@@ -9,6 +9,7 @@ original_slug: Web/HTML/Elemento/b
 **b** de bold=negrita.
 
 - Indica que el texto debe ser representado con una variable **bold**, o **negrita**,de la tipografía que se esté usando.
+
   - : **Sus etiquetas son**: `<b>` y `</b>` (Ambas obligatorias).
 
     **Crea una caja**: en línea.

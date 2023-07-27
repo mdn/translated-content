@@ -16,9 +16,9 @@ Los navegadores no envían ninguna cabecera `Referer` si:
 - el recurso referente es un URI local «file» o «data»;
 - se emplea una solicitud HTTP no segura y la página referente fue recibida a través de un protocolo seguro (HTTPS).
 
-| Tipo de cabecera                                 | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | sí                                       |
+| Tipo de cabecera                      | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | sí                             |
 
 ## Sintaxis
 

@@ -13,7 +13,7 @@ translation_of: Web/API/HTMLTableElement/caption
 ### Syntaxe
 
 ```js
-string = table.caption
+string = table.caption;
 ```
 
 ### Exemple

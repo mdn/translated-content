@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-inner-spin-button'
+title: "::-webkit-inner-spin-button"
 slug: Web/CSS/::-webkit-inner-spin-button
 translation_of: Web/CSS/::-webkit-inner-spin-button
 ---
@@ -13,7 +13,7 @@ Le pseudo-élément **`::-webkit-inner-spin-button`** permet de mettre en forme 
 ### CSS
 
 ```css
-input[type=number]::-webkit-inner-spin-button {
+input[type="number"]::-webkit-inner-spin-button {
   cursor: pointer;
 }
 ```
@@ -21,7 +21,7 @@ input[type=number]::-webkit-inner-spin-button {
 ### HTML
 
 ```html
-<input type="number">
+<input type="number" />
 ```
 
 ### Résultat

@@ -35,8 +35,8 @@ slug: Learn/JavaScript/Building_blocks/Return_values
 返回值意如其名，是指函数执行完毕后返回的值。你已经多次遇见过返回值，尽管你可能没有明确的考虑过他们。让我们一起回看一些熟悉的代码：
 
 ```js
-var myText = 'I am a string';
-var newString = myText.replace('string', 'sausage');
+var myText = "I am a string";
+var newString = myText.replace("string", "sausage");
 console.log(newString);
 // the replace() string function takes a string,
 // replaces one substring with another, and returns
@@ -57,10 +57,10 @@ console.log(newString);
 
 ```js
 function draw() {
-  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (var i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -71,7 +71,7 @@ function draw() {
 
 ```js
 function randomNumber(number) {
-  return Math.floor(Math.random()*number);
+  return Math.floor(Math.random() * number);
 }
 ```
 
@@ -79,7 +79,7 @@ function randomNumber(number) {
 
 ```js
 function randomNumber(number) {
-  var result = Math.floor(Math.random()*number);
+  var result = Math.floor(Math.random() * number);
   return result;
 }
 ```
@@ -107,47 +107,57 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 1. 首先，从 GitHub 的[function-library.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library.html)文件复制一份本地副本。这是一个简单的 HTML 页面包含一个 {{htmlelement("input")}} 文本域和一个段落。还有一个 {{htmlelement("script")}} 元素，我们在两个变量中存储了对两个 HTML 元素的引用。这个小页面允许你在文本框中输入一个数字，并在下面的段落中显示不同的数字。
 2. 让我们添加一些有用的函数。在现有的两行 JavaScript 下面，添加以下函数定义：
 
-    ```js
-    function squared(num) {
-      return num * num;
-    }
+   ```js
+   function squared(num) {
+     return num * num;
+   }
 
-    function cubed(num) {
-      return num * num * num;
-    }
+   function cubed(num) {
+     return num * num * num;
+   }
 
-    function factorial(num) {
-      var x = num;
-      while (x > 1) {
-        num *= x-1;
-        x--;
-      }
-      return num;
-    }
-    ```
+   function factorial(num) {
+     var x = num;
+     while (x > 1) {
+       num *= x - 1;
+       x--;
+     }
+     return num;
+   }
+   ```
 
-    `squared()` 和 `cubed()` 功能是相当明显的 - 他们的平方或立方的数作为一个参数返回。factorial() 函数返回给定数字的阶乘。
+   `squared()` 和 `cubed()` 功能是相当明显的 - 他们的平方或立方的数作为一个参数返回。factorial() 函数返回给定数字的阶乘。
 
 3. 接下来，我们将包括一种打印输入到文本输入中的数字的信息的方法。在现有函数下面输入以下事件处理程序：
 
-    ```js
-    input.onchange = function() {
-      var num = input.value;
-      if (isNaN(num)) {
-        para.textContent = 'You need to enter a number!';
-      } else {
-        para.textContent = num + ' squared is ' + squared(num) + '. ' +
-                           num + ' cubed is ' + cubed(num) + '. ' +
-                           num + ' factorial is ' + factorial(num) + '.';
-      }
-    }
-    ```
+   ```js
+   input.onchange = function () {
+     var num = input.value;
+     if (isNaN(num)) {
+       para.textContent = "You need to enter a number!";
+     } else {
+       para.textContent =
+         num +
+         " squared is " +
+         squared(num) +
+         ". " +
+         num +
+         " cubed is " +
+         cubed(num) +
+         ". " +
+         num +
+         " factorial is " +
+         factorial(num) +
+         ".";
+     }
+   };
+   ```
 
-    这里我们创建一个`onchange`事件处理程序，当文本框上面的 change 事件被触发的之后，事件处理程序就会运行 - 就是说，一个新的值被输入到文本框并且被提交（就比如，输入一个值，然后按 Tab）。当这个匿名函数运行时，输入框中的值将被存储在`num`变量中。
+   这里我们创建一个`onchange`事件处理程序，当文本框上面的 change 事件被触发的之后，事件处理程序就会运行 - 就是说，一个新的值被输入到文本框并且被提交（就比如，输入一个值，然后按 Tab）。当这个匿名函数运行时，输入框中的值将被存储在`num`变量中。
 
-    接下来，我们进行条件测试——如果输入的值不是数字，则在段落中打印错误消息。if 语句判断[isNaN(num)](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN)表达式是否返回 true。我们用`isNaN()`函数测试`num`的值是否不是一个数字 - 如果不是数字，就返回`true`，否则返回`false`。
+   接下来，我们进行条件测试——如果输入的值不是数字，则在段落中打印错误消息。if 语句判断[isNaN(num)](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN)表达式是否返回 true。我们用`isNaN()`函数测试`num`的值是否不是一个数字 - 如果不是数字，就返回`true`，否则返回`false`。
 
-    如果测试返回 false，则数值是一个数字，所以我们在段落元素中打印出一个句子，说明数字的平方、立方体和阶乘是什么。这句话叫 squared()，cubed()，和 factorial() 函数来获得所需的值。
+   如果测试返回 false，则数值是一个数字，所以我们在段落元素中打印出一个句子，说明数字的平方、立方体和阶乘是什么。这句话叫 squared()，cubed()，和 factorial() 函数来获得所需的值。
 
 4. 保存您的代码，将其加载到浏览器中，然后尝试。
 

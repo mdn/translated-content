@@ -28,7 +28,9 @@ window.onresize = refFonction;
 #### HTML
 
 ```html
-<p>Redimensionnez la fenêtre pour déclencher l'évènement <code>resize</code>.</p>
+<p>
+  Redimensionnez la fenêtre pour déclencher l'évènement <code>resize</code>.
+</p>
 <p>Hauteur de la fenêtre : <span id="height"></span></p>
 <p>Largeur de la fenêtre : <span id="width"></span></p>
 ```
@@ -36,8 +38,8 @@ window.onresize = refFonction;
 #### JavaScript
 
 ```js
-const heightOutput = document.querySelector('#height');
-const widthOutput = document.querySelector('#width');
+const heightOutput = document.querySelector("#height");
+const widthOutput = document.querySelector("#width");
 
 function resize() {
   heightOutput.textContent = window.innerHeight;

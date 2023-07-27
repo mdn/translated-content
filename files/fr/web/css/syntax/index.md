@@ -4,6 +4,7 @@ slug: Web/CSS/Syntax
 l10n:
   sourceCommit: 71c4bc0b6329ec40ddbefd8d3124547e91cfa612
 ---
+
 {{CSSRef}}
 
 L'objectif fondamental du langage <i lang="en">Cascading Style Sheets</i> ([CSS](/fr/docs/Web/CSS)) est de permettre à un moteur de navigation d'associer des fonctionnalités spécifiques, comme les couleurs, le positionnement ou les décorations à des éléments de la page. La _syntaxe CSS_ reflète cet objectif et ses éléments de base sont&nbsp;:

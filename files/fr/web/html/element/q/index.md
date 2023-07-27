@@ -1,5 +1,5 @@
 ---
-title: '<q> : l''élément de citation en incise'
+title: "<q> : l'élément de citation en incise"
 slug: Web/HTML/Element/q
 translation_of: Web/HTML/Element/q
 ---
@@ -24,10 +24,11 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 ### HTML
 
 ```html
-<p>Chaque fois que Kenny est tué, Stan dira
-   <q cite="http://fr.wikipedia.org/wiki/Kenny_McCormick#Le_dialogue_rituel">
-     Oh mon Dieu, ils ont tué Kenny !
-   </q>.
+<p>
+  Chaque fois que Kenny est tué, Stan dira
+  <q cite="http://fr.wikipedia.org/wiki/Kenny_McCormick#Le_dialogue_rituel">
+    Oh mon Dieu, ils ont tué Kenny ! </q
+  >.
 </p>
 ```
 

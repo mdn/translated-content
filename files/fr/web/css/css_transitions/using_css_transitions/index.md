@@ -73,8 +73,12 @@ Avec cette feuille de style, on opère une transition CSS sur la taille de polic
 
 ```html hidden
 <body>
-    <p>La boîte ci-dessous utilise des transitions pour les propriétés : width, height, background-color, transform. Survolez la boîte pour voir les animations.</p>
-    <div class="box">Sample</div>
+  <p>
+    La boîte ci-dessous utilise des transitions pour les propriétés : width,
+    height, background-color, transform. Survolez la boîte pour voir les
+    animations.
+  </p>
+  <div class="box">Sample</div>
 </body>
 ```
 
@@ -82,20 +86,24 @@ Avec cette feuille de style, on opère une transition CSS sur la taille de polic
 
 ```css
 .box {
-    border-style: solid;
-    border-width: 1px;
-    display: block;
-    width: 100px;
-    height: 100px;
-    background-color: #0000FF;
-    transition: width 2s, height 2s, background-color 2s, transform 2s;
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #0000ff;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    transform 2s;
 }
 
 .box:hover {
-    background-color: #FFCCCC;
-    width: 200px;
-    height: 200px;
-    transform: rotate(180deg);
+  background-color: #ffcccc;
+  width: 200px;
+  height: 200px;
+  transform: rotate(180deg);
 }
 ```
 
@@ -112,12 +120,16 @@ Avec cette feuille de style, on opère une transition CSS sur la taille de polic
   display: block;
   width: 100px;
   height: 100px;
-  background-color: #0000FF;
-  transition: width 2s, height 2s, background-color 2s, transform 2s;
+  background-color: #0000ff;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    transform 2s;
 }
 
 .box:hover {
-  background-color: #FFCCCC;
+  background-color: #ffcccc;
   width: 200px;
   height: 200px;
   transform: rotate(180deg);
@@ -127,8 +139,10 @@ Avec cette feuille de style, on opère une transition CSS sur la taille de polic
 #### HTML
 
 ```html
-<p>Cette boîte utilisera des transitions pour width, height, background-color, transform.
-   Survolez cette boîte pour voir l'effet.</p>
+<p>
+  Cette boîte utilisera des transitions pour width, height, background-color,
+  transform. Survolez cette boîte pour voir l'effet.
+</p>
 <div class="box"></div>
 ```
 
@@ -160,8 +174,8 @@ De même, si la liste est trop longue par rapport à {{cssxref("transition-prope
 
 ```css
 div {
- transition-property: opacity, left;
- transition-duration: 3s, 5s, 2s, 1s;
+  transition-property: opacity, left;
+  transition-duration: 3s, 5s, 2s, 1s;
 }
 ```
 
@@ -252,11 +266,15 @@ Les transitions permettent de lisser les opérations effectuées avec JavaScript
 Avec JavaScript, on peut ajouter un effet de mouvement sur la balle :
 
 ```js
-var f = document.getElementById('foo');
-document.addEventListener('click', function(ev){
-    f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
-    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
-},false);
+var f = document.getElementById("foo");
+document.addEventListener(
+  "click",
+  function (ev) {
+    f.style.transform = "translateY(" + (ev.clientY - 25) + "px)";
+    f.style.transform += "translateX(" + (ev.clientX - 25) + "px)";
+  },
+  false,
+);
 ```
 
 Avec CSS, il suffit d'ajouter une transition à l'élément et chaque modification sera appliquée de façon régulière :

@@ -1,5 +1,5 @@
 ---
-title: 'Django チュートリアル Part 3: モデルの使用'
+title: "Django チュートリアル Part 3: モデルの使用"
 slug: Learn/Server-side/Django/Models
 ---
 
@@ -77,7 +77,7 @@ In the below sections we'll explore each of the features inside the model in det
 
 A model can have an arbitrary number of fields, of any type — each one represents a column of data that we want to store in one of our database tables. Each database record (row) will consist of one of each field value. Let's look at the example seen below:
 
-```js
+```python
 my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
 ```
 

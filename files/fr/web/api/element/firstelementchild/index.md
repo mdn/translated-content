@@ -24,9 +24,9 @@ Un objet [`Element`](/fr/docs/Web/API/Element) ou `null`.
 </ul>
 
 <script>
-const liste = document.getElementById('liste');
-console.log(liste.firstElementChild.textContent);
-// affiche "Premier (1)" dans la console
+  const liste = document.getElementById("liste");
+  console.log(liste.firstElementChild.textContent);
+  // affiche "Premier (1)" dans la console
 </script>
 ```
 

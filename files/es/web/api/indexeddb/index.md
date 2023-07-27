@@ -11,7 +11,7 @@ La propiedad **`indexedDB`** proporciona un mecanismo para que las aplicaciones 
 ## Sintaxis
 
 ```js
-var DBOpenRequest = self.indexedDB.open('toDoList');
+var DBOpenRequest = self.indexedDB.open("toDoList");
 ```
 
 ### Valor

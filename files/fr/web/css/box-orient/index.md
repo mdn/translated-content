@@ -60,8 +60,8 @@ Dans cet exemple, la propriété `box-orient` placera les deux sections [`<p>`](
 
 ```html
 <div class="exemple">
-    <p>Je serai à gauche de mon voisin.</p>
-    <p>Je serai à droite de mon voisin.</p>
+  <p>Je serai à gauche de mon voisin.</p>
+  <p>Je serai à droite de mon voisin.</p>
 </div>
 ```
 
@@ -69,14 +69,14 @@ Dans cet exemple, la propriété `box-orient` placera les deux sections [`<p>`](
 
 ```css
 div.exemple {
-  display: -moz-box;                /* Mozilla */
-  display: -webkit-box;             /* WebKit */
-  display: box;                     /* Comme spécifié */
+  display: -moz-box; /* Mozilla */
+  display: -webkit-box; /* WebKit */
+  display: box; /* Comme spécifié */
 
   /* Les enfants devraient s'orienter verticalement */
-  -moz-box-orient: horizontal;      /* Mozilla */
-  -webkit-box-orient: horizontal;   /* WebKit */
-  box-orient: horizontal;           /* Comme spécifié */
+  -moz-box-orient: horizontal; /* Mozilla */
+  -webkit-box-orient: horizontal; /* WebKit */
+  box-orient: horizontal; /* Comme spécifié */
 }
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: '<script> : l''élément de script'
+title: "<script> : l'élément de script"
 slug: Web/HTML/Element/script
 translation_of: Web/HTML/Element/script
 ---

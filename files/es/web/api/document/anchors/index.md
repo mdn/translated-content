@@ -18,56 +18,54 @@ Una {{domxref("HTMLCollection")}}.
 ## Ejemplo
 
 ```js
-if ( document.anchors.length >= 5 ) {
-    dump("dump found too many anchors");
-    window.location = "http://www.google.com";
+if (document.anchors.length >= 5) {
+  dump("dump found too many anchors");
+  window.location = "http://www.google.com";
 }
 ```
 
 Lo siguiente es un ejemplo que puebla una Tabla de Contenido con cada ancla en la página:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>Test</title>
-<script>
-function init() {
-  var toc = document.getElementById("toc");
-  var i, li, newAnchor;
-  for (i = 0; i < document.anchors.length; i++) {
-    li = document.createElement("li");
-    newAnchor = document.createElement('a');
-    newAnchor.href = "#" + document.anchors[i].name;
-    newAnchor.innerHTML = document.anchors[i].text;
-    li.appendChild(newAnchor);
-    toc.appendChild(li);
-  }
-}
-</script>
-</head>
-<body onload="init()">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test</title>
+    <script>
+      function init() {
+        var toc = document.getElementById("toc");
+        var i, li, newAnchor;
+        for (i = 0; i < document.anchors.length; i++) {
+          li = document.createElement("li");
+          newAnchor = document.createElement("a");
+          newAnchor.href = "#" + document.anchors[i].name;
+          newAnchor.innerHTML = document.anchors[i].text;
+          li.appendChild(newAnchor);
+          toc.appendChild(li);
+        }
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <h1>Title</h1>
+    <h2><a name="contents">Contents</a></h2>
+    <ul id="toc"></ul>
 
-<h1>Title</h1>
-<h2><a name="contents">Contents</a></h2>
-<ul id="toc"></ul>
+    <h2><a name="plants">Plants</a></h2>
+    <ol>
+      <li>Apples</li>
+      <li>Oranges</li>
+      <li>Pears</li>
+    </ol>
 
-<h2><a name="plants">Plants</a></h2>
-<ol>
-  <li>Apples</li>
-  <li>Oranges</li>
-  <li>Pears</li>
-</ol>
-
-<h2><a name="veggies">Veggies</a></h2>
-<ol>
-  <li>Carrots</li>
-  <li>Celery</li>
-  <li>Beats</li>
-</ol>
-
-</body>
+    <h2><a name="veggies">Veggies</a></h2>
+    <ol>
+      <li>Carrots</li>
+      <li>Celery</li>
+      <li>Beats</li>
+    </ol>
+  </body>
 </html>
 ```
 

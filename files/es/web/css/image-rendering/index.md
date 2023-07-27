@@ -49,7 +49,8 @@ Esta propiedad aplica tanto al elemento mismo, como a cualquier imagen provista 
 
 ```css
 /* aplica a imágenes GIF y PNG; eviar bordes borrosos */
-img[src$=".gif"], img[src$=".png"] {
+img[src$=".gif"],
+img[src$=".png"] {
   image-rendering: crisp-edges;
 }
 ```

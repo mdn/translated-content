@@ -52,7 +52,10 @@ Ce fragment HTML permet d'appliquer une feuille de style spécifique pour les ap
 
 ```html
 <link rel="stylesheet" href="http://toto.truc.com/base.css" />
-<link rel="stylesheet" media="all and (min-color-index: 256)" href="http://toto.truc.com/feuille_style_couleurs.css" />
+<link
+  rel="stylesheet"
+  media="all and (min-color-index: 256)"
+  href="http://toto.truc.com/feuille_style_couleurs.css" />
 ```
 
 ## Spécifications

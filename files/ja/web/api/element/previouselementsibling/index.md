@@ -1,20 +1,18 @@
 ---
-title: Element.previousElementSibling
+title: "Element: previousElementSibling プロパティ"
+short-title: previousElementSibling
 slug: Web/API/Element/previousElementSibling
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
 
 **`Element.previousElementSibling`** は読み取り専用のプロパティで、この要素 ({{domxref("Element")}}) の親の子リスト内ですぐ前にある要素を返します。このノードがリストの最初のノードであった場合は `null` を返します。
 
-## 構文
+## 値
 
-```js
-// ゲッター
-element = el.previousElementSibling;
-
-// セッターなし。読み取り専用プロパティ
-```
+{{domxref("Element")}} オブジェクト、または `null` です。
 
 ## 例
 
@@ -26,13 +24,13 @@ element = el.previousElementSibling;
 <div id="div-03">Here is div-03</div>
 
 <script>
-  let el = document.getElementById('div-03').previousElementSibling;
-  document.write('<p>Siblings of div-03</p><ol>');
+  let el = document.getElementById("div-03").previousElementSibling;
+  document.write("<p>Siblings of div-03</p><ol>");
   while (el) {
-    document.write('<li>' + el.nodeName + '</li>');
+    document.write("<li>" + el.nodeName + "</li>");
     el = el.previousElementSibling;
   }
-  document.write('</ol>');
+  document.write("</ol>");
 </script>
 ```
 

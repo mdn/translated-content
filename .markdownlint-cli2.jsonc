@@ -228,5 +228,11 @@
     }
   },
   "customRules": ["markdownlint-rule-search-replace"],
-  "ignores": ["node_modules", "**/conflicting/**", "**/orphaned/**", ".github/"]
+  "ignores": [
+    "node_modules",
+    ".git",
+    ".github",
+    "**/conflicting/**",
+    "**/orphaned/**"
+  ]
 }

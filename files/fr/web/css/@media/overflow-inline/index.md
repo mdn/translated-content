@@ -23,16 +23,14 @@ La caractéristique `overflow-inline` est définit avec un mot-clé parmi ceux d
 
 ```html
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Nullam ac turpis eleifend, fringilla velit ac, aliquam tellus.
-  Vestibulum ante ipsum primis in faucibus orci luctus et
-  ultrices posuere cubilia Curae; Nunc velit erat, tempus id
-  rutrum sed, dapibus ut urna. Integer vehicula nibh a justo
-  imperdiet rutrum. Nam faucibus pretium orci imperdiet
-  sollicitudin. Nunc id facilisis dui. Proin elementum et
-  massa et feugiat. Integer rutrum ullamcorper eleifend.
-  Proin sit amet tincidunt risus. Sed nec augue congue eros
-  accumsan tincidunt sed eget ex.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis
+  eleifend, fringilla velit ac, aliquam tellus. Vestibulum ante ipsum primis in
+  faucibus orci luctus et ultrices posuere cubilia Curae; Nunc velit erat,
+  tempus id rutrum sed, dapibus ut urna. Integer vehicula nibh a justo imperdiet
+  rutrum. Nam faucibus pretium orci imperdiet sollicitudin. Nunc id facilisis
+  dui. Proin elementum et massa et feugiat. Integer rutrum ullamcorper eleifend.
+  Proin sit amet tincidunt risus. Sed nec augue congue eros accumsan tincidunt
+  sed eget ex.
 </p>
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'Attribut HTML : maxlength'
+title: "Attribut HTML : maxlength"
 slug: Web/HTML/Attributes/maxlength
 translation_of: Web/HTML/Attributes/maxlength
 ---
@@ -17,7 +17,7 @@ Bien que le navigateur empêche généralement l'utilisateur de saisir plus de t
 ## Exemple
 
 ```html
-<input type="password" maxlength="4"/>
+<input type="password" maxlength="4" />
 ```
 
 {{EmbedLiveSample('Exemple', '', 100)}}

@@ -48,7 +48,10 @@ all: revert;
 **HTML**
 
 ```html
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 **CSS**
@@ -56,7 +59,7 @@ all: revert;
 ```css
 html {
   font-size: small;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   color: blue;
 }
 
@@ -71,12 +74,22 @@ Su resultado es:
 #### Sin propiedad `all`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-html { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
+html {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
 ```
 
 {{EmbedLiveSample("ex0", "200", "125")}}
@@ -86,13 +99,25 @@ El elemento {{HTMLElement("blockquote")}} usa los estilos predeterminados del na
 #### `all:unset`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-html { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
-blockquote { all: unset; }
+html {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
+blockquote {
+  all: unset;
+}
 ```
 
 {{EmbedLiveSample("ex1", "200", "125")}}
@@ -102,13 +127,25 @@ El elemento {{HTMLElement("blockquote")}} no usa los estilos predeterminados del
 #### `all:initial`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-html { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
-blockquote { all: initial; }
+html {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
+blockquote {
+  all: initial;
+}
 ```
 
 {{EmbedLiveSample("ex2", "200", "125")}}
@@ -118,13 +155,25 @@ El elemento {{HTMLElement("blockquote")}} no usa los estilos predeterminados del
 #### `all:inherit`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-html { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue; color: red; }
-blockquote { all: inherit; }
+html {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
+blockquote {
+  all: inherit;
+}
 ```
 
 {{EmbedLiveSample("ex3", "200", "125")}}

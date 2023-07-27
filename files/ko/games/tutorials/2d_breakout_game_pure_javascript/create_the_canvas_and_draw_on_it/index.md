@@ -18,25 +18,30 @@ original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽�
 HTML문서 구조는 꽤 간단합니다. 게임은 {{htmlelement("canvas")}} 엘리먼트에 렌더링됩니다. 여러분이 좋아하는 텍스트 에디터로 새로운 HTML 문서를 생성하여 index.html로 저장하고, 아래 코드를 추가하세요.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-      * { padding: 0; margin: 0; }
-      canvas { background: #eee; display: block; margin: 0 auto; }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      canvas {
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="480" height="320"></canvas>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
-
-<script>
-  // JavaScript 코드가 여기에 들어갈 것입니다.
-</script>
-
-</body>
+    <script>
+      // JavaScript 코드가 여기에 들어갈 것입니다.
+    </script>
+  </body>
 </html>
 ```
 
@@ -69,7 +74,7 @@ ctx.closePath();
 
 ```js
 ctx.beginPath();
-ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
 ctx.fillStyle = "green";
 ctx.fill();
 ctx.closePath();

@@ -16,7 +16,7 @@ ElmSelectionne.setCustomValidity(message);
 
 ### Paramètres
 
-- *message* est le {{domxref("DOMString")}} contenant le message d'erreur.
+- _message_ est le {{domxref("DOMString")}} contenant le message d'erreur.
 
 ## Spécifications
 

@@ -66,7 +66,6 @@ speak-as: <counter-style-name>;
   speak-as: numbers;
 }
 
-
 .exemple {
   list-style: speak-as-exemple;
 }

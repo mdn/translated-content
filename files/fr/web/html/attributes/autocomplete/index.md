@@ -1,5 +1,5 @@
 ---
-title: 'Attribut HTML : autocomplete'
+title: "Attribut HTML : autocomplete"
 slug: Web/HTML/Attributes/autocomplete
 translation_of: Web/HTML/Attributes/autocomplete
 ---
@@ -146,7 +146,7 @@ Voir [la spécification WHATWG](https://html.spec.whatwg.org/multipage/forms.htm
 ```html
 <div>
   <label for="cc-number">Entrez votre numéro de carte de crédit</label>
-  <input name="cc-number" id="cc-number" autocomplete="off">
+  <input name="cc-number" id="cc-number" autocomplete="off" />
 </div>
 ```
 

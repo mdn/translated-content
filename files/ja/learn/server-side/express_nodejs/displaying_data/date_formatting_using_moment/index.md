@@ -22,17 +22,15 @@ npm install moment
 1. Open **./models/bookinstance.js**.
 2. At the top of the page, import _moment_.
 
-    ```js
-    var moment = require('moment');
-    ```
+   ```js
+   var moment = require("moment");
+   ```
 
 Add the virtual property `due_back_formatted` just after the url property.
 
 ```js
-BookInstanceSchema
-.virtual('due_back_formatted')
-.get(function () {
-  return moment(this.due_back).format('MMMM Do, YYYY');
+BookInstanceSchema.virtual("due_back_formatted").get(function () {
+  return moment(this.due_back).format("MMMM Do, YYYY");
 });
 ```
 

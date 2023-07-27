@@ -11,7 +11,7 @@ La propriété en lecture seule **`AnimationEvent.pseudoElement`** est une {{dom
 ## Syntaxe
 
 ```js
-nom = AnimationEvent.pseudoElement
+nom = AnimationEvent.pseudoElement;
 ```
 
 ## Spécifications

@@ -72,9 +72,8 @@ ten dpi   Incorrect : seules des expressions numériques sont acceptées.
 
 ```html
 <p class="exemple">
-  À ces mots le Chapelier ouvrit de grands yeux ; mais
-  il se contenta de dire : « Pourquoi une pie
-  ressemble-t-elle à un pupitre ? »
+  À ces mots le Chapelier ouvrit de grands yeux ; mais il se contenta de dire :
+  « Pourquoi une pie ressemble-t-elle à un pupitre ? »
 </p>
 ```
 

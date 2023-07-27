@@ -25,9 +25,9 @@ Notez que l'événement `submit` se déclenche **uniquement** sur [l'élement fo
 
 ## Propriétés
 
-| Propriété                             | Type                                 | Description                                                        |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------------------ |
+| Propriété                       | Type                       | Description                                                        |
+| ------------------------------- | -------------------------- | ------------------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | La cible de l'évènement (la cible la plus haute dans l'arbre DOM). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | Le type de l'évènement.                                            |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Si l'évènement bouillonne normalement ou non.                      |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Si l'évènement est annulable ou non.                               |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Le type de l'évènement.                                            |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Si l'évènement bouillonne normalement ou non.                      |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Si l'évènement est annulable ou non.                               |

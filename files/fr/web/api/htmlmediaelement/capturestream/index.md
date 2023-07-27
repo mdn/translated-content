@@ -27,7 +27,7 @@ Un objet {{domxref('MediaStream')}} pouvant être utilisé en tant que source po
 Dans cet exemple, un écouteur d'événement est mise en place, permettant la capture du contenu d'un élément média avec l'ID `"playback"` dans un {{domxref("MediaStream")}} lors d'un clic sur un bouton de lancement. La flux peut être utilisée dans d'autres buts—comme une source de diffusion via WebRTC, vous permettant de partager des vidéos pré-enregistrées avec une autre personne lors d'un appel video.
 
 ```js
-document.querySelector('.playAndRecord').addEventListener('click', function() {
+document.querySelector(".playAndRecord").addEventListener("click", function () {
   var playbackElement = document.getElementById("playback");
   var captureStream = playbackElement.captureStream();
   playbackElement.play();

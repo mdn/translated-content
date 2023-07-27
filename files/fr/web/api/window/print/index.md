@@ -15,7 +15,7 @@ Cette méthode sera bloquante pour le reste de l'exécution tant que la boîte d
 ## Syntaxe
 
 ```js
-print()
+print();
 ```
 
 ### Paramètres

@@ -6811,20 +6811,6 @@
       "jota1410"
     ]
   },
-  "Web/CSS/CSS_Selectors": {
-    "modified": "2019-07-09T01:16:13.123Z",
-    "contributors": [
-      "missmakita",
-      "blanchart",
-      "Benji1337",
-      "metal-gogo",
-      "kikolevante"
-    ]
-  },
-  "Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors": {
-    "modified": "2020-07-31T07:57:08.167Z",
-    "contributors": ["blanchart", "israel-munoz"]
-  },
   "Web/CSS/CSS_Types": {
     "modified": "2019-03-18T21:35:39.343Z",
     "contributors": ["lajaso"]
@@ -7068,6 +7054,20 @@
   "Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index": {
     "modified": "2019-03-23T22:32:38.884Z",
     "contributors": ["javichito"]
+  },
+  "Web/CSS/CSS_selectors": {
+    "modified": "2019-07-09T01:16:13.123Z",
+    "contributors": [
+      "missmakita",
+      "blanchart",
+      "Benji1337",
+      "metal-gogo",
+      "kikolevante"
+    ]
+  },
+  "Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors": {
+    "modified": "2020-07-31T07:57:08.167Z",
+    "contributors": ["blanchart", "israel-munoz"]
   },
   "Web/CSS/CSS_text": {
     "modified": "2019-03-23T22:36:23.444Z",

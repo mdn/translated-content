@@ -95,13 +95,13 @@ Además de los atributos listados abajo, este elemento puede tener cualquier [gl
 Para crear un widget que muestre una constraseña, use:
 
 ```html
-<input type="password">
+<input type="password" />
 ```
 
 Para crear un widget que muestre una contraseña con un patrón o diseño, use:
 
 ```html
-<input type="password" pattern=".{6,}">
+<input type="password" pattern=".{6,}" />
 ```
 
 El ejemplo de arriba creará un elemento password que deberá contener 6 o más carácteres.

@@ -23,17 +23,19 @@ El siguiente ejemplo elimina el primer nodo dentro del elemento con id `"foo"` s
 ```js
 var foo = document.getElementById("foo");
 if (foo.hasChildNodes()) {
-    // do something with 'foo.childNodes'
+  // do something with 'foo.childNodes'
 }
 ```
 
 ## Polyfill
 
 ```js
-;(function(prototype) {
-    prototype.hasChildNodes = prototype.hasChildNodes || function() {
-        return !!this.firstChild;
-    }
+(function (prototype) {
+  prototype.hasChildNodes =
+    prototype.hasChildNodes ||
+    function () {
+      return !!this.firstChild;
+    };
 })(Node.prototype);
 ```
 

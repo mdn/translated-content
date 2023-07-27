@@ -9,6 +9,7 @@ tags:
   - циклы
 translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 Теперь, после изучения основ JavaScript, мы проверим ваши знания циклов, функций, условных операторов и событий предложив вам написать популярный элемент который вы увидите на многих сайтах - галерея на JavaScript.
@@ -31,14 +32,12 @@ translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 <h1>Пример фотогалереи</h1>
 
 <div class="full-img">
-  <img class="displayed-img" src="images/pic1.jpg">
+  <img class="displayed-img" src="images/pic1.jpg" />
   <div class="overlay"></div>
   <button class="dark">Темнее</button>
 </div>
 
-<div class="thumb-bar">
-
-</div>
+<div class="thumb-bar"></div>
 ```
 
 Результат выглядит следующим образом:
@@ -90,7 +89,7 @@ translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 Следующие строки служат основой для достижения изменений, указанных в пунктах 2 и 3 выше.
 
 ```js
-btn.setAttribute('class', xxx);
+btn.setAttribute("class", xxx);
 btn.textContent = xxx;
 overlay.style.backgroundColor = xxx;
 ```

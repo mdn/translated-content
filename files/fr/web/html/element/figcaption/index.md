@@ -1,5 +1,5 @@
 ---
-title: '<figcaption> : l''élément de légende d''une figure'
+title: "<figcaption> : l'élément de légende d'une figure"
 slug: Web/HTML/Element/figcaption
 translation_of: Web/HTML/Element/figcaption
 ---

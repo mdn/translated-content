@@ -33,38 +33,36 @@ Si `child` n'est pas un enfant du nœud `element`, la méthode provoque une exce
 La méthode peut lever une exception de deux façons :
 
 1. Si `enfant` était bien un enfant de element et qu'il existe donc dans le DOM, mais qu'il a déjà été retiré, la méthode provoque l'exception suivante :``
-    `Uncaught NotFoundError: Failed to execute 'removeChild' on 'element': The node to be removed is not a child of this node`.
+`Uncaught NotFoundError: Failed to execute 'removeChild' on 'element': The node to be removed is not a child of this node`.
 2. si l'`enfant` n'existe pas dans le DOM de la page, la méthode provoque l'exception suivante :
-    `Uncaught TypeError: Failed to execute 'removeChild' on 'element': parameter 1 is not of type 'Node'.`
+   `Uncaught TypeError: Failed to execute 'removeChild' on 'element': parameter 1 is not of type 'Node'.`
 
 ## Exemples
 
 ```html
 <!--Sample HTML code-->
-<div id="top" align="center"> </div>
+<div id="top" align="center"></div>
 
 <script type="text/javascript">
-      var top = document.getElementById("top");
-      var nested = document.getElementById("nested");
+  var top = document.getElementById("top");
+  var nested = document.getElementById("nested");
 
-      var garbage = top.removeChild(nested);    //Cas test 2: la méthode lance l'exception (2)
-
+  var garbage = top.removeChild(nested); //Cas test 2: la méthode lance l'exception (2)
 </script>
 
 <!--Sample HTML code-->
 <div id="top" align="center">
- <div id="nested"></div>
+  <div id="nested"></div>
 </div>
 
 <script type="text/javascript">
-      var top = document.getElementById("top");
-      var nested = document.getElementById("nested");
+  var top = document.getElementById("top");
+  var nested = document.getElementById("nested");
 
-      var garbage = top.removeChild(nested); // Ce premier appel supprime correctement le noeud
+  var garbage = top.removeChild(nested); // Ce premier appel supprime correctement le noeud
 
-      // ......
-      garbage = top.removeChild(nested);   // Cas test 1 : la méthode dans le second appel ici, lance l'exception (1)
-
+  // ......
+  garbage = top.removeChild(nested); // Cas test 1 : la méthode dans le second appel ici, lance l'exception (1)
 </script>
 ```
 

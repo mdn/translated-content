@@ -170,5 +170,5 @@ div {
 
 - [`transform`](/fr/docs/Web/CSS/transform)
 - [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`skewX()`](/fr/docs/Web/CSS/transform-function/skewX())
-- [`skewY()`](/fr/docs/Web/CSS/transform-function/skewY())
+- [`skewX()`](</fr/docs/Web/CSS/transform-function/skewX()>)
+- [`skewY()`](</fr/docs/Web/CSS/transform-function/skewY()>)
