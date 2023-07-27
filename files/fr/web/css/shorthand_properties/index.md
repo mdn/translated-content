@@ -37,7 +37,7 @@ Les propriétés raccourcies essaient de ne pas imposer un ordre spécifique pou
 Il y a deux thèmes pour lesquels l'ordre est important&nbsp;:
 
 - Les propriétés relatives aux bords d'une boîte, comme [`border-style`](/fr/docs/Web/CSS/border-style), [`margin`](/fr/docs/Web/CSS/margin) ou [`padding`](/fr/docs/Web/CSS/padding).
-- Les propriétés relatives aux coins d'une boîte, comme [`border-radius`](/fr/docs/Web/CSS/border-radius)`
+- Les propriétés relatives aux coins d'une boîte, comme [`border-radius`](/fr/docs/Web/CSS/border-radius)
 
 #### Propriétés pour les bords d'une boîte
 
