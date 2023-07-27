@@ -39,7 +39,8 @@ const paragraph = document.getElementById("para");
 const output = document.getElementById("output");
 
 if (paragraph.matches(":scope")) {
-  output.textContent = "Le premier paragraphe est sa propre portée, comme attendu !";
+  output.textContent =
+    "Le premier paragraphe est sa propre portée, comme attendu !";
 }
 ```
 
