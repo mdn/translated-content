@@ -304,7 +304,7 @@ textarea.onkeyup = function () {
 };
 ```
 
-{{ EmbedLiveSample('Pédagogie_active_incorporer_une_image', 700, 350, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Pédagogie_active_incorporer_une_image', 700, 350) }}
 
 ## Légender des images avec `figure` et `figcaption`
 
@@ -490,7 +490,7 @@ textarea.onkeyup = function () {
 };
 ```
 
-{{ EmbedLiveSample('Pédagogie_active_créer_un_objet_figure', 700, 350, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Pédagogie_active_créer_un_objet_figure', 700, 350) }}
 
 ## Images d'arrière-plan CSS
 

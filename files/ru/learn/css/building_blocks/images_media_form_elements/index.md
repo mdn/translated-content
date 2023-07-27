@@ -9,8 +9,8 @@ translation_of: Learn/CSS/Building_blocks/Images_media_form_elements
 В этом уроке мы рассмотрим, как обрабатываются определённые специальные элементы в CSS. Элементы изображений, других медиа и форм ведут себя иначе при их стилизации в CSS чем обычные блоки. Понимание того, что возможно, а что нет спасут вас от лишних разочарований и этот урок прольёт свет на некоторые из этих основных вещей, которые вам нужно знать.
 
 | Prerequisites: | Basic computer literacy, [basic software installed](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Objective:     | To understand the way that some elements behave unusually when styled with CSS.                                                                                                                                                                                                                                                                                                                                                                                          |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objective:     | To understand the way that some elements behave unusually when styled with CSS.                                                                                                                                                                                                                                                                                                                                |
 
 ## Замещаемые элементы
 
@@ -97,8 +97,8 @@ button,
 input,
 select,
 textarea {
-  font-family : inherit;
-  font-size : 100%;
+  font-family: inherit;
+  font-size: 100%;
 }
 ```
 
@@ -141,7 +141,8 @@ textarea {
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  padding: 0; margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 textarea {
@@ -167,10 +168,10 @@ This lesson has highlighted some of the differences you will encounter when work
 1. [Cascade and inheritance](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 2. [CSS selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
 
-    - [Type, class, and ID selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+   - [Type, class, and ID selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+   - [Attribute selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+   - [Pseudo-classes and pseudo-elements](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+   - [Combinators](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 3. [The box model](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
 4. [Backgrounds and borders](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

@@ -23,13 +23,13 @@ L'événement `gamepaddisconnected` est déclenché lorsque le navigateur détec
 
 ## Propriétés
 
-| Property                              | Type                                 | Description                                                                                 |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------- |
+| Property                        | Type                       | Description                                                                                 |
+| ------------------------------- | -------------------------- | ------------------------------------------------------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree).                                      |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                                                          |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.                                                  |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.                                                    |
-| `gamepad` {{readonlyInline}}    | {{domxref("Gamepad")}}         | The single gamepad attribute provides access to the associated gamepad data for this event. |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                                                          |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.                                                  |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.                                                    |
+| `gamepad` {{readonlyInline}}    | {{domxref("Gamepad")}}     | The single gamepad attribute provides access to the associated gamepad data for this event. |
 
 ## Evénements liés
 

@@ -28,8 +28,8 @@ Un {{domxref("GLboolean")}} indiquant si le tampon est ou non valide.
 ### Création d'un tampon
 
 ```js
-var canevas = document.getElementById('canevas');
-var gl = canevas.getContext('webgl');
+var canevas = document.getElementById("canevas");
+var gl = canevas.getContext("webgl");
 var tampon = gl.createBuffer();
 
 gl.isBuffer(tampon);

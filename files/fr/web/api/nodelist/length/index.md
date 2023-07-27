@@ -13,7 +13,7 @@ translation_of: Web/API/NodeList/length
 ## Syntaxe
 
 ```js
-numItems =nodeList.length
+numItems = nodeList.length;
 ```
 
 - `numItems` est un entier (_integer_), valeur représentant le nombre d'éléments dans une `NodeList`.

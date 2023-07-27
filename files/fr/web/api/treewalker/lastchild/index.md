@@ -18,10 +18,14 @@ node = treeWalker.lastChild();
 
 ```js
 var treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 var node = treeWalker.lastChild(); // renvoie le dernier enfant visible de l'élément racine
 ```

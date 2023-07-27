@@ -35,7 +35,8 @@ Il est aussi possible (même si ça n'est pas obligatoire) d'accéder à la list
 const inputElement = document.getElementById("input");
 inputElement.addEventListener("change", handleFiles, false);
 function handleFiles() {
-  const fileList = this.files; /* on peut désormais manipuler la liste de fichiers */
+  const fileList =
+    this.files; /* on peut désormais manipuler la liste de fichiers */
 }
 ```
 
@@ -91,34 +92,21 @@ uploadInput.addEventListener(
     }
 
     // Approximation à l'unité humaine la plus proche
-    const units = [
-      "o",
-      "Ko",
-      "Mo",
-      "Go",
-      "To",
-      "Po",
-      "Eo",
-      "Zo",
-      "Yo",
-    ];
+    const units = ["o", "Ko", "Mo", "Go", "To", "Po", "Eo", "Zo", "Yo"];
     const exponent = Math.min(
       Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
-      units.length - 1
+      units.length - 1,
     );
     const approx = numberOfBytes / 1024 ** exponent;
     const output =
       exponent === 0
         ? `${numberOfBytes} octets`
-        : `${approx.toFixed(3)} ${
-            units[exponent]
-          } (${numberOfBytes} octets)`;
+        : `${approx.toFixed(3)} ${units[exponent]} (${numberOfBytes} octets)`;
 
-    document.getElementById("fileNum").textContent =
-      uploadInput.files.length;
+    document.getElementById("fileNum").textContent = uploadInput.files.length;
     document.getElementById("fileSize").textContent = output;
   },
-  false
+  false,
 );
 ```
 
@@ -151,7 +139,7 @@ fileSelect.addEventListener(
       fileElem.click();
     }
   },
-  false
+  false,
 );
 ```
 
@@ -323,7 +311,7 @@ fileSelect.addEventListener(
     }
     e.preventDefault(); // Empêche la navigation jusqu'à "#"
   },
-  false
+  false,
 );
 
 fileElem.addEventListener("change", handleFiles, false);
@@ -413,7 +401,7 @@ function FileUpload(img, file) {
         self.ctrl.update(percentage);
       }
     },
-    false
+    false,
   );
 
   xhr.upload.addEventListener(
@@ -423,11 +411,11 @@ function FileUpload(img, file) {
       const canvas = self.ctrl.ctx.canvas;
       canvas.parentNode.removeChild(canvas);
     },
-    false
+    false,
   );
   xhr.open(
     "POST",
-    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php"
+    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
   );
   xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
   reader.onload = (evt) => {
@@ -451,7 +439,7 @@ function createThrobber(img) {
       0,
       0,
       (throbberWidth * percent) / 100,
-      throbberHeight
+      throbberHeight,
     );
     if (percent === 100) {
       throbber.ctx.fillStyle = "green";

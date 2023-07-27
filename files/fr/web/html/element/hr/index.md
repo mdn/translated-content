@@ -1,5 +1,5 @@
 ---
-title: '<hr> : l''élément de rupture thématique (règle horizontale)'
+title: "<hr> : l'élément de rupture thématique (règle horizontale)"
 slug: Web/HTML/Element/hr
 translation_of: Web/HTML/Element/hr
 ---
@@ -35,17 +35,15 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attri
 
 ```html
 <p>
-  Ceci est le premier paragraphe du texte.
-  Les pandas roux sont géniaux.
-  C'est mignon et c'est tout doux.
+  Ceci est le premier paragraphe du texte. Les pandas roux sont géniaux. C'est
+  mignon et c'est tout doux.
 </p>
 
-<hr>
+<hr />
 
 <p>
-  Ceci est le deuxième paragraphe du texte.
-  Les poneys ne sont pas pareils.
-  Ils sont plus grands et moins exotiques.
+  Ceci est le deuxième paragraphe du texte. Les poneys ne sont pas pareils. Ils
+  sont plus grands et moins exotiques.
 </p>
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'Изучение HTML: руководства и уроки'
+title: "Изучение HTML: руководства и уроки"
 slug: Learn/HTML
 tags:
   - HTML

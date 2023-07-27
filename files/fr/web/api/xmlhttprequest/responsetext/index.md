@@ -31,18 +31,18 @@ Vous savez que tout le contenu a été reçu lorsque la valeur de {{domxref("XML
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 // If specified, responseType must be empty string or "text"
-xhr.responseType = 'text';
+xhr.responseType = "text";
 
 xhr.onload = function () {
-    if (xhr.readyState === xhr.DONE) {
-        if (xhr.status === 200) {
-            console.log(xhr.response);
-            console.log(xhr.responseText);
-        }
+  if (xhr.readyState === xhr.DONE) {
+    if (xhr.status === 200) {
+      console.log(xhr.response);
+      console.log(xhr.responseText);
     }
+  }
 };
 
 xhr.send(null);

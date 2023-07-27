@@ -52,12 +52,9 @@ Dans cet exemple, extrait de la méthode `animateScene()` dans l'article [Un exe
 ```js
 gl.useProgram(programmeShader);
 
-uScalingFactor =
-    gl.getUniformLocation(programmeShader, "uScalingFactor");
-uGlobalColor =
-    gl.getUniformLocation(programmeShader, "uGlobalColor");
-uRotationVector =
-    gl.getUniformLocation(programmeShader, "uRotationVector")
+uScalingFactor = gl.getUniformLocation(programmeShader, "uScalingFactor");
+uGlobalColor = gl.getUniformLocation(programmeShader, "uGlobalColor");
+uRotationVector = gl.getUniformLocation(programmeShader, "uRotationVector");
 
 gl.uniform2fv(uScalingFactor, currentScale);
 gl.uniform2fv(uRotationVector, currentRotation);

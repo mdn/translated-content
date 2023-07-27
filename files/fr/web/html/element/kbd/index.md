@@ -1,5 +1,5 @@
 ---
-title: '<kbd> : l''élément de saisie clavier'
+title: "<kbd> : l'élément de saisie clavier"
 slug: Web/HTML/Element/kbd
 translation_of: Web/HTML/Element/kbd
 ---
@@ -31,8 +31,10 @@ D'autres éléments peuvent être utilisés en association avec `<kbd>` afin de 
 ### Exemple simple
 
 ```html
-<p>Utilisez la commande <kbd>help macommande</kbd> afin de consulter
- la documentation pour la commande "macommande".</p>
+<p>
+  Utilisez la commande <kbd>help macommande</kbd> afin de consulter la
+  documentation pour la commande "macommande".
+</p>
 ```
 
 #### Résultat
@@ -51,9 +53,10 @@ Commençons par analyser le code HTML.
 
 ```html
 <p>
-  Vous pouvez également créer un nouveau document
-  en utilisant le raccourci clavier
-  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>.
+  Vous pouvez également créer un nouveau document en utilisant le raccourci
+  clavier
+  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd
+  >.
 </p>
 ```
 
@@ -87,9 +90,10 @@ On met à jour le code HTML afin d'utiliser cette classe :
 
 ```html
 <p>
-  Vous pouvez également créer un nouveau document
-  en utilisant le raccourci clavier
-  <kbd><kbd class="key">Ctrl</kbd>+<kbd class="key">N</kbd></kbd>.
+  Vous pouvez également créer un nouveau document en utilisant le raccourci
+  clavier
+  <kbd><kbd class="key">Ctrl</kbd>+<kbd class="key">N</kbd></kbd
+  >.
 </p>
 ```
 
@@ -105,8 +109,8 @@ En imbriquant un élément `<kbd>` dans un élément {{HTMLElement("samp")}}, on
 
 ```html
 <p>
-  S'il se produit une erreur de syntaxe, cet outil affichera
-  la commande initialement saisie pour que vous la revoyez :
+  S'il se produit une erreur de syntaxe, cet outil affichera la commande
+  initialement saisie pour que vous la revoyez :
 </p>
 <blockquote>
   <samp><kbd>custom-git ad mon-nouveau-fichier.cpp</kbd></samp>
@@ -119,7 +123,7 @@ En imbriquant un élément `<kbd>` dans un élément {{HTMLElement("samp")}}, on
 
 ### Représenter les options de saisies à l'écran
 
-Imbriquer un élément `<samp>` dans un élément `<kbd>`  représente une saisie basée sur du texte affiché par le système (par exemple des noms de menu, d'éléments de menu, des noms de boutons affichés à l'écran, etc.).
+Imbriquer un élément `<samp>` dans un élément `<kbd>` représente une saisie basée sur du texte affiché par le système (par exemple des noms de menu, d'éléments de menu, des noms de boutons affichés à l'écran, etc.).
 
 #### HTML
 
@@ -128,14 +132,17 @@ Ainsi, si on souhaite expliquer comment choisir l'option "Nouveau document" dans
 ```html
 <p>
   Pour créer un nouveau fichier, sélectionner l'option
-  <kbd><kbd><samp>Fichier</samp></kbd>⇒<kbd><samp>Nouveau
-  document</samp></kbd></kbd> dans le menu.
+  <kbd
+    ><kbd><samp>Fichier</samp></kbd
+    >⇒<kbd><samp>Nouveau document</samp></kbd></kbd
+  >
+  dans le menu.
 </p>
 
 <p>
   N'oubliez pas de cliquer sur le bouton
-  <kbd><samp>OK</samp></kbd> afin de confirmer
-  que vous avez saisi le nom du nouveau fichier.
+  <kbd><samp>OK</samp></kbd> afin de confirmer que vous avez saisi le nom du
+  nouveau fichier.
 </p>
 ```
 

@@ -31,9 +31,9 @@ Une {{domxref("NodeList")}} contenant les éléments `<label>` associés avec l'
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", function () {
   const button = document.getElementById("test");
-  for(var i = 0; i < button.labels.length; i++) {
+  for (var i = 0; i < button.labels.length; i++) {
     console.log(button.labels[i].textContent); // "Label 1" et "Label 2"
   }
 });

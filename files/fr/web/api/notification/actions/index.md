@@ -15,7 +15,7 @@ Il s'agit d'une liste des actions définies par l'application que l'utilisateur 
 ## Syntaxe
 
 ```js
-Notification.actions
+Notification.actions;
 ```
 
 ### Valeur

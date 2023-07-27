@@ -11,7 +11,7 @@ La propriété en lecture seule **`icon`** de l'interface {{domxref ("Notificati
 ## Syntaxe
 
 ```js
-Notification.icon
+Notification.icon;
 ```
 
 ### Valeur

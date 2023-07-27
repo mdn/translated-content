@@ -1,5 +1,5 @@
 ---
-title: 'WebSocket : évènement open'
+title: "WebSocket : évènement open"
 slug: Web/API/WebSocket/open_event
 ---
 
@@ -36,11 +36,11 @@ L'évènement `open` est déclenché lorsqu'une connexion avec une `WebSocket` e
 
 ```js
 // Crée une connexion WebSocket
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket("ws://localhost:8080");
 
 // La connexion est ouverte
-socket.addEventListener('open', (event) => {
-  socket.send('Coucou serveur !');
+socket.addEventListener("open", (event) => {
+  socket.send("Coucou serveur !");
 });
 ```
 

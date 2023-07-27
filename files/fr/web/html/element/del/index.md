@@ -1,5 +1,5 @@
 ---
-title: '<del> : l''élément de texte supprimé'
+title: "<del> : l'élément de texte supprimé"
 slug: Web/HTML/Element/del
 translation_of: Web/HTML/Element/del
 ---

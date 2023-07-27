@@ -14,12 +14,6 @@ La propriété **`id`** (lecture seule) de l'interface {{domxref("Client")}} ret
 var clientId = Client.id;
 ```
 
-## Exemple
-
-```js
-TBD
-```
-
 ## Spécifications
 
 {{Specifications}}

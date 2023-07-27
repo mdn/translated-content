@@ -40,32 +40,33 @@ _Hérite des méthodes de son interface parente, [`EventTarget`](/fr/docs/Web/AP
 ```js
 // On place ces variables dans la portée globale afin d'y avoir
 // accès dans la console du navigateur.
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 const constraints = {
   audio: false,
-  video: true
+  video: true,
 };
 
-navigator.mediaDevices.getUserMedia(constraints)
+navigator.mediaDevices
+  .getUserMedia(constraints)
   .then((stream) => {
     const videoTracks = stream.getVideoTracks();
-    console.log('Flux obtenu avec des contraintes :', constraints);
+    console.log("Flux obtenu avec des contraintes :", constraints);
     console.log(`Utilisation de l'appareil vidéo : ${videoTracks[0].label}`);
     stream.onremovetrack = () => {
-      console.log('Flux terminé');
+      console.log("Flux terminé");
     };
     video.srcObject = stream;
   })
   .catch((error) => {
-    if (error.name === 'ConstraintNotSatisfiedError') {
+    if (error.name === "ConstraintNotSatisfiedError") {
       console.error(
-        `La résolution ${constraints.video.width.exact}x${constraints.video.height.exact} px n'est pas prise en charge par votre appareil.`
+        `La résolution ${constraints.video.width.exact}x${constraints.video.height.exact} px n'est pas prise en charge par votre appareil.`,
       );
-    } else if (error.name === 'PermissionDeniedError') {
+    } else if (error.name === "PermissionDeniedError") {
       console.error(
         "Les permissions nécessaires pour utiliser votre caméra ou votre micro " +
-        "n'ont pas été fournies. Vous devez autoriser l'accès à vos appareils " +
-        "depuis cette page afin que la démonstration fonctionne."
+          "n'ont pas été fournies. Vous devez autoriser l'accès à vos appareils " +
+          "depuis cette page afin que la démonstration fonctionne.",
       );
     } else {
       console.error(`Erreur getUserMedia : ${error.name}`, error);

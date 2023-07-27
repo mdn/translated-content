@@ -31,23 +31,23 @@ Cet exemple utilise [`onblur`](/fr/docs/Web/API/GlobalEventHandlers/onblur) et `
 ### HTML
 
 ```html
-<input type="text" value="Cliquez ici">
+<input type="text" value="Cliquez ici" />
 ```
 
 ### JavaScript
 
 ```js
-let input = document.querySelector('input');
+let input = document.querySelector("input");
 
 input.onblur = inputBlur;
 input.onfocus = inputFocus;
 
 function inputBlur() {
-  input.value = 'Le focus a été perdu';
+  input.value = "Le focus a été perdu";
 }
 
 function inputFocus() {
-  input.value = 'Le focus est là';
+  input.value = "Le focus est là";
 }
 ```
 

@@ -11,7 +11,7 @@ La propriété **`allowPaymentRequest`** de l'interface {{domxref("HTMLIFrameEle
 ## Syntaxe
 
 ```js
-var allow = htmlIFrameElement.allowPaymentRequest
+var allow = htmlIFrameElement.allowPaymentRequest;
 ```
 
 ### Valeur

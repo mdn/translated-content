@@ -9,7 +9,7 @@ translation_of: Web/API/Clients/get
 ## Syntaxe
 
 ```js
-self.clients.get(id).then(function(client) {
+self.clients.get(id).then(function (client) {
   // Faire quelque chose avec le client
 });
 ```
@@ -26,7 +26,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se
 ## Exemples
 
 ```js
-self.clients.get(options).then(function(client) {
+self.clients.get(options).then(function (client) {
   self.clients.openWindow(client.url);
 });
 ```

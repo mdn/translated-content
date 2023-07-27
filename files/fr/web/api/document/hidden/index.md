@@ -11,14 +11,14 @@ La propriété **`Document.hidden`** retourne un Booléen qui indique si la page
 ## Syntaxe
 
 ```js
-var boolean = document.hidden
+var boolean = document.hidden;
 ```
 
 ## Exemples
 
 ```js
-document.addEventListener("visibilitychange", function() {
-  console.log( document.hidden );
+document.addEventListener("visibilitychange", function () {
+  console.log(document.hidden);
   // Modifier le comportement...
 });
 ```
