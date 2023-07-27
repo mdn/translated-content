@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: repeat count must be non-negative'
+title: "RangeError: repeat count must be non-negative"
 slug: Web/JavaScript/Reference/Errors/Negative_repetition_count
 translation_of: Web/JavaScript/Reference/Errors/Negative_repetition_count
 ---
@@ -27,16 +27,16 @@ La méthode {{jsxref("String.prototype.repeat()")}} a été utilisée avec un ar
 ### Exemples invalides
 
 ```js example-bad
-'abc'.repeat(-1); // RangeError 
+"abc".repeat(-1); // RangeError
 ```
 
 ### Exemples valides
 
 ```js example-good
-'abc'.repeat(0);    // ''
-'abc'.repeat(1);    // 'abc'
-'abc'.repeat(2);    // 'abcabc'
-'abc'.repeat(3.5);  // 'abcabcabc' (converti en entier)
+"abc".repeat(0); // ''
+"abc".repeat(1); // 'abc'
+"abc".repeat(2); // 'abcabc'
+"abc".repeat(3.5); // 'abcabcabc' (converti en entier)
 ```
 
 ## Voir aussi

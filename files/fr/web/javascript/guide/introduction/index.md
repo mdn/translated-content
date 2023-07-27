@@ -88,9 +88,9 @@ La console fonctionne exactement de la même manière que `eval`&nbsp;: la derni
 
 ```js
 function saluer(votreNom) {
-  alert("Hello " + votreNom)
+  alert("Hello " + votreNom);
 }
-console.log(eval('3 + 5'))
+console.log(eval("3 + 5"));
 ```
 
 ### Le mode éditeur multiligne

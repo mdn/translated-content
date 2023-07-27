@@ -58,7 +58,7 @@ Pour former un littéral en base octal, on pourra utiliser un zéro suivi de la 
 Pour former une séquence d'échappement en base octale, on écrira une séquence d'échappement en base hexadécimale :
 
 ```js example-good
-'\xA9';
+"\xA9";
 ```
 
 ## Voir aussi

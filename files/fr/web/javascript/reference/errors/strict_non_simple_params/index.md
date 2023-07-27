@@ -73,7 +73,7 @@ var somme = function somme([a, b]) {
 On peut convertir le fragment de code précédent avec l'expression suivante :
 
 ```js example-good
-var somme = (function() {
+var somme = (function () {
   "use strict";
   return function somme([a, b]) {
     return a + b;

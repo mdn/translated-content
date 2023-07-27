@@ -91,7 +91,7 @@ Les groupes permettent de regrouper différents motifs ensemble et les groupes d
 const listePersonnes = `Prénom : Jean, Nom_famille : Biche
 Prénom : Jeanne, Nom_famille : Ferrant`;
 
-const regexpNames =  /Prénom : (\w+), Nom_famille : (\w+)/mg;
+const regexpNames = /Prénom : (\w+), Nom_famille : (\w+)/gm;
 for (const correspondance of listePersonnes.matchAll(regexpNames)) {
   console.log(`Bonjour ${correspondance[1]} ${correspondance[2]}`);
 }
@@ -103,9 +103,11 @@ for (const correspondance of listePersonnes.matchAll(regexpNames)) {
 const listePersonnes = `Prénom : Jean, Nom_famille : Biche
 Prénom : Jeanne, Nom_famille : Ferrant`;
 
-const regexpNames =  /Prénom : (?<prenom>\w+), Nom_famille : (?<nom>\w+)/mg;
+const regexpNames = /Prénom : (?<prenom>\w+), Nom_famille : (?<nom>\w+)/gm;
 for (const correspondance of listePersonnes.matchAll(regexpNames)) {
-  console.log(`Bonjour ${correspondance.groups.prenom} ${correspondance.groups.nom}`);
+  console.log(
+    `Bonjour ${correspondance.groups.prenom} ${correspondance.groups.nom}`,
+  );
 }
 ```
 
@@ -135,7 +137,7 @@ lines.splice(
   1,
   0,
   " ".repeat(match.indices[1][1] - match.indices[1][0]) +
-    "^".repeat(match.indices.groups.name[1] - match.indices.groups.name[0])
+    "^".repeat(match.indices.groups.name[1] - match.indices.groups.name[0]),
 );
 console.log(lines.join("\n"));
 // function add(x, y) {

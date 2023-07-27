@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: for-in loop head declarations may not have initializers'
+title: "SyntaxError: for-in loop head declarations may not have initializers"
 slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 translation_of: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 ---
@@ -45,7 +45,7 @@ On peut retirer l'initialisateur de l'en-tête de la boucle :
 ```js example-good
 "use strict";
 
-var obj = {a: 1, b: 2, c: 3 };
+var obj = { a: 1, b: 2, c: 3 };
 
 for (var i in obj) {
   console.log(obj[i]);
@@ -57,7 +57,7 @@ for (var i in obj) {
 [Il ne faut pas utiliser de boucle `for...in` pour parcourir un tableau (`Array`)](/fr/docs/Web/JavaScript/Reference/Instructions/for...in#Utiliser_for...in_et_parcourir_un_tableau). Peut-être souhaitiez-vous utiliser une boucle `for` pour parcourir le tableau ? Cette boucle `for` permet également d'utiliser un initialisateur :
 
 ```js example-good
-var arr = [ "a", "b", "c" ]
+var arr = ["a", "b", "c"];
 
 for (var i = 2; i < arr.length; i++) {
   console.log(arr[i]);

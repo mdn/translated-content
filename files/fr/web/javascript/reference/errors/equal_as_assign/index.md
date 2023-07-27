@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: test for equality (==) mistyped as assignment (=)?'
+title: "SyntaxError: test for equality (==) mistyped as assignment (=)?"
 slug: Web/JavaScript/Reference/Errors/Equal_as_assign
 translation_of: Web/JavaScript/Reference/Errors/Equal_as_assign
 ---
@@ -26,7 +26,7 @@ Le code utilise une affectation (`=`) là où on attendrait un test d'égalité 
 
 Il est conseillé de ne pas utiliser d'affectations simples dans des expressions conditionnelles (comme le test effectué avec [`if...else`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else)) car on peut confondre les deux à la lecture du code. Ainsi, on n'utilisera pas la forme suivante :
 
-```js example-bad
+```js-nolint example-bad
 if (x = y) {
   // do the right thing
 }

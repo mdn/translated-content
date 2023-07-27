@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: Unexpected ''#'' used outside of class body'
+title: "SyntaxError: Unexpected '#' used outside of class body"
 slug: Web/JavaScript/Reference/Errors/Hash_outside_class
 translation_of: Web/JavaScript/Reference/Errors/Hash_outside_class
 ---
@@ -35,30 +35,29 @@ document.querySelector(#un-élément)
 Pourra être corrigé avec&nbsp;:
 
 ```js example-good
-document.querySelector("#un-élément")
+document.querySelector("#un-élément");
 ```
 
 ### En dehors d'une classe
 
 ```js example-bad
 class ClasseAvecChampPrivé {
-  #champPrivé
+  #champPrivé;
 
-  constructor() {
-  }
+  constructor() {}
 }
 
-this.#champPrivé = 42
+this.#champPrivé = 42;
 ```
 
 Cela pourra être corrigé en déplaçant le champ privé à l'intérieur de la classe&nbsp;:
 
 ```js example-good
 class ClasseAvecChampPrivé {
-  #champPrivé
+  #champPrivé;
 
   constructor() {
-    this.#champPrivé = 42
+    this.#champPrivé = 42;
   }
 }
 ```

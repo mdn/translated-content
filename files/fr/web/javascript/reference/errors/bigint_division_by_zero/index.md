@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: BigInt division by zero'
+title: "RangeError: BigInt division by zero"
 slug: Web/JavaScript/Reference/Errors/BigInt_division_by_zero
 l10n:
   sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4

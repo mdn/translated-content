@@ -18,16 +18,16 @@ Les champs publics, tant statiques que d'instance, sont des propriétés qui peu
 
 ```js
 class ClasseAvecChampDInstance {
-  champDInstance = 'champ d\'instance'
+  champDInstance = "champ d'instance";
 }
 
 class ClasseAvecChampStatique {
-  static champStatique = 'champ statique'
+  static champStatique = "champ statique";
 }
 
 class ClasseAvecMethodeDInstancePublique {
   methodePublique() {
-    return 'hello world'
+    return "hello world";
   }
 }
 ```
@@ -42,10 +42,10 @@ Les champs statiques publics sont déclarés en utilisant le mot-clé `static`. 
 
 ```js
 class ClasseAvecChampStatique {
-  static champStatique = 'champ statique'
+  static champStatique = "champ statique";
 }
 
-console.log(ClasseAvecChampStatique.champStatique)
+console.log(ClasseAvecChampStatique.champStatique);
 // affichage attendu : "champ statique"
 ```
 
@@ -53,11 +53,11 @@ Les champs sans initialiseur sont initialisés à `undefined`.
 
 ```js
 class ClasseAvecChampStatique {
-  static champStatique
+  static champStatique;
 }
 
-console.assert(ClasseAvecChampStatique.hasOwnProperty('champStatique'))
-console.log(ClasseAvecChampStatique.champStatique)
+console.assert(ClasseAvecChampStatique.hasOwnProperty("champStatique"));
+console.log(ClasseAvecChampStatique.champStatique);
 // affichage attendu : "undefined"
 ```
 
@@ -65,17 +65,17 @@ Les champs statiques publics ne sont pas réinitialisés dans les sous-classes, 
 
 ```js
 class ClasseAvecChampStatique {
-  static champStatiqueDeBase = 'champ de base'
+  static champStatiqueDeBase = "champ de base";
 }
 
 class SousClasseAvecChampStatique extends ClasseAvecChampStatique {
-  static sousChampStatique = 'champ de la sous-classe'
+  static sousChampStatique = "champ de la sous-classe";
 }
 
-console.log(SousClasseAvecChampStatique.sousChampStatique)
+console.log(SousClasseAvecChampStatique.sousChampStatique);
 // affichage attendu : "champ de la sous-classe"
 
-console.log(SousClasseAvecChampStatique.champStatiqueDeBase)
+console.log(SousClasseAvecChampStatique.champStatiqueDeBase);
 // affichage attendu : "champ de base"
 ```
 
@@ -83,20 +83,22 @@ Lors de l'initialisation des champs, `this` fait référence au constructeur de 
 
 ```js
 class ClasseAvecChampStatique {
-  static champStatiqueDeBase = 'champ statique de base'
-  static autreChampStatiqueDeBase = this.champStatiqueDeBase
+  static champStatiqueDeBase = "champ statique de base";
+  static autreChampStatiqueDeBase = this.champStatiqueDeBase;
 
-  static methodeStatiqueDeBase() { return 'affichage de la méthode statique de base' }
+  static methodeStatiqueDeBase() {
+    return "affichage de la méthode statique de base";
+  }
 }
 
 class SousClasseAvecChampStatique extends ClasseAvecChampStatique {
-  static sousChampStatique = super.methodeStatiqueDeBase()
+  static sousChampStatique = super.methodeStatiqueDeBase();
 }
 
-console.log(ClasseAvecChampStatique.autreChampStatiqueDeBase)
+console.log(ClasseAvecChampStatique.autreChampStatiqueDeBase);
 // affichage attendu : "champ statique de base"
 
-console.log(SousClasseAvecChampStatique.sousChampStatique)
+console.log(SousClasseAvecChampStatique.sousChampStatique);
 // affichage attendu : "affichage de la méthode statique de base"
 ```
 
@@ -108,11 +110,11 @@ Les champs d'instance publics sont ajoutés grâce à {{jsxref("Global_Objects/O
 
 ```js
 class ClasseAvecChampDInstance {
-  champDInstance = 'champ d\'instance'
+  champDInstance = "champ d'instance";
 }
 
-const instance = new ClasseAvecChampDInstance()
-console.log(instance.champDInstance)
+const instance = new ClasseAvecChampDInstance();
+console.log(instance.champDInstance);
 // affichage attendu : "champ d'instance"
 ```
 
@@ -120,11 +122,11 @@ Les champs sans initialiseur sont initialisés à `undefined`.
 
 ```js
 class ClasseAvecChampDInstance {
-  champdDInstance
+  champdDInstance;
 }
 
-const instance = new ClasseAvecChampDInstance()
-console.assert(instance.hasOwnProperty('champDInstance'))
+const instance = new ClasseAvecChampDInstance();
+console.assert(instance.hasOwnProperty("champDInstance"));
 console.log(instance.champDInstance);
 // affichage attendu : "undefined"
 ```
@@ -132,14 +134,14 @@ console.log(instance.champDInstance);
 À l'instar des propriétés, les noms de champ peuvent être calculés :
 
 ```js
-const PREFIXE = 'prefixe';
+const PREFIXE = "prefixe";
 
 class ClasseAvecNomDeChampCalcule {
-    [`${PREFIXE}Champ`] = 'champ préfixé'
+  [`${PREFIXE}Champ`] = "champ préfixé";
 }
 
-const instance = new ClasseAvecNomDeChampCalcule()
-console.log(instance.prefixeChamp)
+const instance = new ClasseAvecNomDeChampCalcule();
+console.log(instance.prefixeChamp);
 // affichage attendu : "champ préfixé"
 ```
 
@@ -147,22 +149,24 @@ Lors de l'initialisation des champs, `this` fait référence à l'instance en co
 
 ```js
 class ClasseAvecChampDInstance {
-  champDInstanceDeBase = 'champ de base'
-  autreChampDInstanceDeBase = this.champDInstanceDeBase
-  methodeDInstanceDeBase() { return 'affichage de la méthode de base' }
+  champDInstanceDeBase = "champ de base";
+  autreChampDInstanceDeBase = this.champDInstanceDeBase;
+  methodeDInstanceDeBase() {
+    return "affichage de la méthode de base";
+  }
 }
 
 class SousClasseAvecChampDInstance extends ClasseAvecChampDInstance {
-  sousChampDInstance = super.methodeDInstanceDeBase()
+  sousChampDInstance = super.methodeDInstanceDeBase();
 }
 
-const base = new ClasseAvecChampDInstance()
-const sous = new SousClasseAvecChampDInstance()
+const base = new ClasseAvecChampDInstance();
+const sous = new SousClasseAvecChampDInstance();
 
-console.log(base.autreChampDInstanceDeBase)
+console.log(base.autreChampDInstanceDeBase);
 // affichage attendu : "champ de base"
 
-console.log(sous.sousChampDInstance)
+console.log(sous.sousChampDInstance);
 // affichage attendu : "affichage de la méthode de base"
 ```
 
@@ -175,7 +179,7 @@ Le mot-clé **`static`** définit une méthode statique pour une classe. Les mé
 ```js
 class ClasseAvecMethodeStatique {
   static methodeStatique() {
-    return 'la méthode statique a été appelée.';
+    return "la méthode statique a été appelée.";
   }
 }
 
@@ -192,12 +196,12 @@ Comme leur nom l'implique, les méthodes d'instance publiques sont des fonctions
 ```js
 class ClasseAvecMethodeDInstancePublique {
   methodePublique() {
-    return 'hello world'
+    return "hello world";
   }
 }
 
-const instance = new ClasseAvecMethodeDInstancePublique()
-console.log(instance.methodePublique())
+const instance = new ClasseAvecMethodeDInstancePublique();
+console.log(instance.methodePublique());
 // affichage attendu : "hello world"
 ```
 
@@ -207,9 +211,9 @@ Vous pouvez utiliser des fonctions génératrices, asynchrones et génératrices
 
 ```js
 class ClasseAvecMethodesFantaisie {
-  *methodeGeneratrice() { }
-  async methodeAsynchrone() { }
-  async *methodeGeneratriceAsynchrone() { }
+  *methodeGeneratrice() {}
+  async methodeAsynchrone() {}
+  async *methodeGeneratriceAsynchrone() {}
 }
 ```
 
@@ -217,20 +221,20 @@ A l'intérieur des méthodes d'instance, `this` fait référence à l'instance e
 
 ```js
 class ClasseDeBase {
-  msg = 'hello world'
+  msg = "hello world";
   methodePubliqueDeBase() {
-    return this.msg
+    return this.msg;
   }
 }
 
 class SousClasse extends ClasseDeBase {
   sousMethodePublique() {
-    return super.methodePubliqueDeBase()
+    return super.methodePubliqueDeBase();
   }
 }
 
-const instance = new SousClasse()
-console.log(instance.sousMethodePublique())
+const instance = new SousClasse();
+console.log(instance.sousMethodePublique());
 // affichage attendu : "hello world"
 ```
 
@@ -238,12 +242,12 @@ Les accesseurs et les mutateurs sont des méthodes spéciales qui sont liées à
 
 ```js
 class ClasseAvecGetSet {
-  #msg = 'hello world'
+  #msg = "hello world";
   get msg() {
-    return this.#msg
+    return this.#msg;
   }
   set msg(x) {
-    this.#msg = `hello ${x}`
+    this.#msg = `hello ${x}`;
   }
 }
 
@@ -251,7 +255,7 @@ const instance = new ClasseAvecGetSet();
 console.log(instance.msg);
 // affichage attendu : "hello world"
 
-instance.msg = 'gâteau';
+instance.msg = "gâteau";
 console.log(instance.msg);
 // affichage attendu : "hello gâteau"
 ```
