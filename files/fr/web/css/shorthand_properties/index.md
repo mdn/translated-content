@@ -44,12 +44,15 @@ Il y a deux thèmes pour lesquels l'ordre est important&nbsp;:
 Les propriétés raccourcies qui portent sur les bords d'une boîte, comme [`border-style`](/fr/docs/Web/CSS/border-style), [`margin`](/fr/docs/Web/CSS/margin) ou [`padding`](/fr/docs/Web/CSS/padding), utilisent toutes une syntaxe cohérente ayant 1 à 4 valeurs&nbsp;:
 
 - Syntaxe avec une valeur
+
   - : `border-width: 1em` — la valeur représente tous les bords&nbsp;: ![Les bords de la boîte avec une syntaxe utilisant une valeur.](border1.png)
 
 - Syntaxe avec deux valeurs
+
   - : `border-width: 1em 2em` — la première valeur représente les bords sur l'axe vertical, c'est-à-dire les bords haut et bas&nbsp;; la seconde représente les bords sur l'axe horizontal, c'est-à-dire les bords gauche et droit&nbsp;: ![Les bords de la boîte avec une syntaxe utilisant deux valeurs.](border2.png)
 
 - Syntaxe avec trois valeurs
+
   - : `border-width: 1em 2em 3em` — la première valeur représente le bord haut, la deuxième représente les bords de l'axe horizontal&nbsp;: gauche et droit, et la troisième représente le bord bas&nbsp;: ![Les bords de la boîte avec une syntaxe utilisant trois valeurs.](border3.png)
 
 - Syntaxe avec quatre valeurs
@@ -60,12 +63,15 @@ Les propriétés raccourcies qui portent sur les bords d'une boîte, comme [`bor
 De la même manière, les propriétés raccourcies qui portent sur les coins d'une boîte (par exemple [`border-radius`](/fr/docs/Web/CSS/border-radius)) utilisent toutes une syntaxe cohérente ayant 1 à 4 valeurs&nbsp;:
 
 - Syntaxe avec une valeur
+
   - : `border-radius: 1em` — la valeur unique représente tous les coins&nbsp;: ![Les coins de la boîte avec une syntaxe utilisant une valeur.](corner1.png)
 
 - Syntaxe avec deux valeurs
+
   - : `border-radius: 1em 2em` — la première valeur porte sur les coins supérieur gauche et inférieur droit, la seconde porte sur les coins supérieur droit et inférieur gauche&nbsp;: ![Les coins de la boîte avec une syntaxe utilisant deux valeurs.](corner2.png)
 
 - Syntaxe avec trois valeurs
+
   - : `border-radius: 1em 2em 3em` — la première valeur représente le coin supérieur gauche, la deuxième les coins supérieur droit et inférieur gauche, la troisième le coin inférieur droit&nbsp;: ![Les coins de la boîte avec une syntaxe utilisant trois valeurs.](corner3.png)
 
 - Syntaxe avec quatre valeurs
