@@ -53,9 +53,10 @@ La pseudo-classe `nth-last-child` prend un seul argument qui représente le moti
 
 ```css
 table {
-  border:1px solid blue;
+  border: 1px solid blue;
 }
-tr:nth-last-child(-n+3) { /* les trois derniers enfants */
+tr:nth-last-child(-n + 3) {
+  /* les trois derniers enfants */
   background-color: lime;
 }
 ```
@@ -69,16 +70,16 @@ tr:nth-last-child(-n+3) { /* les trois derniers enfants */
       <td>Première ligne</td>
     </tr>
     <tr>
-       <td>Deuxième ligne</td>
+      <td>Deuxième ligne</td>
     </tr>
     <tr>
-       <td>Troisième ligne</td>
+      <td>Troisième ligne</td>
     </tr>
     <tr>
-       <td>Quatrième ligne</td>
+      <td>Quatrième ligne</td>
     </tr>
     <tr>
-       <td>Sixième ligne</td>
+      <td>Sixième ligne</td>
     </tr>
   </tbody>
 </table>
@@ -117,7 +118,7 @@ tr:nth-last-child(n) {
   background-color: lightgray;
 }
 
-tr:nth-last-child(n+1){
+tr:nth-last-child(n + 1) {
   font-weight: 600;
 }
 ```
@@ -151,8 +152,8 @@ Il est possible d'utiliser les compteurs pour mettre en forme une liste selon le
 #### CSS
 
 ```css
-li:nth-last-child(n+3),
-li:nth-last-child(n+3) ~ li {
+li:nth-last-child(n + 3),
+li:nth-last-child(n + 3) ~ li {
   color: red;
 }
 ```

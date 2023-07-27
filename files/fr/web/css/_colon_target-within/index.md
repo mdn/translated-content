@@ -30,14 +30,20 @@ La pseudo-classe `:target-within` peut être utilisée pour mettre en avant un a
 ```html
 <h3>Table des matières</h3>
 <ol>
- <li><a href="#p1">Aller au premier paragraphe&nbsp;!</a></li>
- <li><a href="#p2">Aller au second paragraphe&nbsp;!</a></li>
+  <li><a href="#p1">Aller au premier paragraphe&nbsp;!</a></li>
+  <li><a href="#p2">Aller au second paragraphe&nbsp;!</a></li>
 </ol>
 
 <article>
   <h3>Mon bel article</h3>
-  <p id="p1">Vous pouvez cibler <i>ce paragraphe</i> en utilisant un fragment d'URL. Cliquez sur le lien ci-dessus pour essayer&nbsp;!</p>
-  <p id="p2">Ceci est <i>un autre paragraphe</i>, également accessible depuis les liens ci-dessus. N'est-ce pas savoureux&nbsp;?</p>
+  <p id="p1">
+    Vous pouvez cibler <i>ce paragraphe</i> en utilisant un fragment d'URL.
+    Cliquez sur le lien ci-dessus pour essayer&nbsp;!
+  </p>
+  <p id="p2">
+    Ceci est <i>un autre paragraphe</i>, également accessible depuis les liens
+    ci-dessus. N'est-ce pas savoureux&nbsp;?
+  </p>
 </article>
 ```
 
@@ -53,7 +59,7 @@ p:target::before {
   font: 70% sans-serif;
   content: "►";
   color: limegreen;
-  margin-right: .25em;
+  margin-right: 0.25em;
 }
 
 /* Style des éléments en italique à l'intérieur de l'élément cible */

@@ -12,7 +12,6 @@ Une ressource est lue même si elle se trouve en mémoire tampon ou mise en paus
 
 ```css
 :playing {
-
 }
 ```
 

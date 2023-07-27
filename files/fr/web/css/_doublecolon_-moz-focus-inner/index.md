@@ -23,8 +23,7 @@ Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) 
 ### HTML
 
 ```html
-<input type="submit" value="Input"/>
-<button type="submit">Bouton</button>
+<input type="submit" value="Input" /> <button type="submit">Bouton</button>
 ```
 
 ### CSS
@@ -32,11 +31,11 @@ Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) 
 ```css
 button::-moz-focus-inner,
 input[type="submit"]::-moz-focus-inner {
-    padding-block-start: 0px;
-    padding-inline-end: 2px;
-    padding-block-end: 0px;
-    padding-inline-start: 2px;
-    border: 2px dotted red;
+  padding-block-start: 0px;
+  padding-inline-end: 2px;
+  padding-block-end: 0px;
+  padding-inline-start: 2px;
+  border: 2px dotted red;
 }
 ```
 

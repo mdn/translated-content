@@ -14,7 +14,10 @@ Le pseudo-élément **`::-webkit-meter-suboptimum-value`** donne une couleur jau
 
 ```css
 meter::-webkit-meter-suboptimum-value {
-  background: -webkit-gradient linear, left top, left bottom;
+  background:
+    -webkit-gradient linear,
+    left top,
+    left bottom;
   height: 100%;
   box-sizing: border-box;
 }

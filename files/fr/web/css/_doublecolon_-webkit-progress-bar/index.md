@@ -20,14 +20,14 @@ progress {
 }
 
 ::-webkit-progress-bar {
-   background-color: orange;
+  background-color: orange;
 }
 ```
 
 ### HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 ### Résultat

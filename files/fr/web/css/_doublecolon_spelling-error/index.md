@@ -30,7 +30,7 @@ Seul un sous-ensemble restreint de propriétés CSS peut être utilisé dans une
 ## Syntaxe
 
 ```css
-::spelling-error
+::spelling-error {}
 ```
 
 ## Exemples
@@ -38,16 +38,15 @@ Seul un sous-ensemble restreint de propriétés CSS peut être utilisé dans une
 ### CSS
 
 ```css
-p::spelling-error { color:red }
+p::spelling-error {
+  color: red;
+}
 ```
 
 ### HTML
 
 ```html
-<p>
-  Alice devina tout de suite qu’il cherch l’éventail
-  et la paire de gants.
-</p>
+<p>Alice devina tout de suite qu’il cherch l’éventail et la paire de gants.</p>
 ```
 
 ### Résultat

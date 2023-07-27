@@ -56,11 +56,11 @@ input:required:valid {
 ```html
 <form>
   <label>Veuillez saisir une URL :</label>
-  <input type="url">
-  <br>
-  <br>
+  <input type="url" />
+  <br />
+  <br />
   <label>Veuillez saisir une adresse électronique :</label>
-  <input type="email" required>
+  <input type="email" required />
 </form>
 ```
 

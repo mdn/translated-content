@@ -19,13 +19,13 @@ Le pseudo-élément **`::-moz-range-progress`** représente la portion de la pis
 ### HTML
 
 ```html
-<input type="range" min="0" max="100" step="5" value="50"/>
+<input type="range" min="0" max="100" step="5" value="50" />
 ```
 
 ### CSS
 
 ```css
-input[type=range]::-moz-range-progress {
+input[type="range"]::-moz-range-progress {
   background-color: green;
   height: 1em;
 }
