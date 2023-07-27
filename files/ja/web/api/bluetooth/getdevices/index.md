@@ -9,7 +9,7 @@ l10n:
 
 [Web Bluetooth API](/ja/docs/Web/API/Web_Bluetooth_API) の {{DOMxRef("Bluetooth")}} インターフェイスの **`getDevices()`** メソッドは、オリジンがアクセスを許可されている Bluetooth デバイスを公開します。このメソッドは許可を要求するプロンプトを表示しません。
 
-> **メモ:** このメソッドは、圏外だったり電源が切られていたりするものを含め、オリジンが現在アクセスを許可されている各デバイスに対応する {{DOMxRef("BluetoothDevice")}}  を返します。
+> **メモ:** このメソッドは、圏外だったり電源が切られていたりするものを含め、オリジンが現在アクセスを許可されている各デバイスに対応する {{DOMxRef("BluetoothDevice")}} を返します。
 
 ## 構文
 
