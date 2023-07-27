@@ -317,7 +317,8 @@ L'exemple ci-dessus ne sera pas appliqué par les navigateurs qui ne prennent pa
 Ainsi :
 
 ```css
-.a > :-moz-any(.b, .c) {}
+.a > :-moz-any(.b, .c) {
+}
 ```
 
 sera plus lent que
