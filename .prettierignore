@@ -39,9 +39,7 @@ build/
 /files/es/web/javascript/reference/**/*.md
 
 # fr
-/files/fr/mozilla/add-ons/webextensions/api/**/*.md
 /files/fr/web/css/**/*.md
-/files/fr/web/html/**/*.md
 /files/fr/web/javascript/**/*.md
 
 # ja
