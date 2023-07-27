@@ -167,7 +167,7 @@ _更多内容即将推出；Mozilla 仍在致力于自动播放阻止。如果�
 
 ### 示例：仅允许来自文档域的自动播放
 
-使用 {{HTTPHeader("Permissions-Policy")}} 标头来仅允许媒体从文档的 {{Glossary("origin")}} 自动播放:
+使用 {{HTTPHeader("Permissions-Policy")}} 标头来仅允许媒体从文档的 {{Glossary("origin")}} 自动播放：
 
 ```plain
 Permissions-Policy: autoplay 'self'
@@ -214,7 +214,7 @@ Permissions-Policy: autoplay 'self' https://example.media
 
 ### 示例：禁用自动播放
 
-将 `autoplay` 功能策略设置为 `'none'` 会完全禁用文档或 `<iframe>` 以及所有嵌套框架的自动播放。 HTTP 标头是：
+将 `autoplay` 功能策略设置为 `'none'` 会完全禁用文档或 `<iframe>` 以及所有嵌套框架的自动播放。HTTP 标头是：
 
 ```plain
 Permissions-Policy: autoplay 'none'
