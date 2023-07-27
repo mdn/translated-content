@@ -96,5 +96,5 @@ bottom top
 - [Valeurs et unités en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
 - [Tutoriel — Introduction aux valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
 - [`background-position`](/fr/docs/Web/CSS/background-position)
-- [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient())
-- [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient())
+- [`radial-gradient()`](</fr/docs/Web/CSS/gradient/radial-gradient()>)
+- [`conic-gradient()`](</fr/docs/Web/CSS/gradient/conic-gradient()>)

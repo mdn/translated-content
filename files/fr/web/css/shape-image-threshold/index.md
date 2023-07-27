@@ -49,10 +49,8 @@ Dans cet exemple, on utilise un bloc {{HTMLElement("div")}} pour y afficher une 
   width: 150px;
   height: 150px;
   float: left;
-  background-image: linear-gradient(30deg, black, transparent 80%,
-      transparent);
-  shape-outside: linear-gradient(30deg, black, transparent 80%,
-      transparent);
+  background-image: linear-gradient(30deg, black, transparent 80%, transparent);
+  shape-outside: linear-gradient(30deg, black, transparent 80%, transparent);
   shape-image-threshold: 0.2;
 }
 ```
@@ -65,14 +63,14 @@ Dans cet exemple, on utilise un bloc {{HTMLElement("div")}} pour y afficher une 
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel at commodi
   voluptates enim, distinctio officia. Saepe optio accusamus doloribus sint
-  facilis itaque ab nulla, dolor molestiae assumenda cum sit placeat
-  adipisci, libero quae nihil porro debitis laboriosam inventore animi
-  impedit nostrum nesciunt quisquam expedita! Dolores consectetur iure atque
-  a mollitia dicta repudiandae illum exercitationem aliquam repellendus
-  ipsum porro modi, id nemo eligendi, architecto ratione quibusdam iusto
-  nisi soluta? Totam inventore ea eum sed velit et eligendi suscipit
-  accusamus iusto dolore, at provident eius alias maxime pariatur non
-  deleniti ipsum sequi rem eveniet laboriosam magni expedita?
+  facilis itaque ab nulla, dolor molestiae assumenda cum sit placeat adipisci,
+  libero quae nihil porro debitis laboriosam inventore animi impedit nostrum
+  nesciunt quisquam expedita! Dolores consectetur iure atque a mollitia dicta
+  repudiandae illum exercitationem aliquam repellendus ipsum porro modi, id nemo
+  eligendi, architecto ratione quibusdam iusto nisi soluta? Totam inventore ea
+  eum sed velit et eligendi suscipit accusamus iusto dolore, at provident eius
+  alias maxime pariatur non deleniti ipsum sequi rem eveniet laboriosam magni
+  expedita?
 </p>
 ```
 
