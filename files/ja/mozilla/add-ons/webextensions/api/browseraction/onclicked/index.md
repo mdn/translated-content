@@ -12,9 +12,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
 ## 書式
 
 ```js
-browser.browserAction.onClicked.addListener(listener)
-browser.browserAction.onClicked.removeListener(listener)
-browser.browserAction.onClicked.hasListener(listener)
+browser.browserAction.onClicked.addListener(listener);
+browser.browserAction.onClicked.removeListener(listener);
+browser.browserAction.onClicked.hasListener(listener);
 ```
 
 イベントは３つの関数を持っています:

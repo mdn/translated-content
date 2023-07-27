@@ -13,9 +13,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
 
 ```js
 browser.bookmarks.search(
-  query,   // 文字列またはオブジェクト
-  callback // 関数
-)
+  query, // 文字列またはオブジェクト
+  callback, // 関数
+);
 ```
 
 ### 引数
@@ -76,7 +76,7 @@ function onGot(bookmarkItems) {
 }
 
 function checkActiveTab(tab) {
-  chrome.bookmarks.search({url: tab.url}, onGot);
+  chrome.bookmarks.search({ url: tab.url }, onGot);
 }
 
 chrome.browserAction.onClicked.addListener(checkActiveTab);

@@ -12,7 +12,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages
 ## 構文
 
 ```js
-var gettingAcceptLanguages = browser.i18n.getAcceptLanguages()
+var gettingAcceptLanguages = browser.i18n.getAcceptLanguages();
 ```
 
 ### 引数

@@ -21,10 +21,10 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 
 ```js
 var sending = browser.runtime.sendMessage(
-  extensionId,             // optional string
-  message,                 // any
-  options                  // optional object
-)
+  extensionId, // optional string
+  message, // any
+  options, // optional object
+);
 ```
 
 ### 引数
@@ -85,7 +85,7 @@ function handleError(error) {
 
 function notifyBackgroundPage(e) {
   var sending = browser.runtime.sendMessage({
-    greeting: "Greeting from the content script"
+    greeting: "Greeting from the content script",
   });
   sending.then(handleResponse, handleError);
 }
@@ -99,9 +99,8 @@ window.addEventListener("click", notifyBackgroundPage);
 // background-script.js
 
 function handleMessage(request, sender, sendResponse) {
-  console.log("Message from the content script: " +
-    request.greeting);
-  sendResponse({response: "Response from background script"});
+  console.log("Message from the content script: " + request.greeting);
+  sendResponse({ response: "Response from background script" });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);

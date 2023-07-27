@@ -13,8 +13,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/get
 
 ```js
 var getting = browser.tabs.get(
-  tabId              // integer
-)
+  tabId, // integer
+);
 ```
 
 ### Parameters

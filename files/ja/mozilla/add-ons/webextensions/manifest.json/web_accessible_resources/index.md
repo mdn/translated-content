@@ -44,7 +44,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources
 
 例えば、拡張機能に images/my-image.png にある画像ファイルを入れたい場合、このようにします:
 
-```html
+```plain
 my-extension-files/
     manifest.json
     my-background-script.js
@@ -60,8 +60,8 @@ my-extension-files/
 
 このファイルは次の URL で利用できます:
 
-```html
-moz-extension://<extension-UUID>/images/my-image.png"
+```url
+moz-extension://<extension-UUID>/images/my-image.png
 ```
 
 `<extension-UUID>` は拡張機能の ID **ではありません。**これは各ブラウザーインスタンス用にランダムに生成されます。これはウェブサイトがインストールしている拡張機能を調べることで指紋を取ることを防止します。

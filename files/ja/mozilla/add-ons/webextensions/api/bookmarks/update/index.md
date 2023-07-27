@@ -13,10 +13,10 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
 
 ```js
 browser.bookmarks.update(
-  id,      // 文字列
+  id, // 文字列
   changes, // オブジェクト
-  callback // 関数（省略可）
-)
+  callback, // 関数（省略可）
+);
 ```
 
 ### 引数
@@ -55,7 +55,7 @@ function updateFolders(items) {
     // only folders, so skip items with a `url`
     if (!item.url) {
       chrome.bookmarks.update(item.id, {
-        title: "Mozilla Developer Network (MDN)"
+        title: "Mozilla Developer Network (MDN)",
       });
     }
   }

@@ -40,12 +40,12 @@ l10n:
 
 次の 3 つの方法のいずれかを使用して、ウェブページにコンテンツスクリプトを読み込むことができます。
 
-1. - インストール時に、URL パターンに一致するページ内へ。
-     - : `manifest.json` の [`content_scripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) キーを使用して、URL が[指定されたパターンに一致する](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)ページをロードするたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。
-2. - 実行時に、URL パターンに一致するページ内へ。
-     - : {{WebExtAPIRef("contentScripts")}} API を使って、URL が[指定されたパターンに一致する](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)ページを読み込むたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。これは方法 1 と似ていますが、実行時にコンテンツスクリプトを追加/削除できる点が異なります。）
-3. - 実行時に、特定のタブへ。
-     - : Manifest V2 において、[`tabs.executeScript()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API を使用するか、Manifest V3 において、{{WebExtAPIRef("scripting.executeScript()")}} を使用すると、必要なときにコンテンツスクリプトを特定のタブに読み込むことができます。（ユーザーが[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action)をクリックした場合など。）
+1. インストール時に、URL パターンに一致するページ内へ。
+   - : `manifest.json` の [`content_scripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) キーを使用して、URL が[指定されたパターンに一致する](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)ページをロードするたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。
+2. 実行時に、URL パターンに一致するページ内へ。
+   - : {{WebExtAPIRef("contentScripts")}} API を使って、URL が[指定されたパターンに一致する](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)ページを読み込むたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。これは方法 1 と似ていますが、実行時にコンテンツスクリプトを追加/削除できる点が異なります。）
+3. 実行時に、特定のタブへ。
+   - : Manifest V2 において、[`tabs.executeScript()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API を使用するか、Manifest V3 において、{{WebExtAPIRef("scripting.executeScript()")}} を使用すると、必要なときにコンテンツスクリプトを特定のタブに読み込むことができます。（ユーザーが[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action)をクリックした場合など。）
 
 *フレームごと、拡張機能ごとの*グローバルスコープしかありません。これは 1 つのコンテンツスクリプトの変数は、読み込み方にかかわらず、他のコンテンツスクリプトからアクセスできることになります。
 
@@ -72,7 +72,7 @@ Firefox では、この挙動は [Xray vision](/ja/docs/Mozilla/Add-ons/WebExten
 次のようなウェブページを考えてみてください。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -101,7 +101,7 @@ window.foo = "This global variable was added by a page script";
 // redefine the built-in window.confirm() function
 window.confirm = () => {
   alert("The page script has also redefined 'confirm'");
-}
+};
 ```
 
 今度は拡張機能がページにコンテンツスクリプトを挿入します。
@@ -114,7 +114,7 @@ let pageScriptPara = document.getElementById("page-script-para");
 pageScriptPara.style.backgroundColor = "blue";
 
 // can't see properties added by page-script.js
-console.log(window.foo);  // undefined
+console.log(window.foo); // undefined
 
 // sees the original form of redefined properties
 window.confirm("Are you sure?"); // calls the original window.confirm()
@@ -272,7 +272,7 @@ function notifyExtension(e) {
   if (e.target.tagName !== "A") {
     return;
   }
-  browser.runtime.sendMessage({"url": e.target.href});
+  browser.runtime.sendMessage({ url: e.target.href });
 }
 ```
 
@@ -285,10 +285,10 @@ browser.runtime.onMessage.addListener(notify);
 
 function notify(message) {
   browser.notifications.create({
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("link.png"),
-    "title": "You clicked a link!",
-    "message": message.url
+    type: "basic",
+    iconUrl: browser.extension.getURL("link.png"),
+    title: "You clicked a link!",
+    message: message.url,
   });
 }
 ```
@@ -328,8 +328,8 @@ function notify(message) {
 ```js
 // content-script.js
 
-let myPort = browser.runtime.connect({name:"port-from-cs"});
-myPort.postMessage({greeting: "hello from content script"});
+let myPort = browser.runtime.connect({ name: "port-from-cs" });
+myPort.postMessage({ greeting: "hello from content script" });
 
 myPort.onMessage.addListener((m) => {
   console.log("In content script, received message from background script: ");
@@ -337,7 +337,7 @@ myPort.onMessage.addListener((m) => {
 });
 
 document.body.addEventListener("click", () => {
-  myPort.postMessage({greeting: "they clicked the page!"});
+  myPort.postMessage({ greeting: "they clicked the page!" });
 });
 ```
 
@@ -359,16 +359,18 @@ let portFromCS;
 
 function connected(p) {
   portFromCS = p;
-  portFromCS.postMessage({greeting: "hi there content script!"});
+  portFromCS.postMessage({ greeting: "hi there content script!" });
   portFromCS.onMessage.addListener((m) => {
-    portFromCS.postMessage({greeting: `In background script, received message from content script: ${m.greeting}`});
+    portFromCS.postMessage({
+      greeting: `In background script, received message from content script: ${m.greeting}`,
+    });
   });
 }
 
 browser.runtime.onConnect.addListener(connected);
 
 browser.browserAction.onClicked.addListener(() => {
-  portFromCS.postMessage({greeting: "they clicked the button!"});
+  portFromCS.postMessage({ greeting: "they clicked the button!" });
 });
 ```
 
@@ -379,19 +381,19 @@ browser.browserAction.onClicked.addListener(() => {
 ```js
 // background-script.js
 
-let ports = []
+let ports = [];
 
 function connected(p) {
-  ports[p.sender.tab.id] = p
+  ports[p.sender.tab.id] = p;
   // …
 }
 
-browser.runtime.onConnect.addListener(connected)
+browser.runtime.onConnect.addListener(connected);
 
 browser.browserAction.onClicked.addListener(() => {
   ports.forEach((p) => {
-        p.postMessage({greeting: "they clicked the button!"})
-    })
+    p.postMessage({ greeting: "they clicked the button!" });
+  });
 });
 ```
 
@@ -422,10 +424,13 @@ let messenger = document.getElementById("from-page-script");
 messenger.addEventListener("click", messageContentScript);
 
 function messageContentScript() {
-  window.postMessage({
-    direction: "from-page-script",
-    message: "Message from the page"
-  }, "*");
+  window.postMessage(
+    {
+      direction: "from-page-script",
+      message: "Message from the page",
+    },
+    "*",
+  );
 }
 ```
 
@@ -481,15 +486,18 @@ window.addEventListener("message", (event) => {
 ```js
 // content-script.js
 
-window.eval('window.x = 1;');
-eval('window.y = 2');
+window.eval("window.x = 1;");
+eval("window.y = 2");
 
 console.log(`In content script, window.x: ${window.x}`);
 console.log(`In content script, window.y: ${window.y}`);
 
-window.postMessage({
-  message: "check"
-}, "*");
+window.postMessage(
+  {
+    message: "check",
+  },
+  "*",
+);
 ```
 
 このコードは単に変数 x と y を、`window.eval()` と `eval()` を用いて作成し、値をログに出し、ページにメッセージします。
@@ -536,11 +544,11 @@ In page script, window.y: undefined
 >
 > console.log = () => {
 >   original(true);
-> }
+> };
 > ```
 >
 > ```js example-bad
 > // content-script.js calls the redefined version
 >
-> window.eval('console.log(false)');
+> window.eval("console.log(false)");
 > ```

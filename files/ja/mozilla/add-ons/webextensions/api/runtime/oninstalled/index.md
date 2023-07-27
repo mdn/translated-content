@@ -59,7 +59,7 @@ browser.runtime.onInstalled.hasListener(listener)
 function handleInstalled(details) {
   console.log(details.reason);
   browser.tabs.create({
-    url: "https://example.com"
+    url: "https://example.com",
   });
 }
 

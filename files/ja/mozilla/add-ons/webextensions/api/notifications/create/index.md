@@ -19,9 +19,9 @@ This is an asynchronous function that returns a [`Promise`](/ja/docs/Web/JavaScr
 
 ```js
 var creating = browser.notifications.create(
-  id,                   // optional string
-  options               // NotificationOptions
-)
+  id, // optional string
+  options, // NotificationOptions
+);
 ```
 
 ### パラメータ
@@ -46,7 +46,7 @@ Create and display a basic notification periodically, using an {{WebExtAPIRef("a
 Note that you'll need the "alarms" [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to create alarms (as well as the "notifications" permission to create notifications).
 
 ```js
-var cakeNotification = "cake-notification"
+var cakeNotification = "cake-notification";
 
 /*
 
@@ -59,18 +59,18 @@ than a minute.
 */
 var CAKE_INTERVAL = 0.1;
 
-browser.alarms.create("", {periodInMinutes: CAKE_INTERVAL});
+browser.alarms.create("", { periodInMinutes: CAKE_INTERVAL });
 
-browser.alarms.onAlarm.addListener(function(alarm) {
+browser.alarms.onAlarm.addListener(function (alarm) {
   browser.notifications.create(cakeNotification, {
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("icons/cake-96.png"),
-    "title": "Time for cake!",
-    "message": "Something something cake"
+    type: "basic",
+    iconUrl: browser.extension.getURL("icons/cake-96.png"),
+    title: "Time for cake!",
+    message: "Something something cake",
   });
 });
 
-browser.browserAction.onClicked.addListener(()=> {
+browser.browserAction.onClicked.addListener(() => {
   var clearing = browser.notifications.clear(cakeNotification);
   clearing.then(() => {
     console.log("cleared");
@@ -81,7 +81,7 @@ browser.browserAction.onClicked.addListener(()=> {
 Display a similar notification, but add buttons naming cakes, and log the selected cake when a button is clicked:
 
 ```js
-var cakeNotification = "cake-notification"
+var cakeNotification = "cake-notification";
 
 /*
 
@@ -96,25 +96,26 @@ var CAKE_INTERVAL = 0.1;
 
 var buttons = [
   {
-    "title": "Chocolate"
-  }, {
-    "title": "Battenberg"
-  }
+    title: "Chocolate",
+  },
+  {
+    title: "Battenberg",
+  },
 ];
 
-browser.alarms.create("", {periodInMinutes: CAKE_INTERVAL});
+browser.alarms.create("", { periodInMinutes: CAKE_INTERVAL });
 
-browser.alarms.onAlarm.addListener(function(alarm) {
+browser.alarms.onAlarm.addListener(function (alarm) {
   browser.notifications.create(cakeNotification, {
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("icons/cake-96.png"),
-    "title": "Time for cake!",
-    "message": "Something something cake",
-    "buttons": buttons
+    type: "basic",
+    iconUrl: browser.extension.getURL("icons/cake-96.png"),
+    title: "Time for cake!",
+    message: "Something something cake",
+    buttons: buttons,
   });
 });
 
-browser.browserAction.onClicked.addListener(()=> {
+browser.browserAction.onClicked.addListener(() => {
   var clearing = browser.notifications.clear(cakeNotification);
   clearing.then(() => {
     console.log("cleared");

@@ -14,7 +14,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL
 ## 構文
 
 ```js
-var redirectURL = browser.identity.getRedirectURL()
+var redirectURL = browser.identity.getRedirectURL();
 ```
 
 ### 引数

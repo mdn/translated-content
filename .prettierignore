@@ -46,10 +46,7 @@ build/
 /files/ja/learn/css/**/*.md
 /files/ja/learn/javascript/**/*.md
 /files/ja/learn/server-side/**/*.md
-/files/ja/mozilla/**/*.md
 /files/ja/mdn/**/*.md
-/files/ja/mozilla/add-ons/**/*.md
-/files/ja/mozilla/add-ons/webextensions/api/**/*.md
 /files/ja/web/api/**/*.md
 /files/ja/web/css/**/*.md
 /files/ja/web/html/**/*.md

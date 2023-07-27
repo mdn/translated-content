@@ -34,7 +34,7 @@ Clipboard API は、拡張機能から任意のデータをクリップボード
 ページスクリプトの場合、Web API の {{domxref("Permissions", "navigator.permissions")}} を使用して `"clipboard-write"` パーミッションを要求する必要があります。そのパーミッションは、{{domxref("Permissions.query", "navigator.permissions.query()")}} を使って確認することができます。
 
 ```js
-navigator.permissions.query({name: "clipboard-write"}).then((result) => {
+navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
   if (result.state === "granted" || result.state === "prompt") {
     /* write to the clipboard now */
   }
@@ -47,11 +47,14 @@ navigator.permissions.query({name: "clipboard-write"}).then((result) => {
 
 ```js
 function updateClipboard(newClip) {
-  navigator.clipboard.writeText(newClip).then(() => {
-    /* clipboard successfully set */
-  }, () => {
-    /* clipboard write failed */
-  });
+  navigator.clipboard.writeText(newClip).then(
+    () => {
+      /* clipboard successfully set */
+    },
+    () => {
+      /* clipboard write failed */
+    },
+  );
 }
 ```
 
@@ -62,8 +65,7 @@ function updateClipboard(newClip) {
 例えば、以下のような HTML を含むポップアップがあったとします。
 
 ```html
-<input id="input" type="text"/>
-<button id="copy">Copy</button>
+<input id="input" type="text" /> <button id="copy">Copy</button>
 ```
 
 `"copy"` ボタンで {{HTMLElement("input")}} 要素の内容をコピーさせるには、次のようなコードを使用します。
@@ -90,7 +92,7 @@ function copy() {
 }
 
 browser.alarms.create({
-  delayInMinutes: 0.1
+  delayInMinutes: 0.1,
 });
 
 browser.alarms.onAlarm.addListener(copy);
@@ -129,8 +131,9 @@ Clipboard API の {{domxref("Clipboard.readText", "navigator.clipboard.readText(
 一度 [Permissions API](/ja/docs/Web/API/Permissions_API) から `"clipboard-read"` パーミッションを取得すると、クリップボードから簡単に読み取ることができるようになります。例えば、このコードのスニペットはクリップボードからテキストを取得し、ID が `"outbox"` の要素の内容をそのテキストで置き換えます。
 
 ```js
-navigator.clipboard.readText().then((clipText) =>
-  document.getElementById("outbox").innerText = clipText);
+navigator.clipboard
+  .readText()
+  .then((clipText) => (document.getElementById("outbox").innerText = clipText));
 ```
 
 ### execCommand() を使用する
@@ -140,8 +143,7 @@ navigator.clipboard.readText().then((clipText) =>
 このような内容を含む HTML を考えてみましょう。
 
 ```html
-<textarea id="output"></textarea>
-<button id="paste">Paste</button>
+<textarea id="output"></textarea> <button id="paste">Paste</button>
 ```
 
 ユーザーが `"paste"` の {{HTMLElement("button")}} をクリックしたときに、クリップボードから ID が `"output"` の {{HTMLElement("textarea")}} 要素の内容を設定するには、次のようなコードを使用します。

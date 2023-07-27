@@ -34,10 +34,10 @@ devtools ページには目に見える DOM はありませんが、[`<script>`]
 devtools ページは他の WebExtension API にアクセスできず、バックグラウンドページは devtools API にアクセスできないことに注意してください。代わりに、devtools ページとバックグラウンドページは `runtime` メッセージング API を使用して通信する必要があります。ここに例があります:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
   </head>
   <body>
     <script src="devtools.js"></script>
@@ -54,14 +54,16 @@ devtools ウィンドウは、JavaScript デバッガ、ネットワークモニ
 `devtools.panels.create()` API を使用して、devtools ウィンドウに独自のパネルを作成できます:
 
 ```js
-browser.devtools.panels.create(
-  "My Panel",                      // title
-  "icons/star.png",                // icon
-  "devtools/panel/panel.html"      // content
-).then((newPanel) => {
-  newPanel.onShown.addListener(initialisePanel);
-  newPanel.onHidden.addListener(unInitialisePanel);
-});
+browser.devtools.panels
+  .create(
+    "My Panel", // title
+    "icons/star.png", // icon
+    "devtools/panel/panel.html", // content
+  )
+  .then((newPanel) => {
+    newPanel.onShown.addListener(initialisePanel);
+    newPanel.onHidden.addListener(unInitialisePanel);
+  });
 ```
 
 これにはパネルのタイトル、アイコン、コンテンツの 3 つの引数が必要です。新しいパネルを表す `devtools.panels.ExtensionPanel` オブジェクトに解決される [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。
@@ -94,7 +96,7 @@ const scriptToAttach = "document.body.innerHTML = 'Hi from the devtools';";
 window.addEventListener("click", () => {
   browser.runtime.sendMessage({
     tabId: browser.devtools.inspectedWindow.tabId,
-    script: scriptToAttach
+    script: scriptToAttach,
   });
 });
 ```
@@ -104,7 +106,7 @@ window.addEventListener("click", () => {
 
 function handleMessage(request, sender, sendResponse) {
   browser.tabs.executeScript(request.tabId, {
-    code: request.script
+    code: request.script,
   });
 }
 

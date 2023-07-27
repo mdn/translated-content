@@ -16,13 +16,13 @@ Webextension を用いた拡張機能は Chrome や Opera の拡張機能と互�
 Chrome では、拡張機能は `chrome` ネームスペースを使って特権 JavaScript API にアクセスします:
 
 ```js
-chrome.browserAction.setIcon({path: "path/to/icon.png"});
+chrome.browserAction.setIcon({ path: "path/to/icon.png" });
 ```
 
 WebExtensions は同等の API に `browser` ネームスペースを使ってアクセスします:
 
 ```js
-browser.browserAction.setIcon({path: "path/to/icon.png"});
+browser.browserAction.setIcon({ path: "path/to/icon.png" });
 ```
 
 多くの API は非同期です。 Chrome では、非同期 API はコールバックを使用して値を返し、{{WebExtAPIRef("runtime.lastError")}}がエラーを通知します:
@@ -36,10 +36,7 @@ function logCookie(c) {
   }
 }
 
-chrome.cookies.set(
-  {url: "https://developer.mozilla.org/"},
-  logCookie
-);
+chrome.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
 ```
 
 同様の WebExtensions API では [promises](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を利用します:
@@ -53,9 +50,7 @@ function logError(e) {
   console.error(e);
 }
 
-var setCookie = browser.cookies.set(
-  {url: "https://developer.mozilla.org/"}
-);
+var setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
 setCookie.then(logCookie, logError);
 ```
 

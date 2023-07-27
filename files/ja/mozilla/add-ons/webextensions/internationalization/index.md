@@ -80,9 +80,9 @@ l10n:
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
+      "url": {
+        "content": "$1",
+        "example": "https://developer.mozilla.org"
       }
     }
   }

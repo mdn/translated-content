@@ -20,7 +20,7 @@ slug: Mozilla/Add-ons/WebExtensions/Working_with_files
 この仕組みでは、あなたのウェブサイト(や URL で決められたあらゆる場所)からユーザーのコンピューターにファイルを入手できます。主要なメソッドは {{WebExtAPIRef("downloads.download()")}} で、その簡単なフォームで URL を受け付けて、その URL からユーザーの既定のダウンロードフォルダーにファイルをダウンロードします:
 
 ```js
-browser.downloads.download({url: "https://example.org/image.png"})
+browser.downloads.download({ url: "https://example.org/image.png" });
 ```
 
 ユーザーが `saveAs` パラメーターで指定した場所にダウンロードさせることもできます。
@@ -78,11 +78,11 @@ Store Collected Images の例では、画像コンテキストメニューを使
 
 ```js
 async function saveCollectedBlobs(collectionName, collectedBlobs) {
- const storedImages = await getFileStorage({name: "stored-images"});
+  const storedImages = await getFileStorage({ name: "stored-images" });
 
- for (const item of collectedBlobs) {
+  for (const item of collectedBlobs) {
     await storedImages.put(`${collectionName}/${item.uuid}`, item.blob);
- }
+  }
 }
 ```
 
@@ -92,15 +92,15 @@ async function saveCollectedBlobs(collectionName, collectedBlobs) {
 
 ```js
 export async function loadStoredImages(filter) {
- const imagesStore = await getFileStorage({name: "stored-images"});
- let listOptions = filter ? {includes: filter} : undefined;
- const imagesList = await imagesStore.list(listOptions);
- let storedImages = [];
- for (const storedName of imagesList) {
+  const imagesStore = await getFileStorage({ name: "stored-images" });
+  let listOptions = filter ? { includes: filter } : undefined;
+  const imagesList = await imagesStore.list(listOptions);
+  let storedImages = [];
+  for (const storedName of imagesList) {
     const blob = await imagesStore.get(storedName);
-    storedImages.push({storedName, blobUrl: URL.createObjectURL(blob)});
- }
- return storedImages;
+    storedImages.push({ storedName, blobUrl: URL.createObjectURL(blob) });
+  }
+  return storedImages;
 }
 ```
 
@@ -112,11 +112,11 @@ Note the use of [URL.createObjectURL(blob)](/ja/docs/Web/API/URL/createObjectURL
 
 ```js
 async function removeStoredImages(storedImages) {
- const imagesStore = await getFileStorage({name: "stored-images"});
- for (const storedImage of storedImages) {
+  const imagesStore = await getFileStorage({ name: "stored-images" });
+  for (const storedImage of storedImages) {
     URL.revokeObjectURL(storedImage.blobUrl);
     await imagesStore.remove(storedImage.storedName);
- }
+  }
 }
 ```
 

@@ -26,11 +26,14 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 次に、拡張機能のバックグラウンドスクリプト内にコンテキストメニューを追加（および更新、削除）することもできます。メニュー項目を作成するには id、タイトル、表示するコンテキストメニューを指定します。
 
 ```js
-browser.contextMenus.create({
-  id: "log-selection",
-  title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
-  contexts: ["selection"]
-}, onCreated);
+browser.contextMenus.create(
+  {
+    id: "log-selection",
+    title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
+    contexts: ["selection"],
+  },
+  onCreated,
+);
 ```
 
 そして、拡張機能はメニュー項目がクリックされるのを待ち受けします。クリックされた項目、クリックされたコンテキスト、クリックされたタブの詳細に関する渡された情報は、適切な拡張機能を呼び出すために使用されます。

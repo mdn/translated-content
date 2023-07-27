@@ -49,8 +49,8 @@ l10n:
 
 `options_ui` キーは次のコンテンツを持つオブジェクトです。
 
-| `open_in_tab`   | `Boolean` | 省略可能。既定値は `false`。`true` の場合、オプションページはブラウザーのアドオンマネージャーに統合されたものではなく、通常のブラウザータブで開かれる。                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `page`          | `String`  | 必須。オプションページの仕様を含む HTML ファイルへのパス。パスは manifest.json 自体への相対パス。                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `open_in_tab` | `Boolean` | 省略可能。既定値は `false`。`true` の場合、オプションページはブラウザーのアドオンマネージャーに統合されたものではなく、通常のブラウザータブで開かれる。 |
+| `page` | `String` | 必須。オプションページの仕様を含む HTML ファイルへのパス。パスは manifest.json 自体への相対パス。 |
 
 <table class="fullwidth-table standard-table">
   <thead>

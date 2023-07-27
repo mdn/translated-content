@@ -12,9 +12,9 @@ JavaScript のコードをページに挿入します。
 また、自らの拡張機能パッケージに含まれるページに対してであれば、次の方法でコードを挿入することも可能です。
 
 ```js
-browser.tabs.create({url: "/my-page.html"}).then(() => {
+browser.tabs.create({ url: "/my-page.html" }).then(() => {
   browser.tabs.executeScript({
-    code: `console.log('location:', window.location.href);`
+    code: `console.log('location:', window.location.href);`,
   });
 });
 ```
@@ -31,9 +31,9 @@ browser.tabs.create({url: "/my-page.html"}).then(() => {
 
 ```js
 var executing = browser.tabs.executeScript(
-  tabId,                 // optional integer
-  details                // object
-)
+  tabId, // optional integer
+  details, // object
+);
 ```
 
 ### 引数
@@ -64,7 +64,8 @@ var executing = browser.tabs.executeScript(
 スクリプトの結果とは最後に評価された文のことです。これは、[Web コンソール](/ja/docs/Tools/Web_Console)で実行されたスクリプトの出力 (結果であって、`console.log()` の出力のことではありません) に似ています。例えば、次のようなスクリプトを挿入したとします。
 
 ```js
-var foo='my result';foo;
+var foo = "my result";
+foo;
 ```
 
 この場合、結果配列には、文字列 "`my result`" が含まれます。結果は、[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)が可能でなければなりません。最後の文を [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) にすることもできますが、[webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript) ライブラリではサポートされていません。
@@ -87,7 +88,7 @@ function onError(error) {
 var makeItGreen = 'document.body.style.border = "5px solid green"';
 
 var executing = browser.tabs.executeScript({
-  code: makeItGreen
+  code: makeItGreen,
 });
 executing.then(onExecuted, onError);
 ```
@@ -105,7 +106,7 @@ function onError(error) {
 
 var executing = browser.tabs.executeScript({
   file: "/content-script.js",
-  allFrames: true
+  allFrames: true,
 });
 executing.then(onExecuted, onError);
 ```
@@ -121,9 +122,8 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var executing = browser.tabs.executeScript(
-  2, {
-    file: "/content-script.js"
+var executing = browser.tabs.executeScript(2, {
+  file: "/content-script.js",
 });
 executing.then(onExecuted, onError);
 ```
