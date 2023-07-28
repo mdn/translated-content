@@ -105,7 +105,7 @@ test.addEventListener(
       event.target.style.color = "";
     }, 500);
   },
-  false
+  false,
 );
 
 // 每次将光标移动到不同的列表项上时，此处理函数都会执行
@@ -120,7 +120,7 @@ test.addEventListener(
       event.target.style.color = "";
     }, 500);
   },
-  false
+  false,
 );
 ```
 

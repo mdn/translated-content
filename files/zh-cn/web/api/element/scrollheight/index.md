@@ -26,13 +26,13 @@ slug: Web/API/Element/scrollHeight
 `scrollTop`是一个非整数，而`scrollHeight`和`clientHeight`是四舍五入的，因此确定滚动区域是否滚动到底的唯一方法是查看滚动量是否足够接近某个阈值 (在本例中为`1`)：
 
 ```js
-Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1
+Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1;
 ```
 
 以下内容 _不_ 会一直有效，因为`scrollTop`可能包含小数：
 
 ```js
-element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight
+element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight;
 ```
 
 ### 判断元素是否能滚动
@@ -40,8 +40,8 @@ element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight
 当容器不滚动但有溢出的子容器时，这些检查可以确定容器能否滚动：
 
 ```js
-window.getComputedStyle(element).overflowY === 'visible'
-window.getComputedStyle(element).overflowY !== 'hidden'
+window.getComputedStyle(element).overflowY === "visible";
+window.getComputedStyle(element).overflowY !== "hidden";
 ```
 
 ## 示例
@@ -57,7 +57,8 @@ window.getComputedStyle(element).overflowY !== 'hidden'
 ```html
 <form name="registration">
   <p>
-    <textarea id="rules">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
+    <textarea id="rules">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
 Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
 neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at
 velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus
@@ -98,14 +99,14 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
   border-radius: 5px;
   width: 600px;
   padding: 5px;
-  border: 2px #7FDF55 solid;
+  border: 2px #7fdf55 solid;
 }
 
 #rules {
   width: 600px;
   height: 130px;
   padding: 5px;
-  border: #2A9F00 solid 2px;
+  border: #2a9f00 solid 2px;
   border-radius: 5px;
 }
 ```
@@ -113,13 +114,18 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
 #### JavaScript
 
 ```js
-function checkReading () {
+function checkReading() {
   if (checkReading.read) {
     return;
   }
-  checkReading.read = this.scrollHeight - Math.round(this.scrollTop) === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
-  checkReading.noticeBox.textContent = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
+  checkReading.read =
+    this.scrollHeight - Math.round(this.scrollTop) === this.clientHeight;
+  document.registration.accept.disabled = document.getElementById(
+    "nextstep",
+  ).disabled = !checkReading.read;
+  checkReading.noticeBox.textContent = checkReading.read
+    ? "Thank you."
+    : "Please, scroll and read the following text.";
 }
 
 onload = function () {
@@ -131,7 +137,7 @@ onload = function () {
   oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
   oToBeRead.onscroll = checkReading;
   checkReading.call(oToBeRead);
-}
+};
 ```
 
 {{EmbedLiveSample('判定用户是否阅读过文本', '640', '400')}}

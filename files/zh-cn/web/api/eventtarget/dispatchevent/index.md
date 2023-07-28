@@ -16,7 +16,7 @@ slug: Web/API/EventTarget/dispatchEvent
 ## 语法
 
 ```js
-dispatchEvent(event)
+dispatchEvent(event);
 ```
 
 ### 参数
