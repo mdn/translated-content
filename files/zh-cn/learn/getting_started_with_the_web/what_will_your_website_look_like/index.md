@@ -72,6 +72,7 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 另一个选择是使用 [安全 Web 字体](https://web.mit.edu/jmorzins/www/fonts.html)，如 Arial、Times New Roman、Courier New。
 
 > **备注：**（译注）
+>
 > - 同上所述，你可能无法访问 Google Fonts，你可以选择其他可用的在线字体服务，或采用第二种方式，下载后再使用你选择的字体。
 > - 相比英语，汉语的“安全字体”是不太一样的复杂问题，可以认为黑体、宋体是相对“安全”的一类字体，但仍需要精确到具体的字族，下面是一些参考链接
 >   - [如何保证网页的字体在各平台都尽量显示为最高质量的黑体？](https://www.zhihu.com/question/19911793)
