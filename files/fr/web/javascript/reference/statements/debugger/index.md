@@ -20,9 +20,9 @@ Dans l'exemple qui suit, on utilise un code avec l'instruction `debugger` qui pe
 
 ```js
 function codeProbablementBogue() {
-    debugger;
-    // exécuter des instructions qu'on veut
-    // examiner, exécuter pas à pas etc.
+  debugger;
+  // exécuter des instructions qu'on veut
+  // examiner, exécuter pas à pas etc.
 }
 ```
 

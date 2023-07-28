@@ -86,10 +86,10 @@ for (var i = 0; i < items.length; i++) {
 Et voici un fragment de code équivalent qui utilise `forEach` :
 
 ```js
-var items = ["item1", "item2", "item3"]
+var items = ["item1", "item2", "item3"];
 var copie = [];
 
-items.forEach(function(item){
+items.forEach(function (item) {
   copie.push(item);
 });
 ```
@@ -102,7 +102,7 @@ Le code suivant affiche une ligne pour chaque élément du tableau :
 
 ```js
 function logArrayElements(element, index, array) {
-    console.log("a[" + index + "] = " + element);
+  console.log("a[" + index + "] = " + element);
 }
 [2, 5, , 9].forEach(logArrayElements);
 // logs:
@@ -121,18 +121,18 @@ function Compteur() {
   this.compte = 0;
 }
 
-Compteur.prototype.ajouter = function(tableau) {
-  tableau.forEach(function(element) {
+Compteur.prototype.ajouter = function (tableau) {
+  tableau.forEach(function (element) {
     this.somme += element;
     ++this.compte;
-  },  this);
-  //  ^---- On a ajouté l'argument this ici.
+  }, this);
+  // ^---- On a ajouté l'argument this ici.
 };
 
 var obj = new Compteur();
 obj.ajouter([2, 5, 9]);
 console.log(obj.compte); // 3
-console.log(obj.somme);  // 16
+console.log(obj.somme); // 16
 ```
 
 > **Note :** Le paramètre pour `this` est passé à la méthode `forEach()`, à chaque appel du callback, celui-ci sera utilisé comme valeur pour `this`.
@@ -148,30 +148,30 @@ var SEUIL_MAX = 12;
 var v = [5, 2, 16, 4, 3, 18, 20];
 var res;
 
-res = v.every(function(element, index, array) {
-  console.log('élément :', element);
+res = v.every(function (element, index, array) {
+  console.log("élément :", element);
   if (element >= SEUIL_MAX) {
     return false;
   }
 
   return true;
 });
-console.log('res:', res);
+console.log("res:", res);
 // affiche :
 // élément : 5
 // élément : 2
 // élément : 16
 // res : false
 
-res = v.some(function(element, index, array) {
-  console.log('élément:', element);
+res = v.some(function (element, index, array) {
+  console.log("élément:", element);
   if (element >= SEUIL_MAX) {
     return true;
   }
 
   return false;
 });
-console.log('res:', res);
+console.log("res:", res);
 // affiche :
 // élément : 5
 // élément : 2
@@ -188,7 +188,7 @@ function copie(obj) {
   var copie = Object.create(Object.getPrototypeOf(obj));
   var propNames = Object.getOwnPropertyNames(obj);
 
-  propNames.forEach(function(nom) {
+  propNames.forEach(function (nom) {
     var desc = Object.getOwnPropertyDescriptor(obj, nom);
     Object.defineProperty(copie, nom, desc);
   });
@@ -206,7 +206,7 @@ Dans l'exemple qui suit, on utilise un tableau qui contient quatre élément : `
 
 ```js
 var mots = ["un", "deux", "trois", "quatre"];
-mots.forEach(function(mot) {
+mots.forEach(function (mot) {
   console.log(mot);
   if (mot === "deux") {
     mots.shift();

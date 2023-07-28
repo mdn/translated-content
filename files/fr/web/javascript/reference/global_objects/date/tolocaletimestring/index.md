@@ -15,9 +15,9 @@ Les anciennes implémentations ignorent ces arguments, la locale utilisée et le
 ## Syntaxe
 
 ```js
-toLocaleTimeString()
-toLocaleTimeString(locales)
-toLocaleTimeString(locales, options)
+toLocaleTimeString();
+toLocaleTimeString(locales);
+toLocaleTimeString(locales, options);
 ```
 
 ### Paramètres
@@ -95,12 +95,12 @@ Les résultats fournis par `toLocaleTimeString()` peuvent être personnalisés g
 var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // une application peut vouloir utiliser UTC et le montrer
-var options = {timeZone: "UTC", timeZoneName: "short"};
+var options = { timeZone: "UTC", timeZoneName: "short" };
 console.log(date.toLocaleTimeString("en-US", options));
 // → "3:00:00 AM GMT"
 
 // parfois, même les USA ont besoin du format sur 24h
-console.log(date.toLocaleTimeString("en-US", {hour12: false}));
+console.log(date.toLocaleTimeString("en-US", { hour12: false }));
 // → "19:00:00"
 ```
 

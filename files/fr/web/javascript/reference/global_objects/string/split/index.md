@@ -56,10 +56,10 @@ Si le séparateur est un tableau, alors ce tableau est converti en une chaîne d
 Lorsque la chaîne de caractères est vide, `split()` retourne un tableau contenant une chaîne de caractères vide, plutôt qu'un tableau vide. Si la chaîne et le séparateur sont tous deux des chaînes vides, un tableau vide est retourné.
 
 ```js
-const myString = ''
-const splits = myString.split()
+const myString = "";
+const splits = myString.split();
 
-console.log(splits)
+console.log(splits);
 
 // ↪ [""]
 ```
@@ -72,7 +72,10 @@ function splitString(stringToSplit, separator) {
 
   console.log(`La chaine d'origine est : ${stringToSplit}`);
   console.log(`Le délimiteur est : ${separator}`);
-  console.log(`Le tableau comporte ${arrayOfStrings.length} elements : `, arrayOfStrings.join(' / '));
+  console.log(
+    `Le tableau comporte ${arrayOfStrings.length} elements : `,
+    arrayOfStrings.join(" / "),
+  );
 }
 
 var tempestString = "Oh brave new world that has such people in it.";
@@ -138,7 +141,7 @@ console.log(splits);
 Ce script affichera :
 
 ```js
-["Hello", "World.", "How"]
+["Hello", "World.", "How"];
 ```
 
 ### Découper une expression rationnelle - Parenthèses capturantes
@@ -155,7 +158,7 @@ console.log(splits);
 Ce script affichera :
 
 ```js
-[ "Hello ", "1", " word. Sentence number ", "2", "." ]
+["Hello ", "1", " word. Sentence number ", "2", "."];
 ```
 
 > **Note :** `\d` correspond à la [classe de caractères](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) pour les chiffres compris entre 0 et 9.
@@ -165,8 +168,8 @@ Ce script affichera :
 > **Attention :** Ce n'est pas une façon robuste d'inverser une chaîne :
 >
 > ```js example-bad
-> const str = 'asdfghjkl'
-> const strReverse = str.split('').reverse().join('')
+> const str = "asdfghjkl";
+> const strReverse = str.split("").reverse().join("");
 > // 'lkjhgfdsa'
 >
 > // split() retourne un tableau sur lequel reverse() et join() peuvent être appliqués.
@@ -175,8 +178,8 @@ Ce script affichera :
 > Cela ne fonctionne pas si la chaîne de caractères contient des groupes de graphèmes, même en utilisant une division sensible aux unicodes. (Utilisez, par exemple, [esrever](https://github.com/mathiasbynens/esrever) à la place).
 >
 > ```js example-bad
-> const str = 'résumé'
-> const strReverse = str.split(/(?:)/u).reverse().join('')
+> const str = "résumé";
+> const strReverse = str.split(/(?:)/u).reverse().join("");
 > // => "́emuśer"
 > ```
 >

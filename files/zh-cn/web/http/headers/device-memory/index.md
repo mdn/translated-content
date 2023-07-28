@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/Device-Memory
 
 **`Device-Memory`** 是一个跟 [Device Memory API](/zh-CN/docs/Web/API/Device_Memory_API) 相关的请求头，它跟 [Client Hints](/zh-CN/docs/Glossary/Client_hints) 请求头的作用相似，用来表示客户端设备内存的近似大小。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | ?                                        |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | ?                              |
 
 > **备注：** Client Hints are accessible only on secure origins (via TLS). Server has to opt in to receive `Device-Memory` header from the client by sending {{HTTPHeader("Accept-CH")}} and {{HTTPHeader("Accept-CH-Lifetime")}} response headers.
 

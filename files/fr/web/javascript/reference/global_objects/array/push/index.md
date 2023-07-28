@@ -46,7 +46,7 @@ var sports = ["plongée", "baseball"];
 var total = sports.push("football", "tennis");
 
 console.log(sports); // ["plongée", "baseball", "football", "tennis"]
-console.log(total);  // 4
+console.log(total); // 4
 ```
 
 ### Fusionner deux tableaux
@@ -54,8 +54,8 @@ console.log(total);  // 4
 Dans l'exemple qui suit, on utilise la méthode {{jsxref("Function.apply()")}} pour ajouter les différents éléments d'un second tableau
 
 ```js
-var legumes = ['navet', 'pomme de terre'];
-var autresLegumes = ['céleri', 'radis'];
+var legumes = ["navet", "pomme de terre"];
+var autresLegumes = ["céleri", "radis"];
 
 // On fusionne les deux tableaux
 // Équivalent à legumes.push('céleri', 'radis');
@@ -69,8 +69,8 @@ console.log(legumes); // ['navet', 'pomme de terre', 'céleri', 'radis']
 L'exemple qui suit utilise [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) pour ajouter les éléments d'un second tableau à la fin du premier tableau.
 
 ```js
-const legumes = ['navet', 'pomme de terre'];
-const autresLegumes = ['céleri', 'radis'];
+const legumes = ["navet", "pomme de terre"];
+const autresLegumes = ["céleri", "radis"];
 
 // On fusionne les deux tableaux
 // Équivalent à legumes.push('céleri', 'radis');
@@ -85,13 +85,13 @@ Comme nous l'avons vu auparavant, `push` est une méthode générique et nous po
 
 ```js
 var obj = {
-    length: 0,
+  length: 0,
 
-    ajoutElem: function ajoutElem (elem) {
-        // obj.length est automatiquement incrémenté
-        // quand on ajoute un élément
-        [].push.call(this, elem);
-    }
+  ajoutElem: function ajoutElem(elem) {
+    // obj.length est automatiquement incrémenté
+    // quand on ajoute un élément
+    [].push.call(this, elem);
+  },
 };
 
 // Ajoutons quelques objets vides pour illustrer

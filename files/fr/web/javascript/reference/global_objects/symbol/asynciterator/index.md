@@ -22,20 +22,20 @@ Il est possible de définir son propre itérable en définissant la propriété 
 
 ```js
 const myAsyncIterable = new Object();
-myAsyncIterable[Symbol.asyncIterator] = async function*() {
-    yield "coucou";
-    yield "l'itération";
-    yield "asynchrone !";
+myAsyncIterable[Symbol.asyncIterator] = async function* () {
+  yield "coucou";
+  yield "l'itération";
+  yield "asynchrone !";
 };
 
 (async () => {
-    for await (const x of myAsyncIterable) {
-        console.log(x);
-        // expected output:
-        //    "coucou"
-        //    "l'itération"
-        //    "asynchrone !"
-    }
+  for await (const x of myAsyncIterable) {
+    console.log(x);
+    // expected output:
+    //    "coucou"
+    //    "l'itération"
+    //    "asynchrone !"
+  }
 })();
 ```
 

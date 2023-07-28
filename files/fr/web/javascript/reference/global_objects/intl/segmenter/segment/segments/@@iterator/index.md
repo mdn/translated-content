@@ -14,7 +14,7 @@ La méthode **`Intl.Segments.@@iterator`** fait partie de l'implémentation [du 
 ## Syntaxe
 
 ```js
-segments[Symbol.iterator]
+segments[Symbol.iterator];
 ```
 
 La fonction disponible sur cet itérateur est `.next()`, elle est décrite dans [la page du protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérateur_»).
@@ -26,7 +26,7 @@ Un nouvel objet itérateur.
 ## Exemples
 
 ```js
-const segmenter = new Intl.Segmenter('fr', {granularity: 'word'});
+const segmenter = new Intl.Segmenter("fr", { granularity: "word" });
 const input = "Moi ? N'est-ce pas ?";
 const segments = segmenter.segment(input);
 const iterator = segments[Symbol.iterator]();

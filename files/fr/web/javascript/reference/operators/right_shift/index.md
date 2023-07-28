@@ -12,7 +12,7 @@ L'opérateur de **décalage binaire à droite (`>>`)** décale la séquence de b
 ## Syntaxe
 
 ```js
-a >> b
+a >> b;
 ```
 
 ## Description
@@ -40,7 +40,7 @@ De même, `-9 >> 2` donnera `-3`, car le signe est préservé :
 ### Utiliser le décalage à droite
 
 ```js
- 9 >> 2; //  2
+9 >> 2; //  2
 -9 >> 2; // -3
 ```
 

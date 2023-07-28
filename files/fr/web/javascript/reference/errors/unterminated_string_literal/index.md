@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: unterminated string literal'
+title: "SyntaxError: unterminated string literal"
 slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 translation_of: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 ---
@@ -47,15 +47,17 @@ Pour écrire une chaîne sur plusieurs lignes, on pourra utiliser :
 Voici la première variante avec l'opérateur de concaténation :
 
 ```js example-good
-var longString = "This is a very long string which needs " +
-                 "to wrap across multiple lines because " +
-                 "otherwise my code is unreadable.";
+var longString =
+  "This is a very long string which needs " +
+  "to wrap across multiple lines because " +
+  "otherwise my code is unreadable.";
 ```
 
 Sinon, on peut utiliser une barre oblique inversée à la fin de chaque ligne pour indiquer qu'elle continue sur la ligne suivante. Attention, il faudra qu'il n'y ait aucun espace ou autre caractère après la barre oblique (il peut bien entendu y avoir un saut de ligne) :
 
 ```js example-good
-var longString = "This is a very long string which needs \
+var longString =
+  "This is a very long string which needs \
 to wrap across multiple lines because \
 otherwise my code is unreadable.";
 ```

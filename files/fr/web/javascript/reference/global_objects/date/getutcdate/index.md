@@ -13,7 +13,7 @@ La méthode **`getUTCDate()`** renvoie le jour du mois pour la date renseignée 
 ## Syntaxe
 
 ```js
-dateObj.getUTCDate()
+dateObj.getUTCDate();
 ```
 
 ### Valeur de retour
