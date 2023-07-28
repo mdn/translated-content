@@ -18,8 +18,8 @@ slug: Learn/JavaScript/Building_blocks/Return_values
 以下の見覚えのある例を見てみましょう (このシリーズの[過去の記事](/ja/docs/Learn/JavaScript/Building_blocks/Functions#Built-in_browser_functions)より) 。
 
 ```js
-let myText = 'I am a string';
-let newString = myText.replace('string', 'sausage');
+let myText = "I am a string";
+let newString = myText.replace("string", "sausage");
 console.log(newString);
 // 文字列の replace() 関数は文字列を受け取り、
 // 一方の部分文字列をもう一方の部分文字列に置き換え、
@@ -49,7 +49,7 @@ function draw() {
   ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -98,49 +98,59 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 1. まず最初に GitHub から [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) ファイルをローカル環境にコピーします。このファイルはシンプルな HTML のページで、文字列入力用の {{htmlelement("input")}} フィールドとパラグラフ（段落）要素を含んでいます。また、{{htmlelement("script")}} 要素があり、この中でページ内の HTML 要素の参照を 2 つの変数で保持させています。このページに対して、テキストボックスに数値を入力したら、入力した数値と関連のある異なる数値を下のパラグラフ要素に表示させるようにしていきます。
 2. いくつかの関数を `<script>` 要素に追加していきましょう。既に記述されている 2 行の [JavaScript](/ja/docs/Web/JavaScript) のコードの下に、以下の関数定義を追加します。
 
-    ```js
-    function squared(num) {
-      return num * num;
-    }
+   ```js
+   function squared(num) {
+     return num * num;
+   }
 
-    function cubed(num) {
-      return num * num * num;
-    }
+   function cubed(num) {
+     return num * num * num;
+   }
 
-    function factorial(num) {
-      if (num < 0) return undefined;
-      if (num == 0) return 1;
-      let x = num - 1;
-      while (x > 1) {
-        num *= x;
-        x--;
-      }
-      return num;
-    }
-    ```
+   function factorial(num) {
+     if (num < 0) return undefined;
+     if (num == 0) return 1;
+     let x = num - 1;
+     while (x > 1) {
+       num *= x;
+       x--;
+     }
+     return num;
+   }
+   ```
 
-    `squared()` 関数と `cubed()` 関数は大変わかりやすいでしょう。引数として渡された値の 2 乗や 3 乗を返しています。`factorial()` 関数は渡された数の[階乗](https://ja.wikipedia.org/wiki/%E9%9A%8E%E4%B9%97)を返しています。
+   `squared()` 関数と `cubed()` 関数は大変わかりやすいでしょう。引数として渡された値の 2 乗や 3 乗を返しています。`factorial()` 関数は渡された数の[階乗](https://ja.wikipedia.org/wiki/%E9%9A%8E%E4%B9%97)を返しています。
 
 3. 次に input に入力された数値を出力する処理を追加していきます。イベントハンドラーを既存の関数の下に記述しましょう。
 
-    ```js
-    input.onchange = function() {
-      const num = input.value;
-      if (isNaN(num)) {
-        para.textContent = 'You need to enter a number!';
-      } else {
-        para.textContent = num + ' squared is ' + squared(num) + '. ' +
-                           num + ' cubed is ' + cubed(num) + '. ' +
-                           num + ' factorial is ' + factorial(num) + '.';
-      }
-    }
-    ```
+   ```js
+   input.onchange = function () {
+     const num = input.value;
+     if (isNaN(num)) {
+       para.textContent = "You need to enter a number!";
+     } else {
+       para.textContent =
+         num +
+         " squared is " +
+         squared(num) +
+         ". " +
+         num +
+         " cubed is " +
+         cubed(num) +
+         ". " +
+         num +
+         " factorial is " +
+         factorial(num) +
+         ".";
+     }
+   };
+   ```
 
-    ここでは `onchange` イベントハンドラーを作っています。これは文字列入力での `change` イベントが発火した時に実行されます。つまり新しい値が `input` に入力され、送信された時です (たとえば値を入力し、<kbd>Tab</kbd> か <kbd>Return</kbd> を押して入力からフォーカスを外す時)。この無名関数が実行されると、`input` に入力された値が `num` 定数に代入されます。
+   ここでは `onchange` イベントハンドラーを作っています。これは文字列入力での `change` イベントが発火した時に実行されます。つまり新しい値が `input` に入力され、送信された時です (たとえば値を入力し、<kbd>Tab</kbd> か <kbd>Return</kbd> を押して入力からフォーカスを外す時)。この無名関数が実行されると、`input` に入力された値が `num` 定数に代入されます。
 
-    次に、条件付きテストを行うようにします。もし入力された値が数値でなければ、パラグラフ要素にエラーメッセージを出力します。テストでは、式 `isNaN(num)` が true を返すかどうか見るようにします。一般的に値が数値でないかをテストする際には [`isNaN()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/isNaN) 関数を使います。この関数では、渡された値が数値でなければ `true` を返し、数値であれば `false` を返します。
+   次に、条件付きテストを行うようにします。もし入力された値が数値でなければ、パラグラフ要素にエラーメッセージを出力します。テストでは、式 `isNaN(num)` が true を返すかどうか見るようにします。一般的に値が数値でないかをテストする際には [`isNaN()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/isNaN) 関数を使います。この関数では、渡された値が数値でなければ `true` を返し、数値であれば `false` を返します。
 
-    もしテストが `false` を返した場合、`num` の値は数値です。したがって、数値の 2 乗、3 乗、階乗の値を示す文が、パラグラフ要素内に出力されます。その出力する文章内で必要とする値を計算するために `squared()` 関数、`cubed()` 関数、`factorial()` 関数を呼んでいます。
+   もしテストが `false` を返した場合、`num` の値は数値です。したがって、数値の 2 乗、3 乗、階乗の値を示す文が、パラグラフ要素内に出力されます。その出力する文章内で必要とする値を計算するために `squared()` 関数、`cubed()` 関数、`factorial()` 関数を呼んでいます。
 
 4. コードを保存して、それをブラウザーで表示してみましょう。
 

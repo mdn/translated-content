@@ -40,7 +40,6 @@ build/
 /files/es/web/javascript/reference/**/*.md
 
 # ja
-/files/ja/learn/javascript/**/*.md
 /files/ja/mozilla/**/*.md
 /files/ja/mdn/**/*.md
 /files/ja/mozilla/add-ons/**/*.md
