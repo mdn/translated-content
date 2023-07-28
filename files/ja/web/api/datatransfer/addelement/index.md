@@ -14,7 +14,7 @@ slug: Web/API/DataTransfer/addElement
 ## 構文
 
 ```js
-addElement(element)
+addElement(element);
 ```
 
 ### 引数
@@ -31,8 +31,7 @@ addElement(element)
 この例では、`addElement()` メソッドの使用例を示します。
 
 ```js
-function change_drag_node(event, node)
-{
+function change_drag_node(event, node) {
   const dt = event.dataTransfer;
   dt.addElement(node);
 }

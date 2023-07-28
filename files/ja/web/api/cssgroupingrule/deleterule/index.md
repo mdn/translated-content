@@ -10,7 +10,7 @@ slug: Web/API/CSSGroupingRule/deleteRule
 ## 構文
 
 ```js
-deleteRule(index)
+deleteRule(index);
 ```
 
 ### 引数

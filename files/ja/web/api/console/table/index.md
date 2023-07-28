@@ -51,7 +51,11 @@ console.table(me);
 ```js
 // 配列の配列
 
-const people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
+const people = [
+  ["John", "Smith"],
+  ["Jane", "Doe"],
+  ["Emily", "Jones"],
+];
 console.table(people);
 ```
 
@@ -118,8 +122,8 @@ console.table([john, jane, emily], ["firstName"]);
 ## 構文
 
 ```js
-table(data)
-table(data, columns)
+table(data);
+table(data, columns);
 ```
 
 ### 引数

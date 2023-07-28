@@ -10,7 +10,7 @@ slug: Web/API/CSSNumericValue/div
 ## 構文
 
 ```js
-div(number)
+div(number);
 ```
 
 ### 引数

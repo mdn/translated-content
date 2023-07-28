@@ -14,7 +14,7 @@ l10n:
 ## 構文
 
 ```js
-groupEnd()
+groupEnd();
 ```
 
 ### 引数

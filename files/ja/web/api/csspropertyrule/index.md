@@ -34,7 +34,7 @@ _固有のメソッドはありません。祖先である {{domxref("CSSRule")}
 
 ```css
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }

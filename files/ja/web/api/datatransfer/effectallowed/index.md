@@ -49,7 +49,8 @@ Internet Explorer では、値を小文字に変更します。従って、 `lin
 ```html
 <div>
   <p id="source" draggable="true">
-     この要素を選択し、ドロップゾーンにドラッグしてから放すと要素を移動します。</p>
+    この要素を選択し、ドロップゾーンにドラッグしてから放すと要素を移動します。
+  </p>
 </div>
 <div id="target">ドロップゾーン</div>
 <pre id="output"></pre>
@@ -95,9 +96,9 @@ function dropHandler(ev) {
   log(`drop: effectAllowed = ${ev.dataTransfer.effectAllowed}`);
 
   ev.preventDefault();
- // ターゲットの ID を取得し、移動した要素をターゲットの DOM に追加します。
- const data = ev.dataTransfer.getData("text");
- ev.target.appendChild(document.getElementById(data));
+  // ターゲットの ID を取得し、移動した要素をターゲットの DOM に追加します。
+  const data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
 }
 
 function dragoverHandler(ev) {
@@ -108,9 +109,9 @@ function dragoverHandler(ev) {
 const source = document.querySelector("#source");
 const target = document.querySelector("#target");
 
-source.addEventListener("dragstart", dragstartHandler)
-target.addEventListener("dragover", dragoverHandler)
-target.addEventListener("drop", dropHandler)
+source.addEventListener("dragstart", dragstartHandler);
+target.addEventListener("dragover", dragoverHandler);
+target.addEventListener("drop", dropHandler);
 
 function log(message) {
   const output = document.querySelector("#output");

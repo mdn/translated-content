@@ -16,8 +16,8 @@ i10n:
 ## 構文
 
 ```js
-trace()
-trace(object1, /* …, */ objectN)
+trace();
+trace(object1, /* …, */ objectN);
 ```
 
 ### 引数

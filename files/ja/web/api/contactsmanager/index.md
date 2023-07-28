@@ -25,7 +25,7 @@ ContactsManager` はグローバルな {{domxref('navigator.contacts')}} プロ�
 以下のコードは、連絡先ピッカー API に対応しているかどうかを調べるものです。
 
 ```js
-const supported = ('contacts' in navigator && 'ContactsManager' in window);
+const supported = "contacts" in navigator && "ContactsManager" in window;
 ```
 
 ### 対応しているプロパティのチェック
@@ -35,19 +35,19 @@ const supported = ('contacts' in navigator && 'ContactsManager' in window);
 ```js
 async function checkProperties() {
   const supportedProperties = await navigator.contacts.getProperties();
-  if (supportedProperties.includes('name')) {
+  if (supportedProperties.includes("name")) {
     // run code for name support
   }
-  if (supportedProperties.includes('email')) {
+  if (supportedProperties.includes("email")) {
     // run code for email support
   }
-  if (supportedProperties.includes('tel')) {
+  if (supportedProperties.includes("tel")) {
     // run code for telephone number support
   }
-  if (supportedProperties.includes('address')) {
+  if (supportedProperties.includes("address")) {
     // run code for address support
   }
-  if (supportedProperties.includes('icon')) {
+  if (supportedProperties.includes("icon")) {
     // run code for avatar support
   }
 }
@@ -60,15 +60,15 @@ async function checkProperties() {
 そして、 `select()` メソッドを使用して、ユーザーに連絡先ピッカーインターフェイスを表示し、選択された結果を処理する非同期関数が定義されます。
 
 ```js
-const props = ['name', 'email', 'tel', 'address', 'icon'];
-const opts = {multiple: true};
+const props = ["name", "email", "tel", "address", "icon"];
+const opts = { multiple: true };
 
 async function getContacts() {
   try {
-      const contacts = await navigator.contacts.select(props, opts);
-      handleResults(contacts);
+    const contacts = await navigator.contacts.select(props, opts);
+    handleResults(contacts);
   } catch (ex) {
-      // Handle any errors here.
+    // Handle any errors here.
   }
 }
 ```

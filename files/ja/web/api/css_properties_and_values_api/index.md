@@ -20,10 +20,10 @@ CSS Properties and Values API（[CSS Houdini](/ja/docs/Web/Houdini) API の傘�
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 
@@ -31,7 +31,7 @@ window.CSS.registerProperty({
 
 ```css
 @property --my-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }

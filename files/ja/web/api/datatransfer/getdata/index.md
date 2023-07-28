@@ -12,7 +12,7 @@ slug: Web/API/DataTransfer/getData
 ## 構文
 
 ```js
-getData(format)
+getData(format);
 ```
 
 ## 引数
@@ -27,6 +27,7 @@ getData(format)
 ### 注意事項
 
 - データの利用可能性
+
   - [HTML5 Drag and Drop 仕様書](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode)では、「ドラッグデータストアモード」が規定されています。
     これは、 **`DataTransfer.getData()`** が期待した値を返さないという、予期しない動作をする可能性があります。すべてのブラウザーがこの制限を強制しているわけではないからです。
 
@@ -40,7 +41,9 @@ getData(format)
 
 ```html
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <span id="drag" draggable="true" ondragstart="drag(event)">drag me to the other box</span>
+  <span id="drag" draggable="true" ondragstart="drag(event)"
+    >drag me to the other box</span
+  >
 </div>
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 ```
@@ -48,11 +51,12 @@ getData(format)
 ### CSS コンテンツ
 
 ```css
-#div1, #div2 {
-    width:100px;
-    height:50px;
-    padding:10px;
-    border:1px solid #aaaaaa;
+#div1,
+#div2 {
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
 }
 ```
 
@@ -60,20 +64,20 @@ getData(format)
 
 ```js
 function allowDrop(allowdropevent) {
-    allowdropevent.target.style.color = 'blue';
-    allowdropevent.preventDefault();
+  allowdropevent.target.style.color = "blue";
+  allowdropevent.preventDefault();
 }
 
 function drag(dragevent) {
-    dragevent.dataTransfer.setData("text", dragevent.target.id);
-    dragevent.target.style.color = 'green';
+  dragevent.dataTransfer.setData("text", dragevent.target.id);
+  dragevent.target.style.color = "green";
 }
 
 function drop(dropevent) {
-    dropevent.preventDefault();
-    const data = dropevent.dataTransfer.getData("text");
-    dropevent.target.appendChild(document.getElementById(data));
-    document.getElementById("drag").style.color = 'black';
+  dropevent.preventDefault();
+  const data = dropevent.dataTransfer.getData("text");
+  dropevent.target.appendChild(document.getElementById(data));
+  document.getElementById("drag").style.color = "black";
 }
 ```
 

@@ -16,7 +16,7 @@ slug: Web/API/Crypto/getRandomValues
 ## 構文
 
 ```js
-getRandomValues(typedArray)
+getRandomValues(typedArray);
 ```
 
 ### 引数

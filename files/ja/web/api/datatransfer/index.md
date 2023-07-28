@@ -21,6 +21,7 @@ slug: Web/API/DataTransfer
 - {{domxref("DataTransfer.dropEffect")}}
   - : 現在選択されているドラッグ&amp;ドロップ操作の種類を取得したり、新しい操作の種類をセットしたりします。値は `none`, `copy`, `link`, `move` のいずれかです。
 - {{domxref("DataTransfer.effectAllowed")}}
+
   - : とりうるすべての操作の種類を与えます。`none`, `copy`, `copyLink`, `copyMove`, `link`, `linkMove`, `move`, `all`, `uninitialized` のいずれかです。
 
 - {{domxref("DataTransfer.files")}}
