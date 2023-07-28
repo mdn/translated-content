@@ -35,7 +35,7 @@ var formData = new FormData(myForm);
 你可以通过 `delete()` 方法来删除键值对：
 
 ```js
-formData.delete('username');
+formData.delete("username");
 ```
 
 ## 规范

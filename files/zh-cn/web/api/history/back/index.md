@@ -10,7 +10,7 @@ slug: Web/API/History/back
 ## 语法
 
 ```js
-window.history.back()
+window.history.back();
 ```
 
 ## 示例
@@ -26,11 +26,11 @@ window.history.back()
 ### JavaScript
 
 ```js
-window.onload = function(e) {
-  document.getElementById('go-back').addEventListener('click', e => {
+window.onload = function (e) {
+  document.getElementById("go-back").addEventListener("click", (e) => {
     window.history.back();
-  })
-}
+  });
+};
 ```
 
 ## 规范

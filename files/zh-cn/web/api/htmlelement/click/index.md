@@ -13,7 +13,7 @@ slug: Web/API/HTMLElement/click
 ## 语法
 
 ```js
-element.click()
+element.click();
 ```
 
 ## 用例
@@ -24,7 +24,11 @@ element.click()
 
 ```html
 <form>
-  <input type="checkbox" id="myCheck" onmouseover="myFunction()" onclick="alert('click event occurred')">
+  <input
+    type="checkbox"
+    id="myCheck"
+    onmouseover="myFunction()"
+    onclick="alert('click event occurred')" />
 </form>
 ```
 
