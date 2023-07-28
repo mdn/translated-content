@@ -79,7 +79,7 @@ audioElement.play();
 考虑以下 HTML 作为媒体元素：
 
 ```html
-<video src="myvideo.mp4" autoplay onplay="handleFirstPlay(event)">
+<video src="myvideo.mp4" autoplay onplay="handleFirstPlay(event)"></video>
 ```
 
 这里我们有一个 {{HTMLElement("video")}} 元素，它设置了 [`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay) 属性，并设置了 {{domxref("HTMLMediaElement.onplay", "onplay")}} 事件处理程序；该事件由名为 `handleFirstPlay()` 的函数处理，该函数接收 `play` 事件作为输入。
@@ -178,21 +178,21 @@ Permissions-Policy: autoplay 'self'
 <iframe src="mediaplayer.html" allow="autoplay 'src'"> </iframe>
 ```
 
-### Example: Allowing autoplay and fullscreen mode
+### 示例：允许自动播放和全屏模式
 
-Adding [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API) permission to the previous example results in a `Permissions-Policy` header like the following if fullscreen access is allowed regardless of the domain; a domain restriction can be added as well as needed.
+如果无论域如何都允许全屏访问，则向前面的示例添加 [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API) 权限会产生如下所示的 `Permissions-Policy` 标头；可以根据需要添加域限制。
 
 ```plain
 Permissions-Policy: autoplay 'self'; fullscreen
 ```
 
-### 示例：允许自动播放和全屏模式
+使用 `<iframe>` 元素的 `allow` 属性授予相同的权限，如下所示：
 
 ```html
 <iframe src="mediaplayer.html" allow="autoplay 'src'; fullscreen"> </iframe>
 ```
 
-### ### 示例：允许来自特定源的自动播放
+### 示例：允许来自特定源的自动播放
 
 允许从文档（或 `<iframe>`）自己的域和 `https://example.media` 播放媒体的 `Permissions-Policy` 标头如下所示：
 
