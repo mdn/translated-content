@@ -10,7 +10,7 @@ slug: Web/API/Element/after
 ## 语法
 
 ```js
-after(... nodes)
+after(...nodes);
 ```
 
 ### 参数

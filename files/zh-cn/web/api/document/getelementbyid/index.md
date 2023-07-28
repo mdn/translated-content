@@ -31,16 +31,16 @@ getElementById(id)
 ### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>getElementById example</title>
-</head>
-<body>
-  <p id="para">Some text here</p>
-  <button onclick="changeColor('blue');">blue</button>
-  <button onclick="changeColor('red');">red</button>
-</body>
+  <head>
+    <title>getElementById example</title>
+  </head>
+  <body>
+    <p id="para">Some text here</p>
+    <button onclick="changeColor('blue');">blue</button>
+    <button onclick="changeColor('red');">red</button>
+  </body>
 </html>
 ```
 
@@ -48,7 +48,7 @@ getElementById(id)
 
 ```js
 function changeColor(newColor) {
-  var elem = document.getElementById('para');
+  var elem = document.getElementById("para");
   elem.style.color = newColor;
 }
 ```
@@ -95,8 +95,8 @@ getElementById 方法不会搜索**不在文档中的元素**。当创建一个�
 
 ```js
 var element = document.createElement("div");
-element.id = 'testqq';
-var el = document.getElementById('testqq'); // el 是个 null
+element.id = "testqq";
+var el = document.getElementById("testqq"); // el 是个 null
 ```
 
 **非 HTML 文档（Non-HTML documents**）。DOM 的实现必须说明哪个属性是 ID 类型。只有 DTD 定义了'id'是 ID 属性时’id‘才会被认为是 ID 属性。在 [XHTML](/zh-CN/docs/XHTML), [XUL](/zh-CN/docs/XUL)或者其他文档中，'id'通常被定义为 ID 类型的属性。不知道哪个属性是 ID 类型的实现中，这会返回 null 结果。
