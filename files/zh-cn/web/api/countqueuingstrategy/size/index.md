@@ -10,7 +10,7 @@ slug: Web/API/CountQueuingStrategy/size
 ## 语法
 
 ```js
-size()
+size();
 ```
 
 ### 参数
@@ -26,18 +26,21 @@ size()
 ```js
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 
-const writableStream = new WritableStream({
-  // Implement the sink
-  write(chunk) {
-    // …
+const writableStream = new WritableStream(
+  {
+    // Implement the sink
+    write(chunk) {
+      // …
+    },
+    close() {
+      // …
+    },
+    abort(err) {
+      console.log("Sink error:", err);
+    },
   },
-  close() {
-    // …
-  },
-  abort(err) {
-    console.log("Sink error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
 const size = queuingStrategy.size();
 ```
