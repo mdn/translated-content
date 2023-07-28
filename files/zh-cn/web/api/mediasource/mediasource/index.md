@@ -10,7 +10,7 @@ slug: Web/API/MediaSource/MediaSource
 ## 语法
 
 ```js
-new MediaSource()
+new MediaSource();
 ```
 
 ### 参数

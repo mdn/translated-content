@@ -10,7 +10,7 @@ slug: Web/API/MediaSource/removeSourceBuffer
 ## 语法
 
 ```js
-removeSourceBuffer(sourceBuffer)
+removeSourceBuffer(sourceBuffer);
 ```
 
 ### 参数

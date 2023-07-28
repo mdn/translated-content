@@ -26,29 +26,20 @@ Gecko 内核的浏览器会在源代码中标签内部有空白符的地方插�
 <div id="div-02">Here is div-02</div>
 
 <script type="text/javascript">
-var el = document.getElementById('div-01').nextSibling,
+  var el = document.getElementById("div-01").nextSibling,
     i = 1;
 
-console.log('Siblings of div-01:');
+  console.log("Siblings of div-01:");
 
-while (el) {
-  console.log(i + '. ' + el.nodeName);
-  el = el.nextSibling;
-  i++;
-}
-
+  while (el) {
+    console.log(i + ". " + el.nodeName);
+    el = el.nextSibling;
+    i++;
+  }
 </script>
 
-/**************************************************
-  The following is written to the console as it loads:
-
-     Siblings of div-01
-
-      1. #text
-      2. DIV
-      3. #text
-      4. SCRIPT
-
+/************************************************** The following is written to
+the console as it loads: Siblings of div-01 1. #text 2. DIV 3. #text 4. SCRIPT
 **************************************************/
 ```
 
