@@ -10,8 +10,8 @@ slug: Web/API/HTMLFormElement/requestSubmit
 ## 语法
 
 ```js
-requestSubmit()
-requestSubmit(submitter)
+requestSubmit();
+requestSubmit(submitter);
 ```
 
 ### 参数

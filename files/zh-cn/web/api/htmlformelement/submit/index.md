@@ -20,8 +20,8 @@ slug: Web/API/HTMLFormElement/submit
 
 ## 语法
 
- ```js
-submit()
+```js
+submit();
 ```
 
 ### 参数
