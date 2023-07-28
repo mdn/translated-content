@@ -13,7 +13,7 @@ Le **constructeur `ArrayBuffer()`** permet de créer des objets [`ArrayBuffer`](
 ## Syntaxe
 
 ```js
-new ArrayBuffer(longueur)
+new ArrayBuffer(longueur);
 ```
 
 ### Paramètres

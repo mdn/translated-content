@@ -13,7 +13,7 @@ L'accesseur **`byteLength`** est une propriété représentant la longueur, expr
 ## Syntaxe
 
 ```js
-dataview.byteLength
+dataview.byteLength;
 ```
 
 ## Description

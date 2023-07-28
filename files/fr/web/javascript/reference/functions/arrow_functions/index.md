@@ -65,15 +65,17 @@ var a = [
   "We're up all night 'til the sun",
   "We're up all night to get some",
   "We're up all night for good fun",
-  "We're up all night to get lucky"
+  "We're up all night to get lucky",
 ];
 
 // Sans la syntaxe des fonctions fléchées
-var a2 = a.map(function (s) { return s.length });
+var a2 = a.map(function (s) {
+  return s.length;
+});
 // [31, 30, 31, 31]
 
 // Avec, on a quelque chose de plus concis
-var a3 = a.map( s => s.length);
+var a3 = a.map((s) => s.length);
 // [31, 30, 31, 31]
 ```
 
@@ -88,11 +90,11 @@ Jusqu'a l'apparition des fonctions fléchées, chaque nouvelle fonction définis
 Cela a pu entraîner des confusions lorsqu'on utilisait un style de programmation orientée objet.
 
 ```js
-function Personne () {
+function Personne() {
   // Le constructeur Personne() définit `this` comme lui-même.
   this.age = 0;
 
-  setInterval(function grandir () {
+  setInterval(function grandir() {
     // En mode non strict, la fonction grandir() définit `this`
     // comme l'objet global et pas comme le `this` defini
     // par le constructeur Personne().
@@ -106,11 +108,11 @@ var p = new Personne();
 Avec ECMAScript 3/5, ce problème a pu être résolu en affectant la valeur de `this` à une autre variable&nbsp;:
 
 ```js
-function Personne () {
+function Personne() {
   var that = this;
   that.age = 0;
 
-  setInterval(function grandir () {
+  setInterval(function grandir() {
     // La fonction callback se réfère à la variable `that`
     // qui est le contexte souhaité
     that.age++;
@@ -123,7 +125,7 @@ Autrement, on aurait pu utiliser une [fonction de liaison](/fr/docs/Web/JavaScri
 Les fonctions fléchées ne créent pas de nouveau contexte, elles utilisent la valeur `this` de leur contexte. Aussi, si le mot-clé `this` est utilisé dans le corps de la fonction, le moteur recherchera la référence à cette valeur dans une portée parente. Le code qui suit fonctionne ainsi de la façon attendue car le `this` utilisé dans `setInterval` est le `this` de la portée de `Personne` :
 
 ```js
-function Personne () {
+function Personne() {
   this.age = 0;
 
   setInterval(() => {
@@ -140,7 +142,10 @@ var p = new Personne();
 Ici `this` provient du contexte englobant, les règles du [mode strict](/fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/Strict_mode) sont donc ignorées pour ce qui concerne `this`.
 
 ```js
-var f = () => {'use strict'; return this};
+var f = () => {
+  "use strict";
+  return this;
+};
 f() === window; // ou l'objet global
 ```
 
@@ -154,18 +159,18 @@ Le reste des règles du mode strict sont appliquées normalement.
 var ajouter = {
   base: 1,
 
-  add : function (a) {
-    var f = v => v + this.base;
+  add: function (a) {
+    var f = (v) => v + this.base;
     return f(a);
   },
 
   addViaCall: function (a) {
-    var f = v => v + this.base;
+    var f = (v) => v + this.base;
     var b = {
-      base: 2
+      base: 2,
     };
     return f.call(b, a);
-  }
+  },
 };
 
 console.log(ajouter.add(1));
@@ -185,7 +190,7 @@ var arr = () => arguments[0];
 
 arr(); // 1
 
-function toto () {
+function toto() {
   var f = (i) => arguments[0] + i;
   // lien implicite avec arguments de toto
   return f(2);
@@ -197,7 +202,7 @@ toto(3); // 5
 Les fonctions fléchées n'ont donc pas leur propre objet `arguments`, mais dans la plupart des cas, [les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/paramètres_du_reste) représentent une bonne alternative&nbsp;:
 
 ```js
-function toto () {
+function toto() {
   var f = (...args) => args[0];
   return f(2);
 }
@@ -210,14 +215,14 @@ toto(1); // 2
 Comme indiqué précédemment, les fonctions fléchées sont mieux indiquées pour les fonctions qui ne sont pas des méthodes. Prenons un exemple pour illustrer ce point
 
 ```js
-'use strict';
+"use strict";
 var objet = {
   i: 10,
   b: () => console.log(this.i, this),
-  c: function() {
+  c: function () {
     console.log(this.i, this);
-  }
-}
+  },
+};
 
 objet.b();
 // affiche undefined, Window (ou l'objet global de l'environnement)
@@ -255,10 +260,12 @@ Les fonctions fléchées peuvent avoir une syntaxe concise ou utiliser un bloc d
 
 ```js
 // méthode concise, retour implicite
-var fonction = x => x * x;
+var fonction = (x) => x * x;
 
 // bloc classique, retour explicite
-var fonction = (x, y) => { return x + y; }
+var fonction = (x, y) => {
+  return x + y;
+};
 ```
 
 ## Renvoyer des littéraux objets
@@ -312,49 +319,51 @@ fonctionRappel = fonctionRappel || (() => {});
 // Une fonction fléchée vide renvoie undefined
 let vide = () => {};
 
-(() => "tototruc")()
+(() => "tototruc")();
 // exemple d'une fonction immédiatement
 // invoquée (IIFE en anglais) qui renvoie
 // "tototruc"
 
-var simple = a => a > 15 ? 15 : a;
+var simple = (a) => (a > 15 ? 15 : a);
 simple(16); // 15
 simple(10); // 10
 
 var complexe = (a, b) => {
-    if (a > b) {
-        return a;
-    } else {
-        return b;
-    }
-}
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  }
+};
 
 var arr = [5, 6, 13, 0, 1, 18, 23];
 
 var sum = arr.reduce((a, b) => a + b);
 // 66
 
-var even = arr.filter(v => v % 2 == 0);
+var even = arr.filter((v) => v % 2 == 0);
 // [6, 0, 18]
 
-var double = arr.map(v => v * 2);
+var double = arr.map((v) => v * 2);
 // [10, 12, 26, 0, 2, 36, 46]
 
 // On peut aussi construire des chaînes
 // de promesses plus concises
-promise.then(a => {
+promise
+  .then((a) => {
     // ...
-}).then(b => {
+  })
+  .then((b) => {
     // ...
-});
+  });
 
 // Cela permet de visualiser les
 // fonctions sans paramètres
-setTimeout( () => {
-    console.log("Et voilà");
-    setTimeout( () => {
-        console.log("ensuite…");
-    }, 1);
+setTimeout(() => {
+  console.log("Et voilà");
+  setTimeout(() => {
+    console.log("ensuite…");
+  }, 1);
 }, 1);
 ```
 

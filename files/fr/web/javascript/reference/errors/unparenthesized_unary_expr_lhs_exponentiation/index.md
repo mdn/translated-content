@@ -31,18 +31,18 @@ Cela provient vraisemblablement d'une écriture comme celle-ci&nbsp;:
 
 Ici, l'expression est ambigüe et on ne sait pas si elle devrait être évaluée comme `(-a) ** b` ou comme `-(a ** b)`. En mathématiques, l'écriture -x<sup>2</sup> signifie `-(x ** 2)`, et c'est ainsi que de nombreux langages de programmation, comme Python, Haskell, et PHP, gèrent cette évaluation. Mais si la précédence de l'opérateur unaire moins l'emporte sur `**`, cela casse la symétrie avec `a ** -b`, qui s'évalue sans ambigüité comme `a ** (-b)`. Aussi, le langage interdit cette syntaxe et impose d'utiliser des parenthèses d'un côté ou de l'autre pour résoudre l'ambigüité.
 
-```js example-good
-(-a) ** b
--(a ** b)
+```js-nolint example-good
+(-a) ** b;
+-(a ** b);
 ```
 
 D'autres opérateurs unaires ne peuvent pas être utilisés sur l'opérande gauche non plus.
 
 ```js example-bad
-await a ** b
-!a ** b
-+a ** b
-~a ** b
+await a ** b;
+!a ** b;
++a ** b;
+~a ** b;
 ```
 
 ## Exemples
@@ -60,7 +60,7 @@ Toutefois, le fragment `-1 ** n` est illégal en JavaScript. À la place, on uti
 
 ```js example-good
 function taylorSin(x) {
-  return (n) => (-1) ** n * x ** (2 * n + 1) / factorial(2 * n + 1);
+  return (n) => ((-1) ** n * x ** (2 * n + 1)) / factorial(2 * n + 1);
 }
 ```
 

@@ -15,8 +15,8 @@ La complexité en espace mémoire et en temps utilisée pour le tri ne peut pas 
 ## Syntaxe
 
 ```js
-arr.sort()
-arr.sort(fonctionComparaison)
+arr.sort();
+arr.sort(fonctionComparaison);
 ```
 
 ### Paramètres
@@ -66,7 +66,7 @@ L'usage des {{jsxref("Opérateurs/L_opérateur_function", "expressions de foncti
 
 ```js
 var nombres = [4, 2, 5, 1, 3];
-nombres.sort(function(a, b) {
+nombres.sort(function (a, b) {
   return a - b;
 });
 console.log(nombres);
@@ -90,7 +90,7 @@ var items = [
   { name: "And", value: 45 },
   { name: "The", value: -12 },
   { name: "Magnetic", value: 13 },
-  { name: "Zeros", value: 37 }
+  { name: "Zeros", value: 37 },
 ];
 items.sort(function (a, b) {
   return a.value - b.value;
@@ -117,8 +117,7 @@ a[5] = "zèbre";
 function writeArray(x) {
   for (i = 0; i < x.length; i++) {
     console.log(x[i]);
-    if (i < x.length-1)
-      console.log(", ");
+    if (i < x.length - 1) console.log(", ");
   }
 }
 
@@ -158,20 +157,44 @@ function compareNombres(a, b) {
   return a - b;
 }
 
-console.log("Chaînes&nbsp;: " + stringArray.join() +"\n");
-console.log("Triées&nbsp;: " + stringArray.sort() +"\n\n");
+console.log("Chaînes&nbsp;: " + stringArray.join() + "\n");
+console.log("Triées&nbsp;: " + stringArray.sort() + "\n\n");
 
-console.log("Nombres&nbsp;: " + numberArray.join() +"\n");
-console.log("Triés sans fonction de comparaison&nbsp;: " + numberArray.sort() +"\n");
-console.log("Triés avec compareNombres&nbsp;: " + numberArray.sort(compareNombres) +"\n\n");
+console.log("Nombres&nbsp;: " + numberArray.join() + "\n");
+console.log(
+  "Triés sans fonction de comparaison&nbsp;: " + numberArray.sort() + "\n",
+);
+console.log(
+  "Triés avec compareNombres&nbsp;: " +
+    numberArray.sort(compareNombres) +
+    "\n\n",
+);
 
-console.log("Chaînes numériques&nbsp;: " + numericStringArray.join() +"\n");
-console.log("Triées sans fonction de comparaison&nbsp;: " + numericStringArray.sort() +"\n");
-console.log("Triées avec compareNombres&nbsp;: " + numericStringArray.sort(compareNombres) +"\n\n");
+console.log("Chaînes numériques&nbsp;: " + numericStringArray.join() + "\n");
+console.log(
+  "Triées sans fonction de comparaison&nbsp;: " +
+    numericStringArray.sort() +
+    "\n",
+);
+console.log(
+  "Triées avec compareNombres&nbsp;: " +
+    numericStringArray.sort(compareNombres) +
+    "\n\n",
+);
 
-console.log("Nombres et chaînes numériques&nbsp;: " + mixedNumericArray.join() +"\n");
-console.log("Triés sans fonction de comparaison&nbsp;: " + mixedNumericArray.sort() +"\n");
-console.log("Triés avec compareNombres&nbsp;: " + mixedNumericArray.sort(compareNombres) +"\n\n");
+console.log(
+  "Nombres et chaînes numériques&nbsp;: " + mixedNumericArray.join() + "\n",
+);
+console.log(
+  "Triés sans fonction de comparaison&nbsp;: " +
+    mixedNumericArray.sort() +
+    "\n",
+);
+console.log(
+  "Triés avec compareNombres&nbsp;: " +
+    mixedNumericArray.sort(compareNombres) +
+    "\n\n",
+);
 ```
 
 Cet exemple produit la sortie suivante. Comme on peut le voir, lorsqu'on utilise la fonction de comparaison, les nombres sont triés correctement qu'ils soient des nombres ou des chaînes numériques.
@@ -198,7 +221,7 @@ Triés avec compareNombres&nbsp;: 1,5,9,40,80,200,700
 Pour des chaines de caractères contenant des caractères non ASCII, c'est à dire des chaines de caractères contenant par exemple des accents (é, è, a, ä, etc.) : utilisez {{jsxref("String.localeCompare")}}. Cette fonction peut comparer ces caractères afin qu'ils apparaissent dans le bon ordre.
 
 ```js
-var items = ["réservé", "premier", "cliché", "communiqué", "café" ,"adieu"];
+var items = ["réservé", "premier", "cliché", "communiqué", "café", "adieu"];
 items.sort(function (a, b) {
   return a.localeCompare(b);
 });
@@ -212,16 +235,16 @@ La fonction de comparaison peut être amenée à être appelée plusieurs fois p
 
 ```js
 // le tableau à trier
-var liste = ['Delta', 'alpha', 'CHARLIE', 'bravo'];
+var liste = ["Delta", "alpha", "CHARLIE", "bravo"];
 
 // Création d'objet temporaire qui contient les positions
 // et les valeurs en minuscules
-var mapped = liste.map(function(e, i) {
+var mapped = liste.map(function (e, i) {
   return { index: i, value: e.toLowerCase() };
-})
+});
 
 // on trie l'objet temporaire avec les valeurs réduites
-mapped.sort(function(a, b) {
+mapped.sort(function (a, b) {
   if (a.value > b.value) {
     return 1;
   }
@@ -232,7 +255,7 @@ mapped.sort(function(a, b) {
 });
 
 // on utilise un objet final pour les résultats
-var result = mapped.map(function(e){
+var result = mapped.map(function (e) {
   return liste[e.index];
 });
 ```

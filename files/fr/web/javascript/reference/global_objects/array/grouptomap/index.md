@@ -102,11 +102,11 @@ On définit un tableau contenant des objets qui représentent un inventaire alim
 
 ```js
 const inventaire = [
-  { nom: 'asperge', type: 'legume', quantite: 9 },
-  { nom: 'banane', type: 'fruit', quantite: 5 },
-  { nom: 'agneau', type: 'viande', quantite: 23 },
-  { nom: 'cerise', type: 'fruit', quantite: 12 },
-  { nom: 'poisson', type: 'viande', quantite: 22 }
+  { nom: "asperge", type: "legume", quantite: 9 },
+  { nom: "banane", type: "fruit", quantite: 5 },
+  { nom: "agneau", type: "viande", quantite: 23 },
+  { nom: "cerise", type: "fruit", quantite: 12 },
+  { nom: "poisson", type: "viande", quantite: 22 },
 ];
 ```
 
@@ -116,7 +116,9 @@ L'objet `resultat` est une `Map` et il faut donc appeler la méthode `get()` ave
 ```js
 const restock = { restock: true };
 const suffisant = { restock: false };
-const resultat = inventaire.groupToMap(({ quantite }) => quantite < 6 ? restock : suffisant);
+const resultat = inventaire.groupToMap(({ quantite }) =>
+  quantite < 6 ? restock : suffisant,
+);
 console.log(resultat.get(restock));
 // résultat attendu : Array [Object { nom: "banane", type: "fruit", quantite: 5 }]
 ```
@@ -127,7 +129,7 @@ La clé d'un objet `Map` peut être modifiée et continuer d'être utilisée. To
 
 ```js
 // La clé peut être modifiée et continuer d'être utilisée
-restock['rapide'] = true;
+restock["rapide"] = true;
 console.log(resultat.get(restock));
 // résultat attendu : Array [Object { nom: "banane", type: "fruit", quantite: 5 }]
 

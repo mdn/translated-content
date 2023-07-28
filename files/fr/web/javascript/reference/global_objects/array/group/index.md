@@ -98,11 +98,11 @@ On définit un tableau contenant des objets qui représentent un inventaire alim
 
 ```js
 const inventaire = [
-  { nom: 'asperge', type: 'legume', quantite: 5 },
-  { nom: 'banane', type: 'fruit', quantite: 0 },
-  { nom: 'agneau', type: 'viande', quantite: 23 },
-  { nom: 'cerise', type: 'fruit', quantite: 5 },
-  { nom: 'poisson', type: 'viande', quantite: 22 }
+  { nom: "asperge", type: "legume", quantite: 5 },
+  { nom: "banane", type: "fruit", quantite: 0 },
+  { nom: "agneau", type: "viande", quantite: 23 },
+  { nom: "cerise", type: "fruit", quantite: 5 },
+  { nom: "poisson", type: "viande", quantite: 22 },
 ];
 ```
 
@@ -134,7 +134,7 @@ On peut aussi créer des groupes selon un critère utilisant plusieurs propriét
 
 ```js
 function maFonctionDeRappel({ quantite }) {
-  return quantite > 5 ? 'ok' : 'restock';
+  return quantite > 5 ? "ok" : "restock";
 }
 
 const resultat2 = inventaire.group(maFonctionDeRappel);
