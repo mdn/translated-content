@@ -12,7 +12,7 @@ slug: Web/API/Window/screenLeft
 ## 语法
 
 ```js
-leftWindowPos = window.screenLeft
+leftWindowPos = window.screenLeft;
 ```
 
 ### 返回值
@@ -34,14 +34,25 @@ function positionElem() {
   let leftUpdate = initialLeft - newLeft;
   let topUpdate = initialTop - newTop;
 
-  ctx.fillStyle = 'rgb(0, 0, 0)';
+  ctx.fillStyle = "rgb(0, 0, 0)";
   ctx.fillRect(0, 0, width, height);
-  ctx.fillStyle = 'rgb(0, 0, 255)';
+  ctx.fillStyle = "rgb(0, 0, 255)";
   ctx.beginPath();
-  ctx.arc(leftUpdate + (width/2), topUpdate + (height/2) + 35, 50, degToRad(0), degToRad(360), false);
+  ctx.arc(
+    leftUpdate + width / 2,
+    topUpdate + height / 2 + 35,
+    50,
+    degToRad(0),
+    degToRad(360),
+    false,
+  );
   ctx.fill();
 
-  pElem.textContent = 'Window.screenLeft: ' + window.screenLeft + ', Window.screenTop: ' + window.screenTop;
+  pElem.textContent =
+    "Window.screenLeft: " +
+    window.screenLeft +
+    ", Window.screenTop: " +
+    window.screenTop;
 
   window.requestAnimationFrame(positionElem);
 }
@@ -52,7 +63,7 @@ window.requestAnimationFrame(positionElem);
 如果浏览器不支持 `screenLeft`属性，我们还在代码中使用了一个 polyfill 来保证演示效果。通过设置 {{domxref("Window.screenX")}}/{{domxref("Window.screenY")}} 为对应别名来实现一样的功能。
 
 ```js
-if(!window.screenLeft) {
+if (!window.screenLeft) {
   window.screenLeft = window.screenX;
   window.screenTop = window.screenY;
 }

@@ -10,7 +10,7 @@ slug: Web/API/WritableStream/abort
 ## 语法
 
 ```js
-abort(reason)
+abort(reason);
 ```
 
 ### 参数

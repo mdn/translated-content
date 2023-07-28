@@ -10,7 +10,7 @@ slug: Web/API/WritableStreamDefaultWriter/releaseLock
 ## 语法
 
 ```js
-releaseLock()
+releaseLock();
 ```
 
 ### 参数

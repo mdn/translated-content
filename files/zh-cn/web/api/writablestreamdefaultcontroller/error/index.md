@@ -12,7 +12,7 @@ slug: Web/API/WritableStreamDefaultController/error
 ## 语法
 
 ```js
-error(message)
+error(message);
 ```
 
 ### 参数
