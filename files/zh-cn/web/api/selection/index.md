@@ -15,7 +15,7 @@ Selection 对象所对应的是用户所选择的 {{domxref("range","ranges")}}�
 
 ```js
 var selObj = window.getSelection();
-var range  = selObj.getRangeAt(0);
+var range = selObj.getRangeAt(0);
 ```
 
 - `selObj` 被赋予一个 Selection 对象
@@ -116,7 +116,7 @@ window.alert(selObj);
 
 ```js
 var selObj = window.getSelection();
-var range  = selObj.getRangeAt(0);
+var range = selObj.getRangeAt(0);
 ```
 
 - `selObj` 是一个 `Selection` 对象

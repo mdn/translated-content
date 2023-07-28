@@ -10,7 +10,7 @@ slug: Web/API/SourceBuffer/appendBuffer
 ## 语法
 
 ```js
-appendBuffer(source)
+appendBuffer(source);
 ```
 
 ### 参数

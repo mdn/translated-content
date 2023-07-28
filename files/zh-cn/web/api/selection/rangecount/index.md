@@ -26,12 +26,21 @@ value = sel.rangeCount
 ### HTML Content
 
 ```html
-//打开控制台看看 selection 中有多少 range 对象。
-//在 Gecko 浏览器，当你用鼠标在表格单元格中拖动的同时按住 Ctrl，你可以选择多个 range。
+//打开控制台看看 selection 中有多少 range 对象。 //在 Gecko
+浏览器，当你用鼠标在表格单元格中拖动的同时按住 Ctrl，你可以选择多个 range。
 
 <table>
-<tr><td>a.1<td>a.2
-<tr><td>b.1<td>b.2
+  <tr>
+    <td>a.1</td>
+    <td>
+      a.2
+      <tr>
+        <td>b.1</td>
+        <td>b.2</td>
+      </tr>
+    </td>
+  </tr>
+</table>
 ```
 
 ### JavaScript Content
