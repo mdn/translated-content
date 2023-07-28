@@ -60,7 +60,7 @@ console.log(A() && B());
 
 Les expressions suivantes peuvent sembler équivalentes mais ne le sont pas. En effet, l'opérateur `&&` est exécuté avant l'opérateur `||` (voir [l'article sur la précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
 
-```js
+```js-nolint
 true || false && false; // renvoie true, car && est exécuté en premier
 (true || false) && false; // renvoie false, car la précédence par défaut ne s'applique pas avec les parenthèses
 ```

@@ -24,7 +24,7 @@ L'opérateur de groupement consiste en une paire de parenthèses encadrant une e
 
 Normalement, la multiplication et la division sont prises en compte avant l'addition et la soustraction. On peut changer ce comportement avec l'opérateur de groupement.
 
-```js
+```js-nolint
 var a = 1;
 var b = 2;
 var c = 3;
