@@ -61,7 +61,7 @@ console.log(uint16.length); // 2
 console.log(uint16.BYTES_PER_ELEMENT); // 2
 
 // À partir d'un tableau
-const arr = new Uint16Array([21,31]);
+const arr = new Uint16Array([21, 31]);
 console.log(arr[1]); // 31
 
 // À partir d'un autre tableau typé
@@ -74,7 +74,9 @@ const buffer = new ArrayBuffer(8);
 const z = new Uint16Array(buffer, 0, 4);
 
 // À partir d'un itérable
-const iterable = function*(){ yield* [1,2,3]; }();
+const iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 const uint16_from_iterable = new Uint16Array(iterable);
 // Uint16Array[1, 2, 3]
 ```

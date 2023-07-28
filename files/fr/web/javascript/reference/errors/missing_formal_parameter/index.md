@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing formal parameter'
+title: "SyntaxError: missing formal parameter"
 slug: Web/JavaScript/Reference/Errors/Missing_formal_parameter
 translation_of: Web/JavaScript/Reference/Errors/Missing_formal_parameter
 ---
@@ -48,15 +48,15 @@ Il faut utiliser des identifiants lors de la déclaration des fonctions :
 ```js example-good
 function carre(nombre) {
   return nombre * nombre;
-};
+}
 
 function salutation(salut) {
   return salut;
-};
+}
 
 function log(arg) {
-  console.log(arg)
-};
+  console.log(arg);
+}
 ```
 
 Ensuite, on pourra appeler ces fonctions avec les arguments voulus :
@@ -64,7 +64,7 @@ Ensuite, on pourra appeler ces fonctions avec les arguments voulus :
 ```js
 carre(2); // 4
 salutation("Coucou"); // "Coucou"
-log({obj: "value"});  // Object { obj: "value" }
+log({ obj: "value" }); // Object { obj: "value" }
 ```
 
 ## Voir aussi

@@ -11,7 +11,7 @@ Le **constructeur `Number()`** permet de créer un objet [`Number`](/fr/docs/Web
 ## Syntaxe
 
 ```js
-new Number(valeur)
+new Number(valeur);
 ```
 
 ### Paramètres
@@ -24,10 +24,10 @@ new Number(valeur)
 ### Créer des objets `Number`
 
 ```js
-const a = new Number('123'); // a === 123 vaut false
-const b = Number('123');     // b === 123 vaut true
-a instanceof Number;         // true
-b instanceof Number;         // false
+const a = new Number("123"); // a === 123 vaut false
+const b = Number("123"); // b === 123 vaut true
+a instanceof Number; // true
+b instanceof Number; // false
 ```
 
 ## Spécifications

@@ -13,7 +13,7 @@ La méthode **`search()`** éxecute une recherche dans une chaine de caractères
 ## Syntaxe
 
 ```js
-str.search(regexp)
+str.search(regexp);
 ```
 
 ### Paramètres

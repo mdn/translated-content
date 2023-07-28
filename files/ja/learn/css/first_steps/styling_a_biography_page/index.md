@@ -75,9 +75,9 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 1. あなたが作ったものを [CodePen](https://codepen.io/) や [jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのコード共有サービスに公開してください。
 2. 添削の依頼あるいは訊きたいことを [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn) に投稿してください。ここに投稿するときには次のことを忘れないようにしてください。
 
-    - タイトルは何についての質問か分かるように、「Assessment wanted for CSS First Steps」のようにしてください。
-    - 添削や質問を依頼したいコードへのリンクを貼ってください。ソースコードを示してもらわないとこちらもどうサポートしたらよいかがわからないからです。
-    - どの課題に取り組んでいるのか分かるように課題へのリンクを貼ってください。そうしていただけるとあなたがどこで躓いているのか知ることができます。
+   - タイトルは何についての質問か分かるように、「Assessment wanted for CSS First Steps」のようにしてください。
+   - 添削や質問を依頼したいコードへのリンクを貼ってください。ソースコードを示してもらわないとこちらもどうサポートしたらよいかがわからないからです。
+   - どの課題に取り組んでいるのか分かるように課題へのリンクを貼ってください。そうしていただけるとあなたがどこで躓いているのか知ることができます。
 
 ## 次のステップ
 

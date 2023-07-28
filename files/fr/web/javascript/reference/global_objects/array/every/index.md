@@ -62,7 +62,7 @@ Dans l'exemple suivant, on teste si tous les éléments du tableau sont supérie
 function estAssezGrand(element, index, array) {
   return element >= 10;
 }
-[12, 5, 8, 130, 44].every(estAssezGrand);   // false
+[12, 5, 8, 130, 44].every(estAssezGrand); // false
 [12, 54, 18, 130, 44].every(estAssezGrand); // true
 ```
 
@@ -71,10 +71,16 @@ function estAssezGrand(element, index, array) {
 {{jsxref("Fonctions/Fonctions_fléchées","Les fonctions fléchées","","1")}} permettent d'utiliser une syntaxe plus concise pour effectuer le même test.
 
 ```js
-[12, 5, 8, 130, 44].every(elem => elem >= 10); // false
-[12, 54, 18, 130, 44].every(elem => elem >= 10); // true
-[{a:1, b:2}, {a:1, b:3}].every(elem => elem.a === 1); // true
-[{a:2, b:2}, {a:1, b:3}].every(elem => elem.a === 1); // false
+[12, 5, 8, 130, 44].every((elem) => elem >= 10); // false
+[12, 54, 18, 130, 44].every((elem) => elem >= 10); // true
+[
+  { a: 1, b: 2 },
+  { a: 1, b: 3 },
+].every((elem) => elem.a === 1); // true
+[
+  { a: 2, b: 2 },
+  { a: 1, b: 3 },
+].every((elem) => elem.a === 1); // false
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -83,12 +89,12 @@ function estAssezGrand(element, index, array) {
 
 ```js
 if (!Array.prototype.every) {
-  Array.prototype.every = function(callbackfn, thisArg) {
-    'use strict';
+  Array.prototype.every = function (callbackfn, thisArg) {
+    "use strict";
     var T, k;
 
     if (this == null) {
-      throw new TypeError('this vaut null ou n est pas défini');
+      throw new TypeError("this vaut null ou n est pas défini");
     }
 
     // 1. Soit O le résultat de l'appel à ToObject auquel on a
@@ -102,7 +108,7 @@ if (!Array.prototype.every) {
 
     // 4. Si IsCallable(callbackfn) est faux, on lève une exception
     // TypeError.
-    if (typeof callbackfn !== 'function') {
+    if (typeof callbackfn !== "function") {
       throw new TypeError();
     }
 
@@ -116,7 +122,6 @@ if (!Array.prototype.every) {
 
     // 7. On répète tant que k < len
     while (k < len) {
-
       var kValue;
 
       // a. Soit Pk la valeur de ToString(k).
@@ -126,7 +131,6 @@ if (!Array.prototype.every) {
       //    Cette étape peut être combinée avec l'étape c
       // c. Si kPresent vaut true, alors
       if (k in O) {
-
         // i. Soit kValue le résultat de l'appel de la méthode
         //    interne Get de O avec l'argument Pk.
         kValue = O[k];

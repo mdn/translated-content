@@ -13,7 +13,7 @@ La méthode **`fontcolor()`** permet de créer un élément {{HTMLElement("font"
 ## Syntaxe
 
 ```js
-str.fontcolor(couleur)
+str.fontcolor(couleur);
 ```
 
 ### Paramètres
@@ -36,17 +36,22 @@ L'exemple qui suit illustre comment utiliser la méthode `fontcolor()` pour modi
 ```js
 var worldString = "Coucou monde";
 
-console.log(worldString.fontcolor("red") +  " avec le littéral red sur cette ligne");
+console.log(
+  worldString.fontcolor("red") + " avec le littéral red sur cette ligne",
+);
 // '<font color="red">Coucou monde</font> avec le littéral red sur cette ligne'
 
-console.log(worldString.fontcolor("FF00") + " avec la valeur hexadécimale sur cette ligne");
+console.log(
+  worldString.fontcolor("FF00") +
+    " avec la valeur hexadécimale sur cette ligne",
+);
 // '<font color="FF00">Coucou monde</font> avec la valeur hexadécimale sur cette ligne'
 ```
 
 L'objet {{domxref("HTMLElement.style", "element.style")}} permet d'utiliser l'attribut `style` de l'élément et de le manipuler de façon générique. Par exemple :
 
 ```js
-document.getElementById('IDdeVotreElement').style.color = 'red'
+document.getElementById("IDdeVotreElement").style.color = "red";
 ```
 
 ## Spécifications

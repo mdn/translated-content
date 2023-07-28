@@ -13,7 +13,7 @@ La méthode **`getHours()`** renvoie l'heure pour la date renseignée, d'après 
 ## Syntaxe
 
 ```js
-dateObj.getHours()
+dateObj.getHours();
 ```
 
 ### Valeur de retour

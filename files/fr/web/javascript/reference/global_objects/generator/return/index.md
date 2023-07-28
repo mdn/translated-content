@@ -11,7 +11,7 @@ La méthode **`return()`** renvoie la valeur fournie et termine le générateur.
 ## Syntaxe
 
 ```js
-gen.return(valeur)
+gen.return(valeur);
 ```
 
 ### Paramètres
@@ -38,9 +38,9 @@ function* gen() {
 
 var g = gen();
 
-g.next();         // { value: 1, done: false }
+g.next(); // { value: 1, done: false }
 g.return("toto"); // { value: "toto", done: true }
-g.next();         // { value: undefined, done: true }
+g.next(); // { value: undefined, done: true }
 ```
 
 > **Note :** Si `done` vaut `true`, `return(valeur)` renverra la même chose que `next()` : `undefined`. Si aucun argument n'est fourni, la propriété `value` de l'objet renvoyé sera la même qu'avec un appel à `.next()`. Si un argument est fourni, c'est lui qui sera utilisé comme valeur pour l'attribut `value` du résultat.

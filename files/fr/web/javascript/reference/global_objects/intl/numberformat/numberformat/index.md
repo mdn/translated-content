@@ -141,7 +141,7 @@ new Intl.NumberFormat("fr", {
   unit: "liter",
   unitDisplay: "long",
 }).format(amount);
-// → '3 500 litres'
+// → '3 500 litres'
 ```
 
 ### Formatage de devises

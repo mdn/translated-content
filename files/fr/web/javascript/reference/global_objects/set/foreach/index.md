@@ -58,7 +58,7 @@ Le code qui suit permet d'enregistrer une ligne pour chaque élément contenu da
 
 ```js
 function logSetElements(valeur1, valeur2, set) {
-    console.log("s[" + valeur1 + "] = " + valeur2);
+  console.log("s[" + valeur1 + "] = " + valeur2);
 }
 
 new Set(["toto", "truc", undefined]).forEach(logSetElements);
