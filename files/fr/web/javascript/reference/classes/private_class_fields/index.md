@@ -10,17 +10,17 @@ translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 
 ```js
 class ClassWithPrivateField {
-  #privateField
+  #privateField;
 }
 
 class ClassWithPrivateMethod {
   #privateMethod() {
-    return 'hello world'
+    return "hello world";
   }
 }
 
 class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
+  static #PRIVATE_STATIC_FIELD;
 }
 ```
 
@@ -34,15 +34,15 @@ La limitation des variables statiques ne pouvant être appelées que par des mé
 
 ```js
 class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
+  static #PRIVATE_STATIC_FIELD;
 
   static publicStaticMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD
+    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
+    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
   }
 }
 
-console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)
+console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42);
 ```
 
 Les champs statiques privés sont ajoutés au constructeur de la classe au moment de l'évaluation de classe..
@@ -53,23 +53,25 @@ Ceci peut conduire à un comportement inattendu lors de l'utilisation de **`this
 
 ```js
 class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
+  static #PRIVATE_STATIC_FIELD;
 
   static basePublicStaticMethod() {
-    this.#PRIVATE_STATIC_FIELD = 42
-    return this.#PRIVATE_STATIC_FIELD
+    this.#PRIVATE_STATIC_FIELD = 42;
+    return this.#PRIVATE_STATIC_FIELD;
   }
 }
 
-class SubClass extends BaseClassWithPrivateStaticField { }
+class SubClass extends BaseClassWithPrivateStaticField {}
 
-let error = null
+let error = null;
 
 try {
-  SubClass.basePublicStaticMethod()
-} catch(e) { error = e}
+  SubClass.basePublicStaticMethod();
+} catch (e) {
+  error = e;
+}
 
-console.assert(error instanceof TypeError)
+console.assert(error instanceof TypeError);
 ```
 
 ### Champs d'instance privés
@@ -80,16 +82,16 @@ L'encapsulation est forcée par le langage. C'est une erreur de syntaxe que de f
 
 ```js
 class ClassWithPrivateField {
-  #privateField
+  #privateField;
 
   constructor() {
-    this.#privateField = 42
-    this.#randomField = 666 // Erreur de syntaxe
+    this.#privateField = 42;
+    this.#randomField = 666; // Erreur de syntaxe
   }
 }
 
-const instance = new ClassWithPrivateField()
-instance.#privateField === 42 // Erreur de syntaxe
+const instance = new ClassWithPrivateField();
+instance.#privateField === 42; // Erreur de syntaxe
 ```
 
 ### Méthodes Privées
@@ -102,17 +104,17 @@ Les méthodes statiques privées peuvent être des fonctions génératrices, asy
 
 ```js
 class ClassWithPrivateStaticMethod {
-    static #privateStaticMethod() {
-        return 42
-    }
+  static #privateStaticMethod() {
+    return 42;
+  }
 
-    static publicStaticMethod1() {
-        return ClassWithPrivateStaticMethod.#privateStaticMethod();
-    }
+  static publicStaticMethod1() {
+    return ClassWithPrivateStaticMethod.#privateStaticMethod();
+  }
 
-    static publicStaticMethod2() {
-        return this.#privateStaticMethod();
-    }
+  static publicStaticMethod2() {
+    return this.#privateStaticMethod();
+  }
 }
 
 console.assert(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
@@ -123,15 +125,15 @@ Cela peut conduire à un comportement inattendu lors de l'utilisation de **`this
 
 ```js
 class Base {
-    static #privateStaticMethod() {
-        return 42;
-    }
-    static publicStaticMethod1() {
-        return Base.#privateStaticMethod();
-    }
-    static publicStaticMethod2() {
-        return this.#privateStaticMethod();
-    }
+  static #privateStaticMethod() {
+    return 42;
+  }
+  static publicStaticMethod1() {
+    return Base.#privateStaticMethod();
+  }
+  static publicStaticMethod2() {
+    return this.#privateStaticMethod();
+  }
 }
 
 class Derived extends Base {}
@@ -147,16 +149,16 @@ Les méthodes d'instance privées sont des méthodes disponibles dans les instan
 ```js
 class ClassWithPrivateMethod {
   #privateMethod() {
-    return 'hello world'
+    return "hello world";
   }
 
   getPrivateMessage() {
-      return this.#privateMethod()
+    return this.#privateMethod();
   }
 }
 
-const instance = new ClassWithPrivateMethod()
-console.log(instance.getPrivateMessage())
+const instance = new ClassWithPrivateMethod();
+console.log(instance.getPrivateMessage());
 // expected output: "hello world"
 ```
 
@@ -164,18 +166,18 @@ Les méthodes d'instance privées peuvent être des fonctions génératrices, as
 
 ```js
 class ClassWithPrivateAccessor {
-  #message
+  #message;
 
   get #decoratedMessage() {
-    return `✨${this.#message}✨`
+    return `✨${this.#message}✨`;
   }
   set #decoratedMessage(msg) {
-    this.#message = msg
+    this.#message = msg;
   }
 
   constructor() {
-    this.#decoratedMessage = 'hello world'
-    console.log(this.#decoratedMessage)
+    this.#decoratedMessage = "hello world";
+    console.log(this.#decoratedMessage);
   }
 }
 

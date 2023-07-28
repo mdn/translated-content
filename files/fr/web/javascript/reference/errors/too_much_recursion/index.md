@@ -1,5 +1,5 @@
 ---
-title: 'InternalError: too much recursion'
+title: "InternalError: too much recursion"
 slug: Web/JavaScript/Reference/Errors/Too_much_recursion
 translation_of: Web/JavaScript/Reference/Errors/Too_much_recursion
 ---
@@ -30,8 +30,10 @@ Cette fonction récursive est exécutée 10 fois comme l'indique la condition de
 
 ```js
 function loop(x) {
-  if (x >= 10) // "x >= 10" is the exit condition
+  if (x >= 10) {
+    // "x >= 10" is the exit condition
     return;
+  }
   // do stuff
   loop(x + 1); // the recursive call
 }
@@ -42,8 +44,9 @@ Si la condition d'arrêt est beaucoup trop grande, cela ne fonctionnera pas :
 
 ```js example-bad
 function loop(x) {
-  if (x >= 1000000000000)
+  if (x >= 1000000000000) {
     return;
+  }
   // do stuff
   loop(x + 1);
 }

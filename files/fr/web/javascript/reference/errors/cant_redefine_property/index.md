@@ -30,9 +30,9 @@ La méthode {{jsxref("Object.defineProperty()")}} crée des propriétés non-con
 
 ```js example-bad
 var obj = Object.create({});
-Object.defineProperty(obj, "toto", {value: "machin"});
+Object.defineProperty(obj, "toto", { value: "machin" });
 
-Object.defineProperty(obj, "toto", {value: "bidule"});
+Object.defineProperty(obj, "toto", { value: "bidule" });
 // TypeError: can't redefine non-configurable property "toto"
 ```
 
@@ -40,8 +40,8 @@ Si on veut pouvoir redéfinir la propriété "toto" dans la suite du code, il fa
 
 ```js example-good
 var obj = Object.create({});
-Object.defineProperty(obj, "toto", {value: "machin", configurable: true});
-Object.defineProperty(obj, "toto", {value: "bidule", configurable: true});
+Object.defineProperty(obj, "toto", { value: "machin", configurable: true });
+Object.defineProperty(obj, "toto", { value: "bidule", configurable: true });
 ```
 
 ## Voir aussi

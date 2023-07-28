@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing ) after condition'
+title: "SyntaxError: missing ) after condition"
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_condition
 translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_condition
 ---
@@ -61,7 +61,7 @@ Pour corriger cette erreur, on utilisera [un opérateur de comparaison](/fr/docs
 
 ```js example-good
 if (done === true) {
- console.log("Et voilà !");
+  console.log("Et voilà !");
 }
 ```
 

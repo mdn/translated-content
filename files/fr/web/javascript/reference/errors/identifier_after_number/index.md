@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: identifier starts immediately after numeric literal'
+title: "SyntaxError: identifier starts immediately after numeric literal"
 slug: Web/JavaScript/Reference/Errors/Identifier_after_number
 translation_of: Web/JavaScript/Reference/Errors/Identifier_after_number
 ---
@@ -44,7 +44,7 @@ alert(1.toto);
 Pour éviter ce problème, il faudra renommer les variables afin d'éviter d'utiliser un chiffre au début :
 
 ```js example-good
-var vie1 = 'toto';
+var vie1 = "toto";
 var toto = vie1;
 ```
 
