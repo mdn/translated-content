@@ -13,7 +13,7 @@ La méthode **`toJSON()`** renvoie une chaîne représentant l'objet {{jsxref("D
 ## Syntaxe
 
 ```js
-dateObj.toJSON()
+dateObj.toJSON();
 ```
 
 ### Valeur de retour
@@ -29,7 +29,7 @@ Les instances de {{jsxref("Date")}} identifient un instant précis dans le temps
 ### Utiliser `toJSON()`
 
 ```js
-var jsonDate = (new Date()).toJSON();
+var jsonDate = new Date().toJSON();
 var retourVersDate = new Date(jsonDate);
 
 console.log(jsonDate); //2015-10-26T07:46:36.611Z

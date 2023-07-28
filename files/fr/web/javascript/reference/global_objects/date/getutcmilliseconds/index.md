@@ -13,7 +13,7 @@ La méthode **`getUTCMilliseconds()`** renvoie les millièmes de secondes pour l
 ## Syntaxe
 
 ```js
-dateObj.getUTCMilliseconds()
+dateObj.getUTCMilliseconds();
 ```
 
 ### Valeur de retour

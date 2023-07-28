@@ -21,8 +21,16 @@ La propriété spéciale `__caller__` qui renvoyait l'objet qui dans lequel éta
 Dans une fonction récursive, cette propriété ne peut pas être utilisée pour reconstituer la pile d'appels (_call stack_). Par exemple, si on a :
 
 ```js
-function f(n) { g(n - 1); }
-function g(n) { if (n > 0) { f(n); } else { stop(); } }
+function f(n) {
+  g(n - 1);
+}
+function g(n) {
+  if (n > 0) {
+    f(n);
+  } else {
+    stop();
+  }
+}
 f(2);
 ```
 
@@ -35,16 +43,16 @@ f(2) -> g(1) -> f(1) -> g(0) -> stop()
 Et ceci est vrai :
 
 ```js
-stop.caller === g && f.caller === g && g.caller === f
+stop.caller === g && f.caller === g && g.caller === f;
 ```
 
 Donc si on essaie d'obtenir la pile de cette façon :
 
 ```js
 var f = stop;
-var stack = 'Stack trace:';
+var stack = "Stack trace:";
 while (f) {
-  stack += '\n' + f.name;
+  stack += "\n" + f.name;
   f = f.caller;
 }
 ```
@@ -60,9 +68,9 @@ Dans l'exemple suivant, on verifie la propriété `caller` de la fonction.
 ```js
 function maFonction() {
   if (maFonction.caller == null) {
-    return 'Fonction appelée au plus haut niveau !';
+    return "Fonction appelée au plus haut niveau !";
   } else {
-    return 'Fonction appelée par ' + maFonction.caller;
+    return "Fonction appelée par " + maFonction.caller;
   }
 }
 ```

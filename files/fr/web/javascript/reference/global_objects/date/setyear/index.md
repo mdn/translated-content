@@ -11,7 +11,7 @@ La méthode **`setYear()`** définit l'année pour pour la date, selon l'heure l
 ## Syntaxe
 
 ```js
-dateObj.setYear(valeurAnnée)
+dateObj.setYear(valeurAnnée);
 ```
 
 ### Paramètres

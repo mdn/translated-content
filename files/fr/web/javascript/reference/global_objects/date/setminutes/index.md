@@ -19,7 +19,7 @@ dateObj.setMinutes(valeurMinutes[, valeurSecondes[, valeurMs]])
 ### Versions antérieures à JavaScript 1.3
 
 ```js
-dateObj.setMinutes(valeurMinutes)
+dateObj.setMinutes(valeurMinutes);
 ```
 
 ### Paramètres
