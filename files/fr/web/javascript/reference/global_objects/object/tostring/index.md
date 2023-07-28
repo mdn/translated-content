@@ -13,7 +13,7 @@ La méthode **`toString()`** renvoie une chaîne de caractères représentant l'
 ## Syntaxe
 
 ```js
-obj.toString()
+obj.toString();
 ```
 
 ### Valeur de retour
@@ -26,7 +26,7 @@ Chaque object possède une méthode `toString()` qui est appelée de façon auto
 
 ```js
 var o = new Object();
-o.toString();           // renvoie [object Object]
+o.toString(); // renvoie [object Object]
 ```
 
 > **Note :** À partir de JavaScript 1.8.5 `toString()`, lorsqu'elle est appelée sur {{jsxref("null")}} renvoie `[object Null]`, et lorsqu'elle est appelée sur {{jsxref("undefined")}} renvoie `[object Undefined]`, ce qui est conforme à ECMAScript 5 et aux errata qui ont suivis. Voir l'exemple ci-après [Utiliser `toString` pour détecter le type d'un objet](#detect).
@@ -47,7 +47,7 @@ function Chien(nom, race, couleur, sexe) {
   this.sexe = sexe;
 }
 
-monChien = new Chien('Gabby', 'Labrador', 'chocolat', 'femelle');
+monChien = new Chien("Gabby", "Labrador", "chocolat", "femelle");
 ```
 
 Si on appelle la méthode `toString()` sur cet objet, on aura le résultat suivant (provenant de la méthode originale, héritée d'{{jsxref("Object")}}) :
@@ -60,9 +60,17 @@ Dans le code qui suit, on surcharge la méthode `toString()` avec `chienToString
 
 ```js
 Chien.prototype.toString = function chienToString() {
-  var ret = 'Le chien ' + this.nom + ' est un ' + this.race + ' ' + this.sexe + ' ' + this.couleur;
+  var ret =
+    "Le chien " +
+    this.nom +
+    " est un " +
+    this.race +
+    " " +
+    this.sexe +
+    " " +
+    this.couleur;
   return ret;
-}
+};
 ```
 
 En utilisant la fonction ci-avant, à chaque fois que `monChien` sera utilisé là où on attend une chaîne, le moteur JavaScript appellera automatique la fonction `chienToString()` qui renverra la chaîne suivante :
@@ -78,13 +86,13 @@ Le chien Gabby est un labrador femelle chocolat.
 ```js
 var toString = Object.prototype.toString;
 
-toString.call(new Date);    // [object Date]
-toString.call(new String);  // [object String]
-toString.call(Math);        // [object Math]
+toString.call(new Date()); // [object Date]
+toString.call(new String()); // [object String]
+toString.call(Math); // [object Math]
 
 // Depuis JavaScript 1.8.5
-toString.call(undefined);   // [object Undefined]
-toString.call(null);        // [object Null]
+toString.call(undefined); // [object Undefined]
+toString.call(null); // [object Null]
 ```
 
 ## Spécifications
