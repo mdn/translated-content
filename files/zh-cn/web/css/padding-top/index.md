@@ -42,8 +42,12 @@ padding-top: unset;
 ## 实例
 
 ```css
-.content { padding-top: 5%; }
-.sidebox { padding-top: 10px; }
+.content {
+  padding-top: 5%;
+}
+.sidebox {
+  padding-top: 10px;
+}
 ```
 
 ## 规范

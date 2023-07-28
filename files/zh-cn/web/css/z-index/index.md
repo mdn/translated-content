@@ -24,7 +24,7 @@ z-index: auto;
 z-index: 0;
 z-index: 3;
 z-index: 289;
-z-index: -1;/* 使用负值降低优先级 */
+z-index: -1; /* 使用负值降低优先级 */
 
 /* 全局值 */
 z-index: inherit;

@@ -72,9 +72,9 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 
 ```html
 <div class="foo">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-Quos quaerat sit soluta, quisquam exercitationem delectus qui unde in facere
-necessitatibus aut quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quaerat sit
+  soluta, quisquam exercitationem delectus qui unde in facere necessitatibus aut
+  quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
 </div>
 ```
 
@@ -91,7 +91,6 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
-
 }
 .foo {
   width: 50%;
@@ -102,7 +101,7 @@ body {
   text-align: center;
   font-family: system-ui, sans-serif;
   font-size: 14px;
-   /* Setting up animation for better demonstration */
+  /* Setting up animation for better demonstration */
   animation: MotionScale 2s alternate linear infinite;
 }
 
@@ -117,29 +116,13 @@ body {
         Translates every Z point by 0
         Scales down by 10%
     */
-    transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      -50,-100,0,1.1
-    );
-
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -50, -100, 0, 1.1);
   }
   50% {
-    transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      0,0,0,0.9
-    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.9);
   }
   to {
-     transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      50,100,0,1.1
-    )
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);
   }
 }
 ```
