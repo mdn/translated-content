@@ -21,15 +21,19 @@ slug: Web/API/AudioTrack/label
 function getTrackList(el) {
   const trackList = [];
   const wantedKinds = [
-    "main", "alternative", "main-desc", "translation", "commentary"
+    "main",
+    "alternative",
+    "main-desc",
+    "translation",
+    "commentary",
   ];
 
-  el.audioTracks.forEach(function(track) {
+  el.audioTracks.forEach(function (track) {
     if (wantedKinds.includes(track.kind)) {
       trackList.push({
         id: track.id,
         kind: track.kind,
-        label: track.label
+        label: track.label,
       });
     }
   });

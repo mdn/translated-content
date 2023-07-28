@@ -14,7 +14,7 @@ original_slug: Web/API/AudioContext/createStereoPanner
 ## 構文
 
 ```js
-createStereoPanner()
+createStereoPanner();
 ```
 
 ### 引数
@@ -33,10 +33,10 @@ createStereoPanner()
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var myAudio = document.querySelector('audio');
+var myAudio = document.querySelector("audio");
 
-var panControl = document.querySelector('.panning-control');
-var panValue = document.querySelector('.panning-value');
+var panControl = document.querySelector(".panning-control");
+var panValue = document.querySelector(".panning-value");
 
 pre.innerHTML = myScript.innerHTML;
 
@@ -50,10 +50,10 @@ var panNode = audioCtx.createStereoPanner();
 // イベントハンドラー関数で、スライダーが動いたとき
 // 左右のパンの値を左右する
 
-panControl.oninput = function() {
+panControl.oninput = function () {
   panNode.pan.setValueAtTime(panControl.value, audioCtx.currentTime);
   panValue.innerHTML = panControl.value;
-}
+};
 
 // MediaElementAudioSourceNode を panNode に、 panNode を
 // 出力先に接続し、音楽を再生してコントロールでパンを調整

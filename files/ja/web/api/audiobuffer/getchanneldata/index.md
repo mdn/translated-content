@@ -28,9 +28,9 @@ getChannelData(channel);
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var button = document.querySelector('button');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+var button = document.querySelector("button");
+var pre = document.querySelector("pre");
+var myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
@@ -41,17 +41,17 @@ var frameCount = audioCtx.sampleRate * 2.0;
 
 var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
-button.onclick = function() {
+button.onclick = function () {
   // バッファーにホワイトノイズを書き込む;
   // 単なる -1.0 から 1.0 の間の乱数の値である
   for (var channel = 0; channel < channels; channel++) {
-   // 実際のデータの配列を得る
-   var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i < frameCount; i++) {
-     // Math.random() は [0; 1.0] である
-     // 音声は [-1.0; 1.0] である必要がある
-     nowBuffering[i] = Math.random() * 2 - 1;
-   }
+    // 実際のデータの配列を得る
+    var nowBuffering = myArrayBuffer.getChannelData(channel);
+    for (var i = 0; i < frameCount; i++) {
+      // Math.random() は [0; 1.0] である
+      // 音声は [-1.0; 1.0] である必要がある
+      nowBuffering[i] = Math.random() * 2 - 1;
+    }
   }
 
   // AudioBufferSourceNode を得る
@@ -63,7 +63,7 @@ button.onclick = function() {
   source.connect(audioCtx.destination);
   // 音源の再生を始める
   source.start();
-}
+};
 ```
 
 ## 仕様書

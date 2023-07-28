@@ -34,16 +34,24 @@ WebGL 拡張機能は {{domxref("WebGLRenderingContext.getExtension()")}} メソ
 ## 例
 
 次の例は、与えられた図形を 1 回の draw 呼び出しで複数回描画する方法です。
+
 > **警告:** 以下は教育的なものであり、製品レベルのコードではありません。レンダリングループ内や使用直前にデータ/バッファを構築することは、一般的に避けるべきです。
 
 ```js
 // 拡張機能を有効化
-const ext = gl.getExtension('ANGLE_instanced_arrays');
+const ext = gl.getExtension("ANGLE_instanced_arrays");
 
 // 通常通りに図形バッファーを関連付ける
 gl.bindBuffer(gl.ARRAY_BUFFER, geometryVertexBuffer);
 gl.enableVertexAttribArray(vertexPositionAttributeLocation);
-gl.vertexAttribPointer(vertexPositionAttributeLocation, 3, gl.FLOAT, false, 0, 0);
+gl.vertexAttribPointer(
+  vertexPositionAttributeLocation,
+  3,
+  gl.FLOAT,
+  false,
+  0,
+  0,
+);
 
 // 位置バッファーを構築
 const instancePositions = [];
@@ -51,7 +59,7 @@ for (const instance of instances) {
   instancePositions.push(
     instance.position.x,
     instance.position.y,
-    instance.position.z
+    instance.position.z,
   );
 }
 const instancePositionBuffer = createWebGLBufferFromData(instancePositions);
@@ -59,13 +67,25 @@ const instancePositionBuffer = createWebGLBufferFromData(instancePositions);
 // 他の属性と同様に、このインスタンスと位置バッファーを関連付け
 gl.bindBuffer(gl.ARRAY_BUFFER, instancePositionBuffer);
 gl.enableVertexAttribArray(instancePositionAttributeLocation);
-gl.vertexAttribPointer(instancePositionAttributeLocation, 3, gl.FLOAT, false, 0, 0);
+gl.vertexAttribPointer(
+  instancePositionAttributeLocation,
+  3,
+  gl.FLOAT,
+  false,
+  0,
+  0,
+);
 
 // 属性をインスタンスとしてマークし、すべての頂点ではなく、それぞれ（1 つ）のインスタンスを進めます。
 ext.vertexAttribDivisorANGLE(instancePositionAttributeLocation, 1);
 
 // それぞれのインスタンスについて、図形を描画します。
-ext.drawArraysInstancedANGLE(gl.TRIANGLES, 0, numGeometryVertices, instances.length);
+ext.drawArraysInstancedANGLE(
+  gl.TRIANGLES,
+  0,
+  numGeometryVertices,
+  instances.length,
+);
 ```
 
 ## 仕様書

@@ -32,19 +32,19 @@ void ctx.beginPath();
 `beginPath()` メソッドがそれぞれの線を引く前に呼び出されるため、それぞれの線は別々な色で描かれます。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // 第 1 のパス
 ctx.beginPath();
-ctx.strokeStyle = 'blue';
+ctx.strokeStyle = "blue";
 ctx.moveTo(20, 20);
 ctx.lineTo(200, 20);
 ctx.stroke();
 
 // 第 2 のパス
 ctx.beginPath();
-ctx.strokeStyle = 'green';
+ctx.strokeStyle = "green";
 ctx.moveTo(20, 20);
 ctx.lineTo(120, 120);
 ctx.stroke();

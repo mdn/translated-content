@@ -10,8 +10,8 @@ slug: Web/API/ClipboardEvent/ClipboardEvent
 ## 構文
 
 ```js
-new ClipboardEvent(type)
-new ClipboardEvent(type, options)
+new ClipboardEvent(type);
+new ClipboardEvent(type, options);
 ```
 
 ### 引数

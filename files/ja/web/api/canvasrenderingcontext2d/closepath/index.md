@@ -32,14 +32,14 @@ void ctx.closePath();
 三角形の頂点は、 (20, 150), (120, 20), (220, 150) とします。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.moveTo(20, 140);   // ペンを左下の隅へ移動
-ctx.lineTo(120, 10);   // 上中央へ線を引く
-ctx.lineTo(220, 140);  // 右下の隅へ線を引く
-ctx.closePath();       // 左下の隅へ線を引く
+ctx.moveTo(20, 140); // ペンを左下の隅へ移動
+ctx.lineTo(120, 10); // 上中央へ線を引く
+ctx.lineTo(220, 140); // 右下の隅へ線を引く
+ctx.closePath(); // 左下の隅へ線を引く
 ctx.stroke();
 ```
 
@@ -64,8 +64,8 @@ ctx.stroke();
 最初の 2 つの弧は顔の目を作成します。最後の弧は口を作成します。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.arc(240, 20, 40, 0, Math.PI);

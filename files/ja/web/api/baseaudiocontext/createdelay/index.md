@@ -13,7 +13,7 @@ original_slug: Web/API/AudioContext/createDelay
 ## 構文
 
 ```js
-createDelay(maxDelayTime)
+createDelay(maxDelayTime);
 ```
 
 ### 引数

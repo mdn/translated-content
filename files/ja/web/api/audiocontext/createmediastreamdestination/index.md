@@ -31,7 +31,7 @@ var destination = audioCtx.createMediaStreamDestination();
 そこで opus ファイルの再生と保存ができます。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>createMediaStreamDestination() demo</title>
@@ -39,42 +39,42 @@ var destination = audioCtx.createMediaStreamDestination();
   <body>
     <h1>createMediaStreamDestination() demo</h1>
 
-    <p>Encoding a pure sine wave to an Opus file </p>
+    <p>Encoding a pure sine wave to an Opus file</p>
     <button>Make sine wave</button>
     <audio controls></audio>
     <script>
-     var b = document.querySelector("button");
-     var clicked = false;
-     var chunks = [];
-     var ac = new AudioContext();
-     var osc = ac.createOscillator();
-     var dest = ac.createMediaStreamDestination();
-     var mediaRecorder = new MediaRecorder(dest.stream);
-     osc.connect(dest);
+      var b = document.querySelector("button");
+      var clicked = false;
+      var chunks = [];
+      var ac = new AudioContext();
+      var osc = ac.createOscillator();
+      var dest = ac.createMediaStreamDestination();
+      var mediaRecorder = new MediaRecorder(dest.stream);
+      osc.connect(dest);
 
-     b.addEventListener("click", function(e) {
-       if (!clicked) {
-           mediaRecorder.start();
-           osc.start(0);
-           e.target.innerHTML = "Stop recording";
-           clicked = true;
-         } else {
-           mediaRecorder.stop();
-           osc.stop(0);
-           e.target.disabled = true;
-         }
-     });
+      b.addEventListener("click", function (e) {
+        if (!clicked) {
+          mediaRecorder.start();
+          osc.start(0);
+          e.target.innerHTML = "Stop recording";
+          clicked = true;
+        } else {
+          mediaRecorder.stop();
+          osc.stop(0);
+          e.target.disabled = true;
+        }
+      });
 
-     mediaRecorder.ondataavailable = function(evt) {
-       // それぞれの chunk(blobs)を配列に入れる
-       chunks.push(evt.data);
-     };
+      mediaRecorder.ondataavailable = function (evt) {
+        // それぞれの chunk(blobs)を配列に入れる
+        chunks.push(evt.data);
+      };
 
-     mediaRecorder.onstop = function(evt) {
-       // blob を作成し開く
-       var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
-       document.querySelector("audio").src = URL.createObjectURL(blob);
-     };
+      mediaRecorder.onstop = function (evt) {
+        // blob を作成し開く
+        var blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
+        document.querySelector("audio").src = URL.createObjectURL(blob);
+      };
     </script>
   </body>
 </html>
