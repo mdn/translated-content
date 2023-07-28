@@ -12,7 +12,7 @@ slug: Web/API/ReadableStreamDefaultController/error
 ## 语法
 
 ```js
-error(e)
+error(e);
 ```
 
 ### 参数

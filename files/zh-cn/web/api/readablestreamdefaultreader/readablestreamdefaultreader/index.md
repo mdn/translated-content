@@ -12,7 +12,7 @@ slug: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
 ## 语法
 
 ```js
-new ReadableStreamDefaultReader(stream)
+new ReadableStreamDefaultReader(stream);
 ```
 
 ### 参数
@@ -50,8 +50,12 @@ function fetchStream() {
     // 从流中获取的数据是一个 Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
-    listItem.textContent = 'Received ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    let listItem = document.createElement("li");
+    listItem.textContent =
+      "Received " +
+      charsReceived +
+      " characters so far. Current chunk = " +
+      chunk;
     list2.appendChild(listItem);
     result += chunk;
     // 再次调用该函数以读取更多数据

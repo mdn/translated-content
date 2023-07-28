@@ -10,8 +10,8 @@ slug: Web/API/ReadableStream/getReader
 ## 语法
 
 ```js
-getReader()
-getReader(mode)
+getReader();
+getReader(mode);
 ```
 
 ### 参数
@@ -56,8 +56,12 @@ function fetchStream() {
     // value for fetch streams is a Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
-    listItem.textContent = 'Received ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    let listItem = document.createElement("li");
+    listItem.textContent =
+      "Received " +
+      charsReceived +
+      " characters so far. Current chunk = " +
+      chunk;
     list2.appendChild(listItem);
 
     result += chunk;

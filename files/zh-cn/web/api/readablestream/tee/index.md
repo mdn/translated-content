@@ -16,7 +16,7 @@ slug: Web/API/ReadableStream/tee
 ## 语法
 
 ```js
-tee()
+tee();
 ```
 
 ### 参数
@@ -61,8 +61,9 @@ function fetchStream(stream, list) {
     // value for fetch streams is a Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
-    listItem.textContent = 'Read ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    let listItem = document.createElement("li");
+    listItem.textContent =
+      "Read " + charsReceived + " characters so far. Current chunk = " + chunk;
     list.appendChild(listItem);
 
     // Read some more, and call this function again

@@ -10,7 +10,7 @@ slug: Web/API/OfflineAudioContext/OfflineAudioContext
 ## 语法
 
 ```js
-var myOfflineAudio = new OfflineAudioContext(numOfChannels,length,sampleRate);
+var myOfflineAudio = new OfflineAudioContext(numOfChannels, length, sampleRate);
 ```
 
 ### 参数
@@ -32,7 +32,7 @@ var myOfflineAudio = new OfflineAudioContext(numOfChannels,length,sampleRate);
 // 定义一个在线或者离线的音频上下文
 
 var audioCtx = new AudioContext();
-var offlineCtx = new OfflineAudioContext(2,44100*40,44100);
+var offlineCtx = new OfflineAudioContext(2, 44100 * 40, 44100);
 
 source = offlineCtx.createBufferSource();
 
