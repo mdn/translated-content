@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/Content-Security-Policy
 
 如需更多信息，请查阅[Content Security Policy (CSP)](/zh-CN/docs/Web/HTTP/CSP)。
 
-| 头部类型                                         | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| 头部类型                              | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 
@@ -24,6 +24,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 通过获取指令来控制某些可能被加载的确切的资源类型的位置。
 
 - {{CSP("child-src")}}
+
   - : **child-src**：为 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 和其他内嵌浏览器内容（例如用 {{HTMLElement("frame")}} 和 {{HTMLElement("iframe")}} 加载到页面的内容）定义合法的源地址。
 
     > **警告：** 如果开发者希望管控内嵌浏览器内容和 web worker 应分别使用 {{CSP("frame-src")}} 和 {{CSP("worker-src")}} 指令，来相对的取代 **`child-src`**。
