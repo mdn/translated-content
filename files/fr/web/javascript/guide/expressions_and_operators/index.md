@@ -955,7 +955,7 @@ On peut appeler `valider()` pour un élément de formulaire sur le gestionnaire 
 
 L'opérateur de groupement, `( )`, contrôle la précédence de l'évaluation dans une expression. On peut ainsi prioriser certaines opérations par rapport à d'autres et passer outre la précédence par défaut. Dans l'exemple qui suit, on utilise les parenthèses pour que l'addition ait lieu avant la multiplication.
 
-```js
+```js-nolint
 const a = 1;
 const b = 2;
 const c = 3;

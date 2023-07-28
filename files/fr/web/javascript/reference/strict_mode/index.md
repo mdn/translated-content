@@ -172,7 +172,8 @@ Premièrement, le mode strict interdit l'utilisation de `with`. Le problème ave
 ```js
 "use strict";
 var x = 17;
-with (obj) { // !!! erreur de syntaxe
+with (obj) {
+  // !!! erreur de syntaxe
   // Si on n'était pas en mode strict, serait-ce var x,
   // ou serait-ce plutôt obj.x?  Il est impossible en général
   // de le dire sans faire tourner le code, donc

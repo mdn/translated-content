@@ -23,7 +23,7 @@ Les différents navigateurs définissent cette valeur à différents instants. P
 Le code HTML suivant démontre l'utilisation de la propriété `stack`.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <meta charset="UTF-8" />
 <title>Exemple de Trace de Pile</title>
 <body>

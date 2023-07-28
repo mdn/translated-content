@@ -565,7 +565,7 @@ Avec ECMAScript 2015, on peut également utiliser des littéraux sous forme de _
 
 ```js
 // Littéral simple pour une chaîne
-`Un saut de ligne '\n' en JavaScript.`// On peut écrire une chaîne sur plusieurs
+`Un saut de ligne '\n' en JavaScript.` // On peut écrire une chaîne sur plusieurs
 // lignes
 `Dans les gabarits, on peut écrire
   sur plusieurs lignes. `;

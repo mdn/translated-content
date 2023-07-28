@@ -247,7 +247,7 @@ Voici une liste (non exhaustive) d'opérateurs et de méthodes natives qui peuve
   - : Si on prend l'opposé de `0`, on aura, bien entendu, `-0`. Cependant, avec les expressions, cela peut faire que la valeur `-0` se glisse dans les variables sans qu'on s'en rende compte. Par exemple :
 
     ```js
-    let forceArrêt = obj.masse * -obj.vitesse
+    let forceArrêt = obj.masse * -obj.vitesse;
     ```
 
     Si `obj.vitesse` vaut `0` (ou est évalué à `0`), un `-0` sera introduit, ce qui fera que `forceArrêt` pourra être négative.
