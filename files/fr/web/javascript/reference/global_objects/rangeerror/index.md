@@ -45,17 +45,18 @@ Par exemple, cela peut être le cas quand&nbsp;:
 ```js
 const MIN = 200;
 const MAX = 300;
-function verifier( num ) {
-  if( num < MIN || num > MAX ) {
-    throw new RangeError( "Le paramètre doit être compris entre " + MIN + " et " + MAX );
+function verifier(num) {
+  if (num < MIN || num > MAX) {
+    throw new RangeError(
+      "Le paramètre doit être compris entre " + MIN + " et " + MAX,
+    );
   }
-};
+}
 
 try {
   verifier(500);
-}
-catch (e) {
-  if (e instanceof RangeError ){
+} catch (e) {
+  if (e instanceof RangeError) {
     // On gère ce qui se passe en cas d'erreur
   }
 }
@@ -64,17 +65,18 @@ catch (e) {
 ### Utiliser `RangeError` avec des valeurs non-numériques
 
 ```js
-function verifier(valeur){
-  if(["pomme", "banane", "carotte"].includes(valeur) === false){
-    throw new RangeError("L'argument n'est pas un fruit parmi pomme / banane ou carotte.");
+function verifier(valeur) {
+  if (["pomme", "banane", "carotte"].includes(valeur) === false) {
+    throw new RangeError(
+      "L'argument n'est pas un fruit parmi pomme / banane ou carotte.",
+    );
   }
 }
 
 try {
   verifier("chou");
-}
-catch(erreur) {
-  if(erreur instanceof RangeError){
+} catch (erreur) {
+  if (erreur instanceof RangeError) {
     //On gère ce qui se passe en cas d'erreur
   }
 }

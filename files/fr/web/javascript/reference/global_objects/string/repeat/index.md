@@ -13,7 +13,7 @@ La méthode **`repeat()`** construit et renvoie une nouvelle chaine de caractèr
 ## Syntaxe
 
 ```js
-str.repeat(compte)
+str.repeat(compte);
 ```
 
 ### Paramètres
@@ -38,14 +38,19 @@ Une nouvelle chaîne de caractères composée du nombre indiqué de copies de la
 ## Exemples
 
 ```js
-"abc".repeat(-1)     // RangeError
-"abc".repeat(0)      // ""
-"abc".repeat(1)      // "abc"
-"abc".repeat(2)      // "abcabc"
-"abc".repeat(3.5)    // "abcabcabc" (le compteur est converti en un nombre entier)
-"abc".repeat(1/0)    // RangeError
+"abc".repeat(-1); // RangeError
+"abc".repeat(0); // ""
+"abc".repeat(1); // "abc"
+"abc".repeat(2); // "abcabc"
+"abc".repeat(3.5); // "abcabcabc" (le compteur est converti en un nombre entier)
+"abc"
+  .repeat(1 / 0)
+  (
+    // RangeError
 
-({toString : () => "abc", repeat : String.prototype.repeat}).repeat(2)
+    { toString: () => "abc", repeat: String.prototype.repeat },
+  )
+  .repeat(2);
 // "abcabc" (repeat() est une méthode générique)
 ```
 
