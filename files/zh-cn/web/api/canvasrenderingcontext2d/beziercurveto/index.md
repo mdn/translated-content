@@ -47,17 +47,17 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.moveTo(50,20);
+ctx.moveTo(50, 20);
 ctx.bezierCurveTo(230, 30, 150, 60, 50, 100);
 ctx.stroke();
 
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 // start point
 ctx.fillRect(50, 20, 10, 10);
 // end point
 ctx.fillRect(50, 100, 10, 10);
 
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 // control point one
 ctx.fillRect(230, 30, 10, 10);
 // control point two
@@ -79,7 +79,8 @@ ctx.fillRect(150, 70, 10, 10);
 <textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.bezierCurveTo(50, 100, 180, 10, 20, 10);
-ctx.stroke();</textarea>
+ctx.stroke();</textarea
+>
 ```
 
 ```js hidden
@@ -95,14 +96,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
