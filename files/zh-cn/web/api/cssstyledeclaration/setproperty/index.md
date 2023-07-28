@@ -42,7 +42,7 @@ style.cssPropertyName = 'value';
 
 ```js
 var declaration = document.styleSheets[0].rules[0].style;
-declaration.setProperty('margin', '1px 2px');
+declaration.setProperty("margin", "1px 2px");
 // Equivalent to:
 // declaration.margin = '1px 2px';
 ```

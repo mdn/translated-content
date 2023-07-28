@@ -103,7 +103,7 @@ Attention à ne pas utiliser des instructions d'affectation dans les expressions
 
 Voici un exemple de ce qu'il ne faut **pas** faire :
 
-```js example-bad
+```js-nolint example-bad
 if (x = y) {
   /* exécuter des instructions */
 }
@@ -142,15 +142,16 @@ Les autres valeurs, y compris les objets, seront équivalents à `true`.
 
 #### Exemple
 
-Dans l'exemple qui suit, la fonction` checkData `renvoie `true` si une chaîne de caractères mesure trois caractères. Sinon, elle affiche une alerte et renvoie `false`.
+Dans l'exemple qui suit, la fonction `checkData` renvoie `true` si une chaîne de caractères mesure trois caractères. Sinon, elle affiche une alerte et renvoie `false`.
 
 ```js
 function checkData(maChaîne) {
   if (maChaîne.length == 3) {
     return true;
   } else {
-    alert("Veuillez saisir trois caractères. " +
-      maChaîne + " n'est pas valide.");
+    alert(
+      "Veuillez saisir trois caractères. " + maChaîne + " n'est pas valide.",
+    );
     return false;
   }
 }
@@ -242,10 +243,14 @@ throw expression;
 Il est possible d'utiliser n'importe quelle expression, sans restriction de type. Le fragment de code qui suit illustre les différentes possibilités :
 
 ```js
-throw "Erreur2";  //type String
-throw 42;         //type Number
-throw true;       //type Boolean
-throw {toString: function () { return "je suis un objet !"; } };
+throw "Erreur2"; //type String
+throw 42; //type Number
+throw true; //type Boolean
+throw {
+  toString: function () {
+    return "je suis un objet !";
+  },
+};
 ```
 
 > **Note :** Vous pouvez spécifier un objet lorsque vous lancez une exception. Vous pouvez alors faire référence aux propriétés de l'objet dans le bloc `catch`.
@@ -259,9 +264,9 @@ function ExceptionUtilisateur(message) {
 
 // On surcharge la méthode toString pour afficher
 // un message plus explicite (par exemple dans la console)
-ExceptionUtilisateur.prototype.toString = function() {
+ExceptionUtilisateur.prototype.toString = function () {
   return this.name + ': "' + this.message + '"';
-}
+};
 
 // On crée une instance pour ce type d'objet
 // et on renvoie une exception avec cette instance
@@ -281,16 +286,29 @@ Dans l'exemple qui suit, on utilise une instruction `try...catch`. On définit u
 ```js
 function getNomMois(numMois) {
   numMois = numMois - 1; // On décale de 1 car les indices du tableaux commencent à 0
-  var mois = ["Janvier", "Février", "Mars", "Avril" ,"Mai", "Juin", "Juillet",
-              "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+  var mois = [
+    "Janvier",
+    "Février",
+    "Mars",
+    "Avril",
+    "Mai",
+    "Juin",
+    "Juillet",
+    "Août",
+    "Septembre",
+    "Octobre",
+    "Novembre",
+    "Décembre",
+  ];
   if (mois[numMois] != null) {
     return mois[numMois];
   } else {
-    throw "NuméroMoisInvalide";  // Ici on utilise l'instruction throw
+    throw "NuméroMoisInvalide"; // Ici on utilise l'instruction throw
   }
 }
 
-try { // les instructions à essayer si tout se passe bien
+try {
+  // les instructions à essayer si tout se passe bien
   nomMois = getNomMois(maVarMois); // La fonction peut renvoyer une exception
 } catch (e) {
   nomMois = "inconnu";
@@ -339,7 +357,7 @@ Dans l'exemple suivant, on écrit dans un fichier, si une exception se produit l
 ouvrirFichier();
 try {
   écrireFichier(données); // Une erreur peut se produire
-} catch(e) {
+} catch (e) {
   gérerException(e); // On gère le cas où on a une exception
 } finally {
   fermerFichier(); // On n'oublie jamais de fermer le flux.
@@ -353,7 +371,7 @@ function f() {
   try {
     console.log(0);
     throw "bug";
-  } catch(e) {
+  } catch (e) {
     console.log(1);
     return true; // Cette instruction est bloquée jusqu'à la fin du bloc finally
     console.log(2); // Ne pourra jamais être exécuté
@@ -375,10 +393,10 @@ Lorsqu'on surcharge les valeurs de retour avec le bloc `finally`, cela s'appliqu
 function f() {
   try {
     throw "problème";
-  } catch(e) {
+  } catch (e) {
     console.log('"problème" interne intercepté');
     throw e; // cette instruction est mise en attente
-             // tant que le bloc finally n'est pas fini
+    // tant que le bloc finally n'est pas fini
   } finally {
     return false; // surcharge le "throw" précédent
   }
@@ -387,7 +405,7 @@ function f() {
 
 try {
   f();
-} catch(e) {
+} catch (e) {
   // ce bloc n'est jamais utilisé car le throw
   // utilisé dans le bloc catch a été surchargé
   // par l'instruction return de finally

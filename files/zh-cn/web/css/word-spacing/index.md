@@ -11,7 +11,7 @@ slug: Web/CSS/word-spacing
 
 ## 语法
 
-```html
+```css
 word-spacing: normal;    /* Keyword value */
 word-spacing: 3px;       /* <length> values */
 word-spacing: 0.3em;

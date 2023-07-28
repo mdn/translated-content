@@ -13,7 +13,7 @@ La méthode **`hasOwnProperty()`** retourne un booléen indiquant si l'objet pos
 ## Syntaxe
 
 ```js
-obj.hasOwnProperty(prop)
+obj.hasOwnProperty(prop);
 ```
 
 ### Paramètres
@@ -37,9 +37,9 @@ L'exemple suivant détermine si l'objet `o` contient une propriété appelée `p
 
 ```js
 o = new Object();
-o.hasOwnProperty('prop'); // false
-o.prop = 'exists';
-o.hasOwnProperty('prop'); // true
+o.hasOwnProperty("prop"); // false
+o.prop = "exists";
+o.hasOwnProperty("prop"); // true
 ```
 
 ### Propriétés directes et propriétés héritées
@@ -48,15 +48,15 @@ L'exemple suivant illustre la différence entre les propriétés directes et les
 
 ```js
 o = new Object();
-o.prop = 'exists';
+o.prop = "exists";
 
-o.hasOwnProperty('prop');
+o.hasOwnProperty("prop");
 // retourne true
 
-o.hasOwnProperty('toString');
+o.hasOwnProperty("toString");
 // retourne false
 
-o.hasOwnProperty('hasOwnProperty');
+o.hasOwnProperty("hasOwnProperty");
 // retourne false
 ```
 
@@ -66,20 +66,18 @@ L'exemple suivant montre comment parcourir les propriétés d'un objet sans trai
 
 ```js
 var bidule = {
-    truc: 'stack'
+  truc: "stack",
 };
 
 for (var nom in bidule) {
-    if (bidule.hasOwnProperty(nom)) {
-        console.log("C'est bien la propriété (" +
-                     nom +
-                     "), sa valeur : " + bidule[nom]
-                    );
-    }
-    else {
-        console.log(nom);
-        // toString ou autre
-    }
+  if (bidule.hasOwnProperty(nom)) {
+    console.log(
+      "C'est bien la propriété (" + nom + "), sa valeur : " + bidule[nom],
+    );
+  } else {
+    console.log(nom);
+    // toString ou autre
+  }
 }
 ```
 
@@ -89,20 +87,20 @@ JavaScript ne protège pas le nom de propriété `hasOwnProperty`, ainsi il est 
 
 ```js
 var toto = {
-  hasOwnProperty: function() {
+  hasOwnProperty: function () {
     return false;
   },
-  truc: 'Voici les dragons'
+  truc: "Voici les dragons",
 };
 
-toto.hasOwnProperty('truc'); // renvoie toujours false
+toto.hasOwnProperty("truc"); // renvoie toujours false
 
 // On utilise une méthode d'un autre objet
 // et on l'appelle avec this qui vaut toto
-({}).hasOwnProperty.call(toto, 'truc'); // true
+({}).hasOwnProperty.call(toto, "truc"); // true
 
 // On peut aussi utiliser la propriété hasOwnProperty de Object prototype
-Object.prototype.hasOwnProperty.call(toto, 'truc'); // true
+Object.prototype.hasOwnProperty.call(toto, "truc"); // true
 ```
 
 La dernière version utilisée permet de ne pas créer d'objet supplémentaire.

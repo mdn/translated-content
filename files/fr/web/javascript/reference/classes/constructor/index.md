@@ -34,7 +34,7 @@ class Person {
   }
 }
 
-const otto = new Person('Otto');
+const otto = new Person("Otto");
 
 otto.introduce();
 ```
@@ -65,11 +65,11 @@ class ValidationError extends Error {
 try {
   throw new ValidationError("Numéro de téléphone invalide");
 } catch (error) {
-   if (error instanceof ValidationError) {
+  if (error instanceof ValidationError) {
     console.log(error.name); // Il s'agit d'une erreur au lieu de ValidationError !
     console.log(error.printCustomerMessage());
   } else {
-    console.log('Erreur inconnue', error);
+    console.log("Erreur inconnue", error);
     throw error;
   }
 }
@@ -82,24 +82,24 @@ Cependant, si vous fournissez votre propre constructeur, et que votre classe dé
 ```js
 class ValidationError extends Error {
   constructor(message) {
-    super(message);  // appelle le constructeur de la classe parent
-    this.name = 'ValidationError';
-    this.code = '42';
+    super(message); // appelle le constructeur de la classe parent
+    this.name = "ValidationError";
+    this.code = "42";
   }
 
   printCustomerMessage() {
-     return `La validation a échoué :-( (détails : ${this.message}, code : ${this.code})`;
+    return `La validation a échoué :-( (détails : ${this.message}, code : ${this.code})`;
   }
 }
 
 try {
   throw new ValidationError("Numéro de téléphone invalide");
 } catch (error) {
-   if (error instanceof ValidationError) {
+  if (error instanceof ValidationError) {
     console.log(error.name); // Maintenant, c'est une ValidationError !
     console.log(error.printCustomerMessage());
   } else {
-    console.log('Unknown error', error);
+    console.log("Unknown error", error);
     throw error;
   }
 }
@@ -121,7 +121,7 @@ class Square extends Polygon {
     super(length, length);
     // NOTE : Dans les classes dérivées, `super()` doit être appelé avant de pouvoir
     // utiliser `this`. Si vous ne le faites pas, cela provoquera une ReferenceError.
-    this.name = 'Carré';
+    this.name = "Carré";
   }
 
   get area() {
@@ -129,8 +129,8 @@ class Square extends Polygon {
   }
 
   set area(value) {
-    this.height = value**0.5;
-    this.width = value**0.5;
+    this.height = value ** 0.5;
+    this.width = value ** 0.5;
   }
 }
 ```
@@ -141,15 +141,15 @@ Ici, le prototype de la classe `Square` est modifié — mais le constructeur de
 
 ```js
 class Polygon {
-    constructor() {
-        this.name = "Polygone";
-    }
+  constructor() {
+    this.name = "Polygone";
+  }
 }
 
 class Square extends Polygon {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 }
 
 class Rectangle {}

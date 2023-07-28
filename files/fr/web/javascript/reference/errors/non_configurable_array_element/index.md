@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: can''t delete non-configurable array element'
+title: "TypeError: can't delete non-configurable array element"
 slug: Web/JavaScript/Reference/Errors/Non_configurable_array_element
 translation_of: Web/JavaScript/Reference/Errors/Non_configurable_array_element
 ---
@@ -33,8 +33,8 @@ Par défaut, la méthode {{jsxref("Object.defineProperty()")}} crée des propri�
 
 ```js example-bad
 var arr = [];
-Object.defineProperty(arr, 0, {value: 0});
-Object.defineProperty(arr, 1, {value: "1"});
+Object.defineProperty(arr, 0, { value: 0 });
+Object.defineProperty(arr, 1, { value: "1" });
 
 arr.length = 1;
 // TypeError: can't delete non-configurable array element
@@ -44,8 +44,8 @@ Si on veut tronquer le tableau, il faut que les éléments excédants soient con
 
 ```js example-good
 var arr = [];
-Object.defineProperty(arr, 0, {value: 0, configurable: true});
-Object.defineProperty(arr, 1, {value: "1", configurable: true});
+Object.defineProperty(arr, 0, { value: 0, configurable: true });
+Object.defineProperty(arr, 1, { value: "1", configurable: true });
 
 arr.length = 1;
 ```
@@ -55,7 +55,7 @@ arr.length = 1;
 La méthode {{jsxref("Object.seal()")}} permet de marquer l'ensemble des propriétés (ici les éléments du tableau) comme non-configurables :
 
 ```js example-bad
-var arr = [1,2,3];
+var arr = [1, 2, 3];
 Object.seal(arr);
 
 arr.length = 1;
@@ -65,7 +65,7 @@ arr.length = 1;
 Pour corriger l'erreur, il faut retirer l'appel à {{jsxref("Object.seal()")}} ou réaliser une copie du tableau. Dans ce dernier cas, on notera que tronquer la copie du tableau ne modifie pas la longueur du tableau original.
 
 ```js example-good
-var arr = [1,2,3];
+var arr = [1, 2, 3];
 Object.seal(arr);
 
 // On copie le tableau initial pour tronquer cette copie

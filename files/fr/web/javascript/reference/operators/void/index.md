@@ -13,7 +13,7 @@ L'**opérateur `void`** permet d'évaluer une _expression_ donnée et de renvoye
 ## Syntaxe
 
 ```js
-void expression
+void expression;
 ```
 
 ## Description
@@ -25,8 +25,8 @@ L'opérateur `void` est souvent utilisé pour obtenir la valeur `undefined`, gé
 Attention à [la précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Opérateurs/Précédence_des_opérateurs) et notamment de celle de `void`, si besoin, on pourra utiliser des parenthèses pour clarifier la résolution de l'expression :
 
 ```js
-void 2 == '2';    // renvoie false
-void (2 === '2'); // renvoie undefined
+void 2 == "2"; // renvoie false
+void (2 === "2"); // renvoie undefined
 ```
 
 ## Expressions de fonction appelées immédiatement
@@ -34,18 +34,18 @@ void (2 === '2'); // renvoie undefined
 Lorsqu'on utilise tout un script dans une fonction qu'on évalue immédiatement, `void` peut être utilisé pour que le mot-clé `function` soit traité comme une expression plutôt que comme une déclaration.
 
 ```js
-void function iife() {
-    var toto = function () {};
-    var machin = function () {};
-    var truc = function () {
-        toto();
-        machin();
-     };
-    var bidule = function () {};
+void (function iife() {
+  var toto = function () {};
+  var machin = function () {};
+  var truc = function () {
+    toto();
+    machin();
+  };
+  var bidule = function () {};
 
-    truc();
-    bidule();
-}();
+  truc();
+  bidule();
+})();
 ```
 
 ## Les URI JavaScript
@@ -53,9 +53,7 @@ void function iife() {
 Lorsqu'un navigateur utilise une URI avec `javascript:`, le code de l'URI est évalué et le résultat remplace le contenu de la page, sauf si la valeur renvoyée vaut {{jsxref("Objets_globaux/undefined","undefined")}}. L'utilisateur `void` peut alors être utilisé pour renvoyer cette valeur. Par exemple :
 
 ```html
-<a href="javascript:void(0);">
-  Cliquer ici (sans effet)
-</a>
+<a href="javascript:void(0);"> Cliquer ici (sans effet) </a>
 
 <a href="javascript:void(document.body.style.backgroundColor='green');">
   Cliquer ici pour rendre le fond vert

@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: return not in function'
+title: "SyntaxError: return not in function"
 slug: Web/JavaScript/Reference/Errors/Bad_return
 translation_of: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 ---
@@ -40,7 +40,7 @@ var encouragement = function(score) {
 À première vue, les accolades semblent correctes mais en regardant de plus près, on voit qu'il manque une accolade ouvrante ("{") après la première instruction `if`. La version correcte serait :
 
 ```js example-good
-var encouragement = function(score) {
+var encouragement = function (score) {
   if (score === 147) {
     return "Maximum!";
   }

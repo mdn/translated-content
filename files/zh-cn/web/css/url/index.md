@@ -41,11 +41,15 @@ URL 可以使用单引号或双引号包含，也可以直接书写。可以在�
 ## 示例
 
 ```css
-.topbanner { background: url("topbanner.png") #00D no-repeat fixed; }
+.topbanner {
+  background: url("topbanner.png") #00d no-repeat fixed;
+}
 ```
 
 ```css
-ul { list-style: square url(http://www.example.com/redball.png) }
+ul {
+  list-style: square url(http://www.example.com/redball.png);
+}
 ```
 
 ## 规范

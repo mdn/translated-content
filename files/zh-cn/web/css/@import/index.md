@@ -1,5 +1,5 @@
 ---
-title: '@import'
+title: "@import"
 slug: Web/CSS/@import
 ---
 
@@ -34,10 +34,10 @@ slug: Web/CSS/@import
 ```css
 @import url("fineprint.css") print;
 @import url("bluish.css") projection, tv;
-@import 'custom.css';
+@import "custom.css";
 @import url("chrome://communicator/skin/");
 @import "common.css" screen, projection;
-@import url('landscape.css') screen and (orientation:landscape);
+@import url("landscape.css") screen and (orientation: landscape);
 ```
 
 ## 规范
