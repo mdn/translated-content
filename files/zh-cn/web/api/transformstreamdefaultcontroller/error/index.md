@@ -10,7 +10,7 @@ slug: Web/API/TransformStreamDefaultController/error
 ## 语法
 
 ```js
-error(reason)
+error(reason);
 ```
 
 ### 参数

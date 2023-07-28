@@ -10,9 +10,9 @@ slug: Web/API/TextDecoder/TextDecoder
 ## 语法
 
 ```js
-new TextDecoder()
-new TextDecoder(utfLabel)
-new TextDecoder(utfLabel, options)
+new TextDecoder();
+new TextDecoder(utfLabel);
+new TextDecoder(utfLabel, options);
 ```
 
 ### 参数

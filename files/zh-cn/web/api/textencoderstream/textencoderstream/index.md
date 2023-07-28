@@ -10,7 +10,7 @@ slug: Web/API/TextEncoderStream/TextEncoderStream
 ## 语法
 
 ```js
-new TextEncoderStream()
+new TextEncoderStream();
 ```
 
 ### 参数
@@ -23,7 +23,11 @@ new TextEncoderStream()
 
 ```js
 const body = textStream.pipeThrough(new TextEncoderStream());
-fetch('/dest', { method: 'POST', body, headers: {'Content-Type': 'text/plain; charset=UTF-8'} });
+fetch("/dest", {
+  method: "POST",
+  body,
+  headers: { "Content-Type": "text/plain; charset=UTF-8" },
+});
 ```
 
 ## 规范

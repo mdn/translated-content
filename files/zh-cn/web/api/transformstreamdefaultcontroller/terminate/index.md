@@ -10,7 +10,7 @@ slug: Web/API/TransformStreamDefaultController/terminate
 ## 语法
 
 ```js
-terminate()
+terminate();
 ```
 
 ### 参数

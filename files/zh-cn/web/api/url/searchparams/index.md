@@ -12,7 +12,7 @@ slug: Web/API/URL/searchParams
 ## 语法
 
 ```js
-const urlSearchParams = url.searchParams
+const urlSearchParams = url.searchParams;
 ```
 
 ### 属性值
@@ -24,9 +24,9 @@ const urlSearchParams = url.searchParams
 如果你的 URL 是 `https://example.com/?name=Jonathan%20Smith&age=18` ，你可以这样解析 URL，然后得到 `name` 和 `age` 的值。
 
 ```js
-let params = (new URL(document.location)).searchParams;
-let name = params.get('name'); // is the string "Jonathan Smith".
-let age = parseInt(params.get('age')); // is the number 18
+let params = new URL(document.location).searchParams;
+let name = params.get("name"); // is the string "Jonathan Smith".
+let age = parseInt(params.get("age")); // is the number 18
 ```
 
 ## 规范

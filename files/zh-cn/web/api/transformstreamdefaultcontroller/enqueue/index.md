@@ -12,7 +12,7 @@ slug: Web/API/TransformStreamDefaultController/enqueue
 ## 语法
 
 ```js
-enqueue(chunk)
+enqueue(chunk);
 ```
 
 ### 参数
