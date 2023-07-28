@@ -21,34 +21,33 @@ Afin de renvoyer une valeur, la fonction doit comporter une instruction {{jsxref
 Les paramètres donnés lors de l'appel d'une fonction sont appelés les _arguments_ de la fonction. Les arguments sont passés _par valeur_ (_by value_ en anglais). Si la fonction modifie la valeur d'un argument, ce changement ne se répercute pas en dehors de la fonction. Il existe cependant les _références_ d'objets qui sont aussi des valeurs mais qui possèdent la particularité suivante : si la fonction modifie les propriété de l'objet de la référence, ce(s) changement(s) seront perceptibles en dehors de la fonction. Prenons l'exemple suivant :
 
 ```js
- /* Déclaration de la fonction 'maFonction' */
- function maFonction(monObjet)
- {
-   monObjet.marque = "Toyota";
- }
+/* Déclaration de la fonction 'maFonction' */
+function maFonction(monObjet) {
+  monObjet.marque = "Toyota";
+}
 
- /*
-  * Déclaration de la variable 'mavoiture';
-  * création et initialisation d'un nouvel objet;
-  * assigner une référence à 'mavoiture'
-  */
- var mavoiture = {
-   marque: "Honda",
-   modele: "Accord",
-   annee: 1998
- };
+/*
+ * Déclaration de la variable 'mavoiture';
+ * création et initialisation d'un nouvel objet;
+ * assigner une référence à 'mavoiture'
+ */
+var mavoiture = {
+  marque: "Honda",
+  modele: "Accord",
+  annee: 1998,
+};
 
- /* Affiche 'Honda' */
- console.log(mavoiture.marque);
+/* Affiche 'Honda' */
+console.log(mavoiture.marque);
 
- /* Passer la référence de l'objet à la fonction */
- maFonction(mavoiture);
+/* Passer la référence de l'objet à la fonction */
+maFonction(mavoiture);
 
- /*
-  * Affiche 'Toyota' pour valeur de la propriété 'marque'
-  * de l'objet. C'est ce que la fonction a changé.
-  */
- console.log(mavoiture.marque);
+/*
+ * Affiche 'Toyota' pour valeur de la propriété 'marque'
+ * de l'objet. C'est ce que la fonction a changé.
+ */
+console.log(mavoiture.marque);
 ```
 
 Le mot-clé [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) ne fait pas référence à la fonction en cours d'exécution. Il faut donc faire référence aux objets `Function` par leurs noms, et ce même au sein du corps de la fonction.
@@ -94,17 +93,17 @@ function [nom]([param] [, param] [..., param]) {
 Voici un exemple d'expression de fonction **anonyme** (il n'y a pas de nom utilisé) :
 
 ```js
-var maFonction = function() {
+var maFonction = function () {
   /* instructions */
-}
+};
 ```
 
 Il est également possible de fournir un nom lors de la définition afin de créer une expression de fonction **nommée** :
 
 ```js
-var maFonction = function fonctionNommée(){
+var maFonction = function fonctionNommée() {
   /* instructions */
-}
+};
 ```
 
 L'un des bénéfices d'utiliser une expression de fonction nommée est que son nom sera utilisé dans la pile d'appel lors qu'on aura une erreur. Avec le nom de la fonction, il sera plus facile de repérer l'origine de l'erreur.
@@ -114,8 +113,8 @@ Comme on peut le voir, ces deux derniers exemples ne commencent pas avec le mot-
 Lorsque les fonctions sont utilisées une unique fois, on peut utiliser une [« expression de fonction immédiatement invoquée » (ou plus généralement appelée _IIFE_ pour _Immediately Invokable Function Expression_ en anglais)](/fr/docs/Glossaire/IIFE).
 
 ```js
-(function() {
-    /* instruction */
+(function () {
+  /* instruction */
 })();
 ```
 
@@ -179,7 +178,7 @@ param => expression
 Comme tous les autres objets, les objets {{jsxref("Function")}} peuvent être créés grâce à l'opérateur `new` :
 
 ```js
-new Function (arg1, arg2, ... argN, corpsDeLaFonction)
+new Function(arg1, arg2, ...argN, corpsDeLaFonction);
 ```
 
 - `arg1, arg2, ... argN`
@@ -198,7 +197,7 @@ L'invocation du constructeur `Function` en tant que fonction (sans utiliser l'op
 Comme pour tous les autres objets, les objets {{jsxref("GeneratorFunction")}} peuvent être créés grâce à l'opérateur `new` :
 
 ```js
-new GeneratorFunction (arg1, arg2, ... argN, corpsFonction)
+new GeneratorFunction(arg1, arg2, ...argN, corpsFonction);
 ```
 
 - `arg1, arg2, ... argN`
@@ -237,7 +236,7 @@ Avec l'exemple suivant :
 
 ```js
 var truc = function toto() {
-   // instructions
+  // instructions
 };
 ```
 
@@ -253,8 +252,8 @@ Une fonction qui s'appelle elle-même est appelée une fonction récursive. D'un
 var x = 0;
 // "x < 10" est la condition de la boucle
 while (x < 10) {
-   // faire des choses
-   x++;
+  // faire des choses
+  x++;
 }
 ```
 
@@ -262,12 +261,11 @@ peut être convertie en une fonction récursive et un appel à cette fonction :
 
 ```js
 function boucle(x) {
-   // "x >= 10" est la condition de sortie
-   // (et équivaut à "!(x < 10)")
-   if (x >= 10)
-      return;
-   // faire des choses
-   boucle(x + 1); // l'appel récursif
+  // "x >= 10" est la condition de sortie
+  // (et équivaut à "!(x < 10)")
+  if (x >= 10) return;
+  // faire des choses
+  boucle(x + 1); // l'appel récursif
 }
 boucle(0);
 ```
@@ -276,12 +274,13 @@ Cependant, certains algorithmes ne peuvent pas être traduits sous forme de bouc
 
 ```js
 function parcoursArbre(noeud) {
-   if (noeud == null) //
-      return;
-   // faire quelque chose avec le noeud
-   for (var i = 0; i < noeud.childNodes.length; i++) {
-      parcoursArbre(noeud.childNodes[i]);
-   }
+  if (noeud == null)
+    //
+    return;
+  // faire quelque chose avec le noeud
+  for (var i = 0; i < noeud.childNodes.length; i++) {
+    parcoursArbre(noeud.childNodes[i]);
+  }
 }
 ```
 
@@ -293,18 +292,17 @@ La comportement de la récursion en tant que pile peut être observée avec cet 
 
 ```js
 function truc(i) {
-   if (i < 0)
-      return;
-   console.log('début :' + i);
-   toto(i - 1);
-   console.log('fin :' + i);
+  if (i < 0) return;
+  console.log("début :" + i);
+  toto(i - 1);
+  console.log("fin :" + i);
 }
 truc(3);
 ```
 
 Elle produira le résultat suivant :
 
-```js
+```plain
 début :3
 début :2
 début :1
@@ -334,25 +332,25 @@ Pour résumer :
 L'exemple suivant, montre le cas de fonctions imbriquées :
 
 ```js
-function ajouteCarres(a,b) {
-   function carre(x) {
-      return x * x;
-   }
-   return carre(a) + carre(b);
+function ajouteCarres(a, b) {
+  function carre(x) {
+    return x * x;
+  }
+  return carre(a) + carre(b);
 }
-var a = ajouteCarres(2,3); // renvoie 13
-var b = ajouteCarres(3,4); // renvoie 25
-var c = ajouteCarres(4,5); // renvoie 41
+var a = ajouteCarres(2, 3); // renvoie 13
+var b = ajouteCarres(3, 4); // renvoie 25
+var c = ajouteCarres(4, 5); // renvoie 41
 ```
 
 Étant donné que la fonction interne est une fermeture, il est possible d'appeler la fonction externe et de définir des arguments pour la fonction externe mais aussi pour la fonction interne :
 
 ```js
 function externe(x) {
-   function interne(y) {
-      return x + y;
-   }
-   return interne;
+  function interne(y) {
+    return x + y;
+  }
+  return interne;
 }
 var fn_interne = externe(3);
 var resultat = fn_interne(5); // renvoie 8
@@ -374,13 +372,13 @@ On peut l'observer avec l'exemple suivant :
 
 ```js
 function A(x) {
-   function B(y) {
-      function C(z) {
-         console.log(x + y + z);
-      }
-      C(3);
-   }
-   B(2);
+  function B(y) {
+    function C(z) {
+      console.log(x + y + z);
+    }
+    C(3);
+  }
+  B(2);
 }
 A(1); // crée un message d'alerte avec 6 (= 1 + 2 + 3)
 ```
@@ -389,7 +387,7 @@ Dans cet exemple, C accède à la variable y de B et à la variable x de A. Cela
 
 1. `B` est une fermeture qui contient `A`, autrement dit `B` peut accéder aux arguments et aux variables de `A`
 2. `C` est une fermeture qui contient `B`
-3. Étant donné que la fermeture de `B` contient `A` et que celle de `C` contient `B`, `C` peut accéder à la fois aux arguments et variables de `B` _et_ `A`. Autrement dit, `C` *enchaîne les portées de* `B` et `A` dans cet ordre.
+3. Étant donné que la fermeture de `B` contient `A` et que celle de `C` contient `B`, `C` peut accéder à la fois aux arguments et variables de `B` _et_ `A`. Autrement dit, `C` _enchaîne les portées de_ `B` et `A` dans cet ordre.
 
 La réciproque n'est pas vraie. `A` ne peut avoir accès à `C`, parce que `A` ne peut accéder ni aux variables ni aux arguments de `B`, or `C` est une variable de `B. C` est donc privé et seulement pour `B`.
 
@@ -399,11 +397,11 @@ Lorsque deux arguments ou variables appartenant aux portées d'une fermeture ont
 
 ```js
 function externe() {
-   var x = 10;
-   function interne(x) {
-      return x;
-   }
-   return interne;
+  var x = 10;
+  function interne(x) {
+    return x;
+  }
+  return interne;
 }
 resultat = externe()(20); // renvoie 20 et non pas 10
 ```
@@ -428,7 +426,7 @@ Avec ECMAScript 2015, il est possible de définir des méthodes de façon plus c
 ```js
 var obj = {
   toto() {},
-  truc() {}
+  truc() {},
 };
 ```
 
@@ -438,33 +436,33 @@ Comparons les exemples suivants :
 
 1. une fonction définie grâce au constructeur `Function` assignée à la variable `multiplier`
 
-    ```js
-    var multiplier = new Function("x", "y", "return x * y;");
-    ```
+   ```js
+   var multiplier = new Function("x", "y", "return x * y;");
+   ```
 
 2. une déclaration de fonction d'une fonction appelée `multiplier`
 
-    ```js
-    function multiplier(x, y) {
-       return x * y;
-    }
-    ```
+   ```js
+   function multiplier(x, y) {
+     return x * y;
+   }
+   ```
 
 3. une expression de fonction d'une fonction anonyme assignée à la variable `multiplier`
 
-    ```js
-    var multiplier = function(x, y) {
-       return x * y;
-    };
-    ```
+   ```js
+   var multiplier = function (x, y) {
+     return x * y;
+   };
+   ```
 
 4. une expression de fonction d'une fonction nommée `fonction_nom` assignée à la variable `multiplier`
 
-    ```js
-    var multiplier = function function_nom(x, y) {
-       return x * y;
-    };
-    ```
+   ```js
+   var multiplier = function function_nom(x, y) {
+     return x * y;
+   };
+   ```
 
 Tous ces exemples effectuent à peu près la même chose, mais différent sur quelques points :
 
@@ -473,7 +471,7 @@ Tous ces exemples effectuent à peu près la même chose, mais différent sur qu
   - le nom de la fonction ne peut être changé alors que la variable à laquelle la fonction a été assignée peut être réassignée.
   - le nom de la fonction ne peut-être utilisé qu'à l'intérieur du corps de la fonction. Toute tentative d'utilisation en dehors du corps de la fonction entraînera une erreur (ou `undefined` si le nom de la fonction a été déclaré auparavant avec une instruction `var`). Ainsi :
 
-    ```js
+    ````js
         var y = function x() {};
         console.log(x); // renvoie une erreur
         ```
@@ -482,55 +480,58 @@ Tous ces exemples effectuent à peu près la même chose, mais différent sur qu
 
     La variable à laquelle est assignée la fonction est seulement limitée par rapport à la portée. La portée au sein de laquelle la fonction est déclarée est donc garantie d'être dans la portée de la variable.
 
+    ````
+
   - Comme le montre le quatrième exemple, le nom de la fonction peut être différent du nom de la variable à laquelle a été assignée la fonction. Les deux noms n'ont aucune relation entre eux.
 
 - Une déclaration de fonction peut aussi créer une variable avec le même nom que la fonction. Ainsi, contrairement une expression de fonction, une déclaration de fonction permet d'accéder à la fonction grâce à son nom au sein de la portée dans laquelle elle a été définie :
 
   ```js
-    function x() {}
-    console.log(x); // affichera la fonction x sérialisée en une chaîne de caractères
-    ```
+  function x() {}
+  console.log(x); // affichera la fonction x sérialisée en une chaîne de caractères
+  ```
 
   L'exemple qui suit montre que les noms de fonctions ne sont par liées aux variables auxquelles sont assignées les fonctions. Si une variable de fonction est assignée à une autre valeur, elle aura toujours le même nom de fonction :
 
   ```js
-    function toto() {}
-    console.log(toto); // message affichant la chaine de caractères "toto"
-    var truc = toto;
-    console.log(truc); // message affichant la chaine de caractères "toto"
-    ```
+  function toto() {}
+  console.log(toto); // message affichant la chaine de caractères "toto"
+  var truc = toto;
+  console.log(truc); // message affichant la chaine de caractères "toto"
+  ```
 
 - Une fonction définie grâce à « `new Function »` n'aura pas de nom de fonction. Cependant, le moteur JavaScript [SpiderMonkey](/fr/docs/SpiderMonkey), la forme sérialisée de la fonction apparaît comme si la fonction avait le nom « anonymous ». Le code `console.log(new Function())` produira :
 
   ```js
-    function anonymous() {
-    }
-    ```
+  function anonymous() {}
+  ```
 
   La fonction n'ayant pas de nom effectif, `anonymous` n'est pas une variable à laquelle on pourra accéder au sein de la fonction. Par exemple, le code qui suit produira une erreur :
 
   ```js
-    var toto = new Function("console.log(anonymous);");
-    toto();
-    ```
+  var toto = new Function("console.log(anonymous);");
+  toto();
+  ```
 
 - À la différence des fonctions définies par les expressions de fonction ou par le constructeur `Function`, une fonction définie par une déclaration de fonction pourra être utilisée avant la déclaration. Ainsi :
 
   ```js
-    toto(); // affichera TOTO !
-    function toto() {
-       console.log('TOTO !');
-    }
-    ```
+  toto(); // affichera TOTO !
+  function toto() {
+    console.log("TOTO !");
+  }
+  ```
 
 - Une fonction définie par une expression de fonction hérite de la portée courante. La fonction forme donc une fermeture. En revanche, les fonctions définies par le constructeur `Function` n'héritent que de la portée globale (portée héritée par toutes les fonctions).
 - Les fonctions définies par les expressions et les déclarations de fonctions ne sont analysées (parsées) qu'une seule fois. Celles définies grâce au constructeur `Function` ne le sont pas. Cela signifie que la chaîne de caractère représentant le corps de la fonction doit être analysée à chaque fois qu'elle est évaluée. Bien qu'une expression de fonction crée obligatoirement une fermeture, le corps de la fonction n'est pas parsé à nouveau. Les expressions de fonctions sont donc plus rapides que « `new Function(...)` ». Il faut donc éviter le constructeur `Function` autant que possible.
   Il faut cependant noter que les expressions et les déclarations imbriquées au sein d'une chaîne de caractère pour un constructeur `Function` ne sont analysées qu'une seule fois. On aura l'exemple suivant :
 
   ```js
-    var toto = (new Function("var truc = \'TOTO !\';\nreturn(function() {\n\tconsole.log(truc);\n});"))();
-    toto(); //La partie « function() {\n\tconsole.log(truc);\n} » de la chaîne de caractères n'est pas analysée à nouveau.
-    ```
+  var toto = new Function(
+    "var truc = 'TOTO !';\nreturn(function() {\n\tconsole.log(truc);\n});",
+  )();
+  toto(); //La partie « function() {\n\tconsole.log(truc);\n} » de la chaîne de caractères n'est pas analysée à nouveau.
+  ```
 
 Une déclaration de fonction peut très facilement (et souvent involontairement) être transformée en une expression de fonction. Une déclaration de fonction cesse d'en être une lorsque :
 
@@ -538,33 +539,36 @@ Une déclaration de fonction peut très facilement (et souvent involontairement)
 - ou elle n'est plus un « élément source » de la fonction ou du script. Un « élément source » est une instruction non-imbriquée du script ou d'un corps de fonction.
 
   ```js
-    var x = 0;                 // élément source
-    if (x === 0) {              // élément source
-       x = 10;                 // pas un élément source
-       function titi() {}      // pas un élément source
+  var x = 0; // élément source
+  if (x === 0) {
+    // élément source
+    x = 10; // pas un élément source
+    function titi() {} // pas un élément source
+  }
+  function toto() {
+    // élément source
+    var y = 20; // élément source
+    function truc() {} // élément source
+    while (y === 10) {
+      // élément source
+      function machin() {} // pas un élément source
+      y++; // pas un élément source
     }
-    function toto() {          // élément source
-       var y = 20;             // élément source
-       function truc() {}      // élément source
-       while (y === 10) {       // élément source
-          function machin() {} // pas un élément source
-          y++;                 // pas un élément source
-       }
-    }
-    ```
+  }
+  ```
 
 ### Exemples
 
 ```js
-  // déclaration de fonction
-  function toto() {}
+// déclaration de fonction
+function toto() {}
 
-  // expression de fonction
-  (function truc() {})
+// expression de fonction
+(function truc() {});
 
-  // expression de fonction
-  var x = function bonjour() {}
-  ```
+// expression de fonction
+var x = function bonjour() {};
+```
 
 ```js
 if (x) {
@@ -593,9 +597,9 @@ Dans le script qui suit, la fonction `zero` n'est jamais définie et ne peut don
 
 ```js
 if (0) {
-   function zero() {
-      console.log("C'est zero.");
-   }
+  function zero() {
+    console.log("C'est zero.");
+  }
 }
 ```
 
@@ -607,9 +611,9 @@ Bien que cette fonction ressemble à une déclaration de fonction, il s'agit en 
 >
 > ```js
 > if (0) {
->    var zero = function() {
->       console.log("C'est zero");
->    }
+>   var zero = function () {
+>     console.log("C'est zero");
+>   };
 > }
 > ```
 
@@ -624,8 +628,8 @@ Note : Les événements font partie de la logique DOM et non de celle de JavaScr
 L'exemple suivant assigne une fonction au gestionnaire de l'événement « focus ».
 
 ```js
-window.onfocus = function() {
-   document.body.style.backgroundColor = 'white';
+window.onfocus = function () {
+  document.body.style.backgroundColor = "white";
 };
 ```
 
@@ -639,32 +643,32 @@ Il est alors possible d'utiliser cette variable pour assigner une fonction à un
 
 1. écrire dans les propriétés de l'évément DOM HTML
 
-    ```js
-    document.form1.colorButton.onclick = setBGColor;
-    ```
+   ```js
+   document.form1.colorButton.onclick = setBGColor;
+   ```
 
 2. l'attribut de l'événement HTML
 
-    ```html
-    <input type="button"
-       value="Changer la couleur de fond"
-       onclick="setBGColor();"/>
-    ```
+   ```html
+   <input
+     type="button"
+     value="Changer la couleur de fond"
+     onclick="setBGColor();" />
+   ```
 
-    Un gestionnaire d'événement défini de cette manière sera une fonction, nommée selon l'attribut, encadré du code spécifique nécessaire. C'est pourquoi les parenthèses sont ici nécessaires (`setBGColor()` et non pas `setBGColor`). Cela est équivalent à :
+   Un gestionnaire d'événement défini de cette manière sera une fonction, nommée selon l'attribut, encadré du code spécifique nécessaire. C'est pourquoi les parenthèses sont ici nécessaires (`setBGColor()` et non pas `setBGColor`). Cela est équivalent à :
 
-    ```js
-    document.form1.colorButton.onclick = function onclick(event) {
-       setBGColor();
-    };
-    ```
+   ```js
+   document.form1.colorButton.onclick = function onclick(event) {
+     setBGColor();
+   };
+   ```
 
-    Il faut noter la façon dont l'objet événement est passé à la fonction en tant que paramètre `event`. Cela permet au code d'utiliser l'objet `Event` :
+   Il faut noter la façon dont l'objet événement est passé à la fonction en tant que paramètre `event`. Cela permet au code d'utiliser l'objet `Event` :
 
-    ```html
-    <input ...
-        onclick="console.log(event.target.tagName);"/>
-    ```
+   ```html
+   <input ... onclick="console.log(event.target.tagName);" />
+   ```
 
 Tout comme les autres propriétés faisant référence à une fonction, le gestionnaire d'événement peut agir come une méthode et `this` ferait alors référence à l'élément contenant le gestionnaire d'événement. Dans l'exemple suivant, la fonction à laquelle `onfocus` fait référence est appelée avec `this` qui a la valeur `window`.
 
@@ -672,7 +676,7 @@ Tout comme les autres propriétés faisant référence à une fonction, le gesti
 window.onfocus();
 ```
 
-Une erreur faite souvent lorsque l'on commence à utiliser JavaScript est d'ajouter des parenthèses et/ou des paramètres à la fin de la variable. Cela revient à appeler le gestionnaire d'événement lorsqu'on l'assigne. Le fait d'ajouter ces parenthèses assignera la valeur de retour du gestionnaire d'événement. Cette valeur sera souvent` undefined `dans ces cas alors que l'on aurait souhaité obtenir le gestionnaire d'événement.
+Une erreur faite souvent lorsque l'on commence à utiliser JavaScript est d'ajouter des parenthèses et/ou des paramètres à la fin de la variable. Cela revient à appeler le gestionnaire d'événement lorsqu'on l'assigne. Le fait d'ajouter ces parenthèses assignera la valeur de retour du gestionnaire d'événement. Cette valeur sera souvent`undefined`dans ces cas alors que l'on aurait souhaité obtenir le gestionnaire d'événement.
 
 ```js
 document.form1.button1.onclick = setBGColor();
@@ -681,8 +685,8 @@ document.form1.button1.onclick = setBGColor();
 Afin de passer des paramètres à un gestionnaire d'événements, le gestionnaire doit être enveloppé dans une autre fonction, comme dans l'exemple suivant :
 
 ```js
-document.form1.button1.onclick = function() {
-   setBGColor('une valeur');
+document.form1.button1.onclick = function () {
+  setBGColor("une valeur");
 };
 ```
 
@@ -691,7 +695,7 @@ document.form1.button1.onclick = function() {
 En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), à partir d'ES2015 (ES6), la portée des fonctions définies dans un bloc est limitée à ce bloc. Avant ES2015, il était interdit d'utiliser les fonctions de bloc en mode strict..
 
 ```js
-'use strict';
+"use strict";
 
 function f() {
   return 1;
@@ -716,9 +720,10 @@ Dans du code non-strict, les déclarations de fonctions placées dans des blocs 
 
 ```js
 if (onDevraitDéfinirZéro) {
-   function zéro() { // DANGER: risque de compatibilité
-      console.log("Voici zéro.");
-   }
+  function zéro() {
+    // DANGER: risque de compatibilité
+    console.log("Voici zéro.");
+  }
 }
 ```
 
@@ -731,9 +736,9 @@ Une méthode plus sûre est d'utiliser des expressions de fonction :
 ```js
 var zéro;
 if (0) {
-   zéro = function() {
-      console.log("Voici zéro.");
-   };
+  zéro = function () {
+    console.log("Voici zéro.");
+  };
 }
 ```
 
@@ -746,12 +751,12 @@ La fonction qui suit renvoie une chaîne de caractères contenant la représenta
 ```js
 // Cette fonction renvoie une chaîne de caractères complétée par un préfixe composé de zéros
 function padZeros(num, totalLen) {
-   var numStr = num.toString();             // On initialise la valeur à renvoyer en chaîne de caractères
-   var numZeros = totalLen - numStr.length; // On calcule le nombre de zéros
-   for (var i = 1; i <= numZeros; i++) {
-      numStr = "0" + numStr;
-   }
-   return numStr;
+  var numStr = num.toString(); // On initialise la valeur à renvoyer en chaîne de caractères
+  var numZeros = totalLen - numStr.length; // On calcule le nombre de zéros
+  for (var i = 1; i <= numZeros; i++) {
+    numStr = "0" + numStr;
+  }
+  return numStr;
 }
 ```
 
@@ -759,9 +764,9 @@ Les instructions qui suivent utilisent cette fonction
 
 ```js
 var resultat;
-resultat = padZeros(42,4); // renvoie "0042"
-resultat = padZeros(42,2); // renvoie "42"
-resultat = padZeros(5,4);  // renvoie "0005"
+resultat = padZeros(42, 4); // renvoie "0042"
+resultat = padZeros(42, 2); // renvoie "42"
+resultat = padZeros(5, 4); // renvoie "0005"
 ```
 
 ### Déterminer si une fonction existe
@@ -769,11 +774,11 @@ resultat = padZeros(5,4);  // renvoie "0005"
 Il est possible de déterminer si oui ou non une fonction existe en utilisant l'opérateur `typeof`. Dans l'exemple qui suit, on teste pour savoir si l'objet `window` possède une propriété appelé `noFunc` qui serait une fonction. Si c'est le cas, elle sera utilisée, sinon on fera autre chose.
 
 ```js
- if ('function' === typeof window.noFunc) {
-   // utilisation de noFunc()
- } else {
-   // faire autre chose
- }
+if ("function" === typeof window.noFunc) {
+  // utilisation de noFunc()
+} else {
+  // faire autre chose
+}
 ```
 
 Il est à noter que, dans le test `if`, on utilise une référence à `noFunc` - il n'y a pas de parenthèses après le nom de la fonction, la fonction n'est donc pas appelée.

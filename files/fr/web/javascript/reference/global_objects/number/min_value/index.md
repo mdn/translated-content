@@ -24,9 +24,9 @@ Le code qui suit effectue la division de deux nombres. Si le résultat obtenu es
 
 ```js
 if (num1 / num2 >= Number.MIN_VALUE) {
-    func1();
+  func1();
 } else {
-    func2();
+  func2();
 }
 ```
 

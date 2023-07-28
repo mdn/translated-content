@@ -78,8 +78,8 @@ Les exemples suivants renvoient **`NaN`** :
 
 ```js
 parseInt("Coucou", 8); // Ce sont des lettres et pas des chiffres
-parseInt("546", 2);    // Ces chiffres ne sont pas valides pour une représentation
-                       // binaire
+parseInt("546", 2); // Ces chiffres ne sont pas valides pour une représentation
+// binaire
 ```
 
 Les exemples suivants renvoient tous **`-15`** :
@@ -88,7 +88,7 @@ Les exemples suivants renvoient tous **`-15`** :
 parseInt("-F", 16);
 parseInt("-0F", 16);
 parseInt("-0XF", 16);
-parseInt(-15.1, 10)
+parseInt(-15.1, 10);
 parseInt("-17", 8);
 parseInt("-15", 10);
 parseInt("-1111", 2);
@@ -121,7 +121,7 @@ Bien que cela soit fortement déconseillé par ECMAScript 3 et que cela soit int
 
 ```js
 parseInt("0e0"); // 0
-parseInt("08");  // 0, '8' n'est pas un chiffre octal.
+parseInt("08"); // 0, '8' n'est pas un chiffre octal.
 ```
 
 ### ECMAScript 5 supprime l'interprétation octale
@@ -140,19 +140,18 @@ Il est parfois utile d'avoir une fonction de conversion plus stricte. Pour cela,
 
 ```js
 filterInt = function (value) {
-  if (/^(-|\+)?(\d+|Infinity)$/.test(value))
-    return Number(value);
+  if (/^(-|\+)?(\d+|Infinity)$/.test(value)) return Number(value);
   return NaN;
-}
+};
 
-console.log(filterInt('421'));               // 421
-console.log(filterInt('-421'));              // -421
-console.log(filterInt('+421'));              // 421
-console.log(filterInt('Infinity'));          // Infinity
-console.log(filterInt('421e+0'));            // NaN
-console.log(filterInt('421hop'));            // NaN
-console.log(filterInt('hop1.61803398875'));  // NaN
-console.log(filterInt('1.61803398875'));     // NaN
+console.log(filterInt("421")); // 421
+console.log(filterInt("-421")); // -421
+console.log(filterInt("+421")); // 421
+console.log(filterInt("Infinity")); // Infinity
+console.log(filterInt("421e+0")); // NaN
+console.log(filterInt("421hop")); // NaN
+console.log(filterInt("hop1.61803398875")); // NaN
+console.log(filterInt("1.61803398875")); // NaN
 ```
 
 ## Spécifications

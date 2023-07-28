@@ -47,13 +47,12 @@ toto.substring(1); // TypeError: toto is undefined
 var toto = null;
 toto.substring(1); // TypeError: toto is null
 
-
 // Certaines méthodes nécessitent une valeur
 // d'un type spécifique
-var toto = {}
+var toto = {};
 Symbol.keyFor(toto); // TypeError: toto is not a symbol
 
-var toto = "truc"
+var toto = "truc";
 Object.create(toto); // TypeError: "toto" is not an object or null
 ```
 
@@ -62,7 +61,7 @@ Object.create(toto); // TypeError: "toto" is not an object or null
 Pour résoudre ce problème et écarter les cas où la valeur vaut `undefined`, on peut par exemple utiliser l'opérateur [`typeof`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_typeof).
 
 ```js
-if (typeof toto !== 'undefined') {
+if (typeof toto !== "undefined") {
   // Désormais, on sait que toto est bien
   // défini et on peut poursuivre.
 }

@@ -13,7 +13,7 @@ La méthode **`Object.keys()`** renvoie un tableau contenant les noms des propri
 ## Syntaxe
 
 ```js
-Object.keys(obj)
+Object.keys(obj);
 ```
 
 ### Paramètres
@@ -37,23 +37,27 @@ console.log(Object.keys(arr));
 // affichera ['0', '1', '2']
 
 // un objet semblable à un tableau
-var obj = { 0 : "a", 1 : "b", 2 : "c"};
+var obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.keys(obj));
 // affichera ['0', '1', '2']
 
 // un objet semblable à un tableau avec
 // un ordre de clé aléatoire
-var an_obj = { 100: "a", 2: "b", 7: "c"};
+var an_obj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.keys(an_obj));
 // affichera ['2', '7', '100']
 
 // getToto est une propriété non énumérable
-var monObjet = Object.create({}, {
-                                 getToto : {
-                                            value : function () {
-                                              return this.toto }
-                                           }
-                                  });
+var monObjet = Object.create(
+  {},
+  {
+    getToto: {
+      value: function () {
+        return this.toto;
+      },
+    },
+  },
+);
 monObjet.toto = 1;
 
 console.log(Object.keys(monObjet));

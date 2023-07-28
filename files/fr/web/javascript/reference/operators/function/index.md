@@ -42,9 +42,9 @@ En JavaScript, les expressions de fonction ne sont pas remontées (à la différ
 ```js
 nonRemontée(); // TypeError: nonRemontée is not a function
 
-var nonRemontée = function() {
+var nonRemontée = function () {
   console.log("truc");
-}
+};
 ```
 
 ## Exemples
@@ -52,8 +52,8 @@ var nonRemontée = function() {
 L'exemple qui suit définit une fonction anonyme et l'assigne à une variable `x`. La fonction renvoie le carré de son paramètre :
 
 ```js
-var x = function(y) {
-   return y * y;
+var x = function (y) {
+  return y * y;
 };
 ```
 
@@ -63,25 +63,25 @@ Si on souhaite faire référence à une fonction au sein du corps de la fonction
 
 ```js
 var math = {
-  'factorielle': function factorielle(n) {
+  factorielle: function factorielle(n) {
     if (n <= 1) {
       return 1;
     }
     return n * factorielle(n - 1);
-  }
+  },
 };
 ```
 
 La variable affectée à l'expression de fonction aura une propriété `name`. Ce nom n'est pas modifié si la variable est réaffectée. Si le nom de la fonction est absent, ce sera celui de la variable (nom « implicite »). Cela vaut également pour [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) :
 
 ```js
-var toto = function() {};
+var toto = function () {};
 console.log(toto.name); // "toto"
 
 var toto2 = toto;
 console.log(toto2.name); // "toto"
 
-var truc = function machin() {}
+var truc = function machin() {};
 console.log(truc.name); // "machin"
 ```
 
@@ -94,7 +94,7 @@ var a = "coucou";
 var b = "monde";
 
 // IIFE
-(function(x, y) {
+(function (x, y) {
   console.log(x + " " + y);
 })(a, b);
 // coucou monde

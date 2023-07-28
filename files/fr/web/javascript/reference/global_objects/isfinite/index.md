@@ -13,7 +13,7 @@ La fonction globale **`isFinite()`** détermine si la valeur passée en argument
 ## Syntaxe
 
 ```js
-isFinite(valeurÀTester)
+isFinite(valeurÀTester);
 ```
 
 ### Paramètres
@@ -34,19 +34,18 @@ Cette fonction peut être utilisée pour déterminer si un nombre est fini ou no
 ## Exemples
 
 ```js
-isFinite(Infinity);  // false
-isFinite(NaN);       // false
+isFinite(Infinity); // false
+isFinite(NaN); // false
 isFinite(-Infinity); // false
 
-isFinite(0);         // true
-isFinite(2e64);      // true
-isFinite(910);       // true
-isFinite(null);      // true, ce qui aurait été false
-                     // avec la méthode Number.isFinite(null)
+isFinite(0); // true
+isFinite(2e64); // true
+isFinite(910); // true
+isFinite(null); // true, ce qui aurait été false
+// avec la méthode Number.isFinite(null)
 
-
-isFinite("0");       // true ce qui aurait été false
-                     // avec la méthode Number.isFinite("0")
+isFinite("0"); // true ce qui aurait été false
+// avec la méthode Number.isFinite("0")
 ```
 
 ## Spécifications
