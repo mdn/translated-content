@@ -43,9 +43,11 @@ HTML **`<meter>`** 元素用来显示已知范围的标量值或者分数值。
 该元素包含所有的[全局属性](/zh-CN/docs/HTML/Global_attributes).
 
 - `value`
+
   - : 当前的数值。如果设置了最小值和最大值（分别由 min 属性和 max 属性定义），它必须介于最小值和最大值之间。如果没有指定或者格式有误，值即为 0。如果给定的值不在最小值和最大值之间，它的值就等于它最接近的一端的值。
 
     > **备注：** 除非值域在 0 到 1（闭区间）, 否则最小值和最大值属性需要定义，以保证 value 属性在值域范围内。换言之，默认的 min 和 max 值分别为 0 和 1。
+
 - `min`
   - : 值域的最小边界值。如果设置了，它必须比最大值要小。如果没设置，默认为 0。
 - `max`
@@ -77,7 +79,7 @@ HTML **`<meter>`** 元素用来显示已知范围的标量值或者分数值。
 
 在 Google Chrome 浏览器上，计量器结果如下：
 
-![current look of \<meter> in Google Chrome](screen_shot_2020-10-12_at_10.10.53_pm.png)
+![current look of 'meter' in Google Chrome](screen_shot_2020-10-12_at_10.10.53_pm.png)
 
 ### 高低值区间示例
 

@@ -56,7 +56,7 @@ Edge 的 `week` 控制更加精细，使用滚动的滚轮打开星期和年的�
 
 ```html
 <label for="week">What week would you like to start?</label>
-<input id="week" type="week" name="week" value="2017-W01">
+<input id="week" type="week" name="week" value="2017-W01" />
 ```
 
 {{EmbedLiveSample('值', 600, 60)}}
@@ -67,7 +67,7 @@ Edge 的 `week` 控制更加精细，使用滚动的滚轮打开星期和年的�
 
 ```js
 const weekControl = document.querySelector('input[type="week"]');
-weekControl.value = '2017-W45';
+weekControl.value = "2017-W45";
 ```
 
 ## 其他属性
@@ -307,32 +307,32 @@ input:valid + span::after {
 
 ```js
 // 获取 UI 元素
-const nativePicker = document.querySelector('.nativeWeekPicker');
-const fallbackPicker = document.querySelector('.fallbackWeekPicker');
-const fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector(".nativeWeekPicker");
+const fallbackPicker = document.querySelector(".fallbackWeekPicker");
+const fallbackLabel = document.querySelector(".fallbackLabel");
 
-const yearSelect = document.querySelector('#year');
-const weekSelect = document.querySelector('#fallbackWeek');
+const yearSelect = document.querySelector("#year");
+const weekSelect = document.querySelector("#fallbackWeek");
 
 // 最初，隐藏回退元素
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // 测试一个新的 date 输入框是否会回退至 text 输入框
-const test = document.createElement('input');
+const test = document.createElement("input");
 
 try {
-  test.type = 'week';
+  test.type = "week";
 } catch (e) {
   console.log(e.description);
 }
 
 // 如果回退了，运行 if 代码块中的代码
-if ( test.type === 'text') {
+if (test.type === "text") {
   // 隐藏原生选择器，显示回退元素
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // 动态生成星期数
   populateWeeks();
@@ -341,8 +341,8 @@ if ( test.type === 'text') {
 function populateWeeks() {
   // 生成含有 52 个选择的星期数
   for (let i = 1; i <= 52; i++) {
-    const option = document.createElement('option');
-    option.textContent = (i < 10) ? `0${i}` : i;
+    const option = document.createElement("option");
+    option.textContent = i < 10 ? `0${i}` : i;
     weekSelect.appendChild(option);
   }
 }

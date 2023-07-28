@@ -24,7 +24,10 @@ HTML Acronym 元素 (`<acronym>)` 允许作者明确地声明一个字符序列�
 ## 例子
 
 ```html
-<p>The <acronym title="World Wide Web">WWW</acronym> is only one component of the Internet.</p>
+<p>
+  The <acronym title="World Wide Web">WWW</acronym> is only one component of the
+  Internet.
+</p>
 ```
 
 ## 默认样式

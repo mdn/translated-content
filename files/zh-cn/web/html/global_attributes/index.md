@@ -71,6 +71,7 @@ slug: Web/HTML/Global_attributes
 - [`inputmode`](/zh-CN/docs/Web/HTML/Global_attributes/inputmode)
   - : 向浏览器提供有关在编辑此元素或其内容时要使用的虚拟键盘配置类型的提示。主要用于 {{HTMLElement("input")}} 元素，但在 [`contenteditable`](#contenteditable) 模式下可用于任何元素。
 - [`is`](/zh-CN/docs/Web/HTML/Global_attributes/is)
+
   - : 允许指定标准 HTML 元素的行为如同已注册的自定义内置元素一样（有关更多详细信息，请参阅[使用自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)）。
 
     > **备注：** `item*` 属性是 [WHATWG HTML 微数据特性](https://html.spec.whatwg.org/multipage/microdata.html#microdata)的一部分。

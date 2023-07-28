@@ -54,7 +54,7 @@ slug: Web/HTML/Element/embed
 ## 例子
 
 ```html
-<embed type="video/quicktime" src="movie.mov" width="640" height="480">
+<embed type="video/quicktime" src="movie.mov" width="640" height="480" />
 ```
 
 ## 规范

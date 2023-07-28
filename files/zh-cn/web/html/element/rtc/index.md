@@ -44,13 +44,13 @@ slug: Web/HTML/Element/rtc
 
 ```html
 <ruby>
-   <rb>旧</rb>
-   <rb>金</rb>
-   <rb>山</rb>
-   <rt>jiù</rt>
-   <rt>jīn</rt>
-   <rt>shān</rt>
-   <rtc>San Francisco</rtc>
+  <rb>旧</rb>
+  <rb>金</rb>
+  <rb>山</rb>
+  <rt>jiù</rt>
+  <rt>jīn</rt>
+  <rt>shān</rt>
+  <rtc>San Francisco</rtc>
 </ruby>
 ```
 

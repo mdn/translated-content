@@ -76,11 +76,10 @@ slug: Web/HTML/Element/template
 ```js
 // 通过检查来测试浏览器是否支持 HTML 模板元素
 // 用于保存模板元素的内容属性。
-if ('content' in document.createElement('template')) {
-
+if ("content" in document.createElement("template")) {
   // 使用现有的 HTML tbody 实例化表和该行与模板
-  let t = document.querySelector('#productrow'),
-  td = t.content.querySelectorAll("td");
+  let t = document.querySelector("#productrow"),
+    td = t.content.querySelectorAll("td");
   td[0].textContent = "1235646565";
   td[1].textContent = "Stuff";
 
@@ -96,7 +95,6 @@ if ('content' in document.createElement('template')) {
   // 克隆新行并将其插入表中
   let clone2 = document.importNode(t.content, true);
   tb[0].appendChild(clone2);
-
 } else {
   // 找到另一种方法来添加行到表，因为不支持 HTML 模板元素。
 }

@@ -93,7 +93,6 @@ build/
 # zh-cn
 /files/zh-cn/web/api/**/*.md
 /files/zh-cn/web/css/**/*.md
-/files/zh-cn/web/html/**/*.md
 /files/zh-cn/web/http/**/*.md
 /files/zh-cn/web/javascript/reference/**/*.md
 /files/zh-cn/web/svg/**/*.md

@@ -18,9 +18,11 @@ HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在
 ## 主要资源
 
 - HTML 介绍
+
   - : 如果你是 Web 开发新手，请务必阅读我们的 [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics) 文章来了解什么是 HTML 以及如何使用它。
 
 - HTML 教程
+
   - : 关于如何使用 HTML 的文章，教程和完整的示例，查看我们的 [HTML 学习区](/zh-CN/docs/Learn/HTML)。
 
 - HTML 参考
@@ -67,7 +69,7 @@ HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在
 - [HTML 属性参考](/zh-CN/docs/Web/HTML/Attributes)
   - : HTML 元素都含有**属性**。这些额外的属性值可以通过各种途径对元素进行配置或调整其行为。
 - [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
-  - : 全局属性可以在所有 [HTML 元素](/zh-CN/docs/Web/HTML/Element)上进行设置，*包括那些没有在相关标准中出现的元素*。这意味着即使这些非标准元素使得文档并不符合 HTML5 标准，它们也必须允许这些属性存在。
+  - : 全局属性可以在所有 [HTML 元素](/zh-CN/docs/Web/HTML/Element)上进行设置，_包括那些没有在相关标准中出现的元素_。这意味着即使这些非标准元素使得文档并不符合 HTML5 标准，它们也必须允许这些属性存在。
 - [行级元素](/zh-CN/docs/Glossary/Inline-level_content)和[块级元素](/zh-CN/docs/Glossary/Block-level_content)
   - : HTML 元素通常是“行级”或“块级”元素。一个行级元素仅会占用由定义它的标签所包裹起来的空间。而一个块级元素将会占用其父元素（容器）的全部空间，也就是创建一个“块”。
 - [链接类型](/zh-CN/docs/Web/HTML/Link_types)

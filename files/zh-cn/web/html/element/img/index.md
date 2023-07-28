@@ -55,6 +55,7 @@ Web 最常用的图像格式是：
 此元素支持[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
 - `alt`
+
   - : 定义了图像的备用文本描述。
 
     > **备注：** 浏览器并非总是会显示图像。比如：
@@ -70,6 +71,7 @@ Web 最常用的图像格式是：
     将图像复制并粘贴为文本，或是将图像的链接保存为浏览器书签时，也会用到此属性。
 
 - `crossorigin`
+
   - : 这个枚举属性表明是否必须使用 {{glossary("CORS")}} 完成相关图像的抓取。[启用 CORS 的图像](/zh-CN/docs/Web/HTML/CORS_enabled_image)可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会被标记为“[污染](/zh-CN/docs/Web/HTML/CORS_enabled_image#安全性和“被污染”的_canvas)（tainted）”。
 
     如果*未指定* `crossorigin` 属性，则会发送不启用 CORS 的请求（不会携带 {{httpheader("Origin")}} 请求标头），且浏览器会将图像标记为“被污染”并拒绝对图像数据的访问，阻止其在 {{HTMLElement("canvas")}} 元素中的使用。
@@ -86,6 +88,7 @@ Web 最常用的图像格式是：
     如果属性是无效值，浏览器默认将其当做 `anonymous` 关键字。更多信息，请查看 [CORS 属性设置](/zh-CN/docs/Web/HTML/Attributes/crossorigin)。
 
 - `decoding`
+
   - : 为浏览器提供图像解码方式上的提示。允许的值：
 
     - `sync`
@@ -107,17 +110,21 @@ Web 最常用的图像格式是：
       - : 默认值：表示自动确定其相对其他图像的获取优先级。
 
 - `height`
+
   - : 图像的固有高度，以像素为单位。必须是没有单位的整数值。
 
     > **备注：** 同时包括 `height` 和 [`width`](#attr-width) 使浏览器在加载图像之前计算图像的长宽比。此长宽比用于保留显示图像所需的空间，减少甚至防止在下载图像并将其绘制到屏幕上时布局的偏移。减少布局偏移是良好用户体验和 Web 性能的主要组成部分。
 
 - `ismap`
+
   - : 这个布尔属性表示图像是否是[服务器端图像映射](https://en.wikipedia.org/wiki/Image_map#Server-side)的一部分。如果是，那么点击图片的精准坐标将会被发送到服务器。
 
     > **备注：** 只有在 `<img>` 元素是一个拥有有效 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性的 {{htmlelement("a")}} 元素的后代元素的情况下，这个属性才会被允许使用。
 
 - `loading`
+
   - : 指示浏览器应当如何加载该图像。允许的值：
+
     - `eager`
       - : 立即加载图像，不管它是否在可视视口（visible viewport）之外（默认值）。
     - `lazy`
@@ -126,6 +133,7 @@ Web 最常用的图像格式是：
     > **备注：** 仅在启用 JavaScript 时才会延迟加载。这是一种反跟踪的措施，因为，如果用户代理在禁用脚本的情况下支持延迟加载，网站仍然跨源通过在图像中策略性地放置图像来跟踪用户在整个会话期间的大致滚动位置，这样服务器可以跟踪请求了多少图像以及请求在何时发起。
 
 - `referrerpolicy`
+
   - : 一个字符串，指示在获取资源时使用的来源地址（referrer）：
 
     - `no-referrer`：不会发送 {{httpheader("Referer")}} 标头。
@@ -138,6 +146,7 @@ Web 最常用的图像格式是：
     - `unsafe-url`：来源地址包括来源（origin）*和*路径（path）（但不包括[片段](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)、[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)或[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**这个值是不安全的**，因为它将来源和路径从受 TLS 保护的资源泄露到不安全的来源。
 
 - `sizes`
+
   - : 表示资源大小的、以逗号隔开的一个或多个字符串。每一个资源大小包括：
 
     1. 一个[媒体条件](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#语法)。最后一项一定是被忽略的。
@@ -156,8 +165,8 @@ Web 最常用的图像格式是：
     1. 指向图像的 {{glossary("URL")}}。
     2. 可选地，再加一个空格之后，附加以下的其一：
 
-        - 一个宽度描述符（一个正整数，后面紧跟 `w` 符号）。该整数宽度除以 `sizes` 属性给出的资源（source）大小来计算得到有效的像素密度，即换算成和 x 描述符等价的值。
-        - 一个像素密度描述符（一个正浮点数，后面紧跟 `x` 符号）。
+       - 一个宽度描述符（一个正整数，后面紧跟 `w` 符号）。该整数宽度除以 `sizes` 属性给出的资源（source）大小来计算得到有效的像素密度，即换算成和 x 描述符等价的值。
+       - 一个像素密度描述符（一个正浮点数，后面紧跟 `x` 符号）。
 
     如果没有指定源描述符，那它会被指定为默认的 `1x`。
 
@@ -168,6 +177,7 @@ Web 最常用的图像格式是：
 - `width`
   - : 图像的宽度，以像素为单位。必须是没有单位的整数。
 - `usemap`
+
   - : 与元素相关联的[图像映射（image map）](/zh-CN/docs/HTML/Element/map)的部分 URL（以 `#` 开始的部分）。
 
     > **备注：** 如果 `<img>` 元素是 {{htmlelement("a")}} 或 {{HTMLElement("button")}} 元素的后代元素则不能使用这个属性。
@@ -175,6 +185,7 @@ Web 最常用的图像格式是：
 ### 已废弃的属性
 
 - `align` {{Deprecated_Inline}}
+
   - : 图像相对于它周围上下文的对齐。使用 {{cssxref('float')}} 和/或 {{cssxref('vertical-align')}} 这两个 {{glossary("CSS")}} 属性作为代替。允许的值：
 
     - `top`
@@ -193,6 +204,7 @@ Web 最常用的图像格式是：
 - `hspace` {{Deprecated_Inline}}
   - : 插入到图像的左侧和右侧的空白像素的值。使用 CSS 属性 {{cssxref('margin')}} 代替此废弃属性。
 - `longdesc` {{Deprecated_Inline}}
+
   - : 一个指向更详细的图像描述的链接。可能的值是一个 {{glossary("URL")}} 或一个页面上其他元素的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id)。
 
     > **备注：** 此属性在当前最新的 {{glossary("W3C")}} 版本——[HTML 5.2](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc) 中被提到，但在 {{glossary("WHATWG")}} 组织的 [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) 中依然处于被移除的状态。它的未来尚无定数；开发者应使用 {{glossary("WAI")}}-{{glossary("ARIA")}} 这一代替方法，例如：[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) 或 [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details)。
@@ -275,13 +287,13 @@ Web 最常用的图像格式是：
 #### 不要
 
 ```html example-bad
-<img alt="图片" src="penguin.jpg">
+<img alt="图片" src="penguin.jpg" />
 ```
 
 #### 而是
 
 ```html example-good
-<img alt="一只站在沙滩上的跳岩企鹅。" src="penguin.jpg">
+<img alt="一只站在沙滩上的跳岩企鹅。" src="penguin.jpg" />
 ```
 
 当图像上没有 `alt` 属性时，一些屏幕阅读器可能会读出图像的文件名。如果文件名不能代表图像的内容，甚至是一团乱码，这可只能造成令人迷惑的体验。

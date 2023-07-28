@@ -48,7 +48,8 @@ slug: Web/HTML/Element/canvas
 ```html
 <canvas id="canvas" width="300" height="300">
   抱歉，您的浏览器不支持 canvas 元素
- （这些内容将会在不支持<canvas>元素的浏览器或是禁用了 JavaScript 的浏览器内渲染并展现）
+  （这些内容将会在不支持&lt;canvas%gt;元素的浏览器或是禁用了 JavaScript
+  的浏览器内渲染并展现）
 </canvas>
 ```
 
@@ -57,9 +58,9 @@ slug: Web/HTML/Element/canvas
 使用{{domxref("HTMLCanvasElement.getContext()")}}获得一个绘图上下文并开始绘制
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 ```
 

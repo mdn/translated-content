@@ -41,6 +41,7 @@ slug: Web/HTML/Element/thead
 This element includes the [global attributes](/zh-CN/docs/Web/HTML/Global_attributes).
 
 - `align` {{Deprecated_Inline}}
+
   - : This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
 
     - `left`, aligning the content to the left of the cell
@@ -55,21 +56,25 @@ This element includes the [global attributes](/zh-CN/docs/Web/HTML/Global_attrib
     > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the [`char`](/zh-CN/docs/Web/HTML/Element/thead#char) as the value of the {{ cssxref("text-align") }} property {{ unimplemented_inline() }}.
 
 - `bgcolor` {{ Non-standard_inline() }}
+
   - : This attribute defines the background color of each cell of the column. It is one of the 6-digit hexadecimal code as defined in [sRGB](https://www.w3.org/Graphics/Color/sRGB), prefixed by a '#'. One of the sixteen predefined color strings may be used.
 
     > **备注：** Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: the {{ HTMLElement("thead") }} element should be styled using [CSS](/zh-CN/docs/CSS). To give a similar effect to the **bgcolor** attribute, use the [CSS](/zh-CN/docs/CSS) property {{ cssxref("background-color") }}, on the relevant {{ HTMLElement("td") }} or {{ HTMLElement("th") }} elements.
 
 - `char` {{Deprecated_Inline}}
+
   - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](/zh-CN/docs/Web/HTML/Element/tr#align) is not set to `char`, this attribute is ignored.
 
     > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the [`char`](/zh-CN/docs/Web/HTML/Element/thead#char), in CSS3, you can use the character set using the [`char`](/zh-CN/docs/Web/HTML/Element/thead#char) attribute as the value of the {{ cssxref("text-align") }} property {{ unimplemented_inline() }}.
 
 - `charoff` {{Deprecated_Inline}}
+
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the **char** attribute.
 
     > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard.
 
 - `valign` {{Deprecated_Inline}}
+
   - : This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
 
     - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.

@@ -186,11 +186,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 ```html
 <form>
   <div>
-    <input
-      type="search"
-      id="mySearch"
-      name="q"
-      placeholder="站内搜索..." />
+    <input type="search" id="mySearch" name="q" placeholder="站内搜索..." />
     <button>搜索</button>
   </div>
 </form>

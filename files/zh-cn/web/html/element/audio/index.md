@@ -18,9 +18,11 @@ slug: Web/HTML/Element/audio
 该元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `autoplay`
+
   - : 布尔值属性；声明该属性，音频会尽快自动播放，不会等待整个音频文件下载完成。
 
     > **备注：** 自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如果正确使用自动播放，可参见我们的[自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)。
+
 - `controls`
   - : 如果声明了该属性，浏览器将提供一个包含声音，播放进度，播放暂停的控制面板，让用户可以控制音频的播放。
 - `crossorigin`
@@ -32,9 +34,11 @@ slug: Web/HTML/Element/audio
 - `currentTime`
   - : 读取 `currentTime` 属性将返回一个双精度浮点值，用以标明以秒为单位的当前音频的播放位置。如果音频的元数据暂时无法访问——这意味着你无法的知道媒体的开始或持续时间。这时，`currentTime` 相对应的，能够被用于改变重播的时间。否则，设置 `currentTime` 将设置当前的播放位置，并且会自动搜寻到媒体的那个位置，如果媒体目前已经被加载的话。如果音频是以流的形式加载的，并且数据超出了媒体的缓冲区（buffer），{{Glossary("user agent")}} 可能无法获取资源的某些部分。另一些音频的时间轴可能并非从 0 秒开始，所以设置 `currentTime` 到一个开始时间之前的时间可能会失败。举个例子，如果音频媒体的时间轴从 12 小时开始，把 `currentTime` 设置到 3600 将会尝试把当前播放位置设置到媒体的开始位置之前，从而导致错误。{{domxref("HTMLMediaElement.getStartDate", "getStartDate()")}} 方法能够用于确定媒体时间轴的开始位置。
 - `disableRemotePlayback` {{experimental_inline}}
+
   - : 这是一个布尔值，用来禁用在远程设备上进行进度控制的能力。这些设备通过有线（比如 HDMI, DVI）或无线技术（比如 Miracast, Chromecast, DLNA, AirPlay,）来与 web 连接。请参考 [this proposed specification](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute) 来获取更多信息。
 
     > **备注：** 在 Safari 中，你能使用 [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) 作为兜底方案。
+
 - `duration` {{ReadOnlyInline}}
   - : 这是一个双精度浮点数，指明了音频在时间轴中的持续时间（总长度），以秒为单位。如果元素上没有媒体，或者媒体是不可用的，那么会返回 `NaN`。如果媒体找不到确切的结尾（比如不确定长度的直播流，网络电台，或者是通过 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 连接的流），那么这个值将返回 `+Infinity`。
 - `loop`
@@ -42,6 +46,7 @@ slug: Web/HTML/Element/audio
 - `muted`
   - : 表示是否静音的布尔值。默认值为 `false`，表示有声音。
 - `preload`
+
   - : 枚举属性，让开发者自行思考来示意浏览器使用何种加载方式以达到最好的用户体验。可以是以下属性之一：
 
     - `none`: 示意用户可能不会播放该音频，或者服务器希望节省带宽；换句话说，该音频不会被缓存；
@@ -58,28 +63,28 @@ slug: Web/HTML/Element/audio
 
 ## 事件
 
-| 事件名称                                                                                     | 触发时机                                                                                                                           |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| [`audioprocess`](/zh-CN/docs/Web/API/ScriptProcessorNode/audioprocess_event)                                                             | 一个 {{DOMxRef("ScriptProcessorNode")}} 的输入缓冲区已经准备开始处理。                                                   |
-| {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}                 | 浏览器已经可以播放媒体，但是预测已加载的数据不足以在不暂停的情况下顺利将其播放到结尾（即预测会在播放时暂停以获取更多的缓冲区内容） |
-| {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} | 浏览器预测已经可以在不暂停的前提下将媒体播放到结束。                                                                               |
-| [`complete`](/zh-CN/docs/Web/API/OfflineAudioContext/complete_event)                                                                 | 一个 {{DOMxRef("OfflineAudioContext")}} 的渲染已经中止。                                                                 |
-| {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} | `duration` 属性发生了变化。                                                                                                        |
-| {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}                 | 媒体置空。举个例子，当一个媒体已经加载（或部分加载）的情况下话调用 `load()` 方法，这个事件就将被触发。                             |
+| 事件名称                                                                     | 触发时机                                                                                                                           |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| [`audioprocess`](/zh-CN/docs/Web/API/ScriptProcessorNode/audioprocess_event) | 一个 {{DOMxRef("ScriptProcessorNode")}} 的输入缓冲区已经准备开始处理。                                                             |
+| {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}                     | 浏览器已经可以播放媒体，但是预测已加载的数据不足以在不暂停的情况下顺利将其播放到结尾（即预测会在播放时暂停以获取更多的缓冲区内容） |
+| {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}       | 浏览器预测已经可以在不暂停的前提下将媒体播放到结束。                                                                               |
+| [`complete`](/zh-CN/docs/Web/API/OfflineAudioContext/complete_event)         | 一个 {{DOMxRef("OfflineAudioContext")}} 的渲染已经中止。                                                                           |
+| {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}       | `duration` 属性发生了变化。                                                                                                        |
+| {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}                     | 媒体置空。举个例子，当一个媒体已经加载（或部分加载）的情况下话调用 `load()` 方法，这个事件就将被触发。                             |
 | {{domxref("HTMLMediaElement.ended_event", 'ended')}}                         | 播放到媒体的结束位置，播放停止。                                                                                                   |
-| {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}         | 媒体的第一帧加载完成。                                                                                                             |
-| {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} | 元数据加载完成。                                                                                                                   |
+| {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}               | 媒体的第一帧加载完成。                                                                                                             |
+| {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}       | 元数据加载完成。                                                                                                                   |
 | {{domxref("HTMLMediaElement.pause_event", 'pause')}}                         | 播放暂停。                                                                                                                         |
-| {{domxref("HTMLMediaElement.play_event", 'play')}}                         | 播放开始。                                                                                                                         |
-| {{domxref("HTMLMediaElement.playing_event", 'playing ')}}                 | 因为缺少数据而暂停或延迟的状态结束，播放准备开始。                                                                                 |
-| {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}         | 播放速度变化。                                                                                                                     |
-| {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}                     | 一次*获取* 操作结束。                                                                                                              |
-| {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}                 | 一次*获取* 操作开始。                                                                                                              |
-| {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}                 | 用户代理试图获取媒体数据，但数据意外地没有进入。                                                                                   |
-| {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}                 | 媒体加载挂起。                                                                                                                     |
-| {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}         | 由 `currentTime` 指定的时间更新。                                                                                                  |
-| {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}     | 音量变化。                                                                                                                         |
-| {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}                 | 因为暂时性缺少数据，播放暂停。                                                                                                     |
+| {{domxref("HTMLMediaElement.play_event", 'play')}}                           | 播放开始。                                                                                                                         |
+| {{domxref("HTMLMediaElement.playing_event", 'playing ')}}                    | 因为缺少数据而暂停或延迟的状态结束，播放准备开始。                                                                                 |
+| {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}               | 播放速度变化。                                                                                                                     |
+| {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}                       | 一次*获取* 操作结束。                                                                                                              |
+| {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}                     | 一次*获取* 操作开始。                                                                                                              |
+| {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}                     | 用户代理试图获取媒体数据，但数据意外地没有进入。                                                                                   |
+| {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}                     | 媒体加载挂起。                                                                                                                     |
+| {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}               | 由 `currentTime` 指定的时间更新。                                                                                                  |
+| {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}           | 音量变化。                                                                                                                         |
+| {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}                     | 因为暂时性缺少数据，播放暂停。                                                                                                     |
 
 ## 使用说明
 
@@ -87,10 +92,12 @@ slug: Web/HTML/Element/audio
 
 ```html
 <audio controls>
-  <source src="myAudio.mp3" type="audio/mpeg">
-  <source src="myAudio.ogg" type="audio/ogg">
-  <p>Your browser doesn't support HTML5 audio. Here is
-     a <a href="myAudio.mp4">link to the audio</a> instead.</p>
+  <source src="myAudio.mp3" type="audio/mpeg" />
+  <source src="myAudio.ogg" type="audio/ogg" />
+  <p>
+    Your browser doesn't support HTML5 audio. Here is a
+    <a href="myAudio.mp4">link to the audio</a> instead.
+  </p>
 </audio>
 ```
 
@@ -135,11 +142,11 @@ slug: Web/HTML/Element/audio
 ```js
 var elem = document.querySelector("audio");
 
-elem.audioTrackList.onaddtrack = function(event) {
+elem.audioTrackList.onaddtrack = function (event) {
   trackEditor.addTrack(event.track);
 };
 
-elem.audioTrackList.onremovetrack = function(event) {
+elem.audioTrackList.onremovetrack = function (event) {
   trackEditor.removeTrack(event.track);
 };
 ```
@@ -156,9 +163,7 @@ elem.audioTrackList.onremovetrack = function(event) {
 
 ```html
 <!-- Simple audio playback -->
-<audio
-  src="AudioTest.ogg"
-  autoplay>
+<audio src="AudioTest.ogg" autoplay>
   Your browser does not support the <code>audio</code> element.
 </audio>
 ```
@@ -171,7 +176,7 @@ elem.audioTrackList.onremovetrack = function(event) {
 
 ```html
 <audio controls>
-  <source src="foo.wav" type="audio/wav">
+  <source src="foo.wav" type="audio/wav" />
   Your browser does not support the <code>audio</code> element.
 </audio>
 ```
@@ -182,9 +187,9 @@ elem.audioTrackList.onremovetrack = function(event) {
 
 ```html
 <audio controls>
- <source src="foo.opus" type="audio/ogg; codecs=opus"/>
- <source src="foo.ogg" type="audio/ogg; codecs=vorbis"/>
- <source src="foo.mp3" type="audio/mpeg"/>
+  <source src="foo.opus" type="audio/ogg; codecs=opus" />
+  <source src="foo.ogg" type="audio/ogg; codecs=vorbis" />
+  <source src="foo.mp3" type="audio/mpeg" />
 </audio>
 ```
 
@@ -216,11 +221,11 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
 
 ```html
 <audio controls>
-  <source src="myAudio.mp3" type="audio/mpeg">
-  <source src="myAudio.ogg" type="audio/ogg">
+  <source src="myAudio.mp3" type="audio/mpeg" />
+  <source src="myAudio.ogg" type="audio/ogg" />
   <p>
-    Your browser doesn't support HTML5 audio.
-    Here is a <a href="myAudio.mp4">link to download the audio</a> instead.
+    Your browser doesn't support HTML5 audio. Here is a
+    <a href="myAudio.mp4">link to download the audio</a> instead.
   </p>
 </audio>
 ```

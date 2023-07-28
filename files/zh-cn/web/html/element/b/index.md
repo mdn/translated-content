@@ -51,10 +51,11 @@ slug: Web/HTML/Element/b
 
 ```html
 <p>
-  This article describes several <b>text-level</b> elements.
-  It explains their usage in an <b>HTML</b> document.
+  This article describes several <b>text-level</b> elements. It explains their
+  usage in an <b>HTML</b> document.
 </p>
-Keywords are displayed with the default style of the <b> element, likely in bold.
+Keywords are displayed with the default style of the
+<b> element, likely in bold.</b>
 ```
 
 ### 结果

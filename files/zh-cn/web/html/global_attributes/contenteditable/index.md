@@ -18,7 +18,7 @@ slug: Web/HTML/Global_attributes/contenteditable
 
 如果没给出该属性或设置了无效的属性值，则其默认值*继承*自父元素：即，如果父元素可编辑，该子元素也可编辑。
 
-注意，虽然该属性允许设定的值包括 `true` 和 `false`，但该属性仍是一个[*枚举*](/zh-CN/docs/Glossary/Enumerated)属性而非*布尔*属性。
+注意，虽然该属性允许设定的值包括 `true` 和 `false`，但该属性仍是一个[_枚举_](/zh-CN/docs/Glossary/Enumerated)属性而非*布尔*属性。
 
 你可以使用 CSS {{cssxref("caret-color")}} 属性设置用于绘制文本插入 {{Glossary("caret")}} 的颜色。
 

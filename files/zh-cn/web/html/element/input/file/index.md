@@ -211,10 +211,10 @@ div {
 
 1. 不能从脚本中设置文件选取器的值——做下面这样的事情是没有效果的：
 
-    ```js
-    const input = document.querySelector("input[type=file]");
-    input.value = "foo";
-    ```
+   ```js
+   const input = document.querySelector("input[type=file]");
+   input.value = "foo";
+   ```
 
 2. 当使用 `<input type="file">` 选择文件时，出于明显的安全原因，源文件的实际路径没有显示在 input 的 `value` 属性中。实际上显示了文件名，并用 `C:\fakepath\` 附加在路径的开头。这种怪癖有一些历史原因，但它在所有现代浏览器中都受到支持，而且实际上[在规范中也有定义](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly)。
 
@@ -313,8 +313,8 @@ form button:active {
 在脚本的第一行，我们获得了对表单 input 本身和拥有 `.preview` 类的 {{htmlelement("div")}} 元素的引用。然后，我们隐藏了 {{htmlelement("input")}} 元素，这样做是因为文件输入往往很难看，难于设计样式，而且在跨浏览器中对它们的设计不一致。你可以通过单击 {{htmlelement("label")}} 部分来激活 `input` 元素，因此，最好在视觉上隐藏 `input` 并将 label 设计成按钮的样式，这样用户如果想上传文件就会知道如何与之交互。
 
 ```js
-const input = document.querySelector('input');
-const preview = document.querySelector('.preview');
+const input = document.querySelector("input");
+const preview = document.querySelector(".preview");
 
 input.style.opacity = 0;
 ```
@@ -324,7 +324,7 @@ input.style.opacity = 0;
 接下来，我们将[事件监听器](/zh-CN/docs/Web/API/EventTarget/addEventListener)添加到 input 中，以监听选择的值的更改（在本例中，当选择文件时）。事件监听器调用我们定制的 `updateImageDisplay()` 函数。
 
 ```js
-input.addEventListener('change', updateImageDisplay);
+input.addEventListener("change", updateImageDisplay);
 ```
 
 每当 `updateImageDisplay()` 函数被调用时，我们：
@@ -343,25 +343,27 @@ input.addEventListener('change', updateImageDisplay);
 
 ```js
 function updateImageDisplay() {
-  while(preview.firstChild) {
+  while (preview.firstChild) {
     preview.removeChild(preview.firstChild);
   }
 
   const curFiles = input.files;
   if (curFiles.length === 0) {
-    const para = document.createElement('p');
-    para.textContent = 'No files currently selected for upload';
+    const para = document.createElement("p");
+    para.textContent = "No files currently selected for upload";
     preview.appendChild(para);
   } else {
-    const list = document.createElement('ol');
+    const list = document.createElement("ol");
     preview.appendChild(list);
 
     for (const file of curFiles) {
-      const listItem = document.createElement('li');
-      const para = document.createElement('p');
+      const listItem = document.createElement("li");
+      const para = document.createElement("p");
       if (validFileType(file)) {
-        para.textContent = `File name ${file.name}, file size ${returnFileSize(file.size)}.`;
-        const image = document.createElement('img');
+        para.textContent = `File name ${file.name}, file size ${returnFileSize(
+          file.size,
+        )}.`;
+        const image = document.createElement("img");
         image.src = URL.createObjectURL(file);
 
         listItem.appendChild(image);
@@ -391,7 +393,7 @@ const fileTypes = [
   "image/svg+xml",
   "image/tiff",
   "image/webp",
-  "image/x-icon"
+  "image/x-icon",
 ];
 
 function validFileType(file) {

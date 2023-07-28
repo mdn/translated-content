@@ -86,7 +86,7 @@ u.spelling {
 
 ```html
 <span class="underline">今日特供</span>
-<br>
+<br />
 胡萝卜鸡丁面
 ```
 

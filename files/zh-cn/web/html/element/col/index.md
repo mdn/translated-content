@@ -60,6 +60,7 @@ slug: Web/HTML/Element/col
 该元素包含一些全局属性 [全局属性](/zh-CN/docs/HTML/Global_attributes).
 
 - `align` {{deprecated_inline}}
+
   - : This enumerated attribute specifies how horizontal alignment of each column cell content will be handled. Possible values are:
 
     - `left`, aligning the content to the left of the cell
@@ -77,21 +78,27 @@ slug: Web/HTML/Element/col
     > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the [`char`](/zh-CN/docs/Web/HTML/Element/col#char) as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
 
 - `bgcolor` {{Non-standard_inline}}
+
   - : 定义列中对应的每个单元格的背景色。其值是 [sRGB](http://www.w3.org/Graphics/Color/sRGB) 定义的 6 位 16 进制代码之一，前缀为 '#'。也可以使用以下 16 个预定义的颜色字符
 
     注意：不要使用这个属性，它是非标准的，并且只实现了 IE 浏览器中的部分版本：{{HTMLElement("col")}} 元素的样式应该使用 [CSS](/zh-CN/docs/CSS). 在{{HTMLElement("td")}}元素上使用 [CSS](/zh-CN/docs/CSS) 的 {{cssxref("background-color")}} 属性即可实现相同效果。
 
 - `char` {{deprecated_inline}}
+
   - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](/zh-CN/docs/Web/HTML/Element/col#align) is not set to `char`, this attribute is ignored.
 
     > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the [`char`](/zh-CN/docs/Web/HTML/Element/col#char), in CSS3, you can use the character set using the [`char`](/zh-CN/docs/Web/HTML/Element/col#char) attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+
 - `charoff` {{deprecated_inline}}
+
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the **char** attribute.
 
     > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard.
+
 - `span`
   - : 该属性值为一个正整数，表示该 \<col> 元素横跨的列数。默认值为 1
 - `valign` {{deprecated_inline}}
+
   - : This attribute specifies the vertical alignment of the text within each cell of the column. Possible values for this attribute are:
 
     - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](http://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.

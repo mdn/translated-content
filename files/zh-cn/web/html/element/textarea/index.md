@@ -23,6 +23,7 @@ slug: Web/HTML/Element/textarea
 这个元素包含了[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
 - `autocapitalize` {{non-standard_inline}}
+
   - : iOS 的非标准属性（运行在 iOS 上的 Safari、Firefox、Chrome 都支持），文本是否自动首字母大写。在 iOS5 和之后的版本上有效。可能的值为：
 
     - `none`: 禁用首字母大写。
@@ -31,11 +32,14 @@ slug: Web/HTML/Element/textarea
     - `characters`: 全部字母大写。
     - `on`: {{deprecated_inline()}} 自 iOS 5 废弃。
     - `off`: {{deprecated_inline()}} 自 iOS 5 废弃。
+
 - `autocomplete`
+
   - : 是否使用浏览器的记忆功能自动填充文本。可能的值有：
 
     - `off`: 不使用浏览器的记忆自动填充，使用者必须输入他们想要输入的所有内容。或者网页提供了自己的自动填充方法。
     - `on`: 浏览器根据用户之前输入的内容或者习惯，在用户输入的时候给出相应输入提示。如果不指明**autocomplete**属性，浏览器会从父级的表单元素上解析是不是开启这个属性。表单元素可以是 `textarea` 元素的父级{{HTMLElement("form")}}或者 `textarea`有跟表单相同的 id（参见下面的 form 属性）。更多请查看{{HTMLElement("form")}}的[`autocomplete`](/zh-CN/docs/Web/HTML/Element/form#autocomplete) 属性。
+
 - `autofocus`
   - : 页面加载完毕之后是否自动给本元素添加焦点。只有跟表格关联的才能使本属性生效。
 - `cols`
@@ -51,9 +55,11 @@ slug: Web/HTML/Element/textarea
 - `name`
   - : 元素的名称。
 - `placeholder`
+
   - : 向用户提示可以在控件中输入的内容。在渲染提示时，占位符文本中的回车符 (\r) 或换行符 (\n) 一定会被作为行断（换行）处理。
 
     > **备注：** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/zh-CN/docs/Web/HTML/Element/input#标签) for a full explanation.
+
 - `readonly`
   - : 不允许用户修改元素内文本。和 `disabled` 属性不同的是，这个能让用户点击和选择元素内的文本。如果在表单里，这个元素的值还是会跟随表单一起提交。
 - `required`
@@ -63,6 +69,7 @@ slug: Web/HTML/Element/textarea
 - `spellcheck`
   - : 该属性设为 true 时，表明该元素会做拼写和语法检查。属性值为 default 时，表明元素有默认行为，可能会基于父元素的 spellcheck 值。属性值为 false 时，表明元素不做拼写和语法检查。
 - `wrap`
+
   - : 指定文本换行的方式。默认为 soft。可能的值为：
 
     - hard: 在文本到达元素最大宽度的时候，浏览器自动插入换行符 (CR+LF) 。比如指定 `cols`值。
@@ -98,7 +105,7 @@ textarea:invalid {
 }
 
 textarea:valid {
-   border: 2px solid lime;
+  border: 2px solid lime;
 }
 ```
 
@@ -117,8 +124,7 @@ textarea:valid {
 The following example show a very simple textarea, with a set numbers of rows and columns and some default content.
 
 ```html
-<textarea name="textarea"
-   rows="10" cols="50">Write something here</textarea>
+<textarea name="textarea" rows="10" cols="50">Write something here</textarea>
 ```
 
 {{ EmbedLiveSample('基本示例','600','150') }}
@@ -128,9 +134,9 @@ The following example show a very simple textarea, with a set numbers of rows an
 This example has a minimum and maximum number of characters — of 10 and 20 respectively. Try it and see.
 
 ```html
-<textarea name="textarea"
-   rows="5" cols="30"
-   minlength="10" maxlength="20">Write something here</textarea>
+<textarea name="textarea" rows="5" cols="30" minlength="10" maxlength="20">
+Write something here</textarea
+>
 ```
 
 {{ EmbedLiveSample('最小和最大长度','600','80') }}
@@ -142,9 +148,11 @@ Note that `minlength` doesn't stop the user from removing characters so that the
 This example has a placeholder set. Notice how it disappears when you start typing into the box.
 
 ```html
-<textarea name="textarea"
-   rows="5" cols="30"
-   placeholder="Comment text."></textarea>
+<textarea
+  name="textarea"
+  rows="5"
+  cols="30"
+  placeholder="Comment text."></textarea>
 ```
 
 {{ EmbedLiveSample('占位符','600','80') }}
@@ -158,12 +166,12 @@ This example shows two `<textarea>`s — one of which is `disabled`, and one of 
 > **备注：** In browsers other than firefox, such as chrome, the `disabled` textarea content may be selectable and copyable.
 
 ```html
-<textarea name="textarea"
-   rows="5" cols="30"
-   disabled>I am a disabled textarea</textarea>
-<textarea name="textarea"
-   rows="5" cols="30"
-   readonly>I am a readonly textarea</textarea>
+<textarea name="textarea" rows="5" cols="30" disabled>
+I am a disabled textarea</textarea
+>
+<textarea name="textarea" rows="5" cols="30" readonly>
+I am a readonly textarea</textarea
+>
 ```
 
 {{ EmbedLiveSample('禁用和只读','600','80') }}

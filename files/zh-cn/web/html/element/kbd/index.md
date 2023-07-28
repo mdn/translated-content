@@ -39,7 +39,10 @@ HTML 键盘输入元素 (**\<kbd>**) 用于表示用户输入，它将产生一�
 ## 示例
 
 ```html
-<p>Type the following in the Run dialog: <kbd>cmd</kbd><br />Then click the OK button.</p>
+<p>
+  Type the following in the Run dialog: <kbd>cmd</kbd><br />Then click the OK
+  button.
+</p>
 
 <p>Save the document by pressing <kbd>Ctrl</kbd> + <kbd>S</kbd></p>
 ```

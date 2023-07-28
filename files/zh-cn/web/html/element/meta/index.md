@@ -138,10 +138,10 @@ slug: Web/HTML/Element/meta
 ## 示例
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 
 <!-- Redirect page after 3 seconds -->
-<meta http-equiv="refresh" content="3;url=https://www.mozilla.org">
+<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
 ```
 
 ## 规范

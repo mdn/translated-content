@@ -60,7 +60,7 @@ Edge 的 `month` 控制器看起来像这样的：
 
 ```html
 <label for="bday-month">你在哪个月出生？</label>
- <input id="bday-month" type="month" name="bday-month" value="2001-06" />
+<input id="bday-month" type="month" name="bday-month" value="2001-06" />
 ```
 
 {{EmbedLiveSample('设置默认值', 600, 60)}}
@@ -80,7 +80,7 @@ Edge 的 `month` 控制器看起来像这样的：
 
 ```js
 const monthControl = document.querySelector('input[type="month"]');
-monthControl.value = '2001-06';
+monthControl.value = "2001-06";
 ```
 
 {{EmbedLiveSample("通过 JavaScript 代码设置 value", 600, 60)}}
@@ -178,9 +178,7 @@ monthControl.value = '2001-06';
 ```html
 <form>
   <div>
-    <label for="month">
-      你愿意在哪个月拜访（6 月至 9 月）？
-    </label>
+    <label for="month"> 你愿意在哪个月拜访（6 月至 9 月）？ </label>
     <input
       id="month"
       type="month"
@@ -257,9 +255,7 @@ input:valid + span::after {
 ```html
 <form>
   <div>
-    <label for="month">
-      愿意在哪个月访问（6 月至 9 月）？
-    </label>
+    <label for="month"> 愿意在哪个月访问（6 月至 9 月）？ </label>
     <input
       id="month"
       type="month"
@@ -396,32 +392,32 @@ input:valid + span::after {
 
 ```js
 // 获取 UI 元素
-const nativePicker = document.querySelector('.nativeDatePicker');
-const fallbackPicker = document.querySelector('.fallbackDatePicker');
-const fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector(".nativeDatePicker");
+const fallbackPicker = document.querySelector(".fallbackDatePicker");
+const fallbackLabel = document.querySelector(".fallbackLabel");
 
-const yearSelect = document.querySelector('#year');
-const monthSelect = document.querySelector('#month');
+const yearSelect = document.querySelector("#year");
+const monthSelect = document.querySelector("#month");
 
 // 最初，隐藏回退元素
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // 测试一个新的 date 输入框是否会回退至 text 输入框
-const test = document.createElement('input');
+const test = document.createElement("input");
 
 try {
-  test.type = 'month';
+  test.type = "month";
 } catch (e) {
   console.log(e.description);
 }
 
 // 如果回退了，运行 if 代码块中的代码
-if (test.type === 'text') {
+if (test.type === "text") {
   // 隐藏原生选择器，显示回退元素
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // 动态生成年份
   // 月份总是相同的，故将它们硬编码
@@ -435,7 +431,7 @@ function populateYears() {
 
   // 在年份 <select> 中，令该年和之前的 100 年可选
   for (let i = 0; i <= 100; i++) {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.textContent = year - i;
     yearSelect.appendChild(option);
   }

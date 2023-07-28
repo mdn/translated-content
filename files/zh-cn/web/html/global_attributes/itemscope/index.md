@@ -20,9 +20,12 @@ slug: Web/HTML/Global_attributes/itemscope
 下面一个例子指定的 `itemscope` 属性，设置了 `itemtype` 为 "http\://schema.org/Movie"，并且有 3 个关联的 `itemprop` 属性（name、director、genre）。
 
 ```html
-<div itemscope itemtype ="http://schema.org/Movie">
+<div itemscope itemtype="http://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
-  <span>Director: <span itemprop="director">James Cameron</span> (born August 16, 1954)</span>
+  <span
+    >Director: <span itemprop="director">James Cameron</span> (born August 16,
+    1954)</span
+  >
   <span itemprop="genre">Science fiction</span>
   <a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer">Trailer</a>
 </div>

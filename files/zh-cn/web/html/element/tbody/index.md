@@ -158,7 +158,11 @@ slug: Web/HTML/Element/tbody
 table {
   border: 2px solid #555;
   border-collapse: collapse;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 ```
 
@@ -193,7 +197,7 @@ thead > tr > th {
 
 ### 多个表格主体
 
-你可以使用多个 `<tbody>` 元素来在一个表格中建立多个部分。每个部分可能包含它自己的表头或一些行；然而，*每个表格里只能有一个 {{HTMLElement("thead")}} 元素！* 由于刚才所述的原因，你需要用 {{HTMLElement("tr")}} 填充 {{HTMLElement("th")}} 元素，在每个 `<tbody>` 内创建标题。让我们来看看这是怎么做到的。
+你可以使用多个 `<tbody>` 元素来在一个表格中建立多个部分。每个部分可能包含它自己的表头或一些行；然而，_每个表格里只能有一个 {{HTMLElement("thead")}} 元素！_ 由于刚才所述的原因，你需要用 {{HTMLElement("tr")}} 填充 {{HTMLElement("th")}} 元素，在每个 `<tbody>` 内创建标题。让我们来看看这是怎么做到的。
 
 让我们以前面的例子为例，在列表中增加一些学生，并更新表格，使其不再在每一行列出每个学生的专业，而是按专业分组，每个专业都有标题行。
 
@@ -267,7 +271,11 @@ thead > tr > th {
 table {
   border: 2px solid #555;
   border-collapse: collapse;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 
 th,

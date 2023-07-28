@@ -51,9 +51,7 @@ slug: Web/HTML/Attributes/disabled
 <fieldset>
   <legend>复选框</legend>
   <p>
-    <label>
-      <input type="checkbox" name="chbox" value="regular" /> 普通
-    </label>
+    <label> <input type="checkbox" name="chbox" value="regular" /> 普通 </label>
   </p>
   <p>
     <label>
@@ -98,9 +96,7 @@ slug: Web/HTML/Attributes/disabled
 <fieldset disabled>
   <legend>禁用的 fieldset</legend>
   <p>
-    <label>
-      名字：<input type="name" name="radio" value="普通" />
-    </label>
+    <label> 名字：<input type="name" name="radio" value="普通" /> </label>
   </p>
   <p>
     <label>数字：<input type="number" /></label>

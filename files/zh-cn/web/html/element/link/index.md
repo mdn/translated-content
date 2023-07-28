@@ -12,7 +12,7 @@ slug: Web/HTML/Element/link
 要链接一个外部的样式表，你需要像这样在你的{{HTMLElement("head")}}中包含一个{{HTMLElement("link")}}元素：
 
 ```html
-<link href="main.css" rel="stylesheet">
+<link href="main.css" rel="stylesheet" />
 ```
 
 在这个简单的例子中，使用了 `href` 属性设置外部资源的路径，并设置 `rel` 属性的值为“`stylesheet`”(样式表)。`rel` 表示“关系 (relationship) ”，它可能是`<link>`元素其中一个关键的特性——属性值表示`<link>`项的链接方式与包含它的文档之间的关系。你将在我们的[链接类型](/zh-CN/docs/Web/HTML/Link_types)中看到很多不同类型的关系。
@@ -20,14 +20,17 @@ slug: Web/HTML/Element/link
 这里有一些你经常遇到的其他类型。例如，这里是一个网站图标的链接：
 
 ```html
-<link rel="icon" href="favicon.ico">
+<link rel="icon" href="favicon.ico" />
 ```
 
 还有一些其他的与图标相关的`rel`值，主要用于表示不同移动平台上特殊的图标类型，例如：
 
 ```html
-<link rel="apple-touch-icon-precomposed" sizes="114x114"
-      href="apple-icon-114.png" type="image/png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="apple-icon-114.png"
+  type="image/png" />
 ```
 
 `sizes`属性表示图标大小，`type`属性包含了链接资源的 MIME 类型。这些属性为浏览器选择最合适的图标提供了有用的提示。
@@ -35,15 +38,22 @@ slug: Web/HTML/Element/link
 你也可以提供一个媒体类型，或者在`media`属性内部进行查询；这种资源将只在满足媒体条件的情况下才被加载进来。例如：
 
 ```html
-<link href="print.css" rel="stylesheet" media="print">
-<link href="mobile.css" rel="stylesheet" media="screen and (max-width: 600px)">
+<link href="print.css" rel="stylesheet" media="print" />
+<link
+  href="mobile.css"
+  rel="stylesheet"
+  media="screen and (max-width: 600px)" />
 ```
 
 `<link>`也加入了一些新的有意思的性能和安全特性。举例如下：
 
 ```html
-<link rel="preload" href="myFont.woff2" as="font"
-      type="font/woff2" crossorigin="anonymous">
+<link
+  rel="preload"
+  href="myFont.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous" />
 ```
 
 将`rel`设定为`preload`，表示浏览器应该预加载该资源 (更多细节见[使用 rel="preload"预加载内容](/zh-CN/docs/Web/HTML/Preloading_content)) 。`as`属性表示获取特定的内容类。`crossorigin`属性表示该资源是否应该使用一个{{Glossary("CORS")}}请求来获取。
@@ -61,22 +71,23 @@ slug: Web/HTML/Element/link
 这个元素可以使用 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes).
 
 - `as`
+
   - : 该属性仅在`<link>`元素设置了 `rel="preload"` 或者 `rel="prefetch"` 时才能使用。它规定了`<link>元素`加载的内容的类型，对于内容的优先级、请求匹配、正确的[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)的选择以及正确的 {{httpheader("Accept")}}请求头的设置，这个属性是必需的。
 
-    | 值 | 应用于 |
+    | 值       | 应用于                                                                                                           |
     | -------- | ---------------------------------------------------------------------------------------------------------------- |
-    | audio | `<audio>` 元素 |
-    | document | `<iframe>` 和 `<frame>` 元素 |
-    | embed | `<embed>` 元素 |
-    | fetch | fetch, XHRThis value also requires `<link>` to contain the crossorigin attribute. |
-    | font | CSS @font-face |
-    | image | `<img>` and `<picture>` elements with srcset or imageset attributes, SVG `<image>` elements, CSS `*-image` rules |
-    | object | `<object>` elements |
-    | script | `<script>` elements, Worker `importScripts` |
-    | style | `<link rel=stylesheet>` elements, CSS `@import` |
-    | track | `<track>` elements |
-    | video | `<video>` elements |
-    | worker | Worker, SharedWorker |
+    | audio    | `<audio>` 元素                                                                                                   |
+    | document | `<iframe>` 和 `<frame>` 元素                                                                                     |
+    | embed    | `<embed>` 元素                                                                                                   |
+    | fetch    | fetch, XHRThis value also requires `<link>` to contain the crossorigin attribute.                                |
+    | font     | CSS @font-face                                                                                                   |
+    | image    | `<img>` and `<picture>` elements with srcset or imageset attributes, SVG `<image>` elements, CSS `*-image` rules |
+    | object   | `<object>` elements                                                                                              |
+    | script   | `<script>` elements, Worker `importScripts`                                                                      |
+    | style    | `<link rel=stylesheet>` elements, CSS `@import`                                                                  |
+    | track    | `<track>` elements                                                                                               |
+    | video    | `<video>` elements                                                                                               |
+    | worker   | Worker, SharedWorker                                                                                             |
 
 - `crossorigin`
   - : 此枚举属性指定在加载相关资源时是否必须使用 CORS. [启用 CORS 的图片](/zh-CN/docs/Web/HTML/CORS_Enabled_Image) 可以在 {{HTMLElement("canvas")}} 元素中重复使用，并避免其被*污染*. 可取的值如下：
@@ -91,9 +102,11 @@ slug: Web/HTML/Element/link
 - `hreflang`
   - : 此属性指明了被链接资源的语言。其意义仅供参考。可取的值参见 [BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt)。仅当设置了 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性时才应设置该属性。
 - `importance` {{Experimental_Inline}}
+
   - : 指示资源的相对重要性。优先级提示使用以下值委托：**`auto`**: 表示**没有偏好**。浏览器可以使用其自己的启发式方法来确定资源的优先级。**`high`**: 向浏览器指示资源具有高优先级。**`low`**: 向浏览器指示资源的优先级较低。
 
     > **备注：** 只有存在 rel=“preload”或 rel=“prefetch”时，importance 属性才能用于\<link>元素。
+
 - `integrity` {{experimental_inline}}
   - : 包含行内元数据，它是一个你用浏览器获取的资源文件的哈希值，以 base64 编码的方式加的密，这样用户能用它来验证一个获取到的资源，在传送时未被非法篡改，详情查看[Subresource Integrity](/zh-CN/docs/Web/Security/Subresource_Integrity)。
 - `media`
@@ -110,6 +123,7 @@ slug: Web/HTML/Element/link
 - `rel`
   - : 此属性命名链接文档与当前文档的关系。该属性必须是[链接类型值](/zh-CN/docs/Web/HTML/Link_types)的用空格分隔的列表。
 - `sizes`
+
   - : 这个属性定义了包含相应资源的可视化媒体中的 icons 的大小。它只有在[`rel`](/zh-CN/docs/Web/HTML/Element/link#rel)包含 icon 的[link 类型值](/zh-CN/docs/Web/HTML/Link_types)。它可能有如下的规则。
 
     - `any` 表示图标可以按矢量格式缩放到任意大小，例如 `image/svg+xml`。
@@ -136,10 +150,13 @@ slug: Web/HTML/Element/link
 ### 已淘汰的属性
 
 - `charset`{{Deprecated_Inline}}
+
   - : 此属性定义链接资源的字符编码。该值为{{rfc(2045)}}中定义的字符集的空格和/或逗号分隔列表。缺省值为 iso-8859-1。
 
     > **备注：** 该属性已淘汰且禁止使用**。要**实现相同效果，可在外链资源中使用 `Content-Type` HTTP header。
+
 - `rev`{{Deprecated_Inline}}
+
   - : 此属性的值显示了 [`href`](/zh-CN/docs/Web/HTML/Element/link#href) 属性所定义的当前文档与链接文档的关系。因此，该属性定义了与 rel 属性的值相比的反向关系。该属性的[Link type value](/zh-CN/docs/Web/HTML/Link_types)类似于[`rel`](/zh-CN/docs/Web/HTML/Element/link#rel)的可能值。
 
     > **备注：** WHATWG HTML 生活标准（MDN 将其视为规范的规范）认为该属性已过时。但是，值得注意的是，rev 在 W3C 规范中并未过时。就是说，鉴于不确定性，依靠 rev 是不明智的。相反，您应该使用具有相反链接类型值的[`rel`](/zh-CN/docs/Web/HTML/Element/link#rel)属性。例如，要建立反向链接，请指定作者。而且，即使许多站点都以这种方式滥用此属性，该属性也不代表“修订”，并且不得与版本号一起使用。
@@ -151,7 +168,7 @@ slug: Web/HTML/Element/link
 用下面的语法来引入一个 css 文件：
 
 ```html
-<link href="style.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet" />
 ```
 
 ### 提供可替换的样式表
@@ -161,9 +178,9 @@ slug: Web/HTML/Element/link
 用户可以在浏览器菜单 "查看>页面样式" 来选择网页的样式。通过这一办法，可以用多种样式浏览网页。
 
 ```html
-<link href="default.css" rel="stylesheet" title="Default Style">
-<link href="fancy.css" rel="alternate stylesheet" title="Fancy">
-<link href="basic.css" rel="alternate stylesheet" title="Basic">
+<link href="default.css" rel="stylesheet" title="Default Style" />
+<link href="fancy.css" rel="alternate stylesheet" title="Fancy" />
+<link href="basic.css" rel="alternate stylesheet" title="Basic" />
 ```
 
 ### 提供用于不同用法上下文的图标
@@ -172,15 +189,21 @@ slug: Web/HTML/Element/link
 
 ```html
 <!-- third-generation iPad with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon144.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="favicon144.png" />
 <!-- iPhone with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="favicon114.png" />
 <!-- first- and second-generation iPad: -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
 <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link rel="apple-touch-icon-precomposed" href="favicon57.png">
+<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
 <!-- basic favicon -->
-<link rel="icon" href="favicon32.png">
+<link rel="icon" href="favicon32.png" />
 ```
 
 ### 通过媒体查询有条件地加载资源
@@ -188,10 +211,16 @@ slug: Web/HTML/Element/link
 您可以在`media`属性中提供媒体类型或查询; 然后，只有在媒体条件为 true 时，才会加载此资源。例如：
 
 ```html
-<link href="print.css" rel="stylesheet" media="print">
-<link href="mobile.css" rel="stylesheet" media="all">
-<link href="desktop.css" rel="stylesheet" media="screen and (min-width: 600px)">
-<link href="highres.css" rel="stylesheet" media="screen and (min-resolution: 300dpi)">
+<link href="print.css" rel="stylesheet" media="print" />
+<link href="mobile.css" rel="stylesheet" media="all" />
+<link
+  href="desktop.css"
+  rel="stylesheet"
+  media="screen and (min-width: 600px)" />
+<link
+  href="highres.css"
+  rel="stylesheet"
+  media="screen and (min-resolution: 300dpi)" />
 ```
 
 ### 样式表加载事件
@@ -200,16 +229,20 @@ slug: Web/HTML/Element/link
 
 ```html
 <script>
-function sheetLoaded() {
-  // Do something interesting; the sheet has been loaded
-}
+  function sheetLoaded() {
+    // Do something interesting; the sheet has been loaded
+  }
 
-function sheetError() {
-  alert("An error occurred loading the stylesheet!");
-}
+  function sheetError() {
+    alert("An error occurred loading the stylesheet!");
+  }
 </script>
 
-<link rel="stylesheet" href="mystylesheet.css" onload="sheetLoaded()" onerror="sheetError()">
+<link
+  rel="stylesheet"
+  href="mystylesheet.css"
+  onload="sheetLoaded()"
+  onerror="sheetError()" />
 ```
 
 > **备注：** 当样式表以及它引用的部分全部加载完毕，load 事件就会在样式表应用到内容之前立即触发。
