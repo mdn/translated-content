@@ -148,7 +148,7 @@ if (startPlayPromise !== undefined) {
 
 如果 `play()` 返回的 Promise 已正确解决，则 `then()` 子句将运行，并且可以在自动播放开始时开始执行任何需要执行的操作。
 
-## 使用 Web Audio API自动播放
+## 使用 Web Audio API 自动播放
 
 在 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 中，网站或应用程序可以使用链接到 {{domxref("AudioContext")}} 的源节点上的 `start()` 方法开始播放音频。在处理用户输入事件的上下文之外执行此操作受自动播放规则的约束。.
 
