@@ -7,11 +7,11 @@ slug: Web/HTTP/Headers/Accept-Ranges
 
 服务器使用 HTTP 响应头 **`Accept-Ranges`** 标识自身支持范围请求 (partial requests)。字段的具体值用于定义范围请求的单位。
 
-当浏览器发现` Accept-Ranges `头时，可以尝试*继续*中断了的下载，而不是重新开始。
+当浏览器发现`Accept-Ranges`头时，可以尝试*继续*中断了的下载，而不是重新开始。
 
-| 头部类型                                                               | {{Glossary("Response header")}} |
-| ---------------------------------------------------------------------- | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}}（禁止修改的 HTTP 头） | 否                                       |
+| 头部类型                                                    | {{Glossary("Response header")}} |
+| ----------------------------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}}（禁止修改的 HTTP 头） | 否                              |
 
 ## 语法
 
