@@ -25,7 +25,7 @@ padEnd(targetLength, padString)
 
 ### 返回值
 
-在当前 `str` 末尾填充 `padString` 直到达到给定的 `targetLentgth` 所形成的 {{jsxref("String")}}。
+在当前 `str` 末尾填充 `padString` 直到达到给定的 `targetLength` 所形成的 {{jsxref("String")}}。
 
 ## 示例
 
