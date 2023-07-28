@@ -10,8 +10,8 @@ slug: Web/API/Event/Event
 ## 構文
 
 ```js
-new Event(type)
-new Event(type, options)
+new Event(type);
+new Event(type, options);
 ```
 
 ### 値
@@ -36,7 +36,7 @@ new Event(type, options)
 ```js
 // create a look event that bubbles up and cannot be canceled
 
-const evt = new Event("look", {"bubbles":true, "cancelable":false});
+const evt = new Event("look", { bubbles: true, cancelable: false });
 document.dispatchEvent(evt);
 
 // event can be dispatched from any element, not only the document

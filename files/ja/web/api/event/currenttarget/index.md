@@ -16,26 +16,26 @@ slug: Web/API/Event/currentTarget
 `Event.currentTarget` は、複数の要素に同じイベントハンドラーを割り当てるときに使用すると面白いです。
 
 ```js
-function hide(e){
-  e.currentTarget.style.visibility = 'hidden';
+function hide(e) {
+  e.currentTarget.style.visibility = "hidden";
   console.log(e.currentTarget);
   // この関数がイベントハンドラとして使用されるとき： this === e.currentTarget
 }
 
-var ps = document.getElementsByTagName('p');
+var ps = document.getElementsByTagName("p");
 
-for(var i = 0; i < ps.length; i++){
+for (var i = 0; i < ps.length; i++) {
   // console: print the clicked <p> element
-  ps[i].addEventListener('click', hide, false);
+  ps[i].addEventListener("click", hide, false);
 }
 // console: print <body>
-document.body.addEventListener('click', hide, false);
+document.body.addEventListener("click", hide, false);
 
 // 周辺をクリックすると段落が消えます。
 ```
 
 > **メモ:** イベント処理中**だけ** `event.currentTarget` の値は利用可能です。
-> もし {{DOMxRef("console.log()")}} で `event` オブジェクトを変数に格納し、コンソールで `currentTarget` キーを探すと、その値は `null` となります。<br/>
+> もし {{DOMxRef("console.log()")}} で `event` オブジェクトを変数に格納し、コンソールで `currentTarget` キーを探すと、その値は `null` となります。
 > `console.log(event.currentTarget)` を使ってコンソールで表示するか、 [`debugger`](/ja/docs/Web/JavaScript/Reference/Statements/debugger) 文を使ってコードの実行を一時停止し、 `event.currentTarget` の値を表示させる必要があります。
 
 ## 仕様書

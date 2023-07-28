@@ -25,7 +25,7 @@ _親の {{DOMxRef("FileSystemHandle")}} からメソッドを継承します。_
   - : ハンドルが表すエントリーのディスク上での状態を表す {{domxref('File')}} オブジェクトで解決する {{jsxref('Promise')}} を返します。
 - {{domxref('FileSystemFileHandle.createSyncAccessHandle', 'createSyncAccessHandle()')}}
   - : ファイルを同期式で読み書きすることができる {{domxref('FileSystemSyncAccessHandle')}} オブジェクトで解決する {{jsxref('Promise')}} を返します。
-      このメソッドは同期式であるという性質によりパフォーマンス上有利ですが、それ用の [Web Workers](/ja/docs/Web/API/Web_Workers_API) の中でしか用いることができません。
+    このメソッドは同期式であるという性質によりパフォーマンス上有利ですが、それ用の [Web Workers](/ja/docs/Web/API/Web_Workers_API) の中でしか用いることができません。
 - {{domxref('FileSystemFileHandle.createWritable', 'createWritable()')}}
   - : ファイルに書き込むことができる新しく作成された {{domxref('FileSystemWritableFileStream')}} オブジェクトで解決する {{jsxref('Promise')}} を返します。
 

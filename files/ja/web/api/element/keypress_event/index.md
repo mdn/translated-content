@@ -78,7 +78,9 @@ _このインターフェイスには親である {{domxref("UIEvent")}} や {{d
 
 ```html
 <div>
-  <label for="sample">この入力欄にフォーカスを当てて、何か入力してください。</label>
+  <label for="sample"
+    >この入力欄にフォーカスを当てて、何か入力してください。</label
+  >
   <input type="text" name="text" id="sample" />
 </div>
 <p id="log"></p>

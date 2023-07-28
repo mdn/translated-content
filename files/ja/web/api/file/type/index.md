@@ -20,7 +20,7 @@ var name = file.type;
 ## 例
 
 ```html
-<input type="file" multiple onchange="showType(this)">
+<input type="file" multiple onchange="showType(this)" />
 ```
 
 ```js

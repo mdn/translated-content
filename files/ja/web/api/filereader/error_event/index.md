@@ -1,5 +1,5 @@
 ---
-title: 'FileReader: error イベント'
+title: "FileReader: error イベント"
 slug: Web/API/FileReader/error_event
 l10n:
   sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('error', (event) => { });
+addEventListener("error", (event) => {});
 
-onerror = (event) => { };
+onerror = (event) => {};
 ```
 
 ## イベント型
@@ -45,22 +45,21 @@ const fileInput = document.querySelector('input[type="file"]');
 const reader = new FileReader();
 
 function handleSelected(e) {
-    const selectedFile = fileInput.files[0];
-    if (selectedFile) {
+  const selectedFile = fileInput.files[0];
+  if (selectedFile) {
+    reader.addEventListener("error", () => {
+      console.error(`Error occurred reading file: ${selectedFile.name}`);
+    });
 
-        reader.addEventListener('error', () => {
-            console.error(`Error occurred reading file: ${selectedFile.name}`);
-        });
+    reader.addEventListener("load", () => {
+      console.error(`File: ${selectedFile.name} read successfully`);
+    });
 
-        reader.addEventListener('load', () => {
-            console.error(`File: ${selectedFile.name} read successfully`);
-        });
-
-        reader.readAsDataURL(selectedFile);
-    }
+    reader.readAsDataURL(selectedFile);
+  }
 }
 
-fileInput.addEventListener('change', handleSelected);
+fileInput.addEventListener("change", handleSelected);
 ```
 
 ## 仕様書

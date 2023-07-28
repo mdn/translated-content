@@ -28,13 +28,13 @@ close()
 ## 例
 
 ```js
-const button = document.querySelector('button');
-const evtSource = new EventSource('sse.php');
+const button = document.querySelector("button");
+const evtSource = new EventSource("sse.php");
 
 button.onclick = () => {
-  console.log('Connection closed');
+  console.log("Connection closed");
   evtSource.close();
-}
+};
 ```
 
 > **メモ:** 完全な例は GitHub で見られます。 [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/main/server-sent-events) を参照してください。

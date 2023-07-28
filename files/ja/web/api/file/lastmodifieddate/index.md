@@ -10,7 +10,7 @@ slug: Web/API/File/lastModifiedDate
 ## 構文
 
 ```js
-var time = instanceOfFile.lastModifiedDate
+var time = instanceOfFile.lastModifiedDate;
 ```
 
 ### 値

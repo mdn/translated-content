@@ -36,14 +36,10 @@ waitUntil(promise)
 サービスワーカーの `install` イベント内で `waitUntil()` を使用します。
 
 ```js
-addEventListener('install', (event) => {
+addEventListener("install", (event) => {
   const preCache = async () => {
-    const cache = await caches.open('static-v1');
-    return cache.addAll([
-      '/',
-      '/about/',
-      '/static/styles.css'
-    ]);
+    const cache = await caches.open("static-v1");
+    return cache.addAll(["/", "/about/", "/static/styles.css"]);
   };
   event.waitUntil(preCache());
 });

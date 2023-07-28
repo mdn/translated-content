@@ -39,14 +39,18 @@ readAsDataURL(blob)
 
 ```js
 function previewFile() {
-  const preview = document.querySelector('img');
-  const file = document.querySelector('input[type=file]').files[0];
+  const preview = document.querySelector("img");
+  const file = document.querySelector("input[type=file]").files[0];
   const reader = new FileReader();
 
-  reader.addEventListener("load", () => {
-    // 画像ファイルを base64 文字列に変換します
-    preview.src = reader.result;
-  }, false);
+  reader.addEventListener(
+    "load",
+    () => {
+      // 画像ファイルを base64 文字列に変換します
+      preview.src = reader.result;
+    },
+    false,
+  );
 
   if (file) {
     reader.readAsDataURL(file);
@@ -71,21 +75,25 @@ function previewFile() {
 
 ```js
 function previewFiles() {
-  const preview = document.querySelector('#preview');
-  const files = document.querySelector('input[type=file]').files;
+  const preview = document.querySelector("#preview");
+  const files = document.querySelector("input[type=file]").files;
 
   function readAndPreview(file) {
     // `file.name` が拡張子の基準と一致していることを確認します。
     if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
       const reader = new FileReader();
 
-      reader.addEventListener("load", () => {
-        const image = new Image();
-        image.height = 100;
-        image.title = file.name;
-        image.src = this.result;
-        preview.appendChild(image);
-      }, false);
+      reader.addEventListener(
+        "load",
+        () => {
+          const image = new Image();
+          image.height = 100;
+          image.title = file.name;
+          image.src = this.result;
+          preview.appendChild(image);
+        },
+        false,
+      );
 
       reader.readAsDataURL(file);
     }

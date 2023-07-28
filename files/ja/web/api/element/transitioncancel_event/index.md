@@ -1,5 +1,5 @@
 ---
-title: 'Document: transitioncancel イベント'
+title: "Document: transitioncancel イベント"
 slug: Web/API/Element/transitioncancel_event
 original_slug: Web/API/Document/transitioncancel_event
 ---
@@ -40,8 +40,8 @@ original_slug: Web/API/Document/transitioncancel_event
 このコードは、リスナーに `transitioncancel` イベントを追加します。
 
 ```js
-document.addEventListener('transitioncancel', () => {
-  console.log('Transition canceled');
+document.addEventListener("transitioncancel", () => {
+  console.log("Transition canceled");
 });
 ```
 
@@ -49,7 +49,7 @@ document.addEventListener('transitioncancel', () => {
 
 ```js
 document.ontransitioncancel = () => {
-  console.log('Transition canceled');
+  console.log("Transition canceled");
 };
 ```
 

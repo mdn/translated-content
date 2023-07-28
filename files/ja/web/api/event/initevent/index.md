@@ -37,16 +37,20 @@ event.initEvent(type, bubbles, cancelable);
 
 ```js
 // イベントを作成
-const event = document.createEvent('Event');
+const event = document.createEvent("Event");
 
 // バブルアップしキャンセルできないクリックイベントを
 // 作成
-event.initEvent('click', true, false);
+event.initEvent("click", true, false);
 
 // イベントを待ち受けする
-elem.addEventListener('click', function (e) {
-  // e.target matches elem
-}, false);
+elem.addEventListener(
+  "click",
+  function (e) {
+    // e.target matches elem
+  },
+  false,
+);
 
 elem.dispatchEvent(event);
 ```

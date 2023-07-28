@@ -115,6 +115,7 @@ slug: Web/API/Event
 ## メソッド
 
 - {{domxref("Event.composedPath()")}}
+
   - : （リスナーが呼び出されるオブジェクトへの）イベントのパスを返します。これはシャドウルートの {{domxref("ShadowRoot.mode")}} が閉じた状態で作成されたシャドウツリーのノードは含みません。
 
 - {{domxref("Event.preventDefault()")}}

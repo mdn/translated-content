@@ -26,10 +26,15 @@ event.preventDefault();
 #### JavaScript
 
 ```js
-document.querySelector("#id-checkbox").addEventListener("click", function(event) {
-         document.getElementById("output-box").innerHTML += "ごめん！ <code>preventDefault()</code> がチェックさせません！<br>";
-         event.preventDefault();
-}, false);
+document.querySelector("#id-checkbox").addEventListener(
+  "click",
+  function (event) {
+    document.getElementById("output-box").innerHTML +=
+      "ごめん！ <code>preventDefault()</code> がチェックさせません！<br>";
+    event.preventDefault();
+  },
+  false,
+);
 ```
 
 #### HTML
@@ -39,7 +44,7 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 
 <form>
   <label for="id-checkbox">チェックボックス:</label>
-  <input type="checkbox" id="id-checkbox"/>
+  <input type="checkbox" id="id-checkbox" />
 </form>
 
 <div id="output-box"></div>
@@ -62,7 +67,7 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
   <p>名前を小文字のみで入力してください。</p>
 
   <form>
-    <input type="text" id="my-textbox">
+    <input type="text" id="my-textbox" />
   </form>
 </div>
 ```
@@ -87,8 +92,8 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 そして、こちらがその仕事を行う JavaScript コードです。まず、{{domxref("Element/keypress_event", "keypress")}} イベントを待ち受けします。
 
 ```js
-var myTextbox = document.getElementById('my-textbox');
-myTextbox.addEventListener('keypress', checkName, false);
+var myTextbox = document.getElementById("my-textbox");
+myTextbox.addEventListener("keypress", checkName, false);
 ```
 
 `checkName()` 関数は押されたキーを調べ、それを許可するかどうかを決定します。
@@ -100,8 +105,11 @@ function checkName(evt) {
     if (charCode < 97 || charCode > 122) {
       evt.preventDefault();
       displayWarning(
-        "小文字のみを使用してください。"
-        + "\n" + "charCode: " + charCode + "\n"
+        "小文字のみを使用してください。" +
+          "\n" +
+          "charCode: " +
+          charCode +
+          "\n",
       );
     }
   }
@@ -125,10 +133,10 @@ function displayWarning(msg) {
     myTextbox.parentNode.insertBefore(warningBox, myTextbox.nextSibling);
   }
 
-  warningTimeout = window.setTimeout(function() {
-      warningBox.parentNode.removeChild(warningBox);
-      warningTimeout = -1;
-    }, 2000);
+  warningTimeout = window.setTimeout(function () {
+    warningBox.parentNode.removeChild(warningBox);
+    warningTimeout = -1;
+  }, 2000);
 }
 ```
 

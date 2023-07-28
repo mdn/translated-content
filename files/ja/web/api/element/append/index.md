@@ -57,7 +57,7 @@ console.log(div.childNodes); // NodeList [ <p> ]
 let div = document.createElement("div");
 div.append("Some text");
 
-console.log(div.textContent) // "Some text"
+console.log(div.textContent); // "Some text"
 ```
 
 ### 要素とテキストの追加

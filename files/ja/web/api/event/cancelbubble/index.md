@@ -16,10 +16,10 @@ slug: Web/API/Event/cancelBubble
 ## 例
 
 ```js
-elem.onclick = function(event) {
+elem.onclick = function (event) {
   // Do cool things here
   event.cancelBubble = true;
-}
+};
 ```
 
 ## 仕様書

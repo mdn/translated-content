@@ -1,5 +1,5 @@
 ---
-title: 'Document: transitionend イベント'
+title: "Document: transitionend イベント"
 slug: Web/API/Element/transitionend_event
 original_slug: Web/API/Document/transitionend_event
 ---
@@ -40,8 +40,8 @@ original_slug: Web/API/Document/transitionend_event
 このコードはリスナーに `transitionend` イベントを追加します。
 
 ```js
-document.addEventListener('transitionend', () => {
-  console.log('Transition ended');
+document.addEventListener("transitionend", () => {
+  console.log("Transition ended");
 });
 ```
 
@@ -49,7 +49,7 @@ document.addEventListener('transitionend', () => {
 
 ```js
 document.ontransitionend = () => {
-  console.log('Transition ended');
+  console.log("Transition ended");
 };
 ```
 

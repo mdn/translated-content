@@ -37,13 +37,12 @@ _祖先である {{domxref("Credential")}} からプロパティを継承して�
 var cred = new FederatedCredential({
   id: id,
   name: name,
-  provider: 'https://account.google.com',
-  iconURL: iconUrl
+  provider: "https://account.google.com",
+  iconURL: iconUrl,
 });
 
 // 格納
-navigator.credentials.store(cred)
-  .then(function() {
+navigator.credentials.store(cred).then(function () {
   // 他に何かをする
 });
 ```

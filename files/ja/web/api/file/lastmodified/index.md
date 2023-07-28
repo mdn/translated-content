@@ -22,12 +22,12 @@ UNIX 元気からのミリ秒数を表す数値です。
 ### file 入力欄からの読み込み
 
 ```html
-<input type="file" multiple id="fileInput">
+<input type="file" multiple id="fileInput" />
 ```
 
 ```js
-const fileInput = document.querySelector('#fileInput');
-fileInput.addEventListener('change', (event) => {
+const fileInput = document.querySelector("#fileInput");
+fileInput.addEventListener("change", (event) => {
   // filesはFileList型オブジェクト (NodeListと似ている)
   const files = event.target.files;
 
@@ -47,12 +47,12 @@ fileInput.addEventListener('change', (event) => {
 ファイルが動的に生成された場合、最終更新日時は {{domxref("File.File()", "new File()")}} コンストラクター関数で指定することができます。ファイルが見つからない場合、 `lastModified` は `File` オブジェクトの作成時に {{jsxref("Date.now()")}} から現在の時刻を継承します。
 
 ```js
-const fileWithDate = new File([], 'file.bin', {
+const fileWithDate = new File([], "file.bin", {
   lastModified: new Date(2017, 1, 1),
 });
 console.log(fileWithDate.lastModified); //returns 1485903600000
 
-const fileWithoutDate = new File([], 'file.bin');
+const fileWithoutDate = new File([], "file.bin");
 console.log(fileWithoutDate.lastModified); //returns current time
 ```
 

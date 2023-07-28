@@ -19,7 +19,8 @@ slug: Web/API/Event/timeStamp
 
 ```html
 <p>
-  この iframe にフォーカスを設定していずれかのキーを押下すると、 keypress イベントの現在のタイムスタンプを取得します。
+  この iframe にフォーカスを設定していずれかのキーを押下すると、 keypress
+  イベントの現在のタイムスタンプを取得します。
 </p>
 <p>timeStamp: <span id="time">-</span></p>
 ```

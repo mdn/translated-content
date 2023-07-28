@@ -54,7 +54,7 @@ console.log(div.outerHTML);
 `replaceWith()` メソッドは `with` 文でのスコープに対応していません。詳細は {{jsxref("Symbol.unscopables")}} をご覧ください。
 
 ```js
-with(node) {
+with (node) {
   replaceWith("foo");
 }
 // ReferenceError: replaceWith is not defined

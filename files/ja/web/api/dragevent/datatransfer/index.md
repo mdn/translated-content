@@ -19,13 +19,17 @@ slug: Web/API/DragEvent/dataTransfer
 
 ```js
 function processData(d) {
-   // データを処理...
+  // データを処理...
 }
 
-dragTarget.addEventListener("dragend", function(ev) {
-   // ドラッグ＆ドロップのデータ処理を呼び出す
-   if (ev.dataTransfer !== null) processData(ev.dataTransfer);
- }, false);
+dragTarget.addEventListener(
+  "dragend",
+  function (ev) {
+    // ドラッグ＆ドロップのデータ処理を呼び出す
+    if (ev.dataTransfer !== null) processData(ev.dataTransfer);
+  },
+  false,
+);
 ```
 
 ## 仕様書

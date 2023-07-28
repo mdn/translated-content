@@ -1,5 +1,5 @@
 ---
-title: 'Document: transitionrun イベント'
+title: "Document: transitionrun イベント"
 slug: Web/API/Element/transitionrun_event
 original_slug: Web/API/Document/transitionrun_event
 ---
@@ -47,7 +47,7 @@ document.addEventListener('transitionrun', () => {
 
 ```js
 document.ontransitionrun = () => {
-  console.log('Transition started running');
+  console.log("Transition started running");
 };
 ```
 

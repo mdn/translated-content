@@ -1,5 +1,5 @@
 ---
-title: 'EventSource: error イベント'
+title: "EventSource: error イベント"
 slug: Web/API/EventSource/error_event
 original_slug: Web/API/EventSource/onerror
 l10n:
@@ -17,9 +17,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('error', (event) => { });
+addEventListener("error", (event) => {});
 
-onerror = (event) => { };
+onerror = (event) => {};
 ```
 
 ## イベント型
@@ -29,10 +29,10 @@ onerror = (event) => { };
 ## 例
 
 ```js
-const evtSource = new EventSource('sse.php');
+const evtSource = new EventSource("sse.php");
 
 // addEventListener 版
-evtSource.addEventListener('error', (e) => {
+evtSource.addEventListener("error", (e) => {
   console.log("An error occurred while attempting to connect.");
 });
 

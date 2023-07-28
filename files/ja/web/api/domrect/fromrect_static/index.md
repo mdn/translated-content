@@ -11,8 +11,8 @@ original_slug: Web/API/DOMRect/fromRect
 ## 構文
 
 ```js
-fromRect()
-fromRect(rectangle)
+fromRect();
+fromRect(rectangle);
 ```
 
 ### 引数

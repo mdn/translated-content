@@ -10,7 +10,7 @@ slug: Web/API/File/webkitRelativePath
 ## 構文
 
 ```js
-relativePath = File.webkitRelativePath
+relativePath = File.webkitRelativePath;
 ```
 
 ### 値
@@ -31,16 +31,20 @@ relativePath = File.webkitRelativePath
 ### JavaScript コンテンツ
 
 ```js
-document.getElementById("filepicker").addEventListener("change", function(event) {
-  let output = document.getElementById("listing");
-  let files = event.target.files;
+document.getElementById("filepicker").addEventListener(
+  "change",
+  function (event) {
+    let output = document.getElementById("listing");
+    let files = event.target.files;
 
-  for (let i=0; i<files.length; i++) {
-    let item = document.createElement("li");
-    item.innerHTML = files[i].webkitRelativePath;
-    output.appendChild(item);
-  };
-}, false);
+    for (let i = 0; i < files.length; i++) {
+      let item = document.createElement("li");
+      item.innerHTML = files[i].webkitRelativePath;
+      output.appendChild(item);
+    }
+  },
+  false,
+);
 ```
 
 ### 結果

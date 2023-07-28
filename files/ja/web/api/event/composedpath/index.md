@@ -26,32 +26,34 @@ var composed = Event.composedPath();
 次の例は、 [https://mdn.github.io/web-components-examples/composed-composed-path/](https://mdn.github.io/web-components-examples/composed-composed-path/) を試すもので、 `<open-shadow>` と `<closed-shadow>` という 2 つの些細なカスタム要素を定義しています。どちらも text 属性の内容を `<p>` 要素のテキストコンテンツとして、要素のシャドウ DOM に挿入します。両者の唯一の違いは、シャドウルートがそれぞれ `open` と `closed` に設定された状態で取り付けられることです。
 
 ```js
-customElements.define('open-shadow',
+customElements.define(
+  "open-shadow",
   class extends HTMLElement {
     constructor() {
       super();
 
-      const pElem = document.createElement('p');
-      pElem.textContent = this.getAttribute('text');
+      const pElem = document.createElement("p");
+      pElem.textContent = this.getAttribute("text");
 
-      const shadowRoot = this.attachShadow({mode: 'open'});
+      const shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(pElem);
     }
-  }
+  },
 );
 
-customElements.define('closed-shadow',
+customElements.define(
+  "closed-shadow",
   class extends HTMLElement {
     constructor() {
       super();
 
-      const pElem = document.createElement('p');
-      pElem.textContent = this.getAttribute('text');
+      const pElem = document.createElement("p");
+      pElem.textContent = this.getAttribute("text");
 
-      const shadowRoot = this.attachShadow({mode: 'closed'});
+      const shadowRoot = this.attachShadow({ mode: "closed" });
       shadowRoot.appendChild(pElem);
     }
-  }
+  },
 );
 ```
 
@@ -65,7 +67,7 @@ customElements.define('closed-shadow',
 それから click イベントリスナーを `<html>` 要素に設定します。
 
 ```js
-document.querySelector('html').addEventListener('click',function(e) {
+document.querySelector("html").addEventListener("click", function (e) {
   console.log(e.composed);
   console.log(e.composedPath());
 });
