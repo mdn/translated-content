@@ -1,5 +1,5 @@
 ---
-title: ':disabled'
+title: ":disabled"
 slug: Web/CSS/:disabled
 ---
 
@@ -56,10 +56,14 @@ input[type="text"]:disabled {
 
 ```js
 // 等待页面加载完毕
-document.addEventListener('DOMContentLoaded', function () {
-  // 将“change”事件监听器附加到复选框
-  document.getElementById('billing-checkbox').onchange = toggleBilling;
-}, false);
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+    // 将“change”事件监听器附加到复选框
+    document.getElementById("billing-checkbox").onchange = toggleBilling;
+  },
+  false,
+);
 
 function toggleBilling() {
   // 选择 billing 文本字段

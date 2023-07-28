@@ -1,5 +1,5 @@
 ---
-title: ':fullscreen'
+title: ":fullscreen"
 slug: Web/CSS/:fullscreen
 ---
 
@@ -31,7 +31,8 @@ slug: Web/CSS/:fullscreen
 <h1>MDN Web 文档演示：:fullscreen 伪类</h1>
 
 <p>
-  此演示使用 <code>:fullscreen</code> 伪类完全使用 CSS 来实现自动更改用于开启和关闭全屏模式的按钮的样式。
+  此演示使用 <code>:fullscreen</code> 伪类完全使用 CSS
+  来实现自动更改用于开启和关闭全屏模式的按钮的样式。
 </p>
 
 <button id="fs-toggle">切换全屏</button>

@@ -1,5 +1,5 @@
 ---
-title: '@font-face'
+title: "@font-face"
 slug: Web/CSS/@font-face
 ---
 
@@ -10,8 +10,9 @@ slug: Web/CSS/@font-face
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src:
+    url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
 }
 ```
 
@@ -46,20 +47,22 @@ slug: Web/CSS/@font-face
 
 ```html
 <html>
-<head>
-  <title>Web Font Sample</title>
-  <style type="text/css" media="screen, print">
-    @font-face {
-      font-family: "Bitstream Vera Serif Bold";
-      src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
-    }
+  <head>
+    <title>Web Font Sample</title>
+    <style type="text/css" media="screen, print">
+      @font-face {
+        font-family: "Bitstream Vera Serif Bold";
+        src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
+      }
 
-    body { font-family: "Bitstream Vera Serif Bold", serif }
-  </style>
-</head>
-<body>
-  This is Bitstream Vera Serif Bold.
-</body>
+      body {
+        font-family: "Bitstream Vera Serif Bold", serif;
+      }
+    </style>
+  </head>
+  <body>
+    This is Bitstream Vera Serif Bold.
+  </body>
 </html>
 ```
 
@@ -68,9 +71,8 @@ slug: Web/CSS/@font-face
 ```css
 @font-face {
   font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"),
-  local("HelveticaNeue-Bold"),
-  url(MgOpenModernaBold.ttf);
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+    url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }
 ```
@@ -81,15 +83,15 @@ slug: Web/CSS/@font-face
 
 ```css
 @font-face {
-    font-family: myFirstFont;
-    src: local("Times New Roman");
-    font-weight:normal;
+  font-family: myFirstFont;
+  src: local("Times New Roman");
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: myFirstFont;
-    src: local(Consolas);
-    font-weight:bold;
+  font-family: myFirstFont;
+  src: local(Consolas);
+  font-weight: bold;
 }
 ```
 
@@ -104,7 +106,7 @@ slug: Web/CSS/@font-face
     @font-face {
       font-family: MyHelvetica;
       src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-          url(MgOpenModernaBold.ttf);
+        url(MgOpenModernaBold.ttf);
       font-weight: bold;
     }
   }
