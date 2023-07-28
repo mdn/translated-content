@@ -56,7 +56,7 @@ Quando você cria um script - seja embutido em um elemento(tag) `<script>` ou in
 O JavaScript a seguir exibirá um alerta quando o documento for carregado (e quando todo o DOM estiver disponível para uso):
 
 ```html
-<body onload="window.alert('Welcome to my home page!');">
+<body onload="window.alert('Welcome to my home page!');"></body>
 ```
 
 Outro exemplo. Esta função cria um novo elemento H1, adiciona texto a esse elemento e, em seguida, adiciona o `H1` à árvore deste documento:
@@ -65,19 +65,17 @@ Outro exemplo. Esta função cria um novo elemento H1, adiciona texto a esse ele
 <html>
   <head>
     <script>
-       // run this function when the document is loaded
-       window.onload = function() {
-
-         // create a couple of elements in an otherwise empty HTML page
-         var heading = document.createElement("h1");
-         var heading_text = document.createTextNode("Big Head!");
-         heading.appendChild(heading_text);
-         document.body.appendChild(heading);
-      }
+      // run this function when the document is loaded
+      window.onload = function () {
+        // create a couple of elements in an otherwise empty HTML page
+        var heading = document.createElement("h1");
+        var heading_text = document.createTextNode("Big Head!");
+        heading.appendChild(heading_text);
+        document.body.appendChild(heading);
+      };
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -243,35 +241,47 @@ Você pode usar essa página teste ou criar uma similar para testar as interface
   <head>
     <title>Testes DOM</title>
     <script type="application/javascript">
-    function setBodyAttr(attr, value){
-      if (document.body) eval('document.body.'+attr+'="'+value+'"');
-      else notSupported();
-    }
+      function setBodyAttr(attr, value) {
+        if (document.body) eval("document.body." + attr + '="' + value + '"');
+        else notSupported();
+      }
     </script>
   </head>
   <body>
     <div style="margin: .5in; height: 400;">
-      <p><b><tt>text</tt></b></p>
+      <p>
+        <b><tt>text</tt></b>
+      </p>
       <form>
-        <select onChange="setBodyAttr('text',
+        <select
+          onChange="setBodyAttr('text',
         this.options[this.selectedIndex].value);">
-          <option value="black">preto
-          <option value="darkblue">azul escuro
+          <option value="black">preto</option>
+          <option value="darkblue">azul escuro</option>
         </select>
-        <p><b><tt>bgColor</tt></b></p>
-        <select onChange="setBodyAttr('bgColor',
+        <p>
+          <b><tt>bgColor</tt></b>
+        </p>
+        <select
+          onChange="setBodyAttr('bgColor',
         this.options[this.selectedIndex].value);">
-          <option value="white">branco
-          <option value="lightgrey">cinza
+          <option value="white">branco</option>
+          <option value="lightgrey">cinza</option>
         </select>
-        <p><b><tt>link</tt></b></p>
-        <select onChange="setBodyAttr('link',
+        <p>
+          <b><tt>link</tt></b>
+        </p>
+        <select
+          onChange="setBodyAttr('link',
         this.options[this.selectedIndex].value);">
-          <option value="blue">azul
-          <option value="green">verde
-        </select>  <small>
-        <a href="http://algum.website.tld/pagina.html" id="amostra">
-        (link)</a></small><br>
+          <option value="blue">azul</option>
+          <option value="green">verde</option>
+        </select>
+        <small>
+          <a href="http://algum.website.tld/pagina.html" id="amostra">
+            (link)</a
+          ></small
+        ><br />
       </form>
       <form>
         <input type="button" value="version" onclick="ver()" />

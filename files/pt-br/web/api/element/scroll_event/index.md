@@ -48,8 +48,8 @@ textarea {
 ### JavaScript
 
 ```js
-const textarea = document.querySelector('textarea');
-const log = document.getElementById('log');
+const textarea = document.querySelector("textarea");
+const log = document.getElementById("log");
 
 textarea.onscroll = logScroll;
 
@@ -64,10 +64,7 @@ function logScroll(e) {
 
 ## Especificações
 
-| Especificação                                                                    | Status                           | Comentário         |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG','#handler-onscroll','onscroll')}}     | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName("DOM3 Events", "#event-type-scroll", "onscroll")}} | {{Spec2("DOM3 Events")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

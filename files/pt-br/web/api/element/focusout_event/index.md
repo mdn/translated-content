@@ -21,19 +21,13 @@ O evento `focusout` é acionado assim que o elemento perde o foco. A principal d
 - Ação Padrão
   - : Nenhuma.
 
-## Propriedades
+## Especificações
 
-| Property                                 | Type                                               | Description                                |
-| ---------------------------------------- | -------------------------------------------------- | ------------------------------------------ |
-| `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target losing focus.                 |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                   | The type of event.                         |
-| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                       | Whether the event normally bubbles or not. |
-| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                       | Whether the event is cancellable or not.   |
-| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | Event target receiving focus.              |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Element.focusout_event")}}
+{{Compat}}
 
 ## Eventos Relcionados
 
