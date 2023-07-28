@@ -23,8 +23,8 @@ return controller.signal;
 ## 语法
 
 ```js
-abort()
-abort(reason)
+abort();
+abort(reason);
 ```
 
 ### 参数

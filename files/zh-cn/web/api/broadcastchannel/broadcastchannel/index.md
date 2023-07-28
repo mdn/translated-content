@@ -12,7 +12,7 @@ slug: Web/API/BroadcastChannel/BroadcastChannel
 ## 语法
 
 ```js
-new BroadcastChannel(channelName)
+new BroadcastChannel(channelName);
 ```
 
 ### 参数
