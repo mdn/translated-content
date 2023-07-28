@@ -32,7 +32,7 @@ var wm = new WeakMap();
 wm.set(window, "toto");
 
 wm.get(window); // Renvoie "toto"
-wm.get("machin");  // Renvoie undefined.
+wm.get("machin"); // Renvoie undefined.
 ```
 
 ## Spécifications
