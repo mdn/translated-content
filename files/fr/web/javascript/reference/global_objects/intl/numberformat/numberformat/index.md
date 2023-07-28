@@ -167,7 +167,7 @@ new Intl.NumberFormat("fr", {
   currency: "EUR",
   currencySign: "accounting",
 }).format(amount);
-// →  "(3 500,00 €)"
+// →  "(3 500,00 €)"
 ```
 
 ### Notations scientifique, ingénieur et compacte
