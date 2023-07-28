@@ -12,13 +12,15 @@ slug: Web/API/Window/focus
 ## 语法
 
 ```js
-window.focus()
+window.focus();
 ```
 
 ## 示例
 
 ```js
-if (clicked) { window.focus(); }
+if (clicked) {
+  window.focus();
+}
 ```
 
 ## 规范
