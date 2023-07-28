@@ -1961,7 +1961,7 @@ window.addEventListener("load", () => {
 
 ```html
 <fieldset>
-  <legend>Pick a fruit</legend>
+  <legend>选择一种水果</legend>
   <ul class="styledSelect">
     <li>
       <input
@@ -1969,32 +1969,28 @@ window.addEventListener("load", () => {
         name="fruit"
         value="Cherry"
         id="fruitCherry"
-        checked /><label for="fruitCherry">Cherry</label>
+        checked />
+      <label for="fruitCherry">樱桃</label>
     </li>
     <li>
-      <input type="radio" name="fruit" value="Lemon" id="fruitLemon" /><label
-        for="fruitLemon"
-        >Lemon</label
-      >
+      <input type="radio" name="fruit" value="Lemon" id="fruitLemon" />
+      <label for="fruitLemon">柠檬</label>
     </li>
     <li>
-      <input type="radio" name="fruit" value="Banana" id="fruitBanana" /><label
-        for="fruitBanana"
-        >Banana</label
-      >
+      <input type="radio" name="fruit" value="Banana" id="fruitBanana" />
+      <label for="fruitBanana">香蕉</label>
     </li>
     <li>
       <input
         type="radio"
         name="fruit"
         value="Strawberry"
-        id="fruitStrawberry" /><label for="fruitStrawberry">Strawberry</label>
+        id="fruitStrawberry" />
+      <label for="fruitStrawberry">草莓</label>
     </li>
     <li>
-      <input type="radio" name="fruit" value="Apple" id="fruitApple" /><label
-        for="fruitApple"
-        >Apple</label
-      >
+      <input type="radio" name="fruit" value="Apple" id="fruitApple" />
+      <label for="fruitApple">苹果</label>
     </li>
   </ul>
 </fieldset>
