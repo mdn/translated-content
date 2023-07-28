@@ -9,8 +9,8 @@ slug: Web/API/CountQueuingStrategy/size
 
 ## 语法
 
-```js
-size();
+```js-nolint
+size()
 ```
 
 ### 参数

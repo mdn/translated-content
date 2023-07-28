@@ -9,8 +9,8 @@ slug: Web/API/CountQueuingStrategy/CountQueuingStrategy
 
 ## 语法
 
-```js
-new CountQueuingStrategy(highWaterMark);
+```js-nolint
+new CountQueuingStrategy(highWaterMark)
 ```
 
 ### 参数
