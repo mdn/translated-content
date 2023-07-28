@@ -20,9 +20,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('fullscreenchange', (event) => { });
+addEventListener("fullscreenchange", (event) => {});
 
-onfullscreenchange = (event) => { };
+onfullscreenchange = (event) => {};
 ```
 
 ## イベント型
@@ -51,30 +51,34 @@ onfullscreenchange = (event) => { };
 ### JavaScript
 
 ```js
-function fullscreenchanged (event) {
+function fullscreenchanged(event) {
   // document.fullscreenElement は、全画面モードにある要素があれば
   // それを指します。要素がなければ、このプロパティの値は null に
   // あります。
   if (document.fullscreenElement) {
-    console.log(`Element: ${document.fullscreenElement.id} entered fullscreen mode.`);
+    console.log(
+      `Element: ${document.fullscreenElement.id} entered fullscreen mode.`,
+    );
   } else {
-    console.log('Leaving fullscreen mode.');
+    console.log("Leaving fullscreen mode.");
   }
 }
 
-document.addEventListener('fullscreenchange', fullscreenchanged);
+document.addEventListener("fullscreenchange", fullscreenchanged);
 // or
 document.onfullscreenchange = fullscreenchanged;
 
 // トグルボタンがクリックされたら、全画面モードを切り替える
-document.getElementById('toggle-fullscreen').addEventListener('click', (event) => {
-  if (document.fullscreenElement) {
-    // exitFullscreen は Document オブジェクトでのみ使用可
-    document.exitFullscreen();
-  } else {
-    el.requestFullscreen();
-  }
-});
+document
+  .getElementById("toggle-fullscreen")
+  .addEventListener("click", (event) => {
+    if (document.fullscreenElement) {
+      // exitFullscreen は Document オブジェクトでのみ使用可
+      document.exitFullscreen();
+    } else {
+      el.requestFullscreen();
+    }
+  });
 ```
 
 ## 仕様書

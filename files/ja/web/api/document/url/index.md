@@ -10,7 +10,7 @@ slug: Web/API/Document/URL
 ## 構文
 
 ```js
-const url = document.URL
+const url = document.URL;
 ```
 
 ## 例
@@ -25,7 +25,7 @@ document.getElementById("url").textContent = document.URL;
 
 ```html
 <p id="urlText">
-  URL:<br/>
+  URL:<br />
   <span id="url">URL goes here</span>
 </p>
 ```

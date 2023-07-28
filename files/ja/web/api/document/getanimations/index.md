@@ -27,11 +27,9 @@ var allAnimations = Document.getAnimations();
 次のコードスニペットは、ページ上のすべてのアニメーションの {{domxref("Animation.playbackRate")}} を半分にすることで速度をゆっくりにします。
 
 ```js
-document.getAnimations().forEach(
-  function (animation) {
-    animation.playbackRate *= .5;
-  }
-);
+document.getAnimations().forEach(function (animation) {
+  animation.playbackRate *= 0.5;
+});
 ```
 
 ## 仕様書

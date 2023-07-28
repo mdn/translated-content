@@ -10,7 +10,7 @@ slug: Web/API/Document/enableStyleSheetsForSet
 ## 構文
 
 ```js
-enableStyleSheetsForSet(name)
+enableStyleSheetsForSet(name);
 ```
 
 ### 引数

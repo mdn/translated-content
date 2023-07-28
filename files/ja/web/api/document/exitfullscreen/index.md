@@ -30,13 +30,14 @@ exitFullscreen()
 ```js
 document.onclick = (event) => {
   if (document.fullscreenElement) {
-    document.exitFullscreen()
+    document
+      .exitFullscreen()
       .then(() => console.log("Document Exited from Full screen mode"))
-      .catch((err) => console.error(err))
+      .catch((err) => console.error(err));
   } else {
     document.documentElement.requestFullscreen();
   }
-}
+};
 ```
 
 > **メモ:** もっと完全な例については、[`Element.requestFullscreen()` の例](/ja/docs/Web/API/Element/requestFullscreen#%E4%BE%8B)をご覧ください。

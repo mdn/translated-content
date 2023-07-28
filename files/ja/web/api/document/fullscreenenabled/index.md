@@ -28,7 +28,7 @@ function requestFullScreen() {
   if (document.fullscreenEnabled) {
     videoElement.requestFullScreen();
   } else {
-    console.log('現在ブラウザーは全画面モードを使用することができません');
+    console.log("現在ブラウザーは全画面モードを使用することができません");
   }
 }
 ```

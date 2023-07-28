@@ -20,10 +20,10 @@ l10n:
 
 ```js
 if (document.pointerLockElement === canvasElement) {
-  console.log('ポインターロック状態がロック中になりました');
+  console.log("ポインターロック状態がロック中になりました");
   // レスポンスで何か有益なことをする
 } else {
-  console.log('ポインターロック状態がロック解除になりました');
+  console.log("ポインターロック状態がロック解除になりました");
   // レスポンスで何か有益なことをする
 }
 ```

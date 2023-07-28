@@ -45,8 +45,20 @@ let nLastModif = Date.parse(document.lastModified);
 `lastModified` は文字列なので、文書の更新日の比較には*簡単には*使用できないことに注意してください。こちらはいつページが変更されたかをアラートメッセージで表示する方法の例です ([JavaScript cookies API](/ja/docs/DOM/document.cookie) も参照)。
 
 ```js
-if (Date.parse(document.lastModified) > parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0")) {
-  document.cookie = "last_modif=" + Date.now() + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" + location.pathname;
+if (
+  Date.parse(document.lastModified) >
+  parseFloat(
+    document.cookie.replace(
+      /(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/,
+      "$1",
+    ) || "0",
+  )
+) {
+  document.cookie =
+    "last_modif=" +
+    Date.now() +
+    "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" +
+    location.pathname;
   alert("ページが変更されました。");
 }
 ```
@@ -54,12 +66,20 @@ if (Date.parse(document.lastModified) > parseFloat(document.cookie.replace(/(?:(
 …同じ例ですが、最初の訪問をスキップします。
 
 ```js
-var
-  nLastVisit = parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1")),
+var nLastVisit = parseFloat(
+    document.cookie.replace(
+      /(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/,
+      "$1",
+    ),
+  ),
   nLastModif = Date.parse(document.lastModified);
 
 if (isNaN(nLastVisit) || nLastModif > nLastVisit) {
-  document.cookie = "last_modif=" + Date.now() + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" + location.pathname;
+  document.cookie =
+    "last_modif=" +
+    Date.now() +
+    "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" +
+    location.pathname;
 
   if (isFinite(nLastVisit)) {
     alert("ページが変更されました。");

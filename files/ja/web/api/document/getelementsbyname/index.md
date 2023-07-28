@@ -19,17 +19,17 @@ var elements = document.getElementsByName(name);
 ## 例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<title>document.getElementsByName の使用例</title>
+  <title>document.getElementsByName の使用例</title>
 
-<input type="hidden" name="up">
-<input type="hidden" name="down">
+  <input type="hidden" name="up" />
+  <input type="hidden" name="down" />
 
-<script>
-  var up_names = document.getElementsByName("up");
-  console.log(up_names[0].tagName); // "INPUT" と表示
-</script>
+  <script>
+    var up_names = document.getElementsByName("up");
+    console.log(up_names[0].tagName); // "INPUT" と表示
+  </script>
 </html>
 ```
 

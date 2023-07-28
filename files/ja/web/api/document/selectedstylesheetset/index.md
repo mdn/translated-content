@@ -18,9 +18,9 @@ slug: Web/API/Document/selectedStyleSheetSet
 ## 例
 
 ```js
-console.log('Current style sheet set: ' + document.selectedStyleSheetSet);
+console.log("Current style sheet set: " + document.selectedStyleSheetSet);
 
-document.selectedStyleSheetSet = 'Some other style sheet';
+document.selectedStyleSheetSet = "Some other style sheet";
 ```
 
 ## ブラウザーの互換性

@@ -10,7 +10,7 @@ slug: Web/API/Document/createCDATASection
 ## 構文
 
 ```js
-createCDATASection(data)
+createCDATASection(data);
 ```
 
 ### 引数
@@ -25,11 +25,11 @@ createCDATASection(data)
 ## 例
 
 ```js
-var docu = new DOMParser().parseFromString('<xml></xml>', 'application/xml')
+var docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
 
-var cdata = docu.createCDATASection('Some <CDATA> data & then some');
+var cdata = docu.createCDATASection("Some <CDATA> data & then some");
 
-docu.getElementsByTagName('xml')[0].appendChild(cdata);
+docu.getElementsByTagName("xml")[0].appendChild(cdata);
 
 alert(new XMLSerializer().serializeToString(docu));
 // 表示結果: <xml><![CDATA[Some <CDATA> data & then some]]></xml>

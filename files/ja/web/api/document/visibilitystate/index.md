@@ -32,7 +32,7 @@ document.visibilityState
 document.addEventListener("visibilitychange", () => {
   console.log(document.visibilityState);
   // 振る舞いを変更します...
-})
+});
 ```
 
 ## 仕様書

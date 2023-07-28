@@ -23,7 +23,7 @@ function finished(e) {
   logMessage(`Finished script with ID: ${e.target.id}`);
 }
 
-document.addEventListener('afterscriptexecute', finished, true);
+document.addEventListener("afterscriptexecute", finished, true);
 ```
 
 [ライブ例を表示](/samples/html/currentScript.html)

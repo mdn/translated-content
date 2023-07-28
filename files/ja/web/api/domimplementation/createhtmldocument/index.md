@@ -76,7 +76,7 @@ function makeDocument() {
 返される文書は、以下の HTML であらかじめ構成されたものになります。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

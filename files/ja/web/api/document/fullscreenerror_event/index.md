@@ -1,5 +1,5 @@
 ---
-title: 'Document: fullscreenerror イベント'
+title: "Document: fullscreenerror イベント"
 slug: Web/API/Document/fullscreenerror_event
 l10n:
   sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
@@ -20,9 +20,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('fullscreenerror', (event) => { });
+addEventListener("fullscreenerror", (event) => {});
 
-onfullscreenerror = (event) => { };
+onfullscreenerror = (event) => {};
 ```
 
 ## イベント型
@@ -32,14 +32,14 @@ onfullscreenerror = (event) => { };
 ## 例
 
 ```js
-const requestor = document.querySelector('div');
+const requestor = document.querySelector("div");
 
 function handleError(event) {
-  console.error('an error occurred changing into fullscreen');
+  console.error("an error occurred changing into fullscreen");
   console.log(event);
-};
+}
 
-document.addEventListener('fullscreenerror', handleError);
+document.addEventListener("fullscreenerror", handleError);
 // or
 document.onfullscreenerror = handleError;
 

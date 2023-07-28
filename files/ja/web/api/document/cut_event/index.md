@@ -1,5 +1,5 @@
 ---
-title: 'Document: cut イベント'
+title: "Document: cut イベント"
 slug: Web/API/Document/cut_event
 ---
 
@@ -33,8 +33,8 @@ slug: Web/API/Document/cut_event
 ## 例
 
 ```js
-document.addEventListener('cut', (event) => {
-    console.log('cut action initiated')
+document.addEventListener("cut", (event) => {
+  console.log("cut action initiated");
 });
 ```
 
