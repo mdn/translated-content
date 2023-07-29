@@ -38,10 +38,10 @@ void ctx.rotate(angle);
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-ctx.rotate(45 * Math.PI / 180);
+ctx.rotate((45 * Math.PI) / 180);
 ctx.fillRect(70, 0, 100, 30);
 
 // reset current transformation matrix to the identity matrix
@@ -59,7 +59,8 @@ ctx.setTransform(1, 0, 0, 1, 0, 0);
 <textarea id="code" class="playable-code">
 ctx.rotate(45 * Math.PI / 180);
 ctx.fillRect(70,0,100,30);
-ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea>
+ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea
+>
 ```
 
 ```js hidden
@@ -75,14 +76,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -94,7 +95,7 @@ window.addEventListener("load", drawCanvas);
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

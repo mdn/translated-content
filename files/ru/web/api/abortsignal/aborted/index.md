@@ -6,6 +6,7 @@ tags:
   - Экспериментально
 translation_of: Web/API/AbortSignal/aborted
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 Свойство **`aborted`** только для чтения, оно возвращает {{domxref("Boolean")}}, который указывает прерван(`true`) DOM запрос(ы), с которым связан сигнал, или нет(`false`).
@@ -30,7 +31,9 @@ var signal = controller.signal;
 
 // ...
 
-signal.aborted ? console.log('Запрос был отменён') : console.log('Запрос не отменён');
+signal.aborted
+  ? console.log("Запрос был отменён")
+  : console.log("Запрос не отменён");
 ```
 
 ## Спецификации

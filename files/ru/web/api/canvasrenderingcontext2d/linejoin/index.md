@@ -49,7 +49,7 @@ ctx.lineJoin = "bevel" || "round" || "miter";
 
 #### JavaScript
 
-```html
+```js
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -75,7 +75,7 @@ ctx.stroke();
 <canvas id="canvas" width="150" height="150"></canvas>
 ```
 
-```html
+```js
 var ctx = document.getElementById('canvas').getContext('2d');
 var lineJoin = ['round', 'bevel', 'miter'];
 ctx.lineWidth = 10;
@@ -101,10 +101,6 @@ for (let i = 0; i < lineJoin.length; i++) {
 ## Совместимость с браузерами
 
 {{Compat}}
-
-## Особенность WebKit/Blink
-
-- В браузерах на базе Webkit и Blink помимо этого свойства, также поддерживается нестандартный метод `ctx.setLineJoin()`.
 
 ## Смотрите также
 

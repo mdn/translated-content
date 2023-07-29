@@ -24,7 +24,7 @@ var decodedData = scope.atob(encodedData);
 ## Пример
 
 ```js
-var encodedData = window.btoa('Hello, world'); // кодирует строку
+var encodedData = window.btoa("Hello, world"); // кодирует строку
 var decodedData = window.atob(encodedData); // декодирует строку
 ```
 
