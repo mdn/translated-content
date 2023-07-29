@@ -23,7 +23,7 @@ slug: Web/API/Broadcast_Channel_API
 
 ```js
 // 连接到广播频道
-var bc = new BroadcastChannel('test_channel');
+var bc = new BroadcastChannel("test_channel");
 ```
 
 ### 发送消息
@@ -32,7 +32,7 @@ var bc = new BroadcastChannel('test_channel');
 
 ```js
 // 发送简单消息的示例
-bc.postMessage('This is a test message.');
+bc.postMessage("This is a test message.");
 ```
 
 不只是 {{domxref("DOMString")}}，任意类型的对象都可以被发送。此 API 不会将消息与任何的语义相关联，因此通道的参与者有必要知道预期的消息类型和消息的消费方式。
@@ -43,7 +43,9 @@ bc.postMessage('This is a test message.');
 
 ```js
 // 简单示例，用于将事件打印到控制台
-bc.onmessage = function (ev) { console.log(ev); }
+bc.onmessage = function (ev) {
+  console.log(ev);
+};
 ```
 
 ### 与频道断开连接
@@ -52,7 +54,7 @@ bc.onmessage = function (ev) { console.log(ev); }
 
 ```js
 // 断开频道连接
-bc.close()
+bc.close();
 ```
 
 ## 总结
