@@ -45,16 +45,16 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 
 ### 图像
 
-访问 [Google 图像搜索](https://www.google.com/imghp?gws_rd=ssl) 来搜索合适的图片。
+访问 [Google 图片搜索](https://www.google.com/imghp?gws_rd=ssl) 来搜索合适的图片。
 
 1. 当找到你想要的图像时，点击该图像以获得其放大的视图。
 2. 右键单击图像（Mac 上为 Ctrl + 单击），选择*将图像另存为...*，并选择一个可靠的位置来保存你的图像。或者，从浏览器地址栏中复制图片的网址，以便以后使用。
 
-![Google 图像搜索中的搜索结果](updated-google-images.png)
+![Google 图片搜索中的搜索结果](updated-google-images.png)
 
 请注意，网络上的大多数图片，包括谷歌图像中的图片，都是有版权的。为了减少侵权的可能性，可以使用谷歌的许可证过滤器。点击*工具*按钮，然后点击下面出现的*使用权限*选项。你应该选择*知识共享许可*这个选项。
 
-![经知识共享许可过滤后的 Google 图像搜索结果](updated-google-images-licensing.png)
+![经知识共享许可过滤后的 Google 图片搜索结果](updated-google-images-licensing.png)
 
 > **备注：**（译注）因为某些原因，你可能无法访问 Google，可以改为使用[百度图片搜索](https://image.baidu.com/)或[搜狗图片搜索](https://pic.sogou.com/)，并且同样需要注意图片的版权问题。
 
@@ -74,7 +74,7 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 > **备注：**（译注）
 >
 > - 同上所述，你可能无法访问 Google Fonts，你可以选择其他可用的在线字体服务，或采用第二种方式，下载后再使用你选择的字体。
-> - 相比英语，汉语的“安全字体”是不太一样的复杂问题，可以认为黑体、宋体是相对“安全”的一类字体，但仍需要精确到具体的字族，下面是一些参考链接
+> - 相比英语，汉语的“安全字体”是不太一样的复杂问题，可以认为黑体、宋体是相对“安全”的一类字体，但仍需要精确到具体的字族，下面是一些参考链接：
 >   - [如何保证网页的字体在各平台都尽量显示为最高质量的黑体？](https://www.zhihu.com/question/19911793)
 >   - [常用 Web 安全字体显示测试](https://feeshy.github.io/tech/web_safe_fonts.html)
 
