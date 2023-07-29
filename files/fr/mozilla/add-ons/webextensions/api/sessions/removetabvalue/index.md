@@ -14,9 +14,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removing = browser.sessions.removeTabValue(
-  tabId,    // integer
-  key       // string
-)
+  tabId, // integer
+  key, // string
+);
 ```
 
 ### Paramètres
@@ -40,13 +40,19 @@ Ce code ajoute deux éléments de menu contextuel: l'un stocke une valeur associ
 
 ```js
 async function setOnActiveTab() {
-  let tabArray = await browser.tabs.query({currentWindow: true, active: true});
+  let tabArray = await browser.tabs.query({
+    currentWindow: true,
+    active: true,
+  });
   let tabId = tabArray[0].id;
   await browser.sessions.setTabValue(tabId, "my-key", "my-value");
 }
 
 async function removeFromActiveTab() {
-  let tabArray = await browser.tabs.query({currentWindow: true, active: true});
+  let tabArray = await browser.tabs.query({
+    currentWindow: true,
+    active: true,
+  });
   let tabId = tabArray[0].id;
   await browser.sessions.removeTabValue(tabId, "my-key");
 }
@@ -54,13 +60,13 @@ async function removeFromActiveTab() {
 browser.menus.create({
   id: "add-my-item",
   title: "add item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.create({
   id: "remove-my-item",
   title: "remove item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener((info) => {

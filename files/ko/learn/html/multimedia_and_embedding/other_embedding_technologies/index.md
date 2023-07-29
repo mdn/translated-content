@@ -206,13 +206,13 @@ textarea.onkeyup = function(){
 </head>
 <body>
   <iframe
-    src="https://developer.mozilla.org/en-US/docs/Glossary"
+    src="https://developer.mozilla.org/ko/docs/Glossary"
     width="100%"
     height="500"
     allowfullscreen
     sandbox>
     <p>
-      <a href="/en-US/docs/Glossary">
+      <a href="/ko/docs/Glossary">
         iframes을 지원하지 않는 브라우저용 링크
       </a>
     </p>
@@ -253,7 +253,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 > **참고:** [클릭재킹](/ko/docs/Glossary/Clickjacking)은 iframe 공격 방식의 하나입니다. 눈에 보이지 않는 iframe을 여러분의 웹 문서에 삽입하거나, 해커들의 악성 웹사이트에 여러분의 웹페이지를 삽입하여 사용자들의 활동을 빼돌립니다. 이는 사용자들을 잘못된 행동으로 유도하거나 민감한 데이터를 훔쳐내는 일반적인 기술입니다.
 
-우선 간단한 예시를 보겠습니다. 위에서 보여드린 예제를 브라우저에 표시해 보세요. [GitHub에서 실시간 동작 확인](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 가능합니다([소스 코드](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 살펴보세요). 예상과 달리 "페이지를 열 수 없음"과 같은 문구가 표시될 겁니다. [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 열어 '콘솔' 창을 보면 그 이유를 알려주는 문구를 확인할 수 있습니다. Firefox 브라우저의 경우 "The loading of 'https\://developer.mozilla.org/en-US/docs/Glossary' in a frame is denied by 'X-Frame-Options' directive set to 'DENY'"라는 문구가 적혀 있습니다. 이는 다른 사이트에서 MDN 웹페이지를 `<iframe>`안에 포함하지 못하도록 MDN 개발자들이 설정했기 때문입니다. (아래에 있는 [CSP 지시어를 설정하세요](#configure_csp_directives) 참고) 당연한 일입니다. 여러분의 웹사이트에 전체 MDN 페이지를 삽입해두고 자기 사이트라고 우기거나 [클릭재킹](/ko/docs/Glossary/Clickjacking)으로 데이터를 훔치려 들면 안 되잖아요. 게다가 모두가 MDN 페이지를 삽입한다면 대역폭이 추가로 들어 Mozilla에서 큰 비용을 지불해야 할 겁니다.
+우선 간단한 예시를 보겠습니다. 위에서 보여드린 예제를 브라우저에 표시해 보세요. [GitHub에서 실시간 동작 확인](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 가능합니다([소스 코드](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 살펴보세요). 예상과 달리 "페이지를 열 수 없음"과 같은 문구가 표시될 겁니다. [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 열어 '콘솔' 창을 보면 그 이유를 알려주는 문구를 확인할 수 있습니다. Firefox 브라우저의 경우 "The loading of 'https\://developer.mozilla.org/ko/docs/Glossary' in a frame is denied by 'X-Frame-Options' directive set to 'DENY'"라는 문구가 적혀 있습니다. 이는 다른 사이트에서 MDN 웹페이지를 `<iframe>`안에 포함하지 못하도록 MDN 개발자들이 설정했기 때문입니다. (아래에 있는 [CSP 지시어를 설정하세요](#configure_csp_directives) 참고) 당연한 일입니다. 여러분의 웹사이트에 전체 MDN 페이지를 삽입해두고 자기 사이트라고 우기거나 [클릭재킹](/ko/docs/Glossary/Clickjacking)으로 데이터를 훔치려 들면 안 되잖아요. 게다가 모두가 MDN 페이지를 삽입한다면 대역폭이 추가로 들어 Mozilla에서 큰 비용을 지불해야 할 겁니다.
 
 #### 필요한 경우에만 삽입하세요
 

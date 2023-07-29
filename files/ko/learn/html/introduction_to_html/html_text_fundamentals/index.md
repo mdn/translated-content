@@ -13,7 +13,7 @@ HTML의 주요 작업 중 하나는 브라우저가 텍스트를 올바르게 �
     <tr>
       <th scope="row">선행 학습:</th>
       <td>
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >HTML 시작하기</a
         >에서 다뤄봤던 HTML의 기초에 익숙해지기.
       </td>

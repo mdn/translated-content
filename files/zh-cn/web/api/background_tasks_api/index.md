@@ -83,7 +83,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 
 ```
 <p>
-  演示使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API">
+  演示使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Background_Tasks_API">
    协作调度幕后任务 </a> 使用 <code>requestIdleCallback()</code>
   方法。
 </p>

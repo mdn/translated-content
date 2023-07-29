@@ -17,5 +17,5 @@ Como o HTTP, protocolo padrão por trás da "World Wide Web", a "Web" também tr
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "Representational_state_transfer", "REST")}} na Wikipédia
+- [REST](https://pt.wikipedia.org/wiki/REST) na Wikipédia
 - [REST Architecture](https://www.service-architecture.com/articles/web-services/representational_state_transfer_rest.html)

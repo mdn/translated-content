@@ -118,8 +118,8 @@ Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWt
 
 `'unsafe-eval'` 출처 표현식은 문자열에서 코드를 생성하는 여러 스크립트 실행 메소드를 제어합니다. 만약`'unsafe-eval'` 이 `script-src` 에 정의되어 있지 않으면, 아래믜 명령어는 차단되며 아무런 효과가 일어나지 않습니다.
 
-- [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
-- [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
+- [`eval()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- [`Function()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function)
 - 아래와 같이 문자열 리터럴을 전달할 때 :
   `window.setTimeout("alert(\"Hello World!\");", 500);`
 

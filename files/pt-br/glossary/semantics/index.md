@@ -27,7 +27,9 @@ Por padrão, a maioria das [folhas de estilo do agente do usuário](/pt-BR/docs/
 Por outro lado, você pode fazer qualquer elemento parecer um cabeçalho de nível superior. Considere o seguinte:
 
 ```html
-<span style="font-size: 32px; margin: 21px 0;">Is this a top level heading?</span>
+<span style="font-size: 32px; margin: 21px 0;"
+  >Is this a top level heading?</span
+>
 ```
 
 Isso fará com que pareça um cabeçalho de nível superior, mas não tem valor semântico. Portanto, não obterá nenhum benefício extra, conforme descrito acima. Assim, é uma boa idéia usar o elemento HTML certo, para o trabalho certo.
@@ -66,7 +68,7 @@ Estes são alguns dos aproximadamente 100 [elementos](/pt-BR/docs/Web/HTML/Eleme
 
 - [HTML element reference](/pt-BR/docs/Web/HTML/Element#Inline_text_semantics) on MDN
 - [Using HTML sections and outlines](/pt-BR/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Problems_solved_by_HTML5) on MDN
-- {{interwiki("wikipedia", "Semantics#Computer_science", "The meaning of semantics in computer science")}} on Wikipedia
+- [The meaning of semantics in computer science](https://pt.wikipedia.org/wiki/Semantics) on Wikipedia
 - [MDN Web Docs Glossary](/pt-BR/docs/Glossary)
 
   - {{Glossary("SEO")}}

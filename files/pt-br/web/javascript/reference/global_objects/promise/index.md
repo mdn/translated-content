@@ -38,7 +38,7 @@ new Promise((resolveOuter) => {
 });
 ```
 
-Essa promise já está _resolvida_ no momento em que é criada (porque o `resolveOuter` é chamado de forma síncrona), mas é resolvido com outra promise e, portanto, não será _cumprida_ até 1 segundo depois, quando a promise interna for cumprida. Na prática, a “resolução” muitas vezes é feita nos bastidores e não observável, e apenas o seu cumprimento ou rejeição o são.
+Essa promise já está _resolvida_ no momento em que é criada (porque o `resolveOuter` é chamado de forma síncrona), mas é resolvido com outra promise e, portanto, não será _cumprida_ até 1 segundo depois, quando a promise interna for cumprida. Na prática, a "resolução" muitas vezes é feita nos bastidores e não observável, e apenas o seu cumprimento ou rejeição o são.
 
 > **Nota:** várias outras linguagens têm mecanismos para avaliação preguiçosa e adiamento de uma computação, que eles também chamam de "promises", por exemplo, Esquema. As promises em JavaScript representam processos que já estão acontecendo, que podem ser encadeados com funções de retorno de chamada. Se você deseja avaliar lentamente uma expressão, considere usar uma função sem argumentos, por exemplo. `f = () => expressão` para criar a expressão avaliada lentamente e `f()` para avaliar a expressão imediatamente.
 

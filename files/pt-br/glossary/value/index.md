@@ -10,4 +10,4 @@ No contexto de dados ou um objeto {{Glossary("Wrapper", "wrapper")}} em torno de
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "Primitive wrapper class")}} on Wikipedia
+- [Primitive wrapper class](https://en.wikipedia.org/wiki/Primitive_wrapper_class) on Wikipedia

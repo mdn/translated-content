@@ -43,10 +43,10 @@ function* gen() {
 }
 
 var g = gen(); // "Generator { }"
-g.next();      // "Object { value: 1, done: false }"
-g.next();      // "Object { value: 2, done: false }"
-g.next();      // "Object { value: 3, done: false }"
-g.next();      // "Object { value: undefined, done: true }"
+g.next(); // "Object { value: 1, done: false }"
+g.next(); // "Object { value: 2, done: false }"
+g.next(); // "Object { value: 3, done: false }"
+g.next(); // "Object { value: undefined, done: true }"
 ```
 
 ### 向生成器传值

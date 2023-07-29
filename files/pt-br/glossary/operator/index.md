@@ -10,7 +10,7 @@ original_slug: Glossario/Operador
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "Operadores (programação de computadores)")}} na Wikipedia (em inglês)
+- [Operadores (programação de computadores)](<https://en.wikipedia.org/wiki/Operator_(computer_programming)>) na Wikipedia (em inglês)
 
 ### Referência técnica
 

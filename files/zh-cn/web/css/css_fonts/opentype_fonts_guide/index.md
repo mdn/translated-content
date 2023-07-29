@@ -70,7 +70,7 @@ and notice that the lower case 'a' reverts to its regular form and the lower cas
 #### More about alternates
 
 - <https://www.w3.org/TR/css-fonts-4/#propdef-font-variant-alternates>
-- [https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates](/zh-CN/docs/Web/CSS/font-variant-alternates)
+- [https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-variant-alternates](/zh-CN/docs/Web/CSS/font-variant-alternates)
 
 ### 连字（{{cssxref("font-variant-ligatures")}}）
 

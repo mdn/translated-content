@@ -181,7 +181,7 @@ function parseProtocol(url) {
 }
 
 console.log(
-  parseProtocol("https://developer.mozilla.org/en-US/Web/JavaScript")
+  parseProtocol("https://developer.mozilla.org/en-US/Web/JavaScript"),
 ); // "https"
 ```
 
@@ -311,7 +311,7 @@ const metadata = {
       title: "JavaScript-Umgebung",
     },
   ],
-  url: "/en-US/docs/Tools/Scratchpad",
+  url: "/zh-TW/docs/Tools/Scratchpad",
 };
 
 let {

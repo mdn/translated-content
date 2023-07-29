@@ -10,4 +10,4 @@ original_slug: Glossario/OpenGL
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "OpenGL")}} em Wikipedia
+- [OpenGL](https://pt.wikipedia.org/wiki/OpenGL) em Wikipedia

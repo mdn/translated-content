@@ -62,7 +62,7 @@ if (
   (function () {
     var innerText = Object.getOwnPropertyDescriptor(
       Element.prototype,
-      "innerText"
+      "innerText",
     );
     Object.defineProperty(Element.prototype, "textContent", {
       get: function () {

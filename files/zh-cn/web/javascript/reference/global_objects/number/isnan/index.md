@@ -33,15 +33,15 @@ Number.isNaN(value)
 ## 示例
 
 ```js
-Number.isNaN(NaN);        // true
+Number.isNaN(NaN); // true
 Number.isNaN(Number.NaN); // true
-Number.isNaN(0 / 0)       // true
+Number.isNaN(0 / 0); // true
 
 // 下面这几个如果使用全局的 isNaN() 时，会返回 true。
-Number.isNaN("NaN");      // false，字符串 "NaN" 不会被隐式转换成数字 NaN。
-Number.isNaN(undefined);  // false
-Number.isNaN({});         // false
-Number.isNaN("blabla");   // false
+Number.isNaN("NaN"); // false，字符串 "NaN" 不会被隐式转换成数字 NaN。
+Number.isNaN(undefined); // false
+Number.isNaN({}); // false
+Number.isNaN("blabla"); // false
 
 // 下面的都返回 false
 Number.isNaN(true);
@@ -56,9 +56,11 @@ Number.isNaN(" ");
 ## Polyfill
 
 ```js
-Number.isNaN = Number.isNaN || function(value) {
+Number.isNaN =
+  Number.isNaN ||
+  function (value) {
     return typeof value === "number" && isNaN(value);
-}
+  };
 ```
 
 ## 规范

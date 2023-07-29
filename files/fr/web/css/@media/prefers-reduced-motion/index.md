@@ -47,7 +47,7 @@ Cet exemple possède une animation désagréable qui sera exécutée à moins d'
 
 @media (prefers-reduced-motion: reduce) {
   .animation {
-  animation: none;
+    animation: none;
   }
 }
 ```
@@ -56,7 +56,10 @@ Cet exemple possède une animation désagréable qui sera exécutée à moins d'
 .animation {
   background-color: rebeccapurple;
   color: #fff;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
   width: 200px;
   padding: 1em;
   border-radius: 1em;
@@ -76,22 +79,22 @@ Cet exemple possède une animation désagréable qui sera exécutée à moins d'
 
 @keyframes vibrate {
   0% {
-      transform: translate(0);
+    transform: translate(0);
   }
   20% {
-      transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
   }
   40% {
-      transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
   }
   60% {
-      transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
   }
   80% {
-      transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
   }
   100% {
-      transform: translate(0);
+    transform: translate(0);
   }
 }
 ```

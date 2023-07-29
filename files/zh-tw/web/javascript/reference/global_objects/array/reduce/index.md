@@ -72,14 +72,11 @@ var maxCallback2 = (max, cur) => Math.max(max, cur);
 假設 `reduce()` 以下例方式使用：
 
 ```js
-[0, 1, 2, 3, 4].reduce(function (
-  accumulator,
-  currentValue,
-  currentIndex,
-  array
-) {
-  return accumulator + currentValue;
-});
+[0, 1, 2, 3, 4].reduce(
+  function (accumulator, currentValue, currentIndex, array) {
+    return accumulator + currentValue;
+  },
+);
 ```
 
 所傳入的回呼函式將被呼叫四次，所傳入的參數與回傳值如下所示：
@@ -203,7 +200,7 @@ var allbooks = friends.reduce(
   function (prev, curr) {
     return [...prev, ...curr.books];
   },
-  ["Alphabet"]
+  ["Alphabet"],
 );
 
 // allbooks = [
@@ -281,7 +278,7 @@ if (!Array.prototype.reduce) {
     value: function (callback /*, initialValue*/) {
       if (this === null) {
         throw new TypeError(
-          "Array.prototype.reduce " + "called on null or undefined"
+          "Array.prototype.reduce " + "called on null or undefined",
         );
       }
       if (typeof callback !== "function") {
@@ -309,7 +306,7 @@ if (!Array.prototype.reduce) {
         //    throw a TypeError exception.
         if (k >= len) {
           throw new TypeError(
-            "Reduce of empty array " + "with no initial value"
+            "Reduce of empty array " + "with no initial value",
           );
         }
         value = o[k++];

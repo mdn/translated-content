@@ -13,10 +13,10 @@ slug: Learn/CSS/Styling_text/Fundamentals
       <th scope="row">전제조건</th>
       <td>
         Basic computer literacy, HTML basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), CSS basics (study
-        <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/ko/docs/Learn/CSS/Introduction_to_CSS"
           >Introduction to CSS</a
         >).
       </td>

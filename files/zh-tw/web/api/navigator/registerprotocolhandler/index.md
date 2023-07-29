@@ -71,7 +71,7 @@ If your web application is located at `http://www.google.co.uk`, you can registe
 navigator.registerProtocolHandler(
   "web+burger",
   "https://www.google.co.uk/?uri=%s",
-  "Burger handler"
+  "Burger handler",
 );
 ```
 

@@ -209,7 +209,7 @@ mystring[0]; // This returns "H"
 
 ### 다중 선 템플릿 문자열
 
-[템플릿 문자열](/en-US/docs/Web/JavaScript/Reference/template_strings)은 포함 식을 용납하는 문자열 리터럴입니다. 여러분은 그것들과 함께 다중 선 문자열 및 문자열 보간 기능을 사용할 수 있습니다.
+[템플릿 문자열](/ko/docs/Web/JavaScript/Reference/template_strings)은 포함 식을 용납하는 문자열 리터럴입니다. 여러분은 그것들과 함께 다중 선 문자열 및 문자열 보간 기능을 사용할 수 있습니다.
 
 템플릿 문자열은 작은따옴표나 큰따옴표 대신에 back-tick (\` \`) ([grave accent](https://en.wikipedia.org/wiki/Grave_accent))문자로 묶습니다. 템플릿 문자열은 자리 표시자를 포함 할 수 있습니다. 이들은 달러 기호와 중괄호로 표시됩니다. (`${expression}`)
 
@@ -255,7 +255,7 @@ console.log(`Fifteen is ${a + b} and\nnot ${2 * a + b}.`);
 // not 20."
 ```
 
-자세한 내용은 [JavaScript 참조](/en-US/docs/Web/JavaScript/Reference)에서 [템플릿 문자열](/en-US/docs/Web/JavaScript/Reference/template_strings)에 대해 읽어보세요.
+자세한 내용은 [JavaScript 참조](/ko/docs/Web/JavaScript/Reference)에서 [템플릿 문자열](/ko/docs/Web/JavaScript/Reference/template_strings)에 대해 읽어보세요.
 
 ## 국제화
 

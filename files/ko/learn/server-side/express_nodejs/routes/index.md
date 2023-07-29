@@ -13,11 +13,11 @@ slug: Learn/Server-side/Express_Nodejs/routes
       <th scope="row">사전조건:</th>
       <td>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction"
+          href="https://developer.mozilla.org/ko/docs/Learn/Server-side/Express_Nodejs/Introduction"
           >Express/Node introduction</a
         >를 먼저 구독해주세요.이전 강의 주제를 완료해 주세요.(
         <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose"
+          href="https://developer.mozilla.org/ko/docs/Learn/Server-side/Express_Nodejs/mongoose"
           >Express Tutorial Part3 : Mongoose Database 와 연동하기</a
         >)
       </td>

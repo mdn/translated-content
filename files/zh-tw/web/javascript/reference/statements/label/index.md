@@ -29,7 +29,7 @@ label :
 
 需要注意的是 JavaScript **沒有** `goto` 陳述式，標記只能和 `break` 或 `continue` 一起使用。
 
-在[嚴格模式](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode)中，你不能使用 “`let`” 作為標籤名稱。它會拋出一個[`SyntaxError`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)（let 是一個保留的識別符號）。
+在[嚴格模式](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode)中，你不能使用 「`let`」 作為標籤名稱。它會拋出一個[`SyntaxError`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)（let 是一個保留的識別符號）。
 
 ## 範例
 

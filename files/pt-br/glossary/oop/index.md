@@ -12,5 +12,5 @@ original_slug: Glossario/OOP
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "Object-oriented programming")}} no Wikipedia
+- [Object-oriented programming](https://pt.wikipedia.org/wiki/Programação_orientada_a_objetos) no Wikipedia
 - [Introduction to object-oriented JavaScript](/pt-BR/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)

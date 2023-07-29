@@ -32,7 +32,7 @@ TypeError(Ошибка Типа): 'callee' и 'caller' (не может быть
 
 ### Устаревшая `function.caller` или `arguments.callee.caller`
 
-{{jsxref("Function.caller")}} и [`arguments.callee.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) являются устаревшими (Дополнительные сведения см. в справочных статьях).
+{{jsxref("Function.caller")}} и [`arguments.callee.caller`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/callee) являются устаревшими (Дополнительные сведения см. в справочных статьях).
 
 ```js example-bad
 'use strict';
@@ -76,4 +76,4 @@ console.log('returned: ' + g.arguments);
 - [Deprecated and obsolete features](/ru/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) (Устаревшие функции)
 - [Strict mode](/ru/docs/Web/JavaScript/Reference/Strict_mode) (строгий режим)
 - {{jsxref("Function.arguments")}}
-- {{jsxref("Function.caller")}} и [`arguments.callee.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+- {{jsxref("Function.caller")}} и [`arguments.callee.caller`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/callee)

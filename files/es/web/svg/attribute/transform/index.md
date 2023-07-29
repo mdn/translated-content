@@ -11,7 +11,7 @@ El atributo `transform` exhibe una lista de definiciones de transformación que 
 
 | Categorias          | None                                                                             |
 | ------------------- | -------------------------------------------------------------------------------- |
-| Valor               | **`<transform-list>`**                                                             |
+| Valor               | **`<transform-list>`**                                                           |
 | Animable            | Yes                                                                              |
 | Documento normativo | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/coords.html#TransformAttribute) |
 
@@ -48,17 +48,32 @@ text {
 SVG:
 
 ```html
-<svg width="180" height="200"
+<svg
+  width="180"
+  height="200"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
-
   <!-- This is the element before translation and rotation are applied -->
-  <rect x="50" y="50" height="100" width="100" style="stroke:#000; fill: #0086B2" fill-opacity=0.2 stroke-opacity=0.2></rect>
+  <rect
+    x="50"
+    y="50"
+    height="100"
+    width="100"
+    style="stroke:#000; fill: #0086B2"
+    fill-opacity="0.2"
+    stroke-opacity="0.2"></rect>
 
   <!-- Now we add a text element and apply rotate and translate to both -->
-  <rect x="50" y="50" height="100" width="100" style="stroke:#000; fill: #0086B2" transform="translate(30) rotate(45 50 50)"></rect>
-  <text x="60" y="105" transform="translate(30) rotate(45 50 50)"> Hello Moz! </text>
-
+  <rect
+    x="50"
+    y="50"
+    height="100"
+    width="100"
+    style="stroke:#000; fill: #0086B2"
+    transform="translate(30) rotate(45 50 50)"></rect>
+  <text x="60" y="105" transform="translate(30) rotate(45 50 50)">
+    Hello Moz!
+  </text>
 </svg>
 ```
 
@@ -70,21 +85,29 @@ Here is a basic example to understand a general transformation. We consider the 
 
 ```html
 <svg width="160" height="230" xmlns="http://www.w3.org/2000/svg">
-
   <g transform="matrix(1,2,3,4,5,6)">
     <!-- New coordinate system (thick blue line)
          x1 = 10 | x2 = 30
          y1 = 20 | y2 = 40
       -->
-    <line x1="10" y1="20" x2="30" y2="40" style="stroke-width: 10px; stroke: blue;"/>
+    <line
+      x1="10"
+      y1="20"
+      x2="30"
+      y2="40"
+      style="stroke-width: 10px; stroke: blue;" />
   </g>
 
   <!-- Previous coordinate system (thin white line)
        x1 = 1 * 10 + 3 * 20 + 5 = 75  | x2 = 1 * 30 + 3 * 40 + 5 = 155
        y1 = 2 * 10 + 4 * 20 + 6 = 106 | y2 = 2 * 30 + 4 * 40 + 6 = 226
     -->
-  <line x1="75" y1="106" x2="155" y2="226" style="stroke-width: 1px; stroke: white;"/>
-
+  <line
+    x1="75"
+    y1="106"
+    x2="155"
+    y2="226"
+    style="stroke-width: 1px; stroke: white;" />
 </svg>
 ```
 
@@ -95,21 +118,48 @@ Here is a basic example to understand a general transformation. We consider the 
 All text examples in the SVG below have the same positioning on the page (`x="200" y="0"`), and all are rotated at 45°. The only difference is the point that anchors the rotation.
 
 ```html
-<svg viewBox="-20 -20 820 420" xmlns="http://www.w3.org/2000/svg" width="800" height="400">
+<svg
+  viewBox="-20 -20 820 420"
+  xmlns="http://www.w3.org/2000/svg"
+  width="800"
+  height="400">
+  <text x="200" y="0">
+    ...unrotated text; same starting position as examples below (in all cases:
+    x="200" y="0")
+  </text>
 
-  <text x="200" y="0">...unrotated text; same starting position as examples below (in all cases: x="200" y="0")</text>
+  <circle
+    cx="200"
+    cy="0"
+    r="2"
+    style="stroke: green; stroke-width: 1; fill: green;" />
+  <text x="200" y="0" transform="rotate(45 200,0)" style="fill: green;">
+    ...(1) rotate(45 200,0) (rotated 45° around a point at 200,0)
+  </text>
 
-  <circle cx="200" cy="0" r="2" style="stroke: green; stroke-width: 1; fill: green;" />
-  <text x="200" y="0" transform="rotate(45 200,0)" style="fill: green;" >...(1) rotate(45 200,0) (rotated 45° around a point at 200,0)</text>
+  <circle
+    cx="100"
+    cy="0"
+    r="2"
+    style="stroke: blue; stroke-width: 1; fill: blue;" />
+  <path
+    d="M 200,0 A 100,100 0 0,1 0,0"
+    style="stroke: blue; stroke-width: 1; fill: transparent;" />
+  <text x="200" y="0" transform="rotate(45 100,0)" style="fill: blue;">
+    ...(2) rotate(45 100,0) (rotated 45° around a point at 100,0)
+  </text>
 
-  <circle cx="100" cy="0" r="2" style="stroke: blue; stroke-width: 1; fill: blue;" />
-  <path d="M 200,0 A 100,100 0 0,1 0,0" style="stroke: blue; stroke-width: 1; fill: transparent;" />
-  <text x="200" y="0" transform="rotate(45 100,0)" style="fill: blue;">...(2) rotate(45 100,0) (rotated 45° around a point at 100,0)</text>
-
-  <circle cx="0" cy="0" r="2" style="stroke: red; stroke-width: 1; fill: red;" />
-  <path d="M 200,0 A 200,200 0 0,1 0,200" style="stroke: red; stroke-width: 1; fill: transparent;" />
-  <text x="200" y="0" transform="rotate(45 0,0)" style="fill: red;" >...(3) rotate(45 0,0) (rotated 45° around a point at 0,0)</text>
-
+  <circle
+    cx="0"
+    cy="0"
+    r="2"
+    style="stroke: red; stroke-width: 1; fill: red;" />
+  <path
+    d="M 200,0 A 200,200 0 0,1 0,200"
+    style="stroke: red; stroke-width: 1; fill: transparent;" />
+  <text x="200" y="0" transform="rotate(45 0,0)" style="fill: red;">
+    ...(3) rotate(45 0,0) (rotated 45° around a point at 0,0)
+  </text>
 </svg>
 ```
 

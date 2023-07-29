@@ -26,7 +26,7 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-var flushingCache = browser.webRequest.handlerBehaviorChanged()
+var flushingCache = browser.webRequest.handlerBehaviorChanged();
 ```
 
 ### Paramètres

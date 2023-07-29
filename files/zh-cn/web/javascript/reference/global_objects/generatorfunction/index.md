@@ -30,9 +30,11 @@ GeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 ### 参数
 
 - `argN` {{optional_inline}}
+
   - : 函数的参数名，它们必须是符合 JavaScript 参数规范（任何[标识符](/zh-CN/docs/Glossary/Identifier)、[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)或[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)参数，以及可选的默认参数值）的字符串。
 
     由于参数的解析方式与函数声明相同，参数中接受空格和注释。例如：`"x", "theValue = 42", "[a, b] /* numbers */"` 或 `"x, theValue = 42, [a, b] /* numbers */"`。（`"x, theValue = 42", "[a, b]"` 也是正确的，但这容易造成困扰。）
+
 - `functionBody`
   - : 包含 JavaScript 语句的{{jsxref("String", "字符串", "", 1)}}，这些语句组成了新函数的定义。
 

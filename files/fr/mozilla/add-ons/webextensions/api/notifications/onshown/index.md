@@ -11,9 +11,9 @@ Lancé immédiatement après l'affichage d'une notification.
 ## Syntaxe
 
 ```js
-browser.notifications.onShown.addListener(listener)
-browser.notifications.onShown.removeListener(listener)
-browser.notifications.onShown.hasListener(listener)
+browser.notifications.onShown.addListener(listener);
+browser.notifications.onShown.removeListener(listener);
+browser.notifications.onShown.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -49,7 +49,7 @@ function logShown(itemId) {
   console.log(`shown: ${itemId}`);
   browser.notifications.getAll().then((all) => {
     console.log(all[itemId]);
-  })
+  });
 }
 
 browser.notifications.onShown.addListener(logShown);

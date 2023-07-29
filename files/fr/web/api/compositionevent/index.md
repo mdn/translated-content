@@ -1,10 +1,6 @@
 ---
 title: CompositionEvent
 slug: Web/API/CompositionEvent
-tags:
-  - API
-  - DOM
-  - Evènement
 translation_of: Web/API/CompositionEvent
 ---
 

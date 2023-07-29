@@ -12,7 +12,7 @@ La [_HTML Living Standard_](https://html.spec.whatwg.org/) especifica 5 caracter
 
 ## En JavaScript
 
-La [especificación del lenguaje ECMAScript® 2015](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space) establece varios puntos de código Unicode como espacio en blanco: `U+0009` CARACTERES de TABULACIÓN \<TAB>, `U+000B` TABULACIÓN DE LÍNEA \<VT>, `U+000C` FORM FEED \<FF>, `U+0020` ESPACIO \<SP>, `U+00A0` ESPACIO SIN ROTURA \<NBSP>, `U+FEFF` ANCHO CERO NO -BREAK SPACE \<ZWNBSP> y otra categoría “Zs” Cualquier otro punto de código Unicode “Separador, espacio” \<USP>. Estos caracteres suelen ser innecesarios para la funcionalidad del código.
+La [especificación del lenguaje ECMAScript® 2015](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space) establece varios puntos de código Unicode como espacio en blanco: `U+0009` CARACTERES de TABULACIÓN \<TAB>, `U+000B` TABULACIÓN DE LÍNEA \<VT>, `U+000C` FORM FEED \<FF>, `U+0020` ESPACIO \<SP>, `U+00A0` ESPACIO SIN ROTURA \<NBSP>, `U+FEFF` ANCHO CERO NO -BREAK SPACE \<ZWNBSP> y otra categoría "Zs" Cualquier otro punto de código Unicode "Separador, espacio" \<USP>. Estos caracteres suelen ser innecesarios para la funcionalidad del código.
 
 <section id="Quick_links">
  <ol>

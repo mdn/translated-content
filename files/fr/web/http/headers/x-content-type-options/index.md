@@ -1,11 +1,6 @@
 ---
 title: X-Content-Type-Options
 slug: Web/HTTP/Headers/X-Content-Type-Options
-tags:
-  - En-tête HTTP
-  - En-tête de réponse
-  - HTTP
-  - Réponse
 translation_of: Web/HTTP/Headers/X-Content-Type-Options
 ---
 

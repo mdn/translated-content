@@ -1,7 +1,6 @@
 ---
 title: Constructeur Intl.Collator()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
-browser-compat: javascript.builtins.Intl.Collator.Collator
 ---
 
 {{JSRef}}
@@ -13,9 +12,9 @@ Le constructeur **`Intl.Collator()`** crée un objet [`Intl.Collator`](/fr/docs/
 ## Syntaxe
 
 ```js
-new Intl.Collator()
-new Intl.Collator(locales)
-new Intl.Collator(locales, options)
+new Intl.Collator();
+new Intl.Collator(locales);
+new Intl.Collator(locales, options);
 ```
 
 ### Paramètres
@@ -46,7 +45,7 @@ new Intl.Collator(locales, options)
         - `trad`
         - `unihan`
         - `zhuyin`
-        > **Note :** Cette option peut également être définie via la propriété "`collation`" du paramètre `options`.
+          > **Note :** Cette option peut également être définie via la propriété "`collation`" du paramètre `options`.
     - `kn`
       - : Indique si une collation numérique devrait être utilisée (par exemple pour avoir "1" < "2" < "10"). Les valeurs possibles sont "`true`" et "`false`". Cette option peut également être indiquée via la propriété "`numeric`" du paramètre `options`.
     - `kf`
@@ -62,6 +61,7 @@ new Intl.Collator(locales, options)
       - : Indique si la comparaison est utilisée pour trier ou pour rechercher des correspondances. Les valeurs possibles sont "`sort`" et
         "`search`", la valeur par défaut est "`sort`".
     - `sensitivity`
+
       - : Indique les différences dans les chaînes de caractères qui entraînent un résultat non nul. Les valeurs possibles sont&nbsp;:
 
         - "`base`"&nbsp;: Seules les chaînes de caractères pour lesquelles les lettres de base sont différentes sont considérées comme différentes. Avec cette option, on a&nbsp;: a ≠ b, a = á, a = A.
@@ -103,7 +103,7 @@ new Intl.Collator(locales, options)
         - `trad`
         - `unihan`
         - `zhuyin`
-        > **Note :** Cette option peut également être définie via la clé d'extension Unicode `co`&nbsp;; si des valeurs sont fournies aux deux endroits, c'est la propriété d'`options` qui a la priorité.
+          > **Note :** Cette option peut également être définie via la clé d'extension Unicode `co`&nbsp;; si des valeurs sont fournies aux deux endroits, c'est la propriété d'`options` qui a la priorité.
 
 ## Exemples
 
@@ -112,9 +112,9 @@ new Intl.Collator(locales, options)
 Dans l'exemple suivant, on illustre la comparaison de deux chaînes de caractères et le résultat obtenu selon que l'une est située avant ou après, ou de façon équivalente selon l'ordre lexicographique de la langue&nbsp;:
 
 ```js
-console.log(new Intl.Collator().compare('a', 'c')); // → une valeur négative
-console.log(new Intl.Collator().compare('c', 'a')); // → une valeur positive
-console.log(new Intl.Collator().compare('a', 'a')); // → 0
+console.log(new Intl.Collator().compare("a", "c")); // → une valeur négative
+console.log(new Intl.Collator().compare("c", "a")); // → une valeur positive
+console.log(new Intl.Collator().compare("a", "a")); // → 0
 ```
 
 On notera que les résultats obtenus avec les lignes précédentes peuvent varier d'un navigateur à l'autre et entre les différentes versions. En effet, les valeurs numériques obtenues sont spécifiques aux implémentations et la spécification n'impose que le signe de la valeur obtenue.

@@ -509,7 +509,7 @@ dd {
 
 {{ EmbedLiveSample('Use_cases_for_auto-placement', '500', '230') }}
 
-<h2 id="What_can’t_we_do_with_auto-placement_yet">auto-placement では（まだ）できないこと</h2>
+<h2 id="What_can't_we_do_with_auto-placement_yet">auto-placement では（まだ）できないこと</h2>
 
 よく疑問に思うことがいくつかあります。現在のところ、グリッドのすべてのセルにアイテムを配置するようなことはできません。前回の「グリッド上の名前付きライン」のガイドをご覧になった方は、関連する問題をすでに思い浮かべているかもしれません。 CSSWG の GitHub リポジトリに[これに関する問題提起](https://github.com/w3c/csswg-drafts/issues/796)がありますので、自分の用途を追加してみてはいかがでしょうか。
 

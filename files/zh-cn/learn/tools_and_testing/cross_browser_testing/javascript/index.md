@@ -109,22 +109,23 @@ npm install -g jshint
 
 ```js
 function showHeroes(jsonObj) {
-  let heroes = jsonObj['members'];
+  let heroes = jsonObj["members"];
 
   for (const hero of heroes) {
     // …
-   }
- 
-   // …
- }
+  }
+
+  // …
+}
 ```
 
 所以当我们试图访问 `jsonObj` 的一个属性（正如你所期望的，它应该是一个 [JSON 对象](/zh-CN/docs/Learn/JavaScript/Objects/JSON)）时，代码就崩溃了。这应该是使用下面的 XMLHttpRequest 调用从外部的 `.json` 文件获取的：
 
 ```js
-let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+let requestURL =
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
 let request = new XMLHttpRequest();
-request.open('GET', requestURL);
+request.open("GET", requestURL);
 request.send();
 
 let superHeroes = request.response;
@@ -141,7 +142,7 @@ showHeroes(superHeroes);
 尝试将这样代码插入到第 31 行下方：
 
 ```js
-console.log('Response value: ' + superHeroes);
+console.log("Response value: " + superHeroes);
 ```
 
 在浏览器中刷新页面，你将在控制台中得到“Response value:”的输出，以及我们之前看到的相同的错误信息。
@@ -157,11 +158,11 @@ showHeroes(superHeroes);
 改成这样：
 
 ```js
-request.onload = function() {
+request.onload = function () {
   let superHeroes = request.response;
   populateHeader(superHeroes);
   showHeroes(superHeroes);
-}
+};
 ```
 
 总而言之，任何时候，只要有东西不工作了，在你的代码中的某个点上，一个值似乎不是它所要的，你就可以使用 `console.log()` 来打印出来，看看发生了什么。
@@ -178,7 +179,7 @@ request.onload = function() {
 
 - 在左边，你可以选择你要调试的脚本（在本例中我们只有一个）。
 - 中间的面板显示了所选脚本中的代码。
-- 右边的面板显示了与当前环境有关的有用细节——*断点*、*调用栈*和当前活动的*作用域*。
+- 右边的面板显示了与当前环境有关的有用细节——_断点_、*调用栈*和当前活动的*作用域*。
 
 这类工具的主要特点是能够为代码添加断点，这些是代码执行停止的点，在这一点上，你可以检查环境的当前状态，看看正在发生什么。
 
@@ -261,7 +262,7 @@ if ("geolocation" in navigator) {
 }
 ```
 
-你也可以为 CSS 特性编写这样的测试，例如测试 *[element.style.property](/zh-CN/docs/Web/API/HTMLElement/style)* 是否存在（例如：`paragraph.style.transform !== undefined`）。但对于 CSS 和 JavaScript 来说，使用一个成熟的特性检测库可能比一直写自己的更好。Modernizr 是特性检测测试的工业标准。
+你也可以为 CSS 特性编写这样的测试，例如测试 _[element.style.property](/zh-CN/docs/Web/API/HTMLElement/style)_ 是否存在（例如：`paragraph.style.transform !== undefined`）。但对于 CSS 和 JavaScript 来说，使用一个成熟的特性检测库可能比一直写自己的更好。Modernizr 是特性检测测试的工业标准。
 
 最后一点，不要把特性检测和**浏览器嗅探**（检测什么特定的浏览器在访问网站）混淆起来，这是一种可怕的做法，应该不惜一切代价加以阻止。更多细节请参见[使用不良的浏览器嗅探代码](#使用不良的浏览器嗅探代码)，稍后我们就会讲到。
 
@@ -308,9 +309,9 @@ Modernizr 的 [HTML5 Cross Browser Polyfill](https://github.com/Modernizr/Modern
 4. 在原来的 {{htmlelement("script")}} 元素内添加下列代码：
 
    ```js
-   const myImage = document.querySelector('.my-image');
+   const myImage = document.querySelector(".my-image");
 
-   fetch('flowers.jpg').then((response) => {
+   fetch("flowers.jpg").then((response) => {
      response.blob().then((myBlob) => {
        const objectURL = URL.createObjectURL(myBlob);
        myImage.src = objectURL;
@@ -319,7 +320,7 @@ Modernizr 的 [HTML5 Cross Browser Polyfill](https://github.com/Modernizr/Modern
    ```
 
 5. 即使你在不支持 [Fetch](/zh-CN/docs/Web/API/fetch) 的浏览器中加载它，你仍然应该看到花的图像出现——这不是很酷吗？
-    ![一个 fetch 基本示例的标题，配一张紫色花朵的照片](fetch-image.jpg)
+   ![一个 fetch 基本示例的标题，配一张紫色花朵的照片](fetch-image.jpg)
 
 > **备注：** 你可以在 [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) 找到我们的完成版（也请看[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)）。
 
@@ -333,7 +334,7 @@ Modernizr 的 [HTML5 Cross Browser Polyfill](https://github.com/Modernizr/Modern
 if (browserSupportsAllFeatures()) {
   main();
 } else {
-  loadScript('polyfills.js', main);
+  loadScript("polyfills.js", main);
 }
 
 function main(err) {
@@ -353,7 +354,7 @@ function browserSupportsAllFeatures() {
 
 ```js
 function loadScript(src, done) {
-  const js = document.createElement('script');
+  const js = document.createElement("script");
   js.src = src;
   js.onload = () => {
     done();
@@ -382,13 +383,15 @@ function loadScript(src, done) {
 例如，我们在文章前面谈到了箭头函数（在线示例见 [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html)，也可以看看[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/arrow-function.html)），它只在最新的浏览器上工作：
 
 ```js
-addEventListener("click", () => { });
+addEventListener("click", () => {});
 ```
 
 我们可以把它转译成一个传统的老式匿名函数，这样它就可以在老式浏览器中工作：
 
 ```js
-addEventListener("click", function() { /* … */ });
+addEventListener("click", function () {
+  /* … */
+});
 ```
 
 目前推荐的 JavaScript 转译工具是 [Babel](https://babeljs.io/)。它为适合转译的语言特性提供了转译功能。对于那些不能轻易转译成旧的等价物的功能，Babel 还提供了 polyfill 来提供支持。
@@ -406,9 +409,9 @@ addEventListener("click", function() { /* … */ });
 ```js
 let ua = navigator.userAgent;
 
-if (ua.includes('Firefox')) {
+if (ua.includes("Firefox")) {
   // 运行 Firefox 特定代码
-} else if (ua.includes('Chrome')) {
+} else if (ua.includes("Chrome")) {
   // 运行 Chrome 特定代码
 }
 ```
@@ -453,7 +456,7 @@ const audioCtx = new AudioContext();
 例如，尝试进入你的浏览器的开发者控制台，开始输入
 
 ```js
-window.AudioContext
+window.AudioContext;
 ```
 
 如果你的浏览器支持这一功能，它将带有自动完成提示。

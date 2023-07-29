@@ -585,7 +585,7 @@ function replaceAd(adBox) {
 
 {{EmbedLiveSample("fullpage_example", 750, 800)}}
 
-## Смотрите также:
+## Смотрите также
 
 - [Intersection Observer API](/ru/docs/Web/API/Intersection_Observer_API)
 - [Page Visibility API](/ru/docs/Web/API/Page_Visibility_API)

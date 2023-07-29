@@ -39,7 +39,7 @@ slug: Web/API/Document_Object_Model/Whitespace
 以下列文档为例：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -139,7 +139,7 @@ slug: Web/API/Document_Object_Model/Whitespace
 
 ### 在块格式化上下文的空白符
 
-上面我们只是看了包含行内元素的元素，以及行内格式化上下文。如果一个元素至少包含一个块元素，那么它就会建立所谓的[块格式化上下文](zh-CN/docs/Web/Guide/CSS/Block_formatting_context)。
+上面我们只是看了包含行内元素的元素，以及行内格式化上下文。如果一个元素至少包含一个块元素，那么它就会建立所谓的[块格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)。
 
 这种情况下，空白符的处理方式非常不同。
 
@@ -342,7 +342,6 @@ li {
  * 不使用 JavaScript 的“\s”，因为它包含不断行空白字符等其他字符。
  */
 
-
 /**
  * 测知某节点的文字内容是否全为空白。
  *
@@ -352,7 +351,6 @@ li {
 function is_all_ws(nod) {
   return !/[^\t\n\r ]/.test(nod.textContent);
 }
-
 
 /**
  * 测知是否应在遍历时略过某节点。
@@ -377,8 +375,7 @@ function is_ignorable(nod) {
  *               1) |sib| 的最近前一个“不可忽略节点”，由 |is_ignorable| 决定。或
  *               2) 若该节点前无任何此类节点，则返回 null。
  */
-function node_before( sib )
-{
+function node_before(sib) {
   while ((sib = sib.previousSibling)) {
     if (!is_ignorable(sib)) return sib;
   }

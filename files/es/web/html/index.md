@@ -1,5 +1,5 @@
 ---
-title: 'HTML: Lenguaje de etiquetas de hipertexto'
+title: "HTML: Lenguaje de etiquetas de hipertexto"
 slug: Web/HTML
 ---
 

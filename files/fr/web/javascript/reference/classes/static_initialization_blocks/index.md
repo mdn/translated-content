@@ -1,16 +1,6 @@
 ---
 title: Class static initialization blocks
 slug: Web/JavaScript/Reference/Classes/Static_initialization_blocks
-tags:
-  - Classes
-  - ECMAScript 2022
-  - JavaScript
-  - Language feature
-  - Static
-  - Reference
-  - Initialization
-original_slug: Web/JavaScript/Reference/Classes/Class_static_initialization_blocks
-browser-compat: javascript.classes.class_static_initialization_blocks
 ---
 
 {{jsSidebar("Classes")}}
@@ -40,10 +30,10 @@ The scope of the variables declared inside the static block is local to the bloc
 Since `var`, `function`, `const` or `let` declared in a `static {}` initialization block are local to the block, any `var` declarations in the block are not hoisted.
 
 ```js
-var y = 'Outer y';
+var y = "Outer y";
 
 class A {
-  static field = 'Inner y';
+  static field = "Inner y";
   static {
     var y = this.field;
   }
@@ -71,13 +61,13 @@ The output shows that the blocks and fields are evaluated in execution order.
 
 ```js
 class MyClass {
-  static field1 = console.log('field1 called');
+  static field1 = console.log("field1 called");
   static {
-    console.log('Class static block #1 called');
+    console.log("Class static block #1 called");
   }
-  static field2 = console.log('field2 called');
+  static field2 = console.log("field2 called");
   static {
-    console.log('Class static block #2 called');
+    console.log("Class static block #2 called");
   }
 }
 
@@ -98,7 +88,7 @@ This code shows how to access a public static field.
 
 ```js
 class A {
-  static field = 'A static field';
+  static field = "A static field";
   static {
     var y = this.field;
   }
@@ -110,7 +100,7 @@ This includes static properties, as shown below:
 
 ```js
 class A {
-  static fieldA = 'A.fieldA';
+  static fieldA = "A.fieldA";
 }
 class B extends A {
   static {
@@ -137,7 +127,7 @@ class D {
   }
 }
 
-getDPrivateField(new D('private'));
+getDPrivateField(new D("private"));
 // > private
 ```
 

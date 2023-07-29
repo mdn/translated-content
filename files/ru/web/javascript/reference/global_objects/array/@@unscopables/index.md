@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 
 {{JSRef}}
 
-Свойства символа **`@@unscopable`** содержат свойства имён, которые не были включены в ECMAScript до версии ES2015. Эти свойства исключены из привязок оператора [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with).
+Свойства символа **`@@unscopable`** содержат свойства имён, которые не были включены в ECMAScript до версии ES2015. Эти свойства исключены из привязок оператора [`with`](/ru/docs/Web/JavaScript/Reference/Statements/with).
 
 ## Синтаксис
 

@@ -17,7 +17,7 @@ original_slug: Learn/CSS/CSS_layout/미디어_쿼리_초보자_안내서
           href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 입문서</a
         >를 공부하세요), 그리고 CSS의 작동 방식을 파악하기 위해 (<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/ko/docs/Learn/CSS/First_steps"
           >CSS 첫걸음</a
         >과
         <a href="/ko/docs/Learn/CSS/Building_blocks">CSS 구성 블록</a>를

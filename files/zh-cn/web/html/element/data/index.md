@@ -48,9 +48,9 @@ slug: Web/HTML/Element/data
 ```html
 <p>新产品</p>
 <ul>
- <li><data value="398">迷你番茄酱</data></li>
- <li><data value="399">巨无霸番茄酱</data></li>
- <li><data value="400">超级巨无霸番茄酱</data></li>
+  <li><data value="398">迷你番茄酱</data></li>
+  <li><data value="399">巨无霸番茄酱</data></li>
+  <li><data value="400">超级巨无霸番茄酱</data></li>
 </ul>
 ```
 

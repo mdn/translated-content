@@ -5,7 +5,7 @@ slug: Web/API/setTimeout
 
 {{APIRef("HTML DOM")}}
 
-全局的 **`setTimeout()`** 方法设置一个定时器，该定时器在定时器到期后执行一个函数或指定的一段代码。
+全局的 **`setTimeout()`** 方法设置一个定时器，一旦定时器到期，就会执行一个函数或指定的代码片段。
 
 ## 语法
 

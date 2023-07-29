@@ -10,5 +10,5 @@ _Over-The-Air_ (**OTA** ou "Pelo-Ar") refere-se à atualização automática de 
 
 ### Conhecimentos Gerais
 
-- {{Interwiki("wikipedia", "Over-the-air")}} na Wikipedia
+- [Over-the-air](https://pt.wikipedia.org/wiki/Over-the-air) na Wikipedia
 - [Criando e aplicando pacotes de atualização para o Firefox OS](/pt-BR/Firefox_OS/Construindo_e_instalando_o_Firefox_OS/Criando_e_aplicando_pacotes_de_atualizacao_Firefox_OS)

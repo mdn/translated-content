@@ -1,5 +1,5 @@
 ---
-title: CSS Containment
+title: CSS 局限
 slug: Web/CSS/CSS_containment
 ---
 

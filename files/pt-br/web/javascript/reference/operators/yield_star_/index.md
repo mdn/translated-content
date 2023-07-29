@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/yield*
 
 {{jsSidebar("Operators")}}
 
-A **expressão** **`yield*`** é usada para delegar para outro objeto {{jsxref("Statements/function*", "generator")}} ou iterable.
+A **expressão `yield*`** é usada para delegar para outro objeto {{jsxref("Statements/function*", "generator")}} ou iterable.
 
 ## Sintaxe
 
@@ -113,7 +113,7 @@ console.log(result);          // "foo"
 
 ## Notas específicas do Firefox
 
-- A partir do Gecko 33, o tratamento da expressão yield foi atualizado para se conformar com a espeficação do ES2015 ({{bug(981599)}}):
+- A partir do Gecko 33, o tratamento da expressão yield foi atualizado para se conformar com a espeficação do ES2015 ([Erro do Firefox 981599](https://bugzil.la/981599)):
 
   - A restrição de linha finalizadora agora está implementada. Nenhuma linha finalizadora entre "yield" e "\*" é permitida. Código como o a seguir irá invocar uma exception {{jsxref("SyntaxError")}}:
 

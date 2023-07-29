@@ -56,5 +56,5 @@ if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWI
 
 ## Смотрите также
 
-- [`Node.contains`](/en-US/docs/DOM/Node.contains)
+- [`Node.contains`](/ru/docs/DOM/Node.contains)
 - [John Resig - Comparing Document Position](http://ejohn.org/blog/comparing-document-position/)

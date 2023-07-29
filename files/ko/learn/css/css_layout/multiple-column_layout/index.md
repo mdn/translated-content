@@ -15,7 +15,7 @@ CSS 다단 레이아웃 규격은 신문에서 볼 수 있듯이 콘텐츠를 �
         HTML의 기초 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 입문서</a
         >)와 CSS 작동 방식에 대한 개념(<a
-          href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+          href="/ko/docs/Learn/CSS/Introduction_to_CSS"
           >CSS 입문서</a
         >를 공부하세요.)
       </td>

@@ -13,7 +13,7 @@ slug: Learn/Server-side/Django/Admin_site
       <th scope="row">사전 준비:</th>
       <td>
         첫째로 완료하세요:
-        <a href="/en-US/docs/Learn/Server-side/Django/Models"
+        <a href="/ko/docs/Learn/Server-side/Django/Models"
           >Django Tutorial Part 3: Using models</a
         >.
       </td>

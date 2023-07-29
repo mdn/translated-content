@@ -1,14 +1,7 @@
 ---
 title: Atomics.xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/xor
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/xor
 ---
 
 {{JSRef}}
@@ -20,7 +13,7 @@ La méthode statique **`Atomics.xor()`** calcule le résultat d'un OU exclusif (
 ## Syntaxe
 
 ```js
-Atomics.xor(typedArray, index, valeur)
+Atomics.xor(typedArray, index, valeur);
 ```
 
 ### Paramètres
@@ -71,7 +64,7 @@ var ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.xor(ta, 0, 1); // renvoie 5, l'ancienne valeur
-Atomics.load(ta, 0);   // 4
+Atomics.load(ta, 0); // 4
 ```
 
 ## Spécifications

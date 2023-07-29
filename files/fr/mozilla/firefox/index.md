@@ -26,7 +26,7 @@ Découvrez comment créer des modules complémentaires pour [Firefox](https://ww
 
 ## Éditions de Firefox
 
-Firefox est disponible sous cinq **éditions** différentes, l'une d’entre-elles est forcément adaptée pour vous&nbsp;!
+Firefox est disponible sous cinq **éditions** différentes, l'une d'entre-elles est forcément adaptée pour vous&nbsp;!
 
 ### Firefox Nightly
 

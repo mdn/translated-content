@@ -10,4 +10,4 @@ Abstração em {{Glossary("programação de computadores")}} é uma forma de red
 
 ### Conhecimentos gerais
 
-- {{interwiki("wikipedia", "Abstração (programação)", "Abstração")}} na Wikipédia
+- [Abstração](<https://pt.wikipedia.org/wiki/Abstração_(programação)>) na Wikipédia

@@ -42,18 +42,18 @@ Para fazer arquivos conversarem entre si, você tem que fornecer um caminho de a
 1. Copie a imagem que você escolheu antes para sua pasta `imagens`.
 2. Abra seu arquivo `index.html` e insira o seguinte código exatamente como está escrito. Não se preocupe com o significado — nós vamos olhar com mais detalhes essa estrutura posteriormente.
 
-    ```html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>Minha página de teste</title>
-      </head>
-      <body>
-        <img src="" alt="Minha imagem de teste">
-      </body>
-    </html>
-    ```
+   ```html
+   <!doctype html>
+   <html>
+     <head>
+       <meta charset="utf-8" />
+       <title>Minha página de teste</title>
+     </head>
+     <body>
+       <img src="" alt="Minha imagem de teste" />
+     </body>
+   </html>
+   ```
 
 3. A linha `<img src="" alt="Minha imagem de teste">` é o código HTML que vai inserir uma imagem na página. Nós precisamos dizer ao HTML onde a imagem está. A imagem está dentro da pasta _imagens_, no mesmo diretório do `index.html`. Para trilhar o caminho de `index.html` para nossa imagem, o caminho é `imagens/nome-da-sua-imagem`. Por exemplo, nossa imagem é chamada `firefox-icon.png`, então, nosso caminho é `imagens/firefox-icon.png`.
 4. Insira o caminho dentro do seu código HTML, dentro das aspas do código `src=""`.

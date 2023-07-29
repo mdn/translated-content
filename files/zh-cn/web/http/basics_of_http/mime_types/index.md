@@ -83,7 +83,7 @@ _Multipart_ 类型表示细分领域的文件类型的种类，经常对应不�
 
 所有的 HTML 内容都应该使用这种类型。XHTML 的其他 MIME 类型（如`application/xml+html`）现在基本不再使用（HTML5 统一了这些格式）。
 
-> **备注：** You still need to use `application/xml` or `application/xhtml+xml` if you intend to make use of XML’s strict parsing rules, use [`<![CDATA[…]]>`](/en-US/docs/Web/API/CDATASection) or elements from non‑HTML, non‑SVG or non‑MathML XML namespaces, as `text/html`’s parsing semantics are subtly incompatible with those of `application/xml`.
+> **备注：** You still need to use `application/xml` or `application/xhtml+xml` if you intend to make use of XML’s strict parsing rules, use [`<![CDATA[…]]>`](/zh-CN/docs/Web/API/CDATASection) or elements from non‑HTML, non‑SVG or non‑MathML XML namespaces, as `text/html`’s parsing semantics are subtly incompatible with those of `application/xml`.
 
 ### text/javascript
 
@@ -141,9 +141,9 @@ HTML 并没有明确定义被用于{{HTMLElement("audio")}}和{{HTMLElement("vid
 | `audio/wave` `audio/wav` `audio/x-wav` `audio/x-pn-wav` | 音频流媒体文件。一般支持 PCM 音频编码 (WAVE codec "1") ，其他解码器有限支持（如果有的话）。                                                             |
 | `audio/webm`                                            | WebM 音频文件格式。Vorbis 和 Opus 是其最常用的解码器。                                                                                                  |
 | `video/webm`                                            | 采用 WebM 视频文件格式的音视频文件。VP8 和 VP9 是其最常用的视频解码器。Vorbis 和 Opus 是其最常用的音频解码器。                                          |
-| `audio/ogg`                                             | 采用 OGG 多媒体文件格式的音频文件。Vorbis 是这个多媒体文件格式最常用的音频解码器。                                                                     |
-| `video/ogg`                                             | 采用 OGG 多媒体文件格式的音视频文件。常用的视频解码器是 Theora；音频解码器为 Vorbis。                                                                  |
-| `application/ogg`                                       | 采用 OGG 多媒体文件格式的音视频文件。常用的视频解码器是 Theora；音频解码器为 Vorbis。                                                                  |
+| `audio/ogg`                                             | 采用 OGG 多媒体文件格式的音频文件。Vorbis 是这个多媒体文件格式最常用的音频解码器。                                                                      |
+| `video/ogg`                                             | 采用 OGG 多媒体文件格式的音视频文件。常用的视频解码器是 Theora；音频解码器为 Vorbis。                                                                   |
+| `application/ogg`                                       | 采用 OGG 多媒体文件格式的音视频文件。常用的视频解码器是 Theora；音频解码器为 Vorbis。                                                                   |
 | `application/json`                                      | application/json (MIME_type) <https://en.wikipedia.org/wiki/Media_type#Common_examples> <https://www.iana.org/assignments/media-types/application/json> |
 
 ### multipart/form-data

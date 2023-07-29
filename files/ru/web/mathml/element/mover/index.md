@@ -13,7 +13,7 @@ translation_of: Web/MathML/Element/mover
 
 {{MathMLRef}}
 
-Элемент `<mover>` языка разметки MathML используется для добавления акцента или ограничения на выражение. Используйте синтаксис: ` <mover>``базовый надстрочный символ</mover> `
+Элемент `<mover>` языка разметки MathML используется для добавления акцента или ограничения на выражение. Используйте синтаксис: `<mover>``базовый надстрочный символ</mover>`
 
 ## Атрибуты
 
@@ -42,18 +42,19 @@ translation_of: Web/MathML/Element/mover
 
 ```html
 <math>
-
-<mover accent="true">
-  <mrow>
-    <mi> x </mi>
-    <mo> + </mo>
-    <mi> y </mi>
-    <mo> + </mo>
-    <mi> z </mi>
-  </mrow>
-  <mo> &#x23DE; <!-- Верхняя фигурная скобка --> </mo>
-</mover>
-
+  <mover accent="true">
+    <mrow>
+      <mi> x </mi>
+      <mo> + </mo>
+      <mi> y </mi>
+      <mo> + </mo>
+      <mi> z </mi>
+    </mrow>
+    <mo>
+      &#x23DE;
+      <!-- Верхняя фигурная скобка -->
+    </mo>
+  </mover>
 </math>
 ```
 

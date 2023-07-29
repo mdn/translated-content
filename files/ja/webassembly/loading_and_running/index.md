@@ -26,22 +26,22 @@ WebAssembly は `<script type='module'>` または ES2015 の `import` 文とま
 wasm モジュールをフェッチする最も簡単で効率的な方法は、新しい {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用することです。このメソッドは最初の引数として `fetch()` を呼び出すことができ、1 つのステップでフェッチ、モジュールをインスタンス化し、サーバからストリームされる生のバイトコードにアクセスします。
 
 ```js
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then((results) => {
-  // Do something with the results!
-});
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (results) => {
+    // Do something with the results!
+  },
+);
 ```
 
 直接ストリームでは動作しない古い {{jsxref("WebAssembly.instantiate()")}} メソッドを使用した場合、フェッチされたバイトコードを {{jsxref("ArrayBuffer")}} に変換する必要があります。次のようにです。
 
 ```js
-fetch('module.wasm').then((response) =>
-  response.arrayBuffer()
-).then((bytes) =>
-  WebAssembly.instantiate(bytes, importObject)
-).then((results) => {
-  // コンパイルされた結果 (results) で何かする!
-});
+fetch("module.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((results) => {
+    // コンパイルされた結果 (results) で何かする!
+  });
 ```
 
 ### 余談: instantiate() のオーバーロード
@@ -64,18 +64,19 @@ fetch('module.wasm').then((response) =>
 JavaScript 内で WebAssembly インスタンスが有効になったら {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}} プロパティを通してエクスポートされた機能を使い始めることができます。コードは以下のようになります。
 
 ```js
-WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
-.then((obj) => {
-  // Call an exported function:
-  obj.instance.exports.exported_func();
+WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
+  (obj) => {
+    // Call an exported function:
+    obj.instance.exports.exported_func();
 
-  // or access the buffer contents of an exported memory:
-  const i32 = new Uint32Array(obj.instance.exports.memory.buffer);
+    // or access the buffer contents of an exported memory:
+    const i32 = new Uint32Array(obj.instance.exports.memory.buffer);
 
-  // or access the elements of an exported table:
-  const table = obj.instance.exports.table;
-  console.log(table.get(0)());
-})
+    // or access the elements of an exported table:
+    const table = obj.instance.exports.table;
+    console.log(table.get(0)());
+  },
+);
 ```
 
 > **メモ:** WebAssembly モジュールからのエクスポートの仕組みの詳細については [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API) と [WebAssembly テキストフォーマットを理解する](/ja/docs/WebAssembly/Understanding_the_text_format) を参照してください。
@@ -93,8 +94,8 @@ WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
 
 ```js
 const request = new XMLHttpRequest();
-request.open('GET', 'simple.wasm');
-request.responseType = 'arraybuffer';
+request.open("GET", "simple.wasm");
+request.responseType = "arraybuffer";
 request.send();
 
 request.onload = () => {

@@ -29,4 +29,4 @@ if (-Infinity)
 - {{Glossary("Type_Conversion", "Coercion")}}
 - {{Glossary("Boolean")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Glossary")}}
+{{QuickLinksWithSubpages("/es/docs/Glossary")}}

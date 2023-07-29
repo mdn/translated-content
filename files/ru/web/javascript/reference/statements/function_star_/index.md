@@ -136,5 +136,5 @@ var obj = new f; // throws "TypeError: f is not a constructor"
 - Другие ресурсы:
 
   - Компилятор [Regenerator](http://facebook.github.io/regenerator/) из ES2015 в ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
+  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
   - [Task.js](http://taskjs.org/)

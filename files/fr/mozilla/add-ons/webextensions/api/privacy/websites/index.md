@@ -80,21 +80,21 @@ function onSet(result) {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-
   var getting = browser.privacy.websites.hyperlinkAuditingEnabled.get({});
   getting.then((got) => {
     console.log(got.value);
-    if ((got.levelOfControl === "controlled_by_this_extension") ||
-        (got.levelOfControl === "controllable_by_this_extension")) {
+    if (
+      got.levelOfControl === "controlled_by_this_extension" ||
+      got.levelOfControl === "controllable_by_this_extension"
+    ) {
       var setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
-        value: true
+        value: true,
       });
       setting.then(onSet);
     } else {
       console.log("Not able to set hyperlinkAuditingEnabled");
     }
   });
-
 });
 ```
 

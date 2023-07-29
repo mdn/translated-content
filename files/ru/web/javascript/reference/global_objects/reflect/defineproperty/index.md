@@ -53,7 +53,7 @@ obj.x; // 7
 
 ### Проверка успешно ли было определено свойство
 
-При использовании {{jsxref("Object.defineProperty")}}, который возвращал объект в случае успеха, либо выбрасывал исключение {{jsxref("TypeError")}}, вы должны были использовать конструкцию [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) для того, чтобы поймать ошибку, которая случилась при определении свойства. Потому что `Reflect.defineProperty` возвращает {{jsxref("Boolean")}} в любом случае, вы можете использовать конструкцию [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else):
+При использовании {{jsxref("Object.defineProperty")}}, который возвращал объект в случае успеха, либо выбрасывал исключение {{jsxref("TypeError")}}, вы должны были использовать конструкцию [`try...catch`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch) для того, чтобы поймать ошибку, которая случилась при определении свойства. Потому что `Reflect.defineProperty` возвращает {{jsxref("Boolean")}} в любом случае, вы можете использовать конструкцию [`if...else`](/ru/docs/Web/JavaScript/Reference/Statements/if...else):
 
 ```js
 if (Reflect.defineProperty(target, property, attributes)) {

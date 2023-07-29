@@ -1,14 +1,6 @@
 ---
 title: DOMRectReadOnly.y
 slug: Web/API/DOMRectReadOnly/y
-tags:
-  - API
-  - Coordonnées
-  - DOM
-  - Géométrie
-  - Propriétés
-  - Rectangle
-  - 'y'
 translation_of: Web/API/DOMRectReadOnly/y
 ---
 

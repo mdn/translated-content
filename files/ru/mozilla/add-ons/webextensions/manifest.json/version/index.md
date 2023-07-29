@@ -7,6 +7,7 @@ tags:
   - version
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/version
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

@@ -419,7 +419,7 @@ const [,, { name }] = props;
 console.log(name); // "FizzBuzz"
 ```
 
-#### Se busca la cadena de prototipos al desestructurar el objeto.
+#### Se busca la cadena de prototipos al desestructurar el objeto
 
 Al deconstruir un objeto, si no se accede a una propiedad en sí misma, continuará buscando a lo largo de la cadena de prototipos.
 

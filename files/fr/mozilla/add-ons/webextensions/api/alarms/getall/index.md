@@ -13,7 +13,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var getAlarms = browser.alarms.getAll()
+var getAlarms = browser.alarms.getAll();
 ```
 
 ### Paramètres

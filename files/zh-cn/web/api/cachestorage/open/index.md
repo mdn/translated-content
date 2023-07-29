@@ -13,7 +13,7 @@ slug: Web/API/CacheStorage/open
 
 ```js
 // "caches" is a global read-only variable, which is an instance of CacheStorage,
-// For more info, refer to: https://developer.mozilla.org/en-US/docs/Web/API/caches
+// For more info, refer to: https://developer.mozilla.org/zh-CN/docs/Web/API/caches
 
 caches.open(cacheName).then(function(cache) {
   // Do something with your cache

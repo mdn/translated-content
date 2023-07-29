@@ -53,7 +53,7 @@ apps.onsuccess = function () {
           request +
           '" permission, which is "' +
           p +
-          '"'
+          '"',
       );
     }
   });

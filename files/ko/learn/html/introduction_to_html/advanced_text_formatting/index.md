@@ -12,12 +12,12 @@ slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
     <tr>
       <th scope="row">요구 기술:</th>
       <td>
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Getting started with HTML</a
         >
         에 설명된 기본적인 HTML 숙련도.
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
           >HTML text fundamentals</a
         >
         에서 설명하는 텍스트 포맷팅에 대한 지식.
@@ -161,7 +161,7 @@ Quotation Element</em>) indicates that the enclosed text is an extended quotatio
 이것을 block quote 로 변경하기 위해서 아래와 같이 할 수 있습니다.
 
 ```html
-<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+<blockquote cite="https://developer.mozilla.org/ko/docs/Web/HTML/Element/blockquote">
   <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
   Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
 </blockquote>
@@ -176,7 +176,7 @@ Quotation Element</em>) indicates that the enclosed text is an extended quotatio
 인라인 인용구는 `<q>` 요소를 사용한다는 점만 제외하면 블럭 인용구와 동일하게 동작합니다. 아래의 마크업 예시는 MDN `<q>` 페이지의 인용문을 포함합니다.
 
 ```html
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
+<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/ko/docs/Web/HTML/Element/q">intended
 for short quotations that don't require paragraph breaks.</q></p>
 ```
 
@@ -189,17 +189,17 @@ The quote element — `<q>` — is "intended for short quotations that don't req
 {{htmlattrxref("cite","blockquote")}}요소의 컨텐츠는 유용하게 보이지만 안타깝게도 브라우저, 스크린 리더 등은 이를 이용해서 할 수 있는 것이 많지 않습니다. 브라우저는 javascript나 CSS로 여러분이 직접 해결책을 제시하지 않는다면 `cite` 컨텐츠를 화면에 표시할 방법이 없습니다. 페이지에서 인용 출처를 화면에 나타나게 하고 싶다면 `<cite>` 요소를 사용하는 것이 더 좋습니다. 이는 이름 그대로 출처를 포함하기 위해서 사용됩니다. — `<cite>` 요소 안에 있는 출처에 대한 링크를 연결할 수 있습니다.
 
 ```html
-<p>According to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+<p>According to the <a href="https://developer.mozilla.org/ko/docs/Web/HTML/Element/blockquote">
 <cite>MDN blockquote page</cite></a>:
 </p>
 
-<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+<blockquote cite="https://developer.mozilla.org/ko/docs/Web/HTML/Element/blockquote">
   <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
   Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
 </blockquote>
 
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
-for short quotations that don't require paragraph breaks.</q> -- <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/ko/docs/Web/HTML/Element/q">intended
+for short quotations that don't require paragraph breaks.</q> -- <a href="https://developer.mozilla.org/ko/docs/Web/HTML/Element/q">
 <cite>MDN q page</cite></a>.</p>
 ```
 

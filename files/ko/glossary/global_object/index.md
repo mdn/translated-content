@@ -55,7 +55,7 @@ greeting: function greeting() {
 
 ## 같이 보기
 
-- [MDN Web Docs Glossary](/en-US/docs/Glossary)
+- [MDN Web Docs Glossary](/ko/docs/Glossary)
 
   - {{glossary("global scope")}}
   - {{glossary("object")}}

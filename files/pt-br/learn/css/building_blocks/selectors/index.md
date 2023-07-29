@@ -22,12 +22,12 @@ Em {{Glossary("CSS")}}, os seletores são usados para direcionar os elementos {{
           >trabalhar com arquivos</a
         > , conceitos básicos de HTML (estude
         <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
           >Introdução ao HTML</a
         >
         ) e uma ideia de como o CSS funciona (estude os
         <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps"
+          href="https://developer.mozilla.org/pt-BR/docs/Learn/CSS/First_steps"
           >primeiros passos do CSS</a
         > ).
       </td>
@@ -65,7 +65,7 @@ h1 {
 
 Eu também poderia combiná-los em uma lista de seletores, adicionando uma vírgula entre eles.
 
-```css
+```css-nolint
 h1, .special {
   color: blue;
 }
@@ -86,7 +86,7 @@ No exemplo ao vivo abaixo, tente combinar os dois seletores que têm declaraçõ
 
 Ao agrupar seletores dessa forma, se algum seletor for inválido, a regra inteira será ignorada.
 
-No exemplo a seguir, a regra do seletor de classe inválida será ignorada, enquanto o `h1`ainda seria estilizado.
+No exemplo a seguir, a regra do seletor de classe inválida será ignorada, enquanto o `h1` ainda seria estilizado.
 
 ```css
 h1 {
@@ -98,10 +98,11 @@ h1 {
 }
 ```
 
-Quando combinados, no entanto, nem o `h1`nem a classe terão o estilo, pois a regra inteira é considerada inválida.
+Quando combinados, no entanto, nem o `h1` nem a classe terão o estilo, pois a regra inteira é considerada inválida.
 
 ```css
-h1, ..special {
+h1,
+..special {
   color: blue;
 }
 ```
@@ -115,19 +116,22 @@ Existem alguns agrupamentos diferentes de seletores e saber qual tipo de seletor
 Este grupo inclui seletores que têm como alvo um elemento HTML, como um `<h1>`.
 
 ```css
-h1 { }
+h1 {
+}
 ```
 
 Também inclui seletores que direcionam uma classe:
 
 ```css
-.box { }
+.box {
+}
 ```
 
 ou um ID:
 
 ```css
-#unique { }
+#unique {
+}
 ```
 
 ### Seletores de atributos
@@ -135,13 +139,16 @@ ou um ID:
 Este grupo de seletores oferece diferentes maneiras de selecionar elementos com base na presença de um determinado atributo em um elemento:
 
 ```css
-a[title] { }
+a[title] {
+}
 ```
 
 Ou até mesmo faça uma seleção com base na presença de um atributo com um valor específico:
 
 ```css
-a[href="https://example.com"] { }
+a[href="https://example.com"]
+{
+}
 ```
 
 ### Pseudo classes e pseudo-elementos
@@ -149,13 +156,15 @@ a[href="https://example.com"] { }
 Este grupo de seletores inclui pseudo classes, que definem o estilo de certos estados de um elemento. A `:hover`pseudoclasse, por exemplo, seleciona um elemento apenas quando ele está sendo passado pelo ponteiro do mouse:
 
 ```css
-a:hover { }
+a:hover {
+}
 ```
 
 Também inclui pseudoelementos, que selecionam uma determinada parte de um elemento em vez do próprio elemento. Por exemplo, `::first-line`sempre seleciona a primeira linha de texto dentro de um elemento (a `<p>`no caso abaixo), agindo como se a tivesse `<span>`sido colocado em volta da primeira linha formatada e então selecionado.
 
 ```css
-p::first-line { }
+p::first-line {
+}
 ```
 
 ### Combinadores
@@ -163,7 +172,8 @@ p::first-line { }
 O grupo final de seletores combina outros seletores para direcionar os elementos em nossos documentos. O seguinte, por exemplo, seleciona parágrafos que são filhos diretos de `<article>`elementos usando o combinador filho ( `>`):
 
 ```css
-article > p { }
+article > p {
+}
 ```
 
 ## Próximos passos

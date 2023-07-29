@@ -52,7 +52,7 @@ buttonElement.addEventListener("click", {
 
 {{EmbedLiveSample('範例')}}
 
-### 檢閱相關:
+### 檢閱相關
 
 - [addEventListener](/zh-TW/docs/Web/API/EventTarget/addEventListener)
 

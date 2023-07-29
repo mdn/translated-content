@@ -9,9 +9,9 @@ slug: Web/HTTP/Headers/Keep-Alive
 
 > **备注：** 需要将 The {{HTTPHeader("Connection")}} 首部的值设置为 "keep-alive" 这个首部才有意义。同时需要注意的是，在 HTTP/2 协议中， {{HTTPHeader("Connection")}} 和 {{HTTPHeader("Keep-Alive")}} 是被忽略的；在其中采用其他机制来进行连接管理。
 
-| Header type                                      | {{Glossary("General header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("General header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | no                             |
 
 ## 语法
 
@@ -22,6 +22,7 @@ Keep-Alive: parameters
 ## 指令
 
 - _parameters_
+
   - : 一系列用逗号隔开的参数，每一个参数由一个标识符和一个值构成，并使用等号 (`'='`) 隔开。下述标识符是可用的：
 
     - `timeout`：指定了一个空闲连接需要保持打开状态的最小时长（以秒为单位）。需要注意的是，如果没有在传输层设置 keep-alive TCP message 的话，大于 TCP 层面的超时设置会被忽略。

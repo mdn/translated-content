@@ -1,12 +1,6 @@
 ---
 title: Event.cancelable
 slug: Web/API/Event/cancelable
-tags:
-  - API
-  - Annulable
-  - DOM
-  - Propriétés
-  - évènements
 translation_of: Web/API/Event/cancelable
 ---
 
@@ -21,7 +15,7 @@ La plupart des événements natifs du navigateur qui peuvent être annulés sont
 ## Syntaxe
 
 ```js
-bool = event.cancelable
+bool = event.cancelable;
 ```
 
 - Le résultat est un `booléen` qui est `true` (_vrai_) si l'événement peut être annulé.
@@ -32,7 +26,7 @@ Par exemple, les vendeurs de navigateurs proposent que l'évènement [`wheel`](/
 
 ```js
 function preventScrollWheel(event) {
-  if (typeof event.cancelable !== 'boolean' || event.cancelable) {
+  if (typeof event.cancelable !== "boolean" || event.cancelable) {
     // L'événement peut être annulé, alors nous le faisons.
     event.preventDefault();
   } else {
@@ -43,7 +37,7 @@ function preventScrollWheel(event) {
   }
 }
 
-document.addEventListener('wheel', preventCancelableEvents);
+document.addEventListener("wheel", preventCancelableEvents);
 ```
 
 ## Notes

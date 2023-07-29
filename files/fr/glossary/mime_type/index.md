@@ -12,7 +12,7 @@ Il répond au même objectif que les extensions de fichiers traditionnellement u
 
 ### Culture générale
 
-- [Type de médias](https://fr.wikipedia.org/wiki/Type_de_m%C3%A9dias) sur Wikipédia
+- [Type de médias](https://fr.wikipedia.org/wiki/Type_de_médias) sur Wikipédia
 
 ### Référence technique
 

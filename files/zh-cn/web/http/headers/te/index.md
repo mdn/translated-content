@@ -9,9 +9,9 @@ slug: Web/HTTP/Headers/TE
 
 可以参考 {{HTTPHeader("Transfer-Encoding")}} 来获取更多关于传输编码的细节信息。值得注意的是，支持 HTTP/1.1 协议的接收方一定可以处理 `chunked` 传输编码请求，所以没有必要一定在 `TE` 首部指定“chunked”关键字。然而，如果客户端将要接收编码在 chunked 包体里面的"trailer"信息的时候，主动指定该头部将会非常有用。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | yes                            |
 
 ## 语法
 

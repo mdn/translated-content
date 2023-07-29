@@ -14,7 +14,7 @@ slug: Learn/Server-side/Django/Forms
       <td>
         아래 파트를 포함하여 앞선 모든 튜토리얼 파트의 학습을 완료할것
         <a
-          href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions"
+          href="/ko/docs/Learn/Server-side/Django/authentication_and_sessions"
           >Django 튜토리얼 파트 8: 사용자 인증과 이용권한</a
         >.
       </td>

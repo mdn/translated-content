@@ -11,9 +11,9 @@ Lancer quand la fenêtre est créée
 ## Syntaxe
 
 ```js
-browser.windows.onCreated.addListener(listener)
-browser.windows.onCreated.removeListener(listener)
-browser.windows.onCreated.hasListener(listener)
+browser.windows.onCreated.addListener(listener);
+browser.windows.onCreated.removeListener(listener);
+browser.windows.onCreated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
