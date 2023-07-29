@@ -43,11 +43,14 @@ HTMLElement.hidden = true | false;
 ### JavaScript
 
 ```js
-document.getElementById("okButton")
-        .addEventListener("click", function() {
-  document.getElementById("welcome").hidden = true;
-  document.getElementById("awesome").hidden = false;
-}, false);
+document.getElementById("okButton").addEventListener(
+  "click",
+  function () {
+    document.getElementById("welcome").hidden = true;
+    document.getElementById("awesome").hidden = false;
+  },
+  false,
+);
 ```
 
 这段代码用来为 welcome 面板中的按钮绑定一个事件监听器，这个事件监听器会隐藏 welcome 面板并在其原位置显示出 follow-up 面板。
@@ -75,9 +78,10 @@ welcome 面板和 follow-up 面板的 HTML 代码。
 ```html
 <div id="awesome" class="panel" hidden>
   <h1>Thanks!</h1>
-  <p>Thank you <strong>so</strong> much for agreeing to be
-  awesome today! Now get out there and do awesome things
-  awesomely to make the world more awesome!</p>
+  <p>
+    Thank you <strong>so</strong> much for agreeing to be awesome today! Now get
+    out there and do awesome things awesomely to make the world more awesome!
+  </p>
 </div>
 ```
 
@@ -87,7 +91,11 @@ welcome 面板和 follow-up 面板的 HTML 代码。
 
 ```css
 .panel {
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border: 1px solid #22d;
   padding: 12px;
   width: 500px;
@@ -95,7 +103,11 @@ welcome 面板和 follow-up 面板的 HTML 代码。
 }
 
 .button {
-  font: 22px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    22px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   padding: 5px 36px;
 }
 
