@@ -40,9 +40,9 @@ scroll-margin: unset;
 
 ## 描述
 
-You can see the effect of `scroll-margin` by scrolling to a point partway between two of the "pages" of the example's content. The value specified for `scroll-margin` determines how much of the page that's primarily outside the snapport should remain visible.
+通过滚动至示例内容两“页”之间的一点可见 `scroll-margin` 的效果。为 `scroll-margin` 指定的值决定了页面主要位于吸附口外的多少部分应保持可见。
 
-Thus, the `scroll-margin` values represent outsets defining the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
+因此 `scroll-margin` 值表示定义滚动吸附区域的外边距，此区域用于将此盒吸附至滚动口。滚动吸附区域的确定方法为：取变换后的边框盒，求其矩形包围盒（与滚动容器的坐标空间中的轴对齐），再加上指定的外边距。
 
 ## 形式定义
 
