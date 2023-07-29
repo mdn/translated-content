@@ -12,11 +12,11 @@ slug: Web/API/HTMLElement/click
 
 ## 语法
 
-```js
-element.click();
+```js-nolint
+click()
 ```
 
-## 用例
+## 示例
 
 当鼠标移动过复选框时模拟一个点击事件：
 

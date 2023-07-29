@@ -13,8 +13,10 @@ slug: Web/API/HTMLCanvasElement/toBlob
 
 ## 语法
 
-```js
-toBlob(callback, type, quality);
+```js-nolint
+toBlob(callback)
+toBlob(callback, type)
+toBlob(callback, type, quality)
 ```
 
 ### 参数

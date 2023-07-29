@@ -9,8 +9,8 @@ slug: Web/API/History/back
 
 ## 语法
 
-```js
-window.history.back();
+```js-nolint
+back()
 ```
 
 ## 示例

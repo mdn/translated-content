@@ -11,8 +11,8 @@ slug: Web/API/FormData/FormData
 
 ## 语法
 
-```js
-var formData = new FormData(form);
+```js-nolint
+new FormData(form)
 ```
 
 ### 参数

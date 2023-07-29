@@ -13,8 +13,8 @@ slug: Web/API/Headers/append
 
 ## 语法
 
-```js
-myHeaders.append(name, value);
+```js-nolint
+append(name, value)
 ```
 
 ### 参数
