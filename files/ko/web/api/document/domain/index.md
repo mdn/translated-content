@@ -12,8 +12,8 @@ slug: Web/API/Document/domain
 ## 구문
 
 ```js
-const domainString = document.domain
-document.domain = domainString
+const domainString = document.domain;
+document.domain = domainString;
 ```
 
 ### 값

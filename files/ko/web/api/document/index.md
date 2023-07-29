@@ -2,6 +2,7 @@
 title: Document
 slug: Web/API/Document
 ---
+
 {{APIRef("DOM")}}
 
 **`Document`** 인터페이스는 브라우저가 불러온 웹 페이지를 나타내며, 페이지 콘텐츠([DOM 트리](/ko/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core))의 진입점 역할을 수행합니다. DOM 트리는 {{HTMLElement("body")}}와 {{HTMLElement("table")}} 및 [여러 다른](/ko/docs/Web/HTML/Element) 요소를 포함합니다. `Document`는 페이지의 URL을 얻거나 문서에 새로운 요소를 생성하는 등의 기능을 전역적으로 제공합니다.

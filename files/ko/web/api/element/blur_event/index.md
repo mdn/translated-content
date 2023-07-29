@@ -25,12 +25,12 @@ original_slug: Web/Events/blur
 
 ## Properties
 
-| Property                                 | Type                                               | Description                                |
-| ---------------------------------------- | -------------------------------------------------- | ------------------------------------------ |
+| Property                           | Type                                     | Description                                |
+| ---------------------------------- | ---------------------------------------- | ------------------------------------------ |
 | `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target (DOM element)                 |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                   | The type of event.                         |
-| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                       | Whether the event normally bubbles or not. |
-| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                       | Whether the event is cancellable or not.   |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | The type of event.                         |
+| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Whether the event normally bubbles or not. |
+| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Whether the event is cancellable or not.   |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | null                                       |
 
 ## 이벤트 위임
@@ -41,8 +41,8 @@ original_slug: Web/Events/blur
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <input type="text" placeholder="text input" />
+  <input type="password" placeholder="password" />
 </form>
 ```
 
@@ -50,12 +50,20 @@ original_slug: Web/Events/blur
 
 ```js
 var form = document.getElementById("form");
-form.addEventListener("focus", function( event ) {
-  event.target.style.background = "pink";
-}, true);
-form.addEventListener("blur", function( event ) {
-  event.target.style.background = "";
-}, true);
+form.addEventListener(
+  "focus",
+  function (event) {
+    event.target.style.background = "pink";
+  },
+  true,
+);
+form.addEventListener(
+  "blur",
+  function (event) {
+    event.target.style.background = "";
+  },
+  true,
+);
 ```
 
 #### 결과

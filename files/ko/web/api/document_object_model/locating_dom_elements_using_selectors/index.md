@@ -25,13 +25,13 @@ You may find examples and details by reading the documentation for the [`querySe
 The selector methods accept one or more comma-separated selectors to determine what element or elements should be returned. For example, to select all paragraph (`p`) elements in a document whose CSS class is either `warning` or `note`, you can do the following:
 
 ```js
-var special = document.querySelectorAll( "p.warning, p.note" );
+var special = document.querySelectorAll("p.warning, p.note");
 ```
 
 You can also query by ID. For example:
 
 ```js
-var el = document.querySelector( "#main, #basic, #exclamation" );
+var el = document.querySelector("#main, #basic, #exclamation");
 ```
 
 After executing the above code, `el` contains the first element in the document whose ID is one of `main`, `basic`, or `exclamation`.
