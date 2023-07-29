@@ -9,8 +9,8 @@ slug: Web/API/Request/blob
 
 ## 语法
 
-```js
-blob();
+```js-nolint
+blob()
 ```
 
 ### 参数

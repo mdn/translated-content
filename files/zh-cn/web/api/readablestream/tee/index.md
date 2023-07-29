@@ -15,8 +15,8 @@ slug: Web/API/ReadableStream/tee
 
 ## 语法
 
-```js
-tee();
+```js-nolint
+tee()
 ```
 
 ### 参数

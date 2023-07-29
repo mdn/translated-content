@@ -13,8 +13,8 @@ reader 的锁在仍有待处理的读取请求时无法释放，即，如果 rea
 
 ## 语法
 
-```js
-releaseLock();
+```js-nolint
+releaseLock()
 ```
 
 ### 参数

@@ -11,8 +11,8 @@ slug: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
 
 ## 语法
 
-```js
-new ReadableStreamDefaultReader(stream);
+```js-nolint
+new ReadableStreamDefaultReader(stream)
 ```
 
 ### 参数

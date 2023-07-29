@@ -9,8 +9,8 @@ slug: Web/API/ReadableStreamDefaultReader/read
 
 ## 语法
 
-```js
-read();
+```js-nolint
+read()
 ```
 
 ### 参数

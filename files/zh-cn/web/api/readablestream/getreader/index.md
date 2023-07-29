@@ -9,9 +9,9 @@ slug: Web/API/ReadableStream/getReader
 
 ## 语法
 
-```js
-getReader();
-getReader(mode);
+```js-nolint
+getReader()
+getReader(mode)
 ```
 
 ### 参数

@@ -11,9 +11,9 @@ slug: Web/API/ReadableStream/pipeThrough
 
 ## 语法
 
-```js
-pipeThrough(transformStream);
-pipeThrough(transformStream, options);
+```js-nolint
+pipeThrough(transformStream)
+pipeThrough(transformStream, options)
 ```
 
 ### 参数

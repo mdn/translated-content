@@ -11,9 +11,9 @@ slug: Web/API/ReadableStream/pipeTo
 
 ## 语法
 
-```js
-pipeTo(destination);
-pipeTo(destination, options);
+```js-nolint
+pipeTo(destination)
+pipeTo(destination, options)
 ```
 
 ### 参数

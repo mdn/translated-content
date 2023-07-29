@@ -9,8 +9,8 @@ slug: Web/API/PerformanceObserver/disconnect
 
 ## 语法
 
-```js
-disconnect();
+```js-nolint
+disconnect()
 ```
 
 ### 参数

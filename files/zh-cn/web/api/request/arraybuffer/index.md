@@ -9,8 +9,8 @@ slug: Web/API/Request/arrayBuffer
 
 ## 语法
 
-```js
-arrayBuffer();
+```js-nolint
+arrayBuffer()
 ```
 
 ### 参数

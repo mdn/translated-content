@@ -11,8 +11,8 @@ slug: Web/API/Request/json
 
 ## 语法
 
-```js
-json();
+```js-nolint
+json()
 ```
 
 ### 参数

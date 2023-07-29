@@ -11,9 +11,9 @@ cancel 用于在不再需要来自它的任何数据的情况下（即使仍有�
 
 ## 语法
 
-```js
-cancel();
-cancel(reason);
+```js-nolint
+cancel()
+cancel(reason)
 ```
 
 ### 参数

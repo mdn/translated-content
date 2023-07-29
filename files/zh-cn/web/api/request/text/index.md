@@ -9,8 +9,8 @@ slug: Web/API/Request/text
 
 ## 语法
 
-```js
-text();
+```js-nolint
+text()
 ```
 
 ### 参数
