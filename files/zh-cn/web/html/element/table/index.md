@@ -618,7 +618,9 @@ tr:last-child td {
 
 ```html
 <table>
-  <caption>表格名称和值</caption>
+  <caption>
+    表格名称和值
+  </caption>
   <tbody>
     <tr>
       <th scope="col">名称</th>

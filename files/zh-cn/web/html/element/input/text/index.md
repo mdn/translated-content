@@ -164,11 +164,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 <form>
   <div>
     <label for="uname">输入一个用户名：</label>
-    <input
-      type="text"
-      id="uname"
-      name="name"
-      placeholder="一个小写单词" />
+    <input type="text" id="uname" name="name" placeholder="一个小写单词" />
   </div>
   <div>
     <button>提交</button>
@@ -190,9 +186,12 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 <form>
   <div>
     <label for="uname">输入一个用户名：</label>
-    <input type="text" id="uname" name="name"
-           placeholder="一个小写单词"
-           size="30">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      placeholder="一个小写单词"
+      size="30" />
   </div>
   <div>
     <button>提交</button>
@@ -245,7 +244,7 @@ input:valid + span::after {
 <form>
   <div>
     <label for="uname">输入一个用户名：</label>
-    <input type="text" id="uname" name="name" required>
+    <input type="text" id="uname" name="name" required />
     <span class="validity"></span>
   </div>
   <div>
@@ -345,8 +344,13 @@ input:valid + span::after {
 <form>
   <div>
     <label for="uname">输入一个用户名：</label>
-    <input type="text" id="uname" name="name" required size="45"
-           pattern="[a-z]{4,8}">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      required
+      size="45"
+      pattern="[a-z]{4,8}" />
     <span class="validity"></span>
     <p>用户名必须为 4-8 位长，且仅包含小写字母。</p>
   </div>
