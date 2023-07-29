@@ -16,40 +16,22 @@ slug: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 ```js
 var vertices = [
   // 앞면(Front face)
-  -1.0, -1.0,  1.0,
-   1.0, -1.0,  1.0,
-   1.0,  1.0,  1.0,
-  -1.0,  1.0,  1.0,
+  -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0, 1.0,
 
   // 뒤면(Back face)
-  -1.0, -1.0, -1.0,
-  -1.0,  1.0, -1.0,
-   1.0,  1.0, -1.0,
-   1.0, -1.0, -1.0,
+  -1.0, -1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0, -1.0,
 
   // 위면(Top face)
-  -1.0,  1.0, -1.0,
-  -1.0,  1.0,  1.0,
-   1.0,  1.0,  1.0,
-   1.0,  1.0, -1.0,
+  -1.0, 1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0,
 
   // 아래면(Bottom face)
-  -1.0, -1.0, -1.0,
-   1.0, -1.0, -1.0,
-   1.0, -1.0,  1.0,
-  -1.0, -1.0,  1.0,
+  -1.0, -1.0, -1.0, 1.0, -1.0, -1.0, 1.0, -1.0, 1.0, -1.0, -1.0, 1.0,
 
   // 오른쪽면(Right face)
-   1.0, -1.0, -1.0,
-   1.0,  1.0, -1.0,
-   1.0,  1.0,  1.0,
-   1.0, -1.0,  1.0,
+  1.0, -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0,
 
   // 왼쪽면(Left face)
-  -1.0, -1.0, -1.0,
-  -1.0, -1.0,  1.0,
-  -1.0,  1.0,  1.0,
-  -1.0,  1.0, -1.0
+  -1.0, -1.0, -1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0,
 ];
 ```
 
@@ -59,27 +41,31 @@ var vertices = [
 
 ```js
 var colors = [
-  [1.0,  1.0,  1.0,  1.0],    // 앞면 : 흰색
-  [1.0,  0.0,  0.0,  1.0],    // 뒤면 : 빨간색
-  [0.0,  1.0,  0.0,  1.0],    // 위면 : 녹색
-  [0.0,  0.0,  1.0,  1.0],    // 아래면 : 파란색
-  [1.0,  1.0,  0.0,  1.0],    // 오른쪽면 : 노란색
-  [1.0,  0.0,  1.0,  1.0]     // 왼쪽면 : 보라색
+  [1.0, 1.0, 1.0, 1.0], // 앞면 : 흰색
+  [1.0, 0.0, 0.0, 1.0], // 뒤면 : 빨간색
+  [0.0, 1.0, 0.0, 1.0], // 위면 : 녹색
+  [0.0, 0.0, 1.0, 1.0], // 아래면 : 파란색
+  [1.0, 1.0, 0.0, 1.0], // 오른쪽면 : 노란색
+  [1.0, 0.0, 1.0, 1.0], // 왼쪽면 : 보라색
 ];
 
 var generatedColors = [];
 
-for (j=0; j<6; j++) {
+for (j = 0; j < 6; j++) {
   var c = colors[j];
 
-  for (var i=0; i<4; i++) {
+  for (var i = 0; i < 4; i++) {
     generatedColors = generatedColors.concat(c);
   }
 }
 
 cubeVerticesColorBuffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesColorBuffer);
-gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(generatedColors), gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ARRAY_BUFFER,
+  new Float32Array(generatedColors),
+  gl.STATIC_DRAW,
+);
 ```
 
 ## 인덱스 배열 정의
@@ -98,18 +84,51 @@ gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cubeVerticesIndexBuffer);
 // 하나의 면을 나타낸다는 의미입니다.
 
 var cubeVertexIndices = [
-  0,  1,  2,      0,  2,  3,    // front
-  4,  5,  6,      4,  6,  7,    // back
-  8,  9,  10,     8,  10, 11,   // top
-  12, 13, 14,     12, 14, 15,   // bottom
-  16, 17, 18,     16, 18, 19,   // right
-  20, 21, 22,     20, 22, 23    // left
+  0,
+  1,
+  2,
+  0,
+  2,
+  3, // front
+  4,
+  5,
+  6,
+  4,
+  6,
+  7, // back
+  8,
+  9,
+  10,
+  8,
+  10,
+  11, // top
+  12,
+  13,
+  14,
+  12,
+  14,
+  15, // bottom
+  16,
+  17,
+  18,
+  16,
+  18,
+  19, // right
+  20,
+  21,
+  22,
+  20,
+  22,
+  23, // left
 ];
 
 // 인덱스 배열을 GL에 전달
 
-gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,
-    new Uint16Array(cubeVertexIndices), gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ELEMENT_ARRAY_BUFFER,
+  new Uint16Array(cubeVertexIndices),
+  gl.STATIC_DRAW,
+);
 ```
 
 `cubeVertexIndices` 배열은 정육면체 정점 배열의 인덱스값을 원소로 가지며, 각 인덱스 값에 해당하는 정점을 순서대로 세 개씩 묶어서 하나의 삼각형을 구성하고, 삼각형 두 개를 순서대로 묶어서 하나의 면으로 정의합니다. 따라서 6개의 면을 가진 정육면체는 12개의 삼각형의 조합으로 표현할 수 있습니다.

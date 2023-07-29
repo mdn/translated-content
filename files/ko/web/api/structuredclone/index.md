@@ -83,7 +83,7 @@ console.log(uInt8Array.byteLength); // 0
 ```js
 const transferred = structuredClone(
   { x: { y: { z: arrayBuffer1, w: arrayBuffer2 } } },
-  { transfer: [arrayBuffer1] }
+  { transfer: [arrayBuffer1] },
 );
 ```
 

@@ -149,9 +149,9 @@ self.addEventListener("fetch", (event) => {
           console.error("Fetching failed:", error);
 
           throw error;
-        }
+        },
       );
-    })
+    }),
   );
 });
 ```

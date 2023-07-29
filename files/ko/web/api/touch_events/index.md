@@ -2,6 +2,7 @@
 title: Touch events
 slug: Web/API/Touch_events
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 터치를 기반으로 한 양질의 서비스를 제공하기 위해, Touch Events(터치이벤트)는 터치로 인한 움직임을 감지할 능력을 제공합니다.
@@ -38,10 +39,11 @@ This example tracks multiple touch points at a time, allowing the user to draw i
 <canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
   Your browser does not support canvas element.
 </canvas>
-<br>
+<br />
 <button onclick="startup()">Initialize</button>
-<br>
-Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
+<br />
+Log:
+<pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
 
 ### Setting up the event handlers
@@ -84,7 +86,7 @@ function handleStart(evt) {
     ongoingTouches.push(copyTouch(touches[i]));
     var color = colorForTouch(touches[i]);
     ctx.beginPath();
-    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
+    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false); // a circle at the start
     ctx.fillStyle = color;
     ctx.fill();
     log("touchstart:" + i + ".");
@@ -112,9 +114,15 @@ function handleMove(evt) {
     var idx = ongoingTouchIndexById(touches[i].identifier);
 
     if (idx >= 0) {
-      log("continuing touch "+idx);
+      log("continuing touch " + idx);
       ctx.beginPath();
-      log("ctx.moveTo(" + ongoingTouches[idx].pageX + ", " + ongoingTouches[idx].pageY + ");");
+      log(
+        "ctx.moveTo(" +
+          ongoingTouches[idx].pageX +
+          ", " +
+          ongoingTouches[idx].pageY +
+          ");",
+      );
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
       log("ctx.lineTo(" + touches[i].pageX + ", " + touches[i].pageY + ");");
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
@@ -122,7 +130,7 @@ function handleMove(evt) {
       ctx.strokeStyle = color;
       ctx.stroke();
 
-      ongoingTouches.splice(idx, 1, copyTouch(touches[i]));  // swap in the new touch record
+      ongoingTouches.splice(idx, 1, copyTouch(touches[i])); // swap in the new touch record
       log(".");
     } else {
       log("can't figure out which touch to continue");
@@ -159,8 +167,8 @@ function handleEnd(evt) {
       ctx.beginPath();
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
-      ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8);  // and a square at the end
-      ongoingTouches.splice(idx, 1);  // remove it; we're done
+      ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8); // and a square at the end
+      ongoingTouches.splice(idx, 1); // remove it; we're done
     } else {
       log("can't figure out which touch to end");
     }
@@ -182,7 +190,7 @@ function handleCancel(evt) {
 
   for (var i = 0; i < touches.length; i++) {
     var idx = ongoingTouchIndexById(touches[i].identifier);
-    ongoingTouches.splice(idx, 1);  // remove it; we're done
+    ongoingTouches.splice(idx, 1); // remove it; we're done
   }
 }
 ```
@@ -219,7 +227,11 @@ Some browsers (mobile Safari, for one) re-use touch objects between events, so i
 
 ```js
 function copyTouch(touch) {
-  return { identifier: touch.identifier, pageX: touch.pageX, pageY: touch.pageY };
+  return {
+    identifier: touch.identifier,
+    pageX: touch.pageX,
+    pageY: touch.pageY,
+  };
 }
 ```
 
@@ -236,7 +248,7 @@ function ongoingTouchIndexById(idToFind) {
       return i;
     }
   }
-  return -1;    // not found
+  return -1; // not found
 }
 ```
 
@@ -244,7 +256,7 @@ function ongoingTouchIndexById(idToFind) {
 
 ```js
 function log(msg) {
-  var p = document.getElementById('log');
+  var p = document.getElementById("log");
   p.innerHTML = msg + "\n" + p.innerHTML;
 }
 ```
@@ -264,7 +276,10 @@ Since calling `preventDefault()` on a {{event("touchstart")}} or the first {{eve
 ```js
 function onTouch(evt) {
   evt.preventDefault();
-  if (evt.touches.length > 1 || (evt.type == "touchend" && evt.touches.length > 0))
+  if (
+    evt.touches.length > 1 ||
+    (evt.type == "touchend" && evt.touches.length > 0)
+  )
     return;
 
   var newEvt = document.createEvent("MouseEvents");
@@ -286,9 +301,23 @@ function onTouch(evt) {
       break;
   }
 
-  newEvt.initMouseEvent(type, true, true, evt.originalTarget.ownerDocument.defaultView, 0,
-    touch.screenX, touch.screenY, touch.clientX, touch.clientY,
-    evt.ctrlKey, evt.altKey, evt.shiftKey, evt.metaKey, 0, null);
+  newEvt.initMouseEvent(
+    type,
+    true,
+    true,
+    evt.originalTarget.ownerDocument.defaultView,
+    0,
+    touch.screenX,
+    touch.screenY,
+    touch.clientX,
+    touch.clientY,
+    evt.ctrlKey,
+    evt.altKey,
+    evt.shiftKey,
+    evt.metaKey,
+    0,
+    null,
+  );
   evt.originalTarget.dispatchEvent(newEvt);
 }
 ```
