@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 
 ## 语法
 
-```js
-exec(str);
+```js-nolint
+exec(str)
 ```
 
 ### 参数

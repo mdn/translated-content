@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/fround
 
 ## 语法
 
-```js
-Math.fround(doubleFloat);
+```js-nolint
+Math.fround(doubleFloat)
 ```
 
 ### 参数
