@@ -22,7 +22,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 下面这段 html 代码展示了`stack` 属性的使用方法
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <meta charset="UTF-8" />
 <title>Stack Trace Example</title>
 <body>

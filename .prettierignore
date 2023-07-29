@@ -92,4 +92,3 @@ build/
 # zh-cn
 /files/zh-cn/web/api/**/*.md
 /files/zh-cn/web/css/**/*.md
-/files/zh-cn/web/javascript/reference/**/*.md
