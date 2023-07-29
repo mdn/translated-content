@@ -9,8 +9,8 @@ slug: Web/API/Document/exitPictureInPicture
 
 ## 语法
 
-```js
-exitPictureInPicture();
+```js-nolint
+exitPictureInPicture()
 ```
 
 ### 参数
