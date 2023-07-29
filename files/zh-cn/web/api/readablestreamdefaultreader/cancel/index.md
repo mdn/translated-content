@@ -13,9 +13,9 @@ cancel 用于在不再需要来自一个流的任何数据的情况下完全结�
 
 ## 语法
 
-```js
-cancel();
-cancel(reason);
+```js-nolint
+cancel()
+cancel(reason)
 ```
 
 ### 参数
