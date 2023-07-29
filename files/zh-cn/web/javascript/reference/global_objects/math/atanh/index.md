@@ -26,7 +26,7 @@ Math.atanh(x)
 
 ## 示例
 
-### `使用 Math.atanh()`
+### 使用 `Math.atanh()`
 
 ```js
 Math.atanh(-2); // NaN
