@@ -27,7 +27,7 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 
 > **备注：** 即使在实际的复杂网站中，设计团队通常也是从粗略的草图开始设计的，再使用图形编辑器或 Web 技术建立数字模拟图。
 >
-> Web 团队通常包括一个平面设计师和一个{{Glossary("UX", "用户体验")}} (UX) 设计师。平面设计师把网站的视觉效果放在一起。用户体验设计师则以一种更抽象的模式来解决用户如何体验及与网站交互方面的问题。
+> Web 团队通常包括一个平面设计师和一个{{Glossary("UX", "用户体验")}}(UX)设计师。平面设计师把网站的视觉效果放在一起。用户体验设计师则以一种更抽象的模式来解决用户如何体验及与网站交互方面的问题。
 
 ## 选定内容
 
@@ -39,7 +39,7 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 
 ### 主题颜色
 
-使用[色彩选择器](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)挑选心仪的颜色。当选中某种颜色时，会显示一个六位神秘代码，类似于`#660066`。它是一个*十六进制数*，用于表示颜色。将其复制并暂存。
+使用 [色彩选择器](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)挑选心仪的颜色。当选中某种颜色时，会显示一个六位神秘代码，类似于 `#660066`。它是一个*十六进制数*，用于表示颜色。将其复制并暂存。
 
 ![MDN 网站上的颜色选择器，包含 RGB、HSL、HEX 格式](color-picker.png)
 
@@ -56,26 +56,17 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 
 ![经知识共享许可过滤后的 Google 图片搜索结果](updated-google-images-licensing.png)
 
-> **备注：**（译注）因为某些原因，你可能无法访问 Google，可以改为使用[百度图片搜索](https://image.baidu.com/)或[搜狗图片搜索](https://pic.sogou.com/)，并且同样需要注意图片的版权问题。
-
 ### 字体
 
-和图片一样，很多字体都受版权保护，也就是说，你不可以在你的网站上随意使用它们。[Google Fonts](https://developers.google.com/fonts)是 Google 旗下的网络服务，提供了许多字体许可。
+和图片一样，很多字体都受版权保护，也就是说，你不可以在你的网站上随意使用它们。[Google Fonts](https://developers.google.com/fonts) 是 Google 旗下的网络服务，提供了许多字体许可。
 
 选好字体后，你有两种方式使用它：
 
 1. 在你的代码中添加一个引用，从 Google 服务器加载这个字体。
 2. 下载字体文件到你的系统内，自行挂载这个文件，并在你网站的代码中使用。
 
-> **备注：**在你的网站使用从 Google 服务器加载的字体可能会违反欧盟的数据隐私规定 [GDPR](https://gdpr.eu/what-is-gdpr/) ，因为加载字体时会暴露用户的 IP 地址。如果你遇到这种潜在风险，需要选择第二种方式。
+> **备注：**在你的网站使用从 Google 服务器加载的字体可能会违反欧盟的数据隐私规定 [GDPR](https://gdpr.eu/what-is-gdpr/)，因为加载字体时会暴露用户的 IP 地址。如果你遇到这种潜在风险，需要选择第二种方式。
 
 另一个选择是使用 [安全 Web 字体](https://web.mit.edu/jmorzins/www/fonts.html)，如 Arial、Times New Roman、Courier New。
-
-> **备注：**（译注）
->
-> - 同上所述，你可能无法访问 Google Fonts，你可以选择其他可用的在线字体服务，或采用第二种方式，下载后再使用你选择的字体。
-> - 相比英语，汉语的“安全字体”是不太一样的复杂问题，可以认为黑体、宋体是相对“安全”的一类字体，但仍需要精确到具体的字族，下面是一些参考链接：
->   - [如何保证网页的字体在各平台都尽量显示为最高质量的黑体？](https://www.zhihu.com/question/19911793)
->   - [常用 Web 安全字体显示测试](https://feeshy.github.io/tech/web_safe_fonts.html)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
