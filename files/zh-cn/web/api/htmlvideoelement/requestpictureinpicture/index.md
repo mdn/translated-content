@@ -11,8 +11,8 @@ slug: Web/API/HTMLVideoElement/requestPictureInPicture
 
 ## 语法
 
-```js
-requestPictureInPicture();
+```js-nolint
+requestPictureInPicture()
 ```
 
 ### 返回值
