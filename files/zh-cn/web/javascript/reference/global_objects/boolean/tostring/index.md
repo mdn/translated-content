@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 ## 语法
 
 ```js
-toString()
+toString();
 ```
 
 ### 返回值

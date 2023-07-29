@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 ## 语法
 
 ```js
-dateObj.getTimezoneOffset()
+dateObj.getTimezoneOffset();
 ```
 
 ### 参数
