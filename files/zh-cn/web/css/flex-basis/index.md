@@ -41,6 +41,7 @@ flex-basis: unset;
 - `<'width'>`
   - : width 值可以是 {{cssxref("&lt;length&gt;")}}; 该值也可以是一个相对于其父弹性盒容器主轴尺寸的{{cssxref("&lt;percentage&gt;", "百分数")}} 。负值是不被允许的。默认为 `auto`。
 - `content`
+
   - : 基于 flex 的元素的内容自动调整大小。
 
     > **备注：**由于最初规范中没有包括这个值，在一些早期的浏览器实现的 flex 布局中，content 值无效，可以利用设置 ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) 或 [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) 为 auto 达到同样的效果。
@@ -86,10 +87,10 @@ flex-basis: unset;
 }
 
 .flex {
-  background: #6AB6D8;
+  background: #6ab6d8;
   padding: 10px;
   margin-bottom: 50px;
-  border: 3px solid #2E86BB;
+  border: 3px solid #2e86bb;
   color: white;
   font-size: 20px;
   text-align: center;
@@ -112,7 +113,7 @@ flex-basis: unset;
 }
 
 .flex1:after {
-  content: 'auto';
+  content: "auto";
 }
 
 .flex2 {
@@ -120,7 +121,7 @@ flex-basis: unset;
 }
 
 .flex2:after {
-  content: 'max-content';
+  content: "max-content";
 }
 
 .flex3 {
@@ -128,7 +129,7 @@ flex-basis: unset;
 }
 
 .flex3:after {
-  content: 'min-content';
+  content: "min-content";
 }
 
 .flex4 {
@@ -136,15 +137,15 @@ flex-basis: unset;
 }
 
 .flex4:after {
-  content: 'fit-content';
+  content: "fit-content";
 }
 
 .flex5 {
-   flex-basis: content;
+  flex-basis: content;
 }
 
 .flex5:after {
-  content: 'content';
+  content: "content";
 }
 
 .flex6 {
@@ -152,7 +153,7 @@ flex-basis: unset;
 }
 
 .flex6:after {
-  content: 'fill/-webkit-fill-available/-moz-available';
+  content: "fill/-webkit-fill-available/-moz-available";
 }
 ```
 

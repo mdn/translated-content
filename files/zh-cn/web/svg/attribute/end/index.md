@@ -13,7 +13,7 @@ slug: Web/SVG/Attribute/end
 
 | 类别     | 动画定时属性                                                                |
 | -------- | --------------------------------------------------------------------------- |
-| 值       | \<End-value-list>                                                            |
+| 值       | \<End-value-list>                                                           |
 | 可变性   | No                                                                          |
 | 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#EndAttribute) |
 

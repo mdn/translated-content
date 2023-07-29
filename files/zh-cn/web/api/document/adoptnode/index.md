@@ -25,16 +25,16 @@ node = document.adoptNode(externalNode);
 ```js
 // 该函数用来从本文档的第一个 iframe 中获取第一个 element 元素，
 // 并插入到当前文档树中
-function getEle(){
-    var iframe = document.getElementsByTagName("iframe")[0],
-        ele = iframe.contentWindow.document.body.firstElementChild
-        if(ele){
-            document.body.appendChild(document.adoptNode(ele))
-        }else{
-            alert("没有更多元素了")
-        }
+function getEle() {
+  var iframe = document.getElementsByTagName("iframe")[0],
+    ele = iframe.contentWindow.document.body.firstElementChild;
+  if (ele) {
+    document.body.appendChild(document.adoptNode(ele));
+  } else {
+    alert("没有更多元素了");
+  }
 }
-document.getElementById("move").onclick = getEle
+document.getElementById("move").onclick = getEle;
 ```
 
 HTML 文档
@@ -42,27 +42,28 @@ HTML 文档
 ```html
 // index.html
 
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <title>index.html</title>
-</head>
-<body>
+  </head>
+  <body>
     <iframe src="iframe.html"></iframe>
     <button id="move">移动元素</button>
-</body>
+  </body>
 </html>
 
 // iframe.html
 
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <title>iframe.html</title>
-</head>
-<body>
-    <h1>Hello</h1><h3>My world!</h3>
-</body>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <h3>My world!</h3>
+  </body>
 </html>
 ```
 

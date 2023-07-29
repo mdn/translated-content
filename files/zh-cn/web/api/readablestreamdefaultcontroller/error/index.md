@@ -11,7 +11,7 @@ slug: Web/API/ReadableStreamDefaultController/error
 
 ## 语法
 
-```js
+```js-nolint
 error(e)
 ```
 

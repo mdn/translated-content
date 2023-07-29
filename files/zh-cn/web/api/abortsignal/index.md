@@ -51,21 +51,21 @@ _**`AbortSignal`** 接口继续它父接口 {{domxref("EventTarget")}} 的方法
 const controller = new AbortController();
 const signal = controller.signal;
 
-const url = 'video.mp4';
-const downloadBtn = document.querySelector('.download');
-const abortBtn = document.querySelector('.abort');
+const url = "video.mp4";
+const downloadBtn = document.querySelector(".download");
+const abortBtn = document.querySelector(".abort");
 
-downloadBtn.addEventListener('click', fetchVideo);
+downloadBtn.addEventListener("click", fetchVideo);
 
-abortBtn.addEventListener('click', () => {
+abortBtn.addEventListener("click", () => {
   controller.abort();
-  console.log('Download aborted');
+  console.log("Download aborted");
 });
 
 function fetchVideo() {
   fetch(url, { signal })
     .then((response) => {
-      console.log('Download complete', response);
+      console.log("Download complete", response);
     })
     .catch((err) => {
       console.error(`Download error: ${err.message}`);
@@ -84,7 +84,7 @@ function fetchVideo() {
 以下代码片段展示了如何成功地下载一个文件或者在五秒钟后处理一个超时的错误。注意，当出现超时时，`fetch()` promise 会以“`TimeoutError`”`DOMException` 拒绝。这允许代码区分超时（可能需要通知用户）和用户中止。
 
 ```js
-const url = 'video.mp4';
+const url = "video.mp4";
 
 try {
   const res = await fetch(url, { signal: AbortSignal.timeout(5000) });
@@ -94,7 +94,9 @@ try {
   if (err.name === "TimeoutError") {
     console.error("Timeout: It took more than 5 seconds to get the result!");
   } else if (err.name === "AbortError") {
-    console.error("Fetch aborted by user action (browser stop button, closing tab, etc.");
+    console.error(
+      "Fetch aborted by user action (browser stop button, closing tab, etc.",
+    );
   } else if (err.name === "TypeError") {
     console.error("AbortSignal.timeout() method is not supported");
   } else {
@@ -112,20 +114,18 @@ try {
 
 ```js
 try {
-  const controller = new AbortController()
-  const timeoutId = setTimeout(() => controller.abort(), 5000)
-  const res = await fetch(url, { signal: controller.signal })
-  const body = await res.json()
-}
-catch (e) {
-    if (e.name === "AbortError") {
-      // Notify the user of abort.
-      // Note this will never be a timeout error!
-    } else {
-      // A network error, or some other problem.
-      console.log(`Type: ${e.name}, Message: ${e.message}`)
-    }
-
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 5000);
+  const res = await fetch(url, { signal: controller.signal });
+  const body = await res.json();
+} catch (e) {
+  if (e.name === "AbortError") {
+    // Notify the user of abort.
+    // Note this will never be a timeout error!
+  } else {
+    // A network error, or some other problem.
+    console.log(`Type: ${e.name}, Message: ${e.message}`);
+  }
 } finally {
   clearTimeout(timeoutId);
 }

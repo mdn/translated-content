@@ -35,15 +35,12 @@ HTML 建立了放置区本身，它是[`<div>`](/zh-CN/docs/Web/HTML/Element/div
 <p>Drag files and/or directories to the box below!</p>
 
 <div id="dropzone">
-  <div id="boxtitle">
-    Drop Files Here
-  </div>
+  <div id="boxtitle">Drop Files Here</div>
 </div>
 
 <h2>Directory tree:</h2>
 
-<ul id="listing">
-</ul>
+<ul id="listing"></ul>
 ```
 
 ### CSS
@@ -66,13 +63,17 @@ HTML 建立了放置区本身，它是[`<div>`](/zh-CN/docs/Web/HTML/Element/div
   vertical-align: middle;
   text-align: center;
   color: black;
-  font: bold 2em "Arial", sans-serif;
+  font:
+    bold 2em "Arial",
+    sans-serif;
   width: 300px;
   height: 100px;
 }
 
 body {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 
@@ -91,13 +92,13 @@ function scanFiles(item, container) {
   elem.innerHTML = item.name;
   container.appendChild(elem);
 
- if (item.isDirectory) {
+  if (item.isDirectory) {
     let directoryReader = item.createReader();
     let directoryContainer = document.createElement("ul");
     container.appendChild(directoryContainer);
-    directoryReader.readEntries(function(entries) {
-        entries.forEach(function(entry) {
-          scanFiles(entry, directoryContainer);
+    directoryReader.readEntries(function (entries) {
+      entries.forEach(function (entry) {
+        scanFiles(entry, directoryContainer);
       });
     });
   }
@@ -113,28 +114,36 @@ function scanFiles(item, container) {
 然后是事件处理程序。首先，我们阻止[`dragover`](/zh-CN/docs/Web/Events/dragover)事件由默认处理程序处理，以便我们的 drop 区域可以接收 drop：
 
 ```js
-dropzone.addEventListener("dragover", function(event) {
+dropzone.addEventListener(
+  "dragover",
+  function (event) {
     event.preventDefault();
-}, false);
+  },
+  false,
+);
 ```
 
 当然，关闭所有事件的事件处理程序是事件的处理程序[`drop`](/zh-CN/docs/Web/Events/drop)：
 
 ```js
-dropzone.addEventListener("drop", function(event) {
-  let items = event.dataTransfer.items;
+dropzone.addEventListener(
+  "drop",
+  function (event) {
+    let items = event.dataTransfer.items;
 
-  event.preventDefault();
-  listing.innerHTML = "";
+    event.preventDefault();
+    listing.innerHTML = "";
 
-  for (let i=0; i<items.length; i++) {
-    let item = items[i].webkitGetAsEntry();
+    for (let i = 0; i < items.length; i++) {
+      let item = items[i].webkitGetAsEntry();
 
-    if (item) {
+      if (item) {
         scanFiles(item, listing);
+      }
     }
-  }
-}, false);
+  },
+  false,
+);
 ```
 
 这将获取表示从 `event.dataTransfer.items` 中删除的项目的 {{domxref("DataTransferItem")}} 对象列表。然后我们调用 {{domxref("Event.preventDefault()")}} 来防止事件在完成后被进一步处理。
