@@ -50,7 +50,7 @@ slug: Web/HTML/Element/wbr
 
 ## 示例
 
-_[Yahoo 代码规范](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/)_ 推荐 [在标点之前为 URL 换行](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses)，以便避免将标点符号留在行尾，这会让读者将 URL 的末尾搞错。
+[_Yahoo 代码规范_](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/)推荐[在标点之前为 URL 换行](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses)，以便避免将标点符号留在行尾，这会让读者将 URL 的末尾搞错。
 
 ```html
 <p>
