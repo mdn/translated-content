@@ -35,14 +35,14 @@ Math.clz32 (x)
 ## 示例
 
 ```js
-Math.clz32(1)                // 31
-Math.clz32(1000)             // 22
-Math.clz32()                 // 32
+Math.clz32(1); // 31
+Math.clz32(1000); // 22
+Math.clz32(); // 32
 [NaN, Infinity, -Infinity, 0, -0, null, undefined, "foo", {}, []].filter(function (n) {
   return Math.clz32(n) !== 32
-})                           // []
-Math.clz32(true)             // 31
-Math.clz32(3.5)              // 30
+}); // []
+Math.clz32(true); // 31
+Math.clz32(3.5); // 30
 ```
 
 ## 计算前导 1 的个数
