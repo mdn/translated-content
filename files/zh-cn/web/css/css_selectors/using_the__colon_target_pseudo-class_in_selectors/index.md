@@ -10,7 +10,7 @@ original_slug: Web/Guide/CSS/Using_the_:target_selector
 
 ### 选择一个目标
 
-{{cssxref(":target")}} 伪类用来指定那些包含片段标识符的 URI 的目标元素样式。例如 `http://developer.mozilla.org/en/docs/Using_the_:target_selector#Example` 这个 URI 包含了 `#Example` 片段标识符 在 HTML 中，标识符是元素的 `id` 或者 `name` 属性，。由于这两者位于相同的命名空间，因此，这个示例 URI 指向的是文档顶层的 "Example" 。
+{{cssxref(":target")}} 伪类用来指定那些包含片段标识符的 URI 的目标元素样式。例如 `https://developer.mozilla.org/zh-CN/docs/Web/CSS#参考` 这个 URI 包含了 `#参考` 片段标识符 在 HTML 中，标识符是元素的 `id` 或者 `name` 属性。由于这两者位于相同的命名空间，因此，这个示例 URI 指向的是文档顶层的“参考”。
 
 假设你想修改 URI 指向的任何 h2 元素，但是又不想把样式应用到任何其他同类型的元素，那么以下示例足够简单有用：
 
