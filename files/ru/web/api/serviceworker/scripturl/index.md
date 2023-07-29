@@ -21,7 +21,7 @@ someURL = ServiceWorker.scriptURL
 ## Примеры
 
 ```js
-TBD
+TBD;
 ```
 
 ## Спецификации

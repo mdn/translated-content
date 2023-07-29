@@ -26,7 +26,7 @@ node.contains( otherNode )
 
 ```js
 function isInPage(node) {
-  return (node === document.body) ? false : document.body.contains(node);
+  return node === document.body ? false : document.body.contains(node);
 }
 ```
 

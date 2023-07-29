@@ -138,10 +138,7 @@ These constraints apply to `MediaTrackConstraints` objects specified as part of 
 
 ## Specifications
 
-| Specification                                                                                | Status                                   | Comment                 |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------- |
-| {{SpecName('Media Capture', '#dom-mediatrackconstraints')}}             | {{Spec2('Media Capture')}}     | Initial definition.     |
-| {{SpecName('MediaStream Image', '#mediatrackconstraintset-section')}} | {{Spec2('MediaStream Image')}} | Adds image constraints. |
+{{Specifications}}
 
 ## Browser compatibility
 
