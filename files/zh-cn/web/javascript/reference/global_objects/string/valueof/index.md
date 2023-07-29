@@ -30,7 +30,7 @@ The `valueOf()` method of {{jsxref("String")}} returns the primitive value of a 
 ### 使用 `valueOf()`
 
 ```js
-var x = new String('Hello world');
+var x = new String("Hello world");
 console.log(x.valueOf()); // Displays 'Hello world'
 ```
 
