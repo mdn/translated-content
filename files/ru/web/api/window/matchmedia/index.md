@@ -3,6 +3,7 @@ title: Window.matchMedia()
 slug: Web/API/Window/matchMedia
 translation_of: Web/API/Window/matchMedia
 ---
+
 {{APIRef}}
 
 ## Сводка

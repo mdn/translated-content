@@ -4,6 +4,7 @@ slug: Web/API/Window/unhandledrejection_event
 translation_of: Web/API/Window/unhandledrejection_event
 original_slug: Web/Events/unhandledrejection
 ---
+
 Событие **`unhandledrejection`** происходит, когда {{jsxref("Promise")}} завершён с ошибкой, но на данную ошибку не установлен обработчик.
 
 <table class="properties">
@@ -31,8 +32,10 @@ original_slug: Web/Events/unhandledrejection
 
 ```js
 window.addEventListener("unhandledrejection", function (event) {
-  console.warn("Внимание: Необработанная ошибка Promise. Позор вам! Причина: "
-               + event.reason);
+  console.warn(
+    "Внимание: Необработанная ошибка Promise. Позор вам! Причина: " +
+      event.reason,
+  );
 });
 ```
 
