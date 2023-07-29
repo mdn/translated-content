@@ -2,6 +2,7 @@
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLVideoElement`** 인터페이스는 Video object를 조작하는데 필요한 프로퍼티와 메소드를 제공합니다. {{domxref("HTMLMediaElement")}}와 {{domxref("HTMLElement")}}를 상속합니다.
