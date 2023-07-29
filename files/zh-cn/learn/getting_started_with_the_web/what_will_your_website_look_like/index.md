@@ -5,7 +5,7 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
-*你的网站会是什么样子？*在编写网站代码之前，需要先进行规划和设计工作，包括“网站提供哪些信息？”、“用哪些字体和颜色？”、“网站是做什么的？”等。
+_你的网站会是什么样子_？在编写网站代码之前，需要先进行规划和设计工作，包括“网站提供哪些信息？”、“用哪些字体和颜色？”、“网站是做什么的？”等。
 
 ## 第一步：计划
 
