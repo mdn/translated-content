@@ -73,7 +73,7 @@ addEventListener(type, listener, useCapture);
 
 ```js
 function eventHandler(event) {
-  if (event.type == fullscreenchange) {
+  if (event.type === "fullscreenchange") {
     /* 处理 fullscreenchange 事件 */
   } else {
     /* 处理 fullscreenerror 事件 */
