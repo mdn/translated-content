@@ -2,6 +2,7 @@
 title: Window.status
 slug: Web/API/Window/status
 ---
+
 {{APIRef}}
 
 ## 요약
