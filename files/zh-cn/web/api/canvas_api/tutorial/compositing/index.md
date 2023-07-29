@@ -16,7 +16,7 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 
 查看下面[Compositing 示例](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing/Example)的代码。
 
-{{EmbedLiveSample("合成示例", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
+{{EmbedLiveSample("合成示例", 750, 6750, "")}}
 
 ## 裁切路径
 
