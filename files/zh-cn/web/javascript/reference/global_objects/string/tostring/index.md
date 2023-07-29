@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toString
 
 ## 语法
 
-```js
-toString();
+```js-nolint
+toString()
 ```
 
 ### 返回值

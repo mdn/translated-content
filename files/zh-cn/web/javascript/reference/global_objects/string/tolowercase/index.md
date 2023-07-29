@@ -9,8 +9,8 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 
 ## 语法
 
-```js
-str.toLowerCase();
+```js-nolint
+toLowerCase()
 ```
 
 ### 返回值
