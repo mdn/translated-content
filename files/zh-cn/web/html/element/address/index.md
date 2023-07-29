@@ -59,9 +59,9 @@ slug: Web/HTML/Element/address
 ```html
 <address>
   You can contact author at
-  <a href="http://www.somedomain.com/contact"> www.somedomain.com</a>.<br />
+  <a href="http://www.somedomain.com/contact">www.somedomain.com</a>.<br />
   If you see any bugs, please
-  <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.<br />
+  <a href="mailto:webmaster@somedomain.com">contact webmaster</a>.<br />
   You may also want to visit us:<br />
   Mozilla Foundation<br />
   331 E Evelyn Ave<br />
