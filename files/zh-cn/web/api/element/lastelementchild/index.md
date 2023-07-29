@@ -25,9 +25,9 @@ var element = node.lastElementChild;
 </ul>
 
 <script>
-  var foo = document.getElementById("foo");
-  // yields: Third  (3)
-  console.log(foo.lastElementChild.textContent);
+  const list = document.getElementById("list");
+  console.log(list.lastElementChild.textContent);
+  // 输出 "Third (3)"
 </script>
 ```
 

@@ -10,7 +10,7 @@ slug: Web/API/Element/getBoundingClientRect
 ## 语法
 
 ```js
-getBoundingClientRect();
+getBoundingClientRect()
 ```
 
 ### 参数

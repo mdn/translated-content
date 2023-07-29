@@ -25,9 +25,9 @@ var element = node.firstElementChild;
 </ul>
 
 <script>
-  var foo = document.getElementById("foo");
-  // yields: First  (1)
-  console.log(foo.firstElementChild.textContent);
+  const list = document.getElementById("list");
+  console.log(list.firstElementChild.textContent);
+  // 输出 "First (1)"
 </script>
 ```
 
