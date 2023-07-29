@@ -33,7 +33,12 @@ original_slug: Web/API/CSS_Object_Model/ориентация_экрана
   <li>C</li>
 </ul>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut interdum tristique dapibus. Nullam quis malesuada est.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec
+  sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt
+  leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut
+  interdum tristique dapibus. Nullam quis malesuada est.
+</p>
 ```
 
 Соответствующий CSS:
@@ -41,8 +46,9 @@ original_slug: Web/API/CSS_Object_Model/ориентация_экрана
 ```css
 /* Сначала зададим простые стили */
 
-html, body {
-  width : 100%;
+html,
+body {
+  width: 100%;
   height: 100%;
 }
 
@@ -54,17 +60,17 @@ body {
 }
 
 p {
-  font   : 1em sans-serif;
-  margin : 0;
-  padding: .5em;
+  font: 1em sans-serif;
+  margin: 0;
+  padding: 0.5em;
 }
 
 ul {
   list-style: none;
 
-  font   : 1em monospace;
-  margin : 0;
-  padding: .5em;
+  font: 1em monospace;
+  margin: 0;
+  padding: 0.5em;
 
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -74,7 +80,7 @@ ul {
 
 li {
   display: inline-block;
-  margin : 0;
+  margin: 0;
   padding: 0.5em;
   background: white;
 }
@@ -105,15 +111,15 @@ li {
   }
 
   li + li {
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 }
 ```
 
 Результат:
 
-| Портретный режим просмотра                                                                                                                                                           | Альбомный режим просмотра                                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Портретный режим просмотра                                                              | Альбомный режим просмотра                                                               |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | {{ EmbedLiveSample('Настройка_раскладки_содержимого_по_ориентации_экрана', 180, 350) }} | {{ EmbedLiveSample('Настройка_раскладки_содержимого_по_ориентации_экрана', 350, 180) }} |
 
 > **Примечание:** Медиавыражение по ориентации ссылается на окно браузера (соотношение его размеров), а не на ориентацию устройства.
@@ -144,7 +150,7 @@ screen.addEventListener("orientationchange", function () {
 Метод {{domxref("Screen.lockOrientation()")}} принимает одну или несколько строк для определения типа блокировки: `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, `landscape`. Подробнее: {{domxref("Screen.lockOrientation")}}.
 
 ```js
-screen.lockOrientation('landscape');
+screen.lockOrientation("landscape");
 ```
 
 > **Примечание:** Положение экрана зависит от конкретной настройки приложения. Если в приложении A экран блокируется на альбомную ориентацию (`landscape`), а приложение B блокирует экран на портретный режим (`portrait`),

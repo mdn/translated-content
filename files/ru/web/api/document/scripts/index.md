@@ -3,6 +3,7 @@ title: Document.scripts
 slug: Web/API/Document/scripts
 translation_of: Web/API/Document/scripts
 ---
+
 {{APIRef("DOM")}}
 
 Возвращает список элементов {{HTMLElement("script")}} в документ. Возвращаемый объект является {{domxref("HTMLCollection")}}.
@@ -27,12 +28,10 @@ if (scripts.length) {
 }
 ```
 
-## Browser compatibility
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
 
 {{Compat}}
-
-## Specifications
-
-| Specification                                                                                    | Status                               | Comment |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('HTML WHATWG', '#dom-document-scripts', 'Document.scripts')}} | {{ Spec2('HTML WHATWG') }} |         |

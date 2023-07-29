@@ -59,7 +59,8 @@ ctx.strokeText("Hello world", 50, 100);
 </div>
 <textarea id="code" class="playable-code">
 ctx.font = "48px serif";
-ctx.strokeText("Hello world", 50, 100);</textarea>
+ctx.strokeText("Hello world", 50, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -75,14 +76,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

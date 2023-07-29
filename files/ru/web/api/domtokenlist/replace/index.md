@@ -49,7 +49,7 @@ console.log(result);
 if (result) {
   span.textContent = classes;
 } else {
-  span.textContent = 'token not replaced successfully';
+  span.textContent = "token not replaced successfully";
 }
 ```
 
@@ -63,13 +63,13 @@ if (result) {
 
 ```js
 DOMTokenList.prototype.replace = function (a, b) {
-    if (this.contains(a)) {
-        this.add(b);
-        this.remove(a);
-        return true;
-    }
-    return false;
-}
+  if (this.contains(a)) {
+    this.add(b);
+    this.remove(a);
+    return true;
+  }
+  return false;
+};
 ```
 
 ## Спецификации

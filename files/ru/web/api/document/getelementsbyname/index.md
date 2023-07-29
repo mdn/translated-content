@@ -20,17 +20,17 @@ var elements = document.getElementsByName(name);
 ## Пример
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<title>Example: using document.getElementsByName</title>
+  <title>Example: using document.getElementsByName</title>
 
-<input type="hidden" name="up">
-<input type="hidden" name="down">
+  <input type="hidden" name="up" />
+  <input type="hidden" name="down" />
 
-<script>
-  var up_names = document.getElementsByName("up");
-  console.log(up_names[0].tagName); // displays "INPUT"
-</script>
+  <script>
+    var up_names = document.getElementsByName("up");
+    console.log(up_names[0].tagName); // displays "INPUT"
+  </script>
 </html>
 ```
 
@@ -48,10 +48,7 @@ The returned {{domxref("NodeList")}} Collection contains _all_ elements with the
 
 ## Specifications
 
-| Specification                                                                                                                | Status                               | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', '#dom-document-getelementsbyname', "Document.getElementsByName()")}} | {{ Spec2('HTML WHATWG') }} |                    |
-| {{SpecName("DOM2 HTML", "html.html#ID-71555259", "Document.getElementsByName()")}}                 | {{Spec2("DOM2 HTML")}}         | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

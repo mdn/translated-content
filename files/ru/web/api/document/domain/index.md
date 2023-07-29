@@ -75,10 +75,7 @@ Mozilla отличает свойство `document.domain`, которое ни
 
 ## Спецификации
 
-| **Спецификация**                                                                                                                 | **Статус**                       | **Комментарий** |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------- |
-| {{SpecName('HTML WHATWG','origin.html#relaxing-the-same-origin-restriction','Document.domain')}} | {{Spec2('HTML WHATWG')}} |                 |
-| {{SpecName('HTML 5.2','browsers.html#relaxing-the-same-origin-restriction','Document.domain')}} | {{Spec2('HTML 5.2')}}     |                 |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

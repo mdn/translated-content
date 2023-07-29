@@ -35,9 +35,9 @@ translation_of: Web/API/Clients
 ## Примеры
 
 ```js
-clients.matchAll(options).then(function(clients) {
-  for (i = 0 ; i < clients.length ; i++) {
-    if (clients[i] === 'index.html') {
+clients.matchAll(options).then(function (clients) {
+  for (i = 0; i < clients.length; i++) {
+    if (clients[i] === "index.html") {
       clients.openWindow(clients[i]);
       // или сделать что-то другое, с учётом подошедшего клиента
     }
