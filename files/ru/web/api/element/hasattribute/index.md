@@ -7,6 +7,7 @@ tags:
   - метод
 translation_of: Web/API/Element/hasAttribute
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.hasAttribute()`** метод возвращает {{Glossary("Boolean")}} значение указывающее, имеет ли указанный элемент указанный атрибут или нет.
