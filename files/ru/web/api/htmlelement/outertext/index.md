@@ -3,6 +3,7 @@ title: HTMLElement.outerText
 slug: Web/API/HTMLElement/outerText
 translation_of: Web/API/HTMLElement/outerText
 ---
+
 {{APIRef("DOM")}} {{ Non-standard_header() }}
 
 **`HTMLElement.outerText`** - нестандартное свойство. В качестве геттера возвращает то же значение, что и {{domxref("Node.innerText")}}. В качестве сеттера удаляет текущий элемент и вставляет вместо него указанный текст.

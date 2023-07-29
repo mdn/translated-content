@@ -32,15 +32,13 @@ MediaStream Recording API состоит из единого интерфейс�
 
 {{domxref("MediaRecorder")}}
 
-## Спецификация
+## Спецификации
 
-| Specification                                                                | Status                                       | Comment            |
-| ---------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
-| {{SpecName("MediaStream Recording", "#MediaRecorderAPI")}} | {{Spec2("MediaStream Recording")}} | Initial definition |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
-{{Compat("api.MediaRecorder")}}
+{{Compat}}
 
 ## Смотрите также
 
