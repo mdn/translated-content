@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Operators/Right_shift
 
 ## 语法
 
-```js
-x >> y;
+```js-nolint
+x >> y
 ```
 
 ## 描述

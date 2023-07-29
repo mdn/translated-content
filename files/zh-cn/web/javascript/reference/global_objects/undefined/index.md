@@ -3,11 +3,17 @@ title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
 ---
 
-{{jsSidebar("Objects")}}全局属性 **`undefined`** 表示原始值`{{Glossary("Undefined", "undefined")}}。`它是一个 JavaScript 的 {{Glossary("Primitive", "原始数据类型")}} 。{{js_property_attributes(0,0,0)}}{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
+{{jsSidebar("Objects")}}
+
+全局属性 **`undefined`** 表示原始值 `{{Glossary("Undefined", "undefined")}}`。它是一个 JavaScript 的 {{Glossary("Primitive", "原始数据类型")}} 。
+
+{{js_property_attributes(0,0,0)}}
+
+{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
 
 ## 语法
 
-```plain
+```js-nolint
 undefined
 ```
 
@@ -30,21 +36,19 @@ test(); // 返回"undefined"
 
 一个函数如果没有使用 return 语句指定{{jsxref("Statements/return", "返回")}}值，就会返回一个 undefined 值。
 
-> **警告：** 但是它有可能在非全局作用域中被当作{{Glossary("Identifier", "标识符")}}（变量名）来使用 (因为 undefined 不是一个{{jsxref("Reserved_Words", "保留字")}}))，这样做是一个非常坏的主意，因为这样会使你的代码难以去维护和排错。
+> **警告：** 但是它有可能在非全局作用域中被当作{{Glossary("Identifier", "标识符")}}（变量名）来使用（因为 undefined 不是[保留字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#保留字的使用)），这样做是一个非常坏的主意，因为这样会使你的代码难以去维护和排错。
 >
-> ```js
+> ```js example-bad
 > // 不要这样做！
 >
-> // 打印 'foo string' PS：说明 undefined 的值和类型都已经改变
-> (function () {
->   var undefined = "foo";
->   console.log(undefined, typeof undefined);
-> })()(
->   // 打印 'foo string' PS：说明 undefined 的值和类型都已经改变
->   function (undefined) {
->     console.log(undefined, typeof undefined);
->   },
-> )("foo");
+> (() => {
+>   const undefined = "foo";
+>   console.log(undefined, typeof undefined); // foo string
+> })();
+>
+> ((undefined) => {
+>   console.log(undefined, typeof undefined); // foo string
+> })("foo");
 > ```
 
 ## 示例

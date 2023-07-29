@@ -64,8 +64,10 @@ a + b;
 
 为了避免这个问题（防止 ASI），你可以使用括号：
 
-```js
-return a + b;
+```js-nolint
+return (
+  a + b
+);
 ```
 
 ## 示例

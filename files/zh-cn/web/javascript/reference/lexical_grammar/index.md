@@ -203,11 +203,11 @@ JavaScript 的解释器会把它视为普通注释——只有当脚本直接在
 - `transient`
 - `volatile`
 
-另外，字面量 `null`、`true`和`false`同样不能被当成标识使用。
+另外，字面量 `null`、`true` 和 `false` 同样不能被当成标识使用。
 
 ### 保留字的使用
 
-事实上保留字是仅针对标识符（Identifier）的文法定义而言的（而不是标识符名（IdentifierName）的文法定义）。如 [es5.github.com/#A.1](http://es5.github.com/#A.1)中所描述的，这些都是不排斥保留字的标识符名。
+事实上保留字是仅针对标识符（Identifier）的文法定义而言的（而不是标识符名（IdentifierName）的文法定义）。如 [es5.github.com/#A.1](http://es5.github.com/#A.1) 中所描述的，这些都是不排斥保留字的标识符名。
 
 ```js
 a.import
@@ -225,32 +225,28 @@ function import() {} // Illegal.
 
 ### 空字面量
 
-更多信息可以参考 `null`
+更多信息可以参考 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
 
-```js
-null;
+```js-nolint
+null
 ```
 
 ### 布尔字面量
 
 更多信息可以参考[`Boolean`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 
-```js
-true;
-false;
+```js-nolint
+true
+false
 ```
 
 ### 数值字面量
 
 #### 十进制
 
-```js
-1234567890;
-42;
-
-// 谨慎使用 0 开头的数值：
-0888; // 转换为十进制 888
-0777; // 转换为八进制 777，十进制 511
+```js-nolint
+1234567890
+42
 ```
 
 请注意，十进制数值字面量可以以 0 开头，但是如果 0 以后的最高位比 8 小，数值将会被认为是八进制而不会报错。更多信息可以参考 [Firefox bug 957513](https://bugzil.la/957513) 和 [`parseInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix)。
@@ -259,33 +255,29 @@ false;
 
 二进制表示为开头是 0 后接大写或小写的 B（`0b`或者`0B`）。这是 ECMAScript 6 中的新语法，可以参考下面的浏览器兼容性表格。如果`0b`之后有除了 0 或 1 以外的数字，将会抛出[`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)：“Missing binary digits after 0b”。
 
-```js
-var FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
-var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0b00000000011111111111111111111111; // 8388607
+```js-nolint
+0b10000000000000000000000000000000 // 2147483648
+0b01111111100000000000000000000000 // 2139095040
+0B00000000011111111111111111111111 // 8388607
 ```
 
 #### 八进制
 
 八进制表示为开头是 0 后接大写或小写的 O（`0o`或`0O`）。这是 ECMAScript 6 中的新语法，可以参考下面的浏览器兼容性表格。如果有不在（01234567）中的数字，将会抛出[`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)：“Missing octal digits after 0o”。
 
-```js
-var n = 0o755; // 493
-var m = 0o644; // 420
-
-// 用 0 开头也可以实现（请查看上方十进制有关部分）
-0755;
-0644;
+```js-nolint
+0O755 // 493
+0o644 // 420
 ```
 
 #### 十六进制
 
 十六进制表示为开头是 0 后接大写或小写的 X（`0x`或`0X`）。如果有不在（0123456789ABCDEF）中的数字，将会抛出[`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)：“Identifier starts immediately after numeric literal”。
 
-```js
-0xfffffffffffffffff; // 295147905179352830000
-0x123456789abcdef; // 81985529216486900
-0xa; // 10
+```js-nolint
+0xFFFFFFFFFFFFFFFFF // 295147905179352830000
+0x123456789ABCDEF   // 81985529216486900
+0XA                 // 10
 ```
 
 ### 对象字面量
@@ -315,8 +307,8 @@ var o = { a: a, b: b, c: c };
 ### 字符串字面量
 
 ```js-nolint
-'foo';
-"bar";
+'foo'
+"bar"
 ```
 
 #### 十六进制转义序列
@@ -363,15 +355,15 @@ ECMAScript 6 新增特性。使用 Unicode 编码转义，任何字符都可以�
 
 更多信息可以参考[template strings](/zh-CN/docs/Web/JavaScript/Reference/template_strings)。
 
-```js
-`string text`;
+```js-nolint
+`string text`
 
 `string text line 1
- string text line 2`;
+ string text line 2`
 
-`string text ${expression} string text`;
+`string text ${expression} string text`
 
-tag`string text ${expression} string text`;
+tag`string text ${expression} string text`
 ```
 
 ## 自动分号补全
