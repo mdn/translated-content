@@ -9,17 +9,17 @@ slug: Web/API/IDBKeyRange
 
 键范围可以是单个值，也可以是具有上界、下界或端点的范围。如果键范围同时有上界或下界，那么它是有界的，否则是无界的。有界键范围可以是开放的（不包含端点）或闭合的（包含了端点）。要检索一定范围内的所有键值，可以使用以下的代码结构：
 
-| Range                       | Code                                                              |
-| --------------------------- | ----------------------------------------------------------------- |
-| All keys ≤ **x**            | {{domxref("IDBKeyRange.upperBound")}}`(x)`             |
-| All keys < **x**            | {{domxref("IDBKeyRange.upperBound")}}`(x, true)`       |
-| All keys ≥ **y**            | {{domxref("IDBKeyRange.lowerBound")}}`(y)`             |
-| All keys > **y**            | {{domxref("IDBKeyRange.lowerBound")}}`(y, true)`       |
+| Range                       | Code                                                  |
+| --------------------------- | ----------------------------------------------------- |
+| All keys ≤ **x**            | {{domxref("IDBKeyRange.upperBound")}}`(x)`            |
+| All keys < **x**            | {{domxref("IDBKeyRange.upperBound")}}`(x, true)`      |
+| All keys ≥ **y**            | {{domxref("IDBKeyRange.lowerBound")}}`(y)`            |
+| All keys > **y**            | {{domxref("IDBKeyRange.lowerBound")}}`(y, true)`      |
 | All keys ≥ **x** && ≤ **y** | {{domxref("IDBKeyRange.bound")}}`(x, y)`              |
 | All keys > **x** &&< **y**  | {{domxref("IDBKeyRange.bound")}}`(x, y, true, true)`  |
 | All keys > **x** && ≤ **y** | {{domxref("IDBKeyRange.bound")}}`(x, y, true, false)` |
 | All keys ≥ **x** &&< **y**  | {{domxref("IDBKeyRange.bound")}}`(x, y, false, true)` |
-| The key = **z**             | {{domxref("IDBKeyRange.only")}}`(z)`                     |
+| The key = **z**             | {{domxref("IDBKeyRange.only")}}`(z)`                  |
 
 如果以下条件为 true，则键包含在键范围中：
 
@@ -76,19 +76,20 @@ slug: Web/API/IDBKeyRange
 function displayData() {
   var keyRangeValue = IDBKeyRange.bound("A", "F");
 
-  var transaction = db.transaction(['fThings'], 'readonly');
-  var objectStore = transaction.objectStore('fThings');
+  var transaction = db.transaction(["fThings"], "readonly");
+  var objectStore = transaction.objectStore("fThings");
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
+  objectStore.openCursor(keyRangeValue).onsuccess = function (event) {
     var cursor = event.target.result;
-    if(cursor) {
-      var listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
+    if (cursor) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML =
+        "<strong>" + cursor.value.fThing + "</strong>, " + cursor.value.fRating;
       list.appendChild(listItem);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
 }
