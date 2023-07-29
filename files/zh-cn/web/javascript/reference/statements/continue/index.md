@@ -37,11 +37,11 @@ continue [ label ];
 i = 0;
 n = 0;
 while (i < 5) {
-   i++;
-   if (i === 3) {
-      continue;
-   }
-   n += i;
+  i++;
+  if (i === 3) {
+    continue;
+  }
+  n += i;
 }
 ```
 
@@ -55,52 +55,51 @@ while (i < 5) {
 
 ```js
 var i = 0,
-    j = 8;
+  j = 8;
 
 checkiandj: while (i < 4) {
-   console.log("i: " + i);
-   i += 1;
+  console.log("i: " + i);
+  i += 1;
 
-   checkj: while (j > 4) {
-      console.log("j: "+ j);
-      j -= 1;
-      if ((j % 2) == 0)
-         continue checkj;
-      console.log(j + " is odd.");
-   }
-   console.log("i = " + i);
-   console.log("j = " + j);
+  checkj: while (j > 4) {
+    console.log("j: " + j);
+    j -= 1;
+    if (j % 2 == 0) continue checkj;
+    console.log(j + " is odd.");
+  }
+  console.log("i = " + i);
+  console.log("j = " + j);
 }
 ```
 
 输出：
 
 ```js
-"i: 0"
+"i: 0";
 
 // start checkj
-"j: 8"
-"7 is odd."
-"j: 7"
-"j: 6"
-"5 is odd."
-"j: 5"
+"j: 8";
+"7 is odd.";
+"j: 7";
+"j: 6";
+"5 is odd.";
+"j: 5";
 // end checkj
 
-"i = 1"
-"j = 4"
+"i = 1";
+"j = 4";
 
-"i: 1"
-"i = 2"
-"j = 4"
+"i: 1";
+"i = 2";
+"j = 4";
 
-"i: 2"
-"i = 3"
-"j = 4"
+"i: 2";
+"i = 3";
+"j = 4";
 
-"i: 3"
-"i = 4"
-"j = 4"
+"i: 3";
+"i = 4";
+"j = 4";
 ```
 
 ## 规范

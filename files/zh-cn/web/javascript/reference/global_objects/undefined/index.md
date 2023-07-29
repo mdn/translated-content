@@ -20,12 +20,12 @@ undefined
 一个没有被赋值的变量的类型是 undefined。如果方法或者是语句中**操作的变量没有被赋值，则会返回 undefined**（对于这句话持疑惑态度，请查看英文原文来理解）。
 
 ```js
-function test(a){
-    console.log(typeof a);    // undefined
-    return a;
+function test(a) {
+  console.log(typeof a); // undefined
+  return a;
 }
 
-test();                       // 返回"undefined"
+test(); // 返回"undefined"
 ```
 
 一个函数如果没有使用 return 语句指定{{jsxref("Statements/return", "返回")}}值，就会返回一个 undefined 值。
@@ -36,15 +36,15 @@ test();                       // 返回"undefined"
 > // 不要这样做！
 >
 > // 打印 'foo string' PS：说明 undefined 的值和类型都已经改变
-> (function() {
-> var undefined = 'foo';
-> console.log(undefined, typeof undefined)
-> })()
->
-> // 打印 'foo string' PS：说明 undefined 的值和类型都已经改变
-> (function(undefined) {
-> console.log(undefined, typeof undefined)
-> })('foo')
+> (function () {
+>   var undefined = "foo";
+>   console.log(undefined, typeof undefined);
+> })()(
+>   // 打印 'foo string' PS：说明 undefined 的值和类型都已经改变
+>   function (undefined) {
+>     console.log(undefined, typeof undefined);
+>   },
+> )("foo");
 > ```
 
 ## 示例
@@ -57,9 +57,9 @@ test();                       // 返回"undefined"
 var x;
 
 if (x === undefined) {
-// 执行这些语句
+  // 执行这些语句
 } else {
-// 这些语句不会被执行
+  // 这些语句不会被执行
 }
 ```
 
@@ -71,8 +71,8 @@ if (x === undefined) {
 
 ```js
 var x;
-if(typeof x === 'undefined') {
-    // 执行这些语句
+if (typeof x === "undefined") {
+  // 执行这些语句
 }
 ```
 
@@ -80,19 +80,20 @@ if(typeof x === 'undefined') {
 
 ```js
 // 这里没有声明 y
-if(typeof y === 'undefined') {       // 没有错误，执行结果为 true
-   console.log("y is " + typeof y )  // y is undefined
+if (typeof y === "undefined") {
+  // 没有错误，执行结果为 true
+  console.log("y is " + typeof y); // y is undefined
 }
 
-if(y === undefined) {                // ReferenceError: y is not defined
-
+if (y === undefined) {
+  // ReferenceError: y is not defined
 }
 ```
 
 但是，技术方面看来这样的使用方法应该被避免。JavaScript 是一个静态作用域语言，所以，一个变量是否被声明可以通过看它是否在一个封闭的上下文中被声明。唯一的例外是全局作用域，但是全局作用域是被绑定在全局对象上的，所以要检查一个变量是否在全局上下文中存在可以通过检查全局对象上是否存在这个属性（比如使用{{jsxref("Operators/in", "in")}}操作符）。
 
 ```js
-if ('x' in window) {
+if ("x" in window) {
   // 只有 x 被全局性的定义 才会执行这些语句
 }
 ```
@@ -103,13 +104,13 @@ if ('x' in window) {
 
 ```js
 var x;
-if(x === void 0) {
-    // 执行这些语句
+if (x === void 0) {
+  // 执行这些语句
 }
 
 // 没有声明 y
-if(y === void 0) {
-    // 抛出一个 RenferenceError 错误 (与`typeof`相比)
+if (y === void 0) {
+  // 抛出一个 RenferenceError 错误 (与`typeof`相比)
 }
 ```
 

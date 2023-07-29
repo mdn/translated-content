@@ -32,7 +32,7 @@ var wm = new WeakMap();
 wm.set(window, "foo");
 
 wm.has(window); // returns true
-wm.has("baz");  // returns false
+wm.has("baz"); // returns false
 ```
 
 ## 规范

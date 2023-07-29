@@ -28,35 +28,35 @@ x % y
 ### 被除数为正数
 
 ```js
-13 % 5  // 3
-1 % -2 // 1
-1 % 2  // 1
-2 % 3  // 2
-5.5 % 2 // 1.5
+13 % 5; // 3
+1 % -2; // 1
+1 % 2; // 1
+2 % 3; // 2
+5.5 % 2; // 1.5
 ```
 
 ### 被除数为负数
 
 ```js
--13 % 5 // -3
--1 % 2  // -1
--4 % 2  // -0
+-13 % 5; // -3
+-1 % 2; // -1
+-4 % 2; // -0
 ```
 
 ### 被除数为 NaN
 
 ```js
-NaN % 2 // NaN
+NaN % 2; // NaN
 ```
 
 ### 被除数为 Infinity
 
 ```js
-Infinity % 2 // NaN
-Infinity % 0 // NaN
-Infinity % Infinity // NaN
-2 % Infinity // 2
-0 % Infinity // 0
+Infinity % 2; // NaN
+Infinity % 0; // NaN
+Infinity % Infinity; // NaN
+2 % Infinity; // 2
+0 % Infinity; // 0
 ```
 
 ## 规范

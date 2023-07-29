@@ -34,7 +34,7 @@ let objClone = { ...obj };
 如果想将数组元素迭代为函数参数，一般使用{{jsxref( "Function.prototype.apply")}} 的方式进行调用。
 
 ```js
-function myFunction(x, y, z) { }
+function myFunction(x, y, z) {}
 var args = [0, 1, 2];
 myFunction.apply(null, args);
 ```
@@ -42,7 +42,7 @@ myFunction.apply(null, args);
 有了展开语法，可以这样写：
 
 ```js
-function myFunction(x, y, z) { }
+function myFunction(x, y, z) {}
 var args = [0, 1, 2];
 myFunction(...args);
 ```
@@ -50,7 +50,7 @@ myFunction(...args);
 所有参数都可以通过展开语法来传值，也不限制多次使用展开语法。
 
 ```js
-function myFunction(v, w, x, y, z) { }
+function myFunction(v, w, x, y, z) {}
 var args = [0, 1];
 myFunction(-1, ...args, 2, ...[3]);
 ```
@@ -68,27 +68,26 @@ var d = new Date(...dateFields);
 
 ```js
 function applyAndNew(constructor, args) {
-   function partial () {
-      return constructor.apply(this, args);
-   };
-   if (typeof constructor.prototype === "object") {
-      partial.prototype = Object.create(constructor.prototype);
-   }
-   return partial;
+  function partial() {
+    return constructor.apply(this, args);
+  }
+  if (typeof constructor.prototype === "object") {
+    partial.prototype = Object.create(constructor.prototype);
+  }
+  return partial;
 }
 
-
-function myConstructor () {
-   console.log("arguments.length: " + arguments.length);
-   console.log(arguments);
-   this.prop1="val1";
-   this.prop2="val2";
-};
+function myConstructor() {
+  console.log("arguments.length: " + arguments.length);
+  console.log(arguments);
+  this.prop1 = "val1";
+  this.prop2 = "val2";
+}
 
 var myArguments = ["hi", "how", "are", "you", "mr", null];
 var myConstructorWithArguments = applyAndNew(myConstructor, myArguments);
 
-console.log(new myConstructorWithArguments);
+console.log(new myConstructorWithArguments());
 // (myConstructor 构造函数中):           arguments.length: 6
 // (myConstructor 构造函数中):           ["hi", "how", "are", "you", "mr", null]
 // ("new myConstructorWithArguments"中): {prop1: "val1", prop2: "val2"}
@@ -101,8 +100,8 @@ console.log(new myConstructorWithArguments);
 没有展开语法的时候，只能组合使用 `push`, `splice`, `concat` 等方法，来将已有数组元素变成新数组的一部分。有了展开语法，通过字面量方式，构造新数组会变得更简单、更优雅：
 
 ```js
-var parts = ['shoulders', 'knees'];
-var lyrics = ['head', ...parts, 'and', 'toes'];
+var parts = ["shoulders", "knees"];
+var lyrics = ["head", ...parts, "and", "toes"];
 // ["head", "shoulders", "knees", "and", "toes"]
 ```
 
@@ -153,7 +152,7 @@ var arr3 = [...arr1, ...arr2];
 var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 // 将 arr2 中的元素插入到 arr1 的开头
-Array.prototype.unshift.apply(arr1, arr2) // arr1 现在是 [3, 4, 5, 0, 1, 2]
+Array.prototype.unshift.apply(arr1, arr2); // arr1 现在是 [3, 4, 5, 0, 1, 2]
 ```
 
 如果使用展开语法，代码如下：\[请注意，这里使用展开语法创建了一个新的 `arr1` 数组， {{jsxref("Array.unshift")}} 方法则是修改了原本存在的 `arr1` 数组]:
@@ -171,8 +170,8 @@ arr1 = [...arr2, ...arr1]; // arr1 现在为 [3, 4, 5, 0, 1, 2]
 浅拷贝 (Shallow-cloning，不包含 prototype) 和对象合并，可以使用更简短的展开语法。而不必再使用 {{jsxref("Object.assign()")}} 方式。
 
 ```js
-var obj1 = { foo: 'bar', x: 42 };
-var obj2 = { foo: 'baz', y: 13 };
+var obj1 = { foo: "bar", x: 42 };
+var obj2 = { foo: "baz", y: 13 };
 
 var clonedObj = { ...obj1 };
 // 克隆后的对象：{ foo: "bar", x: 42 }
@@ -204,7 +203,7 @@ var mergedObj = merge ( {}, obj1, obj2);
 在数组或函数参数中使用展开语法时，该语法只能用于 [可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)：
 
 ```js
-var obj = {'key1': 'value1'};
+var obj = { key1: "value1" };
 var array = [...obj]; // TypeError: obj is not iterable
 ```
 
