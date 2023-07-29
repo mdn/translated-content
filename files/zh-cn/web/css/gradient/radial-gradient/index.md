@@ -25,19 +25,21 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 - `<ending-shape>`
   - : 渐变结束时的形状。圆形（渐变的形状是一个半径不变的正圆）或椭圆形（轴对称椭圆）。默认值为椭圆。
 - `<size>`
+
   - : 确定渐变结束形状的大小。如果省略，则默认为最远角。它可以显式给出，也可以通过关键字给出。出于关键字定义的目的，将梯度框边缘视为在两个方向上无限延伸，而不是有限线段。
 
-     对于它们的 `<size>`，圆形和椭圆渐变都接受以下关键字：
-     | 关键字              | 描述                                                                                                             |
-    | ----------------- | ---------------------------------------------------------------------------------------------------------------- |
+    对于它们的 `<size>`，圆形和椭圆渐变都接受以下关键字：
+
+    | 关键字            | 描述                                                                                                                 |
+    | ----------------- | -------------------------------------------------------------------------------------------------------------------- |
     | `closest-side`    | 渐变结束的边缘形状与容器距离渐变中心点最近的一边相切（圆形）或者至少与距离渐变中心点最近的垂直和水平边相切（椭圆）。 |
     | `closest-corner`  | 渐变结束的边缘形状与容器距离渐变中心点最近的一个角相交。                                                             |
-    | `farthest-side`   | 与 closest-side 相反，边缘形状与容器距离渐变中心点最远的一边相切（或最远的垂直和水平边）。                       |
+    | `farthest-side`   | 与 `closest-side` 相反，边缘形状与容器距离渐变中心点最远的一边相切（或最远的垂直和水平边）。                         |
     | `farthest-corner` | 渐变结束的边缘形状与容器距离渐变中心点最远的一个角相交。                                                             |
 
-     如果 `<ending-shape>` 被指定为圆形，则可以为大小指定一个 [`<length>`](/zh-CN/docs/Web/CSS/length)，它明确了圆的半径。
+    如果 `<ending-shape>` 被指定为圆形，则可以为大小指定一个 [`<length>`](/zh-CN/docs/Web/CSS/length)，它明确了圆的半径。
 
-    如果 `<ending-shape>` 被指定为椭圆，或者被忽略，则可以使用[`<length-percentage>`](/zh-CN/docs/Web/CSS/length-percentage) 用两个值来指定椭圆的大小。第一个值表示水平半径，第二个值表示垂直半径。百分比值是相对于渐变框的相应尺寸的。负值无效。
+    如果 `<ending-shape>` 被指定为椭圆，或者被忽略，则可以使用 [`<length-percentage>`](/zh-CN/docs/Web/CSS/length-percentage) 用两个值来指定椭圆的大小。第一个值表示水平半径，第二个值表示垂直半径。百分比值是相对于渐变框的相应尺寸的。负值无效。
 
 - `<linear-color-stop>`
   - : 色值结束点（color stop）的 {{cssxref("&lt;color&gt;")}} 值，后跟一个或两个可选的停止位置（沿渐变轴的 {{cssxref("&lt;percentage&gt;")}} 或 {{cssxref("&lt;length&gt;")}}）。`0%` 的百分比，或者 `0` 的长度，代表渐变的中心；值 `100%` 表示结束形状与虚拟渐变射线的交点。两者之间的百分比值线性定位在梯度射线上。包括两个停止位置相当于在两个位置声明了两个颜色相同的色值结束点。
@@ -104,8 +106,11 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 
 ```css
 .radial-gradient {
-  background-image: radial-gradient(farthest-corner at 40px 40px,
-      #f35 0%, #43e 100%);
+  background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    #f35 0%,
+    #43e 100%
+  );
 }
 ```
 
