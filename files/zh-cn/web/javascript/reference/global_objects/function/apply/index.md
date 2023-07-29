@@ -11,9 +11,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 ## 语法
 
-```js
-apply(thisArg);
-apply(thisArg, argsArray);
+```js-nolint
+apply(thisArg)
+apply(thisArg, argsArray)
 ```
 
 ### 参数

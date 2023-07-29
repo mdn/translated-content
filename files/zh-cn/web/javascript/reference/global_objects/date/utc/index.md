@@ -11,14 +11,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
 
 ## 语法
 
-```js
-Date.UTC(year);
-Date.UTC(year, month);
-Date.UTC(year, month, day);
-Date.UTC(year, month, day, hour);
-Date.UTC(year, month, day, hour, minute);
-Date.UTC(year, month, day, hour, minute, second);
-Date.UTC(year, month, day, hour, minute, second, millisecond);
+```js-nolint
+Date.UTC(year)
+Date.UTC(year, month)
+Date.UTC(year, month, day)
+Date.UTC(year, month, day, hour)
+Date.UTC(year, month, day, hour, minute)
+Date.UTC(year, month, day, hour, minute, second)
+Date.UTC(year, month, day, hour, minute, second, millisecond)
 ```
 
 ## 参数

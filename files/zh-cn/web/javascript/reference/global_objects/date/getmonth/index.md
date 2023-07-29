@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 
 ## 语法
 
-```js
-dateObj.getMonth();
+```js-nolint
+getMonth()
 ```
 
 ### 参数

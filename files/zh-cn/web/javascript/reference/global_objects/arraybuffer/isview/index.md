@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 
 ## 语法
 
-```js
-ArrayBuffer.isView(value);
+```js-nolint
+ArrayBuffer.isView(value)
 ```
 
 ### 参数

@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
 
 ## 语法
 
-```js
-dateObj.getDay();
+```js-nolint
+getDay()
 ```
 
 ### 返回值

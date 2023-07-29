@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/isFinite
 
 ## 语法
 
-```js
-isFinite(testValue);
+```js-nolint
+isFinite(testValue)
 ```
 
 ### 参数

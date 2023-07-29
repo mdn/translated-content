@@ -9,8 +9,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/toString
 
 ## 语法
 
-```js
-toString();
+```js-nolint
+toString()
 ```
 
 ### 返回值
