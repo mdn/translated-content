@@ -32,24 +32,24 @@ Canvas 상태는 스택(stack)에 쌓입니다. `save()` 메소드가 호출될 
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
-  ctx.fillRect(0, 0, 150, 150);   // 기본 설정으로 사각형을 그리기
-  ctx.save();                  // 기본 상태를 저장하기
+  ctx.fillRect(0, 0, 150, 150); // 기본 설정으로 사각형을 그리기
+  ctx.save(); // 기본 상태를 저장하기
 
-  ctx.fillStyle = '#09F';      // 설정 변경하기
+  ctx.fillStyle = "#09F"; // 설정 변경하기
   ctx.fillRect(15, 15, 120, 120); // 새로운 설정으로 사각형 그리기
 
-  ctx.save();                  // 현재 상태 저장하기
-  ctx.fillStyle = '#FFF';      // 설정 변경하기
+  ctx.save(); // 현재 상태 저장하기
+  ctx.fillStyle = "#FFF"; // 설정 변경하기
   ctx.globalAlpha = 0.5;
-  ctx.fillRect(30, 30, 90, 90);   // 새로운 설정으로 사각형 그리기
+  ctx.fillRect(30, 30, 90, 90); // 새로운 설정으로 사각형 그리기
 
-  ctx.restore();               // 이전 상태 복원하기
-  ctx.fillRect(45, 45, 60, 60);   // 복원된 설정으로 사각형 그리기
+  ctx.restore(); // 이전 상태 복원하기
+  ctx.fillRect(45, 45, 60, 60); // 복원된 설정으로 사각형 그리기
 
-  ctx.restore();               // 초기 상태를 복원하기
-  ctx.fillRect(60, 60, 30, 30);   // 복원된 설정으로 사각형 그리기
+  ctx.restore(); // 초기 상태를 복원하기
+  ctx.fillRect(60, 60, 30, 30); // 복원된 설정으로 사각형 그리기
 }
 ```
 
@@ -86,11 +86,11 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   for (var i = 0; i < 3; i++) {
     for (var j = 0; j < 3; j++) {
       ctx.save();
-      ctx.fillStyle = 'rgb(' + (51 * i) + ', ' + (255 - 51 * i) + ', 255)';
+      ctx.fillStyle = "rgb(" + 51 * i + ", " + (255 - 51 * i) + ", 255)";
       ctx.translate(10 + j * 50, 10 + i * 50);
       ctx.fillRect(0, 0, 25, 25);
       ctx.restore();
@@ -126,32 +126,32 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 좌측 사각형, canvas 원점에서 회전하기
   ctx.save();
   // 파란 사각형
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(30, 30, 100, 100);
   ctx.rotate((Math.PI / 180) * 25);
   // 회색 사각형
-  ctx.fillStyle = '#4D4E53';
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(30, 30, 100, 100);
   ctx.restore();
 
   // 우측 사각형, 사각형 중심에서 회전하기
   // 파란 사각형 그리기
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(150, 30, 100, 100);
 
   ctx.translate(200, 80); // 사각형 중심으로 이동하기
-                          // x = x + 0.5 * width
-                          // y = y + 0.5 * height
+  // x = x + 0.5 * width
+  // y = y + 0.5 * height
   ctx.rotate((Math.PI / 180) * 25); // 회전
   ctx.translate(-200, -80); // 예전 위치로 이동하기
 
   // 회색 사각형 그리기
-  ctx.fillStyle = '#4D4E53';
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(150, 30, 100, 100);
 }
 ```
@@ -185,7 +185,7 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 간단하지만 확대·축소 비율을 적용한 사각형 그리기
   ctx.save();
@@ -195,8 +195,8 @@ function draw() {
 
   // 수평으로 대칭하기
   ctx.scale(-1, 1);
-  ctx.font = '48px serif';
-  ctx.fillText('MDN', -135, 120);
+  ctx.font = "48px serif";
+  ctx.fillText("MDN", -135, 120);
 }
 ```
 
@@ -242,21 +242,21 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   var sin = Math.sin(Math.PI / 6);
   var cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
   var c = 0;
   for (var i = 0; i <= 12; i++) {
-    c = Math.floor(255 / 12 * i);
-    ctx.fillStyle = 'rgb(' + c + ', ' + c + ', ' + c + ')';
+    c = Math.floor((255 / 12) * i);
+    ctx.fillStyle = "rgb(" + c + ", " + c + ", " + c + ")";
     ctx.fillRect(0, 0, 100, 10);
     ctx.transform(cos, sin, -sin, cos, 0, 0);
   }
 
   ctx.setTransform(-1, 0, 0, 1, 100, 100);
-  ctx.fillStyle = 'rgba(255, 128, 255, 0.5)';
+  ctx.fillStyle = "rgba(255, 128, 255, 0.5)";
   ctx.fillRect(0, 50, 100, 100);
 }
 ```
