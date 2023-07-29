@@ -13,8 +13,8 @@ slug: Web/API/AbortSignal/throwIfAborted
 
 ## 语法
 
-```js
-throwIfAborted();
+```js-nolint
+throwIfAborted()
 ```
 
 ### 参数

@@ -16,8 +16,8 @@ original_slug: Web/API/AbortSignal/timeout
 
 ## 语法
 
-```js
-timeout(time);
+```js-nolint
+AbortSignal.timeout(time)
 ```
 
 ### 参数

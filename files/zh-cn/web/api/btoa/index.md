@@ -11,8 +11,8 @@ slug: Web/API/btoa
 
 ## 语法
 
-```js
-btoa(stringToEncode);
+```js-nolint
+btoa(stringToEncode)
 ```
 
 ### 参数

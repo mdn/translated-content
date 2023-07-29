@@ -11,8 +11,8 @@ slug: Web/API/BroadcastChannel/BroadcastChannel
 
 ## 语法
 
-```js
-new BroadcastChannel(channelName);
+```js-nolint
+new BroadcastChannel(channelName)
 ```
 
 ### 参数

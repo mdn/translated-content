@@ -9,8 +9,8 @@ slug: Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
 
 ## 语法
 
-```js
-new ByteLengthQueuingStrategy(highWaterMark);
+```js-nolint
+new ByteLengthQueuingStrategy(highWaterMark)
 ```
 
 ### 参数
