@@ -19,7 +19,7 @@ dateObj.setSeconds(valeurSecondes[, valeurMs])
 ### Versions antérieures à JavaScript 1.3
 
 ```js
-dateObj.setSeconds(valeurSecondes)
+dateObj.setSeconds(valeurSecondes);
 ```
 
 ### Paramètres
@@ -45,7 +45,7 @@ Si un paramètre utilisé est en dehors des limites attendues, `setSeconds()` te
 
 ```js
 var leGrandJour = new Date();
-leGrandJour.setSeconds(30)
+leGrandJour.setSeconds(30);
 ```
 
 ## Spécifications

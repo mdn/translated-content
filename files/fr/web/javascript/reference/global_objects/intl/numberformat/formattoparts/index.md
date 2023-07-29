@@ -11,7 +11,7 @@ La méthode **`Intl.Numberformat.prototype.formatToParts()`** permet de produire
 ## Syntaxe
 
 ```js
-Intl.NumberFormat.prototype.formatToParts(nombre)
+Intl.NumberFormat.prototype.formatToParts(nombre);
 ```
 
 ### Paramètres
@@ -38,7 +38,7 @@ La méthode `formatToParts()` est peut être utilisée lorsqu'on met en forme de
 Les valeurs possibles pour l'attribut `type` sont :
 
 - `currency`
-  - : Le suffixe associé à la devise. Ce peut être le symbole "$", "€" ou bien le nom de la devise "Dollar", "Euro" selon la façon dont `currencyDisplay`  est indiquée.
+  - : Le suffixe associé à la devise. Ce peut être le symbole "$", "€" ou bien le nom de la devise "Dollar", "Euro" selon la façon dont `currencyDisplay` est indiquée.
 - `decimal`
   - : Le séparateur décimal utilisé (".").
 - `fraction`
@@ -67,9 +67,9 @@ Les valeurs possibles pour l'attribut `type` sont :
 ```js
 var number = 3500;
 
-var formatter = new Intl.NumberFormat('de-DE', {
-  style: 'currency',
-  currency: 'EUR'
+var formatter = new Intl.NumberFormat("de-DE", {
+  style: "currency",
+  currency: "EUR",
 });
 
 formatter.format(number);
@@ -96,12 +96,17 @@ formatter.formatToParts(number);
 Maintenant que la chaîne est décomposée, on peut la réassembler d'une façon spécifique. On peut, par exemple utiliser {{jsxref("Array.prototype.map()")}}, [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), une [instruction `switch`](/fr/docs/Web/JavaScript/Reference/Instructions/switch), [des littéraux de gabarits](/fr/docs/Web/JavaScript/Reference/Littéraux_gabarits) et {{jsxref("Array.prototype.reduce()")}}.
 
 ```js
-var numberString = formatter.formatToParts(number).map(({type, value}) => {
-  switch (type) {
-    case 'currency': return `<strong>${value}</strong>`;
-    default : return value;
-  }
-}).reduce((string, part) => string + part);
+var numberString = formatter
+  .formatToParts(number)
+  .map(({ type, value }) => {
+    switch (type) {
+      case "currency":
+        return `<strong>${value}</strong>`;
+      default:
+        return value;
+    }
+  })
+  .reduce((string, part) => string + part);
 ```
 
 Grâce à cette fonction, on pourra mettre en gras le suffixe associé à la devise :

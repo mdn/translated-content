@@ -13,14 +13,14 @@ L'opérateur binaire NON (`~`) prend l'opposé de chaque bit de son opérande et
 ## Syntaxe
 
 ```js
-~a
+~a;
 ```
 
 ## Description
 
 L'opérande est converti en un entier signé sur 32 bits. Les nombres avec plus de 32 bits voient leurs bits les plus significatifs être tronqués. Voici un exemple où l'entier qui suit est supérieur à une valeur pouvant être exprimée sur 32 bits : la conversion écrête la valeur pour obtenir un entier signé sur 32 bits :
 
-```js
+```plain
 Avant : 11100110111110100000000000000110000000000001
 Après :             10100000000000000110000000000001
 ```
@@ -52,9 +52,9 @@ Appliquer un NON binaire sur n'importe quel nombre `x` fournira la valeur `-(x +
 ### Utiliser le NON binaire
 
 ```js
-~0;  // -1
+~0; // -1
 ~-1; // 0
-~1;  // -2
+~1; // -2
 ```
 
 ## Spécifications

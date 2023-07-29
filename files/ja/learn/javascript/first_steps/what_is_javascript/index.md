@@ -47,14 +47,14 @@ JavaScript はウェブページにて複雑な機能をできるようにする
 
 ```css
 p {
-  font-family: 'helvetica neue', helvetica, sans-serif;
+  font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  border: 2px solid rgba(0,0,200,0.6);
-  background: rgba(0,0,200,0.3);
-  color: rgba(0,0,200,0.6);
-  box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+  border: 2px solid rgba(0, 0, 200, 0.6);
+  background: rgba(0, 0, 200, 0.3);
+  color: rgba(0, 0, 200, 0.6);
+  box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
   border-radius: 10px;
   padding: 3px 10px;
   display: inline-block;
@@ -67,12 +67,12 @@ p {
 最後に、JavaScript を加えて動的なふるまいを実装します:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('click', updateName);
+para.addEventListener("click", updateName);
 
 function updateName() {
-  const name = prompt('名前を入力して下さい');
+  const name = prompt("名前を入力して下さい");
   para.textContent = `Player 1: ${name}`;
 }
 ```
@@ -147,12 +147,12 @@ JavaScript のごく一般的な用途は、(先ほど例示した) Document Obj
 例えば、最初の例で見た JavaScript のブロックに戻りましょう。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('click', updateName);
+para.addEventListener("click", updateName);
 
 function updateName() {
-  const name = prompt('名前を入力して下さい');
+  const name = prompt("名前を入力して下さい");
   para.textContent = `Player 1: ${name}`;
 }
 ```
@@ -203,26 +203,24 @@ JavaScript は CSS と同じような方法で、HTML ページに適用する�
 
    ```html
    <script>
-
      // JavaScript をここに書きます
-
    </script>
    ```
 
 4. それでは {{htmlelement("script")}} 要素内に JavaScript を書いて、もうちょっと面白いことをしてみましょう。「// JavaScript をここに書きます」と書いてあるすぐ下に、以下のコードを追加してください。
 
    ```js
-   document.addEventListener('DOMContentLoaded', () => {
+   document.addEventListener("DOMContentLoaded", () => {
      function createParagraph() {
-       const para = document.createElement('p');
-       para.textContent = 'ボタンが押されました!';
+       const para = document.createElement("p");
+       para.textContent = "ボタンが押されました!";
        document.body.appendChild(para);
      }
 
-     const buttons = document.querySelectorAll('button');
+     const buttons = document.querySelectorAll("button");
 
      for (const button of buttons) {
-       button.addEventListener('click', createParagraph);
+       button.addEventListener("click", createParagraph);
      }
    });
    ```
@@ -251,15 +249,15 @@ JavaScript は CSS と同じような方法で、HTML ページに適用する�
 
    ```js
    function createParagraph() {
-     const para = document.createElement('p');
-     para.textContent = 'ボタンが押されました!';
+     const para = document.createElement("p");
+     para.textContent = "ボタンが押されました!";
      document.body.appendChild(para);
    }
 
-   const buttons = document.querySelectorAll('button');
+   const buttons = document.querySelectorAll("button");
 
    for (const button of buttons) {
-     button.addEventListener('click', createParagraph);
+     button.addEventListener("click", createParagraph);
    }
    ```
 
@@ -277,8 +275,8 @@ JavaScript は CSS と同じような方法で、HTML ページに適用する�
 
 ```js example-bad
 function createParagraph() {
-  const para = document.createElement('p');
-  para.textContent = 'ボタンが押されました！';
+  const para = document.createElement("p");
+  para.textContent = "ボタンが押されました！";
   document.body.appendChild(para);
 }
 ```
@@ -303,10 +301,10 @@ HTML に JavaScript を含めるのではなく、純粋な JavaScript の構成
 このためのコードを以下に示します。
 
 ```js
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll("button");
 
 for (const button of buttons) {
-  button.addEventListener('click', createParagraph);
+  button.addEventListener("click", createParagraph);
 }
 ```
 
@@ -329,7 +327,7 @@ JavaScript を使用してページ上の要素（またはより正確には、
 内部の例では、コードの周りにこの構造を見ることができます。
 
 ```js
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   // …
 });
 ```
@@ -432,8 +430,8 @@ HTML や CSS と同様に、 JavaScript でもコード内にブラウザーが�
 // 関数: HTML の body タグ内の一番下に新しい段落を追加します。
 
 function createParagraph() {
-  let para = document.createElement('p');
-  para.textContent = 'ボタンが押されました！';
+  let para = document.createElement("p");
+  para.textContent = "ボタンが押されました！";
   document.body.appendChild(para);
 }
 
@@ -444,10 +442,10 @@ function createParagraph() {
   どのボタンが押されても、 createParagraph() 関数が実行されるようにする。
 */
 
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll("button");
 
 for (const button of buttons) {
-  button.addEventListener('click', createParagraph);
+  button.addEventListener("click", createParagraph);
 }
 ```
 

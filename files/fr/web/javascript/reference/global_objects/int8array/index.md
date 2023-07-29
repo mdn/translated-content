@@ -125,7 +125,7 @@ console.log(int8.length); // 2
 console.log(int8.BYTES_PER_ELEMENT); // 1
 
 // Construction à partir d'un tableau
-var arr = new Int8Array([21,31]);
+var arr = new Int8Array([21, 31]);
 console.log(arr[1]); // 31
 
 // Construction à partir d'un autre TypedArray
@@ -138,7 +138,9 @@ var buffer = new ArrayBuffer(8);
 var z = new Int8Array(buffer, 1, 4);
 
 // Construction à partir d'un itérable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var int8 = new Int8Array(iterable);
 // Int8Array[1, 2, 3]
 ```

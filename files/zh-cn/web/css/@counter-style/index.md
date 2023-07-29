@@ -1,5 +1,5 @@
 ---
-title: '@counter-style'
+title: "@counter-style"
 slug: Web/CSS/@counter-style
 ---
 
@@ -61,6 +61,7 @@ slug: Web/CSS/@counter-style
     ```
 
 - {{cssxref("additive-symbols")}}
+
   - : 尽管 symbols 属性中指定的符号可以被 system 中定义的大部分算法所使用，但是一些 system 属性的值，比如 additive，依赖于本描述符所描述的加性元组。Each additive tuple consists of a counter symbol and a non negative integer weight. 每个加性元组包含一个可数的符号和一个非负证书的权重。The additive tuples must be specified in the descending order of their weights.
 
 - {{cssxref("speak-as")}}
@@ -80,7 +81,7 @@ slug: Web/CSS/@counter-style
 
 ```css
 .items {
-   list-style: circled-alpha;
+  list-style: circled-alpha;
 }
 ```
 

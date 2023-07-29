@@ -5,7 +5,7 @@ slug: Web/API/CanvasRenderingContext2D/fillText
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.fillText()`** 是 Canvas 2D API 在 *(x, y)* 位置填充文本的方法。如果选项的第四个参数提供了最大宽度，文本会进行缩放以适应最大宽度。
+**`CanvasRenderingContext2D.fillText()`** 是 Canvas 2D API 在 _(x, y)_ 位置填充文本的方法。如果选项的第四个参数提供了最大宽度，文本会进行缩放以适应最大宽度。
 
 参见 {{domxref("CanvasRenderingContext2D.strokeText()")}} 方法对文本进行描边。
 

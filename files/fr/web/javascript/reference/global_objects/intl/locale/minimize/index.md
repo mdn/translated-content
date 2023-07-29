@@ -13,7 +13,7 @@ La méthode **`Intl.Locale.prototype.minimize()`** tente de retirer les informat
 ## Syntaxe
 
 ```js
-locale.minimize()
+locale.minimize();
 ```
 
 ### Valeur de retour
@@ -29,7 +29,10 @@ Cette méthode effectue l'opération inverse de {{jsxref("Locale/maximize", "max
 ## Exemples
 
 ```js
-let maLocale = new Intl.Locale("fr-Latn-FR", {hourCycle: "h24", calendar: "gregory"});
+let maLocale = new Intl.Locale("fr-Latn-FR", {
+  hourCycle: "h24",
+  calendar: "gregory",
+});
 console.log(maLocale.baseName); // Affiche "fr-Latn-FR"
 console.log(maLocale.toString()); // Affiche "fr-Latn-FR-u-ca-gregory-hc-h24"
 let maLocMinimized = maLocale.minimize();

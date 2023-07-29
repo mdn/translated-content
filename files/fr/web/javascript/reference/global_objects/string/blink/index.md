@@ -13,7 +13,7 @@ La méthode **`blink()`** crée un élément HTML {{HTMLElement("blink")}} qui a
 ## Syntaxe
 
 ```js
-str.blink()
+str.blink();
 ```
 
 ### Valeur de retour

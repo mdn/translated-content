@@ -34,10 +34,10 @@ Channel messaging 在这样的场景中特别有用：假如你有一个社交�
 在例子的主页面，我们有一个简单的表单，内含一个文本输入框，用来输入要发送到 {{htmlelement("iframe")}} 的消息。我们还有一个段落，我们在稍后将会用它来显示 {{htmlelement("iframe")}} 回传回来的确认消息。
 
 ```js
-var input = document.getElementById('message-input');
-var output = document.getElementById('message-output');
-var button = document.querySelector('button');
-var iframe = document.querySelector('iframe');
+var input = document.getElementById("message-input");
+var output = document.getElementById("message-output");
+var button = document.querySelector("button");
+var iframe = document.querySelector("iframe");
 
 var channel = new MessageChannel();
 var port1 = channel.port1;
@@ -47,13 +47,13 @@ iframe.addEventListener("load", onLoad);
 
 function onLoad() {
   // 监听按钮点击
-  button.addEventListener('click', onClick);
+  button.addEventListener("click", onClick);
 
   // 在 port1 监听消息
   port1.onmessage = onMessage;
 
   // 把 port2 传给 iframe
-  iframe.contentWindow.postMessage('init', '*', [channel.port2]);
+  iframe.contentWindow.postMessage("init", "*", [channel.port2]);
 }
 
 // 当按钮点击时，在 port1 上发送一个消息
@@ -65,7 +65,7 @@ function onClick(e) {
 // 处理 port1 收到的消息
 function onMessage(e) {
   output.innerHTML = e.data;
-  input.value = '';
+  input.value = "";
 }
 ```
 
@@ -86,11 +86,11 @@ function onMessage(e) {
 在 IFrame 里，我们有下面的 JavaScript:
 
 ```js
-var list = document.querySelector('ul');
+var list = document.querySelector("ul");
 var port2;
 
 // 监听初始的 port 传递消息
-window.addEventListener('message', initPort);
+window.addEventListener("message", initPort);
 
 // 设置传过来的 port
 function initPort(e) {
@@ -100,7 +100,7 @@ function initPort(e) {
 
 // 处理 port2 收到的消息
 function onMessage(e) {
-  var listItem = document.createElement('li');
+  var listItem = document.createElement("li");
   listItem.textContent = e.data;
   list.appendChild(listItem);
   port2.postMessage('Message received by IFrame: "' + e.data + '"');
@@ -121,7 +121,7 @@ function onMessage(e) {
 // 处理 port1 上收到的消息
 function onMessage(e) {
   output.innerHTML = e.data;
-  input.value = '';
+  input.value = "";
 }
 ```
 

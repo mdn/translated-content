@@ -46,8 +46,8 @@ class SuperTriple extends Triple {
   }
 }
 
-console.log(Triple.triple());       // 3
-console.log(Triple.triple(6));      // 18
+console.log(Triple.triple()); // 3
+console.log(Triple.triple(6)); // 18
 console.log(SuperTriple.triple(4)); // 144
 var tp = new Triple();
 console.log(SuperTriple.triple(4)); // 144 (pas d'impact de l'affectation du parent)
@@ -61,10 +61,10 @@ Afin d'appeler une autre méthode statique dans une méthode statique, on pourra
 ```js
 class StaticMethodCall {
   static staticMethod() {
-    return 'Méthode statique appelée';
+    return "Méthode statique appelée";
   }
   static anotherStaticMethod() {
-    return this.staticMethod() + ' depuis une autre statique';
+    return this.staticMethod() + " depuis une autre statique";
   }
 }
 StaticMethodCall.staticMethod();
@@ -75,11 +75,11 @@ StaticMethodCall.anotherStaticMethod();
 
 ### Depuis les constructeurs de classes et les autres méthodes
 
-Les méthodes statiques ne sont pas directement accessibles via le mot-clé [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this). Il faut les appeler avec le nom de la classe qui préfixe le nom de la méthode statique `NomDeClasse.MéthodeStatique()` (comme pour les autres appels en dehors de la classe) ou avec la propriété `constructor`  : `this.constructor.MéthodeStatique()`.
+Les méthodes statiques ne sont pas directement accessibles via le mot-clé [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this). Il faut les appeler avec le nom de la classe qui préfixe le nom de la méthode statique `NomDeClasse.MéthodeStatique()` (comme pour les autres appels en dehors de la classe) ou avec la propriété `constructor` : `this.constructor.MéthodeStatique()`.
 
 ```js
-class StaticMethodCall{
-  constructor(){
+class StaticMethodCall {
+  constructor() {
     console.log(StaticMethodCall.staticMethod());
     // 'appel de la méthode statique'
 
@@ -87,8 +87,8 @@ class StaticMethodCall{
     // 'appel de la méthode statique'
   }
 
-  static staticMethod(){
-    return 'appel de la méthode statique.';
+  static staticMethod() {
+    return "appel de la méthode statique.";
   }
 }
 ```

@@ -16,9 +16,9 @@ Le type {{Glossary("String")}} de JavaScript est utilisé pour représenter des 
 
 Vous pouvez créer des chaînes de caractères simple en utilisant des apostrophes simples ou doubles&nbsp;:
 
-```js
-'machin'
-"truc"
+```js-nolint
+'machin';
+"truc";
 ```
 
 Des chaînes plus avancées peuvent être créées en utilisant des séquences d'échappement.
@@ -28,7 +28,7 @@ Des chaînes plus avancées peuvent être créées en utilisant des séquences d
 Le nombre situé après \x est interprété comme un nombre [hexadécimal](https://fr.wikipedia.org/wiki/Système_hexadécimal) :
 
 ```js
-'\xA9' // "©"
+"\xA9"; // "©"
 ```
 
 #### Les séquences d'échappement Unicode
@@ -36,7 +36,7 @@ Le nombre situé après \x est interprété comme un nombre [hexadécimal](https
 Les séquences d'échappement Unicode requièrent au moins quatres caractères hexadécimaux après \u.
 
 ```js
-'\u00A9' // "©"
+"\u00A9"; // "©"
 ```
 
 #### L'échappement d'unités de codage Unicode
@@ -46,10 +46,10 @@ Nouveau dans ECMAScript 2015. Avec les échappements d'unités de codage Unicode
 Voir aussi {{jsxref("String.fromCodePoint()")}} ou {{jsxref("String.prototype.codePointAt()")}}.
 
 ```js
-'\u{2F804}'
+"\u{2F804}";
 
 // Le même avec des échappements Unicode simples
-'\uD87E\uDC04'
+"\uD87E\uDC04";
 ```
 
 ### Les objets String
@@ -57,7 +57,7 @@ Voir aussi {{jsxref("String.fromCodePoint()")}} ou {{jsxref("String.prototype.co
 L'objet {{jsxref("String")}} est un conteneur autour du type de donnée primitif chaîne de caractères.
 
 ```js
-var s = new String('foo'); // crée un objet String
+var s = new String("foo"); // crée un objet String
 console.log(s); // affiche : {'0': 'f', '1': 'o', '2': 'o'}
 typeof s; // retourne 'object'
 ```
@@ -67,8 +67,8 @@ Vous pouvez appeler chacune des méthodes de l'objet `String` avec une valeur li
 Vous devriez utiliser des littéraux de chaîne de caractères, à moins que vous n'ayez spécifiquement besoin d'un objet `String`, parce que les objets `String` peuvent avoir un comportement contre-intuitif&nbsp;:
 
 ```js
-var s1 = '2 + 2'; // crée une valeur de chaîne de caractères
-var s2 = new String('2 + 2'); // crée un objet String
+var s1 = "2 + 2"; // crée une valeur de chaîne de caractères
+var s2 = new String("2 + 2"); // crée un objet String
 eval(s1); // renvoie le nombre 4
 eval(s2); // renvoie la chaîne "2 + 2"
 ```
@@ -76,9 +76,9 @@ eval(s2); // renvoie la chaîne "2 + 2"
 Un objet `String` possède une propriété, `length`, qui indique le nombre d'unités de codage UTF-16 dans la chaîne de caractères. Par exemple, le code suivant affecte à `x` la valeur 16, parce que la chaîne "Bonjour, Monde !" contient 16 caractères, chacun représenté par une unité de codage UTF-16. Vous pouvez accéder à chaque unité de codage en utilisant une syntaxe de tableau entre crochets. Vous ne pouvez pas changer les caractères, du fait que les chaînes sont des objets immuables (semblables à des tableaux) :
 
 ```js
-var machaine = 'Bonjour, Monde !';
+var machaine = "Bonjour, Monde !";
 var x = machaine.length;
-machaine[0] = 'L'; // cela n'a aucun effet car les chaînes sont immuables
+machaine[0] = "L"; // cela n'a aucun effet car les chaînes sont immuables
 machaine[0]; // cela renvoie "B"
 ```
 
@@ -226,8 +226,10 @@ Les littéraux de gabarits sont délimités par des [accents graves](https://fr.
 Tout caractère de passage à la ligne inséré dans le source fait partie du littéral de modèle. En utilisant les chaînes de caractères normales, vous auriez eu à utiliser la syntaxe suivante afin d'avoir des chaînes de caractères multi-lignes :
 
 ```js
-console.log('chaîne ligne de texte 1\n\
-chaîne ligne de texte 2');
+console.log(
+  "chaîne ligne de texte 1\n\
+chaîne ligne de texte 2",
+);
 // "chaîne ligne de texte 1
 // chaîne ligne de texte 2"
 ```
@@ -248,7 +250,7 @@ Pour intégrer des expressions dans des chaînes normales, vous devriez utiliser
 ```js
 var a = 5;
 var b = 10;
-console.log('Quinze vaut ' + (a + b) + ' et\npas ' + (2 * a + b) + '.');
+console.log("Quinze vaut " + (a + b) + " et\npas " + (2 * a + b) + ".");
 // "Quinze vaut 15 et
 // pas 20."
 ```
@@ -279,8 +281,14 @@ var msParJour = 24 * 60 * 60 * 1000;
 // 17 juillet 2014 00:00:00 UTC.
 var _17juillet2014 = new Date(msParJour * (44 * 365 + 11 + 197));
 
-var options = { year: "2-digit", month: "2-digit", day: "2-digit",
-                hour: "2-digit", minute: "2-digit", timeZoneName: "short" };
+var options = {
+  year: "2-digit",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+  timeZoneName: "short",
+};
 var dateHeureAmericaine = new Intl.DateTimeFormat("en-US", options).format;
 
 console.log(dateHeureAmericaine(_17juillet2014)); // 07/16/14, 5:00 PM PDT
@@ -291,14 +299,18 @@ console.log(dateHeureAmericaine(_17juillet2014)); // 07/16/14, 5:00 PM PDT
 L'objet {{jsxref("NumberFormat")}} est utile pour formater les nombres, par exemple, les devises :
 
 ```js
-var prixDeLEssence = new Intl.NumberFormat("en-US",
-                        { style: "currency", currency: "USD",
-                          minimumFractionDigits: 3 });
+var prixDeLEssence = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 3,
+});
 
 console.log(prixDeLEssence.format(5.259)); // $5.259
 
-var decimalesHanRMBEnChine = new Intl.NumberFormat("zh-CN-u-nu-hanidec",
-                        { style: "currency", currency: "CNY" });
+var decimalesHanRMBEnChine = new Intl.NumberFormat("zh-CN-u-nu-hanidec", {
+  style: "currency",
+  currency: "CNY",
+});
 
 console.log(decimalesHanRMBEnChine.format(1314.25)); // ￥ 一,三一四.二五
 ```
@@ -310,22 +322,22 @@ L'objet {{jsxref("Collator")}} est utile pour comparer et trier des chaînes de 
 Par exemple, il y a en fait deux ordres de tri en allemand, _annuaire_ et _dictionnaire_. Annuaire met l'accent sur le son, et c'est comme si "ä", "ö", etc. étaient étendus en "ae", "oe", etc. avant le tri :
 
 ```js
-var noms = ['Hochberg', 'Hönigswald', 'Holzman'];
+var noms = ["Hochberg", "Hönigswald", "Holzman"];
 
-var annuaireAllemand = new Intl.Collator('de-DE-u-co-phonebk');
+var annuaireAllemand = new Intl.Collator("de-DE-u-co-phonebk");
 
 // Comme si tri de ['Hochberg', 'Hoenigswald', 'Holzman']:
-console.log(noms.sort(annuaireAllemand.compare).join(', '));
+console.log(noms.sort(annuaireAllemand.compare).join(", "));
 // Affiche "Hochberg, Hönigswald, Holzman"
 ```
 
-Certains mots allemands se conjuguent avec des umlauts supplémentaires, de sorte que dans les dictionnaires, le fait d'ignorer les umlauts pour le tri est perceptible (sauf lors du tri de mots ne différant _que_ par des umlauts, comme *schon* avant _schön_).
+Certains mots allemands se conjuguent avec des umlauts supplémentaires, de sorte que dans les dictionnaires, le fait d'ignorer les umlauts pour le tri est perceptible (sauf lors du tri de mots ne différant _que_ par des umlauts, comme _schon_ avant _schön_).
 
 ```js
-var dictionnaireAllemand = new Intl.Collator('de-DE-u-co-dict');
+var dictionnaireAllemand = new Intl.Collator("de-DE-u-co-dict");
 
 // Comme si tri de ["Hochberg", "Honigswald", "Holzman"]:
-console.log(nom.sort(dictionnaireAllemand.compare).join(', '));
+console.log(nom.sort(dictionnaireAllemand.compare).join(", "));
 // Affiche "Hochberg, Holzman, Hönigswald"
 ```
 

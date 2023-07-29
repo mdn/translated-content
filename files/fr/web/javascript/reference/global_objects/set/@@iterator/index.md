@@ -13,7 +13,7 @@ La valeur initiale de la propriété **`@@iterator`** est le même objet fonctio
 ## Syntaxe
 
 ```js
-monSet[Symbol.iterator]
+monSet[Symbol.iterator];
 ```
 
 ### Valeur de retour
@@ -40,7 +40,7 @@ console.log(setIter.next().value); // {}
 ### Utiliser `[@@iterator]()` avec une boucle `for..of`
 
 ```js
-const monSet= new Set();
+const monSet = new Set();
 monSet.add("0");
 monSet.add(1);
 monSet.add({});

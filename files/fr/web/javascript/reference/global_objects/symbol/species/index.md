@@ -23,13 +23,15 @@ Dans certains cas, vous pouvez avoir besoin de renvoyer {{jsxref("Array")}} pour
 ```js
 class MonArray extends Array {
   // On surcharge species avec le constructeur parent Array
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
-var a = new MonArray(1,2,3);
-var mapped = a.map(x => x * x);
+var a = new MonArray(1, 2, 3);
+var mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MonArray); // false
-console.log(mapped instanceof Array);    // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## Spécifications

@@ -35,7 +35,7 @@ var localSym = Symbol();
 Symbol.keyFor(localSym); // undefined，
 
 // 以下 Symbol 不是保存在全局 Symbol 注册表中
-Symbol.keyFor(Symbol.iterator) // undefined
+Symbol.keyFor(Symbol.iterator); // undefined
 ```
 
 ## 规范

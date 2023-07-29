@@ -14,7 +14,7 @@ L'**instruction `for...in`** permet d'itérer sur les [propriétés énumérable
 
 ```js
 for (variable in objet) {
-  instructions
+  instructions;
 }
 ```
 
@@ -52,7 +52,7 @@ Si on souhaite ne parcourir que les propriétés propres d'un objet et pas celle
 La boucle `for...in` qui suit utilise parcourt l'objet `obj` et ses propriétés énumérables qui ne sont pas des symboles en fournissant la chaîne de caractères qui décrit le nom de la propriété et sa valeur.
 
 ```js
-var obj = {a:1, b:2, c:3};
+var obj = { a: 1, b: 2, c: 3 };
 
 for (var prop in obj) {
   console.log(`obj.${prop} = ${obj[prop]}`);
@@ -67,7 +67,7 @@ for (var prop in obj) {
 La fonction qui suit utilise {{jsxref("Object.hasOwnProperty", "hasOwnProperty()")}} pour ne pas afficher les propriétés héritées :
 
 ```js
-var triangle = {a:1, b:2, c:3};
+var triangle = { a: 1, b: 2, c: 3 };
 
 function TriangleCouleur() {
   this.couleur = "rouge";
@@ -78,7 +78,7 @@ TriangleCouleur.prototype = triangle;
 var obj = new TriangleCouleur();
 
 for (var prop in obj) {
-  if( obj.hasOwnProperty( prop ) ) {
+  if (obj.hasOwnProperty(prop)) {
     console.log(`obj.${prop} = ${obj[prop]}`);
   }
 }

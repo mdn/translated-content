@@ -50,7 +50,6 @@ new Date().getTime();
 // 1519211811670
 // ...
 
-
 // précision temporelle avec `privacy.resistFingerprinting` activé
 new Date().getTime();
 // 1519129853500
