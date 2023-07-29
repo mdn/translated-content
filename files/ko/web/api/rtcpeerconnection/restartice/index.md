@@ -36,7 +36,7 @@ ICE 재시작의 작동원리를 좀 더 자세히 알고 싶다면, [ICE restar
 아래의 예제는 {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} 이벤트에 대한 핸들러입니다. 이 핸들러는 ICE를 재시작하여 `failed` 상태로의 전환을 관리합니다.
 
 ```js
-pc.addEventListener("iceconnectionstatechange", event => {
+pc.addEventListener("iceconnectionstatechange", (event) => {
   if (pc.iceConnectionState === "failed") {
     /* possibly reconfigure the connection in some way here */
     /* then request ICE restart */
