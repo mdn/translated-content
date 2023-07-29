@@ -65,7 +65,7 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 1. 在你的代码中添加一个引用，从 Google 服务器加载这个字体。
 2. 下载字体文件到你的系统内，自行挂载这个文件，并在你网站的代码中使用。
 
-> **备注：**在你的网站使用从 Google 服务器加载的字体可能会违反欧盟的数据隐私规定 [GDPR](https://gdpr.eu/what-is-gdpr/)，因为加载字体时会暴露用户的 IP 地址。如果你遇到这种潜在风险，需要选择第二种方式。
+> **备注：** 在你的网站使用从 Google 服务器加载的字体可能会违反欧盟的数据隐私规定 [GDPR](https://gdpr.eu/what-is-gdpr/)，因为加载字体时会暴露用户的 IP 地址。如果你遇到这种潜在风险，需要选择第二种方式。
 
 另一个选择是使用 [安全 Web 字体](https://web.mit.edu/jmorzins/www/fonts.html)，如 Arial、Times New Roman、Courier New。
 
