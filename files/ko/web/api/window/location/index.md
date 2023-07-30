@@ -20,7 +20,7 @@ location = newLocation;
 ### Basic Example
 
 ```js
-alert(location); // alerts "https://developer.mozilla.org/en-US/docs/Web/API/Window.location"
+alert(location); // alerts "https://developer.mozilla.org/ko/docs/Web/API/Window.location"
 ```
 
 ### 예제 #1: 새 페이지로 이동하기

@@ -2,6 +2,7 @@
 title: Document.body
 slug: Web/API/Document/body
 ---
+
 {{APIRef("DOM")}}
 
 `Document.body` 속성은 현재 문서의 {{htmlelement("body")}} 혹은 {{htmlelement("frameset")}} 노드를 나타냅니다. 일치하는 요소가 존재하지 않으면 `null`을 반환합니다.
@@ -9,8 +10,8 @@ slug: Web/API/Document/body
 ## 구문
 
 ```js
-const objRef = document.body
-document.body = objRef
+const objRef = document.body;
+document.body = objRef;
 ```
 
 ## 예제
