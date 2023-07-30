@@ -78,7 +78,7 @@ var matches = container.querySelectorAll("li[data-active='1']");
 ```js
 var highlightedItems = userList.querySelectorAll(".highlighted");
 
-highlightedItems.forEach(function(userItem) {
+highlightedItems.forEach(function (userItem) {
   deleteUser(userItem);
 });
 ```
@@ -94,8 +94,7 @@ highlightedItems.forEach(function(userItem) {
 ```html
 <div class="outer">
   <div class="select">
-    <div class="inner">
-    </div>
+    <div class="inner"></div>
   </div>
 </div>
 ```
@@ -103,8 +102,8 @@ highlightedItems.forEach(function(userItem) {
 ### 자바스크립트
 
 ```js
-var select = document.querySelector('.select');
-var inner = select.querySelectorAll('.outer .inner');
+var select = document.querySelector(".select");
+var inner = select.querySelectorAll(".outer .inner");
 inner.length; // 1 입니다. 0 이 아닙니다!
 ```
 
@@ -113,8 +112,8 @@ inner.length; // 1 입니다. 0 이 아닙니다!
 {{cssxref(":scope")}} 가상 클래스는 예상된 동작을하도록 하지만, 베이스 엘리먼트의 자손에 일치하는 셀렉터로만 제한됩니다:
 
 ```js
-var select = document.querySelector('.select');
-var inner = select.querySelectorAll(':scope .outer .inner');
+var select = document.querySelector(".select");
+var inner = select.querySelectorAll(":scope .outer .inner");
 inner.length; // 0
 ```
 
