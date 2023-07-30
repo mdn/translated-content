@@ -14,7 +14,7 @@ HTML의 {{glossary("Head", "head")}}는 페이지를 열 때 웹 브라우저에
       <td>
         HTML의 기본 구조,
         <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-          >Getting started with HTML</a
+          >HTML 시작하기</a
         >문서의 내용을 사전에 읽으면 좋습니다.
       </td>
     </tr>
