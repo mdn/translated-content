@@ -30,8 +30,8 @@ var messageEvent = new MessageEvent(type, init);
 ## 示例
 
 ```js
-var myMessage = new MessageEvent('worker', {
-  data : 'hello'
+var myMessage = new MessageEvent("worker", {
+  data: "hello",
 });
 ```
 

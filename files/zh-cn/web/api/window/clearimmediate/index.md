@@ -13,15 +13,15 @@ slug: Web/API/Window/clearImmediate
 
 ## 语法
 
-```js
-window.clearImmediate(immediateID)
+```js-nolint
+clearImmediate(immediateID)
 ```
 
 这里的 immediateID 是由{{ domxref("window.setImmediate") }}返回的。
 
 ## 例子
 
-```
+```js
 var immediateID = setImmediate(function () {
   // Run some code
 }
