@@ -89,6 +89,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
   `low`: 이미지가 **낮은** 우선순위를 지님.
 
   - {{htmlattrdef("intrinsicsize")}} {{deprecated_inline}}
+
     - This attribute tells the browser to ignore the actual intrinsic size of the image and pretend it’s the size specified in the attribute. Specifically, the image would raster at these dimensions and `naturalWidth`/`naturalHeight` on images would return the values specified in this attribute. [Explainer](https://github.com/ojanvafai/intrinsicsize-attribute), [examples](https://googlechrome.github.io/samples/intrinsic-size/index.html)
 
 - {{htmlattrdef("ismap")}}

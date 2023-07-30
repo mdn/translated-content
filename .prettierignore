@@ -54,22 +54,10 @@ build/
 /files/ja/web/svg/**/*.md
 
 # ko
-/files/ko/glossary/**/*.md
 /files/ko/learn/**/*.md
-/files/ko/learn/css/**/*.md
-/files/ko/learn/html/**/*.md
-/files/ko/learn/javascript/**/*.md
-/files/ko/learn/server-side/**/*.md
-/files/ko/mdn/**/*.md
-/files/ko/mozilla/**/*.md
-/files/ko/mozilla/add-ons/**/*.md
-/files/ko/mozilla/add-ons/webextensions/api/**/*.md
-/files/ko/mozilla/firefox**/*.md
-/files/ko/web/**/*.md
 /files/ko/web/api/**/*.md
 /files/ko/web/css/**/*.md
 /files/ko/web/javascript/**/*.md
-/files/ko/web/svg/**/*.md
 
 # pt-br
 /files/pt-br/web/api/**/*.md
