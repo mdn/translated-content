@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: ended 事件'
+title: "HTMLMediaElement: ended 事件"
 slug: Web/API/HTMLMediaElement/ended_event
 ---
 
@@ -47,22 +47,26 @@ slug: Web/API/HTMLMediaElement/ended_event
 使用 `addEventListener()`：
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('ended', (event) => {
-  console.log('Video stopped either because 1) it was over, ' +
-      'or 2) no further data is available.');
+video.addEventListener("ended", (event) => {
+  console.log(
+    "Video stopped either because 1) it was over, " +
+      "or 2) no further data is available.",
+  );
 });
 ```
 
 使用 `onended` 事件处理器属性：
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onended = (event) => {
-  console.log('Video stopped either because 1) it was over, ' +
-      'or 2) no further data is available.');
+  console.log(
+    "Video stopped either because 1) it was over, " +
+      "or 2) no further data is available.",
+  );
 };
 ```
 

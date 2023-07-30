@@ -2,7 +2,6 @@
 title: OPTIONS
 slug: Web/HTTP/Methods/OPTIONS
 translation_of: Web/HTTP/Methods/OPTIONS
-original_slug: Web/HTTP/Méthode/OPTIONS
 ---
 
 {{HTTPSidebar}}

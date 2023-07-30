@@ -1,10 +1,6 @@
 ---
 title: transition-property
 slug: Web/CSS/transition-property
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/transition-property
 ---
 
@@ -35,7 +31,10 @@ transition-property: sliding-vertically;
 /* Valeurs multiples */
 transition-property: test1, animation4;
 transition-property: all, height, all;
-transition-property: all, -moz-specific, sliding;
+transition-property:
+  all,
+  -moz-specific,
+  sliding;
 
 /* Avec des valeurs globales */
 transition-property: inherit;

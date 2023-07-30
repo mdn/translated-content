@@ -31,7 +31,7 @@ Uma função pode também ser criada usando uma expressão (veja {{jsxref("Opera
 
 Por padrão, funções retornam `undefined`. Para retornar qualquer outro valor, a função precisa ter uma instrução {{jsxref("Statements/return", "return")}} que especifica o valor para retorno.
 
-### Criando funções condicionalmente.
+### Criando funções condicionalmente
 
 Funções podem ser condicionalmente declaradas, isso é, uma instrução de função pode ser aninhada dentro de uma instrução `if`. A maioria dos navegadores que não sejam Mozilla ir tratar essas declarações condicionais como uma incondicional e criará a função se a condição for true ou não, veja [esse artigo](http://kangax.github.io/nfe/#function-statements) para uma visão geral. Portanto, ela não pode ser usada para criação de expressões de função condicional.
 

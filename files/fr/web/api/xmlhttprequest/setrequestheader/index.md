@@ -19,7 +19,7 @@ Pour des raisons de sécurité, certain header ne peuvent être manipulés que p
 ## Syntaxe
 
 ```js
-XMLHttpRequest.setRequestHeader(header, value)
+XMLHttpRequest.setRequestHeader(header, value);
 ```
 
 ### Paramètre

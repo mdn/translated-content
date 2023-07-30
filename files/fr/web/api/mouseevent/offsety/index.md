@@ -1,13 +1,6 @@
 ---
 title: MouseEvent.offsetY
 slug: Web/API/MouseEvent/offsetY
-tags:
-  - API
-  - Experimental
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
 translation_of: Web/API/MouseEvent/offsetY
 ---
 

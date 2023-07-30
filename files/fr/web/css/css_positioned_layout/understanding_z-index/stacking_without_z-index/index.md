@@ -1,13 +1,7 @@
 ---
 title: Empilement sans z-index
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
-tags:
-  - Avancé
-  - CSS
-  - Guide
-  - z-index
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 ---
 
 {{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_et_float", "Web/CSS/Comprendre_z-index")}}
@@ -37,16 +31,11 @@ Dans l'exemple suivant, les blocs en position absolue et relative sont correctem
 ### HTML
 
 ```html
-<div id="abs1" class="absolute">
-  <b>DIV #1</b><br />position: absolute;</div>
-<div id="rel1" class="relative">
-  <b>DIV #2</b><br />position: relative;</div>
-<div id="rel2" class="relative">
-  <b>DIV #3</b><br />position: relative;</div>
-<div id="abs2" class="absolute">
-  <b>DIV #4</b><br />position: absolute;</div>
-<div id="sta1" class="static">
-  <b>DIV #5</b><br />position: static;</div>
+<div id="abs1" class="absolute"><b>DIV #1</b><br />position: absolute;</div>
+<div id="rel1" class="relative"><b>DIV #2</b><br />position: relative;</div>
+<div id="rel2" class="relative"><b>DIV #3</b><br />position: relative;</div>
+<div id="abs2" class="absolute"><b>DIV #4</b><br />position: absolute;</div>
+<div id="sta1" class="static"><b>DIV #5</b><br />position: static;</div>
 ```
 
 ### CSS

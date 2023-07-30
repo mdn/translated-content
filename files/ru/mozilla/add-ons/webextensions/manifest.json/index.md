@@ -10,6 +10,7 @@ tags:
   - Расширения
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
+
 {{AddonSidebar}}
 
 > **Примечание:** В этой статье описан файл manifest.json для веб-расширений. Если вы ищете информацию о manifest.json для Прогрессивных веб-приложений (PWAs), смотрите статью [Манифест веб-приложения](/ru/docs/Web/Манифест).
@@ -58,7 +59,7 @@ browser.runtime.getManifest().version;
   },
 
   "background": {
-    "scripts": ["jquery.js", "my-background.js"],
+    "scripts": ["jquery.js", "my-background.js"]
   },
 
   "browser_action": {
@@ -117,7 +118,7 @@ browser.runtime.getManifest().version;
   "version": "0.1",
 
   "user_scripts": {
-    "api_script": "apiscript.js",
+    "api_script": "apiscript.js"
   },
 
   "web_accessible_resources": ["images/my-image.png"]

@@ -1,10 +1,7 @@
 ---
 title: choose
 slug: Web/XSLT/Element/choose
-tags:
-  - Référence_XSLT
 translation_of: Web/XSLT/Element/choose
-original_slug: Web/XSLT/choose
 ---
 
 {{ XsltRef() }}

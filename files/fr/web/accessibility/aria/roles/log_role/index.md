@@ -1,12 +1,7 @@
 ---
 title: Utiliser le rôle log
 slug: Web/Accessibility/ARIA/Roles/log_role
-tags:
-  - ARIA
-  - Accessibilité
-  - Rôle
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role
 ---
 
 ### Description

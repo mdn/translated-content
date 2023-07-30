@@ -2,12 +2,7 @@
 title: Concepts de base des propriétés et valeurs logiques
 slug: >-
   Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values
-tags:
-  - CSS
-  - Guide
-  - Propriété logique
 translation_of: Web/CSS/CSS_Logical_Properties/Basic_concepts
-original_slug: Web/CSS/CSS_Logical_Properties/Basic_concepts
 ---
 
 {{CSSRef}}

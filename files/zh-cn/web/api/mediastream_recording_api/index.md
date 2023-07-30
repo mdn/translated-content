@@ -53,7 +53,7 @@ function handleDataAvailable(event) {
 }
 function download() {
   var blob = new Blob(recordedChunks, {
-    type: "video/webm"
+    type: "video/webm",
   });
   var url = URL.createObjectURL(blob);
   var a = document.createElement("a");
@@ -66,7 +66,7 @@ function download() {
 }
 
 // demo: to download after 9sec
-setTimeout(event => {
+setTimeout((event) => {
   console.log("stopping");
   mediaRecorder.stop();
 }, 9000);
@@ -85,9 +85,8 @@ setTimeout(event => {
 在这块代码中，`enumerateDevices()` 被用来检查可利用的设备，找到那些音频输入设备，创建{{HTMLElement("option")}} 元素，之后添加到{{HTMLElement("select")}}元素，代表输入源选择器 .
 
 ```js
-navigator.mediaDevices.enumerateDevices()
-.then(function(devices) {
-  devices.forEach(function(device) {
+navigator.mediaDevices.enumerateDevices().then(function (devices) {
+  devices.forEach(function (device) {
     let menu = document.getElementById("inputdevices");
     if (device.kind == "audioinput") {
       let item = document.createElement("option");

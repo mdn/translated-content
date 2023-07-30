@@ -27,9 +27,10 @@ Esta es una imagen inalterada del logo de MDN:
 Aquí está el logo MDN en un iframe rotado 90 grados desde su esquina inferior izquierda.
 
 ```html
-<img style="transform: rotate(90deg);
+<img
+  style="transform: rotate(90deg);
             transform-origin: bottom left;"
-     src="logo.png">
+  src="logo.png" />
 ```
 
 {{EmbedLiveSample('', 'auto', 240)}}
@@ -39,9 +40,10 @@ Aquí está el logo MDN en un iframe rotado 90 grados desde su esquina inferior 
 Aquí está el logo MDN torcido 10 grados y desplazado 150 pixels en el eje X.
 
 ```html
-<img style="transform: skewx(10deg) translatex(150px);
+<img
+  style="transform: skewx(10deg) translatex(150px);
             transform-origin: bottom left;"
-     src="logo.png">
+  src="logo.png" />
 ```
 
 {{EmbedLiveSample('', '', '')}}

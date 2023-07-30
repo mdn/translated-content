@@ -37,8 +37,8 @@ La propriété **`autoIncrement`** de l'accès au magasin d'objet sert à affich
 //Connexion à la base de données
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += 'Connexion établie.';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "Connexion établie.";
 
   //Affecte la connexion à la variable db.
   db = DBOpenRequest.result;
@@ -48,33 +48,47 @@ DBOpenRequest.onsuccess = function(event) {
 };
 function addData() {
   // un nouvel objet prêt à être emmagasiné
-  newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  newItem = [
+    {
+      taskTitle: "Walk dog",
+      hours: 19,
+      minutes: 30,
+      day: 24,
+      month: "December",
+      year: 2013,
+      notified: "no",
+    },
+  ];
 
   // ouvre une transaction de lecture / écriture prête au traitement des données sur la connexion
   var transaction = db.transaction(["toDoList"], "readwrite");
 
   // en cas de succès de l'ouverture de la transaction
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction complété : modification de la base de données terminée.</li>';
+  transaction.oncomplete = function (event) {
+    note.innerHTML +=
+      "<li>Transaction complété : modification de la base de données terminée.</li>";
   };
   // en cas d'échec de l'ouverture de la transaction
-  transaction.onerror = function(event) {
-    note.innerHTML += '<li>L\'erreur: "' + transaction.error +'" c\'est produite échec de la transaction.</li>';
+  transaction.onerror = function (event) {
+    note.innerHTML +=
+      "<li>L'erreur: \"" +
+      transaction.error +
+      "\" c'est produite échec de la transaction.</li>";
   };
 
   // ouvre l'accès au un magasin "toDoList" de la transaction
   var objectStore = transaction.objectStore("toDoList");
 
-//->Affiche la position du drapeau d’incrémentation automatique
-    console.log(objectStore.autoIncrement);
+  //->Affiche la position du drapeau d’incrémentation automatique
+  console.log(objectStore.autoIncrement);
 
   // Ajoute un enregistrement
   var objectStoreRequest = objectStore.add(newItem[0]);
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = function (event) {
     // signale l'ajout de l'enregistrement
-    note.innerHTML += '<li>Enregistrement ajouté.</li>';
+    note.innerHTML += "<li>Enregistrement ajouté.</li>";
   };
-};
+}
 ```
 
 > **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

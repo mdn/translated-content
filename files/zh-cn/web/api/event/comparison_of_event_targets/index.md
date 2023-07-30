@@ -191,10 +191,10 @@ TODO: Only available in a Mozilla-based browser? TODO: Only suitable for extensi
 
 The `relatedTarget` property for the `mouseover` event holds the node that the mouse was previously over. For the `mouseout` event, it holds the node that the mouse moved to.
 
-| Event type  | [event.target](/zh-CN/DOM/event.target)              | [event.relatedTarget](/zh-CN/DOM/event.relatedTarget) |
-| ----------- | ------------------------------------------------- | -------------------------------------------------- |
-| `mouseover` | the EventTarget which the pointing device entered | the EventTarget which the pointing device exited   |
-| `mouseout`  | the EventTarget which the pointing device exited  | the EventTarget which the pointing device entered  |
+| Event type  | [event.target](/zh-CN/DOM/event.target)           | [event.relatedTarget](/zh-CN/DOM/event.relatedTarget) |
+| ----------- | ------------------------------------------------- | ----------------------------------------------------- |
+| `mouseover` | the EventTarget which the pointing device entered | the EventTarget which the pointing device exited      |
+| `mouseout`  | the EventTarget which the pointing device exited  | the EventTarget which the pointing device entered     |
 
 TODO: Also needs descriptions about `dragenter` and `dragexit` events.
 

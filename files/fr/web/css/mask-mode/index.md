@@ -2,7 +2,6 @@
 title: mask-mode
 slug: Web/CSS/mask-mode
 translation_of: Web/CSS/mask-mode
-browser-compat: css.properties.mask-mode
 ---
 
 {{CSSRef}}

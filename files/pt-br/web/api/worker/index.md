@@ -49,7 +49,7 @@ _Os métodos são herdados de seu pai. {{domxref("EventTarget")}}, e implementa 
 - [`rejectionhandled`](/pt-BR/docs/Web/API/Window/rejectionhandled_event)
   - : Dispara sempre que um {{jsxref("Promise")}} é rejeitado, indenpendentemente de haver ou não um manipulador para capturar sua rejeição.
     Também é disponibilizado via `onrejectionhandled.`
-- [`unhandledrejection`](pt-BR/docs/Web/API/Window/unhandledrejection_event)
+- [`unhandledrejection`](/pt-BR/docs/Web/API/Window/unhandledrejection_event)
   - : Dispara sempre que um {{jsxref ("Promise")}} rejeita, independentemente de haver ou não um manipulador para capturar a rejeição. Também disponível por meio da propriedade do manipulador de eventos `onunhandledrejection.`
 
 ## Exemplos

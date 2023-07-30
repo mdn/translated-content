@@ -57,17 +57,17 @@ slug: Web/HTML/Element/address
 这个例子演示了如何使用 `<address>` 表示一篇文章的作者的联系信息。
 
 ```html
-  <address>
-    You can contact author at <a href="http://www.somedomain.com/contact">
-    www.somedomain.com</a>.<br>
-    If you see any bugs, please <a href="mailto:webmaster@somedomain.com">
-    contact webmaster</a>.<br>
-    You may also want to visit us:<br>
-    Mozilla Foundation<br>
-    331 E Evelyn Ave<br>
-    Mountain View, CA 94041<br>
-    USA
-  </address>
+<address>
+  You can contact author at
+  <a href="http://www.somedomain.com/contact">www.somedomain.com</a>.<br />
+  If you see any bugs, please
+  <a href="mailto:webmaster@somedomain.com">contact webmaster</a>.<br />
+  You may also want to visit us:<br />
+  Mozilla Foundation<br />
+  331 E Evelyn Ave<br />
+  Mountain View, CA 94041<br />
+  USA
+</address>
 ```
 
 ### 结果

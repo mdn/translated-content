@@ -11,9 +11,9 @@ Lancé lorsqu'un élément de signet (un signet ou un dossier) est créé.
 ## Syntaxe
 
 ```js
-browser.bookmarks.onCreated.addListener()
-browser.bookmarks.onCreated.removeListener(listener)
-browser.bookmarks.onCreated.hasListener(listener)
+browser.bookmarks.onCreated.addListener();
+browser.bookmarks.onCreated.removeListener(listener);
+browser.bookmarks.onCreated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

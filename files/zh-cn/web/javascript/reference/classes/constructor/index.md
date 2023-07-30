@@ -33,21 +33,21 @@ constructor([arguments]) { ... }
 
 ```js
 class Square extends Polygon {
-    constructor(length) {
-        // 在这里，它调用了父类的构造函数，并将 lengths 提供给 Polygon 的"width"和"height"
-        super(length, length);
-        // 注意：在派生类中，必须先调用 super() 才能使用 "this"。
-        // 忽略这个，将会导致一个引用错误。
-        this.name = 'Square';
-    }
-    get area() {
-        return this.height * this.width;
-    }
-    set area(value) {
-        // 注意：不可使用 this.area = value
-        // 否则会导致循环 call setter 方法导致爆栈
-        this._area = value;
-    }
+  constructor(length) {
+    // 在这里，它调用了父类的构造函数，并将 lengths 提供给 Polygon 的"width"和"height"
+    super(length, length);
+    // 注意：在派生类中，必须先调用 super() 才能使用 "this"。
+    // 忽略这个，将会导致一个引用错误。
+    this.name = "Square";
+  }
+  get area() {
+    return this.height * this.width;
+  }
+  set area(value) {
+    // 注意：不可使用 this.area = value
+    // 否则会导致循环 call setter 方法导致爆栈
+    this._area = value;
+  }
 }
 ```
 
@@ -57,15 +57,15 @@ class Square extends Polygon {
 
 ```js
 class Polygon {
-    constructor() {
-        this.name = "Polygon";
-    }
+  constructor() {
+    this.name = "Polygon";
+  }
 }
 
 class Square extends Polygon {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 }
 
 class Rectangle {}

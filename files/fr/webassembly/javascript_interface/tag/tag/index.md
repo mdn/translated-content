@@ -11,7 +11,7 @@ Le constructeur **`WebAssembly.Tag()`** crée un nouvel objet [`WebAssembly.Tag`
 ## Syntaxe
 
 ```js
-new WebAssembly.Tag(type)
+new WebAssembly.Tag(type);
 ```
 
 ### Paramètres

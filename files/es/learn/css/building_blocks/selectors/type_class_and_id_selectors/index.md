@@ -59,7 +59,6 @@ Uno de los usos del selector universal es facilitar la legibilidad de los select
 
 ```css
 article :first-child {
-
 }
 ```
 
@@ -69,7 +68,6 @@ Para evitar esta confusión podemos añadir al selector `:first-child` el select
 
 ```css
 article *:first-child {
-
 }
 ```
 

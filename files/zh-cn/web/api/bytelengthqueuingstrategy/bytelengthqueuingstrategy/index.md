@@ -9,7 +9,7 @@ slug: Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
 
 ## 语法
 
-```js
+```js-nolint
 new ByteLengthQueuingStrategy(highWaterMark)
 ```
 
@@ -31,17 +31,20 @@ new ByteLengthQueuingStrategy(highWaterMark)
 ```js
 const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
-const readableStream = new ReadableStream({
-  start(controller) {
-    // …
+const readableStream = new ReadableStream(
+  {
+    start(controller) {
+      // …
+    },
+    pull(controller) {
+      // …
+    },
+    cancel(err) {
+      console.log("stream error:", err);
+    },
   },
-  pull(controller) {
-    // …
-  },
-  cancel(err) {
-    console.log("stream error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
 const size = queuingStrategy.size(chunk);
 ```

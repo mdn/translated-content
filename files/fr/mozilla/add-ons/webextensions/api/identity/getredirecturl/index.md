@@ -15,7 +15,7 @@ Voir [Obtenir une URL de redirection](/fr/Add-ons/WebExtensions/API/identity#Get
 ## Syntaxe
 
 ```js
-var redirectURL = browser.identity.getRedirectURL()
+var redirectURL = browser.identity.getRedirectURL();
 ```
 
 ### Paramètres

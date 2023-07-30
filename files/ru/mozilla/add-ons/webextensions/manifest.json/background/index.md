@@ -9,6 +9,7 @@ tags:
   - Расширения
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

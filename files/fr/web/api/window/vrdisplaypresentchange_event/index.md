@@ -1,12 +1,6 @@
 ---
-title: 'Window: vrdisplaypresentchange event'
+title: "Window: vrdisplaypresentchange event"
 slug: Web/API/Window/vrdisplaypresentchange_event
-tags:
-  - Evènement
-  - Reference
-  - WebVR
-  - onvrdisplaypresentchange
-  - vrdisplaypresentchange
 translation_of: Web/API/Window/vrdisplaypresentchange_event
 ---
 
@@ -46,8 +40,8 @@ L'événement **`vrdisplaypresentchange`** de l'[API WebVR](/fr/docs/Web/API/Web
 Vous pouvez utiliser l'événement `vrdisplaypresentchange` dans une méthode [`addEventListener`](/fr/docs/Web/API/EventTarget/addEventListener) :
 
 ```js
-window.addEventListener('vrdisplaypresentchange', function() {
-  if(vrDisplay.isPresenting) {
+window.addEventListener("vrdisplaypresentchange", function () {
+  if (vrDisplay.isPresenting) {
     info.textContent = "L'affichage a commencé à présenter.";
   } else {
     info.textContent = "L'affichage a cessé de se présenter.";
@@ -59,8 +53,8 @@ window.addEventListener('vrdisplaypresentchange', function() {
 Ou utilisez la propriété de gestionnaire d'événements [`onvrdisplaypresentchange`](/fr/docs/Web/API/Window/onvrdisplaypresentchange) :
 
 ```js
-window.onvrdisplaypresentchange = function() {
-  if(vrDisplay.isPresenting) {
+window.onvrdisplaypresentchange = function () {
+  if (vrDisplay.isPresenting) {
     info.textContent = "L'affichage a commencé à présenter.";
   } else {
     info.textContent = "L'affichage a cessé de se présenter.";

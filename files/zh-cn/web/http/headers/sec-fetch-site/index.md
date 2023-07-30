@@ -7,11 +7,11 @@ slug: Web/HTTP/Headers/Sec-Fetch-Site
 
 **`Sec-Fetch-Site`** 获取元数据标头表明了一个请求发起者的来源与目标资源来源之间的关系。
 
-| Header type                                                      | {{Glossary("Fetch Metadata Request Header")}}                             |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name")}}                 | 只要包含前缀 `Sec-` 都属于应用程序禁止修改的 HTTP 消息头，用户代理保留全部对它们的控制权 |
+| Header type                                     | {{Glossary("Fetch Metadata Request Header")}}                                            |
+| ----------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| {{Glossary("Forbidden header name")}}           | 只要包含前缀 `Sec-` 都属于应用程序禁止修改的 HTTP 消息头，用户代理保留全部对它们的控制权 |
 | {{Glossary("CORS-safelisted response header")}} |                                                                                          |
-| {{Glossary("CORS-safelisted request header")}}     |                                                                                          |
+| {{Glossary("CORS-safelisted request header")}}  |                                                                                          |
 
 ## 语法
 

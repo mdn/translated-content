@@ -74,39 +74,48 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 上图的示例可用下面的代码表示（完整代码请参见 [GitHub](https://github.com/roy-tian/learning-area/blob/master/html/introduction-to-html/document-and-website-structure/index.html)），请结合图片观察代码，并找出代码中可见的区段：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>二次元俱乐部</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe"
+      rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
   </head>
 
   <body>
-    <header> <!-- 本站所有网页的统一主标题 -->
+    <header>
+      <!-- 本站所有网页的统一主标题 -->
       <h1>聆听电子天籁之音</h1>
     </header>
 
-    <nav> <!-- 本站统一的导航栏 -->
+    <nav>
+      <!-- 本站统一的导航栏 -->
       <ul>
         <li><a href="#">主页</a></li>
         <!-- 共 n 个导航栏项目，省略…… -->
       </ul>
 
-      <form> <!-- 搜索栏是站点内导航的一个非线性的方式。 -->
-        <input type="search" name="q" placeholder="要搜索的内容">
-        <input type="submit" value="搜索">
+      <form>
+        <!-- 搜索栏是站点内导航的一个非线性的方式。 -->
+        <input type="search" name="q" placeholder="要搜索的内容" />
+        <input type="submit" value="搜索" />
       </form>
     </nav>
 
-    <main> <!-- 网页主体内容 -->
+    <main>
+      <!-- 网页主体内容 -->
       <article>
         <!-- 此处包含一个 article（一篇文章），内容略…… -->
       </article>
 
-      <aside> <!-- 侧边栏在主内容右侧 -->
+      <aside>
+        <!-- 侧边栏在主内容右侧 -->
         <h2>相关链接</h2>
         <ul>
           <li><a href="#">这是一个超链接</a></li>
@@ -115,7 +124,8 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
       </aside>
     </main>
 
-    <footer> <!-- 本站所有网页的统一页脚 -->
+    <footer>
+      <!-- 本站所有网页的统一页脚 -->
       <p>© 2050 某某保留所有权利</p>
     </footer>
   </body>
@@ -143,7 +153,12 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 {{HTMLElement("span")}} 是一个内联的（inline）无语义元素，最好只用于无法找到更好的语义元素来包含内容时，或者不想增加特定的含义时。例如：
 
 ```html
-<p>国王喝得酩酊大醉，在凌晨 1 点时才回到自己的房间，踉跄地走过门口。<span class="editor-note">[编辑批注：此刻舞台灯光应变暗]</span>.</p>
+<p>
+  国王喝得酩酊大醉，在凌晨 1 点时才回到自己的房间，踉跄地走过门口。<span
+    class="editor-note"
+    >[编辑批注：此刻舞台灯光应变暗]</span
+  >.
+</p>
 ```
 
 这里，“编辑批注”仅仅是对舞台剧导演提供额外指引；没有具体语义。对于视力正常的用户，CSS 应将批注内容与主内容稍微隔开一些。
@@ -155,12 +170,13 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
   <h2>购物车</h2>
   <ul>
     <li>
-      <p><a href=""><strong>银耳环</strong></a>：$99.95.</p>
-      <img src="../products/3333-0985/" alt="Silver earrings">
+      <p>
+        <a href=""><strong>银耳环</strong></a
+        >：$99.95.
+      </p>
+      <img src="../products/3333-0985/" alt="Silver earrings" />
     </li>
-    <li>
-      ...
-    </li>
+    <li>...</li>
   </ul>
   <p>售价：$237.89</p>
 </div>
@@ -179,10 +195,12 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 `<br>` 可在段落中进行换行；`<br>` 是唯一能够生成多个短行结构（例如邮寄地址或诗歌）的元素。比如：
 
 ```html
-<p>从前有个人叫小高<br>
-他说写 HTML 感觉最好<br>
-但他写的代码结构语义一团糟<br>
-他写的标签谁也懂不了。</p>
+<p>
+  从前有个人叫小高<br />
+  他说写 HTML 感觉最好<br />
+  但他写的代码结构语义一团糟<br />
+  他写的标签谁也懂不了。
+</p>
 ```
 
 没有 `<br>` 元素，这段会直接显示在长长的一行中（如前文所讲，[HTML 会忽略大部分空格](/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started#HTML中的空白)）；使用 `<br>` 元素，才使得诗看上去像诗：
@@ -194,9 +212,13 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 `<hr>` 元素在文档中生成一条水平分割线，表示文本中主题的变化（例如话题或场景的改变）。一般就是一条水平的直线。例如：
 
 ```html
-<p>原来这唐僧是个慈悯的圣僧。他见行者哀告，却也回心转意道：“既如此说，且饶你这一次。再休无礼。如若仍前作恶，这咒语颠倒就念二十遍！”行者道：“三十遍也由你，只是我不打人了。”却才伏侍唐僧上马，又将摘来桃子奉上。唐僧在马上也吃了几个，权且充饥。</p>
+<p>
+  原来这唐僧是个慈悯的圣僧。他见行者哀告，却也回心转意道：“既如此说，且饶你这一次。再休无礼。如若仍前作恶，这咒语颠倒就念二十遍！”行者道：“三十遍也由你，只是我不打人了。”却才伏侍唐僧上马，又将摘来桃子奉上。唐僧在马上也吃了几个，权且充饥。
+</p>
 <hr />
-<p>却说那妖精，脱命升空。原来行者那一棒不曾打杀妖精，妖精出神去了。他在那云端里，咬牙切齿，暗恨行者道：“几年只闻得讲他手段，今日果然话不虚传。那唐僧已此不认得我，将要吃饭。若低头闻一闻儿，我就一把捞住，却不是我的人了。不期被他走来，弄破我这勾当，又几乎被他打了一棒。若饶了这个和尚，诚然是劳而无功也。我还下去戏他一戏。”</p>
+<p>
+  却说那妖精，脱命升空。原来行者那一棒不曾打杀妖精，妖精出神去了。他在那云端里，咬牙切齿，暗恨行者道：“几年只闻得讲他手段，今日果然话不虚传。那唐僧已此不认得我，将要吃饭。若低头闻一闻儿，我就一把捞住，却不是我的人了。不期被他走来，弄破我这勾当，又几乎被他打了一棒。若饶了这个和尚，诚然是劳而无功也。我还下去戏他一戏。”
+</p>
 ```
 
 将渲染成：

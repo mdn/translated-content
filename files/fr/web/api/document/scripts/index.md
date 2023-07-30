@@ -1,12 +1,6 @@
 ---
 title: Document.scripts
 slug: Web/API/Document/scripts
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
 translation_of: Web/API/Document/scripts
 ---
 

@@ -28,7 +28,7 @@ TypeError: Cannot create property 'x' on {y} (Chrome)
 ### 错误的情况
 
 ```js example-bad
-'use strict';
+"use strict";
 
 var foo = "my string";
 // 下面这行代码在非严格模式下不会执行。
@@ -40,7 +40,7 @@ foo.bar = {}; // TypeError: can't assign to property "bar" on "my string": not a
 有两种方式，第一种修复这部分代码阻止{{Glossary("primitive")}}被用于这种情况，或者可以通过使用对象构造器创建来修复。
 
 ```js example-good
-'use strict';
+"use strict";
 
 var foo = new String("my string");
 foo.bar = {};

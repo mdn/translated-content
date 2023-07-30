@@ -19,7 +19,7 @@ var xmlDoc = document.implementation.createDocument("", "test", null);
 
 xmlDoc.async = false;
 xmlDoc.onload = loadXMLData;
-xmlDoc.load('querydata.xml');
+xmlDoc.load("querydata.xml");
 ```
 
 ## Especificación

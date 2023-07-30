@@ -1,5 +1,5 @@
 ---
-title: '@namespace'
+title: "@namespace"
 slug: Web/CSS/@namespace
 ---
 
@@ -12,13 +12,16 @@ slug: Web/CSS/@namespace
 @namespace svg url(http://www.w3.org/2000/svg);
 
 /* Esto coincide con todos los elementos XHTML <a>, ya que el XHTML es el namespace por defecto sin prefijo */
-a {}
+a {
+}
 
 /* Esto coincide con todos los elementos SVG <a> */
-svg|a {}
+svg|a {
+}
 
 /* Esto concuerda con todos los elementos XHTML y SVG <a> elements */
-*|a {}
+*|a {
+}
 ```
 
 Cualquier `@namespace` debe seguir todas las reglas de [@charset](/es/docs/Web/CSS/%40charset) y [@import](/es/docs/Web/CSS/%40import), y preceder a todas las demás reglas y [declaraciones de estilo](/es/docs/Web/API/CSSStyleDeclaration) de una hoja de estilos.

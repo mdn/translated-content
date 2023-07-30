@@ -3,6 +3,7 @@ title: Drag Operations
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 original_slug: Web/API/HTML_드래그_앤_드롭_API/Drag_operations
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 다음은 드래그 & 드랍(drag & drop) 동작 실행 시 각 단계에 대한 설명입니다.
@@ -24,7 +25,9 @@ HTML에서 이미지나 링크 그리고 선택(selections)에 대한 기본 행
 컨텐츠의 일부 영역을 드래그할 수 있도록 만드는 예제는 다음과 같습니다.
 
 ```html
-<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+<div
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
   This text <strong>may</strong> be dragged.
 </div>
 ```
@@ -36,7 +39,9 @@ HTML에서 이미지나 링크 그리고 선택(selections)에 대한 기본 행
 XUL 요소에 대해서는 `{{htmlattrxref("draggable")}}` 속성을 사용할 필요가 없으며, 모든 XUL 요소는 드래그가 가능합니다.
 
 ```html
-<button label="Drag Me" ondragstart="event.dataTransfer.setData('text/plain', 'Drag Me Button');">
+<button
+  label="Drag Me"
+  ondragstart="event.dataTransfer.setData('text/plain', 'Drag Me Button');"></button>
 ```
 
 ## 드래그 작업 시작
@@ -44,7 +49,9 @@ XUL 요소에 대해서는 `{{htmlattrxref("draggable")}}` 속성을 사용할 �
 이 예제에서는 `{{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}` 속성을 이용하여 {{event("dragstart")}} 이벤트에 대한 리스너를 추가합니다.
 
 ```html
-<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+<div
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
   This text <strong>may</strong> be dragged.
 </div>
 ```
@@ -108,7 +115,10 @@ event.dataTransfer.setDragImage(image, xOffset, yOffset);
 
 ```js
 function dragWithCustomImage(event) {
-  var canvas = document.createElementNS("http://www.w3.org/1999/xhtml","canvas");
+  var canvas = document.createElementNS(
+    "http://www.w3.org/1999/xhtml",
+    "canvas",
+  );
   canvas.width = canvas.height = 50;
 
   var ctx = canvas.getContext("2d");
@@ -120,7 +130,7 @@ function dragWithCustomImage(event) {
   ctx.stroke();
 
   var dt = event.dataTransfer;
-  dt.setData('text/plain', 'Data to Drag');
+  dt.setData("text/plain", "Data to Drag");
   dt.setDragImage(canvas, 25, 25);
 }
 ```
@@ -182,7 +192,8 @@ event.dataTransfer.dropEffect = "copy";
 
 ```html
 <div ondragover="return false">
-<div ondragover="event.preventDefault()">
+  <div ondragover="event.preventDefault()"></div>
+</div>
 ```
 
 `{{event("dragenter")}}` and `{{event("dragover")}}` 두 이벤트 모두에서 {{domxref("Event.preventDefault","preventDefault()")}} 메서드를 호출하는 것은 그 위치에 드랍이 허용되는 것을 나타냅니다. 하지만, 일반적으로 특정한 상황에서만, 예를 들자면 링크가 드래그될 때만 {{domxref("Event.preventDefault","preventDefault()")}} 메서드를 호출하길 원할 것입니다. 이렇게 하기 위해서는 조건을 확인하여 조건이 충족될 때에만 해당 이벤트를 취소하는 함수를 호출합니다. 조건이 충족되지 않을 경우, 이벤트를 취소하지 않으면 사용자가 마우스 버튼을 놓더라도 드랍은 발생하지 않을 것입니다.
@@ -191,14 +202,14 @@ data transfer의 드래그 데이터 형식에 따라 드랍을 허용하거나 
 
 ```js
 function contains(list, value) {
-    for( var i = 0; i < list.length; ++i ) {
-        if(list[i] === value) return true;
-    }
-    return false;
+  for (var i = 0; i < list.length; ++i) {
+    if (list[i] === value) return true;
+  }
+  return false;
 }
 
 function doDragOver(event) {
-  var isLink = contains( event.dataTransfer.types, "text/uri-list");
+  var isLink = contains(event.dataTransfer.types, "text/uri-list");
   if (isLink) {
     event.preventDefault();
   }
@@ -216,7 +227,7 @@ function doDragOver(event) {
 그 결과로, [contains](/ko/docs/Web/API/Node/contains) 메서드는 해당 속성에 대해 더 이상 동작하지 않으며; 특정 형식의 데이터가 제공되는지 확인하기 위해서는 다음 코드와 같이 [includes](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) 메서드를 사용해야 합니다:
 
 ```js
-if ([...event.dataTransfer.types].includes('text/html')) {
+if ([...event.dataTransfer.types].includes("text/html")) {
   // Do something
 }
 ```
@@ -271,8 +282,7 @@ You can retrieve other types of data as well. If the data is a link, it should h
 function doDrop(event) {
   var lines = event.dataTransfer.getData("text/uri-list").split("\n");
   for (let line of lines) {
-    if (line.startsWith("#"))
-      continue;
+    if (line.startsWith("#")) continue;
 
     let link = document.createElement("a");
     link.href = line;
@@ -302,10 +312,13 @@ The following example returns the data associated with the best-supported format
 ```js
 function doDrop(event) {
   var types = event.dataTransfer.types;
-  var supportedTypes = ["application/x-moz-file", "text/uri-list", "text/plain"];
+  var supportedTypes = [
+    "application/x-moz-file",
+    "text/uri-list",
+    "text/plain",
+  ];
   types = supportedTypes.filter((value) => types.includes(value));
-  if (types.length)
-    var data = event.dataTransfer.getData(types[0]);
+  if (types.length) var data = event.dataTransfer.getData(types[0]);
   event.preventDefault();
 }
 ```

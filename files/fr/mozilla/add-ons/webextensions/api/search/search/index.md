@@ -18,8 +18,8 @@ Pour obtenir les moteurs de recherche installés, utilisez {{WebExtAPIRef("searc
 
 ```js
 browser.search.search(
-  searchProperties       // object
-)
+  searchProperties, // object
+);
 ```
 
 ### Paramètres
@@ -50,7 +50,7 @@ Recherche à l'aide du moteur de recherche par défaut. Les résultats seront af
 ```js
 function search() {
   browser.search.search({
-    query: "styracosaurus"
+    query: "styracosaurus",
   });
 }
 
@@ -63,7 +63,7 @@ Recherche à l'aide de Wikipédia. Les résultats seront affichés dans un nouve
 function search() {
   browser.search.search({
     query: "styracosaurus",
-    engine: "Wikipedia (en)"
+    engine: "Wikipedia (en)",
   });
 }
 
@@ -77,7 +77,7 @@ function search(tab) {
   browser.search.search({
     query: "styracosaurus",
     engine: "Wikipedia (en)",
-    tabId: tab.id
+    tabId: tab.id,
   });
 }
 

@@ -1,10 +1,7 @@
 ---
 title: Définition de paramètres
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
-tags:
-  - Traduction_à_relire
 translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
-original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko/Définition_de_paramètres
 ---
 
 ## Définition de paramètres

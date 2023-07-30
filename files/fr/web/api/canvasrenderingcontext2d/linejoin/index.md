@@ -46,11 +46,11 @@ Cet exemple applique des jointures arrondies au tracé.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.lineWidth = 20;
-ctx.lineJoin = 'round';
+ctx.lineJoin = "round";
 ctx.beginPath();
 ctx.moveTo(20, 20);
 ctx.lineTo(190, 100);
@@ -72,8 +72,8 @@ L'exemple dessine 3 tracés différents, illustrant chacune des trois valeurs de
 ```
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
-var lineJoin = ['round', 'bevel', 'miter'];
+var ctx = document.getElementById("canvas").getContext("2d");
+var lineJoin = ["round", "bevel", "miter"];
 ctx.lineWidth = 10;
 
 for (let i = 0; i < lineJoin.length; i++) {

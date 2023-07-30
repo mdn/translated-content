@@ -19,8 +19,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removing = browser.browsingData.removeFormData(
-  removalOptions            // RemovalOptions object
-)
+  removalOptions, // RemovalOptions object
+);
 ```
 
 ### Paramètres
@@ -52,11 +52,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+var oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removeFormData(
-  {since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removeFormData({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Supprimer tous les données de formulaire enregistrées :
@@ -70,8 +70,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeFormData({}).
-then(onRemoved, onError);
+browser.browsingData.removeFormData({}).then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}

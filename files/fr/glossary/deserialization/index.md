@@ -12,4 +12,4 @@ En {{Glossary("JavaScript")}}, par exemple, vous pouvez désérialiser une {{Glo
 
 ### Culture générale
 
-- [Sérialisation](https://fr.wikipedia.org/wiki/S%C3%A9rialisation) sur Wikipédia
+- [Sérialisation](https://fr.wikipedia.org/wiki/Sérialisation) sur Wikipédia

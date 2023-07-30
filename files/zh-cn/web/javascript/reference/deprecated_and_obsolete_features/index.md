@@ -99,11 +99,11 @@ console.log("b");
 以下是 `RegExp` 实例的属性，不再是 `RegExp` 构造函数的属性：
 
 | 属性                                                                | 描述                                                                             |
-|---------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| {{jsxref("RegExp/global", "global")}}                               | 是否针对字符串中所有可能的匹配进行正则表达式测试，或者只针对第一个匹配进行测试。   |
-| {{jsxref("RegExp/ignoreCase", "ignoreCase")}}                       | 在尝试匹配一个字符串时是否忽略大小写。                                            |
-| {{jsxref("RegExp/lastIndex", "lastIndex")}}                         | 开始下一次匹配的索引。                                                            |
-| {{jsxref("RegExp/multiline", "multiline")}}（也可通过 `RegExp.$*`） | 是否在多行的字符串中搜索。                                                        |
+| ------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| {{jsxref("RegExp/global", "global")}}                               | 是否针对字符串中所有可能的匹配进行正则表达式测试，或者只针对第一个匹配进行测试。 |
+| {{jsxref("RegExp/ignoreCase", "ignoreCase")}}                       | 在尝试匹配一个字符串时是否忽略大小写。                                           |
+| {{jsxref("RegExp/lastIndex", "lastIndex")}}                         | 开始下一次匹配的索引。                                                           |
+| {{jsxref("RegExp/multiline", "multiline")}}（也可通过 `RegExp.$*`） | 是否在多行的字符串中搜索。                                                       |
 | {{jsxref("RegExp/source", "source")}}                               | 模式的文本。                                                                     |
 
 `valueOf()` 方法不再专门用于 `RegExp`。它使用 {{jsxref("Object.prototype.valueOf()")}}，并返回它本身。
@@ -115,7 +115,7 @@ console.log("b");
 ### Object
 
 | 属性                         | 描述                                                                       | 替代方法                                                                                                                                                            |
-|------------------------------|----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ---------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `__count__`                  | 返回直接在用户定义的对象上的可枚举属性的数量。                             | [`Object.keys()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)                                                                                  |
 | `__parent__`                 | 指向对象的上下文                                                           | 没有直接的替换方法                                                                                                                                                  |
 | `__iterator__`               | 和[遗留的生成器和迭代器](#遗留的生成器和迭代器)一起使用。                  | [`Symbol.iterator`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) 和新的[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols) |
@@ -124,8 +124,8 @@ console.log("b");
 | `Object.observe()`           | 异步地观察一个对象的变化。                                                 | {{jsxref("Proxy")}}                                                                                                                                                 |
 | `Object.unobserve()`         | 移除观察器。                                                               | {{jsxref("Proxy")}}                                                                                                                                                 |
 | `Object.getNotifier()`       | 创建一个通知者对象，允许用 `Object.observe()` 来综合触发一个变化的观察者。 | 没有直接的替换方法                                                                                                                                                  |
-| `Object.prototype.watch()`   | 在一个属性上附加一个处理器回调，当属性被分配时被调用。                   | {{jsxref("Proxy")}}                                                                                                                                                 |
-| `Object.prototype.unwatch()` | 移除一个属性上的观察处理器。                                             | {{jsxref("Proxy")}}                                                                                                                                                 |
+| `Object.prototype.watch()`   | 在一个属性上附加一个处理器回调，当属性被分配时被调用。                     | {{jsxref("Proxy")}}                                                                                                                                                 |
+| `Object.prototype.unwatch()` | 移除一个属性上的观察处理器。                                               | {{jsxref("Proxy")}}                                                                                                                                                 |
 
 ### String
 
@@ -146,7 +146,7 @@ console.log("b");
 非标准的 Array 通用方法，如 `Array.slice(myArr, 0, 12)`、`Array.forEach(myArr, myFn)` 等，在 Firefox 1.5（JavaScript 1.6）中引入，在 Firefox 68 中被废弃，并在 Firefox 71 中删除。你可以使用 {{jsxref("Array", "Array.prototype", "实例方法")}} 和 {{jsxref("Function.call")}} 来代替。
 
 | 属性                | 描述                 | 替代                |
-|---------------------|----------------------|---------------------|
+| ------------------- | -------------------- | ------------------- |
 | `Array.observe()`   | 异步地观察数组的变化 | {{jsxref("Proxy")}} |
 | `Array.unobserve()` | 移除观察器。         | {{jsxref("Proxy")}} |
 

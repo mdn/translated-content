@@ -1,5 +1,5 @@
 ---
-title: 'Null'
+title: "Null"
 slug: Glossary/Null
 tags:
   - CodingScripting
@@ -13,7 +13,7 @@ original_slug: Глоссарий/Null
 В {{Glossary("JavaScript")}}, null – это значение, специально обозначенное как {{Glossary("Primitive", "примитив")}}, так как по поведению это в самом деле видимый примитив. Но при этом от `null` унаследованы все остальные Объекты, поэтому, несмотря на то, что null возвращает примитивное значение, его тип это объект:
 
 ```js
-typeof null === 'object'
+typeof null === "object";
 ```
 
 ## Узнать больше

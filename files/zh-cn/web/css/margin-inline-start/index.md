@@ -13,9 +13,9 @@ slug: Web/CSS/margin-inline-start
 
 ```css
 /* <length> 值 */
-margin-inline-start: 10px;  /* 绝对长度 */
-margin-inline-start: 1em;   /* 相对于文字大小 */
-margin-inline-start: 5%;    /* 相对于最近区块容器的宽度 */
+margin-inline-start: 10px; /* 绝对长度 */
+margin-inline-start: 1em; /* 相对于文字大小 */
+margin-inline-start: 5%; /* 相对于最近区块容器的宽度 */
 
 /* 关键词值 */
 margin-inline-start: auto;
@@ -83,7 +83,7 @@ div {
 
 ## 参见
 
-- [CSS 逻辑属性与逻辑值](zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
 - {{cssxref("margin-inline-end")}}
 - 对应的实体属性：{{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 和 {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}
