@@ -2,6 +2,7 @@
 title: Push API
 slug: Web/API/Push_API
 ---
+
 {{DefaultAPISidebar("Push API")}}
 
 **Push API**는 웹 애플리케이션이 현재 로딩이 되어 있지 않더라도 서버로부터 메시지를 받을 수 있도록 하는 기능이다. 이는 개발자들이 비동기적으로 사용자에게 새로운 내용을 시기적절하게 전달할 수 있도록 만들어 준다.

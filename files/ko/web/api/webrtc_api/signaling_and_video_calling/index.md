@@ -39,7 +39,7 @@ function sendToOneUser(target, msgString) {
   var isUnique = true;
   var i;
 
-  for (i=0; i<connectionArray.length; i++) {
+  for (i = 0; i < connectionArray.length; i++) {
     if (connectionArray[i].username === target) {
       connectionArray[i].sendUTF(msgString);
       break;
@@ -62,7 +62,7 @@ if (sendToClients) {
   if (msg.target && msg.target !== undefined && msg.target.length !== 0) {
     sendToOneUser(msg.target, msgString);
   } else {
-    for (i=0; i<connectionArray.length; i++) {
+    for (i = 0; i < connectionArray.length; i++) {
       connectionArray[i].sendUTF(msgString);
     }
   }
@@ -81,7 +81,7 @@ if (sendToClients) {
 
 #### Exchanging session descriptions
 
-시그널링 프로세스를 시작할 때, call을 시작 하는 유저가 ***offer** *란 것을 만든다. 이 offer는 세션 정보를 SDP 포맷으로 가지고 있으며, 커넥션이 이어지기를 원하는 유저(callee)에게 전달되어야 한다. Callee 는 이 offer에 SDP description을 포함하는 ***answer** *메세지를 보내야한다. 우리가 사용할 offer 메세지들은 `"video-offer"` 이라는 타입을 사용할 것이고 answer 메세지들은 `"video-answer"` 타입의 메세지를 사용할 것이다. 이 메세지들은 아래와 같은 field를 가진다.
+시그널링 프로세스를 시작할 때, call을 시작 하는 유저가 **\*offer** \*란 것을 만든다. 이 offer는 세션 정보를 SDP 포맷으로 가지고 있으며, 커넥션이 이어지기를 원하는 유저(callee)에게 전달되어야 한다. Callee 는 이 offer에 SDP description을 포함하는 **\*answer** \*메세지를 보내야한다. 우리가 사용할 offer 메세지들은 `"video-offer"` 이라는 타입을 사용할 것이고 answer 메세지들은 `"video-answer"` 타입의 메세지를 사용할 것이다. 이 메세지들은 아래와 같은 field를 가진다.
 
 - `type`
   - : 메세지의 타입이라; `"video-offer"` 또는 `"video-answer"`.
@@ -150,15 +150,13 @@ Naomi와 Priya는 채팅 소프트웨어를 사용해 대화에 참여했고 Nao
 클라이언트는 비디오를 표시할 공간이 필요하다. 2개의 video와 전화를 걸 button 을 정의한 HTML 코드이다.
 
 ```html
-      <div class="flexChild" id="camera-container">
-        <div class="camera-box">
-          <video id="received_video" autoplay></video>
-          <video id="local_video" autoplay muted></video>
-          <button id="hangup-button" onclick="hangUpCall();" disabled>
-            Hang Up
-          </button>
-        </div>
-      </div>
+<div class="flexChild" id="camera-container">
+  <div class="camera-box">
+    <video id="received_video" autoplay></video>
+    <video id="local_video" autoplay muted></video>
+    <button id="hangup-button" onclick="hangUpCall();" disabled>Hang Up</button>
+  </div>
+</div>
 ```
 
 위에 있는 page structure은 [`<div>`](/ko/docs/Web/HTML/Element/div)태그를 이용하고 CSS 사용을 허용함으로써 페이지 레이아웃 전체를 구성한다. 여기서는 레이아웃에 관한 자세한 내용은 스킵하지만, 위의 코드가 어떻게 돌아가는지 확인해보자. [take a look at the CSS](https://www.gitbook.com/book/gustnxodjs/webrtc-kor/edit#) on Github. 두개의 [`<video>`](/ko/docs/Web/HTML/Element/Video) 중 하나는 너의 self video이고 다른 하나는 상대방의 video를 위한 요소이다.
@@ -230,7 +228,7 @@ function handleUserlistMsg(msg) {
 ```js
 var mediaConstraints = {
   audio: true, // We want an audio track
-  video: true // ...and we want a video track
+  video: true, // ...and we want a video track
 };
 
 function invite(evt) {
@@ -240,7 +238,9 @@ function invite(evt) {
     var clickedUsername = evt.target.textContent;
 
     if (clickedUsername === myUsername) {
-      alert("I'm afraid I can't let you talk to yourself. That would be weird.");
+      alert(
+        "I'm afraid I can't let you talk to yourself. That would be weird.",
+      );
       return;
     }
 
@@ -248,12 +248,13 @@ function invite(evt) {
 
     createPeerConnection();
 
-    navigator.mediaDevices.getUserMedia(mediaConstraints)
-    .then(function(localStream) {
-      document.getElementById("local_video").srcObject = localStream;
-      myPeerConnection.addStream(localStream);
-    })
-    .catch(handleGetUserMediaError);
+    navigator.mediaDevices
+      .getUserMedia(mediaConstraints)
+      .then(function (localStream) {
+        document.getElementById("local_video").srcObject = localStream;
+        myPeerConnection.addStream(localStream);
+      })
+      .catch(handleGetUserMediaError);
   }
 }
 ```
@@ -274,10 +275,12 @@ function invite(evt) {
 
 ```js
 function handleGetUserMediaError(e) {
-  switch(e.name) {
+  switch (e.name) {
     case "NotFoundError":
-      alert("Unable to open your call because no camera and/or microphone" +
-            "were found.");
+      alert(
+        "Unable to open your call because no camera and/or microphone" +
+          "were found.",
+      );
       break;
     case "SecurityError":
     case "PermissionDeniedError":
@@ -366,18 +369,20 @@ Caller가 자신의 [`RTCPeerConnection`](/ko/docs/Web/API/RTCPeerConnection)과
 
 ```js
 function handleNegotiationNeededEvent() {
-  myPeerConnection.createOffer().then(function(offer) {
-    return myPeerConnection.setLocalDescription(offer);
-  })
-  .then(function() {
-    sendToServer({
-      name: myUsername,
-      target: targetUsername,
-      type: "video-offer",
-      sdp: myPeerConnection.localDescription
-    });
-  })
-  .catch(reportError);
+  myPeerConnection
+    .createOffer()
+    .then(function (offer) {
+      return myPeerConnection.setLocalDescription(offer);
+    })
+    .then(function () {
+      sendToServer({
+        name: myUsername,
+        target: targetUsername,
+        type: "video-offer",
+        sdp: myPeerConnection.localDescription,
+      });
+    })
+    .catch(reportError);
 }
 ```
 
@@ -478,7 +483,7 @@ function handleICECandidateEvent(event) {
     sendToServer({
       type: "new-ice-candidate",
       target: targetUsername,
-      candidate: event.candidate
+      candidate: event.candidate,
     });
   }
 }
@@ -505,8 +510,7 @@ function handleICECandidateEvent(event) {
 function handleNewICECandidateMsg(msg) {
   var candidate = new RTCIceCandidate(msg.candidate);
 
-  myPeerConnection.addIceCandidate(candidate)
-    .catch(reportError);
+  myPeerConnection.addIceCandidate(candidate).catch(reportError);
 }
 ```
 
@@ -555,7 +559,7 @@ function hangUpCall() {
   sendToServer({
     name: myUsername,
     target: targetUsername,
-    type: "hang-up"
+    type: "hang-up",
   });
 }
 ```
@@ -573,12 +577,12 @@ function closeVideoCall() {
 
   if (myPeerConnection) {
     if (remoteVideo.srcObject) {
-      remoteVideo.srcObject.getTracks().forEach(track => track.stop());
+      remoteVideo.srcObject.getTracks().forEach((track) => track.stop());
       remoteVideo.srcObject = null;
     }
 
     if (localVideo.srcObject) {
-      localVideo.srcObject.getTracks().forEach(track => track.stop());
+      localVideo.srcObject.getTracks().forEach((track) => track.stop());
       localVideo.srcObject = null;
     }
 
@@ -611,7 +615,7 @@ function closeVideoCall() {
 
 ```js
 function handleICEConnectionStateChangeEvent(event) {
-  switch(myPeerConnection.iceConnectionState) {
+  switch (myPeerConnection.iceConnectionState) {
     case "closed":
     case "failed":
     case "disconnected":
@@ -628,13 +632,13 @@ ICE connection state가 `"closed"`, 또는`"failed"`, 또는 `"disconnected"`으
 마찬가지로 [`signalingstatechange`](/ko/docs/Web/API/RTCPeerConnection/signalingstatechange_event)event를 받을 수 있는데, 시그널링 상태가 `"closed"`으로 바뀌면 call을 완전히 종료시킨다.
 
 ```js
-  myPeerConnection.onsignalingstatechange = function(event) {
-    switch(myPeerConnection.signalingState) {
-      case "closed":
-        closeVideoCall();
-        break;
-    }
-  };
+myPeerConnection.onsignalingstatechange = function (event) {
+  switch (myPeerConnection.signalingState) {
+    case "closed":
+      closeVideoCall();
+      break;
+  }
+};
 ```
 
 ##### ICE gathering state
