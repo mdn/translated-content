@@ -9,8 +9,8 @@ slug: Web/API/WritableStream/getWriter
 
 ## 语法
 
-```js
-getWriter();
+```js-nolint
+getWriter()
 ```
 
 ### 参数

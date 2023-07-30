@@ -11,8 +11,8 @@ slug: Web/API/WritableStreamDefaultWriter/write
 
 ## 语法
 
-```js
-write(chunk);
+```js-nolint
+write(chunk)
 ```
 
 ### 参数

@@ -9,9 +9,9 @@ slug: Web/API/WritableStream/WritableStream
 
 ## 语法
 
-```js
-new WritableStream(underlyingSink);
-new WritableStream(underlyingSink, queuingStrategy);
+```js-nolint
+new WritableStream(underlyingSink)
+new WritableStream(underlyingSink, queuingStrategy)
 ```
 
 ### 参数

@@ -11,9 +11,9 @@ slug: Web/API/WritableStreamDefaultWriter/abort
 
 ## 语法
 
-```js
-abort();
-abort(reason);
+```js-nolint
+abort()
+abort(reason)
 ```
 
 ### 参数

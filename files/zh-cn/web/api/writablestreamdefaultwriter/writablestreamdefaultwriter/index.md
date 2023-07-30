@@ -11,8 +11,8 @@ slug: Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter
 
 ## 语法
 
-```js
-new WritableStreamDefaultWriter(stream);
+```js-nolint
+new WritableStreamDefaultWriter(stream)
 ```
 
 ### 参数

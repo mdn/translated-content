@@ -11,8 +11,8 @@ slug: Web/API/WritableStreamDefaultWriter/close
 
 ## 语法
 
-```js
-close();
+```js-nolint
+close()
 ```
 
 ### 参数

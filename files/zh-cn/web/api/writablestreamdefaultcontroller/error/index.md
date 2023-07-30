@@ -11,8 +11,8 @@ slug: Web/API/WritableStreamDefaultController/error
 
 ## 语法
 
-```js
-error(message);
+```js-nolint
+error(message)
 ```
 
 ### 参数

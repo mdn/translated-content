@@ -9,8 +9,8 @@ slug: Web/API/WritableStreamDefaultWriter/releaseLock
 
 ## 语法
 
-```js
-releaseLock();
+```js-nolint
+releaseLock()
 ```
 
 ### 参数
