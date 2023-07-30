@@ -1,6 +1,8 @@
 ---
 title: 하이퍼링크 만들기
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
+l10n:
+  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
@@ -237,95 +239,92 @@ Document fragments(문서 조각)를 참조하여 현재 문서의 다른 부분
 
 예를 들면
 
-- 대역폭이 낮은 연결에 있는 경우 링크를 클릭하면 멀티 메가바이트 다운로드가 예기치 않게 시작된다.
-- 플래시 플레이어를 설치하지 않은 경우 링크를 클릭한 다음 플래시가 필요한 페이지로 이동한다.
+- 저대역폭 연결 중인 경우 링크를 클릭하면 예기치 않게 여러 메가바이트 다운로드가 시작됩니다.
 
-여기서 사용할 수 있는 텍스트의 종류를 보려면 몇 가지 예를 살펴보십시오.:
+여기서 사용할 수 있는 텍스트의 종류를 알아보기 위해 몇 가지 예를 살펴보겠습니다.
 
 ```html
-<p><a href="http://www.example.com/large-report.pdf">
-  Download the sales report (PDF, 10MB)
-</a></p>
+<p>
+  <a href="https://www.example.com/large-report.pdf">
+    Download the sales report (PDF, 10MB)
+  </a>
+</p>
 
-<p><a href="http://www.example.com/video-stream/">
-  Watch the video (stream opens in separate tab, HD quality)
-</a></p>
-
-<p><a href="http://www.example.com/car-game">
-  Play the car game (requires Flash)
-</a></p>
+<p>
+  <a href="https://www.example.com/video-stream/" target="_blank">
+    Watch the video (stream opens in separate tab, HD quality)
+  </a>
+</p>
 ```
 
-### 다운로드 연결 시 download attribute 사용
+### 다운로드 연결 시 download 속성 사용
 
-브라우저에서 열지 않고 다운로드할 리소스에 연결하는 경우 다운로드 속성을 사용하여 기본 저장 파일 이름을 제공할 수 있다.
-
-Firefox 39의 Windows 버전에 대한 다운로드 링크가 있는 예:
+브라우저에서 열지 않고 다운로드할 리소스에 연결하는 경우 `다운로드` 속성을 사용하여 기본 저장 파일 이름을 제공할 수 있습니다. 다음은 최신 Windows 버전의 Firefox 다운로드 링크의 예입니다.
 
 ```html
-<a href="https://download.mozilla.org/?product=firefox-39.0-SSL&os=win&lang=en-US"
-   download="firefox-39-installer.exe">
-  Download Firefox 39 for Windows
+<a
+  href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
+  download="firefox-latest-64bit-installer.exe">
+  Download Latest Firefox for Windows (64-bit) (English, US)
 </a>
 ```
 
 ## 활동적인 학습: 탐색 메뉴 만들기
 
-이 연습에서는 일부 페이지를 탐색 메뉴와 함께 연결하여 다중 페이지 웹 사이트를 생성하십시오. 이것은 웹사이트가 만들어지는 하나의 일반적인 방식이다. — 동일한 탐색 메뉴를 포함한 모든 페이지에 동일한 페이지 구조가 사용되기 때문에 링크를 클릭할 때 같은 장소에 머물고 있다는 인상을 주며, 다른 내용이 제기되고 있다.
+이 연습을 위해 일부 페이지를 탐색 메뉴와 함께 연결하여 다중 페이지 웹 사이트를 만들었으면 합니다. 이것은 웹 사이트를 만드는 일반적인 방법 중 하나입니다. 동일한 탐색 메뉴를 포함하여 모든 페이지에서 동일한 페이지 구조가 사용되므로 링크를 클릭하면 사용자가 같은 장소에 있고 다른 내용이 표시됩니다.
 
-다음 4개의 페이지의 로컬 복사본을 서로 동일한 디렉토리에 만들어야 한다 (전체 목록을 보려면 [navigation-menu-start](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-start) 디렉토리를 참조):
+다음 네 페이지의 로컬 복사본을 모두 같은 디렉토리에 만들어야 합니다. (전체 목록을 보려면 [navigation-menu-start](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-start) 디렉토리를 참조하세요)
 
-- [index.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/navigation-menu-start/index.html)
-- [projects.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/navigation-menu-start/projects.html)
-- [pictures.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/navigation-menu-start/pictures.html)
-- [social.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/navigation-menu-start/social.html)
+- [index.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/navigation-menu-start/index.html)
+- [projects.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/navigation-menu-start/projects.html)
+- [pictures.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/navigation-menu-start/pictures.html)
+- [social.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/navigation-menu-start/social.html)
 
-당신이 해야할 것:
+여러분이 해야할 것
 
-1. 연결할 페이지의 이름이 포함된 순서 없는 목록을 한 페이지의 지정된 위치에 추가하십시오. 네비게이션 메뉴는 보통 링크의 목록일 뿐이므로 의미적으로 OK이다.
-2. 각 페이지 이름을 해당 페이지 링크로 변경하십시오.
-3. Navigation 메뉴를 각 페이지에 복사하십시오.
-4. 각 페이지에서 동일한 페이지에 대한 링크만 제거하십시오. — 페이지에 대한 링크가 포함된다는 것은 혼란스럽고 의미가 없으며, 링크가 부족하면 현재 어떤 페이지에 있는지 시각적으로 잘 알 수 있다.
+1. 연결할 페이지의 이름이 포함된 한 페이지의 표시된 위치에 순서 없는 목록을 추가합니다. 탐색 메뉴는 일반적으로 링크의 목록이므로 의미론적으로 좋습니다.
+2. 각 페이지 이름을 해당 페이지에 대한 링크로 변경합니다.
+3. 탐색 메뉴를 각 페이지에 복사합니다.
+4. 각 페이지에서 동일한 페이지에 대한 링크만 제거합니다. 페이지가 자신에 대한 링크를 포함하는 것은 혼란스럽고 불필요합니다. 또한 링크가 없으면 현재 사용 중인 페이지를 시각적으로 확인할 수 있습니다.
 
-완성된 예는 다음과 같다:
+완성된 예는 다음과 같습니다.
 
 ![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](navigation-example.png)
 
-> **참고:** 만약 당신이 막히거나, 당신이 그것을 제대로 가지고 있는지 확신할 수 없다면, 당신은 정확한 답을 보기 위해 [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up) 디렉토리를 확인할 수 있다.
+> **참고:** 문제가 발생하거나 문제가 제대로 해결되었는지 확신할 수 없는 경우 [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up) 디렉토리를 확인하여 정답을 확인할 수 있습니다.
 
 ## 이메일 링크
 
-클릭했을 때 리소스나 페이지에 연결하지 않고 새 발신 전자 메일 메시지를 여는 링크나 단추를 만들 수 있다.
-
-이것은 {{HTMLElement("a")}} 태그안에 `mailto:` URL 스키마를 사용하여 구현할 수 있다.
+클릭하면 리소스 또는 페이지에 연결하는 대신 새 발신 전자 메일 메시지를 여는 링크 또는 단추를 만들 수 있습니다. 이것은 {{HTMLElement("a")}} 태그안에 `mailto:` URL 스키마를 사용하여 구현할 수 있습니다.
 
 가장 기본적이고 일반적으로 사용되는 형태의 `mailto:` 링크는 단순히 대상 수신인의 이메일 주소를 표시한다.
 
-예를 들면:
+예를 들면
 
 ```html
 <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
 ```
 
-이렇게 되면 다음과 같은 링크가 생성된다: [Send email to nowhere](mailto:nowhere@mozilla.org).
+이렇게 되면 다음과 같은 링크가 생성됩니다: [Send email to nowhere](mailto:nowhere@mozilla.org).
 
-사실, 이메일 주소는 심지어 선택사항이다. 그것을 생략하면(즉, 당신의 {{htmlattrxref("href", "a")}} 아직 목적지 주소가 지정되지 않은 사용자의 메일 클라이언트에 의해 새로운 발신 이메일 창이 열린다. 이것은 종종 사용자가 선택한 주소로 이메일을 보내기 위해 클릭할 수 있는 "공유" 링크로서 유용하다.
+사실, 이메일 주소는 선택사항입니다. 이메일 주소를 생략하고 {{htmlattrxref("href", "a")}}가 "mailto:"이면 수신처 주소가 없는 사용자의 이메일 클라이언트에 의해 새로운 발신 이메일 창이 열립니다. 이는 종종 사용자가 선택한 주소로 이메일을 보내기 위해 클릭할 수 있는 "공유" 링크로 유용합니다.
 
 ### 세부 사항 지정하기
 
-이메일 주소 외에도 다른 정보를 제공할 수 있다. 실제로 표준 메일 헤더 필드는 사용자가 제공하는 `mailto` URL에 추가할 수 있다. 이것들 중 가장 일반적으로 사용되는 것은 "subject", "cc", and "body"(참된 헤더 필드는 아니지만 새 이메일에 대한 짧은 내용 메시지를 지정할 수 있음)이다. 각 필드와 그 값은 조회 용어로 지정된다.
+이메일 주소 외에도 다른 정보를 제공할 수 있습니다. 실제로 표준 메일 헤더 필드는 사용자가 제공하는 `mailto` URL에 추가할 수 있습니다. 이 중 가장 일반적으로 사용되는 것은 "subject", "cc" 및 "body"(실제 헤더 필드는 아니지만 새 전자 메일에 대한 짧은 내용 메시지를 지정할 수 있습니다.)입니다. 각 필드와 해당 값은 쿼리 단위로 지정됩니다.
 
-아래 예제가 cc, bcc, subject and body 를 포함한다.:
+다음은 cc, bcc, subject 및 body를 포함하는 예입니다.
 
 ```html
-<a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&amp;subject=The%20subject%20of%20the%20email &amp;body=The%20body%20of%20the%20email">
+<a
+  href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
   Send mail with cc, bcc, subject and body
 </a>
 ```
 
 > **참고:** 각 필드의 값은 URL로 인코딩되어야 한다(즉, 출력되지 않은 문자 및 [percent-escaped](http://en.wikipedia.org/wiki/Percent-encoding)). 또한 `mailto:` URL의 각 필드를 구분하는 `&` 의 사용에 유의하십시오. 이것은 표준 URL 쿼리 표기법입니다.
 
-여기 다른 몇 가지 `mailto` URL 샘플들이 있다:
+여기 다른 몇 가지 `mailto` URL 샘플들이 있습니다.
 
 - <mailto:>
 - <mailto:nowhere@mozilla.org>
@@ -333,16 +332,12 @@ Firefox 39의 Windows 버전에 대한 다운로드 링크가 있는 예:
 - <mailto:nowhere@mozilla.org?cc=nobody@mozilla.org>
 - <mailto:nowhere@mozilla.org?cc=nobody@mozilla.org&subject=This%20is%20the%20subject>
 
-### 가능하면 상대 링크 사용하기
+## 실력을 시험해 보세요!
 
-위의 설명에서, 당신은 절대 링크를 항상 사용하는 것이 좋은 생각이라고 생각할 수 있다; 결국, 그것들은 페이지가 상대적인 링크처럼 움직였을 때 깨지지 않는다. 그러나 동일한 웹 사이트 내의 다른 위치에 연결할 때 가능한 한 상대 링크를 사용해야 한다(다른 웹 사이트에 연결할 때는 절대 링크를 사용해야 한다).
-
-- 우선, 당신의 코드를 스캔하는 것이 훨씬 쉽다. — 상대 링크가 일반적으로 절대 링크보다 훨씬 짧기 때문에 코드를 읽는 것이 훨씬 더 쉽다.
-- 둘째, 가능한 한 상대적인 URL을 이용하는 것이 더 효율적이다. 절대 URL을 사용할 때, 브라우저는 {{glossary("DNS")}}로 도메인 이름을 쿼리하여 서버의 실제 위치를 조회하는 것으로 시작하고, 그 서버로 가서 요청되고 있는 파일을 찾는다. 반면에 상대적인 URL을 사용하면, 브라우저는 요청되고 있는 파일을 같은 서버에서 찾아 볼 뿐이다. 따라서 상대 URL이 할 수 있는 절대 URL을 사용하면 브라우저가 계속해서 추가 작업을 수행하도록 만들 수 있으며, 이것은 브라우저의 성능이 저하된다는 것을 의미한다.
-
+여러분은 이 글의 끝에 도달하였는데, 가장 중요한 정보들을 기억하고 계신가요? 다음 단계로 넘어가기 전에 이 정보를 알고있는지 확인하기 위한 추가 테스트를 확인할 수 있습니다. 자세한 내용은 [Test your skills: Links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links) 링크를 참조하세요.
 
 ## 요약
 
-이제 링크는 여기까지입니다, 어쨌든! 나중에 스타일링을 시작하면 링크로 돌아간다. 다음 HTML에서는 텍스트 의미론(Text Semantics)으로 돌아가서 유용하게 사용할 수 있는 고급/비정상적인 기능을 살펴보도록 하겠다. — 다음 목적지는 고급 텍스트 서식에 대해 알아볼 것이다.
+이제 링크는 여기까지입니다. 어쨌든! 스타일링을 시작하면 나중에 과정에서 링크로 돌아갑니다. 다음 HTML에서는 텍스트 의미론(Text Semantics)으로 돌아가서 유용하게 사용할 수 있는 고급/비정상적인 기능을 살펴보도록 하겠다. — 다음 목적지는 고급 텍스트 서식에 대해 알아볼 것이다.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
