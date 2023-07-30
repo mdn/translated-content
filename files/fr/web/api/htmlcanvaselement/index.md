@@ -1,8 +1,6 @@
 ---
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
-tags:
-  - Canvas
 translation_of: Web/API/HTMLCanvasElement
 ---
 
@@ -14,10 +12,10 @@ L'interface **`HTMLCanvasElement`** fournit un ensemble de propriétés et de m�
 
 _Propriétés hérités de son parent,_ _{{domxref("HTMLElement")}}._
 
-| Nom      | Type            | Description                                                                                                                                     |
-| -------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nom      | Type            | Description                                                                                                                                        |
+| -------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `height` | `unsigned long` | Représente l'attribut HTML [`height`](/fr/docs/Web/HTML/Element/canvas#height), qui spécifie la hauteur de l'espace des coordonnées en pixels CSS. |
-| `width`  | `unsigned long` | Représente l'attribut HTML [`width`](/fr/docs/Web/HTML/Element/canvas#width), qui spécifie la largeur de l'espace des coordonnées en pixels CSS. |
+| `width`  | `unsigned long` | Représente l'attribut HTML [`width`](/fr/docs/Web/HTML/Element/canvas#width), qui spécifie la largeur de l'espace des coordonnées en pixels CSS.   |
 
 ## Méthodes
 
@@ -214,12 +212,12 @@ D'abord, dessinez dans le canvas, ensuite appelez `canvas.toDataURL()` pour obte
 
 ```js
 function test() {
- var canvas = document.getElementById("canvas");
- var url = canvas.toDataURL();
+  var canvas = document.getElementById("canvas");
+  var url = canvas.toDataURL();
 
- var nouvelleImg = document.createElement("img");
- nouvelleImg.src = url;
- document.body.appendChild(nouvelleImg);
+  var nouvelleImg = document.createElement("img");
+  nouvelleImg.src = url;
+  document.body.appendChild(nouvelleImg);
 }
 ```
 
@@ -230,10 +228,10 @@ Une fois que vous avez dessiné du contenu dans un canvas, vous pouvez le conver
 ```js
 function test() {
   var canvas = document.getElementById("canvas");
-  canvas.toBlob(function(blob) {
+  canvas.toBlob(function (blob) {
     var nouvelleImg = document.createElement("img"),
-        url = URL.createObjectURL(blob);
-    nouvelleImg.onload = function() {
+      url = URL.createObjectURL(blob);
+    nouvelleImg.onload = function () {
       // Il n'est plus nécessaire de lire le blob, il est donc révoqué
       URL.revokeObjectURL(url);
     };
@@ -246,56 +244,70 @@ function test() {
 Vous pouvez utiliser cette technique en association avec les événemments de souris pour effectuer un changement d'images dynamique (niveau de gris et couleur dans cet exemple) :
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>MDC Example</title>
-<script type="text/javascript">
-function afficherImageCouleur() {
-  this.style.display = "none";
-  this.nextSibling.style.display = "inline";
-}
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>MDC Example</title>
+    <script type="text/javascript">
+      function afficherImageCouleur() {
+        this.style.display = "none";
+        this.nextSibling.style.display = "inline";
+      }
 
-function afficherImageGrise() {
-  this.previousSibling.style.display = "inline";
-  this.style.display = "none";
-}
+      function afficherImageGrise() {
+        this.previousSibling.style.display = "inline";
+        this.style.display = "none";
+      }
 
-function supprimerCouleurs() {
-  var aImages = document.getElementsByClassName("grayscale"),
-      nImgsLong = aImages.length,
-      oCanvas = document.createElement("canvas"),
-      oCtx = oCanvas.getContext("2d");
-  for (var nLargeur, nHauteur, oImgData, oImgGrise, nPixel, aPix, nPixLong, nImgId = 0; nImgId < nImgsLong; nImgId++) {
-    oImgCouleur = aImages[nImgId];
-    nLargeur = oImgCouleur .offsetWidth;
-    nHauteur = oImgCouleur .offsetHeight;
-    oCanvas.width = nWidth;
-    oCanvas.height = nHeight;
-    oCtx.drawImage(oImgCouleur , 0, 0);
-    oImgData = oCtx.getImageData(0, 0, nLargeur, nHauteur);
-    aPix = oImgData.data;
-    nPixLong = aPix.length;
-    for (nPixel = 0; nPixel < nPixLen; nPixel += 4) {
-      aPix[nPixel + 2] = aPix[nPixel + 1] = aPix[nPixel] = (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;
-    }
-    oCtx.putImageData(oImgData, 0, 0);
-    oImgGrise = new Image();
-    oImg.src = oCanvas.toDataURL();
-    oImgGrise.onmouseover = afficherImageCouleur;
-    oImgCouleur.onmouseout = afficherImageGrise;
-    oCtx.clearRect(0, 0, nLargeur, nHauteur);
-    oImgCouleur.style.display = "none";
-    oImgCouleur.parentNode.insertBefore(oImgGrise , oImgCouleur);
-  }
-}
-</script>
-</head>
+      function supprimerCouleurs() {
+        var aImages = document.getElementsByClassName("grayscale"),
+          nImgsLong = aImages.length,
+          oCanvas = document.createElement("canvas"),
+          oCtx = oCanvas.getContext("2d");
+        for (
+          var nLargeur,
+            nHauteur,
+            oImgData,
+            oImgGrise,
+            nPixel,
+            aPix,
+            nPixLong,
+            nImgId = 0;
+          nImgId < nImgsLong;
+          nImgId++
+        ) {
+          oImgCouleur = aImages[nImgId];
+          nLargeur = oImgCouleur.offsetWidth;
+          nHauteur = oImgCouleur.offsetHeight;
+          oCanvas.width = nWidth;
+          oCanvas.height = nHeight;
+          oCtx.drawImage(oImgCouleur, 0, 0);
+          oImgData = oCtx.getImageData(0, 0, nLargeur, nHauteur);
+          aPix = oImgData.data;
+          nPixLong = aPix.length;
+          for (nPixel = 0; nPixel < nPixLen; nPixel += 4) {
+            aPix[nPixel + 2] =
+              aPix[nPixel + 1] =
+              aPix[nPixel] =
+                (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;
+          }
+          oCtx.putImageData(oImgData, 0, 0);
+          oImgGrise = new Image();
+          oImg.src = oCanvas.toDataURL();
+          oImgGrise.onmouseover = afficherImageCouleur;
+          oImgCouleur.onmouseout = afficherImageGrise;
+          oCtx.clearRect(0, 0, nLargeur, nHauteur);
+          oImgCouleur.style.display = "none";
+          oImgCouleur.parentNode.insertBefore(oImgGrise, oImgCouleur);
+        }
+      }
+    </script>
+  </head>
 
-<body onload="supprimerCouleurs();">
-<p><img class="grayscale" src="chagall.jpg" alt="" /></p>
-</body>
+  <body onload="supprimerCouleurs();">
+    <p><img class="grayscale" src="chagall.jpg" alt="" /></p>
+  </body>
 </html>
 ```
 

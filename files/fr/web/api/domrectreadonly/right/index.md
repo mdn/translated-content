@@ -1,13 +1,6 @@
 ---
 title: DOMRectReadOnly.right
 slug: Web/API/DOMRectReadOnly/right
-tags:
-  - API
-  - DOM
-  - Droite
-  - Géométrie
-  - Propriétés
-  - Rectangle
 translation_of: Web/API/DOMRectReadOnly/right
 ---
 

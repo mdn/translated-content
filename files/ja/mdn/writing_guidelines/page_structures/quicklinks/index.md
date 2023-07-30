@@ -22,15 +22,34 @@ MDN はページへのクイックリンクの追加に対応しています。�
 <section id="Quick_links">
   <ol>
     <li><a href="http://docs.ckeditor.com/">CKEditor documentation site</a></li>
-    <li><a href="http://mxr.mozilla.org/">MXR: Mozilla source cross-reference</a></li>
+    <li>
+      <a href="http://mxr.mozilla.org/">MXR: Mozilla source cross-reference</a>
+    </li>
     <li class="toggle">
-      <details><summary>Style guides</summary>
-      <ol>
-        <li><a href="http://www.economist.com/research/StyleGuide/">The Economist style guide</a></li>
-        <li><a href="https://www.amazon.com/gp/product/0226104036/">The Chicago manual of style</a></li>
-        <li><a href="http://www.answers.com/library/Dictionary">Answers.com dictionary</a></li>
-        <li><a href="http://www.wsu.edu/~brians/errors/">Common Errors in English</a></li>
-      </ol>
+      <details>
+        <summary>Style guides</summary>
+        <ol>
+          <li>
+            <a href="http://www.economist.com/research/StyleGuide/"
+              >The Economist style guide</a
+            >
+          </li>
+          <li>
+            <a href="https://www.amazon.com/gp/product/0226104036/"
+              >The Chicago manual of style</a
+            >
+          </li>
+          <li>
+            <a href="http://www.answers.com/library/Dictionary"
+              >Answers.com dictionary</a
+            >
+          </li>
+          <li>
+            <a href="http://www.wsu.edu/~brians/errors/"
+              >Common Errors in English</a
+            >
+          </li>
+        </ol>
       </details>
     </li>
   </ol>

@@ -2,6 +2,7 @@
 title: FetchEvent.respondWith()
 slug: Web/API/FetchEvent/respondWith
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 {{domxref("FetchEvent")}}의 **`respondWith()`** 메소드는 브라우저의 기본 fetch 핸들링을 막고, 당신 스스로 {{domxref("Response")}}에 대한 promise를 제공할 수 있게 허락합니다.
@@ -23,7 +24,7 @@ This means, for example, if a service worker intercepts a stylesheet or worker s
 For most types of network request this change has no impact because you can't observe the final URL. There are a few, though, where it does matter:
 
 - If a {{domxref("fetch()")}} is intercepted, then you can observe the final URL on the result's {{domxref("Response.url")}}.
-- If a [worker](/ko/docs/Web/API/Web_Workers_API) script is intercepted, then the final URL is used to set [`self.location`](/en-US/docs/Web/API/WorkerGlobalScope/location) and used as the base URL for relative URLs in the worker script.
+- If a [worker](/ko/docs/Web/API/Web_Workers_API) script is intercepted, then the final URL is used to set [`self.location`](/ko/docs/Web/API/WorkerGlobalScope/location) and used as the base URL for relative URLs in the worker script.
 - If a stylesheet is intercepted, then the final URL is used as the base URL for resolving relative {{cssxref("@import")}} loads.
 
 Note that navigation requests for {{domxref("Window","Windows")}} and {{domxref("HTMLIFrameElement","iframes")}} do NOT use the final URL. The way the HTML specification handles redirects for navigations ends up using the request URL for the resulting {{domxref("Window.location")}}. This means sites can still provide an "alternate" view of a web page when offline without changing the user-visible URL.
@@ -31,9 +32,10 @@ Note that navigation requests for {{domxref("Window","Windows")}} and {{domxref(
 ## Syntax
 
 ```js
-fetchEvent.respondWith(
+fetchEvent
+  .respondWith
   // Promise that resolves to a Response.
-)
+  ();
 ```
 
 ### Parameters
@@ -46,8 +48,8 @@ Void.
 
 ### Exceptions
 
-| Exception      | Notes                                                                                                                                                                                                                              |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Exception      | Notes                                                                                                                                                                                                   |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `NetworkError` | A network error is triggered on certain combinations of {{domxref("Request.mode","FetchEvent.request.mode")}} and {{domxref("Response.type")}} values, as hinted at in the "global rules" listed above. |
 
 ## Examples
@@ -55,16 +57,18 @@ Void.
 This fetch event tries to return a response from the cache API, falling back to the network otherwise.
 
 ```js
-addEventListener('fetch', event => {
+addEventListener("fetch", (event) => {
   // Prevent the default, and handle the request ourselves.
-  event.respondWith(async function() {
-    // Try to get the response from a cache.
-    const cachedResponse = await caches.match(event.request);
-    // Return it if we found one.
-    if (cachedResponse) return cachedResponse;
-    // If we didn't find a match in the cache, use the network.
-    return fetch(event.request);
-  }());
+  event.respondWith(
+    (async function () {
+      // Try to get the response from a cache.
+      const cachedResponse = await caches.match(event.request);
+      // Return it if we found one.
+      if (cachedResponse) return cachedResponse;
+      // If we didn't find a match in the cache, use the network.
+      return fetch(event.request);
+    })(),
+  );
 });
 ```
 

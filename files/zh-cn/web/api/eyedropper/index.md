@@ -38,8 +38,7 @@ document.getElementById("start-button").addEventListener("click", () => {
   const resultElement = document.getElementById("result");
 
   if (!window.EyeDropper) {
-    resultElement.textContent =
-      "你的浏览器不支持 EyeDropper API";
+    resultElement.textContent = "你的浏览器不支持 EyeDropper API";
     return;
   }
 
@@ -78,8 +77,7 @@ document.getElementById("start-button").addEventListener("click", () => {
   const resultElement = document.getElementById("result");
 
   if (!window.EyeDropper) {
-    resultElement.textContent =
-      "你的浏览器不支持 EyeDropper API";
+    resultElement.textContent = "你的浏览器不支持 EyeDropper API";
     return;
   }
 

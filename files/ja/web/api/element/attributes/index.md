@@ -1,17 +1,18 @@
 ---
-title: Element.attributes
+title: "Element: attributes プロパティ"
+short-title: attributes
 slug: Web/API/Element/attributes
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{ APIRef("DOM") }}
 
-**`Element.attributes`** プロパティは、そのノードに登録されたすべての属性ノードの生きたコレクションを返却します。返却される値は {{domxref("NamedNodeMap")}} であり、 `Array` ではありません。つまり、 {{jsxref("Array")}} のメソッドは持っておらず、 {{domxref("Attr")}} ノードのインデックスはブラウザーによって変わる可能性があります。より正確に言うと、 `attributes` はその属性に関するあらゆる情報を表す文字列のキーと値の組です。
+**`Element.attributes`** プロパティは、そのノードに登録されたすべての属性ノードの生きたコレクションを返却します。返却される値は {{domxref("NamedNodeMap")}} であり、`Array` ではありません。つまり、{{jsxref("Array")}} のメソッドは持っておらず、{{domxref("Attr")}} ノードのインデックスはブラウザーによって変わる可能性があります。より正確に言うと、`attributes` はその属性に関するあらゆる情報を表す文字列のキーと値の組です。
 
-## 構文
+## 値
 
-```js
-var attr = element.attributes;
-```
+{{domxref("NamedNodeMap")}} オブジェクトです。
 
 ## 例
 
@@ -19,54 +20,53 @@ var attr = element.attributes;
 
 ```js
 // 文書内の最初の <p> 要素を取得
-var para = document.getElementsByTagName("p")[0];
-var atts = para.attributes;
+const paragraph = document.querySelector("p");
+const attributes = paragraph.attributes;
 ```
 
 ### 要素の属性を列挙する
 
-ある要素のすべての属性を走査したい場合は、数値のインデックスを使うと便利です。
-次の例では、 "paragraph" を id に持つ要素のすべての属性ノードを走査し、その属性の値を表示します。
+[`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) を使用すると、要素の属性をすべて列挙することができます。
+次の例では、"paragraph" を id に持つ要素のすべての属性ノードを走査し、その属性の値を表示します。
 
 ```html
 <!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>属性の例</title>
+    <script>
+    function listAttributes() {
+       const paragraph = document.getElementById("paragraph");
+       const result = document.getElementById("result");
 
-<html>
-
- <head>
-  <title>Attributes example</title>
-  <script type="text/javascript">
-   function listAttributes() {
-     var paragraph = document.getElementById("paragraph");
-     var result = document.getElementById("result");
-
-     // まず、段落に属性があるか確かめる
-     if (paragraph.hasAttributes()) {
-       var attrs = paragraph.attributes;
-       var output = "";
-       for(var i = attrs.length - 1; i >= 0; i--) {
-         output += attrs[i].name + "->" + attrs[i].value;
+       // まず、段落に属性があるか確かめる
+       if (paragraph.hasAttributes()) {
+         let output = "最初の段落の属性:\n";
+         for (const attr of paragraph.attributes) {
+           output += `${attr.name} -> ${attr.value}\n`;
+         }
+         result.textContent = output;
+       } else {
+         result.textContent = "表示する属性はありません";
        }
-       result.value = output;
-     } else {
-       result.value = "表示する属性はありません";
-     }
-   }
-  </script>
- </head>
+    }
+    </script>
+  </head>
 
-<body>
- <p id="paragraph" style="color: green;">サンプルの段落</p>
- <form action="">
-  <p>
-    <input type="button" value="Show first attribute name and value"
-      onclick="listAttributes();">
-    <input id="result" type="text" value="">
-  </p>
- </form>
-</body>
+  <body>
+    <p id="paragraph" style="color: green;">サンプルの段落</p>
+    <form action="">
+      <p>
+        <input type="button" value="最初の要素の属性の名前と値"
+          onclick="listAttributes();">
+        <pre id="result"></pre>
+      </p>
+    </form>
+  </body>
 </html>
 ```
+
+{{EmbedLiveSample('enumerating_elements_attributes', 100, 300)}}
 
 ## 仕様書
 
@@ -78,5 +78,5 @@ var atts = para.attributes;
 
 ## 関連情報
 
-- 返却される値のインターフェースである {{domxref("NamedNodeMap")}}
-- [quirksmode](https://www.quirksmode.org/dom/w3c_core.html#attributes) におけるブラウザー間の互換性の考慮事項
+- 返却される値のインターフェイスである {{domxref("NamedNodeMap")}}
+- [quirksmode](https://quirksmode.org/dom/core/#attributes) におけるブラウザー間の互換性の考慮事項

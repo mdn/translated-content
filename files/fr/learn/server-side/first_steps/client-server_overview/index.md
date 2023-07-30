@@ -2,7 +2,6 @@
 title: La relation Client-Serveur
 slug: Learn/Server-side/First_steps/Client-Server_overview
 translation_of: Learn/Server-side/First_steps/Client-Server_overview
-original_slug: Learn/Server-side/Premiers_pas/Client-Serveur
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
@@ -94,7 +93,7 @@ Les premières et secondes lignes contiennent la plupart des données déjà év
 - Le site web cible/hôte (developer.mozilla.org).
 - La fin de la première ligne inclut aussi une petite chaîne identifiant la version spécifique du protocole (`HTTP/1.1`).
 
-La dernière ligne contient des données sur les cookies côté client — vous observerez que dans ce cas, le cookie a une id pour gérer la session :    (`Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; ...`).
+La dernière ligne contient des données sur les cookies côté client — vous observerez que dans ce cas, le cookie a une id pour gérer la session : (`Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; ...`).
 
 Les lignes restantes concernent le navigateur utilisé et les sortes de réponses qu'il peut accepter. Par exemple, vous pouvez voir ceci :
 
@@ -116,7 +115,7 @@ La première partie de la réponse à cette requête est détaillée ci-dessous.
 
 À la fin du message nous avons le contenu du corps — lequel contient le "vrai" HTML demandé par la requête.
 
-```html
+```http
 HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
@@ -130,15 +129,27 @@ Allow: GET
 X-Cache-Info: caching
 Content-Length: 41823
 
+```
 
-
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
-<head prefix="og: http://ogp.me/ns#">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
-  ...
+```html
+<!doctype html>
+<html
+  lang="en-US"
+  dir="ltr"
+  class="redesign no-js"
+  data-ffo-opensanslight="false"
+  data-ffo-opensans="false">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <script>
+      (function (d) {
+        d.className = d.className.replace(/\bno-js/, "");
+      })(document.documentElement);
+    </script>
+    ...
+  </head>
+</html>
 ```
 
 Le reste de l'en-tête de la réponse contient des informations sur la réponse elle-même (quand elle a été générée), sur le serveur et comment le navigateur doit gérer la page ( `X-Frame-Options: DENY` cette ligne dit au navigateur de ne pas autoriser cette page a être intégrée dans une {{htmlelement("iframe")}} dans un autre site).
@@ -151,7 +162,7 @@ Un `POST` HTTP est effectué lorsque vous soumettez un formulaire contenant des 
 
 Le texte ci-dessous montre une requête HTTP faite quand un utlisateur soumet un nouveaux profil sur ce site. Le format de la requête est presque le même que celui de la requête `GET` vue précédemment, bien que la première ligne identifie cette requête comme un `POST`.
 
-```html
+```http
 POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
@@ -177,7 +188,7 @@ La principale différence est que l'URL ne comporte pas de paramètres. Comme vo
 
 La réponse à la requête est expliquée dessous. Le statut "`302 Found`" dit au navigateur que le post a abouti et qu'il peut délivrer une deuxième requête HTTP pour charger la page spécifiée dans le champ `Location`. L'information est donc en cela similaire à une réponse de requête `GET`.
 
-```html
+```http
 HTTP/1.1 302 FOUND
 Server: Apache
 X-Backend-Server: developer3.webapp.scl3.mozilla.com

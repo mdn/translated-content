@@ -1,11 +1,6 @@
 ---
 title: CSSValue
 slug: Web/API/CSSValue
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
 translation_of: Web/API/CSSValue
 ---
 

@@ -1,10 +1,6 @@
 ---
 title: Understanding the Web Content Accessibility Guidelines
 slug: Web/Accessibility/Understanding_WCAG
-tags:
-  - TopicStub
-  - WCAG
-  - Web Content Accessibility Guidelines
 translation_of: Web/Accessibility/Understanding_WCAG
 ---
 

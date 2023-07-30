@@ -13,9 +13,9 @@ L'erreur peut être déclenchée en lançant ou renvoyant une valeur invalide da
 ## Syntaxe
 
 ```js
-browser.proxy.onError.addListener(listener)
-browser.proxy.onError.removeListener(listener)
-browser.proxy.onError.hasListener(listener)
+browser.proxy.onError.addListener(listener);
+browser.proxy.onError.removeListener(listener);
+browser.proxy.onError.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

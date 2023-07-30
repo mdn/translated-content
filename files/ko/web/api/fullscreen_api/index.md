@@ -101,11 +101,15 @@ _Fullscreen API는 full-screen mode를 켜고 끌 때 혹은, full-screen mode�
 페이지가 로드되면, 이 코드가 실행되어 <kbd>Enter</kbd> 키 를 주시하는 이벤트 리스너를 설정합니다.
 
 ```js
-document.addEventListener("keypress", function(e) {
-  if (e.keyCode === 13) {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keypress",
+  function (e) {
+    if (e.keyCode === 13) {
+      toggleFullScreen();
+    }
+  },
+  false,
+);
 ```
 
 ### Toggling full-screen mode

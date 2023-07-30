@@ -1,15 +1,7 @@
 ---
 title: Math.cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/cbrt
 ---
 
 {{JSRef}}
@@ -23,7 +15,7 @@ La fonction **`Math.cbrt()`** renvoie la racine cubique (le nom anglais étant _
 ## Syntaxe
 
 ```js
-Math.cbrt(x)
+Math.cbrt(x);
 ```
 
 ### Paramètres
@@ -52,7 +44,7 @@ Math.cbrt(0); // 0
 Math.cbrt(1); // 1
 Math.cbrt(Infinity); // Infinity
 Math.cbrt(null); // 0
-Math.cbrt(2);  // 1.2599210498948732
+Math.cbrt(2); // 1.2599210498948732
 ```
 
 ## Spécifications

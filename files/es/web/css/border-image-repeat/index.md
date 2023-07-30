@@ -63,8 +63,7 @@ border-image-repeat: unset;
 ```
 
 ```html hidden
-<div id="borderImageRepetition">
-</div>
+<div id="borderImageRepetition"></div>
 <select id="repetition">
   <option value="stretch">stretch</option>
   <option value="repeat">repeat</option>
@@ -78,7 +77,8 @@ border-image-repeat: unset;
 ```js hidden
 var repetition = document.getElementById("repetition");
 repetition.addEventListener("change", function (evt) {
-  document.getElementById("borderImageRepetition").style.borderImageRepeat = evt.target.value;
+  document.getElementById("borderImageRepetition").style.borderImageRepeat =
+    evt.target.value;
 });
 ```
 

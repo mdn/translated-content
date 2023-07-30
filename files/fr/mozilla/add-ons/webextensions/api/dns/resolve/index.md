@@ -14,9 +14,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var resolving = browser.dns.resolve(
-  hostname,    // string
-  flags        // array of string
-)
+  hostname, // string
+  flags, // array of string
+);
 ```
 
 ### Paramètres
@@ -70,8 +70,10 @@ function resolved(record) {
   console.log(record.addresses);
 }
 
-let resolving = browser.dns.resolve("developer.mozilla.org",
-                                   ["bypass_cache", "canonical_name"]);
+let resolving = browser.dns.resolve("developer.mozilla.org", [
+  "bypass_cache",
+  "canonical_name",
+]);
 resolving.then(resolved);
 
 // > e.g. xyz.us-west-2.elb.amazonaws.com

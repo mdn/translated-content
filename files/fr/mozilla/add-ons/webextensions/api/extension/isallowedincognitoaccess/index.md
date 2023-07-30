@@ -13,7 +13,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var isAllowed = browser.extension.isAllowedIncognitoAccess()
+var isAllowed = browser.extension.isAllowedIncognitoAccess();
 ```
 
 ### Paramètres

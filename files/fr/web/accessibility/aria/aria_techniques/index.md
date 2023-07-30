@@ -1,13 +1,7 @@
 ---
 title: Techniques ARIA
 slug: Web/Accessibility/ARIA/ARIA_Techniques
-tags:
-  - ARIA
-  - Accessibilité
-  - Attributs
-  - Rôles
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques
-original_slug: Accessibilité/ARIA/Techniques_ARIA
 ---
 
 ### Rôles

@@ -12,8 +12,8 @@ Définit le titre de l'action du navigateur. Le titre est affiché dans une info
 
 ```js
 browser.browserAction.setTitle(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -51,9 +51,9 @@ Ce code change le titre entre "ceci" et "ça" chaque fois que l'utilisateur cliq
 ```js
 function toggleTitle(title) {
   if (title == "this") {
-    browser.browserAction.setTitle({title: "that"});
+    browser.browserAction.setTitle({ title: "that" });
   } else {
-    browser.browserAction.setTitle({title: "this"});
+    browser.browserAction.setTitle({ title: "this" });
   }
 }
 

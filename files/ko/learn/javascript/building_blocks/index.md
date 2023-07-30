@@ -2,6 +2,7 @@
 title: JavaScript 구성요소
 slug: Learn/JavaScript/Building_blocks
 ---
+
 {{LearnSidebar}}
 
 이번 과정에서는 조건문, 반복문, 함수, 이벤트 등 일반적으로 발생하는 코드 종류를 중심으로 JavaScript의 중요한 기본 기능에 대해 설명합니다. 지금까지의 과정을 지나면서 여기서 다룰 내용을 살짝 보셨겠지만 좀 더 심도있게 다룰 것입니다.

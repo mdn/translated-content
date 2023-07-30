@@ -17,9 +17,15 @@ Tanto o atributo **aria-labelledby**, como o **aria-describedby** (_aria-descrit
 Exemplo:
 
 ```html
-<input aria-labelledby="labelShutdown shutdownTime shutdownUnit" type="checkbox" />
+<input
+  aria-labelledby="labelShutdown shutdownTime shutdownUnit"
+  type="checkbox" />
 <span id="labelShutdown">Shut down computer after</span>
-<input aria-labelledby="labelShutdown shutdownTime shutdownUnit" id="shutdownTime" type="text" value="10" />
+<input
+  aria-labelledby="labelShutdown shutdownTime shutdownUnit"
+  id="shutdownTime"
+  type="text"
+  value="10" />
 <span id="shutdownUnit"> minutes</span>
 ```
 

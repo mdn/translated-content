@@ -90,18 +90,18 @@ Building HTML elements and rendering them in the browser at the appropriate time
 ```js
 const state = [
   {
-    id: 'todo-0',
-    name: 'Learn some frameworks!'
-  }
-]
+    id: "todo-0",
+    name: "Learn some frameworks!",
+  },
+];
 ```
 
 How do we show one of those tasks to our user? We want to represent each task as a list item – an HTML [`<li>`](/fr/docs/Web/HTML/Element/li) element inside of an unordered list element (a [`<ul>`](/fr/docs/Web/HTML/Element/ul)). How do we make it? That could look something like this:
 
 ```js
 function buildTodoItemEl(id, name) {
-  const item = document.createElement('li');
-  const span = document.createElement('span');
+  const item = document.createElement("li");
+  const span = document.createElement("span");
   const textContent = document.createTextNode(name);
 
   span.appendChild(textContent);
@@ -120,10 +120,10 @@ The tenth line of this snippet references another build function: `buildDeleteBu
 
 ```js
 function buildDeleteButtonEl(id) {
-  const button = document.createElement('button');
-  const textContent = document.createTextNode('Delete');
+  const button = document.createElement("button");
+  const textContent = document.createTextNode("Delete");
 
-  button.setAttribute('type', 'button');
+  button.setAttribute("type", "button");
   button.appendChild(textContent);
 
   return button;
@@ -135,7 +135,7 @@ This button doesn't do anything yet, but it will later once we decide to impleme
 ```js
 function renderTodoList() {
   const frag = document.createDocumentFragment();
-  state.tasks.forEach(task => {
+  state.tasks.forEach((task) => {
     const item = buildTodoItemEl(task.id, task.name);
     frag.appendChild(item);
   });

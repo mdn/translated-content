@@ -64,16 +64,16 @@ CSS.fr(number);
 ```js
 let height = CSS.vmax(50);
 
-console.log( height );       // CSSUnitValue {value: 50, unit: "vmax"}
-console.log( height.value )  // 50
-console.log( height.unit )   // vmax
+console.log(height); // CSSUnitValue {value: 50, unit: "vmax"}
+console.log(height.value); // 50
+console.log(height.unit); // vmax
 ```
 
 在这个例子中，我们给元素设定 margin 属性值，使用 `CSS.px()` 函数：
 
 ```js
-myElement.attributeStyleMap.set('margin', CSS.px(40));
-let currentMargin = myElement.attributeStyleMap.get('margin');
+myElement.attributeStyleMap.set("margin", CSS.px(40));
+let currentMargin = myElement.attributeStyleMap.get("margin");
 console.log(currentMargin.value, currentMargin.unit); // 40, 'px'
 ```
 

@@ -14,8 +14,8 @@ Masque l'action de page pour un onglet donné.
 
 ```js
 browser.pageAction.hide(
-  tabId // integer
-)
+  tabId, // integer
+);
 ```
 
 ### Paramètres

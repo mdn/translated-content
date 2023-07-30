@@ -34,7 +34,7 @@ NPM 也可以安装（全局的）**Express 应用生成器**，可用于创建�
 
 > **备注：** 与某些其他 Web 框架不同，开发环境不包含单独的开发 Web 服务器。在 Node / Express 中，Web 应用程序将创建并运行自己的 Web 服务器！
 
-典型的开发环境中还需要一些外围工具，包括用于编写代码的 [文本编辑器](zh-CN/docs/Learn/Common_questions/实用文本编辑器) 或 IDE，用于代码控制管理的工具（比如代码版本控制工具 [Git](https://git-scm.com/)）。这里假定你已经安装了这些工具（尤其是文本编辑器）。
+典型的开发环境中还需要一些外围工具，包括用于编写代码的 [文本编辑器](/zh-CN/docs/Learn/Common_questions/实用文本编辑器) 或 IDE，用于代码控制管理的工具（比如代码版本控制工具 [Git](https://git-scm.com/)）。这里假定你已经安装了这些工具（尤其是文本编辑器）。
 
 ### 支持哪些操作系统？
 
@@ -66,8 +66,8 @@ Express 应选用最新版本。
 
 1. 下载安装包：
 
-    1. 访问 <https://nodejs.org/zh-cn/>
-    2. 左侧按钮上写着“推荐多数用户使用（LTS）”，点击下载。
+   1. 访问 <https://nodejs.org/zh-cn/>
+   2. 左侧按钮上写着“推荐多数用户使用（LTS）”，点击下载。
 
 2. 双击下载的安装包，按照提示即可安装。
 
@@ -102,39 +102,38 @@ $ npm -v
 
 1. 以下代码使用了纯 Node 的特性（与 Express 无关）和一些 ES6 的语法，把它复制到 **hellonode.js** 文件中：
 
-    ```js
-    // 加载 HTTP 模块
-    const http = require("http");
-    const hostname = '127.0.0.1';
-    const port = 3000;
+   ```js
+   // 加载 HTTP 模块
+   const http = require("http");
+   const hostname = "127.0.0.1";
+   const port = 3000;
 
-    // 创建 HTTP 服务器
-    const server = http.createServer((req, res) => {
+   // 创建 HTTP 服务器
+   const server = http.createServer((req, res) => {
+     // 用 HTTP 状态码和内容类型（Content-Type）设置 HTTP 响应头
+     res.statusCode = 200;
+     res.setHeader("Content-Type", "text/plain");
 
-      // 用 HTTP 状态码和内容类型（Content-Type）设置 HTTP 响应头
-      res.statusCode = 200;
-      res.setHeader('Content-Type', 'text/plain');
+     // 发送响应体
+     res.end("Hello World\n");
+   });
 
-      // 发送响应体
-      res.end('Hello World\n');
-    });
+   // 监听 3000 端口的请求，注册一个回调函数记录监听开始
+   server.listen(port, hostname, () => {
+     console.log(`服务器运行于 http://${hostname}:${port}/`);
+   });
+   ```
 
-    // 监听 3000 端口的请求，注册一个回调函数记录监听开始
-    server.listen(port, hostname, () => {
-      console.log(`服务器运行于 http://${hostname}:${port}/`);
-    });
-    ```
+   代码导入了 `"http"` 模块，并用它（`createServer()`）创建了一个服务器来监听 3000 端口的 HTTP 请求。随后在控制台打印一条信息，提示测试服务器的正确 URL。`createServer()` 函数接受一个回调函数作为参数，并在接收 HTTP 请求后进行回调。直接返回了 HTTP 状态码 200（"`OK`"），以及纯文本信息 "Hello World"。
 
-    代码导入了 `"http"` 模块，并用它（`createServer()`）创建了一个服务器来监听 3000 端口的 HTTP 请求。随后在控制台打印一条信息，提示测试服务器的正确 URL。`createServer()` 函数接受一个回调函数作为参数，并在接收 HTTP 请求后进行回调。直接返回了 HTTP 状态码 200（"`OK`"），以及纯文本信息 "Hello World"。
-
-    > **备注：** 现在看不懂这些代码请不要担心，开始使用 Express 后候会进行更加详细的解释。
+   > **备注：** 现在看不懂这些代码请不要担心，开始使用 Express 后候会进行更加详细的解释。
 
 2. 在命令行工具中进入 hellonode.js 文件所在的目录，输入“node + 文件名”并运行，服务器就启动了：
 
-    ```bash
-    $ node hellonode.js
-    服务器运行于 http://127.0.0.1:3000/
-    ```
+   ```bash
+   $ node hellonode.js
+   服务器运行于 http://127.0.0.1:3000/
+   ```
 
 3. 在浏览器中访问这个 URL（[http://127.0.0.1:3000/](http://127.0.0.1:8000/)），如果一切正常，浏览器会直接显示出 "Hello world" 字符串。
 
@@ -154,83 +153,83 @@ $ npm -v
 
 1. 首先为新应用创建一个目录，并进入它：
 
-    ```bash
-    mkdir myapp
-    cd myapp
-    ```
+   ```bash
+   mkdir myapp
+   cd myapp
+   ```
 
 2. 然后，使用 NPM 的 init 命令为应用创建一个 **package.json** 文件。这个命令将请求一系列的信息，包括应用的名称和版本，程序初始进入点的文件名（默认为 **index.js**）。现在先接受默认信息即可：
 
-    ```bash
-    npm init
-    ```
+   ```bash
+   npm init
+   ```
 
-    **package.json** 文件中保存了所接受的默认信息，最后一条是许可证信息：
+   **package.json** 文件中保存了所接受的默认信息，最后一条是许可证信息：
 
-    ```json
-    {
-      "name": "myapp",
-      "version": "1.0.0",
-      "description": "",
-      "main": "index.js",
-      "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-      },
-      "author": "",
-      "license": "ISC"
-    }
-    ```
+   ```json
+   {
+     "name": "myapp",
+     "version": "1.0.0",
+     "description": "",
+     "main": "index.js",
+     "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1"
+     },
+     "author": "",
+     "license": "ISC"
+   }
+   ```
 
 3. 接下来在 **myapp** 目录中安装 Express，用下面的命令将 Express 保存在 **package.json** 文件中的依赖表里：
 
-    ```bash
-    npm install express
-    ```
+   ```bash
+   npm install express
+   ```
 
-    此时 **package.json** 文件的底部会出现依赖列表（"dependencies"），其中包含 Express：
+   此时 **package.json** 文件的底部会出现依赖列表（"dependencies"），其中包含 Express：
 
-    ```json
-    {
-      "name": "myapp",
-      "version": "1.0.0",
-      "description": "",
-      "main": "index.js",
-      "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-      },
-      "author": "",
-      "license": "ISC",
-      "dependencies": {
-        "express": "^4.16.4"
-      }
-    }
-    ```
+   ```json
+   {
+     "name": "myapp",
+     "version": "1.0.0",
+     "description": "",
+     "main": "index.js",
+     "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1"
+     },
+     "author": "",
+     "license": "ISC",
+     "dependencies": {
+       "express": "^4.16.4"
+     }
+   }
+   ```
 
 4. 可以调用 `require()` 函数来使用库：
 
-    ```js
-    const express = require('express');
-    const app = express();
+   ```js
+   const express = require("express");
+   const app = express();
 
-    app.get('/', (req, res) => {
-      res.send('Hello World!')
-    });
+   app.get("/", (req, res) => {
+     res.send("Hello World!");
+   });
 
-    app.listen(8000, () => {
-      console.log('示例程序正在监听 8000 端口！')
-    });
-    ```
+   app.listen(8000, () => {
+     console.log("示例程序正在监听 8000 端口！");
+   });
+   ```
 
-    以上代码展示了一个最简单的 "HelloWorld" Express 应用。它导入了 "express" 模块并用它创建了一个服务器（app）来监听 8000 端口，并且在控制台打印了一条信息以提示测试服务器的正确 URL。`app.get()` 函数只响应对特定路径（`'/'`）的 HTTP `GET` 请求，此处的响应就是发送 "Hello World!"。
+   以上代码展示了一个最简单的 "HelloWorld" Express 应用。它导入了 "express" 模块并用它创建了一个服务器（app）来监听 8000 端口，并且在控制台打印了一条信息以提示测试服务器的正确 URL。`app.get()` 函数只响应对特定路径（`'/'`）的 HTTP `GET` 请求，此处的响应就是发送 "Hello World!"。
 
-    在 myapp 应用的根目录下新建一个 **index.js** 文件，将上述代码粘贴进来并保存。
+   在 myapp 应用的根目录下新建一个 **index.js** 文件，将上述代码粘贴进来并保存。
 
 5. 在命令行输入 node + 文件名 即可启动服务器：
 
-    ```bash
-    $ node index.js
-    示例程序正在监听 8000 端口！
-    ```
+   ```bash
+   $ node index.js
+   示例程序正在监听 8000 端口！
+   ```
 
 6. 在浏览器中访问这个 URL（<http://127.0.0.1:8000/>），如果一切正常，浏览器会直接显示出 "Hello world!" 字符串。
 

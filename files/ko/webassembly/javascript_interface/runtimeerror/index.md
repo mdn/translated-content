@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError
 ## Syntax
 
 ```js
-new WebAssembly.RuntimeError(message, fileName, lineNumber)
+new WebAssembly.RuntimeError(message, fileName, lineNumber);
 ```
 
 ### Parameters
@@ -57,15 +57,15 @@ _`RuntimeError` 생성자에는 자체 메서드가 없지만 프로토 타입 �
 
 ```js
 try {
-  throw new WebAssembly.RuntimeError('Hello', 'someFile', 10);
+  throw new WebAssembly.RuntimeError("Hello", "someFile", 10);
 } catch (e) {
   console.log(e instanceof RuntimeError); // true
-  console.log(e.message);                 // "Hello"
-  console.log(e.name);                    // "RuntimeError"
-  console.log(e.fileName);                // "someFile"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // returns the location where the code was run
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "RuntimeError"
+  console.log(e.fileName); // "someFile"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // returns the location where the code was run
 }
 ```
 

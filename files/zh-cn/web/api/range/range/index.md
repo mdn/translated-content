@@ -29,7 +29,7 @@ range = new Range()
 ### JavaScript
 
 ```js
-const paragraphs = document.querySelectorAll('p');
+const paragraphs = document.querySelectorAll("p");
 
 // 创建 Range 对象
 const range = new Range();

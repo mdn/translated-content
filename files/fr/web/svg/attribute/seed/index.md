@@ -1,9 +1,6 @@
 ---
 title: seed
 slug: Web/SVG/Attribute/seed
-tags:
-  - Attribut SVG
-  - Filtre
 translation_of: Web/SVG/Attribute/seed
 ---
 

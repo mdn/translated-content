@@ -54,8 +54,10 @@ When used with React, the JSX from the previous snippet would be compiled into t
 
 ```js
 var subject = "World";
-var header = React.createElement("header", null,
-  React.createElement("h1", null, "Hello, ", subject, "!")
+var header = React.createElement(
+  "header",
+  null,
+  React.createElement("h1", null, "Hello, ", subject, "!"),
 );
 ```
 
@@ -85,7 +87,7 @@ And this data:
 
 ```js
 {
-  subject: "World"
+  subject: "World";
 }
 ```
 
@@ -158,13 +160,8 @@ This will ultimately render the following [`<figure>`](/fr/docs/Web/HTML/Element
 
 ```html
 <figure>
-  <img
-    src="assets/zelda.png"
-    alt="Portrait of Zelda Schiff"
-  >
-  <figcaption>
-    Zelda Schiff is editor-in-chief of the Library Times.
-  </figcaption>
+  <img src="assets/zelda.png" alt="Portrait of Zelda Schiff" />
+  <figcaption>Zelda Schiff is editor-in-chief of the Library Times.</figcaption>
 </figure>
 ```
 
@@ -177,9 +174,7 @@ As an example, consider a button that counts how many times it has been clicked.
 ```js
 function CounterButton() {
   const [count] = useState(0);
-  return (
-    <button>Clicked {count} times</button>
-  );
+  return <button>Clicked {count} times</button>;
 }
 ```
 

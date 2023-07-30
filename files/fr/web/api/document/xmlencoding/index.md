@@ -1,13 +1,6 @@
 ---
 title: Document.xmlEncoding
 slug: Web/API/Document/xmlEncoding
-tags:
-  - API
-  - DOM
-  - Document
-  - Encodage
-  - Propriétés
-  - XML
 translation_of: Web/API/Document/xmlEncoding
 ---
 

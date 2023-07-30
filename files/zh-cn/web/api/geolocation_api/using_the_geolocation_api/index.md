@@ -14,7 +14,7 @@ slug: Web/API/Geolocation_API/Using_the_Geolocation_API
 如果该对象存在，那么地理位置服务可用。你可以测试 `geolocation` 是否存在：
 
 ```js
-if ('geolocation' in navigator) {
+if ("geolocation" in navigator) {
   /* geolocation 存在 */
 } else {
   /* geolocation 不存在 */
@@ -67,13 +67,13 @@ function success(position) {
 }
 
 function error() {
-  alert('Sorry, no position available.');
+  alert("Sorry, no position available.");
 }
 
 const options = {
   enableHighAccuracy: true,
   maximumAge: 30000,
-  timeout: 27000
+  timeout: 27000,
 };
 
 const watchID = navigator.geolocation.watchPosition(success, error, options);
@@ -89,7 +89,7 @@ const watchID = navigator.geolocation.watchPosition(success, error, options);
 
 ```js
 function success(position) {
-  const latitude  = position.coords.latitude;
+  const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
 
   // 使用 latitude 和 longitude 做些什么
@@ -107,7 +107,7 @@ function success(position) {
 ```js
 function errorCallback(error) {
   alert(`ERROR(${error.code}): ${error.message}`);
-};
+}
 ```
 
 ## 示例
@@ -117,56 +117,54 @@ function errorCallback(error) {
 ```css hidden
 body {
   padding: 20px;
-  background-color:#ffffc9
+  background-color: #ffffc9;
 }
 
 button {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 
 ### HTML
 
 ```html
-<button id = "find-me">显示我的位置</button><br/>
-<p id = "status"></p>
-<a id = "map-link" target="_blank"></a>
+<button id="find-me">显示我的位置</button><br />
+<p id="status"></p>
+<a id="map-link" target="_blank"></a>
 ```
 
 ### JavaScript
 
 ```js
 function geoFindMe() {
+  const status = document.querySelector("#status");
+  const mapLink = document.querySelector("#map-link");
 
-  const status = document.querySelector('#status');
-  const mapLink = document.querySelector('#map-link');
-
-  mapLink.href = '';
-  mapLink.textContent = '';
+  mapLink.href = "";
+  mapLink.textContent = "";
 
   function success(position) {
-    const latitude  = position.coords.latitude;
+    const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
 
-    status.textContent = '';
+    status.textContent = "";
     mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
     mapLink.textContent = `纬度：${latitude} °，经度：${longitude} °`;
   }
 
   function error() {
-    status.textContent = '无法获取你的位置';
+    status.textContent = "无法获取你的位置";
   }
 
   if (!navigator.geolocation) {
-    status.textContent = '你的浏览器不支持地理位置';
+    status.textContent = "你的浏览器不支持地理位置";
   } else {
-    status.textContent = '定位中……';
+    status.textContent = "定位中……";
     navigator.geolocation.getCurrentPosition(success, error);
   }
-
 }
 
-document.querySelector('#find-me').addEventListener('click', geoFindMe);
+document.querySelector("#find-me").addEventListener("click", geoFindMe);
 ```
 
 ### 结果

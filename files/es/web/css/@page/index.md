@@ -1,5 +1,5 @@
 ---
-title: '@page'
+title: "@page"
 slug: Web/CSS/@page
 ---
 
@@ -18,9 +18,11 @@ La regla `@page` puede ser accesada por medio de la interfaz modelo objeto {{dom
 ### Descriptores
 
 - [`size`](/es/docs/Web/CSS/@page/size)
+
   - : Especifica el tamaño y la orientación de la caja objetivo de la página. En general, una caja es representada dentro de una hoja, también indica el tamaño de la hoja destino.
 
 - [`marks`](/es/docs/Web/CSS/@page/marks)
+
   - : Añade marcas de corte y/o registro al documento.
 
 - [`bleed`](/es/docs/Web/CSS/@page/bleed)

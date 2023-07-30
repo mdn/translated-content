@@ -29,25 +29,25 @@ user agent 감지를 피하는 몇 가지 방법이 있습니다!
 
 - `기능 탐지` 기능 탐지는 어떤 브라우저가 당신의 페이지를 렌더링하는지를 알아내려고 할 때가 아니라, 어떤 특정한 기능을 당신이 사용가능한지를 확인할 때 사용합니다. 그렇지 않다면, 대비책을 사용하세요. 브라우저 간의 차이점을 찾는 몇 안되는 경우에서는 user agent 문자열을 사용하는 대신, 브라우저가 API를 구현하는 방법을 탐지하고 API를 사용하는 방법을 결정하는 테스트를 구현하는 것이 좋습니다. 아래는 기능탐지의 좋은 최신 예시 입니다. 최근 크롬은[experimental lookbehind support to regular expressions](https://www.chromestatus.com/feature/5668726032564224)을 추가했지만, 다른 브라우저들은 이를 지원하지 않습니다. 그러므로 당신은 이와 같이 해야 한다고 잘못 생각하고 있을 것입니다.
 
- ```js
- // 아래 코드 조각은 한 문자열을 특별한 표기법으로 쪼갭니다.
+```js
+// 아래 코드 조각은 한 문자열을 특별한 표기법으로 쪼갭니다.
 
-if (navigator.userAgent.indexOf("Chrome") !== -1){
-// 네! 이 사용자가 정규표현식의 look-behind 기능을 사용하려는 것
-// 같습니다.
-// /(?&#x3C;=[A-Z])/를 사용하지 마십시오. 정규표현식의
-// look-behind 기능을 지원하지 않는 브라우저에서는 문법오류가
-// 발생할 것입니다. 왜냐하면, 모든 브라우저들은 실제로 실행되지
-// 않는 부분을 포함한 전체 스크립트를 해석하기 때문입니다.
-var camelCaseExpression = new RegExp("(?&#x3C;=[A-Z])");
-var splitUpString = function(str) {
-return (""+str).split(camelCaseExpression);
-};
+if (navigator.userAgent.indexOf("Chrome") !== -1) {
+  // 네! 이 사용자가 정규표현식의 look-behind 기능을 사용하려는 것
+  // 같습니다.
+  // /(?&#x3C;=[A-Z])/를 사용하지 마십시오. 정규표현식의
+  // look-behind 기능을 지원하지 않는 브라우저에서는 문법오류가
+  // 발생할 것입니다. 왜냐하면, 모든 브라우저들은 실제로 실행되지
+  // 않는 부분을 포함한 전체 스크립트를 해석하기 때문입니다.
+  var camelCaseExpression = new RegExp("(?&#x3C;=[A-Z])");
+  var splitUpString = function (str) {
+    return ("" + str).split(camelCaseExpression);
+  };
 } else {
-/_아래 fallback 코드는 성능이 떨어지지만 작동하긴 합니다._/
-var splitUpString = function(str){
-return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
-};
+  /_아래 fallback 코드는 성능이 떨어지지만 작동하긴 합니다._/;
+  var splitUpString = function (str) {
+    return str.replace(/[A-Z]/g, "z$1").split(/z(?=[A-Z])/g);
+  };
 }
 console.log(splitUpString("fooBare")); // ["fooB", "are"]
 console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
@@ -65,19 +65,21 @@ look-behind 지원여부 자체를 테스트함으로써 이 문제들을 회피
 var isLookBehindSupported = false;
 
 try {
-new RegExp("(?&#x3C;=)");
-isLookBehindSupported = true;
+  new RegExp("(?&#x3C;=)");
+  isLookBehindSupported = true;
 } catch (err) {
-// agent가 look-behind 기능을 지원하지 않는다면, 위 문법을 사용한
-// RegExp 객체의 생성이 에러를 던질 것이고, isLookBehindSupported는
-// 여전히 false일 것입니다.
+  // agent가 look-behind 기능을 지원하지 않는다면, 위 문법을 사용한
+  // RegExp 객체의 생성이 에러를 던질 것이고, isLookBehindSupported는
+  // 여전히 false일 것입니다.
 }
 
-var splitUpString = isLookBehindSupported ? function(str) {
-return (""+str).split(new RegExp("(?&#x3C;=[A-Z])"));
-} : function(str) {
-return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
-};
+var splitUpString = isLookBehindSupported
+  ? function (str) {
+      return ("" + str).split(new RegExp("(?&#x3C;=[A-Z])"));
+    }
+  : function (str) {
+      return str.replace(/[A-Z]/g, "z$1").split(/z(?=[A-Z])/g);
+    };
 ```
 
 위의 코드가 시범을 보였듯이, user agent를 살펴보지 않고도 어떤 기능에 대한 브라우저 지원 여부를 시험할 수 있는 방법이 **항상** 존재합니다. 기능 지원 여부를 확인하기 위해 user agent 문자열을 확인할 필요가 **전혀** 없습니다.
@@ -185,7 +187,7 @@ addEventListener(
   () => {
     orientationChanged = true;
   },
-  PASSIVE_LISTENER_OPTION
+  PASSIVE_LISTENER_OPTION,
 );
 
 addEventListener("resize", () =>
@@ -196,7 +198,7 @@ addEventListener("resize", () =>
       }
     }
     mediaQueryUpdated = orientationChanged = false;
-  }, 0)
+  }, 0),
 );
 ```
 

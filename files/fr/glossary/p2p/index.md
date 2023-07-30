@@ -10,4 +10,4 @@ P2P (Peer-to-peer ou pair à pair) est une architecture réseau dans laquelle to
 
 ### Connaissances générales
 
-- [P2P](https://fr.wikipedia.org/wiki/Pair_%C3%A0_pair) sur Wikipédia
+- [P2P](https://fr.wikipedia.org/wiki/Pair_à_pair) sur Wikipédia

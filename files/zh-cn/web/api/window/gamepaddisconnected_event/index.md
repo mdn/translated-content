@@ -18,7 +18,7 @@ window.ongamepaddisconnected = function() { ... };
 ## 示例
 
 ```js
-window.ongamepaddisconnected = function() {
+window.ongamepaddisconnected = function () {
   // A gamepad has been disconnected
 };
 ```

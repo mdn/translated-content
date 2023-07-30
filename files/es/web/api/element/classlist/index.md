@@ -45,7 +45,7 @@ div.classList.add("anotherclass");
 div.classList.toggle("visible");
 
 // añadir/eliminar visible, dependiendo de la condición, i menor que 10
-div.classList.toggle("visible", i < 10 );
+div.classList.toggle("visible", i < 10);
 
 alert(div.classList.contains("foo"));
 

@@ -38,24 +38,24 @@ Canvas 状态存储在栈中，每当`save()`方法被调用后，当前的状�
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
-  ctx.fillRect(0,0,150,150);   // 使用默认设置绘制一个矩形
-  ctx.save();                  // 保存默认状态
+  ctx.fillRect(0, 0, 150, 150); // 使用默认设置绘制一个矩形
+  ctx.save(); // 保存默认状态
 
-  ctx.fillStyle = '#09F'       // 在原有配置基础上对颜色做改变
-  ctx.fillRect(15,15,120,120); // 使用新的设置绘制一个矩形
+  ctx.fillStyle = "#09F"; // 在原有配置基础上对颜色做改变
+  ctx.fillRect(15, 15, 120, 120); // 使用新的设置绘制一个矩形
 
-  ctx.save();                  // 保存当前状态
-  ctx.fillStyle = '#FFF'       // 再次改变颜色配置
+  ctx.save(); // 保存当前状态
+  ctx.fillStyle = "#FFF"; // 再次改变颜色配置
   ctx.globalAlpha = 0.5;
-  ctx.fillRect(30,30,90,90);   // 使用新的配置绘制一个矩形
+  ctx.fillRect(30, 30, 90, 90); // 使用新的配置绘制一个矩形
 
-  ctx.restore();               // 重新加载之前的颜色状态
-  ctx.fillRect(45,45,60,60);   // 使用上一次的配置绘制一个矩形
+  ctx.restore(); // 重新加载之前的颜色状态
+  ctx.fillRect(45, 45, 60, 60); // 使用上一次的配置绘制一个矩形
 
-  ctx.restore();               // 加载默认颜色配置
-  ctx.fillRect(60,60,30,30);   // 使用加载的配置绘制一个矩形
+  ctx.restore(); // 加载默认颜色配置
+  ctx.fillRect(60, 60, 30, 30); // 使用加载的配置绘制一个矩形
 }
 ```
 
@@ -86,11 +86,11 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   for (var i = 0; i < 3; i++) {
     for (var j = 0; j < 3; j++) {
       ctx.save();
-      ctx.fillStyle = 'rgb(' + (51 * i) + ', ' + (255 - 51 * i) + ', 255)';
+      ctx.fillStyle = "rgb(" + 51 * i + ", " + (255 - 51 * i) + ", 255)";
       ctx.translate(10 + j * 50, 10 + i * 50);
       ctx.fillRect(0, 0, 25, 25);
       ctx.restore();
@@ -185,7 +185,7 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // draw a simple rectangle, but scale it.
   ctx.save();
@@ -195,8 +195,8 @@ function draw() {
 
   // mirror horizontally
   ctx.scale(-1, 1);
-  ctx.font = '48px serif';
-  ctx.fillText('MDN', -135, 120);
+  ctx.font = "48px serif";
+  ctx.fillText("MDN", -135, 120);
 }
 ```
 
@@ -246,14 +246,14 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
-  var sin = Math.sin(Math.PI/6);
-  var cos = Math.cos(Math.PI/6);
+  var sin = Math.sin(Math.PI / 6);
+  var cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
   var c = 0;
-  for (var i=0; i <= 12; i++) {
-    c = Math.floor(255 / 12 * i);
+  for (var i = 0; i <= 12; i++) {
+    c = Math.floor((255 / 12) * i);
     ctx.fillStyle = "rgb(" + c + "," + c + "," + c + ")";
     ctx.fillRect(0, 0, 100, 10);
     ctx.transform(cos, sin, -sin, cos, 0, 0);

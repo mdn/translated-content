@@ -45,8 +45,8 @@ img + span.caption {
 que coincidiría con los siguientes elementos {{HTMLElement("span")}} :
 
 ```html
-<img src="photo1.jpg"><span class="caption">The first photo</span>
-<img src="photo2.jpg"><span class="caption">The second photo</span>
+<img src="photo1.jpg" /><span class="caption">The first photo</span>
+<img src="photo2.jpg" /><span class="caption">The second photo</span>
 ```
 
 ## Especificaciones

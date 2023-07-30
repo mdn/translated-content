@@ -172,9 +172,8 @@ translation_of: WebAssembly/Understanding_the_text_format
 Затем мы загрузим наш двоичный файл, скомпилируем, создадим его экземпляр и выполним нашу функцию `add` в коде JavaScript (теперь нам доступна функция `add()` в свойстве [`exports`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports) экземпляра модуля):
 
 ```js
-WebAssembly.instantiateStreaming(fetch('add.wasm'))
-.then(obj => {
-   console.log(obj.instance.exports.add(1, 2));  // "3"
+WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
+  console.log(obj.instance.exports.add(1, 2)); // "3"
 });
 ```
 
@@ -211,9 +210,8 @@ WebAssembly.instantiateStreaming(fetch('add.wasm'))
 Код JavaScript для вызова экспортируемой функции из нашего модуля выглядит так:
 
 ```js
-WebAssembly.instantiateStreaming(fetch('call.wasm'))
-.then(obj => {
-   console.log(obj.instance.exports.getAnswerPlus1());  // "43"
+WebAssembly.instantiateStreaming(fetch("call.wasm")).then((obj) => {
+  console.log(obj.instance.exports.getAnswerPlus1()); // "43"
 });
 ```
 
@@ -244,16 +242,17 @@ WebAssembly.instantiateStreaming(fetch('call.wasm'))
 ```js
 var importObject = {
   console: {
-    log: function(arg) {
+    log: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
-.then(obj => {
-  obj.instance.exports.logIt();
-});
+WebAssembly.instantiateStreaming(fetch("logger.wasm"), importObject).then(
+  (obj) => {
+    obj.instance.exports.logIt();
+  },
+);
 ```
 
 > **Примечание:** Этот пример можно найти на GitHub в файле [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html) (смотрите также [вживую](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html)).
@@ -280,7 +279,7 @@ WebAssembly имеет возможность создавать экземпл�
 Чтобы создать эквивалентный код с помощью JavaScript, вы должны использовать конструктор {{jsxref("WebAssembly.Global()")}}:
 
 ```js
-const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 ```
 
 ### Память WebAssembly
@@ -305,7 +304,7 @@ const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
 ```js
 function consoleLogString(offset, length) {
   var bytes = new Uint8Array(memory.buffer, offset, length);
-  var string = new TextDecoder('utf8').decode(bytes);
+  var string = new TextDecoder("utf8").decode(bytes);
   console.log(string);
 }
 ```
@@ -340,14 +339,15 @@ function consoleLogString(offset, length) {
 Теперь из JavaScript мы можем создать и передать объект памяти размером в 1 страницу. Результатом работы этого кода будет вывод "Hi" в консоль:
 
 ```js
-var memory = new WebAssembly.Memory({initial:1});
+var memory = new WebAssembly.Memory({ initial: 1 });
 
 var importObject = { console: { log: consoleLogString }, js: { mem: memory } };
 
-WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
-.then(obj => {
-  obj.instance.exports.writeHi();
-});
+WebAssembly.instantiateStreaming(fetch("logger2.wasm"), importObject).then(
+  (obj) => {
+    obj.instance.exports.writeHi();
+  },
+);
 ```
 
 > **Примечание:** вы можете найти полный исходный код на GitHub в файле [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html) (также смотрите это [вживую](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
@@ -460,8 +460,7 @@ call_indirect $my_spicy_table (type $i32_to_void)
 Загрузка модуля и использование экспортируемой функции в коде JavaScript будет выглядеть так:
 
 ```js
-WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
-.then(obj => {
+WebAssembly.instantiateStreaming(fetch("wasm-table.wasm")).then((obj) => {
   console.log(obj.instance.exports.callByIndex(0)); // returns 42
   console.log(obj.instance.exports.callByIndex(1)); // returns 13
   console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
@@ -531,16 +530,16 @@ WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
 ```js
 var importObj = {
   js: {
-    memory : new WebAssembly.Memory({ initial: 1 }),
-    table : new WebAssembly.Table({ initial: 1, element: "anyfunc" })
-  }
+    memory: new WebAssembly.Memory({ initial: 1 }),
+    table: new WebAssembly.Table({ initial: 1, element: "anyfunc" }),
+  },
 };
 
 Promise.all([
-  WebAssembly.instantiateStreaming(fetch('shared0.wasm'), importObj),
-  WebAssembly.instantiateStreaming(fetch('shared1.wasm'), importObj)
-]).then(function(results) {
-  console.log(results[1].instance.exports.doIt());  // prints 42
+  WebAssembly.instantiateStreaming(fetch("shared0.wasm"), importObj),
+  WebAssembly.instantiateStreaming(fetch("shared1.wasm"), importObj),
+]).then(function (results) {
+  console.log(results[1].instance.exports.doIt()); // prints 42
 });
 ```
 

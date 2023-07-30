@@ -1,7 +1,6 @@
 ---
 title: WebSocket.close()
 slug: Web/API/WebSocket/close
-browser-compat: api.WebSocket.close
 ---
 
 {{APIRef("Web Sockets API")}}

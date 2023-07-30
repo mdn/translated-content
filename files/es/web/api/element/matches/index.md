@@ -32,15 +32,17 @@ var result = element.matches(selectorString);
 <ul id="aves">
   <li>Loro de alas naranja</li>
   <li class="amenazada">Ágila Filipina</li>
-  <li>Gran Pelícano Blancpo/li>
+  <li>Gran Pelícano Blanco</li>
 </ul>
 
 <script type="text/javascript">
-  var aves = document.getElementsByTagName('li');
+  var aves = document.getElementsByTagName("li");
 
   for (var i = 0; i < aves.length; i++) {
-    if (aves[i].matches('.amenazada')) {
-      console.log('El ' + aves[i].textContent + ' está amenazada de extinción!');
+    if (aves[i].matches(".amenazada")) {
+      console.log(
+        "El " + aves[i].textContent + " está amenazada de extinción!",
+      );
     }
   }
 </script>
@@ -54,18 +56,18 @@ Para navegadores que no soportan `Element.matches()` o `Element.matchesSelector(
 
 ```js
 if (!Element.prototype.matches) {
-    Element.prototype.matches =
-        Element.prototype.matchesSelector ||
-        Element.prototype.mozMatchesSelector ||
-        Element.prototype.msMatchesSelector ||
-        Element.prototype.oMatchesSelector ||
-        Element.prototype.webkitMatchesSelector ||
-        function(s) {
-            var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-                i = matches.length;
-            while (--i >= 0 && matches.item(i) !== this) {}
-            return i > -1;
-        };
+  Element.prototype.matches =
+    Element.prototype.matchesSelector ||
+    Element.prototype.mozMatchesSelector ||
+    Element.prototype.msMatchesSelector ||
+    Element.prototype.oMatchesSelector ||
+    Element.prototype.webkitMatchesSelector ||
+    function (s) {
+      var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+        i = matches.length;
+      while (--i >= 0 && matches.item(i) !== this) {}
+      return i > -1;
+    };
 }
 ```
 
@@ -73,8 +75,9 @@ However, given the practicality of supporting older browsers, the following shou
 
 ```js
 if (!Element.prototype.matches) {
-  Element.prototype.matches = Element.prototype.msMatchesSelector ||
-                              Element.prototype.webkitMatchesSelector;
+  Element.prototype.matches =
+    Element.prototype.msMatchesSelector ||
+    Element.prototype.webkitMatchesSelector;
 }
 ```
 

@@ -1,10 +1,6 @@
 ---
 title: mi
 slug: Web/MathML/Element/mi
-tags:
-  - MathML
-  - MathML:Element
-  - MathML:Référence
 translation_of: Web/MathML/Element/mi
 ---
 

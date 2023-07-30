@@ -1,13 +1,6 @@
 ---
 title: Document.contentType
 slug: Web/API/Document/contentType
-tags:
-  - API
-  - DOM
-  - Document
-  - MIME
-  - Propriétés
-  - Rendu
 translation_of: Web/API/Document/contentType
 ---
 

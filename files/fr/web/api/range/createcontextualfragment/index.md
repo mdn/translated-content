@@ -9,7 +9,7 @@ La méthode **`Range.createContextualFragment()`** retourne un {{domxref("Docume
 ## Syntaxe
 
 ```js
-documentFragment = range.createContextualFragment( chaineHTML )
+documentFragment = range.createContextualFragment(chaineHTML);
 ```
 
 ### Paramètres
