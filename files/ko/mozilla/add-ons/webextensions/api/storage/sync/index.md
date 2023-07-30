@@ -2,6 +2,7 @@
 title: storage.sync
 slug: Mozilla/Add-ons/WebExtensions/API/storage/sync
 ---
+
 {{AddonSidebar()}}
 
 `sync` 저장 공간을 의미합니다. `sync` 저장 공간에 있는 데이터는 브라우저 사이에서 동기화되며 서로 다른 기기 간에 사용자가 브라우저에 로그인 한 경우 언제든지 접근 가능합니다.
