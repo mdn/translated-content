@@ -2,6 +2,8 @@
 title: 콘텐츠 페이지 구조화
 slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 page-type: learn-module-assessment
+l10n:
+  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
