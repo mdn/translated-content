@@ -119,7 +119,7 @@ class Extended extends Base {
 }
 ```
 
-인스턴스 필드는 생성자의 `prototype` 대신 인스턴스에 설정되므로 `super`를 사용하여 슈퍼클래스의 인스턴스 필드에 액세스할 수 없습니다.
+인스턴스 필드는 생성자의 `prototype` 대신 인스턴스에 설정되므로 `super`를 사용하여 슈퍼클래스의 인스턴스 필드에 접근할 수 없습니다.
 
 ```js example-bad
 class Base {
