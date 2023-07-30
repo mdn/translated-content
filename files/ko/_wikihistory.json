@@ -4893,10 +4893,6 @@
     "modified": "2020-10-15T21:50:30.795Z",
     "contributors": ["alattalatta", "young-gratia"]
   },
-  "Web/CSS/CSS_Selectors": {
-    "modified": "2020-08-22T11:28:21.089Z",
-    "contributors": ["alattalatta"]
-  },
   "Web/CSS/CSS_Types": {
     "modified": "2020-08-06T04:37:09.952Z",
     "contributors": ["alattalatta"]
@@ -5196,6 +5192,10 @@
   "Web/CSS/CSS_scroll_snap": {
     "modified": "2019-04-14T23:39:58.448Z",
     "contributors": ["alattalatta", "Netaras"]
+  },
+  "Web/CSS/CSS_selectors": {
+    "modified": "2020-08-22T11:28:21.089Z",
+    "contributors": ["alattalatta"]
   },
   "Web/CSS/CSS_shapes": {
     "modified": "2019-04-25T10:46:18.309Z",
