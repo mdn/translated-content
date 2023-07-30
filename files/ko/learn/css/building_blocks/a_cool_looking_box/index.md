@@ -34,7 +34,7 @@ l10n:
 
 - [HTML](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/cool-information-box-start/index.html) 와 [CSS](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/cool-information-box-start/style.css) 의 시작 로컬 복사본을 만듭니다. — 그것들을 `index.html` 과 `style.css` 로 새로운 디렉토리에 저장합니다.
 
-또는 [JSBin](https://jsbin.com/) 이나 [Glitch](https://glitch.com/)와 같은 사이트를 이용하여 평가를 수행할 수 있습니다. 이러한 온라인 편집기 중 하나에 HTML을 붙여넣고 CSS를 채워넣을 수 있습니다. 사용하는 온라인 편집기에 별도의 CSS 패널이 없는 경우 문서의 '<style>' 요소에 넣어도 괜찮습니다.
+또는 [JSBin](https://jsbin.com/) 이나 [Glitch](https://glitch.com/)와 같은 사이트를 이용하여 평가를 수행할 수 있습니다. 이러한 온라인 편집기 중 하나에 HTML을 붙여넣고 CSS를 채워넣을 수 있습니다. 사용하는 온라인 편집기에 별도의 CSS 패널이 없는 경우 문서의 `<style>` 요소에 넣어도 괜찮습니다.
 
 > **참고** 곤란에 빠지면, 도움을 요청하세요 — 이 페이지 맨 아래에 있는 [Assessment or further help](#assessment_or_further_help) 섹션을 참조하세요 .
 
