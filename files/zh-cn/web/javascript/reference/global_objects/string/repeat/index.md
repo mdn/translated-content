@@ -33,32 +33,34 @@ str.repeat(count)
 
 ```js
 if (!String.prototype.repeat) {
-  String.prototype.repeat = function(count) {
-    'use strict';
+  String.prototype.repeat = function (count) {
+    "use strict";
     if (this == null) {
-      throw new TypeError('can\'t convert ' + this + ' to object');
+      throw new TypeError("can't convert " + this + " to object");
     }
-    var str = '' + this;
+    var str = "" + this;
     count = +count;
     if (count != count) {
       count = 0;
     }
     if (count < 0) {
-      throw new RangeError('repeat count must be non-negative');
+      throw new RangeError("repeat count must be non-negative");
     }
     if (count == Infinity) {
-      throw new RangeError('repeat count must be less than infinity');
+      throw new RangeError("repeat count must be less than infinity");
     }
     count = Math.floor(count);
     if (str.length == 0 || count == 0) {
-      return '';
+      return "";
     }
     // 确保 count 是一个 31 位的整数。这样我们就可以使用如下优化的算法。
     // 当前（2014 年 8 月），绝大多数浏览器都不能支持 1 << 28 长的字符串，所以：
     if (str.length * count >= 1 << 28) {
-      throw new RangeError('repeat count must not overflow maximum string size');
+      throw new RangeError(
+        "repeat count must not overflow maximum string size",
+      );
     }
-    var rpt = '';
+    var rpt = "";
     for (;;) {
       if ((count & 1) == 1) {
         rpt += str;
@@ -70,21 +72,20 @@ if (!String.prototype.repeat) {
       str += str;
     }
     return rpt;
-  }
+  };
 }
 ```
 
 ## 示例
 
 ```js
-"abc".repeat(-1)     // RangeError: repeat count must be positive and less than inifinity
-"abc".repeat(0)      // ""
-"abc".repeat(1)      // "abc"
-"abc".repeat(2)      // "abcabc"
-"abc".repeat(3.5)    // "abcabcabc" 参数 count 将会被自动转换成整数。
-"abc".repeat(1/0)    // RangeError: repeat count must be positive and less than inifinity
-
-({toString : () => "abc", repeat : String.prototype.repeat}).repeat(2)
+"abc".repeat(-1); // RangeError: repeat count must be positive and less than inifinity
+"abc".repeat(0); // ""
+"abc".repeat(1); // "abc"
+"abc".repeat(2); // "abcabc"
+"abc".repeat(3.5); // "abcabcabc" 参数 count 将会被自动转换成整数。
+"abc".repeat(1 / 0); // RangeError: repeat count must be positive and less than inifinity
+({ toString: () => "abc", repeat: String.prototype.repeat }).repeat(2);
 //"abcabc",repeat 是一个通用方法，也就是它的调用者可以不是一个字符串对象。
 ```
 

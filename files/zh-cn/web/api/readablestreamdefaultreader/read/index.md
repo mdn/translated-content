@@ -9,7 +9,7 @@ slug: Web/API/ReadableStreamDefaultReader/read
 
 ## 语法
 
-```js
+```js-nolint
 read()
 ```
 
@@ -55,8 +55,12 @@ function fetchStream() {
     // 从流中获取的数据是一个 Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
-    listItem.textContent = 'Received ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    let listItem = document.createElement("li");
+    listItem.textContent =
+      "Received " +
+      charsReceived +
+      " characters so far. Current chunk = " +
+      chunk;
     list2.appendChild(listItem);
     result += chunk;
     // 再次调用该函数以读取更多数据
@@ -74,8 +78,8 @@ async function* makeTextFileLineIterator(fileURL) {
   const utf8Decoder = new TextDecoder("utf-8");
   let response = await fetch(fileURL);
   let reader = response.body.getReader();
-  let {value: chunk, done: readerDone} = await reader.read();
-  chunk = chunk ? utf8Decoder.decode(chunk, {stream: true}) : "";
+  let { value: chunk, done: readerDone } = await reader.read();
+  chunk = chunk ? utf8Decoder.decode(chunk, { stream: true }) : "";
   let re = /\r\n|\n|\r/gm;
   let startIndex = 0;
   for (;;) {
@@ -85,8 +89,9 @@ async function* makeTextFileLineIterator(fileURL) {
         break;
       }
       let remainder = chunk.substr(startIndex);
-      ({value: chunk, done: readerDone} = await reader.read());
-      chunk = remainder + (chunk ? utf8Decoder.decode(chunk, {stream: true}) : "");
+      ({ value: chunk, done: readerDone } = await reader.read());
+      chunk =
+        remainder + (chunk ? utf8Decoder.decode(chunk, { stream: true }) : "");
       startIndex = re.lastIndex = 0;
       continue;
     }

@@ -24,8 +24,8 @@ gl.drawingBufferWidth;
 你可以通过下面几行代码来获取绘图缓冲区的宽度：
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 gl.drawingBufferWidth; // 300
 ```
 

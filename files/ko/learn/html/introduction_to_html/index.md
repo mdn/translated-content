@@ -37,7 +37,7 @@ slug: Learn/HTML/Introduction_to_HTML
 다음의 평가들은 위의 가이드에 있는 HTML 기본을 얼마나 이해하고 있는지 테스트 합니다.
 
 - [마크업](/ko/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-  - : 우리는 모두 편지 쓰는 법을 금방 배우게 됩니다. 텍스트를 꾸미고 조작하는 것을 테스트 해볼 수 있는 유용한 예제들이 있습니다. 여러분이 마크업 하는 것을 평가합니다.
+  - : 우리는 모두 글자를 쓰는 법을 금방 배우게 됩니다. 텍스트를 꾸미고 조작하는 것을 테스트 해볼 수 있는 유용한 예제들이 있습니다. 여러분이 마크업 하는 것을 평가합니다.
 - [페이지 콘텐츠 구조화](/ko/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
   - : 이 평가는 헤더, 푸터, 네비게이션 메뉴, 주요 콘텐츠, 사이드바를 담고 있는 간단한 웹 페이지의 구조를 HTML로 작성하는 능력을 테스트합니다.
 

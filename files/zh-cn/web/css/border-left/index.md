@@ -53,9 +53,7 @@ border-left: medium dashed green;
 ## Example
 
 ```html
-<div>
-  This box has a border on the left side.
-</div>
+<div>This box has a border on the left side.</div>
 ```
 
 ```css

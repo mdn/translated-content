@@ -10,8 +10,10 @@ slug: Web/API/URLSearchParams
 一个实现了 `URLSearchParams` 的对象可以直接用在 {{jsxref("Statements/for...of", "for...of")}} 结构中，例如下面两行是相等的：
 
 ```js
-for (const [key, value] of mySearchParams) {}
-for (const [key, value] of mySearchParams.entries()) {}
+for (const [key, value] of mySearchParams) {
+}
+for (const [key, value] of mySearchParams.entries()) {
+}
 ```
 
 {{availableinworkers}}
@@ -51,7 +53,7 @@ for (const [key, value] of mySearchParams.entries()) {}
 ## 示例
 
 ```js
-var paramsString = "q=URLUtils.searchParams&topic=api"
+var paramsString = "q=URLUtils.searchParams&topic=api";
 var searchParams = new URLSearchParams(paramsString);
 
 for (let p of searchParams) {
@@ -90,7 +92,7 @@ searchParams2.has("query"); // true
 
 var url = new URL("http://example.com/search?query=%40");
 var searchParams3 = new URLSearchParams(url.search);
-searchParams3.has("query") // true
+searchParams3.has("query"); // true
 ```
 
 ## 规范

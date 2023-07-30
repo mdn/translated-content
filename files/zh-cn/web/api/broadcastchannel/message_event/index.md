@@ -12,8 +12,8 @@ slug: Web/API/BroadcastChannel/message_event
 在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener('message', (event) => { })
-onmessage = (event) => { }
+addEventListener("message", (event) => {});
+onmessage = (event) => {};
 ```
 
 ## 事件类型
@@ -45,46 +45,49 @@ _除了下面列出的属性之外，还可以使用父接口 {{domxref("Event")
 
 ```html hidden
 <h1>发送者</h1>
-<label for="message">请输入要广播的信息：</label><br/>
+<label for="message">请输入要广播的信息：</label><br />
 <textarea id="message" name="message" rows="1" cols="40">Hello</textarea>
 <button id="broadcast-message" type="button">广播信息</button>
 ```
 
 ```css hidden
 body {
-     border: 1px solid black;
-     padding: .5rem;
-     height: 150px;
-     font-family: "Fira Sans", sans-serif;
+  border: 1px solid black;
+  padding: 0.5rem;
+  height: 150px;
+  font-family: "Fira Sans", sans-serif;
 }
 
 h1 {
-    font: 1.6em "Fira Sans", sans-serif;
-    margin-bottom: 1rem;
+  font:
+    1.6em "Fira Sans",
+    sans-serif;
+  margin-bottom: 1rem;
 }
 
 textarea {
-    padding: .2rem;
+  padding: 0.2rem;
 }
 
-label, br {
-    margin: .5rem 0;
+label,
+br {
+  margin: 0.5rem 0;
 }
 
 button {
-    vertical-align: top;
-    height: 1.5rem;
+  vertical-align: top;
+  height: 1.5rem;
 }
 ```
 
 ```js
-const channel = new BroadcastChannel('example-channel');
-const messageControl = document.querySelector('#message');
-const broadcastMessageButton = document.querySelector('#broadcast-message');
+const channel = new BroadcastChannel("example-channel");
+const messageControl = document.querySelector("#message");
+const broadcastMessageButton = document.querySelector("#broadcast-message");
 
-broadcastMessageButton.addEventListener('click', () => {
-    channel.postMessage(messageControl.value);
-})
+broadcastMessageButton.addEventListener("click", () => {
+  channel.postMessage(messageControl.value);
+});
 ```
 
 ### 接收者 1
@@ -96,21 +99,23 @@ broadcastMessageButton.addEventListener('click', () => {
 
 ```css hidden
 body {
-    border: 1px solid black;
-    padding: .5rem;
-    height: 100px;
-    font-family: "Fira Sans", sans-serif;
+  border: 1px solid black;
+  padding: 0.5rem;
+  height: 100px;
+  font-family: "Fira Sans", sans-serif;
 }
 
 h1 {
-    font: 1.6em "Fira Sans",
-    sans-serif; margin-bottom: 1rem;
+  font:
+    1.6em "Fira Sans",
+    sans-serif;
+  margin-bottom: 1rem;
 }
 ```
 
 ```js
-const channel = new BroadcastChannel('example-channel');
-channel.addEventListener('message', (event) => {
+const channel = new BroadcastChannel("example-channel");
+channel.addEventListener("message", (event) => {
   received.textContent = event.data;
 });
 ```
@@ -124,21 +129,23 @@ channel.addEventListener('message', (event) => {
 
 ```css hidden
 body {
-    border: 1px solid black;
-    padding: .5rem;
-    height: 100px;
-    font-family: "Fira Sans", sans-serif;
+  border: 1px solid black;
+  padding: 0.5rem;
+  height: 100px;
+  font-family: "Fira Sans", sans-serif;
 }
 
 h1 {
-    font: 1.6em "Fira Sans", sans-serif;
-    margin-bottom: 1rem;
+  font:
+    1.6em "Fira Sans",
+    sans-serif;
+  margin-bottom: 1rem;
 }
 ```
 
 ```js
-const channel = new BroadcastChannel('example-channel');
-channel.addEventListener('message', (event) => {
+const channel = new BroadcastChannel("example-channel");
+channel.addEventListener("message", (event) => {
   received.textContent = event.data;
 });
 ```

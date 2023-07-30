@@ -30,13 +30,13 @@ baz += false; // 2
 ```
 
 ```js
-let foo = 'foo';
+let foo = "foo";
 
 // String + Boolean -> 拼接
 foo += false; // "foofalse"
 
 // String + String -> 拼接
-foo += 'bar'; // "foofalsebar"
+foo += "bar"; // "foofalsebar"
 ```
 
 ```js
@@ -46,7 +46,7 @@ let bar = 5;
 bar += 2; // 7
 
 // Number + String -> 拼接
-bar += 'foo'; // "7foo"
+bar += "foo"; // "7foo"
 ```
 
 ## 规范

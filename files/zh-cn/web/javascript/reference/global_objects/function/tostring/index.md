@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/toString
 
 ## 语法
 
-```js
+```js-nolint
 toString()
 ```
 
@@ -28,13 +28,13 @@ toString()
 若 `this` 不是 `Function` 对象，则 `toString()` 方法将抛出 {{jsxref("TypeError")}}（"Function.prototype.toString called on incompatible object"）异常。
 
 ```js example-bad
-Function.prototype.toString.call('foo'); // throws TypeError
+Function.prototype.toString.call("foo"); // throws TypeError
 ```
 
 如果是在内置函数或由 `Function.prototype.bind` 返回的函数上调用 `toString()`，则`toString()` 返回原生代码字符串，如下
 
 ```js
-"function someName() { [native code] }"
+"function someName() { [native code] }";
 ```
 
 对于内部对象方法和函数，`someName` 是函数的初始名称；否则其可能是实现定义（implementation-defined）的，但始终以属性名称语法的形式呈现，如：`[1 + 1]`、`someName` 或 `1`。
@@ -44,7 +44,7 @@ Function.prototype.toString.call('foo'); // throws TypeError
 若是在由 `Function` 构造函数生成的函数上调用 `toString()`，则 `toString()` 返回创建后的函数源码，包括形参和函数体，函数名为“anonymous”。例如：对于 `Function("a", "b", "return a + b").toString()`，则会返回：
 
 ```js
-"function anonymous(a,b\n) {\nreturn a + b\n}"
+"function anonymous(a,b\n) {\nreturn a + b\n}";
 ```
 
 从 ES2018 开始，规范要求 `toString()` 的返回值与声明的源代码完全相同，包括空格和注释；或者因某种原因，主机没有源代码，则要求返回一个原生函数字符串。参见[兼容性表格](#浏览器兼容性)以查询对这一修改后的行为的支持情况。
@@ -59,7 +59,9 @@ function test(fn) {
 }
 
 function f() {}
-class A { a() {} }
+class A {
+  a() {}
+}
 function* g() {}
 
 test(f); // "function f() {}"
@@ -68,13 +70,23 @@ test(g); // "function* g() {}"
 test((a) => a); // "(a) => a"
 test({ a() {} }.a); // "a() {}"
 test({ *a() {} }.a); // "*a() {}"
-test({ [0](){} }[0]); // "[0]() {}"
-test(Object.getOwnPropertyDescriptor({
-  get a() {},
-}, "a").get); // "get a() {}"
-test(Object.getOwnPropertyDescriptor({
-  set a(x) {},
-}, "a").set); // "set a(x) {}"
+test({ [0]() {} }[0]); // "[0]() {}"
+test(
+  Object.getOwnPropertyDescriptor(
+    {
+      get a() {},
+    },
+    "a",
+  ).get,
+); // "get a() {}"
+test(
+  Object.getOwnPropertyDescriptor(
+    {
+      set a(x) {},
+    },
+    "a",
+  ).set,
+); // "set a(x) {}"
 test(Function.prototype.toString); // "function toString() { [native code] }"
 test(function f() {}.bind(0)); // "function () { [native code] }"
 test(Function("a", "b")); // function anonymous(a\n) {\nb\n}
@@ -87,14 +99,18 @@ test(Function("a", "b")); // function anonymous(a\n) {\nb\n}
 可以通过将函数强制转换为字符串来获取函数的源文本——例如，通过将其包装在模板字符串中：
 
 ```js
-function foo() { return 'bar' }
+function foo() {
+  return "bar";
+}
 console.log(`${foo}`); // "function foo() { return 'bar' }"
 ```
 
 得到的源文本是*准确的*，包括其中的注释（否则引擎的内部表示不会存储这些注释）。
 
 ```js
-function foo/* a comment */() { return 'bar' }
+function foo /* a comment */() {
+  return "bar";
+}
 console.log(foo.toString()); // "function foo/* a comment */() { return 'bar' }"
 ```
 
