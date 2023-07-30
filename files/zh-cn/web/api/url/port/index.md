@@ -21,7 +21,7 @@ A {{domxref("USVString")}}.
 ## 示例
 
 ```js
-var url = new URL('https://mydomain.com:80/svn/Repos/');
+var url = new URL("https://mydomain.com:80/svn/Repos/");
 var result = url.port; // Returns:'80'
 ```
 
