@@ -1,10 +1,6 @@
 ---
 title: scroll-margin-left
 slug: Web/CSS/scroll-margin-left
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/scroll-margin-left
 ---
 

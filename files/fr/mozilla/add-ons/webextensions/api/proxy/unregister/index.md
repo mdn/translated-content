@@ -17,7 +17,7 @@ C'est une fonction asynchrome qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var unregistering = browser.proxy.unregister()
+var unregistering = browser.proxy.unregister();
 ```
 
 ### Paramètres

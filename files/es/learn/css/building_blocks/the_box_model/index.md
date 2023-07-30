@@ -159,7 +159,9 @@ Si quieres que todos tus elementos usen el modelo de cajas alternativo (opción 
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 ```

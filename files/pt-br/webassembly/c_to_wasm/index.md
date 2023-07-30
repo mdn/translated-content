@@ -94,7 +94,7 @@ Se tudo funcionou como planejado, você deverá ver a saída "Hello world" no co
 
 4. Agora vamos executar este exemplo. O comando acima terá gerado `hello2.html`, que terá praticamente o mesmo conteúdo do modelo com algum código de cola adicionado para carregar o wasm gerado, executá-lo etc. Abra-o em seu navegador e você verá a mesma saída do último exemplo.
 
-> **Observação:** Você pode especificar a saída apenas do arquivo JavaScript "cola"* em vez do HTML completo especificando um arquivo .js em vez de um arquivo HTML no `-o` flag, e.g. `emcc -o hello2.js hello2.c -O3`. Você poderia então construir seu HTML personalizado completamente do zero, embora esta seja uma abordagem avançada; geralmente é mais fácil usar o modelo HTML fornecido.
+> **Observação:** Você pode especificar a saída apenas do arquivo JavaScript "cola" em vez do HTML completo especificando um arquivo .js em vez de um arquivo HTML no `-o` flag, e.g. `emcc -o hello2.js hello2.c -O3`. Você poderia então construir seu HTML personalizado completamente do zero, embora esta seja uma abordagem avançada; geralmente é mais fácil usar o modelo HTML fornecido.
 >
 > - O Emscripten requer uma grande variedade de código JavaScript "cola" para lidar com alocação de memória, vazamentos de memória e uma série de outros problemas
 
@@ -155,7 +155,7 @@ Se você tiver uma função definida em seu código C que deseja chamar conforme
        "myFunction", // name of C function
        null, // return type
        null, // argument types
-       null // arguments
+       null, // arguments
      );
    });
    ```

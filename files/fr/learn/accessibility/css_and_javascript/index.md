@@ -1,19 +1,7 @@
 ---
 title: Meilleures pratiques d'accessibilité CSS et JavaScript
 slug: Learn/Accessibility/CSS_and_JavaScript
-tags:
-  - Accessibilité
-  - Apprendre
-  - Article
-  - CSS
-  - Codage des scripts
-  - Guide
-  - JavaScript
-  - contraste
-  - couleur
-  - discret
 translation_of: Learn/Accessibility/CSS_and_JavaScript
-original_slug: Apprendre/a11y/CSS_and_JavaScript
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
@@ -81,7 +69,8 @@ h1 {
   font-size: 5rem;
 }
 
-p, li {
+p,
+li {
   line-height: 1.5;
   font-size: 1.6rem;
 }
@@ -98,18 +87,22 @@ Voir [Fondamentaux du texte HTML](/fr/docs/Apprendre/HTML/Introduction_à_HTML/H
 
 #### Texte mis en emphase
 
-On met en avant une portion de texte grâce au balises *inline* `<em>` :
+On met en avant une portion de texte grâce au balises _inline_ `<em>` :
 
 ```html
-<p> L'eau est <em> très chaude </em>.</p>
+<p>L'eau est <em> très chaude </em>.</p>
 
-<p> Les gouttelettes d’eau accumulées sur les surfaces s’appellent  <strong>condensation</strong>.</p>
+<p>
+  Les gouttelettes d’eau accumulées sur les surfaces s’appellent
+  <strong>condensation</strong>.
+</p>
 ```
 
 Vous voudrez peut-être ajouter quelques couleurs simples à votre texte mis en importance :
 
 ```css
-strong, em {
+strong,
+em {
   color: #a60000;
 }
 ```
@@ -121,7 +114,10 @@ Cependant, vous aurez rarement besoin de styliser des éléments d'emphase de ma
 Un élément permettant d'associer une abréviation, un acronyme ou un sigle à sa forme développée :
 
 ```html
-<p> Le contenu web est marqué à l'aide de  <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
+<p>
+  Le contenu web est marqué à l'aide de
+  <abbr title="Hypertext Markup Language">HTML</abbr>.
+</p>
 ```
 
 Encore une fois, vous voudrez peut-être appliquer une mise en forme simple sur ces éléments&nbsp;:
@@ -139,7 +135,9 @@ Par convention, on souligne en pointillés les abréviations et il n'est pas jud
 Hyperliens la façon dont vous accédez à de nouveaux endroits sur le Web :
 
 ```html
-<p> Visiter la  <a href="https://www.mozilla.org"> Page d'accueil de Mozilla </a>.</p>
+<p>
+  Visiter la <a href="https://www.mozilla.org"> Page d'accueil de Mozilla </a>.
+</p>
 ```
 
 Un style de lien très simple est présenté ci-dessous :
@@ -149,7 +147,9 @@ a {
   color: #ff0000;
 }
 
-a:hover, a:visited, a:focus {
+a:hover,
+a:visited,
+a:focus {
   color: #a60000;
   text-decoration: none;
 }
@@ -175,7 +175,7 @@ Vous pouvez faire preuve de créativité avec les styles de lien, tant que vous 
 ```html
 <div>
   <label for="name">Entrez votre nom</label>
-  <input type="text" id="name" name="name">
+  <input type="text" id="name" name="name" />
 </div>
 ```
 
@@ -266,7 +266,7 @@ Nous avons également rendu cette validation de formulaire assez accessible. Nou
 
 ```html
 <label for="name"> Entrez votre nom :</label>
-<input type="text" name="name" id="name">
+<input type="text" name="name" id="name" />
 ```
 
 Nous ne faisons la validation qu'une fois le formulaire soumis — ceci afin de ne pas mettre à jour l'interface utilisateur trop souvent et de ne pas perturber les utilisateurs du lecteur d'écran (et éventuellement d'autres) :
@@ -275,16 +275,16 @@ Nous ne faisons la validation qu'une fois le formulaire soumis — ceci afin de 
 form.onsubmit = validate;
 
 function validate(e) {
-  errorList.innerHTML = '';
-  for(var i = 0; i < formItems.length; i++) {
+  errorList.innerHTML = "";
+  for (var i = 0; i < formItems.length; i++) {
     var testItem = formItems[i];
-    if(testItem.input.value === '') {
-      errorField.style.left = '360px';
+    if (testItem.input.value === "") {
+      errorField.style.left = "360px";
       createLink(testItem);
     }
   }
 
-  if(errorList.innerHTML !== '') {
+  if (errorList.innerHTML !== "") {
     e.preventDefault();
   }
 }
@@ -300,15 +300,19 @@ Pour chaque entrée pour laquelle aucune valeur n'a été renseignée lors de la
 
 ```js
 function createLink(testItem) {
- var listItem = document.createElement('li');
- var anchor = document.createElement('a');
- anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
- anchor.href = '#' + testItem.input.name;
- anchor.onclick = function() {
-   testItem.input.focus();
- };
- listItem.appendChild(anchor);
- errorList.appendChild(listItem);
+  var listItem = document.createElement("li");
+  var anchor = document.createElement("a");
+  anchor.textContent =
+    testItem.input.name +
+    " field is empty: fill in your " +
+    testItem.input.name +
+    ".";
+  anchor.href = "#" + testItem.input.name;
+  anchor.onclick = function () {
+    testItem.input.focus();
+  };
+  listItem.appendChild(anchor);
+  errorList.appendChild(listItem);
 }
 ```
 
@@ -322,8 +326,7 @@ Pour terminer, nous avons utilisé certains attributs de WAI-ARIA dans notre dé
 
 ```html
 <div class="errors" role="alert" aria-relevant="all">
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 
@@ -357,7 +360,7 @@ imgThumb.onblur = hideImg;
 
 Les deux premières lignes exécutent les fonctions lorsque le pointeur de la souris survole et cesse de survoler la vignette, respectivement. Cela ne nous permettra toutefois pas d'accéder à la vue agrandie à l'aide du clavier ; pour cela, nous avons inclus les deux dernières lignes, qui exécutent les fonctions lorsque l'image est nette et floue (lorsque la mise au point s'arrête). Cela peut être fait en tapant sur l'image, car nous avons inclus `tabindex="0"` dessus.
 
-L'événement [click](/fr/docs/Web/API/Element/click_event) est intéressant — cela semble dépendre de la souris, mais la plupart des navigateurs activent les gestionnaires d'événement [element.onclick](/fr/docs/Web/API/GlobalEventHandlers/onclick) après avoir pressé <kbd>Entrée</kbd>  sur un lien ou un élément de formulaire ciblé, ou lorsqu'un tel élément est touché sur un écran tactile. Cependant, cela ne fonctionne pas par défaut lorsque vous autorisez un événement à ne pas être mis au point par défaut à l'aide de tabindex. Dans ce cas, vous devez détecter précisément le moment exact où cette touche est enfoncée (voir [Remettre l'accessibilité au clavier](/fr/docs/Apprendre/a11y/HTML#Building_keyboard_accessibility_back_in)).
+L'événement [click](/fr/docs/Web/API/Element/click_event) est intéressant — cela semble dépendre de la souris, mais la plupart des navigateurs activent les gestionnaires d'événement [element.onclick](/fr/docs/Web/API/GlobalEventHandlers/onclick) après avoir pressé <kbd>Entrée</kbd> sur un lien ou un élément de formulaire ciblé, ou lorsqu'un tel élément est touché sur un écran tactile. Cependant, cela ne fonctionne pas par défaut lorsque vous autorisez un événement à ne pas être mis au point par défaut à l'aide de tabindex. Dans ce cas, vous devez détecter précisément le moment exact où cette touche est enfoncée (voir [Remettre l'accessibilité au clavier](/fr/docs/Apprendre/a11y/HTML#Building_keyboard_accessibility_back_in)).
 
 ## Résumé
 

@@ -259,7 +259,7 @@ Les images doivent avoir une hauteur de 200 pixels pour garantir qu'elles rempli
 
 ### Couleurs
 
-Ces propriétés définissent les couleurs utilisées pour les différentes parties du navigateur. Ils sont tous facultatifs (mais notez que `"accentcolor"` et `"textcolor"`  étaient obligatoires dans Firefox avant la version 63). L'effet de ces propriétés sur l'interface utilisateur de Firefox est présenté ici:
+Ces propriétés définissent les couleurs utilisées pour les différentes parties du navigateur. Ils sont tous facultatifs (mais notez que `"accentcolor"` et `"textcolor"` étaient obligatoires dans Firefox avant la version 63). L'effet de ces propriétés sur l'interface utilisateur de Firefox est présenté ici:
 
 <table class="standard-table">
   <tbody>
@@ -1253,8 +1253,8 @@ En outre, cette clé accepte diverses propriétés qui sont des alias pour l'une
 
 > **Attention :** A partir de Firefox 70, les propriétés suivantes sont supprimées : `accentcolor` et `textcolor`. Utilisez à la place `frame` et `tab_background_text`. L'utilisation de ces valeurs dans des thèmes chargés dans Firefox 65 ou une version ultérieure augmentera les avertissements.
 
-| Nom                   | Alias pour                                  |
-| --------------------- | ------------------------------------------- |
+| Nom                   | Alias pour                           |
+| --------------------- | ------------------------------------ |
 | `bookmark_text`       | `toolbar_text {{Deprecated_Inline}}` |
 | `frame`               | `accentcolor {{Deprecated_Inline}}`  |
 | `frame_inactive`      | `accentcolor {{Deprecated_Inline}}`  |

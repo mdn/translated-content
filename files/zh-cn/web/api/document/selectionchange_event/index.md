@@ -16,9 +16,9 @@ slug: Web/API/Document/selectionchange_event
 在 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 等方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener('selectionchange', (event) => {});
+addEventListener("selectionchange", (event) => {});
 
-onselectionchange = (event) => { };
+onselectionchange = (event) => {};
 ```
 
 ## 事件类型

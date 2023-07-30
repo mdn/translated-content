@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/Access-Control-Request-Headers
 
 请求头 **`Access-Control-Request-Headers`** 出现于 {{glossary("preflight request")}}（预检请求）中，用于通知服务器在真正的请求中会采用哪些请求头。
 
-| 报头类型                                         | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| 报头类型                              | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | yes                            |
 
 ## 语法
 

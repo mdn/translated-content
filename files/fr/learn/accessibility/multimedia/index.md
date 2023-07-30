@@ -1,18 +1,7 @@
 ---
 title: Accessible multimedia
 slug: Learn/Accessibility/Multimedia
-tags:
-  - Accessibilité
-  - Apprendre
-  - Audio
-  - Débutant
-  - HTML
-  - Images
-  - JavaScript
-  - Multimedia
-  - Video
 translation_of: Learn/Accessibility/Multimedia
-original_slug: Apprendre/a11y/Multimedia
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
@@ -56,8 +45,9 @@ Nous avons déjà couvert des alternatives textuelles simples pour les images HT
 Par exemple:
 
 ```html
-<img src="dinosaur.png"
-     alt=" Un Tyrannosaure Rex rouge: Un dinosaure a deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tete avec beaucoup de dents acerees .">
+<img
+  src="dinosaur.png"
+  alt=" Un Tyrannosaure Rex rouge: Un dinosaure a deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tete avec beaucoup de dents acerees ." />
 ```
 
 ## Commandes audio et vidéo accessibles
@@ -70,17 +60,23 @@ Les instances audio et vidéo HTML5 sont même fournies avec un ensemble de comm
 
 ```html
 <audio controls>
-  <source src="viper.mp3" type="audio/mp3">
-  <source src="viper.ogg" type="audio/ogg">
-  <p> Votre navigateur ne supporte pas l\'audio HTML5. Voici un <a href="viper.mp3"> lien vers l\'audio </a>  au lieu .</p>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>
+    Votre navigateur ne supporte pas l\'audio HTML5. Voici un
+    <a href="viper.mp3"> lien vers l\'audio </a> au lieu .
+  </p>
 </audio>
 
-<br>
+<br />
 
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Votre navigateur ne supporte pas l\'audio HTML5. Voici un <a href="rabbit320.mp4">lien vers la video</a> instead.</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Votre navigateur ne supporte pas l\'audio HTML5. Voici un
+    <a href="rabbit320.mp4">lien vers la video</a> instead.
+  </p>
 </video>
 ```
 
@@ -114,9 +110,12 @@ Tout d'abord, regardons le code HTML pour le lecteur vidéo, dans le code HTML:
 ```html
 <section class="player">
   <video controls>
-    <source src="rabbit320.mp4" type="video/mp4">
-    <source src="rabbit320.webm" type="video/webm">
-    <p>Votre navigateur ne supporte pas l\'audio HTML5. Voici un <a href="rabbit320.mp4">lien vers la video</a> instead.</p>
+    <source src="rabbit320.mp4" type="video/mp4" />
+    <source src="rabbit320.webm" type="video/webm" />
+    <p>
+      Votre navigateur ne supporte pas l\'audio HTML5. Voici un
+      <a href="rabbit320.mp4">lien vers la video</a> instead.
+    </p>
   </video>
 
   <div class="controls">
@@ -136,17 +135,17 @@ Nous avons inséré quelques boutons de commande simples sous notre vidéo. Bien
 Nous devrons d'abord stocker les références à chacun des contrôles - ajoutez ce qui suit en haut de votre fichier JavaScript:
 
 ```js
-var playPauseBtn = document.querySelector('.playpause');
-var stopBtn = document.querySelector('.stop');
-var rwdBtn = document.querySelector('.rwd');
-var fwdBtn = document.querySelector('.fwd');
-var timeLabel = document.querySelector('.time');
+var playPauseBtn = document.querySelector(".playpause");
+var stopBtn = document.querySelector(".stop");
+var rwdBtn = document.querySelector(".rwd");
+var fwdBtn = document.querySelector(".fwd");
+var timeLabel = document.querySelector(".time");
 ```
 
 Ensuite, nous devons saisir une référence au lecteur vidéo / audio lui-même - ajoutez cette ligne sous les lignes précédentes:
 
 ```js
-var player = document.querySelector('video');
+var player = document.querySelector("video");
 ```
 
 Ceci contient une référence à un objet {{domxref ("HTMLMediaElement")}} qui possède plusieurs propriétés et méthodes utiles disponibles qui peuvent être utilisées pour connecter des fonctionnalités à nos boutons.
@@ -154,7 +153,7 @@ Ceci contient une référence à un objet {{domxref ("HTMLMediaElement")}} qui p
 Avant de passer à la création de notre fonctionnalité de bouton, supprimons les contrôles natifs afin qu'ils ne gênent pas nos contrôles personnalisés. Ajoutez ce qui suit, encore une fois au bas de votre JavaScript:
 
 ```js
-player.removeAttribute('controls');
+player.removeAttribute("controls");
 ```
 
 Le fait de procéder ainsi plutôt que de ne pas inclure les attributs de contrôle en premier lieu présente l'avantage que si notre JavaScript échoue pour une raison quelconque, l'utilisateur dispose toujours de certains contrôles.
@@ -164,13 +163,13 @@ Le fait de procéder ainsi plutôt que de ne pas inclure les attributs de contr�
 Commençons par configurer le bouton lecture / pause. Nous pouvons le faire basculer entre lecture et pause avec une simple fonction conditionnelle, comme ci-dessous. Ajoutez-le à votre code, en bas:
 
 ```js
-playPauseBtn.onclick = function() {
-  if(player.paused) {
+playPauseBtn.onclick = function () {
+  if (player.paused) {
     player.play();
-    playPauseBtn.textContent = 'Pause';
+    playPauseBtn.textContent = "Pause";
   } else {
     player.pause();
-    playPauseBtn.textContent = 'Play';
+    playPauseBtn.textContent = "Play";
   }
 };
 ```
@@ -178,28 +177,28 @@ playPauseBtn.onclick = function() {
 Ensuite, ajoutez ce code en bas, qui contrôle le bouton d'arrêt:
 
 ```js
-stopBtn.onclick = function() {
+stopBtn.onclick = function () {
   player.pause();
   player.currentTime = 0;
-  playPauseBtn.textContent = 'Play';
+  playPauseBtn.textContent = "Play";
 };
 ```
 
-Il n'y a pas de fonction `stop()`  disponible sur {{domxref("HTMLMediaElement")}}s, nous le mettons donc en `pause()`  et, dans le même temps, définissons la valeur `currentTime` sur 0.
+Il n'y a pas de fonction `stop()` disponible sur {{domxref("HTMLMediaElement")}}s, nous le mettons donc en `pause()` et, dans le même temps, définissons la valeur `currentTime` sur 0.
 
 Ensuite, nos boutons de rembobinage et d'avance rapide - ajoutez les blocs suivants au bas de votre code:
 
 ```js
-rwdBtn.onclick = function() {
+rwdBtn.onclick = function () {
   player.currentTime -= 3;
 };
 
-fwdBtn.onclick = function() {
+fwdBtn.onclick = function () {
   player.currentTime += 3;
-  if(player.currentTime >= player.duration || player.paused) {
+  if (player.currentTime >= player.duration || player.paused) {
     player.pause();
     player.currentTime = 0;
-    playPauseBtn.textContent = 'Play';
+    playPauseBtn.textContent = "Play";
   }
 };
 ```
@@ -211,19 +210,19 @@ Notez que nous vérifions également si la durée `currentTime` est supérieure 
 Enfin, ajoutez ce qui suit à la fin du code pour contrôler l'affichage du temps écoulé:
 
 ```js
-player.ontimeupdate = function() {
+player.ontimeupdate = function () {
   var minutes = Math.floor(player.currentTime / 60);
   var seconds = Math.floor(player.currentTime - minutes * 60);
   var minuteValue;
   var secondValue;
 
-  if (minutes<10) {
+  if (minutes < 10) {
     minuteValue = "0" + minutes;
   } else {
     minuteValue = minutes;
   }
 
-  if (seconds<10) {
+  if (seconds < 10) {
     secondValue = "0" + seconds;
   } else {
     secondValue = seconds;
@@ -320,15 +319,15 @@ WEBVTT
 Pour que ceci soit affiché avec la lecture du média HTML, vous devez:
 
 - Enregistrez-le en tant que fichier .vtt dans un endroit approprié.
-- Lien vers le fichier .vtt avec l'élément {{htmlelement("track")}} . `<track>`  devrait être placé dans `<audio>` ou `<video>`, mais après tout `<source>` éléments . Utilisez l'attribut [`kind`](/fr/docs/Web/HTML/Element/track#kind) pour indiquer si les signaux sont des sous-titres, des légendes ou des descriptions. De plus, utilisez [srclang](/fr/docs/Web/HTML/Element/track#srclang) pour indiquer au navigateur la langue dans laquelle vous avez écrit les sous-titres. .
+- Lien vers le fichier .vtt avec l'élément {{htmlelement("track")}} . `<track>` devrait être placé dans `<audio>` ou `<video>`, mais après tout `<source>` éléments . Utilisez l'attribut [`kind`](/fr/docs/Web/HTML/Element/track#kind) pour indiquer si les signaux sont des sous-titres, des légendes ou des descriptions. De plus, utilisez [srclang](/fr/docs/Web/HTML/Element/track#srclang) pour indiquer au navigateur la langue dans laquelle vous avez écrit les sous-titres. .
 
 Voici un exemple:
 
 ```html
 <video controls>
-    <source src="example.mp4" type="video/mp4">
-    <source src="example.webm" type="video/webm">
-    <track kind="subtitles" src="subtitles_en.vtt" srclang="en">
+  <source src="example.mp4" type="video/mp4" />
+  <source src="example.webm" type="video/webm" />
+  <track kind="subtitles" src="subtitles_en.vtt" srclang="en" />
 </video>
 ```
 

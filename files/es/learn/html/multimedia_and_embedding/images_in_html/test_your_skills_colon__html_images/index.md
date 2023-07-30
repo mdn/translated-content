@@ -1,5 +1,5 @@
 ---
-title: 'Pon a prueba tus habilidades: imágenes HTML'
+title: "Pon a prueba tus habilidades: imágenes HTML"
 slug: >-
   Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images
 l10n:

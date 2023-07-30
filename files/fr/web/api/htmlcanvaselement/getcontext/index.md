@@ -1,12 +1,6 @@
 ---
 title: HTMLCanvasElement.getContext()
 slug: Web/API/HTMLCanvasElement/getContext
-tags:
-  - API
-  - Canevas
-  - HTMLCanvasElement
-  - Méthode
-  - Reference
 translation_of: Web/API/HTMLCanvasElement/getContext
 ---
 
@@ -38,9 +32,7 @@ canvas.getContext(typeDeContexte, attributsDeContexte);
   - : Vous pouvez utiliser plusieurs attributs de contexte quand vous créez votre contexte de représentation, par exemple :
 
     ```js
-    canvas.getContext('webgl',
-                     { antialias: false,
-                       depth: false });
+    canvas.getContext("webgl", { antialias: false, depth: false });
     ```
 
     attributs de contexte 2d :
@@ -68,7 +60,7 @@ Un {{domxref("RenderingContext")}}, qui est soit un
 - {{domxref("WebGL2RenderingContext")}} pour `"webgl2"` ou
 - {{domxref("ImageBitmapRenderingContext")}} pour `"bitmaprenderer"`.
 
-Si le *typeDeContexte* ne correspond pas à un contexte de dessin possible, `null` est retourné.
+Si le _typeDeContexte_ ne correspond pas à un contexte de dessin possible, `null` est retourné.
 
 ## Exemples
 
@@ -81,8 +73,8 @@ Si le *typeDeContexte* ne correspond pas à un contexte de dessin possible, `nul
 vous pouvez obtenir un contexte 2d du canevas grâce au code suivant :
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 console.log(ctx); // CanvasRenderingContext2D { ... }
 ```
 

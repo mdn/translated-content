@@ -1,13 +1,6 @@
 ---
 title: DocumentFragment()
 slug: Web/API/DocumentFragment/DocumentFragment
-tags:
-  - API
-  - Constructeur
-  - DOM
-  - Document
-  - Elements
-  - Fragments
 translation_of: Web/API/DocumentFragment/DocumentFragment
 ---
 
@@ -18,7 +11,7 @@ Le constructeur **`DocumentFragment()`** renvoie un nouvel objet {{domxref("Docu
 ## Syntaxe
 
 ```js
-fragment = new DocumentFragment()
+fragment = new DocumentFragment();
 ```
 
 ## Exemple

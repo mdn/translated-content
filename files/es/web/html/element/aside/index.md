@@ -12,11 +12,11 @@ El **elemento HTML `<aside>`** representa una sección de una página que consis
 
 ### Contexto de uso
 
-| Contenido permitido            | [Contenido dinámico](/en/HTML/Content_categories#flow_content)                                                                      |
-| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omisión de etiquetas           | Ninguna, tanto la etiqueta inicial y la etiqueta de cierre son obligatorias                                                                                                   |
+| Contenido permitido            | [Contenido dinámico](/en/HTML/Content_categories#flow_content)                                                                                                     |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Omisión de etiquetas           | Ninguna, tanto la etiqueta inicial y la etiqueta de cierre son obligatorias                                                                                        |
 | Elementos primarios permitidos | Cualquier elemento que acepte contenido dinámico. Ten en cuenta que un elemento \<aside> no debe ser un descendiente de un elemento {{ HTMLElement ("address") }}. |
-| Documento normativo            | [HTML 5, sección 4.4.5](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-aside-element)                                                          |
+| Documento normativo            | [HTML 5, sección 4.4.5](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-aside-element)                                               |
 
 ### Atributos
 

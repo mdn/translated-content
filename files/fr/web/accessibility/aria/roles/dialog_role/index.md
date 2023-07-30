@@ -1,13 +1,7 @@
 ---
 title: Utilisation du rôle dialog
 slug: Web/Accessibility/ARIA/Roles/dialog_role
-tags:
-  - ARIA
-  - Accessibilité
-  - Développement Web
-  - Rôle
 translation_of: Web/Accessibility/ARIA/Roles/dialog_role
-original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog
 ---
 
 ### Description

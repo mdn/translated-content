@@ -1,10 +1,6 @@
 ---
 title: merror
 slug: Web/MathML/Element/merror
-tags:
-  - MathML
-  - MathML:Element
-  - MathML:Référence
 translation_of: Web/MathML/Element/merror
 ---
 

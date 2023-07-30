@@ -22,7 +22,7 @@ var myCrossOriginIsolated = self.crossOriginIsolated; // 或直接 crossOriginIs
 ## 示例
 
 ```js
-if(crossOriginIsolated) {
+if (crossOriginIsolated) {
   // post SharedArrayBuffer
 } else {
   // Do something else

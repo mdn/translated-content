@@ -31,9 +31,9 @@ GET /miPaginaWeb.html
 La respuesta también es muy sencilla: solamente consiste el archivo pedido.
 
 ```html
-<HTML>
-Una pagina web muy sencilla
-</HTML>
+<html>
+  Una pagina web muy sencilla
+</html>
 ```
 
 Al contrario que sus posteriores evoluciones, el protocolo HTTP/0.9 no usa cabeceras HTTP, con lo cual únicamente es posible transmitir archivos HTML, y ningún otro tipo de archivos. Tampoco había información del estado ni códigos de error: en el caso un problema, el archivo HTML pedido, era devuelto con una descripción del problema dentro de él, para que una persona pudiera analizarlo.

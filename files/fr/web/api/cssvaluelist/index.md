@@ -1,12 +1,6 @@
 ---
 title: CSSValueList
 slug: Web/API/CSSValueList
-tags:
-  - API
-  - CSSValueList
-  - DOM
-  - Interface
-  - Reference
 translation_of: Web/API/CSSValueList
 ---
 

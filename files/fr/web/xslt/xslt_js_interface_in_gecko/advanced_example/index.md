@@ -1,10 +1,7 @@
 ---
 title: Exemple avancé
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
-tags:
-  - Traduction_à_relire
 translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
-original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko/Exemple_avancé
 ---
 
 ## Exemple avancé

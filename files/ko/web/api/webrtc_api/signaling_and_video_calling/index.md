@@ -10,7 +10,7 @@ slug: Web/API/WebRTC_API/Signaling_and_video_calling
 
 ## Summary
 
-[WebRTC](/ko/docs/Web/API/WebRTC_API) 는 리얼 타임 음성, 영상, 데이터 교환을 할 수 있는 완전한 p2p 기술이다. [다른 곳에서 논의한 것 처럼](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#establishing_a_connection) 서로 다른 네트워크에 있는 2개의 디바이스들을 서로 위치시키기 위해서는, 각 디바이스들의 위치를 발견하는 방법과 미디어 포맷 협의가 필요하다. 이 프로세스를 **시그널링** **signaling** 이라 부르고 각 디바이스들을 상호간에 동의된 서버(socket.io 혹은 websocket을 이용한 서버)에 연결시킨다. 이 서버는 각 디바이스들이 **negotiation**(협의) 메세지들을 교환할 수 있도록 한다.
+[WebRTC](/ko/docs/Web/API/WebRTC_API) 는 리얼 타임 음성, 영상, 데이터 교환을 할 수 있는 완전한 p2p 기술이다. [다른 곳에서 논의한 것 처럼](/ko/docs/Web/API/WebRTC_API/Session_lifetime#establishing_a_connection) 서로 다른 네트워크에 있는 2개의 디바이스들을 서로 위치시키기 위해서는, 각 디바이스들의 위치를 발견하는 방법과 미디어 포맷 협의가 필요하다. 이 프로세스를 **시그널링** **signaling** 이라 부르고 각 디바이스들을 상호간에 동의된 서버(socket.io 혹은 websocket을 이용한 서버)에 연결시킨다. 이 서버는 각 디바이스들이 **negotiation**(협의) 메세지들을 교환할 수 있도록 한다.
 
 이 글에서 우리는 더 나아가 유저들간에 양방향으로 화상 통화가 되는 예제인 [WebSocket chat](https://mdn-samples.mozilla.org/s/websocket-chat)(웹소켓 문서를 작성하기 위해 만들어졌으며, 링크는 곧 활성화 될 것이다. 아직은 온라인으로 테스트가 불가능하다.)을 작동이 되도록 만들 예정이다. 이것에 관해 [샘플](https://mdn-samples.mozilla.org/s/webrtc-from-chat) 을 확인해 보거나 Github에서 전체 [프로젝트](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)를 확인해볼 수 있다.
 
@@ -22,13 +22,13 @@ slug: Web/API/WebRTC_API/Signaling_and_video_calling
 
 두 디바이스들 사이에 WebRTC 커넥션을 만들기 위해, 인터넷 네트워크에서 그 둘을 연결 시키는 작업을 해줄 **signaling server** 가 필요하다. 어떻게 이 서버를 만들고 실제로 시그널링 과정이 어떻게 되는지 살펴보자.
 
-가장 먼저, 시그널링 서버 자체가 필요하다. WebRTC는 시그널링 정보에 관한 transport 메커니즘을 제시하진 않는다. 두 피어들 사이에서 해리포터의 부엉이처럼 시그널링에 관련된 정보들을 전달해줄 수 있는 것이면 [WebSocket](/en-US/docs/Web/API/WebSockets_API) 이든 [XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest) 든 상관없다.
+가장 먼저, 시그널링 서버 자체가 필요하다. WebRTC는 시그널링 정보에 관한 transport 메커니즘을 제시하진 않는다. 두 피어들 사이에서 해리포터의 부엉이처럼 시그널링에 관련된 정보들을 전달해줄 수 있는 것이면 [WebSocket](/ko/docs/Web/API/WebSockets_API) 이든 [XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest) 든 상관없다.
 
 여기서 중요한 점은 시그널링 서버는 시그널링 데이터 내용을 몰라도 된다는 것이다. 비록 이것은 [SDP](https://www.gitbook.com/book/gustnxodjs/webrtc-kor/edit#) 이지만, 몰라도 큰 문제가 되진 않는다. 메세지의 내용들은 그저 시그널링 서버를 통해 상대편으로 가기만 하면된다. 중요한 점은 ICE subsystem이 신호 데이터를 다른 피어에게 보내도록 지시하면, 다른 피어는 이 정보를 수신하여 자체 ICE subsystem에 전달하는 방법을 알고 있다는 것이다.
 
 ### Readying the chat server for signaling
 
-이 [chat server](https://github.com/mdn/samples-server/tree/master/s/websocket-chat) 는 클라이언트와 서버 사이에 [WebSocket API](/en-US/docs/Web/API/WebSockets_API)을 통해 JSON string으로 데이터를 전송한다. 서버는 새로운 유저를 등록하는 것, username을 세팅하는 것, 채팅 메세지를 전송하는 것 등등의 작업들을 하기 위해 다양한 메세지 타입들을 다룬다. 시그널링과 ICE negotiation 을 서버가 처리하기 위해서 코드를 작성해야한다. 모든 로그인된 유저들에게 브로드캐스팅하는 것이 아니라, 특정한 유저에게 직접 메세지를 전달해야한다. 그리고 서버가 따로 처리할 필요 없이, 수신된 원하지 않은 메세지 타입들을 처리한다. 이를 통해 여러 서버를 만들 필요없이 동일한 서버를 이용하여 시그널 메시지를 보낼 수 있다. 이 개념은 WebRTC가 아니라 WebSocket에 관한 개념이다.
+이 [chat server](https://github.com/mdn/samples-server/tree/master/s/websocket-chat) 는 클라이언트와 서버 사이에 [WebSocket API](/ko/docs/Web/API/WebSockets_API)을 통해 JSON string으로 데이터를 전송한다. 서버는 새로운 유저를 등록하는 것, username을 세팅하는 것, 채팅 메세지를 전송하는 것 등등의 작업들을 하기 위해 다양한 메세지 타입들을 다룬다. 시그널링과 ICE negotiation 을 서버가 처리하기 위해서 코드를 작성해야한다. 모든 로그인된 유저들에게 브로드캐스팅하는 것이 아니라, 특정한 유저에게 직접 메세지를 전달해야한다. 그리고 서버가 따로 처리할 필요 없이, 수신된 원하지 않은 메세지 타입들을 처리한다. 이를 통해 여러 서버를 만들 필요없이 동일한 서버를 이용하여 시그널 메시지를 보낼 수 있다. 이 개념은 WebRTC가 아니라 WebSocket에 관한 개념이다.
 
 이제, WebRTC 시그널링을 지원하는 chat server를 만들기 위해 어떻게 해야하는지 보자. 앞으로 나오는 코드들은 [chatserver.js](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat/chatserver.js) 안에 있는 코드이다.
 
@@ -183,7 +183,7 @@ function sendToServer(msg) {
 }
 ```
 
-전달된 메세지 object는 [`JSON.stringify()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)함수에 의해 JSON string으로 바뀐다. 그 후, WebSocket 커넥션의 [`send()`](/en-US/docs/Web/API/WebSocket/send)함수를 통해 서버로 전달된다.
+전달된 메세지 object는 [`JSON.stringify()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)함수에 의해 JSON string으로 바뀐다. 그 후, WebSocket 커넥션의 [`send()`](/ko/docs/Web/API/WebSocket/send)함수를 통해 서버로 전달된다.
 
 #### UI to start a call
 
@@ -262,9 +262,9 @@ function invite(evt) {
 
 그 다음에 call을 하려는 유저의 이름을 `targetUsername`변수 안에 넣고 `createPeerConnection()`함수를 실행시킨다. 이 함수는 [`RTCPeerConnection`](/ko/docs/Web/API/RTCPeerConnection) 의 기본적인 구성과 기능을 수행한다.
 
-`RTCPeerConnection` 이 생성되면, [`Navigator.mediaDevices.getUserMedia`](/en-US/docs/Web/API/MediaDevices/getUserMedia)함수를 통해 유저의 카메라와 마이크에 권한을 요청한다. 카메라와 마이크에서 나오는 로컬 스트림을 로컬 비디오 preview의 [`srcObject`](/ko/docs/Web/API/MediaElement/srcObject)property에 설정한다. 그리고 [`<video>`](/ko/docs/Web/HTML/Element/Video)element가 자동으로 들어오는 비디오를 재생하도록 구성되었기 때문에, stream은 로컬 preview box에서 재생을 시작한다.
+`RTCPeerConnection` 이 생성되면, [`Navigator.mediaDevices.getUserMedia`](/ko/docs/Web/API/MediaDevices/getUserMedia)함수를 통해 유저의 카메라와 마이크에 권한을 요청한다. 카메라와 마이크에서 나오는 로컬 스트림을 로컬 비디오 preview의 [`srcObject`](/ko/docs/Web/API/MediaElement/srcObject)property에 설정한다. 그리고 [`<video>`](/ko/docs/Web/HTML/Element/Video)element가 자동으로 들어오는 비디오를 재생하도록 구성되었기 때문에, stream은 로컬 preview box에서 재생을 시작한다.
 
-그 다음에 [`RTCPeerConnection`](/ko/docs/Web/API/RTCPeerConnection)에 stream을 추가하기 위해 [`myPeerConnection.addStream()`](/en-US/docs/Web/API/RTCPeerConnection/addStream)함수를 실행한다. WebRTC 커녁션이 완전히 준비되지 않았더라도 WebRTC 커넥션에 stream을 보내기 시작한다.
+그 다음에 [`RTCPeerConnection`](/ko/docs/Web/API/RTCPeerConnection)에 stream을 추가하기 위해 [`myPeerConnection.addStream()`](/ko/docs/Web/API/RTCPeerConnection/addStream)함수를 실행한다. WebRTC 커녁션이 완전히 준비되지 않았더라도 WebRTC 커넥션에 stream을 보내기 시작한다.
 
 만약 local media stream을 가져오는 동안 에러가 발생한다면, `catch` clause가 `handleGetUserMediaError()`함수를 불러 필요에 따라 유저에게 적절한 에러 메세지를 보여줄 것이다.
 
@@ -319,9 +319,9 @@ function createPeerConnection() {
 // …
 ```
 
-웹서버와 같은 호스트에 STUN/TURN 서버를 돌리고 있기 때문에, STUN/TURN 서버의 도메인 이름을 [`location.hostname`](/en-US/docs/Web/API/Location/hostname)을 사용하여 설정했다. 만약 다른 서버의 STUN/TURN 서버를 사용한다면 urls 값을 그 서버로 바꿔주면 된다.
+웹서버와 같은 호스트에 STUN/TURN 서버를 돌리고 있기 때문에, STUN/TURN 서버의 도메인 이름을 [`location.hostname`](/ko/docs/Web/API/Location/hostname)을 사용하여 설정했다. 만약 다른 서버의 STUN/TURN 서버를 사용한다면 urls 값을 그 서버로 바꿔주면 된다.
 
-`RTCPeerConnection`을 만들 때, call을 구성하는 파라미터들을 명시해줘야한다. 가장 중요한 것은 STUN/TURN 서버의 리스트([ICE](/en-US/docs/Glossary/ICE) layer에서 caller와 callee의 경로를 찾는데 사용되는 서버)를 담고 있는 `iceServers`이다. **(주의. 웹소켓을 이용한 시그널링 서버와 전혀 다른 개념이다)**. WebRTC는 두 피어가 방화벽이나 NAT 뒤에 숨어 있어도, 각 피어들의 서로 연결될 수 있도록 피어간 연결 경로를 찾아주는 프로토콜(STUN, TURN)을 사용한다.
+`RTCPeerConnection`을 만들 때, call을 구성하는 파라미터들을 명시해줘야한다. 가장 중요한 것은 STUN/TURN 서버의 리스트([ICE](/ko/docs/Glossary/ICE) layer에서 caller와 callee의 경로를 찾는데 사용되는 서버)를 담고 있는 `iceServers`이다. **(주의. 웹소켓을 이용한 시그널링 서버와 전혀 다른 개념이다)**. WebRTC는 두 피어가 방화벽이나 NAT 뒤에 숨어 있어도, 각 피어들의 서로 연결될 수 있도록 피어간 연결 경로를 찾아주는 프로토콜(STUN, TURN)을 사용한다.
 
 > **참고:** 직접 만든 혹은 사용할 권한을 가지고 있는 STUN/TURN 서버를 사용해야 한다.
 
@@ -346,23 +346,23 @@ function createPeerConnection() {
 위에 있는 이벤트 핸들러 중 처음 두 개는 필수이다. WebRTC로 스트리밍된 미디어와 관련된 것들을 다루기위해 두 핸들러를 설정해야한다. [`removestream`](/ko/docs/Web/Reference/Events/removestream)event는 스트리밍이 중단된 것을 감지하는데 유용하다. 따라서 아마 이것도 사용하게 될 것이다. 남아 있는 4개는 필수적인 것은 아니나, 직접 사용해보자. 이것들 외에도 다른 이벤트들을 사용할 수 있으나 여기에서는 다루지 않겠다. 각 핸들러에 관한 요약 설명이다.
 
 - {{domxref("RTCPeerConnection.onicecandidate")}}
-  - : 로컬 ICE layer는 시그널링 서버를 통해 다른 피어에 ICE candidate를 전송하고자 할 때, 너의 [`icecandidate`](/en-US/docs/Web/API/RTCPeerConnection/icecandidate_event)event handler를 호출한다.
+  - : 로컬 ICE layer는 시그널링 서버를 통해 다른 피어에 ICE candidate를 전송하고자 할 때, 너의 [`icecandidate`](/ko/docs/Web/API/RTCPeerConnection/icecandidate_event)event handler를 호출한다.
 - {{domxref("RTCPeerConnection.onaddstream")}}
   - : [`addstream`](/ko/docs/Web/Events/addstream)event를 위한 이 핸들러는 너의 커넥션에 remote stream이 추가된 것을 알려주기 위해, 로컬 WebRTC layer에 의해 불려진다. 예를들어, 이것은 들어오는 stream을 element에 연결시켜 디스플레이 되게 만들 때 사용된다. 더 자세한 내용은 [Receiving new streams](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling?document_saved=true#Receiving_new_streams) 을 참조해라.
 - {{domxref("RTCPeerConnection.onremovestream")}}
-  - : 커넥션에서 remote가 stream을 제거할 때, `onaddstream`의 반대인 `onremovestream은` [`removestream`](/en-US/docs/Web/API/RTCPeerConnection/removestream_event) event을 처리하기위해 실행된다.
+  - : 커넥션에서 remote가 stream을 제거할 때, `onaddstream`의 반대인 `onremovestream은` [`removestream`](/ko/docs/Web/API/RTCPeerConnection/removestream_event) event을 처리하기위해 실행된다.
 - {{domxref("RTCPeerConnection.oniceconnectionstatechange")}}
-  - : ICE 커넥션의 상태 변경을 알리기위해 ICE layer가 [`iceconnectionstatechange`](/en-US/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event) event 를 보낸다. 이것을 통해 커넥션이 실패하거나 끊어지는 것을 알 수 있다. 이 것에 대한 예제를 아래의 [ICE connection state](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling?document_saved=true#ICE_connection_state) 에서 볼 것이다.
+  - : ICE 커넥션의 상태 변경을 알리기위해 ICE layer가 [`iceconnectionstatechange`](/ko/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event) event 를 보낸다. 이것을 통해 커넥션이 실패하거나 끊어지는 것을 알 수 있다. 이 것에 대한 예제를 아래의 [ICE connection state](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling?document_saved=true#ICE_connection_state) 에서 볼 것이다.
 - {{domxref("RTCPeerConnection.onicegatheringstatechange")}}
-  - : 하나의 상태에서 다른 상태(예를들어, candidate를 모으기 시작하거나 negotiation이 끝났을 때)로 ICE agent의 candidate 수집 프로세스가 변하면, ICE layer는 [`icegatheringstatechange`](/en-US/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event) event를 보낸다. 아래의 [ICE gathering state](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling?document_saved=true#ICE_gathering_state) 을 참조해라.
+  - : 하나의 상태에서 다른 상태(예를들어, candidate를 모으기 시작하거나 negotiation이 끝났을 때)로 ICE agent의 candidate 수집 프로세스가 변하면, ICE layer는 [`icegatheringstatechange`](/ko/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event) event를 보낸다. 아래의 [ICE gathering state](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling?document_saved=true#ICE_gathering_state) 을 참조해라.
 - {{domxref("RTCPeerConnection.onsignalingstatechange")}}
-  - : 시그널링 프로세스의 state가 바뀌게 될 때, WebRTC 인프라는 너에게 [`signalingstatechange`](/en-US/docs/Web/API/RTCPeerConnection/signalingstatechange_event) message를 보낸다. [Signaling state](https://www.gitbook.com/book/gustnxodjs/webrtc-kor/edit#) 에서 코드를 볼 수 있다.
+  - : 시그널링 프로세스의 state가 바뀌게 될 때, WebRTC 인프라는 너에게 [`signalingstatechange`](/ko/docs/Web/API/RTCPeerConnection/signalingstatechange_event) message를 보낸다. [Signaling state](https://www.gitbook.com/book/gustnxodjs/webrtc-kor/edit#) 에서 코드를 볼 수 있다.
 - {{domxref("RTCPeerConnection.onnegotiationneeded")}}
   - : 이 함수는 WebRTC 인프라가 session negotiation 프로세스를 새로 시작해야할 때마다 불린다. 이것의 일은 callee에게 offer를 생성 후 전달하고, 우리에게 연결을 할 것인지 물어보는 것이다. 어떻게 처리하는지 [Starting negotiation](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling?document_saved=true#Starting_negotiation) 를 참조해라.
 
 #### Starting negotiation
 
-Caller가 자신의 [`RTCPeerConnection`](/ko/docs/Web/API/RTCPeerConnection)과 media stream을 생성하고 [Starting a call](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling?document_saved=true#Starting_a_call)에서 보이는 것처럼 커넥션에 추가하면, 브라우져는 다른 피어와 커넥션이 준비가 될 때 [`negotiationneeded`](/en-US/docs/Web/API/RTCPeerConnection/negotiationneeded_event) event를 활성화 시킬 것이다. 밑에는 이벤트를 핸들링하는 코드이다.
+Caller가 자신의 [`RTCPeerConnection`](/ko/docs/Web/API/RTCPeerConnection)과 media stream을 생성하고 [Starting a call](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling?document_saved=true#Starting_a_call)에서 보이는 것처럼 커넥션에 추가하면, 브라우져는 다른 피어와 커넥션이 준비가 될 때 [`negotiationneeded`](/ko/docs/Web/API/RTCPeerConnection/negotiationneeded_event) event를 활성화 시킬 것이다. 밑에는 이벤트를 핸들링하는 코드이다.
 
 ```js
 function handleNegotiationNeededEvent() {
@@ -433,7 +433,7 @@ function handleVideoOfferMsg(msg) {
 
 이 코드는 [Starting a call](#starting_a_call)에 있는 `invite()`함수와 매우 비슷하다. 먼저, `createPeerConnection()`함수를 이용해서 [`RTCPeerConnection`](/ko/docs/Web/API/RTCPeerConnection)를 생성하고 구성한다. 그 후에, `"video-offer"`message로부터 얻은 SDP offer를 가지고 caller의 session description을 나타내는 [`RTCSessionDescription`](/ko/docs/Web/API/RTCSessionDescription)object를 생성한다.
 
-그 후에, session description은 [`myPeerConnection.setRemoteDescription()`](/en-US/docs/Web/API/RTCPeerConnection/setRemoteDescription) 안으로 전달된다. 이를 통해, 받은 offer를 caller의 session 정보로 저장한다. 설정에 성공했다면, promise fulfillment handler(`then()`clause)은 callee의 카메라와 마이크에 접근하고 stream을 설정하는 등 이전에 `invite()`에서 본 것과 같은 프로세스를 시작한다.
+그 후에, session description은 [`myPeerConnection.setRemoteDescription()`](/ko/docs/Web/API/RTCPeerConnection/setRemoteDescription) 안으로 전달된다. 이를 통해, 받은 offer를 caller의 session 정보로 저장한다. 설정에 성공했다면, promise fulfillment handler(`then()`clause)은 callee의 카메라와 마이크에 접근하고 stream을 설정하는 등 이전에 `invite()`에서 본 것과 같은 프로세스를 시작한다.
 
 local stream이 작동한다면, 이제 SDP answer를 만든 후 caller에게 보내야 한다.
 
@@ -458,17 +458,17 @@ local stream이 작동한다면, 이제 SDP answer를 만든 후 caller에게 �
 }
 ```
 
-[`RTCPeerConnection.addStream()`](/en-US/docs/Web/API/RTCPeerConnection/addStream) 이 성공적으로 완료되었다면, 그 다음 fulfillment handler가 실행될 것이다. SDP answer string을 만들기 위해 [`myPeerConnection.createAnswer()`](/ko/docs/Web/API/RTCPeerConnection/createAnswer)를 실행한다. 커넥션에서 callee의 로컬 description을 설정하기 위해 [`myPeerConnection.setLocalDescription`](/ko/docs/Web/API/RTCPeerConnection/setLocalDescription)에 생성한 SDP를 전달한다.
+[`RTCPeerConnection.addStream()`](/ko/docs/Web/API/RTCPeerConnection/addStream) 이 성공적으로 완료되었다면, 그 다음 fulfillment handler가 실행될 것이다. SDP answer string을 만들기 위해 [`myPeerConnection.createAnswer()`](/ko/docs/Web/API/RTCPeerConnection/createAnswer)를 실행한다. 커넥션에서 callee의 로컬 description을 설정하기 위해 [`myPeerConnection.setLocalDescription`](/ko/docs/Web/API/RTCPeerConnection/setLocalDescription)에 생성한 SDP를 전달한다.
 
 최종 answer는 caller에게 보내져서, 어떻게 callee에게 닿을 수 있는지 알게해준다. `"video-answer"`message의 `sdp`property에 callee의 answer를 포함하고, caller에게 이 메세지를 전달한다.
 
 에러가 발생하면 `handleGetUserMediaError()`으로 전달되고, [Handling getUserMedia() errors](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling#Handling_getUserMedia%28%29_errors)에 잘 설명되어 있다.
 
-> **참고:** caller와 마찬가지로 `setLocalDescription()`fulfillment handler가 실행되면, 브라우져는 callee가 반드시 처리해야하는 [`icecandidate`](/en-US/docs/Web/API/RTCPeerConnection/icecandidate_event)event들을 처리하기 시작한다.
+> **참고:** caller와 마찬가지로 `setLocalDescription()`fulfillment handler가 실행되면, 브라우져는 callee가 반드시 처리해야하는 [`icecandidate`](/ko/docs/Web/API/RTCPeerConnection/icecandidate_event)event들을 처리하기 시작한다.
 
 ##### Sending ICE candidates
 
-caller가 callee로부터 answer를 받으면 모든 것이 끝났다고 생각할 수 있지만, 그렇지 않다. 뒷단 에서는 각 피어들의 ICE agent들이 열심히 ICE candidate message들을 교환한다. 미디어 통신이 어떻게 연결될 수 있는지에 대한 방법들을 알릴 때까지, 각 피어들은 상대방에게 계속해서 candidate들을 보낸다. 이 candidate들은 너의 시그널링 서버를 통해서 전송되어야 한다. ICE는 너의 시그널링 서버에 대해 모르기 때문에, 너는 [`icecandidate`](/en-US/docs/Web/API/RTCPeerConnection/icecandidate_event)event를 위한 핸들러를 불러서 전송된 candidate 들을 너의 코드로 직접 처리해야한다.
+caller가 callee로부터 answer를 받으면 모든 것이 끝났다고 생각할 수 있지만, 그렇지 않다. 뒷단 에서는 각 피어들의 ICE agent들이 열심히 ICE candidate message들을 교환한다. 미디어 통신이 어떻게 연결될 수 있는지에 대한 방법들을 알릴 때까지, 각 피어들은 상대방에게 계속해서 candidate들을 보낸다. 이 candidate들은 너의 시그널링 서버를 통해서 전송되어야 한다. ICE는 너의 시그널링 서버에 대해 모르기 때문에, 너는 [`icecandidate`](/ko/docs/Web/API/RTCPeerConnection/icecandidate_event)event를 위한 핸들러를 불러서 전송된 candidate 들을 너의 코드로 직접 처리해야한다.
 
 너의 [`onicecandidate`](/ko/docs/Web/API/RTCPeerConnection/icecandidate_event)handler는 `candidate`property가 candidate의 정보를 담고 있는 SDP(단, candidate들의 끝에는`null`이 찍혀있다) 인 이벤트들을 받는다. 이것이 너의 시그널링 서버를 통해 다른 피어에게 전송해야할 것들이다. 밑에 구현 예제가 있다.
 
@@ -495,7 +495,7 @@ function handleICECandidateEvent(event) {
 
 메세지의 포맷(시그널링을 처리하는 모든 메세지들은)은 모두 너의 영역이고, 너가 필요한 것에 달렸다. 너가 또다른 필요한 정보가 있다면 추가할 수 있다. 메세지는 그저 JSON stringfied 되어 상대방에게 전달될 뿐이다.
 
-> **참고:** Call의 다른 피어로부터 ICE candidate가 도착할 때, [`icecandidate`](/en-US/docs/Web/API/RTCPeerConnection/icecandidate_event)event가 전송되는 것이 **아님을 항상 명심해라**. 대신에 너 자신이 call을 할 때 보내는 것으로, 너가 원하는 채널을 통해 data를 보낼 수 있다. WebRTC를 처음 접한다면 매우 헷갈릴 것이다.
+> **참고:** Call의 다른 피어로부터 ICE candidate가 도착할 때, [`icecandidate`](/ko/docs/Web/API/RTCPeerConnection/icecandidate_event)event가 전송되는 것이 **아님을 항상 명심해라**. 대신에 너 자신이 call을 할 때 보내는 것으로, 너가 원하는 채널을 통해 data를 보낼 수 있다. WebRTC를 처음 접한다면 매우 헷갈릴 것이다.
 
 ##### Receiving ICE candidates
 
@@ -516,7 +516,7 @@ function handleNewICECandidateMsg(msg) {
 
 ##### Receiving new streams
 
-리모트 피어가 [`RTCPeerConnection.addStream()`](/en-US/docs/Web/API/RTCPeerConnection/addStream)를 부름으로써, 또는 stream format에 대한 renegotiation(재협상)에 의해 새로운 스트림이 커넥션에 추가되었을 때, [`addstream`](/en-US/docs/Web/API/RTCPeerConnection/addstream_event)event가 발생한다. 어떻게 처리하는지 아래 코드를 보자.
+리모트 피어가 [`RTCPeerConnection.addStream()`](/ko/docs/Web/API/RTCPeerConnection/addStream)를 부름으로써, 또는 stream format에 대한 renegotiation(재협상)에 의해 새로운 스트림이 커넥션에 추가되었을 때, [`addstream`](/ko/docs/Web/API/RTCPeerConnection/addstream_event)event가 발생한다. 어떻게 처리하는지 아래 코드를 보자.
 
 ```js
 function handleAddStreamEvent(event) {
@@ -531,7 +531,7 @@ function handleAddStreamEvent(event) {
 
 ##### Handling the removal of streams
 
-리모트 피어가 [`RTCPeerConnection.removeStream()`](/en-US/docs/Web/API/RTCPeerConnection/removeStream)를 호출하여 커넥션으로부터 스트림을 없애면, [`removestream`](/en-US/docs/Web/API/RTCPeerConnection/removeStream)event가 발생하게 된다.
+리모트 피어가 [`RTCPeerConnection.removeStream()`](/ko/docs/Web/API/RTCPeerConnection/removeStream)를 호출하여 커넥션으로부터 스트림을 없애면, [`removestream`](/ko/docs/Web/API/RTCPeerConnection/removeStream)event가 발생하게 된다.
 
 ```js
 function handleRemoveStreamEvent(event) {
@@ -595,7 +595,7 @@ function closeVideoCall() {
 2개의 [`<video>`](/ko/docs/Web/HTML/Element/Video)element를 참조한 이후에, WebRTC 커넥션이 존재하는지 체크한다. 만약 있다면, call을 끊고 닫는다:
 
 1. 리모트와 로컬 비디오 stream에 대해서, 각 track들 마다 [`MediaTrack.stop()`](/ko/docs/Web/API/MediaTrack/stop)를 실행시킨다.
-2. 양 비디오의 [`HTMLMediaElement.srcObject`](/en-US/docs/Web/API/HTMLMediaElement/srcObject)property를 `null`로 바꿔 stream에 관한 모든 참조를 푼다.
+2. 양 비디오의 [`HTMLMediaElement.srcObject`](/ko/docs/Web/API/HTMLMediaElement/srcObject)property를 `null`로 바꿔 stream에 관한 모든 참조를 푼다.
 3. [`myPeerConnection.close()`](/ko/docs/Web/API/RTCPeerConnection/close)를 불러 [`RTCPeerConnection`](/ko/docs/Web/API/RTCPeerConnection)을 닫는다.
 4. `myPeerConnection`변수의 값을 `null`로 바꿔서 계속 진행중인 call이 없다는 것을 전체 코드가 알게 한다. 이것은 유저가 유저 리스트에서 username을 클릭할 때 사용된다.
 
@@ -625,7 +625,7 @@ ICE connection state가 `"closed"`, 또는`"failed"`, 또는 `"disconnected"`으
 
 ##### ICE signaling state
 
-마찬가지로 [`signalingstatechange`](/en-US/docs/Web/API/RTCPeerConnection/signalingstatechange_event)event를 받을 수 있는데, 시그널링 상태가 `"closed"`으로 바뀌면 call을 완전히 종료시킨다.
+마찬가지로 [`signalingstatechange`](/ko/docs/Web/API/RTCPeerConnection/signalingstatechange_event)event를 받을 수 있는데, 시그널링 상태가 `"closed"`으로 바뀌면 call을 완전히 종료시킨다.
 
 ```js
   myPeerConnection.onsignalingstatechange = function(event) {

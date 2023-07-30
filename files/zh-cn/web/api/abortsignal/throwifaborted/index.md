@@ -13,7 +13,7 @@ slug: Web/API/AbortSignal/throwIfAborted
 
 ## 语法
 
-```js
+```js-nolint
 throwIfAborted()
 ```
 
@@ -57,7 +57,7 @@ async function waitForCondition(func, targetValue, { signal } = {}) {
 一个基于 {{jsxref("Promise")}} 的 API 应该通过使用 `AbortSignal` abort {{domxref("AbortSignal.reason", "reason")}} 拒绝任何未敲定的 promise 来响应中止信号。例如，考虑以下 `myCoolPromiseAPI`，它接收一个信号并且返回一个 promise。如果 signal 已经中止或者检测到中止事件，则 promise 将被立刻拒绝。否则它将正常返回并且兑现。
 
 ```js
-function myCoolPromiseAPI(/* … ,*/ {signal}) {
+function myCoolPromiseAPI(/* … ,*/ { signal }) {
   return new Promise((resolve, reject) => {
     // If the signal is already aborted, immediately throw in order to reject the promise.
     if (signal.aborted) {
@@ -68,7 +68,7 @@ function myCoolPromiseAPI(/* … ,*/ {signal}) {
     // Call resolve(result) when done.
 
     // Watch for 'abort' signals
-    signal.addEventListener('abort', () => {
+    signal.addEventListener("abort", () => {
       // Stop the main operation
       // Reject the promise wth the abort reason.
       reject(signal.reason);
@@ -86,9 +86,9 @@ const signal = controller.signal;
 startSpinner();
 
 myCoolPromiseAPI({ /* … ,*/ signal })
-  .then((result) => { })
+  .then((result) => {})
   .catch((err) => {
-    if (err.name === 'AbortError') return;
+    if (err.name === "AbortError") return;
     showUserErrorMessage();
   })
   .then(() => stopSpinner());

@@ -48,16 +48,16 @@ function Product(name, price) {
 
 function Food(name, price) {
   Product.call(this, name, price);
-  this.category = 'food';
+  this.category = "food";
 }
 
 function Toy(name, price) {
   Product.call(this, name, price);
-  this.category = 'toy';
+  this.category = "toy";
 }
 
-var cheese = new Food('feta', 5);
-var fun = new Toy('robot', 40);
+var cheese = new Food("feta", 5);
+var fun = new Toy("robot", 40);
 ```
 
 ### 使用 `call` 方法调用匿名函数
@@ -66,16 +66,15 @@ var fun = new Toy('robot', 40);
 
 ```js
 var animals = [
-  { species: 'Lion', name: 'King' },
-  { species: 'Whale', name: 'Fail' }
+  { species: "Lion", name: "King" },
+  { species: "Whale", name: "Fail" },
 ];
 
 for (var i = 0; i < animals.length; i++) {
-  (function(i) {
-    this.print = function() {
-      console.log('#' + i + ' ' + this.species
-                  + ': ' + this.name);
-    }
+  (function (i) {
+    this.print = function () {
+      console.log("#" + i + " " + this.species + ": " + this.name);
+    };
     this.print();
   }).call(animals[i], i);
 }
@@ -87,15 +86,18 @@ for (var i = 0; i < animals.length; i++) {
 
 ```js
 function greet() {
-  var reply = [this.animal, 'typically sleep between', this.sleepDuration].join(' ');
+  var reply = [this.animal, "typically sleep between", this.sleepDuration].join(
+    " ",
+  );
   console.log(reply);
 }
 
 var obj = {
-  animal: 'cats', sleepDuration: '12 and 16 hours'
+  animal: "cats",
+  sleepDuration: "12 and 16 hours",
 };
 
-greet.call(obj);  // cats typically sleep between 12 and 16 hours
+greet.call(obj); // cats typically sleep between 12 and 16 hours
 ```
 
 ### 使用 **`call`** 方法调用函数并且不指定第一个参数（`argument`）
@@ -103,24 +105,24 @@ greet.call(obj);  // cats typically sleep between 12 and 16 hours
 在下面的例子中，我们调用了 `display` 方法，但并没有传递它的第一个参数。如果没有传递第一个参数，`this` 的值将会被绑定为全局对象。
 
 ```js
-var sData = 'Wisen';
+var sData = "Wisen";
 
 function display() {
-  console.log('sData value is %s ', this.sData);
+  console.log("sData value is %s ", this.sData);
 }
 
-display.call();  // sData value is Wisen
+display.call(); // sData value is Wisen
 ```
 
 > **备注：** 在严格模式下，`this` 的值将会是 `undefined`。见下文。
 
 ```js
-'use strict';
+"use strict";
 
-var sData = 'Wisen';
+var sData = "Wisen";
 
 function display() {
-  console.log('sData value is %s ', this.sData);
+  console.log("sData value is %s ", this.sData);
 }
 
 display.call(); // Cannot read the property of 'sData' of undefined

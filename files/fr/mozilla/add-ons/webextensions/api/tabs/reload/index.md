@@ -14,9 +14,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var reloading = browser.tabs.reload(
-  tabId,            // optional integer
-  reloadProperties  // optional object
-)
+  tabId, // optional integer
+  reloadProperties, // optional object
+);
 ```
 
 ### Paramètres
@@ -45,7 +45,7 @@ browser.tabs.reload();
 Rechargez l'onglet actif de la fenêtre en cours, en ignorant le cache :
 
 ```js
-browser.tabs.reload({bypassCache: true});
+browser.tabs.reload({ bypassCache: true });
 ```
 
 Rechargez l'onglet dont l'ID est 2, en ignorant le cache et en appelant un rappel lorsque vous avez terminé :
@@ -59,7 +59,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var reloading = browser.tabs.reload(2, {bypassCache: true});
+var reloading = browser.tabs.reload(2, { bypassCache: true });
 reloading.then(onReloaded, onError);
 ```
 

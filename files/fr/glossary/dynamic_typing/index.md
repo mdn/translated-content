@@ -14,4 +14,4 @@ translation_of: Glossary/Dynamic_typing
 
 ### Culture générale
 
-- [Type (informatique)](https://fr.wikipedia.org/wiki/Type_(informatique)#Typage_statique_et_typage_dynamique) sur Wikipédia
+- [Type (informatique)](<https://fr.wikipedia.org/wiki/Type_(informatique)#Typage_statique_et_typage_dynamique>) sur Wikipédia

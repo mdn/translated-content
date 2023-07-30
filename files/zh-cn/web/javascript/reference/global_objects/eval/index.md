@@ -36,7 +36,7 @@ eval(string)
 
 ```js
 eval(new String("2 + 2")); // 返回了包含"2 + 2"的字符串对象
-eval("2 + 2");             // returns 4
+eval("2 + 2"); // returns 4
 ```
 
 你可以使用一些通用的方法来绕过这个限制，例如使用 `toString()`。
@@ -50,11 +50,12 @@ eval(expression.toString());
 
 ```js
 function test() {
-  var x = 2, y = 4;
-  console.log(eval('x + y'));  // 直接调用，使用本地作用域，结果是 6
+  var x = 2,
+    y = 4;
+  console.log(eval("x + y")); // 直接调用，使用本地作用域，结果是 6
   var geval = eval; // 等价于在全局作用域调用
-  console.log(geval('x + y')); // 间接调用，使用全局作用域，throws ReferenceError 因为`x`未定义
-  (0, eval)('x + y'); // 另一个间接调用的例子
+  console.log(geval("x + y")); // 间接调用，使用全局作用域，throws ReferenceError 因为`x`未定义
+  (0, eval)("x + y"); // 另一个间接调用的例子
 }
 ```
 
@@ -69,37 +70,39 @@ function test() {
 使用 eval 的糟糕代码：
 
 ```js example-bad
-function looseJsonParse(obj){
-    return eval("(" + obj + ")");
+function looseJsonParse(obj) {
+  return eval("(" + obj + ")");
 }
-console.log(looseJsonParse(
-   "{a:(4-1), b:function(){}, c:new Date()}"
-))
+console.log(looseJsonParse("{a:(4-1), b:function(){}, c:new Date()}"));
 ```
 
 不用 eval 的更好的代码：
 
 ```js example-good
-function looseJsonParse(obj){
-    return Function('"use strict";return (' + obj + ')')();
+function looseJsonParse(obj) {
+  return Function('"use strict";return (' + obj + ")")();
 }
-console.log(looseJsonParse(
-   "{a:(4-1), b:function(){}, c:new Date()}"
-))
+console.log(looseJsonParse("{a:(4-1), b:function(){}, c:new Date()}"));
 ```
 
 比较上面的两个代码片段，两个代码片段似乎是以相同的方式工作，但再想一想：eval 的这个代码的速度要慢得多。注意`c: new Date()`在执行体中。在没有 eval 的函数中，对象在全局范围内被用来进行计算，因此浏览器可以放心的假设 `Date` 是来自 `window.Date` 的而不是一个名为 `Date` 的局部变量。然而，在使用 `eval()` 的代码中，浏览器不能假设这一点，因为如果您的代码是下面这个：
 
 ```js example-bad
-function Date(n){
-    return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
+function Date(n) {
+  return [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ][n % 7 || 0];
 }
-function looseJsonParse(obj){
-    return eval("(" + obj + ")");
+function looseJsonParse(obj) {
+  return eval("(" + obj + ")");
 }
-console.log(looseJsonParse(
-   "{a:(4-1), b:function(){}, c:new Date()}"
-))
+console.log(looseJsonParse("{a:(4-1), b:function(){}, c:new Date()}"));
 ```
 
 因此，在 `eval()` 版本的代码中，浏览器被迫进行高代价的查找调用以检查是否存在名为 `Date()` 的任何局部变量。与 `Function()` 相比，这是非常低效的。
@@ -107,17 +110,21 @@ console.log(looseJsonParse(
 在类似的情况下，如果您确实希望能够从 `Function()` 内部的代码调用 `Date` 函数，该怎么办？你应该躲避并退回到 `eval()` 吗？绝对不是，永远不要这么做。而是尝试下面的方法。
 
 ```js example-good
-function Date(n){
-    return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
+function Date(n) {
+  return [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ][n % 7 || 0];
 }
-function runCodeWithDateFunction(obj){
-    return Function('"use strict";return (' + obj + ')')()(
-        Date
-    );
+function runCodeWithDateFunction(obj) {
+  return Function('"use strict";return (' + obj + ")")()(Date);
 }
-console.log(runCodeWithDateFunction(
-   "function(Date){ return Date(5) }"
-))
+console.log(runCodeWithDateFunction("function(Date){ return Date(5) }"));
 ```
 
 由于三重嵌套函数，上面的代码似乎效率低下，但让我们分析一下上述有效方法的好处：
@@ -133,8 +140,13 @@ console.log(runCodeWithDateFunction(
 最后，我们来看看简化版。使用如上所示的`Function()`，您可以更有效地缩小传递给`runCodeWithDateFunction`的代码字符串，因为函数参数名称也可以缩小，如下面的缩小代码所示。
 
 ```js
-console.log(Function('"use strict";return(function(a){return a(5)})')()(function(a){
-return"Monday Tuesday Wednesday Thursday Friday Saturday Sunday".split(" ")[a%7||0]}));
+console.log(
+  Function('"use strict";return(function(a){return a(5)})')()(function (a) {
+    return "Monday Tuesday Wednesday Thursday Friday Saturday Sunday".split(
+      " ",
+    )[a % 7 || 0];
+  }),
+);
 ```
 
 对于常见用例，`eval()`或`Function()`还有更安全 (而且更快！) 的替代方案。
@@ -147,38 +159,38 @@ return"Monday Tuesday Wednesday Thursday Friday Saturday Sunday".split(" ")[a%7|
 var obj = { a: 20, b: 30 };
 var propName = getPropName(); // 返回 "a" 或 "b"
 
-eval( 'var result = obj.' + propsName )
+eval("var result = obj." + propsName);
 ```
 
 但是，这里并不是必须得使用 `eval()`。事实上，这里并不建议这样使用。可以使用 [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors) 进行代替，它更快、更安全：
 
 ```js
-var obj = { a: 20, b: 30 }
+var obj = { a: 20, b: 30 };
 var propName = getPropName(); // 返回 "a" 或 "b"
-var result = obj[ propName ]; // obj[ "a" ] 与 obj.a 等价
+var result = obj[propName]; // obj[ "a" ] 与 obj.a 等价
 ```
 
 你还可以使用这个方法去访问子代的属性。如下：
 
 ```js
-var obj = {a: {b: {c: 0}}};
+var obj = { a: { b: { c: 0 } } };
 var propPath = getPropPath(); // 例如返回 "a.b.c"
 
-eval( 'var result = obj.' + propPath )
+eval("var result = obj." + propPath);
 ```
 
 这里，可以通过分割属性路径、循环遍历不同的属性，来避免 `eval()`：
 
 ```js
 function getDescendantProp(obj, desc) {
-  var arr = desc.split('.');
+  var arr = desc.split(".");
   while (arr.length) {
     obj = obj[arr.shift()];
   }
   return obj;
 }
 
-var obj = {a: {b: {c: 0}}};
+var obj = { a: { b: { c: 0 } } };
 var propPath = getPropPath(); // 例如返回 "a.b.c"
 var result = getDescendantProp(obj, propPath);
 ```
@@ -187,16 +199,16 @@ var result = getDescendantProp(obj, propPath);
 
 ```js
 function setDescendantProp(obj, desc, value) {
-  var arr = desc.split('.');
+  var arr = desc.split(".");
   while (arr.length > 1) {
     obj = obj[arr.shift()];
   }
-  return obj[arr[0]] = value;
+  return (obj[arr[0]] = value);
 }
 
-var obj = {a: {b: {c: 0}}};
-var propPath = getPropPath();  // 例如，返回 "a.b.c"
-var result = setDescendantProp(obj, propPath, 1);  // a.b.c 值为 1
+var obj = { a: { b: { c: 0 } } };
+var propPath = getPropPath(); // 例如，返回 "a.b.c"
+var result = setDescendantProp(obj, propPath, 1); // a.b.c 值为 1
 ```
 
 ### 使用函数而非代码段
@@ -238,7 +250,7 @@ var x = 2;
 var y = 39;
 var z = "42";
 eval("x + y + 1"); // returns 42
-eval(z);           // returns 42
+eval(z); // returns 42
 ```
 
 ### 使用 `eval` 执行一串 JavaScript 语句
@@ -249,7 +261,7 @@ eval(z);           // returns 42
 var x = 5;
 var str = "if (x == 5) {console.log('z is 42'); z = 42;} else z = 0;";
 
-console.log('z is ', eval(str));
+console.log("z is ", eval(str));
 ```
 
 如果您定义了多个值，则会返回最后一个值。
@@ -258,7 +270,7 @@ console.log('z is ', eval(str));
 var x = 5;
 var str = "if (x == 5) {console.log('z is 42'); z = 42; x = 420; } else z = 0;";
 
-console.log('x is ', eval(str)); // z is 42  x is 420
+console.log("x is ", eval(str)); // z is 42  x is 420
 ```
 
 ### 返回值
@@ -266,25 +278,25 @@ console.log('x is ', eval(str)); // z is 42  x is 420
 `eval` 返回最后一个表达式的值。
 
 ```js
-var str = 'if ( a ) { 1 + 1; } else { 1 + 2; }';
+var str = "if ( a ) { 1 + 1; } else { 1 + 2; }";
 var a = true;
-var b = eval(str);  // returns 2
+var b = eval(str); // returns 2
 
-console.log('b is : ' + b);
+console.log("b is : " + b);
 
 a = false;
-b = eval(str);  // returns 3
+b = eval(str); // returns 3
 
-console.log('b is : ' + b);
+console.log("b is : " + b);
 ```
 
 ### `eval` 中函数作为字符串被定义需要“（”和“）”作为前缀和后缀
 
 ```js
-var fctStr1 = 'function a() {}'
-var fctStr2 = '(function a() {})'
-var fct1 = eval(fctStr1)  // 返回 undefined
-var fct2 = eval(fctStr2)  // 返回一个函数
+var fctStr1 = "function a() {}";
+var fctStr2 = "(function a() {})";
+var fct1 = eval(fctStr1); // 返回 undefined
+var fct2 = eval(fctStr2); // 返回一个函数
 ```
 
 ## 规范

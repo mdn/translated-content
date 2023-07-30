@@ -10,7 +10,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 
 | Предпосылки: | Базовая компьютерная грамотность, [установка базового программного обеспечения](/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F), базовые знания [работы с файлами](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files), знакомство с основами HTML (как описано в разделе [Начало работы с HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B)) и предыдущими статьями в этом модуле. |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Задача:      | Узнать, как встраивать элементы в веб-страницы, используя {{htmlelement ("object")}}, {{htmlelement ("embed")}} и {{htmlelement ("iframe")}}, например, флеш-ролики и другие веб-страницы                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Задача:      | Узнать, как встраивать элементы в веб-страницы, используя {{htmlelement ("object")}}, {{htmlelement ("embed")}} и {{htmlelement ("iframe")}}, например, флеш-ролики и другие веб-страницы                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 ## Краткая история внедрения
 
@@ -44,18 +44,21 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 250px;">
-</div>
+<div class="output" style="min-height: 250px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
-<textarea id="code" class="input" style="width: 95%;min-height: 100px;">
-</textarea>
+<textarea
+  id="code"
+  class="input"
+  style="width: 95%;min-height: 100px;"></textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -82,10 +85,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -93,38 +96,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var htmlSolution = '<iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen>\n</iframe>\n\n<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>\n</iframe>';
+var htmlSolution =
+  '<iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen>\n</iframe>\n\n<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>\n</iframe>';
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -136,8 +140,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -148,10 +155,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -251,24 +258,31 @@ textarea.onkeyup = function(){
 
 Если вам нужно внедрить контент плагина, ниже исчерпывающая информация, которая вам понадобится:
 
-|                                                                                      | {{htmlelement("embed")}}                                                          | {{htmlelement("object")}}                                                              |
-| ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| {{glossary("URL")}} встраиваемого контента                                      | [`src`](/ru/docs/Web/HTML/Element/embed#src)                                                  | [`data`](/ru/docs/Web/HTML/Element/object#data)                                                  |
-| _точный_ {{glossary("MIME type", 'media type')}} встраиваемого контента | [`type`](/ru/docs/Web/HTML/Element/embed#type)                                              | [`type`](/ru/docs/Web/HTML/Element/object#type)                                                  |
-| высота и ширина (в пикселях) элемента, управляемого плагином                         | [`height`](/ru/docs/Web/HTML/Element/embed#height) [`width`](/ru/docs/Web/HTML/Element/embed#width) | [`height`](/ru/docs/Web/HTML/Element/object#height) [`width`](/ru/docs/Web/HTML/Element/object#width) |
-| имена и значения, предоставляемые плагину в качестве параметров                      | Особые атрибуты,с их именами и значениями                                                 | одиночные элементы {{htmlelement("param")}}, находящиеся внутри `<object>`            |
-| независимый HTML-контент в качестве резерва для отсутствующего ресурса               | не поддерживается (`<noembed>` является устаревшим)                                       | содержится внутри `<object>`, после элементов `<param>`                                       |
+|                                                                         | {{htmlelement("embed")}}                                                                            | {{htmlelement("object")}}                                                                             |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| {{glossary("URL")}} встраиваемого контента                              | [`src`](/ru/docs/Web/HTML/Element/embed#src)                                                        | [`data`](/ru/docs/Web/HTML/Element/object#data)                                                       |
+| _точный_ {{glossary("MIME type", 'media type')}} встраиваемого контента | [`type`](/ru/docs/Web/HTML/Element/embed#type)                                                      | [`type`](/ru/docs/Web/HTML/Element/object#type)                                                       |
+| высота и ширина (в пикселях) элемента, управляемого плагином            | [`height`](/ru/docs/Web/HTML/Element/embed#height) [`width`](/ru/docs/Web/HTML/Element/embed#width) | [`height`](/ru/docs/Web/HTML/Element/object#height) [`width`](/ru/docs/Web/HTML/Element/object#width) |
+| имена и значения, предоставляемые плагину в качестве параметров         | Особые атрибуты,с их именами и значениями                                                           | одиночные элементы {{htmlelement("param")}}, находящиеся внутри `<object>`                            |
+| независимый HTML-контент в качестве резерва для отсутствующего ресурса  | не поддерживается (`<noembed>` является устаревшим)                                                 | содержится внутри `<object>`, после элементов `<param>`                                               |
 
 > **Примечание:** Элементу `<object>` необходим атрибут `data` , атрибут `type` , или оба сразу. Если вы используете их вместе, вы также можете использовать атрибут [`typemustmatch`](/ru/docs/Web/HTML/Element/object#typemustmatch) (имеющийся в наличии только в Firefox, на момент написания данной статьи). Атрибут `typemustmatch` предотвращает запуск файла, только если в в атрибут type не записан соответствующий медиа-тип. Следовательно, атрибут `typemustmatch` может предоставлять значительные преимущества в безопасности в случае встраивания контента из других источников {{glossary("origin")}} (Таким образом, не давая возможности злоумышленникам запускать произвольные скрипты посредством плагинов).
 
 Ниже представлен пример использования элемента {{htmlelement("embed")}} для вставки Flash-фильма (загляните на [live on Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html), а также на [check the source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html)):
 
 ```html
-<embed src="whoosh.swf" quality="medium"
-       bgcolor="#ffffff" width="550" height="400"
-       name="whoosh" align="middle" allowScriptAccess="sameDomain"
-       allowFullScreen="false" type="application/x-shockwave-flash"
-       pluginspage="http://www.macromedia.com/go/getflashplayer">
+<embed
+  src="whoosh.swf"
+  quality="medium"
+  bgcolor="#ffffff"
+  width="550"
+  height="400"
+  name="whoosh"
+  align="middle"
+  allowScriptAccess="sameDomain"
+  allowFullScreen="false"
+  type="application/x-shockwave-flash"
+  pluginspage="http://www.macromedia.com/go/getflashplayer" />
 ```
 
 Достаточно ужасно, не так ли? Html-код, генерируемый Flash, имел склонность быть значительно хуже. Он использовал элемент `<object>` вместе со встроенным элементом `<embed>` для скрытия всего фундамента (взгляните на пример). Flash ранее использовался в качестве резерва для HTML5-видео (в случае его отсутствия), но со временем необходимость в этом отпала.
@@ -276,9 +290,16 @@ textarea.onkeyup = function(){
 Давайте взглянем на пример `<object>` , встраивающего PDF в страницу (взгляните [live example](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) и [source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)):
 
 ```html
-<object data="mypdf.pdf" type="application/pdf"
-        width="800" height="1200" typemustmatch>
-  <p>You don't have a PDF plugin, but you can <a href="mypdf.pdf">download the PDF file.</a></p>
+<object
+  data="mypdf.pdf"
+  type="application/pdf"
+  width="800"
+  height="1200"
+  typemustmatch>
+  <p>
+    You don't have a PDF plugin, but you can
+    <a href="mypdf.pdf">download the PDF file.</a>
+  </p>
 </object>
 ```
 

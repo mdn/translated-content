@@ -56,7 +56,7 @@ option:checked {
 - `option:checked`
   - : Representa todos os selects na página que estão selecionados
 
-### Usando checkboxes escodindos para amarzenar algum valor booleano.
+### Usando checkboxes escodindos para amarzenar algum valor booleano
 
 A pseudo-classe `:checked` aplicada em checkboxes escondidos, adicionado ao início de sua página pode
 ser aplicada de forma a armazenar algum booleano dinâmico para ser usado por uma regra CSS. O exemplo a seguir mostra como exibir/esconder um elemento expansível com um simples clique em um botão ([download esse demo](/@api/deki/files/6246/=expandable-elements.html)).

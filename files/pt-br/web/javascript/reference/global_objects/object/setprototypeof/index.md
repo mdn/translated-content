@@ -101,7 +101,7 @@ Object.appendChain = function(oChain, oProto) {
 
 ### Exemplos
 
-#### Primeiro exemplo: Adicionar uma cadeia a um 'prototype'.
+#### Primeiro exemplo: Adicionar uma cadeia a um 'prototype'
 
 ```js
 function Mammal() {
@@ -128,7 +128,7 @@ Object.appendChain(oCat, new Animal());
 console.log(oCat.breathing); // 'yes'
 ```
 
-#### Segundo exemplo: Transformar um valor primitivo em uma instância de seu construtor e anexar sua cadeia a um 'prototype'.
+#### Segundo exemplo: Transformar um valor primitivo em uma instância de seu construtor e anexar sua cadeia a um 'prototype'
 
 ```js
 function MySymbol() {
@@ -146,7 +146,7 @@ console.log(oPrime.isSymbol); // 'yes'
 console.log(typeof oPrime); // 'object'
 ```
 
-#### Terceiro exemplo: Anexar uma cadeia ao objeto Function.prototype e anexar uma nova função a essa cadeia.
+#### Terceiro exemplo: Anexar uma cadeia ao objeto Function.prototype e anexar uma nova função a essa cadeia
 
 ```js
 function Person(sName) {

@@ -42,7 +42,7 @@ l10n:
 >   - : `page-type` キーは、 Web/API メソッドでは `web-api-instance-method` （インスタンスメソッドの場合）または `web-api-static-method` （静的メソッドの場合）です。
 > - **status**
 >   - : （適切な）技術の状態のキーを入れてください。
-[**experimental**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)、[**deprecated**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)、**non-standard** （標準化過程にない場合）
+>     [**experimental**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)、[**deprecated**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)、**non-standard** （標準化過程にない場合）
 > - **browser-compat**
 >
 >   - : プレースホルダーの値 `path.to.feature.NameOfTheMethod` を [ブラウザー互換性データリポジトリー](https://github.com/mdn/browser-compat-data) にあるメソッドのクエリー文字列に置き換えてください。

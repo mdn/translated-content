@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial de Django Parte 11: Desplegando Django a producción'
+title: "Tutorial de Django Parte 11: Desplegando Django a producción"
 slug: Learn/Server-side/Django/Deployment
 ---
 
@@ -198,10 +198,10 @@ Existen muchas formas de trabajar con git, pero una de las más sencillas es cre
 2. Una vez conectado, haz click en el enlace **+** de la barra de tareas superior y selecciona **New repository**.
 3. Rellena todos los campos de este formulario. Aunque no son obligatorios, es muy recomendable que los rellenes todos.
 
-    - Introduce el nombre del nuevo repositorio (por ejemplo, _django_local_library_), y una descripción (por ejemplo "Sitio web de la Biblioteca Local escrita en Django").
-    - Selecciona **Python** en la lista de selección _Add .gitignore._
-    - Selecciona tu licencia en la lista de selección _Add license_.
-    - Marca **Initialize this repository with a README**.
+   - Introduce el nombre del nuevo repositorio (por ejemplo, _django_local_library_), y una descripción (por ejemplo "Sitio web de la Biblioteca Local escrita en Django").
+   - Selecciona **Python** en la lista de selección _Add .gitignore._
+   - Selecciona tu licencia en la lista de selección _Add license_.
+   - Marca **Initialize this repository with a README**.
 
 4. Pulsa **Create repository**.
 5. Haz click en el botón verde "**Clone or download**" en la página de tu nuevo repositorio.
@@ -212,65 +212,65 @@ Ahora que el repositorio ("repo") ha sido creado, querremos clonarlo en nuestra 
 1. Instala _git_ para tu computadora local (puedes encontrar versiones para distintas plataformas [here](https://git-scm.com/downloads)).
 2. Abre una ventana/terminal de comandos y clona tu repositorio usando la URL que copiaste anteriormente:
 
-    ```bash
-    git clone https://github.com/<your_git_user_id>/django_local_library.git
-    ```
+   ```bash
+   git clone https://github.com/<your_git_user_id>/django_local_library.git
+   ```
 
-    Esto creará el repositorio debajo del punto actual.
+   Esto creará el repositorio debajo del punto actual.
 
 3. Navega dentro del nuevo repositorio.
 
-    ```bash
-    cd django_local_library.git
-    ```
+   ```bash
+   cd django_local_library.git
+   ```
 
 El paso final es copiar en él tu aplicación y a continuación añadir los archivos a tu repositorio usando git:
 
 1. Copia tu aplicación Django en esta carpeta (todos los archivos que estén al mismo nivel que **manage.py** y por debajo, **no** su carpeta locallibrary contenedora).
 2. Abre el archivo **.gitignore**, copia las siguientes líneas al final del mismo, y guárdalo (este archivo se utiliza para identificar los archivos que, por defecto, no deberían subirse a git).
 
-    ```bash
-    # Text backup files
-    *.bak
+   ```bash
+   # Text backup files
+   *.bak
 
-    #Database
-    *.sqlite3
-    ```
+   #Database
+   *.sqlite3
+   ```
 
 3. Abre una ventana/terminal de comandos y utiliza el comando `add` para añadir todos los archivos a git.
 
-    ```bash
-    git add -A
-    ```
+   ```bash
+   git add -A
+   ```
 
 4. Utiliza el comando status para comprobar que todos los archivos que vas a añadir son correctos (quieres incluir ficheros fuentes, no binarios, archivos temporales, etc). Debería tener un aspecto similar a la lista siguiente.
 
-    ```bash
-    > git status
-    On branch master
-    Your branch is up-to-date with 'origin/master'.
-    Changes to be committed:
-      (use "git reset HEAD <file>..." to unstage)
+   ```bash
+   > git status
+   On branch master
+   Your branch is up-to-date with 'origin/master'.
+   Changes to be committed:
+     (use "git reset HEAD <file>..." to unstage)
 
-            modified:   .gitignore
-            new file:   catalog/__init__.py
-            ...
-            new file:   catalog/migrations/0001_initial.py
-            ...
-            new file:   templates/registration/password_reset_form.html
-    ```
+           modified:   .gitignore
+           new file:   catalog/__init__.py
+           ...
+           new file:   catalog/migrations/0001_initial.py
+           ...
+           new file:   templates/registration/password_reset_form.html
+   ```
 
 5. Si estás conforme, consolida tus archivos en el repositorio local:
 
-    ```bash
-    git commit -m "First version of application moved into github"
-    ```
+   ```bash
+   git commit -m "First version of application moved into github"
+   ```
 
 6. A continuación, sincroniza tu repositorio local con el sitio web Github, usando lo siguiente:
 
-    ```bash
-    git push origin master
-    ```
+   ```bash
+   git push origin master
+   ```
 
 Una vez completada esta operación, deberías poder regresar a la página de Github donde creaste tu repositorio, refrescar la página, y comprobar que tu toda tu aplicación ha sido ya cargada. Puedes continuar actualizando tu repositorio según vayan cambiando los archivos, usando este ciclo add/commit/push.
 

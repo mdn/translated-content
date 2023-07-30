@@ -1,13 +1,7 @@
 ---
 title: Labels multi-options
 slug: Web/Accessibility/ARIA/Multipart_labels
-tags:
-  - ARAI
-  - Accessibilité
-  - Développement Web
-  - Formulaire
 translation_of: Web/Accessibility/ARIA/forms/Multipart_labels
-original_slug: Web/Accessibility/ARIA/forms/Multipart_labels
 ---
 
 ## Utiliser ARIA avec des labels comportant des champs

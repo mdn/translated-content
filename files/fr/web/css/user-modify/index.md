@@ -1,11 +1,6 @@
 ---
 title: user-modify
 slug: Web/CSS/user-modify
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/user-modify
 ---
 

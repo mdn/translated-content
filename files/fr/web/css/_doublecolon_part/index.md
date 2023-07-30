@@ -1,15 +1,6 @@
 ---
-title: '::part()'
+title: "::part()"
 slug: Web/CSS/::part
-tags:
-  - '::part'
-  - CSS
-  - Draft
-  - Exp
-  - NeedsBrowserCompatibility
-  - NeedsExample
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::part
 ---
 
@@ -35,7 +26,9 @@ custom-element::part(foo) {
 
 ```html
 <style type="text/css">
-  *, ::before, ::after {
+  *,
+  ::before,
+  ::after {
     box-sizing: border-box;
   }
 
@@ -43,15 +36,9 @@ custom-element::part(foo) {
     display: flex;
   }
 </style>
-<div part="tab active">
-  Tab 1
-</div>
-<div part="tab">
-  Tab 2
-</div>
-<div part="tab">
-  Tab 3
-</div>
+<div part="tab active">Tab 1</div>
+<div part="tab">Tab 2</div>
+<div part="tab">Tab 3</div>
 ```
 
 #### Feuille de style chargée dans un arbre léger

@@ -1,18 +1,7 @@
 ---
-title: '<dl> : l''élément de liste de descriptions'
+title: "<dl> : l'élément de liste de descriptions"
 slug: Web/HTML/Element/dl
-tags:
-  - Definition List
-  - Description list
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/dl
-browser-compat: html.elements.dl
 ---
 
 {{HTMLSidebar}}
@@ -130,9 +119,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 <dl>
   <dt>Firefox</dt>
   <dd>
-    Un navigateur Web libre, open-source, multi-plateforme
-    dévelopé par la Mozilla Corporation et des centaines de
-    volontaires.
+    Un navigateur Web libre, open-source, multi-plateforme dévelopé par la
+    Mozilla Corporation et des centaines de volontaires.
   </dd>
   <!-- D'autres termes et leurs descriptions -->
 </dl>
@@ -150,9 +138,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
   <dt>Mozilla Firefox</dt>
   <dt>Fx</dt>
   <dd>
-    Un navigateur Web libre, open-source, multi-plateforme
-    dévelopé par la Mozilla Corporation et des centaines de
-    volontaires.
+    Un navigateur Web libre, open-source, multi-plateforme dévelopé par la
+    Mozilla Corporation et des centaines de volontaires.
   </dd>
   <!-- D'autres termes et leurs définitions -->
 </dl>
@@ -168,14 +155,13 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 <dl>
   <dt>Firefox</dt>
   <dd>
-    Un navigateur Web libre, open-source, multi-plateforme
-    dévelopé par la Mozilla Corporation et des centaines de
-    volontaires.
+    Un navigateur Web libre, open-source, multi-plateforme dévelopé par la
+    Mozilla Corporation et des centaines de volontaires.
   </dd>
   <dd>
-    Le petit panda, panda roux, panda fuligineux ou panda
-    éclatant (Ailurus fulgens), est un mammifère originaire
-    de l'Himalaya et de la Chine méridionale.
+    Le petit panda, panda roux, panda fuligineux ou panda éclatant (Ailurus
+    fulgens), est un mammifère originaire de l'Himalaya et de la Chine
+    méridionale.
   </dd>
   <!-- D'autres termes et leurs définitions -->
 </dl>

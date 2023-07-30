@@ -34,12 +34,12 @@ Number(value)
 ### 创建 Number 对象
 
 ```js
-const a = new Number('123'); // a === 123 为 false
-const b = Number('123');     // b === 123 为 true
-a instanceof Number;         // 为 true
-b instanceof Number;         // 为 false
-typeof a // "object"
-typeof b // "number"
+const a = new Number("123"); // a === 123 为 false
+const b = Number("123"); // b === 123 为 true
+a instanceof Number; // 为 true
+b instanceof Number; // 为 false
+typeof a; // "object"
+typeof b; // "number"
 ```
 
 ### 使用 Number() 将 BigInt 转换为数值

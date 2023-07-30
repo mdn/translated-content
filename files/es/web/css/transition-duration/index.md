@@ -42,46 +42,52 @@ transition-duration: unset;
 `transition-duration: 0.5s`
 
 ```html hidden
- <div class="parent">
+<div class="parent">
   <div class="box">Lorem</div>
 </div>
-
 ```
 
 ```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-    -webkit-transition-duration:0.5s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transform color;
-    transition-duration:0.5s;
-    transition-timing-function: ease-in-out;
+.parent {
+  width: 250px;
+  height: 125px;
 }
-.box1{
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-    -webkit-transition-duration:0.5s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transformv color;
-    transition-duration:0.5s;
-    transition-timing-function: ease-in-out;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 20px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    transform -webkit-transform color;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: width height background-color font-size left top
+    transform -webkit-transform color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+.box1 {
+  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  color: yellow;
+  font-size: 18px;
+  left: 150px;
+  top: 25px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    transform -webkit-transform color;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: width height background-color font-size left top
+    transform -webkit-transformv color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 ```
 
@@ -107,46 +113,52 @@ var intervalID = window.setInterval(updateTransition, 7000);
 `transition-duration: 1s`
 
 ```html hidden
- <div class="parent">
+<div class="parent">
   <div class="box">Lorem</div>
 </div>
-
 ```
 
 ```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top -webkit-transform color;
-    -webkit-transition-duration:1s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform color;
-    transition-duration:1s;
-    transition-timing-function: ease-in-out;
+.parent {
+  width: 250px;
+  height: 125px;
 }
-.box1{
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top -webkit-transform transform color;
-    -webkit-transition-duration:1s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transform color;
-    transition-duration:1s;
-    transition-timing-function: ease-in-out;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 20px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left
+    top -webkit-transform color;
+  -webkit-transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: width height background-color font-size left top
+    transform color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+.box1 {
+  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  color: yellow;
+  font-size: 18px;
+  left: 150px;
+  top: 25px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left
+    top -webkit-transform transform color;
+  -webkit-transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: width height background-color font-size left top
+    transform -webkit-transform color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
 }
 ```
 
@@ -172,46 +184,52 @@ var intervalID = window.setInterval(updateTransition, 7000);
 `transition-duration: 2s`
 
 ```html hidden
- <div class="parent">
+<div class="parent">
   <div class="box">Lorem</div>
 </div>
-
 ```
 
 ```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transform color;
-    transition-duration:2s;
-    transition-timing-function: ease-in-out;
+.parent {
+  width: 250px;
+  height: 125px;
 }
-.box1{
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transform color;
-    transition-duration:2s;
-    transition-timing-function: ease-in-out;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 20px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    transform -webkit-transform color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: width height background-color font-size left top
+    transform -webkit-transform color;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+}
+.box1 {
+  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  color: yellow;
+  font-size: 18px;
+  left: 150px;
+  top: 25px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    transform -webkit-transform color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: width height background-color font-size left top
+    transform -webkit-transform color;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
 }
 ```
 
@@ -237,46 +255,52 @@ var intervalID = window.setInterval(updateTransition, 7000);
 `transition-duration: 4s`
 
 ```html hidden
- <div class="parent">
+<div class="parent">
   <div class="box">Lorem</div>
 </div>
-
 ```
 
 ```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-    -webkit-transition-duration:4s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transform color;
-    transition-duration:4s;
-    transition-timing-function: ease-in-out;
+.parent {
+  width: 250px;
+  height: 125px;
 }
-.box1{
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-    -webkit-transition-duration:4s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transform color;
-    transition-duration:4s;
-    transition-timing-function: ease-in-out;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 20px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    transform -webkit-transform color;
+  -webkit-transition-duration: 4s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: width height background-color font-size left top
+    transform -webkit-transform color;
+  transition-duration: 4s;
+  transition-timing-function: ease-in-out;
+}
+.box1 {
+  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  color: yellow;
+  font-size: 18px;
+  left: 150px;
+  top: 25px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    transform -webkit-transform color;
+  -webkit-transition-duration: 4s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: width height background-color font-size left top
+    transform -webkit-transform color;
+  transition-duration: 4s;
+  transition-timing-function: ease-in-out;
 }
 ```
 

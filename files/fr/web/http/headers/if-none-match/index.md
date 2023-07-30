@@ -1,12 +1,6 @@
 ---
 title: If-None-Match
 slug: Web/HTTP/Headers/If-None-Match
-tags:
-  - En-tête HTTP
-  - En-tête de requête
-  - HTTP
-  - Reference
-  - Requêtes Conditionnelles
 translation_of: Web/HTTP/Headers/If-None-Match
 ---
 

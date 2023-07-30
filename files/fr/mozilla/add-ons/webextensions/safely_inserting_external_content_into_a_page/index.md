@@ -36,9 +36,13 @@ Cependant, attention, vous pouvez utiliser des méthodes natives qui ne sont pas
 
 ```js example-bad
 var data = JSON.parse(responseText);
-addonElement.innerHTML = "<div class='" + data.className + "'>" +
-                         "Your favorite color is now " + data.color +
-                         "</div>";
+addonElement.innerHTML =
+  "<div class='" +
+  data.className +
+  "'>" +
+  "Your favorite color is now " +
+  data.color +
+  "</div>";
 ```
 
 Ici, le contenu de `data.className` ou de `data.color` peut contenir du HTML qui peut fermer le tag plus tôt, insérer du contenu HTML arbitraire, puis ouvrir une autre balise.

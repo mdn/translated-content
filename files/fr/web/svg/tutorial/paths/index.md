@@ -1,11 +1,7 @@
 ---
 title: Paths
 slug: Web/SVG/Tutorial/Paths
-tags:
-  - SVG
-  - SVG:Tutoriel
 translation_of: Web/SVG/Tutorial/Paths
-original_slug: Web/SVG/Tutoriel/Paths
 ---
 
 {{ PreviousNext("Web/SVG/Tutoriel/Formes_de_base", "Web/SVG/Tutoriel/Fills_and_Strokes") }}
@@ -114,7 +110,7 @@ Dans ces exemples, il serait probablement plus simple d'utiliser un élément `<
 
 ## Commandes pour les courbes
 
-Il existe trois commandes différentes pour créer des courbes. Deux d'entre elles sont des courbes de Bézier, et la troisième est un «&nbsp;arc&nbsp;» ou section de cercle. Il se peut que vous ayez déjà acquis une expérience pratique avec les courbes de Bézier en utilisant les outils de chemins avec Inkscape, Illustrator ou Photoshop. Pour une description complète des concepts mathématiques sous-jacents, vous pouvez consulter la [page Wikipédia sur les courbes de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier).
+Il existe trois commandes différentes pour créer des courbes. Deux d'entre elles sont des courbes de Bézier, et la troisième est un «&nbsp;arc&nbsp;» ou section de cercle. Il se peut que vous ayez déjà acquis une expérience pratique avec les courbes de Bézier en utilisant les outils de chemins avec Inkscape, Illustrator ou Photoshop. Pour une description complète des concepts mathématiques sous-jacents, vous pouvez consulter la [page Wikipédia sur les courbes de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_Bézier).
 
 Il existe une infinité de courbes de Bézier, mais seulement deux des plus simples d'entre elles sont disponibles dans les éléments `path`: l'une cubique, invoquée avec `C`, et l'autre quadratique, invoquée avec `Q`.
 
@@ -252,35 +248,58 @@ Pour un rayon `rx` et un rayon `ry` donnés, il existe deux ellipses pouvant con
 
 ```html
 <!-- sweep-flag: 0 -->
-<path d="M 125,75 a100,50 0 0,0 100,50"
-      stroke="red" stroke-width="6" fill="none" />
+<path
+  d="M 125,75 a100,50 0 0,0 100,50"
+  stroke="red"
+  stroke-width="6"
+  fill="none" />
 
 <!-- sweep-flag: 1 -->
-<path d="M 125,75 a100,50 0 0,1 100,50"
-      stroke="blue" stroke-width="6" fill="none" />
+<path
+  d="M 125,75 a100,50 0 0,1 100,50"
+  stroke="blue"
+  stroke-width="6"
+  fill="none" />
 ```
 
 ##### Exemple jouable
 
 ```html hidden
 <svg width="350" viewBox="0 0 350 200" xmlns="http://www.w3.org/2000/svg">
-
-  <g font-family="Verdana" font-size="13" >
-    <ellipse cx="125" cy="125" rx="100" ry="50"
-             fill="none" stroke="#888888" stroke-width="2" />
-    <ellipse cx="225" cy="75" rx="100" ry="50"
-             fill="none" stroke="#888888" stroke-width="2" />
+  <g font-family="Verdana" font-size="13">
+    <ellipse
+      cx="125"
+      cy="125"
+      rx="100"
+      ry="50"
+      fill="none"
+      stroke="#888888"
+      stroke-width="2" />
+    <ellipse
+      cx="225"
+      cy="75"
+      rx="100"
+      ry="50"
+      fill="none"
+      stroke="#888888"
+      stroke-width="2" />
     <text x="120" y="70" text-anchor="end">Arc start</text>
     <text x="230" y="140">Arc end</text>
   </g>
 
   <!-- large-arc-flag: 0 -->
-  <path d="M 125,75 a100,50 0 0,0 100,50"
-        stroke="red" stroke-width="6" fill="none" />
+  <path
+    d="M 125,75 a100,50 0 0,0 100,50"
+    stroke="red"
+    stroke-width="6"
+    fill="none" />
 
   <!-- large-arc-flag: 1 -->
-  <path d="M 125,75 a100,50 0 0,1 100,50"
-        stroke="blue" stroke-width="6" fill="none" />
+  <path
+    d="M 125,75 a100,50 0 0,1 100,50"
+    stroke="blue"
+    stroke-width="6"
+    fill="none" />
 </svg>
 ```
 
@@ -294,35 +313,58 @@ Pour chacune des deux ellipses, il existe deux chemins possibles, ce qui donne q
 
 ```html
 <!-- large-arc-flag: 0 -->
-<path d="M 125,75 a100,50 0 0,0 100,50"
-      stroke="red" stroke-width="6" fill="none" />
+<path
+  d="M 125,75 a100,50 0 0,0 100,50"
+  stroke="red"
+  stroke-width="6"
+  fill="none" />
 
 <!-- large-arc-flag: 1 -->
-<path d="M 125,75 a100,50 0 1,0 100,50"
-      stroke="blue" stroke-width="6" fill="none" />
+<path
+  d="M 125,75 a100,50 0 1,0 100,50"
+  stroke="blue"
+  stroke-width="6"
+  fill="none" />
 ```
 
 #### Code jouable 2
 
 ```html hidden
 <svg width="350" viewBox="0 0 350 200" xmlns="http://www.w3.org/2000/svg">
-
-  <g font-family="Verdana" font-size="13" >
-    <ellipse cx="125" cy="125" rx="100" ry="50"
-             fill="none" stroke="#888888" stroke-width="2" />
-    <ellipse cx="225" cy="75" rx="100" ry="50"
-             fill="none" stroke="#888888" stroke-width="2" />
+  <g font-family="Verdana" font-size="13">
+    <ellipse
+      cx="125"
+      cy="125"
+      rx="100"
+      ry="50"
+      fill="none"
+      stroke="#888888"
+      stroke-width="2" />
+    <ellipse
+      cx="225"
+      cy="75"
+      rx="100"
+      ry="50"
+      fill="none"
+      stroke="#888888"
+      stroke-width="2" />
     <text x="120" y="70" text-anchor="end">Arc start</text>
     <text x="230" y="140">Arc end</text>
   </g>
 
   <!-- sweep-flag: 0 -->
-  <path d="M 125,75 a100,50 0 0,0 100,50"
-        stroke="red" stroke-width="6" fill="none" />
+  <path
+    d="M 125,75 a100,50 0 0,0 100,50"
+    stroke="red"
+    stroke-width="6"
+    fill="none" />
 
   <!-- sweep-flag: 1 -->
-  <path d="M 125,75 a100,50 0 1,0 100,50"
-        stroke="blue" stroke-width="6" fill="none" />
+  <path
+    d="M 125,75 a100,50 0 1,0 100,50"
+    stroke="blue"
+    stroke-width="6"
+    fill="none" />
 </svg>
 ```
 

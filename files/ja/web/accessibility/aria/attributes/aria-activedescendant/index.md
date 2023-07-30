@@ -19,7 +19,7 @@ original_slug: >-
 
 ### 例
 
-#### Example 1:
+#### Example 1
 
 ```html
 Code

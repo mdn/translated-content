@@ -38,7 +38,7 @@ Nous avons actuellement dégelé les langues suivantes :
 ### Russe (ru)
 
 - Discussions : [Matrix (#mdn-l10n-ru channel)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
-- Contributeurs actuels : [armanpwnz](https://github.com/armanpwnz), [captainspring](https://github.com/captainspring), [mpstv](https://github.com/mpstv), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
+- Contributeurs actuels : [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
 
 ## Autres sujets de localisation sur MDN
 

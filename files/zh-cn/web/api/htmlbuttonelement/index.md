@@ -166,10 +166,10 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
 
 _从父对象{{domxref("HTMLElement")}}继承的方法。_
 
-| 名字                                    | 返回类型                     | 描述               |
-| --------------------------------------- | ---------------------------- | ------------------ |
+| 名字                                    | 返回类型               | 描述               |
+| --------------------------------------- | ---------------------- | ------------------ |
 | `checkValidity()`                       | {{domxref("Boolean")}} | 对按钮元素不支持。 |
-| `setCustomValidity(in DOMString error)` | `void`                       | 对按钮元素不支持。 |
+| `setCustomValidity(in DOMString error)` | `void`                 | 对按钮元素不支持。 |
 
 在基于 Gecko 的浏览器中，在表单验证时会使用{{cssxref(":-moz-submit-invalid")}} 伪类修饰提交按钮。
 

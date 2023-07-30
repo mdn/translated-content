@@ -12,8 +12,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/setPrototyp
 
 ```js
 var p = new Proxy(target, {
-  setPrototypeOf: function(target, prototype) {
-  }
+  setPrototypeOf: function (target, prototype) {},
 });
 ```
 
@@ -55,12 +54,13 @@ The former approach means that any operation that performs such mutation, that t
 
 ```js
 var handlerReturnsFalse = {
-    setPrototypeOf(target, newProto) {
-        return false;
-    }
+  setPrototypeOf(target, newProto) {
+    return false;
+  },
 };
 
-var newProto = {}, target = {};
+var newProto = {},
+  target = {};
 
 var p1 = new Proxy(target, handlerReturnsFalse);
 Object.setPrototypeOf(p1, newProto); // throws a TypeError
@@ -71,12 +71,13 @@ The latter approach will cause _any_ operation that attempts to mutate, to throw
 
 ```js
 var handlerThrows = {
-    setPrototypeOf(target, newProto) {
-        throw new Error('custom error');
-    }
+  setPrototypeOf(target, newProto) {
+    throw new Error("custom error");
+  },
 };
 
-var newProto = {}, target = {};
+var newProto = {},
+  target = {};
 
 var p2 = new Proxy(target, handlerThrows);
 Object.setPrototypeOf(p2, newProto); // throws new Error("custom error")

@@ -1,14 +1,6 @@
 ---
 title: IntersectionObserver.IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
-tags:
-  - API
-  - Constructor
-  - Intersection Observer API
-  - IntersectionObserver
-  - Reference
-  - Visibility
-  - Visible
 translation_of: Web/API/IntersectionObserver/IntersectionObserver
 ---
 
@@ -61,7 +53,7 @@ Cet exemple crée un nouvel observateur d'intersection qui appelle la fonction `
 
 ```js
 let observer = new IntersectionObserver(myObserverCallback, {
-  threshold: 0.1
+  threshold: 0.1,
 });
 ```
 

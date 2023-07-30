@@ -54,7 +54,9 @@ JavaScript 代码只需将要匹配的媒体查询字符串传递到{{domxref("W
 
 ```css hidden
 .mq-value {
-  font: 18px arial, sans-serif;
+  font:
+    18px arial,
+    sans-serif;
   font-weight: bold;
   color: #88f;
   padding: 0.4em;

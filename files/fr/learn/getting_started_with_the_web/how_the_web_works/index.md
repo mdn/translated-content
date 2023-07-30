@@ -1,19 +1,7 @@
 ---
 title: Le fonctionnement du Web
 slug: Learn/Getting_started_with_the_web/How_the_Web_works
-tags:
-  - Apprendre
-  - Client
-  - DNS
-  - Débutant
-  - HTTP
-  - IP
-  - Infrastructure
-  - Serveur
-  - TCP
-  - Web
 translation_of: Learn/Getting_started_with_the_web/How_the_Web_works
-original_slug: Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web
 ---
 
 {{LearnSidebar}}

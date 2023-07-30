@@ -1,14 +1,6 @@
 ---
 title: Window.screen
 slug: Web/API/Window/screen
-tags:
-  - API
-  - CSSOM View
-  - DOM
-  - Fenêtre
-  - Propriété
-  - Vue CSSOM
-  - Écran
 translation_of: Web/API/Window/screen
 ---
 

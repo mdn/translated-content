@@ -27,7 +27,11 @@ const xmlStr = '<a id="a"><b id="b">hey!</b></a>';
 const parser = new DOMParser();
 const dom = parser.parseFromString(xmlStr, "application/xml");
 // ルート要素の名前またはエラーメッセージを出力します
-console.log(dom.documentElement.nodeName == "parsererror" ? "パース中にエラー発生" : dom.documentElement.nodeName);
+console.log(
+  dom.documentElement.nodeName == "parsererror"
+    ? "パース中にエラー発生"
+    : dom.documentElement.nodeName,
+);
 ```
 
 ### URL にできるリソースを DOM ツリーにパースする
@@ -39,13 +43,13 @@ URL アドレス指定が可能な XML ファイルを読み込み解析して D
 ```js
 const xhr = new XMLHttpRequest();
 
-xhr.onload = function() {
+xhr.onload = function () {
   dump(xhr.responseXML.documentElement.nodeName);
-}
+};
 
-xhr.onerror = function() {
+xhr.onerror = function () {
   dump("Error while getting XML.");
-}
+};
 
 xhr.open("GET", "example.xml");
 xhr.responseType = "document";

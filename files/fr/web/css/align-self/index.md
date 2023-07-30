@@ -35,8 +35,7 @@ align-self: flex-end; /* Les éléments flexibles sont alignés à la fin */
 align-self: baseline;
 align-self: first baseline;
 align-self: last baseline;
-align-self: stretch; /* Les objets dimensionnés avec 'auto' sont */
-                     /* étirés pour remplir le conteneur */
+align-self: stretch; /* Les objets dimensionnés avec 'auto' sont étirés pour remplir le conteneur */
 
 /* Alignement avec gestion du dépassement */
 align-self: safe center;

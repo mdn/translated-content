@@ -1,9 +1,6 @@
 ---
 title: File
 slug: Web/API/File
-tags:
-  - DOM
-  - File
 translation_of: Web/API/File
 ---
 

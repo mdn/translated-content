@@ -8,4 +8,4 @@ Un **opérande** est la partie d'une instruction qui représente la donnée mani
 
 ## Pour en savoir plus
 
-- [Opérande](https://fr.wikipedia.org/wiki/Op%C3%A9rande) sur Wikipédia
+- [Opérande](https://fr.wikipedia.org/wiki/Opérande) sur Wikipédia

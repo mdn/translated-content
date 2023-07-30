@@ -14,23 +14,27 @@ slug: Web/API/KeyboardEvent/keyCode
 ## Example
 
 ```js
-window.addEventListener("keydown", function (event) {
-  if (event.defaultPrevented) {
-    return; // 如果已取消默认操作，则不应执行任何操作
-  }
+window.addEventListener(
+  "keydown",
+  function (event) {
+    if (event.defaultPrevented) {
+      return; // 如果已取消默认操作，则不应执行任何操作
+    }
 
-  var handled = false;
-  if (event.key !== undefined) {
-    // 使用 KeyboardEvent.key 处理事件，并将 handled 设置为 true。
-  } else if (event.keyCode !== undefined) {
-    //使用 KeyboardEvent.keyCode 处理事件并将 handled 设置为 true。
-  }
+    var handled = false;
+    if (event.key !== undefined) {
+      // 使用 KeyboardEvent.key 处理事件，并将 handled 设置为 true。
+    } else if (event.keyCode !== undefined) {
+      //使用 KeyboardEvent.keyCode 处理事件并将 handled 设置为 true。
+    }
 
-  if (handled) {
-    // 如果事件已处理，则禁止“双重操作”
-    event.preventDefault();
-  }
-}, true);
+    if (handled) {
+      // 如果事件已处理，则禁止“双重操作”
+      event.preventDefault();
+    }
+  },
+  true,
+);
 ```
 
 ## 规范
@@ -70,17 +74,17 @@ Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果�
 
 1. 如果运行 macOS 或者 Linux:
 
-    1. 如果你当前的键盘布局不支持 ASCII 并且候选支持 ASCII 键盘布局可用。
+   1. 如果你当前的键盘布局不支持 ASCII 并且候选支持 ASCII 键盘布局可用。
 
-        1. 如果候选支持 ASCII 的键盘布局仅通过未修改的键产生 ASCII 字符，请对该字符使用`keyCode`。
-        2. 如果候选支持 ASCII 的键盘布局产生带有 Shift 键修饰符的 ASCII 字符，请对该字符使用`keyCode`。
-        3. 否则，在美国键盘布局激活时，使用使用`keyCode`表示由按键产生的 ASCII 字符。
+      1. 如果候选支持 ASCII 的键盘布局仅通过未修改的键产生 ASCII 字符，请对该字符使用`keyCode`。
+      2. 如果候选支持 ASCII 的键盘布局产生带有 Shift 键修饰符的 ASCII 字符，请对该字符使用`keyCode`。
+      3. 否则，在美国键盘布局激活时，使用使用`keyCode`表示由按键产生的 ASCII 字符。
 
-    2. 否则，在美国键盘布局激活时，使用使用`keyCode`表示由按键产生的 ASCII 字符。
+   2. 否则，在美国键盘布局激活时，使用使用`keyCode`表示由按键产生的 ASCII 字符。
 
 2. 如果运行 Windows：
 
-    1. 当美国键盘布局激活时，使用映射到 Windows 的相同虚拟键代码的按键产生的 ASCII 字符的`keyCode`值。
+   1. 当美国键盘布局激活时，使用映射到 Windows 的相同虚拟键代码的按键产生的 ASCII 字符的`keyCode`值。
 
 由标准位置的可打印键引起的每个浏览器的 keydown 事件的 keycode 值
 
@@ -2514,7 +2518,7 @@ gecko 在 keyboardvent 中定义了许多 keycode 值，用于显式地生成映
 | `DOM_VK_TAB`                 | 0x09 (9)   | Tab key.                                                                                                                   |
 | `DOM_VK_CLEAR`               | 0x0C (12)  | "5" key on Numpad when NumLock is unlocked. Or on Mac, clear key which is positioned at NumLock key.                       |
 | `DOM_VK_RETURN`              | 0x0D (13)  | Return/enter key on the main keyboard.                                                                                     |
-| `DOM_VK_ENTER`               | 0x0E (14)  | Reserved, but not used. {{Deprecated_Inline}} (Dropped, see [Firefox bug 969247](https://bugzil.la/969247).)                                  |
+| `DOM_VK_ENTER`               | 0x0E (14)  | Reserved, but not used. {{Deprecated_Inline}} (Dropped, see [Firefox bug 969247](https://bugzil.la/969247).)               |
 | `DOM_VK_SHIFT`               | 0x10 (16)  | Shift key.                                                                                                                 |
 | `DOM_VK_CONTROL`             | 0x11 (17)  | Control key.                                                                                                               |
 | `DOM_VK_ALT`                 | 0x12 (18)  | Alt (Option on Mac) key.                                                                                                   |

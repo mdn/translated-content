@@ -1,5 +1,5 @@
 ---
-title: '@document'
+title: "@document"
 slug: Web/CSS/@document
 ---
 
@@ -8,7 +8,8 @@ slug: Web/CSS/@document
 `@document` [CSS](/zh-CN/docs/Web/CSS) [at-rule](/zh-CN/docs/Web/CSS/At-rule) 根据文档的 URL 限制其中包含的样式规则的作用范围。它主要是为用户定义的样式表（UserStyle）而设计的，但也可以在作者定义的样式表上使用。
 
 ```css
-@document url("https://www.example.com/") {
+@document url("https://www.example.com/")
+{
   h1 {
     color: green;
   }
@@ -34,8 +35,7 @@ slug: Web/CSS/@document
 @document url(http://www.w3.org/),
           url-prefix(http://www.w3.org/Style/),
           domain(mozilla.org),
-          regexp("https:.*")
-{
+          regexp("https:.*") {
   /* 该条 CSS 规则会应用在下面的网页：
      + URL 为"http://www.w3.org/"的页面。
      + 任何 URL 以"http://www.w3.org/Style/"开头的网页

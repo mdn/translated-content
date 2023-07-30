@@ -60,7 +60,7 @@ Se {{cssxref("transform-function/perspective()", "perspective()")}} é uma das m
 
 Veja [Using CSS transforms](/En/CSS/Using_CSS_transforms).
 
-### Exemplo ao vivo:
+### Exemplo ao vivo
 
 ```css
 pre {

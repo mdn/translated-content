@@ -326,7 +326,7 @@ document.querySelector("html").addEventListener("click", function () {
 
 ```js
 document.querySelector("html").addEventListener("click", () => {
-  alert('痛っ! つつかないで!');
+  alert("痛っ! つつかないで!");
 });
 ```
 

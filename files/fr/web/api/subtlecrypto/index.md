@@ -1,17 +1,6 @@
 ---
 title: SubtleCrypto
 slug: Web/API/SubtleCrypto
-tags:
-  - API
-  - Advanced
-  - Cryptography
-  - Encryption
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - SubtleCrypto
-  - TopicStub
-  - Web Crypto API
 translation_of: Web/API/SubtleCrypto
 ---
 

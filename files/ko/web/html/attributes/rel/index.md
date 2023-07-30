@@ -29,7 +29,7 @@ original_slug: Web/HTML/Link_types
             만약 요소가 {{HTMLElement("link")}}이고,
             {{htmlattrxref("rel", "link")}} 속성값에
             <code>stylesheet</code>라는 값이 들어 있다면, 링크가
-            <a href="/en-US/docs/Alternative_style_sheets">대체 스타일 시트</a
+            <a href="/ko/docs/Alternative_style_sheets">대체 스타일 시트</a
             >로 정의된 것입니다. 이 경우,
             {{htmlattrxref("title", "link")}} 속성은 반드시 존재해야
             하고 빈 문자열 값을 가지고 있으면 안됩니다.
@@ -38,7 +38,7 @@ original_slug: Web/HTML/Link_types
             만약 {{htmlattrxref("type","link")}}의 값이
             <code>application/rss+xml</code>이거나
             <code>application/atom+xml</code>로 설정되어 있다면, 링크를
-            <a href="/en-US/docs/RSS/Getting_Started/Syndicating"
+            <a href="/ko/docs/RSS/Getting_Started/Syndicating"
               >syndication feed</a
             >(기고 알림)로 정의된 것입니다. 페이지에서 정의된 것 중 첫번째 것이
             기본값입니다.
@@ -124,12 +124,12 @@ original_slug: Web/HTML/Link_types
       <td>
         <p>
           '가장 가까운 조상 {{HTMLElement("article")}} 요소에 대해
-          퍼머링크(<a href="/en-US/docs/Permalink">permalink</a>)를 제공하는
+          퍼머링크(<a href="/ko/docs/Permalink">permalink</a>)를 제공하는
           하이퍼링크임'이라고 정의하는 값입니다. 만약
           <code>article</code> 요소가 없다면, 링크 요소와 가장 가까운 관계를
           맺고 있는
           <code
-            ><a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document"
+            ><a href="/ko/docs/Sections_and_Outlines_of_an_HTML5_document"
               >section</a
             ></code
           >에 대한 퍼머링크로 인식이 됩니다.
@@ -425,7 +425,7 @@ original_slug: Web/HTML/Link_types
         of the {{htmlattrxref("crossorigin", "link")}} attribute is
         taken into consideration, making it possible to make anonymous
         prefetches.<br /><br /><strong>Note:</strong> The
-        <a href="/en-US/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a> has
+        <a href="/ko/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a> has
         details on which links can be prefetched and on alternative methods.
       </td>
       <td>
@@ -439,7 +439,7 @@ original_slug: Web/HTML/Link_types
       <td>
         Tells the browser to download a resource because this resource will be
         needed later during the current navigation. See
-        <a href="/en-US/docs/Web/HTML/Preloading_content"
+        <a href="/ko/docs/Web/HTML/Preloading_content"
           >Preloading content with rel="preload"</a
         >
         for more details.
@@ -482,7 +482,7 @@ original_slug: Web/HTML/Link_types
         resources.<br /><br />If the {{htmlattrxref("type","link")}}
         attribute is set to
         <code>application/opensearchdescription+xml </code>the resource is an
-        <a href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox"
+        <a href="/ko/docs/Creating_OpenSearch_plugins_for_Firefox"
           >OpenSearch plugin</a
         >
         that can be easily added to the interface of some browsers like Firefox
@@ -502,7 +502,7 @@ original_slug: Web/HTML/Link_types
         <code>text/css</code> stylesheet until further inspection.<br /><br />If
         used in combination with the <code>alternate</code> keyword, it defines
         an
-        <a href="/en-US/docs/Alternative_style_sheets"
+        <a href="/ko/docs/Alternative_style_sheets"
           >alternative style sheet</a
         >; in that case the {{htmlattrxref("title", "link")}}
         attribute must be present and not be the empty string.
