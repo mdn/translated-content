@@ -52,12 +52,12 @@ if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
   console.error("Unsupported MIME type or codec: ", mimeCodec);
 }
 
-function sourceOpen(_) {
+function sourceOpen() {
   //console.log(this.readyState); // open
   const mediaSource = this;
   const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener("updateend", function (_) {
+    sourceBuffer.addEventListener("updateend", () => {
       mediaSource.endOfStream();
       video.play();
       //console.log(mediaSource.readyState); // ended
