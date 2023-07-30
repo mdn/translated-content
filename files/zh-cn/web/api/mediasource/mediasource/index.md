@@ -9,8 +9,8 @@ slug: Web/API/MediaSource/MediaSource
 
 ## 语法
 
-```js
-new MediaSource();
+```js-nolint
+new MediaSource()
 ```
 
 ### 参数

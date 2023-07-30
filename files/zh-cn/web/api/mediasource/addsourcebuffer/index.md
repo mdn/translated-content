@@ -9,8 +9,8 @@ slug: Web/API/MediaSource/addSourceBuffer
 
 ## 语法
 
-```js
-addSourceBuffer(mimeType);
+```js-nolint
+addSourceBuffer(mimeType)
 ```
 
 ### 参数

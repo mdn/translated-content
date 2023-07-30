@@ -9,8 +9,8 @@ slug: Web/API/MediaSource/removeSourceBuffer
 
 ## 语法
 
-```js
-removeSourceBuffer(sourceBuffer);
+```js-nolint
+removeSourceBuffer(sourceBuffer)
 ```
 
 ### 参数

@@ -11,8 +11,8 @@ slug: Web/API/MediaStream/getAudioTracks
 
 ## 语法
 
-```js
-var mediaStreamTracks = mediaStream.getAudioTracks();
+```js-nolint
+getAudioTracks()
 ```
 
 ### 参数

@@ -9,8 +9,8 @@ slug: Web/API/MediaStream/getTracks
 
 ## 语法
 
-```js
-var mediaStreamTracks = mediaStream.getTracks();
+```js-nolint
+getTracks()
 ```
 
 ### 参数

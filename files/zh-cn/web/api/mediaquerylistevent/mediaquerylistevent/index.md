@@ -9,9 +9,9 @@ slug: Web/API/MediaQueryListEvent/MediaQueryListEvent
 
 ## 语法
 
-```js
-new MediaQueryListEvent(type);
-new MediaQueryListEvent(type, options);
+```js-nolint
+new MediaQueryListEvent(type)
+new MediaQueryListEvent(type, options)
 ```
 
 ### 参数

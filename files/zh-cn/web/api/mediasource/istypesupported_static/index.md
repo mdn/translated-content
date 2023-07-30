@@ -12,8 +12,8 @@ original_slug: Web/API/MediaSource/isTypeSupported
 
 ## 语法
 
-```js
-isTypeSupported(type);
+```js-nolint
+isTypeSupported(type)
 ```
 
 ### 参数
