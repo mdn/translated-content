@@ -62,7 +62,7 @@ new Uint8Array([12, 5, 8, 130, 44]).filter(supSeuil);
 [Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) permettent d'utiliser une syntaxe plus concise pour réaliser le même test que montré précédemment :
 
 ```js
-new Uint8Array([12, 5, 8, 130, 44]).filter(élém => élém >= 10);
+new Uint8Array([12, 5, 8, 130, 44]).filter((élém) => élém >= 10);
 // Uint8Array [ 12, 130, 44 ]
 ```
 

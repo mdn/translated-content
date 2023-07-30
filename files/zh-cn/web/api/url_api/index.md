@@ -84,7 +84,7 @@ function fillTableWithParameters(tbl) {
     cell.innerText = val;
     row.appendChild(cell);
     tbl.appendChild(row);
-  };
+  }
 }
 ```
 

@@ -16,6 +16,7 @@ const sharePromise = window.navigator.share(data);
 ### 参数
 
 - _data_
+
   - : 包含要共享的数据的对象。必须至少指定以下字段之一。可用选项包括：
 
     - `url`: 要共享的 URL（ {{domxref("USVString")}} ）
@@ -34,8 +35,8 @@ const sharePromise = window.navigator.share(data);
 ```js
 navigator.share({
   title: document.title,
-  text: 'Hello World',
-  url: 'https://developer.mozilla.org',
+  text: "Hello World",
+  url: "https://developer.mozilla.org",
 }); // 分享 MDN 的 URL
 ```
 
@@ -47,13 +48,14 @@ Notice: That the sample handles feature detection by testing for `navigator.canS
 
 ```js
 if (navigator.canShare && navigator.canShare({ files: filesArray })) {
-  navigator.share({
-    files: filesArray,
-    title: 'Pictures',
-    text: 'Our Pictures.',
-  })
-  .then(() => console.log('Share was successful.'))
-  .catch((error) => console.log('Sharing failed', error));
+  navigator
+    .share({
+      files: filesArray,
+      title: "Pictures",
+      text: "Our Pictures.",
+    })
+    .then(() => console.log("Share was successful."))
+    .catch((error) => console.log("Sharing failed", error));
 } else {
   console.log(`Your system doesn't support sharing files.`);
 }

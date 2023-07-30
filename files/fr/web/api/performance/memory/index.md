@@ -11,7 +11,7 @@ translation_of: Web/API/Performance/memory
 ## Syntaxe
 
 ```js
-  timingInfo = performance.memory
+timingInfo = performance.memory;
 ```
 
 ## Attributs

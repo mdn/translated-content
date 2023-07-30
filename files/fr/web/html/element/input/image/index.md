@@ -150,8 +150,13 @@ Un élément `<input type="image">` est [un élément remplacé](/fr/docs/Web/CS
 Prenons un exemple simple qui utilise les différentes fonctionnalités essentielles d'un tel bouton (et qui fonctionnent de la même façon que pour un élément `<img>`)&nbsp;:
 
 ```html
-<input id="image" type="image" width="100" height="30" alt="Login"
-       src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png">
+<input
+  id="image"
+  type="image"
+  width="100"
+  height="30"
+  alt="Login"
+  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" />
 ```
 
 {{EmbedLiveSample('', 600, 50)}}
@@ -199,14 +204,19 @@ L'exemple suivant affiche le même bouton qu'auparavant, cette fois-ci inclus da
   <p>Connectez-vous à votre compte</p>
   <div>
     <label for="userId">Identifiant utilisateur</label>
-    <input type="text" id="userId" name="userId">
+    <input type="text" id="userId" name="userId" />
   </div>
   <div>
     <label for="pwd">Mot de passe</label>
-    <input type="password" id="pwd" name="pwd">
+    <input type="password" id="pwd" name="pwd" />
   </div>
   <div>
-    <input id="image" type="image" src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" alt="Login" width="100">
+    <input
+      id="image"
+      type="image"
+      src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+      alt="Login"
+      width="100" />
   </div>
 </form>
 ```
@@ -243,16 +253,20 @@ Dans ce nouvel exemple, on adapte l'exemple précédent afin d'avoir plus de pla
   <p>Connectez-vous à votre compte</p>
   <div>
     <label for="userId">Identifiant utilisateur</label>
-    <input type="text" id="userId" name="userId">
+    <input type="text" id="userId" name="userId" />
   </div>
   <div>
     <label for="pwd">Mot de passe</label>
-    <input type="password" id="pwd" name="pwd">
+    <input type="password" id="pwd" name="pwd" />
   </div>
   <div>
-    <input id="image" type="image"
+    <input
+      id="image"
+      type="image"
       src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
-      alt="Login" width="200" height="100">
+      alt="Login"
+      width="200"
+      height="100" />
   </div>
 </form>
 ```

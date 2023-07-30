@@ -11,7 +11,7 @@ Renvoie un noeud depuis une [`NodeList`](/fr/docs/Web/API/NodeList) par l'index.
 ## Syntaxe
 
 ```js
-nodeItem = nodeList.item(index)
+nodeItem = nodeList.item(index);
 ```
 
 - `nodeList` est une `NodeList`. Elle est généralement obtenue à partir d'une autre propriété ou méthode DOM, telle que [childNodes](/fr/docs/Web/API/Node/childNodes).
@@ -23,7 +23,7 @@ nodeItem = nodeList.item(index)
 JavaScript propose également une syntaxe semblable à un tableau pour obtenir un élément d'une liste de nœuds par index :
 
 ```js
-nodeItem = nodeList[index]
+nodeItem = nodeList[index];
 ```
 
 ## Exemple

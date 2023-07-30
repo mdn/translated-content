@@ -13,7 +13,7 @@ La méthode **`toUpperCase()`** retourne la valeur de la chaîne courante, conve
 ## Syntaxe
 
 ```js
-str.toUpperCase()
+str.toUpperCase();
 ```
 
 ### Valeur de retour
@@ -34,7 +34,7 @@ La méthode `toUpperCase()` retourne la valeur de la chaîne convertie en majusc
 ### Utiliser `toUpperCase()`
 
 ```js
-console.log( "alphabet".toUpperCase() ); // "ALPHABET"
+console.log("alphabet".toUpperCase()); // "ALPHABET"
 ```
 
 ### Convertir une valeur `this` en chaîne de caractères
@@ -43,9 +43,9 @@ Cette peut être utilisée pour convertir une valeur qui n'est pas une chaîne d
 
 ```js
 var obj = {
-  toString: function toString(){
-    return 'abcdef';
-  }
+  toString: function toString() {
+    return "abcdef";
+  },
 };
 var a = String.prototype.toUpperCase.call(obj);
 var b = String.prototype.toUpperCase.call(true);

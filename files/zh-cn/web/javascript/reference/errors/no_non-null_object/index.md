@@ -28,17 +28,17 @@ TypeError: Invalid value used in weak set (Chrome)
 当使用诸如 {{jsxref("Object.create()")}} 或 {{jsxref("Object.defineProperty()")}} 及{jsxref("Object.defineProperties()")}} 方法时，可选的属性描述器参数需要提供一个描述器对象。提供非对象类型的值（例如数字）将会报错：
 
 ```js example-bad
-Object.defineProperty({}, 'key', 1);
+Object.defineProperty({}, "key", 1);
 // TypeError: 1 is not a non-null object
 
-Object.defineProperty({}, 'key', null);
+Object.defineProperty({}, "key", null);
 // TypeError: null is not a non-null object
 ```
 
 一个合法的描述器对象类似于下面这样：
 
 ```js example-good
-Object.defineProperty({}, 'key', { value: 'foo', writable: false });
+Object.defineProperty({}, "key", { value: "foo", writable: false });
 ```
 
 ### `WeakMap` 和 `WeakSet` 对象需要对象类型的键
@@ -47,14 +47,14 @@ Object.defineProperty({}, 'key', { value: 'foo', writable: false });
 
 ```js example-bad
 var ws = new WeakSet();
-ws.add('foo');
+ws.add("foo");
 // TypeError: "foo" is not a non-null object
 ```
 
 用对象类型的值来替换：
 
 ```js example-good
-ws.add({foo: 'bar'});
+ws.add({ foo: "bar" });
 ws.add(window);
 ```
 

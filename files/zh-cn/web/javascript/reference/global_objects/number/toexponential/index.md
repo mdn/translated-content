@@ -46,9 +46,9 @@ alert("numObj.toExponential(4) is " + numObj.toExponential(4)); //输出 7.7123e
 
 alert("numObj.toExponential(2) is " + numObj.toExponential(2)); //输出 7.71e+1
 
-alert("77.1234.toExponential() is " + 77.1234.toExponential()); //输出 7.71234e+1
+alert("77.1234.toExponential() is " + (77.1234).toExponential()); //输出 7.71234e+1
 
-alert("77 .toExponential() is " + 77 .toExponential()); //输出 7.7e+1
+alert("77 .toExponential() is " + (77).toExponential()); //输出 7.7e+1
 ```
 
 ## 规范

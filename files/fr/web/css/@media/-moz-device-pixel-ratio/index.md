@@ -1,5 +1,5 @@
 ---
-title: '-moz-device-pixel-ratio'
+title: "-moz-device-pixel-ratio"
 slug: Web/CSS/@media/-moz-device-pixel-ratio
 translation_of: Web/CSS/@media/-moz-device-pixel-ratio
 ---
@@ -12,11 +12,11 @@ La [caractéristique média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries#
 >
 > `-moz-device-pixel-ratio` peut être utilisée si besoin d'être compatible avec des versions de Firefox antérieures à la version 16 et `-webkit-device-pixel-ratio` peut être utilisée avec les navigateurs WebKit qui ne prennent pas en charge `dppx`. Par exemple :
 >
-> ```css
+> ```css-nolint
 > @media (-webkit-min-device-pixel-ratio: 2), /* Navigateurs basés sur Webkit */
->        (min--moz-device-pixel-ratio: 2),    /* Anciens Firefox (avant Firefox 16) */
->        (min-resolution: 2dppx),             /* La méthode standard */
->        (min-resolution: 192dpi)             /* Utilisée si dppx n'est pas gérée */
+>        (min--moz-device-pixel-ratio: 2), /* Anciens Firefox (avant Firefox 16) */
+>        (min-resolution: 2dppx), /* La méthode standard */
+>        (min-resolution: 192dpi) /* Utilisée si dppx n'est pas gérée */
 > ```
 >
 > Voir [cet article du CSSWG](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/) pour les bonnes pratiques quant à la compatibilité de `resolution` et `dppx`.

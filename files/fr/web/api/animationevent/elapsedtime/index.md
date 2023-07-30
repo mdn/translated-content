@@ -13,7 +13,7 @@ La propriété en lecture seule **`AnimationEvent.elapsedTime`** est un `float` 
 ## Syntaxe
 
 ```js
-temps = AnimationEvent.elapsedTime
+temps = AnimationEvent.elapsedTime;
 ```
 
 ## Spécifications

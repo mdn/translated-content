@@ -32,12 +32,12 @@ var myEME = new ExtendableMessageEvent(type, init);
 
 ```js
 var init = {
-             data : 'Message de bienvenue',
-             source : MessagePortReference,
-             ports : MessagePortListReference
-           }
+  data: "Message de bienvenue",
+  source: MessagePortReference,
+  ports: MessagePortListReference,
+};
 
-var myEME = new ExtendableMessageEvent('message', init);
+var myEME = new ExtendableMessageEvent("message", init);
 ```
 
 ## Spécifications

@@ -29,7 +29,7 @@ audio.playbackRate = 1.0;
 ## 示例
 
 ```js
-var obj = document.createElement('video');
+var obj = document.createElement("video");
 console.log(obj.playbackRate); // 1
 ```
 

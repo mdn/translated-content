@@ -11,7 +11,7 @@ Le combinateur `>` sépare deux sélecteurs et cible seulement les éléments co
 ```css
 /* Les éléments <li> qui sont des enfant d'un */
 /* <ul class="mon-truc"> */
-ul.mon-truc>li {
+ul.mon-truc > li {
   margin: 2em;
 }
 ```
@@ -42,7 +42,8 @@ div > span {
 
 ```html
 <div>
-  <span>Premier span du div.
+  <span
+    >Premier span du div.
     <span>Deuxième span, dans un span dans un div.</span>
   </span>
 </div>

@@ -9,8 +9,8 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 Каждое свойство используемое в CSS имеет значение или набор значений которые допустимы для этого свойства, и изучение страниц MDN со свойствами поможет вам понять какие значения валидны для того или иного свойства. В этом уроке мы рассмотрим некоторые наиболее общие значения и единицы в использовании.
 
 | Prerequisites: | Basic computer literacy, [basic software installed](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Objective:     | To learn about the different types of values and units used in CSS properties.                                                                                                                                                                                                                                                                                                                                                                                           |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objective:     | To learn about the different types of values and units used in CSS properties.                                                                                                                                                                                                                                                                                                                                 |
 
 ## Что такое значение CSS?
 
@@ -25,7 +25,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 ```css
 h1 {
   color: black;
-  background-color: rgb(197,93,161);
+  background-color: rgb(197, 93, 161);
 }
 ```
 
@@ -37,12 +37,12 @@ h1 {
 
 Существуют различные типы числовых данных, которые вы можете использовать в CSS. Следующие типы классифицируются как числовые:
 
-| Тип данных                                       | Описание                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`<integer>`](/ru/docs/Web/CSS/integer)       | `<integer>` (целое число) — целое число такое как `1024` или `-55`.                                                                                                                                                                                                                                                                                                                                                                                                       |
-| [`<number>`](/ru/docs/Web/CSS/number)         | `<number>` (число) представляет десятичное число — оно может иметь, а может и не иметь десятичную точку с факториальным компонентом, например `0.255`, `128`, или `-1.2`.                                                                                                                                                                                                                                                                                                 |
-| `<dimension>`                                    | `<dimension>` (измерение) это — `<number>` (число) с единицей измерения, прикреплённой к нему, например `45deg`, `5s`, или `10px`. `<dimension>` — это зонт категорий, включающих в себя типы [`<length>`](/ru/docs/Web/CSS/length), [`<angle>`](/ru/docs/Web/CSS/angle), [`<time>`](/ru/docs/Web/CSS/time), и [`<resolution>`](/ru/docs/Web/CSS/resolution) (длина, угол, время и разрешение). |
-| [`<percentage>`](/ru/docs/Web/CSS/percentage) | `<percentage>` (проценты) представляют собой долю некоторого другого значения, например `50%`. Процентные значения всегда относительны по отношению к другому количеству, например длина элемента относительна к длине её родительского элемента.                                                                                                                                                                                                                         |
+| Тип данных                                    | Описание                                                                                                                                                                                                                                                                                                                                                                                        |
+| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`<integer>`](/ru/docs/Web/CSS/integer)       | `<integer>` (целое число) — целое число такое как `1024` или `-55`.                                                                                                                                                                                                                                                                                                                             |
+| [`<number>`](/ru/docs/Web/CSS/number)         | `<number>` (число) представляет десятичное число — оно может иметь, а может и не иметь десятичную точку с факториальным компонентом, например `0.255`, `128`, или `-1.2`.                                                                                                                                                                                                                       |
+| `<dimension>`                                 | `<dimension>` (измерение) это — `<number>` (число) с единицей измерения, прикреплённой к нему, например `45deg`, `5s`, или `10px`. `<dimension>` — это зонт категорий, включающих в себя типы [`<length>`](/ru/docs/Web/CSS/length), [`<angle>`](/ru/docs/Web/CSS/angle), [`<time>`](/ru/docs/Web/CSS/time), и [`<resolution>`](/ru/docs/Web/CSS/resolution) (длина, угол, время и разрешение). |
+| [`<percentage>`](/ru/docs/Web/CSS/percentage) | `<percentage>` (проценты) представляют собой долю некоторого другого значения, например `50%`. Процентные значения всегда относительны по отношению к другому количеству, например длина элемента относительна к длине её родительского элемента.                                                                                                                                               |
 
 ### Длины
 
@@ -253,10 +253,10 @@ For example, understanding that [`<image>`](/ru/docs/Web/CSS/image) also allows 
 1. [Cascade and inheritance](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 2. [CSS selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
 
-    - [Type, class, and ID selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+   - [Type, class, and ID selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+   - [Attribute selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+   - [Pseudo-classes and pseudo-elements](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+   - [Combinators](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 3. [The box model](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
 4. [Backgrounds and borders](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

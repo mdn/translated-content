@@ -1,21 +1,18 @@
 ---
-title: FederatedCredential.protocol
+title: "FederatedCredential: protocol プロパティ"
+short-title: protocol
 slug: Web/API/FederatedCredential/protocol
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{SeeCompatTable}}{{APIRef("")}}{{securecontext_header}}
+{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}
 
-**`protocol`** は {{domxref("FederatedCredential")}} インターフェイスのプロパティで、認証情報の連合アイデンティティプロトコルが入った読み取り専用の {{domxref("DOMString")}} を返します。このプロパティが {{jsxref("null")}} の場合、プロトコルは {{domxref("FederatedCredential.provider")}} プロパティから推測される可能性があります。
-
-## 構文
-
-```
-var protocol = FederatedCredential.protocol
-```
+**`protocol`** は {{domxref("FederatedCredential")}} インターフェイスのプロパティで、資格情報の連合アイデンティティプロトコルが入った読み取り専用の文字列を返します。このプロパティが [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) の場合、プロトコルは {{domxref("FederatedCredential.provider")}} プロパティから推測される可能性があります。
 
 ### 値
 
-認証情報の連合アイデンティティプロトコルが入った {{domxref("DOMString")}} です (例えば `openidconnect`)。
+資格情報の連合アイデンティティプロトコル（例えば `openidconnect`）が入った文字列です。
 
 ## 例
 
@@ -27,6 +24,6 @@ var protocol = FederatedCredential.protocol
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat("api.FederatedCredential.protocol")}}
+{{Compat}}

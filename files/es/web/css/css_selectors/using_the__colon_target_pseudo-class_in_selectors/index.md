@@ -1,6 +1,6 @@
 ---
 title: Usando la pseudo-clase :target en selectores
-slug: Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
+slug: Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 original_slug: Web/CSS/Selectores_CSS/Usando_la_pseudo-clase_:target_en_selectores
 ---
 

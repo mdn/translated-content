@@ -16,8 +16,8 @@ targetDocument.onfullscreenerror = fullscreenErrorHandler;
 ## 示例
 
 ```js
-document.onfullscreenerror = function ( event ) {
-  console.log("FULL SCREEN DENIED")
+document.onfullscreenerror = function (event) {
+  console.log("FULL SCREEN DENIED");
 };
 
 // requestFullscreen() 将会失败，因为它在事件处理器之外

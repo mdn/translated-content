@@ -22,8 +22,8 @@ L'objet WebGLTexture ne définit aucune méthode ou propriété propre, et son c
 ### Création d'une texture
 
 ```js
-var canevas = document.getElementById('canvas');
-var gl = canevas.getContext('webgl');
+var canevas = document.getElementById("canvas");
+var gl = canevas.getContext("webgl");
 var texture = gl.createTexture();
 ```
 

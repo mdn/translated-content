@@ -85,7 +85,7 @@ La première valeur utilisée sera celle qui correspond à {{cssxref("align-cont
 ```css
 #container {
   display: flex;
-  height:240px;
+  height: 240px;
   width: 240px;
   flex-wrap: wrap;
   background-color: #8c8c8c;
@@ -116,27 +116,30 @@ div > div {
 ```html
 <div id="container">
   <div class="small">Lorem</div>
-  <div class="small">Lorem<br/>ipsum</div>
+  <div class="small">Lorem<br />ipsum</div>
   <div class="large">Lorem</div>
-  <div class="large">Lorem<br/>impsum</div>
+  <div class="large">Lorem<br />impsum</div>
   <div class="large"></div>
   <div class="large"></div>
 </div>
 ```
 
 ```html hidden
-<code>writing-mode:</code><select id="writingMode">
+<code>writing-mode:</code
+><select id="writingMode">
   <option value="horizontal-tb" selected>horizontal-tb</option>
   <option value="vertical-rl">vertical-rl</option>
   <option value="vertical-lr">vertical-lr</option>
   <option value="sideways-rl">sideways-rl</option>
-  <option value="sideways-lr">sideways-lr</option>
-</select><code>;</code><br/>
-<code>direction:</code><select id="direction">
+  <option value="sideways-lr">sideways-lr</option></select
+><code>;</code><br />
+<code>direction:</code
+><select id="direction">
   <option value="ltr" selected>ltr</option>
-  <option value="rtl">rtl</option>
-</select><code>;</code><br/>
-<code>place-content:</code><select id="alignContentAlignment">
+  <option value="rtl">rtl</option></select
+><code>;</code><br />
+<code>place-content:</code
+><select id="alignContentAlignment">
   <option value="normal">normal</option>
   <option value="first baseline">first baseline</option>
   <option value="last baseline">last baseline</option>
@@ -163,28 +166,33 @@ div > div {
   <option value="flex-start">flex-start</option>
   <option value="flex-end">flex-end</option>
   <option value="left">left</option>
-  <option value="right">right</option>
-</select><code>;</code>
+  <option value="right">right</option></select
+><code>;</code>
 ```
 
 ```js hidden
 var update = function () {
-   document.getElementById("container").style.placeContent = document.getElementById("alignContentAlignment").value + " " + document.getElementById("justifyContentAlignment").value;
-}
+  document.getElementById("container").style.placeContent =
+    document.getElementById("alignContentAlignment").value +
+    " " +
+    document.getElementById("justifyContentAlignment").value;
+};
 
 var alignContentAlignment = document.getElementById("alignContentAlignment");
-alignContentAlignment.addEventListener("change",  update);
+alignContentAlignment.addEventListener("change", update);
 
-var justifyContentAlignment = document.getElementById("justifyContentAlignment");
+var justifyContentAlignment = document.getElementById(
+  "justifyContentAlignment",
+);
 justifyContentAlignment.addEventListener("change", update);
 
 var writingM = document.getElementById("writingMode");
 writingM.addEventListener("change", function (evt) {
-   document.getElementById("container").style.writingMode = evt.target.value;
+  document.getElementById("container").style.writingMode = evt.target.value;
 });
 var direction = document.getElementById("direction");
 direction.addEventListener("change", function (evt) {
-   document.getElementById("container").style.direction = evt.target.value;
+  document.getElementById("container").style.direction = evt.target.value;
 });
 ```
 

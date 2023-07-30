@@ -28,8 +28,8 @@ imgElem.decoding = refStr;
 
 ```js
 var img = new Image();
-img.decoding = 'sync';
-img.src = 'img/logo.png';
+img.decoding = "sync";
+img.src = "img/logo.png";
 ```
 
 ## Specifications

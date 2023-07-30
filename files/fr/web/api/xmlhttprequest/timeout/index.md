@@ -16,7 +16,7 @@ La propriété **`XMLHttpRequest.timeout`** est un `unsigned long` (un entier lo
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 xhr.timeout = 2000; // durée en millisecondes
 

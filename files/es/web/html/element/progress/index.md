@@ -1,5 +1,5 @@
 ---
-title: '<progress>: Elemento indicador de progreso'
+title: "<progress>: Elemento indicador de progreso"
 slug: Web/HTML/Element/progress
 original_slug: Web/HTML/Elemento/progress
 ---

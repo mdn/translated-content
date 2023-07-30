@@ -29,7 +29,7 @@ console.log(scriptStr.script); // Affichera "Latn" dans la console
 Le constructeur {{jsxref("Locale", "Locale")}} permet d'utiliser un objet de configuration dont les propriétés définiront les caractéristiques de la locale :
 
 ```js
-let scriptObj = new Intl.Locale("fr-FR", {script: "Latn"});
+let scriptObj = new Intl.Locale("fr-FR", { script: "Latn" });
 
 console.log(scriptObj.script); // Affichera "Latn" dans la console
 ```

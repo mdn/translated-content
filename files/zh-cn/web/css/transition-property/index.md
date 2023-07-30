@@ -24,7 +24,10 @@ transition-property: sliding-vertically;
 transition-property: test1;
 transition-property: test1, animation4;
 transition-property: all, height, all;
-transition-property: all, -moz-specific, sliding;
+transition-property:
+  all,
+  -moz-specific,
+  sliding;
 
 /* Global values */
 transition-property: inherit;

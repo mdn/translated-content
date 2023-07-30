@@ -31,10 +31,10 @@ Un objet {{domxref("IDBRequest")}} sur lequel les événements ultérieurs liés
 
 Cette méthode peut provoquer une {{domxref("DOMException")}} de l'un des types suivants :
 
-| Exception                  | Description                                                                 |
-| -------------------------- | --------------------------------------------------------------------------- |
+| Exception                  | Description                                                      |
+| -------------------------- | ---------------------------------------------------------------- |
 | `TransactionInactiveError` | La transaction de ce {{domxref("IDBObjectStore")}} est inactive. |
-| `DataError`                | La clé ou la plage de clés fournie contient une clé invalide.               |
+| `DataError`                | La clé ou la plage de clés fournie contient une clé invalide.    |
 | `InvalidStateError`        | Le {{domxref("IDBObjectStore")}} a été supprimé ou retiré.       |
 
 ## Exemple

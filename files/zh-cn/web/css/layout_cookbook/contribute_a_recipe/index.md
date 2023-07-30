@@ -19,13 +19,13 @@ slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
 2. 这份示例的可供下载版本，同样也存储在 CSS Examples repo 之上。
 3. 该网站的某个页面在 [CSS layout cookbook](/zh-CN/docs/Web/CSS/Layout_cookbook) 上应详细说明：
 
-    1. 要求
-    2. recipe
-    3. 做出的选择
-    4. 任何有用的反馈或供选择的方法
-    5. 任何无障碍访问问题
-    6. 浏览器兼容性
-    7. 其他资源
+   1. 要求
+   2. recipe
+   3. 做出的选择
+   4. 任何有用的反馈或供选择的方法
+   5. 任何无障碍访问问题
+   6. 浏览器兼容性
+   7. 其他资源
 
 ### 1. 建立自己的模式
 

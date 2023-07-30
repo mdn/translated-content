@@ -18,10 +18,10 @@ var bool = event.cancelBubble;
 ## Exemple
 
 ```js
-elem.onclick = function(e) {
+elem.onclick = function (e) {
   // fais des choses sympas ici
   e.cancelBubble = true;
-}
+};
 ```
 
 ## Spécifications

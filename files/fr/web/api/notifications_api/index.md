@@ -13,10 +13,10 @@ L'API Notifications permet aux pages Web de contrôler l'affichage des notificat
 Sur les plates-formes prises en charge, l'affichage d'une notification système implique généralement deux choses. Tout d'abord, l'utilisateur doit accorder l'autorisation à l' {{glossary("Origin","origine")}} actuelle pour afficher les notifications système, ce qui est généralement effectué lorsque l'application ou le site s'initialise, à l'aide de la méthode {{domxref ("Notification.requestPermission()")}}. Cela doit être fait en réponse à un geste de l'utilisateur, tel que cliquer sur un bouton, par exemple:
 
 ```js
-btn.addEventListener('click', () => {
-  let promise = Notification.requestPermission()
+btn.addEventListener("click", () => {
+  let promise = Notification.requestPermission();
   // wait for permission
-})
+});
 ```
 
 > **Note :** Il ne s'agit pas seulement d'une bonne pratique - vous ne devriez pas envoyer de spam aux utilisateurs avec des notifications qu'ils n'acceptent pas - mais les navigateurs suivants interdiront explicitement les notifications non déclenchées en réponse à un geste de l'utilisateur. Firefox le fait déjà depuis la version 72, par exemple.

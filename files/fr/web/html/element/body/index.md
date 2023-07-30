@@ -1,5 +1,5 @@
 ---
-title: '<body> : l''élément pour le corps du document'
+title: "<body> : l'élément pour le corps du document"
 slug: Web/HTML/Element/body
 translation_of: Web/HTML/Element/body
 ---

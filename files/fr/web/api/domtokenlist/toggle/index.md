@@ -41,7 +41,7 @@ Dans l'exemple suivant, nous récupérons la liste des classes définies dans un
 let span = document.querySelector("span");
 let classes = span.classList;
 
-span.addEventListener('click', function() {
+span.addEventListener("click", function () {
   let result = classes.toggle("c");
 
   if (result) {
@@ -49,7 +49,7 @@ span.addEventListener('click', function() {
   } else {
     span.textContent = `'c' retiré ; classList vaut désormais "${classes}".`;
   }
-})
+});
 ```
 
 ### Résultat

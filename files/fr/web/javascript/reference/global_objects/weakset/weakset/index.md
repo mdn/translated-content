@@ -11,8 +11,8 @@ Le **constructeur `WeakSet()`** permet de créer des objets `WeakSet` qui stocke
 ## Syntaxe
 
 ```js
-new WeakSet()
-new WeakSet(iterable)
+new WeakSet();
+new WeakSet(iterable);
 ```
 
 ### Paramètres
@@ -32,12 +32,12 @@ const truc = {};
 ws.add(toto);
 ws.add(truc);
 
-ws.has(toto);    // true
-ws.has(truc);    // true
+ws.has(toto); // true
+ws.has(truc); // true
 
 ws.delete(toto); // retire toto de l'ensemble
-ws.has(toto);    // false, toto a été retiré
-ws.has(truc);    // true, truc est retenu
+ws.has(toto); // false, toto a été retiré
+ws.has(truc); // true, truc est retenu
 ```
 
 On notera que `toto !== truc`. Même si ces objets se ressemblent, _ce ne sont pas **les mêmes objets**_. Aussi, ils sont tous les deux ajoutés à l'ensemble.

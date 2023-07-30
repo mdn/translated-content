@@ -1,5 +1,5 @@
 ---
-title: 'Window: Evenement offline'
+title: "Window: Evenement offline"
 slug: Web/API/Window/offline_event
 translation_of: Web/API/Window/offline_event
 ---
@@ -35,8 +35,8 @@ L'événement **`offline`** de l'interface {{domxref("Window")}} se déclenche l
 
 ```js
 //version addEventListener
-window.addEventListener('offline', (event) => {
-    console.log("La Connexion au réseau est perdu.");
+window.addEventListener("offline", (event) => {
+  console.log("La Connexion au réseau est perdu.");
 });
 
 // onoffline version

@@ -1,5 +1,5 @@
 ---
-title: '<form> : l''élément représentant un formulaire'
+title: "<form> : l'élément représentant un formulaire"
 slug: Web/HTML/Element/form
 translation_of: Web/HTML/Element/form
 ---
@@ -173,16 +173,18 @@ Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire
 ```html
 <!-- Formulaire simple qui enverra une requête GET -->
 <form>
-  <label>Nom :
-    <input name="submitted-name" autocomplete="name">
+  <label
+    >Nom :
+    <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Sauvegarder</button>
 </form>
 
 <!-- Formulaire qui enverra une requête POST à l'URL actuelle -->
 <form method="post">
-  <label>Nom :
-    <input name="submitted-name" autocomplete="name">
+  <label
+    >Nom :
+    <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Sauvegarder</button>
 </form>
@@ -191,7 +193,7 @@ Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire
 <form method="post">
   <fieldset>
     <legend>Titre</legend>
-    <label><input type="radio" name="radio">Sélectionnez-moi</label>
+    <label><input type="radio" name="radio" />Sélectionnez-moi</label>
   </fieldset>
 </form>
 ```

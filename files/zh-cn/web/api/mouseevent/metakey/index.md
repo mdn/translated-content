@@ -22,15 +22,15 @@ var metaKeyPressed = instanceOfMouseEvent.metaKey
 ## 示例
 
 ```js
- function goInput(e) {
- // 检测 metaKey 值
-   if (e.metaKey) {
-        // 继续处理事件
-     superSizeOutput(e);
-   } else {
-     doOutput(e);
-   }
- }
+function goInput(e) {
+  // 检测 metaKey 值
+  if (e.metaKey) {
+    // 继续处理事件
+    superSizeOutput(e);
+  } else {
+    doOutput(e);
+  }
+}
 ```
 
 ## 规范

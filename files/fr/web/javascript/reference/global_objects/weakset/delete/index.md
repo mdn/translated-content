@@ -33,10 +33,10 @@ var obj = {};
 
 ws.add(window);
 
-ws.delete(obj);    // Renvoie false. Aucun objet obj n'a été trouvé ni retiré.
+ws.delete(obj); // Renvoie false. Aucun objet obj n'a été trouvé ni retiré.
 ws.delete(window); // Renvoie true, l'objet window a pu être retiré.
 
-ws.has(window);    // Renvoie false, window n'appartient plus au WeakSet.
+ws.has(window); // Renvoie false, window n'appartient plus au WeakSet.
 ```
 
 ## Spécifications

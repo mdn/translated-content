@@ -1,5 +1,5 @@
 ---
-title: '::-moz-list-bullet'
+title: "::-moz-list-bullet"
 slug: Web/CSS/::-moz-list-bullet
 translation_of: Web/CSS/:-moz-list-bullet
 ---

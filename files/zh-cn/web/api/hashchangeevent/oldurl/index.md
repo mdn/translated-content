@@ -20,8 +20,8 @@ let oldEventUrl = event.oldURL;
 ## 示例
 
 ```js
-window.addEventListener('hashchange', function(event) {
-  console.log('Hash changed from ' + event.oldURL);
+window.addEventListener("hashchange", function (event) {
+  console.log("Hash changed from " + event.oldURL);
 });
 ```
 

@@ -43,9 +43,10 @@ slug: Learn/Getting_started_with_the_web/Dealing_with_files
 
    ```html
    <!doctype html>
-   <html>
+   <html lang="en-US">
      <head>
        <meta charset="utf-8" />
+       <meta name="viewport" content="width=device-width" />
        <title>My test page</title>
      </head>
      <body>

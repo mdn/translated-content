@@ -1,5 +1,5 @@
 ---
-title: 'Window : l''événement deviceorientation'
+title: "Window : l'événement deviceorientation"
 slug: Web/API/Window/deviceorientation_event
 translation_of: Web/API/Window/deviceorientation_event
 ---
@@ -41,19 +41,27 @@ L'événement `deviceorientation` est déclenché lorsque des données sont disp
 
 ```js
 if (window.DeviceOrientationEvent) {
-  window.addEventListener("deviceorientation", function(event) {
-    // alpha : rotation autour de l'axe z
-    var rotateDegrees = event.alpha;
-    // gamma : de gauche à droite
-    var leftToRight = event.gamma;
-    // bêta : mouvement avant-arrière
-    var frontToBack = event.beta;
+  window.addEventListener(
+    "deviceorientation",
+    function (event) {
+      // alpha : rotation autour de l'axe z
+      var rotateDegrees = event.alpha;
+      // gamma : de gauche à droite
+      var leftToRight = event.gamma;
+      // bêta : mouvement avant-arrière
+      var frontToBack = event.beta;
 
-    handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
-  }, true);
+      handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+    },
+    true,
+  );
 }
 
-var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
+var handleOrientationEvent = function (
+  frontToBack,
+  leftToRight,
+  rotateDegrees,
+) {
   // faire quelque chose d'étonnant
 };
 ```

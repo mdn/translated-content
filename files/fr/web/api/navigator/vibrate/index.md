@@ -25,7 +25,9 @@ Passer la valeur 0, un tableau vide, ou un tableau de zéro arrêtera toutes les
 
 ```js
 window.navigator.vibrate(200); // vibre pendant 200ms
-window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]); // Vibre 'SOS' en Morse.
+window.navigator.vibrate([
+  100, 30, 100, 30, 100, 30, 200, 30, 200, 30, 200, 30, 100, 30, 100, 30, 100,
+]); // Vibre 'SOS' en Morse.
 ```
 
 ## Spécifications

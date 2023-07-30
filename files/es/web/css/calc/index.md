@@ -53,7 +53,7 @@ Los operandos en la expresión pueden ser valores tanto positivos como negativos
 .banner {
   position: absolute;
   left: 40px;
-  width: 90%;               /* salvaguarda para navegadores que no reconocen calc() */
+  width: 90%; /* salvaguarda para navegadores que no reconocen calc() */
   width: calc(100% - 80px);
   border: solid black 1px;
   box-shadow: 1px 2px;
@@ -79,12 +79,12 @@ Echémosle un vistazo al CSS:
 input {
   padding: 2px;
   display: block;
-  width: 98%;               /* salvaguarda para navegadores que no reconocen calc() */
+  width: 98%; /* salvaguarda para navegadores que no reconocen calc() */
   width: calc(100% - 1em);
 }
 
 #formbox {
-  width: 130px;             /* salvaguarda para navegadores que no reconocen calc() */
+  width: 130px; /* salvaguarda para navegadores que no reconocen calc() */
   width: calc(100% / 6);
   border: 1px solid black;
   padding: 4px;
@@ -96,8 +96,8 @@ El formulario usa 1/6 del ancho disponible. Para asegurar que los campos de entr
 ```html
 <form>
   <div id="formbox">
-  <label>Type something:</label>
-  <input type="text">
+    <label>Type something:</label>
+    <input type="text" />
   </div>
 </form>
 ```

@@ -12,7 +12,7 @@ Le descripteur **`symbols`**, rattaché à la règle @ {{cssxref("@counter-style
 symbols: A B C D E;
 symbols: "\24B6" "\24B7" "\24B8" D E;
 symbols: "0" "1" "2" "4" "5" "6" "7" "8" "9";
-symbols: url('premier.svg') url('deuxieme.svg') url('troisieme.svg');
+symbols: url("premier.svg") url("deuxieme.svg") url("troisieme.svg");
 symbols: indic-numbers;
 ```
 

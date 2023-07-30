@@ -58,7 +58,9 @@ Cette propriété peut prendre l'une des formes suivantes :
 ### CSS
 
 ```css
-.syn {font-synthesis: none;}
+.syn {
+  font-synthesis: none;
+}
 ```
 
 ### Résultat

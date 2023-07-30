@@ -118,7 +118,9 @@ div {
 }
 
 .moved {
-  transform: translate(10px); /* Equal to: translateX(10px) or translate(10px, 0) */
+  transform: translate(
+    10px
+  ); /* Equal to: translateX(10px) or translate(10px, 0) */
   background-color: pink;
 }
 ```

@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/Server-Timing
 
 **`Server-Timing`** 标头传达在一个给定请求 - 响应周期中的一个或多个参数和描述。它用于在用户浏览器的开发工具或 {{domxref("PerformanceServerTiming")}} 接口中显示任何后端服务器定时参数（例如，数据库读/写、CPU 时间、文件系统访问等）。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 

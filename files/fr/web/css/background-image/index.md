@@ -22,14 +22,17 @@ Si une image donnée ne peut pas être chargée (par exemple lorsqu'il est impos
 
 ```css
 /* Valeur simple */
-background-image: url('https://example.com/bck.png');
+background-image: url("https://example.com/bck.png");
 
 /* Plusieurs valeurs */
-background-image: url('https://example.com/top.png'), url('https://example.com/bottom.png');
+background-image: url("https://example.com/top.png"),
+  url("https://example.com/bottom.png");
 
-background-image:
-  linear-gradient(to bottom, rgba(255,255,0,0.5), rgba(0,0,255,0.5)),
-  url('catfront.png');
+background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 0, 0.5),
+    rgba(0, 0, 255, 0.5)
+  ), url("catfront.png");
 
 /* Valeur avec un mot-clé */
 background-image: none;
@@ -72,12 +75,12 @@ On voit ici l'effet obtenu avec plusieurs images&nbsp;: l'étoile est légèreme
 ```html
 <div>
   <p class="catsandstars">
-    Un paragraphe avec des chats<br/>
+    Un paragraphe avec des chats<br />
     et des étoiles.
   </p>
   <p>Pas ici.</p>
   <p class="catsandstars">
-    Et voilà encore des chats.<br/>
+    Et voilà encore des chats.<br />
     Et des étoiles !
   </p>
   <p>Puis plus rien.</p>
@@ -89,7 +92,7 @@ On voit ici l'effet obtenu avec plusieurs images&nbsp;: l'étoile est légèreme
 ```css
 p {
   font-size: 1.5em;
-  color: #FE7F88;
+  color: #fe7f88;
   background-color: transparent;
   background-image: none;
 }
@@ -99,8 +102,7 @@ div {
 }
 
 .catsandstars {
-  background-image:  url("startransparent.gif"),
-                     url("catfront.png");
+  background-image: url("startransparent.gif"), url("catfront.png");
   background-color: transparent;
 }
 ```
@@ -125,15 +127,15 @@ div {
   - [`<image>`](/fr/docs/Web/CSS/image)
   - [`<gradient>`](/fr/docs/Web/CSS/gradient)
 - Les fonctions CSS relatives aux images&nbsp;:
-  - [`cross-fade()`](/fr/docs/Web/CSS/cross-fade())
-  - [`element()`](/fr/docs/Web/CSS/element())
-  - [`image()`](/fr/docs/Web/CSS/image/image())
-  - [`image-set()`](/fr/docs/Web/CSS/image/image-set())
-  - [`linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient())
-  - [`radial-gradient`](/fr/docs/Web/CSS/gradient/radial-gradient())
-  - [`conic-gradient`](/fr/docs/Web/CSS/gradient/conic-gradient())
-  - [`repeating-linear-gradient`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient())
-  - [`repeating-radial-gradient`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient())
-  - [`repeating-conic-gradient`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient()),
-  - [`paint()`](/fr/docs/Web/CSS/image/paint())
-  - [`url()`](/fr/docs/Web/CSS/url())
+  - [`cross-fade()`](</fr/docs/Web/CSS/cross-fade()>)
+  - [`element()`](</fr/docs/Web/CSS/element()>)
+  - [`image()`](</fr/docs/Web/CSS/image/image()>)
+  - [`image-set()`](</fr/docs/Web/CSS/image/image-set()>)
+  - [`linear-gradient`](</fr/docs/Web/CSS/gradient/linear-gradient()>)
+  - [`radial-gradient`](</fr/docs/Web/CSS/gradient/radial-gradient()>)
+  - [`conic-gradient`](</fr/docs/Web/CSS/gradient/conic-gradient()>)
+  - [`repeating-linear-gradient`](</fr/docs/Web/CSS/gradient/repeating-linear-gradient()>)
+  - [`repeating-radial-gradient`](</fr/docs/Web/CSS/gradient/repeating-radial-gradient()>)
+  - [`repeating-conic-gradient`](</fr/docs/Web/CSS/gradient/repeating-conic-gradient()>)
+  - [`paint()`](</fr/docs/Web/CSS/image/paint()>)
+  - [`url()`](</fr/docs/Web/CSS/url()>)

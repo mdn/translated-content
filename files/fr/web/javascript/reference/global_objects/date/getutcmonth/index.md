@@ -13,7 +13,7 @@ La méthode **`getUTCMonth()`** renvoie le mois de la date renseignée, d'après
 ## Syntaxe
 
 ```js
-dateObj.getUTCMonth()
+dateObj.getUTCMonth();
 ```
 
 ### Valeur de retour

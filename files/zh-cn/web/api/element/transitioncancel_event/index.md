@@ -54,16 +54,29 @@ A {{jsxref("Function")}} to be called when a `transitioncancel` event occurs ind
   display: block;
   width: 100px;
   height: 100px;
-  background-color: #0000FF;
-  color: #FFFFFF;
+  background-color: #0000ff;
+  color: #ffffff;
   padding: 20px;
-  font: bold 1.6em "Helvetica", "Arial", sans-serif;
-  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s, color 2s;
-  transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
+  font:
+    bold 1.6em "Helvetica",
+    "Arial",
+    sans-serif;
+  -webkit-transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    -webkit-transform 2s,
+    color 2s;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    transform 2s,
+    color 2s;
 }
 
 .box:hover {
-  background-color: #FFCCCC;
+  background-color: #ffcccc;
   color: #000000;
   width: 200px;
   height: 200px;
@@ -78,25 +91,27 @@ A {{jsxref("Function")}} to be called when a `transitioncancel` event occurs ind
 
 ```js
 let box = document.querySelector(".box");
-box.ontransitionrun = function(event) {
+box.ontransitionrun = function (event) {
   box.innerHTML = "Zooming...";
-}
+};
 
-box.ontransitionend = function(event) {
+box.ontransitionend = function (event) {
   box.innerHTML = "Done!";
-}
+};
 
-box.onclick = function() {
-  box.style.display = 'none';
+box.onclick = function () {
+  box.style.display = "none";
   timeout = window.setTimeout(appear, 2000);
   function appear() {
-    box.style.display = 'block';
+    box.style.display = "block";
   }
-}
+};
 
-box.ontransitioncancel = function(event) {
-  console.log('transitioncancel fired after ' + event.elapsedTime + ' seconds.');
-}
+box.ontransitioncancel = function (event) {
+  console.log(
+    "transitioncancel fired after " + event.elapsedTime + " seconds.",
+  );
+};
 ```
 
 ### 结果

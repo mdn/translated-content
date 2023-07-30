@@ -20,15 +20,21 @@ El codigo que carga la textura se ve como esto:
 function initTextures() {
   cubeTexture = gl.createTexture();
   cubeImage = new Image();
-  cubeImage.onload = function() { handleTextureLoaded(cubeImage, cubeTexture); }
-  cubeImage.src = 'cubetexture.png';
+  cubeImage.onload = function () {
+    handleTextureLoaded(cubeImage, cubeTexture);
+  };
+  cubeImage.src = "cubetexture.png";
 }
 
 function handleTextureLoaded(image, texture) {
   gl.bindTexture(gl.TEXTURE_2D, texture);
   gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST);
+  gl.texParameteri(
+    gl.TEXTURE_2D,
+    gl.TEXTURE_MIN_FILTER,
+    gl.LINEAR_MIPMAP_NEAREST,
+  );
   gl.generateMipmap(gl.TEXTURE_2D);
   gl.bindTexture(gl.TEXTURE_2D, null);
 }
@@ -75,39 +81,24 @@ gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesTextureCoordBuffer);
 
 var textureCoordinates = [
   // Front
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
   // Back
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
   // Top
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
   // Bottom
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
   // Right
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
   // Left
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
 ];
 
-gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(textureCoordinates),
-              gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ARRAY_BUFFER,
+  new Float32Array(textureCoordinates),
+  gl.STATIC_DRAW,
+);
 ```
 
 Primeramente, este codigo crea un GL buffer en el cual almacenaremos las coordenadas de la textura para cada cara, luego enlazamos ese buffer como el array en el cual escribiremos.
@@ -123,7 +114,7 @@ El shader — y el código que inicializa los shaders — también necesita ser 
 Primero, echemos un vistazo a un cambio muy sencillo que se necesita en initShaders():
 
 ```js
-textureCoordAttribute = gl.getAttribLocation(shaderProgram, 'aTextureCoord');
+textureCoordAttribute = gl.getAttribLocation(shaderProgram, "aTextureCoord");
 gl.enableVertexAttribArray(textureCoordAttribute);
 gl.vertexAttribPointer(texCoordAttribute, 2, gl.FLOAT, false, 0, 0);
 ```
@@ -180,7 +171,7 @@ El código para mapear colores a la textura se ha ido, sustituido por esto:
 ```js
 gl.activeTexture(gl.TEXTURE0);
 gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
-gl.uniform1i(gl.getUniformLocation(shaderProgram, 'uSampler'), 0);
+gl.uniform1i(gl.getUniformLocation(shaderProgram, "uSampler"), 0);
 ```
 
 GL proporciona 32 registros de textura; La primera de ellas es gl.TEXTURE0. Vincularemos nuestra textura previamente cargada a ese registro, a continuación, establecremos el shader sampler uSampler (especificado en el shader) para utilizar esa textura.

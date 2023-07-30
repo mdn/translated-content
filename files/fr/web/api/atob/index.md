@@ -22,7 +22,7 @@ Déclenche une {{jsxref("DOMException")}} si la longueur de la chaîne passée e
 ## Exemple
 
 ```js
-donneesEncodees = window.btoa('Salut, monde'); // encode une chaîne
+donneesEncodees = window.btoa("Salut, monde"); // encode une chaîne
 donneesDecodees = window.atob(donneesEncodees); // décode la chaîne
 ```
 

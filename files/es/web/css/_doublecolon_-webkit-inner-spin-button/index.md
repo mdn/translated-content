@@ -22,7 +22,7 @@ input::-webkit-inner-spin-button {
 ### Contenido HTML
 
 ```html
-<input type="number">
+<input type="number" />
 ```
 
 {{EmbedLiveSample("Example", 200, 30)}}

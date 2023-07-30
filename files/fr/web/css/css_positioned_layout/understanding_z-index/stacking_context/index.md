@@ -87,37 +87,49 @@ Il est important de noter que les blocs DIV #4, DIV #5 et DIV #6 sont les enfant
 ```html
 <div id="div1">
   <h1>Élément de division n°1</h1>
-  <code>position: relative;<br/>
-  z-index: 5;</code>
+  <code
+    >position: relative;<br />
+    z-index: 5;</code
+  >
 </div>
 
 <div id="div2">
   <h1>Élément de division n°2</h1>
-  <code>position: relative;<br/>
-  z-index: 2;</code>
+  <code
+    >position: relative;<br />
+    z-index: 2;</code
+  >
 </div>
 
 <div id="div3">
   <div id="div4">
     <h1>Élément de division n°4</h1>
-    <code>position: relative;<br/>
-    z-index: 6;</code>
+    <code
+      >position: relative;<br />
+      z-index: 6;</code
+    >
   </div>
 
   <h1>Élément de division n°3</h1>
-  <code>position: absolute;<br/>
-  z-index: 4;</code>
+  <code
+    >position: absolute;<br />
+    z-index: 4;</code
+  >
 
   <div id="div5">
     <h1>Élément de division n°5</h1>
-    <code>position: relative;<br/>
-    z-index: 1;</code>
+    <code
+      >position: relative;<br />
+      z-index: 1;</code
+    >
   </div>
 
   <div id="div6">
     <h1>Élément de division n°6</h1>
-    <code>position: absolute;<br/>
-    z-index: 3;</code>
+    <code
+      >position: absolute;<br />
+      z-index: 3;</code
+    >
   </div>
 </div>
 ```
@@ -130,7 +142,9 @@ Il est important de noter que les blocs DIV #4, DIV #5 et DIV #6 sont les enfant
 }
 html {
   padding: 20px;
-  font: 12px/20px Arial, sans-serif;
+  font:
+    12px/20px Arial,
+    sans-serif;
 }
 div {
   opacity: 0.7;

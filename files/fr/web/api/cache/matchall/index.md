@@ -11,7 +11,7 @@ La méthode **`matchAll()`** de l'interface {{domxref("Cache")}} retourne une {{
 ## Syntaxe
 
 ```js
-cache.matchAll(request,{options}).then(function(response) {
+cache.matchAll(request, { options }).then(function (response) {
   // faire quelque chose avec le tableau des réponses
 });
 ```
@@ -37,13 +37,13 @@ Une {{jsxref("Promise", "Promesse")}} qui est résolue en un tableau de toutes l
 ## Exemples
 
 ```js
-caches.open('v1').then(function(cache) {
-  cache.matchAll('/images/').then(function(response) {
-    response.forEach(function(element, index, array) {
+caches.open("v1").then(function (cache) {
+  cache.matchAll("/images/").then(function (response) {
+    response.forEach(function (element, index, array) {
       cache.delete(element);
     });
   });
-})
+});
 ```
 
 ## Spécifications

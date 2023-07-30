@@ -31,19 +31,19 @@ original_slug: Learn/JavaScript/Objects/Inheritance
 function Person(first, last, age, gender, interests) {
   this.name = {
     first,
-    last
+    last,
   };
   this.age = age;
   this.gender = gender;
   this.interests = interests;
-};
+}
 ```
 
 _Все_ методы определены в прототипе конструктора. Например:
 
 ```js
-Person.prototype.greeting = function() {
-  alert('Hi! I\'m ' + this.name.first + '.');
+Person.prototype.greeting = function () {
+  alert("Hi! I'm " + this.name.first + ".");
 };
 ```
 
@@ -78,7 +78,7 @@ function Teacher(first, last, age, gender, interests, subject) {
 function Teacher(first, last, age, gender, interests, subject) {
   this.name = {
     first,
-    last
+    last,
   };
   this.age = age;
   this.gender = gender;
@@ -107,7 +107,7 @@ function BlueGlassBrick() {
   Brick.call(this);
 
   this.opacity = 0.5;
-  this.color = 'blue';
+  this.color = "blue";
 }
 ```
 
@@ -119,21 +119,21 @@ function BlueGlassBrick() {
 
 1. Добавьте следующую строку ниже своего предыдущего добавления:
 
-    ```js
-    Teacher.prototype = Object.create(Person.prototype);
-    ```
+   ```js
+   Teacher.prototype = Object.create(Person.prototype);
+   ```
 
-    Здесь наш друг [`create()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create) снова приходит на помощь. В этом случае мы используем его для создания нового объекта и делаем его значением `Teacher.prototype`. Новый объект имеет свой прототип `Person.prototype` и, следовательно, наследует, если и когда это необходимо, все доступные методы `Person.prototype`.
+   Здесь наш друг [`create()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create) снова приходит на помощь. В этом случае мы используем его для создания нового объекта и делаем его значением `Teacher.prototype`. Новый объект имеет свой прототип `Person.prototype` и, следовательно, наследует, если и когда это необходимо, все доступные методы `Person.prototype`.
 
 2. Нам нужно сделать ещё одну вещь, прежде чем двигаться дальше. После добавления последней строки, `Teacher.prototype.constructor` стало равным `Person()`, потому что мы просто устанавливаем `Teacher.prototype` для ссылки на объект, который наследует его свойства от `Person.prototype`! Попробуйте сохранить код, загрузите страницу в браузере и введите `Teacher.prototype.constructor` в консоль для проверки.
 3. Это может стать проблемой, поэтому нам нужно сделать это правильно. Вы можете сделать это, вернувшись к исходному коду и добавив следующие строки внизу:
 
-    ```
-    Object.defineProperty(Teacher.prototype, 'constructor', {
-        value: Teacher,
-        enumerable: false, // false, чтобы данное свойство не появлялось в цикле for in
-        writable: true });
-    ```
+   ```
+   Object.defineProperty(Teacher.prototype, 'constructor', {
+       value: Teacher,
+       enumerable: false, // false, чтобы данное свойство не появлялось в цикле for in
+       writable: true });
+   ```
 
 4. Теперь, если вы сохраните и обновите, введите `Teacher.prototype.constructor`, чтобы вернуть `Teacher()`, плюс мы теперь наследуем `Person()`!
 
@@ -144,18 +144,36 @@ function BlueGlassBrick() {
 Самый простой способ сделать это - определить его на прототипе `Teacher()` - добавить в нижнюю часть кода следующее:
 
 ```js
-Teacher.prototype.greeting = function() {
+Teacher.prototype.greeting = function () {
   var prefix;
 
-  if (this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M') {
-    prefix = 'Mr.';
-  } else if (this.gender === 'female' || this.gender === 'Female' || this.gender === 'f' || this.gender === 'F') {
-    prefix = 'Mrs.';
+  if (
+    this.gender === "male" ||
+    this.gender === "Male" ||
+    this.gender === "m" ||
+    this.gender === "M"
+  ) {
+    prefix = "Mr.";
+  } else if (
+    this.gender === "female" ||
+    this.gender === "Female" ||
+    this.gender === "f" ||
+    this.gender === "F"
+  ) {
+    prefix = "Mrs.";
   } else {
-    prefix = 'Mx.';
+    prefix = "Mx.";
   }
 
-  alert('Hello. My name is ' + prefix + ' ' + this.name.last + ', and I teach ' + this.subject + '.');
+  alert(
+    "Hello. My name is " +
+      prefix +
+      " " +
+      this.name.last +
+      ", and I teach " +
+      this.subject +
+      ".",
+  );
 };
 ```
 
@@ -166,7 +184,14 @@ Teacher.prototype.greeting = function() {
 Теперь, когда вы ввели весь код, попробуйте создать экземпляр объекта из `Teacher()`, поставив ниже вашего JavaScript-кода (или что-то похожее по вашему выбору):
 
 ```js
-var teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');
+var teacher1 = new Teacher(
+  "Dave",
+  "Griffiths",
+  31,
+  "male",
+  ["football", "cookery"],
+  "mathematics",
+);
 ```
 
 Теперь сохраните, обновите, и попробуйте получить доступ к свойствам и методам вашего нового объекта `teacher1`, например:

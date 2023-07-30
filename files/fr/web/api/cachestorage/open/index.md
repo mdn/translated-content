@@ -15,7 +15,7 @@ Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr
 ## Syntaxe
 
 ```js
-caches.open(cacheName).then(function(cache) {
+caches.open(cacheName).then(function (cache) {
   // faire quelque-chose avec le cache
 });
 ```

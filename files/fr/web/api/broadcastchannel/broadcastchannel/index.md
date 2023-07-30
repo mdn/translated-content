@@ -15,7 +15,7 @@ Le constructeur **`BroadcastChannel()`** crée un nouvel objet [`BroadcastChanne
 ## Syntaxe
 
 ```js
-new BroadcastChannel(channelName)
+new BroadcastChannel(channelName);
 ```
 
 ### Paramètres
@@ -28,8 +28,8 @@ new BroadcastChannel(channelName)
 ```js
 // crée un nouveau canal écoutant sur le canal "notification_interne".
 
-const bc = new BroadcastChannel('notification_interne');
-bc.postMessage('Nouvelle écoute connectée !');
+const bc = new BroadcastChannel("notification_interne");
+bc.postMessage("Nouvelle écoute connectée !");
 ```
 
 ## Spécifications

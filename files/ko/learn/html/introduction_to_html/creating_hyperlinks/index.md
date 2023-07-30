@@ -49,8 +49,9 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 A basic link is created by wrapping the text (or other content, see [Block level links](#block_level_links)) you want to turn into a link inside an {{htmlelement("a")}} element, and giving it an {{htmlattrxref("href", "a")}} 속성은 (also known as a **target**) 사이트의 주소가 포함된 링크를 당신에게 줍니다.
 
 ```html
-<p>I'm creating a link to
-<a href="https://www.mozilla.org/en-US/">the Mozilla homepage</a>.
+<p>
+  I'm creating a link to
+  <a href="https://www.mozilla.org/en-US/">the Mozilla homepage</a>.
 </p>
 ```
 
@@ -65,10 +66,14 @@ A basic link is created by wrapping the text (or other content, see [Block level
 예제 코드 :
 
 ```html
-<p>I'm creating a link to
-<a href="https://www.mozilla.org/en-US/"
-   title="The best place to find more information about Mozilla's
-          mission and how to contribute">the Mozilla homepage</a>.
+<p>
+  I'm creating a link to
+  <a
+    href="https://www.mozilla.org/en-US/"
+    title="The best place to find more information about Mozilla's
+          mission and how to contribute"
+    >the Mozilla homepage</a
+  >.
 </p>
 ```
 
@@ -92,7 +97,9 @@ A basic link is created by wrapping the text (or other content, see [Block level
 
 ```html
 <a href="https://www.mozilla.org/en-US/">
-  <img src="mozilla-image.png" alt="mozilla logo that links to the mozilla homepage">
+  <img
+    src="mozilla-image.png"
+    alt="mozilla logo that links to the mozilla homepage" />
 </a>
 ```
 
@@ -115,8 +122,10 @@ URL은 파일들을 찾기위해 path를 이용합니다. path는 당신이 관�
 - **같은 디렉토리(폴더)**: `contacts.html`을 가리키는 하이퍼링크를 `index.html`(top level `index.html`) 안에 포함시키려면 현재 파일과 동일한 디렉토리에 연결하려는 파일의 파일 이름만 지정하면 된다. 따라서 사용할 URL은 `contacts.html`: 입니다.
 
 ```html
-<p>Want to contact a specific staff member?
-Find details on our <a href="contacts.html">contacts page</a>.</p>
+<p>
+  Want to contact a specific staff member? Find details on our
+  <a href="contacts.html">contacts page</a>.
+</p>
 ```
 
 - **하위 디렉토리로 하향 이동**: `projects/index.html`을 가리키는 하이퍼링크를 internal `index.html`(`index.html`에 상위 레벨)에 포함시키려면 연결하려는 파일을 표시하기 전에 프로젝트 디렉토리로 내려가야 할 것이다. 이 작업은 디렉토리 이름, 그 다음 슬래시, 그 다음 파일 이름을 지정하여 수행되므로 사용할 URL은`projects/index.html` 입니다.
@@ -148,13 +157,19 @@ Find details on our <a href="contacts.html">contacts page</a>.</p>
 예제:
 
 ```html
-<p>Want to write us a letter? Use our <a href="contacts.html#Mailing_address">mailing address</a>.</p>
+<p>
+  Want to write us a letter? Use our
+  <a href="contacts.html#Mailing_address">mailing address</a>.
+</p>
 ```
 
 Document fragments(문서 조각)를 단독으로 사용하여 동일한 문서의 다른 부분에 연결할 수 있다
 
 ```html
-<p>The <a href="#Mailing_address">company mailing address</a> can be found at the bottom of this page.</p>
+<p>
+  The <a href="#Mailing_address">company mailing address</a> can be found at the
+  bottom of this page.
+</p>
 ```
 
 ### 절대 URL과 상대 URL
@@ -194,18 +209,13 @@ Document fragments(문서 조각)를 단독으로 사용하여 동일한 문서�
 _link test:_ [Download Firefox](https://firefox.com)
 
 ```html
-<p><a href="https://firefox.com/">
-  Download Firefox
-</a></p>
+<p><a href="https://firefox.com/"> Download Firefox </a></p>
 ```
 
 _**Bad** link text:_ [Click here](https://firefox.com/) to download Firefox
 
 ```html
-<p><a href="https://firefox.com/">
-  Click here
-</a>
-to download Firefox</p>
+<p><a href="https://firefox.com/"> Click here </a> to download Firefox</p>
 ```
 
 Other tips:
@@ -234,17 +244,23 @@ PDF나 워드 문서와 같이 다운로드되거나 스트리밍되거나(비�
 여기서 사용할 수 있는 텍스트의 종류를 보려면 몇 가지 예를 살펴보십시오.:
 
 ```html
-<p><a href="http://www.example.com/large-report.pdf">
-  Download the sales report (PDF, 10MB)
-</a></p>
+<p>
+  <a href="http://www.example.com/large-report.pdf">
+    Download the sales report (PDF, 10MB)
+  </a>
+</p>
 
-<p><a href="http://www.example.com/video-stream/">
-  Watch the video (stream opens in separate tab, HD quality)
-</a></p>
+<p>
+  <a href="http://www.example.com/video-stream/">
+    Watch the video (stream opens in separate tab, HD quality)
+  </a>
+</p>
 
-<p><a href="http://www.example.com/car-game">
-  Play the car game (requires Flash)
-</a></p>
+<p>
+  <a href="http://www.example.com/car-game">
+    Play the car game (requires Flash)
+  </a>
+</p>
 ```
 
 ### 다운로드 연결 시 download attribute 사용
@@ -254,8 +270,9 @@ PDF나 워드 문서와 같이 다운로드되거나 스트리밍되거나(비�
 Firefox 39의 Windows 버전에 대한 다운로드 링크가 있는 예:
 
 ```html
-<a href="https://download.mozilla.org/?product=firefox-39.0-SSL&os=win&lang=en-US"
-   download="firefox-39-installer.exe">
+<a
+  href="https://download.mozilla.org/?product=firefox-39.0-SSL&os=win&lang=en-US"
+  download="firefox-39-installer.exe">
   Download Firefox 39 for Windows
 </a>
 ```
@@ -309,7 +326,8 @@ Firefox 39의 Windows 버전에 대한 다운로드 링크가 있는 예:
 아래 예제가 cc, bcc, subject and body 를 포함한다.:
 
 ```html
-<a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&amp;subject=The%20subject%20of%20the%20email &amp;body=The%20body%20of%20the%20email">
+<a
+  href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
   Send mail with cc, bcc, subject and body
 </a>
 ```

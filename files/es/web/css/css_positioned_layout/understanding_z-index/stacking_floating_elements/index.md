@@ -32,22 +32,17 @@ Este comportamiento puede ser explicado con una versión mejorada de la lista pr
 ### HTML
 
 ```html
-<div id="abs1">
-  <b>DIV #1</b><br />position: absolute;</div>
+<div id="abs1"><b>DIV #1</b><br />position: absolute;</div>
 
-<div id="flo1">
-  <b>DIV #2</b><br />float: left;</div>
+<div id="flo1"><b>DIV #2</b><br />float: left;</div>
 
-<div id="flo2">
-  <b>DIV #3</b><br />float: right;</div>
+<div id="flo2"><b>DIV #3</b><br />float: right;</div>
 
 <br />
 
-<div id="sta1">
-  <b>DIV #4</b><br />no positioning</div>
+<div id="sta1"><b>DIV #4</b><br />no positioning</div>
 
-<div id="abs2">
-  <b>DIV #5</b><br />position: absolute;</div>
+<div id="abs2"><b>DIV #5</b><br />position: absolute;</div>
 ```
 
 ### CSS

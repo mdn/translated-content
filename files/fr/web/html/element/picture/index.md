@@ -1,5 +1,5 @@
 ---
-title: '<picture> : l''élément d''image adaptative'
+title: "<picture> : l'élément d'image adaptative"
 slug: Web/HTML/Element/picture
 translation_of: Web/HTML/Element/picture
 ---
@@ -37,8 +37,8 @@ L'attribut `media` de l'élément {{HTMLElement("source")}} permet de rédiger u
 
 ```html
 <picture>
- <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
- <img src="mdn-logo-narrow.png" alt="MDN">
+  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)" />
+  <img src="mdn-logo-narrow.png" alt="MDN" />
 </picture>
 ```
 
@@ -48,8 +48,8 @@ L'attribut `type` d'un élément {{HTMLElement("source")}} permet d'indiquer le 
 
 ```html
 <picture>
- <source srcset="mdn-logo.svg" type="image/svg+xml">
- <img src="mdn-logo.png" alt="MDN">
+  <source srcset="mdn-logo.svg" type="image/svg+xml" />
+  <img src="mdn-logo.png" alt="MDN" />
 </picture>
 ```
 

@@ -50,6 +50,7 @@ El motivo de esto es que el elemento {{HTMLElement("form")}} de HTML4 (que es an
 Una petición simple es aquella que cumple todas las siguientes condiciones:
 
 - Uno de los métodos permitidos:
+
   - {{HTTPMethod("GET")}}
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
@@ -73,13 +74,13 @@ Una petición simple es aquella que cumple todas las siguientes condiciones:
 - Si la petición se realiza utilizando un objeto {{domxref("XMLHttpRequest")}}, no se registran detectores de eventos en el objeto devuelto por la propiedad {{domxref("XMLHttpRequest.upload")}} utilizada en la petición; Es decir, dada una instancia `xhr` de {{domxref("XMLHttpRequest")}}, ningún código ha llamado a `xhr.upload.addEventListener()` para añadir un detector de eventos para monitorizar la subida.
 - No se utiliza ningún objeto {{domxref("ReadableStream")}} en la solicitud.
 
- > **Nota:** _WebKit Nightly_ y _Safari Technology Preview_ imponen restricciones adicionales a lo valores permitidos en las cabeceras {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} y {{HTTPHeader("Content-Language")}}. Si alguna de esas cabeceras tiene valores "no estándar", WebKit/Safari no consideran que la petición sea una "solicitud simple". Los valores que WebKit/Safari consideran "no estándar" no están documentados, excepto en los siguientes errores de WebKit:
- >
- > - [Comprobación previa requerida para cabeceras de solicitud CORS-safelisted no estándar: Accept, Accept-Language y Content-Language](https://webkit.org/b/165178)
- > - [Permitir comas en las cabeceras para CORS simple en Accept, Accept-Language y Content-Language](https://webkit.org/b/165566)
- > - [Cambio a un modelo de lista negra para cabeceras Accept restringidas en peticiones CORS simples](https://webkit.org/b/166363)
- >
- > Ningún otro navegador aplica estas restricciones adicionales porque no forman parte de la especificación.
+> **Nota:** _WebKit Nightly_ y _Safari Technology Preview_ imponen restricciones adicionales a lo valores permitidos en las cabeceras {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} y {{HTTPHeader("Content-Language")}}. Si alguna de esas cabeceras tiene valores "no estándar", WebKit/Safari no consideran que la petición sea una "solicitud simple". Los valores que WebKit/Safari consideran "no estándar" no están documentados, excepto en los siguientes errores de WebKit:
+>
+> - [Comprobación previa requerida para cabeceras de solicitud CORS-safelisted no estándar: Accept, Accept-Language y Content-Language](https://webkit.org/b/165178)
+> - [Permitir comas en las cabeceras para CORS simple en Accept, Accept-Language y Content-Language](https://webkit.org/b/165566)
+> - [Cambio a un modelo de lista negra para cabeceras Accept restringidas en peticiones CORS simples](https://webkit.org/b/166363)
+>
+> Ningún otro navegador aplica estas restricciones adicionales porque no forman parte de la especificación.
 
 Por ejemplo, supongamos que el contenido web en `https://foo.example` desea invocar contenido en `https://bar/other`. El código del siguiente ejemplo podría ser utilizado en el JavaScript desplegado en `foo.example`:
 
@@ -138,7 +139,7 @@ Este patrón de las cabeceras {{HTTPHeader("Origin")}} y {{HTTPHeader("Access-Co
 Access-Control-Allow-Origin: https://foo.example
 ```
 
-> **Nota:** Al responder a una petición con [solicitud con credenciales](#requests_with_credentials), el servidor debe especificar un origen en el valor de la cabecera `Access-Control-Allow-Origin`, en lugar de especificar el comodín "*".
+> **Nota:** Al responder a una petición con [solicitud con credenciales](#requests_with_credentials), el servidor debe especificar un origen en el valor de la cabecera `Access-Control-Allow-Origin`, en lugar de especificar el comodín "\*".
 
 ### Solicitudes verificadas previamente
 

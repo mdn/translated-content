@@ -56,7 +56,7 @@ slug: Web/HTML/Element/article
     <tr>
       <th scope="row"><dfn>가능한 부모 요소</dfn></th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/ko/docs/Web/HTML/Content_categories#Flow_content"
           >플로우 콘텐츠</a
         >를 허용하는 모든 요소.<br /><code>&#x3C;article></code> 요소는
         {{HTMLElement("address")}}의 후손이 될 수 없음에 주의하세요.

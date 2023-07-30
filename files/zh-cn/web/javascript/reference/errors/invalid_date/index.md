@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: invalid date'
+title: "RangeError: invalid date"
 slug: Web/JavaScript/Reference/Errors/Invalid_date
 ---
 
@@ -28,15 +28,15 @@ slug: Web/JavaScript/Reference/Errors/Invalid_date
 ISO 格式化字符串中不可识别的字符串或者包含非法元素值的日期一般会返回 {{jsxref("NaN")}}。然而，根据实现的不同，不符合 ISO 格式的字符串可能也会抛出 `RangeError: invalid date`，比如在火狐浏览器中有以下情形：
 
 ```js example-bad
-new Date('foo-bar 2014');
-new Date('2014-25-23').toISOString();
-new Date('foo-bar 2014').toString();
+new Date("foo-bar 2014");
+new Date("2014-25-23").toISOString();
+new Date("foo-bar 2014").toString();
 ```
 
 然而下面这种情形会返回 {{jsxref("NaN")}} ：
 
 ```js example-bad
-Date.parse('foo-bar 2014'); // NaN
+Date.parse("foo-bar 2014"); // NaN
 ```
 
 参见 {{jsxref("Date.parse()")}} 文档，了解更多详情。
@@ -44,7 +44,7 @@ Date.parse('foo-bar 2014'); // NaN
 ### 正确示例
 
 ```js example-good
-new Date('05 October 2011 14:48 UTC');
+new Date("05 October 2011 14:48 UTC");
 ```
 
 ## 另见
