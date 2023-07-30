@@ -2,7 +2,6 @@
 title: API Web Crypto
 slug: Web/API/Web_Crypto_API
 translation_of: Web/API/Web_Crypto_API
-browser-compat: api.Crypto
 ---
 
 {{DefaultAPISidebar("Web Crypto API")}}

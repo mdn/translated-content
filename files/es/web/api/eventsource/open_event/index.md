@@ -17,7 +17,7 @@ eventSource.onopen = function
 ## Ejemplos
 
 ```js
-evtSource.onopen = function() {
+evtSource.onopen = function () {
   console.log("Connection to server opened.");
 };
 ```

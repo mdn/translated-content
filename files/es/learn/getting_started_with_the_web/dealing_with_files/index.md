@@ -43,7 +43,7 @@ Para que los archivos se comuniquen entre sí, debes proporcionar una ruta de ar
 2. Abre tu archivo `index.html` e inserta el siguiente código en el archivo exactamente como se muestra. Por ahora, no te preocupes por lo que significa todo esto; veremos las estructuras con más detalle más adelante en la serie.
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html>
      <head>
        <meta charset="utf-8" />

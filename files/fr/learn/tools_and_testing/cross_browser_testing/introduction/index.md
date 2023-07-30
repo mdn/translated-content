@@ -1,12 +1,6 @@
 ---
 title: Introduction au test en navigateur croisé
 slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
-tags:
-  - Apprentissage
-  - Débutant
-  - multi navigateur
-  - navigateur croisé
-  - test
 translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 ---
 

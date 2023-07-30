@@ -1,12 +1,7 @@
 ---
 title: Worker.onmessage
 slug: Web/API/Worker/message_event
-tags:
-  - API
-  - Property
-  - Reference
 translation_of: Web/API/Worker/onmessage
-original_slug: Web/API/Worker/onmessage
 ---
 
 {{ APIRef("Web Workers API") }}
@@ -28,26 +23,26 @@ L'extrait de code suivant illustre la création d'un objet {{domxref("Worker")}}
 ```js
 var myWorker = new Worker("worker.js");
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message envoyé au worker');
-}
+first.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message envoyé au worker");
+};
 
-myWorker.onmessage = function(e) {
+myWorker.onmessage = function (e) {
   result.textContent = e.data;
-  console.log('Message reçu du worker');
-}
+  console.log("Message reçu du worker");
+};
 ```
 
 Dans le script `worker.js`, un gestionnaire `onmessage` se charge des messages en provenance du script principal :
 
 ```js
-onmessage = function(e) {
-  console.log('Message reçu du script principal');
-  var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
-  console.log('Renvoi d\'un message au script principal');
+onmessage = function (e) {
+  console.log("Message reçu du script principal");
+  var workerResult = "Result: " + e.data[0] * e.data[1];
+  console.log("Renvoi d'un message au script principal");
   postMessage(workerResult);
-}
+};
 ```
 
 Remarquez comment dans le script principal, `onmessage` doit être appelée par `myWorker`, tandis que dans le script du worker vous avez juste besoin d'appeler `onmessage` parce que le worker est en réalité le contexte global ({{domxref("DedicatedWorkerGlobalScope")}}).

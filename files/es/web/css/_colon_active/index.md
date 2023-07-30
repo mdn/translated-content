@@ -1,5 +1,5 @@
 ---
-title: ':active'
+title: ":active"
 slug: Web/CSS/:active
 ---
 
@@ -33,10 +33,18 @@ Los estilos definidos por la pseudoclase `:active` serán anulados por cualquier
 ### CSS
 
 ```css
-a:link { color: blue; }          /* Enlaces no visitados */
-a:visited { color: purple; }     /* Enlaces visitados */
-a:hover { background: yellow; }  /* El usuario esta sobre el enlace */
-a:active { color: lime; }        /* Enlaces activos */
+a:link {
+  color: blue;
+} /* Enlaces no visitados */
+a:visited {
+  color: purple;
+} /* Enlaces visitados */
+a:hover {
+  background: yellow;
+} /* El usuario esta sobre el enlace */
+a:active {
+  color: lime;
+} /* Enlaces activos */
 ```
 
 ### Resultado

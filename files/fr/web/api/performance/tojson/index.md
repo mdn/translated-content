@@ -1,12 +1,6 @@
 ---
 title: performance.toJSON()
 slug: Web/API/Performance/toJSON
-tags:
-  - API
-  - Method
-  - Méthode
-  - Performance Web
-  - Référence
 translation_of: Web/API/Performance/toJSON
 ---
 
@@ -19,7 +13,7 @@ La méthode **`toJSON()`** de l'interface {{domxref("Performance")}} est un sér
 ## Syntaxe
 
 ```js
-  myPerf = performance.toJSON()
+myPerf = performance.toJSON();
 ```
 
 ### Arguments

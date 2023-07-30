@@ -11,7 +11,7 @@ slug: Web/API/HTMLInputElement/webkitdirectory
 ## 语法
 
 ```js
- HTMLInputElement.webkitdirectory = boolValue
+HTMLInputElement.webkitdirectory = boolValue;
 ```
 
 ### 值
@@ -51,7 +51,7 @@ slug: Web/API/HTMLInputElement/webkitdirectory
 
 如果用户选择了`PhotoAlbums`，则文件列表上将会包含上面列出的每个文件的{{domxref("File")}}对象，而不是文件目录。条目`PIC2343.jpg`的`webkitRelativePath`属性将会得到`PhotoAlbums/Birthdays/Don's 40th birthday/PIC2343.jpg`的值。即使{{domxref("FileList")}}是扁平的，这也使得知道层次结构成为可能。
 
-> **备注：** 在 *Chromium < 72* 里，`webkitRelativePath` 的行为表现有所不同。有关更多详细信息，请参见[此 bug](https://bugs.chromium.org/p/chromium/issues/detail?id=124187)。
+> **备注：** 在 _Chromium < 72_ 里，`webkitRelativePath` 的行为表现有所不同。有关更多详细信息，请参见[此 bug](https://bugs.chromium.org/p/chromium/issues/detail?id=124187)。
 
 ## 示例
 
@@ -67,16 +67,20 @@ slug: Web/API/HTMLInputElement/webkitdirectory
 ### JavaScript
 
 ```js
-document.getElementById("filepicker").addEventListener("change", function(event) {
-  let output = document.getElementById("listing");
-  let files = event.target.files;
+document.getElementById("filepicker").addEventListener(
+  "change",
+  function (event) {
+    let output = document.getElementById("listing");
+    let files = event.target.files;
 
-  for (let i=0; i<files.length; i++) {
-    let item = document.createElement("li");
-    item.innerHTML = files[i].webkitRelativePath;
-    output.appendChild(item);
-  };
-}, false);
+    for (let i = 0; i < files.length; i++) {
+      let item = document.createElement("li");
+      item.innerHTML = files[i].webkitRelativePath;
+      output.appendChild(item);
+    }
+  },
+  false,
+);
 ```
 
 ### 结果

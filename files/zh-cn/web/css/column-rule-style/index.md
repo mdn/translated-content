@@ -38,7 +38,9 @@ column-rule-style: inherit;
 ## Example
 
 ```css
-#header {-moz-column-rule-style: inset;}
+#header {
+  -moz-column-rule-style: inset;
+}
 ```
 
 ## Specifications

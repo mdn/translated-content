@@ -1,11 +1,6 @@
 ---
 title: top
 slug: Web/CSS/top
-tags:
-  - CSS
-  - Positionnement
-  - Propriété
-  - Reference
 translation_of: Web/CSS/top
 ---
 
@@ -96,7 +91,7 @@ div {
 p.relatif {
   position: relative;
   top: 5em;
-  border: 2px black solid
+  border: 2px black solid;
 }
 ```
 

@@ -10,4 +10,4 @@ Le [protocole d'authentification HTTP](/fr/docs/Web/HTTP/Authentication) est bas
 
 ## Voir aussi
 
-- [Authentification défi-réponse](https://fr.wikipedia.org/wiki/Authentification_d%C3%A9fi-r%C3%A9ponse) sur Wikipédia.
+- [Authentification défi-réponse](https://fr.wikipedia.org/wiki/Authentification_défi-réponse) sur Wikipédia.

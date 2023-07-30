@@ -10,38 +10,43 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
 打开 **/controllers/genreController.js** ，并在档案最上方引用 async 和 Book 模组。
 
 ```js
-var Book = require('../models/book');
-var async = require('async');
+var Book = require("../models/book");
+var async = require("async");
 ```
 
 找到导出的 `genre_detail()` 控制器方法，并将其替换为以下代码。
 
 ```js
 // Display detail page for a specific Genre.
-exports.genre_detail = function(req, res, next) {
+exports.genre_detail = function (req, res, next) {
+  async.parallel(
+    {
+      genre: function (callback) {
+        Genre.findById(req.params.id).exec(callback);
+      },
 
-    async.parallel({
-        genre: function(callback) {
-            Genre.findById(req.params.id)
-              .exec(callback);
-        },
-
-        genre_books: function(callback) {
-          Book.find({ 'genre': req.params.id })
-          .exec(callback);
-        },
-
-    }, function(err, results) {
-        if (err) { return next(err); }
-        if (results.genre==null) { // No results.
-            var err = new Error('Genre not found');
-            err.status = 404;
-            return next(err);
-        }
-        // Successful, so render
-        res.render('genre_detail', { title: 'Genre Detail', genre: results.genre, genre_books: results.genre_books } );
-    });
-
+      genre_books: function (callback) {
+        Book.find({ genre: req.params.id }).exec(callback);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      }
+      if (results.genre == null) {
+        // No results.
+        var err = new Error("Genre not found");
+        err.status = 404;
+        return next(err);
+      }
+      // Successful, so render
+      res.render("genre_detail", {
+        title: "Genre Detail",
+        genre: results.genre,
+        genre_books: results.genre_books,
+      });
+    },
+  );
 };
 ```
 
@@ -52,10 +57,11 @@ exports.genre_detail = function(req, res, next) {
 > **备注：** 如果数据库中不存在该类型（即它可能已被删除），则`findById()`将成功返回，但没有结果。在这种情况下，我们想要显示一个“未找到”页面，因此我们创建一个`Error`对象，并将其传递给链中的下一个中间件函数`next`。
 >
 > ```js
-> if (results.genre==null) { // No results.
->     var err = new Error('Genre not found');
->     err.status = 404;
->     return next(err);
+> if (results.genre == null) {
+>   // No results.
+>   var err = new Error("Genre not found");
+>   err.status = 404;
+>   return next(err);
 > }
 > ```
 >
@@ -105,7 +111,7 @@ block content
 > 这是来自 **req.params.id** 的 mongoose 错误。要解决这个问题，首先需要在 **genreController.js** 页面上要求 mongoose，如下所示：
 >
 > ```js
->  var mongoose = require('mongoose');
+> var mongoose = require("mongoose");
 > ```
 >
 > 然后使用 **mongoose.Types.ObjectId()**将 id 转换为可以使用的。例如：

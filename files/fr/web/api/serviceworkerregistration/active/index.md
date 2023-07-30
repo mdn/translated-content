@@ -15,7 +15,7 @@ Un _worker_ actif contrôle un {{domxref("ServiceWorkerClient")}} si l'URL du cl
 ## Syntaxe
 
 ```js
-sw = ServiceWorker.active
+sw = ServiceWorker.active;
 ```
 
 ### Valeur

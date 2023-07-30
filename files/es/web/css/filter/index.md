@@ -64,7 +64,9 @@ Si ambos filtros tienen una lista de funciones con la misma longitud y sin {{css
 Ejemplos del uso de las funciones predefinidas se muestran a continuación. Ver cada función. Ver cada función para un ejemplo específico.
 
 ```css
-.mydiv { filter: grayscale(50%) }
+.mydiv {
+  filter: grayscale(50%);
+}
 
 /* funcion del blanco y negro "grayscale" al 50% y un desenfoque "blur" de 10px */
 img {
@@ -75,9 +77,13 @@ img {
 Ejemplos del uso de la función con el recurso SVG se muestran a continuación.
 
 ```css
-.target { filter: url(#c1); }
+.target {
+  filter: url(#c1);
+}
 
-.mydiv { filter: url(commonfilters.xml#large-blur) }
+.mydiv {
+  filter: url(commonfilters.xml#large-blur);
+}
 ```
 
 ## Funciones
@@ -89,7 +95,7 @@ Para utilizar la propiedad CSS `filter`, hay que especificar un valor para una d
 La función url() toma la dirección de un archivo XML que especifica un filtro SVG, y puede incluir un ancla para un elemento de filtro especifico.
 
 ```css
-filter: url(resources.svg#c1)
+filter: url(resources.svg#c1);
 ```
 
 ### `blur()`
@@ -97,7 +103,7 @@ filter: url(resources.svg#c1)
 Aplica un desenfoque Gaussiano a la imagen. El valor de 'radio' define el valor de la desviación estándar de la función de desenfoque Gaussiano o el número de píxeles que se mezclan entre sí, por lo que un valor mayor creará un mayor desenfoque. El valor lagunar de interpolación (es decir, si no se proporciona ningún parametro) es `0`. El parámetro se especifica como una longitud de CSS, pero no acepta porcentajes.
 
 ```css
-filter: blur(5px)
+filter: blur(5px);
 ```
 
 ```html hidden
@@ -128,22 +134,30 @@ filter: blur(5px)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:blur(5px);
-  -webkit-filter:blur(5px);
-  -o-filter:blur(5px);
-  -ms-filter:blur(5px);
-  filter:blur(5px); }
+  width: 100%;
+  height: auto;
+  -moz-filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -164,18 +178,18 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
 ```html
 <svg height="0" xmlns="http://www.w3.org/2000/svg">
   <filter id="svgBlur" x="-5%" y="-5%" width="110%" height="110%">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+    <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
   </filter>
 </svg>
 ```
@@ -187,16 +201,16 @@ table.standard-table td {
 Se aplica una multiplicación lineal a la imagen, haciendo que parezca más o menos brillante. Un valor de `0%` convertirá la imagen completamente a negro. Un valor de `100%` no producirá ningún cambio en la imagen. Otros valores causarán una multiplicación lineal en el efecto. Los valores de una cantidad superior al `100%` aumentarán el brillo de la imagen. El valor lagunar (si no se especifica ningún valor) es `1` (equivalente a `100%`).
 
 ```css
-filter: brightness(0.5)
+filter: brightness(0.5);
 ```
 
 ```html
 <svg height="0" xmlns="http://www.w3.org/2000/svg">
- <filter id="brightness">
+  <filter id="brightness">
     <feComponentTransfer>
-        <feFuncR type="linear" slope="[amount]"/>
-        <feFuncG type="linear" slope="[amount]"/>
-        <feFuncB type="linear" slope="[amount]"/>
+      <feFuncR type="linear" slope="[amount]" />
+      <feFuncG type="linear" slope="[amount]" />
+      <feFuncB type="linear" slope="[amount]" />
     </feComponentTransfer>
   </filter>
 </svg>
@@ -234,28 +248,36 @@ filter: brightness(0.5)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:brightness(2);
-  -webkit-filter:brightness(2);
-  -o-filter:brightness(2);
-  -ms-filter:brightness(2);
-  filter:brightness(2); }
+  width: 100%;
+  height: auto;
+  -moz-filter: brightness(2);
+  -webkit-filter: brightness(2);
+  -o-filter: brightness(2);
+  -ms-filter: brightness(2);
+  filter: brightness(2);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
   border-spacing: 0px;
   margin: 0px 0px 1.286em;
-  height:100%;
+  height: 100%;
   width: 85%;
 }
 table.standard-table th {
@@ -270,11 +292,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -285,16 +307,25 @@ table.standard-table td {
 Ajusta el contraste del elemento. Un valor superior a `0%` creará una imagen completamente gris. Un valor de `100%` deja al elemento sin cambios. Valores superiores a `100%` son permitidos, dando como resultado mayor contraste. El valor lagunar de interpolación (si no se especifica ningún valor) es `1` (equivalente a `100%`).
 
 ```css
-filter: contrast(200%)
+filter: contrast(200%);
 ```
 
 ```html
 <svg height="0" xmlns="http://www.w3.org/2000/svg">
   <filter id="contrast">
     <feComponentTransfer>
-      <feFuncR type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/>
-      <feFuncG type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/>
-      <feFuncB type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/>
+      <feFuncR
+        type="linear"
+        slope="[amount]"
+        intercept="-(0.5 * [amount]) + 0.5" />
+      <feFuncG
+        type="linear"
+        slope="[amount]"
+        intercept="-(0.5 * [amount]) + 0.5" />
+      <feFuncB
+        type="linear"
+        slope="[amount]"
+        intercept="-(0.5 * [amount]) + 0.5" />
     </feComponentTransfer>
   </filter>
 </svg>
@@ -332,22 +363,30 @@ filter: contrast(200%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:contrast(200%);
-  -webkit-filter:contrast(200%);
-  -o-filter:contrast(200%);
-  -ms-filter:contrast(200%);
-  filter:contrast(200%); }
+  width: 100%;
+  height: auto;
+  -moz-filter: contrast(200%);
+  -webkit-filter: contrast(200%);
+  -o-filter: contrast(200%);
+  -ms-filter: contrast(200%);
+  filter: contrast(200%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -368,11 +407,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -394,19 +433,19 @@ Aplica un efecto de sombra a la imagen. Una sombra es realmente una versión des
   - : Véanse los valores {{cssxref("&lt;color&gt;")}} para las opciones posibles de palabras clave y notaciones. Si no se especifica, el color depende del navegador. En Gecko (Firefox), Presto (Opera) y Trident (Internet Explorer), se usa el valor de la propiedad {{cssxref("color")}}. Por otro lado, la sombra en WebKit es transparente, y por lo tanto, es inútil si se omite `<color>`.
 
 ```css
-filter: drop-shadow(16px 16px 10px black)
+filter: drop-shadow(16px 16px 10px black);
 ```
 
 ```html
 <svg height="0" xmlns="http://www.w3.org/2000/svg">
- <filter id="drop-shadow">
-    <feGaussianBlur in="SourceAlpha" stdDeviation="[radius]"/>
-    <feOffset dx="[offset-x]" dy="[offset-y]" result="offsetblur"/>
-    <feFlood flood-color="[color]"/>
-    <feComposite in2="offsetblur" operator="in"/>
+  <filter id="drop-shadow">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="[radius]" />
+    <feOffset dx="[offset-x]" dy="[offset-y]" result="offsetblur" />
+    <feFlood flood-color="[color]" />
+    <feComposite in2="offsetblur" operator="in" />
     <feMerge>
-      <feMergeNode/>
-      <feMergeNode in="SourceGraphic"/>
+      <feMergeNode />
+      <feMergeNode in="SourceGraphic" />
     </feMerge>
   </filter>
 </svg>
@@ -465,17 +504,24 @@ filter: drop-shadow(16px 16px 10px black)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: drop-shadow(16px 16px 10px black);
   -webkit-filter: drop-shadow(16px 16px 10px black);
   -o-filter: drop-shadow(16px 16px 10px black);
@@ -483,13 +529,13 @@ body {
   filter: drop-shadow(16px 16px 10px black);
 }
 #img12 {
-  width:100%;
-  height:auto;
-  -moz-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  -webkit-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  -o-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  -ms-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
+  width: 100%;
+  height: auto;
+  -moz-filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
+  -webkit-filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
+  -o-filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
+  -ms-filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
+  filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
 }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -514,11 +560,12 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
-#img3, #img13 {
-  height:100%;
+#img3,
+#img13 {
+  height: 100%;
 }
 ```
 
@@ -529,7 +576,7 @@ table.standard-table td {
 Convierte la imagen a escala de grises. El valor del parámetro define la proporción de la conversión. Un valor de `100%` es completamente a escala de grises. Un valor de `0%` deja la imagen sin cambios. Valores entre `0%` y `100%` son múltiplos lineales de este efecto. Si el parámetro no es incluido, se usa el valor de `0`.
 
 ```css
-filter: grayscale(100%)
+filter: grayscale(100%);
 ```
 
 ```html hidden
@@ -564,22 +611,30 @@ filter: grayscale(100%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:grayscale(100%);
-  -webkit-filter:grayscale(100%);
-  -o-filter:grayscale(100%);
-  -ms-filter:grayscale(100%);
-  filter:grayscale(100%); }
+  width: 100%;
+  height: auto;
+  -moz-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -600,11 +655,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -615,7 +670,7 @@ table.standard-table td {
 Aplica una rotación de tono (matiz) al elemento. El valor del ángulo define el número de grados al rededor del círculo de colores al que se ajustarán los colores de la imagen. Un valor de `0deg` deja la imagen sin cambios. Si el parámetro del ángulo no es especiicado, se usa valor de `0deg`. Aunque no hay valor máximo, el efecto de valores encima de `360deg` da la vuelta al círculo de colores.
 
 ```css
-filter: hue-rotate(90deg)
+filter: hue-rotate(90deg);
 ```
 
 ```html hidden
@@ -647,22 +702,30 @@ filter: hue-rotate(90deg)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:hue-rotate(90deg);
-  -webkit-filter:hue-rotate(90deg);
-  -o-filter:hue-rotate(90deg);
-  -ms-filter:hue-rotate(90deg);
-  filter:hue-rotate(90deg); }
+  width: 100%;
+  height: auto;
+  -moz-filter: hue-rotate(90deg);
+  -webkit-filter: hue-rotate(90deg);
+  -o-filter: hue-rotate(90deg);
+  -ms-filter: hue-rotate(90deg);
+  filter: hue-rotate(90deg);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -683,11 +746,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -706,7 +769,7 @@ table.standard-table td {
 Invierte los colores de la imagen. El parámetro define la proporción de la conversión. Un valor de `100%` invierte completamente la imagen. Un valor de `0%` deja a la imagen sin cambios. Valores entre `0%` y `100%` son múltiplos lineales del efecto. Si el parámetro no es especificado, se usa un valor de `0`.
 
 ```css
-filter: invert(100%)
+filter: invert(100%);
 ```
 
 ```html hidden
@@ -741,22 +804,30 @@ filter: invert(100%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: invert(100%);
   -webkit-filter: invert(100%);
   -o-filter: invert(100%);
   -ms-filter: invert(100%);
-  filter: invert(100%); }
+  filter: invert(100%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -777,11 +848,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -792,7 +863,7 @@ table.standard-table td {
 Aplica transparencia a la imagen. El valor del parámetro define la proporción de la conversión. Un valor de `0%` es completamente transparente. Un valor de `100%` deja la imagen sin cambios. Valores entre `0%` y `100%` son múltiplos lineales del efecto. Esto es equivalente a multiplicar las muestras de la imagen por el valor indicado. Si el parámetro no es especificado, se usa un valor de `1`. Esta función es similar a la propiedad {{cssxref("opacity")}}, más establecida; la diferencia es que con filtros, algunos navegadores proveen aceleración de hardware para mayor rendimiento.
 
 ```css
-filter: opacity(50%)
+filter: opacity(50%);
 ```
 
 ```html hidden
@@ -825,22 +896,30 @@ filter: opacity(50%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: opacity(50%);
   -webkit-filter: opacity(50%);
   -o-filter: opacity(50%);
   -ms-filter: opacity(50%);
-  filter: opacity(50%); }
+  filter: opacity(50%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -861,11 +940,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -876,7 +955,7 @@ table.standard-table td {
 Aplica saturación a la imagen. El valor del parámetro define la proporción de la conversión. Un valor de `0%` es completamente sin saturación. Un valor de `100%` deja la imagen sin cambios. Otros valores son múltiplos lineales del efecto. Valores por encima de `100%` son permitidos, dando resultados de sobresaturación. Si no se especifica el parámetro, se usa el valor de `1`.
 
 ```css
-filter: saturate(200%)
+filter: saturate(200%);
 ```
 
 ```html hidden
@@ -908,22 +987,30 @@ filter: saturate(200%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: saturate(200%);
   -webkit-filter: saturate(200%);
   -o-filter: saturate(200%);
   -ms-filter: saturate(200%);
-  filter: saturate(200%); }
+  filter: saturate(200%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -944,11 +1031,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -959,7 +1046,7 @@ table.standard-table td {
 Convierte la imagen a sepia. El valor del parámetro define la proporción de la conversión. Un valor de `100%` es completamente sepia. Un valor de `0%` deja la imagen sin cambios. Valores entre `0%` y `100%` son múltiplos lineales del efecto. Si no se especifica el parámetro, se usa el valor de `0`.
 
 ```css
-filter: sepia(100%)
+filter: sepia(100%);
 ```
 
 ```html hidden
@@ -994,22 +1081,30 @@ filter: sepia(100%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: sepia(100%);
   -webkit-filter: sepia(100%);
   -o-filter: sepia(100%);
   -ms-filter: sepia(100%);
-  filter: sepia(100%); }
+  filter: sepia(100%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -1030,11 +1125,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -1045,7 +1140,7 @@ table.standard-table td {
 Se puede combinar cualquier número de funciones para manipular la representación de la imagen. Los siguientes ejemplos aumentan el contraste y brillo de la imagen.
 
 ```css
-filter: contrast(175%) brightness(3%)
+filter: contrast(175%) brightness(3%);
 ```
 
 ```html hidden
@@ -1059,9 +1154,30 @@ filter: contrast(175%) brightness(3%)
   </thead>
   <tbody>
     <tr>
-      <td><img alt="Test_Form_8.jpeg" id="img1" class="internal default" src="/files/3729/Test_Form_8.jpeg" style="width: 100%;" /></td>
-      <td><img alt="Test_Form_8.jpg" id="img2" class="internal default" src="/files/3729/Test_Form_8.jpeg" style="width: 100%;" /></td>
-      <td><img alt="Test_Form_8_s.jpg" id="img4" class="internal default" src="/files/3730/Test_Form_8_s.jpeg" style="width: 100%;" /></td>
+      <td>
+        <img
+          alt="Test_Form_8.jpeg"
+          id="img1"
+          class="internal default"
+          src="/files/3729/Test_Form_8.jpeg"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          alt="Test_Form_8.jpg"
+          id="img2"
+          class="internal default"
+          src="/files/3729/Test_Form_8.jpeg"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          alt="Test_Form_8_s.jpg"
+          id="img4"
+          class="internal default"
+          src="/files/3730/Test_Form_8_s.jpeg"
+          style="width: 100%;" />
+      </td>
     </tr>
   </tbody>
 </table>
@@ -1069,17 +1185,24 @@ filter: contrast(175%) brightness(3%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: contrast(175%) brightness(103%);
   -webkit-filter: contrast(175%) brightness(103%);
   -o-filter: contrast(175%) brightness(103%);
@@ -1106,11 +1229,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 

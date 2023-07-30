@@ -17,9 +17,9 @@ HTTP/2 никоим образом не изменяет семантику пр
 
 1. Основные сведения
 
-    1. [HTTP на MDN](/ru/docs/Web/HTTP)
+   1. [HTTP на MDN](/ru/docs/Web/HTTP)
 
 2. [Справка](/ru/docs/Glossary)
 
-    1. {{glossary("HTTP")}}
-    2. {{glossary("Latency")}}
+   1. {{glossary("HTTP")}}
+   2. {{glossary("Latency")}}

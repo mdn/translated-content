@@ -24,8 +24,8 @@ var string = document.visibilityState
 ## 示例
 
 ```js
-document.addEventListener("visibilitychange", function() {
-  console.log( document.visibilityState );
+document.addEventListener("visibilitychange", function () {
+  console.log(document.visibilityState);
   // Modify behavior...
 });
 ```

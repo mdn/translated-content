@@ -14,9 +14,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removing = browser.tabs.removeCSS(
-  tabId,           // optional integer
-  details          // object
-)
+  tabId, // optional integer
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -57,11 +57,11 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var insertingCSS = browser.tabs.insertCSS(2, {code: css});
+var insertingCSS = browser.tabs.insertCSS(2, { code: css });
 insertingCSS.then(null, onError);
 
 browser.browserAction.onClicked.addListener(() => {
-  var removing = browser.tabs.removeCSS(2, {code: css});
+  var removing = browser.tabs.removeCSS(2, { code: css });
   removing.then(null, onError);
 });
 ```

@@ -11,7 +11,7 @@ Es a un bajo nivel, un modelo procedimental que actualiza un [mapa de bits](http
 
 ### Conocimientos básicos
 
-- [Canvas en Wikipedia](https://es.wikipedia.org/wiki/Canvas_(HTML))
+- [Canvas en Wikipedia](<https://es.wikipedia.org/wiki/Canvas_(HTML)>)
 
 ### Inicio del temario
 

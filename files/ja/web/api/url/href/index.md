@@ -1,40 +1,38 @@
 ---
-title: URL.href
+title: "URL: href プロパティ"
+short-title: href
 slug: Web/API/URL/href
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{ApiRef("URL API")}}
 
-{{domxref("URL")}} インターフェイスの **`href`** プロパティは、URL 全体を含む {{domxref("USVString")}} です。
+**`href`** は {{domxref("URL")}} インターフェイスのプロパティで、URL 全体の入った文字列です。
 
 {{AvailableInWorkers}}
 
-## 構文
+## 値
 
-```
-string = object.href;
-object.href = string;
-```
-
-### 値
-
-{{domxref("USVString")}}。
+文字列です。
 
 ## 例
 
 ```js
-var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href');
-var result = url.href; // 戻り値: 'https://developer.mozilla.org/en-US/docs/Web/API/URL/href'
+const url = new URL(
+  "https://developer.mozilla.org/ja/docs/Web/API/URL/href",
+);
+console.log(url.href); // 'https://developer.mozilla.org/ja/docs/Web/API/URL/href' とログ出力
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.URL.href")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{domxref("URL")}} インターフェイスに属します。
+- 所属先の {{domxref("URL")}} インターフェイス

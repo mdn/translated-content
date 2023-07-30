@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial Django Parte 9: Trabalhando com formulários'
+title: "Tutorial Django Parte 9: Trabalhando com formulários"
 slug: Learn/Server-side/Django/Forms
 ---
 
@@ -14,7 +14,7 @@ Neste tutorial, vamos te mostrar como trabalhar com formulários HTML no Django 
       <td>
         Completar todos os tópicos anteriores deste tutorial, incluindo
         <a
-          href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions"
+          href="/pt-BR/docs/Learn/Server-side/Django/authentication_and_sessions"
           >Django Tutorial Parte 8: Autenticação e Permissões de Usuário</a
         >.
       </td>
@@ -56,9 +56,13 @@ O formulário é definido no HTML como uma coleção de elementos dentro das tag
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
+  <label for="team_name">Enter name: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
@@ -88,17 +92,17 @@ Com base no diagrama acima, as principais coisas que o manuseio de formulários 
 
 1. Exiba o formulário padrão na primeira vez em que for solicitado pelo usuário
 
-    - O formulário pode conter campos em branco (por exemplo, se você estiver criando um novo registro) ou pode ser preenchido previamente com valores iniciais (por exemplo, se você estiver alterando um registro ou tiver valores iniciais padrão úteis).
-    - O formulário é referido como _unbound_ neste momento, porque não está associado a nenhum dado inserido pelo usuário (embora possa ter valores iniciais).
+   - O formulário pode conter campos em branco (por exemplo, se você estiver criando um novo registro) ou pode ser preenchido previamente com valores iniciais (por exemplo, se você estiver alterando um registro ou tiver valores iniciais padrão úteis).
+   - O formulário é referido como _unbound_ neste momento, porque não está associado a nenhum dado inserido pelo usuário (embora possa ter valores iniciais).
 
 2. Receba dados de uma solicitação de envio e vincule-os ao formulário.
 
-    - Vincular dados ao formulário significa que os dados inseridos pelo usuário e quaisquer erros estão disponíveis quando precisamos exibir novamente o formulário.
+   - Vincular dados ao formulário significa que os dados inseridos pelo usuário e quaisquer erros estão disponíveis quando precisamos exibir novamente o formulário.
 
 3. Limpe e valide os dados.
 
-    - A limpeza dos dados executa a higienização da entrada (por exemplo, removendo caracteres inválidos que podem ser usados para enviar conteúdo malicioso ao servidor) e os converte em tipos consistentes de Python.
-    - A validação verifica se os valores são apropriados para o campo (por exemplo, estão no período certo, não são muito curtos ou muito longos etc.)
+   - A limpeza dos dados executa a higienização da entrada (por exemplo, removendo caracteres inválidos que podem ser usados para enviar conteúdo malicioso ao servidor) e os converte em tipos consistentes de Python.
+   - A validação verifica se os valores são apropriados para o campo (por exemplo, estão no período certo, não são muito curtos ou muito longos etc.)
 
 4. Se algum dado for inválido, exiba novamente o formulário, desta vez com valores preenchidos pelo usuário e mensagens de erro para os campos problemáticos.
 5. Se todos os dados forem válidos, execute as ações necessárias (por exemplo, salve os dados, envie e envie por e-mail, retorne o resultado de uma pesquisa, faça o upload de um arquivo etc.)
@@ -395,9 +399,16 @@ Tudo que resta é a variável `\{{ form }}` do _template_, que passamos para o _
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
   <td>
-    <input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required>
-    <br>
-    <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2016-11-08"
+      required />
+    <br />
+    <span class="helptext"
+      >Enter date between now and 4 weeks (default 3 weeks).</span
+    >
   </td>
 </tr>
 ```
@@ -409,14 +420,21 @@ Se você fosse inserir uama data inválida, você também obteria uma lista dos 
 ```html
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
-    <td>
-      <ul class="errorlist">
-        <li>Invalid date - renewal in past</li>
-      </ul>
-      <input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required>
-      <br>
-      <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
-    </td>
+  <td>
+    <ul class="errorlist">
+      <li>Invalid date - renewal in past</li>
+    </ul>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2015-11-08"
+      required />
+    <br />
+    <span class="helptext"
+      >Enter date between now and 4 weeks (default 3 weeks).</span
+    >
+  </td>
 </tr>
 ```
 
@@ -437,8 +455,10 @@ Para mais exemplos de como renderizar formulários manualmente em _templates_ e 
 
 Se você aceitou o "desafio" em [Tutorial Django Parte 8: Autenticação de usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself) você terá uma lista de todos os livros emprestados na biblioteca, que é visível apenas aos funcionários da biblioteca. Podemos adicionar um _link_ para nossa página de renovação ao lado de cada item, usando o código de modelo abaixo.
 
-```html
-{% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>  {% endif %}
+```django
+{% if perms.catalog.can_mark_returned %}-
+  <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>
+{% endif %}
 ```
 
 > **Nota:** Lembre que seu login de teste precisará ter a permissão "`catalog.can_mark_returned`" para acessar a página de renovação de livro (talvez use sua conta de superusuário).
@@ -565,7 +585,7 @@ As views "create" e "update" usam o mesmo template por padrão, que serão nomea
 
 Crie o arquivo de _template_ **locallibrary/catalog/templates/catalog/author_form.html** e copie o texto abaixo.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -583,20 +603,18 @@ Isso é semelhante aos nossos formulários anteriores e renderiza os campos usan
 
 A _view_ "delete" espera encontrar um _template_ nomeado com o formato `model_name_confirm_delete.html` (novamente, você pode mudar o sufixo usando `template_name_suffix` em sua _view_). Crie o arquivo de _template_ `locallibrary/catalog/templates/catalog/author_confirm_delete.html` e copie o texto abaixo.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
+  <h1>Delete Author</h1>
 
-<h1>Delete Author</h1>
+  <p>Are you sure you want to delete the author: \{{ author }}?</p>
 
-<p>Are you sure you want to delete the author: \{{ author }}?</p>
-
-<form action="" method="POST">
-  {% csrf_token %}
-  <input type="submit" value="Yes, delete.">
-</form>
-
+  <form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Yes, delete." />
+  </form>
 {% endblock %}
 ```
 

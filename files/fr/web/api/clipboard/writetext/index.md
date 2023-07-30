@@ -13,7 +13,7 @@ La méthode **`writeText()`** de l'interface {{domxref("Clipboard")}} écrit le 
 ## Syntaxe
 
 ```js
-var promesse = navigator.clipboard.writeText(nouveauTexte)
+var promesse = navigator.clipboard.writeText(nouveauTexte);
 ```
 
 ### Paramètres
@@ -30,11 +30,14 @@ Une {{jsxref("Promise")}} qui sera résolue une fois que le contenu du presse-pa
 Cet exemple définit le contenu du presse-papiers comme la chaîne "\<presse-papiers vide>".
 
 ```js
-navigator.clipboard.writeText("<presse-papiers vide>").then(function() {
-  /* presse-papiers modifié avec succès */
-}, function() {
-  /* échec de l’écriture dans le presse-papiers */
-});
+navigator.clipboard.writeText("<presse-papiers vide>").then(
+  function () {
+    /* presse-papiers modifié avec succès */
+  },
+  function () {
+    /* échec de l’écriture dans le presse-papiers */
+  },
+);
 ```
 
 ## Spécifications

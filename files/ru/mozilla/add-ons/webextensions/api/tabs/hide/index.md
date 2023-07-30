@@ -27,8 +27,8 @@ To use this API you must have the "tabHide" [permission](/en-US/Add-ons/WebExten
 
 ```js
 var hiding = browser.tabs.hide(
-  tabIds          // integer or integer array
-)
+  tabIds, // integer or integer array
+);
 ```
 
 ### Parameters

@@ -9,7 +9,7 @@ La coerción es la conversión automática o implicita de valores de un tipo de 
 ## Examples
 
 ```js
-const valor1 = '5';
+const valor1 = "5";
 const valor2 = 9;
 let suma = valor1 + valor2;
 
@@ -21,5 +21,5 @@ En el ejemplo anterior, JavaScript ha coercido el `9` de número a cadena de tex
 El compilador pudo haber coercido el `5` a un número y retornar el valor de 14, pero no lo hizo. Para retornar ese resultado, tendrías que convertir explícitamente el `5` a un número usando el método `Number()`:
 
 ```js
-sumar = Number(valor1) + valor2
+sumar = Number(valor1) + valor2;
 ```

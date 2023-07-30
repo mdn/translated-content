@@ -46,35 +46,35 @@ myWorker.port.start();
 当启动端口时，两个脚本都会向 worker 发送消息，然后使用 `port.postMessage()`和 `port.onmessage` 处理从 worker 返回的消息：
 
 ```js
-first.onchange = function() {
-    myWorker.port.postMessage([first.value,second.value]);
-    console.log('Message posted to worker');
-  }
+first.onchange = function () {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 
-  second.onchange = function() {
-    myWorker.port.postMessage([first.value,second.value]);
-    console.log('Message posted to worker');
-  }
+second.onchange = function () {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 
-  myWorker.port.onmessage = function(e) {
-    result1.textContent = e.data;
-    console.log('Message received from worker');
-  }
+myWorker.port.onmessage = function (e) {
+  result1.textContent = e.data;
+  console.log("Message received from worker");
+};
 ```
 
 在 worker 中我们使用 {{domxref("SharedWorkerGlobalScope.onconnect")}} 处理程序连接到上面讨论的相同端口。可以在 {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}} 事件的 `ports` 属性中获取到与该 worker 相关联的端口——然后我们使用 {{domxref("MessagePort")}} `start()` 方法来启动端口，然后 `onmessage` 处理程序处理来自主线程的消息。
 
 ```js
-onconnect = function(e) {
-    var port = e.ports[0];
+onconnect = function (e) {
+  var port = e.ports[0];
 
-    port.addEventListener('message', function(e) {
-      var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
-      port.postMessage(workerResult);
-    });
+  port.addEventListener("message", function (e) {
+    var workerResult = "Result: " + e.data[0] * e.data[1];
+    port.postMessage(workerResult);
+  });
 
-    port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
-}
+  port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
+};
 ```
 
 ## 规范

@@ -1,17 +1,6 @@
 ---
 title: PerformanceTiming.connectStart
 slug: Web/API/PerformanceTiming/connectStart
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Propriété
-  - Read-only
-  - legacy
-  - connectStart
 translation_of: Web/API/PerformanceTiming/connectStart
 ---
 

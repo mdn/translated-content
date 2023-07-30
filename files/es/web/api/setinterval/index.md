@@ -27,12 +27,15 @@ setInterval(func, delay, arg0, arg1, /* ..., */ argN);
 ### Parámetros
 
 - `func`
+
   - : Una función {{jsxref("function")}} que se ejecuta cada cierto tiempo. El tiempo lo determina `delay`, estando éste en milisegundos. La primera ejecución ocurre tras el tiempo determinado por `delay`.
 
 - `code`
+
   - : Una sintaxis especial que permite incluir una cadena en lugar de una función, la cual es compilada y ejecutada cada `delay` milisegundos. Se recomienda no usar esta sintaxis, por la misma razón que hace que el uso de {{jsxref("Global_Objects/eval", "eval()")}} sea un riesgo de seguridad.
 
 - `delay` {{optional_inline}}
+
   - : El tiempo en milisegundos (milésimas de segundo) que el temporizador debe retrasar cada ejecución de la función o código especificado. Si no se especifica ninguno, por defecto es 0. Ver el apartado [Delay restrictions](#delay_restrictions) descrito más abajo para más detalles sobre el rango de valores de retardo (delay) permitido.
 
 - `arg0, ..., argN` {{optional_inline}}
@@ -53,13 +56,13 @@ Puede ser útil tener en cuenta que `setInterval()` y {{domxref("setTimeout()")}
 El siguiente ejemplo muestra la sintaxis básica de `setInterval()`
 
 ```js
-var intervalID = setInterval(myCallback, 500, 'parámetro 1', 'parámetro 2');
+var intervalID = setInterval(myCallback, 500, "parámetro 1", "parámetro 2");
 
 function myCallback(a, b) {
-    // Tu código debe ir aquí
-    // Los parámetros son totalmente opcionales
-    console.log(a);
-    console.log(b);
+  // Tu código debe ir aquí
+  // Los parámetros son totalmente opcionales
+  console.log(a);
+  console.log(b);
 }
 ```
 
@@ -71,7 +74,7 @@ El siguiente ejemplo llama a la función `flashtext()` una vez por segundo hasta
 
 ```html
 <div id="my_box">
-    <h3>Hello World</h3>
+  <h3>Hello World</h3>
 </div>
 <button id="start">Start</button>
 <button id="stop">Stop</button>
@@ -81,10 +84,10 @@ El siguiente ejemplo llama a la función `flashtext()` una vez por segundo hasta
 
 ```css
 .go {
-    color: green;
+  color: green;
 }
 .stop {
-    color: red;
+  color: red;
 }
 ```
 
@@ -95,25 +98,25 @@ El siguiente ejemplo llama a la función `flashtext()` una vez por segundo hasta
 let nIntervId;
 
 function changeColor() {
-    // comprobar si ya se ha configurado un intervalo
-    if (!nIntervId) {
-        nIntervId = setInterval(flashText, 1000);
-    }
+  // comprobar si ya se ha configurado un intervalo
+  if (!nIntervId) {
+    nIntervId = setInterval(flashText, 1000);
+  }
 }
 
 function flashText() {
-    const oElem = document.getElementById("my_box");
-    if (oElem.className === "go") {
-        oElem.className = "stop";
-    } else {
-        oElem.className = "go";
-    }
+  const oElem = document.getElementById("my_box");
+  if (oElem.className === "go") {
+    oElem.className = "stop";
+  } else {
+    oElem.className = "go";
+  }
 }
 
 function stopTextColor() {
-    clearInterval(nIntervId);
-    // liberar nuestro inervalId de la variable
-    nIntervId = null;
+  clearInterval(nIntervId);
+  // liberar nuestro inervalId de la variable
+  nIntervId = null;
 }
 
 document.getElementById("start").addEventListener("click", changeColor);
@@ -135,10 +138,10 @@ Cuando le pasas un método a `setInterval()` o cualquier otra función, ésta se
 El código ejecutado por `setInterval` se ejecuta en un contexto de ejecución distinto al de la función desde la que fue llamado. Como consecuencia, la palabra clave [`this`](/es/docs/Web/JavaScript/Reference/Operators/this) para la función llamada se establece en el objeto `window` (u objeto `global`), que no es el mismo contexto de ejecución del valor `this` de la función que llamó a `setInterval()` . Véase el siguiente ejemplo en el que se utiliza `setTimeout()` en lugar de `setInterval()` . El problema con `this` es el mismo en ambos temporizadores:
 
 ```js
-myArray = ['zero', 'one', 'two'];
+myArray = ["zero", "one", "two"];
 
 myArray.myMethod = function (sProperty) {
-    alert(arguments.length > 0 ? this[sProperty] : this);
+  alert(arguments.length > 0 ? this[sProperty] : this);
 };
 
 myArray.myMethod(); // imprime "zero, one, two"
@@ -187,11 +190,11 @@ En estos casos, es preferible un patrón recursivo `setTimeout` :
 
 ```js
 (function loop() {
-    setTimeout(function() {
-        // Escriba su lógica aquí
+  setTimeout(function () {
+    // Escriba su lógica aquí
 
-        loop();
-    }, delay);
+    loop();
+  }, delay);
 })();
 ```
 

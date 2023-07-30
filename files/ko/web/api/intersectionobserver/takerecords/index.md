@@ -2,6 +2,7 @@
 title: IntersectionObserver.takeRecords()
 slug: Web/API/IntersectionObserver/takeRecords
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 {{domxref("IntersectionObserver")}}의 **`takeRecords()`** 메서드는 주시 대상 중에서 마지막 교차 변화 알림 이후, 즉 명시적인 `takeRecords()` 호출 또는 감지기의 콜백 자동 호출 이후 교차 영역에 변화가 생긴 요소를 나타내는 {{domxref("IntersectionObserverEntry")}} 객체의 배열을 반환합니다.

@@ -56,7 +56,7 @@ Pour celles et ceux qui souhaitent plonger dans la technique, voici la liste des
   - : L'API Pointer Lock vous permet de bloquer la souris ou tout autre appareil de pointage à l'intérieur de l'interface de votre jeu, de telle sorte qu'au lieu de recevoir une position absolue du pointeur vous recevrez le delta des coordonnées. Ce qui vous donne une mesure plus précise de ce que fait l'utilisateur, mais aussi l'empêche d'envoyer accidentellement ses entrées ailleurs pour ne pas manquer des actions importantes.
 - [SVG](/fr/docs/Web/SVG) (Scalable Vector Graphics)
   - : Vous permet de créer des graphiques vectoriels dont l'échelle est fluide, quelle que soit la taille ou la résolution de l'affichage de l'utilisateur.
-- [Typed Arrays](/fr/docs/Web/JavaScript/Tableaux_typ%C3%A9s)
+- [Typed Arrays](/fr/docs/Web/JavaScript/Tableaux_typés)
   - : Les tableaux typés JavaScript vous donnent accès à des données binaires brutes depuis JavaScript ; cela vous permet de manipuler des textures GL, des données de jeu ou tout autre chose, même si ce n'est pas dans un format JavaScript natif.
 - [Web Audio API](/fr/docs/Web/API/Web_Audio_API)
   - : Cette API pour contrôler la lecture, la synthèse et la manipulation de l'audio à partir du code JavaScript vous permet de créer des effets sonores impressionnants, de jouer et de manipuler de la musique en temps réel.

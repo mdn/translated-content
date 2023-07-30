@@ -17,9 +17,9 @@ Si l'extension n'écoute pas cet événement lorsqu'une mise à jour est disponi
 ## Syntaxe
 
 ```js
-browser.runtime.onUpdateAvailable.addListener()
-browser.runtime.onUpdateAvailable.removeListener(listener)
-browser.runtime.onUpdateAvailable.hasListener(listener)
+browser.runtime.onUpdateAvailable.addListener();
+browser.runtime.onUpdateAvailable.removeListener(listener);
+browser.runtime.onUpdateAvailable.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

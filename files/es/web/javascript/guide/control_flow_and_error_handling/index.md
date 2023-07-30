@@ -110,7 +110,7 @@ Por ejemplo, _no_ escribas un código como este:
 
 ```js example-bad
 // Propenso a ser mal interpretado como "x == y"
-if (x = y) {
+if ((x = y)) {
   /* expresiones aquí */
 }
 ```
@@ -156,7 +156,7 @@ function checkData() {
   } else {
     alert(
       "Introduce exactamente tres caracteres. " +
-        `${document.form1.threeChar.value} no es válido.`
+        `${document.form1.threeChar.value} no es válido.`,
     );
     return false;
   }

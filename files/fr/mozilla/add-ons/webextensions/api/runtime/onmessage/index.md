@@ -42,9 +42,9 @@ Pour envoyer une réponse asynchrone, il existe deux options&nbsp;:
 ## Syntaxe
 
 ```js
-browser.runtime.onMessage.addListener(listener)
-browser.runtime.onMessage.removeListener(listener)
-browser.runtime.onMessage.hasListener(listener)
+browser.runtime.onMessage.addListener(listener);
+browser.runtime.onMessage.removeListener(listener);
+browser.runtime.onMessage.hasListener(listener);
 ```
 
 Les événements ont trois fonctions&nbsp;:
@@ -93,11 +93,11 @@ Les événements ont trois fonctions&nbsp;:
     >
     > ```js example-bad
     > // ne faites pas ça
-    > browser.runtime.onMessage.addListener(
-    >   async (data, sender) => {
-    >     if (data.type === 'handle_me') { return 'done'; }
+    > browser.runtime.onMessage.addListener(async (data, sender) => {
+    >   if (data.type === "handle_me") {
+    >     return "done";
     >   }
-    > );
+    > });
     > ```
     >
     > L'écouteur consommera ainsi chaque message qu'il reçoit, ce qui empêchera effectivement tous les autres écouteurs de recevoir et de traiter des messages.
@@ -105,13 +105,11 @@ Les événements ont trois fonctions&nbsp;:
     > Si vous souhaitez adopter une approche asynchrone, utilisez plutôt une `Promise`, comme ceci :
     >
     > ```js example-good
-    > browser.runtime.onMessage.addListener(
-    >   (data, sender) => {
-    >     if (data.type === 'handle_me') {
-    >       return Promise.resolve('done');
-    >     }
+    > browser.runtime.onMessage.addListener((data, sender) => {
+    >   if (data.type === "handle_me") {
+    >     return Promise.resolve("done");
     >   }
-    > );
+    > });
     > ```
 
 ## Compatibilité des navigateurs
@@ -133,7 +131,7 @@ function notifyExtension(e) {
   if (e.target.tagName != "A") {
     return;
   }
-  browser.runtime.sendMessage({"url": e.target.href});
+  browser.runtime.sendMessage({ url: e.target.href });
 }
 ```
 
@@ -146,10 +144,10 @@ browser.runtime.onMessage.addListener(notify);
 
 function notify(message) {
   browser.notifications.create({
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("link.png"),
-    "title": "Vous avez cliqué sur un lien !",
-    "message": message.url
+    type: "basic",
+    iconUrl: browser.extension.getURL("link.png"),
+    title: "Vous avez cliqué sur un lien !",
+    message: message.url,
   });
 }
 ```
@@ -170,7 +168,9 @@ function handleError(error) {
 }
 
 function sendMessage(e) {
-  var sending = browser.runtime.sendMessage({content: "message du script de contenu"});
+  var sending = browser.runtime.sendMessage({
+    content: "message du script de contenu",
+  });
   sending.then(handleResponse, handleError);
 }
 
@@ -184,7 +184,7 @@ Voici une version du script d'arrière-plan correspondant, qui envoie une répon
 
 function handleMessage(request, sender, sendResponse) {
   console.log(`le script de contenu a envoyé un message : ${request.content}`);
-  sendResponse({response: "réponse du script d’arrière-plan"});
+  sendResponse({ response: "réponse du script d’arrière-plan" });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);
@@ -197,7 +197,7 @@ Et voici une autre version, qui utilise {{jsxref("Promise.resolve()")}}&nbsp;:
 
 function handleMessage(request, sender, sendResponse) {
   console.log(`le script de contenu a envoyé un message : ${request.content}`);
-  return Promise.resolve({response: "réponse du script d’arrière-plan"});
+  return Promise.resolve({ response: "réponse du script d’arrière-plan" });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);
@@ -213,7 +213,7 @@ Voici une autre version du script d'arrière-plan de l'exemple précédent. Il e
 function handleMessage(request, sender, sendResponse) {
   console.log(`le script de contenu a envoyé un message : ${request.content}`);
   setTimeout(() => {
-    sendResponse({response: "réponse asynchrone du script d’arrière-plan"});
+    sendResponse({ response: "réponse asynchrone du script d’arrière-plan" });
   }, 1000);
   return true;
 }
@@ -236,9 +236,11 @@ function handleResponse(isBookmarked) {
   }
 }
 
-browser.runtime.sendMessage({
-  url: firstLink.href
-}).then(handleResponse);
+browser.runtime
+  .sendMessage({
+    url: firstLink.href,
+  })
+  .then(handleResponse);
 ```
 
 Voici le script d'arrière-plan. Il utilise `{{WebExtAPIRef("bookmarks.search()")}}` pour voir si le lien est dans les marque-pages, ce qui renvoie une {{jsxref("Promise", "promesse")}}&nbsp;:
@@ -247,11 +249,13 @@ Voici le script d'arrière-plan. Il utilise `{{WebExtAPIRef("bookmarks.search()"
 // background-script.js
 
 function isBookmarked(message, sender, response) {
-  return browser.bookmarks.search({
-    url: message.url
-  }).then(function(results) {
-    return results.length > 0;
-  });
+  return browser.bookmarks
+    .search({
+      url: message.url,
+    })
+    .then(function (results) {
+      return results.length > 0;
+    });
 }
 
 browser.runtime.onMessage.addListener(isBookmarked);
@@ -263,9 +267,9 @@ Si le gestionnaire asynchrone ne renvoie pas de promesse, vous pouvez explicitem
 // background-script.js
 
 function handleMessage(request, sender, sendResponse) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
-      resolve({response: "réponse asynchrone du script d’arrière-plan"});
+      resolve({ response: "réponse asynchrone du script d’arrière-plan" });
     }, 1000);
   });
 }

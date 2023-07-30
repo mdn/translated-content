@@ -21,7 +21,7 @@ function () {};
 Una **función nombrada** es una función con nombre:
 
 ```js
-function foo() {};
+function foo() {}
 // o se puede usar la anotación con flecha ECMAScript 2015
 const foo = () => {};
 ```
@@ -29,16 +29,16 @@ const foo = () => {};
 Una **función interna** es una función que está dentro de otra función (`cuadrado` en este caso). Una **función externa** es una función que contiene a otra función (`sumarCuadrados` en este caso):
 
 ```js
-function sumarCuadradors(a,b) {
-   function cuadrado(x) {
-      return x * x;
-   }
-   return cuadrado(a) + cuadrado(b);
-};
+function sumarCuadradors(a, b) {
+  function cuadrado(x) {
+    return x * x;
+  }
+  return cuadrado(a) + cuadrado(b);
+}
 //Usando la anotación de flecha ECMAScript 2015
-const sumarCuadrados = (a,b) => {
-   const cuadrado = x => x*x;
-   return cuadrado(a) + cuadrado(b);
+const sumarCuadrados = (a, b) => {
+  const cuadrado = (x) => x * x;
+  return cuadrado(a) + cuadrado(b);
 };
 ```
 
@@ -46,15 +46,13 @@ Una **función recursiva** es una función que se llama a sí misma. Mira {{Glos
 
 ```js
 function bucle(x) {
-   if (x >= 10)
-      return;
-   bucle(x + 1);
-};
+  if (x >= 10) return;
+  bucle(x + 1);
+}
 //Usando la anotación de flecha ECMAScript 2015
-const bucle = x => {
-   if (x >= 10)
-      return;
-   bucle(x + 1);
+const bucle = (x) => {
+  if (x >= 10) return;
+  bucle(x + 1);
 };
 ```
 
@@ -69,11 +67,11 @@ function foo() {
 */
 
 (function foo() {
-    console.log("Hello Foo");
-}());
+  console.log("Hello Foo");
+})();
 
 (function food() {
-    console.log("Hello Food");
+  console.log("Hello Food");
 })();
 ```
 

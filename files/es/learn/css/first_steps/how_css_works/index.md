@@ -93,7 +93,9 @@ Así es como un navegador interpreta el código HTML anterior, interpreta el ár
 {{EmbedLiveSample('Una_representación_real_de_un_DOM', '100%', 55)}}
 
 ```css hidden
-p {margin:0;}
+p {
+  margin: 0;
+}
 ```
 
 ## La aplicación de CSS al DOM

@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: play event'
+title: "HTMLMediaElement: play event"
 slug: Web/API/HTMLMediaElement/play_event
 ---
 
@@ -52,22 +52,26 @@ slug: Web/API/HTMLMediaElement/play_event
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('play', (event) => {
-  console.log('The Boolean paused property is now false. Either the ' +
-  'play() method was called or the autoplay attribute was toggled.');
+video.addEventListener("play", (event) => {
+  console.log(
+    "The Boolean paused property is now false. Either the " +
+      "play() method was called or the autoplay attribute was toggled.",
+  );
 });
 ```
 
 Using the `onplay` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onplay = (event) => {
-  console.log('The Boolean paused property is now false. Either the ' +
-  'play() method was called or the autoplay attribute was toggled.');
+  console.log(
+    "The Boolean paused property is now false. Either the " +
+      "play() method was called or the autoplay attribute was toggled.",
+  );
 };
 ```
 

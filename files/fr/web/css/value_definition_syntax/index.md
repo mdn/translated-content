@@ -1,12 +1,7 @@
 ---
 title: Syntaxe de définition des valeurs
 slug: Web/CSS/Value_definition_syntax
-tags:
-  - CSS
-  - Débutant
-  - Reference
 translation_of: Web/CSS/Value_definition_syntax
-original_slug: Web/CSS/Syntaxe_de_définition_des_valeurs
 ---
 
 {{CSSRef}}

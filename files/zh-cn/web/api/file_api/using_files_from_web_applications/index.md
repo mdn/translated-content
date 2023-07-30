@@ -61,7 +61,7 @@ const numFiles = files.length;
 下面的例子展示了 `size` 属性的一种可能用法：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
@@ -104,7 +104,7 @@ const numFiles = files.length;
           ];
           const exponent = Math.min(
             Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
-            units.length - 1
+            units.length - 1,
           );
           const approx = numberOfBytes / 1024 ** exponent;
           const output =
@@ -117,7 +117,7 @@ const numFiles = files.length;
             uploadInput.files.length;
           document.getElementById("fileSize").textContent = output;
         },
-        false
+        false,
       );
     </script>
   </body>
@@ -153,7 +153,7 @@ fileSelect.addEventListener(
       fileElem.click();
     }
   },
-  false
+  false,
 );
 ```
 
@@ -308,7 +308,7 @@ URL.revokeObjectURL(objectURL);
 </div>
 ```
 
-这就建立了我们的文件 {{HTMLElement("input")}} 元素，以及调用文件选取器的链接（因为我们把文件 input 隐藏起来，以防止显示那个不那么吸引人的用户界面）。这在[使用 click() 方法隐藏文件 input 元素](#通过_click()_方法使用隐藏的_file_input_元素)一节中有所说明，调用文件选取器的方法也是如此。
+这就建立了我们的文件 {{HTMLElement("input")}} 元素，以及调用文件选取器的链接（因为我们把文件 input 隐藏起来，以防止显示那个不那么吸引人的用户界面）。这在[使用 click() 方法隐藏文件 input 元素](<#通过_click()_方法使用隐藏的_file_input_元素>)一节中有所说明，调用文件选取器的方法也是如此。
 
 `handleFiles()` 方法如下：
 
@@ -325,7 +325,7 @@ fileSelect.addEventListener(
     }
     e.preventDefault(); // 避免导航至“#”
   },
-  false
+  false,
 );
 
 fileElem.addEventListener("change", handleFiles, false);
@@ -364,12 +364,12 @@ function handleFiles() {
 2. 通过调用列表的 {{DOMxRef("Node.appendChild()")}} 方法来将新的列表元素插入到 {{HTMLElement("div")}} 块。
 3. 遍历 `files` 代表的文件集合 {{DOMxRef("FileList")}} 中的每个 {{DOMxRef("File")}}：
 
-    1. 创建一个新的列表项（{{HTMLElement("li")}}）元素并插入到列表中。
-    2. 创建一个新的图片（{{HTMLElement("img")}}）元素。
-    3. 设置图片的源为一个新的指代文件的对象 URL，使用 {{DOMxRef("URL.createObjectURL()")}} 来创建 blob URL。
-    4. 设置图片的高度为 60 像素。
-    5. 设置图片的 load 事件处理器来释放对象 URL，当图片加载完成之后对象 URL 就不再需要了。这个可以通过调用 {{DOMxRef("URL.revokeObjectURL()")}} 方法并且传递 `img.src`中的对象 URL 字符串来实现。
-    6. 将新的列表项添加到列表中。
+   1. 创建一个新的列表项（{{HTMLElement("li")}}）元素并插入到列表中。
+   2. 创建一个新的图片（{{HTMLElement("img")}}）元素。
+   3. 设置图片的源为一个新的指代文件的对象 URL，使用 {{DOMxRef("URL.createObjectURL()")}} 来创建 blob URL。
+   4. 设置图片的高度为 60 像素。
+   5. 设置图片的 load 事件处理器来释放对象 URL，当图片加载完成之后对象 URL 就不再需要了。这个可以通过调用 {{DOMxRef("URL.revokeObjectURL()")}} 方法并且传递 `img.src`中的对象 URL 字符串来实现。
+   6. 将新的列表项添加到列表中。
 
 这是上面代码的一个在线示例：
 
@@ -415,7 +415,7 @@ function FileUpload(img, file) {
         self.ctrl.update(percentage);
       }
     },
-    false
+    false,
   );
 
   xhr.upload.addEventListener(
@@ -425,11 +425,11 @@ function FileUpload(img, file) {
       const canvas = self.ctrl.ctx.canvas;
       canvas.parentNode.removeChild(canvas);
     },
-    false
+    false,
   );
   xhr.open(
     "POST",
-    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php"
+    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
   );
   xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
   reader.onload = (evt) => {
@@ -453,7 +453,7 @@ function createThrobber(img) {
       0,
       0,
       (throbberWidth * percent) / 100,
-      throbberHeight
+      throbberHeight,
     );
     if (percent === 100) {
       throbber.ctx.fillStyle = "green";

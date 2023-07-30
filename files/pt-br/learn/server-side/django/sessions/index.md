@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial Django Parte 7: Sessões'
+title: "Tutorial Django Parte 7: Sessões"
 slug: Learn/Server-side/Django/Sessions
 original_slug: Learn/Server-side/Django/Sessões
 ---
@@ -12,7 +12,7 @@ original_slug: Learn/Server-side/Django/Sessões
       <th scope="row">Pré-requisitos:</th>
       <td>
         Completar todos os tópicos anteriores do tutorial, incluindo
-        <a href="/en-US/docs/Learn/Server-side/Django/Generic_views"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/Generic_views"
           >Django Tutorial Part 6: Generic list and detail views</a
         >
       </td>
@@ -139,7 +139,7 @@ Aqui primeiro obtemos o valor da _session key_ `'num_visits'`, setando o valor p
 
 Adicione a linha vista na parte inferior do bloco a seguir ao seu _template_ HTML principal (**/locallibrary/catalog/templates/index.html**) na parte inferior da sessão _"Dynamic content"_, para exibir a variável _context_:
 
-```html
+```django
 <h2>Dynamic content</h2>
 
 <p>The library has the following record counts:</p>
@@ -150,7 +150,10 @@ Adicione a linha vista na parte inferior do bloco a seguir ao seu _template_ HTM
   <li><strong>Authors:</strong> \{{ num_authors }}</li>
 </ul>
 
-<p>You have visited this page \{{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+<p>
+  You have visited this page \{{ num_visits }}{% if num_visits == 1 %} time{%
+  else %} times{% endif %}.
+</p>
 ```
 
 Salve suas alterações e reinicie o servidor de teste. Sempre que você atualiza a página, o número deve ser atualizado.

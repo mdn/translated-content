@@ -27,7 +27,7 @@ canvas.mozOpaque = true;
 你可以获取或设置 `mozOpaque` 属性。例如，当 mimeType == 'image/jpeg'或类似值时，可以将其属性值设置为 true，以在不需要半透明度的情况下提高应用程序的性能。
 
 ```js
-var canvas = document.getElementById('canvas');
+var canvas = document.getElementById("canvas");
 console.log(canvas.mozOpaque); // true
 // 停用该方法
 canvas.mozOpaque = false;

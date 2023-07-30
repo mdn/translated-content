@@ -1,5 +1,5 @@
 ---
-title: 'HTML el atributo: multiple'
+title: "HTML el atributo: multiple"
 slug: Web/HTML/Attributes/multiple
 original_slug: Web/HTML/Atributos/multiple
 ---
@@ -53,8 +53,7 @@ Cuando se especifica [`multiple`](/es/docs/Web/HTML/Element/input#multiple), la 
   id="emails"
   list="drawfemails"
   required
-  size="64"
-/>
+  size="64" />
 
 <datalist id="drawfemails">
   <option value="gruñón@woodworkers.com">Gruñón</option>
@@ -92,8 +91,7 @@ Cuando se establece [`multiple`](/es/docs/Web/HTML/Element/input#multiple) en el
       id="uploads"
       name="uploads"
       accept=".jpg, .jpeg, .png, .svg, .gif"
-      multiple
-    />
+      multiple />
   </p>
   <p>
     <label for="text">Elige un archivo de texto para cargar: </label>

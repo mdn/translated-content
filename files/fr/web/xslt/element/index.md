@@ -1,8 +1,6 @@
 ---
 title: Éléments
 slug: Web/XSLT/Element
-tags:
-  - Référence_XSLT
 translation_of: Web/XSLT/Element
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: 'Django didactique Section 3: Utilisation des modèles de données'
+title: "Django didactique Section 3: Utilisation des modèles de données"
 slug: Learn/Server-side/Django/Models
 translation_of: Learn/Server-side/Django/Models
 ---
@@ -98,7 +98,7 @@ Détaillons ce qu'il en retourne :
 
 Chaque objet peut contenir autant d'attributs que de besoin et de quelque type qu'il soit. Chaque attribut correspondra à une colonne - _ou champ_ - dans une table de la base de données. Chaque enregistrement, ou ligne dans la table, correspondra à une instance de la classe d'objet et chaque champ sera évalué. Un champ est de la forme :
 
-```js
+```python
 my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
 ```
 
@@ -160,7 +160,7 @@ ordering = ['title', '-pubdate']
 
 Les livres sont présenté dans l'ordre alphabétique de leur titre, puis dans l'ordre chronologique du plus récent au plus ancien.
 
-Un autre attribut très utile est celui d'un nom vernaculaire pour la classe, `verbose_name`  peut être au singulier et au pluriel :
+Un autre attribut très utile est celui d'un nom vernaculaire pour la classe, `verbose_name` peut être au singulier et au pluriel :
 
 ```python
 verbose_name = 'BetterName'

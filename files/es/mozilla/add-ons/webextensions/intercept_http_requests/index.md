@@ -28,9 +28,7 @@ Crea un nuevo directorio llamado "requests". En ese directorio, crea un archivo 
   "name": "webRequest-demo",
   "version": "1.0",
 
-  "permissions": [
-    "webRequest"
-  ],
+  "permissions": ["webRequest"],
 
   "background": {
     "scripts": ["background.js"]
@@ -45,10 +43,9 @@ function logURL(requestDetails) {
   console.log("Cargando: " + requestDetails.url);
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  logURL,
-  {urls: ["<all_urls>"]}
-);
+browser.webRequest.onBeforeRequest.addListener(logURL, {
+  urls: ["<all_urls>"],
+});
 ```
 
 En este punto se utiliza {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} para llamar la función `logURL()` junstamente después de realizar la solicitud. La función `logURL()` se apropia de la solicitud URL del objeto de eventos y lo registra en la consola del navegador. El [patrón](/es/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` signinifica que se pueden interceptar todas las solicitudes HTTP de todas las URLs.
@@ -63,20 +60,16 @@ Ahora utilice `webRequest` para redireccionar todas las solicitudes HTTP. Primer
 
 ```json
 {
-
   "description": "Demostrar webRequests",
   "manifest_version": 2,
   "name": "webRequest-demo",
   "version": "1.0",
 
-  "permissions": [
-    "webRequest", "webRequestBlocking"
-  ],
+  "permissions": ["webRequest", "webRequestBlocking"],
 
   "background": {
     "scripts": ["background.js"]
   }
-
 }
 ```
 
@@ -90,14 +83,15 @@ var pattern = "https://mdn.mozillademos.org/*";
 function redirect(requestDetails) {
   console.log("Redireccionando: " + requestDetails.url);
   return {
-    redirectUrl: "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif"
+    redirectUrl:
+      "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif",
   };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   redirect,
-  {urls:[pattern], types:["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
@@ -122,7 +116,8 @@ Reemplace "background.js" con el siguiente código:
 ```js
 var targetPage = "http://useragentstring.com/*";
 
-var ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+var ua =
+  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 function rewriteUserAgentHeader(e) {
   for (var header of e.requestHeaders) {
@@ -130,13 +125,13 @@ function rewriteUserAgentHeader(e) {
       header.value = ua;
     }
   }
-  return {requestHeaders: e.requestHeaders};
+  return { requestHeaders: e.requestHeaders };
 }
 
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeader,
-  {urls: [targetPage]},
-  ["blocking", "requestHeaders"]
+  { urls: [targetPage] },
+  ["blocking", "requestHeaders"],
 );
 ```
 

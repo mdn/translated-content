@@ -165,5 +165,5 @@ Veja [Redimensionando as imagens de fundo](/pt-BR/docs/Web/CSS/CSS_Backgrounds_a
 ## Veja também
 
 - [Redimensionando as imagens de fundo](/pt-BR/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)
-- [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds)
+- [Scaling of SVG backgrounds](/pt-BR/docs/Web/CSS/Scaling_of_SVG_backgrounds)
 - {{cssxref("object-fit")}}

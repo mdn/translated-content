@@ -53,12 +53,16 @@ Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 ## Exemple
 
 ```css hidden
-html, body, svg { height: 100%; }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20"  y="20" width="60" height="60" />
+  <rect x="20" y="20" width="60" height="60" />
   <rect x="120" y="20" width="60" height="60" />
   <rect x="220" y="20" width="60" height="60" />
 </svg>
@@ -689,7 +693,7 @@ Pour [`<foreignObject>`](/fr/docs/Web/SVG/Element/foreignObject), `x` définit l
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `x` est une propriété *géométrique*, ce qui signifie qu'il peut être utilisé comme propriété CSS pour `<foreignObject>`.
+> **Note :** À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour `<foreignObject>`.
 
 ## `<glyphRef>`
 
@@ -741,7 +745,7 @@ Pour [`<image>`](/fr/docs/Web/SVG/Element/image), `x` définit l'abscisse du coi
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `x` est une propriété *géométrique*, ce qui signifie qu'il peut être utilisé comme propriété CSS pour les images.
+> **Note :** À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour les images.
 
 ## `<mask>`
 
@@ -812,7 +816,7 @@ Pour [`<rect>`](/fr/docs/Web/SVG/Element/rect), `x` définit l'abscisse du coin 
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `x` est une propriété *géométrique*, ce qui signifie qu'il peut être utilisé comme propriété CSS pour les rectangles.
+> **Note :** À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour les rectangles.
 
 ## `<svg>`
 
@@ -837,11 +841,11 @@ Pour [`<svg>`](/fr/docs/Web/SVG/Element/svg), `x` définit l'abscisse du coin su
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `x` est une propriété *géométrique*, ce qui signifie qu'il peut être utilisé comme propriété CSS pour `<svg>`.
+> **Note :** À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour `<svg>`.
 
 ## `<text>`
 
-Pour [`<text>`](/fr/docs/Web/SVG/Element/text), si l'élément contient une seule valeur, `x` définit l'abscisse où *la position du contenu texte* doit être placée. *La position du contenu texte* est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de *la position du contenu texte* est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
+Pour [`<text>`](/fr/docs/Web/SVG/Element/text), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
 
 S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
 
@@ -864,7 +868,11 @@ S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe 
 </table>
 
 ```css hidden
-html, body, svg { height: 100%; }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -894,7 +902,7 @@ text {
 line {
   fill: none;
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 2px;
 }
 ```
@@ -905,7 +913,7 @@ line {
 
 > **Attention :** Avec SVG2, [`<tref>`](/fr/docs/Web/SVG/Element/tref) est déprécié et ne devrait plus être utilisé.
 
-Pour [`<tref>`](/fr/docs/Web/SVG/Element/tref), si l'élément contient une seule valeur, `x` définit l'abscisse où *la position du contenu texte* doit être placée. *La position du contenu texte* est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de *la position du contenu texte* est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
+Pour [`<tref>`](/fr/docs/Web/SVG/Element/tref), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
 
 S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
 
@@ -929,7 +937,7 @@ S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe 
 
 ## `<tspan>`
 
-Pour [`<tspan>`](/fr/docs/Web/SVG/Element/tspan), si l'élément contient une seule valeur, `x` définit l'abscisse où *la position du contenu texte* doit être placée. *La position du contenu texte* est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de *la position du contenu texte* est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
+Pour [`<tspan>`](/fr/docs/Web/SVG/Element/tspan), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
 
 S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
 
@@ -952,7 +960,11 @@ S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe 
 </table>
 
 ```css hidden
-html, body, svg { height: 100%; }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -984,7 +996,7 @@ text {
 line {
   fill: none;
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 2px;
 }
 ```
@@ -1014,7 +1026,7 @@ Pour [`<use>`](/fr/docs/Web/SVG/Element/use), `x` définit l'abscisse du coin su
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `x` est une propriété *géométrique*, ce qui signifie qu'il peut être utilisé comme propriété CSS pour les éléments utilisés.
+> **Note :** À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour les éléments utilisés.
 
 ## Spécifications
 

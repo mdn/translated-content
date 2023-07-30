@@ -1,10 +1,6 @@
 ---
 title: CustomEvent.initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
-tags:
-  - API
-  - DOM
-  - Méthodes
 translation_of: Web/API/CustomEvent/initCustomEvent
 ---
 

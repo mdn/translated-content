@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial Django Parte 2: Creación del esqueleto del sitio web'
+title: "Tutorial Django Parte 2: Creación del esqueleto del sitio web"
 slug: Learn/Server-side/Django/skeleton_website
 ---
 
@@ -43,7 +43,7 @@ El proceso es sencillo:
 1. Usar la herramienta `django-admin` para crear la carpeta del proyecto, los ficheros de plantillas básicos y el script de gestión del proyecto (**manage.py**).
 2. Usar **manage.py** para crear una o más _aplicaciones_.
 
-    > **Nota:** Un sitio web puede consistir de una o más secciones, ej. sitio principal, blog, wiki, area de descargas, etc. Django te recomienda encarecidamente que desarrolles estos componentes como _aplicaciones_ separadas que podrían ser reutilizadas, si se desea, en otros proyectos.
+   > **Nota:** Un sitio web puede consistir de una o más secciones, ej. sitio principal, blog, wiki, area de descargas, etc. Django te recomienda encarecidamente que desarrolles estos componentes como _aplicaciones_ separadas que podrían ser reutilizadas, si se desea, en otros proyectos.
 
 3. Registrar las nuevas aplicaciones para incluirlas en el proyecto.
 4. Conectar el mapeador url de cada aplicación.

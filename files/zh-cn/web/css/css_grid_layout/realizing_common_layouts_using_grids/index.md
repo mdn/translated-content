@@ -18,45 +18,55 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 我的标记是一个容器，其中包含用于标题、页脚、主要内容、导航、边栏和打算放置广告的块的元素。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-    .wrapper {
-        max-width: 1024px;
-        margin: 0 auto;
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
 
-    .wrapper > * {
-        border: 2px solid #f08c00;
-        background-color: #ffec99;
-        border-radius: 5px;
-        padding: 10px;
-    }
+.wrapper > * {
+  border: 2px solid #f08c00;
+  background-color: #ffec99;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 ```html
 <div class="wrapper">
-        <header class="main-head">The header</header>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="">Nav 1</a></li>
-                <li><a href="">Nav 2</a></li>
-                <li><a href="">Nav 3</a></li>
-            </ul>
-        </nav>
-        <article class="content">
-            <h1>Main article area</h1>
-            <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p>
-        </article>
-        <aside class="side">Sidebar</aside>
-        <div class="ad">Advertising</div>
-        <footer class="main-footer">The footer</footer>
+  <header class="main-head">The header</header>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="">Nav 1</a></li>
+      <li><a href="">Nav 2</a></li>
+      <li><a href="">Nav 3</a></li>
+    </ul>
+  </nav>
+  <article class="content">
+    <h1>Main article area</h1>
+    <p>
+      In this layout, we display the areas in source order for any screen less
+      that 500 pixels wide. We go to a two column layout, and then to a three
+      column layout by redefining the grid, and the placement of items on the
+      grid.
+    </p>
+  </article>
+  <aside class="side">Sidebar</aside>
+  <div class="ad">Advertising</div>
+  <footer class="main-footer">The footer</footer>
 </div>
 ```
 
@@ -130,11 +140,11 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
       "header header  header"
       "nav    content sidebar"
       "nav    content ad"
-      "footer footer  footer"
-   }
-   nav ul {
-     flex-direction: column;
-   }
+      "footer footer  footer";
+  }
+  nav ul {
+    flex-direction: column;
+  }
 }
 ```
 
@@ -154,7 +164,10 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 .wrapper > * {
   border: 2px solid #f08c00;
@@ -177,9 +190,13 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 ```html
 <div class="wrapper">
   <div class="item1">Start column line 1, span 3 column tracks.</div>
-  <div class="item2">Start column line 6, span 4 column tracks. 2 row tracks.</div>
+  <div class="item2">
+    Start column line 6, span 4 column tracks. 2 row tracks.
+  </div>
   <div class="item3">Start row 2 column line 2, span 2 column tracks.</div>
-  <div class="item4">Start at column line 3, span to the end of the grid (-1).</div>
+  <div class="item4">
+    Start at column line 3, span to the end of the grid (-1).
+  </div>
 </div>
 ```
 
@@ -190,7 +207,7 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
   grid-column: col-start / span 3;
 }
 .item2 {
-  grid-column: col-start 6 / span 4 ;
+  grid-column: col-start 6 / span 4;
   grid-row: 1 / 3;
 }
 .item3 {
@@ -218,44 +235,56 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 为了了解这种布局方法在实践中是如何工作的，我们可以使用 12 列网格系统创建与使用{{cssxref("grid-template-areas")}}创建的布局相同的布局。我开始使用与网格模板区域示例相同的标记。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-    .wrapper {
-        max-width: 1024px;
-        margin: 0 auto;
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
 
-    .wrapper > * {
-        border: 2px solid #f08c00;
-        background-color: #ffec99;
-        border-radius: 5px;
-        padding: 10px;
-    }
+.wrapper > * {
+  border: 2px solid #f08c00;
+  background-color: #ffec99;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 ```html
 <div class="wrapper">
-        <header class="main-head">The header</header>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="">Nav 1</a></li>
-                <li><a href="">Nav 2</a></li>
-                <li><a href="">Nav 3</a></li>
-            </ul>
-        </nav>
-        <article class="content"><h1>Main article area</h1>
-        <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p></article>
-        <aside class="side">Sidebar</aside>
-        <div class="ad">Advertising</div>
-        <footer class="main-footer">The footer</footer>
-    </div>
+  <header class="main-head">The header</header>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="">Nav 1</a></li>
+      <li><a href="">Nav 2</a></li>
+      <li><a href="">Nav 3</a></li>
+    </ul>
+  </nav>
+  <article class="content">
+    <h1>Main article area</h1>
+    <p>
+      In this layout, we display the areas in source order for any screen less
+      that 500 pixels wide. We go to a two column layout, and then to a three
+      column layout by redefining the grid, and the placement of items on the
+      grid.
+    </p>
+  </article>
+  <aside class="side">Sidebar</aside>
+  <div class="ad">Advertising</div>
+  <footer class="main-footer">The footer</footer>
+</div>
 ```
 
 然后，我可以设置网格，如上面的示例 12 列布局。
@@ -284,7 +313,6 @@ ad 面板位于边栏下面，因此从网格行 4 开始。然后我们有内�
 
 ```css
 @media (min-width: 500px) {
-
   .side {
     grid-column: col-start / span 3;
     grid-row: 3;
@@ -293,7 +321,8 @@ ad 面板位于边栏下面，因此从网格行 4 开始。然后我们有内�
     grid-column: col-start / span 3;
     grid-row: 4;
   }
-  .content, .main-footer {
+  .content,
+  .main-footer {
     grid-column: col-start 4 / span 9;
   }
   nav ul {
@@ -353,50 +382,61 @@ ad 面板位于边栏下面，因此从网格行 4 开始。然后我们有内�
     <div class="body"><p>The content of this listing item goes here.</p></div>
     <div class="cta"><a href="">Call to action!</a></div>
   </li>
-   <li>
-     <h2>Item Two</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-   </li>
-   <li class="wide">
-     <h2>Item Three</h2>
-     <div class="body"><p>The content of this listing item goes here.</p>
-     <p>This one has more text than the other items.</p>
-     <p>Quite a lot more</p>
-     <p>Perhaps we could do something different with it?</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-    </li>
-    <li>
-     <h2>Item Four</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-    </li>
-     <li>
-     <h2>Item Five</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-      <div class="cta"><a href="">Call to action!</a></div>
-    </li>
+  <li>
+    <h2>Item Two</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li class="wide">
+    <h2>Item Three</h2>
+    <div class="body">
+      <p>The content of this listing item goes here.</p>
+      <p>This one has more text than the other items.</p>
+      <p>Quite a lot more</p>
+      <p>Perhaps we could do something different with it?</p>
+    </div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li>
+    <h2>Item Four</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li>
+    <h2>Item Five</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
 </ul>
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
-    img {max-width: 100%; display: block;}
-    body {
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-    a:link, a:visited {
-      text-decoration: none;
-      color: #f08c00;
-    }
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #f08c00;
+}
 
-    h2 {
-      background-color: #f08c00;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
+h2 {
+  background-color: #f08c00;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
 ```
 
 我们将创建一个具有灵活数量的灵活列的网格。我希望它们永远不要小于 200 像素，然后平等地共享任何可用的剩余空间——所以我们总是得到相同宽度的列轨迹。我们使用 minmax() 函数实现了这一点，该函数是用于轨道大小的重复表示法。
@@ -407,13 +447,13 @@ ad 面板位于边栏下面，因此从网格行 4 开始。然后我们有内�
   margin: 2em;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 ```
 
 一旦我添加了这个 CSS，项目就开始以网格的形式展开。如果我让窗口变小或变宽，列跟踪的数量就会发生变化，而不需要使用媒体查询添加断点并重新定义网格。
 
-然后，我就可以使用 flex touch 来整理这些盒子的内部结构。我将列表项设置为` display: flex `和 `flex-direction` 设置为 `column`。然后，我可以在` .cta `上使用自动边界将这个工具条推到盒子底部。
+然后，我就可以使用 flex touch 来整理这些盒子的内部结构。我将列表项设置为 `display: flex` 和 `flex-direction` 设置为 `column`。然后，我可以在 `.cta` 上使用自动边界将这个工具条推到盒子底部。
 
 ```css
 .listing li {
@@ -452,50 +492,61 @@ ad 面板位于边栏下面，因此从网格行 4 开始。然后我们有内�
     <div class="body"><p>The content of this listing item goes here.</p></div>
     <div class="cta"><a href="">Call to action!</a></div>
   </li>
-   <li>
-     <h2>Item Two</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-   </li>
-   <li class="wide">
-     <h2>Item Three</h2>
-     <div class="body"><p>The content of this listing item goes here.</p>
-     <p>This one has more text than the other items.</p>
-     <p>Quite a lot more</p>
-     <p>Perhaps we could do something different with it?</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-    </li>
-    <li>
-     <h2>Item Four</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-    </li>
-     <li>
-     <h2>Item Five</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-      <div class="cta"><a href="">Call to action!</a></div>
-    </li>
+  <li>
+    <h2>Item Two</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li class="wide">
+    <h2>Item Three</h2>
+    <div class="body">
+      <p>The content of this listing item goes here.</p>
+      <p>This one has more text than the other items.</p>
+      <p>Quite a lot more</p>
+      <p>Perhaps we could do something different with it?</p>
+    </div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li>
+    <h2>Item Four</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li>
+    <h2>Item Five</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
 </ul>
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
-    img {max-width: 100%; display: block;}
-    body {
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-    a:link, a:visited {
-      text-decoration: none;
-      color: #f08c00;
-    }
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #f08c00;
+}
 
-    h2 {
-      background-color: #f08c00;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
+h2 {
+  background-color: #f08c00;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
 
 .listing li {
   border: 1px solid #ffe066;
@@ -521,7 +572,7 @@ ad 面板位于边栏下面，因此从网格行 4 开始。然后我们有内�
   display: grid;
   grid-gap: 20px;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 .listing .wide {
   grid-column-end: span 2;

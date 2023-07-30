@@ -1,13 +1,6 @@
 ---
 title: Affectation après OU binaire (|=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.bitwise_or_assignment
 ---
 
 {{jsSidebar("Operators")}}
@@ -19,8 +12,8 @@ L'opérateur d'affectation après OU binaire (`|=`) utilise la représentation b
 ## Syntaxe
 
 ```js
-Opérateur : x |= y
-Signification :  x = x | y
+Opérateur: x |= y;
+Signification: x = x | y;
 ```
 
 ## Exemples

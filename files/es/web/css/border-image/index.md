@@ -32,10 +32,10 @@ La imágen es cortada para rellenar el area del borde, repitiendose si es necesa
 ```css
 .example {
   border: 30px solid transparent;
-  -moz-border-image:url("/files/4127/border.png") 30 30 repeat; /* Old firefox */
-  -webkit-border-image:url("/files/4127/border.png") 30 30 repeat; /* Safari */
-  -o-border-image:url("/files/4127/border.png") 30 30 repeat; /* Opera */
-  border-image:url("/files/4127/border.png") 30 30 repeat;
+  -moz-border-image: url("/files/4127/border.png") 30 30 repeat; /* Old firefox */
+  -webkit-border-image: url("/files/4127/border.png") 30 30 repeat; /* Safari */
+  -o-border-image: url("/files/4127/border.png") 30 30 repeat; /* Opera */
+  border-image: url("/files/4127/border.png") 30 30 repeat;
 }
 ```
 
@@ -49,10 +49,10 @@ La opción 'round' es una variación de la opción 'repeat', la cual distribuye 
 ```css
 .example {
   border: 30px solid transparent;
-  -moz-border-image:url("/files/4127/border.png") 30 30 round; /* Old firefox */
-  -webkit-border-image:url("/files/4127/border.png") 30 30 round; /* Safari */
-  -o-border-image:url("/files/4127/border.png") 30 30 round; /* Opera */
-  border-image:url("/files/4127/border.png") 30 30 round;
+  -moz-border-image: url("/files/4127/border.png") 30 30 round; /* Old firefox */
+  -webkit-border-image: url("/files/4127/border.png") 30 30 round; /* Safari */
+  -o-border-image: url("/files/4127/border.png") 30 30 round; /* Opera */
+  border-image: url("/files/4127/border.png") 30 30 round;
 }
 ```
 
@@ -66,10 +66,10 @@ La opción 'stretch' estira la imágen para rellenar todo el borde del área
 ```css
 .example {
   border: 30px solid transparent;
-  -moz-border-image:url("/files/4127/border.png") 30 30 stretch; /* Old firefox */
-  -webkit-border-image:url("/files/4127/border.png") 30 30 stretch; /* Safari */
-  -o-border-image:url("/files/4127/border.png") 30 30 stretch; /* Opera */
-  border-image:url("/files/4127/border.png") 30 30 stretch;
+  -moz-border-image: url("/files/4127/border.png") 30 30 stretch; /* Old firefox */
+  -webkit-border-image: url("/files/4127/border.png") 30 30 stretch; /* Safari */
+  -o-border-image: url("/files/4127/border.png") 30 30 stretch; /* Opera */
+  border-image: url("/files/4127/border.png") 30 30 stretch;
 }
 ```
 

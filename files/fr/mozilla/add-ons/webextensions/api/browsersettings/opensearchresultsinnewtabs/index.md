@@ -25,8 +25,9 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.openSearchResultsInNewTabs.set({value: true}).
-  then(logResult);
+browser.browserSettings.openSearchResultsInNewTabs
+  .set({ value: true })
+  .then(logResult);
 ```
 
 {{WebExtExamples}}

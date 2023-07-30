@@ -47,16 +47,16 @@ slug: Web/API/Window/unload_event
 ## 示例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Parent Frame</title>
     <script>
-      window.addEventListener('beforeunload', function(event) {
-        console.log('I am the 1st one.');
+      window.addEventListener("beforeunload", function (event) {
+        console.log("I am the 1st one.");
       });
-      window.addEventListener('unload', function(event) {
-        console.log('I am the 3rd one.');
+      window.addEventListener("unload", function (event) {
+        console.log("I am the 3rd one.");
       });
     </script>
   </head>
@@ -69,21 +69,21 @@ slug: Web/API/Window/unload_event
 下面是 `child-frame.html 的内容`:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Child Frame</title>
     <script>
-      window.addEventListener('beforeunload', function(event) {
-        console.log('I am the 2nd one.');
+      window.addEventListener("beforeunload", function (event) {
+        console.log("I am the 2nd one.");
       });
-      window.addEventListener('unload', function(event) {
-        console.log('I am the 4th and last one…');
+      window.addEventListener("unload", function (event) {
+        console.log("I am the 4th and last one…");
       });
     </script>
   </head>
   <body>
-      ☻
+    ☻
   </body>
 </html>
 ```

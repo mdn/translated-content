@@ -23,18 +23,18 @@ instanceOfFileReader.readAsBinaryString(blob);
 ## 示例
 
 ```js
-var canvas = document.createElement('canvas');
+var canvas = document.createElement("canvas");
 var height = 200;
-var width  = 200;
+var width = 200;
 
-canvas.width  = width;
+canvas.width = width;
 canvas.height = height;
 
-var ctx = canvas.getContext('2d');
+var ctx = canvas.getContext("2d");
 
-ctx.strokeStyle = '#090';
+ctx.strokeStyle = "#090";
 ctx.beginPath();
-ctx.arc(width/2, height/2, width/2 - width/10, 0, Math.PI*2);
+ctx.arc(width / 2, height / 2, width / 2 - width / 10, 0, Math.PI * 2);
 ctx.stroke();
 
 canvas.toBlob(function (blob) {
@@ -42,7 +42,7 @@ canvas.toBlob(function (blob) {
 
   reader.onloadend = function () {
     console.log(reader.result);
-  }
+  };
 
   reader.readAsBinaryString(blob);
 });

@@ -85,10 +85,10 @@ if (y + dy > canvas.height || y + dy < 0) {
 壁と円周の衝突地点を計算すべきところで、壁と円の中心の衝突地点を計算しているのがこの理由です。ボールは壁に触ったときに跳ね返る、壁に半分のめり込んだときに跳ね返っても仕方ありません。そこで円周を含めるために文を少し調節します。最後に追加したコードを次のように書き換えます。
 
 ```js
-if (x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
   dx = -dx;
 }
-if (y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
+if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
   dy = -dy;
 }
 ```

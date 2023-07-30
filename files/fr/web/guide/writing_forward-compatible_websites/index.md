@@ -1,11 +1,7 @@
 ---
 title: Développer des sites à compatibilité descendante
 slug: Web/Guide/Writing_forward-compatible_websites
-tags:
-  - NeedsEditorialReview
-  - NeedsTechnicalReview
 translation_of: Web/Guide/Writing_forward-compatible_websites
-original_slug: Développement_Web/Développer_des_sites_à_compatibilité_descendante
 ---
 
 Cette page explique comment développer des sites qui continuent de fonctionner au fur et à mesure des mises à jour des navigateurs.

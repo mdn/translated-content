@@ -1,11 +1,6 @@
 ---
 title: Window.screenX
 slug: Web/API/Window/screenX
-tags:
-  - API
-  - Propriété
-  - Window
-  - lecture seule
 translation_of: Web/API/Window/screenX
 ---
 
@@ -16,7 +11,7 @@ La propriété **`Window.screenX`** retourne la distance honrizontale, in CSS pi
 ## Syntaxe
 
 ```js
-lLoc = window.screenX
+lLoc = window.screenX;
 ```
 
 - _`lLoc`_ is the number of CSS pixels from the left side the screen.

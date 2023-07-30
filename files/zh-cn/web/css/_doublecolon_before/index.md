@@ -1,5 +1,5 @@
 ---
-title: '::before (:before)'
+title: "::before (:before)"
 slug: Web/CSS/::before
 ---
 
@@ -14,7 +14,7 @@ a::before {
 }
 ```
 
-> **备注：** 由 `::before` 和`::after` 生成的伪元素[包含在元素格式框内](https://www.w3.org/TR/CSS2/generate.html#before-after-content)，因此不能应用在[*替换元素上*](/zh-CN/docs/Web/CSS/Replaced_element)，比如 {{htmlelement("img")}} 或 {{htmlelement("br")}} 元素。
+> **备注：** 由 `::before` 和`::after` 生成的伪元素[包含在元素格式框内](https://www.w3.org/TR/CSS2/generate.html#before-after-content)，因此不能应用在[_替换元素上_](/zh-CN/docs/Web/CSS/Replaced_element)，比如 {{htmlelement("img")}} 或 {{htmlelement("br")}} 元素。
 
 ## 语法
 
@@ -74,14 +74,14 @@ q::after {
 
 ```css
 .ribbon {
-   background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::before {
-   content:          "Look at this orange box.";
-   background-color: #FFBA10;
-   border-color:     black;
-   border-style:     dotted;
+  content: "Look at this orange box.";
+  background-color: #ffba10;
+  border-color: black;
+  border-style: dotted;
 }
 ```
 
@@ -119,11 +119,11 @@ li {
 }
 
 li.done {
-  background: #CCFF99;
+  background: #ccff99;
 }
 
 li.done::before {
-  content: '';
+  content: "";
   position: absolute;
   border-color: #009933;
   border-style: solid;
@@ -140,15 +140,19 @@ li.done::before {
 #### JavaScript
 
 ```js
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if( ev.target.tagName === 'LI') {
-     ev.target.classList.toggle('done');
-  }
-}, false);
+var list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  function (ev) {
+    if (ev.target.tagName === "LI") {
+      ev.target.classList.toggle("done");
+    }
+  },
+  false,
+);
 ```
 
-下面展示的是最终得到的结果。请注意我们没有使用任何图标，对勾标识实际上是使用 CSS 定义了样式的` ::before `伪元素。接下来建立几个待办事项来完成它们吧。
+下面展示的是最终得到的结果。请注意我们没有使用任何图标，对勾标识实际上是使用 CSS 定义了样式的`::before`伪元素。接下来建立几个待办事项来完成它们吧。
 
 #### 结果
 
@@ -162,32 +166,38 @@ list.addEventListener('click', function(ev) {
 
 ```html
 <div class="example">
-<span id="floatme">"Floated Before" should be generated on the left of the
-viewport and not allow overflow in this line to flow under it. Likewise
-should "Floated After" appear on the right of the viewport and not allow this
-line to flow under it.</span>
+  <span id="floatme"
+    >"Floated Before" should be generated on the left of the viewport and not
+    allow overflow in this line to flow under it. Likewise should "Floated
+    After" appear on the right of the viewport and not allow this line to flow
+    under it.</span
+  >
 </div>
 ```
 
 #### CSS
 
 ```css
-#floatme { float: left; width: 50%; }
+#floatme {
+  float: left;
+  width: 50%;
+}
 
 /* To get an empty column, just indicate a hex code for a non-breaking space: \a0 as the content (use \0000a0 when following such a space with other characters) */
 .example::before {
   content: "Floated Before";
   float: left;
-  width: 25%
+  width: 25%;
 }
 .example::after {
   content: "Floated After";
   float: right;
-  width:25%
+  width: 25%;
 }
 
 /* For styling */
-.example::before, .example::after{
+.example::before,
+.example::after {
   background: yellow;
   color: red;
 }

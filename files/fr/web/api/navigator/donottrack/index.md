@@ -1,11 +1,6 @@
 ---
 title: Navigator.doNotTrack
 slug: Web/API/Navigator/doNotTrack
-tags:
-  - API
-  - DOM
-  - Propriétés
-  - Reference
 translation_of: Web/API/Navigator/doNotTrack
 ---
 

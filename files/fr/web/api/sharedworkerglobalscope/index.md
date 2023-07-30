@@ -1,14 +1,6 @@
 ---
 title: SharedWorkerGlobalScope
 slug: Web/API/SharedWorkerGlobalScope
-tags:
-  - API
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - SharedWorkerGlobalScope
-  - TopicStub
-  - Web Workers
 translation_of: Web/API/SharedWorkerGlobalScope
 ---
 

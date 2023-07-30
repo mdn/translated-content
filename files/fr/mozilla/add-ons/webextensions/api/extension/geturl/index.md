@@ -14,8 +14,8 @@ Convertit un chemin relatif dans le répertoire d'installation d'une extension e
 
 ```js
 browser.extension.getURL(
-  path // string
-)
+  path, // string
+);
 ```
 
 ### Paramètres
