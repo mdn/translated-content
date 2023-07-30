@@ -54,7 +54,7 @@ someOtherNode.textContent = string;
 
 给出这个 HTML 片段：
 
-```js
+```html
 <div id="divA">
   This is <span>some</span> text!
 </div>

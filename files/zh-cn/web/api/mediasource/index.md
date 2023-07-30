@@ -21,8 +21,7 @@ slug: Web/API/MediaSource
     子集的对象—即提供当前被选中的视频轨（video track），启用的音频轨（audio tracks）以及显示/隐藏的字幕轨（text tracks）的对象列表。
 - {{domxref("MediaSource.readyState")}} {{readonlyInline}}
 
-  - : `返回一个包含当前 MediaSource`状态的集合，即使它当前没有附着到一个 media 元素（`closed`），或者已附着并准备接收{{domxref("SourceBuffer")}} 对象
-    （`open`），亦或者已附着但这个流已被{{domxref("MediaSource.endOfStream()")}}关闭（`ended`）。
+  - : 返回一个代表当前 `MediaSource` 状态的枚举值，即当前是否未连接到媒体元素（`closed`），是否已连接并准备好接收 {{domxref("SourceBuffer")}} 对象（`open`），或者是否已连接但已通过 {{domxref("MediaSource.endOfStream()")}} 结束媒体流（`ended`）。
 
 - {{domxref("MediaSource.duration")}}
   - : 获取和设置当前正在推流媒体的持续时间。
