@@ -31,8 +31,8 @@ slug: Web/API/FetchEvent/respondWith
 
 ## 语法
 
-```js
-respondWith(response);
+```js-nolint
+respondWith(response)
 ```
 
 ### 参数

@@ -15,8 +15,8 @@ slug: Web/API/EventTarget/dispatchEvent
 
 ## 语法
 
-```js
-dispatchEvent(event);
+```js-nolint
+dispatchEvent(event)
 ```
 
 ### 参数
