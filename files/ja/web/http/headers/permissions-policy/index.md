@@ -71,6 +71,7 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}}
   - : 表示されないフレーム内 (例えば iframe が [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) または `display: none` の場合) でタスクを実行するかどうかを制御します。
 - {{httpheader('Feature-Policy/execution-while-out-of-viewport', 'execution-while-out-of-viewport')}}
+
   - : ビューポートの見える範囲外にあるフレーム内のタスクを実行するかどうかを制御します。
 
 - {{httpheader('Feature-Policy/fullscreen','fullscreen')}}
@@ -83,9 +84,11 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/gyroscope','gyroscope')}}
   - : 現在の文書が {{DOMxRef("Gyroscope")}} インターフェイスを通じて、端末の方向に関する情報を収集することを許可するかどうかを制御します。
 - {{httpheader('Feature-Policy/layout-animations','layout-animations')}}
+
   - : 現在の文書がレイアウトアニメーションを表示することを許可するかどうかを制御します。
 
 - {{httpheader('Feature-Policy/legacy-image-formats','legacy-image-formats')}}
+
   - : 現在の文書が古い形式の画像を表示することを許可するかどうかを制御します。
 
 - {{httpheader('Feature-Policy/magnetometer','magnetometer')}}

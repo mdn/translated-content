@@ -1,5 +1,5 @@
 ---
-title: 'Feature-Policy: geolocation'
+title: "Feature-Policy: geolocation"
 slug: Web/HTTP/Headers/Permissions-Policy/geolocation
 original_slug: Web/HTTP/Headers/Feature-Policy/geolocation
 ---

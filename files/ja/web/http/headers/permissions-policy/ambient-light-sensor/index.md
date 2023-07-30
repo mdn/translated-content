@@ -1,5 +1,5 @@
 ---
-title: 'Feature-Policy: ambient-light-sensor'
+title: "Feature-Policy: ambient-light-sensor"
 slug: Web/HTTP/Headers/Permissions-Policy/ambient-light-sensor
 original_slug: Web/HTTP/Headers/Feature-Policy/ambient-light-sensor
 ---

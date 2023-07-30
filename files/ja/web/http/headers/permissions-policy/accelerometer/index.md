@@ -1,5 +1,5 @@
 ---
-title: 'Feature-Policy: accelerometer'
+title: "Feature-Policy: accelerometer"
 slug: Web/HTTP/Headers/Permissions-Policy/accelerometer
 original_slug: Web/HTTP/Headers/Feature-Policy/accelerometer
 ---
