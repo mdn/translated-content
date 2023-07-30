@@ -5,7 +5,7 @@ slug: Web/CSS/scroll-margin-inline-end
 
 {{CSSRef}}
 
-**`scroll-margin-inline-end`** 属性定义了滚动吸附区域在行向末侧的外边距，此区域用于将此盒吸附至滚动口。滚动吸附区域的确定方法为：取变换后的边框盒，求其矩形包围盒（与滚动容器的坐标空间中的轴对齐），再加上指定的外边距。
+**`scroll-margin-inline-end`** 属性定义了滚动吸附区域的行末外边距，此区域用于将此盒吸附至滚动口。滚动吸附区域的确定方法为：取变换后的边框盒，求其矩形包围盒（与滚动容器的坐标空间中的轴对齐），再加上指定的外边距。
 
 {{EmbedInteractiveExample("pages/css/scroll-margin-inline-end.html")}}
 
@@ -27,7 +27,7 @@ scroll-margin-inline-end: unset;
 ### 取值
 
 - {{CSSXref("&lt;length&gt;")}}
-  - : 滚动容器行末边的外边距。
+  - : 滚动容器的行末外边距。
 
 ## 形式定义
 

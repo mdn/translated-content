@@ -27,7 +27,7 @@ scroll-margin-bottom: unset;
 ### 取值
 
 - {{CSSXref("&lt;length&gt;")}}
-  - : 滚动容器下侧边的外边距。
+  - : 滚动容器的下外边距。
 
 ## 形式定义
 
