@@ -12,9 +12,9 @@ slug: Web/API/structuredClone
 
 ## 语法
 
-```js
-structuredClone(value);
-structuredClone(value, { transfer });
+```js-nolint
+structuredClone(value)
+structuredClone(value, { transfer })
 ```
 
 ### 参数

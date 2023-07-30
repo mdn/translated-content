@@ -9,8 +9,8 @@ slug: Web/API/SourceBuffer/remove
 
 ## 语法
 
-```js
-remove(start, end);
+```js-nolint
+remove(start, end)
 ```
 
 ### 参数
@@ -27,9 +27,7 @@ remove(start, end);
 ### 异常
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-
   - : 如果 {{domxref("MediaSource.duration")}} 属性为 `NaN`、`start` 参数是负数或者大于 {{domxref("MediaSource.duration")}}，或者 `end` 参数小于或等于 `start` 或等于 `NaN`，则抛出异常。
-
 - `InvalidStateError` {{domxref("DOMException")}}
   - : 如果 {{domxref("SourceBuffer.updating")}} 属性等于 `true`，或者这个 `SourceBuffer` 已经从 {{domxref("MediaSource")}} 移除，则抛出异常。
 

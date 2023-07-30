@@ -9,8 +9,8 @@ slug: Web/API/SpeechSynthesis/getVoices
 
 ## 语法
 
-```js
-getVoices();
+```js-nolint
+getVoices()
 ```
 
 ### 参数
