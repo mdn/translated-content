@@ -9,7 +9,7 @@ slug: Web/API/Element/getBoundingClientRect
 
 ## 语法
 
-```js
+```js-nolint
 getBoundingClientRect()
 ```
 
