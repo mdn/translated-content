@@ -1,5 +1,5 @@
 ---
-title: 'SpeechRecognition: result event'
+title: "SpeechRecognition: result event"
 slug: Web/API/SpeechRecognition/result_event
 ---
 
@@ -43,9 +43,9 @@ You can use the `result` event in an [`addEventListener`](/zh-CN/docs/Web/API/Ev
 ```js
 var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('result', function(event) {
+recognition.addEventListener("result", function (event) {
   var color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
+  diagnostic.textContent = "Result received: " + color + ".";
   bg.style.backgroundColor = color;
 });
 ```
@@ -53,11 +53,11 @@ recognition.addEventListener('result', function(event) {
 Or use the [`onresult`](/zh-CN/docs/Web/API/SpeechRecognition/onresult) event handler property:
 
 ```js
-recognition.onresult = function(event) {
+recognition.onresult = function (event) {
   var color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
+  diagnostic.textContent = "Result received: " + color + ".";
   bg.style.backgroundColor = color;
-}
+};
 ```
 
 ## Specifications

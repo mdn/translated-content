@@ -25,17 +25,15 @@ var elList = elementNodeReference.children;
 
 ```js
 // parg 是一个指向<p>元素的对象引用
-if (parg.childElementCount)
-// 检查这个<p>元素是否有子元素
-// 译者注:childElementCount 有兼容性问题
- {
-   var children = parg.children;
-   for (var i = 0; i < children.length; i++)
-   {
-   // 通过 children[i] 来获取每个子元素
-   // 注意:List 是一个 live 的 HTMLCollection 对象，在这里添加或删除 parg 的子元素节点，都会立即改变 List 的值。
-   };
- };
+if (parg.childElementCount) {
+  // 检查这个<p>元素是否有子元素
+  // 译者注:childElementCount 有兼容性问题
+  var children = parg.children;
+  for (var i = 0; i < children.length; i++) {
+    // 通过 children[i] 来获取每个子元素
+    // 注意:List 是一个 live 的 HTMLCollection 对象，在这里添加或删除 parg 的子元素节点，都会立即改变 List 的值。
+  }
+}
 ```
 
 ## 规范
