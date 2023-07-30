@@ -79,12 +79,14 @@ GroupData 엔트리에 추가할 수 있는 하위 멤버 목록입니다.
 5. `"events"` — the value is an array that should contain all of the events associated with the API, defined in the API spec, or elsewhere. If there are a huge number of events, you might want to consider only listing the most popular ones, or putting them first in the list. "animationstart" results in a link being made to [https://developer.mozilla.org/ko/docs/Web/Events/animationstart](/ko/docs/Web/Events/animationstart).
 6. `"guides"` — the value is an array containing one or more objects that define links to guides explain how to use the API. Each object contains two submembers — "url", which contains the partial URL pointing to the guide article, and "title", which defines the link test for the link. As an example, the following object:
 
-    ```json
-    { "url":   "/docs/Web/API/Detecting_device_orientation",
-    "title": "Detecting device orientation" }
-    ```
+   ```json
+   {
+     "url": "/docs/Web/API/Detecting_device_orientation",
+     "title": "Detecting device orientation"
+   }
+   ```
 
-    Creates a link with the title "Detecting device orientation", which points to [https://developer.mozilla.org/ko/docs/Web/API/Detecting_device_orientation](/ko/docs/Web/API/Detecting_device_orientation).
+   Creates a link with the title "Detecting device orientation", which points to [https://developer.mozilla.org/ko/docs/Web/API/Detecting_device_orientation](/ko/docs/Web/API/Detecting_device_orientation).
 
 ### API Submembers and Tags
 
