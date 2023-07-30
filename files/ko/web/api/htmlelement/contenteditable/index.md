@@ -2,6 +2,7 @@
 title: HTMLElement.contentEditable
 slug: Web/API/HTMLElement/contentEditable
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLElement")}} 요소의 **`contenteditable`** 속성은 요소의 편집 가능 여부를 나타냅니다. 열거형 속성으로, 다음 중 하나의 값을 가질 수 있습니다.
