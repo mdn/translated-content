@@ -67,10 +67,12 @@ CSS 규격에는 두 가지 레이아웃 메서드가 동일한 항목에 적용
 아래 예에서는 세 개의 `<div>` 부동체를 행으로 표시했습니다. [CSS grid 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Grids)을 지원하지 않는 브라우저는 상자 행을 <ruby><em>부동 레이아웃</em><rp> (</rp><rt>浮動 組版</rt><rp>) </rp></ruby>으로 간주합니다. grid 항목이 되는 부동 항목은 부동 동작을 상실합니다. 즉, `.wrapper` 클레스를 grid 컨테이너로 전환하면 부동 항목이 grid 항목이 됩니다. 브라우저가 grid 레이아웃을 지원하는 경우 grid 디스플레이를 표시합니다. 지원하지 않으면 `display: grid` 관련 속성은 무시되고 부동 레이아웃이 사용됩니다.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -80,7 +82,7 @@ CSS 규격에는 두 가지 레이아웃 메서드가 동일한 항목에 적용
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
@@ -116,10 +118,12 @@ CSS 규격에는 두 가지 레이아웃 메서드가 동일한 항목에 적용
 부동 레이아웃에서 백분율은 컨테이너를 기준으로 계산됩니다. 33.333%는 컨테이너 너비의 3 분의 1입니다. 그러나 grid에서는 항목이 배치된 grid 영역을 기준으로 33.333%가 계산되므로 grid 레이아웃이 도입되면 실제로 원하는 크기의 3분의 1이 됩니다.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -129,7 +133,7 @@ CSS 규격에는 두 가지 레이아웃 메서드가 동일한 항목에 적용
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
@@ -154,10 +158,12 @@ feature queries를 사용하면 브라우저가 특정 CSS 기능을 지원하�
 위의 예제에 feature query를 추가하면 grid가 지원됨을 알고 있는 경우 이 feature query를 사용하여 항목 너비를 `auto`으로 다시 설정할 수 있습니다.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -167,14 +173,14 @@ feature queries를 사용하면 브라우저가 특정 CSS 기능을 지원하�
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
 
 @supports (display: grid) {
   .item {
-      width: auto;
+    width: auto;
   }
 }
 ```
