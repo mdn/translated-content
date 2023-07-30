@@ -1,5 +1,5 @@
 ---
-title: '<input>: 입력 요소'
+title: "<input>: 입력 요소"
 slug: Web/HTML/Element/input
 ---
 
@@ -482,11 +482,25 @@ A few additional non-standard attributes are listed following the descriptions o
       <option>https://www.youtube.com/user/firefoxchannel</option>
     </datalist>
 
-    <p><label for="textx">Text</label> <input type="text" list="fruitsxx" id="textx"/></p>
-    <p><label for="colorx">Color</label> <input type="color" list="colorsxx" id="colorx"/></p>
-    <p><label for="rangex">Range</label> <input type="range" min="0" max="64" list="numbersxx" id="rangex"/></p>
-    <p><label for="numberx">Number</label> <input type="number" min="0" max="64" list="numbersxx" id="numberx"/></p>
-    <p><label for="urlx">URL</label> <input type="url" list="urlsxx" id="urlx"/></p>
+    <p>
+      <label for="textx">Text</label>
+      <input type="text" list="fruitsxx" id="textx" />
+    </p>
+    <p>
+      <label for="colorx">Color</label>
+      <input type="color" list="colorsxx" id="colorx" />
+    </p>
+    <p>
+      <label for="rangex">Range</label>
+      <input type="range" min="0" max="64" list="numbersxx" id="rangex" />
+    </p>
+    <p>
+      <label for="numberx">Number</label>
+      <input type="number" min="0" max="64" list="numbersxx" id="numberx" />
+    </p>
+    <p>
+      <label for="urlx">URL</label> <input type="url" list="urlsxx" id="urlx" />
+    </p>
     ```
 
     {{EmbedLiveSample("datalist",400,275,"","", "nobutton")}}
@@ -624,7 +638,7 @@ When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} 
 
 ```html
 <!-- A basic input -->
-<input type="text" name="input" value="Type here">
+<input type="text" name="input" value="Type here" />
 ```
 
 ### A common use-case scenario
@@ -632,10 +646,10 @@ When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} 
 ```html
 <!-- A common form that includes input tags -->
 <form action="getform.php" method="get">
-    <label>First name: <input type="text" name="first_name" /></label><br />
-    <label>Last name: <input type="text" name="last_name" /></label><br />
-    <label>E-mail: <input type="email" name="user_email" /></label><br />
-    <input type="submit" value="Submit" />
+  <label>First name: <input type="text" name="first_name" /></label><br />
+  <label>Last name: <input type="text" name="last_name" /></label><br />
+  <label>E-mail: <input type="email" name="user_email" /></label><br />
+  <input type="submit" value="Submit" />
 </form>
 ```
 

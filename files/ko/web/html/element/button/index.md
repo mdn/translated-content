@@ -1,5 +1,5 @@
 ---
-title: '<button>: 버튼 요소'
+title: "<button>: 버튼 요소"
 slug: Web/HTML/Element/button
 ---
 
@@ -96,25 +96,31 @@ slug: Web/HTML/Element/button
 <dl>
 
 - {{htmlattrdef("autofocus")}}
+
   - : 페이지 로드 후, 이 버튼에 포커스가 위치해야 하는지 나타냅니다. 문서 내에서 **하나의 요소**만 `autofocus` 특성을 가질 수 있습니다.
 
 - {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
+
   - : This attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. Unlike other browsers, [Firefox persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting `autocomplete="off"` disables this feature; see [Firefox bug 654072](https://bugzil.la/654072).
 
 - {{htmlattrdef("disabled")}}
+
   - : 버튼과 사용자의 상호작용, 즉 누르거나 클릭하는 것을 막습니다.
 
   Firefox, unlike other browsers, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.
 
 - {{htmlattrdef("form")}}
+
   - : 버튼과 연결할 {{HTMLElement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 `<form>` 요소의 {{htmlattrxref("id")}} 특성 값을 사용해야 합니다. `form` 특성을 지정하지 않았으나 조상 중 `<form>` 요소가 존재하면 해당 `<form>`과 연결됩니다.
 
   `form` 특성을 사용하면 버튼을 `<form>` 요소에 넣지 않고도 연결할 수 있고, 조상 중 `<form>`이 있더라도 소유자를 재정의할 수 있습니다.
 
 - {{htmlattrdef("formaction")}}
+
   - : `<button>`이 제출 버튼인 경우, 제출한 정보를 처리할 URL. 지정한 경우, 버튼의 양식 소유자가 가진 {{htmlattrxref("action","form")}} 특성보다 우선합니다. 양식 소유자가 존재하지 않으면 영향을 주지 않습니다.
 
 - {{htmlattrdef("formenctype")}}
+
   - : `<button>`이 제출 버튼인 경우, `formenctype` 특성은 양식을 서버로 제출할 때 사용할 양식 데이터 인코딩을 지정합니다. 가능한 값은 다음과 같습니다.
 
   - `application/x-www-form-urlencoded`: 기본값.
@@ -124,6 +130,7 @@ slug: Web/HTML/Element/button
   지정한 경우, 버튼의 양식 소유자가 가진 {{htmlattrxref("enctype","form")}} 특성보다 우선합니다.
 
 - {{htmlattrdef("formmethod")}}
+
   - : `<button>`이 제출 버튼인 경우, `formmethod` 특성은 양식을 서버로 제출할 때 사용할 [HTTP 메서드](/ko/docs/Web/HTTP/Methods)를 지정합니다. 가능한 값은 다음과 같습니다.
 
   - `post`: 양식의 데이터를 HTTP 요청 본문에 넣습니다. 비밀번호처럼, 양식 데이터 중 공개하지 않아야 하는 항목이 있으면 사용하세요.
@@ -132,9 +139,11 @@ slug: Web/HTML/Element/button
   지정한 경우, 버튼의 양식 소유자가 가진 {{htmlattrxref("method","form")}} 특성보다 우선합니다.
 
 - {{htmlattrdef("formnovalidate")}}
+
   - : `<button>`이 제출 버튼인 경우, `formnovalidate` 특성은 양식을 제출할 때 [유효성 검사](/ko/docs/Learn/Forms/Form_validation)를 하지 않겠다는 것을 지정합니다. 지정한 경우, 버튼의 양식 소유자가 가진 {{htmlattrxref("novalidate","form")}} 특성보다 우선합니다.
 
 - {{htmlattrdef("formtarget")}}
+
   - : `<button>`이 제출 버튼인 경우, `formtarget` 특성에는 양식 제출의 결과를 표시할 위치를 나타내는 표준 키워드 혹은 사용자 지정 이름을 사용할 수 있습니다. 가능한 값은 {{glossary("browsing context", "브라우징 맥락")}}(탭, 창, {{htmlelement("iframe")}})의 이름 또는 키워드입니다. 지정한 경우, 버튼의 양식 소유자가 가진 {{htmlattrxref("target","form")}} 특성보다 우선합니다. 다음 키워드는 특별한 뜻을 가지고 있습니다.
 
   - `_self`: 응답을 현재 브라우징 맥락에 표시합니다. 기본값.
@@ -143,9 +152,11 @@ slug: Web/HTML/Element/button
   - `_top`: 응답을 최상단 브라우징 맥락(현재 맥락의 부모면서 자신의 부모가 존재하지 않는, 제일 높은 맥락)에 표시합니다. 부모가 존재하지 않으면 `_self`와 동일하게 행동합니다.
 
 - {{htmlattrdef("name")}}
+
   - : 버튼의 이름. 제출할 때, 버튼의 `value` 특성과 함께 양식 데이터의 일부를 구성합니다.
 
 - {{htmlattrdef("type")}}
+
   - : 버튼의 행동 방식. 가능한 값은 다음과 같습니다.
 
   - `submit`: 버튼이 서버로 양식 데이터를 제출합니다. 지정하지 않은 경우 기본값이며, 유효하지 않은 값일 때도 사용합니다.
@@ -181,7 +192,9 @@ slug: Web/HTML/Element/button
 
 ```html
 <button name="favorite" type="button">
-  <svg aria-hidden="true" viewBox="0 0 10 10"><path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z"/></svg>
+  <svg aria-hidden="true" viewBox="0 0 10 10">
+    <path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z" />
+  </svg>
   Add to favorites
 </button>
 ```

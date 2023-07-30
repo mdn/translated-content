@@ -1,5 +1,5 @@
 ---
-title: '<link>: 외부 리소스 연결 요소'
+title: "<link>: 외부 리소스 연결 요소"
 slug: Web/HTML/Element/link
 ---
 
@@ -14,7 +14,7 @@ slug: Web/HTML/Element/link
 외부 스타일 시트를 연결하려면 {{htmlelement("head")}} 안에 다음과 같은 `<link>` 요소를 배치하세요.
 
 ```html
-<link href="main.css" rel="stylesheet">
+<link href="main.css" rel="stylesheet" />
 ```
 
 위의 간단한 예제는 `href` 특성에 스타일 시트의 경로를, `rel` 특성에 `stylesheet`을 사용합니다. `rel` 은 관계(**rel**ationship)를 뜻하며, 현재 문서와 연결한 아이템의 관계가 어떻게 되는지 설명합니다. 따라서 `<link>` 요소의 제일 중요한 기능 중 하나라고 볼 수 있습니다. [링크 유형](/ko/docs/Web/HTML/Link_types) 참고서에서 볼 수 있듯 관계에는 다양한 종류가 있습니다.
@@ -22,14 +22,17 @@ slug: Web/HTML/Element/link
 그중에서도 몇 가지 자주 쓰이는 유형이 있습니다. 사이트의 파비콘을 연결하려면 다음과 같이 사용합니다.
 
 ```html
-<link rel="icon" href="favicon.ico">
+<link rel="icon" href="favicon.ico" />
 ```
 
 아이콘을 위한 `rel` 값도 여러개가 있으며, 주 용도는 다양한 휴대기기 플랫폼의 특별한 아이콘을 나타내기 위함입니다.
 
 ```html
-<link rel="apple-touch-icon-precomposed" sizes="114x114"
-      href="apple-icon-114.png" type="image/png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="apple-icon-114.png"
+  type="image/png" />
 ```
 
 `sizes` 특성은 아이콘 크기를, `type` 특성은 연결한 리소스의 MIME을 포함합니다. 브라우저는 이런 여러가지 정보를 통해 가장 적합한 아이콘을 선택합니다.
@@ -37,15 +40,22 @@ slug: Web/HTML/Element/link
 `media` 특성을 사용해 미디어 유형이나 쿼리를 지정할 수도 있습니다. 그러면 해당 미디어 조건을 만족할 때만 리소스를 불러옵니다.
 
 ```html
-<link href="print.css" rel="stylesheet" media="print">
-<link href="mobile.css" rel="stylesheet" media="screen and (max-width: 600px)">
+<link href="print.css" rel="stylesheet" media="print" />
+<link
+  href="mobile.css"
+  rel="stylesheet"
+  media="screen and (max-width: 600px)" />
 ```
 
 새로운 성능 및 보안 관련 기능도 `<link>` 요소에 추가됐습니다. 다음 코드로 살펴보겠습니다.
 
 ```html
-<link rel="preload" href="myFont.woff2" as="font"
-      type="font/woff2" crossorigin="anonymous">
+<link
+  rel="preload"
+  href="myFont.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous" />
 ```
 
 `rel`의 `preload` 값은 브라우저가 이 리소스를 미리 불러와야 한다는 것(자세한 정보는 [이 문서](/ko/docs/Web/HTML/Preloading_content)를 참고하세요)을 나타내고, `as` 특성은 가져오는 리소스가 어떤 리소스인지 나타냅니다. `crossorigin` 특성은 리소스를 {{glossary("CORS")}} 요청으로 불러와야 하는지에 대한 값입니다.
@@ -76,7 +86,7 @@ slug: Web/HTML/Element/link
 페이지에 스타일 시트를 포함하려면 다음 구문을 사용하세요.
 
 ```html
-<link href="style.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet" />
 ```
 
 ### 대체 스타일시트 제공하기
@@ -86,9 +96,9 @@ slug: Web/HTML/Element/link
 유저는 View>Page Style 메뉴에서 사용할 스타일시트를 고를수 있습니다. 이것은 유저가 페이지를 여러 버전으로 볼수 있는 방법을 제공합니다.
 
 ```html
-<link href="default.css" rel="stylesheet" title="Default Style">
-<link href="fancy.css" rel="alternate stylesheet" title="Fancy">
-<link href="basic.css" rel="alternate stylesheet" title="Basic">
+<link href="default.css" rel="stylesheet" title="Default Style" />
+<link href="fancy.css" rel="alternate stylesheet" title="Fancy" />
+<link href="basic.css" rel="alternate stylesheet" title="Basic" />
 ```
 
 ### Providing icons for different usage contexts
@@ -97,15 +107,21 @@ You can include links to several different icons on the same page, and the brows
 
 ```html
 <!-- third-generation iPad with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon144.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="favicon144.png" />
 <!-- iPhone with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="favicon114.png" />
 <!-- first- and second-generation iPad: -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
 <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link rel="apple-touch-icon-precomposed" href="favicon57.png">
+<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
 <!-- basic favicon -->
-<link rel="icon" href="favicon32.png">
+<link rel="icon" href="favicon32.png" />
 ```
 
 ### 스타일 시트 load 이벤트
@@ -114,16 +130,20 @@ You can include links to several different icons on the same page, and the brows
 
 ```html
 <script>
-function sheetLoaded() {
-  // Do something interesting; the sheet has been loaded
-}
+  function sheetLoaded() {
+    // Do something interesting; the sheet has been loaded
+  }
 
-function sheetError() {
-  alert("An error occurred loading the stylesheet!");
-}
+  function sheetError() {
+    alert("An error occurred loading the stylesheet!");
+  }
 </script>
 
-<link rel="stylesheet" href="mystylesheet.css" onload="sheetLoaded()" onerror="sheetError()">
+<link
+  rel="stylesheet"
+  href="mystylesheet.css"
+  onload="sheetLoaded()"
+  onerror="sheetError()" />
 ```
 
 > **참고:** The `load` event fires once the stylesheet and all of its imported content has been loaded and parsed, and immediately before the styles start being applied to the content.

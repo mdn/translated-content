@@ -115,16 +115,12 @@ slug: Web/HTML/Element/article
     <article class="user_review">
       <p>I agree, dinos are my favorite.</p>
       <footer>
-        <p>
-          Posted on <time datetime="2015-05-17 19:00">May 17</time> by Tom.
-        </p>
+        <p>Posted on <time datetime="2015-05-17 19:00">May 17</time> by Tom.</p>
       </footer>
     </article>
   </section>
   <footer>
-    <p>
-      Posted on <time datetime="2015-05-15 19:00">May 15</time> by Staff.
-    </p>
+    <p>Posted on <time datetime="2015-05-15 19:00">May 15</time> by Staff.</p>
   </footer>
 </article>
 ```
