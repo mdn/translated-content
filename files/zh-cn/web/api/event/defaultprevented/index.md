@@ -14,15 +14,15 @@ slug: Web/API/Event/defaultPrevented
 ## 语法
 
 ```js
-bool = event.defaultPrevented
+bool = event.defaultPrevented;
 ```
 
 ## 示例
 
 ```js
- if (e.defaultPrevented) {
-   /* 事件的默认动作已被取消*/
- }
+if (e.defaultPrevented) {
+  /* 事件的默认动作已被取消*/
+}
 ```
 
 ## 规范
