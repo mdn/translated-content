@@ -359,7 +359,7 @@ As previously discussed, Internet Explorer versions 9 and below do not support t
 |*|  IE-specific polyfill that enables the passage of arbitrary arguments to the
 |*|  callback functions of javascript timers (HTML5 standard syntax).
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/Web/API/window.setInterval
+|*|  https://developer.mozilla.org/zh-TW/docs/Web/API/window.setInterval
 |*|  https://developer.mozilla.org/User:fusionchess
 |*|
 |*|  Syntax:
@@ -534,7 +534,7 @@ In pages requiring many timers, it can often be difficult to keep track of all o
 |*|
 |*|  Revision #2 - September 26, 2014
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/Web/API/window.setInterval
+|*|  https://developer.mozilla.org/zh-TW/docs/Web/API/window.setInterval
 |*|  https://developer.mozilla.org/User:fusionchess
 |*|  https://github.com/madmurphy/minidaemon.js
 |*|

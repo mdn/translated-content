@@ -1,5 +1,5 @@
 ---
-title: ':checked'
+title: ":checked"
 slug: Web/CSS/:checked
 translation_of: Web/CSS/:checked
 ---
@@ -17,7 +17,7 @@ input:checked {
 }
 ```
 
-> **Note :** Les navigateurs considèrent souvent les éléments `<option>` comme [des éléments remplacés](/fr/docs/Web/CSS/%C3%89l%C3%A9ment_remplac%C3%A9)et la possibilité de mise en forme avec `:checked` varie d'un navigateur à l'autre.
+> **Note :** Les navigateurs considèrent souvent les éléments `<option>` comme [des éléments remplacés](/fr/docs/Web/CSS/Élément_remplacé)et la possibilité de mise en forme avec `:checked` varie d'un navigateur à l'autre.
 
 ## Syntaxe
 
@@ -31,15 +31,15 @@ input:checked {
 
 ```html
 <div>
-  <input type="radio" name="my-input" id="yes">
+  <input type="radio" name="my-input" id="yes" />
   <label for="yes">Oui</label>
 
-  <input type="radio" name="my-input" id="no">
+  <input type="radio" name="my-input" id="no" />
   <label for="no">Non</label>
 </div>
 
 <div>
-  <input type="checkbox" name="my-checkbox" id="opt-in">
+  <input type="checkbox" name="my-checkbox" id="opt-in" />
   <label for="opt-in">Cochez-moi !</label>
 </div>
 

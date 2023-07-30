@@ -32,7 +32,7 @@ translation_of: Web/API/Element/keyup_event
   </tbody>
 </table>
 
-События [`keydown`](/en-US/docs/Web/API/Element/keydown_event) и `keyup` показывают то, что клавиша была нажата, в то время как `keypress` показывает то, какой символ был введён. Например, прописную "a" `keydown` и `keyup` сообщат как 65, а `keypress` сообщит как 97. Заглавную же "A" все события сообщают как 65.
+События [`keydown`](/ru/docs/Web/API/Element/keydown_event) и `keyup` показывают то, что клавиша была нажата, в то время как `keypress` показывает то, какой символ был введён. Например, прописную "a" `keydown` и `keyup` сообщат как 65, а `keypress` сообщит как 97. Заглавную же "A" все события сообщают как 65.
 
 ## Примеры
 
@@ -74,7 +74,7 @@ input.onkeyup = logKey;
 
 ## Смотрите также
 
-- [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
-- [`keydown`](/en-US/docs/Web/API/Element/keydown_event)
-- [`keypress`](/en-US/docs/Web/API/Element/keypress_event)
+- [`input`](/ru/docs/Web/API/HTMLElement/input_event)
+- [`keydown`](/ru/docs/Web/API/Element/keydown_event)
+- [`keypress`](/ru/docs/Web/API/Element/keypress_event)
 - [Document `keyup` event](/ru/docs/Web/API/Document/keyup_event)

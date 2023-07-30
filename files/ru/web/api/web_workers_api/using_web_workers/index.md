@@ -10,7 +10,7 @@ original_slug: DOM/Using_web_workers
 
 {{DefaultAPISidebar("Web Workers API")}}
 
-Web Worker-ы предоставляют простое средство для запуска скриптов в фоновом потоке. Поток Worker'а может выполнять задачи без вмешательства в пользовательский интерфейс. К тому же, они могут осуществлять ввод/вывод, используя [`XMLHttpRequest`](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest) (хотя атрибуты `responseXML` и `channel` всегда будут равны null). Существующий Worker может отсылать сообщения JavaScript коду-создателю через обработчик событий, указанный этим кодом (и наоборот). Эта статья даёт детальную инструкцию по использованию Web Workers.
+Web Worker-ы предоставляют простое средство для запуска скриптов в фоновом потоке. Поток Worker'а может выполнять задачи без вмешательства в пользовательский интерфейс. К тому же, они могут осуществлять ввод/вывод, используя [`XMLHttpRequest`](/ru/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest) (хотя атрибуты `responseXML` и `channel` всегда будут равны null). Существующий Worker может отсылать сообщения JavaScript коду-создателю через обработчик событий, указанный этим кодом (и наоборот). Эта статья даёт детальную инструкцию по использованию Web Workers.
 
 ## Web Workers API
 
@@ -745,7 +745,7 @@ Worker устанавливает свойство `onmessage` для функц
 
 ## Смотрите также
 
-- [`Worker`](/en-US/docs/Web/API/Worker) интерфейс
-- [`SharedWorker`](/en-US/docs/Web/API/SharedWorker) интерфейс
+- [`Worker`](/ru/docs/Web/API/Worker) интерфейс
+- [`SharedWorker`](/ru/docs/Web/API/SharedWorker) интерфейс
 - [Функции доступные для worker-ов](/ru/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
 - [Продвинутые концепции и примеры](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)

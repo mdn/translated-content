@@ -18,7 +18,7 @@ original_slug: Web/HTML/Canvas/Tutorial/Basic_usage
 
 > **참고:** **노트:** 만약 렌더링이 왜곡된 것처럼 보이는 경우 CSS를 사용하지 않고 `<canvas>` 속성에서 `width` 및 `height` 속성을 명시적으로 지정하십시오.
 
-[`id`](/ko/docs/Web/HTML/Global_attributes/id) 속성(어트리뷰트)는 `<canvas>` 요소에 국한되지 않는 글로벌HTML 속성 ([global HTML attributes](/ko/docs/Web/HTML/Global_attributes) )중 하나로, 모든 HTML 요소에 적용 ( [`class`](/en-US/docs/Web/HTML/Global_attributes/class) 등등)될 수 있습니다. 대체로 항상 `id` 속성을 사용해 주는것이 좋은데, 이는 스크립트 내에서 구분을 쉽게 해 줄 수 있기 때문입니다.
+[`id`](/ko/docs/Web/HTML/Global_attributes/id) 속성(어트리뷰트)는 `<canvas>` 요소에 국한되지 않는 글로벌HTML 속성 ([global HTML attributes](/ko/docs/Web/HTML/Global_attributes) )중 하나로, 모든 HTML 요소에 적용 ( [`class`](/ko/docs/Web/HTML/Global_attributes/class) 등등)될 수 있습니다. 대체로 항상 `id` 속성을 사용해 주는것이 좋은데, 이는 스크립트 내에서 구분을 쉽게 해 줄 수 있기 때문입니다.
 
 `<canvas>`요소는 일반적인 이미지 ({{cssxref("margin")}}, {{cssxref("border")}}, {{cssxref("background")}}…) 처럼 스타일을 적용시킬 수 있습니다. 하지만 이 방법은 실제 캔버스 위에 그리는 것에는 영향을 끼치지 않습니다. 이 방법이 어떻게 사용되는지는 [해당 챕터](/ko/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)에서 확인 할 수 있습니다. 캔버스에 스타일링이 따로 지정 되있지 않았다면, 캔버스 스타일은 투명으로 설정되어있습니다.
 

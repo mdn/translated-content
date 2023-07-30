@@ -10,7 +10,7 @@ El elemento **HTML `<th>`** define una celda como encabezado de un grupo de celd
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories"
+        <a href="/es/docs/HTML/Content_categories"
           >Categorías de contenido</a
         >
       </th>

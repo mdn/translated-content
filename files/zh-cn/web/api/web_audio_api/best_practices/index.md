@@ -48,24 +48,32 @@ If you are looking for sound creation or a more instrument-based option, [tone.j
 例如，在使用 {{domxref("AudioContext")}}时，如果你在`click`事件中创建了音频上下文，它的内部状态应该会被自动设置成`播放 (running)`。这里有一个在`click`事件中创建音频上下文简单的例子：
 
 ```js
-const button = document.querySelector('button');
-button.addEventListener('click', function() {
+const button = document.querySelector("button");
+button.addEventListener(
+  "click",
+  function () {
     const audioCtx = new AudioContext();
-}, false);
+  },
+  false,
+);
 ```
 
 如果你在用户动作之外创建上下文 (create the context outside of a user gesture)，它的内部状态会被设置为`暂停 (suspend)`。这里我们可以同样用 click 事件的例子。我们会检查这个上下文的状态，并且启动它。如果它是`暂停 (suspend)`的状态，使用[`resume()`](/zh-CN/docs/Web/API/BaseAudioContext/resume)方法来恢复。
 
 ```js
 const audioCtx = new AudioContext();
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', function() {
-      // check if context is in suspended state (autoplay policy)
-    if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
+button.addEventListener(
+  "click",
+  function () {
+    // check if context is in suspended state (autoplay policy)
+    if (audioCtx.state === "suspended") {
+      audioCtx.resume();
     }
-}, false);
+  },
+  false,
+);
 ```
 
 对于{{domxref("OfflineAudioContext")}}，你也可以使用[`startRendering()`](/zh-CN/docs/Web/API/OfflineAudioContext/startRendering)方法来恢复到播放状态。

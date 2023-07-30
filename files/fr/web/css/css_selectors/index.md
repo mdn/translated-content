@@ -1,14 +1,7 @@
 ---
 title: Sélecteurs CSS
-slug: Web/CSS/CSS_Selectors
-tags:
-  - Aperçu
-  - CSS
-  - CSS Selectors
-  - Reference
-  - Sélecteur
+slug: Web/CSS/CSS_selectors
 translation_of: Web/CSS/CSS_Selectors
-original_slug: Web/CSS/Sélecteurs_CSS
 ---
 
 {{CSSRef}}

@@ -7,9 +7,9 @@ slug: Glossary/Type_Conversion
 
 1. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Type", "型")}}
-    2. {{Glossary("Type coercion", "型強制")}}
+   1. {{Glossary("Type", "型")}}
+   2. {{Glossary("Type coercion", "型強制")}}
 
 2. Wikipedia の記事
 
-    1. [型変換](https://ja.wikipedia.org/wiki/型変換)
+   1. [型変換](https://ja.wikipedia.org/wiki/型変換)

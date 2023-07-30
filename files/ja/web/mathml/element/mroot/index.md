@@ -28,12 +28,10 @@ MathML の `<mroot>` 要素は根指数の付いた累乗根を表示するの�
 
 ```html
 <math>
-
- <mroot>
+  <mroot>
     <mi>x</mi>
     <mn>3</mn>
- </mroot>
-
+  </mroot>
 </math>
 ```
 

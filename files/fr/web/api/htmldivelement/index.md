@@ -1,11 +1,6 @@
 ---
 title: HTMLDivElement
 slug: Web/API/HTMLDivElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 translation_of: Web/API/HTMLDivElement
 ---
 

@@ -29,7 +29,7 @@ event = new Event(typeArg, eventInit);
 ## 範例
 
 ```js
-// 建立一個 bubbles up 、並未被取消的事件 “look” 。
+// 建立一個 bubbles up 、並未被取消的事件 「look」 。
 var ev = new Event("look", { bubbles: true, cancelable: false });
 document.dispatchEvent(ev);
 ```

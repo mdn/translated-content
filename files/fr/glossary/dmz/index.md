@@ -10,7 +10,7 @@ Une DMZ est un moyen de fournir une interface isolée et sécurisée entre un r�
 
 ### Culture générale
 
-- [Zone démilitarisée (informatique)](https://fr.wikipedia.org/wiki/Zone_d%C3%A9militaris%C3%A9e_(informatique)) sur Wikipédia
+- [Zone démilitarisée (informatique)](<https://fr.wikipedia.org/wiki/Zone_démilitarisée_(informatique)>) sur Wikipédia
 
 ### Apprendre à ce propos
 

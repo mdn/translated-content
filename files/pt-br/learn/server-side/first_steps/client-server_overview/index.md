@@ -113,7 +113,7 @@ A primeira parte da resposta para esta solicitação é mostrada abaixo. O heade
 
 No final da mensagem vemos o conteúdo do corpo( **body** content) — que contém o HTML real retornado pela solicitação.
 
-```html
+```http
 HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
@@ -126,8 +126,6 @@ X-Frame-Options: DENY
 Allow: GET
 X-Cache-Info: caching
 Content-Length: 41823
-
-
 
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
@@ -148,7 +146,7 @@ Um HTTP `POST` é feito quando você envia um formulário contendo informações
 
 O texto abaixo mostra a solicitação HTTP feita quando um usuário envia novos detalhes de perfil neste site. O formato de requisição é quase o mesmo que o exemplo de solicitação `GET` mostrado anteriormente, embora a primeira linha reconheça esta solicitação como um `POST`.
 
-```html
+```http
 POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
@@ -174,7 +172,7 @@ A principal diferença é que o URL não possui parâmetros. Como você pode ver
 
 A resposta de solicitação é mostrada abaixo. O código de status "`302 Found`" diz ao navegador que a postagem foi bem sucedida, e que deve emitir uma segunda solicitação HTTP para carregar a página especificada no campo determinado( `Location` field). As informações são semelhantes às da resposta a uma solicitação `GET` .
 
-```html
+```http
 HTTP/1.1 302 FOUND
 Server: Apache
 X-Backend-Server: developer3.webapp.scl3.mozilla.com

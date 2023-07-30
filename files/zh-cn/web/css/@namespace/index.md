@@ -1,5 +1,5 @@
 ---
-title: '@namespace'
+title: "@namespace"
 slug: Web/CSS/@namespace
 ---
 
@@ -42,13 +42,16 @@ slug: Web/CSS/@namespace
 @namespace svg url(http://www.w3.org/2000/svg);
 
 /* 匹配所有的 XHTML <a> 元素，因为 XHTML 是默认无前缀命名空间 */
-a {}
+a {
+}
 
 /* 匹配所有的 SVG <a> 元素 */
-svg|a {}
+svg|a {
+}
 
 /* 匹配 XHTML 和 SVG <a> 元素 */
-*|a {}
+*|a {
+}
 ```
 
 ## 规范

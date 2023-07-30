@@ -132,10 +132,10 @@ ng serve
 本教程重点介绍的应用程序源文件位于 `src/app` 中。命令行界面自动生成的关键文件包含：
 
 1. `app.module.ts`：指定应用程序使用的文件。
-    此文件充当应用程序中其他文件的中心枢纽。
+   此文件充当应用程序中其他文件的中心枢纽。
 2. `app.component.ts`：也称为类，包含着应用程序主页的逻辑。
 3. `app.component.html`：包含 `AppComponent` 的 HTML。此文件的内容也被称为模板。
-    模板将确定视图或你在浏览器中看到的内容。
+   模板将确定视图或你在浏览器中看到的内容。
 4. `app.component.css`: 包含 `AppComponent` 的样式。如果要定义仅适用于特定组件的样式（而不是整个应用程序），则可以使用此文件。
 
 Angular 中的组件由三个主要部分组成：模板、样式和类。例如，`app.component.ts`、`app.component.html` 和 `app.component.css` 共同构成了 `AppComponent`。此结构将逻辑、视图和样式分开，使应用程序更易于维护和缩放。
@@ -158,17 +158,16 @@ Angular 用 TypeScript 构建。TypeScript 是 JavaScript 的超集，这意味�
 你创建一个带有 `@Component()` 修饰器的组件，该装饰器具有元数据，该元数据告诉 Angular 在哪里可以找到 HTML 和 CSS。典型组件如下：
 
 ```js
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-item',
-    // the following metadata specifies the location of the other parts of the component
-  templateUrl: './item.component.html',
-  styleUrls: ['./item.component.css']
+  selector: "app-item",
+  // the following metadata specifies the location of the other parts of the component
+  templateUrl: "./item.component.html",
+  styleUrls: ["./item.component.css"],
 })
-
 export class ItemComponent {
-// your code goes here
+  // your code goes here
 }
 ```
 
@@ -184,24 +183,20 @@ export class ItemComponent {
 
 ```js
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html'
+  selector: "app-root",
+  templateUrl: "./app.component.html",
 })
-
-export class AppComponent {
-}
+export class AppComponent {}
 ```
 
 要编写内联 HTML，请使用 `template` 属性并在反引号中编写 HTML：
 
 ```js
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   template: `<h1>Hi!</h1>`,
 })
-
-export class AppComponent {
-}
+export class AppComponent {}
 ```
 
 Angular 使用额外的语法扩展 HTML，允许你从组件中插入动态值。Angular 会在组件的状态更改时自动更新渲染的文档对象模型（DOM）。此功能的一个用途是插入动态文本，如下面的示例所示。
@@ -213,16 +208,15 @@ Angular 使用额外的语法扩展 HTML，允许你从组件中插入动态值�
 双大括号指示 Angular 插入其中的内容。`title` 的值来自组件类：
 
 ```js
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-@Component ({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+@Component({
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
-
 export class AppComponent {
-    title = 'To do application';
+  title = "To do application";
 }
 ```
 

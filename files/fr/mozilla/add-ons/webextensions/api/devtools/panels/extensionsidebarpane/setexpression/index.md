@@ -20,9 +20,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var evaluating = browser.devtools.panels.setExpression(
-  expression,       // string
-  rootTitle         // string
-)
+  expression, // string
+  rootTitle, // string
+);
 ```
 
 ### Paramètres
@@ -46,13 +46,11 @@ Ce code crée un volet de barre latérale qui affiche le [`tagName`](/fr/docs/We
 
 ```js
 function onCreated(sidebarPane) {
-
   browser.devtools.panels.elements.onSelectionChanged.addListener(() => {
     const exp = "$0 && $0.tagName";
     const title = "Selected Element tagName";
     sidebarPane.setExpression(exp, title);
   });
-
 }
 
 browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);

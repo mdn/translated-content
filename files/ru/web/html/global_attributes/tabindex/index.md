@@ -30,4 +30,4 @@ translation_of: Web/HTML/Global_attributes/tabindex
 
 - Все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 - {{domxref("HTMLElement.tabindex")}} отражает этот атрибут.
-- Проблемы доступности (юзабилити): смотри [Don’t Use Tabindex Greater than 0 | Adrian Roselli](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html).
+- Проблемы доступности (юзабилити): смотри [Don't Use Tabindex Greater than 0 | Adrian Roselli](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html).

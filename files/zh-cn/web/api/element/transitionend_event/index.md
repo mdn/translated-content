@@ -50,15 +50,23 @@ target.ontransitionend = {{jsxref("Global_Objects/Function", "Function")}}
   display: block;
   width: 100px;
   height: 100px;
-  background-color: #0000FF;
-  color: #FFFFFF;
+  background-color: #0000ff;
+  color: #ffffff;
   padding: 20px;
-  font: bold 1.6em "Helvetica", "Arial", sans-serif;
-  transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
+  font:
+    bold 1.6em "Helvetica",
+    "Arial",
+    sans-serif;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    transform 2s,
+    color 2s;
 }
 
 .box:hover {
-  background-color: #FFCCCC;
+  background-color: #ffcccc;
   color: #000000;
   width: 200px;
   height: 200px;
@@ -72,12 +80,12 @@ target.ontransitionend = {{jsxref("Global_Objects/Function", "Function")}}
 
 ```js
 let box = document.querySelector(".box");
-box.ontransitionrun = function(event) {
+box.ontransitionrun = function (event) {
   box.textContent = "Zooming...";
-}
-box.ontransitionend = function(event) {
+};
+box.ontransitionend = function (event) {
   box.textContent = "Done!";
-}
+};
 ```
 
 ### 效果

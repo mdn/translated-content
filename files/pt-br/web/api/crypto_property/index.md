@@ -16,7 +16,7 @@ var cryptoObj = window.crypto || window.msCrypto; // for IE 11
 
 ## Exemplo
 
-#### Usando a propriedade {{domxref("Window.crypto")}} para acessar o método getRandomValues().
+#### Usando a propriedade {{domxref("Window.crypto")}} para acessar o método getRandomValues()
 
 ### JavaScript
 

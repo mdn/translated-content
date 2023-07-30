@@ -52,7 +52,7 @@ El fragmento de código siguiente muestra como marcar un díalogo de alerta que 
 </div>
 ```
 
-#### Ejemplos en funcionamiento:
+#### Ejemplos en funcionamiento
 
 Pendiente
 

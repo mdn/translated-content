@@ -258,7 +258,7 @@ Para linhas de largura uniforme, cada metade acaba sendo uma quantidade inteira 
 
 Embora seja um pouco doloroso ao trabalhar inicialmente com gráficos 2D escalonáveis, prestar atenção à grade de pixels e à posição dos caminhos garante que seus desenhos pareçam corretos, independentemente da escala ou de qualquer outra transformação envolvida. Uma linha vertical de 1,0 largura desenhada na posição correta se tornará uma linha nítida de 2 pixels quando aumentada em 2 e aparecerá na posição correta.
 
-### Exemplo lineCap.
+### Exemplo lineCap
 
 A propriedade lineCap determina como os pontos finais de cada linha são desenhados. Existem três valores possíveis para essa propriedade e são: bunda, redondo e quadrado. Por padrão, essa propriedade está configurada para butt.![](canvas_linecap.png)
 

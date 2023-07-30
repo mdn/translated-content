@@ -13,9 +13,9 @@ L'écouteur reçoit le paramètre `downloadId` de l'objet {{WebExtAPIRef('downlo
 ## Syntaxe
 
 ```js
-browser.downloads.onErased.addListener(listener)
-browser.downloads.onErased.removeListener(listener)
-browser.downloads.onErased.hasListener(listener)
+browser.downloads.onErased.addListener(listener);
+browser.downloads.onErased.removeListener(listener);
+browser.downloads.onErased.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -55,7 +55,7 @@ browser.downloads.onErased.addListener(handleErased);
 
 var erasing = browser.downloads.erase({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 ```
 

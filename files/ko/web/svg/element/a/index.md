@@ -93,7 +93,7 @@ svg|a:active {
     값 유형: **\<string>** ; 기본 값: 없음; 에니메이션 가능: **예**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : 하이퍼링크가 가리키는 URL 또는 URL 조각입니다. 이전 브라우저의 이전 버전과의 호환성을 위해 필요할 수 있습니다.
-  값 유형: **[\<URL>](/ko/docs/Web/SVG/Content_type#url)** ; 기본값: 없음; 애니메이션 가능: **예**
+    값 유형: **[\<URL>](/ko/docs/Web/SVG/Content_type#url)** ; 기본값: 없음; 애니메이션 가능: **예**
 
 ### 전역 속성
 

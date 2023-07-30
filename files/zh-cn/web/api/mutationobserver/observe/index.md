@@ -20,6 +20,7 @@ mutationObserver.observe(target[, options])
 - `target`
   - : DOM 树中的一个要观察变化的 DOM {{domxref("Node")}} (可能是一个 {{domxref("Element")}})，或者是被观察的子节点树的根节点。
 - `options`
+
   - : 此对象的配置项描述了 DOM 的哪些变化应该报告给 `MutationObserver` 的 `callback`。当调用 {{domxref("MutationObserver.observe", "observe()")}} 时，`childList`、`attributes` 和 `characterData` 中，必须有一个参数为 `true`。否则会抛出 `TypeError` 异常。
 
     `options` 的属性如下：
@@ -80,13 +81,13 @@ var elementToObserve = document.querySelector("#targetElementId");
 
 // 创建一个叫 `observer` 的新 `MutationObserver` 实例，
 // 并将回调函数传给它
-var observer = new MutationObserver(function() {
-    console.log('callback that runs when observer is triggered');
+var observer = new MutationObserver(function () {
+  console.log("callback that runs when observer is triggered");
 });
 
 // 在 MutationObserver 实例上调用 `observe` 方法，
 // 并将要观察的元素与选项传给此方法
-observer.observe(elementToObserve, {subtree: true, childList: true});
+observer.observe(elementToObserve, { subtree: true, childList: true });
 ```
 
 ## 规范

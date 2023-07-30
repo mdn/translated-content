@@ -2,7 +2,6 @@
 title: Constructeur FinalizationRegistry()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
 translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
-browser-compat: javascript.builtins.FinalizationRegistry.FinalizationRegistry
 ---
 
 {{JSRef}}
@@ -34,7 +33,7 @@ new FinalizationRegistry(function(valeurTenue) { ... })
 On crée le registre en fournissant la fonction de rappel&nbsp;:
 
 ```js
-const registre = new FinalizationRegistry(valeurTenue => {
+const registre = new FinalizationRegistry((valeurTenue) => {
   // ....
 });
 ```

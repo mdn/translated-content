@@ -64,7 +64,7 @@ var array = [];
 array[0] = 'mundo';
 ```
 
-## Ver también:
+## Ver también
 
 - [Automatic semicolon insertion (ASI)](/es/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)
 - [JavaScript statements](/es/docs/Web/JavaScript/Reference/Statements)

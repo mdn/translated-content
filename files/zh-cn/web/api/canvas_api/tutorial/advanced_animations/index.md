@@ -18,21 +18,21 @@ slug: Web/API/Canvas_API/Tutorial/Advanced_animations
 跟平常一样，我们需要先画一个 context（画布场景）。为了画出这个球，我们又会创建一个包含一些相关属性以及 `draw()` 函数的 `ball` 对象，来完成绘制。
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 var ball = {
   x: 100,
   y: 100,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 ball.draw();
@@ -45,8 +45,8 @@ ball.draw();
 现在我们有了一个小球，正准备添加一些基本动画，正如我们[上一章](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_animations)所学的。又是这样，{{domxref("window.requestAnimationFrame()")}} 再一次帮助我们控制动画。小球依旧依靠添加速率矢量进行移动。在每一帧里面，我们依旧用{{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} 清理掉之前帧里旧的圆形。
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 var raf;
 
 var ball = {
@@ -55,29 +55,29 @@ var ball = {
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e){
+canvas.addEventListener("mouseover", function (e) {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e){
+canvas.addEventListener("mouseout", function (e) {
   window.cancelAnimationFrame(raf);
 });
 
@@ -168,8 +168,8 @@ ball.draw();
 为了让动作更真实，你可以像这样处理速度，例如：
 
 ```js
-ball.vy *= .99;
-ball.vy += .25;
+ball.vy *= 0.99;
+ball.vy += 0.25;
 ```
 
 这会逐帧减少垂直方向的速度，所以小球最终将只会在地板上弹跳。
@@ -243,8 +243,8 @@ ball.draw();
 现在，我们使用的是 {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}} 函数帮我们清除前一帧动画。若用一个半透明的 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} 函数取代之，就可轻松制作长尾效果。
 
 ```js
-ctx.fillStyle = 'rgba(255,255,255,0.3)';
-ctx.fillRect(0,0,canvas.width,canvas.height);
+ctx.fillStyle = "rgba(255,255,255,0.3)";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 
 ### 第三个示例
@@ -321,8 +321,8 @@ ball.draw();
 ```
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 var raf;
 var running = false;
 
@@ -332,19 +332,19 @@ var ball = {
   vx: 5,
   vy: 1,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function clear() {
-  ctx.fillStyle = 'rgba(255,255,255,0.3)';
-  ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle = "rgba(255,255,255,0.3)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 function draw() {
@@ -363,7 +363,7 @@ function draw() {
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mousemove', function(e){
+canvas.addEventListener("mousemove", function (e) {
   if (!running) {
     clear();
     ball.x = e.offsetX;
@@ -372,14 +372,14 @@ canvas.addEventListener('mousemove', function(e){
   }
 });
 
-canvas.addEventListener('click',function(e){
+canvas.addEventListener("click", function (e) {
   if (!running) {
     raf = window.requestAnimationFrame(draw);
     running = true;
   }
 });
 
-canvas.addEventListener('mouseout', function(e){
+canvas.addEventListener("mouseout", function (e) {
   window.cancelAnimationFrame(raf);
   running = false;
 });

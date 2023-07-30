@@ -1,6 +1,8 @@
 ---
-title: '<tr>: 表の行要素'
+title: "<tr>: 表の行要素"
 slug: Web/HTML/Element/tr
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{HTMLSidebar}}
@@ -34,7 +36,7 @@ slug: Web/HTML/Element/tr
     - `justify`
       - : テキストが各セルの幅全体を満たす（両端揃え）ように、テキスト内のホワイトスペースを広げます。
     - `char`
-      - : 行内の各セルを、特定の文字に対して揃えます (この方法で設定された列内の各行は、その文字に対して揃えます)。これは [`char`](/ja/docs/Web/HTML/Element/tr#char) および [`charoff`](/ja/docs/Web/HTML/Element/tr#charoff) を使用して、揃える文字 (数値データを揃える際の "." や "," が一般的です) および揃える文字に続く文字の数を指定します。この配置方法は、広くは対応されていませんでした。
+      - : 行内の各セルを、特定の文字に対して揃えます (この方法で設定された列内の各行は、その文字に対して揃えます)。これは [`char`](#char) および [`charoff`](#charoff) を使用して、揃える文字 (数値データを揃える際の "." や "," が一般的です) および揃える文字に続く文字の数を指定します。この配置方法は、広くは対応されていませんでした。
 
     `align` の値が明示的に設定されていない場合は、親ノードの値を継承します。
 
@@ -42,15 +44,15 @@ slug: Web/HTML/Element/tr
 
 - `bgcolor` {{deprecated_inline}}
 
-  - : 文字列で、行の各セルの背景色を定義します。値は [16 進 `#RRGGBB` または `#RGB` 値](/ja/docs/Web/CSS/color_value/rgb)、あるいは[色キーワード](/ja/docs/Web/CSS/color_value#color_keywords)を使用できます。属性を省略するか JavaScript で `null` を設定すると、行のセルは親要素の背景色を継承します。
+  - : 文字列で、行の各セルの背景色を定義します。値は [16 進 `#RRGGBB` または `#RGB` 値](/ja/docs/Web/CSS/color_value/rgb)、あるいは[色キーワード](/ja/docs/Web/CSS/named-color)を使用できます。属性を省略するか JavaScript で `null` を設定すると、行のセルは親要素の背景色を継承します。
 
-    > **メモ:** {{HTMLElement("tr")}} 要素は [CSS](/ja/docs/Web/CSS) を使用してスタイルを設定するべきです。 `bgcolor` 属性と同様の効果を与えるには、[CSS](/ja/docs/Web/CSS) の {{CSSxRef("background-color")}} プロパティを使用してください。
+    > **メモ:** {{HTMLElement("tr")}} 要素は [CSS](/ja/docs/Web/CSS) を使用してスタイルを設定するべきです。 `bgcolor` 属性と同様の効果を与えるには、CSS の {{CSSxRef("background-color")}} プロパティを使用してください。
 
 - `char` {{deprecated_inline}}
 
-  - : 文字列で、行のそれぞれの列のセルで揃える文字を設定します（同一の文字を使用して、それぞれの行の中心がほかの行と揃えられます）。典型的な値に、数値や金額を揃えようとするときのピリオド (`"."`) やカンマ (`","`) があります。 [`align`](/ja/docs/Web/HTML/Element/tr#align) 属性が `char` ではない場合は、この属性は無視されます。
+  - : 文字列で、行のそれぞれの列のセルで揃える文字を設定します（同一の文字を使用して、それぞれの行の中心がほかの行と揃えられます）。典型的な値に、数値や金額を揃えようとするときのピリオド (`"."`) やカンマ (`","`) があります。 [`align`](#align) 属性が `char` ではない場合は、この属性は無視されます。
 
-    > **メモ:** この属性は廃止されただけでなく、ほとんど実装されていませんでした。 [`char`](/ja/docs/Web/HTML/Element/tr#char) と同様の効果を得るには、 CSS の {{CSSxRef("text-align")}} プロパティの値として `char` の値を使用します（例えば `text-align: "."`）。
+    > **メモ:** この属性は廃止され、かつほとんど実装されていませんでした。 [`char`](#char) と同様の効果を得るには、 CSS の {{CSSxRef("text-align")}} プロパティの値として `char` の値を使用します（例えば `text-align: "."`）。
 
 - `charoff` {{deprecated_inline}}
 
@@ -63,7 +65,7 @@ slug: Web/HTML/Element/tr
   - : 文字列で、行の各セルにおける垂直方向のテキスト配置方法を指定します。以下の値が指定可能です。
 
     - `baseline`
-      - : 異なるフォントやフォントサイズの文字列を、その行で使用されているフォントの[ベースライン](https://en.wikipedia.org/wiki/Baseline_(typography))に沿って整列させることによって処理します。もし行の全ての文字が同じサイズであれば、効果は `bottom` と同じになります。
+      - : 異なるフォントやフォントサイズの文字列を、その行で使用されているフォントの[ベースライン](https://en.wikipedia.org/wiki/Baseline)に沿って整列させることによって処理します。もし行の全ての文字が同じサイズであれば、効果は `bottom` と同じになります。
     - `bottom`
       - : 行の各セル内のテキストを、セルの下辺に可能な限り近づけて描画します。
     - `middle`
@@ -125,7 +127,8 @@ table {
   border: 1px solid black;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
 }
 ```
@@ -144,11 +147,11 @@ th, td {
 
 {{EmbedLiveSample("Row_and_column_spanning", 500, 150)}}
 
-見出し領域が実際は2行あることに注目してください。ひとつは "Name", "ID", "Membership Dates", "Balance" の見出し、もうひとつは "Joined" と "Canceled" であり、これは "Membership Dates" の小見出しです。これは以下のようにして実現します。
+見出し領域が実際は 2 行あることに注目してください。ひとつは "Name", "ID", "Membership Dates", "Balance" の見出し、もうひとつは "Joined" と "Canceled" であり、これは "Membership Dates" の小見出しです。これは以下のようにして実現します。
 
 - 1 行目の "Name", "ID", "Balance" の見出しセルは、[`rowspan`](#rowspan) 属性を使用して 2 行にまたがっており、それぞれのセルの高さが 2 行分になります。
 - 1 行目の "Membership Dates" の見出しセルは、[`colspan`](#colspan) 属性を使用して 2 列にまたがっており、実際に見出しの幅が 2 列分になります。
-- 2 行目の {{HTMLElement("th")}} 要素は、"Joined" と "Canceled" しか持っていません。ほかの列は 2 行目にまたがっている 1 行目のセルがすでに占有しているためであり、 2 行目のセルは "Membership Dates" の下へ適切に配置されます。
+- 2 行目の {{HTMLElement("th")}} 要素は、"Joined" と "Canceled" しかありません。ほかの列は 2 行目にまたがっている 1 行目のセルがすでに占有しているためであり、 2 行目のセルは "Membership Dates" の下へ適切に配置されます。
 
 #### HTML
 
@@ -199,7 +202,8 @@ table {
   border: 1px solid black;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
 }
 ```
@@ -261,7 +265,8 @@ table {
   border: 1px solid black;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
 }
 ```
@@ -284,10 +289,6 @@ th, td {
 
 {{EmbedLiveSample("Basic_styling", 500, 200)}}
 
-#### CSS
-
-ここでは HTML を変更せず、CSS に手を加えます。
-
 ```html hidden
 <table>
   <thead>
@@ -328,19 +329,28 @@ th, td {
 </table>
 ```
 
+#### CSS
+
+ここでは HTML を変更せず、CSS に手を加えます。
+
 ```css
 table {
   border: 1px solid black;
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
 }
 
 thead > tr {
   background-color: rgb(228, 240, 245);
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
 }
 ```
 
@@ -360,8 +370,6 @@ th, td {
 
 ここでも HTML は変更しません。 HTML を適切に準備することがどのようなことか分かりましたか？
 
-#### CSS
-
 ```html hidden
 <table>
   <thead>
@@ -402,6 +410,8 @@ th, td {
 </table>
 ```
 
+#### CSS
+
 ここでは CSS をさらに変更します。複雑ではありませんが、多くのことを行います。詳しく説明しましょう。
 
 ##### 表と基本的なスタイル
@@ -409,7 +419,11 @@ th, td {
 ```css
 table {
   border: 1px solid black;
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border-spacing: 0;
   border-collapse: collapse;
 }
@@ -418,9 +432,10 @@ table {
 ここでは {{CSSxRef("border-spacing")}} および {{CSSxRef("border-collapse")}} を追加して、セル間の間隔を取り除き、 2 本の境界線を互いに接する1本の境界線にまとめます。
 
 ```css
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
 }
 
 th {
@@ -491,7 +506,7 @@ tbody > tr > th:first-of-type {
 
 ```css
 tbody > tr > td:last-of-type {
-  text-align:right;
+  text-align: right;
 }
 ```
 
@@ -503,7 +518,7 @@ tbody > tr > td:last-of-type {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>なし</td>
     </tr>
@@ -552,7 +567,7 @@ tbody > tr > td:last-of-type {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.tr")}}
+{{Compat}}
 
 ## 関連情報
 
@@ -560,4 +575,4 @@ tbody > tr > td:last-of-type {
 - {{DOMxRef("HTMLTableRowElement")}}: `<tr>` が準拠するインターフェイスです。
 - 他の表関連要素:
 
-  - {{HTMLElement("table")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}},{{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}
+  - {{HTMLElement("table")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}

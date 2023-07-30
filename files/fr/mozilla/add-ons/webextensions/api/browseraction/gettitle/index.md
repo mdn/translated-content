@@ -16,8 +16,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var gettingTitle = browser.browserAction.getTitle(
-  details               // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -47,9 +47,9 @@ Ce code change le titre entre "ceci" et "cela" chaque fois que l'utilisateur cli
 ```js
 function toggleTitle(title) {
   if (title == "this") {
-    browser.browserAction.setTitle({title: "that"});
+    browser.browserAction.setTitle({ title: "that" });
   } else {
-    browser.browserAction.setTitle({title: "this"});
+    browser.browserAction.setTitle({ title: "this" });
   }
 }
 

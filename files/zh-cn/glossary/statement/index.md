@@ -11,7 +11,7 @@ slug: Glossary/Statement
 
 ### 一般知识
 
-- [Statement (computer science)](https://zh.wikipedia.org/wiki/Statement_(computer_science)) on Wikipedia
+- [Statement (computer science)](<https://zh.wikipedia.org/wiki/Statement_(computer_science)>) on Wikipedia
 
 ### 技术参考
 

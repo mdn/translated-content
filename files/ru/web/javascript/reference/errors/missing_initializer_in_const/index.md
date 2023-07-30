@@ -54,6 +54,6 @@ let columns;
 
 ## Смотрите также
 
-- [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
-- [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)
-- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)
+- [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const)
+- [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let)
+- [`var`](/ru/docs/Web/JavaScript/Reference/Statements/var)

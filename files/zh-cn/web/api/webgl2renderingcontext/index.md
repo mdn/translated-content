@@ -10,8 +10,8 @@ slug: Web/API/WebGL2RenderingContext
 要获取该接口的实例对象需要调用一个 \<canvas> 标签对象的 {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} 函数，并将 "webgl2" 作为参数传递：
 
 ```js
-var canvas = document.getElementById('myCanvas');
-var gl = canvas.getContext('webgl2');
+var canvas = document.getElementById("myCanvas");
+var gl = canvas.getContext("webgl2");
 ```
 
 > **备注：** WebGL 2 是 WebGL 1 的扩展。 `WebGL2RenderingContext` 接口实现了 {{domxref("WebGLRenderingContext")}} 接口的所有成员。有一些 WebGL 1 上下文中的方法在使用 WebGL 2 上下文的时候可以接受附加值。您可以通过 WebGL 1 的参考页了解这些信息。

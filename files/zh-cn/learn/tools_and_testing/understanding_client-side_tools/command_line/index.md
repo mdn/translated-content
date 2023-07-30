@@ -270,12 +270,12 @@ ls | wc -l
 
 让我们看一些更复杂的东西。我们将首先尝试获取 MDN 的“获取”页面的内容 `curl` 命令 (可用于从 url 请求内容)[https://developer.mozilla.org/en-US/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
 
-但是，这个 URL 是页面的旧位置。如果您在一个新的浏览器标签中输入它，您将 (最终) 被重定向到[https://developer.mozilla.org/enUS/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
+但是，这个 URL 是页面的旧位置。如果您在一个新的浏览器标签中输入它，您将 (最终) 被重定向到[https://developer.mozilla.org/en-US/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
 
 因此，如果您使用 curl 请求 `https://developer.mozilla.org/docs/Web/API/fetch`，则不会得到输出。现在就试试：
 
 ```bash
-curl https://developer.mozilla.org/en-US/docs/Web/API/fetch
+curl https://developer.mozilla.org/docs/Web/API/fetch
 ```
 
 我们想精确的告诉 `curl` 遵循重定向使用`-L` 标签。
@@ -292,9 +292,6 @@ curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location
 
 ```bash
 location: /en-US/docs/Web/API/fetch
-location: /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
-location: /en-US/docs/Web/API/GlobalFetch/fetch
-location: /en-US/docs/Web/API/fetch
 ```
 
 尽管有些做作，我们可以把这个结果做得更深入一点，并变换 `location:` 行内容，将基本的起点添加到每个起点的开始，这样我们就可以打印出完整的 url。为此，我们将在混合中添加 awk(它是一种类似于 JavaScript、Ruby 或 Python 的编程语言，只是要老得多 !)
@@ -308,9 +305,6 @@ curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location | aw
 最终的输出应该是这样的
 
 ```bash
-https://developer.mozilla.org/en-US/docs/Web/API/fetch
-https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
-https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch
 https://developer.mozilla.org/en-US/docs/Web/API/fetch
 ```
 
@@ -430,9 +424,13 @@ Stdin is read if it is piped to Prettier and no files are given.
 
 ```js
 const myObj = {
-a:1,b:{c:2}}
-function printMe(obj){console.log(obj.b.c)}
-printMe(myObj)
+  a: 1,
+  b: { c: 2 },
+};
+function printMe(obj) {
+  console.log(obj.b.c);
+}
+printMe(myObj);
 ```
 
 我们可以在代码基上运行得更好，以检查我们的代码是否需要调整。cd 到您的目录中，并尝试运行此命令：

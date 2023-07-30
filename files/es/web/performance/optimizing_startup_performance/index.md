@@ -68,7 +68,7 @@ Hay otras cosas además de ir asíncrono, que pueden ayudarlo a mejorar el tiemp
 - [Apps](/es/docs/Web/Progressive_web_apps)
 - [Games](/es/docs/Games)
 
-## Información del Documento Original:
+## Información del Documento Original
 
 - Autor(s): Alon Zakai
 - Fuente: [BananaBread (or any compiled codebase) Startup Experience](http://mozakai.blogspot.com/2012/07/bananabread-or-any-compiled-codebase.html)

@@ -30,6 +30,7 @@ slug: Web/HTML/Viewport_meta_tag
 "viewport" `<meta>` 标签的基本属性如下所示：
 
 - `width`
+
   - : 控制视口的大小。这可以设置为特定像素数（如'width=600'），也可以设置为特殊值`device-width`，即 [100vw](/zh-CN/docs/Web/CSS/length#视口_viewport_比例的长度)，100% 的视口宽度。最小值为 `1`。最大值为 `10000`。负值会被忽略。
 
 - `height`
@@ -37,15 +38,19 @@ slug: Web/HTML/Viewport_meta_tag
   - : 控制视口的大小。 这可以设置为特定像素数（如 `width=600`），也可以设置为特殊值 `device-height`，即 [100vh](/zh-CN/docs/Web/CSS/length#视口_viewport_比例的长度)，100% 的视口高度。最小值为 `1`。最大值为 `10000`。负值会被忽略。
 
 - `initial-scale`
+
   - : 控制页面首次加载时显示的缩放倍数。最小值是 `0.1`。最大值是 `10`。默认值为 `1`。负值会被忽略。
 
 - `minimum-scale`
+
   - : 控制页面允许缩小的倍数。最小值是 `0.1`。最大值是 `10`。默认值为 `1`。负值会被忽略。
 
 - `maximum-scale`
+
   - : 控制页面允许放大的倍数。设置一个低于 `3` 的值将不具备无障碍访问性。最小值是 `0.1`。最大值是 `10`。默认值为 `1`。负值会被忽略。
 
 - `user-scalable`
+
   - : 控制是否允许页面上的放大和缩小操作。有效值为 `0`、`1`、`yes` 或 `no`。默认值为 `1`，与 `yes` 相同。将值设置为 `0`（即与 `no` 相同）将违反 Web 内容无障碍指南（WCAG）。
 
 - `interactive-widget`
@@ -80,9 +85,11 @@ slug: Web/HTML/Viewport_meta_tag
 允许的值为：
 
 - `resizes-visual`
+
   - : [虚拟视口](/zh-CN/docs/Glossary/Viewport)被交互式组件调整大小。
 
 - `resizes-content`
+
   - : [视口](/zh-CN/docs/Glossary/Viewport)被交互式组件调整大小。
 
 - `overlays-content`

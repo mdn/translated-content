@@ -12,7 +12,7 @@ En este artículo se explican cuales componentes de software necesita para edita
       <th scope="row">Prerrequisitos:</th>
       <td>
         Deberías conocer acerca de
-        <a href="/en-US/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+        <a href="/es/docs/Learn/page_vs_site_vs_server_vs_search_engine"
           >la diferencia entre páginas web, sitios web, servidores web, y
           moteres de búsqueda.</a
         >

@@ -32,7 +32,7 @@ element.slot = aString
 
 В нашем [примере простого шаблона](https://github.com/mdn/web-components-examples/tree/master/simple-template) ([смотри в прямом эфире](https://mdn.github.io/web-components-examples/simple-template/)), мы создаём тривиальный пример пользовательского элемента с именем `<my-paragraph>`, в котором прикрепляется теневой корень, а затем заполняется с использованием содержимого шаблона, содержащего слот с именем `my-text`.
 
-Когда в документе используется `<my-paragraph>`, слот заполняется слот-элементом, включая его в элемент с атрибутом [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) со значением `my-text`. Вот один из таких примеров:
+Когда в документе используется `<my-paragraph>`, слот заполняется слот-элементом, включая его в элемент с атрибутом [`slot`](/ru/docs/Web/HTML/Global_attributes/slot) со значением `my-text`. Вот один из таких примеров:
 
 ```html
 <my-paragraph>

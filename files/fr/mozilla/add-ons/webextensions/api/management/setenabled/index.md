@@ -18,9 +18,9 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var settingEnabled = browser.management.setEnabled(
-  id,              // string
-  enabled         // boolean
-)
+  id, // string
+  enabled, // boolean
+);
 ```
 
 ### Paramètres

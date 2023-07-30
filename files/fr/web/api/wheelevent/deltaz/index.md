@@ -1,15 +1,6 @@
 ---
 title: WheelEvent.deltaZ
 slug: Web/API/WheelEvent/deltaZ
-tags:
-  - API
-  - DOM
-  - Interface
-  - Lecture seulement
-  - Propriété
-  - Reference
-  - Référence(2)
-  - WheelEvent
 translation_of: Web/API/WheelEvent/deltaZ
 ---
 
@@ -26,7 +17,10 @@ var dZ = event.deltaZ;
 ## Exemple
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaZ": 4, "deltaMode": 0});
+var syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaZ: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaZ);
 ```

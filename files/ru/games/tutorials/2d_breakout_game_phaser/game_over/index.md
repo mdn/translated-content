@@ -23,9 +23,9 @@ game.physics.arcade.checkCollision.down = false;
 
 ```js
 ball.checkWorldBounds = true;
-ball.events.onOutOfBounds.add(function(){
-    alert('Game over!');
-    location.reload();
+ball.events.onOutOfBounds.add(function () {
+  alert("Game over!");
+  location.reload();
 }, this);
 ```
 

@@ -13,16 +13,19 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 
 ```js
 // Display list of all Authors.
-exports.author_list = function(req, res, next) {
-
+exports.author_list = function (req, res, next) {
   Author.find()
-    .sort([['family_name', 'ascending']])
+    .sort([["family_name", "ascending"]])
     .exec(function (err, list_authors) {
-      if (err) { return next(err); }
+      if (err) {
+        return next(err);
+      }
       //Successful, so render
-      res.render('author_list', { title: 'Author List', author_list: list_authors });
+      res.render("author_list", {
+        title: "Author List",
+        author_list: list_authors,
+      });
     });
-
 };
 ```
 
@@ -75,7 +78,7 @@ block content
 1. 您需要在 **/controllers/genreController.js** 中编辑`genre_list()`。
 2. 实现方式几乎与`author_list()`控制器完全相同。
 
-    - 按名称以上升顺序，对结果进行排序。
+   - 按名称以上升顺序，对结果进行排序。
 
 3. 要呈现的模板，应命名为 **genre_list.pug**。
 4. 要呈现的模板应该传递变量`title`（'Genre List'）和种类列表`genre_list`（从`Genre.find()`回调返回）。

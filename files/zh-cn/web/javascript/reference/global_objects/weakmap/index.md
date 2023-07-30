@@ -23,7 +23,7 @@ WeakMap 的 key 只能是 `Object` 类型。 {{Glossary("Primitive", "原始数�
 
 2. 另外一个缺点是可能会导致内存泄漏，因为数组会一直引用着每个键和值。这种引用使得垃圾回收算法不能回收处理他们，即使没有其他任何引用存在了。
 
-相比之下，原生的 `WeakMap` 持有的是每个键对象的“弱引用”，这意味着在没有其他引用存在时垃圾回收能正确进行。原生 `WeakMap` 的结构是特殊且有效的，其用于映射的 key _只有_在其没有被回收时才是有效的。
+相比之下，原生的 `WeakMap` 持有的是每个键对象的“弱引用”，这意味着在没有其他引用存在时垃圾回收能正确进行。原生 `WeakMap` 的结构是特殊且有效的，其用于映射的 key *只有*在其没有被回收时才是有效的。
 
 **正由于这样的弱引用，`WeakMap` 的 key 是不可枚举的**（没有方法能给出所有的 key）。如果 key 是可枚举的话，其列表将会受垃圾回收机制的影响，从而得到不确定的结果。因此，如果你想要这种类型对象的 key 值的列表，你应该使用 {{jsxref("Map")}}。
 
@@ -49,13 +49,13 @@ WeakMap 的 key 只能是 `Object` 类型。 {{Glossary("Primitive", "原始数�
 
 ```js
 const wm1 = new WeakMap(),
-      wm2 = new WeakMap(),
-      wm3 = new WeakMap();
+  wm2 = new WeakMap(),
+  wm3 = new WeakMap();
 const o1 = {},
-      o2 = function() {},
-      o3 = window;
+  o2 = function () {},
+  o3 = window;
 wm1.set(o1, 37);
-wm1.set(o2, 'azerty');
+wm1.set(o2, "azerty");
 wm2.set(o1, o2); // value 可以是任意值，包括一个对象或一个函数
 wm2.set(o3, undefined);
 wm2.set(wm1, wm2); // 键和值可以是任意对象，甚至另外一个 WeakMap 对象

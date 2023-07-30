@@ -14,7 +14,7 @@ Web 应用程序清单是被称为[渐进式 Web 应用程序 (PWA)](/zh-CN/docs
 Web 应用程序清单部署在您的 HTML 页面中，使用在你的文件的头部的一个链接标记：
 
 ```html
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/manifest.json" />
 ```
 
 ## manifest 范例
@@ -27,37 +27,47 @@ Web 应用程序清单部署在您的 HTML 页面中，使用在你的文件的�
   "display": "standalone",
   "background_color": "#fff",
   "description": "A simply readable Hacker News app.",
-  "icons": [{
-    "src": "images/touch/homescreen48.png",
-    "sizes": "48x48",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen72.png",
-    "sizes": "72x72",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen96.png",
-    "sizes": "96x96",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen144.png",
-    "sizes": "144x144",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen168.png",
-    "sizes": "168x168",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen192.png",
-    "sizes": "192x192",
-    "type": "image/png"
-  }],
-  "related_applications": [{
-    "platform": "web"
-  }, {
-    "platform": "play",
-    "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
-  }]
+  "icons": [
+    {
+      "src": "images/touch/homescreen48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen168.png",
+      "sizes": "168x168",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web"
+    },
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
+    }
+  ]
 }
 ```
 
@@ -111,10 +121,10 @@ Web 应用程序清单部署在您的 HTML 页面中，使用在你的文件的�
 
 | 显示模式     | 描述                                                                                                                                                                                   | 后备显示模式 |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| `fullscreen` | 全屏显示，所有可用的显示区域都被使用，并且不显示状态栏{{Glossary("chrome")}}。                                                                                                   | `standalone` |
+| `fullscreen` | 全屏显示，所有可用的显示区域都被使用，并且不显示状态栏{{Glossary("chrome")}}。                                                                                                         | `standalone` |
 | `standalone` | 让这个应用看起来像一个独立的应用程序，包括具有不同的窗口，在应用程序启动器中拥有自己的图标等。这个模式中，用户代理将移除用于控制导航的 UI 元素，但是可以包括其他 UI 元素，例如状态栏。 | `minimal-ui` |
-| `minimal-ui` | 该应用程序将看起来像一个独立的应用程序，但会有浏览器地址栏。样式因浏览器而异。                                                                                                        | `browser`    |
-| `browser`    | 该应用程序在传统的浏览器标签或新窗口中打开，具体实现取决于浏览器和平台。这是默认的设置。                                                                                              | (None)       |
+| `minimal-ui` | 该应用程序将看起来像一个独立的应用程序，但会有浏览器地址栏。样式因浏览器而异。                                                                                                         | `browser`    |
+| `browser`    | 该应用程序在传统的浏览器标签或新窗口中打开，具体实现取决于浏览器和平台。这是默认的设置。                                                                                               | (None)       |
 
 > **备注：** 您可以使用显示模式媒体功能，根据[显示模式](/zh-CN/docs/Web/CSS/@media/display-mode)选择性地将 CSS 应用到您的应用程序。这可用于在从 URL 启动网站和从桌面图标启动网站之间提供一致的用户体验。
 
@@ -149,7 +159,7 @@ Web 应用程序清单部署在您的 HTML 页面中，使用在你的文件的�
 | 字段    | 描述                                                                           |
 | ------- | ------------------------------------------------------------------------------ |
 | `sizes` | 包含空格分隔的图像尺寸的字符串。                                               |
-| `src`   | 图像文件的路径。如果`src`是一个相对 URL，则基本 URL 将是 manifest 的 URL。    |
+| `src`   | 图像文件的路径。如果`src`是一个相对 URL，则基本 URL 将是 manifest 的 URL。     |
 | `type`  | 提示图像的媒体类型。此字段的目的是允许用户代理快速忽略不支持的媒体类型的图像。 |
 
 ### `lang`

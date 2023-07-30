@@ -16,11 +16,11 @@ Django의 첫번째 문서에서는 "Django가 뭐지?"라는 질문에 답해�
       <td>
         기본적인 컴퓨터 지식.
         <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps"
+          href="https://developer.mozilla.org/ko/docs/Learn/Server-side/First_steps"
           >server-side website 프로그래밍</a
         >에 대한 전반적인 이해, 그리고 웹사이트의
         <a
-          href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/ko/docs/Learn/Server-side/First_steps/Client-Server_overview"
           >client-server interactions</a
         >
         의 매커니즘에 대한 특정한 지식.

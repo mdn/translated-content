@@ -1,14 +1,7 @@
 ---
 title: GlobalEventHandlers.onloadstart
 slug: Web/API/HTMLMediaElement/loadstart_event
-tags:
-  - API
-  - DOM
-  - Gestionnaires d'évènements
-  - Propriétés
-  - évènements
 translation_of: Web/API/GlobalEventHandlers/onloadstart
-original_slug: Web/API/GlobalEventHandlers/onloadstart
 ---
 
 {{ApiRef}}
@@ -30,7 +23,7 @@ img.onloadstart = funcRef;
 ### Contenu HTML
 
 ```html
-<img src="myImage.jpg">
+<img src="myImage.jpg" />
 ```
 
 ### Contenu JavaScript
@@ -38,16 +31,16 @@ img.onloadstart = funcRef;
 ```js
 // 'loadstart' est lancé le premier, puis 'load', puis 'loadend'
 
-image.addEventListener('load', function(e) {
-  console.log('Image loaded');
+image.addEventListener("load", function (e) {
+  console.log("Image loaded");
 });
 
-image.addEventListener('loadstart', function(e) {
-  console.log('Image load started');
+image.addEventListener("loadstart", function (e) {
+  console.log("Image load started");
 });
 
-image.addEventListener('loadend', function(e) {
-  console.log('Image load finished');
+image.addEventListener("loadend", function (e) {
+  console.log("Image load finished");
 });
 ```
 

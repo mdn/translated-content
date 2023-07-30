@@ -32,25 +32,25 @@ slug: Learn/Server-side/Express_Nodejs/routes
 
 在[上一篇教程文章](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)中，我們定義了 Mongoose 模型，以與數據庫互動，並使用（獨立）腳本創建一些初始庫記錄。現在我們可以編寫代碼，向用戶展示這些信息。我們需要做的第一件事，是確定我們希望能夠在頁面中顯示哪些信息，然後定義適當的 URL，以返回這些資源。然後我們將需要創建路由（URL 處理程序）和視圖（模板）來顯示這些頁面。
 
-下圖是作為處理 HTTP 請求/響應時，需要實現的主要數據流和事項的提醒。除了視圖和路線之外，圖表還顯示“控制器” — 實際處理請求的函數，那些與路由請求分開的代碼。
+下圖是作為處理 HTTP 請求/響應時，需要實現的主要數據流和事項的提醒。除了視圖和路線之外，圖表還顯示「控制器」 — 實際處理請求的函數，那些與路由請求分開的代碼。
 
 由於我們已經創建了模型，我們需要創建的主要內容是：
 
-- “路由”將支持的請求（以及請求 URL 中編碼的任何信息）轉發到適當的控制器功能。
+- 「路由」將支持的請求（以及請求 URL 中編碼的任何信息）轉發到適當的控制器功能。
 - 控制器用於從模型中獲取請求的數據，創建一個顯示數據的 HTML 頁面，並將其返回給用戶，以在瀏覽器中查看。
 - 視圖（模板）則由控制器用來呈現數據。
 
 ![](mvc_express.png)
 
-最終，我們可能會有頁面顯示書籍，流派，作者和書籍的列表和詳細信息，以及用於創建，更新和刪除記錄的頁面。對一篇文章來說，這是很多的內容。因此，本文的大部分內容，都將集中在設置我們的路由和控制器，以返回“虛擬”內容。我們將在後續文章中，擴展控制器方法，以使用模型數據。
+最終，我們可能會有頁面顯示書籍，流派，作者和書籍的列表和詳細信息，以及用於創建，更新和刪除記錄的頁面。對一篇文章來說，這是很多的內容。因此，本文的大部分內容，都將集中在設置我們的路由和控制器，以返回「虛擬」內容。我們將在後續文章中，擴展控制器方法，以使用模型數據。
 
-下面的第一部分，提供了關於如何使用[Express Router](http://expressjs.com/en/4x/api.html#router)中間件的簡要“入門”。當我們設置 LocalLibrary 路由時，我們將在後面的章節中使用這些知識。
+下面的第一部分，提供了關於如何使用[Express Router](http://expressjs.com/en/4x/api.html#router)中間件的簡要「入門」。當我們設置 LocalLibrary 路由時，我們將在後面的章節中使用這些知識。
 
 ## 路由入門
 
 路由是 Express 代碼的一部分，它將 HTTP 動詞（`GET`, `POST`, `PUT`, `DELETE`等），URL 路徑/模式和被調用來處理該模式的函數，相關聯起來。
 
-有幾種方法可以創建路線。本教程將使用[`express.Router`](http://expressjs.com/en/guide/routing.html#express-router)中間件，因為它允許我們將站點的特定部分的路由處理程序組合在一起，並使用通用的路由前綴訪問它們。我們會將所有與圖書館有關的路由，保存在“目錄”模塊中，如果我們添加路由來處理用戶帳戶或其他功能，我們可以將它們分開保存。
+有幾種方法可以創建路線。本教程將使用[`express.Router`](http://expressjs.com/en/guide/routing.html#express-router)中間件，因為它允許我們將站點的特定部分的路由處理程序組合在一起，並使用通用的路由前綴訪問它們。我們會將所有與圖書館有關的路由，保存在「目錄」模塊中，如果我們添加路由來處理用戶帳戶或其他功能，我們可以將它們分開保存。
 
 > **備註：** 我們在[Express 簡介>創建路由處理程序](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction#Creating_route_handlers)中，簡要討論了 Express 應用程序路由。除了為模塊化提供更好的支持之外（如下面第一小節所述），使用 Router 非常類似於直接在 Express 應用程序對像上定義路由。
 
@@ -95,7 +95,7 @@ app.use("/wiki", wiki);
 
 ### 路由函數
 
-我們上面的模塊，定義了幾個典型的路由功能。使用`Router.get()`方法定義“about”路由（在下面），該方法僅響應 HTTP GET 請求。此方法的第一個參數是 URL 路徑，而第二個參數是一個回調函數，如果收到帶有路徑的 HTTP GET 請求，將會調用該函數。
+我們上面的模塊，定義了幾個典型的路由功能。使用`Router.get()`方法定義「about」路由（在下面），該方法僅響應 HTTP GET 請求。此方法的第一個參數是 URL 路徑，而第二個參數是一個回調函數，如果收到帶有路徑的 HTTP GET 請求，將會調用該函數。
 
 ```js
 router.get("/about", function (req, res) {
@@ -109,7 +109,7 @@ router.get("/about", function (req, res) {
 >
 > 上面的路由器函數只需要一次回調，但您可以根據需要指定任意數量的回調參數，或一組回調函數。每個函數都是中間件鏈的一部分，並且將按照添加到鏈中的順序調用（除非前面的函數完成請求）。
 
-這裡的回調函數，在響應中調用[`send()`](https://expressjs.com/en/4x/api.html#res.send)，當我們收到帶有路徑（' `/about'`）的 GET 請求時，返回字符串“About this wiki”。有[許多其他響應方法](https://expressjs.com/en/guide/routing.html#response-methods)，可以結束請求/響應週期。例如，您可以調用[`res.json()`](https://expressjs.com/en/4x/api.html#res.json)，來發送 JSON 響應，或調用[`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile)來發送文件。構建庫時，我們最常使用的響應方法是[render()](https://expressjs.com/en/4x/api.html#res.render)，它使用模板和數據創建並返回 HTML 文件—我們將在後面的文章中，進一步討論這個問題！
+這裡的回調函數，在響應中調用[`send()`](https://expressjs.com/en/4x/api.html#res.send)，當我們收到帶有路徑（' `/about'`）的 GET 請求時，返回字符串「About this wiki」。有[許多其他響應方法](https://expressjs.com/en/guide/routing.html#response-methods)，可以結束請求/響應週期。例如，您可以調用[`res.json()`](https://expressjs.com/en/4x/api.html#res.json)，來發送 JSON 響應，或調用[`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile)來發送文件。構建庫時，我們最常使用的響應方法是[render()](https://expressjs.com/en/4x/api.html#res.render)，它使用模板和數據創建並返回 HTML 文件—我們將在後面的文章中，進一步討論這個問題！
 
 ### HTTP 動詞
 
@@ -158,9 +158,9 @@ app.get('/users/:userId/books/:bookId', function (req, res) {
 })
 ```
 
-路由參數的名稱，必須由“單詞字符”（AZ，az，0-9 和\_）組成。
+路由參數的名稱，必須由「單詞字符」（AZ，az，0-9 和\_）組成。
 
-> **備註：** URL */book/create*將與`/book/:bookId` 之類的路由匹配（它將提取要創建' `create`'的“bookId”值）。將使用與傳入 URL 匹配的第一個路由，因此，如果要單獨處理`/book/create`URL，則必須在`/book/:bookId`路由之前，先定義其路由處理程序。
+> **備註：** URL */book/create*將與`/book/:bookId` 之類的路由匹配（它將提取要創建' `create`'的「bookId」值）。將使用與傳入 URL 匹配的第一個路由，因此，如果要單獨處理`/book/create`URL，則必須在`/book/:bookId`路由之前，先定義其路由處理程序。
 
 這就是您開始使用路由所需的全部內容-如果需要，您可以在 Express 文檔中找到更多信息：[基本路由](http://expressjs.com/en/starter/basic-routing.html)和[路由指南](http://expressjs.com/en/guide/routing.html)。以下部分顯示了我們如何為 LocalLibrary 設置路由和控制器。
 
@@ -185,7 +185,7 @@ app.get('/users/:userId/books/:bookId', function (req, res) {
 
 ## 創建路由-handler 回調函式
 
-在我們定義路由之前，我們將首先創建它們將調用的所有虛擬/骨架回調函數。回調將存在 Books，BookInstances，Genres 和 Authors 的單獨“控制器” 模塊中（您可以使用任何文件/模塊結構，但這似乎是該項目的適當粒度）。
+在我們定義路由之前，我們將首先創建它們將調用的所有虛擬/骨架回調函數。回調將存在 Books，BookInstances，Genres 和 Authors 的單獨「控制器」 模塊中（您可以使用任何文件/模塊結構，但這似乎是該項目的適當粒度）。
 
 首先在項目根目錄（**/controllers**）中，為我們的控制器創建一個文件夾，然後創建單獨的控制器文件/模塊，來處理每個模型：
 
@@ -246,7 +246,7 @@ exports.author_update_post = function (req, res) {
 };
 ```
 
-該模塊首先導入我們稍後將使用的模型，來訪問和更新我們的數據。然後它為我們希望處理的每個 URL，導出函數（創建，更新和刪除操作使用表單，因此還有其他方法，來處理表單發布請求- 我們將在稍後的“表單文章” 中討論這些方法） 。
+該模塊首先導入我們稍後將使用的模型，來訪問和更新我們的數據。然後它為我們希望處理的每個 URL，導出函數（創建，更新和刪除操作使用表單，因此還有其他方法，來處理表單發布請求- 我們將在稍後的「表單文章」 中討論這些方法） 。
 
 所有函數都具有 Express 中間件函數的標準形式，如果方法沒有完成請求週期，則會調用請求，響應和`next`下一個函數的參數（在所有這些情況下，它都會執行！）。這些方法只返回一個字符串，表明尚未創建關聯的頁面。如果期望控制器函數接收路徑參數，則在消息字符串中，輸出這些參數（參見上面的`req.params.id`）。
 
@@ -571,7 +571,7 @@ router.get("/", function (req, res) {
 });
 ```
 
-> **備註：** 這是我們第一次使用[redirect()](https://expressjs.com/en/4x/api.html#res.redirect)響應方法。這會重定向到指定的頁面，默認情況下會發送 HTTP 狀態代碼“302 Found”。您可以根據需要，更改返回的狀態代碼，並提供絕對路徑或相對路徑。
+> **備註：** 這是我們第一次使用[redirect()](https://expressjs.com/en/4x/api.html#res.redirect)響應方法。這會重定向到指定的頁面，默認情況下會發送 HTTP 狀態代碼「302 Found」。您可以根據需要，更改返回的狀態代碼，並提供絕對路徑或相對路徑。
 
 ### 更新 app.js
 

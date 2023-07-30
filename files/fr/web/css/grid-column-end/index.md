@@ -1,10 +1,6 @@
 ---
 title: grid-column-end
 slug: Web/CSS/grid-column-end
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/grid-column-end
 ---
 
@@ -108,7 +104,9 @@ grid-column-end: unset;
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;

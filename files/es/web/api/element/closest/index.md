@@ -50,13 +50,13 @@ El ancestro más cercano {{domxref("Element")}} que coincida con los `selectors`
 ### JavaScript
 
 ```js
-const el = document.getElementById('div-03');
+const el = document.getElementById("div-03");
 
 // El ancestro más cercano con el id de "div-02"
-console.log(el.closest('#div-02')); // <div id="div-02">
+console.log(el.closest("#div-02")); // <div id="div-02">
 
 //  El ancestro más cercano que es un div dentro de un div
-console.log(el.closest('div div')); // <div id="div-03">
+console.log(el.closest("div div")); // <div id="div-03">
 
 // El ancestro más cercano que es un div y tiene un padre article
 console.log(el.closest("article > div")); // <div id="div-01">

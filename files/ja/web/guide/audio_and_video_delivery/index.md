@@ -75,12 +75,12 @@ l10n:
 ### JavaScript の音声
 
 ```js
-const myAudio = document.createElement('audio');
+const myAudio = document.createElement("audio");
 
-if (myAudio.canPlayType('audio/mpeg')) {
-  myAudio.setAttribute('src','audiofile.mp3');
-} else if (myAudio.canPlayType('audio/ogg')) {
-  myAudio.setAttribute('src','audiofile.ogg');
+if (myAudio.canPlayType("audio/mpeg")) {
+  myAudio.setAttribute("src", "audiofile.mp3");
+} else if (myAudio.canPlayType("audio/ogg")) {
+  myAudio.setAttribute("src", "audiofile.ogg");
 }
 
 myAudio.currentTime = 5;
@@ -102,12 +102,12 @@ myAudio.play();
 ### JavaScript の動画
 
 ```js
-const myVideo = document.createElement('video');
+const myVideo = document.createElement("video");
 
-if (myVideo.canPlayType('video/mp4')) {
-  myVideo.setAttribute('src','videofile.mp4');
-} else if (myVideo.canPlayType('video/webm')) {
-  myVideo.setAttribute('src','videofile.webm');
+if (myVideo.canPlayType("video/mp4")) {
+  myVideo.setAttribute("src", "videofile.mp4");
+} else if (myVideo.canPlayType("video/webm")) {
+  myVideo.setAttribute("src", "videofile.webm");
 }
 
 myVideo.width = 480;
@@ -126,7 +126,11 @@ let source;
 try {
   context = new AudioContext();
   request = new XMLHttpRequest();
-  request.open("GET","http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",true);
+  request.open(
+    "GET",
+    "http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",
+    true,
+  );
   request.responseType = "arraybuffer";
 
   request.onload = () => {
@@ -140,9 +144,8 @@ try {
   };
 
   request.send();
-
 } catch (e) {
-  alert('web audio api not supported');
+  alert("web audio api not supported");
 }
 ```
 
@@ -162,17 +165,20 @@ try {
 
 ```js
 if (navigator.mediaDevices) {
-  navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-  .then(function onSuccess(stream) {
-    const video = document.getElementById('webcam');
-    video.autoplay = true;
-    video.srcObject = stream;
-  })
-  .catch(function onError() {
-    alert('There has been a problem retrieving the streams - are you running on file:/// or did you disallow access?');
-  });
+  navigator.mediaDevices
+    .getUserMedia({ video: true, audio: false })
+    .then(function onSuccess(stream) {
+      const video = document.getElementById("webcam");
+      video.autoplay = true;
+      video.srcObject = stream;
+    })
+    .catch(function onError() {
+      alert(
+        "There has been a problem retrieving the streams - are you running on file:/// or did you disallow access?",
+      );
+    });
 } else {
-  alert('getUserMedia is not supported in this browser.');
+  alert("getUserMedia is not supported in this browser.");
 }
 ```
 
@@ -185,7 +191,8 @@ if (navigator.mediaDevices) {
 主な仕組みは下記の通りです。
 
 ```js
-navigator.mediaDevices.getUserMedia({audio:true})
+navigator.mediaDevices
+  .getUserMedia({ audio: true })
   .then(function onSuccess(stream) {
     const recorder = new MediaRecorder(stream);
 
@@ -196,11 +203,11 @@ navigator.mediaDevices.getUserMedia({audio:true})
     recorder.start();
     recorder.onerror = (e) => {
       throw e.error || new Error(e.name); // e.name is FF non-spec
-    }
+    };
     recorder.onstop = (e) => {
-      const audio = document.createElement('audio');
+      const audio = document.createElement("audio");
       audio.src = window.URL.createObjectURL(new Blob(data));
-    }
+    };
     setTimeout(() => {
       rec.stop();
     }, 5000);
@@ -257,8 +264,8 @@ DASH も、メディアファイルの前処理や分割が不要な単純なオ
 
 ```js
 window.onload = () => {
-  const myAudio = document.getElementById('my-audio');
-  const myControl = document.getElementById('my-control');
+  const myAudio = document.getElementById("my-audio");
+  const myControl = document.getElementById("my-control");
 
   function switchState() {
     if (myAudio.paused) {
@@ -271,17 +278,22 @@ window.onload = () => {
   }
 
   function checkKey(e) {
-    if (e.keycode === 32) { // space bar
+    if (e.keycode === 32) {
+      // space bar
       switchState();
     }
   }
 
-  myControl.addEventListener('click', () => {
-    switchState();
-  }, false);
+  myControl.addEventListener(
+    "click",
+    () => {
+      switchState();
+    },
+    false,
+  );
 
   window.addEventListener("keypress", checkKey, false);
-}
+};
 ```
 
 [この例をここで試してみる](https://jsbin.com/jujeladu/2/edit)ことができます。より詳しい情報は、[自分自身でカスタム音声プレイヤーを作成する](/ja/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#creating_your_own_custom_audio_player)をご覧下さい。
@@ -311,11 +323,11 @@ mediaElement.load();
 要素の `seekable` プロパティを使用して、現在シークするために使用できるメディアの範囲を決定することができます。これは、シーク可能な時刻の範囲をリストアップした {{ domxref("TimeRanges") }} オブジェクトを返します。
 
 ```js
-const mediaElement = document.querySelector('#mediaElementID');
-mediaElement.seekable.start(0);  // 開始時刻を返す（秒単位）
-mediaElement.seekable.end(0);    // 終了時刻を返す（秒単位）
+const mediaElement = document.querySelector("#mediaElementID");
+mediaElement.seekable.start(0); // 開始時刻を返す（秒単位）
+mediaElement.seekable.end(0); // 終了時刻を返す（秒単位）
 mediaElement.currentTime = 122; // 122 秒目へシーク
-mediaElement.played.end(0);      // ブラウザーが再生した秒数を返す
+mediaElement.played.end(0); // ブラウザーが再生した秒数を返す
 ```
 
 ### 再生範囲の指定
@@ -434,14 +446,18 @@ AddType video/webm webmv
 ```
 
 ```js
-const v = document.querySelector('video');
-const sources = v.querySelectorAll('source');
+const v = document.querySelector("video");
+const sources = v.querySelectorAll("source");
 const lastsource = sources[sources.length - 1];
-lastsource.addEventListener('error', (ev) => {
-  const d = document.createElement('div');
-  d.innerHTML = v.innerHTML;
-  v.parentNode.replaceChild(d, v);
-}, false);
+lastsource.addEventListener(
+  "error",
+  (ev) => {
+    const d = document.createElement("div");
+    d.innerHTML = v.innerHTML;
+    v.parentNode.replaceChild(d, v);
+  },
+  false,
+);
 ```
 
 ## 音声と動画の JavaScript ライブラリー

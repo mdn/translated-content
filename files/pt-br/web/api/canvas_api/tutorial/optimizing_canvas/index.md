@@ -35,7 +35,7 @@ ctx.drawImage(myImage, 0.3, 0.5);
 
 This causes the browser to do extra calculations to create the anti-aliasing effect. To avoid this, make sure to round all co-ordinates used in calls to {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} using {{jsxref("Math.floor()")}}, for example.
 
-### Don’t scale images in `drawImage`
+### Don't scale images in `drawImage`
 
 Cache various sizes of your images on an offscreen canvas when loading as opposed to constantly scaling them in {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}}.
 
@@ -87,7 +87,7 @@ stage.style.transform = 'scale(' + scaleToFit + ')';
 
 ### Turn off transparency
 
-If your game uses canvas and doesn’t need to be transparent, set the `alpha` option to `false` when creating a drawing context with [`HTMLCanvasElement.getContext()`](/pt-BR/docs/Web/API/HTMLCanvasElement/getContext). This information can be used internally to optimize rendering.
+If your game uses canvas and doesn't need to be transparent, set the `alpha` option to `false` when creating a drawing context with [`HTMLCanvasElement.getContext()`](/pt-BR/docs/Web/API/HTMLCanvasElement/getContext). This information can be used internally to optimize rendering.
 
 ```js
 var ctx = canvas.getContext('2d', { alpha: false });

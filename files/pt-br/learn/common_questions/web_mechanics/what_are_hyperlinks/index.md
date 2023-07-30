@@ -15,7 +15,7 @@ Neste artigo, veremos o que são hiperlinks e por que eles são importantes.
         <a href="/en-US/Learn/How_the_Internet_works"
           >como a Internet funciona </a
         >e estar familiarizado com<a
-          href="/en-US/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+          href="/pt-BR/docs/Learn/page_vs_site_vs_server_vs_search_engine"
         >
           a diferença entre uma página da web, um site, um servidor da web e um
           mecanismo de pesquisa</a

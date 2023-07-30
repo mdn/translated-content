@@ -1,5 +1,5 @@
 ---
-title: ':defined'
+title: ":defined"
 slug: Web/CSS/:defined
 ---
 
@@ -30,18 +30,19 @@ simple-custom:defined {
 在这个 demo 中我们定义了一个非常简单的自定义元素：
 
 ```js
-customElements.define('simple-custom',
+customElements.define(
+  "simple-custom",
   class extends HTMLElement {
     constructor() {
       super();
 
-      let divElem = document.createElement('div');
-      divElem.textContent = this.getAttribute('text');
+      let divElem = document.createElement("div");
+      divElem.textContent = this.getAttribute("text");
 
-      let shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(divElem);
-  }
-})
+      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
+    }
+  },
+);
 ```
 
 然后在文档中插入一个该元素的副本，以及一个标准的 `<p>` 标签：
