@@ -39,13 +39,13 @@ HTML의 주요 작업 중 하나는 브라우저가 텍스트를 올바르게 �
 HTML에서는 각 단락은 {{htmlelement("p")}} 요소 안에 둘러싸여 있어야 합니다. 다음에 나오는 것 처럼 :
 
 ```html
-<p>I am a paragraph, oh yes I am.</p>
+<p>저는 문단입니다, 오 네 저는 그렇습니다.</p>
 ```
 
 각 제목도 heading 요소 안에 둘려싸여 있어야 합니다 :
 
 ```html
-<h1>I am the title of the story.</h1>
+<h1>저는 그 이야기의 제목입니다.</h1>
 ```
 
 heading 요소는 총 6개가 있습니다— {{htmlelement("h1")}}, {{htmlelement("h2")}}, {{htmlelement("h3")}}, {{htmlelement("h4")}}, {{htmlelement("h5")}}, and {{htmlelement("h6")}}. 각 요소는 문서에서 다른 수준의 내용을 나타냅니다 ; 메인 제목을 `<h1>` 으로 나타내고, 소제목을 `<h2>` 으로 나타내고, 소제목의 소제목을 `<h3>`으로 나타내고 이런 식으로 제목들을 나타냅니다 .
