@@ -11,8 +11,8 @@ slug: Web/API/Window/focus
 
 ## 语法
 
-```js
-window.focus();
+```js-nolint
+focus()
 ```
 
 ## 示例
@@ -26,3 +26,7 @@ if (clicked) {
 ## 规范
 
 {{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}

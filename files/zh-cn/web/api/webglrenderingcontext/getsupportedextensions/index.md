@@ -9,8 +9,8 @@ slug: Web/API/WebGLRenderingContext/getSupportedExtensions
 
 ## 语法
 
-```js
-getSupportedExtensions();
+```js-nolint
+getSupportedExtensions()
 ```
 
 ### 参数
