@@ -103,7 +103,7 @@ optional chaining 연산자를 속성에 표현식으로 접근할 때 대괄호
 let nestedProp = obj?.['prop' + 'Name'];
 ```
 
-### Optional chaining은 할당자 왼쪽에서 유효하지 않습니다.
+### Optional chaining은 할당자 왼쪽에서 유효하지 않습니다
 
 ```js
 let object = {};
