@@ -69,7 +69,6 @@ build/
 /files/ko/web/api/**/*.md
 /files/ko/web/css/**/*.md
 /files/ko/web/html/**/*.md
-/files/ko/web/http/**/*.md
 /files/ko/web/javascript/**/*.md
 /files/ko/web/svg/**/*.md
 
