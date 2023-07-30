@@ -12,7 +12,7 @@ l10n:
 
  1985년에서 1990년 사이에 귀도 반 로썸(Guido van Rossum)이 ABC라는 다른 언어의 후속으로 만들어졌으며, 현재는 웹 개발, 데스크톱 애플리케이션, 데이터 과학, DevOps, 자동화/생산성과 같은 다양한 영역에서 사용되고 있습니다.
 
-Python은 OSI가 승인한 오픈 소스 라이센스로 개발되어 상업적인 용도로도 자유롭게 배포할 수 있고 사용할 수도 있습니다. Python의 라이선스는 [Python Software Foundation](https://www.python.org/psf)에서 관리합니다.
+Python은 OSI가 승인한 오픈 소스 라이센스로 개발되어 상업적인 용도로도 자유롭게 사용할 수 있고 배포할 수도 있습니다. Python의 라이선스는 [Python Software Foundation](https://www.python.org/psf)에서 관리합니다.
 
 ## 더 알아보기
 
