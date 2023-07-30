@@ -1,5 +1,5 @@
 ---
-title: '<output>: Элемент вывода'
+title: "<output>: Элемент вывода"
 slug: Web/HTML/Element/output
 tags:
   - Вёрстка
@@ -7,6 +7,7 @@ tags:
   - вывод
 translation_of: Web/HTML/Element/output
 ---
+
 {{HTMLSidebar}}
 
 **HTML-элемент вывода** (**`<output>`**) является контейнерным элементом, в котором сайт или приложение могут выводить результаты вычислений или действий пользователя.
@@ -14,10 +15,10 @@ translation_of: Web/HTML/Element/output
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), [перечисляемые](/ru/docs/Web/HTML/Content_categories#Form_listed), [лэйбловые](/ru/docs/Web/HTML/Content_categories#Form_labelable), [сбрасываемые форма-ассоциированные элементы](/ru/docs/Web/HTML/Content_categories#Form_resettable), явный контент. |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимый контент                                         | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                                                                                                                                                                                                                                                                  |
-| Пропуск тегов                                              | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                    |
+| Пропуск тегов                                              | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                         |
 | Допустимые родители                                        | Все элементы, которые принимают [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                                                                                                                                                                                                                                  |
 | Допустимые ARIA-роли                                       | Любые                                                                                                                                                                                                                                                                                                                                                                                                       |
-| DOM-интерфейс                                              | {{domxref("HTMLOutputElement")}}                                                                                                                                                                                                                                                                                                                                                                |
+| DOM-интерфейс                                              | {{domxref("HTMLOutputElement")}}                                                                                                                                                                                                                                                                                                                                                                            |
 
 ## Атрибуты
 

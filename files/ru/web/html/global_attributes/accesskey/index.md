@@ -6,6 +6,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Global_attributes/accesskey
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 [Глобальный атрибут](/ru/docs/Web/HTML/Global_attributes) **accesskey** даёт возможность быстро перейти к элементу с помощью комбинации клавиш. Значение атрибута состоит из одного печатного символа (в том числе спец. символы, акценты и другие, которые можно написать с клавиатуры).

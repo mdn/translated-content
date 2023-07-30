@@ -14,13 +14,13 @@ translation_of: Web/HTML/Element/base
 **HTML-элемент** **`<base>`** определяет основной адрес (URL), используемый для всех относительных адресов (URLs) в документе. Может быть только один **`<base>`** элемент в одном документе.
 Основной адрес (URL) документа можно запросить скриптом используя {{domxref('document.baseURI')}}.
 
-| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | Метаданные                                               |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------- |
-| Допустимое содержимое                                            | Отсутствует. Это {{Glossary("empty element","пустой элемент")}}.      |
-| Пропуск тегов                                                    | Без закрывающего тега.                                              |
-| Допустимые родители                                              | {{HTMLElement("head")}}, {{HTMLElement("body")}}. |
-| Допустимые ARIA-роли                                             | Нет                                                                 |
-| DOM-интерфейс                                                    | {{domxref("HTMLBaseElement")}}                            |
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | Метаданные                                                       |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------- |
+| Допустимое содержимое                                            | Отсутствует. Это {{Glossary("empty element","пустой элемент")}}. |
+| Пропуск тегов                                                    | Без закрывающего тега.                                           |
+| Допустимые родители                                              | {{HTMLElement("head")}}, {{HTMLElement("body")}}.                |
+| Допустимые ARIA-роли                                             | Нет                                                              |
+| DOM-интерфейс                                                    | {{domxref("HTMLBaseElement")}}                                   |
 
 ## Атрибуты **`<base>`**
 
@@ -40,8 +40,8 @@ translation_of: Web/HTML/Element/base
 ## Примеры
 
 ```html
-<base href="http://www.example.com/page.html">
-<base target="_blank" href="http://www.example.com/page.html">
+<base href="http://www.example.com/page.html" />
+<base target="_blank" href="http://www.example.com/page.html" />
 ```
 
 ## Спецификация

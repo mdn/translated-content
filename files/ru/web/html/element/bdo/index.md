@@ -1,5 +1,5 @@
 ---
-title: '<bdo>: Элемент переопределения направления текста'
+title: "<bdo>: Элемент переопределения направления текста"
 slug: Web/HTML/Element/bdo
 tags:
   - направление текста
@@ -14,12 +14,12 @@ translation_of: Web/HTML/Element/bdo
 
 Текстовые символы рисуются от заданной точки в указанном направлении; индивидуальная ориентация символов не меняется (к примеру, символы не зеркалятся).
 
-| [Категории контента](/ru/docs/HTML/Content_categories) | [Потоковый контент](/ru/docs/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content), palpable content.                           |
-| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимый контент                                     | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                                 |
-| Закрывающий тег                                        | {{no_tag_omission}}                                                                                                                                                               |
-| Допустимые родители                                    | Все элементы, принимающие [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content),                                                                                       |
-| Допустимые ARIA-роли                                   | Любые                                                                                                                                                                                  |
+| [Категории контента](/ru/docs/HTML/Content_categories) | [Потоковый контент](/ru/docs/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content), palpable content.              |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимый контент                                     | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                    |
+| Закрывающий тег                                        | {{no_tag_omission}}                                                                                                                                                       |
+| Допустимые родители                                    | Все элементы, принимающие [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content),                                                                          |
+| Допустимые ARIA-роли                                   | Любые                                                                                                                                                                     |
 | DOM-интерфейс                                          | {{domxref("HTMLElement")}} до Gecko 1.9.2 (Firefox 4) включительно, Firefox реализует интерфейс [`HTMLSpanElement`](/ru/docs/Web/API/HTMLSpanElement) для этого элемента. |
 
 ## Атрибуты
@@ -36,8 +36,7 @@ translation_of: Web/HTML/Element/bdo
 ```html
 <!-- Переключение направления текста -->
 <p>This text will go left to right.</p>
-<p><bdo dir="rtl">This text will go right
-to left.</bdo></p>
+<p><bdo dir="rtl">This text will go right to left.</bdo></p>
 ```
 
 ### Результат
