@@ -29,7 +29,7 @@ pc.setLocalDescription(sessionDescription, successCallback, errorCallback);
 `sessionDescription` 매개 변수는 일단 기술적으로는 `RTCSessionDescriptionInit`의 타입입니다. 하지만, {{domxref("RTCSessionDescription")}}가 `RTCSessionDescriptionInit`와 구별이 불가능하도록 직렬화 (serialize)하기 때문에, `RTCSessionDescription`를 전달 할 수도 있습니다. 이 말은 코드가 다음과 같이 간단해질 수 있다는 뜻입니다:
 
 ```js
-myPeerConnection.createOffer().then(function(offer) {
+myPeerConnection.createOffer().then(function (offer) {
   return myPeerConnection.setLocalDescription(new RTCSessionDescription(offer));
 });
 ```
@@ -74,13 +74,14 @@ myPeerConnection.createOffer().then(myPeerConnection.setLocalDescription);
 
 ```js
 function handleNegotiationNeededEvent() {
-  pc.createOffer().then(function(offer) {
-    return pc.setLocalDescription(offer);
-  })
-  .then(function() {
-    // Send the offer to the remote peer using the signaling server
-  })
-  .catch(reportError);
+  pc.createOffer()
+    .then(function (offer) {
+      return pc.setLocalDescription(offer);
+    })
+    .then(function () {
+      // Send the offer to the remote peer using the signaling server
+    })
+    .catch(reportError);
 }
 ```
 
