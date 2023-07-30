@@ -171,7 +171,7 @@ Object.setPrototypeOf(obj2, obj1);
 obj2.method2(); // "method 1"이 로그됩니다.
 ```
 
-### super.prop을 읽는 메서드는 다른 객체에 바인딩될 때 다르게 동작하지 않습니다.
+### super.prop을 읽는 메서드는 다른 객체에 바인딩될 때 다르게 동작하지 않습니다
 
 `super.x`에 접근하는 것은 `Reflect.get(Object.getPrototypeOf(objectLiteral), "x", this)`와 같이 동작합니다. 즉, 속성은 항상 객체 리터럴/클래스 선언의 프로토타입에서 검색되고 메서드를 바인딩 해제하고 다시 바인딩해도 `super`의 참조는 변경되지 않습니다.
 
