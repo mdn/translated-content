@@ -36,10 +36,8 @@ function print_PerformanceEntries() {
 }
 function print_nextHopProtocol(perfEntry) {
   let value = "nextHopProtocol" in perfEntry;
-  if (value)
-    console.log("nextHopProtocol = " + perfEntry.nextHopProtocol);
-  else
-    console.log("nextHopProtocol = N'EST PAS pris en charge");
+  if (value) console.log("nextHopProtocol = " + perfEntry.nextHopProtocol);
+  else console.log("nextHopProtocol = N'EST PAS pris en charge");
 }
 ```
 

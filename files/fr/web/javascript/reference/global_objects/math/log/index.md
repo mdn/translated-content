@@ -15,7 +15,7 @@ La fonction **`Math.log()`** renvoie le logarithme naturel (aussi appelé logari
 ## Syntaxe
 
 ```js
-Math.log(x)
+Math.log(x);
 ```
 
 ### Paramètres
@@ -39,8 +39,8 @@ Si la valeur de l'argument est négative, la valeur renvoyée sera {{jsxref("NaN
 
 ```js
 Math.log(-1); // NaN, valeur en dehors de l'intervalle de définition
-Math.log(0);  // -Infinity
-Math.log(1);  // 0
+Math.log(0); // -Infinity
+Math.log(1); // 0
 Math.log(10); // 2.302585092994046
 ```
 
@@ -50,7 +50,7 @@ La fonction suivante renvoie le logarithme de `y` en base `x` (c'est-à-dire log
 
 ```js
 function getBaseLog(x, y) {
-    return Math.log(y) / Math.log(x);
+  return Math.log(y) / Math.log(x);
 }
 ```
 

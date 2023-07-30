@@ -61,9 +61,8 @@ h1 {
 
 我也可以将它们组合起来，在它们之间加上一个逗号，变为选择器列表。
 
-```css
-h1,
-.special {
+```css-nolint
+h1, .special {
   color: blue;
 }
 ```

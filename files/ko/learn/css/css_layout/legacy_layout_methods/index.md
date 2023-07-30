@@ -52,12 +52,31 @@ CSS가 아주 최근까지 내장된 격자 시스템을 갖고 있지 않았고
 <h1>2열 레이아웃 예제</h1>
 <div>
   <h2>첫 번째 열</h2>
-  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
+    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
+    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
+    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
+    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+    eget fermentum sapien.
+  </p>
 </div>
 
 <div>
   <h2>두 번째 열</h2>
-  <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  <p>
+    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  </p>
 </div>
 ```
 
@@ -106,12 +125,31 @@ div:nth-of-type(2) {
 
 <div>
   <h2>첫 번째 열</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
+    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
+    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
+    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
+    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+    eget fermentum sapien.
+  </p>
 </div>
 
 <div>
   <h2>두 번째 열</h2>
-  <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  <p>
+    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  </p>
 </div>
 ```
 
@@ -234,19 +272,41 @@ body {
 
 ```css
 /* Two column widths (120px) plus one gutter width (20px) */
-.col.span2 { width: 140px; }
+.col.span2 {
+  width: 140px;
+}
 /* Three column widths (180px) plus two gutter widths (40px) */
-.col.span3 { width: 220px; }
+.col.span3 {
+  width: 220px;
+}
 /* And so on... */
-.col.span4 { width: 300px; }
-.col.span5 { width: 380px; }
-.col.span6 { width: 460px; }
-.col.span7 { width: 540px; }
-.col.span8 { width: 620px; }
-.col.span9 { width: 700px; }
-.col.span10 { width: 780px; }
-.col.span11 { width: 860px; }
-.col.span12 { width: 940px; }
+.col.span4 {
+  width: 300px;
+}
+.col.span5 {
+  width: 380px;
+}
+.col.span6 {
+  width: 460px;
+}
+.col.span7 {
+  width: 540px;
+}
+.col.span8 {
+  width: 620px;
+}
+.col.span9 {
+  width: 700px;
+}
+.col.span10 {
+  width: 780px;
+}
+.col.span11 {
+  width: 860px;
+}
+.col.span12 {
+  width: 940px;
+}
 ```
 
 이러한 클래스를 생성해 놓았다면 격자에 서로 다른 너비의 열 무리를 배치할 수 있습니다. 페이지를 저장하고 브라우저에 불러들여 효과를 확인하십시오.
@@ -327,19 +387,41 @@ body {
 
 ```css
 /* Two column widths (12.5%) plus one gutter width (2.08333333%) */
-.col.span2 { width: 14.58333333%; }
+.col.span2 {
+  width: 14.58333333%;
+}
 /* Three column widths (18.75%) plus two gutter widths (4.1666666) */
-.col.span3 { width: 22.91666666%; }
+.col.span3 {
+  width: 22.91666666%;
+}
 /* And so on... */
-.col.span4 { width: 31.24999999%; }
-.col.span5 { width: 39.58333332%; }
-.col.span6 { width: 47.91666665%; }
-.col.span7 { width: 56.24999998%; }
-.col.span8 { width: 64.58333331%; }
-.col.span9 { width: 72.91666664%; }
-.col.span10 { width: 81.24999997%; }
-.col.span11 { width: 89.5833333%; }
-.col.span12 { width: 97.91666663%; }
+.col.span4 {
+  width: 31.24999999%;
+}
+.col.span5 {
+  width: 39.58333332%;
+}
+.col.span6 {
+  width: 47.91666665%;
+}
+.col.span7 {
+  width: 56.24999998%;
+}
+.col.span8 {
+  width: 64.58333331%;
+}
+.col.span9 {
+  width: 72.91666664%;
+}
+.col.span10 {
+  width: 81.24999997%;
+}
+.col.span11 {
+  width: 89.5833333%;
+}
+.col.span12 {
+  width: 97.91666663%;
+}
 ```
 
 이제 코드를 저장하고 브라우저에 내용을 불러들이면 뷰포트 너비를 변경해보십시오. 열 너비가 멋지게 조정되는 것을 볼 수 있어야 합니다.
@@ -354,24 +436,46 @@ CSS 내부에서 직접 calc() 함수를 사용하여 수학 계산을 할 수 �
 
 ```css
 .col.span4 {
-  width: calc((6.25%*4) + (2.08333333%*3));
+  width: calc((6.25% * 4) + (2.08333333% * 3));
 }
 ```
 
 여러분의 CSS 규칙의 하단 블록을 다음 값으로 대체한 다음 브라우저에서 다시 불러들여 동일한 결과를 얻을 수 있는지 확인하십시오:
 
 ```css
-.col.span2 { width: calc((6.25%*2) + 2.08333333%); }
-.col.span3 { width: calc((6.25%*3) + (2.08333333%*2)); }
-.col.span4 { width: calc((6.25%*4) + (2.08333333%*3)); }
-.col.span5 { width: calc((6.25%*5) + (2.08333333%*4)); }
-.col.span6 { width: calc((6.25%*6) + (2.08333333%*5)); }
-.col.span7 { width: calc((6.25%*7) + (2.08333333%*6)); }
-.col.span8 { width: calc((6.25%*8) + (2.08333333%*7)); }
-.col.span9 { width: calc((6.25%*9) + (2.08333333%*8)); }
-.col.span10 { width: calc((6.25%*10) + (2.08333333%*9)); }
-.col.span11 { width: calc((6.25%*11) + (2.08333333%*10)); }
-.col.span12 { width: calc((6.25%*12) + (2.08333333%*11)); }
+.col.span2 {
+  width: calc((6.25% * 2) + 2.08333333%);
+}
+.col.span3 {
+  width: calc((6.25% * 3) + (2.08333333% * 2));
+}
+.col.span4 {
+  width: calc((6.25% * 4) + (2.08333333% * 3));
+}
+.col.span5 {
+  width: calc((6.25% * 5) + (2.08333333% * 4));
+}
+.col.span6 {
+  width: calc((6.25% * 6) + (2.08333333% * 5));
+}
+.col.span7 {
+  width: calc((6.25% * 7) + (2.08333333% * 6));
+}
+.col.span8 {
+  width: calc((6.25% * 8) + (2.08333333% * 7));
+}
+.col.span9 {
+  width: calc((6.25% * 9) + (2.08333333% * 8));
+}
+.col.span10 {
+  width: calc((6.25% * 10) + (2.08333333% * 9));
+}
+.col.span11 {
+  width: calc((6.25% * 11) + (2.08333333% * 10));
+}
+.col.span12 {
+  width: calc((6.25% * 12) + (2.08333333% * 11));
+}
 ```
 
 > **참고:** 여러분은 최종 버전을 [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-calc.html)에서 확인할 수 있습니다. ([라이브로도 보세요](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)).
@@ -386,7 +490,7 @@ CSS 내부에서 직접 calc() 함수를 사용하여 수학 계산을 할 수 �
 
 ```css
 .content {
-  width: calc((6.25%*8) + (2.08333333%*7));
+  width: calc((6.25% * 8) + (2.08333333% * 7));
 }
 ```
 
@@ -404,7 +508,7 @@ CSS 내부에서 직접 calc() 함수를 사용하여 수학 계산을 할 수 �
 
 ```css
 .offset-by-one {
-  margin-left: calc(6.25% + (2.08333333%*2));
+  margin-left: calc(6.25% + (2.08333333% * 2));
 }
 ```
 
@@ -461,7 +565,6 @@ body {
   padding-right: 2.08333333%;
 }
 
-
 .row {
   display: flex;
 }
@@ -471,7 +574,7 @@ body {
   margin-bottom: 1em;
   width: 6.25%;
   flex: 1 1 auto;
-  background: rgb(255,150,150);
+  background: rgb(255, 150, 150);
 }
 ```
 
@@ -506,8 +609,8 @@ body {
 다음과 같은 내용을 복사본 파일의 헤드 섹션에 skeleton과 normalize CSS 파일에 포함시킵니다:
 
 ```html
-<link href="normalize.css" rel="stylesheet">
-<link href="skeleton.css" rel="stylesheet">
+<link href="normalize.css" rel="stylesheet" />
+<link href="skeleton.css" rel="stylesheet" />
 ```
 
 Skeleton에는 격자 시스템 이외에도 많은 내용이 포함되어 있습니다. 타이포그래피를 위한 CSS 및 착수점으로 사용할 수 있는 다른 페이지 요소도 포함되어 있습니다. 하지만 지금은 이들을 기본값으로 남겨둘 겁이다. 우리가 정말로 관심을 갖고 있는 것은 격자입니다.
@@ -591,7 +694,9 @@ HTML 파일을 저장하고 브라우저에 불러들여 효과를 확인하십�
 당신이 (앞서 다운로드한) skeleton.css 내용을 보면 어떻게 작동하는지 알 수 있습니다. 예를 들어, Skeleton 파일에는 다음과 같이 "three columns" 클래스가 적용되는 요소를 스타일링하기 위한 정의가 부여되어 있습니다.
 
 ```css
-.three.columns { width: 22%; }
+.three.columns {
+  width: 22%;
+}
 ```
 
 모든 Skeleton(또는 다른 격자 프레임워크)은 여러분의 마크업에 추가하여 사용할 수 있는 미리 정의된 클래스를 설정하는 것입니다. 해당 백분율을 계산하는 작업은 마치 당신이 직접 한 것과 똑같습니다.

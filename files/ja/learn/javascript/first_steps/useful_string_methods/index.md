@@ -16,7 +16,7 @@ slug: Learn/JavaScript/First_steps/Useful_string_methods
 JavaScript ではほとんどのものはオブジェクトです。たとえば、次のように文字列を作った時も、
 
 ```js
-let string = 'This is my string';
+let string = "This is my string";
 ```
 
 この変数は文字列オブジェクトのインスタンスになり、大量のプロパティとメソッドが使用可能となります。{{jsxref("String")}} オブジェクトのページに行って、横にある一覧を眺めてみてください！
@@ -30,7 +30,7 @@ let string = 'This is my string';
 ただ {{jsxref("String.prototype.length", "length")}} プロパティを使用すればよいので、とても簡単です。次の行を入力してみましょう。
 
 ```js
-let browserType = 'mozilla';
+let browserType = "mozilla";
 browserType.length;
 ```
 
@@ -49,7 +49,7 @@ browserType[0];
 文字列の一番最後の文字を取得したいときは、先ほどの `length` プロパティと組み合わせて以下のようにします。
 
 ```js
-browserType[browserType.length-1];
+browserType[browserType.length - 1];
 ```
 
 "mozilla" の長さは 7 ですが、0 から始まるので、最後の文字の位置は 6 になります。よって `length-1` とする必要があるのです。
@@ -62,49 +62,49 @@ browserType[browserType.length-1];
 
 1. 以下を試してみましょう。
 
-    ```js
-    browserType.indexOf('zilla');
-    ```
+   ```js
+   browserType.indexOf("zilla");
+   ```
 
-    このコードは 2 を返します。なぜならば、"mozilla"という文字列中で、部分文字列"zilla"の開始位置が 2 (0、1、2 — つまり 3 文字目)であるからです。このようなコードは文字列を絞り込むときなどに使います。例えば、ウェブサイトのアドレスの一覧があったとき、その中から"mozilla"を含むものだけを表示したい場合などです。
+   このコードは 2 を返します。なぜならば、"mozilla"という文字列中で、部分文字列"zilla"の開始位置が 2 (0、1、2 — つまり 3 文字目)であるからです。このようなコードは文字列を絞り込むときなどに使います。例えば、ウェブサイトのアドレスの一覧があったとき、その中から"mozilla"を含むものだけを表示したい場合などです。
 
 2. 部分文字列が含まれてることを確認するもう一つの方法があり、こちらのほうが効果的な場合があります。
 
-    ```js
-    browserType.indexOf('vanilla');
-    ```
+   ```js
+   browserType.indexOf("vanilla");
+   ```
 
-    上記のコードは `-1` を返します。これは部分文字列 (この場合は 'vanilla') がメインの文字列の中に見つからなかった場合に返されます。
+   上記のコードは `-1` を返します。これは部分文字列 (この場合は 'vanilla') がメインの文字列の中に見つからなかった場合に返されます。
 
-    これを使って、部分文字列 'mozilla' を**含まない** (あるいは否定演算子 `!==` を使うなら**含む**) 文字列のすべてのインスタンスを見つけることができます。
+   これを使って、部分文字列 'mozilla' を**含まない** (あるいは否定演算子 `!==` を使うなら**含む**) 文字列のすべてのインスタンスを見つけることができます。
 
-    ```js
-    if(browserType.indexOf('mozilla') === -1) {
-      // もし部分文字列 'mozilla' が含まれていない場合は、
-      // 文字列で何かをします。
-    }
+   ```js
+   if (browserType.indexOf("mozilla") === -1) {
+     // もし部分文字列 'mozilla' が含まれていない場合は、
+     // 文字列で何かをします。
+   }
 
-    if(browserType.indexOf('mozilla') !== -1) {
-      // もし部分文字列 'mozilla' が含まれている場合は、
-      // 文字列で何かをします。
-    }
-    ```
+   if (browserType.indexOf("mozilla") !== -1) {
+     // もし部分文字列 'mozilla' が含まれている場合は、
+     // 文字列で何かをします。
+   }
+   ```
 
 3. 部分文字列がその文字列のどこから始まるかが分かっており、どこで終わっているかがわかれば、その部分文字列を {{jsxref("String.prototype.slice()", "slice()")}} メソッドを使用することで抽出することができます。
 
-    ```js
-    browserType.slice(0,3);
-    ```
+   ```js
+   browserType.slice(0, 3);
+   ```
 
-    このコードは "moz" という文字列を返します。最初の引数は抽出を始める最初の位置で、2 番目の引数が抽出する最後の文字の直後の位置です。つまり、この場合先頭から 4 番目の手前までの文字列が切り出されたということです。言い換えると、この場合は 2 番目の引数と同じ 3 文字が切り出されました。
+   このコードは "moz" という文字列を返します。最初の引数は抽出を始める最初の位置で、2 番目の引数が抽出する最後の文字の直後の位置です。つまり、この場合先頭から 4 番目の手前までの文字列が切り出されたということです。言い換えると、この場合は 2 番目の引数と同じ 3 文字が切り出されました。
 
 4. また、ある文字以降の文字列の残りの文字をすべて抽出したいとわかっている場合は、2 番目のパラメータを含める必要はありません！その代わり、文字列内の残りの文字を抽出したい文字の位置を含める必要があるだけです。次のようにしてみてください。
 
-    ```js
-    browserType.slice(2);
-    ```
+   ```js
+   browserType.slice(2);
+   ```
 
-    この例は "zilla" という文字列を返します。なぜなら、2 の位置にある文字は z であり、2 番目の引数を指定していないため、3 文字目から最後までが部分文字列として戻ったのです。
+   この例は "zilla" という文字列を返します。なぜなら、2 の位置にある文字は z であり、2 番目の引数を指定していないため、3 文字目から最後までが部分文字列として戻ったのです。
 
 > **メモ:** `slice()` の 2 番目の引数はオプション (任意指定) です。もし指定しなければ、元々の文字列の最後まで切り出しを行います。他にもオプションがありますので、さらに詳しく知りたければ{{jsxref("String.prototype.slice()", "slice()")}}のページで調べてみましょう。
 
@@ -115,7 +115,7 @@ String には{{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}と{{j
 それでは次の行を入力し、何が起きるか見てみましょう。
 
 ```js
-let radData = 'My NaMe Is MuD';
+let radData = "My NaMe Is MuD";
 radData.toLowerCase();
 radData.toUpperCase();
 ```
@@ -127,7 +127,7 @@ radData.toUpperCase();
 検索する文字列と、置き換える文字列の 2 つを引数に取ります。次の例を実行してみてください。
 
 ```js
-browserType.replace('moz','van');
+browserType.replace("moz", "van");
 ```
 
 これはコンソールで"vanilla"を返しますが、`browserType` の値は、"mozilla"のままです。プログラムで変数 `browserType` の値を実際に更新するには、演算の結果を変数に設定し直す必要があります。つまりそれ変数に設定されている部分文字列を自動的には更新してくれないのです。従って実際に変数の内容を更新するためには `browserType = browserType.replace('moz','van');` のように書きます。
@@ -150,15 +150,14 @@ browserType.replace('moz','van');
 <h2>出力結果</h2>
 
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>コードエディタ</h2>
-<p class="a11y-label">コードエディタから抜けるには Esc キーを押して下さい(タブキーではタブ文字を挿入します)。</p>
+<p class="a11y-label">
+  コードエディタから抜けるには Esc
+  キーを押して下さい(タブキーではタブ文字を挿入します)。
+</p>
 
 <textarea id="code" class="playable-code" style="height: 290px; width: 95%">
 const list = document.querySelector('.output ul');
@@ -181,8 +180,8 @@ for (let i = 0; i < greetings.length; i++) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="リセット">
-  <input id="solution" type="button" value="答えを見る">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを見る" />
 </div>
 ```
 
@@ -209,9 +208,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -219,55 +218,56 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = '答えを見る';
+  solution.value = "答えを見る";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === '答えを見る') {
+solution.addEventListener("click", function () {
+  if (solution.value === "答えを見る") {
     textarea.value = solutionEntry;
-    solution.value = '答えを隠す';
+    solution.value = "答えを隠す";
   } else {
     textarea.value = userEntry;
-    solution.value = '答えを見る';
+    solution.value = "答えを見る";
   }
   updateCode();
 });
 
-const jsSolution = 'const list = document.querySelector(\'.output ul\');' +
-'\nlist.innerHTML = \'\';' +
-'\nlet greetings = [\'Happy Birthday!\',' +
-'\n                 \'Merry Christmas my love\',' +
-'\n                 \'A happy Christmas to all the family\',' +
-'\n                 \'You\\\'re all I want for Christmas\',' +
-'\n                 \'Get well soon\'];' +
-'\n' +
-'\nfor (let i = 0; i < greetings.length; i++) {' +
-'\n  let input = greetings[i];' +
-'\n  if (greetings[i].indexOf(\'Christmas\') !== -1) {' +
-'\n    let result = input;' +
-'\n    let listItem = document.createElement(\'li\');' +
-'\n    listItem.textContent = result;' +
-'\n    list.appendChild(listItem);' +
-'\n  }' +
-'\n}';
+const jsSolution =
+  "const list = document.querySelector('.output ul');" +
+  "\nlist.innerHTML = '';" +
+  "\nlet greetings = ['Happy Birthday!'," +
+  "\n                 'Merry Christmas my love'," +
+  "\n                 'A happy Christmas to all the family'," +
+  "\n                 'You\\'re all I want for Christmas'," +
+  "\n                 'Get well soon'];" +
+  "\n" +
+  "\nfor (let i = 0; i < greetings.length; i++) {" +
+  "\n  let input = greetings[i];" +
+  "\n  if (greetings[i].indexOf('Christmas') !== -1) {" +
+  "\n    let result = input;" +
+  "\n    let listItem = document.createElement('li');" +
+  "\n    listItem.textContent = result;" +
+  "\n    list.appendChild(listItem);" +
+  "\n  }" +
+  "\n}";
 
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // タブキーでテキストエリアから抜けてしまうのを防ぎ、
 // 代わりにカーソル位置にタブ文字を挿入する
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -278,8 +278,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   const caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -291,10 +294,10 @@ function insertAtCaret(text) {
 
 // ユーザーがテキストエリアのコードを書き換える度に userCode を毎回更新する
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // ユーザーのコードが表示されているときのみ状態を保存し、
   // 答えのコードでユーザーコードが上書きされないようにする
-  if(solution.value === '答えを見る') {
+  if (solution.value === "答えを見る") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -321,15 +324,14 @@ textarea.onkeyup = function(){
 <h2>出力結果</h2>
 
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>コードエディタ</h2>
-<p class="a11y-label">コードエディタから抜けるには Esc キーを押して下さい(タブキーではタブ文字を挿入します)。</p>
+<p class="a11y-label">
+  コードエディタから抜けるには Esc
+  キーを押して下さい(タブキーではタブ文字を挿入します)。
+</p>
 
 <textarea id="code" class="playable-code" style="height: 250px; width: 95%">
 const list = document.querySelector('.output ul');
@@ -347,8 +349,8 @@ for(var i = 0; i < cities.length; i++) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="リセット">
-  <input id="solution" type="button" value="答えを見る">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを見る" />
 </div>
 ```
 
@@ -375,9 +377,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -385,53 +387,54 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = '答えを見る';
+  solution.value = "答えを見る";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === '答えを見る') {
+solution.addEventListener("click", function () {
+  if (solution.value === "答えを見る") {
     textarea.value = solutionEntry;
-    solution.value = '答えを隠す';
+    solution.value = "答えを隠す";
   } else {
     textarea.value = userEntry;
-    solution.value = '答えを見る';
+    solution.value = "答えを見る";
   }
   updateCode();
 });
 
-const jsSolution = 'const list = document.querySelector(\'.output ul\');' +
-'\nlist.innerHTML = \'\';' +
-'\nlet cities = [\'lonDon\', \'ManCHESTer\', \'BiRmiNGHAM\', \'liVERpoOL\'];' +
-'\n' +
-'\nfor (let i = 0; i < cities.length; i++) {' +
-'\n  let input = cities[i];' +
-'\n  let lower = input.toLowerCase();' +
-'\n  let firstLetter = lower.slice(0,1);' +
-'\n  let capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());' +
-'\n  let result = capitalized;' +
-'\n  let listItem = document.createElement(\'li\');' +
-'\n  listItem.textContent = result;' +
-'\n  list.appendChild(listItem);' +
-'\n' +
-'\n}';
+const jsSolution =
+  "const list = document.querySelector('.output ul');" +
+  "\nlist.innerHTML = '';" +
+  "\nlet cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];" +
+  "\n" +
+  "\nfor (let i = 0; i < cities.length; i++) {" +
+  "\n  let input = cities[i];" +
+  "\n  let lower = input.toLowerCase();" +
+  "\n  let firstLetter = lower.slice(0,1);" +
+  "\n  let capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());" +
+  "\n  let result = capitalized;" +
+  "\n  let listItem = document.createElement('li');" +
+  "\n  listItem.textContent = result;" +
+  "\n  list.appendChild(listItem);" +
+  "\n" +
+  "\n}";
 
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // タブキーでテキストエリアから抜けてしまうのを防ぎ、
 // 代わりにカーソル位置にタブ文字を挿入する
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -442,8 +445,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   const caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -455,10 +461,10 @@ function insertAtCaret(text) {
 
 // ユーザーがテキストエリアのコードを書き換える度に userCode を毎回更新する
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // ユーザーのコードが表示されているときのみ状態を保存し、
   // 答えのコードでユーザーコードが上書きされないようにする
-  if(solution.value === '答えを見る') {
+  if (solution.value === "答えを見る") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -496,15 +502,14 @@ MAN: Manchester Piccadilly
 <h2>出力結果</h2>
 
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>コードエディタ</h2>
-<p class="a11y-label">コードエディタから抜けるには Esc キーを押して下さい(タブキーではタブ文字を挿入します)。</p>
+<p class="a11y-label">
+  コードエディタから抜けるには Esc
+  キーを押して下さい(タブキーではタブ文字を挿入します)。
+</p>
 
 <textarea id="code" class="playable-code" style="height: 285px; width: 95%">
 const list = document.querySelector('.output ul');
@@ -527,8 +532,8 @@ for (var i = 0; i < stations.length; i++) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="リセット">
-  <input id="solution" type="button" value="答えを見る">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを見る" />
 </div>
 ```
 
@@ -555,9 +560,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -565,56 +570,57 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = '答えを見る';
+  solution.value = "答えを見る";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === '答えを見る') {
+solution.addEventListener("click", function () {
+  if (solution.value === "答えを見る") {
     textarea.value = solutionEntry;
-    solution.value = '答えを隠す';
+    solution.value = "答えを隠す";
   } else {
     textarea.value = userEntry;
-    solution.value = '答えを見る';
+    solution.value = "答えを見る";
   }
   updateCode();
 });
 
-const jsSolution = 'const list = document.querySelector(\'.output ul\');' +
-'\nlist.innerHTML = \'\';' +
-'\nlet stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',' +
-'\n                \'GNF576746573fhdg4737dh4;Greenfield\',' +
-'\n                \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',' +
-'\n                \'SYB4f65hf75f736463;Stalybridge\',' +
-'\n                \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];' +
-'\n' +
-'\nfor (let i = 0; i < stations.length; i++) {' +
-'\n  let input = stations[i];' +
-'\n  let code = input.slice(0,3);' +
-'\n  let semiC = input.indexOf(\';\');' +
-'\n  let name = input.slice(semiC + 1);' +
-'\n  let result = code + \': \' + name;' +
-'\n  let listItem = document.createElement(\'li\');' +
-'\n  listItem.textContent = result;' +
-'\n  list.appendChild(listItem);' +
-'\n}';
+const jsSolution =
+  "const list = document.querySelector('.output ul');" +
+  "\nlist.innerHTML = '';" +
+  "\nlet stations = ['MAN675847583748sjt567654;Manchester Piccadilly'," +
+  "\n                'GNF576746573fhdg4737dh4;Greenfield'," +
+  "\n                'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street'," +
+  "\n                'SYB4f65hf75f736463;Stalybridge'," +
+  "\n                'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];" +
+  "\n" +
+  "\nfor (let i = 0; i < stations.length; i++) {" +
+  "\n  let input = stations[i];" +
+  "\n  let code = input.slice(0,3);" +
+  "\n  let semiC = input.indexOf(';');" +
+  "\n  let name = input.slice(semiC + 1);" +
+  "\n  let result = code + ': ' + name;" +
+  "\n  let listItem = document.createElement('li');" +
+  "\n  listItem.textContent = result;" +
+  "\n  list.appendChild(listItem);" +
+  "\n}";
 
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // タブキーでテキストエリアから抜けてしまうのを防ぎ、
 // 代わりにカーソル位置にタブ文字を挿入する
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -625,8 +631,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   const caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -638,10 +647,10 @@ function insertAtCaret(text) {
 
 // ユーザーがテキストエリアのコードを書き換える度に userCode を毎回更新する
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // ユーザーのコードが表示されているときのみ状態を保存し、
   // 答えのコードでユーザーコードが上書きされないようにする
-  if(solution.value === '答えを見る') {
+  if (solution.value === "答えを見る") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

@@ -168,11 +168,14 @@ La igualdad Same-value se encarga de un último caso de uso: determinar si dos v
 
 ```js
 // Add an immutable NEGATIVE_ZERO property to the Number constructor.
-Object.defineProperty(Number, "NEGATIVE_ZERO",
-                      { value: -0, writable: false, configurable: false, enumerable: false });
+Object.defineProperty(Number, "NEGATIVE_ZERO", {
+  value: -0,
+  writable: false,
+  configurable: false,
+  enumerable: false,
+});
 
-function attemptMutation(v)
-{
+function attemptMutation(v) {
   Object.defineProperty(Number, "NEGATIVE_ZERO", { value: v });
 }
 ```
@@ -235,7 +238,7 @@ Aquí podemos ver una lista exhaustiva de los método y operadores nativos que p
   - : Obviamente negar 0 genera -0. `Pero al abstracción de una expresión puede causar que un valor -0 se cuele sin darte cuenta` Consideremos el siguiente ejemplo:
 
     ```js
-    let stoppingForce = obj.mass * -obj.velocity
+    let stoppingForce = obj.mass * -obj.velocity;
     ```
 
     Si `obj.velocity` is `0` (o se calcula como `0`), se inserta `-0` en ese lugar y este valor se propaga a `stoppingForce`.

@@ -24,13 +24,13 @@ Vous pouvez trouver des exemples et des détails en lisant la documentation sur 
 Les méthodes de Selector acceptent un ou plusieurs sélecteurs séparés par des virgules pour déterminer les éléments à renvoyer. Par exemple, pour sélectionner tous les éléments paragraphe (`p`) dans le document dont la classe CSS est soit `warning` soit `note`, vous pouvez utiliser ce qui suit :
 
 ```js
-var special = document.querySelectorAll( "p.warning, p.note" );
+var special = document.querySelectorAll("p.warning, p.note");
 ```
 
 Vous pouvez aussi interroger par l'ID (_identifiant_). Par exemple :
 
 ```js
-var el = document.querySelector( "#main, #basic, #exclamation" );
+var el = document.querySelector("#main, #basic, #exclamation");
 ```
 
 Après l'exécution du code ci-dessus, `el` contient le premier élément dans le document dont l'ID est `main`, `basic` ou `exclamation`.

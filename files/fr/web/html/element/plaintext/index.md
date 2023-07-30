@@ -1,5 +1,5 @@
 ---
-title: '<plaintext> : l''élément de texte brut (déprécié)'
+title: "<plaintext> : l'élément de texte brut (déprécié)"
 slug: Web/HTML/Element/plaintext
 translation_of: Web/HTML/Element/plaintext
 ---

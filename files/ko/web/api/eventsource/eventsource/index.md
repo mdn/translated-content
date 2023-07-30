@@ -23,15 +23,15 @@ eventSource = new EventSource(url, configuration);
 ## 예시
 
 ```js
-var evtSource = new EventSource('sse.php');
-var eventList = document.querySelector('ul');
+var evtSource = new EventSource("sse.php");
+var eventList = document.querySelector("ul");
 
-evtSource.onmessage = function(e) {
+evtSource.onmessage = function (e) {
   var newElement = document.createElement("li");
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 > **참고:** GitHub 에서 전체 예시를 확인할 수 있습니다 — [Simple SSE demo using PHP를 사용하는 간단한 SSE 데모](https://github.com/mdn/dom-examples/tree/master/server-sent-events)를 보세요.

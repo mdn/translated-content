@@ -27,12 +27,12 @@ translation_of: Learn/JavaScript/Asynchronous/Introducing
 Большая часть функциональности, которую мы рассматривали в предыдущих обучающих модулях, является синхронной — вы запускаете какой-то код, а результат возвращается, как только браузер может его вернуть. Давайте рассмотрим простой пример ( посмотрите [онлайн](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/basic-function.html), как это работает и посмотрите [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/basic-function.html)):
 
 ```js
-const btn = document.querySelector('button');
-btn.addEventListener('click', () => {
-  alert('You clicked me!');
+const btn = document.querySelector("button");
+btn.addEventListener("click", () => {
+  alert("You clicked me!");
 
-  let pElem = document.createElement('p');
-  pElem.textContent = 'This is a newly-added paragraph.';
+  let pElem = document.createElement("p");
+  pElem.textContent = "This is a newly-added paragraph.";
   document.body.appendChild(pElem);
 });
 ```
@@ -42,10 +42,10 @@ btn.addEventListener('click', () => {
 1. Получаем ссылку на элемент {{htmlelement("button")}}, который уже есть в DOM.
 2. Добавляем к кнопке обработчик события [`click`](/ru/docs/Web/API/Element/click_event) так, что при нажатии на неё:
 
-    1. Выводится сообщение [`alert()`](/ru/docs/Web/API/Window/alert).
-    2. После закрытия сообщения создаём элемент {{htmlelement("p")}} (абзац).
-    3. Затем добавляем в абзац текст.
-    4. В конце добавляем созданный абзац в тело документа.
+   1. Выводится сообщение [`alert()`](/ru/docs/Web/API/Window/alert).
+   2. После закрытия сообщения создаём элемент {{htmlelement("p")}} (абзац).
+   3. Затем добавляем в абзац текст.
+   4. В конце добавляем созданный абзац в тело документа.
 
 Пока выполняется каждая операция, ничего больше не может произойти — обработка (отображение) документа приостановлена. Так происходит, как было сказано [в предыдущей статье](/ru/docs/Learn/JavaScript/Asynchronous/Introducing), потому что [JavaScript является однопоточным](/ru/docs/Learn/JavaScript/Asynchronous/Concepts#JavaScript_%D0%BE%D0%B4%D0%BD%D0%BE%D0%BF%D0%BE%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B9). В каждый момент времени может выполняться только одна команда, обрабатываемая в единственном — главном потоке. Все остальные действия блокируются до окончания выполнения текущей команды.
 
@@ -66,7 +66,7 @@ btn.addEventListener('click', () => {
 Почему трудно работать, используя синхронный код? Давайте посмотрим на небольшой пример. Когда вы получаете картинку с сервера, вы не можете мгновенно вернуть результат. Это значит что следующий (псевдо) код не сработает:
 
 ```js
-let response = fetch('myImage.png');
+let response = fetch("myImage.png");
 let blob = response.blob();
 // display your image blob in the UI somehow
 ```
@@ -82,11 +82,11 @@ let blob = response.blob();
 Пример асинхронного колбэка вторым параметром {{domxref("EventTarget.addEventListener", "addEventListener()")}} (как мы видели выше):
 
 ```js
-btn.addEventListener('click', () => {
-  alert('You clicked me!');
+btn.addEventListener("click", () => {
+  alert("You clicked me!");
 
-  let pElem = document.createElement('p');
-  pElem.textContent = 'This is a newly-added paragraph.';
+  let pElem = document.createElement("p");
+  pElem.textContent = "This is a newly-added paragraph.";
   document.body.appendChild(pElem);
 });
 ```
@@ -100,10 +100,10 @@ btn.addEventListener('click', () => {
 ```js
 function loadAsset(url, type, callback) {
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', url);
+  xhr.open("GET", url);
   xhr.responseType = type;
 
-  xhr.onload = function() {
+  xhr.onload = function () {
     callback(xhr.response);
   };
 
@@ -113,12 +113,12 @@ function loadAsset(url, type, callback) {
 function displayImage(blob) {
   const objectURL = URL.createObjectURL(blob);
 
-  const image = document.createElement('img');
+  const image = document.createElement("img");
   image.src = objectURL;
   document.body.appendChild(image);
 }
 
-loadAsset('coffee.jpg', 'blob', displayImage);
+loadAsset("coffee.jpg", "blob", displayImage);
 ```
 
 Мы создали функцию `displayImage()`, которая представляет blob, переданный в неё, как объект URL, и создаёт картинку, в которой отображается URL, добавляя её в элемент документа `<body>`. Однако, далее мы создаём функцию `loadAsset()`, которая принимает колбэк-функцию в качестве параметра, вместе с URL для получения данных и типом контента. Для получения данных из URL используется `XMLHttpRequest` (часто сокращается до аббревиатуры "XHR") , перед тем как передать ответ в колбэк-функцию для дальнейшей обработки. В этом случае колбэк-функция ждёт, пока XHR закончит загрузку данных (используя обработчик события [`onload`](/ru/docs/Web/API/XMLHttpRequestEventTarget/onload)) перед отправкой данных в колбэк-функцию.
@@ -128,10 +128,10 @@ loadAsset('coffee.jpg', 'blob', displayImage);
 Заметьте, что не все колбэк-функции асинхронны — некоторые запускаются синхронно. Например, при использовании {{jsxref("Array.prototype.forEach()")}} для перебора элементов массива ([запустите пример](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/foreach.html), и [посмотрите исходный код](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/foreach.html)):
 
 ```js
-const gods = ['Apollo', 'Artemis', 'Ares', 'Zeus'];
+const gods = ["Apollo", "Artemis", "Ares", "Zeus"];
 
-gods.forEach(function (eachName, index){
-  console.log(index + '. ' + eachName);
+gods.forEach(function (eachName, index) {
+  console.log(index + ". " + eachName);
 });
 ```
 
@@ -142,15 +142,15 @@ gods.forEach(function (eachName, index){
 Промисы — новый стиль написания асинхронного кода, который используется в современных Web API. Хорошим примером является [`fetch()`](/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch) API, который современнее и эффективнее чем {{domxref("XMLHttpRequest")}}. Посмотрим на краткий пример, из нашей статьи [Fetching data from the server](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data):
 
 ```js
-fetch('products.json')
-  .then( response => {
+fetch("products.json")
+  .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.json();
   })
-  .then( json => initialize(json) )
-  .catch( err => console.error(`Fetch problem: ${err.message}`) );
+  .then((json) => initialize(json))
+  .catch((err) => console.error(`Fetch problem: ${err.message}`));
 ```
 
 > **Примечание:** вы можете посмотреть законченную версию на github ([посмотрите исходный код](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-script.js) и [запустите пример](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/)).
@@ -184,22 +184,27 @@ fetch('products.json')
 Давайте рассмотрим пример, который дополнительно иллюстрирует природу асинхронного кода, показывая, что может произойти, когда мы не полностью осознаем порядок выполнения кода, и проблемы, связанные с попыткой трактовать асинхронный код как синхронный. Следующий пример довольно похож на тот, что мы видели раньше. Одно из отличий состоит в том, что мы включили ряд операторов {{domxref("console.log()")}} чтобы проиллюстрировать порядок, в котором, как вы думаете, будет выполняться код.
 
 ```js
-console.log ('Starting');
+console.log("Starting");
 let image;
 
-fetch('coffee.jpg').then((response) => {
-  console.log('It worked :)')
-  return response.blob();
-}).then((myBlob) => {
-  const objectURL = URL.createObjectURL(myBlob);
-  image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-}).catch((error) => {
-  console.log('There has been a problem with your fetch operation: ' + error.message);
-});
+fetch("coffee.jpg")
+  .then((response) => {
+    console.log("It worked :)");
+    return response.blob();
+  })
+  .then((myBlob) => {
+    const objectURL = URL.createObjectURL(myBlob);
+    image = document.createElement("img");
+    image.src = objectURL;
+    document.body.appendChild(image);
+  })
+  .catch((error) => {
+    console.log(
+      "There has been a problem with your fetch operation: " + error.message,
+    );
+  });
 
-console.log ('All done!');
+console.log("All done!");
 ```
 
 Браузер начнёт выполнение кода, увидит первый консольный оператор `(Starting)` и выполнит его, а затем создаст переменную `image`.
@@ -217,7 +222,7 @@ console.log ('All done!');
 ```js
 console.log("registering click handler");
 
-button.addEventListener('click', () => {
+button.addEventListener("click", () => {
   console.log("get click");
 });
 
@@ -231,7 +236,7 @@ console.log("all done");
 Чтобы увидеть это в действии, попробуйте взять локальную копию нашего [примера](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync.html) и измените третий вызов `console.log ()` следующим образом:
 
 ```js
-console.log ('All done! ' + image + 'displayed.');
+console.log("All done! " + image + "displayed.");
 ```
 
 Теперь вместо третьего сообщения должна возникнуть следующая ошибка:

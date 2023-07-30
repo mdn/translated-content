@@ -56,18 +56,17 @@ Neste exemplo, definimos uma função construtora, assim:
 
 ```js
 function Person(first, last, age, gender, interests) {
-
   // property and method definitions
   this.first = first;
   this.last = last;
-//...
+  //...
 }
 ```
 
 Nós criamos então uma instância de objeto como esta:
 
 ```js
-var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+var person1 = new Person("Bob", "Smith", 32, "male", ["music", "skiing"]);
 ```
 
 Se você digitar "`person1.`" em seu console JavaScript, você deve ver o navegador tentar concluir automaticamente isso com os nomes de membros disponíveis neste objeto:
@@ -81,7 +80,7 @@ Nesta lista, você verá os membros definidos no construtor de `person1`'s const
 O que acontece se você chamar um método em `person1`, que é realmente definido em `Object`? Por exemplo:
 
 ```js
-person1.valueOf()
+person1.valueOf();
 ```
 
 Este método — [`Object.valueOf()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) é herdado por `person1` porque seu construtor é `Person()`, e o protótipo de `Person()` é `Object()`. `valueOf()` retorna o valor do objeto em que é chamado — experimente e veja! Nesse caso, o que acontece é:
@@ -109,22 +108,22 @@ Portanto, [`Object.prototype.watch()`](/pt-BR/docs/Web/JavaScript/Reference/Glob
 
 1. Você pode conferir as propriedades de protótipo existentes para si mesmo — volte ao nosso exemplo anterior e tente inserir o seguinte no console JavaScript:
 
-    ```js
-    Person.prototype
-    ```
+   ```js
+   Person.prototype;
+   ```
 
 2. A saída não mostrará muito porque não definimos nada no protótipo do nosso construtor personalizado! Por padrão, o `prototype` de um construtor sempre começa vazio. Agora tente o seguinte:
 
-    ```js
-    Object.prototype
-    ```
+   ```js
+   Object.prototype;
+   ```
 
 Você verá um grande número de métodos definidos na propriedade `prototype` do `Object`, que estão disponíveis em objetos que herdam `Object`, como mostrado anteriormente.
 
 Você verá outros exemplos de herança de cadeia de protótipos em todo o JavaScript — tente procurar os métodos e propriedades definidos no protótipo dos objetos globais [`String`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String), [`Date`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date), [`Number`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number), e [`Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array), por exemplo. Estes todos têm um número de membros definidos em seu protótipo, e é por isso que, por exemplo, quando você cria uma string, como esta:
 
 ```js
-var myString = 'This is my string.';
+var myString = "This is my string.";
 ```
 
 `myString` imediatamente tem vários métodos úteis disponíveis, como [`split()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace), etc.
@@ -139,15 +138,15 @@ Anteriormente mostramos como o método [`Object.create()`](/pt-BR/docs/Web/JavaS
 
 1. Por exemplo, tente isso no console JavaScript do seu exemplo anterior:
 
-    ```js
-    var person2 = Object.create(person1);
-    ```
+   ```js
+   var person2 = Object.create(person1);
+   ```
 
 2. O que `create()` realmente faz é criar um novo objeto a partir de um objeto de protótipo especificado. Aqui, `person2` está sendo criado usando `person1` como um objeto de protótipo. Você pode verificar isso inserindo o seguinte no console:
 
-    ```js
-    person2.__proto__
-    ```
+   ```js
+   person2.__proto__;
+   ```
 
 Isso retornará o person1.
 
@@ -157,41 +156,44 @@ Toda função de construtor possui uma propriedade prototype cujo valor é um ob
 
 1. Por exemplo, tente estes comandos no console:
 
-    ```js
-    person1.constructor
-    person2.constructor
-    ```
+   ```js
+   person1.constructor;
+   person2.constructor;
+   ```
 
-    Estes devem retornar o construtor `Person()`, pois contém a definição original dessas instâncias.
+   Estes devem retornar o construtor `Person()`, pois contém a definição original dessas instâncias.
 
-    Um truque inteligente é que você pode colocar parênteses no final da propriedade do `constructor` (contendo quaisquer parâmetros necessários) para criar outra instância de objeto daquele construtor. O construtor é uma função depois de tudo, então pode ser chamado usando parênteses; você só precisa incluir a palavra-chave `new` para especificar que deseja usar a função como um construtor.
+   Um truque inteligente é que você pode colocar parênteses no final da propriedade do `constructor` (contendo quaisquer parâmetros necessários) para criar outra instância de objeto daquele construtor. O construtor é uma função depois de tudo, então pode ser chamado usando parênteses; você só precisa incluir a palavra-chave `new` para especificar que deseja usar a função como um construtor.
 
 2. Tente isso no console:
 
-    ```js
-    var person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);
-    ```
+   ```js
+   var person3 = new person1.constructor("Karen", "Stephenson", 26, "female", [
+     "playing drums",
+     "mountain climbing",
+   ]);
+   ```
 
 3. Agora tente acessar os recursos do seu novo objeto, por exemplo:
 
-    ```js
-    person3.name.first
-    person3.age
-    person3.bio()
-    ```
+   ```js
+   person3.name.first;
+   person3.age;
+   person3.bio();
+   ```
 
 Isso funciona bem. Você não precisará usá-lo com frequência, mas pode ser realmente útil quando você deseja criar uma nova instância e não tem uma referência ao construtor original facilmente disponível por algum motivo.
 
 A propriedade do [`constructor`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) tem outros usos. Por exemplo, se você tiver uma instância de objeto e desejar retornar o nome do construtor do qual ela é uma instância, use o seguinte:
 
 ```js
-instanceName.constructor.name
+instanceName.constructor.name;
 ```
 
 Tente isso, por exemplo:
 
 ```js
-person1.constructor.name
+person1.constructor.name;
 ```
 
 > **Nota:** O valor de `constructor.name` pode mudar (devido à herança prototípica, ligação, pré-processadores, transpilers, etc.), portanto, para exemplos mais complexos, você desejará usar o operador [`instanceof`](/pt-BR/docs/Web/JavaScript/Reference/Operators/instanceof).
@@ -202,17 +204,17 @@ Vamos dar uma olhada em um exemplo de modificação da propriedade `prototype` d
 
 1. Volte para o nosso exemplo de [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) e faça uma cópia local do [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). Abaixo do JavaScript existente, adicione o seguinte código, que adiciona um novo método à propriedade `prototype` do construtor:
 
-    ```js
-    Person.prototype.farewell = function() {
-      alert(this.name.first + ' has left the building. Bye for now!');
-    };
-    ```
+   ```js
+   Person.prototype.farewell = function () {
+     alert(this.name.first + " has left the building. Bye for now!");
+   };
+   ```
 
 2. Salve o código e carregue a página no navegador e tente inserir o seguinte na entrada de texto:
 
-    ```js
-    person1.farewell();
-    ```
+   ```js
+   person1.farewell();
+   ```
 
 Você deve receber uma mensagem de alerta, mostrando o nome da pessoa, conforme definido dentro do construtor. Isso é realmente útil, mas o que é ainda mais útil é que toda a cadeia de herança foi atualizada dinamicamente, disponibilizando automaticamente esse novo método em todas as instâncias de objeto derivadas do construtor.
 
@@ -220,15 +222,17 @@ Pense nisso por um momento. Em nosso código, definimos o construtor, então cri
 
 ```js
 function Person(first, last, age, gender, interests) {
-
   // property and method definitions
-
 }
 
-var person1 = new Person('Tammi', 'Smith', 32, 'neutral', ['music', 'skiing', 'kickboxing']);
+var person1 = new Person("Tammi", "Smith", 32, "neutral", [
+  "music",
+  "skiing",
+  "kickboxing",
+]);
 
-Person.prototype.farewell = function() {
-  alert(this.name.first + ' has left the building. Bye for now!');
+Person.prototype.farewell = function () {
+  alert(this.name.first + " has left the building. Bye for now!");
 };
 ```
 
@@ -239,13 +243,13 @@ Mas o método `farewell()` ainda está disponível na instância do objeto `pers
 Você raramente verá propriedades definidas na propriedade `prototype`, porque elas não são muito flexíveis quando definidas dessa forma. Por exemplo, você poderia adicionar uma propriedade assim:
 
 ```js
-Person.prototype.fullName = 'Bob Smith';
+Person.prototype.fullName = "Bob Smith";
 ```
 
 Isso não é muito flexível, pois a pessoa pode não ser chamada assim. Seria muito melhor construir o `fullName` fora do `name.first` e `name.last`:
 
 ```js
-Person.prototype.fullName = this.name.first + ' ' + this.name.last;
+Person.prototype.fullName = this.name.first + " " + this.name.last;
 ```
 
 No entanto, isso não funciona, pois `this` fará referência ao escopo global nesse caso, não ao escopo da função. Chamar essa propriedade retornaria `undefined undefined`. Isso funcionou bem no método que definimos anteriormente no protótipo porque ele está dentro um escopo de função, que será transferido com sucesso para o escopo da instância do objeto, portanto, você pode definir propriedades constantes no protótipo (ou seja, aquelas que nunca precisam ser alteradas), mas geralmente funciona melhor definir propriedades dentro do construtor.

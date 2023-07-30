@@ -45,7 +45,7 @@ switch (document.readyState) {
   case "complete":
     // 页面所有内容都已被完全加载。
     let CSS_rule = document.styleSheets[0].cssRules[0].cssText;
-    console.log(`The first CSS rule is: ${CSS_rule }`);
+    console.log(`The first CSS rule is: ${CSS_rule}`);
     break;
 }
 ```
@@ -58,7 +58,7 @@ document.onreadystatechange = function () {
   if (document.readyState === "interactive") {
     initApplication();
   }
-}
+};
 ```
 
 ### 模拟 load 事件的 readystatechange
@@ -69,7 +69,7 @@ document.onreadystatechange = function () {
   if (document.readyState === "complete") {
     initApplication();
   }
-}
+};
 ```
 
 ### 在 DOMContentLoaded 之前使用 readystatechange 作为事件处理程序以插入或修改 DOM

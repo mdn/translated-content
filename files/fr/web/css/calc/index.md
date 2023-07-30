@@ -82,7 +82,7 @@ input {
 }
 
 #boiteformulaire {
-  width: calc(100%/6);
+  width: calc(100% / 6);
   border: 1px solid black;
   padding: 4px;
 }
@@ -93,8 +93,8 @@ Dans ce cas, le formulaire est lui-même défini pour utiliser un sixième de la
 ```html
 <form>
   <div id="boiteformulaire">
-  <label>Tapez quelque chose :</label>
-  <input type="text">
+    <label>Tapez quelque chose :</label>
+    <input type="text" />
   </div>
 </form>
 ```

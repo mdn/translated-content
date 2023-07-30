@@ -49,7 +49,8 @@ On notera que, sur le plan fonctionnel, cela est équivalent à&nbsp;:
 #### CSS
 
 ```css
-menu, ul {
+menu,
+ul {
   display: flex;
   list-style: none;
   padding: 0;

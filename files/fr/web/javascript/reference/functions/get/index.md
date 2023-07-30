@@ -47,13 +47,12 @@ var o = {
   get dernier() {
     if (this.journal.length > 0) {
       return this.journal[this.journal.length - 1];
-    }
-    else {
+    } else {
       return null;
     }
   },
-  journal: ["toto","actu"]
-}
+  journal: ["toto", "actu"],
+};
 console.log(o.dernier); // "actu"
 ```
 
@@ -70,11 +69,15 @@ delete o.dernier;
 Afin d'ajouter un accesseur à un objet qui existe déjà, on peut utiliser la méthode {{jsxref("Object.defineProperty()")}}.
 
 ```js
-var o = { a:0 }
+var o = { a: 0 };
 
-Object.defineProperty(o, "b", { get: function () { return this.a + 1; } });
+Object.defineProperty(o, "b", {
+  get: function () {
+    return this.a + 1;
+  },
+});
 
-console.log(o.b) // Utilise l'accesseur qui génère a + 1 (qui correspond à 1)
+console.log(o.b); // Utilise l'accesseur qui génère a + 1 (qui correspond à 1)
 ```
 
 ### Utiliser un nom de propriété calculé
@@ -83,7 +86,9 @@ console.log(o.b) // Utilise l'accesseur qui génère a + 1 (qui correspond à 1)
 var expr = "toto";
 
 var obj = {
-  get [expr]() { return "truc"; }
+  get [expr]() {
+    return "truc";
+  },
 };
 
 console.log(obj.toto); // "truc"
@@ -121,16 +126,18 @@ Lorsqu'on utilise `get`, la propriété sera définie sur le prototype de l'obje
 ```js
 class Exemple {
   get coucou() {
-    return 'monde';
+    return "monde";
   }
 }
 
 const obj = new Exemple();
 console.log(obj.coucou);
 // "monde"
-console.log(Object.getOwnPropertyDescriptor(obj, 'coucou'));
+console.log(Object.getOwnPropertyDescriptor(obj, "coucou"));
 // undefined
-console.log(Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), 'coucou'));
+console.log(
+  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), "coucou"),
+);
 // { configurable: true, enumerable: false, get: function get coucou() { return 'monde'; }, set: undefined }
 ```
 

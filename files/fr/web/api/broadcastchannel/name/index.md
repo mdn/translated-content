@@ -20,7 +20,7 @@ Une chaîne
 
 ```js
 // Connexion à un canal
-const canal = new BroadcastChannel('canal_test');
+const canal = new BroadcastChannel("canal_test");
 
 // D'autres traitements (tel que postMessage, …)
 

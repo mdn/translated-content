@@ -20,9 +20,8 @@ La caractéristique `color` est définie avec un entier (type CSS {{cssxref("&lt
 
 ```html
 <p>
-   Ce texte sera noir pour les appareils qui ne prennent en charge
-   aucune couleur, rouge pour ceux qui prennent peu de couleurs en
-   charge et vert sinon.
+  Ce texte sera noir pour les appareils qui ne prennent en charge aucune
+  couleur, rouge pour ceux qui prennent peu de couleurs en charge et vert sinon.
 </p>
 ```
 

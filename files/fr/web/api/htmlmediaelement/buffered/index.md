@@ -13,7 +13,7 @@ La propriété **`buffered`** est une propriété en lecture seule rattachée à
 ## Syntaxe
 
 ```js
-let timeRange = audioObject.buffered
+let timeRange = audioObject.buffered;
 ```
 
 ### Valeur
@@ -23,7 +23,7 @@ Un nouvel [objet `TimeRanges` normalisé](/fr/docs/Web/API/TimeRanges#objets_tim
 ## Exemple
 
 ```js
-let obj = document.createElement('video');
+let obj = document.createElement("video");
 console.log(obj.buffered); // TimeRanges { length: 0 }
 ```
 

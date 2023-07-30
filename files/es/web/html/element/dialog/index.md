@@ -81,13 +81,15 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 <dialog id="favDialog">
   <form method="dialog">
     <section>
-      <p><label for="favAnimal">Favorite animal:</label>
-      <select id="favAnimal">
-        <option></option>
-        <option>Brine shrimp</option>
-        <option>Red panda</option>
-        <option>Spider monkey</option>
-      </select></p>
+      <p>
+        <label for="favAnimal">Favorite animal:</label>
+        <select id="favAnimal">
+          <option></option>
+          <option>Brine shrimp</option>
+          <option>Red panda</option>
+          <option>Spider monkey</option>
+        </select>
+      </p>
     </section>
     <menu>
       <button id="cancel" type="reset">Cancel</button>
@@ -101,21 +103,20 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 </menu>
 
 <script>
-  (function() {
-    var updateButton = document.getElementById('updateDetails');
-    var cancelButton = document.getElementById('cancel');
-    var favDialog = document.getElementById('favDialog');
+  (function () {
+    var updateButton = document.getElementById("updateDetails");
+    var cancelButton = document.getElementById("cancel");
+    var favDialog = document.getElementById("favDialog");
 
     // Update button opens a modal dialog
-    updateButton.addEventListener('click', function() {
+    updateButton.addEventListener("click", function () {
       favDialog.showModal();
     });
 
     // Form cancel button closes the dialog box
-    cancelButton.addEventListener('click', function() {
+    cancelButton.addEventListener("click", function () {
       favDialog.close();
     });
-
   })();
 </script>
 ```

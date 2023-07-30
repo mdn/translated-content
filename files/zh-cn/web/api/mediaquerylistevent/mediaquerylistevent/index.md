@@ -9,7 +9,7 @@ slug: Web/API/MediaQueryListEvent/MediaQueryListEvent
 
 ## 语法
 
-```js
+```js-nolint
 new MediaQueryListEvent(type)
 new MediaQueryListEvent(type, options)
 ```
@@ -32,10 +32,13 @@ new MediaQueryListEvent(type, options)
 ## 示例
 
 ```js
-var media = '(max-width: 600px)';
+var media = "(max-width: 600px)";
 var matches = true;
 
-var myMediaQueryListEvent = new MediaQueryListEvent("change", {media, matches});
+var myMediaQueryListEvent = new MediaQueryListEvent("change", {
+  media,
+  matches,
+});
 ```
 
 ## 规范

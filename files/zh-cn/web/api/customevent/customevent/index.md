@@ -33,13 +33,15 @@ The **`CustomEvent()`** constructor creates a new {{domxref("CustomEvent")}}.
 
 ```js
 // add an appropriate event listener
-obj.addEventListener("cat", function(e) { process(e.detail) });
+obj.addEventListener("cat", function (e) {
+  process(e.detail);
+});
 
 // create and dispatch the event
 var event = new CustomEvent("cat", {
   detail: {
-    hazcheeseburger: true
-  }
+    hazcheeseburger: true,
+  },
 });
 obj.dispatchEvent(event);
 ```
@@ -57,26 +59,35 @@ obj.dispatchEvent(event);
 You can polyfill the `CustomEvent()` constructor functionality in Internet Explorer 9 and higher with the following code:
 
 ```js
-(function(){
-    try{
-        // a : While a window.CustomEvent object exists, it cannot be called as a constructor.
-        // b : There is no window.CustomEvent object
-        new window.CustomEvent('T');
-    }catch(e){
-        var CustomEvent = function(event, params){
-            params = params || { bubbles: false, cancelable: false, detail: undefined };
+(function () {
+  try {
+    // a : While a window.CustomEvent object exists, it cannot be called as a constructor.
+    // b : There is no window.CustomEvent object
+    new window.CustomEvent("T");
+  } catch (e) {
+    var CustomEvent = function (event, params) {
+      params = params || {
+        bubbles: false,
+        cancelable: false,
+        detail: undefined,
+      };
 
-            var evt = document.createEvent('CustomEvent');
+      var evt = document.createEvent("CustomEvent");
 
-            evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+      evt.initCustomEvent(
+        event,
+        params.bubbles,
+        params.cancelable,
+        params.detail,
+      );
 
-            return evt;
-        };
+      return evt;
+    };
 
-        CustomEvent.prototype = window.Event.prototype;
+    CustomEvent.prototype = window.Event.prototype;
 
-        window.CustomEvent = CustomEvent;
-    }
+    window.CustomEvent = CustomEvent;
+  }
 })();
 ```
 

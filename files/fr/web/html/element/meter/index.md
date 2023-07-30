@@ -34,9 +34,7 @@ Comme pour les autres éléments HTML, cet élément inclut également [les attr
     >
     > ```html
     > Utilisation de l'espace de stockage:
-    > <meter value=6 max=8>
-    >   6 blocs utilisés (sur un total de 8)
-    > </meter>
+    > <meter value="6" max="8">6 blocs utilisés (sur un total de 8)</meter>
     > ```
     >
     > Il n'y a pas de moyen sémantique de décrire l'unité de l'attribut **`value`**, néanmoins l'attribut global **`title`** peut être utilisé pour cela.
@@ -48,8 +46,8 @@ Comme pour les autres éléments HTML, cet élément inclut également [les attr
 #### HTML
 
 ```html
-<p>Chauffez le four à
-  <meter min="100" max="250" value="180">180 degrés</meter>.
+<p>
+  Chauffez le four à <meter min="100" max="250" value="180">180 degrés</meter>.
 </p>
 ```
 

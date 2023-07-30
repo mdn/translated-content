@@ -1,5 +1,5 @@
 ---
-title: ':-moz-handler-blocked'
+title: ":-moz-handler-blocked"
 slug: Web/CSS/:-moz-handler-blocked
 translation_of: Web/CSS/:-moz-handler-blocked
 ---

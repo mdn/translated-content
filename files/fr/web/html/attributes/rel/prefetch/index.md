@@ -1,5 +1,5 @@
 ---
-title: 'Types de liens : prefetch'
+title: "Types de liens : prefetch"
 slug: Web/HTML/Attributes/rel/prefetch
 translation_of: Web/HTML/Link_types/prefetch
 ---

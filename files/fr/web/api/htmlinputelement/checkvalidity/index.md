@@ -11,7 +11,7 @@ La méthode **`HTMLInputElement.checkValidity()`** renvoie une valeur booléenne
 ## Syntaxe
 
 ```js
-checkValidity()
+checkValidity();
 ```
 
 ### Paramètres

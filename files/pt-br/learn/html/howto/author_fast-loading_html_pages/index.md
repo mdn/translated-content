@@ -120,21 +120,24 @@ Note, contudo, que muitas das dicas listadas neste artigo são técnicas de sens
 
 ## Exemplo de estrutura de página
 
-- `HTML`
+- `html`
 
-- `HEAD`
-  - `LINK`...
+- `head`
+
+  - `link`...
     Arquivos CSS requeridos para a aparência da página. Minimize o número de arquivos para performance enquanto mantém CSS não-relacionado em arquivos separados para manutenção.
 
-  - `SCRIPT`...
+  - `script`...
     Arquivos JavaScript para funções **requeridas** durante o carregamento da página, sem qualquer DHTML que só pode ser executado após o carregamento completo.
+
 - Minimize o número de arquivos para performance enquanto mantém JavaScript não-relacionado em arquivos separados para manutenção.
 
-- `BODY`
+- `body`
 - Páginas de conteúdo visíveis ao usuário em pequenas divisões (tabelas / divs) que podem ser exibidas sem esperar a página inteira ser baixada.
 
-  - `SCRIPT`...
+  - `script`...
     Quaisquer scripts que forem usados para realizar DHTML. Um script DHTML geralmente só pode ser executado após o carregamento completo da página e a inicialização de todos os objetos necessários. Não há necessidade de carregar esses scripts antes do conteúdo. Isso apenas desacelera a aparência inicial do carregamento da página.
+
 - Minimize o número de arquivos para performance enquanto mantém CSS não-relacionado em arquivos separados para manutenção.
 - Se uma ou mais imagens forem usadas para efeitos de _rollover_, você deve pré-carregá-las aqui após o conteúdo da página ter sido baixado.
 

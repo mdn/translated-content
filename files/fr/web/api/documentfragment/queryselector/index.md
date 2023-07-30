@@ -42,10 +42,10 @@ L'argument chaîne transmis à `querySelector` doit suivre la syntaxe CSS. Pour 
 <div id="foo:bar"></div>
 
 <script>
-document.querySelector('#foo\bar')    // Ne correspond à rien
-document.querySelector('#foo\\\\bar') // Correspond au premier div
-document.querySelector('#foo:bar')     //  Ne correspond à rien
-document.querySelector('#foo\\:bar')   // Correspond au second div
+  document.querySelector("#foo\bar"); // Ne correspond à rien
+  document.querySelector("#foo\\\\bar"); // Correspond au premier div
+  document.querySelector("#foo:bar"); //  Ne correspond à rien
+  document.querySelector("#foo\\:bar"); // Correspond au second div
 </script>
 ```
 

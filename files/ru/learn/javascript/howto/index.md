@@ -5,6 +5,7 @@ tags:
   - Начинающий
 translation_of: Learn/JavaScript/Howto
 ---
+
 {{LearnSidebar}}
 
 Следующие ссылки указывают на решение общих повседневных проблем, которые вам нужно будет исправить, чтобы код JavaScript работал правильно.
@@ -42,8 +43,8 @@ translation_of: Learn/JavaScript/Howto
 
 ```js
 function myFunction() {
-  alert('This is my function.');
-};
+  alert("This is my function.");
+}
 ```
 
 Этот код ничего не сделает, если вы его не вызовете, например
@@ -74,9 +75,9 @@ var myNumber = 0;
 
 ```js
 var myObject = {
-  name : 'Chris',
-  age : 38
-}
+  name: "Chris",
+  age: 38,
+};
 ```
 
 ## Basic definitions

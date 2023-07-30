@@ -1,5 +1,5 @@
 ---
-title: 'Window: message event'
+title: "Window: message event"
 slug: Web/API/Window/message_event
 translation_of: Web/API/Window/message_event
 ---
@@ -41,19 +41,19 @@ Supposons qu'un script envoie un message à un contexte de navigation différent
 
 ```js
 const targetFrame = window.top.frames[1];
-const targetOrigin = 'https://exemple.org';
-const windowMessageButton = document.querySelector('#window-message');
+const targetOrigin = "https://exemple.org";
+const windowMessageButton = document.querySelector("#window-message");
 
-windowMessageButton.addEventListener('click', () => {
-    targetFrame.postMessage('bonjour', targetOrigin);
+windowMessageButton.addEventListener("click", () => {
+  targetFrame.postMessage("bonjour", targetOrigin);
 });
 ```
 
 Le récepteur peut écouter le message en utilisant [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) avec un code comme celui-ci:
 
 ```js
-window.addEventListener('message', (event) => {
-    console.log(`Message reçu: ${event.data}`);
+window.addEventListener("message", (event) => {
+  console.log(`Message reçu: ${event.data}`);
 });
 ```
 
@@ -61,7 +61,7 @@ Alternativement l'écouteur peut utiliser la propriété du gestionnaire d'évé
 
 ```js
 window.onmessage = (event) => {
-    console.log(`Message reçu: ${event.data}`);
+  console.log(`Message reçu: ${event.data}`);
 };
 ```
 

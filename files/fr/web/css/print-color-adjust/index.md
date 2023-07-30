@@ -60,12 +60,17 @@ Dans cet exemple, on a une boîte qui utilise [`background-image`](/fr/docs/Web/
 ```css
 .ma-boite {
   background-color: black;
-  background-image: linear-gradient(rgba(0, 0, 180, 0.5), rgba(70, 140, 220, 0.5));
+  background-image: linear-gradient(
+    rgba(0, 0, 180, 0.5),
+    rgba(70, 140, 220, 0.5)
+  );
   color: #900;
   width: 15rem;
   height: 6rem;
   text-align: center;
-  font: 24px "Helvetica", sans-serif;
+  font:
+    24px "Helvetica",
+    sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;

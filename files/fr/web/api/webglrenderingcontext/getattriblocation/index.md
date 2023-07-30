@@ -28,7 +28,7 @@ Un nombre {{domxref("GLint")}} indiquant l'emplacement du nom de la variable si 
 ## Exemples
 
 ```js
-gl.getAttribLocation(programme, 'vColor');
+gl.getAttribLocation(programme, "vColor");
 ```
 
 ## Spécifications

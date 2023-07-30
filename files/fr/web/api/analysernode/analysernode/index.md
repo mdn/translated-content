@@ -11,7 +11,7 @@ Le constructeur **`AnalyserNode`** crée un nouvel objet {{domxref("AnalyserNode
 ## Syntaxe
 
 ```js
-var analyserNode = new AnalyserNode(context, options)
+var analyserNode = new AnalyserNode(context, options);
 ```
 
 ### Paramètres

@@ -73,9 +73,9 @@ Cet exemple crée un tampon de deux secondes, le remplit avec du bruit blanc et 
 
 ```js
 var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
-var bouton = document.querySelector('button');
-var pre = document.querySelector('pre');
-var monScript = document.querySelector('script');
+var bouton = document.querySelector("button");
+var pre = document.querySelector("pre");
+var monScript = document.querySelector("script");
 
 pre.innerHTML = monScript.innerHTML;
 
@@ -86,19 +86,23 @@ var canaux = 2;
 // au taux d'échantillonnage du AudioContext
 var compteurTrames = contexteAudio.sampleRate * 2.0;
 
-var myArrayBuffer = contexteAudio.createBuffer(2, compteurTrames, contexteAudio.sampleRate);
+var myArrayBuffer = contexteAudio.createBuffer(
+  2,
+  compteurTrames,
+  contexteAudio.sampleRate,
+);
 
-bouton.onclick = function() {
+bouton.onclick = function () {
   // remplit le tampon avec du bruit blanc;
   // valeurs aléatoires entre -1.0 et 1.0
   for (var canal = 0; canal < canaux; canal++) {
-   // crée le ArrayBuffer qui contient les données
-   var nowBuffering = myArrayBuffer.getChannelData(canal);
-   for (var i = 0; i < compteurTrames; i++) {
-     // Math.random() est compris entre [0; 1.0]
-     // audio doit être compris entre [-1.0; 1.0]
-     nowBuffering[i] = Math.random() * 2 - 1;
-   }
+    // crée le ArrayBuffer qui contient les données
+    var nowBuffering = myArrayBuffer.getChannelData(canal);
+    for (var i = 0; i < compteurTrames; i++) {
+      // Math.random() est compris entre [0; 1.0]
+      // audio doit être compris entre [-1.0; 1.0]
+      nowBuffering[i] = Math.random() * 2 - 1;
+    }
   }
 
   // crée AudioBufferSourceNode.
@@ -111,7 +115,7 @@ bouton.onclick = function() {
   source.connect(contexteAudio.destination);
   // lance la lecture de la source
   source.start();
-}
+};
 ```
 
 > **Note :** Pour un exemple de `decodeAudioData()`, voir la page {{domxref("AudioContext.decodeAudioData")}}.

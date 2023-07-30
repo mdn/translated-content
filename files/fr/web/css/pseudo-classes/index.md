@@ -10,7 +10,7 @@ Une **pseudo-classe** est un mot-clé qui peut être ajouté à un sélecteur af
 
 ```css
 div:hover {
-  background-color: #F89B4D;
+  background-color: #f89b4d;
 }
 ```
 
@@ -100,7 +100,7 @@ sélecteur:pseudo-classe {
   background-color: palegreen;
 }
 
-p:nth-child(2n+1) {
+p:nth-child(2n + 1) {
   background-color: lime;
 }
 ```
@@ -110,19 +110,17 @@ p:nth-child(2n+1) {
 ```html
 <div>
   <p class="survol">
-    La Reine devint pourpre de colère&nbsp;; et après
-    l’avoir considérée un moment avec des yeux
-    flamboyants comme ceux d’une bête fauve, elle
-    se mit à crier&nbsp;: «&nbsp;Qu’on lui coupe la tête&nbsp;!&nbsp;»
+    La Reine devint pourpre de colère&nbsp;; et après l’avoir considérée un
+    moment avec des yeux flamboyants comme ceux d’une bête fauve, elle se mit à
+    crier&nbsp;: «&nbsp;Qu’on lui coupe la tête&nbsp;!&nbsp;»
   </p>
   <p>
-    «&nbsp;Quelle idée&nbsp;!&nbsp;» dit Alice très-haut et d’un
-    ton décidé. La Reine se tut.
+    «&nbsp;Quelle idée&nbsp;!&nbsp;» dit Alice très-haut et d’un ton décidé. La
+    Reine se tut.
   </p>
   <p>
-    Le Roi lui posa la main sur le bras, et lui
-    dit timidement&nbsp;: «&nbsp;Considérez donc, ma chère
-    amie, que ce n’est qu’une enfant.&nbsp;»
+    Le Roi lui posa la main sur le bras, et lui dit timidement&nbsp;:
+    «&nbsp;Considérez donc, ma chère amie, que ce n’est qu’une enfant.&nbsp;»
   </p>
 </div>
 ```

@@ -41,7 +41,7 @@ slug: Web/CSS/CSS_Values_and_Units
 
 ```css
 .item::after {
-    content: "This is my content.";
+  content: "This is my content.";
 }
 ```
 
@@ -61,7 +61,7 @@ left | right | none | inline-start | inline-end
 
 ```css
 .box {
-    float: left;
+  float: left;
 }
 ```
 

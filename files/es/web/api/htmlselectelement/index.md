@@ -82,13 +82,13 @@ _This interface inherits the methods of {{domxref("HTMLElement")}}, and of {{dom
 </select>
 */
 
-var select = document.getElementById('s');
+var select = document.getElementById("s");
 
 // return the index of the selected option
 console.log(select.selectedIndex); // 1
 
 // return the value of the selected option
-console.log(select.options[select.selectedIndex].value) // Second
+console.log(select.options[select.selectedIndex].value); // Second
 ```
 
 A better way to track changes to the user's selection is to watch for the [`change`](/es/docs/Web/Reference/Events/change) event to occur on the `<select>`. This will tell you when the value changes, and you can then update anything you need to. See [the example provided](/es/docs/Web/Events/change#Example_Change_event_on_a_select) in the documentation for the `change` event for details.

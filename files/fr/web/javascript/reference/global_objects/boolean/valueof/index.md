@@ -13,7 +13,7 @@ La méthode **`valueOf()`** renvoie la valeur primitive de l'objet {{jsxref("Boo
 ## Syntaxe
 
 ```js
-bool.valueOf()
+bool.valueOf();
 ```
 
 ### Valeur de retour
@@ -32,7 +32,7 @@ Cette méthode est généralement utilisée de façon interne pas le moteur Java
 
 ```js
 var x = new Boolean();
-var maVar = x.valueOf()      // assigne false à maVar
+var maVar = x.valueOf(); // assigne false à maVar
 ```
 
 ## Spécifications

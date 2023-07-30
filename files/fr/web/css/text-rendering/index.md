@@ -64,8 +64,20 @@ Cet exemple illustre comment `optimizeLegibility` est automatiquement utilisé p
 #### CSS
 
 ```css
-.small { font: 19.9px "Times New Roman", "Georgia", "Palatino", serif; }
-.big   { font: 20px "Times New Roman", "Georgia", "Palatino", serif; }
+.small {
+  font:
+    19.9px "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
+}
+.big {
+  font:
+    20px "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
+}
 ```
 
 #### HTML
@@ -86,10 +98,20 @@ Cet exemple illustre la différence d'apparence entre `optimizeSpeed` et `optimi
 #### CSS
 
 ```css
-p { font: 1.5em "Times New Roman", "Georgia", "Palatino", serif }
+p {
+  font:
+    1.5em "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
+}
 
-.speed       { text-rendering: optimizeSpeed; }
-.legibility  { text-rendering: optimizeLegibility; }
+.speed {
+  text-rendering: optimizeSpeed;
+}
+.legibility {
+  text-rendering: optimizeLegibility;
+}
 ```
 
 #### HTML

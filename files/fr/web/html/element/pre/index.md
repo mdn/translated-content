@@ -1,5 +1,5 @@
 ---
-title: '<pre> : l''élément de texte préformaté'
+title: "<pre> : l'élément de texte préformaté"
 slug: Web/HTML/Element/pre
 l10n:
   sourceCommit: 6aa2d63aef51ada47960f4754b601af66a99d63c
@@ -90,8 +90,8 @@ Pour légender un tel diagramme, on pourra utiliser une combinaison d'éléments
                   ||     ||
   </pre>
   <figcaption id="cow-caption">
-    Une vache qui dit "Je suis la meuhieure.". La vache
-    est illustrée à l'aide de caractères préformatés.
+    Une vache qui dit "Je suis la meuhieure.". La vache est illustrée à l'aide
+    de caractères préformatés.
   </figcaption>
 </figure>
 ```

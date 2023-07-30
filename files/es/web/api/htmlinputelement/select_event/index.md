@@ -18,32 +18,32 @@ window.onselect = funcRef;
 
 ```html
 <html>
-<head>
+  <head>
+    <title>onselect test</title>
 
-<title>onselect test</title>
+    <style type="text/css">
+      .text1 {
+        border: 2px solid red;
+      }
+    </style>
 
-<style type="text/css">
-.text1 { border: 2px solid red; }
-</style>
+    <script type="text/javascript">
+      window.onselect = selectText;
 
-<script type="text/javascript">
+      function selectText() {
+        alert("¡detectado evento select!");
+      }
+    </script>
+  </head>
 
-window.onselect = selectText;
-
-function selectText()
-{
- alert("¡detectado evento select!");
-}
-</script>
-</head>
-
-<body>
-<textarea class="text1" cols="30" rows="3">
+  <body>
+    <textarea class="text1" cols="30" rows="3">
 Resalte algo de este texto
 con el puntero del ratón
 para disparar el evento onselect.
-</textarea>
-</body>
+</textarea
+    >
+  </body>
 </html>
 ```
 

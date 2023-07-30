@@ -18,7 +18,7 @@ Gecko-based browsers, have a third _[Almost Standards Mode](/ko/docs/Mozilla/Gec
 The standard `DOCTYPE` declaration that will trigger standards mode is:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 ```
 
 When at all possible, you should just use the above doctype. There are other valid legacy doctypes that will trigger Standards or Almost Standards mode:

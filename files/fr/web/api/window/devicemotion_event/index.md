@@ -1,5 +1,5 @@
 ---
-title: 'Window: devicemotion event'
+title: "Window: devicemotion event"
 slug: Web/API/Window/devicemotion_event
 translation_of: Web/API/Window/devicemotion_event
 ---
@@ -33,7 +33,6 @@ L'évènement `devicemotion` est déclenché à intervalles réguliers et indiqu
 
 ```js
 function handleMotionEvent(event) {
-
   var x = event.accelerationIncludingGravity.x;
   var y = event.accelerationIncludingGravity.y;
   var z = event.accelerationIncludingGravity.z;

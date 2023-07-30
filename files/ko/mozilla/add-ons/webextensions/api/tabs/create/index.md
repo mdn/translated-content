@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
 
 새 탭을 만든다.
 
-이것은 비동기 함수로 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)를 돌려준다.
+이것은 비동기 함수로 [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)를 돌려준다.
 
 ## 문법
 
@@ -24,7 +24,7 @@ var creating = browser.tabs.create(
     - `active`{{optional_inline}}
       - : `boolean`. 활성탭이 되는지를 정한다. 윈도우의 포커스에는 영향이 없다({{WebExtAPIRef('windows.update')}} 참조). 기본값은 `true`.
     - `cookieStoreId` {{optional_inline}}
-      - : `string`. 탭의 쿠키 저장 ID를 `cookieStoreId`로 지정한다. 이 옵션은 확장이 `"cookies"` [권한](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)을 가져야 쓸 수 있다.
+      - : `string`. 탭의 쿠키 저장 ID를 `cookieStoreId`로 지정한다. 이 옵션은 확장이 `"cookies"` [권한](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)을 가져야 쓸 수 있다.
     - `index`{{optional_inline}}
       - : `integer`. 윈도우에서 탭의 위치를 지정한다. 쓸 수 있는 값은 0에서 윈도에 있는 탭의 수까지다.
     - `openerTabId`{{optional_inline}}
@@ -55,7 +55,7 @@ var creating = browser.tabs.create(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the created tab. If the tab could not be created (for example, because `url` used a privileged scheme) the promise will be rejected with an error message.
+A [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the created tab. If the tab could not be created (for example, because `url` used a privileged scheme) the promise will be rejected with an error message.
 
 ## 브라우저 호환성
 

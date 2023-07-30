@@ -11,7 +11,7 @@ La méthode **`HTMLElement.blur()`** retire le focus du clavier de l'élément c
 ## Syntaxe
 
 ```js
-blur()
+blur();
 ```
 
 ## Exemples
@@ -21,20 +21,23 @@ blur()
 #### HTML
 
 ```html
-<input type="text" id="monTexte" value="Texte d'échantillon">
-<br><br>
-<button type="button" onclick="focusInput()">Cliquez ici pour obtenir le focus</button>
-<button type="button" onclick="blurInput()">Cliquez ici pour perdre le focus</button>
+<input type="text" id="monTexte" value="Texte d'échantillon" /> <br /><br />
+<button type="button" onclick="focusInput()">
+  Cliquez ici pour obtenir le focus
+</button>
+<button type="button" onclick="blurInput()">
+  Cliquez ici pour perdre le focus
+</button>
 ```
 
 #### JavaScript
 
 ```js
 function focusInput() {
-  document.getElementById('monTexte').focus();
+  document.getElementById("monTexte").focus();
 }
 function blurInput() {
-  document.getElementById('monTexte').blur();
+  document.getElementById("monTexte").blur();
 }
 ```
 

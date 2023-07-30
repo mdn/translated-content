@@ -134,9 +134,9 @@ JavaScript 的一个非常常见的用途是通过文档对象模型 API（如�
 当浏览器执行到一段 JavaScript 代码时，通常会按从上往下的顺序执行这段代码。这意味着你需要注意代码书写的顺序。比如，我们回到第一个例子中的 JavaScript 代码：
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('click', updateName);
+para.addEventListener("click", updateName);
 
 function updateName() {
   const name = prompt("输入一个新的名字：");
@@ -272,10 +272,10 @@ function createParagraph() {
 与其在 HTML 中包含 JavaScript，不如使用纯 JavaScript 构造。通过 `querySelectorAll()` 函数，可以选择页面上的所有按钮。然后可以循环遍历这些按钮，使用 `addEventListener()` 为每个按钮分配一个处理器。代码如下所示：
 
 ```js
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll("button");
 
-for(let i = 0; i < buttons.length ; i++) {
-  buttons[i].addEventListener('click', createParagraph);
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", createParagraph);
 }
 ```
 

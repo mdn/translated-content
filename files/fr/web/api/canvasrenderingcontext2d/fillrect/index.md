@@ -6,7 +6,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fillRect
 
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D.fillRect()`** de l'API 2D des Canvas dessine un rectangle plein aux coordonnées _(x, y)_, aux dimensions déterminées par *largeur* et *hauteur* et au style déterminé par l'attribut `fillStyle`.
+La méthode **`CanvasRenderingContext2D.fillRect()`** de l'API 2D des Canvas dessine un rectangle plein aux coordonnées _(x, y)_, aux dimensions déterminées par _largeur_ et _hauteur_ et au style déterminé par l'attribut `fillStyle`.
 
 ## Syntaxe
 
@@ -17,9 +17,9 @@ void ctx.fillRect(x, y, largeur, hauteur);
 ### Paramètres
 
 - `x`
-  - : L'ordonnée *x* des coordonnées du point de départ du rectangle.
+  - : L'ordonnée _x_ des coordonnées du point de départ du rectangle.
 - `y`
-  - : L'abscisse *y* des coordonnées du point de départ du rectangle.
+  - : L'abscisse _y_ des coordonnées du point de départ du rectangle.
 - `largeur`
   - : La largeur du rectangle.
 - `hauteur`
@@ -61,7 +61,8 @@ ctx.fillRect(10, 10, 100, 100);
 </div>
 <textarea id="code" class="playable-code">
 ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);</textarea>
+ctx.fillRect(10, 10, 100, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -77,14 +78,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

@@ -41,14 +41,12 @@ Você recebeu alguns recursos de HTML, CSS e imagem e algumas linhas de código 
 <h1>Image gallery example</h1>
 
 <div class="full-img">
-  <img class="displayed-img" src="images/pic1.jpg">
+  <img class="displayed-img" src="images/pic1.jpg" />
   <div class="overlay"></div>
   <button class="dark">Darken</button>
 </div>
 
-<div class="thumb-bar">
-
-</div>
+<div class="thumb-bar"></div>
 ```
 
 O exemplo é assim:
@@ -100,7 +98,7 @@ Isso só deixa o nosso escurecer / clarear `<button>` — nós já fornecemos um
 As linhas seguintes fornecem uma base para alcançar as mudanças estipuladas nos pontos 2 e 3 acima.
 
 ```js
-btn.setAttribute('class', xxx);
+btn.setAttribute("class", xxx);
 btn.textContent = xxx;
 overlay.style.backgroundColor = xxx;
 ```

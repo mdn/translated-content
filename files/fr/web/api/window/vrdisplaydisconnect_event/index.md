@@ -1,5 +1,5 @@
 ---
-title: 'Window: vrdisplaydisconnect event'
+title: "Window: vrdisplaydisconnect event"
 slug: Web/API/Window/vrdisplaydisconnect_event
 translation_of: Web/API/Window/vrdisplaydisconnect_event
 ---
@@ -40,8 +40,8 @@ L'événement **`vrdisplaydisconnect`** de l'[API WebVR](/fr/docs/Web/API/WebVR_
 Vous pouvez utiliser l'événement `vrdisplaydisconnect` dans une méthode [`addEventListener`](/fr/docs/Web/API/EventTarget/addEventListener) :
 
 ```js
-window.addEventListener('vrdisplaydisconnect', function() {
-  info.textContent = 'Affichage déconnecté';
+window.addEventListener("vrdisplaydisconnect", function () {
+  info.textContent = "Affichage déconnecté";
   reportDisplays();
 });
 ```

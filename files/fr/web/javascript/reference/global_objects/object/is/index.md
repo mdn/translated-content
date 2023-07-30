@@ -48,32 +48,33 @@ Cette égalité est également différente de l'égalité stricte qu'on peut avo
 ## Exemples
 
 ```js
-Object.is("toto", "toto");     // true
-Object.is(window, window);     // true
+Object.is("toto", "toto"); // true
+Object.is(window, window); // true
 
-Object.is("toto", "truc");     // false
-Object.is([], []);             // false
+Object.is("toto", "truc"); // false
+Object.is([], []); // false
 
-var toto = {a: 1};
-var truc = {a: 1};
-Object.is(toto, toto);          // true
-Object.is(toto, truc);          // false
+var toto = { a: 1 };
+var truc = { a: 1 };
+Object.is(toto, toto); // true
+Object.is(toto, truc); // false
 
-Object.is(null, null);          // true
+Object.is(null, null); // true
 
 // Cas aux limites (cas spéciaux)
-Object.is(0, -0);                // false
-Object.is(-0, -0);               // true
-Object.is(NaN, 0/0);             // true
+Object.is(0, -0); // false
+Object.is(-0, -0); // true
+Object.is(NaN, 0 / 0); // true
 ```
 
 ## Prothèse d'émulation (_polyfill_)
 
 ```js
 if (!Object.is) {
-  Object.is = function(v1, v2) {
+  Object.is = function (v1, v2) {
     // Algorithme SameValue
-    if (v1 === v2) { //Étapes 1-5, 7-10
+    if (v1 === v2) {
+      //Étapes 1-5, 7-10
       //Étapes 6.b-6.b +0 !=-0
       return v1 !== 0 || 1 / v1 === 1 / v2;
     } else {

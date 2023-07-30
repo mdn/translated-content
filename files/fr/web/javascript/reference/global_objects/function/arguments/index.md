@@ -19,11 +19,13 @@ La valeur de la propriété `arguments` est normalement `null` si la fonction n'
 ## Exemples
 
 ```js
-function f(n) { g(n-1); }
+function f(n) {
+  g(n - 1);
+}
 
 function g(n) {
   console.log("avant : " + g.arguments[0]);
-  if(n>0) f(n);
+  if (n > 0) f(n);
   console.log("après : " + g.arguments[0]);
 }
 

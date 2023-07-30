@@ -1,5 +1,5 @@
 ---
-title: '<style> : l''élément d''information de style'
+title: "<style> : l'élément d'information de style"
 slug: Web/HTML/Element/style
 translation_of: Web/HTML/Element/style
 ---
@@ -43,16 +43,16 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 ```html
 <!doctype html>
 <html>
-<head>
-  <style>
-    p {
-      color: red;
-    }
-  </style>
-</head>
-<body>
-  <p>Voici un paragraphe.</p>
-</body>
+  <head>
+    <style>
+      p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Voici un paragraphe.</p>
+  </body>
 </html>
 ```
 
@@ -69,25 +69,25 @@ Dans cet exemple, on utilise deux éléments `<style>`, on peut voir comment les
 ```html
 <!doctype html>
 <html>
-<head>
-  <style>
-    p {
-      color: white;
-      background-color: blue;
-      padding: 5px;
-      border: 1px solid black;
-    }
-  </style>
-  <style>
-    p {
-      color: blue;
-      background-color: yellow;
-    }
-  </style>
-</head>
-<body>
-  <p>Voici un paragraphe.</p>
-</body>
+  <head>
+    <style>
+      p {
+        color: white;
+        background-color: blue;
+        padding: 5px;
+        border: 1px solid black;
+      }
+    </style>
+    <style>
+      p {
+        color: blue;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Voici un paragraphe.</p>
+  </body>
 </html>
 ```
 
@@ -104,25 +104,25 @@ Dans cet exemple (basé sur le précédent), on ajoute un attribut `media` sur l
 ```html
 <!doctype html>
 <html>
-<head>
-  <style>
-    p {
-      color: white;
-      background-color: blue;
-      padding: 5px;
-      border: 1px solid black;
-    }
-  </style>
-  <style media="all and (max-width: 500px)">
-    p {
-      color: blue;
-      background-color: yellow;
-    }
-  </style>
-</head>
-<body>
-  <p>Voici un paragraphe.</p>
-</body>
+  <head>
+    <style>
+      p {
+        color: white;
+        background-color: blue;
+        padding: 5px;
+        border: 1px solid black;
+      }
+    </style>
+    <style media="all and (max-width: 500px)">
+      p {
+        color: blue;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Voici un paragraphe.</p>
+  </body>
 </html>
 ```
 

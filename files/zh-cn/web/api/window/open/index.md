@@ -10,7 +10,9 @@ slug: Web/API/Window/open
 ## 语法
 
 ```js
-let windowObjectReference = window.open(strUrl, strWindowName, [strWindowFeatures]);
+let windowObjectReference = window.open(strUrl, strWindowName, [
+  strWindowFeatures,
+]);
 ```
 
 > **备注：** *strUrl === *要在新打开的窗口中加载的 URL。
@@ -49,12 +51,11 @@ let strWindowFeatures = `
 `;
 
 function openRequestedPopup() {
-    windowObjectReference =
-    window.open(
-        "http://www.cnn.com/",
-        "CNN_WindowName",
-        strWindowFeatures
-    );
+  windowObjectReference = window.open(
+    "http://www.cnn.com/",
+    "CNN_WindowName",
+    strWindowFeatures,
+  );
 }
 ```
 
@@ -62,12 +63,12 @@ function openRequestedPopup() {
 let WindowObjectReference;
 
 const openRequestedPopup = () => {
-    windowObjectReference = window.open(
-        "https://www.domainname.ext/path/ImageFile.png",
-        "DescriptiveWindowName",
-        "resizable,scrollbars,status"
-    );
-}
+  windowObjectReference = window.open(
+    "https://www.domainname.ext/path/ImageFile.png",
+    "DescriptiveWindowName",
+    "resizable,scrollbars,status",
+  );
+};
 ```
 
 如果已经存在以 _strWindowName_ 为名称的窗口，则不再打开一个新窗口，而是把 _strUrl_ 加载到这个窗口中。在这种情况下，方法的返回值是这个已经打开的窗口，并忽略参数 _strWindowFeatures_。*strUrl*设为空字符串时，可以在不改变窗口地址的情况下获得一个已经打开的同名窗口的引用。如果要在每次调用 `window.open()`时都打开一个新窗口，则要把参数 _strWindowName_ 设置为 `_blank`。
@@ -364,7 +365,7 @@ In cases where `left` and `screenX` (and/or `top` and `screenY`) have conflictin
 windowObjectReference = window.open(
   "http://news.bbc.co.uk/",
   "BBCWorldNewsWindowName",
-  "left=100,screenX=200,resizable,scrollbars,status"
+  "left=100,screenX=200,resizable,scrollbars,status",
 );
 ```
 
@@ -376,7 +377,7 @@ outerWidth has precedence over width and width has precedence over innerWidth. o
 windowObjectReference = window.open(
   "http://www.wwf.org/",
   "WWildlifeOrgWindowName",
-  "outerWidth=600,width=500,innerWidth=400,resizable,scrollbars,status"
+  "outerWidth=600,width=500,innerWidth=400,resizable,scrollbars,status",
 );
 ```
 

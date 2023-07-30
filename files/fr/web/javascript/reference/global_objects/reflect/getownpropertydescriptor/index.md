@@ -13,7 +13,7 @@ La méthode statique **`Reflect.getOwnPropertyDescriptor()`** est similaire à {
 ## Syntaxe
 
 ```js
-Reflect.getOwnPropertyDescriptor(cible, cléPropriété)
+Reflect.getOwnPropertyDescriptor(cible, cléPropriété);
 ```
 
 ### Paramètres
@@ -40,10 +40,10 @@ La méthode `Reflect.getOwnPropertyDescriptor` renvoie un descripteur pour la pr
 ### Utiliser `Reflect.getOwnPropertyDescriptor()`
 
 ```js
-Reflect.getOwnPropertyDescriptor({x: "coucou"}, "x");
+Reflect.getOwnPropertyDescriptor({ x: "coucou" }, "x");
 // {value: "coucou", writable: true, enumerable: true, configurable: true}
 
-Reflect.getOwnPropertyDescriptor({x: "coucou"}, "y");
+Reflect.getOwnPropertyDescriptor({ x: "coucou" }, "y");
 // undefined
 
 Reflect.getOwnPropertyDescriptor([], "length");

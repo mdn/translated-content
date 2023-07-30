@@ -49,7 +49,7 @@ var promise = import("module-name");//这是一个处于第三阶段的提案。
 这将`myModule`插入当前作用域，其中包含来自位于`/modules/my-module.js`文件中导出的所有接口。
 
 ```js
-import * as myModule from '/modules/my-module.js';
+import * as myModule from "/modules/my-module.js";
 ```
 
 在这里，访问导出接口意味着使用模块名称（在本例为“myModule”）作为命名空间。例如，如果上面导入的模块包含一个接口 `doAllTheAmazingThings()`，你可以这样调用：
@@ -63,7 +63,7 @@ myModule.doAllTheAmazingThings();
 给定一个名为 `myExport` 的对象或值，它已经从模块 `my-module` 导出（因为整个模块被导出）或显式地导出（使用 {{jsxref("Statements/export", "export")}} 语句），将 `myExport` 插入当前作用域。
 
 ```js
-import {myExport} from '/modules/my-module.js';
+import { myExport } from "/modules/my-module.js";
 ```
 
 ### 导入多个接口
@@ -71,7 +71,7 @@ import {myExport} from '/modules/my-module.js';
 这将 `foo` 和 `bar` 插入当前作用域。
 
 ```js
-import {foo, bar} from '/modules/my-module.js';
+import { foo, bar } from "/modules/my-module.js";
 ```
 
 ### 导入带有别名的接口
@@ -79,8 +79,7 @@ import {foo, bar} from '/modules/my-module.js';
 你可以在导入时重命名接口。例如，将 `shortName` 插入当前作用域。
 
 ```js
-import {reallyReallyLongModuleExportName as shortName}
-  from '/modules/my-module.js';
+import { reallyReallyLongModuleExportName as shortName } from "/modules/my-module.js";
 ```
 
 ### 导入时重命名多个接口
@@ -90,8 +89,8 @@ import {reallyReallyLongModuleExportName as shortName}
 ```js
 import {
   reallyReallyLongModuleMemberName as shortName,
-  anotherLongModuleName as short
-} from '/modules/my-module.js';
+  anotherLongModuleName as short,
+} from "/modules/my-module.js";
 ```
 
 ### 仅为副作用而导入一个模块
@@ -99,7 +98,7 @@ import {
 整个模块仅为副作用（中性词，无贬义含义）而导入，而不导入模块中的任何内容（接口）。这将运行模块中的全局代码，但实际上不导入任何值。
 
 ```js
-import '/modules/my-module.js';
+import "/modules/my-module.js";
 ```
 
 ### 导入默认值
@@ -109,20 +108,20 @@ import '/modules/my-module.js';
 最简单的用法是直接导入默认值：
 
 ```js
-import myDefault from '/modules/my-module.js';
+import myDefault from "/modules/my-module.js";
 ```
 
 也可以同时将 `default` 语法与上述用法（命名空间导入或命名导入）一起使用。在这种情况下，`default` 导入必须首先声明。例如：
 
 ```js
-import myDefault, * as myModule from '/modules/my-module.js';
+import myDefault, * as myModule from "/modules/my-module.js";
 // myModule used as a namespace
 ```
 
 或者
 
 ```js
-import myDefault, {foo, bar} from '/modules/my-module.js';
+import myDefault, { foo, bar } from "/modules/my-module.js";
 // specific, named imports
 ```
 
@@ -131,7 +130,11 @@ import myDefault, {foo, bar} from '/modules/my-module.js';
 ```js
 (async () => {
   if (somethingIsTrue) {
-    const { default: myDefault, foo, bar } = await import('/modules/my-module.js');
+    const {
+      default: myDefault,
+      foo,
+      bar,
+    } = await import("/modules/my-module.js");
   }
 })();
 ```
@@ -151,16 +154,15 @@ import myDefault, {foo, bar} from '/modules/my-module.js';
 关键字 import 可以像调用函数一样来动态的导入模块。以这种方式调用，将返回一个 `promise`。
 
 ```js
-import('/modules/my-module.js')
-  .then((module) => {
-    // Do something with the module.
-  });
+import("/modules/my-module.js").then((module) => {
+  // Do something with the module.
+});
 ```
 
 这种使用方式也支持 `await` 关键字。
 
 ```js
-let module = await import('/modules/my-module.js');
+let module = await import("/modules/my-module.js");
 ```
 
 ## 示例
@@ -175,24 +177,25 @@ let module = await import('/modules/my-module.js');
 function getJSON(url, callback) {
   let xhr = new XMLHttpRequest();
   xhr.onload = function () {
-    callback(this.responseText)
+    callback(this.responseText);
   };
-  xhr.open('GET', url, true);
+  xhr.open("GET", url, true);
   xhr.send();
 }
 
 export function getUsefulContents(url, callback) {
-  getJSON(url, data => callback(JSON.parse(data)));
+  getJSON(url, (data) => callback(JSON.parse(data)));
 }
 ```
 
 #### 主程序：main.js
 
 ```js
-import { getUsefulContents } from '/modules/file.js';
+import { getUsefulContents } from "/modules/file.js";
 
-getUsefulContents('http://www.example.com',
-    data => { doSomethingUseful(data); });
+getUsefulContents("http://www.example.com", (data) => {
+  doSomethingUseful(data);
+});
 ```
 
 ### 动态导入
@@ -202,14 +205,14 @@ getUsefulContents('http://www.example.com',
 ```js
 const main = document.querySelector("main");
 for (const link of document.querySelectorAll("nav > a")) {
-  link.addEventListener("click", e => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
 
-    import('/modules/my-module.js')
-      .then(module => {
+    import("/modules/my-module.js")
+      .then((module) => {
         module.loadPageInto(main);
       })
-      .catch(err => {
+      .catch((err) => {
         main.textContent = err.message;
       });
   });

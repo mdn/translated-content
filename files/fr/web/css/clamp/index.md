@@ -75,7 +75,9 @@ Ici on utilise l'unité `rem` pour fixer un maximum correspondant à deux fois l
 
 ```html
 <h1>Ce texte est toujours lisible mais sa taille ne change pas.</h1>
-<h1 class="responsive">Ce texte est toujours lisible et s'adapte dans une certaine mesure.</h1>
+<h1 class="responsive">
+  Ce texte est toujours lisible et s'adapte dans une certaine mesure.
+</h1>
 ```
 
 #### Résultat

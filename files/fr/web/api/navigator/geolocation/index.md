@@ -13,7 +13,7 @@ translation_of: Web/API/Navigator/geolocation
 ## Syntaxe
 
 ```js
-geo = navigator.geolocation
+geo = navigator.geolocation;
 ```
 
 ## Spécifications

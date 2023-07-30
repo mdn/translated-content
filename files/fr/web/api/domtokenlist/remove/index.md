@@ -52,7 +52,7 @@ Pour supprimer plusieurs classes à la fois, vous pouvez utiliser un tableau (_a
 let span = document.getElementsByTagName("span")[0],
   classes = span.classList;
 
-classes.remove(...['c', 'b']);
+classes.remove(...["c", "b"]);
 span.textContent = classes;
 ```
 

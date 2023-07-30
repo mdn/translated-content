@@ -74,10 +74,10 @@ l10n:
 {{htmlelement("script")}} 要素のすぐ内側に、以下のコードを追加してください。これは、 {{htmlelement("select")}} 要素と {{htmlelement("pre")}} 要素への参照を格納し、 `<select>` 要素にリスナーを追加して、ユーザーが新しい値を選択したときに、新しい値が引数として `updateDisplay()` という関数に渡されるようにするものです。
 
 ```js
-const verseChoose = document.querySelector('select');
-const poemDisplay = document.querySelector('pre');
+const verseChoose = document.querySelector("select");
+const poemDisplay = document.querySelector("pre");
 
-verseChoose.addEventListener('change', () => {
+verseChoose.addEventListener("change", () => {
   const verse = verseChoose.value;
   updateDisplay(verse);
 });
@@ -86,9 +86,7 @@ verseChoose.addEventListener('change', () => {
 `updateDisplay()` 関数を定義しましょう。まずはさっきのコードブロックの下に以下を書き足します。これは関数の空の箱です。
 
 ```js
-function updateDisplay(verse) {
-
-}
+function updateDisplay(verse) {}
 ```
 
 この関数は、後で必要になるので、読み込むテキストファイルを指し示す関連 URL を構築することから開始します。 {{htmlelement("select")}} 要素の値は、選択されている {{htmlelement("option")}} の中のテキストと常に同じです（value 属性で異なる値を指定しない限り）。対応する連のテキストファイルは "verse1.txt" で、 HTML ファイルと同じディレクトリーにあるので、ファイル名だけで十分です。
@@ -96,7 +94,7 @@ function updateDisplay(verse) {
 ただ、ウェブサーバーはたいてい大文字小文字を区別しますし、今回のファイル名にスペースが含まれていません。 "Verse 1" を "verse1.txt" に変換するためには、 V を小文字にして、スペースを取り除き、 .txt を末尾に追加しなければなりません。これは {{jsxref("String.replace", "replace()")}} と {{jsxref("String.toLowerCase", "toLowerCase()")}}、あと単なる[文字列の結合](/ja/docs/Learn/JavaScript/First_steps/Strings#文字列を連結する)で実現できます。以下のコードを `updateDisplay()` 関数の内側に追加してください。
 
 ```js
-verse = verse.replace(' ', '').toLowerCase();
+verse = verse.replace(" ", "").toLowerCase();
 const url = `${verse}.txt`;
 ```
 
@@ -119,10 +117,12 @@ fetch(url)
   })
   // response.text() が成功したら、そのテキストで `then()` ハンドラーが
   // 呼び出され、それを `poemDisplay` ボックスにコピーします。
-  .then((text) => poemDisplay.textContent = text)
+  .then((text) => (poemDisplay.textContent = text))
   // 起こりうるエラーをキャッチし、`poemDisplay` ボックスにメッセージを
   // 表示します。
-  .catch((error) => poemDisplay.textContent = `Could not fetch verse: ${error}`);
+  .catch(
+    (error) => (poemDisplay.textContent = `Could not fetch verse: ${error}`),
+  );
 ```
 
 ここでは、かなり多くのことを解説します。
@@ -140,8 +140,8 @@ fetch(url)
 この例の問題点として、最初に読み込んだときに詩が表示されないことが挙げられます。これを修正するには、コードの一番下（閉じられた `</script>` タグのすぐ上）に以下の 2 行を追加して、既定で 1 節を読み込み、 {{htmlelement("select") }} 要素が常に正しい値を示していることを確認します。
 
 ```js
-updateDisplay('Verse 1');
-verseChoose.value = 'Verse 1';
+updateDisplay("Verse 1");
+verseChoose.value = "Verse 1";
 ```
 
 #### 例はサーバーから提供すること
@@ -165,7 +165,7 @@ verseChoose.value = 'Verse 1';
 Fetch を使用できる最初のブロックは、 JavaScript で開始されたところにあります。
 
 ```js
-fetch('products.json')
+fetch("products.json")
   .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
@@ -222,15 +222,14 @@ Blob を正常に受信したら、それを `showProduct()` 関数に渡して�
 const request = new XMLHttpRequest();
 
 try {
-  request.open('GET', 'products.json');
+  request.open("GET", "products.json");
 
-  request.responseType = 'json';
+  request.responseType = "json";
 
-  request.addEventListener('load', () => initialize(request.response));
-  request.addEventListener('error', () => console.error('XHR error'));
+  request.addEventListener("load", () => initialize(request.response));
+  request.addEventListener("error", () => console.error("XHR error"));
 
   request.send();
-
 } catch (error) {
   console.error(`XHR error ${request.status}`);
 }
