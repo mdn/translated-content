@@ -43,11 +43,11 @@ _또한 부모 인터페이스인 {{domxref("BaseAudioContext")}}로부터 메�
 
 ## 이벤트
 
-[`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener)를 사용하거나 이벤트 수신기를 이 인터페이스의 `oneventname` 속성에 부여함으로써 이 이벤트들을 수신하세요.
+[`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener)를 사용하거나 이벤트 수신기를 이 인터페이스의 `oneventname` 속성에 부여함으로써 이 이벤트들을 수신하세요.
 
-- [`complete`](/en-US/docs/Web/API/OfflineAudioContext/complete_event)
+- [`complete`](/ko/docs/Web/API/OfflineAudioContext/complete_event)
   - : 오프라인 오디오 컨텍스트의 렌더링이 완료되었을 때 발생됩니다.
-    또한 [`oncomplete`](/en-US/docs/Web/API/OfflineAudioContext/oncomplete) 이벤트 처리기 속성을 사용하여 이용 가능합니다.
+    또한 [`oncomplete`](/ko/docs/Web/API/OfflineAudioContext/oncomplete) 이벤트 처리기 속성을 사용하여 이용 가능합니다.
 
 ## 예제
 

@@ -43,14 +43,14 @@ Also notice that conversion is not necessarily a 1:1 character mapping, as some 
 ### 使用 `toLocaleUpperCase()`
 
 ```js
-'alphabet'.toLocaleUpperCase(); // 'ALPHABET'
+"alphabet".toLocaleUpperCase(); // 'ALPHABET'
 
-'Gesäß'.toLocaleUpperCase(); // 'GESÄSS'
+"Gesäß".toLocaleUpperCase(); // 'GESÄSS'
 
-'i\u0307'.toLocaleUpperCase('lt-LT'); // 'I'
+"i\u0307".toLocaleUpperCase("lt-LT"); // 'I'
 
-let locales = ['lt', 'LT', 'lt-LT', 'lt-u-co-phonebk', 'lt-x-lietuva'];
-'i\u0307'.toLocaleUpperCase(locales); // 'I'
+let locales = ["lt", "LT", "lt-LT", "lt-u-co-phonebk", "lt-x-lietuva"];
+"i\u0307".toLocaleUpperCase(locales); // 'I'
 ```
 
 ## 规范

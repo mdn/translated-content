@@ -77,18 +77,20 @@ myPeerConnection.createOffer(successCallback, failureCallback, [options]) {{depr
 > **备注：** 请记住，这是信令过程的一部分，传输层的实现细节完全由您决定。在这种情况下，[WebSocket](/zh-CN/docs/Web/API/WebSocket_API)连接用于向其他端点发送带有值为“video-offer”的类型字段的{{Glossary("JSON")}}消息。传递给`sendToServer()`函数的对象的内容，以及承诺履行处理程序中的所有其他内容，完全取决于您的设计。
 
 ```js
-  myPeerConnection.createOffer().then(function(offer) {
+myPeerConnection
+  .createOffer()
+  .then(function (offer) {
     return myPeerConnection.setLocalDescription(offer);
   })
-  .then(function() {
+  .then(function () {
     sendToServer({
       name: myUsername,
       target: targetUsername,
       type: "video-offer",
-      sdp: myPeerConnection.localDescription
+      sdp: myPeerConnection.localDescription,
     });
   })
-  .catch(function(reason) {
+  .catch(function (reason) {
     // An error occurred, so handle the failure to connect
   });
 ```

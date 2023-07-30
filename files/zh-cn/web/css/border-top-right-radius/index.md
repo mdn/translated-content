@@ -5,8 +5,6 @@ slug: Web/CSS/border-top-right-radius
 
 {{CSSRef("CSS Borders")}}
 
-## 概要
-
 `border-top-right-radius` 属性设置元素的右上角弧形，这个圆弧可能是一个椭圆，或者其中一个值是 0 的话，就是没有圆弧，换句话就是说拐角是方形的。
 
 ![border-top-right-radius.png](border-top-right-radius.png)
@@ -15,31 +13,35 @@ slug: Web/CSS/border-top-right-radius
 
 > **备注：** 在 border-top-radius-radiu 属性值之后，如果作用在一个元素上没有设置“border-radius”简写属性，那么这个属性值就会通过[简写属性](/zh-CN/CSS/Shorthand_properties)重新设置成它的初始值。
 
-{{cssinfo}}
-
 ## 语法
 
-[How to read CSS syntax.](/zh-CN/docs/docs/Web/CSS/Value_definition_syntax)
+```css
+/* the corner is a circle */
+/* border-top-right-radius: radius */
+border-top-right-radius: 3px;
 
-```
-正式语法: {{csssyntax("border-top-right-radius")}}
-```
+/* the corner is an ellipse */
+/* border-top-right-radius: horizontal vertical */
+border-top-right-radius: 0.5em 1em;
 
-```html
-border-top-right-radius: radius               /* the corner is a circle    */  E.g. border-top-right-radius: 3px
-border-top-right-radius: horizontal vertical  /* the corner is an ellipsis */  E.g. border-top-right-radius: 0.5em 1em
+border-top-right-radius: inherit;
 
-border-top-right-radius: inherit
+/* Global values */
+border-top-right-radius: inherit;
+border-top-right-radius: initial;
+border-top-right-radius: revert;
+border-top-right-radius: revert-layer;
+border-top-right-radius: unset;
 ```
 
 之上：
 
 - _radius_
-  - : 这是一个{{cssxref("&lt;length&gt;")}}或者一个{{cssxref("&lt;percentage&gt;")}}，标志着圆的半径在这个拐角用作边框。
+  - : 这是一个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}，标志着圆的半径在这个拐角用作边框。
 - _horizontal_
-  - : 这是一个{{cssxref("&lt;length&gt;")}}或者一个{{cssxref("&lt;percentage&gt;")}} ，标志着椭圆的水平半长轴在这个拐角被用作边框。
+  - : 这是一个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}，标志着椭圆的水平半长轴在这个拐角被用作边框。
 - _vertical_
-  - : 这是一个{{cssxref("&lt;length&gt;")}}或者一个{{cssxref("&lt;percentage&gt;")}}，标志着椭圆的垂直半长轴在这个拐角被用作边框。
+  - : 这是一个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}，标志着椭圆的垂直半长轴在这个拐角被用作边框。
 
 ### 属性值
 
@@ -48,7 +50,15 @@ border-top-right-radius: inherit
 - `<百分数>`
   - : 标志着圆弧半径的大小或者椭圆的半长轴或半短轴，水平轴的百分值是相对盒模型的宽度，垂直轴的百分值是相对盒模型的宽度，负值是无效的。
 
-## 例子
+## 形式定义
+
+{{CSSInfo}}
+
+## 形式语法
+
+{{csssyntax}}
+
+## 示例
 
 <table class="standard-table" style="border: 2px solid rgb(255, 255, 255)">
   <thead>

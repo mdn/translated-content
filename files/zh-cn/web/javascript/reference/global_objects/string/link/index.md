@@ -35,10 +35,10 @@ str.link(url)
 下例显示一个单词 "MDN" 作为超链接，指向 Mozilla Developer Network。
 
 ```js
-var hotText = 'MDN';
-var URL = 'https://developer.mozilla.org/';
+var hotText = "MDN";
+var URL = "https://developer.mozilla.org/";
 
-document.write('Click to return to ' + hotText.link(URL));
+document.write("Click to return to " + hotText.link(URL));
 // Click to return to <a href="https://developer.mozilla.org/">MDN</a>
 ```
 

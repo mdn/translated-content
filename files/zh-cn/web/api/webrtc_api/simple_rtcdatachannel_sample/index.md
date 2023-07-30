@@ -17,7 +17,11 @@ slug: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 <button id="connectButton" name="connectButton" class="buttonleft">
   Connect
 </button>
-<button id="disconnectButton" name="disconnectButton" class="buttonright" disabled>
+<button
+  id="disconnectButton"
+  name="disconnectButton"
+  class="buttonright"
+  disabled>
   Disconnect
 </button>
 ```
@@ -25,15 +29,23 @@ slug: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 然后我们还有一个输入框，用来输入消息。一个按钮，来触发发送事件。这个 {{HTMLElement("div")}} 是给 channel 中第一个节点使用的。
 
 ```html
-  <div class="messagebox">
-    <label for="message">Enter a message:
-      <input type="text" name="message" id="message" placeholder="Message text"
-              inputmode="latin" size=60 maxlength=120 disabled>
-    </label>
-    <button id="sendButton" name="sendButton" class="buttonright" disabled>
-      Send
-    </button>
-  </div>
+<div class="messagebox">
+  <label for="message"
+    >Enter a message:
+    <input
+      type="text"
+      name="message"
+      id="message"
+      placeholder="Message text"
+      inputmode="latin"
+      size="60"
+      maxlength="120"
+      disabled />
+  </label>
+  <button id="sendButton" name="sendButton" class="buttonright" disabled>
+    Send
+  </button>
+</div>
 ```
 
 最后，还有一个小 DIV 用来显示收到的内容。这个 {{HTMLElement("div")}} 是给 channel 中第二个 peer 使用的。
@@ -56,17 +68,17 @@ WebRTC API 大量使用了{{jsxref("Promise")}}. 这样会让建立链接的过�
 
 ```js
 function startup() {
-  connectButton = document.getElementById('connectButton');
-  disconnectButton = document.getElementById('disconnectButton');
-  sendButton = document.getElementById('sendButton');
-  messageInputBox = document.getElementById('message');
-  receiveBox = document.getElementById('receivebox');
+  connectButton = document.getElementById("connectButton");
+  disconnectButton = document.getElementById("disconnectButton");
+  sendButton = document.getElementById("sendButton");
+  messageInputBox = document.getElementById("message");
+  receiveBox = document.getElementById("receivebox");
 
   // Set event listeners for user interface widgets
 
-  connectButton.addEventListener('click', connectPeers, false);
-  disconnectButton.addEventListener('click', disconnectPeers, false);
-  sendButton.addEventListener('click', sendMessage, false);
+  connectButton.addEventListener("click", connectPeers, false);
+  disconnectButton.addEventListener("click", disconnectPeers, false);
+  sendButton.addEventListener("click", sendMessage, false);
 }
 ```
 
@@ -108,13 +120,13 @@ remoteConnection.ondatachannel = receiveChannelCallback;
 > **备注：** 在现实场景，当参与连接的两节点运行于不同的上下文，建立连接的过程或稍微复杂些，每一次双方通过调用{{domxref("RTCPeerConnection.addIceCandidate()")}}，提出连接方式的建议 (例如：UDP,、中继 UDP、TCP 之类的) ，双方来回往复直到达成一致。本文既然不涉及现实网络环境，因此我们假定双方接受首次连接建议。
 
 ```js
-    localConnection.onicecandidate = e => !e.candidate
-        || remoteConnection.addIceCandidate(e.candidate)
-        .catch(handleAddCandidateError);
+localConnection.onicecandidate = (e) =>
+  !e.candidate ||
+  remoteConnection.addIceCandidate(e.candidate).catch(handleAddCandidateError);
 
-    remoteConnection.onicecandidate = e => !e.candidate
-        || localConnection.addIceCandidate(e.candidate)
-        .catch(handleAddCandidateError);
+remoteConnection.onicecandidate = (e) =>
+  !e.candidate ||
+  localConnection.addIceCandidate(e.candidate).catch(handleAddCandidateError);
 ```
 
 我们配置每个 {{domxref("RTCPeerConnection")}} 对于事件 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 建立事件处理。
@@ -124,13 +136,18 @@ remoteConnection.ondatachannel = receiveChannelCallback;
 建立节点连接的最后一项是创建一个连接 offer.
 
 ```js
-    localConnection.createOffer()
-    .then(offer => localConnection.setLocalDescription(offer))
-    .then(() => remoteConnection.setRemoteDescription(localConnection.localDescription))
-    .then(() => remoteConnection.createAnswer())
-    .then(answer => remoteConnection.setLocalDescription(answer))
-    .then(() => localConnection.setRemoteDescription(remoteConnection.localDescription))
-    .catch(handleCreateDescriptionError);
+localConnection
+  .createOffer()
+  .then((offer) => localConnection.setLocalDescription(offer))
+  .then(() =>
+    remoteConnection.setRemoteDescription(localConnection.localDescription),
+  )
+  .then(() => remoteConnection.createAnswer())
+  .then((answer) => remoteConnection.setLocalDescription(answer))
+  .then(() =>
+    localConnection.setRemoteDescription(remoteConnection.localDescription),
+  )
+  .catch(handleCreateDescriptionError);
 ```
 
 逐行解读上面的代码：
@@ -150,13 +167,13 @@ remoteConnection.ondatachannel = receiveChannelCallback;
 当 peer-to-peer 连接的任何一方成功连接，相应的 {{domxref("RTCPeerConnection")}} 的 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 事件将被触发。在事件的处理中可以执行任何需要的操作，但在本例中，我们所需要做的只是更新用户界面。
 
 ```js
-  function handleLocalAddCandidateSuccess() {
-    connectButton.disabled = true;
-  }
+function handleLocalAddCandidateSuccess() {
+  connectButton.disabled = true;
+}
 
-  function handleRemoteAddCandidateSuccess() {
-    disconnectButton.disabled = false;
-  }
+function handleRemoteAddCandidateSuccess() {
+  disconnectButton.disabled = false;
+}
 ```
 
 当 local 节点连接成功时，禁用 "Connect" 按钮，当 remote 节点连接时许用 "Disconnect" 按钮。
@@ -166,12 +183,12 @@ remoteConnection.ondatachannel = receiveChannelCallback;
 {{domxref("RTCPeerConnection")}} 一旦 open，事件{{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} 被发送到远端以完成打开数据通道的处理，该事件触发 `receiveChannelCallback()` 方法，如下所示：
 
 ```js
-  function receiveChannelCallback(event) {
-    receiveChannel = event.channel;
-    receiveChannel.onmessage = handleReceiveMessage;
-    receiveChannel.onopen = handleReceiveChannelStatusChange;
-    receiveChannel.onclose = handleReceiveChannelStatusChange;
-  }
+function receiveChannelCallback(event) {
+  receiveChannel = event.channel;
+  receiveChannel.onmessage = handleReceiveMessage;
+  receiveChannel.onopen = handleReceiveChannelStatusChange;
+  receiveChannel.onclose = handleReceiveChannelStatusChange;
+}
 ```
 
 事件 {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} 在它的 channel 属性中包括了：对代表 remote 节点的 channel 的{{domxref("RTCDataChannel")}} 的指向，它保存了我们用以在该 channel 上对我们希望处理的事件建立的事件监听。一旦侦听建立，每当 remote 节点接收到数据 `handleReceiveMessage()` 方法将被调用，每当通道的连接状态发生改变 `handleReceiveChannelStatusChange()` 方法将被调用，因此通道完全打开或者关闭时我们都可以作出相应的相应。
@@ -183,24 +200,24 @@ local 节点和 remote 节点采用同样的方法处理表示通道连接状态
 当 local 节点遭遇 open 或者 close 事件，`handleSendChannelStatusChange()` 方法被调用：
 
 ```js
-  function handleSendChannelStatusChange(event) {
-    if (sendChannel) {
-      var state = sendChannel.readyState;
+function handleSendChannelStatusChange(event) {
+  if (sendChannel) {
+    var state = sendChannel.readyState;
 
-      if (state === "open") {
-        messageInputBox.disabled = false;
-        messageInputBox.focus();
-        sendButton.disabled = false;
-        disconnectButton.disabled = false;
-        connectButton.disabled = true;
-      } else {
-        messageInputBox.disabled = true;
-        sendButton.disabled = true;
-        connectButton.disabled = false;
-        disconnectButton.disabled = true;
-      }
+    if (state === "open") {
+      messageInputBox.disabled = false;
+      messageInputBox.focus();
+      sendButton.disabled = false;
+      disconnectButton.disabled = false;
+      connectButton.disabled = true;
+    } else {
+      messageInputBox.disabled = true;
+      sendButton.disabled = true;
+      connectButton.disabled = false;
+      disconnectButton.disabled = true;
     }
   }
+}
 ```
 
 如果通道状态已经变更为 "open", 意味着我们已经完成了在两对等节点之间建立连接。相应地用户界面根据状态更新，许用并将输入光标聚焦在 text 输入框，以便用户可以立即输入要发送给对方的文本消息，同时界面许用 "Send" 和 "Disconnect" 按钮（既然它们已经准备好了），禁用"Connect"按钮，既然在已经建立连接的情况下用不着它。
@@ -210,12 +227,13 @@ local 节点和 remote 节点采用同样的方法处理表示通道连接状态
 另一方面，作为我们例子的 remote 节点，则无视这些状态改变事件，仅仅是在控制台输出它们：
 
 ```js
-  function handleReceiveChannelStatusChange(event) {
-    if (receiveChannel) {
-      console.log("Receive channel's status has changed to " +
-                  receiveChannel.readyState);
-    }
+function handleReceiveChannelStatusChange(event) {
+  if (receiveChannel) {
+    console.log(
+      "Receive channel's status has changed to " + receiveChannel.readyState,
+    );
   }
+}
 ```
 
 `handleReceiveChannelStatusChange()` 方法接收到发生的事件，事件类型为 {{domxref("RTCDataChannelEvent")}}.
@@ -225,13 +243,13 @@ local 节点和 remote 节点采用同样的方法处理表示通道连接状态
 当用户按下 "Send" 按钮，触发我们已建立的该按钮的 [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件处理逻辑，在处理逻辑中调用 sendMessage() 方法。该方法也足够简单：
 
 ```js
-  function sendMessage() {
-    var message = messageInputBox.value;
-    sendChannel.send(message);
+function sendMessage() {
+  var message = messageInputBox.value;
+  sendChannel.send(message);
 
-    messageInputBox.value = "";
-    messageInputBox.focus();
-  }
+  messageInputBox.value = "";
+  messageInputBox.focus();
+}
 ```
 
 首先，待发送的消息文本从文本输入框的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value)属性获得，之后该文本通过调用 {{domxref("RTCDataChannel.send", "sendChannel.send()")}}发送到 remote 节点。都搞定了！余下的只是些用户体验糖 ——清空并聚焦文本输入框，以便用户可以立即开始下一条消息的输入。
@@ -241,13 +259,13 @@ local 节点和 remote 节点采用同样的方法处理表示通道连接状态
 当远程通道发生“message”事件时，我们的 handleReceiveMessage() 方法被调用来处理事件。
 
 ```js
-  function handleReceiveMessage(event) {
-    var el = document.createElement("p");
-    var txtNode = document.createTextNode(event.data);
+function handleReceiveMessage(event) {
+  var el = document.createElement("p");
+  var txtNode = document.createTextNode(event.data);
 
-    el.appendChild(txtNode);
-    receiveBox.appendChild(el);
-  }
+  el.appendChild(txtNode);
+  receiveBox.appendChild(el);
+}
 ```
 
 该方法只是简单地注入了一些 {{Glossary("DOM")}}，它创建了 {{HTMLElement("p")}} (paragraph) 元素，然后创建了 {{domxref("Text")}} 用于显示从事件的`data` 属性拿到的消息文本。该 text node 作为子节点附加到`receiveBox` block，显示在浏览器窗口内容区。
@@ -257,32 +275,31 @@ local 节点和 remote 节点采用同样的方法处理表示通道连接状态
 当用户点击"Disconnect" 按钮。在之前我们设置的按钮事件处理逻辑中`disconnectPeers()` 方法被调用。
 
 ```js
-  function disconnectPeers() {
+function disconnectPeers() {
+  // Close the RTCDataChannels if they're open.
 
-    // Close the RTCDataChannels if they're open.
+  sendChannel.close();
+  receiveChannel.close();
 
-    sendChannel.close();
-    receiveChannel.close();
+  // Close the RTCPeerConnections
 
-    // Close the RTCPeerConnections
+  localConnection.close();
+  remoteConnection.close();
 
-    localConnection.close();
-    remoteConnection.close();
+  sendChannel = null;
+  receiveChannel = null;
+  localConnection = null;
+  remoteConnection = null;
 
-    sendChannel = null;
-    receiveChannel = null;
-    localConnection = null;
-    remoteConnection = null;
+  // Update user interface elements
 
-    // Update user interface elements
+  connectButton.disabled = false;
+  disconnectButton.disabled = true;
+  sendButton.disabled = true;
 
-    connectButton.disabled = false;
-    disconnectButton.disabled = true;
-    sendButton.disabled = true;
-
-    messageInputBox.value = "";
-    messageInputBox.disabled = true;
-  }
+  messageInputBox.value = "";
+  messageInputBox.disabled = true;
+}
 ```
 
 该方法首先关闭每个节点的{{domxref("RTCDataChannel")}}，之后类似地关闭每个节点的 {{domxref("RTCPeerConnection")}}。将所有对它们的指向置为`null` 以避免意外的复用。之后更新界面状态以符合目前已经不存在连接的事实。

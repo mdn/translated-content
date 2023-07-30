@@ -56,12 +56,20 @@ ctx.drawImage(myImage, 0.3, 0.5);
     width: 480px;
     height: 320px;
     position: relative;
-    border: 2px solid black
+    border: 2px solid black;
   }
-  canvas { position: absolute; }
-  #ui-layer { z-index: 3 }
-  #game-layer { z-index: 2 }
-  #background-layer { z-index: 1 }
+  canvas {
+    position: absolute;
+  }
+  #ui-layer {
+    z-index: 3;
+  }
+  #game-layer {
+    z-index: 2;
+  }
+  #background-layer {
+    z-index: 1;
+  }
 </style>
 ```
 
@@ -80,8 +88,8 @@ var scaleY = window.innerHeight / canvas.height;
 var scaleToFit = Math.min(scaleX, scaleY);
 var scaleToCover = Math.max(scaleX, scaleY);
 
-stage.style.transformOrigin = '0 0'; //scale from top left
-stage.style.transform = 'scale(' + scaleToFit + ')';
+stage.style.transformOrigin = "0 0"; //scale from top left
+stage.style.transform = "scale(" + scaleToFit + ")";
 ```
 
 ### 关闭透明度
@@ -89,7 +97,7 @@ stage.style.transform = 'scale(' + scaleToFit + ')';
 如果你的游戏使用画布而且不需要透明，当使用 [`HTMLCanvasElement.getContext()`](/zh-CN/docs/Web/API/HTMLCanvasElement/getContext) 创建一个绘图上下文时把 `alpha` 选项设置为 `false` 。这个选项可以帮助浏览器进行内部优化。
 
 ```js
-var ctx = canvas.getContext('2d', { alpha: false });
+var ctx = canvas.getContext("2d", { alpha: false });
 ```
 
 ### 更多的贴士
