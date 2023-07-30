@@ -1,48 +1,33 @@
 ---
-title: scroll-margin
-slug: Web/CSS/scroll-margin
+title: scroll-margin-inline-start
+slug: Web/CSS/scroll-margin-inline-start
 ---
 
 {{CSSRef}}
 
-[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) **`scroll-margin`** 同时设置元素的所有滚动外边距，其赋值方式较为类似 {{CSSXref("margin")}} 属性为元素外边距赋值的方式。
+**`scroll-margin-inline-start`** 属性定义了滚动吸附区域的行首外边距，此区域用于将此盒吸附至滚动口。滚动吸附区域的确定方法为：取变换后的边框盒，求其矩形包围盒（与滚动容器的坐标空间中的轴对齐），再加上指定的外边距。
 
-{{EmbedInteractiveExample("pages/css/scroll-margin.html")}}
-
-## 属性构成
-
-此属性为下列 CSS 属性的简写属性：
-
-- {{CSSXref("scroll-margin-bottom")}}
-- {{CSSXref("scroll-margin-left")}}
-- {{CSSXref("scroll-margin-right")}}
-- {{CSSXref("scroll-margin-top")}}
+{{EmbedInteractiveExample("pages/css/scroll-margin-inline-start.html")}}
 
 ## 语法
 
 ```css
 /* <length> 值 */
-scroll-margin: 10px;
-scroll-margin: 1em 0.5em 1em 1em;
+scroll-margin-inline-start: 10px;
+scroll-margin-inline-start: 1em;
 
 /* 全局值 */
-scroll-margin: inherit;
-scroll-margin: initial;
-scroll-margin: revert;
-scroll-margin: revert-layer;
-scroll-margin: unset;
+scroll-margin-inline-start: inherit;
+scroll-margin-inline-start: initial;
+scroll-margin-inline-start: revert;
+scroll-margin-inline-start: revert-layer;
+scroll-margin-inline-start: unset;
 ```
 
 ### 取值
 
 - {{CSSXref("&lt;length&gt;")}}
-  - : 滚动容器对应边的外边距。
-
-## 描述
-
-通过滚动至示例内容两“页”之间的一点可见 `scroll-margin` 的效果。为 `scroll-margin` 指定的值决定了页面主要位于吸附口外的多少部分应保持可见。
-
-因此 `scroll-margin` 值表示定义滚动吸附区域的外边距，此区域用于将此盒吸附至滚动口。滚动吸附区域的确定方法为：取变换后的边框盒，求其矩形包围盒（与滚动容器的坐标空间中的轴对齐），再加上指定的外边距。
+  - : 滚动容器的行首外边距。
 
 ## 形式定义
 
@@ -119,17 +104,15 @@ scroll-margin: unset;
 
 ```css
 .scroller > div:nth-child(2) {
-  scroll-margin: 1rem;
+  scroll-margin-inline-start: 1rem;
 }
 
 .scroller > div:nth-child(3) {
-  scroll-margin: 2rem;
+  scroll-margin-inline-start: 2rem;
 }
 ```
 
-这意味着当滚动过中间的子元素后，滚动将吸附至第二个 `<div>` 左侧边的 `1rem` 外处，及第三个 `<div>` 左侧边的 `2rems` 外处。
-
-> **备注：** 此处虽然在所有侧均设置了 `scroll-margin`，但真正相关的仅有首侧边。此处若仅在此边上设置滚动外边距，例如 `scroll-margin-inline-start: 1rem` 或 `scroll-margin: 0 0 0 1rem`，则效果相同。
+这意味着当滚动过中间的子元素后，滚动将吸附至第二个 `<div>` 行首边的 `1rem` 外处，及第三个 `<div>` 行首边的 `2rems` 外处。
 
 #### 结果
 
