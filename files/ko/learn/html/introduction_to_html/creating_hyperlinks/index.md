@@ -54,13 +54,13 @@ A basic link is created by wrapping the text (or other content, see [Block level
 </p>
 ```
 
-위 코드의 결과는 다음과 같습니다:
+위 코드의 결과는 다음과 같습니다.
 
 나는 링크를 만들었다. [the Mozilla homepage](https://www.mozilla.org/en-US/).
 
 ### title 속성에 부가적인 정보를 더하기
 
-`title`; 속성은 해당 페이지에 어떤 종류의 정보가 포함되어 있는지 또는 알아야할 사항과 같은 링크에 대한 보충할만한 유용한 정보를 포함하기 위한 것을 나타낼때 사용한다.
+`title`; 속성은 해당 페이지에 어떤 종류의 정보가 포함되어 있는지 또는 알아야할 사항과 같은 링크에 대한 보충할만한 유용한 정보를 포함하기 위한 것을 나타낼때 사용합니다.
 
 예제 코드 :
 
@@ -110,7 +110,7 @@ URL은 파일들을 찾기위해 path를 이용합니다. path는 당신이 관�
 
 이 디렉토리 구조의 **root**는 `creating-hyperlinks`. 웹사이트를 로컬 단에서 다룰 때에는 전체 웹사이트가 모두 들어갈 수 있는 하나의 디렉토리를 가져야 할 것입니다. Root 안에서 우리는 `index.html` 파일과 `contacts.html` 파일을 갖습니다. 진짜 웹사이트 안에서 `index.html` 는 우리의 홈 페이지 또는 랜딩 페이지(웹사이트의 접속 포인트 또는 웹사이트의 특정 부분 이 되는 페이지)가 될 것입니다.
 
-또 Root 안에는 두 개의 디렉토리가 있습니다 — `pdfs` 와 `projects`. 이들은 각각 하나의 파일을 내부에 가지고 있습니다 — 각각 PDF (`project-brief.pdf`) 와 `index.html` 파일입니다. 당신은 두 개의 `index.html` 파일들을 각각 파일 시스템의 다른 위치에 있도록 해서 하나의 프로젝트 안에 가질 수 있습니다. 많은 웹 사이트들이 이렇게 하고 있습니다. 두번째 `index.html`는 아마 프로젝트와 관련된 정보의 메인 랜딩 페이지가 될 것입니다.
+또 Root 안에는 두 개의 디렉토리가 있습니다 — `pdfs` 와 `projects`. 이들은 각각 하나의 파일을 내부에 가지고 있습니다. — 각각 PDF (`project-brief.pdf`) 와 `index.html` 파일입니다. 당신은 두 개의 `index.html` 파일들을 각각 파일 시스템의 다른 위치에 있도록 해서 하나의 프로젝트 안에 가질 수 있습니다. 많은 웹 사이트들이 이렇게 하고 있습니다. 두번째 `index.html`는 아마 프로젝트와 관련된 정보의 메인 랜딩 페이지가 될 것입니다.
 
 - **같은 디렉토리(폴더)**: `contacts.html`을 가리키는 하이퍼링크를 `index.html`(top level `index.html`) 안에 포함시키려면 현재 파일과 동일한 디렉토리에 연결하려는 파일의 파일 이름만 지정하면 됩니다. 따라서 사용할 URL은 `contacts.html`: 입니다.
 
@@ -151,7 +151,7 @@ Find details on our <a href="contacts.html">contacts page</a>.</p>
 <p>Want to write us a letter? Use our <a href="contacts.html#Mailing_address">mailing address</a>.</p>
 ```
 
-Document fragments(문서 조각)를 단독으로 사용하여 동일한 문서의 다른 부분에 연결할 수 있습니다
+Document fragments(문서 조각)를 단독으로 사용하여 동일한 문서의 다른 부분에 연결할 수 있습니다.
 
 ```html
 <p>The <a href="#Mailing_address">company mailing address</a> can be found at the bottom of this page.</p>
@@ -177,7 +177,7 @@ Document fragments(문서 조각)를 단독으로 사용하여 동일한 문서�
 
 ## Link 실습하기
 
-링크 작성시 지켜야할 몇가지 모범 사례에 대해 살펴봅시다
+링크 작성시 지켜야할 몇가지 모범 사례에 대해 살펴봅시다.
 
 ### 링크 명을 명확하게
 
@@ -210,9 +210,9 @@ to download Firefox</p>
 
 Other tips:
 
-- 링크 텍스트의 일부로 URL을 작성하지마세요 — URL은 보기 흉하며, 화면 판독기가 글자로 URL을 읽어낼 때 이상하게 들립니다.
-- 링크 텍스트에 "link"나 "links to"라고 쓰지 마십시오 — 그것은 단지 소음입니다. Screen readers 사용자들은 사용자에게 연관성이 있다고 말합니다. 링크에는 일반적으로 다른 색상으로 스타일링 되고 밑줄이 그어져 있기 때문에 시각적으로 브라우저를 보는 사람들도 링크가 있다는 것을 알기 때문입니다. (사용자들이 일반적으로 익숙하기 때문에 이 관습은 깨지면 안됩니다.)
-- 링크 라벨은 가능한 짧게 유지해야 합니다 — 긴 링크는 특히 전체 내용을 읽어야하는 screen reader 사용자들을 짜증나게 합니다.
+- 링크 텍스트의 일부로 URL을 작성하지마세요. — URL은 보기 흉하며, 화면 판독기가 글자로 URL을 읽어낼 때 이상하게 들립니다.
+- 링크 텍스트에 "link"나 "links to"라고 쓰지 마십시오. — 그것은 단지 소음입니다. Screen readers 사용자들은 사용자에게 연관성이 있다고 말합니다. 링크에는 일반적으로 다른 색상으로 스타일링 되고 밑줄이 그어져 있기 때문에 시각적으로 브라우저를 보는 사람들도 링크가 있다는 것을 알기 때문입니다. (사용자들이 일반적으로 익숙하기 때문에 이 관습은 깨지면 안됩니다.)
+- 링크 라벨은 가능한 짧게 유지해야 합니다. — 긴 링크는 특히 전체 내용을 읽어야하는 screen reader 사용자들을 짜증나게 합니다.
 - 동일한 텍스트의 여러 복사본이 서로 다른 위치에 연결되는 인스턴스 최소화. 이것은 스크린리더 사용자들에게 문제를 일으킬 수 있는데, 그들은 종종 문맥에서 링크 목록을 꺼냅니다. "여기를 클릭", "여기를 클릭", "여기를 클릭"이라고 표시된 모든 링크를 여러 개 제시합니다. 혼란스러울 것입니다.
 
 ### 가능하면 상대 링크 사용하기
@@ -306,7 +306,7 @@ Firefox 39의 Windows 버전에 대한 다운로드 링크가 있는 예:
 
 이메일 주소 외에도 다른 정보를 제공할 수 있습니다. 실제로 표준 메일 헤더 필드는 사용자가 제공하는 `mailto` URL에 추가할 수 있습니다. 이것들 중 가장 일반적으로 사용되는 것은 "subject", "cc", and "body"(참된 헤더 필드는 아니지만 새 이메일에 대한 짧은 내용 메시지를 지정할 수 있음)입니다. 각 필드와 그 값은 조회 용어로 지정됩니다.
 
-아래 예제가 cc, bcc, subject and body 를 포함한다.:
+아래 예제가 cc, bcc, subject and body 를 포함합니다.:
 
 ```html
 <a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&amp;subject=The%20subject%20of%20the%20email &amp;body=The%20body%20of%20the%20email">
