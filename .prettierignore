@@ -54,7 +54,6 @@ build/
 /files/ja/web/svg/**/*.md
 
 # ko
-/files/ko/glossary/**/*.md
 /files/ko/learn/**/*.md
 /files/ko/mozilla/**/*.md
 /files/ko/mozilla/add-ons/**/*.md
