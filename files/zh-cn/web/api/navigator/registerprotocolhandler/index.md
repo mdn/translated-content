@@ -77,9 +77,11 @@ navigator.registerProtocolHandler(scheme, url, title);
 如果您的网站是 `https://www.google.com/`，则可以为其注册一个协议处理程序来处理 `web+burger:`链接，如下所示：
 
 ```js
-navigator.registerProtocolHandler("web+burger",
-                                  "https://www.google.com/?uri=%s",
-                                  "Burger handler");
+navigator.registerProtocolHandler(
+  "web+burger",
+  "https://www.google.com/?uri=%s",
+  "Burger handler",
+);
 ```
 
 这将创建一个处理程序，该处理程序允许使用 `web+burger:` 链接将用户发送到您的网站，并将访问的 Burger URL 插入`%s`占位符。

@@ -84,4 +84,4 @@ Maintenant, allons à la deuxième partie de cette série, dans laquelle on s'in
 
 {{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/fr/docs/Web/Progressive_web_apps/")}}

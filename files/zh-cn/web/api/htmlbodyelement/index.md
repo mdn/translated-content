@@ -52,7 +52,7 @@ _No specific methods; inherits methods from its parent, {{domxref("HTMLElement")
 - {{domxref("window.languagechange_event", "HTMLBodyElement.onlanguagechange")}}
   - : Fired when the user's preferred language changes.
 - {{domxref("window.message_event", "HTMLBodyElement.onmessage")}}
-  - : Fired when the window receives a message, for example from a call to [`Window.postMessage()`](/en-US/docs/Web/API/Window/postMessage) from another browsing context.
+  - : Fired when the window receives a message, for example from a call to [`Window.postMessage()`](/zh-CN/docs/Web/API/Window/postMessage) from another browsing context.
 - {{domxref("window.messageerror_event", "HTMLBodyElement.onmessageerror")}}
   - : Fired when the window receives a message that can't be deserialized.
 - {{domxref("window.offline_event", "HTMLBodyElement.onoffline")}}

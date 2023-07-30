@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
 ## 構文
 
 ```js
-formatRange(startRange, endRange)
+selectRange(startRange, endRange)
 ```
 
 ### 返値

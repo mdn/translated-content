@@ -16,5 +16,5 @@ original_slug: Глоссарий/BigInt
 
 ### Техническая документация
 
-- Структура данных JavaScript: [`BigInt`](/en-US/docs/Web/JavaScript/Data_structures#BigInt_type)
+- Структура данных JavaScript: [`BigInt`](/ru/docs/Web/JavaScript/Data_structures#BigInt_type)
 - Глобальный объект JavaScript {{jsxref("BigInt")}}

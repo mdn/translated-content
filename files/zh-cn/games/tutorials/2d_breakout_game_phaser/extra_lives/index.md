@@ -28,9 +28,17 @@ var lifeLostText;
 定义文本看起来像我们已经在[分数](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/The_score)课上已经做[的](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/The_score)。`scoreText`在`create()`函数内的现有定义下方添加以下行：
 
 ```js
-livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, { font: '18px Arial', fill: '#0095DD' });
-livesText.anchor.set(1,0);
-lifeLostText = game.add.text(game.world.width*0.5, game.world.height*0.5, 'Life lost, click to continue', { font: '18px Arial', fill: '#0095DD' });
+livesText = game.add.text(game.world.width - 5, 5, "Lives: " + lives, {
+  font: "18px Arial",
+  fill: "#0095DD",
+});
+livesText.anchor.set(1, 0);
+lifeLostText = game.add.text(
+  game.world.width * 0.5,
+  game.world.height * 0.5,
+  "Life lost, click to continue",
+  { font: "18px Arial", fill: "#0095DD" },
+);
 lifeLostText.anchor.set(0.5);
 lifeLostText.visible = false;
 ```
@@ -44,16 +52,26 @@ lifeLostText.visible = false;
 正如你可能已经注意到，我们使用相同的造型为三种文本：`scoreText`，`livesText`和`lifeLostText`。如果我们想要更改字体大小或颜色，我们必须在多个地方进行。为了使我们更容易维护，将来我们可以创建一个单独的变量来保存我们的样式，让我们`textStyle`将其调用并放在文本定义之前：
 
 ```js
-textStyle = { font: '18px Arial', fill: '#0095DD' };
+textStyle = { font: "18px Arial", fill: "#0095DD" };
 ```
 
 现在我们可以在使用文本标签的时候使用这个变量 - 更新你的代码，使文本样式的多个实例被替换为变量：
 
 ```js
-scoreText = game.add.text(5, 5, 'Points: 0', textStyle);
-livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, textStyle);
-livesText.anchor.set(1,0);
-lifeLostText = game.add.text(game.world.width*0.5, game.world.height*0.5, 'Life lost, click to continue', textStyle);
+scoreText = game.add.text(5, 5, "Points: 0", textStyle);
+livesText = game.add.text(
+  game.world.width - 5,
+  5,
+  "Lives: " + lives,
+  textStyle,
+);
+livesText.anchor.set(1, 0);
+lifeLostText = game.add.text(
+  game.world.width * 0.5,
+  game.world.height * 0.5,
+  "Life lost, click to continue",
+  textStyle,
+);
 lifeLostText.anchor.set(0.5);
 lifeLostText.visible = false;
 ```
@@ -65,9 +83,9 @@ lifeLostText.visible = false;
 为了在我们的游戏中实现生活，让我们先改变球对`onOutOfBounds`事件的影响。而不是执行匿名函数并立即显示警报：
 
 ```js
-ball.events.onOutOfBounds.add(function(){
-    alert('Game over!');
-    location.reload();
+ball.events.onOutOfBounds.add(function () {
+  alert("Game over!");
+  location.reload();
 }, this);
 ```
 
@@ -81,21 +99,20 @@ ball.events.onOutOfBounds.add(ballLeaveScreen, this);
 
 ```js
 function ballLeaveScreen() {
-    lives--;
-    if(lives) {
-        livesText.setText('Lives: '+lives);
-        lifeLostText.visible = true;
-        ball.reset(game.world.width*0.5, game.world.height-25);
-        paddle.reset(game.world.width*0.5, game.world.height-5);
-        game.input.onDown.addOnce(function(){
-            lifeLostText.visible = false;
-            ball.body.velocity.set(150, -150);
-        }, this);
-    }
-    else {
-        alert('You lost, game over!');
-        location.reload();
-    }
+  lives--;
+  if (lives) {
+    livesText.setText("Lives: " + lives);
+    lifeLostText.visible = true;
+    ball.reset(game.world.width * 0.5, game.world.height - 25);
+    paddle.reset(game.world.width * 0.5, game.world.height - 5);
+    game.input.onDown.addOnce(function () {
+      lifeLostText.visible = false;
+      ball.body.velocity.set(150, -150);
+    }, this);
+  } else {
+    alert("You lost, game over!");
+    location.reload();
+  }
 }
 ```
 

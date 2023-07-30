@@ -13,10 +13,10 @@ slug: Learn/Server-side/Django/web_application_security
       <th scope="row">이 문서를 보기 전에:</th>
       <td>
         서버사이드 개발에 대한 "<a
-          href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security"
+          href="https://developer.mozilla.org/ko/docs/Learn/Server-side/First_steps/Website_security"
           >Website security</a
         >" 부분을 읽고 오세요. MDN 장고 튜토리얼에서 적어도
-        <a href="/en-US/docs/Learn/Server-side/Django/Forms"
+        <a href="/ko/docs/Learn/Server-side/Django/Forms"
           >Django Tutorial Part 9: Working with forms</a
         >
         까지는 모두 알고있어야 합니다.

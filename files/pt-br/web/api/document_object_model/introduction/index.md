@@ -104,7 +104,7 @@ A tabela a seguir descreve brevemente esses tipos de dados.
         exemplo, a propriedade <strong><code>ownerDocument </code></strong>de um
         elemento retorna o <code>document</code> ao qual ele pertence),esse
         objeto é o próprio objeto de <code>document</code> raiz. O capítulo
-        <a href="/en-US/docs/Web/API/Document"
+        <a href="/pt-BR/docs/Web/API/Document"
           >DOM <code>document</code> Reference</a
         >
         descreve o objeto do <code>document</code> .
@@ -134,7 +134,7 @@ A tabela a seguir descreve brevemente esses tipos de dados.
           um documento HTML, elementos são ainda mais aprimorados pelas APIs
           HTML DOM. A interface {{domxref("HTMLElement")}} bem como
           outras interfaces descrevem capacidades de tipos especifícos de
-          elementos (por exemlo, {{domxref("HTMLTableElement")}} para
+          elementos (por exemplo, {{domxref("HTMLTableElement")}} para
           elementos {{HTMLElement("table")}}).
         </p>
       </td>

@@ -1,13 +1,6 @@
 ---
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
-tags:
-  - API
-  - Audio
-  - DOM
-  - Interface
-  - Media
-  - Video
 translation_of: Web/API/HTMLMediaElement
 ---
 

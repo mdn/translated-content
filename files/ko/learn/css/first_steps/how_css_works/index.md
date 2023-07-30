@@ -22,7 +22,7 @@ CSS 기본 사항, CSS 의 목적 및 간단한 스타일 시트 작성 방법�
           href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
           >파일 작업</a
         >의 기본 지식 및 HTML 기본 사항 (<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         >
         학습.)

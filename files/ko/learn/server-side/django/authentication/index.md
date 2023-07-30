@@ -13,7 +13,7 @@ slug: Learn/Server-side/Django/Authentication
       <th scope="row">선행학습:</th>
       <td>
         앞의 모든 튜토리얼을 모두 끝내세요. up to and including
-        <a href="/en-US/docs/Learn/Server-side/Django/Sessions"
+        <a href="/ko/docs/Learn/Server-side/Django/Sessions"
           >Django Tutorial Part 7: Sessions framework</a
         >.
       </td>

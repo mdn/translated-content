@@ -15,7 +15,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var deletingAll = browser.history.deleteAll()
+var deletingAll = browser.history.deleteAll();
 ```
 
 ### Paramètres

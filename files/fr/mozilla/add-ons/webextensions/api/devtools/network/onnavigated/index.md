@@ -11,9 +11,9 @@ Mise en place lorsque l'utilisateur navigue dans la fenêtre inspectée vers une
 ## Syntaxe
 
 ```js
-browser.devtools.network.onNavigated.addListener(listener)
-browser.devtools.network.onNavigated.removeListener(listener)
-browser.devtools.network.onNavigated.hasListener(listener)
+browser.devtools.network.onNavigated.addListener(listener);
+browser.devtools.network.onNavigated.removeListener(listener);
+browser.devtools.network.onNavigated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

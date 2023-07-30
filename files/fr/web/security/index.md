@@ -1,10 +1,6 @@
 ---
 title: Sécurité Web
 slug: Web/Security
-tags:
-  - Landing
-  - Security
-  - Web
 translation_of: Web/Security
 ---
 

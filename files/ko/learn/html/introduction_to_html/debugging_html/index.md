@@ -13,15 +13,15 @@ HTML을 작성을 할 수 있지만, 문제가 생겼을 때 코드의 오류가
       <th scope="row">선행사항:</th>
       <td>
         HTML이 익숙해야 합니다. 다음문서를 이해하는 정도면 충분합니다.
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >HTML로 시작하기</a
         >,
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
           >HTML 텍스트 기본사항</a
         >, and
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
           >하이파링크 만들기</a
         >.
       </td>

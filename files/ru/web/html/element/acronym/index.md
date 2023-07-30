@@ -48,7 +48,7 @@ translation_of: Web/HTML/Element/acronym
 
 {{Compat}}
 
-## Смотрите также:
+## Смотрите также
 
 - {{HTMLElement("abbr")}}
 

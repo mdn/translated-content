@@ -62,6 +62,6 @@ A promise é rejeitada quando umas das seguintes exceções é encontrada:
 - {{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.
 - {{domxref("SubtleCrypto")}}, a interface a qual ele pertence.
 
-### Dicionário:
+### Dicionário
 
 "Key" = "Chave"

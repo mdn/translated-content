@@ -93,7 +93,7 @@ const header = (
 const header = React.createElement(
   "header",
   null,
-  React.createElement("h1", null, "Mozilla Developer Network")
+  React.createElement("h1", null, "Mozilla Developer Network"),
 );
 ```
 
@@ -306,7 +306,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById("root"),
 );
 
 // If you want your app to work offline and load faster, you can change

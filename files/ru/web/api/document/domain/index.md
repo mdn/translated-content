@@ -44,7 +44,7 @@ document.domain = string;
 
 ### Getting the domain
 
-For the URI `http://developer.mozilla.org/en-US/docs/Web`, this example sets `currentDomain` to the string "`developer.mozilla.org`".
+For the URI `http://developer.mozilla.org/ru/docs/Web`, this example sets `currentDomain` to the string "`developer.mozilla.org`".
 
 ```
 var currentDomain = document.domain;

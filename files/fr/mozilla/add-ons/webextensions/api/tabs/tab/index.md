@@ -61,7 +61,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `selected` {{deprecated_inline}}
   - : `boolean`. Si l'onglet est sélectionné. Cette propriété a été remplacée par `active` et `highlighted`.
 - `sessionId` {{optional_inline}}
-  - : `string`. L'identifiant de session utilisé pour identifier de façon unique un `onglet`  obtenu à partir de l'API {{WebExtAPIRef('sessions')}}.
+  - : `string`. L'identifiant de session utilisé pour identifier de façon unique un `onglet` obtenu à partir de l'API {{WebExtAPIRef('sessions')}}.
 - `status` {{optional_inline}}
   - : `string`. Soit _charger_ ou _compléter_.
 - `successorId` {{optional_inline}}

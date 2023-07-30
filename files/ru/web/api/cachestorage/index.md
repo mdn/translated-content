@@ -13,7 +13,7 @@ tags:
   - TopicStub
 translation_of: Web/API/CacheStorage
 ---
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}
 
 Интерфейс **`CacheStorage`** представляет собой хранилище для объектов {{domxref("Cache")}}. Он предоставляет главную директорию всех именованных кешей, к которым могут получить доступ {{domxref("ServiceWorker")}}, другие типы воркеров или {{domxref("window")}} (вы не обязаны использовать их с service workers, даже если существует спецификация, определяющая это) и поддерживает отображение строковых имён соответствующих объектов {{domxref("Cache")}}.
 

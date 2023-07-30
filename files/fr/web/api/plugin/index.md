@@ -1,13 +1,6 @@
 ---
 title: Plugin
 slug: Web/API/Plugin
-tags:
-  - API
-  - Add-ons
-  - DOM
-  - NeedsContent
-  - Plug-in
-  - Plugins
 translation_of: Web/API/Plugin
 ---
 

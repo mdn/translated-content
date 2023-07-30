@@ -1,11 +1,6 @@
 ---
-title: '::-webkit-outer-spin-button'
+title: "::-webkit-outer-spin-button"
 slug: Web/CSS/::-webkit-outer-spin-button
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-webkit-outer-spin-button
 ---
 
@@ -26,7 +21,7 @@ input::-webkit-outer-spin-button {
 ### HTML
 
 ```html
-<input type="number">
+<input type="number" />
 ```
 
 ### Résultat

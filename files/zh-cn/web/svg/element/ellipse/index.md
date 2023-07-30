@@ -15,7 +15,21 @@ slug: Web/SVG/Element/ellipse
 
 ## 示例
 
-» [ellipse.svg](/files/3253/ellipse.svg)
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="100" cy="50" rx="100" ry="50" />
+</svg>
+```
+
+{{EmbedLiveSample('示例', 100, '100%')}}
 
 ## 属性
 

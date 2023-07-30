@@ -60,7 +60,7 @@ Each storage type represents a separate repository. Here's the actual mapping to
 
 > **Примечание:** If you are looking around in your Profile at the data stored, you might see a fourth folder: `persistent`. Basically, the `persistent` folder was renamed to `permanent` a while ago to keep upgrades/migration simpler.
 
-> **Примечание:** Users shouldn’t add their own directories or files under `<profile>/storage`. This will cause storage initialization to fail; for example, {{domxref("IDBFactory.open()", "open()")}} will fire an error event.
+> **Примечание:** Users shouldn't add their own directories or files under `<profile>/storage`. This will cause storage initialization to fail; for example, {{domxref("IDBFactory.open()", "open()")}} will fire an error event.
 
 ## Storage limits
 

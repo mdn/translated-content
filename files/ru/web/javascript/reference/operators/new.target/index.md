@@ -66,5 +66,5 @@ var b = new B(); // вернёт "B"
 
 - [Functions](/ru/docs/Web/JavaScript/Reference/Functions)
 - [Classes](/ru/docs/Web/JavaScript/Reference/Classes)
-- [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)
-- [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
+- [`new`](/ru/docs/Web/JavaScript/Reference/Operators/new)
+- [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this)

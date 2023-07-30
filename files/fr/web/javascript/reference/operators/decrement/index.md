@@ -1,13 +1,7 @@
 ---
 title: Décrémentation (--)
 slug: Web/JavaScript/Reference/Operators/Decrement
-tags:
-  - Decrement
-  - JavaScript
-  - Language feature
-  - Operator
 translation_of: Web/JavaScript/Reference/Operators/Decrement
-browser-compat: javascript.operators.decrement
 ---
 
 {{jsSidebar("Operators")}}

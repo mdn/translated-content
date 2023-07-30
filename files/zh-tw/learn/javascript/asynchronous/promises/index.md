@@ -87,10 +87,10 @@ chooseToppings(function (toppings) {
         function (pizza) {
           eatPizza(pizza);
         },
-        failureCallback
+        failureCallback,
       );
     },
-    failureCallback
+    failureCallback,
   );
 }, failureCallback);
 ```
@@ -236,7 +236,7 @@ Something is missing — currently, there is nothing to explicitly handle errors
 ```js
 let errorCase = promise3.catch((e) => {
   console.log(
-    "There has been a problem with your fetch operation: " + e.message
+    "There has been a problem with your fetch operation: " + e.message,
   );
 });
 ```
@@ -268,7 +268,7 @@ fetch("coffee.jpg")
   })
   .catch((e) => {
     console.log(
-      "There has been a problem with your fetch operation: " + e.message
+      "There has been a problem with your fetch operation: " + e.message,
     );
   });
 ```
@@ -340,7 +340,7 @@ Let's build another example to show this in action.
        .catch((e) => {
          console.log(
            `There has been a problem with your fetch operation for resource "${url}": ` +
-             e.message
+             e.message,
          );
        });
    }
@@ -458,7 +458,7 @@ function fetchAndDecode(url, type) {
     .catch((e) => {
       console.log(
         `There has been a problem with your fetch operation for resource "${url}": ` +
-          e.message
+          e.message,
       );
     })
     .finally(() => {

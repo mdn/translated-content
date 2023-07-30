@@ -10,4 +10,4 @@ A **ARPAnet** (_Advanced Research Projects Agency Network_, em português, Rede 
 
 ### Conhecimento Geral
 
-- {{Interwiki("wikipedia", "ARPANET")}} na Wikipédia
+- [ARPANET](https://pt.wikipedia.org/wiki/ARPANET) na Wikipédia

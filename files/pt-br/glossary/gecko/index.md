@@ -14,7 +14,7 @@ Como todos os aplicativos do Firefox OS são Web apps, o Firefox OS usa o Gecko 
 
 ### Conhecimento geral
 
-- {{interwiki("wikipedia", "Gecko (software)", "Gecko")}} no Wikipedia
+- [Gecko](<https://pt.wikipedia.org/wiki/Gecko_(software)>) no Wikipedia
 
 ### Referência técnica
 

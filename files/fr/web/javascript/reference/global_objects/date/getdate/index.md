@@ -1,14 +1,7 @@
 ---
 title: Date.prototype.getDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDate
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getDate
 ---
 
 {{JSRef}}
@@ -20,7 +13,7 @@ La méthode **`getDate()`** retourne le jour du mois pour la date spécifiée d'
 ## Syntaxe
 
 ```js
-dateObj.getDate()
+dateObj.getDate();
 ```
 
 ### Paramètres

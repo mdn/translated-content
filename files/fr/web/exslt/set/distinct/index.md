@@ -1,9 +1,6 @@
 ---
 title: distinct
 slug: Web/EXSLT/set/distinct
-tags:
-  - EXSLT
-  - XSLT
 translation_of: Web/EXSLT/set/distinct
 ---
 

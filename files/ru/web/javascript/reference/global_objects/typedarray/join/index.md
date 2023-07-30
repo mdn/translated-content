@@ -49,7 +49,7 @@ if (!Uint8Array.prototype.join) {
 }
 ```
 
-Если вам нужна поддержка устаревшего JavaScript-движка, который не поддерживает свойство [`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), то лучше не создавать полифилы новых методов `Array.prototype`, так как вы не сможете сделать их неперечислимыми.
+Если вам нужна поддержка устаревшего JavaScript-движка, который не поддерживает свойство [`Object.defineProperty`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), то лучше не создавать полифилы новых методов `Array.prototype`, так как вы не сможете сделать их неперечислимыми.
 
 ## Спецификации
 

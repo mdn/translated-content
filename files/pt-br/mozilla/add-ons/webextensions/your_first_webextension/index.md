@@ -27,7 +27,6 @@ Dentro dessa pasta crie um novo arquivo chamado "manifest.json" e coloque o segu
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Borderify",
   "version": "1.0",
@@ -44,7 +43,6 @@ Dentro dessa pasta crie um novo arquivo chamado "manifest.json" e coloque o segu
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 

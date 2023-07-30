@@ -10,5 +10,5 @@ Um nome de domínio é um endereço de uma página na {{Glossary("Internet")}}. 
 
 ### Conhecimento geral
 
-- {{interwiki("wikipedia", "Domínio", "Domínio")}} na Wikipedia
+- [Domínio](https://pt.wikipedia.org/wiki/Domínio) na Wikipedia
 - [Understanding domain names](/en-US/Learn/Understanding_domain_names)

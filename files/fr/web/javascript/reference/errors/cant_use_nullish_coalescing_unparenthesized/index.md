@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressions'
+title: "SyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressions"
 slug: Web/JavaScript/Reference/Errors/Cant_use_nullish_coalescing_unparenthesized
 l10n:
   sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4
@@ -42,8 +42,8 @@ a && b ?? c
 À la place, on utilisera des parenthèses pour rendre explicite l'ordre des opérations voulu&nbsp;:
 
 ```js example-good
-(a ?? b) || c
-a ?? (b && c)
+(a ?? b) || c;
+a ?? (b && c);
 ```
 
 ## Exemples

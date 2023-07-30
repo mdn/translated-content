@@ -46,7 +46,7 @@ switch (document.readyState) {
   case "complete":
     // 頁面已經完成讀取。
     console.log(
-      "The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText
+      "The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText,
     );
     break;
 }

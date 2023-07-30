@@ -1,10 +1,7 @@
 ---
 title: attribute-set
 slug: Web/XSLT/Element/attribute-set
-tags:
-  - Référence_XSLT
 translation_of: Web/XSLT/Element/attribute-set
-original_slug: Web/XSLT/attribute-set
 ---
 
 {{ XsltRef() }}

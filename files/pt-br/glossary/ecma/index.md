@@ -10,5 +10,5 @@ Na web ela é famosa por ser a organização que mantém [a especificação ECMA
 
 ## Aprenda mais
 
-- {{interwiki("wikipedia", "Ecma_International", "Ecma International")}} na Wikipedia
+- [Ecma International](https://pt.wikipedia.org/wiki/Ecma_International) na Wikipedia
 - [Site do Ecma International](http://www.ecma-international.org/)

@@ -12,7 +12,7 @@ original_slug: Learn/Common_questions/What_is_a_domain_name
       <th scope="row">선행사항:</th>
       <td>
         우선,
-        <a href="/en-US/docs/Learn/How_the_Internet_works"
+        <a href="/ko/docs/Learn/How_the_Internet_works"
           >인터넷이 작동하는 법</a
         >을 알 필요가 있고,
         <a href="/en-US/Learn/Understanding_URLs"

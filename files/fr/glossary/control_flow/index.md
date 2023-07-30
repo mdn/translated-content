@@ -11,7 +11,7 @@ Le code est exécuté dans l'ordre de la première ligne du fichier jusqu'à la 
 Par exemple, imaginons un script utilisé pour valider les données saisies par l'utilisateur dans un formulaire sur une page web. Le script envoie la donnée validée, mais si l'utilisateur, disons, laisse vide un champ obligatoire, le script lui demandera de le remplir. Pour faire cela, le script utilise une structure {{Glossary("Conditional", "conditionelle")}} ou `if...else`, afin que le code s'exécute différemment, selon que le formulaire est complété ou non :
 
 ```js
-if (champ==vide) {
+if (champ == vide) {
   demanderUtilisateur();
 } else {
   envoyerForm();
@@ -28,7 +28,7 @@ Le contrôle de flux montre que lorsque vous lisez un script, vous ne devez pas 
 
 ### Culture générale
 
-- [Structure de contrôle](https://fr.wikipedia.org/wiki/Structure_de_contr%C3%B4le) sur Wikipédia
+- [Structure de contrôle](https://fr.wikipedia.org/wiki/Structure_de_contrôle) sur Wikipédia
 
 ### Référence technique
 

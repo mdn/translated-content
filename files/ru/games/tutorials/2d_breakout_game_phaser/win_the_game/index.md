@@ -17,20 +17,20 @@ original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser
 
 ```js
 function ballHitBrick(ball, brick) {
-    brick.kill();
-    score += 10;
-    scoreText.setText('Points: '+score);
+  brick.kill();
+  score += 10;
+  scoreText.setText("Points: " + score);
 
-    var count_alive = 0;
-    for (i = 0; i < bricks.children.length; i++) {
-      if (bricks.children[i].alive == true) {
-        count_alive++;
-      }
+  var count_alive = 0;
+  for (i = 0; i < bricks.children.length; i++) {
+    if (bricks.children[i].alive == true) {
+      count_alive++;
     }
-    if (count_alive == 0) {
-      alert('You won the game, congratulations!');
-      location.reload();
-    }
+  }
+  if (count_alive == 0) {
+    alert("You won the game, congratulations!");
+    location.reload();
+  }
 }
 ```
 

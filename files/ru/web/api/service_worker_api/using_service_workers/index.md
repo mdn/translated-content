@@ -134,7 +134,7 @@ imgLoad('myLittleVader.jpg').then((response) => {
 > **Примечание:** вы можете также объединять вызов нескольких промис-методов в одну цепочку, как в этом примере:
 > `myPromise().then(success, failure).then(success).catch(failure);`
 
-> **Примечание:** вы можете получить гораздо больше информации о промисах, прочитав превосходную статью Джейка Арчибальда (Jake Archibald’s) [JavaScript Promises: there and back again](http://www.html5rocks.com/en/tutorials/es6/promises/).
+> **Примечание:** вы можете получить гораздо больше информации о промисах, прочитав превосходную статью Джейка Арчибальда (Jake Archibald's) [JavaScript Promises: there and back again](http://www.html5rocks.com/en/tutorials/es6/promises/).
 
 ## Демонстрация Service Workers
 

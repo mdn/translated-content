@@ -20,7 +20,7 @@ Lo primero que necesitas es convertir tu video WebM en un manifiesto DASH con to
 - libwebm - concretamente para la herramienta samplemuxer (git clone <https://gerrit.chromium.org/gerrit/p/webm/libwebm.git>).
 - webm-tools - concretamente para la herramienta de creación de manifiestos, webm_dash_manifest (git clone <https://gerrit.chromium.org/gerrit/p/webm/webm-tools.git>).
 
-### 1. Use your existing WebM file to create one audio file and multiple video files.
+### 1. Use your existing WebM file to create one audio file and multiple video files
 
 Por ejemplo:
 
@@ -38,7 +38,7 @@ ffmpeg -i my_master_file.webm -vcodec libvpx -vb 100k -keyint_min 150 -g 150 -an
 ffmpeg -i my_master_file.webm -vcodec libvpx -vb 50k -keyint_min 150 -g 150 -an my_video-50kbps.webm
 ```
 
-### 2. Align the clusters to enable switching at cluster boundaries.
+### 2. Align the clusters to enable switching at cluster boundaries
 
 For video:
 
@@ -53,7 +53,7 @@ Although we don't switch audio streams, it's still necessary to run it through s
 samplemuxer -i my_audio.webm -o my_audio-final.webm -output_cues 1 -cues_on_audio_track 1 -max_cluster_duration 2 -audio_track_number
 ```
 
-### 3. Create the manifest file:
+### 3. Create the manifest file
 
 ```
 webm_dash_manifest -o my_video_manifest.mpd \
@@ -73,8 +73,8 @@ You'll want to modify your web page to point to the DASH manifest first, instead
 
 ```html
 <video>
-  <source src="movie.mpd">
-  <source src="movie.webm">
+  <source src="movie.mpd" />
+  <source src="movie.webm" />
   Your browser does not support the video tag.
 </video>
 ```

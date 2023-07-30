@@ -43,12 +43,12 @@ A new string, with all matches of a pattern replaced by a replacement.
 
 The replacement string can include the following special replacement patterns:
 
-| Pattern  | Inserts                                                                                                                                                                                               |
-| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$$`     | Inserts a `"$"`.                                                                                                                                                                                      |
-| `$&`     | Inserts the matched substring.                                                                                                                                                                        |
-| `` $` `` | Inserts the portion of the string that precedes the matched substring.                                                                                                                                |
-| `$'`     | Inserts the portion of the string that follows the matched substring.                                                                                                                                 |
+| Pattern  | Inserts                                                                                                                                                                                       |
+| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$$`     | Inserts a `"$"`.                                                                                                                                                                              |
+| `$&`     | Inserts the matched substring.                                                                                                                                                                |
+| `` $` `` | Inserts the portion of the string that precedes the matched substring.                                                                                                                        |
+| `$'`     | Inserts the portion of the string that follows the matched substring.                                                                                                                         |
 | `$n`     | Where `n` is a positive integer less than 100, inserts the `n`th parenthesized submatch string, provided the first argument was a {{jsxref("RegExp")}} object. Note that this is `1`-indexed. |
 
 ### 将一个函数指定为一个参数
@@ -59,12 +59,12 @@ Note that the function will be invoked multiple times for each full match to be 
 
 The arguments to the function are as follows:
 
-| Possible name | Supplied value                                                                                                                                                                                                                                                                      |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `match`       | The matched substring. (Corresponds to `$&` above.)                                                                                                                                                                                                                                 |
+| Possible name | Supplied value                                                                                                                                                                                                                                                              |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `match`       | The matched substring. (Corresponds to `$&` above.)                                                                                                                                                                                                                         |
 | `p1, p2, ...` | The *n*th string found by a parenthesized capture group, provided the first argument to `replace()` was a {{jsxref("RegExp")}} object. (Corresponds to `$1`, `$2`, etc. above.) For example, if `/(\a+)(\b+)/`, was given, `p1` is the match for `\a+`, and `p2` for `\b+`. |
-| `offset`      | The offset of the matched substring within the whole string being examined. (For example, if the whole string was `'abcd'`, and the matched substring was `'bc'`, then this argument will be `1`.)                                                                                  |
-| `string`      | The whole string being examined.                                                                                                                                                                                                                                                    |
+| `offset`      | The offset of the matched substring within the whole string being examined. (For example, if the whole string was `'abcd'`, and the matched substring was `'bc'`, then this argument will be `1`.)                                                                          |
+| `string`      | The whole string being examined.                                                                                                                                                                                                                                            |
 
 (The exact number of arguments depends on whether the first argument is a {{jsxref("RegExp")}} object—and, if so, how many parenthesized submatches it specifies.)
 
@@ -73,7 +73,7 @@ The arguments to the function are as follows:
 ### 使用 replaceAll
 
 ```js
-'aabbcc'.replaceAll('b', '.');
+"aabbcc".replaceAll("b", ".");
 // 'aa..cc'
 ```
 
@@ -89,8 +89,8 @@ TypeError: replaceAll must be called with a global RegExp
 这将可以正常运行：
 
 ```js example-good
-'aabbcc'.replaceAll(/b/g, '.');
-"aa..cc"
+"aabbcc".replaceAll(/b/g, ".");
+("aa..cc");
 ```
 
 ## 规范

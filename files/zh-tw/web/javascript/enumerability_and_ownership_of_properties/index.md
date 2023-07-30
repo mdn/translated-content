@@ -222,7 +222,7 @@ var SimplePropertyRetriever = {
       obj,
       true,
       false,
-      this._enumerableAndNotEnumerable
+      this._enumerableAndNotEnumerable,
     );
     // Or just use: return Object.getOwnPropertyNames(obj);
   },
@@ -237,7 +237,7 @@ var SimplePropertyRetriever = {
       obj,
       false,
       true,
-      this._enumerableAndNotEnumerable
+      this._enumerableAndNotEnumerable,
     );
   },
   getOwnAndPrototypeEnumerables: function (obj) {
@@ -252,7 +252,7 @@ var SimplePropertyRetriever = {
       obj,
       true,
       true,
-      this._enumerableAndNotEnumerable
+      this._enumerableAndNotEnumerable,
     );
   },
   // Private static property checker callbacks
@@ -270,7 +270,7 @@ var SimplePropertyRetriever = {
     obj,
     iterateSelfBool,
     iteratePrototypeBool,
-    includePropCb
+    includePropCb,
   ) {
     var props = [];
 

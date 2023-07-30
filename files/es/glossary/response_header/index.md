@@ -5,7 +5,7 @@ slug: Glossary/Response_header
 
 Una **cabecera de respuesta** (en inglés _response header_) es una {{Glossary("HTTP header")}} que puede ser usada en una respuesta HTTP y que no tiene que ver con el contenido del mensaje. Las cabeceras de respuesta, como {{HTTPHeader("Age")}}, {{HTTPHeader("Location")}} o {{HTTPHeader("Server")}} son usadas para dar un contexto más detallado de la respuesta.
 
-No todas las cabeceras que aparecen en una respuesta son categorizada como *cabeceras de respuesta* por la especificación. Por ejemplo, la cabecera {{HTTPHeader("Content-Type")}} es una {{glossary("representation header")}} indicando el tipo original de datos en el cuerpo del mensaje de respuesta (previo a que la codificación en la cabecera de representación {{HTTPHeader("Content-Encoding")}} sea aplicada). Sin embargo, en un mensaje de respuesta, "conversacionalmente" todas las cabeceras son usualmente llamadas como cabeceras de respuesta.
+No todas las cabeceras que aparecen en una respuesta son categorizada como _cabeceras de respuesta_ por la especificación. Por ejemplo, la cabecera {{HTTPHeader("Content-Type")}} es una {{glossary("representation header")}} indicando el tipo original de datos en el cuerpo del mensaje de respuesta (previo a que la codificación en la cabecera de representación {{HTTPHeader("Content-Encoding")}} sea aplicada). Sin embargo, en un mensaje de respuesta, "conversacionalmente" todas las cabeceras son usualmente llamadas como cabeceras de respuesta.
 
 A continuación se muestra algunas cabeceras de respuesta y representación luego de una petición {{HTTPMethod("GET")}}.
 

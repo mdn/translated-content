@@ -10,7 +10,7 @@ Um valor **{{Glossary("primitive")}}** automaticamente atribuido para **variavei
 
 ### Conhecimentos gerais
 
-- {{Interwiki("wikipedia", "Undefined value")}} no Wikipedia
+- [Undefined value](https://pt.wikipedia.org/wiki/Valor_não_definido) no Wikipedia
 
 ### Referência Técnica
 

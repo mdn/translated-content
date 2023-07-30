@@ -117,7 +117,7 @@ Then, drawScene() can be revised to actually use these colors when drawing the s
     type,
     normalize,
     stride,
-    offset
+    offset,
   );
   gl.enableVertexAttribArray(programInfo.attribLocations.vertexColor);
 }

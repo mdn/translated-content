@@ -2,7 +2,6 @@
 title: Element.scrollLeft
 slug: Web/API/Element/scrollLeft
 translation_of: Web/API/Element/scrollLeft
-browser-compat: api.Element.scrollLeft
 ---
 
 {{APIRef("DOM")}}
@@ -54,10 +53,10 @@ Un nombre
 ### JavaScript
 
 ```js
-const button = document.getElementById('slide');
+const button = document.getElementById("slide");
 
 button.onclick = function () {
-  document.getElementById('container').scrollLeft += 20;
+  document.getElementById("container").scrollLeft += 20;
 };
 ```
 

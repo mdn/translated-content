@@ -229,4 +229,4 @@ La sintaxis Rest luce exactamente como la sintaxis spread, pero esto es usado po
 
 ## Vea también
 
-- [Rest parameters](/es/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters) (también ‘`...`’)
+- [Rest parameters](/es/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters) (también '`...`')

@@ -129,8 +129,8 @@ Object.getOwnPropertyDescriptor({
 
 ## Notas específicas do Firefox
 
-- Desde o Firefox 17 a função `Function.prototype.toString()` tem sido implementada salvando o fonte da função. O descompilador foi removido o que torna o parâmetro `indentation` desnecessário. Veja {{bug("761723")}} para mais detalhes.
-- Do Firefox 38 para o 63 a função `Function.prototype.toString()` lançava exceções para objetos {{jsxref("Proxy")}} ({{bug(1100936)}} e {{bug(1440468)}}).
+- Desde o Firefox 17 a função `Function.prototype.toString()` tem sido implementada salvando o fonte da função. O descompilador foi removido o que torna o parâmetro `indentation` desnecessário. Veja [Erro do Firefox 761723](https://bugzil.la/761723) para mais detalhes.
+- Do Firefox 38 para o 63 a função `Function.prototype.toString()` lançava exceções para objetos {{jsxref("Proxy")}} ([Erro do Firefox 1100936](https://bugzil.la/1100936) e [Erro do Firefox 1440468](https://bugzil.la/1440468)).
 
 ## Veja também
 

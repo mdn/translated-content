@@ -1,5 +1,5 @@
 ---
-title: 'Тайминги производительности: как долго - долго?'
+title: "Тайминги производительности: как долго - долго?"
 slug: Web/Performance/How_long_is_too_long
 tags:
   - Performance

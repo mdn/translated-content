@@ -1,11 +1,6 @@
 ---
 title: aural
 slug: Web/CSS/@media/aural
-tags:
-  - CSS
-  - Déprécié
-  - Obsolete
-  - Reference
 translation_of: Web/CSS/@media/aural
 ---
 

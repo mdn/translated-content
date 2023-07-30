@@ -19,7 +19,7 @@ function logTabs(tabs) {
 browser.tabs.query({currentWindow: true}, logTabs);
 ```
 
-Many of the APIs are asynchronous, returning a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise):
+Many of the APIs are asynchronous, returning a [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise):
 
 ```js
 function logCookie(c) {

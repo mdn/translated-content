@@ -130,7 +130,7 @@ IE8 被列为重要，但它较老且不再更新。Opera Mini 也很重要，�
 
 当您的代码库有需要测试的新添加项时，在开始测试之前，应编写出需要通过才能接受的测试要求列表。这些要求可以是可视的，也可以是功能性的，两者结合起来，成为可用的网站功能。
 
-思考下面的例子 (查看[源码](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)，[在线预览](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)):
+思考下面的例子 (查看[源码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)，[在线预览](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)):
 
 ![](sliding-box-demo.png)
 
@@ -219,11 +219,11 @@ You may notice from the text in the example that it won't work in IE8 — this i
 4. 要创建新虚拟机，请按左上角的“新建”按钮。
 5. 按照说明进行操作，并根据需要填写以下对话框。你会：
 
-    1. 为新虚拟机提供名称
-    2. 选择要在其上安装的操作系统和版本
-    3. 设置应分配多少 RAM（我们建议使用 2048MB 或 2GB）
-    4. 创建虚拟硬盘（在包含立即创建虚拟硬盘，VDI（虚拟磁盘映像）和动态分配的三个对话框中选择默认选项）。
-    5. 选择虚拟硬盘的文件位置和大小（选择一个合理的名称和位置来保留它，并且大小指定大约 50GB，或者您可以轻松指定）。
+   1. 为新虚拟机提供名称
+   2. 选择要在其上安装的操作系统和版本
+   3. 设置应分配多少 RAM（我们建议使用 2048MB 或 2GB）
+   4. 创建虚拟硬盘（在包含立即创建虚拟硬盘，VDI（虚拟磁盘映像）和动态分配的三个对话框中选择默认选项）。
+   5. 选择虚拟硬盘的文件位置和大小（选择一个合理的名称和位置来保留它，并且大小指定大约 50GB，或者您可以轻松指定）。
 
 现在，新的虚拟框应出现在 Virtual Box UI 主窗口的左侧菜单中。此时，您可以双击它以打开虚拟机––它将开始启动虚拟机，但它还没有安装操作系统。此时，您需要将对话框指向安装程序映像/磁盘，它将运行在虚拟机上安装它的步骤，就像它是真正的计算机一样。
 

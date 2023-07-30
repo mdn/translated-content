@@ -220,7 +220,7 @@ No cenário acima, `no-referrer` só será usada se `strict-origin-when-cross-or
 
 ## Veja também
 
-- {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}
+- [HTTP referer on Wikipedia](https://pt.wikipedia.org/wiki/HTTP_referer)
 - Quando usando [Fetch](/pt-BR/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
 - A obsoleta diretiva {{HTTPHeader("Content-Security-Policy")}} {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}}.
 - [Política de mesma origem (_Same-origin policy_)](/pt-BR/docs/Web/Security/Same-origin_policy)

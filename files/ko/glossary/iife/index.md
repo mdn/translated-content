@@ -40,9 +40,9 @@ result; // "Barry"
 
 ## 같이 보기
 
-- [Quick example](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#functions) (at the end of the "Functions" section, right before "Custom objects")
+- [Quick example](/ko/docs/Web/JavaScript/A_re-introduction_to_JavaScript#functions) (at the end of the "Functions" section, right before "Custom objects")
 - [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (Wikipedia)
-- [Glossary](/en-US/docs/Glossary)
+- [Glossary](/ko/docs/Glossary)
 
   - {{Glossary("Function")}}
   - {{Glossary("Self-Executing Anonymous Function")}}

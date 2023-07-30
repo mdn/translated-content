@@ -340,7 +340,7 @@ Si Firefox ne peut pas trouver une correspondance exacte pour la taille qu'il ve
 Une action de navigateur avec juste une icône, spécifiée en 2 tailles différentes. Les scripts d'arrière-plan de l'extension peuvent recevoir des événements de clic lorsque l'utilisateur clique sur l'icône en utilisant un code comme celui-ci :
 
 ```js
- browser.browserAction.onClicked.addListener(handleClick);
+browser.browserAction.onClicked.addListener(handleClick);
 ```
 
 ```json

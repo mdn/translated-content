@@ -4,7 +4,7 @@ slug: Web/Manifest/theme_color
 translation_of: Web/Manifest/theme_color
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+{{QuickLinksWithSubpages("/fr/docs/Web/Manifest")}}
 
 <table>
   <tbody>

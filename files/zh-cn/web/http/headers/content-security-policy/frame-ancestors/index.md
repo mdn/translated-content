@@ -54,12 +54,14 @@ Content-Security-Policy: frame-ancestors <source> <source>;
     - `mail.example.com:443`: 匹配所有对于 mail.example.com 在 443 端口的访问意图。
     - `https://store.example.com`: 匹配所有使用 https:访问 store.example.com 的意图。
 - \<scheme-source>
+
   - : 一个 schema 配置，比如'http:'或'https:'。注意，冒号是必要的。你同样也可以指定一个 data schema（但并不推荐）。
 
     - '`data:`' 允许 [`data:` URIs](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) 作为内容源。_这是不安全的，攻击者可以用此来注入恶意代码。请谨慎使用，并不要令其作用于脚本。_
     - `'mediastream:'` 允许 [`mediastream:` URIs](/zh-CN/docs/Web/API/MediaStream_API) 作为内容源。
     - `'blob:'` 允许 [`blob:` URIs](/zh-CN/docs/Web/API/Blob) 作为内容源。
     - `'filesystem:'` 允许 [`filesystem:` URIs](/zh-CN/docs/Web/API/FileSystem) 作为内容源。
+
 - `'self'`
   - : 指向一个该受保护文档所在的源，包含同样的 URL schema 和端口号。必须用单引号设置。有些浏览器会从源指令中排`除 blob`和`filesystem`。需要允许这些内容类型的站点可以通过 Data 属性指定它们。
 - `'none'`

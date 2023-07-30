@@ -16,7 +16,7 @@ This second article in our [Express Tutorial](/ko/docs/Learn/Server-side/Express
       <th scope="row">Prerequisites:</th>
       <td>
         <a
-          href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment"
+          href="/ko/docs/Learn/Server-side/Express_Nodejs/development_environment"
           >Set up a Node development environment</a
         >. Review the Express Tutorial.
       </td>

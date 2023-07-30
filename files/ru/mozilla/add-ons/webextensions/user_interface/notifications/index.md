@@ -6,6 +6,7 @@ tags:
   - Расширение
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 ---
+
 {{AddonSidebar}}
 
 Уведомления позволяют вам передавать информацию пользователям вашего расширения через службу уведомлений в операционной системе.
@@ -28,10 +29,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 var title = browser.i18n.getMessage("notificationTitle");
 var content = browser.i18n.getMessage("notificationContent", message.url);
 browser.notifications.create({
-  "type": "basic",
-  "iconUrl": browser.extension.getURL("icons/link-48.png"),
-  "title": title,
-  "message": content
+  type: "basic",
+  iconUrl: browser.extension.getURL("icons/link-48.png"),
+  title: title,
+  message: content,
 });
 ```
 

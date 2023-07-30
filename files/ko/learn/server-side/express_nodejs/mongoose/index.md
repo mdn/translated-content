@@ -12,7 +12,7 @@ slug: Learn/Server-side/Express_Nodejs/mongoose
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website"
+        <a href="/ko/docs/Learn/Server-side/Express_Nodejs/skeleton_website"
           >Express Tutorial Part 2: Creating a skeleton website</a
         >
       </td>

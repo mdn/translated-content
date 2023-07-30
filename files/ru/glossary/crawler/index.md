@@ -13,4 +13,4 @@ original_slug: Глоссарий/Crawler
 
 1. [MDN Web Docs Glossary](/ru/docs/Glossary)
 
-    1. {{Glossary("Search engine")}}
+   1. {{Glossary("Search engine")}}

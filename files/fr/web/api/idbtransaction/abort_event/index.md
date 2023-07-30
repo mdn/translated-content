@@ -23,12 +23,12 @@ Le gestionnaire d'arrêt est exécuté lorsqu'une transaction a été interrompu
 
 ## Propriétés
 
-| Property                              | Type                                 | Description                                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| Property                        | Type                       | Description                                            |
+| ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
 
 ## Voir aussi
 

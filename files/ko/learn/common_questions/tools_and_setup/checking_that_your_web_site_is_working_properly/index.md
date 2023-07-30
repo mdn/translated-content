@@ -13,7 +13,7 @@ original_slug: Learn/Common_questions/Checking_that_your_web_site_is_working_pro
       <th scope="row">전제 조건:</th>
       <td>
         먼저,
-        <a href="/en-US/docs/Learn/Upload_files_to_a_web_server"
+        <a href="/ko/docs/Learn/Upload_files_to_a_web_server"
           >upload files웹 서버에 파일 업로드 방법</a
         >을 알아야 합니다.
       </td>

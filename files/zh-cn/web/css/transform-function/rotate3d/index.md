@@ -43,7 +43,7 @@ rotate3d(x, y, z, a)
     <tr>
       <th scope="col">在ℝ<sup>3</sup>上的笛卡尔坐标</th>
       <td colspan="1">
-        <a href="/en-US/docs/Web/CSS/transform-function/rotate3d()/transform-functions-rotate3d_cart.png"
+        <a href="/zh-CN/docs/Web/CSS/transform-function/rotate3d()/transform-functions-rotate3d_cart.png"
           ><img
             src="transform-functions-rotate3d_cart.png"
             style="height: 47px; width: 510px" /></a
@@ -88,7 +88,7 @@ rotate3d(x, y, z, a)
     <tr>
       <th scope="col">在ℝℙ<sup>3</sup>上的齐次坐标</th>
       <td colspan="1">
-        <a href="/en-US/docs/Web/CSS/transform-function/rotate3d/transform-functions-rotate3d_hom4.png"
+        <a href="/zh-CN/docs/Web/CSS/transform-function/rotate3d/transform-functions-rotate3d_hom4.png"
           ><img
             src="transform-functions-rotate3d_hom4.png"
             style="height: 61px; width: 522px"

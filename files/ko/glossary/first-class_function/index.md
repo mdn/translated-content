@@ -62,7 +62,7 @@ function sayHello() {
 ## 같이 보기
 
 - [일급 함수](https://en.wikipedia.org/wiki/First-class_function) 위키피디아
-- [MDN Web Docs 용어 사전](/en-US/docs/Glossary)
+- [MDN Web Docs 용어 사전](/ko/docs/Glossary)
 
   - {{glossary("Callback function", "콜백 함수")}}
   - {{glossary("Function", "함수")}}
