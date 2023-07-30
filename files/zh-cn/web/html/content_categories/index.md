@@ -135,7 +135,10 @@ original_slug: Web/Guide/HTML/Content_categories
 例如，{{HTMLElement("del")}} 和 {{HTMLELement("ins")}} 是透明的：
 
 ```html
-<p>We hold these truths to be <del><em>sacred &amp; undeniable</em></del> <ins>self-evident</ins>.</p>
+<p>
+  We hold these truths to be <del><em>sacred &amp; undeniable</em></del>
+  <ins>self-evident</ins>.
+</p>
 ```
 
 即使这两个元素被移除，这个代码段依然是合法的（至少从代码语法上）。

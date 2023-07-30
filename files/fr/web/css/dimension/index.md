@@ -1,10 +1,6 @@
 ---
 title: <dimension>
 slug: Web/CSS/dimension
-tags:
-  - CSS
-  - Reference
-  - Type
 translation_of: Web/CSS/dimension
 ---
 

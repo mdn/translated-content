@@ -11,9 +11,9 @@ Envoyé après {{WebExtAPIRef("runtime.onSuspend")}} pour indiquer que l'applica
 ## Syntaxe
 
 ```js
-browser.runtime.onSuspendCanceled.addListener(listener)
-browser.runtime.onSuspendCanceled.removeListener(listener)
-browser.runtime.onSuspendCanceled.hasListener(listener)
+browser.runtime.onSuspendCanceled.addListener(listener);
+browser.runtime.onSuspendCanceled.removeListener(listener);
+browser.runtime.onSuspendCanceled.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

@@ -1,5 +1,5 @@
 ---
-title: 'CSP: script-src'
+title: "CSP: script-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/script-src
 ---
 
@@ -61,13 +61,13 @@ Content-Security-Policy: script-src https://example.com/
 인라인 스크립트도 실행되지 않습니다:
 
 ```html
-<button id="btn" onclick="doSomething()">
+<button id="btn" onclick="doSomething()"></button>
 ```
 
 {{domxref("EventTarget.addEventListener", "addEventListener")}}를 호출하는 것으로 대체해야 합니다.:
 
 ```js
-document.getElementById("btn").addEventListener('click', doSomething);
+document.getElementById("btn").addEventListener("click", doSomething);
 ```
 
 ### 안전하지 않은 인라인 스크립트
@@ -111,15 +111,17 @@ Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWt
 해시를 생성할 때에는 {{HTMLElement("script")}} 태그를 포함하지 말고, 대소문자, 태그의 앞뒤 공백이 포함되어야 하는 것을 유의해주십시요.
 
 ```html
-<script>var inline = 1;</script>
+<script>
+  var inline = 1;
+</script>
 ```
 
 ### 안전하지 않은 eval 표현식
 
 `'unsafe-eval'` 출처 표현식은 문자열에서 코드를 생성하는 여러 스크립트 실행 메소드를 제어합니다. 만약`'unsafe-eval'` 이 `script-src` 에 정의되어 있지 않으면, 아래믜 명령어는 차단되며 아무런 효과가 일어나지 않습니다.
 
-- [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
-- [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
+- [`eval()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- [`Function()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function)
 - 아래와 같이 문자열 리터럴을 전달할 때 :
   `window.setTimeout("alert(\"Hello World!\");", 500);`
 

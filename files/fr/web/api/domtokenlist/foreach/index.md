@@ -52,12 +52,9 @@ var span = document.querySelector("span");
 var classes = span.classList;
 var iterator = classes.values();
 
-classes.forEach(
-  function(value, key, listObj) {
-    span.textContent += value + ' ' + key + "/" + this + '  ++  ';
-  },
-  "arg"
-);
+classes.forEach(function (value, key, listObj) {
+  span.textContent += value + " " + key + "/" + this + "  ++  ";
+}, "arg");
 ```
 
 ### Résultat

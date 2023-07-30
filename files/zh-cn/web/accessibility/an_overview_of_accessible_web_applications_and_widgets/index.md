@@ -4,7 +4,7 @@ slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 ---
 
 <section id="Quick_links">
-  {{ListSubpagesForSidebar("zh-CN/docs/Web/Accessibility", 1)}}
+  {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility", 1)}}
 </section>
 
 web 正在变化。静态的、基于页面的站点逐渐被动态站点所取代，桌面式的 web 应用由大量的 JavaScript 和 AJAX 组成。设计人员完全可以通过 JavaScript，HTML 和 CSS 的组合创建令人惊叹的新的小部件和控件。这种转变有可能显着提高网络的响应能力和可用性，但是由于无障碍差距，存在许多用户有无法享用这种好处的风险。用户无法访问传统上 JavaScript 对于诸如屏幕阅读器等辅助技术，但是现在有了创建动态 Web 用户界面的方法，可以被各种用户访问。

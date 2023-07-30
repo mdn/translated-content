@@ -1,16 +1,6 @@
 ---
 title: Graphismes sur le Web
 slug: Web/Guide/Graphics
-tags:
-  - 2D
-  - 3D
-  - Canvas
-  - Graphismes
-  - HTML
-  - SVG
-  - Web
-  - WebGL
-  - WebRTC
 translation_of: Web/Guide/Graphics
 ---
 

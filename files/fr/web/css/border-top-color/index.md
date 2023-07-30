@@ -1,10 +1,6 @@
 ---
 title: border-top-color
 slug: Web/CSS/border-top-color
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/border-top-color
 ---
 
@@ -66,9 +62,10 @@ border-top-color: unset;
 
 ```html
 <div class="maboite">
-  <p>Une boîte avec une bordure autour.
-     Notez le côté de la boîte qui est
-     <span class="texterouge">rouge</span>.</p>
+  <p>
+    Une boîte avec une bordure autour. Notez le côté de la boîte qui est
+    <span class="texterouge">rouge</span>.
+  </p>
 </div>
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'HTML: Una buena base para la accesibilidad'
+title: "HTML: Una buena base para la accesibilidad"
 slug: Learn/Accessibility/HTML
 ---
 
@@ -13,10 +13,10 @@ Se puede hacer accesible una gran cantidad de contenido web solo asegurándose d
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimiento básico de informática, entendimiento básico de HTML (ver
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
           >Introducción a HTML</a
         >), y entendimiento de
-        <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility"
+        <a href="/es/docs/Learn/Accessibility/What_is_accessibility"
           >¿Qué es accesibilidad?</a
         >.
       </td>
@@ -88,11 +88,17 @@ Una de las mejores ayudas de accesibilidad que un usuario lector de pantalla pue
 
 <h2>Mi subtítulo</h2>
 
-<p>Esta es la primera subsección de mi documento. ¡Me encantaría que la gente pudiera leer este contenido!</p>
+<p>
+  Esta es la primera subsección de mi documento. ¡Me encantaría que la gente
+  pudiera leer este contenido!
+</p>
 
 <h2>Mi 2º subtitulo</h2>
 
-<p>Esta es la segunda subsección de mi documento. Creo que es más interesante que la primera.</p>
+<p>
+  Esta es la segunda subsección de mi documento. Creo que es más interesante que
+  la primera.
+</p>
 ```
 
 Hemos preparado una versión más larga para que pruebes con un lector de pantalla (ver [good-semantics.html](http://mdn.github.io/learning-area/accessibility/html/good-semantics.html)). Si tratas de navegar por ella, notaras que es muy fácil:
@@ -105,25 +111,26 @@ Hemos preparado una versión más larga para que pruebes con un lector de pantal
 Las personas a veces escriben encabezados, párrafos, etc. usando HTML presentacional y saltos de línea, algo como lo siguiente:
 
 ```html example-bad
-<font size="7">Mi cabecera</font>
-<br><br>
+<font size="7">Mi cabecera</font> <br /><br />
 Esta es la primera sección del documento.
-<br><br>
+<br /><br />
 Voy a agregar otro párrafo aquí también.
-<br><br>
+<br /><br />
 1. Aquí esta
-<br><br>
+<br /><br />
 2. una lista para
-<br><br>
+<br /><br />
 3. que la leas
-<br><br>
+<br /><br />
 <font size="5">Mi subtitulo</font>
-<br><br>
-Esta es la primera subsección de mi documento. ¡Me encantaría que la gente pudiera leer este contenido!
-<br><br>
+<br /><br />
+Esta es la primera subsección de mi documento. ¡Me encantaría que la gente
+pudiera leer este contenido!
+<br /><br />
 <font size="5">Mi 2º subtitulo</font>
-<br><br>
-Esta es la segunda subsección de mi documento. Creo que es más interesante que la primera.
+<br /><br />
+Esta es la segunda subsección de mi documento. Creo que es más interesante que
+la primera.
 ```
 
 Si pruebas nuestra versión extendida con un lector de pantalla (ver [bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)), no vas a tener una buena experiencia: el lector de pantalla no tiene nada que usar como señal, por lo que no podrás tener una tabla de contenidos útil y toda la página se ve como un solo bloque gigante, así que solo se lee de una vez, todo de una vez.
@@ -146,69 +153,61 @@ Prueba nuestro ejemplo [table-layout.html](http://mdn.github.io/learning-area/ac
 
 ```html
 <table width="1200">
-      <!-- main heading row -->
-      <tr id="heading">
-        <td colspan="6">
+  <!-- main heading row -->
+  <tr id="heading">
+    <td colspan="6">
+      <h1 align="center">Header</h1>
+    </td>
+  </tr>
+  <!-- nav menu row  -->
+  <tr id="nav" bgcolor="#ffffff">
+    <td width="200">
+      <a href="#" align="center">Home</a>
+    </td>
+    <td width="200">
+      <a href="#" align="center">Our team</a>
+    </td>
+    <td width="200">
+      <a href="#" align="center">Projects</a>
+    </td>
+    <td width="200">
+      <a href="#" align="center">Contact</a>
+    </td>
+    <td width="300">
+      <form width="300">
+        <input type="search" name="q" placeholder="Search query" width="300" />
+      </form>
+    </td>
+    <td width="100">
+      <button width="100">Go!</button>
+    </td>
+  </tr>
+  <!-- spacer row -->
+  <tr id="spacer" height="10">
+    <td></td>
+  </tr>
+  <!-- main content and aside row -->
+  <tr id="main">
+    <td id="content" colspan="4" bgcolor="#ffffff">
+      <!-- main content goes here -->
+    </td>
+    <td id="aside" colspan="2" bgcolor="#ff80ff" valign="top">
+      <h2>Related</h2>
 
-          <h1 align="center">Header</h1>
-
-        </td>
-      </tr>
-      <!-- nav menu row  -->
-      <tr id="nav" bgcolor="#ffffff">
-        <td width="200">
-          <a href="#" align="center">Home</a>
-        </td>
-        <td width="200">
-          <a href="#" align="center">Our team</a>
-        </td>
-        <td width="200">
-          <a href="#" align="center">Projects</a>
-        </td>
-        <td width="200">
-          <a href="#" align="center">Contact</a>
-        </td>
-        <td width="300">
-          <form width="300">
-            <input type="search" name="q" placeholder="Search query" width="300">
-          </form>
-        </td>
-        <td width="100">
-          <button width="100">Go!</button>
-        </td>
-      </tr>
-      <!-- spacer row -->
-      <tr id="spacer" height="10">
-        <td>
-
-        </td>
-      </tr>
-      <!-- main content and aside row -->
-      <tr id="main">
-        <td id="content" colspan="4" bgcolor="#ffffff">
-
-          <!-- main content goes here -->
-        </td>
-        <td id="aside" colspan="2" bgcolor="#ff80ff" valign="top">
-          <h2>Related</h2>
-
-          <!-- aside content goes here -->
-
-        </td>
-      </tr>
-      <!-- spacer row -->
-      <tr id="spacer" height="10">
-        <td>
-
-        </td>
-      </tr>
-      <!-- footer row -->
-      <tr id="footer" bgcolor="#ffffff">
-        <td colspan="6">
-          <p>©Copyright 2050 by nobody. All rights reversed.</p>
-        </td>
-      </tr>
-    </table>
+      <!-- aside content goes here -->
+    </td>
+  </tr>
+  <!-- spacer row -->
+  <tr id="spacer" height="10">
+    <td></td>
+  </tr>
+  <!-- footer row -->
+  <tr id="footer" bgcolor="#ffffff">
+    <td colspan="6">
+      <p>©Copyright 2050 by nobody. All rights reversed.</p>
+    </td>
+  </tr>
+</table>
 ```
 
 Si intentas navegar por él con un lector de pantalla, probablemente te dirá que hay una tabla para mirar (aunque algunos lectores de pantalla pueden adivinar la diferencia entre diseños con tablas y tablas de datos). Luego, probablemente (dependiendo del lector de pantalla que estés usando) tendrás que entrar en la tabla como objeto y mirar sus características por separado, y luego salir de la tabla nuevamente para continuar navegando por el contenido.
@@ -226,7 +225,6 @@ Los diseños con tablas son una reliquia del pasado: tenían sentido cuando la c
 
 <!-- Here is our page's main content -->
 <main>
-
   <!-- It contains an article -->
   <article>
     <h2>Article heading</h2>
@@ -239,7 +237,6 @@ Los diseños con tablas son una reliquia del pasado: tenían sentido cuando la c
 
     <!-- aside content in here -->
   </aside>
-
 </main>
 
 <!-- And here is our main footer that is used across all the pages of our website -->
@@ -274,13 +271,18 @@ Básicamente, obtienes este comportamiento gratis, solo con el uso de los elemen
 
 <p>Esto es un enlace a <a href="https://www.mozilla.org">Mozilla</a>.</p>
 
-<p>Otro enlace, a la <a href="https://developer.mozilla.org">Mozilla Developer Network</a>.</p>
+<p>
+  Otro enlace, a la
+  <a href="https://developer.mozilla.org">Mozilla Developer Network</a>.
+</p>
 
 <h2>Botones</h2>
 
 <p>
   <button data-message="Esto es del primer botón">¡Haz clic!</button>
-  <button data-message="Esto es del segundo botón">¡Haz clic aquí también!</button>
+  <button data-message="Esto es del segundo botón">
+    ¡Haz clic aquí también!
+  </button>
   <button data-message="Esto es del tercer botón">Y aquí!</button>
 </p>
 
@@ -289,11 +291,11 @@ Básicamente, obtienes este comportamiento gratis, solo con el uso de los elemen
 <form>
   <div>
     <label for="nombre">Entra tu nombre:</label>
-    <input type="text" id="nombre" name="nombre">
+    <input type="text" id="nombre" name="nombre" />
   </div>
   <div>
     <label for="edad">Entra tu edad:</label>
-    <input type="text" id="edad" name="edad">
+    <input type="text" id="edad" name="edad" />
   </div>
   <div>
     <label for="humor">Elige tu humor:</label>
@@ -325,7 +327,9 @@ Volver a agregar estas ventajas requiere un poco de trabajo (puedes ver un ejemp
 
 ```html
 <div data-message="Esto es del primer botón" tabindex="0">¡Haz clic aquí!</div>
-<div data-message="Esto es del segundo botón" tabindex="0">¡Haz clic aquí también!</div>
+<div data-message="Esto es del segundo botón" tabindex="0">
+  ¡Haz clic aquí también!
+</div>
 <div data-message="Esto es del tercer botón" tabindex="0">¡Y aquí!</div>
 ```
 
@@ -337,8 +341,9 @@ Básicamente, el atributo [`tabindex`](/es/docs/Web/HTML/Global_attributes#tabin
 Si bien la adición anterior nos permite tabular los botones, no nos permite activarlos a través de la tecla <kbd>Enter</kbd> / <kbd>Return</kbd>. Para hacer eso, hemos tenido que agregar el siguiente truco en JavaScript:
 
 ```js
-document.onkeydown = function(e) {
-  if(e.keyCode === 13) { // La tecla Enter/Return
+document.onkeydown = function (e) {
+  if (e.keyCode === 13) {
+    // La tecla Enter/Return
     document.activeElement.click();
   }
 };
@@ -359,13 +364,19 @@ Deberías asegurarte de que las etiquetas de texto de tus botones y enlaces sean
 Asegúrate de que tus etiquetas tienen sentido sin su contexto, leídas solas, así como en el contexto del párrafo en que están. Por ejemplo, lo siguiente muestra un buen ejemplo de enlace de texto:
 
 ```html example-good
-<p>Las ballenas son criaturas realmente impresionantes. <a href="whales.html">Aprende más sobre las ballenas</a>.</p>
+<p>
+  Las ballenas son criaturas realmente impresionantes.
+  <a href="whales.html">Aprende más sobre las ballenas</a>.
+</p>
 ```
 
 y esto es un mal texto de enlace:
 
 ```html example-bad
-<p>Las ballenas son criaturas realmente impresionantes. Para aprender más sobre las ballenas, <a href="whales.html">haz clic aquí</a>.</p>
+<p>
+  Las ballenas son criaturas realmente impresionantes. Para aprender más sobre
+  las ballenas, <a href="whales.html">haz clic aquí</a>.
+</p>
 ```
 
 > **Nota:** Encontrarás mucho más sobre la implementación de enlaces y buenas prácticas en nuestro artículo [Crear hipervínculos](/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks). También encontrarás buenos y malos ejemplos en [good-links.html](http://mdn.github.io/learning-area/accessibility/html/good-links.html) y [bad-links.html](http://mdn.github.io/learning-area/accessibility/html/bad-links.html).
@@ -373,7 +384,7 @@ y esto es un mal texto de enlace:
 Las etiquetas de formulario también son importantes, para darte una pista sobre lo que necesita introducir en cada campo de formulario. El siguiente parece un ejemplo bastante razonable:
 
 ```html example-bad
-Entra tu nombre: <input type="text" id="nombre" name="nombre">
+Entra tu nombre: <input type="text" id="nombre" name="nombre" />
 ```
 
 Sin embargo, esto no es tan útil para usuarios con discapacidad. No hay nada en el ejemplo anterior para asociar la etiqueta de forma inequívoca con la entrada del formulario y dejar claro cómo rellenarlo si no puede verlo. Si accedes con algunos lectores de pantalla, es posible que solo se te proporcione una descripción en la línea de "editar texto".
@@ -382,8 +393,8 @@ El siguiente es un ejemplo mucho mejor:
 
 ```html example-good
 <div>
-  <label for="combre">Entra tu nombre:</label>
-  <input type="text" id="combre" name="nombre">
+  <label for="nombre">Entra tu nombre:</label>
+  <input type="text" id="nombre" name="nombre" />
 </div>
 ```
 
@@ -442,19 +453,23 @@ Mientras que el contenido textual es inherentemente accesible, lo mismo no se pu
 Tenemos un ejemplo simple, [access-image.html](http://mdn.github.io/learning-area/accessibility/html/accessible-image.html), que presenta cuatro copias de la misma imagen:
 
 ```html
-<img src="dinosaur.png">
+<img src="dinosaur.png" />
 
-<img src="dinosaur.png"
-     alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+<img
+  src="dinosaur.png"
+  alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
 
-<img src="dinosaur.png"
-     alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."
-     title="The Mozilla red dinosaur">
+<img
+  src="dinosaur.png"
+  alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."
+  title="The Mozilla red dinosaur" />
 
+<img src="dinosaur.png" aria-labelledby="dino-label" />
 
-<img src="dinosaur.png" aria-labelledby="dino-label">
-
-<p id="dino-label">The Mozilla red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.</p>
+<p id="dino-label">
+  The Mozilla red Tyrannosaurus Rex: A two legged dinosaur standing upright like
+  a human, with small arms, and a large head with lots of sharp teeth.
+</p>
 ```
 
 La primera imagen, cuando la ve un lector de pantalla, realmente no ofrece mucha ayuda al usuario; VoiceOver, por ejemplo, lee "/dinosaur.png, imagen". Lee el nombre del archivo para intentar proporcionar ayuda. En este ejemplo, el usuario al menos sabrá que es un dinosaurio de algún tipo, pero a menudo los archivos pueden cargarse con nombres de archivo generados por la máquina (por ejemplo, de una cámara digital) y estos nombres de archivo probablemente no proporcionarían contexto al contenido de la imagen.
@@ -476,9 +491,9 @@ Si deseas proporcionar información contextual adicional, deberías colocarla en
 Echemos otro vistazo al cuarto método:
 
 ```html
-<img src="dinosaur.png" aria-labelledby="dino-label">
+<img src="dinosaur.png" aria-labelledby="dino-label" />
 
-<p id="dino-label">The Mozilla red Tyrannosaurus ... </p>
+<p id="dino-label">The Mozilla red Tyrannosaurus ...</p>
 ```
 
 En este caso, no estamos usando el atributo `alt` en absoluto; en cambio, hemos presentado nuestra descripción de la imagen como un párrafo de texto normal, le hemos dado un `id` y luego usamos el atributo `aria-labelledby` para referirnos a ese `id`, que hace que los lectores de pantalla usen ese párrafo como texto alternativo o etiqueta para esa imagen. Esto es especialmente útil si desea utilizar el mismo texto como etiqueta para varias imágenes, algo que no es posible con `alt`.
@@ -490,7 +505,7 @@ En este caso, no estamos usando el atributo `alt` en absoluto; en cambio, hemos 
 Las imágenes también tienen otros mecanismos disponibles para proporcionar texto descriptivo. Por ejemplo, hay un atributo `longdesc` que apunta a un documento web separado que contiene una descripción ampliada de la imagen, por ejemplo:
 
 ```html
-<img src="dinosaur.png" longdesc="dino-info.html">
+<img src="dinosaur.png" longdesc="dino-info.html" />
 ```
 
 Parece una buena idea, especialmente para infografías como gráficos grandes con mucha información que tal vez podría representarse como una tabla de datos accesible (consulte la sección anterior). Sin embargo, `longdesc` no es compatible de forma consistente con lectores de pantalla, y el contenido es completamente inaccesible para los usuarios que no usan lectores de pantalla. Podría decirse que es mucho mejor incluir la descripción larga en la misma página que la imagen, o vincularla con un enlace normal.
@@ -499,8 +514,12 @@ HTML5 incluye dos elementos nuevos, {{htmlelement("figure")}} y {{htmlelement("f
 
 ```html
 <figure>
-  <img src="dinosaur.png" alt="El Tyrannosaurus de Mozilla">
-  <figcaption>Un Tyrannosaurus Rex rojo: Un dinosaurio de dos piernas, de pie como un humano, con brazos pequeños y una cabeza grande con un montón de dientes afilados.</figcaption>
+  <img src="dinosaur.png" alt="El Tyrannosaurus de Mozilla" />
+  <figcaption>
+    Un Tyrannosaurus Rex rojo: Un dinosaurio de dos piernas, de pie como un
+    humano, con brazos pequeños y una cabeza grande con un montón de dientes
+    afilados.
+  </figcaption>
 </figure>
 ```
 
@@ -510,7 +529,7 @@ Desafortunadamente, la mayoría de lectores de pantalla aún no parecen asociar 
 
 ```html
 <h3>
-  <img src="article-icon.png" alt="">
+  <img src="article-icon.png" alt="" />
   Tyrannosaurus Rex: el rey de los dinosaurios
 </h3>
 ```
@@ -546,13 +565,17 @@ Las personas con problemas de baja visión, que navegan con la ayuda de tecnolog
 #### Enlace que abre una nueva pestaña o ventana
 
 ```html
-<a target="_blank" href="https://www.wikipedia.org/">Wikipedia (se abre en una nueva ventana)</a>
+<a target="_blank" href="https://www.wikipedia.org/"
+  >Wikipedia (se abre en una nueva ventana)</a
+>
 ```
 
 #### Enlace a un recurso que no es HTML
 
 ```html
-<a target="_blank" href="2017-annual-report.ppt">Informe anual de 2017 (PowerPoint)</a>
+<a target="_blank" href="2017-annual-report.ppt"
+  >Informe anual de 2017 (PowerPoint)</a
+>
 ```
 
 Si se utiliza un icono en lugar de texto para indicar este tipo de comportamiento de enlaces, asegúrate de que incluya una [descripción alternativa](/es/docs/Web/HTML/Element/img#alt).

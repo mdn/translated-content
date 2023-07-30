@@ -36,7 +36,7 @@ original_slug: Learn/JavaScript/Building_blocks/События
 
 Подробнее о событиях можно посмотреть в [Справочнике по событиям](/ru/docs/Web/Events).
 
-Каждое доступное событие имеет **обработчик событий** — блок кода (обычно это функция JavaScript, вводимая вами в качестве разработчика), который будет запускаться при срабатывании события. Когда такой блок кода определён на запуск в ответ на возникновение события, мы говорим, что мы **регистрируем обработчик событий**. Обратите внимание, что обработчики событий иногда называют **слушателями событий (от англ. event listeners). Они в значительной степени взаимозаменяемы для наших целей, хотя, строго говоря, они работают вместе. Слушатель отслеживает событие, а обработчик — это код, который запускается в ответ на событие.
+Каждое доступное событие имеет **обработчик событий** — блок кода (обычно это функция JavaScript, вводимая вами в качестве разработчика), который будет запускаться при срабатывании события. Когда такой блок кода определён на запуск в ответ на возникновение события, мы говорим, что мы **регистрируем обработчик событий**. Обратите внимание, что обработчики событий иногда называют слушателями событий (от англ. event listeners). Они в значительной степени взаимозаменяемы для наших целей, хотя, строго говоря, они работают вместе. Слушатель отслеживает событие, а обработчик — это код, который запускается в ответ на событие.
 
 > **Примечание:** Важно отметить, что веб-события не являются частью основного языка JavaScript. Они определены как часть JavaScript-API, встроенных в браузер.
 
@@ -49,22 +49,25 @@ original_slug: Learn/JavaScript/Building_blocks/События
 ```
 
 ```css hidden
-button { margin: 10px };
+button {
+  margin: 10px;
+}
 ```
 
 JavaScript выглядит так:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function random(number) {
-  return Math.floor(Math.random() * (number+1));
+  return Math.floor(Math.random() * (number + 1));
 }
 
-btn.onclick = function() {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+btn.onclick = function () {
+  const rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
-}
+};
 ```
 
 В этом коде мы сохраняем ссылку на кнопку внутри переменной `btn` типа `const`, используя функцию {{domxref ("Document.querySelector()")}}. Мы также определяем функцию, которая возвращает случайное число. Третья часть кода — [обработчик события](#Свойства_обработчика_событий). Переменная `btn` указывает на элемент `<button>` — для этого типа объекта существуют возникающие при определённом взаимодействии с ним события, а значит, возможно использование обработчиков событий. Мы отслеживаем момент возникновения события при щелчке мышью, связывая свойство обработчика события `onclick` с анонимной функцией, генерирующей случайный цвет RGB и устанавливающей его в качестве цвета фона элемента `<body>`.
@@ -94,12 +97,13 @@ btn.onclick = function() {
 В этом курсе вы уже сталкивались со свойствами, связываемыми с алгоритмом работы обработчика событий. Вернёмся к приведённому выше примеру:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
-btn.onclick = function() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+btn.onclick = function () {
+  var rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
-}
+};
 ```
 
 В данной ситуации свойство [`onclick`](/ru/docs/Web/API/GlobalEventHandlers/onclick) — это свойство обработчика события. В принципе это обычное свойство кнопки как элемента (наравне с [`btn.textContent`](/ru/docs/Web/API/Node/textContent) или [`btn.style`](/ru/docs/Web/API/HTMLElement/style)), но оно относится к особому типу. Если вы установите его равным какому-нибудь коду, этот код будет запущен при возникновении события (при нажатии на кнопку).
@@ -107,10 +111,11 @@ btn.onclick = function() {
 Для получения того же результата, вы также можете присвоить свойству обработчика имя уже описанной функции (как мы видели в статье [Создайте свою функцию](/ru/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)):
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function bgChange() {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  const rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
 }
 
@@ -138,7 +143,8 @@ btn.onclick = bgChange;
 
 ```js
 function bgChange() {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  const rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
 }
 ```
@@ -148,7 +154,9 @@ function bgChange() {
 Значение атрибута — это буквально код JavaScript, который вы хотите запустить при возникновении события. В приведённом выше примере вызывается функция, определённая внутри элемента {{htmlelement ("script")}} на той же странице, но вы также можете вставить JavaScript непосредственно внутри атрибута, например:
 
 ```html
-<button onclick="alert('Hello, this is my old-fashioned event handler!');">Press me</button>
+<button onclick="alert('Hello, this is my old-fashioned event handler!');">
+  Press me
+</button>
 ```
 
 Для многих свойств обработчика событий существуют эквиваленты в виде атрибутов HTML. Однако, не рекомендуется их использовать — это считается плохой практикой. Использование атрибутов для регистрации обработчика событий кажется простым и быстрым методом, но такое описание обработчиков также скоро становится неудобным и неэффективным.
@@ -160,7 +168,7 @@ function bgChange() {
 Например:
 
 ```js
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll("button");
 
 for (var i = 0; i < buttons.length; i++) {
   buttons[i].onclick = bgChange;
@@ -170,7 +178,7 @@ for (var i = 0; i < buttons.length; i++) {
 Обратите внимание, что для перебора всех элементов, которые содержит объект [`NodeList`](/ru/docs/Web/API/NodeList), можно воспользоваться встроенным методом [`forEach()`](/ru/docs/Web/API/NodeList/forEach):
 
 ```js
-buttons.forEach(function(button) {
+buttons.forEach(function (button) {
   button.onclick = bgChange;
 });
 ```
@@ -182,14 +190,15 @@ buttons.forEach(function(button) {
 Новый тип механизма событий определён в спецификации [Document Object Model (DOM) Level 2 Events](https://www.w3.org/TR/DOM-Level-2-Events/), которая предоставляет браузеру новую функцию — [`addEventListener()`](/ru/docs/Web/API/EventTarget/addEventListener). Работает она аналогично свойствам обработчика событий, но синтаксис совсем другой. Наш пример со случайным цветом мог бы выглядеть и так:
 
 ```js
-var btn = document.querySelector('button');
+var btn = document.querySelector("button");
 
 function bgChange() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  var rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
 }
 
-btn.addEventListener('click', bgChange);
+btn.addEventListener("click", bgChange);
 ```
 
 > **Примечание:** вы можете найти [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html) из этого примера на GitHub (также [взгляните на его выполнение](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)).
@@ -197,8 +206,9 @@ btn.addEventListener('click', bgChange);
 Внутри функции `addEventListener()` мы указываем два параметра — имя события, для которого мы хотим зарегистрировать этот обработчик, и код, содержащий функцию обработчика, которую мы хотим запустить в ответ. Обратите внимание, что будет целесообразно поместить весь код внутри функции `addEventListener()` в анонимную функцию, например:
 
 ```js
-btn.addEventListener('click', function() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+btn.addEventListener("click", function () {
+  var rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
 });
 ```
@@ -206,7 +216,7 @@ btn.addEventListener('click', function() {
 Этот механизм имеет некоторые преимущества по сравнению с более старыми механизмами, рассмотренными ранее. Например, существует аналогичная функция [`removeEventListener()`](/ru/docs/Web/API/EventTarget/removeEventListener), которая удаляет ранее добавленный обработчик. Это приведёт к удалению набора обработчиков в первом блоке кода в этом разделе:
 
 ```js
-btn.removeEventListener('click', bgChange);
+btn.removeEventListener("click", bgChange);
 ```
 
 Это не важно для простых небольших программ, но для более крупных и более сложных программ он может повысить эффективность очистки старых неиспользуемых обработчиков событий. Кроме того, это позволяет вам иметь одну и ту же кнопку, выполняющую различные действия в разных обстоятельствах — все, что вам нужно сделать, это добавить/удалить обработчики событий, если это необходимо.
@@ -221,8 +231,8 @@ myElement.onclick = functionB;
 Поскольку вторая строка будет перезаписывать значение `onclick`, установленное первой. Однако, если:
 
 ```js
-myElement.addEventListener('click', functionA);
-myElement.addEventListener('click', functionB);
+myElement.addEventListener("click", functionA);
+myElement.addEventListener("click", functionB);
 ```
 
 Обе функции будут выполняться при щелчке элемента.
@@ -258,12 +268,13 @@ etc.
 
 ```js
 function bgChange(e) {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  var rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   e.target.style.backgroundColor = rndCol;
   console.log(e);
 }
 
-btn.addEventListener('click', bgChange);
+btn.addEventListener("click", bgChange);
 ```
 
 > **Примечание:** вы можете найти [исходник кода](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) для этого примера на GitHub (также [взгляните на его выполнение](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
@@ -275,22 +286,22 @@ btn.addEventListener('click', bgChange);
 `e.target` применяют, когда нужно установить один и тот же обработчик событий на несколько элементов и, когда на них происходит событие, применить определённое действие к ним ко всем. Например, у вас может быть набор из 16 плиток, которые исчезают при нажатии. Полезно всегда иметь возможность просто указать, чтобы объект исчез, как `e.target`, вместо того, чтобы выбирать его более сложным способом. В следующем примере (см. исходный код на [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html),а как он работает можно посмотреть [здесь](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html)), мы создаём 16 элементов {{htmlelement ("div")}} с использованием JavaScript. Затем мы выберем все из них, используя {{domxref ("document.querySelectorAll()")}}, и с помощью цикла `for` выберем каждый из них, добавив обработчик `onclick` к каждому так, чтобы случайный цвет применялся к каждому клику:
 
 ```js
-var divs = document.querySelectorAll('div');
+var divs = document.querySelectorAll("div");
 
 for (var i = 0; i < divs.length; i++) {
-  divs[i].onclick = function(e) {
+  divs[i].onclick = function (e) {
     e.target.style.backgroundColor = bgChange();
-  }
+  };
 }
 ```
 
 Результат выглядит следующим образом (попробуйте щёлкнуть по нему):
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Useful event target example</title>
     <style>
       div {
@@ -304,25 +315,26 @@ for (var i = 0; i < divs.length; i++) {
   <body>
     <script>
       for (var i = 1; i <= 16; i++) {
-        var myDiv = document.createElement('div');
+        var myDiv = document.createElement("div");
         document.body.appendChild(myDiv);
       }
 
       function random(number) {
-        return Math.floor(Math.random()*number);
+        return Math.floor(Math.random() * number);
       }
 
       function bgChange() {
-        var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        var rndCol =
+          "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
         return rndCol;
       }
 
-      var divs = document.querySelectorAll('div');
+      var divs = document.querySelectorAll("div");
 
       for (var i = 0; i < divs.length; i++) {
-        divs[i].onclick = function(e) {
+        divs[i].onclick = function (e) {
           e.target.style.backgroundColor = bgChange();
-        }
+        };
       }
     </script>
   </body>
@@ -345,14 +357,14 @@ for (var i = 0; i < divs.length; i++) {
 <form>
   <div>
     <label for="fname">Имя: </label>
-    <input id="fname" type="text">
+    <input id="fname" type="text" />
   </div>
   <div>
     <label for="lname">Фамилия: </label>
-    <input id="lname" type="text">
+    <input id="lname" type="text" />
   </div>
   <div>
-     <input id="submit" type="submit">
+    <input id="submit" type="submit" />
   </div>
 </form>
 <p></p>
@@ -367,18 +379,18 @@ div {
 В JavaScript мы реализуем очень простую проверку внутри обработчика события [onsubmit](/ru/docs/Web/API/GlobalEventHandlers/onsubmit) (событие "отправить" запускается в форме, когда оно отправлено), который проверяет, пусты ли текстовые поля. Если они пусты, мы вызываем функцию [`preventDefault()`](/ru/docs/Web/API/Event/preventDefault) объекта события, которая останавливает отправку формы, а затем выводит сообщение об ошибке в абзаце ниже нашей формы, чтобы сообщить пользователю, что не так:
 
 ```js
-var form = document.querySelector('form');
-var fname = document.getElementById('fname');
-var lname = document.getElementById('lname');
-var submit = document.getElementById('submit');
-var para = document.querySelector('p');
+var form = document.querySelector("form");
+var fname = document.getElementById("fname");
+var lname = document.getElementById("lname");
+var submit = document.getElementById("submit");
+var para = document.querySelector("p");
 
-form.onsubmit = function(e) {
-  if (fname.value === '' || lname.value === '') {
+form.onsubmit = function (e) {
+  if (fname.value === "" || lname.value === "") {
     e.preventDefault();
-    para.textContent = 'Оба поля должны быть заполнены!';
+    para.textContent = "Оба поля должны быть заполнены!";
   }
-}
+};
 ```
 
 Очевидно, что это довольно слабая проверка формы - это не помешает пользователю отправить форму с пробелами или цифрами, введёнными в поля, но для примера подходит. Вывод выглядит следующим образом:
@@ -392,21 +404,25 @@ form.onsubmit = function(e) {
 Последним предметом для рассмотрения в этой теме является то, с чем вы не часто будете сталкиваться, но это может стать настоящей головной болью, если вы не поймёте, как работает следующий механизм. _Всплытие_ и _перехват событий_ — два механизма, описывающих, что происходит, когда два обработчика одного и того же события активируются на одном элементе. Посмотрим на пример. Чтобы сделать это проще — откройте пример [show-video-box.html](http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box.html) в одной вкладке и [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html) в другой вкладке. Он также представлен ниже:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Show video box example</title>
     <style>
       div {
         position: absolute;
         top: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         width: 550px;
         height: 420px;
         border-radius: 10px;
         background-color: #eee;
-        background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.4));
+        background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.1),
+          rgba(0, 0, 0, 0.4)
+        );
       }
 
       .hidden {
@@ -422,7 +438,6 @@ form.onsubmit = function(e) {
         width: 400px;
         margin: 50px auto;
       }
-
     </style>
   </head>
   <body>
@@ -430,36 +445,41 @@ form.onsubmit = function(e) {
 
     <div class="hidden">
       <video>
-        <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4" type="video/mp4">
-        <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm" type="video/webm">
-        <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+        <source
+          src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4"
+          type="video/mp4" />
+        <source
+          src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm"
+          type="video/webm" />
+        <p>
+          Your browser doesn't support HTML5 video. Here is a
+          <a href="rabbit320.mp4">link to the video</a> instead.
+        </p>
       </video>
     </div>
 
     <script>
+      var btn = document.querySelector("button");
+      var videoBox = document.querySelector("div");
+      var video = document.querySelector("video");
 
-      var btn = document.querySelector('button');
-      var videoBox = document.querySelector('div');
-      var video = document.querySelector('video');
-
-      btn.onclick = function() {
+      btn.onclick = function () {
         displayVideo();
-      }
+      };
 
       function displayVideo() {
-        if(videoBox.getAttribute('class') === 'hidden') {
-          videoBox.setAttribute('class','showing');
+        if (videoBox.getAttribute("class") === "hidden") {
+          videoBox.setAttribute("class", "showing");
         }
       }
 
-      videoBox.addEventListener('click',function() {
-        videoBox.setAttribute('class','hidden');
+      videoBox.addEventListener("click", function () {
+        videoBox.setAttribute("class", "hidden");
       });
 
-      video.addEventListener('click',function() {
+      video.addEventListener("click", function () {
         video.play();
       });
-
     </script>
   </body>
 </html>
@@ -474,9 +494,12 @@ form.onsubmit = function(e) {
 
 <div class="hidden">
   <video>
-    <source src="rabbit320.mp4" type="video/mp4">
-    <source src="rabbit320.webm" type="video/webm">
-    <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+    <source src="rabbit320.mp4" type="video/mp4" />
+    <source src="rabbit320.webm" type="video/webm" />
+    <p>
+      Your browser doesn't support HTML5 video. Here is a
+      <a href="rabbit320.mp4">link to the video</a> instead.
+    </p>
   </video>
 </div>
 ```
@@ -499,23 +522,23 @@ div {
 ```
 
 ```js
-var btn = document.querySelector('button');
-btn.onclick = function() {
-  videoBox.setAttribute('class', 'showing');
-}
+var btn = document.querySelector("button");
+btn.onclick = function () {
+  videoBox.setAttribute("class", "showing");
+};
 ```
 
 Затем мы добавляем ещё пару обработчиков событий `onclick.` Первый к `<div>`, а второй к `<video>`. Идея заключается в том, чтобы при щелчке по области `<div>` вне зоны видео поле снова скрылось, а при клике в области `<video>` видео начало воспроизводиться.
 
 ```js
-var videoBox = document.querySelector('div');
-var video = document.querySelector('video');
+var videoBox = document.querySelector("div");
+var video = document.querySelector("video");
 
-videoBox.onclick = function() {
-  videoBox.setAttribute('class', 'hidden');
+videoBox.onclick = function () {
+  videoBox.setAttribute("class", "hidden");
 };
 
-video.onclick = function() {
+video.onclick = function () {
   video.play();
 };
 ```
@@ -552,7 +575,7 @@ video.onclick = function() {
 Поэтому мы можем исправить нашу текущую проблему, изменив вторую функцию-обработчик в предыдущем блоке кода:
 
 ```js
-video.onclick = function(e) {
+video.onclick = function (e) {
   e.stopPropagation();
   video.play();
 };

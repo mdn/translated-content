@@ -316,8 +316,8 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 `App.js` に戻り、9 行目に注目しましょう。
 
-```js
-<img src = {logo} className = "App-logo" alt = "logo" />
+```jsx
+<img src={logo} className="App-logo" alt="logo" />
 ```
 
 ここでは、`<img />` タグの `src` 属性値は中括弧で囲まれています。これは、JSX が変数を認識する方法です。React が `{logo}` を表示し、アプリの 2 行目のインポートを参照していることを確認してから、logo ファイルを取得してレンダリングします。

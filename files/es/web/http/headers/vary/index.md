@@ -9,9 +9,9 @@ El encabezado de respuesta **`Vary`** HTTP determina como hacer coincidir los en
 
 El encabezado `Vary` se debe establecer en una respuesta {{HTTPStatus("304")}} `Not Modified` exactamente igual que habría sido fijado en una respuesta equivalente {{HTTPStatus("200")}} `OK`.
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## Sintaxis
 

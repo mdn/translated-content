@@ -1,12 +1,6 @@
 ---
 title: ShadowRoot.delegatesFocus
 slug: Web/API/ShadowRoot/delegatesFocus
-tags:
-  - API
-  - Non-standard
-  - Propriété
-  - Reference
-  - ShadowRoot
 translation_of: Web/API/ShadowRoot/delegatesFocus
 ---
 
@@ -19,7 +13,7 @@ translation_of: Web/API/ShadowRoot/delegatesFocus
 ## Syntaxe
 
 ```js
-var df = shadowRoot.delegatesFocus
+var df = shadowRoot.delegatesFocus;
 ```
 
 ### Valeur

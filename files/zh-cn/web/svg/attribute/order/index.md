@@ -15,10 +15,10 @@ order 属性确定被用作 {{ SVGElement("feConvolveMatrix") }} 元素的矩阵
 
 ## Usage context
 
-| Categories | None                                                                    |
-| ---------- | ----------------------------------------------------------------------- |
+| Categories | None                                                                        |
+| ---------- | --------------------------------------------------------------------------- |
 | Value      | [\<number-optional-number>](/zh-CN/SVG/Content_type#Number-optional-number) |
-| Animatable | Yes                                                                     |
+| Animatable | Yes                                                                         |
 
 ## Example
 

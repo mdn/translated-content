@@ -29,7 +29,6 @@ Ahora crearemos un archivo nuevo llamado "manifest.json" directamente en la carp
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Borderify",
   "version": "1.0",
@@ -46,7 +45,6 @@ Ahora crearemos un archivo nuevo llamado "manifest.json" directamente en la carp
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 

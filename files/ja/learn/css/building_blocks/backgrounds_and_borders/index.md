@@ -17,8 +17,14 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 
 ```css
 .box {
-  background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
-  url(big-star.png) center no-repeat, rebeccapurple;
+  background:
+    linear-gradient(
+        105deg,
+        rgba(255, 255, 255, 0.2) 39%,
+        rgba(51, 56, 57, 1) 96%
+      ) center center / 400px 200px no-repeat,
+    url(big-star.png) center no-repeat,
+    rebeccapurple;
 }
 ```
 
@@ -156,9 +162,12 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 他の`background-*`プロパティも、`background-image`と同じ方法でコンマ区切りの値を持つことができます:
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png), url(image1.png);
+background-image: url(image1.png), url(image2.png), url(image3.png),
+  url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
-background-position: 10px 20px,  top right;
+background-position:
+  10px 20px,
+  top right;
 ```
 
 プロパティに指定した複数のプロパティ値は、他のプロパティの同じ位置にある値と対応します。上の例で、`image1`の`background-repeat`値は`no-repeat`です。では、プロパティごとに値の個数が異なるとどうなるでしょうか？答えは、個数が少ない値が繰り返し使われる、ということです。上の例では、4 つの背景画像がありますが、2 つの `background-position` の値しかありません。最初の 2 つの位置の値は対応する位置の画像に適用され、その後は繰り返されます。つまり、`image3`には 1 番目、`image4`には 2 番目の値がふたたび使われます。

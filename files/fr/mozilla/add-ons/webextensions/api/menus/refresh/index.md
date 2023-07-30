@@ -19,7 +19,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-browser.menus.refresh()
+browser.menus.refresh();
 ```
 
 ### Paramètres
@@ -41,12 +41,12 @@ Cet exemple permet d'afficher le menu contextuel sur un lien, puis met à jour l
 ```js
 function updateMenuItem(linkHostname) {
   browser.menus.update(openLabelledId, {
-    title: `Open (${linkHostname})`
+    title: `Open (${linkHostname})`,
   });
   browser.menus.refresh();
 }
 
-browser.menus.onShown.addListener(info => {
+browser.menus.onShown.addListener((info) => {
   if (!info.linkUrl) {
     return;
   }

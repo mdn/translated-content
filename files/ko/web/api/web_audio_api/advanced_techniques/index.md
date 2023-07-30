@@ -514,7 +514,7 @@ function scheduleNote(beatNumber, time) {
 
 여기서 우리는 현재 시간을 보고 다음 노트에 대한 시간과 비교합니다; 두 개가 일치할 때 이것은 이전의 두 함수를 호출할 것입니다.
 
-{{domxref("AudioContext")}} 객체 인스턴스는 [`currentTime`](/en-US/docs/Web/API/BaseAudioContext/currentTime) 속성을 가지고 있는데, 이는 우리가 처음 컨텍스트를 생성한 이후의 초를 얻을 수 있게 합니다. 이것은 우리가 우리의 스텝 시퀸서 내에서 타이밍을 위해 사용해야만 하는 것입니다 — 약 소수 15자리까지의 정확한 float 값을 반환하는 이것은 극도로 정확합니다.
+{{domxref("AudioContext")}} 객체 인스턴스는 [`currentTime`](/ko/docs/Web/API/BaseAudioContext/currentTime) 속성을 가지고 있는데, 이는 우리가 처음 컨텍스트를 생성한 이후의 초를 얻을 수 있게 합니다. 이것은 우리가 우리의 스텝 시퀸서 내에서 타이밍을 위해 사용해야만 하는 것입니다 — 약 소수 15자리까지의 정확한 float 값을 반환하는 이것은 극도로 정확합니다.
 
 ```js
 function scheduler() {

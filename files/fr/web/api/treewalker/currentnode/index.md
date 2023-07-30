@@ -1,12 +1,6 @@
 ---
 title: TreeWalker.currentNode
 slug: Web/API/TreeWalker/currentNode
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Noeuds
-  - Propriété
 translation_of: Web/API/TreeWalker/currentNode
 ---
 
@@ -25,10 +19,14 @@ treeWalker.currentNode = node;
 
 ```js
 var treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 root = treeWalker.currentNode; // l'élément racine car c'est le premier élément!
 ```

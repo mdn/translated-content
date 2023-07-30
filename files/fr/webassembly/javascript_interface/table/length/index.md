@@ -19,15 +19,19 @@ table.length;
 Avec l'instruction qui suit, on crée un tableau WebAssembly avec une taille initiale de 2 éléments et avec une taille maximale de 10.
 
 ```js
-var table = new WebAssembly.Table({ element: "anyfunc", initial: 2, maximum: 10 });
+var table = new WebAssembly.Table({
+  element: "anyfunc",
+  initial: 2,
+  maximum: 10,
+});
 ```
 
 On peut ensuite étendre le tableau d'un élément :
 
 ```js
-console.log(table.length);   // "2"
-console.log(table.grow(1));  // "2"
-console.log(table.length);   // "3"
+console.log(table.length); // "2"
+console.log(table.grow(1)); // "2"
+console.log(table.length); // "3"
 ```
 
 ## Spécifications

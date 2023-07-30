@@ -10,4 +10,4 @@ Un Environnement de Développement Intégré (**EDI**) ou Environnement de Déve
 
 ### Culture générale
 
-- [Environnement de développement](https://fr.wikipedia.org/wiki/Environnement_de_d%C3%A9veloppement) sur Wikipédia
+- [Environnement de développement](https://fr.wikipedia.org/wiki/Environnement_de_développement) sur Wikipédia

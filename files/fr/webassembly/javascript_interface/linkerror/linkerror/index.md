@@ -11,10 +11,10 @@ Le constructeur **`WebAssembly.LinkError()`** crée un nouvel objet `LinkError` 
 ## Syntaxe
 
 ```js
-new WebAssembly.LinkError()
-new WebAssembly.LinkError(message)
-new WebAssembly.LinkError(message, nomFichier)
-new WebAssembly.LinkError(message, nomFichier, numeroLigne)
+new WebAssembly.LinkError();
+new WebAssembly.LinkError(message);
+new WebAssembly.LinkError(message, nomFichier);
+new WebAssembly.LinkError(message, nomFichier, numeroLigne);
 ```
 
 ### Paramètres
@@ -34,15 +34,15 @@ Le fragment de code qui suit crée une nouvelle instance de `LinkError` et affic
 
 ```js
 try {
-  throw new WebAssembly.LinkError('Coucou', 'unFichier', 10);
+  throw new WebAssembly.LinkError("Coucou", "unFichier", 10);
 } catch (e) {
   console.log(e instanceof LinkError); // true
-  console.log(e.message);                 // "Coucou"
-  console.log(e.name);                    // "LinkError"
-  console.log(e.fileName);                // "unFichier"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // renvoie l'emplacement du code exécuté
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "LinkError"
+  console.log(e.fileName); // "unFichier"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // renvoie l'emplacement du code exécuté
 }
 ```
 

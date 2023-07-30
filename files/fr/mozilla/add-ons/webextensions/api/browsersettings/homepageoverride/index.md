@@ -19,7 +19,7 @@ Notez qu'il s'agit d'un paramètre en lecture seule. Pour changer la page d'accu
 Obtenez la valeur actuelle de l'URL de la page d'accueil :
 
 ```js
-browser.browserSettings.homepageOverride.get({}).then(result => {
+browser.browserSettings.homepageOverride.get({}).then((result) => {
   console.log(result.value);
 });
 ```

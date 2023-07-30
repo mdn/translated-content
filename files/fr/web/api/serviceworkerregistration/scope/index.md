@@ -1,14 +1,6 @@
 ---
 title: ServiceWorkerRegistration.scope
 slug: Web/API/ServiceWorkerRegistration/scope
-tags:
-  - API
-  - Portée
-  - Propriété
-  - Reference
-  - Service Workers
-  - ServiceWorkerRegistration
-  - scope
 translation_of: Web/API/ServiceWorkerRegistration/scope
 ---
 
@@ -21,7 +13,7 @@ La propriété en lecture seule **`scope`** de l'interface {{domxref ("ServiceWo
 ## Syntaxe
 
 ```js
-serviceWorkerRegistration.scope
+serviceWorkerRegistration.scope;
 ```
 
 ## Spécifications

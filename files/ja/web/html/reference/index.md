@@ -15,7 +15,7 @@ slug: Web/HTML/Reference
   - : グローバル属性は、すべての HTML 要素で共通の属性です。すべての要素で使用できますが、要素によっては効果がないこともあります。
 - [リンク種別](/ja/docs/Web/HTML/Link_types)
   - : HTML では、以下のようなリンク種別で {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}} 要素を使用して他へリンクするときに二つの文書間の関係を示します。
-- [コンテンツカテゴリ](/ja/docs/Web/Guide/HTML/Content_categories)
+- [コンテンツカテゴリ](/ja/docs/Web/HTML/Content_categories)
   - : すべての HTML 要素は一つ以上のコンテンツカテゴリのメンバです。 — これらのカテゴリは共通の特徴を持つ要素をグループ化します。
 - [HTML で使われる日付と時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)
   - : 一部の HTML 要素では、日付や時刻を値や属性の値として指定することができます。これには様々な種類の日付や時刻を扱う {{HTMLElement("input")}} 要素や、 {{HTMLElement("ins")}} および {{HTMLElement("del")}} 要素があります。

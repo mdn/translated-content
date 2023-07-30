@@ -57,7 +57,7 @@ set1.add({'key1': 1}); // agora set1 contém 2 registros
 
 {{Compat("javascript.builtins.Set.has")}}
 
-## Veja também:
+## Veja também
 
 - {{jsxref("Set")}}
 - {{jsxref("Set.prototype.add()")}}

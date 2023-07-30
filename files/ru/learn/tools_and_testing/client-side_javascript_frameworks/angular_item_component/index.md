@@ -74,8 +74,11 @@ ng generate component item
 
 ```html
 <div class="item">
-
-  <input [id]="item.description" type="checkbox" (change)="item.done = !item.done" [checked]="item.done" />
+  <input
+    [id]="item.description"
+    type="checkbox"
+    (change)="item.done = !item.done"
+    [checked]="item.done" />
   <label [for]="item.description">\{{item.description}}</label>
 
   <div class="btn-wrapper" *ngIf="!editable">
@@ -85,14 +88,20 @@ ng generate component item
 
   <!-- Этот блок отображается, если пользователь кликнул на кнопку Edit -->
   <div *ngIf="editable">
-    <input class="sm-text-input" placeholder="edit item" [value]="item.description" #editedItem (keyup.enter)="saveItem(editedItem.value)">
+    <input
+      class="sm-text-input"
+      placeholder="edit item"
+      [value]="item.description"
+      #editedItem
+      (keyup.enter)="saveItem(editedItem.value)" />
 
     <div class="btn-wrapper">
       <button class="btn" (click)="editable = !editable">Cancel</button>
-      <button class="btn btn-save" (click)="saveItem(editedItem.value)">Save</button>
+      <button class="btn btn-save" (click)="saveItem(editedItem.value)">
+        Save
+      </button>
     </div>
   </div>
-
 </div>
 ```
 
@@ -122,11 +131,18 @@ Angular использует `\{{item.description}}` для получения �
 ```html
 <!-- Этот блок отображается, если пользователь кликнул на кнопку Edit -->
 <div *ngIf="editable">
-  <input class="sm-text-input" placeholder="edit item" [value]="item.description" #editedItem (keyup.enter)="saveItem(editedItem.value)">
+  <input
+    class="sm-text-input"
+    placeholder="edit item"
+    [value]="item.description"
+    #editedItem
+    (keyup.enter)="saveItem(editedItem.value)" />
 
   <div class="btn-wrapper">
     <button class="btn" (click)="editable = !editable">Cancel</button>
-    <button class="btn btn-save" (click)="saveItem(editedItem.value)">Save</button>
+    <button class="btn btn-save" (click)="saveItem(editedItem.value)">
+      Save
+    </button>
   </div>
 </div>
 ```
@@ -166,7 +182,7 @@ remove(item) {
 В `item.component.ts` отредактируйте JavaScript-импорты так:
 
 ```js
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { Item } from "../item";
 ```
 
@@ -236,8 +252,11 @@ export class ItemComponent {
 Замените текущий неупорядоченный список в `app.component.html` обновлённой версией:
 
 ```html
-<h2>\{{items.length}} <span *ngIf="items.length === 1; else elseBlock">item</span>
-<ng-template #elseBlock>items</ng-template></h2>
+<h2>
+  \{{items.length}}
+  <span *ngIf="items.length === 1; else elseBlock">item</span>
+  <ng-template #elseBlock>items</ng-template>
+</h2>
 
 <ul>
   <li *ngFor="let item of items">
@@ -278,14 +297,14 @@ Angular позволяет использовать `<ng-template>`, если в
 
 ```css
 .item {
-  padding: .5rem 0 .75rem 0;
+  padding: 0.5rem 0 0.75rem 0;
   text-align: left;
   font-size: 1.2rem;
 }
 
 .btn-wrapper {
   margin-top: 1rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .btn {
@@ -297,7 +316,6 @@ Angular позволяет использовать `<ng-template>`, если в
   background-color: #000;
   color: #fff;
   border-color: #000;
-
 }
 
 .btn-save:hover {
@@ -310,7 +328,7 @@ Angular позволяет использовать `<ng-template>`, если в
 }
 
 .checkbox-wrapper {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 .btn-warn {
@@ -330,7 +348,7 @@ Angular позволяет использовать `<ng-template>`, если в
 
 .sm-text-input {
   width: 100%;
-  padding: .5rem;
+  padding: 0.5rem;
   border: 2px solid #555;
   display: block;
   box-sizing: border-box;
@@ -357,10 +375,12 @@ Angular позволяет использовать `<ng-template>`, если в
 /* чекбокс */
 [type="checkbox"]:not(:checked) + label:before,
 [type="checkbox"]:checked + label:before {
-  content: '';
+  content: "";
   position: absolute;
-  left: 0; top: 0;
-  width: 1.25em; height: 1.25em;
+  left: 0;
+  top: 0;
+  width: 1.25em;
+  height: 1.25em;
   border: 2px solid #ccc;
   background: #fff;
 }
@@ -368,14 +388,15 @@ Angular позволяет использовать `<ng-template>`, если в
 /* галочка для чекбокса */
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
-  content: '\2713\0020';
+  content: "\2713\0020";
   position: absolute;
-  top: .15em; left: .22em;
+  top: 0.15em;
+  left: 0.22em;
   font-size: 1.3em;
   line-height: 0.8;
   color: #0d8dee;
-  transition: all .2s;
-  font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+  transition: all 0.2s;
+  font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
 }
 /* изменение галочки чекбокса */
 [type="checkbox"]:not(:checked) + label:after {

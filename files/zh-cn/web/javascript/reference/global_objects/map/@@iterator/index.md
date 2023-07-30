@@ -26,9 +26,9 @@ map 的 **iterator** 函数默认就是 {{jsxref("Map.prototype.entries()", "ent
 
 ```js
 var myMap = new Map();
-myMap.set('0', 'foo');
-myMap.set(1, 'bar');
-myMap.set({}, 'baz');
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
 
 var mapIter = myMap[Symbol.iterator]();
 //返回的其实是个 generator
@@ -41,9 +41,9 @@ console.log(mapIter.next().value); // [Object, "baz"]
 
 ```js
 var myMap = new Map();
-myMap.set('0', 'foo');
-myMap.set(1, 'bar');
-myMap.set({}, 'baz');
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
 
 for (const entry of myMap) {
   console.log(entry);

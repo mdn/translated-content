@@ -32,7 +32,7 @@ In this example, a {{HTMLElement("select")}} element with a number of options is
 The HTML that creates the selection box and the {{HTMLElement("option")}} elements representing each of the food choices looks like this:
 
 ```html
-<label for="foods">What do you want to eat?</label><br>
+<label for="foods">What do you want to eat?</label><br />
 <select id="foods" name="foods" size="7" multiple>
   <option value="1">Burrito</option>
   <option value="2">Cheeseburger</option>
@@ -40,12 +40,9 @@ The HTML that creates the selection box and the {{HTMLElement("option")}} elemen
   <option value="4">Pepperoni Pizza</option>
   <option value="5">Taco</option>
 </select>
-<br>
-<button name="order" id="order">
-  Order Now
-</button>
-<p id="output">
-</p>
+<br />
+<button name="order" id="order">Order Now</button>
+<p id="output"></p>
 ```
 
 The `<select>` element is set to allow multiple items to be selected, and it is 7 rows tall. Note also the {{HTMLElement("button")}}, whose role it is to trigger fetching the {{domxref("HTMLCollection")}} of selected elements using the `selected` property.
@@ -59,31 +56,35 @@ let orderButton = document.getElementById("order");
 let itemList = document.getElementById("foods");
 let outputBox = document.getElementById("output");
 
-orderButton.addEventListener("click", function() {
-  let collection = itemList.selectedOptions;
-  let output = "";
+orderButton.addEventListener(
+  "click",
+  function () {
+    let collection = itemList.selectedOptions;
+    let output = "";
 
-  for (let i=0; i<collection.length; i++) {
+    for (let i = 0; i < collection.length; i++) {
+      if (output === "") {
+        output = "Your order for the following items has been placed: ";
+      }
+      output += collection[i].label;
+
+      if (i === collection.length - 2 && collection.length < 3) {
+        output += " and ";
+      } else if (i < collection.length - 2) {
+        output += ", ";
+      } else if (i === collection.length - 2) {
+        output += ", and ";
+      }
+    }
+
     if (output === "") {
-      output = "Your order for the following items has been placed: ";
+      output = "You didn't order anything!";
     }
-    output += collection[i].label;
 
-    if (i === (collection.length - 2) && (collection.length < 3)) {
-      output +=  " and ";
-    } else if (i < (collection.length - 2)) {
-      output += ", ";
-    } else if (i === (collection.length - 2)) {
-      output += ", and ";
-    }
-  }
-
-  if (output === "") {
-    output = "You didn't order anything!";
-  }
-
-  outputBox.innerHTML = output;
-}, false);
+    outputBox.innerHTML = output;
+  },
+  false,
+);
 ```
 
 This script sets up a [`click`](/ko/docs/Web/API/Element/click_event) event listener on the "Order Now" button. When clicked, the event handler fetches the list of selected options using `selectedOptions`, then iterates over the options in the list. A string is constructed to list the ordered items, with logic to build the list using proper English grammar rules (including a [serial comma](https://en.wikipedia.org/wiki/Serial_comma).

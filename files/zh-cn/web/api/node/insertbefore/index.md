@@ -73,16 +73,16 @@ parentDiv.insertBefore(newNode, sp2); // Generate "Type Error: Invalid Argument"
 </div>
 
 <script>
-//创建一个新的、普通的<span>元素
-var sp1 = document.createElement("span");
+  //创建一个新的、普通的<span>元素
+  var sp1 = document.createElement("span");
 
-//插入节点之前，要获得节点的引用
-var sp2 = document.getElementById("childElement");
-//获得父节点的引用
-var parentDiv = sp2.parentNode;
+  //插入节点之前，要获得节点的引用
+  var sp2 = document.getElementById("childElement");
+  //获得父节点的引用
+  var parentDiv = sp2.parentNode;
 
-//在 DOM 中在 sp2 之前插入一个新元素
-parentDiv.insertBefore(sp1, sp2);
+  //在 DOM 中在 sp2 之前插入一个新元素
+  parentDiv.insertBefore(sp1, sp2);
 </script>
 ```
 
@@ -102,7 +102,7 @@ parentDiv.insertBefore(sp1, sp2.nextSibling);
 
 ```js
 //插入节点之前，要获得节点的引用
-var parentElement = document.getElementById('parentElement');
+var parentElement = document.getElementById("parentElement");
 //获得第一个子节点的引用
 var theFirstChild = parentElement.firstChild;
 

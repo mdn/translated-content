@@ -2,7 +2,6 @@
 title: Document
 slug: Web/API/Document
 translation_of: Web/API/Document
-browser-compat: api.Document
 ---
 
 {{APIRef("DOM")}}

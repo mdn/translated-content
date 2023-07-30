@@ -1,12 +1,7 @@
 ---
 title: Zones live ARIA
 slug: Web/Accessibility/ARIA/ARIA_Live_Regions
-tags:
-  - ARIA
-  - Accessibilité
-  - Avancé
 translation_of: Web/Accessibility/ARIA/ARIA_Live_Regions
-original_slug: Accessibilité/ARIA/Zones_live_ARIA
 ---
 
 ## Introduction

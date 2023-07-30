@@ -275,7 +275,7 @@ ls | wc -l
 因此，如果您使用 curl 请求 `https://developer.mozilla.org/docs/Web/API/fetch`，则不会得到输出。现在就试试：
 
 ```bash
-curl https://developer.mozilla.org/zh-CN/docs/Web/API/fetch
+curl https://developer.mozilla.org/docs/Web/API/fetch
 ```
 
 我们想精确的告诉 `curl` 遵循重定向使用`-L` 标签。
@@ -424,9 +424,13 @@ Stdin is read if it is piped to Prettier and no files are given.
 
 ```js
 const myObj = {
-a:1,b:{c:2}}
-function printMe(obj){console.log(obj.b.c)}
-printMe(myObj)
+  a: 1,
+  b: { c: 2 },
+};
+function printMe(obj) {
+  console.log(obj.b.c);
+}
+printMe(myObj);
 ```
 
 我们可以在代码基上运行得更好，以检查我们的代码是否需要调整。cd 到您的目录中，并尝试运行此命令：

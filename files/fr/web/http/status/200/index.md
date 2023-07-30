@@ -2,7 +2,6 @@
 title: 200 OK
 slug: Web/HTTP/Status/200
 translation_of: Web/HTTP/Status/200
-browser-compat: http.status.200
 ---
 
 {{HTTPSidebar}}

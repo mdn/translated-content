@@ -2,7 +2,6 @@
 title: 206 Partial Content
 slug: Web/HTTP/Status/206
 translation_of: Web/HTTP/Status/206
-browser-compat: http.status.206
 ---
 
 {{HTTPSidebar}}

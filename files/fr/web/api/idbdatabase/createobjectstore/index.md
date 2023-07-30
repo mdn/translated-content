@@ -1,11 +1,6 @@
 ---
 title: IDBDatabase.createObjectStore()
 slug: Web/API/IDBDatabase/createObjectStore
-tags:
-  - API
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBDatabase/createObjectStore
 ---
 
@@ -59,39 +54,39 @@ var objectStore = db.createObjectStore(name, optionalParameters);
 ## Exemple
 
 ```js
- // Ouverture de la base de données
-  var request = window.indexedDB.open("toDoList", 4);
+// Ouverture de la base de données
+var request = window.indexedDB.open("toDoList", 4);
 
-  /* Gestionnaire d'événement qui intervient lors de la
+/* Gestionnaire d'événement qui intervient lors de la
      mise en place d'une nouvelle version de la base de
      données, que la base n'existe pas et soit ajoutée
      ou qu'un nouveau numéro de version soit passé à
      window.indexedDB.open
      Il est seulement mis en œuvre dans les
      navigateurs récents */
-  request.onupgradeneeded = function(event) {
-    var db = event.target.result;
+request.onupgradeneeded = function (event) {
+  var db = event.target.result;
 
-    db.onerror = function(event) {
-      note.innerHTML += '<li>Erreur du chargement de la base de données.</li>';
-    };
-
-    // On ajoute un magasin d'objet à la base de données
-
-    var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
-
-    // définition des index de ce magasin d'objets
-
-    objectStore.createIndex("hours", "hours", { unique: false });
-    objectStore.createIndex("minutes", "minutes", { unique: false });
-    objectStore.createIndex("day", "day", { unique: false });
-    objectStore.createIndex("month", "month", { unique: false });
-    objectStore.createIndex("year", "year", { unique: false });
-
-    objectStore.createIndex("notified", "notified", { unique: false });
-
-    note.innerHTML += '<li>Magasin d\'objet ajouté.</li>';
+  db.onerror = function (event) {
+    note.innerHTML += "<li>Erreur du chargement de la base de données.</li>";
   };
+
+  // On ajoute un magasin d'objet à la base de données
+
+  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+
+  // définition des index de ce magasin d'objets
+
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
+
+  objectStore.createIndex("notified", "notified", { unique: false });
+
+  note.innerHTML += "<li>Magasin d'objet ajouté.</li>";
+};
 ```
 
 ## Spécifications

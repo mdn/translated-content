@@ -1,5 +1,5 @@
 ---
-title: 'Document: DOMContentLoaded event'
+title: "Document: DOMContentLoaded event"
 slug: Web/API/Document/DOMContentLoaded_event
 translation_of: Web/API/Document/DOMContentLoaded_event
 ---
@@ -38,8 +38,8 @@ Du code JavaScript synchrone va mettre en pause la création du DOM. Si vous vou
 ### Usage simple
 
 ```js
-document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
+document.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM fully loaded and parsed");
 });
 ```
 
@@ -47,13 +47,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ```html
 <script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
+  document.addEventListener("DOMContentLoaded", (event) => {
+    console.log("DOM fully loaded and parsed");
   });
 
-for( let i = 0; i < 1000000000; i++)
-{} // This synchronous script is going to delay parsing of the DOM,
-   // so the DOMContentLoaded event is going to launch later.
+  for (let i = 0; i < 1000000000; i++) {} // This synchronous script is going to delay parsing of the DOM,
+  // so the DOMContentLoaded event is going to launch later.
 </script>
 ```
 
@@ -63,12 +62,14 @@ L'évènement `DOMContentLoaded` peut-être déclenché avant que le script soit
 
 ```js
 function doSomething() {
-  console.info('DOM loaded');
+  console.info("DOM loaded");
 }
 
-if (document.readyState === 'loading') {  // Loading hasn't finished yet
-  document.addEventListener('DOMContentLoaded', doSomething);
-} else {  // `DOMContentLoaded` has already fired
+if (document.readyState === "loading") {
+  // Loading hasn't finished yet
+  document.addEventListener("DOMContentLoaded", doSomething);
+} else {
+  // `DOMContentLoaded` has already fired
   doSomething();
 }
 ```
@@ -109,7 +110,8 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
@@ -121,26 +123,26 @@ label, button {
 #### JS
 
 ```js
-const log = document.querySelector('.event-log-contents');
-const reload = document.querySelector('#reload');
+const log = document.querySelector(".event-log-contents");
+const reload = document.querySelector("#reload");
 
-reload.addEventListener('click', () => {
-  log.textContent ='';
+reload.addEventListener("click", () => {
+  log.textContent = "";
   window.setTimeout(() => {
-      window.location.reload(true);
+    window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) => {
-    log.textContent = log.textContent + 'load\n';
+window.addEventListener("load", (event) => {
+  log.textContent = log.textContent + "load\n";
 });
 
-document.addEventListener('readystatechange', (event) => {
-    log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
+document.addEventListener("readystatechange", (event) => {
+  log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    log.textContent = log.textContent + `DOMContentLoaded\n`;
+document.addEventListener("DOMContentLoaded", (event) => {
+  log.textContent = log.textContent + `DOMContentLoaded\n`;
 });
 ```
 

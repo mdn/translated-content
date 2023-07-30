@@ -1,14 +1,6 @@
 ---
 title: XMLHttpRequestEventTarget
 slug: Web/API/XMLHttpRequestEventTarget
-tags:
-  - AJAX
-  - API
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - Reference
-  - TopicStub
-  - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequestEventTarget
 ---
 

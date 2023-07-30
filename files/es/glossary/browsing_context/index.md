@@ -16,4 +16,4 @@ La comunicación entre contextos de navegación está severamente restringida. E
 - [Browsing context on WHATWG](https://html.spec.whatwg.org/multipage/browsers.html#windows)
 - [Browsing context on W3C](http://w3c.github.io/html/browsers.html#sec-browsing-contexts)
 
-{{QuickLinksWithSubpages("/en-US/docs/Glossary")}}
+{{QuickLinksWithSubpages("/es/docs/Glossary")}}

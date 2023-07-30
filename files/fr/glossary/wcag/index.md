@@ -18,7 +18,7 @@ WCAG utilise trois niveaux d'accessibilité :
 
 ### Culture générale
 
-- [Accessibilité du Web](https://fr.wikipedia.org/wiki/Accessibilit%C3%A9_du_web) sur Wikipédia
+- [Accessibilité du Web](https://fr.wikipedia.org/wiki/Accessibilité_du_web) sur Wikipédia
 
 ### Connaissances techniques
 

@@ -1,14 +1,7 @@
 ---
 title: Date.prototype.getUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getUTCHours
 ---
 
 {{JSRef}}
@@ -20,7 +13,7 @@ La méthode **`getUTCHours()`** renvoie les heures de la date renseignée, d'apr
 ## Syntaxe
 
 ```js
-dateObj.getUTCHours()
+dateObj.getUTCHours();
 ```
 
 ### Valeur de retour

@@ -81,14 +81,14 @@ My cat is very grumpy
 以上介绍了一些基本的 HTML 元素，但孤木不成林。现在来看看单个元素如何彼此协同构成一个完整的 HTML 页面。回顾 [文件处理](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 小节中创建的 `index.html` 示例：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My test page</title>
   </head>
   <body>
-    <img src="images/firefox-icon.png" alt="My test image">
+    <img src="images/firefox-icon.png" alt="My test image" />
   </body>
 </html>
 ```
@@ -166,7 +166,10 @@ Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标�
 比如，要将下面的段落片段改成一个列表：
 
 ```html
-<p>At Mozilla, we're a global community of technologists, thinkers, and builders working together… </p>
+<p>
+  At Mozilla, we're a global community of technologists, thinkers, and builders
+  working together…
+</p>
 ```
 
 可以这样更改标记：
@@ -180,7 +183,7 @@ Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标�
   <li>builders</li>
 </ul>
 
-<p>working together… </p>
+<p>working together…</p>
 ```
 
 试着在示例页面中添加一个有序列表和无序列表。
@@ -192,21 +195,23 @@ Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标�
 1. 选择一些文本。比如“Mozilla Manifesto”。
 2. 将文本包含在 {{htmlelement("a")}} 元素内，就像这样：
 
-    ```html
-    <a>Mozilla Manifesto</a>
-    ```
+   ```html
+   <a>Mozilla Manifesto</a>
+   ```
 
 3. 为此 {{htmlelement("a")}} 元素添加一个 `href` 属性，就像这样：
 
-    ```html
-    <a href="">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="">Mozilla Manifesto</a>
+   ```
 
 4. 把属性的值设置为所需网址：
 
-    ```html
-    <a href="https://www.mozilla.org/zh-CN/about/manifesto/">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="https://www.mozilla.org/zh-CN/about/manifesto/"
+     >Mozilla Manifesto</a
+   >
+   ```
 
 如果网址开始部分省略了 `https://` 或者 `http://`，可能会得到错误的结果。在完成一个链接后，可以试着点击它来确保指向正确。
 

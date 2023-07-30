@@ -1,9 +1,6 @@
 ---
 title: <marker>
 slug: Web/SVG/Element/marker
-tags:
-  - SVG
-  - SVG Element
 translation_of: Web/SVG/Element/marker
 ---
 
@@ -16,7 +13,11 @@ Les marqueurs sont attachés aux formes à l'aide des propriétés {{SVGAttr("ma
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

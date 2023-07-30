@@ -368,6 +368,7 @@
 /ko/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/create	/ko/docs/Mozilla/Add-ons/WebExtensions/API/menus/create
 /ko/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/getTargetElement	/ko/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
 /ko/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/onShown	/ko/docs/Mozilla/Add-ons/WebExtensions/API/menus/onShown
+/ko/docs/Mozilla/Add-ons/WebExtensions/Prerequisites	/ko/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
 /ko/docs/Mozilla/애드온들	/ko/docs/Mozilla/Add-ons
 /ko/docs/Mozilla/애드온들/AMO/Policy/Featured	https://extensionworkshop.com/documentation/publish/recommended-extensions/
 /ko/docs/Mozilla/애드온들/Listing	https://extensionworkshop.com/documentation/develop/create-an-appealing-listing/
@@ -397,7 +398,7 @@
 /ko/docs/Mozilla/애드온들/WebExtensions/Examples	/ko/docs/Mozilla/Add-ons/WebExtensions/Examples
 /ko/docs/Mozilla/애드온들/WebExtensions/Package_your_extension_	https://extensionworkshop.com/documentation/publish/package-your-extension/
 /ko/docs/Mozilla/애드온들/WebExtensions/Porting_a_Google_Chrome_extension	https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/
-/ko/docs/Mozilla/애드온들/WebExtensions/Prerequisites	/ko/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
+/ko/docs/Mozilla/애드온들/WebExtensions/Prerequisites	/ko/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
 /ko/docs/Mozilla/애드온들/WebExtensions/Temporary_Installation_in_Firefox	https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/
 /ko/docs/Mozilla/애드온들/WebExtensions/User_actions	/ko/docs/Mozilla/Add-ons/WebExtensions/User_actions
 /ko/docs/Mozilla/애드온들/WebExtensions/What_are_WebExtensions	/ko/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions

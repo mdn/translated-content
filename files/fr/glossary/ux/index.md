@@ -12,4 +12,4 @@ Le système peut être n'importe quel type de produit ou d'application avec lequ
 
 ### Culture générale
 
-- [Expérience utilisateur](https://fr.wikipedia.org/wiki/Exp%C3%A9rience_utilisateur) sur Wikipédia
+- [Expérience utilisateur](https://fr.wikipedia.org/wiki/Expérience_utilisateur) sur Wikipédia

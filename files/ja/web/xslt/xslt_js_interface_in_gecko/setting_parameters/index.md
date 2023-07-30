@@ -24,6 +24,5 @@ var sortVal = xsltProcessor.getParameter(null, "myOrder");
 
 if (sortVal == "" || sortVal == "descending")
   xsltProcessor.setParameter(null, "myOrder", "ascending");
-else
-  xsltProcessor.setParameter(null, "myOrder", "descending");
+else xsltProcessor.setParameter(null, "myOrder", "descending");
 ```

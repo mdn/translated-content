@@ -22,23 +22,23 @@ window.onsubmit = funcRef;
 
 ```html
 <html>
-<script>
-function reg() {
-  window.captureEvents(Event.SUBMIT);
-  window.onsubmit = hit;
-}
+  <script>
+    function reg() {
+      window.captureEvents(Event.SUBMIT);
+      window.onsubmit = hit;
+    }
 
-function hit() {
-  console.log('hit');
-}
-</script>
+    function hit() {
+      console.log("hit");
+    }
+  </script>
 
-<body onload="reg();">
-<form>
-  <input type="submit" value="submit" />
-</form>
-<div id="d"> </div>
-</body>
+  <body onload="reg();">
+    <form>
+      <input type="submit" value="submit" />
+    </form>
+    <div id="d"></div>
+  </body>
 </html>
 ```
 

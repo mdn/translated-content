@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
 
 ## 语法
 
-```js
-dateObj.getHours()
+```js-nolint
+getHours()
 ```
 
 ### 参数

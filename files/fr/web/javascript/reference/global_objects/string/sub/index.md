@@ -1,16 +1,7 @@
 ---
 title: String.prototype.sub()
 slug: Web/JavaScript/Reference/Global_Objects/String/sub
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/sub
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/sub
 ---
 
 {{JSRef}}{{deprecated_header}}
@@ -20,7 +11,7 @@ La méthode **`sub()`** crée un élément HTML {{HTMLElement("sub")}} qui entra
 ## Syntaxe
 
 ```js
-str.sub()
+str.sub();
 ```
 
 ### Valeur de retour
