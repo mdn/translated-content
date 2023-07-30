@@ -77,7 +77,6 @@ build/
 /files/pt-br/web/api/**/*.md
 /files/pt-br/web/css/**/*.md
 /files/pt-br/web/html/**/*.md
-/files/pt-br/web/http/**/*.md
 /files/pt-br/web/javascript/**/*.md
 /files/pt-br/web/svg/**/*.md
 

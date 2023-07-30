@@ -57,8 +57,8 @@ If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Especificações
 
-| Especificação                                            | Título                                                       |
-| -------------------------------------------------------- | ------------------------------------------------------------ |
+| Especificação                               | Título                                                       |
+| ------------------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7232", "If-Modified-Since", "3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
 ## Compatibilidade com navegadores
