@@ -133,7 +133,7 @@ class Extended extends Base {
 
 여기서 `baseField`는 `Base.prototype`이 아니라 `Base` 인스턴스의 자체 속성으로 정의되기 때문에 10이 아닌 `undefined`입니다. 이 맥락에서 `super`는 `Extended.prototype`의 [[Prototype]]이므로 `Base.prototype`의 속성만 조회할 수 있습니다.
 
-### super 속성을 삭제하면 오류가 발생합니다.
+### super 속성을 삭제하면 오류가 발생합니다
 
 [`delete` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/delete)와 `super.prop` 또는 `super[expr]`를 사용하여 부모 클래스의 속성을 삭제할 수 없습니다. 삭제하면 {{jsxref("ReferenceError")}}가 발생합니다.
 
