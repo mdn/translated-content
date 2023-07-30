@@ -22,7 +22,7 @@ slug: Web/API/Compression_Streams_API
 
 ```js
 const compressedReadableStream = inputReadableStream.pipeThrough(
-  new CompressionStream("gzip")
+  new CompressionStream("gzip"),
 );
 ```
 

@@ -10,8 +10,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getURL
 
 ```js
 browser.runtime.getURL(
-  path // string
-)
+  path, // string
+);
 ```
 
 ### Paramètres

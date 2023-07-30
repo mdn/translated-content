@@ -29,13 +29,14 @@ _该接口继承了父接口 {{domxref("MouseEvent")}}、{{domxref("UIEvent")}} 
 - {{domxref("WheelEvent.deltaZ")}} {{readonlyinline}}
   - : 返回一个 `double` 值，该值表示滚轮的 z 轴方向上的滚动量。
 - {{domxref("WheelEvent.deltaMode")}} {{readonlyinline}}
+
   - : 返回一个 `unsigned long` 值，该值表示上述各 `delta*` 的值的单位。允许的值如下：
 
-    | 常量                          | 值     | 描述                                                                |
-    | ---------------------------- | ------ | ------------------------------------------------------------------- |
-    | `WheelEvent.DOM_DELTA_PIXEL` | `0x00` | `delta*` 的单位为像素。                                               |
-    | `WheelEvent.DOM_DELTA_LINE`  | `0x01` | `delta*` 单位为行。每一次点击鼠标都会滚动一行内容，行高的计算取决于浏览器。   |
-    | `WheelEvent.DOM_DELTA_PAGE`  | `0x02` | `delta*` 单位为页。每一次点击鼠标都会滚动一页内容。                       |
+    | 常量                         | 值     | 描述                                                                        |
+    | ---------------------------- | ------ | --------------------------------------------------------------------------- |
+    | `WheelEvent.DOM_DELTA_PIXEL` | `0x00` | `delta*` 的单位为像素。                                                     |
+    | `WheelEvent.DOM_DELTA_LINE`  | `0x01` | `delta*` 单位为行。每一次点击鼠标都会滚动一行内容，行高的计算取决于浏览器。 |
+    | `WheelEvent.DOM_DELTA_PAGE`  | `0x02` | `delta*` 单位为页。每一次点击鼠标都会滚动一页内容。                         |
 
 - {{DOMxRef("WheelEvent.wheelDelta")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : 返回一个整数（32 位），表示以像素为单位的距离。

@@ -22,9 +22,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 注意，在使用递归调用时，你不能使用此属性来重现出调用栈。请考虑以下代码：
 
 ```js
-function f(n) { g(n-1) }
-function g(n) { if(n>0) f(n); else stop() }
-f(2)
+function f(n) {
+  g(n - 1);
+}
+function g(n) {
+  if (n > 0) f(n);
+  else stop();
+}
+f(2);
 ```
 
 当 `stop()` 函数被调用时，调用栈是这样的：
@@ -36,7 +41,7 @@ f(2) -> g(1) -> f(1) -> g(0) -> stop()
 由于下面的表达式为 true (只保留函数最后一次被调用时的 caller)：
 
 ```js
-stop.caller === g && f.caller === g && g.caller === f
+stop.caller === g && f.caller === g && g.caller === f;
 ```
 
 所以如果你尝试在 `stop()` 函数中获取调用栈的话：
@@ -62,10 +67,9 @@ while (f) {
 
 ```js
 function myFunc() {
-   if (myFunc.caller == null) {
-      return ("该函数在全局作用域内被调用！");
-   } else
-      return ("调用我的是函数是" + myFunc.caller);
+  if (myFunc.caller == null) {
+    return "该函数在全局作用域内被调用！";
+  } else return "调用我的是函数是" + myFunc.caller;
 }
 ```
 

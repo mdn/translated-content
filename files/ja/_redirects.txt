@@ -902,7 +902,7 @@
 /ja/docs/DOM/window.URL.revokeObjectURL	/ja/docs/Web/API/URL/revokeObjectURL_static
 /ja/docs/DOM/window.alert	/ja/docs/Web/API/Window/alert
 /ja/docs/DOM/window.alert-redirect-1	/ja/docs/Web/API/Window/alert
-/ja/docs/DOM/window.applicationCache	/ja/docs/Web/API/Window/applicationCache
+/ja/docs/DOM/window.applicationCache	/ja/docs/orphaned/Web/API/Window/applicationCache
 /ja/docs/DOM/window.arguments	/ja/docs/orphaned/Working_with_windows_in_chrome_code
 /ja/docs/DOM/window.atob	/ja/docs/Web/API/atob
 /ja/docs/DOM/window.atob-redirect-1	/ja/docs/Web/API/atob
@@ -1130,7 +1130,7 @@
 /ja/docs/DOM:selection	/ja/docs/Web/API/Selection
 /ja/docs/DOM:window	/ja/docs/Web/API/Window
 /ja/docs/DOM:window.alert	/ja/docs/Web/API/Window/alert
-/ja/docs/DOM:window.applicationCache	/ja/docs/Web/API/Window/applicationCache
+/ja/docs/DOM:window.applicationCache	/ja/docs/orphaned/Web/API/Window/applicationCache
 /ja/docs/DOM:window.atob	/ja/docs/Web/API/atob
 /ja/docs/DOM:window.back	/ja/docs/Web/API/Window/back
 /ja/docs/DOM:window.blur	/ja/docs/Web/API/Window/blur
@@ -3135,6 +3135,7 @@
 /ja/docs/Web/API/Window/animationend_event	/ja/docs/Web/API/Element/animationend_event
 /ja/docs/Web/API/Window/animationiteration_event	/ja/docs/Web/API/Element/animationiteration_event
 /ja/docs/Web/API/Window/animationstart_event	/ja/docs/Web/API/Element/animationstart_event
+/ja/docs/Web/API/Window/applicationCache	/ja/docs/orphaned/Web/API/Window/applicationCache
 /ja/docs/Web/API/Window/arguments	/ja/docs/orphaned/Working_with_windows_in_chrome_code
 /ja/docs/Web/API/Window/content	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/crypto	/ja/docs/Web/API/crypto_property
@@ -3207,6 +3208,7 @@
 /ja/docs/Web/API/Worker/onerror	/ja/docs/Web/API/Worker/error_event
 /ja/docs/Web/API/Worker/onmessageerror	/ja/docs/Web/API/Worker/messageerror_event
 /ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/caches
+/ja/docs/Web/API/WorkerGlobalScope/console	/ja/docs/conflicting/Web/API/console
 /ja/docs/Web/API/XMLDocument/async	/ja/docs/Web/API/XMLDocument
 /ja/docs/Web/API/XMLHttpRequest/onreadystatechange	/ja/docs/Web/API/XMLHttpRequest/readystatechange_event
 /ja/docs/Web/API/XMLHttpRequestEventTarget/onabort	/ja/docs/Web/API/XMLHttpRequest/abort_event
@@ -3325,7 +3327,7 @@
 /ja/docs/Web/API/window.URL.createObjectURL	/ja/docs/Web/API/URL/createObjectURL_static
 /ja/docs/Web/API/window.URL.revokeObjectURL	/ja/docs/Web/API/URL/revokeObjectURL_static
 /ja/docs/Web/API/window.alert	/ja/docs/Web/API/Window/alert
-/ja/docs/Web/API/window.applicationCache	/ja/docs/Web/API/Window/applicationCache
+/ja/docs/Web/API/window.applicationCache	/ja/docs/orphaned/Web/API/Window/applicationCache
 /ja/docs/Web/API/window.arguments	/ja/docs/orphaned/Working_with_windows_in_chrome_code
 /ja/docs/Web/API/window.atob	/ja/docs/Web/API/atob
 /ja/docs/Web/API/window.back	/ja/docs/Web/API/Window/back
@@ -3509,6 +3511,7 @@
 /ja/docs/Web/CSS/-moz-zoom-out	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-ms-scroll-snap-type	/ja/docs/Web/CSS/scroll-snap-type
 /ja/docs/Web/CSS/-webkit-print-color-adjust	/ja/docs/Web/CSS/print-color-adjust
+/ja/docs/Web/CSS/:-moz-focusring	/ja/docs/conflicting/Web/CSS/:focus-visible
 /ja/docs/Web/CSS/:-moz-list-bullet	/ja/docs/Web/CSS/::-moz-list-bullet
 /ja/docs/Web/CSS/:-moz-locale-dir(ltr)	/ja/docs/Web/CSS/:-moz-locale-dir_ltr
 /ja/docs/Web/CSS/:-moz-locale-dir(rtl)	/ja/docs/Web/CSS/:-moz-locale-dir_rtl

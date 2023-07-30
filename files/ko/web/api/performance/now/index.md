@@ -50,7 +50,6 @@ performance.now();
 // 8782206
 // ...
 
-
 // reduced time precision with `privacy.resistFingerprinting` enabled
 performance.now();
 // 8865400

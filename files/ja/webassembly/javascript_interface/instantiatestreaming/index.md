@@ -48,7 +48,7 @@ WebAssembly.instantiateStreaming(source, importObject)
 const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
 
 WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (obj) => obj.instance.exports.exported_func()
+  (obj) => obj.instance.exports.exported_func(),
 );
 ```
 

@@ -1,10 +1,6 @@
 ---
 title: DeviceMotionEvent.interval
 slug: Web/API/DeviceMotionEvent/interval
-tags:
-  - API
-  - Propriété
-  - Reference
 translation_of: Web/API/DeviceMotionEvent/interval
 ---
 

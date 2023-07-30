@@ -16,8 +16,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var opening = browser.downloads.open(
-  downloadId      // integer
-)
+  downloadId, // integer
+);
 ```
 
 ### Paramètres
@@ -47,15 +47,15 @@ function onError(error) {
 }
 
 function openDownload(downloadItems) {
-    if (downloadItems.length > 0) {
-      var opening = browser.downloads.open(downloadItems[0].id);
-      opening.then(onOpened, onError);
-    }
+  if (downloadItems.length > 0) {
+    var opening = browser.downloads.open(downloadItems[0].id);
+    opening.then(onOpened, onError);
   }
+}
 
 var searching = browser.downloads.search({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 searching.then(openDownload, onError);

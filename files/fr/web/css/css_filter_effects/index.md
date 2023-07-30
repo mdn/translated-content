@@ -1,13 +1,7 @@
 ---
 title: Filter Effects
 slug: Web/CSS/CSS_filter_effects
-tags:
-  - Aperçu
-  - CSS
-  - Filter Effects
-  - Reference
 translation_of: Web/CSS/Filter_Effects
-original_slug: Web/CSS/Filter_Effects
 ---
 
 {{CSSRef}}

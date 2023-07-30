@@ -47,7 +47,7 @@ Math.log(10); // 2.302585092994046
 
 ```js
 function getBaseLog(x, y) {
-    return Math.log(y) / Math.log(x);
+  return Math.log(y) / Math.log(x);
 }
 ```
 

@@ -17,7 +17,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var getSettings = browser.browsingData.settings()
+var getSettings = browser.browsingData.settings();
 ```
 
 ### Paramètres

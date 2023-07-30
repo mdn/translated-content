@@ -22,22 +22,24 @@ element.onauxclick = functionRef(e);
 在这个例子中我们定义了两个事件处理函数：`onclick` 和 `onauxclick`。前者改变按钮背景的颜色，而后者改变按钮前景（文本）的颜色。您可以通过使用多按钮鼠标尝试演示来查看这两种功能 ([see it live on GitHub](https://mdn.github.io/dom-examples/auxclick/); also [see the source code](https://github.com/mdn/dom-examples/blob/master/auxclick/index.html))。
 
 ```js
-var button = document.querySelector('button');
-var html = document.querySelector('html');
+var button = document.querySelector("button");
+var html = document.querySelector("html");
 
 function random(number) {
   return Math.floor(Math.random() * number);
 }
 
-button.onclick = function() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+button.onclick = function () {
+  var rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   button.style.backgroundColor = rndCol;
 };
 
-button.onauxclick = function() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+button.onauxclick = function () {
+  var rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   button.style.color = rndCol;
-}
+};
 ```
 
 > **备注：** 如果您使用的是三键鼠标，您会注意到在单击任一非鼠标左键时该 `onauxclick` 处理程序会运行。

@@ -1,13 +1,6 @@
 ---
 title: ET logique (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
-tags:
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
-browser-compat: javascript.operators.logical_and
 ---
 
 {{jsSidebar("Operators")}}
@@ -19,7 +12,7 @@ L'opérateur ET logique (`&&`) (conjonction logique) renvoie vrai si et uniqueme
 ## Syntaxe
 
 ```js
-expr1 && expr2
+expr1 && expr2;
 ```
 
 ## Description
@@ -47,17 +40,17 @@ L'expression utilisant un ET logique est évaluée de gauche à droite. Le moteu
 Cette notion de court-circuit indique que la partie `expr` ci-avant **n'est pas évaluée**, tout effet de bord lié à cette évaluation n'aura pas lieu (par exemple, si `expr` est un appel de fonction, la fonction n'est pas appelée). Ce fonctionnement a lieu, car la valeur du résultat peut d'office être déterminée par l'évaluation du premier opérande. Par exemple :
 
 ```js
-function A(){
-  console.log('A a été appelée');
+function A() {
+  console.log("A a été appelée");
   return false;
 }
 
-function B(){
-  console.log('B a été appelée');
+function B() {
+  console.log("B a été appelée");
   return true;
 }
 
-console.log( A() && B() );
+console.log(A() && B());
 // affichera "A a été appelée" dans la console via l'appel de la fonction
 // puis affichera false (la valeur du résultat de l'expression avec l'opérateur)
 // on voit que la fonction B n'est pas du tout appelée
@@ -67,10 +60,9 @@ console.log( A() && B() );
 
 Les expressions suivantes peuvent sembler équivalentes mais ne le sont pas. En effet, l'opérateur `&&` est exécuté avant l'opérateur `||` (voir [l'article sur la précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
 
-```js
-true || false && false      // renvoie true, car && est exécuté en premier
-(true || false) && false    // renvoie false, car la précédence par défaut ne s'applique pas
-                                    // avec les parenthèses
+```js-nolint
+true || false && false; // renvoie true, car && est exécuté en premier
+(true || false) && false; // renvoie false, car la précédence par défaut ne s'applique pas avec les parenthèses
 ```
 
 ## Exemples
@@ -80,15 +72,15 @@ true || false && false      // renvoie true, car && est exécuté en premier
 Le code suivant illustre quelques usages de l'opérateur ET logique `&&`.
 
 ```js
-a1 = true   && true       // t && t renvoie true
-a2 = true   && false      // t && f renvoie false
-a3 = false  && true       // f && t renvoie false
-a4 = false  && (3 == 4)   // f && f renvoie false
-a5 = 'Chat' && 'Chien'    // t && t renvoie "Chien"
-a6 = false  && 'Chat'     // f && t renvoie false
-a7 = 'Chat' && false      // t && f renvoie false
-a8 = ''     && false      // f && f renvoie ""
-a9 = false  && ''         // f && f renvoie false
+a1 = true && true; // t && t renvoie true
+a2 = true && false; // t && f renvoie false
+a3 = false && true; // f && t renvoie false
+a4 = false && 3 == 4; // f && f renvoie false
+a5 = "Chat" && "Chien"; // t && t renvoie "Chien"
+a6 = false && "Chat"; // f && t renvoie false
+a7 = "Chat" && false; // t && f renvoie false
+a8 = "" && false; // f && f renvoie ""
+a9 = false && ""; // f && f renvoie false
 ```
 
 ### Règles de conversion booléennes
@@ -98,13 +90,13 @@ a9 = false  && ''         // f && f renvoie false
 L'opération suivante, utilisant des **booléens** :
 
 ```js
-bCondition1 && bCondition2
+bCondition1 && bCondition2;
 ```
 
 sera toujours équivalente à :
 
 ```js
-!(!bCondition1 || !bCondition2)
+!(!bCondition1 || !bCondition2);
 ```
 
 #### Convertir OU en ET
@@ -112,13 +104,13 @@ sera toujours équivalente à :
 L'opération suivante, utilisant des **booléens** :
 
 ```js
-bCondition1 || bCondition2
+bCondition1 || bCondition2;
 ```
 
 sera toujours équivalente à :
 
 ```js
-!(!bCondition1 && !bCondition2)
+!(!bCondition1 && !bCondition2);
 ```
 
 ### Retrait des parenthèses imbriquées
@@ -128,13 +120,13 @@ Les expressions logiques sont évaluées de gauche à droite, il est donc possib
 L'opération composite suivant, qui utilise des **booléens** :
 
 ```js
-bCondition1 || (bCondition2 && bCondition3)
+bCondition1 || (bCondition2 && bCondition3);
 ```
 
 sera toujours égale à :
 
 ```js
-bCondition1 || bCondition2 && bCondition3
+bCondition1 || (bCondition2 && bCondition3);
 ```
 
 ## Spécifications

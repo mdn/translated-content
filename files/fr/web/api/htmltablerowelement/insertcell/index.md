@@ -37,9 +37,15 @@ Nous utilisons ensuite `insertCell(0)` pour insérer une nouvelle cellule dans l
 
 ```html
 <table id="my-table">
-  <tr><td>Row 1</td></tr>
-  <tr><td>Row 2</td></tr>
-  <tr><td>Row 3</td></tr>
+  <tr>
+    <td>Row 1</td>
+  </tr>
+  <tr>
+    <td>Row 2</td>
+  </tr>
+  <tr>
+    <td>Row 3</td>
+  </tr>
 </table>
 ```
 
@@ -57,12 +63,12 @@ function addRow(tableID) {
   let newCell = newRow.insertCell(0);
 
   // Ajoute un nœud texte à la cellule
-  let newText = document.createTextNode('New bottom row');
+  let newText = document.createTextNode("New bottom row");
   newCell.appendChild(newText);
 }
 
 // Appelle addRow() avec l’ID de la table
-addRow('my-table');
+addRow("my-table");
 ```
 
 ### Résultat

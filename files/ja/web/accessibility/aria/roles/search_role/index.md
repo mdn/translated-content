@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: search ロール'
+title: "ARIA: search ロール"
 slug: Web/Accessibility/ARIA/Roles/search_role
 ---
 
@@ -20,8 +20,8 @@ slug: Web/Accessibility/ARIA/Roles/search_role
 ```html
 <form id="search" role="search">
   <label for="search-input">このサイトを検索</label>
-  <input type="search" id="search-input" name="search" spellcheck="false">
-  <input value="検索する" type="submit">
+  <input type="search" id="search-input" name="search" spellcheck="false" />
+  <input value="検索する" type="submit" />
 </form>
 ```
 

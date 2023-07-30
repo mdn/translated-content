@@ -44,7 +44,7 @@ console.log(obj === null); // false
 console.log(obj === undefined); // false
 ```
 
-La igualdad estricta es casi siempre el operador igualdad más adecuado. Para todos los valores, excepto para los números, utiliza la semántica obvia: un valor sólo es igual así mismo. Para número usa una semántica ligeramente diferente para paliar dos casos límites diferentes. El primero es que usando número en coma flotante el cero puede ser positivo o negativo. Esto es útil para representar ciertas soluciones matemáticas, pero en la mayoría de las situaciones no nos importa esa diferencia entre +0 y -0. La igualdad estricta los trata como un únicomvalor. El segundo caso tiene que ver con que los número en coma flotante incluyen el concepto NaN (Not a Number) como un posible valor para representar la solución a ciertos problemas matemáticos mal definidos, por ejemplo la adición de un infinito negativo a un infinito positivo. La igualdad estricta trata NaN como desigual con cualquier otro valore -- incluyendo a sí mismo. (El único caso en el que x !== x es verdades en cuando x is NaN).
+La igualdad estricta es casi siempre el operador igualdad más adecuado. Para todos los valores, excepto para los números, utiliza la semántica obvia: un valor sólo es igual así mismo. Para número usa una semántica ligeramente diferente para paliar dos casos límites diferentes. El primero es que usando número en coma flotante el cero puede ser positivo o negativo. Esto es útil para representar ciertas soluciones matemáticas, pero en la mayoría de las situaciones no nos importa esa diferencia entre +0 y -0. La igualdad estricta los trata como un únicomvalor. El segundo caso tiene que ver con que los número en coma flotante incluyen el concepto NaN (Not a Number) como un posible valor para representar la solución a ciertos problemas matemáticos mal definidos, por ejemplo la adición de un infinito negativo a un infinito positivo. La igualdad estricta trata NaN como desigual con cualquier otro valore — incluyendo a sí mismo. (El único caso en el que x !== x es verdades en cuando x is NaN).
 
 ## Igualdad débil usando ==
 
@@ -168,11 +168,14 @@ La igualdad Same-value se encarga de un último caso de uso: determinar si dos v
 
 ```js
 // Add an immutable NEGATIVE_ZERO property to the Number constructor.
-Object.defineProperty(Number, "NEGATIVE_ZERO",
-                      { value: -0, writable: false, configurable: false, enumerable: false });
+Object.defineProperty(Number, "NEGATIVE_ZERO", {
+  value: -0,
+  writable: false,
+  configurable: false,
+  enumerable: false,
+});
 
-function attemptMutation(v)
-{
+function attemptMutation(v) {
   Object.defineProperty(Number, "NEGATIVE_ZERO", { value: v });
 }
 ```
@@ -235,7 +238,7 @@ Aquí podemos ver una lista exhaustiva de los método y operadores nativos que p
   - : Obviamente negar 0 genera -0. `Pero al abstracción de una expresión puede causar que un valor -0 se cuele sin darte cuenta` Consideremos el siguiente ejemplo:
 
     ```js
-    let stoppingForce = obj.mass * -obj.velocity
+    let stoppingForce = obj.mass * -obj.velocity;
     ```
 
     Si `obj.velocity` is `0` (o se calcula como `0`), se inserta `-0` en ese lugar y este valor se propaga a `stoppingForce`.

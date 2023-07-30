@@ -109,25 +109,25 @@ CSS.highlights.clear();
 下面的 HTML 代码片段定义了一个搜索框和有几段文字的文章：
 
 ```html
-<label>Search within text <input id="query" type="text"></label>
+<label>Search within text <input id="query" type="text" /></label>
 <article>
   <p>
     Maxime debitis hic, delectus perspiciatis laborum molestiae labore,
-    deleniti, quam consequatur iure veniam alias voluptas nisi quo.
-    Dolorem eaque alias, quo vel quas repudiandae architecto deserunt
-    quidem, sapiente laudantium nulla.
+    deleniti, quam consequatur iure veniam alias voluptas nisi quo. Dolorem
+    eaque alias, quo vel quas repudiandae architecto deserunt quidem, sapiente
+    laudantium nulla.
   </p>
   <p>
-    Maiores odit molestias, necessitatibus doloremque dolor illum
-    reprehenderit provident nostrum laboriosam iste, tempore perferendis!
-    Ab porro neque esse voluptas libero necessitatibus fugiat, ex, minus
-    atque deserunt veniam molestiae tempora? Vitae.
+    Maiores odit molestias, necessitatibus doloremque dolor illum reprehenderit
+    provident nostrum laboriosam iste, tempore perferendis! Ab porro neque esse
+    voluptas libero necessitatibus fugiat, ex, minus atque deserunt veniam
+    molestiae tempora? Vitae.
   </p>
   <p>
-    Dolorum facilis voluptate eaque eius similique ducimus dignissimos
-    assumenda quos architecto. Doloremque deleniti non exercitationem
-    rerum quam alias harum, nisi obcaecati corporis temporibus vero sapiente
-    voluptatum est quibusdam id ipsa.
+    Dolorum facilis voluptate eaque eius similique ducimus dignissimos assumenda
+    quos architecto. Doloremque deleniti non exercitationem rerum quam alias
+    harum, nisi obcaecati corporis temporibus vero sapiente voluptatum est
+    quibusdam id ipsa.
   </p>
 </article>
 ```
@@ -159,7 +159,7 @@ query.addEventListener("input", () => {
     return;
   }
 
-  // Clear the HighlightRegistry to remove the 
+  // Clear the HighlightRegistry to remove the
   // previous search results.
   CSS.highlights.clear();
 
@@ -185,7 +185,7 @@ query.addEventListener("input", () => {
         startPos = index + str.length;
       }
 
-      // Create a range object for each instance of 
+      // Create a range object for each instance of
       // str we found in the text node.
       return indices.map((index) => {
         const range = new Range();

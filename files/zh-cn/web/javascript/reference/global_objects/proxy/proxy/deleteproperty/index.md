@@ -12,8 +12,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/deletePrope
 
 ```js
 var p = new Proxy(target, {
-  deleteProperty: function(target, property) {
-  }
+  deleteProperty: function (target, property) {},
 });
 ```
 
@@ -52,12 +51,15 @@ var p = new Proxy(target, {
 以下代码演示了对 {{jsxref("Operators/delete", "delete")}} 操作的拦截。
 
 ```js
-var p = new Proxy({}, {
-  deleteProperty: function(target, prop) {
-    console.log('called: ' + prop);
-    return true;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    deleteProperty: function (target, prop) {
+      console.log("called: " + prop);
+      return true;
+    },
+  },
+);
 
 delete p.a; // "called: a"
 ```

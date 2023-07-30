@@ -1,14 +1,7 @@
 ---
 title: EventSource.onopen
 slug: Web/API/EventSource/open_event
-tags:
-  - API
-  - Event Handler
-  - EventSource
-  - Propriété
-  - Reference
 translation_of: Web/API/EventSource/onopen
-original_slug: Web/API/EventSource/onopen
 ---
 
 {{APIRef('Server Sent Events')}}
@@ -24,7 +17,7 @@ eventSource.onopen = function
 ## Exemples
 
 ```js
-evtSource.onopen = function() {
+evtSource.onopen = function () {
   console.log("Connexion au serveur établie.");
 };
 ```

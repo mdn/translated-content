@@ -13,9 +13,9 @@ Se déclenche lorsque l'onglet sélectionné dans une fenêtre change.
 ## Syntaxe
 
 ```js
-browser.tabs.onSelectionChanged.addListener(listener)
-browser.tabs.onSelectionChanged.removeListener(listener)
-browser.tabs.onSelectionChanged.hasListener(listener)
+browser.tabs.onSelectionChanged.addListener(listener);
+browser.tabs.onSelectionChanged.removeListener(listener);
+browser.tabs.onSelectionChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions:

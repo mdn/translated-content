@@ -1,12 +1,6 @@
 ---
 title: AuthenticatorAssertionResponse.authenticatorData
 slug: Web/API/AuthenticatorAssertionResponse/authenticatorData
-tags:
-  - API
-  - Propriété
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 translation_of: Web/API/AuthenticatorAssertionResponse/authenticatorData
 ---
 

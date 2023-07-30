@@ -43,7 +43,7 @@ return x + y / 3;
 
 ### 자동 세미콜론 삽입
 
-`return` 명령문은 [자동 세미콜론 삽입(ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)의 영향을 받습니다. `return` 키워드와 표현식 사이에는 줄바꿈 문자가 올 수 없습니다.
+`return` 명령문은 [자동 세미콜론 삽입(ASI)](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)의 영향을 받습니다. `return` 키워드와 표현식 사이에는 줄바꿈 문자가 올 수 없습니다.
 
 ```js
 return

@@ -1,12 +1,6 @@
 ---
 title: Element.insertAdjacentElement()
 slug: Web/API/Element/insertAdjacentElement
-tags:
-  - API
-  - DOM
-  - Element
-  - Insertion
-  - Méthodes
 translation_of: Web/API/Element/insertAdjacentElement
 ---
 
@@ -50,9 +44,9 @@ L'élément inséré ou `null` si l'insertion a échouée.
 ```html
 <!-- beforebegin -->
 <p>
-<!-- afterbegin -->
-foo
-<!-- beforeend -->
+  <!-- afterbegin -->
+  foo
+  <!-- beforeend -->
 </p>
 <!-- afterend -->
 ```
@@ -62,20 +56,20 @@ foo
 ## Exemple
 
 ```js
-beforeBtn.addEventListener('click', function() {
-  var tempDiv = document.createElement('div');
+beforeBtn.addEventListener("click", function () {
+  var tempDiv = document.createElement("div");
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {
-    activeElem.insertAdjacentElement('beforebegin',tempDiv);
+    activeElem.insertAdjacentElement("beforebegin", tempDiv);
   }
   setListener(tempDiv);
 });
 
-afterBtn.addEventListener('click', function() {
-  var tempDiv = document.createElement('div');
+afterBtn.addEventListener("click", function () {
+  var tempDiv = document.createElement("div");
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {
-    activeElem.insertAdjacentElement('afterend',tempDiv);
+    activeElem.insertAdjacentElement("afterend", tempDiv);
   }
   setListener(tempDiv);
 });

@@ -1,28 +1,30 @@
 ---
 title: HTMLTableRowElement
 slug: Web/API/HTMLTableRowElement
+l10n:
+  sourceCommit: 0387e3e9f49863cc1f8bba5164e1697778cba593
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLTableRowElement`** インターフェイスは、（継承によって利用できる通常の {{domxref("HTMLElement")}} インターフェイスに加えて） HTML の表の行のレイアウトを操作したり行を表したりするための特別なプロパティとメソッドを提供します。
+**`HTMLTableRowElement`** インターフェイスは、（継承によって利用できる通常の {{domxref("HTMLElement")}} インターフェイスに加えて）HTML の表の行のレイアウトを操作したり行を表したりするための特別なプロパティとメソッドを提供します。
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
-_親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
+_親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
 
-- {{domxref("HTMLTableRowElement.cells")}} {{readonlyInline}}
+- {{domxref("HTMLTableRowElement.cells")}} {{ReadOnlyInline}}
   - : 行のセルを表す生きた {{domxref("HTMLCollection")}} を返します。 `HTMLCollection` は生きており、セルが追加・削除された際に自動的に更新されます。
-- {{domxref("HTMLTableRowElement.rowIndex")}} {{readonlyInline}}
+- {{domxref("HTMLTableRowElement.rowIndex")}} {{ReadOnlyInline}}
   - : 表全体におけるこの行の論理的な位置を表す `long` 値を返します。この行が表の中になかった場合は、 `-1` を返します。
-- {{domxref("HTMLTableRowElement.sectionRowIndex")}} {{readonlyInline}}
+- {{domxref("HTMLTableRowElement.sectionRowIndex")}} {{ReadOnlyInline}}
   - : 所属する表の区間におけるこの行の論理的な位置を表す `long` 値を返します。この行が区間の中になかった場合は、 `-1` を返します。
 
-## メソッド
+## インスタンスメソッド
 
-_親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
+_親である {{domxref("HTMLElement")}} から継承したメソッドがあります。_
 
 - {{domxref("HTMLTableRowElement.deleteCell()", "deleteCell(index)")}}
   - : `index` の位置に対応するセルを取り除きます。 `index` が `-1` であった場合、末尾のセルを取り除きます。 `index` が `-1` より小さいか、このコレクションにあるセルの数より大きい場合、 {{DOMxRef("DOMException")}} が `IndexSizeError` の値で発生します。
@@ -34,9 +36,9 @@ _親である {{domxref("HTMLElement")}} からメソッドを継承していま
 > **警告:** これらのプロパティは{{Glossary("deprecated", "非推奨")}}になっており、もう使用するべきではありません。これらは主に古いコードベースを理解しやすくすることを目的に文書化されています。
 
 - {{domxref("HTMLTableRowElement.align")}} {{deprecated_inline}}
-  - : 文字列で、 [`align`](/ja/docs/Web/HTML/Element/tr#align)ment/tr#align)ment/tr#align)ment/tr#align) 属性を反映した列挙値です。これは、周囲のコンテキストに対する要素の内容の整列を示す。指定できる値は `"left"`, `"right"`, `"center"` です。
+  - : 文字列で、 [`align`](/ja/docs/Web/HTML/Element/tr#align) 属性を反映した列挙値です。これは、周囲のコンテキストに対する要素の内容の整列を示す。指定できる値は `"left"`, `"right"`, `"center"` です。
 - {{domxref("HTMLTableRowElement.bgColor")}} {{deprecated_inline}}
-  - : 文字列で、セルの背景色です。これは、廃止された [`bgColor`](/ja/docs/Web/HTML/Element/tr#bgColor) 属性を反映したものです。
+  - : 文字列で、セルの背景色です。これは、廃止された [`bgColor`](/ja/docs/Web/HTML/Element/tr#bgcolor) 属性を反映したものです。
 - {{domxref("HTMLTableRowElement.ch")}} {{deprecated_inline}}
   - : 文字列で、 1 つの文字を含みます。この文字は、列の全てのセルを揃えるための文字です。これは [`char`](/ja/docs/Web/HTML/Element/tr#char) を反映し、既定では言語に関連付けられた小数点の値、例えば英語なら `'.'`、フランス語なら `','` となります。このプロパティはオプションであり、あまり対応されていませんでした。
 - {{domxref("HTMLTableRowElement.chOff")}} {{deprecated_inline}}

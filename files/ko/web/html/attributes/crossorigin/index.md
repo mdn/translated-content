@@ -48,4 +48,4 @@ Media element의 `crossorigin` 속성은 CORS 세팅입니다.
 - [Cross-Origin Resource Sharing (CORS)](/ko/docs/Web/HTTP/CORS)
 - [HTML attribute: `rel`](/ko/docs/Web/HTML/Attributes/rel)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}
+{{QuickLinksWithSubpages("/ko/docs/Web/HTML/")}}

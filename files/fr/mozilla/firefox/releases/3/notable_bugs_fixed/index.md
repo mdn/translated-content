@@ -25,4 +25,4 @@ Cet article fait la liste des corrections importantes faisant partie de Firefox 
 
 ### Voir aussi
 
-- [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_d%c3%a9veloppeurs)
+- [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_développeurs)

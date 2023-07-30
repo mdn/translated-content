@@ -1,11 +1,6 @@
 ---
 title: Attr.namespaceURI
 slug: Web/API/Attr/namespaceURI
-tags:
-  - API
-  - DOM
-  - Reference
-  - namespaceURI
 translation_of: Web/API/Attr/namespaceURI
 ---
 
@@ -18,7 +13,7 @@ La propriété en lecture seule **`Attr.namespaceURI`** retourne l'URI d'espace 
 ## Syntaxe
 
 ```js
-namespace = attribute.namespaceURI
+namespace = attribute.namespaceURI;
 ```
 
 ## Exemple
@@ -26,8 +21,11 @@ namespace = attribute.namespaceURI
 Dans cet extrait de code, un attribut est examiné pour son {{domxref("localName")}} et son `namespaceURI`. Si le `namespaceURI` renvoie l'espace de noms XUL et le `localName` retourne "browser" (_navigateur_), alors le noeud est compris comme étant un `<browser/>` XUL.
 
 ```js
-if (attribute.localName == "value" &&
-    attribute.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
+if (
+  attribute.localName == "value" &&
+  attribute.namespaceURI ==
+    "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+) {
   // ceci est une valeur XUL
 }
 ```

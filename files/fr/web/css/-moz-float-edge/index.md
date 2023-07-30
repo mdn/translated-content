@@ -1,11 +1,6 @@
 ---
-title: '-moz-float-edge'
+title: "-moz-float-edge"
 slug: Web/CSS/-moz-float-edge
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-moz-float-edge
 ---
 
@@ -65,10 +60,7 @@ La propriété **`-moz-float-edge`** définit si les propriétés de hauteur et 
 
 ```html
 <div class="box">
-   <p>
-      Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit.
-   </p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </div>
 ```
 

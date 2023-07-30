@@ -1,12 +1,6 @@
 ---
 title: NodeList.keys()
 slug: Web/API/NodeList/keys
-tags:
-  - API
-  - DOM
-  - Liste
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/NodeList/keys
 ---
 
@@ -39,8 +33,8 @@ node.appendChild(kid3);
 var list = node.childNodes;
 
 // Utilisation de for..of
-for(var key of list.keys()) {
-   console.log(key);
+for (var key of list.keys()) {
+  console.log(key);
 }
 ```
 

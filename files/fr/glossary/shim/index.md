@@ -10,4 +10,4 @@ Un **shim** est un morceau de code utilisé pour corriger le comportement du cod
 
 ### Culture générale
 
-- [L'article sur les <i lang="en">shim</i> en anglais](https://en.wikipedia.org/wiki/Shim_(computing)) sur Wikipédia
+- [L'article sur les <i lang="en">shim</i> en anglais](<https://en.wikipedia.org/wiki/Shim_(computing)>) sur Wikipédia

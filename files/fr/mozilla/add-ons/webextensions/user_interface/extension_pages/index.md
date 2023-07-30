@@ -36,7 +36,7 @@ var createData = {
   type: "detached_panel",
   url: "panel.html",
   width: 250,
-  height: 100
+  height: 100,
 };
 var creating = browser.windows.create(createData);
 ```
@@ -46,7 +46,7 @@ Lorsque la fenêtre n'est plus nécessaire, elle peut être fermée par programm
 Par exemple, après que l'utilisateur a cliqué sur un bouton, en passant l'ID de la fenêtre actuelle à {{WebExtAPIRef("windows.remove()")}}&nbsp;:
 
 ```js
-document.getElementById("closeme").addEventListener("click", function(){
+document.getElementById("closeme").addEventListener("click", function () {
   let winId = browser.windows.WINDOW_ID_CURRENT;
   let removing = browser.windows.remove(winId);
 });
@@ -59,7 +59,7 @@ Par défaut, les pages que vous ouvrez de cette manière seront stockées dans l
 ```js
 function onVisited(historyItem) {
   if (historyItem.url == browser.extension.getURL(myPage)) {
-    browser.history.deleteUrl({url: historyItem.url});
+    browser.history.deleteUrl({ url: historyItem.url });
   }
 }
 

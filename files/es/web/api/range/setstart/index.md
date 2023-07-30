@@ -32,7 +32,7 @@ range.setStart(startNode, startOffset);
 var range = document.createRange();
 var startNode = document.getElementsByTagName("p").item(2);
 var startOffset = 0;
-range.setStart(startNode,startOffset);
+range.setStart(startNode, startOffset);
 ```
 
 ## Especificaciones

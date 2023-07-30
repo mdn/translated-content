@@ -70,13 +70,15 @@ En nuestro [ejemplo básico de ferch](https://github.com/mdn/fetch-examples/tree
 Observa como ya que lo que estamos solicitando es una imagen, necesitamos ejecutar {{domxref("Body.blob")}} ({{domxref("Response")}} implements body) para darle a la respuesta su tipo MIME correcto.
 
 ```js
-var myImage = document.querySelector('.my-image');
-fetch('flowers.jpg').then(function(response) {
-  return response.blob();
-}).then(function(blob) {
-  var objectURL = URL.createObjectURL(blob);
-  myImage.src = objectURL;
-});
+var myImage = document.querySelector(".my-image");
+fetch("flowers.jpg")
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (blob) {
+    var objectURL = URL.createObjectURL(blob);
+    myImage.src = objectURL;
+  });
 ```
 
 También puedes usar el constructor {{domxref("Response.Response()")}} para crear tus objetos `Response` personalizados:

@@ -1,11 +1,6 @@
 ---
 title: Option()
 slug: Web/API/HTMLOptionElement/Option
-tags:
-  - API
-  - Constructeur
-  - HTML DOM
-  - HTMLOptionElement
 translation_of: Web/API/HTMLOptionElement/Option
 ---
 
@@ -41,11 +36,11 @@ var optionElementReference = new Option(text, value, defaultSelected, selected);
 </select>
 */
 
-var s = document.getElementById('s');
+var s = document.getElementById("s");
 var options = [Quatre, Cinq, Six];
 
-options.forEach(function(element,key) {
-    s[key] = new Option(element,key);
+options.forEach(function (element, key) {
+  s[key] = new Option(element, key);
 });
 ```
 
@@ -60,17 +55,17 @@ options.forEach(function(element,key) {
 </select>
 */
 
-var s = document.getElementById('s');
-var options = [ 'zéro', 'un', 'deux' ];
+var s = document.getElementById("s");
+var options = ["zéro", "un", "deux"];
 
-options.forEach(function(element, key) {
-  if (element == 'zéro') {
+options.forEach(function (element, key) {
+  if (element == "zéro") {
     s[s.options.length] = new Option(element, s.options.length, false, false);
   }
-  if (element == 'un') {
+  if (element == "un") {
     s[s.options.length] = new Option(element, s.options.length, true, false); // Ajouter l'attribut "selected"
   }
-  if (element == 'deux') {
+  if (element == "deux") {
     s[s.options.length] = new Option(element, s.options.length, false, true); // Sélectionnera l'option
   }
 });

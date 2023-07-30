@@ -1,16 +1,7 @@
 ---
-title: '<code> : l''élément de code en ligne'
+title: "<code> : l'élément de code en ligne"
 slug: Web/HTML/Element/code
-tags:
-  - Code
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Inline Code
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/code
-browser-compat: html.elements.code
 ---
 
 {{HTMLSidebar}}
@@ -100,9 +91,8 @@ Un paragraphe de texte qui contient `<code>` :
 
 ```html
 <p>
-  La fonction <code>selectAll()</code> met en évidence tout le texte
-  du champ de saisie afin que l'utilisateur puisse, par exemple, le
-  copier ou le supprimer.
+  La fonction <code>selectAll()</code> met en évidence tout le texte du champ de
+  saisie afin que l'utilisateur puisse, par exemple, le copier ou le supprimer.
 </p>
 ```
 

@@ -11,7 +11,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var isAllowed = browser.extension.isAllowedFileSchemeAccess()
+var isAllowed = browser.extension.isAllowedFileSchemeAccess();
 ```
 
 ### Paramètres

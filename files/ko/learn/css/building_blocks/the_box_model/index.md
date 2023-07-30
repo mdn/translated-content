@@ -160,7 +160,9 @@ CSS 블록 박스 구성하기 위한 우리의 준비물은:
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 ```

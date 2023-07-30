@@ -20,7 +20,10 @@ Semánticas adicionales se adjuntan a los atributos de **title** de los elemento
 El atributo **title** puede contener varias líneas . Cada `U+000A LINE FEED` (`LF`) insertada representa una línea nueva . Se debe tener precaución ya que esto significa que :
 
 ```html
-<p>Líneas nuevas en title deben de tomarse en cuenta , como esta <abbr title="Este es un título multilínea">ejemplo </abbr>.</p>
+<p>
+  Líneas nuevas en title deben de tomarse en cuenta , como esta
+  <abbr title="Este es un título multilínea">ejemplo </abbr>.
+</p>
 ```
 
 define un título de dos líneas .

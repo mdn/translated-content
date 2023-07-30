@@ -160,7 +160,7 @@ display: unset;
 
     - `inline-block`
 
-      - : 该元素生成块级元素盒，如果它是一个单独的内联盒，它将盒周围的内容一起流动（行为类似于替换元素）。
+      - : 该元素生成块级元素盒，如果它是一个单独的内联盒，它将和周围的内容一起流动（行为类似于替换元素）。
 
         它等同于 `inline flow-root`。
 
@@ -361,8 +361,8 @@ div {
 #### JavaScript
 
 ```js
-const articles = document.querySelectorAll('.container');
-const select = document.querySelector('select');
+const articles = document.querySelectorAll(".container");
+const select = document.querySelector("select");
 
 function updateDisplay() {
   articles.forEach((article) => {
@@ -370,7 +370,7 @@ function updateDisplay() {
   });
 }
 
-select.addEventListener('change', updateDisplay);
+select.addEventListener("change", updateDisplay);
 
 updateDisplay();
 ```

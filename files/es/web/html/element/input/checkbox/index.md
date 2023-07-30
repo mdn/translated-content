@@ -21,9 +21,13 @@ Este elemento posee los "[atributos globales](/es/docs/HTML/Global_attributes)".
 ## Ejemplo
 
 ```html
-<label><input type="checkbox" id="cbox1" value="first_checkbox"> Este es mi primer checkbox</label><br>
+<label
+  ><input type="checkbox" id="cbox1" value="first_checkbox" /> Este es mi primer
+  checkbox</label
+><br />
 
-<input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">Este es mi segundo checkbox</label>
+<input type="checkbox" id="cbox2" value="second_checkbox" />
+<label for="cbox2">Este es mi segundo checkbox</label>
 ```
 
 Esto crea dos casillas de verificación, que se ven así:

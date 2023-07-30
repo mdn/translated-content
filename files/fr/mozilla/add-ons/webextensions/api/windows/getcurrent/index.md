@@ -16,8 +16,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var gettingCurrent = browser.windows.getCurrent(
-  getInfo               // optional object
-)
+  getInfo, // optional object
+);
 ```
 
 ### Paramètres
@@ -59,7 +59,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  var getting = browser.windows.getCurrent({populate: true});
+  var getting = browser.windows.getCurrent({ populate: true });
   getting.then(logTabs, onError);
 });
 ```

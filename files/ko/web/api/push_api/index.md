@@ -2,6 +2,7 @@
 title: Push API
 slug: Web/API/Push_API
 ---
+
 {{DefaultAPISidebar("Push API")}}
 
 **Push API**는 웹 애플리케이션이 현재 로딩이 되어 있지 않더라도 서버로부터 메시지를 받을 수 있도록 하는 기능이다. 이는 개발자들이 비동기적으로 사용자에게 새로운 내용을 시기적절하게 전달할 수 있도록 만들어 준다.
@@ -64,7 +65,7 @@ Mozilla's [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook
 
 ## See also
 
-- [Sending VAPID identified WebPush Notifications via Mozilla’s Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/)
+- [Sending VAPID identified WebPush Notifications via Mozilla's Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/)
 - [Web Push Notifications: Timely, Relevant, and Precise](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/), Joseph Medley
 - [Service Worker API](/ko/docs/Web/API/Service_Worker_API)
 

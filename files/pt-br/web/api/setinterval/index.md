@@ -8,7 +8,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 
 O método **`setInterval()`** oferecido das interfaces {{domxref("Window")}} e {{domxref("Worker")}}, repetem chamadas de funções ou executam trechos de código, com um tempo de espera fixo entre cada chamada. Isso retorna um ID único para o intervalo, podendo remove-lo mais tarde apenas o chamando {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}. Este metodo é definido pelo mixin {{domxref("WindowOrWorkerGlobalScope")}}.
 
-## Sintaxe.
+## Sintaxe
 
 ```
 var intervalID = scope.setInterval(func, delay[, param1, param2, ...]);

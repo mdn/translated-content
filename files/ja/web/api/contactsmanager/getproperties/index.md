@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
-**`getProperties()`** は {{domxref("ContactsManager")}} インターフェイスのメソッドで、プロミス ({{jsxref('Promise')}}) を返します。これは、どの連絡先プロパティが利用できるかを示す[文字列](ja/docs/Web/JavaScript/Data_structures#文字列型)の配列 ({{jsxref('Array')}}) で解決します。
+**`getProperties()`** は {{domxref("ContactsManager")}} インターフェイスのメソッドで、プロミス ({{jsxref('Promise')}}) を返します。これは、どの連絡先プロパティが利用できるかを示す[文字列](/ja/docs/Web/JavaScript/Data_structures#文字列型)の配列 ({{jsxref('Array')}}) で解決します。
 
 ## 構文
 
@@ -21,7 +21,7 @@ getProperties()
 
 ### 返値
 
-プロミス ({{jsxref('Promise')}}) を返します。これは、どの連絡先プロパティが利用できるかを示す[文字列](ja/docs/Web/JavaScript/Data_structures#文字列型)の配列 ({{jsxref('Array')}}) で解決します。
+プロミス ({{jsxref('Promise')}}) を返します。これは、どの連絡先プロパティが利用できるかを示す[文字列](/ja/docs/Web/JavaScript/Data_structures#文字列型)の配列 ({{jsxref('Array')}}) で解決します。
 
 プロパティには、以下のものを含めることができます。
 

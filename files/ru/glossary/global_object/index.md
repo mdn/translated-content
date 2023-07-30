@@ -31,14 +31,14 @@ foo === window.foo; // Возвращает: true
 Глобальная Переменная `foo` была сохранена в объекте `window`, подобно следующему примеру:
 
 ```js
-foo: "foobar"
+foo: "foobar";
 ```
 
 ### Получение доступа к Глобальным Функциям
 
 ```js
 function greeting() {
-   console.log("Hi!");
+  console.log("Hi!");
 }
 
 window.greeting(); // Тоже самое что и обычный вызов: greeting();
@@ -52,7 +52,7 @@ window.greeting(); // Тоже самое что и обычный вызов: g
 
 ```js
 greeting: function greeting() {
-   console.log("Hi!");
+  console.log("Hi!");
 }
 ```
 

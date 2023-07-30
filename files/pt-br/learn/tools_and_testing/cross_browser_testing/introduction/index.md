@@ -12,9 +12,9 @@ This article starts the module off by providing an overview of the topic of (cro
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.
+        Familiarity with the core <a href="/pt-BR/docs/Learn/HTML">HTML</a>,
+        <a href="/pt-BR/docs/Learn/CSS">CSS</a>, and
+        <a href="/pt-BR/docs/Learn/JavaScript">JavaScript</a> languages.
       </td>
     </tr>
     <tr>

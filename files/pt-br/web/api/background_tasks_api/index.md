@@ -81,7 +81,7 @@ In order to be oriented about what we're trying to accomplish, let's have a look
 
 ```html
 <p>
-  Demonstration of using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API">
+  Demonstration of using <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Background_Tasks_API">
   cooperatively scheduled background tasks</a> using the <code>requestIdleCallback()</code>
   method.
 </p>

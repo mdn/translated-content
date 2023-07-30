@@ -13,7 +13,7 @@ S'il y a des mises à jour en attente pour l'extension, qu'elles ont été diff�
 ## Syntaxe
 
 ```js
-browser.runtime.reload()
+browser.runtime.reload();
 ```
 
 ### Paramètres

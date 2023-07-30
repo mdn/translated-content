@@ -16,8 +16,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingSubTree = browser.bookmarks.getSubTree(
-  id                     // string
-)
+  id, // string
+);
 ```
 
 ### Paramètres

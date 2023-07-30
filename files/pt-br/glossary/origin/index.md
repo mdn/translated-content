@@ -23,12 +23,12 @@ Algumas operações são restritas para conteúdos de mesma origem, e essa restr
 
 ## Especificações
 
-| Especificação                                                    | Status                           | Comentário |
-| ---------------------------------------------------------------- | -------------------------------- | ---------- |
+| Especificação                                    | Status                   | Comentário |
+| ------------------------------------------------ | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', '#origin', 'origin')}} | {{Spec2('HTML WHATWG')}} |            |
 
 ## Aprenda mais
 
 Veja [Same-origin policy](/pt-BR/docs/Web/Security/Same-origin_policy) para mais informações.
 
-{{QuickLinksWithSubpages("/en-US/docs/Glossary")}}
+{{QuickLinksWithSubpages("/pt-BR/docs/Glossary")}}

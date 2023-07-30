@@ -1,15 +1,7 @@
 ---
 title: "ARIA : le rôle button"
 slug: Web/Accessibility/ARIA/Roles/button_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA button
-  - Accessibility
-  - Button Role
-  - Reference
 translation_of: Web/Accessibility/ARIA/Roles/button_role
-original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_button
 ---
 
 Le rôle **[button](https://www.w3.org/WAI/PF/aria/roles#button)** devrait être utilisé pour les éléments cliquables qui déclenchent une réponse lorsqu'activés par l'utilisateur. Ajouter `role="button"` permettra à un élément d'apparaître comme un bouton de contrôle pour un lecteur d'écran. Ce rôle peut être utilisé avec l'attribut `aria-pressed` afin de créer des boutons interrupteurs.
