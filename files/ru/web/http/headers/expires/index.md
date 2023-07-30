@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTTP/Headers/Expires
 original_slug: Web/HTTP/Заголовки/Expires
 ---
+
 {{HTTPSidebar}}
 
 Заголовок **`Expires`** содержит дату/время, по истечении которой ответ сервера считается устаревшим.

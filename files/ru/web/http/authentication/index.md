@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTTP/Authentication
 original_slug: Web/HTTP/Аутентификация
 ---
+
 {{HTTPSidebar}}
 
 HTTP предоставляет набор инструментов для контроля доступа к ресурсам и аутентификации. Самой

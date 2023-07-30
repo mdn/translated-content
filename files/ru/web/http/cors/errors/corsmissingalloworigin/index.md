@@ -1,5 +1,5 @@
 ---
-title: 'Причина: отсутствует заголовок CORS «Access-Control-Allow-Origin»'
+title: "Причина: отсутствует заголовок CORS «Access-Control-Allow-Origin»"
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ---
