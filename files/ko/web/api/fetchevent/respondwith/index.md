@@ -23,7 +23,7 @@ This means, for example, if a service worker intercepts a stylesheet or worker s
 For most types of network request this change has no impact because you can't observe the final URL. There are a few, though, where it does matter:
 
 - If a {{domxref("fetch()")}} is intercepted, then you can observe the final URL on the result's {{domxref("Response.url")}}.
-- If a [worker](/ko/docs/Web/API/Web_Workers_API) script is intercepted, then the final URL is used to set [`self.location`](/en-US/docs/Web/API/WorkerGlobalScope/location) and used as the base URL for relative URLs in the worker script.
+- If a [worker](/ko/docs/Web/API/Web_Workers_API) script is intercepted, then the final URL is used to set [`self.location`](/ko/docs/Web/API/WorkerGlobalScope/location) and used as the base URL for relative URLs in the worker script.
 - If a stylesheet is intercepted, then the final URL is used as the base URL for resolving relative {{cssxref("@import")}} loads.
 
 Note that navigation requests for {{domxref("Window","Windows")}} and {{domxref("HTMLIFrameElement","iframes")}} do NOT use the final URL. The way the HTML specification handles redirects for navigations ends up using the request URL for the resulting {{domxref("Window.location")}}. This means sites can still provide an "alternate" view of a web page when offline without changing the user-visible URL.

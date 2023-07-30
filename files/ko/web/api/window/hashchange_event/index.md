@@ -108,7 +108,7 @@ if(!window.HashChangeEvent)(function(){
 
 ## See also
 
-- [`hashchange`](/en-US/docs/Web/API/Window/hashchange_event) event
+- [`hashchange`](/ko/docs/Web/API/Window/hashchange_event) event
 - [Manipulating the browser history](/ko/docs/DOM/Manipulating_the_browser_history)
 - [`history.pushState()` and `history.replaceState()`](/ko/docs/DOM/window.history) methods
 - {{domxref("WindowEventHandlers.onpopstate")}}

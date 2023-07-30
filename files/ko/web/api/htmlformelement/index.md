@@ -60,15 +60,15 @@ _This interface also inherits methods from its parent, {{domxref("HTMLElement")}
 
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
-- [`formdata`](/en-US/docs/Web/API/HTMLFormElement/formdata_event)
+- [`formdata`](/ko/docs/Web/API/HTMLFormElement/formdata_event)
   - : The `formdata` event fires after the entry list representing the form's data is constructed.
-    Also available via the [`onformdata`](/en-US/docs/Web/API/GlobalEventHandlers/onformdata) property.
-- [`reset`](/en-US/docs/Web/API/HTMLFormElement/reset_event)
+    Also available via the [`onformdata`](/ko/docs/Web/API/GlobalEventHandlers/onformdata) property.
+- [`reset`](/ko/docs/Web/API/HTMLFormElement/reset_event)
   - : The `reset` event fires when a form is reset.
-    Also available via the [`onreset`](/en-US/docs/Web/API/GlobalEventHandlers/onreset) property.
-- [`submit`](/en-US/docs/Web/API/HTMLFormElement/submit_event)
+    Also available via the [`onreset`](/ko/docs/Web/API/GlobalEventHandlers/onreset) property.
+- [`submit`](/ko/docs/Web/API/HTMLFormElement/submit_event)
   - : The `submit` event fires when a form is submitted.
-    Also available via the [`onsubmit`](/en-US/docs/Web/API/GlobalEventHandlers/onsubmit) property.
+    Also available via the [`onsubmit`](/ko/docs/Web/API/GlobalEventHandlers/onsubmit) property.
 
 ## Usage notes
 

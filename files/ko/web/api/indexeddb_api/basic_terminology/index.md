@@ -46,7 +46,7 @@ IndexedDB는 "키"로 인덱싱된 객체를 저장하고 검색할 수 있습�
 
 IndexedDB is designed to cover most cases that need client-side storage. However, it is not designed for a few cases like the following:
 
-- Internationalized sorting. Not all languages sort strings in the same way, so internationalized sorting is not supported. While the database can't store data in a specific internationalized order, you can sort the data that you've read out of the database yourself. Note, however, that [locale-aware sorting](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting) has been allowed with an experimental flag enabled (currently for Firefox only) since Firefox 43.
+- Internationalized sorting. Not all languages sort strings in the same way, so internationalized sorting is not supported. While the database can't store data in a specific internationalized order, you can sort the data that you've read out of the database yourself. Note, however, that [locale-aware sorting](/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting) has been allowed with an experimental flag enabled (currently for Firefox only) since Firefox 43.
 - Synchronizing. The API is not designed to take care of synchronizing with a server-side database. You have to write code that synchronizes a client-side indexedDB database with a server-side database.
 - Full text searching. The API does not have an equivalent of the `LIKE` operator in SQL.
 
@@ -91,7 +91,7 @@ An index is a specialized object store for looking up records in another object 
 
 Alternatively, you can also look up records in an object store using the [key](#key).
 
-To learn more on using indexes, see [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#using_an_index). For the reference documentation on index, see [IDBKeyRange](/en-US/docs/Web/API/IDBKeyRange).
+To learn more on using indexes, see [Using IndexedDB](/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB#using_an_index). For the reference documentation on index, see [IDBKeyRange](/ko/docs/Web/API/IDBKeyRange).
 
 #### object store
 
@@ -113,7 +113,7 @@ A database connection can have several active transactions associated with it at
 
 Transactions are expected to be short-lived, so the browser can terminate a transaction that takes too long, in order to free up storage resources that the long-running transaction has locked. You can abort the transaction, which rolls back the changes made to the database in the transaction. And you don't even have to wait for the transaction to start or be active to abort it.
 
-The three modes of transactions are: `readwrite`, `readonly`, and `versionchange`. The only way to create and delete object stores and indexes is by using a [`versionchange`](/en-US/docs/Web/API/IDBDatabase/versionchange_event) transaction. To learn more about transaction types, see the reference article for [IndexedDB](/en-US/docs/Web/API/IndexedDB_API).
+The three modes of transactions are: `readwrite`, `readonly`, and `versionchange`. The only way to create and delete object stores and indexes is by using a [`versionchange`](/ko/docs/Web/API/IDBDatabase/versionchange_event) transaction. To learn more about transaction types, see the reference article for [IndexedDB](/ko/docs/Web/API/IndexedDB_API).
 
 Because everything happens within a transaction, it is a very important concept in IndexedDB. To learn more about transactions, especially on how they relate to versioning, see {{domxref("IDBTransaction")}}, which also has reference documentation.
 
@@ -131,7 +131,7 @@ A key that is stored as part of the stored value. It is found using a _key path_
 
 A data value by which stored values are organized and retrieved in the object store. The object store can derive the key from one of three sources: a _[key generator](#key_generator)_, a _[key path](#key_path)_, or an explicitly specified value. The key must be of a data type that has a number that is greater than the one before it. Each record in an object store must have a key that is unique within the same store, so you cannot have multiple records with the same key in a given object store.
 
-A key can be one of the following types: [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), [date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date), float, a binary blob, and [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array). For arrays, the key can range from an empty value to infinity. And you can include an array within an array.
+A key can be one of the following types: [string](/ko/docs/Web/JavaScript/Reference/Global_Objects/String), [date](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date), float, a binary blob, and [array](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array). For arrays, the key can range from an empty value to infinity. And you can include an array within an array.
 
 Alternatively, you can also look up records in an object store using the _[index](#index)._
 
@@ -149,11 +149,11 @@ A key that is stored separately from the value being stored.
 
 #### value
 
-Each record has a value, which could include anything that can be expressed in JavaScript, including [boolean](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean), [number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), [date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date), [object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object), [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), [regexp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp), [undefined](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined), and null.
+Each record has a value, which could include anything that can be expressed in JavaScript, including [boolean](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean), [number](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number), [string](/ko/docs/Web/JavaScript/Reference/Global_Objects/String), [date](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date), [object](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object), [array](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array), [regexp](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp), [undefined](/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined), and null.
 
 When an object or array is stored, the properties and values in that object or array can also be anything that is a valid value.
 
-[Blobs](/en-US/docs/Web/API/Blob) and files can be stored, cf. [specification](https://w3c.github.io/IndexedDB/).
+[Blobs](/ko/docs/Web/API/Blob) and files can be stored, cf. [specification](https://w3c.github.io/IndexedDB/).
 
 ### Range and scope
 
@@ -173,11 +173,11 @@ The set of object stores and indexes to which a transaction applies. The scopes 
 
 ## Next steps
 
-With an understanding of IndexedDB's key characteristics and core terminology under our belts, we can get to more concrete stuff. For a tutorial on how to use the API, see [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB).
+With an understanding of IndexedDB's key characteristics and core terminology under our belts, we can get to more concrete stuff. For a tutorial on how to use the API, see [Using IndexedDB](/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB).
 
 ## See also
 
 - [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
-- [IndexedDB API Reference](/en-US/docs/Web/API/IndexedDB_API)
-- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [IndexedDB API Reference](/ko/docs/Web/API/IndexedDB_API)
+- [Using IndexedDB](/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - [IndexedDB — The Store in Your Browser](<https://docs.microsoft.com/previous-versions/msdn10/gg679063(v=msdn.10)>)

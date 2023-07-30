@@ -9,9 +9,9 @@ IndexedDB는 사용자의 브라우저에 데이터를 영구적으로 저장할
 
 ## 이 문서에 대하여
 
-여러분은 이 튜토리얼에서 IndexedDB의 비동기 방식(asynchronous) API에 대해 훑어볼 수 있습니다. 만약 IndexedDB가 생소하다면, [IndexedDB key characteristics and basic terminology](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology) 를 먼저 읽어보는 것이 좋습니다.
+여러분은 이 튜토리얼에서 IndexedDB의 비동기 방식(asynchronous) API에 대해 훑어볼 수 있습니다. 만약 IndexedDB가 생소하다면, [IndexedDB key characteristics and basic terminology](/ko/docs/Web/API/IndexedDB_API/Basic_Terminology) 를 먼저 읽어보는 것이 좋습니다.
 
-IndexedDB API에 대한 참조(reference) 문서를 원한다면, [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) 항목과 하위 페이지를 보십시오. 이 문서에서는 IndexedDB에서 사용되는 객체의 종류와, 동기식(synchrounous), 비동기식(asynchronous) API에 대해서 기술하고 있습니다.
+IndexedDB API에 대한 참조(reference) 문서를 원한다면, [IndexedDB API](/ko/docs/Web/API/IndexedDB_API) 항목과 하위 페이지를 보십시오. 이 문서에서는 IndexedDB에서 사용되는 객체의 종류와, 동기식(synchrounous), 비동기식(asynchronous) API에 대해서 기술하고 있습니다.
 
 ## 기본 패턴
 
@@ -60,7 +60,7 @@ var request = window.indexedDB.open("MyTestDatabase");
 
 보셨나요? 데이터베이스 접속은 다른 operation 들과 비슷합니다 — 당신은 "요청(request)" 하면 됩니다.
 
-open 요청은 데이터베이스를 즉시 열거나 즉시 트랜잭션을 시작하지 않습니다. `open()` 함수를 호출하면 이벤트로 처리한 결과(성공 상태)나 오류 값이 있는 [`IDBOpenDBRequest`](/ko/docs/IndexedDB/IDBOpenDBRequest) 객체를 반환합니다. IndexedDB의 다른 비동기 함수 대부분은 결과 또는 오류가 있는 [`IDBRequest`](/ko/docs/IndexedDB/IDBRequest) 객체를 반환합니다. `open()` 함수의 결과는 [`IDBDatabase`](/en-US/docs/IndexedDB/IDBDatabase) 의 인스턴스입니다.
+open 요청은 데이터베이스를 즉시 열거나 즉시 트랜잭션을 시작하지 않습니다. `open()` 함수를 호출하면 이벤트로 처리한 결과(성공 상태)나 오류 값이 있는 [`IDBOpenDBRequest`](/ko/docs/IndexedDB/IDBOpenDBRequest) 객체를 반환합니다. IndexedDB의 다른 비동기 함수 대부분은 결과 또는 오류가 있는 [`IDBRequest`](/ko/docs/IndexedDB/IDBRequest) 객체를 반환합니다. `open()` 함수의 결과는 [`IDBDatabase`](/ko/docs/IndexedDB/IDBDatabase) 의 인스턴스입니다.
 
 open 메소드의 두번째 매개 변수는 데이터베이스의 버전입니다. 데이터베이스의 버전은 데이터베이스 스키마를 결정합니다. 데이터베이스 스키마는 데이터베이스 안의 객체 저장소와 그것들의 구조를 결정합니다. 데이터베이스가 아직 존재하지 않으면, open operation에 의해 생성되고, 그 다음 `onupgradeneeded` 이벤트가 트리거되고 이 이벤트 안에서 데이터베이스 스키마를 작성합니다. 데이터베이스가 존재하지만 업그레이드 된 버전 번호를 지정하는 경우 `onupgradeneeded` 이벤트가 트리거되고 해당 핸들러에 업데이트된 스키마를 제공할 수 있습니다. 자세한 내용은 나중에 아래의 [데이터베이스의 버전 업데이트](#데이터베이스의_버전_생성_또는_업데이트)와 {{ domxref("IDBFactory.open") }} 페이지를 참조하십시오.
 
@@ -136,7 +136,7 @@ request.onupgradeneeded = function(event) {
 
 ### 데이터베이스 구성
 
-이제 데이터베이스를 구축합니다. IndexedDB는 테이블이 아닌 객체 저장소를 사용하며 하나의 데이터베이스는 여러 개의 객체 저장소를 포함할 수 있습니다. 값을 객체 저장소에 저장할 때마다 값은 키와 연관됩니다. 객체 저장소가 [키 경로](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) 또는 [키 생성기](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator) 옵션의 사용 여부에 따라 키를 제공할 수 있는 여러 가지 방법이 있습니다.
+이제 데이터베이스를 구축합니다. IndexedDB는 테이블이 아닌 객체 저장소를 사용하며 하나의 데이터베이스는 여러 개의 객체 저장소를 포함할 수 있습니다. 값을 객체 저장소에 저장할 때마다 값은 키와 연관됩니다. 객체 저장소가 [키 경로](/ko/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) 또는 [키 생성기](/ko/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator) 옵션의 사용 여부에 따라 키를 제공할 수 있는 여러 가지 방법이 있습니다.
 
 다음 표는 키가 제공되는 다양한 방법을 보여줍니다:
 
