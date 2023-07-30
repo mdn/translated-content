@@ -35,9 +35,7 @@ globalThis.genRandomNumbers = () => {
 
 ```html
 <p id="myRandText">随机数为：</p>
-<button type="button" onClick="genRandomNumbers()">
-  生成 10 个随机数
-</button>
+<button type="button" onClick="genRandomNumbers()">生成 10 个随机数</button>
 ```
 
 ### 结果

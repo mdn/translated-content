@@ -33,13 +33,13 @@ After using {{domxref("Permissions.query", "navigator.permissions.query()")}} to
 // First, ask the Permissions API if we have some kind of access to
 // the "clipboard-read" feature.
 
-navigator.permissions.query({name: "clipboard-read"}).then(result => {
+navigator.permissions.query({ name: "clipboard-read" }).then((result) => {
   // If permission to read the clipboard is granted or if the user will
   // be prompted to allow it, we proceed.
 
   if (result.state == "granted" || result.state == "prompt") {
-    navigator.clipboard.read().then(data => {
-      for (let i=0; i<data.items.length; i++) {
+    navigator.clipboard.read().then((data) => {
+      for (let i = 0; i < data.items.length; i++) {
         if (data.items[i].type != "text/plain") {
           alert("Clipboard contains non-text data. Unable to access it.");
         } else {

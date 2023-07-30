@@ -41,7 +41,7 @@ Si on dispose d'un environnement (un navigateur par exemple) qui supporte la com
 
 ```js
 var locales = ["ban", "id-u-co-pinyin", "de-ID"];
-var options = {localeMatcher: "lookup"};
+var options = { localeMatcher: "lookup" };
 console.log(Intl.Collator.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```

@@ -1,5 +1,5 @@
 ---
-title: '<article> : l''élément de contenu d''un article'
+title: "<article> : l'élément de contenu d'un article"
 slug: Web/HTML/Element/article
 translation_of: Web/HTML/Element/article
 ---

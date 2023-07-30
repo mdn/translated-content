@@ -37,7 +37,7 @@ La méthode `slice` copie les octets contenus jusqu'au (au sens exclusif) param�
 
 ```js
 var buf1 = new ArrayBuffer(8);
-var buf2 = buf1.slice(0)
+var buf2 = buf1.slice(0);
 ```
 
 ## Spécifications

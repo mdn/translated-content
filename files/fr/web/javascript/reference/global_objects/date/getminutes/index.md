@@ -13,7 +13,7 @@ La méthode **`getMinutes()`** renvoie les minutes pour la date renseignée d'ap
 ## Syntaxe
 
 ```js
-dateObj.getMinutes()
+dateObj.getMinutes();
 ```
 
 ### Valeur de retour

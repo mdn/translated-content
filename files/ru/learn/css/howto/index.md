@@ -4,6 +4,7 @@ slug: Learn/CSS/Howto
 translation_of: Learn/CSS/Howto
 original_slug: Learn/CSS/Как
 ---
+
 Следующие ссылки указывают на решения общих повседневных проблем, вам придётся решать их с помощью CSS.
 
 ## Примеры и использование

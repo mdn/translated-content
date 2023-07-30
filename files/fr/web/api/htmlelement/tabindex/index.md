@@ -24,7 +24,7 @@ Un entier.
 ## Exemples
 
 ```js
-const b1 = document.getElementById('bouton1');
+const b1 = document.getElementById("bouton1");
 
 b1.tabIndex = 1;
 ```

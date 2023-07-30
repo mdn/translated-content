@@ -1,5 +1,5 @@
 ---
-title: '::cue-region'
+title: "::cue-region"
 slug: Web/CSS/::cue-region
 translation_of: Web/CSS/::cue-region
 ---

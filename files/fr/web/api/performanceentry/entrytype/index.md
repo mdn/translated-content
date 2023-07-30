@@ -38,7 +38,6 @@ L'exemple suivant montre l'utilisation de la propriété `entryType`.
 
 ```js
 function run_PerformanceEntry() {
-
   // Vérifie le support des fonctionnalités avant de continuer
   if (performance.mark === undefined) {
     console.log("performance.mark n'est pas pris en charge");
@@ -50,7 +49,7 @@ function run_PerformanceEntry() {
 
   // Vérifie le type d'entrée de toutes les entrées "begin".
   let entriesNamedBegin = performance.getEntriesByName("begin");
-  for (let i=0; i < entriesNamedBegin.length; i++) {
+  for (let i = 0; i < entriesNamedBegin.length; i++) {
     let typeOfEntry = entriesNamedBegin[i].entryType;
     console.log("L'entrée est de type : " + typeOfEntry);
   }

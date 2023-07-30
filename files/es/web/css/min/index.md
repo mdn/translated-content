@@ -46,7 +46,8 @@ Otro caso de uso para las funciones CSS es establecer la maxima longitud en cont
 Veamos algo de CSS:
 
 ```css
-input, label {
+input,
+label {
   padding: 2px;
   box-sizing: border-box;
   display: inline-block;
@@ -66,7 +67,7 @@ Aquí, el formulario en si mismo, junto con el margen, borde y padding, será de
 ```html
 <form>
   <label>Escribe algo:</label>
-  <input type="text">
+  <input type="text" />
 </form>
 ```
 

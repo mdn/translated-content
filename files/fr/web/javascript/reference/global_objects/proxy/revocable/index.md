@@ -41,20 +41,23 @@ Si la fonction `revoke()` est appelée, le proxy devient inutilisable et toutes 
 ### Utiliser `Proxy.revocable()`
 
 ```js
-let revocable = Proxy.revocable({}, {
-  get: function(cible, nom) {
-    return "[[" + nom + "]]";
-  }
-});
+let revocable = Proxy.revocable(
+  {},
+  {
+    get: function (cible, nom) {
+      return "[[" + nom + "]]";
+    },
+  },
+);
 let proxy = revocable.proxy;
 console.log(proxy.toto); // "[[toto]]"
 
 revocable.revoke();
 
 console.log(proxy.toto); // TypeError est levée
-proxy.toto = 1;          // TypeError à nouveau
-delete proxy.toto;       // TypeError toujours
-typeof proxy;            // "object", typeof ne déclenche aucune trappe
+proxy.toto = 1; // TypeError à nouveau
+delete proxy.toto; // TypeError toujours
+typeof proxy; // "object", typeof ne déclenche aucune trappe
 ```
 
 ## Spécifications

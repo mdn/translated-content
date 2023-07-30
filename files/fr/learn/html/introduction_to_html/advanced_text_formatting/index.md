@@ -15,7 +15,7 @@ Il y a de nombreux autres éléments HTML pour mettre en forme un texte qui n'on
       <td>
         Être familiarisé avec les bases du HTML, traitées à la page
         <a
-          href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started"
+          href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Getting_started"
           >Commencer avec le HTML</a
         >
         et du formatage de texte HTML, décrit dans les
@@ -240,7 +240,7 @@ textarea.onkeyup = function () {
 };
 ```
 
-{{ EmbedLiveSample('Apprentissage_interactif_balisez_une_série_de_définitions', 700, 350, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Apprentissage_interactif_balisez_une_série_de_définitions', 700, 350) }}
 
 ## Citations
 
@@ -459,7 +459,7 @@ textarea.onkeyup = function () {
 };
 ```
 
-{{ EmbedLiveSample('Apprentissage_actif_Qui_a_dit_quoi_', 700, 450, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Apprentissage_actif_Qui_a_dit_quoi_', 700, 450) }}
 
 ## Abréviations
 
@@ -618,7 +618,7 @@ textarea.onkeyup = function () {
 };
 ```
 
-{{ EmbedLiveSample('Apprentissage_actif_marquer_une_abréviation', 700, 300, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Apprentissage_actif_marquer_une_abréviation', 700, 300) }}
 
 ## Balisage des détails de contact
 

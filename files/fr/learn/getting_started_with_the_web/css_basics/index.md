@@ -169,7 +169,7 @@ html {
 }
 ```
 
-Cette règle permet de définir la couleur utilisée en arrière-plan pour toute la page. Vous pouvez ici utiliser la valeur que vous aviez choisie [lors de la conception de votre site](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site#Couleur_du_th%C3%A8me).
+Cette règle permet de définir la couleur utilisée en arrière-plan pour toute la page. Vous pouvez ici utiliser la valeur que vous aviez choisie [lors de la conception de votre site](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site#Couleur_du_thème).
 
 ### Mettre en forme le corps de page
 

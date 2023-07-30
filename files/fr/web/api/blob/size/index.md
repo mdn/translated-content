@@ -15,7 +15,7 @@ Renvoie la taille du fichier en octets.
 ## Syntaxe
 
 ```js
-var size = instanceOfFile.fileSize
+var size = instanceOfFile.fileSize;
 ```
 
 ## Valeur

@@ -220,7 +220,7 @@ Même si tout le code fonctionne ensemble, chaque déclaration `if...else` fonct
 
 ### Opérateurs logiques AND, OR et NOT
 
-Si vous voulez tester plusieurs conditions sans imbriquer des instructions `if...else` , les [opérateurs logiques](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_logiques) pourront vous rendre service. Quand ils sont utilisés dans des conditions, les deux premiers sont représentés comme ci dessous :
+Si vous voulez tester plusieurs conditions sans imbriquer des instructions `if...else` , les [opérateurs logiques](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_logiques) pourront vous rendre service. Quand ils sont utilisés dans des conditions, les deux premiers sont représentés comme ci dessous :
 
 - `&&` — AND&nbsp;; vous permet d'enchaîner deux ou plusieurs expressions de sorte que toutes doivent être individuellement égales à `true` pour que l'enemble de l'expression retourne `true`.
 - `||` — OR&nbsp;; vous permet d'enchaîner deux ou plusieurs expressions ensemble de sorte qu'il suffit qu'une au plus soit évaluée comme étant `true` pour que l'ensemble de l'expression renvoie `true`.
@@ -373,7 +373,7 @@ function setWeather() {
 
 ## Opérateur ternaire
 
-Voici une dernière syntaxe que nous souhaitons vous présenter avant de nous amuser avec quelques exemples. L'[opérateur ternaire ou conditionnel](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel) est un petit morceau de code qui teste une condition et renvoie une valeur ou expression si elle est `true` et une autre si elle est `false` — elle est utile dans certains cas, et occupe moins de place qu'un bloc `if...else` si votre choix est limité à deux possibilités à choisir via une condition `true`/`false`. Voici le pseudo‑code correspondant&nbsp;:
+Voici une dernière syntaxe que nous souhaitons vous présenter avant de nous amuser avec quelques exemples. L'[opérateur ternaire ou conditionnel](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_conditionnel) est un petit morceau de code qui teste une condition et renvoie une valeur ou expression si elle est `true` et une autre si elle est `false` — elle est utile dans certains cas, et occupe moins de place qu'un bloc `if...else` si votre choix est limité à deux possibilités à choisir via une condition `true`/`false`. Voici le pseudo‑code correspondant&nbsp;:
 
 ```
 ( condition ) ? exécuter ce code : exécuter celui‑ci à la place
@@ -420,7 +420,7 @@ select.onchange = function () {
 };
 ```
 
-{{ EmbedLiveSample('Exemple_opérateur_ternaire', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Exemple_opérateur_ternaire', '100%', 300) }}
 
 Nous mettons un élément {{htmlelement('select')}} pour choisir un thème (noir ou blanc), plus un simple élément {{htmlelement('h1')}} pour afficher un titre de site web. Nous avons aussi une fonction `update()`, qui prend deux couleurs en paramètre (entrées). La couleur de fond du site est déterminée par la couleur indiquée dans le premier paramètre fourni, et la couleur du texte par le deuxième.
 
@@ -553,7 +553,7 @@ textarea.addEventListener("input", updateCode);
 window.addEventListener("load", updateCode);
 ```
 
-{{ EmbedLiveSample('Apprentissage_actif_un_calendrier_simple', '100%', 1110, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Apprentissage_actif_un_calendrier_simple', '100%', 1110) }}
 
 ## Activité&nbsp;: plus de choix de couleurs
 
@@ -641,6 +641,6 @@ C'est tout ce qu'il est nécessaire de connaître à propos des structures condi
 - [Opérateurs de comparaison](/fr/docs/Learn/JavaScript/First_steps/Math#Opérateurs_de_comparaison)
 - [Les instructions conditionnelles](/fr/docs/Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs#Les_instructions_conditionnelles)
 - [Référence if...else](/fr/docs/Web/JavaScript/Reference/Instructions/if...else)
-- [Référence opérateur conditionnel (ternaire)](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel)
+- [Référence opérateur conditionnel (ternaire)](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_conditionnel)
 
 {{NextMenu("Apprendre/JavaScript/Building_blocks/Looping_code", "Apprendre/JavaScript/Building_blocks")}}

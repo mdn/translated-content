@@ -23,7 +23,7 @@ L'interface `BatteryManager` fournit des moyens pour obtenir des informations su
 
 ## Méthodes
 
-*`BatteryManager` hérite des méthodes de son interface parente&nbsp;:* [`EventTarget`](/fr/docs/Web/API/EventTarget).
+_`BatteryManager` hérite des méthodes de son interface parente&nbsp;:_ [`EventTarget`](/fr/docs/Web/API/EventTarget).
 
 ## Évènements
 

@@ -11,15 +11,15 @@ Les propriétés non-standard **$1, $2, $3, $4, $5, $6, $7, $8, $9** sont des pr
 ## Syntaxe
 
 ```js
-RegExp.$1
-RegExp.$2
-RegExp.$3
-RegExp.$4
-RegExp.$5
-RegExp.$6
-RegExp.$7
-RegExp.$8
-RegExp.$9
+RegExp.$1;
+RegExp.$2;
+RegExp.$3;
+RegExp.$4;
+RegExp.$5;
+RegExp.$6;
+RegExp.$7;
+RegExp.$8;
+RegExp.$9;
 ```
 
 ## Description
@@ -38,8 +38,8 @@ Dans le script qui suit, on utilise {{jsxref("String.prototype.replace()", "repl
 
 ```js
 var re = /(\w+)\s(\w+)/;
-var str = 'Jean Biche';
-str.replace(re, '$2, $1'); // "Biche, Jean"
+var str = "Jean Biche";
+str.replace(re, "$2, $1"); // "Biche, Jean"
 RegExp.$1; // "Jean"
 RegExp.$2; // "Biche"
 ```

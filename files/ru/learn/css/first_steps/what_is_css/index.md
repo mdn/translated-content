@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/CSS/First_steps/What_is_CSS
 original_slug: Learn/CSS/First_steps/Что_такое_CSS
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First steps")}}
 
 **{{Glossary("CSS")}}** (Каскадные таблицы стилей) позволяет создавать великолепно выглядящие веб-страницы, но как же это работает? Эта статья объясняет, что такое CSS, с помощью простого примера синтаксиса, а также охватывает некоторые ключевые термины о языке.
@@ -49,8 +50,8 @@ CSS — это язык на основе правил: вы задаёте пр
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 ```
 
@@ -64,12 +65,12 @@ h1 {
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 
 p {
-    color: black;
+  color: black;
 }
 ```
 

@@ -38,7 +38,7 @@ console.log(caseFirstStr.caseFirst); // Prints "upper"
 Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale) permet d'utiliser un objet de configuration comme deuxième argument. Les propriétés de cet objet seront autant d'extensions Unicode à utiliser pour la locale. Ici, on peut utiliser un objet avec la propriété `caseFirst` pour indiquer l'impact de la casse sur la collation de cette locale :
 
 ```js
-let caseFirstObj= new Intl.Locale("en-Latn-US", {caseFirst: "lower"});
+let caseFirstObj = new Intl.Locale("en-Latn-US", { caseFirst: "lower" });
 console.log(us12hour.caseFirst); // affichera "lower" dans la console.
 ```
 

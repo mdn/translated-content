@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
 
 ## 语法
 
-```js
-dateObj.getDate()
+```js-nolint
+getDate()
 ```
 
 ## 参数

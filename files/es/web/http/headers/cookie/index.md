@@ -9,9 +9,9 @@ El encabezado **`Cookie`** de una solicitud HTTP contiene [cookies HTTP](/es/doc
 
 Los encabezados `Cookie` puede ser omitidos por completo, si las preferencias de privacidad del navegador están configuradas para bloquearlos, por ejemplo.
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | yes                            |
 
 ## Sintaxis
 

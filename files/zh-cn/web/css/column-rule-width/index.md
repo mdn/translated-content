@@ -36,7 +36,9 @@ column-rule-width: inherit;
 ## Example
 
 ```css
-#header {column-rule-width: thick;}
+#header {
+  column-rule-width: thick;
+}
 ```
 
 ## Specifications

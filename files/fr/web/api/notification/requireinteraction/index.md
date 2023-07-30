@@ -11,7 +11,7 @@ La propriété en lecture seule **`requireInteraction`** de l'interface {{domxre
 ## Syntaxe
 
 ```js
-Notification.requireInteraction
+Notification.requireInteraction;
 ```
 
 ### Valeur

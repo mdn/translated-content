@@ -12,8 +12,8 @@ L'opérateur de reste et d'affectation (`%=`) calcule le reste de la division de
 ## Syntaxe
 
 ```js
-Opérateur : x %= y
-Signification :  x  = x % y
+Opérateur: x %= y;
+Signification: x = x % y;
 ```
 
 ## Exemples
@@ -22,9 +22,9 @@ Signification :  x  = x % y
 
 ```js
 let truc = 5;
-truc %= 2;      // 1
-truc %= 'toto'; // NaN
-truc %= 0;      // NaN
+truc %= 2; // 1
+truc %= "toto"; // NaN
+truc %= 0; // NaN
 ```
 
 ## Spécifications

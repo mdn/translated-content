@@ -22,7 +22,7 @@ La fonction suivante renvoie la valeur de la racine carrée de 2 :
 
 ```js
 function getRoot2() {
-   return Math.SQRT2;
+  return Math.SQRT2;
 }
 
 getRoot2(); // 1.4142135623730951

@@ -18,7 +18,7 @@ L'exemple qui suit illustre l'utilisation simple de propriétés relatives aux p
 p {
   width: 600px;
   margin: 0 auto;
-  font-family: "Helvetica Neue", "Arial",  sans-serif;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
   font-style: italic;
   font-weight: 100;
   font-variant-ligatures: normal;
@@ -31,9 +31,9 @@ p {
 
 ```html
 <p>
-   Alice ne fut pas très-étonnée, tant elle commençait à s’habituer aux
-   événements extraordinaires. Tandis qu’elle regardait encore l’endroit
-   que le Chat venait de quitter, il reparut tout à coup.
+  Alice ne fut pas très-étonnée, tant elle commençait à s’habituer aux
+  événements extraordinaires. Tandis qu’elle regardait encore l’endroit que le
+  Chat venait de quitter, il reparut tout à coup.
 </p>
 ```
 

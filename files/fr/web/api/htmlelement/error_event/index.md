@@ -1,5 +1,5 @@
 ---
-title: 'Element : évènement error'
+title: "Element : évènement error"
 slug: Web/API/HTMLElement/error_event
 translation_of: Web/API/Element/error_event
 ---
@@ -70,13 +70,14 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
 button {
   height: 2rem;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
 img {
@@ -88,17 +89,17 @@ img {
 ### JS
 
 ```js
-const log = document.querySelector('.event-log-contents');
+const log = document.querySelector(".event-log-contents");
 
-const badImg = document.querySelector('.bad-img');
-badImg.addEventListener('error', (event) => {
-    log.textContent = log.textContent + `${event.type}: Chargement de l'image\n`;
-    console.log(event)
+const badImg = document.querySelector(".bad-img");
+badImg.addEventListener("error", (event) => {
+  log.textContent = log.textContent + `${event.type}: Chargement de l'image\n`;
+  console.log(event);
 });
 
-const imgError = document.querySelector('#img-error');
-imgError.addEventListener('click', () => {
-    badImg.setAttribute('src', 'i-dont-exist');
+const imgError = document.querySelector("#img-error");
+imgError.addEventListener("click", () => {
+  badImg.setAttribute("src", "i-dont-exist");
 });
 ```
 

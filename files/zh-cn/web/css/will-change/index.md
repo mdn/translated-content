@@ -78,8 +78,8 @@ will-change: unset;
 const el = document.getElementById("element");
 
 // 当鼠标移动到该元素上时给该元素设置 will-change 属性
-el.addEventListener('mouseenter', hintBrowser);
-el.addEventListener('animationEnd', removeHint);
+el.addEventListener("mouseenter", hintBrowser);
+el.addEventListener("animationEnd", removeHint);
 
 function hintBrowser() {
   // 将在动画关键帧块中发生变化的可优化属性
@@ -87,7 +87,7 @@ function hintBrowser() {
 }
 
 function removeHint() {
-  this.style.willChange = 'auto';
+  this.style.willChange = "auto";
 }
 ```
 

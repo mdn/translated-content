@@ -11,7 +11,7 @@ La propriété d'accesseur **`Array[@@species]`** renvoie le constructeur `Array
 ## Syntaxe
 
 ```js
-Array[Symbol.species]
+Array[Symbol.species];
 ```
 
 ### Valeur de retour
@@ -36,7 +36,9 @@ Pour un objet dérivé, la valeur de `species` pour une classe `MonArray` sera l
 class MonArray extends Array {
   // On surcharge le symbole species
   // pour renvoyer le constructeur Array parent
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
 ```
 

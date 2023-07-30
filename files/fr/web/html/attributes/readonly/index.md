@@ -1,5 +1,5 @@
 ---
-title: 'Attribut HTML : readonly'
+title: "Attribut HTML : readonly"
 slug: Web/HTML/Attributes/readonly
 translation_of: Web/HTML/Attributes/readonly
 ---
@@ -36,19 +36,19 @@ Si l'élément est en lecture seule, la valeur de l'élément ne peut pas être 
 
 ```html
 <div class="group">
-  <input type="textbox" value="Some value" readonly="readonly"/>
+  <input type="textbox" value="Some value" readonly="readonly" />
   <label>Textbox</label>
 </div>
 <div class="group">
-  <input type="date" value="2020-01-01" readonly="readonly"/>
+  <input type="date" value="2020-01-01" readonly="readonly" />
   <label>Date</label>
 </div>
 <div class="group">
-  <input type="email" value="Some value" readonly="readonly"/>
+  <input type="email" value="Some value" readonly="readonly" />
   <label>Email</label>
 </div>
 <div class="group">
-  <input type="password" value="Some value" readonly="readonly"/>
+  <input type="password" value="Some value" readonly="readonly" />
   <label>Password</label>
 </div>
 <div class="group">

@@ -60,10 +60,8 @@ perspective: unset;
 <table>
   <tbody>
     <tr>
-      <th><code>perspective: 250px;</code>
-      </th>
-      <th><code>perspective: 350px;</code>
-      </th>
+      <th><code>perspective: 250px;</code></th>
+      <th><code>perspective: 350px;</code></th>
     </tr>
     <tr>
       <td>
@@ -92,10 +90,8 @@ perspective: unset;
       </td>
     </tr>
     <tr>
-      <th><code>perspective: 500px;</code>
-      </th>
-      <th><code>perspective: 650px;</code>
-      </th>
+      <th><code>perspective: 500px;</code></th>
+      <th><code>perspective: 650px;</code></th>
     </tr>
     <tr>
       <td>
@@ -211,8 +207,10 @@ CSS 建立了不同透视距离的 class，还包括容器盒、立方体本身�
 }
 
 /* Make the table a little nicer */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   padding: 10px;
   font-family: sans-serif;
   text-align: left;

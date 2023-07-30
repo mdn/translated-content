@@ -15,7 +15,7 @@ La propriété **`columnNumber`** contient le numéro de la colonne, dans la lig
 ```js
 var e = new Error("Ne peut pas lire la donnée");
 throw e;
-console.log(e.columnNumber) // 0
+console.log(e.columnNumber); // 0
 ```
 
 ## Spécifications

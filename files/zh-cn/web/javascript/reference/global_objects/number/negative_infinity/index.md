@@ -35,10 +35,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 下例中，赋值给变量 `smallNumber` 一个明显小于 JavaScript 中的最小值的值。当 `if` 语句执行时，`smallNumber` 值为 "`-Infinity`"，因此在继续执行代码前，`smallNumber` 被设为一个更容易管理的值。
 
 ```js
-var smallNumber = (-Number.MAX_VALUE) * 2
+var smallNumber = -Number.MAX_VALUE * 2;
 
 if (smallNumber == Number.NEGATIVE_INFINITY) {
- smallNumber = returnFinite();
+  smallNumber = returnFinite();
 }
 ```
 

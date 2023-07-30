@@ -40,26 +40,26 @@ String.fromCodePoint(num1[, ...[, numN]])
 ### 使用 `fromCodePoint()`
 
 ```js
-String.fromCodePoint(42);       // "*"
-String.fromCodePoint(65, 90);   // "AZ"
-String.fromCodePoint(0x404);    // "\u0404"
-String.fromCodePoint(0x2F804);  // "\uD87E\uDC04"
-String.fromCodePoint(194564);   // "\uD87E\uDC04"
-String.fromCodePoint(0x1D306, 0x61, 0x1D307) // "\uD834\uDF06a\uD834\uDF07"
+String.fromCodePoint(42); // "*"
+String.fromCodePoint(65, 90); // "AZ"
+String.fromCodePoint(0x404); // "\u0404"
+String.fromCodePoint(0x2f804); // "\uD87E\uDC04"
+String.fromCodePoint(194564); // "\uD87E\uDC04"
+String.fromCodePoint(0x1d306, 0x61, 0x1d307); // "\uD834\uDF06a\uD834\uDF07"
 
-String.fromCodePoint('_');      // RangeError
+String.fromCodePoint("_"); // RangeError
 String.fromCodePoint(Infinity); // RangeError
-String.fromCodePoint(-1);       // RangeError
-String.fromCodePoint(3.14);     // RangeError
-String.fromCodePoint(3e-2);     // RangeError
-String.fromCodePoint(NaN);      // RangeError
+String.fromCodePoint(-1); // RangeError
+String.fromCodePoint(3.14); // RangeError
+String.fromCodePoint(3e-2); // RangeError
+String.fromCodePoint(NaN); // RangeError
 ```
 
 ```js
 // String.fromCharCode() 方法不能单独获取在高代码点位上的字符
 // 另一方面，下列的示例中，可以返回 4 字节，也可以返回 2 字节的字符
 // (也就是说，它可以返回单独的字符，使用长度 2 代替 1!）
-console.log(String.fromCodePoint(0x2F804)); // or 194564 in decimal
+console.log(String.fromCodePoint(0x2f804)); // or 194564 in decimal
 ```
 
 ## Polyfill
@@ -67,24 +67,29 @@ console.log(String.fromCodePoint(0x2F804)); // or 194564 in decimal
 `String.fromCodePoint` 方法是 ECMAScript2015（ES6）新增加的特性，所以一些老的浏览器可能还不支持。可以通过使用下面的 polyfill 代码来保证浏览器的支持：
 
 ```js
-if (!String.fromCodePoint) (function(stringFromCharCode) {
-    var fromCodePoint = function(_) {
-      var codeUnits = [], codeLen = 0, result = "";
-      for (var index=0, len = arguments.length; index !== len; ++index) {
+if (!String.fromCodePoint)
+  (function (stringFromCharCode) {
+    var fromCodePoint = function (_) {
+      var codeUnits = [],
+        codeLen = 0,
+        result = "";
+      for (var index = 0, len = arguments.length; index !== len; ++index) {
         var codePoint = +arguments[index];
         // correctly handles all cases including `NaN`, `-Infinity`, `+Infinity`
         // The surrounding `!(...)` is required to correctly handle `NaN` cases
         // The (codePoint>>>0) === codePoint clause handles decimals and negatives
-        if (!(codePoint < 0x10FFFF && (codePoint>>>0) === codePoint))
+        if (!(codePoint < 0x10ffff && codePoint >>> 0 === codePoint))
           throw RangeError("Invalid code point: " + codePoint);
-        if (codePoint <= 0xFFFF) { // BMP code point
+        if (codePoint <= 0xffff) {
+          // BMP code point
           codeLen = codeUnits.push(codePoint);
-        } else { // Astral code point; split in surrogate halves
+        } else {
+          // Astral code point; split in surrogate halves
           // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
           codePoint -= 0x10000;
           codeLen = codeUnits.push(
-            (codePoint >> 10) + 0xD800,  // highSurrogate
-            (codePoint % 0x400) + 0xDC00 // lowSurrogate
+            (codePoint >> 10) + 0xd800, // highSurrogate
+            (codePoint % 0x400) + 0xdc00, // lowSurrogate
           );
         }
         if (codeLen >= 0x3fff) {
@@ -94,14 +99,17 @@ if (!String.fromCodePoint) (function(stringFromCharCode) {
       }
       return result + stringFromCharCode.apply(null, codeUnits);
     };
-    try { // IE 8 only supports `Object.defineProperty` on DOM elements
+    try {
+      // IE 8 only supports `Object.defineProperty` on DOM elements
       Object.defineProperty(String, "fromCodePoint", {
-        "value": fromCodePoint, "configurable": true, "writable": true
+        value: fromCodePoint,
+        configurable: true,
+        writable: true,
       });
-    } catch(e) {
+    } catch (e) {
       String.fromCodePoint = fromCodePoint;
     }
-}(String.fromCharCode));
+  })(String.fromCharCode);
 ```
 
 ## 规范

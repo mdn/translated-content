@@ -25,14 +25,12 @@ HTML、CSS と画像および数行の JavaScript のコードが提供されて
 <h1>Image gallery example</h1>
 
 <div class="full-img">
-  <img class="displayed-img" src="images/pic1.jpg">
+  <img class="displayed-img" src="images/pic1.jpg" />
   <div class="overlay"></div>
   <button class="dark">Darken</button>
 </div>
 
-<div class="thumb-bar">
-
-</div>
+<div class="thumb-bar"></div>
 ```
 
 例ではこのように見えます:
@@ -82,7 +80,7 @@ JavaScript に必要なもの:
 次のコードは上記の 2 と 3 で示された変更を行う基本的なものです。
 
 ```js
-btn.setAttribute('class', xxx);
+btn.setAttribute("class", xxx);
 btn.textContent = xxx;
 overlay.style.backgroundColor = xxx;
 ```

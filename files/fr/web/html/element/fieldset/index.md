@@ -1,5 +1,5 @@
 ---
-title: '<fieldset> : l''élément pour les ensembles de champs'
+title: "<fieldset> : l'élément pour les ensembles de champs"
 slug: Web/HTML/Element/fieldset
 translation_of: Web/HTML/Element/fieldset
 ---
@@ -50,7 +50,7 @@ Cet exemple montre un `<fieldset>` très simple, avec un `<legend>`, et un seul 
 <form action="#">
   <fieldset>
     <legend>Titre simple</legend>
-    <input type="radio" name="radio" id="radio">
+    <input type="radio" name="radio" id="radio" />
     <label for="radio">L'esprit de la radio</label>
   </fieldset>
 </form>
@@ -72,11 +72,11 @@ Dans cet exemple, on voit comment l'attribut `disabled` permet de désactiver un
     <legend>Fieldset désactivé</legend>
     <div>
       <label for="name">Nom : </label>
-      <input type="text" id="name" value="Chris">
+      <input type="text" id="name" value="Chris" />
     </div>
     <div>
       <label for="pwd">Archétype : </label>
-      <input type="password" id="pwd" value="Wookie">
+      <input type="password" id="pwd" value="Wookie" />
     </div>
   </fieldset>
 </form>

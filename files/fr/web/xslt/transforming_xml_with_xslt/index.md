@@ -4,7 +4,7 @@ slug: Web/XSLT/Transforming_XML_with_XSLT
 translation_of: Web/XSLT/Transforming_XML_with_XSLT
 ---
 
-### [Présentation](/fr/Transformations_XML_avec_XSLT/Pr%c3%a9sentation)
+### [Présentation](/fr/Transformations_XML_avec_XSLT/Présentation)
 
 La séparation du contenu et de la présentation est l'une des caractéristiques principale du [XML](/fr/XML). La structure d'un document XML est conçue pour refléter et clarifier les relations entre les différents aspects du contenu lui-même, sans l'obsurcir par la nécessité d'y intégrer des indications sur la présentation qui lui sera appliquée ensuite. Cette structure intelligente est particulièrement importante, car de plus en plus de transferts de données sont automatisés et se font entre des machines très hétérogènes reliées par un réseau.
 
@@ -16,7 +16,7 @@ Nous nous intéressons ici au second type de feuilles de styles supporté par Ge
 
 ### Référence XSLT/XPath
 
-#### [Éléments](/fr/XSLT/%c3%89l%c3%a9ments)
+#### [Éléments](/fr/XSLT/Éléments)
 
 - [xsl:apply-imports](/fr/XSLT/apply-imports) _(supporté)_
 - [xsl:apply-templates](/fr/XSLT/apply-templates) _(supporté)_

@@ -24,10 +24,10 @@ Esta propiedad aplica para los [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elemen
 text-shadow: 1px 1px 2px black;
 
 /* color | offset-x | offset-y | blur-radius */
-text-shadow: #CCC 1px 0 10px;
+text-shadow: #ccc 1px 0 10px;
 
 /* offset-x | offset-y | color */
-text-shadow: 5px 5px #558ABB;
+text-shadow: 5px 5px #558abb;
 
 /* color | offset-x | offset-y */
 text-shadow: white 2px 5px;
@@ -66,14 +66,15 @@ text-shadow: unset;
 
 ```css
 .red-text-shadow {
-   text-shadow: red 0 -2px;
+  text-shadow: red 0 -2px;
 }
 ```
 
 ```html
 <p class="red-text-shadow">
-   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-   inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 </p>
 ```
 
@@ -83,16 +84,25 @@ text-shadow: unset;
 
 ```css
 .white-with-blue-shadow {
-   text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
-   color: white;
-   font: 1.5em Georgia, "Bitstream Charter", "URW Bookman L", "Century Schoolbook L", serif;
+  text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
+  color: white;
+  font:
+    1.5em Georgia,
+    "Bitstream Charter",
+    "URW Bookman L",
+    "Century Schoolbook L",
+    serif;
 }
 ```
 
 ```html
 <p class="white-with-blue-shadow">
-   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-   veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 </p>
 ```
 
@@ -102,18 +112,23 @@ text-shadow: unset;
 
 ```css
 .gold-on-gold {
-   text-shadow: rgba(0,0,0,0.1) -1px 0, rgba(0,0,0,0.1) 0 -1px,
-   rgba(255,255,255,0.1) 1px 0, rgba(255,255,255,0.1) 0 1px,
-   rgba(0,0,0,0.1) -1px -1px, rgba(255,255,255,0.1) 1px 1px;
-   color: gold;
-   background: gold;
+  text-shadow:
+    rgba(0, 0, 0, 0.1) -1px 0,
+    rgba(0, 0, 0, 0.1) 0 -1px,
+    rgba(255, 255, 255, 0.1) 1px 0,
+    rgba(255, 255, 255, 0.1) 0 1px,
+    rgba(0, 0, 0, 0.1) -1px -1px,
+    rgba(255, 255, 255, 0.1) 1px 1px;
+  color: gold;
+  background: gold;
 }
 ```
 
 ```html
 <p class="gold-on-gold">
-   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-   veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 </p>
 ```
 

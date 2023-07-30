@@ -126,7 +126,7 @@ Et il y a bien plus encore&nbsp;! Pas de précipitation cependant. Vous ne serez
 
 Ici nous allons commencer à réellement nous intéresser au code, et, ce faisant, à explorer ce qui se passe quand vous exécutez du JavaScript dans votre page.
 
-Commençons par un bref récapitulatif de ce qui se passe lorsqu'une page web se charge dans le navigateur (voir [Comment fonctionnent vraiment les CSS](/fr/docs/Apprendre/CSS/Introduction_%C3%A0_CSS/Le_fonctionnement_de_CSS#Comment_fonctionnent_vraiment_les_CSS)). Quand la page se charge, les codes HTML, CSS et JavaScript s'exécutent dans un environnement (l'onglet du navigateur). C'est un peu comme une usine qui prend des matières premières (le code) et sort un produit (la page web).
+Commençons par un bref récapitulatif de ce qui se passe lorsqu'une page web se charge dans le navigateur (voir [Comment fonctionnent vraiment les CSS](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Le_fonctionnement_de_CSS#Comment_fonctionnent_vraiment_les_CSS)). Quand la page se charge, les codes HTML, CSS et JavaScript s'exécutent dans un environnement (l'onglet du navigateur). C'est un peu comme une usine qui prend des matières premières (le code) et sort un produit (la page web).
 
 ![](execution.png)
 
@@ -291,7 +291,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-Il s'agit d'un gestionnaire d'évènement associé à l'événement `DOMContentLoaded` du navigateur, cet événement est déclenché quand le `body` HTML est complètement chargé et analysé. Le code JavaScript à l'intérieur du bloc est exécuté après le déclenchement de `DOMContentLoaded`. Par conséquent, l'erreur est évitée (vous en apprendrez plus sur les [événements](/fr/docs/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements) plus tard dans le cours).
+Il s'agit d'un gestionnaire d'évènement associé à l'événement `DOMContentLoaded` du navigateur, cet événement est déclenché quand le `body` HTML est complètement chargé et analysé. Le code JavaScript à l'intérieur du bloc est exécuté après le déclenchement de `DOMContentLoaded`. Par conséquent, l'erreur est évitée (vous en apprendrez plus sur les [événements](/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements) plus tard dans le cours).
 
 Dans l'exemple externe, nous utilisons une fonctionnalité JavaScript plus moderne pour résoudre le problème, l'attribut `async`, qui indique au navigateur de continuer à télécharger le contenu HTML une fois que l'élément de balise {{htmlelement("script")}} a été atteint.
 

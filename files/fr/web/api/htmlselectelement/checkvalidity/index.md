@@ -11,7 +11,7 @@ La méthode **`HTMLSelectElement.checkValidity()`** vérifie si l'élément a de
 ## Syntaxe
 
 ```js
-checkValidity()
+checkValidity();
 ```
 
 ### Paramètres

@@ -17,8 +17,8 @@ El código de respuesta `203` es similar al código [`214`](/es/docs/Web/HTTP/He
 
 ## Specifications
 
-| Specification                                                                        | Title                                                         |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| Specification                                                  | Title                                                         |
+| -------------------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "203 Non-Authoritative Information" , "6.3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## See also

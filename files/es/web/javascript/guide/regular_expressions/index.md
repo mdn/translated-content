@@ -22,7 +22,7 @@ Construyes una expresión regular en una de estas dos formas:
 - O llamando a la función constructora del objeto {{jsxref("RegExp")}}, de la siguiente manera:
 
   ```js
-  let re = new RegExp('ab+c');
+  let re = new RegExp("ab+c");
   ```
 
   El uso de la función constructora proporciona una compilación en tiempo de ejecución de la expresión regular. Usa la función constructora cuando sepas que el patrón de la expresión regular cambiará, o no conoces el patrón y lo obtienes de otra fuente, como la entrada del usuario.
@@ -80,7 +80,7 @@ Si las cadenas de escape aún no forman parte de tu patrón, puedes agregarlas u
 
 ```js
 function escapeRegExp(string) {
-  return string.replace(/[.*+\-?^${}()|[\]\\]/g,'\\$&'); // $& significa toda la cadena coincidente
+  return string.replace(/[.*+\-?^${}()|[\]\\]/g, "\\$&"); // $& significa toda la cadena coincidente
 }
 ```
 
@@ -96,16 +96,16 @@ Los paréntesis alrededor de cualquier parte del patrón de expresión regular h
 
 Las expresiones regulares se utilizan con los métodos `RegExp` `test()` y `exec()` y con los métodos de `String`, `match()`, `replace()`, `search()` y `split()`. Estos métodos se explican en detalle en la [referencia de JavaScript](/es/docs/Web/JavaScript/Reference).
 
-| Método                                                           | Descripción                                                                                                                                  |
-| ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("RegExp.exec", "exec()")}}                 | Ejecuta una búsqueda por una coincidencia en una cadena. Devuelve un arreglo de información o `null` en una discrepancia.                    |
-| {{jsxref("RegExp.test", "test()")}}                 | Prueba una coincidencia en una cadena. Devuelve `true` o `false`.                                                                            |
-| {{jsxref("String.match", "match()")}}                 | Devuelve un arreglo que contiene todas las coincidencias, incluidos los grupos de captura, o `null` si no se encuentra ninguna coincidencia. |
-| {{jsxref("String.matchAll", "matchAll()")}}         | Devuelve un iterador que contiene todas las coincidencias, incluidos los grupos de captura.                                                  |
-| {{jsxref("String.search", "search()")}}             | Prueba una coincidencia en una cadena. Devuelve el índice de la coincidencia, o `-1` si la búsqueda falla.                                   |
-| {{jsxref("String.replace", "replace()")}}         | Ejecuta una búsqueda por una coincidencia en una cadena y reemplaza la subcadena coincidente con una subcadena de reemplazo.                 |
+| Método                                          | Descripción                                                                                                                                  |
+| ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("RegExp.exec", "exec()")}}             | Ejecuta una búsqueda por una coincidencia en una cadena. Devuelve un arreglo de información o `null` en una discrepancia.                    |
+| {{jsxref("RegExp.test", "test()")}}             | Prueba una coincidencia en una cadena. Devuelve `true` o `false`.                                                                            |
+| {{jsxref("String.match", "match()")}}           | Devuelve un arreglo que contiene todas las coincidencias, incluidos los grupos de captura, o `null` si no se encuentra ninguna coincidencia. |
+| {{jsxref("String.matchAll", "matchAll()")}}     | Devuelve un iterador que contiene todas las coincidencias, incluidos los grupos de captura.                                                  |
+| {{jsxref("String.search", "search()")}}         | Prueba una coincidencia en una cadena. Devuelve el índice de la coincidencia, o `-1` si la búsqueda falla.                                   |
+| {{jsxref("String.replace", "replace()")}}       | Ejecuta una búsqueda por una coincidencia en una cadena y reemplaza la subcadena coincidente con una subcadena de reemplazo.                 |
 | {{jsxref("String.replaceAll", "replaceAll()")}} | Ejecuta una búsqueda de todas las coincidencias en una cadena y reemplaza las subcadenas coincidentes con una subcadena de reemplazo.        |
-| {{jsxref("String.split", "split()")}}                 | Utiliza una expresión regular o una cadena fija para dividir una cadena en un arreglo de subcadenas.                                         |
+| {{jsxref("String.split", "split()")}}           | Utiliza una expresión regular o una cadena fija para dividir una cadena en un arreglo de subcadenas.                                         |
 
 Cuando desees saber si un patrón se encuentra en una cadena, utiliza los métodos `test()` o `search()`; para obtener más información (pero una ejecución más lenta) utiliza los métodos `exec()` o `match()`. Si usas `exec()` o `match()` y si la búsqueda tiene éxito, estos métodos devuelven un arreglo y actualizan las propiedades del objeto expresión regular asociado y también del objeto de expresión regular predefinido, el objeto `RegExp`. Si la búsqueda falla, el método `exec()` devuelve `null` (que coacciona a `false`).
 
@@ -113,16 +113,16 @@ En el siguiente ejemplo, el script utiliza el método `exec()` para encontrar un
 
 ```js
 var myRe = /d(b+)d/g;
-var myArray = myRe.exec('cdbbdbsbz');
+var myArray = myRe.exec("cdbbdbsbz");
 ```
 
 Si no necesitas acceder a las propiedades de la expresión regular, una forma alternativa de crear `myArray` es con este script:
 
 ```js
-var myArray = /d(b+)d/g.exec('cdbbdbsbz');
-    // similar a "cdbbdbsbz" .match(/d(b+)d/g); sin embargo,
-    // "cdbbdbsbz" .match (/d(b+)d/g) genera Array ["dbbd"], mientras
-    // /d(b+)d/g.exec('cdbbdbsbz ') produce Array ['dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ].
+var myArray = /d(b+)d/g.exec("cdbbdbsbz");
+// similar a "cdbbdbsbz" .match(/d(b+)d/g); sin embargo,
+// "cdbbdbsbz" .match (/d(b+)d/g) genera Array ["dbbd"], mientras
+// /d(b+)d/g.exec('cdbbdbsbz ') produce Array ['dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ].
 ```
 
 (Consulta [diferentes comportamientos](#g-diferentes-comportamientos) para obtener más información sobre los diferentes comportamientos).
@@ -130,8 +130,8 @@ var myArray = /d(b+)d/g.exec('cdbbdbsbz');
 Si deseas construir la expresión regular a partir de una cadena, otra alternativa más es este script:
 
 ```js
-var myRe = new RegExp('d(b+)d', 'g');
-var myArray = myRe.exec('cdbbdbsbz');
+var myRe = new RegExp("d(b+)d", "g");
+var myArray = myRe.exec("cdbbdbsbz");
 ```
 
 Con estos scripts, la búsqueda se realiza correctamente, devuelve el arreglo y actualiza las propiedades que se muestran en la siguiente tabla.
@@ -198,8 +198,8 @@ Como se muestra en la segunda forma de este ejemplo, puedes usar una expresión 
 
 ```js
 var myRe = /d(b+)d/g;
-var myArray = myRe.exec('cdbbdbsbz');
-console.log('El valor de lastIndex es ' + myRe.lastIndex);
+var myArray = myRe.exec("cdbbdbsbz");
+console.log("El valor de lastIndex es " + myRe.lastIndex);
 
 // "El valor de lastIndex es 5"
 ```
@@ -207,8 +207,8 @@ console.log('El valor de lastIndex es ' + myRe.lastIndex);
 Sin embargo, si tienes este script:
 
 ```js
-var myArray = /d(b+)d/g.exec('cdbbdbsbz');
-console.log('El valor de lastIndex es ' + /d(b+)d/g.lastIndex);
+var myArray = /d(b+)d/g.exec("cdbbdbsbz");
+console.log("El valor de lastIndex es " + /d(b+)d/g.lastIndex);
 
 // "El valor de lastIndex es 0"
 ```
@@ -219,13 +219,13 @@ Las apariciones de `/d(b+)d/g` en las dos declaraciones son objetos de expresió
 
 Las expresiones regulares tienen seis indicadores opcionales que permiten funciones como la búsqueda global y que no distinga entre mayúsculas y minúsculas. Estos indicadores se pueden usar por separado o juntos en cualquier orden y se incluyen como parte de la expresión regular.
 
-| Bandera | Descripción                                                                                                                                                     | Propiedad correspondiente                                                                           |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `g`     | Búsqueda global.                                                                                                                                                | [`RegExp.prototype.global`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global)         |
-| `i`     | Búsqueda que no distingue entre mayúsculas y minúsculas.                                                                                                        | [`RegExp.prototype.ignoreCase`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) |
-| `m`     | Búsqueda multilínea.                                                                                                                                            | [`RegExp.prototype.multiline`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline)   |
-| `s`     | Permite que el `.` coincida con caracteres de nueva línea.                                                                                                      | [`RegExp.prototype.dotAll`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll)         |
-| `u`     | "unicode"; tratar un patrón como una secuencia de puntos de código Unicode.                                                                                     | [`RegExp.prototype.unicode`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)       |
+| Bandera | Descripción                                                                                                                                          | Propiedad correspondiente                                                                           |
+| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `g`     | Búsqueda global.                                                                                                                                     | [`RegExp.prototype.global`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global)         |
+| `i`     | Búsqueda que no distingue entre mayúsculas y minúsculas.                                                                                             | [`RegExp.prototype.ignoreCase`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) |
+| `m`     | Búsqueda multilínea.                                                                                                                                 | [`RegExp.prototype.multiline`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline)   |
+| `s`     | Permite que el `.` coincida con caracteres de nueva línea.                                                                                           | [`RegExp.prototype.dotAll`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll)         |
+| `u`     | "unicode"; tratar un patrón como una secuencia de puntos de código Unicode.                                                                          | [`RegExp.prototype.unicode`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)       |
 | `y`     | Realiza una búsqueda "pegajosa" que coincida a partir de la posición actual en la cadena de destino. Consulta {{jsxref("RegExp.sticky", "sticky")}}. | [`RegExp.prototype.sticky`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)         |
 
 Para incluir una bandera con la expresión regular, usa esta sintaxis:
@@ -237,7 +237,7 @@ var re = /patrón/banderas;
 o
 
 ```js
-var re = new RegExp('patrón', 'banderas');
+var re = new RegExp("patrón", "banderas");
 ```
 
 Ten en cuenta que las banderas son parte integral de una expresión regular. No se pueden agregar ni eliminar más tarde.
@@ -246,7 +246,7 @@ Por ejemplo, `re = /\w+\s/g` crea una expresión regular que busca uno o más ca
 
 ```js
 var re = /\w+\s/g;
-var str = 'fee fi fo fum';
+var str = "fee fi fo fum";
 var myArray = str.match(re);
 console.log(myArray);
 
@@ -262,7 +262,7 @@ var re = /\w+\s/g;
 con:
 
 ```js
-var re = new RegExp('\\w+\\s', 'g');
+var re = new RegExp("\\w+\\s", "g");
 ```
 
 y obtener el mismo resultado.
@@ -270,7 +270,10 @@ y obtener el mismo resultado.
 El comportamiento asociado con el indicador `g` es diferente cuando se usa el método `.exec()`. Los roles de "clase" y "argumento" se invierten: En el caso de `.match()`, la clase cadena (o tipo de datos) posee el método y la expresión regular es solo un argumento, mientras que en el caso de `.exec()`, es la expresión regular la que posee el método, siendo la cadena el argumento. Compara esto _`str.match(re)`_ con _`re.exec(str)`_. El indicador `g` se usa con el método **`.exec()`** para obtener una progresión iterativa.
 
 ```js
-var xArray; while(xArray = re.exec(str)) console.log(xArray);
+var xArray;
+while ((xArray = re.exec(str))) {
+  console.log(xArray);
+}
 // produce:
 // ["fee ", index: 0, input: "fee fi fo fum"]
 // ["fi ", index: 4, input: "fee fi fo fum"]
@@ -298,13 +301,16 @@ El evento `Change` activado cuando el usuario presiona <kbd>Enter</kbd> establec
 
 ```html
 <p>
-  Ingresa tu número de teléfono (con el código de área) y luego haz clic en "Comprobar".
-  <br>
+  Ingresa tu número de teléfono (con el código de área) y luego haz clic en
+  "Comprobar".
+  <br />
   El formato esperado es como ###-###-####.
 </p>
 <form action="#">
-  <input id="phone">
-    <button onclick="testInfo(document.getElementById('phone'));">Comprobar</button>
+  <input id="phone" />
+  <button onclick="testInfo(document.getElementById('phone'));">
+    Comprobar
+  </button>
 </form>
 ```
 
@@ -315,9 +321,10 @@ var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;
 function testInfo(phoneInput) {
   var OK = re.exec(phoneInput.value);
   if (!OK) {
-    console.error(phoneInput.value + ' isn\'t a phone number with area code!');
+    console.error(phoneInput.value + " isn't a phone number with area code!");
   } else {
-    console.log('Gracias, tu número de teléfono es ' + OK[0]);}
+    console.log("Gracias, tu número de teléfono es " + OK[0]);
+  }
 }
 ```
 
