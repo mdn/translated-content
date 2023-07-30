@@ -10,13 +10,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
 
 {{JSRef}}
 
-Свойство **`byteLength`** возвращает длину объектов {{jsxref("DataView")}} в байтах.
+Свойство-геттер **`byteLength`** возвращает длину {{jsxref("DataView")}} в байтах.
 
 {{EmbedInteractiveExample("pages/js/dataview-bytelength.html")}}
 
 ## Описание
 
-Свойство `byteLength` - это свойством доступа, функция set accessor которого `undefined`, что означает, что вы можете только читать это свойство. Значение устанавливается при создании объекта `DataView` и не может быть изменено. Если `DataView` не указывает смещение или длину (`byteLength`), то будет возвращена `byteLength` указанного `ArrayBuffer` или `SharedArrayBuffer`.
+Свойство `byteLength` доступно только для чтения. Его значение определяется при создании объекта `DataView` и не может быть изменено. Если при создании `DataView` не были переданы параметры `byteOffset` или `byteLength`, то свойство будет равно `byteLength` связанного `ArrayBuffer` или `SharedArrayBuffer`.
 
 ## Примеры
 
@@ -25,13 +25,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
 ```js
 const buffer = new ArrayBuffer(8);
 const dataview = new DataView(buffer);
-dataview.byteLength; // 8 (соответствует длине буфера в байтах)
+dataview.byteLength; // 8 (соответствует byteLength буфера)
 
 const dataview2 = new DataView(buffer, 1, 5);
-dataview2.byteLength; // 5 (как указано при построении DataView)
+dataview2.byteLength; // 5 (как указано при создании DataView)
 
 const dataview3 = new DataView(buffer, 2);
-dataview3.byteLength; // 6 (из-за смещения при построении DataView)
+dataview3.byteLength; // 6 (из-за byteOffset, заданного при создании DataView)
 ```
 
 ## Спецификации
