@@ -50,14 +50,12 @@ someOtherNode.textContent = string;
 
 此外，使用 `textContent` 可以防止 [XSS 攻击](/zh-CN/docs/Glossary/Cross-site_scripting)。
 
-## 例子
+## 示例
 
 给出这个 HTML 片段：
 
 ```html
-<div id="divA">
-  This is <span>some</span> text!
-</div>
+<div id="divA">This is <span>some</span> text!</div>
 ```
 
 你可以使用 `textContent` 去获取该元素的文本内容：
@@ -116,7 +114,7 @@ if (
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("HTMLElement.innerText")}}
 - {{domxref("Element.innerHTML")}}
