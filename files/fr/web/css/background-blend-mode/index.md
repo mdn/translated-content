@@ -49,7 +49,7 @@ background-blend-mode: unset;
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: screen;
 }
 ```
@@ -82,10 +82,11 @@ background-blend-mode: unset;
 ### JavaScript
 
 ```js
-document.getElementById("select").onchange = function(event) {
-  document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
-}
-console.log(document.getElementById('div'));
+document.getElementById("select").onchange = function (event) {
+  document.getElementById("div").style.backgroundBlendMode =
+    document.getElementById("select").selectedOptions[0].innerHTML;
+};
+console.log(document.getElementById("div"));
 ```
 
 ### Résultat

@@ -11,9 +11,9 @@ Lancé lorsqu'un onglet est attaché à une fenêtre, par exemple parce qu'il a 
 ## Syntaxe
 
 ```js
-browser.tabs.onAttached.addListener(listener)
-browser.tabs.onAttached.removeListener(listener)
-browser.tabs.onAttached.hasListener(listener)
+browser.tabs.onAttached.addListener(listener);
+browser.tabs.onAttached.removeListener(listener);
+browser.tabs.onAttached.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

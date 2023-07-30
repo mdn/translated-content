@@ -11,7 +11,7 @@ La méthode **`Node.isDefaultNamespace()`** accepte un URI d'espace de nom comme
 ## Syntaxe
 
 ```js
-result = node.isDefaultNamespace(namespaceURI)
+result = node.isDefaultNamespace(namespaceURI);
 ```
 
 - `result` détient la valeur de retour `true` (_vrai_) ou `false` (_faux_).
@@ -21,7 +21,7 @@ result = node.isDefaultNamespace(namespaceURI)
 
 ```js
 var XULNS = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
-var el = document.getElementsByTagNameNS(XULNS, 'textbox')[0];
+var el = document.getElementsByTagNameNS(XULNS, "textbox")[0];
 
 alert(el.isDefaultNamespace(XULNS)); // true
 ```

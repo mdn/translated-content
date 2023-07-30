@@ -28,7 +28,7 @@ Le problème peut être lié à une valeur qui se trouve à un endroit inattendu
 ### Exemple invalide
 
 ```js example-bad
-'use strict';
+"use strict";
 
 var foo = "my string";
 // The following line does nothing if not in strict mode.
@@ -40,7 +40,7 @@ foo.bar = {}; // TypeError: can't assign to property "bar" on "my string": not a
 On pourra corriger le problème en convertissant la valeur primitive en sont équivalent objet avec un constructeur (ici {{jsxref("String")}} pour .
 
 ```js example-good
-'use strict';
+"use strict";
 
 var foo = new String("my string");
 foo.bar = {};

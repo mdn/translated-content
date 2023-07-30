@@ -11,7 +11,7 @@ translation_of: Web/API/Navigator/connection
 ## Syntaxe
 
 ```js
-connexionInfo = navigator.connection
+connexionInfo = navigator.connection;
 ```
 
 ## Spécifications

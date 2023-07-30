@@ -214,7 +214,7 @@ slug: Web/HTML/Element/button
 
 ### Firefox
 
-Firefox will add a small dotted border on a focused button. This border is declared through CSS in the browser stylesheet, but you can override it to add your own focused style using `<a href="/en-US/docs/Web/CSS/::-moz-focus-inner">button::-moz-focus-inner { }</a>`.
+Firefox will add a small dotted border on a focused button. This border is declared through CSS in the browser stylesheet, but you can override it to add your own focused style using `<a href="/ko/docs/Web/CSS/::-moz-focus-inner">button::-moz-focus-inner { }</a>`.
 
 If overridden, it is important to **ensure that the state change when focus is moved to the button is high enough** that people experiencing low vision conditions will be able to perceive it.
 

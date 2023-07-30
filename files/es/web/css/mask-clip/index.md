@@ -36,8 +36,8 @@ donde:
 
 ```css
 div {
-    -webkit-mask-image: url('images/mask.png');
-    -webkit-mask-clip: padding;
+  -webkit-mask-image: url("images/mask.png");
+  -webkit-mask-clip: padding;
 }
 ```
 

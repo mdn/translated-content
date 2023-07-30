@@ -13,9 +13,9 @@ Notez que l'URL de l'onglet peut ne pas avoir sa valeur finale au moment où cet
 ## Syntaxe
 
 ```js
-browser.tabs.onCreated.addListener(callback)
-browser.tabs.onCreated.removeListener(listener)
-browser.tabs.onCreated.hasListener(listener)
+browser.tabs.onCreated.addListener(callback);
+browser.tabs.onCreated.removeListener(listener);
+browser.tabs.onCreated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

@@ -88,7 +88,7 @@ div {
 
 ```html
 <div class="content-box">Content box</div>
-<br>
+<br />
 <div class="border-box">Border box</div>
 ```
 

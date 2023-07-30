@@ -18,7 +18,7 @@ var isPressed = navigator.getGamepads()[0].pressed;
 ```js
 var gp = navigator.getGamepads()[0]; // 获取第一个控制器对象
 
-if(gp.buttons[0].pressed == true) {
+if (gp.buttons[0].pressed == true) {
   // 响应按钮按下
 }
 ```

@@ -1,5 +1,5 @@
 ---
-title: 'Window: vrdisplayconnect event'
+title: "Window: vrdisplayconnect event"
 slug: Web/API/Window/vrdisplayconnect_event
 translation_of: Web/API/Window/vrdisplayconnect_event
 ---
@@ -40,8 +40,8 @@ L'événement **`vrdisplayconnect`** de l'[API WebVR](/fr/docs/Web/API/WebVR_API
 Vous pouvez utiliser l'événement `vrdisplayconnect` dans une méthode [`addEventListener`](/fr/docs/Web/API/EventTarget/addEventListener) :
 
 ```js
-window.addEventListener('vrdisplayconnect', function() {
-  info.textContent = 'Affichage connecté.';
+window.addEventListener("vrdisplayconnect", function () {
+  info.textContent = "Affichage connecté.";
   reportDisplays();
 });
 ```
@@ -49,8 +49,8 @@ window.addEventListener('vrdisplayconnect', function() {
 Ou utilisez la propriété du gestionnaire d'événements [`onvrdisplayconnect`](/fr/docs/Web/API/Window/onvrdisplayconnect) :
 
 ```js
-window.onvrdisplayconnect = function() {
-  info.textContent = 'Affichage connecté.';
+window.onvrdisplayconnect = function () {
+  info.textContent = "Affichage connecté.";
   reportDisplays();
 };
 ```

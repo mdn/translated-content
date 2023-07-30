@@ -116,9 +116,9 @@ Ensuite, `drawScene()` peut être modifié pour utiliser réellement ces couleur
     type,
     normalize,
     stride,
-    offset);
-  gl.enableVertexAttribArray(
-    programInfo.attribLocations.vertexColor);
+    offset,
+  );
+  gl.enableVertexAttribArray(programInfo.attribLocations.vertexColor);
 }
 ```
 

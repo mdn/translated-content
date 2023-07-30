@@ -44,11 +44,11 @@ Boolean(value)
 ```js
 const bZero = new Boolean(0);
 const bNull = new Boolean(null);
-const bEmptyString = new Boolean('');
+const bEmptyString = new Boolean("");
 const bfalse = new Boolean(false);
 
-typeof bfalse // "object"
-Boolean(bfalse) // true
+typeof bfalse; // "object"
+Boolean(bfalse); // true
 ```
 
 请注意，用 `Boolean()` 将 `Boolean` 对象转换为原始值的结果总是 `true`，即使该对象的值为 `false`。因此，总是建议避免构造 `Boolean` 包装对象。
@@ -58,16 +58,16 @@ Boolean(bfalse) // true
 ```js
 const bfalse = new Boolean(false);
 
-bfalse.valueOf() // false
+bfalse.valueOf(); // false
 ```
 
 ### 使用初始值 true 创建 Boolean 对象
 
 ```js
 const btrue = new Boolean(true);
-const btrueString = new Boolean('true');
-const bfalseString = new Boolean('false');
-const bSuLin = new Boolean('Su Lin');
+const btrueString = new Boolean("true");
+const bfalseString = new Boolean("false");
+const bSuLin = new Boolean("Su Lin");
 const bArrayProto = new Boolean([]);
 const bObjProto = new Boolean({});
 ```

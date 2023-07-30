@@ -61,22 +61,25 @@ Vamos dar uma olhada em um simples exemplo para explicar o que nós queremos diz
 ```
 
 ```css hidden
-button { margin: 10px };
+button {
+  margin: 10px;
+}
 ```
 
 O JavaScript seria algo como:
 
 ```js
-var btn = document.querySelector('button');
+var btn = document.querySelector("button");
 
 function random(number) {
-  return Math.floor(Math.random()*(number+1));
+  return Math.floor(Math.random() * (number + 1));
 }
 
-btn.onclick = function() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+btn.onclick = function () {
+  var rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
-}
+};
 ```
 
 Nesse código, nós guardamos uma referência ao botão dentro de uma variável chamada `btn`, usando a função {{domxref("Document.querySelector()")}}. Também definimos uma função que retorna um número aleatório. A terceira parte do código é o manipulador de eventos. A variável `btn` aponta para um elemento `<button>`, e esse tipo de objeto tem um número de eventos que podem ser disparados nele, assim sendo, manipuladores de eventos estão disponíveis.
@@ -106,12 +109,13 @@ Há várias maneiras diferentes de adicionar código de ouvinte de evento a pág
 Essas são as propriedades que existem para conter o código do manipulador de eventos que vimos com mais frequência durante o curso. Voltando ao exemplo acima:
 
 ```js
-var btn = document.querySelector('button');
+var btn = document.querySelector("button");
 
-btn.onclick = function() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+btn.onclick = function () {
+  var rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
-}
+};
 ```
 
 A propriedade [`onclick`](/pt-BR/docs/Web/API/GlobalEventHandlers/onclick) é a propriedade do manipulador de eventos que está sendo usada nesta situação. É essencialmente uma propriedade como qualquer outra disponível no botão (por exemplo, [`btn.textContent`](/pt-BR/docs/Web/API/Node/textContent), ou [`btn.style`](/pt-BR/docs/Web/API/HTMLElement/style)), mas é um tipo especial — quando você configura para ser igual a algum código, esse código será executado quando o evento é acionado no botão.
@@ -119,10 +123,11 @@ A propriedade [`onclick`](/pt-BR/docs/Web/API/GlobalEventHandlers/onclick) é a 
 Você também pode definir a propriedade handler para ser igual a um nome de função nomeado (como vimos em [Construa sua própria função](/pt-BR/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)). O seguinte funcionaria da mesma forma:
 
 ```js
-var btn = document.querySelector('button');
+var btn = document.querySelector("button");
 
 function bgChange() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  var rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
 }
 
@@ -150,7 +155,8 @@ Você também pode ver um padrão como este em seu código:
 
 ```js
 function bgChange() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  var rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
 }
 ```
@@ -160,7 +166,9 @@ function bgChange() {
 O método mais antigo de registrar manipuladores de eventos encontrados na Web envolveu **atributos HTML de manipulador de eventos** (também conhecidos como **manipuladores de eventos inline**) como o mostrado acima — o valor do atributo é literalmente o código JavaScript que você deseja executar quando o evento ocorre. O exemplo acima chama uma função definida dentro de um elemento {{htmlelement("script")}} na mesma página, mas você também pode inserir JavaScript diretamente dentro do atributo, por exemplo:
 
 ```html
-<button onclick="alert('Hello, this is my old-fashioned event handler!');">Press me</button>
+<button onclick="alert('Hello, this is my old-fashioned event handler!');">
+  Press me
+</button>
 ```
 
 Você encontrará equivalentes de atributo HTML para muitas das propriedades do manipulador de eventos; no entanto, você não deve usá-los — eles são considerados uma prática ruim. Pode parecer fácil usar um atributo manipulador de eventos se você estiver apenas fazendo algo realmente rápido, mas eles se tornam rapidamente incontroláveis e ineficientes.
@@ -170,7 +178,7 @@ Para começar, não é uma boa ideia misturar o seu HTML e o seu JavaScript, poi
 Mesmo em um único arquivo, os manipuladores de eventos in-line não são uma boa ideia. Um botão está OK, mas e se você tivesse 100 botões? Você teria que adicionar 100 atributos ao arquivo; isso rapidamente se tornaria um pesadelo de manutenção. Com JavaScript, você poderia facilmente adicionar uma função de manipulador de eventos a todos os botões da página, não importando quantos fossem, usando algo assim:
 
 ```js
-var buttons = document.querySelectorAll('button');
+var buttons = document.querySelectorAll("button");
 
 for (var i = 0; i < buttons.length; i++) {
   buttons[i].onclick = bgChange;
@@ -184,14 +192,15 @@ for (var i = 0; i < buttons.length; i++) {
 O mais novo tipo de mecanismo de evento é definido na Especificação de Eventos Nível 2 do [Document Object Model (DOM)](https://www.w3.org/TR/DOM-Level-2-Events/), que fornece aos navegadores uma nova função — [`addEventListener()`](/pt-BR/docs/Web/API/EventTarget/addEventListener). Isso funciona de maneira semelhante às propriedades do manipulador de eventos, mas a sintaxe é obviamente diferente. Poderíamos reescrever nosso exemplo de cor aleatória para ficar assim:
 
 ```js
-var btn = document.querySelector('button');
+var btn = document.querySelector("button");
 
 function bgChange() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  var rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
 }
 
-btn.addEventListener('click', bgChange);
+btn.addEventListener("click", bgChange);
 ```
 
 > **Nota:** Você pode encontrar o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html) para este exemplo no GitHub (também [veja isso executando em tempo real](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)).
@@ -199,8 +208,9 @@ btn.addEventListener('click', bgChange);
 Dentro da função `addEventListener()`, especificamos dois parâmetros — o nome do evento para o qual queremos registrar esse manipulador, e o código que compreende a função do manipulador que queremos executar em resposta a ele. Note que é perfeitamente apropriado colocar todo o código dentro da função `addEventListener()`, em uma função anônima, assim:
 
 ```js
-btn.addEventListener('click', function() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+btn.addEventListener("click", function () {
+  var rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
 });
 ```
@@ -208,7 +218,7 @@ btn.addEventListener('click', function() {
 Esse mecanismo tem algumas vantagens sobre os mecanismos mais antigos discutidos anteriormente. Para começar, há uma função de contraparte, [`removeEventListener()`](/pt-BR/docs/Web/API/EventTarget/removeEventListener), que remove um listener adicionado anteriormente. Por exemplo, isso removeria o listener definido no primeiro bloco de código nesta seção:
 
 ```js
-btn.removeEventListener('click', bgChange);
+btn.removeEventListener("click", bgChange);
 ```
 
 Isso não é significativo para programas pequenos e simples, mas para programas maiores e mais complexos, pode melhorar a eficiência para limpar antigos manipuladores de eventos não utilizados. Além disso, por exemplo, isso permite que você tenha o mesmo botão executando ações diferentes em circunstâncias diferentes — tudo o que você precisa fazer é adicionar / remover manipuladores de eventos conforme apropriado.
@@ -223,8 +233,8 @@ myElement.onclick = functionB;
 Como a segunda linha sobrescreveria o valor de `onclick` definido pelo primeiro. Isso funcionaria, no entanto:
 
 ```js
-myElement.addEventListener('click', functionA);
-myElement.addEventListener('click', functionB);
+myElement.addEventListener("click", functionA);
+myElement.addEventListener("click", functionB);
 ```
 
 Ambas as funções serão executadas quando o elemento for clicado.
@@ -260,12 +270,13 @@ Nesta seção, abordaremos brevemente alguns conceitos avançados que são relev
 
 ```js
 function bgChange(e) {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  var rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   e.target.style.backgroundColor = rndCol;
   console.log(e);
 }
 
-btn.addEventListener('click', bgChange);
+btn.addEventListener("click", bgChange);
 ```
 
 > **Nota:** Você pode encontrar o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) para este exemplo no GitHub (também [veja isso executando em tempo real](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
@@ -277,22 +288,22 @@ Aqui você pode ver que estamos incluindo um objeto de evento, **e**, na funçã
 `e.target` é incrivelmente útil quando você deseja definir o mesmo manipulador de eventos em vários elementos e fazer algo com todos eles quando ocorre um evento neles. Você pode, por exemplo, ter um conjunto de 16 blocos que desaparecem quando são clicados. É útil poder sempre apenas definir a coisa para desaparecer como `e.target`, ao invés de ter que selecioná-lo de alguma forma mais difícil. No exemplo a seguir (veja [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html) para o código-fonte completo; veja também a [execução ao vivo](http://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) aqui), criamos 16 elementos {{htmlelement("div")}} usando JavaScript. Em seguida, selecionamos todos eles usando {{domxref("document.querySelectorAll()")}} e, em seguida, percorremos cada um deles, adicionando um manipulador onclick a cada um, de modo que uma cor aleatória seja aplicada a cada um deles quando clicados:
 
 ```js
-var divs = document.querySelectorAll('div');
+var divs = document.querySelectorAll("div");
 
 for (var i = 0; i < divs.length; i++) {
-  divs[i].onclick = function(e) {
+  divs[i].onclick = function (e) {
     e.target.style.backgroundColor = bgChange();
-  }
+  };
 }
 ```
 
 A saída é a seguinte (tente clicar em cima — divirta-se):
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Useful event target example</title>
     <style>
       div {
@@ -306,25 +317,26 @@ A saída é a seguinte (tente clicar em cima — divirta-se):
   <body>
     <script>
       for (var i = 1; i <= 16; i++) {
-        var myDiv = document.createElement('div');
+        var myDiv = document.createElement("div");
         document.body.appendChild(myDiv);
       }
 
       function random(number) {
-        return Math.floor(Math.random()*number);
+        return Math.floor(Math.random() * number);
       }
 
       function bgChange() {
-        var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        var rndCol =
+          "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
         return rndCol;
       }
 
-      var divs = document.querySelectorAll('div');
+      var divs = document.querySelectorAll("div");
 
       for (var i = 0; i < divs.length; i++) {
-        divs[i].onclick = function(e) {
+        divs[i].onclick = function (e) {
           e.target.style.backgroundColor = bgChange();
-        }
+        };
       }
     </script>
   </body>
@@ -347,14 +359,14 @@ Primeiro, um formulário HTML simples que requer que você digite seu primeiro e
 <form>
   <div>
     <label for="fname">First name: </label>
-    <input id="fname" type="text">
+    <input id="fname" type="text" />
   </div>
   <div>
     <label for="lname">Last name: </label>
-    <input id="lname" type="text">
+    <input id="lname" type="text" />
   </div>
   <div>
-     <input id="submit" type="submit">
+    <input id="submit" type="submit" />
   </div>
 </form>
 <p></p>
@@ -369,18 +381,18 @@ div {
 Agora algum JavaScript — aqui nós implementamos uma verificação muito simples dentro de um manipulador de evento onsubmit (o evento submit é disparado em um formulário quando é enviado) que testa se os campos de texto estão vazios. Se estiverem, chamamos a função [`preventDefault()`](/pt-BR/docs/Web/API/Event/preventDefault) no objeto de evento — que interrompe o envio do formulário — e, em seguida, exibir uma mensagem de erro no parágrafo abaixo do nosso formulário para informar ao usuário o que está errado:
 
 ```js
-var form = document.querySelector('form');
-var fname = document.getElementById('fname');
-var lname = document.getElementById('lname');
-var submit = document.getElementById('submit');
-var para = document.querySelector('p');
+var form = document.querySelector("form");
+var fname = document.getElementById("fname");
+var lname = document.getElementById("lname");
+var submit = document.getElementById("submit");
+var para = document.querySelector("p");
 
-form.onsubmit = function(e) {
-  if (fname.value === '' || lname.value === '') {
+form.onsubmit = function (e) {
+  if (fname.value === "" || lname.value === "") {
     e.preventDefault();
-    para.textContent = 'You need to fill in both names!';
+    para.textContent = "You need to fill in both names!";
   }
-}
+};
 ```
 
 Obviamente, isso é uma validação de forma bastante fraca — ela não impediria o usuário de validar o formulário com espaços ou números inseridos nos campos, por exemplo — mas está tudo bem, por exemplo. A saída é a seguinte:
@@ -394,21 +406,25 @@ Obviamente, isso é uma validação de forma bastante fraca — ela não impedir
 O assunto final a ser abordado aqui é algo que você não encontrará com frequência, mas pode ser uma dor real se você não entender. Borbulhamento e captura de eventos são dois mecanismos que descrevem o que acontece quando dois manipuladores do mesmo tipo de evento são ativados em um elemento. Vamos dar uma olhada em um exemplo para facilitar isso — abra o exemplo show-video-box.html em uma nova guia (e o [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html) em outra guia). Ele também está disponível ao vivo abaixo:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Show video box example</title>
     <style>
       div {
         position: absolute;
         top: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         width: 480px;
         height: 380px;
         border-radius: 10px;
         background-color: #eee;
-        background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.1));
+        background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.1)
+        );
       }
 
       .hidden {
@@ -424,7 +440,6 @@ O assunto final a ser abordado aqui é algo que você não encontrará com frequ
         width: 400px;
         margin: 40px auto;
       }
-
     </style>
   </head>
   <body>
@@ -432,36 +447,41 @@ O assunto final a ser abordado aqui é algo que você não encontrará com frequ
 
     <div class="hidden">
       <video>
-        <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4" type="video/mp4">
-        <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm" type="video/webm">
-        <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+        <source
+          src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4"
+          type="video/mp4" />
+        <source
+          src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm"
+          type="video/webm" />
+        <p>
+          Your browser doesn't support HTML5 video. Here is a
+          <a href="rabbit320.mp4">link to the video</a> instead.
+        </p>
       </video>
     </div>
 
     <script>
+      var btn = document.querySelector("button");
+      var videoBox = document.querySelector("div");
+      var video = document.querySelector("video");
 
-      var btn = document.querySelector('button');
-      var videoBox = document.querySelector('div');
-      var video = document.querySelector('video');
-
-      btn.onclick = function() {
+      btn.onclick = function () {
         displayVideo();
-      }
+      };
 
       function displayVideo() {
-        if(videoBox.getAttribute('class') === 'hidden') {
-          videoBox.setAttribute('class','showing');
+        if (videoBox.getAttribute("class") === "hidden") {
+          videoBox.setAttribute("class", "showing");
         }
       }
 
-      videoBox.addEventListener('click',function() {
-        videoBox.setAttribute('class','hidden');
+      videoBox.addEventListener("click", function () {
+        videoBox.setAttribute("class", "hidden");
       });
 
-      video.addEventListener('click',function() {
+      video.addEventListener("click", function () {
         video.play();
       });
-
     </script>
   </body>
 </html>
@@ -476,9 +496,12 @@ Este é um exemplo bastante simples que mostra e oculta um {{htmlelement("div")}
 
 <div class="hidden">
   <video>
-    <source src="rabbit320.mp4" type="video/mp4">
-    <source src="rabbit320.webm" type="video/webm">
-    <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+    <source src="rabbit320.mp4" type="video/mp4" />
+    <source src="rabbit320.webm" type="video/webm" />
+    <p>
+      Your browser doesn't support HTML5 video. Here is a
+      <a href="rabbit320.mp4">link to the video</a> instead.
+    </p>
   </video>
 </div>
 ```
@@ -486,9 +509,9 @@ Este é um exemplo bastante simples que mostra e oculta um {{htmlelement("div")}
 Quando o {{htmlelement("button")}} é clicado, o vídeo é exibido, alterando o atributo de classe em `<div>` de `hidden` para `showing` (o CSS do exemplo contém essas duas classes, que posicione a caixa fora da tela e na tela, respectivamente):
 
 ```js
-btn.onclick = function() {
-  videoBox.setAttribute('class', 'showing');
-}
+btn.onclick = function () {
+  videoBox.setAttribute("class", "showing");
+};
 ```
 
 Em seguida, adicionamos mais alguns manipuladores de eventos `onclick` — o primeiro ao `<div>` e o segundo ao `<video>`. A ideia é que, quando a área do `<div>` fora do vídeo for clicada, a caixa deve ser ocultada novamente; quando o vídeo em si é clicado, o vídeo deve começar a tocar.
@@ -535,7 +558,7 @@ Este é um comportamento irritante, mas existe uma maneira de corrigir isso! O o
 Podemos, portanto, consertar nosso problema atual alterando a segunda função do manipulador no bloco de códigos anterior para isto:
 
 ```js
-video.onclick = function(e) {
+video.onclick = function (e) {
   e.stopPropagation();
   video.play();
 };

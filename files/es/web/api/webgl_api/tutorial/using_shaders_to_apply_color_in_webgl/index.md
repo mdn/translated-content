@@ -32,20 +32,20 @@ El código comienza por crear una matriz JavaScript que contenga cuatro vectores
 Para designar los colores a utilizar, el vertex shader necesita ser actualizado para extraer el color apropiado del buffer de color:
 
 ```html
-    <script id="shader-vs" type="x-shader/x-vertex">
-      attribute vec3 aVertexPosition;
-      attribute vec4 aVertexColor;
+<script id="shader-vs" type="x-shader/x-vertex">
+  attribute vec3 aVertexPosition;
+  attribute vec4 aVertexColor;
 
-      uniform mat4 uMVMatrix;
-      uniform mat4 uPMatrix;
+  uniform mat4 uMVMatrix;
+  uniform mat4 uPMatrix;
 
-      varying lowp vec4 vColor;
+  varying lowp vec4 vColor;
 
-      void main(void) {
-        gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
-        vColor = aVertexColor;
-      }
-    </script>
+  void main(void) {
+    gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+    vColor = aVertexColor;
+  }
+</script>
 ```
 
 La diferencia principal aquí es que, por cada vértice, vamos a establecer su color usando `varying` en el fragmento de sombreado.
@@ -55,23 +55,23 @@ La diferencia principal aquí es que, por cada vértice, vamos a establecer su c
 Anteriormente utilizábamos el fragment shader como un actualizador:
 
 ```html
-    <script id="shader-fs" type="x-shader/x-fragment">
-      void main(void) {
-        gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
-      }
-    </script>
+<script id="shader-fs" type="x-shader/x-fragment">
+  void main(void) {
+    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+  }
+</script>
 ```
 
 Según vayamos tomando el color interpolado para cada pixel, nosotros simplemente necesitamos cambiar esto para obtener el valor de la variable vColor:
 
 ```html
-    <script id="shader-fs" type="x-shader/x-fragment">
-     varying lowp vec4 vColor;
+<script id="shader-fs" type="x-shader/x-fragment">
+  varying lowp vec4 vColor;
 
-      void main(void) {
-        gl_FragColor = vColor;
-      }
-    </script>
+   void main(void) {
+     gl_FragColor = vColor;
+   }
+</script>
 ```
 
 Es un cambio simple; cada fragmento simplemente recibe el color interpolado basado en su posición relativa a los vértices, en lugar que de un valor establecido.
@@ -81,8 +81,8 @@ Es un cambio simple; cada fragmento simplemente recibe el color interpolado basa
 Como siguiente, es necesario agregar código hacia la rutina `initShaders()` esto para inicializar el atributo de color para el shader program:
 
 ```js
-  vertexColorAttribute = gl.getAttribLocation(shaderProgram, "aVertexColor");
-  gl.enableVertexAttribArray(vertexColorAttribute);
+vertexColorAttribute = gl.getAttribLocation(shaderProgram, "aVertexColor");
+gl.enableVertexAttribArray(vertexColorAttribute);
 ```
 
 Then, drawScene() puede ser revisado para que utilice dichos colores cuando dibuje el cuadrado:

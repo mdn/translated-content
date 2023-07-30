@@ -13,7 +13,7 @@ La propriété accesseur **`RegExp[@@species]`** renvoie le constructeur `RegExp
 ## Syntaxe
 
 ```js
-RegExp[Symbol.species]
+RegExp[Symbol.species];
 ```
 
 ## Description
@@ -34,7 +34,9 @@ Pour les objets dérivés (par exemple, une classe `MaRegExp`), la valeur de `sp
 class MaRegExp extends RegExp {
   // On surcharge species pour renvoyer
   // le constructeur parent RegExp
-  static get [Symbol.species]() { return RegExp; }
+  static get [Symbol.species]() {
+    return RegExp;
+  }
 }
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial Django Parte 4: Django admin site'
+title: "Tutorial Django Parte 4: Django admin site"
 slug: Learn/Server-side/Django/Admin_site
 ---
 

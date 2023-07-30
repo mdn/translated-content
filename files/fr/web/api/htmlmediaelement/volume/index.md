@@ -21,7 +21,7 @@ Une valeur de type double (nombre à virgule) inclut entre 0 et 1, si elle vaut 
 ## Exemple
 
 ```js
-var obj = document.createElement('audio');
+var obj = document.createElement("audio");
 console.log(obj.volume); // 1
 obj.volume = 0.75;
 ```

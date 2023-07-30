@@ -29,8 +29,9 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.overrideDocumentColors.set({value: "always"}).
-  then(logResult);
+browser.browserSettings.overrideDocumentColors
+  .set({ value: "always" })
+  .then(logResult);
 ```
 
 {{WebExtExamples}}

@@ -18,10 +18,14 @@ node = treeWalker.parentNode();
 
 ```js
 var treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 var node = treeWalker.parentNode(); // returns null as there is no parent
 ```

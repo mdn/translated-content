@@ -12,8 +12,8 @@ Pour plus d'informations, voir [messagerie native](/fr/Add-ons/WebExtensions/Nat
 
 ```js
 var port = browser.runtime.connectNative(
-  application // string
-)
+  application, // string
+);
 ```
 
 ### Paramètres

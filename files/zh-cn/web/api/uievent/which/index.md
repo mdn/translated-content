@@ -21,40 +21,45 @@ var keyResult = event.which;
 
 ```html
 <html>
-<head>
-<title>charCode/keyCode/which example</title>
+  <head>
+    <title>charCode/keyCode/which example</title>
 
-<script type="text/javascript">
+    <script type="text/javascript">
+      function showKeyPress(evt) {
+        alert(
+          "onkeypress handler: \n" +
+            "keyCode property: " +
+            evt.keyCode +
+            "\n" +
+            "which property: " +
+            evt.which +
+            "\n" +
+            "charCode property: " +
+            evt.charCode +
+            "\n" +
+            "Character Key Pressed: " +
+            String.fromCharCode(evt.charCode) +
+            "\n",
+        );
+      }
 
-function showKeyPress(evt) {
-alert("onkeypress handler: \n"
-      + "keyCode property: " + evt.keyCode + "\n"
-      + "which property: " + evt.which + "\n"
-      + "charCode property: " + evt.charCode + "\n"
-      + "Character Key Pressed: "
-      + String.fromCharCode(evt.charCode) + "\n"
-     );
-}
+      function keyDown(evt) {
+        alert(
+          "onkeydown handler: \n" +
+            "keyCode property: " +
+            evt.keyCode +
+            "\n" +
+            "which property: " +
+            evt.which +
+            "\n",
+        );
+      }
+    </script>
+  </head>
 
-
-function keyDown(evt) {
-alert("onkeydown handler: \n"
-      + "keyCode property: " + evt.keyCode + "\n"
-      + "which property: " + evt.which + "\n"
-     );
-}
-
-</script>
-</head>
-
-<body
- onkeypress="showKeyPress(event);"
- onkeydown="keyDown(event);"
->
-
-<p>Please press any key.</p>
-
-</body>
+  <body onkeypress="showKeyPress(event);" onkeydown="keyDown(event);">
+    <p>Please press any key.</p>
+  </body>
 </html>
 ```
 

@@ -16,7 +16,7 @@ Les Hyperliens sont vraiment importants, ils sont ce qui fait du Web _une toile_
       <td>
         Être familiarisé avec les bases du HTML, traitées à la page
         <a
-          href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started"
+          href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Getting_started"
           >Commencer avec le HTML</a
         >
         et du formatage de texte HTML, décrit dans les
@@ -320,7 +320,7 @@ Voici un exemple incluant cc (carbon copy), bcc (blind cc), subject (sujet) et b
 </a>
 ```
 
-> **Note :** La valeur de chaque champ doit être codée à la façon d'une URL, c'est-à-dire que les caractères non-imprimables (les caractères "invisibles" tels que les tabulations, les retours chariot et les sauts de page) et les espaces doivent être [percent-escaped](http://en.wikipedia.org/wiki/Percent-encoding). Notez également l'utilisation du point d'interrogation (`?`) pour séparer l'URL principale des valeurs de champ et de l'esperluette (&) pour séparer chaque champ dans l'URL `mailto:`. C'est la notation standard des requêtes URL. Lire [La méthode GET](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires#La_méthode_GET) pour comprendre ce pourquoi la notation de requête URL est habituellement le plus souvent utilisée.
+> **Note :** La valeur de chaque champ doit être codée à la façon d'une URL, c'est-à-dire que les caractères non-imprimables (les caractères "invisibles" tels que les tabulations, les retours chariot et les sauts de page) et les espaces doivent être [percent-escaped](http://en.wikipedia.org/wiki/Percent-encoding). Notez également l'utilisation du point d'interrogation (`?`) pour séparer l'URL principale des valeurs de champ et de l'esperluette (&) pour séparer chaque champ dans l'URL `mailto:`. C'est la notation standard des requêtes URL. Lire [La méthode GET](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires#La_méthode_GET) pour comprendre ce pourquoi la notation de requête URL est habituellement le plus souvent utilisée.
 
 Voici quelques autres exemples d'URL `mailto` :
 

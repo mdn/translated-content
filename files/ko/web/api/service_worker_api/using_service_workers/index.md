@@ -61,7 +61,7 @@ Let’s compare a traditional synchronous callback structure to its asynchronous
 try {
   var value = myFunction();
   console.log(value);
-} catch(err) {
+} catch (err) {
   console.log(err);
 }
 ```
@@ -69,11 +69,13 @@ try {
 #### async
 
 ```js
-myFunction().then(function(value) {
-  console.log(value);
-}).catch(function(err) {
-  console.log(err);
-});
+myFunction()
+  .then(function (value) {
+    console.log(value);
+  })
+  .catch(function (err) {
+    console.log(err);
+  });
 ```
 
 In the first example, we have to wait for `myFunction()` to run and return `value` before any more of the code can execute. In the second example, `myFunction()` returns a promise for `value`, then the rest of the code can carry on running. When the promise resolves, the code inside `then` will be run, asynchronously.
@@ -86,21 +88,25 @@ Instead, we could build our own promise to handle this kind of case. (See our [P
 
 ```js
 function imgLoad(url) {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     var request = new XMLHttpRequest();
-    request.open('GET', url);
-    request.responseType = 'blob';
+    request.open("GET", url);
+    request.responseType = "blob";
 
-    request.onload = function() {
+    request.onload = function () {
       if (request.status == 200) {
         resolve(request.response);
       } else {
-        reject(Error('Image didn\'t load successfully; error code:' + request.statusText));
+        reject(
+          Error(
+            "Image didn't load successfully; error code:" + request.statusText,
+          ),
+        );
       }
     };
 
-    request.onerror = function() {
-      reject(Error('There was a network error.'));
+    request.onerror = function () {
+      reject(Error("There was a network error."));
     };
 
     request.send();
@@ -113,16 +119,19 @@ We return a new promise using the `Promise()` constructor, which takes as an arg
 When we come to call the `imgLoad()` function, we call it with the url to the image we want to load, as we might expect, but the rest of the code is a little different:
 
 ```js
-var body = document.querySelector('body');
+var body = document.querySelector("body");
 var myImage = new Image();
 
-imgLoad('myLittleVader.jpg').then(function(response) {
-  var imageURL = window.URL.createObjectURL(response);
-  myImage.src = imageURL;
-  body.appendChild(myImage);
-}, function(Error) {
-  console.log(Error);
-});
+imgLoad("myLittleVader.jpg").then(
+  function (response) {
+    var imageURL = window.URL.createObjectURL(response);
+    myImage.src = imageURL;
+    body.appendChild(myImage);
+  },
+  function (Error) {
+    console.log(Error);
+  },
+);
 ```
 
 On to the end of the function call, we chain the promise `then()` method, which contains two functions — the first one is executed when the promise successfully resolves, and the second is called when the promise is rejected. In the resolved case, we display the image inside `myImage` and append it to the body (it’s argument is the `request.response` contained inside the promise’s `resolve` method); in the rejected case we return an error to the console.
@@ -155,15 +164,17 @@ Now let’s get on to service workers!
 The first block of code in our app’s JavaScript file — `app.js` — is as follows. This is our entry point into using service workers.
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw-test/sw.js', {scope: '/sw-test/'})
-  .then(function(reg) {
-    // registration worked
-    console.log('Registration succeeded. Scope is ' + reg.scope);
-  }).catch(function(error) {
-    // registration failed
-    console.log('Registration failed with ' + error);
-  });
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/sw-test/sw.js", { scope: "/sw-test/" })
+    .then(function (reg) {
+      // registration worked
+      console.log("Registration succeeded. Scope is " + reg.scope);
+    })
+    .catch(function (error) {
+      // registration failed
+      console.log("Registration failed with " + error);
+    });
 }
 ```
 
@@ -209,22 +220,22 @@ The install event is fired when an install is successfully completed. The instal
 Let’s start this section by looking at a code sample — this is the [first block you’ll find in our service worker](https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L18):
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener("install", function (event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
+    caches.open("v1").then(function (cache) {
       return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
+        "/sw-test/",
+        "/sw-test/index.html",
+        "/sw-test/style.css",
+        "/sw-test/app.js",
+        "/sw-test/image-list.js",
+        "/sw-test/star-wars-logo.jpg",
+        "/sw-test/gallery/",
+        "/sw-test/gallery/bountyHunters.jpg",
+        "/sw-test/gallery/myLittleVader.jpg",
+        "/sw-test/gallery/snowTroopers.jpg",
       ]);
-    })
+    }),
   );
 });
 ```
@@ -249,20 +260,19 @@ A `fetch` event fires every time any resource controlled by a service worker is 
 You can attach a `fetch` event listener to the service worker, then call the `respondWith()` method on the event to hijack our HTTP responses and update them with your own magic.
 
 ```js
-this.addEventListener('fetch', function(event) {
-  event.respondWith(
+this.addEventListener("fetch", function (event) {
+  event
+    .respondWith
     // magic goes here
-  );
+    ();
 });
 ```
 
 We could start by simply responding with the resource whose url matches that of the network request, in each case:
 
 ```js
-this.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request)
-  );
+this.addEventListener("fetch", function (event) {
+  event.respondWith(caches.match(event.request));
 });
 ```
 
@@ -272,38 +282,41 @@ Let’s look at a few other options we have when defining our magic (see our [Fe
 
 1. The `{{domxref("Response.Response","Response()")}}` constructor allows you to create a custom response. In this case, we are just returning a simple text string:
 
-    ```js
-    new Response('Hello from your friendly neighbourhood service worker!');
-    ```
+   ```js
+   new Response("Hello from your friendly neighbourhood service worker!");
+   ```
 
 2. This more complex `Response` below shows that you can optionally pass a set of headers in with your response, emulating standard HTTP response headers. Here we are just telling the browser what the content type of our synthetic response is:
 
-    ```js
-    new Response('<p>Hello from your friendly neighbourhood service worker!</p>', {
-      headers: { 'Content-Type': 'text/html' }
-    });
-    ```
+   ```js
+   new Response(
+     "<p>Hello from your friendly neighbourhood service worker!</p>",
+     {
+       headers: { "Content-Type": "text/html" },
+     },
+   );
+   ```
 
 3. If a match wasn’t found in the cache, you could tell the browser to simply {{domxref("GlobalFetch.fetch","fetch")}} the default network request for that resource, to get the new resource from the network if it is available:
 
-    ```js
-    fetch(event.request);
-    ```
+   ```js
+   fetch(event.request);
+   ```
 
 4. If a match wasn’t found in the cache, and the network isn’t available, you could just match the request with some kind of default fallback page as a response using {{domxref("CacheStorage.match","match()")}}, like this:
 
-    ```js
-    caches.match('/fallback.html');
-    ```
+   ```js
+   caches.match("/fallback.html");
+   ```
 
 5. You can retrieve a lot of information about each request by calling parameters of the {{domxref("Request")}} object returned by the {{domxref("FetchEvent")}}:
 
-    ```js
-    event.request.url
-    event.request.method
-    event.request.headers
-    event.request.body
-    ```
+   ```js
+   event.request.url;
+   event.request.method;
+   event.request.headers;
+   event.request.body;
+   ```
 
 ## Recovering failed requests
 
@@ -312,11 +325,11 @@ So `caches.match(event.request)` is great when there is a match in the service w
 Fortunately service workers’ promise-based structure makes it trivial to provide further options towards success. We could do this:
 
 ```js
-this.addEventListener('fetch', function(event) {
+this.addEventListener("fetch", function (event) {
   event.respondWith(
-    caches.match(event.request).then(function(response) {
+    caches.match(event.request).then(function (response) {
       return response || fetch(event.request);
-    })
+    }),
   );
 });
 ```
@@ -326,16 +339,19 @@ If the resources isn't in the cache, it is requested from the network.
 If we were being really clever, we would not only request the resource from the network; we would also save it into the cache so that later requests for that resource could be retrieved offline too! This would mean that if extra images were added to the Star Wars gallery, our app could automatically grab them and cache them. The following would do the trick:
 
 ```js
-this.addEventListener('fetch', function(event) {
+this.addEventListener("fetch", function (event) {
   event.respondWith(
-    caches.match(event.request).then(function(resp) {
-      return resp || fetch(event.request).then(function(response) {
-        return caches.open('v1').then(function(cache) {
-          cache.put(event.request, response.clone());
-          return response;
-        });
-      });
-    })
+    caches.match(event.request).then(function (resp) {
+      return (
+        resp ||
+        fetch(event.request).then(function (response) {
+          return caches.open("v1").then(function (cache) {
+            cache.put(event.request, response.clone());
+            return response;
+          });
+        })
+      );
+    }),
   );
 });
 ```
@@ -347,18 +363,24 @@ Cloning the response is necessary because request and response streams can only 
 The only trouble we have now is that if the request doesn’t match anything in the cache, and the network is not available, our request will still fail. Let’s provide a default fallback so that whatever happens, the user will at least get something:
 
 ```js
-this.addEventListener('fetch', function(event) {
+this.addEventListener("fetch", function (event) {
   event.respondWith(
-    caches.match(event.request).then(function(resp) {
-      return resp || fetch(event.request).then(function(response) {
-        caches.open('v1').then(function(cache) {
-          cache.put(event.request, response.clone());
-        });
-        return response;
-      });
-    }).catch(function() {
-      return caches.match('/sw-test/gallery/myLittleVader.jpg');
-    })
+    caches
+      .match(event.request)
+      .then(function (resp) {
+        return (
+          resp ||
+          fetch(event.request).then(function (response) {
+            caches.open("v1").then(function (cache) {
+              cache.put(event.request, response.clone());
+            });
+            return response;
+          })
+        );
+      })
+      .catch(function () {
+        return caches.match("/sw-test/gallery/myLittleVader.jpg");
+      }),
   );
 });
 ```
@@ -402,17 +424,19 @@ You also get an `activate` event. This is a generally used to do stuff that woul
 Promises passed into `waitUntil()` will block other events until completion, so you can rest assured that your clean-up operation will have completed by the time you get your first `fetch` event on the new cache.
 
 ```js
-this.addEventListener('activate', function(event) {
-  var cacheWhitelist = ['v2'];
+this.addEventListener("activate", function (event) {
+  var cacheWhitelist = ["v2"];
 
   event.waitUntil(
-    caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (cacheWhitelist.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      }));
-    })
+    caches.keys().then(function (keyList) {
+      return Promise.all(
+        keyList.map(function (key) {
+          if (cacheWhitelist.indexOf(key) === -1) {
+            return caches.delete(key);
+          }
+        }),
+      );
+    }),
   );
 });
 ```
@@ -423,7 +447,7 @@ Chrome has `chrome://inspect/#service-workers`, which shows current service work
 
 Firefox has also started to implement some useful tools related to service workers:
 
-- You can navigate to [`about:debugging`](/en-US/docs/Tools/about:debugging) to see what SWs are registered and update/remove them.
+- You can navigate to [`about:debugging`](/ko/docs/Tools/about:debugging) to see what SWs are registered and update/remove them.
 - When testing you can get around the HTTPS restriction by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the [Firefox Developer Tools settings](/ko/docs/Tools/Settings).
 
 > **참고:** You may serve your app from `http://localhost` (e.g. using `me@localhost:/my/app$ python -m SimpleHTTPServer`) for local development. See [Security considerations](https://www.w3.org/TR/service-workers/#security-considerations)

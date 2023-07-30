@@ -13,28 +13,26 @@ Pour utiliser les APIs plus puissantes, vous devez en [demander la permission](/
 Vous pouvez accéder aux APIs en utilisant l'espace de noms `browser` :
 
 ```js
-function afficherTabs (tabs) {
-  console.log(tabs)
+function afficherTabs(tabs) {
+  console.log(tabs);
 }
 
-browser.tabs.query({currentWindow: true}, afficherTabs)
+browser.tabs.query({ currentWindow: true }, afficherTabs);
 ```
 
 De nombreuses APIs sont asynchrones et retournent une {{JSxRef("Promise")}}:
 
 ```js
-function afficherCookie (c) {
-  console.log(c)
+function afficherCookie(c) {
+  console.log(c);
 }
 
-function afficherErreur (e) {
-  console.error(e)
+function afficherErreur(e) {
+  console.error(e);
 }
 
-let setCookie = browser.cookies.set(
-   {url: "https://developer.mozilla.org/"}
-);
-setCookie.then(afficherCookie, afficherErreur)
+let setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
+setCookie.then(afficherCookie, afficherErreur);
 ```
 
 Notez que ceci est différent du système d'extension de Google Chrome, qui utilise l'espace de noms `chrome` à la place de `browser`, et qui utilise des fonctions de rappel (callbacks) plutôt que des promesses pour les fonctions asynchrones. Afin de favoriser la portabilité, l'implémentation Firefox des WebExtensions prend en charge `chrome` et les fonctions de rappel ainsi que `browser` et les promesses. Mozilla a également écrit une prothèse d'émulation (polyfill) permettant au code qui utilise `browser` et les promesses de fonctionner sans modification dans Chrome: <https://github.com/mozilla/webextension-polyfill>.

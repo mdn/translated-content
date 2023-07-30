@@ -1,5 +1,5 @@
 ---
-title: 'Руководство часть 10: Тестирование приложений Django'
+title: "Руководство часть 10: Тестирование приложений Django"
 slug: Learn/Server-side/Django/Testing
 tags:
   - TDD

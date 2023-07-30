@@ -35,7 +35,9 @@ elementList = baseElement.querySelectorAll(selectors);
 
 ```js
 // dataset selectors
-const refs = [...document.querySelectorAll(`[data-name*="funnel-chart-percent"]`)];
+const refs = [
+  ...document.querySelectorAll(`[data-name*="funnel-chart-percent"]`),
+];
 
 // attribute selectors
 // const refs = [...document.querySelectorAll(`[class*="funnel-chart-percent"]`)];
@@ -47,20 +49,20 @@ const refs = [...document.querySelectorAll(`[data-name*="funnel-chart-percent"]`
 下面的例子返回了 HTML 文档中的 `body` 元素的所有 `p` 后代元素：
 
 ```js
-var matches = document.body.querySelectorAll('p');
+var matches = document.body.querySelectorAll("p");
 ```
 
 下面的例子返回了`id`为`'test`'的元素的所有`class 属性`为'`highlighted`'的所有 div 后代元素的`p`子元素：
 
 ```js
-var el = document.querySelector('#test');
-var matches = el.querySelectorAll('div.highlighted > p');
+var el = document.querySelector("#test");
+var matches = el.querySelectorAll("div.highlighted > p");
 ```
 
 下面的例子返回了 el 元素的后代元素中所有拥有`data-src`属性的`iframe`元素：
 
 ```js
-var matches = el.querySelectorAll('iframe[data-src]');
+var matches = el.querySelectorAll("iframe[data-src]");
 ```
 
 ## 附注

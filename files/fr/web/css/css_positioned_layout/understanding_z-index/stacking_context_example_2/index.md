@@ -52,7 +52,8 @@ span.bold {
   z-index: 10;
 }
 
-#div1,#div3 {
+#div1,
+#div3 {
   height: 80px;
   position: relative;
   border: 1px dashed #669966;
@@ -89,28 +90,24 @@ span.bold {
 ### HTML
 
 ```html
-<br/>
+<br />
 
 <div id="div1">
-  <br/><span class="bold">DIV #1</span>
-  <br/>position: relative;
+  <br /><span class="bold">DIV #1</span> <br />position: relative;
   <div id="div2">
-    <br/><span class="bold">DIV #2</span>
-    <br/>position: absolute;
-    <br/>z-index: 2;
+    <br /><span class="bold">DIV #2</span> <br />position: absolute;
+    <br />z-index: 2;
   </div>
 </div>
 
-<br/>
+<br />
 
 <div id="div3">
-  <br/><span class="bold">DIV #3</span>
-  <br/>position: relative;
-  <br/>z-index: 1;
+  <br /><span class="bold">DIV #3</span> <br />position: relative;
+  <br />z-index: 1;
   <div id="div4">
-    <br/><span class="bold">DIV #4</span>
-    <br/>position: absolute;
-    <br/>z-index: 10;
+    <br /><span class="bold">DIV #4</span> <br />position: absolute;
+    <br />z-index: 10;
   </div>
 </div>
 ```

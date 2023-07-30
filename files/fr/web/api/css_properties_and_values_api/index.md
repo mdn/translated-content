@@ -19,10 +19,10 @@ L'exemple suivant utilise {{domxref('CSS.registerProperty')}} en [JavaScript](/f
 
 ```js
 window.CSS.registerProperty({
-  name: '--ma-couleur',
-  syntax: '<color>',
+  name: "--ma-couleur",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 
@@ -30,7 +30,7 @@ Le même enregistrement peut se faire en [CSS](/fr/docs/Web/CSS) en utilisant la
 
 ```css
 @property --ma-couleur {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }

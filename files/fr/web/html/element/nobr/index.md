@@ -1,5 +1,5 @@
 ---
-title: '<nobr> : l''élément de non-rupture de texte (obsolète)'
+title: "<nobr> : l'élément de non-rupture de texte (obsolète)"
 slug: Web/HTML/Element/nobr
 translation_of: Web/HTML/Element/nobr
 ---

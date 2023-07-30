@@ -23,7 +23,11 @@ Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString).
 Dans cet exemple, la valeur de [`elementtiming`](/fr/docs/Web/HTML/Attributes/elementtiming) est `big-image`. L'appel à `entry.indentifier` renvoie donc la chaîne de caractères `big-image`.
 
 ```html
-<img src="image.jpg" alt="une belle image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="une belle image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js

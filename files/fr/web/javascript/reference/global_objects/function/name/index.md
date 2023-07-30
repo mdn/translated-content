@@ -28,7 +28,7 @@ faireUnTruc.name; // "faireUnTruc"
 Lorsqu'on crée une fonction avec `new Function(...)` ou simplement `Function(...)`, on crée uniquement des objets dont le nom est "anonymous".
 
 ```js
-(new Function).name; // "anonymous"
+new Function().name; // "anonymous"
 ```
 
 ### Inférence des noms de fonction
@@ -36,9 +36,9 @@ Lorsqu'on crée une fonction avec `new Function(...)` ou simplement `Function(..
 Les variables et les méthodes permettent d'inférer (c'est-à-dire de « deviner ») le nom des fonctions anonymes en fonction de leur position syntaxique (cette fonctionnalité est apparue avec ECMAScript 2015).
 
 ```js
-var f = function() {};
+var f = function () {};
 var objet = {
-  uneMéthode: function() {}
+  uneMéthode: function () {},
 };
 
 console.log(f.name); // "f"
@@ -49,11 +49,15 @@ On peut définir une fonction avec un nom grâce à une {{jsxref("Opérateurs/L_
 
 ```js
 var objet = {
-  uneMéthode: function objet_maMéthode() {}
+  uneMéthode: function objet_maMéthode() {},
 };
 console.log(objet.uneMéthode.name); // logs "objet_maMéthode"
 
-try { objet_maMéthode } catch(e) { console.log(e); }
+try {
+  objet_maMéthode;
+} catch (e) {
+  console.log(e);
+}
 // ReferenceError: objet_maMéthode is not defined
 ```
 
@@ -62,10 +66,10 @@ On ne peut pas changer le nom d'une fonction, cette propriété est uniquement e
 ```js
 var objet = {
   // anonyme
-  uneMéthode: function() {}
+  uneMéthode: function () {},
 };
 
-objet.uneMéthode.name = 'uneMéthode';
+objet.uneMéthode.name = "uneMéthode";
 console.log(object.uneMéthode.name); // une chaîne vide, uneMéthode est anonyme
 ```
 
@@ -75,7 +79,7 @@ Pour modifier le nom, on pourrait cependant utiliser la méthode {{jsxref("Objec
 
 ```js
 var o = {
-  toto(){}
+  toto() {},
 };
 o.toto.name; // "toto";
 ```
@@ -85,7 +89,7 @@ o.toto.name; // "toto";
 {{jsxref("Function.bind()")}} produit une fonction dont le nom sera la chaîne "bound " suivi du nom de la fonction.
 
 ```js
-function toto() {};
+function toto() {}
 toto.bind({}).name; // "bound toto"
 ```
 
@@ -95,8 +99,8 @@ Lorsqu'on utilise les propriétés d'accesseur [`get`](/fr/docs/Web/JavaScript/R
 
 ```js
 var o = {
-  get toto(){},
-  set toto(x){}
+  get toto() {},
+  set toto(x) {},
 };
 
 var descripteur = Object.getOwnPropertyDescriptor(o, "toto");
@@ -109,7 +113,7 @@ descripteur.set.name; // "set toto";
 On peut utiliser la notation `obj.constructor.name` pour vérifier la « classe » d'un objet (attention aux avertissements ci-après) :
 
 ```js
-function Toto() {}  // Syntaxe ES2015 : class Toto {}
+function Toto() {} // Syntaxe ES2015 : class Toto {}
 
 var instanceDeToto = new Toto();
 console.log(instanceDeToto.constructor.name); // affiche "Toto" dans la console
@@ -128,8 +132,8 @@ Avec `static name()`, `Toto.name` ne contient plus le nom de la classe mais une 
 
 ```js
 function Toto() {}
-Object.defineProperty(Toto, 'name', { writable: true });
-Toto.name = function() {};
+Object.defineProperty(Toto, "name", { writable: true });
+Toto.name = function () {};
 ```
 
 Il est donc parfois erroné de penser que `Function.name` pointe toujours vers le nom de la classe.
@@ -142,8 +146,8 @@ Si un symbole ({{jsxref("Symbol")}}) est utilisé comme nom d'une fonction et qu
 var sym1 = Symbol("Toto");
 var sym2 = Symbol();
 var o = {
-  [sym1]: function(){},
-  [sym2]: function(){}
+  [sym1]: function () {},
+  [sym2]: function () {},
 };
 
 o[sym1].name; // "[Toto]"
@@ -155,25 +159,25 @@ o[sym2].name; // ""
 Attention à l'utilisation de `Function.name` lorsque le code source est transformé par certains outils. En effet, ceux-ci réduisent généralement la taille d'un programme en compressant les espaces et en modifiant parfois les noms de variables. Ainsi, un fragment de code comme :
 
 ```js
-function Toto() {};
+function Toto() {}
 var toto = new Toto();
 
-if (Toto.constructor.name === 'Toto') {
+if (Toto.constructor.name === "Toto") {
   console.log("'toto' est une instance de 'Toto'");
 } else {
-  console.log('Oups !');
+  console.log("Oups !");
 }
 ```
 
 pourrait être compressé en :
 
 ```js
-function a() {};
+function a() {}
 var b = new a();
-if (b.constructor.name === 'Toto') {
+if (b.constructor.name === "Toto") {
   console.log("'toto' est une instance de 'Toto'");
 } else {
-  console.log('Oups !');
+  console.log("Oups !");
 }
 ```
 

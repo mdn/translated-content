@@ -13,7 +13,7 @@ La méthode **`get()`** renvoie un élément précisé d'un objet `Map`. Si la v
 ## Syntaxe
 
 ```js
-maMap.get(clé)
+maMap.get(clé);
 ```
 
 ### Paramètres
@@ -31,8 +31,8 @@ L'élément associée à la clé donnée ou {{jsxref("undefined")}} si la clé n
 var maMap = new Map();
 maMap.set("truc", "toto");
 
-maMap.get("truc");     // Renvoie "toto".
-maMap.get("machin");   // Renvoie undefined.
+maMap.get("truc"); // Renvoie "toto".
+maMap.get("machin"); // Renvoie undefined.
 ```
 
 ## Spécifications

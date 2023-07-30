@@ -61,9 +61,8 @@ document.body.innerHTML = "";
 下面这个例子，首先获取文档当前的 HTML 标记并替换 `"<"` 字符为 HTML 实体 `"&lt;"`，从本质上来看，它是将 HTML 转换成原始文本，将其包裹在 {{HTMLElement("pre")}} 元素中。然后 `innerHTML` 的值被替换成新的字符串。最后，文档的内容被替换为页面显示源码。
 
 ```js
-document.documentElement.innerHTML = "<pre>" +
-         document.documentElement.innerHTML.replace(/</g,"&lt;") +
-            "</pre>";
+document.documentElement.innerHTML =
+  "<pre>" + document.documentElement.innerHTML.replace(/</g, "&lt;") + "</pre>";
 ```
 
 #### 其他：
@@ -126,8 +125,14 @@ log() 函数通过 {{jsxref("Date")}} 对象的 {{jsxref("Date.toLocaleTimeStrin
 
 ```js
 function logEvent(event) {
-  var msg = "Event <strong>" + event.type + "</strong> at <em>" +
-            event.clientX + ", " + event.clientY + "</em>";
+  var msg =
+    "Event <strong>" +
+    event.type +
+    "</strong> at <em>" +
+    event.clientX +
+    ", " +
+    event.clientY +
+    "</em>";
   log(msg);
 }
 ```

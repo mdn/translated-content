@@ -1,47 +1,43 @@
 ---
-title: URL.host
+title: "URL: host プロパティ"
+short-title: host
 slug: Web/API/URL/host
+l10n:
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
 {{ApiRef("URL API")}}
 
-{{domxref("URL")}} インターフェイスの **`host`** プロパティは、ホストを含む {{domxref("USVString")}} です。 ホストは、*ホスト名*の後に、URL の*ポート*が空でない場合、`':'`、および URL の*ポート*が続きます。
+**`host`** は {{domxref("URL")}} インターフェイスのプロパティで、ホスト、すなわち {{domxref("URL.hostname", "hostname")}} の入った文字列です。URL の {{glossary("port", "ポート番号")}} が空でない場合は、`':'`、および URL の {{domxref("URL.port", "port")}} が続きます。
 
 {{AvailableInWorkers}}
 
-## 構文
+## 値
 
-```
-string = object.host;
-object.host = string;
-```
-
-### 値
-
-{{domxref("USVString")}}。
+文字列です。
 
 ## 例
 
 ```js
-var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/host');
-var result = url.host // "developer.mozilla.org"
+let url = new URL("https://developer.mozilla.org/ja/docs/Web/API/URL/host");
+console.log(url.host); // "developer.mozilla.org"
 
-var url = new URL('https://developer.mozilla.org:443/en-US/docs/Web/API/URL/host');
-var result = url.host // "developer.mozilla.org"
-// 443 がスキームのデフォルトポートであるため、ポート番号は含まれません
+url = new URL("https://developer.mozilla.org:443/ja/docs/Web/API/URL/host");
+console.log(url.host); // "developer.mozilla.org"
+// 443 がスキームの既定のポートであるため、ポート番号は含まれません
 
-var url = new URL('https://developer.mozilla.org:4097/en-US/docs/Web/API/URL/host');
-var result = url.host // "developer.mozilla.org:4097"
+url = new URL("https://developer.mozilla.org:4097/ja/docs/Web/API/URL/host");
+console.log(url.host); // "developer.mozilla.org:4097"
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.URL.host")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{domxref("URL")}} インターフェイスに属します。
+- 所属先の {{domxref("URL")}} インターフェイス

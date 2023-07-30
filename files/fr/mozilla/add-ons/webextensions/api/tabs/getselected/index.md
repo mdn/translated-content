@@ -16,8 +16,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingSelected = browser.tabs.getSelected(
-  windowId           // optional integer
-)
+  windowId, // optional integer
+);
 ```
 
 ### Paramètres

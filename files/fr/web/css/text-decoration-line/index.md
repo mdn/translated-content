@@ -22,8 +22,8 @@ text-decoration-line: overline;
 text-decoration-line: line-through;
 
 /* Valeurs avec plusieurs mots-clés */
-text-decoration-line: underline overline;                /* On a deux décorations pour la ligne */
-text-decoration-line: overline underline line-through;   /* On a plusieurs décorations */
+text-decoration-line: underline overline; /* On a deux décorations pour la ligne */
+text-decoration-line: overline underline line-through; /* On a plusieurs décorations */
 
 /* Valeurs globales */
 text-decoration-line: inherit;

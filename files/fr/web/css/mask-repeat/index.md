@@ -134,19 +134,18 @@ Une ou plusieurs valeurs `<repeat-style>`, séparées par des virgules.
 .exemple {
   height: 100px;
   width: 100px;
-  background-color: rgb(128,128,128);
+  background-color: rgb(128, 128, 128);
   border: solid black 1px;
 
   /* Pour voir la bordure */
   -webkit-mask-clip: content;
   mask-clip: content;
 
-  -webkit-mask-image: url('https://developer.mozilla.org/static/img/favicon32.png');
-  mask-image: url('https://developer.mozilla.org/static/img/favicon32.png');
+  -webkit-mask-image: url("https://developer.mozilla.org/static/img/favicon32.png");
+  mask-image: url("https://developer.mozilla.org/static/img/favicon32.png");
 
   -webkit-mask-repeat: repeat-x;
   mask-repeat: repeat-x;
-
 }
 ```
 

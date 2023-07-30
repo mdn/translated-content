@@ -40,8 +40,8 @@ En nuestro [ejemplo Fetch Response](https://github.com/mdn/fetch-examples/tree/m
 
 ```js
 var miBlob = new Blob();
-var opciones = { "status" : 200 , "statusText" : "Flipante!" };
-var miRespuesta = new Response(miBlob,opciones);
+var opciones = { status: 200, statusText: "Flipante!" };
+var miRespuesta = new Response(miBlob, opciones);
 ```
 
 ## Especificaciones

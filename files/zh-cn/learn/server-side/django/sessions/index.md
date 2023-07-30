@@ -1,5 +1,5 @@
 ---
-title: 'Django 教程 7: 会话框架'
+title: "Django 教程 7: 会话框架"
 slug: Learn/Server-side/Django/Sessions
 ---
 
@@ -137,18 +137,21 @@ def index(request):
 
 将以下区块底部那一行，添加到主 HTML 模板（**/locallibrary/catalog/templates/index.html**）的“动态内容”部分底部，以显示上下文变量：
 
-```html
+```django
 <h2>Dynamic content</h2>
 
 <p>The library has the following record counts:</p>
 <ul>
-<li><strong>Books:</strong> \{{ num_books }}</li>
-<li><strong>Copies:</strong> \{{ num_instances }}</li>
-<li><strong>Copies available:</strong> \{{ num_instances_available }}</li>
-<li><strong>Authors:</strong> \{{ num_authors }}</li>
+  <li><strong>Books:</strong> \{{ num_books }}</li>
+  <li><strong>Copies:</strong> \{{ num_instances }}</li>
+  <li><strong>Copies available:</strong> \{{ num_instances_available }}</li>
+  <li><strong>Authors:</strong> \{{ num_authors }}</li>
 </ul>
 
-<p>You have visited this page \{{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+<p>
+  You have visited this page \{{ num_visits }}{% if num_visits == 1 %} time{%
+  else %} times{% endif %}.
+</p>
 ```
 
 保存更改，并重新启动测试服务器。每次刷新页面时，数字都应该更新。

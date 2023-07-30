@@ -24,9 +24,9 @@ La fonction suivante crée trois entrées de données dans le stockage local, pu
 
 ```js
 function peuplerLeStockage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'monChat.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "monChat.png");
 
   localStorage.clear();
 }

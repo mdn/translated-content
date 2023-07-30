@@ -14,8 +14,7 @@ La méthode **`handler.deleteProperty()`** est une trappe pour l'opérateur {{js
 
 ```js
 var p = new Proxy(cible, {
-  deleteProperty: function(cible, propriété) {
-  }
+  deleteProperty: function (cible, propriété) {},
 });
 ```
 
@@ -54,12 +53,15 @@ Si les invarians suivants ne sont pas respectés, le proxy renverra une exceptio
 Dans l'exemple qui suit, on intercepte les opérations de {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}.
 
 ```js
-var p = new Proxy({}, {
-  deleteProperty: function(cible, prop) {
-    console.log("appelée sur : " + prop);
-    return true;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    deleteProperty: function (cible, prop) {
+      console.log("appelée sur : " + prop);
+      return true;
+    },
+  },
+);
 
 delete p.a; // "appelée sur : a"
 ```

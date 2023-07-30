@@ -86,11 +86,11 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 ### Intégrer une vidéo YouTube
 
 ```html
-<object type="video/mp4"
-    data="https://www.youtube.com/watch?v=Sp9ZfSvpf7A"
-    width="1280"
-    height="720">
-</object>
+<object
+  type="video/mp4"
+  data="https://www.youtube.com/watch?v=Sp9ZfSvpf7A"
+  width="1280"
+  height="720"></object>
 ```
 
 ## Spécifications

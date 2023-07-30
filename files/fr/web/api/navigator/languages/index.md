@@ -20,8 +20,8 @@ Un tableau de chaînes de caractères.
 ## Exemples
 
 ```js
-navigator.language   // "en-US"
-navigator.languages  // ["en-US", "zh-CN", "ja-JP"]
+navigator.language; // "en-US"
+navigator.languages; // ["en-US", "zh-CN", "ja-JP"]
 ```
 
 ## Spécifications

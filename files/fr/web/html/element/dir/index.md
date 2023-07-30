@@ -1,5 +1,5 @@
 ---
-title: '<dir> : l''élément de répertoire'
+title: "<dir> : l'élément de répertoire"
 slug: Web/HTML/Element/dir
 translation_of: Web/HTML/Element/dir
 ---

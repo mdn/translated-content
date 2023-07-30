@@ -171,7 +171,7 @@ Cependant, ils peuvent communiquer en envoyant des messages. Une extrémité met
   </thead>
 </table>
 
-> **Note :** En ajoutant à cette méthode de communication, qui envoie des messages uniques, vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darri%C3%A8re-plan).
+> **Note :** En ajoutant à cette méthode de communication, qui envoie des messages uniques, vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan).
 
 Mettons à jour notre exemple pour montrer comment envoyer un message à partir du script en arrière-plan.
 

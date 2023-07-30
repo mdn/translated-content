@@ -18,7 +18,7 @@ document = element.ownerDocument;
 
 ## Exemple
 
-```html
+```js
 // étant donné un nœud "p", obtient le premier enfant HTML
 // de l'objet document
 var d = p.ownerDocument;

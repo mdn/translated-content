@@ -16,7 +16,7 @@ L'un des principaux buts de HTML est de structurer du texte et lui donner du sen
         <p>
           Connaître les bases du langage HTML, telles que traitées à la page
           <a
-            href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started"
+            href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Getting_started"
             >Commencer avec le HTML</a
           >.
         </p>
@@ -105,7 +105,7 @@ Ceci est dû au fait qu'il n'y a aucun élément indiquant la structure du conte
 
 - Les visiteurs d'une page web la parcourent pour trouver le contenu pertinent. Par conséquent, ils ne lisentsouvent que les titres (généralement [nous ne passons que très peu de temps sur une page web](http://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/)). S'ils ne trouvent pas le contenu souhaité en quelques secondes, ils seront probablement déçus et chercheront l'information souhaitée ailleurs.
 - Les moteurs de recherche, lorsqu'ils indexent votre page, prennent en considération les titres en tant que mots‑clés ce qui influe sur le classement de la page lors d'une recherche. Sans titre, une page aura un faible référencement (voir {{glossary("SEO")}} (Search Engine Optimization).
-- Les personnes malvoyantes ne pouvant lire votre page peuvent utiliser des [lecteurs d'écran](https://fr.wikipedia.org/wiki/Lecteur_d%27%C3%A9cran). Ces logiciels permettent d'accéder rapidement à une partie du texte. Pour cela, ils lisent les titres de votre document aux utilisateurs, leur permettant ainsi de trouver rapidement l'information dont ils ont besoin. Si les titres ne sont pas disponibles, les lecteurs d'écran lisent tout le document, le rendant peu accessible aux personnes avec un handicap visuel.
+- Les personnes malvoyantes ne pouvant lire votre page peuvent utiliser des [lecteurs d'écran](https://fr.wikipedia.org/wiki/Lecteur_d%27écran). Ces logiciels permettent d'accéder rapidement à une partie du texte. Pour cela, ils lisent les titres de votre document aux utilisateurs, leur permettant ainsi de trouver rapidement l'information dont ils ont besoin. Si les titres ne sont pas disponibles, les lecteurs d'écran lisent tout le document, le rendant peu accessible aux personnes avec un handicap visuel.
 - Pour composer un style de contenu avec le {{glossary("CSS")}} ou réaliser des choses intéressantes avec le {{glossary("JavaScript")}}, vous devez avoir des éléments enveloppant les contenus pertinents, ce qui permet ensuite de les cibler avec CSS/JavaScript.
 
 Il est donc nécessaire d'ajouter des balises de structuration du contenu.

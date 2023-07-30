@@ -23,7 +23,7 @@ Une chaîne de caractères qui contient le nom du fichier sans le chemin, par ex
 ### HTML
 
 ```html
-<input type="file" multiple onchange="processSelectedFiles(this)">
+<input type="file" multiple onchange="processSelectedFiles(this)" />
 
 <div id="output"></div>
 ```
@@ -43,7 +43,7 @@ function processSelectedFiles(fileInput) {
 ```
 
 ```css hidden
-#output{
+#output {
   padding: 0.5em 0;
   white-space: pre;
 }

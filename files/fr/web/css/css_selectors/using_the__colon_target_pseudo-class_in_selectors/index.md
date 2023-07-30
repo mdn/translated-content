@@ -40,11 +40,13 @@ Si le but est de créer un style commun qui s'appliquera à tous les éléments 
 
 ## Exemple
 
-Dans l'exemple suivant, cinq liens pointent chacun vers une portion du même document. Actionner le lien « Premier », par exemple, fera en sorte que le` <h1 id="un"> `devienne l'élément cible. Notons que le document pourrait défiler vers une nouvelle position, jusqu'à la cible du lien.
+Dans l'exemple suivant, cinq liens pointent chacun vers une portion du même document. Actionner le lien « Premier », par exemple, fera en sorte que le `<h1 id="un">` devienne l'élément cible. Notons que le document pourrait défiler vers une nouvelle position, jusqu'à la cible du lien.
 
 ```html
-<h4 id="un">...</h4> <p id="deux">...</p>
-<div id="trois">...</div> <a id="quatre">...</a> <em id="cinq">...</em>
+<h4 id="un">...</h4>
+<p id="deux">...</p>
+<div id="trois">...</div>
+<a id="quatre">...</a> <em id="cinq">...</em>
 
 <a href="#un">Premier</a>
 <a href="#deux">Deuxième</a>

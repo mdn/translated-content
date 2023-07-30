@@ -11,7 +11,8 @@ Retourne/définit la partie domaine de l'origine du document courant, telle qu'u
 ## Syntaxe
 
 ```js
-var chaineDomaine = document.domain; document.domain = chaine;
+var chaineDomaine = document.domain;
+document.domain = chaine;
 ```
 
 ## Exemple
@@ -21,8 +22,7 @@ var chaineDomaine = document.domain; document.domain = chaine;
 // ce script ferme la fenêtre
 var mauvaisDomaine = "www.example.xxx";
 
-if (document.domain == mauvaisDomaine )
-   window.close(); // juste un exemple - window.close() n'a parfois aucun effet.
+if (document.domain == mauvaisDomaine) window.close(); // juste un exemple - window.close() n'a parfois aucun effet.
 ```
 
 ```js

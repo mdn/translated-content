@@ -107,7 +107,10 @@ La valeur `auto` indique une bordure sur mesure selon l'interface du système d'
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### HTML

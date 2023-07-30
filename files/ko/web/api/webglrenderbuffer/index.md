@@ -2,6 +2,7 @@
 title: WebGLRenderbuffer
 slug: Web/API/WebGLRenderbuffer
 ---
+
 {{APIRef("WebGL")}}
 
 **WebGLRenderbuffer** 인터페이스는 [WebGL API](/ko/docs/Web/API/WebGL_API) 의 부분입니다. 그리고 이미지를 담거나 렌더링 연산의 소스나 타겟이 될 수 있는 버퍼를 말합니다.
@@ -20,8 +21,8 @@ slug: Web/API/WebGLRenderbuffer
 ### 렌더 버퍼 만들기
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var buffer = gl.createRenderbuffer();
 ```
 

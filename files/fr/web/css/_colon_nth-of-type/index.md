@@ -1,5 +1,5 @@
 ---
-title: ':nth-of-type'
+title: ":nth-of-type"
 slug: Web/CSS/:nth-of-type
 translation_of: Web/CSS/:nth-of-type
 ---
@@ -49,7 +49,7 @@ Dans cet exemple nous allons colorer un paragrapher sur deux avec des couleurs d
 
 ```css
 /* Paragraphes impairs */
-p:nth-of-type(2n+1) {
+p:nth-of-type(2n + 1) {
   color: red;
 }
 
