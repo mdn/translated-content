@@ -10,7 +10,9 @@ O atributo **`keyTimes`** representa uma lista de valores de tempo usados para c
 Four elements are using this attribute: {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, and {{SVGElement("animateTransform")}}
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -18,10 +20,18 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 120 120" xmlns="https://www.w3.org/2000/svg">
   <circle cx="60" cy="10" r="10">
-    <animate attributeName="cx" dur="4s" repeatCount="indefinite"
-        values="60 ; 110 ; 60 ; 10 ; 60" keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1"/>
-    <animate attributeName="cy" dur="4s" repeatCount="indefinite"
-        values="10 ; 60 ; 110 ; 60 ; 10" keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1"/>
+    <animate
+      attributeName="cx"
+      dur="4s"
+      repeatCount="indefinite"
+      values="60 ; 110 ; 60 ; 10 ; 60"
+      keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1" />
+    <animate
+      attributeName="cy"
+      dur="4s"
+      repeatCount="indefinite"
+      values="10 ; 60 ; 110 ; 60 ; 10"
+      keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1" />
   </circle>
 </svg>
 ```
@@ -67,10 +77,10 @@ If the duration of the animation is indefinite, any `keyTimes` specification wil
 
 ## Specifications
 
-| Specification                                                                                | Status                                   | Comment            |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName("SVG Animations 2", "#KeyTimesAttribute", "keyTimes")}}     | {{Spec2("SVG Animations 2")}} | No change          |
-| {{SpecName("SVG1.1", "animate.html#KeyTimesAttribute", "keyTimes")}} | {{Spec2("SVG1.1")}}                 | Initial definition |
+| Specification                                                        | Status                        | Comment            |
+| -------------------------------------------------------------------- | ----------------------------- | ------------------ |
+| {{SpecName("SVG Animations 2", "#KeyTimesAttribute", "keyTimes")}}   | {{Spec2("SVG Animations 2")}} | No change          |
+| {{SpecName("SVG1.1", "animate.html#KeyTimesAttribute", "keyTimes")}} | {{Spec2("SVG1.1")}}           | Initial definition |
 
 ## Compatibilidade com navegadores
 
