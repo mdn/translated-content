@@ -275,7 +275,7 @@ Extended.getName(); // "Extended" 로그
 
 이는 [정적 프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields#private_static_fields)과 상호 작용할 때 특히 중요합니다.
 
-### super.prop을 설정하면 this 속성이 대신 설정됩니다.
+### super.prop을 설정하면 this 속성이 대신 설정됩니다
 
 `super.x = 1`과 같은 `super`의 속성을 설정하는 것은 `Reflect.set(Object.getPrototypeOf(objectLiteral), "x", 1, this)`와 같이 동작합니다. 이는 `super`를 단순히 "프로토타입 객체의 참조"로 이해하는 것에 한계가 이는 이유 중 하나입니다. 실제로는 `this`에 대한 속성을 설정하기 때문이죠.
 
