@@ -51,17 +51,17 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 1. `number-game-errors.html`을 연 탭으로 이동해서 JavaScript 콘솔을 여세요. 스크린샷과 비슷한 내용의 오류 메시지를 볼 수 있어야 합니다. ![](not-a-function.png)
 2. 이 오류는 찾기 쉬운 편이고, 브라우저도 도움이 될 다양한 정보를 제공합니다. (위의 스크린샷은 Firefox에서 촬영했지만 다른 브라우저도 비슷한 정보를 제공합니다) 우리가 알 수 있는 사실은, 왼쪽에서 오른쪽으로...
 
-    - 붉은 "x"는 오류라는 뜻입니다.
-    - 오류 메시지는 무엇이 잘못됐는지 나타냅니다. "TypeError: guessSubmit.addeventListener is not a function"
-    - "Learn More" 링크는 오류의 뜻을 더 자세히 알아볼 수 있는 MDN 페이지로 향합니다.
-    - JavaScript 파일 이름은 개발자 도구의 디버거 탭을 엽니다. 이 링크를 따라가면 오류가 발생한 정확한 위치를 볼 수 있습니다.
-    - 오류가 발생한 줄 번호와, 오류를 처음으로 마주한 문자 번호를 볼 수 있습니다. 이 예제에서는 86번째 줄, 3번째 글자입니다.
+   - 붉은 "x"는 오류라는 뜻입니다.
+   - 오류 메시지는 무엇이 잘못됐는지 나타냅니다. "TypeError: guessSubmit.addeventListener is not a function"
+   - "Learn More" 링크는 오류의 뜻을 더 자세히 알아볼 수 있는 MDN 페이지로 향합니다.
+   - JavaScript 파일 이름은 개발자 도구의 디버거 탭을 엽니다. 이 링크를 따라가면 오류가 발생한 정확한 위치를 볼 수 있습니다.
+   - 오류가 발생한 줄 번호와, 오류를 처음으로 마주한 문자 번호를 볼 수 있습니다. 이 예제에서는 86번째 줄, 3번째 글자입니다.
 
 3. 코드 편집기에서 86번째 줄을 보면 다음 코드를 볼 수 있습니다.
 
-    ```js
-    guessSubmit.addeventListener('click', checkGuess);
-    ```
+   ```js
+   guessSubmit.addeventListener("click", checkGuess);
+   ```
 
 4. 오류 메시지 "guessSubmit.addeventListener is not a function"은 우리가 호출한 함수를 JavaScript 인터프리터가 인식하지 못했다는 뜻입니다. 보통 이 오류는 철자를 잘못 적은 경우 발생합니다. 구문의 올바른 철자가 확실하지 않을 땐 MDN에서 기능 참고서를 살펴보는 게 도움이 되곤 합니다. 선호하는 검색 엔진에서 "mdn '기능 이름'"을 검색해 보세요. 하지만 지금은 시간을 아끼기 위해 링크를 바로 드리겠습니다. [`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener)입니다.
 5. `addEventListener()` 페이지를 보니, 함수 이름을 잘못 적었네요! JavaScript는 대소문자를 구분한다는 점을 기억하세요. 철자는 물론 대소문자도 잘못 적으면 오류가 발생합니다. `addeventListener`를 `addEventListener`로 수정하면 될 겁니다. 지금 해보세요.
@@ -74,36 +74,36 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 2. 이제 숫자를 입력하고 Submit guess 버튼을 누르면... 다른 오류네요! ![](variable-is-null.png)
 3. 이번 오류는 78번째 줄에서 "TypeError: lowOrHi is null"입니다.
 
-    > **참고:** [`Null`](/ko/docs/Glossary/Null)은 "아무것도 아닌 것", 또는 "값이 없음"을 뜻하는 특별한 값입니다. 즉 `lowOrHi`가 선언됐고 초기화도 됐지만 의미 있는 값을 가지진 못한 겁니다. 타입도, 값도 없는 거죠.
+   > **참고:** [`Null`](/ko/docs/Glossary/Null)은 "아무것도 아닌 것", 또는 "값이 없음"을 뜻하는 특별한 값입니다. 즉 `lowOrHi`가 선언됐고 초기화도 됐지만 의미 있는 값을 가지진 못한 겁니다. 타입도, 값도 없는 거죠.
 
-    > **참고:** 이 오류는 페이지를 불러온 직후에 나타나진 않았는데, 함수 내부(`checkGuess() { ... }` 블록의 안)에서 발생했기 때문입니다. 이후 [함수에 관한 글](/ko/docs/Learn/JavaScript/Building_blocks/Functions)에서 더 알아보겠지만, 함수 안의 코드는 함수 바깥과 다른 범위(스코프)에서 동작합니다. 이 예제에서는 86번째 줄에 의해 `checkGuess()` 함수가 구동하기 전에는 코드가 동작하지 않았고, 따라서 오류도 발생하지 않았습니다.
+   > **참고:** 이 오류는 페이지를 불러온 직후에 나타나진 않았는데, 함수 내부(`checkGuess() { ... }` 블록의 안)에서 발생했기 때문입니다. 이후 [함수에 관한 글](/ko/docs/Learn/JavaScript/Building_blocks/Functions)에서 더 알아보겠지만, 함수 안의 코드는 함수 바깥과 다른 범위(스코프)에서 동작합니다. 이 예제에서는 86번째 줄에 의해 `checkGuess()` 함수가 구동하기 전에는 코드가 동작하지 않았고, 따라서 오류도 발생하지 않았습니다.
 
 4. 78번째 줄을 보면 다음 코드를 볼 수 있습니다.
 
-    ```js
-    lowOrHi.textContent = 'Last guess was too high!';
-    ```
+   ```js
+   lowOrHi.textContent = "Last guess was too high!";
+   ```
 
 5. 위의 코드에서는 `lowOrHi` 상수의 `textContent` 속성에 텍스트 문자열을 할당하려고 시도했지만, `lowOrHi`에 들어있어야 할 값이 없어서 동작하지 못했습니다. 이유를 알아봅시다. 코드 내에서 `lowOrHi`가 등장하는 다른 곳을 탐색해 보세요. JavaScript에서 `lowOrHi`가 제일 먼저 등장하는 곳은 48번째 줄입니다.
 
-    ```js
-    const lowOrHi = document.querySelector('lowOrHi');
-    ```
+   ```js
+   const lowOrHi = document.querySelector("lowOrHi");
+   ```
 
 6. 여기서는 문서 HTML의 요소 참조를 변수에 저장하려고 시도하고 있습니다. 48번째 줄이 실행된 후에 `lowOrHi`가 `null`인지 확인해 봅시다. 49번째 줄에 아래의 코드를 추가하세요.
 
-    ```js
-    console.log(lowOrHi);
-    ```
+   ```js
+   console.log(lowOrHi);
+   ```
 
-    > **참고:** [`console.log()`](/ko/docs/Web/API/console/log)는 콘솔에 값을 기록하는 엄청나게 유용한 디버깅 함수입니다. 따라서 이 코드는 48번째 줄에서 `lowOrHi`의 값을 설정하려고 시도한 직후에 그 결과를 콘솔에 기록합니다.
+   > **참고:** [`console.log()`](/ko/docs/Web/API/console/log)는 콘솔에 값을 기록하는 엄청나게 유용한 디버깅 함수입니다. 따라서 이 코드는 48번째 줄에서 `lowOrHi`의 값을 설정하려고 시도한 직후에 그 결과를 콘솔에 기록합니다.
 
 7. 저장하고 새로고침하세요. `console.log()`가 콘솔에 기록한 결과를 볼 수 있을 겁니다. ![](console-log-output.png) `lowOrHi`의 값이 명백히 `null`이므로, 48번째 줄에 문제가 있는 게 틀림없습니다.
 8. 어떤 문제일지 생각해 봅시다. 48번째 줄은 [`document.querySelector()`](/ko/docs/Web/API/Document/querySelector) 메서드를 사용해, CSS 선택자로 선택한 요소의 참조를 가져옵니다. 우리 파일의 더 위쪽에서 우리가 찾으려는 문단을 볼 수 있습니다.
 
-    ```html
-    <p class="lowOrHi"></p>
-    ```
+   ```html
+   <p class="lowOrHi"></p>
+   ```
 
 9. 보아하니 우리가 사용했어야 하는 선택자는 마침표(`.`)로 시작하는 클래스 선택자였는데, 48번째 줄의 `querySelector()` 메서드에 제공한 선택자에는 마침표가 없습니다. 이게 문제일 수 있겠네요! `lowOrHi`를 `.lowOrHi`로 바꿔보세요.
 10. 저장 후 다시 새로고침해보면 `console.log()` 명령문이 우리가 원하는 `<p>` 요소를 반환하는 모습을 볼 수 있습니다. 휴, 다른 오류를 고쳤네요. 이제 `console.log()`는 지워도 되고, 아니면 나중에 다시 보기 위해 남겨놔도 됩니다. 선호하는 쪽으로 선택하세요.
@@ -124,21 +124,21 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 
 1. `randomNumber` 변수에 무작위 수를 설정하는 부분을 찾아보세요. 게임을 시작할 때 맞혀야 하는 무작위 수는 44번째 줄 부근에서 저장합니다.
 
-    ```js
-    let randomNumber = Math.floor(Math.random()) + 1;
-    ```
+   ```js
+   let randomNumber = Math.floor(Math.random()) + 1;
+   ```
 
 2. 후속 라운드를 시작할 때 새로운 무작위 수를 생성하는 코드는 113번째 줄 근처입니다.
 
-    ```js
-    randomNumber = Math.floor(Math.random()) + 1;
-    ```
+   ```js
+   randomNumber = Math.floor(Math.random()) + 1;
+   ```
 
 3. 위의 두 줄이 정말 문제일까요? 이전에 만났던 `console.log()`를 다시 꺼내옵시다. 각각의 줄 바로 밑에 다음 코드를 추가하세요.
 
-    ```js
-    console.log(randomNumber);
-    ```
+   ```js
+   console.log(randomNumber);
+   ```
 
 4. 저장, 새로고침, 그리고 몇 판 플레이해 보세요. 콘솔에 기록하는 시점에서, `randomNumber`가 정말 1임을 볼 수 있습니다.
 
@@ -147,25 +147,25 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 문제를 수정하기 전에 이 코드가 어떻게 동작하는지 상기해 봅시다. 먼저, 0.5675493843처럼 0과 1 사이의 무작위 10진수 숫자를 생성하는 [`Math.random()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/random)을 호출합니다.
 
 ```js
-Math.random()
+Math.random();
 ```
 
 다음으로, `Math.random()`을 호출한 결과를 [`Math.floor()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)에 제공합니다. `Math.floor()`는 주어진 수의 버림을 반환합니다. 그리고 여기에 1을 더합니다.
 
 ```js
-Math.floor(Math.random()) + 1
+Math.floor(Math.random()) + 1;
 ```
 
 0과 1 사이의 무작위 10진수 수를 버림하면 결과는 항상 0이니, 여기에 1을 더한 결과는 항상 1입니다. 무작위 수를 버림하기 전에 먼저 100을 곱해야 원하는 숫자를 얻을 수 있을 겁니다. 다음 코드는 0부터 99까지의 무작위 수를 생성합니다.
 
 ```js
-Math.floor(Math.random()*100);
+Math.floor(Math.random() * 100);
 ```
 
 그러므로, 여기에 1을 더하면 1과 100 사이의 수를 얻을 수 있습니다.
 
 ```js
-Math.floor(Math.random()*100) + 1;
+Math.floor(Math.random() * 100) + 1;
 ```
 
 두 줄 모두 이렇게 고친 후에 저장하고 새로고침해보세요. 이제 처음 의도했던 대로 게임을 플레이할 수 있을 겁니다.
