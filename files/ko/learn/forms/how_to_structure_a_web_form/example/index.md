@@ -1,11 +1,13 @@
 ---
 title: Example
 slug: Learn/Forms/How_to_structure_a_web_form/Example
+i18n:
+  sourceCommit: 8130108afffac43fb24f9db8c43d3d36043c17f8
 ---
 
 [HTML 폼 구성 방법](/ko/docs/Learn/Forms/How_to_structure_a_web_form)의 기본 결제 폼 예제 입니다.
 
-## A payment form
+## 결제 폼
 
 ### HTML
 
@@ -179,6 +181,6 @@ label em {
 }
 ```
 
-### Result
+### 결과
 
 {{ EmbedLiveSample('A_payment_form', '100%', 620) }}

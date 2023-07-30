@@ -1,6 +1,8 @@
 ---
 title: HTML 폼 구성 방법
 slug: Learn/Forms/How_to_structure_a_web_form
+i18n:
+  sourceCommit: 8130108afffac43fb24f9db8c43d3d36043c17f8
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
@@ -334,6 +336,6 @@ slug: Learn/Forms/How_to_structure_a_web_form
 
 ### 고급 주제
 
-- [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Sending forms through JavaScript](/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Property compatibility table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [How to build custom form controls](/ko/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [Sending forms through JavaScript](/ko/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [Property compatibility table for form widgets](/ko/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
