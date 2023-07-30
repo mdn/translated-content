@@ -48,9 +48,11 @@ SVG 内でテキストが `<text>` 要素内以外で組み込まれた場合、
 #### SVG
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="500" height="40" viewBox="0 0 500 40">
-
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="500"
+  height="40"
+  viewBox="0 0 500 40">
   <text x="0" y="35" font-family="Verdana" font-size="35">
     Hello, out there
   </text>
@@ -87,9 +89,7 @@ SVG テキストは着色することができます。
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="30">
-  <text x="10" y="20" stroke="none" fill="red">
-    SVG Colored Text
-  </text>
+  <text x="10" y="20" stroke="none" fill="red">SVG Colored Text</text>
 </svg>
 ```
 
@@ -105,8 +105,10 @@ SVG テキストは HTML テキストのようにスタイリングできます�
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="60">
-  <text x="10" y="40"
-      style="font-family: Times New Roman;
+  <text
+    x="10"
+    y="40"
+    style="font-family: Times New Roman;
              font-size: 44px;
              stroke: #00ff00;
              fill: #0000ff;">
