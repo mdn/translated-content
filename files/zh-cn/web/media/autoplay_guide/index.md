@@ -24,7 +24,7 @@ original_slug: Web/媒体/Autoplay_guide
 audioElement.play();
 ```
 
-以下网络功能和 API 可能会受到自动播放阻止的影响：
+以下网络功能和 API 可能会受到阻止自动播放的影响：
 
 - The {{Glossary("HTML")}} {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements
 - The [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)
@@ -152,7 +152,7 @@ if (startPlayPromise !== undefined) {
 
 在 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 中，网站或应用程序可以使用链接到 {{domxref("AudioContext")}} 的源节点上的 `start()` 方法开始播放音频。在处理用户输入事件的上下文之外执行此操作受自动播放规则的约束。.
 
-_更多内容即将推出；Mozilla 仍在致力于自动播放阻止。如果其他人已经拥有它，欢迎他们参与本部分......_
+_更多内容即将推出；Mozilla 仍在致力于阻止自动播放。如果其他人已经拥有它，欢迎他们参与本部分......_
 
 ## 自动播放功能策略
 
@@ -241,7 +241,7 @@ Permissions-Policy: autoplay 'none'
 
 ## 浏览器配置选项
 
-浏览器可能具有控制自动播放工作方式或如何处理自动播放阻止的首选项。此处列出了对您作为 Web 开发人员可能具有特殊意义或重要性的任何此类首选项。其中包括任何可能有助于测试或调试的内容，以及任何可以以您需要准备处理的方式设置的内容。
+浏览器可能具有控制自动播放工作方式或如何处理阻止自动播放的首选项。此处列出了对您作为 Web 开发人员可能具有特殊意义或重要性的任何此类首选项。其中包括任何可能有助于测试或调试的内容，以及任何可以以您需要准备处理的方式设置的内容。
 
 ### Firefox
 
