@@ -42,13 +42,14 @@ _该接口继承了其祖先接口 {{DOMxRef("MouseEvent")}}、{{DOMxRef("UIEven
   - : 返回一个表示 Z 轴滚动量的双精度浮点数（`double`）。
 
 - {{DOMxRef("WheelEvent.deltaMode")}} {{ReadOnlyInline}}
+
   - : 返回一个无符号长整型（`unsigned long`)，其表示 `delta*` 值的滚动数量的单位。允许的值如下：
 
-    | 常量                          | 值     | 描述                                                                         |
-    | ---------------------------- | ------ | ---------------------------------------------------------------------------- |
-    | `WheelEvent.DOM_DELTA_PIXEL` | `0x00` | `delta*` 值以像素为单位为准。                                                   |
+    | 常量                         | 值     | 描述                                                                                    |
+    | ---------------------------- | ------ | --------------------------------------------------------------------------------------- |
+    | `WheelEvent.DOM_DELTA_PIXEL` | `0x00` | `delta*` 值以像素为单位为准。                                                           |
     | `WheelEvent.DOM_DELTA_LINE`  | `0x01` | `delta*` 值以行为单位指定。每次鼠标单击滚动一个内容行，而计算行高度的方法取决于浏览器。 |
-    | `WheelEvent.DOM_DELTA_PAGE`  | `0x02` | `delta*` 值以页为单位指定。每次鼠标单击滚动一个页面的内容。                         |
+    | `WheelEvent.DOM_DELTA_PAGE`  | `0x02` | `delta*` 值以页为单位指定。每次鼠标单击滚动一个页面的内容。                             |
 
 - {{DOMxRef("WheelEvent.wheelDelta")}} {{ReadOnlyInline}} {{deprecated_inline}}
 

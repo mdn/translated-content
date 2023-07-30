@@ -53,21 +53,22 @@ In the [Red Queen's Race](http://codepen.io/rachelnabors/pen/PNGGaV?editors=0010
 ```js
 // Define the key frames
 var spriteFrames = [
-  { transform: 'translateY(0)' },
-  { transform: 'translateY(-100%)' }
+  { transform: "translateY(0)" },
+  { transform: "translateY(-100%)" },
 ];
 
 // Get the element that represents Alice and the Red Queen
-var redQueen_alice_sprite = document.getElementById('red-queen_and_alice_sprite');
+var redQueen_alice_sprite = document.getElementById(
+  "red-queen_and_alice_sprite",
+);
 
 // Animate Alice and the Red Queen using steps()
-var redQueen_alice = redQueen_alice_sprite.animate(
-spriteFrames, {
-  easing: 'steps(7, end)',
+var redQueen_alice = redQueen_alice_sprite.animate(spriteFrames, {
+  easing: "steps(7, end)",
   direction: "reverse",
   duration: 600,
   playbackRate: 1,
-  iterations: Infinity
+  iterations: Infinity,
 });
 ```
 

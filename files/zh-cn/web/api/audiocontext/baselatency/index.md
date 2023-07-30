@@ -24,11 +24,11 @@ A double representing the base latency in seconds.
 ```js
 //default latency ("interactive")
 const audioCtx1 = new AudioContext();
-console.log(audioCtx1.baseLatency);//0.01
+console.log(audioCtx1.baseLatency); //0.01
 
 //higher latency ("playback")
-const audioCtx2 = new AudioContext({ latencyHint: 'playback' });
-console.log(audioCtx2.baseLatency);//0.02
+const audioCtx2 = new AudioContext({ latencyHint: "playback" });
+console.log(audioCtx2.baseLatency); //0.02
 ```
 
 ## Specifications

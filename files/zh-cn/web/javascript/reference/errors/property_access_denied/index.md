@@ -22,12 +22,14 @@ Error: Permission denied to access property "x"
 ## 示例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"></iframe>
+    <iframe
+      id="myframe"
+      src="http://www1.w3c-test.org/common/blank.html"></iframe>
     <script>
-      console.log(document.getElementById('myframe').contentWindow.document);
+      console.log(document.getElementById("myframe").contentWindow.document);
       // Error: Permission denied to access property "document"
     </script>
   </head>

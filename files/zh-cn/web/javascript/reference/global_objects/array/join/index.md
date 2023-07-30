@@ -55,7 +55,7 @@ a.join(""); // 'WindWaterFire'
 
 ```js
 console.log([1, , 3].join()); // '1,,3'
-console.log([1, undefined, 3].join()); // '1,,3' 
+console.log([1, undefined, 3].join()); // '1,,3'
 ```
 
 ### 在非数组对象上调用 join()

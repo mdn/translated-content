@@ -15,9 +15,9 @@ original_slug: Web/API/Document/dragend_event
 在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener('dragend', (event) => {});
+addEventListener("dragend", (event) => {});
 
-ondragend = (event) => { };
+ondragend = (event) => {};
 ```
 
 ## 事件类型
@@ -47,9 +47,7 @@ ondragend = (event) => { };
 
 ```html
 <div id="container">
-  <div id="draggable" draggable="true">
-    这个 div 是可拖动的
-  </div>
+  <div id="draggable" draggable="true">这个 div 是可拖动的</div>
 </div>
 <div class="dropzone"></div>
 ```
@@ -75,7 +73,7 @@ body {
 }
 
 .dragging {
-  opacity: .5;
+  opacity: 0.5;
 }
 ```
 

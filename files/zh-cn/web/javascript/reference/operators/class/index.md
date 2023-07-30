@@ -29,16 +29,16 @@ const MyClass = class [className] [extends otherClassName] {
 `constructor` 方法是可选的。使用类表达式生成的类将始终响应 {{jsxref("Operators/typeof", "typeof")}} 值为 `"function"`。
 
 ```js
-'use strict';
-let Foo = class {};  // constructor property is optional
-Foo = class {};      // Re-declaration is allowed
+"use strict";
+let Foo = class {}; // constructor property is optional
+Foo = class {}; // Re-declaration is allowed
 
-typeof Foo;             // returns "function"
-typeof class {};        // returns "function"
+typeof Foo; // returns "function"
+typeof class {}; // returns "function"
 
-Foo instanceof Object;   // true
+Foo instanceof Object; // true
 Foo instanceof Function; // true
-class Foo {}            // Throws SyntaxError (class declarations do not allow re-declaration)
+class Foo {} // Throws SyntaxError (class declarations do not allow re-declaration)
 ```
 
 ## 示例
@@ -51,13 +51,13 @@ class Foo {}            // Throws SyntaxError (class declarations do not allow r
 const Foo = class {
   constructor() {}
   bar() {
-    return 'Hello World!';
+    return "Hello World!";
   }
 };
 
 const instance = new Foo();
-instance.bar();  // "Hello World!"
-Foo.name;        // "Foo"
+instance.bar(); // "Hello World!"
+Foo.name; // "Foo"
 ```
 
 ### 命名类表达式
@@ -70,11 +70,11 @@ const Foo = class NamedFoo {
   whoIsThere() {
     return NamedFoo.name;
   }
-}
+};
 const bar = new Foo();
-bar.whoIsThere();  // "NamedFoo"
-NamedFoo.name;     // ReferenceError: NamedFoo is not defined
-Foo.name;          // "NamedFoo"
+bar.whoIsThere(); // "NamedFoo"
+NamedFoo.name; // ReferenceError: NamedFoo is not defined
+Foo.name; // "NamedFoo"
 ```
 
 ## 规范

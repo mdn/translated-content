@@ -36,7 +36,7 @@ Number.parseInt(string, radix)
 这个方法和全局的 {{jsxref("parseInt", "parseInt()")}} 函数具有一样的函数功能：
 
 ```js
-Number.parseInt === parseInt // true
+Number.parseInt === parseInt; // true
 ```
 
 其目的是对全局变量进行模块化，另见 {{jsxref("parseInt", "parseInt()")}} 获取更多详情和示例。
