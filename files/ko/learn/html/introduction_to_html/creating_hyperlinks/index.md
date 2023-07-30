@@ -273,7 +273,7 @@ Document fragments(문서 조각)를 참조하여 현재 문서의 다른 부분
 
 이 연습을 위해 일부 페이지를 탐색 메뉴와 함께 연결하여 다중 페이지 웹 사이트를 만들었으면 합니다. 이것은 웹 사이트를 만드는 일반적인 방법 중 하나입니다. 동일한 탐색 메뉴를 포함하여 모든 페이지에서 동일한 페이지 구조가 사용되므로 링크를 클릭하면 사용자가 같은 장소에 있고 다른 내용이 표시됩니다.
 
-다음 네 페이지의 로컬 복사본을 모두 같은 디렉토리에 만들어야 합니다. (전체 목록을 보려면 [navigation-menu-start](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-start) 디렉토리를 참조하세요)
+다음 네 페이지의 로컬 복사본을 모두 같은 디렉토리에 만들어야 합니다. (전체 목록을 보려면 [navigation-menu-start](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-start) 디렉토리를 참조하세요.)
 
 - [index.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/navigation-menu-start/index.html)
 - [projects.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/navigation-menu-start/projects.html)
@@ -297,15 +297,15 @@ Document fragments(문서 조각)를 참조하여 현재 문서의 다른 부분
 
 클릭하면 리소스 또는 페이지에 연결하는 대신 새 발신 전자 메일 메시지를 여는 링크 또는 단추를 만들 수 있습니다. 이것은 {{HTMLElement("a")}} 태그안에 `mailto:` URL 스키마를 사용하여 구현할 수 있습니다.
 
-가장 기본적이고 일반적으로 사용되는 형태의 `mailto:` 링크는 단순히 대상 수신인의 이메일 주소를 표시한다.
+가장 기본적이고 일반적으로 사용되는 형태의 `mailto:` 링크는 단순히 대상 수신인의 이메일 주소를 표시합니다.
 
 예를 들면
 
 ```html
-<a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
+<a href="mailto:nowhere@mozilla.org">아무데나 전자 메일 보내기</a>
 ```
 
-이렇게 되면 다음과 같은 링크가 생성됩니다: [Send email to nowhere](mailto:nowhere@mozilla.org).
+이렇게 되면 다음과 같은 링크가 생성됩니다. [아무데나 전자 메일 보내기](mailto:nowhere@mozilla.org).
 
 사실, 이메일 주소는 선택사항입니다. 이메일 주소를 생략하고 {{htmlattrxref("href", "a")}}가 "mailto:"이면 수신처 주소가 없는 사용자의 이메일 클라이언트에 의해 새로운 발신 이메일 창이 열립니다. 이는 종종 사용자가 선택한 주소로 이메일을 보내기 위해 클릭할 수 있는 "공유" 링크로 유용합니다.
 
@@ -322,7 +322,10 @@ Document fragments(문서 조각)를 참조하여 현재 문서의 다른 부분
 </a>
 ```
 
-> **참고:** 각 필드의 값은 URL로 인코딩되어야 한다(즉, 출력되지 않은 문자 및 [percent-escaped](http://en.wikipedia.org/wiki/Percent-encoding)). 또한 `mailto:` URL의 각 필드를 구분하는 `&` 의 사용에 유의하십시오. 이것은 표준 URL 쿼리 표기법입니다.
+> **참고:** 각 필드의 값은 인쇄되지 않는 문자(탭, 캐리지 리턴, 페이지 구분과 같은 보이지 않는 문자 [percent-escaped](http://en.wikipedia.org/wiki/Percent-encoding))와 공백을 사용하여 URL로 인코딩해야 합니다.
+> 또한 물음표(`?`)를 사용하여 필드 값에서 기본 URL을 구분하고, `mailto:` URL의 각 필드를 구분하는 `&`를 사용합니다.
+> 이것은 표준 URL 쿼리 표기법입니다.
+> 어떤 URL 쿼리 표기법이 더 일반적으로 사용되는지 이해하기 위해 [The GET method](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data#the_get_method) 문서를 읽어보세요.
 
 여기 다른 몇 가지 `mailto` URL 샘플들이 있습니다.
 
@@ -334,10 +337,10 @@ Document fragments(문서 조각)를 참조하여 현재 문서의 다른 부분
 
 ## 실력을 시험해 보세요!
 
-여러분은 이 글의 끝에 도달하였는데, 가장 중요한 정보들을 기억하고 계신가요? 다음 단계로 넘어가기 전에 이 정보를 알고있는지 확인하기 위한 추가 테스트를 확인할 수 있습니다. 자세한 내용은 [Test your skills: Links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links) 링크를 참조하세요.
+이 글의 끝에 도달한 여러분은 가장 중요했던 정보들을 기억하고 계신가요? 다음 단계로 넘어가기 전에 이 정보를 알고있는지 확인하기 위한 추가 테스트 해볼 수 있습니다. 자세한 내용은 [Test your skills: Links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links) 링크를 참조하세요.
 
 ## 요약
 
-이제 링크는 여기까지입니다. 어쨌든! 스타일링을 시작하면 나중에 과정에서 링크로 돌아갑니다. 다음 HTML에서는 텍스트 의미론(Text Semantics)으로 돌아가서 유용하게 사용할 수 있는 고급/비정상적인 기능을 살펴보도록 하겠다. — 다음 목적지는 고급 텍스트 서식에 대해 알아볼 것이다.
+이제 링크는 여기까지입니다. 어쨌든! 스타일링을 시작하면 나중에 이 과정의 링크로 돌아올 것입니다. 다음 HTML에서는 텍스트 의미론(Text Semantics)으로 돌아가서 유용하게 사용할 수 있는 고급의 다른 기능들을 살펴보도록 하겠습니다. 다음에 알아볼 내용은 [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)입니다.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
