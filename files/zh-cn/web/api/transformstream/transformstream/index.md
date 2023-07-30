@@ -9,11 +9,11 @@ slug: Web/API/TransformStream/TransformStream
 
 ## 语法
 
-```js
-new TransformStream();
-new TransformStream(transformer);
-new TransformStream(transformer, writableStrategy);
-new TransformStream(transformer, writableStrategy, readableStrategy);
+```js-nolint
+new TransformStream()
+new TransformStream(transformer)
+new TransformStream(transformer, writableStrategy)
+new TransformStream(transformer, writableStrategy, readableStrategy)
 ```
 
 ### 参数

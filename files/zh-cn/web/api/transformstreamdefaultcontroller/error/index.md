@@ -9,8 +9,8 @@ slug: Web/API/TransformStreamDefaultController/error
 
 ## 语法
 
-```js
-error(reason);
+```js-nolint
+error(reason)
 ```
 
 ### 参数

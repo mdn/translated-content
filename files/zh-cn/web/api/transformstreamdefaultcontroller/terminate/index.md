@@ -9,8 +9,8 @@ slug: Web/API/TransformStreamDefaultController/terminate
 
 ## 语法
 
-```js
-terminate();
+```js-nolint
+terminate()
 ```
 
 ### 参数

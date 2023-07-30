@@ -11,9 +11,9 @@ slug: Web/API/URLSearchParams/URLSearchParams
 
 ## 语法
 
-```js
-new URLSearchParams();
-new URLSearchParams(options);
+```js-nolint
+new URLSearchParams()
+new URLSearchParams(options)
 ```
 
 ### 参数

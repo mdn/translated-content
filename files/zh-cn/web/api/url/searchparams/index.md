@@ -9,19 +9,13 @@ slug: Web/API/URL/searchParams
 
 {{AvailableInWorkers}}
 
-## 语法
-
-```js
-const urlSearchParams = url.searchParams;
-```
-
-### 属性值
+## 值
 
 一个 {{domxref("URLSearchParams")}} 对象。
 
-## 例子
+## 示例
 
-如果你的 URL 是 `https://example.com/?name=Jonathan%20Smith&age=18` ，你可以这样解析 URL，然后得到 `name` 和 `age` 的值。
+如果你的 URL 是 `https://example.com/?name=Jonathan%20Smith&age=18`，你可以这样解析 URL，然后得到 `name` 和 `age` 的值。
 
 ```js
 let params = new URL(document.location).searchParams;

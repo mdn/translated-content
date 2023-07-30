@@ -9,8 +9,8 @@ slug: Web/API/TextEncoderStream/TextEncoderStream
 
 ## 语法
 
-```js
-new TextEncoderStream();
+```js-nolint
+new TextEncoderStream()
 ```
 
 ### 参数

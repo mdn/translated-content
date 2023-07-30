@@ -17,17 +17,22 @@ slug: Web/API/WebGL_API/Matrix_math_for_the_web
 var identityMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
 ```
 
-说到乘法，这种运算用于矩阵是什么样的呢？最简单的例子是矩阵乘一个点。你可能注意到，三维空间中的点和一个 4x4 矩阵并不匹配，为此我们加上了额外的第四维 W。一般来说，把 W 设为 1 就可以了。W 维度还有一些额外的用途超出本文的讨论范围。查看[WebGL model view projection](/zh-CN/docs/Web/API/WebGL_API/WebGL_model_view_projection)看它有哪些用途。
+说到乘法，这种运算用于矩阵是什么样的呢？最简单的例子是矩阵乘一个点。你可能注意到，三维空间中的点和一个 4x4 矩阵并不匹配，为此我们加上了额外的第四维 W。一般来说，把 W 设为 1 就可以了。W 维度还有一些额外的用途超出本文的讨论范围。
 
 注意矩阵和点的对齐方式：
 
-```js
-[1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1][(4, 3, 2, 1)];
+```js-nolint
+[1, 0, 0, 0,
+ 0, 1, 0, 0,
+ 0, 0, 1, 0,
+ 0, 0, 0, 1]
+
+[4, 3, 2, 1] // 在 [x, y, z, w] 处求点积
 ```
 
 ### 定义相乘函数
 
-我们在示例代码中定义了一个乘法函数 — `multiplyMatrixAndPoint()`:
+我们在示例代码中定义了一个乘法函数——`multiplyMatrixAndPoint()`：
 
 ```js
 function multiplyMatrixAndPoint(matrix, point) {

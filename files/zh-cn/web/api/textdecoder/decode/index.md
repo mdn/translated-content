@@ -11,10 +11,10 @@ slug: Web/API/TextDecoder/decode
 
 ## 语法
 
-```js
-decode();
-decode(buffer);
-decode(buffer, options);
+```js-nolint
+decode()
+decode(buffer)
+decode(buffer, options)
 ```
 
 ### 参数
