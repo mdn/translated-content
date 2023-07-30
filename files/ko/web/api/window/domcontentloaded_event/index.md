@@ -5,6 +5,7 @@ slug: Web/API/Window/DOMContentLoaded_event
 l10n:
   sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
+
 {{APIRef}}
 
 **`DOMContentLoaded`** 이벤트는 HTML 문서가 완전히 구문 분석되고 모든 지연된 스크립트(`<script defer src="…">`와 `<script type="module">`)가 다운로드되고 실행될 때 발생합니다. 이미지, 서브프레임, 비동기 스크립트와 같은 다른 항목의 로드가 끝날 때까지 기다리지 않습니다.
@@ -36,8 +37,8 @@ onDOMContentLoaded = (event) => {};
 ### 기본 용도
 
 ```js
-window.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
+window.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM fully loaded and parsed");
 });
 ```
 
