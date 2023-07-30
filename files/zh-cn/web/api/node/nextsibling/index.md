@@ -22,40 +22,39 @@ Gecko 内核的浏览器会在源代码中标签内部有空白符的地方插�
 ## 示例
 
 ```html
-<div id="div-01">Here is div-01</div>
-<div id="div-02">Here is div-02</div>
-
-<script type="text/javascript">
-  var el = document.getElementById("div-01").nextSibling,
-    i = 1;
-
-  console.log("Siblings of div-01:");
-
-  while (el) {
-    console.log(i + ". " + el.nodeName);
-    el = el.nextSibling;
-    i++;
-  }
-</script>
-
-/************************************************** The following is written to
-the console as it loads: Siblings of div-01 1. #text 2. DIV 3. #text 4. SCRIPT
-**************************************************/
+<div id="div-1">Here is div-1</div>
+<div id="div-2">Here is div-2</div>
+<br />
+<output><em>Not calculated.</em></output>
 ```
 
-从上面的例子中可以看出，在两个标签之间（即一个元素的闭合标签之后，下一个元素的起始标签之前）有空白出现时，会有`#text` 节点被插入到 DOM 中。使用 `document.write` 语句插入的两个元素之间不会有空白。
+```js
+let el = document.getElementById("div-1").nextSibling;
+let i = 1;
 
-The possible inclusion of text nodes in the DOM must be allowed for when traversing the DOM using `nextSibling`. See the resources in the Notes section.
+let result = "Siblings of div-1:<br/>";
+
+while (el) {
+  result += `${i}. ${el.nodeName}<br/>`;
+  el = el.nextSibling;
+  i++;
+}
+
+const output = document.querySelector("output");
+output.innerHTML = result;
+```
+
+{{ EmbedLiveSample("示例", "100%", 500)}}
 
 ## 规范
 
-- [DOM Level 1 Core: nextSibling](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling)
-- [DOM Level 2 Core: nextSibling](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F)
-
-## 相关链接
-
-- {{domxref("Element.nextElementSibling")}}
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 相关链接
+
+- {{domxref("Element.nextElementSibling")}}
+- {{domxref("Node.previousSibling")}}
