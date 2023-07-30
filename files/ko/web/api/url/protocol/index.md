@@ -24,7 +24,7 @@ url.protocol = newProtocol;
 
 ```js
 const url = new URL(
-  "https://developer.mozilla.org/en-US/docs/Web/API/URL/protocol",
+  "https://developer.mozilla.org/ko/docs/Web/API/URL/protocol",
 );
 console.log(url.protocol); // Logs "https:"
 ```

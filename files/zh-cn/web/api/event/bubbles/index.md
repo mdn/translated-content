@@ -22,14 +22,14 @@ var bool = event.bubbles;
 ### 例子
 
 ```js
- function goInput(e) {
+function goInput(e) {
   // 检查事件对象是否冒泡
   if (!e.bubbles) {
-     // 如果不冒泡，则手动传递事件
-     passItOn(e);
+    // 如果不冒泡，则手动传递事件
+    passItOn(e);
   }
   // 如果冒泡的话
-  doOutput(e)
+  doOutput(e);
 }
 ```
 

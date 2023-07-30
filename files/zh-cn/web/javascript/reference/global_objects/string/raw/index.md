@@ -44,26 +44,29 @@ String.raw`templateString`
 ### 使用 `String.raw()`
 
 ```js
-String.raw`Hi\n${2+3}!`;
+String.raw`Hi\n${2 + 3}!`;
 // 'Hi\\n5!'，Hi 后面的字符不是换行符，\ 和 n 是两个不同的字符
 
-String.raw `Hi\u000A!`;
+String.raw`Hi\u000A!`;
 // "Hi\\u000A!"，同上，这里得到的会是 \、u、0、0、0、A 6 个字符，
 // 任何类型的转义形式都会失效，保留原样输出，不信你试试.length
 
 let name = "Bob";
-String.raw `Hi\n${name}!`;
+String.raw`Hi\n${name}!`;
 // "Hi\nBob!"，内插表达式还可以正常运行
-
 
 // 正常情况下，你也许不需要将 String.raw() 当作函数调用。
 // 但是为了模拟 `t${0}e${1}s${2}t` 你可以这样做：
-String.raw({ raw: 'test' }, 0, 1, 2); // 't0e1s2t'
+String.raw({ raw: "test" }, 0, 1, 2); // 't0e1s2t'
 // 注意这个测试，传入一个 string，和一个类似数组的对象
 // 下面这个函数和 `foo${2 + 3}bar${'Java' + 'Script'}baz` 是相等的。
-String.raw({
-  raw: ['foo', 'bar', 'baz']
-}, 2 + 3, 'Java' + 'Script'); // 'foo5barJavaScriptbaz'
+String.raw(
+  {
+    raw: ["foo", "bar", "baz"],
+  },
+  2 + 3,
+  "Java" + "Script",
+); // 'foo5barJavaScriptbaz'
 ```
 
 ## 规范

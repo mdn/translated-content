@@ -128,27 +128,29 @@ slug: Web/CSS/@supports
 
 ```css
 @supports (animation-name: test) {
-    /* 如果支持不带前缀的 animation-name，则下面指定的 CSS 会生效 */
-    @keyframes {
-      /* @supports 是一个 CSS 条件组 at-rule，它可以包含其他相关的 at-rules */
-    }
+  /* 如果支持不带前缀的 animation-name，则下面指定的 CSS 会生效 */
+  @keyframes {
+    /* @supports 是一个 CSS 条件组 at-rule，它可以包含其他相关的 at-rules */
+  }
 }
 ```
 
 ### 检测是否支持指定的 CSS 属性或者其带前缀版本
 
 ```css
-@supports ( (perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px) or
-            (-ms-perspective: 10px) or (-o-perspective: 10px) ) {
-    /* 如果支持不带前缀以及带前缀的 perspective 属性，则下面指定的 CSS 会生效 */
+@supports (
+  (perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px)
+    or (-ms-perspective: 10px) or (-o-perspective: 10px)
+) {
+  /* 如果支持不带前缀以及带前缀的 perspective 属性，则下面指定的 CSS 会生效 */
 }
 ```
 
 ### 检测是否不支持指定的 CSS 属性
 
 ```css
-@supports not ((text-align-last:justify) or (-moz-text-align-last:justify)) {
-    /* 这里的 CSS 代码用来模拟 text-align-last:justify */
+@supports not ((text-align-last: justify) or (-moz-text-align-last: justify)) {
+  /* 这里的 CSS 代码用来模拟 text-align-last:justify */
 }
 ```
 
@@ -184,8 +186,7 @@ slug: Web/CSS/@supports
   /* 这条规则需要内嵌在 @supports 块内。
      否则该规则在支持 :nth-child(…) 但不支持其内的 `of` 参数的浏览器中，
      只有部分生效 */
-  :is(:nth-child(1n of ul, ol) a,
-  details > summary) {
+  :is(:nth-child(1n of ul, ol) a, details > summary) {
     /* 当:is(...) 选择器以及 :nth-child(…) 的 `of` 参数都支持时，
         这里的 CSS 会生效 */
   }

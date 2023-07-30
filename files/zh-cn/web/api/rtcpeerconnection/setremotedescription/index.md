@@ -37,12 +37,12 @@ _这个方法没有返回值。_
 
 ```js
 var pc = new PeerConnection();
-pc.setRemoteDescription( new RTCSessionDescription( offer ), function() {
-   pc.createAnswer( function( answer ) {
-     pc.setLocalDescription( answer, function() {
-       // send the answer to the remote connection
-    })
-  })
+pc.setRemoteDescription(new RTCSessionDescription(offer), function () {
+  pc.createAnswer(function (answer) {
+    pc.setLocalDescription(answer, function () {
+      // send the answer to the remote connection
+    });
+  });
 });
 ```
 

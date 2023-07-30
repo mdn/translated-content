@@ -1,30 +1,28 @@
 ---
-title: URL.port
+title: "URL: port プロパティ"
+short-title: port
 slug: Web/API/URL/port
+l10n:
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
 {{ApiRef("URL API")}}
 
-{{domxref("URL")}} インターフェイスの **`port`** プロパティは、URL のポート番号を含む {{domxref("USVString")}} です。 URL に明示的なポート番号が含まれていない場合は、`''` に設定されます。
+**`port`** は {{domxref("URL")}} インターフェイスのプロパティで、この URL のポート番号の入った文字列です。
+
+> **メモ:** [`URL()`](/ja/docs/Web/API/URL/URL) コンストラクターに渡された入力文字列が明示的なポート番号を含んでいないか（例えば `https://localhost`）、入力文字列のプロトコル部分に対応する既定のポート番号を含んでいる場合（例えば `https://localhost:443`）、コンストラクターが返す [`URL`](/ja/docs/Web/API/URL) オブジェクトの port プロパティの値は空文字列 (`''`) になります。
 
 {{AvailableInWorkers}}
 
-## 構文
+## 値
 
-```
-string = object.port;
-object.port = string;
-```
-
-### 値
-
-{{domxref("USVString")}}。
+文字列です。
 
 ## 例
 
 ```js
-var url = new URL('https://mydomain.com:80/svn/Repos/');
-var result = url.port; // 戻り値: '80'
+const url = new URL("https://example.com:80/svn/Repos/");
+console.log(url.port); // '80' と出力
 ```
 
 ## 仕様
@@ -33,8 +31,8 @@ var result = url.port; // 戻り値: '80'
 
 ## ブラウザーの互換性
 
-{{Compat("api.URL.port")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{domxref("URL")}} インターフェイスに属します。
+- 所属先の {{domxref("URL")}} インターフェイス

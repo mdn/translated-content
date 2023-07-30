@@ -26,7 +26,7 @@ url.password = newPassword;
 
 ```js
 const url = new URL(
-  "https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/password",
+  "https://anonymous:flabada@developer.mozilla.org/ko/docs/Web/API/URL/password",
 );
 console.log(url.password); // Logs "flabada"
 ```

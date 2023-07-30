@@ -67,8 +67,8 @@ li {
   counter-increment: listCounter;
 }
 li::after {
-  content: "[" counter(listCounter) "] == ["
-               counter(listCounter, upper-roman) "]";
+  content: "[" counter(listCounter) "] == [" counter(listCounter, upper-roman)
+    "]";
 }
 ```
 
@@ -98,8 +98,11 @@ li {
   counter-increment: count;
 }
 li::after {
-  content: "[" counter(count, decimal-leading-zero) "] == ["
-               counter(count, lower-alpha) "]";
+  content: "[" counter(count, decimal-leading-zero) "] == [" counter(
+      count,
+      lower-alpha
+    )
+    "]";
 }
 ```
 
