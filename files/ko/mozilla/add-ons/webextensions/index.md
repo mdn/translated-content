@@ -14,9 +14,9 @@ Extension(이하 확장기능)은 브라우저의 기능을 확장하고 수정�
 - [첫번째 확장기능](/en-US/Add-ons/WebExtensions/Your_first_WebExtension)
 - [두번째 확장기능](/en-US/Add-ons/WebExtensions/Your_second_WebExtension)
 - [확장기능의 구조](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- [파이어폭스 개발 로드맵](/en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview)
+- [파이어폭스 개발 로드맵](/ko/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview)
 - [확장기능의 예시](/en-US/Add-ons/WebExtensions/Examples)
-- [그 다음은?](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_)
+- [그 다음은?](/ko/docs/Mozilla/Add-ons/WebExtensions/What_next_)
 
 ## 개념
 
