@@ -7,6 +7,7 @@ tags:
 translation_of: Web/SVG/Element/image
 original_slug: Web/SVG/Элемент/image
 ---
+
 {{SVGRef}}
 
 Элемент \<image> позволяет включить растровые изображения в SVG документ.
@@ -49,9 +50,8 @@ This element implements the [`SVGImageElement`](/ru/docs/Web/API/SVGImageElement
 ### SVG
 
 ```html
-<svg width="200" height="200"
-  xmlns="http://www.w3.org/2000/svg">
-  <image href="mdn_logo_only_color.png" height="200" width="200"/>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <image href="mdn_logo_only_color.png" height="200" width="200" />
 </svg>
 ```
 

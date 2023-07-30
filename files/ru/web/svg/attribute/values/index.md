@@ -37,7 +37,7 @@ translation_of: Web/SVG/Attribute/values
 
 | Categories         | _None_                                                                                        |
 | ------------------ | --------------------------------------------------------------------------------------------- |
-| Value              | \<list> \| [\<number>](/en/SVG/Content_type#Number)               |
+| Value              | \<list> \| [\<number>](/en/SVG/Content_type#Number)                                           |
 | Animatable         | Yes                                                                                           |
 | Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#feColorMatrixValuesAttribute) |
 
