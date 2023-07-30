@@ -1,5 +1,5 @@
 ---
-title: '<var>: 変数要素'
+title: "<var>: 変数要素"
 slug: Web/HTML/Element/var
 ---
 
@@ -89,7 +89,10 @@ HTML の**変数要素** (**`<var>`**) は、数式やプログラムコード�
 
 ```css
 var {
-  font: bold 15px "Courier", "Courier New", monospace;
+  font:
+    bold 15px "Courier",
+    "Courier New",
+    monospace;
 }
 ```
 
@@ -100,8 +103,7 @@ var {
 これは、 `<var>` を使用して数式の変数名を記述した単純な例です。
 
 ```html
-<p>単純な数式:
-  <var>x</var> = <var>y</var> + 2 </p>
+<p>単純な数式: <var>x</var> = <var>y</var> + 2</p>
 ```
 
 出力結果は次の通りです。
@@ -116,16 +118,20 @@ CSS を使用して、 `<var>` 要素の既定のスタイルを上書きする�
 
 ```css
 var {
-  font: bold 15px "Courier", "Courier New", monospace;
+  font:
+    bold 15px "Courier",
+    "Courier New",
+    monospace;
 }
 ```
 
 #### HTML
 
 ```html
-<p><var>minSpeed</var> と <var>maxSpeed</var> 変数は、
-   端末の最低速度と最高速度を分当たりの回転数 (RPM) で
-   制御します。</p>
+<p>
+  <var>minSpeed</var> と <var>maxSpeed</var> 変数は、
+  端末の最低速度と最高速度を分当たりの回転数 (RPM) で 制御します。
+</p>
 ```
 
 この HTML では、2 つの変数名を `<var>` を使用して囲んでいます。
