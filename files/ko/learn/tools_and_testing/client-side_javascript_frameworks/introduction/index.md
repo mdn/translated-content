@@ -1,7 +1,8 @@
 ---
 title: 클라이언트 측 프레임워크 소개
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
-page-type: learn-module-chapter
+l10n:
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
