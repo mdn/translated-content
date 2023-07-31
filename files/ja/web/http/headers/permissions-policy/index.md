@@ -49,6 +49,22 @@ Permissions-Policy: <directive> <allowlist>
 
     > **Note:** ディレクティブにはデフォルトの allowlist があり、 `Permissions-Policy` HTTP ヘッダーでは常に `*`, `self` または `none` になります。これらは個々の[ディレクティブのリファレンスページ](#ディレクティブ)で指定されています。 `<iframe>` の `allow` 属性では、デフォルトの動作は常に `src` です。
 
+ブラウザがサポートしている場合、許可リストで複数の異なるサブドメインを明示的に指定する代わりに許可ポリシーのオリジンにワイルドカードを含めることができます。
+
+そのため以下のような指定は
+
+```http
+("https://example.com" "https://a.example.com" "https://b.example.com" "https://c.example.com")
+```
+
+このように書き換えることができます。
+
+```http
+("https://example.com" "https://*.example.com")
+```
+
+> **Note:** `"https://*.example.com"` は `"https://example.com"` とは別のオリジンになります。
+
 ## ディレクティブ
 
 - {{httpheader('Permissions-Policy/accelerometer','accelerometer')}}
