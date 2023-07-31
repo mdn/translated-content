@@ -25,8 +25,8 @@ l10n:
         >에 대한 기본 지식, HTML 기초 (
         <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
-        > 공부), CSS 작동 방식에 대한 아이디어 (
-        <a href="/ko/docs/Learn/CSS/First_steps">CSS 첫 단계</a>공부.)
+        >를 공부하세요), CSS 작동 방식에 대한 아이디어 (
+        <a href="/ko/docs/Learn/CSS/First_steps">CSS 첫 단계</a>를 공부하세요)
       </td>
     </tr>
     <tr>
@@ -48,9 +48,7 @@ l10n:
 
 ## 범용 선택자
 
-The universal selector is indicated by an asterisk (`*`). It selects everything in the document (or inside the parent element if it is being chained together with another element and a descendant combinator). In the following example, we use the universal selector to remove the margins on all elements. Instead of the default styling added by the browser — which spaces out headings and paragraphs with margins — everything is close together.
-
-범용 선택기는 별표(`*`)로 표시됩니다. 문서의 모든 항목을 선택합니다(또는 다른 요소 및 하위 연결자와 함께 연결된 경우 상위 요소 내부). 다음 예제에서는 범용 선택기를 사용하여 모든 요소의 여백을 제거합니다. 여백이 있는 제목과 단락의 간격을 두는 브라우저에서 추가한 기본 스타일 대신 모든 것이 서로 가깝습니다.
+범용 선택기는 별표(`*`)로 표시됩니다. 문서의 모든 항목을 선택합니다(또는 다른 요소 및 하위 연결자와 함께 연결된 경우 상위 요소 내부). 다음 예제에서는 범용 선택기를 사용하여 모든 요소의 여백을 제거합니다. 브라우저에서 추가한 기본 스타일이 제목과 단락의 간격을 두는 것과 반면, 모든 것이 서로 가깝습니다.
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/universal.html", '100%', 750)}}
 
@@ -68,9 +66,7 @@ article :first-child {
 
 그러나, 이 선택자는 다른 요소의 첫 번째 자식인 `<article>` 요소를 선택하는 `article:first-child`와 혼동될 수 있습니다.
 
-To avoid this confusion, we can add the universal selector to the `:first-child` pseudo-class, so it is more obvious what the selector is doing. It is selecting _any_ element which is the first-child of an `<article>` element, or the first-child of any descendant element of `<article>`:
-
-이러한 혼란을 피하기 위해 `:first-child` 의사 클래스에 범용 선택자를 추가할 수 있으므로 선택자가 수행하는 작업이 더 명확해집니다. `<article>` 요소의 첫 번째 자식 또는 `<article>`의 모든 하위 요소의 첫 번째 자식인 _any_ 요소를 선택합니다.
+이러한 혼란을 피하기 위해 `:first-child` 의사 클래스에 범용 선택자를 추가할 수 있으므로 선택자가 수행하는 작업이 더 명확해집니다. `<article>` 요소의 첫 번째 자식인 어떤 요소 또는 `<article>`의 모든 하위 요소의 첫 번째 자식인 어떤 요소를 선택합니다.
 
 ```css
 article *:first-child {
@@ -82,14 +78,13 @@ article *:first-child {
 
 ## 클래스 선택자
 
-The class selector starts with a dot (`.`) character. It will select everything in the document with that class applied to it. In the live example below we have created a class called `highlight`, and have applied it to several places in my document. All of the elements that have the class applied are highlighted.
 클래스 선택자는 점(`.`) 문자로 시작합니다. 해당 클래스가 적용된 문서의 모든 항목이 선택됩니다. 아래 라이브 예제에서 우리는 `highlight`라는 클래스를 만들고 내 문서의 여러 위치에 적용했습니다. 클래스가 적용된 모든 요소가 강조 표시됩니다.
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/class.html", '100%', 750)}}
 
 ### 특정 요소에 대한 타켓팅 클래스
 
-클래스가 적용된 특정 요소를 대상으로 하는 선택자를 만들 수 있습니다. 다음 예에서는, `highlight` 클래스가 있는 `<h1>` 제목과 다르게 `highlight` 클래스가 있는 `<span>`을 강조 표시하니다. 대상으로 지정하려는 요소의 유형 선택자를 사용하고 ,사이에 공백 없이 점을 사용하여 추가된 클래스를 사용하여 이 작업을 수행합니다.
+클래스가 적용된 특정 요소를 대상으로 하는 선택자를 만들 수 있습니다. 다음 예에서는, `highlight` 클래스가 있는 `<h1>` 제목과 다르게 `highlight` 클래스가 있는 `<span>`을 강조 표시합니다. 대상으로 지정하려는 요소의 유형 선택자를 사용하고, 사이에 공백 없이 점을 사용하여 추가된 클래스를 사용하여 이 작업을 수행합니다.
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/class-type.html", '100%', 750)}}
 
@@ -99,7 +94,7 @@ The class selector starts with a dot (`.`) character. It will select everything 
 
 요소에 여러 클래스를 적용하고 개별적으로 대상을 지정하거나 선택자의 모든 클래스가 있는 경우에만 요소를 선택할 수 있습니다. 이는 사이트에서 다양한 방식으로 결합할 수 있는 컴포넌트를 구축할 때 유용할 수 있습니다.
 
-아래 예시에는, 메모가 포함된 `<div>`가 있습니다. 상자에 `notebox` 클래스가 있는 경우 회색 테두리가 적용됩니다. `경고` 또는 `위험` 클래스도 있는 경우 {{cssxref("border-color")}}를 변경합니다.
+아래 예시에는, 메모가 포함된 `<div>`가 있습니다. 상자에 `notebox` 클래스가 있는 경우 회색 테두리가 적용됩니다. `warning` 또는 `danger` 클래스도 있는 경우 {{cssxref("border-color")}}를 변경합니다.
 
 우리는 요소 사이에 공백 없이 함께 연결하여 적용된 두 개의 클래스가 있는 경우에만 요소를 일치시키길 원한다고 브라우저에 알릴 수 있습니다. 마지막 `<div>`에는 `danger`클래스만 있기 때문에 스타일이 적용되지 않는 것을 볼 수 있습니다. 무엇이든 적용하려면 `notebox`도 필요합니다.
 
@@ -112,7 +107,7 @@ ID 선택자는 점 문자가 아닌 `#`으로 시작하지만, 클래스 선택
 {{EmbedGHLiveSample("css-examples/learn/selectors/id.html", '100%', 750)}}
 
 > **경고:** 문서에서 동일한 ID를 여러 번 사용하면 스타일을 지정하기 위해 작동하는 것처럼 보일 수 있지만, 이렇게 하지 마십시오. 이로 인해 잘못된 코드가 생성되고 여러 곳에서 이상한 동작이 발생합니다.
-
+>
 > **참고:** 특이성 강의에서 배웠듯이, ID는 특이성이 높습니다. 대부분의 다른 선택자를 무시합니다. 대부분의 경우 ID 대신 요소에 클래스를 추가하는 것이 좋습니다. 그러나 ID를 사용하는 것이 요소를 대상으로 지정하는 유일한 방법인 경우 - 아마도 마크업에 대한 액세스 권한이 없고 편집할 수 없기 때문에 - 이 방법이 작동합니다.
 
 ## 요약
