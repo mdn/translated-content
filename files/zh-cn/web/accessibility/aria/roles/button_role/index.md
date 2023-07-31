@@ -15,7 +15,7 @@ button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按�
 <div id="saveChanges" tabindex="0" role="button" aria-pressed="false">保存</div>
 ```
 
-上面这个例子创建了一个可聚焦的按钮，但是需要 JavaScript 和 CSS 来包含按钮的外观和行为。这些功能默认是由 {{HTMLElement("button")}} 或者 {{HTMLElement("input")}}（带有 `type="button"`）元素提供的。`
+上面这个例子创建了一个可聚焦的按钮，但是需要 JavaScript 和 CSS 来包含按钮的外观和行为。这些功能默认是由 {{HTMLElement("button")}} 或者 {{HTMLElement("input")}}（带有 `type="button"`）元素提供的。
 
 ```html
 <button type="button" id="saveChanges">保存</button>
