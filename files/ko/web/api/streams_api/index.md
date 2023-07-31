@@ -2,6 +2,7 @@
 title: Streams API
 slug: Web/API/Streams_API
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 Streams API는 Javascript를 이용해 네트워크를 통해 전송된 데이터 스트림에 접근하여 원하는 대로 처리가 가능한 API를 제공합니다.

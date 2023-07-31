@@ -2,6 +2,7 @@
 title: range
 slug: Web/API/Range
 ---
+
 {{ APIRef("DOM") }}
 
 **`Range`** 객체는 주어진 document 내의 텍스트 노드들의 부분들(parts)과 document의 단편화에 포함된 노드들을 나타내고 있다.

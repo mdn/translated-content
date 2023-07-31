@@ -26,10 +26,9 @@ var docFragment = document.createDocumentFragment();
 ```js
 var ul = document.getElementsByTagName("ul")[0]; // assuming it exists
 var docfrag = document.createDocumentFragment();
-var browserList = ["Internet Explorer", "Firefox", "Safari",
-    "Chrome", "Opera"];
+var browserList = ["Internet Explorer", "Firefox", "Safari", "Chrome", "Opera"];
 
-browserList.forEach(function(e) {
+browserList.forEach(function (e) {
   var li = document.createElement("li");
   li.textContent = e;
   docfrag.appendChild(li);

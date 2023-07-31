@@ -498,7 +498,7 @@ console.log(msg); // Hello, my name is George
 
 ### 함수형 상속(Functional inheritance)
 
-함수형 상속(Functional inheritance)이라는 단어는 Douglas Crockford가 자신의 저서 “JavaScript: The Good Parts”에서 창조한 단어이다. 이 방법은 새 속성들을 연결형 상속으로 쌓되 상속 기능을 Factory 함수로 만들어 사용하는 방식이다.
+함수형 상속(Functional inheritance)이라는 단어는 Douglas Crockford가 자신의 저서 "JavaScript: The Good Parts"에서 창조한 단어이다. 이 방법은 새 속성들을 연결형 상속으로 쌓되 상속 기능을 Factory 함수로 만들어 사용하는 방식이다.
 
 기존의 객체를 확장하는데 쓰이는 함수를 일반적으로 믹스인 함수라 칭한다. 객체 확장에 함수를 사용하는 가장 큰 이점은 Private Data를 클로져를 통해 캡슐화 시킬 수 있다는 점이다.
 

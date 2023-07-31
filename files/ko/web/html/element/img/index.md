@@ -83,7 +83,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
   `low`: 이미지가 **낮은** 우선순위를 지님.
 
   - {{htmlattrdef("intrinsicsize")}} {{deprecated_inline}}
-    - This attribute tells the browser to ignore the actual intrinsic size of the image and pretend it’s the size specified in the attribute. Specifically, the image would raster at these dimensions and `naturalWidth`/`naturalHeight` on images would return the values specified in this attribute. [Explainer](https://github.com/ojanvafai/intrinsicsize-attribute), [examples](https://googlechrome.github.io/samples/intrinsic-size/index.html)
+    - This attribute tells the browser to ignore the actual intrinsic size of the image and pretend it's the size specified in the attribute. Specifically, the image would raster at these dimensions and `naturalWidth`/`naturalHeight` on images would return the values specified in this attribute. [Explainer](https://github.com/ojanvafai/intrinsicsize-attribute), [examples](https://googlechrome.github.io/samples/intrinsic-size/index.html)
 - {{htmlattrdef("ismap")}}
   - : 이미지가 [서버 사이드 맵](https://ko.wikipedia.org/wiki/%EC%9D%B4%EB%AF%B8%EC%A7%80_%EB%A7%B5)의 일부인지 나타냄. 서버 사이드 맵에 속하는 경우, 사용자가 이미지에서 클릭한 위치를 서버로 전송합니다.
 
