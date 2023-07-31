@@ -2,6 +2,7 @@
 title: Your second extension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
+
 {{AddonSidebar}}
 
 [Your first extension](/ko/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) 장을 읽었다면, 확장 기능을 만드는 법을 알게 되었을 것입니다. 이번 장에서는 몇개의 API를 사용하는 약간 더 복잡한 확장 기능을 만들어 보겠습니다.
@@ -51,7 +52,6 @@ cd beastify
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Beastify",
   "version": "1.0",
@@ -62,9 +62,7 @@ cd beastify
     "48": "icons/beasts-48.png"
   },
 
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": ["activeTab"],
 
   "browser_action": {
     "default_icon": "icons/beasts-32.png",
@@ -77,7 +75,6 @@ cd beastify
     "beasts/turtle.jpg",
     "beasts/snake.jpg"
   ]
-
 }
 ```
 
@@ -99,7 +96,7 @@ cd beastify
 
 확장 기능은 아이콘을 가져야 합니다. 이 아이콘은 애드온 매니저("about:addons" url을 통해 열 수 있습니다)에서 확장 기능의 목록에서 보여집니다. 이번에 만든 manifest.json는 "icons / beasts-48.png" 아이콘을 정의했습니다.
 
-"icons"라는 디렉토리를 만들고 "beasts-48.png" 파일을 그 아래에 저장하겠습니다. 우리 예제는 [Aha-Soft’s Free Retina iconset](https://www.iconfinder.com/iconsets/free-retina-icon-set)에서 가져온 이미지를 [라이센스](http://www.aha-soft.com/free-icons/free-retina-icon-set/) 조건에 따라 사용했습니다.
+"icons"라는 디렉토리를 만들고 "beasts-48.png" 파일을 그 아래에 저장하겠습니다. 우리 예제는 [Aha-Soft's Free Retina iconset](https://www.iconfinder.com/iconsets/free-retina-icon-set)에서 가져온 이미지를 [라이센스](http://www.aha-soft.com/free-icons/free-retina-icon-set/) 조건에 따라 사용했습니다.
 
 자신만의 아이콘을 사용하려면 48x48 픽셀이어야 합니다. 또한 고해상도를 위한 96x96 픽셀도 지원합니다. 만약 고해상도를 지원하게 하고싶다면 manifest.json의 아이콘 부분을 아래처럼 작성하면 됩니다.
 
@@ -139,27 +136,27 @@ touch choose_beast.html choose_beast.css choose_beast.js
 HTML파일의 내용은 다음과 같습니다.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_beast.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="choose_beast.css" />
   </head>
 
-<body>
-  <div id="popup-content">
-    <div class="button beast">Frog</div>
-    <div class="button beast">Turtle</div>
-    <div class="button beast">Snake</div>
-    <div class="button reset">Reset</div>
-  </div>
-  <div id="error-content" class="hidden">
-    <p>Can't beastify this web page.</p><p>Try a different page.</p>
-  </div>
-  <script src="choose_beast.js"></script>
-</body>
-
+  <body>
+    <div id="popup-content">
+      <div class="button beast">Frog</div>
+      <div class="button beast">Turtle</div>
+      <div class="button beast">Snake</div>
+      <div class="button reset">Reset</div>
+    </div>
+    <div id="error-content" class="hidden">
+      <p>Can't beastify this web page.</p>
+      <p>Try a different page.</p>
+    </div>
+    <script src="choose_beast.js"></script>
+  </body>
 </html>
 ```
 
@@ -172,7 +169,8 @@ HTML파일의 내용은 다음과 같습니다.
 이 CSS는 팝업의 크기를 정의하고 선택항목의 공간을 정의하는 등 기본적인 스타일링을 합니다. 또한 `class="hidden"` 이라고 정의한 항목을 숨깁니다. 이것은 `"error-content"` `<div>` 가 기본적으로는 숨겨진다는 것을 뜻합니다.
 
 ```css
-html, body {
+html,
+body {
   width: 100px;
 }
 
@@ -189,19 +187,19 @@ html, body {
 }
 
 .beast:hover {
-  background-color: #CFF2F2;
+  background-color: #cff2f2;
 }
 
 .beast {
-  background-color: #E5F2F2;
+  background-color: #e5f2f2;
 }
 
 .reset {
-  background-color: #FBFBC9;
+  background-color: #fbfbc9;
 }
 
 .reset:hover {
-  background-color: #EAEA9D;
+  background-color: #eaea9d;
 }
 ```
 
@@ -224,7 +222,6 @@ const hidePage = `body > :not(.beastify-image) {
  */
 function listenForClicks() {
   document.addEventListener("click", (e) => {
-
     /**
      * Given the name of a beast, get the URL to the corresponding image.
      */
@@ -245,11 +242,11 @@ function listenForClicks() {
      * send a "beastify" message to the content script in the active tab.
      */
     function beastify(tabs) {
-      browser.tabs.insertCSS({code: hidePage}).then(() => {
+      browser.tabs.insertCSS({ code: hidePage }).then(() => {
         let url = beastNameToURL(e.target.textContent);
         browser.tabs.sendMessage(tabs[0].id, {
           command: "beastify",
-          beastURL: url
+          beastURL: url,
         });
       });
     }
@@ -259,7 +256,7 @@ function listenForClicks() {
      * send a "reset" message to the content script in the active tab.
      */
     function reset(tabs) {
-      browser.tabs.removeCSS({code: hidePage}).then(() => {
+      browser.tabs.removeCSS({ code: hidePage }).then(() => {
         browser.tabs.sendMessage(tabs[0].id, {
           command: "reset",
         });
@@ -278,12 +275,13 @@ function listenForClicks() {
      * then call "beastify()" or "reset()" as appropriate.
      */
     if (e.target.classList.contains("beast")) {
-      browser.tabs.query({active: true, currentWindow: true})
+      browser.tabs
+        .query({ active: true, currentWindow: true })
         .then(beastify)
         .catch(reportError);
-    }
-    else if (e.target.classList.contains("reset")) {
-      browser.tabs.query({active: true, currentWindow: true})
+    } else if (e.target.classList.contains("reset")) {
+      browser.tabs
+        .query({ active: true, currentWindow: true })
         .then(reset)
         .catch(reportError);
     }
@@ -305,9 +303,10 @@ function reportExecuteScriptError(error) {
  * and add a click handler.
  * If we couldn't inject the script, handle the error.
  */
-browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
-.then(listenForClicks)
-.catch(reportExecuteScriptError);
+browser.tabs
+  .executeScript({ file: "/content_scripts/beastify.js" })
+  .then(listenForClicks)
+  .catch(reportExecuteScriptError);
 ```
 
 이 코드의 시작접은 96번째 라인입니다. 이 스크립트는 [`browser.tabs.executeScript()`](/ko/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API를 사용해 팝업이 로드될때 활성화된 탭에 content script (beastify.js)를 주입합니다. content script를 성공적으로 주입하면 사용자가 탭을 닫거나 페이지를 이동할 때까지 content script가 주입 된 상태로 유지됩니다.
@@ -335,7 +334,7 @@ content script 주입이 성공하면 `listenForClicks()`이 호출 된다. 이 
 확장 기능의 루트에 "content_scripts"라는 디렉토리를 생성하고, "beastify.js" 파일을 아래 내용으로 작성합니다.
 
 ```js
-(function() {
+(function () {
   /**
    * Check and set a global guard variable.
    * If this content script is injected into the same page again,
@@ -373,7 +372,7 @@ content script 주입이 성공하면 `listenForClicks()`이 호출 된다. 이 
   /**
    * Listen for messages from the background script.
    * Call "beastify()" or "reset()".
-  */
+   */
   browser.runtime.onMessage.addListener((message) => {
     if (message.command === "beastify") {
       insertBeast(message.beastURL);
@@ -381,7 +380,6 @@ content script 주입이 성공하면 `listenForClicks()`이 호출 된다. 이 
       removeExistingBeasts();
     }
   });
-
 })();
 ```
 

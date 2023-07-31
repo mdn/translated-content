@@ -68,7 +68,6 @@ l10n:
 </a>
 <p>
   Documenting web technologies, including CSS, HTML, and JavaScript, since 2005.
-</p>
 ```
 
 이렇게 하면 헤더를 링크로 바꿀 수 있습니다.
@@ -141,8 +140,10 @@ URL은 파일들을 찾기위해 path를 이용합니다. path는 당신이 관�
 - **같은 디렉토리(폴더):** `contacts.html`을 가리키는 하이퍼링크를 `index.html`(최상위 레벨 `index.html`) 안에 포함하려면 현재 파일과 동일한 디렉토리에 있으므로 연결하려는 파일의 이름만 지정하면 됩니다. 따라서 사용할 URL은 `contacts.html` 입니다.
 
 ```html
-<p>Want to contact a specific staff member?
-Find details on our <a href="contacts.html">contacts page</a>.</p>
+<p>
+  Want to contact a specific staff member? Find details on our
+  <a href="contacts.html">contacts page</a>.
+</p>
 ```
 
 - **하위 디렉토리로 하향 이동:** `projects/index.html`을 가리키는 하이퍼링크를 `index.html`(최상위 레벨 `index.html`)에 포함하려면 연결하려는 파일을 표시하기 전에 프로젝트 디렉토리로 내려가야 합니다. 이 작업은 디렉토리 이름, 그 다음 슬래시, 그 다음 파일 이름을 지정하여 수행되므로 사용할 URL은 `projects/index.html` 입니다.
@@ -170,13 +171,19 @@ Find details on our <a href="contacts.html">contacts page</a>.</p>
 그런 다음 해당 ID에 연결하려면 아래 예시와 같이 URL 끝에 해시/파운드 기호를 포함하면 됩니다.
 
 ```html
-<p>Want to write us a letter? Use our <a href="contacts.html#Mailing_address">mailing address</a>.</p>
+<p>
+  Want to write us a letter? Use our
+  <a href="contacts.html#Mailing_address">mailing address</a>.
+</p>
 ```
 
 Document fragments(문서 조각)를 참조하여 현재 문서의 다른 부분에 연결할 수도 있습니다.
 
 ```html
-<p>The <a href="#Mailing_address">company mailing address</a> can be found at the bottom of this page.</p>
+<p>
+  The <a href="#Mailing_address">company mailing address</a> can be found at the
+  bottom of this page.
+</p>
 ```
 
 ### 절대 URL과 상대 URL

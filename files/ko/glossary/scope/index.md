@@ -10,13 +10,13 @@ original_slug: Glossary/스코프
 
 ```js
 function exampleFunction() {
-    var x = "declared inside function";
-    // x는 오직 exampleFunction 내부에서만 사용 가능.
-    console.log("Inside function");
-    console.log(x);
+  var x = "declared inside function";
+  // x는 오직 exampleFunction 내부에서만 사용 가능.
+  console.log("Inside function");
+  console.log(x);
 }
 
-console.log(x);  // 에러 발생
+console.log(x); // 에러 발생
 ```
 
 그러나 다음과 같은 코드는 변수가 함수 외부의 전역에서 선언되었기 때문에 유효하다.
@@ -27,8 +27,8 @@ var x = "declared outside function";
 exampleFunction();
 
 function exampleFunction() {
-    console.log("Inside function");
-    console.log(x);
+  console.log("Inside function");
+  console.log(x);
 }
 
 console.log("Outside function");
