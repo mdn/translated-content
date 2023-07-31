@@ -17,7 +17,7 @@ Web Audio API 的 `AudioParam` 接口代表音频相关的参数，通常是 {{d
 
 ### a-rate
 
-_a-rate_ `AudioParam` 获取音频信号的每个[采样帧](Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#音频片段：帧、样本和声道)的当前音频参数值。
+_a-rate_ `AudioParam` 获取音频信号的每个[采样帧](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#音频片段：帧、样本和声道)的当前音频参数值。
 
 ### k-rate
 
@@ -45,7 +45,7 @@ _k-rate_ `AudioParam` 对待处理的整个块使用相同的初始音频参数�
 - {{domxref("AudioParam.setTargetAtTime()")}}
   - : 安排逐渐改变 `AudioParam` 的值的开始时间。这个变化将从 `startTime` 指定的时间开始，并且以指定的方式向目标参数给定的值改变。指数衰减速率由 `timeConstant` 参数定义，以秒为单位。
 - {{domxref("AudioParam.setValueCurveAtTime()")}}
-  - : 调整 `AudioParam` 的值以跟随一组定义为 {{domxref("Float32Array")}} 的值，数值会缩放到适应给定的间隔，从 `startTime` 时间开始，直到给定的持续时间（duration）。
+  - : 调整 `AudioParam` 的值以跟随一组缩放到适应给定间隔的浮点数值，该间隔从给定的起始时间开始，持续一段给定的时长。
 - {{domxref("AudioParam.cancelScheduledValues()")}}
   - : 取消所有安排的对 `AudioParam` 的未来的改变。
 - {{domxref("AudioParam.cancelAndHoldAtTime()")}}
