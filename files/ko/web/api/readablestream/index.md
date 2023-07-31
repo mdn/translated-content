@@ -54,10 +54,10 @@ fetch("https://www.example.org/").then((response) => {
           controller.enqueue(value);
           push();
         });
-      };
+      }
 
       push();
-    }
+    },
   });
 
   return new Response(stream, { headers: { "Content-Type": "text/html" } });

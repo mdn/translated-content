@@ -85,7 +85,7 @@ To publish to this account, please connect through FTP with the following creden
 
 ![Our demozilla personal website, seen in a browser: it's empty](demozilla-empty.png)
 
-> **참고:** 보이는 화면은 여러분의 호스팅 제공자에 따라 다릅니다. 대부분은 “This website is hosted by \[Hosting Service].”과 같은 페이지를 보게될 것입니다.
+> **참고:** 보이는 화면은 여러분의 호스팅 제공자에 따라 다릅니다. 대부분은 "This website is hosted by \[Hosting Service]."과 같은 페이지를 보게될 것입니다.
 
 이제 우리의 FTP 클라이언트를 멀리 떨어진 서버에 접속하기 위해 _"Create an account..." 버튼을 누릅니다._ 그리고 호스팅제공자로 부터 받은 정보를 해당 필드에 채워줍니다.
 

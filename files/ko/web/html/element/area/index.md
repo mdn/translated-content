@@ -99,7 +99,7 @@ slug: Web/HTML/Element/area
   - : A string indicating which referrer to use when fetching the resource:
 
     - `"no-referrer"` meaning that the `Referer:` header will not be sent.
-    - "`no-referrer-when-downgrade`" meaning that no `Referer:` header will be sent when navigating to an origin without TLS (HTTPS). This is a user agent’s default behavior, if no policy is otherwise specified.
+    - "`no-referrer-when-downgrade`" meaning that no `Referer:` header will be sent when navigating to an origin without TLS (HTTPS). This is a user agent's default behavior, if no policy is otherwise specified.
     - `"origin"` meaning that the referrer will be the origin of the page, that is roughly the scheme, the host and the port.
     - "origin-when-cross-origin" meaning that navigations to other origins will be limited to the scheme, the host and the port, while navigations on the same origin will include the referrer's path.
     - `"unsafe-url"` meaning that the referrer will include the origin and the path (but not the fragment, password, or username). This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.
@@ -138,7 +138,7 @@ A numeric value specifying the position of the defined area in the browser tabbi
 
 - {{htmlattrdef("type")}} {{deprecated_inline}}
 
-No effect. Browsers ignore it. (The W3C 5.3 fork of the HTML specification defines it as valid, but [the canonical HTML specification](https://html.spec.whatwg.org/multipage/#the-area-element) doesn’t, and it has no effect in any user agents.)
+No effect. Browsers ignore it. (The W3C 5.3 fork of the HTML specification defines it as valid, but [the canonical HTML specification](https://html.spec.whatwg.org/multipage/#the-area-element) doesn't, and it has no effect in any user agents.)
 
 ## 예제
 
