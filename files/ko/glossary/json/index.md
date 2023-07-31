@@ -11,5 +11,5 @@ JSON은 숫자, 불리언, 문자열, `null`, 배열(순서가 지정된 값) �
 
 ## 같이 보기
 
-- [JSON](https://en.wikipedia.org/wiki/JSON) on Wikipedia
-- [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) on MDN
+- [JSON](https://ko.wikipedia.org/wiki/JSON) on Wikipedia
+- [JSON](/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON) on MDN
