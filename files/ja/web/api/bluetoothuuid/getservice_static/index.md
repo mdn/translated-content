@@ -27,7 +27,7 @@ BluetoothUUID.getService(name)
 ### 例外
 
 - {{jsxref("TypeError")}}
-  - : `name` がレジストリで見つからないとき投げられます。
+  - : `name` がレジストリーで見つからないとき投げられます。
 
 ## 例
 

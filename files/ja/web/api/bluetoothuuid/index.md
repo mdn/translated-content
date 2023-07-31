@@ -7,12 +7,12 @@ l10n:
 
 {{APIRef("Bluetooth API")}}
 
-{{domxref('Web Bluetooth API')}} の **`BluetoothUUID`** インターフェイスは、Bluetooth SIG が管理している[レジストリ](https://www.bluetooth.com/specifications/assigned-numbers/)から Universally Unique Identifier (UUID) の値を名前で検索する方法を提供します。
+{{domxref('Web Bluetooth API')}} の **`BluetoothUUID`** インターフェイスは、Bluetooth SIG が管理している[レジストリー](https://www.bluetooth.com/specifications/assigned-numbers/)から Universally Unique Identifier (UUID) の値を名前で検索する方法を提供します。
 
 ## 説明
 
 UUID 文字列は、`00001818-0000-1000-8000-00805f9b34fb` などの 128 ビットの UUID です。
-Bluetooth レジストリには、16 ビットおよび 32 ビットのエイリアスと名前に加え、UUID で識別されるディスクリプター、サービス、キャラクタリスティックのリストも格納されています。
+Bluetooth レジストリーには、16 ビットおよび 32 ビットのエイリアスと名前に加え、UUID で識別されるディスクリプター、サービス、キャラクタリスティックのリストも格納されています。
 
 `BluetoothUUID` インターフェイスは、これらの 128 ビットの UUID を取得するメソッドを提供します。
 
