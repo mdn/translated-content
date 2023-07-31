@@ -215,7 +215,7 @@ slug: Web/Accessibility/ARIA/Roles/listbox_role
 
 <section id="Quick_links">
 
-1. [**WAI-ARIA 角色**](/en-US/docs/Web/Accessibility/ARIA/Roles)
+1. [**WAI-ARIA 角色**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
 
    {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Roles")}}
 

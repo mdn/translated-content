@@ -7,7 +7,7 @@ slug: Web/Accessibility/ARIA
   <ol>
     <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Annotations">ARIA 注解</a></li>
     <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Guides">ARIA 指南</a></li>
-    <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA 流动区域</a></li>
+    <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA 实时区域</a></li>
     <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA 屏幕阅读器实现指南</a></li>
     <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques">使用 ARIA：角色、状态和属性</a></li>
     <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Multipart_labels">多部分标签</a></li>
@@ -25,15 +25,15 @@ slug: Web/Accessibility/ARIA
   </ol>
 </section>
 
-无障碍富互联网应用（Accessible Rich Internet Applications，**<abbr>ARIA</abbr>**）是一组[角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)和[特性](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)，用于定义使残障人士更易于访问 web 内容和 web 应用程序（尤其是使用 JavaScript 开发的应用程序）的方法。
+无障碍富互联网应用（Accessible Rich Internet Applications，**<abbr>ARIA</abbr>**）是一组[角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)和[属性](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)，用于定义使残障人士更易于访问 web 内容和 web 应用程序（尤其是使用 JavaScript 开发的应用程序）的方法。
 
 它补充了 HTML，以便在没有其他机制时可以将应用程序中常用的交互和小部件传递给辅助技术。例如，ARIA 支持无障碍 JavaScript 小部件、表单提示和错误消息、实时内容更新等。
 
-> **警告：** 许多这些小部件后来被合并到 HTML5 中，如果存在这样的元素，**开发人员应该更喜欢使用正确语义的 HTML 元素而不是使用 ARIA**。例如，原生元素具有内置的[键盘无障碍](/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)、角色和状态。但是，如果您选择使用 ARIA，则您有责任在脚本中模仿（等效）浏览器行为。
+> **警告：** 许多这些小部件在现代浏览器中都已经完全支持。如果有正确语义的 HTML 元素存在的话，**开发人员应该更喜欢使用这样的元素而不是使用 ARIA**。例如，原生元素具有内置的[键盘无障碍](/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)、角色和状态。但是，如果您选择使用 ARIA，则你有责任在脚本中模仿（等效）浏览器行为。
 
 使用 [ARIA 的第一规则](https://www.w3.org/TR/using-aria/#rule1)是“如果你能够使用原生的 HTML 元素或属性，并且有你需要但已经建立在里面的语义和行为，而不是重新调整元素的用途并添加 ARIA 角色、状态或者属性来使它更加无障碍，那么你就应该如此。”
 
-> **备注：** 有个说法叫做“ARIA 宁缺毋滥”。在 [WebAim's survey of over one million home pages](https://webaim.org/projects/million/#aria) 中，他们发生，有 ARIA 存在的主页比那些没有 ARIA 的，多检测出了平均 41% 的错误。尽管 ARIA 是为了使网页更加无障碍而设计的，但是如果使用不当，可能适得其反。
+> **备注：** 有个说法叫做“ARIA 宁缺毋滥”。在 [WebAim's survey of over one million home pages](https://webaim.org/projects/million/#aria) 中，他们发现，有 ARIA 存在的主页比那些没有 ARIA 的，多检测出了平均 41% 的错误。尽管 ARIA 是为了使网页更加无障碍而设计的，但是如果使用不当，可能适得其反。
 
 这是进度条小部件的标记：
 
@@ -75,9 +75,9 @@ function updateProgress(percentComplete) {
 <progress id="percent-loaded" value="75" max="100">75 %</progress>
 ```
 
-> **Note:** {{HTMLElement('progress')}} 元素不允许 `min` 属性，最小值永远为 0。
+> **注释：** {{HTMLElement('progress')}} 元素不允许 `min` 属性，最小值永远为 0。
 
-> HTML 陆标元素（{{HTMLElement("main")}}、{{HTMLElement("header")}}、{{HTMLElement("nav")}} 等）具有内置的 ARIA 角色，因此有无需复制它们。
+> HTML 地标元素（{{HTMLElement("main")}}、{{HTMLElement("header")}}、{{HTMLElement("nav")}} 等）具有内置的 ARIA 角色，因此有无需复制它们。
 
 ## 支持
 
