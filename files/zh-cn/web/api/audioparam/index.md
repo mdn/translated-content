@@ -9,7 +9,7 @@ Web Audio API 的 `AudioParam` 接口代表音频相关的参数，通常是 {{d
 
 `AudioParam` 可以用于安排在特定时间并遵循特定模式设置一个具体的值或者数值的变化过程。
 
-每个 `AudioParam` 都有一个初始化为空的事件列表，用于定义值在何时发生的具体变化。当该列表不为空时，`AudioParam.value` 将忽略使用属性进行的更改。该事件列表使我们能够使用任意基于时间线的自动化曲线来安排必须在非常精确的时间发生的更改。使用的时间定义于 {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}} 中。
+每个 `AudioParam` 都有一个初始化为空的事件列表，用于定义值在何时发生的具体变化。当该列表不为空时，将忽略使用 `AudioParam.value` 属性进行的更改。该事件列表使我们能够使用任意基于时间线的自动化曲线来安排必须在非常精确的时间发生的更改。使用的时间定义于 {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}} 中。
 
 ## AudioParam 类型
 
@@ -39,17 +39,17 @@ _k-rate_ `AudioParam` 对待处理的整个块使用相同的初始音频参数�
 - {{domxref("AudioParam.setValueAtTime()")}}
   - : 参照 {{domxref("AudioContext.currentTime")}}，安排在一个确切的时间，立即更改 `AudioParam` 的值。新的值由 `value` 参数给定。
 - {{domxref("AudioParam.linearRampToValueAtTime()")}}
-  - : 调整 `AudioParam` 的值，使其逐渐按线性变化。这个变化会从上一个事件指定的事件开始，跟随一个线性变化到参数给定的新值，并在 `endTime` 参数给定的时间到达新值。
+  - : 调整 `AudioParam` 的值，使其逐渐按线性变化。这个变化会从*上一个*事件指定的事件开始，跟随一个线性变化到参数给定的新值，并在 `endTime` 参数给定的时间到达新值。
 - {{domxref("AudioParam.exponentialRampToValueAtTime()")}}
-  - : 调整 `AudioParam` 的值，使其逐渐按指数变化。这个变化会从上一个事件指定的事件开始，跟随一个指数变化到参数给定的新值，并在 `endTime` 参数给定的时间到达新值。
+  - : 调整 `AudioParam` 的值，使其逐渐按指数变化。这个变化会从*上一个*事件指定的事件开始，跟随一个指数变化到参数给定的新值，并在 `endTime` 参数给定的时间到达新值。
 - {{domxref("AudioParam.setTargetAtTime()")}}
-  - : 将开始计划改变 `AudioParam` 的值。这个变化将从 `startTime` 指定的时间开始，并且以指定的方式向目标参数给定的值改变。指数衰减速率由 `timeConstant` 参数定义，`time` 参数使以秒作为测量单位的时间。
+  - : 安排逐渐改变 `AudioParam` 的值的开始时间。这个变化将从 `startTime` 指定的时间开始，并且以指定的方式向目标参数给定的值改变。指数衰减速率由 `timeConstant` 参数定义，以秒为单位。
 - {{domxref("AudioParam.setValueCurveAtTime()")}}
-  - : 调整 `AudioParam` 的值以跟随一组定义为 {{domxref("Float32Array")}} 的值，数值会缩放到适应给定的间隔，从 `startTime` 时间开始并具有特定的持续时间（duration）。
+  - : 调整 `AudioParam` 的值以跟随一组定义为 {{domxref("Float32Array")}} 的值，数值会缩放到适应给定的间隔，从 `startTime` 时间开始，直到给定的持续时间（duration）。
 - {{domxref("AudioParam.cancelScheduledValues()")}}
-  - : 取消全部在 `AudioParam` 中的未来计划发生的改变。
+  - : 取消所有安排的对 `AudioParam` 的未来的改变。
 - {{domxref("AudioParam.cancelAndHoldAtTime()")}}
-  - : 取消全部计划将来对 `AudioParam` 的改变，但是保持给定时间的值，直到将来的使用其他方法产生改变。新的值会被赋予到 `value` 属性中。
+  - : 取消所有安排的对 `AudioParam` 的未来的改变，但是保持给定时间的值，直到将来的使用其他方法产生改变。
 
 ## 示例
 
