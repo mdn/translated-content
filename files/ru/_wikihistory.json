@@ -8445,14 +8445,6 @@
     "modified": "2019-03-23T22:55:54.351Z",
     "contributors": ["surrsoft"]
   },
-  "Web/CSS/CSS_Selectors": {
-    "modified": "2019-09-26T17:15:05.505Z",
-    "contributors": ["RomanBush", "vkorzhova", "Gergalov", "bezik", "irenprkpv"]
-  },
-  "Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors": {
-    "modified": "2019-03-18T21:30:19.329Z",
-    "contributors": ["Hoopers_Hooch"]
-  },
   "Web/CSS/CSS_Types": {
     "modified": "2019-03-18T21:45:05.678Z",
     "contributors": ["TViglesGoom"]
@@ -8770,6 +8762,14 @@
   "Web/CSS/CSS_scroll_snap/Basic_concepts": {
     "modified": "2020-04-24T16:34:16.121Z",
     "contributors": ["hisbvdis"]
+  },
+  "Web/CSS/CSS_selectors": {
+    "modified": "2019-09-26T17:15:05.505Z",
+    "contributors": ["RomanBush", "vkorzhova", "Gergalov", "bezik", "irenprkpv"]
+  },
+  "Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors": {
+    "modified": "2019-03-18T21:30:19.329Z",
+    "contributors": ["Hoopers_Hooch"]
   },
   "Web/CSS/CSS_table": {
     "modified": "2019-03-23T22:31:01.222Z",

@@ -35,8 +35,8 @@ browser.tabs.onUpdated.addListener(handleUpdated);
 
 ```js
 var toggling = browser.tabs.toggleReaderMode(
-  tabId            // optional integer
-)
+  tabId, // optional integer
+);
 ```
 
 ### Paramètres

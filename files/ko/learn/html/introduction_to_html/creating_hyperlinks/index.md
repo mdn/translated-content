@@ -43,7 +43,7 @@ A basic link is created by wrapping the text (or other content, see [Block level
 
 ```html
 <p>나는 링크를 만들었습니다.
-<a href="https://www.mozilla.org/en-US/">Mozilla 홈페이지</a>.
+<a href="https://www.mozilla.org/ko/">Mozilla 홈페이지</a>.
 </p>
 ```
 
@@ -70,7 +70,7 @@ title 속성은 그리고 마우스를 호버했을때에 툴팁에 대한 기�
 
 > **참고:** 링크 제목은 마우스 호버시에만 공개 됩니다. 이것은 웹 페이지를 탐색하기 위해 키보드에만 의존하는 사람들이 타이틀 정보에 접근하는데 어려움을 겪게 된다는 것을 의미합니다. 만약 title의 정보가 페이지 사용에 있어서 정말로 중요하다면, 해당하는 정보를 일반 텍스트에 넣어줌으로써 모든 사용자가 접근할 수 있는 방식으로 제시해주어야합니다.
 
-### 능동학습: 당신만의 링크 만들기
+### 능동학습: 링크를 만들어봅시다
 
 능동적으로 학습해 봅시다: 코드 편집기를 사용해서 하나의 HTML document 를 만드세요. ([소스코드: 템플릿 시작하기](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)를 이용해보세요.)
 
@@ -107,8 +107,10 @@ URL은 파일들을 찾기위해 path를 이용합니다. path는 당신이 관�
 - **같은 디렉토리(폴더)**: `contacts.html`을 가리키는 하이퍼링크를 `index.html`(top level `index.html`) 안에 포함시키려면 현재 파일과 동일한 디렉토리에 연결하려는 파일의 파일 이름만 지정하면 된다. 따라서 사용할 URL은 `contacts.html`: 입니다.
 
 ```html
-<p>Want to contact a specific staff member?
-Find details on our <a href="contacts.html">contacts page</a>.</p>
+<p>
+  Want to contact a specific staff member? Find details on our
+  <a href="contacts.html">contacts page</a>.
+</p>
 ```
 
 - **하위 디렉토리로 하향 이동**: `projects/index.html`을 가리키는 하이퍼링크를 internal `index.html`(`index.html`에 상위 레벨)에 포함시키려면 연결하려는 파일을 표시하기 전에 프로젝트 디렉토리로 내려가야 할 것이다. 이 작업은 디렉토리 이름, 그 다음 슬래시, 그 다음 파일 이름을 지정하여 수행되므로 사용할 URL은`projects/index.html` 입니다.
@@ -301,7 +303,8 @@ Firefox 39의 Windows 버전에 대한 다운로드 링크가 있는 예:
 아래 예제가 cc, bcc, subject and body 를 포함한다.:
 
 ```html
-<a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&amp;subject=The%20subject%20of%20the%20email &amp;body=The%20body%20of%20the%20email">
+<a
+  href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
   Send mail with cc, bcc, subject and body
 </a>
 ```

@@ -13,7 +13,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var gettingAcceptLanguages = browser.i18n.getAcceptLanguages()
+var gettingAcceptLanguages = browser.i18n.getAcceptLanguages();
 ```
 
 ### Paramètres

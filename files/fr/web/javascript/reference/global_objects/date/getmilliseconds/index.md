@@ -13,7 +13,7 @@ La méthode **`getMilliseconds()`** renvoie les millièmes de secondes de la dat
 ## Syntaxe
 
 ```js
-dateObj.getMilliseconds()
+dateObj.getMilliseconds();
 ```
 
 ### Valeur de retour

@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing ] after element list'
+title: "SyntaxError: missing ] after element list"
 slug: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
 translation_of: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
 ---
@@ -41,13 +41,9 @@ Les versions correctes seraient :
 ```js example-good
 var liste = [1, 2];
 
-var instruments = [
- "Ukulele",
- "Guitare",
- "Piano"
-];
+var instruments = ["Ukulele", "Guitare", "Piano"];
 
-var data = [{toto: "truc"}, {titi: "bidule"}];
+var data = [{ toto: "truc" }, { titi: "bidule" }];
 ```
 
 ## Voir aussi

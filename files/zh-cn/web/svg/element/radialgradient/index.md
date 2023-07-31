@@ -41,27 +41,27 @@ svg {
 ## 属性
 
 - {{SVGAttr("cx")}}
-  - : 这个属性定义了径向渐变的终点圆的 X 坐标。*值类型*：[**\<length>**](/zh-CN/docs/Web/SVG/Content_type#长度)；*默认值*：`50%`；*动画性*：**有**
+  - : 这个属性定义了径向渐变的终点圆的 X 坐标。_值类型_：[**\<length>**](/zh-CN/docs/Web/SVG/Content_type#长度)；_默认值_：`50%`；_动画性_：**有**
 - {{SVGAttr("cy")}}
-  - : 这个属性定义了径向渐变的终点圆的 Y 坐标。*值类型*：[**\<length>**](/zh-CN/docs/Web/SVG/Content_type#长度)；*默认值*：`50%`；*动画性*：**有**
+  - : 这个属性定义了径向渐变的终点圆的 Y 坐标。_值类型_：[**\<length>**](/zh-CN/docs/Web/SVG/Content_type#长度)；_默认值_：`50%`；_动画性_：**有**
 - {{SVGAttr("fr")}}
-  - : 这个属性定义了径向梯度的起点圆的半径。渐变的绘制将使 0% {{SVGElement('stop','gradient stop')}} 被映射到起始圆的周长。*值类型*：[**\<length>**](/zh-CN/docs/Web/SVG/Content_type#长度)；*默认值*：`0%`；*动画性*：**有**
+  - : 这个属性定义了径向梯度的起点圆的半径。渐变的绘制将使 0% {{SVGElement('stop','gradient stop')}} 被映射到起始圆的周长。_值类型_：[**\<length>**](/zh-CN/docs/Web/SVG/Content_type#长度)；_默认值_：`0%`；_动画性_：**有**
 - {{SVGAttr("fx")}}
-  - : 这个属性定义了径向渐变的起点圆的 X 坐标。*值类型*：[**\<length>**](/zh-CN/docs/Web/SVG/Content_type#长度)；*默认值*：与 `cx` 相同；*动画性*：**有**
+  - : 这个属性定义了径向渐变的起点圆的 X 坐标。_值类型_：[**\<length>**](/zh-CN/docs/Web/SVG/Content_type#长度)；_默认值_：与 `cx` 相同；_动画性_：**有**
 - {{SVGAttr("fy")}}
-  - : 这个属性定义了径向渐变的起点圆的 Y 坐标。*值类型*：[**\<length>**](/zh-CN/docs/Web/SVG/Content_type#长度)；*默认值*：与 `cy` 相同；*动画性*：**有**
+  - : 这个属性定义了径向渐变的起点圆的 Y 坐标。_值类型_：[**\<length>**](/zh-CN/docs/Web/SVG/Content_type#长度)；_默认值_：与 `cy` 相同；_动画性_：**有**
 - {{SVGAttr("gradientUnits")}}
-  - : 这个属性定义了 `cx`、`cy`、`r`、`fx`、`fy`、`fr` 属性的坐标系统；*值类型*：`userSpaceOnUse`|`objectBoundingBox`；*默认值*：`objectBoundingBox`；*动画性*：**有**
+  - : 这个属性定义了 `cx`、`cy`、`r`、`fx`、`fy`、`fr` 属性的坐标系统；_值类型_：`userSpaceOnUse`|`objectBoundingBox`；_默认值_：`objectBoundingBox`；_动画性_：**有**
 - {{SVGAttr("gradientTransform")}}
-  - : 这个属性为梯度坐标系提供了额外的[变换](/zh-CN/docs/Web/SVG/Atribute/transform)。*值类型*：**[\<transform-list>](/zh-CN/docs/Web/SVG/Content_type#transform-list)** ；*默认值*：*identity transform*；*动画性*：**有**
+  - : 这个属性为梯度坐标系提供了额外的[变换](/zh-CN/docs/Web/SVG/Atribute/transform)。_值类型_：**[\<transform-list>](/zh-CN/docs/Web/SVG/Content_type#transform-list)** ；_默认值_：_identity transform_；_动画性_：**有**
 - {{SVGAttr("href")}}
-  - : 这个属性定义了对另一个将被用作模板 `<radialGradient>` 元素的引用。*值类型*：[**\<URL>**](/zh-CN/docs/Web/SVG/Content_type#url)；*默认值*：none；*动画性*：**有**
+  - : 这个属性定义了对另一个将被用作模板 `<radialGradient>` 元素的引用。_值类型_：[**\<URL>**](/zh-CN/docs/Web/SVG/Content_type#url)；_默认值_：none；_动画性_：**有**
 - {{SVGAttr("r")}}
-  - : 这个属性定义了径向渐变的终点圆的半径。梯度的绘制将使 100% 的{{SVGElement('stop','gradient stop')}} 被映射到终点圆的周长。*值类型*：[**\<length>**](/zh-CN/docs/Web/SVG/Content_type#长度)；*默认值*：`50%`；*动画性*：**有**
+  - : 这个属性定义了径向渐变的终点圆的半径。梯度的绘制将使 100% 的{{SVGElement('stop','gradient stop')}} 被映射到终点圆的周长。_值类型_：[**\<length>**](/zh-CN/docs/Web/SVG/Content_type#长度)；_默认值_：`50%`；_动画性_：**有**
 - {{SVGAttr("spreadMethod")}}
-  - : 这个属性表明，如果渐变在包含渐变的形状的边界内开始或结束，它将如何表现。*值类型*：`pad`|`reflect`|`repeat`；*默认值*：`pad`；*动画性*：**有**
+  - : 这个属性表明，如果渐变在包含渐变的形状的边界内开始或结束，它将如何表现。_值类型_：`pad`|`reflect`|`repeat`；_默认值_：`pad`；_动画性_：**有**
 - {{SVGAttr("xlink:href")}}
-  - : {{Deprecated_Header}}对另一个将被用作模板的 `<radialGradient>` 元素的 [\<IRI>](/zh-CN/docs/Web/SVG/Content_type#iri) 引用。*值类型*：[**\<IRI>**](/zh-CN/docs/Web/SVG/Content_type#iri)；*默认值*：none；*动画性*：**有**
+  - : {{Deprecated_Header}}对另一个将被用作模板的 `<radialGradient>` 元素的 [\<IRI>](/zh-CN/docs/Web/SVG/Content_type#iri) 引用。_值类型_：[**\<IRI>**](/zh-CN/docs/Web/SVG/Content_type#iri)；_默认值_：none；_动画性_：**有**
 
 ### 全局属性
 

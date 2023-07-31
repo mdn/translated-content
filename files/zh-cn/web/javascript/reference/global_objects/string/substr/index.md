@@ -39,12 +39,12 @@ str.substr(start[, length])
 ```js
 var str = "abcdefghij";
 
-console.log("(1,2): "    + str.substr(1,2));   // (1,2): bc
-console.log("(-3,2): "   + str.substr(-3,2));  // (-3,2): hi
-console.log("(-3): "     + str.substr(-3));    // (-3): hij
-console.log("(1): "      + str.substr(1));     // (1): bcdefghij
-console.log("(-20, 2): " + str.substr(-20,2)); // (-20, 2): ab
-console.log("(20, 2): "  + str.substr(20,2));  // (20, 2):
+console.log("(1,2): " + str.substr(1, 2)); // (1,2): bc
+console.log("(-3,2): " + str.substr(-3, 2)); // (-3,2): hi
+console.log("(-3): " + str.substr(-3)); // (-3): hij
+console.log("(1): " + str.substr(1)); // (1): bcdefghij
+console.log("(-20, 2): " + str.substr(-20, 2)); // (-20, 2): ab
+console.log("(20, 2): " + str.substr(20, 2)); // (20, 2):
 ```
 
 ## 兼容旧环境（Polyfill）
@@ -53,24 +53,23 @@ Microsoft's JScript 不支持负的 start 索引。如果你想充分利用该�
 
 ```js
 // only run when the substr function is broken
-if ('ab'.substr(-1) != 'b')
-{
+if ("ab".substr(-1) != "b") {
   /**
    *  Get the substring of a string
    *  @param  {integer}  start   where to start the substring
    *  @param  {integer}  length  how many characters to return
    *  @return {string}
    */
-  String.prototype.substr = function(substr) {
-    return function(start, length) {
+  String.prototype.substr = (function (substr) {
+    return function (start, length) {
       // did we get a negative start, calculate how much it is
       // from the beginning of the string
       if (start < 0) start = this.length + start;
 
       // call the original function
       return substr.call(this, start, length);
-    }
-  }(String.prototype.substr);
+    };
+  })(String.prototype.substr);
 }
 ```
 

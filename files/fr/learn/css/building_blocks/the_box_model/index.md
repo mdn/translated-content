@@ -189,7 +189,9 @@ Si vous désirez utiliser le modèle alternatif sur tous vos éléments — ce q
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 ```

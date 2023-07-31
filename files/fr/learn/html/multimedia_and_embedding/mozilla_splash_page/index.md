@@ -1,5 +1,5 @@
 ---
-title: 'Évaluation : page d''accueil Mozilla'
+title: "Évaluation : page d'accueil Mozilla"
 slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 ---

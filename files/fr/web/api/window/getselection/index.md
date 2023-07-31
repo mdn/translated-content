@@ -11,7 +11,7 @@ Renvoie un objet selection représentant le ou les objets sélectionnés.
 ## Syntaxe
 
 ```js
-selection = window.getSelection()
+selection = window.getSelection();
 ```
 
 ## Paramètres

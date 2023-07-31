@@ -21,9 +21,7 @@ L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`style`** conti
   Cette méthode n'est pas vraiment recommandée
 </p>
 
-<p class="toto">
-  Alors que ça, c'est mieux.
-</p>
+<p class="toto">Alors que ça, c'est mieux.</p>
 ```
 
 ### CSS

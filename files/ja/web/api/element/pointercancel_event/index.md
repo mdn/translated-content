@@ -1,5 +1,6 @@
 ---
 title: "Element: pointercancel イベント"
+short-title: pointercancel
 slug: Web/API/Element/pointercancel_event
 original_slug: Web/API/Document/pointercancel_event
 l10n:

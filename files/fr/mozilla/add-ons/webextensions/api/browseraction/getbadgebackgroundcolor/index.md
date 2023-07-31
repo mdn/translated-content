@@ -13,9 +13,9 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-browser.browserAction.getBadgeBackgroundColor (
-  details // object
-)
+browser.browserAction.getBadgeBackgroundColor(
+  details, // object
+);
 ```
 
 ### Paramètres

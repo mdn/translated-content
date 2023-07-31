@@ -2304,7 +2304,7 @@
 /zh-CN/docs/Web/Guide/CSS/Using_CSS_transforms	/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions	/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
 /zh-CN/docs/Web/Guide/CSS/Using_multi-column_layouts	/zh-CN/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
-/zh-CN/docs/Web/Guide/CSS/Using_the_:target_selector	/zh-CN/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
+/zh-CN/docs/Web/Guide/CSS/Using_the_:target_selector	/zh-CN/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /zh-CN/docs/Web/Guide/CSS/Visual_formatting_model	/zh-CN/docs/Web/CSS/Visual_formatting_model
 /zh-CN/docs/Web/Guide/CSS/媒体查询	/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /zh-CN/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/zh-CN/docs/Web/API/Document_Object_Model/Whitespace

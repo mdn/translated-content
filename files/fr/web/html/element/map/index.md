@@ -23,10 +23,13 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ```html
 <map name="primary">
-  <area shape="circle" coords="75,75,75" href="left.html">
-  <area shape="circle" coords="275,75,75" href="right.html">
+  <area shape="circle" coords="75,75,75" href="left.html" />
+  <area shape="circle" coords="275,75,75" href="right.html" />
 </map>
-<img usemap="#primary" src="https://via.placeholder.com/350x150" alt="350 x 150 pic">
+<img
+  usemap="#primary"
+  src="https://via.placeholder.com/350x150"
+  alt="350 x 150 pic" />
 ```
 
 ### Résultat
@@ -60,7 +63,7 @@ _Pour le lien `right.html`&nbsp;:_
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >,
-        <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_tangible"
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
           >contenu tangible</a
         >.
       </td>
@@ -70,7 +73,7 @@ _Pour le lien `right.html`&nbsp;:_
       <td>
         Tout élément dont
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Mod%C3%A8le_de_contenu_transparent"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Modèle_de_contenu_transparent"
           >le modèle de contenu est transparent</a
         >.
       </td>
@@ -84,7 +87,7 @@ _Pour le lien `right.html`&nbsp;:_
       <td>
         Tout élément qui accepte
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >du contenu phrasé</a
         >.
       </td>

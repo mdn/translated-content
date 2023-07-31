@@ -13,7 +13,7 @@ La propriété **`objectStoreNames`**, rattachée à l'interface {{domxref("IDBD
 ## Syntaxe
 
 ```js
-db.objectStoreNames
+db.objectStoreNames;
 ```
 
 ### Valeur
@@ -28,12 +28,12 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // Les deux gestionnaires d’événements activés pour
 // gérer la réussite ou l'échec de le connexion.
-DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>Erreur de chargement de la base de données.</li>';
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>Erreur de chargement de la base de données.</li>";
 };
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Base de données initialisée.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Base de données initialisée.</li>";
 
   // Affecte la connexion à la variable db.
   db = DBOpenRequest.result;

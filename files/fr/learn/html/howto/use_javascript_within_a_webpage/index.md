@@ -52,9 +52,11 @@ Il est également possible d'insérer du code JavaScript directement dans la bal
 
 ```html
 <script>
-window.addEventListener('load', function () {
-  console.log('Cette fonction est exécutée une fois quand la page est chargée.');
-});
+  window.addEventListener("load", function () {
+    console.log(
+      "Cette fonction est exécutée une fois quand la page est chargée.",
+    );
+  });
 </script>
 ```
 

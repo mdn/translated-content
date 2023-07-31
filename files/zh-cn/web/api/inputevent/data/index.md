@@ -26,16 +26,16 @@ var string = inputEvent.data;
 ```html
 <p>Some text to copy and paste.</p>
 
-<input type="text">
+<input type="text" />
 
 <p class="result"></p>
 ```
 
 ```js
-var editable = document.querySelector('input')
-var result = document.querySelector('.result');
+var editable = document.querySelector("input");
+var result = document.querySelector(".result");
 
-editable.addEventListener('input', (e) => {
+editable.addEventListener("input", (e) => {
   result.textContent = "Inputted text: " + e.data;
 });
 ```

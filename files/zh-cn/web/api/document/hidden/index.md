@@ -16,8 +16,8 @@ var string = document.hidden
 ## 示例
 
 ```js
-document.addEventListener("visibilitychange", function() {
-  console.log( document.hidden );
+document.addEventListener("visibilitychange", function () {
+  console.log(document.hidden);
   // Modify behavior...
 });
 ```

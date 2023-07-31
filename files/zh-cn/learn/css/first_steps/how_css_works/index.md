@@ -78,7 +78,9 @@ P
 {{EmbedLiveSample('一个真实的 DOM 案例', '100%', 55)}}
 
 ```css hidden
-p {margin:0;}
+p {
+  margin: 0;
+}
 ```
 
 ## 应用 CSS 到 DOM

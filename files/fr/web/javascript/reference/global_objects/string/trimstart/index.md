@@ -44,7 +44,7 @@ console.log(str.length); // 8
 
 str = str.trimStart();
 console.log(str.length); // 5
-console.log(str);        // "toto  "
+console.log(str); // "toto  "
 ```
 
 ## Spécifications

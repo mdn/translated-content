@@ -12,9 +12,12 @@ ARIA は、アプリケーションで一般的に使用されている対話操
 プログレスバーウィジェットのためのマークアップです。
 
 ```html
-<div id="percent-loaded" role="progressbar" aria-valuenow="75"
-     aria-valuemin="0" aria-valuemax="100">
-</div>
+<div
+  id="percent-loaded"
+  role="progressbar"
+  aria-valuenow="75"
+  aria-valuemin="0"
+  aria-valuemax="100"></div>
 ```
 
 このプログレスバーは、意味を持たない `<div>` を使って作られています。残念ながら、 HTML 4 には開発者が利用できるより意味のある要素がないので、 ARIA の役割とプロパティを追加する必要があります。要素に属性を追加することでこれを指定します。この例では、 `role="progressbar"` 属性により、この要素が実際には JavaScript を使用したプログレスバーウィジェットであることをブラウザーに伝えています。 `aria-valuemin` および `aria-valuemax` 属性はプログレスバーの最小値と最大値を指定し、 `aria-valuenow` は現在の状態を表すため、 JavaScript から更新し続けます。

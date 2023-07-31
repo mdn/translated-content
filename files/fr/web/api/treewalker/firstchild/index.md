@@ -18,10 +18,14 @@ node = treeWalker.firstChild;
 
 ```js
 var treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 var node = treeWalker.firstChild(); // renvoie le premier enfant de l'élément racine ou null si aucun
 ```

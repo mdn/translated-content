@@ -1,5 +1,5 @@
 ---
-title: 'Apprendre le HTML : guides et didacticiels'
+title: "Apprendre le HTML : guides et didacticiels"
 slug: Learn/HTML
 translation_of: Learn/HTML
 ---

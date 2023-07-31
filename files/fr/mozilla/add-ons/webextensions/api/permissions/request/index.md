@@ -22,8 +22,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var requesting = browser.permissions.request(
-  permissions                // Permissions object
-)
+  permissions, // Permissions object
+);
 ```
 
 ### Paramètres
@@ -46,11 +46,10 @@ Ce code ajoute un gestionnaire de clics qui demande diverses permissions, puis e
 ```js
 const permissionsToRequest = {
   permissions: ["bookmarks", "history"],
-  origins: ["https://developer.mozilla.org/"]
-}
+  origins: ["https://developer.mozilla.org/"],
+};
 
 function requestPermissions() {
-
   function onResponse(response) {
     if (response) {
       console.log("Permission was granted");
@@ -60,14 +59,17 @@ function requestPermissions() {
     return browser.permissions.getAll();
   }
 
-  browser.permissions.request(permissionsToRequest)
+  browser.permissions
+    .request(permissionsToRequest)
     .then(onResponse)
     .then((currentPermissions) => {
-    console.log(`Current permissions:`, currentPermissions);
-  });
+      console.log(`Current permissions:`, currentPermissions);
+    });
 }
 
-document.querySelector("#request").addEventListener("click", requestPermissions);
+document
+  .querySelector("#request")
+  .addEventListener("click", requestPermissions);
 ```
 
 {{WebExtExamples}}

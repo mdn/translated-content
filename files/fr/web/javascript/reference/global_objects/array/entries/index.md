@@ -13,7 +13,7 @@ La méthode **`entries()`** renvoie un nouvel objet de type **`Array Iterator`**
 ## Syntaxe
 
 ```js
-arr.entries()
+arr.entries();
 ```
 
 ### Valeur de retour
@@ -39,7 +39,7 @@ for (const [index, element] of arr.entries()) {
 On peut avoir le même résultat en utilisant une boucle [for...of](/fr/docs/Web/JavaScript/Reference/Instructions/for...of) :
 
 ```js
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 var eArr = arr.entries();
 
 for (let e of eArr) {

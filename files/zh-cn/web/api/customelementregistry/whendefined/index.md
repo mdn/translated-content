@@ -38,20 +38,20 @@ Promise<> customElements.whenDefined(name);
   <nav-menu>
     <menu-item>Item 1</menu-item>
     <menu-item>Item 2</menu-item>
-     ...
+    ...
     <menu-item>Item N</menu-item>
   </nav-menu>
 </nav>
 ```
 
 ```js
-const container = document.getElementById('menu-container');
-const placeholder = container.querySelector('.menu-placeholder');
+const container = document.getElementById("menu-container");
+const placeholder = container.querySelector(".menu-placeholder");
 // Fetch all the children of menu that are not yet defined.
-const undefinedElements = container.querySelectorAll(':not(:defined)');
+const undefinedElements = container.querySelectorAll(":not(:defined)");
 
-const promises = [...undefinedElements].map(
-  button => customElements.whenDefined(button.localName)
+const promises = [...undefinedElements].map((button) =>
+  customElements.whenDefined(button.localName),
 );
 
 // Wait for all the children to be upgraded,

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Service Workers API")}}
 
-The **`ServiceWorkerGlobalScope`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) represents the global execution context of a service worker.
+The **`ServiceWorkerGlobalScope`** interface of the [Service Worker API](/ko/docs/Web/API/Service_Worker_API) represents the global execution context of a service worker.
 
 Developers should keep in mind that the ServiceWorker state is not persisted across the termination/restart cycle, so each event handler should assume it's being invoked with a bare, default global state.
 
@@ -49,7 +49,7 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 - {{domxref("performance_property", "ServiceWorkerGlobalScope.performance")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Performance")}} object associated with the worker, which is a regular performance object, but with a subset of its properties and methods available.
 - {{domxref("Window.scheduler", "ServiceWorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
+  - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/ko/docs/Web/API/Prioritized_Task_Scheduling_API).
 - {{domxref("WorkerGlobalScope.self", "ServiceWorkerGlobalScope.self")}}
   - : Returns an object reference to the `ServiceWorkerGlobalScope` object itself.
 
@@ -88,13 +88,13 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 - {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}}
   - : Occurs when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchabort_event", "backgroundfetchabort")}} {{Experimental_Inline}}
-  - : Fired when a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation has been canceled by the user or the app.
+  - : Fired when a [background fetch](/ko/docs/Web/API/Background_Fetch_API) operation has been canceled by the user or the app.
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchclick_event", "backgroundfetchclick")}} {{Experimental_Inline}}
-  - : Fired when the user has clicked on the UI for a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation.
+  - : Fired when the user has clicked on the UI for a [background fetch](/ko/docs/Web/API/Background_Fetch_API) operation.
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchfail_event", "backgroundfetchfail")}} {{Experimental_Inline}}
-  - : Fired when at least one of the requests in a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation has failed.
+  - : Fired when at least one of the requests in a [background fetch](/ko/docs/Web/API/Background_Fetch_API) operation has failed.
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchsuccess_event", "backgroundfetchsuccess")}} {{Experimental_Inline}}
-  - : Fired when all of the requests in a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation have succeeded.
+  - : Fired when all of the requests in a [background fetch](/ko/docs/Web/API/Background_Fetch_API) operation have succeeded.
 - {{domxref("ServiceWorkerGlobalScope.canmakepayment_event", "canmakepayment")}} {{Experimental_Inline}}
   - : Fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}}.
 - {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} {{Experimental_Inline}}
@@ -149,9 +149,9 @@ self.addEventListener("fetch", (event) => {
           console.error("Fetching failed:", error);
 
           throw error;
-        }
+        },
       );
-    })
+    }),
   );
 });
 ```
@@ -166,7 +166,7 @@ self.addEventListener("fetch", (event) => {
 
 ## See also
 
-- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Using Service Workers](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}

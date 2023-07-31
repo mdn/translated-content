@@ -20,10 +20,14 @@ nodeFilter = nodeIterator.filter;
 
 ```js
 var nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 nodeFilter = nodeIterator.filter;
 ```

@@ -31,8 +31,8 @@ Soit un objet {{domxref("HTMLCanvasElement")}} ou {{domxref("OffscreenCanvas")}}
 Vous pouvez en récupérer une référence à partir du `WebGLRenderingContext` en utilisant la propriété `canvas` :
 
 ```js
-var canevas = document.getElementById('canevas');
-var gl = canevas.getContext('webgl');
+var canevas = document.getElementById("canevas");
+var gl = canevas.getContext("webgl");
 gl.canvas; // HTMLCanvasElement
 ```
 
@@ -42,7 +42,7 @@ Exemple d'utilisation de l'objet expérimental {{domxref("OffscreenCanvas")}}.
 
 ```js
 var horsEcran = new OffscreenCanvas(256, 256);
-var gl = horsEcran.getContext('webgl');
+var gl = horsEcran.getContext("webgl");
 gl.canvas; // OffscreenCanvas
 ```
 

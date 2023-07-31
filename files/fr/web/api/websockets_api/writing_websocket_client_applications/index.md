@@ -49,7 +49,10 @@ A partir de Firefox 11, un message d'erreur descriptif est envoyé à la console
 Cet exemple simple crée un nouvel objet WebSocket, qui se connecte au serveur à l'adresse `ws://www.example.com/socketserver`. Un protocole spécifique "protocolOne" est indiqué dans cette exemple, bien qu'il ne soit pas obligatoire.
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
+var exampleSocket = new WebSocket(
+  "ws://www.example.com/socketserver",
+  "protocolOne",
+);
 ```
 
 Lorsque la connexion est établie, la propriété `readyState` de l'objet `exampleSocket` prend la valeur `CONNECTING`. Sa valeur devient `OPEN` une fois que la connexion est prête à transférer des données.
@@ -57,7 +60,10 @@ Lorsque la connexion est établie, la propriété `readyState` de l'objet `examp
 Pour ouvrir une connexion flexible quant aux protocoles supportés, on spécifie une liste de protocoles:
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
+var exampleSocket = new WebSocket("ws://www.example.com/socketserver", [
+  "protocolOne",
+  "protocolTwo",
+]);
 ```
 
 Une fois la connexion établie (c'est-à-dire quand `readyState` a la valeur `OPEN`), la propriété `protocol` indique quel protocole le server a sélectionné.
@@ -76,7 +82,9 @@ Comme l'établissement d'une connexion est asynchrone, et peut potentiellemet é
 
 ```js
 exampleSocket.onopen = function (event) {
-  exampleSocket.send("Voici un texte que le serveur attend de recevoir dès que possible !");
+  exampleSocket.send(
+    "Voici un texte que le serveur attend de recevoir dès que possible !",
+  );
 };
 ```
 
@@ -92,8 +100,8 @@ function sendText() {
   var msg = {
     type: "message",
     text: document.getElementById("text").value,
-    id:   clientID,
-    date: Date.now()
+    id: clientID,
+    date: Date.now(),
   };
 
   // Envoi de l'objet msg à travers une chaîne formatée en JSON
@@ -113,7 +121,7 @@ WebSockets est une API orientée évènement; lorsqu'elle reçoit un message, un
 ```js
 exampleSocket.onmessage = function (event) {
   console.log(event.data);
-}
+};
 ```
 
 ### Réception et interprétation d'objets JSON
@@ -127,30 +135,38 @@ Considérons l'application de chat évoquée dans [Utilisation de JSON pour tran
 Le code qui interprète ces messages entrants pourrait être:
 
 ```js
-exampleSocket.onmessage = function(event) {
+exampleSocket.onmessage = function (event) {
   var f = document.getElementById("chatbox").contentDocument;
   var text = "";
   var msg = JSON.parse(event.data);
   var time = new Date(msg.date);
   var timeStr = time.toLocaleTimeString();
 
-  switch(msg.type) {
+  switch (msg.type) {
     case "id":
       clientID = msg.id;
       setUsername();
       break;
     case "username":
-      text = "<b>User <em>" + msg.name + "</em> signed in at " + timeStr + "</b><br>";
+      text =
+        "<b>User <em>" +
+        msg.name +
+        "</em> signed in at " +
+        timeStr +
+        "</b><br>";
       break;
     case "message":
       text = "(" + timeStr + ") <b>" + msg.name + "</b>: " + msg.text + "<br>";
       break;
     case "rejectusername":
-      text = "<b>Your username has been set to <em>" + msg.name + "</em> because the name you chose is in use.</b><br>"
+      text =
+        "<b>Your username has been set to <em>" +
+        msg.name +
+        "</em> because the name you chose is in use.</b><br>";
       break;
     case "userlist":
       var ul = "";
-      for (i=0; i < msg.users.length; i++) {
+      for (i = 0; i < msg.users.length; i++) {
         ul += msg.users[i] + "<br>";
       }
       document.getElementById("userlistbox").innerHTML = ul;

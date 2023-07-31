@@ -1,5 +1,5 @@
 ---
-title: '<rp> : l''élément de parenthèses alternatif aux annotations Ruby'
+title: "<rp> : l'élément de parenthèses alternatif aux annotations Ruby"
 slug: Web/HTML/Element/rp
 translation_of: Web/HTML/Element/rp
 ---
@@ -26,8 +26,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
-  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
 
@@ -75,7 +74,7 @@ body {
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >Contenu phrasé</a
         >. Texte.
       </td>

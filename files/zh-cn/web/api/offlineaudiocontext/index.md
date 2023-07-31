@@ -49,7 +49,7 @@ _从父级 {{domxref("AudioContext")}} 和 {{domxref("EventTarget")}} 获取方�
 // 定义一个在线或者离线的音频上下文
 
 var audioCtx = new AudioContext();
-var offlineCtx = new OfflineAudioContext(2,44100*40,44100);
+var offlineCtx = new OfflineAudioContext(2, 44100 * 40, 44100);
 
 source = offlineCtx.createBufferSource();
 
@@ -60,36 +60,40 @@ source = offlineCtx.createBufferSource();
 function getData() {
   request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
-  request.onload = function() {
+  request.onload = function () {
     var audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(audioData, function (buffer) {
       myBuffer = buffer;
       source.buffer = myBuffer;
       source.connect(offlineCtx.destination);
       source.start();
       //source.loop = true;
-      offlineCtx.startRendering().then(function(renderedBuffer) {
-        console.log('渲染完全成功');
-        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        var song = audioCtx.createBufferSource();
-        song.buffer = renderedBuffer;
+      offlineCtx
+        .startRendering()
+        .then(function (renderedBuffer) {
+          console.log("渲染完全成功");
+          var audioCtx = new (window.AudioContext ||
+            window.webkitAudioContext)();
+          var song = audioCtx.createBufferSource();
+          song.buffer = renderedBuffer;
 
-        song.connect(audioCtx.destination);
+          song.connect(audioCtx.destination);
 
-        play.onclick = function() {
-          song.start();
-        }
-      }).catch(function(err) {
-          console.log('渲染失败：' + err);
+          play.onclick = function () {
+            song.start();
+          };
+        })
+        .catch(function (err) {
+          console.log("渲染失败：" + err);
           // 注意：当 OfflineAudioContext 上 startRendering 被立刻调用，Promise 应该被 reject
-      });
+        });
     });
-  }
+  };
 
   request.send();
 }

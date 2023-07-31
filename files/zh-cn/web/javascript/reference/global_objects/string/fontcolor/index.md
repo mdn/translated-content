@@ -45,7 +45,7 @@ console.log（worldString.fontcolor('FF00') + ' is red in hexadecimal'
 和{{domxref("HTMLElement.style","element.style")}}对象一起，你可以访问元素的`style`属性，并且更随意的去操纵它，例如：
 
 ```js
-document.getElementById('yourElemId').style.color ='red';
+document.getElementById("yourElemId").style.color = "red";
 ```
 
 ## Specifications

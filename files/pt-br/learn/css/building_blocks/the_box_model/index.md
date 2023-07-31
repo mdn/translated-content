@@ -159,7 +159,9 @@ If you want all of your elements to use the alternative box model, and this is a
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 ```

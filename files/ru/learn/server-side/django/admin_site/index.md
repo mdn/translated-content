@@ -1,5 +1,5 @@
 ---
-title: 'Руководство Django часть 4: административная панель Django'
+title: "Руководство Django часть 4: административная панель Django"
 slug: Learn/Server-side/Django/Admin_site
 translation_of: Learn/Server-side/Django/Admin_site
 ---

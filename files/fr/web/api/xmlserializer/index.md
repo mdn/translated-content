@@ -27,17 +27,13 @@ alert(str);
 ```js
 var s = new XMLSerializer();
 var stream = {
-  close: function()
-  {
+  close: function () {
     alert("Flux fermé");
   },
-  flush: function()
-  {
-  },
-  write: function(string, count)
-  {
+  flush: function () {},
+  write: function (string, count) {
     alert("'" + string + "'\n nb d'octets&nbsp;: " + count + "");
-  }
+  },
 };
 s.serializeToStream(document, stream, "UTF-8");
 ```

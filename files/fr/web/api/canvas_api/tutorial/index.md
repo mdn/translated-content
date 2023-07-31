@@ -19,7 +19,7 @@ L'utilisation de l'élément `<canvas>` n'a rien de très compliqué, mais néce
 ## Dans ce tutoriel
 
 - [Utilisation de base](/fr/docs/Tutoriel_canvas/Utilisation_de_base)
-- [Dessin de formes géométriques](/fr/docs/Tutoriel_canvas/Formes_g%C3%A9om%C3%A9triques)
+- [Dessin de formes géométriques](/fr/docs/Tutoriel_canvas/Formes_géométriques)
 - [Ajout de styles et de couleurs](/fr/docs/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs)
 - [Dessin de texte](/fr/docs/Dessin_de_texte_avec_canvas)
 - [Utilisation d'images](/fr/docs/Tutoriel_canvas/Utilisation_d'images)

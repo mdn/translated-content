@@ -56,10 +56,12 @@ Moreover, vector image files are much lighter than their raster equivalents, bec
 As a simple example, the following code creates a circle and a rectangle:
 
 ```html
-<svg version="1.1"
-     baseProfile="full"
-     width="300" height="200"
-     xmlns="https://www.w3.org/2000/svg">
+<svg
+  version="1.1"
+  baseProfile="full"
+  width="300"
+  height="200"
+  xmlns="https://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="black" />
   <circle cx="150" cy="100" r="90" fill="blue" />
 </svg>
@@ -96,10 +98,10 @@ To embed an SVG via an {{htmlelement("img")}} element, you just need to referenc
 
 ```html
 <img
-    src="equilateral.svg"
-    alt="triangle with all three sides equal"
-    height="87"
-    width="100" />
+  src="equilateral.svg"
+  alt="triangle with all three sides equal"
+  height="87"
+  width="100" />
 ```
 
 #### Pros
@@ -119,7 +121,10 @@ To embed an SVG via an {{htmlelement("img")}} element, you just need to referenc
 For browsers that don't support SVG (IE 8 and below, Android 2.3 and below), you could reference a PNG or JPG from your `src` attribute and use a [`srcset`](/pt-BR/docs/Web/HTML/Element/img#srcset) attribute (which only recent browsers recognize) to reference the SVG. This being the case, only supporting browsers will load the SVG — older browsers will load the PNG instead:
 
 ```html
-<img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg">
+<img
+  src="equilateral.png"
+  alt="triangle with equal sides"
+  srcset="equilateral.svg" />
 ```
 
 You can also use SVGs as CSS background images, as shown below. In the below code, older browsers will stick with the PNG that they understand, while newer browsers will load the SVG:
@@ -140,7 +145,7 @@ You can also open up the SVG file in a text editor, copy the SVG code, and paste
 
 ```html
 <svg width="300" height="200">
-    <rect width="100%" height="100%" fill="green" />
+  <rect width="100%" height="100%" fill="green" />
 </svg>
 ```
 
@@ -166,7 +171,7 @@ Here's a quick review:
 
 ```html
 <iframe src="triangle.svg" width="500" height="500" sandbox>
-    <img src="triangle.png" alt="Triangle with three unequal sides" />
+  <img src="triangle.png" alt="Triangle with three unequal sides" />
 </iframe>
 ```
 
@@ -186,11 +191,12 @@ If you get stuck and can't get your code working, you can always reset it using 
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="input" style="width: 95%;min-height: 200px;">
   <svg width="100%" height="100%">
@@ -205,8 +211,8 @@ If you get stuck and can't get your code working, you can always reset it using 
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution" disabled>
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" disabled />
 </div>
 ```
 
@@ -233,10 +239,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -244,38 +250,38 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-const htmlSolution = '';
+const htmlSolution = "";
 let solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -286,8 +292,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   const caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -299,10 +308,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

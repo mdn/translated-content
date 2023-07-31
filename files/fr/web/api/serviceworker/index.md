@@ -28,7 +28,7 @@ _L'interface `ServiceWorker` hérite des propriétés de son parent, le {{domxre
 
 ## Méthodes
 
-L'interface du *`ServiceWorker` hérite des méthodes de son parent, {{domxref("Worker")}}, avec l'exception de {{domxref("Worker.terminate")}}, qui ne doit pas être accessible depuis le service worker.*
+L'interface du _`ServiceWorker` hérite des méthodes de son parent, {{domxref("Worker")}}, avec l'exception de {{domxref("Worker.terminate")}}, qui ne doit pas être accessible depuis le service worker._
 
 ## Exemples
 

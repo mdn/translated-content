@@ -1,5 +1,5 @@
 ---
-title: 'Types de liens : noopener'
+title: "Types de liens : noopener"
 slug: Web/HTML/Attributes/rel/noopener
 translation_of: Web/HTML/Link_types/noopener
 ---

@@ -25,7 +25,7 @@ Que ce soit en raison de limitations physiques ou techniques, il peut arriver qu
 
 ## Pédagogie active
 
-_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/D%C3%A9buter_sur_MDN)._
+_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Débuter_sur_MDN)._
 
 ## Aller plus loin
 
@@ -69,7 +69,7 @@ Depuis 1999, le {{Glossary("W3C")}} possède un groupe de travail appelé {{Glos
 
 Vous pouvez vous référer à :
 
-- [L'article Wikipédia](https://fr.wikipedia.org/wiki/Accessibilit%C3%A9) sur l'accessibilité
+- [L'article Wikipédia](https://fr.wikipedia.org/wiki/Accessibilité) sur l'accessibilité
 - [Le site WAI (le projet W3C's Web Accessibility Initiative) (en anglais)](http://www.w3.org/WAI/)
 
 ## Prochaines étapes

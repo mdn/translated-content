@@ -30,7 +30,7 @@ isSupported = document.queryCommandSupported(command);
 ```js
 var flg = document.queryCommandSupported("SelectAll");
 
-if(flg) {
+if (flg) {
   // ...Do something
 }
 ```

@@ -16,7 +16,7 @@ courant.
 ## Syntaxe
 
 ```js
-document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
+document.execCommand(aCommandName, aShowDefaultUI, aValueArgument);
 ```
 
 ### Valeur de retour

@@ -1,5 +1,5 @@
 ---
-title: 'Testez vos connaissances : le modèle de boîte'
+title: "Testez vos connaissances : le modèle de boîte"
 slug: Learn/CSS/Building_blocks/Box_Model_Tasks
 translation_of: Learn/CSS/Building_blocks/Box_Model_Tasks
 l10n:

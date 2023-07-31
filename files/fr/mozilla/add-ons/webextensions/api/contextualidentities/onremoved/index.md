@@ -11,9 +11,9 @@ Lancé lorsqu'une nouvelle identité contextuelle est supprimée. Les identités
 ## Syntaxe
 
 ```js
-browser.contextualIdentities.onRemoved.addListener(listener)
-browser.contextualIdentities.onRemoved.removeListener(listener)
-browser.contextualIdentities.onRemoved.hasListener(listener)
+browser.contextualIdentities.onRemoved.addListener(listener);
+browser.contextualIdentities.onRemoved.removeListener(listener);
+browser.contextualIdentities.onRemoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

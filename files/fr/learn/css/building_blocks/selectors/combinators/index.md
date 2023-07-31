@@ -98,7 +98,8 @@ Dans l'exemple ci-dessous, nous sélectionnons tous les éléments `<p>` qui vie
 Vous pouvez combiner n'importe lequel des sélecteurs que nous avons découverts dans les leçons précédentes avec des combinateurs afin de sélectionner une partie de votre document. Par exemple, si nous voulons sélectionner des éléments de liste avec une classe de "a", qui sont des enfants directs d'un `<ul>`, je pourrais utiliser ce qui suit.
 
 ```css
-ul > li[class="a"]  {  }
+ul > li[class="a"] {
+}
 ```
 
 Faites cependant attention lorsque vous créez de grandes listes de sélecteurs qui sélectionnent des parties très spécifiques de votre document. Il sera difficile de réutiliser les règles CSS car vous avez rendu le sélecteur très spécifique à l'emplacement de cet élément dans le balisage.

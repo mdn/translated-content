@@ -28,14 +28,21 @@ Tout d'abord, on définit l'animation avec des règles CSS (certaines règles su
   padding-bottom: 4px;
   color: white;
   background-color: darkgreen;
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 ```
 
 ```css
 @keyframes colorchange {
-  0% { background: yellow }
-  100% { background: blue }
+  0% {
+    background: yellow;
+  }
+  100% {
+    background: blue;
+  }
 }
 
 .box {
@@ -58,8 +65,7 @@ Si on n'utilise que ces règles, la boîte n'est pas animée lorsqu'elle s'affic
 Voici le fragment de HTML où on utilise un élément {{HTMLElement("div")}} qu'on veut animer et un bouton pour lancer (ou relancer) l'animation.
 
 ```html
-<div class="box">
-</div>
+<div class="box"></div>
 
 <div class="runButton" onclick="play()">Cliquer pour lancer l'animation</div>
 ```
@@ -71,8 +77,8 @@ Enfin, voyons le JavaScript qui sera utilisé. Cette technique repose principale
 ```js
 function play() {
   document.querySelector(".box").className = "box";
-  window.requestAnimationFrame(function(time) {
-    window.requestAnimationFrame(function(time) {
+  window.requestAnimationFrame(function (time) {
+    window.requestAnimationFrame(function (time) {
       document.querySelector(".box").className = "box changing";
     });
   });
@@ -141,15 +147,15 @@ Ces pistes sont utilisées dans la démonstration suivante :
 ### JavaScript
 
 ```js
-let watchme = document.getElementById('watchme')
+let watchme = document.getElementById("watchme");
 
-watchme.className = 'slidein'
+watchme.className = "slidein";
 const listener = (e) => {
-  watchme.className = 'slidein stopped'
-}
-watchme.addEventListener('click', () =>
-  watchme.addEventListener('animationiteration', listener, false)
-)
+  watchme.className = "slidein stopped";
+};
+watchme.addEventListener("click", () =>
+  watchme.addEventListener("animationiteration", listener, false),
+);
 ```
 
 ### Résultat

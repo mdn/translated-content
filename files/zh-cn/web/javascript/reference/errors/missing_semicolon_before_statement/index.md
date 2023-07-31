@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing ; before statement'
+title: "SyntaxError: missing ; before statement"
 slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 ---
 
@@ -36,7 +36,7 @@ var foo = 'Tom's bar';
 
 你可以用双引号，或者用\转义：
 
-```js example-good
+```js-nolint example-good
 var foo = "Tom's bar";
 var foo = 'Tom\'s bar';
 ```
@@ -76,9 +76,9 @@ def print(info){
 因此，建议使用`function`而不是`def`：
 
 ```js example-good
-function print(info){
+function print(info) {
   console.log(info);
-};
+}
 ```
 
 ## 参考

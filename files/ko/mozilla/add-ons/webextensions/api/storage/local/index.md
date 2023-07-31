@@ -2,6 +2,7 @@
 title: storage.local
 slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 ---
+
 {{AddonSidebar()}}
 
 `local` 저장소 영역을 표현한다. `local` 저장소의 항목은 확장이 설치된 기기에 제한된다.

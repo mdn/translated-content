@@ -13,9 +13,9 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-var gettingText = browser.browserAction.getBadgeText (
-  details               // object
-)
+var gettingText = browser.browserAction.getBadgeText(
+  details, // object
+);
 ```
 
 ### Paramètres

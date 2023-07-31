@@ -11,7 +11,11 @@ La méthode **`DOMImplementation.createDocument()`** crée et retourne un {{domx
 ## Syntaxe
 
 ```js
-doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, documentType);
+doc = document.implementation.createDocument(
+  namespaceURI,
+  qualifiedNameStr,
+  documentType,
+);
 ```
 
 ### Paramètres
@@ -34,11 +38,15 @@ doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, doc
 ## Exemple
 
 ```js
-var doc = document.implementation.createDocument ('http://www.w3.org/1999/xhtml', 'html', null);
-var body = document.createElementNS('http://www.w3.org/1999/xhtml', 'body');
-body.setAttribute('id', 'abc');
+var doc = document.implementation.createDocument(
+  "http://www.w3.org/1999/xhtml",
+  "html",
+  null,
+);
+var body = document.createElementNS("http://www.w3.org/1999/xhtml", "body");
+body.setAttribute("id", "abc");
 doc.documentElement.appendChild(body);
-alert(doc.getElementById('abc')); // [objet HTMLBodyElement]
+alert(doc.getElementById("abc")); // [objet HTMLBodyElement]
 ```
 
 ## Spécifications

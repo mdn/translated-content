@@ -82,10 +82,8 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
 <dl>
   <dt>Firefox</dt>
   <dd>
-    A free, open source, cross-platform,
-    graphical web browser developed by the
-    Mozilla Corporation and hundreds of
-    volunteers.
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
   </dd>
 
   <!-- Other terms and descriptions -->
@@ -104,10 +102,8 @@ Salida:
   <dt>Mozilla Firefox</dt>
   <dt>Fx</dt>
   <dd>
-    A free, open source, cross-platform,
-    graphical web browser developed by the
-    Mozilla Corporation and hundreds of
-    volunteers.
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
   </dd>
 
   <!-- Other terms and descriptions -->
@@ -124,16 +120,12 @@ Salida:
 <dl>
   <dt>Firefox</dt>
   <dd>
-    A free, open source, cross-platform,
-    graphical web browser developed by the
-    Mozilla Corporation and hundreds of
-    volunteers.
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
   </dd>
   <dd>
-    The Red Panda also known as the Lesser
-    Panda, Wah, Bear Cat or Firefox, is a
-    mostly herbivorous mammal, slightly larger
-    than a domestic cat (60 cm long).
+    The Red Panda also known as the Lesser Panda, Wah, Bear Cat or Firefox, is a
+    mostly herbivorous mammal, slightly larger than a domestic cat (60 cm long).
   </dd>
 
   <!-- Other terms and descriptions -->

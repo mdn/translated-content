@@ -45,15 +45,15 @@ var getAllKeysRequest = IDBIndex.getAll(query, count);
 
 ```js
 //on récupère l’accès à l'index
-var myIndex = objectStore.index('index');
+var myIndex = objectStore.index("index");
 //on fait une requête de recherche sur l'index
 var getAllKeyRequest = myIndex.getAllKeys();
 //si la requête réussi
-getAllKeysRequest.onsuccess = function() {
+getAllKeysRequest.onsuccess = function () {
   //on affiche le résultat sur la console
   //~= [{key:'a',value:un_clone_structuré},{key:'2',value:un_clone_structuré},...]
   console.log(getAllKeysRequest.result);
-}
+};
 ```
 
 ## Spécifications

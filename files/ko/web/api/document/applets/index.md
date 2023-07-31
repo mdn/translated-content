@@ -12,7 +12,7 @@ slug: Web/API/Document/applets
 ## 문법
 
 ```js
-nodeList = document.applets
+nodeList = document.applets;
 ```
 
 ## 예제

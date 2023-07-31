@@ -62,7 +62,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 
 - `filename*`
 
-  - : "filename"과의 유일한 차이점은 "filename*"는 인코딩으로 [RFC 5987](https://tools.ietf.org/html/rfc5987)을 사용한다는 것 뿐입니다. 하나의 헤더 필드에 "filename"과 "filename*"이 둘 다 사용된다면 "filename*"이 보다 우선됩니다.
+  - : "filename"과의 유일한 차이점은 "filename*"는 인코딩으로 [RFC 5987](https://tools.ietf.org/html/rfc5987)을 사용한다는 것 뿐입니다. 하나의 헤더 필드에 "filename"과 "filename*"이 둘 다 사용된다면 "filename\*"이 보다 우선됩니다.
 
 ## Examples
 
