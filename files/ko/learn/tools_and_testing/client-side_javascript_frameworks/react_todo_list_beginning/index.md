@@ -112,14 +112,11 @@ function App(props) {
           <span className="visually-hidden"> tasks</span>
         </button>
       </div>
-      <h2 id="list-heading">
-        3 tasks remaining
-      </h2>
+      <h2 id="list-heading">3 tasks remaining</h2>
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
-        aria-labelledby="list-heading"
-      >
+        aria-labelledby="list-heading">
         <li className="todo stack-small">
           <div className="c-cb">
             <input id="todo-0" type="checkbox" defaultChecked={true} />
@@ -191,7 +188,7 @@ function App(props) {
 - 작업이 몇 개 남아있는지 알려주는 헤딩(heading)이 있습니다.
 - 순서가 매겨지지 않은 세 개의 작업이 있습니다. 각각의 작업은 리스트 아이템([`<li>`](/ko/docs/Web/HTML/Element/li))이며, 편집하거나 삭제하기 위한 버튼과 완료를 표시할 체크 박스를 가지고 있습니다.
 
-폼은 작업을 *만들* 수 있게 해줍니다; 버튼들은 작업들을 *필터링할* 수 있게 해줍니다; 헤딩과 리스트는 작업들을 *읽을* 수 있게 해줍니다. 작업을 *편집하는* UI는 현재는 없습니다. 이것도 괜찮습니다 – 나중에 만들 거니까요.
+폼은 작업을 _만들_ 수 있게 해줍니다; 버튼들은 작업들을 _필터링할_ 수 있게 해줍니다; 헤딩과 리스트는 작업들을 _읽을_ 수 있게 해줍니다. 작업을 _편집하는_ UI는 현재는 없습니다. 이것도 괜찮습니다 – 나중에 만들 거니까요.
 
 ### 접근성 기능
 
@@ -305,7 +302,9 @@ body {
   width: 100%;
   max-width: 68rem;
   margin: 0 auto;
-  font: 1.6rem/1.25 Arial, sans-serif;
+  font:
+    1.6rem/1.25 Arial,
+    sans-serif;
   background-color: #f5f5f5;
   color: #4d4d4d;
 }
@@ -398,7 +397,9 @@ body {
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   position: relative;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 2px 4px 0 rgba(0, 0, 0, 0.2),
+    0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
 }
 @media screen and (min-width: 550px) {
   .todoapp {

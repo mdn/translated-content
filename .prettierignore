@@ -54,7 +54,6 @@ build/
 /files/ja/web/svg/**/*.md
 
 # ko
-/files/ko/learn/**/*.md
 /files/ko/web/api/**/*.md
 /files/ko/web/css/**/*.md
 /files/ko/web/javascript/**/*.md
