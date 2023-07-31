@@ -1,5 +1,5 @@
 ---
-title: '<br>: 줄바꿈 요소'
+title: "<br>: 줄바꿈 요소"
 slug: Web/HTML/Element/br
 ---
 
@@ -28,10 +28,10 @@ slug: Web/HTML/Element/br
 ## 예제
 
 ```html
-Mozilla Foundation<br>
-1981 Landings Drive<br>
-Building K<br>
-Mountain View, CA 94043-0801<br>
+Mozilla Foundation<br />
+1981 Landings Drive<br />
+Building K<br />
+Mountain View, CA 94043-0801<br />
 USA
 ```
 

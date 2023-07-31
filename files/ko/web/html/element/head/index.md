@@ -1,5 +1,5 @@
 ---
-title: '<head>: 문서 메타데이터 (헤더) 요소'
+title: "<head>: 문서 메타데이터 (헤더) 요소"
 slug: Web/HTML/Element/head
 ---
 

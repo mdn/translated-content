@@ -57,7 +57,6 @@ build/
 /files/ko/learn/**/*.md
 /files/ko/web/api/**/*.md
 /files/ko/web/css/**/*.md
-/files/ko/web/html/**/*.md
 /files/ko/web/javascript/**/*.md
 
 # pt-br
