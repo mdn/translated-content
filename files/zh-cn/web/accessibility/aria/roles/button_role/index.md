@@ -9,7 +9,7 @@ slug: Web/Accessibility/ARIA/Roles/button_role
 
 button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按钮。按钮是用于执行操作的小部件，例如提交表单、打开对话框、退出活动或执行一个命令，例如插入新的记录或者显示信息。添加 `role="button"` 会告诉辅助技术，这是一个按钮，但是不提供按钮的功能。你应该使用 {{HTMLElement("button")}} 或者 {{HTMLElement("input")}} 以及 `type="button"`。
 
-`button` 角色可以和 [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) 发生一起使用，以[创建切换按钮](#toggle_buttons)。
+`button` 角色可以和 [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) 特性一起使用，以[创建切换按钮](#切换按钮)。
 
 ```html
 <div id="saveChanges" tabindex="0" role="button" aria-pressed="false">保存</div>
