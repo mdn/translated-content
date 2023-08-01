@@ -38,6 +38,6 @@ Na sintaxe formal, os tipos de dados são indicados pela palavra chave aplicada 
 
 ## Especificações
 
-| Especificação                            | Status                               | Comentário         |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
+| Especificação                 | Status                     | Comentário         |
+| ----------------------------- | -------------------------- | ------------------ |
 | {{ SpecName('CSS3 Values') }} | {{ Spec2('CSS3 Values') }} | Definição inicial. |

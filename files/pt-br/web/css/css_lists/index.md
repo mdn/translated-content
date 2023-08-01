@@ -43,7 +43,7 @@ original_slug: Web/CSS/CSS_Lists_and_Counters
 
 ## Specifications
 
-| Specification                                            | Status                           | Comment |
-| -------------------------------------------------------- | -------------------------------- | ------- |
-| {{ SpecName('CSS3 Lists')}}                     | {{ Spec2('CSS3 Lists') }} |         |
+| Specification                             | Status                    | Comment |
+| ----------------------------------------- | ------------------------- | ------- |
+| {{ SpecName('CSS3 Lists')}}               | {{ Spec2('CSS3 Lists') }} |         |
 | {{ SpecName('CSS2.1', 'generate.html') }} | {{ Spec2('CSS2.1') }}     |         |

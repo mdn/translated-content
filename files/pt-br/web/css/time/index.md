@@ -45,11 +45,11 @@ O tipo dado `<time>` consiste de um elemento {{cssxref("&lt;number&gt;")}} segui
 
 ## Specifications
 
-| Especificação                                                                | Status                           | Comentário                         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ---------------------------------- |
-| {{SpecName('CSS4 Values','#time','&lt;time&gt;')}}         | {{Spec2('CSS4 Values')}} |                                    |
-| {{SpecName('CSS3 Values','#time','&lt;time&gt;')}}         | {{Spec2('CSS3 Values')}} | Definição normativa de `s` e `ms`. |
-| {{SpecName('CSS2.1','aural.html#times','&lt;time&gt;')}} | {{Spec2('CSS2.1')}}         | Difinição informal de `s` e `ms`.  |
+| Especificação                                            | Status                   | Comentário                         |
+| -------------------------------------------------------- | ------------------------ | ---------------------------------- |
+| {{SpecName('CSS4 Values','#time','&lt;time&gt;')}}       | {{Spec2('CSS4 Values')}} |                                    |
+| {{SpecName('CSS3 Values','#time','&lt;time&gt;')}}       | {{Spec2('CSS3 Values')}} | Definição normativa de `s` e `ms`. |
+| {{SpecName('CSS2.1','aural.html#times','&lt;time&gt;')}} | {{Spec2('CSS2.1')}}      | Difinição informal de `s` e `ms`.  |
 
 ## Compatibilidade com navegadores
 
