@@ -1,5 +1,5 @@
 ---
-title: ':empty'
+title: ":empty"
 slug: Web/CSS/:empty
 tags:
   - CSS
@@ -10,6 +10,7 @@ tags:
   - Псевдоклассы
 translation_of: Web/CSS/:empty
 ---
+
 {{ CSSRef() }}
 
 ## Описание
@@ -40,7 +41,7 @@ translation_of: Web/CSS/:empty
 <div class="box"><!-- Я буду лаймовым --></div>
 <div class="box">Я буду красным</div>
 <div class="box">
-    <!-- Я буду красным, так как перед комментарием стоят пробелы -->
+  <!-- Я буду красным, так как перед комментарием стоят пробелы -->
 </div>
 ```
 

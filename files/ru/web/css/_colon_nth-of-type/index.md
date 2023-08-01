@@ -1,5 +1,5 @@
 ---
-title: ':nth-of-type'
+title: ":nth-of-type"
 slug: Web/CSS/:nth-of-type
 tags:
   - CSS
@@ -53,7 +53,7 @@ p:nth-of-type(4n) {
 
 ```css
 /* Нечётные параграфы */
-p:nth-of-type(2n+1) {
+p:nth-of-type(2n + 1) {
   color: red;
 }
 

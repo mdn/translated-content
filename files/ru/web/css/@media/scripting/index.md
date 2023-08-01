@@ -25,7 +25,9 @@ translation_of: Web/CSS/@media/scripting
 
 ```html
 <p class="script-none">You do not have scripting available. :-(</p>
-<p class="script-initial-only">Your scripting is only enabled during the initial page load. Weird.</p>
+<p class="script-initial-only">
+  Your scripting is only enabled during the initial page load. Weird.
+</p>
 <p class="script-enabled">You have scripting enabled! :-)</p>
 ```
 
@@ -38,7 +40,7 @@ p {
 
 @media (scripting: none) {
   .script-none {
-     color: red;
+    color: red;
   }
 }
 

@@ -1,5 +1,5 @@
 ---
-title: '@counter-style'
+title: "@counter-style"
 slug: Web/CSS/@counter-style
 tags:
   - CSS CSS At-rule CSS Counter Styles Reference
@@ -99,7 +99,7 @@ The above counter style rule can be applied to lists like this:
 
 ```css
 .items {
-   list-style: circled-alpha;
+  list-style: circled-alpha;
 }
 ```
 
@@ -124,8 +124,8 @@ Checkout more examples on the [demo page](https://mdn.github.io/css-counter-styl
 
 ## Спецификации
 
-| Спецификация                                                                                             | Статус                                       | Комментарий                |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------- |
+| Спецификация                                                                    | Статус                           | Комментарий                |
+| ------------------------------------------------------------------------------- | -------------------------------- | -------------------------- |
 | {{SpecName('CSS3 Counter Styles', '#the-counter-style-rule', 'counter-style')}} | {{Spec2('CSS3 Counter Styles')}} | Первоначальное определение |
 
 ## Совместимость с браузерами

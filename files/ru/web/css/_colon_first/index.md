@@ -1,8 +1,8 @@
 ---
-title: ':first'
+title: ":first"
 slug: Web/CSS/:first
 tags:
-  - '@page'
+  - "@page"
   - CSS
   - Псевдо-класс
   - Разметка
@@ -53,7 +53,7 @@ p {
 ```js
 document.querySelector("button").onclick = function () {
   window.print();
-}
+};
 ```
 
 ### Результат

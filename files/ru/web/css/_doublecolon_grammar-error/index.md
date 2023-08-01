@@ -1,5 +1,5 @@
 ---
-title: '::grammar-error'
+title: "::grammar-error"
 slug: Web/CSS/::grammar-error
 tags:
   - CSS
@@ -47,7 +47,7 @@ translation_of: Web/CSS/::grammar-error
 #### CSS
 
 ```css
-::grammar-error  {
+::grammar-error {
   text-decoration: underline red;
   color: red;
 }

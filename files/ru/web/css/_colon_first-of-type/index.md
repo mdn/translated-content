@@ -1,5 +1,5 @@
 ---
-title: ':first-of-type'
+title: ":first-of-type"
 slug: Web/CSS/:first-of-type
 tags:
   - Псевдоклассы
@@ -15,7 +15,9 @@ translation_of: Web/CSS/:first-of-type
 ## Синтаксис
 
 ```css
-element:first-of-type { /* стили */ }
+element:first-of-type {
+  /* стили */
+}
 ```
 
 ## Пример

@@ -1,5 +1,5 @@
 ---
-title: ':not()'
+title: ":not()"
 slug: Web/CSS/:not
 translation_of: Web/CSS/:not
 ---
@@ -26,8 +26,12 @@ translation_of: Web/CSS/:not
 ## Пример
 
 ```css
-p:not(.classy) { color: red; }
-body :not(p) { color: green; }
+p:not(.classy) {
+  color: red;
+}
+body :not(p) {
+  color: green;
+}
 ```
 
 CSS выше и HTML ниже...
@@ -35,7 +39,7 @@ CSS выше и HTML ниже...
 ```html
 <p>Некоторый текст.</p>
 <p class="classy">Какой-то другой текст.</p>
-<span>Ещё текст<span>
+<span>Ещё текст</span>
 ```
 
 Выведет это:
