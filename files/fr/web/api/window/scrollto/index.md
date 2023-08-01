@@ -31,7 +31,10 @@ ou
     - `left`
       - : Indique le nombre de pixels le long desquels faire défiler la fenêtre ou l'élément sur l'axe horizontal.
     - `behavior`
-      - : Indique si le défilement devrait être doux (valeur `smooth`), ou s'il devrait avoir lieu instantanément, en une seule fois (valeur `auto`, qui est la valeur par défaut).
+      - : Indique si le défilement devrait être instantané ou doux. Cette option est une chaine de charactère qui doit avoir l'un de ces valeurs:
+        - `smooth`: le défilement doit s'animer en douceur
+        - `instant`: le défilement devrait se produire instantanément en un seul saut
+        - `auto`: le comportement de défilement est déterminé par la valeur calculée de ([scroll-behavior](/fr/docs/Web/CSS/scroll-behavior))
 
 ### Valeur de retour
 
