@@ -60,7 +60,7 @@ button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按�
 
 ### 基本的按钮
 
-Buttons should always have an accessible name. For most buttons, this name will be the same as the text inside the button, between the opening and closing tags. In some cases, for example buttons represented by icons, the accessible name may be provided from the [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attributes.
+按钮始终应该有无障碍的名称。对于大多数的按钮，名称通常是和按钮内的文本、开启和闭合标签之间的内容一致的。一些情况下，比如以图标形式呈现的按钮，其无障碍名称可能是由 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 或者 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 属性提供的。
 
 ## 切换按钮
 
@@ -71,7 +71,7 @@ Buttons should always have an accessible name. For most buttons, this name will 
 - 如果 `aria-pressed="true"`。说明这个按钮当前已被按下。
 - 如果 `aria-pressed="mixed"`，说明这个按钮被认为是部分按下的。
 
-As an example, the mute button on an audio player labeled "mute" could indicate that sound is muted by setting the `aria-pressed` state true. The label of a toggle button should not change when its state changes. In our example the label remains "Mute" with a screen reader reading "Mute toggle button pressed" or "Mute toggle button not pressed" depending on the value of `aria-pressed`. If the design were to call for the button label to change from "Mute" to "Unmute," a toggle button would not be appropriate, so the `aria-pressed` attribute would be omitted.
+比如，音频播放器上有“静音”标签的静音按钮应该表示当 `aria-pressed` 状态为 true 时声音是静音的。切换按钮的标签不应该随状态改变而改变。在这个例子中，当屏幕阅读器说“静音切换按钮已按下”或者“静音切换按钮未按下”（取决于 `aria-pressed` 时），按钮的标签都始终为“静音”。如果设计时是要让按钮标签由“静音”更改为“取消静音”，那么这时候切换按钮并不合适，`aria-pressed` 属性应该省略。
 
 ### 键盘交互
 
@@ -80,18 +80,18 @@ As an example, the mute button on an audio player labeled "mute" could indicate 
 | <kbd>Enter</kbd> | 激活按钮。 |
 | <kbd>Space</kbd> | 激活按钮。 |
 
-Following button activation, focus is set depending on the type of action the button performs. For example, if clicking the button opens a dialog, the focus should move to the dialog. If the button closes a dialog, focus should return to the button that opened the dialog unless the function performed in the dialog context logically leads to a different element. If the button alters the current context, such as muting and unmuting an audio file, then focus typically remains on the button.
+按钮激活后，会设置焦点，取决于按钮执行的操作的类型。比如，如果点击打开对话框的按钮，那么焦点应该移动到对话框。如果按钮是关闭对话框的，那么焦点应该回到打开对话框的按钮，除非对话框上下文中执行的功能在逻辑上是导向到不同的元素的。如果按钮更改了当前的上下文，例如将音频文件静音或者取消静音，那么焦点通常应该留在按钮上。
 
-### Required JavaScript Features
+### 必需的 JavaScript 功能
 
-#### Required event handlers
+#### 必需的事件处理器
 
-Buttons can be operated by mouse, touch, and keyboard users. For native HTML `<button>` elements, the button's `onclick` event fires for mouse clicks and when the user presses <kbd>Space</kbd> or <kbd>Enter</kbd> while the button has focus. But if another tag is used to create a button, the `onclick` event only fires when clicked by the mouse cursor, even if `role="button"` is used. Because of this, separate key event handlers must be added to the element so that the button is be triggered when the <kbd>Space</kbd> or <kbd>Enter</kbd> key is pressed.
+按钮可能是由鼠标、触屏或者键盘用户操作的。对于原生的 `<button>` 元素，按钮的 `onclick` 事件会在用户点击时，以及在按钮有焦点时用户按下 <kbd>Space</kbd> 或 <kbd>Enter</kbd> 时触发。但如果有其他的标签用于创建按钮，那么 `onclick` 事件只会有用户使用鼠标指针点击时才会触发，即使使用了 `role="button"`。因此，需要给元素添加单独的事件处理器，以在按下 <kbd>Space</kbd> 或 <kbd>Enter</kbd> 键时触发按钮。
 
 - `onclick`
-  - : Handles the event raised when the button is activated using a mouse click or touch event.
+  - : 使用鼠标点击或者触摸事件激活按钮时产生的事件。
 - `onKeyDown`
-  - : Handles the event raised when the button is activated using the Enter or Space key on the keyboard. (Note not the [deprecated onKeyPress](/zh-CN/docs/Web/API/Element/keypress_event))
+  - : 使用键盘上的 Enter 或 Space 键激活按钮时触发的事件。（注意不是[已弃用的 onKeyPress](/zh-CN/docs/Web/API/Element/keypress_event)。）
 
 ## 示例
 
@@ -261,7 +261,7 @@ function toggleButton(element) {
 
 ## 无障碍考虑
 
-按钮本身是可交互的，因此可聚焦。如果给自身没有焦点的元素（如 `<span>`、`<div>` 或 `<p>`）添加了焦点，那么就应该使用 `tabindex` 属性以使用按钮可聚焦。
+按钮本身是可交互的，因此可聚焦。如果给自身没有焦点的元素（如 `<span>`、`<div>` 或 `<p>`）添加了焦点，那么就应该使用 `tabindex` 属性以使得按钮可聚焦。
 
 > **警告：** 谨慎将链接标记为按钮。按钮是预期使用 <kbd>Space</kbd> 或 <kbd>Enter</kbd> 键触发的，而链接是预期使用 <kbd>Enter</kbd> 触发的。也就是说，如果使用了链接以表现得像是个按钮，仅添加 `role="button"` 是不够的。还有必要为 <kbd>Space</kbd> 添加一个键事件处理器，以与原生的按钮行为保持一致。
 
@@ -269,7 +269,7 @@ function toggleButton(element) {
 
 ## 最佳实践
 
-If a link performs the action of a button, giving the element `role="button"` helps assistive technology users understand the function of the element. However, a better solution is to adjust the visual design so it matches the function and ARIA role. Where possible, it is recommended to use native HTML buttons (`<button>`, `<input type="button">`, `<input type="submit">`, `<input type="reset">` and `<input type="image">`) rather than the `button` role, as native HTML buttons are supported by all user agents and assistive technology and provide keyboard and focus requirements by default, without need for additional customization.
+如果链接执行的是按钮的操作，那么给元素 `role="button"` 可以帮助辅助技术用户理解这个元素的功能。然后，更好的设计是调整视觉设计从而匹配其功能和 ARIA 角色。在有可能时，建议使用原生的 HTML 按钮（`<button>`、`<input type="button">`、`<input type="submit">`、`<input type="reset">` 和 `<input type="image">`）而不是 `button` 角色，因为能够被所有的用户代理和辅助技术都支持，且默认会提供键盘和焦点需求而不需要额外的自定义。
 
 ## 规范
 
