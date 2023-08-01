@@ -15,8 +15,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 
 ```js
 var removing = browser.browsingData.removeCache(
-  removalOptions            // RemovalOptions オブジェクト
-)
+  removalOptions, // RemovalOptions オブジェクト
+);
 ```
 
 ### 引数
@@ -45,8 +45,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeCache({}).
-then(onRemoved, onError);
+browser.browsingData.removeCache({}).then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}
