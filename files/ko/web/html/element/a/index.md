@@ -164,9 +164,7 @@ slug: Web/HTML/Element/a
 #### HTML
 
 ```html
-<a href="https://www.mozilla.com">
-  Mozilla
-</a>
+<a href="https://www.mozilla.com">Mozilla</a>
 ```
 
 #### 결과
@@ -184,7 +182,10 @@ slug: Web/HTML/Element/a
 ```
 
 ```css hidden
-a { display: block; margin-bottom: 0.5em }
+a {
+  display: block;
+  margin-bottom: 0.5em;
+}
 ```
 
 #### 결과
@@ -195,9 +196,7 @@ a { display: block; margin-bottom: 0.5em }
 
 ```html
 <!-- <a> 요소로 아래의 구획에 연결 -->
-<p><a href="#Section_further_down">
-  아래 제목으로 건너뛰기
-</a></p>
+<p><a href="#Section_further_down">아래 제목으로 건너뛰기</a></p>
 
 <!-- 링크가 향할 제목 -->
 <h2 id="Section_further_down">아래의 제목</h2>
@@ -240,7 +239,8 @@ a { display: block; margin-bottom: 0.5em }
 ##### HTML
 
 ```html
-<p>마우스 드래그로 그림을 그려보세요.
+<p>
+  마우스 드래그로 그림을 그려보세요.
   <a href="" download="my_painting.png">다운로드</a>
 </p>
 
@@ -268,28 +268,31 @@ a {
 ##### JavaScript
 
 ```js
-var canvas = document.querySelector('canvas'),
-    c = canvas.getContext('2d');
-c.fillStyle = 'hotpink';
+var canvas = document.querySelector("canvas"),
+  c = canvas.getContext("2d");
+c.fillStyle = "hotpink";
 
 function draw(x, y) {
   if (isDrawing) {
     c.beginPath();
-    c.arc(x, y, 10, 0, Math.PI*2);
+    c.arc(x, y, 10, 0, Math.PI * 2);
     c.closePath();
     c.fill();
   }
 }
 
-canvas.addEventListener('mousemove', event =>
-  draw(event.offsetX, event.offsetY)
+canvas.addEventListener("mousemove", (event) =>
+  draw(event.offsetX, event.offsetY),
 );
-canvas.addEventListener('mousedown', () => isDrawing = true);
-canvas.addEventListener('mouseup', () => isDrawing = false);
+canvas.addEventListener("mousedown", () => (isDrawing = true));
+canvas.addEventListener("mouseup", () => (isDrawing = false));
 
-document.querySelector('a').addEventListener('click', event =>
-  event.target.href = canvas.toDataURL()
-);
+document
+  .querySelector("a")
+  .addEventListener(
+    "click",
+    (event) => (event.target.href = canvas.toDataURL()),
+  );
 ```
 
 ##### 결과
@@ -313,9 +316,7 @@ document.querySelector('a').addEventListener('click', event =>
 심각하게 흔한 실수는 "여기를 클릭"이나 "여기"라는 단어에 링크를 한다는 것입니다.
 
 ```html example-bad
-<p>
-  저희의 제품을 더 알아보시려면 <a href="/products">여기</a>를 클릭하세요.
-</p>
+<p>저희의 제품을 더 알아보시려면 <a href="/products">여기</a>를 클릭하세요.</p>
 ```
 
 #### 강한 링크 텍스트
@@ -323,9 +324,7 @@ document.querySelector('a').addEventListener('click', event =>
 다행히도 쉽게 수정할 수 있는 데다가, 접근성이 떨어지는 버전보다 더 짧습니다!
 
 ```html example-good
-<p>
-  저희의 <a href="/products">제품을 더 알아보세요</a>.
-</p>
+<p>저희의 <a href="/products">제품을 더 알아보세요</a>.</p>
 ```
 
 접근성 보조 기술은 페이지 안의 모든 링크를 나열하는 단축키가 있습니다. 그러나 강한 링크 텍스트가 보조 기술 사용자에게만 도움을 주는 것은 아닙니다. 모든 링크 나열 단축키는 시각적 사용자가 페이지를 빠르게 훑는 것을 흉내 내는 것이기 때문입니다.
@@ -355,9 +354,7 @@ document.querySelector('a').addEventListener('click', event =>
 #### 비 HTML 리소스 링크
 
 ```html
-<a href="2017-annual-report.ppt">
-  2017 연간 보고서 (PowerPoint)
-</a>
+<a href="2017-annual-report.ppt">2017 연간 보고서 (PowerPoint)</a>
 ```
 
 아이콘을 사용해 링크의 행동을 강조할 땐 {{HTMLAttrxRef("alt", "img", "대체 텍스트", 1)}}를 꼭 지정하세요.
@@ -365,12 +362,12 @@ document.querySelector('a').addEventListener('click', event =>
 ```html
 <a target="_blank" href="https://ko.wikipedia.org">
   위키백과
-  <img alt="(새 탭에서 열림)" src="newtab.svg">
+  <img alt="(새 탭에서 열림)" src="newtab.svg" />
 </a>
 
 <a href="2017-annual-report.ppt">
   2017 연간 보고서
-  <img alt="(PowerPoint 파일)" src="ppt-icon.svg">
+  <img alt="(PowerPoint 파일)" src="ppt-icon.svg" />
 </a>
 ```
 
@@ -387,11 +384,10 @@ document.querySelector('a').addEventListener('click', event =>
 <body>
   <a href="#content">내용으로 건너뛰기</a>
 
-  <header>
-    …
-  </header>
+  <header>…</header>
 
-  <main id="content"> <!-- 여기로 건너뜀 -->
+  <main id="content"><!-- 여기로 건너뜀 --></main>
+</body>
 ```
 
 ```css

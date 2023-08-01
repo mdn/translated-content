@@ -42,10 +42,7 @@ build/
 /files/es/web/javascript/reference/**/*.md
 
 # ja
-/files/ja/mozilla/**/*.md
 /files/ja/mdn/**/*.md
-/files/ja/mozilla/add-ons/**/*.md
-/files/ja/mozilla/add-ons/webextensions/api/**/*.md
 /files/ja/web/api/**/*.md
 /files/ja/web/css/**/*.md
 /files/ja/web/html/**/*.md
@@ -54,10 +51,8 @@ build/
 /files/ja/web/svg/**/*.md
 
 # ko
-/files/ko/learn/**/*.md
 /files/ko/web/api/**/*.md
 /files/ko/web/css/**/*.md
-/files/ko/web/html/**/*.md
 /files/ko/web/javascript/**/*.md
 
 # pt-br

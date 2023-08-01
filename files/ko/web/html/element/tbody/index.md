@@ -1,5 +1,5 @@
 ---
-title: '<tbody>: 표 본문 요소'
+title: "<tbody>: 표 본문 요소"
 slug: Web/HTML/Element/tbody
 ---
 
@@ -118,14 +118,19 @@ slug: Web/HTML/Element/tbody
 table {
   border: 2px solid #555;
   border-collapse: collapse;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 ```
 
 우선 표의 전반적인 스타일을 설정합니다.외부 테두리의 굵기, 스타일, 색을 설정하고, {{cssxref("border-collapse")}}를 이용해 각 칸의 테두리가 서로 분리되지 않고 공유하도록 지정합니다. {{cssxref("font")}}를 사용해 표의 기본 글씨체도 설정합니다.
 
 ```css
-th, td {
+th,
+td {
   border: 1px solid #bbb;
   padding: 2px 8px 0;
   text-align: left;
@@ -226,10 +231,15 @@ Then each remaining row in each major's `<tbody>` consists of two cells: the fir
 table {
   border: 2px solid #555;
   border-collapse: collapse;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #bbb;
   padding: 2px 8px 0;
   text-align: left;

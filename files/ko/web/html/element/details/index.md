@@ -77,7 +77,7 @@ Fully standards-compliant implementations automatically apply the CSS `{{cssxref
 `toggle` 이벤트 처리기를 부착해 위젯의 상태 변화를 감지할 수 있습니다.
 
 ```js
-details.addEventListener("toggle", event => {
+details.addEventListener("toggle", (event) => {
   if (details.open) {
     /* the element was toggled open */
   } else {
@@ -94,10 +94,11 @@ details.addEventListener("toggle", event => {
 
 ```html
 <details>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
 </details>
 ```
 
@@ -112,10 +113,11 @@ details.addEventListener("toggle", event => {
 ```html
 <details>
   <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
 </details>
 ```
 
@@ -130,10 +132,11 @@ details.addEventListener("toggle", event => {
 ```html
 <details open>
   <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
 </details>
 ```
 
@@ -149,7 +152,10 @@ details.addEventListener("toggle", event => {
 
 ```css
 details {
-  font: 16px "Open Sans", Calibri, sans-serif;
+  font:
+    16px "Open Sans",
+    Calibri,
+    sans-serif;
   width: 620px;
 }
 
@@ -178,10 +184,11 @@ details > p {
 ```html
 <details>
   <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
 </details>
 ```
 
@@ -201,7 +208,10 @@ details > p {
 
 ```css
 details {
-  font: 16px "Open Sans", Calibri, sans-serif;
+  font:
+    16px "Open Sans",
+    Calibri,
+    sans-serif;
   width: 620px;
 }
 
@@ -235,10 +245,11 @@ details > p {
 ```html
 <details>
   <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
 </details>
 ```
 
