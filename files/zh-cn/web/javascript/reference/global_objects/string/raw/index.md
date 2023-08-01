@@ -126,4 +126,3 @@ String.raw({ raw: "test" }, 0, 1, 2); // 't0e1s2t'
 - [模版字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)
 - {{jsxref("String")}}
 - [词法文法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
-
