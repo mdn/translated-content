@@ -11,7 +11,7 @@ slug: Web/API/FileSystemDirectoryReader/readEntries
 
 ## 语法
 
-```js
+```js-nolint
 readEntries(successCallback)
 readEntries(successCallback, errorCallback)
 ```

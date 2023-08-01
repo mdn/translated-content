@@ -1,12 +1,7 @@
 ---
 title: GET
 slug: Web/HTTP/Methods/GET
-tags:
-  - HTTP
-  - Reference
-  - Request method
 translation_of: Web/HTTP/Methods/GET
-original_slug: Web/HTTP/Méthode/GET
 ---
 
 {{HTTPSidebar}}

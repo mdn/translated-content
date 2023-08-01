@@ -1,10 +1,6 @@
 ---
 title: rotate
 slug: Web/CSS/rotate
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/rotate
 ---
 

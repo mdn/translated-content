@@ -1,10 +1,6 @@
 ---
 title: mfrac
 slug: Web/MathML/Element/mfrac
-tags:
-  - MathML
-  - MathML:Element
-  - MathML:Référence
 translation_of: Web/MathML/Element/mfrac
 ---
 
@@ -40,14 +36,14 @@ Affichage dans votre navigateur: <math><mfrac bevelled="true"><mfrac><mi>a </mi>
 ```html
 <math>
   <mfrac bevelled="true">
-     <mfrac>
-        <mi> a </mi>
-        <mi> b </mi>
-     </mfrac>
-     <mfrac>
-        <mi> c </mi>
-        <mi> d </mi>
-     </mfrac>
+    <mfrac>
+      <mi> a </mi>
+      <mi> b </mi>
+    </mfrac>
+    <mfrac>
+      <mi> c </mi>
+      <mi> d </mi>
+    </mfrac>
   </mfrac>
 </math>
 ```

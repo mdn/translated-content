@@ -262,7 +262,7 @@ h1 {
 응답형 페이지의 HTML 소스를 보면 일반적으로 문서의 `<head>`에서 다음과 같은 {{htmlelement("meta")}} 태그를 볼 수 있다.
 
 ```html
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
 이 메타 태그는 뷰포트의 너비를 장치의 너비로 설정하여 문서를 의도한 크기의 100%로 확장해야 한다고 모바일 브라우저에게 알려줍니다. 이로써 여러분이 의도한 대로 모바일에 최적화된 크기로 문서를 표시합니다.
@@ -284,8 +284,6 @@ h1 {
 - `user-scalable`: `no`값을 지정하게 되면 확대/축소를 방지합니다.
 
 여러분은 `minimum-scale`와 `maximum-scale` 사용을 피해야하며, 특히 `user-scalable`를 `no`로 설정하는 것도 피해야 합니다. 사용자는 필요한 만큼 확대하거나 축소할 수 있어야 합니다.이를 방지하면 접근성 문제가 발생합니다.
-
-> **참고:** 뷰포트 메타 태그를 대체하기 위해 고안된 CSS @ 규칙이 있습니다. [@viewport](/ko/docs/Web/CSS/@viewport) 그러나 브라우저 지원이 매우 형편없습니다. 그것은 인터넷 익스플로러와 에지에서 구현되었지만, 일단 크롬 기반 에지가 출시되면 더 이상 에지 브라우저의 일부가 되지 않게 됩니다.
 
 ## 요약정리
 

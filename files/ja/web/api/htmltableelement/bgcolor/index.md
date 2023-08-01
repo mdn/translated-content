@@ -1,40 +1,37 @@
 ---
-title: HTMLTableElement.bgColor
+title: "HTMLTableElement: bgColor プロパティ"
+short-title: bgColor
 slug: Web/API/HTMLTableElement/bgColor
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
-**`HTMLTableElement.bgcolor`** プロパティは、この表の背景色を表します。
+**`bgcolor`** は {{domxref("HTMLTableElement")}} のプロパティで、この表の背景色を表します。
 
-`bgColor` 属性は HTML 4.01 で非推奨になりました。代わりに、 CSS の {{cssxref("background-color")}} プロパティをその要素の [`style`](/ja/docs/Web/API/HTMLElement/style) オブジェクトで変更するか、スタイルルールを使用するかしてください。
+> **メモ:** この属性は使用しないでください。代わりに、 CSS の {{cssxref("background-color")}} プロパティをその要素の [`style`](/ja/docs/Web/API/HTMLElement/style) オブジェクトで変更するか、スタイルルールを使用するかしてください。
 
-DOM の [`tbody`](/ja/docs/Web/API/HTMLTableElement/tBodies), [`row`](/ja/docs/Web/API/HTMLTableElement/rows), [`cell`](/ja/docs/DOM/table.cells) オブジェクトでも利用できます。
+## 値
 
-## 構文
-
-```js
-color = table.bgColor
-table.bgColor = color
-```
-
-### 引数
-
-- `color` は色の値を表す文字列です。
+色の値を表す文字列です。
 
 ## 例
 
 ```js
 // 表の背景色をライトブルーに設定
-var t = document.getElementById('TableA');
-t.bgColor = 'lightblue';
+const t = document.getElementById("TableA");
+t.bgColor = "lightblue";
 ```
 
 ## 仕様書
 
-- [DOM Level 2
-  HTML:_HTMLTableElement_ .bgColor](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-83532985)
+{{Specifications}}
 
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{cssxref("background-color")}}

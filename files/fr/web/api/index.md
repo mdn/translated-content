@@ -1,13 +1,6 @@
 ---
 title: Référence Web API
 slug: Web/API
-tags:
-  - API
-  - Applications
-  - DOM
-  - JavaScript
-  - Reference
-  - Web
 translation_of: Web/API
 ---
 

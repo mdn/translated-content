@@ -177,25 +177,25 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 let personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
-let regexpNames =  /First_Name: (\w+), Last_Name: (\w+)/mg;
+let regexpNames = /First_Name: (\w+), Last_Name: (\w+)/gm;
 let match = regexpNames.exec(personList);
 do {
   console.log(`Hello ${match[1]} ${match[2]}`);
-} while((match = regexpNames.exec(personList)) !== null);
+} while ((match = regexpNames.exec(personList)) !== null);
 ```
 
 ### 使用命名组
 
 ```js
-let users= `姓氏：李，名字：雷
+let users = `姓氏：李，名字：雷
 姓氏：韩，名字：梅梅`;
 
-let regexpNames =  /姓氏：(?<first>.+)，名字：(?<last>.+)/mg;
+let regexpNames = /姓氏：(?<first>.+)，名字：(?<last>.+)/gm;
 let match = regexpNames.exec(users);
 
 do {
   console.log(`Hello ${match.groups.first} ${match.groups.last}`);
-} while((match = regexpNames.exec(users)) !== null);
+} while ((match = regexpNames.exec(users)) !== null);
 
 // Hellow 李 雷
 // Hellow 韩 梅梅

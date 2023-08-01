@@ -1,6 +1,8 @@
 ---
-title: '<td>: 表データセル要素'
+title: "<td>: 表データセル要素"
 slug: Web/HTML/Element/td
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
@@ -8,53 +10,6 @@ slug: Web/HTML/Element/td
 **`<td>`** は [HTML](/ja/docs/Web/HTML) の要素で、表でデータを包含するセルを定義します。これは*モデル*に関与します。
 
 {{EmbedInteractiveExample("pages/tabbed/td.html","tabbed-taller")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
-          >コンテンツカテゴリー</a
-        >
-      </th>
-      <td>区分化ルート</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>
-        開始タグは必須です。<br>直後に {{HTMLElement("th")}} 要素または {{HTMLElement("td")}} 要素がある場合、または親要素内で以降のデータがない場合は終了タグを省略可能。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>{{HTMLElement("tr")}} 要素</td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td>
-        <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Cell_Role"
-            >cell</a
-          ></code
-        > ({{HTMLElement("table")}} 要素の子孫である場合)
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLTableCellElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 属性
 
@@ -77,31 +32,31 @@ slug: Web/HTML/Element/td
 
 - `align` {{deprecated_inline}}
 
-  - : この列挙属性は各セルの中身について、水平方向の配置方法を制御します。以下の値を指定可能です。
+  - : この[列挙](/ja/docs/Glossary/Enumerated)属性は各セルの中身について、水平方向の配置方法を制御します。以下の値を指定可能です。
 
     - `left`: 中身をセルの左側に揃えます。
     - `center`: 中身をセル内で中央揃えにします。
     - `right`: 中身をセルの右側に揃えます。
     - `justify` (テキストのみ): 中身がセル内で両端揃えになるように、テキストコンテンツに空白を挿入します。
-    - `char` (テキストのみ): テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は [`char`](/ja/docs/Web/HTML/Element/td#char) 属性および [`charoff`](/ja/docs/Web/HTML/Element/td#charoff) 属性で定義します。{{unimplemented_inline(2212)}}
+    - `char` (テキストのみ): テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は [`char`](#char) 属性および [`charoff`](#charoff) 属性で定義します。
 
     この属性を設定しない場合は、値が `left` であるとみなされます。
 
     > **メモ:**
     >
     > - `left`, `center`, `right`, `justify` の値と同様の効果を得るには、 CSS の {{cssxref("text-align")}} プロパティを使用してください。
-    > - 同様の効果を得るには、 {{cssxref("text-align")}} プロパティの値 [`char`](/ja/docs/Web/HTML/Element/td#char) を使用できます。 CSS3 では {{unimplemented_inline}} です。
+    > - 同様の効果を得るには、 {{cssxref("text-align")}} プロパティの値 [`char`](#char) を使用できます。
 
 - `axis` {{deprecated_inline}}
   - : この属性は、空白文字で区切られた文字列のリストを持ちます。各文字列は、このヘッダーを適用するセルグループの `id` です。
 - `bgcolor` {{deprecated_inline}}
 
-  - : この属性は、列の各セルの背景色を定義します。値は [sRGB](https://www.w3.org/Graphics/Color/sRGB) で定義された 6桁の 16 進数値のいずれかで、先頭に '`#`' が付きます。定義済みの[色キーワード](/ja/docs/Web/CSS/color_value#color_keywords)の一つを使うこともできます。
+  - : この属性は、列の各セルの背景色を定義します。値は [6 桁の 16 進数による RGB コード](/ja/docs/Web/CSS/hex-color)で、先頭に '`#`' が付きます。定義済みの[色キーワード](/ja/docs/Web/CSS/named-color)の一つを使うこともできます。
 
     同様の効果を与えるには、 CSS の {{ cssxref("background-color") }} プロパティを使用してください。
 
 - `char` {{deprecated_inline}}
-  - : この属性は、列内のセルで揃える文字を設定します。典型的な値に、数値や金額を揃えようとするときのピリオド (.) があります。 [`align`](/ja/docs/Web/HTML/Element/td#align) 属性が `char` に設定されていない場合、この属性は無視されます。
+  - : この属性は、列内のセルで揃える文字を設定します。典型的な値に、数値や金額を揃えようとするときのピリオド (.) があります。 [`align`](#align) 属性が `char` に設定されていない場合、この属性は無視されます。
 - `charoff` {{deprecated_inline}}
   - : この属性は、 **char** 属性で指定した揃え文字から列のデータをオフセットする文字数を示します。
 - `height` {{deprecated_inline}}
@@ -125,6 +80,55 @@ slug: Web/HTML/Element/td
 ## 例
 
 `<td>` 要素の例については、 {{HTMLElement("table")}} を参照してください。
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
+      </th>
+      <td>区分化ルート</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>
+        開始タグは必須。<br />直後に {{HTMLElement("th")}} 要素または {{HTMLElement("td")}} 要素がある場合、または親要素内で以降のデータがない場合は終了タグが省略可能。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>{{HTMLElement("tr")}} 要素</td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Cell_Role"
+            >cell</a
+          ></code
+        >（{{HTMLElement("table")}} 要素の子孫である場合）
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLTableCellElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

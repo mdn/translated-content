@@ -13,7 +13,7 @@ cancel 用于在不再需要来自一个流的任何数据的情况下完全结�
 
 ## 语法
 
-```js
+```js-nolint
 cancel()
 cancel(reason)
 ```
@@ -53,8 +53,12 @@ function fetchStream() {
     // 从流中获取的数据是一个 Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
-    listItem.textContent = 'Received ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    let listItem = document.createElement("li");
+    listItem.textContent =
+      "Received " +
+      charsReceived +
+      " characters so far. Current chunk = " +
+      chunk;
     list2.appendChild(listItem);
     result += chunk;
     // 再次调用该函数以读取更多数据

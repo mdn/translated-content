@@ -1,5 +1,5 @@
 ---
-title: '<section>: 일반 구획 요소'
+title: "<section>: 일반 구획 요소"
 slug: Web/HTML/Element/section
 ---
 

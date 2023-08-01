@@ -20,7 +20,7 @@ Un contexte sera considéré comme sécurisé s'il est servi locallement, ou dep
 
 Les fichiers servis locallement avec des chemins comme `http://localhost` et `file://` sont considérés sécurisés.
 
-Les contextes qui ne sont pas servis locallement doivent être servis avec *https\://* ou *wss\://* et les protocoles utilisés ne doivent pas être considérés obsolètes.
+Les contextes qui ne sont pas servis locallement doivent être servis avec _https\://_ ou _wss\://_ et les protocoles utilisés ne doivent pas être considérés obsolètes.
 
 ## Détection des fonctionnalités
 

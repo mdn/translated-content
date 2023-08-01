@@ -33,9 +33,9 @@ var source = audioCtx.createMediaElementSource(myMediaElement);
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var myAudio = document.querySelector('audio');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+var myAudio = document.querySelector("audio");
+var pre = document.querySelector("pre");
+var myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
@@ -57,11 +57,15 @@ var HEIGHT = window.innerHeight;
 document.onmousemove = updatePage;
 
 function updatePage(e) {
-    CurY = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+  CurY = window.Event
+    ? e.pageY
+    : event.clientY +
+      (document.documentElement.scrollTop
+        ? document.documentElement.scrollTop
+        : document.body.scrollTop);
 
-    gainNode.gain.value = CurY/HEIGHT;
+  gainNode.gain.value = CurY / HEIGHT;
 }
-
 
 // connect the AudioBufferSourceNode to the gainNode
 // and the gainNode to the destination, so we can play the

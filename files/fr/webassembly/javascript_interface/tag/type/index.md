@@ -13,7 +13,7 @@ L'objet renvoyé par la méthode sera le même que celui initialement passé au 
 ## Syntaxe
 
 ```js
-type()
+type();
 ```
 
 ### Paramètres

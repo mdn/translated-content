@@ -15,7 +15,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var gettingEngines = browser.search.get()
+var gettingEngines = browser.search.get();
 ```
 
 ### Paramètres

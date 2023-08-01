@@ -371,7 +371,7 @@ Además compila el marcado y la sección de `<script>` de cada componente y alma
 Por último, el archivo `public/index.html` incluye los archivos `bundle.css` y `bundle.js` que fueron generados:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

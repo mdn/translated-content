@@ -12,7 +12,7 @@ slug: Web/API/History/forward
 ## 구문
 
 ```js
-history.forward()
+history.forward();
 ```
 
 ## 예제
@@ -22,15 +22,15 @@ history.forward()
 ### HTML
 
 ```html
-<button id='go-forward'>앞으로 가기!</button>
+<button id="go-forward">앞으로 가기!</button>
 ```
 
 ### JavaScript
 
 ```js
-document.getElementById('go-forward').addEventListener('click', e => {
+document.getElementById("go-forward").addEventListener("click", (e) => {
   window.history.forward();
-})
+});
 ```
 
 ## 명세

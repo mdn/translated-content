@@ -1,12 +1,6 @@
 ---
 title: PerformanceMeasure
 slug: Web/API/PerformanceMeasure
-tags:
-  - API
-  - Interface
-  - Performance Timeline API
-  - Reference
-  - Performance Web
 translation_of: Web/API/PerformanceMeasure
 ---
 

@@ -40,7 +40,7 @@ original_slug: Web/SVG/Элемент/image
 
 ## DOM Interface
 
-This element implements the [`SVGImageElement`](/en-US/docs/Web/API/SVGImageElement) interface.
+This element implements the [`SVGImageElement`](/ru/docs/Web/API/SVGImageElement) interface.
 
 ## Пример
 

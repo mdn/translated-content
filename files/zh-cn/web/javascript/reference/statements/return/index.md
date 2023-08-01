@@ -46,7 +46,7 @@ return x + y / 3;
 
 [自动插入分号（ASI）](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全)规则会影响 `return` 语句。在 `return` 关键字和被返回的表达式之间不允许使用换行符。
 
-```js
+```js-nolint
 return
 a + b;
 ```
@@ -64,7 +64,7 @@ a + b;
 
 为了避免这个问题（防止 ASI），你可以使用括号：
 
-```js
+```js-nolint
 return (
   a + b
 );
@@ -78,14 +78,15 @@ return (
 
 ```js
 function counter() {
-  for (let count = 1; ; count++) {  // 无限循环
+  for (let count = 1; ; count++) {
+    // 无限循环
     console.log(`${count}A`); // 执行 5 次
     if (count === 5) {
       return;
     }
-    console.log(`${count}B`);  // 执行 4 次
+    console.log(`${count}B`); // 执行 4 次
   }
-  console.log(`${count}C`);  // 永远不会执行
+  console.log(`${count}C`); // 永远不会执行
 }
 
 counter();
@@ -108,7 +109,9 @@ counter();
 
 ```js
 function magic() {
-  return function calc(x) { return x * 42; };
+  return function calc(x) {
+    return x * 42;
+  };
 }
 
 const answer = magic();

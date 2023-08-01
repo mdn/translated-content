@@ -2,7 +2,6 @@
 title: Constructeur Promise()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/Promise
-browser-compat: javascript.builtins.Promise.Promise
 ---
 
 {{JSRef}}
@@ -14,7 +13,7 @@ Le constructeur **`Promise()`** est principalement utilisé afin d'envelopper de
 ## Syntaxe
 
 ```js
-new Promise(executeur)
+new Promise(executeur);
 ```
 
 ### Paramètres

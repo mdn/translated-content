@@ -1,10 +1,6 @@
 ---
 title: fallback
 slug: Web/CSS/@counter-style/fallback
-tags:
-  - CSS
-  - Descripteur
-  - Reference
 translation_of: Web/CSS/@counter-style/fallback
 ---
 
@@ -37,7 +33,8 @@ fallback: custom-gangnam-style;
 
 ```css
 @counter-style fallback-example {
-  system: fixed; symbols: "\24B6" "\24B7" "\24B8";
+  system: fixed;
+  symbols: "\24B6" "\24B7" "\24B8";
   fallback: upper-alpha;
 }
 .exemple {

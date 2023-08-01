@@ -13,8 +13,8 @@ Le type d'encodage généralement utilisé est "application/x-www-form-urlencode
 ## Syntaxe
 
 ```js
-string = form.enctype
-form.enctype = string
+string = form.enctype;
+form.enctype = string;
 ```
 
 ## Exemple

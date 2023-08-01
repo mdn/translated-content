@@ -40,4 +40,4 @@ A [same-origin security policy](/pt-BR/docs/Web/Security/Same-origin_policy) pro
 
 - [Especificação Fetch](https://fetch.spec.whatwg.org)
 
-{{QuickLinksWithSubpages("/en-US/docs/Glossary")}}
+{{QuickLinksWithSubpages("/pt-BR/docs/Glossary")}}

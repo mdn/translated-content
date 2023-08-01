@@ -14,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var createContext = browser.contextualIdentities.create(
-  details                  // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -79,11 +79,13 @@ function onError(e) {
   console.error(e);
 }
 
-browser.contextualIdentities.create({
-  name: "my-thing",
-  color: "purple",
-  icon: "briefcase"
-}).then(onCreated, onError);
+browser.contextualIdentities
+  .create({
+    name: "my-thing",
+    color: "purple",
+    icon: "briefcase",
+  })
+  .then(onCreated, onError);
 ```
 
 {{WebExtExamples}}

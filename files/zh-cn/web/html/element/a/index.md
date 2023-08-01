@@ -18,7 +18,9 @@ slug: Web/HTML/Element/a
 - `download`
 
   - : 导致浏览器将链接的 URL 视为下载资源。可以使用或不使用 `filename` 值：
+
     - 如果没有指定值，浏览器会从多个来源决定文件名和扩展名：
+
       - {{HTTPHeader("Content-Disposition")}} HTTP 标头。
       - URL [路径](/zh-CN/docs/Web/API/URL/pathname)的最后一段。
       - {{Glossary("MIME_type", "媒体类型")}}。来自 {{HTTPHeader("Content-Type")}} 标头，[`data:` URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) 的开头，或 [`blob:` URL](/zh-CN/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}。
@@ -239,7 +241,7 @@ function draw(x, y) {
 }
 
 canvas.addEventListener("mousemove", (event) =>
-  draw(event.offsetX, event.offsetY)
+  draw(event.offsetX, event.offsetY),
 );
 canvas.addEventListener("mousedown", () => (isDrawing = true));
 canvas.addEventListener("mouseup", () => (isDrawing = false));
@@ -248,7 +250,7 @@ document
   .querySelector("a")
   .addEventListener(
     "click",
-    (event) => (event.target.href = canvas.toDataURL())
+    (event) => (event.target.href = canvas.toDataURL()),
   );
 ```
 
@@ -326,7 +328,7 @@ document
 <a href="2017-annual-report.ppt"> 2017 年度报告（PowerPoint） </a>
 ```
 
-如果使用图标标志链接行为，确保其具有[*替代文本*](/zh-CN/docs/Web/HTML/Element/img#alt)：
+如果使用图标标志链接行为，确保其具有[_替代文本_](/zh-CN/docs/Web/HTML/Element/img#alt)：
 
 ```html
 <a target="_blank" href="https://www.wikipedia.org">

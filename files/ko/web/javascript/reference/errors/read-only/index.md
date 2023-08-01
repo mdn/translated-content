@@ -20,9 +20,9 @@ slug: Web/JavaScript/Reference/Errors/Read-only
 
 ## 무엇이 잘못 된 걸까?
 
-전역변수 또는 객체 프로퍼티가 읽기 전용으로 할당된 경우입니다.(엄밀히 따지자면 [쓰기가 불가능한 데이터 속성입니다.](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Writable_attribute))
+전역변수 또는 객체 프로퍼티가 읽기 전용으로 할당된 경우입니다.(엄밀히 따지자면 [쓰기가 불가능한 데이터 속성입니다.](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Writable_attribute))
 
-이 에러는 [엄격모드](/en-US/docs/Web/JavaScript/Reference/Strict_mode)에서만 등장합니다. 엄격하지 않은 모드에서는 읽기전용 속성은 묵시적으로 무시됩니다.
+이 에러는 [엄격모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)에서만 등장합니다. 엄격하지 않은 모드에서는 읽기전용 속성은 묵시적으로 무시됩니다.
 
 ## 예시
 

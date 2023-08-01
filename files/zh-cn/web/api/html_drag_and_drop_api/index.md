@@ -5,7 +5,7 @@ slug: Web/API/HTML_Drag_and_Drop_API
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
-**HTML 拖放**（Drag and Drop）接口使应用程序能够在浏览器中使用拖放功能。例如，用户可使用鼠标选择可拖拽（*draggable*）元素，将元素拖拽到可放置（*droppable*）元素，并释放鼠标按钮以放置这些元素。拖拽操作期间，会有一个可拖拽元素的半透明快照跟随着鼠标指针。
+**HTML 拖放**（Drag and Drop）接口使应用程序能够在浏览器中使用拖放功能。例如，用户可使用鼠标选择可拖拽（_draggable_）元素，将元素拖拽到可放置（_droppable_）元素，并释放鼠标按钮以放置这些元素。拖拽操作期间，会有一个可拖拽元素的半透明快照跟随着鼠标指针。
 
 对于网站、扩展以及 XUL 应用程序，你可以自定义什么元素是可拖拽的、可拖拽元素产生的反馈类型，以及可放置的元素。
 
@@ -19,15 +19,15 @@ HTML 的 drag & drop 使用了 {{domxref("Event","DOM event model")}} 以及从 
 
 所有的 [拖拽事件类型](/zh-CN/docs/Web/API/DragEvent#Event_types) 有一个对应的 [拖拽全局属性](/zh-CN/docs/Web/API/DragEvent#GlobalEventHandlers)。每个拖拽事件类型和拖拽全局属性都有对应的描述文档。下面的表格提供了一个简短的事件类型描述，以及一个相关文档的链接。
 
-| 事件                         | On 型事件处理程序                                                                | 触发时刻                                                                                                              |
-| ---------------------------- | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event)     | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}             | 当拖拽元素或选中的文本时触发。                                                                                        |
-| [`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event) | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | 当拖拽操作结束时触发 (比如松开鼠标按键或敲“Esc”键). (见[结束拖拽](/zh-CN/docs/DragDrop/Drag_Operations#dragend))      |
+| 事件                                                           | On 型事件处理程序                                            | 触发时刻                                                                                                              |
+| -------------------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event)           | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}           | 当拖拽元素或选中的文本时触发。                                                                                        |
+| [`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event)     | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | 当拖拽操作结束时触发 (比如松开鼠标按键或敲“Esc”键). (见[结束拖拽](/zh-CN/docs/DragDrop/Drag_Operations#dragend))      |
 | [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event) | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | 当拖拽元素或选中的文本到一个可释放目标时触发（见 [指定释放目标](/zh-CN/docs/DragDrop/Drag_Operations#droptargets)）。 |
 | [`dragleave`](/zh-CN/docs/Web/API/HTMLElement/dragleave_event) | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | 当拖拽元素或选中的文本离开一个可释放目标时触发。                                                                      |
-| [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}     | 当元素或选中的文本被拖到一个可释放目标上时触发（每 100 毫秒触发一次）。                                               |
+| [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)   | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}   | 当元素或选中的文本被拖到一个可释放目标上时触发（每 100 毫秒触发一次）。                                               |
 | [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | 当用户开始拖拽一个元素或选中的文本时触发（见[开始拖拽操作](/zh-CN/docs/DragDrop/Drag_Operations#dragstart)）。        |
-| [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)     | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}             | 当元素或选中的文本在可释放目标上被释放时触发（见[执行释放](/zh-CN/docs/DragDrop/Drag_Operations#drop)）。             |
+| [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)           | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}           | 当元素或选中的文本在可释放目标上被释放时触发（见[执行释放](/zh-CN/docs/DragDrop/Drag_Operations#drop)）。             |
 
 **注意：**当从操作系统向浏览器中拖拽文件时，不会触发 `dragstart` 和`dragend` 事件。
 
@@ -68,7 +68,7 @@ Mozilla 和 Firefox 支持一些不在标准拖放模型中的特性。请查看
     ev.dataTransfer.setData("text/plain", ev.target.id);
   }
 
-  window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener("DOMContentLoaded", () => {
     // Get the element by id
     const element = document.getElementById("p1");
     // Add the ondragstart event listener
@@ -92,7 +92,10 @@ function dragstart_handler(ev) {
   // 添加拖拽数据
   ev.dataTransfer.setData("text/plain", ev.target.innerText);
   ev.dataTransfer.setData("text/html", ev.target.outerHTML);
-  ev.dataTransfer.setData("text/uri-list", ev.target.ownerDocument.location.href);
+  ev.dataTransfer.setData(
+    "text/uri-list",
+    ev.target.ownerDocument.location.href,
+  );
 }
 ```
 
@@ -108,7 +111,7 @@ function dragstart_handler(ev) {
   // NOTE: change "example.gif" to a real image URL or the image
   // will not be created and the default drag image will be used.
   var img = new Image();
-  img.src = 'example.gif';
+  img.src = "example.gif";
   ev.dataTransfer.setDragImage(img, 10, 10);
 }
 ```
@@ -143,19 +146,24 @@ function dragstart_handler(ev) {
 
 ```html
 <script>
-function dragover_handler(ev) {
- ev.preventDefault();
- ev.dataTransfer.dropEffect = "move";
-}
-function drop_handler(ev) {
- ev.preventDefault();
- // Get the id of the target and add the moved element to the target's DOM
- var data = ev.dataTransfer.getData("text/plain");
- ev.target.appendChild(document.getElementById(data));
-}
+  function dragover_handler(ev) {
+    ev.preventDefault();
+    ev.dataTransfer.dropEffect = "move";
+  }
+  function drop_handler(ev) {
+    ev.preventDefault();
+    // Get the id of the target and add the moved element to the target's DOM
+    var data = ev.dataTransfer.getData("text/plain");
+    ev.target.appendChild(document.getElementById(data));
+  }
 </script>
 
-<p id="target" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">Drop Zone</p>
+<p
+  id="target"
+  ondrop="drop_handler(event)"
+  ondragover="dragover_handler(event)">
+  Drop Zone
+</p>
 ```
 
 注意每个处理程序调用 {{domxref("Event.preventDefault","preventDefault()")}} 来阻止对这个事件的其他处理过程（如触点事件或指针事件）。
@@ -170,25 +178,32 @@ function drop_handler(ev) {
 
 ```html
 <script>
-function dragstart_handler(ev) {
- // Add the target element's id to the data transfer object
- ev.dataTransfer.setData("application/my-app", ev.target.id);
- ev.dataTransfer.dropEffect = "move";
-}
-function dragover_handler(ev) {
- ev.preventDefault();
- ev.dataTransfer.dropEffect = "move"
-}
-function drop_handler(ev) {
- ev.preventDefault();
- // Get the id of the target and add the moved element to the target's DOM
- var data = ev.dataTransfer.getData("application/my-app");
- ev.target.appendChild(document.getElementById(data));
-}
+  function dragstart_handler(ev) {
+    // Add the target element's id to the data transfer object
+    ev.dataTransfer.setData("application/my-app", ev.target.id);
+    ev.dataTransfer.dropEffect = "move";
+  }
+  function dragover_handler(ev) {
+    ev.preventDefault();
+    ev.dataTransfer.dropEffect = "move";
+  }
+  function drop_handler(ev) {
+    ev.preventDefault();
+    // Get the id of the target and add the moved element to the target's DOM
+    var data = ev.dataTransfer.getData("application/my-app");
+    ev.target.appendChild(document.getElementById(data));
+  }
 </script>
 
-<p id="p1" draggable="true" ondragstart="dragstart_handler(event)">This element is draggable.</p>
-<div id="target" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">Drop Zone</div>
+<p id="p1" draggable="true" ondragstart="dragstart_handler(event)">
+  This element is draggable.
+</p>
+<div
+  id="target"
+  ondrop="drop_handler(event)"
+  ondragover="dragover_handler(event)">
+  Drop Zone
+</div>
 ```
 
 更多信息请参见 [执行释放](/zh-CN/docs/Web/Guide/HTML/Drag_operations#drop)。

@@ -18,7 +18,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride
 現在の新規タブ URL を取得する：
 
 ```js
-browser.browserSettings.newTabPageOverride.get({}).then(result => {
+browser.browserSettings.newTabPageOverride.get({}).then((result) => {
   console.log(result.value);
 });
 ```

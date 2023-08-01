@@ -1,12 +1,6 @@
 ---
 title: BlobEvent.BlobEvent()
 slug: Web/API/BlobEvent/BlobEvent
-tags:
-  - API
-  - Blob
-  - Constructeur
-  - DOM
-  - Evènement
 translation_of: Web/API/BlobEvent/BlobEvent
 ---
 

@@ -58,7 +58,7 @@ var o = {
 
 ### Удаление сеттера оператором `delete`
 
-Если вы хотите удалить сеттер, вы можете просто его [`удалить`](/en-US/docs/Web/JavaScript/Reference/Operators/delete):
+Если вы хотите удалить сеттер, вы можете просто его [`удалить`](/ru/docs/Web/JavaScript/Reference/Operators/delete):
 
 ```js
 delete o.current;

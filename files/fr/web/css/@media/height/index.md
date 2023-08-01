@@ -1,10 +1,6 @@
 ---
 title: height
 slug: Web/CSS/@media/height
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
 translation_of: Web/CSS/@media/height
 ---
 
@@ -22,8 +18,7 @@ La caractéristique `height` est définie comme une longueur (type {{cssxref("&l
 
 ```html
 <div>
-  Surveillez cet élément lors du
-  redimensionnement de la zone d'affichage.
+  Surveillez cet élément lors du redimensionnement de la zone d'affichage.
 </div>
 ```
 

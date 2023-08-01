@@ -81,7 +81,7 @@ Para exemplos mais detalhados veja as páginas [\<ol>](/pt-BR/docs/Web/HTML/Elem
 
 {{Compat("html.elements.li")}}
 
-## Veja também:
+## Veja também
 
 - Outros elementos HTML parentes: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} e o obsoleto {{HTMLElement("dir")}};
 - Propriedades CSS que podem ser úteis, especialmente para dar um charme ao elemento`<li>`:

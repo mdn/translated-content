@@ -38,8 +38,8 @@ Par exemple, sur Chrome pour Android, la `Promise` retournée sera résolue apr�
 ```js
 navigator.share({
   title: document.title,
-  text: 'Hello World',
-  url: 'https://developer.mozilla.org',
+  text: "Hello World",
+  url: "https://developer.mozilla.org",
 }); // partage l'URL de MDN
 ```
 

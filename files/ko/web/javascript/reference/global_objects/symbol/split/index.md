@@ -51,4 +51,4 @@ console.log("Another one bites the dust".split(new ReverseSplit()));
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}
 - {{jsxref("String.prototype.split()")}}
-- [`RegExp.prototype[@@split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
+- [`RegExp.prototype[@@split]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)

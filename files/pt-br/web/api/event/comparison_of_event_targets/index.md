@@ -122,7 +122,7 @@ Há 5 tipos de _targets_ a se considerar:
         {{ Non-standard_inline() }} O alvo original do evento, antes de
         qualquer redirecionamento. Veja
         <a
-          href="/en-US/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
+          href="/pt-BR/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
           >Anonymous Content#Event_Flow_and_Targeting</a
         >
         para mais detalhes.

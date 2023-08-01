@@ -117,8 +117,7 @@ Consigner les modifications dans les URL :
 ```js
 function handleUpdated(tabId, changeInfo, tabInfo) {
   if (changeInfo.url) {
-    console.log("Tab: " + tabId +
-                " URL changed to " + changeInfo.url);
+    console.log("Tab: " + tabId + " URL changed to " + changeInfo.url);
   }
 }
 
@@ -134,8 +133,8 @@ const pattern1 = "https://developer.mozilla.org/*";
 const pattern2 = "https://twitter.com/mozdevnet";
 
 const filter = {
-  urls: [pattern1, pattern2]
-}
+  urls: [pattern1, pattern2],
+};
 
 function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log(`Updated tab: ${tabId}`);
@@ -150,8 +149,8 @@ Le journal ne change que la propriété `épinglée` des onglets (c'est-à-dire 
 
 ```js
 const filter = {
-  properties: ["pinned"]
-}
+  properties: ["pinned"],
+};
 
 function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log(`Updated tab: ${tabId}`);
@@ -173,8 +172,8 @@ const pattern2 = "https://twitter.com/mozdevnet";
 
 const filter = {
   urls: [pattern1, pattern2],
-  properties: ["pinned"]
-}
+  properties: ["pinned"],
+};
 
 function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log(`Updated tab: ${tabId}`);
@@ -182,9 +181,7 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log("New tab Info: ", tabInfo);
 }
 
-browser.tabs.onUpdated.addListener(
-  handleUpdated,
-  filter);
+browser.tabs.onUpdated.addListener(handleUpdated, filter);
 ```
 
 Changements dans le journal seulement :
@@ -200,8 +197,8 @@ const pattern2 = "https://twitter.com/mozdevnet";
 const filter = {
   urls: [pattern1, pattern2],
   properties: ["pinned"],
-  windowId: browser.windows.WINDOW_ID_CURRENT
-}
+  windowId: browser.windows.WINDOW_ID_CURRENT,
+};
 
 function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log(`Updated tab: ${tabId}`);
@@ -209,9 +206,7 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log("New tab Info: ", tabInfo);
 }
 
-browser.tabs.onUpdated.addListener(
-  handleUpdated,
-  filter);
+browser.tabs.onUpdated.addListener(handleUpdated, filter);
 ```
 
 {{WebExtExamples}}

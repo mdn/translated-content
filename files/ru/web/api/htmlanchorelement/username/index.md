@@ -25,7 +25,7 @@ object.username = string;
 ## Примеры
 
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.username">
+// Допустим, что документ содержит элемент <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/ru/docs/HTMLHyperlinkElementUtils.username">
 var anchor = document.getElementByID("myAnchor");
 var result = anchor.username; // Вернёт: 'anonymous'
 ```

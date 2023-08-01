@@ -2,6 +2,7 @@
 title: 웹의 리소스 식별하기
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 ---
+
 {{HTTPSidebar}}
 HTTP 요청 대상을 "리소스"라고 하며 리소스의 특성은 더 이상 정의되지 않습니다. 리소스는 문서, 사진 등으로 그 어떤 것이든 될 수 있습니다. 각 리소스는 리소스 식별을 위해 HTTP 전체에서 사용되는 {{Glossary("URI")}}(Uniform Resource Identifier)로 식별됩니다.
 
@@ -13,7 +14,7 @@ HTTP 요청 대상을 "리소스"라고 하며 리소스의 특성은 더 이상
 
 ```
 https://developer.mozilla.org
-https://developer.mozilla.org/en-US/docs/Learn/
+https://developer.mozilla.org/ko/docs/Learn/
 https://developer.mozilla.org/en-US/search?q=URL
 ```
 
@@ -45,19 +46,19 @@ urn:ietf:rfc:7230
 - ![Protocol](mdn-url-protocol@x2.png)
   - : `http://`는 프로토콜로, 브라우저가 사용해야 하는 프로토콜을 나타냅니다. 일반적으로 프로토콜은 HTTP이거나 보안 버전인 HTTPS입니다. 웹은 이 두 가지 중 하나를 사용하지만, 브라우저는 메일 클라이언트를 여는 `mailto:` 또는 파일 전송을 처리하는 `ftp:`와 같은 다른 프로토콜을 처리하는 방법도 알고 있으므로 이러한 프로토콜을 보더라도 놀라지 않으셔도됩니다. 일반적인 스키마는 다음과 같습니다.
 
-| 스키마 | 설명 |
-| ----------- | -------------------------------------------------------------------- |
-| data | [Data URL](/ko/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) |
-| file | 호스트별 파일 이름 |
-| ftp | {{Glossary("FTP","File Transfer Protocol")}} |
-| http/https | [하이퍼 텍스트 전송 프로토콜 (보안)](/ko/docs/Glossary/HTTP) |
-| javascript | URL내 JavaScript 코드 |
-| mailto | 전자 메일 주소 |
-| ssh | 보안 쉘 |
-| tel | 전화 |
-| urn | 통합 자원 이름 |
-| view-source | 리소스의 소스코드 |
-| ws/wss | [웹 소켓 연결 (보안)](/ko/docs/Web/API/WebSockets_API) |
+| 스키마      | 설명                                                         |
+| ----------- | ------------------------------------------------------------ |
+| data        | [Data URL](/ko/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)       |
+| file        | 호스트별 파일 이름                                           |
+| ftp         | {{Glossary("FTP","File Transfer Protocol")}}                 |
+| http/https  | [하이퍼 텍스트 전송 프로토콜 (보안)](/ko/docs/Glossary/HTTP) |
+| javascript  | URL내 JavaScript 코드                                        |
+| mailto      | 전자 메일 주소                                               |
+| ssh         | 보안 쉘                                                      |
+| tel         | 전화                                                         |
+| urn         | 통합 자원 이름                                               |
+| view-source | 리소스의 소스코드                                            |
+| ws/wss      | [웹 소켓 연결 (보안)](/ko/docs/Web/API/WebSockets_API)       |
 
 ### 도메인 이름
 
@@ -92,7 +93,7 @@ urn:ietf:rfc:7230
 ## 예제
 
 ```
-https://developer.mozilla.org/en-US/docs/Learn
+https://developer.mozilla.org/ko/docs/Learn
 tel:+1-816-555-1212
 git@github.com:mdn/browser-compat-data.git
 ftp://example.org/resource.txt
@@ -106,5 +107,5 @@ mailto:help@supercyberhelpdesk.info
 
 ## 같이 보기
 
-- [What is a URL?](/en-US/docs/Learn/Common_questions/What_is_a_URL)
+- [What is a URL?](/ko/docs/Learn/Common_questions/What_is_a_URL)
 - [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

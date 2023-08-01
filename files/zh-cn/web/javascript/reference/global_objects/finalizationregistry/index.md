@@ -16,7 +16,7 @@ slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
 你在回调中创建了如下的 registry：
 
 ```js
-const registry = new FinalizationRegistry(heldValue => {
+const registry = new FinalizationRegistry((heldValue) => {
   // ....
 });
 ```
@@ -95,7 +95,7 @@ Some notes on cleanup callbacks:
 You create the registry passing in the callback:
 
 ```js
-const registry = new FinalizationRegistry(heldValue => {
+const registry = new FinalizationRegistry((heldValue) => {
   // ....
 });
 ```

@@ -1,11 +1,6 @@
 ---
 title: NamedNodeMap
 slug: Web/API/NamedNodeMap
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
 translation_of: Web/API/NamedNodeMap
 ---
 

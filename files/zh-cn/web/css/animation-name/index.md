@@ -22,7 +22,10 @@ animation-name: sliding-vertically;
 
 /* 多个动画 */
 animation-name: test1, animation4;
-animation-name: none, -moz-specific, sliding;
+animation-name:
+  none,
+  -moz-specific,
+  sliding;
 
 /* 全局值 */
 animation-name: inherit;
@@ -84,7 +87,6 @@ animation-name: unset;
     transform: rotate(360deg);
   }
 }
-
 ```
 
 #### 结果

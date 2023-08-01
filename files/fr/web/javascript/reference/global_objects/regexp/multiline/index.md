@@ -1,14 +1,7 @@
 ---
 title: RegExp.prototype.multiline
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
-tags:
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - RegExp
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/multiline
 ---
 
 {{JSRef}}

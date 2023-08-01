@@ -395,14 +395,15 @@ La fonction [`minmax()`](/fr/docs/Web/CSS/minmax) permet ce comportement. Dans l
 
 ```html
 <div class="wrapper">
-   <div>Un</div>
-   <div>Deux
-     <p>Davantage de contenu.</p>
-     <p>On dépasse les 100 pixels.</p>
-   </div>
-   <div>Trois</div>
-   <div>Quatre</div>
-   <div>Cinq</div>
+  <div>Un</div>
+  <div>
+    Deux
+    <p>Davantage de contenu.</p>
+    <p>On dépasse les 100 pixels.</p>
+  </div>
+  <div>Trois</div>
+  <div>Quatre</div>
+  <div>Cinq</div>
 </div>
 ```
 
@@ -750,11 +751,11 @@ On peut contrôler l'ordre dans lequel les éléments s'empilent en utilisant la
 
 ```html hidden
 <div class="wrapper">
-    <div class="box box1">Un</div>
-    <div class="box box2">Deux</div>
-   <div class="box box3">Trois</div>
-   <div class="box box4">Quatre</div>
-   <div class="box box5">Cinq</div>
+  <div class="box box1">Un</div>
+  <div class="box box2">Deux</div>
+  <div class="box box3">Trois</div>
+  <div class="box box4">Quatre</div>
+  <div class="box box5">Cinq</div>
 </div>
 ```
 

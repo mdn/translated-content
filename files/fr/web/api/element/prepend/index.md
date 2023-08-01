@@ -2,7 +2,6 @@
 title: Element.prepend()
 slug: Web/API/Element/prepend
 translation_of: Web/API/Element/prepend
-browser-compat: api.Element.prepend
 ---
 
 {{APIRef("DOM")}}
@@ -12,9 +11,9 @@ La méthode **`Element.prepend()`** permet d'insérer un ensemble d'objets [`Nod
 ## Syntaxe
 
 ```js
-prepend(param1)
-prepend(param1, param2)
-prepend(param1, param2, /* ... ,*/ paramN)
+prepend(param1);
+prepend(param1, param2);
+prepend(param1, param2, /* ... ,*/ paramN);
 ```
 
 ### Paramètres
@@ -72,7 +71,7 @@ La méthode `prepend()` ne fait pas partie de la portée créée par une instruc
 ```js
 let div = document.createElement("div");
 
-with(div) {
+with (div) {
   prepend("toto");
 }
 // ReferenceError: prepend is not defined

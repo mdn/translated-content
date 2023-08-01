@@ -16,8 +16,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var clearing = setting.clear(
-  details     // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -35,7 +35,7 @@ Voir {{WebExtAPIRef("types.BrowserSetting")}}.
 
 ## Exemple
 
-Effacer le paramètre `webRTCIPHandlingPolicy`  :
+Effacer le paramètre `webRTCIPHandlingPolicy` :
 
 ```js
 function onCleared(result) {

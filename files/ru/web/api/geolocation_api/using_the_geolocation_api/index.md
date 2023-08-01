@@ -106,7 +106,7 @@ function success(position) {
 
 ## Обработка ошибок
 
-Callback-функция для ошибок, если она была передана в `getCurrentPosition()` или `watchPosition()`, ожидает экземпляр объекта [`GeolocationPositionError`](/en-US/docs/Web/API/GeolocationPositionError) в качестве первого аргумента. Он будет содержать два свойства, `code`, который укажет на то, какая именно ошибка произошла и понятное для человека `message`, описывающее значение поля code.
+Callback-функция для ошибок, если она была передана в `getCurrentPosition()` или `watchPosition()`, ожидает экземпляр объекта [`GeolocationPositionError`](/ru/docs/Web/API/GeolocationPositionError) в качестве первого аргумента. Он будет содержать два свойства, `code`, который укажет на то, какая именно ошибка произошла и понятное для человека `message`, описывающее значение поля code.
 
 Функция может выглядеть примерно так:
 

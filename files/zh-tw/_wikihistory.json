@@ -2973,21 +2973,6 @@
     "modified": "2019-03-23T22:21:21.278Z",
     "contributors": ["MashKao", "yvonne6344"]
   },
-  "Web/CSS/CSS_Selectors": {
-    "modified": "2020-10-24T16:00:38.628Z",
-    "contributors": [
-      "NekoChan-2851",
-      "weichengcing",
-      "BobChao",
-      "noih",
-      "jsgao0",
-      "jackblackevo"
-    ]
-  },
-  "Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors": {
-    "modified": "2019-03-23T22:49:42.209Z",
-    "contributors": ["jackblackevo", "alk03073135"]
-  },
   "Web/CSS/CSS_animations": {
     "modified": "2019-03-23T22:43:48.571Z",
     "contributors": ["teoli"]
@@ -3067,6 +3052,21 @@
   "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1": {
     "modified": "2019-03-23T22:55:03.379Z",
     "contributors": ["jackblackevo", "h140100"]
+  },
+  "Web/CSS/CSS_selectors": {
+    "modified": "2020-10-24T16:00:38.628Z",
+    "contributors": [
+      "NekoChan-2851",
+      "weichengcing",
+      "BobChao",
+      "noih",
+      "jsgao0",
+      "jackblackevo"
+    ]
+  },
+  "Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors": {
+    "modified": "2019-03-23T22:49:42.209Z",
+    "contributors": ["jackblackevo", "alk03073135"]
   },
   "Web/CSS/CSS_transitions": {
     "modified": "2019-03-23T22:18:48.267Z",

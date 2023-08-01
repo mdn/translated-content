@@ -25,7 +25,7 @@ object.hostname = string;
 ## Примеры
 
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.hostname">
+// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/ru/docs/HTMLHyperlinkElementUtils.hostname">
 var anchor = document.getElementByID("myAnchor");
 var result = anchor.hostname; // Вернёт: 'developer.mozilla.org'
 ```

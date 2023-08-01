@@ -31,7 +31,7 @@ original_slug: Games/Анатомия
 
 ```js
 window.main = function () {
-  window.requestAnimationFrame( main );
+  window.requestAnimationFrame(main);
 
   // Код, который цикл должен выполнить
 };
@@ -55,15 +55,15 @@ main(); // Start the cycle
 
 ```js
 /*
-* Начинаем с точки с запятой в случае, если какая-либо строка кода выше данного примера
-* полагается на автоматическую вставку точки с запятой (ASI). Браузер может случайно решить,
-* что весь этот код начинается с предыдущей строки. Первая точка с запятой отмечает начало
-* новой строки, если предыдущая не была пустой или завершённой.
-*/
+ * Начинаем с точки с запятой в случае, если какая-либо строка кода выше данного примера
+ * полагается на автоматическую вставку точки с запятой (ASI). Браузер может случайно решить,
+ * что весь этот код начинается с предыдущей строки. Первая точка с запятой отмечает начало
+ * новой строки, если предыдущая не была пустой или завершённой.
+ */
 
-;(function () {
+(function () {
   function main() {
-    window.requestAnimationFrame( main );
+    window.requestAnimationFrame(main);
 
     // Содержание вашего основного цикла
   }
@@ -80,17 +80,17 @@ main(); // Start the cycle
 
 ```js
 /*
-* Начинаем с точки с запятой в случае, если какая-либо строка кода выше данного примера
-* полагается на автоматическую вставку точки с запятой (ASI). Браузер может случайно решить,
-* что весь этот код начинается с предыдущей строки. Первая точка с запятой отмечает начало
-* новой строки, если предыдущая не была пустой или завершённой.
-*
-* Давайте также предположим, что MyGame уже определена.
-*/
+ * Начинаем с точки с запятой в случае, если какая-либо строка кода выше данного примера
+ * полагается на автоматическую вставку точки с запятой (ASI). Браузер может случайно решить,
+ * что весь этот код начинается с предыдущей строки. Первая точка с запятой отмечает начало
+ * новой строки, если предыдущая не была пустой или завершённой.
+ *
+ * Давайте также предположим, что MyGame уже определена.
+ */
 
-;(function () {
+(function () {
   function main() {
-    MyGame.stopMain = window.requestAnimationFrame( main );
+    MyGame.stopMain = window.requestAnimationFrame(main);
 
     // Содержание вашего основного цикла
   }
@@ -102,7 +102,7 @@ main(); // Start the cycle
 Теперь у нас есть переменная `stopMain`, объявленная в нашем пространстве имён `MyGame`, которая содержит идентификатор последнего вызова `requestAnimationFrame()` нашего основного цикла. В любой момент мы может остановить основной цикл, сказав браузеру, чтобы тот отменил запрос, соответствующий последнему маркеру.
 
 ```js
-window.cancelAnimationFrame( MyGame.stopMain );
+window.cancelAnimationFrame(MyGame.stopMain);
 ```
 
 Ключ к программированию основного цикла в JavaScript заключается в том, чтобы прикрепить его к любому событию, которое должно управлять вашими действиями, и обращать внимание на то, как различные системы участвуют во взаимодействии. У вас может быть несколько компонентов, управляемых несколькими различными типами событий. Это может показаться излишним усложнением, но также может быть просто хорошей оптимизацией (не обязательно, конечно). Проблема в том, что вы не выстраиваете типичный основной цикл. В JavaScript вы используйте основной цикл браузера и стараетесь сделать это эффективно.
@@ -134,17 +134,17 @@ var tNow = window.performance.now();
 
 ```js
 /*
-* Начинаем с точки с запятой в случае, если какая-либо строка кода выше данного примера
-* полагается на автоматическую вставку точки с запятой (ASI). Браузер может случайно решить,
-* что весь этот код начинается с предыдущей строки. Первая точка с запятой отмечает начало
-* новой строки, если предыдущая не была пустой или завершённой.
-*
-* Давайте также предположим, что MyGame уже определена.
-*/
+ * Начинаем с точки с запятой в случае, если какая-либо строка кода выше данного примера
+ * полагается на автоматическую вставку точки с запятой (ASI). Браузер может случайно решить,
+ * что весь этот код начинается с предыдущей строки. Первая точка с запятой отмечает начало
+ * новой строки, если предыдущая не была пустой или завершённой.
+ *
+ * Давайте также предположим, что MyGame уже определена.
+ */
 
-;(function () {
-  function main( tFrame ) {
-    MyGame.stopMain = window.requestAnimationFrame( main );
+(function () {
+  function main(tFrame) {
+    MyGame.stopMain = window.requestAnimationFrame(main);
 
     // Содержимое вашего основного цикла
     // tFrame, из "function main ( tFrame )", это DOMHighResTimeStamp предоставленный requestAnimationFrame.
@@ -170,19 +170,19 @@ If your game can hit the maximum refresh rate of any hardware you support then y
 
 ```js
 /*
-* Starting with the semicolon is in case whatever line of code above this example
-* relied on automatic semicolon insertion (ASI). The browser could accidentally
-* think this whole example continues from the previous line. The leading semicolon
-* marks the beginning of our new line if the previous one was not empty or terminated.
-*
-* Let us also assume that MyGame is previously defined.
-*/
+ * Starting with the semicolon is in case whatever line of code above this example
+ * relied on automatic semicolon insertion (ASI). The browser could accidentally
+ * think this whole example continues from the previous line. The leading semicolon
+ * marks the beginning of our new line if the previous one was not empty or terminated.
+ *
+ * Let us also assume that MyGame is previously defined.
+ */
 
-;(function () {
-  function main( tFrame ) {
-    MyGame.stopMain = window.requestAnimationFrame( main );
+(function () {
+  function main(tFrame) {
+    MyGame.stopMain = window.requestAnimationFrame(main);
 
-    update( tFrame ); // Call your update method. In our case, we give it rAF's timestamp.
+    update(tFrame); // Call your update method. In our case, we give it rAF's timestamp.
     render();
   }
 
@@ -231,36 +231,36 @@ A separate update and draw method could look like the following example. For the
 
 ```js
 /*
-* Starting with the semicolon is in case whatever line of code above this example
-* relied on automatic semicolon insertion (ASI). The browser could accidentally
-* think this whole example continues from the previous line. The leading semicolon
-* marks the beginning of our new line if the previous one was not empty or terminated.
-*
-* Let us also assume that MyGame is previously defined.
-*
-* MyGame.lastRender keeps track of the last provided requestAnimationFrame timestamp.
-* MyGame.lastTick keeps track of the last update time. Always increments by tickLength.
-* MyGame.tickLength is how frequently the game state updates. It is 20 Hz (50ms) here.
-*
-* timeSinceTick is the time between requestAnimationFrame callback and last update.
-* numTicks is how many updates should have happened between these two rendered frames.
-*
-* render() is passed tFrame because it is assumed that the render method will calculate
-*          how long it has been since the most recently passed update tick for
-*          extrapolation (purely cosmetic for fast devices). It draws the scene.
-*
-* update() calculates the game state as of a given point in time. It should always
-*          increment by tickLength. It is the authority for game state. It is passed
-*          the DOMHighResTimeStamp for the time it represents (which, again, is always
-*          last update + MyGame.tickLength unless a pause feature is added, etc.)
-*
-* setInitialState() Performs whatever tasks are leftover before the mainloop must run.
-*                   It is just a generic example function that you might have added.
-*/
+ * Starting with the semicolon is in case whatever line of code above this example
+ * relied on automatic semicolon insertion (ASI). The browser could accidentally
+ * think this whole example continues from the previous line. The leading semicolon
+ * marks the beginning of our new line if the previous one was not empty or terminated.
+ *
+ * Let us also assume that MyGame is previously defined.
+ *
+ * MyGame.lastRender keeps track of the last provided requestAnimationFrame timestamp.
+ * MyGame.lastTick keeps track of the last update time. Always increments by tickLength.
+ * MyGame.tickLength is how frequently the game state updates. It is 20 Hz (50ms) here.
+ *
+ * timeSinceTick is the time between requestAnimationFrame callback and last update.
+ * numTicks is how many updates should have happened between these two rendered frames.
+ *
+ * render() is passed tFrame because it is assumed that the render method will calculate
+ *          how long it has been since the most recently passed update tick for
+ *          extrapolation (purely cosmetic for fast devices). It draws the scene.
+ *
+ * update() calculates the game state as of a given point in time. It should always
+ *          increment by tickLength. It is the authority for game state. It is passed
+ *          the DOMHighResTimeStamp for the time it represents (which, again, is always
+ *          last update + MyGame.tickLength unless a pause feature is added, etc.)
+ *
+ * setInitialState() Performs whatever tasks are leftover before the mainloop must run.
+ *                   It is just a generic example function that you might have added.
+ */
 
-;(function () {
-  function main( tFrame ) {
-    MyGame.stopMain = window.requestAnimationFrame( main );
+(function () {
+  function main(tFrame) {
+    MyGame.stopMain = window.requestAnimationFrame(main);
     var nextTick = MyGame.lastTick + MyGame.tickLength;
     var numTicks = 0;
 
@@ -270,18 +270,18 @@ A separate update and draw method could look like the following example. For the
     // If it is large, then either your game was asleep, or the machine cannot keep up.
     if (tFrame > nextTick) {
       var timeSinceTick = tFrame - MyGame.lastTick;
-      numTicks = Math.floor( timeSinceTick / MyGame.tickLength );
+      numTicks = Math.floor(timeSinceTick / MyGame.tickLength);
     }
 
-    queueUpdates( numTicks );
-    render( tFrame );
+    queueUpdates(numTicks);
+    render(tFrame);
     MyGame.lastRender = tFrame;
   }
 
-  function queueUpdates( numTicks ) {
-    for(var i=0; i < numTicks; i++) {
+  function queueUpdates(numTicks) {
+    for (var i = 0; i < numTicks; i++) {
       MyGame.lastTick = MyGame.lastTick + MyGame.tickLength; // Now lastTick is this tick.
-      update( MyGame.lastTick );
+      update(MyGame.lastTick);
     }
   }
 

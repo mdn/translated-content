@@ -8,7 +8,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_ba
 
 Откройте файл **/views/layout.pug** и замените его содержимое следующим.
 
-```html
+```pug
 doctype html
 html(lang='en')
   head
@@ -58,9 +58,9 @@ html(lang='en')
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 

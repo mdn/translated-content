@@ -1,7 +1,7 @@
 ---
 title: Firefox 107 for developers
 slug: Mozilla/Firefox/Releases/107
-l10n: 
+l10n:
   sourceCommit: 27ae7e9c347490290a7327a48842575d333b2f31
 ---
 

@@ -36,8 +36,8 @@ slug: Learn/JavaScript/Building_blocks/Functions
 在这套课程中我们已经使用了很多浏览器内置函数，当我们操作一个字符串的时候，例如：
 
 ```js
-var myText = 'I am a string';
-var newString = myText.replace('string', 'sausage');
+var myText = "I am a string";
+var newString = myText.replace("string", "sausage");
 console.log(newString);
 // replace() 字符串函数接受一个字符串，
 // 用另一个子字符串替换一个子字符串，并返回
@@ -47,8 +47,8 @@ console.log(newString);
 或者当我们操作一个数组的时候：
 
 ```js
-var myArray = ['I', 'love', 'chocolate', 'frogs'];
-var madeAString = myArray.join(' ');
+var myArray = ["I", "love", "chocolate", "frogs"];
+var madeAString = myArray.join(" ");
 console.log(madeAString);
 // join() 函数接受一个数组，将
 // 所有数组元素连接成一个单一的
@@ -58,7 +58,7 @@ console.log(madeAString);
 或者当我们生成一个随机数时：
 
 ```js
-var myNumber = Math.random()
+var myNumber = Math.random();
 // random() 函数生成一个随机
 // 数字在 0 和 1 之间，并返回该
 // 数字
@@ -88,10 +88,10 @@ JavaScript 有许多内置的函数，可以让您做很多有用的事情，而
 
 ```js
 function draw() {
-  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (var i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -108,7 +108,7 @@ draw();
 
 ```js
 function random(number) {
-  return Math.floor(Math.random()*number);
+  return Math.floor(Math.random() * number);
 }
 ```
 
@@ -120,10 +120,10 @@ function random(number) {
 
 ```js
 function myFunction() {
-  alert('hello');
+  alert("hello");
 }
 
-myFunction()
+myFunction();
 // 调用一次该函数
 ```
 
@@ -133,7 +133,7 @@ myFunction()
 
 ```js
 function myFunction() {
-  alert('hello');
+  alert("hello");
 }
 ```
 
@@ -148,11 +148,11 @@ function() {
 这个函数叫做**匿名函数** — 它没有函数名！它也不会自己做任何事情。你通常将匿名函数与事件处理程序一起使用，例如，如果单击相关按钮，以下操作将在函数内运行代码：
 
 ```js
-var myButton = document.querySelector('button');
+var myButton = document.querySelector("button");
 
-myButton.onclick = function() {
-  alert('hello');
-}
+myButton.onclick = function () {
+  alert("hello");
+};
 ```
 
 上述示例将要求{{htmlelement("button")}} 在页面上提供可用于选择并单击的元素。您在整个课程中已经看到过这种结构了几次，您将在下一篇文章中了解更多信息并在其中使用。
@@ -160,9 +160,9 @@ myButton.onclick = function() {
 你还可以将匿名函数分配为变量的值，例如：
 
 ```js
-var myGreeting = function() {
-  alert('hello');
-}
+var myGreeting = function () {
+  alert("hello");
+};
 ```
 
 现在可以使用以下方式调用此函数：
@@ -174,9 +174,9 @@ myGreeting();
 有效地给变量一个名字;还可以将该函数分配为多个变量的值，例如：
 
 ```js
-var anotherGreeting = function() {
-  alert('hello');
-}
+var anotherGreeting = function () {
+  alert("hello");
+};
 ```
 
 现在可以使用以下任一方法调用此函数
@@ -190,18 +190,18 @@ anotherGreeting();
 
 ```js
 function myGreeting() {
-  alert('hello');
+  alert("hello");
 }
 ```
 
 您将主要使用匿名函数来运行负载的代码以响应事件触发（如点击按钮） - 使用事件处理程序。再次，这看起来像这样：
 
 ```js
-myButton.onclick = function() {
-  alert('hello');
+myButton.onclick = function () {
+  alert("hello");
   // 我可以在这里放入
   // 尽可能多的代码
-}
+};
 ```
 
 > **备注：** 匿名函数也称为函数表达式。函数表达式与函数声明有一些区别。函数声明会进行声明提升（declaration hoisting），而函数表达式不会。
@@ -221,8 +221,8 @@ var myNumber = Math.random();
 浏览器的内置字符串[replace（）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace)函数需要两个参数：在主字符串中查找的子字符串，以及用以下替换该字符串的子字符串：
 
 ```js
-var myText = 'I am a string';
-var newString = myText.replace('string', 'sausage');
+var myText = "I am a string";
+var newString = myText.replace("string", "sausage");
 ```
 
 > **备注：** 当您需要指定多个参数时，它们以逗号分隔。
@@ -230,8 +230,8 @@ var newString = myText.replace('string', 'sausage');
 还应该注意，有时参数不是必须的 —— 您不必指定它们。如果没有，该功能一般会采用某种默认行为。作为示例，数组 [join（）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join)函数的参数是可选的：
 
 ```js
-var myArray = ['我', '爱', '巧克力', '青蛙'];
-var madeAString = myArray.join(' ');
+var myArray = ["我", "爱", "巧克力", "青蛙"];
+var madeAString = myArray.join(" ");
 // 返回 '我 爱 巧克力 青蛙'
 var madeAString = myArray.join();
 // 返回 '我,爱,巧克力,青蛙'
@@ -260,17 +260,17 @@ JavaScript 由于各种原因而建立，但主要是由于安全性和组织性
 
 ```js
 // first.js
-let name = 'Chris';
+let name = "Chris";
 function greeting() {
-  alert('Hello ' + name + ': welcome to our company.');
+  alert("Hello " + name + ": welcome to our company.");
 }
 ```
 
 ```js
 // second.js
-let name = 'Zaptec';
+let name = "Zaptec";
 function greeting() {
-  alert('Our company is called ' + name + '.');
+  alert("Our company is called " + name + ".");
 }
 ```
 
@@ -294,89 +294,89 @@ function greeting() {
 2. 在浏览器和文本编辑器中打开示例。
 3. 在浏览器开发工具中打开 JavaScript 控制台。在 JavaScript 控制台中，输入以下命令：
 
-    ```js
-    output(x);
-    ```
+   ```js
+   output(x);
+   ```
 
-    您应该看到变量`x`输出到屏幕的值。
+   您应该看到变量`x`输出到屏幕的值。
 
 4. 现在尝试在您的控制台中输入以下内容
 
-    ```js
-    output(y);
-    output(z);
-    ```
+   ```js
+   output(y);
+   output(z);
+   ```
 
-    这两个都应该返回错误沿“ [ReferenceError：y 未定义](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined) ”。这是为什么？由于函数作用域 - `y` 和 `z` 被锁定在函数 `a()` 和 `b()` 函数中，所以 `output()` 从全局作用域调用时无法访问它们。
+   这两个都应该返回错误沿“ [ReferenceError：y 未定义](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined) ”。这是为什么？由于函数作用域 - `y` 和 `z` 被锁定在函数 `a()` 和 `b()` 函数中，所以 `output()` 从全局作用域调用时无法访问它们。
 
 5. 但是，从另一个函数里面调用什么呢？尝试编辑 `a()`，`b()`所以他们看起来像这样：
 
-    ```js
-    function a() {
-      var y = 2;
-      output(y);
-    }
+   ```js
+   function a() {
+     var y = 2;
+     output(y);
+   }
 
-    function b() {
-      var z = 3;
-      output(z);
-    }
-    ```
+   function b() {
+     var z = 3;
+     output(z);
+   }
+   ```
 
-    保存代码并重新加载到浏览器中，然后尝试从 JavaScript 控制台调用`a()`和`b()`函数：
+   保存代码并重新加载到浏览器中，然后尝试从 JavaScript 控制台调用`a()`和`b()`函数：
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    您应该看到页面中输出的`y`和`z`的值。这样就没问题，因为`output()`函数在其他函数的内部被调用 - 在这种情况下，输出变量的定义和函数的调用都在同一个作用域中（译者注：即函数作用域）。`output()`它可以从任何地方被调用，因为它在全局作用域中被定义。
+   您应该看到页面中输出的`y`和`z`的值。这样就没问题，因为`output()`函数在其他函数的内部被调用 - 在这种情况下，输出变量的定义和函数的调用都在同一个作用域中（译者注：即函数作用域）。`output()`它可以从任何地方被调用，因为它在全局作用域中被定义。
 
 6. 现在尝试更新您的代码，如下所示：
 
-    ```js
-    function a() {
-      var y = 2;
-      output(x);
-    }
+   ```js
+   function a() {
+     var y = 2;
+     output(x);
+   }
 
-    function b() {
-      var z = 3;
-      output(x);
-    }
-    ```
+   function b() {
+     var z = 3;
+     output(x);
+   }
+   ```
 
 7. 再次保存并重新加载，并在 JavaScript 控制台中再次尝试：
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    函数 `a()`和`b()`都应该输出 x---1 的值。这些没有问题，因为即使`output()`的调用与`x`的定义不在同一个作用域内，但`x`是一个全局变量，所以在所有代码中都可用。
+   函数 `a()`和`b()`都应该输出 x---1 的值。这些没有问题，因为即使`output()`的调用与`x`的定义不在同一个作用域内，但`x`是一个全局变量，所以在所有代码中都可用。
 
 8. 最后，尝试更新您的代码，如下所示：
 
-    ```js
-    function a() {
-      var y = 2;
-      output(z);
-    }
+   ```js
+   function a() {
+     var y = 2;
+     output(z);
+   }
 
-    function b() {
-      var z = 3;
-      output(y);
-    }
-    ```
+   function b() {
+     var z = 3;
+     output(y);
+   }
+   ```
 
 9. 再次保存并重新加载，并在 JavaScript 控制台中再次尝试：
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    这次`a()`和`b()`调用都会返回那个令人讨厌的 "[ReferenceError: z is not defined](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined)" error — 这是因为`output()`函数的调用和输出变量的定义不在同一个函数作用域内 - 变量对这些函数调用是不可见的。
+   这次`a()`和`b()`调用都会返回那个令人讨厌的 "[ReferenceError: z is not defined](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined)" error — 这是因为`output()`函数的调用和输出变量的定义不在同一个函数作用域内 - 变量对这些函数调用是不可见的。
 
 > **备注：** 相同的范围规则不适用于循环（for（）{...}）和条件块（if（）{...}） - 它们看起来非常相似，但它们不一样！小心不要让这些困惑。
 

@@ -2,6 +2,7 @@
 title: Storage
 slug: Web/API/Storage
 ---
+
 {{APIRef("Web Storage API")}}
 
 [Web Storage API](/ko/docs/Web/API/Web_Storage_API)의 **`Storage`** 인터페이스는 특정 도메인을 위한 세션 저장소 또는 로컬 저장소의 접근 경로로서 데이터를 추가하고 수정하거나 삭제할 수 있습니다.
@@ -31,30 +32,30 @@ slug: Web/API/Storage
 아래 코드에서는 `localStorage`에 접근해 `Storage` 객체를 접근합니다. 우선 `!localStorage.getItem('bgcolor')`를 사용해 데이터가 저장소에 존재하는지 알아냅니다. 데이터가 있으면 {{domxref("Storage.getItem()")}}으로 회수한 후 `setStyles()`로 페이지 스타일을 바꿉니다. 데이터가 없으면 `populateStorage()` 함수를 호출하고, 그 안에서는 {{domxref("Storage.setItem()")}}을 통해 데이터를 설정합니다. 그 후에는 동일하게 `setStyles()`를 사용합니다.
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem("bgcolor")) {
   populateStorage();
 } else {
   setStyles();
 }
 
 function populateStorage() {
-  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-  localStorage.setItem('font', document.getElementById('font').value);
-  localStorage.setItem('image', document.getElementById('image').value);
+  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
+  localStorage.setItem("font", document.getElementById("font").value);
+  localStorage.setItem("image", document.getElementById("image").value);
 }
 
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  var currentColor = localStorage.getItem("bgcolor");
+  var currentFont = localStorage.getItem("font");
+  var currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = "#" + currentColor;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 

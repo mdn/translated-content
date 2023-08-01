@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/Access-Control-Allow-Methods
 
 响应首部 **`Access-Control-Allow-Methods`** 在对 {{glossary("preflight request")}}.（预检请求）的应答中明确了客户端所要访问的资源允许使用的方法或方法列表。
 
-| 报头类型                                         | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| 报头类型                              | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 

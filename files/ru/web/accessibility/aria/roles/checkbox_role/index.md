@@ -16,7 +16,7 @@ translation_of: Web/Accessibility/ARIA/Roles/checkbox_role
 <label id="chk1-label">Remember my preferences</label>
 ```
 
-Первое правило ARIA - если у нативного HTML-элемента или атрибута присутствует необходимая семантика или поведение, следует использовать его, а не использовать другой элемент не по назначению, добавляя ARIA. Вместо этого лучше использовать [HTML checkbox](/ru/docs/Web/HTML/Element/input/checkbox) [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), который изначально предоставляет необходимый функционал:
+Первое правило ARIA - если у нативного HTML-элемента или атрибута присутствует необходимая семантика или поведение, следует использовать его, а не использовать другой элемент не по назначению, добавляя ARIA. Вместо этого лучше использовать [HTML checkbox](/ru/docs/Web/HTML/Element/input/checkbox) [`<input type="checkbox">`](/ru/docs/Web/HTML/Element/input/checkbox), который изначально предоставляет необходимый функционал:
 
 ```html
 <input type="checkbox" id="chk1-label" />
@@ -140,7 +140,7 @@ function changeCheckbox(event) {
 
 ## Смотрите также
 
-- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)
+- [`<input type="checkbox">`](/ru/docs/Web/HTML/Element/input/checkbox)
 - [ARIA: radio role](/ru/docs/Web/Accessibility/ARIA/Roles/Radio_Role)
 - [ARIA: menuitem role](/ru/docs/Web/Accessibility/ARIA/Roles/Menuitem_Role)
 - [ARIA: menuitemcheckbox role](/ru/docs/Web/Accessibility/ARIA/Roles/Menuitemcheckbox_Role)

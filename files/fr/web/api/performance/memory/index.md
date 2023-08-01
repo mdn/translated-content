@@ -1,10 +1,6 @@
 ---
 title: performance.memory
 slug: Web/API/Performance/memory
-tags:
-  - API
-  - Reference
-  - Performance web
 translation_of: Web/API/Performance/memory
 ---
 
@@ -15,7 +11,7 @@ translation_of: Web/API/Performance/memory
 ## Syntaxe
 
 ```js
-  timingInfo = performance.memory
+timingInfo = performance.memory;
 ```
 
 ## Attributs

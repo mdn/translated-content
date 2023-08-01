@@ -26,7 +26,7 @@ Un {{domxref("Element")}} o `null`.
 
 {{Compat}}
 
-## Véase también:
+## Véase también
 
 - {{ domxref("Document.exitPointerLock()") }}
 - {{ domxref("Element.requestPointerLock()") }}

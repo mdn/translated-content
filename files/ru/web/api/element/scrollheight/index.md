@@ -43,7 +43,7 @@ element.scrollHeight - element.scrollTop === element.clientHeight
 
 ## Пример работы scrollHeight
 
-Если объединить это выражение с событием [`onscroll`](/en-US/docs/DOM/element.onscroll), оно может быть использовано для того, чтобы определить, прочитал ли пользователь текст, или нет (см. также свойства [`element.scrollTop`](/en-US/docs/DOM/element.scrollTop) и [`element.clientHeight`](/en-US/docs/DOM/element.clientHeight)). Например:
+Если объединить это выражение с событием [`onscroll`](/ru/docs/DOM/element.onscroll), оно может быть использовано для того, чтобы определить, прочитал ли пользователь текст, или нет (см. также свойства [`element.scrollTop`](/ru/docs/DOM/element.scrollTop) и [`element.clientHeight`](/ru/docs/DOM/element.clientHeight)). Например:
 
 ### HTML
 

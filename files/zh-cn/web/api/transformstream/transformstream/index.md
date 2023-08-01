@@ -9,7 +9,7 @@ slug: Web/API/TransformStream/TransformStream
 
 ## 语法
 
-```js
+```js-nolint
 new TransformStream()
 new TransformStream(transformer)
 new TransformStream(transformer, writableStrategy)
@@ -70,15 +70,15 @@ function appendToDOMStream(el) {
   return new WritableStream({
     write(chunk) {
       el.append(chunk);
-    }
+    },
   });
 }
 
-fetch('./lorem-ipsum.txt').then((response) =>
+fetch("./lorem-ipsum.txt").then((response) =>
   response.body
     .pipeThrough(new TextDecoderStream())
     .pipeThrough(upperCaseStream())
-    .pipeTo(appendToDOMStream(document.body))
+    .pipeTo(appendToDOMStream(document.body)),
 );
 ```
 
@@ -87,7 +87,9 @@ fetch('./lorem-ipsum.txt').then((response) =>
 如果没有提供 `transformer` 参数，那么结果将是一个恒等流，它将所有写入可写端的分块转发到可读端，并且不做任何改变。在以下示例中，一个恒等转换流被用于向一个管道添加缓冲。
 
 ```js
-const writableStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1024 * 1024 });
+const writableStrategy = new ByteLengthQueuingStrategy({
+  highWaterMark: 1024 * 1024,
+});
 readableStream
   .pipeThrough(new TransformStream(undefined, writableStrategy))
   .pipeTo(writableStream);

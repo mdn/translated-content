@@ -1,14 +1,7 @@
 ---
 title: String.prototype.toLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/toLowerCase
 ---
 
 {{JSRef}}
@@ -20,7 +13,7 @@ La méthode **`toLowerCase()`** retourne la chaîne de caractères courante en m
 ## Syntaxe
 
 ```js
-str.toLowerCase()
+str.toLowerCase();
 ```
 
 ### Valeur de retour
@@ -34,7 +27,7 @@ La méthode `toLowerCase()` renvoie la valeur de la chaîne convertie en minuscu
 ## Exemples
 
 ```js
-console.log( "ALPHABET".toLowerCase() ); // "alphabet"
+console.log("ALPHABET".toLowerCase()); // "alphabet"
 ```
 
 ## Spécifications

@@ -1,12 +1,6 @@
 ---
 title: <image>
 slug: Web/HTML/Element/image
-tags:
-  - Element
-  - HTML
-  - Non-standard
-  - Obsolete
-  - Reference
 translation_of: Web/HTML/Element/image
 ---
 

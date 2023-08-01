@@ -21,7 +21,10 @@ El siguiente ejemplo especifica que el atributo `itemscope`. El ejemplo especifi
 ```html
 <div itemscope itemtype="http://schema.org/Movie">
   <h1 itemprop="nombre">Avatar</h1>
-  <span>Director: <span itemprop="director">James Cameron</span> (born August 16, 1954)</span>
+  <span
+    >Director: <span itemprop="director">James Cameron</span> (born August 16,
+    1954)</span
+  >
   <span itemprop="genero">Ciencia ficcion</span>
   <a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer">Trailer</a>
 </div>
