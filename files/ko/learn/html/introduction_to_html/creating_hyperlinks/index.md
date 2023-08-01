@@ -231,7 +231,7 @@ PDF나 워드 문서와 같이 다운로드되거나 스트리밍되거나(비�
 - 대역폭이 낮은 연결에 있는 경우 링크를 클릭하면 멀티 메가바이트 다운로드가 예기치 않게 시작됩니다.
 - 플래시 플레이어를 설치하지 않은 경우 링크를 클릭한 다음 플래시가 필요한 페이지로 이동합니다.
 
-여기서 사용할 수 있는 텍스트의 종류를 보려면 몇 가지 예를 살펴보십시오.:
+여기서 사용할 수 있는 텍스트의 종류를 보려면 몇 가지 예를 살펴보십시오.
 
 ```html
 <p><a href="http://www.example.com/large-report.pdf">
@@ -298,7 +298,7 @@ Firefox 39의 Windows 버전에 대한 다운로드 링크가 있는 예:
 <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
 ```
 
-이렇게 되면 다음과 같은 링크가 생성됩니다: [Send email to nowhere](mailto:nowhere@mozilla.org).
+이렇게 되면 다음과 같은 링크가 생성됩니다. [Send email to nowhere](mailto:nowhere@mozilla.org).
 
 사실, 이메일 주소는 심지어 선택사항입니다. 그것을 생략하면(즉, 당신의 {{htmlattrxref("href", "a")}} 아직 목적지 주소가 지정되지 않은 사용자의 메일 클라이언트에 의해 새로운 발신 이메일 창이 열립니다. 이것은 종종 사용자가 선택한 주소로 이메일을 보내기 위해 클릭할 수 있는 "공유" 링크로서 유용합니다.
 
@@ -306,7 +306,7 @@ Firefox 39의 Windows 버전에 대한 다운로드 링크가 있는 예:
 
 이메일 주소 외에도 다른 정보를 제공할 수 있습니다. 실제로 표준 메일 헤더 필드는 사용자가 제공하는 `mailto` URL에 추가할 수 있습니다. 이것들 중 가장 일반적으로 사용되는 것은 "subject", "cc", and "body"(참된 헤더 필드는 아니지만 새 이메일에 대한 짧은 내용 메시지를 지정할 수 있음)입니다. 각 필드와 그 값은 조회 용어로 지정됩니다.
 
-아래 예제가 cc, bcc, subject and body 를 포함합니다.:
+아래 예제가 cc, bcc, subject and body 를 포함합니다.
 
 ```html
 <a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&amp;subject=The%20subject%20of%20the%20email &amp;body=The%20body%20of%20the%20email">
