@@ -11,7 +11,7 @@ The **computed value** of a CSS property is computed from the specified value by
 - Handling the special values {{cssxref("inherit")}} and {{cssxref("initial")}}, and
 - Doing the computation needed to reach the value described in the "Computed value" line in the property's summary.
 
-The computation needed to reach the **computed value** for the property typically involves converting relative values (such as those in` em `units or percentages) to absolute values.
+The computation needed to reach the **computed value** for the property typically involves converting relative values (such as those in `em` units or percentages) to absolute values.
 
 For example, if an element has specified values `font-size: 16px` and `padding-top: 2em`, then the computed value of `padding-top` is `32px` (double the font size).
 
@@ -25,8 +25,8 @@ The {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API returns
 
 ## Especificações
 
-| Especificações                                                                                   | Status                   | Comentário            |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | --------------------- |
+| Especificações                                                          | Status              | Comentário            |
+| ----------------------------------------------------------------------- | ------------------- | --------------------- |
 | {{SpecName("CSS2.1", "cascade.html#computed-value", "computed value")}} | {{Spec2("CSS2.1")}} | Especificação inicial |
 
 ## Veja também

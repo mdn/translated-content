@@ -32,10 +32,10 @@ Finalmente, note que, para elementos não substituídos inline, o total de espa�
 
 ## Especificação
 
-| Especificação                                                    | Status                       | Comentário                                                        |
-| ---------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------------------- |
+| Especificação                                     | Status                | Comentário                                                        |
+| ------------------------------------------------- | --------------------- | ----------------------------------------------------------------- |
 | {{ SpecName("CSS2.1","box.html#box-dimensions")}} | {{ Spec2('CSS2.1') }} | Embora mais precisamente formulada, não existem mudanças práticas |
-| {{ SpecName("CSS1","#formatting-model")}}         | {{ Spec2('CSS1') }}     |                                                                   |
+| {{ SpecName("CSS1","#formatting-model")}}         | {{ Spec2('CSS1') }}   |                                                                   |
 
 ## Veja também
 

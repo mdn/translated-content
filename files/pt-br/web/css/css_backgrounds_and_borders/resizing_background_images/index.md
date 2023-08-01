@@ -82,7 +82,8 @@ O valor contain especifica que, independentemente do tamanho da caixa que conté
   background-image: url(firefox_logo.png);
   background-size: contain;
   border: 2px solid darkgray;
-  color: #000; text-shadow: 1px 1px 0 #fff;
+  color: #000;
+  text-shadow: 1px 1px 0 #fff;
 }
 ```
 
