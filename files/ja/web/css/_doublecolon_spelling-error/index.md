@@ -1,5 +1,5 @@
 ---
-title: '::spelling-error'
+title: "::spelling-error"
 slug: Web/CSS/::spelling-error
 ---
 
@@ -23,7 +23,7 @@ slug: Web/CSS/::spelling-error
 ## 構文
 
 ```css
-::spelling-error
+::spelling-error {}
 ```
 
 ## 例
@@ -35,13 +35,15 @@ slug: Web/CSS/::spelling-error
 #### HTML
 
 ```html
-<p contenteditable spellcheck="true">My friends are coegdfgfddffbgning to the party tonight.</p>
+<p contenteditable spellcheck="true">
+  My friends are coegdfgfddffbgning to the party tonight.
+</p>
 ```
 
 #### CSS
 
 ```css
-::spelling-error  {
+::spelling-error {
   text-decoration: wavy red;
 }
 ```
