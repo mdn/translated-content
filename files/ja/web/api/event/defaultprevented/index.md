@@ -1,11 +1,14 @@
 ---
-title: Event.defaultPrevented
+title: "Event: defaultPrevented プロパティ"
+short-title: defaultPrevented
 slug: Web/API/Event/defaultPrevented
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{ APIRef("DOM") }}
 
-**`defaultPrevented`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、論理値で {{ domxref("Event.preventDefault()") }} の呼び出しがイベントをキャンセルしたかどうかを示す値を返します。
+**`defaultPrevented`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、{{ domxref("Event.preventDefault()") }} の呼び出しがイベントをキャンセルしたかどうかを示す値を論理値で返します。
 
 ## 値
 
@@ -34,12 +37,9 @@ function logClick(event) {
   const log = document.getElementById("log");
 
   if (event.target.tagName === "A") {
-    if (event.defaultPrevented) {
-      log.innerText =
-        "Sorry, but you cannot visit this link!\n" + log.innerText;
-    } else {
-      log.innerText = "Visiting link...\n" + log.innerText;
-    }
+    log.innerText = event.defaultPrevented
+      ? `Sorry, but you cannot visit this link!\n${log.innerText}`
+      : `Visiting link…\n${log.innerText}`;
   }
 }
 

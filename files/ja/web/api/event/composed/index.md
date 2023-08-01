@@ -1,6 +1,9 @@
 ---
-title: Event.composed
+title: "Event: composed プロパティ"
+short-title: composed
 slug: Web/API/Event/composed
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Shadow DOM")}}
@@ -71,7 +74,7 @@ customElements.define(
 それから click イベントリスナーを `<html>` 要素に設定します。
 
 ```js
-document.querySelector("html").addEventListener("click", function (e) {
+document.querySelector("html").addEventListener("click", (e) => {
   console.log(e.composed);
   console.log(e.composedPath());
 });

@@ -21,7 +21,7 @@ window.onhashchange = funcRef;
 **HTML event handler:**
 
 ```html
-<body onhashchange="funcRef();">
+<body onhashchange="funcRef();"></body>
 ```
 
 **event listener:**
@@ -45,7 +45,7 @@ This example uses an event handler (`window.onhashchange`) to check the new hash
 
 ```js
 function locationHashChanged() {
-  if (location.hash === '#cool-feature') {
+  if (location.hash === "#cool-feature") {
     console.log("You're visiting a cool feature!");
   }
 }
@@ -59,10 +59,10 @@ window.onhashchange = locationHashChanged;
 
 ```js
 function hashHandler() {
-  console.log('The hash has changed!');
+  console.log("The hash has changed!");
 }
 
-window.addEventListener('hashchange', hashHandler, false);
+window.addEventListener("hashchange", hashHandler, false);
 ```
 
 ### Overriding the hash
@@ -71,7 +71,7 @@ window.addEventListener('hashchange', hashHandler, false);
 
 ```js
 function changeHash() {
-  location.hash = (Math.random() > 0.5) ? 'location1' : 'location2';
+  location.hash = Math.random() > 0.5 ? "location1" : "location2";
 }
 ```
 
@@ -79,8 +79,8 @@ function changeHash() {
 
 `hashchange` 이벤트에는 다음과 같은 필드가 있습니다:
 
-| Field    | Type        | Description             |
-| -------- | ----------- | ----------------------- |
+| Field    | Type        | Description                |
+| -------- | ----------- | -------------------------- |
 | `newURL` | `DOMString` | 탐색할 새로운 URL입니다.   |
 | `oldURL` | `DOMString` | 탐색했던 이전의 URL입니다. |
 
@@ -88,14 +88,23 @@ function changeHash() {
 
 ```js
 //let this snippet run before your hashchange event binding code
-if(!window.HashChangeEvent)(function(){
-  var lastURL=document.URL;
-  window.addEventListener("hashchange",function(event){
-    Object.defineProperty(event,"oldURL",{enumerable:true,configurable:true,value:lastURL});
-    Object.defineProperty(event,"newURL",{enumerable:true,configurable:true,value:document.URL});
-    lastURL=document.URL;
-  });
-}());
+if (!window.HashChangeEvent)
+  (function () {
+    var lastURL = document.URL;
+    window.addEventListener("hashchange", function (event) {
+      Object.defineProperty(event, "oldURL", {
+        enumerable: true,
+        configurable: true,
+        value: lastURL,
+      });
+      Object.defineProperty(event, "newURL", {
+        enumerable: true,
+        configurable: true,
+        value: document.URL,
+      });
+      lastURL = document.URL;
+    });
+  })();
 ```
 
 ## 명세
@@ -108,7 +117,7 @@ if(!window.HashChangeEvent)(function(){
 
 ## See also
 
-- [`hashchange`](/en-US/docs/Web/API/Window/hashchange_event) event
+- [`hashchange`](/ko/docs/Web/API/Window/hashchange_event) event
 - [Manipulating the browser history](/ko/docs/DOM/Manipulating_the_browser_history)
 - [`history.pushState()` and `history.replaceState()`](/ko/docs/DOM/window.history) methods
 - {{domxref("WindowEventHandlers.onpopstate")}}

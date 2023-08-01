@@ -36,8 +36,8 @@ value = window.devicePixelRatio;
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 // Set display size (css pixels).
 var size = 200;
@@ -55,9 +55,9 @@ ctx.scale(scale, scale);
 ctx.fillStyle = "#bada55";
 ctx.fillRect(10, 10, 300, 300);
 ctx.fillStyle = "#ffffff";
-ctx.font = '18px Arial';
-ctx.textAlign = 'center';
-ctx.textBaseline = 'middle';
+ctx.font = "18px Arial";
+ctx.textAlign = "center";
+ctx.textBaseline = "middle";
 
 var x = size / 2;
 var y = size / 2;
@@ -84,7 +84,7 @@ const updatePixelRatio = () => {
   let pr = window.devicePixelRatio;
   let prString = (pr * 100).toFixed(0);
   pixelRatioBox.innerText = `${prString}% (${pr.toFixed(2)})`;
-}
+};
 
 updatePixelRatio();
 
@@ -104,12 +104,14 @@ HTML 将创建包含说明的框和将显示当前像素比率信息的`pixel-ra
 ```html
 <div class="container">
   <div class="inner-container">
-    <p>This example demonstrates the effect of zooming the page in
-       and out (or moving it to a screen with a different scaling
-       factor) on the value of the property <code>Window.devicePixelRatio</code>.
-       Try it and watch what happens!</p>
+    <p>
+      This example demonstrates the effect of zooming the page in and out (or
+      moving it to a screen with a different scaling factor) on the value of the
+      property <code>Window.devicePixelRatio</code>. Try it and watch what
+      happens!
+    </p>
   </div>
-    <div class="pixel-ratio"></div>
+  <div class="pixel-ratio"></div>
 </div>
 ```
 
@@ -117,7 +119,9 @@ HTML 将创建包含说明的框和将显示当前像素比率信息的`pixel-ra
 
 ```css
 body {
-  font: 22px arial, sans-serif;
+  font:
+    22px arial,
+    sans-serif;
 }
 
 .container {

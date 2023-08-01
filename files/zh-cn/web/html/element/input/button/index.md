@@ -49,18 +49,18 @@ slug: Web/HTML/Element/input/button
 ```
 
 ```js
-const button = document.querySelector('input');
-const paragraph = document.querySelector('p');
+const button = document.querySelector("input");
+const paragraph = document.querySelector("p");
 
-button.addEventListener('click', updateButton);
+button.addEventListener("click", updateButton);
 
 function updateButton() {
-  if (button.value === '开动机器') {
-    button.value = '停止机器';
-    paragraph.textContent = '机器启动了！';
+  if (button.value === "开动机器") {
+    button.value = "停止机器";
+    paragraph.textContent = "机器启动了！";
   } else {
-    button.value = '开动机器';
-    paragraph.textContent = '机器已经停下了。';
+    button.value = "开动机器";
+    paragraph.textContent = "机器已经停下了。";
   }
 }
 ```
@@ -83,18 +83,18 @@ function updateButton() {
 ```
 
 ```js hidden
-const button = document.querySelector('input');
-const paragraph = document.querySelector('p');
+const button = document.querySelector("input");
+const paragraph = document.querySelector("p");
 
-button.addEventListener('click', updateButton);
+button.addEventListener("click", updateButton);
 
 function updateButton() {
-  if (button.value === '开动机器') {
-    button.value = '停止机器';
-    paragraph.textContent = '机器启动了！';
+  if (button.value === "开动机器") {
+    button.value = "停止机器";
+    paragraph.textContent = "机器启动了！";
   } else {
-    button.value = '开动机器';
-    paragraph.textContent = '机器已经停下了。';
+    button.value = "开动机器";
+    paragraph.textContent = "机器已经停下了。";
   }
 }
 ```
@@ -118,16 +118,16 @@ function updateButton() {
 ```
 
 ```js
-const button = document.querySelector('input');
+const button = document.querySelector("input");
 
-button.addEventListener('click', disableButton);
+button.addEventListener("click", disableButton);
 
 function disableButton() {
   button.disabled = true;
-  button.value = '已禁用';
+  button.value = "已禁用";
   setTimeout(() => {
     button.disabled = false;
-    button.value = '已启用';
+    button.value = "已启用";
   }, 2000);
 }
 ```
@@ -150,10 +150,10 @@ function disableButton() {
 ```
 
 ```js
-const button = document.querySelector('input');
-const fieldset = document.querySelector('fieldset');
+const button = document.querySelector("input");
+const fieldset = document.querySelector("fieldset");
 
-button.addEventListener('click', disableButton);
+button.addEventListener("click", disableButton);
 
 function disableButton() {
   fieldset.disabled = true;
@@ -224,29 +224,29 @@ span {
 ```
 
 ```js
-const canvas = document.querySelector('.myCanvas');
-const width = canvas.width = window.innerWidth;
-const height = canvas.height = window.innerHeight - 85;
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector(".myCanvas");
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight - 85);
+const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'rgb(0,0,0)';
-ctx.fillRect(0,0,width,height);
+ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillRect(0, 0, width, height);
 
 const colorPicker = document.querySelector('input[type="color"]');
 const sizePicker = document.querySelector('input[type="range"]');
-const output = document.querySelector('.output');
+const output = document.querySelector(".output");
 const clearBtn = document.querySelector('input[type="button"]');
 
 // covert degrees to radians
 function degToRad(degrees) {
-  return degrees * Math.PI / 180;
-};
+  return (degrees * Math.PI) / 180;
+}
 
 // update sizepicker output value
 
 sizePicker.oninput = () => {
   output.textContent = sizePicker.value;
-}
+};
 
 // store mouse pointer coordinates, and whether the button is pressed
 let curX;
@@ -257,7 +257,7 @@ let pressed = false;
 document.onmousemove = (e) => {
   curX = e.pageX;
   curY = e.pageY;
-}
+};
 
 canvas.onmousedown = () => {
   pressed = true;
@@ -265,18 +265,25 @@ canvas.onmousedown = () => {
 
 canvas.onmouseup = () => {
   pressed = false;
-}
+};
 
 clearBtn.onclick = () => {
-  ctx.fillStyle = 'rgb(0,0,0)';
-  ctx.fillRect(0,0,width,height);
-}
+  ctx.fillStyle = "rgb(0,0,0)";
+  ctx.fillRect(0, 0, width, height);
+};
 
 function draw() {
   if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
-    ctx.arc(curX, curY - 85, sizePicker.value, degToRad(0), degToRad(360), false);
+    ctx.arc(
+      curX,
+      curY - 85,
+      sizePicker.value,
+      degToRad(0),
+      degToRad(360),
+      false,
+    );
     ctx.fill();
   }
 

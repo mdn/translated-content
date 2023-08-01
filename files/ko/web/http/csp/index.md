@@ -91,7 +91,7 @@ Content-Security-Policy: default-src 'self'; img-src *; media-src example.org ex
 
 기본적으로 여기서는 문서 원본의 콘텐츠만 허용되며 다음은 예외로 처리됩니다.
 
-- 이미지는 출처에 상관없이 로드할 수 있습니다("*" 와일드카드 참고).
+- 이미지는 출처에 상관없이 로드할 수 있습니다("\*" 와일드카드 참고).
 - 미디어는 example.org 및 example.net에서만 허용되며 해당 사이트의 하위 도메인에서는 허용되지 않습니다.
 - 실행 가능한 스크립트는 userscripts.example.com에서 온 것만 허용됩니다.
 
@@ -144,27 +144,35 @@ Content-Security-Policy: default-src 'self'; report-to http://reportcollector.ex
 보고서 JSON 객체는 `application/csp-report` {{HTTPHeader("Content-Type")}}과 함께 전송되며 다음 데이터를 포함합니다.
 
 - `blocked-uri`
+
   - : 콘텐츠 보안 정책에 의해 로드가 차단된 리소스의 URI입니다. 차단된 URI가 `document-uri`와 다른 출처인 경우, 차단된 URI는 스키마, 호스트 그리고 포트만 포함되도록 자릅니다.
 
 - `disposition`
+
   - : {{HTTPHeader("Content-Security-Policy-Report-Only")}} 헤더 또는 `Content-Security-Policy` 헤더 사용 여부에 따라 `"enforce"` 또는 `"report"`로 나타납니다.
 
 - `document-uri`
+
   - : 위반이 발생한 문서의 URI입니다.
 
 - `effective-directive`
+
   - : 정책 시행으로 인해 위반이 발생한 지시문입니다. 실제로 적용된 지시문이 `style-src`인 경우에 Chrome이 `style-src-elem`/`style-src-attr`을 제공하는 것과 같이 일부 브라우저는 다른 값을 제공할 수 있습니다.
 
 - `original-policy`
+
   - : `Content-Security-Policy` HTTP 헤더에 지정된 원래 정책입니다.
 
 - `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
+
   - : 위반이 발생한 문서의 리퍼러입니다.
 
 - `script-sample`
+
   - : 위반을 일으킨 인라인 스크립트, 이벤트 처리기 또는 스타일의 처음 40자입니다. `'report-sample'`이 포함된 `script-src*`와 `style-src*` 위반에만 적용 가능합니다.
 
 - `status-code`
+
   - : 전역 객체가 인스턴스화된 리소스의 HTTP 상태 코드입니다.
 
 - `violated-directive` {{Deprecated_Inline}}
@@ -181,7 +189,7 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-t
 `signup.html`의 HTML은 다음과 같습니다.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

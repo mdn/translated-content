@@ -66,7 +66,7 @@ However, what you really want is something that grabs a pair of devices (perhaps
 ```js
 var gHMD, gPositionSensor;
 
-navigator.getVRDevices().then(function(devices) {
+navigator.getVRDevices().then(function (devices) {
   for (var i = 0; i < devices.length; ++i) {
     if (devices[i] instanceof HMDVRDevice) {
       gHMD = devices[i];
@@ -76,7 +76,10 @@ navigator.getVRDevices().then(function(devices) {
 
   if (gHMD) {
     for (var i = 0; i < devices.length; ++i) {
-      if (devices[i] instanceof PositionSensorVRDevice && devices[i].hardwareUnitId === gHMD.hardwareUnitId) {
+      if (
+        devices[i] instanceof PositionSensorVRDevice &&
+        devices[i].hardwareUnitId === gHMD.hardwareUnitId
+      ) {
         gPositionSensor = devices[i];
         break;
       }
@@ -94,9 +97,9 @@ The scene is rendered on a {{htmlelement("canvas")}} element, created and placed
 场景最终是通过 {{htmlelement("canvas")}} 标记元素来显示。canvas 画布可通过以下 JS 代码来创建。
 
 ```js
-var myCanvas = document.createElement('canvas');
-var ctx = myCanvas.getContext('2d');
-var body = document.querySelector('body');
+var myCanvas = document.createElement("canvas");
+var ctx = myCanvas.getContext("2d");
+var body = document.querySelector("body");
 body.appendChild(myCanvas);
 ```
 
@@ -105,7 +108,7 @@ Next, we create a new [image](/zh-CN/docs/Web/API/HTMLImageElement) and use a [`
 
 ```js
 var image = new Image();
-image.src = 'firefox.png';
+image.src = "firefox.png";
 image.onload = draw;
 ```
 
@@ -118,8 +121,8 @@ draw() 方法的实现代码参考如下：
 function draw() {
   WIDTH = window.innerWidth;
   HEIGHT = window.innerHeight;
-  lCtrOffset = WIDTH*0.25;
-  rCtrOffset = WIDTH*0.25;
+  lCtrOffset = WIDTH * 0.25;
+  rCtrOffset = WIDTH * 0.25;
 
   myCanvas.width = WIDTH;
   myCanvas.height = HEIGHT;
@@ -162,18 +165,22 @@ function setView() {
 First we call {{domxref("PositionSensorVRDevice.getState")}} on the reference to our position sensor. This method returns everything you might want to know about the current state of the HMD — accessible through a {{domxref("VRPositionState")}} object — including its position, orientation, and more advanced information such as linear and angular velocity/acceleration.
 
 ```js
-  if(posState.hasPosition) {
-    posPara.textContent = 'Position: x' + roundToTwo(posState.position.x) + " y"
-                                + roundToTwo(posState.position.y) + " z"
-                                + roundToTwo(posState.position.z);
-    xPos = -posState.position.x * WIDTH * 2;
-    yPos = posState.position.y * HEIGHT * 2;
-    if(-posState.position.z > 0.01) {
-      zPos = -posState.position.z;
-    } else {
-      zPos = 0.01;
-    }
+if (posState.hasPosition) {
+  posPara.textContent =
+    "Position: x" +
+    roundToTwo(posState.position.x) +
+    " y" +
+    roundToTwo(posState.position.y) +
+    " z" +
+    roundToTwo(posState.position.z);
+  xPos = -posState.position.x * WIDTH * 2;
+  yPos = posState.position.y * HEIGHT * 2;
+  if (-posState.position.z > 0.01) {
+    zPos = -posState.position.z;
+  } else {
+    zPos = 0.01;
   }
+}
 ```
 
 In the next part, we first check to make sure valid position information is available for the HMD using {{domxref("VRPositionState.hasPosition")}}, so that we don't return an error and stop the app working (if the HMD is switched off, or not pointing at the position sensor.)
@@ -183,15 +190,18 @@ Then we output the current position information to a paragraph in the app UI for
 Last up, we set our `xPos`, `yPos`, and `zPos` variables relative to the position information stored in {{domxref("VRPositionState.position")}}. You'll notice that we have used an `if ... else` block to make sure the `zPos` value stays at 0.01 or above — the app was throwing an error if it went below 0.
 
 ```js
-  if(posState.hasOrientation) {
-    orientPara.textContent = 'Orientation: x' + roundToTwo(posState.orientation.x) + " y"
-                                + roundToTwo(posState.orientation.y) + " z"
-                                + roundToTwo(posState.orientation.z);
-    xOrient = posState.orientation.x * WIDTH;
-    yOrient = -posState.orientation.y * HEIGHT * 2;
-    zOrient = posState.orientation.z * 180;
-
-  }
+if (posState.hasOrientation) {
+  orientPara.textContent =
+    "Orientation: x" +
+    roundToTwo(posState.orientation.x) +
+    " y" +
+    roundToTwo(posState.orientation.y) +
+    " z" +
+    roundToTwo(posState.orientation.z);
+  xOrient = posState.orientation.x * WIDTH;
+  yOrient = -posState.orientation.y * HEIGHT * 2;
+  zOrient = posState.orientation.z * 180;
+}
 ```
 
 Next, we use a similar process to update the scene according to the HMD's orientation — check that valid orientation data is available using {{domxref("VRPositionState.hasOrientation")}}, display orientation data in the UI for informational purposes, and then set the `xOrient`, `yOrient`, and `zOrient` values relative to the orientation information stored in {{domxref("VRPositionState.orientation")}}.
@@ -216,10 +226,10 @@ function drawImages() {
 First we draw a white {{domxref("CanvasRenderingContext2D.fillRect","fillRect()")}} to clear the scene before the next frame is drawn.
 
 ```js
-  ctx.save();
-  ctx.beginPath();
-  ctx.translate(WIDTH/4,HEIGHT/2);
-  ctx.rect(-(WIDTH/4),-(HEIGHT/2),WIDTH/2,HEIGHT);
+ctx.save();
+ctx.beginPath();
+ctx.translate(WIDTH / 4, HEIGHT / 2);
+ctx.rect(-(WIDTH / 4), -(HEIGHT / 2), WIDTH / 2, HEIGHT);
 ```
 
 Next, we save the context state with {{domxref("CanvasRenderingContext2D.save","save()")}} so we can treat the left eye view as a separate image and not have its code affect the right eye view.
@@ -235,13 +245,19 @@ Note that the `rect()` has to be drawn starting from minus a quarter of the widt
 Now we {{domxref("CanvasRenderingContext2D.clip","clip()")}} the canvas. Because we called this just after the `rect()` was drawn, anything else that we do on the canvas will be constrained inside the `rect()`, with any overflow hidden until a `restore()` call is made (see later on.) This ensures that the whole left eye view will remain separate from the right eye view.
 
 ```js
-  ctx.rotate(zOrient * Math.PI / 180);
+ctx.rotate((zOrient * Math.PI) / 180);
 ```
 
 A rotation is now applied to the image, related to the current value of `zOrient`, so that the scene rotates as you rotate your head.
 
 ```js
-  ctx.drawImage(image,-(WIDTH/4)+lCtrOffset-((image.width)/(2*(1/zPos)))+xPos-yOrient,-((image.height)/(2*(1/zPos)))+yPos+xOrient,image.width*zPos,image.height*zPos);
+ctx.drawImage(
+  image,
+  -(WIDTH / 4) + lCtrOffset - image.width / (2 * (1 / zPos)) + xPos - yOrient,
+  -(image.height / (2 * (1 / zPos))) + yPos + xOrient,
+  image.width * zPos,
+  image.height * zPos,
+);
 ```
 
 Now for the actual image drawing! This rather nasty line of code needs breaking down, so here it is, argument by argument:
@@ -253,14 +269,14 @@ Now for the actual image drawing! This rather nasty line of code needs breaking 
 - `image.height*zPos`: The height to draw the image; this is modified by `zPos` so it will be drawn bigger as you get closer to it.
 
 ```js
-  ctx.strokeStyle = "black";
-  ctx.stroke();
+ctx.strokeStyle = "black";
+ctx.stroke();
 ```
 
 Next we draw a black {{domxref("CanvasRenderingContext2D.stroke","stroke()")}} around the left eye view, just to aid the view separation a bit more.
 
 ```js
-  ctx.restore();
+ctx.restore();
 ```
 
 Finally, we {{domxref("CanvasRenderingContext2D.restore","restore()")}} the canvas so we can then go on to draw the right eye view.
@@ -281,7 +297,7 @@ The VR effect is much more effective if you set your app runnning in [fullscreen
 In this case I have just kept things simple, running a `fullScreen()` function when the canvas is clicked:
 
 ```js
-myCanvas.addEventListener('click',fullScreen,false);
+myCanvas.addEventListener("click", fullScreen, false);
 ```
 
 The `fullScreen()` function checks which version of the `requestFullscreen()` method is present on the canvas (this will differ by browser) and then calls the appropriate one, for maximum compatibility:
@@ -311,9 +327,9 @@ First of all, you can use the {{domxref("PositionSensorVRDevice.resetSensor")}} 
 ```
 
 ```js
-document.querySelector('button').onclick = function() {
+document.querySelector("button").onclick = function () {
   gPositionSensor.resetSensor();
-}
+};
 ```
 
 The other thing to calibrate is the field of view (FOV) of your headset — how much of the scene can be seen in the up, right, down and left directions. This information can be retrieved for each eye separately using the {{domxref("HMDVRDevice.getEyeParameters")}} method, which returns parameters for each eye separately (you need to call it twice, once with a parameter of `left`, and once with a parameter of `right`.) This returns a {{domxref("VREyeParameters")}} object for each eye.
@@ -330,10 +346,10 @@ The field of view created is a pyramid shape, the apex of which is emanating fro
 You could check whether the user has a suitable field of view for your app, and if not, set a new field of view using {{domxref("HMDVRDevice.setFieldOfView")}} method. A simple function to handle this might look like so:
 
 ```js
-function setCustomFOV(up,right,down,left) {
-  var testFOV = new VRFieldOfView(up,right,down,left);
+function setCustomFOV(up, right, down, left) {
+  var testFOV = new VRFieldOfView(up, right, down, left);
 
-  gHMD.setFieldOfView(testFOV,testFOV,0.01,10000.0);
+  gHMD.setFieldOfView(testFOV, testFOV, 0.01, 10000.0);
 }
 ```
 

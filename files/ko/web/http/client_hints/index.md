@@ -15,7 +15,7 @@ Accept-CH: DPR, Width, Viewport-Width, Downlink
 또는
 
 ```html
-<meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width, Downlink">
+<meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width, Downlink" />
 ```
 
 클라이언트가 `Accept-CH` header를 전달받게 되면 지원되는 경우, Client Hint header를 추가합니다. 예를 들어 위의 Accept-CH 예제를 기반으로 클라이언트는 모든 후속 요청에 DPR, Width, Viewport-Width 및 Downlink 헤더를 추가 할 수 있습니다.

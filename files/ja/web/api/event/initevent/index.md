@@ -1,6 +1,9 @@
 ---
-title: Event.initEvent()
+title: "Event: initEvent() メソッド"
+short-title: initEvent()
 slug: Web/API/Event/initEvent
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{ ApiRef("DOM") }}{{deprecated_header}}
@@ -16,8 +19,8 @@ slug: Web/API/Event/initEvent
 
 ## 構文
 
-```js
-event.initEvent(type, bubbles, cancelable);
+```js-nolint
+event.initEvent(type, bubbles, cancelable)
 ```
 
 ### 引数
@@ -46,8 +49,8 @@ event.initEvent("click", true, false);
 // イベントを待ち受けする
 elem.addEventListener(
   "click",
-  function (e) {
-    // e.target matches elem
+  (e) => {
+    // e.target が elem と一致
   },
   false,
 );

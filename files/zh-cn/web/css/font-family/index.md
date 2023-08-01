@@ -60,28 +60,39 @@ font-family: "Gill Sans Extrabold", sans-serif;
 - `<family-name>`
   - : 一个字体族的名字。例如"Times" 和 "Helvetica" 都是字体族名。字体族名可以包含空格，但包含空格时应该用引号。
 - `<generic-name>`
+
   - : 通用字体族名是一种备选机制，用于在指定的字体不可用时给出较好的字体。通用字体族名都是关键字，所以不可以加引号。在列表的末尾应该至少有一个通用字体族名。以下是该属性可能的取值以及他们的定义。
 
     - `serif`
+
       - : 带衬线字体，笔画结尾有特殊的装饰线或衬线。
 
         例如：Lucida Bright、Lucida Fax、Palatino、Palatino Linotype、Palladio、URW Palladio、serif。
+
     - `sans-serif`
+
       - : 无衬线字体，即笔画结尾是平滑的字体。
 
         例如：Open Sans、Fira Sans、Lucida Sans、Lucida Sans Unicode、Trebuchet MS、Liberation Sans、Nimbus Sans L、sans-serif。
+
     - `monospace`
+
       - : 等宽字体，即字体中每个字宽度相同。
 
         例如：Fira Mono、DejaVu Sans Mono、Menlo、Consolas、Liberation Mono、Monaco、Lucida Console、monospace。
+
     - `cursive`
+
       - : 草书字体。这种字体有的有连笔，有的还有特殊的斜体效果。因为一般这种字体都有一点连笔效果，所以会给人一种手写的感觉。
 
         例如：Brush Script MT、Brush Script Std、Lucida Calligraphy、Lucida Handwriting、Apple Chancery、cursive。
+
     - `fantasy`
+
       - : Fantasy 字体主要是那些具有特殊艺术效果的字体。
 
         例如：Papyrus、Herculanum、Party LET、Curlz MT、Harrington、fantasy。
+
     - `system-ui`
       - : 从浏览器所处平台处获取的默认用户界面字体。由于世界各地的排版习惯之间有很大的差异，因此为那些不适合其他通用字体的字体提供了这个通用字体。
     - `ui-serif`
@@ -113,13 +124,21 @@ font-family: "Goudy Bookletter 1911", sans-serif;
 以下的声明是**无效的**：
 
 ```css example-bad
-font-family: Goudy Bookletter 1911, sans-serif;
+font-family:
+  Goudy Bookletter 1911,
+  sans-serif;
 font-family: Red/Black, sans-serif;
-font-family: "Lucida" Grande, sans-serif;
+font-family:
+  "Lucida" Grande,
+  sans-serif;
 font-family: Ahem!, sans-serif;
-font-family: test@foo, sans-serif;
+font-family:
+  test @foo,
+  sans-serif;
 font-family: #POUND, sans-serif;
-font-family: Hawaii 5-0, sans-serif;
+font-family:
+  Hawaii 5-0,
+  sans-serif;
 ```
 
 ### 形式语法
@@ -165,37 +184,21 @@ font-family: Hawaii 5-0, sans-serif;
 ```
 
 ```html hidden
-<div class="serif">
-  This is an example of a serif font.
-</div>
+<div class="serif">This is an example of a serif font.</div>
 
-<div class="sansserif">
-  This is an example of a sans-serif font.
-</div>
+<div class="sansserif">This is an example of a sans-serif font.</div>
 
-<div class="monospace">
-  This is an example of a monospace font.
-</div>
+<div class="monospace">This is an example of a monospace font.</div>
 
-<div class="cursive">
-  This is an example of a cursive font.
-</div>
+<div class="cursive">This is an example of a cursive font.</div>
 
-<div class="fantasy">
-  This is an example of a fantasy font.
-</div>
+<div class="fantasy">This is an example of a fantasy font.</div>
 
-<div class="math">
-  This is an example of a math font.
-</div>
+<div class="math">This is an example of a math font.</div>
 
-<div class="emoji">
-  This is an example of an emoji font.
-</div>
+<div class="emoji">This is an example of an emoji font.</div>
 
-<div class="fangsong">
-  This is an example of a fangsong font.
-</div>
+<div class="fangsong">This is an example of a fangsong font.</div>
 ```
 
 {{EmbedLiveSample("一些通用字体", 600, 120)}}

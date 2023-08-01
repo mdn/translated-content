@@ -1,6 +1,9 @@
 ---
-title: Event.type
+title: "Event: type プロパティ"
+short-title: type
 slug: Web/API/Event/type
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef}}
@@ -27,7 +30,7 @@ slug: Web/API/Event/type
 ```js
 function getEventType(event) {
   const log = document.getElementById("log");
-  log.innerText = event.type + "\n" + log.innerText;
+  log.innerText = `${event.type}\n${log.innerText}`;
 }
 
 // キーボードイベント

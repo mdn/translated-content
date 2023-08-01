@@ -77,21 +77,25 @@ console.log(c); // 输出 1，而且不会报错
 ```js
 var a = [];
 for (var i = 0; i < 10; i++) {
-      a[i] = function () {console.log(i);};
+  a[i] = function () {
+    console.log(i);
+  };
 }
-a[0]();                // 10
-a[1]();                // 10
-a[6]();                // 10
+a[0](); // 10
+a[1](); // 10
+a[6](); // 10
 
 /********************/
 
 var a = [];
 for (let i = 0; i < 10; i++) {
-      a[i] = function () {console.log(i);};
+  a[i] = function () {
+    console.log(i);
+  };
 }
-a[0]();                // 0
-a[1]();                // 1
-a[6]();                // 6
+a[0](); // 0
+a[1](); // 1
+a[6](); // 6
 ```
 
 #### 使用`function`

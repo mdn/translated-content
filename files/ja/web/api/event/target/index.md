@@ -1,6 +1,9 @@
 ---
-title: Event.target
+title: "Event: target プロパティ"
+short-title: target
 slug: Web/API/Event/target
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{ApiRef("DOM")}}

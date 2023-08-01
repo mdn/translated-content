@@ -35,7 +35,7 @@ mySet.add("foo");
 console.log(mySet.delete("bar")); // 返回 false，不包含 "bar" 这个元素
 console.log(mySet.delete("foo")); // 返回 true，删除成功
 
-console.log(mySet.has("foo"));    // 返回 false，"foo" 已经成功删除
+console.log(mySet.has("foo")); // 返回 false，"foo" 已经成功删除
 ```
 
 ### 从 Set 中删除对象
