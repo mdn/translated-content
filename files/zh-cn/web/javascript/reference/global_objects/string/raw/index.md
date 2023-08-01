@@ -43,7 +43,7 @@ String.raw`templateString`
 
 > **警告：** 不应直接使用 `String.raw` 作为“身份”标签。请参见[构建身份标签](#building_an_identity_tag)以了解如何实现此操作。
 
-如果使用没有 `length `属性或 `length` 为非正数的 `raw` 属性的对象调用 `String.raw()` 方法，它将返回一个空字符串 `""`。如果 `substitutions.length < strings.raw.length - 1`（即没有足够的替换项来填充占位符——这在一个格式正确的标记模板字面量中是不可能发生的），则其余的占位符将被填充为空字符串。
+如果使用没有 `length` 属性或 `length` 为非正数的 `raw` 属性的对象调用 `String.raw()` 方法，它将返回一个空字符串 `""`。如果 `substitutions.length < strings.raw.length - 1`（即没有足够的替换项来填充占位符——这在一个格式正确的标记模板字面量中是不可能发生的），则其余的占位符将被填充为空字符串。
 
 ## 示例
 
