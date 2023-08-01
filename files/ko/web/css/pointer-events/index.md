@@ -2,6 +2,7 @@
 title: pointer-events
 slug: Web/CSS/pointer-events
 ---
+
 {{CSSRef}}
 
 **`pointer-events`** [CSS](/ko/docs/Web/CSS) 속성은 그래픽 요소가 어떤 상황에서 포인터 이벤트의 [대상](/ko/docs/Web/API/Event/target)이 될 수 있는지 지정합니다.
@@ -15,13 +16,13 @@ slug: Web/CSS/pointer-events
 pointer-events: auto;
 pointer-events: none;
 pointer-events: visiblePainted; /* SVG only */
-pointer-events: visibleFill;    /* SVG only */
-pointer-events: visibleStroke;  /* SVG only */
-pointer-events: visible;        /* SVG only */
-pointer-events: painted;        /* SVG only */
-pointer-events: fill;           /* SVG only */
-pointer-events: stroke;         /* SVG only */
-pointer-events: all;            /* SVG only */
+pointer-events: visibleFill; /* SVG only */
+pointer-events: visibleStroke; /* SVG only */
+pointer-events: visible; /* SVG only */
+pointer-events: painted; /* SVG only */
+pointer-events: fill; /* SVG only */
+pointer-events: stroke; /* SVG only */
+pointer-events: all; /* SVG only */
 
 /* 전역 값 */
 pointer-events: inherit;
@@ -112,7 +113,8 @@ img {
 #### CSS
 
 ```css
-a[href="http://example.com"] {
+a[href="http://example.com"]
+{
   pointer-events: none;
 }
 ```
