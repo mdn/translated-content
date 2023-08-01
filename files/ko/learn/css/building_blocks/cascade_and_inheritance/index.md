@@ -2,6 +2,7 @@
 title: 계단식 및 상속
 slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
 이 수업의 목적은 CSS 가 HTML 에 적용되는 방법과 충돌을 해결하는 방법을 제어하는 CSS 의 가장 기본적인 개념인 — 계단식, 우선 순위 및 상속 — 에 대한 이해를 발전시키는 것입니다.
@@ -175,12 +176,12 @@ CSS 속기 속성을 `all` 로 사용하면 이러한 상속 값 중 하나를 (
 
 다음 표는 기분을 전환하기 위해 몇 가지 분리된 예를 보여줍니다. 이것들을 살펴보고 왜 그들이 우리에게 그들에게 주어진 우선 순위를 가지고 있는지 이해하도록 하십시오. 선택자는 아직 자세히 다루지 않았지만, MDN [선택자 참조](/ko/docs/Web/CSS/CSS_Selectors) 에서 각 선택자의 세부 정보를 찾을 수 있습니다.
 
-| 선택자                                                                          | Thousands | Hundreds | Tens | Ones | Total specificity |
-| ------------------------------------------------------------------------------- | --------- | -------- | ---- | ---- | ----------------- |
-| `h1`                                                                            | 0         | 0        | 0    | 1    | 0001              |
-| `h1 + p::first-letter`                                                          | 0         | 0        | 0    | 3    | 0003              |
-| `li > a[href*="en-US"] > .inline-warning`                                       | 0         | 0        | 2    | 2    | 0022              |
-| `#identifier`                                                                   | 0         | 1        | 0    | 0    | 0100              |
+| 선택자                                                                   | Thousands | Hundreds | Tens | Ones | Total specificity |
+| ------------------------------------------------------------------------ | --------- | -------- | ---- | ---- | ----------------- |
+| `h1`                                                                     | 0         | 0        | 0    | 1    | 0001              |
+| `h1 + p::first-letter`                                                   | 0         | 0        | 0    | 3    | 0003              |
+| `li > a[href*="en-US"] > .inline-warning`                                | 0         | 0        | 2    | 2    | 0022              |
+| `#identifier`                                                            | 0         | 1        | 0    | 0    | 0100              |
 | 요소의 {{htmlattrxref("style")}} 속성 안에 규칙이 있는 선택자가 없습니다 | 1         | 0        | 0    | 0    | 1000              |
 
 계속 진행하기 전에, 실제 사례를 살펴보겠습니다.

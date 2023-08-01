@@ -45,27 +45,27 @@ slug: Learn/CSS/First_steps/Getting_started
 ```html
 <!doctype html>
 <html lang="ko-KR">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>CSS로 시작하기</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>레벨 1 제목입니다</h1>
 
-    <p>이것은 단락입니다. 본문에는 <span>span 요소</span>와 <a href="http://example.com">링크</a>가 있습니다.</p>
+    <p>
+      이것은 단락입니다. 본문에는 <span>span 요소</span>와
+      <a href="http://example.com">링크</a>가 있습니다.
+    </p>
 
     <p>이것은 두 번째 단락입니다. <em>강조된</em> 요소를 포함합니다.</p>
 
     <ul>
-        <li>항목 하나</li>
-        <li>항목 둘</li>
-        <li>항목 <em>셋</em></li>
+      <li>항목 하나</li>
+      <li>항목 둘</li>
+      <li>항목 <em>셋</em></li>
     </ul>
-
-</body>
-
+  </body>
 </html>
 ```
 
@@ -80,7 +80,7 @@ HTML 문서와 같은 폴더에 파일을 만들고 `styles.css` 로 저장하�
 `styles.css` 파일을 `index.html` 에 링크하려면, HTML 문서의 {{htmlelement("head")}} 안에 다음 행을 추가하십시오:
 
 ```html
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css" />
 ```
 
 이 {{htmlelement("link")}} 요소는 `rel` 속성을 사용하는 스타일 시트와 해당 스타일 시트의 위치를 `href` 속성의 값으로 브라우저에게 알려줍니다. `styles.css` 에 규칙을 추가하여 CSS 가 작동하는지 테스트 할 수 있습니다. 코드 편집기를 사용하여 CSS 파일에 다음을 추가하십시오:
@@ -108,8 +108,9 @@ p {
 선택자를 쉼표로 구분하여 여러 선택자를 한 번에 대상으로 지정할 수 있습니다. 모든 단락과 모든 목록 항목을 녹색으로 만들려면 규칙은 다음과 같습니다:
 
 ```css
-p, li {
-    color: green;
+p,
+li {
+  color: green;
 }
 ```
 

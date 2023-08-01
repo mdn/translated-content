@@ -15,19 +15,19 @@ slug: Web/API/CustomEvent/detail
 
 ```js
 // CustomEvent 생성
-const catFound = new CustomEvent('animalfound', {
+const catFound = new CustomEvent("animalfound", {
   detail: {
-    name: 'cat'
-  }
+    name: "cat",
+  },
 });
-const dogFound = new CustomEvent('animalfound', {
+const dogFound = new CustomEvent("animalfound", {
   detail: {
-    name: 'dog'
-  }
+    name: "dog",
+  },
 });
 
 // 적합한 이벤트 수신기 부착
-obj.addEventListener('animalfound', (e) => console.log(e.detail.name));
+obj.addEventListener("animalfound", (e) => console.log(e.detail.name));
 
 // 이벤트 발송
 obj.dispatchEvent(catFound);
