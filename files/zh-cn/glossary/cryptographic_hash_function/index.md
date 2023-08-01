@@ -7,7 +7,7 @@ slug: Glossary/Cryptographic_hash_function
 
 加密散列函数有时也称为*摘要函数*，其是一种{{glossary("cryptography", "密码")}}原语，将任意大小的信息转为固定大小的消息，称为{{glossary("digest", "摘要")}}。加密散列函数通常用于授权、{{Glossary("digital signature", "数字签名")}}以及{{Glossary("HMAC", "密钥散列消息认证码")}}。
 
-散列函数必须有以下特征才能用于加密：
+散列函数必须有以下特征才能用于密码学：
 
 - 快速计算（因为它们需要频繁的生成）
 - 不可逆（每个摘要可能来自拥有庞大数据的消息，并且仅有暴力破解才能生成导致给定摘要的消息）
