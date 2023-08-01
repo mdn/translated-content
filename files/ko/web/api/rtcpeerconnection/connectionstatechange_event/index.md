@@ -21,8 +21,8 @@ RTCPeerConnection.onconnectionstatechange = eventHandler;
 ## 예시
 
 ```js
-pc.onconnectionstatechange = function(event) {
-  switch(pc.connectionState) {
+pc.onconnectionstatechange = function (event) {
+  switch (pc.connectionState) {
     case "connected":
       // The connection has become fully connected
       break;
@@ -34,7 +34,7 @@ pc.onconnectionstatechange = function(event) {
       // The connection has been closed
       break;
   }
-}
+};
 ```
 
 ## 명세

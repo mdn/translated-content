@@ -1,17 +1,14 @@
 ---
-title: File.name
+title: "File: name プロパティ"
+short-title: name
 slug: Web/API/File/name
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("File API")}}
 
 {{domxref("File")}} オブジェクトによって表されるファイルの名前を返します。セキュリティ上の理由から、パスはこのプロパティから除外されます。
-
-## 構文
-
-```js
-var name = file.name;
-```
 
 ## 値
 
@@ -19,34 +16,37 @@ var name = file.name;
 
 ## 例
 
-```html
-<input type="file" multiple onchange="processSelectedFiles(this)">
+### HTML
 
-<div id="output"></div>
+```html
+<input type="file" id="filepicker" multiple />
+<div>
+  <p>選択されたファイルのリスト:</p>
+  <ul id="output"></ul>
+</div>
 ```
+
+### JavaScript
 
 ```js
-const output = document.querySelector("#output");
-function processSelectedFiles(fileInput) {
-  let files = fileInput.files;
-  output.textContent = "選択されたファイルのリスト:";
+const output = document.getElementById("output");
+const filepicker = document.getElementById("filepicker");
 
-  for (let i = 0; i < files.length; i++) {
-    output.textContent += `\nファイル名: ${files[i].name}`;
+filepicker.addEventListener("change", (event) => {
+  const files = event.target.files;
+  output.textContent = "";
+
+  for (const file of files) {
+    const li = document.createElement("li");
+    li.textContent = file.name;
+    output.appendChild(li);
   }
-}
+});
 ```
 
-```css hidden
-#output{
-  padding: 0.5em 0;
-  white-space: pre;
-}
-```
+### 結果
 
-#### 結果
-
-{{ EmbedLiveSample('Example', 300, 100) }}
+{{EmbedLiveSample('Examples')}}
 
 ## 仕様書
 

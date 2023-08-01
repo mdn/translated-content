@@ -58,7 +58,7 @@ L'exemple suivant teste si certains éléments d'un tableau sont plus grands que
 
 ```js
 function estAssezGrand(element, indice, array) {
-  return (element >= 10);
+  return element >= 10;
 }
 var resultat = [2, 5, 8, 1, 4].some(estAssezGrand);
 // resultat vaut false
@@ -71,8 +71,8 @@ passed = [12, 5, 8, 1, 4].some(estAssezGrand);
 [Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) permettent d'utiliser une syntaxe plus concise pour réaliser la même opération que l'exemple précédent.
 
 ```js
-[2, 5, 8, 1, 4].some(elem => elem > 10); // false
-[12, 5, 8, 1, 4].some(elem => elem > 10); // true
+[2, 5, 8, 1, 4].some((elem) => elem > 10); // false
+[12, 5, 8, 1, 4].some((elem) => elem > 10); // true
 ```
 
 > **Note :** Si on veut vérifier qu'un élément est dans un tableau, on pourra utiliser la méthode {{jsxref("Array.prototype.includes()")}}.

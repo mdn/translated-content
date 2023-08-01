@@ -13,7 +13,7 @@ La méthode **`Intl.RelativeTimeFormat.prototype.formatToParts()`** est une mét
 ## Syntaxe
 
 ```js
-RelativeTimeFormat.formatToParts(valeur, unite)
+RelativeTimeFormat.formatToParts(valeur, unite);
 ```
 
 ### Paramètres

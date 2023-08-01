@@ -161,8 +161,8 @@ slug: Web/HTML/Element/table
 <p>Table with colgroup and col</p>
 <table>
   <colgroup>
-    <col class="column1">
-    <col class="columns2plus3" span="2">
+    <col class="column1" />
+    <col class="columns2plus3" span="2" />
   </colgroup>
   <tr>
     <th>Lime</th>
@@ -178,7 +178,9 @@ slug: Web/HTML/Element/table
 
 <p>Simple table with caption</p>
 <table>
-  <caption>Awesome caption</caption>
+  <caption>
+    Awesome caption
+  </caption>
   <tr>
     <td>Awesome data</td>
   </tr>
@@ -186,15 +188,15 @@ slug: Web/HTML/Element/table
 ```
 
 ```css hidden
-table
-{
-border-collapse: collapse;
-border-spacing: 0px;
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
 }
-table, th, td
-{
-padding: 5px;
-border: 1px solid black;
+table,
+th,
+td {
+  padding: 5px;
+  border: 1px solid black;
 }
 ```
 
@@ -219,7 +221,9 @@ border: 1px solid black;
 
 ```html
 <table>
-  <caption>Color names and values</caption>
+  <caption>
+    Color names and values
+  </caption>
   <tbody>
     <tr>
       <th scope="col">Name</th>

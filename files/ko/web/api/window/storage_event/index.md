@@ -25,10 +25,16 @@ window.onstorage = functionRef;
 다음 예제는 다른 문서에서 저장소 키를 바꿀 때마다 메시지를 기록합니다.
 
 ```js
-window.onstorage = function(e) {
-  console.log('The ' + e.key +
-    ' key has been changed from ' + e.oldValue +
-    ' to ' + e.newValue + '.');
+window.onstorage = function (e) {
+  console.log(
+    "The " +
+      e.key +
+      " key has been changed from " +
+      e.oldValue +
+      " to " +
+      e.newValue +
+      ".",
+  );
 };
 ```
 

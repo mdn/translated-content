@@ -33,8 +33,8 @@ for ([initialization]; [condition]; [final-expression])
 
 ```js
 for (var i = 0; i < 9; i++) {
-   console.log(i);
-   // more statements
+  console.log(i);
+  // more statements
 }
 ```
 
@@ -47,18 +47,18 @@ for (var i = 0; i < 9; i++) {
 ```js
 var i = 0;
 for (; i < 9; i++) {
-    console.log(i);
-    // more statements
+  console.log(i);
+  // more statements
 }
 ```
 
 像初始化块一样，条件块也是可选的。如果省略此表达式，则必须确保在循环体内跳出，以防创建死循环。
 
 ```js
-for (var i = 0;; i++) {
-   console.log(i);
-   if (i > 3) break;
-   // more statements
+for (var i = 0; ; i++) {
+  console.log(i);
+  if (i > 3) break;
+  // more statements
 }
 ```
 
@@ -80,26 +80,31 @@ for (;;) {
 
 ```js
 function showOffsetPos(sId) {
-
-  var nLeft = 0, nTop = 0;
+  var nLeft = 0,
+    nTop = 0;
 
   for (
-
-    var oItNode = document.getElementById(sId); /* initialization */
-
-    oItNode; /* condition */
-
-    nLeft += oItNode.offsetLeft, nTop += oItNode.offsetTop, oItNode = oItNode.offsetParent /* final-expression */
-
+    var oItNode = document.getElementById(sId) /* initialization */;
+    oItNode /* condition */;
+    nLeft += oItNode.offsetLeft,
+      nTop += oItNode.offsetTop,
+      oItNode = oItNode.offsetParent /* final-expression */
   ); /* 分号 semicolon */
 
-  console.log('Offset position of \'' + sId + '\' element:\n left: ' + nLeft + 'px;\n top: ' + nTop + 'px;');
-
+  console.log(
+    "Offset position of '" +
+      sId +
+      "' element:\n left: " +
+      nLeft +
+      "px;\n top: " +
+      nTop +
+      "px;",
+  );
 }
 
 /* Example call: */
 
-showOffsetPos('content');
+showOffsetPos("content");
 
 // Output:
 // "Offset position of "content" element:

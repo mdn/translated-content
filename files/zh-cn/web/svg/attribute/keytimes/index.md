@@ -24,34 +24,36 @@ keyTimes 列表的语义取决于插值模式：
 
 | 类别   | 动画值属性 |
 | ------ | ---------- |
-| 值     | \<list>     |
+| 值     | \<list>    |
 | 可变性 | No         |
 
 ## 示例
 
 ```html
 <?xml version="1.0"?>
-<svg width="120" height="120"
-     viewPort="0 0 120 120" version="1.1"
-     xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="120"
+  height="120"
+  viewPort="0 0 120 120"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="10" r="10">
+    <animate
+      attributeName="cx"
+      attributeType="XML"
+      dur="4s"
+      values="60 ; 110 ; 60 ; 10 ; 60"
+      keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1"
+      repeatCount="indefinite" />
 
-    <circle cx="60" cy="10" r="10">
-
-        <animate attributeName="cx"
-                 attributeType="XML"
-                 dur="4s"
-                 values="60 ; 110 ; 60 ; 10 ; 60"
-                 keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1"
-                 repeatCount="indefinite"/>
-
-        <animate attributeName="cy"
-                 attributeType="XML"
-                 dur="4s"
-                 values="10 ; 60 ; 110 ; 60 ; 10 "
-                 keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1"
-                 repeatCount="indefinite"/>
-
-    </circle>
+    <animate
+      attributeName="cy"
+      attributeType="XML"
+      dur="4s"
+      values="10 ; 60 ; 110 ; 60 ; 10 "
+      keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1"
+      repeatCount="indefinite" />
+  </circle>
 </svg>
 ```
 

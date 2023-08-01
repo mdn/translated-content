@@ -13,7 +13,7 @@ la méthode statique **`Reflect.setPrototypeOf()`** est semblable à la méthode
 ## Syntaxe
 
 ```js
-Reflect.setPrototypeOf(cible, prototype)
+Reflect.setPrototypeOf(cible, prototype);
 ```
 
 ### Paramètres

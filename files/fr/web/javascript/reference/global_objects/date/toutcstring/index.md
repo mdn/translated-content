@@ -13,7 +13,7 @@ La méthode **`toUTCString()`** convertit une date en une chaîne de caractères
 ## Syntaxe
 
 ```js
-dateObj.toUTCString()
+dateObj.toUTCString();
 ```
 
 ### Valeur de retour

@@ -144,7 +144,10 @@ slug: Web/HTML/Content_categories
 예를 들어, {{HTMLElement("del")}} 과 {{HTMLELement("ins")}} 요소는 투명합니다:
 
 ```html
-<p>We hold these truths to be <del><em>sacred &amp; undeniable</em></del> <ins>self-evident</ins>.</p>
+<p>
+  We hold these truths to be <del><em>sacred &amp; undeniable</em></del>
+  <ins>self-evident</ins>.
+</p>
 ```
 
 올바른 영어는 아니지만, 두 요소를 제거하더라도 HTML은 유효합니다.

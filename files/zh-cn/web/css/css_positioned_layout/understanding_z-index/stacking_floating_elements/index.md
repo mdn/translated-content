@@ -31,20 +31,21 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elem
 ### 该示例的源码
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Stacking and float</title>
     <style type="text/css">
-
-    div {
+      div {
         font: 12px Arial;
-    }
+      }
 
-    span.bold { font-weight: bold; }
+      span.bold {
+        font-weight: bold;
+      }
 
-    #absdiv1 {
+      #absdiv1 {
         position: absolute;
         width: 150px;
         height: 200px;
@@ -53,18 +54,18 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elem
         border: 1px dashed #990000;
         background-color: #ffdddd;
         text-align: center;
-    }
+      }
 
-    #normdiv {
+      #normdiv {
         /* opacity: 0.7; */
         height: 100px;
         border: 1px dashed #999966;
         background-color: #ffffcc;
         margin: 0px 10px 0px 10px;
         text-align: left;
-    }
+      }
 
-    #flodiv1 {
+      #flodiv1 {
         margin: 0px 10px 0px 20px;
         float: left;
         width: 150px;
@@ -72,9 +73,9 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elem
         border: 1px dashed #009900;
         background-color: #ccffcc;
         text-align: center;
-    }
+      }
 
-    #flodiv2 {
+      #flodiv2 {
         margin: 0px 20px 0px 10px;
         float: right;
         width: 150px;
@@ -82,9 +83,9 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elem
         border: 1px dashed #009900;
         background-color: #ccffcc;
         text-align: center;
-    }
+      }
 
-    #absdiv2 {
+      #absdiv2 {
         position: absolute;
         width: 150px;
         height: 100px;
@@ -93,41 +94,35 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elem
         border: 1px dashed #990000;
         background-color: #ffdddd;
         text-align: center;
-    }
+      }
+    </style>
+  </head>
 
-</style>
-</head>
-
-<body>
+  <body>
     <br /><br />
 
     <div id="absdiv1">
-        <br /><span class="bold">DIV #1</span>
-        <br />position: absolute;
+      <br /><span class="bold">DIV #1</span> <br />position: absolute;
     </div>
 
     <div id="flodiv1">
-        <br /><span class="bold">DIV #2</span>
-        <br />float: left;
+      <br /><span class="bold">DIV #2</span> <br />float: left;
     </div>
 
     <div id="flodiv2">
-        <br /><span class="bold">DIV #3</span>
-        <br />float: right;
+      <br /><span class="bold">DIV #3</span> <br />float: right;
     </div>
 
     <br />
 
     <div id="normdiv">
-        <br /><span class="bold">DIV #4</span>
-        <br />no positioning
+      <br /><span class="bold">DIV #4</span> <br />no positioning
     </div>
 
     <div id="absdiv2">
-        <br /><span class="bold">DIV #5</span>
-        <br />position: absolute;
+      <br /><span class="bold">DIV #5</span> <br />position: absolute;
     </div>
-</body>
+  </body>
 </html>
 ```
 

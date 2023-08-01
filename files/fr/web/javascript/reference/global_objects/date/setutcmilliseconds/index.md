@@ -13,7 +13,7 @@ La méthode **`setUTCMilliseconds()`** définit les millièmes de secondes pour 
 ## Syntaxe
 
 ```js
-dateObj.setUTCMilliseconds(valeurMs)
+dateObj.setUTCMilliseconds(valeurMs);
 ```
 
 ### Paramètres

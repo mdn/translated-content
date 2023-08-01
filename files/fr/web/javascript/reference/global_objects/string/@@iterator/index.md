@@ -13,7 +13,7 @@ La méthode **`[@@iterator]()`** renvoie un nouvel objet [`Iterator`](/fr/docs/W
 ## Syntaxe
 
 ```js
-chaîneDeCaractères[Symbol.iterator]
+chaîneDeCaractères[Symbol.iterator];
 ```
 
 ### Valeur de retour

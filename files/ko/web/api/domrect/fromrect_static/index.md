@@ -11,7 +11,7 @@ original_slug: Web/API/DOMRect/fromRect
 ## 구문
 
 ```js
-DOMRect.fromRect(rectangle)
+DOMRect.fromRect(rectangle);
 ```
 
 ### 매개변수

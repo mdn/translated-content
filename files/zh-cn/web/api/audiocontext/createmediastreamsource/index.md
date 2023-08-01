@@ -34,54 +34,55 @@ var source = audioCtx.createMediaStreamSource(stream);
 > **备注：** 你可以查看[在线演示](https://mdn.github.io/webaudio-examples/stream-source-buffer/)，或者[查看源码](https://github.com/mdn/webaudio-examples/tree/main/stream-source-buffer)。
 
 ```js
-var pre = document.querySelector('pre');
-var video = document.querySelector('video');
-var myScript = document.querySelector('script');
-var range = document.querySelector('input');
+var pre = document.querySelector("pre");
+var video = document.querySelector("video");
+var myScript = document.querySelector("script");
+var range = document.querySelector("input");
 
 // getUserMedia 获取流
 // 把流放入 MediaStreamAudioSourceNode
 // 输出到 video 元素
 
 if (navigator.mediaDevices) {
-    console.log('getUserMedia supported.');
-    navigator.mediaDevices.getUserMedia ({audio: true, video: true})
-    .then(function(stream) {
-        video.srcObject = stream;
-        video.onloadedmetadata = function(e) {
-            video.play();
-            video.muted = true;
-        };
+  console.log("getUserMedia supported.");
+  navigator.mediaDevices
+    .getUserMedia({ audio: true, video: true })
+    .then(function (stream) {
+      video.srcObject = stream;
+      video.onloadedmetadata = function (e) {
+        video.play();
+        video.muted = true;
+      };
 
-        // 创建 MediaStreamAudioSourceNode
-        // Feed the HTMLMediaElement into it
-        var audioCtx = new AudioContext();
-        var source = audioCtx.createMediaStreamSource(stream);
+      // 创建 MediaStreamAudioSourceNode
+      // Feed the HTMLMediaElement into it
+      var audioCtx = new AudioContext();
+      var source = audioCtx.createMediaStreamSource(stream);
 
-        // 创建二阶滤波器
-        var biquadFilter = audioCtx.createBiquadFilter();
-        biquadFilter.type = "lowshelf";
-        biquadFilter.frequency.value = 1000;
+      // 创建二阶滤波器
+      var biquadFilter = audioCtx.createBiquadFilter();
+      biquadFilter.type = "lowshelf";
+      biquadFilter.frequency.value = 1000;
+      biquadFilter.gain.value = range.value;
+
+      // 把 AudioBufferSourceNode 连接到 gainNode
+      // gainNode 连接到目的地，所以我们可以播放
+      // 音乐并用鼠标调节音量
+      source.connect(biquadFilter);
+      biquadFilter.connect(audioCtx.destination);
+
+      // Get new mouse pointer coordinates when mouse is moved
+      // then set new gain value
+
+      range.oninput = function () {
         biquadFilter.gain.value = range.value;
-
-        // 把 AudioBufferSourceNode 连接到 gainNode
-        // gainNode 连接到目的地，所以我们可以播放
-        // 音乐并用鼠标调节音量
-        source.connect(biquadFilter);
-        biquadFilter.connect(audioCtx.destination);
-
-        // Get new mouse pointer coordinates when mouse is moved
-        // then set new gain value
-
-        range.oninput = function() {
-            biquadFilter.gain.value = range.value;
-        }
+      };
     })
-    .catch(function(err) {
-        console.log('The following gUM error occured: ' + err);
+    .catch(function (err) {
+      console.log("The following gUM error occured: " + err);
     });
 } else {
-   console.log('getUserMedia not supported on your browser!');
+  console.log("getUserMedia not supported on your browser!");
 }
 
 // dump script to pre element

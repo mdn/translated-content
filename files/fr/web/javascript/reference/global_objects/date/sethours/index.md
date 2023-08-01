@@ -19,7 +19,7 @@ dateObj.setHours(valeurHeures[, valeurMinutes[, valeurSecondes[, valeurMs]]])
 ### Versions antérieures à JavaScript 1.3
 
 ```js
-dateObj.setHours(valeurHeures)
+dateObj.setHours(valeurHeures);
 ```
 
 ### Paramètres

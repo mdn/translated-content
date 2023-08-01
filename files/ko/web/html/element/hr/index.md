@@ -74,7 +74,7 @@ slug: Web/HTML/Element/hr
 
 ### HTML
 
-```html
+```html-nolint
 <p>
 This is the first paragraph of text.
 This is the first paragraph of text.
