@@ -113,7 +113,7 @@ translation_of: Web/API/Event/Comparison_of_Event_Targets
         {{ Non-standard_inline() }} Первоначальная цель события перед
         любым перенацеливанием. Подробнее см.
         <a
-          href="/en-US/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
+          href="/ru/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
           >Анонимный контент#Event_Flow_and_Targeting</a
         >.
       </td>

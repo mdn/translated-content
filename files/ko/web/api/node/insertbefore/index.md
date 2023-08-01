@@ -2,6 +2,7 @@
 title: Node.insertBefore()
 slug: Web/API/Node/insertBefore
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.insertBefore()`** 메소드는 참조된 노드 앞에 특정 부모 노드의 자식 노드를 삽입합니다. 만약 주어진 자식 노드가 document에 존재하는 노드를 참조한다면, `insertBefore()` 가 자식 노드를 현재 위치에서 새로운 위치로 옮깁니다. (노드를 다른 노드에 추가하기 전에 상위 노드에서 제거할 필요가 없습니다)
@@ -20,7 +21,7 @@ var insertedNode = parentNode.insertBefore(newNode, referenceNode);
 
 `referenceNode` 가 `null` 이라면, `newNode` 가 자식 노드의 리스트의 끝에 삽입됩니다.
 
-> **참고:** _`referenceNode`_ 는 **선택 인자가 아닙니다.** -- 명시적으로 `Node` 나 `null` 를 전달해야 합니다. 전달하지 않거나 잘못된 값을 전달하면 브라우저 버전에 따라 다른 결과를 얻게 됩니다.
+> **참고:** _`referenceNode`_ 는 **선택 인자가 아닙니다.** — 명시적으로 `Node` 나 `null` 를 전달해야 합니다. 전달하지 않거나 잘못된 값을 전달하면 브라우저 버전에 따라 다른 결과를 얻게 됩니다.
 
 ## Returns
 
@@ -30,30 +31,30 @@ var insertedNode = parentNode.insertBefore(newNode, referenceNode);
 
 ```html
 <div id="parentElement">
-   <span id="childElement">foo bar</span>
+  <span id="childElement">foo bar</span>
 </div>
 
 <script>
-// Create the new node to insert
-var newNode = document.createElement("span");
+  // Create the new node to insert
+  var newNode = document.createElement("span");
 
-// Get a reference to the parent node
-var parentDiv = document.getElementById("childElement").parentNode;
+  // Get a reference to the parent node
+  var parentDiv = document.getElementById("childElement").parentNode;
 
-// Begin test case [ 1 ] : Exist a childElement --> All working correctly
-var sp2 = document.getElementById("childElement");
-parentDiv.insertBefore(newNode, sp2);
-// End test case [ 1 ]
+  // Begin test case [ 1 ] : Exist a childElement --> All working correctly
+  var sp2 = document.getElementById("childElement");
+  parentDiv.insertBefore(newNode, sp2);
+  // End test case [ 1 ]
 
-// Begin test case [ 2 ] : childElement is of Type undefined
-var sp2 = undefined; // Not exist a node of id "childElement"
-parentDiv.insertBefore(newNode, sp2); // Implicit dynamic cast to type Node
-// End test case [ 2 ]
+  // Begin test case [ 2 ] : childElement is of Type undefined
+  var sp2 = undefined; // Not exist a node of id "childElement"
+  parentDiv.insertBefore(newNode, sp2); // Implicit dynamic cast to type Node
+  // End test case [ 2 ]
 
-// Begin test case [ 3 ] : childElement is of Type "undefined" ( string )
-var sp2 = "undefined"; // Not exist a node of id "childElement"
-parentDiv.insertBefore(newNode, sp2); // Generate "Type Error: Invalid Argument"
-// End test case [ 3 ]
+  // Begin test case [ 3 ] : childElement is of Type "undefined" ( string )
+  var sp2 = "undefined"; // Not exist a node of id "childElement"
+  parentDiv.insertBefore(newNode, sp2); // Generate "Type Error: Invalid Argument"
+  // End test case [ 3 ]
 </script>
 ```
 
@@ -70,20 +71,20 @@ parentDiv.insertBefore(newNode, sp2); // Generate "Type Error: Invalid Argument"
 </div>
 
 <script>
-// Create a new, plain <span> element
-var sp1 = document.createElement("span");
+  // Create a new, plain <span> element
+  var sp1 = document.createElement("span");
 
-// Get a reference to the element, before we want to insert the element
-var sp2 = document.getElementById("childElement");
-// Get a reference to the parent element
-var parentDiv = sp2.parentNode;
+  // Get a reference to the element, before we want to insert the element
+  var sp2 = document.getElementById("childElement");
+  // Get a reference to the parent element
+  var parentDiv = sp2.parentNode;
 
-// Insert the new element into the DOM before sp2
-parentDiv.insertBefore(sp1, sp2);
+  // Insert the new element into the DOM before sp2
+  parentDiv.insertBefore(sp1, sp2);
 </script>
 ```
 
-There is no `insertAfter` method. It can be emulated by combining the `insertBefore` method with [`nextSibling`](/en-US/docs/DOM/Node.nextSibling).
+There is no `insertAfter` method. It can be emulated by combining the `insertBefore` method with [`nextSibling`](/ko/docs/DOM/Node.nextSibling).
 
 In the previous example, `sp1` could be inserted after `sp2` using:
 
@@ -99,7 +100,7 @@ Insert an element before the first child element, using the [firstChild](/ko/doc
 
 ```js
 // Get a reference to the element in which we want to insert a new node
-var parentElement = document.getElementById('parentElement');
+var parentElement = document.getElementById("parentElement");
 // Get a reference to the first child
 var theFirstChild = parentElement.firstChild;
 

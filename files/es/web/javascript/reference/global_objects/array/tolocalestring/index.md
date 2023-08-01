@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/toLocaleString
 
 {{JSRef}}
 
-El método **`toLocaleString()`** devuelve una cadena de texto representando los elementos del array. Los elementos son convertidos a texto usando su método `toLocaleString` y dichos Strings son separados por un caracter específico para la localidad (como una coma para la separación de decimales “,”).
+El método **`toLocaleString()`** devuelve una cadena de texto representando los elementos del array. Los elementos son convertidos a texto usando su método `toLocaleString` y dichos Strings son separados por un caracter específico para la localidad (como una coma para la separación de decimales ",").
 
 {{EmbedInteractiveExample("pages/js/array-tolocalestring.html")}}
 

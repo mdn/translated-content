@@ -55,12 +55,10 @@ translation_of: Web/Manifest/screenshots
 ]
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                        | Status                       | Comment             | Feedback                                                                         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName('Manifest', '#screenshots-member', 'screenshots')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

@@ -132,5 +132,5 @@ document.querySelector("#myfiles").onchange=pullfiles;
 ## Смотрите также
 
 - [Using files from web applications](/ru/docs/Using_files_from_web_applications)
-- [`File`](/en-US/docs/DOM/File)
-- [`FileReader`](/en-US/docs/DOM/FileReader)
+- [`File`](/ru/docs/DOM/File)
+- [`FileReader`](/ru/docs/DOM/FileReader)

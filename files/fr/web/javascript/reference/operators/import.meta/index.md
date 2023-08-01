@@ -1,12 +1,7 @@
 ---
 title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
-tags:
-  - JavaScript
-  - Modules
-  - Reference
 translation_of: Web/JavaScript/Reference/Statements/import.meta
-original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
 
 {{JSSidebar("Statements")}}
@@ -16,7 +11,7 @@ L'objet **`import.meta`** est une méta-propriété qui expose des métadonnées
 ## Syntaxe
 
 ```js
-import.meta
+import.meta;
 ```
 
 ## Description

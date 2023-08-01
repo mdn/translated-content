@@ -203,7 +203,7 @@ console.log(instance.subPublicMethod())
 // expected output: "hello world"
 ```
 
-Getters and setters are special methods that bind to a class property and are called when that property is accessed or set. Use the [get](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [set](/en-US/docs/Web/JavaScript/Reference/Functions/set) syntax to declare a public instance getter or setter.
+Getters and setters are special methods that bind to a class property and are called when that property is accessed or set. Use the [get](/ko/docs/Web/JavaScript/Reference/Functions/get) and [set](/ko/docs/Web/JavaScript/Reference/Functions/set) syntax to declare a public instance getter or setter.
 
 ```js
 class ClassWithGetSet {

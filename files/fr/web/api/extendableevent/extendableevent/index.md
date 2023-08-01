@@ -1,13 +1,6 @@
 ---
 title: ExtendableEvent.ExtendableEvent()
 slug: Web/API/ExtendableEvent/ExtendableEvent
-tags:
-  - API
-  - Experimental
-  - ExtendableEvent
-  - Reference
-  - Service Workers
-  - ServiceWorker
 translation_of: Web/API/ExtendableEvent/ExtendableEvent
 ---
 

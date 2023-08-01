@@ -35,7 +35,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 ## 範例
 
 ```json
-"homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify"
+"homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/beastify"
 ```
 
 ## 瀏覽器兼容性

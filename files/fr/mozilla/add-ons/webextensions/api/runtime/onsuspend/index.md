@@ -13,9 +13,9 @@ Envoyé sur la page de l'événement juste avant son déchargement. Cela donne �
 ## Syntaxe
 
 ```js
-browser.runtime.onSuspend.addListener(listener)
-browser.runtime.onSuspend.removeListener(listener)
-browser.runtime.onSuspend.hasListener(listener)
+browser.runtime.onSuspend.addListener(listener);
+browser.runtime.onSuspend.removeListener(listener);
+browser.runtime.onSuspend.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

@@ -1,10 +1,6 @@
 ---
 title: AnalyserNode
 slug: Web/API/AnalyserNode
-tags:
-  - API
-  - AnalyserNode
-  - Reference
 translation_of: Web/API/AnalyserNode
 ---
 

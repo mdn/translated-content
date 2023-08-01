@@ -22,21 +22,22 @@ objRef =window.personalbar
 {{deprecated_inline}} The following complete HTML example shows the way that the visible property of the various "bar" objects is used, and also the change to the privileges necessary to write to the visible property of any of the bars on an existing window. Due to [deprecation of enablePrivilege](/zh-CN/docs/Bypassing_Security_Restrictions_and_Signing_Code) this functionality can not be used in web pages. EnablePrivilege is disabled in Firefox 15 and will be removed in Firefox 17.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<title>Various DOM Tests</title>
+  <head>
+    <title>Various DOM Tests</title>
 
-<script>
-// changing bar states on the existing window
-netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserWrite");
-window.personalbar.visible = !window.personalbar.visible;
-</script>
-
-</head>
-<body>
-  <p>Various DOM Tests</p>
-</body>
+    <script>
+      // changing bar states on the existing window
+      netscape.security.PrivilegeManager.enablePrivilege(
+        "UniversalBrowserWrite",
+      );
+      window.personalbar.visible = !window.personalbar.visible;
+    </script>
+  </head>
+  <body>
+    <p>Various DOM Tests</p>
+  </body>
 </html>
 ```
 

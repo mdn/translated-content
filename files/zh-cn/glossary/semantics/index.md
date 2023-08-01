@@ -28,7 +28,9 @@ HTML 中，例如，{{htmlelement("h1")}} 元素是一个语义化元素，赋�
 另一方面，你可以通过样式（CSS）来让任何的元素*看上去*像是一个最高级别的标题，就像下面所展示的方法一样：
 
 ```html
-<span style="font-size: 32px; margin: 21px 0;">Is this a top level heading?</span>
+<span style="font-size: 32px; margin: 21px 0;"
+  >Is this a top level heading?</span
+>
 ```
 
 这将会把这个元素渲染得像是一个最高级别的标题，但是它的值没有对应到最“最高级别标题”这一语义，所以在此之上，它不会获得更多额外的描述（只是一个普通“span”元素而不是“最高级别标题”这一语义）。所以在恰当的需求下使用恰当的 HTML 元素是一个不错的主意。

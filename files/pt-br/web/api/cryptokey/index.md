@@ -40,6 +40,6 @@ _Esta interface não herda, nem implementa nenhum método._
 
 - {{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.
 
-### Dicionário:
+### Dicionário
 
 "Key" = "Chave"

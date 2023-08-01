@@ -1,5 +1,5 @@
 ---
-title: '::after (:after)'
+title: "::after (:after)"
 slug: Web/CSS/::after
 ---
 
@@ -68,12 +68,12 @@ Podemos estilizar el texto o imágenes de la propiedad {{cssxref("content")}} de
 
 ```css
 .ribbon {
-  background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::after {
   content: "This is a fancy orange box.";
-  background-color: #FFBA10;
+  background-color: #ffba10;
   border-color: black;
   border-style: dotted;
 }
@@ -90,9 +90,15 @@ El siguiente ejemplo muestra el uso del [pseudo-elemento](/es/docs/Web/CSS/Pseud
 #### HTML
 
 ```html
-<p>Here we have some
-  <span tabindex="0" data-descr="collection of words and punctuation">text</span> with a few
-  <span tabindex="0" data-descr="small popups that appear when hovering">tooltips</span>.
+<p>
+  Here we have some
+  <span tabindex="0" data-descr="collection of words and punctuation"
+    >text</span
+  >
+  with a few
+  <span tabindex="0" data-descr="small popups that appear when hovering"
+    >tooltips</span
+  >.
 </p>
 ```
 
@@ -102,7 +108,7 @@ El siguiente ejemplo muestra el uso del [pseudo-elemento](/es/docs/Web/CSS/Pseud
 span[data-descr] {
   position: relative;
   text-decoration: underline;
-  color: #00F;
+  color: #00f;
   cursor: help;
 }
 

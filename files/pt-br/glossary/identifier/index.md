@@ -12,4 +12,4 @@ Em {{glossary("JavaScript")}}, identificadores podem conter somente caracteres a
 
 ### Conhecimento Geral
 
-- {{interwiki("wikipedia", "Identificador", "Identificador")}} no Wikipédia
+- [Identificador](https://pt.wikipedia.org/wiki/Identificador) no Wikipédia

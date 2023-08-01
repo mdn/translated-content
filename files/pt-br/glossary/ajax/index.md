@@ -14,7 +14,7 @@ Com websites interativos e padrões web modernos, o AJAX está sendo substituíd
 
 ### Conhecimentos gerais
 
-- {{interwiki("wikipedia", "AJAX")}} na Wikipedia
+- [AJAX](https://pt.wikipedia.org/wiki/AJAX) na Wikipedia
 
 ### Informações técnicas
 

@@ -22,7 +22,7 @@ _Hérite des méthodes de son interface parente, [`EventTarget`](/fr/docs/Web/AP
 - [`enumerateDevices()`](/fr/docs/Web/API/MediaDevices/enumerateDevices)
   - : Fournit un tableau d'informations sur les appareils média (en entrée et en sortie) disponibles sur le système.
 - [`getSupportedConstraints()`](/fr/docs/Web/API/MediaDevices/getSupportedConstraints)
-  - : Renvoie un objet dont le format respecte [`MediaTrackSupportedConstraints`](/fr/docs/Web/API/MediaTrackSupportedConstraints) et qui indique les propriétés contraintes qui sont prises en charge par l'interface [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack). Voir [l'API <i lang="en">Media Streams</i>](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) pour en savoir plus à propos des contraintes et leur utilisation.
+  - : Renvoie un objet dont le format respecte [`MediaTrackSupportedConstraints`](/fr/docs/Web/API/MediaTrackSupportedConstraints) et qui indique les propriétés contraintes qui sont prises en charge par l'interface [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack). Voir [l'API <i lang="en">Media Streams</i>](/fr/docs/Web/API/Media_Capture_and_Streams_API/Constraints) pour en savoir plus à propos des contraintes et leur utilisation.
 - [`getDisplayMedia()`](/fr/docs/Web/API/MediaDevices/getDisplayMedia)
   - : Demande à la personne de sélectionner un affichage ou une portion d'un affichage (par exemple une fenêtre) pour le/la capturer comme [`MediaStream`](/fr/docs/Web/API/MediaStream) à des fins de partage ou d'enregistrement. Cette méthode renvoie une promesse qui se résout en `MediaStream`.
 - [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia)
@@ -40,32 +40,33 @@ _Hérite des méthodes de son interface parente, [`EventTarget`](/fr/docs/Web/AP
 ```js
 // On place ces variables dans la portée globale afin d'y avoir
 // accès dans la console du navigateur.
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 const constraints = {
   audio: false,
-  video: true
+  video: true,
 };
 
-navigator.mediaDevices.getUserMedia(constraints)
+navigator.mediaDevices
+  .getUserMedia(constraints)
   .then((stream) => {
     const videoTracks = stream.getVideoTracks();
-    console.log('Flux obtenu avec des contraintes :', constraints);
+    console.log("Flux obtenu avec des contraintes :", constraints);
     console.log(`Utilisation de l'appareil vidéo : ${videoTracks[0].label}`);
     stream.onremovetrack = () => {
-      console.log('Flux terminé');
+      console.log("Flux terminé");
     };
     video.srcObject = stream;
   })
   .catch((error) => {
-    if (error.name === 'ConstraintNotSatisfiedError') {
+    if (error.name === "ConstraintNotSatisfiedError") {
       console.error(
-        `La résolution ${constraints.video.width.exact}x${constraints.video.height.exact} px n'est pas prise en charge par votre appareil.`
+        `La résolution ${constraints.video.width.exact}x${constraints.video.height.exact} px n'est pas prise en charge par votre appareil.`,
       );
-    } else if (error.name === 'PermissionDeniedError') {
+    } else if (error.name === "PermissionDeniedError") {
       console.error(
         "Les permissions nécessaires pour utiliser votre caméra ou votre micro " +
-        "n'ont pas été fournies. Vous devez autoriser l'accès à vos appareils " +
-        "depuis cette page afin que la démonstration fonctionne."
+          "n'ont pas été fournies. Vous devez autoriser l'accès à vos appareils " +
+          "depuis cette page afin que la démonstration fonctionne.",
       );
     } else {
       console.error(`Erreur getUserMedia : ${error.name}`, error);
@@ -83,7 +84,7 @@ navigator.mediaDevices.getUserMedia(constraints)
 
 ## Voir aussi
 
-- [L'API de capture et des flux multimédia](/en-US/docs/Web/API/Media_Capture_and_Streams_API)&nbsp;: l'API à laquelle appartient cette interface.
-- [L'API de capture d'écran](/en-US/docs/Web/API/Screen_Capture_API)&nbsp;: l'API qui définit la méthode [`getDisplayMedia()`](/fr/docs/Web/API/MediaDevices/getDisplayMedia).
-- [L'API WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- [L'API de capture et des flux multimédia](/fr/docs/Web/API/Media_Capture_and_Streams_API)&nbsp;: l'API à laquelle appartient cette interface.
+- [L'API de capture d'écran](/fr/docs/Web/API/Screen_Capture_API)&nbsp;: l'API qui définit la méthode [`getDisplayMedia()`](/fr/docs/Web/API/MediaDevices/getDisplayMedia).
+- [L'API WebRTC](/fr/docs/Web/API/WebRTC_API)
 - [`Navigator.mediaDevices`](/fr/docs/Web/API/Navigator/mediaDevices) qui fournit une référence à un objet `MediaDevices` permettant d'accéder aux appareils.

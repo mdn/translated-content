@@ -13,7 +13,7 @@ original_slug: Learn/Common_questions/What_are_hyperlinks
       <td>
         <a href="/en-US/Learn/How_the_Internet_works">인터넷이 작동하는 법</a>을
         알아야 하고
-        <a href="/en-US/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+        <a href="/ko/docs/Learn/page_vs_site_vs_server_vs_search_engine"
           >웹 페이지, 웹사이트, 웹 서버 그리고 검색엔진의 차이</a
         >에 익숙해야 한다.
       </td>

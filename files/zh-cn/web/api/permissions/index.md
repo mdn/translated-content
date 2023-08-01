@@ -21,10 +21,10 @@ slug: Web/API/Permissions
 ## Example
 
 ```js
-navigator.permissions.query({name:'geolocation'}).then(function(result) {
-  if (result.state === 'granted') {
+navigator.permissions.query({ name: "geolocation" }).then(function (result) {
+  if (result.state === "granted") {
     showLocalNewsWithGeolocation();
-  } else if (result.state === 'prompt') {
+  } else if (result.state === "prompt") {
     showButtonToEnableLocalNews();
   }
   // 如果没有此权限则不什么也做

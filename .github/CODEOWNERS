@@ -87,3 +87,4 @@
 /.github/     @mdn/core-dev
 /*            @mdn/core-dev
 /*.md         @mdn/core-dev @mdn/core-yari-content
+/.prettierignore

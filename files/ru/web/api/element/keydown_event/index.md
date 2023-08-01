@@ -34,7 +34,7 @@ translation_of: Web/API/Element/keydown_event
   </tbody>
 </table>
 
-События `keydown` и [`keyup`](/en-US/docs/Web/API/Element/keyup_event) показывают то, что клавиша была нажата, в то время как `keypress` показывает то, какой символ был введён. Например, прописную "a" `keydown` и `keyup` сообщат как 65, а `keypress` сообщит как 97. Заглавную же "A" все события сообщают как 65.
+События `keydown` и [`keyup`](/ru/docs/Web/API/Element/keyup_event) показывают то, что клавиша была нажата, в то время как `keypress` показывает то, какой символ был введён. Например, прописную "a" `keydown` и `keyup` сообщат как 65, а `keypress` сообщит как 97. Заглавную же "A" все события сообщают как 65.
 
 События клавиатуры генерируются только в `<inputs>`, `<textarea>` и любых элементах с атрибутом `contentEditable` или `tabindex="-1"`.
 
@@ -78,7 +78,7 @@ input.onkeydown = logKey;
 
 ## Смотрите также
 
-- [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
-- [`keypress`](/en-US/docs/Web/API/Element/keypress_event)
-- [`keyup`](/en-US/docs/Web/API/Element/keyup_event)
+- [`input`](/ru/docs/Web/API/HTMLElement/input_event)
+- [`keypress`](/ru/docs/Web/API/Element/keypress_event)
+- [`keyup`](/ru/docs/Web/API/Element/keyup_event)
 - [Document `keydown` event](/ru/docs/Web/API/Document/keydown_event)

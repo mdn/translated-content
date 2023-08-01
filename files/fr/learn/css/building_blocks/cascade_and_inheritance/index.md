@@ -2,12 +2,12 @@
 title: Cascade, spécificité et héritage
 slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
 l10n:
-  sourceCommit: e9d266e58c2464eb6dd745d68c18cb6db8a3d3c6
+  sourceCommit: 62681c2ef134407009c5c11fa679db1f485e016d
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
-L'objectif de ce chapitre est de mieux comprendre certains des concepts fondamentaux de CSS que sont la cascade, la spécificité et l'héritage. Tous les trois, ils contrôlent la façon dont le CSS est appliqué au HTML et comment les éventuels conflits entre les déclarations de style sont résolus.
+L'objectif de ce chapitre est de mieux comprendre certains des concepts fondamentaux de CSS que sont la cascade, la spécificité et l'héritage. Tous les trois contrôlent la façon dont le CSS est appliqué au HTML et comment les éventuels conflits entre les déclarations de style sont résolus.
 
 Bien que ce chapitre puisse sembler plus théorique voire académique que d'autres dans ce parcours, comprendre ces concepts vous facilitera la tâche par la suite&nbsp;! Nous vous recommandons de suivre ce chapitre avec attention et de vérifier que vous comprenez bien les concepts avant d'aller plus loin.
 
@@ -30,7 +30,7 @@ CSS est l'acronyme pour **<i lang="en">Cascading Style Sheets</i>** (soit «&nbs
 
 Lorsque vous travaillerez sur un projet, vous rencontrerez peut-être une règle CSS dont vous pensez qu'elle devrait s'appliquer à un élément, mais qui ne fonctionne pas. Il arrive souvent que le problème vienne de deux règles qui appliquent différentes valeurs pour la même propriété sur le même élément. [**La cascade**](/fr/docs/Web/CSS/Cascade) et [**la spécificité**](/fr/docs/Web/CSS/Specificity) sont des mécanismes qui contrôlent quelle règle s'applique lorsqu'un tel conflit se produit. Autrement dit, la règle qui met en forme votre élément peut ne pas être celle à laquelle vous vous attendez et comprendre ces mécanismes vous aidera à diagnostiquer, corriger voire éviter ces problèmes.
 
-Un autre concept fondamental est [**l'héritage**](/fr/docs/Web/CSS/inheritance). Celui-ci décrit comment certaines propriétés CSS héritent ou non par défaut des valeurs appliquées aux éléments parents. Là aussi, cela peut être une source de confusion si on ne comprend pas ce mécanisme alors qu'on observe un comportement inattendu.
+Un autre concept fondamental est [**l'héritage**](/fr/docs/Web/CSS/Inheritance). Celui-ci décrit comment certaines propriétés CSS héritent ou non par défaut des valeurs appliquées aux éléments parents. Là aussi, cela peut être une source de confusion si on ne comprend pas ce mécanisme alors qu'on observe un comportement inattendu.
 
 Commençons par un aperçu rapide de ces notions avant de les détailler une à une puis d'étudier leurs interactions entre elles et avec votre code CSS. Cela peut sembler complexe de prime abord, mais au fur et à mesure que vous écrirez du CSS, ce fonctionnement deviendra plus naturel.
 
@@ -162,7 +162,7 @@ La spécificité d'un sélecteur est mesurée selon 3 composantes différentes, 
 
 Les pseudo-classes de négation ([`:not()`](/fr/docs/Web/CSS/:not)), de sélection relationnelle ([`:has()`](/fr/docs/Web/CSS/:has)), et de correspondance ([`:is()`](/fr/docs/Web/CSS/:is)) n'ont pas d'effet par elles-mêmes sur la spécificité, ce sont leurs paramètres qui ont un impact. La contribution à la spécificité du sélecteur de chacune de ses pseudo-classes est égale à la spécificité la plus grande parmi les paramètres qui lui sont passés.
 
-Le tableau qui suit illustre quelques exemples pour une approche plus concrète. N'hésitez pas à les décomposer et assurez vous de bien comprendre la spécificité obtenue. Nous n'avons pas encore abordé tous les sélecteurs en détails, mais vous pourrez trouver leurs documentations respectives sur MDN au sein de [la référence des sélecteurs](/fr/docs/Web/CSS/CSS_Selectors).
+Le tableau qui suit illustre quelques exemples pour une approche plus concrète. N'hésitez pas à les décomposer et assurez vous de bien comprendre la spécificité obtenue. Nous n'avons pas encore abordé tous les sélecteurs en détails, mais vous pourrez trouver leurs documentations respectives sur MDN au sein de [la référence des sélecteurs](/fr/docs/Web/CSS/CSS_Selectors/Selectors_and_combinators).
 
 | Sélecteur                                 | Identifiants | Classes | Éléments | Spécificité totale |
 | ----------------------------------------- | ------------ | ------- | -------- | ------------------ |

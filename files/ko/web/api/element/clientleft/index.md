@@ -2,6 +2,7 @@
 title: Element.clientLeft
 slug: Web/API/Element/clientLeft
 ---
+
 {{ APIRef("DOM") }}
 
 엘리먼트의 왼쪽 테두리의 너비 (픽셀 단위)입니다. 엘리먼트의 텍스트 방향이 오른쪽에서 왼쪽이고 오버플로로 인해 왼쪽 수직 스크롤 막대가 렌더링되는 경우 수직 스크롤 막대의 너비가 포함됩니다. `clientLeft`는 왼쪽 여백 또는 왼쪽 패딩을 포함하지 않습니다. `clientLeft`는 읽기 전용입니다.

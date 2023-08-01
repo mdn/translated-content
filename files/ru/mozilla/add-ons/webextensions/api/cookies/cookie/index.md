@@ -11,6 +11,7 @@ tags:
   - данные
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 ---
+
 {{AddonSidebar()}}
 
 Тип `Cookie` из {{WebExtAPIRef("cookies")}} API представляет собой информацию о HTTP cookie.

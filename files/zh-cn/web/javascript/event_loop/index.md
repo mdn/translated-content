@@ -76,13 +76,13 @@ while (queue.waitForMessage()) {
 ```js
 const s = new Date().getSeconds();
 
-setTimeout(function() {
+setTimeout(function () {
   // 输出 "2"，表示回调函数并没有在 500 毫秒之后立即执行
   console.log("Ran after " + (new Date().getSeconds() - s) + " seconds");
 }, 500);
 
-while(true) {
-  if(new Date().getSeconds() - s >= 2) {
+while (true) {
+  if (new Date().getSeconds() - s >= 2) {
     console.log("Good, looped for 2 seconds");
     break;
   }
@@ -98,22 +98,20 @@ while(true) {
 基本上，`setTimeout` 需要等待当前队列中所有的消息都处理完毕之后才能执行，即使已经超出了由第二参数所指定的时间。
 
 ```js
-(function() {
-
-  console.log('这是开始');
+(function () {
+  console.log("这是开始");
 
   setTimeout(function cb() {
-    console.log('这是来自第一个回调的消息');
+    console.log("这是来自第一个回调的消息");
   });
 
-  console.log('这是一条消息');
+  console.log("这是一条消息");
 
   setTimeout(function cb1() {
-    console.log('这是来自第二个回调的消息');
+    console.log("这是来自第二个回调的消息");
   }, 0);
 
-  console.log('这是结束');
-
+  console.log("这是结束");
 })();
 
 // "这是开始"

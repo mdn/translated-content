@@ -10,7 +10,7 @@ slug: Web/API/MediaStreamTrack/getSettings
 ## 구문
 
 ```js
-const settings = track.getSettings()
+const settings = track.getSettings();
 ```
 
 ### 반환 값

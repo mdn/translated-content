@@ -2,6 +2,7 @@
 title: Document.open()
 slug: Web/API/Document/open
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.open()`** 메소드는 문서를 {{domxref("Document.write", "쓰기", "", "1")}} 위해 문서를 열 수 있도록 제공한다.
@@ -56,7 +57,7 @@ Starting with Gecko 1.9.2, `document.open()` uses the [principal](/ko/docs/Secur
 다음 예제는 Github 웹 사이트를 새 창으로 열게 되며, opener 개체를 `null`로 설정한다.
 
 ```js
-document.open('https://www.github.com','', 'noopener=true')
+document.open("https://www.github.com", "", "noopener=true");
 ```
 
 ## document.open()의 인자 2개
@@ -64,7 +65,7 @@ document.open('https://www.github.com','', 'noopener=true')
 브라우저에서는 2개의 인자를 가진 `document.open()` 또한 가지고 있으며, 아래와 같은 구조를 가진다.
 
 ```js
-document.open(type, replace)
+document.open(type, replace);
 ```
 
 Where `type` 인자는 문서를 작성할 MIME 형식을 정의하며(예: `text/html`), 현재 히스토리를 대체(예: `"replace"`) 하는 새 문서 작성을 시작할 수 있다.

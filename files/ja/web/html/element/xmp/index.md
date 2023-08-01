@@ -1,9 +1,11 @@
 ---
 title: <xmp>
 slug: Web/HTML/Element/xmp
+l10n:
+  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
-{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 ## 概要
 
@@ -17,11 +19,13 @@ slug: Web/HTML/Element/xmp
 
 ## 属性
 
-この要素は、すべての要素が持つ[グローバル属性](/ja/docs/HTML/global_attributes)以外の属性を持ちません。
+この要素は、すべての要素が持つ[グローバル属性](/ja/docs/Web/HTML/Global_attributes)以外の属性を持ちません。
 
 ## DOM インターフェイス
 
 この要素は {{domxref('HTMLElement')}} インターフェイスを実装しています。
+
+<!-- ## Technical summary -->
 
 ## 仕様書
 
@@ -33,7 +37,5 @@ slug: Web/HTML/Element/xmp
 
 ## 関連情報
 
-- 代替となり得る要素: {{ HTMLElement("pre") }} 要素、 {{ HTMLElement("code") }} 要素
-- {{HTMLElement("plaintext")}} 要素と {{ HTMLElement("listing") }} 要素も廃止となっています。
-
-{{HTMLSidebar}}
+- 代替となり得る要素: {{HTMLElement("pre")}} 要素、 {{HTMLElement("code")}} 要素
+- {{HTMLElement("plaintext")}} 要素も {{HTMLElement("xmp")}} と似ていますが、同様に廃止されています。

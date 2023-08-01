@@ -18,7 +18,7 @@ Hoje o W3C conduz a especificação do _DOM_; e o DOM Working Group está atualm
 
 ### Conhecimentos Gerais
 
-- {{interwiki("wikipedia", "Modelo de Objeto de Documentos", "DOM")}}
+- [DOM](https://pt.wikipedia.org/wiki/Modelo_de_Objeto_de_Documentos)
 
 ### Referência Técnica
 

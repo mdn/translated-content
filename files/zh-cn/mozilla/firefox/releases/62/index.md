@@ -75,7 +75,7 @@ _No changes._
 ### CSSOM
 
 - Support for [`CSSStyleDeclaration.getPropertyCSSValue()`](/zh-CN/docs/Web/API/CSSStyleDeclaration/getPropertyCSSValue) has been removed ([Firefox bug 1408301](https://bugzil.la/1408301)).
-- Support for [`CSSValue`](/zh-CN/docs/Web/API/CSSValue), [`CSSPrimitiveValue`](/zh-CN/docs/Web/API/CSSPrimitiveValue), and [`CSSValueList`](/zh-CN/docs/Web/API/CSSValueList) has been removed ({{bug()}}).
+- Support for {{domxref("CSSValue")}}, {{domxref("CSSPrimitiveValue")}}, and {{domxref("CSSValueList")}} has been removed ([Firefox bug 1459871](https://bugzil.la/1459871)).
 - [`window.getComputedStyle()`](/zh-CN/docs/Web/API/Window/getComputedStyle) no longer returns `null` when called on a `Window` which has no presentation ([Firefox bug 1467722](https://bugzil.la/1467722)).
 
 ### HTTP

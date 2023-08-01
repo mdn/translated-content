@@ -10,4 +10,4 @@ original_slug: Glossario/CRUD
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "CRUD")}} on Wikipedia
+- [CRUD](https://pt.wikipedia.org/wiki/CRUD) on Wikipedia

@@ -1,5 +1,5 @@
 ---
-title: 'Express Tutorial Part 3: Using a Database (with Mongoose)'
+title: "Express Tutorial Part 3: Using a Database (with Mongoose)"
 slug: Learn/Server-side/Express_Nodejs/mongoose
 ---
 
@@ -12,7 +12,7 @@ slug: Learn/Server-side/Express_Nodejs/mongoose
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website"
+        <a href="/ko/docs/Learn/Server-side/Express_Nodejs/skeleton_website"
           >Express Tutorial Part 2: Creating a skeleton website</a
         >
       </td>
@@ -65,7 +65,7 @@ NPM 패키지 매니저 사이트에는 사용가능한 많은 ODM/ORM 솔루션
 
 ### Using Mongoose and MongoDb for the LocalLibrary
 
-For the _Local Library_ example (and the rest of this topic) we're going to use the [Mongoose ODM](https://www.npmjs.com/package/mongoose) to access our library data. Mongoose acts as a front end to [MongoDB](https://www.mongodb.com/what-is-mongodb), an open source [NoSQL](https://en.wikipedia.org/wiki/NoSQL) database that uses a document-oriented data model. A “collection” of “documents”, in a MongoDB database, [is analogous to](https://docs.mongodb.com/manual/core/databases-and-collections/#collections) a “table” of “rows” in a relational database.
+For the _Local Library_ example (and the rest of this topic) we're going to use the [Mongoose ODM](https://www.npmjs.com/package/mongoose) to access our library data. Mongoose acts as a front end to [MongoDB](https://www.mongodb.com/what-is-mongodb), an open source [NoSQL](https://en.wikipedia.org/wiki/NoSQL) database that uses a document-oriented data model. A "collection" of "documents", in a MongoDB database, [is analogous to](https://docs.mongodb.com/manual/core/databases-and-collections/#collections) a "table" of "rows" in a relational database.
 
 This ODM and database combination is extremely popular in the Node community, partially because the document storage and query system looks very much like JSON, and is hence familiar to JavaScript developers.
 
@@ -119,10 +119,10 @@ _Mongoose_ requires a connection to a MongoDB database. You can `require()` and 
 
 ```js
 //Import the mongoose module
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
 //Set up default mongoose connection
-var mongoDB = 'mongodb://127.0.0.1/my_database';
+var mongoDB = "mongodb://127.0.0.1/my_database";
 mongoose.connect(mongoDB);
 // Get Mongoose to use the global promise library
 mongoose.Promise = global.Promise;
@@ -130,7 +130,7 @@ mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 
 //Bind connection to error event (to get notification of connection errors)
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.on("error", console.error.bind(console, "MongoDB connection error:"));
 ```
 
 You can get the default `Connection` object with `mongoose.connection`. Once connected, the open event is fired on the `Connection` instance.
@@ -151,14 +151,14 @@ The code fragment below shows how you might define a simple schema. First you `r
 
 ```js
 //Require Mongoose
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
 //Define a schema
 var Schema = mongoose.Schema;
 
 var SomeModelSchema = new Schema({
-    a_string: String,
-    a_date: Date
+  a_string: String,
+  a_date: Date,
 });
 ```
 
@@ -173,12 +173,12 @@ Models are created from schemas using the `mongoose.model()` method:
 var Schema = mongoose.Schema;
 
 var SomeModelSchema = new Schema({
-    a_string: String,
-    a_date: Date
+  a_string: String,
+  a_date: Date,
 });
 
 // Compile model from schema
-var SomeModel = mongoose.model('SomeModel', SomeModelSchema );
+var SomeModel = mongoose.model("SomeModel", SomeModelSchema);
 ```
 
 The first argument is the singular name of the collection that will be created for your model (Mongoose will create the database collection for the above model _SomeModel_ above), and the second argument is the schema you want to use in creating the model.
@@ -190,8 +190,7 @@ The first argument is the singular name of the collection that will be created f
 한 스키마는 임의의 숫자의 필드들을 가질 수 있습니다.(각각의 필드는 MongoDB에 저장된 문서의 필드를 대표합니다.) 아래의 예제 스키마는 일반적인 필드 타입들을 보여주고 있으며 그들이 어떻게 선언되는지 나타냅니다.
 
 ```js
-var schema = new Schema(
-{
+var schema = new Schema({
   name: String,
   binary: Buffer,
   living: Boolean,
@@ -201,11 +200,11 @@ var schema = new Schema(
   _someId: Schema.Types.ObjectId,
   array: [],
   ofString: [String], // You can also have an array of each of the other types too.
-  nested: { stuff: { type: String, lowercase: true, trim: true } }
-})
+  nested: { stuff: { type: String, lowercase: true, trim: true } },
+});
 ```
 
-Most of the [SchemaTypes](http://mongoosejs.com/docs/schematypes.html) (the descriptors after “type:” or after field names) are self explanatory. The exceptions are:
+Most of the [SchemaTypes](http://mongoosejs.com/docs/schematypes.html) (the descriptors after "type:" or after field names) are self explanatory. The exceptions are:
 
 - `ObjectId`: Represents specific instances of a model in the database. For example, a book might use this to represent its author object. This will actually contain the unique ID (`_id`) for the specified object. We can use the `populate()` method to pull in the associated information when needed.
 - [Mixed](http://mongoosejs.com/docs/schematypes.html#mixed): 임의의 스키마 타입입니다.(어떤 타입도 될 수 있음)
@@ -281,7 +280,7 @@ To create a record you can define an instance of the model and then call `save()
 
 ```js
 // Create an instance of model SomeModel
-var awesome_instance = new SomeModel({ name: 'awesome' });
+var awesome_instance = new SomeModel({ name: "awesome" });
 
 // Save the new model instance, passing a callback
 awesome_instance.save(function (err) {
@@ -295,7 +294,7 @@ Creation of records (along with updates, deletes, and queries) are asynchronous 
 You can also use `create()` to define the model instance at the same time as you save it. The callback will return an error for the first argument and the newly-created model instance for the second argument.
 
 ```js
-SomeModel.create({ name: 'also_awesome' }, function (err, awesome_instance) {
+SomeModel.create({ name: "also_awesome" }, function (err, awesome_instance) {
   if (err) return handleError(err);
   // saved!
 });
@@ -310,10 +309,10 @@ You can access the fields in this new record using the dot syntax, and change th
 console.log(awesome_instance.name); //should log 'also_awesome'
 
 // Change record by modifying the fields, then calling save().
-awesome_instance.name="New cool name";
+awesome_instance.name = "New cool name";
 awesome_instance.save(function (err) {
-   if (err) return handleError(err); // saved!
-   });
+  if (err) return handleError(err); // saved!
+});
 ```
 
 #### Searching for records
@@ -321,13 +320,13 @@ awesome_instance.save(function (err) {
 You can search for records using query methods, specifying the query conditions as a JSON document. The code fragment below shows how you might find all athletes in a database that play tennis, returning just the fields for athlete _name_ and _age_. Here we just specify one matching field (sport) but you can add more criteria, specify regular expression criteria, or remove the conditions altogether to return all athletes.
 
 ```js
-var Athlete = mongoose.model('Athlete', yourSchema);
+var Athlete = mongoose.model("Athlete", yourSchema);
 
 // find all athletes who play tennis, selecting the 'name' and 'age' fields
-Athlete.find({ 'sport': 'Tennis' }, 'name age', function (err, athletes) {
+Athlete.find({ sport: "Tennis" }, "name age", function (err, athletes) {
   if (err) return handleError(err);
   // 'athletes' contains the list of athletes that match the criteria.
-})
+});
 ```
 
 If you specify a callback, as shown above, the query will execute immediately. The callback will be invoked when the search completes.
@@ -338,10 +337,10 @@ If you don't specify a callback then the API will return a variable of type [Que
 
 ```js
 // find all athletes that play tennis
-var query = Athlete.find({ 'sport': 'Tennis' });
+var query = Athlete.find({ sport: "Tennis" });
 
 // selecting the 'name' and 'age' fields
-query.select('name age');
+query.select("name age");
 
 // limit our results to 5 items
 query.limit(5);
@@ -353,7 +352,7 @@ query.sort({ age: -1 });
 query.exec(function (err, athletes) {
   if (err) return handleError(err);
   // athletes contains an ordered list of 5 athletes who play Tennis
-})
+});
 ```
 
 Above we've defined the query conditions in the `find()` method. We can also do this using a `where()` function, and we can chain all the parts of our query together using the dot operator (.) rather than adding them separately. The code fragment below is the same as our query above, with an additional condition for the age.
@@ -386,27 +385,27 @@ You can create references from one document/model instance to another using the 
 For example, the following schema defines authors and stories. Each author can have multiple stories, which we represent as an array of `ObjectId`. Each story can have a single author. The "ref" (highlighted in bold below) tells the schema which model can be assigned to this field.
 
 ```js
-var mongoose = require('mongoose')
-  , Schema = mongoose.Schema
+var mongoose = require("mongoose"),
+  Schema = mongoose.Schema;
 
 var authorSchema = Schema({
-  name    : String,
-  stories : [{ type: Schema.Types.ObjectId, ref: 'Story' }]
+  name: String,
+  stories: [{ type: Schema.Types.ObjectId, ref: "Story" }],
 });
 
 var storySchema = Schema({
-  author : { type: Schema.Types.ObjectId, ref: 'Author' },
-  title    : String
+  author: { type: Schema.Types.ObjectId, ref: "Author" },
+  title: String,
 });
 
-var Story  = mongoose.model('Story', storySchema);
-var Author = mongoose.model('Author', authorSchema);
+var Story = mongoose.model("Story", storySchema);
+var Author = mongoose.model("Author", authorSchema);
 ```
 
 We can save our references to the related document by assigning the `_id` value. Below we create an author, then a book, and assign the author id to our stories author field.
 
 ```js
-var bob = new Author({ name: 'Bob Smith' });
+var bob = new Author({ name: "Bob Smith" });
 
 bob.save(function (err) {
   if (err) return handleError(err);
@@ -414,7 +413,7 @@ bob.save(function (err) {
   //Bob now exists, so lets create a story
   var story = new Story({
     title: "Bob goes sledding",
-    author: bob._id    // assign the _id from the our author Bob. This ID is created by default!
+    author: bob._id, // assign the _id from the our author Bob. This ID is created by default!
   });
 
   story.save(function (err) {
@@ -427,14 +426,13 @@ bob.save(function (err) {
 Our story document now has an author referenced by the author document's ID. In order to get the author information in our story results we use `populate()`, as shown below.
 
 ```js
-Story
-.findOne({ title: 'Bob goes sledding' })
-.populate('author') //This populates the author id with actual author information!
-.exec(function (err, story) {
-  if (err) return handleError(err);
-  console.log('The author is %s', story.author.name);
-  // prints "The author is Bob Smith"
-});
+Story.findOne({ title: "Bob goes sledding" })
+  .populate("author") //This populates the author id with actual author information!
+  .exec(function (err, story) {
+    if (err) return handleError(err);
+    console.log("The author is %s", story.author.name);
+    // prints "The author is Bob Smith"
+  });
 ```
 
 > **참고:** Astute readers will have noted that we added an author to our story, but we didn't do anything to add our story to our author's `stories` array. How then can we get all stories by a particular author? One way would be to add our author to the stories array, but this would result in us having two places where the information relating authors and stories needs to be maintained.
@@ -442,9 +440,7 @@ Story
 > A better way is to get the `_id` of our _author_, then use `find()` to search for this in the author field across all stories.
 >
 > ```js
-> Story
-> .find({ author : bob._id })
-> .exec(function (err, stories) {
+> Story.find({ author: bob._id }).exec(function (err, stories) {
 >   if (err) return handleError(err);
 >   // returns all stories that have Bob's id as their author.
 > });
@@ -460,25 +456,25 @@ While you can create schemas and models using any file structure you like, we hi
 // File: ./models/somemodel.js
 
 //Require Mongoose
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
 //Define a schema
 var Schema = mongoose.Schema;
 
 var SomeModelSchema = new Schema({
-    a_string          : String,
-    a_date            : Date,
+  a_string: String,
+  a_date: Date,
 });
 
 //Export function to create "SomeModel" model class
-module.exports = mongoose.model('SomeModel', SomeModelSchema );
+module.exports = mongoose.model("SomeModel", SomeModelSchema);
 ```
 
 You can then require and use the model immediately in other files. Below we show how you might use it to get all instances of the model.
 
 ```js
 //Create a SomeModel model just by requiring the module
-var SomeModel = require('../models/somemodel')
+var SomeModel = require("../models/somemodel");
 
 // Use the SomeModel object (model) to find all SomeModel records
 SomeModel.find(callback_function);
@@ -498,36 +494,36 @@ After logging in, you'll be taken to the [home](https://mlab.com/home) screen:
 
 1. Click **Create New** in the _MongoDB Deployments_ section.![](mlabcreatenewdeployment.png)
 2. This will open the _Cloud Provider Selection_ screen.
-    ![MLab - screen for new deployment](mlab_new_deployment_form_v2.png)
+   ![MLab - screen for new deployment](mlab_new_deployment_form_v2.png)
 
-    - Select the SANDBOX (Free) plan from the Plan Type section.
-    - Select any provider from the _Cloud Provider_ section. Different providers offer different regions (displayed below the selected plan type).
-    - Click the **Continue** button.
+   - Select the SANDBOX (Free) plan from the Plan Type section.
+   - Select any provider from the _Cloud Provider_ section. Different providers offer different regions (displayed below the selected plan type).
+   - Click the **Continue** button.
 
 3. This will open the _Select Region_ screen.
 
-    ![Select new region screen](mlab_new_deployment_select_region_v2.png)
+   ![Select new region screen](mlab_new_deployment_select_region_v2.png)
 
-    - Select the region closest to you and then **Continue**.
+   - Select the region closest to you and then **Continue**.
 
 4. This will open the _Final Details_ screen.
-    ![New deployment database name](mlab_new_deployment_final_details.png)
+   ![New deployment database name](mlab_new_deployment_final_details.png)
 
-    - Enter the name for the new database as `local_library` and then select **Continue**.
+   - Enter the name for the new database as `local_library` and then select **Continue**.
 
 5. This will open the _Order Confirmation_ screen.
-    ![Order confirmation screen](mlab_new_deployment_order_confirmation.png)
+   ![Order confirmation screen](mlab_new_deployment_order_confirmation.png)
 
-    - Click **Submit Order** to create the database.
+   - Click **Submit Order** to create the database.
 
 6. You will be returned to the home screen. Click on the new database you just created to open its details screen. As you can see the database has no collections (data).
-    ![mLab - Database details screen](mlab_new_deployment_database_details.png)
+   ![mLab - Database details screen](mlab_new_deployment_database_details.png)
 
-    The URL that you need to use to access your database is displayed on the form above (shown for this database circled above). In order to use this you need to create a database user that you can specify in the URL.
+   The URL that you need to use to access your database is displayed on the form above (shown for this database circled above). In order to use this you need to create a database user that you can specify in the URL.
 
 7. Click the **Users** tab and select the **Add database user** button.
 8. Enter a username and password (twice), and then press **Create**. Do not select _Make read only_.
-    ![](mlab_database_users.png)
+   ![](mlab_database_users.png)
 
 You now have now created the database, and have an URL (with username and password) that can be used to access it. This will look something like: `mongodb://your_user_namer:your_password@ds119748.mlab.com:19748/local_library`.
 
@@ -545,12 +541,12 @@ Open **/app.js** (in the root of your project) and copy the following text below
 
 ```js
 //Set up mongoose connection
-var mongoose = require('mongoose');
-var mongoDB = 'insert_your_database_url_here';
+var mongoose = require("mongoose");
+var mongoDB = "insert_your_database_url_here";
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.on("error", console.error.bind(console, "MongoDB connection error:"));
 ```
 
 As discussed [in the Mongoose primer above](#Connecting_to_MongoDB), this code creates the default connection to the database and binds to the error event (so that errors will be printed to the console).
@@ -573,35 +569,29 @@ We will define a separate module for each model, as [discussed above](#One_schem
 Copy the `Author` schema code shown below and paste it into your **./models/author.js** file. The scheme defines an author has having `String` SchemaTypes for the first and family names, that are required and have a maximum of 100 characters, and `Date` fields for the date of birth and death.
 
 ```js
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
-var AuthorSchema = new Schema(
-  {
-    first_name: {type: String, required: true, max: 100},
-    family_name: {type: String, required: true, max: 100},
-    date_of_birth: {type: Date},
-    date_of_death: {type: Date},
-  }
-);
+var AuthorSchema = new Schema({
+  first_name: { type: String, required: true, max: 100 },
+  family_name: { type: String, required: true, max: 100 },
+  date_of_birth: { type: Date },
+  date_of_death: { type: Date },
+});
 
 // Virtual for author's full name
-AuthorSchema
-.virtual('name')
-.get(function () {
-  return this.family_name + ', ' + this.first_name;
+AuthorSchema.virtual("name").get(function () {
+  return this.family_name + ", " + this.first_name;
 });
 
 // Virtual for author's URL
-AuthorSchema
-.virtual('url')
-.get(function () {
-  return '/catalog/author/' + this._id;
+AuthorSchema.virtual("url").get(function () {
+  return "/catalog/author/" + this._id;
 });
 
 //Export model
-module.exports = mongoose.model('Author', AuthorSchema);
+module.exports = mongoose.model("Author", AuthorSchema);
 ```
 
 We've also declared a [virtual](#Virtual_properties) for the AuthorSchema named "url" that returns the absolute URL required to get a particular instance of the model — we'll use the property in our templates whenever we need to get a link to a particular author.
@@ -616,29 +606,25 @@ At the end of the module we export the model.
 Copy the `Book` schema code shown below and paste it into your **./models/book.js** file. Most of this is similar to the author model — we've declared a schema with a number of string fields and a virtual for getting the URL of specific book records, and we've exported the model.
 
 ```js
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
-var BookSchema = new Schema(
-  {
-    title: {type: String, required: true},
-    author: {type: Schema.ObjectId, ref: 'Author', required: true},
-    summary: {type: String, required: true},
-    isbn: {type: String, required: true},
-    genre: [{type: Schema.ObjectId, ref: 'Genre'}]
-  }
-);
+var BookSchema = new Schema({
+  title: { type: String, required: true },
+  author: { type: Schema.ObjectId, ref: "Author", required: true },
+  summary: { type: String, required: true },
+  isbn: { type: String, required: true },
+  genre: [{ type: Schema.ObjectId, ref: "Genre" }],
+});
 
 // Virtual for book's URL
-BookSchema
-.virtual('url')
-.get(function () {
-  return '/catalog/book/' + this._id;
+BookSchema.virtual("url").get(function () {
+  return "/catalog/book/" + this._id;
 });
 
 //Export model
-module.exports = mongoose.model('Book', BookSchema);
+module.exports = mongoose.model("Book", BookSchema);
 ```
 
 The main difference here is that we've created two references to other models:
@@ -651,28 +637,29 @@ The main difference here is that we've created two references to other models:
 Finally, copy the `BookInstance` schema code shown below and paste it into your **./models/bookinstance.js** file. The `BookInstance` represents a specific copy of a book that someone might borrow, and includes information about whether the copy is available or on what date it is expected back, "imprint" or version details.
 
 ```js
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
-var BookInstanceSchema = new Schema(
-  {
-    book: { type: Schema.ObjectId, ref: 'Book', required: true }, //reference to the associated book
-    imprint: {type: String, required: true},
-    status: {type: String, required: true, enum: ['Available', 'Maintenance', 'Loaned', 'Reserved'], default: 'Maintenance'},
-    due_back: {type: Date, default: Date.now}
-  }
-);
+var BookInstanceSchema = new Schema({
+  book: { type: Schema.ObjectId, ref: "Book", required: true }, //reference to the associated book
+  imprint: { type: String, required: true },
+  status: {
+    type: String,
+    required: true,
+    enum: ["Available", "Maintenance", "Loaned", "Reserved"],
+    default: "Maintenance",
+  },
+  due_back: { type: Date, default: Date.now },
+});
 
 // Virtual for bookinstance's URL
-BookInstanceSchema
-.virtual('url')
-.get(function () {
-  return '/catalog/bookinstance/' + this._id;
+BookInstanceSchema.virtual("url").get(function () {
+  return "/catalog/bookinstance/" + this._id;
 });
 
 //Export model
-module.exports = mongoose.model('BookInstance', BookInstanceSchema);
+module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 ```
 
 The new things we show here are the field options:
@@ -701,19 +688,19 @@ In order to test the models (and to create some example books and other items th
 
 1. Download (or otherwise create) the file [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) inside your _express-locallibrary-tutorial_ directory (in the same level as `package.json`).
 
-    > **참고:** You don't need to know how [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) works; it just adds sample data into the database.
+   > **참고:** You don't need to know how [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) works; it just adds sample data into the database.
 
 2. Enter the following commands in the project root to install the _async_ module that is required by the script (we'll discuss this in later tutorials, )
 
-    ```bash
-    npm install async --save
-    ```
+   ```bash
+   npm install async --save
+   ```
 
 3. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
 
-    ```bash
-    node populatedb <your mongodb url>
-    ```
+   ```bash
+   node populatedb <your mongodb url>
+   ```
 
 4. The script should run through to completion, displaying items as it creates them in the terminal.
 

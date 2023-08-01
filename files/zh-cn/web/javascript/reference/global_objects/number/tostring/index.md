@@ -40,16 +40,16 @@ numObj.toString([radix])
 ```js
 var count = 10;
 
-console.log(count.toString());    // 输出 '10'
-console.log((17).toString());     // 输出 '17'
-console.log((17.2).toString());   // 输出 '17.2'
+console.log(count.toString()); // 输出 '10'
+console.log((17).toString()); // 输出 '17'
+console.log((17.2).toString()); // 输出 '17.2'
 
 var x = 6;
 
-console.log(x.toString(2));       // 输出 '110'
-console.log((254).toString(16));  // 输出 'fe'
+console.log(x.toString(2)); // 输出 '110'
+console.log((254).toString(16)); // 输出 'fe'
 
-console.log((-10).toString(2));   // 输出 '-1010'
+console.log((-10).toString(2)); // 输出 '-1010'
 console.log((-0xff).toString(2)); // 输出 '-11111111'
 ```
 

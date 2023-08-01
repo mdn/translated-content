@@ -157,7 +157,7 @@ Parcel 希望有一个 `index.html` 和一个 `index.js` 文件进行处理，�
 现在，我们需要在我们的工作目录中添加一个 `index.html` 文件。在你的测试目录中创建 `index.html`，并写入以下内容：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

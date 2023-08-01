@@ -1,5 +1,5 @@
 ---
-title: 'Glosario de MDN Web Docs: Definiciones de términos relacionados con la Web'
+title: "Glosario de MDN Web Docs: Definiciones de términos relacionados con la Web"
 slug: Glossary
 l10n:
   sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b

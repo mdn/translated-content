@@ -24,12 +24,12 @@ formData.values();
 ```js
 //创建一个 FormData 测试对象
 var formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 //显示值
 for (var value of formData.values()) {
-   console.log(value);
+  console.log(value);
 }
 ```
 

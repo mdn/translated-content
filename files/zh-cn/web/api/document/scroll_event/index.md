@@ -1,5 +1,5 @@
 ---
-title: 'Document: scroll event'
+title: "Document: scroll event"
 slug: Web/API/Document/scroll_event
 ---
 
@@ -49,11 +49,11 @@ function doSomething(scroll_pos) {
   // 根据滚动位置做的事
 }
 
-window.addEventListener('scroll', function(e) {
+window.addEventListener("scroll", function (e) {
   last_known_scroll_position = window.scrollY;
 
   if (!ticking) {
-    window.requestAnimationFrame(function() {
+    window.requestAnimationFrame(function () {
       doSomething(last_known_scroll_position);
       ticking = false;
     });

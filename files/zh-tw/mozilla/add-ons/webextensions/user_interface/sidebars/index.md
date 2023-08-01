@@ -22,7 +22,7 @@ browser.windows.getCurrent({ populate: true }).then((windowInfo) => {
 });
 ```
 
-如果側邊欄要在不同的視窗顯示不同內容這會很有用。範例請看 ["annotate-page" 範例](https://github.com/mdn/webextensions-examples/tree/master/annotate-page)。
+如果側邊欄要在不同的視窗顯示不同內容這會很有用。範例請看 ["annotate-page" 範例](https://github.com/mdn/webextensions-examples/tree/main/annotate-page)。
 
 側邊欄文件與後端腳本以及彈出視窗享有一樣的權限。他們可以透過{{WebExtAPIRef("runtime.getBackgroundPage()")}}直接讀取後端頁面（只要側邊欄隸屬於隱私模式的視窗），並且可以透過一些 messaging APIs 與內容腳本或原生應用互動，像是{{WebExtAPIRef("tabs.sendMessage()")}}與{{WebExtAPIRef("runtime.sendNativeMessage()")}}。
 
@@ -52,4 +52,4 @@ browser.windows.getCurrent({ populate: true }).then((windowInfo) => {
 
 ## 範例
 
-GitHub 上的 [webextensions-examples](https://github.com/mdn/webextensions-examples) 程式庫包含了建立側邊欄的 [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page) 範例。
+GitHub 上的 [webextensions-examples](https://github.com/mdn/webextensions-examples) 程式庫包含了建立側邊欄的 [annotate-page](https://github.com/mdn/webextensions-examples/tree/main/annotate-page) 範例。

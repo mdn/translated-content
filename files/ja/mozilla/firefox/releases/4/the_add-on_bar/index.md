@@ -15,8 +15,9 @@ Firefox 4 よりウィンドウの下部に新しいツールバーを実装す�
 ```js
 // 一番最近使われたウィンドウを探す
 
-var mediator = Components.classes['@mozilla.org/appshell/window-mediator;1']
-                  .getService(Components.interfaces.nsIWindowMediator);
+var mediator = Components.classes[
+  "@mozilla.org/appshell/window-mediator;1"
+].getService(Components.interfaces.nsIWindowMediator);
 var doc = mediator.getMostRecentWindow("navigator:browser").document;
 
 // そのウィンドウのアドオンバーを取得する
@@ -45,9 +46,14 @@ if (firstrun) {
   /* Code related to firstrun */
 } else {
   try {
-    var installedVersion = Services.prefs.getCharPref("extensions.YOUREXT.installedVersion");
+    var installedVersion = Services.prefs.getCharPref(
+      "extensions.YOUREXT.installedVersion",
+    );
     if (curVersion > installedVersion) {
-      Services.prefs.setCharPref("extensions.YOUREXT.installedVersion", curVersion);
+      Services.prefs.setCharPref(
+        "extensions.YOUREXT.installedVersion",
+        curVersion,
+      );
       /* Code related to upgrade */
     }
   } catch (ex) {

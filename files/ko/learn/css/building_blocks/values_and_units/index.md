@@ -22,11 +22,11 @@ CSS 에 사용된 모든 속성에는 해당 속성에 허용되는 값 이 있�
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         >
         학습) 및 , CSS 작동 방식 이해 (<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/ko/docs/Learn/CSS/First_steps"
           >CSS 첫 번째 단계</a
         >
         학습)
@@ -41,7 +41,7 @@ CSS 에 사용된 모든 속성에는 해당 속성에 허용되는 값 이 있�
 
 ## CSS 값이란 무엇인가?
 
-CSS 사양과 MDN 의 속성 페이지에서 [`<color>`](/en-US/docs/Web/CSS/color_value) 또는 [`<length>`](/en-US/docs/Web/CSS/length). 와 같이 꺽쇠 괄호로 묶여 있는 값을 찾을 수 있습니다. `<color>` 값이 특정 속성에 유효한 것으로 표시되면, [`<color>`](/en-US/docs/Web/CSS/color_value) 참조 페이지에 나열된대로 유효한 속성을 해당 속성의 값으로 사용할 수 있습니다.
+CSS 사양과 MDN 의 속성 페이지에서 [`<color>`](/ko/docs/Web/CSS/color_value) 또는 [`<length>`](/ko/docs/Web/CSS/length). 와 같이 꺽쇠 괄호로 묶여 있는 값을 찾을 수 있습니다. `<color>` 값이 특정 속성에 유효한 것으로 표시되면, [`<color>`](/ko/docs/Web/CSS/color_value) 참조 페이지에 나열된대로 유효한 속성을 해당 속성의 값으로 사용할 수 있습니다.
 
 > **참고:** CSS 값을 _데이터 유형_ 이라고 합니다. 용어는 기본적으로 상호 교환이 가능합니다 — CSS 에서 데이터 유형이라고 하는것을 볼 때, 실제로 가치를 말하는 멋진 방법입니다.
 
@@ -52,11 +52,11 @@ CSS 사양과 MDN 의 속성 페이지에서 [`<color>`](/en-US/docs/Web/CSS/col
 ```css
 h1 {
   color: black;
-  background-color: rgb(197,93,161);
+  background-color: rgb(197, 93, 161);
 }
 ```
 
-CSS 값은 허용가능한 하위값 모음을 정의하는 방법입니다. 즉, `<color>` 가 유효한 것으로 표시되면 — 키워드, 16진수 값, `rgb()` 함수 등 어떤 색상값을 사용할 수 있는지 궁금할 필요가 없습니다. 사용 가능한 `<color>` 값은 브라우저에서 지원한다고 가정합니다. 각 값에 대한 MDN 페이지는 브라우저 지원에 대한 정보를 제공합니다. 예를 들어 [`<color>`](/en-US/docs/Web/CSS/color_value) 페이지를 보면 브라우저 호환성 섹션에 다양한 색상값 유형과 지원이 나열되어 있습니다.
+CSS 값은 허용가능한 하위값 모음을 정의하는 방법입니다. 즉, `<color>` 가 유효한 것으로 표시되면 — 키워드, 16진수 값, `rgb()` 함수 등 어떤 색상값을 사용할 수 있는지 궁금할 필요가 없습니다. 사용 가능한 `<color>` 값은 브라우저에서 지원한다고 가정합니다. 각 값에 대한 MDN 페이지는 브라우저 지원에 대한 정보를 제공합니다. 예를 들어 [`<color>`](/ko/docs/Web/CSS/color_value) 페이지를 보면 브라우저 호환성 섹션에 다양한 색상값 유형과 지원이 나열되어 있습니다.
 
 여러가지 가능한 값을 시험해 볼 수 있도록 예를 들어 자주 접할 수 있는 몇 가지 유형의 값과 단위를 살펴보겠습니다.
 
@@ -64,12 +64,12 @@ CSS 값은 허용가능한 하위값 모음을 정의하는 방법입니다. 즉
 
 CSS 에서 사용할 수 있는 다양한 숫자 데이터 형식이 있습니다. 다음은 모두 숫자로 분류됩니다:
 
-| 데이터 형식  | 설명     |
-| ---- | --- |
-| [`<integer>`](/ko/docs/Web/CSS/integer)       | `<integer>` 은 `1024` 또는`-55` 와 같은 정수입니다. |
-| [`<number>`](/ko/docs/Web/CSS/number)         | `<number>` 는 10진수를 나타냅니다 — 소수점 이하의 소수 자릿수 (예: `0.255`, `128` 또는 `-1.2`) 가 있을 수도 있고 없을 수도 있습니다.|
-| [`<dimension>`](/ko/docs/Web/CSS/dimension) | `<dimension>` 은 예를 들어 `45deg`, `5s` 또는 `10px`. 과 같은 단위가 붙어있는 `<number>` 입니다. `<dimension>` 은 [`<length>`](/ko/docs/Web/CSS/length), [`<angle>`](/ko/docs/Web/CSS/angle), [`<time>`](/ko/docs/Web/CSS/time) 및 [`<resolution>`](/ko/docs/Web/CSS/resolution) 의 종류를 포함하는 카테고리입니다[.](/ko/docs/Web/CSS/resolution) |
-| [`<percentage>`](/en-US/docs/Web/CSS/percentage) | `<percentage>` 는 다른 값의 일부, 예를 들어 `50%` 를 나타냅니다. 백분율 값은 항상 다른 수량을 기준으로 합니다. 예를 들어 요소의 길이는 부모 요소의 길이를 기준으로 합니다.                                                                                                                                                                                     |
+| 데이터 형식                                   | 설명                                                                                                                                                                                                                                                                                                                                               |
+| --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`<integer>`](/ko/docs/Web/CSS/integer)       | `<integer>` 은 `1024` 또는`-55` 와 같은 정수입니다.                                                                                                                                                                                                                                                                                                |
+| [`<number>`](/ko/docs/Web/CSS/number)         | `<number>` 는 10진수를 나타냅니다 — 소수점 이하의 소수 자릿수 (예: `0.255`, `128` 또는 `-1.2`) 가 있을 수도 있고 없을 수도 있습니다.                                                                                                                                                                                                               |
+| [`<dimension>`](/ko/docs/Web/CSS/dimension)   | `<dimension>` 은 예를 들어 `45deg`, `5s` 또는 `10px`. 과 같은 단위가 붙어있는 `<number>` 입니다. `<dimension>` 은 [`<length>`](/ko/docs/Web/CSS/length), [`<angle>`](/ko/docs/Web/CSS/angle), [`<time>`](/ko/docs/Web/CSS/time) 및 [`<resolution>`](/ko/docs/Web/CSS/resolution) 의 종류를 포함하는 카테고리입니다[.](/ko/docs/Web/CSS/resolution) |
+| [`<percentage>`](/ko/docs/Web/CSS/percentage) | `<percentage>` 는 다른 값의 일부, 예를 들어 `50%` 를 나타냅니다. 백분율 값은 항상 다른 수량을 기준으로 합니다. 예를 들어 요소의 길이는 부모 요소의 길이를 기준으로 합니다.                                                                                                                                                                         |
 
 ### 길이
 
@@ -111,7 +111,7 @@ CSS 에서 사용할 수 있는 다양한 숫자 데이터 형식이 있습니�
 
 아래 예에서 일부 상대 및 절대 길이 단위의 동작을 확인할 수 있습니다. 첫 번째 박스에는 {{cssxref("width")}} 픽셀 단위로 설정되어 있습니다. 절대 단위로서 이 너비는 다른 사항에 관계없이 동일하게 유지됩니다.
 
-두 번째 박스의 너비는 `vw` (viewport 너비) 단위로 설정됩니다. 이 값은 viewport 너비를 기준으로 하므로, 10vw 는 viewport 너비의 10% 입니다. 브라우저 창의 너비를 변경하면, 박스의 크기가 변경되지만, 이 예제는 [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) 을 사용하여 페이지에 포함되므로 작동하지 않습니다. 이 기능을 실제로 보려면 [브라우저 탭에서 예제를 연 후 에 시도](https://mdn.github.io/css-examples/learn/values-units/length.html) 해야 합니다.
+두 번째 박스의 너비는 `vw` (viewport 너비) 단위로 설정됩니다. 이 값은 viewport 너비를 기준으로 하므로, 10vw 는 viewport 너비의 10% 입니다. 브라우저 창의 너비를 변경하면, 박스의 크기가 변경되지만, 이 예제는 [`<iframe>`](/ko/docs/Web/HTML/Element/iframe) 을 사용하여 페이지에 포함되므로 작동하지 않습니다. 이 기능을 실제로 보려면 [브라우저 탭에서 예제를 연 후 에 시도](https://mdn.github.io/css-examples/learn/values-units/length.html) 해야 합니다.
 
 세 번째 박스는 `em` 단위를 사용합니다. 글꼴 크기에 상대적입니다. `.wrapper` class 를 포함하는 {{htmlelement("div")}} 를 포함하여 글꼴 크기를 `1em` 으로 설정했습니다. 이 값을 `1.5em` 으로 변경하면 모든 요소의 글꼴 크기가 증가하지만, 너비가 해당 글꼴 크기에 비례하므로 마지막 항목만 넓어집니다.
 
@@ -151,7 +151,7 @@ HTML 은 중첩된 목록의 집합니다 — 총 3개의 목록이 있으며 �
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 650)}}
 
-많은 값이 길이 또는 백분율을 허용하지만, 길이만 허용하는 값도 있습니다. MDN 속성 참조 페이지에서 어떤 값이 허용되는지 확인할 수 있습니다. 허용된 값에 [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) 가 포함된 경우 길이 또는 백분율을 사용할 수 있습니다. 허용된 값에 `<length>` 만 포함된 경우, 백분율을 사용할 수 없습니다.
+많은 값이 길이 또는 백분율을 허용하지만, 길이만 허용하는 값도 있습니다. MDN 속성 참조 페이지에서 어떤 값이 허용되는지 확인할 수 있습니다. 허용된 값에 [`<length-percentage>`](/ko/docs/Web/CSS/length-percentage) 가 포함된 경우 길이 또는 백분율을 사용할 수 있습니다. 허용된 값에 `<length>` 만 포함된 경우, 백분율을 사용할 수 없습니다.
 
 ### 숫자
 
@@ -173,7 +173,7 @@ CSS 에서 색상을 지정하는 방법은 여러가지가 있으며, 그 중 �
 
 ### 색상 키워드
 
-여기의 학습 섹션이나 MDN 의 다른 예에서 색상 키워드를 지정하는 간단하고 이해하기 쉬운 방법인 색상 키워드를 볼 수 있습니다. 이 키워드에는 여러가지가 있으며 그중 일부는 상당히 재미있는 이름을 가지고 있습니다! [`<color>`](/en-US/docs/Web/CSS/color_value) 값에 대한 전체 목록을 페이지에서 볼 수 있습니다.
+여기의 학습 섹션이나 MDN 의 다른 예에서 색상 키워드를 지정하는 간단하고 이해하기 쉬운 방법인 색상 키워드를 볼 수 있습니다. 이 키워드에는 여러가지가 있으며 그중 일부는 상당히 재미있는 이름을 가지고 있습니다! [`<color>`](/ko/docs/Web/CSS/color_value) 값에 대한 전체 목록을 페이지에서 볼 수 있습니다.
 
 **아래의 라이브 예제에서 다른 색상 값을 사용하여 작동하는 방법에 대한 아이디어를 얻으십시오.**
 
@@ -227,17 +227,17 @@ RGB 에 RGBA 가 있는 것처럼, HSL 에는 HSLA 에 상응하는 것이 있�
 
 ## 이미지
 
-[`<image>`](/en-US/docs/Web/CSS/image) 데이터 형식은 이미지가 유효한 값인 경우 사용됩니다. 이것은 `url()` 함수 또는 gradient 를 통해 가리키는 실제 이미지 파일일 수 있습니다.
+[`<image>`](/ko/docs/Web/CSS/image) 데이터 형식은 이미지가 유효한 값인 경우 사용됩니다. 이것은 `url()` 함수 또는 gradient 를 통해 가리키는 실제 이미지 파일일 수 있습니다.
 
 아래 예제에서 CSS `background-image` 속성의 값으로 사용되는 이미지와 gradient 를 보여주었습니다.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 740)}}
 
-> **참고:** `<image>` 에 대해 가능한 다른 값이 있지만 이 값은 최신이며 최신 브라우저 지원이 좋지 않습니다. \<image> 데이터 형식을 읽으려면 MDN 페이지에서 [`<image>`](/en-US/docs/Web/CSS/image) 데이터 형식을 확인하십시오.
+> **참고:** `<image>` 에 대해 가능한 다른 값이 있지만 이 값은 최신이며 최신 브라우저 지원이 좋지 않습니다. \<image> 데이터 형식을 읽으려면 MDN 페이지에서 [`<image>`](/ko/docs/Web/CSS/image) 데이터 형식을 확인하십시오.
 
 ## 위치 (Position)
 
-[`<position>`](/en-US/docs/Web/CSS/position_value) 데이터 형식은 배경 이미지 ([`background-position`](/en-US/docs/Web/CSS/background-position) 를 통해) 와 같은 항목을 배치하는 데 사용되는 2D 좌표를 나타냅니다. `top`, `left`, `bottom`, `right` 및 `center` 와 같은 키워드를 사용하여 항목을 2D 박스의 특정 범위에 맞춰 길이와 함께 박스의 위쪽 및 왼쪽 가장자리에서 offset 을 나타냅니다.
+[`<position>`](/ko/docs/Web/CSS/position_value) 데이터 형식은 배경 이미지 ([`background-position`](/ko/docs/Web/CSS/background-position) 를 통해) 와 같은 항목을 배치하는 데 사용되는 2D 좌표를 나타냅니다. `top`, `left`, `bottom`, `right` 및 `center` 와 같은 키워드를 사용하여 항목을 2D 박스의 특정 범위에 맞춰 길이와 함께 박스의 위쪽 및 왼쪽 가장자리에서 offset 을 나타냅니다.
 
 일반적인 position 값은 두 가지 값으로 구성됩니다 — 첫 번째는 위치를 가로로 설정하고, 두 번째는 세로로 설정합니다. 한 축의 값만 지정하면 다른 축은 `center` 으로 설정됩니다.
 
@@ -271,6 +271,6 @@ CSS 에서 문자열을 사용하는 장소가 있습니다. 예를 들면, [생
 
 기억해야 할 중요한 점은 각 속성에 정의된 값 목록이 있고 각 값에는 하위 값이 무엇인지 설명하는 정의가 있다는 것입니다. 그런 다음 MDN 에서 세부 사항을 찾을 수 있습니다.
 
-예를 들어, [`<image>`](/en-US/docs/Web/CSS/image) 를 사용하면 색상 gradient 를 만들 수 있다는 점을 이해하면 유용하지만 명백하지 않은 지식이 있을 수 있습니다!
+예를 들어, [`<image>`](/ko/docs/Web/CSS/image) 를 사용하면 색상 gradient 를 만들 수 있다는 점을 이해하면 유용하지만 명백하지 않은 지식이 있을 수 있습니다!
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}

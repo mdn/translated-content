@@ -12,4 +12,4 @@ Em outras palavras, ele diz ao navegador que apenas altere o protocolo de HTTP p
 
 - {{HTTPHeader("Strict-Transport-Security")}}
 - Artigo OWASP: [HTTP Strict Transport Security](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security)
-- Wikipedia: {{interwiki("wikipedia", "HTTP Strict Transport Security")}}
+- Wikipedia: [HTTP Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)

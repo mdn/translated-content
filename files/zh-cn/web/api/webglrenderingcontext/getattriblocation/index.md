@@ -27,7 +27,7 @@ GLint gl.getAttribLocation(program, name);
 ## 示例
 
 ```js
-gl.getAttribLocation(program, 'vColor');
+gl.getAttribLocation(program, "vColor");
 ```
 
 ## 规范

@@ -13,4 +13,4 @@ O HTTP é textual (toda a comunicação é feita em texto simples) e sem estado 
 ## Leia mais
 
 - [HTTP no MDN](/pt-BR/docs/Web/HTTP)
-- {{interwiki("wikipedia", "Hypertext Transfer Protocol", "HTTP")}} na Wikipedia
+- [HTTP](https://pt.wikipedia.org/wiki/Hypertext_Transfer_Protocol) na Wikipedia

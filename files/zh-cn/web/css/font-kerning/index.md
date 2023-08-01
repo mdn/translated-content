@@ -72,11 +72,11 @@ div {
 ### JavaScript
 
 ```js
-var input  = document.getElementById('input'),
-    kern   = document.getElementById('kern'),
-    nokern = document.getElementById('nokern');
+var input = document.getElementById("input"),
+  kern = document.getElementById("kern"),
+  nokern = document.getElementById("nokern");
 
-input.addEventListener('keyup', function() {
+input.addEventListener("keyup", function () {
   kern.textContent = input.value; /* Update content */
   nokern.textContent = input.value;
 });

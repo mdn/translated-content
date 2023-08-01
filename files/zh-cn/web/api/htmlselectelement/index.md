@@ -91,13 +91,13 @@ _这个接口从 {{domxref("HTMLElement")}}，{{domxref("Element")}} 和 {{domxr
 </select>
 */
 
-var select = document.getElementById('s');
+var select = document.getElementById("s");
 
 // return the index of the selected option
 console.log(select.selectedIndex); // 1
 
 // return the value of the selected option
-console.log(select.options[select.selectedIndex].value) // Second
+console.log(select.options[select.selectedIndex].value); // Second
 ```
 
 A better way to track changes to the user's selection is to watch for the {{domxref("HTMLElement/change_event", "change")}} event to occur on the `<select>`. This will tell you when the value changes, and you can then update anything you need to. See [the example provided](/zh-CN/docs/Web/API/HTMLElement/change_event#select_element) in the documentation for the `change` event for details.

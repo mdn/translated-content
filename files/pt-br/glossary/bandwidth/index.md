@@ -8,4 +8,4 @@ Largura de banda é a medida de quanta informação pode trafegar através de um
 
 ## Learn more
 
-- {{Interwiki("wikipedia", "Bandwidth")}} on Wikipedia
+- [Bandwidth](https://pt.wikipedia.org/wiki/Bandwidth) on Wikipedia

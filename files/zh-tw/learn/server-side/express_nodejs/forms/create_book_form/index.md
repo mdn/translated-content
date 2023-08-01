@@ -40,7 +40,7 @@ exports.book_create_get = function (req, res, next) {
         authors: results.authors,
         genres: results.genres,
       });
-    }
+    },
   );
 };
 ```
@@ -117,7 +117,7 @@ exports.book_create_post = [
             book: book,
             errors: errors.array(),
           });
-        }
+        },
       );
       return;
     } else {

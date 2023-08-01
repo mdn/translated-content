@@ -88,17 +88,9 @@ clip: unset;
 
 ```html
 <p class="dotted-border">
-  <img
-    src="macarons.png"
-    title="Image originale" />
-  <img
-    id="top-left"
-    src="macarons.png"
-    title="Image rognée en haut à gauche" />
-  <img
-    id="middle"
-    src="macarons.png"
-    title="Image rognée au centre" />
+  <img src="macarons.png" title="Image originale" />
+  <img id="top-left" src="macarons.png" title="Image rognée en haut à gauche" />
+  <img id="middle" src="macarons.png" title="Image rognée au centre" />
   <img
     id="bottom-right"
     src="macarons.png"

@@ -1,13 +1,6 @@
 ---
 title: PerformanceNavigationTiming
 slug: Web/API/PerformanceNavigationTiming
-tags:
-  - API
-  - Interface
-  - Navigation Timing API
-  - Performance Timeline API
-  - Reference
-  - Performance Web
 translation_of: Web/API/PerformanceNavigationTiming
 ---
 

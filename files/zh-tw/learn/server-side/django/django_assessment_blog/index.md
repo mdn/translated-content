@@ -168,7 +168,7 @@ The following screenshot provide an example of what the finished program should 
 
 ### 列出所有的部落格文章
 
-這個頁面會列出所有部落格內的文章(可以從側邊選單的“所有文章”連結進入)。
+這個頁面會列出所有部落格內的文章(可以從側邊選單的「所有文章」連結進入)。
 幾項提醒：
 
 - 側邊選單也要列出目前登入的使用者。
@@ -180,7 +180,7 @@ The following screenshot provide an example of what the finished program should 
 
 ### 列出所有部落客(文章作者)
 
-可以由側邊選單的“所有部落客”進入此頁面，並於頁面上提供連結至每一位部落客。
+可以由側邊選單的「所有部落客」進入此頁面，並於頁面上提供連結至每一位部落客。
 從截圖可以發現到，並沒有任何一位使用者登入。
 
 ![List of all bloggers](diyblog_blog_allbloggers.png)

@@ -49,7 +49,7 @@ _也从其父接口继承方法 , {{domxref("BaseAudioContext")}}._
 简单声明：
 
 ```js
-var audioCtx = new AudioContext;
+var audioCtx = new AudioContext();
 ```
 
 跨浏览器的方式：

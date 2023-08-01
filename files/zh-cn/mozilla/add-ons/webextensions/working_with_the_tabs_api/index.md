@@ -63,7 +63,7 @@ To see how {{WebExtAPIRef("tabs.query")}} and {{WebExtAPIRef("tabs.Tab")}} are u
 
 ### manifest.json
 
-Here is the [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json):
+Here is the [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/manifest.json):
 
 ```json
 {
@@ -73,12 +73,10 @@ Here is the [manifest.json](https://github.com/mdn/webextensions-examples/blob/m
     "default_popup": "tabs.html"
   },
   "description": "A list of methods you can perform on a tab.",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs",
   "manifest_version": 2,
   "name": "Tabs, tabs, tabs",
-  "permissions": [
-    "tabs"
-  ],
+  "permissions": ["tabs"],
   "version": "1.0"
 }
 ```
@@ -93,43 +91,35 @@ Here is the [manifest.json](https://github.com/mdn/webextensions-examples/blob/m
 tabs.html defines the content of the extension's popup:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="tabs.css" />
+  </head>
 
- <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="tabs.css"/>
- </head>
+  <body>
+    <div class="panel">
+      <div class="panel-section panel-section-header">
+        <div class="text-section-header">Tabs-tabs-tabs</div>
+      </div>
 
-<body>
+      <a href="#" id="tabs-move-beginning"
+        >Move active tab to the beginning of the window</a
+      ><br />
 
- <div class="panel">
-    <div class="panel-section panel-section-header">
-     <div class="text-section-header">Tabs-tabs-tabs</div>
+      … Define the other menu items …
+
+      <div class="switch-tabs">
+        <p>Switch to tab</p>
+
+        <div id="tabs-list"></div>
+      </div>
     </div>
 
-    <a href="#" id="tabs-move-beginning">Move active tab to the beginning of the window</a><br>
-
-
-…
-
-Define the other menu items
-…
-
-    <div class="switch-tabs">
-
-     <p>Switch to tab</p>
-
-     <div id="tabs-list"></div>
-
-    </div>
- </div>
-
- <script src="tabs.js"></script>
-
-</body>
-
+    <script src="tabs.js"></script>
+  </body>
 </html>
 ```
 
@@ -141,7 +131,7 @@ Here is a summary of the above does:
 
 ### tabs.js
 
-In [tabs.js](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js), we’ll see how the list of tabs is built and added to the popup.
+In [tabs.js](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.js), we’ll see how the list of tabs is built and added to the popup.
 
 #### Creating the popup
 
@@ -155,7 +145,7 @@ The first thing that `listTabs()` does is to call `getCurrentWindowTabs()`. This
 
 ```js
 function getCurrentWindowTabs() {
-  return browser.tabs.query({currentWindow: true});
+  return browser.tabs.query({ currentWindow: true });
 }
 ```
 
@@ -184,25 +174,24 @@ Next, we'll create the links for each tab:
 1. Loops through the first 5 items from the {{WebExtAPIRef("tabs.Tab")}} object.
 2. For each item, add a hyperlink to the document fragment.
 
-    - The link’s label—that is, its text—is set using the tab’s title (or the ID, if it has no title).
-    - The link’s address is set using the tab’s ID.
+   - The link’s label—that is, its text—is set using the tab’s title (or the ID, if it has no title).
+   - The link’s address is set using the tab’s ID.
 
-    ```js
-    for (let tab of tabs) {
+   ```js
+   for (let tab of tabs) {
      if (!tab.active && counter <= limit) {
-        let tabLink = document.createElement('a');
+       let tabLink = document.createElement("a");
 
-        tabLink.textContent = tab.title || tab.id;
+       tabLink.textContent = tab.title || tab.id;
 
-       tabLink.setAttribute('href', tab.id);
-        tabLink.classList.add('switch-tabs');
-        currentTabs.appendChild(tabLink);
+       tabLink.setAttribute("href", tab.id);
+       tabLink.classList.add("switch-tabs");
+       currentTabs.appendChild(tabLink);
      }
 
      counter += 1;
-
-    }
-    ```
+   }
+   ```
 
 Finally, the document fragment is written to the `tabs-list` div:
 
@@ -285,16 +274,18 @@ None of the functions require a permission to operate, so there are no features 
 tabs.html defines the "menu" displayed in the popup, which includes the "Move active tab to the beginning of the window list" option, with a series of `<a>` tags grouped by a visual separator. Each menu item is given an ID, which is used in tabs.js to determine which menu item is being requested.
 
 ```html
-    <a href="#" id="tabs-move-beginning">Move active tab to the beginning of the window</a><br>
-    <a href="#" id="tabs-move-end">Move active tab to the end of the window</a><br>
+<a href="#" id="tabs-move-beginning"
+  >Move active tab to the beginning of the window</a
+><br />
+<a href="#" id="tabs-move-end">Move active tab to the end of the window</a
+><br />
 
-    <div class="panel-section-separator"></div>
+<div class="panel-section-separator"></div>
 
+<a href="#" id="tabs-duplicate">Duplicate active tab</a><br />
 
-    <a href="#" id="tabs-duplicate">Duplicate active tab</a><br>
-
-    <a href="#" id="tabs-reload">Reload active tab</a><br>
-    <a href="#" id="tabs-alertinfo">Alert active tab info</a><br>
+<a href="#" id="tabs-reload">Reload active tab</a><br />
+<a href="#" id="tabs-alertinfo">Alert active tab info</a><br />
 ```
 
 #### tabs.js
@@ -321,16 +312,16 @@ A series of `if` statements then look to match the ID of the item clicked.
 This code snippet is for the "Move active tab to the beginning of the window list" option:
 
 ```js
- if (e.target.id === "tabs-move-beginning") {
-   callOnActiveTab((tab, tabs) => {
-     var index = 0;
-     if (!tab.pinned) {
-       index = firstUnpinnedTab(tabs);
-     }
-     console.log(`moving ${tab.id} to ${index}`)
-     browser.tabs.move([tab.id], {index});
-   });
- }
+if (e.target.id === "tabs-move-beginning") {
+  callOnActiveTab((tab, tabs) => {
+    var index = 0;
+    if (!tab.pinned) {
+      index = firstUnpinnedTab(tabs);
+    }
+    console.log(`moving ${tab.id} to ${index}`);
+    browser.tabs.move([tab.id], { index });
+  });
+}
 ```
 
 It's worth noting the use of `console.log()`. This enables you to output information to the [debugger](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Debugging) console, which can be useful when resolving issues found during development.
@@ -340,15 +331,15 @@ It's worth noting the use of `console.log()`. This enables you to output informa
 The move code first calls `callOnActiveTab()` which in turn calls `getCurrentWindowTabs()` to get a {{WebExtAPIRef("tabs.Tab")}} object containing the active window’s tabs. It then loops through the object to find and return the active tab object:
 
 ```js
- function callOnActiveTab(callback) {
-   getCurrentWindowTabs().then((tabs) => {
-     for (var tab of tabs) {
-       if (tab.active) {
-         callback(tab, tabs);
-       }
-     }
-   });
- }
+function callOnActiveTab(callback) {
+  getCurrentWindowTabs().then((tabs) => {
+    for (var tab of tabs) {
+      if (tab.active) {
+        callback(tab, tabs);
+      }
+    }
+  });
+}
 ```
 
 ##### Pinned tabs
@@ -357,18 +348,18 @@ A feature of tabs is that the user can _pin_ tabs in a window. Pinned tabs are p
 
 ```js
 function firstUnpinnedTab(tabs) {
- for (var tab of tabs) {
-   if (!tab.pinned) {
-     return tab.index;
-   }
- }
+  for (var tab of tabs) {
+    if (!tab.pinned) {
+      return tab.index;
+    }
+  }
 }
 ```
 
 We now have everything needed to move the tab: the active tab object from which we can get the tab ID and the position the tab is to be moved to. So, we can implement the move:
 
 ```js
-     browser.tabs.move([tab.id], {index});
+browser.tabs.move([tab.id], { index });
 ```
 
 The remaining functions to duplicate, reload, create, and remove tabs are implemented similarly.
@@ -465,27 +456,20 @@ The latter is the most useful, as it allows an extension to use {{WebExtAPIRef("
 {
   "description": "Adds a page action to toggle applying CSS to pages.",
 
- "manifest_version": 2,
- "name": "apply-css",
- "version": "1.0",
- "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/apply-css",
+  "manifest_version": 2,
+  "name": "apply-css",
+  "version": "1.0",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/apply-css",
 
- "background": {
-
+  "background": {
     "scripts": ["background.js"]
- },
+  },
 
- "page_action": {
+  "page_action": {
+    "default_icon": "icons/off.svg"
+  },
 
-    "default_icon": "icons/off.svg",
-    "browser_style": true
- },
-
- "permissions": [
-    "activeTab",
-    "tabs"
- ]
-
+  "permissions": ["activeTab", "tabs"]
 }
 ```
 
@@ -513,9 +497,9 @@ When first loaded, the extension uses {{WebExtAPIRef("tabs.query")}} to get a li
 var gettingAllTabs = browser.tabs.query({});
 
 gettingAllTabs.then((tabs) => {
- for (let tab of tabs) {
-   initializePageAction(tab);
- }
+  for (let tab of tabs) {
+    initializePageAction(tab);
+  }
 });
 ```
 
@@ -523,9 +507,9 @@ gettingAllTabs.then((tabs) => {
 
 ```js
 function protocolIsApplicable(url) {
- var anchor =  document.createElement('a');
- anchor.href = url;
- return APPLICABLE_PROTOCOLS.includes(anchor.protocol);
+  var anchor = document.createElement("a");
+  anchor.href = url;
+  return APPLICABLE_PROTOCOLS.includes(anchor.protocol);
 }
 ```
 
@@ -533,12 +517,11 @@ Then, if the example can act on the tab, `initializePageAction()` sets the tab's
 
 ```js
 function initializePageAction(tab) {
-
- if (protocolIsApplicable(tab.url)) {
-   browser.pageAction.setIcon({tabId: tab.id, path: "icons/off.svg"});
-   browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
-   browser.pageAction.show(tab.id);
- }
+  if (protocolIsApplicable(tab.url)) {
+    browser.pageAction.setIcon({ tabId: tab.id, path: "icons/off.svg" });
+    browser.pageAction.setTitle({ tabId: tab.id, title: TITLE_APPLY });
+    browser.pageAction.show(tab.id);
+  }
 }
 ```
 
@@ -562,24 +545,21 @@ browser.pageAction.onClicked.addListener(toggleCSS);
 
 ```js
 function toggleCSS(tab) {
-
-
- function gotTitle(title) {
-
+  function gotTitle(title) {
     if (title === TITLE_APPLY) {
-     browser.pageAction.setIcon({tabId: tab.id, path: "icons/on.svg"});
-     browser.pageAction.setTitle({tabId: tab.id, title: TITLE_REMOVE});
-     browser.tabs.insertCSS({code: CSS});
+      browser.pageAction.setIcon({ tabId: tab.id, path: "icons/on.svg" });
+      browser.pageAction.setTitle({ tabId: tab.id, title: TITLE_REMOVE });
+      browser.tabs.insertCSS({ code: CSS });
     } else {
-     browser.pageAction.setIcon({tabId: tab.id, path: "icons/off.svg"});
-     browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
-     browser.tabs.removeCSS({code: CSS});
+      browser.pageAction.setIcon({ tabId: tab.id, path: "icons/off.svg" });
+      browser.pageAction.setTitle({ tabId: tab.id, title: TITLE_APPLY });
+      browser.tabs.removeCSS({ code: CSS });
     }
- }
+  }
 
- var gettingTitle = browser.pageAction.getTitle({tabId: tab.id});
+  var gettingTitle = browser.pageAction.getTitle({ tabId: tab.id });
 
- gettingTitle.then(gotTitle);
+  gettingTitle.then(gotTitle);
 }
 ```
 
@@ -587,7 +567,7 @@ Finally, to ensure that the `pageAction` is valid after each update to the tab, 
 
 ```js
 browser.tabs.onUpdated.addListener((id, changeInfo, tab) => {
- initializePageAction(tab);
+  initializePageAction(tab);
 });
 ```
 

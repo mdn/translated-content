@@ -11,16 +11,16 @@ slug: Web/JavaScript/Reference/Classes/Public_class_fields
 
 ```js
 class ClassWithInstanceField {
-  instanceField = 'instance field'
+  instanceField = "instance field";
 }
 
 class ClassWithStaticField {
-  static staticField = 'static field'
+  static staticField = "static field";
 }
 
 class ClassWithPublicInstanceMethod {
   publicMethod() {
-    return 'hello world'
+    return "hello world";
   }
 }
 ```
@@ -35,22 +35,22 @@ class ClassWithPublicInstanceMethod {
 
 ```js
 class ClassWithStaticField {
-  static staticField = 'static field'
+  static staticField = "static field";
 }
 
-console.log(ClassWithStaticField.staticField)
-// 预期输出值："static field" 
+console.log(ClassWithStaticField.staticField);
+// 预期输出值："static field"
 ```
 
 没有设定初始化的字段将默认被初始化为 `undefined`。
 
 ```js
 class ClassWithStaticField {
-  static staticField
+  static staticField;
 }
 
-console.assert(Object.hasOwn(ClassWithStaticField, 'staticField'))
-console.log(ClassWithStaticField.staticField)
+console.assert(Object.hasOwn(ClassWithStaticField, "staticField"));
+console.log(ClassWithStaticField.staticField);
 // 预期输出值："undefined"
 ```
 
@@ -58,17 +58,17 @@ console.log(ClassWithStaticField.staticField)
 
 ```js
 class ClassWithStaticField {
-  static baseStaticField = 'base field'
+  static baseStaticField = "base field";
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = 'sub class field'
+  static subStaticField = "sub class field";
 }
 
-console.log(SubClassWithStaticField.subStaticField)
+console.log(SubClassWithStaticField.subStaticField);
 // 预期输出值："sub class field"
 
-console.log(SubClassWithStaticField.baseStaticField)
+console.log(SubClassWithStaticField.baseStaticField);
 // 预期输出值："base field"
 ```
 
@@ -76,20 +76,22 @@ console.log(SubClassWithStaticField.baseStaticField)
 
 ```js
 class ClassWithStaticField {
-  static baseStaticField = 'base static field'
-  static anotherBaseStaticField = this.baseStaticField
+  static baseStaticField = "base static field";
+  static anotherBaseStaticField = this.baseStaticField;
 
-  static baseStaticMethod() { return 'base static method output' }
+  static baseStaticMethod() {
+    return "base static method output";
+  }
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = super.baseStaticMethod()
+  static subStaticField = super.baseStaticMethod();
 }
 
-console.log(ClassWithStaticField.anotherBaseStaticField)
+console.log(ClassWithStaticField.anotherBaseStaticField);
 // 预期输出值："base static field"
 
-console.log(SubClassWithStaticField.subStaticField)
+console.log(SubClassWithStaticField.subStaticField);
 // 预期输出值："base static method output"
 ```
 
@@ -101,11 +103,11 @@ console.log(SubClassWithStaticField.subStaticField)
 
 ```js
 class ClassWithInstanceField {
-  instanceField = 'instance field'
+  instanceField = "instance field";
 }
 
-const instance = new ClassWithInstanceField()
-console.log(instance.instanceField)
+const instance = new ClassWithInstanceField();
+console.log(instance.instanceField);
 // 预期输出值："instance field"
 ```
 
@@ -113,22 +115,22 @@ console.log(instance.instanceField)
 
 ```js
 class ClassWithInstanceField {
-  instanceField
+  instanceField;
 }
 
-const instance = new ClassWithInstanceField()
-console.assert(Object.hasOwn(instance, 'instanceField'))
-console.log(instance.instanceField)
+const instance = new ClassWithInstanceField();
+console.assert(Object.hasOwn(instance, "instanceField"));
+console.log(instance.instanceField);
 // 预期输出值："undefined"
 ```
 
 和属性（properties）一样，字段名可以由计算得出。
 
 ```js
-const PREFIX = 'prefix';
+const PREFIX = "prefix";
 
 class ClassWithComputedFieldName {
-    [`${PREFIX}Field`] = 'prefixed field';
+  [`${PREFIX}Field`] = "prefixed field";
 }
 
 const instance = new ClassWithComputedFieldName();
@@ -140,22 +142,24 @@ console.log(instance.prefixField);
 
 ```js
 class ClassWithInstanceField {
-  baseInstanceField = 'base field'
-  anotherBaseInstanceField = this.baseInstanceField
-  baseInstanceMethod() { return 'base method output' }
+  baseInstanceField = "base field";
+  anotherBaseInstanceField = this.baseInstanceField;
+  baseInstanceMethod() {
+    return "base method output";
+  }
 }
 
 class SubClassWithInstanceField extends ClassWithInstanceField {
-  subInstanceField = super.baseInstanceMethod()
+  subInstanceField = super.baseInstanceMethod();
 }
 
-const base = new ClassWithInstanceField()
-const sub = new SubClassWithInstanceField()
+const base = new ClassWithInstanceField();
+const sub = new SubClassWithInstanceField();
 
-console.log(base.anotherBaseInstanceField)
+console.log(base.anotherBaseInstanceField);
 // 预期输出值："base field"
 
-console.log(sub.subInstanceField)
+console.log(sub.subInstanceField);
 // 预期输出值："base method output"
 ```
 
@@ -163,11 +167,11 @@ console.log(sub.subInstanceField)
 
 ```js
 class ClassWithInstanceField {
-  instanceField = 'instance field';
+  instanceField = "instance field";
 
   constructor() {
     console.log(this.instanceField);
-    this.instanceField = 'new value';
+    this.instanceField = "new value";
   }
 }
 
@@ -180,7 +184,7 @@ console.log(instance.instanceField); // "new value"
 ```js
 class Base {
   constructor() {
-    console.log('Base constructor:', this.field);
+    console.log("Base constructor:", this.field);
   }
 }
 
@@ -188,7 +192,7 @@ class Derived extends Base {
   field = 1;
   constructor() {
     super();
-    console.log('Derived constructor:', this.field);
+    console.log("Derived constructor:", this.field);
   }
 }
 
@@ -233,7 +237,7 @@ const instance2 = new DerivedWithConstructor(); // Logs 1
 ```js
 class ClassWithStaticMethod {
   static staticMethod() {
-    return 'static method has been called.';
+    return "static method has been called.";
   }
 }
 
@@ -250,12 +254,12 @@ console.log(ClassWithStaticMethod.staticMethod());
 ```js
 class ClassWithPublicInstanceMethod {
   publicMethod() {
-    return 'hello world'
+    return "hello world";
   }
 }
 
-const instance = new ClassWithPublicInstanceMethod()
-console.log(instance.publicMethod())
+const instance = new ClassWithPublicInstanceMethod();
+console.log(instance.publicMethod());
 // 预期输出值："hello world"
 ```
 
@@ -265,9 +269,9 @@ console.log(instance.publicMethod())
 
 ```js
 class ClassWithFancyMethods {
-  *generatorMethod() { }
-  async asyncMethod() { }
-  async *asyncGeneratorMethod() { }
+  *generatorMethod() {}
+  async asyncMethod() {}
+  async *asyncGeneratorMethod() {}
 }
 ```
 
@@ -275,20 +279,20 @@ class ClassWithFancyMethods {
 
 ```js
 class BaseClass {
-  msg = 'hello world'
+  msg = "hello world";
   basePublicMethod() {
-    return this.msg
+    return this.msg;
   }
 }
 
 class SubClass extends BaseClass {
   subPublicMethod() {
-    return super.basePublicMethod()
+    return super.basePublicMethod();
   }
 }
 
-const instance = new SubClass()
-console.log(instance.subPublicMethod())
+const instance = new SubClass();
+console.log(instance.subPublicMethod());
 // 预期输出值："hello world"
 ```
 
@@ -296,21 +300,21 @@ console.log(instance.subPublicMethod())
 
 ```js
 class ClassWithGetSet {
-  #msg = 'hello world'
+  #msg = "hello world";
   get msg() {
-    return this.#msg
+    return this.#msg;
   }
   set msg(x) {
-    this.#msg = `hello ${x}`
- }
+    this.#msg = `hello ${x}`;
+  }
 }
 
-const instance = new ClassWithGetSet()
-console.log(instance.msg)
+const instance = new ClassWithGetSet();
+console.log(instance.msg);
 // 预期输出值："hello world"
 
-instance.msg = 'cake'
-console.log(instance.msg)
+instance.msg = "cake";
+console.log(instance.msg);
 // 预期输出值："hello cake"
 ```
 

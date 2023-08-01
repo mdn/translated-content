@@ -1,5 +1,5 @@
 ---
-title: '<param>: 객체 매개변수 요소'
+title: "<param>: 객체 매개변수 요소"
 slug: Web/HTML/Element/param
 ---
 

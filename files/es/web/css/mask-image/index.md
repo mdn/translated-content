@@ -1,5 +1,5 @@
 ---
-title: '-webkit-mask-image'
+title: "-webkit-mask-image"
 slug: Web/CSS/mask-image
 original_slug: Web/CSS/-webkit-mask-image
 ---
@@ -37,11 +37,11 @@ La propiedad CSS `-webkit-mask-image` establece la imagen de máscara para un el
 
 ```css
 body {
-  -webkit-mask-image: url('images/mymask.png');
+  -webkit-mask-image: url("images/mymask.png");
 }
 
 div {
-  -webkit-mask-image: url('images/foo.png'), url('images/bar.png');
+  -webkit-mask-image: url("images/foo.png"), url("images/bar.png");
 }
 
 p {

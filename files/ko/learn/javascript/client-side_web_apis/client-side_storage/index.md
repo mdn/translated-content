@@ -18,8 +18,8 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
         <a href="/ko/docs/Learn/JavaScript/Building_blocks"
           >구성 요소</a
         >
-        <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript 객체</a> 참고),
-        <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
+        <a href="/ko/docs/Learn/JavaScript/Objects">JavaScript 객체</a> 참고),
+        <a href="/ko/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
           >Client-side API의 기본</a
         >
       </td>
@@ -71,7 +71,7 @@ Cache와 Service Workers의 사용은 심화 주제이므로 이 문서에서는
 
 ## Storing simple data — web storage
 
-The [Web Storage API](/en-US/docs/Web/API/Web_Storage_API) is very easy to use — you store simple name/value pairs of data (limited to strings, numbers, etc.) and retrieve these values when needed.
+The [Web Storage API](/ko/docs/Web/API/Web_Storage_API) is very easy to use — you store simple name/value pairs of data (limited to strings, numbers, etc.) and retrieve these values when needed.
 
 ### Basic syntax
 
@@ -229,17 +229,17 @@ Let's build up the example, so you can understand how it works.
 
 Your example is finished — well done! All that remains now is to save your code and test your HTML page in a browser. You can see our [finished version running live here](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html).
 
-> **Note:** There is another, slightly more complex example to explore at [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API).
+> **Note:** There is another, slightly more complex example to explore at [Using the Web Storage API](/ko/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API).
 
 > **Note:** In the line `<script src="index.js" defer></script>` of the source for our finished version, the `defer` attribute specifies that the contents of the {{htmlelement("script")}} element will not execute until the page has finished loading.
 
 ## Storing complex data — IndexedDB
 
-The [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) (sometimes abbreviated IDB) is a complete database system available in the browser in which you can store complex related data, the types of which aren't limited to simple values like strings or numbers. You can store videos, images, and pretty much anything else in an IndexedDB instance.
+The [IndexedDB API](/ko/docs/Web/API/IndexedDB_API) (sometimes abbreviated IDB) is a complete database system available in the browser in which you can store complex related data, the types of which aren't limited to simple values like strings or numbers. You can store videos, images, and pretty much anything else in an IndexedDB instance.
 
 The IndexedDB API allows you to create a database, then create object stores within that database.
 Object stores are like tables in a relational database, and each object store can contain a number of objects.
-To learn more about the IndexedDB API, see [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB).
+To learn more about the IndexedDB API, see [Using IndexedDB](/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB).
 
 However, this does come at a cost: IndexedDB is much more complex to use than the Web Storage API. In this section, we'll really only scratch the surface of what it is capable of, but we will give you enough to get started.
 
@@ -291,7 +291,7 @@ Now let's look at what we have to do in the first place, to actually set up a da
    ```js
    // error handler signifies that the database didn't open successfully
    openRequest.addEventListener("error", () =>
-     console.error("Database failed to open")
+     console.error("Database failed to open"),
    );
 
    // success handler signifies that the database opened successfully
@@ -395,7 +395,7 @@ function addData(e) {
   });
 
   transaction.addEventListener("error", () =>
-    console.log("Transaction not opened due to error")
+    console.log("Transaction not opened due to error"),
   );
 }
 ```
@@ -518,7 +518,7 @@ function deleteItem(e) {
 }
 ```
 
-- The first part of this could use some explaining — we retrieve the ID of the record to be deleted using `Number(e.target.parentNode.getAttribute('data-note-id'))` — recall that the ID of the record was saved in a `data-note-id` attribute on the `<li>` when it was first displayed. We do however need to pass the attribute through the global built-in [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) object as it is of datatype string, and therefore wouldn't be recognized by the database, which expects a number.
+- The first part of this could use some explaining — we retrieve the ID of the record to be deleted using `Number(e.target.parentNode.getAttribute('data-note-id'))` — recall that the ID of the record was saved in a `data-note-id` attribute on the `<li>` when it was first displayed. We do however need to pass the attribute through the global built-in [`Number()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number) object as it is of datatype string, and therefore wouldn't be recognized by the database, which expects a number.
 - We then get a reference to the object store using the same pattern we've seen previously, and use the {{domxref("IDBObjectStore.delete()")}} method to delete the record from the database, passing it the ID.
 - When the database transaction is complete, we delete the note's `<li>` from the DOM, and again do the check to see if the `<ul>` is now empty, inserting a note as appropriate.
 
@@ -566,7 +566,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
            displayVideo(
              request.result.mp4,
              request.result.webm,
-             request.result.name
+             request.result.name,
            );
          } else {
            // Fetch the videos from the network
@@ -587,10 +587,10 @@ Let's walk through the most interesting parts of the example. We won't look at i
    // Fetch the MP4 and WebM versions of the video using the fetch() function,
    // then expose their response bodies as blobs
    const mp4Blob = fetch(`videos/${video.name}.mp4`).then((response) =>
-     response.blob()
+     response.blob(),
    );
    const webmBlob = fetch(`videos/${video.name}.webm`).then((response) =>
-     response.blob()
+     response.blob(),
    );
 
    // Only run the next code when both promises have fulfilled
@@ -616,7 +616,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
      const request = objectStore.add({ mp4, webm, name });
 
      request.addEventListener("success", () =>
-       console.log("Record addition attempt finished")
+       console.log("Record addition attempt finished"),
      );
      request.addEventListener("error", () => console.error(request.error));
    }
@@ -659,11 +659,11 @@ The above example already shows how to create an app that will store large asset
 
 ![Firefox offline screen with an illustration of a cartoon character to the left-hand side holding a two-pin plug in its right hand and a two-pin socket in its left hand. On the right-hand side there is an Offline Mode message and a button labeled 'Try again'.](ff-offline.png)
 
-This is where [Service workers](/en-US/docs/Web/API/Service_Worker_API) and the closely-related [Cache API](/en-US/docs/Web/API/Cache) come in.
+This is where [Service workers](/ko/docs/Web/API/Service_Worker_API) and the closely-related [Cache API](/ko/docs/Web/API/Cache) come in.
 
 A service worker is a JavaScript file that is registered against a particular origin (website, or part of a website at a certain domain) when it is accessed by a browser. When registered, it can control pages available at that origin. It does this by sitting between a loaded page and the network and intercepting network requests aimed at that origin.
 
-When it intercepts a request, it can do anything you wish to it (see [use case ideas](/en-US/docs/Web/API/Service_Worker_API#other_use_case_ideas)), but the classic example is saving the network responses offline and then providing those in response to a request instead of the responses from the network. In effect, it allows you to make a website work completely offline.
+When it intercepts a request, it can do anything you wish to it (see [use case ideas](/ko/docs/Web/API/Service_Worker_API#other_use_case_ideas)), but the classic example is saving the network responses offline and then providing those in response to a request instead of the responses from the network. In effect, it allows you to make a website work completely offline.
 
 The Cache API is another client-side storage mechanism, with a bit of a difference — it is designed to save HTTP responses, and so works very well with service workers.
 
@@ -682,7 +682,7 @@ The first thing to note is that there's an extra bit of code placed in the main 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
     .register(
-      "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js"
+      "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js",
     )
     .then(() => console.log("Service Worker Registered"));
 }
@@ -711,8 +711,8 @@ self.addEventListener("install", (e) => {
           "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html",
           "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js",
           "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css",
-        ])
-      )
+        ]),
+      ),
   );
 });
 ```
@@ -729,13 +729,13 @@ Inside the handler, we first log the URL of the requested asset. We then provide
 
 Inside this block, we use {{domxref("CacheStorage.match()")}} to check whether a matching request (i.e. matches the URL) can be found in any cache. This promise fulfills with the matching response if a match is found, or `undefined` if it isn't.
 
-If a match is found, we return it as the custom response. If not, we [fetch()](/en-US/docs/Web/API/fetch) the response from the network and return that instead.
+If a match is found, we return it as the custom response. If not, we [fetch()](/ko/docs/Web/API/fetch) the response from the network and return that instead.
 
 ```js
 self.addEventListener("fetch", (e) => {
   console.log(e.request.url);
   e.respondWith(
-    caches.match(e.request).then((response) => response || fetch(e.request))
+    caches.match(e.request).then((response) => response || fetch(e.request)),
   );
 });
 ```
@@ -760,19 +760,19 @@ That's it for now. We hope you've found our rundown of client-side storage techn
 
 ## See also
 
-- [Web storage API](/en-US/docs/Web/API/Web_Storage_API)
-- [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API)
-- [Cookies](/en-US/docs/Web/HTTP/Cookies)
-- [Service worker API](/en-US/docs/Web/API/Service_Worker_API)
+- [Web storage API](/ko/docs/Web/API/Web_Storage_API)
+- [IndexedDB API](/ko/docs/Web/API/IndexedDB_API)
+- [Cookies](/ko/docs/Web/HTTP/Cookies)
+- [Service worker API](/ko/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
 ## In this module
 
-- [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
+- [Introduction to web APIs](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
+- [Manipulating documents](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
+- [Fetching data from the server](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [Third party APIs](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
+- [Drawing graphics](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [Video and audio APIs](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
 - **Client-side storage**

@@ -12,23 +12,23 @@ slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
       <td>
         <p>
           이 장에 들어서기에 앞서 필요한 선수 학습들에는
-          <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+          <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
             >Getting started with HTML</a
           >,
           <a
-            href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"
+            href="/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"
             >What's in the head? Metadata in HTML</a
           >,
           <a
-            href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+            href="/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
             >HTML text fundamentals</a
           >,
           <a
-            href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+            href="/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
             >Creating hyperlinks</a
           >,
           <a
-            href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting"
+            href="/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting"
             >Advanced text formatting</a
           >
           등이 있습니다.

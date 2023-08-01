@@ -31,14 +31,14 @@ foo === window.foo; // Returns: true
 全局变量 `foo` 存储在 `window` 对象中，像这样：
 
 ```js
-foo: "foobar"
+foo: "foobar";
 ```
 
 ### 访问全局函数
 
 ```js
 function greeting() {
-   console.log("Hi!");
+  console.log("Hi!");
 }
 
 window.greeting(); // It is the same as the normal invoking: greeting();
@@ -52,7 +52,7 @@ window.greeting(); // It is the same as the normal invoking: greeting();
 
 ```js
 greeting: function greeting() {
-   console.log("Hi!");
+  console.log("Hi!");
 }
 ```
 

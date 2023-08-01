@@ -91,5 +91,5 @@ input:required {
 
 - Прочие псевдоклассы для валидации: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":valid") }}
 - Псевдоклассы Mozilla: {{cssxref(":user-invalid")}}, {{cssxref(":-moz-submit-invalid")}}
-- [Валидация форм](/en-US/docs/Learn/Forms/Form_validation)
-- Получение [состояния валидации](/en-US/docs/Web/API/ValidityState) средствами JavaScript
+- [Валидация форм](/ru/docs/Learn/Forms/Form_validation)
+- Получение [состояния валидации](/ru/docs/Web/API/ValidityState) средствами JavaScript

@@ -117,4 +117,4 @@ function imageReceived() {
 - [HTML Specification - the `crossorigin` attribute](http://whatwg.org/html#attr-img-crossorigin)
 - [Веб хранилище (API)](/ru/docs/Web/API/Web_Storage_API)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}
+{{QuickLinksWithSubpages("/ru/docs/Web/HTML/")}}

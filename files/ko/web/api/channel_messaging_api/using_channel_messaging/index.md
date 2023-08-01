@@ -2,6 +2,7 @@
 title: Using channel messaging
 slug: Web/API/Channel_Messaging_API/Using_channel_messaging
 ---
+
 {{DefaultAPISidebar("Channel Messaging API")}}
 
 [Channel Messaging API](/ko/docs/Web/API/Channel_Messaging_API) 는 두 개의 독립적인 스크립트(예를 들면, 두 개의 IFrame, 또는 메인 다큐먼트와 IFrame, 또는 {{domxref("SharedWorker")}}에 의한 두 개의 다큐먼트)를 각 포트를 가진 양방향 채널(또는 파이프)을 통해 서로 직접 통신할 수 있도록 해줍니다. 이 문서에서 이 기술을 사용하는 기본내용에 대해 살펴봅시다.
@@ -29,28 +30,28 @@ We'll be focusing on the latter example in this article. It looks like so:
 In the main page of the demo, we have a paragraph and a simple form with a text input for entering messages to be sent to an {{htmlelement("iframe")}}.
 
 ```js
-var para = document.querySelector('p');
-var textInput = document.querySelector('.message-box');
-var button = document.querySelector('button');
+var para = document.querySelector("p");
+var textInput = document.querySelector(".message-box");
+var button = document.querySelector("button");
 
-var ifr = document.querySelector('iframe');
+var ifr = document.querySelector("iframe");
 var otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  button.onclick = function(e) {
+  button.onclick = function (e) {
     e.preventDefault();
 
     var channel = new MessageChannel();
-    otherWindow.postMessage(textInput.value, '*', [channel.port2]);
+    otherWindow.postMessage(textInput.value, "*", [channel.port2]);
 
     channel.port1.onmessage = handleMessage;
     function handleMessage(e) {
       para.innerHTML = e.data;
-      textInput.value = '';
+      textInput.value = "";
     }
-  }
+  };
 }
 ```
 
@@ -69,14 +70,14 @@ At the bottom of the `iframeLoaded()` function there is a {{domxref("MessagePort
 Over in the IFrame, we have the following JavaScript:
 
 ```js
-var list = document.querySelector('ul');
+var list = document.querySelector("ul");
 
-onmessage = function(e) {
-  var listItem = document.createElement('li');
+onmessage = function (e) {
+  var listItem = document.createElement("li");
   listItem.textContent = e.data;
   list.appendChild(listItem);
   e.ports[0].postMessage('Message received by IFrame: "' + e.data + '"');
-}
+};
 ```
 
 The entirety of the code is wrapped in a {{domxref("window.onmessage")}} handler, which runs when the message is received from the main page (via its `postMessage()`.) First we create a list item and insert it in the unordered list, setting the {{domxref("textContent","Node.textContent")}} of the list item equal to the event's `data` attribute (this contains the actual message).
@@ -91,7 +92,7 @@ Returning to the main page, let's now look at the onmessage handler at the botto
 channel.port1.onmessage = handleMessage;
 function handleMessage(e) {
   para.innerHTML = e.data;
-  textInput.value = '';
+  textInput.value = "";
 }
 ```
 

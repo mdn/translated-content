@@ -96,7 +96,7 @@ A2HS 所需的字段如下：
 要完成 manifest 的设置，您需要从应用程序主页的 HTML 中引用它：
 
 ```html
-<link rel="manifest" href="manifest.webmanifest">
+<link rel="manifest" href="manifest.webmanifest" />
 ```
 
 一旦有了 manifest 声明，支持 A2HS 的浏览器就会知道在哪里查找它。
@@ -137,35 +137,35 @@ A2HS 所需的字段如下：
 
 ```js
 let deferredPrompt;
-const addBtn = document.querySelector('.add-button');
-addBtn.style.display = 'none';
+const addBtn = document.querySelector(".add-button");
+addBtn.style.display = "none";
 ```
 
 我们最初隐藏该按钮是因为 PWA 必须满足 A2HS 标准才会安装。条件满足时，支持的浏览器将触发 `beforeinstallprompt` 事件。然后，我们可以使用以下处理程序来处理安装：
 
 ```js
-window.addEventListener('beforeinstallprompt', (e) => {
+window.addEventListener("beforeinstallprompt", (e) => {
   // 防止 Chrome 67 及更早版本自动显示安装提示
   e.preventDefault();
   // 稍后再触发此事件
   deferredPrompt = e;
   // 更新 UI 以提醒用户可以将 App 安装到桌面
-  addBtn.style.display = 'block';
+  addBtn.style.display = "block";
 
-  addBtn.addEventListener('click', (e) => {
+  addBtn.addEventListener("click", (e) => {
     // 隐藏显示 A2HS 按钮的界面
-    addBtn.style.display = 'none';
+    addBtn.style.display = "none";
     // 显示安装提示
     deferredPrompt.prompt();
     // 等待用户反馈
     deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the A2HS prompt');
-        } else {
-          console.log('User dismissed the A2HS prompt');
-        }
-        deferredPrompt = null;
-      });
+      if (choiceResult.outcome === "accepted") {
+        console.log("User accepted the A2HS prompt");
+      } else {
+        console.log("User dismissed the A2HS prompt");
+      }
+      deferredPrompt = null;
+    });
   });
 });
 ```
@@ -203,4 +203,4 @@ window.addEventListener('beforeinstallprompt', (e) => {
 - [Web manifest 参考](/zh-CN/docs/Web/Manifest)
 - [应用安装横幅](https://developers.google.com/web/fundamentals/app-install-banners/)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Progressive_web_apps/")}}

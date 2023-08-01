@@ -5,7 +5,7 @@ slug: Web/HTML/Element/fieldset
 
 {{HTMLSidebar}}
 
-O **elemento** **HTML `<fieldset>`** é usado para agrupar elementos, assim como labels ({{HTMLElement("label")}}), dentro de um formulário web.
+O **elemento HTML `<fieldset>`** é usado para agrupar elementos, assim como labels ({{HTMLElement("label")}}), dentro de um formulário web.
 
 <table class="properties">
   <tbody>
@@ -326,7 +326,7 @@ fieldset.elist:hover input[type="radio"]:checked ~ label {
 
 ## Erros
 
-- {{Bug(504622)}} - Fieldsets nunca diminui abaixo de sua largura min-intrinsic
+- [Erro do Firefox 504622](https://bugzil.la/504622) - Fieldsets nunca diminui abaixo de sua largura min-intrinsic
 - [WebKit bug 123507](https://bugs.webkit.org/show_bug.cgi?id=123507) - `min-width: {{cssxref("-webkit-min-content")}}` sobre fieldset
 - [StackOverflow discussão com soluções alternativas para os bugs acima](http://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content)
 

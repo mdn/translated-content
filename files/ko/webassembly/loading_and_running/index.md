@@ -2,6 +2,7 @@
 title: Loading and running WebAssembly code
 slug: WebAssembly/Loading_and_running
 ---
+
 {{WebAssemblySidebar}}
 
 자바 스크립트에서 WebAssembly를 사용하려면 먼저 컴파일 / 인스턴스화 전에 모듈을 메모리로 가져와야합니다. 여기서 WebAssembly 바이트 코드를 가져 오는 데 사용할 수있는 다양한 메커니즘에 대한 참조와 함께 컴파일 / 인스턴스화 및 실행 방법에 대해 설명합니다.
@@ -24,22 +25,22 @@ WebAssembly는 아직 `<script type='module'>` 또는 ES2015 `import` statements
 wasm 모듈을 가져오는 가장 빠르고 효율적인 방법은 새로운 {{jsxref("WebAssembly.instantiateStreaming()")}} 방법을 사용하는 것입니다. 이 method는 첫번째 인수로 fetch() 호출을 수행할 수 있는 메서드이며, 서버에서 스트리밍할 때 원시 바이트 코드에 액세스하면서 모듈 가져오기, 컴파일 및 인스턴스화를 한 번에 처리합니다.
 
 ```js
-    WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-    .then(results => {
-      // Do something with the results!
-    });
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (results) => {
+    // Do something with the results!
+  },
+);
 ```
 
 직접 스트림에서 작동하지 않는 이전 {{domxref ( "WebAssembly.instantiate")}} 메서드를 사용한 경우에는 가져온 바이트 코드를 {{domxref ( "ArrayBuffer ")}}로 변환하는 추가단계가 필요합니다.
 
 ```js
-    fetch('module.wasm').then(response =>
-      response.arrayBuffer()
-    ).then(bytes =>
-      WebAssembly.instantiate(bytes, importObject)
-    ).then(results => {
-      // Do something with the results!
-    });
+fetch("module.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((results) => {
+    // Do something with the results!
+  });
 ```
 
 ### Aside on instantiate() overloads
@@ -47,10 +48,10 @@ wasm 모듈을 가져오는 가장 빠르고 효율적인 방법은 새로운 {{
 {{jsxref("WebAssembly.instantiate()")}} 함수에는 두 가지 오버로드 양식이 있습니다. 위에 표시된 형식은 바이트 코드를 인수로 컴파일하여 컴파일된 모듈 객체가 포함된 개체로 resolve되는 'promise'을 반환합니다. 개체는 다음과 같습니다.
 
 ```js
-    {
-      module : Module // The newly compiled WebAssembly.Module object,
-      instance : Instance // A new WebAssembly.Instance of the module object
-    }
+{
+  module: Module; // The newly compiled WebAssembly.Module object,
+  instance: Instance; // A new WebAssembly.Instance of the module object
+}
 ```
 
 > **참고:** 일반적으로 인스턴스자체만 신경 쓰지만, 모듈을 캐시하거나, [`postMessage()`](/ko/docs/Web/API/MessagePort/postMessage)를 통해 다른 worker나 윈도우와 공유하거나, 단순히 인스턴스를 더 생성하고자 할 때도 유용합니다.
@@ -62,25 +63,26 @@ wasm 모듈을 가져오는 가장 빠르고 효율적인 방법은 새로운 {{
 JavaScript에서 WebAssembly 인스턴스를 사용할 수있게되면 {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}} 속성을 통해 내 보낸 속성을 사용할 수 있습니다 . 코드는 다음과 같습니다.
 
 ```js
-    WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
-    .then(obj => {
-      // Call an exported function:
-      obj.instance.exports.exported_func();
+WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
+  (obj) => {
+    // Call an exported function:
+    obj.instance.exports.exported_func();
 
-      // or access the buffer contents of an exported memory:
-      var i32 = new Uint32Array(obj.instance.exports.memory.buffer);
+    // or access the buffer contents of an exported memory:
+    var i32 = new Uint32Array(obj.instance.exports.memory.buffer);
 
-      // or access the elements of an exported table:
-      var table = obj.instance.exports.table;
-      console.log(table.get(0)());
-    })
+    // or access the elements of an exported table:
+    var table = obj.instance.exports.table;
+    console.log(table.get(0)());
+  },
+);
 ```
 
 > **참고:** WebAssembly 모듈에서 내보내는 방법에 대한 자세한 내용은 [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Using_the_JavaScript_API) 및 [Understanding WebAssembly text format](/ko/docs/WebAssembly/Understanding_the_text_format)를 참조하십시오.
 
 ## Using XMLHttpRequest
 
-[`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest)는 Fetch보다 다소 오래된 방법이지만 형식화 된 배열을 얻는 데 부족함이 없습니다. `simple.wasm`을 그대로 사용하여 진행하겠습니다.
+[`XMLHttpRequest`](/ko/docs/Web/API/XMLHttpRequest)는 Fetch보다 다소 오래된 방법이지만 형식화 된 배열을 얻는 데 부족함이 없습니다. `simple.wasm`을 그대로 사용하여 진행하겠습니다.
 
 1. 새로운 {{domxref("XMLHttpRequest()")}} 인스턴스를 만들고 {{domxref("XMLHttpRequest.open","open()")}} 메서드를 사용하여 요청을 열고 요청 메서드를 GET으로 설정합니다. , 가져올 파일의 경로를 선언하십시오.
 2. 핵심 부분은 {{domxref("XMLHttpRequest.responseType","responseType")}} 속성을 사용하여 응답 유형을 `'arraybuffer'`로 설정하는 것입니다.
@@ -90,17 +92,17 @@ JavaScript에서 WebAssembly 인스턴스를 사용할 수있게되면 {{jsxref(
 최종코드는 다음과 같습니다.
 
 ```js
-    request = new XMLHttpRequest();
-    request.open('GET', 'simple.wasm');
-    request.responseType = 'arraybuffer';
-    request.send();
+request = new XMLHttpRequest();
+request.open("GET", "simple.wasm");
+request.responseType = "arraybuffer";
+request.send();
 
-    request.onload = function() {
-      var bytes = request.response;
-      WebAssembly.instantiate(bytes, importObject).then(results => {
-        results.instance.exports.exported_func();
-      });
-    };
+request.onload = function () {
+  var bytes = request.response;
+  WebAssembly.instantiate(bytes, importObject).then((results) => {
+    results.instance.exports.exported_func();
+  });
+};
 ```
 
 > **참고:** [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html) 에서도 예제를 확인할 수 있습니다.

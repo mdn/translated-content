@@ -29,7 +29,7 @@ original_slug: Web/HTTP/Заголовки/Referer
 
 Браузер не отправляет заголовок `Referer`, если:
 
-- исходный ресурс -- локальный "файл" или "data" URI,
+- исходный ресурс — локальный "файл" или "data" URI,
 - используется незащищённый HTTP-запрос, а исходная страница была получена с защищённым протоколом (HTTPS).
 
 <table class="properties">
@@ -59,7 +59,7 @@ Referer: <url>
 ## Пример
 
 ```
-Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+Referer: https://developer.mozilla.org/ru/docs/Web/JavaScript
 ```
 
 ## Спецификация

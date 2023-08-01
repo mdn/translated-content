@@ -159,7 +159,7 @@ fetch("flowers.jpg")
   .catch(function (error) {
     console.log(
       "There has been a problem with your fetch operation: ",
-      error.message
+      error.message,
     );
   });
 ```
@@ -303,7 +303,7 @@ addEventListener("fetch", function (event) {
   event.respondWith(
     new Response(myBody, {
       headers: { "Content-Type": "text/plain" },
-    })
+    }),
   );
 });
 ```
