@@ -1,7 +1,8 @@
 ---
 title: 종속 계층
 slug: Learn/CSS/Building_blocks/Cascade_layers
-
+l10n:
+  sourceCommit: 38029c123179b3dbccc12fb01dc558b3dcb01292
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
