@@ -272,7 +272,7 @@ Angular는 이 과정을 [의존성 주입](https://angular.io/guide/dependency-
 
 [React 문서에서 가상 DOM에 대해 자세히 읽어보세요](https://reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom).
 
-**증분 DOM**은 무엇을 렌더링할지 결정하기 위해 DOM 비교(diff)를 구축하다는 점에서 가상 DOM과 유사하지만, JavaScript 메모리에 DOM의 완전한 복사본을 생성하지 않는다는 점에서 다릅니다. 변경할 필요가 없는 DOM 부분은 무시합니다. Angular는 증분 DOM을 사용하는 이 모듈에서 지금가지 논의된 유일한 프레임워크입니다.  
+**증분 DOM**은 무엇을 렌더링할지 결정하기 위해 DOM 비교(diff)를 구축하다는 점에서 가상 DOM과 유사하지만, JavaScript 메모리에 DOM의 완전한 복사본을 생성하지 않는다는 점에서 다릅니다. 변경할 필요가 없는 DOM 부분은 무시합니다. Angular는 증분 DOM을 사용하는 이 모듈에서 지금가지 논의된 유일한 프레임워크입니다.
 
 [Auth0 블로그에서 증분 DOM에 대한 자세한 내용을 읽을 수 있습니다](https://auth0.com/blog/incremental-dom/).
 
@@ -330,4 +330,3 @@ it("Increments the count when clicked", () => {
 - [Angular](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
