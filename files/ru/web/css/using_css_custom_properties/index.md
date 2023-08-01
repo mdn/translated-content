@@ -81,10 +81,10 @@ element {
 
 ```html
 <div>
-    <div class="one"></div>
-    <div class="two">Text <span class="five">- more text</span></div>
-    <input class="three">
-    <textarea class="four">Lorem Ipsum</textarea>
+  <div class="one"></div>
+  <div class="two">Text <span class="five">- more text</span></div>
+  <input class="three" />
+  <textarea class="four">Lorem Ipsum</textarea>
 </div>
 ```
 
@@ -136,10 +136,10 @@ element {
 
 ```html hidden
 <div>
-    <div class="one"></div>
-    <div class="two">Text <span class="five">- more text</span></div>
-    <input class="three">
-    <textarea class="four">Lorem Ipsum</textarea>
+  <div class="one"></div>
+  <div class="two">Text <span class="five">- more text</span></div>
+  <input class="three" />
+  <textarea class="four">Lorem Ipsum</textarea>
 </div>
 ```
 
@@ -187,11 +187,18 @@ element {
 }
 
 .three {
-  background-color: var(--my-var, var(--my-background, pink)); /* pink если --my-var и --my-background не определены */
+  background-color: var(
+    --my-var,
+    var(--my-background, pink)
+  ); /* pink если --my-var и --my-background не определены */
 }
 
 .three {
-  background-color: var(--my-var, --my-background, pink); /* "--my-background, pink" будет воспринят как значение в случае, если --my-var не определена */
+  background-color: var(
+    --my-var,
+    --my-background,
+    pink
+  ); /* "--my-background, pink" будет воспринят как значение в случае, если --my-var не определена */
 }
 ```
 

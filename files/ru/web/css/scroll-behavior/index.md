@@ -3,6 +3,7 @@ title: scroll-behavior
 slug: Web/CSS/scroll-behavior
 translation_of: Web/CSS/scroll-behavior
 ---
+
 {{ CSSRef }}
 
 ## Описание
@@ -62,7 +63,8 @@ a {
   width: 50px;
   text-decoration: none;
 }
-nav, scroll-container {
+nav,
+scroll-container {
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -94,8 +96,8 @@ scroll-page {
 
 ## Характеристики
 
-| Характеристика                                                                                   | Статус                           | Комментарий           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------- |
+| Характеристика                                                            | Статус                  | Комментарий           |
+| ------------------------------------------------------------------------- | ----------------------- | --------------------- |
 | {{SpecName('CSSOM View', "#propdef-scroll-behavior", 'scroll-behavior')}} | {{Spec2('CSSOM View')}} | Initial specification |
 
 ## Совместимость с браузерами
