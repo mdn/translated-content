@@ -19,6 +19,20 @@ window.scrollBy(X, Y);
 - `X` est le nombre en pixels pour le défilement horizontal.
 - `Y` est le nombre en pixels pour le défilement vertical.
 
+ou
+
+- `options`
+  - : Un dictionnaire avec les paramètres suivants&nbsp;:
+    - `top`
+      - : Indique le nombre de pixels le long desquels faire défiler la fenêtre ou l'élément sur l'axe vertical.
+    - `left`
+      - : Indique le nombre de pixels le long desquels faire défiler la fenêtre ou l'élément sur l'axe horizontal.
+    - `behavior`
+      - : Indique si le défilement devrait être instantané ou doux. Cette option est une chaine de charactère qui doit avoir l'un de ces valeurs:
+        - `smooth`: le défilement doit s'animer en douceur
+        - `instant`: le défilement devrait se produire instantanément en un seul saut
+        - `auto`: le comportement de défilement est déterminé par la valeur calculée de ([scroll-behavior](/fr/docs/Web/CSS/scroll-behavior))
+
 Des coordonnées positives feront défiler à droite et vers le bas de la page. Des coordonnées négatives feront défiler à gauche et vers le haut de la page.
 
 ## Exemples
