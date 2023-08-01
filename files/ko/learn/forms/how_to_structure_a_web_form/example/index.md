@@ -1,7 +1,7 @@
 ---
 title: Example
 slug: Learn/Forms/How_to_structure_a_web_form/Example
-i10n:
+l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
