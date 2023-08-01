@@ -21,7 +21,7 @@ color: transparent;
 
 ### 取值
 
-具名颜色由标准颜色，以及关键字 [`transparent`](#transparent) 和 {{CSSXref("&lt;color&gt;", "currentcolor", "#currentcolor_keyword")}} 所构成。
+命名颜色包含标准颜色、[`transparent`](#transparent) 和 {{CSSXref("&lt;color&gt;", "currentcolor", "#currentcolor_keyword")}} 关键字。
 
 #### 标准颜色
 
@@ -915,7 +915,7 @@ color: transparent;
 
 ## 示例
 
-### 使用具名颜色
+### 使用命名颜色
 
 #### HTML
 
@@ -959,7 +959,7 @@ color: transparent;
 
 #### 结果
 
-{{EmbedLiveSample("使用具名颜色")}}
+{{EmbedLiveSample("使用命名颜色")}}
 
 ## 规范
 
@@ -971,4 +971,4 @@ color: transparent;
 
 ## 参见
 
-- {{CSSXref("&lt;color&gt;")}}——`<named-color>` 为此数据类型定义的构成部分
+- [`<color>`](/zh-CN/docs/Web/CSS/color_value)——`<named-color>` 为此数据类型定义的构成部分

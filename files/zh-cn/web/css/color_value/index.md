@@ -5,81 +5,176 @@ slug: Web/CSS/color_value
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) `<color>` 表示一种[标准 RGB 色彩空间（sRGB color space）](http://en.wikipedia.org/wiki/SRGB)的颜色。一个颜色可以包括一个[alpha 通道](https://en.wikipedia.org/wiki/Alpha_compositing)透明度值，来表明颜色如何与它的背景色[混合（composite）](http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending)。
+[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) **`<color>`** 表示一个颜色。颜色可以包括一个 [alpha 通道](https://en.wikipedia.org/wiki/Alpha_compositing)透明度值，来表明颜色如何与背景色[混合（composite）](http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending)。
 
-一个`<color>`可以以如下方式定义：
-
-- 使用一个关键字（比如`blue`或`transparent`）
-- 使用[RGB 立体坐标（RGB cubic-coordinate）](http://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation)系统（以“#”加十六进制或者 `rgb()` 和 `rgba()` 函数表达式的形式）
-- 使用[HSL 圆柱坐标（HSL cylindrical-coordinate）](http://en.wikipedia.org/wiki/HSL_and_HSV)系统（以 `hsl()` 和 `hsla()` 函数表达式的形式）
-
-> **备注：** 本文章详细描述了`<color>`数据类型。如要了解更多关于在 HTML 中使用颜色的信息，请参阅[使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/HTML/Applying_color)。
+> **备注：** 尽管 CSS 颜色值被精确定义，但在不同的输出设备上仍然有可能表现不一致（甚至区别很大）。这是因为大多数设备不是经校准的，而且有些浏览器不支持输出设备的[色彩配置（color profile）](http://en.wikipedia.org/wiki/ICC_profile)。
 
 ## 语法
 
-`<color>`可以以以下方式指定。
+```css
+/* 命名的颜色 */
+rebeccapurple
+aliceblue
 
-> **备注：** 尽管 CSS 颜色值被精确定义，但在不同的输出设备上仍然有可能显示不一。它们大多数是不可被校准的，而且有些浏览器不支持输出设备的[色彩配置（color profile）](http://en.wikipedia.org/wiki/ICC_profile)。
+/* RGB 十六进制 */
+#f09
+#ff0099
 
-### 颜色关键字
+/* RGB（红、绿、蓝） */
+rgb(255 0 153)
+rgb(255 0 153 / 80%)
 
-颜色关键字（color keywords）是不区分大小写的标识符，它表示一个具体的颜色，例如 `red`、`blue`、`brown`或者`lightseagreen` 。尽管名称或多或少描述了分别的颜色，但必定是人工的，其后没有严格的标准。
+/* HSL（色相、饱和度、明度） */
+hsl(150 30% 60%)
+hsl(150 30% 60% / 0.8)
 
-在使用关键字时有几个需要留意的注意事项：
+/* HWB（色相、白度、黑度）*/
+hwb(12 50% 0%)
+hwb(194 0% 0% / 0.5)
 
-- 除了通常的 16 个 HTML 基本颜色，其他的不能被用于 HTML。HTML 将通过一个特定的计算程序转换这些未知的值，这将导致成为完全不同的颜色。这些关键字应只被用于 SVG 和 CSS。
-- 未知的关键字会让 CSS 属性无效。无效的属性将被忽略，该颜色将没有作用。这是一个和 HTML 相比不同的行为。
-- 未使用关键字定义的颜色在 CSS 中有任意的透明度，它们是单实色。
-- 一些关键字表示同样的颜色：
+/* LAB（亮度、A 轴、B 轴） */
+lab(50% 40 59.5)
+lab(50% 40 59.5 / 0.5)
 
-  - `darkgray` / `darkgrey`
-  - `darkslategray` / `darkslategrey`
-  - `dimgray` / `dimgrey`
-  - `lightgray` / `lightgrey`
-  - `lightslategray` / `lightslategrey`
-  - `gray` / `grey`
-  - `slategray` / `slategrey`
+/* LCH（亮度、色度、色相） */
+lch(52.2% 72.2 50)
+lch(52.2% 72.2 50 / 0.5)
 
-- 虽然关键字的名称取自常见的 X11 颜色名，然而由于生产商为具体的硬件所做的定制，颜色可能与 X11 系统上相应的颜色有所偏差。
+/* Oklab（亮度、A 轴、B 轴） */
+oklab(59% 0.1 0.1)
+oklab(59% 0.1 0.1 / 0.5)
 
-> **备注：** 可接受的关键字列表在 CSS 的演变过程中发生了改变：
->
-> - CSS 标准 1 只接受 16 个基本颜色，称为*VGA 颜色*，因为它们来源于 [VGA](http://en.wikipedia.org/wiki/VGA) 显卡所显示的颜色集合而被称为 _VGA colors_（视频图形阵列色彩）。
-> - CSS 标准 2 增加了 `orange` 关键字。
-> - 从一开始，浏览器接受其他的颜色，由于一些早期浏览器是 X11 应用程序，这些颜色大多数是 X11 命名的颜色列表，虽然有一点不同。SVG 1.0 是首个正式定义这些关键字的标准；CSS 色彩标准 3 也正式定义了这些关键字。它们经常被称作*扩张的颜色关键字*， *X11 颜色*或 _SVG 颜色_。
-> - CSS 颜色标准 4 添加可`rebeccapurple`关键字来[纪念 web 先锋 Eric Meyer](https://codepen.io/trezy/post/honoring-a-great-man)。
+/* Oklch（亮度、色度、色相） */
+oklch(60% 0.15 50)
+oklch(60% 0.15 50 / 0.5)
+```
 
-### `transparent` 关键字
+一个`<color>`可以以如下方式定义：
 
-`transparent` 关键字表示一个完全透明的颜色，即该颜色看上去将是背景色。从技术上说，它是带有阿尔法通道为最小值的黑色，是 `rgba(0,0,0,0)` 的简写。
+- 通过关键字：{{CSSXref("&lt;named-color&gt;")}} （例如 `blue` 和 `pink`）、{{CSSXref("&lt;system-color&gt;")}} 和 [`currentcolor`](#currentcolor_关键字).
+- 通过十六进制标记：{{CSSXref("&lt;hex-color&gt;")}}（例如 `#ff0000`）。
+- 通过使用函数标记的颜色空间的参数：
+  - [sRGB](https://en.wikipedia.org/wiki/SRGB) 颜色空间：{{CSSXref("color_value/hsl", "hsl()")}}、{{CSSXref("color_value/hwb", "hwb()")}}、{{CSSXref("color_value/rgb", "rgb()")}}；
+  - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) 颜色空间：{{CSSXref("color_value/lab", "lab()")}}、{{CSSXref("color_value/lch", "lch()")}}；
+  - [Oklab](https://bottosson.github.io/posts/oklab/) 颜色空间：{{CSSXref("color_value/oklab", "oklab()")}}、{{CSSXref("color_value/oklch", "oklch()")}}；
+  - 其他颜色空间：{{CSSXref("color_value/color", "color()")}}。
+- 通过混合两个颜色：{{CSSXref("color_value/color-mix", "color-mix()")}}。
 
-> **备注：** 为避免未预料的行为，比如{{cssxref("gradient")}}中，the current CSS spec states that `transparent` should be calculated in the [alpha-premultiplied color space](https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax). 但是，注意旧的浏览器可能将其作为 alpha 值为 0 的黑色。
+### currentColor 关键字
 
-> **备注：** `transparent` 关键字在 CSS Level 2 (Revision 1) 中不是一个真实的颜色。它是一个特殊的关键字，可以代替一个普通的 `<color>` 值用于两个 CSS 属性中： {{ Cssxref("background") }} 和 {{ Cssxref("border") }}。本质上使用它可以覆盖一个继承的单色。随着经由[阿尔法通道（alpha channels）](http://en.wikipedia.org/wiki/Alpha_compositing)透明度的支持，`transparent` 在 CSS Colors Level 3 中被重新定义为一个真实的颜色，允许在任何一个需要 `<color>` 值的地方使用，像 {{ Cssxref("color") }} 属性。
+`currentColor` 关键字代表元素的 {{ Cssxref("color") }} 属性的计算值。它允许让继承自属性或子元素的属性颜色属性以默认值不再继承。
 
-### `currentColor` 关键字
-
-`currentColor` 关键字代表原始的 {{ Cssxref("color") }} 属性的计算值。它允许让继承自属性或子元素的属性颜色属性以默认值不再继承。
-
-它也能用于那些继承了元素的 {{ Cssxref("color") }} 属性计算值的属性，相当于在这些元素上使用 `inherit` 关键字，如果这些元素有该关键字的话。
-
-#### currentcolor 示例
-
-该行的颜色（一个填充颜色的 div）应用它继承自父级的 {{ Cssxref("color") }} 属性。
-
-##### HTML
+如果 `currentcolor` 用于 `color` 属性的值，那么会给元素继承 `color` 属性的值。
 
 ```html
-<div style="color:blue; border: 1px dashed currentcolor;">
-  The color of this text is blue.
-  <div style="background:currentcolor; height:9px;"></div>
-  This block is surrounded by a blue border.
+<div style="color: blue; border: 1px dashed currentcolor;">
+  这个文本的颜色是蓝色。
+  <div style="background: currentcolor; height:9px;"></div>
+  这个块的边框也是蓝色。
 </div>
 ```
 
-##### 结果
+{{EmbedLiveSample("currentcolor_关键字", "100%", 80)}}
 
-{{EmbedLiveSample('currentcolor 示例')}}
+### 缺失颜色成分
+
+每个 CSS 颜色函数的成分，除了使用旧版的逗号分隔语法的，都可以指定关键字 `none` 表示一个缺失的成分。
+
+清晰地指定缺失的成分可用于 [颜色插值]（#带有缺失成分时的插值），可用于需要插值一些颜色成分但不插值其他颜色成分时。对于所有其他的目的，缺失的成分会相当于相应单位的零值：`0`、`0%` 或 `0deg`。例如，下面的颜色在不插值时是等价的：
+
+```css
+/* 这两个是等价的 */
+color: oklab(50% none -0.25);
+color: oklab(50% 0 -0.25);
+
+/* 这两个是等价的 */
+background-color: hsl(none 100% 50%);
+background-color: hsl(0deg 100% 50%);
+```
+
+## 插值
+
+在动画和[渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中， `<color>` 值会在每个红绿蓝成分中插值。每一个成分都会插值为浮点实数。注意颜色的插值发生在 [alpha-premultiplied sRGBA color space](https://www.gimp.org/docs/plug-in/appendix-alpha.html) 中，以避免出现未预料的灰色。在动画中，插值速度由[时间函数](/zh-CN/docs/)决定。
+
+颜色插值会发生在[渐变](/zh-CN/docs/Web/CSS/gradient)、[过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) 和 [动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations) 中。
+
+插值 `<color>` 值时，首先会转换成指定的颜色空间，然后颜色成分的[计算值](/zh-CN/docs/Web/CSS/computed_value)线性插值，插值速度由过渡和动画中的[缓动函数](/zh-CN/docs/Web/CSS/easing-function)决定。插值颜色空间默认为 Oklab，但是可以在一些与颜色相关的函数标记中通过 {{CSSXref("&lt;color-interpolation-method&gt;")}} 覆盖。
+
+### 带有缺失成分时的插值
+
+#### 在同一空间内插值颜色
+
+对完全在插值颜色空间中的颜色进行插值时，一个颜色中缺失的成分将替换为另一种颜色中同一成分的现有值。例如，以下两个表达式是等效的：
+
+```css
+color-mix(in oklch, oklch(none 0.2 10), oklch(60% none 30))
+color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
+```
+
+> **备注：** 如果两个颜色都缺失这个成分，那么这个成分在插值后也是缺失的。
+
+#### 在不同空间内插值：相似成分
+
+如果任何要插值的颜色不在插值颜色空间中，则其缺失的成分将根据同一类的**相似成分**转换为转换后的颜色，如下表所述：
+
+| 类似 | 相似成分 |
+| ---- | -------- |
+| 红色 | `R`, `X` |
+| 绿色 | `G`, `Y` |
+| 蓝色 | `B`, `Z` |
+| 明度 | `L`      |
+| 色度 | `C`, `S` |
+| 色相 | `H`      |
+| a    | `a`      |
+| b    | `b`      |
+
+例如：
+
+- `color(xyz 0.2 0.1 0.6)` 中的 `X`（`0.2`）相似于 `rgb(50% 70% 30%)` 中的 `R`（`50%`）。
+- `hsl(0deg 100% 80%)` 中的 `H`（`0deg`）相似于 `oklch(80% 0.1 140)` 中的 `H`（`140`）。
+
+使用Oklch作为插值颜色空间并以下面两种颜色为例：
+
+```css
+lch(80% 30 none)
+color(display-p3 0.7 0.5 none)
+```
+
+预处理过程为：
+
+1. 将两种颜色中缺失的成分替换为零值：
+
+   ```css
+   lch(80% 30 0)
+   color(display-p3 0.7 0.5 0)
+   ```
+
+2. 将两种颜色转换为插值颜色空间：
+
+   ```css
+   oklch(83.915% 0.0902 0.28)
+   oklch(63.612% 0.1522 78.748)
+   ```
+
+3. 如果转换后颜色的任何成分与相应原始颜色中的缺失成分相似，则将其重置为缺失的成分：
+
+   ```css
+   oklch(83.915% 0.0902 none)
+   oklch(63.612% 0.1522 78.748)
+   ```
+
+4. 将任何缺失的成分替换为另一转换后颜色中的相同成分：
+
+   ```css
+   oklch(83.915% 0.0902 78.748)
+   oklch(63.612% 0.1522 78.748)
+   ```
+
+## 无障碍考虑
+
+一些人分辨颜色可能会存在困难。[WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) 强烈建议不要将颜色作为传递特定消息、活动或结果的唯一方式。参见 [颜色和颜色对比度](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast) 以了解更多信息。
+
+<!--
 
 ### RGB 颜色
 
@@ -290,14 +385,6 @@ The following keywords were defined in earlier versions of the CSS Color Module.
   - : User's preference for the text color of unvisited links. Should be used with the default document background color.
 - \-moz-visitedhyperlinktext
   - : User's preference for the text color of visited links. Should be used with the default document background color.
-
-## 插值
-
-在动画和[渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中， `<color>` 值会在每个红绿蓝成分中插值。每一个成分都会插值为浮点实数。注意颜色的插值发生在 [alpha-premultiplied sRGBA color space](https://www.gimp.org/docs/plug-in/appendix-alpha.html) 中，以避免出现未预料的灰色。在动画中，插值速度由[时间函数](/zh-CN/docs/)决定。
-
-## Accessibility considerations
-
-Some people have difficulty distinguishing colors. The [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See [Color and color contrast](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast) for more information.
 
 ## 示例
 
@@ -627,7 +714,250 @@ hsla(240 100% 50% / .05)      /*   5% opaque blue */
 
 /* Percentage value for alpha */
 hsla(240 100% 50% / 5%)       /*   5% opaque blue */
+``` -->
+
+## 形式语法
+
+{{csssyntax}}
+
+## 示例
+
+### 颜色值检测器
+
+在这个例子中，我们提供了一个 `<div>` 和一个文本输入框。往文本框内输入有效的颜色会使 `<div>` 接受这个颜色，从而可能测试我们的颜色值 。
+
+#### HTML
+
+```html
+<div></div>
+<hr />
+<label for="color">输入有效的颜色值：</label>
+<input type="text" id="color" />
 ```
+
+```css hidden
+div {
+  height: 200px;
+  width: 200px;
+}
+```
+
+```js hidden
+const inputElem = document.querySelector("input");
+const divElem = document.querySelector("div");
+
+function validTextColor(stringToTest) {
+  if (stringToTest === "inherit" || stringToTest === "transparent") {
+    return false;
+  }
+
+  const div = document.createElement("div");
+  div.style.color = stringToTest;
+  return !!div.style.color;
+}
+
+inputElem.addEventListener("input", () => {
+  if (validTextColor(inputElem.value)) {
+    divElem.style.backgroundColor = inputElem.value;
+    divElem.textContent = "";
+  } else {
+    divElem.removeAttribute("style");
+    divElem.textContent = "无效的颜色值";
+  }
+});
+```
+
+#### 结果
+
+{{EmbedLiveSample("颜色值检测器", "100%", 300)}}
+
+### 完全饱和的 sRGB 颜色
+
+此示例显示 sRGB 颜色空间中完全饱和的 sRGB 颜色。
+
+#### HTML
+
+```html
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+```
+
+#### CSS
+
+```css hidden
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+div {
+  height: 80px;
+  margin: 10px;
+  width: 80px;
+}
+```
+
+```css
+div:nth-child(1) {
+  background-color: hsl(0 100% 50%);
+}
+div:nth-child(2) {
+  background-color: hsl(30 100% 50%);
+}
+div:nth-child(3) {
+  background-color: hsl(60 100% 50%);
+}
+div:nth-child(4) {
+  background-color: hsl(90 100% 50%);
+}
+div:nth-child(5) {
+  background-color: hsl(120 100% 50%);
+}
+div:nth-child(6) {
+  background-color: hsl(150 100% 50%);
+}
+div:nth-child(7) {
+  background-color: hsl(180 100% 50%);
+}
+div:nth-child(8) {
+  background-color: hsl(210 100% 50%);
+}
+div:nth-child(9) {
+  background-color: hsl(240 100% 50%);
+}
+div:nth-child(10) {
+  background-color: hsl(270 100% 50%);
+}
+div:nth-child(11) {
+  background-color: hsl(300 100% 50%);
+}
+div:nth-child(12) {
+  background-color: hsl(330 100% 50%);
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample("完全饱和的 srgb 颜色", "100%", 200)}}
+
+### 不同深浅的红色
+
+此示例显示 sRGB 颜色空间中不同深浅的红色。
+
+#### HTML
+
+```html
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+```
+
+#### CSS
+
+```css hidden
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+div {
+  box-sizing: border-box;
+  height: 80px;
+  margin: 10px;
+  width: 80px;
+}
+```
+
+```css
+div:nth-child(1) {
+  background-color: hsl(0 100% 0%);
+}
+div:nth-child(2) {
+  background-color: hsl(0 100% 20%);
+}
+div:nth-child(3) {
+  background-color: hsl(0 100% 40%);
+}
+div:nth-child(4) {
+  background-color: hsl(0 100% 60%);
+}
+div:nth-child(5) {
+  background-color: hsl(0 100% 80%);
+}
+div:nth-child(6) {
+  background-color: hsl(0 100% 100%);
+  border: solid;
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample("不同深浅的红色", "100%", 150)}}
+
+### 不同饱和度的红色
+
+此示例显示 sRGB 颜色空间中不同饱和度的红色。
+
+#### HTML
+
+```html
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+```
+
+#### CSS
+
+```css hidden
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+div {
+  height: 80px;
+  margin: 10px;
+  width: 80px;
+}
+```
+
+```css
+div:nth-child(1) {
+  background-color: hsl(0 0% 50%);
+}
+div:nth-child(2) {
+  background-color: hsl(0 20% 50%);
+}
+div:nth-child(3) {
+  background-color: hsl(0 40% 50%);
+}
+div:nth-child(4) {
+  background-color: hsl(0 60% 50%);
+}
+div:nth-child(5) {
+  background-color: hsl(0 80% 50%);
+}
+div:nth-child(6) {
+  background-color: hsl(0 100% 50%);
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample("不同饱和度的红色", "100%", 150)}}
 
 ## 规范
 
@@ -639,6 +969,8 @@ hsla(240 100% 50% / 5%)       /*   5% opaque blue */
 
 ## 参见
 
-- The {{ Cssxref("opacity") }} property, allowing to define the transparency of color at the element level.
-- The {{ Cssxref("color") }}, {{ Cssxref("background-color") }}, {{ Cssxref("border-color") }}, {{ Cssxref("outline-color") }}, {{ Cssxref("text-shadow") }}, {{ Cssxref("box-shadow") }} properties.
-- [CSS Reference](/zh-CN/docs/Web/CSS/Reference) index
+- {{CSSXref("opacity")}}：在元素级别上设备透明度的属性
+- {{CSSXref("&lt;hue&gt;")}}：表示一个颜色的色相角度的数据类型
+- {{CSSXref("color")}}、{{CSSXref("background-color")}}、{{CSSXref("border-color")}}、{{CSSXref("box-shadow")}}、{{CSSXref("outline-color")}}、{{CSSXref("text-shadow")}}：使用 `<color>` 的常见属性
+- [使用 CSS 给元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
+- MDN blog（2023）中的[新函数、渐变、CSS 颜色中的色相（级别 4）](/zh-CN/blog/css-color-module-level-4/)
