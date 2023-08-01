@@ -21,9 +21,9 @@ CSS Grid Layout 在 Safari，Chrome，Opera，Firefox 和 Edge 中都没有前�
 
 ### 浮动
 
-[Floats](/zh-CN/docs/Learn/CSS/CSS_layout/Floats) 曾经用于创建多列布局。如果您在旧代码库使用了浮动布局，则不会发生冲突。网格项目会忽略浮动属性；事实上，网格项目优先级更高。在下面的示例中，我们有一个简单的media对象。如果 float 没有从旧版 CSS 中删除，且容器是网格容器，也不会有问题。我们可以使用 CSS 网格中实现的对齐属性。
+[Floats](/zh-CN/docs/Learn/CSS/CSS_layout/Floats) 曾经用于创建多列布局。如果您在旧代码库使用了浮动布局，则不会发生冲突。网格项目会忽略浮动属性；事实上，网格项目优先级更高。在下面的示例中，我们有一个简单的 media 对象。如果 float 没有从旧版 CSS 中删除，且容器是网格容器，也不会有问题。我们可以使用 CSS 网格中实现的对齐属性。
 
-Float 不再适用，我们可以使用CSS盒子对齐属性 {{cssxref("align-self")}} 来使内容对齐到容器末尾：
+Float 不再适用，我们可以使用 CSS 盒子对齐属性 {{cssxref("align-self")}} 来使内容对齐到容器末尾：
 
 
 ```css
@@ -164,7 +164,7 @@ img {
 
 ![After applying grid to our container, the width of the items is now incorrect as they display at one third of the item width.](10-float-width-problem.png)
 
-如果将宽度设置为`auto`，则将阻止旧浏览器发生浮动行为。我们需要能够定义旧浏览器的宽度，并删除支持网格的浏览器的宽度。多亏了 [CSS特性查询](/zh-CN/docs/Web/CSS/@supports) ，我们才能做到这一点。
+如果将宽度设置为`auto`，则将阻止旧浏览器发生浮动行为。我们需要能够定义旧浏览器的宽度，并删除支持网格的浏览器的宽度。多亏了 [CSS 特性查询](/zh-CN/docs/Web/CSS/@supports) ，我们才能做到这一点。
 
 ### 使用特性查询的解决方案
 
@@ -370,7 +370,7 @@ CSS 网格布局规范详细说明了为什么当某物成为网格项时我们�
 
 如 [CSS display specification](https://drafts.csswg.org/css-display-3/#blockify) 中所定义，当一个元素的父元素设置为 `display: grid` 时，它会被块化。这就是为什么当我们的项目被设置为 `inline-block` 时，`display: inline-block` 不再生效的原因。
 
-如果您使用 `display: table` 作为旧版布局，则设置为 `display: table-cell` 的项目会生成匿名盒子。 因此，如果您在没有任何父元素设置为 `display-table` 的情况下使用 `display: table-cell`，则会在任何相邻单元格周围创建匿名表格包装器，就像将它们包裹在 div 或其他设置为 `display: table` 的元素中一样。 如果您将一个项目设置为 `display: table-cell` ，然后在t特性查询中将父级更改为 `display: grid` ，则不会创建匿名盒子。 这意味着您可以覆盖基于 `display: table` 的布局，且无需额外的匿名盒子。
+如果您使用 `display: table` 作为旧版布局，则设置为 `display: table-cell` 的项目会生成匿名盒子。因此，如果您在没有任何父元素设置为 `display-table` 的情况下使用 `display: table-cell`，则会在任何相邻单元格周围创建匿名表格包装器，就像将它们包裹在 div 或其他设置为 `display: table` 的元素中一样。如果您将一个项目设置为 `display: table-cell` ，然后在特性查询中将父级更改为 `display: grid` ，则不会创建匿名盒子。这意味着您可以覆盖基于 `display: table` 的布局，且无需额外的匿名盒子。
 
 ### 浮动元素
 
