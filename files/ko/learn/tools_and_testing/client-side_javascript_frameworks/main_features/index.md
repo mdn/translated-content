@@ -196,9 +196,7 @@ React에서, [`click`](/ko/docs/Web/API/Element/click_event) 이벤트를 수신
 ```js
 function CounterButton() {
   const [count, setCount] = useState(0);
-  return (
-    <button onClick={() => setCount(count + 1)}>{count}번 클릭됨</button>
-  );
+  return <button onClick={() => setCount(count + 1)}>{count}번 클릭됨</button>;
 }
 ```
 
