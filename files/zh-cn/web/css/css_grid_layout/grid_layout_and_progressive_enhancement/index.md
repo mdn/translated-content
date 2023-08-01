@@ -25,7 +25,6 @@ CSS Grid Layout 在 Safari，Chrome，Opera，Firefox 和 Edge 中都没有前�
 
 Float 不再适用，我们可以使用 CSS 盒子对齐属性 {{cssxref("align-self")}} 来使内容对齐到容器末尾：
 
-
 ```css
 * {
   box-sizing: border-box;
@@ -268,9 +267,8 @@ img {
 
 由于使用浮动创建项目网格的问题，许多人会使用与上面所示的浮动方法不同的方法来布局一组卡片，`display: inline-block` 是其中之一。
 
-我们可以再次使用特性查询来覆盖使用 `display: inline-block` 的布局，并且也不用覆盖所有内容。设置为 `inline-block` 的项目将成为网格项目，所以 `inline-block` 的行为不再生效。当处于 
- `display: inline-block` 显示模式时，我们项目上使用了 {{cssxref("vertical-align")}} 属性，但该属性不适用于网格项目，因此一旦它成为网格项目，该属性就会被忽略：
-
+我们可以再次使用特性查询来覆盖使用 `display: inline-block` 的布局，并且也不用覆盖所有内容。设置为 `inline-block` 的项目将成为网格项目，所以 `inline-block` 的行为不再生效。当处于 `display: inline-block` 显示模式时，我们项目上使用了 {{cssxref("vertical-align")}} 属性，但该属性不适用于网格项目，因此一旦它成为网格项目，该属性就会被忽略：
+ 
 ```css hidden
 * {
   box-sizing: border-box;
