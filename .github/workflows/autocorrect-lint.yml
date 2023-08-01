@@ -19,9 +19,20 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
+
+      - name: Install NPM
+        run: |
+          yarn --frozen-lockfile
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get changed files
         env:
@@ -34,11 +45,23 @@ jobs:
           DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }} \
             --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
           # filter out files that are not markdown
-          DIFF_DOCUMENTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/zh-cn/" | xargs)
+          DIFF_DOCUMENTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^(files|docs)/zh-cn/" | xargs)
           echo "DIFF_DOCUMENTS=${DIFF_DOCUMENTS}" >> $GITHUB_ENV
 
-      - name: AutoCorrect changed content
+      - name: AutoCorrect lint changed content
+        id: run_lint
         if: ${{ env.DIFF_DOCUMENTS }}
-        uses: huacnlee/autocorrect-action@v2.6.2
+        run: yarn autocorrect --lint --no-diff-bg-color ${{ env.DIFF_DOCUMENTS }}
+
+      # https://docs.github.com/en/actions/managing-issues-and-pull-requests/commenting-on-an-issue-when-a-label-is-added
+      - name: Report Result
+        if: failure()
+        uses: peter-evans/create-or-update-comment@v3
         with:
-          args: ${{ env.DIFF_DOCUMENTS }} --lint --no-diff-bg-color
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            [AutoCorrect](https://github.com/huacnlee/autocorrect) lint failure: 
+
+            ```diff
+            ${{ steps.run_lint.outputs.result }}
+            ```
