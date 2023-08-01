@@ -62,7 +62,7 @@ new Intl.DisplayNames([langues[, options]])
 Dans son utilisation simple, sans spécifier de langue, une chaine dans la langue locale par défaut et avec les options par défaut sera retournée.
 
 ```js
-console.log((new Intl.DisplayNames()).of('US'));
+console.log(new Intl.DisplayNames().of("US"));
 // Expected output: 'us'
 ```
 

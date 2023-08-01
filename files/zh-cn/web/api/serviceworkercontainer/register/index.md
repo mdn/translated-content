@@ -14,11 +14,10 @@ slug: Web/API/ServiceWorkerContainer/register
 ## 语法
 
 ```js
-ServiceWorkerContainer.register(scriptURL, options)
-    .then(
-        function(ServiceWorkerRegistration) {
-            // do something
-        }
+ServiceWorkerContainer.register(scriptURL, options).then(
+  function (ServiceWorkerRegistration) {
+    // do something
+  },
 );
 ```
 
@@ -39,21 +38,23 @@ ServiceWorkerContainer.register(scriptURL, options)
 ## 示例
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js', {scope: './'})
-  .then(function(registration) {
-    document.querySelector('#status').textContent = 'succeeded';
-  }).catch(function(error) {
-    document.querySelector('#status').textContent = error;
-  });
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("service-worker.js", { scope: "./" })
+    .then(function (registration) {
+      document.querySelector("#status").textContent = "succeeded";
+    })
+    .catch(function (error) {
+      document.querySelector("#status").textContent = error;
+    });
 } else {
   // The current browser doesn't support service workers.
-  let aElement = document.createElement('a');
+  let aElement = document.createElement("a");
   aElement.href = `
      http://www.chromium.org/blink/serviceworker/service-worker-faq
   `;
-  aElement.textContent = 'unavailable';
-  document.querySelector('#status').appendChild(aElement);
+  aElement.textContent = "unavailable";
+  document.querySelector("#status").appendChild(aElement);
 }
 ```
 

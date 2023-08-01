@@ -1,5 +1,5 @@
 ---
-title: ':nth-last-col'
+title: ":nth-last-col"
 slug: Web/CSS/:nth-last-col
 translation_of: Web/CSS/:nth-last-col
 ---
@@ -53,11 +53,11 @@ Voir {{Cssxref(":nth-child")}} pour une explication plus détaillée de cette sy
 ```css
 td {
   border: 1px solid #ccc;
-  padding: .2em;
+  padding: 0.2em;
 }
 
 /* Colonnes impaires, en commençant par la colonne finale du tableau */
-:nth-last-col(2n+1) {
+:nth-last-col(2n + 1) {
   background-color: pink;
 }
 ```

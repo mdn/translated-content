@@ -25,15 +25,15 @@ justify-self: normal;
 justify-self: stretch;
 
 /* Alignement par rapport à l'axe */
-justify-self: center;     /* L'élément est aligné au centre */
-justify-self: start;      /* L'élément est aligné au début  */
-justify-self: end;        /* L'élément est aligné à la fin  */
+justify-self: center; /* L'élément est aligné au centre */
+justify-self: start; /* L'élément est aligné au début  */
+justify-self: end; /* L'élément est aligné à la fin  */
 justify-self: flex-start; /* L'élément est aligné au début de l'axe */
-justify-self: flex-end;   /* L'élément est aligné à la fin de l'axe */
+justify-self: flex-end; /* L'élément est aligné à la fin de l'axe */
 justify-self: self-start;
 justify-self: self-end;
-justify-self: left;       /* L'élément est aligné à gauche */
-justify-self: right;      /* L'élément est aligné à droite */
+justify-self: left; /* L'élément est aligné à gauche */
+justify-self: right; /* L'élément est aligné à droite */
 
 /* Alignement par rapport à la ligne de base */
 justify-self: baseline;
@@ -113,7 +113,9 @@ Cette propriété peut être définie selon trois formes différentes :
 ### CSS
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -134,7 +136,7 @@ Cette propriété peut être définie selon trois formes différentes :
 .wrapper {
   display: grid;
   grid-template-columns: repeat(2, 100px);
-  grid-template-rows: repeat(2,100px);
+  grid-template-rows: repeat(2, 100px);
   height: 300px;
   width: 300px;
   grid-gap: 10px;

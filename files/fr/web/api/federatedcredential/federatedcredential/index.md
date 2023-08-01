@@ -13,7 +13,7 @@ Pour les navigateurs qui le prennent en charge, une instance de cette classe pou
 ## Syntaxe
 
 ```js
-var mesCredentials = new FederatedCredential(init)
+var mesCredentials = new FederatedCredential(init);
 ```
 
 ### Paramètres

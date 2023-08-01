@@ -16,7 +16,7 @@ La méthode **`create()`**, rattachée à l'interface {{domxref("CredentialsCont
 ## Syntaxe
 
 ```js
-var promise = CredentialsContainer.create([options])
+var promise = CredentialsContainer.create([options]);
 ```
 
 ### Paramètres

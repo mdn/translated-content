@@ -12,7 +12,7 @@ Cette méthode supprime une alarme à partir du nom passé en argument. Il s'agi
 
 ```js
 var clearAlarm = browser.alarms.clear(
-  name // string
+  name, // string
 );
 ```
 
@@ -29,7 +29,7 @@ Une promesse ({{jsxref("Promise")}}) qui sera tenue avec un booléen. Ce boolée
 
 ```js
 function onCleared(wasCleared) {
-  console.log(wasCleared);  // true/false
+  console.log(wasCleared); // true/false
 }
 
 var clearAlarm = browser.alarms.clear("my-periodic-alarm");

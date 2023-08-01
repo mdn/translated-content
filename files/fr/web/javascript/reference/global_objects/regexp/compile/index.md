@@ -11,7 +11,7 @@ La méthode dépréciée **`compile()`** est utilisée afin de (re)compiler une 
 ## Syntaxe
 
 ```js
-regexObj.compile(motif, flags)
+regexObj.compile(motif, flags);
 ```
 
 ### Paramètres

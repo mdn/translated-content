@@ -10,7 +10,7 @@ slug: Web/API/ServiceWorkerRegistration/navigationPreload
 ## Syntax
 
 ```js
-var navigationPreloadManager = serviceWorkerRegistration.navigationPreload
+var navigationPreloadManager = serviceWorkerRegistration.navigationPreload;
 ```
 
 ### Value

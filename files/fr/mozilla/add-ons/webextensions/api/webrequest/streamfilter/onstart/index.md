@@ -20,18 +20,18 @@ Cet exemple remplacera le contenu de la page par "texte de remplacement" :
 function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onstart = event => {
+  filter.onstart = (event) => {
     console.log("started");
     let encoder = new TextEncoder();
     filter.write(encoder.encode("replacement content"));
     filter.close();
-  }
+  };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.org/"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.org/"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 

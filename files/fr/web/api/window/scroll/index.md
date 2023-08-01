@@ -11,8 +11,8 @@ La méthode **`Window.scroll()`** permet de faire défiler la fenêtre jusqu'à 
 ## Syntaxe
 
 ```js
-window.scroll(x, y)
-window.scroll(options)
+window.scroll(x, y);
+window.scroll(options);
 ```
 
 ### Paramètres
@@ -38,7 +38,9 @@ Ou avec `options`&nbsp;:
 ```html
 <!-- On place le 100e pixel, sur l'axe vertical, en haut de la fenêtre -->
 
-<button onclick="scroll(0, 100);">Cliquez pour faire défiler jusqu'au 100e pixel</button>
+<button onclick="scroll(0, 100);">
+  Cliquez pour faire défiler jusqu'au 100e pixel
+</button>
 ```
 
 Avec `options`&nbsp;:
@@ -47,7 +49,7 @@ Avec `options`&nbsp;:
 window.scroll({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

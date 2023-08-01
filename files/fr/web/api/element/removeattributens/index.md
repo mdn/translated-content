@@ -13,7 +13,7 @@ Dans Firefox 3 et postérieurs, cette méthode réinitialise les valeurs DOM à 
 ## Syntaxe
 
 ```js
-element.removeAttributeNS(namespace,attrName);
+element.removeAttributeNS(namespace, attrName);
 ```
 
 - `namespace` est une chaîne qui contient l'espace de noms de l'attribut.

@@ -17,7 +17,9 @@ slug: Learn/HTML/Tables/Advanced
 
 ```html
 <table>
-  <caption>ジュラ紀の恐竜</caption>
+  <caption>
+    ジュラ紀の恐竜
+  </caption>
 
   ...
 </table>
@@ -64,16 +66,16 @@ slug: Learn/HTML/Tables/Advanced
 5. 次に、[`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性を追加して "SUM" セルを最初の 4 列にまたがるようにします。そのため、実際の数は "Cost" 列の下部に表示されます。
 6. これらの要素が CSS を適用するためにどれほど有用であるかのアイデアをあなたに与えるために、表にいくつかの簡単な追加のスタイリングを追加しましょう。 HTML 文書の `<head>` の中には、空の {{htmlelement("style")}} 要素があります。 この要素内に、次の CSS コード行を追加します。
 
-    ```css
-    tbody {
-      font-size: 90%;
-      font-style: italic;
-    }
+   ```css
+   tbody {
+     font-size: 90%;
+     font-style: italic;
+   }
 
-    tfoot {
-      font-weight: bold;
-    }
-    ```
+   tfoot {
+     font-weight: bold;
+   }
+   ```
 
 7. 保存して更新し、結果を確認します。 `<tbody>` 要素と `<tfoot>` 要素が適切に配置されていない場合は、同じスタイルを適用するためにはるかに複雑なセレクタ/規則を記述する必要があります。
 
@@ -82,109 +84,110 @@ slug: Learn/HTML/Tables/Advanced
 完成した表は次のようになります。
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My spending record</title>
     <style>
+      html {
+        font-family: sans-serif;
+      }
 
-        html {
-          font-family: sans-serif;
-        }
+      table {
+        border-collapse: collapse;
+        border: 2px solid rgb(200, 200, 200);
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+      }
 
-          table {
-          border-collapse: collapse;
-          border: 2px solid rgb(200,200,200);
-          letter-spacing: 1px;
-          font-size: 0.8rem;
-        }
+      td,
+      th {
+        border: 1px solid rgb(190, 190, 190);
+        padding: 10px 20px;
+      }
 
-        td, th {
-          border: 1px solid rgb(190,190,190);
-          padding: 10px 20px;
-        }
+      th {
+        background-color: rgb(235, 235, 235);
+      }
 
-        th {
-          background-color: rgb(235,235,235);
-        }
+      td {
+        text-align: center;
+      }
 
-        td {
-          text-align: center;
-        }
+      tr:nth-child(even) td {
+        background-color: rgb(250, 250, 250);
+      }
 
-        tr:nth-child(even) td {
-          background-color: rgb(250,250,250);
-        }
+      tr:nth-child(odd) td {
+        background-color: rgb(245, 245, 245);
+      }
 
-        tr:nth-child(odd) td {
-          background-color: rgb(245,245,245);
-        }
+      caption {
+        padding: 10px;
+      }
 
-        caption {
-          padding: 10px;
-        }
+      tbody {
+        font-size: 90%;
+        font-style: italic;
+      }
 
-        tbody {
-          font-size: 90%;
-          font-style: italic;
-        }
-
-        tfoot {
-          font-weight: bold;
-        }
+      tfoot {
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
-      <table>
-        <caption>How I chose to spend my money</caption>
-        <thead>
-          <tr>
-            <th>Purchase</th>
-            <th>Location</th>
-            <th>Date</th>
-            <th>Evaluation</th>
-            <th>Cost (€)</th>
-          </tr>
-        </thead>
-        <tfoot>
-          <tr>
-            <td colspan="4">SUM</td>
-            <td>118</td>
-          </tr>
-        </tfoot>
-        <tbody>
-          <tr>
-            <td>Haircut</td>
-            <td>Hairdresser</td>
-            <td>12/09</td>
-            <td>Great idea</td>
-            <td>30</td>
-          </tr>
-          <tr>
-            <td>Lasagna</td>
-            <td>Restaurant</td>
-            <td>12/09</td>
-            <td>Regrets</td>
-            <td>18</td>
-          </tr>
-          <tr>
-            <td>Shoes</td>
-            <td>Shoeshop</td>
-            <td>13/09</td>
-            <td>Big regrets</td>
-            <td>65</td>
-          </tr>
-          <tr>
-            <td>Toothpaste</td>
-            <td>Supermarket</td>
-            <td>13/09</td>
-            <td>Good</td>
-            <td>5</td>
-          </tr>
-        </tbody>
+    <table>
+      <caption>
+        How I chose to spend my money
+      </caption>
+      <thead>
+        <tr>
+          <th>Purchase</th>
+          <th>Location</th>
+          <th>Date</th>
+          <th>Evaluation</th>
+          <th>Cost (€)</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td colspan="4">SUM</td>
+          <td>118</td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>Haircut</td>
+          <td>Hairdresser</td>
+          <td>12/09</td>
+          <td>Great idea</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>Lasagna</td>
+          <td>Restaurant</td>
+          <td>12/09</td>
+          <td>Regrets</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>Shoes</td>
+          <td>Shoeshop</td>
+          <td>13/09</td>
+          <td>Big regrets</td>
+          <td>65</td>
+        </tr>
+        <tr>
+          <td>Toothpaste</td>
+          <td>Supermarket</td>
+          <td>13/09</td>
+          <td>Good</td>
+          <td>5</td>
+        </tr>
+      </tbody>
     </table>
-
   </body>
 </html>
 ```
@@ -394,16 +397,15 @@ slug: Learn/HTML/Tables/Advanced
   </tr>
 </thead>
 <tbody>
-<tr>
-  <th id="haircut">Haircut</th>
-  <td headers="location haircut">Hairdresser</td>
-  <td headers="date haircut">12/09</td>
-  <td headers="evaluation haircut">Great idea</td>
-  <td headers="cost haircut">30</td>
-</tr>
+  <tr>
+    <th id="haircut">Haircut</th>
+    <td headers="location haircut">Hairdresser</td>
+    <td headers="date haircut">12/09</td>
+    <td headers="evaluation haircut">Great idea</td>
+    <td headers="cost haircut">30</td>
+  </tr>
 
   ...
-
 </tbody>
 ```
 

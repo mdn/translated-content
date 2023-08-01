@@ -43,7 +43,7 @@ text-align: unset;
 La propiedad `text-align` se especifica de una de las siguientes maneras:
 
 - Utilizando los valores clave `start`, `end`, `left`, `right`, `center`,
-`justify`, `justify-all`, o `match-parent`.
+  `justify`, `justify-all`, o `match-parent`.
 - Utilizando sólo un valor `<string>`, en cuyo caso el otro valor por defecto es `right`.
 - Utilizando tanto un valor de palabra clave como un valor [`<string>`](#string).
 

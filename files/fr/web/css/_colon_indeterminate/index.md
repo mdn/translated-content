@@ -1,5 +1,5 @@
 ---
-title: ':indeterminate'
+title: ":indeterminate"
 slug: Web/CSS/:indeterminate
 translation_of: Web/CSS/:indeterminate
 ---
@@ -33,11 +33,13 @@ Cela inclut :
 #### CSS
 
 ```css
-input, span {
+input,
+span {
   background: red;
 }
 
-:indeterminate, :indeterminate + label {
+:indeterminate,
+:indeterminate + label {
   background: lime;
 }
 ```
@@ -46,11 +48,11 @@ input, span {
 
 ```html
 <div>
-  <input type="checkbox" id="checkbox">
+  <input type="checkbox" id="checkbox" />
   <label for="checkbox">L'arrière-plan devrait être vert.</label>
 </div>
 <div>
-  <input type="radio" id="radio">
+  <input type="radio" id="radio" />
   <label for="radio">L'arrière-plan devrait être vert.</label>
 </div>
 ```
@@ -59,7 +61,7 @@ input, span {
 
 ```js
 var inputs = document.getElementsByTagName("input");
-for(var i = 0; i < inputs.length; i++) {
+for (var i = 0; i < inputs.length; i++) {
   inputs[i].indeterminate = true;
 }
 ```
@@ -82,7 +84,7 @@ progress:indeterminate {
 #### HTML
 
 ```html
-<progress/>
+<progress />
 ```
 
 #### Résultat

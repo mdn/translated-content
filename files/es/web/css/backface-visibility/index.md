@@ -58,7 +58,10 @@ Esta propiedad puede tener dos valores diferentes (y exclusivos):
             <div class="face bottom">6</div>
           </div>
         </div>
-        <p>All the faces are transparent and the three back faces are visible through the front ones.</p>
+        <p>
+          All the faces are transparent and the three back faces are visible
+          through the front ones.
+        </p>
       </td>
       <td>
         <div class="container">
@@ -71,7 +74,9 @@ Esta propiedad puede tener dos valores diferentes (y exclusivos):
             <div class="face bottom">6</div>
           </div>
         </div>
-        <p>No face is opaque, but the three back faces are always hidden now.</p>
+        <p>
+          No face is opaque, but the three back faces are always hidden now.
+        </p>
       </td>
     </tr>
   </tbody>
@@ -153,7 +158,7 @@ Esta propiedad puede tener dos valores diferentes (y exclusivos):
 .top {
   background: rgba(196, 196, 0, 0.7);
   transform: rotateX(90deg) translateZ(50px);
-  -webkit-transform: rotateX(90deg) translateZ(50px)
+  -webkit-transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
@@ -163,8 +168,10 @@ Esta propiedad puede tener dos valores diferentes (y exclusivos):
 }
 
 /* Make the table a little nicer */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   margin: 0px;
   padding: 6px;
   font-family: sans-serif;

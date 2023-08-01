@@ -2,6 +2,7 @@
 title: 웹 게임 개발에 대해
 slug: Games/Introduction
 ---
+
 {{GamesSidebar}}
 
 현대의 웹은 뛰어나고 고품질의 게임을 만들 뿐 만 아니라 이 게임들을 배급 하는 플랫폼으로 성장하였습니다.

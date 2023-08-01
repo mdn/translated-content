@@ -62,7 +62,7 @@ Cette propriété peut prendre deux formes :
   display: grid;
   grid-gap: 10px;
   grid-template: repeat(4, 1fr) / repeat(2, 1fr);
-  grid-auto-flow: column;  /* ou 'row', 'row dense', 'column dense' */
+  grid-auto-flow: column; /* ou 'row', 'row dense', 'column dense' */
 }
 
 #item1 {
@@ -102,7 +102,7 @@ Cette propriété peut prendre deux formes :
   <option value="column">column</option>
   <option value="row">row</option>
 </select>
-<input id="dense" type="checkbox" onchange="changeGridAutoFlow()">
+<input id="dense" type="checkbox" onchange="changeGridAutoFlow()" />
 <label for="dense">dense</label>
 ```
 

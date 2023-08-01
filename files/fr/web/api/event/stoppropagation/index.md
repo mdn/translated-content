@@ -16,7 +16,7 @@ event.stopPropagation();
 
 ## Exemple
 
-Voir la section Exemple 5 : [Propagation d'évènements](/fr/docs/Web/API/Document_Object_Model/Exemples#Exemple_5_:_propagation_d%27%C3%A9v%C3%A8nements) dans le chapitre Exemples pour un exemple plus détaillé de cette méthode et de la propagation d'évènements dans le DOM.
+Voir la section Exemple 5 : [Propagation d'évènements](/fr/docs/Web/API/Document_Object_Model/Exemples#Exemple_5_:_propagation_d%27évènements) dans le chapitre Exemples pour un exemple plus détaillé de cette méthode et de la propagation d'évènements dans le DOM.
 
 ## Notes
 

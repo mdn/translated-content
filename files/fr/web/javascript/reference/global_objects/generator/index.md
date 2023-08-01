@@ -6,7 +6,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Generator
 
 {{JSRef}}
 
-L'objet **`Generator`** est renvoyé par une {{jsxref("Instructions/function*","fonction génératrice","",1)}}, c'est à la fois [un itérateur](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_%C2%AB_it%C3%A9rateur_%C2%BB) et [un itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_%C2%AB_it%C3%A9rable_%C2%BB).
+L'objet **`Generator`** est renvoyé par une {{jsxref("Instructions/function*","fonction génératrice","",1)}}, c'est à la fois [un itérateur](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérateur_») et [un itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_»).
 
 ## Syntaxe
 
@@ -34,10 +34,9 @@ var g = gen(); // "Generator { }"
 ### Un itérateur infini
 
 ```js
-function* idMaker(){
-    var index = 0;
-    while(true)
-        yield index++;
+function* idMaker() {
+  var index = 0;
+  while (true) yield index++;
 }
 
 var gen = idMaker(); // "Generator { }"
@@ -72,11 +71,11 @@ function* fibonacci() {
 }
 
 var it = fibonacci();
-console.log(it);          // "Generator {  }"
-console.log(it.next());   // 1
+console.log(it); // "Generator {  }"
+console.log(it.next()); // 1
 console.log(it.send(10)); // 20
-console.log(it.close());  // undefined
-console.log(it.next());   // throws StopIteration (le générateur est clôturé)
+console.log(it.close()); // undefined
+console.log(it.next()); // throws StopIteration (le générateur est clôturé)
 ```
 
 ## Spécifications

@@ -19,9 +19,9 @@ self.onlanguagechange = function() { ... };
 L'extrait de code suivant montre un gestionnaire `onlanguagechange` placé au sein d'un worker :
 
 ```js
-self.onlanguagechange = function() {
-  console.log('Your preferred language settings have been changed');
-}
+self.onlanguagechange = function () {
+  console.log("Your preferred language settings have been changed");
+};
 ```
 
 ## Spécifications

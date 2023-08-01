@@ -12,9 +12,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
 ## 書式
 
 ```js
-browser.menus.onClicked.addListener(listener)
-browser.menus.onClicked.removeListener(listener)
-browser.menus.onClicked.hasListener(listener)
+browser.menus.onClicked.addListener(listener);
+browser.menus.onClicked.removeListener(listener);
+browser.menus.onClicked.hasListener(listener);
 ```
 
 イベントは 3 つの関数を持ちます:
@@ -54,12 +54,11 @@ browser.menus.onClicked.hasListener(listener)
 browser.menus.create({
   id: "click-me",
   title: "Click me!",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener((info, tab) => {
-  console.log("Item " + info.menuItemId + " clicked " +
-              "in tab " + tab.id);
+  console.log("Item " + info.menuItemId + " clicked " + "in tab " + tab.id);
 });
 ```
 

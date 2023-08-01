@@ -34,13 +34,12 @@ Cet exemple affiche toutes les origines à qui la directive Feature Policy perme
 
 ```js
 // D'abord, récupère l'objet Feature Policy
-const featurePolicy = document.featurePolicy
+const featurePolicy = document.featurePolicy;
 
 // Puis demande la liste pour la fonctionnalité "camera"
-const listePermissions = featurePolicy.getAllowlistForFeature("camera")
+const listePermissions = featurePolicy.getAllowlistForFeature("camera");
 
-for (const origine of listePermissions)
-  console.log(origine)
+for (const origine of listePermissions) console.log(origine);
 ```
 
 ## Spécifications

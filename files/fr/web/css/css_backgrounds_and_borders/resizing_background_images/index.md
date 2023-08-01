@@ -86,7 +86,8 @@ Essayez de redimensionner la fenêtre de votre navigateur afin de voir la valeur
   background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
   background-size: contain;
   border: 2px solid darkgray;
-  color: #000; text-shadow: 1px 1px 0 #fff;
+  color: #000;
+  text-shadow: 1px 1px 0 #fff;
 }
 ```
 

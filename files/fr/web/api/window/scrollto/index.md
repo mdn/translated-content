@@ -11,15 +11,15 @@ La méthode **`Window.scrollTo()`** permet de faire défiler la fenêtre pour at
 ## Syntaxe
 
 ```js
-scrollTo(x-coord, y-coord)
-scrollTo(options)
+scrollTo(x_coord, y_coord);
+scrollTo(options);
 ```
 
 ### Paramètres
 
-- `x-coord`
+- `x_coord`
   - : Le pixel sur l'axe horizontal du document dont on veut qu'il soit affiché dans le coin supérieur gauche.
-- `y-coord`
+- `y_coord`
   - : Le pixel sur l'axe vertical du document dont on veut qu'il soit affiché dans le coin supérieur gauche.
 
 ou
@@ -51,7 +51,7 @@ window.scrollTo(0, 1000);
 window.scrollTo({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

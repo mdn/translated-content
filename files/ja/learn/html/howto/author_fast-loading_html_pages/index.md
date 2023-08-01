@@ -132,7 +132,7 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 画像に遅延読み込みのマークを付けるには、 [`loading`](/ja/docs/Web/HTML/Element/img#loading) 属性に `lazy` という値を指定してください。この設定により、画像は必要なときにのみ読み込まれます。
 
 ```html
-<img href="./images/footerlogo.jpg" loading="lazy">
+<img href="./images/footerlogo.jpg" loading="lazy" />
 ```
 
 ただし、遅延読み込みされた画像は、 `load` イベントが発生した時点では利用できない場合があります。画像がロードされているかどうかは、論理プロパティの {{domxref("HTMLImageElement.complete", "complete")}} の値が `true` であるかどうかを確認することで判断できます。

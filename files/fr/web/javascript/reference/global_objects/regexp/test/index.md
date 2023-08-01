@@ -13,7 +13,7 @@ La méthode **`test()`** vérifie s'il y a une correspondance entre un texte et 
 ## Syntaxe
 
 ```js
-regexObj.test(chaîne)
+regexObj.test(chaîne);
 ```
 
 ### Paramètres
@@ -44,18 +44,18 @@ console.log(resultat); // true
 L'exemple ci-dessous affiche un message qui dépend du succès du test :
 
 ```js
-function testinput(regex, chaine){
-    var midstring;
-    if (regex.test(chaine)) {
-        midstring = " contient ";
-    } else {
-        midstring = " ne contient pas ";
-    }
-    console.log(str + midstring + re.source);
+function testinput(regex, chaine) {
+  var midstring;
+  if (regex.test(chaine)) {
+    midstring = " contient ";
+  } else {
+    midstring = " ne contient pas ";
+  }
+  console.log(str + midstring + re.source);
 }
 
 testinput(/^coucou/, "coucou le monde"); // coucou le monde contient coucou
-testinput(/^coucou/, "salut le monde") // salut le monde ne contient pas coucou
+testinput(/^coucou/, "salut le monde"); // salut le monde ne contient pas coucou
 ```
 
 ### Utiliser `test()` avec le marqueur global (`/g`)

@@ -29,7 +29,7 @@ La propiedad [CSS](/es/docs/Web/CSS) `-webkit-mask-origin` determina el origen d
 .example {
   border: 10px double;
   padding: 10px;
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
 
   /* La imagen de máscara estará dentro del padding */
   -webkit-mask-origin: content;
@@ -38,7 +38,7 @@ La propiedad [CSS](/es/docs/Web/CSS) `-webkit-mask-origin` determina el origen d
 
 ```css
 div {
-  -webkit-mask-image: url('mask1.png'), url('mask2.png');
+  -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-origin: padding, content;
 }
 ```

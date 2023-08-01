@@ -95,4 +95,4 @@ Pour une liste alphabétique, voir le volet de navigation situé à gauche sur c
 
 ## Voir aussi
 
-- Le chapitre de cette référence sur les [opérateurs JavaScript](/fr/docs/JavaScript/Reference/Op%C3%A9rateurs).
+- Le chapitre de cette référence sur les [opérateurs JavaScript](/fr/docs/JavaScript/Reference/Opérateurs).

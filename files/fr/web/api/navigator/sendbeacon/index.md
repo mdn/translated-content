@@ -41,7 +41,7 @@ Non seulement ces techniques représentent-elles de mauvais patrons de programma
 L'exemple suivant montre un code analytique théorique qui tente de soumettre des données à un serveur en utilisant une requête `XMLHttpRequest` synchrone dans un gestionnaire de déchargement. Cela résulte en un délai pour le déchargement de la page.
 
 ```js
-window.addEventListener('unload', enregistrerDonnees, false);
+window.addEventListener("unload", enregistrerDonnees, false);
 
 function enregistrerDonnees() {
   var client = new XMLHttpRequest();
@@ -56,7 +56,7 @@ C'est là qu'entre en jeu **`sendBeacon()`**. En utilisant la méthode `sendBeac
 L'exemple suivant montre un patron de code analytique théorique qui soumet des données à un serveur en utilisant la méthode `sendBeacon()`.
 
 ```js
-window.addEventListener('unload', enregistrerDonnees, false);
+window.addEventListener("unload", enregistrerDonnees, false);
 
 function enregistrerDonnees() {
   navigator.sendBeacon("/log", donneesAnalytiques);
@@ -74,4 +74,4 @@ function enregistrerDonnees() {
 ## Voir aussi
 
 - {{domxref("navigator", "navigator")}}
-- {{domxref("WorkerNavigator.sendBeacon()")}} (Utilisation de `sendBeacon()` dans des *workers*)
+- {{domxref("WorkerNavigator.sendBeacon()")}} (Utilisation de `sendBeacon()` dans des _workers_)

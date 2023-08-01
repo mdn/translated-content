@@ -50,13 +50,13 @@ var db;
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // Gère l'échec de l'ouverture de la base
-DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>La base de donnée n\'as pas peut être ouverte.</li>';
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>La base de donnée n'as pas peut être ouverte.</li>";
 };
 
 // Gère le succès de l'ouverture de la base
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>La base de données est ouverte.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>La base de données est ouverte.</li>";
 
   //
   db = request.result;
@@ -68,10 +68,9 @@ DBOpenRequest.onsuccess = function(event) {
 // Ce gestionnaire d'événement nécessite un nouveau numéro de version de la base de données.
 // Si la base n'existe pas un nouveau numéro de version est généré par la méthode d'ouverture de connexion window.indexDB.open .
 
-DBOpenRequest.onupgradeneeded = function(event) {
-
-  db.onerror = function(event) {
-    note.innerHTML += '<li>Erreur de chargement de la base de données.</li>';
+DBOpenRequest.onupgradeneeded = function (event) {
+  db.onerror = function (event) {
+    note.innerHTML += "<li>Erreur de chargement de la base de données.</li>";
   };
 
   // L'Accès au magasin d'objet "toDoList" de la base de données

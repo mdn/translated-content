@@ -56,7 +56,8 @@ Cet exemple, qui met la vidéo en pause quand vous basculez vers un autre onglet
 ```js
 // Set the name of the hidden property and the change event for visibility
 var hidden, visibilityChange;
-if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
+if (typeof document.hidden !== "undefined") {
+  // Opera 12.10 and Firefox 18 and later support
   hidden = "hidden";
   visibilityChange = "visibilitychange";
 } else if (typeof document.msHidden !== "undefined") {
@@ -80,23 +81,35 @@ function handleVisibilityChange() {
 }
 
 // Warn if the browser doesn't support addEventListener or the Page Visibility API
-if (typeof document.addEventListener === "undefined" || typeof document.hidden === "undefined") {
-  console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+if (
+  typeof document.addEventListener === "undefined" ||
+  typeof document.hidden === "undefined"
+) {
+  console.log(
+    "This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.",
+  );
 } else {
   // Handle page visibility change
   document.addEventListener(visibilityChange, handleVisibilityChange, false);
 
   // When the video pauses, set the title.
   // This shows the paused
-  videoElement.addEventListener("pause", function(){
-    document.title = 'Paused';
-  }, false);
+  videoElement.addEventListener(
+    "pause",
+    function () {
+      document.title = "Paused";
+    },
+    false,
+  );
 
   // When the video plays, set the title.
-  videoElement.addEventListener("play", function(){
-    document.title = 'Playing';
-  }, false);
-
+  videoElement.addEventListener(
+    "play",
+    function () {
+      document.title = "Playing";
+    },
+    false,
+  );
 }
 ```
 
@@ -118,11 +131,15 @@ if (typeof document.addEventListener === "undefined" || typeof document.hidden =
     function handleVisibilityChange() {
       if (document.hidden) {
         pauseSimulation();
-      } else  {
+      } else {
         startSimulation();
       }
     }
-    document.addEventListener("visibilitychange", handleVisibilityChange, false);
+    document.addEventListener(
+      "visibilitychange",
+      handleVisibilityChange,
+      false,
+    );
     ```
 
 - {{domxref("document.onvisibilitychange")}}

@@ -31,15 +31,13 @@ otherWindow.postMessage(message, targetOrigin, [transfer]);
 ```js
 window.addEventListener("message", receiveMessage, false);
 
-function receiveMessage(event)
-{
+function receiveMessage(event) {
   // For Chrome, the origin property is in the event.originalEvent
   // object.
   // 这里不准确，chrome 没有这个属性
   // var origin = event.origin || event.originalEvent.origin;
-  var origin = event.origin
-  if (origin !== "http://example.org:8080")
-    return;
+  var origin = event.origin;
+  if (origin !== "http://example.org:8080") return;
 
   // ...
 }
@@ -98,20 +96,19 @@ window.addEventListener("message", receiveMessage, false);
  */
 
 //当 A 页面 postMessage 被调用后，这个 function 被 addEventListener 调用
-function receiveMessage(event)
-{
+function receiveMessage(event) {
   // 我们能信任信息来源吗？
-  if (event.origin !== "http://example.com:8080")
-    return;
+  if (event.origin !== "http://example.com:8080") return;
 
   // event.source 就当前弹出页的来源页面
   // event.data 是 "hello there!"
 
   // 假设你已经验证了所受到信息的 origin (任何时候你都应该这样做), 一个很方便的方式就是把 event.source
   // 作为回信的对象，并且把 event.origin 作为 targetOrigin
-  event.source.postMessage("hi there yourself!  the secret response " +
-                           "is: rheeeeet!",
-                           event.origin);
+  event.source.postMessage(
+    "hi there yourself!  the secret response " + "is: rheeeeet!",
+    event.origin,
+  );
 }
 
 window.addEventListener("message", receiveMessage, false);

@@ -13,7 +13,7 @@ Si un élément du formulaire (comme un bouton reset par exemple) a un `name` ou
 ## Syntaxe
 
 ```js
-HTMLFormElement.reset()
+HTMLFormElement.reset();
 ```
 
 ## Exemple

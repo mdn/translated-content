@@ -1,5 +1,5 @@
 ---
-title: 'スキルテスト: オブジェクトの基本'
+title: "スキルテスト: オブジェクトの基本"
 slug: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 ---
 

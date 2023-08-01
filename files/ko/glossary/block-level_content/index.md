@@ -17,13 +17,18 @@ original_slug: Web/HTML/Block-level_elements
 ### HTML
 
 ```html
-<p>이 문단은 블록 레벨 요소입니다. 부모 요소와 구분할 수 있도록 배경 색을 입혔습니다.</p>
+<p>
+  이 문단은 블록 레벨 요소입니다. 부모 요소와 구분할 수 있도록 배경 색을
+  입혔습니다.
+</p>
 ```
 
 ### CSS
 
 ```css
-p { background-color: #8ABB55; }
+p {
+  background-color: #8abb55;
+}
 ```
 
 {{EmbedLiveSample('블록_레벨_요소')}}

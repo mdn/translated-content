@@ -44,7 +44,7 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-Pour une introduction à la syntaxe des sélecteurs CSS, consultez [ce tutoriel](/fr/docs/Apprendre/CSS/Introduction_%C3%A0_CSS/La_syntaxe). Soyez conscient que n'importe quelle erreur de [syntaxe CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured) dans une définition de règle l'invalide entièrement. Les règles non validées sont ignorées par le navigateur. Note : les définitions de règles CSS sont intégralement [basées sur du texte](https://www.w3.org/TR/css-syntax-3/#intro) (ASCII) alors que DOM-CSS / CSSOM (le système de gestion des règles) est [basé sur des objets](https://www.w3.org/TR/cssom/#introduction).
+Pour une introduction à la syntaxe des sélecteurs CSS, consultez [ce tutoriel](/fr/docs/Apprendre/CSS/Introduction_à_CSS/La_syntaxe). Soyez conscient que n'importe quelle erreur de [syntaxe CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured) dans une définition de règle l'invalide entièrement. Les règles non validées sont ignorées par le navigateur. Note : les définitions de règles CSS sont intégralement [basées sur du texte](https://www.w3.org/TR/css-syntax-3/#intro) (ASCII) alors que DOM-CSS / CSSOM (le système de gestion des règles) est [basé sur des objets](https://www.w3.org/TR/cssom/#introduction).
 
 ### Syntaxe des règles @
 
@@ -60,7 +60,7 @@ Comme la structure des règles @ varie grandement, veuillez consulter [règle @]
 
 Sont indiqués dans ce qui suit les divers [sélecteurs](/fr/docs/Web/CSS/CSS_Selectors), qui permettent aux styles d'être appliqués de façon conditionnelle selon diverses caractéristiques des éléments présents dans le DOM.
 
-### [Sélecteurs simples](/fr/docs/Web/CSS/CSS_Selectors#les_s%c3%a9lecteurs_simples/fr/docs/web/css/s%c3%a9lecteurs_css)
+### [Sélecteurs simples](/fr/docs/Web/CSS/CSS_Selectors#les_sélecteurs_simples/fr/docs/web/css/sélecteurs_css)
 
 Les sélecteurs simples sont des sélecteurs fondamentaux. Ce sont les sélecteurs les plus élémentaires qui sont fréquemment combinés pour créer d'autres sélecteurs plus complexes.
 
@@ -112,7 +112,7 @@ Les combinateurs sont des sélecteurs qui établissent une relation entre deux s
 - [Descripteurs](</fr/docs/Glossary/Descriptor_(CSS)>)
 - [Héritage](/fr/docs/Web/CSS/inheritance)
 - [Propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties)
-- [Spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#sp%c3%a9cificit%c3%a9)
+- [Spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#spécificité)
 - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
 - [Unités et valeurs CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
 

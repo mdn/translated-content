@@ -16,14 +16,14 @@ Le tableau qui suit fournit les correspondances entre les propriétés logiques 
 
 Si on utilisait un mode d'écriture vertical, {{CSSxRef("inline-size")}} aurait correspondu à {{CSSxRef("height")}}.
 
-| Propriété logique                        | Propriété physique               |
-| ---------------------------------------- | -------------------------------- |
-| {{CSSxRef("inline-size")}}     | {{CSSxRef("width")}}     |
-| {{CSSxRef("block-size")}}         | {{CSSxRef("height")}}     |
-| {{CSSxRef("min-inline-size")}} | {{CSSxRef("min-width")}} |
-| {{CSSxRef("min-block-size")}} | {{CSSxRef("min-height")}} |
-| {{CSSxRef("max-inline-size")}} | {{CSSxRef("max-width")}} |
-| {{CSSxRef("max-block-size")}} | {{CSSxRef("max-height")}} |
+| Propriété logique              | Propriété physique        |
+| ------------------------------ | ------------------------- |
+| {{CSSxRef("inline-size")}}     | {{CSSxRef("width")}}      |
+| {{CSSxRef("block-size")}}      | {{CSSxRef("height")}}     |
+| {{CSSxRef("min-inline-size")}} | {{CSSxRef("min-width")}}  |
+| {{CSSxRef("min-block-size")}}  | {{CSSxRef("min-height")}} |
+| {{CSSxRef("max-inline-size")}} | {{CSSxRef("max-width")}}  |
+| {{CSSxRef("max-block-size")}}  | {{CSSxRef("max-height")}} |
 
 ## Exemple pour `width` et `height`
 

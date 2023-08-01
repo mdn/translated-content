@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Errors/No_properties
 
 {{jsSidebar("Errors")}}
 
-[`null`](/ko/docs/Web/JavaScript/Reference/Operators/null) 과 {{jsxref("undefined")}} 라는 속성에 접근하려고 시도할때 “null(혹은 undefined)은 속성이 없습니다”라는 JavaScript 에러가 발생합니다.
+[`null`](/ko/docs/Web/JavaScript/Reference/Operators/null) 과 {{jsxref("undefined")}} 라는 속성에 접근하려고 시도할때 "null(혹은 undefined)은 속성이 없습니다"라는 JavaScript 에러가 발생합니다.
 
 ## 메세지
 

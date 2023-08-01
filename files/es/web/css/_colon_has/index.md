@@ -20,7 +20,9 @@ La [pseudo-class](/es/docs/Web/CSS/Pseudo-classes) CSS **`:has()`** representa u
 El siguiente selector selecciona únicamente los elementos {{HTMLElement("a")}} que contienen {{HTMLElement("img")}} hijo:
 
 ```css
-a:has(> img)
+a:has(> img) {
+
+}
 ```
 
 ## Especificaciones

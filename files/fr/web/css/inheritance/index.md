@@ -52,7 +52,7 @@ p {
 
 {{EmbedLiveSample("")}}
 
-Les mots «&nbsp;du texte en emphase&nbsp;» n'ont pas de bordure *en plus* (car la valeur initiale de [`border-style`](/fr/docs/Web/CSS/border-style) est `none`).
+Les mots «&nbsp;du texte en emphase&nbsp;» n'ont pas de bordure _en plus_ (car la valeur initiale de [`border-style`](/fr/docs/Web/CSS/border-style) est `none`).
 
 ## Notes
 

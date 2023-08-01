@@ -44,7 +44,7 @@ Sec-CH-UA-Full-Version-List: "<brand>";v="<full version>", ...
 
 - `<brand>`
   - : 与用户代理相关的品牌，如“Chromium”和“Google Chrome”。
-     这可能是一个故意不正确的品牌，如 `" Not A;Brand"` 或 `"(Not(A:Brand"`（实际值是预期随时间变化且不可预测的）。
+    这可能是一个故意不正确的品牌，如 `" Not A;Brand"` 或 `"(Not(A:Brand"`（实际值是预期随时间变化且不可预测的）。
 - `<full version>`
   - : 完整的版本号，例如 98.0.4750.0。
 

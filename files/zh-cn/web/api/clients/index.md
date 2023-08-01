@@ -23,35 +23,37 @@ slug: Web/API/Clients
 下面示例显示一个已有的聊天窗口，或者当用户点击通知时创建新的窗口。
 
 ```js
-addEventListener('notificationclick', event => {
-  event.waitUntil(async function() {
-    const allClients = await clients.matchAll({
-      includeUncontrolled: true
-    });
+addEventListener("notificationclick", (event) => {
+  event.waitUntil(
+    (async function () {
+      const allClients = await clients.matchAll({
+        includeUncontrolled: true,
+      });
 
-    let chatClient;
+      let chatClient;
 
-    // Let's see if we already have a chat window open:
-    for (const client of allClients) {
-      const url = new URL(client.url);
+      // Let's see if we already have a chat window open:
+      for (const client of allClients) {
+        const url = new URL(client.url);
 
-      if (url.pathname == '/chat/') {
-        // Excellent, let's use it!
-        client.focus();
-        chatClient = client;
-        break;
+        if (url.pathname == "/chat/") {
+          // Excellent, let's use it!
+          client.focus();
+          chatClient = client;
+          break;
+        }
       }
-    }
 
-    // If we didn't find an existing chat window,
-    // open a new one:
-    if (!chatClient) {
-      chatClient = await clients.openWindow('/chat/');
-    }
+      // If we didn't find an existing chat window,
+      // open a new one:
+      if (!chatClient) {
+        chatClient = await clients.openWindow("/chat/");
+      }
 
-    // Message the client:
-    chatClient.postMessage("New chat messages!");
-  }());
+      // Message the client:
+      chatClient.postMessage("New chat messages!");
+    })(),
+  );
 });
 ```
 

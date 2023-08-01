@@ -35,25 +35,25 @@ Once `getData()` has finished running, we start the audio source playing with `s
 function getData() {
   source = audioCtx.createBufferSource();
 
-  var myRequest = new Request('viper.ogg');
+  var myRequest = new Request("viper.ogg");
 
-  fetch(myRequest).then(function(response) {
-    response.arrayBuffer().then(function(buffer) {
-      audioCtx.decodeAudioData(buffer, function(decodedData) {
+  fetch(myRequest).then(function (response) {
+    response.arrayBuffer().then(function (buffer) {
+      audioCtx.decodeAudioData(buffer, function (decodedData) {
         source.buffer = decodedData;
         source.connect(audioCtx.destination);
       });
     });
   });
-};
+}
 
 // wire up buttons to stop and play audio
 
-play.onclick = function() {
+play.onclick = function () {
   getData();
   source.start(0);
-  play.setAttribute('disabled', 'disabled');
-}
+  play.setAttribute("disabled", "disabled");
+};
 ```
 
 ## 规范

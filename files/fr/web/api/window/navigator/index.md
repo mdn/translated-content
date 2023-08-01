@@ -11,7 +11,7 @@ La propriété en lecture-seule **`Window.navigator`** renvoie une référence �
 ## Syntaxe
 
 ```js
-navigatorObject = window.navigator
+navigatorObject = window.navigator;
 ```
 
 ## Exemple

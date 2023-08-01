@@ -11,8 +11,8 @@ La propriété obsolète `bgColor` renvoie ou déinit la couleur de fond (backgr
 ## Syntaxe
 
 ```js
-color = document.bgColor
-document.bgColor =color
+color = document.bgColor;
+document.bgColor = color;
 ```
 
 ### Parametres

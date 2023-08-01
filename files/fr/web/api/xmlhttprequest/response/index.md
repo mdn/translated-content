@@ -108,19 +108,19 @@ La propriété `XMLHttpRequest.response` contient le corps de la réponse. Elle 
 ## Example
 
 ```js
-var url = 'somePage.html'; // une page locale
+var url = "somePage.html"; // une page locale
 
 function load(url, callback) {
   var xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
       console.log(xhr.response); // Par défault une DOMString
     }
-  }
+  };
 
-  xhr.open('GET', url, true);
-  xhr.send('');
+  xhr.open("GET", url, true);
+  xhr.send("");
 }
 ```
 

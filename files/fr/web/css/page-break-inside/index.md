@@ -60,16 +60,18 @@ Pour des raisons de compatibilité, `page-break-inside` devrait être considér�
     <span>Une liste</span>
     <ol>
       <li>Un</li>
-<!--       <li>Deux</li> -->
+      <!-- <li>Deux</li> -->
     </ol>
   </section>
   <ul>
     <li>Un</li>
-<!--     <li>Deux</li> -->
+    <!-- <li>Deux</li> -->
   </ul>
   <p>Un deuxième paragraphe.</p>
   <p>Un troisième paragraphe, un peu plus long.</p>
-  <p>Un quatrième paragraphe, un peu plus long voire plus long que le troisième.</p>
+  <p>
+    Un quatrième paragraphe, un peu plus long voire plus long que le troisième.
+  </p>
 </div>
 ```
 
@@ -84,7 +86,10 @@ Pour des raisons de compatibilité, `page-break-inside` devrait être considér�
   column-width: 100px;
 }
 
-.list, ol, ul, p {
+.list,
+ol,
+ul,
+p {
   break-inside: avoid;
 }
 
@@ -92,7 +97,9 @@ p {
   background-color: #8ca0ff;
 }
 
-ol, ul, .list {
+ol,
+ul,
+.list {
   margin: 0.5em 0;
   display: block;
   background-color: orange;

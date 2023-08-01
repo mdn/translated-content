@@ -3,6 +3,7 @@ title: HTML_폼_구성_방법
 slug: Learn/Forms/How_to_structure_a_web_form
 original_slug: Learn/HTML/Forms/HTML_폼_구성_방법
 ---
+
 HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두가지 이유로 중요하다. 폼이 사용 할수 있다는 것을 보장하고 접근성도 늘릴수 있기 떄문이다.(즉 장애인들도 쉽게 사용할 수 있다.) HTML 폼의 [접근성](/ko/docs/Web/Accessibility)은 중요한 점이고 어떻게 폼 접근성을 높일 수 있는지 볼것이다.
 
 HTML 폼들은 그 유연성으로 인해 HTML 중 복잡한 구조를 가지고 있는 요소중 하나이다. 폼 요소와 속성을 잘 혼합하면 모든 형태의 기본적인 폼을 만들 수 있다. 즉 몇몇 사람들이 HTML폼이 단순하고 매우 거칠다는 것을 발견했다는 것에 주목할 가치가 있다. [XForms](/ko/docs/Archive/Web/XForms)같은 풍부한 기술이 있다는 것은 사실이지만 불행하게도 모든 브라우저에서 폼의 종류를 널리 구현되지 않았다. 왜냐하면 대부분 자바스크립트에 의존하여 HTML폼들을 다루기 떄문이다.이 문서에서는 HTML 폼 요소들을 어떻게 사용해야 하는지 자세하게 설명 할 것이다. 만약 사용자 폼 위젯 만들기에 대하여 자세한 내용을 알고 싶다면 다음 문서를 참조하시오. [How to build custom form widgets](/ko/docs/HTML/Forms/How_to_build_custom_form_widgets)
@@ -188,8 +189,8 @@ HTML 폼들은 그 유연성으로 인해 HTML 중 복잡한 구조를 가지고
 
 {{HTMLElement("fieldset")}} 요소는 다음과 같은 속성을 지정한다.
 
-| 속성 이름                                            | 기본값    | 설명                                                                                                                                                                                                                                                                                    |
-| ---------------------------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 속성 이름                               | 기본값    | 설명                                                                                                                                                                                                                                                                           |
+| --------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | {{htmlattrxref("disabled","fieldset")}} | (_false_) | 만약 이 불리언 속성이 설정되면 폼은(첫번째 {{ HTMLElement("legend") }}요소에 있는 요소는 예외이다. ) 이것에 파생된 요소를 사용하거나 편집 할 수없게된다. 그리고 마우스 클릭같은 어떠한 브라우저 이벤트들도 받지 않을것이다. 일반적으로 브라우저는 회색으로 이를 표시할 것이다. |
 
 ### The \<label> element
@@ -200,8 +201,8 @@ HTML 폼들은 그 유연성으로 인해 HTML 중 복잡한 구조를 가지고
 
 **{{HTMLElement("label")}}** 요소의 속성
 
-| 속성 명                                  | 기본값 | 설명                                                                                                                                               |
-| ---------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 속성 명                         | 기본값 | 설명                                                                                                                                       |
+| ------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | {{htmlattrxref("for","label")}} |        | {{HTMLElement("label")}} 요소와 같은 문서에 있는 위젯의 라벨의 ID . 문서안의 ID와 for속성 값이 같으면 그 라벨 요소는 그 위젯의 라벨이된다. |
 
 요소는 for속성으로 지정한 위젯과 묶여진다. for속성은 해당 위젯의 실제 id 속성을 참조한다. 위젯은 요소로 둘러싸게 할수 있지만 이 경우 몇가지 보조 기술이 라벨과 위젯의 암시적인 관계를 이해하지 못하기 떄문에 for 속성을 고려 해봐야한다.
@@ -211,12 +212,12 @@ HTML 폼들은 그 유연성으로 인해 HTML 중 복잡한 구조를 가지고
 ```html
 <form>
   <p>
-    <input type="checkbox" id="taste_1" name="taste_cherry" value="1">
+    <input type="checkbox" id="taste_1" name="taste_cherry" value="1" />
     <label for="taste_1">I like cherry</label>
   </p>
   <p>
     <label for="taste_2">
-      <input type="checkbox" id="taste_2" name="taste_banana" value="1">
+      <input type="checkbox" id="taste_2" name="taste_banana" value="1" />
       I like banana
     </label>
   </p>
@@ -229,7 +230,11 @@ HTML 폼들은 그 유연성으로 인해 HTML 중 복잡한 구조를 가지고
 
 ```html
 <form>
-  <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+  <p>
+    Required fields are followed by
+    <strong><abbr title="required">*</abbr></strong
+    >.
+  </p>
 
   <p>
     <label for="name">
@@ -242,7 +247,8 @@ HTML 폼들은 그 유연성으로 인해 HTML 중 복잡한 구조를 가지고
   <p>
     <label for="birth">
       <span>Date of birth: </span>
-      <input type="text" id="birth" name="userbirth" maxlength="10" /> <em>formated as mm/dd/yyyy</em>
+      <input type="text" id="birth" name="userbirth" maxlength="10" />
+      <em>formated as mm/dd/yyyy</em>
     </label>
   </p>
 </form>
@@ -260,8 +266,8 @@ HTML 폼들은 그 유연성으로 인해 HTML 중 복잡한 구조를 가지고
 
 {{HTMLElement("output")}} 요소는 다음 속성은 지원한다.
 
-| Attribute name                               | Default value | Description                                                                                              |
-| -------------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------- |
+| Attribute name                   | Default value | Description                                                                                              |
+| -------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------- |
 | {{htmlattrxref("for","output")}} |               | 스페이스로 구분된 다른 요소의 ID로 설정하고 이 요소들에 값을 입력을 계산하는데 기여한다.(또는 다른 효과) |
 
 ### form이 사용되는 일반적인 form 구조
@@ -279,7 +285,11 @@ HTML 목록은 체크박스나 라디오 버튼을 사용하는데 일반적으�
 ```html
 <form>
   <h1>Payment form</h1>
-  <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+  <p>
+    Required fields are followed by
+    <strong><abbr title="required">*</abbr></strong
+    >.
+  </p>
 
   <section>
     <h2>Contact information</h2>
@@ -310,7 +320,7 @@ HTML 목록은 체크박스나 라디오 버튼을 사용하는데 일반적으�
       </label>
     </p>
 
-     <p>
+    <p>
       <label for="mail">
         <span>E-mail: </span>
         <input type="email" id="mail" name="usermail" required />
@@ -707,8 +717,8 @@ This is all summarized in the following table (for a full list of all attributes
 
 이 요소는 다중 텍스트 필드로 설정된다. 이 요소는 사용자가 입력한 텍스트에 줄 바꿈을 할수 있다는 것을 제외하고 단일 라인 텍스트 필드와 정확하게 똑같이 작동한다. 또한 여러줄에 걸처 랜더링을 제어 하기위해 몇가지 추가 속성 설정을 허락한다.
 
-| Attribute name                                   | 기본값 | 설명                                                                    |
-| ------------------------------------------------ | ------ | ----------------------------------------------------------------------- |
+| Attribute name                      | 기본값 | 설명                                                                    |
+| ----------------------------------- | ------ | ----------------------------------------------------------------------- |
 | {{htmlattrxref("cols","textarea")}} | `20`   | 보여지는 문자 너비의 평균을 기준으로 텍스트 컨트롤의 너비               |
 | {{htmlattrxref("rows","textarea")}} |        | 보여지는 텍스트 행의 수                                                 |
 | {{htmlattrxref("wrap","textarea")}} | `soft` | hard, soft 이 둘중 하나의 값으로 어떻게 텍스트를 둘러쌀것인지 나타낸다. |
@@ -725,12 +735,14 @@ This is all summarized in the following table (for a full list of all attributes
 ```html
 <form>
   <p>
-    <label for="text_1">With regular HTML</label><br>
+    <label for="text_1">With regular HTML</label><br />
     <textarea id="text_1" name="regular"><p>I'm a paragraphe</p></textarea>
   </p>
   <p>
-    <label for="text_2">With escaped HTML</label><br>
-    <textarea id="text_2" name="escaped">&lt;p&gt;I'm a paragraphe&lt;/p&gt;</textarea>
+    <label for="text_2">With escaped HTML</label><br />
+    <textarea id="text_2" name="escaped">
+&lt;p&gt;I'm a paragraphe&lt;/p&gt;</textarea
+    >
   </p>
   <p>
     <button>Send me</button>
@@ -769,13 +781,13 @@ Let's take an example:
 
 {{HTMLElement("optgroup")}} 요소의 라벨 속성은 값이 나오기전에 보여주고 옵션 같은 요소들은 선택할 수 없게 나온다..
 
-| 속성 이름                                        | 기본값    | 설명                                                                                                                   |
-| ------------------------------------------------ | --------- | ---------------------------------------------------------------------------------------------------------------------- |
-| {{htmlattrxref("label","option")}}     |           | 이 속성은 옵션을 설명하는 라벨의 텍스트이다. 만약 라벨 속성이 정의되지 않으면 이 값은 요소의 텍스트 콘텐츠로 설정된다. |
+| 속성 이름                             | 기본값    | 설명                                                                                                                   |
+| ------------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------- |
+| {{htmlattrxref("label","option")}}    |           | 이 속성은 옵션을 설명하는 라벨의 텍스트이다. 만약 라벨 속성이 정의되지 않으면 이 값은 요소의 텍스트 콘텐츠로 설정된다. |
 | {{htmlattrxref("selected","option")}} | (_false_) | 만약 이 속성이 불리언 값으로 설정되는 경우 처음에 선택된 상태로 시작하게된다.                                          |
 
-| Attribute name                                   | Default value | Description                                                        |
-| ------------------------------------------------ | ------------- | ------------------------------------------------------------------ |
+| Attribute name                       | Default value | Description                                                        |
+| ------------------------------------ | ------------- | ------------------------------------------------------------------ |
 | {{htmlattrxref("label","optgroup")}} |               | The name of the group of options. **This attribute is mandatory.** |
 
 ### \<datalist>요소
@@ -821,16 +833,16 @@ Let's take an example:
 
 **{{HTMLElement("meter")}} 요소는 다음과 같은 속성을 가진다**
 
-| Attribute name                                   | Default value   | Description                                                    |
-| ------------------------------------------------ | --------------- | -------------------------------------------------------------- |
-| {{htmlattrxref("min","meter")}}         | 0               | The lower numeric bound of the measured range.                 |
-| {{htmlattrxref("max","meter")}}         | 1               | The upper numeric bound of the measured range.                 |
-| {{htmlattrxref("low","meter")}}         | the `min` value | The upper numeric bound of the low end of the measured range.  |
-| {{htmlattrxref("high","meter")}}     | the `max` value | The lower numeric bound of the high end of the measured range. |
+| Attribute name                      | Default value   | Description                                                    |
+| ----------------------------------- | --------------- | -------------------------------------------------------------- |
+| {{htmlattrxref("min","meter")}}     | 0               | The lower numeric bound of the measured range.                 |
+| {{htmlattrxref("max","meter")}}     | 1               | The upper numeric bound of the measured range.                 |
+| {{htmlattrxref("low","meter")}}     | the `min` value | The upper numeric bound of the low end of the measured range.  |
+| {{htmlattrxref("high","meter")}}    | the `max` value | The lower numeric bound of the high end of the measured range. |
 | {{htmlattrxref("optimum","meter")}} |                 | The optimal numeric value.                                     |
 
-| Attribute name                               | Default value | Description                                                                                                                                  |
-| -------------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Attribute name                     | Default value | Description                                                                                                                         |
+| ---------------------------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | {{htmlattrxref("max","progress")}} |               | This attribute describes how much work the task indicated by the {{HTMLElement("progress")}} element requires before it's complete. |
 
 ### The \<button> element
@@ -843,11 +855,11 @@ Let's take an example:
 
 **{HTMLElement("button")}} 요소의 속성**
 
-| 속성 이름                                                | 기본값   | 설명                                                                                                            |
-| -------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------- |
-| {{htmlattrxref("type","button")}}             | `submit` | 버튼의 타입. `button`, `reset`, `submit 이 있다.`                                                               |
+| 속성 이름                                   | 기본값   | 설명                                                                                                   |
+| ------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------ |
+| {{htmlattrxref("type","button")}}           | `submit` | 버튼의 타입. `button`, `reset`, `submit 이 있다.`                                                      |
 | {{htmlattrxref("formaction","button")}}     |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 action 속성에 오버라이드 된다.     |
-| {{htmlattrxref("formenctype","button")}}     |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 enctype 속성에 오버라이드 된다.    |
+| {{htmlattrxref("formenctype","button")}}    |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 enctype 속성에 오버라이드 된다.    |
 | {{htmlattrxref("formmethod","button")}}     |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 method 속성에 오버라이드 된다.     |
 | {{htmlattrxref("formnovalidate","button")}} |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 novalidate 속성에 오버라이드 된다. |
 | {{htmlattrxref("formtarget","button")}}     |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 target 속성에 오버라이드 된다.     |
@@ -860,13 +872,13 @@ Let's take an example:
 
 Many of the elements used to define form widgets have some their own attributes. However, there is a set of attributes common to all form elements that give you some control over those widgets. Here is a list of those common attributes:
 
-| Attribute name | Default value | Description                                                                                                                                                                                                                                                                                                                                           |
-| -------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `autofocus`    | (_false_)     | This Boolean attribute lets you specify that the element should automatically have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified.                                                                     |
-| `disabled`     | (_false_)     | This Boolean attribute indicates that the user cannot interact with the element. If this attribute is not specified, the element inherits its setting from the containing element, for example {{HTMLElement("fieldset")}}; if there is no containing element with the `disabled` attribute set, then the element is enabled.                |
+| Attribute name | Default value | Description                                                                                                                                                                                                                                                                                                                         |
+| -------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `autofocus`    | (_false_)     | This Boolean attribute lets you specify that the element should automatically have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified.                                                   |
+| `disabled`     | (_false_)     | This Boolean attribute indicates that the user cannot interact with the element. If this attribute is not specified, the element inherits its setting from the containing element, for example {{HTMLElement("fieldset")}}; if there is no containing element with the `disabled` attribute set, then the element is enabled.       |
 | `form`         |               | The form element that the widget is associated with. The value of the attribute must be the `id` attribute of a {{HTMLElement("form")}} element in the same document. In theory, it lets you set a form widget outside of a {{HTMLElement("form")}} element. In practice, however, there is no browser which supports that feature. |
-| `name`         |               | The name of the element; this is submitted with the form data.                                                                                                                                                                                                                                                                                        |
-| `value`        |               | The element's initial value.                                                                                                                                                                                                                                                                                                                          |
+| `name`         |               | The name of the element; this is submitted with the form data.                                                                                                                                                                                                                                                                      |
+| `value`        |               | The element's initial value.                                                                                                                                                                                                                                                                                                        |
 
 ## Using [ARIA](/ko/docs/Accessibility/ARIA) to structure HTML forms
 
@@ -884,7 +896,7 @@ This attribute is a convenient way to define a label without using the {{HTMLEle
 <form>
   <p id="fruitLabel">What's your favorite fruit</p>
   <p>
-    <input type="text" name="fruit" aria-labelledby="fruitLabel">
+    <input type="text" name="fruit" aria-labelledby="fruitLabel" />
   </p>
 </form>
 ```

@@ -45,14 +45,14 @@ L'évènement **`scroll`** (défilement) est émis lorsque l'on fait défiler le
 
 ## Propriétés
 
-| Propriété                             | Type                                 | Description                                                                   |
-| ------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | La cible de l'évènement (la plus haute dans l'arbre DOM).                     |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | Le type d'évènement.                                                          |
-| `bubbles` {{readonlyInline}}    | {{domxref("Boolean")}}         | Si l'évènement bouillonne ou non.                                             |
-| `cancelable` {{readonlyInline}} | {{domxref("Boolean")}}         | Si l'évènement est annulable ou non.                                          |
+| Propriété                       | Type                       | Description                                                      |
+| ------------------------------- | -------------------------- | ---------------------------------------------------------------- |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | La cible de l'évènement (la plus haute dans l'arbre DOM).        |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Le type d'évènement.                                             |
+| `bubbles` {{readonlyInline}}    | {{domxref("Boolean")}}     | Si l'évènement bouillonne ou non.                                |
+| `cancelable` {{readonlyInline}} | {{domxref("Boolean")}}     | Si l'évènement est annulable ou non.                             |
 | `view` {{readonlyInline}}       | {{domxref("WindowProxy")}} | {{domxref("Document.defaultView")}} (objet `window` du document) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                     | 0.                                                                            |
+| `detail` {{readonlyInline}}     | `long` (`float`)           | 0.                                                               |
 
 ## Exemple
 
@@ -72,11 +72,11 @@ function faireQuelqueChose(position_scroll) {
   // faire quelque chose avec la position du scroll
 }
 
-window.addEventListener('scroll', function(e) {
+window.addEventListener("scroll", function (e) {
   derniere_position_de_scroll_connue = window.scrollY;
 
   if (!ticking) {
-    window.requestAnimationFrame(function() {
+    window.requestAnimationFrame(function () {
       faireQuelqueChose(derniere_position_de_scroll_connue);
       ticking = false;
     });

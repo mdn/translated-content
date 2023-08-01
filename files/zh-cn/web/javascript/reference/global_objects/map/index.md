@@ -138,8 +138,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
 
 ```js example-bad
 const wrongMap = new Map();
-wrongMap['bla'] = 'blaa';
-wrongMap['bla2'] = 'blaaa2';
+wrongMap["bla"] = "blaa";
+wrongMap["bla2"] = "blaaa2";
 
 console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
@@ -147,23 +147,23 @@ console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 但这种设置属性的方式不会改变 Map 的数据结构。它使用的是通用对象的特性。`'bla'` 的值未被存储在 Map 中，无法被查询到。其他的对这一数据的操作也会失败：
 
 ```js example-bad
-wrongMap.has('bla')    // false
-wrongMap.delete('bla') // false
-console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }
+wrongMap.has("bla"); // false
+wrongMap.delete("bla"); // false
+console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
 
 正确的存储数据到 Map 中的方式是使用 `set(key, value)` 方法。
 
 ```js example-good
-const contacts = new Map()
-contacts.set('Jessie', {phone: "213-555-1234", address: "123 N 1st Ave"})
-contacts.has('Jessie') // true
-contacts.get('Hilary') // undefined
-contacts.set('Hilary', {phone: "617-555-4321", address: "321 S 2nd St"})
-contacts.get('Jessie') // {phone: "213-555-1234", address: "123 N 1st Ave"}
-contacts.delete('Raymond') // false
-contacts.delete('Jessie') // true
-console.log(contacts.size) // 1
+const contacts = new Map();
+contacts.set("Jessie", { phone: "213-555-1234", address: "123 N 1st Ave" });
+contacts.has("Jessie"); // true
+contacts.get("Hilary"); // undefined
+contacts.set("Hilary", { phone: "617-555-4321", address: "321 S 2nd St" });
+contacts.get("Jessie"); // {phone: "213-555-1234", address: "123 N 1st Ave"}
+contacts.delete("Raymond"); // false
+contacts.delete("Jessie"); // true
+console.log(contacts.size); // 1
 ```
 
 ## 构造函数
@@ -194,6 +194,7 @@ console.log(contacts.size) // 1
 - {{jsxref("Map.prototype.set()")}}
   - : 在 `Map` 对象中设置与指定的键 `key` 关联的值，并返回 `Map` 对象。
 - {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
+
   - : 返回一个新的迭代对象，其为一个包含 `Map` 对象中所有键值对的 `[key, value]` 数组，并以插入 `Map` 对象的顺序排列。
 
 - {{jsxref("Map.prototype.keys()")}}
@@ -212,9 +213,9 @@ console.log(contacts.size) // 1
 ```js
 const myMap = new Map();
 
-const keyString = 'a string';
+const keyString = "a string";
 const keyObj = {};
-const keyFunc = function() {};
+const keyFunc = function () {};
 
 // 添加键
 myMap.set(keyString, "和键'a string'关联的值");
@@ -228,9 +229,9 @@ console.log(myMap.get(keyString)); // "和键'a string'关联的值"
 console.log(myMap.get(keyObj)); // "和键 keyObj 关联的值"
 console.log(myMap.get(keyFunc)); // "和键 keyFunc 关联的值"
 
-console.log(myMap.get('a string')); // "和键'a string'关联的值"，因为 keyString === 'a string'
+console.log(myMap.get("a string")); // "和键'a string'关联的值"，因为 keyString === 'a string'
 console.log(myMap.get({})); // undefined，因为 keyObj !== {}
-console.log(myMap.get(function() {})); // undefined，因为 keyFunc !== function () {}
+console.log(myMap.get(function () {})); // undefined，因为 keyFunc !== function () {}
 ```
 
 ### 将 NaN 作为 Map 的键
@@ -239,12 +240,12 @@ console.log(myMap.get(function() {})); // undefined，因为 keyFunc !== functio
 
 ```js
 const myMap = new Map();
-myMap.set(NaN, 'not a number');
+myMap.set(NaN, "not a number");
 
 myMap.get(NaN);
 // "not a number"
 
-const otherNaN = Number('foo');
+const otherNaN = Number("foo");
 myMap.get(otherNaN);
 // "not a number"
 ```
@@ -255,8 +256,8 @@ myMap.get(otherNaN);
 
 ```js
 const myMap = new Map();
-myMap.set(0, 'zero');
-myMap.set(1, 'one');
+myMap.set(0, "zero");
+myMap.set(1, "one");
 
 for (const [key, value] of myMap) {
   console.log(`${key} = ${value}`);
@@ -298,12 +299,15 @@ myMap.forEach((value, key) => {
 ### Map 与数组的关系
 
 ```js
-const kvArray = [['key1', 'value1'], ['key2', 'value2']];
+const kvArray = [
+  ["key1", "value1"],
+  ["key2", "value2"],
+];
 
 // 使用常规的 Map 构造函数可以将一个二维键值对数组转换成一个 Map 对象
 const myMap = new Map(kvArray);
 
-console.log(myMap.get('key1')); // "value1"
+console.log(myMap.get("key1")); // "value1"
 
 // 使用 Array.from 函数可以将一个 Map 对象转换成一个二维键值对数组
 console.log(Array.from(myMap)); // 输出和 kvArray 相同的数组
@@ -320,9 +324,7 @@ console.log(Array.from(myMap.keys())); // 输出 ["key1", "key2"]
 `Map` 能像数组一样被复制：
 
 ```js
-const original = new Map([
-  [1, 'one'],
-]);
+const original = new Map([[1, "one"]]);
 
 const clone = new Map(original);
 
@@ -336,14 +338,14 @@ console.log(original === clone); // false. 浅比较 不为同一个对象的引
 
 ```js
 const first = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
 ]);
 
 const second = new Map([
-  [1, 'uno'],
-  [2, 'dos']
+  [1, "uno"],
+  [2, "dos"],
 ]);
 
 // 合并两个 Map 对象时，如果有重复的键值，则后面的会覆盖前面的。
@@ -359,18 +361,18 @@ console.log(merged.get(3)); // three
 
 ```js
 const first = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
 ]);
 
 const second = new Map([
-  [1, 'uno'],
-  [2, 'dos']
+  [1, "uno"],
+  [2, "dos"],
 ]);
 
 // Map 对象同数组进行合并时，如果有重复的键值，则后面的会覆盖前面的。
-const merged = new Map([...first, ...second, [1, 'eins']]);
+const merged = new Map([...first, ...second, [1, "eins"]]);
 
 console.log(merged.get(1)); // eins
 console.log(merged.get(2)); // dos

@@ -48,10 +48,10 @@ Cette méthode peut être utile lorsqu'on souhaite agréger le résultat de plus
 var p1 = Promise.resolve(3);
 var p2 = 1337;
 var p3 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 100, 'foo');
+  setTimeout(resolve, 100, "foo");
 });
 
-Promise.all([p1, p2, p3]).then(values => {
+Promise.all([p1, p2, p3]).then((values) => {
   console.log(values); // [3, 1337, "foo"]
 });
 ```
@@ -62,36 +62,41 @@ La promesse créée par `Promise.all()` échoue immédiatement si l'une des prom
 
 ```js
 var p1 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 1000, 'un');
+  setTimeout(resolve, 1000, "un");
 });
 var p2 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 2000, 'deux');
+  setTimeout(resolve, 2000, "deux");
 });
 var p3 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 3000, 'trois');
+  setTimeout(resolve, 3000, "trois");
 });
 var p4 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 4000, 'quatre');
+  setTimeout(resolve, 4000, "quatre");
 });
 var p5 = new Promise((resolve, reject) => {
-  reject('rejet');
+  reject("rejet");
 });
 
-Promise.all([p1, p2, p3, p4, p5]).then(values => {
-  console.log(values);
-}, reason => {
-  console.log(reason)
-});
+Promise.all([p1, p2, p3, p4, p5]).then(
+  (values) => {
+    console.log(values);
+  },
+  (reason) => {
+    console.log(reason);
+  },
+);
 
 // Dans la console :
 // "rejet"
 
 //On peut aussi employer .catch
-Promise.all([p1, p2, p3, p4, p5]).then(values => {
-  console.log(values);
-}).catch(reason => {
-  console.log(reason)
-});
+Promise.all([p1, p2, p3, p4, p5])
+  .then((values) => {
+    console.log(values);
+  })
+  .catch((reason) => {
+    console.log(reason);
+  });
 
 // Dans la console :
 // "rejet"
@@ -101,20 +106,24 @@ Il est possible de modifier ce comportement en gérant les éventuels échecs :
 
 ```js
 var p1 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 1000, 'p1_resolution_retardee');
+  setTimeout(resolve, 1000, "p1_resolution_retardee");
 });
 
 var p2 = new Promise((resolve, reject) => {
-  reject(new Error('p2_rejet_immediat'));
+  reject(new Error("p2_rejet_immediat"));
 });
 
 Promise.all([
-  p1.catch(error => { return error }),
-  p2.catch(error => { return error }),
-]).then(values => {
+  p1.catch((error) => {
+    return error;
+  }),
+  p2.catch((error) => {
+    return error;
+  }),
+]).then((values) => {
   console.log(values[0]); // "p1_resolution_retardee"
   console.log(values[1]); // "Error: p2_rejet_immediat"
-})
+});
 ```
 
 ### Caractère asynchrone de `Promise.all()`
@@ -132,9 +141,9 @@ console.log(p);
 
 // on utilise la méthode setTimeout pour exécuter
 // du code dès que la pile est vide
-setTimeout(function() {
-    console.log('La pile est vide');
-    console.log(p);
+setTimeout(function () {
+  console.log("La pile est vide");
+  console.log(p);
 });
 
 // Cela affichera dans la console (et dans cet ordre) :
@@ -149,9 +158,9 @@ On aura le même comportement si `Promise.all` produit une promesse rompue :
 var mixedPromisesArray = [Promise.resolve(33), Promise.reject(44)];
 var p = Promise.all(mixedPromisesArray);
 console.log(p);
-setTimeout(function() {
-    console.log('La pile est vide');
-    console.log(p);
+setTimeout(function () {
+  console.log("La pile est vide");
+  console.log(p);
 });
 
 // Affichera :
@@ -170,10 +179,10 @@ var p = Promise.all([]); // immédiatement résolue
 // de façon asynchrone
 var p2 = Promise.all([1337, "hi"]);
 console.log(p);
-console.log(p2)
-setTimeout(function() {
-    console.log('La pile est vide');
-    console.log(p2);
+console.log(p2);
+setTimeout(function () {
+  console.log("La pile est vide");
+  console.log(p2);
 });
 
 // Affichera :

@@ -13,7 +13,7 @@ La propriété **`name`** de l'interface `IDBDatabase` est une chaîne de caract
 ## Syntaxe
 
 ```js
-db.name
+db.name;
 ```
 
 ### Valeur
@@ -32,12 +32,12 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 // détecter si l'ouverture de la base se déroule
 // correctement ou non.
 
-DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>Erreur au chargement de la base de données.</li>';
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>Erreur au chargement de la base de données.</li>";
 };
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Base de données initialisée.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Base de données initialisée.</li>";
 
   // Affecte la connexion à la variable db.
   db = DBOpenRequest.result;

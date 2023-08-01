@@ -47,11 +47,11 @@ sort(compareFn)
 
 如果提供了 `compareFn`，所有非 `undefined` 的数组元素都会按照比较函数的返回值进行排序（所有的 `undefined` 元素都会被排序到数组的末尾，并且不调用 `compareFn`）。
 
-| `compareFn(a, b)` 返回值 | 排序顺序                  |
-| ----------------------- | ------------------------ |
-| > 0                     | `a` 在 `b` 后，如 `[b, a]` |
-| < 0                     | `a` 在 `b` 前，如 `[a, b]` |
-| === 0                   | 保持 `a` 和 `b` 原来的顺序  |
+| `compareFn(a, b)` 返回值 | 排序顺序                   |
+| ------------------------ | -------------------------- |
+| > 0                      | `a` 在 `b` 后，如 `[b, a]` |
+| < 0                      | `a` 在 `b` 前，如 `[a, b]` |
+| === 0                    | 保持 `a` 和 `b` 原来的顺序 |
 
 所以，比较函数形式如下：
 
@@ -160,7 +160,7 @@ items.sort((a, b) => {
 当排序非 ASCII 字符的字符串（如包含类似 e、é、è、a、ä 等字符的字符串）。一些非英语语言的字符串需要使用 {{jsxref("String.localeCompare")}}。这个函数可以将函数排序到正确的顺序。
 
 ```js
-var items = ['réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu'];
+var items = ["réservé", "premier", "cliché", "communiqué", "café", "adieu"];
 items.sort(function (a, b) {
   return a.localeCompare(b);
 });
@@ -227,10 +227,10 @@ console.log(numbers[0]); // 3
 
 ```js
 const students = [
-  { name: "Alex",   grade: 15 },
+  { name: "Alex", grade: 15 },
   { name: "Devlin", grade: 15 },
-  { name: "Eagle",  grade: 13 },
-  { name: "Sam",    grade: 14 },
+  { name: "Eagle", grade: 13 },
+  { name: "Sam", grade: 14 },
 ];
 ```
 
@@ -244,9 +244,9 @@ students.sort((firstItem, secondItem) => firstItem.grade - secondItem.grade);
 
 ```js
 [
-  { name: "Eagle",  grade: 13 },
-  { name: "Sam",    grade: 14 },
-  { name: "Alex",   grade: 15 }, // grade 相同时维持原先的顺序（稳定排序）
+  { name: "Eagle", grade: 13 },
+  { name: "Sam", grade: 14 },
+  { name: "Alex", grade: 15 }, // grade 相同时维持原先的顺序（稳定排序）
   { name: "Devlin", grade: 15 }, // grade 相同时维持原先的顺序（稳定排序）
 ];
 ```
@@ -257,10 +257,10 @@ EcmaScript 第 10 版（EcmaScript 2019）以前没有要求稳定性，意味�
 
 ```js
 [
-  { name: "Eagle",  grade: 13 },
-  { name: "Sam",    grade: 14 },
+  { name: "Eagle", grade: 13 },
+  { name: "Sam", grade: 14 },
   { name: "Devlin", grade: 15 }, // 没有维持原先的顺序
-  { name: "Alex",   grade: 15 }, // 没有维持原先的顺序
+  { name: "Alex", grade: 15 }, // 没有维持原先的顺序
 ];
 ```
 

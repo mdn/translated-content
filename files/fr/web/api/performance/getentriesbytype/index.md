@@ -13,7 +13,7 @@ La méthode **`getEntriesByName()`** renvoie une liste de tous les objets {{domx
 ## Syntaxe
 
 ```js
-  let entries = window.performance.getEntriesByType(type);
+let entries = window.performance.getEntriesByType(type);
 ```
 
 ### Arguments
@@ -49,32 +49,46 @@ function usePerformanceEntryMethods() {
 
   // Utilise getEntries() pour itérer à travers chaque entrée.
   var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
+  for (var i = 0; i < p.length; i++) {
     log("Entry[" + i + "]");
     checkPerformanceEntry(p[i]);
   }
 
   // Utilise getEntries(name, entryType) pour obtenir des entrées spécifiques.
-  p = performance.getEntries({name : "Begin", entryType: "mark"});
-  for (var i=0; i < p.length; i++) {
+  p = performance.getEntries({ name: "Begin", entryType: "mark" });
+  for (var i = 0; i < p.length; i++) {
     log("Begin[" + i + "]");
     checkPerformanceEntry(p[i]);
   }
 
   // Utilise getEntriesByType() pour obtenir toutes les entrées "mark".
   p = performance.getEntriesByType("mark");
-  for (var i=0; i < p.length; i++) {
-    log("Mark only entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
+  for (var i = 0; i < p.length; i++) {
+    log(
+      "Mark only entry[" +
+        i +
+        "]: name = " +
+        p[i].name +
+        "; startTime = " +
+        p[i].startTime +
+        "; duration  = " +
+        p[i].duration,
+    );
   }
 
   // Utilise getEntriesByName() pour obtenir toutes les entrées "mark" nommées "Begin".
   p = performance.getEntriesByName("Begin", "mark");
-  for (var i=0; i < p.length; i++) {
-    log("Mark and Begin entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
+  for (var i = 0; i < p.length; i++) {
+    log(
+      "Mark and Begin entry[" +
+        i +
+        "]: name = " +
+        p[i].name +
+        "; startTime = " +
+        p[i].startTime +
+        "; duration  = " +
+        p[i].duration,
+    );
   }
 }
 ```

@@ -40,7 +40,10 @@ slug: Learn/CSS/Styling_text/Styling_lists
 ```html
 <h2>장바구니</h2>
 
-<p>참조 단락</p>
+<p>
+  Paragraph for reference, paragraph for reference, paragraph for reference,
+  paragraph for reference, paragraph for reference, paragraph for reference.
+</p>
 
 <ul>
   <li>허머스</li>
@@ -51,28 +54,42 @@ slug: Learn/CSS/Styling_text/Styling_lists
 
 <h2>레시피 목록</h2>
 
-<p>참조 단락</p>
+<p>
+  Paragraph for reference, paragraph for reference, paragraph for reference,
+  paragraph for reference, paragraph for reference, paragraph for reference.
+</p>
 
 <ol>
-  <li>피타를 토스트하고 식힌 다음 가장자리를 자릅니다.</li>
-  <li>달라붙지 않는 얕은 팬에 할루미를 튀겨 양면이 갈색이 되도록 합니다.</li>
-  <li>샐러드를 씻고 자릅니다.</li>
-  <li>샐러드, 후무스, 튀긴 할루미로 피타 속을 채웁니다.</li>
+  <li>Toast pita, leave to cool, then slice down the edge.</li>
+  <li>
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
+  <li>Wash and chop the salad.</li>
+  <li>Fill pita with salad, hummus, and fried halloumi.</li>
 </ol>
 
 <h2>성분 설명 목록</h2>
 
-<p>참조 단락</p>
+<p>
+  Paragraph for reference, paragraph for reference, paragraph for reference,
+  paragraph for reference, paragraph for reference, paragraph for reference.
+</p>
 
 <dl>
-  <dt>허머스</dt>
-  <dd>일반적으로 타히니, 레몬 주스, 소금, 마늘 및 기타 재료와 혼합된 병아리콩으로 만든 걸쭉한 딥/소스입니다.</dd>
-  <dt>피타</dt>
-  <dd>부드러우면서 살짝 누룩을 넣은 플랫브레드입니다.</dd>
-  <dt>할루미</dt>
-  <dd>일반적으로 염소/양의 우유로 만들어지며 녹는점이 평소보다 높은 반경성, 숙성되지 않은 소금물에 절인 치즈입니다.</dd>
-  <dt>그린 샐러드</dt>
-  <dd>많은 사람들이 케밥을 장식하는 데에 사용하는 녹색 건강 재료입니다.</dd>
+  <dt>Hummus</dt>
+  <dd>
+    A thick dip/sauce generally made from chick peas blended with tahini, lemon
+    juice, salt, garlic, and other ingredients.
+  </dd>
+  <dt>Pita</dt>
+  <dd>A soft, slightly leavened flatbread.</dd>
+  <dt>Halloumi</dt>
+  <dd>
+    A semi-hard, unripened, brined cheese with a higher-than-usual melting
+    point, usually made from goat/sheep milk.
+  </dd>
+  <dt>Green salad</dt>
+  <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
 </dl>
 ```
 
@@ -102,18 +119,22 @@ h2 {
   font-size: 2rem;
 }
 
-ul,ol,dl,p {
+ul,
+ol,
+dl,
+p {
   font-size: 1.5rem;
 }
 
-li, p {
+li,
+p {
   line-height: 1.5;
 }
 
 /* Description list styles */
 
-
-dd, dt {
+dd,
+dt {
   line-height: 1.5;
 }
 
@@ -246,7 +267,9 @@ ul {
 ```html
 <ol start="4">
   <li>Toast pita, leave to cool, then slice down the edge.</li>
-  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li>Wash and chop the salad.</li>
   <li>Fill pita with salad, hummus, and fried halloumi.</li>
 </ol>
@@ -263,7 +286,9 @@ ul {
 ```html
 <ol start="4" reversed>
   <li>Toast pita, leave to cool, then slice down the edge.</li>
-  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li>Wash and chop the salad.</li>
   <li>Fill pita with salad, hummus, and fried halloumi.</li>
 </ol>
@@ -282,7 +307,9 @@ ul {
 ```html
 <ol>
   <li value="2">Toast pita, leave to cool, then slice down the edge.</li>
-  <li value="4">Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li value="4">
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li value="6">Wash and chop the salad.</li>
   <li value="8">Fill pita with salad, hummus, and fried halloumi.</li>
 </ol>
@@ -306,9 +333,15 @@ ul {
 실수한 경우 _재설정_ 버튼을 사용하여 언제든지 재설정할 수 있습니다. 정말 막히면 _해결 방법 표시_ 버튼을 눌러 잠재적인 답변을 확인하세요.
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>HTML Input</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"><ul>
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+<ul>
   <li>First, light the candle.</li>
   <li>Next, open the box.</li>
   <li>Finally, place the three magic items in the box, in this exact order, to complete the spell:
@@ -318,16 +351,30 @@ ul {
       <li>The goblin statue</li>
     </ol>
   </li>
-</ul></textarea>
+</ul></textarea
+  >
 
   <h2>CSS Input</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></textarea>
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></textarea>
 
   <h2>Output</h2>
-  <div class="output" style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
+  <div
+    class="output"
+    style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="재설정" style="margin: 10px 10px 0 0;">
-    <input id="solution" type="button" value="해결 방법 표시" style="margin: 10px 0 0 10px;">
+    <input
+      id="reset"
+      type="button"
+      value="Reset"
+      style="margin: 10px 10px 0 0;" />
+    <input
+      id="solution"
+      type="button"
+      value="Show solution"
+      style="margin: 10px 0 0 10px;" />
   </div>
 </div>
 ```
@@ -341,8 +388,8 @@ var cssCode = cssInput.value;
 var output = document.querySelector(".output");
 var solution = document.getElementById("solution");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+var styleElem = document.createElement("style");
+var headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -350,15 +397,16 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
+solution.addEventListener("click", function () {
   htmlInput.value = htmlCode;
-  cssInput.value = 'ul {\n  list-style-type: square;\n}\n\nul li, ol li {\n  line-height: 1.5;\n}\n\nol {\n  list-style-type: lower-alpha\n}';
+  cssInput.value =
+    "ul {\n  list-style-type: square;\n}\n\nul li, ol li {\n  line-height: 1.5;\n}\n\nol {\n  list-style-type: lower-alpha\n}";
   drawOutput();
 });
 
