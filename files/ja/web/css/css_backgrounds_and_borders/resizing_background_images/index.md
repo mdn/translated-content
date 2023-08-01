@@ -15,8 +15,7 @@ original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images
 ### HTML
 
 ```html
-<div class="tiledBackground">
-</div>
+<div class="tiledBackground"></div>
 ```
 
 ### CSS

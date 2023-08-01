@@ -74,9 +74,13 @@ original_slug: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
   /* すべての高コントラストの整形規則 */
 }
 @media screen and (-ms-high-contrast: black-on-white) {
-  div { background-image: url('image-bw.png'); }
+  div {
+    background-image: url("image-bw.png");
+  }
 }
 @media screen and (-ms-high-contrast: white-on-black) {
-  div { background-image: url('image-wb.png'); }
+  div {
+    background-image: url("image-wb.png");
+  }
 }
 ```

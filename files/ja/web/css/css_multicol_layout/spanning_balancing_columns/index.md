@@ -50,7 +50,7 @@ original_slug: Web/CSS/CSS_Columns/Spanning_Columns
 
 {{EmbedGHLiveSample("css-examples/multicol/balancing/balance.html", '100%', 550)}}
 
- `column-fill` の他の値として `auto` があります。この場合、すべての段を同じ量で充足して高さの均衡を図るのではなく、段を順番に充足させます。以下の例では `column-fill` を `auto` に変更し、段を段組みコンテナーの高さまで順番に充足させ、最後のいくつかの段は空のままにします。
+`column-fill` の他の値として `auto` があります。この場合、すべての段を同じ量で充足して高さの均衡を図るのではなく、段を順番に充足させます。以下の例では `column-fill` を `auto` に変更し、段を段組みコンテナーの高さまで順番に充足させ、最後のいくつかの段は空のままにします。
 
 {{EmbedGHLiveSample("css-examples/multicol/balancing/auto.html", '100%', 550)}}
 
