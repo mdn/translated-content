@@ -25,8 +25,8 @@ slug: Web/CSS/:any-link
 ### HTML
 
 ```html
-<a href="https://example.com">External link</a><br>
-<a href="#">Internal target link</a><br>
+<a href="https://example.com">External link</a><br />
+<a href="#">Internal target link</a><br />
 <a>Placeholder link (won't get styled)</a>
 ```
 

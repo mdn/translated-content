@@ -12,7 +12,7 @@ slug: Web/CSS/:-moz-loading
 ## 構文
 
 ```css
-:-moz-loading
+:-moz-loading {}
 ```
 
 ## 例
