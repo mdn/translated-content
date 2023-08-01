@@ -133,89 +133,13 @@ CSS 는 글꼴의 일반적인 다섯 가지 이름: `serif`, `sans-serif`, `mon
 
 5개의 이름은 다음과 같이 정의됩니다:
 
-<table class="standard-table no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">용어</th>
-      <th scope="col">정의</th>
-      <th scope="col">예제</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>serif</code></td>
-      <td>
-        serif가 있는 글꼴(일부 서체에서 획 끝에 표시되는 번창 및 기타 작은 세부 사항).
-      </td>
-      <td id="serif-example">
-        <pre class="brush: html hidden">My big red elephant</pre>
-        <pre class="brush: css hidden">
-body {
-  font-family: serif;
-}</pre
-        >
-        {{EmbedLiveSample("serif-example", 100, 60)}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>sans-serif</code></td>
-      <td>serif가 없는 글꼴.</td>
-      <td id="sans-serif-example">
-        <pre class="brush: html hidden">My big red elephant</pre>
-        <pre class="brush: css hidden">
-body {
-  font-family: sans-serif;
-}</pre
-        >
-        {{EmbedLiveSample("sans-serif-example", 100, 60)}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>monospace</code></td>
-      <td>
-        모든 문자의 너비가 동일한 글꼴로, 일반적으로 코드 목록에 사용됩니다.
-      </td>
-      <td id="monospace-example">
-        <pre class="brush: html hidden">My big red elephant</pre>
-        <pre class="brush: css hidden">
-body {
-  font-family: monospace;
-}</pre
-        >
-        {{EmbedLiveSample("monospace-example", 100, 60)}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>cursive</code></td>
-      <td>
-        흐르고 연결된 획을 사용하여 손글씨를 에뮬레이션하기 위한 글꼴입니다.
-      </td>
-      <td id="cursive-example">
-        <pre class="brush: html hidden">My big red elephant</pre>
-        <pre class="brush: css hidden">
-body {
-  font-family: cursive;
-}</pre
-        >
-        {{EmbedLiveSample("cursive-example", 100, 60)}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>fantasy</code></td>
-      <td>장식용 글꼴.</td>
-      <td id="fantasy-example">
-        <pre class="brush: html hidden">My big red elephant</pre>
-        <pre class="brush: css hidden">
-body {
-  font-family: fantasy;
-}</pre
-        >
-        {{EmbedLiveSample("fantasy-example", 100, 60)}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
+| 용어         | 정의                                                                                                              | 예제                |
+| ------------ | ----------------------------------------------------------------------------------------------------------------- | ------------------- |
+| `serif`      | serif가 있는 글꼴(일부 서체에서 획 끝에 표시되는 번창 및 기타 작은 세부 사항).                                     | My big red elephant |
+| `sans-serif` | serifs 가 없는 글꼴.                                                                                              | My big red elephant |
+| `monospace`  | 모든 문자의 너비가 같은 글꼴로, 일반적으로 코드 목록에 사용됩니다.                                                 | My big red elephant |
+| `cursive`    | 흐르고 연결된 획을 사용하여 손글씨를 에뮬레이션하기 위한 글꼴입니다.                                                | My big red elephant |
+| `fantasy`    | 장식용 글꼴.                                                                                                      | My big red elephant |
 
 #### 글꼴 스택
 
