@@ -26,14 +26,12 @@ translation_of: Web/CSS/display-listitem
 ### `HTML`
 
 ```html
-
 <div class="fake-list">I will display as a list item</div>
 ```
 
 ### `CSS`
 
 ```css
-
 .fake-list {
   display: list-item;
   list-style-position: inside;

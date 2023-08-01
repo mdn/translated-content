@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.types.filter-function.invert
 ---
+
 {{CSSRef}}
 
 [Функция](/ru/docs/Web/CSS/CSS_Functions) [CSS](/ru/docs/Web/CSS) **`invert()`** инвертирует цвета изображения. Его результатом является {{cssxref("&lt;filter-function&gt;")}}.

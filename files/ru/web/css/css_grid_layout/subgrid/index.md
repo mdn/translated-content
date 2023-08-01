@@ -93,6 +93,6 @@ translation_of: Web/CSS/CSS_Grid_Layout/Subgrid
 
 ## Спецификация
 
-| Specification                        | Status                           | Comment                                                                                                   |
-| ------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Specification              | Status                  | Comment                                                                                                   |
+| -------------------------- | ----------------------- | --------------------------------------------------------------------------------------------------------- |
 | {{SpecName("CSS Grid 2")}} | {{Spec2("CSS Grid 2")}} | Initial definition of [subgrids](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#subgrid). |

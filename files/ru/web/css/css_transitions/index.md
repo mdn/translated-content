@@ -33,8 +33,8 @@ translation_of: Web/CSS/CSS_Transitions
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
+| Specification                      | Status                          | Comment             |
+| ---------------------------------- | ------------------------------- | ------------------- |
 | {{ SpecName('CSS3 Transitions') }} | {{ Spec2('CSS3 Transitions') }} | Initial definition. |
 
 ## See also

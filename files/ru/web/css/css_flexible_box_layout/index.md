@@ -47,6 +47,6 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout
 
 ## Спецификации
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
+| Specification                  | Status                      | Comment             |
+| ------------------------------ | --------------------------- | ------------------- |
 | {{ SpecName('CSS3 Flexbox') }} | {{ Spec2('CSS3 Flexbox') }} | Initial definition. |

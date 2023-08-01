@@ -42,8 +42,8 @@ translation_of: Web/CSS/CSS_Animations
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
+| Specification                     | Status                         | Comment             |
+| --------------------------------- | ------------------------------ | ------------------- |
 | {{ SpecName('CSS3 Animations') }} | {{ Spec2('CSS3 Animations') }} | Initial definition. |
 
 ## Browser compatibility

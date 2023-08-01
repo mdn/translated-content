@@ -3,6 +3,7 @@ title: Селектор дочерних элементов
 slug: Web/CSS/Child_combinator
 translation_of: Web/CSS/Child_combinator
 ---
+
 {{CSSRef("Selectors")}}
 
 ## Описание
@@ -18,7 +19,9 @@ selector1 > selector2 { style properties }
 ## Пример
 
 ```css
-span { background-color: white; }
+span {
+  background-color: white;
+}
 div > span {
   background-color: DodgerBlue;
 }
@@ -26,7 +29,8 @@ div > span {
 
 ```html
 <div>
-  <span>Span 1 в div
+  <span
+    >Span 1 в div
     <span>Span 2 в span, который в div</span>
   </span>
 </div>

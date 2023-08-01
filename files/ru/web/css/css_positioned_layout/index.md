@@ -38,7 +38,7 @@ original_slug: Web/CSS/CSS_Positioning
 
 ## Specifications
 
-| Specification                                        | Status                                   | Comment |
-| ---------------------------------------------------- | ---------------------------------------- | ------- |
-| {{ SpecName('CSS3 Positioning') }}         | {{ Spec2('CSS3 Positioning') }} |         |
-| {{ SpecName('CSS2.1', 'visuren.html') }} | {{ Spec2('CSS2.1') }}             |         |
+| Specification                            | Status                          | Comment |
+| ---------------------------------------- | ------------------------------- | ------- |
+| {{ SpecName('CSS3 Positioning') }}       | {{ Spec2('CSS3 Positioning') }} |         |
+| {{ SpecName('CSS2.1', 'visuren.html') }} | {{ Spec2('CSS2.1') }}           |         |

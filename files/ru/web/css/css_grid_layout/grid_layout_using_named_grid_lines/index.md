@@ -12,7 +12,9 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 Когда вы определяете свою сетку с помощью свойств `grid-template-rows` и `grid-template-columns`, вы можете присвоить имя некоторым или всем линиям в вашей сетке. Для демонстрации я использую простой макет, созданный в руководстве по линейному размещению. На этот раз я создам сетку, используя именованные линии.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -90,7 +92,9 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 Хотя вы можете выбрать любые имена, но если вы добавляете `-start` и `-end` к линиям вокруг области, как в приведённом выше примере, то сетка создаст вам именованную область основного используемого имени. Возьмём приведённый выше пример, у меня есть `content-start` и `content-end` как для строк, так и для столбцов. Это означает, что будет создана также область сетки с именем `content`, которую можно по своему усмотрению.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -159,7 +163,9 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 Позиционировать `overlay` используя неявные именованные линии, это то же самое, что позиционировать элемент с помощью названных нами строк..
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -207,9 +213,9 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
   z-index: 10;
   grid-column: main-start / main-end;
   grid-row: hd-start / ft-end;
-  border: 4px solid rgb(92,148,13);
-  background-color: rgba(92,148,13,.4);
-  color: rgb(92,148,13);
+  border: 4px solid rgb(92, 148, 13);
+  background-color: rgba(92, 148, 13, 0.4);
+  color: rgb(92, 148, 13);
   font-size: 150%;
 }
 ```
@@ -235,7 +241,9 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 В следующем примере я создаю сетку с двенадцатью равными по ширине столбцами. Перед определением размера 1fr трека столбца я также определяю имя строки `[col-start]`. Это означает, что в конечном итоге мы получим сетку, содержащую 12 строк столбцов с именами `col-start` перед столбцом шириной `1fr` .
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -263,7 +271,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 
 ```css
 .item1 {
-  grid-column: col-start / col-start 5
+  grid-column: col-start / col-start 5;
 }
 ```
 
@@ -300,7 +308,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 
 ```css
 .wrapper {
-  grid-template-columns: repeat(4, [col-start] 1fr [col-end] );
+  grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
 }
 ```
 
@@ -308,14 +316,16 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 
 ```css
 .wrapper {
-  grid-template-columns: [col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr  [col-end col-start] 1fr [col-end];
+  grid-template-columns: [col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr [col-end];
 }
 ```
 
 Если вы использовали список треков, то вы можете использовать ключевое слово `span` не только для охвата ряда строк, но и для охвата ряда строк с определённым именем..
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -339,7 +349,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 }
 
 .item1 {
-  grid-column: col1-start / col2-start 2
+  grid-column: col1-start / col2-start 2;
 }
 
 .item2 {
@@ -350,8 +360,12 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 
 ```html
 <div class="wrapper">
-  <div class="item1">I am placed from col1-start line 1 to col2-start line 2</div>
-  <div class="item2">I am placed from col1-start line 2 spanning 2 lines named col1-start</div>
+  <div class="item1">
+    I am placed from col1-start line 1 to col2-start line 2
+  </div>
+  <div class="item2">
+    I am placed from col1-start line 2 spanning 2 lines named col1-start
+  </div>
 </div>
 ```
 
@@ -372,7 +386,9 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 Затем мы можем использовать этот фреймворк для вёрстки нашей страницы. Например, чтобы создать макет из трёх столбцов с верхним и нижним колонтитулами, у меня может быть следующая разметка.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -403,7 +419,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 
 ```css
 .main-header,
-.main-footer  {
+.main-footer {
   grid-column: col-start / span 12;
 }
 

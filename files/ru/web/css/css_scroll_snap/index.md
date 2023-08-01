@@ -57,8 +57,8 @@ translation_of: Web/CSS/CSS_Scroll_Snap
 
 ## Specification
 
-| Specification                                        | Status                                           | Comment            |
-| ---------------------------------------------------- | ------------------------------------------------ | ------------------ |
+| Specification                          | Status                              | Comment            |
+| -------------------------------------- | ----------------------------------- | ------------------ |
 | {{SpecName("CSS Scroll Snap Points")}} | {{Spec2("CSS Scroll Snap Points")}} | Initial definition |
 
 ## Browser compatibility
