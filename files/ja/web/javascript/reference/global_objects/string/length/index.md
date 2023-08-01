@@ -19,7 +19,7 @@ l10n:
 
 ## 解説
 
-このプロパティは、文字列内のコード単位の数を返します。JavaScript では [UTF-16](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters) エンコーディングを使用しており、すべての Unicode 文字が 1 つまたは 2 つのコード単位にエンコードされるため、`length` で返される値は文字列の実際の Unicode 文字数に一致しない可能性があります。よく使われるラテン、キリル、有名な漢字などはこのような問題にはなりませんが、絵文字、[数学記号](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols)、難しい漢字などのような特定の文字体系では、`length` で返される値が文字列の実際の文字数と一致しなくなる可能性があるので、コード単位数と文字数の違いを考慮する必要があるかもしれません。
+このプロパティは、文字列内のコード単位の数を返します。JavaScript では [UTF-16](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター) エンコーディングを使用しており、すべての Unicode 文字が 1 つまたは 2 つのコード単位にエンコードされるため、`length` で返される値は文字列の実際の Unicode 文字数に一致しない可能性があります。よく使われるラテン、キリル、有名な漢字などはこのような問題にはなりませんが、絵文字、[数学記号](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols)、難しい漢字などのような特定の文字体系では、`length` で返される値が文字列の実際の文字数と一致しなくなる可能性があるので、コード単位数と文字数の違いを考慮する必要があるかもしれません。
 
 言語の仕様書では、文字列の最大長が 2<sup>53</sup> - 1 要素と制定されており、これは[正確に表せる整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)の上限となっています。しかし、この長さの文字列は 16,384TiB のストレージを必要とし、これは一般的な機器のメモリーに収まらないため、実装上はもっと低い閾値を設けている傾向があり、文字列の長さを便宜上 32 ビット整数に収めています。
 
