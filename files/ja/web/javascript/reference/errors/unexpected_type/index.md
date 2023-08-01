@@ -44,10 +44,10 @@ var foo = null;
 foo.substring(1); // TypeError: foo is null
 
 // ある種のメソッドでは、特定の型が求められることがあります。
-var foo = {}
+var foo = {};
 Symbol.keyFor(foo); // TypeError: foo is not a symbol
 
-var foo = 'bar'
+var foo = "bar";
 Object.create(foo); // TypeError: "foo" is not an object or null
 ```
 
@@ -60,7 +60,7 @@ if (foo !== undefined) {
   // これで、 foo が定義されていることがわかるので、実行することができます。
 }
 
-if (typeof foo !== 'undefined') {
+if (typeof foo !== "undefined") {
   // 同じというのは良い考えですが、この実装を使わないでください。 - 本当の
   // undefined の値と未宣言の変数が混同されて問題が発生する可能性があります。
 }
