@@ -1,7 +1,8 @@
 ---
 title: 객체 지향 프로그래밍
 slug: Learn/JavaScript/Objects/Object-oriented_programming
-page-type: learn-module-chapter
+l10n:
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
