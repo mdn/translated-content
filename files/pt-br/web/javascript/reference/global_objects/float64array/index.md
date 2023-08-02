@@ -105,7 +105,7 @@ console.log(float64.length); // 2
 console.log(float64.BYTES_PER_ELEMENT); // 8
 
 // From an array
-var arr = new Float64Array([21,31]);
+var arr = new Float64Array([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -118,15 +118,17 @@ var buffer = new ArrayBuffer(32);
 var z = new Float64Array(buffer, 0, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var float64 = new Float64Array(iterable);
 // Float64Array[1, 2, 3]
 ```
 
 ## Specifications
 
-| Specification                                                                        |
-| ------------------------------------------------------------------------------------ |
+| Specification                                                   |
+| --------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} |
 
 ## Compatibilidade com navegadores
