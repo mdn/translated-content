@@ -6,7 +6,7 @@ original_slug: Web/CSS/gradient/linear-gradient()
 
 {{CSSRef}}
 
-**`linear-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) 用于创建一个表示两种或多种颜色沿一条直线进行线性过渡的像，其结果属于 {{cssxref("&lt;gradient&gt;")}} 数据类型，这是一种特别的 {{cssxref("&lt;image&gt;")}} 数据类型。
+**`linear-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) 创建一个由两种或多种颜色沿一条直线进行线性过渡的图像，其结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，这是一种特殊的 {{cssxref("&lt;image&gt;")}} 数据类型。
 
 {{EmbedInteractiveExample("pages/css/function-linear-gradient.html")}}
 
@@ -41,15 +41,15 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 - `<color-hint>`
   - : 颜色中转点是一个插值提示，它定义了在相邻颜色之间渐变如何进行。长度定义了在两种颜色之间的哪个点停止渐变颜色应该达到颜色过渡的中点。如果省略，颜色转换的中点是两个颜色停止之间的中点。
 
-> **备注：** [CSS 渐变中的颜色点](#Gradient_with_multiple_color_stops) 的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients) 在一致的规则。
+> **备注：** [CSS 渐变中的颜色点](#Gradient_with_multiple_color_stops) 的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中的颜色点遵循相同的规则。
 
 ## 描述
 
-和其他渐变一样，线性渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#no_intrinsic)；即，它不具备固有的或首选的尺寸，也不具备首选的比率。该函数的具体尺寸将与其适用的元素尺寸匹配。
+和其他渐变一样，线性渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#description)，也就是说没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 
 要创建一个能够填满窗口的渐变，请使用 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 函数。
 
-由于 `<gradient>` 属于 `<image>` 数据类型，因此只能在使用 [`<image>`](/zh-CN/docs/Web/CSS/image) 的地方使用。因此，`linear-gradient()` 不会用于 {{CSSxRef("background-color")}} 以及其他使用 {{CSSxRef("&lt;color&gt;")}} 数据类型的属性。
+由于 `<gradient>` 属于 `<image>` 数据类型，因此只能用在能使用 [`<image>`](/zh-CN/docs/Web/CSS/image) 的地方。因此，`linear-gradient()` 在 {{CSSxRef("background-color")}} 以及其他使用 {{CSSxRef("&lt;color&gt;")}} 数据类型的属性上不起作用。
 
 ### 线性渐变的构成
 

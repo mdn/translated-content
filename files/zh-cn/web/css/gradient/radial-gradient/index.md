@@ -5,7 +5,7 @@ slug: Web/CSS/gradient/radial-gradient
 
 {{CSSRef}}
 
-**`radial-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions)创建一个图像，该图像由从原点辐射的两种或多种颜色之间的渐进过渡组成，其的形状可以是圆形或椭圆形。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，这是一种特别的 {{cssxref("&lt;image&gt;")}}。
+**`radial-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions)创建一个图像，该图像由从原点辐射的两种或多种颜色之间的渐进过渡组成，其形状可以是圆形或椭圆形。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，这是一种特殊的 {{cssxref("&lt;image&gt;")}}。
 
 {{EmbedInteractiveExample("pages/css/function-radial-gradient.html")}}
 
@@ -48,13 +48,13 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 
 ## 描述
 
-与其他渐变相同，径向渐变是一个[不固定尺寸](/zh-CN/docs/Web/CSS/image#no_intrinsic)的图像，即它没有首选的大小，也没有首选的比例。具体大小将由它所应用的元素的大小决定。
+与其他渐变一样，径向渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#description)，也就是说没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 
 如要创建重复的径向渐变来填充容器，请使用 CSS 的 {{cssxref("repeating-radial-gradient")}} 方法。
 
-因为 `<gradient>` 属于 `<image>` 类型，所以它可以用于任何适用于 `<image>` 的地方。正是因为这样，`radial-gradient()` 不能用于 {{Cssxref("background-color")}} 和其他属性比如 {{cssxref("&lt;color&gt;")}} 数据类型。
+由于 `<gradient>` 属于 `<image>` 数据类型，因此只能用在能使用 `<image>` 的地方。因此，`radial-gradient()` 在 {{Cssxref("background-color")}} 及其他使用 {{cssxref("&lt;color&gt;")}} 数据类型的属性上不起作用。
 
-## 径向渐变的组成
+## 径向渐变的合成
 
 ![解释径向的图：虚拟辐射线从中点开始水平。椭圆渐变，以及最终的形状，与声明它的框具有相同的纵横比](radial_gradient.png)
 

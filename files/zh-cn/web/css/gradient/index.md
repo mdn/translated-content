@@ -9,11 +9,11 @@ slug: Web/CSS/gradient
 
 {{EmbedInteractiveExample("pages/css/type-gradient.html")}}
 
-CSS 渐变 [没有内在尺寸](/zh-CN/docs/CSS/image#no_intrinsic)；即，不具备固有或首选的尺寸，也不具备首选的比率。其实际的大小取决于其填充元素的大小。
+CSS 渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#description)，也就是说没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 
 ## 语法
 
-`<gradient>` 数据类型是以下面列出的函数类型中的一个定义的。
+`<gradient>` 数据类型是由下面列出的函数类型中的一个定义的。
 
 ### 线性渐变
 
@@ -25,7 +25,7 @@ CSS 渐变 [没有内在尺寸](/zh-CN/docs/CSS/image#no_intrinsic)；即，不�
 
 ### 重复的渐变
 
-重复的渐变会尽可能重复渐变以填满指定的区域。锥形渐变是使用 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 和 {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} 函数生成的。
+重复的渐变会尽可能重复渐变以填满指定的区域。重复渐变是使用 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 和 {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} 函数生成的。
 
 ### 锥形渐变
 

@@ -5,7 +5,7 @@ slug: Web/CSS/gradient/conic-gradient
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`conic-gradient()`** 创建了一个由渐变组成的图像，渐变的颜色变换围绕一个中心点旋转（而不是从中心辐射）。锥形渐变的例子包括饼图和色轮 {{glossary("color wheel", "color wheels")}}. `conic-gradient()` 函数的结果是 {{CSSxRef("&lt;gradient&gt;")}} 数据类型的对象，是一种特殊的 {{CSSxRef("&lt;image&gt;")}} 数据类型。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`conic-gradient()`** 创建一个由渐变组成的图像，渐变的颜色围绕一个中心点旋转（而不是从中心辐射）进行过渡。锥形渐变的例子包括饼图和色轮 {{glossary("color wheel", "color wheels")}}。`conic-gradient()` 函数的结果是 {{CSSxRef("&lt;gradient&gt;")}} 数据类型的对象，这是一种特殊的 {{CSSxRef("&lt;image&gt;")}} 数据类型。
 
 {{EmbedInteractiveExample("pages/css/function-conic-gradient.html")}}
 
@@ -43,15 +43,15 @@ background: conic-gradient(
 - `<color-hint>`
   - : {{Glossary("interpolation")}} 提示，它定义了在相邻颜色之间渐变如何进行。长度定义了渐变色应在两个颜色断点之间的哪一点到达颜色过渡的中点。如果省略，颜色转换的中点是两个颜色断点之间的中点。
 
-> **备注：** [CSS 渐变中的颜色断点](#gradient_with_multiple_color_stops)的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)遵循相同的规则。
+> **备注：** [CSS 渐变中的颜色断点](#gradient_with_multiple_color_stops)的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中的颜色断点遵循相同的规则。
 
 ## 描述
 
-和任意渐变一样，锥形渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#description)；就是说，它没有天然的或首选的尺寸，也没有首选的比例。它的具体大小将与它所应用的元素的大小相匹配，或者如果设置为元素大小以外的值，则与 `<image>` 的大小相匹配。
+与其他渐变一样，锥形渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#description)，也就是说没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 
 要创建重复的锥形渐变来填充 360 度旋转，应该使用 {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} 函数。
 
-因为 `<gradient>` 属于 `<image>` 数据类型，它们只能用在能使用 `<image>` 的地方。因此，`conic-gradient()` 在 {{CSSxRef("background-color")}} 以及其他使用 {{CSSxRef("&lt;color&gt;")}} 数据类型的属性上不起作用。
+由于 `<gradient>` 属于 `<image>` 数据类型，因此只能用在能使用 `<image>` 的地方。因此，`conic-gradient()` 在 {{CSSxRef("background-color")}} 以及其他使用 {{CSSxRef("&lt;color&gt;")}} 数据类型的属性上不起作用。
 
 > **备注：** 为什么它被称为“锥形”渐变？如果色块的一侧比另一侧亮得多，则从上面看，它可能看起来像一个圆锥体。
 
@@ -61,7 +61,7 @@ background: conic-gradient(
 
 ![沿着锥形渐变的圆周和径向渐变的轴的颜色断点](screenshot_2018-11-29_21.09.19.png)
 
-锥形渐变是通过指示旋转角度、渐变中心，然后指定颜色断点列表来指定的。与线性渐变和径向渐变不同，线性渐变和径向渐变的颜色断点是通过指定 [length](/zh-CN/docs/Web/CSS/length) 来放置的，而锥形渐变的颜色断点是通过 [angle](/zh-CN/docs/Web/CSS/angle) 来指定的。单位包括角度 `deg`、梯度 `grad`、弧度 `rad` 和整圈的 `turn`。在一个圆中有 360 度，400 个梯度，2π 弧度，1 圈。支持锥形渐变的浏览器也接受百分比值，100% 等于 360 度，但这不在规范中。
+锥形渐变是通过指示旋转角度、渐变中心，然后指定颜色断点列表来指定的。与线性渐变和径向渐变不同，线性渐变和径向渐变的颜色断点是通过[长度](/zh-CN/docs/Web/CSS/length)指定的，而锥形渐变的颜色断点是通过[角度](/zh-CN/docs/Web/CSS/angle)指定的。单位包括角度 `deg`、梯度 `grad`、弧度 `rad` 和整圈的 `turn`。在一个圆中有 360 度，400 个梯度，2π 弧度，1 圈。支持锥形渐变的浏览器也接受百分比值，100% 等于 360 度，但这不在规范中。
 
 与径向渐变类似，锥形渐变语法用于将渐变中心定位在图像内部甚至外部的任何位置。位置的值类似于两个值的 background-position 语法。
 
@@ -69,7 +69,7 @@ background: conic-gradient(
 
 #### 自定义渐变
 
-通过在渐变弧上添加更多角度的颜色断点，可以在多种颜色之间创建高度定制的过渡。颜色断点的位置可以通过使用{{CSSxRef("&lt;angle&gt;")}}来明确地定义。如果不指定颜色断点的位置，它将位于其前面的颜色断点和后面的颜色断点之间。如果没有为第一个或最后一个颜色断点指定角度，则其值分别为 0 度和 360 度。以下两种渐变是等效的：
+通过在渐变弧上添加更多角度的颜色断点，可以在多种颜色之间创建高度定制的过渡。颜色断点的位置可以通过使用 {{CSSxRef("&lt;angle&gt;")}} 来明确地定义。如果不指定颜色断点的位置，它将位于其前面的颜色断点和后面的颜色断点之间。如果没有为第一个或最后一个颜色断点指定角度，则其值分别为 0 度和 360 度。以下两种渐变是等效的：
 
 ```css
 conic-gradient(red, orange, yellow, green, blue);

@@ -6,15 +6,15 @@ original_slug: Web/CSS/gradient/repeating-linear-gradient()
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`repeating-linear-gradient()`** 创建一个由重复线性渐变组成的{{cssxref("&lt;image&gt;")}}，这是一个类似 {{cssxref("linear-gradient")}} 的函数，并且采用相同的参数，但是它会在所有方向上重复渐变以覆盖其整个容器。这个函数的结果是一个 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，这是一个特殊的 {{cssxref("&lt;image&gt;")}} 类型。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`repeating-linear-gradient()`** 创建一个由重复线性渐变组成的 {{cssxref("&lt;image&gt;")}}，类似于 {{cssxref("linear-gradient")}}，并且采用相同的参数，但是它会在所有方向上重复渐变以覆盖其整个容器。这个函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，这是一种特殊的 {{cssxref("&lt;image&gt;")}} 类型。
 
 {{EmbedInteractiveExample("pages/css/function-repeating-linear-gradient.html")}}
 
 每次重复时，颜色点位置的偏移量都是基准渐变长度（最后一个颜色点和第一个之间的距离）的倍数。因此，最后颜色点的颜色应该与第一个颜色点的颜色保持一致；如果不一致的话，会导致非常突兀的渐变效果。这可以通过将第一个颜色值重复添加到最后一个颜色值中来修改。
 
-与其他渐变一样，线形重复渐变[没有固定的尺寸](/zh-CN/docs/CSS/image#no_intrinsic)；即，它没有原始尺寸或首选尺寸，也没有首选的比列。它将自适应于对应元素的尺寸。
+与其他渐变一样，线形重复渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#description)，也就是说没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 
-因为 `<gradient>` 属于 `<image>` 数据类型，所以只能在可以使用 `<image>` 的地方使用它们。因此 `repeating-linear-gradient()` 不适用于{{Cssxref("background-color")}} 以及使用 {{cssxref("&lt;color&gt;")}} 数据类型的地方。
+由于 `<gradient>` 属于 `<image>` 数据类型，因此只能用在可以使用 `<image>` 的地方。因此，`repeating-linear-gradient()` 在{{Cssxref("background-color")}} 以及其他使用 {{cssxref("&lt;color&gt;")}} 数据类型上不起作用。
 
 ## 语法
 
@@ -48,7 +48,7 @@ repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
 - `<color-hint>`
   - : color-hint 是插值提示，定义了两个相邻的颜色点之间的渐变如何进行。长度定义了两个颜色点之间的渐变颜色应该在哪里到达颜色过渡过程的中点。如果省略，那么颜色过渡的中点就是两个颜色点之间的中点。
 
-> **备注：** [CSS 渐变中的颜色眯点](#Gradient_with_multiple_color_stops) 的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中的颜色点遵循相同的规则。
+> **备注：** [CSS 渐变中的颜色点](#Gradient_with_multiple_color_stops) 的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中的颜色点遵循相同的规则。
 
 ### 形式语法
 
@@ -107,7 +107,7 @@ body {
 
 {{EmbedLiveSample('十个重复水平线', 120, 120)}}
 
-因为最后一个颜色点是 10%，且渐变是竖直的，因为重复渐变的每个渐变都是高度的 10%，正好满足 10% 个水平线。
+因为最后一个颜色点是 10%，且渐变是竖直的，因为重复渐变的每个渐变都是高度的 10%，正好满足 10 个水平线。
 
 > **备注：** 更多示例请参见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)。
 
