@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
 ## 구문
 
 ```js
-    Math.trunc(x)
+Math.trunc(x);
 ```
 
 ### 매개변수
@@ -42,14 +42,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
 ### `Math.trunc()`사용하기
 
 ```js
-Math.trunc(13.37);    // 13
-Math.trunc(42.84);    // 42
-Math.trunc(0.123);    //  0
-Math.trunc(-0.123);   // -0
-Math.trunc('-1.123'); // -1
-Math.trunc(NaN);      // NaN
-Math.trunc('foo');    // NaN
-Math.trunc();         // NaN
+Math.trunc(13.37); // 13
+Math.trunc(42.84); // 42
+Math.trunc(0.123); //  0
+Math.trunc(-0.123); // -0
+Math.trunc("-1.123"); // -1
+Math.trunc(NaN); // NaN
+Math.trunc("foo"); // NaN
+Math.trunc(); // NaN
 ```
 
 ## 표준
