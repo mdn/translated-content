@@ -698,7 +698,7 @@ div {
 
 {{cssxref("gradient/linear-gradient", "linear-gradient()")}}、{{cssxref("gradient/radial-gradient", "radial-gradient()")}} 和 {{cssxref("gradient/conic-gradient", "conic-gradient()")}} 函数不支持自动重复的颜色点。但是，{{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}、{{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} 和 {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} 函数可以用于提供此功能。
 
-重复渐变线或弧的大小，是第一个颜色点和最后一个颜色点之间的长度。如果第一个颜色点只有颜色没有颜色点长度，那么值默认为 0。如果最后一个颜色点只有颜色没有颜色点长度，那么值默认为 100%。如果都没有指定，那么渐变线是 100%，意味着线性和锥形的渐变都不会重复，径向渐变只会在渐变的半径小于中心点和最远角之间的距离时重复。如果第一个颜色点声明了，其值大于0，渐变也会重复，因为线或弧的大小就是第一个颜色点和最后一个颜色点之间的距离，小于 100% 或 360 度。
+重复渐变线或弧的大小，是第一个颜色点和最后一个颜色点之间的长度。如果第一个颜色点只有颜色没有颜色点长度，那么值默认为 0。如果最后一个颜色点只有颜色没有颜色点长度，那么值默认为 100%。如果都没有指定，那么渐变线是 100%，意味着线性和锥形的渐变都不会重复，径向渐变只会在渐变的半径小于中心点和最远角之间的距离时重复。如果第一个颜色点声明了，其值大于 0，渐变也会重复，因为线或弧的大小就是第一个颜色点和最后一个颜色点之间的距离，小于 100% 或 360 度。
 
 ### 重复的线性渐变
 

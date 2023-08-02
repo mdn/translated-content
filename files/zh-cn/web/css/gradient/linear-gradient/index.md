@@ -13,7 +13,7 @@ original_slug: Web/CSS/gradient/linear-gradient()
 ## 语法
 
 ```css
-/* 渐变轴为45度，从蓝色渐变到红色 */
+/* 渐变轴为 45 度，从蓝色渐变到红色 */
 linear-gradient(45deg, blue, red);
 
 /* 从右下到左上、从蓝色渐变到红色 */
