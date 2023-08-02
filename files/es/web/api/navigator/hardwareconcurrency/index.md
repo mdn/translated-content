@@ -1,7 +1,6 @@
 ---
 title: navigator.hardwareConcurrency
 slug: Web/API/Navigator/hardwareConcurrency
-original_slug: Web/API/NavigatorConcurrentHardware/hardwareConcurrency
 ---
 
 {{APIRef("HTML DOM")}}
