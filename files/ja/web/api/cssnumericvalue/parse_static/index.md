@@ -11,7 +11,7 @@ original_slug: Web/API/CSSNumericValue/parse
 ## 構文
 
 ```js
-parse(cssText)
+parse(cssText);
 ```
 
 ### 引数
