@@ -6,6 +6,7 @@ tags:
   - Method
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 ---
+
 {{JSRef}}Метод **`Symbol.keyFor(sym)`** получает ключ для заданного символа из глобального реестра символов.
 
 {{EmbedInteractiveExample("pages/js/symbol-keyfor.html")}}
@@ -36,7 +37,7 @@ Symbol.keyFor(localSym); // undefined
 
 // Известные символы не является символами,
 // которые находятся в глобальном реестре символов
-Symbol.keyFor(Symbol.iterator) // undefined
+Symbol.keyFor(Symbol.iterator); // undefined
 ```
 
 ## Спецификации

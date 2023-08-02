@@ -9,6 +9,7 @@ tags:
   - прототип
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/size
 ---
+
 {{JSRef}}
 
 Метод доступа **`size`** возвращает количество (уникальных) элементов в объекте {{jsxref("Set")}}
@@ -27,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/size
 var mySet = new Set();
 mySet.add(1);
 mySet.add(5);
-mySet.add('некоторый текст')
+mySet.add("некоторый текст");
 
 mySet.size; // 3
 ```

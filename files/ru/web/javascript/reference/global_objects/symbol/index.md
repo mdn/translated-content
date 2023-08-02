@@ -55,9 +55,9 @@ var sym = new Symbol(); // TypeError
 
 ```js
 var sym = Symbol("foo");
-typeof sym;     // "symbol"
+typeof sym; // "symbol"
 var symObj = Object(sym);
-typeof symObj;  // "object"
+typeof symObj; // "object"
 ```
 
 ### Разделяемые символы в глобальном символьном реестре
@@ -141,9 +141,9 @@ typeof symObj;  // "object"
 Оператор {{jsxref("Operators/typeof", "typeof")}} позволяет идентифицировать символ.
 
 ```js
-typeof Symbol() === 'symbol'
-typeof Symbol('foo') === 'symbol'
-typeof Symbol.iterator === 'symbol'
+typeof Symbol() === "symbol";
+typeof Symbol("foo") === "symbol";
+typeof Symbol.iterator === "symbol";
 ```
 
 ### Преобразование типов с символами
@@ -168,7 +168,7 @@ obj["c"] = "c";
 obj.d = "d";
 
 for (var i in obj) {
-   console.log(i); // выведет "c" и "d"
+  console.log(i); // выведет "c" и "d"
 }
 ```
 
@@ -177,7 +177,7 @@ for (var i in obj) {
 JSON.stringify() игнорирует свойства с ключами `Symbol`:
 
 ```js
-JSON.stringify({[Symbol("foo")]: "foo"});
+JSON.stringify({ [Symbol("foo")]: "foo" });
 // '{}'
 ```
 
@@ -189,9 +189,9 @@ JSON.stringify({[Symbol("foo")]: "foo"});
 
 ```js
 var sym = Symbol("foo");
-var obj = {[sym]: 1};
-obj[sym];            // 1
-obj[Object(sym)];    // снова 1
+var obj = { [sym]: 1 };
+obj[sym]; // 1
+obj[Object(sym)]; // снова 1
 ```
 
 ## Спецификации

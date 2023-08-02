@@ -125,7 +125,7 @@ console.log(uint8.length); // 2
 console.log(uint8.BYTES_PER_ELEMENT); // 1
 
 // From an array
-var arr = new Uint8Array([21,31]);
+var arr = new Uint8Array([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -138,17 +138,19 @@ var buffer = new ArrayBuffer(8);
 var z = new Uint8Array(buffer, 1, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var uint8 = new Uint8Array(iterable);
 // Uint8Array[1, 2, 3]
 ```
 
 ## Specifications
 
-| Specification                                                                        | Status                           | Comment                                                                                                                        |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Superseded by ECMAScript 6.                                                                                                    |
-| {{SpecName('ES6', '#table-49', 'TypedArray constructors')}}     | {{Spec2('ES6')}}             | Initial definition in an ECMA standard. Specified that `new` is required.                                                      |
+| Specification                                                   | Status                   | Comment                                                                                                                        |
+| --------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('Typed Array')}}                                     | {{Spec2('Typed Array')}} | Superseded by ECMAScript 6.                                                                                                    |
+| {{SpecName('ES6', '#table-49', 'TypedArray constructors')}}     | {{Spec2('ES6')}}         | Initial definition in an ECMA standard. Specified that `new` is required.                                                      |
 | {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 changed the `Uint8Array` constructor to use the `ToIndex` operation and allows constructors with no arguments. |
 
 ## Browser compatibility

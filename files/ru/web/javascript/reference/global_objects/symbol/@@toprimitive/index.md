@@ -10,6 +10,7 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
 ---
+
 {{JSRef}}
 
 Метод **`[@@toPrimitive]()`** преобразует объект Symbol в примитивное значение.

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/trimStart
 original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimLeft
 ---
+
 {{JSRef("Global_Objects", "String")}} {{non-standard_header}}
 
 ## Сводка
@@ -34,13 +35,13 @@ str.trimLeft()
 Следующий пример покажет строку `'foo '`:
 
 ```js
-var str = '   foo  ';
+var str = "   foo  ";
 
 console.log(str.length); // 8
 
 str = str.trimLeft();
 console.log(str.length); // 5
-console.log(str);        // 'foo  '
+console.log(str); // 'foo  '
 ```
 
 ## Спецификации
