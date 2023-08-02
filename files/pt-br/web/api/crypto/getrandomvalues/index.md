@@ -35,19 +35,17 @@ window.crypto.getRandomValues(array);
 
 console.log("Seus números da sorte são:");
 for (var i = 0; i < array.length; i++) {
-    console.log(array[i]);
+  console.log(array[i]);
 }
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                | Estado                               | Comentário        |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
-| {{SpecName('Web Crypto API', '#RandomSource-method-getRandomValues')}} | {{Spec2('Web Crypto API')}} | Definição inicial |
+{{Specifications}}
 
-## Navegadores compatíveis
+## Compatibilidade com navegadores
 
-{{Compat("api.Crypto.getRandomValues")}}
+{{Compat}}
 
 ## Veja também
 

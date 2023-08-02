@@ -17,12 +17,10 @@ var document = new Document()
 
 Nenhum.
 
-Especificações
+## Especificações
 
-| Especificação                                                                    | Status                           | Comentário        |
-| -------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName('DOM WHATWG','#interface-document','Document')}} | {{Spec2('DOM WHATWG')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.Document")}}
+{{Compat}}
