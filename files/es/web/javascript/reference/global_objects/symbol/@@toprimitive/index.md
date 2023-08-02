@@ -1,7 +1,6 @@
 ---
 title: Symbol.prototype[@@toPrimitive]
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
 l10n:
   sourceCommit: cf607d68522cd35ee7670782d3ee3a361eaef2e4
 ---

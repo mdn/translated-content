@@ -1,7 +1,6 @@
 ---
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
-original_slug: Web/JavaScript/Referencia/Sentencias/for-await...of
 ---
 
 {{jsSidebar("Statements")}}

@@ -1,7 +1,6 @@
 ---
 title: this
 slug: Web/JavaScript/Reference/Operators/this
-original_slug: Web/JavaScript/Referencia/Operadores/this
 ---
 
 {{jsSidebar("Operators")}}
