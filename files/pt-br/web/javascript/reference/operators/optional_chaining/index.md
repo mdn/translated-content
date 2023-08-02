@@ -46,7 +46,7 @@ Isso é equivalente ao seguinte, exceto que a variável temporária, de fato, n�
 
 ```js
 let temp = obj.first;
-let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);
+let nestedProp = temp === null || temp === undefined ? undefined : temp.second;
 ```
 
 ### Encadeamento opcional com chamadas de funções
@@ -70,9 +70,9 @@ Se você usa callbacks ou consulta métodos de objetos com [atribuição via des
 function doSomething(onContent, onError) {
   try {
     // ... faz algo com os dados
-  }
-  catch (err) {
-    if (onError) { // teste se onError realmente existe
+  } catch (err) {
+    if (onError) {
+      // teste se onError realmente existe
       onError(err.message);
     }
   }
@@ -83,9 +83,8 @@ function doSomething(onContent, onError) {
 // Usando encadeamento opcional com chamadas de função
 function doSomething(onContent, onError) {
   try {
-   // ... faz algo com os dados
-  }
-  catch (err) {
+    // ... faz algo com os dados
+  } catch (err) {
     onError?.(err.message); // Nenhuma exceção se onError for undefined
   }
 }
@@ -96,7 +95,7 @@ function doSomething(onContent, onError) {
 Você também pode usar o operador de encadeamento opcional ao acessar propriedades com uma expressão usando [assessores de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation):
 
 ```js
-let nestedProp = obj?.['prop' + 'Name'];
+let nestedProp = obj?.["prop" + "Name"];
 ```
 
 ### Encadeamento opcional não válido no lado esquerdo de uma atribuição
@@ -120,7 +119,7 @@ Esse exemplo busca plo valor da propriedade `name` para o membro `bar` em um map
 
 ```js
 let myMap = new Map();
-myMap.set("foo", {name: "baz", desc: "inga"});
+myMap.set("foo", { name: "baz", desc: "inga" });
 
 let nameBar = myMap.get("bar")?.name;
 ```
@@ -146,8 +145,8 @@ let customer = {
   name: "Carl",
   details: {
     age: 82,
-    location: "Paradise Falls" // endereço detalhado é desconhecido
-  }
+    location: "Paradise Falls", // endereço detalhado é desconhecido
+  },
 };
 let customerCity = customer.details?.address?.city;
 
@@ -162,7 +161,7 @@ O {{JSxRef("Operators/Nullish_Coalescing_Operator", "operador de coalescência n
 ```js
 let customer = {
   name: "Carl",
-  details: { age: 82 }
+  details: { age: 82 },
 };
 const customerCity = customer?.city ?? "Cidade desconhecida";
 console.log(customerCity); // Cidade desconhecida

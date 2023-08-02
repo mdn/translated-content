@@ -30,7 +30,7 @@ Inicialmente, quando se deseja endereçar um valor padrão à variável, um padr
 let foo;
 
 //  foo nunca é endereçado a nenhum valor, portanto, ainda está indefinido
-let someDummyText = foo || 'Hello!';
+let someDummyText = foo || "Hello!";
 ```
 
 Entretanto, devido ao `||` ser um operador lógico booleano, o operando do lado esquerdo é coagido para um valor booleano para sua avaliação e qualquer valor _falseável_ (`0`, `''`, `NaN`, `null`, `undefined`) não é retornado. Este comportamento pode causar consequencias inesperadas se você considerar `0`, `''`, ou `NaN` como valores válidos.
@@ -41,19 +41,19 @@ let text = "";
 
 let qty = count || 42;
 let message = text || "Olá!";
-console.log(qty);     // 42 e não 0
+console.log(qty); // 42 e não 0
 console.log(message); // "Olá!" e não ""
 ```
 
 O operador de coalescência nula evita esta cilada pois retorna o segundo operando apenas quando o primeiro é avaliado entre os valores `null` ou `undefined` (mas nehum outro valor falseável):
 
 ```js
-let myText = ''; // Uma string vazia (que também é um valor falseável)
+let myText = ""; // Uma string vazia (que também é um valor falseável)
 
-let notFalsyText = myText || 'Olá mundo';
+let notFalsyText = myText || "Olá mundo";
 console.log(notFalsyText); // Olá mundo
 
-let preservingFalsy = myText ?? 'Olá vizinhança';
+let preservingFalsy = myText ?? "Olá vizinhança";
 console.log(preservingFalsy); // '' (Pois myText não é undefined e nem null)
 ```
 
@@ -62,15 +62,24 @@ console.log(preservingFalsy); // '' (Pois myText não é undefined e nem null)
 Assim como os operadores lógicos OR e AND, a expressão do lado direito não é avaliada se o lado esquerdo não for avaliado entre `null` e nem `undefined`.
 
 ```js
-function A() { console.log('A foi chamado'); return undefined;}
-function B() { console.log('B foi chamado'); return false;}
-function C() { console.log('C foi chamado'); return "foo";}
+function A() {
+  console.log("A foi chamado");
+  return undefined;
+}
+function B() {
+  console.log("B foi chamado");
+  return false;
+}
+function C() {
+  console.log("C foi chamado");
+  return "foo";
+}
 
-console.log( A() ?? C() );
+console.log(A() ?? C());
 // Imprime "A foi chamado" então "C foi chamado" e por fim "foo"
 // Como A() retornou undefined então ambas expressões foram avaliadas
 
-console.log( B() ?? C() );
+console.log(B() ?? C());
 // Imprime "B foi chamado" então "false"
 // Como B() retornou false (e não null ou undefined), a expressão
 // do lado direito não foi avaliada.
@@ -98,7 +107,7 @@ O operador de coalescêcia nula trata `undefined` e `null` como valores específ
 ```js
 let foo = { someFooProp: "oi" };
 
-console.log(foo.someFooProp?.toUpperCase());  // "OI"
+console.log(foo.someFooProp?.toUpperCase()); // "OI"
 console.log(foo.someBarProp?.toUpperCase()); // undefined
 ```
 
