@@ -87,13 +87,12 @@ window.cancelIdleCallback =
 
 ```html
 <p>
-  演示使用
+  使用 <code>requestIdleCallback()</code> 方法的
   <a
     href="https://developer.mozilla.org/zh-CN/docs/Web/API/Background_Tasks_API">
-    协作调度幕后任务
+    后台任务协作调度
   </a>
-  使用 <code>requestIdleCallback()</code>
-  方法。
+  演示 。
 </p>
 
 <div id="container">
