@@ -7,6 +7,7 @@ tags:
   - Property
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## Сводка

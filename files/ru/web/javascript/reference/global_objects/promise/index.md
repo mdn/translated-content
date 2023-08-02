@@ -8,6 +8,7 @@ tags:
   - Промисы
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 ---
+
 {{JSRef}}
 
 ## Сводка
@@ -120,7 +121,7 @@ let myFirstPromise = new Promise((resolve, reject) => {
   // Мы вызываем resolve(...), когда асинхронная операция завершилась успешно, и reject(...), когда она не удалась.
   // В этом примере мы используем setTimeout(...), чтобы симулировать асинхронный код.
   // В реальности вы, скорее всего, будете использовать XHR, HTML5 API или что-то подобное.
-  setTimeout(function(){
+  setTimeout(function () {
     resolve("Success!"); // Ура! Всё прошло хорошо!
   }, 250);
 });
@@ -191,21 +192,22 @@ function testPromise() {
 ```js
 if ("Promise" in window) {
   btn = document.getElementById("btn");
-   btn.addEventListener("click",testPromise);
-}
-else {
-  log = document.getElementById('log');
-  log.innerHTML = "Live example not available as your browser doesn't support the Promise interface.";
+  btn.addEventListener("click", testPromise);
+} else {
+  log = document.getElementById("log");
+  log.innerHTML =
+    "Live example not available as your browser doesn't support the Promise interface.";
 }
 ```
 
 ```js
 if ("Promise" in window) {
   let btn = document.getElementById("btn");
-  btn.addEventListener("click",testPromise);
+  btn.addEventListener("click", testPromise);
 } else {
-  log = document.getElementById('log');
-  log.innerHTML = "Демонстрация невозможна, поскольку ваш браузер не поддерживает интерфейс <code>Promise<code>.";
+  log = document.getElementById("log");
+  log.innerHTML =
+    "Демонстрация невозможна, поскольку ваш браузер не поддерживает интерфейс <code>Promise<code>.";
 }
 ```
 

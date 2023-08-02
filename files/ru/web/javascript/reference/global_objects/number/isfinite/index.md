@@ -11,6 +11,7 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## Сводка
@@ -35,23 +36,25 @@ Number.isFinite(testValue)
 ## Примеры
 
 ```js
-Number.isFinite(Infinity);  // false
-Number.isFinite(NaN);       // false
+Number.isFinite(Infinity); // false
+Number.isFinite(NaN); // false
 Number.isFinite(-Infinity); // false
 
-Number.isFinite(0);         // true
-Number.isFinite(2e64);      // true
+Number.isFinite(0); // true
+Number.isFinite(2e64); // true
 
-Number.isFinite('0');       // false, при использовании глобальной
-                            // функции isFinite('0') было бы true
+Number.isFinite("0"); // false, при использовании глобальной
+// функции isFinite('0') было бы true
 ```
 
 ## Полифил
 
 ```js
-Number.isFinite = Number.isFinite || function(value) {
-  return typeof value === 'number' && isFinite(value);
-}
+Number.isFinite =
+  Number.isFinite ||
+  function (value) {
+    return typeof value === "number" && isFinite(value);
+  };
 ```
 
 ## Спецификации

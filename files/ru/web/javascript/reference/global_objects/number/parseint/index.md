@@ -46,7 +46,7 @@ Number.parseInt === parseInt; // true
 
 ```js
 if (Number.parseInt === undefined) {
-    Number.parseInt = window.parseInt;
+  Number.parseInt = window.parseInt;
 }
 ```
 

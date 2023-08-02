@@ -47,7 +47,7 @@ Reflect.defineProperty(target, propertyKey, attributes)
 
 ```js
 var obj = {};
-Reflect.defineProperty(obj, 'x', {value: 7}); // true
+Reflect.defineProperty(obj, "x", { value: 7 }); // true
 obj.x; // 7
 ```
 

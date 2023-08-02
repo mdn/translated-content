@@ -37,7 +37,7 @@ equal = (Math.abs(x - y + z) < Number.EPSILON);
 
 ```js
 if (Number.EPSILON === undefined) {
-    Number.EPSILON = Math.pow(2, -52);
+  Number.EPSILON = Math.pow(2, -52);
 }
 ```
 
