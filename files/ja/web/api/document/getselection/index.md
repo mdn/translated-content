@@ -11,7 +11,7 @@ original_slug: Web/API/DocumentOrShadowRoot/getSelection
 ## 構文
 
 ```js
-getSelection()
+getSelection();
 ```
 
 ### 引数

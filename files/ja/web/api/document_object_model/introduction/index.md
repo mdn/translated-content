@@ -58,7 +58,7 @@ DOM を使い始めるのに、特別なものは必要ありません。
 スクリプトを作成すると、インラインの `<script>` 要素であろうと、ウェブページに含まれていようと、すぐに {{domxref("document")}} や {{domxref("Window", "window")}} オブジェクトの API を使って、文書自体やウェブページ内の様々な要素（文書の子孫要素）を操作し始めることができるようになるのです。 DOM プログラミングは、次の例のように、 {{domxref("console.log()")}} 関数を使ってコンソールにメッセージを表示させるような簡単なものであってもかまいません。
 
 ```html
-<body onload="console.log('ホームページへようこそ!');">
+<body onload="console.log('ホームページへようこそ!');"></body>
 ```
 
 一般に、ページの構造（HTML で記述）と DOM の操作（JavaScript で記述）を混在させることは推奨されないため、ここでは JavaScript 部分をまとめ、 HTML とは切り離して記述することにします。
@@ -69,19 +69,17 @@ DOM を使い始めるのに、特別なものは必要ありません。
 <html>
   <head>
     <script>
-       // この関数は文書が読み込まれた時に実行される
-       window.onload = function() {
-
-         // create a couple of elements in an otherwise empty HTML page
-         const heading = document.createElement("h1");
-         const heading_text = document.createTextNode("Big Head!");
-         heading.appendChild(heading_text);
-         document.body.appendChild(heading);
-      }
+      // この関数は文書が読み込まれた時に実行される
+      window.onload = function () {
+        // create a couple of elements in an otherwise empty HTML page
+        const heading = document.createElement("h1");
+        const heading_text = document.createTextNode("Big Head!");
+        heading.appendChild(heading_text);
+        document.body.appendChild(heading);
+      };
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -163,8 +161,7 @@ const table = document.getElementById("table");
 const tableAttrs = table.attributes; // Node/Element インターフェイス
 for (let i = 0; i < tableAttrs.length; i++) {
   // HTMLTableElement インターフェイス: border 属性
-  if(tableAttrs[i].nodeName.toLowerCase() == "border")
-    table.border = "1";
+  if (tableAttrs[i].nodeName.toLowerCase() == "border") table.border = "1";
 }
 // HTMLTableElement インターフェイス: summary 属性
 table.summary = "note: increased border";
@@ -201,44 +198,53 @@ table.summary = "note: increased border";
 
 ```html
 <html>
-<head>
-  <title>Simple Document API example</title>
-  <script>
-    function setBodyAttr(attr, value) {
-      if (document.body) document.body[attr] = value;
-      else throw new Error("no support");
-    }
-  </script>
-</head>
-<body>
-  <div>
-    <form>
-      <p><b><code>text</code></b></p>
-      <select onChange="setBodyAttr('text',
+  <head>
+    <title>Simple Document API example</title>
+    <script>
+      function setBodyAttr(attr, value) {
+        if (document.body) document.body[attr] = value;
+        else throw new Error("no support");
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <form>
+        <p>
+          <b><code>text</code></b>
+        </p>
+        <select
+          onChange="setBodyAttr('text',
         this.options[this.selectedIndex].value);">
-        <option value="black">black</option>
-        <option value="red">red</option>
-      </select>
-      <p><b><code>bgColor</code></b></p>
-      <select onChange="setBodyAttr('bgColor',
+          <option value="black">black</option>
+          <option value="red">red</option>
+        </select>
+        <p>
+          <b><code>bgColor</code></b>
+        </p>
+        <select
+          onChange="setBodyAttr('bgColor',
         this.options[this.selectedIndex].value);">
-        <option value="white">white</option>
-        <option value="lightgrey">gray</option>
-      </select>
-      <p><b><code>link</code></b></p>
-      <select onChange="setBodyAttr('link',
+          <option value="white">white</option>
+          <option value="lightgrey">gray</option>
+        </select>
+        <p>
+          <b><code>link</code></b>
+        </p>
+        <select
+          onChange="setBodyAttr('link',
         this.options[this.selectedIndex].value);">
-        <option value="blue">blue</option>
-        <option value="green">green</option>
-      </select>
-      <small>
-        <a href="http://some.website.tld/page.html" id="sample">
-          (sample link)
-        </a>
-      </small>
-    </form>
-  </div>
-</body>
+          <option value="blue">blue</option>
+          <option value="green">green</option>
+        </select>
+        <small>
+          <a href="http://some.website.tld/page.html" id="sample">
+            (sample link)
+          </a>
+        </small>
+      </form>
+    </div>
+  </body>
 </html>
 ```
 
@@ -248,6 +254,6 @@ table.summary = "note: increased border";
 
 ## 仕様書
 
-| 仕様書                                       |
+| 仕様書                                              |
 | --------------------------------------------------- |
 | [DOM Living Standard](https://dom.spec.whatwg.org/) |
