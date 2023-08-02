@@ -97,7 +97,7 @@ slug: Learn/HTML/Tables/Advanced
 你完成的表格应该如下所示：
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -106,7 +106,7 @@ slug: Learn/HTML/Tables/Advanced
       html {
         font-family: sans-serif;
       }
- 
+
       table {
         border-collapse: collapse;
         border: 4px solid rgb(200, 200, 200);

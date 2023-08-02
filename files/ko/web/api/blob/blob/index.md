@@ -2,6 +2,7 @@
 title: Blob()
 slug: Web/API/Blob/Blob
 ---
+
 {{APIRef("File API")}}
 
 **`Blob()`** 생성자는 새로운 {{domxref("Blob")}} 객체를 반환합니다. 반환하는 블롭의 데이터는 `array` 매개변수에 제공한 배열을 이어붙인 값입니다.
@@ -32,7 +33,7 @@ new Blob(array, options);
 
 ```js
 const array = ['<a id="a"><b id="b">hey!</b></a>']; // 하나의 DOMString을 포함한 배열
-const blob = new Blob(array, {type : 'text/html'}); // 생성한 블롭
+const blob = new Blob(array, { type: "text/html" }); // 생성한 블롭
 ```
 
 ## 명세

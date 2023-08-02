@@ -1,12 +1,6 @@
 ---
 title: Event.returnValue
 slug: Web/API/Event/returnValue
-tags:
-  - API
-  - DOM
-  - Propriétés
-  - action
-  - évènements
 translation_of: Web/API/Event/returnValue
 ---
 

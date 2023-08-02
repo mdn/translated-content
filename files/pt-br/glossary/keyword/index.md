@@ -12,5 +12,5 @@ Quando você usa uma máquina de busca, utiliza palavras ou expressões para esp
 
 ### Conhecimento Geral
 
-- {{interwiki("wikipedia", "Keyword_research", "Keyword")}} on Wikipedia
+- [Keyword](https://en.wikipedia.org/wiki/Keyword_research) on Wikipedia
 - [Motor de Busca](https://pt.wikipedia.org/wiki/Motor_de_busca) no Wikipedia

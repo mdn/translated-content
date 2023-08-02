@@ -14,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une {{jsxref("promise")}}.
 
 ```js
 var getBookmarks = browser.bookmarks.get(
-  idOrIdList                // string or string array
-)
+  idOrIdList, // string or string array
+);
 ```
 
 ### Paramètres

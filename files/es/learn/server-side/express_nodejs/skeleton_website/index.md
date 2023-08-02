@@ -1,5 +1,5 @@
 ---
-title: 'Express Tutorial Part 2: Creating a skeleton website'
+title: "Express Tutorial Part 2: Creating a skeleton website"
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
 
@@ -15,7 +15,7 @@ Este segundo artículo de nuestro [Tutorial Express](/es/docs/Learn/Server-side/
       <th scope="row">Prerequisitos:</th>
       <td>
         <a
-          href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment"
+          href="/es/docs/Learn/Server-side/Express_Nodejs/development_environment"
           >Configurar un entorno de desarrollo de Node</a
         >. Revise el Tutorial Express.
       </td>
@@ -163,24 +163,24 @@ En este punto tenemos un esqueleto completo de nuestro proyecto. El sitio web no
 
 1. Primero instale las dependencias (el comando `install` recuperará todas las dependencias listadas e el archivo **package.json** del proyecto).
 
-    ```bash
-    cd express-locallibrary-tutorial
-    npm install
-    ```
+   ```bash
+   cd express-locallibrary-tutorial
+   npm install
+   ```
 
 2. Luego ejecute la aplicación.
 
-    - En Windows, use este comando:
+   - En Windows, use este comando:
 
-      ```bash
-      SET DEBUG=express-locallibrary-tutorial:* & npm start
-      ```
+     ```bash
+     SET DEBUG=express-locallibrary-tutorial:* & npm start
+     ```
 
-    - En macOS o Linux, use este comando:
+   - En macOS o Linux, use este comando:
 
-      ```bash
-      DEBUG=express-locallibrary-tutorial:* npm start
-      ```
+     ```bash
+     DEBUG=express-locallibrary-tutorial:* npm start
+     ```
 
 3. Luego carge en su navegador `http://localhost:3000/` para acceder a la aplicación.
 
@@ -194,10 +194,10 @@ Tiene una aplicación Express funcional, ejecutandose en _localhost:3000_.
 >
 > ```bash
 > $ SET DEBUG=express-locallibrary-tutorial:* &#x26; npm start
-> 
+>
 > $ express-locallibrary-tutorial@0.0.0 start D:\express-locallibrary-tutorial
 > $ node ./bin/www
-> 
+>
 > express-locallibrary-tutorial:server Listening on port 3000 +0ms
 > GET / 200 288.474 ms - 170
 > GET /stylesheets/style.css 200 5.799 ms - 111
@@ -337,7 +337,7 @@ El archivo **/bin/www** es el punto de entrada de la aplicación. Lo primero que
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require("../app");
 ```
 
 > **Nota:** `require()` es una función de node global que se usa para importar módulos en el archivo actual. Aquí especificamos el módulo app.js utilizando una ruta relativa y omitiendo la extensión de archivo opcional (.js).
@@ -360,19 +360,19 @@ De vuelta en el archivo de punto de entrada **www** anterior, es este objeto mod
 Permite trabajar a través del archivo **app.js** en detalle. Primero importamos algunas bibliotecas de node útiles en el archivo usando require (), incluyendo _express_, _serve-favicon_, _morgan_, _cookie-parser_ y _body-parser_ que previamente descargamos para nuestra aplicación usando NPM; y _path_, que es una biblioteca central de nodos para analizar rutas de archivos y directorios.
 
 ```js
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+var express = require("express");
+var path = require("path");
+var favicon = require("serve-favicon");
+var logger = require("morgan");
+var cookieParser = require("cookie-parser");
+var bodyParser = require("body-parser");
 ```
 
 Luego require () modules de nuestro directorio de rutas. Estos modules/files contienen código para manejar conjuntos particulares de "routes" relacionadas (rutas URL). Cuando extendemos la aplicación esqueleto, por ejemplo, para enumerar todos los libros de la biblioteca, agregaremos un nuevo archivo para tratar las rutas relacionadas con los libros.
 
 ```js
-var index = require('./routes/index');
-var users = require('./routes/users');
+var index = require("./routes/index");
+var users = require("./routes/users");
 ```
 
 > **Nota:** En este punto, acabamos de importar el módulo; aún no hemos utilizado sus rutas (esto sucede un poco más abajo en el archivo).
@@ -383,8 +383,8 @@ Next we create the `app` object using our imported _express_ module, and then us
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
 ```
 
 The next set of functions call `app.use()` to add the _middleware_ libraries into the request handling chain. In addition to the 3rd party libraries we imported previously, we use the `express.static` middleware to get _Express_ to serve all the static files in the **/public** directory in the project root.
@@ -392,18 +392,18 @@ The next set of functions call `app.use()` to add the _middleware_ libraries int
 ```js
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
+app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 ```
 
 Now that all the other middleware is set up, we add our (previously imported) route-handling code to the request handling chain. The imported code will define particular routes for the different _parts_ of the site:
 
 ```js
-app.use('/', index);
-app.use('/users', users);
+app.use("/", index);
+app.use("/users", users);
 ```
 
 > **Nota:** The paths specified above ('/' and '`/users'`) are treated as a prefix to routes defined in the imported files. So for example if the imported **users** module defines a route for `/profile`, you would access that route at `/users/profile`. We'll talk more about routes in a later article.
@@ -412,21 +412,21 @@ The last middleware in the file adds handler methods for errors and HTTP 404 res
 
 ```js
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+app.use(function (req, res, next) {
+  var err = new Error("Not Found");
   err.status = 404;
   next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.locals.error = req.app.get("env") === "development" ? err : {};
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render("error");
 });
 ```
 
@@ -441,12 +441,12 @@ module.exports = app;
 The route file **/routes/users.js** is shown below (route files share a similar structure, so we don't need to also show **index.js**). First it loads the _express_ module, and uses it to get an `express.Router` object. Then it specifies a route on that object, and lastly exports the router from the module (this is what allows the file to be imported into **app.js**).
 
 ```js
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get("/", function (req, res, next) {
+  res.send("respond with a resource");
 });
 
 module.exports = router;
@@ -464,8 +464,8 @@ The views (templates) are stored in the **/views** directory (as specified in **
 
 ```js
 /* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+router.get("/", function (req, res) {
+  res.render("index", { title: "Express" });
 });
 ```
 

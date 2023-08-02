@@ -17,7 +17,7 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-var gettingAll = browser.management.getAll()
+var gettingAll = browser.management.getAll();
 ```
 
 ### Paramètres

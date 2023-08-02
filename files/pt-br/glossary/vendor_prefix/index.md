@@ -35,4 +35,4 @@ Em propriedades e métodos, eles normalmente usam:
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "CSS filter#Prefix_filters", "Vendor prefix")}} no Wikipedia
+- [Vendor prefix](https://en.wikipedia.org/wiki/CSS_filter) no Wikipedia

@@ -74,7 +74,7 @@ if (!String.prototype.includes) {
 
 ## String.prototype.contains
 
-No Firefox 18 - 39, o nome deste método era `contains()`. Ele foi renomeado para `includes()` no {{bug(1102219)}} devido ao seguinte motivo:
+No Firefox 18 - 39, o nome deste método era `contains()`. Ele foi renomeado para `includes()` no [Erro do Firefox 1102219](https://bugzil.la/1102219) devido ao seguinte motivo:
 
 Foi [reportado](https://bugzilla.mozilla.org/show_bug.cgi?id=789036) que alguns websites que utilizam MooTools 1.2 não funcionavam no Firefox 17. Esta versão do MooTools verifica se `String.prototype.contains()` existe e, se não existir, MooTools adiciona sua própria função. Com a implementação desta função no Firefox 17, o comportamento desta validação mudou de uma forma que códigos baseados na implementação da função `String.prototype.contains()` do MooTools parassem de funcionar. Como resultado, esta mudança foi [desabilitada](https://hg.mozilla.org/releases/mozilla-aurora/rev/086db97198a8) no Firefox 17 e `String.prototype.contains()` foi disponibilizada na versão seguinte, no Firefox 18.
 

@@ -29,13 +29,13 @@ None.
 ## Examples
 
 ```js
-self.addEventListener('push', function(event) {
+self.addEventListener("push", function (event) {
   var obj = event.data.json();
 
-  if(obj.action === 'subscribe' || obj.action === 'unsubscribe') {
+  if (obj.action === "subscribe" || obj.action === "unsubscribe") {
     fireNotification(obj, event);
     port.postMessage(obj);
-  } else if(obj.action === 'init' || obj.action === 'chatMsg') {
+  } else if (obj.action === "init" || obj.action === "chatMsg") {
     port.postMessage(obj);
   }
 });

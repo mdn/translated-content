@@ -127,7 +127,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 ## Simplificando o comportamento entre navegadores
 
-Embora os objetos de host (como objetos DOM) não sejam obrigados pela especificação a seguir o comportamento do Mozilla quando convertidos por Array.prototype.slice e IE <9 não o fazem, versões do IE começando pela versão 9 permitem isso. “Shimming” pode permitir um comportamento confiável entre navegadores. Enquanto outros navegadores modernos continuem suportando essa habilidade, como atualmente IE, Mozilla, Chrome, Safari, e Opera fazem, desenvolvedores lendo (DOM-supporting) o código slice confiando neste shim não serão desencaminhados pela semântica; eles podem confiar seguramente na semântica para fornecer o agora aparentemente comportamento padrão de fato. (Isso também corrige o problema com IE < 9 onde o segundo argumento do `slice` era explicitamente {{jsxref("null")}}/{{jsxref("undefined")}})
+Embora os objetos de host (como objetos DOM) não sejam obrigados pela especificação a seguir o comportamento do Mozilla quando convertidos por Array.prototype.slice e IE <9 não o fazem, versões do IE começando pela versão 9 permitem isso. "Shimming" pode permitir um comportamento confiável entre navegadores. Enquanto outros navegadores modernos continuem suportando essa habilidade, como atualmente IE, Mozilla, Chrome, Safari, e Opera fazem, desenvolvedores lendo (DOM-supporting) o código slice confiando neste shim não serão desencaminhados pela semântica; eles podem confiar seguramente na semântica para fornecer o agora aparentemente comportamento padrão de fato. (Isso também corrige o problema com IE < 9 onde o segundo argumento do `slice` era explicitamente {{jsxref("null")}}/{{jsxref("undefined")}})
 
 ```js
 (function () {

@@ -99,7 +99,7 @@ In the following code snippet, we open a database asynchronously ({{domxref("IDB
 This next line opens up a transaction on the Database, then opens an object store that we can then manipulate the data inside of.
 
 ```js
-    var objectStore = db.transaction('toDoList').objectStore('toDoList');
+var objectStore = db.transaction("toDoList").objectStore("toDoList");
 ```
 
 ## Especificaciones

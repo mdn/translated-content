@@ -50,7 +50,7 @@ var inputByName = inputs["username"];
 
 ### Accessing form controls
 
-This example gets the form's element list, then iterates over the list, looking for {{HTMLElement("input")}} elements of type [`"text"`](/en-US/docs/Web/HTML/Element/input/text) so that some form of processing can be performed on them.
+This example gets the form's element list, then iterates over the list, looking for {{HTMLElement("input")}} elements of type [`"text"`](/ru/docs/Web/HTML/Element/input/text) so that some form of processing can be performed on them.
 
 ```js
 var inputs = document.getElementById("my-form").elements;

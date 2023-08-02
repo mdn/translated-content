@@ -1,12 +1,7 @@
 ---
 title: Sélecteurs de type
 slug: Web/CSS/Type_selectors
-tags:
-  - CSS
-  - Reference
-  - Sélecteur
 translation_of: Web/CSS/Type_selectors
-original_slug: Web/CSS/Sélecteurs_de_type
 ---
 
 {{CSSRef("Selectors")}}

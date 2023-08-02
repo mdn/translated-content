@@ -53,7 +53,7 @@ El almacenamiento tiene tres propiedades, que representan los diferentes tipos d
 
 > **Nota:** **Agradecimientos**
 >
->Esta API se basa en la API [`chrome.storage`](https://developer.chrome.com/extensions/storage) de Chromium. Esta documentación se deriva de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) en el código de Chromium.
+> Esta API se basa en la API [`chrome.storage`](https://developer.chrome.com/extensions/storage) de Chromium. Esta documentación se deriva de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) en el código de Chromium.
 >
 > Los datos de compatibilidad de Microsoft Edge son proporcionados por Microsoft Corporation y se incluyen aquí bajo la Licencia de Estados Unidos Creative Commons Attribution 3.0.
 

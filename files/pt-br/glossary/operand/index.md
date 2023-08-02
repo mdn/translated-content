@@ -8,4 +8,4 @@ An **operand** is the part of an instruction representing the data manipulated b
 
 ## Learn more
 
-- {{Interwiki("wikipedia", "Operand")}} on Wikipedia
+- [Operand](https://pt.wikipedia.org/wiki/Operando) on Wikipedia

@@ -22,7 +22,7 @@ scope.clearTimeout(timeoutID)
 
 It's worth noting that the pool of IDs used by {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} and {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} are shared, which means you can technically use `clearTimeout()` and {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} interchangeably. However, for clarity, you should avoid doing so.
 
-## Пример использования:
+## Пример использования
 
 Запустите приведённый ниже скрипт в контакте веб-страницы и кликните один раз. Вы увидите всплывающее сообщение через 1 секунду. Если вы щёлкните страницу несколько раз за одну секунду, предупреждение появится только один раз.
 

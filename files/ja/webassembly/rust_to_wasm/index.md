@@ -205,19 +205,18 @@ wasm-pack build --target web
 まず、プロジェクトのルートに `index.html` という名前のファイルを作成し、以下のような内容にしてみましょう。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>hello-wasm example</title>
   </head>
   <body>
     <script type="module">
-      import init, {greet} from "./pkg/hello_wasm.js";
-      init()
-        .then(() => {
-          greet("WebAssembly")
-        });
+      import init, { greet } from "./pkg/hello_wasm.js";
+      init().then(() => {
+        greet("WebAssembly");
+      });
     </script>
   </body>
 </html>
@@ -290,14 +289,14 @@ npm link hello-wasm
 次に、Webpack を設定する必要があります。`webpack.config.js` を作成し、そこに次のことを記入してください。
 
 ```js
-const path = require('path');
+const path = require("path");
 module.exports = {
   entry: "./index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
   },
-  mode: "development"
+  mode: "development",
 };
 ```
 
@@ -314,10 +313,10 @@ import("./node_modules/hello-wasm/hello_wasm.js").then((js) => {
 最後に HTML ファイルが必要です。 `index.html` を作成し、次の内容を追加してください。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>hello-wasm example</title>
   </head>
   <body>

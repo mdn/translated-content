@@ -45,7 +45,7 @@ const fetchResponsePromise = fetch(resource [, init])
       - : O método da requisição, por exemplo `GET`, `POST`. Observe que o cabeçalho
         {{httpheader("Origin")}} não é definido em requisições Fetch com um método de
         {{HTTPMethod("HEAD")}} ou {{HTTPMethod("GET")}}.
-        (Este comportamento foi corrigido no Firefox 65 — consulte {{bug(1508661)}}).
+        (Este comportamento foi corrigido no Firefox 65 — consulte [Erro do Firefox 1508661](https://bugzil.la/1508661)).
     - `headers`
       - : Qualquer cabeçalho que você queira adicionar à sua requisição, contido dentro de um objeto
         {{domxref("Headers")}} ou um objeto literal com valores {{jsxref("String")}}. Observe que [alguns nomes são proibidos](/pt-BR/docs/Glossary/Forbidden_header_name).

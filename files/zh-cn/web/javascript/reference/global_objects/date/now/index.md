@@ -30,12 +30,11 @@ var timeInMs = Date.now();
 
 ```js
 // reduced time precision (2ms) in Firefox 60
-Date.now()
+Date.now();
 // 1519211809934
 // 1519211810362
 // 1519211811670
 // ...
-
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 Date.now();

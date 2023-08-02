@@ -11,4 +11,4 @@ HTTP/2 não modifica a semântica de aplicativo do HTTP de nenhuma maneira. Todo
 ## Veja também
 
 - [HTTP on MDN](/pt-BR/docs/Web/HTTP)
-- {{interwiki("wikipedia", "HTTP/2", "HTTP/2")}} na Wikipedia
+- [HTTP/2](https://pt.wikipedia.org/wiki/HTTP/2) na Wikipedia

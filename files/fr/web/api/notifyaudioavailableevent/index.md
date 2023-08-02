@@ -1,13 +1,6 @@
 ---
 title: NotifyAudioAvailableEvent
 slug: Web/API/NotifyAudioAvailableEvent
-tags:
-  - API
-  - Audio
-  - Déprécié
-  - Non-standard
-  - Reference
-  - Référence(2)
 translation_of: Web/API/NotifyAudioAvailableEvent
 ---
 

@@ -28,7 +28,10 @@ var score = 0;
 А сейчас добавим строку кода в самый конец функции `create()`:
 
 ```js
-scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095DD' });
+scoreText = game.add.text(5, 5, "Points: 0", {
+  font: "18px Arial",
+  fill: "#0095DD",
+});
 ```
 
 Функция `text()` может принимать четыре параметра:
@@ -45,9 +48,9 @@ scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095D
 
 ```js
 function ballHitBrick(ball, brick) {
-    brick.kill();
-    score += 10;
-    scoreText.setText('Points: '+score);
+  brick.kill();
+  score += 10;
+  scoreText.setText("Points: " + score);
 }
 ```
 

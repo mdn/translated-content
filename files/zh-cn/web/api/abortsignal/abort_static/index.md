@@ -22,9 +22,9 @@ return controller.signal;
 
 ## 语法
 
-```js
-abort()
-abort(reason)
+```js-nolint
+AbortSignal.abort()
+AbortSignal.abort(reason)
 ```
 
 ### 参数

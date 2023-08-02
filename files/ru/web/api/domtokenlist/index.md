@@ -91,6 +91,6 @@ span.textContent = 'span classList is "' + classes + '"';
 
 {{Compat}}
 
-## Смотрите также:
+## Смотрите также
 
 - {{domxref("DOMSettableTokenList")}} (объект который расширяет `DOMTokenList` с установленным _.value_ параметром)

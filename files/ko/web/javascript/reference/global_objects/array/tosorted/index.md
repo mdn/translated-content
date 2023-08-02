@@ -9,7 +9,7 @@ l10n:
 
 {{jsxref("Array")}}의 **`toSorted()`** 메서드는 {{jsxref("Array/sort", "sort()")}}에 대응되는 [복사](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) 메서드입니다. 이 메서드는 요소들을 오름차순으로 정렬한 새로운 배열을 반환합니다.
 
-## Syntax
+## 구문
 
 ```js-nolint
 // 함수 없이 사용

@@ -7,6 +7,7 @@ original_slug: Web/HTML/Elemento/tt
 ### Definición
 
 - Muestra el texto marcado con una fuente de ancho fijo.
+
   - : **Sus etiquetas son**: \<tt> y \</tt> (Ambas obligatorias)
 
     **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).

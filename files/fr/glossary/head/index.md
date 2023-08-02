@@ -11,4 +11,4 @@ L'**en-tête** est la partie d'un document {{glossary("HTML")}} qui contient les
 ### En-tête HTML
 
 - Référence sur l'élément {{htmlelement("head")}} sur MDN
-- [La balise HTML \<head>](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/The_head_metadata_in_HTML) dans la zone d'apprentissage du MDN
+- [La balise HTML \<head>](/fr/Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML) dans la zone d'apprentissage du MDN

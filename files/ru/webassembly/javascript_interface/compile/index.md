@@ -36,21 +36,18 @@ Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
 ```js
 var worker = new Worker("wasm_worker.js");
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.compile(bytes)
-).then(mod =>
-  worker.postMessage(mod)
-);
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.compile(bytes))
+  .then((mod) => worker.postMessage(mod));
 ```
 
 > **Примечание:** Вероятно, вы захотите использовать {{jsxref("WebAssembly.compileStreaming()")}} в большинстве случаев, поскольку он более эффективен, чем `compile()`.
 
 ## Характеристики
 
-| Спецификация                                                                             | Статус                               | Коммент                             |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------- |
+| Спецификация                                                       | Статус                      | Коммент                             |
+| ------------------------------------------------------------------ | --------------------------- | ----------------------------------- |
 | {{SpecName('WebAssembly JS', '#webassemblycompile', 'compile()')}} | {{Spec2('WebAssembly JS')}} | Первоначальное определение проекта. |
 
 ## Совместимость с браузером

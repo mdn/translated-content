@@ -12,8 +12,8 @@ slug: Web/API/URL/protocol
 ## 구문
 
 ```js
-const protocol = url.protocol
-url.protocol = newProtocol
+const protocol = url.protocol;
+url.protocol = newProtocol;
 ```
 
 ### 값
@@ -23,7 +23,9 @@ url.protocol = newProtocol
 ## 예제
 
 ```js
-const url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/protocol');
+const url = new URL(
+  "https://developer.mozilla.org/ko/docs/Web/API/URL/protocol",
+);
 console.log(url.protocol); // Logs "https:"
 ```
 

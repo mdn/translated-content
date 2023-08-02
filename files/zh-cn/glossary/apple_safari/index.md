@@ -11,7 +11,7 @@ slug: Glossary/Apple_Safari
 
 ### 基本信息
 
-- 维基百科上的[Safari](https://zh.wikipedia.org/wiki/Safari_(web_browser))
+- 维基百科上的[Safari](<https://zh.wikipedia.org/wiki/Safari_(web_browser)>)
 - [Safari on apple.com](https://www.apple.com/safari/)
 
 ### 技术信息

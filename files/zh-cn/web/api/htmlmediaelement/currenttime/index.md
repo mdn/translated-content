@@ -21,7 +21,7 @@ video.currentTime = 35;
 ## 示例
 
 ```js
-var obj = document.createElement('video');
+var obj = document.createElement("video");
 console.log(obj.currentTime);
 ```
 

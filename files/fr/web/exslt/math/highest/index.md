@@ -12,7 +12,7 @@ Un nœud possède cette valeur maximale si la conversion de sa valeur qui est un
 
 ## Syntaxe
 
-```js
+```plain
 math:highest(nodeSet)
 ```
 

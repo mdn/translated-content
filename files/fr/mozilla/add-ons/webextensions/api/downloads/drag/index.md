@@ -12,8 +12,8 @@ La fonction **`drag()`** de l'API {{WebExtAPIRef("downloads")}} initie le glisse
 
 ```js
 chrome.downloads.drag(
-  downloadId // integer
-)
+  downloadId, // integer
+);
 ```
 
 Cette API est également disponible en tant que `browser.downloads.drag()`.

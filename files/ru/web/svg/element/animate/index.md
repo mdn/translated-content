@@ -47,7 +47,7 @@ original_slug: Web/SVG/Элемент/animate
 
 ## DOM интерфейс
 
-Элемент реализует [`SVGAnimateElement`](/en-US/docs/Web/DOM/SVGAnimateElement) интерфейс .
+Элемент реализует [`SVGAnimateElement`](/ru/docs/Web/DOM/SVGAnimateElement) интерфейс .
 
 ## Спецификации
 

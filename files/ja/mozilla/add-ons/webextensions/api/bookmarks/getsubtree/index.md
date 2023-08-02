@@ -13,9 +13,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
 
 ```js
 browser.bookmarks.getSubTree(
-  id,      // 文字列
-  callback // 関数
-)
+  id, // 文字列
+  callback, // 関数
+);
 ```
 
 ### 引数

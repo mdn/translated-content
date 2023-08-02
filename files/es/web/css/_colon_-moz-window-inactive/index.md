@@ -1,5 +1,5 @@
 ---
-title: ':-moz-window-inactive'
+title: ":-moz-window-inactive"
 slug: Web/CSS/:-moz-window-inactive
 ---
 
@@ -19,13 +19,13 @@ Este ejemplo modifica la apariencia del fondo de una caja dependiendo de si est√
 
 ```html
 <style type="text/css">
-#mybox {
-  background: linear-gradient(to bottom, blue, cyan);
-}
+  #mybox {
+    background: linear-gradient(to bottom, blue, cyan);
+  }
 
-#mybox:-moz-window-inactive {
-  background: cyan;
-}
+  #mybox:-moz-window-inactive {
+    background: cyan;
+  }
 </style>
 
 <div id="mybox" style="width:200px; height:200px;">

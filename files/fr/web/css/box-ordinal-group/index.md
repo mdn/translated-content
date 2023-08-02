@@ -2,7 +2,6 @@
 title: box-ordinal-group
 slug: Web/CSS/box-ordinal-group
 translation_of: Web/CSS/box-ordinal-group
-browser-compat: css.properties.box-ordinal-group
 ---
 
 {{CSSRef}}{{Non-standard_header}}

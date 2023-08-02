@@ -22,7 +22,7 @@ await clients.claim();
 
 ### Результат
 
-[`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) с `undefined`.
+[`Promise`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise) с `undefined`.
 
 ## Пример
 

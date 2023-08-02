@@ -37,7 +37,7 @@ luego de ejecutar el codigo de arriba, la variable `el` contiene el primer eleme
 
 Podes usar cualquier selector CSS con los metodos `querySelector()` y `querySelectorAll()`_._
 
-## Ver tambien.
+## Ver tambien
 
 - [Selectors API](http://www.w3.org/TR/selectors-api/)
 - {{domxref("Element.querySelector()")}}

@@ -446,7 +446,7 @@ a + b;
 
 - Prior to Firefox 5 (JavaScript 1.8.6), future reserved keywords could be used when not in strict mode. This ECMAScript violation was fixed in Firefox 5.
 
-## Смотрите также:
+## Смотрите также
 
 - [Jeff Walden: Двоичные и восьмеричные числа](http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
 - [Mathias Bynens: JavaScript character escape sequences](http://mathiasbynens.be/notes/javascript-escapes)

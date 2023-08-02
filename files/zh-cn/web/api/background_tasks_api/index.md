@@ -5,7 +5,9 @@ slug: Web/API/Background_Tasks_API
 
 {{DefaultAPISidebar("Background Tasks")}}
 
-**幕后任务协作调度 API** (也叫幕后任务 API 或者简单称为 `requestIdleCallback()` API) 提供了由用户代理决定，在空闲时间自动执行队列任务的能力。
+**后台任务协作调度 API**（Cooperative Scheduling of Background Tasks API，也叫后台任务 API，或者简单称为 `requestIdleCallback()` API）提供了由用户代理决定的，在空闲时间自动执行队列任务的能力。
+
+> **备注：** 此 API *无法*在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中使用。
 
 ## 概念和用法
 
@@ -28,18 +30,20 @@ slug: Web/API/Background_Tasks_API
 因为后台任务 API 还是相当新的，而你的代码可能需要在那些不仍不支持此 API 的浏览器上运行。你可以把 {{domxref("WindowTimers.setTimeout()", "setTimeout()")}} 用作回调选项来做这样的事。这个并不是 {{Glossary("polyfill")}} ，因为它在功能上并不相同； `setTimeout()` 并不会让你利用空闲时段，而是使你的代码在情况允许时执行你的代码，以使我们可以尽可能地避免造成用户体验性能表现延迟的后果。
 
 ```js
-window.requestIdleCallback = window.requestIdleCallback || function(handler) {
-  let startTime = Date.now();
+window.requestIdleCallback =
+  window.requestIdleCallback ||
+  function (handler) {
+    let startTime = Date.now();
 
-  return setTimeout(function() {
-    handler({
-      didTimeout: false,
-      timeRemaining: function() {
-        return Math.max(0, 50.0 - (Date.now() - startTime));
-      }
-    });
-  }, 1);
-}
+    return setTimeout(function () {
+      handler({
+        didTimeout: false,
+        timeRemaining: function () {
+          return Math.max(0, 50.0 - (Date.now() - startTime));
+        },
+      });
+    }, 1);
+  };
 ```
 
 如果 {{domxref("Window.requestIdleCallback", "window.requestIdleCallback")}} 是 undefined, 我们在这里把它创建出来。这个函数首先会记录我们调用具体实现的时间。我们将用它计算填充程序{{domxref("IdleDeadline.timeRemaining()", "timeRemaining()")}}返回的值。
@@ -51,9 +55,11 @@ window.requestIdleCallback = window.requestIdleCallback || function(handler) {
 我们{{domxref("Window.cancelIdleCallback", "cancelIdleCallback()")}}的具体实现要简单的多。
 
 ```js
-window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
-  clearTimeout(id);
-}
+window.cancelIdleCallback =
+  window.cancelIdleCallback ||
+  function (id) {
+    clearTimeout(id);
+  };
 ```
 
 如果`cancelIdleCallback()`没有定义，它将创建一个来简单地把指定回调 ID 传递给{{domxref("WindowTimers.clearTimeout", "clearTimeout()")}}。
@@ -81,7 +87,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 
 ```
 <p>
-  演示使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API">
+  演示使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Background_Tasks_API">
    协作调度幕后任务 </a> 使用 <code>requestIdleCallback()</code>
   方法。
 </p>
@@ -117,7 +123,7 @@ body {
 .logBox {
   margin-top: 16px;
   width: 400px;
-  height:500px;
+  height: 500px;
   border-radius: 6px;
   border: 1px solid black;
   box-shadow: 4px 4px 2px black;
@@ -133,7 +139,9 @@ body {
 }
 
 #log {
-  font: 12px "Courier", monospace;
+  font:
+    12px "Courier",
+    monospace;
   padding: 6px;
   overflow: auto;
   overflow-y: scroll;
@@ -228,22 +236,26 @@ let statusRefreshScheduled = false;
 - `statusRefreshScheduled` 我们用它来追踪我们是否已经为即将到来的帧安排了状态显示框的更新，所以我们每一帧只执行一次。
 
 ```js hidden
-window.requestIdleCallback = window.requestIdleCallback || function(handler) {
-  let startTime = Date.now();
+window.requestIdleCallback =
+  window.requestIdleCallback ||
+  function (handler) {
+    let startTime = Date.now();
 
-  return setTimeout(function() {
-    handler({
-      didTimeout: false,
-      timeRemaining: function() {
-        return Math.max(0, 50.0 - (Date.now() - startTime));
-      }
-    });
-  }, 1);
-};
+    return setTimeout(function () {
+      handler({
+        didTimeout: false,
+        timeRemaining: function () {
+          return Math.max(0, 50.0 - (Date.now() - startTime));
+        },
+      });
+    }, 1);
+  };
 
-window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
-  clearTimeout(id);
-};
+window.cancelIdleCallback =
+  window.cancelIdleCallback ||
+  function (id) {
+    clearTimeout(id);
+  };
 ```
 
 #### 管理任务队列
@@ -258,7 +270,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 function enqueueTask(taskHandler, taskData) {
   taskList.push({
     handler: taskHandler,
-    data: taskData
+    data: taskData,
   });
 
   totalTaskCount++;
@@ -286,7 +298,10 @@ function enqueueTask(taskHandler, taskData) {
 
 ```js
 function runTaskQueue(deadline) {
-  while ((deadline.timeRemaining() > 0 || deadline.didTimeout) && taskList.length) {
+  while (
+    (deadline.timeRemaining() > 0 || deadline.didTimeout) &&
+    taskList.length
+  ) {
     let task = taskList.shift();
     currentTaskNumber++;
 
@@ -295,7 +310,7 @@ function runTaskQueue(deadline) {
   }
 
   if (taskList.length) {
-    taskHandle = requestIdleCallback(runTaskQueue, { timeout: 1000} );
+    taskHandle = requestIdleCallback(runTaskQueue, { timeout: 1000 });
   } else {
     taskHandle = 0;
   }
@@ -323,9 +338,9 @@ function runTaskQueue(deadline) {
 
 ```js
 function scheduleStatusRefresh() {
-    if (!statusRefreshScheduled) {
-      requestAnimationFrame(updateDisplay);
-      statusRefreshScheduled = true;
+  if (!statusRefreshScheduled) {
+    requestAnimationFrame(updateDisplay);
+    statusRefreshScheduled = true;
   }
 }
 ```
@@ -338,7 +353,8 @@ function scheduleStatusRefresh() {
 
 ```js
 function updateDisplay() {
-  let scrolledToEnd = logElem.scrollHeight - logElem.clientHeight <= logElem.scrollTop + 1;
+  let scrolledToEnd =
+    logElem.scrollHeight - logElem.clientHeight <= logElem.scrollTop + 1;
 
   if (totalTaskCount) {
     if (progressBarElem.max != totalTaskCount) {
@@ -358,7 +374,7 @@ function updateDisplay() {
   }
 
   if (scrolledToEnd) {
-      logElem.scrollTop = logElem.scrollHeight - logElem.clientHeight;
+    logElem.scrollTop = logElem.scrollHeight - logElem.clientHeight;
   }
 
   statusRefreshScheduled = false;
@@ -383,7 +399,7 @@ function updateDisplay() {
 ```js
 function log(text) {
   if (!logFragment) {
-      logFragment = document.createDocumentFragment();
+    logFragment = document.createDocumentFragment();
   }
 
   let el = document.createElement("div");
@@ -408,8 +424,8 @@ function log(text) {
 function logTaskHandler(data) {
   log("<strong>Running task #" + currentTaskNumber + "</strong>");
 
-  for (i=0; i<data.count; i+=1) {
-    log((i+1).toString() + ". " + data.text);
+  for (i = 0; i < data.count; i += 1) {
+    log((i + 1).toString() + ". " + data.text);
   }
 }
 ```
@@ -434,17 +450,19 @@ function decodeTechnoStuff() {
 
   let n = getRandomIntInclusive(100, 200);
 
-  for (i=0; i<n; i++) {
+  for (i = 0; i < n; i++) {
     let taskData = {
       count: getRandomIntInclusive(75, 150),
-      text: "This text is from task number " + (i+1).toString() + " of " + n
+      text: "This text is from task number " + (i + 1).toString() + " of " + n,
     };
 
     enqueueTask(logTaskHandler, taskData);
   }
 }
 
-document.getElementById("startButton").addEventListener("click", decodeTechnoStuff, false);
+document
+  .getElementById("startButton")
+  .addEventListener("click", decodeTechnoStuff, false);
 ```
 
 `decodeTechnoStuff()`开始执行时会将任务总数（到现在为止添加到队列中的任务数）清零，并随后调用`updateDisplay()`以重置显示为“没有任何事发生”的状态。

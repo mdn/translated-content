@@ -410,8 +410,8 @@ As propriedades do objeto `o` são:
 - `o.b` — um getter que retorna `o.a` + 1
 - `o.c` — um setter que define o valor de `o.a` pela metade do valor definindo para `o.c`
 
-Observe que nomes de função de getters e setters definidos em um objeto literal usando "\[gs]et _property_()" (ao contrário de `__define[GS]etter__` ) não são os próprios nomes dos getters, embora a sintaxe `[gs]et propertyName(){ }` possa induzir ao erro e você pensar de outra forma. Para nomear uma função getter ou setter usando a sintaxe "\[gs]et _property_()", define explicitamente um função nomeada programaticamente usando [`Object.defineProperty`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/defineProperty "en-US/docs/Core JavaScript 1.5 Reference/Global
-Objects/Object/defineProperty") (ou o legado fallback [`Object.prototype.__defineGetter__`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/defineGetter "en-US/docs/Core JavaScript 1.5 Reference/Global
+Observe que nomes de função de getters e setters definidos em um objeto literal usando "\[gs]et _property_()" (ao contrário de `__define[GS]etter__` ) não são os próprios nomes dos getters, embora a sintaxe `[gs]et propertyName(){ }` possa induzir ao erro e você pensar de outra forma. Para nomear uma função getter ou setter usando a sintaxe "\[gs]et _property_()", define explicitamente um função nomeada programaticamente usando [`Object.defineProperty`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/defineProperty "/en-US/docs/Core JavaScript 1.5 Reference/Global
+Objects/Object/defineProperty") (ou o legado fallback [`Object.prototype.__defineGetter__`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/defineGetter "/en-US/docs/Core JavaScript 1.5 Reference/Global
 Objects/Object/defineGetter")).
 
 O código a seguir ilustra como getters e setters podem extender o protótipo [`Date`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date) para adicionar a propriedade `ano` para todas as instâncias de classes `Date` pré-definidas. Ele usa os métodos `getFullYear` e `setFullYear` existentes da classe `Date` para suportar o getter e setter da propriedade `ano`.

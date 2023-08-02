@@ -26,7 +26,7 @@ TODO: Only available in a Mozilla-based browser? TODO: Only suitable for extensi
 ### 範例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />

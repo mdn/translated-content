@@ -40,7 +40,7 @@ var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
 
 ## Описание
 
-Смотрите {{jsxref("Array.prototype.map()")}} для детального описания callback функции. Метод `flatMap` идентичен методу [`map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) с последующим вызовом [`flat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) с параметром depth 1.
+Смотрите {{jsxref("Array.prototype.map()")}} для детального описания callback функции. Метод `flatMap` идентичен методу [`map`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map) с последующим вызовом [`flat`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) с параметром depth 1.
 
 ## Примеры
 
@@ -100,7 +100,7 @@ arr1.reduce((acc, x) => acc.concat([x * 2]), []);
 
 {{Compat}}
 
-## См так же:
+## См так же
 
 - {{jsxref("Array.prototype.flat()")}}
 - {{jsxref("Array.prototype.map()")}}

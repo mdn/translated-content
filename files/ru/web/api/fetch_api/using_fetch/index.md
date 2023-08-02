@@ -331,7 +331,7 @@ console.log(error);
 
 none: по умолчанию.request: защита объекта заголовков, полученного по запросу ({{domxref("Request.headers")}}).request-no-cors: защита объекта заголовков, полученного по запросу созданного с {{domxref("Request.mode")}} no-cors.response: защита Headers полученных от ответа ({{domxref("Response.headers")}}).immutable: в основном, используется в ServiceWorkers; делает объект заголовков read-only.
 
-Примечание: вы не можете добавить или установить request защищаемые Headers’ заголовок Content-Length. Аналогично, вставка Set-Cookie в заголовок ответа недопустимо: ServiceWorkers не допускают установки cookies через синтезированные ответы.
+Примечание: вы не можете добавить или установить request защищаемые Headers' заголовок Content-Length. Аналогично, вставка Set-Cookie в заголовок ответа недопустимо: ServiceWorkers не допускают установки cookies через синтезированные ответы.
 
 Объекты ответа
 

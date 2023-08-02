@@ -51,34 +51,42 @@ slug: Web/HTML/Element/button
 - `formaction`
   - : 表示程序处理 button 提交信息的 URI。如果指定了，将重写 button 表单拥有者的[`action`](/zh-CN/docs/Web/HTML/Element/form#action)属性。
 - `formenctype`
+
   - : 如果 button 是 submit 类型，此属性值指定提交表单到服务器的内容类型。可选值：
 
     - `application/x-www-form-urlencoded`: 未指定时的默认值。
     - `multipart/form-data`: 如果使用[`type`](/zh-CN/docs/Web/HTML/Element/input#type)属性的{{HTMLElement("input")}}元素设置文件，使用此值。
     - `text/plain`如果指定此属性，它将重写 button 的表单拥有者的[`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype)属性。
+
 - `formmethod`
+
   - : 如果 button 是 submit 类型，此属性指定浏览器提交表单使用的 HTTP 方法。可选值：
 
     - `post`：来自表单的数据被包含在表单内容中，被发送到服务器。
     - `get`：来自表单的数据以'?'作为分隔符被附加到 form 的**URI**属性中，得到的 URI 被发送到服务器。当表单没有副作用，且仅包含 ASCII 字符时使用这种方法。如果指定了，此属性会重写 button 拥有者的[`method`](/zh-CN/docs/Web/HTML/Element/form#method)属性。
+
 - `formnovalidate`
   - : 如果 button 是 submit 类型，此布尔属性指定当表单被提交时不需要验证。如果指定了，它会重写 button 拥有者的[`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate)属性。
 - `formtarget`
+
   - : 如果 button 是 submit 类型，此属性指定一个名称或关键字，表示接收提交的表单后在哪里显示响应。这是一个浏览上下文（例如 tab，window 或内联框架）的名称或关键字。如果指定了，它会重写 button 拥有者的[`target`](/zh-CN/docs/Web/HTML/Element/form#target) 属性。关键字如下：
 
     - `_self`: 在同一个浏览上下文中加载响应作为当前的。未指定时此值为默认值。
     - `_blank`: 在一个新的不知名浏览上下文中加载响应。
     - `_parent`: 在当前浏览上下文父级中加载响应。如果没有父级的，此选项将按\_self 执行。
     - `_top`: 在顶级浏览上下文（即当前浏览上下文的祖先，且没有父级）中架加载响应。如果没有顶级的，此选项将按\_self 执行。
+
 - `name`
   - : button 的名称，与表单数据一起提交。
 - `type`
+
   - : button 的类型。可选值：
 
     - `submit`: 此按钮将表单数据提交给服务器。如果未指定属性，或者属性动态更改为空值或无效值，则此值为默认值。
     - `reset`: 此按钮重置所有组件为初始值。
     - `button`: 此按钮没有默认行为。它可以有与元素事件相关的客户端脚本，当事件出现时可触发。
     - menu: 此按钮打开一个由指定{{HTMLElement("menu")}}元素进行定义的弹出菜单。
+
 - `value`
   - : button 的初始值。它定义的值与表单数据的提交按钮相关联。当表单中的数据被提交时，这个值便以参数的形式被递送至服务器。
 

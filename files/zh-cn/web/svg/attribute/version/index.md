@@ -11,10 +11,10 @@ slug: Web/SVG/Attribute/version
 
 ## Usage context
 
-| 类别     | None                                    |
-| -------- | --------------------------------------- |
+| 类别     | None                                        |
+| -------- | ------------------------------------------- |
 | 值       | [\<number>](/zh-CN/SVG/Content_type#Number) |
-| 动画属性 | No                                      |
+| 动画属性 | No                                          |
 
 ## 规范
 

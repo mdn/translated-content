@@ -10,5 +10,5 @@ Ele foi criado por Guido van Rossum como sucessor de outra linguagem (chamado AB
 
 ## Saiba Mais
 
-- {{interwiki('wikipedia','Python (programming language)','Python')}} na Wikipedia
+- [Python](https://pt.wikipedia.org/wiki/Python) na Wikipedia
 - [Um tutorial python](http://www.tutorialspoint.com/python/index.htm)

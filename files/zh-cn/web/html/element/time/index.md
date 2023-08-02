@@ -80,7 +80,9 @@ This article was created on 2011-01-28.
 #### `datetime` 示例
 
 ```html
-<p>The concert took place on <time datetime="2001-05-15 19:00">May 15</time>.</p>
+<p>
+  The concert took place on <time datetime="2001-05-15 19:00">May 15</time>.
+</p>
 ```
 
 上面的 HTML 会显示：

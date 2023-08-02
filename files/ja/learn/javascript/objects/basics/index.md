@@ -170,8 +170,8 @@ name.last;
 次のように[ドット記法](#ドット記法)を使用する代わりに、
 
 ```js
-person.age
-person.name.first
+person.age;
+person.name.first;
 ```
 
 角括弧を使用して次のようにすることができます。

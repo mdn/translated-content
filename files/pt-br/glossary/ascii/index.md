@@ -10,4 +10,4 @@ ASCII (Código Padrão Americano para o Intercâmbio de Informação) é um dos 
 
 ### Conhecimento geral
 
-{{Interwiki("wikipedia", "ASCII")}} no Wikipedia
+[ASCII](https://pt.wikipedia.org/wiki/ASCII) no Wikipedia

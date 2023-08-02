@@ -1,10 +1,6 @@
 ---
 title: Commentaires
 slug: Web/CSS/Comments
-tags:
-  - CSS
-  - Débutant
-  - Reference
 translation_of: Web/CSS/Comments
 ---
 
@@ -30,7 +26,6 @@ Commentaire
 sur plusieurs
 lignes
 */
-
 
 /* Le commentaire qui suit permet
    de désactiver une règle */

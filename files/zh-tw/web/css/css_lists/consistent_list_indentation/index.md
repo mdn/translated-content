@@ -61,7 +61,7 @@ Gecko 則不太一樣，他為 `<ul>` element 設定了 40 pixel 的 left _paddi
 
 從結果來說，marker 都很好的附著在 `<li>` element 之前並未消失。唯一的不同點是發生在你替 `<ul>` element 設定背景顏色時。
 
-### 不變的是 ...
+### 不變的是
 
 現在我們知道，若你希望在 Gecko, Internet Explorer 和 Opera 都有一樣的 list 外觀， `<ul>` element 的 left margin 和 left padding 都要設定。你大可不必理會 `<li>` 的設定。
 

@@ -15,26 +15,24 @@ O exemplo mostra um documento HTML e um XHTML incluindo os cabeçalhos relevante
 ### Documento HTML
 
 ```html
-HTTP/1.1 200 OK
-Content-Type: text/html
+<!-- Content-Type: text/html -->
 
-<!DOCTYPE html>
-<html lang=en>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset=utf-8>
+    <meta charset="utf-8" />
     <title>HTML</title>
   </head>
   <body>
-    <p>Eu sou um documento HTML
+    <p>Eu sou um documento HTML</p>
   </body>
 </html>
 ```
 
 ### Documento XHTML
 
-```
-HTTP/1.1 200 OK
-Content-Type: application/xhtml+xml
+```xml
+<!-- Content-Type: application/xhtml+xml -->
 
 <html xml:lang="en" xmlns="https://www.w3.org/1999/xhtml">
   <head>

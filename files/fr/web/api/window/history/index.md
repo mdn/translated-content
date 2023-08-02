@@ -14,8 +14,8 @@ En particulier, cet article explique les caractéristiques des méthodes `pushSt
 ## Exemple
 
 ```js
-history.back();     // similaire au bouton de retour
-history.go(-1);     // similaire à history.back();
+history.back(); // similaire au bouton de retour
+history.go(-1); // similaire à history.back();
 ```
 
 ## Notes

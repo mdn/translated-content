@@ -104,6 +104,6 @@ div {
 
 ## See also
 
-- [`border`](/en-US/docs/Web/CSS/border)
-- [`border-block`](/en-US/docs/Web/CSS/border-block)
-- [`outline`](/en-US/docs/Web/CSS/outline)
+- [`border`](/ru/docs/Web/CSS/border)
+- [`border-block`](/ru/docs/Web/CSS/border-block)
+- [`outline`](/ru/docs/Web/CSS/outline)

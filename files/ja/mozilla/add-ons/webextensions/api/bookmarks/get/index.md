@@ -12,8 +12,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/get
 ```js
 browser.bookmarks.get(
   idOrIdList, // 文字列または文字列の配列
-  callback    // 関数
-)
+  callback, // 関数
+);
 ```
 
 ### 引数

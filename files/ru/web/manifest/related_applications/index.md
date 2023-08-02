@@ -65,12 +65,10 @@ translation_of: Web/Manifest/related_applications
 | `url`      | URL, по которому может быть найдено приложение.                                                                                 |
 | `id`       | ID, используемое для представления приложения на определённой платформе.                                                        |
 
-## Specification
+## Спецификации
 
-| Specification                                                                                                | Status                       | Comment             | Feedback                                                                         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName('Manifest', '#related_applications-member', 'related_applications')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

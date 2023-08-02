@@ -9,8 +9,8 @@ slug: Glossary/Hotlink
 
 1. 一般知識
 
-    1. Wikipedia 上の [直リンク](https://ja.wikipedia.org/wiki/直リンク)
+   1. Wikipedia 上の [直リンク](https://ja.wikipedia.org/wiki/直リンク)
 
 2. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1. {{glossary("Hyperlink")}}
+   1. {{glossary("Hyperlink")}}

@@ -7,6 +7,7 @@ tags:
   - Расширение
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

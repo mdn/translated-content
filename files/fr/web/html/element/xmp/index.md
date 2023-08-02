@@ -1,12 +1,6 @@
 ---
 title: <xmp>
 slug: Web/HTML/Element/xmp
-tags:
-  - Element
-  - HTML
-  - Obsolete
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/xmp
 ---
 

@@ -42,7 +42,10 @@ HTML にはリッチメディアを文書内に埋め込むための要素、 {{
   <source src="rabbit320.mp4" type="video/mp4" />
   <source src="rabbit320.webm" type="video/webm" />
   <p>
-    お使いのブラウザーは HTML 動画に対応していません。代わりに<a href="rabbit320.mp4">動画へのリンク</a>があります。
+    お使いのブラウザーは HTML 動画に対応していません。代わりに<a
+      href="rabbit320.mp4"
+      >動画へのリンク</a
+    >があります。
   </p>
 </video>
 ```
@@ -142,7 +145,8 @@ HTML のインデックスファイルを開いてください。多くの機能
 @font-face {
   font-family: "HeydingsControlsRegular";
   src: url("fonts/heydings_controls-webfont.eot");
-  src: url("fonts/heydings_controls-webfont.eot?#iefix") format("embedded-opentype"),
+  src:
+    url("fonts/heydings_controls-webfont.eot?#iefix") format("embedded-opentype"),
     url("fonts/heydings_controls-webfont.woff") format("woff"),
     url("fonts/heydings_controls-webfont.ttf") format("truetype");
   font-weight: normal;
@@ -212,17 +216,17 @@ button:before {
 2. このファイルの一番上に、以下のコードを挿入してください。
 
    ```js
-   const media = document.querySelector('video');
-   const controls = document.querySelector('.controls');
+   const media = document.querySelector("video");
+   const controls = document.querySelector(".controls");
 
-   const play = document.querySelector('.play');
-   const stop = document.querySelector('.stop');
-   const rwd = document.querySelector('.rwd');
-   const fwd = document.querySelector('.fwd');
+   const play = document.querySelector(".play");
+   const stop = document.querySelector(".stop");
+   const rwd = document.querySelector(".rwd");
+   const fwd = document.querySelector(".fwd");
 
-   const timerWrapper = document.querySelector('.timer');
-   const timer = document.querySelector('.timer span');
-   const timerBar = document.querySelector('.timer div');
+   const timerWrapper = document.querySelector(".timer");
+   const timer = document.querySelector(".timer span");
+   const timerBar = document.querySelector(".timer div");
    ```
 
    ここでは、操作したいすべてのオブジェクトへの参照を保持するための定数を作成しています。 3 つのグループを持っています。
@@ -234,11 +238,11 @@ button:before {
 3. 次に、コードの一番下に以下のものを挿入してください。
 
    ```js
-   media.removeAttribute('controls');
-   controls.style.visibility = 'visible';
+   media.removeAttribute("controls");
+   controls.style.visibility = "visible";
    ```
 
-  この 2 行は、既定のブラウザーコントロールを動画から削除し、カスタムコントロールを表示するようにします。
+この 2 行は、既定のブラウザーコントロールを動画から削除し、カスタムコントロールを表示するようにします。
 
 #### 動画の再生と一時停止
 
@@ -247,7 +251,7 @@ button:before {
 1. まず最初に、以下のコードをコードの一番下に追加し、再生ボタンがクリックされたときに `playPauseMedia()` 関数が呼び出されるようにします。
 
    ```js
-   play.addEventListener('click', playPauseMedia);
+   play.addEventListener("click", playPauseMedia);
    ```
 
 2. 次に、`playPauseMedia()` を定義するために、以下のことを、再びコードの一番下に追加してください。
@@ -255,10 +259,10 @@ button:before {
    ```js
    function playPauseMedia() {
      if (media.paused) {
-       play.setAttribute('data-icon','u');
+       play.setAttribute("data-icon", "u");
        media.play();
      } else {
-       play.setAttribute('data-icon','P');
+       play.setAttribute("data-icon", "P");
        media.pause();
      }
    }
@@ -273,8 +277,8 @@ button:before {
 1. 次に、動画の停止を処理する機能を追加しましょう。前回追加した行の下に、以下の [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) 行を追加してください。
 
    ```js
-   stop.addEventListener('click', stopMedia);
-   media.addEventListener('ended', stopMedia);
+   stop.addEventListener("click", stopMedia);
+   media.addEventListener("ended", stopMedia);
    ```
 
    {{domxref("Element/click_event", "click")}} イベントは明らかです。停止ボタンがクリックされたときに `stopMedia()` 関数を実行して動画を停止させたいのです。しかし、再生が完了したときにも動画を停止したいのです。これは {{domxref("HTMLMediaElement/ended_event", "ended")}} イベントが発行されることによって示されるので、そのイベント発行時にも関数を実行するようリスナーを設定します。
@@ -285,11 +289,11 @@ button:before {
    function stopMedia() {
      media.pause();
      media.currentTime = 0;
-     play.setAttribute('data-icon','P');
+     play.setAttribute("data-icon", "P");
    }
    ```
 
-    `stop()` メソッドは HTMLMediaElement API にはありません。代わりに、動画を `pause()` して、その {{domxref("HTMLMediaElement.currentTime", "currentTime")}} プロパティを 0 に設定します。 `currentTime` に値 (秒単位) を設定すると、その位置にメディアがすぐにジャンプします。
+   `stop()` メソッドは HTMLMediaElement API にはありません。代わりに、動画を `pause()` して、その {{domxref("HTMLMediaElement.currentTime", "currentTime")}} プロパティを 0 に設定します。 `currentTime` に値 (秒単位) を設定すると、その位置にメディアがすぐにジャンプします。
 
    後は、表示されているアイコンを「再生」アイコンに設定するだけです。停止ボタンが押されたときに動画が一時停止していたか再生していたかに関係なく、その後再生できる状態にしたいのです。
 
@@ -300,8 +304,8 @@ button:before {
 1. まず、最初の行の下に、以下の 2 つの [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) の行を追加してください。
 
    ```js
-   rwd.addEventListener('click', mediaBackward);
-   fwd.addEventListener('click', mediaForward);
+   rwd.addEventListener("click", mediaBackward);
+   fwd.addEventListener("click", mediaForward);
    ```
 
 2. 次に、イベントハンドラー関数について説明します。先ほどの関数の下に、次のコードを追加して `mediaBackward()` と `mediaForward()` を定義してください。
@@ -312,14 +316,14 @@ button:before {
 
    function mediaBackward() {
      clearInterval(intervalFwd);
-     fwd.classList.remove('active');
+     fwd.classList.remove("active");
 
-     if (rwd.classList.contains('active')) {
-       rwd.classList.remove('active');
+     if (rwd.classList.contains("active")) {
+       rwd.classList.remove("active");
        clearInterval(intervalRwd);
        media.play();
      } else {
-       rwd.classList.add('active');
+       rwd.classList.add("active");
        media.pause();
        intervalRwd = setInterval(windBackward, 200);
      }
@@ -327,14 +331,14 @@ button:before {
 
    function mediaForward() {
      clearInterval(intervalRwd);
-     rwd.classList.remove('active');
+     rwd.classList.remove("active");
 
-     if (fwd.classList.contains('active')) {
-       fwd.classList.remove('active');
+     if (fwd.classList.contains("active")) {
+       fwd.classList.remove("active");
        clearInterval(intervalFwd);
        media.play();
      } else {
-       fwd.classList.add('active');
+       fwd.classList.add("active");
        media.pause();
        intervalFwd = setInterval(windForward, 200);
      }
@@ -355,7 +359,7 @@ button:before {
    ```js
    function windBackward() {
      if (media.currentTime <= 3) {
-       rwd.classList.remove('active');
+       rwd.classList.remove("active");
        clearInterval(intervalRwd);
        stopMedia();
      } else {
@@ -365,7 +369,7 @@ button:before {
 
    function windForward() {
      if (media.currentTime >= media.duration - 3) {
-       fwd.classList.remove('active');
+       fwd.classList.remove("active");
        clearInterval(intervalFwd);
        stopMedia();
      } else {
@@ -386,7 +390,7 @@ button:before {
 他にも、以下の `addEventListener()` 行を追加してください。
 
 ```js
-media.addEventListener('timeupdate', setTime);
+media.addEventListener("timeupdate", setTime);
 ```
 
 次に、 `setTime()` 関数を定義します。ファイルの一番下に以下のように追加してください。
@@ -396,13 +400,14 @@ function setTime() {
   const minutes = Math.floor(media.currentTime / 60);
   const seconds = Math.floor(media.currentTime - minutes * 60);
 
-  const minuteValue = minutes.toString().padStart(2, '0');
-  const secondValue = seconds.toString().padStart(2, '0');
+  const minuteValue = minutes.toString().padStart(2, "0");
+  const secondValue = seconds.toString().padStart(2, "0");
 
   const mediaTime = `${minuteValue}:${secondValue}`;
   timer.textContent = mediaTime;
 
-  const barLength = timerWrapper.clientWidth * (media.currentTime/media.duration);
+  const barLength =
+    timerWrapper.clientWidth * (media.currentTime / media.duration);
   timerBar.style.width = `${barLength}px`;
 }
 ```
@@ -423,8 +428,8 @@ function setTime() {
 まず、`stopMedia()` 関数の中に以下の行を追加してください。どこでも構いません。
 
 ```js
-rwd.classList.remove('active');
-fwd.classList.remove('active');
+rwd.classList.remove("active");
+fwd.classList.remove("active");
 clearInterval(intervalRwd);
 clearInterval(intervalFwd);
 ```
@@ -446,9 +451,9 @@ clearInterval(intervalFwd);
 3. タイマーの内側の `<div>` 要素を真のシークバー/スクローラーにする方法はうまくいきそうですか。ヒントとして、要素の左右と上下の X と Y の値は [`getBoundingClientRect()`](/ja/docs/Web/API/Element/getBoundingClientRect) メソッドで、マウスクリックの座標は {{domxref("Document")}} オブジェクトで呼び出されるクリックイベントのオブジェクトで見つけることができます。例を挙げます。
 
    ```js
-   document.onclick = function(e) {
+   document.onclick = function (e) {
      console.log(e.x, e.y);
-   }
+   };
    ```
 
 ## 関連情報

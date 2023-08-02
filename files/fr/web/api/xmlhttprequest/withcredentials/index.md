@@ -1,12 +1,6 @@
 ---
 title: XMLHttpRequest.withCredentials
 slug: Web/API/XMLHttpRequest/withCredentials
-tags:
-  - API
-  - Propriété
-  - Reference
-  - XHR
-  - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest/withCredentials
 ---
 
@@ -26,7 +20,7 @@ Les cookies tiers obtenus lorsque `withCredentials` vaut `true` continuent de re
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://example.com/', true);
+xhr.open("GET", "http://example.com/", true);
 xhr.withCredentials = true;
 xhr.send(null);
 ```

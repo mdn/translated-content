@@ -108,13 +108,13 @@ if ("document" in self) {
           if (token === "") {
             throw new DOMEx(
               "SYNTAX_ERR",
-              "An invalid or illegal string was specified"
+              "An invalid or illegal string was specified",
             );
           }
           if (/\s/.test(token)) {
             throw new DOMEx(
               "INVALID_CHARACTER_ERR",
-              "String contains an invalid character"
+              "String contains an invalid character",
             );
           }
           return arrIndexOf.call(classList, token);
@@ -220,7 +220,7 @@ if ("document" in self) {
             objCtr.defineProperty(
               elemCtrProto,
               classListProp,
-              classListPropDesc
+              classListPropDesc,
             );
           }
         }

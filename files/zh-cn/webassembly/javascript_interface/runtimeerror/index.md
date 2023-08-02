@@ -57,15 +57,15 @@ _`RuntimeError`构造函数不包含自己的方法，但是，它确实通过�
 
 ```js
 try {
-  throw new WebAssembly.RuntimeError('Hello', 'someFile', 10);
+  throw new WebAssembly.RuntimeError("Hello", "someFile", 10);
 } catch (e) {
   console.log(e instanceof RuntimeError); // true
-  console.log(e.message);                 // "Hello"
-  console.log(e.name);                    // "RuntimeError"
-  console.log(e.fileName);                // "someFile"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // 返回代码运行的位置
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "RuntimeError"
+  console.log(e.fileName); // "someFile"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // 返回代码运行的位置
 }
 ```
 

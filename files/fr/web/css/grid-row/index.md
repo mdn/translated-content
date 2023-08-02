@@ -1,10 +1,6 @@
 ---
 title: grid-row
 slug: Web/CSS/grid-row
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/grid-row
 ---
 

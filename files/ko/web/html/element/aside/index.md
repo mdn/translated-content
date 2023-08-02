@@ -1,5 +1,5 @@
 ---
-title: '<aside>: 별도 구획 요소'
+title: "<aside>: 별도 구획 요소"
 slug: Web/HTML/Element/aside
 ---
 
@@ -47,7 +47,7 @@ slug: Web/HTML/Element/aside
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/ko/docs/Web/HTML/Content_categories#Flow_content"
           >플로우 콘텐츠</a
         >를 허용하는 모든 요소.<br /><code>&#x3C;aside></code> 요소는
         {{HTMLElement("address")}}의 후손이 될 수 없음에 주의하세요.
@@ -94,16 +94,9 @@ slug: Web/HTML/Element/aside
 
 ```html
 <article>
-  <p>
-    디즈니 만화영화 <em>인어 공주</em>는
-    1989년 처음 개봉했습니다.
-  </p>
-  <aside>
-    인어 공주는 첫 개봉 당시 8700만불의 흥행을 기록했습니다.
-  </aside>
-  <p>
-    영화에 대한 정보...
-  </p>
+  <p>디즈니 만화영화 <em>인어 공주</em>는 1989년 처음 개봉했습니다.</p>
+  <aside>인어 공주는 첫 개봉 당시 8700만불의 흥행을 기록했습니다.</aside>
+  <p>영화에 대한 정보...</p>
 </article>
 ```
 

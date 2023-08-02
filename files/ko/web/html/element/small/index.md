@@ -1,5 +1,5 @@
 ---
-title: '<small>: 덧붙임 글 요소'
+title: "<small>: 덧붙임 글 요소"
 slug: Web/HTML/Element/small
 ---
 
@@ -69,8 +69,9 @@ slug: Web/HTML/Element/small
 ### 기본 사용법
 
 ```html
-<p>This is the first sentence.
- <small>This whole sentence is in small letters.</small>
+<p>
+  This is the first sentence.
+  <small>This whole sentence is in small letters.</small>
 </p>
 ```
 
@@ -79,9 +80,9 @@ slug: Web/HTML/Element/small
 ### CSS 예제
 
 ```html
-<p>This is the first sentence.
-  <span style="font-size:0.8em">This whole sentence is in small
-  letters.</span>
+<p>
+  This is the first sentence.
+  <span style="font-size:0.8em">This whole sentence is in small letters.</span>
 </p>
 ```
 

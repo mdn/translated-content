@@ -11,10 +11,10 @@ slug: Web/HTML/Element/menu
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/ko/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/ko/docs/Web/HTML/Content_categories#Flow_content"
           >Flow content</a
         >. Additionally, if in the <em>list menu</em> state, palpable content.
         (<em>list menu</em> is the default state, unless the parent element is a
@@ -25,7 +25,7 @@ slug: Web/HTML/Element/menu
       <th scope="row">Permitted content</th>
       <td>
         If the element is in the <em>list menu</em> state:
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/ko/docs/Web/HTML/Content_categories#Flow_content"
           >flow content</a
         >, or alternatively, zero or more occurrences of
         {{HTMLElement("li")}}, {{HTMLElement("script")}}, and
@@ -45,7 +45,7 @@ slug: Web/HTML/Element/menu
       <th scope="row">Permitted parent elements</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/ko/docs/Web/HTML/Content_categories#Flow_content"
           >flow content</a
         >.
       </td>

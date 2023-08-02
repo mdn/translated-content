@@ -17,7 +17,7 @@ original_slug: Web/API/URL/createObjectURL
 ## 구문
 
 ```js
-const objectURL = URL.createObjectURL(object)
+const objectURL = URL.createObjectURL(object);
 ```
 
 ### 매개변수

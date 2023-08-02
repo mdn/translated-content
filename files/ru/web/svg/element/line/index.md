@@ -66,7 +66,7 @@ html,body,svg { height:100% }
 
 {{Compat}}
 
-## Смотрите также:
+## Смотрите также
 
 - {{SVGElement("polygon")}}
 - {{SVGElement("path")}}

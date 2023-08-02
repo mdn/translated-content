@@ -181,7 +181,7 @@ link.addEventListener(
     link.href = canvas.toDataURL();
     link.download = "mypainting.png";
   },
-  false
+  false,
 );
 
 document.body.appendChild(link);

@@ -10,5 +10,5 @@ Um ato de uma função invocando a si mesma. A recursão é usada para resolver 
 
 ### Conhecimento Geral
 
-- {{Interwiki("wikipedia", "Recursividade (ciência da computação)")}} no Wikipédia
+- [Recursividade (ciência da computação)](<https://pt.wikipedia.org/wiki/Recursividade_(ciência_da_computação)>) no Wikipédia
 - [More details about recursion in JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Functions#Recursion)

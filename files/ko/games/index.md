@@ -2,6 +2,7 @@
 title: 게임 개발
 slug: Games
 ---
+
 {{GamesSidebar}}
 
 게임은 가장 인기있는 컴퓨터 활동 중 하나입니다. 어떠한 표준 웹 브라우저에서도 작동하는 더욱 좋고 강력한 게임을 개발할 수 있는 새로운 기술들이 끊임없이 나타나고 있습니다.
@@ -16,7 +17,7 @@ slug: Games
 
 ## 네이티브 언어로 개발된 게임을 웹으로 포팅하기
 
-만약 네이티브 개발자이고(예를 들어 C++로 게임을 만들 수 있는 경우) 게임을 웹에 복사하는 것에 흥미가 있다면 [Emscripten](https://emscripten.org/index.html)에 대해 배워보세요. 이것은 LLVM을 자바스크립트로 변환하는 컴파일러로 LLVM 바이트코드(예를 들어, Clang을 사용해 C/C++ 혹은 다른 언어에서 생성된 코드)를 웹에서 실행 가능한 형태인 [asm.js](/en-US/docs/Games/Tools/asm.js)로 컴파일합니다.
+만약 네이티브 개발자이고(예를 들어 C++로 게임을 만들 수 있는 경우) 게임을 웹에 복사하는 것에 흥미가 있다면 [Emscripten](https://emscripten.org/index.html)에 대해 배워보세요. 이것은 LLVM을 자바스크립트로 변환하는 컴파일러로 LLVM 바이트코드(예를 들어, Clang을 사용해 C/C++ 혹은 다른 언어에서 생성된 코드)를 웹에서 실행 가능한 형태인 [asm.js](/ko/docs/Games/Tools/asm.js)로 컴파일합니다.
 
 시작하고 싶다면, 아래 링크를 참조해보세요.
 
@@ -26,7 +27,7 @@ slug: Games
 
 ## 예제
 
-웹 게임들의 예시 목록을 보고싶으시면 [예제 페이지](/en-US/docs/Games/Examples)에서 확인해보세요. 또 더욱 쓸만한 리소스를 보고싶다면 [games.mozilla.org](https://games.mozilla.org/)를 확인해보세요!
+웹 게임들의 예시 목록을 보고싶으시면 [예제 페이지](/ko/docs/Games/Examples)에서 확인해보세요. 또 더욱 쓸만한 리소스를 보고싶다면 [games.mozilla.org](https://games.mozilla.org/)를 확인해보세요!
 
 ## 같이 보기
 

@@ -12,7 +12,7 @@ original_slug: Learn/Common_questions/How_does_the_Internet_work
       <th scope="row">선행지식:</th>
       <td>
         선행지식은 필요없습니다. 하지만 '프로젝트의 목표 설정에 대한 글(<a
-          href="/en-US/docs/Learn/Thinking_before_coding"
+          href="/ko/docs/Learn/Thinking_before_coding"
           >Article on setting project goals</a
         >)에 대한 글을 먼저 읽어보세요.
       </td>

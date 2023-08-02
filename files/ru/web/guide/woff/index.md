@@ -27,10 +27,7 @@ You can use the {{cssxref("@font-face")}} CSS property to use WOFF fonts for tex
 
 ## Спецификации
 
-| Specification                            | Status                       | Comment                   |
-| ---------------------------------------- | ---------------------------- | ------------------------- |
-| {{SpecName('WOFF2.0', '', '')}} | {{Spec2('WOFF2.0')}} | New compression algorithm |
-| {{SpecName('WOFF1.0', '', '')}} | {{Spec2('WOFF1.0')}} | Initial specification.    |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

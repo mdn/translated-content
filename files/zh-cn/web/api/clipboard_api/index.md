@@ -14,8 +14,11 @@ slug: Web/API/Clipboard_API
 除了在实例化中创建一个 `Clipboard` 对象，你还可以使用全局的 {{domxref("Navigator.clipboard")}} 来访问系统剪贴板。
 
 ```js
-navigator.clipboard.readText().then(
-  clipText => document.querySelector(".editor").innerText += clipText);
+navigator.clipboard
+  .readText()
+  .then(
+    (clipText) => (document.querySelector(".editor").innerText += clipText),
+  );
 ```
 
 上述代码提取了剪贴板的文本并将其附在 class 为 `editor` 的第一个元素后面。因为当剪贴板中不是文本时， {{domxref("Clipboard.readText", "readText()")}} (and {{domxref("Clipboard.read", "read()")}}, for that matter) 会返回一个空字符串，所以这段代码是安全的。

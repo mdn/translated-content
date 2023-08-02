@@ -12,7 +12,7 @@ slug: Web/API/URLSearchParams/get
 ## 구문
 
 ```js
-get(name)
+get(name);
 ```
 
 ### 매개변수

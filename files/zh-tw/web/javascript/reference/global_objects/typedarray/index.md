@@ -60,33 +60,33 @@ int16[0] = 42;
 console.log(int16[0]); // 42
 
 // Indexed properties on prototypes are not consulted (Fx 25)
-Int8Array.prototype[20] = 'foo';
-(new Int8Array(32))[20]; // 0
+Int8Array.prototype[20] = "foo";
+new Int8Array(32)[20]; // 0
 // even when out of bound
-Int8Array.prototype[20] = 'foo';
-(new Int8Array(8))[20]; // undefined
+Int8Array.prototype[20] = "foo";
+new Int8Array(8)[20]; // undefined
 // or with negative integers
-Int8Array.prototype[-1] = 'foo';
-(new Int8Array(8))[-1]; // undefined
+Int8Array.prototype[-1] = "foo";
+new Int8Array(8)[-1]; // undefined
 
 // Named properties are allowed, though (Fx 30)
-Int8Array.prototype.foo = 'bar';
-(new Int8Array(32)).foo; // "bar"
+Int8Array.prototype.foo = "bar";
+new Int8Array(32).foo; // "bar"
 ```
 
 ## TypedArray 物件
 
-| Type                                     | Value Range               | Size in bytes | Description                                                               | Web IDL type          | Equivalent C type |
-| ---------------------------------------- | ------------------------- | ------------- | ------------------------------------------------------------------------- | --------------------- | ----------------- |
+| Type                            | Value Range               | Size in bytes | Description                                                               | Web IDL type          | Equivalent C type |
+| ------------------------------- | ------------------------- | ------------- | ------------------------------------------------------------------------- | --------------------- | ----------------- |
 | {{jsxref("Int8Array")}}         | -128 to 127               | 1             | 8-bit two's complement signed integer                                     | `byte`                | `int8_t`          |
-| {{jsxref("Uint8Array")}}         | 0 to 255                  | 1             | 8-bit unsigned integer                                                    | `octet`               | `uint8_t`         |
+| {{jsxref("Uint8Array")}}        | 0 to 255                  | 1             | 8-bit unsigned integer                                                    | `octet`               | `uint8_t`         |
 | {{jsxref("Uint8ClampedArray")}} | 0 to 255                  | 1             | 8-bit unsigned integer (clamped)                                          | `octet`               | `uint8_t`         |
-| {{jsxref("Int16Array")}}         | -32768 to 32767           | 2             | 16-bit two's complement signed integer                                    | `short`               | `int16_t`         |
-| {{jsxref("Uint16Array")}}         | 0 to 65535                | 2             | 16-bit unsigned integer                                                   | `unsigned short`      | `uint16_t`        |
-| {{jsxref("Int32Array")}}         | -2147483648 to 2147483647 | 4             | 32-bit two's complement signed integer                                    | `long`                | `int32_t`         |
-| {{jsxref("Uint32Array")}}         | 0 to 4294967295           | 4             | 32-bit unsigned integer                                                   | `unsigned long`       | `uint32_t`        |
-| {{jsxref("Float32Array")}}     | 1.2x10^-38 to 3.4x10^38   | 4             | 32-bit IEEE floating point number ( 7 significant digits e.g. 1.1234567)  | `unrestricted float`  | `float`           |
-| {{jsxref("Float64Array")}}     | 5.0x10^-324 to 1.8x10^308 | 8             | 64-bit IEEE floating point number (16 significant digits e.g. 1.123...15) | `unrestricted double` | `double`          |
+| {{jsxref("Int16Array")}}        | -32768 to 32767           | 2             | 16-bit two's complement signed integer                                    | `short`               | `int16_t`         |
+| {{jsxref("Uint16Array")}}       | 0 to 65535                | 2             | 16-bit unsigned integer                                                   | `unsigned short`      | `uint16_t`        |
+| {{jsxref("Int32Array")}}        | -2147483648 to 2147483647 | 4             | 32-bit two's complement signed integer                                    | `long`                | `int32_t`         |
+| {{jsxref("Uint32Array")}}       | 0 to 4294967295           | 4             | 32-bit unsigned integer                                                   | `unsigned long`       | `uint32_t`        |
+| {{jsxref("Float32Array")}}      | 1.2x10^-38 to 3.4x10^38   | 4             | 32-bit IEEE floating point number ( 7 significant digits e.g. 1.1234567)  | `unrestricted float`  | `float`           |
+| {{jsxref("Float64Array")}}      | 5.0x10^-324 to 1.8x10^308 | 8             | 64-bit IEEE floating point number (16 significant digits e.g. 1.123...15) | `unrestricted double` | `double`          |
 
 ## 屬性
 
@@ -200,14 +200,25 @@ These methods are defined on the `TypedArray` prototype object and are thus shar
 Many of the methods used in Typed Arrays can be polyfilled using the methods present in regular Javascript Arrays. The following snippet of JavaScript demonstrates how you might polyfill any missing Typed Array methods.
 
 ```js example-bad
-var typedArrayTypes = [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array,
-          Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array];
+var typedArrayTypes = [
+  Int8Array,
+  Uint8Array,
+  Uint8ClampedArray,
+  Int16Array,
+  Uint16Array,
+  Int32Array,
+  Uint32Array,
+  Float32Array,
+  Float64Array,
+];
 
 for (var k in typedArrayTypes)
-    for (var v in Array.prototype)
-        if (Array.prototype.hasOwnProperty(v) &&
-          !typedArrayTypes[k].prototype.hasOwnProperty(v))
-            typedArrayTypes[k].prototype[v] = Array.prototype[v];
+  for (var v in Array.prototype)
+    if (
+      Array.prototype.hasOwnProperty(v) &&
+      !typedArrayTypes[k].prototype.hasOwnProperty(v)
+    )
+      typedArrayTypes[k].prototype[v] = Array.prototype[v];
 ```
 
 ## 規範

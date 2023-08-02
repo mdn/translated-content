@@ -2,7 +2,6 @@
 title: 301 Moved Permanently
 slug: Web/HTTP/Status/301
 translation_of: Web/HTTP/Status/301
-browser-compat: http.status.301
 ---
 
 {{HTTPSidebar}}

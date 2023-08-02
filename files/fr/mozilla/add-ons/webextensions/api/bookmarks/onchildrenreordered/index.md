@@ -11,9 +11,9 @@ Lancé lorsque les enfants d'un dossier ont changé leur commande en raison de l
 ## Syntaxe
 
 ```js
-browser.bookmarks.onChildrenReordered.addListener(listener)
-browser.bookmarks.onChildrenReordered.removeListener(listener)
-browser.bookmarks.onChildrenReordered.hasListener(listener)
+browser.bookmarks.onChildrenReordered.addListener(listener);
+browser.bookmarks.onChildrenReordered.removeListener(listener);
+browser.bookmarks.onChildrenReordered.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

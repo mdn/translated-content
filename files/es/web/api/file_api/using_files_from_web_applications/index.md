@@ -241,12 +241,12 @@ Si el objeto {{ domxref("FileList") }} pasado a `handleFiles()` es `null`, simpl
 2. El nuevo elemento de la lista es insertado en el bloque {{ HTMLElement("div") }} llamando a si método {{ domxref("element.appendChild()") }}.
 3. Para cada {{ domxref("File") }} en el {{ domxref("FileList") }} representado `files`:
 
-    1. Se crea un nuevo elemento de lista ({{ HTMLElement("li") }}) y lo inserta en la lista.
-    2. Se crea un nuevo elemento imagen ({{ HTMLElement("img") }}).
-    3. Establece en la fuente de la imagen un nuevo blob URL representandoel archivo, usando {{ domxref("window.createBlobURL()") }} para crear el blob URL.
-    4. Se establece el alto de la imagen en 60 pixels.
-    5. Se configura el controlador para el evento load para liberar el blob URL, puesto que ya no es necesario una vez que la imagen ha sido cargada. Esto se hace llamando al método {{ domxref("window.revokeBlobURL()") }}, pasando la cadena en el blob URL como se ha especificado para `img.src`.
-    6. Se añade el nuevo elemento de la lista a la lista.
+   1. Se crea un nuevo elemento de lista ({{ HTMLElement("li") }}) y lo inserta en la lista.
+   2. Se crea un nuevo elemento imagen ({{ HTMLElement("img") }}).
+   3. Establece en la fuente de la imagen un nuevo blob URL representandoel archivo, usando {{ domxref("window.createBlobURL()") }} para crear el blob URL.
+   4. Se establece el alto de la imagen en 60 pixels.
+   5. Se configura el controlador para el evento load para liberar el blob URL, puesto que ya no es necesario una vez que la imagen ha sido cargada. Esto se hace llamando al método {{ domxref("window.revokeBlobURL()") }}, pasando la cadena en el blob URL como se ha especificado para `img.src`.
+   6. Se añade el nuevo elemento de la lista a la lista.
 
 ## Ejemplo: Subiendo un archivo seleccionado por el usuario
 

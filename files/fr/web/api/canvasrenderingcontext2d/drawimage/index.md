@@ -13,7 +13,17 @@ La méthode **`CanvasRenderingContext2D.drawImage()`** de l'API 2D des Canvas in
 ```js
 void ctx.drawImage(image, dx, dy);
 void ctx.drawImage(image, dx, dy, dLargeur, dHauteur);
-void ctx.drawImage(image, sx, sy, sLargeur, sHauteur, dx, dy, dLargeur, dHauteur);
+void ctx.drawImage(
+  image,
+  sx,
+  sy,
+  sLargeur,
+  sHauteur,
+  dx,
+  dy,
+  dLargeur,
+  dHauteur,
+);
 ```
 
 ![drawImage](canvas_drawimage.jpg)
@@ -92,7 +102,7 @@ ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);</textarea>
 ```js hidden
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-var image = document.getElementById('source');
+var image = document.getElementById("source");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
 var edit = document.getElementById("edit");
@@ -103,14 +113,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

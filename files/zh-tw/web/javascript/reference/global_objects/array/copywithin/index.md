@@ -88,7 +88,7 @@ if (!Array.prototype.copyWithin) {
       hold = this.slice
         .apply(
           this,
-          positiveT ? [start, stop] : positiveS ? [start, -target] : [start]
+          positiveT ? [start, stop] : positiveS ? [start, -target] : [start],
         )
         .join(delimiter);
 
@@ -99,7 +99,7 @@ if (!Array.prototype.copyWithin) {
             ? [target, stop - start, hold]
             : positiveS
             ? [target, stop, hold]
-            : [target, start, hold]
+            : [target, start, hold],
         ),
         this.join(delimiter).split(delimiter).slice(zero, length)
       );

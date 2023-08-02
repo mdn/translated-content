@@ -1,5 +1,5 @@
 ---
-title: 'HTMLElement: dragover event'
+title: "HTMLElement: dragover event"
 slug: Web/API/HTMLElement/dragover_event
 original_slug: Web/API/HTMLElement/dragover_event
 ---
@@ -15,9 +15,9 @@ El evento se activa en el objetivo de caída
 Usar el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}} , o establecer una propiedad de manejador de eventos.
 
 ```js
-addEventListener('dragover', (event) => {});
+addEventListener("dragover", (event) => {});
 
-ondragover = (event) => { };
+ondragover = (event) => {};
 ```
 
 ## Tipo de Evento

@@ -10,7 +10,7 @@ Um navegador _Web_ é um programa que obtém e exibe páginas da {{Glossary("Wor
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "Navegador web")}} na Wikipedia
+- [Navegador web](https://pt.wikipedia.org/wiki/Navegador_web) na Wikipedia
 - [The evolution of the web](http://www.evolutionoftheweb.com/)
 
 ### Baixar um navegador
