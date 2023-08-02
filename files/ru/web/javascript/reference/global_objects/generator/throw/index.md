@@ -3,6 +3,7 @@ title: Generator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
 ---
+
 {{JSRef}}
 
 Метод **`throw()`** возобновляет выполнение тела генератора кидая внутри исключение `и возвращает объект со свойствами done и value`.
@@ -37,11 +38,11 @@ gen.throw(exception)
 
 ```js
 function* gen() {
-  while(true) {
+  while (true) {
     try {
-       yield 42;
-    } catch(e) {
-      console.log('Error caught!');
+      yield 42;
+    } catch (e) {
+      console.log("Error caught!");
     }
   }
 }
@@ -49,7 +50,7 @@ function* gen() {
 var g = gen();
 g.next();
 // { value: 42, done: false }
-g.throw(new Error('Something went wrong'));
+g.throw(new Error("Something went wrong"));
 // "Error caught!"
 // { value: 42, done: false }
 ```

@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log2
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Сводка
@@ -41,11 +42,11 @@ Math.log2(x)
 ### Пример: использование метода `Math.log2()`
 
 ```js
-Math.log2(3);    // 1.584962500721156
-Math.log2(2);    // 1
-Math.log2(1);    // 0
-Math.log2(0);    // -Infinity
-Math.log2(-2);   // NaN
+Math.log2(3); // 1.584962500721156
+Math.log2(2); // 1
+Math.log2(1); // 0
+Math.log2(0); // -Infinity
+Math.log2(-2); // NaN
 Math.log2(1024); // 10
 ```
 
@@ -54,9 +55,11 @@ Math.log2(1024); // 10
 Этот метод может эмулироваться следующим способом:
 
 ```js
-Math.log2 = Math.log2 || function(x) {
-  return Math.log(x) / Math.LN2;
-};
+Math.log2 =
+  Math.log2 ||
+  function (x) {
+    return Math.log(x) / Math.LN2;
+  };
 ```
 
 ## Спецификации

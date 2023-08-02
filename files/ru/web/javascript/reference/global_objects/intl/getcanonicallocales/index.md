@@ -7,6 +7,7 @@ tags:
   - метод
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
 ---
+
 {{JSRef}}
 
 Метод **`Intl.getCanonicalLocales()`** возвращает массив, содержащий канонические коды языков. Повторяющиеся значения будут отброшены и элементы будут проверены на соответствие структуры языковых тегов.
@@ -31,10 +32,10 @@ Intl.getCanonicalLocales(locales)
 ## Примеры
 
 ```js
-Intl.getCanonicalLocales('RU-RU'); // ["ru-RU"]
-Intl.getCanonicalLocales(['RU-RU', 'Fr']); // ["ru-RU", "fr"]
+Intl.getCanonicalLocales("RU-RU"); // ["ru-RU"]
+Intl.getCanonicalLocales(["RU-RU", "Fr"]); // ["ru-RU", "fr"]
 
-Intl.getCanonicalLocales('RU_RU');
+Intl.getCanonicalLocales("RU_RU");
 // RangeError:'EN_US' is not a structurally valid language tag
 ```
 

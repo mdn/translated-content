@@ -11,6 +11,7 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sign
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Сводка
@@ -41,26 +42,28 @@ Math.sign(x)
 ### Пример: использование метода `Math.sign()`
 
 ```js
-Math.sign(3);     //  1
-Math.sign(-3);    // -1
-Math.sign('-3');  // -1
-Math.sign(0);     //  0
-Math.sign(-0);    // -0
-Math.sign(NaN);   // NaN
-Math.sign('foo'); // NaN
-Math.sign();      // NaN
+Math.sign(3); //  1
+Math.sign(-3); // -1
+Math.sign("-3"); // -1
+Math.sign(0); //  0
+Math.sign(-0); // -0
+Math.sign(NaN); // NaN
+Math.sign("foo"); // NaN
+Math.sign(); // NaN
 ```
 
 ## Полифил
 
 ```js
-Math.sign = Math.sign || function(x) {
-  x = +x; // преобразуем в число
-  if (x === 0 || isNaN(x)) {
-    return x;
-  }
-  return x > 0 ? 1 : -1;
-}
+Math.sign =
+  Math.sign ||
+  function (x) {
+    x = +x; // преобразуем в число
+    if (x === 0 || isNaN(x)) {
+      return x;
+    }
+    return x > 0 ? 1 : -1;
+  };
 ```
 
 ## Спецификации

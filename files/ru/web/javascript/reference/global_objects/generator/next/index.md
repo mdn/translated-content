@@ -10,6 +10,7 @@ tags:
   - прототип
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/next
 ---
+
 {{JSRef}}
 
 Метод **`next()`** возвращает объект с двумя свойствами `done` и `value`. Также вы можете задать параметр для метода `next`, чтобы отправить значение в генератор.
@@ -50,10 +51,10 @@ function* gen() {
 }
 
 var g = gen(); // "Generator { }"
-g.next();      // "Object { value: 1, done: false }"
-g.next();      // "Object { value: 2, done: false }"
-g.next();      // "Object { value: 3, done: false }"
-g.next();      // "Object { value: undefined, done: true }"
+g.next(); // "Object { value: 1, done: false }"
+g.next(); // "Object { value: 2, done: false }"
+g.next(); // "Object { value: 3, done: false }"
+g.next(); // "Object { value: undefined, done: true }"
 ```
 
 ### Отправка значения в генератор
@@ -62,7 +63,7 @@ g.next();      // "Object { value: undefined, done: true }"
 
 ```js
 function* gen() {
-  while(true) {
+  while (true) {
     var value = yield null;
     console.log(value);
   }
