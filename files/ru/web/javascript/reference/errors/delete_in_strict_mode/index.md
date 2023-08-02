@@ -6,6 +6,7 @@ title: >-
 slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 translation_of: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение
@@ -35,7 +36,7 @@ SyntaxError: удаление неполного идентификатора в
 Попытка удалить простую переменную не работает в JavaScript и выдаёт ошибку в строгом режиме:
 
 ```js example-bad
-'use strict';
+"use strict";
 
 var x;
 
@@ -49,7 +50,7 @@ delete x;
 Чтобы освободить содержимое переменной, задайте для неё значение {{jsxref("null")}}:
 
 ```js example-good
-'use strict';
+"use strict";
 
 var x;
 

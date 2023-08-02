@@ -5,6 +5,7 @@ title: >-
 slug: Web/JavaScript/Reference/Errors/Cant_redefine_property
 translation_of: Web/JavaScript/Reference/Errors/Cant_redefine_property
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщения
@@ -31,9 +32,9 @@ The {{jsxref("Object.defineProperty()")}} создаёт не настраива
 
 ```js example-bad
 var obj = Object.create({});
-Object.defineProperty(obj, "foo", {value: "bar"});
+Object.defineProperty(obj, "foo", { value: "bar" });
 
-Object.defineProperty(obj, "foo", {value: "baz"});
+Object.defineProperty(obj, "foo", { value: "baz" });
 // TypeError: не удаётся переопределить не настраиваемое свойство "foo"
 ```
 
@@ -41,8 +42,8 @@ Object.defineProperty(obj, "foo", {value: "baz"});
 
 ```js example-good
 var obj = Object.create({});
-Object.defineProperty(obj, "foo", {value: "bar", configurable: true});
-Object.defineProperty(obj, "foo", {value: "baz", configurable: true});
+Object.defineProperty(obj, "foo", { value: "bar", configurable: true });
+Object.defineProperty(obj, "foo", { value: "baz", configurable: true });
 ```
 
 ## Смотрите также

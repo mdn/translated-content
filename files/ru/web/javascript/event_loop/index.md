@@ -58,7 +58,7 @@ g(21);
 Модель событийного цикла (`event loop`) называется так потому, что отслеживает новые события в цикле:
 
 ```js
-while(queue.waitForMessage()){
+while (queue.waitForMessage()) {
   queue.processNextMessage();
 }
 ```
@@ -83,21 +83,19 @@ while(queue.waitForMessage()){
 
 ```js
 (function () {
-
-  console.log('this is the start');
+  console.log("this is the start");
 
   setTimeout(function cb() {
-    console.log('this is a msg from call back');
+    console.log("this is a msg from call back");
   });
 
-  console.log('this is just a message');
+  console.log("this is just a message");
 
   setTimeout(function cb1() {
-    console.log('this is a msg from call back1');
+    console.log("this is a msg from call back1");
   }, 0);
 
-  console.log('this is the end');
-
+  console.log("this is the end");
 })();
 
 // "this is the start"

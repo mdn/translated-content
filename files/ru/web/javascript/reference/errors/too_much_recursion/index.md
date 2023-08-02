@@ -1,5 +1,5 @@
 ---
-title: 'InternalError: too much recursion'
+title: "InternalError: too much recursion"
 slug: Web/JavaScript/Reference/Errors/Too_much_recursion
 tags:
   - Errors
@@ -30,8 +30,10 @@ InternalError: too much recursion
 
 ```js
 function loop(x) {
-  if (x >= 10) // "x >= 10" это условие выхода
+  if (x >= 10) {
+    // "x >= 10" это условие выхода
     return;
+  }
   // do stuff
   loop(x + 1); // рекурсивный вызов
 }
@@ -42,8 +44,7 @@ loop(0);
 
 ```js example-bad
 function loop(x) {
-  if (x >= 1000000000000)
-    return;
+  if (x >= 1000000000000) return;
   // do stuff
   loop(x + 1);
 }

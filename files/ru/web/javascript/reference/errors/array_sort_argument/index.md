@@ -5,6 +5,7 @@ title: >-
 slug: Web/JavaScript/Reference/Errors/Array_sort_argument
 translation_of: Web/JavaScript/Reference/Errors/Array_sort_argument
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение
@@ -27,20 +28,19 @@ TypeError: недопустимый Array.prototype.sort аргумент для
 ### Неправильные примеры
 
 ```js example-bad
-[1, 3, 2].sort(5);  // TypeError
+[1, 3, 2].sort(5); // TypeError
 
 var cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
-[1, 3, 2].sort(cmp[this.key] || 'asc');  // TypeError
+[1, 3, 2].sort(cmp[this.key] || "asc"); // TypeError
 ```
 
 ### правильные
 
 ```js example-good
-[1, 3, 2].sort();   // [1, 2, 3]
-
+[1, 3, 2].sort(); // [1, 2, 3]
 
 var cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
-[1, 3, 2].sort(cmp[this.key || 'asc']); // [1, 2, 3]
+[1, 3, 2].sort(cmp[this.key || "asc"]); // [1, 2, 3]
 ```
 
 ## Смотрите также

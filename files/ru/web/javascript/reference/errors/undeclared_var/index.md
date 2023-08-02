@@ -40,7 +40,7 @@ Errors about undeclared variable assignments occur in [strict mode code](/ru/doc
 
 ```js example-bad
 function foo() {
-  'use strict';
+  "use strict";
   bar = true;
 }
 foo(); // ReferenceError: assignment to undeclared variable bar
@@ -52,7 +52,7 @@ foo(); // ReferenceError: assignment to undeclared variable bar
 
 ```js example-good
 function foo() {
-  'use strict';
+  "use strict";
   var bar = true;
 }
 foo();
