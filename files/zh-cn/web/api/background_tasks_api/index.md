@@ -85,30 +85,30 @@ window.cancelIdleCallback =
 
 为了了解我们的目标，看一下 HTML。这里创建了一个盒子 (ID `"Container"`) 来显示操作进度（因为毕竟我们没法知道解码“量子丝极谱发射”会用多长时间），还创建了一个次要的盒子 (ID `"logBox"`) 来展示文本输出。
 
-```
+```html
 <p>
-  演示使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Background_Tasks_API">
-   协作调度幕后任务 </a> 使用 <code>requestIdleCallback()</code>
+  演示使用
+  <a
+    href="https://developer.mozilla.org/zh-CN/docs/Web/API/Background_Tasks_API">
+    协作调度幕后任务
+  </a>
+  使用 <code>requestIdleCallback()</code>
   方法。
 </p>
 
-<div class="container">
+<div id="container">
   <div class="label">解码量子丝极谱发射中...</div>
   <progress id="progress" value="0"></progress>
-  <div class="button" id="startButton">
-    开始
-  </div>
+  <div class="button" id="startButton">开始</div>
   <div class="label counter">
-    任务 <span id="currentTaskNumber">0</span> / <span id="totalTaskCount">0</span>
+    任务 <span id="currentTaskNumber">0</span> /
+    <span id="totalTaskCount">0</span>
   </div>
 </div>
 
-<div class="logBox">
-  <div class="logHeader">
-    记录
-  </div>
-  <div id="log">
-  </div>
+<div id="logBox">
+  <div class="logHeader">记录</div>
+  <div id="log"></div>
 </div>
 ```
 
@@ -120,7 +120,7 @@ body {
   font-size: 16px;
 }
 
-.logBox {
+#logBox {
   margin-top: 16px;
   width: 400px;
   height: 500px;
@@ -149,7 +149,7 @@ body {
   height: 460px;
 }
 
-.container {
+#container {
   width: 400px;
   padding: 6px;
   border-radius: 6px;
