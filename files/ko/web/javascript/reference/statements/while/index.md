@@ -9,9 +9,10 @@ slug: Web/JavaScript/Reference/Statements/while
 
 ## 문법
 
-```js
-    while (condition)
-      statement
+```js-nolint
+while (condition) {
+  statement
+}
 ```
 
 - `조건`

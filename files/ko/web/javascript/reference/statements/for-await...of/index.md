@@ -2,6 +2,7 @@
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
 ---
+
 {{jsSidebar("Statements")}}
 
 **`for await...of` 구문**은 보통 비동기에 대응하는 열거자를 나열할 때 쓰이지만, {{jsxref("String")}}, {{jsxref("Array")}}, `Array` 같은 객체 (e.g., {{jsxref("Functions/arguments", "arguments")}} or [`NodeList`](/ko/docs/Web/API/NodeList)), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} 같은 동기적으로 열거 가능한 객체 또한 가능하며, 사용자가 직접 정의한 동기 또는 비동기 객체도 나열할 수 있도록 해준다. 일반적인 **`for ...of`** 문과 마찬가지로 열거자 심볼이 정의한 속성을 실행하게 되어 열거한 값을 변수로 받아 처리한다.
@@ -9,9 +10,9 @@ slug: Web/JavaScript/Reference/Statements/for-await...of
 ## 구문
 
 ```js
-    for await (variable of iterable) {
-      statement
-    }
+for await (variable of iterable) {
+  statement;
+}
 ```
 
 - `variable`
@@ -34,15 +35,15 @@ const asyncIterable = {
         }
 
         return Promise.resolve({ done: true });
-      }
+      },
     };
-  }
+  },
 };
 
-(async function() {
-   for await (let num of asyncIterable) {
-     console.log(num);
-   }
+(async function () {
+  for await (let num of asyncIterable) {
+    console.log(num);
+  }
 })();
 
 // 0
@@ -62,7 +63,7 @@ async function* asyncGenerator() {
   }
 }
 
-(async function() {
+(async function () {
   for await (let num of asyncGenerator()) {
     console.log(num);
   }
@@ -106,7 +107,7 @@ async function getResponseSize(url) {
   // 예상 출력: "응답 크기: 1071472 바이트"
   return responseSize;
 }
-getResponseSize('https://jsonplaceholder.typicode.com/photos');
+getResponseSize("https://jsonplaceholder.typicode.com/photos");
 ```
 
 ## 명세서
