@@ -19,10 +19,8 @@ Um objeto `DeviceRotationRate` fornece informações sobre a taxa na qual o disp
 
 ## Especificações
 
-| Especificacões                               | Status                                   | Comentario         |
-| -------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Definição inicial. |
+{{Specifications}}
 
 ## Navegador compativeís
 
-{{Compat("api.DeviceMotionEventRotationRate")}}
+{{Compat}}

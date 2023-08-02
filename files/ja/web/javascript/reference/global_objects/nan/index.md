@@ -32,29 +32,31 @@ slug: Web/JavaScript/Reference/Global_Objects/NaN
 `NaN` は別の `NaN` 値を含むあらゆる数と (`==`、`!=`、`===`、`!==` によって) 同じではないと比較されます。ある値が `NaN` かどうかを的確に判定するには {{jsxref("Number.isNaN()")}} か {{jsxref("Global_Objects/isNaN", "isNaN()")}} を使用してください。あるいは自己比較を実行しましょう。 `NaN` は、また `NaN` だけが、自身と同等ではないと比較評価されます。
 
 ```js
-NaN === NaN;        // false
+NaN === NaN; // false
 Number.NaN === NaN; // false
-isNaN(NaN);         // true
-isNaN(Number.NaN);  // true
-Number.isNaN(NaN);  // true
+isNaN(NaN); // true
+isNaN(Number.NaN); // true
+Number.isNaN(NaN); // true
 
-function valueIsNaN(v) { return v !== v; }
-valueIsNaN(1);          // false
-valueIsNaN(NaN);        // true
+function valueIsNaN(v) {
+  return v !== v;
+}
+valueIsNaN(1); // false
+valueIsNaN(NaN); // true
 valueIsNaN(Number.NaN); // true
 ```
 
 ただし、 `isNaN()` と `Number.isNaN()` には違いがあることに気をつけてください。前者は、値そのものが `NaN` であったり、値の変換の結果 `NaN` になる場合に `true` を返します。後者は値そのものが `NaN` のときにだけ `true` を返します。
 
 ```js
-isNaN('hello world');        // true
-Number.isNaN('hello world'); // false
+isNaN("hello world"); // true
+Number.isNaN("hello world"); // false
 ```
 
 同じ理由で、 `bigint` 値の場合は `isNaN()` ではエラーが発生しますが、 `Number.isNaN()` では発生しません。
 
 ```js
-isNaN(1n);        // TypeError: Conversion from 'BigInt' to 'number' is not allowed.
+isNaN(1n); // TypeError: Conversion from 'BigInt' to 'number' is not allowed.
 Number.isNaN(1n); // false
 ```
 
@@ -62,9 +64,9 @@ Number.isNaN(1n); // false
 
 ```js
 let arr = [2, 4, NaN, 12];
-arr.indexOf(NaN);                      // -1 (false)
-arr.includes(NaN);                     // true
-arr.findIndex(n => Number.isNaN(n));   // 2
+arr.indexOf(NaN); // -1 (false)
+arr.includes(NaN); // true
+arr.findIndex((n) => Number.isNaN(n)); // 2
 ```
 
 ## 仕様書

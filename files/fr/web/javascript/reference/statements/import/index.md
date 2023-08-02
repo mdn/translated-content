@@ -57,7 +57,7 @@ monModule.faireToutesLesChosesIncroyables();
 
 ### Importer un seul export depuis un module
 
-Étant donné un objet ou une valeur nommé(e) `monExport` qui est exporté(e) depuis le module `mon-module`, soit implicitement (parce que l'intégralité du module est exportée), soit explicitement (en utilisant l'instruction {{jsxref("Statements/export", "export")}}), ce qui suit insére `monExport` dans la portée courante.
+Étant donné un objet ou une valeur nommé(e) `monExport` qui est exporté(e) depuis le module `mon-module`, soit implicitement (parce que l'intégralité du module est exportée), soit explicitement (en utilisant l'instruction {{jsxref("Statements/export", "export")}}), ce qui suit insère `monExport` dans la portée courante.
 
 ```js
 import { monExport } from "/modules/mon-module.js";
@@ -73,7 +73,7 @@ import { machin, truc } from "/modules/mon-module.js";
 
 ### Importer un élément exporté avec un alias
 
-Vous pouvez renommer un export lors de l'importation. Par exemple, ce qui suit insére `nomCourt` dans la portée courante.
+Vous pouvez renommer un export lors de l'importation. Par exemple, ce qui suit insère `nomCourt` dans la portée courante.
 
 ```js
 import { nomDExportDeModuleVraimentVraimentLong as nomCourt } from "/modules/mon-module.js";
