@@ -1,9 +1,6 @@
 ---
 title: transform
 slug: Web/SVG/Attribute/transform
-tags:
-  - Attribut
-  - SVG
 translation_of: Web/SVG/Attribute/transform
 ---
 

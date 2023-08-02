@@ -1,14 +1,7 @@
 ---
 title: Comparison entre les sélecteurs CSS et XPath
 slug: Web/XPath/Comparison_with_CSS_selectors
-tags:
-  - CSS
-  - Draft
-  - NeedsContent
-  - Reference
-  - XPath
 translation_of: Web/XPath/Comparison_with_CSS_selectors
-original_slug: Web/CSS/Sélecteurs_CSS/Comparison_with_XPath
 ---
 
 {{CSSRef("Selectors")}}{{QuickLinksWithSubpages("/fr/docs/Web/XPath")}}

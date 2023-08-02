@@ -2,7 +2,6 @@
 title: ARIA
 slug: Web/Accessibility/ARIA
 translation_of: Web/Accessibility/ARIA
-original_slug: Accessibilité/ARIA
 l10n:
   sourceCommit: 06ddb12df72026593451c479e98c39e5dff8f313
 ---

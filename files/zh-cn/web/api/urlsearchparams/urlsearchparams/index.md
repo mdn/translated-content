@@ -11,7 +11,7 @@ slug: Web/API/URLSearchParams/URLSearchParams
 
 ## 语法
 
-```js
+```js-nolint
 new URLSearchParams()
 new URLSearchParams(options)
 ```
@@ -34,7 +34,7 @@ new URLSearchParams(options)
 
 ```js
 // Pass in a string literal
-var url = new URL('https://example.com?foo=1&bar=2');
+var url = new URL("https://example.com?foo=1&bar=2");
 // Retrieve from window.location
 var url2 = new URL(window.location);
 
@@ -43,10 +43,13 @@ var params = new URLSearchParams(url.search);
 var params2 = new URLSearchParams(url2.search);
 
 // Pass in a sequence
-var params3 = new URLSearchParams([["foo", 1],["bar", 2]]);
+var params3 = new URLSearchParams([
+  ["foo", 1],
+  ["bar", 2],
+]);
 
 // Pass in a record
-var params4 = new URLSearchParams({"foo" : 1 , "bar" : 2});
+var params4 = new URLSearchParams({ foo: 1, bar: 2 });
 ```
 
 这个示例展示了如何使用来自一个带有查询参数（search parameter）的 URL 构建的查询参数对象创建一个新的 URL。
@@ -84,7 +87,7 @@ const addSearchParams = (url, params = {}) =>
     `${url.origin}${url.pathname}?${new URLSearchParams([
       ...Array.from(url.searchParams.entries()),
       ...Object.entries(params),
-    ])}`
+    ])}`,
   );
 ```
 

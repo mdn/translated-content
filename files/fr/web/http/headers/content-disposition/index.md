@@ -1,10 +1,6 @@
 ---
 title: Content-Disposition
 slug: Web/HTTP/Headers/Content-Disposition
-tags:
-  - HTTP
-  - Reference
-  - header
 translation_of: Web/HTTP/Headers/Content-Disposition
 ---
 

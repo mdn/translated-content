@@ -2,7 +2,6 @@
 title: Constructeur ArrayBuffer()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
-browser-compat: javascript.builtins.ArrayBuffer.ArrayBuffer
 ---
 
 {{JSRef}}
@@ -14,7 +13,7 @@ Le **constructeur `ArrayBuffer()`** permet de créer des objets [`ArrayBuffer`](
 ## Syntaxe
 
 ```js
-new ArrayBuffer(longueur)
+new ArrayBuffer(longueur);
 ```
 
 ### Paramètres

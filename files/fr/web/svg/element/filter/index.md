@@ -1,9 +1,6 @@
 ---
 title: <filter>
 slug: Web/SVG/Element/filter
-tags:
-  - Element
-  - SVG
 translation_of: Web/SVG/Element/filter
 ---
 

@@ -1,9 +1,6 @@
 ---
 title: <clipPath>
 slug: Web/SVG/Element/clipPath
-tags:
-  - Element
-  - SVG
 translation_of: Web/SVG/Element/clipPath
 ---
 

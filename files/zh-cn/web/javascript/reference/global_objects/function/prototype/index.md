@@ -25,7 +25,7 @@ console.log(Object.getPrototypeOf(inst) === Ctor.prototype); // true
 
 关于构造函数的 `prototype` 属性与结果对象的原型之间的相互作用，你可以查看[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#构造函数)来了解更多。
 
-一个具有 `prototype` 属性的函数也并不代表其有资格作为构造函数。例如，[function*](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*) 拥有 `prototype` 属性，但它不能通过 `new` 运算符来调用。
+一个具有 `prototype` 属性的函数也并不代表其有资格作为构造函数。例如，[function\*](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*) 拥有 `prototype` 属性，但它不能通过 `new` 运算符来调用。
 
 ```js
 async function* asyncGeneratorFunction() {}

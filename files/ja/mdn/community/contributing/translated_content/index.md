@@ -34,7 +34,7 @@ l10n:
 ### 日本語 (ja)
 
 - ディスカッション: [Slack (#translation channel)](https://mozillajp.slack.com/), [GitHub (mozilla-japan)](https://github.com/mozilla-japan/translation), [Google Group (Mozilla.translations.ja)](https://groups.google.com/forum/#!forum/mozilla-translations-ja)
-- 現在の貢献者: [mfuji09](https://github.com/mfuji09), [hmatrjp](https://github.com/hmatrjp), [potappo](https://github.com/potappo), [dynamis](https://github.com/dynamis), [kenji-yamasaki](https://github.com/kenji-yamasaki)
+- 現在の管理者: [mfuji09](https://github.com/mfuji09), [hmatrjp](https://github.com/hmatrjp), [potappo](https://github.com/potappo), [dynamis](https://github.com/dynamis), [kenji-yamasaki](https://github.com/kenji-yamasaki)
 
 ### 韓国語 (ko)
 

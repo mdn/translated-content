@@ -1,10 +1,6 @@
 ---
 title: <feDiffuseLighting>
 slug: Web/SVG/Element/feDiffuseLighting
-tags:
-  - Element
-  - SVG
-  - SVG Filter
 translation_of: Web/SVG/Element/feDiffuseLighting
 ---
 

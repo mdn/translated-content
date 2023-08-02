@@ -1,38 +1,86 @@
 ---
-title: 'Element: mousemove イベント'
+title: "Element: mousemove イベント"
+short-title: mousemove
 slug: Web/API/Element/mousemove_event
+l10n:
+  sourceCommit: 757f33efcbdf2de4995920e41ab7dd20f0a9192b
 ---
 
 {{APIRef}}
 
 `mousemove` イベントは、カーソルのホットスポットが要素内にあるときに、ポインティングデバイス (通常はマウス) が移動されると、その要素に発行されます。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("MouseEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## 構文
 
-<h2 id="Examples">例</h2>
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-次の例は、{{domxref("Element/mousedown_event", "mousedown")}}、`mousemove`、{{domxref("Element/mouseup_event", "mouseup")}} の各イベントを使って HTML5 の要素である [canvas](/ja/docs/Web/API/Canvas_API) の上にお絵かきができるものです。機能は単純で、線の太さは 1、線の色は黒に固定されています。
+```js
+addEventListener("mousemove", (event) => {});
+
+onmousemove = (event) => {};
+```
+
+## イベント型
+
+{{domxref("MouseEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("MouseEvent")}}
+
+## イベントプロパティ
+
+_親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承したプロパティもあります_。
+
+- {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
+  - : このマウスイベントが発行されたときに <kbd>alt</kbd> キーが押されていた場合は `true` を返します。
+- {{domxref("MouseEvent.button")}} {{ReadOnlyInline}}
+  - : このマウスイベントが発行されたときに押されていたボタンの番号です（もしあれば）。
+- {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
+  - : このマウスイベントが発行されたときに押されていたボタンです（もしあれば）。
+- {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
+  - : マウスポインターのローカル座標（DOM コンテンツ）における X 座標です。
+- {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
+  - : マウスポインターのローカル座標（DOM コンテンツ）における Y 座標です。
+- {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
+  - : このマウスイベントが発行されたときに <kbd>control</kbd> キーが押されていた場合は `true` を返します。
+- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+  - : このイベントの現在のレイヤーにおける相対の水平座標を返します。
+- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+  - : このイベントの現在のレイヤーにおける相対の垂直座標を返します。
+- {{domxref("MouseEvent.metaKey")}} {{ReadOnlyInline}}
+  - : このマウスイベントが発行されたときに <kbd>meta</kbd> キーが押されていた場合は `true` を返します。
+- {{domxref("MouseEvent.movementX")}} {{ReadOnlyInline}}
+  - : 前回の {{domxref("Element/mousemove_event", "mousemove")}} イベントの位置から相対的なマウスポインターの X 座標です。
+- {{domxref("MouseEvent.movementY")}} {{ReadOnlyInline}}
+  - : 前回の {{domxref("Element/mousemove_event", "mousemove")}} イベントの位置から相対的なマウスポインターの Y 座標です。
+- {{domxref("MouseEvent.offsetX")}} {{ReadOnlyInline}}
+  - : 対象ノードのパディング辺からの相対的なマウスポインターの X 座標です。
+- {{domxref("MouseEvent.offsetY")}} {{ReadOnlyInline}}
+  - : 対象ノードのパディング辺からの相対的なマウスポインターの Y 座標です。
+- {{domxref("MouseEvent.pageX")}} {{ReadOnlyInline}}
+  - : 文書全体からの相対的なマウスポインターの X 座標です。
+- {{domxref("MouseEvent.pageY")}} {{ReadOnlyInline}}
+  - : 文書全体からの相対的なマウスポインターの Y 座標です。
+- {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
+  - : もしあれば、イベントの副ターゲットです。
+- {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
+  - : グローバル（画面）座標におけるマウスポインターの X 座標です。
+- {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
+  - : グローバル（画面）座標におけるマウスポインターの Y 座標です。
+- {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
+  - : このマウスイベントが発行されたときに <kbd>shift</kbd> キーが押されていた場合は `true` を返します。
+- {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+  - : イベントを発生させた機器の種類（`MOZ_SOURCE_*` 定数のいずれか）。
+    これにより、例えばマウスイベントが実際のマウスによって生成されたのか、タッチイベントによって生成されたのかを判断することができます（これはイベントに関連付けられた座標を解釈する精度に影響するかもしれません）。
+- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+  - : クリックしたときに適用された圧力です。
+- {{domxref("MouseEvent.x")}} {{ReadOnlyInline}}
+  - : {{domxref("MouseEvent.clientX")}} の別名です。
+- {{domxref("MouseEvent.y")}} {{ReadOnlyInline}}
+  - : {{domxref("MouseEvent.clientY")}} の別名です。
+
+## 例
+
+次の例は、{{domxref("Element/mousedown_event", "mousedown")}}、`mousemove`、{{domxref("Element/mouseup_event", "mouseup")}} の各イベントを使って HTML の要素である [canvas](/ja/docs/Web/API/Canvas_API) の上にお絵かきができるものです。機能は単純で、線の太さは 1、線の色は黒に固定されています。
 
 ページが読み込まれると、定数 `myPics` と `context` が、それぞれ canvas と描画に使用する 2D コンテキストの参照を格納するために生成されます。
 
@@ -69,28 +117,28 @@ let isDrawing = false;
 let x = 0;
 let y = 0;
 
-const myPics = document.getElementById('myPics');
-const context = myPics.getContext('2d');
+const myPics = document.getElementById("myPics");
+const context = myPics.getContext("2d");
 
 // event.offsetX, event.offsetY はキャンバスの縁からのオフセットの (x,y) です。
 
 // mousedown, mousemove, mouseup にイベントリスナーを追加
-myPics.addEventListener('mousedown', e => {
+myPics.addEventListener("mousedown", (e) => {
   x = e.offsetX;
   y = e.offsetY;
   isDrawing = true;
 });
 
-myPics.addEventListener('mousemove', e => {
-  if (isDrawing === true) {
+myPics.addEventListener("mousemove", (e) => {
+  if (isDrawing) {
     drawLine(context, x, y, e.offsetX, e.offsetY);
     x = e.offsetX;
     y = e.offsetY;
   }
 });
 
-window.addEventListener('mouseup', e => {
-  if (isDrawing === true) {
+window.addEventListener("mouseup", (e) => {
+  if (isDrawing) {
     drawLine(context, x, y, e.offsetX, e.offsetY);
     x = 0;
     y = 0;
@@ -100,7 +148,7 @@ window.addEventListener('mouseup', e => {
 
 function drawLine(context, x1, y1, x2, y2) {
   context.beginPath();
-  context.strokeStyle = 'black';
+  context.strokeStyle = "black";
   context.lineWidth = 1;
   context.moveTo(x1, y1);
   context.lineTo(x2, y2);

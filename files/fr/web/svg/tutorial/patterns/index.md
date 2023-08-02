@@ -1,11 +1,7 @@
 ---
 title: Motifs
 slug: Web/SVG/Tutorial/Patterns
-tags:
-  - SVG
-  - SVG:Tutoriel
 translation_of: Web/SVG/Tutorial/Patterns
-original_slug: Web/SVG/Tutoriel/Motifs
 ---
 
 {{ PreviousNext("Web/SVG/Tutoriel/Gradients", "Web/SVG/Tutoriel/Texts") }}

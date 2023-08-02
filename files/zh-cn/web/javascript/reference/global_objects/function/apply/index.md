@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 ## 语法
 
-```js
+```js-nolint
 apply(thisArg)
 apply(thisArg, argsArray)
 ```
@@ -57,7 +57,7 @@ apply(thisArg, argsArray)
 `apply` 正派上用场！
 
 ```js
-const array = ['a', 'b'];
+const array = ["a", "b"];
 const elements = [0, 1, 2];
 array.push.apply(array, elements);
 console.info(array); // ["a", "b", 0, 1, 2]
@@ -78,13 +78,11 @@ let max = Math.max.apply(null, numbers); // 基本等同于 Math.max(numbers[0],
 let min = Math.min.apply(null, numbers);
 
 // 对比：简单循环算法
-max = -Infinity, min = +Infinity;
+(max = -Infinity), (min = +Infinity);
 
 for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] > max)
-    max = numbers[i];
-  if (numbers[i] < min)
-    min = numbers[i];
+  if (numbers[i] > max) max = numbers[i];
+  if (numbers[i] < min) min = numbers[i];
 }
 ```
 
@@ -100,7 +98,10 @@ function minOfArray(arr) {
   let QUANTUM = 32768;
 
   for (let i = 0, len = arr.length; i < len; i += QUANTUM) {
-    const submin = Math.min.apply(null, arr.slice(i, Math.min(i + QUANTUM, len)));
+    const submin = Math.min.apply(
+      null,
+      arr.slice(i, Math.min(i + QUANTUM, len)),
+    );
     min = Math.min(submin, min);
   }
 
@@ -127,16 +128,16 @@ Function.prototype.construct = function (aArgs) {
 ```js
 function MyConstructor() {
   for (let nProp = 0; nProp < arguments.length; nProp++) {
-    this['property' + nProp] = arguments[nProp];
+    this["property" + nProp] = arguments[nProp];
   }
 }
 
-let myArray = [4, 'Hello world!', false];
+let myArray = [4, "Hello world!", false];
 let myInstance = MyConstructor.construct(myArray);
 
-console.log(myInstance.property1);                // logs 'Hello world!'
+console.log(myInstance.property1); // logs 'Hello world!'
 console.log(myInstance instanceof MyConstructor); // logs 'true'
-console.log(myInstance.constructor);              // logs 'MyConstructor'
+console.log(myInstance.constructor); // logs 'MyConstructor'
 ```
 
 > **备注：** 这个非原生的 `Function.construct` 方法无法和一些原生构造器（例如 {{jsxref("Global_Objects/Date", "Date")}}）一起使用。在这种情况下你必须使用 {{jsxref("Function.prototype.bind")}} 方法。例如，想象有如下一个数组要用在 Date 构造器中：`[2012, 11, 4]`；这时你需要这样写：`new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` ——无论如何这不是最好的实现方式并且也许不该用在任何生产环境中。

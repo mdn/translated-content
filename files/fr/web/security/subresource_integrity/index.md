@@ -1,9 +1,6 @@
 ---
 title: Subresource Integrity
 slug: Web/Security/Subresource_Integrity
-tags:
-  - Intro
-  - Sécurité
 translation_of: Web/Security/Subresource_Integrity
 ---
 

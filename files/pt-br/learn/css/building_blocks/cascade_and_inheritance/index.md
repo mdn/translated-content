@@ -179,12 +179,12 @@ A quantidade de especificidade que um seletor tem é medida usando quatro valore
 
 A tabela a seguir mostra alguns exemplos isolados para colocá-lo no clima. Experimente passar por eles e certifique-se de entender por que eles têm a especificidade que demos a eles. Ainda não cobrimos os seletores em detalhes, mas você pode encontrar detalhes de cada seletor em MDN [selectors reference](/pt-BR/docs/Web/CSS/CSS_Selectors).
 
-| Selector                                                                                | Thousands | Hundreds | Tens | Ones | Total specificity |
-| --------------------------------------------------------------------------------------- | --------- | -------- | ---- | ---- | ----------------- |
-| `h1`                                                                                    | 0         | 0        | 0    | 1    | 0001              |
-| `h1 + p::first-letter`                                                                  | 0         | 0        | 0    | 3    | 0003              |
-| `li > a[href*="en-US"] > .inline-warning`                                               | 0         | 0        | 2    | 2    | 0022              |
-| `#identifier`                                                                           | 0         | 1        | 0    | 0    | 0100              |
+| Selector                                                                                                       | Thousands | Hundreds | Tens | Ones | Total specificity |
+| -------------------------------------------------------------------------------------------------------------- | --------- | -------- | ---- | ---- | ----------------- |
+| `h1`                                                                                                           | 0         | 0        | 0    | 1    | 0001              |
+| `h1 + p::first-letter`                                                                                         | 0         | 0        | 0    | 3    | 0003              |
+| `li > a[href*="en-US"] > .inline-warning`                                                                      | 0         | 0        | 2    | 2    | 0022              |
+| `#identifier`                                                                                                  | 0         | 1        | 0    | 0    | 0100              |
 | No selector, with a rule inside an element's [`style`](/pt-BR/docs/Web/HTML/Global_attributes#style) attribute | 1         | 0        | 0    | 0    | 1000              |
 
 Antes de prosseguirmos, vejamos um exemplo em ação.
@@ -236,7 +236,7 @@ As declarações conflitantes serão aplicadas na seguinte ordem, com as posteri
 4. Declarações importantes nas folhas de estilo do autor
 5. Declarações importantes nas folhas de estilo do usuário
 
-    Faz sentido que as folhas de estilo dos desenvolvedores da web substituam as folhas de estilo do usuário, para que o design possa ser mantido conforme pretendido, mas às vezes os usuários têm bons motivos para substituir os estilos do desenvolvedor da web, conforme mencionado acima - isso pode ser feito usando! Important em suas regras.
+   Faz sentido que as folhas de estilo dos desenvolvedores da web substituam as folhas de estilo do usuário, para que o design possa ser mantido conforme pretendido, mas às vezes os usuários têm bons motivos para substituir os estilos do desenvolvedor da web, conforme mencionado acima - isso pode ser feito usando! Important em suas regras.
 
 ## Teste suas Habilidades!
 

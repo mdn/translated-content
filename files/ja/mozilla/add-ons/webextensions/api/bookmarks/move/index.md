@@ -11,10 +11,10 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 
 ```js
 browser.bookmarks.move(
-  id,          // 文字列
+  id, // 文字列
   destination, // オブジェクト
-  callback     // 関数（省略可）
-)
+  callback, // 関数（省略可）
+);
 ```
 
 ### 引数
@@ -57,10 +57,13 @@ browser.bookmarks.move(bookmarkID, { index: 0 });
 
 ```js
 function moveToFolder(bookmarkId, destinationId) {
-  browser.bookmarks.move(bookmarkId, { parentId: destinationId },
-                         function(updatedNode) {
-    /* ブックマークの移動後に行う処理 */
-  });
+  browser.bookmarks.move(
+    bookmarkId,
+    { parentId: destinationId },
+    function (updatedNode) {
+      /* ブックマークの移動後に行う処理 */
+    },
+  );
 }
 ```
 

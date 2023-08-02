@@ -2,8 +2,6 @@
 title: HTMLElement
 slug: Web/API/HTMLElement
 translation_of: Web/API/HTMLElement
-page-type: web-api-interface
-browser-compat: api.HTMLElement
 ---
 
 {{APIRef("HTML DOM")}}

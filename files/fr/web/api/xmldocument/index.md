@@ -1,10 +1,6 @@
 ---
 title: XMLDocument
 slug: Web/API/XMLDocument
-tags:
-  - API
-  - DOM
-  - Experimental
 translation_of: Web/API/XMLDocument
 ---
 

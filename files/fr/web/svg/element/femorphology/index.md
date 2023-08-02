@@ -1,10 +1,6 @@
 ---
 title: <feMorphology>
 slug: Web/SVG/Element/feMorphology
-tags:
-  - Element
-  - SVG
-  - SVG Filter
 translation_of: Web/SVG/Element/feMorphology
 ---
 

@@ -14,9 +14,9 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var updating = browser.windows.update(
-  windowId,              // integer
-  updateInfo             // object
-)
+  windowId, // integer
+  updateInfo, // object
+);
 ```
 
 ### Paramètres
@@ -66,13 +66,11 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-
   var updating = browser.windows.update(tab.windowId, {
     left: 0,
-    top: 0
+    top: 0,
   });
   updating.then(onUpdated, onError);
-
 });
 ```
 

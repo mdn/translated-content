@@ -1,9 +1,6 @@
 ---
 title: <feMerge>
 slug: Web/SVG/Element/feMerge
-tags:
-  - Element
-  - SVG Filter
 translation_of: Web/SVG/Element/feMerge
 ---
 

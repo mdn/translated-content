@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: canplaythrough'
+title: "HTMLMediaElement: canplaythrough"
 slug: Web/API/HTMLMediaElement/canplaythrough_event
 ---
 
@@ -45,22 +45,26 @@ slug: Web/API/HTMLMediaElement/canplaythrough_event
 使用 `addEventListener()`：
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('canplaythrough', (event) => {
-  console.log('I think I can play through the entire ' +
-      'video without ever having to stop to buffer.');
+video.addEventListener("canplaythrough", (event) => {
+  console.log(
+    "I think I can play through the entire " +
+      "video without ever having to stop to buffer.",
+  );
 });
 ```
 
 使用 `oncanplaythrough` 事件处理器属性：
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.oncanplaythrough = (event) => {
-  console.log('I think I can play through the entire ' +
-      'video without ever having to stop to buffer.');
+  console.log(
+    "I think I can play through the entire " +
+      "video without ever having to stop to buffer.",
+  );
 };
 ```
 

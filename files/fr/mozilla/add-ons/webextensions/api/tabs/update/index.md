@@ -16,9 +16,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var updating = browser.tabs.update(
-  tabId,              // optional integer
-  updateProperties    // object
-)
+  tabId, // optional integer
+  updateProperties, // object
+);
 ```
 
 ### Paramètres
@@ -88,7 +88,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var updating = browser.tabs.update({url: "https://developer.mozilla.org"});
+var updating = browser.tabs.update({ url: "https://developer.mozilla.org" });
 updating.then(onUpdated, onError);
 ```
 
@@ -106,12 +106,12 @@ function onError(error) {
 function updateFirstTab(tabs) {
   var updating = browser.tabs.update(tabs[0].id, {
     active: true,
-    url: "https://developer.mozilla.org"
+    url: "https://developer.mozilla.org",
   });
   updating.then(onUpdated, onError);
 }
 
-var querying = browser.tabs.query({currentWindow:true});
+var querying = browser.tabs.query({ currentWindow: true });
 querying.then(updateFirstTab, onError);
 ```
 

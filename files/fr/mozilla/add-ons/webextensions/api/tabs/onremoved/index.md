@@ -11,9 +11,9 @@ Lancé quand un onglet est fermé.
 ## Syntaxe
 
 ```js
-browser.tabs.onRemoved.addListener(callback)
-browser.tabs.onRemoved.removeListener(listener)
-browser.tabs.onRemoved.hasListener(listener)
+browser.tabs.onRemoved.addListener(callback);
+browser.tabs.onRemoved.removeListener(listener);
+browser.tabs.onRemoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

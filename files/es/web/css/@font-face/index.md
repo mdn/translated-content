@@ -1,5 +1,5 @@
 ---
-title: '@font-face'
+title: "@font-face"
 slug: Web/CSS/@font-face
 ---
 
@@ -7,7 +7,7 @@ slug: Web/CSS/@font-face
 
 ## Resumen
 
-`@font-face` permite al autor especificar fuentes online para visualizar en sus páginas web. Al permitir a los autores proporcionar sus propias fuentes,` @font-face `elimina la necesidad de depender del numero limitado de fuentes de usuarios instaladas en sus computadoras.
+`@font-face` permite al autor especificar fuentes online para visualizar en sus páginas web. Al permitir a los autores proporcionar sus propias fuentes, `@font-face` elimina la necesidad de depender del numero limitado de fuentes de usuarios instaladas en sus computadoras.
 
 ## Sintaxis
 

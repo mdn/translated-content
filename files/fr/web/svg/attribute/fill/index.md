@@ -1,9 +1,6 @@
 ---
 title: fill
 slug: Web/SVG/Attribute/fill
-tags:
-  - SVG
-  - SVG Attribute
 translation_of: Web/SVG/Attribute/fill
 ---
 

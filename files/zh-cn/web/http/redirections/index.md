@@ -5,7 +5,7 @@ slug: Web/HTTP/Redirections
 
 {{HTTPSidebar}}
 
-**URL 重定向**（也称为 *URL 转发*）是一种为页面、表单或者整个 Web 站点/应用提供多个 URL 地址的技术。HTTP 对此操作有一种特殊类型的响应，称为 ***HTTP 重定向***（HTTP redirect）。
+**URL 重定向**（也称为 _URL 转发_）是一种为页面、表单或者整个 Web 站点/应用提供多个 URL 地址的技术。HTTP 对此操作有一种特殊类型的响应，称为 **_HTTP 重定向_**（HTTP redirect）。
 
 重定向可实现许多目标：
 

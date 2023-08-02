@@ -1,10 +1,6 @@
 ---
 title: pointer
 slug: Web/CSS/@media/pointer
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
 translation_of: Web/CSS/@media/pointer
 ---
 
@@ -32,8 +28,7 @@ Dans cet exemple, on crée une petite case à cocher pour les utilisateurs qui d
 ### HTML
 
 ```html
-<input id="test" type="checkbox" />
-<label for="test">Coucou !</label>
+<input id="test" type="checkbox" /> <label for="test">Coucou !</label>
 ```
 
 ### CSS

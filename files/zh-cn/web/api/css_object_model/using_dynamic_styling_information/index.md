@@ -17,21 +17,22 @@ CSS 对象模型（CSSOM），是 DOM 的一部分，通过暴露一些接口，
 
 ```html
 <html>
-<head>
-<title>Modifying a stylesheet rule with CSSOM</title>
-<style type="text/css">
-body {
- background-color: red;
-}
-</style>
-<script type="text/javascript">
-var stylesheet = document.styleSheets[1];
-stylesheet.cssRules[0].style.backgroundColor="blue";
-</script>
-</head>
-<body>
-The stylesheet declaration for the body's background color is modified via JavaScript.
-</body>
+  <head>
+    <title>Modifying a stylesheet rule with CSSOM</title>
+    <style type="text/css">
+      body {
+        background-color: red;
+      }
+    </style>
+    <script type="text/javascript">
+      var stylesheet = document.styleSheets[1];
+      stylesheet.cssRules[0].style.backgroundColor = "blue";
+    </script>
+  </head>
+  <body>
+    The stylesheet declaration for the body's background color is modified via
+    JavaScript.
+  </body>
 </html>
 ```
 
@@ -51,39 +52,36 @@ The stylesheet declaration for the body's background color is modified via JavaS
 
 ```html
 <html>
-<head>
-<title>simple style example</title>
+  <head>
+    <title>simple style example</title>
 
-<script type="text/javascript">
+    <script type="text/javascript">
+      function alterStyle(elem) {
+        elem.style.background = "green";
+      }
 
-function alterStyle(elem) {
-  elem.style.background = 'green';
-}
+      function resetStyle(elemId) {
+        elem = document.getElementById(elemId);
+        elem.style.background = "white";
+      }
+    </script>
 
-function resetStyle(elemId) {
-  elem = document.getElementById(elemId);
-  elem.style.background = 'white';
-}
-</script>
+    <style type="text/css">
+      #p1 {
+        border: solid blue 2px;
+      }
+    </style>
+  </head>
 
-<style type="text/css">
-#p1 {
-  border: solid blue 2px;
-}
-</style>
-</head>
+  <body>
+    <!-- passes a reference to the element's object as parameter 'this'. -->
+    <p id="p1" onclick="alterStyle(this);">
+      Click here to change background color.
+    </p>
 
-<body>
-
-<!-- passes a reference to the element's object as parameter 'this'. -->
-<p id="p1" onclick="alterStyle(this);">
- Click here to change background color.
-</p>
-
-<!-- passes the 'p1' id of another element's style to modify. -->
-<button onclick="resetStyle('p1');">Reset background color</button>
-
-</body>
+    <!-- passes the 'p1' id of another element's style to modify. -->
+    <button onclick="resetStyle('p1');">Reset background color</button>
+  </body>
 </html>
 ```
 
@@ -98,26 +96,26 @@ function resetStyle(elemId) {
 比这两个属性更重要的是使用 `style` 对象来给某个元素设置单独的样式属性。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
- <head>
-  <title>style Property Example</title>
-  <link rel="StyleSheet" href="example.css" type="text/css">
-  <script type="text/javascript">
-    function stilo() {
-      document.getElementById('d').style.color = 'orange';
-    }
-    function resetStyle() {
-      document.getElementById('d').style.color = 'black';
-    }
-  </script>
- </head>
+  <head>
+    <title>style Property Example</title>
+    <link rel="StyleSheet" href="example.css" type="text/css" />
+    <script type="text/javascript">
+      function stilo() {
+        document.getElementById("d").style.color = "orange";
+      }
+      function resetStyle() {
+        document.getElementById("d").style.color = "black";
+      }
+    </script>
+  </head>
 
- <body>
-  <div id="d" class="thunder">Thunder</div>
-  <button onclick="stilo()">Click here to change text color</button>
-  <button onclick="resetStyle()">Reset text color</button>
- </body>
+  <body>
+    <div id="d" class="thunder">Thunder</div>
+    <button onclick="stilo()">Click here to change text color</button>
+    <button onclick="resetStyle()">Reset text color</button>
+  </body>
 </html>
 ```
 
@@ -130,8 +128,8 @@ style 的 media 和 type 给不给出都可以。
 注意，你也可以通过获得元素的引用，然后使用它的 [`setAttribute`](/zh-CN/DOM/element.setAttribute) 方法，指定 CSS 属性和值，来改变该元素的样式。
 
 ```js
-var el = document.getElementById('some-element');
-el.setAttribute('style', 'background-color:darkblue;');
+var el = document.getElementById("some-element");
+el.setAttribute("style", "background-color:darkblue;");
 ```
 
 但请注意，`setAttribute` 会移除该元素样式对象中已经定义的其他样式属性。如果上面的 `some-element` 有一个行内样式属性：`style="font-size: 18px"`，其值将会因为使用了 `setAttribute` 方法而被移除。

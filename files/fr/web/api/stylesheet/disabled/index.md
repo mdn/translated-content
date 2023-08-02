@@ -11,7 +11,7 @@ La **`StyleSheet.disabled`** propriété indique si la feuille de style est emp�
 ## Syntaxe
 
 ```js
-bool = stylesheet.disabled
+bool = stylesheet.disabled;
 ```
 
 ## Exemple

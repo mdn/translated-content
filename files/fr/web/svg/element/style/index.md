@@ -1,10 +1,6 @@
 ---
 title: <style>
 slug: Web/SVG/Element/style
-tags:
-  - Element
-  - Reference
-  - SVG
 translation_of: Web/SVG/Element/style
 ---
 

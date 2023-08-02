@@ -14,8 +14,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var getting = setting.get(
-  details     // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres

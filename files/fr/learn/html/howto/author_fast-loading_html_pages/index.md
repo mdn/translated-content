@@ -40,8 +40,8 @@ En particulier pour les pages qui sont générées dynamiquement, une petite rec
 Plus d'informations:
 
 1. [HTTP Conditional Get for RSS Hackers](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-   2. [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
-   3. [On HTTP Last-Modified and ETag](http://www.cmlenz.net/blog/2005/05/on_http_lastmod.html)
+2. [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
+3. [On HTTP Last-Modified and ETag](http://www.cmlenz.net/blog/2005/05/on_http_lastmod.html)
 
 ### Réduire le nombre de scripts en ligne
 
@@ -58,13 +58,13 @@ En outre, la validité du balisage permet la libre utilisation d'autres outils q
 Remplacer la mise en page basé sur des \<table> par des blocs \<div>, plutôt que des \<table> très imbriquée comme dans l'exemple suivant:
 
 ```html
-<TABLE>
-  <TABLE>
-    <TABLE>
-          ...
-    </TABLE>
-  </TABLE>
-</TABLE>
+<table>
+  <table>
+    <table>
+      ...
+    </table>
+  </table>
+</table>
 ```
 
 Préferez des \<table> non-imbriquées ou \<div> comme dans l'exemple suivant:

@@ -1,13 +1,7 @@
 ---
 title: inputmode
 slug: Web/HTML/Global_attributes/inputmode
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
 translation_of: Web/HTML/Global_attributes/inputmode
-original_slug: Web/HTML/Attributs_universels/inputmode
 ---
 
 {{HTMLSidebar("Global_attributes")}}

@@ -1,9 +1,6 @@
 ---
 title: preserveAspectRatio
 slug: Web/SVG/Attribute/preserveAspectRatio
-tags:
-  - SVG
-  - SVG Attribute
 translation_of: Web/SVG/Attribute/preserveAspectRatio
 ---
 

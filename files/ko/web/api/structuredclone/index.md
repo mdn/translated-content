@@ -58,7 +58,7 @@ console.assert(clone.itself === clone); // 순환 참조가 보존됩니다.
 
 ### 값 전송
 
-`options` 매개변수의 `transfer` 속성을 사용하여 복제된 객체에서 복제되는 대신 [전송가능한 객체](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects)가 전송될 수 있습니다. 전송하면 원래 객체를 사용할 수 없게 됩니다.
+`options` 매개변수의 `transfer` 속성을 사용하여 복제된 객체에서 복제되는 대신 [전송가능한 객체](/ko/docs/Web/API/Web_Workers_API/Transferable_objects)가 전송될 수 있습니다. 전송하면 원래 객체를 사용할 수 없게 됩니다.
 
 > **참고 사항** 버퍼의 일부 데이터를 저장하기 전에 비동기적으로 검사할 때 유용할 수 있습니다.
 > 데이터가 저장되기 전에 버퍼가 수정되는 것을 피하기 위해 버퍼를 복제하고 해당 데이터를 검사할 수 있습니다.
@@ -83,7 +83,7 @@ console.log(uInt8Array.byteLength); // 0
 ```js
 const transferred = structuredClone(
   { x: { y: { z: arrayBuffer1, w: arrayBuffer2 } } },
-  { transfer: [arrayBuffer1] }
+  { transfer: [arrayBuffer1] },
 );
 ```
 

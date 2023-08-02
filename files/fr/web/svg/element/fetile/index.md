@@ -1,10 +1,6 @@
 ---
 title: <feTile>
 slug: Web/SVG/Element/feTile
-tags:
-  - Element
-  - SVG
-  - SVG Filter
 translation_of: Web/SVG/Element/feTile
 ---
 

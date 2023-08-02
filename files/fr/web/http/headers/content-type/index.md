@@ -1,10 +1,6 @@
 ---
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
-tags:
-  - HTTP
-  - Reference
-  - en-tête
 translation_of: Web/HTTP/Headers/Content-Type
 ---
 

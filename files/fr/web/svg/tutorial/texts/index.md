@@ -1,11 +1,7 @@
 ---
 title: Textes
 slug: Web/SVG/Tutorial/Texts
-tags:
-  - SVG
-  - SVG:Tutoriel
 translation_of: Web/SVG/Tutorial/Texts
-original_slug: Web/SVG/Tutoriel/Texts
 ---
 
 {{PreviousNext("Web/SVG/Tutoriel/Motifs", "Web/SVG/Tutoriel/Transformations_de_base")}}

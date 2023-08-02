@@ -2,7 +2,6 @@
 title: Détection du navigateur à l'aide de User-Agent
 slug: Web/HTTP/Browser_detection_using_the_user_agent
 translation_of: Web/HTTP/Browser_detection_using_the_user_agent
-original_slug: Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent
 ---
 
 {{HTTPSidebar}}

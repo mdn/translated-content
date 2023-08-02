@@ -1,11 +1,6 @@
 ---
 title: <shape>
 slug: Web/CSS/shape
-tags:
-  - CSS
-  - Déprécié
-  - Reference
-  - Type
 translation_of: Web/CSS/shape
 ---
 

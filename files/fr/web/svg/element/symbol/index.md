@@ -1,9 +1,6 @@
 ---
 title: <symbol>
 slug: Web/SVG/Element/symbol
-tags:
-  - SVG
-  - SVG Conteneur
 translation_of: Web/SVG/Element/symbol
 ---
 

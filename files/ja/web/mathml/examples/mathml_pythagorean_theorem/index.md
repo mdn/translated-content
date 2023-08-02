@@ -8,7 +8,7 @@ slug: Web/MathML/Examples/MathML_Pythagorean_Theorem
 **命題**: 直角三角形では、斜辺の 2 乗は他の 2 辺の 2 乗の和に等しい。
 
 すなわち、 a と b を脚とし、c を斜辺とすると、<math>
-<mrow><msup><mi>  a </mi><mn>2</mn>
+<mrow><msup><mi> a </mi><mn>2</mn>
 </msup><mo>+ </mo><msup><mi>b </mi><mn>2</mn>
 </msup><mo>= </mo><msup><mi>c </mi><mn>2</mn>
 </msup></mrow></math>

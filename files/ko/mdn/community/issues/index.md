@@ -3,6 +3,7 @@ title: MDN에 문제 보고하기
 slug: MDN/Community/Issues
 original_slug: MDN/Contribute/Howto/Report_a_problem
 ---
+
 <div>{{MDNSidebar}}</div>
 
 <p>가끔씩은 MDN을 이용하면서 몇몇 문제를 발견하게 될 수도 있습니다. 사이트의 내부 구조에서 생긴 문제나 문서 내용에 잘못된 점이 있다면, 직접 수정하거나 문제점을 보고할 수 있습니다. 물론 직접 수정해주는 것이 제일 좋겠지만, 문제점을 알려주는 것이 최선이라면 그것도 괜찮습니다.</p>

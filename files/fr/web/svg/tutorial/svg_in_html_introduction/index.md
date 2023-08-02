@@ -1,10 +1,7 @@
 ---
 title: Introduction à SVG dans HTML
 slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
-tags:
-  - SVG
 translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
-original_slug: Web/SVG/Tutoriel/Introduction_à_SVG_dans_HTML
 ---
 
 ### Aperçu

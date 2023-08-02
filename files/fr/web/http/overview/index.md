@@ -1,13 +1,7 @@
 ---
 title: Un aperçu de HTTP
 slug: Web/HTTP/Overview
-tags:
-  - Aperçu
-  - HTML
-  - HTTP
-  - WebMechanics
 translation_of: Web/HTTP/Overview
-original_slug: Web/HTTP/Aperçu
 ---
 
 {{HTTPSidebar}}

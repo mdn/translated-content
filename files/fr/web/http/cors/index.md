@@ -1,13 +1,6 @@
 ---
 title: Cross-origin resource sharing (CORS)
 slug: Web/HTTP/CORS
-tags:
-  - AJAX
-  - CORS
-  - HTTP
-  - Same-origin policy
-  - XMLHttpRequest
-  - cross-site
 translation_of: Web/HTTP/CORS
 ---
 

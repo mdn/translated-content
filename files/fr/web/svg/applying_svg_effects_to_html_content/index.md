@@ -2,7 +2,6 @@
 title: Application d'effets SVG à du contenu HTML
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 translation_of: Web/SVG/Applying_SVG_effects_to_HTML_content
-original_slug: Web/SVG/Application_d_effets_SVG_a_du_contenu_HTML
 ---
 
 Les navigateurs modernes supportent le format [SVG](/fr-FR/docs/SVG) utilisant du [CSS](/fr-FR/docs/Web/CSS) pour appliquer des effets graphiques au contenu HTML.

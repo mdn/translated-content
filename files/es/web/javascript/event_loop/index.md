@@ -19,14 +19,14 @@ Las siguientes secciones explican un modelo teórico. Los motores modernos de Ja
 Las llamadas a función forman una pila de _frames._ Un frame encapsula información como el contexto y las variables locales de una función.
 
 ```js
-function f(b){
+function f(b) {
   var a = 12;
-  return a+b+35;
+  return a + b + 35;
 }
 
-function g(x){
+function g(x) {
   var m = 4;
-  return f(m*x);
+  return f(m * x);
 }
 
 g(21);
@@ -47,7 +47,7 @@ Un programa en ejecución en JavaScript contiene una cola de mensajes, la cual e
 El `loop de eventos` obtiene su nombre por la forma en que es usualmente implementado, la cual generalmente se parece a:
 
 ```js
-while(queue.waitForMessage()){
+while (queue.waitForMessage()) {
   queue.processNextMessage();
 }
 ```
@@ -72,21 +72,19 @@ Cero retraso no significa que una llamada a una función (call back) se disparar
 
 ```js
 (function () {
-
-  console.log('this is the start');
+  console.log("this is the start");
 
   setTimeout(function cb() {
-    console.log('this is a msg from call back');
+    console.log("this is a msg from call back");
   });
 
-  console.log('this is just a message');
+  console.log("this is just a message");
 
   setTimeout(function cb1() {
-    console.log('this is a msg from call back1');
+    console.log("this is a msg from call back1");
   }, 0);
 
-  console.log('this is the  end');
-
+  console.log("this is the  end");
 })();
 
 // "this is the start"

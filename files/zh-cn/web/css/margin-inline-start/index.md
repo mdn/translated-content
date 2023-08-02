@@ -13,9 +13,9 @@ slug: Web/CSS/margin-inline-start
 
 ```css
 /* <length> 值 */
-margin-inline-start: 10px;  /* 绝对长度 */
-margin-inline-start: 1em;   /* 相对于文字大小 */
-margin-inline-start: 5%;    /* 相对于最近区块容器的宽度 */
+margin-inline-start: 10px; /* 绝对长度 */
+margin-inline-start: 1em; /* 相对于文字大小 */
+margin-inline-start: 5%; /* 相对于最近区块容器的宽度 */
 
 /* 关键词值 */
 margin-inline-start: auto;

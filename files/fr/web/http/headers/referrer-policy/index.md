@@ -1,17 +1,6 @@
 ---
 title: Referrer-Policy
 slug: Web/HTTP/Headers/Referrer-Policy
-tags:
-  - HTTP
-  - HTTP Header
-  - Privacy
-  - Reference
-  - Referrer-Policy
-  - Response
-  - Response Header
-  - Réponse
-  - en-tête
-  - referrer
 translation_of: Web/HTTP/Headers/Referrer-Policy
 ---
 

@@ -1,13 +1,6 @@
 ---
 title: element.getAttribute
 slug: Web/API/Element/getAttribute
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Méthode
-  - Reference
 translation_of: Web/API/Element/getAttribute
 ---
 
@@ -18,7 +11,7 @@ translation_of: Web/API/Element/getAttribute
 ## Syntaxe
 
 ```js
-let attribut = element.getAttribute(nom_attribut)
+let attribut = element.getAttribute(nom_attribut);
 ```
 
 où

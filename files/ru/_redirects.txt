@@ -625,8 +625,8 @@
 /ru/docs/Web/CSS/CSS_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/conflicting/Web/CSS/cursor
 /ru/docs/Web/CSS/CSS_Variables	/ru/docs/Web/CSS/CSS_cascading_variables
 /ru/docs/Web/CSS/CSS_animated_properties	/ru/docs/Web/CSS
-/ru/docs/Web/CSS/CSS_Селекторы	/ru/docs/Web/CSS/CSS_Selectors
-/ru/docs/Web/CSS/CSS_Селекторы/Using_the_:target_pseudo-class_in_selectors	/ru/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
+/ru/docs/Web/CSS/CSS_Селекторы	/ru/docs/Web/CSS/CSS_selectors
+/ru/docs/Web/CSS/CSS_Селекторы/Using_the_:target_pseudo-class_in_selectors	/ru/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /ru/docs/Web/CSS/Child_selectors	/ru/docs/Web/CSS/Child_combinator
 /ru/docs/Web/CSS/Common_CSS_Questions	/ru/docs/Learn/CSS/Howto/CSS_FAQ
 /ru/docs/Web/CSS/Descendant_selectors	/ru/docs/Web/CSS/Descendant_combinator

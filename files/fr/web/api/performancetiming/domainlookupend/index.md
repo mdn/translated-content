@@ -1,17 +1,6 @@
 ---
 title: PerformanceTiming.domainLookupEnd
 slug: Web/API/PerformanceTiming/domainLookupEnd
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Propriété
-  - Read-only
-  - legacy
-  - domainLookupEnd
 translation_of: Web/API/PerformanceTiming/domainLookupEnd
 ---
 

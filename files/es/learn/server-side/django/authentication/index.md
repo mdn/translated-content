@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial de Django Parte 8: Autenticación y permisos de Usuario'
+title: "Tutorial de Django Parte 8: Autenticación y permisos de Usuario"
 slug: Learn/Server-side/Django/Authentication
 ---
 
@@ -71,13 +71,13 @@ Ya creaste tu primer usuario cuando revisamos el [sitio de administración de Dj
 >
 > ```python
 > from django.contrib.auth.models import User
-> 
+>
 > # Create user and save to the database
-> 
+>
 > user = User.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
-> 
+>
 > # Update fields and then save again
-> 
+>
 > user.first_name = 'John'
 > user.last_name = 'Citizen'
 > user.save()
@@ -101,7 +101,7 @@ Ahora vamos a crear un usuario:
 3. Ingresa un **Nombre de Usuario** "Username", **Contraseña** "Password" y **Confirmacion de Contraseña** "Password confirmation" apropiado para tu usuario de prueba.
 4. Presiona **Save** "Guardar" para crear el usuario.
 
-    El sitio de administrador creara el nuevo usuario e inmediatamente te llevara a la pantalla de _Change user_ "Cambios del usuario" donde puedes cambiar tu **nombre de usuario** "Username" y agregar informacion para los campos opcionales del modelo de Usuario "User". Estos campos incluyen el primer nombre "first name", el apellido "last name", la direcion de correo electronico "email adress", los estados de los usuarios y sus permisos "users status and permissions" (solo el indicador **Active** "Activo" deberia ser activado). Mas abajo puedes especificar los grupos y permisos del usuario, y ver datos importantes relacionados a el usuario (ej: la fecha en que se agrego y la fecha del ultimo inicio de sesion)
+   El sitio de administrador creara el nuevo usuario e inmediatamente te llevara a la pantalla de _Change user_ "Cambios del usuario" donde puedes cambiar tu **nombre de usuario** "Username" y agregar informacion para los campos opcionales del modelo de Usuario "User". Estos campos incluyen el primer nombre "first name", el apellido "last name", la direcion de correo electronico "email adress", los estados de los usuarios y sus permisos "users status and permissions" (solo el indicador **Active** "Activo" deberia ser activado). Mas abajo puedes especificar los grupos y permisos del usuario, y ver datos importantes relacionados a el usuario (ej: la fecha en que se agrego y la fecha del ultimo inicio de sesion)
 
 5. ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
 6. En la seccion _Groups_ "Grupos", selecciona el grupo **Library Member** de la lista de grupos disponibles, y entonces presiona la **la flecha apuntando a la derecha** entre las dos cajas para moverlo dentro de la caja de _Chosen groups_ "Grupos seleccionados".![Admin site - add user to group](admin_authentication_user_add_group.png)

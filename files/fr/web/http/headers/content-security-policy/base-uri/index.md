@@ -2,7 +2,6 @@
 title: "CSP : base-uri"
 slug: Web/HTTP/Headers/Content-Security-Policy/base-uri
 translation_of: Web/HTTP/Headers/Content-Security-Policy/base-uri
-browser-compat: http.headers.csp.Content-Security-Policy.base-uri
 ---
 
 {{HTTPSidebar}}

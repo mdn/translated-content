@@ -1,9 +1,6 @@
 ---
 title: color
 slug: Web/SVG/Attribute/color
-tags:
-  - SVG
-  - SVG Attribute
 translation_of: Web/SVG/Attribute/color
 ---
 

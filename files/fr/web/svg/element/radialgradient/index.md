@@ -2,7 +2,6 @@
 title: <radialGradient>
 slug: Web/SVG/Element/radialGradient
 translation_of: Web/SVG/Element/radialGradient
-browser-compat: svg.elements.radialGradient
 ---
 
 {{SVGRef}}

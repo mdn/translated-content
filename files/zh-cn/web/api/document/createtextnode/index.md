@@ -19,34 +19,32 @@ var text = document.createTextNode(data);
 ## 示例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-<title>createTextNode 示例</title>
-</head>
+  <head>
+    <title>createTextNode 示例</title>
+  </head>
 
-<body>
-  <button value="YES! ">YES! </button>
-  <button value="NO! ">NO! </button>
-  <button value="WE CAN! ">WE CAN! </button>
+  <body>
+    <button value="YES! ">YES!</button>
+    <button value="NO! ">NO!</button>
+    <button value="WE CAN! ">WE CAN!</button>
 
-  <hr />
+    <hr />
 
-  <p id="p1">段落的第一行。</p>
+    <p id="p1">段落的第一行。</p>
 
-  <script>
-  const p1 = document.getElementById("p1"),
-  buttons = document.body.querySelectorAll(":scope > button");
-  function addTextNode(text) {
-    p1.appendChild( document.createTextNode(text) );
-  }
-  buttons.forEach(button =>
-    button.addEventListener("click", () =>
-      addTextNode(button.value)
-    )
-  );
-  </script>
-</body>
+    <script>
+      const p1 = document.getElementById("p1"),
+        buttons = document.body.querySelectorAll(":scope > button");
+      function addTextNode(text) {
+        p1.appendChild(document.createTextNode(text));
+      }
+      buttons.forEach((button) =>
+        button.addEventListener("click", () => addTextNode(button.value)),
+      );
+    </script>
+  </body>
 </html>
 ```
 

@@ -1,9 +1,6 @@
 ---
 title: dx
 slug: Web/SVG/Attribute/dx
-tags:
-  - SVG
-  - SVG Attribute
 translation_of: Web/SVG/Attribute/dx
 ---
 

@@ -1,16 +1,7 @@
 ---
 title: String.prototype.sup()
 slug: Web/JavaScript/Reference/Global_Objects/String/sup
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/sup
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/sup
 ---
 
 {{JSRef}} {{deprecated_header}}
@@ -20,7 +11,7 @@ La méthode **`sup()`** crée un élément HTML {{HTMLElement("sup")}} qui entra
 ## Syntaxe
 
 ```js
-str.sup()
+str.sup();
 ```
 
 ### Valeur de retour

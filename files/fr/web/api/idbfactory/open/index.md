@@ -1,12 +1,6 @@
 ---
 title: IDBFactory.open()
 slug: Web/API/IDBFactory/open
-tags:
-  - API
-  - IDBFactory
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBFactory/open
 ---
 
@@ -73,11 +67,19 @@ Dans le fragment de code qui suit, on effectue une requête pour ouvrir une base
 ```js
 var note = document.querySelector("ul");
 
-window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+window.indexedDB =
+  window.indexedDB ||
+  window.mozIndexedDB ||
+  window.webkitIndexedDB ||
+  window.msIndexedDB;
 // NE PAS utiliser "var indexedDB = ..." si on n’est pas dans une fonction.
 // On pourrait avoir besoin de références vers quelques objets window.IDB* :
-window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
-window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
+window.IDBTransaction =
+  window.IDBTransaction ||
+  window.webkitIDBTransaction ||
+  window.msIDBTransaction;
+window.IDBKeyRange =
+  window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
 // Mozilla n’a jamais préfixé ces objets, donc on n’a pas besoin de window.mozIDB*
 
 // On ouvre la version 4 de la base de données
@@ -85,13 +87,13 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // On ajoute deux gestionnaires d'évènements
 // Le premier utilisé en cas d'échec
-DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>Erreur lors du chargement de la base.</li>';
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>Erreur lors du chargement de la base.</li>";
 };
 
 // Et le second en cas de réussite
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Base de données initialisée.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Base de données initialisée.</li>";
 
   // On stocke le résultat de l'ouverture dans la
   // variable db qui sera utilisée par la suite

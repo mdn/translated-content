@@ -47,19 +47,20 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
 意味論的 HTML で最も重要なすばやい勝利は、コンテンツに見出しと段落の構造を使用することです。 これは、スクリーンリーダーのユーザーが、必要なコンテンツをすばやく見つけるために文書の見出しを道標として使用する傾向があるためです。 あなたのコンテンツが見出しを持っていない場合、彼らが得るのは、何かを見つけるための道標のないテキストの巨大な壁だけです。 悪い HTML と良い HTML の例としては、
 
 ```html example-bad
-<font size="7">私の見出し</font>
-<br><br>
+<font size="7">私の見出し</font> <br /><br />
 これが私の文書の最初のセクションです。
-<br><br>
+<br /><br />
 ここにも段落を追加します。
-<br><br>
+<br /><br />
 <font size="5">私の副見出し</font>
-<br><br>
-これが私の文書の最初のサブセクションです。 私は人々がこのコンテンツを見つけることができるようにしたいです！
-<br><br>
+<br /><br />
+これが私の文書の最初のサブセクションです。
+私は人々がこのコンテンツを見つけることができるようにしたいです！
+<br /><br />
 <font size="5">私の2番目の副見出し</font>
-<br><br>
-これは私のコンテンツの2番目のサブセクションです。 私は最後のものよりも面白いと思います。
+<br /><br />
+これは私のコンテンツの2番目のサブセクションです。
+私は最後のものよりも面白いと思います。
 ```
 
 ```html example-good
@@ -71,11 +72,17 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
 
 <h2>私の副見出し</h2>
 
-<p>これが私の文書の最初のサブセクションです。 私は人々がこのコンテンツを見つけることができるようにしたいです！</p>
+<p>
+  これが私の文書の最初のサブセクションです。
+  私は人々がこのコンテンツを見つけることができるようにしたいです！
+</p>
 
 <h2>私の2番目の副見出し</h2>
 
-<p>これは私のコンテンツの2番目のサブセクションです。 私は最後のものよりも面白いと思います。</p>
+<p>
+  これは私のコンテンツの2番目のサブセクションです。
+  私は最後のものよりも面白いと思います。
+</p>
 ```
 
 さらに、あなたのコンテンツはそのソース順で論理的に意味があるべきです — あなたは後で CSS を使い、いつでもそれを望んだ所に置くことができますが、最初から正しいソース順を手にするべきです。
@@ -109,8 +116,14 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
 もう 1 つのヒント — 次の例に示すように、{{cssxref(":focus")}} 疑似クラスを使用して、フォーカス可能要素のフォーカス時の外観をコントロールできます。 フォーカスとホバーのスタイルを倍増するのは良い考えです。 それにより、マウスやキーボードを使用しているかどうかに関わらず、ユーザーがコントロールをアクティブにしたときに何かが行われるという視覚的な手がかりを得ることができます。
 
 ```css
-a:hover, input:hover, button:hover, select:hover,
-a:focus, input:focus, button:focus, select:focus {
+a:hover,
+input:hover,
+button:hover,
+select:hover,
+a:focus,
+input:focus,
+button:focus,
+select:focus {
   font-weight: bold;
 }
 ```
@@ -125,31 +138,32 @@ a:focus, input:focus, button:focus, select:focus {
 2. JavaScript でキーボードショートカットを作成すると、キーボードの特定のキーを押すことで機能をアクティブにできます。 あらゆる目的に適応できるゲーム関連の例については、[デスクトップのマウスとキーボードのコントロール](/ja/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)を参照してください。
 3. 偽のボタンの振る舞いのために、いくつかの興味深い戦術を使ってください。 例えば、[fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) の例を見てください（[ソースコード](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)を見る）。 ここでは、それぞれの属性に `tabindex="0"` という属性を与えることで（もっと有用な詳細については WebAIM の [tabindex の記事](http://webaim.org/techniques/keyboard/tabindex)（英語）を見てください）、偽の `<div>` ボタンにフォーカスできるようにしました（タブを介すことも含む）。 これにより、ボタンにタブ移動することはできますが、
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    &#x20;/&#x20;
+   &#x20;/&#x20;
 
-    <kbd>Return</kbd>
+   <kbd>Return</kbd>
 
-    &#x20;キーでそれらをアクティブにすることはできません。 そのためには、次のちょっとした JavaScript トリックを追加する必要があります。
+   &#x20;キーでそれらをアクティブにすることはできません。 そのためには、次のちょっとした JavaScript トリックを追加する必要があります。
 
-    ```js
-    document.onkeydown = function(e) {
-      if(e.keyCode === 13) { // The Enter/Return key
-        document.activeElement.onclick(e);
-      }
-    };
-    ```
+   ```js
+   document.onkeydown = function (e) {
+     if (e.keyCode === 13) {
+       // The Enter/Return key
+       document.activeElement.onclick(e);
+     }
+   };
+   ```
 
-    ここでは、`document` オブジェクトにリスナーを追加して、キーボードのボタンが押されたことを検出します。 イベントオブジェクトの [`keyCode`](/ja/docs/Web/API/KeyboardEvent/keyCode) プロパティを使ってどのボタンが押されたかをチェックし、
+   ここでは、`document` オブジェクトにリスナーを追加して、キーボードのボタンが押されたことを検出します。 イベントオブジェクトの [`keyCode`](/ja/docs/Web/API/KeyboardEvent/keyCode) プロパティを使ってどのボタンが押されたかをチェックし、
 
-    <kbd>Return</kbd>
+   <kbd>Return</kbd>
 
-    &#x20;/&#x20;
+   &#x20;/&#x20;
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    &#x20;と一致するキーコードであれば、`document.activeElement.onclick()` を使用してボタンの `onclick` ハンドラに格納されている関数を実行します。 [`activeElement`](/ja/docs/Web/API/Document/activeElement) は現在ページにフォーカスしている要素を与えます。
+   &#x20;と一致するキーコードであれば、`document.activeElement.onclick()` を使用してボタンの `onclick` ハンドラに格納されている関数を実行します。 [`activeElement`](/ja/docs/Web/API/Document/activeElement) は現在ページにフォーカスしている要素を与えます。
 
 > **メモ:** この手法は、イベントハンドラ・プロパティ（`onclick` など）を使ってオリジナルのイベントハンドラを設定した場合にのみ機能します。 `addEventListener` は機能しません。 これは、機能を再構築するための非常に面倒な作業です。 それに他にも問題があるはずです。 そもそも正しい要素を正しい仕事に使うほうがよいでしょう。
 
@@ -352,17 +366,17 @@ NVDA は Windows 専用で、インストールする必要があります。
 2. ダウンロードしたら、インストールします — インストーラをダブルクリックし、ライセンスに同意して指示に従います。
 3. NVDA を起動するには、プログラムファイル/ショートカットをダブルクリックするか、キーボードショートカットの&#x20;
 
-    <kbd>Ctrl</kbd>
+   <kbd>Ctrl</kbd>
 
-    &#x20;\+&#x20;
+   &#x20;\+&#x20;
 
-    <kbd>Alt</kbd>
+   <kbd>Alt</kbd>
 
-    &#x20;\+&#x20;
+   &#x20;\+&#x20;
 
-    <kbd>N</kbd>
+   <kbd>N</kbd>
 
-    &#x20;を使用します。 起動すると NVDA にようこそダイアログが表示されます。 ここでは、いくつかのオプションから選択し、次に \[OK] ボタンを押して作業を進めます。
+   &#x20;を使用します。 起動すると NVDA にようこそダイアログが表示されます。 ここでは、いくつかのオプションから選択し、次に \[OK] ボタンを押して作業を進めます。
 
 これで NVDA はあなたのコンピュータ上でアクティブになります。
 
@@ -417,17 +431,17 @@ NVDA にはたくさんのキーボードコマンドがありますので、こ
 2. CSS がオフになっているときにコンテンツが意味をなすことを確認してください。
 3. 機能が[キーボードからアクセス可能であること](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility)を確認してください。&#x20;
 
-    <kbd>Tab</kbd>
+   <kbd>Tab</kbd>
 
-    、
+   、
 
-    <kbd>Return</kbd>
+   <kbd>Return</kbd>
 
-    &#x20;/&#x20;
+   &#x20;/&#x20;
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    &#x20;などを使ってテストします。
+   &#x20;などを使ってテストします。
 
 4. テキスト以外のコンテンツに[代替テキスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives)があることを確認してください。 [監査ツール](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools)はそのような問題を捉えるのに適しています。
 5. 適切なチェックツールを使用して、サイトの[カラーコントラスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Color_and_color_contrast)が許容範囲内であることを確認してください。

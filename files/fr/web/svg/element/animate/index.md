@@ -2,7 +2,6 @@
 title: <animate>
 slug: Web/SVG/Element/animate
 translation_of: Web/SVG/Element/animate
-browser-compat: svg.elements.animate
 ---
 
 {{SVGRef}}
