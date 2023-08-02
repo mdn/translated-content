@@ -6,7 +6,17 @@ original_slug: Web/CSS/gradient/repeating-linear-gradient()
 
 {{CSSRef}}
 
-CSS 函数 **`repeating-linear-gradient()`** 创建一个由重复线性渐变组成的{{cssxref("&lt;image&gt;")}}，这是一个类似 {{cssxref("linear-gradient")}} 的函数，并且采用相同的参数，但是它会在所有方向上重复渐变以覆盖其整个容器。这个函数的结果是一个{{cssxref("&lt;gradient&gt;")}} 数据类型的对象，这是一个特殊的{{cssxref("&lt;image&gt;")}}类型。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`repeating-linear-gradient()`** 创建一个由重复线性渐变组成的{{cssxref("&lt;image&gt;")}}，这是一个类似 {{cssxref("linear-gradient")}} 的函数，并且采用相同的参数，但是它会在所有方向上重复渐变以覆盖其整个容器。这个函数的结果是一个 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，这是一个特殊的 {{cssxref("&lt;image&gt;")}} 类型。
+
+{{EmbedInteractiveExample("pages/css/function-repeating-linear-gradient.html")}}
+
+每次重复时，颜色点位置的偏移量都是基准渐变长度（最后一个颜色点和第一个之间的距离）的倍数。因此，最后颜色点的颜色应该与第一个颜色点的颜色保持一致；如果不一致的话，会导致非常突兀的渐变效果。这可以通过将第一个颜色值重复添加到最后一个颜色值中来修改。
+
+与其他渐变一样，线形重复渐变[没有固定的尺寸](/zh-CN/docs/CSS/image#no_intrinsic)；即，它没有原始尺寸或首选尺寸，也没有首选的比列。它将自适应于对应元素的尺寸。
+
+因为 `<gradient>` 属于 `<image>` 数据类型，所以只能在可以使用 `<image>` 的地方使用它们。因此 `repeating-linear-gradient()` 不适用于{{Cssxref("background-color")}} 以及使用 {{cssxref("&lt;color&gt;")}} 数据类型的地方。
+
+## 语法
 
 ```css
 /* 一个倾斜 45 度的重复线性渐变，
@@ -21,15 +31,10 @@ repeating-linear-gradient(to left top, blue, red);
    从蓝色开始，40% 后变绿，
    最后渐变到红色 */
 repeating-linear-gradient(0deg, blue, green 40%, red);
+
+/* 从左到右重复五次的渐变，从红色开始，然后变绿，再变回红色 */
+repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
 ```
-
-每次重复时，色标位置的偏移量都是基准渐变长度（最后一个色标和第一个之间的距离）的倍数。因此，最后色标的色值应该与第一个色标的色值保持一致；如果不一致的话，会导致非常突兀的渐变效果。
-
-与其他渐变一样，线形重复渐变没有提供 [固定的尺寸](/zh-CN/docs/CSS/image#no_intrinsic)；即，它没有原始尺寸或首选尺寸，也没有首选的比列。它将自适应于对应元素的尺寸。
-
-> **备注：** 因为 `<gradient>` 属于`<image>` 数据类型，所以只能在可以使用 `<image>`的地方使用它们。因此`repeating-linear-gradient()` 不适用于{{Cssxref("background-color")}}以及使用 {{cssxref("&lt;color&gt;")}} 数据类型的地方。
-
-## 语法
 
 ### 值
 
@@ -38,149 +43,73 @@ repeating-linear-gradient(0deg, blue, green 40%, red);
     to top, to bottom, to left 和 to right 这些值会被转换成角度 0 度、180 度、270 度和 90 度。其余值会被转换为一个以向顶部中央方向为起点顺时针旋转的角度。渐变线的结束点与其起点中心对称。
 - {{cssxref("&lt;angle&gt;")}}
   - : 用角度值指定渐变的方向（或角度）。角度顺时针增加。
-- `<color-stop>`
+- `<linear-color-stop>`
+  - : 颜色点的 {{CSSxRef("&lt;color&gt;")}} 值，随后是一个或者两个可选的停止点位置（每个都是沿着渐变轴上的一个 {{CSSxRef("&lt;percentage&gt;")}} 或者一个 {{CSSxRef("&lt;length&gt;")}}）。`0%` 的百分比，或者 `0` 的长度，代表渐变的开始，`100%` 代表 100% 的图像尺寸，也就是说渐变不会重复。
+- `<color-hint>`
+  - : color-hint 是插值提示，定义了两个相邻的颜色点之间的渐变如何进行。长度定义了两个颜色点之间的渐变颜色应该在哪里到达颜色过渡过程的中点。如果省略，那么颜色过渡的中点就是两个颜色点之间的中点。
 
-  - : 由一个{{cssxref("&lt;color&gt;")}}值组成，并且跟随着一个可选的终点位置（可以是一个{{cssxref("&lt;percentage&gt;")}}或者是沿着渐变轴的{{cssxref("&lt;length&gt;")}}）。CSS 渐变的颜色渲染采取了与 SVG 相同的规则。
-
-    > **备注：** 渲染颜色中间点的规则[CSS 渐变中的色标](#Gradient_with_multiple_color_stops) 与[SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)一致。
+> **备注：** [CSS 渐变中的颜色眯点](#Gradient_with_multiple_color_stops) 的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中的颜色点遵循相同的规则。
 
 ### 形式语法
 
-```css
-repeating-linear-gradient(  [ <angle> | to <side-or-corner> ,]? <color-stop> [, <color-stop>]+ )
-                            \---------------------------------/ \----------------------------/
-                              渐变轴的定义                                色标列表
-
-where <side-or-corner> = [left | right] || [top | bottom]
-   and <color-stop>     = <color> [ <percentage> | <length> ]?
-```
+{{csssyntax}}
 
 ## 示例
 
-```css
-#grad1 {
-  background-image: repeating-linear-gradient(
-    180deg,
-    rgb(26, 198, 204),
-    rgb(26, 198, 204) 7%,
-    rgb(100, 100, 100) 10%
-  );
-}
-
-#grad2 {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 25px,
-    rgba(255, 255, 255, 1) 25px,
-    rgba(255, 255, 255, 1) 50px
-  );
-}
-```
-
-```html
-<ol>
-  <li>
-    Repeating horizontal bars
-    <div id="grad1"></div>
-  </li>
-  <li>
-    Zebra stripes
-    <div id="grad2"></div>
-  </li>
-</ol>
-```
+### 斑马条纹
 
 ```css hidden
-div {
-  display: block;
-  width: 50%;
-  height: 80px;
-  border-color: #000000;
-  padding: 10px;
+body {
+  width: 100vw;
+  height: 100vh;
 }
+```
 
-#grad1 {
-  background-image: -moz-repeating-linear-gradient(
-    180deg,
-    rgb(26, 198, 204),
-    rgb(26, 198, 204) 7%,
-    rgb(100, 100, 100) 10%
-  );
-  background-image: -webkit-repeating-linear-gradient(
-    180deg,
-    rgb(26, 198, 204),
-    rgb(26, 198, 204) 7%,
-    rgb(100, 100, 100) 10%
-  );
-  background-image: -o-repeating-linear-gradient(
-    180deg,
-    rgb(26, 198, 204),
-    rgb(26, 198, 204) 7%,
-    rgb(100, 100, 100) 10%
-  );
-  background-image: repeating-linear-gradient(
-    180deg,
-    rgb(26, 198, 204),
-    rgb(26, 198, 204) 7%,
-    rgb(100, 100, 100) 10%
-  );
-}
-
-#grad2 {
-  background-color: black;
-  background-image: -moz-repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 25px,
-    rgba(255, 255, 255, 1) 25px,
-    rgba(255, 255, 255, 1) 50px
-  );
-  background-image: -webkit-repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 25px,
-    rgba(255, 255, 255, 1) 25px,
-    rgba(255, 255, 255, 1) 50px
-  );
-  background-image: -o-repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 25px,
-    rgba(255, 255, 255, 1) 25px,
-    rgba(255, 255, 255, 1) 50px
-  );
-  background-image: -ms-repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 25px,
-    rgba(255, 255, 255, 1) 25px,
-    rgba(255, 255, 255, 1) 50px
-  );
+```css
+body {
   background-image: repeating-linear-gradient(
     -45deg,
     transparent,
-    transparent 25px,
-    rgba(255, 255, 255, 1) 25px,
-    rgba(255, 255, 255, 1) 50px
+    transparent 20px,
+    black 20px,
+    black 40px
+  );
+  /* with multiple color stop lengths */
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0 20px,
+    black 20px 40px
   );
 }
 ```
 
-```html hidden
-<ol>
-  <li>
-    repeating gradient
-    <div id="grad1"></div>
-  </li>
-  <li>
-    Zebra pattern
-    <div id="grad2"></div>
-  </li>
-</ol>
+{{EmbedLiveSample('斑马条纹', 120, 120)}}
+
+### 十个重复的水平线
+
+```css hidden
+body {
+  width: 100vw;
+  height: 100vh;
+}
 ```
 
-{{EmbedLiveSample('示例', '300px', '300px', '')}}
+```css
+body {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgb(26, 198, 204),
+    rgb(26, 198, 204) 7%,
+    rgb(100, 100, 100) 10%
+  );
+}
+```
+
+{{EmbedLiveSample('十个重复水平线', 120, 120)}}
+
+因为最后一个颜色点是 10%，且渐变是竖直的，因为重复渐变的每个渐变都是高度的 10%，正好满足 10% 个水平线。
+
+> **备注：** 更多示例请参见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)。
 
 ## 规范
 

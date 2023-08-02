@@ -39,11 +39,11 @@ background: conic-gradient(
 - `<position>`
   - : 使用与 [background-position](/zh-CN/docs/Web/CSS/background-position) 属性相同的长度、顺序和关键字值，定义渐变的中心。如果省略，默认值是 `center`，表示渐变是居中的。
 - `<angular-color-stop>`
-  - : 一个颜色断点的 {{CSSxRef("&lt;color&gt;")}} 值，并且跟随着一个或两个可选的断点位置（一个沿着渐变圆周轴的{{CSSxRef("&lt;angle&gt;")}}）。
+  - : 颜色断点的 {{CSSxRef("&lt;color&gt;")}} 值，并且跟随着一个或两个可选的断点位置（一个沿着渐变圆周轴的{{CSSxRef("&lt;angle&gt;")}}）。
 - `<color-hint>`
-  - : 颜色中转点是一个 {{Glossary("interpolation")}} 提示，它定义了在相邻颜色之间渐变如何进行。长度定义了渐变色应在两个颜色断点之间的哪一点到达颜色过渡的中点。如果省略，颜色转换的中点是两个颜色断点之间的中点。
+  - : {{Glossary("interpolation")}} 提示，它定义了在相邻颜色之间渐变如何进行。长度定义了渐变色应在两个颜色断点之间的哪一点到达颜色过渡的中点。如果省略，颜色转换的中点是两个颜色断点之间的中点。
 
-> **备注：** 渲染颜色中间点的规则（[color stops in CSS gradients](#gradient_with_multiple_color_stops)）与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)一致。
+> **备注：** [CSS 渐变中的颜色断点](#gradient_with_multiple_color_stops)的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)遵循相同的规则。
 
 ## 描述
 
@@ -61,7 +61,7 @@ background: conic-gradient(
 
 ![沿着锥形渐变的圆周和径向渐变的轴的颜色断点](screenshot_2018-11-29_21.09.19.png)
 
-锥形渐变是通过指示旋转角度、渐变中心，然后指定颜色断点列表来指定的。与线性渐变和径向渐变不同，线性渐变和径向渐变的颜色断点是通过指定 [length](/zh-CN/docs/Web/CSS/length) 来放置的，而锥形渐变的颜色断点是通过 [angle](/zh-CN/docs/Web/CSS/angle) 来指定的。单位包括度的 `deg`、梯度的 `grad`、弧度的 `rad`和圈的 `turn`。在一个圆中有 360 度，400 个梯度，2π 弧度，1 圈。支持锥形渐变的浏览器也接受百分比值，100% 等于 360 度，但这不在规范中。
+锥形渐变是通过指示旋转角度、渐变中心，然后指定颜色断点列表来指定的。与线性渐变和径向渐变不同，线性渐变和径向渐变的颜色断点是通过指定 [length](/zh-CN/docs/Web/CSS/length) 来放置的，而锥形渐变的颜色断点是通过 [angle](/zh-CN/docs/Web/CSS/angle) 来指定的。单位包括角度 `deg`、梯度 `grad`、弧度 `rad` 和整圈的 `turn`。在一个圆中有 360 度，400 个梯度，2π 弧度，1 圈。支持锥形渐变的浏览器也接受百分比值，100% 等于 360 度，但这不在规范中。
 
 与径向渐变类似，锥形渐变语法用于将渐变中心定位在图像内部甚至外部的任何位置。位置的值类似于两个值的 background-position 语法。
 
@@ -104,16 +104,16 @@ background-size: 25% 25%;
 
 你可以混合和匹配不同的角度单位，但最好不要，以上的内容很难理解。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 无障碍说明
+## 无障碍考虑
 
 浏览器不向辅助技术提供任何关于背景图像的特殊信息。这主要对屏幕阅读器来说很重要，因为屏幕阅读器不会宣布其存在，因此不会向用户传达任何信息。虽然可以创建饼图、棋盘和其他带有圆锥梯度的效果，但 CSS 图像不提供指定替代文本的原生方式，因此屏幕阅读器用户无法访问由圆锥梯度表示的图像。如果图像包含对理解页面的总体用途至关重要的信息，那么最好在文档中对其进行语义描述。
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [MDN 理解 WCAG，指南 1.1 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [理解成功标准 1.1.1 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## 示例
 
@@ -225,7 +225,7 @@ div {
 ## 参见
 
 - [使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- 其他渐变函数：{{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- 其他渐变函数：{{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}、{{cssxref("gradient/linear-gradient", "linear-gradient()")}}、{{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}、{{cssxref("gradient/radial-gradient", "radial-gradient()")}}、{{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}
 - {{cssxref("element", "element()")}}

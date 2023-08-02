@@ -5,7 +5,7 @@ slug: Web/CSS/gradient/radial-gradient
 
 {{CSSRef}}
 
-**`radial-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions)创建一个图像，该图像由从原点辐射的两种或多种颜色之间的渐进过渡组成。它的形状可以是圆形或椭圆形。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象。这是一种特别的 {{cssxref("&lt;image&gt;")}}。
+**`radial-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions)创建一个图像，该图像由从原点辐射的两种或多种颜色之间的渐进过渡组成，其的形状可以是圆形或椭圆形。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，这是一种特别的 {{cssxref("&lt;image&gt;")}}。
 
 {{EmbedInteractiveExample("pages/css/function-radial-gradient.html")}}
 
@@ -42,9 +42,9 @@ radial-gradient(circle at center, red 0, blue, green 100%)
     如果 `<ending-shape>` 被指定为椭圆，或者被忽略，则可以使用 [`<length-percentage>`](/zh-CN/docs/Web/CSS/length-percentage) 用两个值来指定椭圆的大小。第一个值表示水平半径，第二个值表示垂直半径。百分比值是相对于渐变框的相应尺寸的。负值无效。
 
 - `<linear-color-stop>`
-  - : 色值结束点（color stop）的 {{cssxref("&lt;color&gt;")}} 值，后跟一个或两个可选的停止位置（沿渐变轴的 {{cssxref("&lt;percentage&gt;")}} 或 {{cssxref("&lt;length&gt;")}}）。`0%` 的百分比，或者 `0` 的长度，代表渐变的中心；值 `100%` 表示结束形状与虚拟渐变射线的交点。两者之间的百分比值线性定位在梯度射线上。包括两个停止位置相当于在两个位置声明了两个颜色相同的色值结束点。
+  - : 颜色点的 {{cssxref("&lt;color&gt;")}} 值，后跟一个或两个可选的停止位置（沿渐变轴的 {{cssxref("&lt;percentage&gt;")}} 或 {{cssxref("&lt;length&gt;")}}）。`0%` 的百分比，或者 `0` 的长度，代表渐变的中心；值 `100%` 表示结束形状与虚拟渐变射线的交点。两者之间的百分比值线性定位在梯度射线上。包括两个停止位置相当于在两个位置声明了两个颜色相同的色值结束点。
 - `<color-hint>`
-  - : color-hint 是一个插值提示，定义了相邻色标之间的渐变如何进行。长度定义了两种颜色之间的哪个点渐变颜色应该到达颜色过渡的中点。如果省略，颜色过渡的中点是两个色值结束点之间的中点。
+  - : color-hint 是一个插值提示，定义了相邻颜色点之间的渐变如何进行。长度定义了两种颜色之间的哪个点渐变颜色应该到达颜色过渡的中点。如果省略，颜色过渡的中点是两个色值结束点之间的中点。
 
 ## 描述
 
@@ -56,13 +56,13 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 
 ## 径向渐变的组成
 
-![解释径向梯度的图：虚拟辐射线从中点开始水平。椭圆渐变，以及最终的形状，与声明它的框具有相同的纵横比](radial_gradient.png)
+![解释径向的图：虚拟辐射线从中点开始水平。椭圆渐变，以及最终的形状，与声明它的框具有相同的纵横比](radial_gradient.png)
 
-径向渐变由其*中心点*、*边缘形状*轮廓、*两个或多个色值结束点*定义而成。
+径向渐变由其*中心点*、*边缘形状*轮廓、*两个或多个颜色点*定义而成。
 
-为了创建平滑的渐变，径向渐变函数绘制了一系列从中心点放射到边缘形状（甚至可能超出范围）的同心轮廓。边缘形状可以是圆形（circle）或椭圆形（ellipse）。
+要创建平滑的渐变，`radial-gradient()` 函数绘制了一系列从中心点放射到边缘形状（甚至可能超出范围）的同心轮廓。边缘形状可以是圆形（circle）或椭圆形（ellipse）。
 
-色值结束点位于虚拟渐变射线（Virtual gradient ray）上，该渐变射线从中心点水平向右延伸。基于百分比的色值结束位置是相对于边缘形状和此渐变射线之间的交点（代表 100％）。每个形状都是一种单色，并由其相交的渐变射线上的颜色确定。
+颜色点位于*虚拟渐变射线*（virtual gradient ray）上，该渐变射线从中心点水平向右延伸。基于百分比的色值结束位置是相对于边缘形状和此渐变射线之间的交点（代表 `100％`）。每个形状都是单个颜色，并由其相交的渐变射线上的颜色确定。
 
 ## 形式语法
 
@@ -130,7 +130,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 
 ## 参见
 
-- [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - 其他的渐变函数：{{cssxref("repeating-radial-gradient")}}、{{cssxref("linear-gradient")}}、{{cssxref("repeating-linear-gradient")}}、{{cssxref("conic-gradient")}}、{{cssxref("repeating-conic-gradient")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("_image","image()")}}
