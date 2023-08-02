@@ -28,13 +28,13 @@ HTML の {{HTMLElement("sup")}} 要素を含む文字列です。
 以下の例は、 {{jsxref("String.prototype.sub()", "sub()")}} と `sup()` メソッドを使用して文字列を整形しています。
 
 ```js
-var superText = '上付き文字';
-var subText = '下付き文字';
+var superText = "上付き文字";
+var subText = "下付き文字";
 
-console.log('これは' + superText.sup() + 'の見え方を示しています。');
+console.log("これは" + superText.sup() + "の見え方を示しています。");
 // "これは<sup>上付き文字</sup>の見え方を示しています。"
 
-console.log('これは' + subText.sub() + 'の見え方を示しています。');
+console.log("これは" + subText.sub() + "の見え方を示しています。");
 // "これは<sub>下付き文字</sub>の見え方を示しています。"
 ```
 

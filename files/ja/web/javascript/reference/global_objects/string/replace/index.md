@@ -14,11 +14,11 @@ slug: Web/JavaScript/Reference/Global_Objects/String/replace
 ## 構文
 
 ```js
-replace(regexp, newSubstr)
-replace(regexp, replacerFunction)
+replace(regexp, newSubstr);
+replace(regexp, replacerFunction);
 
-replace(substr, newSubstr)
-replace(substr, replacerFunction)
+replace(substr, newSubstr);
+replace(substr, replacerFunction);
 ```
 
 ### 引数
@@ -50,13 +50,13 @@ replace(substr, replacerFunction)
 
 置換文字列には以下の特殊な置換パターンを入れることができます。
 
-| パターン   | 導入                                                                                                                                                                                                                                                                                                                       |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$$`      | `"$"` を挿入します。                                                                                                                                                                                                                                                                                                              |
-| `$&`      | 一致した部分文字列を挿入します。                                                                                                                                                                                                                                                                                                |
-| `` $` ``  | 一致した部分文字列の直前の文字列の部分を挿入します。                                                                                                                                                                                                                                                        |
-| `$'`      | 一致した部分文字列の直後の文字列の部分を挿入します。                                                                                                                                                                                                                                                         |
-| `$n`      | `n` は 100 未満の正の整数です。第一引数が {{jsxref("RegExp")}} オブジェクトだった場合に `n` 番目の括弧でキャプチャされた文字列を挿入します。なお、 `1` から始まることに注意してください。 `n` 番目のグループが存在しない場合 (例えば、グループ 3 の場合)、リテラル (例えば `$3`) として置換されます。                     |
+| パターン  | 導入                                                                                                                                                                                                                                                                                                                    |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$$`      | `"$"` を挿入します。                                                                                                                                                                                                                                                                                                    |
+| `$&`      | 一致した部分文字列を挿入します。                                                                                                                                                                                                                                                                                        |
+| `` $` ``  | 一致した部分文字列の直前の文字列の部分を挿入します。                                                                                                                                                                                                                                                                    |
+| `$'`      | 一致した部分文字列の直後の文字列の部分を挿入します。                                                                                                                                                                                                                                                                    |
+| `$n`      | `n` は 100 未満の正の整数です。第一引数が {{jsxref("RegExp")}} オブジェクトだった場合に `n` 番目の括弧でキャプチャされた文字列を挿入します。なお、 `1` から始まることに注意してください。 `n` 番目のグループが存在しない場合 (例えば、グループ 3 の場合)、リテラル (例えば `$3`) として置換されます。                   |
 | `$<Name>` | ここで、 `Name` はキャプチャするグループ名です。グループが一致に含まれていなかったり、正規表現に含まれていなかったり、正規表現ではなく文字列が `replace` の第一引数として渡された場合は、リテラル (例えば `$<Name>`) に解決されます。名前付きキャプチャグループに対応しているブラウザーのバージョンでのみ利用可能です。 |
 
 ### 引数としての関数の指定
@@ -67,13 +67,13 @@ replace(substr, replacerFunction)
 
 関数に与えられる引数は次の通りです。
 
-| 名前 | 与えられる値                                                                                                                                                                                                                                                                                                         |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `match`       | 一致した部分文字列 (上記の `$&` に対応) です。                                                                                                                                                                                                                                                                    |
+| 名前          | 与えられる値                                                                                                                                                                                                                                                          |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `match`       | 一致した部分文字列 (上記の `$&` に対応) です。                                                                                                                                                                                                                        |
 | `p1, p2, ...` | `replace()` の第一引数が {{jsxref("RegExp")}} オブジェクトだった場合、n 番目の括弧でキャプチャされたグループの文字列 (上記の `$1`, `$2`, などに対応) です。例えば `/(\a+)(\b+)/` が与えられた場合、`p1` は `\a+` に対する一致、`p2` は `\b+` に対する一致となります。 |
-| `offset`      | 一致した部分文字列の、分析中の文字列全体の中でのオフセットです（例えば、文字列全体が `'abcd'` で、一致した部分文字列が `'bc'` ならば、この引数は 1 となります）。                                                                                                                     |
-| `string`      | 分析中の文字列全体です。                                                                                                                                                                                                                                                                                       |
-| `groups`      | 名前付きキャプチャグループに対応しているブラウザーのバージョンでは、使用されるグループ名をキーとし、一致した部分を値とするオブジェクトになります (一致しない場合は `undefined`)。                                                                                                                                  |
+| `offset`      | 一致した部分文字列の、分析中の文字列全体の中でのオフセットです（例えば、文字列全体が `'abcd'` で、一致した部分文字列が `'bc'` ならば、この引数は 1 となります）。                                                                                                     |
+| `string`      | 分析中の文字列全体です。                                                                                                                                                                                                                                              |
+| `groups`      | 名前付きキャプチャグループに対応しているブラウザーのバージョンでは、使用されるグループ名をキーとし、一致した部分を値とするオブジェクトになります (一致しない場合は `undefined`)。                                                                                     |
 
 （引数の正確な個数は、第一引数が {{jsxref("RegExp")}} オブジェクトかどうか、そうならばさらに括弧でキャプチャされるサブ一致がいくつ指定されているかによります。）
 
@@ -82,10 +82,10 @@ replace(substr, replacerFunction)
 ```js
 function replacer(match, p1, p2, p3, offset, string) {
   // p1 is nondigits, p2 digits, and p3 non-alphanumerics
-  return [p1, p2, p3].join(' - ');
+  return [p1, p2, p3].join(" - ");
 }
-let newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
-console.log(newString);  // abc - 12345 - #$*%
+let newString = "abc12345#$*%".replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
+console.log(newString); // abc - 12345 - #$*%
 ```
 
 ## 例
@@ -95,9 +95,9 @@ console.log(newString);  // abc - 12345 - #$*%
 以下の例では、 `replace()` メソッドで正規表現を利用しています。
 
 ```js
-let str = 'Twas the night before Xmas...';
-let newstr = str.replace(/xmas/i, 'Christmas');
-console.log(newstr);  // Twas the night before Christmas...
+let str = "Twas the night before Xmas...";
+let newstr = str.replace(/xmas/i, "Christmas");
+console.log(newstr); // Twas the night before Christmas...
 ```
 
 これは `'Twas the night before Christmas...'` と出力します。
@@ -110,9 +110,9 @@ console.log(newstr);  // Twas the night before Christmas...
 
 ```js
 let re = /apples/gi;
-let str = 'Apples are round, and apples are juicy.';
-let newstr = str.replace(re, 'oranges');
-console.log(newstr);  // oranges are round, and oranges are juicy.
+let str = "Apples are round, and apples are juicy.";
+let newstr = str.replace(re, "oranges");
+console.log(newstr); // oranges are round, and oranges are juicy.
 ```
 
 この出力は 'oranges are round, and oranges are juicy' となります。
@@ -123,9 +123,9 @@ console.log(newstr);  // oranges are round, and oranges are juicy.
 
 ```js
 let re = /(\w+)\s(\w+)/;
-let str = 'John Smith';
-let newstr = str.replace(re, '$2, $1');
-console.log(newstr);  // Smith, John
+let str = "John Smith";
+let newstr = str.replace(re, "$2, $1");
+console.log(newstr); // Smith, John
 ```
 
 この出力は 'Smith, John' となります。
@@ -139,7 +139,7 @@ console.log(newstr);  // Smith, John
 ```js
 function styleHyphenFormat(propertyName) {
   function upperToHyphenLower(match, offset, string) {
-    return (offset > 0 ? '-' : '') + match.toLowerCase();
+    return (offset > 0 ? "-" : "") + match.toLowerCase();
   }
   return propertyName.replace(/[A-Z]/g, upperToHyphenLower);
 }
@@ -150,7 +150,7 @@ function styleHyphenFormat(propertyName) {
 最終的な置換が行われる前に、一致の*結果*をさらに変換したいので、関数を使用する必要があります。これにより、 {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} メソッドの前に一致の評価が行われます。関数を使わず一致を使ってこれを行おうとした場合、 {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} は何の効果もないでしょう。
 
 ```js example-bad
-let newString = propertyName.replace(/[A-Z]/g, '-' + '$&'.toLowerCase());  // 動作しない
+let newString = propertyName.replace(/[A-Z]/g, "-" + "$&".toLowerCase()); // 動作しない
 ```
 
 これは、 `'$&'.toLowerCase()` は、まずその文字がパターンとして使用される前に（`'$&'` という結果である）文字列リテラルとして評価されるだろうからです。
@@ -164,7 +164,7 @@ let newString = propertyName.replace(/[A-Z]/g, '-' + '$&'.toLowerCase());  // �
 ```js
 function f2c(x) {
   function convert(str, p1, offset, s) {
-    return ((p1 - 32) * 5/9) + 'C';
+    return ((p1 - 32) * 5) / 9 + "C";
   }
   let s = String(x);
   let test = /(-?\d+(?:\.\d*)?)F\b/g;

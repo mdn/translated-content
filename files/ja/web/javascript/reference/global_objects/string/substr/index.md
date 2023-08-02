@@ -12,8 +12,8 @@ slug: Web/JavaScript/Reference/Global_Objects/String/substr
 ## 構文
 
 ```js
-substr(start)
-substr(start, length)
+substr(start);
+substr(start, length);
 ```
 
 ### 引数
@@ -45,23 +45,25 @@ Microsoft の JScript は start の位置として負の数に対応していま
 
 ```js
 // only run when the substr() function is broken
-if ('ab'.substr(-1) != 'b') {
+if ("ab".substr(-1) != "b") {
   /**
    *  Get the substring of a string
    *  @param  {integer}  start   where to start the substring
    *  @param  {integer}  length  how many characters to return
    *  @return {string}
    */
-  String.prototype.substr = function(substr) {
-    return function(start, length) {
+  String.prototype.substr = (function (substr) {
+    return function (start, length) {
       // call the original method
-      return substr.call(this,
+      return substr.call(
+        this,
         // did we get a negative start, calculate how much it is from the beginning of the string
         // adjust the start parameter for negative value
         start < 0 ? this.length + start : start,
-        length)
-    }
-  }(String.prototype.substr);
+        length,
+      );
+    };
+  })(String.prototype.substr);
 }
 ```
 
@@ -70,16 +72,16 @@ if ('ab'.substr(-1) != 'b') {
 ### substr() の使用
 
 ```js
-const aString = 'Mozilla';
+const aString = "Mozilla";
 
-console.log(aString.substr(0, 1));   // 'M'
-console.log(aString.substr(1, 0));   // ''
-console.log(aString.substr(-1, 1));  // 'a'
-console.log(aString.substr(1, -1));  // ''
-console.log(aString.substr(-3));     // 'lla'
-console.log(aString.substr(1));      // 'ozilla'
+console.log(aString.substr(0, 1)); // 'M'
+console.log(aString.substr(1, 0)); // ''
+console.log(aString.substr(-1, 1)); // 'a'
+console.log(aString.substr(1, -1)); // ''
+console.log(aString.substr(-3)); // 'lla'
+console.log(aString.substr(1)); // 'ozilla'
 console.log(aString.substr(-20, 2)); // 'Mo'
-console.log(aString.substr(20, 2));  // ''
+console.log(aString.substr(20, 2)); // ''
 ```
 
 ## 仕様書

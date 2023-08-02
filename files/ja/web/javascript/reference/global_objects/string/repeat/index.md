@@ -34,14 +34,14 @@ str.repeat(count)
 ### repeat() の使用
 
 ```js
-'abc'.repeat(-1)    // RangeError
-'abc'.repeat(0)     // ''
-'abc'.repeat(1)     // 'abc'
-'abc'.repeat(2)     // 'abcabc'
-'abc'.repeat(3.5)   // 'abcabcabc' (小数は丸められ、整数の結果が返されます)
-'abc'.repeat(1/0)   // RangeError
+'abc'.repeat(-1); // RangeError
+'abc'.repeat(0); // ''
+'abc'.repeat(1); // 'abc'
+'abc'.repeat(2); // 'abcabc'
+'abc'.repeat(3.5); // 'abcabcabc' (小数は丸められ、整数の結果が返されます)
+'abc'.repeat(1/0); // RangeError
 
-({ toString: () => 'abc', repeat: String.prototype.repeat }).repeat(2)
+({ toString: () => 'abc', repeat: String.prototype.repeat }).repeat(2);
 // 'abcabc' (repeat() は汎用メソッドです)
 ```
 

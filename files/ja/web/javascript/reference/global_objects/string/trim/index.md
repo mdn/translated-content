@@ -30,7 +30,7 @@ str.trim()
 ```js
 if (!String.prototype.trim) {
   String.prototype.trim = function () {
-    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
   };
 }
 ```
@@ -42,12 +42,12 @@ if (!String.prototype.trim) {
 以下の例は小文字の文字列 `'foo'` を表示します。
 
 ```js
-var orig = '   foo  ';
+var orig = "   foo  ";
 console.log(orig.trim()); // 'foo'
 
 // 片方からだけ空白を取り除く .trim() の例。
 
-var orig = 'foo    ';
+var orig = "foo    ";
 console.log(orig.trim()); // 'foo'
 ```
 

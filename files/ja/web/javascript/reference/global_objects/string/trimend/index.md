@@ -39,13 +39,13 @@ String.prototype.trimRight.name === "trimEnd";
 以下の例では、小文字の文字列 `' foo'` を表示します。
 
 ```js
-var str = '   foo  ';
+var str = "   foo  ";
 
 console.log(str.length); // 8
 
 str = str.trimEnd();
 console.log(str.length); // 6
-console.log(str);        // '   foo'
+console.log(str); // '   foo'
 ```
 
 ## 仕様書

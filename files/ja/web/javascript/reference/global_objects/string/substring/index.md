@@ -45,23 +45,23 @@ str.substring(indexStart[, indexEnd])
 以下の例では `substring()` を使用して、 `Mozilla` という文字列から文字を取り出して表示します。
 
 ```js
-let anyString = 'Mozilla'
+let anyString = "Mozilla";
 
 // 'M' と表示
-console.log(anyString.substring(0, 1))
-console.log(anyString.substring(1, 0))
+console.log(anyString.substring(0, 1));
+console.log(anyString.substring(1, 0));
 
 // 'Mozill' と表示
-console.log(anyString.substring(0, 6))
+console.log(anyString.substring(0, 6));
 
 // 'lla' と表示
-console.log(anyString.substring(4))
-console.log(anyString.substring(4, 7))
-console.log(anyString.substring(7, 4))
+console.log(anyString.substring(4));
+console.log(anyString.substring(4, 7));
+console.log(anyString.substring(7, 4));
 
 // 'Mozilla' と表示
-console.log(anyString.substring(0, 7))
-console.log(anyString.substring(0, 10))
+console.log(anyString.substring(0, 7));
+console.log(anyString.substring(0, 10));
 ```
 
 ### substring() と length プロパティの使用
@@ -70,14 +70,14 @@ console.log(anyString.substring(0, 10))
 
 ```js
 // 最後の 4 文字の 'illa' を表示します
-let anyString = 'Mozilla'
-let anyString4 = anyString.substring(anyString.length - 4)
-console.log(anyString4)
+let anyString = "Mozilla";
+let anyString4 = anyString.substring(anyString.length - 4);
+console.log(anyString4);
 
 // 最後の 5 文字の 'zilla' を表示します
-let anyString = 'Mozilla'
-let anyString5 = anyString.substring(anyString.length - 5)
-console.log(anyString5)
+let anyString = "Mozilla";
+let anyString5 = anyString.substring(anyString.length - 5);
+console.log(anyString5);
 ```
 
 ### substring() と substr() の違い
@@ -89,9 +89,9 @@ console.log(anyString5)
 さらに、 `substr()` は **ECMAScript の古い機能**とみなされており、将来のバージョンでは削除される可能性があるため、できれば使用しないのが最良です。
 
 ```js
-let text = 'Mozilla'
-console.log(text.substring(2,5))  // => "zil"
-console.log(text.substr(2,3))     // => "zil"
+let text = "Mozilla";
+console.log(text.substring(2, 5)); // => "zil"
+console.log(text.substr(2, 3)); // => "zil"
 ```
 
 ### substring() と slice() の違い
@@ -101,23 +101,23 @@ console.log(text.substr(2,3))     // => "zil"
 `substring()` メソッドは `indexStart` が `indexEnd` よりも大きい場合に二つの引数を交換するので、文字列が返されます。 {{jsxref("String.slice", "slice()")}} メソッドはこの場合には空文字列を返します。
 
 ```js
-let text = 'Mozilla'
-console.log(text.substring(5, 2))  // => "zil"
-console.log(text.slice(5, 2))      // => ""
+let text = "Mozilla";
+console.log(text.substring(5, 2)); // => "zil"
+console.log(text.slice(5, 2)); // => ""
 ```
 
 どちらかまたは両方の引数が負の数または `NaN` であった場合、 `substring()` メソッドはこれらを `0` として扱います。
 
 ```js
-console.log(text.substring(-5, 2))  // => "Mo"
-console.log(text.substring(-5, -2)) // => ""
+console.log(text.substring(-5, 2)); // => "Mo"
+console.log(text.substring(-5, -2)); // => ""
 ```
 
 `slice()` も `NaN` の引数を `0` として扱いますが、負の数を指定した場合は、文字列の末尾からの文字数で位置を探します。
 
 ```js
-console.log(text.slice(-5, 2))   // => ""
-console.log(text.slice(-5, -2))  // => "zil"
+console.log(text.slice(-5, 2)); // => ""
+console.log(text.slice(-5, -2)); // => "zil"
 ```
 
 負の数を使用した例は {{jsxref("String.slice", "slice()")}} のページをご覧ください。
@@ -131,13 +131,16 @@ console.log(text.slice(-5, -2))  // => "zil"
 function replaceString(oldS, newS, fullS) {
   for (let i = 0; i < fullS.length; ++i) {
     if (fullS.substring(i, i + oldS.length) == oldS) {
-      fullS = fullS.substring(0, i) + newS + fullS.substring(i + oldS.length, fullS.length)
+      fullS =
+        fullS.substring(0, i) +
+        newS +
+        fullS.substring(i + oldS.length, fullS.length);
     }
   }
-  return fullS
+  return fullS;
 }
 
-replaceString('World', 'Web', 'Brave New World')
+replaceString("World", "Web", "Brave New World");
 ```
 
 なお、これは `oldS` が `newS` の部分文字列である場合に無限ループに陥ります。 — 例えば、 '`World`' を '`OtherWorld`' で置き換える場合などです。
@@ -146,7 +149,7 @@ replaceString('World', 'Web', 'Brave New World')
 
 ```js
 function replaceString(oldS, newS, fullS) {
-  return fullS.split(oldS).join(newS)
+  return fullS.split(oldS).join(newS);
 }
 ```
 

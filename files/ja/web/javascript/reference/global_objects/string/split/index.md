@@ -54,10 +54,10 @@ str.split([separator[, limit]])
 文字列が空の場合、 `split()` は空の配列ではなく、1 つの空文字列を含む配列を返します。文字列と区切り文字列が共に空文字列の場合、空の配列が返ります。
 
 ```js
-const myString = ''
-const splits = myString.split()
+const myString = "";
+const splits = myString.split();
 
-console.log(splits)
+console.log(splits);
 
 // ↪ [""]
 ```
@@ -66,22 +66,27 @@ console.log(splits)
 
 ```js
 function splitString(stringToSplit, separator) {
-  const arrayOfStrings = stringToSplit.split(separator)
+  const arrayOfStrings = stringToSplit.split(separator);
 
-  console.log('元の文字列: ', stringToSplit)
-  console.log('区切り文字列: ' , separator)
-  console.log('配列の要素数は', arrayOfStrings.length, '件: ', arrayOfStrings.join(' / '))
+  console.log("元の文字列: ", stringToSplit);
+  console.log("区切り文字列: ", separator);
+  console.log(
+    "配列の要素数は",
+    arrayOfStrings.length,
+    "件: ",
+    arrayOfStrings.join(" / "),
+  );
 }
 
-const tempestString = 'Oh brave new world that has such people in it.'
-const monthString = 'Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec'
+const tempestString = "Oh brave new world that has such people in it.";
+const monthString = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec";
 
-const space = ' '
-const comma = ','
+const space = " ";
+const comma = ",";
 
-splitString(tempestString, space)
-splitString(tempestString)
-splitString(monthString, comma)
+splitString(tempestString, space);
+splitString(tempestString);
+splitString(monthString, comma);
 ```
 
 この例は次のような出力結果を生み出します。
@@ -105,14 +110,14 @@ splitString(monthString, comma)
 以下の例では、`split()` は、0 回以上の空白とそれに続くセミコロン、それにさらに続く 0 回以上の空白を探し、それらが見つかったとき、文字列から空白を削除します。`nameList` は、`split()` の結果として返された配列です。
 
 ```js
-const names = 'Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand '
+const names = "Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand ";
 
-console.log(names)
+console.log(names);
 
-const re = /\s*(?:;|$)\s*/
-const nameList = names.split(re)
+const re = /\s*(?:;|$)\s*/;
+const nameList = names.split(re);
 
-console.log(nameList)
+console.log(nameList);
 ```
 
 これは 2 つの行を出力します。1 行目は元の文字列を出力し、2 行目は `split` メソッドの実行結果の配列を出力します。
@@ -127,10 +132,10 @@ Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
 以下の例では、`split()` は 文字列中の 0 回以上の空白を探し、見つかった最初の 3 つの分割結果を返します。
 
 ```js
-const myString = 'Hello World. How are you doing?'
-const splits = myString.split(' ', 3)
+const myString = "Hello World. How are you doing?";
+const splits = myString.split(" ", 3);
 
-console.log(splits)
+console.log(splits);
 ```
 
 このスクリプトは以下の例を出力します。
@@ -144,10 +149,10 @@ console.log(splits)
 `separator` がキャプチャの括弧 `(` `)` を含む正規表現である場合、一致した結果が配列に含まれます。
 
 ```js
-const myString = 'Hello 1 word. Sentence number 2.'
-const splits = myString.split(/(\d)/)
+const myString = "Hello 1 word. Sentence number 2.";
+const splits = myString.split(/(\d)/);
 
-console.log(splits)
+console.log(splits);
 ```
 
 このスクリプトは、以下を表示します。
@@ -163,8 +168,8 @@ console.log(splits)
 > **警告:** この手法は文字列を正しく反転できるとは限りません。
 >
 > ```js
-> const str = 'asdfghjkl'
-> const strReverse = str.split('').reverse().join('')
+> const str = "asdfghjkl";
+> const strReverse = str.split("").reverse().join("");
 > // 'lkjhgfdsa'
 >
 > // split() が配列を返し、 reverse() および join() が適用できます
@@ -173,8 +178,8 @@ console.log(splits)
 > Unicode 対応の分割を使用している場合でも、文字列に書記素クラスターが含まれていると機能しません (代わりに [esrever](https://github.com/mathiasbynens/esrever) などを使ってください)。
 >
 > ```js
-> const str = 'résumé'
-> const strReverse = str.split(/(?:)/u).reverse().join('')
+> const str = "résumé";
+> const strReverse = str.split(/(?:)/u).reverse().join("");
 > // => "́emuśer"
 > ```
 >

@@ -30,9 +30,9 @@ str.toString()
 以下の例は、{{jsxref("String")}} オブジェクトを表す文字列の値を表示します。
 
 ```js
-var x = new String('Hello world');
+var x = new String("Hello world");
 
-alert(x.toString()) // 'Hello world' を表示します
+alert(x.toString()); // 'Hello world' を表示します
 ```
 
 ## 仕様

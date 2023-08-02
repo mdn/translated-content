@@ -39,13 +39,13 @@ String.prototype.trimLeft.name === "trimStart";
 以下の例では、小文字の文字列 `'foo '` を表示します。
 
 ```js
-var str = '   foo  ';
+var str = "   foo  ";
 
 console.log(str.length); // 8
 
 str = str.trimStart();
 console.log(str.length); // 5
-console.log(str);        // 'foo  '
+console.log(str); // 'foo  '
 ```
 
 ## ポリフィル
@@ -53,20 +53,21 @@ console.log(str);        // 'foo  '
 ```js
 //https://github.com/FabioVergani/js-Polyfill_String-trimStart
 
-(function(w){
-    var String=w.String, Proto=String.prototype;
+(function (w) {
+  var String = w.String,
+    Proto = String.prototype;
 
-    (function(o,p){
-        if(p in o?o[p]?false:true:true){
-            var r=/^\s+/;
-            o[p]=o.trimLeft||function(){
-                return this.replace(r,'')
-            }
-        }
-    })(Proto,'trimStart');
-
+  (function (o, p) {
+    if (p in o ? (o[p] ? false : true) : true) {
+      var r = /^\s+/;
+      o[p] =
+        o.trimLeft ||
+        function () {
+          return this.replace(r, "");
+        };
+    }
+  })(Proto, "trimStart");
 })(window);
-
 
 /*
 ES6:

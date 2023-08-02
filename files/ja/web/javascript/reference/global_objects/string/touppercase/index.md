@@ -33,7 +33,7 @@ str.toUpperCase()
 ### 基本的な使用
 
 ```js
-console.log('alphabet'.toUpperCase()); // 'ALPHABET'
+console.log("alphabet".toUpperCase()); // 'ALPHABET'
 ```
 
 ### 文字列でない `this` 値を文字列に変換する
@@ -43,8 +43,8 @@ console.log('alphabet'.toUpperCase()); // 'ALPHABET'
 ```js
 const a = String.prototype.toUpperCase.call({
   toString: function toString() {
-    return 'abcdef';
-  }
+    return "abcdef";
+  },
 });
 
 const b = String.prototype.toUpperCase.call(true);

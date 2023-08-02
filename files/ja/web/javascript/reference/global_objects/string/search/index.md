@@ -18,6 +18,7 @@ str.search(regexp)
 ### 引数
 
 - `regexp`
+
   - : [regular expression](/ja/docs/Web/JavaScript/Guide/Regular_Expressions) 正規表現オブジェクトです。
 
     正規表現でないオブジェクト `regexp` が渡された場合は {{jsxref("RegExp")}} オブジェクトに `new RegExp(regexp)` を使用して暗黙的に変換されます。
@@ -39,11 +40,11 @@ str.search(regexp)
 次の例は、2 つの異なる正規表現オブジェクトで文字列を検索し、成功した検索 (正の値) と失敗した検索 (`-1`) を表示します。
 
 ```js
-let str = "hey JudE"
-let re = /[A-Z]/g
-let reDot = /[.]/g
-console.log(str.search(re))    // 最初の大文字 "J" の位置である 4 を返します
-console.log(str.search(reDot)) // '.' ドット記号が見つからないので -1 を返します
+let str = "hey JudE";
+let re = /[A-Z]/g;
+let reDot = /[.]/g;
+console.log(str.search(re)); // 最初の大文字 "J" の位置である 4 を返します
+console.log(str.search(reDot)); // '.' ドット記号が見つからないので -1 を返します
 ```
 
 ## 仕様書

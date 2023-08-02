@@ -30,7 +30,7 @@ str.valueOf()
 ### `valueOf()` メソッドの使用
 
 ```js
-var x = new String('Hello world');
+var x = new String("Hello world");
 console.log(x.valueOf()); // "Hello world" を表示します
 ```
 

@@ -28,7 +28,7 @@ str.toLowerCase()
 ### `toLowerCase()` メソッドの使用
 
 ```js
-console.log('ALPHABET'.toLowerCase()); // 'alphabet'
+console.log("ALPHABET".toLowerCase()); // 'alphabet'
 ```
 
 ## 仕様書
