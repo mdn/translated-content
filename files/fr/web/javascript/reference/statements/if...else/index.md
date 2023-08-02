@@ -25,7 +25,7 @@ else
 ```
 
 - `condition`
-  - : Une [expression](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators) qui sera évaluée pour déterminer si elle est équivalent à [équivalente à vrai (<i lang="en">truthy</i> en anglais)](/fr/docs/Glossary/Truthy) ou [équivalente à faux (<i lang="en">falsy</i> en anglais)](/fr/docs/Glossary/Falsy).
+  - : Une [expression](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators) qui sera évaluée pour déterminer si elle est [équivalente à vrai (<i lang="en">truthy</i> en anglais)](/fr/docs/Glossary/Truthy) ou [équivalente à faux (<i lang="en">falsy</i> en anglais)](/fr/docs/Glossary/Falsy).
 - `instruction1`
   - : L'instruction qui est exécutée si la condition est équivalente à vrai. Cette instruction peut être n'importe quelle instruction valide, y compris une imbrication d'autres instructions `if`. Pour exécuter plusieurs instructions, on pourra utiliser un [bloc d'instructions (`{ /* … */ }`)](/fr/docs/Web/JavaScript/Reference/Statements/block) qui permet de les regrouper. Pour n'exécuter aucune instruction, on pourra utiliser [l'instruction vide](/fr/docs/Web/JavaScript/Reference/Statements/Empty).
 - `instruction2`
@@ -111,7 +111,7 @@ function verifierValeur(a, b) {
 }
 ```
 
-Attention à ne pas confondre les valeurs booléennes primitives `true` et `false` avec les valeurs construites avec un objet [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) (par exemple `Boolean(false)` et `Boolean(true)`). Toute valeur qui n'est pas `false`, [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null), `0`, `-0`, [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) ou la chaîne vide (`""`), et tout objet, y compris un objet `Boolean` dont la valeur est `false`, seront considérés comme équivalent à `true` dans une instruction conditionnelle `if`. Ainsi&nbsp;:
+Attention à ne pas confondre les valeurs booléennes primitives `true` et `false` avec les valeurs construites avec un objet [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) (par exemple `Boolean(false)` et `Boolean(true)`). Toute valeur qui n'est pas `false`, [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null), `0`, `-0`, [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) ou la chaîne vide (`""`), et tout objet, y compris un objet `Boolean` dont la valeur est `false`, seront considérés comme équivalent à `true` dans une instruction conditionnelle `if`. Ainsi&nbsp;:
 
 ```js
 const b = new Boolean(false);
