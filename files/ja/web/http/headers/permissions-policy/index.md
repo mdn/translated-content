@@ -7,7 +7,7 @@ slug: Web/HTTP/Headers/Permissions-Policy
 
 HTTP の **`Permissions-Policy`** ヘッダーは、自身のフレームおよび文書内の {{HTMLElement("iframe")}} 要素で、ブラウザーの機能を使用することを許可または拒否する仕組みを提供します。
 
-詳しくは、[機能ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の記事を参照してください。
+詳しくは、[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の記事を参照してください。
 
 <table class="properties">
   <tbody>
@@ -29,7 +29,7 @@ Permissions-Policy: <directive> <allowlist>
 ```
 
 - `<directive>`
-  - : `allowlist` に適用される機能ポリシーディレクティブです。許可されているディレクティブ名の一覧は、以下の[ディレクティブ](#ディレクティブ)を参照してください。
+  - : `allowlist` に適用される権限ポリシーディレクティブです。許可されているディレクティブ名の一覧は、以下の[ディレクティブ](#ディレクティブ)を参照してください。
 - `<allowlist>`
 
   - : 許可リストは、以下の値のうち 1 つ以上を取るオリジンの空白区切りのリストです。
@@ -138,7 +138,7 @@ Permissions-Policy: <directive> <allowlist>
 
 ## 例
 
-SecureCorp Inc. が、アプリケーションでマイクと Geolocation API を無効にしたがっているとします。以下の機能ポリシーを設定する HTTP レスポンスヘッダーを配信することで実現できます。
+SecureCorp Inc. が、アプリケーションでマイクと Geolocation API を無効にしたがっているとします。以下の権限ポリシーを設定する HTTP レスポンスヘッダーを配信することで実現できます。
 
 ```
 Permissions-Policy: microphone=(), geolocation=()
@@ -156,7 +156,7 @@ Permissions-Policy: microphone=(), geolocation=()
 
 ## 関連情報
 
-- [機能ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)
+- [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)
 - {{DOMxRef("Document.featurePolicy")}} および {{DOMxRef("FeaturePolicy")}}
 - [Feature-Policy Tester (Chrome Developer Tools extension)](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop)
 - {{HTTPHeader("Content-Security-Policy")}}
