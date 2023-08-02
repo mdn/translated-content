@@ -34,23 +34,23 @@ Porque `acos() é um metodo estático`, você sempre usará `Math.acos() ao inv�
 ### Usando `Math.acos()`
 
 ```js
-Math.acos(-2);  // NaN
-Math.acos(-1);  // 3.141592653589793
-Math.acos(0);   // 1.5707963267948966
+Math.acos(-2); // NaN
+Math.acos(-1); // 3.141592653589793
+Math.acos(0); // 1.5707963267948966
 Math.acos(0.5); // 1.0471975511965979
-Math.acos(1);   // 0
-Math.acos(2);   // NaN
+Math.acos(1); // 0
+Math.acos(2); // NaN
 ```
 
 Para valores menores que -1 ou maiores que than 1, `Math.acos()` o método retornrá {{jsxref("NaN")}}.
 
 ## Especificações
 
-| Specification                                                            | Status                       | Comment                                            |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.2', 'Math.acos')}}     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-math.acos', 'Math.acos')}}     | {{Spec2('ES6')}}         |                                                    |
+| Specification                                          | Status               | Comment                                            |
+| ------------------------------------------------------ | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                    | {{Spec2('ES1')}}     | Initial definition. Implemented in JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.2', 'Math.acos')}}    | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-math.acos', 'Math.acos')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-math.acos', 'Math.acos')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Compatibilidade com navegadores

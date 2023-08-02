@@ -37,9 +37,9 @@ Se um dos argumentos não puder ser convertido em um número, o resultado será 
 ### Usando `Math.max`
 
 ```js
-Math.max(10, 20);   //  20
+Math.max(10, 20); //  20
 Math.max(-10, -20); // -10
-Math.max(-10, 20);  //  20
+Math.max(-10, 20); //  20
 ```
 
 ### Retornando o maior elemento de um array
@@ -48,7 +48,7 @@ Math.max(-10, 20);  //  20
 
 ```js
 var arr = [1, 2, 3];
-var max = arr.reduce(function(a, b) {
+var max = arr.reduce(function (a, b) {
   return Math.max(a, b);
 }, -Infinity);
 ```
@@ -57,7 +57,7 @@ A função a seguir utiliza {{jsxref("Function.prototype.apply()")}} para encont
 
 ```js
 function getMaxOfArray(numArray) {
-    return Math.max.apply(null, numArray);
+  return Math.max.apply(null, numArray);
 }
 ```
 
@@ -73,11 +73,11 @@ Entretanto, tanto spread(`...`) quanto `apply` irão ou falhar ou retornar o res
 
 ## Especificações
 
-| Especificação                                                    | Status                   | Comentário          |
-| ---------------------------------------------------------------- | ------------------------ | ------------------- |
-| ECMAScript 1st Edition. Implemented in JavaScript 1.0            | Standard                 | Initial definition. |
-| {{SpecName('ES6', '#sec-15.8.2.11', 'Math.max')}} | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-math.max', 'Math.max')}} | {{Spec2('ES6')}}     |                     |
+| Especificação                                         | Status             | Comentário          |
+| ----------------------------------------------------- | ------------------ | ------------------- |
+| ECMAScript 1st Edition. Implemented in JavaScript 1.0 | Standard           | Initial definition. |
+| {{SpecName('ES6', '#sec-15.8.2.11', 'Math.max')}}     | {{Spec2('ES5.1')}} |                     |
+| {{SpecName('ES6', '#sec-math.max', 'Math.max')}}      | {{Spec2('ES6')}}   |                     |
 
 ## Compatibilidade com navegadores
 
