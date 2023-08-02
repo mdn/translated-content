@@ -14,11 +14,11 @@ slug: Web/API/Plugin
 
 ## 属性
 
-| 名称                                         | 描述                                | 返回值类型                       | 兼容性                           |
-| -------------------------------------------- | ----------------------------------- | -------------------------------- | -------------------------------- |
+| 名称                              | 描述                                | 返回值类型               | 兼容性                           |
+| --------------------------------- | ----------------------------------- | ------------------------ | -------------------------------- |
 | {{domxref("Plugin.description")}} | 一个人类可读的插件描述。 **只读。** | {{domxref("DOMString")}} | DOM 0                            |
-| {{domxref("Plugin.filename")}}     | 插件文件名。**只读。**              | {{domxref("DOMString")}} | DOM 0                            |
-| {{domxref("Plugin.name")}}         | 插件名。**只读。**                  | {{domxref("DOMString")}} | DOM 0                            |
+| {{domxref("Plugin.filename")}}    | 插件文件名。**只读。**              | {{domxref("DOMString")}} | DOM 0                            |
+| {{domxref("Plugin.name")}}        | 插件名。**只读。**                  | {{domxref("DOMString")}} | DOM 0                            |
 | {{domxref("Plugin.version")}}     | 插件版本号字符串。**只读。**        | {{domxref("DOMString")}} | Gecko browsers only (Firefox 4+) |
 
 ## 方法

@@ -13,7 +13,7 @@ La méthode **`valueOf()`** renvoie la valeur primitive de l'objet {{jsxref("Str
 ## Syntaxe
 
 ```js
-str.valueOf()
+str.valueOf();
 ```
 
 ### Valeur de retour

@@ -14,8 +14,8 @@ l10n:
 ## 構文
 
 ```js
-count()
-count(label)
+count();
+count(label);
 ```
 
 ### 引数

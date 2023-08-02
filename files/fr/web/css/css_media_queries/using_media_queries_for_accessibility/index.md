@@ -78,9 +78,13 @@ Les déclarations suivantes s'appliqueront respectivement aux applications qui s
   /* Toutes les règles appliquées en contraste élevé */
 }
 @media screen and (-ms-high-contrast: black-on-white) {
-  div { background-image: url('image-bw.png'); }
+  div {
+    background-image: url("image-bw.png");
+  }
 }
 @media screen and (-ms-high-contrast: white-on-black) {
-  div { background-image: url('image-wb.png'); }
+  div {
+    background-image: url("image-wb.png");
+  }
 }
 ```

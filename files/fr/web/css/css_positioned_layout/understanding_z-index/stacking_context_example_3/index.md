@@ -105,14 +105,13 @@ div.lev3 {
 ### HTML
 
 ```html
-<br/>
+<br />
 
 <div class="lev1">
-<span class="bold">LEVEL #1</span>
+  <span class="bold">LEVEL #1</span>
   <div id="container1">
     <div class="lev2">
-      <br/><span class="bold">LEVEL #2</span>
-      <br/>z-index: 1;
+      <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
       <div id="container2">
         <div class="lev3"><span class="bold">LEVEL #3</span></div>
         <div class="lev3"><span class="bold">LEVEL #3</span></div>
@@ -128,8 +127,7 @@ div.lev3 {
       </div>
     </div>
     <div class="lev2">
-      <br/><span class="bold">LEVEL #2</span>
-      <br/>z-index: 1;
+      <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
     </div>
   </div>
 </div>

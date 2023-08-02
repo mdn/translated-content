@@ -43,10 +43,10 @@ const intersectionObserver = new IntersectionObserver((entries) => {
   if (entries[0].intersectionRatio <= 0) return;
 
   loadItems(10);
-  console.log('Loaded new items');
+  console.log("Loaded new items");
 });
 // 开始监听
-intersectionObserver.observe(document.querySelector('.scrollerFooter'));
+intersectionObserver.observe(document.querySelector(".scrollerFooter"));
 ```
 
 ## 规范

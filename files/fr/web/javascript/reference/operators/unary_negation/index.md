@@ -13,7 +13,7 @@ L'opérateur de négation unaire (`-`) se place devant son opérande et le trans
 ## Syntaxe
 
 ```js
-Opérateur : -x
+Opérateur: -x;
 ```
 
 ## Exemples

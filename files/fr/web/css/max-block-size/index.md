@@ -63,10 +63,10 @@ La propriété `max-block-size` peut prendre les mêmes valeurs que les proprié
 
 La valeur de `writing-mode` détermine la propriété physique correspondant à `max-block-size`&nbsp;:
 
-| Valeur pour `writing-mode`                                                                                                                                                                            | Propriété physique équivalente à `max-block-size` |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}  | [`max-height`](/fr/docs/Web/CSS/max-height)                  |
-| `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | [`max-width`](/fr/docs/Web/CSS/max-width)                  |
+| Valeur pour `writing-mode`                                                                                                                                            | Propriété physique équivalente à `max-block-size` |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}     | [`max-height`](/fr/docs/Web/CSS/max-height)       |
+| `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | [`max-width`](/fr/docs/Web/CSS/max-width)         |
 
 > **Note :** Les valeurs `sideways-lr` et `sideways-rl` pour `writing-mode` ont été retirées du module de spécification CSS sur les modes d'écriture de niveau 3 en fin de processus et pourraient être réintroduites dans la spécification de niveau 4.
 
@@ -121,7 +121,11 @@ On a ensuite les classes `horizontal` et `vertical`, qui ajoutent la propriété
   padding: 4px;
   background-color: #abcdef;
   color: #000;
-  font: 16px "Open Sans", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Open Sans",
+    "Helvetica",
+    "Arial",
+    sans-serif;
   max-block-size: 160px;
   min-block-size: 100px;
 }

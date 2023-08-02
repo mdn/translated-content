@@ -69,7 +69,7 @@ div {
 
 ### Live Examples
 
-#### image-rendering: auto;
+#### image-rendering: auto
 
 78% ![squares.gif](squares.gif) 100% ![squares.gif](squares.gif) 138% ![squares.gif](squares.gif) downsized ![hut.jpg](hut.jpg) upsized ![blumen.jpg](blumen.jpg)
 

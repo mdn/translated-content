@@ -73,10 +73,24 @@ La propriété `line-height` peut être définie grâce :
 /* Toutes les règles qui suivent
    fourniront un résultat équivalent */
 
-div { line-height: 1.2;   font-size: 10pt }   /* number */
-div { line-height: 1.2em; font-size: 10pt }   /* length */
-div { line-height: 120%;  font-size: 10pt }   /* percentage */
-div { font: 10pt/1.2 Georgia,"Bitstream Charter",serif }
+div {
+  line-height: 1.2;
+  font-size: 10pt;
+} /* number */
+div {
+  line-height: 1.2em;
+  font-size: 10pt;
+} /* length */
+div {
+  line-height: 120%;
+  font-size: 10pt;
+} /* percentage */
+div {
+  font:
+    10pt/1.2 Georgia,
+    "Bitstream Charter",
+    serif;
+}
 ```
 
 ### Notes
@@ -115,12 +129,12 @@ h1 {
 
 ```html
 <div class="box green">
- <h1>Avoid unexpected results by using unitless line-height</h1>
+  <h1>Avoid unexpected results by using unitless line-height</h1>
   length and percentage line-heights have poor inheritance behavior ...
 </div>
 
 <div class="box red">
- <h1>Avoid unexpected results by using unitless line-height</h1>
+  <h1>Avoid unexpected results by using unitless line-height</h1>
   length and percentage line-heights have poor inheritance behavior ...
 </div>
 

@@ -1,5 +1,5 @@
 ---
-title: 'Window: beforeunload event'
+title: "Window: beforeunload event"
 slug: Web/API/Window/beforeunload_event
 ---
 
@@ -52,11 +52,11 @@ HTML 规范指出在此事件中调用{{domxref("window.alert()")}}，{{domxref(
 HTML 规范指出作者应该使用 {{domxref("Event.preventDefault()")}} 而非 {{domxref("Event.returnValue")}}，然而，不是所有浏览器都支持这么做。
 
 ```js
-window.addEventListener('beforeunload', (event) => {
+window.addEventListener("beforeunload", (event) => {
   // Cancel the event as stated by the standard.
   event.preventDefault();
   // Chrome requires returnValue to be set.
-  event.returnValue = '';
+  event.returnValue = "";
 });
 ```
 

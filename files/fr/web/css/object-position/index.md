@@ -47,8 +47,8 @@ object-position: unset;
 Dans ce fragment HTML, on a deux éléments [`<img>`](/fr/docs/Web/HTML/Element/img), chacun affichant le logo de MDN.
 
 ```html
-<img id="object-position-1" src="mdn.svg" alt="Logo MDN"/>
-<img id="object-position-2" src="mdn.svg" alt="Logo MDN"/>
+<img id="object-position-1" src="mdn.svg" alt="Logo MDN" />
+<img id="object-position-2" src="mdn.svg" alt="Logo MDN" />
 ```
 
 ### CSS

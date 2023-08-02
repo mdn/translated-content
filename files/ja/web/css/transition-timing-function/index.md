@@ -29,7 +29,7 @@ transition-timing-function: step-end;
 
 /* 関数値 */
 transition-timing-function: steps(4, jump-end);
-transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* 段階式の関数のキーワード */
 transition-timing-function: steps(4, jump-start);
@@ -40,7 +40,7 @@ transition-timing-function: steps(6, start);
 transition-timing-function: steps(8, end);
 
 /* 複数のタイミング関数 */
-transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* グローバル値 */
 transition-timing-function: inherit;
@@ -121,33 +121,34 @@ transition-timing-function: unset;
 ```
 
 ```css hidden
-.parent {}
-.parent > div[class] {
-    width: 12em;
-    min-width: 12em;
-    margin-bottom: 4px;
-    background-color: black;
-    border: 1px solid red;
-    color: white;
-    transition-property: all;
-    transition-duration: 7s;
+.parent {
 }
-.parent > div.box1{
-    width: 90vw;
-    min-width: 24em;
-    background-color: magenta;
-    color: yellow;
-    border: 1px solid orange;
-    transition-property: all;
-    transition-duration: 2s;
+.parent > div[class] {
+  width: 12em;
+  min-width: 12em;
+  margin-bottom: 4px;
+  background-color: black;
+  border: 1px solid red;
+  color: white;
+  transition-property: all;
+  transition-duration: 7s;
+}
+.parent > div.box1 {
+  width: 90vw;
+  min-width: 24em;
+  background-color: magenta;
+  color: yellow;
+  border: 1px solid orange;
+  transition-property: all;
+  transition-duration: 2s;
 }
 ```
 
 ```js hidden
 function updateTransition() {
   var els = document.querySelectorAll(".parent > div[class]");
-  for(var c = els.length, i = 0; i < c; i++) {
-     els[i].classList.toggle("box1");
+  for (var c = els.length, i = 0; i < c; i++) {
+    els[i].classList.toggle("box1");
   }
 }
 
@@ -156,22 +157,22 @@ var intervalID = window.setInterval(updateTransition, 10000);
 
 ```css
 .ease {
-   transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 .easein {
-   transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
 }
 .easeout {
-   transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 .easeinout {
-   transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 .linear {
-   transition-timing-function: linear;
+  transition-timing-function: linear;
 }
 .cb {
-   transition-timing-function: cubic-bezier(0.2,-2,0.8,2);
+  transition-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
 }
 ```
 
@@ -191,33 +192,34 @@ var intervalID = window.setInterval(updateTransition, 10000);
 ```
 
 ```css hidden
-.parent {}
-.parent > div[class] {
-    width: 12em;
-    min-width: 12em;
-    margin-bottom: 4px;
-    background-color: black;
-    border: 1px solid red;
-    color: white;
-    transition-property: all;
-    transition-duration:7s;
+.parent {
 }
-.parent > div.box1{
-    width: 90vw;
-    min-width: 24em;
-    background-color: magenta;
-    color: yellow;
-    border: 1px solid orange;
-    transition-property: all;
-    transition-duration:2s;
+.parent > div[class] {
+  width: 12em;
+  min-width: 12em;
+  margin-bottom: 4px;
+  background-color: black;
+  border: 1px solid red;
+  color: white;
+  transition-property: all;
+  transition-duration: 7s;
+}
+.parent > div.box1 {
+  width: 90vw;
+  min-width: 24em;
+  background-color: magenta;
+  color: yellow;
+  border: 1px solid orange;
+  transition-property: all;
+  transition-duration: 2s;
 }
 ```
 
 ```js hidden
 function updateTransition() {
   var els = document.querySelectorAll(".parent > div[class]");
-  for(var c = els.length, i = 0; i < c; i++) {
-     els[i].classList.toggle("box1");
+  for (var c = els.length, i = 0; i < c; i++) {
+    els[i].classList.toggle("box1");
   }
 }
 
@@ -226,22 +228,22 @@ var intervalID = window.setInterval(updateTransition, 10000);
 
 ```css
 .jump-start {
-   transition-timing-function: steps(5, jump-start);
+  transition-timing-function: steps(5, jump-start);
 }
 .jump-end {
-   transition-timing-function: steps(5, jump-end);
+  transition-timing-function: steps(5, jump-end);
 }
 .jump-none {
-   transition-timing-function: steps(5, jump-none);
+  transition-timing-function: steps(5, jump-none);
 }
 .jump-both {
-   transition-timing-function: steps(5, jump-both);
+  transition-timing-function: steps(5, jump-both);
 }
 .step-start {
-   transition-timing-function: step-start;
+  transition-timing-function: step-start;
 }
 .step-end {
-   transition-timing-function: step-end;
+  transition-timing-function: step-end;
 }
 ```
 

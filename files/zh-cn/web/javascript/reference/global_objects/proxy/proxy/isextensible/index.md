@@ -13,8 +13,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/isExtensibl
 
 ```js
 var p = new Proxy(target, {
-  isExtensible: function(target) {
-  }
+  isExtensible: function (target) {},
 });
 ```
 
@@ -51,25 +50,30 @@ handler.isExtensible() 用于拦截对对象的 Object.isExtensible()。
 以下代码演示{{jsxref("Object.isExtensible()")}}.
 
 ```js
-var p = new Proxy({}, {
-  isExtensible: function(target) {
-    console.log('called');
-    return true; // 也可以 return 1; 等表示为 true 的值
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    isExtensible: function (target) {
+      console.log("called");
+      return true; // 也可以 return 1; 等表示为 true 的值
+    },
+  },
+);
 
-console.log(Object.isExtensible(p)); // "called"
-                                     // true
+console.log(Object.isExtensible(p)); // "called"; outputs true
 ```
 
 以下代码演示违反约束的情况。
 
 ```js
-var p = new Proxy({}, {
-  isExtensible: function(target) {
-    return false; // return 0; return NaN 等都会报错
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    isExtensible: function (target) {
+      return false; // return 0; return NaN 等都会报错
+    },
+  },
+);
 
 Object.isExtensible(p); // TypeError is thrown
 ```

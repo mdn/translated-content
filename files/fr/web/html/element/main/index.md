@@ -34,18 +34,22 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 
   <article>
     <h2>Pomme rouge</h2>
-    <p>Ce sont des pommes rouges vives très communes dans les supermarchés.<p>
-    <p>... </p>
-    <p>... </p>
+    <p>Ce sont des pommes rouges vives très communes dans les supermarchés.</p>
+    <p></p>
+    <p>...</p>
+    <p>...</p>
   </article>
 
   <article>
     <h2>La Granny Smith</h2>
-    <p>Ces pommes juteuses, vertes, font une très belle garniture pour les tartes aux pommes.<p>
-    <p>... </p>
-    <p>... </p>
+    <p>
+      Ces pommes juteuses, vertes, font une très belle garniture pour les tartes
+      aux pommes.
+    </p>
+    <p></p>
+    <p>...</p>
+    <p>...</p>
   </article>
-
 </main>
 
 <!-- Autre contenu -->

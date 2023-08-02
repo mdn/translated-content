@@ -23,11 +23,9 @@ None.
 
 None ({{jsxref("undefined")}}).
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                            | Status                           | Comentário |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#printing', 'print()')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

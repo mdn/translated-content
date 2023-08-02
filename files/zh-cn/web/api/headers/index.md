@@ -57,9 +57,9 @@ slug: Web/API/Headers
 ```js
 let myHeaders = new Headers();
 
-myHeaders.append('Content-Type', 'text/xml');
+myHeaders.append("Content-Type", "text/xml");
 
-myHeaders.get('Content-Type');
+myHeaders.get("Content-Type");
 // should return 'text/xml'
 ```
 

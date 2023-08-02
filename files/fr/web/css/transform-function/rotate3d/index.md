@@ -119,8 +119,8 @@ p {
   margin: auto;
 }
 
-.transformation{
-  transform: rotate3d(0,1,0,60deg);
+.transformation {
+  transform: rotate3d(0, 1, 0, 60deg);
   background-color: blue;
 }
 ```

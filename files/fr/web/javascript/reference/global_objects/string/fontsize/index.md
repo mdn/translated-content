@@ -13,7 +13,7 @@ La propriété **`fontsize()`** permet de créer un élément HTML {{HTMLElement
 ## Syntaxe
 
 ```js
-str.fontsize(taille)
+str.fontsize(taille);
 ```
 
 ### Paramètres
@@ -44,7 +44,7 @@ console.log(worldString.fontsize(7)); // <font size="7">Coucou monde</fontsize>
 L'objet {{domxref("HTMLElement.style", "element.style")}} permet d'utiliser l'attribut `style` de l'élément et de le manipuler de façon générique. Par exemple :
 
 ```js
-document.getElementById('IdElement').style.fontSize = '0.7em'
+document.getElementById("IdElement").style.fontSize = "0.7em";
 ```
 
 ## Spécifications

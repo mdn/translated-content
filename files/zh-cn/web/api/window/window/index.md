@@ -20,17 +20,17 @@ window.window.window.window
 
 1. 脚本中的全局变量实际上是 window 对象的属性：
 
-    ```js
-    var global = {data: 0};
-    alert(global === window.global); // displays "true"
-    ```
+   ```js
+   var global = { data: 0 };
+   alert(global === window.global); // displays "true"
+   ```
 
 2. 不用写 `window.` 前缀就可以访问 window 对象的内置属性：
 
-    ```js
-    setTimeout("alert('Hi!')", 50); // equivalent to using window.setTimeout.
-    alert(window === window.window); // displays "true"
-    ```
+   ```js
+   setTimeout("alert('Hi!')", 50); // equivalent to using window.setTimeout.
+   alert(window === window.window); // displays "true"
+   ```
 
 将 `window` 属性指向该 window 对象本身的目的，是为了更容易引用全局对象。不然，就得在最开始写代码的时候进行手动赋值：`var window = this;` 。
 

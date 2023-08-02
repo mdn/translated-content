@@ -101,14 +101,8 @@ Les outils d'assistance ne peuvent pas analyser les images d'arrière-plan. Si l
 .crossfade {
   width: 300px;
   height: 300px;
-  background-image: -webkit-cross-fade(
-    url('br.png'),
-    url('tr.png'),
-    75%);
-  background-image: cross-fade(
-    url('br.png'),
-    url('tr.png'),
-    75%);
+  background-image: -webkit-cross-fade(url("br.png"), url("tr.png"), 75%);
+  background-image: cross-fade(url("br.png"), url("tr.png"), 75%);
 }
 ```
 
@@ -127,10 +121,10 @@ Les outils d'assistance ne peuvent pas analyser les images d'arrière-plan. Si l
 ## Voir aussi
 
 - [`<image>`](/fr/docs/Web/CSS/image)
-- [`url()`](/fr/docs/Web/CSS/url())
-- [`image()`](/fr/docs/Web/CSS/image/image())
-- [`image-set()`](/fr/docs/Web/CSS/image/image-set())
-- [`element()`](/fr/docs/Web/CSS/element())
+- [`url()`](</fr/docs/Web/CSS/url()>)
+- [`image()`](</fr/docs/Web/CSS/image/image()>)
+- [`image-set()`](</fr/docs/Web/CSS/image/image-set()>)
+- [`element()`](</fr/docs/Web/CSS/element()>)
 - [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
 - Fonctions de création de dégradés&nbsp;:
   - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)

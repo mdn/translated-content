@@ -13,7 +13,7 @@ La méthode statique **`Atomics.xor()`** calcule le résultat d'un OU exclusif (
 ## Syntaxe
 
 ```js
-Atomics.xor(typedArray, index, valeur)
+Atomics.xor(typedArray, index, valeur);
 ```
 
 ### Paramètres
@@ -64,7 +64,7 @@ var ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.xor(ta, 0, 1); // renvoie 5, l'ancienne valeur
-Atomics.load(ta, 0);   // 4
+Atomics.load(ta, 0); // 4
 ```
 
 ## Spécifications

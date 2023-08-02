@@ -12,7 +12,7 @@ slug: Web/API/atob
 ## 구문
 
 ```js
-atob(encodedData)
+atob(encodedData);
 ```
 
 ### 매개변수
@@ -32,7 +32,7 @@ atob(encodedData)
 ## 예제
 
 ```js
-const encodedData = btoa('Hello, world'); // 문자열 인코딩
+const encodedData = btoa("Hello, world"); // 문자열 인코딩
 const decodedData = atob(encodedData); // 문자열 디코딩
 ```
 

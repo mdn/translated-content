@@ -50,7 +50,6 @@ Avec le tableau créé et le template défini, on utilise JavaScript pour insér
 // l'élément HTML template en vérifiant la présence
 // de l'attribut content pour l'élément template.
 if ("content" in document.createElement("template")) {
-
   // On prépare une ligne pour le tableau
   var template = document.querySelector("#productrow");
 
@@ -71,7 +70,6 @@ if ("content" in document.createElement("template")) {
 
   // Puis on insère
   tbody.appendChild(clone2);
-
 } else {
   // Une autre méthode pour ajouter les lignes
   // car l'élément HTML n'est pas pris en charge.

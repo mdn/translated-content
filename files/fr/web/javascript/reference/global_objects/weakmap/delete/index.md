@@ -33,7 +33,7 @@ wm.set(window, "toto");
 
 wm.delete(window); // Renvoie true. La suppression a bien eu lieu.
 
-wm.has(window);    // Renvoie false. L'objet window n'est plus dans la WeakMap.
+wm.has(window); // Renvoie false. L'objet window n'est plus dans la WeakMap.
 ```
 
 ## Spécifications

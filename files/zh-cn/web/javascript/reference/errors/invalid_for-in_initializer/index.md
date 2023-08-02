@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: for-in loop head declarations may not have initializers'
+title: "SyntaxError: for-in loop head declarations may not have initializers"
 slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 ---
 
@@ -44,7 +44,7 @@ for (var i = 0 in obj) {
 ```js example-good
 "use strict";
 
-var obj = {a: 1, b: 2, c: 3 };
+var obj = { a: 1, b: 2, c: 3 };
 
 for (var i in obj) {
   console.log(obj[i]);
@@ -56,7 +56,7 @@ for (var i in obj) {
 for...in 循环[不应该应用于数组迭代中](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in#Array_iteration_and_for...in)。是否考虑使用 [`for`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for) 循环而不是 `for-in` 循环来遍历数组（{{jsxref("Array")}}）？在 for 循环中是允许使用初始化语句的：
 
 ```js example-good
-var arr = [ "a", "b", "c" ]
+var arr = ["a", "b", "c"];
 
 for (var i = 2; i < arr.length; i++) {
   console.log(arr[i]);

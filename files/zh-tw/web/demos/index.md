@@ -1,7 +1,6 @@
 ---
 title: Demos of open web technologies
 slug: Web/Demos
-original_slug: Web/Demos_of_open_web_technologies
 ---
 
 Mozilla 支援豐富、廣泛且扣人心弦的網路公開技術，並且我們鼓勵使用他們。這個頁面提供一些展示這些有趣技術的連結，包含那些曾經在 Demo Studio 有人氣的，但[現在已經落伍了](https://blog.mozilla.org/community/2015/12/18/saying-goodbye-to-demo-studio/)的技術。如果你知道有關於新的網路公開技術，不錯的展示或是應用程式，請將連結加到下方適合的區塊中。

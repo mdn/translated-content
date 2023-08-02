@@ -11,7 +11,7 @@ La méthode `deref` renvoie l'objet cible associé à l'objet [`WeakRef`](/fr/do
 ## Syntaxe
 
 ```js
-deref()
+deref();
 ```
 
 ### Valeur de retour

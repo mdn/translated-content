@@ -31,7 +31,8 @@ slug: Web/API/File_and_Directory_Entries_API/Firefox_support
 为了确保你的代码可以在 Chrome 和其他浏览器上运行，你可以包括如下代码：
 
 ```js
-var FileSystemDirectoryEntry = window.FileSystemDirectoryEntry || window.DirectoryEntry;
+var FileSystemDirectoryEntry =
+  window.FileSystemDirectoryEntry || window.DirectoryEntry;
 var FileSystemEntry = window.FileSystemEntry || window.Entry;
 ```
 

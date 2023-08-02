@@ -83,7 +83,7 @@ const aGeneratorObject = (function* () {
 })();
 
 console.log(typeof aGeneratorObject.next);
-// "function"——它有 next 方法（返回正确的值），所以它是迭代器 
+// "function"——它有 next 方法（返回正确的值），所以它是迭代器
 
 console.log(typeof aGeneratorObject[Symbol.iterator]);
 // "function"——它有 @@iterator 方法（返回正确的迭代器），所以它是可迭代的
@@ -158,7 +158,7 @@ new WeakSet(
     yield {};
     yield myObj;
     yield {};
-  })()
+  })(),
 ).has(myObj); // true
 ```
 

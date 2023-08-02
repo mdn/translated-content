@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 
 ## 语法
 
-```js
+```js-nolint
 exec(str)
 ```
 
@@ -57,13 +57,13 @@ exec(str)
 // Match "quick brown" followed by "jumps", ignoring characters in between
 // Remember "brown" and "jumps"
 // Ignore case
-const re = /quick\s(?<color>brown).+?(jumps)/igd;
-const result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
+const re = /quick\s(?<color>brown).+?(jumps)/dgi;
+const result = re.exec("The Quick Brown Fox Jumps Over The Lazy Dog");
 ```
 
 下表列出这个脚本的返回值（`result`）：
 
-| 属性       | 值                                                                 |
+| 属性      | 值                                                                 |
 | --------- | ------------------------------------------------------------------ |
 | `[0]`     | `"Quick Brown Fox Jumps"`                                          |
 | `[1]`     | `"Brown"`                                                          |
@@ -83,7 +83,7 @@ const result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
 
 ```js
 const myRe = /ab*/g;
-const str = 'abbcdefabh';
+const str = "abbcdefabh";
 let myArray;
 while ((myArray = myRe.exec(str)) !== null) {
   let msg = `Found ${myArray[0]}. `;
@@ -112,7 +112,7 @@ Found ab. Next match starts at 9
 你也可以直接使用 `exec()` 而不是创建一个 {{jsxref("RegExp")}} 对象：
 
 ```js
-const matches = /(hello \S+)/.exec('This is a hello world!');
+const matches = /(hello \S+)/.exec("This is a hello world!");
 console.log(matches[1]);
 ```
 

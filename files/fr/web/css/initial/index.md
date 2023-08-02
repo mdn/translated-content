@@ -33,13 +33,11 @@ La propriété {{cssxref("all")}} peut être utilisée avec cette valeur afin de
 ### HTML
 
 ```html
- <p class="exemple">
-    Texte rouge
-       <em>
-          ce texte est avec la couleur initiale (noire)
-       </em>
-    ce texte est rouge aussi
- </p>
+<p class="exemple">
+  Texte rouge
+  <em> ce texte est avec la couleur initiale (noire) </em>
+  ce texte est rouge aussi
+</p>
 ```
 
 ### Résultat

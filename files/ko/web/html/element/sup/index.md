@@ -1,5 +1,5 @@
 ---
-title: '<sup>: 위 첨자 요소'
+title: "<sup>: 위 첨자 요소"
 slug: Web/HTML/Element/sup
 ---
 
@@ -78,8 +78,11 @@ slug: Web/HTML/Element/sup
 위 첨자를 가장 많이 사용할만한 곳 중 하나는 거듭제곱의 지수 표기입니다.
 
 ```html
-<p>One of the most common equations in all of physics is
-<var>E</var>=<var>m</var><var>c</var><sup>2</sup>.<p>
+<p>
+  One of the most common equations in all of physics is <var>E</var>=<var>m</var
+  ><var>c</var><sup>2</sup>.
+</p>
+<p></p>
 ```
 
 {{EmbedLiveSample("지수_표기", 650, 80)}}
@@ -101,8 +104,9 @@ The resulting output:
 영어 "fourth", 스페인어 "quinto" 등 서수는 숫자와, 위 첨자로 표기한 언어별 특정 텍스트를 사용해 축약할 수 있습니다.
 
 ```html
-<p>The ordinal number "fifth" can be abbreviated in various
-languages as follows:</p>
+<p>
+  The ordinal number "fifth" can be abbreviated in various languages as follows:
+</p>
 
 <ul>
   <li>English: 5<sup>th</sup></li>

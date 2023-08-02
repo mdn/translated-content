@@ -96,7 +96,7 @@ Edge 的 `time` 选择控件有点复杂，打开一个小时和分钟的滚动�
 
 ```js
 const timeControl = document.querySelector('input[type="time"]');
-timeControl.value = '15:30';
+timeControl.value = "15:30";
 ```
 
 ### 时间格式
@@ -112,8 +112,7 @@ timeControl.value = '15:30';
   <label for="startTime">开始时间：</label>
   <input type="time" id="startTime" />
   <p>
-    <code>time</code> 输入框的值：
-    <code> "<span id="value">n/a</span>"</code>.
+    <code>time</code> 输入框的值： <code> "<span id="value">n/a</span>"</code>.
   </p>
 </form>
 ```
@@ -124,9 +123,13 @@ timeControl.value = '15:30';
 const startTime = document.getElementById("startTime");
 const valueSpan = document.getElementById("value");
 
-startTime.addEventListener("input", () => {
-  valueSpan.innerText = startTime.value;
-}, false);
+startTime.addEventListener(
+  "input",
+  () => {
+    valueSpan.innerText = startTime.value;
+  },
+  false,
+);
 ```
 
 {{EmbedLiveSample("时间格式", 600, 80)}}
@@ -223,9 +226,7 @@ _目前，尚不清楚当与 `time` 输入一起使用时，`any` 的值对 `ste
 
 ```html
 <form>
-  <label for="appt-time">
-    选择约定的时间（开放时间为 12:00 到 18:00）：
-  </label>
+  <label for="appt-time"> 选择约定的时间（开放时间为 12:00 到 18:00）： </label>
   <input id="appt-time" type="time" name="appt-time" min="12:00" max="18:00" />
   <span class="validity"></span>
 </form>
@@ -272,13 +273,13 @@ input:valid + span::after {
 如果设置的 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 属性大于 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性，有效时间范围将环绕午夜，产生一个跨越午夜的有效时间范围。这个功能不被任何其他 input 类型所支持。虽然这个功能[在 HTML 规范中](https://html.spec.whatwg.org/multipage/input.html#has-a-reversed-range)，但它还没有被普遍支持。基于 Chrome 的浏览器从 82 版开始支持该功能，Firefox 在 76 版中加入了该功能。Safari 从 14.1 版开始不支持这个功能。要做好出现这种情况的准备。
 
 ```js
-const input = document.createElement('input');
-input.type = 'time';
-input.min = '23:00';
-input.max = '01:00';
-input.value = '23:59';
+const input = document.createElement("input");
+input.type = "time";
+input.min = "23:00";
+input.max = "01:00";
+input.value = "23:59";
 
-if (input.validity.valid && input.type === 'time') {
+if (input.validity.valid && input.type === "time") {
   // <input type=time> reversed range supported
 } else {
   // <input type=time> reversed range unsupported
@@ -416,9 +417,7 @@ HTML 看起来像这样：
       required />
     <span class="validity"></span>
   </div>
-  <p class="fallbackLabel">
-    选择约定的时间（开放时间为 12:00 到 18:00）：
-  </p>
+  <p class="fallbackLabel">选择约定的时间（开放时间为 12:00 到 18:00）：</p>
   <div class="fallbackTimePicker">
     <div>
       <span>
@@ -467,32 +466,32 @@ input:valid + span::after {
 
 ```js
 // 获取 UI 元素
-const nativePicker = document.querySelector('.nativeTimePicker');
-const fallbackPicker = document.querySelector('.fallbackTimePicker');
-const fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector(".nativeTimePicker");
+const fallbackPicker = document.querySelector(".fallbackTimePicker");
+const fallbackLabel = document.querySelector(".fallbackLabel");
 
-const hourSelect = document.querySelector('#hour');
-const minuteSelect = document.querySelector('#minute');
+const hourSelect = document.querySelector("#hour");
+const minuteSelect = document.querySelector("#minute");
 
 // 最初，隐藏回退元素
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // 测试一个新的 time 输入框是否会回退至 text 输入框
-const test = document.createElement('input');
+const test = document.createElement("input");
 
 try {
-  test.type = 'time';
+  test.type = "time";
 } catch (e) {
   console.log(e.description);
 }
 
 // 如果回退了，运行 if 代码块中的代码
-if (test.type === 'text') {
+if (test.type === "text") {
   // 隐藏原生选择器，显示回退元素
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // 动态生成小时和分钟数
   populateHours();
@@ -502,7 +501,7 @@ if (test.type === 'text') {
 function populateHours() {
   // 生成含有 6 小时开放时间的 <select>
   for (let i = 12; i <= 18; i++) {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.textContent = i;
     hourSelect.appendChild(option);
   }
@@ -511,8 +510,8 @@ function populateHours() {
 function populateMinutes() {
   // 对每一小时动态生成 60 个代表分钟数的 <select>
   for (let i = 0; i <= 59; i++) {
-    const option = document.createElement('option');
-    option.textContent = (i < 10) ? `0${i}` : i;
+    const option = document.createElement("option");
+    option.textContent = i < 10 ? `0${i}` : i;
     minuteSelect.appendChild(option);
   }
 }
@@ -520,8 +519,8 @@ function populateMinutes() {
 // 如果小时数为 18，分钟数必须设置为 00
 // 你不可以选择超过 18:00 的时间
 function setMinutesToZero() {
-  if (hourSelect.value === '18') {
-    minuteSelect.value = '00';
+  if (hourSelect.value === "18") {
+    minuteSelect.value = "00";
   }
 }
 

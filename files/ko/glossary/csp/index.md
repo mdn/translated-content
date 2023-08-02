@@ -2,6 +2,7 @@
 title: CSP
 slug: Glossary/CSP
 ---
+
 CSP (Content Security Policy)는 {{Glossary("XSS")}}이나 데이터 주입과 같은 특정 웹사이트 관련 공격을 탐지 하거나 완화 하기 위해 사용된다.
 
 기본적인 구현은 `Content-Security-Policy`라고 불리는 {{Glossary("HTTP")}} 헤더를 기반으로 한다.

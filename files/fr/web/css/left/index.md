@@ -78,7 +78,7 @@ left: unset;
 #wrap {
   width: 700px;
   margin: 0 auto;
-  background: #5C5C5C;
+  background: #5c5c5c;
 }
 
 pre {
@@ -94,7 +94,7 @@ pre {
   position: absolute;
   left: 20px;
   top: 20px;
-  background-color: #D8F5FF;
+  background-color: #d8f5ff;
 }
 
 #exemple_2 {
@@ -103,8 +103,7 @@ pre {
   position: relative;
   top: 0;
   right: 0;
-  background-color: #C1FFDB;
-
+  background-color: #c1ffdb;
 }
 #exemple_3 {
   width: 600px;
@@ -112,16 +111,16 @@ pre {
   position: relative;
   top: 20px;
   left: 20px;
-  background-color: #FFD7C2;
+  background-color: #ffd7c2;
 }
 
 #exemple_4 {
-  width:200px;
-  height:200px;
-  position:absolute;
-  bottom:10px;
-  right:20px;
-  background-color:#FFC7E4;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  background-color: #ffc7e4;
 }
 ```
 
@@ -135,7 +134,10 @@ pre {
       left: 20px;
       top: 20px;
     </pre>
-    <p>Le seul élément englobant pour ce div est la fenêtre principale. Elle se positionne par rapport à elle.</p>
+    <p>
+      Le seul élément englobant pour ce div est la fenêtre principale. Elle se
+      positionne par rapport à elle.
+    </p>
   </div>
 
   <div id="exemple_2">
@@ -154,7 +156,10 @@ pre {
       top: 20px;
       left: 20px;
     </pre>
-    <p>La position est relative par rapport au div voisin mais on le retire du flux.</p>
+    <p>
+      La position est relative par rapport au div voisin mais on le retire du
+      flux.
+    </p>
 
     <div id="exemple_4">
       <pre>
@@ -162,7 +167,10 @@ pre {
         bottom: 10px;
         right: 20px;
       </pre>
-      <p>La position est absolue à l'intérieur d'un parent positionné de façon relative.</p>
+      <p>
+        La position est absolue à l'intérieur d'un parent positionné de façon
+        relative.
+      </p>
     </div>
   </div>
 </div>

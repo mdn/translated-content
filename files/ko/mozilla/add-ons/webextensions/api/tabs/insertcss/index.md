@@ -11,21 +11,21 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 
 이 API를 사용하기 위해 여러분은 해당 페이지 URL에 대한 허가가 필요합니다. 이 허가에 대한 요청은 [호스트 허가](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)를 통하거나 [활성화 된 탭 허가](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)을 사용할 수도 있습니다.
 
-You can only inject CSS into pages whose URL can be expressed using a [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns): meaning, its scheme must be one of "http", "https", or "file". This means that you can't inject CSS into any of the browser's built-in pages, such as about:debugging, about:addons, or the page that opens when you open a new empty tab.
+You can only inject CSS into pages whose URL can be expressed using a [match pattern](/ko/docs/Mozilla/Add-ons/WebExtensions/Match_patterns): meaning, its scheme must be one of "http", "https", or "file". This means that you can't inject CSS into any of the browser's built-in pages, such as about:debugging, about:addons, or the page that opens when you open a new empty tab.
 
 > **Note:** Firefox resolves URLs in injected CSS files relative to the CSS file itself, rather than to the page it's injected into.
 
 The inserted CSS may be removed again by calling {{WebExtAPIRef("tabs.removeCSS()")}}.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) (on Firefox only).
+This is an asynchronous function that returns a [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise) (on Firefox only).
 
 ## Syntax
 
 ```js
 let inserting = browser.tabs.insertCSS(
-  tabId,           // optional integer
-  details          // object
-)
+  tabId, // optional integer
+  details, // object
+);
 ```
 
 ### Parameters
@@ -44,7 +44,7 @@ let inserting = browser.tabs.insertCSS(
 
       - : `string`. This can take one of two values: "user", to add the CSS as a user stylesheet or "author" to add it as an author stylesheet. If this option is omitted, the CSS is added as an author stylesheet.
 
-        - "user" enables you to prevent websites from overriding the CSS you insert: see [Cascading order](/en-US/docs/Web/CSS/Cascade#cascading_order).
+        - "user" enables you to prevent websites from overriding the CSS you insert: see [Cascading order](/ko/docs/Web/CSS/Cascade#cascading_order).
         - "author" stylesheets behave as if they appear after all author rules specified by the web page. This behavior includes any author stylesheets added dynamically by the page's scripts, even if that addition happens after the `insertCSS` call completes.
 
     - `file` {{optional_inline}}
@@ -58,7 +58,7 @@ let inserting = browser.tabs.insertCSS(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the CSS has been inserted. If any error occurs, the promise will be rejected with an error message.
+A [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the CSS has been inserted. If any error occurs, the promise will be rejected with an error message.
 
 ## Examples
 
@@ -68,12 +68,11 @@ This example inserts into the currently active tab CSS which is taken from a str
 let css = "body { border: 20px dotted pink; }";
 
 browser.browserAction.onClicked.addListener(() => {
-
   function onError(error) {
     console.log(`Error: ${error}`);
   }
 
-  let insertingCSS = browser.tabs.insertCSS({code: css});
+  let insertingCSS = browser.tabs.insertCSS({ code: css });
   insertingCSS.then(null, onError);
 });
 ```
@@ -82,12 +81,11 @@ This example inserts CSS which is loaded from a file packaged with the extension
 
 ```js
 browser.browserAction.onClicked.addListener(() => {
-
   function onError(error) {
     console.log(`Error: ${error}`);
   }
 
-  let insertingCSS = browser.tabs.insertCSS(2, {file: "content-style.css"});
+  let insertingCSS = browser.tabs.insertCSS(2, { file: "content-style.css" });
   insertingCSS.then(null, onError);
 });
 ```

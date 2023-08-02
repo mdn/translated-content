@@ -35,14 +35,15 @@ var promise = HTMLImageElement.decode();
 
 ```js
 const img = new Image();
-img.src = 'nebula.jpg';
-img.decode()
-.then(() => {
-  document.body.appendChild(img);
-})
-.catch((encodingError) => {
-  // Do something with the error.
-})
+img.src = "nebula.jpg";
+img
+  .decode()
+  .then(() => {
+    document.body.appendChild(img);
+  })
+  .catch((encodingError) => {
+    // Do something with the error.
+  });
 ```
 
 ## 规范

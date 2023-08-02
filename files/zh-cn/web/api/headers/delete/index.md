@@ -40,15 +40,15 @@ var myHeaders = new Headers(); // Currently empty
 可以通过 append() 方法添加 header:
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.get('Content-Type'); // Returns 'image/jpeg'
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.get("Content-Type"); // Returns 'image/jpeg'
 ```
 
 可以通过 delete() 方法删除已有 header:
 
 ```js
-myHeaders.delete('Content-Type');
-myHeaders.get('Content-Type'); // Returns null, as it has been deleted
+myHeaders.delete("Content-Type");
+myHeaders.get("Content-Type"); // Returns null, as it has been deleted
 ```
 
 ## Specifications

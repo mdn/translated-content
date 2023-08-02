@@ -120,7 +120,7 @@ Promise.resolve("foo")
   // 字符串实际上是由上一个回调函数之前的那块异步代码处理的。
   .then((string) => {
     console.log(
-      "最后一个 then：哎呀……之前懒得实例化并返回一个 Promise，所以顺序可能有点令人惊讶"
+      "最后一个 then：哎呀……之前懒得实例化并返回一个 Promise，所以顺序可能有点令人惊讶",
     );
 
     // 注意 `string` 这时不会存在 'baz'。
@@ -276,9 +276,7 @@ console.log(resolvedProm);
 
 const thenProm = resolvedProm.then((value) => {
   console.log(
-    `在主堆栈结束后被调用。收到的值是：${value}，返回的值是：${
-      value + 1
-    }`,
+    `在主堆栈结束后被调用。收到的值是：${value}，返回的值是：${value + 1}`,
   );
   return value + 1;
 });
