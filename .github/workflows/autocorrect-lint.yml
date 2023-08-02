@@ -27,6 +27,9 @@ jobs:
         with:
           node-version-file: ".nvmrc"
           cache: yarn
+      - uses: reviewdog/action-setup@v1
+        with:
+          reviewdog_version: v0.14.2
 
       - name: Install NPM
         run: |
@@ -48,20 +51,12 @@ jobs:
           DIFF_DOCUMENTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^(files|docs)/zh-cn/" | xargs)
           echo "DIFF_DOCUMENTS=${DIFF_DOCUMENTS}" >> $GITHUB_ENV
 
-      - name: AutoCorrect lint changed content
-        id: run_lint
+      - name: AutoCorrect Lint
         if: ${{ env.DIFF_DOCUMENTS }}
         run: yarn autocorrect --lint --no-diff-bg-color ${{ env.DIFF_DOCUMENTS }}
 
-      # https://docs.github.com/en/actions/managing-issues-and-pull-requests/commenting-on-an-issue-when-a-label-is-added
-      - name: Report Result
+      - name: AutoCorrect Lint Reports
         if: failure()
-        uses: peter-evans/create-or-update-comment@v3
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            [AutoCorrect](https://github.com/huacnlee/autocorrect) lint failure: 
-
-            ```diff
-            ${{ steps.run_lint.outputs.result }}
-            ```
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.REVIEWDOG_GITHUB_API_TOKEN }}
+        run: yarn -s autocorrect --format rdjson --lint ${{ env.DIFF_DOCUMENTS }} | reviewdog -f=rdjson -reporter=github-pr-review
