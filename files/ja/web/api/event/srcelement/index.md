@@ -1,6 +1,9 @@
 ---
-title: Event.srcElement
+title: "Event: srcElement プロパティ"
+short-title: srcElement
 slug: Web/API/Event/srcElement
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{ApiRef("DOM")}}{{deprecated_header}}

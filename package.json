@@ -35,7 +35,7 @@
     "markdown-it": "^13.0.1",
     "markdownlint-cli2": "0.8.1",
     "markdownlint-rule-search-replace": "1.1.0",
-    "ora": "^6.3.1",
+    "ora": "^7.0.0",
     "prettier": "3.0.0",
     "yargs": "^17.7.2"
   }

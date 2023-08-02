@@ -1,5 +1,5 @@
 ---
-title: '링크 유형: preload'
+title: "링크 유형: preload"
 slug: Web/HTML/Attributes/rel/preload
 original_slug: Web/HTML/Link_types/preload
 ---
@@ -13,7 +13,7 @@ original_slug: Web/HTML/Link_types/preload
 페이지를 스타일링하기 위해 주로 다음과 같이 `<link>`를 이용해 CSS 파일을 로드할 것입니다.
 
 ```html
-<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/main.css" />
 ```
 
 하지만 여기서는 `<link>`를 원하는 어떤 리소스에도 사용 가능한 프리로더로 바꿔주는 `preload`의 `rel` 값을 사용하겠습니다. 동시에 다음 사항도 명시해야 합니다.
@@ -25,13 +25,13 @@ original_slug: Web/HTML/Link_types/preload
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>JavaScript 및 CSS 예제 소스</title>
 
-  <link rel="preload" href="style.css" as="style">
-  <link rel="preload" href="main.js" as="script">
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="preload" href="main.js" as="script" />
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -84,16 +84,19 @@ original_slug: Web/HTML/Link_types/preload
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>비디오 프리로드 예제</title>
 
-  <link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4">
+  <link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4" />
 </head>
 <body>
   <video controls>
-    <source src="sintel-short.mp4" type="video/mp4">
-    <source src="sintel-short.webm" type="video/webm">
-    <p>현재 브라우저는 HTML5를 지원하지 않습니다. 대신 <a href="sintel-short.mp4">이 비디오 링크</a>를 사용하세요.</p>
+    <source src="sintel-short.mp4" type="video/mp4" />
+    <source src="sintel-short.webm" type="video/webm" />
+    <p>
+      현재 브라우저는 HTML5를 지원하지 않습니다. 대신
+      <a href="sintel-short.mp4">이 비디오 링크</a>를 사용하세요.
+    </p>
   </video>
 </body>
 ```
@@ -116,13 +119,23 @@ original_slug: Web/HTML/Link_types/preload
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>웹 폰트 예제</title>
 
-  <link rel="preload" href="fonts/cicle_fina-webfont.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/zantroke-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link
+    rel="preload"
+    href="fonts/cicle_fina-webfont.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin />
+  <link
+    rel="preload"
+    href="fonts/zantroke-webfont.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin />
 
-  <link href="style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" />
 </head>
 <body>
   …
@@ -139,13 +152,21 @@ original_slug: Web/HTML/Link_types/preload
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>반응형 프리로드 예제</title>
 
-  <link rel="preload" href="bg-image-narrow.png" as="image" media="(max-width: 600px)">
-  <link rel="preload" href="bg-image-wide.png" as="image" media="(min-width: 601px)">
+  <link
+    rel="preload"
+    href="bg-image-narrow.png"
+    as="image"
+    media="(max-width: 600px)" />
+  <link
+    rel="preload"
+    href="bg-image-wide.png"
+    as="image"
+    media="(min-width: 601px)" />
 
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
   <header>
@@ -154,12 +175,12 @@ original_slug: Web/HTML/Link_types/preload
 
   <script>
     var mediaQueryList = window.matchMedia("(max-width: 600px)");
-    var header = document.querySelector('header');
+    var header = document.querySelector("header");
 
     if (mediaQueryList.matches) {
-      header.style.backgroundImage = 'url(bg-image-narrow.png)';
+      header.style.backgroundImage = "url(bg-image-narrow.png)";
     } else {
-      header.style.backgroundImage = 'url(bg-image-wide.png)';
+      header.style.backgroundImage = "url(bg-image-wide.png)";
     }
   </script>
 </body>
