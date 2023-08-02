@@ -3,6 +3,7 @@ title: 상속과 프로토타입
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
 original_slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
 ---
+
 {{jsSidebar("Advanced")}}
 
 Java 나 C++ 같이 클래스 기반의 언어를 사용하던 프로그래머는 자바스크립트가 동적인 언어라는 점과 클래스가 없다는 것에서 혼란스러워 한다. (ES2015부터 class 키워드를 지원하기 시작했으나, 문법적인 양념일 뿐이며 자바스크립트는 여전히 프로토타입 기반의 언어다.)
@@ -24,9 +25,9 @@ Java 나 C++ 같이 클래스 기반의 언어를 사용하던 프로그래머�
 ```js
 // o라는 객체가 있고, 속성 'a' 와 'b'를 갖고 있다고 하자.
 let f = function () {
-    this.a = 1;
-    this.b = 2;
-}
+  this.a = 1;
+  this.b = 2;
+};
 let o = new f(); // {a: 1, b: 2}
 
 // f 함수의 prototype 속성 값들을 추가 하자.
@@ -69,9 +70,9 @@ console.log(o.d); // undefined
 ```js
 var o = {
   a: 2,
-  m: function(b){
+  m: function (b) {
     return this.a + 1;
-  }
+  },
 };
 
 console.log(o.m()); // 3
@@ -125,9 +126,9 @@ console.log(p.m()); // 13
 우리는 아래에 보이는 것과 같이 `doSomething()` 프로토타입에 속성을 추가할 수 있다.
 
 ```js
-function doSomething(){}
+function doSomething() {}
 doSomething.prototype.foo = "bar";
-console.log( doSomething.prototype );
+console.log(doSomething.prototype);
 ```
 
 결과:
@@ -153,11 +154,11 @@ console.log( doSomething.prototype );
 다음의 코드를 실행해보자.
 
 ```js
-function doSomething(){}
+function doSomething() {}
 doSomething.prototype.foo = "bar"; // add a property onto the prototype
 var doSomeInstancing = new doSomething();
 doSomeInstancing.prop = "some value"; // add a property onto the object
-console.log( doSomeInstancing );
+console.log(doSomeInstancing);
 ```
 
 실행하고나면 결과는 다음과 비슷할 것이다.
@@ -199,7 +200,7 @@ doSomeInstancing의 `__proto__`의 `__proto__`의 `__proto__`는 존재할 수 �
 콘솔에 코드를 조금 더 추가해보자.
 
 ```js
-function doSomething(){}
+function doSomething() {}
 doSomething.prototype.foo = "bar";
 var doSomeInstancing = new doSomething();
 doSomeInstancing.prop = "some value";
@@ -227,7 +228,7 @@ doSomething.prototype.foo:  bar
 ### 문법 생성자로 객체 생성
 
 ```js
-var o = {a: 1};
+var o = { a: 1 };
 
 // o 객체는 프로토타입으로 Object.prototype 을 가진다.
 // 이로 인해 o.hasOwnProperty('a') 같은 코드를 사용할 수 있다.
@@ -242,7 +243,7 @@ var a = ["yo", "whadup", "?"];
 // 프로토타입 체인은 다음과 같다.
 // a ---> Array.prototype ---> Object.prototype ---> null
 
-function f(){
+function f() {
   return 2;
 }
 
@@ -262,9 +263,9 @@ function Graph() {
 }
 
 Graph.prototype = {
-  addVertex: function(v){
+  addVertex: function (v) {
     this.vertexes.push(v);
-  }
+  },
 };
 
 var g = new Graph();
@@ -277,7 +278,7 @@ var g = new Graph();
 ECMAScript 5는 새로운 방법을 도입했다. [Object.create](/en/JavaScript/Reference/Global_Objects/Object/create)라는 메소드를 호출하여 새로운 객체를 만들 수 있다. 생성된 객체의 프로토타입은 이 메소드의 첫 번째 인수로 지정된다.
 
 ```js
-var a = {a: 1};
+var a = { a: 1 };
 // a ---> Object.prototype ---> null
 
 var b = Object.create(a);
@@ -297,7 +298,7 @@ console.log(d.hasOwnProperty); // undefined이다. 왜냐하면 d는 Object.prot
 ECMAScript2015에는 몇 가지 키워드가 도입되어 [class](/ko/docs/Web/JavaScript/Reference/Classes)를 구현하였다. 이런 생성 방식은 클래서 기반 언어의 개발자들에게 친숙하게 다가오나 동작 방식이 같지는 않다. 자바스크립트는 여전히 프로토타입 기반으로 남아있다. 새로 도입된 키워드는 {{jsxref("Statements/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}, {{jsxref("Classes/static", "static")}}, {{jsxref("Classes/extends", "extends")}}, 그리고 {{jsxref("Operators/super", "super")}}가 있다.
 
 ```js
-'use strict';
+"use strict";
 
 class Polygon {
   constructor(height, width) {
@@ -329,16 +330,16 @@ var square = new Square(2);
 객체의 속성에 걸쳐 루프를 수행 하는 경우 프로토타입 체인 전체의 **모든** 열거자 속성에 대하여 적용된다. 객체 개인 속성인지 프로토타입 체인상 어딘가에 있는지 확인하기 위해서는 Object.prototype에서 모든 오브젝트로 상속된 [`hasOwnProperty`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) 메소드를 이용할 필요가 있다. 다음 코드를 통하여 구체적인 예를 확인하여 보자.
 
 ```js
-console.log(g.hasOwnProperty('vertices'));
+console.log(g.hasOwnProperty("vertices"));
 // true
 
-console.log(g.hasOwnProperty('nope'));
+console.log(g.hasOwnProperty("nope"));
 // false
 
-console.log(g.hasOwnProperty('addVertex'));
+console.log(g.hasOwnProperty("addVertex"));
 // false
 
-console.log(g.__proto__.hasOwnProperty('addVertex'));
+console.log(g.__proto__.hasOwnProperty("addVertex"));
 // true
 ```
 
@@ -366,13 +367,13 @@ function A(a) {
 // A의 정의에서 this.varA는 항상 A.prototype.varA가 가려버리는데
 // prototype에 varA를 다시 넣는 이유는 무엇인가?
 A.prototype = {
-  varA: null,  // 아무것도 안하면서 varA를 쓰는 이유가 있을까?
-      // 아마도 숨겨진 클래스의 할당 구조를 최적화 하려는 것인가?
-      // https://developers.google.com/speed/articles/optimizing-javascript#Initializing-instance-variables
-      // 모든 객체의 varA가 동일하게 초기화 되어야 상기 링크 내용이 유효할 수 있다.
-  doSomething: function() {
+  varA: null, // 아무것도 안하면서 varA를 쓰는 이유가 있을까?
+  // 아마도 숨겨진 클래스의 할당 구조를 최적화 하려는 것인가?
+  // https://developers.google.com/speed/articles/optimizing-javascript#Initializing-instance-variables
+  // 모든 객체의 varA가 동일하게 초기화 되어야 상기 링크 내용이 유효할 수 있다.
+  doSomething: function () {
     // ...
-  }
+  },
 };
 
 function B(a, b) {
@@ -384,17 +385,18 @@ B.prototype = Object.create(A.prototype, {
     value: null,
     enumerable: true,
     configurable: true,
-    writable: true
+    writable: true,
   },
   doSomething: {
-    value: function() { // override
+    value: function () {
+      // override
       A.prototype.doSomething.apply(this, arguments); // call super
       // ...
     },
     enumerable: true,
     configurable: true,
-    writable: true
-  }
+    writable: true,
+  },
 });
 B.prototype.constructor = B;
 
@@ -457,15 +459,15 @@ Javascript에서 이를 구현하는 방법은 여러가지가 있는데 ES6에�
 
 ```js
 class Greeter {
-  constructor (name) {
-    this.name = name || 'John Doe';
+  constructor(name) {
+    this.name = name || "John Doe";
   }
-  hello () {
-    return `Hello, my name is ${ this.name }`;
+  hello() {
+    return `Hello, my name is ${this.name}`;
   }
 }
 
-const george = new Greeter('George');
+const george = new Greeter("George");
 const msg = george.hello();
 console.log(msg); // Hello, my name is George
 ```
@@ -485,11 +487,11 @@ console.log(msg); // Hello, my name is George
 ```js
 const proto = {
   hello: function hello() {
-    return `Hello, my name is ${ this.name }`;
-  }
+    return `Hello, my name is ${this.name}`;
+  },
 };
 
-const george = Object.assign({}, proto, {name: 'George'});
+const george = Object.assign({}, proto, { name: "George" });
 const msg = george.hello();
 console.log(msg); // Hello, my name is George
 ```
@@ -511,25 +513,29 @@ console.log(msg); // Hello, my name is George
 
 const rawMixin = function () {
   const attrs = {};
-  return Object.assign(this, {
-    set (name, value) {
-      attrs[name] = value;
-      this.emit('change', {
-        prop: name,
-        value: value
-      });
+  return Object.assign(
+    this,
+    {
+      set(name, value) {
+        attrs[name] = value;
+        this.emit("change", {
+          prop: name,
+          value: value,
+        });
+      },
+      get(name) {
+        return attrs[name];
+      },
     },
-    get (name) {
-      return attrs[name];
-    }
-  }, Events.prototype);
+    Events.prototype,
+  );
 };
 
 const mixinModel = (target) => rawMixin.call(target);
-const george = { name: 'george' };
+const george = { name: "george" };
 const model = mixinModel(george);
-model.on('change', data => console.log(data));
-model.set('name', 'Sam');
+model.on("change", (data) => console.log(data));
+model.set("name", "Sam");
 /*
 {
   prop: 'name',
