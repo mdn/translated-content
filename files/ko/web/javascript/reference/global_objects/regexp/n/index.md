@@ -10,15 +10,15 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
 ## Syntax
 
 ```js
-RegExp.$1
-RegExp.$2
-RegExp.$3
-RegExp.$4
-RegExp.$5
-RegExp.$6
-RegExp.$7
-RegExp.$8
-RegExp.$9
+RegExp.$1;
+RegExp.$2;
+RegExp.$3;
+RegExp.$4;
+RegExp.$5;
+RegExp.$6;
+RegExp.$7;
+RegExp.$8;
+RegExp.$9;
 ```
 
 ## Description
@@ -39,8 +39,8 @@ These properties can be used in the replacement text for the {{jsxref("String.re
 
 ```js
 var re = /(\w+)\s(\w+)/;
-var str = 'John Smith';
-str.replace(re, '$2, $1'); // "Smith, John"
+var str = "John Smith";
+str.replace(re, "$2, $1"); // "Smith, John"
 RegExp.$1; // "John"
 RegExp.$2; // "Smith"
 ```
