@@ -54,10 +54,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 
 ## Спецификации
 
-| Specification                                                                | Status                       | Comment                       |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------- |
+| Specification                                             | Status               | Comment                       |
+| --------------------------------------------------------- | -------------------- | ----------------------------- |
 | {{SpecName('ESDraft', '#sec-atomics-object', 'Atomics')}} | {{Spec2('ESDraft')}} | Initial definition in ES2017. |
-| {{SpecName('ES8', '#sec-atomics-object', 'Atomics')}}     | {{Spec2('ES8')}}         |                               |
+| {{SpecName('ES8', '#sec-atomics-object', 'Atomics')}}     | {{Spec2('ES8')}}     |                               |
 
 ## Поддержка браузерами
 

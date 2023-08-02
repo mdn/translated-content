@@ -46,8 +46,8 @@ BigInt.asUintN(64, max + 1n);
 
 ## Specifications
 
-| Specification                                                                            |
-| ---------------------------------------------------------------------------------------- |
+| Specification                                                      |
+| ------------------------------------------------------------------ |
 | {{SpecName('ESDraft', '#sec-bigint.asuintn', 'BigInt.asUintN()')}} |
 
 ## Browser compatibility

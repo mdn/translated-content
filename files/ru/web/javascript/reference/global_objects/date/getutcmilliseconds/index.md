@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 ## Сводка
@@ -42,11 +43,11 @@ var milliseconds = today.getUTCMilliseconds();
 
 ## Спецификации
 
-| Спецификация                                                                                                                         | Статус                   | Комментарии                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                                                                              | Стандарт                 | Изначальное определение. Реализовано в JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.25', 'Date.prototype.getUTCMilliseconds')}}                                 | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-date.prototype.getutcmilliseconds', 'Date.prototype.getUTCMilliseconds')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                                                                       | Статус             | Комментарии                                            |
+| -------------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                                            | Стандарт           | Изначальное определение. Реализовано в JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.25', 'Date.prototype.getUTCMilliseconds')}}                       | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-date.prototype.getutcmilliseconds', 'Date.prototype.getUTCMilliseconds')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

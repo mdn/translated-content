@@ -12,6 +12,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Сводка
@@ -27,7 +28,7 @@ arr.entries()
 ## Описание
 
 ```js
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 var eArr = arr.entries();
 
 console.log(eArr.next().value); // [0, 'a']

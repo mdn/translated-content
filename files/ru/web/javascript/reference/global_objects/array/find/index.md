@@ -14,6 +14,7 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 ---
+
 {{JSRef}}
 
 ## Сводка

@@ -7,6 +7,7 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 ---
+
 {{JSRef}}
 
 Метод `ArrayBuffer.isView(arg)` возвращает `true`, если `arg` является одним из таких видов `ArrayBuffer`, как [типизированные массивы](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) или {{jsxref("DataView")}}; в ином случае возвращает `false`.
@@ -31,15 +32,15 @@ ArrayBuffer.isView(arg)
 ## Примеры
 
 ```js
-ArrayBuffer.isView();                    // false
-ArrayBuffer.isView([]);                  // false
-ArrayBuffer.isView({});                  // false
-ArrayBuffer.isView(null);                // false
-ArrayBuffer.isView(undefined);           // false
+ArrayBuffer.isView(); // false
+ArrayBuffer.isView([]); // false
+ArrayBuffer.isView({}); // false
+ArrayBuffer.isView(null); // false
+ArrayBuffer.isView(undefined); // false
 ArrayBuffer.isView(new ArrayBuffer(10)); // false
 
-ArrayBuffer.isView(new Uint8Array());    // true
-ArrayBuffer.isView(new Float32Array());  // true
+ArrayBuffer.isView(new Uint8Array()); // true
+ArrayBuffer.isView(new Float32Array()); // true
 ArrayBuffer.isView(new Int8Array(10).subarray(0, 3)); // true
 
 var buffer = new ArrayBuffer(2);
