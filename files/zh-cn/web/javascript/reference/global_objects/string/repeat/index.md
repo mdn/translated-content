@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/repeat
 
 {{JSRef}}
 
-**`repeat()`** 方法构造并返回一个新字符串，该字符串包含调用它的字符串的指定数量被连接在一起的副本。
+**`repeat()`** 方法构造并返回一个新字符串，其中包含指定数量的所调用的字符串副本，这些副本连接在一起。
 
 {{EmbedInteractiveExample("pages/js/string-repeat.html","shorter")}}
 
