@@ -1,7 +1,6 @@
 ---
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 ---
 
 {{JSRef}}

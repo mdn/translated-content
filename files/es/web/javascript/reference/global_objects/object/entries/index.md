@@ -1,7 +1,6 @@
 ---
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/entries
 ---
 
 {{JSRef}}
