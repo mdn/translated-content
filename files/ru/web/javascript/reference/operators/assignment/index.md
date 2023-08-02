@@ -14,6 +14,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Assignment
 original_slug: Web/JavaScript/Reference/Operators/Присваивание
 ---
+
 {{jsSidebar("Operators")}}
 
 Простой оператор присваивания (`=`) используется для присваивания значения переменной. Операция присваивания вычисляется в присваиваемую величину. Присваивание по цепочке (_chaining_) используется для назначения нескольким переменным одинакового значения.
@@ -36,8 +37,8 @@ original_slug: Web/JavaScript/Reference/Operators/Присваивание
 //  y = 10
 //  z = 25
 
-x = y     // x будет присвоено значение 10
-x = y = z // x, y и z будут равны 25
+x = y; // x будет присвоено значение 10
+x = y = z; // x, y и z будут равны 25
 ```
 
 ## Спецификации

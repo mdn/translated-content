@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/block
 original_slug: Web/JavaScript/Reference/Statements/Блок
 ---
+
 {{jsSidebar("Statements")}}
 
 **Блок инструкций** (или **сложная инструкция** в других языках) используется для группировки нуля или более инструкций. Блок отделяется парой фигурных скобок и может опционально быть {{jsxref("Statements/label", "поименован")}}:

@@ -21,7 +21,7 @@ browser-compat: javascript.operators.logical_nullish_assignment
 ## Синтаксис
 
 ```js
-expr1 ??= expr2
+expr1 ??= expr2;
 ```
 
 ## Описание

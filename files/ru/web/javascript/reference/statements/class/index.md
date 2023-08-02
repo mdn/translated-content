@@ -33,7 +33,7 @@ Class declaration не {{Glossary("Hoisting", "поднимается")}} (в о
 ```js
 class Polygon {
   constructor(height, width) {
-    this.name = 'Polygon';
+    this.name = "Polygon";
     this.height = height;
     this.width = width;
   }
@@ -42,7 +42,7 @@ class Polygon {
 class Square extends Polygon {
   constructor(length) {
     super(length, length);
-    this.name = 'Square';
+    this.name = "Square";
   }
 }
 ```
@@ -51,17 +51,14 @@ class Square extends Polygon {
 >
 > ```js
 > var Foo = class {};
-> class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared
->
-> ```
->
+> class Foo {} // Uncaught TypeError: Identifier 'Foo' has already been declared
 > ```
 
 ## Спецификации
 
-| Спецификация                                                                                 | Статус                       | Комментарий         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}     | {{Spec2('ES6')}}         | Initial definition. |
+| Спецификация                                                           | Статус               | Комментарий         |
+| ---------------------------------------------------------------------- | -------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}     | {{Spec2('ES6')}}     | Initial definition. |
 | {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Поддержка браузерами

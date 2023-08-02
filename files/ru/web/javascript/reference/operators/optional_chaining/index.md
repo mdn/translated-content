@@ -15,10 +15,10 @@ translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 ## Синтаксис
 
 ```js
-obj?.prop
-obj?.[expr]
-arr?.[index]
-func?.(args)
+obj?.prop;
+obj?.[expr];
+arr?.[index];
+func?.(args);
 ```
 
 ## Описание
@@ -45,7 +45,7 @@ let nestedProp = obj.first?.second;
 
 ```js
 let temp = obj.first;
-let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);
+let nestedProp = temp === null || temp === undefined ? undefined : temp.second;
 ```
 
 ### Опциональная последовательность с вызовом функции
@@ -69,9 +69,9 @@ let result = someInterface.customMethod?.();
 function doSomething(onContent, onError) {
   try {
     // ... делаем что-то с данными
-  }
-  catch (err) {
-    if (onError) { // проверяем, существует ли onError
+  } catch (err) {
+    if (onError) {
+      // проверяем, существует ли onError
       onError(err.message);
     }
   }
@@ -82,9 +82,8 @@ function doSomething(onContent, onError) {
 // С использованием оператора опциональной последовательности
 function doSomething(onContent, onError) {
   try {
-   // ... делаем что-то с данными
-  }
-  catch (err) {
+    // ... делаем что-то с данными
+  } catch (err) {
     onError?.(err.message); // не выбросит исключение, если onError равен undefined
   }
 }
@@ -95,7 +94,7 @@ function doSomething(onContent, onError) {
 Вы также можете использовать оператор опциональной последовательности, когда обращаетесь к свойству с помощью [скобочной нотации](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Скобочная_нотация):
 
 ```js
-let nestedProp = obj?.['prop' + 'Name'];
+let nestedProp = obj?.["prop" + "Name"];
 ```
 
 ## Примеры
@@ -106,7 +105,7 @@ let nestedProp = obj?.['prop' + 'Name'];
 
 ```js
 let myMap = new Map();
-myMap.set("foo", {name: "baz", desc: "inga"});
+myMap.set("foo", { name: "baz", desc: "inga" });
 
 let nameBar = myMap.get("bar")?.name;
 ```
@@ -132,8 +131,8 @@ let customer = {
   name: "Carl",
   details: {
     age: 82,
-    location: "Paradise Falls" // точный адрес неизвестен
-  }
+    location: "Paradise Falls", // точный адрес неизвестен
+  },
 };
 let customerCity = customer.details?.address?.city;
 
@@ -148,7 +147,7 @@ let duration = vacations.trip?.getTime?.();
 ```js
 let customer = {
   name: "Carl",
-  details: { age: 82 }
+  details: { age: 82 },
 };
 const customerCity = customer?.city ?? "Unknown city";
 console.log(customerCity); // Unknown city
