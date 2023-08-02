@@ -32,12 +32,12 @@ Um valor inteiro `long`, a id da requisição, que identifica unicamente a entra
 ```js
 var start = null;
 var element = document.getElementById("ElementoQueVcQuerAnimar");
-element.style.position = 'absolute';
+element.style.position = "absolute";
 
 function step(timestamp) {
   if (!start) start = timestamp;
   var progress = timestamp - start;
-  element.style.left = Math.min(progress/10, 200) + "px";
+  element.style.left = Math.min(progress / 10, 200) + "px";
   if (progress < 2000) {
     window.requestAnimationFrame(step);
   }
@@ -46,24 +46,13 @@ function step(timestamp) {
 window.requestAnimationFrame(step);
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                                                                            | Status                                       | Comentário                         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------- |
-| {{SpecName('HTML WHATWG', '#animation-frames', 'requestAnimationFrame')}}                                                         | {{Spec2('HTML WHATWG')}}             | Sem mudanças, substitui a anterior |
-| {{SpecName('RequestAnimationFrame', '#dom-windowanimationtiming-requestanimationframe', 'requestAnimationFrame')}} | {{Spec2('RequestAnimationFrame')}} | Definição inicial                  |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Window.requestAnimationFrame")}}
-
-\[1] Anteriro ao Gecko 11.0, mozRequestAnimationFrame() podia ser chamado sem parâmetros de entrada. Isso não é mais suportado, como provavelmente não será parte do padrão
-
-\[2] O parâmetro do callback é {{domxref("DOMTimeStamp")}} ao invés de {{domxref("DOMHighResTimeStamp")}} se a versão prefixada do método foi utilizada `DOMTimeStamp` possui apenas precisão de milisegundo, mas `DOMHighResTimeStamp` possui precisão mínima de microsegundos. Portanto, o tempo zero é diferente: `DOMHighResTimeStamp` possui o mesmo tempo zero que `performance.now()`, mas DOMTimeStamp possui o mesmo tempo zero que `Date.now().`
-
-\[3] A chamada correta no Chrome para cancelar a requisição é currently `window.cancelAnimationFrame()`. Versões anteriores, `window.webkitCancelAnimationFrame()` e `window.webkitCancelRequestAnimationFrame()`, foram descontinuados mas possuem suporte por enquanto.
-
-\[4] Suporte para a versão prefixada foi removida no Firefox 42.
+{{Compat}}
 
 ## Veja também
 
