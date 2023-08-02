@@ -28,7 +28,7 @@ HTML の {{HTMLElement("tt")}} 要素を含む文字列です。
 下記の例は、 `fixed` メソッドを使用して文字列の表示方法を変更します。
 
 ```js
-var worldString = '世界のみなさん、こんにちは！';
+var worldString = "世界のみなさん、こんにちは！";
 console.log(worldString.fixed()); // "<tt>世界のみなさん、こんにちは！</tt>"
 ```
 

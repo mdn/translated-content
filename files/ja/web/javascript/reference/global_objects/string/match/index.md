@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/match
 ## 構文
 
 ```js
-match(regexp)
+match(regexp);
 ```
 
 ### 引数
@@ -62,7 +62,7 @@ match(regexp)
 正規表現が `i` フラグを含んでいるので、大文字と小文字の違いは無視されます。
 
 ```js
-const str = 'For more information, see Chapter 3.4.5.1';
+const str = "For more information, see Chapter 3.4.5.1";
 const re = /see (chapter \d+(\.\d)*)/i;
 const found = str.match(re);
 
@@ -86,7 +86,7 @@ console.log(found);
 以下の例は、 g と i フラグを `match()` で使用した実例です。 `A` から `E` までと、 `a` から `e` までのすべての文字が返され、それぞれが配列の個々の要素に入ります。
 
 ```js
-const str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+const str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 const regexp = /[A-E]/gi;
 const matches_array = str.match(regexp);
 
@@ -101,7 +101,7 @@ console.log(matches_array);
 名前付きキャプチャグループに対応しているブラウザーでは、次のコードは "`fox`" または "`cat`" を "`animal`" という名前のグループに入れます。
 
 ```js
-const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
 
 const capturingRegex = /(?<animal>fox|cat) jumps over/;
 const found = paragraph.match(capturingRegex);
@@ -113,7 +113,7 @@ console.log(found.groups); // {animal: "fox"}
 ```js
 const str = "Nothing will come of nothing.";
 
-str.match();   // returns [""]
+str.match(); // returns [""]
 ```
 
 ### RegExp ではないオブジェクトを引数にする
@@ -123,17 +123,18 @@ str.match();   // returns [""]
 正の符号がついた正の数であった場合、 `RegExp()` は正の符号を無視します。
 
 ```js
-const str1 = "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.",
-    str2 = "My grandfather is 65 years old and My grandmother is 63 years old.",
-    str3 = "The contract was declared null and void.";
-str1.match("number");   // "number" は文字列です。 ["number"] を返します。
-str1.match(NaN);        // NaN の型は数値です。 ["NaN"] を返します。
-str1.match(Infinity);   // Infinity の方は数値です。 ["Infinity"] を返します。
-str1.match(+Infinity);  // ["Infinity"] を返します
-str1.match(-Infinity);  // ["-Infinity"] を返します
-str2.match(65);         // ["65"] を返します
-str2.match(+65);        // 正の符号が付いた数値です。 ["65"] を返します
-str3.match(null);       // ["null"] を返します。
+const str1 =
+    "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.",
+  str2 = "My grandfather is 65 years old and My grandmother is 63 years old.",
+  str3 = "The contract was declared null and void.";
+str1.match("number"); // "number" は文字列です。 ["number"] を返します。
+str1.match(NaN); // NaN の型は数値です。 ["NaN"] を返します。
+str1.match(Infinity); // Infinity の方は数値です。 ["Infinity"] を返します。
+str1.match(+Infinity); // ["Infinity"] を返します
+str1.match(-Infinity); // ["-Infinity"] を返します
+str2.match(65); // ["65"] を返します
+str2.match(+65); // 正の符号が付いた数値です。 ["65"] を返します
+str3.match(null); // ["null"] を返します。
 ```
 
 ## 仕様書

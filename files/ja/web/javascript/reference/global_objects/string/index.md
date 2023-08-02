@@ -34,13 +34,13 @@ const string4 = new String("文字列オブジェクト");
 文字列内の個々の文字へのアクセス方法には、二通りの方法があります。そのひとつは {{jsxref("String.prototype.charAt()", "charAt()")}} メソッドです。
 
 ```js
-return 'ねこ'.charAt(1)  // "こ" が返される
+return "ねこ".charAt(1); // "こ" が返される
 ```
 
 そしてもうひとつは、文字列を配列のようなオブジェクトとして扱い、数値の添字を用いる方法です。 (ECMAScript 5 で導入)
 
 ```js
-return 'ねこ'[1]  // "こ" が返される。
+return "ねこ"[1]; // "こ" が返される。
 ```
 
 ブラケット記法を使用した文字アクセスでは、これらのプロパティに値を設定したり削除したりすることはできません。関連したプロパティを書き込んだり設定したりすることもできません。 (より詳細な情報は {{jsxref("Object.defineProperty()")}} を参照してください。)
@@ -50,14 +50,15 @@ return 'ねこ'[1]  // "こ" が返される。
 C 言語では 文字列の比較の為に `strcmp()` 関数を用います。 JavaScript では単純に [小なり / 大なり演算子](/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)を用います。
 
 ```js
-let a = 'a'
-let b = 'b'
-if (a < b) { // true
-  console.log(a + ' は ' + b + ' より小さい')
+let a = "a";
+let b = "b";
+if (a < b) {
+  // true
+  console.log(a + " は " + b + " より小さい");
 } else if (a > b) {
-  console.log(a + ' は ' + b + ' より大きい')
+  console.log(a + " は " + b + " より大きい");
 } else {
-  console.log(a + ' と ' + b + ' は等しい')
+  console.log(a + " と " + b + " は等しい");
 }
 ```
 
@@ -81,20 +82,20 @@ JavaScript では、 `String` オブジェクトと{{Glossary("Primitive", "プ�
 文字列リテラル (二重引用符または単一引用符で示されます)、および `String` 関数をコンストラクター以外の場面で (すなわち {{jsxref("Operators/new", "new")}} キーワードを使わずに) 呼び出した場合はプリミティブの文字列になります。 JavaScript では、必要に応じてプリミティブの文字列が自動的に `String` オブジェクトに変換されるので、プリミティブの文字列に対して `String` オブジェクトのメソッドを使用することができます。プリミティブの文字列に対して、メソッドの呼び出しやプロパティの参照が行われようとした場合、 JavaScript は自動的にプリミティブの文字列をオブジェクトでラップし、メソッドを呼び出したりプロパティの参照を行ったりします。
 
 ```js
-let s_prim = 'foo'
-let s_obj = new String(s_prim)
+let s_prim = "foo";
+let s_obj = new String(s_prim);
 
-console.log(typeof s_prim) // Logs "string"
-console.log(typeof s_obj)  // Logs "object"
+console.log(typeof s_prim); // Logs "string"
+console.log(typeof s_obj); // Logs "object"
 ```
 
 プリミティブの文字列と `String` オブジェクトは {{jsxref("Global_Objects/eval", "eval()")}} を使用すると異なる結果となります。 `eval` に渡されたプリミティブは、ソースコードとして扱われます。 `String` オブジェクトは他のオブジェクトと同様に、オブジェクトとしてそのままの文字列を返します。
 
 ```js
-let s1 = '2 + 2'              // 文字列プリミティブを生成
-var s2 = new String('2 + 2')  // String オブジェクトを生成
-console.log(eval(s1))         // 数値の 4 を返す
-console.log(eval(s2))         // 文字列の "2 + 2" を返す
+let s1 = "2 + 2"; // 文字列プリミティブを生成
+var s2 = new String("2 + 2"); // String オブジェクトを生成
+console.log(eval(s1)); // 数値の 4 を返す
+console.log(eval(s2)); // 文字列の "2 + 2" を返す
 ```
 
 こういった理由から、プリミティブの文字列を期待して実装されたコードは `String` オブジェクトでうまく動作しないことがあります。しかし、一般的にはこれらの違いを考慮しなければならないことはあまりありません。
@@ -102,7 +103,7 @@ console.log(eval(s2))         // 文字列の "2 + 2" を返す
 なお、 `String` オブジェクトは {{jsxref("String.prototype.valueOf()", "valueOf()")}} メソッドを用いることで、プリミティブの文字列に変換することができます。
 
 ```js
-console.log(eval(s2.valueOf()))  // 数値の 4 を返す
+console.log(eval(s2.valueOf())); // 数値の 4 を返す
 ```
 
 ### エスケープ表記
@@ -134,9 +135,10 @@ console.log(eval(s2.valueOf()))  // 数値の 4 を返す
 [+](/ja/docs/Web/JavaScript/Reference/Operators/Addition) 演算子を使用して、次のように複数の文字列を追加することができます。
 
 ```js
-let longString = "This is a very long string which needs " +
-                 "to wrap across multiple lines because " +
-                 "otherwise my code is unreadable."
+let longString =
+  "This is a very long string which needs " +
+  "to wrap across multiple lines because " +
+  "otherwise my code is unreadable.";
 ```
 
 #### 方法 2
@@ -146,9 +148,10 @@ let longString = "This is a very long string which needs " +
 この形式は以下のようになります。
 
 ```js
-let longString = "This is a very long string which needs \
+let longString =
+  "This is a very long string which needs \
 to wrap across multiple lines because \
-otherwise my code is unreadable."
+otherwise my code is unreadable.";
 ```
 
 これらの結果はともに同じ文字列が生成されます。
@@ -289,7 +292,7 @@ otherwise my code is unreadable."
 `String` を使用すると、 {{jsxref("String.prototype.toString()", "toString()")}} よりも信頼性の高い代替手段となり、 {{jsxref("null")}}, {{jsxref("undefined")}}, {{jsxref("Symbol", "symbols")}} に対して使用することもできます。
 
 ```js
-let outputStrings = []
+let outputStrings = [];
 for (let i = 0, n = inputValues.length; i < n; ++i) {
   outputStrings.push(String(inputValues[i]));
 }

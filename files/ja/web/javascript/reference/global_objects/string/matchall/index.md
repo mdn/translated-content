@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
 
 {{JSRef}}
 
-**`matchAll()`** は[キャプチャグループ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)を含む *[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)* に一致するすべての*文字列*をイテレーターで返すメソッドです。
+**`matchAll()`** は[キャプチャグループ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)を含む _[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)_ に一致するすべての*文字列*をイテレーターで返すメソッドです。
 
 {{EmbedInteractiveExample("pages/js/string-matchall.html")}}
 
@@ -36,12 +36,14 @@ str.matchAll(regexp)
 `matchAll` が JavaScript に追加される前は、 [regexp.exec](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) (および `/g` フラグ付きの正規表現) をループの中で呼び出すことですべての一致結果を取得することができました。
 
 ```js
-const regexp = RegExp('foo[a-z]*','g');
-const str = 'table football, foosball';
+const regexp = RegExp("foo[a-z]*", "g");
+const str = "table football, foosball";
 let match;
 
 while ((match = regexp.exec(str)) !== null) {
-  console.log(`Found ${match[0]} start=${match.index} end=${regexp.lastIndex}.`);
+  console.log(
+    `Found ${match[0]} start=${match.index} end=${regexp.lastIndex}.`,
+  );
   // expected output: "Found football start=6 end=14."
   // expected output: "Found foosball start=16 end=24."
 }
@@ -52,27 +54,31 @@ while ((match = regexp.exec(str)) !== null) {
 また代わりに `matchAll` を使うことで、 {{jsxref("Statements/for...of", "for...of")}}、 {{jsxref("Operators/Spread_syntax", "配列スプレッド", "", 1)}}、 {{jsxref("Array.from()")}} 構造と効率よく組み合わせることができます。
 
 ```js
-const regexp = RegExp('foo[a-z]*','g');
-const str = 'table football, foosball';
+const regexp = RegExp("foo[a-z]*", "g");
+const str = "table football, foosball";
 const matches = str.matchAll(regexp);
 
 for (const match of matches) {
-  console.log(`Found ${match[0]} start=${match.index} end=${match.index + match[0].length}.`);
+  console.log(
+    `Found ${match[0]} start=${match.index} end=${
+      match.index + match[0].length
+    }.`,
+  );
 }
 // expected output: "Found football start=6 end=14."
 // expected output: "Found foosball start=16 end=24."
 
 // matches iterator is exhausted after the for..of iteration
 // Call matchAll again to create a new iterator
-Array.from(str.matchAll(regexp), m => m[0]);
+Array.from(str.matchAll(regexp), (m) => m[0]);
 // Array [ "football", "foosball" ]
 ```
 
 `matchAll` は、グローバル (`g`) フラグがない場合は例外が発生します。
 
 ```js
-const regexp = RegExp('[a-c]','');
-const str = 'abc';
+const regexp = RegExp("[a-c]", "");
+const str = "abc";
 str.matchAll(regexp);
 // TypeError
 ```
@@ -80,10 +86,10 @@ str.matchAll(regexp);
 `matchAll` では内部的に {{jsxref("RegExp")}} オブジェクトをクローンします。そのため {{jsxref("Global_Objects/RegExp/exec", "regexp.exec()")}} とは違って文字列をスキャンした際に `lastIndex` が変わることはありません。
 
 ```js
-const regexp = RegExp('[a-c]','g');
+const regexp = RegExp("[a-c]", "g");
 regexp.lastIndex = 1;
-const str = 'abc';
-Array.from(str.matchAll(regexp), m => `${regexp.lastIndex} ${m[0]}`);
+const str = "abc";
+Array.from(str.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`);
 // Array [ "1 b", "1 c" ]
 ```
 
@@ -95,7 +101,7 @@ Array.from(str.matchAll(regexp), m => `${regexp.lastIndex} ${m[0]}`);
 
 ```js
 let regexp = /t(e)(st(\d?))/g;
-let str = 'test1test2';
+let str = "test1test2";
 
 str.match(regexp);
 // Array ['test1', 'test2']

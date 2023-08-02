@@ -28,12 +28,12 @@ HTML の {{HTMLElement("b")}} 要素を含む文字列です。
 下記の例は、 `fixed` メソッドを使用して文字列の表示方法を変更します。
 
 ```js
-var worldString = 'Hello, world';
+var worldString = "Hello, world";
 
-console.log(worldString.blink());   // <blink>Hello, world</blink>
-console.log(worldString.bold());    // <b>Hello, world</b>
+console.log(worldString.blink()); // <blink>Hello, world</blink>
+console.log(worldString.bold()); // <b>Hello, world</b>
 console.log(worldString.italics()); // <i>Hello, world</i>
-console.log(worldString.strike());  // <strike>Hello, world</strike>
+console.log(worldString.strike()); // <strike>Hello, world</strike>
 ```
 
 ## 仕様書

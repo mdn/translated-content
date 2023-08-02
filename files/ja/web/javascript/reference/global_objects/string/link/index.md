@@ -35,10 +35,10 @@ HTML の {{HTMLElement("a")}} 要素を含む文字列です。
 以下の例では文字列のメソッドを使用して、文字列の大きさを変更しています。
 
 ```js
-var hotText = 'MDN';
-var URL = 'https://developer.mozilla.org/';
+var hotText = "MDN";
+var URL = "https://developer.mozilla.org/";
 
-console.log('Click to return to ' + hotText.link(URL));
+console.log("Click to return to " + hotText.link(URL));
 // Click to return to <a href="https://developer.mozilla.org/">MDN</a>
 ```
 

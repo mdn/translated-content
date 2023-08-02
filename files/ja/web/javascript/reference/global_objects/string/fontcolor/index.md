@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 ## 構文
 
 ```js
-fontcolor(color)
+fontcolor(color);
 ```
 
 ### 引数
@@ -35,19 +35,21 @@ HTML の {{HTMLElement("font")}} 要素を含む文字列です。
 以下の例は `fontcolor()` メソッドを使用して、 HTML の `<font>` 要素を伴う文字列を生成することで文字列の色を変更しています。
 
 ```js
-var worldString = 'Hello, world';
+var worldString = "Hello, world";
 
-console.log(worldString.fontcolor('red') +  ' is red in this line');
+console.log(worldString.fontcolor("red") + " is red in this line");
 // '<font color="red">Hello, world</font> is red in this line'
 
-console.log(worldString.fontcolor('FF00') + ' is red in hexadecimal in this line');
+console.log(
+  worldString.fontcolor("FF00") + " is red in hexadecimal in this line",
+);
 // '<font color="FF00">Hello, world</font> is red in hexadecimal in this line'
 ```
 
 {{domxref("HTMLElement/style", "element.style")}} オブジェクトを使用すると、要素の `style` 属性を使用して、次のようにもっと汎用的に操作することができます。
 
 ```js
-document.getElementById('yourElemId').style.color = 'red';
+document.getElementById("yourElemId").style.color = "red";
 ```
 
 ## 仕様書

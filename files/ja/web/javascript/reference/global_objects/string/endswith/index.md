@@ -35,11 +35,11 @@ str.endsWith(searchString[, length])
 ### endsWith() の使用
 
 ```js
-let str = 'To be, or not to be, that is the question.'
+let str = "To be, or not to be, that is the question.";
 
-console.log(str.endsWith('question.'))  // true
-console.log(str.endsWith('to be'))      // false
-console.log(str.endsWith('to be', 19))  // true
+console.log(str.endsWith("question.")); // true
+console.log(str.endsWith("to be")); // false
+console.log(str.endsWith("to be", 19)); // true
 ```
 
 ## ポリフィル
@@ -48,7 +48,7 @@ console.log(str.endsWith('to be', 19))  // true
 
 ```js
 if (!String.prototype.endsWith) {
-  String.prototype.endsWith = function(search, this_len) {
+  String.prototype.endsWith = function (search, this_len) {
     if (this_len === undefined || this_len > this.length) {
       this_len = this.length;
     }

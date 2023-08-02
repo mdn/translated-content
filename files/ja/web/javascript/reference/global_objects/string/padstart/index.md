@@ -31,11 +31,11 @@ str.padStart(targetLength [, padString])
 ### 基本的な例
 
 ```js
-'abc'.padStart(10);         // "       abc"
-'abc'.padStart(10, "foo");  // "foofoofabc"
-'abc'.padStart(6,"123465"); // "123abc"
-'abc'.padStart(8, "0");     // "00000abc"
-'abc'.padStart(1);          // "abc"
+"abc".padStart(10); // "       abc"
+"abc".padStart(10, "foo"); // "foofoofabc"
+"abc".padStart(6, "123465"); // "123abc"
+"abc".padStart(8, "0"); // "00000abc"
+"abc".padStart(1); // "abc"
 ```
 
 ### 数値を固定長文字列へ変換
@@ -44,7 +44,7 @@ str.padStart(targetLength [, padString])
 // Javascript version of: (unsigned)
 //  printf "%0*d" width num
 function leftFillNum(num, targetLength) {
-    return num.toString().padStart(targetLength, 0);
+  return num.toString().padStart(targetLength, 0);
 }
 
 const num = 123;

@@ -49,22 +49,22 @@ Unicode は個々の文字に対して、*コードポイント*と呼ばれる�
 - "`n`" のコードポイント (U+006E) に続いて組み合わせチルダのコードポイント (U+0303)
 
 ```js
-let string1 = '\u00F1';
-let string2 = '\u006E\u0303';
+let string1 = "\u00F1";
+let string2 = "\u006E\u0303";
 
-console.log(string1);  //  ñ
-console.log(string2);  //  ñ
+console.log(string1); //  ñ
+console.log(string2); //  ñ
 ```
 
 しかし、コードポイントが異なるため、文字列の比較ではこれらが同じものとして扱われません。また、それぞれのコードポイントの数が異なるため、長さすら異なります。
 
 ```js
-let string1 = '\u00F1';            // ñ
-let string2 = '\u006E\u0303';      // ñ
+let string1 = "\u00F1"; // ñ
+let string2 = "\u006E\u0303"; // ñ
 
 console.log(string1 === string2); // false
-console.log(string1.length);      // 1
-console.log(string2.length);      // 2
+console.log(string1.length); // 1
+console.log(string2.length); // 2
 ```
 
 `normalize()` メソッドは、同じ文字を表すコードポイントのすべての並びを共通の正規化された形式に文字列を変換することで、この問題を解決するのに役立ちます。正規化の方法は主に二つがあり、一つは**正準等価性**に、もう一つは**互換等価性**に基づきます。
@@ -76,15 +76,15 @@ Unicode では、二つのコードポイントの並びが同じ抽象文字を
 `normalize()` を "`NFD`" または "`NFC`" の引数で使用することで、すべてが正準等価な文字列となる文字列の形を生成することができます。以下の例では、文字 "`ñ`" の二つの表現を正規化しています。
 
 ```js
-let string1 = '\u00F1';           // ñ
-let string2 = '\u006E\u0303';     // ñ
+let string1 = "\u00F1"; // ñ
+let string2 = "\u006E\u0303"; // ñ
 
-string1 = string1.normalize('NFD');
-string2 = string2.normalize('NFD');
+string1 = string1.normalize("NFD");
+string2 = string2.normalize("NFD");
 
 console.log(string1 === string2); // true
-console.log(string1.length);      // 2
-console.log(string2.length);      // 2
+console.log(string1.length); // 2
+console.log(string2.length); // 2
 ```
 
 #### 合成形と分解形
@@ -94,15 +94,15 @@ console.log(string2.length);      // 2
 "`NFC`" を指定すると**合成**正規形を取得することができ、これは複数のコードポイントを可能な限り単一のコードポイントで置き換えます。 "`ñ`" の合成正規形は "`\u00F1`" です。
 
 ```js
-let string1 = '\u00F1';                           // ñ
-let string2 = '\u006E\u0303';                     // ñ
+let string1 = "\u00F1"; // ñ
+let string2 = "\u006E\u0303"; // ñ
 
-string1 = string1.normalize('NFC');
-string2 = string2.normalize('NFC');
+string1 = string1.normalize("NFC");
+string2 = string2.normalize("NFC");
 
-console.log(string1 === string2);                 // true
-console.log(string1.length);                      // 1
-console.log(string2.length);                      // 1
+console.log(string1 === string2); // true
+console.log(string1.length); // 1
+console.log(string2.length); // 1
 console.log(string2.codePointAt(0).toString(16)); // f1
 ```
 
@@ -122,23 +122,23 @@ Unicode では、二つのコードポイントの並びが、同じ抽象文字
 `normalize()` を "`NFKD`" または "`NFKC`" を引数にして使用することで、互換等価な文字列が同じになる形の文字列を生成することができます。
 
 ```js
-let string1 = '\uFB00';
-let string2 = '\u0066\u0066';
+let string1 = "\uFB00";
+let string2 = "\u0066\u0066";
 
-console.log(string1);             // ﬀ
-console.log(string2);             // ff
+console.log(string1); // ﬀ
+console.log(string2); // ff
 console.log(string1 === string2); // false
-console.log(string1.length);      // 1
-console.log(string2.length);      // 2
+console.log(string1.length); // 1
+console.log(string2.length); // 2
 
-string1 = string1.normalize('NFKD');
-string2 = string2.normalize('NFKD');
+string1 = string1.normalize("NFKD");
+string2 = string2.normalize("NFKD");
 
-console.log(string1);             // ff <- 外見が変わった
-console.log(string2);             // ff
+console.log(string1); // ff <- 外見が変わった
+console.log(string2); // ff
 console.log(string1 === string2); // true
-console.log(string1.length);      // 2
-console.log(string2.length);      // 2
+console.log(string1.length); // 2
+console.log(string2.length); // 2
 ```
 
 互換等価な正規化を適用する際には、正規化された形式がすべてのアプリケーションに適しているとは限らないので、文字列で何をしようとしているのかを考慮することが重要です。上の例では、ユーザーが "`f`" を検索すれば文字列を見つけることができるので、正規化は検索に適しています。しかし、視覚的な表現が異なるため、表示には適切ではないかもしれません。
@@ -154,37 +154,33 @@ console.log(string2.length);      // 2
 
 // U+1E9B: LATIN SMALL LETTER LONG S WITH DOT ABOVE
 // U+0323: COMBINING DOT BELOW
-let str = '\u1E9B\u0323';
-
+let str = "\u1E9B\u0323";
 
 // Canonically-composed form (NFC)
 
 // U+1E9B: LATIN SMALL LETTER LONG S WITH DOT ABOVE
 // U+0323: COMBINING DOT BELOW
-str.normalize('NFC'); // '\u1E9B\u0323'
-str.normalize();      // same as above
-
+str.normalize("NFC"); // '\u1E9B\u0323'
+str.normalize(); // same as above
 
 // Canonically-decomposed form (NFD)
 
 // U+017F: LATIN SMALL LETTER LONG S
 // U+0323: COMBINING DOT BELOW
 // U+0307: COMBINING DOT ABOVE
-str.normalize('NFD'); // '\u017F\u0323\u0307'
-
+str.normalize("NFD"); // '\u017F\u0323\u0307'
 
 // Compatibly-composed (NFKC)
 
 // U+1E69: LATIN SMALL LETTER S WITH DOT BELOW AND DOT ABOVE
-str.normalize('NFKC'); // '\u1E69'
-
+str.normalize("NFKC"); // '\u1E69'
 
 // Compatibly-decomposed (NFKD)
 
 // U+0073: LATIN SMALL LETTER S
 // U+0323: COMBINING DOT BELOW
 // U+0307: COMBINING DOT ABOVE
-str.normalize('NFKD'); // '\u0073\u0323\u0307'
+str.normalize("NFKD"); // '\u0073\u0323\u0307'
 ```
 
 ## 仕様書

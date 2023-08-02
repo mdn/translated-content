@@ -33,9 +33,9 @@ str.anchor(name)
 ### anchor() の使用
 
 ```js
-var myString = 'Table of Contents';
+var myString = "Table of Contents";
 
-document.body.innerHTML = myString.anchor('contents_anchor');
+document.body.innerHTML = myString.anchor("contents_anchor");
 ```
 
 以下の HTML が生成されます。

@@ -45,19 +45,19 @@ UTF-16 では、もっとも一般的な文字は単一の 16 ビット値 (す�
 BMP 文字は、 UTF-16 では単一のコードユニットを使用します。
 
 ```js
-String.fromCharCode(65, 66, 67);   // returns "ABC"
-String.fromCharCode(0x2014);       // returns "—"
-String.fromCharCode(0x12014);      // also returns "—"; the digit 1 is truncated and ignored
-String.fromCharCode(8212);         // also returns "—"; 8212 is the decimal form of 0x2014
+String.fromCharCode(65, 66, 67); // returns "ABC"
+String.fromCharCode(0x2014); // returns "—"
+String.fromCharCode(0x12014); // also returns "—"; the digit 1 is truncated and ignored
+String.fromCharCode(8212); // also returns "—"; 8212 is the decimal form of 0x2014
 ```
 
 補助文字は、 UTF-16 では、 2 つのコードユニット (すなわちサロゲートペア) を必要とします。
 
 ```js
-String.fromCharCode(0xD83C, 0xDF03); // Code Point U+1F303 "Night with
-String.fromCharCode(55356, 57091);   // Stars" == "\uD83C\uDF03"
+String.fromCharCode(0xd83c, 0xdf03); // Code Point U+1F303 "Night with
+String.fromCharCode(55356, 57091); // Stars" == "\uD83C\uDF03"
 
-String.fromCharCode(0xD834, 0xDF06, 0x61, 0xD834, 0xDF07); // "\uD834\uDF06a\uD834\uDF07"
+String.fromCharCode(0xd834, 0xdf06, 0x61, 0xd834, 0xdf07); // "\uD834\uDF06a\uD834\uDF07"
 ```
 
 ## 仕様書

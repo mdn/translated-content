@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 ## 構文
 
 ```js
-fontsize(size)
+fontsize(size);
 ```
 
 ### 引数
@@ -35,17 +35,17 @@ HTML の {{HTMLElement("font")}} 要素を含む文字列です。
 以下の例では文字列のメソッドを使用して、文字列の大きさを変更しています。
 
 ```js
-var worldString = 'Hello, world';
+var worldString = "Hello, world";
 
-console.log(worldString.small());     // <small>Hello, world</small>
-console.log(worldString.big());       // <big>Hello, world</big>
+console.log(worldString.small()); // <small>Hello, world</small>
+console.log(worldString.big()); // <big>Hello, world</big>
 console.log(worldString.fontsize(7)); // <font size="7">Hello, world</fontsize>
 ```
 
 {{domxref("HTMLElement/style", "element.style")}} オブジェクトを使用すると、要素の `style` 属性を使用して、次のようにもっと汎用的に操作することができます。
 
 ```js
-document.getElementById('yourElemId').style.fontSize = '0.7em';
+document.getElementById("yourElemId").style.fontSize = "0.7em";
 ```
 
 ## 仕様書

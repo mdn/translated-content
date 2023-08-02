@@ -42,18 +42,18 @@ str.indexOf(searchValue [, fromIndex])
 `searchValue` が空文字列であった場合は奇妙な結果になります。 `fromIndex` の値がなかった場合や、 `fromIndex` の値が文字列の `length` よりも小さかった場合は、返値は `fromIndex` と同じになります。
 
 ```js
-'hello world'.indexOf('') // 0 を返す
-'hello world'.indexOf('', 0) // 0 を返す
-'hello world'.indexOf('', 3) // 3 を返す
-'hello world'.indexOf('', 8) // 8 を返す
+"hello world".indexOf(""); // 0 を返す
+"hello world".indexOf("", 0); // 0 を返す
+"hello world".indexOf("", 3); // 3 を返す
+"hello world".indexOf("", 8); // 8 を返す
 ```
 
 しかし、 `fromIndex` の値が文字列の `length` 以上であった場合、返値は文字列の `length` になります。
 
 ```js
-'hello world'.indexOf('', 11) // 11 を返す
-'hello world'.indexOf('', 13) // 11 を返す
-'hello world'.indexOf('', 22) // 11 を返す
+"hello world".indexOf("", 11); // 11 を返す
+"hello world".indexOf("", 13); // 11 を返す
+"hello world".indexOf("", 22); // 11 を返す
 ```
 
 前者の例では、 JS は指定された位置の直後に空文字列を見つけているようです。後者の例では、 JS は検索される文字列の末尾で空文字列を見つけているようです。
@@ -63,21 +63,21 @@ str.indexOf(searchValue [, fromIndex])
 文字列における文字は左から右にインデックス化されます。一番最初の文字の位置は `0` で、 `stringName` として呼び出された文字列における一番最後の文字は `stringName.length - 1` です。
 
 ```js
-'Blue Whale'.indexOf('Blue')      // 0 を返します
-'Blue Whale'.indexOf('Blute')     // -1 を返します
-'Blue Whale'.indexOf('Whale', 0)  // 5 を返します
-'Blue Whale'.indexOf('Whale', 5)  // 5 を返します
-'Blue Whale'.indexOf('Whale', 7)  // -1 を返します
-'Blue Whale'.indexOf('')          // 0 を返します
-'Blue Whale'.indexOf('', 9)       // 9 を返します
-'Blue Whale'.indexOf('', 10)      // 10 を返します
-'Blue Whale'.indexOf('', 11)      // 10 を返します
+"Blue Whale".indexOf("Blue"); // 0 を返します
+"Blue Whale".indexOf("Blute"); // -1 を返します
+"Blue Whale".indexOf("Whale", 0); // 5 を返します
+"Blue Whale".indexOf("Whale", 5); // 5 を返します
+"Blue Whale".indexOf("Whale", 7); // -1 を返します
+"Blue Whale".indexOf(""); // 0 を返します
+"Blue Whale".indexOf("", 9); // 9 を返します
+"Blue Whale".indexOf("", 10); // 10 を返します
+"Blue Whale".indexOf("", 11); // 10 を返します
 ```
 
 `indexOf()` メソッドは大文字と小文字を区別します。例えば、以下の式は `-1` を返します。
 
 ```js
-'Blue Whale'.indexOf('blue')  // -1 を返します
+"Blue Whale".indexOf("blue"); // -1 を返します
 ```
 
 ### 出現のチェック
@@ -85,9 +85,9 @@ str.indexOf(searchValue [, fromIndex])
 `0` は `true` と評価されず、 `-1` は `false` と評価されないことに注意してください。そのため、特定の文字列がほかの文字列に含まれているかをチェックする正確な方法は次のようになります。
 
 ```js
-'Blue Whale'.indexOf('Blue') !== -1  // true
-'Blue Whale'.indexOf('Bloe') !== -1  // false
-~('Blue Whale'.indexOf('Bloe')) // 0, which is falsy
+"Blue Whale".indexOf("Blue") !== -1; // true
+"Blue Whale".indexOf("Bloe") !== -1; // false
+~"Blue Whale".indexOf("Bloe"); // 0, which is falsy
 ```
 
 ## 例
@@ -97,10 +97,10 @@ str.indexOf(searchValue [, fromIndex])
 以下の例は、`"Brave new world"` という文字列において、与えられた値の位置を求めるために、`indexOf()` を使用しています。
 
 ```js
-const str = 'Brave new world'
+const str = "Brave new world";
 
-console.log('Index of first w from start is ' + str.indexOf('w'))   // 8 を表示
-console.log('Index of "new" from start is ' + str.indexOf('new'))   // 6 を表示
+console.log("Index of first w from start is " + str.indexOf("w")); // 8 を表示
+console.log('Index of "new" from start is ' + str.indexOf("new")); // 6 を表示
 ```
 
 ### `indexOf()` と 大文字と小文字の区別
@@ -110,12 +110,14 @@ console.log('Index of "new" from start is ' + str.indexOf('new'))   // 6 を表�
 それらの変数は、2 番目の文字列が大文字を含んでいることを除けば、同じ文字列を含んでいます。1 番目の {{domxref("console.log()")}} メソッドは `19` を表示します。しかし、 `indexOf()` メソッドは大文字と小文字を区別するので、 "`cheddar`" という文字列は `myCapString` では見つけられません。ですから、 `console.log()` メソッドは `-1` を表示します。
 
 ```js
-const myString    = 'brie, pepper jack, cheddar'
-const myCapString = 'Brie, Pepper Jack, Cheddar'
+const myString = "brie, pepper jack, cheddar";
+const myCapString = "Brie, Pepper Jack, Cheddar";
 
-console.log('myString.indexOf("cheddar") is ' + myString.indexOf('cheddar'))
+console.log('myString.indexOf("cheddar") is ' + myString.indexOf("cheddar"));
 // 19 を表示します
-console.log('myCapString.indexOf("cheddar") is ' + myCapString.indexOf('cheddar'))
+console.log(
+  'myCapString.indexOf("cheddar") is ' + myCapString.indexOf("cheddar"),
+);
 // -1 を表示します
 ```
 
@@ -124,16 +126,16 @@ console.log('myCapString.indexOf("cheddar") is ' + myCapString.indexOf('cheddar'
 以下の例は、 `count` に、 `str` という文字列中で `e` という文字が出現する回数を設定します。
 
 ```js
-const str = 'To be, or not to be, that is the question.'
-let count = 0
-let position = str.indexOf('e')
+const str = "To be, or not to be, that is the question.";
+let count = 0;
+let position = str.indexOf("e");
 
 while (position !== -1) {
-  count++
-  position = str.indexOf('e', position + 1)
+  count++;
+  position = str.indexOf("e", position + 1);
 }
 
-console.log(count)  // 4 を表示
+console.log(count); // 4 を表示
 ```
 
 ## 仕様書

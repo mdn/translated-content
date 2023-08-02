@@ -24,23 +24,23 @@ ECMAScript 2016 (ed. 7) では最大長が `2^53 - 1` 要素と制定されま�
 \`length\` は文字数ではなくコードユニットの数を数えるため、文字数を知りたい場合はこのようなことをする必要があります。
 
 ```js
-function getCharacterLength (str) {
+function getCharacterLength(str) {
   // The string iterator that is used here iterates over characters,
   //  not mere code units
   return [...str].length;
 }
 
-console.log(getCharacterLength('A\uD87E\uDC04Z')); // 3
+console.log(getCharacterLength("A\uD87E\uDC04Z")); // 3
 
 // While not recommended, you could add this to each string as follows:
 
-Object.defineProperty(String.prototype, 'charLength', {
-  get () {
+Object.defineProperty(String.prototype, "charLength", {
+  get() {
     return getCharacterLength(this);
-  }
+  },
 });
 
-console.log('A\uD87E\uDC04Z'.charLength); // 3
+console.log("A\uD87E\uDC04Z".charLength); // 3
 ```
 
 ## 例
@@ -48,13 +48,13 @@ console.log('A\uD87E\uDC04Z'.charLength); // 3
 ### 基本的な使い方
 
 ```js
-let x = 'Mozilla';
-let empty = '';
+let x = "Mozilla";
+let empty = "";
 
-console.log(x + ' の文字数：' + x.length + ' 文字(コード個数)' );
+console.log(x + " の文字数：" + x.length + " 文字(コード個数)");
 /* "Mozilla の文字数：7 文字(コード個数)" */
 
-console.log('空文字の文字数：' + empty.length + ' 文字' );
+console.log("空文字の文字数：" + empty.length + " 文字");
 /* "空文字の文字数：0 文字" */
 ```
 

@@ -12,8 +12,8 @@ slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 ## 構文
 
 ```js
-lastIndexOf(searchValue)
-lastIndexOf(searchValue, fromIndex)
+lastIndexOf(searchValue);
+lastIndexOf(searchValue, fromIndex);
 ```
 
 ### 引数
@@ -32,14 +32,14 @@ lastIndexOf(searchValue, fromIndex)
 文字列における文字は左から右にインデックス化されます。一番最初の文字の位置は `0` で、一番最後の文字は `str.length - 1` です。
 
 ```js
-'canal'.lastIndexOf('a');     // 3 を返す
-'canal'.lastIndexOf('a', 2);  // 1 を返す
-'canal'.lastIndexOf('a', 0);  // -1 を返す
-'canal'.lastIndexOf('x');     // -1 を返す
-'canal'.lastIndexOf('c', -5); // 0 を返す
-'canal'.lastIndexOf('c', 0);  // 0 を返す
-'canal'.lastIndexOf('');      // 5 を返す
-'canal'.lastIndexOf('', 2);   // 2 を返す
+"canal".lastIndexOf("a"); // 3 を返す
+"canal".lastIndexOf("a", 2); // 1 を返す
+"canal".lastIndexOf("a", 0); // -1 を返す
+"canal".lastIndexOf("x"); // -1 を返す
+"canal".lastIndexOf("c", -5); // 0 を返す
+"canal".lastIndexOf("c", 0); // 0 を返す
+"canal".lastIndexOf(""); // 5 を返す
+"canal".lastIndexOf("", 2); // 2 を返す
 ```
 
 > **メモ:** `'abab'.lastIndexOf('ab', 2)` は `2` を返し、 `0` にはなりません。 `fromIndex` は検索の開始位置を制約するものだからです。
@@ -49,7 +49,7 @@ lastIndexOf(searchValue, fromIndex)
 `lastIndexOf()` メソッドは大文字と小文字を区別します。例えば、以下の式は `-1` を返します。
 
 ```js
-'Blue Whale, Killer Whale'.lastIndexOf('blue'); // -1 を返す
+"Blue Whale, Killer Whale".lastIndexOf("blue"); // -1 を返す
 ```
 
 ## 例
@@ -59,15 +59,17 @@ lastIndexOf(searchValue, fromIndex)
 以下の例は、 {{jsxref("String.prototype.indexOf()", "indexOf()")}} と `lastIndexOf()` を使用して文字列 "`Brave new world`" の中の値の位置を示します。
 
 ```js
-let anyString = 'Brave new world';
+let anyString = "Brave new world";
 
-console.log('先頭から見て最初に w が出現する位置: ' + anyString.indexOf('w'));
+console.log("先頭から見て最初に w が出現する位置: " + anyString.indexOf("w"));
 // 8 と出力
-console.log('末尾から見て最初に w が出現する位置: ' + anyString.lastIndexOf('w'));
+console.log(
+  "末尾から見て最初に w が出現する位置: " + anyString.lastIndexOf("w"),
+);
 // 10 と出力
-console.log('先頭から見た "new" の位置: ' + anyString.indexOf('new'));
+console.log('先頭から見た "new" の位置: ' + anyString.indexOf("new"));
 // 6 と出力
-console.log('末尾から見た "new" の位置: ' + anyString.lastIndexOf('new'));
+console.log('末尾から見た "new" の位置: ' + anyString.lastIndexOf("new"));
 // 6 と出力
 ```
 

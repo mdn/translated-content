@@ -43,13 +43,13 @@ includes(searchString, position)
 `includes()` メソッドは大文字と小文字が区別します。例えば、次のコードでは `false` を返します。
 
 ```js
-'Blue Whale'.includes('blue')  // false を返す
+"Blue Whale".includes("blue"); // false を返す
 ```
 
 元の文字列と検索文字列の両方をすべて小文字に変換することで、この制約を回避することができます。
 
 ```js
-'Blue Whale'.toLowerCase().includes('blue')  // true を返す
+"Blue Whale".toLowerCase().includes("blue"); // true を返す
 ```
 
 ## 例
@@ -57,14 +57,14 @@ includes(searchString, position)
 ### includes() の使用
 
 ```js
-const str = 'To be, or not to be, that is the question.'
+const str = "To be, or not to be, that is the question.";
 
-console.log(str.includes('To be'))        // true
-console.log(str.includes('question'))     // true
-console.log(str.includes('nonexistent'))  // false
-console.log(str.includes('To be', 1))     // false
-console.log(str.includes('TO BE'))        // false
-console.log(str.includes(''))             // true
+console.log(str.includes("To be")); // true
+console.log(str.includes("question")); // true
+console.log(str.includes("nonexistent")); // false
+console.log(str.includes("To be", 1)); // false
+console.log(str.includes("TO BE")); // false
+console.log(str.includes("")); // true
 ```
 
 ## 仕様書

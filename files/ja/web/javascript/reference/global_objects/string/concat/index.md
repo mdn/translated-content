@@ -42,18 +42,18 @@ str.concat(str2 [, ...strN])
 複数の文字列を連結してコンソールに表示する例を以下に示します。
 
 ```js
-let hello = 'こんにちは、'
-console.log(hello.concat('鈴木さん', '。よい1日を。'))
+let hello = "こんにちは、";
+console.log(hello.concat("鈴木さん", "。よい1日を。"));
 /* こんにちは、鈴木さん。よい1日を。*/
 
-let greetList = ['こんにちは', ' ', '佐藤さん', '!']
-"".concat(...greetList)  // "こんにちは 佐藤さん!"
+let greetList = ["こんにちは", " ", "佐藤さん", "!"];
+"".concat(...greetList); // "こんにちは 佐藤さん!"
 
-"".concat({})    // [object Object]
-"".concat([])    // ""
-"".concat(null)  // "null"
-"".concat(true)  // "true"
-"".concat(4, 5)  // "45"
+"".concat({}); // [object Object]
+"".concat([]); // ""
+"".concat(null); // "null"
+"".concat(true); // "true"
+"".concat(4, 5); // "45"
 ```
 
 ## 仕様書

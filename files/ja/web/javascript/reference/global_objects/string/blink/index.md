@@ -30,12 +30,12 @@ HTML の {{HTMLElement("blink")}} 要素を含む文字列です。
 以下の例では文字列のメソッドを使用して、文字列の整形方法を変化させています。
 
 ```js
-var worldString = 'Hello, world';
+var worldString = "Hello, world";
 
-console.log(worldString.blink());   // <blink>Hello, world</blink>
-console.log(worldString.bold());    // <b>Hello, world</b>
+console.log(worldString.blink()); // <blink>Hello, world</blink>
+console.log(worldString.bold()); // <b>Hello, world</b>
 console.log(worldString.italics()); // <i>Hello, world</i>
-console.log(worldString.strike());  // <strike>Hello, world</strike>
+console.log(worldString.strike()); // <strike>Hello, world</strike>
 ```
 
 ## 仕様書

@@ -14,9 +14,9 @@ slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 ## 構文
 
 ```js
-referenceStr.localeCompare(compareString)
-referenceStr.localeCompare(compareString, locales)
-referenceStr.localeCompare(compareString, locales, options)
+referenceStr.localeCompare(compareString);
+referenceStr.localeCompare(compareString, locales);
+referenceStr.localeCompare(compareString, locales, options);
 ```
 
 ### 引数
@@ -55,13 +55,13 @@ referenceStr.localeCompare(compareString, locales, options)
 
 ```js
 // 文字 "a" は "c" は負の数になります
-'a'.localeCompare('c'); // -2 や -1 （あるいはまた別の負の数）
+"a".localeCompare("c"); // -2 や -1 （あるいはまた別の負の数）
 
 // 単語 "check" はアルファベット順に "against" より後ろなので正の数になります
-'check'.localeCompare('against'); // 2 や 1 （あるいはまた別の正の数）
+"check".localeCompare("against"); // 2 や 1 （あるいはまた別の正の数）
 
 // "a" と"a" は等しいので自然数 0 になります
-'a'.localeCompare('a'); // 0
+"a".localeCompare("a"); // 0
 ```
 
 ### 配列の並べ替え
@@ -69,8 +69,8 @@ referenceStr.localeCompare(compareString, locales, options)
 `localeCompare()` で、大文字小文字の違いを無視した配列の並べ替えができます。
 
 ```js
-let items = ['réservé', 'Premier', 'Cliché', 'communiqué', 'café', 'Adieu'];
-items.sort( (a, b) => a.localeCompare(b, 'fr', {ignorePunctuation: true}));
+let items = ["réservé", "Premier", "Cliché", "communiqué", "café", "Adieu"];
+items.sort((a, b) => a.localeCompare(b, "fr", { ignorePunctuation: true }));
 // ['Adieu', 'café', 'Cliché', 'communiqué', 'Premier', 'réservé']
 ```
 
@@ -83,9 +83,9 @@ items.sort( (a, b) => a.localeCompare(b, 'fr', {ignorePunctuation: true}));
 ```js
 function localeCompareSupportsLocales() {
   try {
-    'foo'.localeCompare('bar', 'i');
+    "foo".localeCompare("bar", "i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -96,8 +96,8 @@ function localeCompareSupportsLocales() {
 `localeCompare()` によって得られる結果は言語間で異なります。アプリケーションのユーザーインターフェイスで使用される言語の整列順を得るには、 `locales` 引数を使用してその言語 (そしてできればいくつかの代替言語) を指定していることを確かめて下さい。
 
 ```js
-console.log('ä'.localeCompare('z', 'de')); // 負の数: ドイツ語で ä は a に分類される
-console.log('ä'.localeCompare('z', 'sv')); // 正の数: スウェーデン語では ä は z の後になる
+console.log("ä".localeCompare("z", "de")); // 負の数: ドイツ語で ä は a に分類される
+console.log("ä".localeCompare("z", "sv")); // 正の数: スウェーデン語では ä は z の後になる
 ```
 
 ### `options` の使用
@@ -106,10 +106,10 @@ console.log('ä'.localeCompare('z', 'sv')); // 正の数: スウェーデン語�
 
 ```js
 // ドイツ語では ä の base letter は a
-console.log('ä'.localeCompare('a', 'de', { sensitivity: 'base' })); // 0
+console.log("ä".localeCompare("a", "de", { sensitivity: "base" })); // 0
 
 // スウェーデン語では ä と a は base letter が異なる
-console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // 正の値
+console.log("ä".localeCompare("a", "sv", { sensitivity: "base" })); // 正の値
 ```
 
 ### 数値の並べ替え
@@ -119,7 +119,7 @@ console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // 正の�
 console.log("2".localeCompare("10")); // 1
 
 // options を使用した数値
-console.log("2".localeCompare("10", undefined, {numeric: true})); // -1
+console.log("2".localeCompare("10", undefined, { numeric: true })); // -1
 
 // ロケールタグを使用した数値
 console.log("2".localeCompare("10", "en-u-kn-true")); // -1
