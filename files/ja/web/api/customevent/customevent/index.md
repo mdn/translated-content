@@ -1,6 +1,9 @@
 ---
-title: CustomEvent()
+title: "CustomEvent: CustomEvent() コンストラクター"
+short-title: CustomEvent()
 slug: Web/API/CustomEvent/CustomEvent
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
 {{APIRef("DOM")}}
@@ -9,16 +12,15 @@ slug: Web/API/CustomEvent/CustomEvent
 
 ## 構文
 
-```js
-new CustomEvent(type);
-new CustomEvent(type, options);
+```js-nolint
+new CustomEvent(type)
+new CustomEvent(type, options)
 ```
 
 ### 引数
 
 - `type`
-  - : イベントの名前を表す文字列です。
-    大文字と小文字を区別し、ブラウザーは常に `customevent` を設定します。
+  - : イベントの名前を表す文字列です。イベント名は大文字小文字を区別します。
 - `options` {{optional_inline}}
   - : オブジェクトで、 {{domxref("Event/Event", "Event()")}} で定義されるプロパティに加えて、以下のプロパティを指定することができます。
     - `detail` {{optional_inline}}

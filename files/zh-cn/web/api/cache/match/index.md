@@ -10,7 +10,7 @@ slug: Web/API/Cache/match
 ## 语法
 
 ```js
-cache.match(request,{options}).then(function(response) {
+cache.match(request, { options }).then(function (response) {
   //操作 response
 });
 ```
@@ -43,18 +43,20 @@ cache.match(request,{options}).then(function(response) {
 在这个例子中，我们决定只缓存通过 GET 取得的 HTML 文档。如果 `if()` 条件是 false，那么这个 fetch 处理器就不会处理这个请求。如果还有其他的 fetch 处理器被注册，它们将有机会调用 `event.respondWith()` 如果没有 fetch 处理器调用 `event.respondWith()` ，该请求就会像没有 service worker 介入一样由浏览器处理。如果 `fetch()` 返回了有效的 HTTP 响应，相应码是 4xx 或 5xx，那么`catch()` 就**不会**被调用。
 
 ```js
-self.addEventListener('fetch', function(event) {
+self.addEventListener("fetch", function (event) {
   // 我们只想在用 GET 方法请求 HTML 文档时调用 event.respondWith()。
-  if (event.request.method === 'GET' &&
-      event.request.headers.get('accept').indexOf('text/html') !== -1) {
-    console.log('Handling fetch event for', event.request.url);
+  if (
+    event.request.method === "GET" &&
+    event.request.headers.get("accept").indexOf("text/html") !== -1
+  ) {
+    console.log("Handling fetch event for", event.request.url);
     event.respondWith(
-      fetch(event.request).catch(function(e) {
-        console.error('Fetch failed; returning offline page instead.', e);
-        return caches.open(OFFLINE_CACHE).then(function(cache) {
+      fetch(event.request).catch(function (e) {
+        console.error("Fetch failed; returning offline page instead.", e);
+        return caches.open(OFFLINE_CACHE).then(function (cache) {
           return cache.match(OFFLINE_URL);
         });
-      })
+      }),
     );
   }
 });

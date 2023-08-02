@@ -35,7 +35,7 @@ Cette erreur ne se produit qu'en [mode strict](/fr/docs/Web/JavaScript/Reference
 Essayer de supprimer une variable normale avec `delete` ne fonctionne pas, voire lève une exception en mode strict :
 
 ```js example-bad
-'use strict';
+"use strict";
 
 var x;
 
@@ -50,7 +50,7 @@ delete x;
 Pour libérer le contenu d'une variable, on peut la passer à {{jsxref("null")}} :
 
 ```js example-good
-'use strict';
+"use strict";
 
 var x;
 // ...

@@ -12,9 +12,9 @@ HTTP 协议中的 **`If-Unmodified-Since`** 消息头用于请求之中，使得
 - 与 non-{{Glossary("safe")}} 方法如 {{HTTPMethod("POST")}} 搭配使用，可以用来[优化并发控制](https://en.wikipedia.org/wiki/Optimistic_concurrency_control)，例如在某些 wiki 应用中的做法：假如在原始副本获取之后，服务器上所存储的文档已经被修改，那么对其作出的编辑会被拒绝提交。
 - 与含有 {{HTTPHeader("If-Range")}} 消息头的范围请求搭配使用，用来确保新的请求片段来自于未经修改的文档。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | no                             |
 
 ## 语法
 

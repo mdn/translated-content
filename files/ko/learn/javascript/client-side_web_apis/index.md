@@ -2,6 +2,7 @@
 title: Client-side web APIs
 slug: Learn/JavaScript/Client-side_web_APIs
 ---
+
 {{LearnSidebar}}
 
 웹 사이트 또는 응용 프로그램 용 client-side JavaScript를 작성할때 API (응용 프로그램 프로그래밍 인터페이스)를 사용하지 않으면 많은것을 만들기 어렵습니다. API는 사이트가 실행되고 있는 브라우저와 운영 체제의 다양한 부분 그리고 웹 사이트 혹은 서비스의 데이터를 다룰 수 있는 인터페이스입니다. 이번장에서 우리는 API가 무엇인지, 그리고 개발할 때 자주 접하게 될 보편적인 API를 사용하는 방법에 대해 살펴볼 것입니다.

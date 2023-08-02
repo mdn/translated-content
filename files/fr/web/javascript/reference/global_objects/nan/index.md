@@ -15,7 +15,7 @@ La propriété globale **`NaN`** est une valeur utilisée pour représenter une 
 ## Syntaxe
 
 ```js
-NaN
+NaN;
 ```
 
 ## Description
@@ -31,17 +31,17 @@ Il est rare d'utiliser expressément `NaN` dans un programme. On récupère gén
 Les [opérateurs d'égalité](/fr/docs/Web/JavaScript/Les_différents_tests_d_égalité_comment_les_utiliser) (`==` et `===`) ne peuvent pas être utilisé pour tester une valeur par rapport à `NaN`. Il faut utiliser {{jsxref("Number.isNaN()")}} ou {{jsxref("isNaN", "isNaN()")}} à la place.
 
 ```js
-NaN === NaN;        // false
+NaN === NaN; // false
 Number.NaN === NaN; // false
-isNaN(NaN);         // true
-isNaN(Number.NaN);  // true
+isNaN(NaN); // true
+isNaN(Number.NaN); // true
 ```
 
 La différence entre `isNaN()` et `Number.isNaN()` est la façon dont les valeurs sont, ou non, converties en nombre avant de vérifier si la valeur est `NaN` : `isNaN()` convertira l'argument en nombre avant de vérifier alors que `Number.isNaN()` ne renverra `true` que si l'opérande vaut `NaN`.
 
 ```js
-isNaN('coucou monde');        // renvoie true
-Number.isNaN('coucou monde'); // renvoie false
+isNaN("coucou monde"); // renvoie true
+Number.isNaN("coucou monde"); // renvoie false
 ```
 
 ## Spécifications

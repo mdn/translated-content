@@ -1,5 +1,5 @@
 ---
-title: '고급 기법: 오디오 생성 및 시퀸싱'
+title: "고급 기법: 오디오 생성 및 시퀸싱"
 slug: Web/API/Web_Audio_API/Advanced_techniques
 ---
 
@@ -23,12 +23,12 @@ slug: Web/API/Web_Audio_API/Advanced_techniques
 
 각 소리들은 또한 해당 소리를 수정할 수 있는 슬라이더를 가지고 있는데, 이는 이펙트나 우리가 이 소리들을 만들기 위해 사용한 각 기법의 특정한 파라미터를 조작할 수 있게 해 줍니다. 우리가 사용하는 이 기법들은:
 
-| 소리의 이름 | 기법                              | 연관된 Web Audio API 기능                                                                                                        |
-| ----------- | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| "스윕"      | 오실레이터, 주기파                | {{domxref("OscillatorNode")}}, {{domxref("PeriodicWave")}}                                                   |
-| "펄스"      | 다수의 오실레이터                 | {{domxref("OscillatorNode")}}                                                                                         |
+| 소리의 이름 | 기법                              | 연관된 Web Audio API 기능                                                                         |
+| ----------- | --------------------------------- | ------------------------------------------------------------------------------------------------- |
+| "스윕"      | 오실레이터, 주기파                | {{domxref("OscillatorNode")}}, {{domxref("PeriodicWave")}}                                        |
+| "펄스"      | 다수의 오실레이터                 | {{domxref("OscillatorNode")}}                                                                     |
 | "노이즈"    | 무작위 노이즈 버퍼, 바이쿼드 필터 | {{domxref("AudioBuffer")}}, {{domxref("AudioBufferSourceNode")}}, {{domxref("BiquadFilterNode")}} |
-| "다이얼 음" | 재생할 사운드 샘플 로딩하기       | {{domxref("BaseAudioContext/decodeAudioData")}}, {{domxref("AudioBufferSourceNode")}}               |
+| "다이얼 음" | 재생할 사운드 샘플 로딩하기       | {{domxref("BaseAudioContext/decodeAudioData")}}, {{domxref("AudioBufferSourceNode")}}             |
 
 > **참고:** 이 악기는 좋은 소리를 내기 위해 만들어지지 않았습니다. 이것은 데모 코드를 제공하기 위해 만들어졌고 이런 악기의 **아주** 단순화된 버전을 나타냅니다. 이 소리들은 다이얼 접속 모뎀에 기반합니다. 만약 여러분이 이것이 어떤 소리인지 모른다면 [여기서 들어볼 수 있습니다.](https://soundcloud.com/john-pemberton/modem-dialup)
 
@@ -64,12 +64,12 @@ const wave = audioCtx.createPeriodicWave(wavetable.real, wavetable.imag);
 
 ```js
 function playSweep(time) {
-     const osc = audioCtx.createOscillator();
-     osc.setPeriodicWave(wave);
-     osc.frequency.value = 440;
-     osc.connect(audioCtx.destination);
-     osc.start(time);
-     osc.stop(time + 1);
+  const osc = audioCtx.createOscillator();
+  osc.setPeriodicWave(wave);
+  osc.frequency.value = 440;
+  osc.connect(audioCtx.destination);
+  osc.start(time);
+  osc.stop(time + 1);
 }
 ```
 
@@ -83,26 +83,48 @@ function playSweep(time) {
 
 ```html
 <label for="attack">Attack</label>
-<input name="attack" id="attack" type="range" min="0" max="1" value="0.2" step="0.1" />
+<input
+  name="attack"
+  id="attack"
+  type="range"
+  min="0"
+  max="1"
+  value="0.2"
+  step="0.1" />
 
 <label for="release">Release</label>
-<input name="release" id="release" type="range" min="0" max="1" value="0.5" step="0.1" />
+<input
+  name="release"
+  id="release"
+  type="range"
+  min="0"
+  max="1"
+  value="0.5"
+  step="0.1" />
 ```
 
 이제 우리는 JavaScript에서 몇 가지 변수들을 생성하고 입력 값들이 업데이트되었을 때 바뀌도록 할 수 있습니다:
 
 ```js
 let attackTime = 0.2;
-const attackControl = document.querySelector('#attack');
-attackControl.addEventListener('input', function() {
+const attackControl = document.querySelector("#attack");
+attackControl.addEventListener(
+  "input",
+  function () {
     attackTime = Number(this.value);
-}, false);
+  },
+  false,
+);
 
 let releaseTime = 0.5;
-const releaseControl = document.querySelector('#release');
-releaseControl.addEventListener('input', function() {
+const releaseControl = document.querySelector("#release");
+releaseControl.addEventListener(
+  "input",
+  function () {
     releaseTime = Number(this.value);
-}, false);
+  },
+  false,
+);
 ```
 
 ### 최종 playSweep() 함수
@@ -116,21 +138,21 @@ releaseControl.addEventListener('input', function() {
 ```js
 let sweepLength = 2;
 function playSweep(time) {
-    let osc = audioCtx.createOscillator();
-    osc.setPeriodicWave(wave);
-    osc.frequency.value = 440;
+  let osc = audioCtx.createOscillator();
+  osc.setPeriodicWave(wave);
+  osc.frequency.value = 440;
 
-    let sweepEnv = audioCtx.createGain();
-    sweepEnv.gain.cancelScheduledValues(time);
-    sweepEnv.gain.setValueAtTime(0, time);
-    // attack을 설정합니다
-    sweepEnv.gain.linearRampToValueAtTime(1, time + attackTime);
-    // release를 설정합니다
-    sweepEnv.gain.linearRampToValueAtTime(0, time + sweepLength - releaseTime);
+  let sweepEnv = audioCtx.createGain();
+  sweepEnv.gain.cancelScheduledValues(time);
+  sweepEnv.gain.setValueAtTime(0, time);
+  // attack을 설정합니다
+  sweepEnv.gain.linearRampToValueAtTime(1, time + attackTime);
+  // release를 설정합니다
+  sweepEnv.gain.linearRampToValueAtTime(0, time + sweepLength - releaseTime);
 
-    osc.connect(sweepEnv).connect(audioCtx.destination);
-    osc.start(time);
-    osc.stop(time + sweepLength);
+  osc.connect(sweepEnv).connect(audioCtx.destination);
+  osc.start(time);
+  osc.stop(time + sweepLength);
 }
 ```
 
@@ -144,7 +166,7 @@ function playSweep(time) {
 
 ```js
 const osc = audioCtx.createOscillator();
-osc.type = 'sine';
+osc.type = "sine";
 osc.frequency.value = 880;
 ```
 
@@ -161,7 +183,7 @@ amp.gain.setValueAtTime(1, audioCtx.currentTime);
 
 ```js
 const lfo = audioCtx.createOscillator();
-lfo.type = 'square';
+lfo.type = "square";
 lfo.frequency.value = 30;
 ```
 
@@ -185,7 +207,14 @@ UI 제어에 대해, 오실레이터의 두 주파수들이 range 입력을 통�
 
 ```html
 <label for="hz">Hz</label>
-<input name="hz" id="hz" type="range" min="660" max="1320" value="880" step="1" />
+<input
+  name="hz"
+  id="hz"
+  type="range"
+  min="660"
+  max="1320"
+  value="880"
+  step="1" />
 <label for="lfo">LFO</label>
 <input name="lfo" id="lfo" type="range" min="20" max="40" value="30" step="1" />
 ```
@@ -194,16 +223,24 @@ UI 제어에 대해, 오실레이터의 두 주파수들이 range 입력을 통�
 
 ```js
 let pulseHz = 880;
-const hzControl = document.querySelector('#hz');
-hzControl.addEventListener('input', function() {
+const hzControl = document.querySelector("#hz");
+hzControl.addEventListener(
+  "input",
+  function () {
     pulseHz = Number(this.value);
-}, false);
+  },
+  false,
+);
 
 let lfoHz = 30;
-const lfoControl = document.querySelector('#lfo');
-lfoControl.addEventListener('input', function() {
+const lfoControl = document.querySelector("#lfo");
+lfoControl.addEventListener(
+  "input",
+  function () {
     lfoHz = Number(this.value);
-}, false);
+  },
+  false,
+);
 ```
 
 ### 최종 playPulse() 함수
@@ -213,22 +250,22 @@ lfoControl.addEventListener('input', function() {
 ```js
 let pulseTime = 1;
 function playPulse(time) {
-    let osc = audioCtx.createOscillator();
-    osc.type = 'sine';
-    osc.frequency.value = pulseHz;
+  let osc = audioCtx.createOscillator();
+  osc.type = "sine";
+  osc.frequency.value = pulseHz;
 
-    let amp = audioCtx.createGain();
-    amp.gain.value = 1;
+  let amp = audioCtx.createGain();
+  amp.gain.value = 1;
 
-    let lfo = audioCtx.createOscillator();
-    lfo.type = 'square';
-    lfo.frequency.value = lfoHz;
+  let lfo = audioCtx.createOscillator();
+  lfo.type = "square";
+  lfo.frequency.value = lfoHz;
 
-    lfo.connect(amp.gain);
-    osc.connect(amp).connect(audioCtx.destination);
-    lfo.start();
-    osc.start(time);
-    osc.stop(time + pulseTime);
+  lfo.connect(amp.gain);
+  osc.connect(amp).connect(audioCtx.destination);
+  lfo.start();
+  osc.start(time);
+  osc.stop(time + pulseTime);
 }
 ```
 
@@ -254,7 +291,7 @@ let data = buffer.getChannelData(0); // 데이터 얻기
 
 // 버퍼를 노이즈로 채우기
 for (let i = 0; i < bufferSize; i++) {
-    data[i] = Math.random() * 2 - 1;
+  data[i] = Math.random() * 2 - 1;
 }
 ```
 
@@ -288,7 +325,7 @@ noise.start();
 
 ```js
 let bandpass = audioCtx.createBiquadFilter();
-bandpass.type = 'bandpass';
+bandpass.type = "bandpass";
 bandpass.frequency.value = 1000;
 
 // 그래프 연결하기
@@ -301,24 +338,46 @@ UI에서 우리는 사용자가 range 입력과 지난 섹션에서처럼의 이
 
 ```html
 <label for="duration">Duration</label>
-<input name="duration" id="duration" type="range" min="0" max="2" value="1" step="0.1" />
+<input
+  name="duration"
+  id="duration"
+  type="range"
+  min="0"
+  max="2"
+  value="1"
+  step="0.1" />
 
 <label for="band">Band</label>
-<input name="band" id="band" type="range" min="400" max="1200" value="1000" step="5" />
+<input
+  name="band"
+  id="band"
+  type="range"
+  min="400"
+  max="1200"
+  value="1000"
+  step="5" />
 ```
 
 ```js
 let noiseDuration = 1;
-const durControl = document.querySelector('#duration');
-durControl.addEventListener('input', function() {
+const durControl = document.querySelector("#duration");
+durControl.addEventListener(
+  "input",
+  function () {
     noiseDuration = Number(this.value);
-}, false);
+  },
+  false,
+);
 
 let bandHz = 1000;
-const bandControl = document.querySelector('#band');
-bandControl.addEventListener('input', function() {
+const bandControl = document.querySelector("#band");
+bandControl.addEventListener(
+  "input",
+  function () {
     bandHz = Number(this.value);
-}, false);
+  },
+  false,
+);
 ```
 
 ### 최종 playNoise() 함수
@@ -327,26 +386,26 @@ bandControl.addEventListener('input', function() {
 
 ```js
 function playNoise(time) {
-    const bufferSize = audioCtx.sampleRate * noiseDuration; // 노트의 시간을 설정합니다
-    const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate); // 빈 버퍼를 생성합니다
-    let data = buffer.getChannelData(0); // get data
+  const bufferSize = audioCtx.sampleRate * noiseDuration; // 노트의 시간을 설정합니다
+  const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate); // 빈 버퍼를 생성합니다
+  let data = buffer.getChannelData(0); // get data
 
-    // 버퍼를 노이즈로 채웁니다
-    for (let i = 0; i < bufferSize; i++) {
-        data[i] = Math.random() * 2 - 1;
-    }
+  // 버퍼를 노이즈로 채웁니다
+  for (let i = 0; i < bufferSize; i++) {
+    data[i] = Math.random() * 2 - 1;
+  }
 
-    // 생성된 데이터에 대해 버퍼 소스 생성하기
-    let noise = audioCtx.createBufferSource();
-    noise.buffer = buffer;
+  // 생성된 데이터에 대해 버퍼 소스 생성하기
+  let noise = audioCtx.createBufferSource();
+  noise.buffer = buffer;
 
-    let bandpass = audioCtx.createBiquadFilter();
-    bandpass.type = 'bandpass';
-    bandpass.frequency.value = bandHz;
+  let bandpass = audioCtx.createBiquadFilter();
+  bandpass.type = "bandpass";
+  bandpass.frequency.value = bandHz;
 
-    // 그래프 연결하기
-    noise.connect(bandpass).connect(audioCtx.destination);
-    noise.start(time);
+  // 그래프 연결하기
+  noise.connect(bandpass).connect(audioCtx.destination);
+  noise.start(time);
 }
 ```
 
@@ -373,9 +432,9 @@ async function getFile(audioContext, filepath) {
 
 ```js
 async function setupSample() {
-    const filePath = 'dtmf.mp3';
-    const sample = await getFile(audioCtx, filePath);
-    return sample;
+  const filePath = "dtmf.mp3";
+  const sample = await getFile(audioCtx, filePath);
+  return sample;
 }
 ```
 
@@ -384,10 +443,9 @@ async function setupSample() {
 이제 우리는 `setupSample()`을 다음과 같이 사용할 수 있습니다:
 
 ```js
-setupSample()
-    .then((sample) => {
-        // 샘플은 우리의 버퍼된 파일입니다
-        // ...
+setupSample().then((sample) => {
+  // 샘플은 우리의 버퍼된 파일입니다
+  // ...
 });
 ```
 
@@ -399,11 +457,11 @@ setupSample()
 
 ```js
 function playSample(audioContext, audioBuffer, time) {
-    const sampleSource = audioContext.createBufferSource();
-    sampleSource.buffer = audioBuffer;
-    sampleSource.connect(audioContext.destination)
-    sampleSource.start(time);
-    return sampleSource;
+  const sampleSource = audioContext.createBufferSource();
+  sampleSource.buffer = audioBuffer;
+  sampleSource.connect(audioContext.destination);
+  sampleSource.start(time);
+  return sampleSource;
 }
 ```
 
@@ -415,15 +473,26 @@ function playSample(audioContext, audioBuffer, time) {
 
 ```html
 <label for="rate">Rate</label>
-<input name="rate" id="rate" type="range" min="0.1" max="2" value="1" step="0.1" />
+<input
+  name="rate"
+  id="rate"
+  type="range"
+  min="0.1"
+  max="2"
+  value="1"
+  step="0.1" />
 ```
 
 ```js
 let playbackRate = 1;
-const rateControl = document.querySelector('#rate');
-rateControl.addEventListener('input', function() {
+const rateControl = document.querySelector("#rate");
+rateControl.addEventListener(
+  "input",
+  function () {
     playbackRate = Number(this.value);
-}, false);
+  },
+  false,
+);
 ```
 
 ### 최종 playSample() 함수
@@ -432,12 +501,12 @@ rateControl.addEventListener('input', function() {
 
 ```js
 function playSample(audioContext, audioBuffer, time) {
-    const sampleSource = audioContext.createBufferSource();
-    sampleSource.buffer = audioBuffer;
-    sampleSource.playbackRate.value = playbackRate;
-    sampleSource.connect(audioContext.destination)
-    sampleSource.start(time);
-    return sampleSource;
+  const sampleSource = audioContext.createBufferSource();
+  sampleSource.buffer = audioBuffer;
+  sampleSource.playbackRate.value = playbackRate;
+  sampleSource.connect(audioContext.destination);
+  sampleSource.start(time);
+  return sampleSource;
 }
 ```
 
@@ -455,10 +524,14 @@ function playSample(audioContext, audioBuffer, time) {
 
 ```js
 let tempo = 60.0;
-const bpmControl = document.querySelector('#bpm');
-bpmControl.addEventListener('input', function() {
+const bpmControl = document.querySelector("#bpm");
+bpmControl.addEventListener(
+  "input",
+  function () {
     tempo = Number(this.value);
-}, false);
+  },
+  false,
+);
 ```
 
 그리고 나서 우리는 얼마나 미리 우리가 내다보기를 원하는지, 그리고 얼마나 미리 우리가 스케쥴하기를 원하는지를 정의하는 변수를 생성할 것입니다:
@@ -475,15 +548,15 @@ let currentNote = 0;
 let nextNoteTime = 0.0; // 다음 노트가 예정되어 있을 때
 
 function nextNote() {
-    const secondsPerBeat = 60.0 / tempo;
+  const secondsPerBeat = 60.0 / tempo;
 
-    nextNoteTime += secondsPerBeat; // 박자 시간을 유지하기 위해 비트 길이를 추가
+  nextNoteTime += secondsPerBeat; // 박자 시간을 유지하기 위해 비트 길이를 추가
 
-    // 박자 숫자를 진행시키고, 0으로 만듭니다
-    currentNote++;
-    if (currentNote === 4) {
-            currentNote = 0;
-    }
+  // 박자 숫자를 진행시키고, 0으로 만듭니다
+  currentNote++;
+  if (currentNote === 4) {
+    currentNote = 0;
+  }
 }
 ```
 
@@ -493,37 +566,52 @@ function nextNote() {
 const notesInQueue = [];
 
 function scheduleNote(beatNumber, time) {
+  // 우리가 재생 중이 아닐지라도, 노트를 큐에 푸시합니다.
+  notesInQueue.push({ note: beatNumber, time: time });
 
-    // 우리가 재생 중이 아닐지라도, 노트를 큐에 푸시합니다.
-    notesInQueue.push({ note: beatNumber, time: time });
-
-    if (pads[0].querySelectorAll('button')[beatNumber].getAttribute('aria-checked') === 'true') {
-        playSweep(time)
-    }
-    if (pads[1].querySelectorAll('button')[beatNumber].getAttribute('aria-checked') === 'true') {
-        playPulse(time)
-    }
-    if (pads[2].querySelectorAll('button')[beatNumber].getAttribute('aria-checked') === 'true') {
-        playNoise(time)
-    }
-    if (pads[3].querySelectorAll('button')[beatNumber].getAttribute('aria-checked') === 'true') {
-        playSample(audioCtx, dtmf, time);
-    }
+  if (
+    pads[0]
+      .querySelectorAll("button")
+      [beatNumber].getAttribute("aria-checked") === "true"
+  ) {
+    playSweep(time);
+  }
+  if (
+    pads[1]
+      .querySelectorAll("button")
+      [beatNumber].getAttribute("aria-checked") === "true"
+  ) {
+    playPulse(time);
+  }
+  if (
+    pads[2]
+      .querySelectorAll("button")
+      [beatNumber].getAttribute("aria-checked") === "true"
+  ) {
+    playNoise(time);
+  }
+  if (
+    pads[3]
+      .querySelectorAll("button")
+      [beatNumber].getAttribute("aria-checked") === "true"
+  ) {
+    playSample(audioCtx, dtmf, time);
+  }
 }
 ```
 
 여기서 우리는 현재 시간을 보고 다음 노트에 대한 시간과 비교합니다; 두 개가 일치할 때 이것은 이전의 두 함수를 호출할 것입니다.
 
-{{domxref("AudioContext")}} 객체 인스턴스는 [`currentTime`](/en-US/docs/Web/API/BaseAudioContext/currentTime) 속성을 가지고 있는데, 이는 우리가 처음 컨텍스트를 생성한 이후의 초를 얻을 수 있게 합니다. 이것은 우리가 우리의 스텝 시퀸서 내에서 타이밍을 위해 사용해야만 하는 것입니다 — 약 소수 15자리까지의 정확한 float 값을 반환하는 이것은 극도로 정확합니다.
+{{domxref("AudioContext")}} 객체 인스턴스는 [`currentTime`](/ko/docs/Web/API/BaseAudioContext/currentTime) 속성을 가지고 있는데, 이는 우리가 처음 컨텍스트를 생성한 이후의 초를 얻을 수 있게 합니다. 이것은 우리가 우리의 스텝 시퀸서 내에서 타이밍을 위해 사용해야만 하는 것입니다 — 약 소수 15자리까지의 정확한 float 값을 반환하는 이것은 극도로 정확합니다.
 
 ```js
 function scheduler() {
-    // 다음 구간 전에 재생할 필요가 있을 노트가 있는 동안, 그것들을 스케쥴하고 포인터를 진행시킵니다.
-    while (nextNoteTime < audioCtx.currentTime + scheduleAheadTime ) {
-        scheduleNote(currentNote, nextNoteTime);
-        nextNote();
-    }
-    timerID = window.setTimeout(scheduler, lookahead);
+  // 다음 구간 전에 재생할 필요가 있을 노트가 있는 동안, 그것들을 스케쥴하고 포인터를 진행시킵니다.
+  while (nextNoteTime < audioCtx.currentTime + scheduleAheadTime) {
+    scheduleNote(currentNote, nextNoteTime);
+    nextNote();
+  }
+  timerID = window.setTimeout(scheduler, lookahead);
 }
 ```
 
@@ -533,25 +621,25 @@ function scheduler() {
 let lastNoteDrawn = 3;
 
 function draw() {
-    let drawNote = lastNoteDrawn;
-    let currentTime = audioCtx.currentTime;
+  let drawNote = lastNoteDrawn;
+  let currentTime = audioCtx.currentTime;
 
-    while (notesInQueue.length && notesInQueue[0].time < currentTime) {
-        drawNote = notesInQueue[0].note;
-        notesInQueue.splice(0,1);   // 노트를 큐에서 제거합니다
-    }
+  while (notesInQueue.length && notesInQueue[0].time < currentTime) {
+    drawNote = notesInQueue[0].note;
+    notesInQueue.splice(0, 1); // 노트를 큐에서 제거합니다
+  }
 
-    // 우리는 오직 노트가 이동되었을 경우 그릴 필요가 있습니다.
-    if (lastNoteDrawn != drawNote) {
-        pads.forEach(function(el, i) {
-            el.children[lastNoteDrawn].style.borderColor = 'hsla(0, 0%, 10%, 1)';
-            el.children[drawNote].style.borderColor = 'hsla(49, 99%, 50%, 1)';
-        });
+  // 우리는 오직 노트가 이동되었을 경우 그릴 필요가 있습니다.
+  if (lastNoteDrawn != drawNote) {
+    pads.forEach(function (el, i) {
+      el.children[lastNoteDrawn].style.borderColor = "hsla(0, 0%, 10%, 1)";
+      el.children[drawNote].style.borderColor = "hsla(49, 99%, 50%, 1)";
+    });
 
-        lastNoteDrawn = drawNote;
-    }
-    // 다시 그리기 위해 설정됨
-    requestAnimationFrame(draw);
+    lastNoteDrawn = drawNote;
+  }
+  // 다시 그리기 위해 설정됨
+  requestAnimationFrame(draw);
 }
 ```
 
@@ -561,39 +649,36 @@ function draw() {
 
 ```js
 // 로드된 샘플이 재생을 허용했을 때
-let loadingEl = document.querySelector('.loading');
-const playButton = document.querySelector('[data-playing]');
+let loadingEl = document.querySelector(".loading");
+const playButton = document.querySelector("[data-playing]");
 let isPlaying = false;
-setupSample()
-    .then((sample) => {
-        loadingEl.style.display = 'none'; // 로딩 스크린 제거
+setupSample().then((sample) => {
+  loadingEl.style.display = "none"; // 로딩 스크린 제거
 
-        dtmf = sample; // 우리의 playSample 함수에서 사용될 것임
+  dtmf = sample; // 우리의 playSample 함수에서 사용될 것임
 
-        playButton.addEventListener('click', function() {
-            isPlaying = !isPlaying;
+  playButton.addEventListener("click", function () {
+    isPlaying = !isPlaying;
 
-            if (isPlaying) { // 재생 시작
+    if (isPlaying) {
+      // 재생 시작
 
-                // 컨텍스트가 연기(suspended) 상태인지 확인 (자동 재생 정책)
-                if (audioCtx.state === 'suspended') {
-                    audioCtx.resume();
-                }
+      // 컨텍스트가 연기(suspended) 상태인지 확인 (자동 재생 정책)
+      if (audioCtx.state === "suspended") {
+        audioCtx.resume();
+      }
 
-                currentNote = 0;
-                nextNoteTime = audioCtx.currentTime;
-                scheduler(); // 스케쥴링 시작
-                requestAnimationFrame(draw); // 드로잉 루프 시작.
-                this.dataset.playing = 'true';
-
-            } else {
-
-                window.clearTimeout(timerID);
-                this.dataset.playing = 'false';
-
-            }
-        })
-    });
+      currentNote = 0;
+      nextNoteTime = audioCtx.currentTime;
+      scheduler(); // 스케쥴링 시작
+      requestAnimationFrame(draw); // 드로잉 루프 시작.
+      this.dataset.playing = "true";
+    } else {
+      window.clearTimeout(timerID);
+      this.dataset.playing = "false";
+    }
+  });
+});
 ```
 
 ## 요약

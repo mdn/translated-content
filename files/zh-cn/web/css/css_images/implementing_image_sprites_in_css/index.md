@@ -26,8 +26,12 @@ CSS **图像合并**（**Image sprites**）技术，亦作 CSS 贴图定位、�
 为设置 `background-position` 以使每个按钮得到合并后图片中的正确部分，可以在 `background` 属性中的 {{cssxref("url()")}} 后添加 x, y 两个坐标值，或直接使用 {{cssxref("background-position")}} 属性。例如：
 
 ```css
-#btn1 {background-position: -20px 0px}
-#btn2 {background-position: -40px 0px}
+#btn1 {
+  background-position: -20px 0px;
+}
+#btn2 {
+  background-position: -40px 0px;
+}
 ```
 
 这会将 ID 为 btn1 的元素的背景向左移 20px，ID 为 btn2 的元素的背景向左移 40px（假设这两个元素都带有 `toolbtn` 这个类且应用了上面 `background` 属性中定义的图片背景）

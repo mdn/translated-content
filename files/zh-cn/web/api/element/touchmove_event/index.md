@@ -12,9 +12,9 @@ slug: Web/API/Element/touchmove_event
 在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener('touchmove', (event) => {});
+addEventListener("touchmove", (event) => {});
 
-ontouchmove = (event) => { };
+ontouchmove = (event) => {};
 ```
 
 ## 事件类型

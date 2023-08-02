@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@species
 ## Syntaxe
 
 ```js
-Set[Symbol.species]
+Set[Symbol.species];
 ```
 
 ## Description

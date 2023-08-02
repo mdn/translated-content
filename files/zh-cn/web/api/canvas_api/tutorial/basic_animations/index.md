@@ -14,13 +14,13 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 你可以通过以下的步骤来画出一帧：
 
 1. **清空 canvas**
-    除非接下来要画的内容会完全充满 canvas（例如背景图），否则你需要清空所有。最简单的做法就是用 `clearRect` 方法。
+   除非接下来要画的内容会完全充满 canvas（例如背景图），否则你需要清空所有。最简单的做法就是用 `clearRect` 方法。
 2. **保存 canvas 状态**
-    如果你要改变一些会改变 canvas 状态的设置（样式，变形之类的），又要在每画一帧之时都是原始状态的话，你需要先保存一下。
+   如果你要改变一些会改变 canvas 状态的设置（样式，变形之类的），又要在每画一帧之时都是原始状态的话，你需要先保存一下。
 3. **绘制动画图形（animated shapes）**
-    这一步才是重绘动画帧。
+   这一步才是重绘动画帧。
 4. **恢复 canvas 状态**
-    如果已经保存了 canvas 的状态，可以先恢复它，然后重绘下一帧。
+   如果已经保存了 canvas 的状态，可以先恢复它，然后重绘下一帧。
 
 ## 操控动画
 
@@ -51,45 +51,51 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 var sun = new Image();
 var moon = new Image();
 var earth = new Image();
-function init(){
-  sun.src = 'canvas_sun.png';
-  moon.src = 'canvas_moon.png';
-  earth.src = 'canvas_earth.png';
+function init() {
+  sun.src = "canvas_sun.png";
+  moon.src = "canvas_moon.png";
+  earth.src = "canvas_earth.png";
   window.requestAnimationFrame(draw);
 }
 
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
-  ctx.globalCompositeOperation = 'destination-over';
-  ctx.clearRect(0,0,300,300); // clear canvas
+  ctx.globalCompositeOperation = "destination-over";
+  ctx.clearRect(0, 0, 300, 300); // clear canvas
 
-  ctx.fillStyle = 'rgba(0,0,0,0.4)';
-  ctx.strokeStyle = 'rgba(0,153,255,0.4)';
+  ctx.fillStyle = "rgba(0,0,0,0.4)";
+  ctx.strokeStyle = "rgba(0,153,255,0.4)";
   ctx.save();
-  ctx.translate(150,150);
+  ctx.translate(150, 150);
 
   // Earth
   var time = new Date();
-  ctx.rotate( ((2*Math.PI)/60)*time.getSeconds() + ((2*Math.PI)/60000)*time.getMilliseconds() );
-  ctx.translate(105,0);
-  ctx.fillRect(0,-12,50,24); // Shadow
-  ctx.drawImage(earth,-12,-12);
+  ctx.rotate(
+    ((2 * Math.PI) / 60) * time.getSeconds() +
+      ((2 * Math.PI) / 60000) * time.getMilliseconds(),
+  );
+  ctx.translate(105, 0);
+  ctx.fillRect(0, -12, 50, 24); // Shadow
+  ctx.drawImage(earth, -12, -12);
 
   // Moon
   ctx.save();
-  ctx.rotate( ((2*Math.PI)/6)*time.getSeconds() + ((2*Math.PI)/6000)*time.getMilliseconds() );
-  ctx.translate(0,28.5);
-  ctx.drawImage(moon,-3.5,-3.5);
+  ctx.rotate(
+    ((2 * Math.PI) / 6) * time.getSeconds() +
+      ((2 * Math.PI) / 6000) * time.getMilliseconds(),
+  );
+  ctx.translate(0, 28.5);
+  ctx.drawImage(moon, -3.5, -3.5);
   ctx.restore();
 
   ctx.restore();
 
   ctx.beginPath();
-  ctx.arc(150,150,105,0,Math.PI*2,false); // Earth orbit
+  ctx.arc(150, 150, 105, 0, Math.PI * 2, false); // Earth orbit
   ctx.stroke();
 
-  ctx.drawImage(sun,0,0,300,300);
+  ctx.drawImage(sun, 0, 0, 300, 300);
 
   window.requestAnimationFrame(draw);
 }
@@ -108,14 +114,14 @@ init();
 这个例子实现一个动态时钟，可以显示当前时间。
 
 ```js
-function clock(){
+function clock() {
   var now = new Date();
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.save();
-  ctx.clearRect(0,0,150,150);
-  ctx.translate(75,75);
-  ctx.scale(0.4,0.4);
-  ctx.rotate(-Math.PI/2);
+  ctx.clearRect(0, 0, 150, 150);
+  ctx.translate(75, 75);
+  ctx.scale(0.4, 0.4);
+  ctx.rotate(-Math.PI / 2);
   ctx.strokeStyle = "black";
   ctx.fillStyle = "white";
   ctx.lineWidth = 8;
@@ -123,11 +129,11 @@ function clock(){
 
   // Hour marks
   ctx.save();
-  for (var i=0;i<12;i++){
+  for (var i = 0; i < 12; i++) {
     ctx.beginPath();
-    ctx.rotate(Math.PI/6);
-    ctx.moveTo(100,0);
-    ctx.lineTo(120,0);
+    ctx.rotate(Math.PI / 6);
+    ctx.moveTo(100, 0);
+    ctx.lineTo(120, 0);
     ctx.stroke();
   }
   ctx.restore();
@@ -135,69 +141,71 @@ function clock(){
   // Minute marks
   ctx.save();
   ctx.lineWidth = 5;
-  for (i=0;i<60;i++){
-    if (i%5!=0) {
+  for (i = 0; i < 60; i++) {
+    if (i % 5 != 0) {
       ctx.beginPath();
-      ctx.moveTo(117,0);
-      ctx.lineTo(120,0);
+      ctx.moveTo(117, 0);
+      ctx.lineTo(120, 0);
       ctx.stroke();
     }
-    ctx.rotate(Math.PI/30);
+    ctx.rotate(Math.PI / 30);
   }
   ctx.restore();
 
   var sec = now.getSeconds();
   var min = now.getMinutes();
-  var hr  = now.getHours();
-  hr = hr>=12 ? hr-12 : hr;
+  var hr = now.getHours();
+  hr = hr >= 12 ? hr - 12 : hr;
 
   ctx.fillStyle = "black";
 
   // write Hours
   ctx.save();
-  ctx.rotate( hr*(Math.PI/6) + (Math.PI/360)*min + (Math.PI/21600)*sec )
+  ctx.rotate(
+    hr * (Math.PI / 6) + (Math.PI / 360) * min + (Math.PI / 21600) * sec,
+  );
   ctx.lineWidth = 14;
   ctx.beginPath();
-  ctx.moveTo(-20,0);
-  ctx.lineTo(80,0);
+  ctx.moveTo(-20, 0);
+  ctx.lineTo(80, 0);
   ctx.stroke();
   ctx.restore();
 
   // write Minutes
   ctx.save();
-  ctx.rotate( (Math.PI/30)*min + (Math.PI/1800)*sec )
+  ctx.rotate((Math.PI / 30) * min + (Math.PI / 1800) * sec);
   ctx.lineWidth = 10;
   ctx.beginPath();
-  ctx.moveTo(-28,0);
-  ctx.lineTo(112,0);
+  ctx.moveTo(-28, 0);
+  ctx.lineTo(112, 0);
   ctx.stroke();
   ctx.restore();
 
   // Write seconds
   ctx.save();
-  ctx.rotate(sec * Math.PI/30);
+  ctx.rotate((sec * Math.PI) / 30);
   ctx.strokeStyle = "#D40000";
   ctx.fillStyle = "#D40000";
   ctx.lineWidth = 6;
   ctx.beginPath();
-  ctx.moveTo(-30,0);
-  ctx.lineTo(83,0);
+  ctx.moveTo(-30, 0);
+  ctx.lineTo(83, 0);
   ctx.stroke();
   ctx.beginPath();
-  ctx.arc(0,0,10,0,Math.PI*2,true);
+  ctx.arc(0, 0, 10, 0, Math.PI * 2, true);
   ctx.fill();
   ctx.beginPath();
-  ctx.arc(95,0,10,0,Math.PI*2,true);
+  ctx.arc(95, 0, 10, 0, Math.PI * 2, true);
   ctx.stroke();
   ctx.fillStyle = "rgba(0,0,0,0)";
-  ctx.arc(0,0,3,0,Math.PI*2,true);
+  ctx.arc(0, 0, 3, 0, Math.PI * 2, true);
   ctx.fill();
   ctx.restore();
 
   ctx.beginPath();
   ctx.lineWidth = 14;
-  ctx.strokeStyle = '#325FA2';
-  ctx.arc(0,0,142,0,Math.PI*2,true);
+  ctx.strokeStyle = "#325FA2";
+  ctx.arc(0, 0, 142, 0, Math.PI * 2, true);
   ctx.stroke();
 
   ctx.restore();
@@ -224,7 +232,7 @@ var img = new Image();
 // User Variables - customize these to change the image being scrolled, its
 // direction, and the speed.
 
-img.src = 'capitan_meadows,_yosemite_national_park.jpg';
+img.src = "capitan_meadows,_yosemite_national_park.jpg";
 var CanvasXSize = 800;
 var CanvasYSize = 200;
 var speed = 30; // lower is faster
@@ -241,68 +249,68 @@ var clearX;
 var clearY;
 var ctx;
 
-img.onload = function() {
-    imgW = img.width * scale;
-    imgH = img.height * scale;
+img.onload = function () {
+  imgW = img.width * scale;
+  imgH = img.height * scale;
 
-    if (imgW > CanvasXSize) {
-        // image larger than canvas
-        x = CanvasXSize - imgW;
-    }
-    if (imgW > CanvasXSize) {
-        // image width larger than canvas
-        clearX = imgW;
-    } else {
-        clearX = CanvasXSize;
-    }
-    if (imgH > CanvasYSize) {
-        // image height larger than canvas
-        clearY = imgH;
-    } else {
-        clearY = CanvasYSize;
-    }
+  if (imgW > CanvasXSize) {
+    // image larger than canvas
+    x = CanvasXSize - imgW;
+  }
+  if (imgW > CanvasXSize) {
+    // image width larger than canvas
+    clearX = imgW;
+  } else {
+    clearX = CanvasXSize;
+  }
+  if (imgH > CanvasYSize) {
+    // image height larger than canvas
+    clearY = imgH;
+  } else {
+    clearY = CanvasYSize;
+  }
 
-    // get canvas context
-    ctx = document.getElementById('canvas').getContext('2d');
+  // get canvas context
+  ctx = document.getElementById("canvas").getContext("2d");
 
-    // set refresh rate
-    return setInterval(draw, speed);
-}
+  // set refresh rate
+  return setInterval(draw, speed);
+};
 
 function draw() {
-    ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
+  ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
 
-    // if image is <= Canvas Size
-    if (imgW <= CanvasXSize) {
-        // reset, start from beginning
-        if (x > CanvasXSize) {
-            x = -imgW + x;
-        }
-        // draw additional image1
-        if (x > 0) {
-            ctx.drawImage(img, -imgW + x, y, imgW, imgH);
-        }
-        // draw additional image2
-        if (x - imgW > 0) {
-            ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
-        }
+  // if image is <= Canvas Size
+  if (imgW <= CanvasXSize) {
+    // reset, start from beginning
+    if (x > CanvasXSize) {
+      x = -imgW + x;
     }
+    // draw additional image1
+    if (x > 0) {
+      ctx.drawImage(img, -imgW + x, y, imgW, imgH);
+    }
+    // draw additional image2
+    if (x - imgW > 0) {
+      ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
+    }
+  }
 
-    // image is > Canvas Size
-    else {
-        // reset, start from beginning
-        if (x > (CanvasXSize)) {
-            x = CanvasXSize - imgW;
-        }
-        // draw aditional image
-        if (x > (CanvasXSize-imgW)) {
-            ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
-        }
+  // image is > Canvas Size
+  else {
+    // reset, start from beginning
+    if (x > CanvasXSize) {
+      x = CanvasXSize - imgW;
     }
-    // draw image
-    ctx.drawImage(img, x, y,imgW, imgH);
-    // amount to move
-    x += dx;
+    // draw aditional image
+    if (x > CanvasXSize - imgW) {
+      ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
+    }
+  }
+  // draw image
+  ctx.drawImage(img, x, y, imgW, imgH);
+  // amount to move
+  x += dx;
 }
 ```
 
@@ -321,129 +329,136 @@ function draw() {
 ## 鼠标追踪动画
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-        <script>
-            var cn;
-            //= document.getElementById('cw');
-            var c;
-            var u = 10;
-            const m = {
-                x: innerWidth / 2,
-                y: innerHeight / 2
-            };
-            window.onmousemove = function(e) {
-                m.x = e.clientX;
-                m.y = e.clientY;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      var cn;
+      //= document.getElementById('cw');
+      var c;
+      var u = 10;
+      const m = {
+        x: innerWidth / 2,
+        y: innerHeight / 2,
+      };
+      window.onmousemove = function (e) {
+        m.x = e.clientX;
+        m.y = e.clientY;
+      };
+      function gc() {
+        var s = "0123456789ABCDEF";
+        var c = "#";
+        for (var i = 0; i < 6; i++) {
+          c += s[Math.ceil(Math.random() * 15)];
+        }
+        return c;
+      }
+      var a = [];
+      window.onload = function myfunction() {
+        cn = document.getElementById("cw");
+        c = cn.getContext("2d");
 
-            }
-            function gc() {
-                var s = "0123456789ABCDEF";
-                var c = "#";
-                for (var i = 0; i < 6; i++) {
-                    c += s[Math.ceil(Math.random() * 15)]
-                }
-                return c
-            }
-            var a = [];
-            window.onload = function myfunction() {
-                cn = document.getElementById('cw');
-                c = cn.getContext('2d');
+        for (var i = 0; i < 10; i++) {
+          var r = 30;
+          var x = Math.random() * (innerWidth - 2 * r) + r;
+          var y = Math.random() * (innerHeight - 2 * r) + r;
+          var t = new ob(
+            innerWidth / 2,
+            innerHeight / 2,
+            5,
+            "red",
+            Math.random() * 200 + 20,
+            2,
+          );
+          a.push(t);
+        }
+        //cn.style.backgroundColor = "#700bc8";
 
-                for (var i = 0; i < 10; i++) {
-                    var r = 30;
-                    var x = Math.random() * (innerWidth - 2 * r) + r;
-                    var y = Math.random() * (innerHeight - 2 * r) + r;
-                    var t = new ob(innerWidth / 2,innerHeight / 2,5,"red",Math.random() * 200 + 20,2);
-                    a.push(t);
-                }
-                //cn.style.backgroundColor = "#700bc8";
+        c.lineWidth = "2";
+        c.globalAlpha = 0.5;
+        resize();
+        anim();
+      };
+      window.onresize = function () {
+        resize();
+      };
+      function resize() {
+        cn.height = innerHeight;
+        cn.width = innerWidth;
+        for (var i = 0; i < 101; i++) {
+          var r = 30;
+          var x = Math.random() * (innerWidth - 2 * r) + r;
+          var y = Math.random() * (innerHeight - 2 * r) + r;
+          a[i] = new ob(
+            innerWidth / 2,
+            innerHeight / 2,
+            4,
+            gc(),
+            Math.random() * 200 + 20,
+            0.02,
+          );
+        }
+        //  a[0] = new ob(innerWidth / 2, innerHeight / 2, 40, "red", 0.05, 0.05);
+        //a[0].dr();
+      }
+      function ob(x, y, r, cc, o, s) {
+        this.x = x;
+        this.y = y;
+        this.r = r;
+        this.cc = cc;
+        this.theta = Math.random() * Math.PI * 2;
+        this.s = s;
+        this.o = o;
+        this.t = Math.random() * 150;
 
-                c.lineWidth = "2";
-                c.globalAlpha = 0.5;
-                resize();
-                anim()
-            }
-            window.onresize = function() {
+        this.o = o;
+        this.dr = function () {
+          const ls = {
+            x: this.x,
+            y: this.y,
+          };
+          this.theta += this.s;
+          this.x = m.x + Math.cos(this.theta) * this.t;
+          this.y = m.y + Math.sin(this.theta) * this.t;
+          c.beginPath();
+          c.lineWidth = this.r;
+          c.strokeStyle = this.cc;
+          c.moveTo(ls.x, ls.y);
+          c.lineTo(this.x, this.y);
+          c.stroke();
+          c.closePath();
+        };
+      }
+      function anim() {
+        requestAnimationFrame(anim);
+        c.fillStyle = "rgba(0,0,0,0.05)";
+        c.fillRect(0, 0, cn.width, cn.height);
+        a.forEach(function (e, i) {
+          e.dr();
+        });
+      }
+    </script>
+    <style>
+      #cw {
+        position: fixed;
+        z-index: -1;
+      }
 
-                resize();
-
-            }
-            function resize() {
-                cn.height = innerHeight;
-                cn.width = innerWidth;
-                for (var i = 0; i < 101; i++) {
-                    var r = 30;
-                    var x = Math.random() * (innerWidth - 2 * r) + r;
-                    var y = Math.random() * (innerHeight - 2 * r) + r;
-                    a[i] = new ob(innerWidth / 2,innerHeight / 2,4,gc(),Math.random() * 200 + 20,0.02);
-
-                }
-                //  a[0] = new ob(innerWidth / 2, innerHeight / 2, 40, "red", 0.05, 0.05);
-                //a[0].dr();
-            }
-            function ob(x, y, r, cc, o, s) {
-                this.x = x;
-                this.y = y;
-                this.r = r;
-                this.cc = cc;
-                this.theta = Math.random() * Math.PI * 2;
-                this.s = s;
-                this.o = o;
-                this.t = Math.random() * 150;
-
-                this.o = o;
-                this.dr = function() {
-                    const ls = {
-                        x: this.x,
-                        y: this.y
-                    };
-                    this.theta += this.s;
-                    this.x = m.x + Math.cos(this.theta) * this.t;
-                    this.y = m.y + Math.sin(this.theta) * this.t;
-                    c.beginPath();
-                    c.lineWidth = this.r;
-                    c.strokeStyle = this.cc;
-                    c.moveTo(ls.x, ls.y);
-                    c.lineTo(this.x, this.y);
-                    c.stroke();
-                    c.closePath();
-
-                }
-            }
-            function anim() {
-                requestAnimationFrame(anim);
-                c.fillStyle = "rgba(0,0,0,0.05)";
-                c.fillRect(0, 0, cn.width, cn.height);
-                a.forEach(function(e, i) {
-                    e.dr();
-                });
-
-            }
-        </script>
-        <style>
-            #cw {
-                position: fixed;
-                z-index: -1;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                background-color: rgba(0,0,0,0.05);
-            }
-        </style>
-    </head>
-    <body>
-        <canvas id="cw"></canvas>
-        qwerewr
-
-    </body>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="cw"></canvas>
+    qwerewr
+  </body>
 </html>
 ```
 

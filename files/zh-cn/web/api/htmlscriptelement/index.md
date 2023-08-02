@@ -128,16 +128,21 @@ _没有具体的方法;属性从其父类继承，{{domxref("HTMLElement")}}。_
 让我们创建一个名为 importScript 的函数，它能够在一个文档中导入新的脚本，创建一个{{HTMLElement("script")}} 节点，并立即插入到宿主{{HTMLElement("script")}} 之前 (通过 {{domxref("document.currentScript")}} 可以获取宿主 script 标签）。这些脚本将**异步**执行。更多细节，请参见 defer 和 async 属性。
 
 ```js
-function loadError (oError) {
+function loadError(oError) {
   throw new URIError("The script " + oError.target.src + " is not accessible.");
 }
 
-function importScript (sSrc, fOnload) {
+function importScript(sSrc, fOnload) {
   var oScript = document.createElement("script");
-  oScript.type = "text\/javascript";
+  oScript.type = "text/javascript";
   oScript.onerror = loadError;
-  if (fOnload) { oScript.onload = fOnload; }
-  document.currentScript.parentNode.insertBefore(oScript, document.currentScript);
+  if (fOnload) {
+    oScript.onload = fOnload;
+  }
+  document.currentScript.parentNode.insertBefore(
+    oScript,
+    document.currentScript,
+  );
   oScript.src = sSrc;
 }
 ```
@@ -148,20 +153,22 @@ function importScript (sSrc, fOnload) {
 
 ```js
 var importScript = (function (oHead) {
-
-  function loadError (oError) {
-    throw new URIError("The script " + oError.target.src + " is not accessible.");
+  function loadError(oError) {
+    throw new URIError(
+      "The script " + oError.target.src + " is not accessible.",
+    );
   }
 
   return function (sSrc, fOnload) {
     var oScript = document.createElement("script");
-    oScript.type = "text\/javascript";
+    oScript.type = "text/javascript";
     oScript.onerror = loadError;
-    if (fOnload) { oScript.onload = fOnload; }
+    if (fOnload) {
+      oScript.onload = fOnload;
+    }
     oHead.appendChild(oScript);
     oScript.src = sSrc;
-  }
-
+  };
 })(document.head || document.getElementsByTagName("head")[0]);
 ```
 
@@ -169,7 +176,14 @@ var importScript = (function (oHead) {
 
 ```js
 importScript("myScript1.js");
-importScript("myScript2.js", /* onload function: */ function () { alert("You read this alert because the script \"myScript2.js\" has been correctly loaded."); });
+importScript(
+  "myScript2.js",
+  /* onload function: */ function () {
+    alert(
+      'You read this alert because the script "myScript2.js" has been correctly loaded.',
+    );
+  },
+);
 ```
 
 ## 规范

@@ -22,7 +22,7 @@ A {{domxref("USVString")}}.
 Executed from inside a worker script, the following snippet will log the worker's global scope's origin to the console each time it receives a message
 
 ```js
-onmessage = function() {
+onmessage = function () {
   console.log(self.origin);
 };
 ```

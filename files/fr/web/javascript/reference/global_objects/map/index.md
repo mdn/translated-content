@@ -115,10 +115,10 @@ Ainsi, on pourra faire&nbsp;:
 
 ```js example-bad
 const mauvaiseMap = new Map();
-mauvaiseMap['bla'] = 'blaa';
-mauvaiseMap['bla2'] = 'blaaa2';
+mauvaiseMap["bla"] = "blaa";
+mauvaiseMap["bla2"] = "blaaa2";
 
-console.log(mauvaiseMap);  // Map { bla: 'blaa', bla2: 'blaaa2' }
+console.log(mauvaiseMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
 
 Mais ces instructions n'interagissent pas avec la structure `Map`, elles ne font qu'ajouter des propriétés objet. La valeur associée à la clé `"bla"` n'est pas stockée dans la `Map`. Ainsi, si on utilise les méthodes de `Map`, cela échouera&nbsp;:
@@ -133,13 +133,16 @@ Pour stocker des données dans une structure `Map`, on utilisera plutôt la mét
 
 ```js example-good
 const contacts = new Map();
-contacts.set('Jessie', {phone: "01 99 00 12 34", address: "1 Rue de l'avenue"});
-contacts.has('Jessie'); // true
-contacts.get('James'); // undefined
-contacts.set('James', {phone: "06 39 98 78 89", address: "3 Chemin du Parc"});
-contacts.get('Jessie'); // {phone: "01 99 00 12 34", address: "1 Rue de l'avenue"}
-contacts.delete('Miaouss'); // false
-contacts.delete('Jessie'); // true
+contacts.set("Jessie", {
+  phone: "01 99 00 12 34",
+  address: "1 Rue de l'avenue",
+});
+contacts.has("Jessie"); // true
+contacts.get("James"); // undefined
+contacts.set("James", { phone: "06 39 98 78 89", address: "3 Chemin du Parc" });
+contacts.get("Jessie"); // {phone: "01 99 00 12 34", address: "1 Rue de l'avenue"}
+contacts.delete("Miaouss"); // false
+contacts.delete("Jessie"); // true
 console.log(contacts.size); // 1
 ```
 
@@ -192,8 +195,8 @@ console.log(contacts.size); // 1
 const maMap = new Map();
 
 const objectKey = {},
-    functionKey = function () {},
-    stringKey = "une chaîne";
+  functionKey = function () {},
+  stringKey = "une chaîne";
 
 // définir les valeurs
 maMap.set(stringKey, "valeur associée à 'une chaîne'");
@@ -203,14 +206,14 @@ maMap.set(functionKey, "valeur associée à functionKey");
 maMap.size; // 3
 
 // récupérer les valeurs
-maMap.get(stringKey);     // "valeur associée à 'une chaîne'"
-maMap.get(objectKey);     // "valeur associée à objetClé"
-maMap.get(functionKey);   // "valeur associée à fonctionClé"
+maMap.get(stringKey); // "valeur associée à 'une chaîne'"
+maMap.get(objectKey); // "valeur associée à objetClé"
+maMap.get(functionKey); // "valeur associée à fonctionClé"
 
-maMap.get("une chaîne");  // "valeur associée à 'une chaîne'"
-                          // car chaineClé === 'une chaîne'
-maMap.get({});            // indéfini car objetClé !== {}
-maMap.get(function() {}); // indéfini car fonctionClé !== function () {}
+maMap.get("une chaîne"); // "valeur associée à 'une chaîne'"
+// car chaineClé === 'une chaîne'
+maMap.get({}); // indéfini car objetClé !== {}
+maMap.get(function () {}); // indéfini car fonctionClé !== function () {}
 ```
 
 ### Utiliser `NaN` comme clé
@@ -266,7 +269,7 @@ for (const [key, value] of maMap.entries()) {
 Il est aussi possible de parcourir des objets `Map` avec la méthode [`forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach)&nbsp;:
 
 ```js
-maMap.forEach(function(value, key) {
+maMap.forEach(function (value, key) {
   console.log(`${key} = ${value}`);
 });
 // 0 = zéro
@@ -276,7 +279,10 @@ maMap.forEach(function(value, key) {
 ### Relation avec les objets `Array`
 
 ```js
-const keyValuePair = [["clé1", "valeur1"], ["clé2", "valeur2"]];
+const keyValuePair = [
+  ["clé1", "valeur1"],
+  ["clé2", "valeur2"],
+];
 
 // On utilise le constructeur Map
 // pour transformer un tableau de clés/valeurs
@@ -302,9 +308,7 @@ console.log(Array.from(maMap.keys())); // affichera ["clé1", "clé2"]
 Il est possible de cloner des `Map` comme on clone des tableaux&nbsp;:
 
 ```js
-const original = new Map([
-  [1, 'un']
-]);
+const original = new Map([[1, "un"]]);
 
 const clone = new Map(original);
 
@@ -318,14 +322,14 @@ Il est également possible de fusionner deux `Map` en conservant le critère d'u
 
 ```js
 const premier = new Map([
-  [1, 'un'],
-  [2, 'deux'],
-  [3, 'trois'],
+  [1, "un"],
+  [2, "deux"],
+  [3, "trois"],
 ]);
 
 const second = new Map([
-  [1, 'uno'],
-  [2, 'dos']
+  [1, "uno"],
+  [2, "dos"],
 ]);
 
 // On fusionne les deux maps. C'est la "dernière" version
@@ -343,19 +347,19 @@ Il est également possible de fusionner des objets `Map` avec des objets `Array`
 
 ```js
 const premier = new Map([
-  [1, 'un'],
-  [2, 'deux'],
-  [3, 'trois'],
+  [1, "un"],
+  [2, "deux"],
+  [3, "trois"],
 ]);
 
 const second = new Map([
-  [1, 'uno'],
-  [2, 'dos']
+  [1, "uno"],
+  [2, "dos"],
 ]);
 
 // On peut fusionner des Maps avec un tableau
 // Là encore c'est le dernier exemplaire de la clé qui l'emporte
-const fusion = new Map([...premier, ...second, [1, 'eins']]);
+const fusion = new Map([...premier, ...second, [1, "eins"]]);
 
 console.log(fusion.get(1)); // eins
 console.log(fusion.get(2)); // dos

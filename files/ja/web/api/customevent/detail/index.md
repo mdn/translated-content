@@ -1,6 +1,9 @@
 ---
-title: CustomEvent.detail
+title: "CustomEvent: detail プロパティ"
+short-title: detail
 slug: Web/API/CustomEvent/detail
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
 {{APIRef("DOM")}}

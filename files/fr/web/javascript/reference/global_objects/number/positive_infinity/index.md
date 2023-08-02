@@ -39,9 +39,9 @@ Il est possible d'utiliser la propriété `Number.POSITIVE_INFINITY` pour faire 
 Dans l'exemple qui suit, on affecte une valeur plus grande que la valeur maximale à la variable `grosNombre`. Lors de l'exécution de l'instruction `if`, `grosNombre` aura la valeur `Infinity`, pour continuer, on met à jour `grosNombre` avec une valeur plus acceptable.
 
 ```js
-var grosNombre = Number.MAX_VALUE * 2
+var grosNombre = Number.MAX_VALUE * 2;
 if (grosNombre == Number.POSITIVE_INFINITY) {
- grosNombre = renvoyerUnNombreFini();
+  grosNombre = renvoyerUnNombreFini();
 }
 ```
 

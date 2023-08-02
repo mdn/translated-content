@@ -13,7 +13,7 @@ Le constructeur **`Promise()`** est principalement utilisé afin d'envelopper de
 ## Syntaxe
 
 ```js
-new Promise(executeur)
+new Promise(executeur);
 ```
 
 ### Paramètres

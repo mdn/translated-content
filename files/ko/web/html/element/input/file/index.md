@@ -72,7 +72,7 @@ slug: Web/HTML/Element/input/file
 | ----------------------- | ----------------------------------------------------------------------------------------- |
 | [`accept`](#accept)     | 허용하는 파일 유형을 나타내는 하나 이상의 [고유 파일 유형 지정자](#고유_파일_유형_지정자) |
 | [`capture`](#capture)   | 이미지 또는 비디오 데이터를 캡처할 때 사용할 방법                                         |
-| [`files`](#files)       | 선택한 파일을 나열하는 {{domxref("FileList")}}                                   |
+| [`files`](#files)       | 선택한 파일을 나열하는 {{domxref("FileList")}}                                            |
 | [`multiple`](#multiple) | 지정할 경우 사용자가 여러 개의 파일을 선택할 수 있음                                      |
 
 ### {{htmlattrdef("accept")}}
@@ -82,8 +82,10 @@ slug: Web/HTML/Element/input/file
 예를 들어, Microsoft Word 파일을 식별하는 방법은 여러가지이므로, Word 파일을 허용하는 `<input>`은 다음과 같은 형태를 갖게 됩니다.
 
 ```html
-<input type="file" id="docpicker"
-  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+<input
+  type="file"
+  id="docpicker"
+  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 ```
 
 ### {{htmlattrdef("capture")}}
@@ -127,7 +129,7 @@ slug: Web/HTML/Element/input/file
 `accept` 특성이 고유 파일 유형 지정자를 값으로 받습니다. 쉼표로 구분하면 여러 개의 지정자도 사용할 수 있습니다. 예를 들어, 표준 이미지 형식 뿐만 아니라 PDF 파일도 받을 수 있어야 하는 입력 칸은 다음 코드처럼 작성할 수 있습니다.
 
 ```html
-<input type="file" accept="image/*,.pdf">
+<input type="file" accept="image/*,.pdf" />
 ```
 
 ## 파일 입력 칸 사용하기
@@ -136,13 +138,13 @@ slug: Web/HTML/Element/input/file
 
 ```html
 <form method="post" enctype="multipart/form-data">
- <div>
-   <label for="file">Choose file to upload</label>
-   <input type="file" id="file" name="file" multiple>
- </div>
- <div>
-   <button>Submit</button>
- </div>
+  <div>
+    <label for="file">Choose file to upload</label>
+    <input type="file" id="file" name="file" multiple />
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
 </form>
 ```
 
@@ -200,8 +202,11 @@ div {
 <form method="post" enctype="multipart/form-data">
   <div>
     <label for="profile_pic">Choose file to upload</label>
-    <input type="file" id="profile_pic" name="profile_pic"
-          accept=".jpg, .jpeg, .png">
+    <input
+      type="file"
+      id="profile_pic"
+      name="profile_pic"
+      accept=".jpg, .jpeg, .png" />
   </div>
   <div>
     <button>Submit</button>
@@ -233,10 +238,10 @@ div {
 
 1. 파일 입력 칸의 값을 스크립트에서 설정할 수는 없습니다. 따라서 다음 코드는 아무런 효과도 내지 않습니다.
 
-    ```js
-    const input = document.querySelector("input[type=file]");
-    input.value = "foo";
-    ```
+   ```js
+   const input = document.querySelector("input[type=file]");
+   input.value = "foo";
+   ```
 
 2. `<input type="file">` 로 선택한 원본 파일의 실제 경로는 명확한 보안상 문제로 인해 알 수 없습니다. 대신 앞에 `C:\fakepath\` 를 붙인 파일 이름을 경로로 보여줍니다. 하필 이런 모습이 된 것에는 역사적인 이유가 있지만 이 동작은 모든 최신 브라우저에서 지원하고 있으며, 사실 [명세에도 포함](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly)되어 있습니다.
 
@@ -252,7 +257,12 @@ div {
 <form method="post" enctype="multipart/form-data">
   <div>
     <label for="image_uploads">Choose images to upload (PNG, JPG)</label>
-    <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple>
+    <input
+      type="file"
+      id="image_uploads"
+      name="image_uploads"
+      accept=".jpg, .jpeg, .png"
+      multiple />
   </div>
   <div class="preview">
     <p>No files currently selected for upload</p>
@@ -280,7 +290,8 @@ form ol {
   padding-left: 0;
 }
 
-form li, div > p {
+form li,
+div > p {
   background: #eee;
   display: flex;
   justify-content: space-between;
@@ -299,8 +310,9 @@ form p {
   padding-left: 10px;
 }
 
-form label, form button {
-  background-color: #7F9CCB;
+form label,
+form button {
+  background-color: #7f9ccb;
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px ridge black;
@@ -308,13 +320,15 @@ form label, form button {
   height: auto;
 }
 
-form label:hover, form button:hover {
-  background-color: #2D5BA3;
+form label:hover,
+form button:hover {
+  background-color: #2d5ba3;
   color: white;
 }
 
-form label:active, form button:active {
-  background-color: #0D3F8F;
+form label:active,
+form button:active {
+  background-color: #0d3f8f;
   color: white;
 }
 ```
@@ -326,8 +340,8 @@ form label:active, form button:active {
 우선 양식의 파일 입력 칸과, `.preview` 클래스를 가진 {{htmlelement("div")}} 요소에 대한 참조를 가져옵니다. 그 후, {{htmlelement("input")}} 요소를 숨겨버립니다. 파일 입력 칸은 보통 못생겼고, 스타일을 적용하기도 어려우며 브라우저마다 디자인이 다르기 때문입니다. `<input>`은 연결된 {{htmlelement("label")}}을 클릭해도 활성화할 수 있으므로, 시각적으로 `<input>`을 숨긴 후 레이블에 버튼처럼 스타일을 적용해서, 파일을 업로드하고 싶은 경우 레이블을 누르라는 것을 알려주는 편이 낫습니다.
 
 ```js
-var input = document.querySelector('input');
-var preview = document.querySelector('.preview');
+var input = document.querySelector("input");
+var preview = document.querySelector(".preview");
 
 input.style.opacity = 0;
 ```
@@ -337,7 +351,7 @@ input.style.opacity = 0;
 그 다음으로는 입력 칸에 [이벤트 수신기](/ko/docs/Web/API/EventTarget/addEventListener)를 부착해 그 값이 달라지는지(예제의 경우, 파일을 선택할 때) 지켜봅니다. 이벤트 수신기는 밑에서 만들 `updateImageDisplay()` 함수를 호출하게 됩니다.
 
 ```js
-input.addEventListener('change', updateImageDisplay);
+input.addEventListener("change", updateImageDisplay);
 ```
 
 `updateImageDisplay()` 함수를 호출하면 다음 작업을 수행하게 됩니다.
@@ -356,25 +370,27 @@ input.addEventListener('change', updateImageDisplay);
 
 ```js
 function updateImageDisplay() {
-  while(preview.firstChild) {
+  while (preview.firstChild) {
     preview.removeChild(preview.firstChild);
   }
 
   const curFiles = input.files;
-  if(curFiles.length === 0) {
-    const para = document.createElement('p');
-    para.textContent = 'No files currently selected for upload';
+  if (curFiles.length === 0) {
+    const para = document.createElement("p");
+    para.textContent = "No files currently selected for upload";
     preview.appendChild(para);
   } else {
-    const list = document.createElement('ol');
+    const list = document.createElement("ol");
     preview.appendChild(list);
 
-    for(const file of curFiles) {
-      const listItem = document.createElement('li');
-      const para = document.createElement('p');
-      if(validFileType(file)) {
-        para.textContent = `File name ${file.name}, file size ${returnFileSize(file.size)}.`;
-        const image = document.createElement('img');
+    for (const file of curFiles) {
+      const listItem = document.createElement("li");
+      const para = document.createElement("p");
+      if (validFileType(file)) {
+        para.textContent = `File name ${file.name}, file size ${returnFileSize(
+          file.size,
+        )}.`;
+        const image = document.createElement("img");
         image.src = URL.createObjectURL(file);
 
         listItem.appendChild(image);
@@ -404,7 +420,7 @@ const fileTypes = [
   "image/svg+xml",
   "image/tiff",
   "image/webp",
-  "image/x-icon"
+  "image/x-icon",
 ];
 
 function validFileType(file) {
@@ -416,12 +432,12 @@ function validFileType(file) {
 
 ```js
 function returnFileSize(number) {
-  if(number < 1024) {
-    return number + 'bytes';
-  } else if(number >= 1024 && number < 1048576) {
-    return (number/1024).toFixed(1) + 'KB';
-  } else if(number >= 1048576) {
-    return (number/1048576).toFixed(1) + 'MB';
+  if (number < 1024) {
+    return number + "bytes";
+  } else if (number >= 1024 && number < 1048576) {
+    return (number / 1024).toFixed(1) + "KB";
+  } else if (number >= 1048576) {
+    return (number / 1048576).toFixed(1) + "MB";
   }
 }
 ```

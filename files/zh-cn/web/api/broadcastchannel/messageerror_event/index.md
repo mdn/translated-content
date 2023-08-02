@@ -1,5 +1,5 @@
 ---
-title: 'BroadcastChannel: messageerror event'
+title: "BroadcastChannel: messageerror event"
 slug: Web/API/BroadcastChannel/messageerror_event
 ---
 
@@ -39,13 +39,13 @@ slug: Web/API/BroadcastChannel/messageerror_event
 以下代码使用 [`addEventListener`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 来监听消息和错误：
 
 ```js
-const channel = new BroadcastChannel('example-channel');
+const channel = new BroadcastChannel("example-channel");
 
-channel.addEventListener('message', (event) => {
+channel.addEventListener("message", (event) => {
   received.textContent = event.data;
 });
 
-channel.addEventListener('messageerror', (event) => {
+channel.addEventListener("messageerror", (event) => {
   console.error(event);
 });
 ```
@@ -53,7 +53,7 @@ channel.addEventListener('messageerror', (event) => {
 使用 [`onmessage`](/zh-CN/docs/Web/API/BroadcastChannel/onmessage) 和 [`onmessageerror`](/zh-CN/docs/Web/API/BroadcastChannel/onmessageerror) 事件处理程序来实现相同效果：
 
 ```js
-const channel = new BroadcastChannel('example-channel');
+const channel = new BroadcastChannel("example-channel");
 
 channel.onmessage = (event) => {
   received.textContent = event.data;

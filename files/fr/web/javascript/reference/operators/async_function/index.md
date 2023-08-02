@@ -39,29 +39,30 @@ Une expression `async function` est très proche, et partage quasiment la même 
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
-};
+}
 
-(async function(x) { // fonction asynchrone immédiatement appelée
+(async function (x) {
+  // fonction asynchrone immédiatement appelée
   var a = resolveAfter2Seconds(20);
   var b = resolveAfter2Seconds(30);
-  return x + await a + await b;
-})(10).then(v => {
-  console.log(v);  // affiche 60 après 2 secondes.
+  return x + (await a) + (await b);
+})(10).then((v) => {
+  console.log(v); // affiche 60 après 2 secondes.
 });
 
-var add = async function(x) {
+var add = async function (x) {
   var a = await resolveAfter2Seconds(20);
   var b = await resolveAfter2Seconds(30);
   return x + a + b;
 };
 
-add(10).then(v => {
-  console.log(v);  // affiche 60 après 4 secondes.
+add(10).then((v) => {
+  console.log(v); // affiche 60 après 4 secondes.
 });
 ```
 

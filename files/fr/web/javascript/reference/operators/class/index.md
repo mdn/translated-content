@@ -54,12 +54,12 @@ var Toto = class TotoNommé {
   quiEstLa() {
     return TotoNommé.name;
   }
-}
+};
 
-var truc = new Toto;
+var truc = new Toto();
 truc.quiEstLa(); // "TotoNommmé"
-TotoNommé.name;  // ReferenceError
-Toto.name;       // "TotoNommé"
+TotoNommé.name; // ReferenceError
+Toto.name; // "TotoNommé"
 ```
 
 ## Spécifications

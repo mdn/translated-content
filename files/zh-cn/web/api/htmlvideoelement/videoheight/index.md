@@ -34,15 +34,19 @@ slug: Web/API/HTMLVideoElement/videoHeight
 ```js
 let v = document.getElementById("myVideo");
 
-v.addEventListener("resize", ev => {
-  let w = v.videoWidth;
-  let h = v.videoHeight;
+v.addEventListener(
+  "resize",
+  (ev) => {
+    let w = v.videoWidth;
+    let h = v.videoHeight;
 
-  if (w && h) {
-    v.style.width = w;
-    v.style.height = h;
-  }
-}, false);
+    if (w && h) {
+      v.style.width = w;
+      v.style.height = h;
+    }
+  },
+  false,
+);
 ```
 
 请注意，只有当 `videoWidth` 和 `videoHeight` 都不是 0 的情况，才会应用更改。

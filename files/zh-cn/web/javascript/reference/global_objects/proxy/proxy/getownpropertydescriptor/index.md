@@ -12,8 +12,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPrope
 
 ```js
 var p = new Proxy(target, {
-  getOwnPropertyDescriptor: function(target, prop) {
-  }
+  getOwnPropertyDescriptor: function (target, prop) {},
 });
 ```
 
@@ -57,15 +56,17 @@ var p = new Proxy(target, {
 以下是 {{jsxref("Object.getOwnPropertyDescriptor()")}} 的代码陷阱：
 
 ```js
-var p = new Proxy({ a: 20}, {
-  getOwnPropertyDescriptor: function(target, prop) {
-    console.log('called: ' + prop);
-    return { configurable: true, enumerable: true, value: 10 };
-  }
-});
+var p = new Proxy(
+  { a: 20 },
+  {
+    getOwnPropertyDescriptor: function (target, prop) {
+      console.log("called: " + prop);
+      return { configurable: true, enumerable: true, value: 10 };
+    },
+  },
+);
 
-console.log(Object.getOwnPropertyDescriptor(p, 'a').value); // "called: a"
-                                                            // 10
+console.log(Object.getOwnPropertyDescriptor(p, "a").value); // "called: a"; output 10
 ```
 
 以下代码则违反了不变量。
@@ -74,12 +75,12 @@ console.log(Object.getOwnPropertyDescriptor(p, 'a').value); // "called: a"
 var obj = { a: 10 };
 Object.preventExtensions(obj);
 var p = new Proxy(obj, {
-  getOwnPropertyDescriptor: function(target, prop) {
+  getOwnPropertyDescriptor: function (target, prop) {
     return undefined;
-  }
+  },
 });
 
-Object.getOwnPropertyDescriptor(p, 'a'); // TypeError is thrown
+Object.getOwnPropertyDescriptor(p, "a"); // TypeError is thrown
 ```
 
 ## 规范

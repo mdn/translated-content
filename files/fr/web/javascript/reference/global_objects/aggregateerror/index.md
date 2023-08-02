@@ -25,13 +25,11 @@ Un objet **`AggregateError`** représente une erreur lorsque plusieurs erreurs d
 ### Intercepter une erreur `AggregateError`
 
 ```js
-Promise.any([
-  Promise.reject(new Error("une erreur")),
-]).catch(e => {
+Promise.any([Promise.reject(new Error("une erreur"))]).catch((e) => {
   console.log(e instanceof AggregateError); // true
-  console.log(e.message);                   // "All Promises rejected"
-  console.log(e.name);                      // "AggregateError"
-  console.log(e.errors);                    // [ Error: "une erreur" ]
+  console.log(e.message); // "All Promises rejected"
+  console.log(e.name); // "AggregateError"
+  console.log(e.errors); // [ Error: "une erreur" ]
 });
 ```
 
@@ -39,14 +37,12 @@ Promise.any([
 
 ```js
 try {
-  throw new AggregateError([
-    new Error("une erreur"),
-  ], 'Coucou');
+  throw new AggregateError([new Error("une erreur")], "Coucou");
 } catch (e) {
   console.log(e instanceof AggregateError); // true
-  console.log(e.message);                   // "Coucou"
-  console.log(e.name);                      // "AggregateError"
-  console.log(e.errors);                    // [ Error: "une erreur" ]
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "AggregateError"
+  console.log(e.errors); // [ Error: "une erreur" ]
 }
 ```
 

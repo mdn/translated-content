@@ -23,15 +23,15 @@ var regex = new RegExp("toto", "g");
 
 console.log(regex.global); // true
 
-var str = 'totoexempletoto';
-var str1 = str.replace(regex, '');
+var str = "totoexempletoto";
+var str1 = str.replace(regex, "");
 
-console.log(str1);  // affichera "exemple" dans la console
+console.log(str1); // affichera "exemple" dans la console
 
-var regex1 = new RegExp('toto');
-var str2 = str.replace(regex1, '');
+var regex1 = new RegExp("toto");
+var str2 = str.replace(regex1, "");
 
-console.log(str2);  // affichera "exempletoto" dans la console
+console.log(str2); // affichera "exempletoto" dans la console
 ```
 
 ## Spécifications

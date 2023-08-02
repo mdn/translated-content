@@ -182,7 +182,7 @@ l10n:
 - {{domxref("Window.confirm()")}}
   - : 사용자가 응답해야 하는 대화 상자를 표시합니다.
 - {{domxref("createImageBitmap", "Window.createImageBitmap()")}}
-  - : 다양한 종류의 이미지를 받고, {{domxref("ImageBitmap")}}으로 이행하는 {{jsxref("Promise")}}를 반환합니다. 선택 사항으로, 원본 이미지를 *(sx, sy)* 의 원점에서 너비 sw, 높이 sh만큼 자를 수 있습니다.
+  - : 다양한 종류의 이미지를 받고, {{domxref("ImageBitmap")}}으로 이행하는 {{jsxref("Promise")}}를 반환합니다. 선택 사항으로, 원본 이미지를 _(sx, sy)_ 의 원점에서 너비 sw, 높이 sh만큼 자를 수 있습니다.
 - {{domxref("EventTarget.dispatchEvent", "Window.dispatchEvent()")}}
   - : 이벤트를 발동합니다.
 - {{domxref("Window.dump()")}} {{Non-standard_Inline}}

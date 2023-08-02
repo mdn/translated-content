@@ -13,7 +13,7 @@ La méthode **`setUint8()`** permet d'enregister un entier non-signé sur 8 bits
 ## Syntaxe
 
 ```js
-dataview.setUint8(positionOctet, valeur)
+dataview.setUint8(positionOctet, valeur);
 ```
 
 ### Paramètres

@@ -28,12 +28,12 @@ str.bold()
 下面的例子使用字符串方法来改变字符串的格式。
 
 ```js
-var worldString = 'Hello, world';
+var worldString = "Hello, world";
 
-console.log(worldString.blink());   // <blink>Hello, world</blink>
-console.log(worldString.bold());    // <b>Hello, world</b>
+console.log(worldString.blink()); // <blink>Hello, world</blink>
+console.log(worldString.bold()); // <b>Hello, world</b>
 console.log(worldString.italics()); // <i>Hello, world</i>
-console.log(worldString.strike());  // <strike>Hello, world</strike>
+console.log(worldString.strike()); // <strike>Hello, world</strike>
 ```
 
 ## 规范

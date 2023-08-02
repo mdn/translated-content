@@ -17,9 +17,13 @@ original_slug: Web/API/Document/selectstart_event
 ## 例子
 
 ```js
-document.addEventListener("selectstart", function() {
-  console.log('Selection started');
-}, false);
+document.addEventListener(
+  "selectstart",
+  function () {
+    console.log("Selection started");
+  },
+  false,
+);
 ```
 
 ## 继承

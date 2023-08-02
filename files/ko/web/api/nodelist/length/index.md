@@ -12,7 +12,7 @@ slug: Web/API/NodeList/length
 ## 구문
 
 ```js
-numItems =nodeList.length
+numItems = nodeList.length;
 ```
 
 - `numItems`은 `NodeList`의 항목수를 나타내는 정수값입니다.
