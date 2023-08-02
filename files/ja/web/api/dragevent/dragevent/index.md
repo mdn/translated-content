@@ -1,6 +1,9 @@
 ---
-title: DragEvent()
+title: "DragEvent: DragEvent() コンストラクター"
+short-title: DragEvent()
 slug: Web/API/DragEvent/DragEvent
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
@@ -13,9 +16,9 @@ slug: Web/API/DragEvent/DragEvent
 
 ## 構文
 
-```js
-new DragEvent(type);
-new DragEvent(type, dragEventInit);
+```js-nolint
+new DragEvent(type)
+new DragEvent(type, dragEventInit)
 ```
 
 ### 引数
