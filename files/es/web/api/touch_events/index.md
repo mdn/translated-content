@@ -1,7 +1,6 @@
 ---
 title: Eventos de toque
 slug: Web/API/Touch_events
-original_slug: DOM/Touch_events
 ---
 
 Con el fin de proporcionar soporte de calidad para usuarios de interfaces táctiles, los eventos táctiles dan la posibilidad de interpretar la actividad de los dedos en pantallas táctiles o trackpads.
