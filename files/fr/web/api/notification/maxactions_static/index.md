@@ -11,7 +11,7 @@ L'attribut **`maxActions`** de l'interface {{domxref ("Notification")}} renvoie 
 ## Syntaxe
 
 ```js
-Notification.maxActions
+Notification.maxActions;
 ```
 
 ### Valeur
@@ -23,8 +23,10 @@ Un entier {{JSxRef ("Number")}} qui indique le plus grand nombre d'actions de no
 L'extrait de code suivant enregistre le nombre maximal d'actions prises en charge.
 
 ```js
-const { maxActions } = Notification
-console.log(`This device can display at most ${maxActions} actions on each notification.`);
+const { maxActions } = Notification;
+console.log(
+  `This device can display at most ${maxActions} actions on each notification.`,
+);
 ```
 
 ## Spécifications

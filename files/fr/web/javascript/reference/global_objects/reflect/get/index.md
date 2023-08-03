@@ -48,9 +48,11 @@ Reflect.get(obj, "x"); // 1
 Reflect.get(["zero", "un"], 1); // "un"
 
 // Proxy qui intercepte get
-var x = {p: 1};
+var x = { p: 1 };
 var obj = new Proxy(x, {
-  get(t, k, r) { return k + "truc"; }
+  get(t, k, r) {
+    return k + "truc";
+  },
 });
 Reflect.get(obj, "toto"); // "tototruc"
 ```

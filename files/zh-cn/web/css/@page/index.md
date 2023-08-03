@@ -1,5 +1,5 @@
 ---
-title: '@page'
+title: "@page"
 slug: Web/CSS/@page
 ---
 

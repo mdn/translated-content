@@ -15,7 +15,7 @@ Retourne un booléen indiquant si {{domxref("event.preventDefault()")}} a été 
 ## Syntaxe
 
 ```js
-bool = event.defaultPrevented
+bool = event.defaultPrevented;
 ```
 
 ## Exemple

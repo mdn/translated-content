@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: identifier starts immediately after numeric literal'
+title: "SyntaxError: identifier starts immediately after numeric literal"
 slug: Web/JavaScript/Reference/Errors/Identifier_after_number
 ---
 
@@ -39,7 +39,7 @@ var foo = 1life;
 You will need to rename your variable to avoid the leading number.
 
 ```js example-good
-var life1 = 'foo';
+var life1 = "foo";
 var foo = life1;
 ```
 

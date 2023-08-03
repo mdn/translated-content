@@ -18,15 +18,15 @@ Un objet [`Element`](/fr/docs/Web/API/Element) ou `null`
 
 ```html
 <ul id="list">
-  <li>Premier    (1)</li>
-  <li>Deuxième   (2)</li>
-  <li>Troisième  (3)</li>
+  <li>Premier (1)</li>
+  <li>Deuxième (2)</li>
+  <li>Troisième (3)</li>
 </ul>
 
 <script>
-const list = document.getElementById('list');
-console.log(list.lastElementChild.textContent);
-// Troisième  (3)
+  const list = document.getElementById("list");
+  console.log(list.lastElementChild.textContent);
+  // Troisième  (3)
 </script>
 ```
 

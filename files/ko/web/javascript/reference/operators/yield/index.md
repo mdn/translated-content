@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/yield
 
 {{jsSidebar("Operators")}}
 
-`yield` 키워드는 제너레이터 함수 ({{jsxref("Statements/function*", "function*")}} 또는 [레거시 generator](/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) 함수)를 중지하거나 재개하는데 사용됩니다.
+`yield` 키워드는 제너레이터 함수 ({{jsxref("Statements/function*", "function*")}} 또는 [레거시 generator](/ko/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) 함수)를 중지하거나 재개하는데 사용됩니다.
 
 ## 문법
 
@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Operators/yield
 ```
 
 - `expression`
-  - : 제너레이터 함수에서 [제너레이터 프로토콜](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator)을 통해 반환할 값을 정의합니다. 값이 생략되면, `undefined를 반환합니다.`
+  - : 제너레이터 함수에서 [제너레이터 프로토콜](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#iterator)을 통해 반환할 값을 정의합니다. 값이 생략되면, `undefined를 반환합니다.`
 - `rv`
   - : 제너레이터 실행을 재개 하기 위해서, optional value을 제너레이터의 `next()` 메서드로 전달하여 반환합니다.
 
@@ -69,7 +69,7 @@ console.log(iterator.next()); // { value: undefined, done: true }
 
 ## See also
 
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/ko/docs/Web/JavaScript/Guide/The_Iterator_protocol)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield*", "yield*")}}

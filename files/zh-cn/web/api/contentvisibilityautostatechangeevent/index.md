@@ -20,7 +20,7 @@ slug: Web/API/ContentVisibilityAutoStateChangeEvent
 
 ## 实例属性
 
-*从其父接口 {{DOMxRef("Event")}} 继承属性。*
+_从其父接口 {{DOMxRef("Event")}} 继承属性。_
 
 - {{domxref("ContentVisibilityAutoStateChangeEvent.skipped", "skipped")}} {{ReadOnlyInline}}
   - : 如果用户代理正在跳过元素的渲染则返回 `true`，否则返回 `false`。
@@ -28,9 +28,9 @@ slug: Web/API/ContentVisibilityAutoStateChangeEvent
 ## 示例
 
 ```js
-const canvasElem = document.querySelector('canvas');
+const canvasElem = document.querySelector("canvas");
 
-canvasElem.addEventListener('contentvisibilityautostatechange', stateChanged);
+canvasElem.addEventListener("contentvisibilityautostatechange", stateChanged);
 canvasElem.style.contentVisibility = "auto";
 
 function stateChanged(event) {

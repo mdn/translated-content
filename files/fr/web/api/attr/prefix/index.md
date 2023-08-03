@@ -13,7 +13,7 @@ La propriété **`Attr.prefix`** en lecture seule renvoie le préfixe de l'espac
 ## Syntaxe
 
 ```js
-string = attribute.prefix
+string = attribute.prefix;
 ```
 
 ## Exemples

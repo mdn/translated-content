@@ -12,9 +12,9 @@ Les objets qui sont des chaînes de caractères sont insérés comme des nœuds 
 ## Syntaxe
 
 ```js
-after(noeud1)
-after(noeud1, noeud2)
-after(noeud1, noeud2, /* ... ,*/ noeudN)
+after(noeud1);
+after(noeud1, noeud2);
+after(noeud1, noeud2, /* ... ,*/ noeudN);
 ```
 
 ### Paramètres

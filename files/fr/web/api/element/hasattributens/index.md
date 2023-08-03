@@ -13,10 +13,7 @@ translation_of: Web/API/Element/hasAttributeNS
 ## Syntaxe
 
 ```js
-result =
-element.hasAttributeNS(
-namespace,
-localName)
+result = element.hasAttributeNS(namespace, localName);
 ```
 
 - `result`
@@ -32,10 +29,10 @@ localName)
 // Vérifie que l'attribut existe
 // avant de définir une valeur
 var d = document.getElementById("div1");
-if (d.hasAttributeNS(
-        "http://www.mozilla.org/ns/specialspace/",
-        "special-align")) {
-    d.setAttribute("align", "center");
+if (
+  d.hasAttributeNS("http://www.mozilla.org/ns/specialspace/", "special-align")
+) {
+  d.setAttribute("align", "center");
 }
 ```
 

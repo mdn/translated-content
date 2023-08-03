@@ -13,7 +13,7 @@ La fonction **`decodeURIComponent()`** permet de décoder un composant d'un Unif
 ## Syntaxe
 
 ```js
-decodeURIComponent(encodedURI)
+decodeURIComponent(encodedURI);
 ```
 
 ### Paramètres

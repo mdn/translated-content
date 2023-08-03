@@ -28,8 +28,7 @@ Dans cet exemple, on crée une petite case à cocher pour les utilisateurs qui d
 ### HTML
 
 ```html
-<input id="test" type="checkbox" />
-<label for="test">Coucou !</label>
+<input id="test" type="checkbox" /> <label for="test">Coucou !</label>
 ```
 
 ### CSS

@@ -27,7 +27,7 @@ dateObj.toJSON()
 var date = new Date();
 console.log(date); //Thu Nov 09 2017 18:54:04 GMT+0800 (中国标准时间)
 
-var jsonDate = (date).toJSON();
+var jsonDate = date.toJSON();
 console.log(jsonDate); //"2017-11-09T10:51:11.395Z"
 
 var backToDate = new Date(jsonDate);

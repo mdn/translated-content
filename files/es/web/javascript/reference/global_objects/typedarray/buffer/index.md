@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
-original_slug: Web/JavaScript/Referencia/Objetos_globales/TypedArray/buffer
 ---
 
 {{JSRef}}

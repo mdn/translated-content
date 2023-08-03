@@ -11,7 +11,7 @@ Envoie un {{domxref("Event")}} (_évènement_) à la {{domxref("EventTarget")}} 
 ## Syntaxe
 
 ```js
-cancelled = !target.dispatchEvent(event)
+cancelled = !target.dispatchEvent(event);
 ```
 
 ### Paramètres

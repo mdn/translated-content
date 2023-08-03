@@ -17,9 +17,9 @@ Les anciennes implémentations ignoraient ces arguments, la locale et le format 
 ## Syntaxe
 
 ```js
-toLocaleString()
-toLocaleString(locales)
-toLocaleString(locales, options)
+toLocaleString();
+toLocaleString(locales);
+toLocaleString(locales, options);
 ```
 
 ### Paramètres
@@ -113,7 +113,12 @@ Les résultats fournis par `toLocaleString()` peuvent être personnalisés grâc
 let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // obtenir le jour de la semaine avec une date longue
-let options = {weekday: "long", year: "numeric", month: "long", day: "numeric"};
+let options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
 
 console.log(date.toLocaleString("de-DE", options));
 // → "Donnerstag, 20. Dezember 2012"
@@ -126,7 +131,7 @@ console.log(date.toLocaleString("en-US", options));
 // → "Thursday, December 20, 2012, UTC"
 
 // parfois, même les USA ont besoin d'avoir une heure sur 24h
-console.log(date.toLocaleString("en-US", {hour12: false}));
+console.log(date.toLocaleString("en-US", { hour12: false }));
 // → "12/19/2012, 19:00:00"
 ```
 
@@ -139,7 +144,8 @@ Ainsi, IE et Edge ajoutent des caractères de contrôle bidirectionnels autour d
 Aussi, mieux vaut ne pas comparer un résultat fourni par `toLocaleString()` avec une valeur statique&nbsp;:
 
 ```js example-bad
-"1/1/2019, 01:00:00" === new Date("2019-01-01T00:00:00Z").toLocaleString("en-US");
+"1/1/2019, 01:00:00" ===
+  new Date("2019-01-01T00:00:00Z").toLocaleString("en-US");
 // true pour Firefox et les autres
 // false pour IE et Edge
 ```

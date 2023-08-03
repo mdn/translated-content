@@ -77,8 +77,7 @@ Les valeurs de la propriété raccourcie peuvent être fournies dans n'importe q
 
 ```html
 <p class="exemple">
-  En passant elle prit sur un rayon un pot
-  de confiture portant cette étiquette,
+  En passant elle prit sur un rayon un pot de confiture portant cette étiquette,
   « MARMELADE D’ORANGES. »
 </p>
 ```

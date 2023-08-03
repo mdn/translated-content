@@ -13,7 +13,7 @@ Dans les versions récentes des applications basées sur Mozilla ainsi que sur I
 ## Syntaxe
 
 ```js
-document.clear()
+document.clear();
 ```
 
 ## Spécifications

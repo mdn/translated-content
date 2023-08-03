@@ -37,7 +37,7 @@ const xmlString = "<warning>Attention au tigre</warning>";
 const doc1 = parser.parseFromString(xmlString, "application/xml");
 // XMLDocument
 
-const svgString = "<circle cx=\"50\" cy=\"50\" r=\"50\"/>";
+const svgString = '<circle cx="50" cy="50" r="50"/>';
 const doc2 = parser.parseFromString(svgString, "image/svg+xml");
 // XMLDocument
 
@@ -45,7 +45,7 @@ const htmlString = "<strong>Attention au léopard</strong>";
 const doc3 = parser.parseFromString(htmlString, "text/html");
 // HTMLDocument
 
-console.log(doc1.documentElement.textContent)
+console.log(doc1.documentElement.textContent);
 // "Attention au tigre"
 
 console.log(doc2.firstChild.tagName);

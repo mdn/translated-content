@@ -13,7 +13,7 @@ La propriété **`length`** représente la longueur d'une chaine de caractères,
 ## Syntaxe
 
 ```js
-str.length
+str.length;
 ```
 
 ## Description

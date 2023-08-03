@@ -19,7 +19,7 @@ La propriété CSS **`align-tracks`** définit l'alignement dans l'axe de maçon
 align-tracks: start;
 align-tracks: space-between;
 align-tracks: center;
-align-tracks: start,center,end;
+align-tracks: start, center, end;
 
 /* Valeurs globales */
 align-tracks: inherit;

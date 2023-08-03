@@ -1,7 +1,6 @@
 ---
 title: Selectores de atributo
 slug: Web/CSS/Attribute_selectors
-original_slug: Web/CSS/Selectores_atributo
 ---
 
 {{CSSRef}}

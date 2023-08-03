@@ -47,7 +47,10 @@ body {
 /* 代替 */
 /* コンポーネント内のスタイル: */
 .component .header {
-  color: var(--header-color, blue); /* header-color という変数は設定されていないため、代替値である blue がセットされます */
+  color: var(
+    --header-color,
+    blue
+  ); /* header-color という変数は設定されていないため、代替値である blue がセットされます */
 }
 
 .component .text {

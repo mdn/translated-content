@@ -13,8 +13,8 @@ La méthode **`reduce()`** applique une fonction qui est un « accumulateur » e
 ## Syntaxe
 
 ```js
-arr.reduce(callback)
-arr.reduce(callback, valeurInitiale)
+arr.reduce(callback);
+arr.reduce(callback, valeurInitiale);
 ```
 
 ### Paramètres
@@ -55,7 +55,7 @@ Autrement dit, si `valeurInitiale` n'est pas fournie, `reduce` exécutera la fon
 En considérant le code suivant :
 
 ```js
-[0, 1, 2, 3, 4].reduce(function(accumulateur, valeurCourante, index, array){
+[0, 1, 2, 3, 4].reduce(function (accumulateur, valeurCourante, index, array) {
   return accumulateur + valeurCourante;
 });
 ```
@@ -122,7 +122,7 @@ Il est aussi possible d'utiliser une {{jsxref("Fonctions/Fonctions_fléchées","
 Si on fournit une valeur initiale comme second argument à l'appel de `reduce()`, le résultat sera alors le suivant :
 
 ```js
-[0, 1, 2, 3, 4].reduce(function(accumulateur, valeurCourante, index, array){
+[0, 1, 2, 3, 4].reduce(function (accumulateur, valeurCourante, index, array) {
   return accumulateur + valeurCourante;
 }, 10);
 ```
@@ -189,7 +189,7 @@ Ici, la valeur renvoyée par `reduce()` serait `20`.
 ### Additionner toutes les valeurs d'un tableau
 
 ```js
-var total = [0, 1, 2, 3].reduce((a, b)=> a + b,0);
+var total = [0, 1, 2, 3].reduce((a, b) => a + b, 0);
 // total == 6
 ```
 
@@ -199,8 +199,11 @@ Pour additionner les valeurs d'une propriété donnée des objets d'un tableau, 
 
 ```js
 var valeurInitiale = 0;
-var somme = [{x: 1}, {x:2}, {x:3}].reduce(function (accumulateur, valeurCourante) {
-    return accumulateur + valeurCourante.x;
+var somme = [{ x: 1 }, { x: 2 }, { x: 3 }].reduce(function (
+  accumulateur,
+  valeurCourante,
+) {
+  return accumulateur + valeurCourante.x;
 }, valeurInitiale);
 
 console.log(somme); // affiche 6 dans la console
@@ -210,9 +213,9 @@ On peut également écrire une version plus concise avec les fonctions fléchée
 
 ```js
 var valeurInitiale = 0;
-var somme = [{x: 1}, {x:2}, {x:3}].reduce(
-    (accumulateur, valeurCourante) => accumulateur + valeurCourante.x
-    , valeurInitiale
+var somme = [{ x: 1 }, { x: 2 }, { x: 3 }].reduce(
+  (accumulateur, valeurCourante) => accumulateur + valeurCourante.x,
+  valeurInitiale,
 );
 
 console.log(somme); // affiche 6 dans la console
@@ -221,8 +224,12 @@ console.log(somme); // affiche 6 dans la console
 ### Aplatir une liste de listes
 
 ```js
-var applati = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
-    return a.concat(b);
+var applati = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+].reduce(function (a, b) {
+  return a.concat(b);
 });
 // applati vaut [0, 1, 2, 3, 4, 5]
 ```
@@ -231,13 +238,16 @@ var applati = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
 
 ```js
 var amis = [
-  { "nom": "Quentin", "livres": ["City Hall", "Harry Potter"]},
-  { "nom": "Alice", "livres": ["L'Avare", "Les Fleurs du Mal"]}
-]
+  { nom: "Quentin", livres: ["City Hall", "Harry Potter"] },
+  { nom: "Alice", livres: ["L'Avare", "Les Fleurs du Mal"] },
+];
 
-var tousLivres = amis.reduce(function(prev, curr) {
-  return [...prev, ...curr.livres];
-}, ["Perceval"]);
+var tousLivres = amis.reduce(
+  function (prev, curr) {
+    return [...prev, ...curr.livres];
+  },
+  ["Perceval"],
+);
 
 // tousLivres = ["Perceval", "City Hall", "Harry Potter",
 //               "L'Avare", "Les Fleurs du Mal"]
@@ -255,9 +265,8 @@ var tousLivres = amis.reduce(function(prev, curr) {
 function runPromiseInSequense(arr) {
   return arr.reduce((promiseChain, currentPromise) => {
     return promiseChain.then((chainedResult) => {
-      return currentPromise(chainedResult)
-        .then((res) => res)
-    })
+      return currentPromise(chainedResult).then((res) => res);
+    });
   }, Promise.resolve());
 }
 
@@ -283,10 +292,9 @@ function p3(a) {
 }
 
 const promiseArr = [p1, p2, p3];
-runPromiseInSequense(promiseArr)
-  .then((res) => {
-    console.log(res);   // 30
-  });
+runPromiseInSequense(promiseArr).then((res) => {
+  console.log(res); // 30
+});
 ```
 
 ### Regrouper des objets selon une propriété
@@ -295,13 +303,13 @@ runPromiseInSequense(promiseArr)
 var personnes = [
   { nom: "Alice", age: 21 },
   { nom: "Bob", age: 20 },
-  { nom: "Charlie", age: 20 }
+  { nom: "Charlie", age: 20 },
 ];
 
-function groupBy(tableauObjets, propriete){
+function groupBy(tableauObjets, propriete) {
   return tableauObjets.reduce(function (acc, obj) {
     var cle = obj[propriete];
-    if(!acc[cle]){
+    if (!acc[cle]) {
       acc[cle] = [];
     }
     acc[cle].push(obj);
@@ -324,15 +332,15 @@ var personnesParAge = groupBy(personnes, "age");
 
 ```js
 // Les briques de base que nous allons composer
-const double = x => x + x;
-const triple = x => 3 * x;
-const quadruple = x => 4 * x;
+const double = (x) => x + x;
+const triple = (x) => 3 * x;
+const quadruple = (x) => 4 * x;
 
 // Une fonction qui permet d'appliquer une composition
-const pipe = (...functions) => input => functions.reduce(
-    (acc, fn) => fn(acc),
-    input
-);
+const pipe =
+  (...functions) =>
+  (input) =>
+    functions.reduce((acc, fn) => fn(acc), input);
 
 // On crée des fonctions pour multiplier par un facteur donné
 const multiply6 = pipe(double, triple);
@@ -361,11 +369,14 @@ console.table(tableauSansDoublon); // [1, 2, 3, 4, 5, 6]
 
 ```js
 var tableauAvecDoublons = [1, 2, 3, 1, 4, 5, 4, 6];
-var tableauSansDoublon = tableauAvecDoublons.reduce(function (acc, valCourante) {
-  if(acc.indexOf(valCourante) === -1) {
+var tableauSansDoublon = tableauAvecDoublons.reduce(function (
+  acc,
+  valCourante,
+) {
+  if (acc.indexOf(valCourante) === -1) {
     acc.push(valCourante);
   }
-  return acc
+  return acc;
 }, []);
 
 console.log(tableauSansDoublon); // [1, 2, 3, 4, 5, 6]

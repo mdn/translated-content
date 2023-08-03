@@ -13,7 +13,7 @@ La méthode **`getSeconds()`** renvoie les secondes pour la date renseignée d'a
 ## Syntaxe
 
 ```js
-dateObj.getSeconds()
+dateObj.getSeconds();
 ```
 
 ### Valeur de retour

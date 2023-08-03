@@ -13,7 +13,7 @@ Parmi le plus important, cette interface expose la méthode {{domxref("ServiceWo
 ## Propriétés
 
 - {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}
-  - : Retourne un objet {{domxref("ServiceWorker")}} si son état est `activated` (le même objet retourné par {{domxref("ServiceWorkerRegistration.active")}}). Cette propriété retourne `null` si la requête est un rechargement forcé (*Majuscule* + rechargement) ou si il n'y a pas de worker actif.
+  - : Retourne un objet {{domxref("ServiceWorker")}} si son état est `activated` (le même objet retourné par {{domxref("ServiceWorkerRegistration.active")}}). Cette propriété retourne `null` si la requête est un rechargement forcé (_Majuscule_ + rechargement) ou si il n'y a pas de worker actif.
 
 <!---->
 
@@ -43,22 +43,28 @@ Parmi le plus important, cette interface expose la méthode {{domxref("ServiceWo
 Cet extrait de code provient de [exemple service worker fallback-response](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/fallback-response/index.html#L126) (voir [fallback-response live](http://googlechrome.github.io/samples/service-worker/fallback-response/)). Le code test si le navigateur supporte les services workers. Alors le code enregistre le service worker et détermine si la page est activement contrôlée par le service worker. Si elle ne l'est pas, il invite l'utilisateur à recharger la page pour permettre au service worker de prendre le contrôle. Ce code indique aussi les échecs d'enregistrement.
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js', {scope: './'}).then(function() {
-    if (navigator.serviceWorker.controller) {
-      document.querySelector('#status').textContent = 'The service worker is currently handling network operations.';
-      showRequestButtons();
-    } else {
-      document.querySelector('#status').textContent = 'Please reload this page to allow the service worker to handle network operations.';
-    }
-  }).catch(function(error) {
-    document.querySelector('#status').textContent = error;
-  });
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("service-worker.js", { scope: "./" })
+    .then(function () {
+      if (navigator.serviceWorker.controller) {
+        document.querySelector("#status").textContent =
+          "The service worker is currently handling network operations.";
+        showRequestButtons();
+      } else {
+        document.querySelector("#status").textContent =
+          "Please reload this page to allow the service worker to handle network operations.";
+      }
+    })
+    .catch(function (error) {
+      document.querySelector("#status").textContent = error;
+    });
 } else {
-  var aElement = document.createElement('a');
-  aElement.href = 'http://www.chromium.org/blink/serviceworker/service-worker-faq';
-  aElement.textContent = 'unavailable';
-  document.querySelector('#status').appendChild(aElement);
+  var aElement = document.createElement("a");
+  aElement.href =
+    "http://www.chromium.org/blink/serviceworker/service-worker-faq";
+  aElement.textContent = "unavailable";
+  document.querySelector("#status").appendChild(aElement);
 }
 ```
 

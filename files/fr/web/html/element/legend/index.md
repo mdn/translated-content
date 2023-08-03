@@ -22,7 +22,7 @@ Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/A
 <form action="" method="post">
   <fieldset>
     <legend>Un champ pour le choix de la radio</legend>
-    <input type="radio" name="radio" id="radio">
+    <input type="radio" name="radio" id="radio" />
     <label for="radio">Cliquez ici</label>
   </fieldset>
 </form>

@@ -3,6 +3,7 @@ title: Requisições síncronas e assíncronas
 slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 original_slug: Web/API/XMLHttpRequest/Requisicoes_sincronas_e_assincronas
 ---
+
 `XMLHttpRequest` suporta comunicações síncronas e assíncronas. No geral, entretando, requisições assíncronas devem prevalecer sobre requisições síncronas por questões de performance.
 
 Requisições síncronas podem bloquear a execução do codigo, gerando um "congelamento" da tela, prejudicando a experiência do usuário.
@@ -46,11 +47,18 @@ A requisição é, de fato, realizada na Linha 15. A rotina de _callback_ é inv
 Em alguns casos, você pode precisar ler muitos arquivos externos. Esta é uma função padrão que utiliza o objeto `XMLHttpRequest` de forma assíncrona para alternar o conteúdo do arquivo legível para um listener especificado.
 
 ```js
-function xhrSuccess () { this.callback.apply(this, this.arguments); }
+function xhrSuccess() {
+  this.callback.apply(this, this.arguments);
+}
 
-function xhrError () { console.error(this.statusText); }
+function xhrError() {
+  console.error(this.statusText);
+}
 
-function loadFile (sURL, fCallback /*, argumentToPass1, argumentToPass2, etc. */) {
+function loadFile(
+  sURL,
+  fCallback /*, argumentToPass1, argumentToPass2, etc. */,
+) {
   var oReq = new XMLHttpRequest();
   oReq.callback = fCallback;
   oReq.arguments = Array.prototype.slice.call(arguments, 2);
@@ -64,7 +72,7 @@ function loadFile (sURL, fCallback /*, argumentToPass1, argumentToPass2, etc. */
 Uso:
 
 ```js
-function showMessage (sMsg) {
+function showMessage(sMsg) {
   alert(sMsg + this.responseText);
 }
 
@@ -94,25 +102,24 @@ Line 12 actually initiates the request.
 You can use a timeout to prevent hanging your code forever while waiting for a read to occur. This is done by setting the value of the `timeout` property on the `XMLHttpRequest` object, as shown in the code below:
 
 ```js
-function loadFile(sUrl, timeout, callback){
-
-    var args = arguments.slice(3);
-    var xhr = new XMLHttpRequest();
-    xhr.ontimeout = function () {
-        console.error("The request for " + url + " timed out.");
-    };
-    xhr.onload = function() {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-                callback.apply(xhr, args);
-            } else {
-                console.error(xhr.statusText);
-            }
-        }
-    };
-    xhr.open("GET", url, true);
-    xhr.timeout = timeout;
-    xhr.send(null);
+function loadFile(sUrl, timeout, callback) {
+  var args = arguments.slice(3);
+  var xhr = new XMLHttpRequest();
+  xhr.ontimeout = function () {
+    console.error("The request for " + url + " timed out.");
+  };
+  xhr.onload = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        callback.apply(xhr, args);
+      } else {
+        console.error(xhr.statusText);
+      }
+    }
+  };
+  xhr.open("GET", url, true);
+  xhr.timeout = timeout;
+  xhr.send(null);
 }
 ```
 
@@ -121,7 +128,7 @@ Notice the addition of code to handle the "timeout" event by setting the `ontime
 Usage:
 
 ```js
-function showMessage (sMsg) {
+function showMessage(sMsg) {
   alert(sMsg + this.responseText);
 }
 
@@ -144,7 +151,7 @@ This example demonstrates how to make a simple synchronous request.
 
 ```js
 var request = new XMLHttpRequest();
-request.open('GET', '/bar/foo.txt', false);  // `false` makes the request synchronous
+request.open("GET", "/bar/foo.txt", false); // `false` makes the request synchronous
 request.send(null);
 
 if (request.status === 200) {
@@ -165,19 +172,19 @@ One of the few cases in which a synchronous request does not usually block execu
 ```html
 <!doctype html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>MDN Example</title>
-<script type="text/javascript">
-  var worker = new Worker("myTask.js");
-  worker.onmessage = function(event) {
-    alert("Worker said: " + event.data);
-  };
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>MDN Example</title>
+    <script type="text/javascript">
+      var worker = new Worker("myTask.js");
+      worker.onmessage = function (event) {
+        alert("Worker said: " + event.data);
+      };
 
-  worker.postMessage("Hello");
-</script>
-</head>
-<body></body>
+      worker.postMessage("Hello");
+    </script>
+  </head>
+  <body></body>
 </html>
 ```
 
@@ -193,7 +200,7 @@ Hello World!!
 self.onmessage = function (event) {
   if (event.data === "Hello") {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "myFile.txt", false);  // synchronous request
+    xhr.open("GET", "myFile.txt", false); // synchronous request
     xhr.send(null);
     self.postMessage(xhr.responseText);
   }
@@ -211,13 +218,13 @@ There are some cases in which the synchronous usage of XMLHttpRequest was not re
 The following example (from the [sendBeacon docs](/pt-BR/docs/Web/API/Navigator/sendBeacon)) shows a theoretical analytics code that attempts to submit data to a server by using a synchronous XMLHttpRequest in an unload handler. This results in the unload of the page to be delayed.
 
 ```js
-window.addEventListener('unload', logData, false);
+window.addEventListener("unload", logData, false);
 
 function logData() {
-    var client = new XMLHttpRequest();
-    client.open("POST", "/log", false); // third parameter indicates sync xhr. :(
-    client.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-    client.send(analyticsData);
+  var client = new XMLHttpRequest();
+  client.open("POST", "/log", false); // third parameter indicates sync xhr. :(
+  client.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+  client.send(analyticsData);
 }
 ```
 
@@ -226,10 +233,10 @@ Using the **`sendBeacon()`** method, the data will be transmitted asynchronously
 The following example shows a theoretical analytics code pattern that submits data to a server using the by using the **`sendBeacon()`** method.
 
 ```js
-window.addEventListener('unload', logData, false);
+window.addEventListener("unload", logData, false);
 
 function logData() {
-    navigator.sendBeacon("/log", analyticsData);
+  navigator.sendBeacon("/log", analyticsData);
 }
 ```
 

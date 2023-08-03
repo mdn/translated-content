@@ -1,5 +1,5 @@
 ---
-title: 'Window: cut event'
+title: "Window: cut event"
 slug: Web/API/Window/cut_event
 translation_of: Web/API/Window/cut_event
 ---
@@ -34,8 +34,8 @@ La cible d'origine de cet événement est le {{domxref("Element")}} qui était l
 ## Exemples
 
 ```js
-window.addEventListener('cut', (event) => {
-    console.log('cut action initiated')
+window.addEventListener("cut", (event) => {
+  console.log("cut action initiated");
 });
 ```
 

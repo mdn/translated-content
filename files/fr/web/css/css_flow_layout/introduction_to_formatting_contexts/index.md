@@ -75,7 +75,7 @@ Dans ce guide, nous avons approfondi les notions relatives aux contextes de form
 
 ## Voir aussi
 
-- [Contexte de formatage de bloc (ou *Block Formatting Context* (BFC) en anglais)](/fr/docs/Web/CSS/Block_formatting_context)
+- [Contexte de formatage de bloc (ou _Block Formatting Context_ (BFC) en anglais)](/fr/docs/Web/CSS/Block_formatting_context)
 - [Modèle de formatage visuel](/fr/docs/Web/CSS/Modèle_de_mise_en_forme_visuelle)
 - [Modèle de boîte CSS](/fr/docs/Web/CSS/Modèle_de_boîte_CSS)
 

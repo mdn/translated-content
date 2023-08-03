@@ -140,8 +140,9 @@ html {
    ```css
    @font-face {
      font-family: "zantrokeregular";
-     src: url("fonts/zantroke-webfont.woff2") format("woff2"), url("fonts/zantroke-webfont.woff")
-         format("woff");
+     src:
+       url("fonts/zantroke-webfont.woff2") format("woff2"),
+       url("fonts/zantroke-webfont.woff") format("woff");
      font-weight: normal;
      font-style: normal;
    }
@@ -179,8 +180,9 @@ Fontsquirrel によって生成された `@font-face` 構文を調べてみま�
 ```css
 @font-face {
   font-family: "zantrokeregular";
-  src: url("zantroke-webfont.woff2") format("woff2"), url("zantroke-webfont.woff")
-      format("woff");
+  src:
+    url("zantroke-webfont.woff2") format("woff2"),
+    url("zantroke-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

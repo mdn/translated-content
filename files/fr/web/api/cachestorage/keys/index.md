@@ -13,7 +13,7 @@ Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr
 ## Syntaxe
 
 ```js
-caches.keys().then(function(keyList) {
+caches.keys().then(function (keyList) {
   // faire quelque-chose avec votre keylist
 });
 ```

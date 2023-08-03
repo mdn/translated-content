@@ -30,7 +30,7 @@ console.log(regionStr.region);
 Le constructeur {{jsxref("Locale", "Locale")}} prend comme second argument un objet de paramétrage dont chacune des propriétés permet de définir une extension ou une composante de la locale.
 
 ```js
-let regionObj = new Intl.Locale("fr-Latn", {region: "FR"});
+let regionObj = new Intl.Locale("fr-Latn", { region: "FR" });
 
 console.log(regionObj.region);
 // Affichera "FR" dans la console

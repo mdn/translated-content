@@ -16,7 +16,7 @@ Supposons qu'une image est affichée pour chaque élement de la classe `toolbtn`
 
 ```css
 .toolbtn {
-  background: url('myfile.png');
+  background: url("myfile.png");
   display: inline-block;
   height: 20px;
   width: 20px;

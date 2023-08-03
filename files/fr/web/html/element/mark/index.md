@@ -1,5 +1,5 @@
 ---
-title: '<mark> : l''élément de marquage du texte'
+title: "<mark> : l'élément de marquage du texte"
 slug: Web/HTML/Element/mark
 translation_of: Web/HTML/Element/mark
 ---
@@ -46,15 +46,17 @@ Dans cet exemple, on utilise `<mark>` pour marquer les résultats d'une recherch
 #### HTML
 
 ```html
-<p>It is a dark time for the Rebellion. Although the Death
-Star has been destroyed, <mark class="match">Imperial</mark>
-troops have driven the Rebel forces from their hidden base and
-pursued them across the galaxy.</p>
+<p>
+  It is a dark time for the Rebellion. Although the Death Star has been
+  destroyed, <mark class="match">Imperial</mark> troops have driven the Rebel
+  forces from their hidden base and pursued them across the galaxy.
+</p>
 
-<p>Evading the dreaded <mark class="match">Imperial</mark>
-Starfleet, a group of freedom fighters led by Luke Skywalker
-has established a new secret base on the remote ice world of
-Hoth.</p>
+<p>
+  Evading the dreaded <mark class="match">Imperial</mark> Starfleet, a group of
+  freedom fighters led by Luke Skywalker has established a new secret base on
+  the remote ice world of Hoth.
+</p>
 ```
 
 #### Résultat

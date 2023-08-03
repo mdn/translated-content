@@ -19,9 +19,9 @@ audioCtx.onstatechange = function() { ... };
 下面这段代码是[AudioContext states DEMO](https://github.com/mdn/audiocontext-states/settings) ([直接运行](http://mdn.github.io/audiocontext-states/)) 中的，其中 `onstatechange` 处理器会在每次当前 {{domxref("state")}} 发生变化时把它输出到控制台。
 
 ```js
-audioCtx.onstatechange = function() {
+audioCtx.onstatechange = function () {
   console.log(audioCtx.state);
-}
+};
 ```
 
 ## 规范

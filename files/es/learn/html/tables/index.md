@@ -1,7 +1,6 @@
 ---
 title: Tablas HTML
 slug: Learn/HTML/Tables
-original_slug: Learn/HTML/Tablas
 ---
 
 {{LearnSidebar}}

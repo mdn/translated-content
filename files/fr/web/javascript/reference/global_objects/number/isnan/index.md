@@ -13,7 +13,7 @@ La méthode **`Number.isNaN()`** permet de déterminer si la valeur passée en a
 ## Syntaxe
 
 ```js
-Number.isNaN(valeurÀTester)
+Number.isNaN(valeurÀTester);
 ```
 
 ### Paramètres
@@ -59,9 +59,11 @@ Number.isNaN("blabla"); // ex : cette valeur aurait rendu true avec la méthode 
 La fonction suivant fonctionne car `NaN` est la seule valeur JavaScript qui n'est pas égale à elle-même.
 
 ```js
-Number.isNaN = Number.isNaN || function(value) {
+Number.isNaN =
+  Number.isNaN ||
+  function (value) {
     return typeof value === "number" && isNaN(value);
-}
+  };
 ```
 
 ## Spécifications

@@ -1,7 +1,6 @@
 ---
 title: 使用 templates and slots
 slug: Web/API/Web_components/Using_templates_and_slots
-original_slug: Web/Web_Components/Using_templates_and_slots
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -23,7 +22,7 @@ original_slug: Web/Web_Components/Using_templates_and_slots
 上面的代码不会展示在你的页面中，直到你用 JavaScript 获取它的引用，然后添加到 DOM 中，如下面的代码：
 
 ```js
-let template = document.getElementById('my-paragraph');
+let template = document.getElementById("my-paragraph");
 let templateContent = template.content;
 document.body.appendChild(templateContent);
 ```
@@ -46,7 +45,7 @@ customElements.define(
       const shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(templateContent.cloneNode(true));
     }
-  }
+  },
 );
 ```
 
@@ -138,19 +137,43 @@ customElements.define(
 ```html
 <template id="element-details-template">
   <style>
-  details {font-family: "Open Sans Light",Helvetica,Arial}
-  .name {font-weight: bold; color: #217ac0; font-size: 120%}
-  h4 { margin: 10px 0 -8px 0; }
-  h4 span { background: #217ac0; padding: 2px 6px 2px 6px }
-  h4 span { border: 1px solid #cee9f9; border-radius: 4px }
-  h4 span { color: white }
-  .attributes { margin-left: 22px; font-size: 90% }
-  .attributes p { margin-left: 16px; font-style: italic }
+    details {
+      font-family: "Open Sans Light", Helvetica, Arial;
+    }
+    .name {
+      font-weight: bold;
+      color: #217ac0;
+      font-size: 120%;
+    }
+    h4 {
+      margin: 10px 0 -8px 0;
+    }
+    h4 span {
+      background: #217ac0;
+      padding: 2px 6px 2px 6px;
+    }
+    h4 span {
+      border: 1px solid #cee9f9;
+      border-radius: 4px;
+    }
+    h4 span {
+      color: white;
+    }
+    .attributes {
+      margin-left: 22px;
+      font-size: 90%;
+    }
+    .attributes p {
+      margin-left: 16px;
+      font-style: italic;
+    }
   </style>
   <details>
     <summary>
       <span>
-        <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
+        <code class="name"
+          >&lt;<slot name="element-name">NEED NAME</slot>&gt;</code
+        >
         <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
       </span>
     </summary>
@@ -159,7 +182,7 @@ customElements.define(
       <slot name="attributes"><p>None</p></slot>
     </div>
   </details>
-  <hr>
+  <hr />
 </template>
 ```
 
@@ -179,17 +202,20 @@ customElements.define(
 接下来，我们定义一个新的 **`<element-details>`** 元素然后用 {{DOMXref("Element.attachShadow")}} 来将它附着到它的 [阴影 (shadow) root](/zh-CN/docs/Web/API/ShadowRoot), 这个阴影上我们创建了 {{HTMLElement("template")}} 元素。这和我们上面使用的简单例子中的一样。
 
 ```js
-customElements.define('element-details',
+customElements.define(
+  "element-details",
   class extends HTMLElement {
     constructor() {
       super();
-      var template = document
-        .getElementById('element-details-template')
-        .content;
-      const shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(template.cloneNode(true));
-  }
-})
+      var template = document.getElementById(
+        "element-details-template",
+      ).content;
+      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
+        template.cloneNode(true),
+      );
+    }
+  },
+);
 ```
 
 ### 结合命名的 slots 使用自定义元素 \<element-details>
@@ -199,10 +225,10 @@ customElements.define('element-details',
 ```html
 <element-details>
   <span slot="element-name">slot</span>
-  <span slot="description">A placeholder inside a web
-    component that users can fill with their own markup,
-    with the effect of composing different DOM trees
-    together.</span>
+  <span slot="description"
+    >A placeholder inside a web component that users can fill with their own
+    markup, with the effect of composing different DOM trees together.</span
+  >
   <dl slot="attributes">
     <dt>name</dt>
     <dd>The name of the slot.</dd>
@@ -211,10 +237,11 @@ customElements.define('element-details',
 
 <element-details>
   <span slot="element-name">template</span>
-  <span slot="description">A mechanism for holding client-
-    side content that is not to be rendered when a page is
-    loaded but may subsequently be instantiated during
-    runtime using JavaScript.</span>
+  <span slot="description"
+    >A mechanism for holding client- side content that is not to be rendered
+    when a page is loaded but may subsequently be instantiated during runtime
+    using JavaScript.</span
+  >
 </element-details>
 ```
 
@@ -229,14 +256,26 @@ customElements.define('element-details',
 在完成之前，我们在文档中给"dl"和"dt"以及"dd"标签增加一些 CSS 样式。
 
 ```css
-  dl { margin-left: 6px; }
-  dt { font-weight: bold; color: #217ac0; font-size: 110% }
-  dt { font-family: Consolas, "Liberation Mono", Courier }
-  dd { margin-left: 16px }
+dl {
+  margin-left: 6px;
+}
+dt {
+  font-weight: bold;
+  color: #217ac0;
+  font-size: 110%;
+}
+dt {
+  font-family: Consolas, "Liberation Mono", Courier;
+}
+dd {
+  margin-left: 16px;
+}
 ```
 
 ```css hidden
-body { margin-top: 47px }
+body {
+  margin-top: 47px;
+}
 ```
 
 ### 结果
@@ -254,35 +293,67 @@ body { margin-top: 47px }
 - 因为第二个 **`<element-details>`** 标签没有引用名为`"attributes"` 的槽，所以标签内名为`"attributes"的`插槽的内容将会使用模板中默认的内容。
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>slot example</title>
     <style>
-
-      dl { margin-left: 6px; }
-      dt { font-weight: bold; color: #217ac0; font-size: 110% }
-      dt { font-family: Consolas, "Liberation Mono", Courier }
-      dd { margin-left: 16px }
-
+      dl {
+        margin-left: 6px;
+      }
+      dt {
+        font-weight: bold;
+        color: #217ac0;
+        font-size: 110%;
+      }
+      dt {
+        font-family: Consolas, "Liberation Mono", Courier;
+      }
+      dd {
+        margin-left: 16px;
+      }
     </style>
   </head>
   <body>
     <template id="element-details-template">
       <style>
-      details {font-family: "Open Sans Light",Helvetica,Arial}
-      .name {font-weight: bold; color: #217ac0; font-size: 120%}
-      h4 { margin: 10px 0 -8px 0; }
-      h4 span { background: #217ac0; padding: 2px 6px 2px 6px }
-      h4 span { border: 1px solid #cee9f9; border-radius: 4px }
-      h4 span { color: white }
-      .attributes { margin-left: 22px; font-size: 90% }
-      .attributes p { margin-left: 16px; font-style: italic }
+        details {
+          font-family: "Open Sans Light", Helvetica, Arial;
+        }
+        .name {
+          font-weight: bold;
+          color: #217ac0;
+          font-size: 120%;
+        }
+        h4 {
+          margin: 10px 0 -8px 0;
+        }
+        h4 span {
+          background: #217ac0;
+          padding: 2px 6px 2px 6px;
+        }
+        h4 span {
+          border: 1px solid #cee9f9;
+          border-radius: 4px;
+        }
+        h4 span {
+          color: white;
+        }
+        .attributes {
+          margin-left: 22px;
+          font-size: 90%;
+        }
+        .attributes p {
+          margin-left: 16px;
+          font-style: italic;
+        }
       </style>
       <details>
         <summary>
           <span>
-            <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
+            <code class="name"
+              >&lt;<slot name="element-name">NEED NAME</slot>&gt;</code
+            >
             <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
           </span>
         </summary>
@@ -291,15 +362,15 @@ body { margin-top: 47px }
           <slot name="attributes"><p>None</p></slot>
         </div>
       </details>
-      <hr>
+      <hr />
     </template>
 
     <element-details>
       <span slot="element-name">slot</span>
-      <span slot="description">A placeholder inside a web
-        component that users can fill with their own markup,
-        with the effect of composing different DOM trees
-        together.</span>
+      <span slot="description"
+        >A placeholder inside a web component that users can fill with their own
+        markup, with the effect of composing different DOM trees together.</span
+      >
       <dl slot="attributes">
         <dt>name</dt>
         <dd>The name of the slot.</dd>
@@ -308,24 +379,28 @@ body { margin-top: 47px }
 
     <element-details>
       <span slot="element-name">template</span>
-      <span slot="description">A mechanism for holding client-
-        side content that is not to be rendered when a page is
-        loaded but may subsequently be instantiated during
-        runtime using JavaScript.</span>
+      <span slot="description"
+        >A mechanism for holding client- side content that is not to be rendered
+        when a page is loaded but may subsequently be instantiated during
+        runtime using JavaScript.</span
+      >
     </element-details>
 
     <script>
-    customElements.define('element-details',
-      class extends HTMLElement {
-        constructor() {
-          super();
-          const template = document
-            .getElementById('element-details-template')
-            .content;
-          const shadowRoot = this.attachShadow({mode: 'open'})
-            .appendChild(template.cloneNode(true));
-        }
-      })
+      customElements.define(
+        "element-details",
+        class extends HTMLElement {
+          constructor() {
+            super();
+            const template = document.getElementById(
+              "element-details-template",
+            ).content;
+            const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
+              template.cloneNode(true),
+            );
+          }
+        },
+      );
     </script>
   </body>
 </html>

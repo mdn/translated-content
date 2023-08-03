@@ -14,10 +14,10 @@ slug: Web/API/NodeList
 在一些情况下，`NodeList` 是一个实时集合，也就是说，如果文档中的节点树发生变化，`NodeList` 也会随之变化。例如，{{domxref("Node.childNodes")}} 是实时的：
 
 ```js
-var parent = document.getElementById('parent');
+var parent = document.getElementById("parent");
 var child_nodes = parent.childNodes;
 console.log(child_nodes.length); // 我们假设结果会是“2”
-parent.appendChild(document.createElement('div'));
+parent.appendChild(document.createElement("div"));
 console.log(child_nodes.length); // 但此时的输出是“3”
 ```
 
@@ -49,7 +49,7 @@ console.log(child_nodes.length); // 但此时的输出是“3”
 
 ```js
 for (var i = 0; i < myNodeList.length; ++i) {
-  var item = myNodeList[i];  // 调用 myNodeList.item(i) 是没有必要的
+  var item = myNodeList[i]; // 调用 myNodeList.item(i) 是没有必要的
 }
 ```
 
@@ -58,7 +58,7 @@ for (var i = 0; i < myNodeList.length; ++i) {
 [for...of](/zh-CN/JavaScript/Reference/Statements/for...of) 循环**将会**正确的遍历 `NodeList` 对象：
 
 ```js
-var list = document.querySelectorAll('input[type=checkbox]');
+var list = document.querySelectorAll("input[type=checkbox]");
 for (var checkbox of list) {
   checkbox.checked = true;
 }
@@ -69,7 +69,7 @@ for (var checkbox of list) {
 也有一种使用数组 `Array` 的 {{jsxref("Array.forEach()", "Array.prototype.forEach")}} 来遍历 `NodeList` 的方法，这种方法兼容 Internet Explorer {{Deprecated_Inline}}：
 
 ```js
-var list = document.querySelectorAll('input[type=checkbox]');
+var list = document.querySelectorAll("input[type=checkbox]");
 Array.prototype.forEach.call(list, function (checkbox) {
   checkbox.checked = true;
 });
@@ -100,22 +100,21 @@ NodeList 的原型上除了类似数组的 `forEach` 方法之外，还有 `item
 一个解决办法就是把 `Array.prototype` 上的方法添加到 `NodeList.prototype` 上。可是，要注意[扩展 DOM 对象的原型是非常危险的](http://perfectionkills.com/whats-wrong-with-extending-the-dom/)，尤其是在旧版本的 Internet Explorer（6，7，8）中。
 
 ```js
-var arrayMethods = Object.getOwnPropertyNames( Array.prototype );
+var arrayMethods = Object.getOwnPropertyNames(Array.prototype);
 
-arrayMethods.forEach( attachArrayMethodsToNodeList );
+arrayMethods.forEach(attachArrayMethodsToNodeList);
 
-function attachArrayMethodsToNodeList(methodName)
-{
-  if(methodName !== "length") {
+function attachArrayMethodsToNodeList(methodName) {
+  if (methodName !== "length") {
     NodeList.prototype[methodName] = Array.prototype[methodName];
   }
-};
+}
 
-var divs = document.getElementsByTagName( 'div' );
-var firstDiv = divs[ 0 ];
+var divs = document.getElementsByTagName("div");
+var firstDiv = divs[0];
 
-firstDiv.childNodes.forEach(function( divChild ){
-  divChild.parentNode.style.color = '#0F0';
+firstDiv.childNodes.forEach(function (divChild) {
+  divChild.parentNode.style.color = "#0F0";
 });
 ```
 
@@ -124,11 +123,11 @@ firstDiv.childNodes.forEach(function( divChild ){
 ```js
 var forEach = Array.prototype.forEach;
 
-var divs = document.getElementsByTagName( 'div' );
-var firstDiv = divs[ 0 ];
+var divs = document.getElementsByTagName("div");
+var firstDiv = divs[0];
 
-forEach.call(firstDiv.childNodes, function( divChild ){
-  divChild.parentNode.style.color = '#0F0';
+forEach.call(firstDiv.childNodes, function (divChild) {
+  divChild.parentNode.style.color = "#0F0";
 });
 ```
 

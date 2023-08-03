@@ -18,8 +18,7 @@ La caractéristique `height` est définie comme une longueur (type {{cssxref("&l
 
 ```html
 <div>
-  Surveillez cet élément lors du
-  redimensionnement de la zone d'affichage.
+  Surveillez cet élément lors du redimensionnement de la zone d'affichage.
 </div>
 ```
 

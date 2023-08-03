@@ -11,9 +11,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/alarms/create
 
 ```js
 browser.alarms.create(
-  name,              // 文字列
-  alarmInfo          // オブジェクト
-)
+  name, // 文字列
+  alarmInfo, // オブジェクト
+);
 ```
 
 ### 引数
@@ -49,7 +49,7 @@ browser.alarms.create(
 const delayInMinutes = 5;
 
 chrome.alarms.create({
-  delayInMinutes
+  delayInMinutes,
 });
 ```
 
@@ -61,7 +61,7 @@ const periodInMinutes = 2;
 
 chrome.alarms.create("my-periodic-alarm", {
   delayInMinutes,
-  periodInMinutes
+  periodInMinutes,
 });
 ```
 
@@ -73,7 +73,7 @@ const periodInMinutes = 2;
 
 chrome.alarms.create("my-periodic-alarm", {
   when,
-  periodInMinutes
+  periodInMinutes,
 });
 ```
 

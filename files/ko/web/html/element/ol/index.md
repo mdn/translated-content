@@ -144,13 +144,16 @@ slug: Web/HTML/Element/ol
 ```html
 <ol>
   <li>first item</li>
-  <li>second item  <!-- closing </li> tag not here! -->
+  <li>
+    second item
+    <!-- closing </li> tag not here! -->
     <ol>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ol>
-  </li>            <!-- Here's the closing </li> tag -->
+  </li>
+  <!-- Here's the closing </li> tag -->
   <li>third item</li>
 </ol>
 ```
@@ -162,13 +165,16 @@ slug: Web/HTML/Element/ol
 ```html
 <ol>
   <li>first item</li>
-  <li>second item      <!-- Look, the closing </li> tag is not placed here! -->
+  <li>
+    second item
+    <!-- Look, the closing </li> tag is not placed here! -->
     <ul>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ul>
-  </li>                <!-- Here is the closing </li> tag -->
+  </li>
+  <!-- Here is the closing </li> tag -->
   <li>third item</li>
 </ol>
 ```

@@ -16,10 +16,10 @@ i10n:
 ## 構文
 
 ```js
-warn(obj1)
-warn(obj1, /* …, */ objN)
-warn(msg)
-warn(msg, subst1, /* …, */ substN)
+warn(obj1);
+warn(obj1, /* …, */ objN);
+warn(msg);
+warn(msg, subst1, /* …, */ substN);
 ```
 
 ## 引数
@@ -47,4 +47,4 @@ warn(msg, subst1, /* …, */ substN)
 
 ## 関連情報
 
-- [MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))
+- [MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)

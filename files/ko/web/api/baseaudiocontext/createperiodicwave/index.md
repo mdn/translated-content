@@ -46,7 +46,7 @@ imag[0] = 0;
 real[1] = 1;
 imag[1] = 0;
 
-var wave = ac.createPeriodicWave(real, imag, {disableNormalization: true});
+var wave = ac.createPeriodicWave(real, imag, { disableNormalization: true });
 
 osc.setPeriodicWave(wave);
 

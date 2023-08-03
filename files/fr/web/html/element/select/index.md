@@ -77,7 +77,8 @@ Pour plus d'informations sur la mise en forme de `<select>` :
 L'exemple qui suit est légèrement plus complexe et illustre certaines fonctionnalités qui peuvent être utilisées avec un élément `<select>` :
 
 ```html
-<label>Veuillez choisir un ou plusieurs animaux :
+<label
+  >Veuillez choisir un ou plusieurs animaux :
   <select name="pets" multiple size="4">
     <optgroup label="Animaux à 4-jambes">
       <option value="Chien">Chien</option>

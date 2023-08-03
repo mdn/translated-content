@@ -32,19 +32,19 @@ Un objet {{DOMxRef("Storage")}} qui peut être utilisé pour accéder à l'espac
 L'extrait de code suivant accède à l'objet local {{domxref("Storage")}} du domaine courant et lui ajoute une entrée en utilisant {{domxref("Storage.setItem()")}}.
 
 ```js
-localStorage.setItem('monChat', 'Tom');
+localStorage.setItem("monChat", "Tom");
 ```
 
 La syntaxe pour la lecture de l'article `localStorage` est la suivante :
 
 ```js
-var cat = localStorage.getItem('monChat');
+var cat = localStorage.getItem("monChat");
 ```
 
 La syntaxe pour la suppression de l'élément `localStorage` est la suivante :
 
 ```js
-localStorage.removeItem('monChat');
+localStorage.removeItem("monChat");
 ```
 
 La syntaxe pour supprimer tous les éléments de `localStorage` est la suivante :

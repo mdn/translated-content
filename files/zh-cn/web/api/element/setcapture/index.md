@@ -24,44 +24,48 @@ element.setCapture(retargetToElement);
 
 ```html
 <html>
-<head>
-  <title>鼠标捕捉示例</title>
-  <style type="text/css">
-    #myButton {
-      border: solid black 1px;
-      color: black;
-      padding: 2px;
-      -moz-box-shadow:black 2px 2px;
-    }
-  </style>
+  <head>
+    <title>鼠标捕捉示例</title>
+    <style type="text/css">
+      #myButton {
+        border: solid black 1px;
+        color: black;
+        padding: 2px;
+        -moz-box-shadow: black 2px 2px;
+      }
+    </style>
 
-  <script type="text/javascript">
-    function init() {
-      var btn = document.getElementById("myButton");
-      btn.addEventListener("mousedown", mouseDown, false);
-      btn.addEventListener("mouseup", mouseUp, false);
-    }
+    <script type="text/javascript">
+      function init() {
+        var btn = document.getElementById("myButton");
+        btn.addEventListener("mousedown", mouseDown, false);
+        btn.addEventListener("mouseup", mouseUp, false);
+      }
 
-    function mouseDown(e) {
-      e.target.setCapture();
-      e.target.addEventListener("mousemove", mouseMoved, false);
-    }
+      function mouseDown(e) {
+        e.target.setCapture();
+        e.target.addEventListener("mousemove", mouseMoved, false);
+      }
 
-    function mouseUp(e) {
-      e.target.removeEventListener("mousemove", mouseMoved, false);
-    }
+      function mouseUp(e) {
+        e.target.removeEventListener("mousemove", mouseMoved, false);
+      }
 
-    function mouseMoved(e) {
-      var output = document.getElementById("output");
-      output.innerHTML = "鼠标的当前位置：" + e.clientX + ", " + e.clientY;
-    }
-  </script>
-</head>
-<body onload="init()">
-  <p>这是一个关于如何在 Gecko 2.0 中针对元素使用鼠标捕捉的示例。</p>
-  <p><a id="myButton" href="javascript:buttonClicked()">点我并且按住鼠标滑动</a></p>
-  <div id="output">还没有任何事件哦！</div>
-</body>
+      function mouseMoved(e) {
+        var output = document.getElementById("output");
+        output.innerHTML = "鼠标的当前位置：" + e.clientX + ", " + e.clientY;
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <p>这是一个关于如何在 Gecko 2.0 中针对元素使用鼠标捕捉的示例。</p>
+    <p>
+      <a id="myButton" href="javascript:buttonClicked()"
+        >点我并且按住鼠标滑动</a
+      >
+    </p>
+    <div id="output">还没有任何事件哦！</div>
+  </body>
 </html>
 ```
 

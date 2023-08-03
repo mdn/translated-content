@@ -1,7 +1,6 @@
 ---
 title: JavaScript 类型化数组
 slug: Web/JavaScript/Guide/Typed_arrays
-original_slug: Web/JavaScript/Typed_arrays
 ---
 
 {{JsSidebar("Advanced")}}

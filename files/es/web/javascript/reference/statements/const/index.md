@@ -1,7 +1,6 @@
 ---
 title: const
 slug: Web/JavaScript/Reference/Statements/const
-original_slug: Web/JavaScript/Referencia/Sentencias/const
 ---
 
 {{jsSidebar("Statements")}}

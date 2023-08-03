@@ -1,5 +1,5 @@
 ---
-title: ':picture-in-picture'
+title: ":picture-in-picture"
 slug: Web/CSS/:picture-in-picture
 translation_of: Web/CSS/:picture-in-picture
 l10n:

@@ -25,10 +25,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/LN2
 
 ```js
 function getNatLog2() {
-   return Math.LN2
+  return Math.LN2;
 }
 
-getNatLog2() // 0.6931471805599453
+getNatLog2(); // 0.6931471805599453
 ```
 
 ## 规范

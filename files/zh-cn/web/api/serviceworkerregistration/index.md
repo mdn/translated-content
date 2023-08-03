@@ -55,16 +55,22 @@ This code snippet is from the [service worker registration-events sample](https:
 Any new service workers are registered; if there's an existing service worker, the code overrides its default scope so that the registration applies to the current directory and everything underneath it. The example also reports any registration failures.
 
 ```js
-if ('serviceWorker' in navigator) {
-  document.querySelector('#availability').innerText = 'are';
-  document.querySelector('#controlled').innerText = navigator.serviceWorker.controller ? 'is' : 'is not';
-  navigator.serviceWorker.register('service-worker.js', {scope: './'}).then(function(registration) {
-    document.querySelector('#register').textContent = 'succeeded';
-  }).catch(function(error) {
-    document.querySelector('#register').textContent = 'failed: ' + error;
-  });
+if ("serviceWorker" in navigator) {
+  document.querySelector("#availability").innerText = "are";
+  document.querySelector("#controlled").innerText = navigator.serviceWorker
+    .controller
+    ? "is"
+    : "is not";
+  navigator.serviceWorker
+    .register("service-worker.js", { scope: "./" })
+    .then(function (registration) {
+      document.querySelector("#register").textContent = "succeeded";
+    })
+    .catch(function (error) {
+      document.querySelector("#register").textContent = "failed: " + error;
+    });
 } else {
-  document.querySelector('#availability').innerText = 'are not';
+  document.querySelector("#availability").innerText = "are not";
 }
 ```
 

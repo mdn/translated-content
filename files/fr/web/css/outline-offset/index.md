@@ -55,7 +55,7 @@ outline-offset: unset;
 ### HTML
 
 ```html
-<p class="exemple">La bordure est décalée<p>
+<p class="exemple">La bordure est décalée</p>
 ```
 
 ### Résultat

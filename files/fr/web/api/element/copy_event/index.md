@@ -24,10 +24,10 @@ L'événement **copy** est déclenché lorsque l'utilisateur initie une copie pa
 Un gestionnaire de cet événement peut modifier l'objet {{domxref("ClipboardEvent.clipboardData")}} en appellant {{domxref("DataTransfer.setData", "setData(format, data)")}}:
 
 ```js
-document.addEventListener('copy', function(e){
-    e.clipboardData.setData('text/plain', 'Hello, world!');
-    e.clipboardData.setData('text/html', '<b>Hello, world!</b>');
-    e.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
+document.addEventListener("copy", function (e) {
+  e.clipboardData.setData("text/plain", "Hello, world!");
+  e.clipboardData.setData("text/html", "<b>Hello, world!</b>");
+  e.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
 });
 ```
 
@@ -42,12 +42,12 @@ L'action par défaut de l'événement dépend de la source de celui-ci et du com
 
 ## Propriétés
 
-| Property                              | Type                                 | Description                                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| Property                        | Type                       | Description                                            |
+| ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
 
 ## Spécifications
 

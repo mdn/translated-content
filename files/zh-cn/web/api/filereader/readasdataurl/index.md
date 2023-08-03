@@ -23,21 +23,25 @@ readAsDataURL(blob)
 ### HTML
 
 ```html
-<input type="file" onchange="previewFile()"><br>
-<img src="" height="200" alt="Image preview...">
+<input type="file" onchange="previewFile()" /><br />
+<img src="" height="200" alt="Image preview..." />
 ```
 
 ### JavaScript
 
 ```js
 function previewFile() {
-  var preview = document.querySelector('img');
-  var file    = document.querySelector('input[type=file]').files[0];
-  var reader  = new FileReader();
+  var preview = document.querySelector("img");
+  var file = document.querySelector("input[type=file]").files[0];
+  var reader = new FileReader();
 
-  reader.addEventListener("load", function () {
-    preview.src = reader.result;
-  }, false);
+  reader.addEventListener(
+    "load",
+    function () {
+      preview.src = reader.result;
+    },
+    false,
+  );
 
   if (file) {
     reader.readAsDataURL(file);
@@ -54,7 +58,7 @@ function previewFile() {
 ### HTML
 
 ```html
-<input id="browse" type="file" onchange="previewFiles()" multiple>
+<input id="browse" type="file" onchange="previewFiles()" multiple />
 <div id="preview"></div>
 ```
 
@@ -62,33 +66,33 @@ function previewFile() {
 
 ```js
 function previewFiles() {
-
-  var preview = document.querySelector('#preview');
-  var files   = document.querySelector('input[type=file]').files;
+  var preview = document.querySelector("#preview");
+  var files = document.querySelector("input[type=file]").files;
 
   function readAndPreview(file) {
-
     // 确保 `file.name` 符合我们要求的扩展名
-    if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
+    if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
       var reader = new FileReader();
 
-      reader.addEventListener("load", function () {
-        var image = new Image();
-        image.height = 100;
-        image.title = file.name;
-        image.src = this.result;
-        preview.appendChild( image );
-      }, false);
+      reader.addEventListener(
+        "load",
+        function () {
+          var image = new Image();
+          image.height = 100;
+          image.title = file.name;
+          image.src = this.result;
+          preview.appendChild(image);
+        },
+        false,
+      );
 
       reader.readAsDataURL(file);
     }
-
   }
 
   if (files) {
     [].forEach.call(files, readAndPreview);
   }
-
 }
 ```
 

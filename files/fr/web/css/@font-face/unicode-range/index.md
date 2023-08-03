@@ -12,11 +12,11 @@ Le descripteur **`unicode-range`**, associé à la règle @ [`@font-face`](/fr/d
 
 ```css
 /* Valeurs <unicode-range> */
-unicode-range: U+26;                 /* un seul point de code         */
+unicode-range: U+26; /* un seul point de code         */
 unicode-range: U+0-7F;
-unicode-range: U+0025-00FF;          /* un intervalle spécifique      */
-unicode-range: U+4??;                /* un intervalle de substitution */
-unicode-range: U+0025-00FF, U+4??;   /* plusieurs valeurs             */
+unicode-range: U+0025-00FF; /* un intervalle spécifique      */
+unicode-range: U+4??; /* un intervalle de substitution */
+unicode-range: U+0025-00FF, U+4??; /* plusieurs valeurs             */
 ```
 
 ### Valeurs
@@ -63,8 +63,8 @@ Dans la feuille de style CSS, on définit une règle [`@font-face`](/fr/docs/Web
 
 ```css
 @font-face {
-  font-family: 'Ampersand';
-  src: local('Times New Roman');
+  font-family: "Ampersand";
+  src: local("Times New Roman");
   unicode-range: U+26;
 }
 

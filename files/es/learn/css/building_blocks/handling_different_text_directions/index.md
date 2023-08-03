@@ -1,7 +1,6 @@
 ---
 title: Manejando diferentes direcciones de texto
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
-original_slug: Learn/CSS/Building_blocks/Manejando_diferentes_direcciones_de_texto
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}

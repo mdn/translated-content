@@ -28,12 +28,14 @@ Dans l'exemple qui suit, on souhaite récupérer l'enregistrement qui correspond
 let title = "Promener le chien";
 
 // On ouvre une transaction en lecture/écriture
-let objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+let objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // On récupère l'objet qui possède le titre souhaité
 let objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = function() {
+objectStoreTitleRequest.onsuccess = function () {
   // On agit sur les données de l'objet de la requête
   let data = objectStoreTitleRequest.result;
 
@@ -44,7 +46,7 @@ objectStoreTitleRequest.onsuccess = function() {
   let updateTitleRequest = objectStore.put(data);
 
   // Lorsque cette seconde requête est terminée, on lance displayData() pour rafraîchir l'écran
-  updateTitleRequest.onsuccess = function() {
+  updateTitleRequest.onsuccess = function () {
     displayData();
   };
 };

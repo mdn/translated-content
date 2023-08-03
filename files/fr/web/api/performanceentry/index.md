@@ -49,10 +49,7 @@ function print_PerformanceEntries() {
   }
 }
 function print_PerformanceEntry(perfEntry) {
-  let properties = ["name",
-                    "entryType",
-                    "startTime",
-                    "duration"];
+  let properties = ["name", "entryType", "startTime", "duration"];
 
   for (let i = 0; i < properties.length; i++) {
     // Vérifie chaque propriété

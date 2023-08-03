@@ -22,7 +22,7 @@ Une valeur booléenne.
 ## Exemple
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 obj.loop = true; // vrai
 ```
 
