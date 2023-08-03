@@ -192,11 +192,12 @@ view 함수의 마지막에선 HTML 페이지를 생성하고 이 페이지를 �
 예를 들어, 아래 코드 조각은 extends 탬플릿 태그의 사용 및 content 블럭(block)을 재정의하는 방법을 보여줍니다. 생성된 HTML은 기본 탬플릿에서 정의된 코드와 구조를 포함할 것입니다(`title` 블럭에서 정의한 기본 내용은 포함하지만, 기본 `contents` 블럭 대신 새로운 `contents` 블럭 포함).
 
 ```html
-{% extends "base_generic.html" %}
-
-{% block content %}
-  <h1>Local Library Home</h1>
-  <p>Welcome to LocalLibrary, a website developed by <em>Mozilla Developer Network</em>!</p>
+{% extends "base_generic.html" %} {% block content %}
+<h1>Local Library Home</h1>
+<p>
+  Welcome to LocalLibrary, a website developed by
+  <em>Mozilla Developer Network</em>!
+</p>
 {% endblock %}
 ```
 

@@ -150,21 +150,17 @@ HTTP `POST`는 당신이 정보를 포함한 폼을 작성하여 서버에 저�
 
 ```html
 POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
-Host: developer.mozilla.org
-Connection: keep-alive
-Content-Length: 432
-Pragma: no-cache
-Cache-Control: no-cache
-Origin: https://developer.mozilla.org
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
-Content-Type: application/x-www-form-urlencoded
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Host: developer.mozilla.org Connection: keep-alive Content-Length: 432 Pragma:
+no-cache Cache-Control: no-cache Origin: https://developer.mozilla.org
+Upgrade-Insecure-Requests: 1 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64)
+AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
+Content-Type: application/x-www-form-urlencoded Accept:
+text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 Referer: https://developer.mozilla.org/en-US/profiles/hamishwillee/edit
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-US,en;q=0.8,es;q=0.6
-Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; _gat=1; csrftoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT; dwf_section_edit=False; dwf_sg_task_completion=False; _ga=GA1.2.1688886003.1471911953; ffo=true
-
+Accept-Encoding: gzip, deflate, br Accept-Language: en-US,en;q=0.8,es;q=0.6
+Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; _gat=1;
+csrftoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT; dwf_section_edit=False;
+dwf_sg_task_completion=False; _ga=GA1.2.1688886003.1471911953; ffo=true
 csrfmiddlewaretoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT&user-username=hamishwillee&user-fullname=Hamish+Willee&user-title=&user-organization=&user-location=Australia&user-locale=en-US&user-timezone=Australia%2FMelbourne&user-irc_nickname=&user-interests=&user-expertise=&user-twitter_url=&user-stackoverflow_url=&user-linkedin_url=&user-mozillians_url=&user-facebook_url=
 ```
 
