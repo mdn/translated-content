@@ -6,7 +6,6 @@ tags:
   - Reference
   - Псевдоклассы
   - Селекторы
-translation_of: Web/CSS/Pseudo-classes
 ---
 {{CSSRef}}
 

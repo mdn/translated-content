@@ -5,7 +5,6 @@ tags:
   - Manifest
   - Web
   - categories
-translation_of: Web/Manifest/categories
 ---
 
 {{QuickLinksWithSubpages("/ru/docs/Web/Manifest")}}

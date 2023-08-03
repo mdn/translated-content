@@ -7,7 +7,6 @@ tags:
   - Object
   - Prototype
   - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 ---
 {{JSRef("Global_Objects", "Object")}}
 

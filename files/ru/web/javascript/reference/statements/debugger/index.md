@@ -4,7 +4,6 @@ slug: Web/JavaScript/Reference/Statements/debugger
 tags:
   - JavaScript
   - Отладка
-translation_of: Web/JavaScript/Reference/Statements/debugger
 ---
 {{jsSidebar("Statements")}}
 

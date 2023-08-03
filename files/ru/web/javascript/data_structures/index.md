@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - Типы данных
   - Учебник
-translation_of: Web/JavaScript/Data_structures
 ---
 {{jsSidebar("More")}}
 

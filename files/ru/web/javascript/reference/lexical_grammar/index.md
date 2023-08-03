@@ -7,7 +7,6 @@ tags:
   - Literal
   - ключевые слова
   - литералы
-translation_of: Web/JavaScript/Reference/Lexical_grammar
 ---
 
 {{JsSidebar("More")}}

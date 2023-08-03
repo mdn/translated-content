@@ -7,7 +7,6 @@ tags:
   - CSS Custom Properties
   - Guide
   - Reference
-translation_of: Web/CSS/--*
 browser-compat: css.properties.custom-property
 ---
 

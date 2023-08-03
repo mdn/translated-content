@@ -5,7 +5,6 @@ tags:
   - HTTP
   - Methods
   - Reference
-translation_of: Web/HTTP/Methods
 ---
 
 {{HTTPSidebar}}

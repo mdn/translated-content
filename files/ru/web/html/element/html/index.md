@@ -9,7 +9,6 @@ tags:
   - Справка
   - Элемент
   - корневой элемент HTML
-translation_of: Web/HTML/Element/html
 ---
 {{HTMLSidebar}}
 

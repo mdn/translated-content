@@ -9,7 +9,6 @@ tags:
   - Справка
   - метаданные
   - метаданные документа HTML
-translation_of: Web/HTML/Element/head
 ---
 
 {{HTMLSidebar}}

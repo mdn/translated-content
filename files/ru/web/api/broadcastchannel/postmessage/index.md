@@ -9,7 +9,6 @@ tags:
   - Определение
   - Экспериментальное
   - метод
-translation_of: Web/API/BroadcastChannel/postMessage
 ---
 
 {{APIRef("BroadCastChannel API")}}

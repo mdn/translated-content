@@ -8,7 +8,6 @@ tags:
   - Возможности языка
   - Левая часть выражения
   - Оператор
-translation_of: Web/JavaScript/Reference/Operators/super
 ---
 {{jsSidebar("Operators")}}
 

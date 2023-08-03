@@ -7,7 +7,6 @@ tags:
   - Дополнения
   - Манифест
   - Расширения
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 ---
 
 {{AddonSidebar}}

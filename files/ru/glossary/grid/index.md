@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Grids
   - Glossary
-translation_of: Glossary/Grid
 ---
 
 _CSS Гриды (они же сетки или CSS Grid)_ устанавливаются с помощью значения `grid` в свойстве `display`; вы можете определить колонки и строки в сетке с помощью свойств {{cssxref("grid-template-columns")}} и {{cssxref("grid-template-rows")}} соответственно.

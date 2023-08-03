@@ -11,7 +11,6 @@ tags:
   - Оператор присваивания
   - "Особенность_языка"
   - справочник
-translation_of: Web/JavaScript/Reference/Operators/Assignment
 ---
 {{jsSidebar("Operators")}}
 

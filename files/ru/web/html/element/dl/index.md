@@ -11,7 +11,6 @@ tags:
   - Список определений
   - Элемент
   - списки
-translation_of: Web/HTML/Element/dl
 ---
 
 {{HTMLSidebar}}

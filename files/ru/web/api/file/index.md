@@ -1,7 +1,6 @@
 ---
 title: File
 slug: Web/API/File
-translation_of: Web/API/File
 ---
 
 {{APIRef}}

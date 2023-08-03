@@ -7,7 +7,6 @@ tags:
   - JavaScript
   - Phaser
   - Начинающий
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Scaling
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Load_the_assets_and_print_them_on_screen")}}

@@ -4,7 +4,6 @@ slug: Web/CSS/user-select
 tags:
   - Вёрстка
   - Свойство
-translation_of: Web/CSS/user-select
 ---
 
 {{CSSRef}}

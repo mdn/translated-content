@@ -7,7 +7,6 @@ tags:
   - File API
   - WebAPI
   - Файлы
-translation_of: Web/API/FileReader
 ---
 
 {{ APIRef("File API") }}

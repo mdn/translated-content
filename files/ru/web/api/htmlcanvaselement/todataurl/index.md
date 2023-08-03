@@ -7,7 +7,6 @@ tags:
   - HTMLCanvasElement
   - Method
   - Reference
-translation_of: Web/API/HTMLCanvasElement/toDataURL
 ---
 
 {{APIRef("Canvas API")}}

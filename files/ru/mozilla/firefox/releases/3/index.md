@@ -1,7 +1,6 @@
 ---
 title: Firefox 3 для разработчиков
 slug: Mozilla/Firefox/Releases/3
-translation_of: Mozilla/Firefox/Releases/3
 ---
 
 {{FirefoxSidebar}}

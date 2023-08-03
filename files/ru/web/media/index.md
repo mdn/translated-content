@@ -9,7 +9,6 @@ tags:
   - TopicStub
   - Video
   - Web
-translation_of: Web/Media
 ---
 
 {{QuickLinksWithSubpages("/ru/docs/Web/Media")}}

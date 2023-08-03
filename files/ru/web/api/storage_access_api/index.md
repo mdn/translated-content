@@ -6,7 +6,6 @@ tags:
   - Reference
   - Storage
   - Storage Access API
-translation_of: Web/API/Storage_Access_API
 ---
 
 {{DefaultAPISidebar("Storage Access API")}}{{seecompattable}}

@@ -5,7 +5,6 @@ tags:
   - HTML
   - Глобальные атрибуты
   - Руководство
-translation_of: Web/HTML/Global_attributes/style
 ---
 
 {{HTMLSidebar("Global_attributes")}}

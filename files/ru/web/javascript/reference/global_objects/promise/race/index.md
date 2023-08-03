@@ -6,7 +6,6 @@ tags:
   - Promise
   - Промис
   - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
 {{JSRef}}
 

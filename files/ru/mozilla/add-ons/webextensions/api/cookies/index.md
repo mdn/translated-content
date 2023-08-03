@@ -12,7 +12,6 @@ tags:
   - Reference
   - TopicStub
   - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
 
 {{AddonSidebar}}

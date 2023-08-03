@@ -8,7 +8,6 @@ tags:
   - RegExp
   - метод
   - регулярные выражения
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 ---
 
 {{JSRef}}

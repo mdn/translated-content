@@ -1,7 +1,6 @@
 ---
 title: Navigator.getUserMedia()
 slug: Web/API/Navigator/getUserMedia
-translation_of: Web/API/Navigator/getUserMedia
 ---
 
 {{APIRef("Media Capture and Streams")}}{{deprecated_header}}

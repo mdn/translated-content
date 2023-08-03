@@ -9,7 +9,6 @@ tags:
   - Proxy
   - Reflect
   - Метапрограммирование
-translation_of: Web/JavaScript/Guide/Meta_programming
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}

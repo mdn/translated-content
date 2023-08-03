@@ -1,7 +1,6 @@
 ---
 title: AudioParam.setValueAtTime()
 slug: Web/API/AudioParam/setValueAtTime
-translation_of: Web/API/AudioParam/setValueAtTime
 ---
 
 {{ APIRef("Web Audio API") }}

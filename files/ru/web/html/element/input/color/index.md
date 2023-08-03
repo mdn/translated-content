@@ -12,7 +12,6 @@ tags:
   - Input
   - Reference
   - color
-translation_of: Web/HTML/Element/input/color
 ---
 
 {{HTMLSidebar}}

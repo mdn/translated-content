@@ -7,7 +7,6 @@ tags:
   - Величина
   - Разметка
   - длина
-translation_of: Web/CSS/length
 ---
 
 {{CSSRef}}

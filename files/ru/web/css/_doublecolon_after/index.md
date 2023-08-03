@@ -7,7 +7,6 @@ tags:
   - Reference
   - Web
   - Псевдоэлементы
-translation_of: Web/CSS/::after
 ---
 
 {{CSSRef}}

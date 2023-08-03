@@ -6,7 +6,6 @@ tags:
   - Content Security Policy
   - HTTP
   - Глоссарий
-translation_of: Glossary/CSP
 ---
 
 CSP ([Политика безопасности контента](/ru/docs/Web/HTTP/CSP)) используется для обнаружения и смягчения определённых типов атак, связанных с веб-сайтами, таких как {{Glossary("XSS")}} и инъекции данных.

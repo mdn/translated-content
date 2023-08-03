@@ -10,7 +10,6 @@ tags:
   - XMLHttpRequest
   - Отмена
   - метод
-translation_of: Web/API/XMLHttpRequest/abort
 ---
 
 {{APIRef('XMLHttpRequest')}}

@@ -7,7 +7,6 @@ tags:
   - Расположение CSS
   - Свойства CSS
   - Шаблон
-translation_of: Web/CSS/visibility
 ---
 {{CSSRef}}
 

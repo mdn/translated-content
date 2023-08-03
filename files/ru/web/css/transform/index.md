@@ -9,7 +9,6 @@ tags:
   - наклон
   - поворот
   - трансформация
-translation_of: Web/CSS/transform
 ---
 {{CSSRef}}
 

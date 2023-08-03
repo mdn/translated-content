@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - Выражение
   - Цикл
-translation_of: Web/JavaScript/Reference/Statements/for...in
 ---
 {{jsSidebar("Statements")}}
 

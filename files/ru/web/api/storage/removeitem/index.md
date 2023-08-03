@@ -5,7 +5,6 @@ tags:
   - API
   - Storage
   - Справка
-translation_of: Web/API/Storage/removeItem
 ---
 
 {{APIRef("Web Storage API")}}

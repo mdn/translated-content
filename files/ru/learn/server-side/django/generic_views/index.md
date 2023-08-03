@@ -7,7 +7,6 @@ tags:
   - Отображения django
   - Руководство
   - Шаблоны django
-translation_of: Learn/Server-side/Django/Generic_views
 ---
 
 {{LearnSidebar}}

@@ -5,7 +5,6 @@ tags:
   - CSS
   - flexbox
   - Свойства
-translation_of: Web/CSS/align-self
 ---
 {{CSSRef}}
 

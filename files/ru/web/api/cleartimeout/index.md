@@ -1,7 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.clearTimeout()
 slug: Web/API/clearTimeout
-translation_of: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 ---
 
 {{APIRef("HTML DOM")}}

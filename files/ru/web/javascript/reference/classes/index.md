@@ -8,7 +8,6 @@ tags:
   - Reference
   - Классы
   - Наследование
-translation_of: Web/JavaScript/Reference/Classes
 ---
 
 {{JsSidebar("Классы")}}

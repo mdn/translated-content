@@ -7,7 +7,6 @@ tags:
   - Method
   - Reference
   - console
-translation_of: Web/API/Console/time
 ---
 
 {{APIRef("Console API")}}

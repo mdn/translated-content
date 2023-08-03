@@ -14,7 +14,6 @@ tags:
   - Считыватель экрана
   - вспомогательная технология
   - доступность
-translation_of: Learn/Accessibility/What_is_accessibility
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}

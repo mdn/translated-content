@@ -7,7 +7,6 @@ tags:
   - Документ
   - Показать страницу
   - Скрыть страницу
-translation_of: Web/API/Page_Visibility_API
 ---
 
 {{DefaultAPISidebar("Page Visibility API")}}

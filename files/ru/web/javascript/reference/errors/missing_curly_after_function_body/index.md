@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - SyntaxError
   - Ошибки
-translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
 ---
 
 {{jsSidebar("Errors")}}

@@ -7,7 +7,6 @@ tags:
   - Method
   - Prototype
   - WeakSet
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 ---
 {{JSRef("Global_Objects", "WeakSet")}}
 

@@ -6,7 +6,6 @@ tags:
   - ES6
   - JavaScript
   - Классы
-translation_of: Web/JavaScript/Reference/Classes/constructor
 ---
 
 {{jsSidebar("Classes")}}

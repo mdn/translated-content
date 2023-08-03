@@ -4,7 +4,6 @@ slug: Web/CSS/text-justify
 tags:
   - Текст
   - выравнивание текста
-translation_of: Web/CSS/text-justify
 ---
 
 {{CSSRef}}

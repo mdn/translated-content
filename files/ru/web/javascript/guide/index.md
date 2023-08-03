@@ -5,7 +5,6 @@ tags:
   - Guide
   - JavaScript
   - l10n:priority
-translation_of: Web/JavaScript/Guide
 ---
 {{jsSidebar("JavaScript Guide")}}
 

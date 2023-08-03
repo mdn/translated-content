@@ -6,7 +6,6 @@ tags:
   - Источник
   - Цитата
   - Элемент
-translation_of: Web/HTML/Element/cite
 ---
 
 ## Описание

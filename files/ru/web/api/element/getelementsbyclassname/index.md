@@ -6,7 +6,6 @@ tags:
   - Класс
   - Коллекция
   - Элемент
-translation_of: Web/API/Element/getElementsByClassName
 ---
 
 {{APIRef("DOM")}}

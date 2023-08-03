@@ -5,7 +5,6 @@ tags:
   - Compatibility
   - Firefox
   - Mozilla
-translation_of: Mozilla/Firefox/Releases/28
 ---
 
 {{FirefoxSidebar}}

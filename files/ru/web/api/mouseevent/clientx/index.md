@@ -9,7 +9,6 @@ tags:
   - MouseEvent
   - Property
   - Read-only
-translation_of: Web/API/MouseEvent/clientX
 ---
 
 {{APIRef("DOM Events")}}

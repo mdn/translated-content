@@ -7,7 +7,6 @@ tags:
   - HTML DOM
   - JS
   - cookie
-translation_of: Web/API/Document/cookie
 ---
 
 {{APIRef("DOM")}}

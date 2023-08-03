@@ -7,7 +7,6 @@ tags:
   - Prototype
   - Reference
   - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toString
 ---
 {{JSRef("Global_Objects", "String")}}
 

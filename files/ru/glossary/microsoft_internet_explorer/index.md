@@ -5,7 +5,6 @@ tags:
   - Microsoft
   - Microsoft Internet Explorer
   - Windows
-translation_of: Glossary/Microsoft_Internet_Explorer
 ---
 
 Internet Explorer (или IE) - это бесплатный графический {{glossary("browser", "браузер")}}, созданный Microsoft для использования внутри компании. {{glossary("Microsoft Edge")}} - на данный момент Windows браузер по умолчанию.

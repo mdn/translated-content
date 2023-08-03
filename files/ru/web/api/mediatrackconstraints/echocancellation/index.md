@@ -12,7 +12,6 @@ tags:
   - Свойство
   - Эхоподавление
   - справочник
-translation_of: Web/API/MediaTrackConstraints/echoCancellation
 ---
 
 {{APIRef("Media Capture and Streams")}}

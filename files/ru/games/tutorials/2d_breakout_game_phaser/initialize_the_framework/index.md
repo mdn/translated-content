@@ -9,7 +9,6 @@ tags:
   - Phaser
   - Игры
   - Руководство
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Scaling")}}

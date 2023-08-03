@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - Левосторонние выражения
   - Оператор
-translation_of: Web/JavaScript/Reference/Operators/new
 ---
 
 {{jsSidebar("Operators")}}

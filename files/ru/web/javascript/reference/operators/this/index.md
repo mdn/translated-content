@@ -7,7 +7,6 @@ tags:
   - Reference
   - this
   - свойства языка
-translation_of: Web/JavaScript/Reference/Operators/this
 ---
 {{jsSidebar("Operators")}}
 

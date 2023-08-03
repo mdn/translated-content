@@ -7,7 +7,6 @@ tags:
   - Reference
   - Référence(2)
   - Интерфейсы
-translation_of: Web/API/HTMLTableElement
 ---
 
 {{APIRef("HTML DOM")}}

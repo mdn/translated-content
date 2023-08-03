@@ -6,7 +6,6 @@ tags:
   - WebExtensions
   - Веб-расширения
   - Для начинающих
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 ---
 
 {{AddonSidebar()}}

@@ -8,7 +8,6 @@ tags:
   - Method
   - Reference
   - XMLHttpRequest API
-translation_of: Web/API/FormData/entries
 ---
 
 {{APIRef("XMLHttpRequest")}}

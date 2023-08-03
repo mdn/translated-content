@@ -1,7 +1,6 @@
 ---
 title: HTMLCanvasElement.toBlob()
 slug: Web/API/HTMLCanvasElement/toBlob
-translation_of: Web/API/HTMLCanvasElement/toBlob
 ---
 
 {{APIRef("Canvas API")}}

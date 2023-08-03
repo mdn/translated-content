@@ -4,7 +4,6 @@ slug: Mozilla/Firefox/Releases/43
 tags:
   - Firefox
   - Release Notes
-translation_of: Mozilla/Firefox/Releases/43
 ---
 
 {{FirefoxSidebar}}

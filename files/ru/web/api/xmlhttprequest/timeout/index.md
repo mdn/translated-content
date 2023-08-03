@@ -6,7 +6,6 @@ tags:
   - XMLHttpRequest
   - Свойство
   - Ссылка
-translation_of: Web/API/XMLHttpRequest/timeout
 ---
 
 {{APIRef('XMLHttpRequest')}}

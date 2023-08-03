@@ -9,7 +9,6 @@ tags:
   - Конструктор
   - Получение данных
   - Чтение данных
-translation_of: Web/API/XMLHttpRequest/XMLHttpRequest
 ---
 
 #### XMLHttpRequest

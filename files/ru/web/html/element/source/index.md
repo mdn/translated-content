@@ -1,7 +1,6 @@
 ---
 title: Элемент <source>
 slug: Web/HTML/Element/source
-translation_of: Web/HTML/Element/source
 ---
 
 **HTML-элемент `<source>` **указывает несколько медиа-ресурсов для элементов {{HTMLElement("picture")}}, {{HTMLElement("video")}} и {{HTMLElement("audio")}}. Это пустой элемент. Он обычно используется для обслуживания одного и того же медиа-контента [в нескольких форматах, поддерживаемых различными браузерами](/ru/docs/Media_formats_supported_by_the_audio_and_video_elements).

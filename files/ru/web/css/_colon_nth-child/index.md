@@ -7,7 +7,6 @@ tags:
   - Reference
   - Web
   - Псевдоклассы
-translation_of: Web/CSS/:nth-child
 ---
 
 {{CSSRef}}

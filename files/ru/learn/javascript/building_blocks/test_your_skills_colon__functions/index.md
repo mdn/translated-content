@@ -6,7 +6,6 @@ tags:
   - Изучение
   - Новичок
   - Функции
-translation_of: Learn/JavaScript/Building_blocks/Test_your_skills:_Functions
 ---
 
 {{learnsidebar}}

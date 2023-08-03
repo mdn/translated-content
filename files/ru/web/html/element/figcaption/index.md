@@ -6,7 +6,6 @@ tags:
   - HTML
   - Reference
   - Элемент
-translation_of: Web/HTML/Element/figcaption
 ---
 
 {{HTMLSidebar}}

@@ -7,7 +7,6 @@ tags:
   - Intl
   - JavaScript
   - ListFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 ---
 {{JSRef}}
 

@@ -7,7 +7,6 @@ tags:
   - Свойство
   - Ссылка
   - Только для чтения
-translation_of: Web/API/Document/documentElement
 ---
 
 {{ ApiRef("DOM") }}

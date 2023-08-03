@@ -11,7 +11,6 @@ tags:
   - Reference
   - Référence(2)
   - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 ---
 {{JSRef}}Метод **`repeat()`** конструирует и возвращает новую строку, содержащую указанное количество соединённых вместе копий строки, на которой он был вызван.
 

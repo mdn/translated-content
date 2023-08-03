@@ -6,7 +6,6 @@ tags:
   - DOM
   - Interface
   - NodeList
-translation_of: Web/API/NodeList
 ---
 
 {{APIRef("DOM")}}

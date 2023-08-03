@@ -7,7 +7,6 @@ tags:
   - Отсылка
   - Свойство
   - Справка
-translation_of: Web/API/Document/doctype
 ---
 
 {{ApiRef("DOM")}}

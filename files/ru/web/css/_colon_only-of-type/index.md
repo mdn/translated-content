@@ -4,7 +4,6 @@ slug: Web/CSS/:only-of-type
 tags:
   - CSS
   - Псевдоклассы
-translation_of: Web/CSS/:only-of-type
 ---
 
 {{CSSRef}}

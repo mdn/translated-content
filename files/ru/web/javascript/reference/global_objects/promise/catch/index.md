@@ -7,7 +7,6 @@ tags:
   - Prototype
   - Промис
   - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
 ---
 {{JSRef}}
 

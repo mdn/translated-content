@@ -5,7 +5,6 @@ tags:
   - Beacon
   - JSAPI Reference
   - Производительность
-translation_of: Web/API/Beacon_API
 ---
 
 {{DefaultAPISidebar("Beacon")}}{{SeeCompatTable}}

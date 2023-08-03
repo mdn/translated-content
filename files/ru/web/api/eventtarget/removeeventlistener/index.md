@@ -6,7 +6,6 @@ tags:
   - Браузерная совместимость
   - Обработка событий
   - метод
-translation_of: Web/API/EventTarget/removeEventListener
 ---
 
 {{APIRef("DOM Events")}}

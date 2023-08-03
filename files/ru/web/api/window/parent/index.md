@@ -11,7 +11,6 @@ tags:
   - Property
   - Reference
   - Window
-translation_of: Web/API/Window/parent
 ---
 
 {{APIRef}}

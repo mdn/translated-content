@@ -6,7 +6,6 @@ tags:
   - CSS-свойства
   - CSS сетка
   - Ссылки
-translation_of: Web/CSS/grid
 ---
 ## Общие сведения
 

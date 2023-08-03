@@ -4,7 +4,6 @@ slug: Learn/JavaScript/Objects/Basics
 tags:
   - JavaScript
   - ООП
-translation_of: Learn/JavaScript/Objects/Basics
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}

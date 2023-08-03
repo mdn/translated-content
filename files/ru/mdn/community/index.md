@@ -5,7 +5,6 @@ tags:
   - Руководство
   - Сообщество
   - Чат
-translation_of: MDN/Contribute/Feedback
 ---
 
 {{MDNSidebar}}

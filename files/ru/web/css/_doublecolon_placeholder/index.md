@@ -5,7 +5,6 @@ tags:
   - '::placeholder'
   - CSS
   - Псевдоэлемент
-translation_of: Web/CSS/::placeholder
 ---
 {{CSSRef}}
 

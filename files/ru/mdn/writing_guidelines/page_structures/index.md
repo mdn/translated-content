@@ -7,7 +7,6 @@ tags:
   - NeedsTranslation
   - Structures
   - TopicStub
-translation_of: MDN/Structures
 ---
 
 {{MDNSidebar}}

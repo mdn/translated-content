@@ -5,7 +5,6 @@ tags:
   - Manifest
   - Web
   - display
-translation_of: Web/Manifest/display
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}

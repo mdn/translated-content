@@ -1,7 +1,6 @@
 ---
 title: "Проверьте свои навыки: позиционирование"
 slug: Learn/CSS/CSS_layout/Position_skills
-translation_of: Learn/CSS/CSS_layout/Position_skills
 ---
 
 {{LearnSidebar}}

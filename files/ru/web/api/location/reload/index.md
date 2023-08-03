@@ -7,7 +7,6 @@ tags:
   - Location
   - Method
   - Reference
-translation_of: Web/API/Location/reload
 ---
 
 {{ APIRef("HTML DOM") }}

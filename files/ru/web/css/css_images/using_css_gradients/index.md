@@ -5,7 +5,6 @@ tags:
   - Градиенты
   - Примеры
   - Руководство
-translation_of: Web/CSS/CSS_Images/Using_CSS_gradients
 ---
 
 {{CSSRef}}

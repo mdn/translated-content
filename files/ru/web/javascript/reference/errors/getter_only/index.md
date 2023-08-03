@@ -3,7 +3,6 @@ title: >-
   TypeError: setting getter-only property "x"(установка свойства только для
   геттера "x")
 slug: Web/JavaScript/Reference/Errors/Getter_only
-translation_of: Web/JavaScript/Reference/Errors/Getter_only
 ---
 {{jsSidebar("Errors")}}
 

@@ -3,7 +3,6 @@ title: StorageManager.estimate()
 slug: Web/API/StorageManager/estimate
 tags:
   - метод
-translation_of: Web/API/StorageManager/estimate
 ---
 
 {{securecontext_header}}{{APIRef("Storage")}}

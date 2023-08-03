@@ -6,7 +6,6 @@ tags:
   - Layout
   - Reference
   - Псевдоэлементы
-translation_of: Web/CSS/::first-letter
 ---
 
 {{CSSRef}}

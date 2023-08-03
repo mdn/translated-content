@@ -5,7 +5,6 @@ tags:
   - Web-расширение
   - Безопасность
   - Расширение
-translation_of: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 ---
 
 {{AddonSidebar}}

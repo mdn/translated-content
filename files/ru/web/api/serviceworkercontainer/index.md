@@ -12,7 +12,6 @@ tags:
   - ServiceWorkerContainer
   - TopicStub
   - Workers
-translation_of: Web/API/ServiceWorkerContainer
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

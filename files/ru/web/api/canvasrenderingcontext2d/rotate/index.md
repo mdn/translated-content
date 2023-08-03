@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.rotate()
 slug: Web/API/CanvasRenderingContext2D/rotate
-translation_of: Web/API/CanvasRenderingContext2D/rotate
 ---
 
 {{APIRef}}

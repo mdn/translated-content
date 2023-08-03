@@ -6,7 +6,6 @@ tags:
   - TypedArray
   - TypedArrays
   - Типизированные массивы
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray
 ---
 {{JSRef}}
 

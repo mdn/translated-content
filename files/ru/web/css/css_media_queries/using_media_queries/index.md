@@ -10,7 +10,6 @@ tags:
   - Продвинутый
   - Резиновая вёрстка
   - Руководство
-translation_of: Web/CSS/Media_Queries/Using_media_queries
 ---
 
 {{cssref}}

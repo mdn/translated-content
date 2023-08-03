@@ -5,7 +5,6 @@ tags:
   - Web-расширение
   - Безопасность
   - Расширение
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
 ---
 
 {{AddonSidebar}}

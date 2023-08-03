@@ -5,7 +5,6 @@ tags:
   - API
   - JavaScript
   - WebAssembly
-translation_of: WebAssembly/Using_the_JavaScript_API
 ---
 
 {{WebAssemblySidebar}}

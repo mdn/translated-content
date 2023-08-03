@@ -8,7 +8,6 @@ tags:
   - Reference
   - Référence(2)
   - TopicStub
-translation_of: Web/API/IndexedDB_API
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}

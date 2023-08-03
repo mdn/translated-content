@@ -6,7 +6,6 @@ tags:
   - CSS-свойство
   - Композиция и наложение
   - recipe:css-property
-translation_of: Web/CSS/background-blend-mode
 browser-compat: css.properties.background-blend-mode
 ---
 {{CSSRef()}}

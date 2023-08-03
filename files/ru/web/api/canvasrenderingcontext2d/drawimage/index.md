@@ -7,7 +7,6 @@ tags:
   - CanvasRenderingContext2D
   - Ссылка
   - метод
-translation_of: Web/API/CanvasRenderingContext2D/drawImage
 ---
 
 {{APIRef}}

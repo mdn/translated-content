@@ -6,7 +6,6 @@ tags:
   - CSS Basic Concepts
   - Для начинающих
   - Основы
-translation_of: Web/Guide/CSS/Block_formatting_context
 ---
 
 {{ CSSRef() }}

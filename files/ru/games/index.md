@@ -5,7 +5,6 @@ tags:
   - Игры
   - Приложения
   - геймдев
-translation_of: Games
 ---
 
 {{GamesSidebar}}

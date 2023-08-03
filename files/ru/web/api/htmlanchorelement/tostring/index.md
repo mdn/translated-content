@@ -9,7 +9,6 @@ tags:
   - Method
   - Stringifier
   - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/toString
 ---
 
 {{ApiRef("URL API")}}

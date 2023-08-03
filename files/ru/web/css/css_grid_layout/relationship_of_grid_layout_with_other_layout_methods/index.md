@@ -4,7 +4,6 @@ slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_meth
 tags:
   - Руководство
   - Сетка
-translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
 
 **CSS Grid Layout** спроектирован таким образом, чтобы работать вместе с другими частями CSS и составлять с ними законченную систему создания макетов страниц. В рамках этого руководства, мы объясним, каким образом сочетать гриды с другими техниками, которыми Вы, возможно, уже пользуетесь в своей работе.

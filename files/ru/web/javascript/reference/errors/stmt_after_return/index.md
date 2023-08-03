@@ -6,7 +6,6 @@ tags:
   - Return
   - Warning
   - Предупреждения
-translation_of: Web/JavaScript/Reference/Errors/Stmt_after_return
 ---
 
 {{jsSidebar("Errors")}}

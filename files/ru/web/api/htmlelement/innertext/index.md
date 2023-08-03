@@ -1,7 +1,6 @@
 ---
 title: Node.innerText
 slug: Web/API/HTMLElement/innerText
-translation_of: Web/API/HTMLElement/innerText
 ---
 
 {{APIRef("DOM")}}

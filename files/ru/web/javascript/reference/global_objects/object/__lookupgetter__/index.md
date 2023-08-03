@@ -9,7 +9,6 @@ tags:
   - Object
   - Prototype
   - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 ---
 
 {{JSRef("Global_Objects", "Object")}} {{non-standard_header}} {{deprecated_header}}

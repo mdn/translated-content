@@ -10,7 +10,6 @@ tags:
   - Method
   - Reference
   - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log10
 ---
 {{JSRef("Global_Objects", "Math")}}
 

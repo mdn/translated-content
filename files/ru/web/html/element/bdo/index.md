@@ -3,7 +3,6 @@ title: '<bdo>: Элемент переопределения направлен�
 slug: Web/HTML/Element/bdo
 tags:
   - направление текста
-translation_of: Web/HTML/Element/bdo
 ---
 
 {{HTMLSidebar}}

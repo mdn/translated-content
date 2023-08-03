@@ -5,7 +5,6 @@ tags:
   - Geolocation API
   - Guide
   - Intermediate
-translation_of: Web/API/Geolocation_API
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}

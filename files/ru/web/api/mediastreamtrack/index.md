@@ -11,7 +11,6 @@ tags:
   - Интерфейс
   - Медиа
   - аудио
-translation_of: Web/API/MediaStreamTrack
 ---
 
 {{APIRef("Media Capture and Streams")}}

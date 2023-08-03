@@ -9,7 +9,6 @@ tags:
   - коды HTTP
   - ошибки HTTP
   - HTTP-коды ответов
-translation_of: Web/HTTP/Status
 ---
 
 {{HTTPSidebar}}

@@ -6,7 +6,6 @@ tags:
   - WebExtensions
   - Дополнения
   - Расширения
-translation_of: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 ---
 
 {{AddonSidebar}}

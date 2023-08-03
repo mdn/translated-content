@@ -4,7 +4,6 @@ slug: Web/CSS/:lang
 tags:
   - CSS
   - Псевдо-класс
-translation_of: Web/CSS/:lang
 ---
 
 {{CSSRef}}

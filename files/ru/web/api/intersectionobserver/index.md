@@ -9,7 +9,6 @@ tags:
   - Intersection Observer API
   - Reference
   - observers
-translation_of: Web/API/IntersectionObserver
 ---
 
 {{APIRef("Intersection Observer API")}}

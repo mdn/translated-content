@@ -11,7 +11,6 @@ tags:
   - Reference
   - Référence(2)
   - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 ---
 
 {{JSRef("Global_Objects", "String")}}

@@ -5,7 +5,6 @@ tags:
   - Java
   - Глоссарий
   - Язык программирования
-translation_of: Glossary/Java
 ---
 
 Java — {{glossary("Compile", "компилируемый")}}, {{glossary("OOP", "объектно-ориентированный")}} и легко переносимый язык {{Glossary("computer programming", "программирования")}}.

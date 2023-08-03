@@ -6,7 +6,6 @@ tags:
   - Градиент
   - Холст
   - метод
-translation_of: Web/API/CanvasRenderingContext2D/createLinearGradient
 ---
 
 {{APIRef}}

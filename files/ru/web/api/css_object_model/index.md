@@ -4,7 +4,6 @@ slug: Web/API/CSS_Object_Model
 tags:
   - API
   - CSSOM
-translation_of: Web/API/CSS_Object_Model
 ---
 
 {{DefaultAPISidebar('CSSOM')}}

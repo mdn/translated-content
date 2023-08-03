@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - Reflect
   - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/get
 ---
 
 {{JSRef}}

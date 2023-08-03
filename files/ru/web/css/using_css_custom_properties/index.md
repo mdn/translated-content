@@ -6,7 +6,6 @@ tags:
   - CSS переменные
   - Web
   - Руководства
-translation_of: Web/CSS/Using_CSS_custom_properties
 ---
 
 {{SeeCompatTable}}

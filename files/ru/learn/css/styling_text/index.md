@@ -20,7 +20,6 @@ tags:
   - списки
   - тени
   - шрифт
-translation_of: Learn/CSS/Styling_text
 ---
 
 {{LearnSidebar}}

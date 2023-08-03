@@ -3,7 +3,6 @@ title: ':active'
 slug: Web/CSS/:active
 tags:
   - Псевдоклассы
-translation_of: Web/CSS/:active
 ---
 
 {{CSSRef}}

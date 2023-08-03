@@ -8,7 +8,6 @@ tags:
   - console.log()
   - Отладка
   - метод
-translation_of: Web/API/Console/log
 ---
 
 {{APIRef("Console API")}}

@@ -5,7 +5,6 @@ tags:
   - HTML
   - Основной поток
   - элементы
-translation_of: Web/HTML/Element/ol
 ---
 
 {{HTMLSidebar}}

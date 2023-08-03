@@ -6,7 +6,6 @@ tags:
   - l10n:priority
   - Веб
   - Справка
-translation_of: Web/HTTP
 ---
 {{HTTPSidebar}}
 

@@ -10,7 +10,6 @@ tags:
   - Главная
   - Справка
   - Экспериментальная
-translation_of: Web/API/Fetch_API
 ---
 
 {{DefaultAPISidebar("Fetch API")}}

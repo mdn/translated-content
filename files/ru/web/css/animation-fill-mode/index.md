@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS-анимации
   - CSS-свойства
-translation_of: Web/CSS/animation-fill-mode
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

@@ -11,7 +11,6 @@ tags:
   - Service Workers
   - TopicStub
   - Workers
-translation_of: Web/API/Service_Worker_API
 ---
 
 {{DefaultAPISidebar("Service Workers API")}}

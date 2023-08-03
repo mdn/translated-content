@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - Math
   - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math
 ---
 {{JSRef("Global_Objects", "Math")}}
 

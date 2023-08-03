@@ -7,7 +7,6 @@ tags:
   - WebAssembly
   - XMLHttpRequest
   - bytecode
-translation_of: WebAssembly/Loading_and_running
 ---
 
 {{WebAssemblySidebar}}

@@ -8,7 +8,6 @@ tags:
   - USB
   - WebUSB
   - WebUSB API
-translation_of: Web/API/USB
 ---
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}

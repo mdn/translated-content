@@ -3,7 +3,6 @@ title: HTTP-куки
 slug: Web/HTTP/Cookies
 tags:
   - Куки
-translation_of: Web/HTTP/Cookies
 ---
 
 {{HTTPSidebar}}

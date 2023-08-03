@@ -7,7 +7,6 @@ tags:
   - Prototype
   - Reference
   - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/valueOf
 ---
 {{JSRef("Global_Objects", "String")}}
 

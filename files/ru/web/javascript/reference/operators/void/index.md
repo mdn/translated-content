@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - Операторы
   - Унарные
-translation_of: Web/JavaScript/Reference/Operators/void
 ---
 
 {{jsSidebar("Operators")}}

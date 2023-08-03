@@ -5,7 +5,6 @@ tags:
   - Вёрстка
   - Элемент
   - вывод
-translation_of: Web/HTML/Element/output
 ---
 {{HTMLSidebar}}
 

@@ -12,7 +12,6 @@ tags:
   - TopicStub
   - Web Audio API
   - sound
-translation_of: Web/API/AudioParam
 ---
 
 {{APIRef("Web Audio API")}}

@@ -5,7 +5,6 @@ tags:
   - HTML
   - Код
   - Элемент
-translation_of: Web/HTML/Element/code
 ---
 
 {{HTMLSidebar}}

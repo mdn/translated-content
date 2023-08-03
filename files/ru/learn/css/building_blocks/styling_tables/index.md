@@ -5,7 +5,6 @@ tags:
   - CSS
   - Стилизация
   - таблицы
-translation_of: Learn/CSS/Building_blocks/Styling_tables
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Borders", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Styling_boxes")}}

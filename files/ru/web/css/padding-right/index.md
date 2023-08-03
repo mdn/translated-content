@@ -4,7 +4,6 @@ slug: Web/CSS/padding-right
 tags:
   - CSS
   - CSS-свойство
-translation_of: Web/CSS/padding-right
 ---
 
 {{CSSRef}}

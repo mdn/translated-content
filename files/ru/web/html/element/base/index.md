@@ -6,7 +6,6 @@ tags:
   - HTML
   - атрибуты <base>
   - метаданные
-translation_of: Web/HTML/Element/base
 ---
 
 {{HTMLSidebar}}

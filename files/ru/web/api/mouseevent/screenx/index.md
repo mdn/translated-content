@@ -1,7 +1,6 @@
 ---
 title: MouseEvent.screenX
 slug: Web/API/MouseEvent/screenX
-translation_of: Web/API/MouseEvent/screenX
 ---
 
 {{APIRef("DOM Events")}}

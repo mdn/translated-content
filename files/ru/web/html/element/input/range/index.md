@@ -4,7 +4,6 @@ slug: Web/HTML/Element/input/range
 tags:
   - контроллер
   - слайдер
-translation_of: Web/HTML/Element/input/range
 ---
 
 {{HTMLSidebar("Input_types")}}

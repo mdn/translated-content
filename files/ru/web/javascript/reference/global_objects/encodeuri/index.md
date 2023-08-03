@@ -6,7 +6,6 @@ tags:
   - NeedsUpdate
   - Reference
   - URI
-translation_of: Web/JavaScript/Reference/Global_Objects/encodeURI
 ---
 {{jsSidebar("Objects")}}
 

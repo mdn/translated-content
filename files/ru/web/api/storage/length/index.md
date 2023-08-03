@@ -6,7 +6,6 @@ tags:
   - Storage
   - Web Storage
   - Справка
-translation_of: Web/API/Storage/length
 ---
 
 {{APIRef("Web Storage API")}}

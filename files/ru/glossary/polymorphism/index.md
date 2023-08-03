@@ -4,7 +4,6 @@ slug: Glossary/Polymorphism
 tags:
   - CodingScripting
   - Glossary
-translation_of: Glossary/Polymorphism
 ---
 
 **Полиморфизм** - это представление одного интерфейса для разных типов данных.

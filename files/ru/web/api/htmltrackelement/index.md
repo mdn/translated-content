@@ -1,7 +1,6 @@
 ---
 title: HTMLTrackElement
 slug: Web/API/HTMLTrackElement
-translation_of: Web/API/HTMLTrackElement
 ---
 
 {{ APIRef("HTML DOM") }}

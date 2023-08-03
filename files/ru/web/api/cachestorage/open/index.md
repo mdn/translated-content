@@ -8,7 +8,6 @@ tags:
   - Method
   - Reference
   - ServiceWorker
-translation_of: Web/API/CacheStorage/open
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}

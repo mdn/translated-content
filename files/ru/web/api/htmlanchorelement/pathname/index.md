@@ -7,7 +7,6 @@ tags:
   - HTMLHyperlinkElementUtils
   - Property
   - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/pathname
 ---
 
 {{ApiRef("URL API")}}

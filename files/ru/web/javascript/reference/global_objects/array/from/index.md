@@ -8,7 +8,6 @@ tags:
   - Method
   - Reference
   - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 ---
 {{JSRef}}
 

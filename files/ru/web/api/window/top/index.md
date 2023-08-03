@@ -1,7 +1,6 @@
 ---
 title: Window.top
 slug: Web/API/Window/top
-translation_of: Web/API/Window/top
 ---
 
 {{APIRef}}

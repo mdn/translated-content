@@ -7,7 +7,6 @@ tags:
   - HTML DOM
   - Справка
   - метод
-translation_of: Web/API/Document/close
 ---
 
 {{APIRef("DOM")}}

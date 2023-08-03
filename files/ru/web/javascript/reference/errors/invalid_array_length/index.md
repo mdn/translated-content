@@ -7,7 +7,6 @@ tags:
   - Массив
   - Ошибка
   - Размер массива
-translation_of: Web/JavaScript/Reference/Errors/Invalid_array_length
 ---
 
 {{jsSidebar("Errors")}}

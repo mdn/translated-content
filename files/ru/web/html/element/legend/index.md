@@ -7,7 +7,6 @@ tags:
   - Web
   - element legend
   - legend
-translation_of: Web/HTML/Element/legend
 ---
 
 {{HTMLSidebar}}

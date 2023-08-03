@@ -6,7 +6,6 @@ tags:
   - Example
   - Guide
   - WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
 
 {{AddonSidebar}}

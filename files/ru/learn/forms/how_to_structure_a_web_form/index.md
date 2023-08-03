@@ -8,7 +8,6 @@ tags:
   - Новичок
   - Структурирование
   - Форма
-translation_of: Learn/Forms/How_to_structure_a_web_form
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Ваша_первая_HTML_форма", "Learn/HTML/Forms/Стандартные_виджеты_форм", "Learn/HTML/Forms")}}

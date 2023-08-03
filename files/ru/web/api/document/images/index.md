@@ -4,7 +4,6 @@ slug: Web/API/Document/images
 tags:
   - DOM
   - JavaScript
-translation_of: Web/API/Document/images
 ---
 
 {{ ApiRef() }}

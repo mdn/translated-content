@@ -5,7 +5,6 @@ tags:
   - Reference
   - WebExtensions
   - version
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/version
 ---
 
 {{AddonSidebar}}

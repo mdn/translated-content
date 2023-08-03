@@ -13,7 +13,6 @@ tags:
   - Переменные
   - Проверка
   - Числа
-translation_of: Learn/JavaScript/First_steps/Silly_story_generator
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Первые_шаги/Arrays", "Learn/JavaScript/Первые_шаги")}}

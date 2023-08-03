@@ -20,7 +20,6 @@ tags:
   - display
   - getDisplayMedia
   - screen
-translation_of: Web/API/Screen_Capture_API
 ---
 
 {{DefaultAPISidebar("Screen Capture API")}}

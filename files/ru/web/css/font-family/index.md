@@ -6,7 +6,6 @@ tags:
   - CSS-свойства
   - CSS-свойство
   - семейства-шрифтов
-translation_of: Web/CSS/font-family
 ---
 
 {{CSSRef}}

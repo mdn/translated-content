@@ -7,7 +7,6 @@ tags:
   - Interface
   - Reference
   - XMLHttpRequest
-translation_of: Web/API/FormData
 ---
 
 {{APIRef("XMLHttpRequest")}}

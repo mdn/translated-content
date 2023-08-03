@@ -12,7 +12,6 @@ tags:
   - Браузер
   - Новичку
   - Обучение
-translation_of: Learn/Common_questions/What_are_browser_developer_tools
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

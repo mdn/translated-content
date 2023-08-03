@@ -10,7 +10,6 @@ tags:
   - Prototype
   - Reference
   - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
 {{JSRef("Global_Objects", "Array")}}
 

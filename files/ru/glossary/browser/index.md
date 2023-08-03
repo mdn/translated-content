@@ -1,7 +1,6 @@
 ---
 title: Браузер
 slug: Glossary/Browser
-translation_of: Glossary/Browser
 ---
 
 _Веб браузер —_ это программа которая извлекает и показывает страницы из {{Glossary("World Wide Web","Web")}}, и даёт пользователям доступ к веб-страницам через {{Glossary("hyperlink","гиперссылки")}}.

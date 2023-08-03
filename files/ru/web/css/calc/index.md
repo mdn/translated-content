@@ -3,7 +3,6 @@ title: Функция calc()
 slug: Web/CSS/calc
 tags:
   - css calc
-translation_of: Web/CSS/calc()
 ---
 
 {{CSSRef}}

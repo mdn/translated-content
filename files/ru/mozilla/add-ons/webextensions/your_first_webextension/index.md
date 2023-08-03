@@ -6,7 +6,6 @@ tags:
   - Extensions
   - Guide
   - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
 
 {{AddonSidebar}}

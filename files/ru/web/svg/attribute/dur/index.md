@@ -4,7 +4,6 @@ slug: Web/SVG/Attribute/dur
 tags:
   - SVG
   - SVG атрибуты
-translation_of: Web/SVG/Attribute/dur
 ---
 
 {{SVGRef}}

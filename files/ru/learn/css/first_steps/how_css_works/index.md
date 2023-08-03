@@ -10,7 +10,6 @@ tags:
   - Начинающий
   - Обучение
   - дерево
-translation_of: Learn/CSS/First_steps/How_CSS_works
 ---
 
 {{LearnSidebar}}

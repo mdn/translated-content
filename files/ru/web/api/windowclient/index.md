@@ -10,7 +10,6 @@ tags:
   - Service Workers
   - ServiceWorker
   - WindowClient
-translation_of: Web/API/WindowClient
 ---
 
 {{APIRef("Service Workers API")}}

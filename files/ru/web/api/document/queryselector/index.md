@@ -10,7 +10,6 @@ tags:
   - поиск элемента
   - поиск элементов
   - селектор
-translation_of: Web/API/Document/querySelector
 ---
 
 {{ApiRef("DOM")}}

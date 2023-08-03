@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Property
   - object-fit
-translation_of: Web/CSS/object-fit
 ---
 {{CSSRef}}
 

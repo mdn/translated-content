@@ -6,7 +6,6 @@ tags:
   - MouseEvent
   - Property
   - Read-only
-translation_of: Web/API/MouseEvent/offsetX
 ---
 
 {{APIRef("DOM Events")}}{{SeeCompatTable}}

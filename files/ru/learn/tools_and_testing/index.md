@@ -18,7 +18,6 @@ tags:
   - TopicStub
   - cross browser
   - user testing
-translation_of: Learn/Tools_and_testing
 ---
 
 {{LearnSidebar}}

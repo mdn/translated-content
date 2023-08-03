@@ -4,7 +4,6 @@ slug: Web/JavaScript/Reference/Operators/Addition_assignment
 tags:
   - JavaScript
   - Оператор
-translation_of: Web/JavaScript/Reference/Operators/Addition_assignment
 ---
 
 {{jsSidebar("Operators")}}

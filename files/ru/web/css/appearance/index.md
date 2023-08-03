@@ -4,7 +4,6 @@ slug: Web/CSS/appearance
 tags:
   - Стилизация
   - кастомные свойства
-translation_of: Web/CSS/appearance
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

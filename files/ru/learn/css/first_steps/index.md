@@ -9,7 +9,6 @@ tags:
   - first steps
   - Введение
   - Начинающий
-translation_of: Learn/CSS/First_steps
 ---
 
 {{LearnSidebar}}

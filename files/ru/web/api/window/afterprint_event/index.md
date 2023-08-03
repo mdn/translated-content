@@ -1,7 +1,6 @@
 ---
 title: WindowEventHandlers.onafterprint
 slug: Web/API/Window/afterprint_event
-translation_of: Web/API/WindowEventHandlers/onafterprint
 ---
 
 {{ApiRef}}

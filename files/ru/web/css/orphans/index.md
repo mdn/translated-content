@@ -6,7 +6,6 @@ tags:
   - печать
   - разрыв страницы
   - фрагментация
-translation_of: Web/CSS/orphans
 ---
 
 {{CSSRef}}

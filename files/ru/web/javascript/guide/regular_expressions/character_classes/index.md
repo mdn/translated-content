@@ -8,7 +8,6 @@ tags:
   - RegExp
   - Regular Expression
   - character classes
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 ---
 
 {{JSSidebar("JavaScript Guide")}}

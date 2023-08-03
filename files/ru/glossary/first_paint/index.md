@@ -1,7 +1,6 @@
 ---
 title: First paint
 slug: Glossary/First_paint
-translation_of: Glossary/First_paint
 ---
 
 **Первое отображение** - время между переходом на страницу и моментом, когда браузер отображает первые пиксели на экране. Является частью Paint Timing API.

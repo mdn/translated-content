@@ -10,7 +10,6 @@ tags:
   - Справка
   - Только для чтения
   - загрузка
-translation_of: Web/API/XMLHttpRequest/responseXML
 ---
 
 {{APIRef('XMLHttpRequest')}}

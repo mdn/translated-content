@@ -1,7 +1,6 @@
 ---
 title: HTMLContentElement
 slug: Web/API/HTMLSlotElement
-translation_of: Web/API/HTMLContentElement
 ---
 
 {{ APIRef("Web Components") }}

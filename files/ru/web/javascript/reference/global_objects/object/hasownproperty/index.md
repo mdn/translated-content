@@ -8,7 +8,6 @@ tags:
   - Prototype
   - Reference
   - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
 {{JSRef("Global_Objects", "Object")}}
 

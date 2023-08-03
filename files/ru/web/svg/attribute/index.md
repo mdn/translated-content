@@ -8,7 +8,6 @@ tags:
   - SVG Reference
   - Атрибуты
   - Руководство
-translation_of: Web/SVG/Attribute
 ---
 
 « [SVG](/ru/docs/Web/SVG) / [Справочник SVG элементов](/ru/docs/Web/SVG/Элемент) »

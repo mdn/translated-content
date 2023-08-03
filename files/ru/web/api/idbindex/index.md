@@ -11,7 +11,6 @@ tags:
   - Reference
   - Storage
   - TopicStub
-translation_of: Web/API/IDBIndex
 ---
 
 {{APIRef("IndexedDB")}}

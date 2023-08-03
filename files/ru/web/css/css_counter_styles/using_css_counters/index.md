@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS счётчики
   - вложенные счётчики
-translation_of: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
 
 {{CSSRef}}

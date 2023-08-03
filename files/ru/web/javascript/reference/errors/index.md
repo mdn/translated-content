@@ -4,7 +4,6 @@ slug: Web/JavaScript/Reference/Errors
 tags:
   - JavaScript
   - NeedsTranslation
-translation_of: Web/JavaScript/Reference/Errors
 ---
 
 {{jsSidebar("Errors")}}

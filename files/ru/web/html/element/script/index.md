@@ -3,7 +3,6 @@ title: '<script>: элемент для написания скриптов'
 slug: Web/HTML/Element/script
 tags:
   - Script
-translation_of: Web/HTML/Element/script
 ---
 
 {{HTMLSidebar}}

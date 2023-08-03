@@ -4,7 +4,6 @@ slug: Web/HTML/Element/progress
 tags:
   - Progress bar
   - индикатор загрузки
-translation_of: Web/HTML/Element/progress
 ---
 {{HTMLSidebar}}
 

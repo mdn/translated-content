@@ -6,7 +6,6 @@ tags:
   - Заголовки
   - Кеширование
   - Ответ сервера
-translation_of: Web/HTTP/Headers/Expires
 ---
 {{HTTPSidebar}}
 

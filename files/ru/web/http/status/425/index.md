@@ -6,7 +6,6 @@ tags:
   - Браузер
   - Код состояния
   - Ошибка клиента
-translation_of: Web/HTTP/Status/425
 ---
 
 {{SeeCompatTable}}{{HTTPSidebar}}

@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - Proxy
   - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
 ---
 
 {{JSRef}}

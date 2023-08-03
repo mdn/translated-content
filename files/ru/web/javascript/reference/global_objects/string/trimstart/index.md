@@ -8,7 +8,6 @@ tags:
   - Prototype
   - Reference
   - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/trimStart
 ---
 {{JSRef("Global_Objects", "String")}} {{non-standard_header}}
 

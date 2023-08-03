@@ -7,7 +7,6 @@ tags:
   - Location
   - Method
   - Reference
-translation_of: Web/API/Location/replace
 ---
 
 {{ APIRef("HTML DOM") }}

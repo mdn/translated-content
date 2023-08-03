@@ -5,7 +5,6 @@ tags:
   - Прокси
   - вызов функции
   - ловушка
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 ---
 
 {{JSRef}}

@@ -8,7 +8,6 @@ tags:
   - Prototype
   - Reference
   - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 ---
 
 {{JSRef("Global_Objects", "Date")}}

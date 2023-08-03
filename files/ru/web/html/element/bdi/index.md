@@ -7,7 +7,6 @@ tags:
   - Веб
   - Текстовая семантика
   - Элемент
-translation_of: Web/HTML/Element/bdi
 ---
 ## Описание
 

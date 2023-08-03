@@ -6,7 +6,6 @@ tags:
   - HTTP метод
   - Методы запроса
   - Справка
-translation_of: Web/HTTP/Methods/PATCH
 ---
 
 {{HTTPSidebar}}

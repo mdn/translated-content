@@ -1,7 +1,6 @@
 ---
 title: Уведомление
 slug: Web/API/Notification
-translation_of: Web/API/Notification
 ---
 
 {{APIRef("Web Notifications")}}

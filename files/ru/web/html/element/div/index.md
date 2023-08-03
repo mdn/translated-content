@@ -12,7 +12,6 @@ tags:
   - Разделение контента
   - Справка
   - Элемент
-translation_of: Web/HTML/Element/div
 ---
 
 {{HTMLSidebar}}

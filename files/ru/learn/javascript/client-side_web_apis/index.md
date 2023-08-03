@@ -17,7 +17,6 @@ tags:
   - TopicStub
   - WebAPI
   - data
-translation_of: Learn/JavaScript/Client-side_web_APIs
 ---
 
 {{LearnSidebar}}

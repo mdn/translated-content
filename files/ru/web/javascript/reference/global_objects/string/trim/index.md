@@ -8,7 +8,6 @@ tags:
   - Prototype
   - Reference
   - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 ---
 
 {{JSRef("Global_Objects", "String")}}

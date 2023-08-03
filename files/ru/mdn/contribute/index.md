@@ -5,7 +5,6 @@ tags:
   - Гайд
   - Landing
   - MDN Meta
-translation_of: MDN/Contribute
 ---
 
 {{MDNSidebar}}

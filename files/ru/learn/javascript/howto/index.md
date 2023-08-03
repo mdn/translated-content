@@ -3,7 +3,6 @@ title: Решите общие проблемы в вашем JavaScript-код�
 slug: Learn/JavaScript/Howto
 tags:
   - Начинающий
-translation_of: Learn/JavaScript/Howto
 ---
 
 {{LearnSidebar}}

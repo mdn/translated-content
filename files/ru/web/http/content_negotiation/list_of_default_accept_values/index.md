@@ -6,7 +6,6 @@ tags:
   - Reference
   - Заголовок Accept
   - Согласование контента
-translation_of: Web/HTTP/Content_negotiation/List_of_default_Accept_values
 ---
 {{HTTPSidebar}}
 

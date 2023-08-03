@@ -13,7 +13,6 @@ tags:
   - Фотографии
   - Элемент
   - мультимедиа
-translation_of: Web/HTML/Element/img
 ---
 
 {{HTMLSidebar}}

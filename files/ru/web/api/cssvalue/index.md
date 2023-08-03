@@ -1,7 +1,6 @@
 ---
 title: CSSValue
 slug: Web/API/CSSValue
-translation_of: Web/API/CSSValue
 ---
 
 {{APIRef("DOM")}}

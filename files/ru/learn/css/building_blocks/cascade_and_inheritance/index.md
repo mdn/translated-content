@@ -10,7 +10,6 @@ tags:
   - Порядок следования
   - Правила
   - Специфичность
-translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}

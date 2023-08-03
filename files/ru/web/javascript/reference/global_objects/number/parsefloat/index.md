@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - Method
   - Number
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 ---
 
 {{JSRef("Global_Objects", "Number")}}

@@ -6,7 +6,6 @@ tags:
   - Криптография
   - Справка
   - метод
-translation_of: Web/API/Crypto/getRandomValues
 ---
 
 {{APIRef("Web Crypto API")}}

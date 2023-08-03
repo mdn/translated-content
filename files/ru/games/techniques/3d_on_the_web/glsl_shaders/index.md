@@ -7,7 +7,6 @@ tags:
   - Shader
   - three.js
   - Шейдер
-translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
 ---
 
 {{GamesSidebar}}

@@ -4,7 +4,6 @@ slug: Web/HTML/Element/br
 tags:
   - HTML
   - Элемент
-translation_of: Web/HTML/Element/br
 ---
 
 {{HTMLSidebar}}

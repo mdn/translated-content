@@ -1,7 +1,6 @@
 ---
 title: Используем Web Audio API
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
-translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
 ---
 
 [Web Audio API](/ru/docs/Web_Audio_API) обеспечивает простой, но мощный механизм реализации и управления аудио-контентом внутри web приложения. Это позволяет разрабатывать сложные аудио миксины, эффекты и т.д. В этой статье мы постараемся объяснить основы использования Web Audio API, посредством пары простых примеров.

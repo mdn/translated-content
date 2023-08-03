@@ -10,7 +10,6 @@ tags:
   - Коммерция
   - Оплата
   - Платежи
-translation_of: Web/API/PaymentRequest
 ---
 
 {{securecontext_header}}{{APIRef("Payment Request API")}}

@@ -8,7 +8,6 @@ tags:
   - Интерфейс
   - Свойство
   - Экспериментальный
-translation_of: Web/API/Document/origin
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}

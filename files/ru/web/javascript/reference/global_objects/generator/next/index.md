@@ -8,7 +8,6 @@ tags:
   - генератор
   - метод
   - прототип
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/next
 ---
 {{JSRef}}
 

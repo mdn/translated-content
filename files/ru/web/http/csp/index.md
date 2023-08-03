@@ -4,7 +4,6 @@ slug: Web/HTTP/CSP
 tags:
   - Безопасность
   - Справка
-translation_of: Web/HTTP/CSP
 ---
 
 {{HTTPSidebar}}

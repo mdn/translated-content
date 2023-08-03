@@ -1,7 +1,6 @@
 ---
 title: Всплывающие окна
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Popups
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 ---
 
 {{AddonSidebar}}

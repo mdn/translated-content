@@ -4,7 +4,6 @@ slug: Web/HTML/Element/meter
 tags:
   - Формы
   - прогресс
-translation_of: Web/HTML/Element/meter
 ---
 
 {{HTMLSidebar}}

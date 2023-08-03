@@ -1,7 +1,6 @@
 ---
 title: minmax()
 slug: Web/CSS/minmax
-translation_of: Web/CSS/minmax()
 ---
 
 **`minmax()`** это [CSS](/ru/docs/Web/CSS) функция, определяющая диапазон размеров, который больше или равен _min_ и меньше или равен _max_. Используется в [CSS Grids](/ru/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes).

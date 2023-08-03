@@ -13,7 +13,6 @@ tags:
   - Новичок
   - Обучающий раздел
   - Обучение
-translation_of: Learn
 ---
 
 {{LearnSidebar}}

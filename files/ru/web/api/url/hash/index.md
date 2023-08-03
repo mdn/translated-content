@@ -7,7 +7,6 @@ tags:
   - URL
   - Property
   - Reference
-translation_of: Web/API/URL/hash
 ---
 
 {{ APIRef("URL API") }}

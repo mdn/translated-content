@@ -11,7 +11,6 @@ tags:
   - NeedsTranslation
   - Server-side programming
   - TopicStub
-translation_of: Learn/Server-side/First_steps
 ---
 
 {{LearnSidebar}}

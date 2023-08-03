@@ -13,7 +13,6 @@ tags:
   - Référence(2)
   - TopicStub
   - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest
 ---
 
 {{APIRef("XMLHttpRequest")}}

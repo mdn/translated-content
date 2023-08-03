@@ -4,7 +4,6 @@ slug: Web/JavaScript/Reference/Operators/typeof
 tags:
   - JavaScript
   - Оператор
-translation_of: Web/JavaScript/Reference/Operators/typeof
 ---
 {{jsSidebar("Operators")}}
 

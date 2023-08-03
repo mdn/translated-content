@@ -1,7 +1,6 @@
 ---
 title: Использование событий касания
 slug: Web/API/Touch_events/Using_Touch_Events
-translation_of: Web/API/Touch_events/Using_Touch_Events
 ---
 
 {{DefaultAPISidebar("Touch Events")}}

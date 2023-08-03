@@ -5,7 +5,6 @@ tags:
   - HTTP
   - Веб Механика
   - Руководство
-translation_of: Web/HTTP/Messages
 ---
 {{HTTPSidebar}}
 

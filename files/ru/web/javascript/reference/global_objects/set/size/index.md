@@ -7,7 +7,6 @@ tags:
   - set
   - Свойство
   - прототип
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/size
 ---
 {{JSRef}}
 

@@ -8,7 +8,6 @@ tags:
   - Для начинающих
   - Программирование на стороне сервера
   - Учебник
-translation_of: Learn/Server-side/Express_Nodejs
 ---
 
 {{LearnSidebar}}

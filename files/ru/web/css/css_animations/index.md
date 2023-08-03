@@ -7,7 +7,6 @@ tags:
   - Experimental
   - Overview
   - Reference
-translation_of: Web/CSS/CSS_Animations
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

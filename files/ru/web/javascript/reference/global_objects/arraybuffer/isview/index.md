@@ -5,7 +5,6 @@ tags:
   - ArrayBuffer
   - JavaScript
   - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 ---
 {{JSRef}}
 

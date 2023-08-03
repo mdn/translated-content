@@ -7,7 +7,6 @@ tags:
   - История
   - Определение
   - метод
-translation_of: Web/API/History/go
 ---
 
 {{APIRef("History API")}}

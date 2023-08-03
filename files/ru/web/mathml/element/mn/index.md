@@ -5,7 +5,6 @@ tags:
   - MathML
   - MathML:Token Elements
   - Числовой литерал
-translation_of: Web/MathML/Element/mn
 ---
 
 {{MathMLRef}}

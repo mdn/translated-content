@@ -6,7 +6,6 @@ tags:
   - полноэкранный режим
   - псевдокласс
   - экран
-translation_of: Web/CSS/:fullscreen
 ---
 
 {{CSSRef}}

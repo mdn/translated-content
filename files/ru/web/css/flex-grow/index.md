@@ -8,7 +8,6 @@ tags:
   - CSS-свойство
   - NeedsContent
   - Reference
-translation_of: Web/CSS/flex-grow
 ---
 
 {{CSSRef}}

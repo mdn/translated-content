@@ -1,7 +1,6 @@
 ---
 title: keypress
 slug: Web/API/Element/keypress_event
-translation_of: Web/API/Document/keypress_event
 ---
 
 Событие `keypress` происходит когда нажимается символьная клавиша, то есть клавиша которая создаёт символ. Пример таких клавиш это буквы, цифры, знаки пунктуации и т.д. Примеры клавиш которые не создают символы, это клавиши модификаторы, такие как: <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>Meta</kbd>.

@@ -5,7 +5,6 @@ tags:
   - CSS
   - Web
   - Тип данных CSS
-translation_of: Web/CSS/angle
 ---
 
 {{ CSSRef() }}

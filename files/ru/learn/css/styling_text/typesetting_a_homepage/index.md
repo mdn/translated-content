@@ -1,7 +1,6 @@
 ---
 title: "Задание: Стилизирование школьного сайта"
 slug: Learn/CSS/Styling_text/Typesetting_a_homepage
-translation_of: Learn/CSS/Styling_text/Typesetting_a_homepage
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}

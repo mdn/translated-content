@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - Оператор
   - Экспериментальный
-translation_of: Web/JavaScript/Reference/Statements/for...of
 ---
 
 {{jsSidebar("Statements")}}

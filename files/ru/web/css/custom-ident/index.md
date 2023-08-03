@@ -11,7 +11,6 @@ tags:
   - Web
   - Разметка
   - тип данных
-translation_of: Web/CSS/custom-ident
 ---
 
 {{CSSRef}}

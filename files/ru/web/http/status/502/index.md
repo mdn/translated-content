@@ -4,7 +4,6 @@ slug: Web/HTTP/Status/502
 tags:
   - HTTP
   - Код статуса
-translation_of: Web/HTTP/Status/502
 ---
 
 {{HTTPSidebar}}

@@ -17,7 +17,6 @@ tags:
   - Элемент
   - аудио
   - мультимедиа
-translation_of: Web/HTML/Element/audio
 ---
 
 {{HTMLSidebar}}

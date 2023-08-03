@@ -10,7 +10,6 @@ tags:
   - Свойство
   - Узел
   - Узлы
-translation_of: Web/API/Node/nextSibling
 ---
 
 {{APIRef("DOM")}}

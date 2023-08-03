@@ -8,7 +8,6 @@ tags:
   - метод
   - прототип
   - яваскрипт
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 ---
 {{JSRef}}
 

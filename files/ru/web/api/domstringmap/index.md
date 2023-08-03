@@ -3,7 +3,6 @@ title: DOMStringMap
 slug: Web/API/DOMStringMap
 tags:
   - API
-translation_of: Web/API/DOMStringMap
 ---
 
 {{ APIRef("HTML DOM") }}

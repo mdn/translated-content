@@ -7,7 +7,6 @@ tags:
   - Итератор
   - Функция
   - Экспериментальный
-translation_of: Web/JavaScript/Reference/Statements/function*
 ---
 
 {{jsSidebar("Statements")}}

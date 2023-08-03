@@ -15,7 +15,6 @@ tags:
   - Формы
   - фигуры
   - фильтры
-translation_of: Learn/CSS/Building_blocks/Advanced_styling_effects
 ---
 
 {{LearnSidebar}}

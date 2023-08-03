@@ -5,7 +5,6 @@ tags:
   - DataView
   - JavaScript
   - byteLength
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
 ---
 
 {{JSRef}}

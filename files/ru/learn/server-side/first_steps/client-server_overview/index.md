@@ -14,7 +14,6 @@ tags:
   - Сервер
   - Учить
   - Учить
-translation_of: Learn/Server-side/First_steps/Client-Server_overview
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}

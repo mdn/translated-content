@@ -10,7 +10,6 @@ tags:
   - XMLHttpRequest
   - send
   - запрос
-translation_of: Web/API/XMLHttpRequest/send
 ---
 
 {{APIRef('XMLHttpRequest')}}

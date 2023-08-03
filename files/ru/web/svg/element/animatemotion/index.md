@@ -5,7 +5,6 @@ tags:
   - SVG
   - svg анимация
   - Элемент
-translation_of: Web/SVG/Element/animateMotion
 ---
 {{SVGRef}}
 

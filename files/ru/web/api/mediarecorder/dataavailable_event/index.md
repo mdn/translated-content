@@ -1,7 +1,6 @@
 ---
 title: MediaRecorder.ondataavailable
 slug: Web/API/MediaRecorder/dataavailable_event
-translation_of: Web/API/MediaRecorder/ondataavailable
 ---
 
 {{APIRef("MediaStream Recording")}}

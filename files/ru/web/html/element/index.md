@@ -6,7 +6,6 @@ tags:
   - Веб
   - Справка
   - элементы
-translation_of: Web/HTML/Element
 ---
 
 {{HTMLSidebar("Elements")}}

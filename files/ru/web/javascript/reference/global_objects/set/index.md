@@ -10,7 +10,6 @@ tags:
   - Reference
   - set
   - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Set
 ---
 
 {{JSRef}}

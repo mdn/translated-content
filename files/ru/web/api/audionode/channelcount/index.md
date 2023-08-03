@@ -1,7 +1,6 @@
 ---
 title: AudioNode.channelCount
 slug: Web/API/AudioNode/channelCount
-translation_of: Web/API/AudioNode/channelCount
 ---
 
 {{ APIRef("Web Audio API") }}

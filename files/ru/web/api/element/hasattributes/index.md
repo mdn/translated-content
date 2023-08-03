@@ -1,7 +1,6 @@
 ---
 title: Element.hasAttributes()
 slug: Web/API/Element/hasAttributes
-translation_of: Web/API/Element/hasAttributes
 ---
 
 {{ApiRef("DOM")}}

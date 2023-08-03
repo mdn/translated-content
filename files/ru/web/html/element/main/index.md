@@ -9,7 +9,6 @@ tags:
   - main
   - Справка
   - Элемент
-translation_of: Web/HTML/Element/main
 ---
 {{HTMLSidebar}}
 

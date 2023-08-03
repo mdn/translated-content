@@ -11,7 +11,6 @@ tags:
   - Performance
   - TopicStub
   - Web Performance
-translation_of: Learn/Performance
 ---
 
 {{LearnSidebar}}

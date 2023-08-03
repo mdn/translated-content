@@ -4,7 +4,6 @@ slug: Web/CSS/CSS_media_queries/Testing_media_queries
 tags:
   - Выражения
   - медиавыражения
-translation_of: Web/CSS/Media_Queries/Testing_media_queries
 ---
 
 {{cssref}}

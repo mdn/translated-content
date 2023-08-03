@@ -7,7 +7,6 @@ tags:
   - Игры
   - геймпады
   - контроллеры
-translation_of: Games/Techniques/Controls_Gamepad_API
 ---
 
 {{GamesSidebar}}

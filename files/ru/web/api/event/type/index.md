@@ -7,7 +7,6 @@ tags:
   - Event
   - Событие
   - Ссылка
-translation_of: Web/API/Event/type
 ---
 
 {{APIRef}}

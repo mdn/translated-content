@@ -8,7 +8,6 @@ tags:
   - HTTPS
   - консоль
   - причины
-translation_of: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 ---
 ## Причина
 

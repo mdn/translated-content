@@ -8,7 +8,6 @@ tags:
   - filter
   - Свойство CSS
   - Ссылка
-translation_of: Web/CSS/filter
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

@@ -12,7 +12,6 @@ tags:
   - Storage API
   - StorageManager
   - Usage
-translation_of: Web/API/StorageManager
 ---
 
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}

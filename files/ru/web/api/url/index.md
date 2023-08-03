@@ -11,7 +11,6 @@ tags:
   - Domain
   - Адрес
   - Домен
-translation_of: Web/API/URL
 ---
 
 {{ApiRef("URL API")}}

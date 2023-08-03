@@ -11,7 +11,6 @@ tags:
   - Reference
   - Référence(2)
   - TopicStub
-translation_of: Web/API/CanvasRenderingContext2D
 ---
 
 {{APIRef}}

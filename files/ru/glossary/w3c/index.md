@@ -8,7 +8,6 @@ tags:
   - Консорциум
   - Глоссарий
   - Сообщество
-translation_of: Glossary/W3C
 ---
 
 The _World Wide Web Consortium_ (W3C) is an international body that maintains {{Glossary("World Wide Web", "Web-related")}} rules and frameworks.

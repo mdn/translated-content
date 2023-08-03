@@ -9,7 +9,6 @@ tags:
   - Worker
   - Конструктор
   - Ссылка
-translation_of: Web/API/Worker/Worker
 ---
 
 {{APIRef("Web Workers API")}}

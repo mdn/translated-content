@@ -5,7 +5,6 @@ tags:
   - Node
   - Text
   - Текст
-translation_of: Web/API/Text
 ---
 
 {{ApiRef("DOM")}}

@@ -4,7 +4,6 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-ind
 tags:
   - CSS
   - z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 ---
 
 ### Наложения без Z-индекса

@@ -1,7 +1,6 @@
 ---
 title: Платформа и управление
 slug: Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Bounce_off_the_walls", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Game_over")}}

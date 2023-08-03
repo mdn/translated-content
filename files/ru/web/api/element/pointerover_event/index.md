@@ -1,7 +1,6 @@
 ---
 title: "HTMLElement: pointerover event"
 slug: Web/API/Element/pointerover_event
-translation_of: Web/API/HTMLElement/pointerover_event
 ---
 
 {{APIRef}}

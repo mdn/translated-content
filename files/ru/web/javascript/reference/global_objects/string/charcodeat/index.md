@@ -7,7 +7,6 @@ tags:
   - Reference
   - String
   - Unicode
-translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 ---
 
 {{JSRef("Global_Objects", "String")}}

@@ -7,7 +7,6 @@ tags:
   - Разметка
   - Совместимость Мобильных Браузеров
   - Справка
-translation_of: Web/CSS/border
 ---
 
 {{CSSRef("CSS Borders")}}

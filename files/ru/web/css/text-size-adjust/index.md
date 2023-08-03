@@ -3,7 +3,6 @@ title: text-size-adjust
 slug: Web/CSS/text-size-adjust
 tags:
   - Экспериментально
-translation_of: Web/CSS/text-size-adjust
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

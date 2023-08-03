@@ -4,7 +4,6 @@ slug: Web/SVG/Attribute/cx
 tags:
   - SVG
   - SVG атрибуты
-translation_of: Web/SVG/Attribute/cx
 ---
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)

@@ -9,7 +9,6 @@ tags:
   - Интерфейс
   - Определение
   - Экспериментальное
-translation_of: Web/API/BluetoothRemoteGATTServer
 ---
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}

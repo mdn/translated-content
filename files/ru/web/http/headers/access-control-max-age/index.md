@@ -1,7 +1,6 @@
 ---
 title: Access-Control-Max-Age
 slug: Web/HTTP/Headers/Access-Control-Max-Age
-translation_of: Web/HTTP/Headers/Access-Control-Max-Age
 ---
 
 Заголовок ответа сервера **`Access-Control-Max-Age`** сообщает браузеру насколько {{glossary("предзапрос")}} (эта информация содержится в заголовках {{HTTPHeader("Access-Control-Allow-Methods")}} и {{HTTPHeader("Access-Control-Allow-Headers")}}) может быть кеширован и опущен при запросах к серверу.

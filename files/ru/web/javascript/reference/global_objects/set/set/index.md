@@ -1,7 +1,6 @@
 ---
 title: Set() конструктор
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/Set
 ---
 
 {{JSRef}}

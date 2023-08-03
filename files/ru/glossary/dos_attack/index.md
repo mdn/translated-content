@@ -1,7 +1,6 @@
 ---
 title: DoS атака
 slug: Glossary/DOS_attack
-translation_of: Glossary/DOS_attack
 ---
 
 DoS (отказ в обслуживании) - это сетевая атака, которая препятствует обычному использованию ресурсов {{glossary ('server')}}, нагружая сервер "ложными", "фиктивными" запросами.

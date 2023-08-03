@@ -6,7 +6,6 @@ tags:
   - DOM
   - Method
   - метод
-translation_of: Web/API/Element/getAttribute
 ---
 
 {{ ApiRef("DOM") }}

@@ -9,7 +9,6 @@ tags:
   - readAsArrayBuffer
   - Файлы
   - метод
-translation_of: Web/API/FileReader/readAsArrayBuffer
 ---
 
 {{APIRef("File API")}}

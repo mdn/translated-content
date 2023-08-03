@@ -18,7 +18,6 @@ tags:
   - XML Web Services
   - XSLT
   - XUL
-translation_of: Mozilla/Firefox/Releases/1.5
 ---
 
 {{FirefoxSidebar}}

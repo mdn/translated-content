@@ -6,7 +6,6 @@ tags:
   - DOM
   - DOM Element Methods
   - Method
-translation_of: Web/API/Node/removeChild
 ---
 
 {{ApiRef}}

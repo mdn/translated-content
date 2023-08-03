@@ -7,7 +7,6 @@ tags:
   - Веб
   - Пароль
   - Формы
-translation_of: Web/HTML/Element/input/password
 ---
 
 {{HTMLSidebar}}

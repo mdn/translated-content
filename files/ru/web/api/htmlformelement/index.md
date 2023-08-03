@@ -8,7 +8,6 @@ tags:
   - NeedsTranslation
   - Reference
   - TopicStub
-translation_of: Web/API/HTMLFormElement
 ---
 
 {{APIRef("HTML DOM")}}

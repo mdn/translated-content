@@ -7,7 +7,6 @@ tags:
   - Method
   - Reference
   - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 ---
 
 {{JSRef("Global_Objects", "Date")}}

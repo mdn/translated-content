@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - методы BigInt
   - свойства BigInt
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 {{JSRef}}
 

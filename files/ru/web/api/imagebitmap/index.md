@@ -9,7 +9,6 @@ tags:
   - Reference
   - Интерфейс
   - Ссылка
-translation_of: Web/API/ImageBitmap
 ---
 
 {{APIRef("Canvas API")}}

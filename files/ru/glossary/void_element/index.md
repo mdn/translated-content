@@ -6,7 +6,6 @@ tags:
   - Glossary
   - Intermediate
   - Глоссарий
-translation_of: Glossary/Empty_element
 ---
 
 **Пустой элемент** — {{Glossary("element", "элемент")}} HTML, SVG или MathML, который **не может** иметь дочерних узлов (т.е. вложенных элементов или текста внутри себя).

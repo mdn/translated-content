@@ -1,7 +1,6 @@
 ---
 title: loadstart
 slug: Web/API/XMLHttpRequest/loadstart_event
-translation_of: Web/API/XMLHttpRequest/loadstart_event
 ---
 
 Событие `loadstart` происходит, когда начинается загрузка.

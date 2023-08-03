@@ -5,7 +5,6 @@ tags:
   - HTTP
   - Код ошибки
   - Ошибка сервера
-translation_of: Web/HTTP/Status/500
 ---
 {{HTTPSidebar}}
 

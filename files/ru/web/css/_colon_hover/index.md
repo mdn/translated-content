@@ -5,7 +5,6 @@ tags:
   - CSS
   - Псевдоклассы
   - Руководство
-translation_of: Web/CSS/:hover
 ---
 {{ CSSRef() }}
 

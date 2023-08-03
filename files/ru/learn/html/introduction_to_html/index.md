@@ -13,7 +13,6 @@ tags:
   - Ссылки
   - Структура
   - Текст
-translation_of: Learn/HTML/Introduction_to_HTML
 ---
 
 {{LearnSidebar}}

@@ -4,7 +4,6 @@ slug: Glossary/Null
 tags:
   - CodingScripting
   - Glossary
-translation_of: Glossary/Null
 ---
 
 В информатике, значение **`null`** представляет ссылку, которая указывает, обычно намеренно, на несуществующий или некорректный {{glossary("object","объект")}} или адрес. Смысл null-ссылки различается от языка к языку.

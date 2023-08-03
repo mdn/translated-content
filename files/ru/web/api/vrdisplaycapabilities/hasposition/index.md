@@ -3,7 +3,6 @@ title: VRDisplayCapabilities.hasPosition
 slug: Web/API/VRDisplayCapabilities/hasPosition
 tags:
   - Виртуальная реальность
-translation_of: Web/API/VRDisplayCapabilities/hasPosition
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}

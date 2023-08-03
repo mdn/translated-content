@@ -6,7 +6,6 @@ tags:
   - FileReader
   - Конструктор
   - Ссылка
-translation_of: Web/API/FileReader/FileReader
 ---
 
 Конструктор **`FileReader()`** создаёт новый FileReader.

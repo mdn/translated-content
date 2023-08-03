@@ -1,7 +1,6 @@
 ---
 title: "Проверь свои навыки: Multicol"
 slug: Learn/CSS/CSS_layout/Multicol_skills
-translation_of: Learn/CSS/CSS_layout/Multicol_skills
 ---
 
 {{LearnSidebar}}

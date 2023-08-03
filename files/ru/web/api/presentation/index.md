@@ -8,7 +8,6 @@ tags:
   - Презентация API
   - Ссылка
   - Экспериментальный
-translation_of: Web/API/Presentation
 ---
 
 {{APIRef("Presentation API")}}

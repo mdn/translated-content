@@ -7,7 +7,6 @@ tags:
   - CSS Property
   - Experimental
   - Reference
-translation_of: Web/CSS/animation-iteration-count
 ---
 {{ CSSRef() }}{{ SeeCompatTable() }}
 

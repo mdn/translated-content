@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - Функции
   - Экспериментальный
-translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 ---
 {{jsSidebar("Functions")}}
 

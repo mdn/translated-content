@@ -5,7 +5,6 @@ tags:
   - Выравнивание
   - Заголовок
   - Стилизация
-translation_of: Web/HTML/Element/caption
 ---
 
 {{HTMLSidebar}}

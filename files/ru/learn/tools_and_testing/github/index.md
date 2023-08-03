@@ -5,7 +5,6 @@ tags:
   - Веб
   - Начинающий
   - гит
-translation_of: Learn/Tools_and_testing/GitHub
 ---
 
 {{LearnSidebar}}

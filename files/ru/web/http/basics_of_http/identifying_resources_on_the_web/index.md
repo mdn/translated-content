@@ -15,7 +15,6 @@ tags:
   - Фрагмент
   - домен
   - запрос
-translation_of: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 ---
 
 {{HTTPSidebar}}

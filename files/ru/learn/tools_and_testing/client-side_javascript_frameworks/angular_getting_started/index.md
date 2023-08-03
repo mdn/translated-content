@@ -10,8 +10,6 @@ tags:
   - Изучение
   - client-side
   - Angular
-translation_of: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
 ---
 
 {{LearnSidebar}}

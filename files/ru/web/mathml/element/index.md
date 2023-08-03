@@ -6,7 +6,6 @@ tags:
   - MathML Reference
   - NeedsTranslation
   - TopicStub
-translation_of: Web/MathML/Element
 ---
 
 Здесь представлен алфавитный список **презентационных (presentation)** элементов MathML.

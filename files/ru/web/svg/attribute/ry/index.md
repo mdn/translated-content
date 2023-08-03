@@ -3,7 +3,6 @@ title: ry
 slug: Web/SVG/Attribute/ry
 tags:
   - SVG атрибуты
-translation_of: Web/SVG/Attribute/ry
 ---
 {{SVGRef}}
 

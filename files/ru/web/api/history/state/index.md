@@ -1,7 +1,6 @@
 ---
 title: History.state
 slug: Web/API/History/state
-translation_of: Web/API/History/state
 ---
 
 {{APIRef("History API")}}Свойство **`History.state`** возвращает значение последнего состояния стека истории (history stack). Этим способом можно проверить состояние не дожидаясь события {{event("popstate")}}.

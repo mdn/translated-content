@@ -3,7 +3,6 @@ title: Введение в кросс-браузерное тестирован�
 slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 tags:
   - тестирование
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}

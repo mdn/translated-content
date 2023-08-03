@@ -6,7 +6,6 @@ tags:
   - Заголовок HTTP
   - Справка
   - заголовок запроса
-translation_of: Web/HTTP/Headers/If-Unmodified-Since
 ---
 
 {{HTTPSidebar}}

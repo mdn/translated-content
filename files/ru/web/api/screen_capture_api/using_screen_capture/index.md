@@ -1,7 +1,6 @@
 ---
 title: Использование интерфейса Screen Capture API
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
-translation_of: Web/API/Screen_Capture_API/Using_Screen_Capture
 ---
 
 {{DefaultAPISidebar("Screen Capture API")}}

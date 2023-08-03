@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS-свойства
   - css шрифты
-translation_of: Web/CSS/font-size
 ---
 
 {{CSSRef}}

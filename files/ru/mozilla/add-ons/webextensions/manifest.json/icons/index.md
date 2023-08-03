@@ -7,7 +7,6 @@ tags:
   - Веб-расширение
   - Дополнения
   - Расширения
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/icons
 ---
 
 {{AddonSidebar}}

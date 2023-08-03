@@ -6,7 +6,6 @@ tags:
   - Заголовок
   - заголовок ответа
   - ответ
-translation_of: Web/HTTP/Headers/Retry-After
 ---
 {{HTTPSidebar}}
 

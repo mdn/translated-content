@@ -7,7 +7,6 @@ tags:
   - Media Queries
   - Reference
   - media feature
-translation_of: Web/CSS/@media/inverted-colors
 ---
 
 {{cssref}}

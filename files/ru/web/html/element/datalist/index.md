@@ -10,7 +10,6 @@ tags:
   - Web
   - Веб
   - Элемент
-translation_of: Web/HTML/Element/datalist
 ---
 
 **HTML-элемент `<datalist>`** содержит набор опций ({{HTMLElement("option")}}), доступных для выбора. Выбранное значение будет установлено для элемента {{HTMLElement("input")}}, с атрибутом [`list`](/ru/docs/Web/HTML/Element/input#list).

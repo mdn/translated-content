@@ -3,7 +3,6 @@ title: Привилегированный код
 slug: Glossary/Privileged_code
 tags:
   - privileged
-translation_of: Glossary/privileged_code
 ---
 
 **Привилегированный код (Privileged code**) - Javascript-код расширения, например, скриптов `content scripts`.

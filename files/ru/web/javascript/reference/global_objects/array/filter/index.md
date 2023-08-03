@@ -9,7 +9,6 @@ tags:
   - Prototype
   - Reference
   - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 ---
 
 {{JSRef}}

@@ -4,7 +4,6 @@ slug: Learn/CSS/CSS_layout/Normal_Flow
 tags:
   - float
   - grid
-translation_of: Learn/CSS/CSS_layout/Normal_Flow
 ---
 
 {{LearnSidebar}}

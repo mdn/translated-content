@@ -4,7 +4,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 tags:
   - JavaScript
   - Method
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 ---
 {{JSRef}}Метод **`Symbol.keyFor(sym)`** получает ключ для заданного символа из глобального реестра символов.
 

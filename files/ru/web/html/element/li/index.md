@@ -6,7 +6,6 @@ tags:
   - HTML
   - Reference
   - списки
-translation_of: Web/HTML/Element/li
 ---
 
 {{HTMLSidebar}}

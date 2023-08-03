@@ -4,7 +4,6 @@ slug: Web/JavaScript/Guide/Control_flow_and_error_handling
 tags:
   - Guide
   - JavaScript
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}

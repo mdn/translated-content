@@ -7,7 +7,6 @@ tags:
   - Object
   - Reference
   - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON
 ---
 {{JSRef("Global_Objects", "JSON")}}
 

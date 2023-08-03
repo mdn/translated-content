@@ -12,7 +12,6 @@ tags:
   - Prototype
   - Reference
   - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
 {{JSRef("Global_Objects", "Array")}}
 

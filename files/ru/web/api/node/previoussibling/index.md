@@ -9,7 +9,6 @@ tags:
   - Свойство
   - Узел
   - Узлы
-translation_of: Web/API/Node/previousSibling
 ---
 
 {{APIRef("DOM")}}

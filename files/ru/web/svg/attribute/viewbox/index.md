@@ -3,7 +3,6 @@ title: viewBox
 slug: Web/SVG/Attribute/viewBox
 tags:
   - SVG
-translation_of: Web/SVG/Attribute/viewBox
 ---
 
 « [SVG Attribute reference home](/en/SVG/Attribute)

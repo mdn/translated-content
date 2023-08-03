@@ -6,7 +6,6 @@ tags:
   - HTML DOM
   - Web
   - метод
-translation_of: Web/API/History/pushState
 ---
 
 {{APIRef("DOM")}}

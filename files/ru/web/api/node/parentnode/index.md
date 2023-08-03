@@ -5,7 +5,6 @@ tags:
   - API
   - DOM
   - Method
-translation_of: Web/API/Node/parentNode
 ---
 
 {{ApiRef}}

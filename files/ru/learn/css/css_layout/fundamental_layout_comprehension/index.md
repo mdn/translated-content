@@ -6,7 +6,6 @@ tags:
   - Начинающий
   - Обучение
   - Раскладка
-translation_of: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 ---
 
 {{LearnSidebar}}

@@ -6,7 +6,6 @@ tags:
   - CSS Позиционирование
   - CSS-свойство
   - Справка
-translation_of: Web/CSS/bottom
 ---
 
 {{CSSRef}}

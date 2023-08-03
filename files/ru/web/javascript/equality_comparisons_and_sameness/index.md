@@ -5,7 +5,6 @@ tags:
   - Равенство
   - Сравнение
   - Средний
-translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 ---
 
 {{jsSidebar("Intermediate")}}

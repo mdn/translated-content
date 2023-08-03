@@ -8,7 +8,6 @@ tags:
   - Потоковое медиа
   - Расширение
   - аудио
-translation_of: Web/API/MediaSource
 ---
 
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}

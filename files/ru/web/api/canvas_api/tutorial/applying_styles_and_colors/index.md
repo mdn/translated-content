@@ -1,7 +1,6 @@
 ---
 title: Применение стилей и цветов
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
-translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}

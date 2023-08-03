@@ -4,7 +4,6 @@ title: >-
   one(Внимание: -file- является в сущности назначенным //# sourceMappingURL, но
   уже имеет один)
 slug: Web/JavaScript/Reference/Errors/Already_has_pragma
-translation_of: Web/JavaScript/Reference/Errors/Already_has_pragma
 ---
 
 {{jsSidebar("Errors")}}

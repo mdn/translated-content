@@ -3,7 +3,6 @@ title: AudioContext
 slug: Web/API/AudioContext
 tags:
   - аудио
-translation_of: Web/API/AudioContext
 ---
 
 {{APIRef()}}

@@ -9,7 +9,6 @@ tags:
   - сворачивание элементов
   - флекс
   - флексбокс
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
 ---
 
 {{CSSRef}}

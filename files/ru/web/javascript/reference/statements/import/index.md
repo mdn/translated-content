@@ -10,7 +10,6 @@ tags:
   - Модули
   - динамический импорт
   - импорт
-translation_of: Web/JavaScript/Reference/Statements/import
 ---
 
 {{jsSidebar("Statements")}}

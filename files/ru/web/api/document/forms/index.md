@@ -7,7 +7,6 @@ tags:
   - Document
   - Forms
   - Property
-translation_of: Web/API/Document/forms
 ---
 
 {{APIRef("DOM")}}

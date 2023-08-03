@@ -12,7 +12,6 @@ tags:
   - Workflows
   - Игры
   - уроки
-translation_of: Games/Tutorials
 ---
 
 {{GamesSidebar}}

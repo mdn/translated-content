@@ -1,7 +1,6 @@
 ---
 title: Дешифрование
 slug: Glossary/Decryption
-translation_of: Glossary/Decryption
 ---
 
 В {{glossary("cryptography","криптографии")}}, **дешифрование** это конвертация {{glossary("ciphertext","шифротекста")}} в {{glossary("cleartext","открытый текст")}}.

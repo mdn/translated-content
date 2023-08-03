@@ -5,7 +5,6 @@ tags:
   - Landing
   - MDN Meta
   - Процессы
-translation_of: MDN/Contribute/Processes
 ---
 
 {{MDNSidebar}}

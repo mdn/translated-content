@@ -6,7 +6,6 @@ tags:
   - HTTP заголовки
   - Ответы заголовка
   - Справка
-translation_of: Web/HTTP/Headers/X-Content-Type-Options
 ---
 
 {{HTTPSidebar}}

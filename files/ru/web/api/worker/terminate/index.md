@@ -9,7 +9,6 @@ tags:
   - terminate
   - Ссылка
   - метод
-translation_of: Web/API/Worker/terminate
 ---
 
 {{APIRef("Web Workers API")}}

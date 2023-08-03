@@ -10,7 +10,6 @@ tags:
   - animate
   - web animation
   - web animation api
-translation_of: Web/API/EffectTiming
 ---
 
 {{ SeeCompatTable() }}{{ APIRef("Web Animations") }}

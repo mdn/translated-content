@@ -6,7 +6,6 @@ tags:
   - BODY
   - Document
   - frameset
-translation_of: Web/API/Document/body
 ---
 
 {{APIRef("DOM")}}

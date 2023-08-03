@@ -18,7 +18,6 @@ tags:
   - TopicStub
   - WebRTC
   - screen
-translation_of: Web/API/MediaTrackConstraints
 ---
 
 {{APIRef("Media Capture and Streams")}}

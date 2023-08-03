@@ -4,7 +4,6 @@ slug: Web/API/BeforeUnloadEvent
 tags:
   - Диалог
   - Окно
-translation_of: Web/API/BeforeUnloadEvent
 ---
 
 {{APIRef}}

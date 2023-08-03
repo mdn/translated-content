@@ -8,7 +8,6 @@ tags:
   - NeedsTranslation
   - TopicStub
   - Web
-translation_of: Web/Guide/API
 ---
 
 Здесь вы найдёте ссылки на каждое руководство и объяснение каждого API, составляющего архитектуру веб-разработки.

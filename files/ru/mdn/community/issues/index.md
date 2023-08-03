@@ -5,7 +5,6 @@ tags:
   - MDN Мета
   - Инструкция
   - Руководство
-translation_of: MDN/Contribute/Howto/Report_a_problem
 ---
 
 {{MDNSidebar}}

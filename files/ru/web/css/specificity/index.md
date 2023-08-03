@@ -8,7 +8,6 @@ tags:
   - Примеры
   - Руководство
   - Специфичность селектора
-translation_of: Web/CSS/Specificity
 ---
 
 {{cssref}}

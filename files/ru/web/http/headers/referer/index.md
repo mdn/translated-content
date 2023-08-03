@@ -5,7 +5,6 @@ tags:
   - HTTP
   - referer
   - Заголовок
-translation_of: Web/HTTP/Headers/Referer
 ---
 
 {{HTTPSidebar}}

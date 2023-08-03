@@ -5,7 +5,6 @@ tags:
   - CSS
   - Селекторы
   - комбинаторы
-translation_of: Learn/CSS/Building_blocks/Selectors/Combinators
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}

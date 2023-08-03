@@ -5,7 +5,6 @@ tags:
   - CSS
   - Псевдо-класс
   - Разметка
-translation_of: Web/CSS/:indeterminate
 ---
 
 {{CSSRef}}

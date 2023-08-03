@@ -4,7 +4,6 @@ slug: Glossary/Identifier
 tags:
   - Глоссарий
   - начальный уровень
-translation_of: Glossary/Identifier
 ---
 
 Последовательность символов в коде, которые определяют **{{glossary("variable","переменную")}}, {{glossary("function","функцию")}} или {{glossary("property","свойство")}}**.

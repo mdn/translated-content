@@ -5,7 +5,6 @@ tags:
   - Intl
   - JavaScript
   - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
 ---
 {{JSRef}}
 

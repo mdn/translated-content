@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - TypeError
   - Ошибки
-translation_of: Web/JavaScript/Reference/Errors/Not_a_function
 ---
 
 {{jsSidebar("Errors")}}

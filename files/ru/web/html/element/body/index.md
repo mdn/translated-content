@@ -11,7 +11,6 @@ tags:
   - Секционирование
   - Справка
   - Элемент
-translation_of: Web/HTML/Element/body
 ---
 
 {{HTMLSidebar}}

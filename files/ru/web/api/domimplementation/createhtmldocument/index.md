@@ -7,7 +7,6 @@ tags:
   - DOMImplementation
   - Method
   - Reference
-translation_of: Web/API/DOMImplementation/createHTMLDocument
 ---
 
 {{ApiRef("DOM")}}

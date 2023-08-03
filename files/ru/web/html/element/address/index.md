@@ -7,7 +7,6 @@ tags:
   - HTML справочник
   - Веб
   - Элемент
-translation_of: Web/HTML/Element/address
 ---
 {{HTMLSidebar}}
 

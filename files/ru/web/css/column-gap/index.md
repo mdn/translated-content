@@ -2,7 +2,6 @@
 title: column-gap
 slug: Web/CSS/column-gap
 page-type: css-property
-translation_of: Web/CSS/column-gap
 browser-compat: css.properties.column-gap
 ---
 

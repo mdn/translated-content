@@ -8,7 +8,6 @@ tags:
   - Method
   - OffscreenCanvas
   - Reference
-translation_of: Web/API/HTMLCanvasElement/transferControlToOffscreen
 ---
 
 {{APIRef("Canvas API")}} {{SeeCompatTable}}

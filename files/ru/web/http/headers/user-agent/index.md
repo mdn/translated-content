@@ -6,7 +6,6 @@ tags:
   - Заголовки HTTP
   - Справка
   - User-agent
-translation_of: Web/HTTP/Headers/User-Agent
 ---
 {{HTTPSidebar}}
 

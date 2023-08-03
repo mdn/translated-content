@@ -7,7 +7,6 @@ tags:
   - Method
   - Prototype
   - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 ---
 {{JSRef("Global_Objects", "Date")}}
 

@@ -9,7 +9,6 @@ tags:
   - Промисы
   - Статья
   - колбэк
-translation_of: Learn/JavaScript/Asynchronous/Introducing
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}

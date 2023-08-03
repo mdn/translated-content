@@ -5,7 +5,6 @@ tags:
   - HTML
   - Начинающим
   - таблицы
-translation_of: Learn/HTML/Tables/Structuring_planet_data
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}

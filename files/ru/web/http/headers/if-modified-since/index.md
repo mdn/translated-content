@@ -6,7 +6,6 @@ tags:
   - Заголовки HTTP
   - Заголовки запроса
   - Условные запросы
-translation_of: Web/HTTP/Headers/If-Modified-Since
 ---
 
 {{HTTPSidebar}}

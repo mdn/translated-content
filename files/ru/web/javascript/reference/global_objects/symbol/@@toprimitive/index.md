@@ -8,7 +8,6 @@ tags:
   - Method
   - Prototype
   - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
 ---
 {{JSRef}}
 

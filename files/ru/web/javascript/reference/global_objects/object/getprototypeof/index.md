@@ -7,7 +7,6 @@ tags:
   - Method
   - Object
   - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
 
 {{JSRef("Global_Objects", "Object")}}

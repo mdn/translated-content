@@ -7,7 +7,6 @@ tags:
   - Безопасность
   - Заголовок
   - Справка
-translation_of: Web/HTTP/Headers/X-XSS-Protection
 ---
 
 {{HTTPSidebar}}

@@ -7,7 +7,6 @@ tags:
   - WebDAV
   - Коды состояний
   - Ошибка клиента
-translation_of: Web/HTTP/Status/422
 ---
 {{HTTPSidebar}}
 

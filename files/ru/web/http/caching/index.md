@@ -6,7 +6,6 @@ tags:
   - Кеширование
   - Кеширование
   - Руководство
-translation_of: Web/HTTP/Caching
 ---
 {{HTTPSidebar}}
 

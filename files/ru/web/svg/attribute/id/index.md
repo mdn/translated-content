@@ -3,7 +3,6 @@ title: id
 slug: Web/SVG/Attribute/id
 tags:
   - SVG
-translation_of: Web/SVG/Attribute/id
 ---
 {{SVGRef}}
 

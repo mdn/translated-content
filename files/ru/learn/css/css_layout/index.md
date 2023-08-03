@@ -21,7 +21,6 @@ tags:
   - Сетка
   - позиционирование
   - разметка страницы
-translation_of: Learn/CSS/CSS_layout
 ---
 
 {{LearnSidebar}}

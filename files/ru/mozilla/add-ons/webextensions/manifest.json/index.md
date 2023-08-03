@@ -8,7 +8,6 @@ tags:
   - Дополнения
   - Обзор
   - Расширения
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
 
 {{AddonSidebar}}

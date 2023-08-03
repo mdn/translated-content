@@ -7,7 +7,6 @@ tags:
   - Селекторы
   - Справка
   - Экспериментальная
-translation_of: Web/CSS/:has
 ---
 
 {{CSSRef}}

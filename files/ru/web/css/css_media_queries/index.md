@@ -10,7 +10,6 @@ tags:
   - Reference
   - Responsive Design
   - TopicStub
-translation_of: Web/CSS/Media_Queries
 ---
 
 {{CSSRef("CSS3 Media Queries")}}

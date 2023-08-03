@@ -8,7 +8,6 @@ tags:
   - Proxy
   - Reference
   - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 ---
 
 {{JSRef}}

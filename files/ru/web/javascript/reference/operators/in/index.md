@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - Оператор
   - Оператор отношения
-translation_of: Web/JavaScript/Reference/Operators/in
 ---
 {{jsSidebar("Operators")}}
 

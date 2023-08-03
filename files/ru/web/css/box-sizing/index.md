@@ -7,7 +7,6 @@ tags:
   - высота
   - размер
   - ширина
-translation_of: Web/CSS/box-sizing
 ---
 {{CSSRef}}
 

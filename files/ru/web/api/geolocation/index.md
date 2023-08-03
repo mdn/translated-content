@@ -8,7 +8,6 @@ tags:
   - Interface
   - Reference
   - Secure context
-translation_of: Web/API/Geolocation
 ---
 
 {{APIRef}}

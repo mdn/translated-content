@@ -9,7 +9,6 @@ tags:
   - JS
   - designmode
   - editor
-translation_of: Web/API/Document/designMode
 ---
 
 {{ ApiRef() }}

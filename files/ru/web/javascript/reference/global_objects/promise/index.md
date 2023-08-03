@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - Promise
   - Промисы
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 ---
 {{JSRef}}
 

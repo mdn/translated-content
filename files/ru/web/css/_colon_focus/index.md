@@ -9,7 +9,6 @@ tags:
   - Веб
   - Псевдо-классы
   - Раскладка
-translation_of: Web/CSS/:focus
 ---
 
 {{CSSRef}}

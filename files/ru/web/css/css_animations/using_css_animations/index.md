@@ -8,7 +8,6 @@ tags:
   - Example
   - Experimental
   - Guide
-translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 ---
 
 {{SeeCompatTable}}{{CSSRef}}

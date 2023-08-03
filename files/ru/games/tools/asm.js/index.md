@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - WebAssembly
   - asm.js
-translation_of: Games/Tools/asm.js
 ---
 
 {{GamesSidebar}}

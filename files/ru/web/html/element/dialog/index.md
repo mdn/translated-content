@@ -10,7 +10,6 @@ tags:
   - Диалог
   - Экспериментальный
   - Элемент
-translation_of: Web/HTML/Element/dialog
 ---
 
 {{SeeCompatTable}}
