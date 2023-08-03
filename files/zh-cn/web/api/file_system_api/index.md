@@ -1,12 +1,11 @@
 ---
-title: 文件系统访问 API
+title: 文件系统 API
 slug: Web/API/File_System_API
-original_slug: Web/API/File_System_Access_API
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System API")}}
 
-文件系统访问 API 允许开发者使用文件读写以及文件管理功能。
+文件系统 API——以及通过[文件系统访问 API](https://wicg.github.io/file-system-access/)提供的扩展来访问设备文件系统中的文件——允许使用文件读写以及文件管理功能。
 
 ## 概念与用法
 
@@ -25,31 +24,15 @@ original_slug: Web/API/File_System_Access_API
 
 > **备注：** 使用此 API 的特性时可能会抛出的各种异常已在规范定义的相关页面中列出。然而，API 与底层操作系统的交互使得实际情况更加复杂。这里提供一篇关于[在规范中列出错误对应表](https://github.com/whatwg/fs/issues/57)的提议，其中包含了一些有用的信息。
 
-> **备注：** 基于 {{domxref("FileSystemHandle")}} 的对象能够被序列化存储至 {{domxref("IndexedDB API", "IndexedDB", "", "nocode")}} 数据库实例中, 也可以通过 {{domxref("window.postMessage", "postMessage()")}} 移交。
+> **备注：** 基于 {{domxref("FileSystemHandle")}} 的对象能够被序列化存储至 {{domxref("IndexedDB API", "IndexedDB", "", "nocode")}} 数据库实例中，也可以通过 {{domxref("window.postMessage", "postMessage()")}} 移交。
 
 ### 源私有文件系统
 
-[源私有文件系统](https://fs.spec.whatwg.org/#origin-private-file-system)（下文简称“OPFS”）是页面所属的源专用的存储端点，它提供对一种经过高度性能优化的特殊文件的访问能力的选择，例如，对文件内容的原地、独占写入访问。
+[源私有文件系统](https://fs.spec.whatwg.org/#origin-private-file-system)（origin private file system，OPFS）属于文件系统 API，提供了页面所属的源专用的存储端点，并且像常规文件系统一样对用户不可见。它提供对一种经过高度性能优化的特殊文件的访问能力的选择，例如，对文件内容的原地写入访问。
 
-在 OPFS 中存储数据近似于浏览器提供的其他页面源私有存储机制（如 {{domxref("IndexedDB API", "IndexedDB API", "", "nocode")}}）。其意味着，在 OPFS 中的文件相较于用选择器选择的文件有以下不同点：
-
-- 访问 OPFS 中的文件不需要用户授权。
-- 清除站点数据会删除 OPFS。
-- OPFS 受浏览器配额限制。
-
-在 OPFS 内可以通过以下三步来操作文件：
-
-1. {{domxref("StorageManager.getDirectory()")}} 方法，可以在 worker 线程或主线程中调用 [`navigator.storage.getDirectory()`](/zh-CN/docs/Web/API/Navigator/storage)，返回一个允许你访问某个目录以及其内容的 {{domxref("FileSystemDirectoryHandle")}} 对象——它代表 OPFS 的根目录。
-2. 调用 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} 方法获得一个 {{domxref('FileSystemFileHandle')}} 对象，其表示目录中指定文件的句柄。
-3. 调用文件句柄的 {{domxref('FileSystemFileHandle.createSyncAccessHandle', 'createSyncAccessHandle()')}} 方法，获得一个 {{domxref('FileSystemSyncAccessHandle')}} 对象，用于读写文件。这是一种用于高性能*同步*读写操作的句柄（其他类型的句柄是异步的）。这个类的同步特性带来了性能优势，可用于异步操作开销较大的情景（例如 [WebAssembly](/zh-CN/docs/WebAssembly)）。注意：此方法为 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 专用。
-
-虽然浏览器一般通过将 OPFS 的内容持久化到磁盘的某个位置来实现这一特性，但并非意在让用户可以轻易访问。虽然浏览器会让人产生文件是真实存在的感觉，但它们可能被存储在数据库或者其他数据结构中，你是不能指望能一一对应地找到那些被创建出来的文件的。
-
-> **备注：** 使用 {{domxref('FileSystemSyncAccessHandle.write()')}} 的写入操作是原地的，即，写入到写入器中的更改会同时写入到实际的底层文件。这不同于此 API 中其他那些在关闭了写入流后才会将更改提交到磁盘的写入机制（例如 {{domxref('FileSystemFileHandle.createWritable()')}}）。
+请阅读我们的[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)，以了解如何使用它。
 
 ### 保存文件
-
-此 API 也提供“保存”功能：
 
 - 对于异步句柄，使用 {{domxref('FileSystemWritableFileStream')}} 接口。当你想要保存的数据是 {{domxref('Blob')}}、{{jsxref("String")}} 对象、字符串字面量或 {{jsxref('ArrayBuffer', 'buffer')}} 形式的时候，你可以打开一个写入流把数据保存到文件。可以是已经存在的文件，也可以是新文件。
 - 对于同步的 {{domxref('FileSystemSyncAccessHandle')}}，使用 {{domxref('FileSystemSyncAccessHandle.write', 'write()')}} 方法写入更改。你还可以选择调用 {{domxref('FileSystemSyncAccessHandle.flush', 'flush()')}} 以使更改在指定的时间点写入磁盘（或者你也可以让底层操作系统在其认为合适的时间点执行写入，这么做大多数情况下应该都不会有问题）。
