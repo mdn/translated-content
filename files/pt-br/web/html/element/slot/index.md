@@ -1,5 +1,5 @@
 ---
-title: '<content>: The Shadow DOM Content Placeholder element (obsolete)'
+title: "<content>: The Shadow DOM Content Placeholder element (obsolete)"
 slug: Web/HTML/Element/slot
 ---
 

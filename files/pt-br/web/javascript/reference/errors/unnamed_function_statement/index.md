@@ -1,5 +1,5 @@
 ---
-title: 'Erro de sintaxe: declaração de função requer um nome'
+title: "Erro de sintaxe: declaração de função requer um nome"
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 ---
 

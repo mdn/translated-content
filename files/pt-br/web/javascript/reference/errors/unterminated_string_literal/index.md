@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: unterminated string literal'
+title: "SyntaxError: unterminated string literal"
 slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 ---
 
