@@ -62,23 +62,21 @@ Dans le fragment de code suivant, nous créons un nouvel Header en utilisant le 
 ```js
 var monHeader = new Headers();
 
-monHeader.append('Content-Type', 'text/xml');
-monHeader.get('Content-Type') // doit retourner 'text/xml'
+monHeader.append("Content-Type", "text/xml");
+monHeader.get("Content-Type"); // doit retourner 'text/xml'
 ```
 
 La même chose peut être accomplie en passant par un array d'array un littéral d'objet au constructeur.
 
 ```js
 var mesHeaders = new Headers({
-    'Content-Type': 'text/xml'
+  "Content-Type": "text/xml",
 });
 
 // ou, en utilisant un array d'array
-mesHeaders = new Headers([
-    ['Content-Type', 'text/xml']
-]);
+mesHeaders = new Headers([["Content-Type", "text/xml"]]);
 
-mesHeaders.get('Content-Type') // doit retourner 'text/xml'
+mesHeaders.get("Content-Type"); // doit retourner 'text/xml'
 ```
 
 ## Spécifications

@@ -23,7 +23,7 @@ Un objet de type [`Element`](/fr/docs/Web/API/Element).
 Dans cet exemple, l'appel à `entry.element` va enregistrer dans la console `<img src="image.jpg" alt="une belle image" elementtiming="big-image">`.
 
 ```html
-<img src="image.jpg" alt="une belle image" elementtiming="big-image">
+<img src="image.jpg" alt="une belle image" elementtiming="big-image" />
 ```
 
 ```js

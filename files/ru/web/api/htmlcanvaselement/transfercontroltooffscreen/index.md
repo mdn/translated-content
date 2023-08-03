@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLCanvasElement/transferControlToOffscreen
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 **`HTMLCanvasElement.transferControlToOffscreen()`**
@@ -28,9 +29,9 @@ OffscreenCanvas HTMLCanvasElement.transferControlToOffscreen()
 ## Примеры
 
 ```js
-var htmlCanvas = document.createElement('canvas');
+var htmlCanvas = document.createElement("canvas");
 var offscreen = htmlCanvas.transferControlToOffscreen();
-var gl = offscreen.getContext('webgl');
+var gl = offscreen.getContext("webgl");
 
 // ... отрисовка с помощью  gl контекста ...
 
@@ -42,7 +43,7 @@ gl.commit();
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

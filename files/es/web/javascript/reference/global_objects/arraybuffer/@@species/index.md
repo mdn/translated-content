@@ -1,7 +1,6 @@
 ---
 title: get ArrayBuffer[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
-original_slug: Web/JavaScript/Referencia/Objetos_globales/ArrayBuffer/@@species
 ---
 
 {{JSRef}}

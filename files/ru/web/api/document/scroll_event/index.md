@@ -1,5 +1,5 @@
 ---
-title: 'Document: событие scroll'
+title: "Document: событие scroll"
 slug: Web/API/Document/scroll_event
 tags:
   - API
@@ -11,6 +11,7 @@ tags:
   - Источник
 translation_of: Web/API/Document/scroll_event
 ---
+
 {{APIRef}}
 
 Событие **`scroll`** возникает при прокрутке области просмотра документа или элемента.
@@ -59,11 +60,11 @@ function doSomething(scroll_pos) {
   // Делаем что-нибудь с позицией скролла
 }
 
-window.addEventListener('scroll', function(e) {
+window.addEventListener("scroll", function (e) {
   last_known_scroll_position = window.scrollY;
 
   if (!ticking) {
-    window.requestAnimationFrame(function() {
+    window.requestAnimationFrame(function () {
       doSomething(last_known_scroll_position);
       ticking = false;
     });

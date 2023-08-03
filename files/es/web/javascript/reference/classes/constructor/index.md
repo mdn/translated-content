@@ -1,7 +1,6 @@
 ---
 title: constructor
 slug: Web/JavaScript/Reference/Classes/constructor
-original_slug: Web/JavaScript/Referencia/Classes/constructor
 ---
 
 {{jsSidebar("Classes")}}

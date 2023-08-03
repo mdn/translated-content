@@ -62,48 +62,68 @@ function use_PerformanceEntry_methods() {
 
   // Use getEntries() to iterate through the each entry
   var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
+  for (var i = 0; i < p.length; i++) {
     log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
 
   // Use getEntries(name, entryType) to get specific entries
-  p = performance.getEntries({name : "Begin", entryType: "mark"});
-  for (var i=0; i < p.length; i++) {
+  p = performance.getEntries({ name: "Begin", entryType: "mark" });
+  for (var i = 0; i < p.length; i++) {
     log("Begin[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
 
   // Use getEntriesByType() to get all "mark" entries
   p = performance.getEntriesByType("mark");
-  for (var i=0; i < p.length; i++) {
-    log ("Mark only entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
+  for (var i = 0; i < p.length; i++) {
+    log(
+      "Mark only entry[" +
+        i +
+        "]: name = " +
+        p[i].name +
+        "; startTime = " +
+        p[i].startTime +
+        "; duration  = " +
+        p[i].duration,
+    );
   }
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
   p = performance.getEntriesByName("Begin", "mark");
-  for (var i=0; i < p.length; i++) {
-    log ("Mark and Begin entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
+  for (var i = 0; i < p.length; i++) {
+    log(
+      "Mark and Begin entry[" +
+        i +
+        "]: name = " +
+        p[i].name +
+        "; startTime = " +
+        p[i].startTime +
+        "; duration  = " +
+        p[i].duration,
+    );
   }
 }
 
 //entryType,name,initiatorType  Examples
 var p = performance.getEntries();
 
-var ptyps = p.map((ele) => {return(ele.entryType)});
+var ptyps = p.map((ele) => {
+  return ele.entryType;
+});
 //Array(94) [ "navigation", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", … ]
 
-var pnms = p.map((ele) => {return(ele.name)});
+var pnms = p.map((ele) => {
+  return ele.name;
+});
 //Array(94) [ "document", "https://csdnimg.cn/public/static/css/avatar.css", "https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js", "https://csdnimg.cn/rabbit/exposure-click/main-1.0.5.js", "https://csdnimg.cn/release/phoenix/production/main-e96db8abdf.js", "https://csdnimg.cn/pubfooter/js/tracking-1.0.2.js", "https://csdnimg.cn/public/common/toolbar/js/content_toolbar.js", "https://csdnimg.cn/release/phoenix/production/markdown_views-ea0013b516.css", "https://csdnimg.cn/search/baidu_search-1.1.2.js?v=201802071056&autorun=true&install=true&keyword=%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F", "https://csdnimg.cn/release/phoenix/production/main-f869aa95a4.css", … ]
 
-var pityps = p.map((ele) => {return(ele.initiatorType)});
+var pityps = p.map((ele) => {
+  return ele.initiatorType;
+});
 //Array(94) [ "navigation", "link", "script", "script", "script", "script", "script", "link", "script", "link", … ]
 
-Specifications
+Specifications;
 ```
 
 {{Specifications}}

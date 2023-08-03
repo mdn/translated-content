@@ -33,8 +33,8 @@ var ws = new WeakSet();
 var obj = {};
 ws.add(window);
 
-mySet.has(window);  // renvoie true
-mySet.has(obj);     // renvoie false
+mySet.has(window); // renvoie true
+mySet.has(obj); // renvoie false
 ```
 
 ## Spécifications

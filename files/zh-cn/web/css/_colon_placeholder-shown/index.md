@@ -26,7 +26,7 @@ slug: Web/CSS/:placeholder-shown
 #### HTML
 
 ```html
-<input placeholder="在这里输入一些东西！">
+<input placeholder="在这里输入一些东西！" />
 ```
 
 #### CSS

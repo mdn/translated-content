@@ -1,5 +1,5 @@
 ---
-title: '<br> : l''élément de saut de ligne'
+title: "<br> : l'élément de saut de ligne"
 slug: Web/HTML/Element/br
 translation_of: Web/HTML/Element/br
 ---
@@ -36,11 +36,11 @@ Bien qu'il soit possible d'appliquer une marge ([`margin`](/fr/docs/Web/CSS/marg
 Dans l'exemple suivant, nous utilisons des éléments `<br>` pour créer des sauts de ligne entre les différentes lignes d'une adresse postale :
 
 ```html
-Mozilla<br>
-331 E. Evelyn Avenue<br>
-Mountain View, CA<br>
-94041<br>
-USA<br>
+Mozilla<br />
+331 E. Evelyn Avenue<br />
+Mountain View, CA<br />
+94041<br />
+USA<br />
 ```
 
 #### Résultat

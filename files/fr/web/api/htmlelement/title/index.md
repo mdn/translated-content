@@ -27,7 +27,7 @@ element.title = chn;
 ## Exemple
 
 ```js
- bouton1.title = "cliquer pour rafraîchir";
+bouton1.title = "cliquer pour rafraîchir";
 ```
 
 ## Spécifications

@@ -17,8 +17,8 @@ var boolean = document.hidden
 ## Примеры
 
 ```js
-document.addEventListener("visibilitychange", function() {
-  console.log( document.hidden );
+document.addEventListener("visibilitychange", function () {
+  console.log(document.hidden);
   // Modify behavior...
 });
 ```

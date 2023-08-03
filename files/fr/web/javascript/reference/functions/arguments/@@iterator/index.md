@@ -11,7 +11,7 @@ La valeur initiale de la propriété **`@@iterator`** est le même objet que la 
 ## Syntaxe
 
 ```js
-arguments[Symbol.iterator]()
+arguments[Symbol.iterator]();
 ```
 
 ## Exemples
@@ -27,7 +27,7 @@ function f() {
     console.log(letter);
   }
 }
-f('w', 'y', 'k', 'o', 'p');
+f("w", "y", "k", "o", "p");
 ```
 
 ## Spécifications

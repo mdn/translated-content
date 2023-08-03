@@ -35,9 +35,15 @@ Cette interface n'a pas de méthodes.
 function showPaintTimings() {
   if (window.performance) {
     let performance = window.performance;
-    let performanceEntries = performance.getEntriesByType('paint');
-    performanceEntries.forEach( (performanceEntry, i, entries) => {
-      console.log("Le temps pour " + performanceEntry.name + " est de " + performanceEntry.startTime + " millisecondes.");
+    let performanceEntries = performance.getEntriesByType("paint");
+    performanceEntries.forEach((performanceEntry, i, entries) => {
+      console.log(
+        "Le temps pour " +
+          performanceEntry.name +
+          " est de " +
+          performanceEntry.startTime +
+          " millisecondes.",
+      );
     });
   } else {
     console.log("Performance Timing n'est pas prise en charge.");

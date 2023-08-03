@@ -17,10 +17,10 @@ Le chainage optionnel ne peut pas être utilisé sur un objet initialement inexi
 ## Syntaxe
 
 ```js
-obj?.prop
-obj?.[expr]
-arr?.[index]
-func?.(args)
+obj?.prop;
+obj?.[expr];
+arr?.[index];
+func?.(args);
 ```
 
 ## Description
@@ -47,7 +47,7 @@ C'est équivalent à :
 
 ```js
 let temp = obj.premier;
-let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);
+let nestedProp = temp === null || temp === undefined ? undefined : temp.second;
 ```
 
 ### Chaînage optionnel avec des appels de fonctions
@@ -71,9 +71,9 @@ Si vous utilisez des fonctions ou des méthodes de recherche depuis un objet ave
 function doSomething(onContent, onError) {
   try {
     // ... faire quelque chose avec les données
-  }
-  catch (err) {
-    if (onError) { // vérifier que onError existe réellement
+  } catch (err) {
+    if (onError) {
+      // vérifier que onError existe réellement
       onError(err.message);
     }
   }
@@ -84,9 +84,8 @@ function doSomething(onContent, onError) {
 // Utiliser le chaînage optionnel avec les appels de fonctions
 function doSomething(onContent, onError) {
   try {
-   // ... faire quelque chose avec les données
-  }
-  catch (err) {
+    // ... faire quelque chose avec les données
+  } catch (err) {
     onError?.(err.message); // pas d'exception si onError n'est pas défini
   }
 }
@@ -97,7 +96,7 @@ function doSomething(onContent, onError) {
 Vous pouvez aussi utiliser l'opérateur de chaînage optionnel lorsque vous accédez aux propriétés avec une expression en utilisant [la notation avec crochets des accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation) :
 
 ```js
-let nestedProp = obj?.['propName'];
+let nestedProp = obj?.["propName"];
 ```
 
 ### Chaînage optionnel invalide depuis le côté gauche d'une affectation
@@ -121,7 +120,7 @@ Cet exemple cherche la valeur de la propriété `name` dans un objet stocké com
 
 ```js
 let monMap = new Map();
-monMap.set("foo", {name: "baz", desc: "inga"});
+monMap.set("foo", { name: "baz", desc: "inga" });
 
 let nameBar = monMap.get("bar")?.name;
 ```
@@ -147,9 +146,9 @@ let client = {
   nom: "Carl",
   details: {
     age: 82,
-    localisation: "Paradise Falls"
+    localisation: "Paradise Falls",
     // adresse détaillée inconnue
-  }
+  },
 };
 let villeDuClient = client.details?.adresse?.ville;
 
@@ -164,7 +163,7 @@ L'{{JSxRef("Opérateurs/Nullish_coalescing_operator", "Opérateur de coalescence
 ```js
 let client = {
   nom: "Carl",
-  details: { age: 82 }
+  details: { age: 82 },
 };
 const villeDuClient = client?.ville ?? "Ville Inconnue";
 console.log(villeDuClient); // Ville inconnue

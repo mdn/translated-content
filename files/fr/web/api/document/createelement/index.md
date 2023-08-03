@@ -34,14 +34,14 @@ Ici est créé un nouveau `<div>` qui est inséré avant l'élément avec l'iden
 #### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>||Working with elements||</title>
-</head>
-<body>
-  <div id="div1">The text above has been created dynamically.</div>
-</body>
+  <head>
+    <title>||Working with elements||</title>
+  </head>
+  <body>
+    <div id="div1">The text above has been created dynamically.</div>
+  </body>
 </html>
 ```
 
@@ -50,16 +50,16 @@ Ici est créé un nouveau `<div>` qui est inséré avant l'élément avec l'iden
 ```js
 document.body.onload = addElement;
 
-function addElement () {
+function addElement() {
   // crée un nouvel élément div
   var newDiv = document.createElement("div");
   // et lui donne un peu de contenu
-  var newContent = document.createTextNode('Hi there and greetings!');
+  var newContent = document.createTextNode("Hi there and greetings!");
   // ajoute le nœud texte au nouveau div créé
   newDiv.appendChild(newContent);
 
   // ajoute le nouvel élément créé et son contenu dans le DOM
-  var currentDiv = document.getElementById('div1');
+  var currentDiv = document.getElementById("div1");
   document.body.insertBefore(newDiv, currentDiv);
 }
 ```
@@ -89,7 +89,7 @@ customElements.define('expanding-list', ExpandingList, { extends: 'ul' });
 Si nous cherchons à créer une instance de cet élément par programmation, nous devons utiliser un appel tel que montré dans la ligne suivante&nbsp;:
 
 ```js
-let expandingList = document.createElement('ul', { is : 'expanding-list' })
+let expandingList = document.createElement("ul", { is: "expanding-list" });
 ```
 
 Le nouvel élément donnera un attribut [`is`](/fr/docs/Web/HTML/Global_attributes/is) dont la valeur est la balise de nom de l'élément personnalisé.

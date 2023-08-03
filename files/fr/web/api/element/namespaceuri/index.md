@@ -13,7 +13,7 @@ La propriété en lecture seule **`Element.namespaceURI`** renvoie l'URI d'espac
 ## Syntaxe
 
 ```js
-namespace = element.namespaceURI
+namespace = element.namespaceURI;
 ```
 
 ## Exemple
@@ -21,8 +21,11 @@ namespace = element.namespaceURI
 Dans cet extrait, un élément est examiné pour son {{domxref("localName")}} et son `namespaceURI`. Si le `namespaceURI` renvoie l'espace de noms XUL et le `localName` retourne "browser" (_navigateur_), alors le noeud est compris comme étant un `<browser/>` XUL.
 
 ```js
-if (element.localName == "browser" &&
-    element.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
+if (
+  element.localName == "browser" &&
+  element.namespaceURI ==
+    "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+) {
   // c'est un navigateur XUL
 }
 ```

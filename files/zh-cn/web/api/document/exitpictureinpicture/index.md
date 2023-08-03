@@ -9,7 +9,7 @@ slug: Web/API/Document/exitPictureInPicture
 
 ## 语法
 
-```js
+```js-nolint
 exitPictureInPicture()
 ```
 
@@ -28,13 +28,14 @@ exitPictureInPicture()
 ```js
 document.onclick = function (event) {
   if (document.pictureInPictureElement) {
-    document.exitPictureInPicture()
+    document
+      .exitPictureInPicture()
       .then(() => console.log("Document Exited from Picture-in-Picture mode"))
-      .catch((err) => console.error(err))
+      .catch((err) => console.error(err));
   } else {
     video.requestPictureInPicture();
   }
-}
+};
 ```
 
 注意，如果你想要跟踪页面上正在以画中画模式播放的视频，你应该在 {{DOMxRef("HTMLVideoElement")}} 元素上监听 `enterpictureinpicture` 和 `exitpictureinpicture` 事件。或者，你可以检查 {{DOMxRef("Document.pictureInPictureElement")}} 元素是否引用了当前的 {{DOMxRef("HTMLVideoElement")}} 元素。

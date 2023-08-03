@@ -1,7 +1,6 @@
 ---
 title: "<title>: El elemento Título del documento"
 slug: Web/HTML/Element/title
-original_slug: Web/HTML/Elemento/title
 ---
 
 {{HTMLSidebar}}

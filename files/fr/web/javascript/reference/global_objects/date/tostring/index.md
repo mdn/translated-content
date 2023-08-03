@@ -13,7 +13,7 @@ La méthode **`toString()`** renvoie une chaîne de caractères représentant l'
 ## Syntaxe
 
 ```js
-dateObj.toString()
+dateObj.toString();
 ```
 
 ### Valeur de retour

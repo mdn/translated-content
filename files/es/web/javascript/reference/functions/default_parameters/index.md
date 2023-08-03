@@ -1,7 +1,6 @@
 ---
 title: Parámetros predeterminados
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-original_slug: Web/JavaScript/Referencia/Funciones/Parametros_por_defecto
 ---
 
 {{jsSidebar("Functions", "Funciones")}}

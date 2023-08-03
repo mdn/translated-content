@@ -1,7 +1,6 @@
 ---
 title: Class fields
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
-original_slug: Web/JavaScript/Referencia/Classes/Class_fields
 ---
 
 {{JsSidebar("Classes")}}

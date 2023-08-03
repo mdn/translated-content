@@ -1,7 +1,6 @@
 ---
 title: form
 slug: Web/HTML/Element/form
-original_slug: Web/HTML/Elemento/form
 ---
 
 ## Resumen

@@ -15,7 +15,7 @@ var color = document.alinkColor;
 document.alinkColor = color;
 ```
 
-*color* est un echaîne de caractère contenant le nom de la couleur en anglais(exemple., `blue` pour bleu, `darkblue` pour bleu foncé, etc.) ou la valeur hexadécimal de la couleur (exemple, `#0000FF`)
+_color_ est un echaîne de caractère contenant le nom de la couleur en anglais(exemple., `blue` pour bleu, `darkblue` pour bleu foncé, etc.) ou la valeur hexadécimal de la couleur (exemple, `#0000FF`)
 
 ## Notes
 

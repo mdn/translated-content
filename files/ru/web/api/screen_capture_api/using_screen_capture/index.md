@@ -21,8 +21,10 @@ async function startCapture(displayMediaOptions) {
   let captureStream = null;
 
   try {
-    captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-  } catch(err) {
+    captureStream = await navigator.mediaDevices.getDisplayMedia(
+      displayMediaOptions,
+    );
+  } catch (err) {
     console.error("Error: " + err);
   }
   return captureStream;
@@ -35,10 +37,14 @@ async function startCapture(displayMediaOptions) {
 
 ```js
 function startCapture(displayMediaOptions) {
- let captureStream = null;
+  let captureStream = null;
 
- return navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
-    .catch(err => { console.error("Error:" + err); return null; });
+  return navigator.mediaDevices
+    .getDisplayMedia(displayMediaOptions)
+    .catch((err) => {
+      console.error("Error:" + err);
+      return null;
+    });
 }
 ```
 
@@ -105,8 +111,8 @@ function startCapture(displayMediaOptions) {
 ```js
 const gdmOptions = {
   video: true,
-  audio: true
-}
+  audio: true,
+};
 ```
 
 Это даёт пользователю полную свободу выбора того, что он хочет, в пределах того, что поддерживает пользовательский агент. Это можно уточнить, указав дополнительную информацию для каждого свойства `audio` и `video`:
@@ -114,14 +120,14 @@ const gdmOptions = {
 ```js
 const gdmOptions = {
   video: {
-    cursor: "always"
+    cursor: "always",
   },
   audio: {
     echoCancellation: true,
     noiseSuppression: true,
-    sampleRate: 44100
-  }
-}
+    sampleRate: 44100,
+  },
+};
 ```
 
 В этом примере курсор всегда будет виден при захвате, и на звуковой дорожке в идеале должны быть включены функции подавления шума и эхоподавления, а также идеальная частота дискретизации звука 44,1 кГц
@@ -180,19 +186,27 @@ const stopElem = document.getElementById("stop");
 
 var displayMediaOptions = {
   video: {
-    cursor: "always"
+    cursor: "always",
   },
-  audio: false
+  audio: false,
 };
 
 // Set event listeners for the start and stop buttons
-startElem.addEventListener("click", function(evt) {
-  startCapture();
-}, false);
+startElem.addEventListener(
+  "click",
+  function (evt) {
+    startCapture();
+  },
+  false,
+);
 
-stopElem.addEventListener("click", function(evt) {
-  stopCapture();
-}, false);
+stopElem.addEventListener(
+  "click",
+  function (evt) {
+    stopCapture();
+  },
+  false,
+);
 ```
 
 ##### Logging content
@@ -200,10 +214,13 @@ stopElem.addEventListener("click", function(evt) {
 To make logging of errors and other issues easy, this example overrides certain {{domxref("Console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is `log`.
 
 ```js
-console.log = msg => logElem.innerHTML += `${msg}<br>`;
-console.error = msg => logElem.innerHTML += `<span class="error">${msg}</span><br>`;
-console.warn = msg => logElem.innerHTML += `<span class="warn">${msg}<span><br>`;
-console.info = msg => logElem.innerHTML += `<span class="info">${msg}</span><br>`;
+console.log = (msg) => (logElem.innerHTML += `${msg}<br>`);
+console.error = (msg) =>
+  (logElem.innerHTML += `<span class="error">${msg}</span><br>`);
+console.warn = (msg) =>
+  (logElem.innerHTML += `<span class="warn">${msg}<span><br>`);
+console.info = (msg) =>
+  (logElem.innerHTML += `<span class="info">${msg}</span><br>`);
 ```
 
 This allows us to use the familiar {{domxref("console.log()")}}, {{domxref("console.error()")}}, and so on to log information to the log box in the document.
@@ -217,9 +234,11 @@ async function startCapture() {
   logElem.innerHTML = "";
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(
+      displayMediaOptions,
+    );
     dumpOptionsInfo();
-  } catch(err) {
+  } catch (err) {
     console.error("Error: " + err);
   }
 }
@@ -241,7 +260,7 @@ The `stopCapture()` method is called when the "Stop Capture" button is clicked. 
 function stopCapture(evt) {
   let tracks = videoElem.srcObject.getTracks();
 
-  tracks.forEach(track => track.stop());
+  tracks.forEach((track) => track.stop());
   videoElem.srcObject = null;
 }
 ```
@@ -268,16 +287,22 @@ The track list is obtained by calling {{domxref("MediaStream.getVideoTracks", "g
 The HTML starts with a simple introductory paragraph, then gets into the meat of things.
 
 ```html
-<p>This example shows you the contents of the selected part of your display.
-Click the Start Capture button to begin.</p>
+<p>
+  This example shows you the contents of the selected part of your display.
+  Click the Start Capture button to begin.
+</p>
 
-<p><button id="start">Start Capture</button>&nbsp;<button id="stop">Stop Capture</button></p>
+<p>
+  <button id="start">Start Capture</button>&nbsp;<button id="stop">
+    Stop Capture
+  </button>
+</p>
 
 <video id="video" autoplay></video>
-<br>
+<br />
 
 <strong>Log:</strong>
-<br>
+<br />
 <pre id="log"></pre>
 ```
 
@@ -333,8 +358,7 @@ Feature-Policy: display-capture 'self'
 If you're performing screen capture within an `<iframe>`, you can request permission just for that frame, which is clearly more secure than requesting a more general permission:
 
 ```html
-<iframe src="https://mycode.example.net/etc" allow="display-capture">
-</iframe>
+<iframe src="https://mycode.example.net/etc" allow="display-capture"> </iframe>
 ```
 
 ## See also

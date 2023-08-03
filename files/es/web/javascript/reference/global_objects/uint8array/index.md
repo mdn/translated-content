@@ -1,7 +1,6 @@
 ---
 title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Uint8Array
 ---
 
 {{JSRef}}

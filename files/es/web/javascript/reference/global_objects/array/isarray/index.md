@@ -1,7 +1,6 @@
 ---
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/isArray
 ---
 
 {{JSRef}}

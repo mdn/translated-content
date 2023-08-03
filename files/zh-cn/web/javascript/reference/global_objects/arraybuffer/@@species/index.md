@@ -30,7 +30,9 @@ ArrayBuffer[Symbol.species]; // function ArrayBuffer()
 ```js
 class MyArrayBuffer extends ArrayBuffer {
   // Overwrite MyArrayBuffer species to the parent ArrayBuffer constructor
-  static get [Symbol.species]() { return ArrayBuffer; }
+  static get [Symbol.species]() {
+    return ArrayBuffer;
+  }
 }
 ```
 

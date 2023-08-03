@@ -1,7 +1,6 @@
 ---
 title: Detalles del modelo de objetos
 slug: conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
-original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Iterators_and_Generators")}}

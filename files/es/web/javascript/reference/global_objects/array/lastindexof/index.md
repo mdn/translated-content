@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/lastIndexOf
 ---
 
 {{JSRef}}

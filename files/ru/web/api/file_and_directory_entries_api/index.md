@@ -82,17 +82,11 @@ API доступа к файлам и директориям имитирует 
 
 ## Спецификации
 
-| Specification                            | Status                               | Comment               |
-| ---------------------------------------- | ------------------------------------ | --------------------- |
-| {{SpecName('File System API')}} | {{Spec2('File System API')}} | Draft of proposed API |
-
-Этот API не имеет официальной спецификации W3C или WHATWG.
+{{Specifications}}
 
 ## Совместимость с браузерами
 
 {{Compat}}
-
-{{Compat("api.FileSystemSync", 0)}}
 
 ## Смотрите также
 

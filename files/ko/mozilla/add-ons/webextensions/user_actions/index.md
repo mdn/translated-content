@@ -29,7 +29,7 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 Note that user actions in normal web pages are not treated as user actions for this purpose. For example, if a user clicks a button in a normal web page, and a content script has added a click handler for that button and in that handler sends a message to the extension's background page, then the background page message handler is not considered to be handling a user action.
 
-Also, if a user input handler waits on a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), then its status as a user input handler is lost. For example:
+Also, if a user input handler waits on a [promise](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise), then its status as a user input handler is lost. For example:
 
 ```js
 async function handleClick() {

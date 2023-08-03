@@ -35,9 +35,9 @@ gl.attachShader(programme, shaderDeFragment);
 
 gl.linkProgram(programme);
 
-if ( !gl.getProgramParameter( programme, gl.LINK_STATUS) ) {
+if (!gl.getProgramParameter(programme, gl.LINK_STATUS)) {
   var info = gl.getProgramInfoLog(program);
-  throw 'Impossible de compiler le programme WebGL. \n\n' + info;
+  throw "Impossible de compiler le programme WebGL. \n\n" + info;
 }
 ```
 

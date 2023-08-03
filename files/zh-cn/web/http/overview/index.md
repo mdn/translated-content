@@ -95,26 +95,26 @@ HTTP 是无状态的：在同一个连接中，两个执行成功的请求之间
 1. 打开一个 TCP 连接：TCP 连接被用来发送一条或多条请求，以及接受响应消息。客户端可能打开一条新的连接，或重用一个已经存在的连接，或者也可能开几个新的 TCP 连接连向服务端。
 2. 发送一个 HTTP 报文：HTTP 报文（在 HTTP/2 之前）是语义可读的。在 HTTP/2 中，这些简单的消息被封装在了帧中，这使得报文不能被直接读取，但是原理仍是相同的。
 
-    ```http
-    GET / HTTP/1.1
-    Host: developer.mozilla.org
-    Accept-Language: zh
-    ```
+   ```http
+   GET / HTTP/1.1
+   Host: developer.mozilla.org
+   Accept-Language: zh
+   ```
 
 3. 读取服务端返回的报文信息：
 
-    ```http
-    HTTP/1.1 200 OK
-    Date: Sat, 09 Oct 2010 14:28:02 GMT
-    Server: Apache
-    Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
-    ETag: "51142bc1-7449-479b075b2891b"
-    Accept-Ranges: bytes
-    Content-Length: 29769
-    Content-Type: text/html
+   ```http
+   HTTP/1.1 200 OK
+   Date: Sat, 09 Oct 2010 14:28:02 GMT
+   Server: Apache
+   Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
+   ETag: "51142bc1-7449-479b075b2891b"
+   Accept-Ranges: bytes
+   Content-Length: 29769
+   Content-Type: text/html
 
-    <!DOCTYPE html>…（此处是所请求网页的 29769 字节）
-    ```
+   <!DOCTYPE html>…（此处是所请求网页的 29769 字节）
+   ```
 
 4. 关闭连接或者为后续请求重用连接。
 

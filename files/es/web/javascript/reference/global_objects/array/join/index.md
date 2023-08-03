@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/join
 ---
 
 {{JSRef}}

@@ -44,6 +44,7 @@ slug: Web/HTML/Element/menu
 - `label` {{Deprecated_inline}}
   - : The name of the menu as shown to the user. Used within nested menus, to provide a label through which the submenu can be accessed. Must only be specified when the parent element is a {{HTMLElement("menu")}} in the _context menu_ state.
 - `type`
+
   - : This attribute indicates the kind of menu being declared, and can be one of two values.
 
     - `context` {{Deprecated_inline}} : Indicates the _popup menu_ state, which represents a group of commands activated through another element. This might be as a button menu referenced by a [`menu`](/zh-CN/docs/Web/HTML/Element/button#menu) attribute of a {{HTMLElement("button")}} element, or as context menu for an element with a [`contextmenu`](/zh-CN/docs/HTML/Global_attributes#attr-contextmenu) attribute. This value is the default if the attribute is missing and the parent element is also a `<menu>` element.
@@ -71,14 +72,12 @@ An HTML menu can be used to create context menus (typically activated by right-c
 
 ```html
 <!-- A <div> element with a context menu -->
-<div contextmenu="popup-menu">
-  Right-click to see the adjusted context menu
-</div>
+<div contextmenu="popup-menu">Right-click to see the adjusted context menu</div>
 
 <menu type="context" id="popup-menu">
   <menuitem>Action</menuitem>
   <menuitem>Another action</menuitem>
-  <hr/>
+  <hr />
   <menuitem>Separated action</menuitem>
 </menu>
 ```
@@ -107,14 +106,12 @@ div {
 
 ```html
 <!-- A button, which displays a menu when clicked. -->
-<button type="menu" menu="popup-menu">
-  Dropdown
-</button>
+<button type="menu" menu="popup-menu">Dropdown</button>
 
 <menu type="context" id="popup-menu">
   <menuitem>Action</menuitem>
   <menuitem>Another action</menuitem>
-  <hr/>
+  <hr />
   <menuitem>Separated action</menuitem>
 </menu>
 ```

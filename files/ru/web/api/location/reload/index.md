@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Location/reload
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Метод **`Location.reload()`** перезагружает ресурс из текущего URL подобно кнопке обновления браузера.

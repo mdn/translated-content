@@ -13,7 +13,7 @@ La propriété en lecture seule **`BlobEvent.data`** représente un {{domxref("B
 ## Syntaxe
 
 ```js
-associatedBlob = BlobEvent.data
+associatedBlob = BlobEvent.data;
 ```
 
 ## Spécifications

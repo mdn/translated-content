@@ -12,20 +12,22 @@ slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 如果没有为项目指定位置信息，它们就会把自己摆放在网格中，每个单元格中放一个。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -60,30 +62,32 @@ slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 不过你可以通过 `grid-auto-rows` 属性来控制它们的大小。为了让所有的行都是 100 像素高，可以像下面这样做：
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-    <div>One</div>
-    <div>Two</div>
-    <div>Three</div>
-    <div>Four</div>
-    <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
@@ -103,36 +107,35 @@ slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 也可以为 {{cssxref("grid-auto-rows")}} 设置 {{cssxref("minmax","minmax()")}} 值，这会让创建出的行保持一个最小尺寸，而且能够自动加高以适应更多的内容。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-     <div>One</div>
-     <div>Two</div>
-     <div>Three</div>
-     <div>Four
-     <br>This cell
-     <br>Has extra
-     <br>content.
-     <br>Max is auto
-     <br>so the row expands.
-     </div>
-     <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>
+    Four <br />This cell <br />Has extra <br />content. <br />Max is auto
+    <br />so the row expands.
+  </div>
+  <div>Five</div>
 </div>
 ```
 
@@ -152,33 +155,35 @@ slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 也可以向 `grid-auto-rows` 属性传入一个轨道列表，行的大小就会按轨道列表重复设置。在下例中，轨道列表声明了一个 100 像素的行和第二个 200 像素的行，当内容很多时网格就会自动创建足够多的隐式行来容纳内容。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
 </div>
 ```
 
@@ -201,42 +206,44 @@ slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-rows: repeat(3, 200px);
-    gap: 10px;
-    grid-auto-flow: column;
-    grid-auto-columns: 300px 100px;
+  display: grid;
+  grid-template-rows: repeat(3, 200px);
+  gap: 10px;
+  grid-auto-flow: column;
+  grid-auto-columns: 300px 100px;
 }
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
 </div>
 ```
 
@@ -255,37 +262,39 @@ slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 网格首先要做的是让每个项目都有一个位置。在下面的例子中，一共有 12 个网格项目，项目 2 和项目 5 已经通过使用基于线定位的方法确定了它们在网格中的位置。仔细观察网格空间中这两个已定位的项目和那些自动定位的项目。自动定位的项目将按在 DOM 中的顺序从已定位项目的前面开始摆放，虽然有两个项目已经事先定位好，但其他项目不是从已经定位的项目之后才开始摆放的。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
-   <div>Nine</div>
-   <div>Ten</div>
-   <div>Eleven</div>
-   <div>Twelve</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+  <div>Eleven</div>
+  <div>Twelve</div>
 </div>
 ```
 
@@ -296,13 +305,13 @@ slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
   grid-auto-rows: 100px;
   gap: 10px;
 }
- .wrapper div:nth-child(2) {
-   grid-column: 3;
-   grid-row: 2 / 4;
- }
- .wrapper div:nth-child(5) {
-   grid-column: 1 / 3;
-   grid-row: 1 / 3;
+.wrapper div:nth-child(2) {
+  grid-column: 3;
+  grid-row: 2 / 4;
+}
+.wrapper div:nth-child(5) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
 }
 ```
 
@@ -315,36 +324,38 @@ slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 请观察网格中是如何被留出缺口的，因为对于自动定位的项目，如果轨道的大小不适合放入一个项目，这个项目就会被移动到下一行，直至它找到了可以容纳它的空间。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
-   <div>Nine</div>
-   <div>Ten</div>
-   <div>Eleven</div>
-   <div>Twelve</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+  <div>Eleven</div>
+  <div>Twelve</div>
 </div>
 ```
 
@@ -355,18 +366,18 @@ slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
   grid-auto-rows: 100px;
   gap: 10px;
 }
-.wrapper div:nth-child(4n+1) {
+.wrapper div:nth-child(4n + 1) {
   grid-column-end: span 2;
   grid-row-end: span 2;
   background-color: #ffa94d;
 }
- .wrapper div:nth-child(2) {
-   grid-column: 3;
-   grid-row: 2 / 4;
- }
- .wrapper div:nth-child(5) {
-   grid-column: 1 / 3;
-   grid-row: 1 / 3;
+.wrapper div:nth-child(2) {
+  grid-column: 3;
+  grid-row: 2 / 4;
+}
+.wrapper div:nth-child(5) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
 }
 ```
 
@@ -381,52 +392,54 @@ slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 经过以上设置，网格就会回填缺口，以前网格会遗留下缺口，而现在它会为此前的缺口找到适合它的项目，然后把项目从 DOM 中拿出来再放到缺口中去。对于已经重新指定过顺序的网格，这样做不会改变项目之间原有的逻辑顺序，比如对于 Tab 键的顺序仍然与文档的顺序相同。在后面的文章中我们会讨论网格布局潜在的可用性问题，此外你应该意识到，使用这个功能会让 DOM 中看到的顺序与实际显示的顺序不一致，它们两者之间的联系会被打破。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
-   <div>Nine</div>
-   <div>Ten</div>
-   <div>Eleven</div>
-   <div>Twelve</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+  <div>Eleven</div>
+  <div>Twelve</div>
 </div>
 ```
 
 ```css
-.wrapper div:nth-child(4n+1) {
+.wrapper div:nth-child(4n + 1) {
   grid-column-end: span 2;
   grid-row-end: span 2;
   background-color: #ffa94d;
 }
- .wrapper div:nth-child(2) {
-   grid-column: 3;
-   grid-row: 2 / 4;
- }
- .wrapper div:nth-child(5) {
-   grid-column: 1 / 3;
-   grid-row: 1 / 3;
+.wrapper div:nth-child(2) {
+  grid-column: 3;
+  grid-row: 2 / 4;
+}
+.wrapper div:nth-child(5) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
 }
 .wrapper {
   display: grid;
@@ -464,28 +477,30 @@ slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 自动定位还可以帮你布局有逻辑顺序的界面元素。下面的术语列表就是一个示例。为定义列表添加样式是一个有趣的挑战，即它的结构是扁平的，没有把成组的 `dt` 和 `dd` 元素包装起来。在示例中，我们使用自动定位来定位项目，另外还通过样式类把 `dt` 摆放在第 1 列，把 `dd` 摆放在第 2 列，以便让术语显示在一边，术语的定义显示在另一边，而不用管它们各有多少个。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <dl>
-       <dt>Mammals</dt>
-       <dd>Cat</dd>
-       <dd>Dog</dd>
-       <dd>Mouse</dd>
-       <dt>Fish</dt>
-       <dd>Guppy</dd>
-       <dt>Birds</dt>
-       <dd>Pied Wagtail</dd>
-       <dd>Owl</dd>
-   </dl>
+  <dl>
+    <dt>Mammals</dt>
+    <dd>Cat</dd>
+    <dd>Dog</dd>
+    <dd>Mouse</dd>
+    <dt>Fish</dt>
+    <dd>Guppy</dd>
+    <dt>Birds</dt>
+    <dd>Pied Wagtail</dd>
+    <dd>Owl</dd>
+  </dl>
 </div>
 ```
 
@@ -502,8 +517,8 @@ dt {
   font-weight: bold;
 }
 dd {
-   grid-column: 2;
- }
+  grid-column: 2;
+}
 ```
 
 {{ EmbedLiveSample('自动定位实例', '500', '230') }}

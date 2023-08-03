@@ -18,7 +18,9 @@ As a presentation attribute, it can be applied to any element but it has effect 
 ## 示例
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -35,9 +37,9 @@ html, body, svg {
 ## Usage notes
 
 | Value         | `normal` \| {{cssxref("length")}} |
-| ------------- | ---------------------------------------- |
-| Default value | `normal`                                 |
-| Animatable    | Yes                                      |
+| ------------- | --------------------------------- |
+| Default value | `normal`                          |
+| Animatable    | Yes                               |
 
 For a description of the values, please refer to the [CSS `letter-spacing`](/zh-CN/docs/Web/CSS/letter-spacing#Values) property.
 

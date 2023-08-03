@@ -11,7 +11,7 @@ Renvoie une liste active de tous les jeux de feuilles de styles actuellement dis
 ## Syntaxe
 
 ```js
-sets = document.styleSheetSets
+sets = document.styleSheetSets;
 ```
 
 En retour, `sets` est une liste de jeux de feuilles de styles disponibles.

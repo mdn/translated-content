@@ -11,15 +11,14 @@ slug: Web/API/HTMLInputElement/multiple
 
 ```js
 // fileInput is a <input type=file multiple>
-let fileInput = document.getElementById('myfileinput');
+let fileInput = document.getElementById("myfileinput");
 
 if (fileInput.multiple == true) {
-
   for (let i = 0; i < fileInput.files.length; i++) {
     // Loop fileInput.files
   }
 
-// Only one file available
+  // Only one file available
 } else {
   let file = fileInput.files.item(0);
 }

@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/push
 ---
 
 {{JSRef}}

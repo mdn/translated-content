@@ -44,11 +44,11 @@ Cette méthode renvoie un objet {{domxref("IDBOpenDBRequest")}} sur lequel seron
 ```js
 var DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
 
-DBDeleteRequest.onerror = function(event) {
+DBDeleteRequest.onerror = function (event) {
   console.log("Erreur lors de la suppression de la base");
 };
 
-DBDeleteRequest.onsuccess = function(event) {
+DBDeleteRequest.onsuccess = function (event) {
   console.log("Suppression de la base réussie");
 
   console.log(event.result); // undefined

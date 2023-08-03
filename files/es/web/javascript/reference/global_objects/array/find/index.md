@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/find
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/indexOf
 ---
 
 {{JSRef}}

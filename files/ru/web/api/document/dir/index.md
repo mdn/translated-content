@@ -7,6 +7,7 @@ tags:
   - Property
 translation_of: Web/API/Document/dir
 ---
+
 {{ApiRef("")}}
 
 Свойство **`Document.dir`** является строкой {{domxref("DOMString")}} показывает направление текста на странице (слева направо или справа налево).

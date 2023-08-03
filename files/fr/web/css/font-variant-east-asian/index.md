@@ -11,13 +11,13 @@ La propriété **`font-variant-east-asian`** contrôle l'utilisation des glyphes
 ```css
 font-variant-east-asian: normal;
 font-variant-east-asian: ruby;
-font-variant-east-asian: jis78;              /* <east-asian-variant-values> */
-font-variant-east-asian: jis83;              /* <east-asian-variant-values> */
-font-variant-east-asian: jis90;              /* <east-asian-variant-values> */
-font-variant-east-asian: jis04;              /* <east-asian-variant-values> */
-font-variant-east-asian: simplified;         /* <east-asian-variant-values> */
-font-variant-east-asian: traditional;        /* <east-asian-variant-values> */
-font-variant-east-asian: full-width;         /* <east-asian-width-values> */
+font-variant-east-asian: jis78; /* <east-asian-variant-values> */
+font-variant-east-asian: jis83; /* <east-asian-variant-values> */
+font-variant-east-asian: jis90; /* <east-asian-variant-values> */
+font-variant-east-asian: jis04; /* <east-asian-variant-values> */
+font-variant-east-asian: simplified; /* <east-asian-variant-values> */
+font-variant-east-asian: traditional; /* <east-asian-variant-values> */
+font-variant-east-asian: full-width; /* <east-asian-width-values> */
 font-variant-east-asian: proportional-width; /* <east-asian-width-values> */
 font-variant-east-asian: ruby full-width jis83;
 

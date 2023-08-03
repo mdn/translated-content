@@ -11,6 +11,7 @@ tags:
   - сеть
 translation_of: Web/API/Navigator/sendBeacon
 ---
+
 {{APIRef("HTML DOM")}}
 
 Метод **`navigator.sendBeacon()`** используется для асинхронной передачи небольшого количества информации поверх {{Glossary("HTTP")}} веб-серверу.

@@ -37,12 +37,12 @@ try {
   let a = variableNonDefinie;
 } catch (e) {
   console.log(e instanceof ReferenceError); // true
-  console.log(e.message);                   // "variableNonDefinie is not defined"
-  console.log(e.name);                      // "ReferenceError"
-  console.log(e.fileName);                  // "Scratchpad/1"
-  console.log(e.lineNumber);                // 2
-  console.log(e.columnNumber);              // 6
-  console.log(e.stack);                     // "@Scratchpad/2:2:7\n"
+  console.log(e.message); // "variableNonDefinie is not defined"
+  console.log(e.name); // "ReferenceError"
+  console.log(e.fileName); // "Scratchpad/1"
+  console.log(e.lineNumber); // 2
+  console.log(e.columnNumber); // 6
+  console.log(e.stack); // "@Scratchpad/2:2:7\n"
 }
 ```
 
@@ -50,15 +50,15 @@ try {
 
 ```js
 try {
-  throw new ReferenceError('Bonjour', 'unFichier.js', 10);
+  throw new ReferenceError("Bonjour", "unFichier.js", 10);
 } catch (e) {
   console.log(e instanceof ReferenceError); // true
-  console.log(e.message);                   // "Bonjour"
-  console.log(e.name);                      // "ReferenceError"
-  console.log(e.fileName);                  // "unFichier.js"
-  console.log(e.lineNumber);                // 10
-  console.log(e.columnNumber);              // 0
-  console.log(e.stack);                     // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Bonjour"
+  console.log(e.name); // "ReferenceError"
+  console.log(e.fileName); // "unFichier.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 

@@ -13,7 +13,7 @@ La méthode statique **`Reflect.deleteProperty()`** permet de supprimer des prop
 ## Syntaxe
 
 ```js
-Reflect.deleteProperty(cible, cléPropriété)
+Reflect.deleteProperty(cible, cléPropriété);
 ```
 
 ### Paramètres
@@ -50,7 +50,7 @@ arr; // [1, 2, 3, , 5]
 Reflect.deleteProperty({}, "toto"); // true
 
 // Renvoie false si une propriété n'est pas configurable
-Reflect.deleteProperty(Object.freeze({toto: 1}),"toto"); // false
+Reflect.deleteProperty(Object.freeze({ toto: 1 }), "toto"); // false
 ```
 
 ## Spécifications

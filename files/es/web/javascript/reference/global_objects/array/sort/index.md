@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/sort
 ---
 
 {{JSRef}}

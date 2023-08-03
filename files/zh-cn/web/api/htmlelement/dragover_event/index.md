@@ -14,9 +14,9 @@ slug: Web/API/HTMLElement/dragover_event
 在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或者设置事件处理器属性。
 
 ```js
-addEventListener('dragover', (event) => {});
+addEventListener("dragover", (event) => {});
 
-ondragover = (event) => { };
+ondragover = (event) => {};
 ```
 
 ## 事件类型

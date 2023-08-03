@@ -51,11 +51,13 @@ Cette propriété fut le premier mécanisme implémenté pour tester les premiè
 
 1. Les noms d'axes utilisés avec `font-variation-settings` sont sensibles à la casse. Les noms des axes enregistrés doivent être écrits en minuscules et les noms des axes spécifiques doivent être écrits en majuscules. Ainsi, dans ce cas :
 
-    ```css
-    font-variation-settings: 'wght' 375, 'GRAD' 88;
-    ```
+   ```css
+   font-variation-settings:
+     "wght" 375,
+     "GRAD" 88;
+   ```
 
-    `wght` correspondra à l'axe enregistré du même nom et `GRAD` à un axe spécifique.
+   `wght` correspondra à l'axe enregistré du même nom et `GRAD` à un axe spécifique.
 
 2. Si on a défini des valeurs avec `font-variation-settings` et qu'on souhaite changer une de ces valeurs, il sera nécessaire de redéclarer l'ensemble des valeurs (de la même façon qu'on doit redéclarer l'ensemble des caractéristiques OpenType avec {{cssxref("font-feature-settings")}}). Il est possible de contourner cet écueil en utilisant [des propriétés CSS personnalisées](/fr/docs/Web/CSS/Using_CSS_custom_properties) pour les valeurs individuelles et en modifiant uniquement la valeur d'une des propriétés personnalisée (cf. l'exemple en fin d'article).
 
@@ -68,7 +70,7 @@ On notera qu'il n'est pas possible d'utiliser la déclaration `@font-face` afin 
 ```css
 font-weight: 375;
 
-font-variation-settings: 'wght' 375;
+font-variation-settings: "wght" 375;
 ```
 
 Vous pouvez éditer l'exemple CSS suivant pour voir l'effet sur la graisse de la police.
@@ -84,7 +86,7 @@ La largeur (indiquée par l'étiquette `wdth`) correspond à l'axe selon lequel 
 ```css
 font-stretch: 115%;
 
-font-variation-settings: 'wdth' 115;
+font-variation-settings: "wdth" 115;
 ```
 
 L'exemple suivant peut être édité pour observer les modifications des valeurs sur cet axe.
@@ -100,7 +102,7 @@ En CSS, l'italique est appliqué grâce à la propriété {{cssxref("font-style"
 ```css
 font-style: italic;
 
-font-variation-settings: 'ital' 1;
+font-variation-settings: "ital" 1;
 
 font-synthesis: none;
 ```
@@ -118,7 +120,7 @@ La pente (indiquée par l'étiquette `slnt`), également appelée « oblique »,
 ```css
 font-style: oblique 14deg;
 
-font-variation-settings: 'slnt' 14;
+font-variation-settings: "slnt" 14;
 ```
 
 L'exemple suivant peut être édité pour observer les modifications des valeurs sur cet axe.
@@ -138,7 +140,7 @@ Une nouvelle propriété CSS a été créée afin de prendre en charge cet axe a
 ```css
 font-optical-sizing: auto;
 
-font-variation-settings: 'opsz' 36;
+font-variation-settings: "opsz" 36;
 ```
 
 L'exemple suivant peut être édité pour observer les modifications des valeurs sur cet axe.
@@ -154,7 +156,7 @@ Les axes spécifiques sont introduits spécifiquement par les concepteurs de pol
 Le grade est une variation qui consiste à épaissir certains des traits des glyphes sans agrandir la largeur totale du glyphe. En augmentant le grade, on a ainsi un caractère plus « dense ». Il ne faut pas confondre le corps et le grade : le premier augmente la taille générale, largeur incluse, des glyphes tandis que le second ne modifie pas l'espace physique occupé par le caractère. Le grade est un axe spécifique plutôt populaire car il permet de faire varier la densité apparente du texte sans modifier sa largeur et ainsi il évite de générer un décalage du texte.
 
 ```css
-font-variation-settings: 'GRAD' 88;
+font-variation-settings: "GRAD" 88;
 ```
 
 L'exemple suivant peut être édité pour observer les modifications des valeurs sur cet axe.
@@ -171,11 +173,11 @@ La syntaxe de base est la même mais on peut indiquer la technologie utilisée p
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: normal;
+  font-family: "MyVariableFontName";
+  src: "path/to/font/file/myvariablefont.woff2" format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: normal;
 }
 ```
 
@@ -183,11 +185,11 @@ La syntaxe de base est la même mais on peut indiquer la technologie utilisée p
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: oblique 0deg 20deg;
+  font-family: "MyVariableFontName";
+  src: "path/to/font/file/myvariablefont.woff2" format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: oblique 0deg 20deg;
 }
 ```
 
@@ -197,11 +199,11 @@ La syntaxe de base est la même mais on peut indiquer la technologie utilisée p
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: italic;
+  font-family: "MyVariableFontName";
+  src: "path/to/font/file/myvariablefont.woff2" format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: italic;
 }
 ```
 
@@ -209,11 +211,11 @@ La syntaxe de base est la même mais on peut indiquer la technologie utilisée p
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: oblique 0deg 12deg;
+  font-family: "MyVariableFontName";
+  src: "path/to/font/file/myvariablefont.woff2" format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: oblique 0deg 12deg;
 }
 ```
 
@@ -227,13 +229,13 @@ La prise en charge des polices variables peut être vérifié grâce à {{cssxre
 
 ```css
 h1 {
- font-family: some-non-variable-font-family;
+  font-family: some-non-variable-font-family;
 }
 
-@supports (font-variation-settings: 'wdth' 115) {
- h1 {
+@supports (font-variation-settings: "wdth" 115) {
+  h1 {
     font-family: some-variable-font-family;
- }
+  }
 }
 ```
 

@@ -56,13 +56,13 @@ L'intervalle des éléments inspectés par `find` est défini avant la première
 
 ```js
 const inventaire = [
-  {nom: 'pommes', quantité: 2},
-  {nom: 'bananes', quantité: 0},
-  {nom: 'cerises', quantité: 5}
+  { nom: "pommes", quantité: 2 },
+  { nom: "bananes", quantité: 0 },
+  { nom: "cerises", quantité: 5 },
 ];
 
 function estCerises(fruit) {
-  return fruit.nom === 'cerises';
+  return fruit.nom === "cerises";
 }
 
 console.log(inventaire.find(estCerises));
@@ -73,12 +73,12 @@ console.log(inventaire.find(estCerises));
 
 ```js
 const inventaire = [
-                     {nom: 'pommes', quantité: 2},
-                     {nom: 'bananes', quantité: 0},
-                     {nom: 'cerises', quantité: 5}
-                   ];
+  { nom: "pommes", quantité: 2 },
+  { nom: "bananes", quantité: 0 },
+  { nom: "cerises", quantité: 5 },
+];
 
-const resultat = inventaire.find( fruit => fruit.nom === 'cerises');
+const resultat = inventaire.find((fruit) => fruit.nom === "cerises");
 console.log(resultat);
 // { nom: 'cerises', quantité: 5}
 ```
@@ -89,15 +89,15 @@ Dans l'exemple suivant, on cherche un nombre premier parmi les éléments d'un t
 
 ```js
 function estPremier(element, index, array) {
-    let début = 2;
-    while (début <= Math.sqrt(element)) {
-        if (element % début ++ < 1) return false;
-    }
-    return (element > 1);
+  let début = 2;
+  while (début <= Math.sqrt(element)) {
+    if (element % début++ < 1) return false;
+  }
+  return element > 1;
 }
 
-console.log( [4, 6, 8, 12].find(estPremier) ); // undefined, rien trouvé
-console.log( [4, 5, 8, 12].find(estPremier) ); // 5
+console.log([4, 6, 8, 12].find(estPremier)); // undefined, rien trouvé
+console.log([4, 5, 8, 12].find(estPremier)); // 5
 ```
 
 ## Spécifications

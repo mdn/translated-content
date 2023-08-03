@@ -1,7 +1,6 @@
 ---
 title: Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
-original_slug: Web/JavaScript/Reference/Global_Objects/Array/Array
 ---
 
 {{JSRef}}

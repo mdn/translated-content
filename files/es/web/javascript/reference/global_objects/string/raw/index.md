@@ -1,7 +1,6 @@
 ---
 title: String.raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/raw
 ---
 
 {{JSRef}}

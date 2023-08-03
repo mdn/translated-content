@@ -5,6 +5,7 @@ tags:
   - Виртуальная реальность
 translation_of: Web/API/VRDisplayEvent
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 Интерфейс VRDisplayEvent API WebVR представляет объект событий, связанных с WebVR (Подробнее - см. Список расширений окна WebVR)
@@ -26,16 +27,20 @@ _`VRDisplayEvent` также наследует свойства от своег
 ## Examples
 
 ```js
-window.addEventListener('vrdisplaypresentchange', function(e) {
-  console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
-})
+window.addEventListener("vrdisplaypresentchange", function (e) {
+  console.log(
+    "Display " +
+      e.display.displayId +
+      " presentation has changed. Reason given: " +
+      e.reason +
+      ".",
+  );
+});
 ```
 
 ## Specifications
 
-| Specification                                                                                    | Status                       | Comment            |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#interface-vrdisplayevent', 'VRDisplayEvent')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -13,7 +13,7 @@ La méthode **`valueOf()`** renvoie la valeur primitive d'un objet {{jsxref("Dat
 ## Syntaxe
 
 ```js
-date.valueOf()
+date.valueOf();
 ```
 
 ### Valeur de retour
@@ -34,7 +34,7 @@ Cette méthode est souvent appelée en interne par le moteur JavaScript et n'est
 
 ```js
 var x = new Date(56, 6, 17);
-var maVar = x.valueOf();      // maVar vaut -424713600000
+var maVar = x.valueOf(); // maVar vaut -424713600000
 ```
 
 ## Spécifications

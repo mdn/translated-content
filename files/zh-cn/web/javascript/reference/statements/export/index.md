@@ -84,20 +84,20 @@ export default class { .. }
 
 ```js
 // 文件 test.js
-let k; export default k = 12;
+let k;
+export default k = 12;
 ```
 
 ```js
 // 另一个文件
-import m from './test'; // 由于 k 是默认导出，所以可以自由使用 import m 替代 import k
-console.log(m);        // 输出为 12
+import m from "./test"; // 由于 k 是默认导出，所以可以自由使用 import m 替代 import k
+console.log(m); // 输出为 12
 ```
 
 你也可以重命名命名导出以避免命名冲突：
 
 ```js
-export { myFunction as function1,
-         myVariable as variable };
+export { myFunction as function1, myVariable as variable };
 ```
 
 ### 重导出 / 聚合
@@ -107,15 +107,13 @@ export { myFunction as function1,
 这个可以使用“export from”语法实现：
 
 ```js
-export { default as function1,
-         function2 } from 'bar.js';
+export { default as function1, function2 } from "bar.js";
 ```
 
 与之形成对比的是联合使用导入和导出：
 
 ```js
-import { default as function1,
-         function2 } from 'bar.js';
+import { default as function1, function2 } from "bar.js";
 export { function1, function2 };
 ```
 
@@ -124,17 +122,17 @@ export { function1, function2 };
 > **备注：** 尽管与 import 等效，但以下语法在语法上无效：
 
 ```js
-import DefaultExport from 'bar.js'; // 有效的
+import DefaultExport from "bar.js"; // 有效的
 ```
 
 ```js
-export DefaultExport from 'bar.js'; // 无效的
+export DefaultExport from "bar.js"; // 无效的
 ```
 
 这里正确的做法是重命名这个导出：
 
 ```js
-export { default as DefaultExport } from 'bar.js';
+export { default as DefaultExport } from "bar.js";
 ```
 
 ## 示例
@@ -152,14 +150,14 @@ function cube(x) {
 const foo = Math.PI + Math.SQRT2;
 
 var graph = {
-    options: {
-        color:'white',
-        thickness:'2px'
-    },
-    draw: function() {
-        console.log('From graph draw function');
-    }
-}
+  options: {
+    color: "white",
+    thickness: "2px",
+  },
+  draw: function () {
+    console.log("From graph draw function");
+  },
+};
 
 export { cube, foo, graph };
 ```
@@ -167,16 +165,16 @@ export { cube, foo, graph };
 然后，在你的 HTML 页面的顶级模块中：
 
 ```js
-import { cube, foo, graph } from 'my-module.js';
+import { cube, foo, graph } from "my-module.js";
 
 graph.options = {
-    color:'blue',
-    thickness:'3px'
+  color: "blue",
+  thickness: "3px",
 };
 
 graph.draw();
 console.log(cube(3)); // 27
-console.log(foo);    // 4.555806215962888
+console.log(foo); // 4.555806215962888
 ```
 
 着重注意以下几点：
@@ -199,7 +197,7 @@ export default function cube(x) {
 然后，在另一个脚本中，可以直接导入默认导出：
 
 ```js
-import cube from './my-module.js';
+import cube from "./my-module.js";
 console.log(cube(3)); // 27
 ```
 
@@ -231,15 +229,15 @@ export myClass;
 // parentModule.js 中
 // 仅仅聚合 childModule1 和 childModule2 中的导出
 // 以重新导出他们
-export { myFunction, myVariable } from 'childModule1.js';
-export { myClass } from 'childModule2.js';
+export { myFunction, myVariable } from "childModule1.js";
+export { myClass } from "childModule2.js";
 ```
 
 ```js
 // 顶层模块中
 // 我们可以从单个模块调用所有导出，因为 parentModule 事先
 // 已经将他们“收集”/“打包”到一起
-import { myFunction, myVariable, myClass } from 'parentModule.js'
+import { myFunction, myVariable, myClass } from "parentModule.js";
 ```
 
 ## 规范

@@ -22,13 +22,13 @@ slug: Web/API/Response/type
 ## 示例
 
 在我们的 [Fetch 响应示例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response)中（参见 [Fetch 响应在线演示](https://mdn.github.io/dom-examples/fetch/fetch-response/)），我们使用 {{domxref("Request.Request","Request()")}} 构造函数创建了一个新的 {{domxref("Request")}} 对象，并向其传递了一个 JPG 路径。然后，我们使用
- {{domxref("fetch()")}} 获取到这个请求，使用 {{domxref("Response.blob")}} 从响应中提取到 blob，使用 {{domxref("URL.createObjectURL")}} 从中创建一个对象的 URL，并将其显示在 {{htmlelement("img")}} 中。
+{{domxref("fetch()")}} 获取到这个请求，使用 {{domxref("Response.blob")}} 从响应中提取到 blob，使用 {{domxref("URL.createObjectURL")}} 从中创建一个对象的 URL，并将其显示在 {{htmlelement("img")}} 中。
 
 注意，在 `fetch()` 代码块的顶部，我们将响应的 `type` 记录在控制台。
 
 ```js
-const myImage = document.querySelector('img');
-const myRequest = new Request('flowers.jpg');
+const myImage = document.querySelector("img");
+const myRequest = new Request("flowers.jpg");
 fetch(myRequest).then((response) => {
   console.log(response.type); // returns basic by default
   response.blob().then((myBlob) => {

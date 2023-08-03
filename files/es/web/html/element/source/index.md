@@ -1,7 +1,6 @@
 ---
 title: <source>
 slug: Web/HTML/Element/source
-original_slug: Web/HTML/Elemento/source
 ---
 
 El **elemento HTML `<source>`** especifica recursos de medios múltiples para los elementos {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, o {{HTMLElement("video")}}. Es un elemento vacío. Normalmente se utiliza para servir el mismo contenido multimedia en [varios formatos soportados por diferentes navegadores](/es/docs/Media_formats_supported_by_the_audio_and_video_elements).

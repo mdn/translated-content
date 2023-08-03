@@ -1,7 +1,6 @@
 ---
 title: Booleano
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Boolean
 ---
 
 {{JSRef}}

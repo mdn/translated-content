@@ -16,7 +16,8 @@ a[title] {
 
 /* Les éléments <a> avec un href qui correspond */
 /* à "https://example.org" */
-a[href="https://example.org"] {
+a[href="https://example.org"]
+{
   color: green;
 }
 

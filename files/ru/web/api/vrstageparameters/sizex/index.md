@@ -28,9 +28,7 @@ var mySizeX = vrStageParametersInstance.sizeX;
 
 ## Specifications
 
-| Specification                                                                            | Status                       | Comment            |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#dom-vrstageparameters-sizex', 'sizeX')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

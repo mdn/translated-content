@@ -37,42 +37,41 @@ var style = window.getComputedStyle(elem1, null);
 
 ```html
 <style>
- #elem-container{
-   position: absolute;
-   left:     100px;
-   top:      200px;
-   height:   100px;
- }
+  #elem-container {
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    height: 100px;
+  }
 </style>
 
 <div id="elem-container">dummy</div>
 <div id="output"></div>
 
 <script>
-  function getTheStyle(){
+  function getTheStyle() {
     var elem = document.getElementById("elem-container");
-    var theCSSprop = window.getComputedStyle(elem,null).getPropertyValue("height");
+    var theCSSprop = window
+      .getComputedStyle(elem, null)
+      .getPropertyValue("height");
     document.getElementById("output").innerHTML = theCSSprop;
-   }
+  }
   getTheStyle();
 </script>
 ```
 
 ```js
-function dumpComputedStyles(elem,prop) {
-
-  var cs = window.getComputedStyle(elem,null);
+function dumpComputedStyles(elem, prop) {
+  var cs = window.getComputedStyle(elem, null);
   if (prop) {
-    console.log(prop+" : "+cs.getPropertyValue(prop));
+    console.log(prop + " : " + cs.getPropertyValue(prop));
     return;
   }
   var len = cs.length;
-  for (var i=0;i<len;i++) {
-
+  for (var i = 0; i < len; i++) {
     var style = cs[i];
-    console.log(style+" : "+cs.getPropertyValue(style));
+    console.log(style + " : " + cs.getPropertyValue(style));
   }
-
 }
 ```
 

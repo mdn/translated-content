@@ -31,7 +31,7 @@ Aucune.
 
 ### Erreurs déclenchées
 
-Si *largeur* ou *hauteur* est une valeur négative, une erreur `gl.INVALID_VALUE` est déclenchée.
+Si _largeur_ ou _hauteur_ est une valeur négative, une erreur `gl.INVALID_VALUE` est déclenchée.
 
 ## Exemples
 

@@ -24,7 +24,9 @@ browser.menus.create(
 ### 매개변수
 
 - `createProperties`
+
   - : `object`. 새 메뉴 항목의 속성들
+
     - `checked` {{optional_inline}}
       - : `boolean`. checkbox나 radio 항목의 초기값: 선택은 `true`, 선택이 아니면 `false`. radio 항목이라면 그룹 중에서 하나만 선택된 것으로 할 수 있다.
     - `command` {{optional_inline}}</dt>
@@ -112,10 +114,10 @@ browser.menus.create(
 browser.menus.create({
   id: "log-selection",
   title: "Log '%s' to the console",
-  contexts: ["selection"]
+  contexts: ["selection"],
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "log-selection") {
     console.log(info.selectionText);
   }
@@ -133,33 +135,39 @@ function onCreated() {
   }
 }
 
-browser.menus.create({
-  id: "radio-green",
-  type: "radio",
-  title: "Make it green",
-  contexts: ["all"],
-  checked: false
-}, onCreated);
+browser.menus.create(
+  {
+    id: "radio-green",
+    type: "radio",
+    title: "Make it green",
+    contexts: ["all"],
+    checked: false,
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "radio-blue",
-  type: "radio",
-  title: "Make it blue",
-  contexts: ["all"],
-  checked: false
-}, onCreated);
+browser.menus.create(
+  {
+    id: "radio-blue",
+    type: "radio",
+    title: "Make it blue",
+    contexts: ["all"],
+    checked: false,
+  },
+  onCreated,
+);
 
 var makeItBlue = 'document.body.style.border = "5px solid blue"';
 var makeItGreen = 'document.body.style.border = "5px solid green"';
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "radio-blue") {
     browser.tabs.executeScript(tab.id, {
-      code: makeItBlue
+      code: makeItBlue,
     });
   } else if (info.menuItemId == "radio-green") {
     browser.tabs.executeScript(tab.id, {
-      code: makeItGreen
+      code: makeItGreen,
     });
   }
 });

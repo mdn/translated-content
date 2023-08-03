@@ -1,7 +1,6 @@
 ---
 title: 让我们开始 CSS 的学习之旅
 slug: Learn/CSS/First_steps/Getting_started
-original_slug: Learn/CSS/First_steps/开始
 ---
 
 {{LearnSidebar}}

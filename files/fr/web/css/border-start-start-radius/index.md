@@ -43,16 +43,16 @@ Ainsi, avec un mode d'écriture `horizontal-tb`, cette propriété logique corre
 
 ```css
 div {
-background-color: rebeccapurple;
-width: 120px;
-height: 120px;
+  background-color: rebeccapurple;
+  width: 120px;
+  height: 120px;
   border-start-start-radius: 10px;
 }
 
 .texteExemple {
-writing-mode: vertical-rl;
-padding: 10px;
-background-color: #fff;
+  writing-mode: vertical-rl;
+  padding: 10px;
+  background-color: #fff;
   border-start-start-radius: 10px;
 }
 ```
@@ -61,7 +61,7 @@ background-color: #fff;
 
 ```html
 <div>
-<p class="texteExemple">Exemple</p>
+  <p class="texteExemple">Exemple</p>
 </div>
 ```
 

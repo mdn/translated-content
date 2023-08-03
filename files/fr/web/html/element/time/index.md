@@ -71,8 +71,7 @@ La valeur exploitable informatiquement est la valeur de l'attribut `datetime` de
 #### HTML
 
 ```html
-<p>Le concert a lieu <time
-  datetime="2001-05-15T19:00">le 15 mai</time>.</p>
+<p>Le concert a lieu <time datetime="2001-05-15T19:00">le 15 mai</time>.</p>
 ```
 
 #### Résultat

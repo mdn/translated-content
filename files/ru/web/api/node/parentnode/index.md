@@ -7,6 +7,7 @@ tags:
   - Method
 translation_of: Web/API/Node/parentNode
 ---
+
 {{ApiRef}}
 
 ## Аннотация
@@ -36,14 +37,13 @@ if (node.parentNode) {
 
 Так же возвращает `null` если элемент только был создан и ещё не добавлен в DOM дерево.
 
-## Поддержка браузерами
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
 
 {{Compat}}
-
-## Спецификация
-
-- [DOM Level 2 Core: Node.parentNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317)
-- [DOM Level 3 Core: Node.parentNode](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1060184317)
 
 ## Смотрите также
 

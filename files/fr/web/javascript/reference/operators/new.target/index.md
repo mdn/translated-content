@@ -13,7 +13,7 @@ La syntaxe **`new.target`** est disponible dans toutes les fonctions et permet e
 ## Syntaxe
 
 ```js
-new.target
+new.target;
 ```
 
 ## Description
@@ -29,8 +29,8 @@ La syntaxe `new.target` se compose du mot-clé `new`, suivi d'un point puis d'un
 Utilisé dans les appels de fonctions « classiques » (autrement dit pour les fonctions qui ne sont pas des constructeurs), `new.target` vaut {{jsxref("undefined")}}. Cela permet de détecter si une fonction a été appelée comme constructeur avec [`new`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_new) :
 
 ```js
-function Toto(){
-  if (!new.target) throw "Toto() doit être appelé avec new"
+function Toto() {
+  if (!new.target) throw "Toto() doit être appelé avec new";
   console.log("Toto instancié avec new");
 }
 
@@ -49,7 +49,11 @@ class A {
   }
 }
 
-class B extends A { constructor() { super(); } }
+class B extends A {
+  constructor() {
+    super();
+  }
+}
 
 var a = new A(); // affiche "A"
 var b = new B(); // affiche "B"

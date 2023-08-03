@@ -52,10 +52,8 @@ padding-right: unset;
 
 ```html
 <p class="padd">
-  Elle n’avait pas bu la moitié de la bouteille,
-  que sa tête touchait au plafond et qu’elle fut
-  forcée de se baisser pour ne pas se casser le
-  cou.
+  Elle n’avait pas bu la moitié de la bouteille, que sa tête touchait au plafond
+  et qu’elle fut forcée de se baisser pour ne pas se casser le cou.
 </p>
 ```
 

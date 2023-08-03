@@ -24,24 +24,22 @@ document.write(markup);
 
 ```html
 <html>
+  <head>
+    <title>write example</title>
 
-<head>
-  <title>write example</title>
+    <script>
+      function newContent() {
+        alert("load new content");
+        document.open();
+        document.write("<h1>Out with the old - in with the new!</h1>");
+        document.close();
+      }
+    </script>
+  </head>
 
-  <script>
-    function newContent() {
-      alert("load new content");
-      document.open();
-      document.write("<h1>Out with the old - in with the new!</h1>");
-      document.close();
-    }
-  </script>
-</head>
-
-<body onload="newContent();">
-  <p>Some original document content.</p>
-</body>
-
+  <body onload="newContent();">
+    <p>Some original document content.</p>
+  </body>
 </html>
 ```
 
@@ -53,7 +51,7 @@ If the `document.write()` call is embedded within an inlined HTML `<script>` tag
 
 ```html
 <script>
-  document.write("<h1>Main title</h1>")
+  document.write("<h1>Main title</h1>");
 </script>
 ```
 

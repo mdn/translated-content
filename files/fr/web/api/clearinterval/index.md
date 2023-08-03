@@ -11,7 +11,7 @@ La méthode globale **`clearInterval()`** permet d'annuler une action répétée
 ## Syntaxe
 
 ```js
-clearInterval(intervalID)
+clearInterval(intervalID);
 ```
 
 ### Paramètres

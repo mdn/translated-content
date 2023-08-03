@@ -1,7 +1,6 @@
 ---
 title: Parámetros Rest
 slug: Web/JavaScript/Reference/Functions/rest_parameters
-original_slug: Web/JavaScript/Referencia/Funciones/parametros_rest
 ---
 
 {{jsSidebar("Functions")}}

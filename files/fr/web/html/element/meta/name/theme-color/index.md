@@ -11,7 +11,7 @@ La valeur de **`theme-color`** comme attribut [`name`](/fr/docs/Web/HTML/Element
 ## Exemple
 
 ```html
-<meta name="theme-color" content="#4285f4">
+<meta name="theme-color" content="#4285f4" />
 ```
 
 L'image qui suit illustre l'effet de l'élément [`<meta>`](/fr/docs/Web/HTML/Element/meta) avec `theme-color` pour un document affiché dans Chrome sur Android.
@@ -23,8 +23,11 @@ _Crédits image&nbsp;: [Couleurs des icônes et du navigateur](https://web.dev/i
 Il est possible de fournir un type de média ou une requête média avec l'attribut [`media`](/fr/docs/Web/HTML/Element/meta#attr-media) afin que la couleur soit utilisée pour une condition donnée. Par exemple&nbsp;:
 
 ```html
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+<meta
+  name="theme-color"
+  media="(prefers-color-scheme: light)"
+  content="white" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
 ```
 
 ## Spécifications

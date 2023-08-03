@@ -1,5 +1,5 @@
 ---
-title: ':scope'
+title: ":scope"
 slug: Web/CSS/:scope
 translation_of: Web/CSS/:scope
 ---
@@ -39,9 +39,7 @@ if (paragraphe.matches(":scope")) {
 ### HTML
 
 ```html
-<p id="para">
-  Voici un paragraphe, pas vraiment intéressant mais bon.
-</p>
+<p id="para">Voici un paragraphe, pas vraiment intéressant mais bon.</p>
 <p id="output"></p>
 ```
 

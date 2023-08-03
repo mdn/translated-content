@@ -47,10 +47,12 @@ function.bind(thisArg[, arg1[, arg2[, ...]]])
 `bind()` 最简单的用法是创建一个函数，不论怎么调用，这个函数都有同样的 **`this`** 值。JavaScript 新手经常犯的一个错误是将一个方法从对象中拿出来，然后再调用，期望方法中的 `this` 是原来的对象（比如在回调中传入这个方法）。如果不做特殊处理的话，一般会丢失原来的对象。基于这个函数，用原始的对象创建一个绑定函数，巧妙地解决了这个问题：
 
 ```js
-this.x = 9;    // 在浏览器中，this 指向全局的 "window" 对象
+this.x = 9; // 在浏览器中，this 指向全局的 "window" 对象
 var module = {
   x: 81,
-  getX: function() { return this.x; }
+  getX: function () {
+    return this.x;
+  },
 };
 
 module.getX(); // 81
@@ -75,7 +77,7 @@ function list() {
 }
 
 function addArguments(arg1, arg2) {
-    return arg1 + arg2
+  return arg1 + arg2;
 }
 
 var list1 = list(1, 2, 3); // [1, 2, 3]
@@ -111,17 +113,16 @@ function LateBloomer() {
 }
 
 // 在 1 秒钟后声明 bloom
-LateBloomer.prototype.bloom = function() {
+LateBloomer.prototype.bloom = function () {
   window.setTimeout(this.declare.bind(this), 1000);
 };
 
-LateBloomer.prototype.declare = function() {
-  console.log('I am a beautiful flower with ' +
-    this.petalCount + ' petals!');
+LateBloomer.prototype.declare = function () {
+  console.log("I am a beautiful flower with " + this.petalCount + " petals!");
 };
 
 var flower = new LateBloomer();
-flower.bloom();  // 一秒钟后，调用 'declare' 方法
+flower.bloom(); // 一秒钟后，调用 'declare' 方法
 ```
 
 ### 作为构造函数使用的绑定函数
@@ -136,20 +137,20 @@ function Point(x, y) {
   this.y = y;
 }
 
-Point.prototype.toString = function() {
-  return this.x + ',' + this.y;
+Point.prototype.toString = function () {
+  return this.x + "," + this.y;
 };
 
 var p = new Point(1, 2);
 p.toString(); // '1,2'
 
 var emptyObj = {};
-var YAxisPoint = Point.bind(emptyObj, 0/*x*/);
+var YAxisPoint = Point.bind(emptyObj, 0 /*x*/);
 
 // 本页下方的 polyfill 不支持运行这行代码，
 // 但使用原生的 bind 方法运行是没问题的：
 
-var YAxisPoint = Point.bind(null, 0/*x*/);
+var YAxisPoint = Point.bind(null, 0 /*x*/);
 
 /*（译注：polyfill 的 bind 方法中，如果把 bind 的第一个参数加上，
 即对新绑定的 this 执行 Object(this)，包装为对象，
@@ -173,7 +174,7 @@ new YAxisPoint(17, 42) instanceof Point; // true
 //（即使通常来说这个不是被期望发生的）
 YAxisPoint(13);
 
-emptyObj.x + ',' + emptyObj.y;   //  '0,13'
+emptyObj.x + "," + emptyObj.y; //  '0,13'
 ```
 
 如果你希望一个绑定函数要么只能用 {{jsxref("Operators/new", "new")}} 操作符，要么只能直接调用，那你必须在目标函数上显式规定这个限制。

@@ -44,7 +44,7 @@ On peut utiliser une instruction `return` dans un générateur. Lorsque cette in
 ### Exemple simple
 
 ```js
-function* creerID(){
+function* creerID() {
   var index = 0;
   while (true) {
     yield index++;
@@ -73,9 +73,9 @@ var gen = logGenerator();
 // le premier appel à next exécute la fonction depuis son
 // début jusqu'au premier yield rencontré
 gen.next();
-gen.next('bretzel');    // bretzel
-gen.next('california'); // california
-gen.next('mayonnaise'); // mayonnaise
+gen.next("bretzel"); // bretzel
+gen.next("california"); // california
+gen.next("mayonnaise"); // mayonnaise
 ```
 
 ### Exemple utilisant yield\*
@@ -86,7 +86,7 @@ function* autreGenerateur(i) {
   yield i + 2;
   yield i + 3;
 }
-function* generateur(i){
+function* generateur(i) {
   yield i;
   yield* autreGenerateur(i);
   yield i + 10;
@@ -121,11 +121,11 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 ```js
 const monObj = {
-  *generator () {
+  *generator() {
     yield "a";
     yield "b";
-  }
-}
+  },
+};
 
 const gen = monObj.generator();
 
@@ -138,28 +138,28 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 ```js
 class Toto {
-  *[Symbol.iterator] () {
+  *[Symbol.iterator]() {
     yield 1;
     yield 2;
   }
 }
 
 const monObj = {
-  *[Symbol.iterator] () {
+  *[Symbol.iterator]() {
     yield "a";
     yield "b";
-  }
-}
+  },
+};
 
-console.log(Array.from(new Toto)); // [1, 2]
-console.log(Array.from(monObj));   // [ "a", "b"]
+console.log(Array.from(new Toto())); // [1, 2]
+console.log(Array.from(monObj)); // [ "a", "b"]
 ```
 
 ### Les générateurs ne sont pas constructibles
 
 ```js example-bad
 function* f() {}
-var obj = new f; // lève une TypeError: f n'est pas un constructeur
+var obj = new f(); // lève une TypeError: f n'est pas un constructeur
 ```
 
 ### Générateur défini avec une expression

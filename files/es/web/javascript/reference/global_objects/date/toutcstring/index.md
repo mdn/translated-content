@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.toUTCString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toUTCString
 ---
 
 {{JSRef}}

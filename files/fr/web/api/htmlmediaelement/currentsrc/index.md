@@ -19,7 +19,7 @@ Un objet [`DOMString`](/fr/docs/Web/API/DOMString) contenant l'URL absolue de la
 ## Exemples
 
 ```js
-let obj = document.createElement('video');
+let obj = document.createElement("video");
 console.log(obj.currentSrc); // ""
 ```
 

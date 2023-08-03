@@ -37,15 +37,19 @@ _Наследует свойства от своего родителя, {{domxr
 ## Пример
 
 ```js
-window.addEventListener("beforeinstallprompt", function(e) {
+window.addEventListener("beforeinstallprompt", function (e) {
   // Зарегистрируйте платформы, указанные в качестве параметров, в запросе на установку
   console.log(e.platforms); // e.g., ["web", "android", "windows"]
-  e.userChoice.then(function(choiceResult) {
+  e.userChoice.then(function (choiceResult) {
     console.log(choiceResult.outcome); // either "accepted" or "dismissed"
   }, handleError);
 });
 ```
 
-## Совместимость с браузером
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
 
 {{Compat}}

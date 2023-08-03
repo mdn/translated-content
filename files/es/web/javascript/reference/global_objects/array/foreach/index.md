@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/forEach
 ---
 
 {{JSRef}}

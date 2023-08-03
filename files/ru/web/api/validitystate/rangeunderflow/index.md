@@ -17,7 +17,7 @@ browser-compat: api.ValidityState.rangeUnderflow
 Учитывая следующее:
 
 ```html
-<input type="number" min="20" max="40" step="2"/>
+<input type="number" min="20" max="40" step="2" />
 ```
 
 если `value < 20`, `rangeUnderflow` будет true. Если `true`, элемент соответствует CSS-псевдоклассам {{cssxref(":invalid")}} и {{cssxref(":out-of-range")}}.

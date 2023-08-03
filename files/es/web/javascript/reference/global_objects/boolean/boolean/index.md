@@ -1,7 +1,6 @@
 ---
 title: Boolean() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Boolean/Boolean
 ---
 
 {{JSRef}}

@@ -22,7 +22,7 @@ Pour connaître la position précise à l'intérieur de l'élément, on utiliser
 ## Syntaxe
 
 ```js
-elementFromPoint(x, y)
+elementFromPoint(x, y);
 ```
 
 ### Paramètres

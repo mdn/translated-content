@@ -19,11 +19,11 @@ translation_of: Web/API/EventSource
 
 ## Свойства
 
-| Attribute    | Type                                 | Description                                                                                                   |
-| ------------ | ------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
-| `onerror`    | `nsIDOMEventListener`                | JavaScript-функция, вызываемая при появлении ошибки                                                           |
-| `onmessage`  | `nsIDOMEventListener`                | JavaScript-функция, вызываемая при приходе сообщения без поля `event`                                         |
-| `onopen`     | `nsIDOMEventListener`                | JavaScript-функция, вызываемая после открытия соединения                                                      |
+| Attribute    | Type                       | Description                                                                                                   |
+| ------------ | -------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `onerror`    | `nsIDOMEventListener`      | JavaScript-функция, вызываемая при появлении ошибки                                                           |
+| `onmessage`  | `nsIDOMEventListener`      | JavaScript-функция, вызываемая при приходе сообщения без поля `event`                                         |
+| `onopen`     | `nsIDOMEventListener`      | JavaScript-функция, вызываемая после открытия соединения                                                      |
 | `readyState` | [`long`](/en/long)         | Состояние соединения, должно иметь одно из значений `CONNECTING`, `OPEN`, или `CLOSED`. **Только для чтения** |
 | `url`        | {{ domxref("DOMString") }} | **Только для чтения**                                                                                         |
 
@@ -56,11 +56,10 @@ void close();
 
 Нет
 
-## Смотрите также
+## Спецификации
 
-- {{ spec("https://html.spec.whatwg.org/multipage/comms.html#the-eventsource-interface","Server-Sent Events: The EventSource Interface","CR") }}
-- [Using server-sent events](/en/Server-sent_events/Using_server-sent_events)
+{{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}

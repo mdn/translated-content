@@ -62,6 +62,7 @@ slug: Web/HTML/Element/base
 - {{htmlattrdef("href")}}
   - : 문서 내 상대 URL이 사용할 기준 URL. 절대 및 상대 URL을 사용할 수 있습니다.
 - {{htmlattrdef("target")}}
+
   - : `target` 속성을 명시하지 않은 {{htmlelement("a")}}, {{htmlelement("area")}}, 또는 {{htmlelement("form")}} 요소가 탐색을 유발했을 때, 그 결과를 보여줄 기본 {{glossary("browsing context", "브라우징 맥락")}}. **키워드**나 **저작자 정의 이름**으로 지정합니다.
 
   다음 키워드는 특별한 의미를 갖습니다.
@@ -90,15 +91,15 @@ slug: Web/HTML/Element/base
 [Open Graph](https://ogp.me/) 태그는 `<base>`를 인식하지 않으므로 항상 온전한 형태의 절대 URL을 지정해야 합니다.
 
 ```html
-<meta property="og:image" content="https://example.com/thumbnail.jpg">
+<meta property="og:image" content="https://example.com/thumbnail.jpg" />
 ```
 
 ## 예제
 
 ```html
-<base href="http://www.example.com/page.html">
-<base target="_blank">
-<base target="_target" href="http://www.example.com/page.html">
+<base href="http://www.example.com/page.html" />
+<base target="_blank" />
+<base target="_target" href="http://www.example.com/page.html" />
 ```
 
 ## 명세

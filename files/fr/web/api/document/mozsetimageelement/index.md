@@ -46,7 +46,7 @@ function clicked() {
   canvas.setAttribute("width", 100);
   canvas.setAttribute("height", 100);
 
-  var ctx = canvas.getContext('2d');
+  var ctx = canvas.getContext("2d");
   ctx.fillStyle = "#" + c.toString(16) + "0000";
   ctx.fillRect(25, 25, 75, 75);
 

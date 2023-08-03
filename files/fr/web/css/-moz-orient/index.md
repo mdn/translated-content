@@ -1,5 +1,5 @@
 ---
-title: '-moz-orient'
+title: "-moz-orient"
 slug: Web/CSS/-moz-orient
 translation_of: Web/CSS/-moz-orient
 ---
@@ -33,15 +33,12 @@ La propriété `moz-orient` est définie avec un mot-clé parmi ceux de la liste
 
 ```html
 <p>
-  La barre de progression suivante est
-  horizontale (le comportement par défaut) :
+  La barre de progression suivante est horizontale (le comportement par défaut)
+  :
 </p>
 <progress max="100" value="75"></progress>
 
-<p>
-  La barre de progression suivante
-  est verticale :
-</p>
+<p>La barre de progression suivante est verticale :</p>
 <progress class="vert" max="100" value="75"></progress>
 ```
 

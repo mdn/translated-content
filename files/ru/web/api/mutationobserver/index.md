@@ -61,24 +61,24 @@ translation_of: Web/API/MutationObserver
 
 ```js
 // Выбираем целевой элемент
-var target = document.getElementById('some-id');
+var target = document.getElementById("some-id");
 
 // Конфигурация observer (за какими изменениями наблюдать)
 const config = {
-    attributes: true,
-    childList: true,
-    subtree: true
+  attributes: true,
+  childList: true,
+  subtree: true,
 };
 
 // Колбэк-функция при срабатывании мутации
-const callback = function(mutationsList, observer) {
-    for (let mutation of mutationsList) {
-        if (mutation.type === 'childList') {
-            console.log('A child node has been added or removed.');
-        } else if (mutation.type === 'attributes') {
-            console.log('The ' + mutation.attributeName + ' attribute was modified.');
-        }
+const callback = function (mutationsList, observer) {
+  for (let mutation of mutationsList) {
+    if (mutation.type === "childList") {
+      console.log("A child node has been added or removed.");
+    } else if (mutation.type === "attributes") {
+      console.log("The " + mutation.attributeName + " attribute was modified.");
     }
+  }
 };
 
 // Создаём экземпляр наблюдателя с указанной функцией колбэка

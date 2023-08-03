@@ -160,6 +160,6 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`scaleZ()`](/ja/docs/Web/CSS/transform-function/scaleZ())
-- [`translate3d()`](/ja/docs/Web/CSS/transform-function/translate3d())
-- [`rotate3d()`](/ja/docs/Web/CSS/transform-function/rotate3d())
+- [`scaleZ()`](</ja/docs/Web/CSS/transform-function/scaleZ()>)
+- [`translate3d()`](</ja/docs/Web/CSS/transform-function/translate3d()>)
+- [`rotate3d()`](</ja/docs/Web/CSS/transform-function/rotate3d()>)

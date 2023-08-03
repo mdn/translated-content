@@ -45,7 +45,7 @@ console.log(float32.length); // 2
 console.log(float32.BYTES_PER_ELEMENT); // 4
 
 // À partir d'un tableau
-const arr = new Float32Array([21,31]);
+const arr = new Float32Array([21, 31]);
 console.log(arr[1]); // 31
 
 // À partir d'un autre tableau typé
@@ -58,7 +58,9 @@ const buffer = new ArrayBuffer(16);
 const z = new Float32Array(buffer, 0, 4);
 
 // À partir d'un itérable
-const iterable = function*(){ yield* [1,2,3]; }();
+const iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 const float32 = new Float32Array(iterable);
 // Float32Array[1, 2, 3]
 ```

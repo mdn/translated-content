@@ -1,7 +1,6 @@
 ---
 title: Funciones Flecha
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-original_slug: Web/JavaScript/Referencia/Funciones/Arrow_functions
 ---
 
 {{jsSidebar("Functions", "Funciones")}}

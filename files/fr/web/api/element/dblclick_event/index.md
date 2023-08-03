@@ -1,5 +1,5 @@
 ---
-title: 'Element : évènement dblclick'
+title: "Element : évènement dblclick"
 slug: Web/API/Element/dblclick_event
 translation_of: Web/API/Element/dblclick_event
 ---
@@ -40,10 +40,10 @@ Dans cet exemple, on modifie la taille d'une tuile lorsqu'on double-clique dessu
 ### JavaScript
 
 ```js
-const card = document.querySelector('aside');
+const card = document.querySelector("aside");
 
-card.addEventListener('dblclick', function (e) {
-  card.classList.toggle('large');
+card.addEventListener("dblclick", function (e) {
+  card.classList.toggle("large");
 });
 ```
 
@@ -64,9 +64,9 @@ aside {
   border-radius: 1em;
   display: inline-block;
   padding: 1em;
-  transform: scale(.9);
+  transform: scale(0.9);
   transform-origin: 0 0;
-  transition: transform .6s;
+  transition: transform 0.6s;
 }
 
 .large {

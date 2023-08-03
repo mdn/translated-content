@@ -28,9 +28,9 @@ Pour vérifier que le réseau est accessible, on pourra utiliser `navigator.onLi
 
 ```js
 if (navigator.onLine) {
-  console.log('connecté');
+  console.log("connecté");
 } else {
-  console.log('hors ligne');
+  console.log("hors ligne");
 }
 ```
 
@@ -41,9 +41,13 @@ Si le navigateur ne prend pas en charge `navigator.onLine`, l'exemple précéden
 Pour gérer les changements liés à l'état du réseau, on pourra utiliser la méthode [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) afin de créer des gestionnaires d'évènements pour `online` et `offline`, comme dans l'exemple qui suit&nbsp;:
 
 ```js
-window.addEventListener('offline', function(e) { console.log('hors ligne'); });
+window.addEventListener("offline", function (e) {
+  console.log("hors ligne");
+});
 
-window.addEventListener('online', function(e) { console.log('connecté'); });
+window.addEventListener("online", function (e) {
+  console.log("connecté");
+});
 ```
 
 ## Spécifications

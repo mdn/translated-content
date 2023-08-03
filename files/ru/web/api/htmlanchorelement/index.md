@@ -3,6 +3,7 @@ title: HTMLAnchorElement
 slug: Web/API/HTMLAnchorElement
 translation_of: Web/API/HTMLAnchorElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 Интерфейс **`HTMLAnchorElement`** представляет элементы гиперссылки и предоставляет специальные свойства и методы (помимо обычного объектного интерфейса {{domxref("HTMLElement")}}, который они наследуют) для управления макетом и представлением таких элементов.

@@ -81,12 +81,10 @@ console.count([label]);
 - `label`
   - : Строка. Если она передаётся, `count()` выводит такое число, которое соответствует количеству раз вызова данной функции с таким же точно `label`.
 
-## Specifications
+## Спецификации
 
-| Specification                                                                | Status                           | Comment            |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#count", "console.count()")}} | {{Spec2("Console API")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

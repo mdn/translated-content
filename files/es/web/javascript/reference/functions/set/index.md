@@ -1,7 +1,6 @@
 ---
 title: setter
 slug: Web/JavaScript/Reference/Functions/set
-original_slug: Web/JavaScript/Referencia/Funciones/set
 ---
 
 {{jsSidebar("Funciones")}}

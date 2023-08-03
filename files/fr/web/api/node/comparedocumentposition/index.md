@@ -22,15 +22,17 @@ La valeur retournée est un masque de bits avec les valeurs suivantes :
 ## Syntaxe
 
 ```js
-node.compareDocumentPosition( otherNode )
+node.compareDocumentPosition(otherNode);
 ```
 
 ## Exemple
 
 ```js
-var head = document.getElementsByTagName('head').item(0);
+var head = document.getElementsByTagName("head").item(0);
 
-if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWING) {
+if (
+  head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWING
+) {
   console.log("well-formed document");
 } else {
   console.log("<head> is not before <body>");

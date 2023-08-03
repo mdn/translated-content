@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/values
 ---
 
 {{JSRef}}

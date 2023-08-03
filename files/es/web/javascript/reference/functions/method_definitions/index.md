@@ -1,7 +1,6 @@
 ---
 title: Method definitions
 slug: Web/JavaScript/Reference/Functions/Method_definitions
-original_slug: Web/JavaScript/Referencia/Funciones/Method_definitions
 ---
 
 {{JsSidebar("Functions")}}A partir de ECMAScript 2015 (ES6), se introdujo una sintaxis abreviada para la definición de métodos en inicializadores de objetos. Es una forma abreviada para la asignación de una función al nombre del método.

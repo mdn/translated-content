@@ -88,33 +88,33 @@ class WordCount extends HTMLParagraphElement {
     // 计数器指向元素的父级
     var wcParent = this.parentNode;
 
-    function countWords(node){
-      var text = node.innerText || node.textContent
+    function countWords(node) {
+      var text = node.innerText || node.textContent;
       return text.trim().split(/\s+/g).length;
     }
 
-    var count = 'Words: ' + countWords(wcParent);
+    var count = "Words: " + countWords(wcParent);
 
     // 创建一个 shadow root
-    var shadow = this.attachShadow({mode: 'open'});
+    var shadow = this.attachShadow({ mode: "open" });
 
     // 创建文本节点并向其添加计数器
-    var text = document.createElement('span');
+    var text = document.createElement("span");
     text.textContent = count;
 
     // 将其添加到 shadow root 上
     shadow.appendChild(text);
 
     // 当元素内容发生变化时更新计数
-    setInterval(function() {
-      var count = 'Words: ' + countWords(wcParent);
+    setInterval(function () {
+      var count = "Words: " + countWords(wcParent);
       text.textContent = count;
     }, 200);
   }
 }
 
 // 定义新元素
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 ## 规范

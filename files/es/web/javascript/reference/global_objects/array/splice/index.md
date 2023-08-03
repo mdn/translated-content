@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/splice
 ---
 
 {{JSRef}}

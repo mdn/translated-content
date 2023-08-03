@@ -56,7 +56,7 @@ addEventListener("backgroundfetchsuccess", (event) => {
 
       // Обновить уведомление о прогрессе
       event.updateUI({ title: "Эпизод 5 готов к прослушиванию!" });
-    })()
+    })(),
   );
 });
 ```

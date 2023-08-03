@@ -18,7 +18,7 @@ browser-compat: api.ValidityState.badInput
 ## Пример
 
 ```html
-<input type="number" id="age">
+<input type="number" id="age" />
 ```
 
 ```js

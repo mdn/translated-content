@@ -3,6 +3,7 @@ title: BatteryManager
 slug: Web/API/BatteryManager
 translation_of: Web/API/BatteryManager
 ---
+
 {{APIRef}}
 
 Интерфейс `BatteryManager` предоставляет пути получения информации о уровне заряда батареи устройства.
@@ -37,11 +38,11 @@ translation_of: Web/API/BatteryManager
 
 {{page("/ru-RU/docs/Web/API/EventTarget","Methods")}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

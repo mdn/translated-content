@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/flat
 ---
 
 {{JSRef}} {{SeeCompatTable}}

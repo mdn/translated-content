@@ -107,7 +107,9 @@ On découpe l'image et on la répète pour remplir la zone entre les bordures.
 #### HTML
 
 ```html
-<div id="gradient">L'image formée par le dégradé est étirée pour remplir la zone.</div>
+<div id="gradient">
+  L'image formée par le dégradé est étirée pour remplir la zone.
+</div>
 ```
 
 #### CSS
@@ -138,11 +140,11 @@ On découpe l'image et on la répète pour remplir la zone entre les bordures.
 - [`outline`](/fr/docs/Web/CSS/outline)
 - [`box-shadow`](/fr/docs/Web/CSS/box-shadow)
 - [`background-image`](/fr/docs/Web/CSS/background-image)
-- La fonction [`url()`](/fr/docs/Web/CSS/url())
+- La fonction [`url()`](</fr/docs/Web/CSS/url()>)
 - Fonctions pour les dégradés&nbsp;:
 
-  - [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient())
-  - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient())
-  - [`repeating-linear-gradient()`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient())
-  - [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient())
-  - [`repeating-radial-gradient()`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient())
+  - [`conic-gradient()`](</fr/docs/Web/CSS/gradient/conic-gradient()>)
+  - [`linear-gradient()`](</fr/docs/Web/CSS/gradient/linear-gradient()>)
+  - [`repeating-linear-gradient()`](</fr/docs/Web/CSS/gradient/repeating-linear-gradient()>)
+  - [`radial-gradient()`](</fr/docs/Web/CSS/gradient/radial-gradient()>)
+  - [`repeating-radial-gradient()`](</fr/docs/Web/CSS/gradient/repeating-radial-gradient()>)
