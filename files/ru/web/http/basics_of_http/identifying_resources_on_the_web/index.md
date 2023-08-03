@@ -16,7 +16,6 @@ tags:
   - домен
   - запрос
 translation_of: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-original_slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web_RU
 ---
 
 {{HTTPSidebar}}

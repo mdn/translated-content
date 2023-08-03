@@ -1,7 +1,6 @@
 ---
 title: MDN Web Docs のリポジトリー
 slug: MDN/Community/Contributing/Our_repositories
-original_slug: MDN/Contribute/Where_is_everything
 i10n:
   sourceCommit: db5093f0ffaecdf744b086751a56fc1ad591b00a
 ---

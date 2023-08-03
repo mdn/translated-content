@@ -13,7 +13,6 @@ tags:
   - Начинающий
   - Пример
 translation_of: Web/MathML/Examples/MathML_Pythagorean_Theorem
-original_slug: Web/MathML/Примеры/MathML_Pythagorean_Theorem
 ---
 
 Сейчас мы докажем Теорему Пифагора:

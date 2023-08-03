@@ -8,7 +8,6 @@ tags:
   - Structures
   - TopicStub
 translation_of: MDN/Structures
-original_slug: MDN/Structures
 ---
 
 {{MDNSidebar}}

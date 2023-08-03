@@ -2,7 +2,6 @@
 title: NonDocumentTypeChildNode.previousElementSibling
 slug: Web/API/Element/previousElementSibling
 translation_of: Web/API/NonDocumentTypeChildNode/previousElementSibling
-original_slug: Web/API/NonDocumentTypeChildNode/previousElementSibling
 ---
 
 {{APIRef("DOM")}}

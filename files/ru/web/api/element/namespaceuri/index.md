@@ -2,7 +2,6 @@
 title: Node.namespaceURI
 slug: Web/API/Element/namespaceURI
 translation_of: Web/API/Node/namespaceURI
-original_slug: Web/API/Node/namespaceURI
 ---
 
 {{APIRef("DOM")}}

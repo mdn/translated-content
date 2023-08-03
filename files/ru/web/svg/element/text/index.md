@@ -6,7 +6,6 @@ tags:
   - SVG
   - SVG text
 translation_of: Web/SVG/Element/text
-original_slug: Web/SVG/Элемент/<text>
 ---
 {{SVGRef}}
 

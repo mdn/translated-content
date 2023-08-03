@@ -16,7 +16,6 @@ tags:
   - на стороне сервера
   - сессии
 translation_of: Learn/Server-side/Django/Authentication
-original_slug: Learn/Server-side/Django/Аутентификация
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}

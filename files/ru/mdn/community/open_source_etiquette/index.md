@@ -7,7 +7,6 @@ tags:
   - Open source
   - MDN
   - Новичок
-original_slug: MDN/Contribute/Open_source_etiquette
 ---
 
 {{MDNSidebar}}

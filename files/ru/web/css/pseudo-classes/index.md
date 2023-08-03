@@ -7,7 +7,6 @@ tags:
   - Псевдоклассы
   - Селекторы
 translation_of: Web/CSS/Pseudo-classes
-original_slug: Web/CSS/Псевдо-классы
 ---
 {{CSSRef}}
 

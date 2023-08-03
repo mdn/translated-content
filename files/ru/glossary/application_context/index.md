@@ -6,7 +6,6 @@ tags:
   - Glossary
   - Глоссарий
 translation_of: Glossary/application_context
-original_slug: Глоссарий/application_context
 ---
 
 Контекст приложения - это {{glossary("browsing context","контекст просмотра")}} верхнего уровня, к которому применяется [манифест](/ru/docs/Web/Manifest).

@@ -7,7 +7,6 @@ tags:
   - Гайд
   - промис
 translation_of: Web/JavaScript/Guide/Using_promises
-original_slug: Web/JavaScript/Guide/Ispolzovanie_promisov
 ---
 
 {{jsSidebar("Руководство по JavaScript")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}

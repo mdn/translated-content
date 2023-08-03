@@ -8,7 +8,6 @@ tags:
   - Руководство
   - Формы
 translation_of: Learn/Forms
-original_slug: Learn/HTML/Forms
 ---
 
 {{LearnSidebar}}

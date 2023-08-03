@@ -1,7 +1,6 @@
 ---
 title: オープンソースのエチケット
 slug: MDN/Community/Open_source_etiquette
-original_slug: MDN/Contribute/Open_source_etiquette
 i10n:
   sourceCommit: e7981a5962663764c953ef509d7a8f2d0f934885
 ---

@@ -1,7 +1,6 @@
 ---
 title: fetch()
 slug: Web/API/fetch
-original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 l10n:
   sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
 ---

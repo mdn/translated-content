@@ -7,7 +7,6 @@ tags:
   - Объекты
   - Руководства
 translation_of: Learn/JavaScript/Objects
-original_slug: Learn/JavaScript/Объекты
 ---
 
 {{LearnSidebar}}

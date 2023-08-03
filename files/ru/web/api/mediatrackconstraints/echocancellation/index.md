@@ -13,7 +13,6 @@ tags:
   - Эхоподавление
   - справочник
 translation_of: Web/API/MediaTrackConstraints/echoCancellation
-original_slug: Web/API/MediaTrackConstraints/Эхоподавление
 ---
 
 {{APIRef("Media Capture and Streams")}}

@@ -4,7 +4,6 @@ slug: Web/JavaScript/Event_loop
 tags:
   - Руководство
 translation_of: Web/JavaScript/EventLoop
-original_slug: Web/JavaScript/EventLoop
 ---
 
 {{JsSidebar("Advanced")}}

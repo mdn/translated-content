@@ -7,7 +7,6 @@ tags:
   - Свойство
   - Ссылка
 translation_of: Web/API/GlobalEventHandlers/onerror
-original_slug: Web/API/GlobalEventHandlers/onerror
 ---
 
 {{ ApiRef("HTML DOM") }}

@@ -10,7 +10,6 @@ tags:
   - Reference
   - URL API
 translation_of: Web/API/HTMLHyperlinkElementUtils/origin
-original_slug: Web/API/HTMLHyperlinkElementUtils/origin
 ---
 
 {{APIRef("URL API")}}

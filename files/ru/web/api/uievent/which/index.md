@@ -8,7 +8,6 @@ tags:
   - Property
   - Reference
 translation_of: Web/API/KeyboardEvent/which
-original_slug: Web/API/KeyboardEvent/which
 ---
 
 {{APIRef ("События DOM")}} {{Deprecated_header}}

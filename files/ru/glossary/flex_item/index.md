@@ -6,7 +6,6 @@ tags:
   - флекс-элемент
   - флексбокс
 translation_of: Glossary/Flex_Item
-original_slug: Глоссарий/Flex_Item
 ---
 
 Непосредственные дочерние элементы {{glossary("флекс-контейнера")}} (элемент для которого установлено `display: flex` или `display: inline-flex`) становятся **флекс-элементами**.

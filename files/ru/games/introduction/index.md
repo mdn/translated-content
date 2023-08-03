@@ -6,7 +6,6 @@ tags:
   - Игры
   - уроки
 translation_of: Games/Introduction
-original_slug: Games/Ввод
 ---
 
 {{GamesSidebar}}

@@ -10,7 +10,6 @@ tags:
   - домен
   - протокол
 translation_of: Learn/Common_questions/What_is_a_URL
-original_slug: Learn/Common_questions/What_is_a_URL
 ---
 
 Данная статья описывает Единый локатор ресурсов или Uniform Resource Locators (URLs), объясняет, что это такое, и описывает его структуру.

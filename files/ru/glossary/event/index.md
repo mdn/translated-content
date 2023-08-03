@@ -6,7 +6,6 @@ tags:
   - Глоссарий
   - события
 translation_of: Glossary/event
-original_slug: Глоссарий/event
 ---
 
 События - это сгенерированные [DOM](/ru/docs/Glossary/DOM)-элементами свойства, которыми можно манипулировать с помощью Javascript-кода.

@@ -6,7 +6,6 @@ tags:
   - Наследование
   - ООП
 translation_of: Learn/JavaScript/Objects/Inheritance
-original_slug: Learn/JavaScript/Objects/Inheritance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}

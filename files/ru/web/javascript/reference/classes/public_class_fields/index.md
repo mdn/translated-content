@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - Возможности языка
 translation_of: Web/JavaScript/Reference/Classes/Public_class_fields
-original_slug: Web/JavaScript/Reference/Classes/Class_fields
 ---
 {{JsSidebar("Classes")}}
 

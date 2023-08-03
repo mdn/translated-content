@@ -9,7 +9,6 @@ tags:
   - Reference
 translation_of: Web/API/DocumentOrShadowRoot/activeElement
 translation_of_original: Web/API/Document/activeElement
-original_slug: Web/API/DocumentOrShadowRoot/activeElement
 ---
 
 {{ ApiRef() }}

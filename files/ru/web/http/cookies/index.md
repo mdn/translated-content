@@ -4,7 +4,6 @@ slug: Web/HTTP/Cookies
 tags:
   - Куки
 translation_of: Web/HTTP/Cookies
-original_slug: Web/HTTP/Куки
 ---
 
 {{HTTPSidebar}}

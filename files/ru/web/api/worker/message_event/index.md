@@ -2,7 +2,6 @@
 title: Worker.onmessage
 slug: Web/API/Worker/message_event
 translation_of: Web/API/Worker/onmessage
-original_slug: Web/API/Worker/onmessage
 ---
 
 {{APIRef("Web Workers API")}}

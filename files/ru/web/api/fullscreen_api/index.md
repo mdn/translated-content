@@ -2,7 +2,6 @@
 title: Fullscreen API
 slug: Web/API/Fullscreen_API
 translation_of: Web/API/Fullscreen_API
-original_slug: DOM/Using_fullscreen_mode
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}

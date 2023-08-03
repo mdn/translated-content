@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.onconnectionstatechange
 slug: Web/API/RTCPeerConnection/connectionstatechange_event
-original_slug: Web/API/RTCPeerConnection/onconnectionstatechange
 ---
 
 {{APIRef("WebRTC")}}

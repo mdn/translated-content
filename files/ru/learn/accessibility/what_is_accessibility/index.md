@@ -15,7 +15,6 @@ tags:
   - вспомогательная технология
   - доступность
 translation_of: Learn/Accessibility/What_is_accessibility
-original_slug: Learn/Доступность/What_is_accessibility
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}

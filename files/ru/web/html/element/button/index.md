@@ -8,7 +8,6 @@ tags:
   - Средний уровень
   - Формы
 translation_of: Web/HTML/Element/button
-original_slug: Web/HTML/Element/кнопка
 ---
 
 ## Описание

@@ -8,7 +8,6 @@ tags:
   - Показать страницу
   - Скрыть страницу
 translation_of: Web/API/Page_Visibility_API
-original_slug: Web/API/Видимость_страницы_API
 ---
 
 {{DefaultAPISidebar("Page Visibility API")}}

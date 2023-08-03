@@ -7,7 +7,6 @@ tags:
   - Начинающий
   - доступность
 translation_of: Learn/Common_questions/Design_for_all_types_of_users
-original_slug: Learn/Common_questions/Design_for_all_types_of_users
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

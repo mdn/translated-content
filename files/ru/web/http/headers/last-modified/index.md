@@ -7,7 +7,6 @@ tags:
   - Reference
   - Response Header
 translation_of: Web/HTTP/Headers/Last-Modified
-original_slug: Web/HTTP/Заголовки/Last-Modified
 ---
 {{HTTPSidebar}}
 

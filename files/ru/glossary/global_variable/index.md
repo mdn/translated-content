@@ -4,7 +4,6 @@ slug: Glossary/Global_variable
 tags:
   - Глоссарий
 translation_of: Glossary/Global_variable
-original_slug: Глоссарий/global_variable
 ---
 
 Глобальная переменная это переменная, которая была объявлена в глобальной области видимости. Иначе говоря, переменная, доступ к которой, можно получить со всех других областей видимости.

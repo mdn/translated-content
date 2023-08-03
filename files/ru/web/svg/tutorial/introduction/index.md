@@ -5,7 +5,6 @@ tags:
   - SVG
   - Руководство
 translation_of: Web/SVG/Tutorial/Introduction
-original_slug: Web/SVG/Tutorial/Введение
 ---
 
 {{ PreviousNext("Web/SVG/Руководство", "Web/SVG/Руководство/Введение") }}

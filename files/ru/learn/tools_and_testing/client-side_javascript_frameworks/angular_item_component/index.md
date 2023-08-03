@@ -2,8 +2,6 @@
 title: Создание компонента элемента (item component)
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
-original_slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
 translation_of: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
 tags:

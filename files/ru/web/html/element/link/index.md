@@ -7,7 +7,6 @@ tags:
   - метаданные
   - предзагрузка
 translation_of: Web/HTML/Element/link
-original_slug: Web/HTML/Element/ссылка
 ---
 {{HTMLSidebar}}
 

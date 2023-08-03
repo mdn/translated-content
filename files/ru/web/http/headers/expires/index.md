@@ -7,7 +7,6 @@ tags:
   - Кеширование
   - Ответ сервера
 translation_of: Web/HTTP/Headers/Expires
-original_slug: Web/HTTP/Заголовки/Expires
 ---
 {{HTTPSidebar}}
 

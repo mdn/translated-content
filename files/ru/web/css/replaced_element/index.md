@@ -6,7 +6,6 @@ tags:
   - Reference
   - замещаемый элемент
 translation_of: Web/CSS/Replaced_element
-original_slug: Web/CSS/Замещаемый_элемент
 ---
 
 {{CSSRef}}

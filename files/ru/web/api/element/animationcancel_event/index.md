@@ -2,7 +2,6 @@
 title: GlobalEventHandlers.onanimationcancel
 slug: Web/API/Element/animationcancel_event
 translation_of: Web/API/GlobalEventHandlers/onanimationcancel
-original_slug: Web/API/GlobalEventHandlers/onanimationcancel
 ---
 
 {{APIRef("CSS3 Animations")}}

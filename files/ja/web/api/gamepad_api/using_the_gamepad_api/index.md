@@ -1,7 +1,6 @@
 ---
 title: ゲームパッド API の使用
 slug: Web/API/Gamepad_API/Using_the_Gamepad_API
-original_slug: Web/Guide/API/Gamepad
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---

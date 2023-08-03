@@ -7,7 +7,6 @@ tags:
   - Глоссарий
   - КодингСкриптинг
 translation_of: Glossary/IIFE
-original_slug: Глоссарий/IIFE
 ---
 
 **IIFE** (Immediately Invoked Function Expression) это {{glossary("JavaScript")}} {{glossary("функция")}}, которая выполняется сразу же после того, как она была определена.

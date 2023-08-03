@@ -6,7 +6,6 @@ tags:
   - HTTP Заголовок
   - заголовок ответа
 translation_of: Web/HTTP/Headers/Accept-Ranges
-original_slug: Web/HTTP/Заголовки/Accept-Ranges
 ---
 {{HTTPSidebar}}
 

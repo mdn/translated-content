@@ -7,7 +7,6 @@ tags:
   - Заголовок
   - заголовок запроса
 translation_of: Web/HTTP/Headers/Authorization
-original_slug: Web/HTTP/Заголовки/Authorization
 ---
 
 {{HTTPSidebar}}

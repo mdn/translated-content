@@ -6,7 +6,6 @@ tags:
   - Тень
   - инструменты
 translation_of: Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
-original_slug: Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
 ---
 
 Этот инструмент позволяет вам создавать CSS {{cssxref("box-shadow")}} эффекты, добавлять тени вашим элементам.

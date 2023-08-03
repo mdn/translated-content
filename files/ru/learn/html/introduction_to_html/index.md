@@ -14,7 +14,6 @@ tags:
   - Структура
   - Текст
 translation_of: Learn/HTML/Introduction_to_HTML
-original_slug: Learn/HTML/Введение_в_HTML
 ---
 
 {{LearnSidebar}}

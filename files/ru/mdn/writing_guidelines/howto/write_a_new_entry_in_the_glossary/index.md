@@ -11,7 +11,6 @@ tags:
   - Словарная статья
   - Термин
 translation_of: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
-original_slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 ---
 
 {{MDNSidebar}}

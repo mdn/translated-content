@@ -5,7 +5,6 @@ tags:
   - Glossary
   - HTTP
 translation_of: Glossary/safe
-original_slug: Глоссарий/safe
 ---
 
 Метод HTTP является **безопасным**, если он не меняет состояние сервера. Другими словами, безопасный метод проводит операции "только чтение" (read-only). Несколько следующих методов HTTP безопасные: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}} или {{HTTPMethod("OPTIONS")}}. Все безопасные методы являются также {{glossary("idempotent", "идемпотентными")}}, как и некоторые другие, но при этом небезопасные, такие как {{HTTPMethod("PUT")}} или {{HTTPMethod("DELETE")}}.

@@ -2,7 +2,6 @@
 title: Переменные - место хранения необходимой информации
 slug: Learn/JavaScript/First_steps/Variables
 translation_of: Learn/JavaScript/First_steps/Variables
-original_slug: Learn/JavaScript/Первые_шаги/Variables
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Что_пошло_не_так", "Learn/JavaScript/Первые_шаги/Math", "Learn/JavaScript/Первые_шаги")}}

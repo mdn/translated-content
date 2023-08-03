@@ -5,7 +5,6 @@ tags:
   - DOM
   - JavaScript
 translation_of: Web/API/Document/images
-original_slug: DOM/document.images
 ---
 
 {{ ApiRef() }}

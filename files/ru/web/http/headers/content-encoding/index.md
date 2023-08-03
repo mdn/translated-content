@@ -6,7 +6,6 @@ tags:
   - HTTP
   - Headers
 translation_of: Web/HTTP/Headers/Content-Encoding
-original_slug: Web/HTTP/Заголовки/Content-Encoding
 ---
 
 {{HTTPSidebar}}

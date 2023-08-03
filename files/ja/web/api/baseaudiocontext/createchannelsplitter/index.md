@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createChannelSplitter()
 slug: Web/API/BaseAudioContext/createChannelSplitter
-original_slug: Web/API/AudioContext/createChannelSplitter
 ---
 
 {{ APIRef("Web Audio API") }}

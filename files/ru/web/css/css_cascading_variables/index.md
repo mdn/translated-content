@@ -9,7 +9,6 @@ tags:
   - Overview
   - Reference
 translation_of: Web/CSS/CSS_Variables
-original_slug: Web/CSS/CSS_Variables
 ---
 
 {{CSSRef}}

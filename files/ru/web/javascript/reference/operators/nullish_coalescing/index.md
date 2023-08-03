@@ -7,7 +7,6 @@ tags:
   - Operator
   - Reference
   - nullish coalescing
-original_slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 browser-compat: javascript.operators.nullish_coalescing
 ---
 

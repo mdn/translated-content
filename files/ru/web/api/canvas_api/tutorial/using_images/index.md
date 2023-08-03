@@ -4,7 +4,6 @@ slug: Web/API/Canvas_API/Tutorial/Using_images
 tags:
   - Графика
 translation_of: Web/API/Canvas_API/Tutorial/Using_images
-original_slug: Web/API/Canvas_API/Tutorial/Использование_изображений
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Трансформации")}}

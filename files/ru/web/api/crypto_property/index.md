@@ -7,7 +7,6 @@ tags:
   - Нужны примеры
   - Совместимость
 translation_of: Web/API/Window/crypto
-original_slug: Web/API/Window/crypto
 ---
 
 {{APIRef}}

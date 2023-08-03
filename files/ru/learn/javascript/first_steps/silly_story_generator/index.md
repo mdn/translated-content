@@ -14,7 +14,6 @@ tags:
   - Проверка
   - Числа
 translation_of: Learn/JavaScript/First_steps/Silly_story_generator
-original_slug: Learn/JavaScript/Первые_шаги/Создатель_глупых_историй
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Первые_шаги/Arrays", "Learn/JavaScript/Первые_шаги")}}

@@ -5,7 +5,6 @@ tags:
   - воркер
   - поток
 translation_of: Web/API/Web_Workers_API/Using_web_workers
-original_slug: DOM/Using_web_workers
 ---
 
 {{DefaultAPISidebar("Web Workers API")}}

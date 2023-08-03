@@ -1,7 +1,6 @@
 ---
 title: WindowEventHandlers.onstorage
 slug: Web/API/Window/storage_event
-original_slug: Web/API/WindowEventHandlers/onstorage
 ---
 
 {{ ApiRef() }}

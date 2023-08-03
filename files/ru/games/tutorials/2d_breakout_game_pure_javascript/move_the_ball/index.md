@@ -10,7 +10,6 @@ tags:
   - передвижение
   - пишем игру на javascript
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Переместить_мяч
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создание_Canvas_и_рисование_на_нём", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}

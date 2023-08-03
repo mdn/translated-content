@@ -5,7 +5,6 @@ tags:
   - SVG
   - SVG:Руководство
 translation_of: Web/SVG/Tutorial/Basic_Shapes
-original_slug: Web/SVG/Tutorial/Основные_Фигуры
 ---
 
 {{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}

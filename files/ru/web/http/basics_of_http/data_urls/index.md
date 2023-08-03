@@ -2,7 +2,6 @@
 title: Data URL
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
 translation_of: Web/HTTP/Basics_of_HTTP/Data_URIs
-original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
 
 {{HTTPSidebar}}

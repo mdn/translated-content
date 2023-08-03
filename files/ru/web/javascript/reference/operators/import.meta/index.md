@@ -4,7 +4,6 @@ slug: Web/JavaScript/Reference/Operators/import.meta
 tags:
   - Модули
 translation_of: Web/JavaScript/Reference/Statements/import.meta
-original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
 
 {{JSSidebar("Statements")}}

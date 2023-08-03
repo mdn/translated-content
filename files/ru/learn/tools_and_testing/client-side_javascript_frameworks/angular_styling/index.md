@@ -1,7 +1,6 @@
 ---
 title: Стилизация вашего Angular-приложения
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling
 translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling
 tags:
   - Новички

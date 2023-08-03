@@ -6,7 +6,6 @@ tags:
   - заголовок запроса
   - оригинальный адрес
 translation_of: Web/HTTP/Headers/X-Forwarded-For
-original_slug: Web/HTTP/Заголовки/X-Forwarded-For
 ---
 
 {{HTTPSidebar}}

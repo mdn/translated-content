@@ -4,7 +4,6 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 tags:
   - канвас
 translation_of: Web/API/Canvas_API/Tutorial/Compositing
-original_slug: Web/API/Canvas_API/Tutorial/Композиции
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

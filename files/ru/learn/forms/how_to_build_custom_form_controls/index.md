@@ -9,7 +9,6 @@ tags:
   - Руководство
   - Формы
 translation_of: Learn/Forms/How_to_build_custom_form_controls
-original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 ---
 
 {{LearnSidebar}}

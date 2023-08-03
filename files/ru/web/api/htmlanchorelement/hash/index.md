@@ -8,7 +8,6 @@ tags:
   - Property
   - URL API
 translation_of: Web/API/HTMLHyperlinkElementUtils/hash
-original_slug: Web/API/HTMLHyperlinkElementUtils/hash
 ---
 
 {{ APIRef("URLUtils") }}

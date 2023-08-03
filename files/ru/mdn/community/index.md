@@ -6,7 +6,6 @@ tags:
   - Сообщество
   - Чат
 translation_of: MDN/Contribute/Feedback
-original_slug: MDN/Contribute/Feedback
 ---
 
 {{MDNSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: 컨테이닝 블록의 모든 것
 slug: Web/CSS/Containing_block
-original_slug: Web/CSS/All_About_The_Containing_Block
 ---
 
 {{cssref}}

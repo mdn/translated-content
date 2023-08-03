@@ -2,7 +2,6 @@
 title: Анатомия видеоигры
 slug: Games/Anatomy
 translation_of: Games/Anatomy
-original_slug: Games/Анатомия
 ---
 
 {{GamesSidebar}}

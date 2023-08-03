@@ -2,7 +2,6 @@
 title: focusin
 slug: Web/API/Element/focusin_event
 translation_of: Web/API/Element/focusin_event
-original_slug: Web/Events/focusin
 ---
 
 Событие focusin срабатывает, когда элемент получает фокус. Главное отличие от `focus` в том, что последний не всплывает.

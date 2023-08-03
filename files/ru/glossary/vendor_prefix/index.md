@@ -2,7 +2,6 @@
 title: Vendor Prefix
 slug: Glossary/Vendor_Prefix
 translation_of: Glossary/Vendor_Prefix
-original_slug: Глоссарий/Vendor_Prefix
 ---
 
 Browser vendors sometimes add prefixes to experimental or nonstandard CSS properties and JavaScript APIs, so developers can experiment with new ideas while—in theory—preventing their experiments from being relied upon and then breaking web developers' code during the standardization process. Developers should wait to include the unprefixed property until browser behavior is standardized.

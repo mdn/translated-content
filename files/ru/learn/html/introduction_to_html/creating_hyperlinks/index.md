@@ -13,7 +13,6 @@ tags:
   - Ссылки
   - Язык гипертекстовой разметки
 translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперссылок
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}

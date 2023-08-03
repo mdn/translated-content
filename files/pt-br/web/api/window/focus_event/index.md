@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onfocus
 slug: Web/API/Window/focus_event
-original_slug: Web/API/GlobalEventHandlers/onfocus
 ---
 
 {{ApiRef("HTML DOM")}}

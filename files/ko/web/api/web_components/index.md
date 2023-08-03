@@ -1,7 +1,6 @@
 ---
 title: 웹 컴포넌트
 slug: Web/API/Web_components
-original_slug: Web/Web_Components
 ---
 
 {{DefaultAPISidebar("Web Components")}}

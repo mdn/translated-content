@@ -12,7 +12,6 @@ tags:
   - Variables
   - var
   - var()
-original_slug: Web/CSS/var()
 browser-compat: css.properties.custom-property.var
 ---
 
