@@ -1,7 +1,6 @@
 ---
 title: <stop>
 slug: Web/SVG/Element/stop
-translation_of: Web/SVG/Element/stop
 ---
 
 {{SVGRef}}

@@ -1,7 +1,6 @@
 ---
 title: Document.querySelectorAll()
 slug: Web/API/Document/querySelectorAll
-translation_of: Web/API/Document/querySelectorAll
 ---
 
 {{APIRef("DOM")}}

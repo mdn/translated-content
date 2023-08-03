@@ -1,8 +1,8 @@
 ---
 title: Introduction to using XPath in JavaScript
 slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
-original_slug: Introduction_to_using_XPath_in_JavaScript
 ---
+
 이 문서는 JavaScript 안, 확장기능, 웹사이트에서 [XPath](/ko/XPath)를 사용하기 위한 인터페이스를 설명합니다. Mozilla는 [DOM 3 XPath](http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html)를 상당량 구현합니다. 이것은 XPath 식이 HTML과 XML 문서 모두에서 잘 돌아간다는 것을 뜻합니다.
 
 XPath를 사용하는 주 인터페이스는 [document](/ko/DOM/document) 개체의 [evaluate](/ko/DOM/document.evaluate) 함수입니다.
@@ -32,6 +32,7 @@ var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceReso
   - [`XPathEvaluator`](http://www.xulplanet.com/references/objref/XPathEvaluator.html) 개체의 [`createNSResolver`](/ko/DOM/document.createNSResolver) 메소드를 써서 [만듭니다](#Implementing_a_Default_Namespace_Resolver). 항상 가상으로 이를 쓰면 좋습니다.
   - HTML 문서를 위해서나 namespace 접두사가 없을 때 쓸 수 있는 `null`. 만약 `xpathExpression`가 namespace 접두사를 포함하면 이는 `NAMESPACE_ERR` 코드를 내는 `DOMException`을 가져옴을 유의하세요.
   - 사용자 정의 맞춤(custom) 함수. 세부 내용은 부록의 [사용자 정의 Namespace Resolver 쓰기](#Implementing_a_User_Defined_Namespace_Resolver) 절을 보세요.
+
 - `resultType`: 평가 결과로 반환되기 바랐던 결과 형을 지정하는 [상수](#XPathResult_Defined_Constants). 가장 흔히 넘겨주는 상수는 가장 자연스러운 형으로 XPath 식의 결과를 반환하는 `XPathResult.ANY_TYPE`입니다. 부록에 [쓸 수 있는 상수](#XPathResult_Defined_Constants) 목록 전체를 포함하는 절이 있습니다. 아래 [반환형 지정](#Specifying_the_Return_Type) 절에서 설명합니다.
 - `result`: 결과를 반환하는 데 재사용하는 기존 `XPathResult` 개체나 새 `XPathResult` 개체를 만드는 데 쓸 수 있는 `null` 가운데 하나.
 
@@ -50,10 +51,12 @@ var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? 
 Or alternatively by using the `createNSResolver` method of a `XPathEvaluator` object.
 
 ```js
-var xpEvaluator = new XPathEvaluator(); 
-var nsResolver = xpEvaluator.createNSResolver( 
-  contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement 
-  ); 
+var xpEvaluator = new XPathEvaluator();
+var nsResolver = xpEvaluator.createNSResolver(
+  contextNode.ownerDocument == null
+    ? contextNode.documentElement
+    : contextNode.ownerDocument.documentElement,
+);
 ```
 
 그리고 나서 `document.evaluate` 함수에 `namespaceResolver` 매개변수로 `nsResolver` 변수를 넘겨줍니다.
@@ -122,18 +125,23 @@ alert( 'This document contains ' + paragraphCount.stringValue + ' paragraph elem
 ###### 반복자 예
 
 ```js
-var iterator = document.evaluate('//phoneNumber', documentNode, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null );
+var iterator = document.evaluate(
+  "//phoneNumber",
+  documentNode,
+  null,
+  XPathResult.UNORDERED_NODE_ITERATOR_TYPE,
+  null,
+);
 
 try {
   var thisNode = iterator.iterateNext();
 
   while (thisNode) {
-    alert( thisNode.textContent );
+    alert(thisNode.textContent);
     thisNode = iterator.iterateNext();
   }
-}
-catch (e) {
-  dump( 'Error: Document tree modified during iteraton ' + e );
+} catch (e) {
+  dump("Error: Document tree modified during iteraton " + e);
 }
 ```
 
@@ -151,11 +159,16 @@ Snapshot은 변환 문서로 바꾸지 않습니다. 그래서 반복자와는 �
 ###### Snapshot 예
 
 ```js
-var nodesSnapshot = document.evaluate('//phoneNumber', documentNode, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+var nodesSnapshot = document.evaluate(
+  "//phoneNumber",
+  documentNode,
+  null,
+  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+  null,
+);
 
-for ( var i=0 ; i < nodesSnapshot.snapshotLength; i++ )
-{
-  dump( nodesSnapshot.snapshotItem(i).textContent );
+for (var i = 0; i < nodesSnapshot.snapshotLength; i++) {
+  dump(nodesSnapshot.snapshotItem(i).textContent);
 }
 ```
 
@@ -173,9 +186,18 @@ for ( var i=0 ; i < nodesSnapshot.snapshotLength; i++ )
 ###### First Node 예
 
 ```js
-var firstPhoneNumber = document.evaluate('//phoneNumber', documentNode, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null );
+var firstPhoneNumber = document.evaluate(
+  "//phoneNumber",
+  documentNode,
+  null,
+  XPathResult.FIRST_ORDERED_NODE_TYPE,
+  null,
+);
 
-dump( 'The first phone number found is ' + firstPhoneNumber.singleNodeValue.textContent );
+dump(
+  "The first phone number found is " +
+    firstPhoneNumber.singleNodeValue.textContent,
+);
 ```
 
 #### ANY_TYPE 상수
@@ -209,10 +231,10 @@ HTML이 namespace가 없기 때문에, 우리는 `namespaceResolver` 매개변�
 ```js
 var thisHeading = headings.iterateNext();
 
-var alertText = 'Level 2 headings in this document are:\n'
+var alertText = "Level 2 headings in this document are:\n";
 
 while (thisHeading) {
-  alertText += thisHeading.textContent + '\n';
+  alertText += thisHeading.textContent + "\n";
   thisHeading = headings.iterateNext();
 }
 ```
@@ -251,9 +273,19 @@ req.send(null);
 
 var xmlDoc = req.responseXML;
 
-var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
+var nsResolver = xmlDoc.createNSResolver(
+  xmlDoc.ownerDocument == null
+    ? xmlDoc.documentElement
+    : xmlDoc.ownerDocument.documentElement,
+);
 
-var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult.ANY_TYPE, null );
+var personIterator = xmlDoc.evaluate(
+  "//person",
+  xmlDoc,
+  nsResolver,
+  XPathResult.ANY_TYPE,
+  null,
+);
 ```
 
 ## 부록
@@ -273,8 +305,8 @@ var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult
 ```js
 function nsResolver(prefix) {
   var ns = {
-    'xhtml' : 'http://www.w3.org/1999/xhtml',
-    'mathml': 'http://www.w3.org/1998/Math/MathML'
+    xhtml: "http://www.w3.org/1999/xhtml",
+    mathml: "http://www.w3.org/1998/Math/MathML",
   };
   return ns[prefix] || null;
 }
@@ -283,7 +315,13 @@ function nsResolver(prefix) {
 그러면 `document.evaluate` 호출은 다음과 같습니다.
 
 ```js
-document.evaluate( '//xhtml:td/mathml:math', document, nsResolver, XPathResult.ANY_TYPE, null );
+document.evaluate(
+  "//xhtml:td/mathml:math",
+  document,
+  nsResolver,
+  XPathResult.ANY_TYPE,
+  null,
+);
 ```
 
 #### XPathResult 정의 상수

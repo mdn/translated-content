@@ -1,7 +1,6 @@
 ---
 title: HTMLInputElement.checkValidity()
 slug: Web/API/HTMLInputElement/checkValidity
-translation_of: Web/API/HTMLInputElement/checkValidity
 ---
 
 {{APIRef("HTML DOM")}}

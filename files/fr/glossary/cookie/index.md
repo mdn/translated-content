@@ -1,7 +1,6 @@
 ---
 title: Cookie
 slug: Glossary/Cookie
-translation_of: Glossary/Cookie
 ---
 
 Un cookie est un petit bout d'information laissé via le navigateur web par un site web sur l'ordinateur du visiteur.

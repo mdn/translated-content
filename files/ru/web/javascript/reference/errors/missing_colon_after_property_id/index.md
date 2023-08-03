@@ -1,7 +1,6 @@
 ---
-title: 'SyntaxError: missing : after property id'
+title: "SyntaxError: missing : after property id"
 slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
-translation_of: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 ---
 
 {{jsSidebar("Errors")}}

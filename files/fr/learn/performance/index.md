@@ -1,7 +1,6 @@
 ---
 title: Performance Web
 slug: Learn/Performance
-translation_of: Learn/Performance
 ---
 
 {{LearnSidebar}}

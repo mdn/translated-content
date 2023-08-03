@@ -1,7 +1,6 @@
 ---
 title: suffix
 slug: Web/CSS/@counter-style/suffix
-translation_of: Web/CSS/@counter-style/suffix
 ---
 
 {{CSSRef}}

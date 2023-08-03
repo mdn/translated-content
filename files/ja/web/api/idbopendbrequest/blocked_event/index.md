@@ -1,5 +1,5 @@
 ---
-title: 'IDBOpenDBRequest: blocked イベント'
+title: "IDBOpenDBRequest: blocked イベント"
 slug: Web/API/IDBOpenDBRequest/blocked_event
 l10n:
   sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b

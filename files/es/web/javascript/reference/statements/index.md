@@ -1,7 +1,6 @@
 ---
 title: Sentencias
 slug: Web/JavaScript/Reference/Statements
-original_slug: Web/JavaScript/Referencia/Sentencias
 ---
 
 {{jsSidebar("Statements")}}

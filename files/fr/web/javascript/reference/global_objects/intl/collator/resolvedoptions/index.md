@@ -1,7 +1,6 @@
 ---
 title: Intl.Collator.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 ---
 
 {{JSRef}}

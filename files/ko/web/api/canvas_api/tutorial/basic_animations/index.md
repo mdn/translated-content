@@ -1,7 +1,6 @@
 ---
 title: 기본 애니메이션
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
-original_slug: Web/HTML/Canvas/Tutorial/Basic_animations
 ---
 
 {{HTMLElement("canvas")}} 요소는 자바스크립트로 제어하는 것이므로, 애니메이션도 쉽게 만들 수 있습니다. 복잡한 애니메이션을 만드는 것은 추가 작업이 더 필요하고, 앞으로 그에 대한 페이지도 머지 않아 추가되기를 기대합니다.
@@ -13,13 +12,13 @@ original_slug: Web/HTML/Canvas/Tutorial/Basic_animations
 한 장면을 그리려면 아래와 같은 단계를 밟습니다.
 
 1. **캔버스를 비웁니다.**
-    그리려는 도형이 (배경 이미지를 만들 때처럼) 캔버스를 가득 채우는 것이 아니라면, 이전에 그려진 모든 도형을 지울 필요가 있습니다. 가장 쉬운 방법은 `clearRect()` 메소드를 사용하는 것입니다.
+   그리려는 도형이 (배경 이미지를 만들 때처럼) 캔버스를 가득 채우는 것이 아니라면, 이전에 그려진 모든 도형을 지울 필요가 있습니다. 가장 쉬운 방법은 `clearRect()` 메소드를 사용하는 것입니다.
 2. **캔버스 상태를 저장합니다.**
-    캔버스 상태에 영향을 주는 (스타일 변경, 모양 변형 등의) 설정값을 바꾸려고 하고, 바뀐 값을 각 장면마다 사용하려고 한다면, 원래 상태를 저장할 필요가 있습니다.
+   캔버스 상태에 영향을 주는 (스타일 변경, 모양 변형 등의) 설정값을 바꾸려고 하고, 바뀐 값을 각 장면마다 사용하려고 한다면, 원래 상태를 저장할 필요가 있습니다.
 3. **애니메이션할 도형을 그립니다.**
-    실제 장면을 그리는 단계입니다.
+   실제 장면을 그리는 단계입니다.
 4. **캔버스 상태를 복원합니다.**
-    새로운 장면을 그리기 전에 저장된 상태를 복원합니다.
+   새로운 장면을 그리기 전에 저장된 상태를 복원합니다.
 
 ## 애니메이션 제어하기
 
@@ -66,45 +65,51 @@ var myAnimation = new Daemon(null, animateShape, 500, Infinity);
 var sun = new Image();
 var moon = new Image();
 var earth = new Image();
-function init(){
-  sun.src = 'canvas_sun.png';
-  moon.src = 'canvas_moon.png';
-  earth.src = 'canvas_earth.png';
-  setInterval(draw,100);
+function init() {
+  sun.src = "canvas_sun.png";
+  moon.src = "canvas_moon.png";
+  earth.src = "canvas_earth.png";
+  setInterval(draw, 100);
 }
 
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
-  ctx.globalCompositeOperation = 'destination-over';
-  ctx.clearRect(0,0,300,300); // 캔버스를 비운다
+  ctx.globalCompositeOperation = "destination-over";
+  ctx.clearRect(0, 0, 300, 300); // 캔버스를 비운다
 
-  ctx.fillStyle = 'rgba(0,0,0,0.4)';
-  ctx.strokeStyle = 'rgba(0,153,255,0.4)';
+  ctx.fillStyle = "rgba(0,0,0,0.4)";
+  ctx.strokeStyle = "rgba(0,153,255,0.4)";
   ctx.save();
-  ctx.translate(150,150);
+  ctx.translate(150, 150);
 
   // 지구
   var time = new Date();
-  ctx.rotate( ((2*Math.PI)/60)*time.getSeconds() + ((2*Math.PI)/60000)*time.getMilliseconds() );
-  ctx.translate(105,0);
-  ctx.fillRect(0,-12,50,24); // Shadow
-  ctx.drawImage(earth,-12,-12);
+  ctx.rotate(
+    ((2 * Math.PI) / 60) * time.getSeconds() +
+      ((2 * Math.PI) / 60000) * time.getMilliseconds(),
+  );
+  ctx.translate(105, 0);
+  ctx.fillRect(0, -12, 50, 24); // Shadow
+  ctx.drawImage(earth, -12, -12);
 
   // 달
   ctx.save();
-  ctx.rotate( ((2*Math.PI)/6)*time.getSeconds() + ((2*Math.PI)/6000)*time.getMilliseconds() );
-  ctx.translate(0,28.5);
-  ctx.drawImage(moon,-3.5,-3.5);
+  ctx.rotate(
+    ((2 * Math.PI) / 6) * time.getSeconds() +
+      ((2 * Math.PI) / 6000) * time.getMilliseconds(),
+  );
+  ctx.translate(0, 28.5);
+  ctx.drawImage(moon, -3.5, -3.5);
   ctx.restore();
 
   ctx.restore();
 
   ctx.beginPath();
-  ctx.arc(150,150,105,0,Math.PI*2,false); // 지구 궤도
+  ctx.arc(150, 150, 105, 0, Math.PI * 2, false); // 지구 궤도
   ctx.stroke();
 
-  ctx.drawImage(sun,0,0,300,300);
+  ctx.drawImage(sun, 0, 0, 300, 300);
 }
 ```
 
@@ -123,19 +128,19 @@ init();
 이 예제에서는, 현재 시각을 보여주는 움직이는 시계를 만듭니다.
 
 ```js
-function init(){
+function init() {
   clock();
-  setInterval(clock,1000);
+  setInterval(clock, 1000);
 }
 
-function clock(){
+function clock() {
   var now = new Date();
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.save();
-  ctx.clearRect(0,0,150,150);
-  ctx.translate(75,75);
-  ctx.scale(0.4,0.4);
-  ctx.rotate(-Math.PI/2);
+  ctx.clearRect(0, 0, 150, 150);
+  ctx.translate(75, 75);
+  ctx.scale(0.4, 0.4);
+  ctx.rotate(-Math.PI / 2);
   ctx.strokeStyle = "black";
   ctx.fillStyle = "white";
   ctx.lineWidth = 8;
@@ -143,11 +148,11 @@ function clock(){
 
   // 시계판 - 시
   ctx.save();
-  for (var i=0;i<12;i++){
+  for (var i = 0; i < 12; i++) {
     ctx.beginPath();
-    ctx.rotate(Math.PI/6);
-    ctx.moveTo(100,0);
-    ctx.lineTo(120,0);
+    ctx.rotate(Math.PI / 6);
+    ctx.moveTo(100, 0);
+    ctx.lineTo(120, 0);
     ctx.stroke();
   }
   ctx.restore();
@@ -155,69 +160,71 @@ function clock(){
   // 시계판 - 분
   ctx.save();
   ctx.lineWidth = 5;
-  for (i=0;i<60;i++){
-    if (i%5!=0) {
+  for (i = 0; i < 60; i++) {
+    if (i % 5 != 0) {
       ctx.beginPath();
-      ctx.moveTo(117,0);
-      ctx.lineTo(120,0);
+      ctx.moveTo(117, 0);
+      ctx.lineTo(120, 0);
       ctx.stroke();
     }
-    ctx.rotate(Math.PI/30);
+    ctx.rotate(Math.PI / 30);
   }
   ctx.restore();
 
   var sec = now.getSeconds();
   var min = now.getMinutes();
-  var hr  = now.getHours();
-  hr = hr>=12 ? hr-12 : hr;
+  var hr = now.getHours();
+  hr = hr >= 12 ? hr - 12 : hr;
 
   ctx.fillStyle = "black";
 
   // 시간 표시 - 시
   ctx.save();
-  ctx.rotate( hr*(Math.PI/6) + (Math.PI/360)*min + (Math.PI/21600)*sec )
+  ctx.rotate(
+    hr * (Math.PI / 6) + (Math.PI / 360) * min + (Math.PI / 21600) * sec,
+  );
   ctx.lineWidth = 14;
   ctx.beginPath();
-  ctx.moveTo(-20,0);
-  ctx.lineTo(80,0);
+  ctx.moveTo(-20, 0);
+  ctx.lineTo(80, 0);
   ctx.stroke();
   ctx.restore();
 
   // 시간 표시 - 분
   ctx.save();
-  ctx.rotate( (Math.PI/30)*min + (Math.PI/1800)*sec )
+  ctx.rotate((Math.PI / 30) * min + (Math.PI / 1800) * sec);
   ctx.lineWidth = 10;
   ctx.beginPath();
-  ctx.moveTo(-28,0);
-  ctx.lineTo(112,0);
+  ctx.moveTo(-28, 0);
+  ctx.lineTo(112, 0);
   ctx.stroke();
   ctx.restore();
 
   // 시간 표시 - 초
   ctx.save();
-  ctx.rotate(sec * Math.PI/30);
+  ctx.rotate((sec * Math.PI) / 30);
   ctx.strokeStyle = "#D40000";
   ctx.fillStyle = "#D40000";
   ctx.lineWidth = 6;
   ctx.beginPath();
-  ctx.moveTo(-30,0);
-  ctx.lineTo(83,0);
+  ctx.moveTo(-30, 0);
+  ctx.lineTo(83, 0);
   ctx.stroke();
   ctx.beginPath();
-  ctx.arc(0,0,10,0,Math.PI*2,true);
+  ctx.arc(0, 0, 10, 0, Math.PI * 2, true);
   ctx.fill();
   ctx.beginPath();
-  ctx.arc(95,0,10,0,Math.PI*2,true);
+  ctx.arc(95, 0, 10, 0, Math.PI * 2, true);
   ctx.stroke();
   ctx.fillStyle = "rgba(0,0,0,0)";
-  ctx.arc(0,0,3,0,Math.PI*2,true);
+  ctx.arc(0, 0, 3, 0, Math.PI * 2, true);
   ctx.fill();
   ctx.restore();
 
   ctx.beginPath();
   ctx.lineWidth = 14;
-  ctx.strokeStyle = '#325FA2';
-  ctx.arc(0,0,142,0,Math.PI*2,true);
+  ctx.strokeStyle = "#325FA2";
+  ctx.arc(0, 0, 142, 0, Math.PI * 2, true);
   ctx.stroke();
 
   ctx.restore();
@@ -244,7 +251,7 @@ var img = new Image();
 // 변수
 // 스크롤될 이미지, 방향, 속도를 바꾸려면 변수값을 바꾼다.
 
-img.src = 'capitan_meadows,_yosemite_national_park.jpg';
+img.src = "capitan_meadows,_yosemite_national_park.jpg";
 var CanvasXSize = 800;
 var CanvasYSize = 200;
 var speed = 30; // 값이 작을 수록 빨라진다
@@ -261,41 +268,59 @@ var clearX;
 var clearY;
 var ctx;
 
-img.onload = function() {
-    imgW = img.width*scale;
-    imgH = img.height*scale;
-    if (imgW > CanvasXSize) { x = CanvasXSize-imgW; } // 캔버스보다 큰 이미지
-    if (imgW > CanvasXSize) { clearX = imgW; } // 캔버스보다 큰 이미지
-    else { clearX = CanvasXSize; }
-    if (imgH > CanvasYSize) { clearY = imgH; } // 캔버스보다 큰 이미지
-    else { clearY = CanvasYSize; }
-    // 캔버스 요소 얻기
-    ctx = document.getElementById('canvas').getContext('2d');
-    // 새로 그리기 속도 설정
-    return setInterval(draw, speed);
-}
+img.onload = function () {
+  imgW = img.width * scale;
+  imgH = img.height * scale;
+  if (imgW > CanvasXSize) {
+    x = CanvasXSize - imgW;
+  } // 캔버스보다 큰 이미지
+  if (imgW > CanvasXSize) {
+    clearX = imgW;
+  } // 캔버스보다 큰 이미지
+  else {
+    clearX = CanvasXSize;
+  }
+  if (imgH > CanvasYSize) {
+    clearY = imgH;
+  } // 캔버스보다 큰 이미지
+  else {
+    clearY = CanvasYSize;
+  }
+  // 캔버스 요소 얻기
+  ctx = document.getElementById("canvas").getContext("2d");
+  // 새로 그리기 속도 설정
+  return setInterval(draw, speed);
+};
 
 function draw() {
-    // 캔버스를 비운다
-    ctx.clearRect(0,0,clearX,clearY);
-    // 이미지가 캔버스보다 작거나 같다면 (If image is <= Canvas Size)
-    if (imgW <= CanvasXSize) {
-        // 재설정, 처음부터 시작
-        if (x > (CanvasXSize)) { x = 0; }
-        // 추가 이미지 그리기
-        if (x > (CanvasXSize-imgW)) { ctx.drawImage(img,x-CanvasXSize+1,y,imgW,imgH); }
+  // 캔버스를 비운다
+  ctx.clearRect(0, 0, clearX, clearY);
+  // 이미지가 캔버스보다 작거나 같다면 (If image is <= Canvas Size)
+  if (imgW <= CanvasXSize) {
+    // 재설정, 처음부터 시작
+    if (x > CanvasXSize) {
+      x = 0;
     }
-    // 이미지가 캔버스보다 크다면 (If image is > Canvas Size)
-    else {
-        // 재설정, 처음부터 시작
-        if (x > (CanvasXSize)) { x = CanvasXSize-imgW; }
-        // 추가 이미지 그리기
-        if (x > (CanvasXSize-imgW)) { ctx.drawImage(img,x-imgW+1,y,imgW,imgH); }
+    // 추가 이미지 그리기
+    if (x > CanvasXSize - imgW) {
+      ctx.drawImage(img, x - CanvasXSize + 1, y, imgW, imgH);
     }
-    // 이미지 그리기
-    ctx.drawImage(img,x,y,imgW,imgH);
-    // 움직임 정도
-    x += dx;
+  }
+  // 이미지가 캔버스보다 크다면 (If image is > Canvas Size)
+  else {
+    // 재설정, 처음부터 시작
+    if (x > CanvasXSize) {
+      x = CanvasXSize - imgW;
+    }
+    // 추가 이미지 그리기
+    if (x > CanvasXSize - imgW) {
+      ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
+    }
+  }
+  // 이미지 그리기
+  ctx.drawImage(img, x, y, imgW, imgH);
+  // 움직임 정도
+  x += dx;
 }
 ```
 

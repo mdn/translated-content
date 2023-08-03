@@ -1,16 +1,6 @@
 ---
 title: <dialog>
 slug: Web/HTML/Element/dialog
-tags:
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Web
-  - Диалог
-  - Экспериментальный
-  - Элемент
-translation_of: Web/HTML/Element/dialog
 ---
 
 {{SeeCompatTable}}

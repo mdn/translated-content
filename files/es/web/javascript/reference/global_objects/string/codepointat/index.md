@@ -1,7 +1,6 @@
 ---
 title: String.prototype.codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/codePointAt
 ---
 
 {{JSRef}}

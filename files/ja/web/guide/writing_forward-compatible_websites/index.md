@@ -1,7 +1,6 @@
 ---
 title: 前方互換性のあるウェブサイトを書く
 slug: Web/Guide/Writing_forward-compatible_websites
-original_slug: Web_Development/Writing_forward-compatible_websites
 ---
 
 このページでは、新しいバージョンのブラウザーが公開されても壊れることのないウェブサイトを記述する方法を説明します。

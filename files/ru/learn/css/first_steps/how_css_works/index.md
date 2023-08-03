@@ -1,16 +1,6 @@
 ---
 title: Как работает CSS
 slug: Learn/CSS/First_steps/How_CSS_works
-tags:
-  - Beginner
-  - CSS
-  - DOM
-  - DOM дерево
-  - Learn
-  - Начинающий
-  - Обучение
-  - дерево
-translation_of: Learn/CSS/First_steps/How_CSS_works
 ---
 
 {{LearnSidebar}}

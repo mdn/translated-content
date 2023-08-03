@@ -1,7 +1,6 @@
 ---
 title: Microformatos
 slug: Web/HTML/microformats
-original_slug: Web/HTML/microformatos
 ---
 
 {{HTMLSidebar}}

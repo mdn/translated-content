@@ -1,7 +1,6 @@
 ---
 title: Accessible multimedia
 slug: Learn/Accessibility/Multimedia
-translation_of: Learn/Accessibility/Multimedia
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}

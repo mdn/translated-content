@@ -1,7 +1,6 @@
 ---
 title: Map.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/set
 ---
 
 {{JSRef}}

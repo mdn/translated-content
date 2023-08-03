@@ -1,7 +1,6 @@
 ---
 title: "웹페이지를 표시한다는 것: 브라우저는 어떻게 동작하는가"
 slug: Web/Performance/How_browsers_work
-original_slug: Web/Performance/브라우저는_어떻게_동작하는가
 ---
 
 사용자는 로드가 빠르고 상호작용이 원활한 컨텐츠로 이루어진 웹 경험을 원합니다. 따라서 개발자는 이 두 가지 목표를 달성하기 위해서 부단히 노력해야합니다.
@@ -57,7 +56,7 @@ HTTPS를 이용한 보안성있는 연결을 위해서는 또 다른 "핸드셰�
 웹서버로 한 번 연결이 성립되고 나면, 브라우저는 유저 대신에 초기 [HTTP `GET` request](/ko/docs/Web/HTTP/Methods)를 보냅니다. 웹사이트는 대게 HTML 파일을 요청합니다. 서버가 요청을 받으면, 관련 응답 해더와 함께 HTML의 내용을 응답하게 됩니다.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />

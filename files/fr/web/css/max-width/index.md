@@ -1,7 +1,6 @@
 ---
 title: max-width
 slug: Web/CSS/max-width
-translation_of: Web/CSS/max-width
 ---
 
 {{CSSRef}}

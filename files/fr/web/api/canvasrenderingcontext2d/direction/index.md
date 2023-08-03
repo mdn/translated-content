@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.direction
 slug: Web/API/CanvasRenderingContext2D/direction
-translation_of: Web/API/CanvasRenderingContext2D/direction
 ---
 
 {{APIRef}} {{SeeCompatTable}}

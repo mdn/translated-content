@@ -1,7 +1,6 @@
 ---
 title: Error.prototype.lineNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 ---
 
 {{JSRef}} {{non-standard_header}}

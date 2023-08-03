@@ -1,12 +1,6 @@
 ---
 title: CSS Table
 slug: Web/CSS/CSS_table
-tags:
-  - CSS
-  - CSS Reference
-  - CSS Table
-  - Overview
-translation_of: Web/CSS/CSS_Table
 ---
 
 {{CSSRef}}

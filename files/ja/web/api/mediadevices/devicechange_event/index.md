@@ -1,7 +1,6 @@
 ---
 title: "MediaDevices: devicechange イベント"
 slug: Web/API/MediaDevices/devicechange_event
-original_slug: Web/API/MediaDevices/ondevicechange
 l10n:
   sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---

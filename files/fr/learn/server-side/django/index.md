@@ -1,7 +1,6 @@
 ---
 title: Django Web Framework (Python)
 slug: Learn/Server-side/Django
-translation_of: Learn/Server-side/Django
 ---
 
 {{LearnSidebar}}

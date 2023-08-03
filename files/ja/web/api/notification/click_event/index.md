@@ -1,7 +1,6 @@
 ---
-title: 'Notification: click イベント'
+title: "Notification: click イベント"
 slug: Web/API/Notification/click_event
-original_slug: Web/API/Notification/onclick
 l10n:
   sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---

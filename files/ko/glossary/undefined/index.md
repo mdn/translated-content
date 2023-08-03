@@ -10,7 +10,7 @@ slug: Glossary/Undefined
 ```js
 var x; // 값을 할당하지 않고 변수 선언
 
-console.log("x's value is", x) // "x's value is undefined" 출력
+console.log("x's value is", x); // "x's value is undefined" 출력
 ```
 
 ## 더 알아보기

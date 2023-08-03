@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.activeTexture()
 slug: Web/API/WebGLRenderingContext/activeTexture
-translation_of: Web/API/WebGLRenderingContext/activeTexture
 ---
 
 {{APIRef("WebGL")}}

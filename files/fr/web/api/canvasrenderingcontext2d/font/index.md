@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.font
 slug: Web/API/CanvasRenderingContext2D/font
-translation_of: Web/API/CanvasRenderingContext2D/font
 ---
 
 {{APIRef}}

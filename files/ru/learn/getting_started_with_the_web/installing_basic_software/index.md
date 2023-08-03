@@ -1,17 +1,6 @@
 ---
 title: Установка базового программного обеспечения
 slug: Learn/Getting_started_with_the_web/Installing_basic_software
-tags:
-  - WebMechanics
-  - Браузер
-  - Инструменты
-  - Начинающий
-  - Новичку
-  - Обучение
-  - Текстовый редактор
-  - Установка
-translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
-original_slug: Learn/Getting_started_with_the_web/Установка_базового_программного_обеспечения
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}

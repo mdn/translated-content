@@ -1,7 +1,6 @@
 ---
 title: "<dd> : l'élément de détail d'une description"
 slug: Web/HTML/Element/dd
-translation_of: Web/HTML/Element/dd
 ---
 
 {{HTMLSidebar}}

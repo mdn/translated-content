@@ -1,15 +1,6 @@
 ---
 title: String.prototype.fixed()
 slug: Web/JavaScript/Reference/Global_Objects/String/fixed
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Методы оборачивания в HTML
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fixed
 ---
 {{JSRef("Global_Objects", "String")}} {{deprecated_header}}
 

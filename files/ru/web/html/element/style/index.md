@@ -1,14 +1,6 @@
 ---
 title: <style> - элемент для указания стилей
 slug: Web/HTML/Element/style
-tags:
-  - HTML
-  - Reference
-  - Référence(2)
-  - Веб
-  - метаданные документа HTML
-  - элементы
-translation_of: Web/HTML/Element/style
 ---
 
 ## Краткое описание

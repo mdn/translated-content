@@ -1,22 +1,6 @@
 ---
 title: Идентификация ресурсов в Вебе
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-tags:
-  - HTTP
-  - URI
-  - URL
-  - Веб
-  - Порт
-  - Путь
-  - Ресурсы
-  - Синтаксис
-  - Синтаксис URL
-  - Схема
-  - Фрагмент
-  - домен
-  - запрос
-translation_of: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-original_slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web_RU
 ---
 
 {{HTTPSidebar}}

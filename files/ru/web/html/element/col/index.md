@@ -1,14 +1,6 @@
 ---
 title: <col>
 slug: Web/HTML/Element/col
-tags:
-  - HTML
-  - Веб
-  - Ссылка
-  - Элемент
-  - таблицы
-  - табличные данные HTML
-translation_of: Web/HTML/Element/col
 ---
 
 {{HTMLSidebar}}

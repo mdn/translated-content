@@ -1,7 +1,6 @@
 ---
 title: filter
 slug: Web/CSS/filter
-translation_of: Web/CSS/filter
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

@@ -1,7 +1,6 @@
 ---
 title: tabs.show()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/show
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/show
 ---
 
 {{AddonSidebar()}}

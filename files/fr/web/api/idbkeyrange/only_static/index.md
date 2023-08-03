@@ -1,7 +1,6 @@
 ---
 title: IDBKeyRange.only()
 slug: Web/API/IDBKeyRange/only_static
-translation_of: Web/API/IDBKeyRange/only
 ---
 
 {{APIRef("IndexedDB")}}

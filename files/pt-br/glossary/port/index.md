@@ -1,7 +1,6 @@
 ---
 title: Port
 slug: Glossary/Port
-original_slug: Glossario/Port
 ---
 
 Porta

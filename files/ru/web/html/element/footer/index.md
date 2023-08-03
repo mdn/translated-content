@@ -1,14 +1,6 @@
 ---
 title: <footer>
 slug: Web/HTML/Element/footer
-tags:
-  - Element
-  - HTML
-  - Разделы
-  - Разделы HTML
-  - Справка
-  - Элемент
-translation_of: Web/HTML/Element/footer
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Host
 slug: Web/HTTP/Headers/Host
-translation_of: Web/HTTP/Headers/Host
 ---
 
 {{HTTPSidebar}}
