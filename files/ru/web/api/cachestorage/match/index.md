@@ -54,16 +54,22 @@ caches.match(request, options).then(function(response) {
 3. Если произошла какая-либо ошибка (например, из-за проблем с сетью), возвращаем резервный ответ.
 
 ```js
-caches.match(event.request).then(function(response) {
-  return response || fetch(event.request).then(function(r) {
-    caches.open('v1').then(function(cache) {
-      cache.put(event.request, r);
-    });
-    return r.clone();
+caches
+  .match(event.request)
+  .then(function (response) {
+    return (
+      response ||
+      fetch(event.request).then(function (r) {
+        caches.open("v1").then(function (cache) {
+          cache.put(event.request, r);
+        });
+        return r.clone();
+      })
+    );
+  })
+  .catch(function () {
+    return caches.match("/sw-test/gallery/myLittleVader.jpg");
   });
-}).catch(function() {
-  return caches.match('/sw-test/gallery/myLittleVader.jpg');
-});
 ```
 
 ## Спецификации
