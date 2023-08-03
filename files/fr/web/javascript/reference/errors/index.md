@@ -1,7 +1,6 @@
 ---
 title: Référence des erreurs JavaScript
 slug: Web/JavaScript/Reference/Errors
-translation_of: Web/JavaScript/Reference/Errors
 ---
 
 {{jsSidebar("Errors")}}

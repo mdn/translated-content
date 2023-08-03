@@ -1,7 +1,6 @@
 ---
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
-translation_of: Web/JavaScript/Reference/Global_Objects/Date
 ---
 
 {{JSRef}}

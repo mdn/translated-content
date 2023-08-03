@@ -1,7 +1,6 @@
 ---
 title: 401 Unauthorized
 slug: Web/HTTP/Status/401
-translation_of: Web/HTTP/Status/401
 ---
 {{HTTPSidebar}}
 

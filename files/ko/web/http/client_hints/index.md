@@ -1,7 +1,6 @@
 ---
 title: Client hints(클라이언트 힌트)
 slug: Web/HTTP/Client_hints
-original_slug: Glossary/Client_hints
 ---
 
 **Client Hints**는 클라이언트 장치 및 에이전트별 기본 설정 목록을 확인할 수 있도록 사전 컨텐츠 체크를 위한 [HTTP request header](/ko/docs/Web/HTTP/Headers) 입니다. [Client Hints](/ko/docs/Web/HTTP/Headers#Client_hints)를 사용하면 이미지 DPR 해상도의 자동 조절과 최적화 된 assets을 자동으로 적용할 수 있습니다.

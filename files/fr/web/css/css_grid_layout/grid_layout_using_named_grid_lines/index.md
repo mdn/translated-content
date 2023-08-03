@@ -1,7 +1,6 @@
 ---
 title: Utiliser des lignes nommées sur une grille
 slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
-translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 ---
 
 {{CSSRef}}

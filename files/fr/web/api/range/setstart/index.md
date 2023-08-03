@@ -1,7 +1,6 @@
 ---
 title: Range.setStart()
 slug: Web/API/Range/setStart
-translation_of: Web/API/Range/setStart
 ---
 
 {{ApiRef("DOM")}}

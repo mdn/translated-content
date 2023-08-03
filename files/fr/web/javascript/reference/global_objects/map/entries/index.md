@@ -1,7 +1,6 @@
 ---
 title: Map.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Map/entries
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/entries
 ---
 
 {{JSRef}}

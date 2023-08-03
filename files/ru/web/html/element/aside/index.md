@@ -1,17 +1,6 @@
 ---
 title: <aside>
 slug: Web/HTML/Element/aside
-tags:
-  - Element
-  - HTML
-  - HTML5
-  - Web
-  - Веб
-  - Разделы
-  - Разделы HTML
-  - Справка
-  - Элемент
-translation_of: Web/HTML/Element/aside
 ---
 
 {{HTMLSidebar}}

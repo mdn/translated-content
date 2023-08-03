@@ -1,7 +1,6 @@
 ---
 title: Intergiciel
 slug: Glossary/Middleware
-translation_of: Glossary/Middleware
 ---
 
 Intergiciel (_Middleware_) est un terme (défini vaguement) pour tout logiciel ou service permettant aux parties d'un système de communiquer et de gérer des données. C'est le logiciel qui gère la communication entre les composants et les entrées / sorties, de sorte que les développeurs peuvent se concentrer sur l'objectif spécifique de leur application.

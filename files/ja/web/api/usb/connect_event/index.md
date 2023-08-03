@@ -1,5 +1,5 @@
 ---
-title: 'USB: connect イベント'
+title: "USB: connect イベント"
 slug: Web/API/USB/connect_event
 l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b

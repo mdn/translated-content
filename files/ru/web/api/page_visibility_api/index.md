@@ -1,15 +1,8 @@
 ---
 title: Видимость страницы API
 slug: Web/API/Page_Visibility_API
-tags:
-  - API
-  - DOM
-  - Документ
-  - Показать страницу
-  - Скрыть страницу
-translation_of: Web/API/Page_Visibility_API
-original_slug: Web/API/Видимость_страницы_API
 ---
+
 {{DefaultAPISidebar("Page Visibility API")}}
 
 При переключении между вкладками, web страница переходит в фоновый режим и поэтому не видна пользователю. Page Visibility API предоставляет события, которые вы можете отслеживать, чтобы узнать, когда страница станет видимой или скрытой, а так же возможность наблюдать текущее состояние видимости страницы.
@@ -62,7 +55,8 @@ The example, which pauses the video when you switch to another tab and plays aga
 ```js
 // Set the name of the hidden property and the change event for visibility
 var hidden, visibilityChange;
-if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
+if (typeof document.hidden !== "undefined") {
+  // Opera 12.10 and Firefox 18 and later support
   hidden = "hidden";
   visibilityChange = "visibilitychange";
 } else if (typeof document.msHidden !== "undefined") {
@@ -87,22 +81,31 @@ function handleVisibilityChange() {
 
 // Warn if the browser doesn't support addEventListener or the Page Visibility API
 if (typeof document.addEventListener === "undefined" || hidden === undefined) {
-  console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+  console.log(
+    "This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.",
+  );
 } else {
   // Handle page visibility change
   document.addEventListener(visibilityChange, handleVisibilityChange, false);
 
   // When the video pauses, set the title.
   // This shows the paused
-  videoElement.addEventListener("pause", function(){
-    document.title = 'Paused';
-  }, false);
+  videoElement.addEventListener(
+    "pause",
+    function () {
+      document.title = "Paused";
+    },
+    false,
+  );
 
   // When the video plays, set the title.
-  videoElement.addEventListener("play", function(){
-    document.title = 'Playing';
-  }, false);
-
+  videoElement.addEventListener(
+    "play",
+    function () {
+      document.title = "Playing";
+    },
+    false,
+  );
 }
 ```
 
@@ -140,7 +143,7 @@ The Page Visibility API adds the following properties to the {{domxref("Document
 function handleVisibilityChange() {
   if (document.hidden) {
     pauseSimulation();
-  } else  {
+  } else {
     startSimulation();
   }
 }
@@ -150,15 +153,11 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 ## Specifications
 
-| Specification                                    | Status                                       | Comment             |
-| ------------------------------------------------ | -------------------------------------------- | ------------------- |
-| {{SpecName('Page Visibility API')}} | {{Spec2('Page Visibility API')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Document.visibilityState`
-
-{{Compat("api.Document.visibilityState")}}
+{{Compat}}
 
 ## See also
 

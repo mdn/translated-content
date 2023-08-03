@@ -1,7 +1,6 @@
 ---
 title: Страница с подробностями жанров
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
 ---
 
 Страница "подробности" (_detail)_ для жанров должна показывать информацию для отдельного жанра по его автоматически генерируем идентификатору `_id`. Должно быть показано название жанра и список книг этого жанра, со ссылками на страницу с детальной информацией для каждой книги.

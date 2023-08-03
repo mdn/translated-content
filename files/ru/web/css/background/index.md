@@ -1,7 +1,6 @@
 ---
 title: background
 slug: Web/CSS/background
-translation_of: Web/CSS/background
 ---
 {{CSSRef("CSS Background")}}Сокращённое [CSS](/ru/docs/Web/CSS) свойство **`background`** устанавливает сразу все свойства стиля фона, такие как цвет, изображение, источник и размер, или метод повтора.{{EmbedInteractiveExample("pages/css/background.html")}}
 

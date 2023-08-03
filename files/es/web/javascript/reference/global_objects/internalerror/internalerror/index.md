@@ -1,7 +1,6 @@
 ---
 title: Constructor InternalError()
 slug: Web/JavaScript/Reference/Global_Objects/InternalError/InternalError
-original_slug: Web/JavaScript/Referencia/Objetos_globales/InternalError/Constructor_InternalError
 ---
 
 {{JSRef}} {{non-standard_header}}

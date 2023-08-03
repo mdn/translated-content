@@ -1,7 +1,6 @@
 ---
 title: IDBIndex.count()
 slug: Web/API/IDBIndex/count
-translation_of: Web/API/IDBIndex/count
 ---
 
 {{APIRef("IndexedDB")}}

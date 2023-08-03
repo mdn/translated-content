@@ -1,7 +1,6 @@
 ---
 title: Envoyer et extraire les données des formulaires
 slug: Learn/Forms/Sending_and_retrieving_form_data
-translation_of: Learn/Forms/Sending_and_retrieving_form_data
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}

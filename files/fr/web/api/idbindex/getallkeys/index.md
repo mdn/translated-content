@@ -1,7 +1,6 @@
 ---
 title: IDBIndex.getAllKeys()
 slug: Web/API/IDBIndex/getAllKeys
-translation_of: Web/API/IDBIndex/getAllKeys
 ---
 
 {{APIRef("IndexedDB")}}

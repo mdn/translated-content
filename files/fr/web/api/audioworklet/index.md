@@ -1,7 +1,6 @@
 ---
 title: AudioWorklet
 slug: Web/API/AudioWorklet
-translation_of: Web/API/AudioWorklet
 ---
 
 {{APIRef("Web Audio API")}}{{securecontext_header}}

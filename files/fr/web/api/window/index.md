@@ -1,7 +1,6 @@
 ---
 title: window
 slug: Web/API/Window
-translation_of: Web/API/Window
 ---
 
 {{APIRef}}

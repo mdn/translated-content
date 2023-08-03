@@ -1,5 +1,5 @@
 ---
-title: '視点とビューアー: WebXR でのカメラのシミュレーション'
+title: "視点とビューアー: WebXR でのカメラのシミュレーション"
 slug: Web/API/WebXR_Device_API/Cameras
 ---
 

@@ -1,13 +1,6 @@
 ---
 title: CanvasRenderingContext2D.putImageData()
 slug: Web/API/CanvasRenderingContext2D/putImageData
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
-translation_of: Web/API/CanvasRenderingContext2D/putImageData
 ---
 
 {{APIRef}}
@@ -64,27 +57,41 @@ void ctx.putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight
 #### JavaScript
 
 ```js
-let canvas = document.getElementById('canvas');
-let ctx = canvas.getContext('2d');
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
 
-function putImageData(ctx, imageData, dx, dy,
-    dirtyX, dirtyY, dirtyWidth, dirtyHeight) {
+function putImageData(
+  ctx,
+  imageData,
+  dx,
+  dy,
+  dirtyX,
+  dirtyY,
+  dirtyWidth,
+  dirtyHeight,
+) {
   let data = imageData.data;
   let height = imageData.height;
   let width = imageData.width;
   dirtyX = dirtyX || 0;
   dirtyY = dirtyY || 0;
-  dirtyWidth = dirtyWidth !== undefined? dirtyWidth: width;
-  dirtyHeight = dirtyHeight !== undefined? dirtyHeight: height;
+  dirtyWidth = dirtyWidth !== undefined ? dirtyWidth : width;
+  dirtyHeight = dirtyHeight !== undefined ? dirtyHeight : height;
   let limitBottom = dirtyY + dirtyHeight;
   let limitRight = dirtyX + dirtyWidth;
   for (let y = dirtyY; y < limitBottom; y++) {
     for (let x = dirtyX; x < limitRight; x++) {
       var pos = y * width + x;
-      ctx.fillStyle = 'rgba(' + data[pos*4+0]
-                        + ',' + data[pos*4+1]
-                        + ',' + data[pos*4+2]
-                        + ',' + (data[pos*4+3]/255) + ')';
+      ctx.fillStyle =
+        "rgba(" +
+        data[pos * 4 + 0] +
+        "," +
+        data[pos * 4 + 1] +
+        "," +
+        data[pos * 4 + 2] +
+        "," +
+        data[pos * 4 + 3] / 255 +
+        ")";
       ctx.fillRect(x + dx, y + dy, 1, 1);
     }
   }
@@ -142,11 +149,6 @@ after: Uint8ClampedArray(4) [ 255, 255, 255, 1 ]
 ## Совместимость с браузера
 
 {{Compat}}
-
-### Специфичные для Gecko заметки
-
-- Начиная с Gecko 10.0, нескончаемые(например, NaN или Infinity) значения любого из этих параметров приводят к тому, что вызов `putImageData()` будет игнорироваться, а не вызывать исключение.
-- To comply with the specification, starting with Gecko 16.0, a call with an invalid number of arguments (only 3 or 7 arguments are valid), will now throw an error ({{bug(762657)}}).
 
 ## Смотрите также
 

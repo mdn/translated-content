@@ -1,7 +1,6 @@
 ---
 title: <marquee>
 slug: Web/HTML/Element/marquee
-original_slug: Web/HTML/Elemento/marquee
 ---
 
 {{HTMLSidebar}}{{Deprecated_Header}}

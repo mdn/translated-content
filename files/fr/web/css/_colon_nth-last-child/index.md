@@ -1,7 +1,6 @@
 ---
 title: ":nth-last-child"
 slug: Web/CSS/:nth-last-child
-translation_of: Web/CSS/:nth-last-child
 ---
 
 {{CSSRef}}

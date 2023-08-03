@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/clear
 ---
 
 {{JSRef}}

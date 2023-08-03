@@ -81,8 +81,13 @@ Você também pode realizar o output de múltiplos objetos ao simplesmente list�
 
 ```js
 var carro = "Fusca";
-var algumObjeto = {str:"Algum texto", id:5};
-console.info("Meu primeiro carro era um ", carro, ". O objeto é: ", algumObjeto);
+var algumObjeto = { str: "Algum texto", id: 5 };
+console.info(
+  "Meu primeiro carro era um ",
+  carro,
+  ". O objeto é: ",
+  algumObjeto,
+);
 ```
 
 O output será algo assim:

@@ -1,5 +1,5 @@
 ---
-title: 'FileReader: progress イベント'
+title: "FileReader: progress イベント"
 slug: Web/API/FileReader/progress_event
 l10n:
   sourceCommit: 03c5110696fb433c13f3ccf63266d8affe446d8a

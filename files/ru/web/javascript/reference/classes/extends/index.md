@@ -1,11 +1,6 @@
 ---
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
-tags:
-  - Классы
-  - Наследование
-  - Расширение
-translation_of: Web/JavaScript/Reference/Classes/extends
 ---
 
 {{jsSidebar("Classes")}}

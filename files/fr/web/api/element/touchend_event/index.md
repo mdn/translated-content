@@ -1,7 +1,6 @@
 ---
 title: touchend
 slug: Web/API/Element/touchend_event
-translation_of: Web/API/Document/touchend_event
 ---
 
 {{APIRef}}

@@ -1,13 +1,6 @@
 ---
 title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
-tags:
-  - Internationalization
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 ---
 {{JSRef("Global_Objects", "Number")}}
 

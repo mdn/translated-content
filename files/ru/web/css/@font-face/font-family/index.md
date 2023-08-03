@@ -1,10 +1,6 @@
 ---
 title: font-family
 slug: Web/CSS/@font-face/font-family
-tags:
-  - Шрифты
-  - дескрипторы
-translation_of: Web/CSS/@font-face/font-family
 ---
 {{CSSRef}}
 

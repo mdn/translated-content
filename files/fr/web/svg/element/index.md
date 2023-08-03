@@ -1,7 +1,6 @@
 ---
 title: Element
 slug: Web/SVG/Element
-translation_of: Web/SVG/Element
 ---
 
 Les dessins et les images SVG sont créés à l'aide d'un large éventail d'éléments dédiés à la construction, au dessin et à la mise en page d'images vectorielles et de diagrammes. Vous trouverez ici la documentation de référence pour chacun des éléments SVG.

@@ -1,7 +1,6 @@
 ---
 title: PWA 结构
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
-original_slug: Web/Progressive_web_apps/App_structure
 ---
 
 {{PWASidebar}} {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Introduction", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}

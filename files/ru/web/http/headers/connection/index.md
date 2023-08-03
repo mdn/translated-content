@@ -1,13 +1,6 @@
 ---
 title: Connection
 slug: Web/HTTP/Headers/Connection
-tags:
-  - HTTP
-  - Веб
-  - Заголовки
-  - Справка
-translation_of: Web/HTTP/Headers/Connection
-original_slug: Web/HTTP/Заголовки/Connection
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Premiers pas dans la programmation d'un site côté serveur
 slug: Learn/Server-side/First_steps
-translation_of: Learn/Server-side/First_steps
 ---
 
 {{LearnSidebar}}

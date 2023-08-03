@@ -1,7 +1,6 @@
 ---
 title: JavaScript の型付き配列
 slug: Web/JavaScript/Guide/Typed_arrays
-original_slug: Web/JavaScript/Typed_arrays
 ---
 
 {{JsSidebar("Advanced")}}

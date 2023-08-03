@@ -1,7 +1,6 @@
 ---
 title: 2 つめの拡張機能
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
 l10n:
   sourceCommit: 593600a6822de931ce9fb369849146ad25f22c6f
 ---

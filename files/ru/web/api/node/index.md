@@ -1,10 +1,6 @@
 ---
 title: Node
 slug: Web/API/Node
-tags:
-  - API
-  - DOM
-translation_of: Web/API/Node
 ---
 
 {{APIRef("DOM")}}
@@ -44,19 +40,19 @@ _Наследует свойства от родителей {{domxref("EventTar
 
   - : Возвращает беззнаковое короткое число `(unsigned short`) представляющее тип узла. Возможные значения:
 
-    | Имя                                                      | Значение |
-    | -------------------------------------------------------- | -------- |
-    | `ELEMENT_NODE`                                           | `1`      |
+    | Имя                                             | Значение |
+    | ----------------------------------------------- | -------- |
+    | `ELEMENT_NODE`                                  | `1`      |
     | `ATTRIBUTE_NODE` {{deprecated_inline()}}        | `2`      |
-    | `TEXT_NODE`                                              | `3`      |
+    | `TEXT_NODE`                                     | `3`      |
     | `CDATA_SECTION_NODE` {{deprecated_inline()}}    | `4`      |
     | `ENTITY_REFERENCE_NODE` {{deprecated_inline()}} | `5`      |
     | `ENTITY_NODE` {{deprecated_inline()}}           | `6`      |
-    | `PROCESSING_INSTRUCTION_NODE`                            | `7`      |
-    | `COMMENT_NODE`                                           | `8`      |
-    | `DOCUMENT_NODE`                                          | `9`      |
-    | `DOCUMENT_TYPE_NODE`                                     | `10`     |
-    | `DOCUMENT_FRAGMENT_NODE`                                 | `11`     |
+    | `PROCESSING_INSTRUCTION_NODE`                   | `7`      |
+    | `COMMENT_NODE`                                  | `8`      |
+    | `DOCUMENT_NODE`                                 | `9`      |
+    | `DOCUMENT_TYPE_NODE`                            | `10`     |
+    | `DOCUMENT_FRAGMENT_NODE`                        | `11`     |
     | `NOTATION_NODE` {{deprecated_inline()}}         | `12`     |
 
 - {{domxref("Node.nodeValue")}}
@@ -125,7 +121,7 @@ _Наследует методы от своих родителей {{domxref("E
 Следующая функция рекурсивный цикл всех дочерних узлов узла и она исполняет вызов функции относительно их (и себя относительно родительского узла).
 
 ```js
-function DOMComb (oParent, oCallback) {
+function DOMComb(oParent, oCallback) {
   if (oParent.hasChildNodes()) {
     for (var oNode = oParent.firstChild; oNode; oNode = oNode.nextSibling) {
       DOMComb(oNode, oCallback);
@@ -157,8 +153,10 @@ DOMComb(parentNode, callbackFunction);
 Следующий пример отправляет в `console.log` текстовое содержимое body:
 
 ```js
-function printContent () {
-  if (this.nodeValue) { console.log(this.nodeValue); }
+function printContent() {
+  if (this.nodeValue) {
+    console.log(this.nodeValue);
+  }
 }
 
 onload = function () {
@@ -170,7 +168,9 @@ onload = function () {
 
 ```js
 Element.prototype.removeAll = function () {
-  while (this.firstChild) { this.removeChild(this.firstChild); }
+  while (this.firstChild) {
+    this.removeChild(this.firstChild);
+  }
   return this;
 };
 ```

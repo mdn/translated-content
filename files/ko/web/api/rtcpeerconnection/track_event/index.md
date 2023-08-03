@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.ontrack
 slug: Web/API/RTCPeerConnection/track_event
-original_slug: Web/API/RTCPeerConnection/ontrack
 ---
 
 {{APIRef("WebRTC")}}

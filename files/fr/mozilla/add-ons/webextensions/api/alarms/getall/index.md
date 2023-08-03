@@ -1,7 +1,6 @@
 ---
 title: alarms.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
-translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
 ---
 
 {{AddonSidebar}}

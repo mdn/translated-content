@@ -1,7 +1,6 @@
 ---
 title: Constructeur DataView()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/DataView
 ---
 
 {{JSRef}}

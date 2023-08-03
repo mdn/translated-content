@@ -1,7 +1,6 @@
 ---
 title: TTL
 slug: Glossary/TTL
-translation_of: Glossary/TTL
 ---
 
 TTL peut se référer soit à :

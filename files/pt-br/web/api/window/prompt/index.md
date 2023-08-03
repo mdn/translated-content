@@ -26,9 +26,9 @@ if (signo.toLowerCase() == "escorpião") {
 
 // há muitas formas de se usar o recurso prompt
 var sign = window.prompt(); // abrir uma janela de promtpt em branco
-var sign = prompt();       //  abrir uma janela de promtpt em branco
-var sign = window.prompt('Você está se sentindo com sorte'); // abrir uma janela com o texto "Você está se sentindo com sorte"
-var sign = window.prompt('Você está se sentindo com sorte', 'certamente'); // abrir uma janela com o texto "Você está se sentindo com sorte" e com o valor padrão "certamente"
+var sign = prompt(); //  abrir uma janela de promtpt em branco
+var sign = window.prompt("Você está se sentindo com sorte"); // abrir uma janela com o texto "Você está se sentindo com sorte"
+var sign = window.prompt("Você está se sentindo com sorte", "certamente"); // abrir uma janela com o texto "Você está se sentindo com sorte" e com o valor padrão "certamente"
 ```
 
 Quando o usuário pressiona o botão OK, o texto digitado no campo de texto é retornado. Se o usuário pressionar OK sem ter digitado qualquer texto, uma cadeia de caracteres vazia é retornada. Se o usuário pressionar o botão Cancelar, esta função retornará `null`.
@@ -51,9 +51,13 @@ No Safari, se o usuário clicar em Cancelar, a função retornará uma cadeia de
 
 Esta função não tem efeito na versão Modern UI/Metro do Internet Explorer para Windows 8. Ele não exibe o prompt para o usuário, e sempre retornará `undefined`. Não está claro se é um erro ou um comportamento intencional. Versões desktop do IE implementam esta função.
 
-**Especificação**
+## Especificações
 
-Especificado em HTML5.
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## Veja também
 

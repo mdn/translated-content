@@ -12,9 +12,9 @@ l10n:
 ## 構文
 
 ```js
-new Intl.Segmenter()
-new Intl.Segmenter(locales)
-new Intl.Segmenter(locales, options)
+new Intl.Segmenter();
+new Intl.Segmenter(locales);
+new Intl.Segmenter(locales, options);
 ```
 
 > **メモ:** `Intl.Segmenter()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使用してのみ構築可能です。`new` を使わずに呼び出そうとすると {{jsxref("TypeError")}} が発生します。
@@ -52,8 +52,11 @@ new Intl.Segmenter(locales, options)
 
 ```js
 const text = "吾輩は猫である。名前はたぬき。";
-const japaneseSegmenter = new Intl.Segmenter("ja-JP", {granularity: "word"});
-console.log([...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike).length);
+const japaneseSegmenter = new Intl.Segmenter("ja-JP", { granularity: "word" });
+console.log(
+  [...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike)
+    .length,
+);
 // logs 8 as the text is segmented as '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。'
 ```
 

@@ -1,15 +1,8 @@
 ---
 title: GlobalEventHandlers.oncontextmenu
 slug: Web/API/Element/contextmenu_event
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - oncontextmenu
-translation_of: Web/API/GlobalEventHandlers/oncontextmenu
-original_slug: Web/API/GlobalEventHandlers/oncontextmenu
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 Свойство обработчика событий для события клика правой кнопкой мыши внутри элемента window.
@@ -30,13 +23,19 @@ window.oncontextmenu = funcRef;
 Код в этом примере меняет стандартное поведение браузера, отключая клик правой кнопкой мыши.
 
 ```js
-document.oncontextmenu = function () { // Используйте объект "document" вместо "window" для совместимости с IE8.
-   return false;
+document.oncontextmenu = function () {
+  // Используйте объект "document" вместо "window" для совместимости с IE8.
+  return false;
 };
 
-window.addEventListener('contextmenu', function (e) { // Не совместимо с IE младше 9 версии
+window.addEventListener(
+  "contextmenu",
+  function (e) {
+    // Не совместимо с IE младше 9 версии
     e.preventDefault();
-}, false);
+  },
+  false,
+);
 ```
 
 ## Спецификация

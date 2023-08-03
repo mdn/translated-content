@@ -1,7 +1,6 @@
 ---
 title: animation
 slug: Web/CSS/animation
-translation_of: Web/CSS/animation
 ---
 
 {{CSSRef}}

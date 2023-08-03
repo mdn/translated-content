@@ -1,7 +1,6 @@
 ---
 title: 접근성을 위한 미디어 쿼리 사용하기
 slug: Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
-original_slug: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
 ---
 
 **미디어쿼리**(**Media Queries**)는 장애를 가진 사용자가 웹사이트를 더 쉽게 이해할 수 있도록 도울 수 있습니다.

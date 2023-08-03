@@ -1,7 +1,6 @@
 ---
 title: CDN
 slug: Glossary/CDN
-translation_of: Glossary/CDN
 ---
 
 Un **CDN** (Content Delivery Network) est un groupe de serveurs répartis en de nombreux endroits. Ces serveurs répliquent des copies des données. De cette manière, les serveurs peuvent répondre aux requêtes de données en se basant sur les serveurs les plus proches de leurs utilisateurs finaux respectifs. Les CDN rendent les services rapides et moins affectés par les trafics élevés.

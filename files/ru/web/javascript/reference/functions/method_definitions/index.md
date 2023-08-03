@@ -1,8 +1,6 @@
 ---
 title: Определение методов
 slug: Web/JavaScript/Reference/Functions/Method_definitions
-translation_of: Web/JavaScript/Reference/Functions/Method_definitions
-original_slug: Web/JavaScript/Reference/Functions/Определение_методов
 ---
 
 {{JsSidebar("Functions")}}

@@ -1,7 +1,6 @@
 ---
 title: "Window: beforeunload event"
 slug: Web/API/Window/beforeunload_event
-original_slug: Web/API/WindowEventHandlers/onbeforeunload
 ---
 
 {{APIRef("HTML DOM")}}

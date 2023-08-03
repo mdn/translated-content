@@ -1,7 +1,6 @@
 ---
 title: "MediaRecorder: stop イベント"
 slug: Web/API/MediaRecorder/stop_event
-original_slug: Web/API/MediaRecorder/onstop
 l10n:
   sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
 ---

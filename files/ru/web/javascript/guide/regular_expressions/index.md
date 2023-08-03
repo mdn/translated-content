@@ -1,7 +1,6 @@
 ---
 title: Регулярные выражения
 slug: Web/JavaScript/Guide/Regular_expressions
-translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}

@@ -1,7 +1,6 @@
 ---
 title: Lignes directrices pour le HTML
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
-translation_of: MDN/Guidelines/Code_guidelines/HTML
 ---
 
 {{MDNSidebar}}

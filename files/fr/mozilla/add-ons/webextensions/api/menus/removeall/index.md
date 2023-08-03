@@ -1,7 +1,6 @@
 ---
 title: menus.removeAll()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/removeAll
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/removeAll
 ---
 
 {{AddonSidebar()}}

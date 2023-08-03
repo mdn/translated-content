@@ -1,7 +1,6 @@
 ---
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number
 ---
 
 {{JSRef}}

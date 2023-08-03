@@ -1,12 +1,6 @@
 ---
-title: 'null'
+title: "null"
 slug: Web/JavaScript/Reference/Operators/null
-tags:
-  - JavaScript
-  - Literal
-  - Primitive
-translation_of: Web/JavaScript/Reference/Global_Objects/null
-original_slug: Web/JavaScript/Reference/Global_Objects/null
 ---
 
 {{jsSidebar("Objects")}}

@@ -1,7 +1,6 @@
 ---
 title: Math.sqrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/sqrt
 ---
 
 {{JSRef}}

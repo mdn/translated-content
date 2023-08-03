@@ -1,7 +1,6 @@
 ---
 title: Exemple 1
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
-translation_of: Learn/Forms/How_to_build_custom_form_controls/Example_1
 ---
 
 C'est le premier exemple de code qui explique [comment construire un widget de formulaire personnalisé](/fr/docs/Learn/Forms/How_to_build_custom_form_controls).

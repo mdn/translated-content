@@ -1,8 +1,8 @@
 ---
 title: FormData.getAll()
 slug: Web/API/FormData/getAll
-translation_of: Web/API/FormData/getAll
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`getAll()`** - метод объекта {{domxref("FormData")}}, который возвращает все значения, связанные с ключом в объекте FormData.
@@ -35,14 +35,14 @@ var formData = new FormData();
 Можем добавить два `username` при помощи {{domxref("FormData.append")}}:
 
 ```js
-formData.append('username', 'Борис');
-formData.append('username', 'Кирилл');
+formData.append("username", "Борис");
+formData.append("username", "Кирилл");
 ```
 
 Тогда метод `getAll()` вернёт оба значения username в виде массива:
 
 ```js
-formData.getAll('username'); // Вернёт ["Борис", "Кирилл"]
+formData.getAll("username"); // Вернёт ["Борис", "Кирилл"]
 ```
 
 ## Спецификации

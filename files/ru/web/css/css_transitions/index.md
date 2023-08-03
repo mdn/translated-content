@@ -1,15 +1,6 @@
 ---
 title: CSS Transitions
 slug: Web/CSS/CSS_transitions
-tags:
-  - CSS
-  - CSS Transitions
-  - Experimental
-  - NeedsTranslation
-  - Overview
-  - Reference
-  - TopicStub
-translation_of: Web/CSS/CSS_Transitions
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

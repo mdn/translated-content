@@ -1,13 +1,6 @@
 ---
 title: box-sizing
 slug: Web/CSS/box-sizing
-tags:
-  - Блоковая модель
-  - Контент
-  - высота
-  - размер
-  - ширина
-translation_of: Web/CSS/box-sizing
 ---
 {{CSSRef}}
 

@@ -1,5 +1,5 @@
 ---
-title: '<figure>: O elemento Figure com Caption opcional'
+title: "<figure>: O elemento Figure com Caption opcional"
 slug: Web/HTML/Element/figure
 ---
 

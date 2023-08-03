@@ -2,7 +2,6 @@
 title: "Element: append() メソッド"
 short-title: append()
 slug: Web/API/Element/append
-original_slug: Web/API/ParentNode/append
 l10n:
   sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---

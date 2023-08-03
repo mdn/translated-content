@@ -1,7 +1,6 @@
 ---
 title: Introdução ao lado servidor
 slug: Learn/Server-side/First_steps/Introduction
-original_slug: Learn/Server-side/First_steps/Introdução
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}

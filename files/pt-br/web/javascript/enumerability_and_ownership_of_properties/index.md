@@ -1,7 +1,6 @@
 ---
 title: Enumerabilidade e posse de propriedades
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
-original_slug: Web/JavaScript/Enumerabilidade_e_posse_de_propriedades
 ---
 
 {{JsSidebar("Mais")}}

@@ -1,13 +1,6 @@
 ---
 title: transition
 slug: Web/CSS/transition
-tags:
-  - CSS
-  - CSS переход
-  - Reference
-  - transition
-  - Свойство CSS
-translation_of: Web/CSS/transition
 ---
 {{CSSRef}}
 

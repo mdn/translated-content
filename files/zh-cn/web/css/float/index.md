@@ -1,7 +1,6 @@
 ---
 title: float
 slug: Web/CSS/float
-original_slug: CSS/float
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: management.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getAll
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/getAll
 ---
 
 {{AddonSidebar()}}
