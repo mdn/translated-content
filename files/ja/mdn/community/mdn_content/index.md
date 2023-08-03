@@ -1,7 +1,7 @@
 ---
 title: MDN コンテンツのバグ修正
 slug: MDN/Community/MDN_content
-i10n:
+l10n:
   sourceCommit: 4c6b993ad0d43bc679688a3488e13a4ec0b2c3ec
 ---
 
