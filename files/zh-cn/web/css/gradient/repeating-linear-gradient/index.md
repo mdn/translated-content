@@ -9,7 +9,7 @@ slug: Web/CSS/gradient/repeating-linear-gradient
 
 {{EmbedInteractiveExample("pages/css/function-repeating-linear-gradient.html")}}
 
-每次重复时，颜色点位置的偏移量都是基准渐变长度（最后一个颜色点和第一个之间的距离）的倍数。因此，最后颜色点的颜色应该与第一个颜色点的颜色保持一致；如果不一致的话，会导致非常突兀的渐变效果。这可以通过将第一个颜色值重复添加到最后一个颜色值中来修改。
+每次重复时，色标（color stop）位置的偏移量都是基准渐变长度（最后一个色标和第一个之间的距离）的倍数。因此，最后色标的颜色应该与第一个色标的颜色保持一致；如果不一致的话，会导致非常突兀的渐变效果。这可以通过将第一个颜色值重复添加到最后一个颜色值中来修改。
 
 与其他渐变一样，线形重复渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#description)，也就是说没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 
@@ -38,16 +38,16 @@ repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
 ### 值
 
 - `<side-or-corner>`
-  - : 描述渐变线的起始点位置。它包含两个关键词：第一个指出垂直位置 left or right，第二个指出水平位置 top or bottom。关键词的先后顺序无影响，且都是可选的。
-    to top, to bottom, to left 和 to right 这些值会被转换成角度 0 度、180 度、270 度和 90 度。其余值会被转换为一个以向顶部中央方向为起点顺时针旋转的角度。渐变线的结束点与其起点中心对称。
+  - : 渐变线的起始点位置。如果指定了，则包含 `to` 和两个关键词：一个指定水平位置（`left` 或 `right`），另一个指定竖直位置（`top` 或 `bottom`）。关键词的先后顺序无影响。如果没有指定，则默认为 `to bottom`。
+    `to top`、`to bottom`、`to left` 和 `to right` 等价于 `0deg`、`180deg`、`270deg` 和 `90deg`。其余值会被转换为角度。
 - {{cssxref("&lt;angle&gt;")}}
-  - : 用角度值指定渐变的方向（或角度）。角度顺时针增加。
+  - : 渐变线的方向的角度。`0deg` 等价于 `to top`，增加值相当于顺时针旋转。
 - `<linear-color-stop>`
-  - : 颜色点的 {{CSSxRef("&lt;color&gt;")}} 值，随后是一个或者两个可选的停止点位置（每个都是沿着渐变轴上的一个 {{CSSxRef("&lt;percentage&gt;")}} 或者一个 {{CSSxRef("&lt;length&gt;")}}）。`0%` 的百分比，或者 `0` 的长度，代表渐变的开始，`100%` 代表 100% 的图像尺寸，也就是说渐变不会重复。
+  - : 色标（color stop）的 {{cssxref("&lt;color&gt;")}} 值，然后是一个或两个可选的色标位置（沿渐变轴的 {{cssxref("&lt;percentage&gt;")}} 或 {{cssxref("&lt;length&gt;")}}）。百分比值 `0%`，或者长度值 `0`，代表渐变的开始，`100%` 代表 100% 的图像尺寸，也就是说渐变不会重复。
 - `<color-hint>`
-  - : color-hint 是插值提示，定义了两个相邻的颜色点之间的渐变如何进行。长度定义了两个颜色点之间的渐变颜色应该在哪里到达颜色过渡过程的中点。如果省略，那么颜色过渡的中点就是两个颜色点之间的中点。
+  - : 颜色提示（color-hint）是插值提示，定义了在相邻色标之间的渐变如何进行。这个长度定义了渐变色应在两个色标之间的哪一点到达颜色过渡的中点。如果省略，颜色过渡的中点是两个色标之间的中点。
 
-> **备注：** [CSS 渐变中的颜色点](#Gradient_with_multiple_color_stops) 的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中的颜色点遵循相同的规则。
+> **备注：** [CSS 渐变中的色标](#Gradient_with_multiple_color_stops) 的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中的色标遵循相同的规则。
 
 ### 形式语法
 
@@ -106,7 +106,7 @@ body {
 
 {{EmbedLiveSample('十个重复水平线', 120, 120)}}
 
-因为最后一个颜色点是 10%，且渐变是竖直的，因为重复渐变的每个渐变都是高度的 10%，正好满足 10 个水平线。
+因为最后一个色标是 10%，且渐变是竖直的，因为重复渐变的每个渐变都是高度的 10%，正好满足 10 个水平线。
 
 > **备注：** 更多示例请参见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)。
 

@@ -5,11 +5,11 @@ slug: Web/CSS/CSS_images/Using_CSS_gradients
 
 {{CSSRef}}
 
-**CSS 渐变** {{cssxref("&lt;image&gt;")}} 类型的一种特殊类型 {{cssxref("&lt;gradient&gt;")}} 表示，由两种或多种颜色之间的渐进过渡组成。您可以选择三种类型的渐变：线性 (由 {{cssxref("linear-gradient")}} 函数创建)，径向 (由 {{cssxref("radial-gradient")}} 函数创建) 和圆锥 (由 {{cssxref("conic-gradient")}} 函数创建)。您还可以使用 {{cssxref("repeating-linear-gradient")}} 和 {{cssxref("repeating-radial-gradient")}} 函数创建重复渐变。
+**CSS 渐变** {{cssxref("&lt;image&gt;")}} 类型的一种特殊类型 {{cssxref("&lt;gradient&gt;")}} 表示，由两种或多种颜色之间的渐进过渡组成。你可以选择三种类型的渐变：线性（由 {{cssxref("linear-gradient")}} 函数创建）、径向（由 {{cssxref("radial-gradient")}} 函数创建）和锥形（由 {{cssxref("conic-gradient")}} 函数创建）。你还可以使用 {{cssxref("repeating-linear-gradient")}} 和 {{cssxref("repeating-radial-gradient")}} 函数创建重复渐变。
 
-渐变可以在任何使用 `<image>` 的地方使用，例如在背景中。由于渐变是动态生成的，因此它们可以消除对传统用于实现类似效果的栅格图像文件的需求。此外，由于渐变是由浏览器生成的，因此在放大时它们看起来比栅格图像更好，并且可以动态调整大小。
+渐变可以在任何使用 `<image>` 的地方使用，例如在背景中。由于渐变是动态生成的，因此可以消除对传统用于实现类似效果的栅格图像文件的需求。此外，由于渐变是由浏览器生成的，因此在放大时看起来比栅格图像更好，并且可以动态调整大小。
 
-我们将从线性渐变开始介绍，然后以线性渐变为例介绍所有渐变类型支持的功能，然后继续介绍径向渐变，圆锥渐变和重复渐变。
+我们将从线性渐变开始介绍，然后以线性渐变为例介绍所有渐变类型支持的功能，然后继续介绍径向渐变、锥形渐变和重复渐变。
 
 ## 使用线性渐变
 
@@ -17,7 +17,7 @@ slug: Web/CSS/CSS_images/Using_CSS_gradients
 
 ### 基础线性渐变
 
-要创建最基本的渐变类型，您只需指定两种颜色即可。这些被称为色标。至少指定两个色标，也可以指定任意数量。
+要创建最基本的渐变类型，你只需指定两种颜色即可。这些被称为色标（color stop）。至少指定两个色标，也可以指定任意数量。
 
 ```html hidden
 <div class="simple-linear"></div>
@@ -275,13 +275,13 @@ div {
 
 在上面的第一个例子中，黄绿色从 0% 的位置中开始（这是推断出来的），然后到 20% 的位置，在之后的渐变宽度的 10% 内，开始由黄绿色转换为红色，在 30% 的位置到达纯红色，然后一直保持为红色，直到渐变中的 45% 的位置，然后淡化到青色，这持续了渐变的 15% 的过程，然后然后继续。
 
-在第二个例子中，每个颜色的第二个颜色点都是相邻颜色的第一个颜色点，创建一个条纹效果。
+在第二个例子中，每个颜色的第二个色标都是相邻颜色的第一个色标，创建一个条纹效果。
 
-在这两个例子中，渐变都写了两次：第一个是 CSS Images Level 3 方法，可为每个颜色点重复颜色，第二个是 CSS Images Level 4 多个颜色点方法，在一个线性的颜色点声明中包含两个颜色点长度。
+在这两个例子中，渐变都写了两次：第一个是 CSS Images Level 3 方法，可为每个色标重复颜色，第二个是 CSS Images Level 4 多个色标方法，在一个线性的色标声明中包含两个色标长度。
 
 ### 控制渐变的进程
 
-默认情况下，渐变在两个相邻的颜色点之间都是均匀推进的，两个颜色点之间的中点是颜色值的中点。你可以控制两个颜色点之间的插值（{{Glossary("interpolation")}}），或者过程，方法是添加一个颜色提示位置。在这个例子中，颜色在渐变过程的 20% 而不是 50% 的位置到达黄绿色和青色之间的中点。第二个例子没有提示，因此可以通过对比看出颜色提示的效果。
+默认情况下，渐变在两个相邻的色标之间都是均匀推进的，两个色标之间的中点是颜色值的中点。你可以控制两个色标之间的插值（{{Glossary("interpolation")}}），或者过程，方法是添加一个颜色提示位置。在这个例子中，颜色在渐变过程的 20% 而不是 50% 的位置到达黄绿色和青色之间的中点。第二个例子没有提示，因此可以通过对比看出颜色提示的效果。
 
 ```html hidden
 <div class="colorhint-gradient"></div>
@@ -388,9 +388,9 @@ div {
 
 {{ EmbedLiveSample('基本的径向渐变', 120, 120) }}
 
-### 设置径向颜色点的位置
+### 设置径向色标的位置
 
-和线性渐变一样，你可以用百分比或者绝对长度指定每个径向颜色点的位置。
+和线性渐变一样，你可以用百分比或者绝对长度指定每个径向色标的位置。
 
 ```html hidden
 <div class="radial-gradient"></div>
@@ -409,7 +409,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('设置径向颜色点的位置', 120, 120) }}
+{{ EmbedLiveSample('设置径向色标的位置', 120, 120) }}
 
 ### 设置渐变的中心
 
@@ -620,7 +620,7 @@ div {
 
 **`conic-gradient()`** [CSS](/zh-CN/docs/Web/CSS) 函数创建包含颜色围绕中心点旋转（两颗不是从中心点辐射）产生的渐变的图像。锥形渐变的例子包括了饼图和{{glossary("color wheel", "色轮")}}，但是也可以用于创建棋盘格和其他有趣的效果。
 
-锥形渐变的语法和径向渐变的语法类似，但是颜色点是围绕渐变弧（圆的圆周）进行的，而不是从渐变中心出现的渐变线上，并且颜色点是百分比或度数：绝对长度无效。
+锥形渐变的语法和径向渐变的语法类似，但是色标是围绕渐变弧（圆的圆周）进行的，而不是从渐变中心出现的渐变线上，并且色标是百分比或度数：绝对长度无效。
 
 在径向渐变中，颜色从椭圆中心的位置在各个方向上向外过渡。在锥形渐变中，颜色围绕圆的中心在圆周上旋转过渡，从顶部开始，顺时针进行。类似于径向渐变，你可以设置渐变的中心。类似于线性渐变，你可以改变渐变的角度。
 
@@ -672,7 +672,7 @@ div {
 
 ### 改变角度
 
-默认情况下，你指定的不同颜色点是围绕着圆均等分布的。你可以在开始时使用“from”关键字以及一个角度或者长度以指定锥形渐变的起始点，然后你可以在后面包括角度或者长度以指定不同的位置。
+默认情况下，你指定的不同色标是围绕着圆均等分布的。你可以在开始时使用“from”关键字以及一个角度或者长度以指定锥形渐变的起始点，然后你可以在后面包括角度或者长度以指定不同的位置。
 
 ```html hidden
 <div class="conic-gradient"></div>
@@ -695,9 +695,9 @@ div {
 
 ## 使用重复的渐变
 
-{{cssxref("gradient/linear-gradient", "linear-gradient()")}}、{{cssxref("gradient/radial-gradient", "radial-gradient()")}} 和 {{cssxref("gradient/conic-gradient", "conic-gradient()")}} 函数不支持自动重复的颜色点。但是，{{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}、{{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} 和 {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} 函数可以用于提供此功能。
+{{cssxref("gradient/linear-gradient", "linear-gradient()")}}、{{cssxref("gradient/radial-gradient", "radial-gradient()")}} 和 {{cssxref("gradient/conic-gradient", "conic-gradient()")}} 函数不支持自动重复的色标。但是，{{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}、{{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} 和 {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} 函数可以用于提供此功能。
 
-重复渐变线或弧的大小，是第一个颜色点和最后一个颜色点之间的长度。如果第一个颜色点只有颜色没有颜色点长度，那么值默认为 0。如果最后一个颜色点只有颜色没有颜色点长度，那么值默认为 100%。如果都没有指定，那么渐变线是 100%，意味着线性和锥形的渐变都不会重复，径向渐变只会在渐变的半径小于中心点和最远角之间的距离时重复。如果第一个颜色点声明了，其值大于 0，渐变也会重复，因为线或弧的大小就是第一个颜色点和最后一个颜色点之间的距离，小于 100% 或 360 度。
+重复渐变线或弧的大小，是第一个色标和最后一个色标之间的长度。如果第一个色标只有颜色没有色标长度，那么值默认为 0。如果最后一个色标只有颜色没有色标长度，那么值默认为 100%。如果都没有指定，那么渐变线是 100%，意味着线性和锥形的渐变都不会重复，径向渐变只会在渐变的半径小于中心点和最远角之间的距离时重复。如果第一个色标声明了，其值大于 0，渐变也会重复，因为线或弧的大小就是第一个色标和最后一个色标之间的距离，小于 100% 或 360 度。
 
 ### 重复的线性渐变
 
@@ -776,7 +776,7 @@ div {
 
 ### 格纹渐变
 
-要创建格纹，我们使用了几个重叠的带有透明的渐变。在第一个背景声明中，我们分别列举出了每个颜色点。第二个背景属性声明使用了颜色点的多个位置的语法：
+要创建格纹，我们使用了几个重叠的带有透明的渐变。在第一个背景声明中，我们分别列举出了每个色标。第二个背景属性声明使用了色标的多个位置的语法：
 
 ```html hidden
 <div class="plaid-gradient"></div>

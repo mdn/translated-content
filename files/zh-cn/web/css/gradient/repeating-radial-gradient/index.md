@@ -9,7 +9,7 @@ slug: Web/CSS/gradient/repeating-radial-gradient
 
 {{EmbedInteractiveExample("pages/css/function-repeating-radial-gradient.html")}}
 
-每次重复时，颜色点的位置的偏移量都是基准渐变长度（最后一个颜色点和第一个之间的距离）的倍数。因此，最后颜色点的颜色应该与第一个颜色的颜色保持一致；如果不一致的话，会导致非常突兀的渐变效果，可以将第一个颜色点重复添加到最后一个中来解决。
+每次重复时，色标（color stop）的位置的偏移量都是基准渐变长度（最后一个色标和第一个之间的距离）的倍数。因此，最后色标的颜色应该与第一个颜色的颜色保持一致；如果不一致的话，会导致非常突兀的渐变效果，可以将第一个色标重复添加到最后一个中来解决。
 
 与其他渐变一样，径向重复渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#description)，也就是说没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 
@@ -33,24 +33,24 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 ### 值
 
 - {{cssxref("&lt;position&gt;")}}
-  - : `position` 与 {{cssxref("background-position")}} 或者 {{cssxref("transform-origin")}} 类似。默认值为 `center`。
+  - : 渐变的位置，和 {{cssxref("background-position")}} 或者 {{cssxref("transform-origin")}} 以相同方式解析。如果没有指定，默认为 `center`。
 - `<shape>`
-  - : 渐变的形状。圆形（渐变的形状是一个半径不变的正圆）或椭圆形（轴对称椭圆）。如果没有指定，默认为椭圆形，即 `ellipse`。
+  - : 渐变的结束形状。值可以是 `circle`（圆形，渐变的形状是一个半径不变的正圆）或 `ellipse`（椭圆，轴对称椭圆）。如果没有指定，默认为 `ellipse`。
 - `<extent-keyword>`
 
-  - : 关键字用于描述边缘轮廓的具体位置。以下为关键字常量：
+  - : 关键字，描述结束形状应该有多大。可能的值包括：
 
-    | 关键字            | 描述                                                                                                             |
-    | ----------------- | ---------------------------------------------------------------------------------------------------------------- |
-    | `closest-side`    | 渐变的边缘形状与容器距离渐变中心点最近的一边相切（圆形）或者至少与距离渐变中心点最近的垂直和水平边相切（椭圆）。 |
-    | `closest-corner`  | 渐变的边缘形状与容器距离渐变中心点最近的一个角相交。                                                             |
-    | `farthest-side`   | 与 `closest-side` 相反，边缘形状与容器距离渐变中心点最远的一边相切（或最远的垂直和水平边）。                     |
-    | `farthest-corner` | 渐变的边缘形状与容器距离渐变中心点最远的一个角相交。                                                             |
+    | 关键字            | 描述                                                                                                               |
+    | ----------------- | ------------------------------------------------------------------------------------------------------------------ |
+    | `closest-side`    | 渐变结束形状如果是圆形，与容器距离渐变中心点最近的一边相切，如果是椭圆，则与距离渐变中心点最近的垂直和水平边相切。 |
+    | `closest-corner`  | 渐变结束形状与容器距离渐变中心点最近的一个角相交。                                                                 |
+    | `farthest-side`   | 与 `closest-side` 相反，结束形状与容器距离渐变中心点最远的一边（或最远的垂直和水平边）相切。                       |
+    | `farthest-corner` | 渐变结束形状与容器距离渐变中心点最远的一个角相交。                                                                 |
 
     > **备注：** 早期的草案中还包含其他关键字 (`cover` and `contain`) ，分别相当于标准关键字 `farthest-corner` 和 `closest-side`,。但因为在某些实现中丢弃了这些旧的关键字，所以请仅使用标准关键字。
 
 - `<color-stop>`
-  - : 颜色点的 {{cssxref("&lt;color&gt;")}} 值，随后是可选的停止位置（沿着渐变轴的 {{cssxref("&lt;percentage&gt;")}} 或 {{cssxref("&lt;length&gt;")}}）。百分比值 `0%`，或者长度值 `0`，表示渐变中心点；百分比值 `100%` 表示渐变射线与边缘形状相交的点。其间的百分比值线性对应渐变射线上的点。
+  - : 色标（color stop）的 {{cssxref("&lt;color&gt;")}} 值，然后是一个或两个可选的色标位置（沿渐变轴的 {{cssxref("&lt;percentage&gt;")}} 或 {{cssxref("&lt;length&gt;")}}）。百分比值 `0%`，或者长度值 `0`，表示渐变中心点；百分比值 `100%` 表示渐变射线与结束形状相交的点。其间的百分比值线性对应渐变射线上的点。
 
 ### 形式语法
 
@@ -120,7 +120,7 @@ background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
 
 {{EmbedLiveSample('Farthest-corner 渐变', '300px', '120px', '')}}
 
-这个椭圆形渐变会位于左上角靠中心 20% 的位置，在中心和最远角（右下角）之间重复 10 次。支持多位置颜色点的浏览器会显示为红色和绿色条纹的椭圆形。不支持这个语法的浏览器仍会从红色到黑色再由蓝色到绿色的渐变。
+这个椭圆形渐变会位于左上角靠中心 20% 的位置，在中心和最远角（右下角）之间重复 10 次。支持多位置色标的浏览器会显示为红色和绿色条纹的椭圆形。不支持这个语法的浏览器仍会从红色到黑色再由蓝色到绿色的渐变。
 
 > **备注：** 更多例子请见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)。
 
@@ -134,7 +134,7 @@ background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
 
 ## 参见
 
-- [使用 CSS 渐变](/zh-CN/docs/Web/Guide/CSS/Using_CSS_gradients)
+- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - 其他渐变函数：{{cssxref("gradient/radial-gradient", "radial-gradient()")}}、{{cssxref("gradient/linear-gradient", "linear-gradient()")}}、{{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}、{{cssxref("gradient/conic-gradient", "conic-gradient()")}}、{{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}
