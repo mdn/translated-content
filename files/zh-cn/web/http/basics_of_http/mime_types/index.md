@@ -298,5 +298,3 @@ MIME 类型不是传达文档类型信息的唯一方式：
 - [Web 媒体类型指南](/zh-CN/docs/Web/Media/Formats)
 - [正确配置服务器 MIME 类型](/zh-CN/docs/Learn/Server-side/Configuring_server_MIME_types)
 - <https://www.iana.org/assignments/media-types/application/json>
-
-{{HTTPSidebar}}
