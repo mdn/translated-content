@@ -1,7 +1,6 @@
 ---
 title: Math.trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/trunc
 ---
 
 {{JSRef}}

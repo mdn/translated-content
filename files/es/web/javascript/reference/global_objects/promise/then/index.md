@@ -1,7 +1,6 @@
 ---
 title: Promise.prototype.then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/then
 ---
 
 {{JSRef}}
