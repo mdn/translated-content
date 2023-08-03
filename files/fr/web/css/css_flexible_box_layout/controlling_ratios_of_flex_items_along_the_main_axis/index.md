@@ -1,7 +1,6 @@
 ---
 title: Contrôler les proportions des boîtes flexibles le long de l'axe principal
-slug: >-
-  Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
+slug: Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Gestionnaire de Proxy (handler)
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
-translation_of_original: Web/JavaScript/Reference/Global_Objects/Proxy/handler
 ---
 
 {{JSRef}}

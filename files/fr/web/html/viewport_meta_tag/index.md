@@ -1,7 +1,5 @@
 ---
-title: >-
-  Utilisation de la balise meta viewport pour contrôler la mise en page sur
-  mobile
+title: Utilisation de la balise meta viewport pour contrôler la mise en page sur mobile
 slug: Web/HTML/Viewport_meta_tag
 ---
 

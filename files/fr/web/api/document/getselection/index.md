@@ -1,7 +1,6 @@
 ---
 title: document.getSelection
 slug: Web/API/Document/getSelection
-translation_of_original: Web/API/Document/getSelection
 ---
 
 {{APIRef("DOM")}}

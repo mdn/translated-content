@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onresize
 slug: Web/API/Window/resize_event
-translation_of_original: Web/API/Element.onresize
 ---
 
 {{ApiRef}}

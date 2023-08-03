@@ -1,7 +1,5 @@
 ---
-title: >-
-  Quelle différence entre une page web, un site web, un serveur web et un moteur
-  de recherche ?
+title: Quelle différence entre une page web, un site web, un serveur web et un moteur de recherche ?
 slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
 ---
 
