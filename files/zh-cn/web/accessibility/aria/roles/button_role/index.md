@@ -257,7 +257,7 @@ function toggleButton(element) {
 
 ### 结果
 
-{{EmbedLiveSample('ARIA_Toggle_Button')}}
+{{EmbedLiveSample('切换按钮示例')}}
 
 ## 无障碍考虑
 
