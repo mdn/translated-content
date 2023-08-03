@@ -1,20 +1,6 @@
 ---
 title: Генератор глупых историй
 slug: Learn/JavaScript/First_steps/Silly_story_generator
-tags:
-  - JavaScript
-  - Задание
-  - Изучение
-  - Испытание
-  - Массивы
-  - Написание Кода
-  - Начальный Уровень
-  - Операторы
-  - Переменные
-  - Проверка
-  - Числа
-translation_of: Learn/JavaScript/First_steps/Silly_story_generator
-original_slug: Learn/JavaScript/Первые_шаги/Создатель_глупых_историй
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Первые_шаги/Arrays", "Learn/JavaScript/Первые_шаги")}}

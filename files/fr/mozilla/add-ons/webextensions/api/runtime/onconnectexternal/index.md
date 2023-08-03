@@ -1,7 +1,6 @@
 ---
 title: runtime.onConnectExternal
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal
 ---
 
 {{AddonSidebar()}}

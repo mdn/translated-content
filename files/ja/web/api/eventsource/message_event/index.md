@@ -1,7 +1,6 @@
 ---
-title: 'EventSource: message イベント'
+title: "EventSource: message イベント"
 slug: Web/API/EventSource/message_event
-original_slug: Web/API/EventSource/onmessage
 l10n:
   sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---

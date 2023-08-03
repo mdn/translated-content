@@ -1,7 +1,6 @@
 ---
 title: webRequest.onBeforeRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest
 ---
 
 {{AddonSidebar()}}

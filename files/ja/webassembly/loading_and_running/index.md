@@ -1,7 +1,7 @@
 ---
 title: WebAssembly コードの読み込みと実行
 slug: WebAssembly/Loading_and_running
-i10n:
+l10n:
   sourceCommit: 1ef12f2e0815d0d285d6027219c987a3e4e228a3
 ---
 

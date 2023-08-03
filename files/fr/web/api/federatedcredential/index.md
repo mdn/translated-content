@@ -1,7 +1,6 @@
 ---
 title: FederatedCredential
 slug: Web/API/FederatedCredential
-translation_of: Web/API/FederatedCredential
 ---
 
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}

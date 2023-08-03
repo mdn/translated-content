@@ -1,7 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.setInterval()
 slug: Web/API/setInterval
-original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
 
 {{APIRef("HTML DOM")}}

@@ -1,7 +1,6 @@
 ---
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/finally
 ---
 
 {{JSRef}}

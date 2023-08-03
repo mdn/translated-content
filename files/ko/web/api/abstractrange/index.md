@@ -49,7 +49,7 @@ let endElem = startElem.querySelector("span");
 let range = document.createRange();
 
 range.setStart(startElem, 0);
-range.setEnd(endElem, endElem.childNodes[0].length/2);
+range.setEnd(endElem, endElem.childNodes[0].length / 2);
 let contents = range.cloneContents();
 
 document.body.appendChild(contents);
@@ -72,13 +72,15 @@ To illustrate this, consider the HTML below:
 ```html
 <div class="container">
   <div class="header">
-    <img src="" class="sitelogo">
+    <img src="" class="sitelogo" />
     <h1>The Ultimate Website</h1>
   </div>
   <article>
     <section class="entry" id="entry1">
       <h2>Section 1: An interesting thing...</h2>
-      <p>A <em>very</em> interesting thing happened on the way to the forum...</p>
+      <p>
+        A <em>very</em> interesting thing happened on the way to the forum...
+      </p>
       <aside class="callout">
         <h2>Aside</h2>
         <p>An interesting aside to share with you...</p>
@@ -149,7 +151,7 @@ let paraTextNode = paraNode.childNodes[1];
 
 let range = document.createRange();
 range.setStart(paraTextNode, 6);
-range.setEnd(paraTextNode, paraTextNode.length-1);
+range.setEnd(paraTextNode, paraTextNode.length - 1);
 
 let fragment = range.cloneContents();
 document.body.appendChild(fragment);

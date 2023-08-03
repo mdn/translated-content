@@ -1,7 +1,6 @@
 ---
 title: 510 Not Extended
 slug: Web/HTTP/Status/510
-translation_of: Web/HTTP/Status/510
 ---
 
 {{HTTPSidebar}}

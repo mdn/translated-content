@@ -1,7 +1,6 @@
 ---
 title: Utiliser le mode plein écran
 slug: Web/API/Fullscreen_API
-translation_of: Web/API/Fullscreen_API
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}

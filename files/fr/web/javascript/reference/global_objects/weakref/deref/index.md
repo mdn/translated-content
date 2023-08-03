@@ -1,7 +1,6 @@
 ---
 title: WeakRef.prototype.deref()
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
 title: WebSocket.onerror
 slug: Web/API/WebSocket/error_event
-original_slug: Web/API/WebSocket/onerror
 ---
 
 {{APIRef("Web Sockets API")}}

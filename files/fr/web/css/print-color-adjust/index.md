@@ -1,7 +1,6 @@
 ---
 title: print-color-adjust
 slug: Web/CSS/print-color-adjust
-translation_of: Web/CSS/print-color-adjust
 ---
 
 {{CSSRef}}

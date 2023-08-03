@@ -1,10 +1,6 @@
 ---
 title: font-style
 slug: Web/CSS/font-style
-tags:
-  - Ссылка
-  - шрифт
-translation_of: Web/CSS/font-style
 ---
 {{CSSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: Noms des métadonnées standard
 slug: Web/HTML/Element/meta/name
-translation_of: Web/HTML/Element/meta/name
 ---
 
 {{HTMLSidebar}}

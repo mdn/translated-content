@@ -2,7 +2,7 @@
 title: シグナリングとビデオ通話
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
 l10n:
- 3f7036e4dbe83e50c873c42a88a5a7d1d80a478e
+  sourceCommit: 3f7036e4dbe83e50c873c42a88a5a7d1d80a478e
 ---
 
 {{DefaultAPISidebar("WebRTC")}}

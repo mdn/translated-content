@@ -1,7 +1,6 @@
 ---
 title: TreeWalker.currentNode
 slug: Web/API/TreeWalker/currentNode
-translation_of: Web/API/TreeWalker/currentNode
 ---
 
 {{ APIRef("DOM") }}

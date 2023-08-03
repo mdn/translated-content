@@ -1,7 +1,6 @@
 ---
 title: "<figure> : l'élément de figure avec légende facultative"
 slug: Web/HTML/Element/figure
-translation_of: Web/HTML/Element/figure
 ---
 
 {{HTMLSidebar}}

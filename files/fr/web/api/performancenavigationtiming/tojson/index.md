@@ -1,7 +1,6 @@
 ---
 title: PerformanceNavigationTiming.toJSON()
 slug: Web/API/PerformanceNavigationTiming/toJSON
-translation_of: Web/API/PerformanceNavigationTiming/toJSON
 ---
 
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}

@@ -1,7 +1,6 @@
 ---
 title: border-block-color
 slug: Web/CSS/border-block-color
-translation_of: Web/CSS/border-block-color
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

@@ -1,8 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.clearTimeout()
 slug: Web/API/clearTimeout
-translation_of: Web/API/WindowOrWorkerGlobalScope/clearTimeout
-original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 ---
 
 {{APIRef("HTML DOM")}}
@@ -28,40 +26,43 @@ It's worth noting that the pool of IDs used by {{domxref("WindowOrWorkerGlobalSc
 
 ```js
 var alarm = {
-  remind: function(aMessage) {
+  remind: function (aMessage) {
     alert(aMessage);
     this.timeoutID = undefined;
   },
 
-  setup: function() {
-    if (typeof this.timeoutID === 'number') {
+  setup: function () {
+    if (typeof this.timeoutID === "number") {
       this.cancel();
     }
 
-    this.timeoutID = window.setTimeout(function(msg) {
-      this.remind(msg);
-    }.bind(this), 1000, 'Wake up!');
+    this.timeoutID = window.setTimeout(
+      function (msg) {
+        this.remind(msg);
+      }.bind(this),
+      1000,
+      "Wake up!",
+    );
   },
 
-  cancel: function() {
+  cancel: function () {
     window.clearTimeout(this.timeoutID);
-  }
+  },
 };
-window.onclick = function() { alarm.setup(); };
+window.onclick = function () {
+  alarm.setup();
+};
 ```
 
 ## Примечания
 
 Передача недействительного ID `clearTimeout()` ни к чему не приведёт. Исключение не создается.
 
-## Спецификация
+## Спецификации
 
-| Specification                                                                                                                                    | Status                           | Comment                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#dom-cleartimeout', 'WindowOrWorkerGlobalScope.clearTimeout()')}} | {{Spec2("HTML WHATWG")}} | Method moved to the `WindowOrWorkerGlobalScope` mixin in the latest spec. |
-| {{SpecName('HTML WHATWG', 'webappapis.html#dom-cleartimeout', 'clearTimeout()')}}                                     | {{Spec2('HTML WHATWG')}} |                                                                           |
+{{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

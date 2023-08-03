@@ -1,7 +1,6 @@
 ---
 title: 게임 오버
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
-original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Game_over
 ---
 
 {{GamesSidebar}}

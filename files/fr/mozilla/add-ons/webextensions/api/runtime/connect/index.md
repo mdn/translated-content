@@ -1,7 +1,6 @@
 ---
 title: runtime.connect()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/connect
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/connect
 ---
 
 {{AddonSidebar()}}

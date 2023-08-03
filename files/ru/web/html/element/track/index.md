@@ -1,19 +1,6 @@
 ---
-title: '<track>: Встраиваемая текстовая дорожка'
+title: "<track>: Встраиваемая текстовая дорожка"
 slug: Web/HTML/Element/track
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - HTML5
-  - Multimedia
-  - Reference
-  - TextTrack
-  - Web
-  - Веб
-  - Справка
-  - Элемент
-translation_of: Web/HTML/Element/track
 ---
 
 {{HTMLSidebar}}

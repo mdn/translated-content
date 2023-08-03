@@ -1,7 +1,6 @@
 ---
 title: border-collapse
 slug: Web/CSS/border-collapse
-translation_of: Web/CSS/border-collapse
 ---
 
 {{CSSRef}}

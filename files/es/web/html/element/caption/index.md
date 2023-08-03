@@ -1,7 +1,6 @@
 ---
 title: caption
 slug: Web/HTML/Element/caption
-original_slug: Web/HTML/Elemento/caption
 ---
 
 ### Definición

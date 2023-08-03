@@ -1,7 +1,6 @@
 ---
 title: Math.asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/asin
 ---
 
 {{JSRef}}

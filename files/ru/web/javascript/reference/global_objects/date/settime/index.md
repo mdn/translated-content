@@ -1,13 +1,6 @@
 ---
 title: Date.prototype.setTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setTime
 ---
 {{JSRef("Global_Objects", "Date")}}
 

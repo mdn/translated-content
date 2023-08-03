@@ -1,7 +1,6 @@
 ---
 title: WebSocket
 slug: Web/API/WebSocket
-translation_of: Web/API/WebSocket
 ---
 
 {{APIRef("Web Sockets API")}}

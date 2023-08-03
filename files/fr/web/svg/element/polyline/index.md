@@ -1,7 +1,6 @@
 ---
 title: <polyline>
 slug: Web/SVG/Element/polyline
-translation_of: Web/SVG/Element/polyline
 ---
 
 {{SVGRef}}

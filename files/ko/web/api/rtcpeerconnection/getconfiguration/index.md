@@ -30,13 +30,16 @@ var configuration = RTCPeerConnection.getConfiguration();
 ```js
 let configuration = myPeerConnection.getConfiguration();
 
-if ((configuration.certificates != undefined) && (!configuration.certificates.length)) {
-   RTCPeerConnection.generateCertificate({
-      name: 'RSASSA-PKCS1-v1_5',
-      hash: 'SHA-256',
-      modulusLength: 2048,
-      publicExponent: new Uint8Array([1, 0, 1])
-  }).then(function(cert) {
+if (
+  configuration.certificates != undefined &&
+  !configuration.certificates.length
+) {
+  RTCPeerConnection.generateCertificate({
+    name: "RSASSA-PKCS1-v1_5",
+    hash: "SHA-256",
+    modulusLength: 2048,
+    publicExponent: new Uint8Array([1, 0, 1]),
+  }).then(function (cert) {
     configuration.certificates = [cert];
     myPeerConnection.setConfiguration(configuration);
   });

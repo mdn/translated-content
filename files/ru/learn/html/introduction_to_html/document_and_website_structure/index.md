@@ -1,16 +1,6 @@
 ---
 title: Структура документа и веб-сайта
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-tags:
-  - Guide
-  - HTML
-  - Базовая разметка
-  - Гайд
-  - Для новичков
-  - С чего начать
-  - Структура сайта
-translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-original_slug: Learn/HTML/Введение_в_HTML/Структура_документа_и_веб-сайта
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}

@@ -1,7 +1,6 @@
 ---
 title: Notification()
 slug: Web/API/Notification/Notification
-translation_of: Web/API/Notification/Notification
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

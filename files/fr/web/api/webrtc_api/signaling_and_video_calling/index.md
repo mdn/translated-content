@@ -1,7 +1,6 @@
 ---
 title: L’essentiel du WebRTC
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
-translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 translation_of_original: Web/API/WebRTC_API/WebRTC_basics
 ---
 

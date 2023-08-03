@@ -1,7 +1,6 @@
 ---
 title: Options page
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 ---
 
 {{AddonSidebar}}

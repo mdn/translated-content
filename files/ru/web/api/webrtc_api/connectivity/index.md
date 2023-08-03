@@ -1,9 +1,8 @@
 ---
 title: WebRTC подключение
 slug: Web/API/WebRTC_API/Connectivity
-translation_of: Web/API/WebRTC_API/Connectivity
-original_slug: Web/API/WebRTC_API/связь
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 Теперь, когда мы рассмотрели протоколы по отдельности, мы можем сложить их вместе. Эта статья описывает, как различные связанные с WebRTC протоколы взаимодействуют друг с другом для того, чтобы создать соединение и передать данные и/или медиа между узлами.

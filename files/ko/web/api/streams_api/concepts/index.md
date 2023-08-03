@@ -1,7 +1,6 @@
 ---
 title: Streams API 컨셉
 slug: Web/API/Streams_API/Concepts
-original_slug: Web/API/Streams_API/컨셉
 ---
 
 {{apiref("Streams")}}
@@ -14,7 +13,7 @@ A readable stream is a data source represented in JavaScript by a {{domxref("Rea
 
 There are two types of underlying source:
 
-- **Push sources** constantly push data at you when you’ve accessed them, and it is up to you to start, pause, or cancel access to the stream. Examples include video streams and TCP/[Web sockets](/ko/docs/Web/API/WebSockets_API).
+- **Push sources** constantly push data at you when you've accessed them, and it is up to you to start, pause, or cancel access to the stream. Examples include video streams and TCP/[Web sockets](/ko/docs/Web/API/WebSockets_API).
 - **Pull sources** require you to explicitly request data from them once connected to. Examples include a file access operation via a [Fetch](/ko/docs/Web/API/Fetch_API) or [XHR](/ko/docs/Web/API/XMLHttpRequest/XMLHttpRequest) call.
 
 The data is read sequentially in small pieces called **chunks**. A chunk can be a single byte, or it can be something larger such as a [typed array](/ko/docs/Web/JavaScript/Typed_arrays) of a certain size. A single stream can contain chunks of different sizes and types.
@@ -25,11 +24,11 @@ The chunks placed in a stream are said to be **enqueued** — this means they ar
 
 The chunks inside the stream are read by a **reader** — this processes the data one chunk at a time, allowing you to do whatever kind of operation you want to do on it. The reader plus the other processing code that goes along with it is called a **consumer**.
 
-There is also a construct you’ll use called a **controller** — each reader has an associated controller that allows you to control the stream (for example, to cancel it if wished).
+There is also a construct you'll use called a **controller** — each reader has an associated controller that allows you to control the stream (for example, to cancel it if wished).
 
 Only one reader can read a stream at a time; when a reader is created and starts reading a stream (an **active reader**), we say it is **locked** to it. If you want another reader to start reading your stream, you typically need to cancel the first reader before you do anything else (although you can **tee** streams, see the Teeing section below)
 
-Note that there are two different types of readable stream. As well as the conventional readable stream there is a type called a byte stream — this is an extended version of a conventional stream for reading underlying byte sources (otherwise known as BYOB, or “bring your own buffer”) sources. These allow streams to be read straight into a buffer supplied by the developer, minimizing the copying required. Which underlying stream (and by extension, reader and controller) your code will use depends on how the stream was created in the first place (see the {{domxref("ReadableStream.ReadableStream()")}} constructor page).
+Note that there are two different types of readable stream. As well as the conventional readable stream there is a type called a byte stream — this is an extended version of a conventional stream for reading underlying byte sources (otherwise known as BYOB, or "bring your own buffer") sources. These allow streams to be read straight into a buffer supplied by the developer, minimizing the copying required. Which underlying stream (and by extension, reader and controller) your code will use depends on how the stream was created in the first place (see the {{domxref("ReadableStream.ReadableStream()")}} constructor page).
 
 > **경고:** **Important**: Byte streams are not implemented anywhere as yet, and questions have been raised as to whether the spec details are in a finished enough state for them to be implemented. This may change over time.
 
@@ -41,7 +40,7 @@ Even though only a single reader can read a stream at once, it is possible to sp
 
 In JavaScript, this is achieved via the {{domxref("ReadableStream.tee()")}} method — it outputs an array containing two identical copies of the original readable stream, which can then be read independently by two separate readers.
 
-You might do this for example in a [ServiceWorker](/ko/docs/Web/API/Service_Worker_API) if you want to fetch a response from the server and stream it to the browser, but also stream it to the ServiceWorker cache. Since a response body cannot be consumed more than once, and a stream can't be read by more than one reader at once, you’d need two copies to do this.
+You might do this for example in a [ServiceWorker](/ko/docs/Web/API/Service_Worker_API) if you want to fetch a response from the server and stream it to the browser, but also stream it to the ServiceWorker cache. Since a response body cannot be consumed more than once, and a stream can't be read by more than one reader at once, you'd need two copies to do this.
 
 ![](tee.png)
 
@@ -55,7 +54,7 @@ When a writer is created and starts writing to a stream (an **active writer**), 
 
 An **internal queue** keeps track of the chunks that have been written to the stream but not yet been processed by the underlying sink.
 
-There is also a construct you’ll use called a controller — each writer has an associated controller that allows you to control the stream (for example, to abort it if wished).
+There is also a construct you'll use called a controller — each writer has an associated controller that allows you to control the stream (for example, to abort it if wished).
 
 ![](writable_streams.png)
 
@@ -101,6 +100,6 @@ high water mark - total size of chunks in queue = desired size
 
 The **desired size** is the size of chunks the stream can still accept to keep the stream flowing but below the high water mark in size. After the calculation is performed, chunk generation will be slowed down/sped up as appropriate to keep the stream flowing as fast as possible while keeping the desired size above zero. If the value falls to zero (or below in the case of writable streams), it means that chunks are being generated faster than the stream can cope with, which results in problems.
 
-> **참고:** What happens in the case of zero or negative desired size hasn’t really been defined in the spec so far. Patience is a virtue.
+> **참고:** What happens in the case of zero or negative desired size hasn't really been defined in the spec so far. Patience is a virtue.
 
 As an example, let's take a chunk size of 1, and a high water mark of 3. This means that up to 3 chunks can be enqueued before the high water mark is reached and backpressure is applied.

@@ -1,5 +1,6 @@
 ---
-title: CompositionEvent.data
+title: "CompositionEvent: data プロパティ"
+short-title: data
 slug: Web/API/CompositionEvent/data
 l10n:
   sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb

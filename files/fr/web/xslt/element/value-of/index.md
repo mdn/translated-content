@@ -1,7 +1,6 @@
 ---
 title: value-of
 slug: Web/XSLT/Element/value-of
-translation_of: Web/XSLT/Element/value-of
 ---
 
 {{ XsltRef() }}

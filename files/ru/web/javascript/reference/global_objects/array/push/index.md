@@ -1,12 +1,6 @@
 ---
 title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/push
 ---
 {{JSRef("Global_Objects", "Array")}}
 

@@ -1,7 +1,6 @@
 ---
 title: FederatedCredential.provider
 slug: Web/API/FederatedCredential/provider
-translation_of: Web/API/FederatedCredential/provider
 ---
 
 {{SeeCompatTable}}{{APIRef("")}}

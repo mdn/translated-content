@@ -1,7 +1,6 @@
 ---
 title: Chiffrement avec clé publique
 slug: Glossary/Public-key_cryptography
-translation_of: Glossary/Public-key_cryptography
 ---
 
 Le chiffrage avec clé publique — ou _chiffrage asymétrique_ — est un système de chiffrage dans lequel les clés fonctionnent par paires. La transformation réalisée par l'une des clés ne peut être inversée que par l'autre clé. L'une des clés (la _clé privée_) est gardée secrète, tandis que l'autre est rendue publique.

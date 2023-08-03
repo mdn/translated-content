@@ -1,11 +1,6 @@
 ---
 title: Сообщения HTTP
 slug: Web/HTTP/Messages
-tags:
-  - HTTP
-  - Веб Механика
-  - Руководство
-translation_of: Web/HTTP/Messages
 ---
 {{HTTPSidebar}}
 

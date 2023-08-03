@@ -1,7 +1,6 @@
 ---
 title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 ---
 
 {{JSRef}}

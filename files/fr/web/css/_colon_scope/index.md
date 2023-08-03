@@ -1,7 +1,6 @@
 ---
 title: ":scope"
 slug: Web/CSS/:scope
-translation_of: Web/CSS/:scope
 ---
 
 {{CSSRef}}

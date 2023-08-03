@@ -1,7 +1,6 @@
 ---
 title: Node.lastChild
 slug: Web/API/Node/lastChild
-translation_of: Web/API/Node/lastChild
 ---
 
 {{ ApiRef() }}

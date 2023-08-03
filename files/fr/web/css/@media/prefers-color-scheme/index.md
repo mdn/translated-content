@@ -1,7 +1,6 @@
 ---
 title: prefers-color-scheme
 slug: Web/CSS/@media/prefers-color-scheme
-translation_of: Web/CSS/@media/prefers-color-scheme
 ---
 
 {{CSSRef}}

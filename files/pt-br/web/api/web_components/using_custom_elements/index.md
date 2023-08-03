@@ -1,7 +1,6 @@
 ---
 title: Usando custom elements
 slug: Web/API/Web_components/Using_custom_elements
-original_slug: Web/Web_Components/Using_custom_elements
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -23,7 +22,7 @@ Para registar um custom element na página, use o método {{domxref("CustomEleme
 Então, por exemplo, podemos definir um custom element [word-count](https://mdn.github.io/web-components-examples/word-count-web-component/) `(contagem-palavras)` assim:
 
 ```js
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 O elemento é chamado de `word-count`, seu objeto de classe é `WordCount`, e estende o elemento {{htmlelement("p")}}.
@@ -81,42 +80,47 @@ Dentro do construtor, definimos toda a funcionalidade que o elemento terá quand
 
 ```js
 // Create a shadow root
-this.attachShadow({mode: 'open'}); // sets and returns 'this.shadowRoot'
+this.attachShadow({ mode: "open" }); // sets and returns 'this.shadowRoot'
 
 // Create (nested) span elements
-const wrapper = document.createElement('span');
-wrapper.setAttribute('class','wrapper');
-const icon = wrapper.appendChild(document.createElement('span'));
-icon.setAttribute('class','icon');
-icon.setAttribute('tabindex', 0);
+const wrapper = document.createElement("span");
+wrapper.setAttribute("class", "wrapper");
+const icon = wrapper.appendChild(document.createElement("span"));
+icon.setAttribute("class", "icon");
+icon.setAttribute("tabindex", 0);
 // Insert icon from defined attribute or default icon
-const img = icon.appendChild(document.createElement('img'));
-img.src = this.hasAttribute('img') ? this.getAttribute('img') : 'img/default.png';
+const img = icon.appendChild(document.createElement("img"));
+img.src = this.hasAttribute("img")
+  ? this.getAttribute("img")
+  : "img/default.png";
 
-const info = wrapper.appendChild(document.createElement('span'));
-info.setAttribute('class','info');
+const info = wrapper.appendChild(document.createElement("span"));
+info.setAttribute("class", "info");
 // Take attribute content and put it inside the info span
-info.textContent = this.getAttribute('data-text');
+info.textContent = this.getAttribute("data-text");
 
 // Create some CSS to apply to the shadow dom
-const style = document.createElement('style');
-style.textContent = '.wrapper {' +
-// CSS truncated for brevity
+const style = document.createElement("style");
+style.textContent =
+  ".wrapper {" +
+  // CSS truncated for brevity
 
-// attach the created elements to the shadow DOM
-this.shadowRoot.append(style,wrapper);
+  // attach the created elements to the shadow DOM
+  this.shadowRoot.append(style, wrapper);
 ```
 
 Por fim, registramos nosso custom element no `CustomElementRegistry` usando o método`define()` mencionado anteriormente — nos parâmetros especificamos o nome do elemento e, em seguida, o nome da classe que define sua funcionalidade:
 
 ```js
-customElements.define('popup-info', PopUpInfo);
+customElements.define("popup-info", PopUpInfo);
 ```
 
 Agora está disponível para uso em nossa página. Em nosso HTML, nós o usamos assim:
 
 ```html
-<popup-info img="img/alt.png" data-text="Your card validation code (CVC)
+<popup-info
+  img="img/alt.png"
+  data-text="Your card validation code (CVC)
   is an extra security feature — it is the last 3 or 4 numbers on the
   back of your card."></popup-info>
 ```
@@ -131,9 +135,9 @@ Por exemplo, dê uma olhada neste código de nosso exemplo [popup-info-box-exter
 
 ```js
 // Aplicar estilos externos ao shadow dom
-const linkElem = document.createElement('link');
-linkElem.setAttribute('rel', 'stylesheet');
-linkElem.setAttribute('href', 'style.css');
+const linkElem = document.createElement("link");
+linkElem.setAttribute("rel", "stylesheet");
+linkElem.setAttribute("href", "style.css");
 
 // Anexe o elemento criado ao shadow dom
 shadow.appendChild(linkElem);
@@ -167,16 +171,14 @@ Não explicaremos a funcionalidade do elemento em detalhes aqui, mas você pode 
 Em seguida, registramos o elemento usando o método `define()` como antes, exceto que, desta vez, ele também inclui um objeto de opções que detalha de qual elemento nosso elemento personalizado herda:
 
 ```js
-customElements.define('expanding-list', ExpandingList, { extends: "ul" });
+customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 ```
 
 Usar o elemento integrado em um documento da web também parece um pouco diferente:
 
 ```html
 <ul is="expanding-list">
-
   ...
-
 </ul>
 ```
 
@@ -205,10 +207,10 @@ Vejamos um exemplo em uso. O código abaixo é retirado do exemplo [life-cycle-c
 O construtor da classe é realmente simples - aqui anexamos um shadow DOM ao elemento e, em seguida, anexamos os elementos vazios {{htmlelement("div")}} e {{htmlelement("style")}} ao shadow root:
 
 ```js
-const shadow = this.attachShadow({mode: 'open'});
+const shadow = this.attachShadow({ mode: "open" });
 
-const div = document.createElement('div');
-const style = document.createElement('style');
+const div = document.createElement("div");
+const style = document.createElement("style");
 shadow.appendChild(style);
 shadow.appendChild(div);
 ```
@@ -218,11 +220,11 @@ A função chave neste exemplo é `updateStyle()` — isso pega um elemento, peg
 ```js
 function updateStyle(elem) {
   const shadow = elem.shadowRoot;
-  shadow.querySelector('style').textContent = `
+  shadow.querySelector("style").textContent = `
     div {
-      width: ${elem.getAttribute('l')}px;
-      height: ${elem.getAttribute('l')}px;
-      background-color: ${elem.getAttribute('c')};
+      width: ${elem.getAttribute("l")}px;
+      height: ${elem.getAttribute("l")}px;
+      background-color: ${elem.getAttribute("c")};
     }
   `;
 }

@@ -1,7 +1,6 @@
 ---
 title: HTMLCollection
 slug: Web/API/HTMLCollection
-translation_of: Web/API/HTMLCollection
 ---
 
 {{APIRef("HTML DOM")}}

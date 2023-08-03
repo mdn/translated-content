@@ -1,7 +1,6 @@
 ---
 title: PerformanceElementTiming.toJSON()
 slug: Web/API/PerformanceElementTiming/toJSON
-translation_of: Web/API/PerformanceElementTiming/toJSON
 ---
 
 {{APIRef("Element Timing API")}}

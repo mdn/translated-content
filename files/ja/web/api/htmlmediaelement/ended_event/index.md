@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: ended イベント'
+title: "HTMLMediaElement: ended イベント"
 slug: Web/API/HTMLMediaElement/ended_event
 l10n:
   sourceCommit: 19dbdc2139ab1c68651da2b9338061d64567665d

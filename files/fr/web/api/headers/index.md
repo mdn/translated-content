@@ -1,7 +1,6 @@
 ---
 title: Headers
 slug: Web/API/Headers
-translation_of: Web/API/Headers
 ---
 
 {{APIRef("Fetch API")}}

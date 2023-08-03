@@ -1,13 +1,6 @@
 ---
 title: <optgroup>
 slug: Web/HTML/Element/optgroup
-tags:
-  - HTML
-  - HTML forms
-  - Описание
-  - Формы
-  - Элемент
-translation_of: Web/HTML/Element/optgroup
 ---
 
 **HTML-элемент `<optgroup>` **позволяет группировать опции, находящиеся внутри элемента {{HTMLElement("select")}}.

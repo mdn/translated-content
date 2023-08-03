@@ -1,7 +1,6 @@
 ---
 title: handler.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/getPrototypeOf
 ---
 
 {{JSRef("Global_Objects", "Proxy")}}

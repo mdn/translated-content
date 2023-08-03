@@ -12,9 +12,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked
 ## 書式
 
 ```js
-browser.pageAction.onClicked.addListener(listener)
-browser.pageAction.onClicked.removeListener(listener)
-browser.pageAction.onClicked.hasListener(listener)
+browser.pageAction.onClicked.addListener(listener);
+browser.pageAction.onClicked.removeListener(listener);
+browser.pageAction.onClicked.hasListener(listener);
 ```
 
 イベントは 3 つの関数を持ちます:
@@ -50,11 +50,10 @@ var CATGIFS = "http://chilloutandwatchsomecatgifs.com/";
 
 browser.pageAction.onClicked.addListener((tab) => {
   browser.pageAction.hide(tab.id);
-  browser.tabs.update({url: CATGIFS});
+  browser.tabs.update({ url: CATGIFS });
 });
 
-browser.pageAction.onClicked.addListener(function () {
-});
+browser.pageAction.onClicked.addListener(function () {});
 ```
 
 {{WebExtExamples}}

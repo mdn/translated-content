@@ -1,7 +1,6 @@
 ---
 title: Asignacion (=)
 slug: Web/JavaScript/Reference/Operators/Assignment
-original_slug: Web/JavaScript/Referencia/Operadores/Asignacion
 ---
 
 {{jsSidebar("Operators")}}

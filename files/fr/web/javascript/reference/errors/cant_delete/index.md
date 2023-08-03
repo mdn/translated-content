@@ -1,7 +1,6 @@
 ---
 title: 'TypeError: property "x" is non-configurable and can''t be deleted'
 slug: Web/JavaScript/Reference/Errors/Cant_delete
-translation_of: Web/JavaScript/Reference/Errors/Cant_delete
 ---
 
 {{jsSidebar("Errors")}}

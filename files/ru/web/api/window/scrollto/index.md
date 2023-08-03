@@ -1,11 +1,8 @@
 ---
 title: Window.scrollTo()
 slug: Web/API/Window/scrollTo
-tags:
-  - Плавная прокрутка
-  - Плавный скролл
-translation_of: Web/API/Window/scrollTo
 ---
+
 {{ APIRef }}
 
 ## Описание
@@ -32,12 +29,12 @@ window.scrollTo(options)
 ## Пример
 
 ```js
-window.scrollTo( 0, 1000 );
+window.scrollTo(0, 1000);
 
 // этот код меняет поведение прокрутки на "smooth"
 window.scrollTo({
-    top: 1000,
-    behavior: "smooth"
+  top: 1000,
+  behavior: "smooth",
 });
 ```
 

@@ -1,13 +1,6 @@
 ---
 title: SyntaxError
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
-tags:
-  - Error
-  - JavaScript
-  - Object
-  - Reference
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
 ---
 {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 

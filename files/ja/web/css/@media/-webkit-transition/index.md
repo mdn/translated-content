@@ -1,5 +1,5 @@
 ---
-title: '-webkit-transition'
+title: "-webkit-transition"
 slug: Web/CSS/@media/-webkit-transition
 ---
 

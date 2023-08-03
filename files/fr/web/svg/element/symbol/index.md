@@ -1,7 +1,6 @@
 ---
 title: <symbol>
 slug: Web/SVG/Element/symbol
-translation_of: Web/SVG/Element/symbol
 ---
 
 {{SVGRef}}

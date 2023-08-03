@@ -1,7 +1,6 @@
 ---
 title: border-image-slice
 slug: Web/CSS/border-image-slice
-translation_of: Web/CSS/border-image-slice
 ---
 {{CSSRef}}
 

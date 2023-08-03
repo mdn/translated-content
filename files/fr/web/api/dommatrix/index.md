@@ -1,7 +1,6 @@
 ---
 title: CSSMatrix
 slug: Web/API/DOMMatrix
-translation_of: Web/API/DOMMatrix
 translation_of_original: Web/API/CSSMatrix
 ---
 
