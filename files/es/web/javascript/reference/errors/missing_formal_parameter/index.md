@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing formal parameter'
+title: "SyntaxError: missing formal parameter"
 slug: Web/JavaScript/Reference/Errors/Missing_formal_parameter
 ---
 
