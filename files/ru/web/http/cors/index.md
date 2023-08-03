@@ -1,7 +1,6 @@
 ---
 title: Cross-Origin Resource Sharing (CORS)
 slug: Web/HTTP/CORS
-translation_of: Web/HTTP/CORS
 ---
 
 {{HTTPSidebar}}

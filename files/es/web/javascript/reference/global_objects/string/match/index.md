@@ -1,7 +1,6 @@
 ---
 title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/match
 ---
 
 {{JSRef('Objetos_globales', 'String')}}

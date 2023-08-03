@@ -1,5 +1,5 @@
 ---
-title: 'FileReader: loadend イベント'
+title: "FileReader: loadend イベント"
 slug: Web/API/FileReader/loadend_event
 l10n:
   sourceCommit: 03c5110696fb433c13f3ccf63266d8affe446d8a

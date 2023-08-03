@@ -1,7 +1,6 @@
 ---
 title: 웹소켓 서버 작성하기
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
-original_slug: WebSockets/Writing_WebSocket_servers
 ---
 
 {{APIRef("Websockets API")}}
@@ -133,7 +132,7 @@ If the MASK bit was set (and it should be, for client-to-server messages), read 
 ```js
 var DECODED = "";
 for (var i = 0; i < ENCODED.length; i++) {
-    DECODED[i] = ENCODED[i] ^ MASK[i % 4];
+  DECODED[i] = ENCODED[i] ^ MASK[i % 4];
 }
 ```
 

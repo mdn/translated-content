@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onloadstart
 slug: Web/API/HTMLMediaElement/loadstart_event
-translation_of: Web/API/GlobalEventHandlers/onloadstart
 ---
 
 {{ApiRef}}

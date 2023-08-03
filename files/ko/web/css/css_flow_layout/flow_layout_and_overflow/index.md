@@ -1,7 +1,6 @@
 ---
 title: 대열 레이아웃과 대열이탈
 slug: Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
-original_slug: Web/CSS/CSS_Flow_Layout/흐름_레이아웃과_오버플로
 ---
 
 컨테이너에 채울 수 없을 만큼 더 많은 내용물이 있을 때 오버플로 상황이 발생한다. CSS에서 크기 제한이 있는 요소를 다루려면 오버플로의 동작 방식을 이해하는 것이 중요하다. 이 안내서는 일반 플로우에 해당하는 작업 중에 오버플로이 작동하는 방식을 설명한다.
@@ -32,13 +31,13 @@ original_slug: Web/CSS/CSS_Flow_Layout/흐름_레이아웃과_오버플로
 
 참고: [작업 초안 오버플로 수준 3](https://www.w3.org/TR/css-overflow-3/)을 보면 추가적인 속성 값으로 `overflow: clip`이 있다. 이것은 `overflow: hidden`와 같이 작용하지만, 프로그래밍 방식의 스크롤이 불용되어 스크롤 할 수 상자가 된다. 또한, 이것은 블록 서식 상황을 생성하지 못한다.
 
-오버플로 속성은 실제로는 [`overflow-x`](/en-US/docs/Web/CSS/overflow-x)와 [`overflow-y`](/en-US/docs/Web/CSS/overflow-y) 속성의 약칭이다. 오버플로 값을 하나만 지정하면 이 값은 가로 세로 양 축에 모두 사용된다. 그러나 두 가지 값 모두를 지정할 수 있다. 첫번 째 경우에는 `overflow-x`를 수평 방향 값으로 두번째 경우에는 `overflow-y`를 수직 방향 값으로 사용하면 된다. 아래 예에서 나는 `overflow-y: scroll`만 지정함으로써 원치 않는 가로 스크롤 막대가 나타나지 않도록 했다.
+오버플로 속성은 실제로는 [`overflow-x`](/ko/docs/Web/CSS/overflow-x)와 [`overflow-y`](/ko/docs/Web/CSS/overflow-y) 속성의 약칭이다. 오버플로 값을 하나만 지정하면 이 값은 가로 세로 양 축에 모두 사용된다. 그러나 두 가지 값 모두를 지정할 수 있다. 첫번 째 경우에는 `overflow-x`를 수평 방향 값으로 두번째 경우에는 `overflow-y`를 수직 방향 값으로 사용하면 된다. 아래 예에서 나는 `overflow-y: scroll`만 지정함으로써 원치 않는 가로 스크롤 막대가 나타나지 않도록 했다.
 
 {{EmbedGHLiveSample("css-examples/flow/overflow/overflow-y.html", '100%', 700)}}
 
 ## 상대적 플로우 속성
 
-우리는 [쓰기 모드와 플로우 레이아웃](/ko/docs/Web/CSS/CSS_Flow_Layout/%ED%9D%90%EB%A6%84_%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83%EA%B3%BC_%EC%93%B0%EA%B8%B0_%EB%AA%A8%EB%93%9C) 안내서에서 `block-size`와 `inline-size`라는 새로운 속성를 살펴보았는데, 이 속성은 물리적인 화면 크기에 레이아웃을 구속하기보다는 다양한 쓰기 모드에서 작업할 경우에 적합하다. 수준 3 오버플로 모듈에는 플로우에 상대적인 오버플로 속성들[`overflow-block`](/en-US/docs/Web/CSS/@media/overflow-block)와 [`overflow-inline`](/en-US/docs/Web/CSS/@media/overflow-inline)도 포함되어 있다. 그것들은 `overflow-x`와 `overflow-y`에 대응하지만, 매핑은 문서의 쓰기 모드 여하에 달려 있다.
+우리는 [쓰기 모드와 플로우 레이아웃](/ko/docs/Web/CSS/CSS_Flow_Layout/%ED%9D%90%EB%A6%84_%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83%EA%B3%BC_%EC%93%B0%EA%B8%B0_%EB%AA%A8%EB%93%9C) 안내서에서 `block-size`와 `inline-size`라는 새로운 속성를 살펴보았는데, 이 속성은 물리적인 화면 크기에 레이아웃을 구속하기보다는 다양한 쓰기 모드에서 작업할 경우에 적합하다. 수준 3 오버플로 모듈에는 플로우에 상대적인 오버플로 속성들[`overflow-block`](/ko/docs/Web/CSS/@media/overflow-block)와 [`overflow-inline`](/ko/docs/Web/CSS/@media/overflow-inline)도 포함되어 있다. 그것들은 `overflow-x`와 `overflow-y`에 대응하지만, 매핑은 문서의 쓰기 모드 여하에 달려 있다.
 
 이들 속성은 현재 브라우저에 구현이 되어 있지 않으므로, 현 시점에는 물리적인 속성을 사용하고 쓰기 모드에 맞게 조정해야 한다.
 

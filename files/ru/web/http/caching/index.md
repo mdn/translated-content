@@ -1,13 +1,6 @@
 ---
 title: HTTP-кеширование
 slug: Web/HTTP/Caching
-tags:
-  - HTTP
-  - Кеширование
-  - Кеширование
-  - Руководство
-translation_of: Web/HTTP/Caching
-original_slug: Web/HTTP/Кеширование
 ---
 
 {{HTTPSidebar}}

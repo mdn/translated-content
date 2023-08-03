@@ -1,7 +1,6 @@
 ---
 title: XSLTProcessor
 slug: Web/API/XSLTProcessor
-translation_of: Web/API/XSLTProcessor
 ---
 
 {{Non-standard_header}}{{SeeCompatTable}}{{APIRef("XSLT")}}

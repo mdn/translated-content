@@ -1,11 +1,6 @@
 ---
 title: GET
 slug: Web/HTTP/Methods/GET
-tags:
-  - HTTP
-  - Метод запроса
-  - Справка
-translation_of: Web/HTTP/Methods/GET
 ---
 
 {{HTTPSidebar}}

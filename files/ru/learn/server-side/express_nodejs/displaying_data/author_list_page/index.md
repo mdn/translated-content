@@ -1,7 +1,6 @@
 ---
 title: Список авторов. Тест - список жанров
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
 
 Страница списка авторов должна показывать список всех авторов, хранимых в БД, причём каждое имя автора должно быть связано со страницей подробностей для этого автора. Дата рождения автора и дата смерти должны выводиться в одной строке после имени автора.

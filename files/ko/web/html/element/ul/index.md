@@ -96,22 +96,25 @@ slug: Web/HTML/Element/ul
 ```html
 <ul>
   <li>first item</li>
-  <li>second item
-  <!-- Look, the closing </li> tag is not placed here! -->
+  <li>
+    second item
+    <!-- Look, the closing </li> tag is not placed here! -->
     <ul>
       <li>second item first subitem</li>
-      <li>second item second subitem
-      <!-- Same for the second nested unordered list! -->
+      <li>
+        second item second subitem
+        <!-- Same for the second nested unordered list! -->
         <ul>
           <li>second item second subitem first sub-subitem</li>
           <li>second item second subitem second sub-subitem</li>
           <li>second item second subitem third sub-subitem</li>
         </ul>
-      </li> <!-- Closing </li> tag for the li that
+      </li>
+      <!-- Closing </li> tag for the li that
                   contains the third unordered list -->
       <li>second item third subitem</li>
     </ul>
-  <!-- Here is the closing </li> tag -->
+    <!-- Here is the closing </li> tag -->
   </li>
   <li>third item</li>
 </ul>
@@ -124,14 +127,15 @@ slug: Web/HTML/Element/ul
 ```html
 <ul>
   <li>first item</li>
-  <li>second item
-  <!-- Look, the closing </li> tag is not placed here! -->
+  <li>
+    second item
+    <!-- Look, the closing </li> tag is not placed here! -->
     <ol>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ol>
-  <!-- Here is the closing </li> tag -->
+    <!-- Here is the closing </li> tag -->
   </li>
   <li>third item</li>
 </ul>

@@ -1,7 +1,6 @@
 ---
 title: Anatomie d'un jeu vidéo
 slug: Games/Anatomy
-translation_of: Games/Anatomy
 ---
 
 {{GamesSidebar}}

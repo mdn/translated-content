@@ -1,7 +1,6 @@
 ---
 title: 511 Network Authentication Required
 slug: Web/HTTP/Status/511
-translation_of: Web/HTTP/Status/511
 ---
 
 {{HTTPSidebar}}

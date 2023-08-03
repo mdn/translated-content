@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing ; before statement'
+title: "SyntaxError: missing ; before statement"
 slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 ---
 

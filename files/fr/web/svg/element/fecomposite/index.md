@@ -1,7 +1,6 @@
 ---
 title: <feComposite>
 slug: Web/SVG/Element/feComposite
-translation_of: Web/SVG/Element/feComposite
 ---
 
 {{SVGRef}}

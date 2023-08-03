@@ -42,7 +42,7 @@ Each shadow is specified as two or three `<length>` values, followed optionally 
 
 When more than one shadow is given, shadows are applied front-to-back, with the first-specified shadow on top.
 
-This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first-letter")}} [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements).
+This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first-letter")}} [pseudo-elements](/ko/docs/Web/CSS/Pseudo-elements).
 
 ### Values
 
@@ -109,4 +109,4 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 
 - {{cssxref("box-shadow")}}
 - The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color)
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Applying color to HTML elements using CSS](/ko/docs/Web/CSS/CSS_Colors/Applying_color)

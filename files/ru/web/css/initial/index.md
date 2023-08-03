@@ -1,17 +1,6 @@
 ---
 title: initial
 slug: Web/CSS/initial
-tags:
-  - CSS
-  - CSS Cascade
-  - CSS Value
-  - Default state
-  - Initial state
-  - Layout
-  - Reference
-  - initial
-  - Справка
-translation_of: Web/CSS/initial
 ---
 {{CSSRef}}
 

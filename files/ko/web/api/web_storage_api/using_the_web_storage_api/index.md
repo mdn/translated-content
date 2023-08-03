@@ -2,6 +2,7 @@
 title: Web Storage API 사용하기
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
+
 {{DefaultAPISidebar("Web Storage API")}}
 
 Web Storage API는 브라우저에서 쿠키를 사용하는 것보다 훨씬 직관적으로 key/value 데이터를 안전하게 저장할 수 있는 메커니즘을 제공합니다.
@@ -40,38 +41,39 @@ localStorage를 지원하는 브라우저는 windows 객체에 localStorage라�
 
 ```js
 function storageAvailable(type) {
-    var storage;
-    try {
-        storage = window[type];
-        var x = '__storage_test__';
-        storage.setItem(x, x);
-        storage.removeItem(x);
-        return true;
-    }
-    catch(e) {
-        return e instanceof DOMException && (
-            // Firefox를 제외한 모든 브라우저
-            e.code === 22 ||
-            // Firefox
-            e.code === 1014 ||
-            // 코드가 존재하지 않을 수도 있기 떄문에 이름 필드도 확인합니다.
-            // Firefox를 제외한 모든 브라우저
-            e.name === 'QuotaExceededError' ||
-            // Firefox
-            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-            // 이미 저장된 것이있는 경우에만 QuotaExceededError를 확인하십시오.
-            (storage && storage.length !== 0);
-    }
+  var storage;
+  try {
+    storage = window[type];
+    var x = "__storage_test__";
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return (
+      e instanceof DOMException &&
+      // Firefox를 제외한 모든 브라우저
+      (e.code === 22 ||
+        // Firefox
+        e.code === 1014 ||
+        // 코드가 존재하지 않을 수도 있기 떄문에 이름 필드도 확인합니다.
+        // Firefox를 제외한 모든 브라우저
+        e.name === "QuotaExceededError" ||
+        // Firefox
+        e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+      // 이미 저장된 것이있는 경우에만 QuotaExceededError를 확인하십시오.
+      storage &&
+      storage.length !== 0
+    );
+  }
 }
 ```
 
 위 함수를 다음과 같이 사용할 수 있습니다.
 
 ```js
-if (storageAvailable('localStorage')) {
+if (storageAvailable("localStorage")) {
   // 야호! 우리는 localStorage를 사용할 수 있습니다.
-}
-else {
+} else {
   // 슬픈 소식, localStorage를 사용할 수 없습니다.
 }
 ```
@@ -97,7 +99,7 @@ We have also provided an [event output page](https://mdn.github.io/dom-examples/
 To start with on [main.js](https://github.com/mdn/dom-examples/blob/master/web-storage/main.js), we will test whether the storage object has already been populated (i.e., the page was previously accessed):
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem("bgcolor")) {
   populateStorage();
 } else {
   setStyles();
@@ -114,17 +116,17 @@ As noted above, values can be retrieved from storage using {{domxref("Storage.ge
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  var currentColor = localStorage.getItem("bgcolor");
+  var currentFont = localStorage.getItem("font");
+  var currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = "#" + currentColor;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 
@@ -136,9 +138,9 @@ Here, the first three lines grab the values from local storage. Next, we set the
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-  localStorage.setItem('font', document.getElementById('font').value);
-  localStorage.setItem('image', document.getElementById('image').value);
+  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
+  localStorage.setItem("font", document.getElementById("font").value);
+  localStorage.setItem("image", document.getElementById("image").value);
 
   setStyles();
 }
@@ -161,12 +163,14 @@ The {{domxref("StorageEvent")}} is fired whenever a change is made to the {{domx
 On the events page (see [events.js](https://github.com/mdn/dom-examples/blob/master/web-storage/event.js)) the only JavaScript is as follows:
 
 ```js
-window.addEventListener('storage', function(e) {
-  document.querySelector('.my-key').textContent = e.key;
-  document.querySelector('.my-old').textContent = e.oldValue;
-  document.querySelector('.my-new').textContent = e.newValue;
-  document.querySelector('.my-url').textContent = e.url;
-  document.querySelector('.my-storage').textContent = JSON.stringify(e.storageArea);
+window.addEventListener("storage", function (e) {
+  document.querySelector(".my-key").textContent = e.key;
+  document.querySelector(".my-old").textContent = e.oldValue;
+  document.querySelector(".my-new").textContent = e.newValue;
+  document.querySelector(".my-url").textContent = e.url;
+  document.querySelector(".my-storage").textContent = JSON.stringify(
+    e.storageArea,
+  );
 });
 ```
 

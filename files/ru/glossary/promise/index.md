@@ -1,11 +1,6 @@
 ---
 title: Promise
 slug: Glossary/Promise
-tags:
-  - Глоссарий
-  - асинхронный
-translation_of: Glossary/Promise
-original_slug: Глоссарий/Promise
 ---
 
 **{{jsxref("Promise")}}** - это {{Glossary("Object")}}, возвращаемый {{Glossary("function")}}, которая ещё не завершила свою работу. Промис буквально представляет собой "обещание", сделанное функцией, которая через объект промиса вернет результат.

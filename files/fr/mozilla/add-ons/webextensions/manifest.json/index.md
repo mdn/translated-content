@@ -1,7 +1,6 @@
 ---
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
 
 {{AddonSidebar}}

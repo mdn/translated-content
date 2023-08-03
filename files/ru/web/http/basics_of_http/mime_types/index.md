@@ -1,9 +1,6 @@
 ---
 title: MIME types
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
-tags:
-  - HTTP
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
 
 **Медиа тип** (так же известный как **Multipurpose Internet Mail Extensions** или **MIME тип)** является стандартом, который описывает природу и формат документа, файла или набора байтов. Он определён и стандартизирован в спецификации {{RFC(6838)}} .

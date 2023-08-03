@@ -1,7 +1,6 @@
 ---
 title: Math.asinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/asinh
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
 title: WebIDL ファイルに含まれる情報
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
-original_slug: MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
 ---
 
 {{MDNSidebar}}

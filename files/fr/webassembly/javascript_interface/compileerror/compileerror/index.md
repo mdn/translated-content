@@ -1,7 +1,6 @@
 ---
 title: Constructeur WebAssembly.CompileError()
 slug: WebAssembly/JavaScript_interface/CompileError/CompileError
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError/CompileError
 ---
 
 {{WebAssemblySidebar}}

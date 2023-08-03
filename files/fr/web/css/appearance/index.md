@@ -1,7 +1,6 @@
 ---
 title: appearance (-moz-appearance, -webkit-appearance)
 slug: Web/CSS/appearance
-translation_of: Web/CSS/appearance
 ---
 
 {{CSSRef}}

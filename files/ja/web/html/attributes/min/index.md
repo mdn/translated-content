@@ -1,5 +1,5 @@
 ---
-title: 'HTML 属性: min'
+title: "HTML 属性: min"
 slug: Web/HTML/Attributes/min
 ---
 

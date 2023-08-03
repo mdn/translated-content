@@ -1,7 +1,6 @@
 ---
-title: 'ServiceWorkerContainer: error イベント'
+title: "ServiceWorkerContainer: error イベント"
 slug: Web/API/ServiceWorkerContainer/error_event
-original_slug: Web/API/ServiceWorkerContainer/onerror
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---

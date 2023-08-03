@@ -1,7 +1,6 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
-translation_of: Web/CSS/flex-basis
 ---
 
 {{CSSRef}}

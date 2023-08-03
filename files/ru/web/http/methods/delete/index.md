@@ -1,12 +1,6 @@
 ---
 title: DELETE
 slug: Web/HTTP/Methods/DELETE
-tags:
-  - HTTP
-  - HTTP методы
-  - Метод запроса
-  - Справка
-translation_of: Web/HTTP/Methods/DELETE
 ---
 
 {{HTTPSidebar}}

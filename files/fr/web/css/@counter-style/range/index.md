@@ -1,7 +1,6 @@
 ---
 title: range
 slug: Web/CSS/@counter-style/range
-translation_of: Web/CSS/@counter-style/range
 ---
 
 {{CSSRef}}

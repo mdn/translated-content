@@ -1,7 +1,6 @@
 ---
 title: SISD
 slug: Glossary/SISD
-translation_of: Glossary/SISD
 ---
 
 SISD signifie **Single Instruction/Single Data** et est une des [catégories d'architecture d'ordinateurs](https://fr.wikipedia.org/wiki/Taxonomie_de_Flynn). Avec une architecture SISD, un processeur unique exécute une instruction unique et opère sur un flux de données unique en mémoire.

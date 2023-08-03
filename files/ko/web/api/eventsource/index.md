@@ -25,7 +25,7 @@ _This interface also inherits properties from its parent, {{domxref("EventTarget
 - {{domxref("EventSource.url")}} {{ReadOnlyInline}}
   - : A string representing the URL of the source.
 - {{domxref("EventSource.withCredentials")}} {{ReadOnlyInline}}
-  - : A boolean value indicating whether the `EventSource` object was instantiated with cross-origin ([CORS](/en-US/docs/Web/HTTP/CORS)) credentials set (`true`), or not (`false`, the default).
+  - : A boolean value indicating whether the `EventSource` object was instantiated with cross-origin ([CORS](/ko/docs/Web/HTTP/CORS)) credentials set (`true`), or not (`false`, the default).
 
 ## Instance methods
 
@@ -50,15 +50,15 @@ Additionally, the event source itself may send messages with an event field, whi
 이 기초적인 예시에서, `EventSource`는 서버로 부터 받은 이벤트로 생성되었습니다; `"sse.php"`라는 이름을 가진 페이지는 이벤트를 생성할 책임이 있습니다.
 
 ```js
-var evtSource = new EventSource('sse.php');
-var eventList = document.querySelector('ul');
+var evtSource = new EventSource("sse.php");
+var eventList = document.querySelector("ul");
 
-evtSource.onmessage = function(e) {
+evtSource.onmessage = function (e) {
   var newElement = document.createElement("li");
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 각각의 수신한 이벤트는 우리의 `EventSource` 객체의 `onmessage` 이벤트 핸들러가 실행되도록 합니다. 차례가 되었을 때, 새로운 {{HTMLElement("li")}} 요소를 생성하고, 메시지 데이터를 안에 작성합니다. 그 때, 문서에 이미 존재하는 ul 요소에 새로운 요소를 추가하게 됩니다.

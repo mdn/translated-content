@@ -1,7 +1,6 @@
 ---
 title: Inicializador de Objeto
 slug: Web/JavaScript/Reference/Operators/Object_initializer
-original_slug: Web/JavaScript/Reference/Operators/Inicializador_Objeto
 ---
 
 {{JsSidebar("Operadores")}}

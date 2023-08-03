@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.getImmediatePose()
 slug: Web/API/VRDisplay/getImmediatePose
-original_slug: Web/API/VRDevice/getImmediatePose
 ---
 
 {{deprecated_header}}{{APIRef("WebVR API")}}

@@ -1,11 +1,6 @@
 ---
 title: Перенаправления в HTTP
 slug: Web/HTTP/Redirections
-tags:
-  - HTTP
-  - Начинающий
-  - Руководство
-translation_of: Web/HTTP/Redirections
 ---
 
 {{HTTPSidebar}}

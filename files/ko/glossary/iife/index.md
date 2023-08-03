@@ -7,7 +7,7 @@ slug: Glossary/IIFE
 
 ```js
 (function () {
-    statements
+  statements;
 })();
 ```
 
@@ -21,18 +21,18 @@ slug: Glossary/IIFE
 
 ```js
 (function () {
-    var aName = "Barry";
+  var aName = "Barry";
 })();
 // IIFE 내부에서 정의된 변수는 외부 범위에서 접근이 불가능하다.
-aName // throws "Uncaught ReferenceError: aName is not defined"
+aName; // throws "Uncaught ReferenceError: aName is not defined"
 ```
 
 IIFE를 변수에 할당하면 IIFE 자체는 저장되지 않고, 함수가 실행된 결과만 저장된다.
 
 ```js
 var result = (function () {
-    var name = "Barry";
-    return name;
+  var name = "Barry";
+  return name;
 })();
 // 즉시 결과를 생성한다.
 result; // "Barry"

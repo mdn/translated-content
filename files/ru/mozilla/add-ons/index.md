@@ -1,12 +1,6 @@
 ---
 title: Дополнения
 slug: Mozilla/Add-ons
-tags:
-  - NeedsTranslation
-  - TopicStub
-  - Дополнения
-  - Расширения
-translation_of: Mozilla/Add-ons
 ---
 
 Дополнения добавляют новые функциональные возможности в [Gecko](/ru/docs/Mozilla/Gecko)-приложения, такие, как Firefox, SeaMonkey и Thunderbird. Есть два основных типа дополнений: [расширения](#Extensions), которые добавляют новые функции в приложение, и [темы](#Themes), изменяющие пользовательский интерфейс приложения.

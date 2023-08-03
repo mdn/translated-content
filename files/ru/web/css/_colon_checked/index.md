@@ -1,12 +1,6 @@
 ---
-title: ':checked'
+title: ":checked"
 slug: Web/CSS/:checked
-tags:
-  - CSS
-  - Макет
-  - Псевдоклассы
-  - Руководство
-translation_of: Web/CSS/:checked
 ---
 {{CSSRef}}
 

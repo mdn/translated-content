@@ -1,8 +1,6 @@
 ---
 title: DeviceRotationRate.gamma
 slug: Web/API/DeviceMotionEventRotationRate/gamma
-translation_of: Web/API/DeviceMotionEventRotationRate/gamma
-translation_of_original: Web/API/DeviceRotationRate/gamma
 ---
 
 {{ ApiRef("Device Orientation Events") }}

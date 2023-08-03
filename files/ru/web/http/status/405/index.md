@@ -1,7 +1,6 @@
 ---
 title: 405 Method Not Allowed
 slug: Web/HTTP/Status/405
-translation_of: Web/HTTP/Status/405
 ---
 
 {{HTTPSidebar}}

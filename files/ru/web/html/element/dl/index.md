@@ -1,17 +1,6 @@
 ---
 title: "<dl>: Элемент списка описаний"
 slug: Web/HTML/Element/dl
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-  - dl
-  - Веб
-  - Список определений
-  - Элемент
-  - списки
-translation_of: Web/HTML/Element/dl
 ---
 
 {{HTMLSidebar}}

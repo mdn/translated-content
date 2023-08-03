@@ -1,7 +1,6 @@
 ---
 title: "Element : évènement mouseout"
 slug: Web/API/Element/mouseout_event
-translation_of: Web/API/Element/mouseout_event
 ---
 
 {{APIRef}}

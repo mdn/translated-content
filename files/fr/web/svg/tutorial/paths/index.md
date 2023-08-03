@@ -1,7 +1,6 @@
 ---
 title: Paths
 slug: Web/SVG/Tutorial/Paths
-translation_of: Web/SVG/Tutorial/Paths
 ---
 
 {{ PreviousNext("Web/SVG/Tutoriel/Formes_de_base", "Web/SVG/Tutoriel/Fills_and_Strokes") }}

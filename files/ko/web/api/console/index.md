@@ -10,7 +10,7 @@ slug: Web/API/console
 `console` 객체는 아무 전역 객체에서나 접근할 수 있습니다. 브라우징 문맥에선 {{domxref("Window")}}, 워커에서는 {{domxref("WorkerGlobalScope")}}이 속성으로 포함하고 있습니다. {{domxref("Window.console")}}의 형태로 노출되어 있으므로 간단하게 `console`로 참조할 수 있습니다.
 
 ```js
-console.log("링크를 열 수 없습니다")
+console.log("링크를 열 수 없습니다");
 ```
 
 이 문서는 콘솔 객체에서 사용할 수 있는 [메서드](#메서드)와 몇 가지 [예제](#예제)를 다룹니다.
@@ -93,7 +93,7 @@ console.log(someObject);
 
 ```js
 var car = "Dodge Charger";
-var someObject = {str:"Some text", id:5};
+var someObject = { str: "Some text", id: 5 };
 console.info("My first car was a", car, ". The object is: ", someObject);
 ```
 
@@ -121,8 +121,8 @@ console.info("My first car was a", car, ". The object is: ", someObject);
 각각의 치환 문자열은 이후 매개변수에서 값을 가져옵니다. 예를 들어...
 
 ```js
-for (var i=0; i<5; i++) {
-  console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
+for (var i = 0; i < 5; i++) {
+  console.log("Hello, %s. You've called me %d times.", "Bob", i + 1);
 }
 ```
 
@@ -141,7 +141,10 @@ for (var i=0; i<5; i++) {
 `"%c"` 명령을 사용해 콘솔 출력에 CSS 스타일을 적용할 수 있습니다.
 
 ```js
-console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");
+console.log(
+  "This is %cMy stylish message",
+  "color: yellow; font-style: italic; background-color: blue;padding: 2px",
+);
 ```
 
 명령 이전의 텍스트는 영향을 받지 않고, 이후의 텍스트는 매개변수로 제공한 CSS 선언을 적용합니다.
@@ -151,7 +154,12 @@ console.log("This is %cMy stylish message", "color: yellow; font-style: italic; 
 `"%c"` 명령을 여러 번 사용할 수도 있습니다.
 
 ```js
-console.log("Multiple styles: %cred %corange", "color: red", "color: orange", "Additional unformatted message");
+console.log(
+  "Multiple styles: %cred %corange",
+  "color: red",
+  "color: orange",
+  "Additional unformatted message",
+);
 ```
 
 `%c` 구문과 함께 사용할 수 있는 CSS 속성은 다음과 같습니다. (Firefox 기준, 브라우저마다 다를 수 있음)

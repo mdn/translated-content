@@ -1,7 +1,6 @@
 ---
 title: topSites
 slug: Mozilla/Add-ons/WebExtensions/API/topSites
-translation_of: Mozilla/Add-ons/WebExtensions/API/topSites
 ---
 
 {{AddonSidebar}}

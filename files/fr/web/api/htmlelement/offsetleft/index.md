@@ -1,7 +1,6 @@
 ---
 title: element.offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
-translation_of: Web/API/HTMLElement/offsetLeft
 ---
 
 {{ ApiRef() }}

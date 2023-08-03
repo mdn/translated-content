@@ -82,7 +82,7 @@ for (var i = 0; i < files.length; i++) {
 下面是一个更完整的例子。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head> </head>
   <body>

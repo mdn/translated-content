@@ -1,7 +1,6 @@
 ---
 title: DOMRectReadOnly.fromRect()
 slug: Web/API/DOMRectReadOnly/fromRect_static
-original_slug: Web/API/DOMRectReadOnly/fromRect
 ---
 
 {{APIRef("Geometry Interfaces")}}

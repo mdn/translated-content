@@ -1,7 +1,6 @@
 ---
 title: Document.write()
 slug: Web/API/Document/write
-translation_of: Web/API/Document/write
 ---
 
 {{ ApiRef("DOM") }}
@@ -25,24 +24,22 @@ document.write(разметка);
 
 ```html
 <html>
+  <head>
+    <title>write example</title>
 
-<head>
-  <title>write example</title>
+    <script>
+      function newContent() {
+        alert("загрузка нового контента");
+        document.open();
+        document.write("<h1>Долой старое, да здравствует новое!</h1>");
+        document.close();
+      }
+    </script>
+  </head>
 
-  <script>
-    function newContent() {
-      alert("загрузка нового контента");
-      document.open();
-      document.write("<h1>Долой старое, да здравствует новое!</h1>");
-      document.close();
-    }
-  </script>
-</head>
-
-<body onload="newContent();">
-  <p>Какой-то оригинальный контент.</p>
-</body>
-
+  <body onload="newContent();">
+    <p>Какой-то оригинальный контент.</p>
+  </body>
 </html>
 ```
 
@@ -54,7 +51,7 @@ document.write(разметка);
 
 ```html
 <script>
-  document.write("<h1>Основной заголовок</h1>")
+  document.write("<h1>Основной заголовок</h1>");
 </script>
 ```
 
@@ -68,8 +65,11 @@ document.write(разметка);
 
 ## Спецификации
 
-- [DOM Level 2 HTML: `write()` Method](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75233634)
-- [Dynamic markup insertion in HTML](http://www.w3.org/TR/2011/WD-html5-author-20110705/apis-in-html-documents.html#dynamic-markup-insertion)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
 
 ## Смотрите также
 

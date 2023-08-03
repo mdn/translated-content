@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Table.prototype.grow()
 slug: WebAssembly/JavaScript_interface/Table/grow
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow
 ---
 
 {{WebAssemblySidebar}}

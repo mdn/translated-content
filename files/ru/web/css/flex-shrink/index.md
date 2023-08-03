@@ -1,7 +1,6 @@
 ---
 title: flex-shrink
 slug: Web/CSS/flex-shrink
-translation_of: Web/CSS/flex-shrink
 ---
 {{CSSRef}}
 

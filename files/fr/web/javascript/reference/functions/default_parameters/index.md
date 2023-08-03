@@ -1,7 +1,6 @@
 ---
 title: Valeurs par défaut des arguments
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 ---
 
 {{jsSidebar("Functions")}}

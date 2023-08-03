@@ -1,7 +1,6 @@
 ---
 title: CSS グリッドと論理的な値と書字方向
 slug: Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
-original_slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
 ---
 
 {{CSSRef}}

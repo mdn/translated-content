@@ -24,7 +24,7 @@ slug: Web/JavaScript/Reference/Statements/for...of
 
 ## 예제
 
-### {{jsxref("Array")}}에 대해 반복:
+### {{jsxref("Array")}}에 대해 반복
 
 ```js
 let iterable = [10, 20, 30];
@@ -50,7 +50,7 @@ for (const value of iterable) {
 // 30
 ```
 
-### {{jsxref("String")}}에 대해 반복:
+### {{jsxref("String")}}에 대해 반복
 
 ```js
 let iterable = "boo";
@@ -63,7 +63,7 @@ for (let value of iterable) {
 // "o"
 ```
 
-### {{jsxref("TypedArray")}}에 대해 반복:
+### {{jsxref("TypedArray")}}에 대해 반복
 
 ```js
 let iterable = new Uint8Array([0x00, 0xff]);
@@ -75,7 +75,7 @@ for (let value of iterable) {
 // 255
 ```
 
-### {{jsxref("Map")}}에 대해 반복:
+### {{jsxref("Map")}}에 대해 반복
 
 ```js
 let iterable = new Map([["a", 1], ["b", 2], ["c", 3]]);
@@ -95,7 +95,7 @@ for (let [key, value] of iterable) {
 // 3
 ```
 
-### {{jsxref("Set")}}에 대해 반복:
+### {{jsxref("Set")}}에 대해 반복
 
 ```js
 let iterable = new Set([1, 1, 2, 2, 3, 3]);

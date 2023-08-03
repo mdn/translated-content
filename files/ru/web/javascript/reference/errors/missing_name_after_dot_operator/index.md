@@ -1,7 +1,6 @@
 ---
-title: 'SyntaxError: missing name after . operator(отсутствует имя после. оператора)'
+title: "SyntaxError: missing name after . operator(отсутствует имя после. оператора)"
 slug: Web/JavaScript/Reference/Errors/Missing_name_after_dot_operator
-translation_of: Web/JavaScript/Reference/Errors/Missing_name_after_dot_operator
 ---
 
 {{jsSidebar("Errors")}}

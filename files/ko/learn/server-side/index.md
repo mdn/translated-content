@@ -2,6 +2,7 @@
 title: Server-side website programming
 slug: Learn/Server-side
 ---
+
 {{LearnSidebar}}
 
 The **동적 웹사이트 서버-사이드 프로그래밍** 에 대한 주제는 동적 웹사이트를 생성하는 방법을 보여주는 과목(module) 시리즈이다. (Dynamic Websites: HTTP 요구(requests)에 응답하여 요구에 맞는 정보를 전달하는 웹사이트) 각 과목들은 서버-사이드 프로그래밍의 포괄적인 소개를 제공한다. 기본적인 어플리케이션들을 생성하기 위한 Django (Python) 와Express (Node.js/JavaScript) 같은 웹 프레임워크를 사용하는 방법에 대한 초보자 레벨(beginner level)의 가이드도 포함한다.

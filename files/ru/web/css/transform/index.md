@@ -1,15 +1,6 @@
 ---
 title: transform
 slug: Web/CSS/transform
-tags:
-  - CSS
-  - transform
-  - Вёрстка
-  - Свойство CSS
-  - наклон
-  - поворот
-  - трансформация
-translation_of: Web/CSS/transform
 ---
 {{CSSRef}}
 

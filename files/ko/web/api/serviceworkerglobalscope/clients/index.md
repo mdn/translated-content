@@ -10,7 +10,7 @@ slug: Web/API/ServiceWorkerGlobalScope/clients
 ## Syntax
 
 ```js
-swClients = self.clients
+swClients = self.clients;
 ```
 
 ### Value

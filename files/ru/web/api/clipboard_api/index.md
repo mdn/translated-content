@@ -1,20 +1,6 @@
 ---
 title: Clipboard API
 slug: Web/API/Clipboard_API
-tags:
-  - API
-  - Async Clipboard API
-  - Clipboard
-  - Clipboard API
-  - Clipboard Event API
-  - ClipboardEvent
-  - ClipboardItem
-  - Cut
-  - Landing
-  - Reference
-  - copy
-  - paste
-translation_of: Web/API/Clipboard_API
 ---
 
 {{DefaultAPISidebar("Clipboard API")}}**Clipboard API** предоставляет возможность реагировать на команды буфера обмена (вырезать, копировать и вставить), а также выполнять асинхронные чтение/запись в системный буфер обмена. Доступ к содержимому буфера обмена осуществляется через [Permissions API](/ru/docs/Web/API/Permissions_API): `clipboard-write` (разрешение на запись) в буфер обмена автоматически предоставляется страницам, когда они находятся на активной вкладке. Для `clipboard-read` (чтение из буфера обмена) должно быть запрошено разрешение пользователя. Можно сделать запрос на разрешение, попытавшись прочитать данные из буфера обмена.
@@ -26,8 +12,11 @@ API предназначен заменить {{domxref("document.execCommand()"
 Вместо создания объекта буфера посредством инициализации экземпляра, вы получаете доступ к системному буферу обмена через глобальный {{domxref("Navigator.clipboard")}}:
 
 ```js
-navigator.clipboard.readText().then(
-  clipText => document.querySelector(".editor").innerText += clipText);
+navigator.clipboard
+  .readText()
+  .then(
+    (clipText) => (document.querySelector(".editor").innerText += clipText),
+  );
 ```
 
 Этот фрагмент извлекает текст из буфера обмена и добавляет его к первому элементу, найденному с помощью `editor` (редактора) классов. Этот код безопасен, поскольку {{domxref("Clipboard.readText", "readText()")}} (и {{domxref("Clipboard.read", "read()")}}, если на то пошло) возвращает пустую строку, если в буфере обмена нет текста.
@@ -43,21 +32,11 @@ navigator.clipboard.readText().then(
 
 ## Спецификации
 
-{{Specifications("api.Clipboard")}}
+{{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
-### Clipboard
-
-{{Compat("api.Clipboard")}}
-
-### ClipboardEvent
-
-{{Compat("api.ClipboardEvent")}}
-
-### ClipboardItem
-
-{{Compat("api.ClipboardItem")}}
+{{Compat}}
 
 ## Смотрите также
 

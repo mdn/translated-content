@@ -1,7 +1,6 @@
 ---
 title: Partage d'objets avec des scripts de page
 slug: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
-translation_of: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
 ---
 
 {{AddonSidebar}}
