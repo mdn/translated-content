@@ -26,8 +26,11 @@ API предназначен заменить {{domxref("document.execCommand()"
 Вместо создания объекта буфера посредством инициализации экземпляра, вы получаете доступ к системному буферу обмена через глобальный {{domxref("Navigator.clipboard")}}:
 
 ```js
-navigator.clipboard.readText().then(
-  clipText => document.querySelector(".editor").innerText += clipText);
+navigator.clipboard
+  .readText()
+  .then(
+    (clipText) => (document.querySelector(".editor").innerText += clipText),
+  );
 ```
 
 Этот фрагмент извлекает текст из буфера обмена и добавляет его к первому элементу, найденному с помощью `editor` (редактора) классов. Этот код безопасен, поскольку {{domxref("Clipboard.readText", "readText()")}} (и {{domxref("Clipboard.read", "read()")}}, если на то пошло) возвращает пустую строку, если в буфере обмена нет текста.
@@ -43,21 +46,11 @@ navigator.clipboard.readText().then(
 
 ## Спецификации
 
-{{Specifications("api.Clipboard")}}
+{{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
-### Clipboard
-
-{{Compat("api.Clipboard")}}
-
-### ClipboardEvent
-
-{{Compat("api.ClipboardEvent")}}
-
-### ClipboardItem
-
-{{Compat("api.ClipboardItem")}}
+{{Compat}}
 
 ## Смотрите также
 

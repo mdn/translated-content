@@ -1,7 +1,6 @@
 ---
 title: handler.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/preventExtensions
 ---
 
 {{JSRef}}

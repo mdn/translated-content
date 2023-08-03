@@ -35,7 +35,7 @@ canvas.height = pxl;
 Вы можете получить высоту холста следующим образом:
 
 ```js
-var canvas = document.getElementById('canvas');
+var canvas = document.getElementById("canvas");
 console.log(canvas.height); // 300
 ```
 

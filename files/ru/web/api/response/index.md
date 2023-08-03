@@ -85,13 +85,15 @@ In our [basic fetch example](https://github.com/mdn/fetch-examples/tree/master/b
 You'll notice that since we are requesting an image, we need to run {{domxref("Body.blob")}} ({{domxref("Response")}} implements Body) to give the response its correct MIME type.
 
 ```js
-const image = document.querySelector('.my-image');
-fetch('flowers.jpg').then(function(response) {
-  return response.blob();
-}).then(function(blob) {
-  const objectURL = URL.createObjectURL(blob);
-  image.src = objectURL;
-});
+const image = document.querySelector(".my-image");
+fetch("flowers.jpg")
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (blob) {
+    const objectURL = URL.createObjectURL(blob);
+    image.src = objectURL;
+  });
 ```
 
 You can also use the {{domxref("Response.Response()")}} constructor to create your own custom `Response` object:
@@ -123,9 +125,7 @@ doAjax().then(console.log).catch(console.log);
 
 ## Specifications
 
-| Specification                                                        | Status                   | Comment            |
-| -------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#response-class','Response')}} | {{Spec2('Fetch')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

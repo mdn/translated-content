@@ -101,9 +101,7 @@ translation_of: Web/API/PannerNode
 
 ## Specifications
 
-| Specification                                                                                    | Status                               | Comment |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#the-pannernode-interface', 'PannerNode')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

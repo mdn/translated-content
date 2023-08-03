@@ -51,17 +51,17 @@ A {{jsxref('Promise')}} that resolves to a {{domxref('NotificationEvent')}}.
 ## Examples
 
 ```js
-navigator.serviceWorker.register('sw.js');
+navigator.serviceWorker.register("sw.js");
 
 function showNotification() {
-  Notification.requestPermission(function(result) {
-    if (result === 'granted') {
-      navigator.serviceWorker.ready.then(function(registration) {
-        registration.showNotification('Vibration Sample', {
-          body: 'Buzz! Buzz!',
-          icon: '../images/touch/chrome-touch-icon-192x192.png',
+  Notification.requestPermission(function (result) {
+    if (result === "granted") {
+      navigator.serviceWorker.ready.then(function (registration) {
+        registration.showNotification("Vibration Sample", {
+          body: "Buzz! Buzz!",
+          icon: "../images/touch/chrome-touch-icon-192x192.png",
           vibrate: [200, 100, 200, 100, 200, 100, 200],
-          tag: 'vibration-sample'
+          tag: "vibration-sample",
         });
       });
     }
@@ -75,12 +75,8 @@ You can also retrieve details of the {{domxref("Notification")}}s have have been
 
 ## Specifications
 
-| Specification                                                                                                                                                | Status                                   | Comment             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{SpecName('Web Notifications','#dom-serviceworkerregistration-shownotificationtitle-options','showNotification()')}} | {{Spec2('Web Notifications')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
 {{Compat}}
-
-{{Compat("api.ServiceWorkerRegistration.showNotification")}}

@@ -27,9 +27,7 @@ A {{jsxref ("Function")}} вызывается, когда происходит 
 
 ## Specification
 
-| Specification                                                                                                        | Status                               | Comment |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('CSS3 Animations','#eventdef-animationevent-animationend','onanimationend')}} | {{Spec2('CSS3 Animations')}} |         |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

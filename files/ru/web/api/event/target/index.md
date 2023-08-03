@@ -61,7 +61,7 @@ ul.addEventListener('click', hide, false);
 function hide(e) {
   // Поддержка IE 6-8
   var target = e.target || e.srcElement;
-  target.style.visibility = 'hidden';
+  target.style.visibility = "hidden";
 }
 ```
 

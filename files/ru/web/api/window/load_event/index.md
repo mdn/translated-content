@@ -4,6 +4,7 @@ slug: Web/API/Window/load_event
 translation_of: Web/API/Window/load_event
 original_slug: Web/Events/load
 ---
+
 Событие `load` происходит когда ресурс и его зависимые ресурсы закончили загружаться.
 
 ## General info
@@ -36,7 +37,7 @@ original_slug: Web/Events/load
 
 ```html
 <script>
-  window.addEventListener("load", function(event) {
+  window.addEventListener("load", function (event) {
     console.log("All resources finished loading!");
   });
 </script>

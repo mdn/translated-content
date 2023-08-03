@@ -35,14 +35,14 @@ let element = document.createElement(tagName[, options]);
 #### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>||Working with elements||</title>
-</head>
-<body>
-  <div id="div1">The text above has been created dynamically.</div>
-</body>
+  <head>
+    <title>||Working with elements||</title>
+  </head>
+  <body>
+    <div id="div1">The text above has been created dynamically.</div>
+  </body>
 </html>
 ```
 
@@ -51,7 +51,7 @@ let element = document.createElement(tagName[, options]);
 ```js
 document.body.onload = addElement;
 
-function addElement () {
+function addElement() {
   // 新しい div 要素を作成します
   const newDiv = document.createElement("div");
 
@@ -74,7 +74,7 @@ function addElement () {
 ### ウェブコンポーネントの例
 
 以下の例の断片は [expanding-list-web-component](https://github.com/mdn/web-components-examples/tree/master/expanding-list-web-component)
- の例から取ったものです ([ライブでもご覧ください](https://mdn.github.io/web-components-examples/expanding-list-web-component/))。この場合、カスタム要素は {{domxref("HTMLUListElement")}} を拡張し、 {{htmlelement("ul")}} 要素を表します。
+の例から取ったものです ([ライブでもご覧ください](https://mdn.github.io/web-components-examples/expanding-list-web-component/))。この場合、カスタム要素は {{domxref("HTMLUListElement")}} を拡張し、 {{htmlelement("ul")}} 要素を表します。
 
 ```js
 // 要素のためのクラスを作成
@@ -95,7 +95,7 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });
 この要素のインスタンスをプログラムで生成したければ、次の行のような呼び出しを使用します。
 
 ```js
-let expandingList = document.createElement('ul', { is : 'expanding-list' })
+let expandingList = document.createElement("ul", { is: "expanding-list" });
 ```
 
 新しい要素には [`is`](/ja/docs/Web/HTML/Global_attributes/is) 属性が与えられ、その値はカスタム要素のタグ名になります。

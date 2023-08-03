@@ -350,7 +350,7 @@ This page is where you enter your new password after clicking the link in the pa
 
 This is the last password-reset template, which is displayed to notify you when the password reset has succeeded. Create **/locallibrary/templates/registration/password_reset_complete.html**, and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}

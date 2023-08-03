@@ -8,6 +8,7 @@ tags:
   - метод
 translation_of: Web/API/History/pushState
 ---
+
 {{APIRef("DOM")}}
 
 В [HTML](/ru/docs/Web/HTML) документе метод **`history.pushState()`** добавляет новое состояние в историю браузера

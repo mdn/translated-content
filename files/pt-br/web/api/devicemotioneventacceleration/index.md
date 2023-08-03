@@ -19,6 +19,4 @@ Um objeto `DeviceAcceleration` fornece informações sobre a quantidade de acele
 
 ## Especificações
 
-| Especificações                                                                                               | Status                                   | Comentario        |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------- |
-| {{SpecName("Device Orientation", "#device_acceleration", "DeviceAcceleration")}} | {{Spec2("Device Orientation")}} | Definição inicial |
+{{Specifications}}

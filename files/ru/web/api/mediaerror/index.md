@@ -13,6 +13,7 @@ tags:
   - аудио
 translation_of: Web/API/MediaError
 ---
+
 {{APIRef("HTML DOM")}}
 
 Интерфейс `MediaError` представляет собой ошибку, возникшую при обработке мультимедиа в HTML-элементе мультимедиа на основе {{domxref ("HTMLMediaElement")}}, например {{HTMLElement ("audio")}} или {{HTMLElement ("video")}}.

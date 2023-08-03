@@ -3,6 +3,7 @@ title: Event.cancelable
 slug: Web/API/Event/cancelable
 translation_of: Web/API/Event/cancelable
 ---
+
 {{ ApiRef("DOM") }}
 
 ## Описание
@@ -33,4 +34,8 @@ var bool = event.cancelable;
 
 ## Спецификации
 
-- [DOM Level 2 Events: cancelable](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-canCancel)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

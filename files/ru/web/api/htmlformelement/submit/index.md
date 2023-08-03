@@ -31,12 +31,10 @@ HTMLFormElement.submit()
 document.forms["myform"].submit();
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#dom-form-submit', 'HTMLFormElement: submit')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

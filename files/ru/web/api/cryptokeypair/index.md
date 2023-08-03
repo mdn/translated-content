@@ -7,6 +7,7 @@ tags:
   - Web Crypto API
 translation_of: Web/API/CryptoKeyPair
 ---
+
 {{APIRef("Web Crypto API")}}
 
 **`CryptoKeyPair`** из [Web Crypto API](/ru/docs/Web/API/Web_Crypto_API) представляет собой пару ключей для ассиметричных криптографических алгоритмов, также известных как алгоритмы с публичным-приватным ключом.
@@ -39,9 +40,11 @@ translation_of: Web/API/CryptoKeyPair
 
 ## Спецификации
 
-| Specification                            | Status                               | Comment |
-| ---------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Crypto API')}} | {{Spec2('Web Crypto API')}} |         |
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
 
 ## Смотрите также
 
