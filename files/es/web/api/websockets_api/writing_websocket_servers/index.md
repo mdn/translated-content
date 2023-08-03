@@ -1,7 +1,6 @@
 ---
 title: Escribir servidores WebSocket
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
-original_slug: Web/API/WebSockets_API/Escribiendo_servidores_con_WebSocket
 ---
 
 ## Introducción

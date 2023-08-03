@@ -1,7 +1,6 @@
 ---
 title: String.prototype.fontcolor()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fontcolor
 ---
 
 {{JSRef}} {{deprecated_header}}

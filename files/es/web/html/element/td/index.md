@@ -1,7 +1,6 @@
 ---
 title: <td>
 slug: Web/HTML/Element/td
-original_slug: Web/HTML/Elemento/td
 ---
 
 {{HTMLSidebar}}

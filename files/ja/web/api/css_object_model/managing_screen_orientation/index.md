@@ -39,8 +39,9 @@ CSS は [`orientation`](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#orien
 ```css
 /* 始めに、共通のスタイルを定義しましょう */
 
-html, body {
-  width : 100%;
+html,
+body {
+  width: 100%;
   height: 100%;
 }
 
@@ -52,17 +53,17 @@ body {
 }
 
 p {
-  font   : 1em sans-serif;
-  margin : 0;
-  padding: .5em;
+  font: 1em sans-serif;
+  margin: 0;
+  padding: 0.5em;
 }
 
 ul {
   list-style: none;
 
-  font   : 1em monospace;
-  margin : 0;
-  padding: .5em;
+  font: 1em monospace;
+  margin: 0;
+  padding: 0.5em;
 
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -72,7 +73,7 @@ ul {
 
 li {
   display: inline-block;
-  margin : 0;
+  margin: 0;
   padding: 0.5em;
   background: white;
 }
@@ -103,7 +104,7 @@ li {
   }
 
   li + li {
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 }
 ```
@@ -158,7 +159,7 @@ screen.addEventListener("orientationchange", () => {
 {{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} は、適用するロック方式を定義する文字列として、`any`、`natural`、`portrait-primary`、`portrait-secondary`、`landscape-primary`、`landscape-secondary`、`portrait`、`landscape` のいずれかを受け入れます。
 
 ```js
-{{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} ;
+screen.orientation.lock();
 ```
 
 ロックに成功した後に解決される[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)を返します。

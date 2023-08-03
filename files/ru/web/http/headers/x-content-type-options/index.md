@@ -1,13 +1,6 @@
 ---
 title: X-Content-Type-Options
 slug: Web/HTTP/Headers/X-Content-Type-Options
-tags:
-  - HTTP
-  - HTTP заголовки
-  - Ответы заголовка
-  - Справка
-translation_of: Web/HTTP/Headers/X-Content-Type-Options
-original_slug: Web/HTTP/Заголовки/X-Content-Type-Options
 ---
 
 {{HTTPSidebar}}

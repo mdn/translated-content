@@ -1,13 +1,6 @@
 ---
 title: border
 slug: Web/CSS/border
-tags:
-  - CSS Границы
-  - CSS-свойства
-  - Разметка
-  - Совместимость Мобильных Браузеров
-  - Справка
-translation_of: Web/CSS/border
 ---
 
 {{CSSRef("CSS Borders")}}

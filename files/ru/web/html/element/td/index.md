@@ -1,7 +1,6 @@
 ---
-title: '<td>: элемент ячейки таблицы данных'
+title: "<td>: элемент ячейки таблицы данных"
 slug: Web/HTML/Element/td
-translation_of: Web/HTML/Element/td
 ---
 
 {{HTMLSidebar}}

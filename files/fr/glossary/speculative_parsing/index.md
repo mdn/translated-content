@@ -1,7 +1,6 @@
 ---
 title: Optimisation des pages pour l'analyse spéculative
 slug: Glossary/Speculative_parsing
-translation_of: Glossary/speculative_parsing
 ---
 
 Traditionnellement dans les navigateurs, l'analyseur HTML a été exécuté sur le fil principal et a été bloqué après une balise `</script>` jusqu'à ce que le script ait été extrait du réseau et exécuté. L'analyseur HTML dans Firefox 4 et versions ultérieures prend en charge l'analyse spéculative sur le fil principal. Il analyse "en avant" pendant que les scripts sont téléchargés et exécutés. Comme dans Firefox 3.5 et 3.6, l'analyseur HTML lance des chargements spéculatifs pour les scripts, les feuilles de style et les images qu'il trouve à l'avance dans le flux. Toutefois, dans Firefox 4 et versions ultérieures, l'analyseur HTML exécute également l'algorithme de construction de l'arborescence HTML de manière spéculative. L'avantage est que lorsqu'une spéculation réussit, il n'est pas nécessaire d'analyser la partie du fichier entrant qui a déjà été analysée pour les scripts, les feuilles de style et les images. L'inconvénient est qu'il y a plus de travail perdu quand la spéculation échoue.

@@ -1,7 +1,6 @@
 ---
 title: Window.captureEvents()
 slug: Web/API/Window/captureEvents
-translation_of: Web/API/Window/captureEvents
 ---
 
 {{ ApiRef() }} {{deprecated_header(1.9)}} {{Non-standard_header}}

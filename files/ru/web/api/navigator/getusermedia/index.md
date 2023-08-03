@@ -1,7 +1,6 @@
 ---
 title: Navigator.getUserMedia()
 slug: Web/API/Navigator/getUserMedia
-translation_of: Web/API/Navigator/getUserMedia
 ---
 
 {{APIRef("Media Capture and Streams")}}{{deprecated_header}}
@@ -54,25 +53,27 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
 Это пример использования `getUserMedia()` , включая код для работы с префиксами различных браузеров. Обратите внимание, что это устаревший способ сделать это: современные примеры см. В разделе «Примеры» в разделе {{domxref ("MediaDevices.getUserMedia ()")}}.
 
 ```js
-navigator.getUserMedia = navigator.getUserMedia ||
-                         navigator.webkitGetUserMedia ||
-                         navigator.mozGetUserMedia;
+navigator.getUserMedia =
+  navigator.getUserMedia ||
+  navigator.webkitGetUserMedia ||
+  navigator.mozGetUserMedia;
 
 if (navigator.getUserMedia) {
-   navigator.getUserMedia({ audio: true, video: { width: 1280, height: 720 } },
-      function(stream) {
-         var video = document.querySelector('video');
-         video.srcObject = stream;
-         video.onloadedmetadata = function(e) {
-           video.play();
-         };
-      },
-      function(err) {
-         console.log("The following error occurred: " + err.name);
-      }
-   );
+  navigator.getUserMedia(
+    { audio: true, video: { width: 1280, height: 720 } },
+    function (stream) {
+      var video = document.querySelector("video");
+      video.srcObject = stream;
+      video.onloadedmetadata = function (e) {
+        video.play();
+      };
+    },
+    function (err) {
+      console.log("The following error occurred: " + err.name);
+    },
+  );
 } else {
-   console.log("getUserMedia not supported");
+  console.log("getUserMedia not supported");
 }
 ```
 
@@ -93,9 +94,13 @@ if (navigator.getUserMedia) {
 
 См. Разрешение: аудио-захват и разрешение: видео-захват для получения дополнительной информации.
 
-## Browser compatibility
-
 > **Предупреждение:** New code should use {{domxref("Navigator.mediaDevices.getUserMedia()")}} instead.
+
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -1,7 +1,6 @@
 ---
 title: SharedWorkerGlobalScope.onconnect
 slug: Web/API/SharedWorkerGlobalScope/connect_event
-translation_of: Web/API/SharedWorkerGlobalScope/onconnect
 ---
 
 {{APIRef("Web Workers API")}}

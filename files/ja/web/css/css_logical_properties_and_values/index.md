@@ -1,7 +1,6 @@
 ---
 title: CSS 論理的プロパティと値
 slug: Web/CSS/CSS_logical_properties_and_values
-original_slug: Web/CSS/CSS_Logical_Properties
 ---
 
 {{CSSRef}}

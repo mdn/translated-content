@@ -1,7 +1,6 @@
 ---
 title: browserAction.getBadgeBackgroundColor()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeBackgroundColor
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeBackgroundColor
 ---
 
 {{AddonSidebar()}}

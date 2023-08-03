@@ -1,5 +1,5 @@
 ---
-title: 'Document: visibilitychange イベント'
+title: "Document: visibilitychange イベント"
 slug: Web/API/Document/visibilitychange_event
 l10n:
   sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('visibilitychange', (event) => { });
+addEventListener("visibilitychange", (event) => {});
 
-onvisibilitychange = (event) => { };
+onvisibilitychange = (event) => {};
 ```
 
 ## イベント型
@@ -41,7 +41,7 @@ onvisibilitychange = (event) => { };
 
 ```js
 document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === 'visible') {
+  if (document.visibilityState === "visible") {
     backgroundMusic.play();
   } else {
     backgroundMusic.pause();
@@ -55,8 +55,8 @@ document.addEventListener("visibilitychange", () => {
 
 ```js
 document.onvisibilitychange = () => {
-  if (document.visibilityState === 'hidden') {
-    navigator.sendBeacon('/log', analyticsData);
+  if (document.visibilityState === "hidden") {
+    navigator.sendBeacon("/log", analyticsData);
   }
 };
 ```

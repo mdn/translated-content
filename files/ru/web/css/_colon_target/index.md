@@ -1,10 +1,6 @@
 ---
 title: ":target"
 slug: Web/CSS/:target
-tags:
-  - Вёрстка
-  - Псевдоклассы
-translation_of: Web/CSS/:target
 ---
 
 {{CSSRef}}

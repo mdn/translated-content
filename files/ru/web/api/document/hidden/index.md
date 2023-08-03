@@ -1,7 +1,6 @@
 ---
 title: Document.hidden
 slug: Web/API/Document/hidden
-translation_of: Web/API/Document/hidden
 ---
 
 {{ ApiRef("DOM") }}
@@ -17,8 +16,8 @@ var boolean = document.hidden
 ## Примеры
 
 ```js
-document.addEventListener("visibilitychange", function() {
-  console.log( document.hidden );
+document.addEventListener("visibilitychange", function () {
+  console.log(document.hidden);
   // Modify behavior...
 });
 ```

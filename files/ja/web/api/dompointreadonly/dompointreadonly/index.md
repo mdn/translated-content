@@ -10,11 +10,11 @@ slug: Web/API/DOMPointReadOnly/DOMPointReadOnly
 ## 構文
 
 ```js
-new DOMPointReadOnly()
-new DOMPointReadOnly(x)
-new DOMPointReadOnly(x, y)
-new DOMPointReadOnly(x, y, z)
-new DOMPointReadOnly(x, y, z, w)
+new DOMPointReadOnly();
+new DOMPointReadOnly(x);
+new DOMPointReadOnly(x, y);
+new DOMPointReadOnly(x, y, z);
+new DOMPointReadOnly(x, y, z, w);
 ```
 
 ### 引数

@@ -1,7 +1,6 @@
 ---
 title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/assign
 ---
 
 {{JSRef}}

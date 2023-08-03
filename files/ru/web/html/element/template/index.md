@@ -1,20 +1,6 @@
 ---
-title: '<template>: элемент шаблона контента'
+title: "<template>: элемент шаблона контента"
 slug: Web/HTML/Element/template
-tags:
-  - Элемент
-  - HTML
-  - HTML Веб-компоненты
-  - HTML:Основной поток
-  - HTML:Метаданные
-  - HTML:Фразовый контент
-  - HTML:Элементы поддержки скриптов
-  - Справочник
-  - Шаблон
-  - Веб
-  - Веб-компоненты
-translation_of: Web/HTML/Element/template
-browser-compat: html.elements.template
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Igualdad Estricta (===)
 slug: Web/JavaScript/Reference/Operators/Strict_equality
-original_slug: Web/JavaScript/Referencia/Operadores/Strict_equality
 ---
 
 {{jsSidebar("Operators")}}

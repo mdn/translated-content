@@ -1,7 +1,6 @@
 ---
 title: CSS로 HTML 요소에 색 입히기
 slug: Web/CSS/CSS_colors/Applying_color
-original_slug: Web/HTML/Applying_color
 ---
 
 {{HTMLSidebar}}

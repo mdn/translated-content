@@ -1,7 +1,6 @@
 ---
 title: 203 Non-Authoritative Information
 slug: Web/HTTP/Status/203
-translation_of: Web/HTTP/Status/203
 ---
 
 {{HTTPSidebar}}

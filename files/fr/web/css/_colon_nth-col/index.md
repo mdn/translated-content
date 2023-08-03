@@ -1,7 +1,6 @@
 ---
 title: ":nth-col"
 slug: Web/CSS/:nth-col
-translation_of: Web/CSS/:nth-col
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

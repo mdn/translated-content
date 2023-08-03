@@ -1,7 +1,6 @@
 ---
 title: history.search()
 slug: Mozilla/Add-ons/WebExtensions/API/history/search
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/search
 ---
 
 {{AddonSidebar()}}

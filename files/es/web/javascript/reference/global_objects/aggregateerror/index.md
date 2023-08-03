@@ -1,7 +1,6 @@
 ---
 title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
-original_slug: Web/JavaScript/Referencia/Objetos_globales/AggregateError
 ---
 
 {{JSRef}}

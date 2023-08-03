@@ -1,7 +1,6 @@
 ---
 title: Elementos títulos
 slug: Web/HTML/Element/Heading_Elements
-original_slug: Web/HTML/Elemento/Elementos_títulos
 ---
 
 Los elementos de **encabezado** implementan seis niveles de encabezado del documento, `<h1>` es el más importante, y `<h6>`, el menos importante. Un elemento de encabezado describe brevemente el tema de la sección que presenta. La información de encabezado puede ser usada por los agentes usuarios, por ejemplo, para construir una tabla de contenidos para un documento automáticamente.

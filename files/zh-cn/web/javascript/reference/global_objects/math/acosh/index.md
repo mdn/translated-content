@@ -1,7 +1,6 @@
 ---
 title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
-original_slug: Web/JavaScript/Reference/Global_Objects/Math/反双曲余弦值
 ---
 
 {{JSRef}}

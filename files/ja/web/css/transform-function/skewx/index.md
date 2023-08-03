@@ -1,7 +1,6 @@
 ---
 title: skewX()
 slug: Web/CSS/transform-function/skewX
-original_slug: Web/CSS/transform-function/skewX()
 ---
 
 {{CSSRef}}

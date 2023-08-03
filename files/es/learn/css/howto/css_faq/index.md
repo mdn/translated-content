@@ -1,7 +1,6 @@
 ---
 title: Preguntas frecuentes sobre CSS
 slug: Learn/CSS/Howto/CSS_FAQ
-original_slug: Web/CSS/Preguntas_frecuentes_sobre_CSS
 ---
 
 #### Mi CSS es válida, pero no se representa correctamente

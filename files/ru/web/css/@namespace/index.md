@@ -1,9 +1,6 @@
 ---
 title: "@namespace"
 slug: Web/CSS/@namespace
-tags:
-  - Пространства имён
-translation_of: Web/CSS/@namespace
 ---
 
 {{ CSSRef() }}

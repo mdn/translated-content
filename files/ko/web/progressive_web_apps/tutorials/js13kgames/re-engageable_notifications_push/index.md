@@ -1,7 +1,6 @@
 ---
 title: 알림과 푸시를 사용해 PWA를 재참여(re-engageable)가능하게 만드는 방법
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
-original_slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
 
 {{PreviousMenu("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}

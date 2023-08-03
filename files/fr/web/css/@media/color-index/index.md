@@ -1,7 +1,6 @@
 ---
 title: color-index
 slug: Web/CSS/@media/color-index
-translation_of: Web/CSS/@media/color-index
 ---
 
 {{CSSRef}}

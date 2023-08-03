@@ -1,7 +1,6 @@
 ---
 title: tabs.connect()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/connect
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/connect
 ---
 
 {{AddonSidebar()}}

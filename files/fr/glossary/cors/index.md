@@ -1,7 +1,6 @@
 ---
 title: CORS
 slug: Glossary/CORS
-translation_of: Glossary/CORS
 ---
 
 CORS (Partage de ressource cross-origin) est un mécanisme qui consiste à transmettre des [entêtes HTTP](/fr/docs/HTTP/Headers) qui déterminent s'il faut ou non bloquer les requêtes à des ressources restreintes sur une page web qui se trouve sur un domaine externe au domaine dont la ressource est originaire.

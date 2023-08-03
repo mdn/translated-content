@@ -1,7 +1,6 @@
 ---
-title: 'MediaStream: addtrack イベント'
+title: "MediaStream: addtrack イベント"
 slug: Web/API/MediaStream/addtrack_event
-original_slug: Web/API/MediaStream/onaddtrack
 ---
 
 {{APIRef("Media Capture and Streams")}}

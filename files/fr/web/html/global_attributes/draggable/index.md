@@ -1,7 +1,6 @@
 ---
 title: draggable
 slug: Web/HTML/Global_attributes/draggable
-translation_of: Web/HTML/Global_attributes/draggable
 ---
 
 {{HTMLSidebar("Global_attributes")}}

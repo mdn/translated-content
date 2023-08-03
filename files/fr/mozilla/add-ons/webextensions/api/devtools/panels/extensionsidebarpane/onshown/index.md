@@ -1,7 +1,6 @@
 ---
 title: devtools.panels.ExtensionSidebarPane.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onShown
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onShown
 ---
 
 {{AddonSidebar()}}

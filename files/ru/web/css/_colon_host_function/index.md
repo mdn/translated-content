@@ -1,8 +1,6 @@
 ---
 title: ":host()"
 slug: Web/CSS/:host_function
-translation_of: Web/CSS/:host()
-original_slug: Web/CSS/:host()
 ---
 
 {{CSSRef}}

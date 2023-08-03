@@ -1,7 +1,6 @@
 ---
 title: stop-color
 slug: Web/SVG/Attribute/stop-color
-translation_of: Web/SVG/Attribute/stop-color
 ---
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 

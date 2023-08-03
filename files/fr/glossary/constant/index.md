@@ -1,7 +1,6 @@
 ---
 title: Constante
 slug: Glossary/Constant
-translation_of: Glossary/Constant
 ---
 
 Une constante est une valeur que le programmeur ne peut pas modifier, des nombres par exemple (1, 2, 42). Par contre, avec des {{glossary("Variable","variables")}}, le programmeur peut affecter une nouvelle {{glossary("value","valeur")}} à un nom de variable déjà utilisé.

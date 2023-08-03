@@ -1,7 +1,6 @@
 ---
 title: Operador de coalescência nula
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
-original_slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 ---
 
 {{JSSidebar("Operators")}}

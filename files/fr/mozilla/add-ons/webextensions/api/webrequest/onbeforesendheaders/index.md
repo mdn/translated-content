@@ -1,7 +1,6 @@
 ---
 title: webRequest.onBeforeSendHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders
 ---
 
 {{AddonSidebar()}}

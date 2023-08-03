@@ -1,7 +1,6 @@
 ---
 title: TCP
 slug: Glossary/TCP
-translation_of: Glossary/TCP
 ---
 
 **TCP (pour <i lang="en">Transmission Control Protocol</i> en anglais)** (ou «&nbsp;protocole de contrôle des transmissions&nbsp;») est un [protocole](/fr/docs/Glossary/Protocol) réseau qui permet à deux hôtes de se connecter et d'échanger des données. Le protocole TCP garantit la distribution des données et des paquets dans l'ordre où ils ont été envoyés. Vint Cerf et Bob Kahn, scientifiques du DARPA à l'époque, ont conçu TCP dans les années 70.

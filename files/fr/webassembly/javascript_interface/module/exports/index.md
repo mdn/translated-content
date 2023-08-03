@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Module.exports()
 slug: WebAssembly/JavaScript_interface/Module/exports
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/exports
 ---
 
 {{WebAssemblySidebar}}

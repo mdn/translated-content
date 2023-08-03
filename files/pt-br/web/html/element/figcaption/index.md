@@ -1,5 +1,5 @@
 ---
-title: '<figcaption>: O elemento de legenda da figura'
+title: "<figcaption>: O elemento de legenda da figura"
 slug: Web/HTML/Element/figcaption
 ---
 

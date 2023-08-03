@@ -1,10 +1,6 @@
 ---
 title: ":left"
 slug: Web/CSS/:left
-tags:
-  - Вёрстка
-  - Псевдоклассы
-translation_of: Web/CSS/:left
 ---
 
 {{ CSSRef() }}

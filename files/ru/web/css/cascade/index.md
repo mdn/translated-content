@@ -1,7 +1,6 @@
 ---
 title: Cascade
 slug: Web/CSS/Cascade
-translation_of: Web/CSS/Cascade
 ---
 
 {{ CSSRef() }}

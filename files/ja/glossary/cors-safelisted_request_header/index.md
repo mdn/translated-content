@@ -1,7 +1,6 @@
 ---
 title: CORS-safelisted request header (CORS セーフリストリクエストヘッダー)
 slug: Glossary/CORS-safelisted_request_header
-page-type: glossary-definition
 l10n:
   sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
 ---

@@ -1,5 +1,5 @@
 ---
-title: 'Window: DOMContentLoaded イベント'
+title: "Window: DOMContentLoaded イベント"
 slug: Web/API/Window/DOMContentLoaded_event
 ---
 

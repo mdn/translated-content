@@ -1,12 +1,6 @@
 ---
 title: Content-Disposition
 slug: Web/HTTP/Headers/Content-Disposition
-tags:
-  - HTTP
-  - HTTP-заголовок
-  - header
-translation_of: Web/HTTP/Headers/Content-Disposition
-original_slug: Web/HTTP/Заголовки/Content-Disposition
 ---
 {{HTTPSidebar}}В обычном HTTP-ответе заголовок **`Content-Disposition`** является индикатором того, что ожидаемый контент ответа будет отображаться в браузере, как веб-страница или часть веб-страницы, или же как вложение, которое затем может быть скачано и сохранено локально.
 

@@ -1,7 +1,6 @@
 ---
 title: DataTransfer
 slug: Web/API/DataTransfer
-translation_of: Web/API/DataTransfer
 ---
 
 L'objet `DataTransfer` contient les données glissées au cours d'une opération de glisser-déposer. Il peut contenir un ou plusieurs éléments, du même type ou de types différents. Pour plus d'informations sur le glisser-déposer, voir [Glisser et déposer](/fr/docs/Glisser_et_déposer).

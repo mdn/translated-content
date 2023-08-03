@@ -1,7 +1,6 @@
 ---
 title: <abbr>
 slug: Web/HTML/Element/abbr
-original_slug: Web/HTML/Elemento/abbr
 ---
 
 {{HTMLSidebar}}

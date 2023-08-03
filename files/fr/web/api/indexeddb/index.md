@@ -1,7 +1,6 @@
 ---
 title: indexedDB
 slug: Web/API/indexedDB
-translation_of: Web/API/indexedDB
 ---
 
 {{APIRef}}

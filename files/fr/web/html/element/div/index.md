@@ -1,7 +1,6 @@
 ---
 title: "<div> : l'élément de division du contenu"
 slug: Web/HTML/Element/div
-translation_of: Web/HTML/Element/div
 ---
 
 {{HTMLSidebar}}

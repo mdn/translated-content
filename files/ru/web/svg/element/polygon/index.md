@@ -1,10 +1,6 @@
 ---
 title: <polygon>
 slug: Web/SVG/Element/polygon
-tags:
-  - SVG
-translation_of: Web/SVG/Element/polygon
-original_slug: Web/SVG/Элемент/polygon
 ---
 {{SVGRef}}
 

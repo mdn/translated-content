@@ -1,7 +1,6 @@
 ---
 title: abort
 slug: Web/API/HTMLMediaElement/abort_event
-original_slug: Web/Events/abort
 ---
 
 O evento **`abort`** é disparado quando o carregamento de um recurso foi interrompido.

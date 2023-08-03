@@ -1,7 +1,6 @@
 ---
 title: mask-type
 slug: Web/CSS/mask-type
-translation_of: Web/CSS/mask-type
 ---
 
 {{CSSRef}}

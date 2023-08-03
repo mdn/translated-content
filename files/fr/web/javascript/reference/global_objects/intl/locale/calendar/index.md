@@ -1,7 +1,6 @@
 ---
 title: Intl.Locale.prototype.calendar
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar
 ---
 
 {{JSRef}}
