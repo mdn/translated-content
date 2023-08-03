@@ -41,9 +41,7 @@ An `InvalidState` error is raised if the `requestData()` method is called while 
 
 ## Specifications
 
-| Specification                                                                                                                                    | Status                                       | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName("MediaStream Recording", "#widl-MediaRecorder-requestData-void", "MediaRecorder.requestData()")}} | {{Spec2("MediaStream Recording")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

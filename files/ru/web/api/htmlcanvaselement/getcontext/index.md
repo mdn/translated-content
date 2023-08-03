@@ -32,9 +32,7 @@ canvas.getContext(contextType, contextAttributes);
   - : Вы можете использовать несколько атрибутов контекста при создании контекста рендеринга, например:
 
     ```js
-    canvas.getContext("webgl",
-                     { antialias: false,
-                       depth: false });
+    canvas.getContext("webgl", { antialias: false, depth: false });
     ```
 
     2d атрибуты контекста:
@@ -86,7 +84,7 @@ Now you have the [2D rendering context](/ru/docs/Web/API/CanvasRenderingContext2
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

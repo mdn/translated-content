@@ -1,5 +1,5 @@
 ---
-title: 'HTMLCanvasElement: событие webglcontextlost'
+title: "HTMLCanvasElement: событие webglcontextlost"
 slug: Web/API/HTMLCanvasElement/webglcontextlost_event
 tags:
   - Event
@@ -39,14 +39,14 @@ translation_of: Web/API/HTMLCanvasElement/webglcontextlost_event
 Вы можете эмулировать `webglcontextlost` событие с помощью расширения {{domxref("WEBGL_lose_context")}}:
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 
-canvas.addEventListener('webglcontextlost', (event) => {
+canvas.addEventListener("webglcontextlost", (event) => {
   console.log(event);
 });
 
-gl.getExtension('WEBGL_lose_context').loseContext();
+gl.getExtension("WEBGL_lose_context").loseContext();
 
 // будет выведено "webglcontextlost".
 ```
