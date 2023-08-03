@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getMinutes
 ---
 
 {{JSRef}}

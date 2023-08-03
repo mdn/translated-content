@@ -1,7 +1,6 @@
 ---
 title: dns.resolve()
 slug: Mozilla/Add-ons/WebExtensions/API/dns/resolve
-translation_of: Mozilla/Add-ons/WebExtensions/API/dns/resolve
 ---
 
 {{AddonSidebar()}}

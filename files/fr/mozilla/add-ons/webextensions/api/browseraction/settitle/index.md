@@ -1,7 +1,6 @@
 ---
 title: browserAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setTitle
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setTitle
 ---
 
 {{AddonSidebar}}

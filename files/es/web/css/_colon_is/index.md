@@ -1,7 +1,6 @@
 ---
 title: ":any"
 slug: Web/CSS/:is
-original_slug: Web/CSS/:any
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

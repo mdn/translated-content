@@ -1,7 +1,6 @@
 ---
 title: browserSettings.openBookmarksInNewTabs
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs
 ---
 
 {{AddonSidebar()}}

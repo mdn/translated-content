@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 ---
 
 {{JSRef}}

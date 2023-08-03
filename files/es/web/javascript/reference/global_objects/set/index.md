@@ -1,7 +1,6 @@
 ---
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
-original_slug: Web/JavaScript/Reference/Global_Objects/Set
 ---
 
 {{JSRef}}

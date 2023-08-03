@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.getLayers()
 slug: Web/API/VRDisplay/getLayers
-original_slug: Web/API/VRDevice/getLayers
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

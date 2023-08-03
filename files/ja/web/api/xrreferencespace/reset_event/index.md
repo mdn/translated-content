@@ -1,5 +1,5 @@
 ---
-title: 'XRReferenceSpace: reset イベント'
+title: "XRReferenceSpace: reset イベント"
 slug: Web/API/XRReferenceSpace/reset_event
 ---
 

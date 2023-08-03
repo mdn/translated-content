@@ -1,5 +1,5 @@
 ---
-title: ':user-valid (:-moz-ui-valid)'
+title: ":user-valid (:-moz-ui-valid)"
 slug: Web/CSS/:user-valid
 ---
 

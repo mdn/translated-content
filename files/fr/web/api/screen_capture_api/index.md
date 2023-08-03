@@ -1,7 +1,6 @@
 ---
 title: Screen Capture API
 slug: Web/API/Screen_Capture_API
-translation_of: Web/API/Screen_Capture_API
 ---
 
 {{DefaultAPISidebar("Screen Capture API")}}

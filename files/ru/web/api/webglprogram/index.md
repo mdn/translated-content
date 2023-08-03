@@ -1,7 +1,6 @@
 ---
 title: WebGLProgram
 slug: Web/API/WebGLProgram
-translation_of: Web/API/WebGLProgram
 ---
 
 {{APIRef("WebGL")}}
@@ -17,7 +16,7 @@ gl.attachShader(program, fragmentShader);
 
 gl.linkProgram(program);
 
-if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
   var info = gl.getProgramInfoLog(program);
   throw "Could not compile WebGL program. \n\n" + info;
 }

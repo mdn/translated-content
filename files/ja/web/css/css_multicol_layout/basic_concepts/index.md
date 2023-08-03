@@ -1,7 +1,6 @@
 ---
 title: 段組みの基本概念
 slug: Web/CSS/CSS_multicol_layout/Basic_concepts
-original_slug: Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
 ---
 
 {{CSSRef}}

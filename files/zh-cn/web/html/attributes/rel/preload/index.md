@@ -1,7 +1,6 @@
 ---
 title: 链接类型：preload
 slug: Web/HTML/Attributes/rel/preload
-original_slug: Web/HTML/Link_types/preload
 ---
 
 {{HTMLSidebar}}

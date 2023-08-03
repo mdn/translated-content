@@ -1,7 +1,6 @@
 ---
 title: WorkerGlobalScope.onlanguagechange
 slug: Web/API/WorkerGlobalScope/languagechange_event
-translation_of: Web/API/WorkerGlobalScope/onlanguagechange
 ---
 
 {{APIRef("Web Workers API")}}

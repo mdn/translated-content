@@ -1,7 +1,6 @@
 ---
 title: 이벤트 루프
 slug: Web/JavaScript/Event_loop
-original_slug: Web/JavaScript/EventLoop
 ---
 
 {{JsSidebar("Advanced")}}

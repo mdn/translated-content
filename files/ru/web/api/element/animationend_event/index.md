@@ -1,8 +1,6 @@
 ---
 title: GlobalEventHandler.onanimationend
 slug: Web/API/Element/animationend_event
-translation_of: Web/API/GlobalEventHandlers/onanimationend
-original_slug: Web/API/GlobalEventHandlers/onanimationend
 ---
 
 {{APIRef("CSS3 Animations")}}
@@ -27,9 +25,7 @@ A {{jsxref ("Function")}} вызывается, когда происходит 
 
 ## Specification
 
-| Specification                                                                                                        | Status                               | Comment |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('CSS3 Animations','#eventdef-animationevent-animationend','onanimationend')}} | {{Spec2('CSS3 Animations')}} |         |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

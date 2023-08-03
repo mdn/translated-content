@@ -1,7 +1,6 @@
 ---
 title: Grammaire lexicale
 slug: Web/JavaScript/Reference/Lexical_grammar
-translation_of: Web/JavaScript/Reference/Lexical_grammar
 ---
 
 {{JsSidebar("More")}}

@@ -1,7 +1,6 @@
 ---
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
-original_slug: Web/JavaScript/Referencia/Objetos_globales/JSON/parse
 ---
 
 {{JSRef("Global_Objects", "JSON")}}

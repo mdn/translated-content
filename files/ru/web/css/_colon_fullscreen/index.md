@@ -1,12 +1,6 @@
 ---
-title: ':fullscreen'
+title: ":fullscreen"
 slug: Web/CSS/:fullscreen
-tags:
-  - Вёрстка
-  - полноэкранный режим
-  - псевдокласс
-  - экран
-translation_of: Web/CSS/:fullscreen
 ---
 
 {{CSSRef}}

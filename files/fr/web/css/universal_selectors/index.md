@@ -1,7 +1,6 @@
 ---
 title: Sélecteurs universels
 slug: Web/CSS/Universal_selectors
-translation_of: Web/CSS/Universal_selectors
 ---
 
 {{CSSRef("Selectors")}}

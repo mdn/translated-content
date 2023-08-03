@@ -26,6 +26,7 @@ build/
 /files/fr/web/css/place-self/index.md
 /files/fr/web/javascript/reference/global_objects/array/includes/index.md
 /files/fr/web/javascript/reference/global_objects/intl/displaynames/of/index.md
+/files/ko/web/css/css_flow_layout/block_and_inline_layout_in_normal_flow/index.md
 /files/pt-br/learn/server-side/django/forms/index.md
 /files/ru/learn/server-side/django/forms/index.md
 /files/ru/learn/server-side/django/introduction/index.md
@@ -51,7 +52,6 @@ build/
 /files/ja/web/svg/**/*.md
 
 # ko
-/files/ko/web/api/**/*.md
 /files/ko/web/css/**/*.md
 /files/ko/web/javascript/**/*.md
 

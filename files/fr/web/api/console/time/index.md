@@ -1,7 +1,6 @@
 ---
 title: console.time
 slug: Web/API/console/time
-translation_of: Web/API/Console/time
 ---
 
 {{APIRef("Console API")}}

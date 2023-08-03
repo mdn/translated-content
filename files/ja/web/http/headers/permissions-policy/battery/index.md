@@ -1,7 +1,6 @@
 ---
-title: 'Feature-Policy: battery'
+title: "Feature-Policy: battery"
 slug: Web/HTTP/Headers/Permissions-Policy/battery
-original_slug: Web/HTTP/Headers/Feature-Policy/battery
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}

@@ -1,7 +1,6 @@
 ---
 title: Optimisation des performances en CSS
 slug: Learn/Performance/CSS
-translation_of: Learn/Performance/CSS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}

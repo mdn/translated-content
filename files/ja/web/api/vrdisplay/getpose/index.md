@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.getPose()
 slug: Web/API/VRDisplay/getPose
-original_slug: Web/API/VRDevice/getPose
 ---
 
 {{APIRef("WebVR API")}}{{deprecated_header}}

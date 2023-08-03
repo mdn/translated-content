@@ -1,5 +1,5 @@
 ---
-title: '<rtc>: ルビ文字列コンテナー要素'
+title: "<rtc>: ルビ文字列コンテナー要素"
 slug: Web/HTML/Element/rtc
 ---
 

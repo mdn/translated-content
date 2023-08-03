@@ -1,8 +1,8 @@
 ---
 title: Window.frames
 slug: Web/API/Window/frames
-translation_of: Web/API/Window/frames
 ---
+
 {{APIRef("DOM")}}
 
 Возвращает само окно, являющееся объектом в виде массива, распечатывая элементы текущего окна.
@@ -30,10 +30,7 @@ for (var i = 0; i < frames.length; i++) {
 
 ## Specifications
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName("HTML WHATWG", "browsers.html#dom-frames", "Window.frames")}} | {{Spec2("HTML WHATWG")}} |         |
-| {{SpecName("HTML5 W3C", "browsers.html#dom-frames", "Window.frames")}}     | {{Spec2("HTML5 W3C")}}     |         |
+{{Specifications}}
 
 ## Browser compatibility
 

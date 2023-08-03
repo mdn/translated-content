@@ -1,7 +1,6 @@
 ---
 title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
-original_slug: Web/HTML/Atributos_Globales/itemscope
 ---
 
 {{HTMLSidebar("Global_attributes")}}

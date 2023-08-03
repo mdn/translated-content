@@ -1,7 +1,6 @@
 ---
 title: IDBObjectStore.openKeyCursor()
 slug: Web/API/IDBObjectStore/openKeyCursor
-translation_of: Web/API/IDBObjectStore/openKeyCursor
 ---
 
 {{APIRef("IndexedDB")}}

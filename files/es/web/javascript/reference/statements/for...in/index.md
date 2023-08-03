@@ -1,7 +1,6 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-original_slug: Web/JavaScript/Referencia/Sentencias/for...in
 ---
 
 {{jsSidebar("Statements")}}

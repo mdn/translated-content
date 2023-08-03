@@ -1,7 +1,6 @@
 ---
 title: devtools.inspectedWindow.tabId
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId
 ---
 
 {{AddonSidebar()}}

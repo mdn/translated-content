@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Set/size
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/size
 ---
 
 {{JSRef}}

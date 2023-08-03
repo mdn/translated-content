@@ -1,7 +1,6 @@
 ---
 title: Response.json()
 slug: Web/API/Response/json
-original_slug: Web/API/Body/json
 l10n:
   sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---

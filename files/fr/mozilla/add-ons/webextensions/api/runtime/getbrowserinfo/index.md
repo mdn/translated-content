@@ -1,7 +1,6 @@
 ---
 title: runtime.getBrowserInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo
 ---
 
 {{AddonSidebar}}

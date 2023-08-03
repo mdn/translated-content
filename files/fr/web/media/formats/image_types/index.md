@@ -1,7 +1,6 @@
 ---
 title: Guide des types et formats de fichiers d'images
 slug: Web/Media/Formats/Image_types
-translation_of: Web/Media/Formats/Image_types
 ---
 
 {{QuickLinksWithSubpages("/fr/docs/Web/Media")}}

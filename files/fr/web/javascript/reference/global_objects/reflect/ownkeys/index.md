@@ -1,7 +1,6 @@
 ---
 title: Reflect.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
 ---
 
 {{JSRef}}

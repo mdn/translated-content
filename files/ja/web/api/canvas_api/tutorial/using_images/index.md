@@ -1,7 +1,6 @@
 ---
 title: 画像の使用
 slug: Web/API/Canvas_API/Tutorial/Using_images
-original_slug: Web/Guide/HTML/Canvas_tutorial/Using_images
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}

@@ -1,7 +1,6 @@
 ---
 title: skew()
 slug: Web/CSS/transform-function/skew
-original_slug: Web/CSS/transform-function/skew()
 ---
 
 {{CSSRef}}
@@ -234,5 +233,5 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [skewX()](/ja/docs/Web/CSS/transform-function/skewX())
-- [skewY()](/ja/docs/Web/CSS/transform-function/skewY())
+- [skewX()](</ja/docs/Web/CSS/transform-function/skewX()>)
+- [skewY()](</ja/docs/Web/CSS/transform-function/skewY()>)

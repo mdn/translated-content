@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Unary_plus
 ## 構文
 
 ```js
-+x
++x;
 ```
 
 ## 解説
@@ -36,11 +36,11 @@ console.log(+y);
 ### 数値以外での使い方
 
 ```js
-+true  // 1
-+false // 0
-+null  // 0
-+function(val){ return val } // NaN
-+1n    //  BigInt 値は数値に変換できないためエラーになります
++true; // 1
++false; // 0
++null; // 0
++function(val){ return val }; // NaN
++1n; // BigInt 値は数値に変換できないためエラーになります
 ```
 
 ## 仕様書

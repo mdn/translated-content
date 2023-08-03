@@ -1,7 +1,6 @@
 ---
 title: Instalar y desinstalar aplicaciones web
 slug: Web/Progressive_web_apps/Guides/Installing
-original_slug: Web/Progressive_web_apps/Installing
 ---
 
 La instalación de aplicaciones web es una función disponible en los navegadores modernos que permite a los usuarios elegir "instalar" fácil y cómodamente una aplicación web en su dispositivo para que puedan acceder a ella de la misma manera que lo harían con cualquier otra aplicación. Dependiendo del dispositivo y las características del sistema operativo y el navegador, esto puede resultar en lo que esencialmente es una aplicación con todas las funciones (por ejemplo, usando [WebAPK](https://developers.google.com/web/fundamentals/integration/webapks) en Android) o como un acceso directo agregado a la pantalla de tu dispositivo. Esta guía explica cómo se realiza la instalación, qué significa y qué debes hacer como desarrollador para que los usuarios la aprovechen.

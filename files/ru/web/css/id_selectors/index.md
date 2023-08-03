@@ -1,7 +1,6 @@
 ---
 title: Селекторы по ID
 slug: Web/CSS/ID_selectors
-translation_of: Web/CSS/ID_selectors
 ---
 
 {{ CSSRef() }}

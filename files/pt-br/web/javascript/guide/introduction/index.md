@@ -1,7 +1,6 @@
 ---
 title: Introdução
 slug: Web/JavaScript/Guide/Introduction
-page-type: guide
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}

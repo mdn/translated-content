@@ -1,5 +1,5 @@
 ---
-title: '<dir>:  O elemento obsoleto Directory'
+title: "<dir>:  O elemento obsoleto Directory"
 slug: Web/HTML/Element/dir
 ---
 

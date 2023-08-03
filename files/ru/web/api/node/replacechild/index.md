@@ -1,16 +1,8 @@
 ---
 title: Node.replaceChild
 slug: Web/API/Node/replaceChild
-tags:
-  - API
-  - DOM
-  - DOM Elements Method
-  - Gecko
-  - Method
-  - Node
-translation_of: Web/API/Node/replaceChild
-original_slug: Web/API/Node.replaceChild
 ---
+
 {{ApiRef}}
 
 ## Аннотация
@@ -60,11 +52,13 @@ parentDiv.replaceChild(sp1, sp2);
 // </div>
 ```
 
-## Спецификация
+## Спецификации
 
-- [DOM Level 1 Core: replaceChild](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-replaceChild)
-- [DOM Level 2 Core: replaceChild](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-785887307)
-- [DOM Level 3 Core: replaceChild](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-785887307)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
 
 ## Смотрите также
 

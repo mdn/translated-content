@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.CompileError
 slug: WebAssembly/JavaScript_interface/CompileError
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
 ---
 
 {{WebAssemblySidebar}}

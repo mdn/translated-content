@@ -1,7 +1,6 @@
 ---
 title: CSS グリッドレイアウトでの自動配置
 slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
-original_slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 ---
 
 {{CSSRef}}

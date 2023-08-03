@@ -1,7 +1,6 @@
 ---
 title: XMLDocument
 slug: Web/API/XMLDocument
-translation_of: Web/API/XMLDocument
 ---
 
 {{ ApiRef("DOM") }} {{SeeCompatTable}}

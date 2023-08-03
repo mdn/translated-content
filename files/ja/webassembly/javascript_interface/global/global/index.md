@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Global() コンストラクター
 slug: WebAssembly/JavaScript_interface/Global/Global
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global
 ---
 
 {{WebAssemblySidebar}}

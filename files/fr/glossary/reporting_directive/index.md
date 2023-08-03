@@ -1,7 +1,6 @@
 ---
 title: Directive de rapport
 slug: Glossary/Reporting_directive
-translation_of: Glossary/Reporting_directive
 ---
 
 Les **directives de rapports** **{{Glossary("CSP")}}** sont utilisées dans un en-tête {{HTTPHeader("Content-Security-Policy","Politique de sécurité de contenu")}} et contrôlent le processus de génération de rapports sur les violations CSP.

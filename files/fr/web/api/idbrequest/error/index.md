@@ -1,7 +1,6 @@
 ---
 title: IDBRequest.error
 slug: Web/API/IDBRequest/error
-translation_of: Web/API/IDBRequest/error
 ---
 
 {{APIRef("IndexedDB")}}

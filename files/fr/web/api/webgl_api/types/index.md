@@ -1,7 +1,6 @@
 ---
 title: Types WebGL
 slug: Web/API/WebGL_API/Types
-translation_of: Web/API/WebGL_API/Types
 ---
 
 {{DefaultAPISidebar("WebGL")}}

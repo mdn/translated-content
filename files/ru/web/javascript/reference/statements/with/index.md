@@ -1,7 +1,6 @@
 ---
 title: with
 slug: Web/JavaScript/Reference/Statements/with
-translation_of: Web/JavaScript/Reference/Statements/with
 ---
 
 > **Предупреждение:** Использование оператора `with` не рекомендуемо, т.к. он может быть источником запутанных багов и проблем совместимости. Детальная информация в параграфе "Ambiguity Contra" раздела "Description".

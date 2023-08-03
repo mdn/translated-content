@@ -1,7 +1,6 @@
 ---
 title: error
 slug: Web/API/HTMLElement/error_event
-original_slug: Web/API/Element/error_event
 ---
 
 {{APIRef}}

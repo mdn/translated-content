@@ -1,5 +1,5 @@
 ---
-title: ':dir()'
+title: ":dir()"
 slug: Web/CSS/:dir
 ---
 

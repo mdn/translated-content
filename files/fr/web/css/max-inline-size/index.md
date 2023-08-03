@@ -1,7 +1,6 @@
 ---
 title: max-inline-size
 slug: Web/CSS/max-inline-size
-translation_of: Web/CSS/max-inline-size
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

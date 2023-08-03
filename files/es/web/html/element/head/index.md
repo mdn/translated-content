@@ -1,7 +1,6 @@
 ---
 title: head
 slug: Web/HTML/Element/head
-original_slug: Web/HTML/Elemento/head
 ---
 
 {{HTMLSidebar}}

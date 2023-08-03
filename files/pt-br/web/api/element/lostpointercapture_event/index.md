@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onlostpointercapture
 slug: Web/API/Element/lostpointercapture_event
-original_slug: Web/API/GlobalEventHandlers/onlostpointercapture
 ---
 
 {{ApiRef("HTML DOM")}}

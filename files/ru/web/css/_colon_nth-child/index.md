@@ -1,13 +1,6 @@
 ---
-title: ':nth-child'
+title: ":nth-child"
 slug: Web/CSS/:nth-child
-tags:
-  - CSS
-  - Layout
-  - Reference
-  - Web
-  - Псевдоклассы
-translation_of: Web/CSS/:nth-child
 ---
 
 {{CSSRef}}

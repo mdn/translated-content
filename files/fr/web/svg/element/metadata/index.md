@@ -1,7 +1,6 @@
 ---
 title: <metadata>
 slug: Web/SVG/Element/metadata
-translation_of: Web/SVG/Element/metadata
 ---
 
 {{SVGRef}}

@@ -1,7 +1,6 @@
 ---
 title: frame
 slug: Web/HTML/Element/frame
-original_slug: Web/HTML/Elemento/frame
 ---
 
 ### Definición

@@ -1,7 +1,6 @@
 ---
 title: 미디어 쿼리 초보자 안내서
 slug: Learn/CSS/CSS_layout/Media_queries
-original_slug: Learn/CSS/CSS_layout/미디어_쿼리_초보자_안내서
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
