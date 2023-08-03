@@ -1,14 +1,6 @@
 ---
 title: USB.getDevices()
 slug: Web/API/USB/getDevices
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - WebUSB
-  - WebUSB API
-  - getDevices()
 ---
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}

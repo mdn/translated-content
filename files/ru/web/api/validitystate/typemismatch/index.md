@@ -1,13 +1,6 @@
 ---
 title: ValidityState.typeMismatch
 slug: Web/API/ValidityState/typeMismatch
-tags:
-  - API
-  - Constraint Validation API
-  - DOM
-  - Свойство
-  - Справочник
-browser-compat: api.ValidityState.typeMismatch
 ---
 
 Доступное только для чтения свойство **`typeMismatch`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, соответствует ли изменённое пользователем значение {{HTMLElement("input")}} ограничениям атрибута [`type`](/ru/docs/Web/HTML/Element/input#input_types).

@@ -1,17 +1,6 @@
 ---
 title: AudioParam
 slug: Web/API/AudioParam
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Interface
-  - NeedsTranslation
-  - Parameter
-  - Reference
-  - TopicStub
-  - Web Audio API
-  - sound
 ---
 
 {{APIRef("Web Audio API")}}

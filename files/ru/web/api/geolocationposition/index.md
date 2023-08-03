@@ -1,9 +1,6 @@
 ---
 title: GeolocationPosition
 slug: Web/API/GeolocationPosition
-tags:
-  - локация
-  - местонахождение
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}

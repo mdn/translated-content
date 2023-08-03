@@ -1,14 +1,6 @@
 ---
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - String
-  - регулярные выражения
 ---
 
 {{JSRef("Global_Objects", "String")}}

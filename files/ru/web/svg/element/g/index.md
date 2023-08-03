@@ -1,9 +1,6 @@
 ---
 title: <g>
 slug: Web/SVG/Element/g
-tags:
-  - NeedsUpdate
-  - SVG
 ---
 {{SVGRef}}
 

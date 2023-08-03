@@ -1,13 +1,6 @@
 ---
 title: Node.replaceChild
 slug: Web/API/Node/replaceChild
-tags:
-  - API
-  - DOM
-  - DOM Elements Method
-  - Gecko
-  - Method
-  - Node
 ---
 
 {{ApiRef}}

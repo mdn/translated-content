@@ -1,10 +1,6 @@
 ---
 title: HTTP аутентификация
 slug: Web/HTTP/Authentication
-tags:
-  - Аутентификация
-  - Разграничение доступа
-  - Руководство
 ---
 {{HTTPSidebar}}
 

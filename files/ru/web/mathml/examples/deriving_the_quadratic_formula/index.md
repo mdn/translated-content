@@ -1,14 +1,6 @@
 ---
 title: "MathML: Вывод Квадратичной Формулы"
 slug: Web/MathML/Examples/Deriving_the_Quadratic_Formula
-tags:
-  - Beginner
-  - Education
-  - Example
-  - Guide
-  - HTML5
-  - MathML
-  - NeedsBeginnerUpdate
 ---
 
 На этой странице описывается вывод Квадратичной Формулы.

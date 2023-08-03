@@ -1,11 +1,6 @@
 ---
 title: Function.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
-tags:
-  - Function
-  - JavaScript
-  - Method
-  - Prototype
 ---
 {{JSRef("Global_Objects", "Function")}}
 

@@ -1,7 +1,5 @@
 ---
-title: >-
-  TypeError: can't delete non-configurable array element(Тип ошибки:не удаётся
-  удалить настраиваемый элемент массива)
+title: "TypeError: can't delete non-configurable array element(Тип ошибки:не удаётся удалить настраиваемый элемент массива)"
 slug: Web/JavaScript/Reference/Errors/Non_configurable_array_element
 ---
 {{jsSidebar("Errors")}}

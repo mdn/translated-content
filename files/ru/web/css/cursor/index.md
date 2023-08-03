@@ -1,7 +1,6 @@
 ---
 title: Курсор
 slug: Web/CSS/cursor
-browser-compat: css.properties.cursor
 ---
 
 {{CSSRef}}

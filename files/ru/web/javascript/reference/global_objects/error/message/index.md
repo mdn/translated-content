@@ -1,11 +1,6 @@
 ---
 title: Error.prototype.message
 slug: Web/JavaScript/Reference/Global_Objects/Error/message
-tags:
-  - Error
-  - JavaScript
-  - Property
-  - Prototype
 ---
 {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 

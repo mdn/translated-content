@@ -1,7 +1,6 @@
 ---
 title: "Проверьте свои знания: Изображения в HTML"
-slug: >-
-  Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images
+slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images
 ---
 
 {{learnsidebar}}

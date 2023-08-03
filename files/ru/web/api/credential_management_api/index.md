@@ -1,14 +1,6 @@
 ---
 title: Credential Management API
 slug: Web/API/Credential_Management_API
-tags:
-  - API
-  - Credential Management API
-  - Landing
-  - NeedsContent
-  - Overview
-  - Reference
-  - credential management
 ---
 
 {{DefaultAPISidebar("Credential Management API")}}{{ SeeCompatTable() }}

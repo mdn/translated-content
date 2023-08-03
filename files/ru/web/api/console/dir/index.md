@@ -1,10 +1,6 @@
 ---
 title: Console.dir()
 slug: Web/API/console/dir
-tags:
-  - API
-  - DOM
-  - Веб-консоль
 ---
 
 {{ APIRef("Console API") }}{{Non-standard_header}}

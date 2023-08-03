@@ -1,14 +1,6 @@
 ---
 title: Storage
 slug: Web/API/Storage
-tags:
-  - API
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Storage
-  - Web Storage
-  - data
 ---
 
 {{APIRef("Web Storage API")}}

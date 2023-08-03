@@ -1,14 +1,6 @@
 ---
 title: USB.ondisconnect
 slug: Web/API/USB/disconnect_event
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - WebUSB
-  - WebUSB API
-  - ondisconnect
 ---
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}

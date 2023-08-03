@@ -1,17 +1,6 @@
 ---
 title: Доказательство теоремы Пифагора
 slug: Web/MathML/Examples/MathML_Pythagorean_Theorem
-tags:
-  - Beginner
-  - Example
-  - Guide
-  - HTML5 Math
-  - Math education
-  - MathML
-  - NeedsBeginnerUpdate
-  - Гайд
-  - Начинающий
-  - Пример
 ---
 
 Сейчас мы докажем Теорему Пифагора:

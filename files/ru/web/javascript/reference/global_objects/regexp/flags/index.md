@@ -1,17 +1,6 @@
 ---
 title: RegExp.prototype.flags
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
-tags:
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Référence(2)
-  - регулярные выражения
 ---
 
 {{JSRef("Global_Objects", "RegExp")}}

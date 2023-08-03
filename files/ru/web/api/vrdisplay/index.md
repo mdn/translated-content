@@ -1,19 +1,6 @@
 ---
 title: VRDisplay
 slug: Web/API/VRDisplay
-tags:
-  - API
-  - DOM
-  - Experimental
-  - Interface
-  - Media
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}

@@ -1,14 +1,6 @@
 ---
 title: Web Workers API
 slug: Web/API/Web_Workers_API
-tags:
-  - API
-  - NeedsTranslation
-  - Service Workers
-  - Shared Workers
-  - TopicStub
-  - Web Workers
-  - Workers
 ---
 
 {{DefaultAPISidebar("Web Workers API")}}

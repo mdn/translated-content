@@ -1,13 +1,6 @@
 ---
 title: RegExp.prototype.exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - регулярные выражения
 ---
 
 {{JSRef("Global_Objects", "RegExp")}}

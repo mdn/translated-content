@@ -1,11 +1,6 @@
 ---
 title: TypedArray.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
-tags:
-  - Типизированные массивы
-  - Типизированный массив
-  - метод
-  - прототип
 ---
 
 {{JSRef}}

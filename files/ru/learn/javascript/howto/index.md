@@ -1,8 +1,6 @@
 ---
 title: Решите общие проблемы в вашем JavaScript-коде
 slug: Learn/JavaScript/Howto
-tags:
-  - Начинающий
 ---
 
 {{LearnSidebar}}

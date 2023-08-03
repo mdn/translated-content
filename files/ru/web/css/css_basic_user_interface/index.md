@@ -1,11 +1,6 @@
 ---
 title: CSS Basic User Interface
 slug: Web/CSS/CSS_basic_user_interface
-tags:
-  - CSS
-  - CSS Basic User Interface
-  - Overview
-  - Reference
 ---
 
 {{CSSRef}}

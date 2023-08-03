@@ -1,13 +1,6 @@
 ---
 title: Intl.DateTimeFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
-tags:
-  - DateTimeFormat
-  - Intl
-  - JavaScript
-  - Method
-  - Prototype
-  - метод
 ---
 
 {{JSRef}}Метод **`Intl.DateTimeFormat.prototype.formatToParts()`** позволяет выполнять форматирование строк с учётом форматирования `DateTimeFormat`.

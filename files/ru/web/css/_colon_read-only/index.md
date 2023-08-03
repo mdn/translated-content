@@ -1,8 +1,6 @@
 ---
-title: ':read-only'
+title: ":read-only"
 slug: Web/CSS/:read-only
-tags:
-  - Псевдо-элементы
 ---
 {{ CSSRef() }}
 

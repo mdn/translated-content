@@ -1,9 +1,6 @@
 ---
 title: word-spacing
 slug: Web/CSS/word-spacing
-tags:
-  - Текст
-  - форматирование
 ---
 {{CSSRef}}
 

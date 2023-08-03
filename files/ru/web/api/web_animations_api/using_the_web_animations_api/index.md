@@ -1,8 +1,6 @@
 ---
 title: Using the Web Animations API
 slug: Web/API/Web_Animations_API/Using_the_Web_Animations_API
-tags:
-  - Анимация
 ---
 
 {{DefaultAPISidebar("Web Animations")}}

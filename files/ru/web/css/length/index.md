@@ -1,12 +1,6 @@
 ---
 title: <length>
 slug: Web/CSS/length
-tags:
-  - CSS
-  - CSS Тип Данных
-  - Величина
-  - Разметка
-  - длина
 ---
 
 {{CSSRef}}

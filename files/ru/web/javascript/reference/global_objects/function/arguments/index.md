@@ -1,12 +1,6 @@
 ---
 title: Function.arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
-tags:
-  - Deprecated
-  - Function
-  - JavaScript
-  - Property
-  - arguments
 ---
 
 {{JSRef("Global_Objects", "Function")}} {{deprecated_header}}

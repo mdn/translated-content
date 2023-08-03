@@ -1,11 +1,6 @@
 ---
 title: Используемые по умолчанию значения заголовка Accept
 slug: Web/HTTP/Content_negotiation/List_of_default_Accept_values
-tags:
-  - HTTP
-  - Reference
-  - Заголовок Accept
-  - Согласование контента
 ---
 {{HTTPSidebar}}
 

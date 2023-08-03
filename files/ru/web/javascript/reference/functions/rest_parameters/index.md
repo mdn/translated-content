@@ -1,10 +1,6 @@
 ---
 title: Остаточные параметры (rest parameters)
 slug: Web/JavaScript/Reference/Functions/rest_parameters
-tags:
-  - JavaScript
-  - Остаточные параметры
-  - Функции
 ---
 
 {{jsSidebar("Functions")}}

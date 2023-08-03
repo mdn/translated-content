@@ -1,10 +1,6 @@
 ---
 title: Отправить отзыв об MDN
 slug: MDN/Community
-tags:
-  - Руководство
-  - Сообщество
-  - Чат
 ---
 
 {{MDNSidebar}}

@@ -1,10 +1,6 @@
 ---
 title: Navigator
 slug: Web/API/Navigator
-tags:
-  - API
-  - HTML DOM
-  - Navigator
 ---
 
 {{ apiref() }}

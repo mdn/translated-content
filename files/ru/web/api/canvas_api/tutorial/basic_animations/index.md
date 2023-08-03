@@ -1,13 +1,6 @@
 ---
 title: Простые анимации
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
-tags:
-  - HTML
-  - HTML5
-  - Графика
-  - Обучение
-  - Средний уровень
-  - Холст
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}

@@ -1,10 +1,6 @@
 ---
 title: Публичные поля классов
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
-tags:
-  - Классы
-  - JavaScript
-  - Возможности языка
 ---
 {{JsSidebar("Classes")}}
 

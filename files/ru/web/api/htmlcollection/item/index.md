@@ -1,11 +1,6 @@
 ---
 title: HTMLCollection.item
 slug: Web/API/HTMLCollection/item
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
 ---
 
 {{APIRef("HTML DOM")}}

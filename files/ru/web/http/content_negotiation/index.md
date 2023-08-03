@@ -1,8 +1,6 @@
 ---
 title: Согласование контента
 slug: Web/HTTP/Content_negotiation
-tags:
-  - Согласование контента
 ---
 
 {{HTTPSidebar}}

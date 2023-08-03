@@ -1,13 +1,6 @@
 ---
 title: Уроки по Web API
 slug: Web/Guide/API
-tags:
-  - API
-  - Guide
-  - Landing
-  - NeedsTranslation
-  - TopicStub
-  - Web
 ---
 
 Здесь вы найдёте ссылки на каждое руководство и объяснение каждого API, составляющего архитектуру веб-разработки.

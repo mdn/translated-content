@@ -1,12 +1,6 @@
 ---
 title: ключ background
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
-tags:
-  - WebExtensions
-  - Веб-расширения
-  - Дополнения
-  - Манифест
-  - Расширения
 ---
 
 {{AddonSidebar}}

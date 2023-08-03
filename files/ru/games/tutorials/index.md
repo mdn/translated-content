@@ -1,17 +1,6 @@
 ---
 title: Уроки
 slug: Games/Tutorials
-tags:
-  - Canvas
-  - Games
-  - JavaScript
-  - NeedsTranslation
-  - TopicStub
-  - Tutorial
-  - Web
-  - Workflows
-  - Игры
-  - уроки
 ---
 
 {{GamesSidebar}}

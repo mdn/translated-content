@@ -1,12 +1,6 @@
 ---
 title: Set.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Set/size
-tags:
-  - ECMAScript6
-  - JavaScript
-  - set
-  - Свойство
-  - прототип
 ---
 {{JSRef}}
 

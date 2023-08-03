@@ -1,10 +1,6 @@
 ---
 title: Участие в развитии MDN
 slug: MDN/Contribute
-tags:
-  - Гайд
-  - Landing
-  - MDN Meta
 ---
 
 {{MDNSidebar}}

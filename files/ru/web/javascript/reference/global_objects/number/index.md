@@ -1,10 +1,6 @@
 ---
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
-tags:
-  - JavaScript
-  - Number
-  - Reference
 ---
 {{JSRef("Global_Objects", "Number")}}
 

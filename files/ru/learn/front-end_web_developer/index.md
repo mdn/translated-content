@@ -1,10 +1,6 @@
 ---
 title: Фронтенд разработчик
 slug: Learn/Front-end_web_developer
-tags:
-  - Начинающий
-  - Стандарты веб-разработки
-  - Фронтенд
 ---
 
 {{learnsidebar}}

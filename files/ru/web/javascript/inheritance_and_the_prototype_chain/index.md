@@ -1,11 +1,6 @@
 ---
 title: Наследование и цепочка прототипов
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
-tags:
-  - JavaScript
-  - Наследование
-  - ООП
-  - Прототип объекта
 ---
 
 {{jsSidebar("Advanced")}}

@@ -1,10 +1,6 @@
 ---
 title: Document.dir
 slug: Web/API/Document/dir
-tags:
-  - API
-  - Document
-  - Property
 ---
 
 {{ApiRef("")}}

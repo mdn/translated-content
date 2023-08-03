@@ -1,11 +1,6 @@
 ---
 title: border-radius
 slug: Web/CSS/border-radius
-tags:
-  - CSS
-  - CSS-свойство
-  - Скругление
-  - Углы
 ---
 
 {{CSSRef}}

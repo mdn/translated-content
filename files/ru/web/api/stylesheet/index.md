@@ -1,11 +1,6 @@
 ---
 title: StyleSheet
 slug: Web/API/StyleSheet
-tags:
-  - Интерфейсы
-  - Объектная модель CSS
-  - Референсы
-  - Таблицы стилей
 ---
 
 {{APIRef("CSSOM")}} Объектная модель CSS

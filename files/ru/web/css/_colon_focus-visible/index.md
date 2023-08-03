@@ -1,5 +1,5 @@
 ---
-title: ':focus-visible'
+title: ":focus-visible"
 slug: Web/CSS/:focus-visible
 ---
 Псевдокласс **`:focus-visible`** применяется, в то время как элемент соответствует псевдоклассу :focus, и UA ({{glossary("User Agent")}}) определяет с помощью эвристики, что фокус должен быть сделан очевидным для элемента.

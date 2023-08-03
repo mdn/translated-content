@@ -1,14 +1,6 @@
 ---
 title: MutationObserver
 slug: Web/API/MutationObserver
-tags:
-  - API
-  - Advanced
-  - DOM
-  - DOM Reference
-  - NeedsContent
-  - NeedsUpdate
-  - Reference
 ---
 
 {{APIRef("DOM")}}

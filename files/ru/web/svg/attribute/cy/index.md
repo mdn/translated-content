@@ -1,9 +1,6 @@
 ---
 title: cy
 slug: Web/SVG/Attribute/cy
-tags:
-  - SVG
-  - SVG атрибуты
 ---
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)

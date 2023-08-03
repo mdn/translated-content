@@ -1,10 +1,6 @@
 ---
 title: <text>
 slug: Web/SVG/Element/text
-tags:
-  - NeedsUpdate
-  - SVG
-  - SVG text
 ---
 {{SVGRef}}
 

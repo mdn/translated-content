@@ -1,10 +1,6 @@
 ---
 title: TRACE
 slug: Web/HTTP/Methods/TRACE
-tags:
-  - HTTP
-  - Метод трассировки
-  - Справка
 ---
 
 {{HTTPSidebar}}

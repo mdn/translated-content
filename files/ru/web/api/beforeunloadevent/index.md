@@ -1,9 +1,6 @@
 ---
 title: BeforeUnloadEvent
 slug: Web/API/BeforeUnloadEvent
-tags:
-  - Диалог
-  - Окно
 ---
 
 {{APIRef}}

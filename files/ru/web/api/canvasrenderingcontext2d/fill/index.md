@@ -1,13 +1,6 @@
 ---
 title: CanvasRenderingContext2D.fill()
 slug: Web/API/CanvasRenderingContext2D/fill
-tags:
-  - API
-  - Canvas
-  - Method
-  - Reference
-  - Справка
-  - метод
 ---
 
 {{APIRef}}

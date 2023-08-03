@@ -1,12 +1,6 @@
 ---
 title: HTMLDialogElement.open
 slug: Web/API/HTMLDialogElement/open
-tags:
-  - API
-  - Dialog
-  - HTML DOM
-  - HTMLDialogElement
-  - open
 ---
 
 {{ APIRef("HTML DOM") }}

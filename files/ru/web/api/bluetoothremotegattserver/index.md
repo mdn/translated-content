@@ -1,14 +1,6 @@
 ---
 title: BluetoothRemoteGATTServer
 slug: Web/API/BluetoothRemoteGATTServer
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTServer
-  - Web Bluetooth API
-  - Интерфейс
-  - Определение
-  - Экспериментальное
 ---
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}

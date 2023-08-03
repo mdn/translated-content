@@ -1,9 +1,6 @@
 ---
 title: Сложение с присваиванием (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
-tags:
-  - JavaScript
-  - Оператор
 ---
 
 {{jsSidebar("Operators")}}

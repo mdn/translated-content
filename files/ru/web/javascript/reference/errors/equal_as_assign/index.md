@@ -1,7 +1,5 @@
 ---
-title: >-
-  SyntaxError: test for equality (==) mistyped as assignment (=)?(тест на
-  равенство (==) опечатка как присваивание (=)?)
+title: "SyntaxError: test for equality (==) mistyped as assignment (=)?(тест на равенство (==) опечатка как присваивание (=)?)"
 slug: Web/JavaScript/Reference/Errors/Equal_as_assign
 ---
 

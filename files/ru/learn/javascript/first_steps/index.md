@@ -1,10 +1,6 @@
 ---
 title: Первые шаги в JavaScript
 slug: Learn/JavaScript/First_steps
-tags:
-  - JavaScript
-  - Массивы
-  - Новичкам
 ---
 
 {{LearnSidebar}}

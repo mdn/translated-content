@@ -1,11 +1,6 @@
 ---
 title: Псевдоэлементы
 slug: Web/CSS/Pseudo-elements
-tags:
-  - CSS
-  - Reference
-  - Псевдоэлементы
-  - Селекторы
 ---
 {{CSSRef}}
 

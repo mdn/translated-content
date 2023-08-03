@@ -1,12 +1,6 @@
 ---
 title: XMLHttpRequest.getResponseHeader()
 slug: Web/API/XMLHttpRequest/getResponseHeader
-tags:
-  - API
-  - XHR
-  - XMLHttpRequest
-  - getResponseHeader
-  - метод
 ---
 
 {{APIRef('XMLHttpRequest')}}

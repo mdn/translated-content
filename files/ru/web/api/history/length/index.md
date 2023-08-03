@@ -1,14 +1,6 @@
 ---
 title: History.length
 slug: Web/API/History/length
-tags:
-  - API
-  - HTML
-  - History API
-  - Read-only
-  - WebAPI
-  - Свойство
-  - Справка
 ---
 
 {{ APIRef("HTML DOM") }}

@@ -1,10 +1,6 @@
 ---
 title: categories
 slug: Web/Manifest/categories
-tags:
-  - Manifest
-  - Web
-  - categories
 ---
 
 {{QuickLinksWithSubpages("/ru/docs/Web/Manifest")}}

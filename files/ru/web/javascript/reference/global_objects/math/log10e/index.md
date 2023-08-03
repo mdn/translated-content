@@ -1,11 +1,6 @@
 ---
 title: Math.LOG10E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
 ---
 
 {{JSRef("Global_Objects", "Math")}}

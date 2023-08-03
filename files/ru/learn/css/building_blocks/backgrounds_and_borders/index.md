@@ -1,16 +1,6 @@
 ---
 title: Фон и границы
 slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - Границы
-  - Изображение
-  - Обучение
-  - Позиция
-  - Фон
-  - Цвет
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}

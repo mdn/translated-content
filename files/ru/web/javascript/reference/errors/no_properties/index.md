@@ -1,10 +1,6 @@
 ---
 title: 'TypeError: "x" has no properties'
 slug: Web/JavaScript/Reference/Errors/No_properties
-tags:
-  - JavaScript
-  - TypeError
-  - Ошибки
 ---
 
 {{jsSidebar("Errors")}}

@@ -1,13 +1,6 @@
 ---
 title: Классы
 slug: Web/JavaScript/Reference/Classes
-tags:
-  - ECMAScript 2015
-  - ECMAScript6
-  - JavaScript
-  - Reference
-  - Классы
-  - Наследование
 ---
 
 {{JsSidebar("Классы")}}

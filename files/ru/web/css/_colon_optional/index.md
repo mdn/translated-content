@@ -1,8 +1,6 @@
 ---
-title: ':optional'
+title: ":optional"
 slug: Web/CSS/:optional
-tags:
-  - Псевдо-классы
 ---
 
 {{ CSSRef() }}

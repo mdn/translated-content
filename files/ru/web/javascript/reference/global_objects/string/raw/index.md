@@ -1,15 +1,6 @@
 ---
 title: String.raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
-tags:
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Method
-  - Reference
-  - Référence(2)
-  - String
 ---
 
 {{JSRef("Global_Objects", "String")}}

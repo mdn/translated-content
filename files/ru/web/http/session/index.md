@@ -1,8 +1,6 @@
 ---
 title: HTTP сессия
 slug: Web/HTTP/Session
-tags:
-  - HTTP
 ---
 {{HTTPSidebar}}
 

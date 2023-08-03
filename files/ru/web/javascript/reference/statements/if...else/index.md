@@ -1,9 +1,6 @@
 ---
 title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
-tags:
-  - Выражение
-  - Условие
 ---
 
 {{jsSidebar("Statements")}}

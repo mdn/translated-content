@@ -1,10 +1,6 @@
 ---
 title: Краткая форма записи свойств
 slug: Web/CSS/Shorthand_properties
-tags:
-  - CSS
-  - Guide
-  - Reference
 ---
 {{cssref}}
 

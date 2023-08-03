@@ -1,10 +1,6 @@
 ---
 title: <mn>
 slug: Web/MathML/Element/mn
-tags:
-  - MathML
-  - MathML:Token Elements
-  - Числовой литерал
 ---
 
 {{MathMLRef}}

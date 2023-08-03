@@ -1,13 +1,6 @@
 ---
 title: Оператор нулевого слияния (??)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-  - nullish coalescing
-browser-compat: javascript.operators.nullish_coalescing
 ---
 
 {{JSSidebar("Operators")}}

@@ -1,10 +1,6 @@
 ---
 title: XMLHttpRequest.response
 slug: Web/API/XMLHttpRequest/response
-tags:
-  - AJAX
-  - Response
-  - XMLHttpRequest
 ---
 
 {{APIRef('XMLHttpRequest')}}

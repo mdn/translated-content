@@ -1,10 +1,6 @@
 ---
 title: align-self
 slug: Web/CSS/align-self
-tags:
-  - CSS
-  - flexbox
-  - Свойства
 ---
 {{CSSRef}}
 

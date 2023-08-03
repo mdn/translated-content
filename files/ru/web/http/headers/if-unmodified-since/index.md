@@ -1,11 +1,6 @@
 ---
 title: If-Unmodified-Since
 slug: Web/HTTP/Headers/If-Unmodified-Since
-tags:
-  - HTTP
-  - Заголовок HTTP
-  - Справка
-  - заголовок запроса
 ---
 
 {{HTTPSidebar}}

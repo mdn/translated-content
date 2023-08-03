@@ -1,14 +1,6 @@
 ---
 title: Element.append()
 slug: Web/API/Element/append
-tags:
-  - API
-  - DOM
-  - Метод
-  - Узел
-  - Элемент
-  - Определение
-browser-compat: api.Element.append
 ---
 
 {{APIRef("DOM")}}

@@ -1,9 +1,6 @@
 ---
 title: Document.readyState
 slug: Web/API/Document/readyState
-tags:
-  - API
-  - Property
 ---
 
 {{APIRef("DOM")}}

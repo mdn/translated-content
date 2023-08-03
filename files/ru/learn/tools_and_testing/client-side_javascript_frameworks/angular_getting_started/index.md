@@ -1,15 +1,6 @@
 ---
 title: Начало работы с Angular
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
-tags:
-  - Новички
-  - Фреймворки
-  - Установка
-  - JavaScript
-  - Изучение
-  - client-side
-  - Angular
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
 ---
 
 {{LearnSidebar}}

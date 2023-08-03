@@ -1,8 +1,6 @@
 ---
 title: Кнопка в панели инструментов
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
-tags:
-  - Кнопка панели инструментов
 ---
 
 {{AddonSidebar}}

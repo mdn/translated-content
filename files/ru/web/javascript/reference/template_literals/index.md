@@ -1,12 +1,6 @@
 ---
 title: Шаблонные строки
 slug: Web/JavaScript/Reference/Template_literals
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Строки
-  - Шаблонные строки
-  - Экспериментальный
 ---
 
 {{JsSidebar("More")}}

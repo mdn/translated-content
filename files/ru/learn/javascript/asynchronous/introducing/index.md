@@ -1,14 +1,6 @@
 ---
 title: Введение в асинхронный JavaScript
 slug: Learn/JavaScript/Asynchronous/Introducing
-tags:
-  - Асинхронность
-  - Введение
-  - Гайд
-  - Начинающий
-  - Промисы
-  - Статья
-  - колбэк
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}

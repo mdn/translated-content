@@ -1,11 +1,6 @@
 ---
 title: Метка
 slug: Web/JavaScript/Reference/Statements/label
-tags:
-  - JavaScript
-  - Возможности языка
-  - Метка
-browser-compat: javascript.statements.label
 ---
 
 {{jsSidebar("Statements")}}

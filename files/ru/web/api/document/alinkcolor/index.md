@@ -1,10 +1,6 @@
 ---
 title: Document.alinkColor
 slug: Web/API/Document/alinkColor
-tags:
-  - API
-  - Obsolete
-  - Property
 ---
 
 {{APIRef("DOM")}} {{ Deprecated_header() }}

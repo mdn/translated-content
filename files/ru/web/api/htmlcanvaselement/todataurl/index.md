@@ -1,12 +1,6 @@
 ---
 title: HTMLCanvasElement.toDataURL()
 slug: Web/API/HTMLCanvasElement/toDataURL
-tags:
-  - API
-  - Canvas
-  - HTMLCanvasElement
-  - Method
-  - Reference
 ---
 
 {{APIRef("Canvas API")}}

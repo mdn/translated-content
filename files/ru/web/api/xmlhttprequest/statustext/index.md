@@ -1,14 +1,6 @@
 ---
 title: XMLHttpRequest.statusText
 slug: Web/API/XMLHttpRequest/statusText
-tags:
-  - AJAX
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - XMLHttpRequest
-  - XMLHttpRequest Status
 ---
 
 {{APIRef('XMLHttpRequest')}}

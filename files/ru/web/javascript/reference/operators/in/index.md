@@ -1,10 +1,6 @@
 ---
 title: in operator
 slug: Web/JavaScript/Reference/Operators/in
-tags:
-  - JavaScript
-  - Оператор
-  - Оператор отношения
 ---
 {{jsSidebar("Operators")}}
 

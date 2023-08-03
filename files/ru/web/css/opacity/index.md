@@ -1,12 +1,6 @@
 ---
 title: opacity
 slug: Web/CSS/opacity
-tags:
-  - CSS
-  - CSS-свойство
-  - Opacity
-  - Непрозрачность
-  - Прозрачность
 ---
 {{CSSRef}}
 

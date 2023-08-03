@@ -1,11 +1,6 @@
 ---
 title: ARIA
 slug: Glossary/ARIA
-tags:
-  - Accessibility
-  - Glossary
-  - Глоссарий
-  - доступность
 ---
 
 **ARIA** (_Accessible Rich {{glossary("Internet")}} Applications_) является {{Glossary("W3C")}} спецификацией для добавления семантики и других метаданных в {{Glossary("HTML")}} при использовании вспомогательных технологий.

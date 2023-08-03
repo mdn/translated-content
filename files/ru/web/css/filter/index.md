@@ -1,13 +1,6 @@
 ---
 title: filter
 slug: Web/CSS/filter
-tags:
-  - CSS
-  - SVG
-  - SVG фильтр
-  - filter
-  - Свойство CSS
-  - Ссылка
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

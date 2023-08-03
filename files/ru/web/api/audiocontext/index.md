@@ -1,8 +1,6 @@
 ---
 title: AudioContext
 slug: Web/API/AudioContext
-tags:
-  - аудио
 ---
 
 {{APIRef()}}

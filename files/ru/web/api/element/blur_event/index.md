@@ -1,9 +1,6 @@
 ---
 title: blur (event)
 slug: Web/API/Element/blur_event
-tags:
-  - DOM
-  - DOM Events
 ---
 
 Событие `blur` вызывается когда элемент теряет фокус. Главное отличие между этим событием и [`focusout`](/ru/docs/Mozilla_event_reference/focusout) только в том что у последнего есть фаза всплытия.

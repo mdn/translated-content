@@ -1,9 +1,6 @@
 ---
 title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
-tags:
-  - JavaScript
-  - Оператор
 ---
 {{jsSidebar("Operators")}}
 

@@ -1,10 +1,6 @@
 ---
-title: '::placeholder'
+title: "::placeholder"
 slug: Web/CSS/::placeholder
-tags:
-  - '::placeholder'
-  - CSS
-  - Псевдоэлемент
 ---
 {{CSSRef}}
 

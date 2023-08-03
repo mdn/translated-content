@@ -1,10 +1,6 @@
 ---
 title: ключ manifest_version
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
-tags:
-  - Reference
-  - WebExtensions
-  - manifest_version
 ---
 
 {{AddonSidebar}}

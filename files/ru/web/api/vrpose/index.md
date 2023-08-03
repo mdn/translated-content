@@ -1,17 +1,6 @@
 ---
 title: VRPose
 slug: Web/API/VRPose
-tags:
-  - API
-  - Experimental
-  - Landing
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - VR
-  - VRPose
-  - Virtual Reality
-  - WebVR
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}

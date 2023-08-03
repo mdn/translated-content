@@ -1,13 +1,6 @@
 ---
 title: Error.prototype.lineNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
-tags:
-  - Error
-  - JavaScript
-  - Non-standard
-  - Property
-  - Prototype
-  - Reference
 ---
 
 {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}} {{non-standard_header}}

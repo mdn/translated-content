@@ -1,9 +1,6 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Element/input/range
-tags:
-  - контроллер
-  - слайдер
 ---
 
 {{HTMLSidebar("Input_types")}}

@@ -1,10 +1,6 @@
 ---
 title: Referer
 slug: Web/HTTP/Headers/Referer
-tags:
-  - HTTP
-  - referer
-  - Заголовок
 ---
 
 {{HTTPSidebar}}

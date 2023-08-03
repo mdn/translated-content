@@ -1,13 +1,6 @@
 ---
 title: rotate()
 slug: Web/CSS/transform-function/rotate
-tags:
-  - CSS
-  - CSS трансформация
-  - CSS функция
-  - Reference
-  - Rotate
-  - transform
 ---
 
 {{CSSRef}}

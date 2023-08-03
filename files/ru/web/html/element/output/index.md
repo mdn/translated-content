@@ -1,10 +1,6 @@
 ---
-title: '<output>: Элемент вывода'
+title: "<output>: Элемент вывода"
 slug: Web/HTML/Element/output
-tags:
-  - Вёрстка
-  - Элемент
-  - вывод
 ---
 {{HTMLSidebar}}
 

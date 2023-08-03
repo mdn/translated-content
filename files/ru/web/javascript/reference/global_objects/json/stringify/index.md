@@ -1,11 +1,6 @@
 ---
 title: JSON.stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
-tags:
-  - JSON
-  - JavaScript
-  - Method
-  - Reference
 ---
 
 {{JSRef("Global_Objects", "JSON")}}

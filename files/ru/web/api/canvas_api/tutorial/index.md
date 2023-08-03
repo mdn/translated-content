@@ -1,9 +1,6 @@
 ---
 title: Руководство по Canvas
 slug: Web/API/Canvas_API/Tutorial
-tags:
-  - Canvas
-  - Graphics
 ---
 
 [![](canvas_tut_examples.jpg)](/ru/docs/Web/API/Canvas_API){{DefaultAPISidebar("Canvas API")}}

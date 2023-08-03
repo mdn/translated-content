@@ -1,18 +1,6 @@
 ---
 title: ExtendableEvent
 slug: Web/API/ExtendableEvent
-tags:
-  - API
-  - Experimental
-  - ExtendableEvent
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - TopicStub
-  - Workers
 ---
 
 {{APIRef("Service Workers API")}}

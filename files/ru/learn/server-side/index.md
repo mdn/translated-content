@@ -1,17 +1,6 @@
 ---
 title: Серверное программирование веб-сайтов
 slug: Learn/Server-side
-tags:
-  - Beginner
-  - CodingScripting
-  - Intro
-  - Landing
-  - Learn
-  - NeedsTranslation
-  - Server
-  - Server-side programming
-  - Topic
-  - TopicStub
 ---
 
 {{LearnSidebar}}

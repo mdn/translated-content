@@ -1,9 +1,6 @@
 ---
 title: Комбинатор столбцов
 slug: Web/CSS/Column_combinator
-tags:
-  - Вёрстка
-  - Селекторы
 ---
 
 {{CSSRef("Selectors")}}{{SeeCompatTable}}

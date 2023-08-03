@@ -1,9 +1,6 @@
 ---
 title: Полиморфизм
 slug: Glossary/Polymorphism
-tags:
-  - CodingScripting
-  - Glossary
 ---
 
 **Полиморфизм** - это представление одного интерфейса для разных типов данных.

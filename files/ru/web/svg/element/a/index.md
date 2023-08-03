@@ -1,8 +1,6 @@
 ---
 title: a
 slug: Web/SVG/Element/a
-tags:
-  - SVG
 ---
 {{SVGRef}}
 

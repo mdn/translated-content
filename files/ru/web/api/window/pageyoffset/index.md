@@ -1,9 +1,6 @@
 ---
 title: Window.pageYOffset
 slug: Web/API/Window/pageYOffset
-tags:
-  - прокрутка
-  - скролл
 ---
 
 {{ APIRef("CSSOM View") }}

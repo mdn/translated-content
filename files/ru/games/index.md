@@ -1,10 +1,6 @@
 ---
 title: Разработка игр
 slug: Games
-tags:
-  - Игры
-  - Приложения
-  - геймдев
 ---
 
 {{GamesSidebar}}

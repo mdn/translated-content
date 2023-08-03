@@ -1,14 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.href
 slug: Web/API/HTMLAnchorElement/href
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Location
-  - Property
-  - Reference
-  - URL API
 ---
 
 {{ApiRef("URL API")}}

@@ -1,13 +1,6 @@
 ---
 title: Element.slot
 slug: Web/API/Element/slot
-tags:
-  - API
-  - DOM
-  - Element
-  - Property
-  - Reference
-  - shadow dom
 ---
 
 {{APIRef("Shadow DOM")}}

@@ -1,14 +1,6 @@
 ---
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
-tags:
-  - ECMAScript5
-  - ECMAScript6
-  - Function
-  - JavaScript
-  - Method
-  - Reference
-  - polyfill
 ---
 
 {{JSRef("Global_Objects", "Function")}}

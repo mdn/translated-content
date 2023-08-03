@@ -1,19 +1,6 @@
 ---
 title: Каким должен быть ваш веб-сайт?
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
-tags:
-  - Assets
-  - Beginner
-  - Composing
-  - Content
-  - Design
-  - Fonts
-  - Learn
-  - Plan
-  - Дизайн
-  - Контент
-  - Новичку
-  - Шрифты
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}

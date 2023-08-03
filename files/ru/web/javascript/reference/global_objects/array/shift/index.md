@@ -1,11 +1,6 @@
 ---
 title: Array.prototype.shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
 ---
 {{JSRef("Global_Objects", "Array")}}
 

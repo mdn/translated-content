@@ -1,9 +1,6 @@
 ---
 title: text-justify
 slug: Web/CSS/text-justify
-tags:
-  - Текст
-  - выравнивание текста
 ---
 
 {{CSSRef}}

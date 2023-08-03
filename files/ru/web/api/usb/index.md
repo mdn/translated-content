@@ -1,13 +1,6 @@
 ---
 title: USB
 slug: Web/API/USB
-tags:
-  - API
-  - Interface
-  - Reference
-  - USB
-  - WebUSB
-  - WebUSB API
 ---
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}

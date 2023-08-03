@@ -1,15 +1,6 @@
 ---
 title: PaymentRequest
 slug: Web/API/PaymentRequest
-tags:
-  - API
-  - Payment Request API
-  - PaymentRequest
-  - Деньги
-  - Интерфейс
-  - Коммерция
-  - Оплата
-  - Платежи
 ---
 
 {{securecontext_header}}{{APIRef("Payment Request API")}}

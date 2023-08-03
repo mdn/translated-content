@@ -1,16 +1,6 @@
 ---
 title: File and Directory Entries API
 slug: Web/API/File_and_Directory_Entries_API
-tags:
-  - API
-  - File System API
-  - File and Directory Entries API
-  - Files
-  - NeedsTranslation
-  - Non-standard
-  - Overview
-  - Reference
-  - TopicStub
 ---
 
 {{DefaultAPISidebar("File System API")}}

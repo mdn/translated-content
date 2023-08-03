@@ -1,12 +1,6 @@
 ---
 title: break
 slug: Web/JavaScript/Reference/Statements/break
-tags:
-  - JavaScript
-  - Возможности языка
-  - Справочник
-  - Оператор
-browser-compat: javascript.statements.break
 ---
 {{jsSidebar("Statements")}}
 

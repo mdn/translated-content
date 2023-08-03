@@ -1,12 +1,6 @@
 ---
 title: 422 Unprocessable Entity
 slug: Web/HTTP/Status/422
-tags:
-  - HTTP
-  - HTTP коды состояний
-  - WebDAV
-  - Коды состояний
-  - Ошибка клиента
 ---
 {{HTTPSidebar}}
 

@@ -1,14 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.origin
 slug: Web/API/HTMLAnchorElement/origin
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - Read-only
-  - Reference
-  - URL API
 ---
 
 {{APIRef("URL API")}}

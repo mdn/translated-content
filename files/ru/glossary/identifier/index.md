@@ -1,9 +1,6 @@
 ---
 title: Идентификатор
 slug: Glossary/Identifier
-tags:
-  - Глоссарий
-  - начальный уровень
 ---
 
 Последовательность символов в коде, которые определяют **{{glossary("variable","переменную")}}, {{glossary("function","функцию")}} или {{glossary("property","свойство")}}**.

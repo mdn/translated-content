@@ -1,9 +1,6 @@
 ---
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
-tags:
-  - Intersection Observer API
-  - пересечение объектов
 ---
 
 {{DefaultAPISidebar("Intersection Observer API")}}

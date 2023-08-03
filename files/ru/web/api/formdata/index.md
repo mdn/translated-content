@@ -1,12 +1,6 @@
 ---
 title: FormData
 slug: Web/API/FormData
-tags:
-  - API
-  - FormData
-  - Interface
-  - Reference
-  - XMLHttpRequest
 ---
 
 {{APIRef("XMLHttpRequest")}}

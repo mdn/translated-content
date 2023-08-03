@@ -1,10 +1,6 @@
 ---
 title: Symbol.hasInstance
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
-tags:
-  - JavaScript
-  - Property
-  - Symbol
 ---
 
 {{JSRef}}

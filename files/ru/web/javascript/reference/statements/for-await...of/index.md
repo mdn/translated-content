@@ -1,10 +1,6 @@
 ---
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
-tags:
-  - JavaScript
-  - async
-  - Асинхронность
 ---
 
 {{jsSidebar("Statements")}}

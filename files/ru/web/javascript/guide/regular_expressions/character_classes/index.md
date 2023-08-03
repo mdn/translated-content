@@ -1,13 +1,6 @@
 ---
 title: Классы символов
 slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
-tags:
-  - Guide
-  - JavaScript
-  - Reference
-  - RegExp
-  - Regular Expression
-  - character classes
 ---
 
 {{JSSidebar("JavaScript Guide")}}

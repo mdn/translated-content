@@ -1,16 +1,6 @@
 ---
 title: Service Worker API
 slug: Web/API/Service_Worker_API
-tags:
-  - API
-  - Landing
-  - NeedsTranslation
-  - Offline
-  - Overview
-  - Reference
-  - Service Workers
-  - TopicStub
-  - Workers
 ---
 
 {{DefaultAPISidebar("Service Workers API")}}

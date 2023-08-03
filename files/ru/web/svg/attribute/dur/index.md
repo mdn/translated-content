@@ -1,9 +1,6 @@
 ---
 title: dur
 slug: Web/SVG/Attribute/dur
-tags:
-  - SVG
-  - SVG атрибуты
 ---
 
 {{SVGRef}}

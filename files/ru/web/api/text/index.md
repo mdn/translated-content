@@ -1,10 +1,6 @@
 ---
 title: Текст
 slug: Web/API/Text
-tags:
-  - Node
-  - Text
-  - Текст
 ---
 
 {{ApiRef("DOM")}}

@@ -1,9 +1,6 @@
 ---
 title: Node
 slug: Web/API/Node
-tags:
-  - API
-  - DOM
 ---
 
 {{APIRef("DOM")}}

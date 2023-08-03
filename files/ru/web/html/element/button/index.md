@@ -1,12 +1,6 @@
 ---
 title: <button> - элемент кнопки
 slug: Web/HTML/Element/button
-tags:
-  - Element
-  - HTML
-  - Web
-  - Средний уровень
-  - Формы
 ---
 
 ## Описание

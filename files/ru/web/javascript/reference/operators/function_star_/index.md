@@ -1,12 +1,6 @@
 ---
 title: function* expression
 slug: Web/JavaScript/Reference/Operators/function*
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Итератор
-  - Оператор
-  - Функция
 ---
 {{jsSidebar("Operators")}}
 

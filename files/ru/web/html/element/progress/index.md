@@ -1,9 +1,6 @@
 ---
-title: '<progress>: Элемент индикатора выполнения'
+title: "<progress>: Элемент индикатора выполнения"
 slug: Web/HTML/Element/progress
-tags:
-  - Progress bar
-  - индикатор загрузки
 ---
 {{HTMLSidebar}}
 

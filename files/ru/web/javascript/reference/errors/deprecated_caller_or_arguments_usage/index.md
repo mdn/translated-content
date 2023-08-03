@@ -1,11 +1,6 @@
 ---
-title: 'Ошибка Ссылки: устаревший вызывающий объект или использование аргументов'
+title: "Ошибка Ссылки: устаревший вызывающий объект или использование аргументов"
 slug: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
-tags:
-  - JavaScript
-  - Ошибки
-  - Строгий режим
-  - предупреждение
 ---
 
 {{jsSidebar("Errors")}}

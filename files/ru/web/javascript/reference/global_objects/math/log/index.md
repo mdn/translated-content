@@ -1,11 +1,6 @@
 ---
 title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
 ---
 {{JSRef("Global_Objects", "Math")}}
 

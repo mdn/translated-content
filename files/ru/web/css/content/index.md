@@ -1,8 +1,6 @@
 ---
 title: content
 slug: Web/CSS/content
-tags:
-  - Контекст
 ---
 {{CSSRef}}
 

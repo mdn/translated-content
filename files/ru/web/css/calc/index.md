@@ -1,8 +1,6 @@
 ---
 title: Функция calc()
 slug: Web/CSS/calc
-tags:
-  - css calc
 ---
 
 {{CSSRef}}

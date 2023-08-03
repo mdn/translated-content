@@ -1,10 +1,6 @@
 ---
 title: short_name
 slug: Web/Manifest/short_name
-tags:
-  - Manifest
-  - Web
-  - short-name
 ---
 
 {{QuickLinksWithSubpages("/ru/docs/Web/Manifest")}}

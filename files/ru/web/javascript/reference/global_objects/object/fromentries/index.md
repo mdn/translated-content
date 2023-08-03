@@ -1,11 +1,6 @@
 ---
 title: Object.fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Reference
 ---
 {{JSRef}}
 

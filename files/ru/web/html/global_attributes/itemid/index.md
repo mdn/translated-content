@@ -1,8 +1,6 @@
 ---
 title: itemid
 slug: Web/HTML/Global_attributes/itemid
-tags:
-  - микроданные
 ---
 
 {{HTMLSidebar("Global_attributes")}}

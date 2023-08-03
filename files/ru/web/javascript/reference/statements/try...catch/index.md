@@ -1,10 +1,6 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
-tags:
-  - JavaScript
-  - Исключение
-  - Ошибка
 ---
 
 {{jsSidebar("Statements")}}

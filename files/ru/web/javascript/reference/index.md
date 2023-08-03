@@ -1,8 +1,6 @@
 ---
 title: Справочник по JavaScript
 slug: Web/JavaScript/Reference
-tags:
-  - JavaScript
 ---
 
 {{JsSidebar}}

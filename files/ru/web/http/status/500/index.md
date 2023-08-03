@@ -1,10 +1,6 @@
 ---
 title: 500 Internal Server Error
 slug: Web/HTTP/Status/500
-tags:
-  - HTTP
-  - Код ошибки
-  - Ошибка сервера
 ---
 {{HTTPSidebar}}
 

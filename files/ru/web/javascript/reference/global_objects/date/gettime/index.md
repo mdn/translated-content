@@ -1,12 +1,6 @@
 ---
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 ---
 
 {{JSRef("Global_Objects", "Date")}}

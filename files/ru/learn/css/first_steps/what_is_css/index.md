@@ -1,15 +1,6 @@
 ---
 title: Что такое CSS?
 slug: Learn/CSS/First_steps/What_is_CSS
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - Введение в CSS
-  - Начинающий
-  - Обучение
-  - Синтаксис
-  - Спецификации
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First steps")}}

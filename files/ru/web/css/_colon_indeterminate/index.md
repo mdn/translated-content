@@ -1,10 +1,6 @@
 ---
-title: ':indeterminate'
+title: ":indeterminate"
 slug: Web/CSS/:indeterminate
-tags:
-  - CSS
-  - Псевдо-класс
-  - Разметка
 ---
 
 {{CSSRef}}

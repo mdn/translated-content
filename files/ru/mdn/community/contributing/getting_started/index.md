@@ -1,13 +1,6 @@
 ---
 title: Mozilla - Быстрый старт!
 slug: MDN/Community/Contributing/Getting_started
-tags:
-  - Документация
-  - Начало работы
-  - Гайд
-  - MDN
-  - MDN Project
-  - Новые участники
 ---
 
 {{MDNSidebar}}

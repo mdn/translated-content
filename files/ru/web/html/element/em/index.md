@@ -1,5 +1,5 @@
 ---
-title: '<em>: Элемент акцентирования'
+title: "<em>: Элемент акцентирования"
 slug: Web/HTML/Element/em
 ---
 

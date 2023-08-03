@@ -1,12 +1,6 @@
 ---
 title: WeakSet.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakSet
 ---
 
 {{JSRef("Global_Objects", "WeakSet")}}

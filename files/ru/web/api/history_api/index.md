@@ -1,11 +1,6 @@
 ---
 title: History API
 slug: Web/API/History_API
-tags:
-  - API
-  - DOM
-  - HTML5
-  - История
 ---
 
 {{DefaultAPISidebar("History API")}}

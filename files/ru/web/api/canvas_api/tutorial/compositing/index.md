@@ -1,8 +1,6 @@
 ---
 title: Композиция и обрезка
 slug: Web/API/Canvas_API/Tutorial/Compositing
-tags:
-  - канвас
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

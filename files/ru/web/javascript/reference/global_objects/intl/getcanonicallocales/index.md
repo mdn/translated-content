@@ -1,10 +1,6 @@
 ---
 title: Intl.getCanonicalLocales()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
-tags:
-  - Intl
-  - JavaScript
-  - метод
 ---
 {{JSRef}}
 

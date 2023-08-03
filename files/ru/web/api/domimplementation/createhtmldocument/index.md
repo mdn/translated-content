@@ -1,12 +1,6 @@
 ---
 title: DOMImplementation.createHTMLDocument()
 slug: Web/API/DOMImplementation/createHTMLDocument
-tags:
-  - API
-  - DOM Reference
-  - DOMImplementation
-  - Method
-  - Reference
 ---
 
 {{ApiRef("DOM")}}

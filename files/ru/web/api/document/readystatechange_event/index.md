@@ -1,8 +1,6 @@
 ---
 title: readystatechange
 slug: Web/API/Document/readystatechange_event
-tags:
-  - события
 ---
 
 {{ApiRef}}

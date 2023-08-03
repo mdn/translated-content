@@ -1,10 +1,6 @@
 ---
 title: right
 slug: Web/CSS/right
-tags:
-  - CSS
-  - CSS Позиционирование
-  - CSS-свойство
 ---
 {{CSSRef}}
 

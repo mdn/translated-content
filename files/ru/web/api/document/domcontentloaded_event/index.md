@@ -1,8 +1,6 @@
 ---
 title: "Document: DOMContentLoaded event"
 slug: Web/API/Document/DOMContentLoaded_event
-tags:
-  - Событие
 ---
 
 {{APIRef}}

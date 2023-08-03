@@ -1,9 +1,6 @@
 ---
 title: continue
 slug: Web/JavaScript/Reference/Statements/continue
-tags:
-  - JavaScript
-  - Statement
 ---
 
 {{jsSidebar("Statements")}}

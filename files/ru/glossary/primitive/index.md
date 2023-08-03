@@ -1,10 +1,6 @@
 ---
 title: Primitive
 slug: Glossary/Primitive
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
 ---
 
 **Примитив** (значение примитивного типа, примитивный тип данных) это данные, которые не являются {{glossary("object", "объектом")}} и не имеют {{glossary("method","методов")}}. В {{Glossary("JavaScript")}} 7 простых типов данных: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("boolean")}}, {{Glossary("null")}}, {{Glossary("undefined")}}, {{Glossary("symbol")}} (новое в {{Glossary("ECMAScript")}} 2015), {{Glossary("bigint")}}.

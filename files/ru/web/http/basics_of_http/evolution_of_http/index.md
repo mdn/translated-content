@@ -1,9 +1,6 @@
 ---
 title: Evolution of HTTP
 slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
-tags:
-  - HTTP
-  - Руководство
 ---
 
 {{HTTPSidebar}}

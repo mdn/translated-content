@@ -1,11 +1,6 @@
 ---
 title: Function.caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
-tags:
-  - Function
-  - JavaScript
-  - Non-standard
-  - Property
 ---
 {{JSRef("Global_Objects", "Function")}} {{non-standard_header}}
 

@@ -1,17 +1,6 @@
 ---
 title: VRStageParameters
 slug: Web/API/VRStageParameters
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - VR
-  - VRStageParameters
-  - Virtual Reality
-  - WebVR
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}

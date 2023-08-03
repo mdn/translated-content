@@ -1,8 +1,6 @@
 ---
 title: ry
 slug: Web/SVG/Attribute/ry
-tags:
-  - SVG атрибуты
 ---
 {{SVGRef}}
 

@@ -1,10 +1,6 @@
 ---
 title: WebSocket
 slug: Web/API/WebSocket
-tags:
-  - API
-  - WebSocket
-  - WebSockets
 ---
 
 Объект **WebSocket** предоставляет API для создания и управления [веб-сокет](/ru/docs/Web/API/WebSockets_API)-подключения к серверу, а также для отправки и получения данных в этом подключении.

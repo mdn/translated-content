@@ -1,10 +1,6 @@
 ---
 title: CSS счётчики
 slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
-tags:
-  - CSS
-  - CSS счётчики
-  - вложенные счётчики
 ---
 
 {{CSSRef}}

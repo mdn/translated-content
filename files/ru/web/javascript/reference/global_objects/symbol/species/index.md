@@ -1,12 +1,6 @@
 ---
 title: Symbol.species
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
-tags:
-  - ECMAScript6
-  - Experimental
-  - JavaScript
-  - Свойство
-  - Символы
 ---
 {{JSRef}}
 

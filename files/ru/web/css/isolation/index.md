@@ -1,10 +1,6 @@
 ---
 title: isolation
 slug: Web/CSS/isolation
-tags:
-  - Контекст наложения
-  - Очерёдность
-  - Порядок отрисовки
 ---
 {{CSSRef}}
 

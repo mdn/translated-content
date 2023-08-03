@@ -1,14 +1,6 @@
 ---
 title: WorkerGlobalScope
 slug: Web/API/WorkerGlobalScope
-tags:
-  - API
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - WorkerGlobalScope
-  - Workers
 ---
 
 {{APIRef("Web Workers API")}}

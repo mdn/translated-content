@@ -1,10 +1,6 @@
 ---
 title: attributeName
 slug: Web/SVG/Attribute/attributeName
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG атрибуты
 ---
 
 {{SVGRef}}

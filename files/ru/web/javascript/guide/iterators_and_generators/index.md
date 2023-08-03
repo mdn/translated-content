@@ -1,10 +1,6 @@
 ---
 title: Итераторы и  генераторы
 slug: Web/JavaScript/Guide/Iterators_and_generators
-tags:
-  - yield
-  - Генераторы
-  - Итераторы
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Meta_programming")}}

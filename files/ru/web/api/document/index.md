@@ -1,8 +1,6 @@
 ---
 title: Document
 slug: Web/API/Document
-tags:
-  - DOM
 ---
 
 {{ ApiRef("DOM") }}

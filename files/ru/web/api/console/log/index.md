@@ -1,13 +1,6 @@
 ---
 title: Console.log()
 slug: Web/API/console/log
-tags:
-  - Debug
-  - Debugging
-  - console
-  - console.log()
-  - Отладка
-  - метод
 ---
 
 {{APIRef("Console API")}}

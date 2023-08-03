@@ -1,10 +1,6 @@
 ---
 title: Accept-Ranges
 slug: Web/HTTP/Headers/Accept-Ranges
-tags:
-  - HTTP
-  - HTTP Заголовок
-  - заголовок ответа
 ---
 {{HTTPSidebar}}
 

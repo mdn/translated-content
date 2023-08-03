@@ -1,14 +1,6 @@
 ---
 title: Object.prototype.__lookupSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Non-standard
-  - Object
-  - Prototype
-  - Reference
 ---
 
 {{JSRef("Global_Objects", "Object")}} {{non-standard_header}} {{deprecated_header}}

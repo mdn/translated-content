@@ -1,11 +1,6 @@
 ---
 title: GlobalEventHandlers.onerror
 slug: Web/API/Window/error_event
-tags:
-  - API
-  - HTML DOM
-  - Свойство
-  - Ссылка
 ---
 
 {{ ApiRef("HTML DOM") }}

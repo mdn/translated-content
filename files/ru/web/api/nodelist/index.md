@@ -1,11 +1,6 @@
 ---
 title: NodeList
 slug: Web/API/NodeList
-tags:
-  - API
-  - DOM
-  - Interface
-  - NodeList
 ---
 
 {{APIRef("DOM")}}

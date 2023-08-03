@@ -1,15 +1,6 @@
 ---
 title: EffectTiming
 slug: Web/API/KeyframeEffect/KeyframeEffect
-tags:
-  - API
-  - Animation
-  - Dictionary
-  - EffectTiming
-  - Experimental
-  - animate
-  - web animation
-  - web animation api
 ---
 
 {{ SeeCompatTable() }}{{ APIRef("Web Animations") }}

@@ -1,11 +1,6 @@
 ---
 title: Метод EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
-tags:
-  - API
-  - Браузерная совместимость
-  - Обработка событий
-  - метод
 ---
 
 {{APIRef("DOM Events")}}

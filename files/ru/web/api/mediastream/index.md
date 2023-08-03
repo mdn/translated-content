@@ -1,14 +1,6 @@
 ---
 title: MediaStream
 slug: Web/API/MediaStream
-tags:
-  - API
-  - Media Streams API
-  - MediaStream
-  - Reference
-  - TopicStub
-  - WebRTC
-  - Интерфейс
 ---
 
 {{APIRef("Media Capture and Streams")}}

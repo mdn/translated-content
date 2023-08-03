@@ -1,14 +1,6 @@
 ---
 title: Принятие решений в вашем коде — условные конструкции
 slug: Learn/JavaScript/Building_blocks/conditionals
-tags:
-  - JavaScript
-  - Switch
-  - else
-  - if
-  - Для начинающих
-  - Операторы
-  - Статья
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}

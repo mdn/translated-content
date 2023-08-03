@@ -1,12 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.password
 slug: Web/API/HTMLAnchorElement/password
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - URL API
 ---
 
 {{ApiRef("URL API")}}

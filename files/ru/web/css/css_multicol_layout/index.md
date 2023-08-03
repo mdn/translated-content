@@ -1,12 +1,6 @@
 ---
 title: CSS Columns
 slug: Web/CSS/CSS_multicol_layout
-tags:
-  - CSS
-  - CSS Reference
-  - NeedsTranslation
-  - Overview
-  - TopicStub
 ---
 
 {{CSSRef}}

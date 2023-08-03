@@ -1,10 +1,6 @@
 ---
 title: 302 Found
 slug: Web/HTTP/Status/302
-tags:
-  - HTTP
-  - Код ответа
-  - Перенаправления
 ---
 
 {{HTTPSidebar}}

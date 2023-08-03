@@ -1,14 +1,6 @@
 ---
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
-tags:
-  - Array
-  - ECMAScript6
-  - Experimental
-  - JavaScript
-  - Method
-  - Reference
-  - polyfill
 ---
 
 {{JSRef}}

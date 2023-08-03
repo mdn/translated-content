@@ -1,12 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.search
 slug: Web/API/HTMLAnchorElement/search
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - URL API
 ---
 
 {{ApiRef("URL API")}}

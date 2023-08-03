@@ -1,12 +1,6 @@
 ---
 title: Element.outerHTML
 slug: Web/API/Element/outerHTML
-tags:
-  - Парсинг
-  - Парсинг DOM
-  - Свойство
-  - Сериализация
-  - Ссылка
 ---
 
 {{APIRef("DOM")}}

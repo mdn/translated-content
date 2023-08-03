@@ -1,9 +1,6 @@
 ---
 title: Тестирование медиавыражений программно
 slug: Web/CSS/CSS_media_queries/Testing_media_queries
-tags:
-  - Выражения
-  - медиавыражения
 ---
 
 {{cssref}}

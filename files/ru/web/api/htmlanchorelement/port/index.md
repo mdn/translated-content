@@ -1,12 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.port
 slug: Web/API/HTMLAnchorElement/port
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - URL API
 ---
 
 {{ApiRef("URL API")}}

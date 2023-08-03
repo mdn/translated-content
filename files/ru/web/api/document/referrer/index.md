@@ -1,10 +1,6 @@
 ---
 title: Document.referrer
 slug: Web/API/Document/referrer
-tags:
-  - API
-  - Document
-  - Property
 ---
 
 {{APIRef("DOM")}}

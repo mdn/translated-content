@@ -1,10 +1,6 @@
 ---
 title: Content-Encoding
 slug: Web/HTTP/Headers/Content-Encoding
-tags:
-  - Content-Encoding
-  - HTTP
-  - Headers
 ---
 
 {{HTTPSidebar}}

@@ -1,14 +1,6 @@
 ---
 title: Document.designMode
 slug: Web/API/Document/designMode
-tags:
-  - API
-  - DOM
-  - Document
-  - HTML
-  - JS
-  - designmode
-  - editor
 ---
 
 {{ ApiRef() }}

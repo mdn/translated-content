@@ -1,8 +1,6 @@
 ---
 title: HTMLFormElement.submit()
 slug: Web/API/HTMLFormElement/submit
-tags:
-  - HTMLFormElement
 ---
 
 {{APIRef("HTML DOM")}}

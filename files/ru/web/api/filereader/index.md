@@ -1,12 +1,6 @@
 ---
 title: FileReader
 slug: Web/API/FileReader
-tags:
-  - API
-  - DOM
-  - File API
-  - WebAPI
-  - Файлы
 ---
 
 {{ APIRef("File API") }}

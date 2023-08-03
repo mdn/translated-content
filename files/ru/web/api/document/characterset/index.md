@@ -1,11 +1,6 @@
 ---
 title: Document.characterSet
 slug: Web/API/Document/characterSet
-tags:
-  - API
-  - DOM
-  - Document
-  - Read-only
 ---
 
 {{ ApiRef("DOM") }}

@@ -1,11 +1,6 @@
 ---
 title: Введение в события
 slug: Learn/JavaScript/Building_blocks/Events
-tags:
-  - Изучение
-  - Обработчик событий
-  - Руководство
-  - события
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}

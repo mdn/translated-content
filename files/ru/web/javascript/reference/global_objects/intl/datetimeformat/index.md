@@ -1,10 +1,6 @@
 ---
 title: Intl.DateTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - JavaScript
 ---
 
 {{JSRef("Global_Objects", "DateTimeFormat", "Intl,Collator,NumberFormat")}}

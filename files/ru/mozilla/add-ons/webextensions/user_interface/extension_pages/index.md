@@ -1,11 +1,6 @@
 ---
 title: Страницы расширения
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
-tags:
-  - UI
-  - WebExtensions
-  - Веб-расширения
-  - Для начинающих
 ---
 
 {{AddonSidebar()}}

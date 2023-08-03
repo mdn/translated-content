@@ -1,15 +1,6 @@
 ---
 title: XMLHttpRequest.responseXML
 slug: Web/API/XMLHttpRequest/responseXML
-tags:
-  - AJAX
-  - API
-  - XMLHttpRequest
-  - Отправка
-  - Свойство
-  - Справка
-  - Только для чтения
-  - загрузка
 ---
 
 {{APIRef('XMLHttpRequest')}}

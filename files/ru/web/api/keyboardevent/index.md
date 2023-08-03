@@ -1,13 +1,6 @@
 ---
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
-tags:
-  - API
-  - DOM
-  - Event
-  - UI Events
-  - Интерфейс
-  - Событие
 ---
 
 {{APIRef("DOM Events")}}

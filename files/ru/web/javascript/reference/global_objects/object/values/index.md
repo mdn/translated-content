@@ -1,11 +1,6 @@
 ---
 title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Reference
 ---
 
 {{JSRef}}

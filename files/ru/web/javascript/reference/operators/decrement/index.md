@@ -1,9 +1,6 @@
 ---
 title: Декремент (--)
 slug: Web/JavaScript/Reference/Operators/Decrement
-tags:
-  - Декремент
-  - Оператор
 ---
 
 {{jsSidebar("Operators")}}

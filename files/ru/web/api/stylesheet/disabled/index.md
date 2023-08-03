@@ -1,9 +1,6 @@
 ---
 title: StyleSheet.disabled
 slug: Web/API/StyleSheet/disabled
-tags:
-  - Свойство
-  - Стили
 ---
 
 {{APIRef("CSSOM")}}

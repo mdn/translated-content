@@ -1,15 +1,6 @@
 ---
 title: Массивы
 slug: Learn/JavaScript/First_steps/Arrays
-tags:
-  - JavaScript
-  - Pop
-  - Push
-  - shift
-  - unshift
-  - Для начинающих
-  - Массивы
-  - Статья
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Useful_string_methods", "Learn/JavaScript/Первые_шаги/Создатель_глупых_историй", "Learn/JavaScript/Первые_шаги")}}

@@ -1,16 +1,6 @@
 ---
 title: Присваивание (=)
 slug: Web/JavaScript/Reference/Operators/Assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-  - Оператор
-  - Оператор присваивания
-  - "Особенность_языка"
-  - справочник
 ---
 {{jsSidebar("Operators")}}
 

@@ -1,10 +1,6 @@
 ---
 title: Использование CSS-градиентов
 slug: Web/CSS/CSS_images/Using_CSS_gradients
-tags:
-  - Градиенты
-  - Примеры
-  - Руководство
 ---
 
 {{CSSRef}}

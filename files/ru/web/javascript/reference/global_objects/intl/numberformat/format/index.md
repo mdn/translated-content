@@ -1,12 +1,6 @@
 ---
 title: Intl.NumberFormat.prototype.format
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
-tags:
-  - Internationalization
-  - JavaScript
-  - NumberFormat
-  - Property
-  - Prototype
 ---
 
 {{JSRef("Global_Objects", "NumberFormat", "Intl,Collator,DateTimeFormat")}}

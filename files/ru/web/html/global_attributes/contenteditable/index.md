@@ -1,10 +1,6 @@
 ---
 title: contenteditable
 slug: Web/HTML/Global_attributes/contenteditable
-tags:
-  - HTML
-  - Глобальные атрибуты
-  - Определение
 ---
 
 {{HTMLSidebar("Global_attributes")}}

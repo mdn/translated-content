@@ -1,11 +1,6 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
-tags:
-  - Array
-  - JavaScript
-  - Reference
-  - Глобальные объекты
 ---
 {{JSRef("Global_Objects", "Array")}}
 

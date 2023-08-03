@@ -1,13 +1,6 @@
 ---
 title: О MDN
 slug: MDN/Writing_guidelines
-tags:
-  - Документация
-  - Копирайт
-  - Лицензии
-  - Руководство
-  - Сообщество
-  - Участие
 ---
 
 {{MDNSidebar}}

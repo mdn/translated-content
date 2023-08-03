@@ -1,15 +1,6 @@
 ---
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
-tags:
-  - Class
-  - ECMAScript 2015
-  - Global Objects
-  - JavaScript
-  - Object
-  - Reference
-  - set
-  - Polyfill
 ---
 
 {{JSRef}}

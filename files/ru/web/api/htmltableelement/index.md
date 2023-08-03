@@ -1,12 +1,6 @@
 ---
 title: HTMLTableElement
 slug: Web/API/HTMLTableElement
-tags:
-  - API
-  - HTML DOM
-  - Reference
-  - Référence(2)
-  - Интерфейсы
 ---
 
 {{APIRef("HTML DOM")}}

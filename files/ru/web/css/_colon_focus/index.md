@@ -1,14 +1,6 @@
 ---
-title: ':focus'
+title: ":focus"
 slug: Web/CSS/:focus
-tags:
-  - CSS
-  - Layout
-  - Reference
-  - Web
-  - Веб
-  - Псевдо-классы
-  - Раскладка
 ---
 
 {{CSSRef}}

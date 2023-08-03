@@ -1,5 +1,5 @@
 ---
-title: ':focus-within'
+title: ":focus-within"
 slug: Web/CSS/:focus-within
 ---
 {{CSSRef}}

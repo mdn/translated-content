@@ -1,11 +1,6 @@
 ---
 title: History.pushState()
 slug: Web/API/History/pushState
-tags:
-  - API
-  - HTML DOM
-  - Web
-  - метод
 ---
 
 {{APIRef("DOM")}}

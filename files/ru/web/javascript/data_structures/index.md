@@ -1,10 +1,6 @@
 ---
 title: Типы данных JavaScript и структуры данных
 slug: Web/JavaScript/Data_structures
-tags:
-  - JavaScript
-  - Типы данных
-  - Учебник
 ---
 {{jsSidebar("More")}}
 

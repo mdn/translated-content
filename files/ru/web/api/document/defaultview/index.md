@@ -1,10 +1,6 @@
 ---
 title: Document.defaultView
 slug: Web/API/Document/defaultView
-tags:
-  - API
-  - DOM
-  - Property
 ---
 
 {{ ApiRef() }}

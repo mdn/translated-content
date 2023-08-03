@@ -1,14 +1,6 @@
 ---
 title: Что такое URL-адрес?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
-tags:
-  - URL
-  - Адрес
-  - Порт
-  - Ресурс
-  - Якорь
-  - домен
-  - протокол
 ---
 
 Данная статья описывает Единый локатор ресурсов или Uniform Resource Locators (URLs), объясняет, что это такое, и описывает его структуру.

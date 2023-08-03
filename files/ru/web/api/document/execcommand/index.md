@@ -1,11 +1,6 @@
 ---
 title: Document.execCommand()
 slug: Web/API/Document/execCommand
-tags:
-  - API
-  - DOM
-  - editor
-  - wysiwyg
 ---
 
 {{ApiRef("DOM")}}

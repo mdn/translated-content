@@ -1,14 +1,6 @@
 ---
 title: XMLHttpRequest.onreadystatechange
 slug: Web/API/XMLHttpRequest/readystatechange_event
-tags:
-  - API
-  - XHR
-  - XMLHttpRequest
-  - Обработчик
-  - Свойство
-  - Событие
-  - Ссылка
 ---
 
 {{APIRef}}

@@ -1,9 +1,6 @@
 ---
 title: Уведомления
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
-tags:
-  - Web-расширение
-  - Расширение
 ---
 
 {{AddonSidebar}}

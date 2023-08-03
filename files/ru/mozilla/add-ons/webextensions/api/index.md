@@ -1,9 +1,6 @@
 ---
 title: JavaScript APIs
 slug: Mozilla/Add-ons/WebExtensions/API
-tags:
-  - Web-расширение
-  - Расширение
 ---
 
 {{AddonSidebar}}

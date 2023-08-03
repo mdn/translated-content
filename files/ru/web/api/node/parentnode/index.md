@@ -1,10 +1,6 @@
 ---
 title: Node.parentNode
 slug: Web/API/Node/parentNode
-tags:
-  - API
-  - DOM
-  - Method
 ---
 
 {{ApiRef}}

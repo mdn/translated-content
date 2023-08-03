@@ -1,10 +1,6 @@
 ---
 title: Window.clearImmediate()
 slug: Web/API/Window/clearImmediate
-tags:
-  - API
-  - DOM
-  - метод
 ---
 
 {{ Apiref() }}

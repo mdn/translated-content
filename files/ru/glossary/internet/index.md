@@ -1,23 +1,6 @@
 ---
 title: Интернет
 slug: Glossary/Internet
-tags:
-  - Beginner
-  - Glossary
-  - Guide
-  - Intro
-  - NeedsContent
-  - Tutorial
-  - Web
-  - WebMechanics
-  - Введение
-  - Веб
-  - Глоссарий
-  - Начинающий
-  - Руководство
-  - Глоссарий
-  - Учебник
-  - туториал
 ---
 
 Интернет — это всемирная сеть сетей, в которой используется набор интернет-протоколов (называемый также {{glossary("TCP")}}/{{glossary("IPv6","IP")}} по двум наиболее важным {{glossary("protocol","протоколам")}}).

@@ -1,10 +1,6 @@
 ---
 title: Document.bgColor
 slug: Web/API/Document/bgColor
-tags:
-  - API
-  - Deprecated
-  - Property
 ---
 
 {{APIRef("DOM")}} {{ Deprecated_header() }}

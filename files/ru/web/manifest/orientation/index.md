@@ -1,10 +1,6 @@
 ---
 title: orientation
 slug: Web/Manifest/orientation
-tags:
-  - Manifest
-  - Orientation
-  - Web
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}

@@ -1,12 +1,6 @@
 ---
 title: "Руководство часть 6: Отображение списков и детальной информации"
 slug: Learn/Server-side/Django/Generic_views
-tags:
-  - django
-  - Для начинающих
-  - Отображения django
-  - Руководство
-  - Шаблоны django
 ---
 
 {{LearnSidebar}}

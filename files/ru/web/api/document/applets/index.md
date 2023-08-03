@@ -1,12 +1,6 @@
 ---
 title: Document.applets
 slug: Web/API/Document/applets
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Апплеты
-  - Документ
 ---
 
 {{APIRef("DOM")}}

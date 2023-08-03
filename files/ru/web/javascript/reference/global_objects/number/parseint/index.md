@@ -1,11 +1,6 @@
 ---
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Number
 ---
 
 {{JSRef("Global_Objects", "Number")}}

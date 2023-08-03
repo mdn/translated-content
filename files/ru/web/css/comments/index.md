@@ -1,13 +1,6 @@
 ---
 title: Комментарии
 slug: Web/CSS/Comments
-tags:
-  - Beginner
-  - CSS
-  - CSS Reference
-  - Комментарии
-  - Новичку
-  - Руководство
 ---
 {{CSSRef}}
 

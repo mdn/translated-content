@@ -1,16 +1,6 @@
 ---
 title: Устройство CSS
 slug: Learn/CSS/Building_blocks
-tags:
-  - Beginner
-  - CSS
-  - Landing
-  - Learn
-  - Начинающий
-  - Обучение
-  - Опции
-  - Функции
-  - состоит
 ---
 
 {{LearnSidebar}}

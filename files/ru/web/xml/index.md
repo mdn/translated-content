@@ -1,13 +1,6 @@
 ---
 title: "XML: Extensible Markup Language"
 slug: Web/XML
-tags:
-  - Draft
-  - Landing
-  - NeedsTranslation
-  - TopicStub
-  - Web
-  - XML
 ---
 
 {{QuickLinksWithSubpages("/ru/docs/Web/XML")}}

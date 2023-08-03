@@ -1,14 +1,6 @@
 ---
 title: TouchEvent
 slug: Web/API/TouchEvent
-tags:
-  - API
-  - DOM
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - touch
 ---
 
 {{ APIRef("Touch Events") }}

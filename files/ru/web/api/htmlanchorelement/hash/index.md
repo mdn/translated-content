@@ -1,12 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.hash
 slug: Web/API/HTMLAnchorElement/hash
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - URL API
 ---
 
 {{ APIRef("URLUtils") }}

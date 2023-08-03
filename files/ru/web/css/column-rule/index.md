@@ -1,8 +1,6 @@
 ---
 title: column-rule
 slug: Web/CSS/column-rule
-tags:
-  - мультиколоночная вёрстка
 ---
 
 {{CSSRef}}

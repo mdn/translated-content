@@ -1,11 +1,6 @@
 ---
 title: Атрибут justify-items
 slug: Web/CSS/justify-items
-tags:
-  - CSS
-  - CSS атрибут
-  - CSS выравнивание блоков
-  - Ссылки
 ---
 
 {{CSSRef}}

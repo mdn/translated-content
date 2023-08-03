@@ -1,9 +1,6 @@
 ---
 title: Базовый поток
 slug: Learn/CSS/CSS_layout/Normal_Flow
-tags:
-  - float
-  - grid
 ---
 
 {{LearnSidebar}}

@@ -1,5 +1,5 @@
 ---
-title: '<dfn>: Элемент определения'
+title: "<dfn>: Элемент определения"
 slug: Web/HTML/Element/dfn
 ---
 

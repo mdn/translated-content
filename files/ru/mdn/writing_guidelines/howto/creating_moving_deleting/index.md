@@ -1,12 +1,6 @@
 ---
 title: Как создавать и редактировать страницы
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
-tags:
-  - MDN основы
-  - Гайд
-  - Как
-  - Новичок
-  - Стартовая
 ---
 
 {{MDNSidebar}}

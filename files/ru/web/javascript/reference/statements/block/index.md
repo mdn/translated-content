@@ -1,11 +1,6 @@
 ---
 title: Блок
 slug: Web/JavaScript/Reference/Statements/block
-tags:
-  - JavaScript
-  - Инструкция
-  - Оператор
-  - справочник
 ---
 {{jsSidebar("Statements")}}
 

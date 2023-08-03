@@ -1,13 +1,6 @@
 ---
 title: HTMLCanvasElement.transferControlToOffscreen()
 slug: Web/API/HTMLCanvasElement/transferControlToOffscreen
-tags:
-  - API
-  - Experimental
-  - HTMLCanvasElement
-  - Method
-  - OffscreenCanvas
-  - Reference
 ---
 
 {{APIRef("Canvas API")}} {{SeeCompatTable}}

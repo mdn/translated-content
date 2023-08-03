@@ -1,10 +1,6 @@
 ---
 title: Процессы документирования
 slug: MDN/Contribute/Processes
-tags:
-  - Landing
-  - MDN Meta
-  - Процессы
 ---
 
 {{MDNSidebar}}

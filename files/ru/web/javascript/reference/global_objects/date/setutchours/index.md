@@ -1,12 +1,6 @@
 ---
 title: Date.prototype.setUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 ---
 {{JSRef("Global_Objects", "Date")}}
 

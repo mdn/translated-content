@@ -1,9 +1,6 @@
 ---
 title: CSS Object Model (CSSOM)
 slug: Web/API/CSS_Object_Model
-tags:
-  - API
-  - CSSOM
 ---
 
 {{DefaultAPISidebar('CSSOM')}}

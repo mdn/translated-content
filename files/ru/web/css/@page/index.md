@@ -1,10 +1,6 @@
 ---
-title: '@page'
+title: "@page"
 slug: Web/CSS/@page
-tags:
-  - Вёрстка
-  - печать
-  - страница
 ---
 {{CSSRef}}
 

@@ -1,11 +1,6 @@
 ---
 title: Function.displayName
 slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
-tags:
-  - Function
-  - JavaScript
-  - Non-standard
-  - Property
 ---
 
 {{JSRef("Global_Objects", "Function")}} {{Non-standard_header}}

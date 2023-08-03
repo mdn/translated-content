@@ -1,10 +1,6 @@
 ---
 title: Элемент <picture>
 slug: Web/HTML/Element/picture
-tags:
-  - HTML
-  - Встроенный контент
-  - Элемент picture
 ---
 {{HTMLSidebar}}
 

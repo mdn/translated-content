@@ -1,9 +1,6 @@
 ---
 title: column-count
 slug: Web/CSS/column-count
-tags:
-  - Свойство
-  - мультиколоночная вёрстка
 ---
 
 {{CSSRef}}

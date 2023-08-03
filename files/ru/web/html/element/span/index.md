@@ -1,14 +1,6 @@
 ---
 title: <span>
 slug: Web/HTML/Element/span
-tags:
-  - Element
-  - HTML
-  - Web
-  - Веб
-  - Потоковый контент
-  - Справка
-  - Элемент
 ---
 
 {{HTMLSidebar}}

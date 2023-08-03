@@ -1,9 +1,6 @@
 ---
 title: document.images
 slug: Web/API/Document/images
-tags:
-  - DOM
-  - JavaScript
 ---
 
 {{ ApiRef() }}

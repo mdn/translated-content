@@ -1,10 +1,6 @@
 ---
 title: Browser storage limits and eviction criteria
 slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
-tags:
-  - IndexedDB
-  - данных
-  - клиентская сторона
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}

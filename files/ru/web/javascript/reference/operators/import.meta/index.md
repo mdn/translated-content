@@ -1,8 +1,6 @@
 ---
 title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
-tags:
-  - Модули
 ---
 
 {{JSSidebar("Statements")}}

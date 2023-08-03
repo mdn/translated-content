@@ -1,8 +1,6 @@
 ---
 title: hanging-punctuation
 slug: Web/CSS/hanging-punctuation
-tags:
-  - CSS
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

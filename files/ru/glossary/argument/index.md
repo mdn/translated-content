@@ -1,10 +1,6 @@
 ---
 title: Аргумент
 slug: Glossary/Argument
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
 ---
 
 Аргумент - это {{glossary("value","значение")}}, ({{glossary("primitive","примитив")}} или {{glossary("object","объект")}}), переданное в качестве входных данных в {{glossary("function","функцию")}}.

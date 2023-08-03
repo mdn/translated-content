@@ -1,10 +1,6 @@
 ---
 title: SVGTextElement
 slug: Web/API/SVGTextElement
-tags:
-  - SVG
-  - Text
-  - Текст
 ---
 
 {{APIRef("SVG")}}

@@ -1,9 +1,6 @@
 ---
 title: Firefox 29 для разработчика
 slug: Mozilla/Firefox/Releases/29
-tags:
-  - firefox developers
-  - firefox29
 ---
 
 {{FirefoxSidebar}}

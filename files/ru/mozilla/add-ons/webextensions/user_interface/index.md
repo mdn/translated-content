@@ -1,8 +1,6 @@
 ---
 title: Пользовательский интерфейс
 slug: Mozilla/Add-ons/WebExtensions/user_interface
-tags:
-  - Пользовательский интерфейс
 ---
 
 {{AddonSidebar}}

@@ -1,11 +1,6 @@
 ---
 title: Использование промисов
 slug: Web/JavaScript/Guide/Using_promises
-tags:
-  - JavaScript
-  - Асинхронность
-  - Гайд
-  - промис
 ---
 
 {{jsSidebar("Руководство по JavaScript")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}

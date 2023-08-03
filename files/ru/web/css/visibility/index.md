@@ -1,12 +1,6 @@
 ---
 title: visibility
 slug: Web/CSS/visibility
-tags:
-  - CSS
-  - Web
-  - Расположение CSS
-  - Свойства CSS
-  - Шаблон
 ---
 {{CSSRef}}
 

@@ -1,10 +1,6 @@
 ---
 title: get TypedArray[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
-tags:
-  - JavaScript
-  - Property
-  - TypedArray
 ---
 {{JSRef}}
 

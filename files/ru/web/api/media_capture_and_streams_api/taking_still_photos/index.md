@@ -1,8 +1,6 @@
 ---
 title: Захват кадров с WebRTC
 slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
-tags:
-  - Захват WebRTC
 ---
 
 {{DefaultAPISidebar("Media Capture and Streams")}}

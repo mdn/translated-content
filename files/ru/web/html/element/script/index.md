@@ -1,8 +1,6 @@
 ---
-title: '<script>: элемент для написания скриптов'
+title: "<script>: элемент для написания скриптов"
 slug: Web/HTML/Element/script
-tags:
-  - Script
 ---
 
 {{HTMLSidebar}}

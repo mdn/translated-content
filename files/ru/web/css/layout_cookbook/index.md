@@ -1,13 +1,6 @@
 ---
 title: CSS Layout cookbook
 slug: Web/CSS/Layout_cookbook
-tags:
-  - CSS
-  - Layout
-  - NeedsTranslation
-  - TopicStub
-  - cookbook
-  - recipes
 ---
 {{CSSRef}}
 Книга рецептов CSS объединяет примеры большинства наиболее распространённых лейаут паттернов, которые могу встретиться вам при разработке веб-сайтов.

@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: function statement requires a name(функция оператор требует имя)'
+title: "SyntaxError: function statement requires a name(функция оператор требует имя)"
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 ---
 

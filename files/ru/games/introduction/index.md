@@ -1,10 +1,6 @@
 ---
 title: Ввод в разработку Web-игр
 slug: Games/Introduction
-tags:
-  - Firefox OS
-  - Игры
-  - уроки
 ---
 
 {{GamesSidebar}}

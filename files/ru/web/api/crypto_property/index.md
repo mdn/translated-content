@@ -1,11 +1,6 @@
 ---
 title: Window.crypto
 slug: Web/API/crypto_property
-tags:
-  - API
-  - Нужно описание
-  - Нужны примеры
-  - Совместимость
 ---
 
 {{APIRef}}

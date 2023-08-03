@@ -1,8 +1,6 @@
 ---
 title: column-rule-color
 slug: Web/CSS/column-rule-color
-tags:
-  - мультиколоночная вёрстка
 ---
 {{CSSRef}}
 

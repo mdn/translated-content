@@ -1,15 +1,6 @@
 ---
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
-tags:
-  - Array
-  - ECMAScript5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - forEach
-  - polyfill
 ---
 {{JSRef("Global_Objects", "Array")}}
 

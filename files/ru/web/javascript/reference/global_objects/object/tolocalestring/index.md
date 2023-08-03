@@ -1,11 +1,6 @@
 ---
 title: Object.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
 ---
 {{JSRef("Global_Objects", "Object")}}
 

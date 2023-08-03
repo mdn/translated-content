@@ -1,10 +1,6 @@
 ---
 title: Методы HTTP запроса
 slug: Web/HTTP/Methods
-tags:
-  - HTTP
-  - Methods
-  - Reference
 ---
 
 {{HTTPSidebar}}

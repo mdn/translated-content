@@ -1,11 +1,6 @@
 ---
 title: Retry-After
 slug: Web/HTTP/Headers/Retry-After
-tags:
-  - HTTP
-  - Заголовок
-  - заголовок ответа
-  - ответ
 ---
 {{HTTPSidebar}}
 

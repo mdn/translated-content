@@ -1,15 +1,6 @@
 ---
 title: "Задание: DIY Django мини блог"
 slug: Learn/Server-side/Django/django_assessment_blog
-tags:
-  - Аттестация
-  - Бэкенд
-  - Бэкенд программирование
-  - Django
-  - Изучение
-  - Начинающий
-  - блог
-  - скриптовый кодинг
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}

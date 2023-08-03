@@ -1,11 +1,6 @@
 ---
 title: Заключение
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
-tags:
-  - Игры
-  - Канва
-  - Начинающий
-  - жизни
 ---
 
 {{GamesSidebar}}{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Управление_мышью")}}

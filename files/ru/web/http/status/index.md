@@ -1,14 +1,6 @@
 ---
 title: Коды ответа HTTP
 slug: Web/HTTP/Status
-tags:
-  - HTTP
-  - HTTP Response codes
-  - HTTP response code
-  - код ответа HTTP
-  - коды HTTP
-  - ошибки HTTP
-  - HTTP-коды ответов
 ---
 
 {{HTTPSidebar}}

@@ -1,9 +1,6 @@
 ---
 title: Порядок выполнения и обработка ошибок
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - Guide
-  - JavaScript
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}

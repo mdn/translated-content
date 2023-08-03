@@ -1,12 +1,6 @@
 ---
 title: Location.replace()
 slug: Web/API/Location/replace
-tags:
-  - API
-  - HTML-DOM
-  - Location
-  - Method
-  - Reference
 ---
 
 {{ APIRef("HTML DOM") }}

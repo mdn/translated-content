@@ -1,9 +1,6 @@
 ---
 title: pointer-events
 slug: Web/CSS/pointer-events
-tags:
-  - CSS-свойства
-  - Ссылка
 ---
 {{CSSRef}}
 

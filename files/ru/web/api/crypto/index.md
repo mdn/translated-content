@@ -1,11 +1,6 @@
 ---
 title: Crypto
 slug: Web/API/Crypto
-tags:
-  - API
-  - Web Crypto API
-  - Интерфейс
-  - Справка
 ---
 
 {{APIRef("Web Crypto API")}}

@@ -1,9 +1,6 @@
 ---
 title: Pragma
 slug: Web/HTTP/Headers/Pragma
-tags:
-  - Прагма
-  - кеш
 ---
 
 {{HTTPSidebar}}

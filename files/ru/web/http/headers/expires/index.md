@@ -1,11 +1,6 @@
 ---
 title: Expires
 slug: Web/HTTP/Headers/Expires
-tags:
-  - HTTP
-  - Заголовки
-  - Кеширование
-  - Ответ сервера
 ---
 {{HTTPSidebar}}
 

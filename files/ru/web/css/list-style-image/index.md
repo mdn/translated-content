@@ -1,9 +1,6 @@
 ---
 title: list-style-image
 slug: Web/CSS/list-style-image
-tags:
-  - маркер списка
-  - список
 ---
 {{CSSRef}}
 

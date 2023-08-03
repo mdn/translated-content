@@ -1,11 +1,6 @@
 ---
 title: Document()
 slug: Web/API/Document/Document
-tags:
-  - API
-  - DOM
-  - Документ
-  - Конструктор
 ---
 
 {{APIRef}}{{Non-standard_header}}
