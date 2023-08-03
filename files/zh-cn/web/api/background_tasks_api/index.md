@@ -90,8 +90,11 @@ window.cancelIdleCallback =
 
 <div id="container">
   <div class="label">解码量子丝极谱发射中...</div>
+
   <progress id="progress" value="0"></progress>
+
   <div class="button" id="startButton">开始</div>
+
   <div class="label counter">
     任务 <span id="currentTaskNumber">0</span> /
     <span id="totalTaskCount">0</span>
