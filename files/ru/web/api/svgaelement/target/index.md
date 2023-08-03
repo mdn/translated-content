@@ -36,9 +36,7 @@ linkRef.target ='_blank';
 
 ## Характеристики
 
-| Спецификация                                                                             | Статус                   | Коммент |
-| ---------------------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{SpecName('SVG1.1', 'text.html#InterfaceSVGAElement', 'target')}} | {{Spec2('SVG1.1')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

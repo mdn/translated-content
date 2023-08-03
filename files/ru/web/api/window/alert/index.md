@@ -46,9 +46,7 @@ The following text is shared between this article, DOM:window\.prompt and DOM:wi
 
 ## Спецификации
 
-| Спецификация                                                                                                 | Статус                           | Комментарий |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-alert', 'alert()')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

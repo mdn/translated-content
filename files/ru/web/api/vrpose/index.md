@@ -47,9 +47,7 @@ This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and 
 
 ## Specifications
 
-| Specification                                                                | Status                       | Comment            |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#interface-vrpose', 'VRPose')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -93,9 +93,7 @@ function drawVRScene() {
 
 ## Specifications
 
-| Specification                                                                                                                | Status                       | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#dom-vrdisplay-requestanimationframe', 'requestAnimationFrame()')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

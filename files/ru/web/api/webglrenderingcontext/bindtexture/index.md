@@ -43,8 +43,8 @@ None.
 ### Привязка текстуры
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var texture = gl.createTexture();
 
 gl.bindTexture(gl.TEXTURE_2D, texture);

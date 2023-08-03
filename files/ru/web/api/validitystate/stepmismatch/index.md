@@ -17,7 +17,7 @@ browser-compat: api.ValidityState.stepMismatch
 Учитывая следующее:
 
 ```html
-<input type="number" min="20" max="40" step="2"/>
+<input type="number" min="20" max="40" step="2" />
 ```
 
 если `(value - min) % 2 != 0`, `stepMismatch` будет true.

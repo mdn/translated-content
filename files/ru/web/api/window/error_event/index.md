@@ -53,7 +53,7 @@ window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
 
   // Просто запустить обработчик события по умолчанию.
   return false;
-}
+};
 ```
 
 ## Спецификации

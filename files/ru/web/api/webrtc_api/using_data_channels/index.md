@@ -41,7 +41,7 @@ dataChannel.addEventListener("open", (event) => {
 
 ```js
 let dataChannel = pc.createDataChannel("MyApp Channel", {
-  negotiated: true
+  negotiated: true,
 });
 
 dataChannel.addEventListener("open", (event) => {

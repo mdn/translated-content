@@ -34,17 +34,18 @@ In this example, we obtain the usage estimates and present the percentage of sto
 
 ```html
 <p>
-  You're currently using about <span id="percent">
-  </span>% of your available storage.
+  You're currently using about <span id="percent"> </span>% of your available
+  storage.
 </p>
 ```
 
 ### JavaScript content
 
 ```js
-navigator.storage.estimate().then(function(estimate) {
-  document.getElementById("percent").innerHTML =
-      (estimate.usage / estimate.quota).toFixed(2);
+navigator.storage.estimate().then(function (estimate) {
+  document.getElementById("percent").innerHTML = (
+    estimate.usage / estimate.quota
+  ).toFixed(2);
 });
 ```
 

@@ -32,10 +32,10 @@ console.dir(someObject);
 
 Примеры можно посмотреть по ссылке: {{SectionOnPage("/ru/docs/Web/API/Console", "Usage")}}
 
-## Specifications
+## Спецификации
 
-| Specification                        | Status                           | Comment             |
-| ------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('Console API')}} | {{Spec2('Console API')}} | Initial definition. |
+{{Specifications}}
 
-> **Примечание:** Currently there are many implementation differences among browsers, but work is being done to bring them together and make them more consistent with one another.
+## Совместимость с браузерами
+
+{{Compat}}
