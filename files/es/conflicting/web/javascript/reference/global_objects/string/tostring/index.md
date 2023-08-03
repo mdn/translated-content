@@ -1,8 +1,6 @@
 ---
 title: String.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
-original_slug: Web/JavaScript/Reference/Global_Objects/String/toSource
-browser-compat: javascript.builtins.String.toString
 ---
 
 {{JSRef}} {{non-standard_header}}

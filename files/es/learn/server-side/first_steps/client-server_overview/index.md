@@ -1,7 +1,6 @@
 ---
 title: Visión General Cliente-Servidor
 slug: Learn/Server-side/First_steps/Client-Server_overview
-original_slug: Learn/Server-side/Primeros_pasos/Vision_General_Cliente_Servidor
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}

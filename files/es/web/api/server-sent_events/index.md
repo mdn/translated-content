@@ -1,7 +1,6 @@
 ---
 title: Server-sent events
 slug: Web/API/Server-sent_events
-original_slug: Server-sent_events
 ---
 
 Traditionally, a web page has to send a request to the server to receive new data; that is, the page requests data from the server. With server-sent events, it's possible for a server to send new data to a web page at any time, by pushing messages to the web page. These incoming messages can be treated as _[Events](/es/docs/DOM/event) + data_ inside the web page.

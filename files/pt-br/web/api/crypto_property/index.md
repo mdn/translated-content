@@ -26,18 +26,20 @@ genRandomNumbers = function getRandomNumbers() {
   window.crypto.getRandomValues(array);
 
   var randText = document.getElementById("myRandText");
-  randText.innerHTML = "The random numbers are: "
+  randText.innerHTML = "The random numbers are: ";
   for (var i = 0; i < array.length; i++) {
     randText.innerHTML += array[i] + " ";
   }
-}
+};
 ```
 
 ### HTML
 
 ```html
-<p id="myRandText">The random numbers are: </p>
-<button type="button" onClick='genRandomNumbers()'>Generate 10 random numbers</button>
+<p id="myRandText">The random numbers are:</p>
+<button type="button" onClick="genRandomNumbers()">
+  Generate 10 random numbers
+</button>
 ```
 
 ### Resultado
@@ -46,13 +48,11 @@ genRandomNumbers = function getRandomNumbers() {
 
 ## Especificações
 
-| Especificação                                                                                | Status                               | Comentário         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName("Web Crypto API", "#dfn-GlobalCrypto", "Window.crypto")}} | {{Spec2("Web Crypto API")}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.crypto")}}
+{{Compat}}
 
 ## Veja também
 

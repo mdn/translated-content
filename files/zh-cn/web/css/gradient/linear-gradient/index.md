@@ -1,7 +1,6 @@
 ---
 title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
-original_slug: Web/CSS/gradient/linear-gradient()
 ---
 
 {{CSSRef}}

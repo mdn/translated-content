@@ -35,13 +35,11 @@ linkRef.target ='_blank';
 
 ## Especificações
 
-| Specification                                                                            | Status                   | Comment |
-| ---------------------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{SpecName('SVG1.1', 'text.html#InterfaceSVGAElement', 'target')}} | {{Spec2('SVG1.1')}} |         |
+{{Specifications}}
 
-## Compatibilidade com o navegador
+## Compatibilidade com navegadores
 
-{{Compat("api.SVGAElement.target")}}
+{{Compat}}
 
 ## Veja também
 

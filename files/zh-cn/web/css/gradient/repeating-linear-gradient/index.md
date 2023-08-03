@@ -1,7 +1,6 @@
 ---
 title: repeating-linear-gradient()
 slug: Web/CSS/gradient/repeating-linear-gradient
-original_slug: Web/CSS/gradient/repeating-linear-gradient()
 ---
 
 {{CSSRef}}

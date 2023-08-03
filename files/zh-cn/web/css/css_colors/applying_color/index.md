@@ -1,7 +1,6 @@
 ---
 title: 使用 CSS 为 HTML 元素应用颜色
 slug: Web/CSS/CSS_colors/Applying_color
-original_slug: Web/HTML/Applying_color
 ---
 
 {{CSSRef}}
@@ -205,7 +204,7 @@ th {
 </table>
 ```
 
-{{EmbedLiveSample("HSL 函数表示法s", 300, 260)}}
+{{EmbedLiveSample("HSL 函数表示法", 300, 260)}}
 
 > **备注：** Note that when you omit the hue's unit, it's assumed to be in degrees (`deg`).
 

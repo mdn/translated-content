@@ -1,7 +1,6 @@
 ---
 title: selectstart
 slug: Web/API/Node/selectstart_event
-original_slug: Web/API/Document/selectstart_event
 ---
 
 [Selection API](/zh-CN/docs/Web/API/Selection_API) 的 **`selectstart`** 事件在用户开始一个新的选择时候触发。
