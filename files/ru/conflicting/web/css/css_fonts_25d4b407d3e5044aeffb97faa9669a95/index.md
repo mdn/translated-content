@@ -1,8 +1,6 @@
 ---
 title: <basefont>
 slug: conflicting/Web/CSS/CSS_Fonts_25d4b407d3e5044aeffb97faa9669a95
-translation_of: Web/HTML/Element/basefont
-original_slug: Web/HTML/Element/basefont
 ---
 
 The obsolete **HTML Base Font element** (**`<basefont>`**) sets a default font face, size, and color for the other elements which are descended from its parent element. With this set, the font's size can then be varied relative to the base size using the {{HTMLElement("font")}} element.

@@ -1,8 +1,6 @@
 ---
 title: Symbol (Символ)
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
-translation_of: Glossary/Symbol
-original_slug: Glossary/Symbol
 ---
 
 На этой странице описывается тип данных «символ» и функция «{{jsxref("Symbol")}}`()`», которая (среди прочего) создаёт экземпляры типа «символ».
