@@ -9,6 +9,7 @@ tags:
   - TopicStub
 translation_of: Web/API/Performance
 ---
+
 {{APIRef("Navigation Timing")}}
 
 Интерфейс **`Performance`** представляет информацию о производительности страницы с временными метками.

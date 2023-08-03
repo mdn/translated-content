@@ -47,8 +47,8 @@ In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/maste
 
 ```js
 var myBlob = new Blob();
-var init = { "status" : 200 , "statusText" : "SuperSmashingGreat!" };
-var myResponse = new Response(myBlob,init);
+var init = { status: 200, statusText: "SuperSmashingGreat!" };
+var myResponse = new Response(myBlob, init);
 ```
 
 ## Спецификации

@@ -38,7 +38,9 @@ var child = element.appendChild(child);
 Цепочка может работать не так, как ожидалось, из-за того, что `appendChild()` возвращает дочерний элемент:
 
 ```js
-let aBlock = document.createElement('block').appendChild( document.createElement('b') );
+let aBlock = document
+  .createElement("block")
+  .appendChild(document.createElement("b"));
 ```
 
 Присваивает переменной `aBlock` элемент `<b></b>`, а не `<block></block>`, как вы могли ожидать.
@@ -51,9 +53,13 @@ var p = document.createElement("p");
 document.body.appendChild(p);
 ```
 
-## Спецификация
+## Спецификации
 
-- [DOM Level 3 Core: appendChild](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-184E7107)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
 
 ## Смотрите также
 
