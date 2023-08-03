@@ -33,7 +33,7 @@ slug: Web/Accessibility/ARIA
 
 使用 [ARIA 的第一规则](https://www.w3.org/TR/using-aria/#rule1)是“如果你能够使用原生的 HTML 元素或属性，并且有你需要但已经建立在里面的语义和行为，而不是重新调整元素的用途并添加 ARIA 角色、状态或者属性来使它更加无障碍，那么你就应该如此。”
 
-> **备注：** 有个说法叫做“ARIA 宁缺毋滥”。在 [WebAim's survey of over one million home pages](https://webaim.org/projects/million/#aria) 中，他们发现，有 ARIA 存在的主页比那些没有 ARIA 的，多检测出了平均 41% 的错误。尽管 ARIA 是为了使网页更加无障碍而设计的，但是如果使用不当，可能适得其反。
+> **备注：** 有个说法叫做“ARIA 宁缺毋滥”。在 [WebAim 对超过 100 万个主页的调查](https://webaim.org/projects/million/#aria)中，他们发现，有 ARIA 存在的主页比那些没有 ARIA 的，多检测出了平均 41% 的错误。尽管 ARIA 是为了使网页更加无障碍而设计的，但是如果使用不当，可能适得其反。
 
 这是进度条小部件的标记：
 
