@@ -1,7 +1,6 @@
 ---
 title: noframes
 slug: Web/HTML/Element/noframes
-original_slug: Web/HTML/Elemento/noframes
 ---
 
 ### Definición

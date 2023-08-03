@@ -1,12 +1,6 @@
 ---
-title: '<pre>: Предварительно отформатированный текстовый элемент'
+title: "<pre>: Предварительно отформатированный текстовый элемент"
 slug: Web/HTML/Element/pre
-tags:
-  - HTML
-  - HTML группировка контента
-  - 'HTML: поток контента'
-  - Элемент
-translation_of: Web/HTML/Element/pre
 ---
 
 {{HTMLSidebar}}

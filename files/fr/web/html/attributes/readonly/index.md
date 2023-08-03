@@ -1,7 +1,6 @@
 ---
 title: "Attribut HTML : readonly"
 slug: Web/HTML/Attributes/readonly
-translation_of: Web/HTML/Attributes/readonly
 ---
 
 {{HTMLSidebar}}

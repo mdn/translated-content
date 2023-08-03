@@ -1,15 +1,6 @@
 ---
 title: Как структурировать HTML-формы
 slug: Learn/Forms/How_to_structure_a_web_form
-tags:
-  - HTML-форма
-  - Веб-форма
-  - Изучение
-  - Новичок
-  - Структурирование
-  - Форма
-translation_of: Learn/Forms/How_to_structure_a_web_form
-original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Ваша_первая_HTML_форма", "Learn/HTML/Forms/Стандартные_виджеты_форм", "Learn/HTML/Forms")}}

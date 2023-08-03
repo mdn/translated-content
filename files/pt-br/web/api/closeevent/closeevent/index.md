@@ -29,13 +29,11 @@ var event = new CloseEvent(typeArg, closeEventInit);
 
 ## Especificações
 
-| Specification                                                                            | Status                           | Comment           |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName('HTML WHATWG','comms.html#closeevent','CloseEvent()')}} | {{Spec2('HTML WHATWG')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CloseEvent.CloseEvent")}}
+{{Compat}}
 
 ## Veja também
 

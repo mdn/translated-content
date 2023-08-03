@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.style
 slug: Web/API/HTMLElement/style
-translation_of: Web/API/HTMLElement/style
 ---
 
 {{APIRef("CSSOM")}}

@@ -2,6 +2,7 @@
 title: CustomEvent
 slug: Web/API/CustomEvent
 ---
+
 {{APIRef("DOM")}}
 
 **`CustomEvent`** 인터페이스는 어떤 목적이든간에 애플리케이션이 초기화한 이벤트를 나타냅니다.

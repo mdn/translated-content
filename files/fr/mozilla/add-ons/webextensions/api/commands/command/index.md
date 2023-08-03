@@ -1,7 +1,6 @@
 ---
 title: Command
 slug: Mozilla/Add-ons/WebExtensions/API/commands/Command
-translation_of: Mozilla/Add-ons/WebExtensions/API/commands/Command
 ---
 
 {{AddonSidebar()}}

@@ -58,7 +58,8 @@ slug: Web/HTML/Element/select
 ### 여러 기능을 갖춘 복잡한 메뉴
 
 ```html
-<label>Please choose one or more pets:
+<label
+  >Please choose one or more pets:
   <select name="pets" multiple size="4">
     <optgroup label="4-legged pets">
       <option value="dog">Dog</option>

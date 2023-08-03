@@ -10,7 +10,7 @@ slug: Web/API/ImageCapture/takePhoto
 ## 구문
 
 ```js
-const blobPromise = imageCaptureObj.takePhoto([photoSettings])
+const blobPromise = imageCaptureObj.takePhoto([photoSettings]);
 ```
 
 ### 매개변수
@@ -30,19 +30,22 @@ const blobPromise = imageCaptureObj.takePhoto([photoSettings])
 다음 코드는 [Simple Image Capture 데모](https://simpl.info/imagecapture/)에서 가져온 것으로, `takePhoto()`가 반환한 {{jsxref("Promise")}}의 {{domxref("Blob")}}을 사용해 {{htmlelement("img")}} 요소에 할당하는 방법을 보입니다. 코드를 짧게 유지하기 위해 {{domxref("ImageCapture")}} 객체의 초기화 과정은 생략했습니다.
 
 ```js
-var takePhotoButton = document.querySelector('button#takePhoto');
-var canvas = document.querySelector('canvas');
+var takePhotoButton = document.querySelector("button#takePhoto");
+var canvas = document.querySelector("canvas");
 
 takePhotoButton.onclick = takePhoto;
 
 function takePhoto() {
-  imageCapture.takePhoto().then(function(blob) {
-    console.log('Took photo:', blob);
-    img.classList.remove('hidden');
-    img.src = URL.createObjectURL(blob);
-  }).catch(function(error) {
-    console.log('takePhoto() error: ', error);
-  });
+  imageCapture
+    .takePhoto()
+    .then(function (blob) {
+      console.log("Took photo:", blob);
+      img.classList.remove("hidden");
+      img.src = URL.createObjectURL(blob);
+    })
+    .catch(function (error) {
+      console.log("takePhoto() error: ", error);
+    });
 }
 ```
 

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 
 {{JSRef}}{{Deprecated_header}}
 
-> **警告:** オブジェクトの `[[Prototype]]` を変更することは、最新の JavaScript エンジンがプロパティアクセスを最適化する仕組み上、***すべての***ブラウザーや JavaScript エンジンにおいて、とても低速な操作となります。プロトタイプの継承関係を変更することによる性能上の影響は微細で広範囲にわたり、単に `obj.__proto__ = ...` という文の実行時間に留まらず、 `[[Prototype]]` が変更された***いずれかの***オブジェクトへのアクセスを持つ***あらゆる***コードに及ぶ可能性があります。性能を気にしている場合、オブジェクトの `[[Prototype]]` の変更は避けるべきです。代わりに、 {{JSxRef("Object.create()")}} を使用して求める `[[Prototype]]` をもつオブジェクトを新たに生成してください。
+> **警告:** オブジェクトの `[[Prototype]]` を変更することは、最新の JavaScript エンジンがプロパティアクセスを最適化する仕組み上、**_すべての_**ブラウザーや JavaScript エンジンにおいて、とても低速な操作となります。プロトタイプの継承関係を変更することによる性能上の影響は微細で広範囲にわたり、単に `obj.__proto__ = ...` という文の実行時間に留まらず、 `[[Prototype]]` が変更された**_いずれかの_**オブジェクトへのアクセスを持つ**_あらゆる_**コードに及ぶ可能性があります。性能を気にしている場合、オブジェクトの `[[Prototype]]` の変更は避けるべきです。代わりに、 {{JSxRef("Object.create()")}} を使用して求める `[[Prototype]]` をもつオブジェクトを新たに生成してください。
 
 > **警告:** `Object.prototype.__proto__` は現時点でほとんどのブラウザーが対応していますが、そのプロパティの存在と正確な動作は、ウェブブラウザーの互換性を確保するためのレガシー機能として、 ECMAScript 2015 で初めて標準化されました。より広く対応させるには、代わりに {{JSxRef("Object.getPrototypeOf()")}} を使用してください。
 
@@ -30,7 +30,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 ### \_\_proto\_\_ の使用
 
 ```js
-
 function Circle() {}
 const shape = {};
 const circle = new Circle();
@@ -40,15 +39,15 @@ const circle = new Circle();
 shape.__proto__ = circle;
 
 // オブジェクトプロトタイプの取得
-console.log(shape.__proto__ === Circle);  // false
+console.log(shape.__proto__ === Circle); // false
 
 const ShapeA = function () {};
 const ShapeB = {
-    a() {
-        console.log('aaa');
-    }
+  a() {
+    console.log("aaa");
+  },
 };
-console.log(ShapeA.prototype.__proto__ = ShapeB);
+console.log((ShapeA.prototype.__proto__ = ShapeB));
 
 const shapea = new ShapeA();
 shapea.a(); // aaa
@@ -57,9 +56,9 @@ console.log(ShapeA.prototype === shapea.__proto__); // true
 // または
 const ShapeC = function () {};
 const ShapeD = {
-    a() {
-        console.log('a');
-    }
+  a() {
+    console.log("a");
+  },
 };
 
 const shapeC = new ShapeC();
@@ -70,7 +69,7 @@ console.log(ShapeC.prototype === shapeC.__proto__); // false
 // または
 function Test() {}
 Test.prototype.myname = function () {
-    console.log('myname');
+  console.log("myname");
 };
 
 const a = new Test();
@@ -80,16 +79,14 @@ a.myname(); // myname
 // または
 const fn = function () {};
 fn.prototype.myname = function () {
-    console.log('myname');
+  console.log("myname");
 };
 
 var obj = {
-    __proto__: fn.prototype
+  __proto__: fn.prototype,
 };
 
 obj.myname(); // myname
-
- 
 ```
 
 ## 仕様書

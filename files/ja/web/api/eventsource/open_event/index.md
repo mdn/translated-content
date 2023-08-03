@@ -1,5 +1,5 @@
 ---
-title: 'EventSource: open イベント'
+title: "EventSource: open イベント"
 slug: Web/API/EventSource/open_event
 l10n:
   sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce

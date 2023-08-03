@@ -1,7 +1,6 @@
 ---
-title: 'TypeError: ''x'' is not iterable (Тип ошибки  ''x'' не является итерационным)'
+title: "TypeError: 'x' is not iterable (Тип ошибки  'x' не является итерационным)"
 slug: Web/JavaScript/Reference/Errors/is_not_iterable
-translation_of: Web/JavaScript/Reference/Errors/is_not_iterable
 ---
 
 {{jsSidebar("Errors")}}

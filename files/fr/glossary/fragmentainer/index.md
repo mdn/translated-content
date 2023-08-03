@@ -1,7 +1,6 @@
 ---
 title: Fragmenteur
 slug: Glossary/Fragmentainer
-translation_of: Glossary/Fragmentainer
 l10n:
   sourceCommit: 541357c50283942128c2f5c0335418bc2b90e751
 ---

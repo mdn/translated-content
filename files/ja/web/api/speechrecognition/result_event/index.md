@@ -1,7 +1,6 @@
 ---
-title: 'SpeechRecognition: result イベント'
+title: "SpeechRecognition: result イベント"
 slug: Web/API/SpeechRecognition/result_event
-original_slug: Web/API/SpeechRecognition/onresult
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---

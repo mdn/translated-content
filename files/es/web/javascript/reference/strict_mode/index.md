@@ -1,7 +1,6 @@
 ---
 title: Modo Estricto
 slug: Web/JavaScript/Reference/Strict_mode
-original_slug: Web/JavaScript/Referencia/Modo_estricto
 ---
 
 {{JsSidebar("More", "Más")}}A veces, verás que llaman {{Glossary("Sloppy_mode", "sloppy mode — modo poco riguroso")}} al modo no estricto predeterminado. Este no es un término oficial, pero tenlo en cuenta, por si acaso.

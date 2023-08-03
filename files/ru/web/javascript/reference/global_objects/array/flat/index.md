@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
-tags:
-  - Массив
-  - Ссылка
-  - Экспериментальная
-  - метод
-  - прототип
-  - яваскрипт
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 ---
 {{JSRef}}
 

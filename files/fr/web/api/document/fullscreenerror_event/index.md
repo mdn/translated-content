@@ -1,7 +1,6 @@
 ---
 title: fullscreenerror
 slug: Web/API/Document/fullscreenerror_event
-translation_of: Web/API/Document/fullscreenerror_event
 ---
 
 L'évènement **`fullscreenerror`** est déclenché lorsque le navigateur ne peut pas entrer en mode plein écran.

@@ -1,7 +1,6 @@
 ---
 title: performance.measure()
 slug: Web/API/Performance/measure
-translation_of: Web/API/Performance/measure
 ---
 
 {{APIRef("User Timing API")}}

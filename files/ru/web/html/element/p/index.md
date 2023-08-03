@@ -1,17 +1,6 @@
 ---
-title: '<p>: Элемент текстового абзаца'
+title: "<p>: Элемент текстового абзаца"
 slug: Web/HTML/Element/p
-tags:
-  - Element
-  - HTML
-  - Web
-  - Абзац
-  - Веб
-  - Группировка контента
-  - Параграф
-  - Справка
-  - Элемент
-translation_of: Web/HTML/Element/p
 ---
 {{HTMLSidebar}}
 

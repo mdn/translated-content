@@ -1,7 +1,6 @@
 ---
 title: normalize-space
 slug: Web/XPath/Functions/normalize-space
-translation_of: Web/XPath/Functions/normalize-space
 ---
 
 {{ XsltRef() }}

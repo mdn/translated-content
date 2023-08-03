@@ -1,7 +1,6 @@
 ---
 title: Media
 slug: Glossary/Media
-translation_of: Glossary/Media
 ---
 
 Le terme **média** est surchargé quand on parle du Web ; il prend des significations différentes selon le contexte.

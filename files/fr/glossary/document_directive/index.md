@@ -1,7 +1,6 @@
 ---
 title: Directive de document
 slug: Glossary/Document_directive
-translation_of: Glossary/Document_directive
 ---
 
 Les **directives de document** **{{Glossary("CSP")}}** sont utilisées dans un en-tête de {{HTTPHeader("Content-Security-Policy","politique de sécurité de contenu")}} et régissent les propriétés d'un document ou l'environnement des "[worker"](/fr/docs/Web/API/Web_Workers_API) auxquels la politique s'applique.

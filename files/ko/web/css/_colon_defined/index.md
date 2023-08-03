@@ -1,5 +1,5 @@
 ---
-title: ':defined'
+title: ":defined"
 slug: Web/CSS/:defined
 ---
 {{CSSRef}}

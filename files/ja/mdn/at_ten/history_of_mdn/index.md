@@ -1,8 +1,7 @@
 ---
 title: MDN のあゆみ
 slug: MDN/At_ten/History_of_MDN
-original_slug: MDN_at_ten/History_of_MDN
-i10n:
+l10n:
   sourceCommit: 356b0655db61fafedd864b54d39e04529b52fff4
 ---
 

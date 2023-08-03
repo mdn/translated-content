@@ -1,11 +1,6 @@
 ---
 title: object-fit
 slug: Web/CSS/object-fit
-tags:
-  - CSS
-  - CSS Property
-  - object-fit
-translation_of: Web/CSS/object-fit
 ---
 {{CSSRef}}
 

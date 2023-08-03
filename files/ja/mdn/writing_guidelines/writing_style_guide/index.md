@@ -1,7 +1,6 @@
 ---
 title: 執筆スタイルガイド
 slug: MDN/Writing_guidelines/Writing_style_guide
-original_slug: MDN/Guidelines/Writing_style_guide
 l10n:
   sourceCommit: e60194342c9666ad8a2e6e5e6c25705fe818bcde
 ---

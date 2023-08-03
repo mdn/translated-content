@@ -1,7 +1,6 @@
 ---
 title: calc()
 slug: Web/CSS/calc
-original_slug: Web/CSS/calc()
 ---
 
 {{CSSRef}}

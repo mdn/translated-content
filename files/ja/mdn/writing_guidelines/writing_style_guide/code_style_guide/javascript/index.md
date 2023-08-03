@@ -1,7 +1,6 @@
 ---
 title: JavaScript のコード例を整形するためのガイドライン
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
-original_slug: MDN/Guidelines/Code_guidelines/JavaScript
 ---
 
 {{MDNSidebar}}

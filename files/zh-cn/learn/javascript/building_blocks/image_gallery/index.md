@@ -1,7 +1,6 @@
 ---
 title: 图片库
 slug: Learn/JavaScript/Building_blocks/Image_gallery
-original_slug: learn/JavaScript/Building_blocks/相片走廊
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}

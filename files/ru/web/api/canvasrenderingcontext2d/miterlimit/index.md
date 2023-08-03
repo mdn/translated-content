@@ -1,8 +1,8 @@
 ---
 title: CanvasRenderingContext2D.miterLimit
 slug: Web/API/CanvasRenderingContext2D/miterLimit
-translation_of: Web/API/CanvasRenderingContext2D/miterLimit
 ---
+
 {{APIRef}}
 
 Свойство **CanvasRenderingContext2D.miterLimit** устанавливает/возвращает максимальную длину среза.
@@ -39,7 +39,8 @@ ctx.beginPath();
 ctx.moveTo(0,0);
 ctx.lineWidth = 15;
 ctx.lineTo(100, 100);
-ctx.stroke();</textarea>
+ctx.stroke();</textarea
+>
 ```
 
 ```js hidden
@@ -55,14 +56,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -74,17 +75,9 @@ window.addEventListener("load", drawCanvas);
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
-
-### WebKit/Blink-specific notes
-
-- In WebKit- and Blink-based Browsers, a non-standard and deprecated method `ctx.setMiterLimit()` is implemented in addition to this property.
-
-### Gecko-specific notes
-
-- Starting Gecko 2.0, setting `miterLimit` to a negative value no longer throws an exception; instead, it properly ignores non-positive values.
 
 ## See also
 

@@ -1,7 +1,6 @@
 ---
 title: tabs.captureVisibleTab()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
 ---
 
 {{AddonSidebar()}}

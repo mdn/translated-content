@@ -1,7 +1,6 @@
 ---
 title: Quantificateurs
 slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
 ---
 
 {{jsSidebar("JavaScript Guide")}}

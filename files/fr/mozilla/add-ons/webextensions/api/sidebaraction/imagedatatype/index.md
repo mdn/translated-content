@@ -1,7 +1,6 @@
 ---
 title: sidebarAction.ImageDataType
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/ImageDataType
-translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/ImageDataType
 ---
 
 {{AddonSidebar()}}

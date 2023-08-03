@@ -1,5 +1,5 @@
 ---
-title: 'FileReader: abort イベント'
+title: "FileReader: abort イベント"
 slug: Web/API/FileReader/abort_event
 l10n:
   sourceCommit: 03c5110696fb433c13f3ccf63266d8affe446d8a

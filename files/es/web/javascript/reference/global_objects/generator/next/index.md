@@ -1,7 +1,6 @@
 ---
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador/next
 ---
 
 {{JSRef}}

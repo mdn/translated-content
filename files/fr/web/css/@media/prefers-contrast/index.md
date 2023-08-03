@@ -1,7 +1,6 @@
 ---
 title: prefers-contrast
 slug: Web/CSS/@media/prefers-contrast
-translation_of: Web/CSS/@media/prefers-contrast
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

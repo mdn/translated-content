@@ -23,7 +23,7 @@ slug: Glossary/Function
 
 ```js
 // Function declaration
-function foo() {};
+function foo() {}
 
 // Named function expression
 (function bar() {});
@@ -35,17 +35,17 @@ const foo = () => {};
 **안쪽 함수**는 다른함수 내부에서 정의된 함수이다(아래 예에서는 square). **바깥 함수**는 함수를 포함하고 있는 함수이다(아래 예에서는 addSquares):
 
 ```js
-function addSquares(a,b) {
-   function square(x) {
-      return x * x;
-   }
-   return square(a) + square(b);
-};
+function addSquares(a, b) {
+  function square(x) {
+    return x * x;
+  }
+  return square(a) + square(b);
+}
 
 //Using ECMAScript 2015 arrow notation
-const addSquares = (a,b) => {
-   const square = x => x*x;
-   return square(a) + square(b);
+const addSquares = (a, b) => {
+  const square = (x) => x * x;
+  return square(a) + square(b);
 };
 ```
 
@@ -53,16 +53,14 @@ const addSquares = (a,b) => {
 
 ```js
 function loop(x) {
-   if (x >= 10)
-      return;
-   loop(x + 1);
-};
+  if (x >= 10) return;
+  loop(x + 1);
+}
 
 //Using ECMAScript 2015 arrow notation
-const loop = x => {
-   if (x >= 10)
-      return;
-   loop(x + 1);
+const loop = (x) => {
+  if (x >= 10) return;
+  loop(x + 1);
 };
 ```
 
@@ -79,14 +77,14 @@ function foo() {
 
 // Function expressions, named or anonymous, can be called immediately
 (function foo() {
-    console.log("Hello Foo");
-}());
-
-(function food() {
-    console.log("Hello Food");
+  console.log("Hello Foo");
 })();
 
-(() => console.log('hello world'))();
+(function food() {
+  console.log("Hello Food");
+})();
+
+(() => console.log("hello world"))();
 ```
 
 IIFE에 대해 더 많은 설명이 필요하다면 위키피디아의 다음 페이지를 확인 바란다: [Immediately Invoked Function Expression](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)

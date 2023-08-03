@@ -1,26 +1,6 @@
 ---
 title: Screen Capture API
 slug: Web/API/Screen_Capture_API
-tags:
-  - API
-  - Capture
-  - Conference
-  - Media
-  - MediaDevices
-  - MediaStream
-  - NeedsTranslation
-  - Overview
-  - Screen Capture
-  - Screen Capture API
-  - Screen Sharing
-  - Sharing
-  - TopicStub
-  - Video
-  - Window
-  - display
-  - getDisplayMedia
-  - screen
-translation_of: Web/API/Screen_Capture_API
 ---
 
 {{DefaultAPISidebar("Screen Capture API")}}
@@ -34,7 +14,9 @@ The Screen Capture API is relatively simple to use. Its sole method is {{domxref
 To start capturing video from the screen, you call `getDisplayMedia()` on the instance of `Media` `navigator.mediaDevices`:
 
 ```js
-captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+captureStream = await navigator.mediaDevices.getDisplayMedia(
+  displayMediaOptions,
+);
 ```
 
 The {{jsxref("Promise")}} returned by `getDisplayMedia()` resolves to a {{domxref("MediaStream")}} which streams the captured media.
@@ -95,7 +77,7 @@ The following dictionaries are defined by the Screen Capture API.
 {{Glossary("User agent", "User agents")}} that support Feature Policy (either using HTTP's {{HTTPHeader("Feature-Policy")}} header or the {{HTMLElement("iframe")}} attribute [`allow`](/ru/docs/Web/HTML/Element/iframe#allow)) can specify a desire to use the Screen Capture API using the policy control directive `display-capture`:
 
 ```html
-<iframe allow="display-capture" src="/some-other-document.html">
+<iframe allow="display-capture" src="/some-other-document.html"></iframe>
 ```
 
 The default allow list is `self`, which lets the any content within the document use Screen Capture.
@@ -104,13 +86,11 @@ See [Using Feature Policy](/ru/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy
 
 ## Specifications
 
-| Specification                            | Status                               | Comment            |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Screen Capture')}} | {{Spec2('Screen Capture')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.MediaDevices.getDisplayMedia")}}
+{{Compat}}
 
 ## See also
 

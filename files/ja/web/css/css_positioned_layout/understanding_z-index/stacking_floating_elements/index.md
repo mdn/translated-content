@@ -1,7 +1,6 @@
 ---
 title: 浮動ブロックの重ね合わせ
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: dir
 slug: Web/HTML/Element/dir
-original_slug: Web/HTML/Elemento/dir
 ---
 
 ### Definición

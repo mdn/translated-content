@@ -1,7 +1,6 @@
 ---
 title: Intl.Segmenter.prototype.segment()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
 title: ascent-override
 slug: Web/CSS/@font-face/ascent-override
-translation_of: Web/CSS/@font-face/ascent-override
 ---
 
 {{CSSRef}}

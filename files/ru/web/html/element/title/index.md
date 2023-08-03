@@ -1,23 +1,6 @@
 ---
-title: '<title>: элемент заголовка документа'
+title: "<title>: элемент заголовка документа"
 slug: Web/HTML/Element/title
-tags:
-  - Element
-  - HTML
-  - Title
-  - Web
-  - Веб
-  - Заголовок вкладки
-  - Заголовок окна
-  - Заголовок страницы
-  - Имя вкладки
-  - Имя окна
-  - Имя страницы
-  - Справка
-  - Элемент
-  - метаданные
-  - метаданные документа HTML
-translation_of: Web/HTML/Element/title
 ---
 
 {{HTMLSidebar}}

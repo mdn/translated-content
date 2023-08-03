@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/reduceRight
 ---
 
 {{JSRef("Objetos_globales", "Array")}}

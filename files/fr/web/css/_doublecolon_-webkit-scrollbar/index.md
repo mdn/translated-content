@@ -1,7 +1,6 @@
 ---
 title: "::-webkit-scrollbar"
 slug: Web/CSS/::-webkit-scrollbar
-translation_of: Web/CSS/::-webkit-scrollbar
 ---
 
 {{CSSRef}}{{Non-standard_header}}Le pseudo-élément **`::-webkit-scrollbar`** permet de modifier le style de la barre de défilement associée à un élément. Il s'agit d'un pseudo-élément propriétaire, uniquement disponible pour les navigateurs WebKit.

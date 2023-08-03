@@ -1,7 +1,6 @@
 ---
 title: windows.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/remove
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/remove
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: overflow-inline
 slug: Web/CSS/@media/overflow-inline
-translation_of: Web/CSS/@media/overflow-inline
 ---
 
 {{CSSRef}}

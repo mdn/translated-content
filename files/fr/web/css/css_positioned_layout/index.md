@@ -1,7 +1,6 @@
 ---
 title: CSS Positioned Layout
 slug: Web/CSS/CSS_positioned_layout
-translation_of: Web/CSS/CSS_Positioning
 ---
 
 {{CSSRef}}

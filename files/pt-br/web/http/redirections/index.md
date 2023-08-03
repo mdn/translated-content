@@ -1,7 +1,6 @@
 ---
 title: Redirecionamentos em HTTP
 slug: Web/HTTP/Redirections
-original_slug: Web/HTTP/Redirecionamento
 ---
 
 {{HTTPSidebar}}

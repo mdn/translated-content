@@ -1,7 +1,6 @@
 ---
 title: String.prototype.toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 ---
 
 {{JSRef}}

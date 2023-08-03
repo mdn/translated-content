@@ -1,7 +1,6 @@
 ---
 title: Pseudo-classes
 slug: Web/CSS/Pseudo-classes
-translation_of: Web/CSS/Pseudo-classes
 ---
 
 {{CSSRef}}

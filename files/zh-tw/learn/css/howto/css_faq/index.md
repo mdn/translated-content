@@ -1,7 +1,6 @@
 ---
 title: CSS 一般問題
 slug: Learn/CSS/Howto/CSS_FAQ
-original_slug: Web/CSS/Common_CSS_Questions
 ---
 
 {{LearnSidebar}}

@@ -1,15 +1,8 @@
 ---
 title: Media Session API
 slug: Web/API/Media_Session_API
-tags:
-  - Media Session API
-  - MediaMetadata
-  - MediaSession
-  - Видео
-  - Медиа
-  - аудио
-translation_of: Web/API/Media_Session_API
 ---
+
 {{DefaultAPISidebar("Media Session API")}}
 
 API Media Session даёт разработчику возможность настроить уведомление о медиа. С помощью него можно предоставить метаданные о проигрываемых приложением медиа, а также позволяет приложению реагировать на команды управления воспроизведением. Смысл данного интерфейса в том, чтобы пользователь мог просматривать и управлять медиаконтентом, не переходя на страницу, где происходит воспроизведение.
@@ -49,49 +42,88 @@ navigator.mediaSession.playbackState = "playing";
 Данный пример демонстрирует работу и определение доступности Media Session API. Также, он передаёт метаданные и определяет собственные обработчики событий:
 
 ```js
-if ('mediaSession' in navigator) {
+if ("mediaSession" in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
-    title: 'Unforgettable',
-    artist: 'Nat King Cole',
-    album: 'The Ultimate Collection (Remastered)',
+    title: "Unforgettable",
+    artist: "Nat King Cole",
+    album: "The Ultimate Collection (Remastered)",
     artwork: [
-      { src: 'https://dummyimage.com/96x96',   sizes: '96x96',   type: 'image/png' },
-      { src: 'https://dummyimage.com/128x128', sizes: '128x128', type: 'image/png' },
-      { src: 'https://dummyimage.com/192x192', sizes: '192x192', type: 'image/png' },
-      { src: 'https://dummyimage.com/256x256', sizes: '256x256', type: 'image/png' },
-      { src: 'https://dummyimage.com/384x384', sizes: '384x384', type: 'image/png' },
-      { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
-    ]
+      {
+        src: "https://dummyimage.com/96x96",
+        sizes: "96x96",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/128x128",
+        sizes: "128x128",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/192x192",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/256x256",
+        sizes: "256x256",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/384x384",
+        sizes: "384x384",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/512x512",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
   });
 
-  navigator.mediaSession.setActionHandler('play', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('pause', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekbackward', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekforward', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('previoustrack', function() { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('nexttrack', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler("play", function () {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("pause", function () {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("seekbackward", function () {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("seekforward", function () {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("previoustrack", function () {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("nexttrack", function () {
+    /* Code excerpted. */
+  });
 }
 ```
 
 Некоторые браузеры отключают автовоспроизведение медиаэлементов на мобильных устройствах и требуют действий пользователя для начала воспроизведения. Этот пример добавит обработчик события `pointerup` для кнопки воспроизведения на странице, который начнёт работу с медиасессией:
 
 ```js
-playButton.addEventListener('pointerup', function(event) {
-  var audio = document.querySelector('audio');
+playButton.addEventListener("pointerup", function (event) {
+  var audio = document.querySelector("audio");
 
   // Пользователь нажал кнопку, начинаем воспроизведение...
-  audio.play()
-  .then(_ => { /* Настройка элементов управления (показана выше). */ })
-  .catch(error => { console.log(error) });
+  audio
+    .play()
+    .then((_) => {
+      /* Настройка элементов управления (показана выше). */
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 });
 ```
 
 ## Спецификации
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Media Session')}} | {{Spec2('Media Session')}} | Initial definition. |
+{{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
-{{Compat("api.MediaSession")}}
+{{Compat}}

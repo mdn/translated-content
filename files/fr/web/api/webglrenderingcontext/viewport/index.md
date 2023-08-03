@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.viewport()
 slug: Web/API/WebGLRenderingContext/viewport
-translation_of: Web/API/WebGLRenderingContext/viewport
 ---
 
 {{APIRef("WebGL")}}

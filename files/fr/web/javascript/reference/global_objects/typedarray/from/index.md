@@ -1,7 +1,6 @@
 ---
 title: TypedArray.from()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 ---
 
 {{JSRef}}

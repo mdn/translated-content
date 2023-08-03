@@ -1,7 +1,6 @@
 ---
 title: PermissionStatus.onchange
 slug: Web/API/PermissionStatus/change_event
-original_slug: Web/API/PermissionStatus/onchange
 ---
 
 {{APIRef("Permissions API")}}{{SeeCompatTable}}

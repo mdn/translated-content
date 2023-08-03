@@ -1,7 +1,6 @@
 ---
 title: clip-path
 slug: Web/SVG/Attribute/clip-path
-translation_of: Web/SVG/Attribute/clip-path
 ---
 
 {{SVGRef}}

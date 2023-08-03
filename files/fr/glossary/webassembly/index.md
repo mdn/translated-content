@@ -1,7 +1,6 @@
 ---
 title: WebAssembly
 slug: Glossary/WebAssembly
-translation_of: Glossary/WebAssembly
 ---
 
 **WebAssembly** (abrégé _Wasm_) est un format ouvert [binaire](/fr/docs/Glossary/Binary) qui peut être exécuté dans des navigateurs web modernes afin d'améliorer la performance et/ou de fournir de nouvelles fonctionnalités pour des pages web.

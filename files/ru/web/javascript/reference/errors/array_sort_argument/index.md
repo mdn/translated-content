@@ -1,9 +1,6 @@
 ---
-title: >-
-  TypeError: invalid Array.prototype.sort argument (TypeError: недопустимый
-  Array.prototype.sort argument)
+title: "TypeError: invalid Array.prototype.sort argument (TypeError: недопустимый Array.prototype.sort argument)"
 slug: Web/JavaScript/Reference/Errors/Array_sort_argument
-translation_of: Web/JavaScript/Reference/Errors/Array_sort_argument
 ---
 {{jsSidebar("Errors")}}
 

@@ -1,7 +1,6 @@
 ---
 title: どんなテキストエディターが利用可能？
 slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
-original_slug: Learn/Common_questions/Available_text_editors
 ---
 
 この記事ではウェブ開発向けのテキストエディターをインストールする際に考慮すべき点をいくつか取り上げます。

@@ -1,7 +1,6 @@
 ---
 title: Constructeur WebAssembly.Table()
 slug: WebAssembly/JavaScript_interface/Table/Table
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table
 ---
 
 {{WebAssemblySidebar}}

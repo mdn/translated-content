@@ -1,7 +1,6 @@
 ---
 title: Storage.length
 slug: Web/API/Storage/length
-translation_of: Web/API/Storage/length
 ---
 
 {{APIRef("Web Storage API")}}
