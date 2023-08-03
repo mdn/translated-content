@@ -46,7 +46,7 @@ slug: Web/Accessibility/ARIA
   aria-valuemax="100"></div>
 ```
 
-这个进度条是使用 {{HTMLElement("div")}} 构建的，没有任何意义。我们加入 ARIA 角色和属性以添加意义。在这个例子中，[`role="progressbar"`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/progressbar_role) 属性告知浏览器，这个元素实际上是一个由 JavaScript 驱动的进度条小部件。[`aria-valuemin`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) 和 [`aria-valuemax`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) 属性指定进度条的最小值和最大值，，[`aria-valuenow`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) 描述进度条的当前状态和因此必须使用 JavaScript 保持更新。
+这个进度条是使用 {{HTMLElement("div")}} 构建的，没有任何意义。我们加入 ARIA 角色和属性以添加意义。在这个例子中，[`role="progressbar"`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/progressbar_role) 属性告知浏览器，这个元素实际上是一个由 JavaScript 驱动的进度条小部件。[`aria-valuemin`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) 和 [`aria-valuemax`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) 属性指定进度条的最小值和最大值，[`aria-valuenow`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) 描述进度条的当前状态，因此必须使用 JavaScript 保持更新。
 
 除了将它们直接放置在元素中之外，还可以将 ARIA 属性添加到元素中，并使用 JavaScript 代码动态更新，如下所示：
 
