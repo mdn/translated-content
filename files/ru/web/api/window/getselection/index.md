@@ -26,10 +26,10 @@ selection = window.getSelection();
 
 ```js
 function foo() {
-    var selObj = window.getSelection();
-    alert(selObj);
-    var selRange = selObj.getRangeAt(0);
-    // вернёт диапазон Range
+  var selObj = window.getSelection();
+  alert(selObj);
+  var selRange = selObj.getRangeAt(0);
+  // вернёт диапазон Range
 }
 ```
 

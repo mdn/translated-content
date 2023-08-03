@@ -25,19 +25,17 @@ doc = window.document
 ## Пример
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-   <title>Hello, World!</title>
-</head>
-<body>
-
-<script type="text/javascript">
-   var doc = window.document;
-   console.log(doc.title); // Hello, World!
-</script>
-
-</body>
+  <head>
+    <title>Hello, World!</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var doc = window.document;
+      console.log(doc.title); // Hello, World!
+    </script>
+  </body>
 </html>
 ```
 

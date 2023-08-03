@@ -41,7 +41,7 @@ audioObj = new Audio(url);
 Лучший подход, основанный на событии:
 
 ```js
-myAudioElement.addEventListener("canplaythrough", event => {
+myAudioElement.addEventListener("canplaythrough", (event) => {
   /* аудио может быть воспроизведено; проиграть, если позволяют разрешения */
   myAudioElement.play();
 });
@@ -55,7 +55,7 @@ myAudioElement.addEventListener("canplaythrough", event => {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

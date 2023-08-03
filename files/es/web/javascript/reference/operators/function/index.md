@@ -1,7 +1,6 @@
 ---
 title: function
 slug: Web/JavaScript/Reference/Operators/function
-original_slug: Web/JavaScript/Referencia/Operadores/function
 ---
 
 {{jsSidebar("Operators")}}

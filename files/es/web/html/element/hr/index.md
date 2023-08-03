@@ -1,7 +1,6 @@
 ---
 title: <hr>
 slug: Web/HTML/Element/hr
-original_slug: Web/HTML/Elemento/hr
 ---
 
 ### Definición

@@ -6,6 +6,7 @@ tags:
   - SVG
 translation_of: Web/API/SVGGraphicsElement
 ---
+
 {{APIRef("SVG")}}
 
 Интерфейс **`SVGGraphicsElement`** представляет элементы SVG, основной целью которых является прямое отображение графики в группу.

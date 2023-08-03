@@ -81,9 +81,7 @@ compressor.release.setValueAtTime(0.25, audioCtx.currentTime);
 
 ## Specifications
 
-| Specification                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#AudioParam', 'AudioParam')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

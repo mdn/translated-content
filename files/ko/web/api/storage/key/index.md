@@ -37,8 +37,8 @@ function forEachKey(callback) {
 다음 함수는 localStorage 의 key들을 반복하고 각 key에 설정된 값들을 가져옵니다.
 
 ```js
-for(var i =0; i < localStorage.length; i++){
-   console.log(localStorage.getItem(localStorage.key(i)));
+for (var i = 0; i < localStorage.length; i++) {
+  console.log(localStorage.getItem(localStorage.key(i)));
 }
 ```
 

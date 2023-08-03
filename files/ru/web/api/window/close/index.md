@@ -3,6 +3,7 @@ title: Window.close()
 slug: Web/API/Window/close
 translation_of: Web/API/Window/close
 ---
+
 {{APIRef}}
 
 Функция **`Window.close()`** закрывает текущее окно или окно, которое было открыто с помощью функции **`Window.open()`**.
@@ -26,7 +27,7 @@ window.close();
 var openedWindow;
 
 function openWindow() {
-  openedWindow = window.open('moreinfo.htm');
+  openedWindow = window.open("moreinfo.htm");
 }
 
 function closeOpenedWindow() {

@@ -1,7 +1,6 @@
 ---
 title: event.which
 slug: Web/API/UIEvent/which
-original_slug: Web/API/KeyboardEvent/which
 ---
 
 {{ ApiRef() }}

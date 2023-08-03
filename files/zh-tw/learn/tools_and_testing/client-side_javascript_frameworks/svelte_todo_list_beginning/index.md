@@ -1,7 +1,6 @@
 ---
 title: 開始寫我們的 Svelte 待辦清單應用程式
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
 ---
 
 {{LearnSidebar}}

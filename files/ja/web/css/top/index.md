@@ -16,7 +16,7 @@ slug: Web/CSS/top
 - `position` が `sticky` に設定されている場合、 `top` プロパティは粘着制約矩形の計算に使用されます。
 - `position` が `static` に設定されている場合、 `top` プロパティは*効果がありません*。
 
-`top` と {{cssxref("bottom")}} の両方が指定されており、 `position` が `absolute` または `fixed` に設定されており、*かつ* {{cssxref("height")}} が未指定 (`auto` または `100%` のどちらか) の場合は、 `top` と `bottom` の距離が尊重されます。それ以外の場合、 {{cssxref("height")}} が何らかの形で制約されていた場合、または `position` が `relative` に設定されていた場合は、 `top` プロパティが優先されて `bottom` プロパティは無視されます。
+`top` と {{cssxref("bottom")}} の両方が指定されており、 `position` が `absolute` または `fixed` に設定されており、_かつ_ {{cssxref("height")}} が未指定 (`auto` または `100%` のどちらか) の場合は、 `top` と `bottom` の距離が尊重されます。それ以外の場合、 {{cssxref("height")}} が何らかの形で制約されていた場合、または `position` が `relative` に設定されていた場合は、 `top` プロパティが優先されて `bottom` プロパティは無視されます。
 
 ## 構文
 

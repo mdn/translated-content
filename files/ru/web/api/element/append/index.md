@@ -25,7 +25,7 @@ translation_of: Web/API/Element/append
 ## Синтаксис
 
 ```js
-append(...nodesOrDOMStrings)
+append(...nodesOrDOMStrings);
 ```
 
 ### Аргументы
@@ -43,30 +43,30 @@ append(...nodesOrDOMStrings)
 ### Вставка элемента
 
 ```js
-let div = document.createElement("div")
-let p = document.createElement("p")
-div.append(p)
+let div = document.createElement("div");
+let p = document.createElement("p");
+div.append(p);
 
-console.log(div.childNodes) // NodeList [ <p> ]
+console.log(div.childNodes); // NodeList [ <p> ]
 ```
 
 ### Вставка текста
 
 ```js
-let div = document.createElement("div")
-div.append("Какой-то текст")
+let div = document.createElement("div");
+div.append("Какой-то текст");
 
-console.log(div.textContent) // "Какой-то текст"
+console.log(div.textContent); // "Какой-то текст"
 ```
 
 ### Вставка и текста, и элемента сразу
 
 ```js
-let div = document.createElement("div")
-let p = document.createElement("p")
-div.append("Какой-то текст", p)
+let div = document.createElement("div");
+let p = document.createElement("p");
+div.append("Какой-то текст", p);
 
-console.log(div.childNodes) // NodeList [ #text "Какой-то текст", <p> ]
+console.log(div.childNodes); // NodeList [ #text "Какой-то текст", <p> ]
 ```
 
 ### Область видимости метода нерасширяема
@@ -74,10 +74,10 @@ console.log(div.childNodes) // NodeList [ #text "Какой-то текст", <p
 Метод `append()` не работает с оператором `with`. Подробнее читайте в справке по {{jsxref("Symbol.unscopables")}}.
 
 ```js
-let div = document.createElement("div")
+let div = document.createElement("div");
 
-with(div) {
-  append("foo")
+with (div) {
+  append("foo");
 }
 // ReferenceError: append is not defined
 ```

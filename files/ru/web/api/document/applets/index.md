@@ -9,6 +9,7 @@ tags:
   - Документ
 translation_of: Web/API/Document/applets
 ---
+
 {{APIRef("DOM")}}
 
 **`applets`** возвращает массив апплетов, находящихся в документе.
@@ -36,6 +37,6 @@ my_java_app = document.applets[1];
 
 {{Specifications}}
 
-## Браузерная поддержка
+## Совместимость с браузерами
 
 {{Compat}}

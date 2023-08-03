@@ -11,7 +11,7 @@ slug: Web/CSS/revert
 - 만약 사용자의 커스텀 스타일을 사용하거나 사용자에 의해서 스타일이 적용되어 있다면, `revert` 는 user agent의 default 스타일로 되돌립니다.
 - 만약 user agent default 스타일만 지정되어있다면, {{cssxref("unset")}}과 마찬가지의 의미입니다.
 
-`revert` 키워드는 많은 경우에서 [`unset`](/en-US/docs/Web/CSS/unset) 과 같은 성질을 가집니다. 한가지 차이점은 user agent에 의한 스타일이냐 유저가 지정한 스타일이냐의 차이입니다.
+`revert` 키워드는 많은 경우에서 [`unset`](/ko/docs/Web/CSS/unset) 과 같은 성질을 가집니다. 한가지 차이점은 user agent에 의한 스타일이냐 유저가 지정한 스타일이냐의 차이입니다.
 
 Revert 는 자식 요소까지 변경하지는 않습니다. (하지만 자식 요소에 특별히 rule이 지정되어 있지 않다면 적용됩니다.). 그래서 만약에 모든 섹션에 `color: green` 속성을 지정하고 `all: revert` 를 사용하면 모든 섹션의 컬러값은 black으로 돌아갈 것입니다. 하지만 만약, 당신이 section 내의 모든 p에 red를 지정했다면 그것들은 red로 유지될 것입니다.
 

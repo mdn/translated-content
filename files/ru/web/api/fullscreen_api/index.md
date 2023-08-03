@@ -105,11 +105,15 @@ In this example, a video is presented in a web page. Pressing the <kbd>Return</k
 When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
 
 ```js
-document.addEventListener("keypress", function(e) {
-  if (e.keyCode === 13) {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keypress",
+  function (e) {
+    if (e.keyCode === 13) {
+      toggleFullScreen();
+    }
+  },
+  false,
+);
 ```
 
 ### Toggling full-screen mode
@@ -119,7 +123,7 @@ This code is called by the event handler above when the user hits the <kbd>Enter
 ```js
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
+    document.documentElement.requestFullscreen();
   } else {
     if (document.exitFullscreen) {
       document.exitFullscreen();
@@ -134,19 +138,11 @@ If full-screen mode is already active (`fullscreenElement` is not `null`), we ca
 
 ## Specifications
 
-| Specification                        | Status                           | Comment          |
-| ------------------------------------ | -------------------------------- | ---------------- |
-| {{SpecName("Fullscreen")}} | {{Spec2("Fullscreen")}} | Initial version. |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Document.fullscreen`
-
-{{Compat("api.Document.fullscreen")}}
-
-### `Document.fullscreenEnabled`
-
-{{Compat("api.Document.fullscreenEnabled")}}
+{{Compat}}
 
 ## See also
 

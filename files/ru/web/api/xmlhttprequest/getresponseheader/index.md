@@ -9,6 +9,7 @@ tags:
   - метод
 translation_of: Web/API/XMLHttpRequest/getResponseHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 Метод **XMLHttpRequest.getResponseHeader()** возвращает строку, содержащую текст определённого хэдера (header). Если в наличии несколько хэдеров с одинаковыми именами, то они возвращаются в виде одной строки, где значения отделены друг от друга парой "запятая + пробел". Метод `getResponseHeader()` возвращает значение в кодировке UTF.
@@ -34,11 +35,11 @@ var myHeader = getResponseHeader(name);
 var client = new XMLHttpRequest();
 client.open("GET", "unicorns-are-teh-awesome.txt", true);
 client.send();
-client.onreadystatechange = function() {
-  if(this.readyState == this.HEADERS_RECEIVED) {
+client.onreadystatechange = function () {
+  if (this.readyState == this.HEADERS_RECEIVED) {
     console.log(client.getResponseHeader("Content-Type"));
   }
-}
+};
 ```
 
 ## Спецификации

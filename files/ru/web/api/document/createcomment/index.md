@@ -24,10 +24,10 @@ CommentNode = document.createComment(data)
 ## Пример
 
 ```js
-var docu = new DOMParser().parseFromString('<xml></xml>',  "application/xml");
-var comment = docu.createComment('Это комментарий на странице');
+var docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
+var comment = docu.createComment("Это комментарий на странице");
 
-docu.getElementsByTagName('xml')[0].appendChild(comment);
+docu.getElementsByTagName("xml")[0].appendChild(comment);
 
 alert(new XMLSerializer().serializeToString(docu));
 // Выведет: <xml><!--Это комментарий на странице--></xml>

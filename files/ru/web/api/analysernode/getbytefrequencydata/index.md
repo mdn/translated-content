@@ -81,13 +81,11 @@ draw();
 - array
   - : {{domxref("Uint8Array")}}, в который будут скопированы данные частотной области.
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                                    | Status                               | Comment |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#dom-analysernode-getbytefrequencydata', 'getByteFrequencyData()')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
-## Поддержка в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -1,7 +1,6 @@
 ---
 title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
-original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap/set
 ---
 
 {{JSRef}}

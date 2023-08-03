@@ -119,7 +119,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 You won't access `WorkerGlobalScope` directly in your code; however, its properties and methods are inherited by more specific global scopes such as {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}}. For example, you could import another script into the worker and print out the contents of the worker scope's `navigator` object using the following two lines:
 
 ```js
-importScripts('foo.js');
+importScripts("foo.js");
 console.log(navigator);
 ```
 
@@ -127,9 +127,7 @@ console.log(navigator);
 
 ## Specifications
 
-| Specification                                                                                | Status                           | Comment |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#workerglobalscope', 'WorkerGlobalScope')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

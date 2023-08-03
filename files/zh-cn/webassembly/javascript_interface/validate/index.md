@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.validate()
 slug: WebAssembly/JavaScript_interface/validate
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 ---
 
 {{WebAssemblySidebar}}

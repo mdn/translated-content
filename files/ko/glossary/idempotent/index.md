@@ -2,6 +2,7 @@
 title: 멱등성
 slug: Glossary/Idempotent
 ---
+
 동일한 요청을 한 번 보내는 것과 여러 번 연속으로 보내는 것이 같은 효과를 지니고, 서버의 상태도 동일하게 남을 때, 해당 HTTP 메서드가 **멱등성**을 가졌다고 말합니다. 다른 말로는, 멱등성 메서드에는 통계 기록 등을 제외하면 어떠한 부수 효과(side effect)도 존재해서는 안됩니다. 올바르게 구현한 경우 {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}} 메서드는 멱등성을 가지며, {{HTTPMethod("POST")}} 메서드는 그렇지 않습니다. 모든 {{glossary("safe", "안전한")}} 메서드는 멱등성도 가집니다.
 
 멱등성을 따질 땐 실제 서버의 백엔드 상태만 보면 되며, 각 요청에서 반환하는 응답 코드는 다를 수 있습니다. 첫 번째 {{HTTPMethod("DELETE")}} 요청이 {{HTTPStatus("200")}}을 반환한다면, 그 이후는 아마 {{HTTPStatus("404")}}를 반환할 것입니다. `DELETE`가 멱등성을 가진다는 것은, REST API에서 개발자는 `DELETE` 메서드를 사용해 "목록의 마지막 항목 제거" 기능을 구현해서는 안된다는 것입니다.

@@ -1,5 +1,5 @@
 ---
-title: 'Document: DOMContentLoaded event'
+title: "Document: DOMContentLoaded event"
 slug: Web/API/Document/DOMContentLoaded_event
 tags:
   - Событие
@@ -42,8 +42,8 @@ translation_of: Web/API/Document/DOMContentLoaded_event
 ### Основное применение
 
 ```js
-document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM полностью загружен и разобран');
+document.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM полностью загружен и разобран");
 });
 ```
 
@@ -51,13 +51,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ```html
 <script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM полностью загружен и разобран');
+  document.addEventListener("DOMContentLoaded", (event) => {
+    console.log("DOM полностью загружен и разобран");
   });
 
-for( let i = 0; i < 1000000000; i++)
-{} // Этот синхронный скрипт откладывает разбор DOM,
-   // так что событие DOMContentLoaded будет запущено позже.
+  for (let i = 0; i < 1000000000; i++) {} // Этот синхронный скрипт откладывает разбор DOM,
+  // так что событие DOMContentLoaded будет запущено позже.
 </script>
 ```
 
@@ -67,12 +66,14 @@ for( let i = 0; i < 1000000000; i++)
 
 ```js
 function doSomething() {
-  console.info('DOM загружен');
+  console.info("DOM загружен");
 }
 
-if (document.readyState === 'loading') {  // Загрузка ещё не закончилась
-  document.addEventListener('DOMContentLoaded', doSomething);
-} else {  // `DOMContentLoaded` Уже сработал
+if (document.readyState === "loading") {
+  // Загрузка ещё не закончилась
+  document.addEventListener("DOMContentLoaded", doSomething);
+} else {
+  // `DOMContentLoaded` Уже сработал
   doSomething();
 }
 ```
@@ -113,7 +114,8 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
@@ -125,26 +127,26 @@ label, button {
 #### JS
 
 ```js
-const log = document.querySelector('.event-log-contents');
-const reload = document.querySelector('#reload');
+const log = document.querySelector(".event-log-contents");
+const reload = document.querySelector("#reload");
 
-reload.addEventListener('click', () => {
-  log.textContent ='';
+reload.addEventListener("click", () => {
+  log.textContent = "";
   window.setTimeout(() => {
-      window.location.reload(true);
+    window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) => {
-    log.textContent = log.textContent + 'load\n';
+window.addEventListener("load", (event) => {
+  log.textContent = log.textContent + "load\n";
 });
 
-document.addEventListener('readystatechange', (event) => {
-    log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
+document.addEventListener("readystatechange", (event) => {
+  log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    log.textContent = log.textContent + `DOMContentLoaded\n`;
+document.addEventListener("DOMContentLoaded", (event) => {
+  log.textContent = log.textContent + `DOMContentLoaded\n`;
 });
 ```
 
@@ -156,7 +158,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

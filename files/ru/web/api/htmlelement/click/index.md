@@ -16,12 +16,10 @@ translation_of: Web/API/HTMLElement/click
 element.click()
 ```
 
-## Specification
+## Спецификации
 
-| Specification                                                    | Status                       | Comment             |
-| ---------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('DOM2 HTML', 'html.html#ID-2651361')}} | {{Spec2('DOM2 HTML')}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

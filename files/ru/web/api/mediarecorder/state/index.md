@@ -3,6 +3,7 @@ title: MediaRecorder.state
 slug: Web/API/MediaRecorder/state
 translation_of: Web/API/MediaRecorder/state
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 Свойство только для чтения **`MediaRecorder.state`** возвращает текущее состояние определённого объекта `MediaRecorder`.
