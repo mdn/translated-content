@@ -1,7 +1,6 @@
 ---
 title: Intl.RelativeTimeFormat.supportedLocalesOf()
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
+slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
 ---
 
 {{JSRef}}

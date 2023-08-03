@@ -1,5 +1,5 @@
 ---
-title: "<frame>"
+title: <frame>
 slug: Web/HTML/Element/frame
 ---
 

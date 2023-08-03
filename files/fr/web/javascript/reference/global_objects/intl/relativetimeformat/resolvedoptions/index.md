@@ -1,7 +1,6 @@
 ---
 title: Intl.RelativeTimeFormat.prototype.resolvedOptions()
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
+slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Intl.Segments.prototype[@@iterator]()
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator
+slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator
 ---
 
 {{JSRef}}

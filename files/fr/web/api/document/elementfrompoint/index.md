@@ -1,7 +1,6 @@
 ---
 title: Document.elementFromPoint()
 slug: Web/API/Document/elementFromPoint
-translation_of_original: Web/API/Document/elementFromPoint
 ---
 
 {{APIRef("DOM")}}

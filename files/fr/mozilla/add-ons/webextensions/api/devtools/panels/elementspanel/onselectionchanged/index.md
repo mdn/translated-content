@@ -1,7 +1,6 @@
 ---
 title: onSelectionChanged
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged
 ---
 
 {{AddonSidebar()}}
