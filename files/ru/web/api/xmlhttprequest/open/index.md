@@ -3,6 +3,7 @@ title: XMLHttpRequest.open()
 slug: Web/API/XMLHttpRequest/open
 translation_of: Web/API/XMLHttpRequest/open
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 Метод **XMLHttpRequest.open()** инициализирует новый запрос или повторно инициализирует уже созданный.

@@ -20,31 +20,29 @@ img.onloadend = funcRef;
 ## Примеры
 
 ```html
-<img src="myImage.jpg">
+<img src="myImage.jpg" />
 ```
 
 ```js
 // 'loadstart' fires first, then 'load', then 'loadend'
 
-image.addEventListener('load', function(e) {
-  console.log('Image loaded');
+image.addEventListener("load", function (e) {
+  console.log("Image loaded");
 });
 
-image.addEventListener('loadstart', function(e) {
-  console.log('Image load started');
+image.addEventListener("loadstart", function (e) {
+  console.log("Image load started");
 });
 
-image.addEventListener('loadend', function(e) {
-  console.log('Image load finished');
+image.addEventListener("loadend", function (e) {
+  console.log("Image load finished");
 });
 ```
 
 ## Спецификации
 
-| Specification                                                                                            | Status                           | Comment            |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("HTML WHATWG", "webappapis.html#handler-onloadend", "onloadend")}} | {{Spec2("HTML WHATWG")}} | Initial definition |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

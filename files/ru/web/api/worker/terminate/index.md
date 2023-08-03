@@ -35,7 +35,7 @@ Void.
 В следующем фрагменте кода показано создание потока {{domxref("Worker")}} с помощью конструктора {{domxref("Worker.Worker", "Worker()")}}, который немедленно завершается.
 
 ```js
-var myWorker = new Worker('worker.js');
+var myWorker = new Worker("worker.js");
 
 myWorker.terminate();
 ```
