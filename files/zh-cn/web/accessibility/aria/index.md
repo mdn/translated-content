@@ -81,20 +81,11 @@ function updateProgress(percentComplete) {
 
 ## 支持
 
-与任何其他 Web 技术一样，对 ARIA 有不同程度的支持。支持基于所使用的操作系统和浏览器，以及与之交互的辅助技术类型。此外，操作系统、浏览器和辅助技术的版本也是影响因素。较旧的软件版本可能不支持某些 ARIA 角色、仅部分支持或误报其功能。
+与任何其他 Web 技术一样，ARIA 也有不同程度的支持。支持基于所使用的操作系统和浏览器，以及与之交互的辅助技术类型。此外，操作系统、浏览器和辅助技术的版本也是影响因素。较旧的软件版本可能不支持某些 ARIA 角色、仅部分支持或误报其功能。
 
-同样重要的是要承认一些依赖辅助技术的人不愿意升级他们的软件，因为害怕失去与他们的计算机和浏览器交互的能力。因此，尽可能对 [使用语义化的 HTML 元素](/zh-CN/docs/Learn/Accessibility/HTML) 很重要，因为语义 HTML 对辅助技术的支持要好得多。
+同样重要的是要承认一些依赖辅助技术的人不愿意升级他们的软件，因为害怕失去与他们的计算机和浏览器交互的能力。因此，尽可能[使用语义化的 HTML 元素](/zh-CN/docs/Learn/Accessibility/HTML)很重要，因为语义 HTML 对辅助技术的支持要好得多。
 
 使用实际辅助技术测试您编写的 ARIA 也很重要。就像浏览器模拟器和模拟器不是测试完全支持的有效解决方案一样，代理辅助技术解决方案不足以完全保证功能。
-
-## 教程
-
-- [ARIA 简介](/zh-CN/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)
-  - : 快速介绍如何使用 ARIA 访问动态内容。另请参阅 2008 年的经典 [ARIA intro by Gez Lemon](https://dev.opera.com/articles/view/introduction-to-wai-aria/)。
-- [Videos of screen readers using ARIA](https://zomigi.com/blog/videos-of-screen-readers-using-aria-updated/)
-  - : 查看来自网络的真实和简化示例，视频包括 ARIA“之前”和 ARIA“之后”。
-- [Using ARIA](https://w3c.github.io/using-aria/)
-  - : 开发人员实用指南。它建议在 HTML 元素上使用哪些 ARIA 属性。建议是基于实施的实际情况。
 
 ## 参考
 
@@ -105,9 +96,9 @@ function updateProgress(percentComplete) {
 
 ## 标准化工作
 
-- [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria-1.1/)
+- [WAI-ARIA 规范](https://www.w3.org/TR/wai-aria-1.1/)
   - : W3C 规范本身。
-- [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/)
+- [WAI-ARIA 创作实践](https://www.w3.org/TR/wai-aria-practices-1.1/)
   - : 官方最佳实践记录了如何最好地对常见小部件和交互进行 ARIA 化。一个很好的资源。
 
 ## 脚本小部件的 ARIA
