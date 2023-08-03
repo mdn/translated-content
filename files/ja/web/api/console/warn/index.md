@@ -1,7 +1,7 @@
 ---
 title: console.warn()
 slug: Web/API/console/warn
-i10n:
+l10n:
   sourceCommit: d19d68bf6078c23d527b6e1355925795e745d124
 ---
 

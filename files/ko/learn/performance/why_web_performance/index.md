@@ -2,7 +2,7 @@
 title: 웹 성능이 중요한 "이유"
 slug: Learn/Performance/why_web_performance
 l10n:
-  commitSource: bb026bcb88b7f45374d602301b7b0db5a49ff303
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
