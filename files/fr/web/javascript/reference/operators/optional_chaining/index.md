@@ -1,7 +1,6 @@
 ---
 title: Chaînage optionnel (optional chaining)
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
-translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 ---
 
 {{jsSidebar("Operators")}}

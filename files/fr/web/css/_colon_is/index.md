@@ -1,7 +1,6 @@
 ---
 title: ":is() (:matches(), :any())"
 slug: Web/CSS/:is
-translation_of: Web/CSS/:is
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

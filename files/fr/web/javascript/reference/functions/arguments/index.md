@@ -1,7 +1,6 @@
 ---
 title: arguments
 slug: Web/JavaScript/Reference/Functions/arguments
-translation_of: Web/JavaScript/Reference/Functions/arguments
 ---
 
 {{jsSidebar("Fonctions")}}

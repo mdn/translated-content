@@ -1,7 +1,6 @@
 ---
 title: runtime.PlatformNaclArch
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformNaclArch
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformNaclArch
 ---
 
 {{AddonSidebar()}}

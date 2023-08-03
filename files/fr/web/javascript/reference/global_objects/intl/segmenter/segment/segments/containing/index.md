@@ -2,7 +2,6 @@
 title: Intl.Segments.prototype.containing()
 slug: >-
   Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Segments/containing
 ---
 
 {{JSRef}}

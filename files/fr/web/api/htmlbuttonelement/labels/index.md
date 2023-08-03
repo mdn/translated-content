@@ -1,7 +1,6 @@
 ---
 title: HTMLButtonElement.labels
 slug: Web/API/HTMLButtonElement/labels
-translation_of: Web/API/HTMLButtonElement/labels
 ---
 
 {{APIRef("DOM")}}

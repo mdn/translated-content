@@ -1,7 +1,6 @@
 ---
 title: Math.hypot()
 slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/hypot
 ---
 
 {{JSRef}}

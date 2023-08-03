@@ -1,7 +1,6 @@
 ---
 title: "<input> : l'élément de saisie dans un formulaire"
 slug: Web/HTML/Element/input
-translation_of: Web/HTML/Element/input
 ---
 
 {{HTMLSidebar}}

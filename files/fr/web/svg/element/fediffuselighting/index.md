@@ -1,7 +1,6 @@
 ---
 title: <feDiffuseLighting>
 slug: Web/SVG/Element/feDiffuseLighting
-translation_of: Web/SVG/Element/feDiffuseLighting
 ---
 
 {{SVGRef}}

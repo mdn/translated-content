@@ -1,7 +1,6 @@
 ---
 title: Atomics.waitAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
 title: browserAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
 ---
 
 {{AddonSidebar()}}

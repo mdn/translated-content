@@ -1,7 +1,6 @@
 ---
 title: downloads.pause()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/pause
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/pause
 ---
 
 {{AddonSidebar()}}

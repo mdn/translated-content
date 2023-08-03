@@ -1,7 +1,6 @@
 ---
 title: "<marquee> : l'élément de fronton (obsolète)"
 slug: Web/HTML/Element/marquee
-translation_of: Web/HTML/Element/marquee
 ---
 
 {{HTMLSidebar}}{{non-standard_header}}{{deprecated_header}}

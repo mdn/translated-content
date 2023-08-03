@@ -1,7 +1,6 @@
 ---
 title: unload
 slug: Web/API/Window/unload_event
-translation_of: Web/API/Window/unload_event
 ---
 
 L'événement `unload` est appelé lorsque le document ou une ressource enfant est en train d'être déchargé.

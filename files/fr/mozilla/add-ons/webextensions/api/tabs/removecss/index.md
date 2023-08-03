@@ -1,7 +1,6 @@
 ---
 title: tabs.removeCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS
 ---
 
 {{AddonSidebar()}}

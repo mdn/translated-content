@@ -1,7 +1,6 @@
 ---
 title: Navigator.credentials
 slug: Web/API/Navigator/credentials
-translation_of: Web/API/Navigator/credentials
 ---
 
 {{securecontext_header}}{{APIRef("")}}

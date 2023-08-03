@@ -1,7 +1,6 @@
 ---
 title: HTMLIFrameElement.csp
 slug: Web/API/HTMLIFrameElement/csp
-translation_of: HTMLIFrameElement.csp
 ---
 
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}

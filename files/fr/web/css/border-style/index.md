@@ -1,7 +1,6 @@
 ---
 title: border-style
 slug: Web/CSS/border-style
-translation_of: Web/CSS/border-style
 ---
 
 {{CSSRef}}

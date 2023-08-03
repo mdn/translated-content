@@ -1,7 +1,6 @@
 ---
 title: Intl.Locale.prototype.script
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
 ---
 
 {{JSRef}}

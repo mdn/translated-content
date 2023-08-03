@@ -1,7 +1,6 @@
 ---
 title: File.fileSize
 slug: Web/API/Blob/size
-translation_of: Web/API/File/fileSize
 ---
 
 {{APIRef("File API") }}{{non-standard_header}}

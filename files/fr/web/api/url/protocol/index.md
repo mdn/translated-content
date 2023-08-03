@@ -1,7 +1,6 @@
 ---
 title: URL.protocol
 slug: Web/API/URL/protocol
-translation_of: Web/API/URL/protocol
 ---
 
 {{ApiRef("URL API")}}

@@ -1,7 +1,6 @@
 ---
 title: Préchargement
 slug: Glossary/Prefetch
-translation_of: Glossary/Prefetch
 ---
 
 ### Qu'est ce que le préchargement de liens&nbsp;?

@@ -1,7 +1,6 @@
 ---
 title: Fonctionnalités dépréciées
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
-translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 ---
 
 {{JsSidebar("More")}}

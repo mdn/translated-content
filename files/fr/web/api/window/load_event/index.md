@@ -1,7 +1,6 @@
 ---
 title: "Window : évènement load"
 slug: Web/API/Window/load_event
-translation_of: Web/API/Window/load_event
 l10n:
   sourceCommit: 95d6c222f9aba9a60dee4adc738d741a28c8b83a
 ---

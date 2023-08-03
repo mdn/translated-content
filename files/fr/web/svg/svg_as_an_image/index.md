@@ -1,7 +1,6 @@
 ---
 title: SVG en tant qu'image
 slug: Web/SVG/SVG_as_an_Image
-translation_of: Web/SVG/SVG_as_an_Image
 ---
 
 {{SVGRef}}

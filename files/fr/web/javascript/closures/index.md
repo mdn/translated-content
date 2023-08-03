@@ -1,7 +1,6 @@
 ---
 title: Closures (Fermetures)
 slug: Web/JavaScript/Closures
-translation_of: Web/JavaScript/Closures
 ---
 
 {{jsSidebar("Intermediate")}}

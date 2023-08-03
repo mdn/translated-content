@@ -1,7 +1,6 @@
 ---
 title: "-webkit-mask-box-image"
 slug: Web/CSS/-webkit-mask-box-image
-translation_of: Web/CSS/-webkit-mask-box-image
 ---
 
 {{CSSRef}}{{Non-standard_header}}

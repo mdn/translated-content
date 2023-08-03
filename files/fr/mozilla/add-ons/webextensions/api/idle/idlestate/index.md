@@ -1,7 +1,6 @@
 ---
 title: idle.IdleState
 slug: Mozilla/Add-ons/WebExtensions/API/idle/IdleState
-translation_of: Mozilla/Add-ons/WebExtensions/API/idle/IdleState
 ---
 
 {{AddonSidebar()}}

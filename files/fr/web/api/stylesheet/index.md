@@ -1,7 +1,6 @@
 ---
 title: StyleSheet
 slug: Web/API/StyleSheet
-translation_of: Web/API/StyleSheet
 ---
 
 {{APIRef("CSSOM")}}

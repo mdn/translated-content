@@ -1,7 +1,6 @@
 ---
 title: history.HistoryItem
 slug: Mozilla/Add-ons/WebExtensions/API/history/HistoryItem
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/HistoryItem
 ---
 
 {{AddonSidebar()}}

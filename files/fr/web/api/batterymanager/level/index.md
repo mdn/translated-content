@@ -1,7 +1,6 @@
 ---
 title: BatteryManager.level
 slug: Web/API/BatteryManager/level
-translation_of: Web/API/BatteryManager/level
 ---
 
 {{APIRef("Battery API")}}

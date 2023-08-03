@@ -1,7 +1,6 @@
 ---
 title: DeviceRotationRate.alpha
 slug: Web/API/DeviceMotionEventRotationRate/alpha
-translation_of: Web/API/DeviceMotionEventRotationRate/alpha
 translation_of_original: Web/API/DeviceRotationRate/alpha
 ---
 
