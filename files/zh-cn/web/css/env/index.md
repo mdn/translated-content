@@ -1,7 +1,6 @@
 ---
 title: env()
 slug: Web/CSS/env
-original_slug: Web/CSS/env()
 ---
 
 {{CSSRef}}

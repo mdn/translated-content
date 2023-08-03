@@ -1,7 +1,6 @@
 ---
 title: CSS彈性盒子用法
 slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
-original_slug: Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes
 ---
 
 {{CSSRef}}

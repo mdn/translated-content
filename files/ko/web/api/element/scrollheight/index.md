@@ -2,6 +2,7 @@
 title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.scrollHeight`** 읽기 전용 속성은 요소 콘텐츠의 총 높이를 나타내며, 바깥으로 넘쳐서 보이지 않는 콘텐츠도 포함합니다.
@@ -39,28 +40,29 @@ padding-bottom
 다음 등식이 참인 경우 요소를 끝까지 스크롤한 것입니다.
 
 ```js
-element.scrollHeight - element.scrollTop === element.clientHeight
+element.scrollHeight - element.scrollTop === element.clientHeight;
 ```
 
 컨테이너가 스크롤 대신 오버플로된 자식을 노출하는 경우, 다음 검사로 컨테이너가 스크롤 가능한지 알아볼 수 있습니다.
 
 ```js
-window.getComputedStyle(element).overflowY === 'visible'
-window.getComputedStyle(element).overflowY !== 'hidden'
+window.getComputedStyle(element).overflowY === "visible";
+window.getComputedStyle(element).overflowY !== "hidden";
 ```
 
 ## 예제
 
 ### 텍스트를 다 읽었는지 확인하기
 
-[`onscroll`](/en-US/docs/DOM/element.onscroll) 이벤트를 함께 사용하여, 내용을 다 읽었는지 확인할 수 있습니다. ([`element.scrollTop`](/ko/docs/DOM/element.scrollTop) 과 [`element.clientHeight`](/ko/docs/DOM/element.clientHeight) 를 참조하세요).
+[`onscroll`](/ko/docs/DOM/element.onscroll) 이벤트를 함께 사용하여, 내용을 다 읽었는지 확인할 수 있습니다. ([`element.scrollTop`](/ko/docs/DOM/element.scrollTop) 과 [`element.clientHeight`](/ko/docs/DOM/element.clientHeight) 를 참조하세요).
 
 #### HTML
 
 ```html
 <form name="registration">
   <p>
-    <textarea id="rules">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
+    <textarea id="rules">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
 Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
 neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at
 velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus
@@ -101,14 +103,14 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
   border-radius: 5px;
   width: 600px;
   padding: 5px;
-  border: 2px #7FDF55 solid;
+  border: 2px #7fdf55 solid;
 }
 
 #rules {
   width: 600px;
   height: 130px;
   padding: 5px;
-  border: #2A9F00 solid 2px;
+  border: #2a9f00 solid 2px;
   border-radius: 5px;
 }
 ```
@@ -116,13 +118,17 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
 #### JavaScript
 
 ```js
-function checkReading () {
+function checkReading() {
   if (checkReading.read) {
     return;
   }
   checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
-  checkReading.noticeBox.innerHTML = checkReading.read ? "감사합니다" : "다음 내용을 확인해주십시오";
+  document.registration.accept.disabled = document.getElementById(
+    "nextstep",
+  ).disabled = !checkReading.read;
+  checkReading.noticeBox.innerHTML = checkReading.read
+    ? "감사합니다"
+    : "다음 내용을 확인해주십시오";
 }
 
 onload = function () {
@@ -134,7 +140,7 @@ onload = function () {
   oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
   oToBeRead.onscroll = checkReading;
   checkReading.call(oToBeRead);
-}
+};
 ```
 
 {{ EmbedLiveSample('텍스트를_다_읽었는지_확인하기', '640', '400') }}

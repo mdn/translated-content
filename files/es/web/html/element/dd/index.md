@@ -1,7 +1,6 @@
 ---
 title: dd
 slug: Web/HTML/Element/dd
-original_slug: Web/HTML/Elemento/dd
 ---
 
 {{HTMLSidebar}}

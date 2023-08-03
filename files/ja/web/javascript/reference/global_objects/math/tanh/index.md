@@ -35,10 +35,13 @@ Math.tanh(x)
 {{jsxref("Math.exp()")}} 関数の助けを借りて、エミュレートできます。:
 
 ```js
-Math.tanh = Math.tanh || function(x){
-    var a = Math.exp(+x), b = Math.exp(-x);
+Math.tanh =
+  Math.tanh ||
+  function (x) {
+    var a = Math.exp(+x),
+      b = Math.exp(-x);
     return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
-}
+  };
 ```
 
 ## 例
@@ -46,9 +49,9 @@ Math.tanh = Math.tanh || function(x){
 ### Math.tanh() の使用
 
 ```js
-Math.tanh(0);        // 0
+Math.tanh(0); // 0
 Math.tanh(Infinity); // 1
-Math.tanh(1);        // 0.7615941559557649
+Math.tanh(1); // 0.7615941559557649
 ```
 
 ## 仕様書

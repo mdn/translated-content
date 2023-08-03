@@ -1,7 +1,6 @@
 ---
 title: Guías de contenido y estilo de MDN
 slug: conflicting/MDN/Writing_guidelines
-original_slug: MDN/Guidelines
 ---
 
 {{MDNSidebar}}

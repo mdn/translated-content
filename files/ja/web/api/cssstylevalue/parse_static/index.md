@@ -34,7 +34,9 @@ parse(property, cssText)
 
 ```js
 const css = CSSStyleValue.parse(
-    'transform', 'translate3d(10px,10px,0) scale(0.5)');
+  "transform",
+  "translate3d(10px,10px,0) scale(0.5)",
+);
 ```
 
 ```css

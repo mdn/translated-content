@@ -1,7 +1,6 @@
 ---
 title: colgroup
 slug: Web/HTML/Element/colgroup
-original_slug: Web/HTML/Elemento/colgroup
 ---
 
 ### Definición

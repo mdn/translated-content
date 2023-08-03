@@ -150,7 +150,7 @@ div {
 
 ## 関連情報
 
-- [`translate()`](/ja/docs/Web/CSS/transform-function/translate())
-- [`translateY()`](/ja/docs/Web/CSS/transform-function/translateY())
+- [`translate()`](</ja/docs/Web/CSS/transform-function/translate()>)
+- [`translateY()`](</ja/docs/Web/CSS/transform-function/translateY()>)
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}

@@ -1,7 +1,6 @@
 ---
 title: Especificidad
 slug: Web/CSS/Specificity
-original_slug: Web/CSS/Especificidad
 ---
 
 La **especificidad** es la manera mediante la cual los navegadores deciden qué valores de una propiedad CSS son más relevantes para un elemento y, por lo tanto, serán aplicados. La especificidad está basada en las reglas de coincidencia que están compuestas por diferentes tipos de [selectores CSS](/es/CSS/CSS_Reference#Selectors).

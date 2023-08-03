@@ -14,10 +14,10 @@ l10n:
 ## 構文
 
 ```js
-debug(obj1)
-debug(obj1, /* …, */ objN)
-debug(msg)
-debug(msg, subst1, /* …, */ substN)
+debug(obj1);
+debug(obj1, /* …, */ objN);
+debug(msg);
+debug(msg, subst1, /* …, */ substN);
 ```
 
 ### 引数
