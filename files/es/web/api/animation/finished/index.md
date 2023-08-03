@@ -1,7 +1,6 @@
 ---
 title: Animation.finished
 slug: Web/API/Animation/finished
-original_slug: Web/API/Animation/terminado
 ---
 
 {{ APIRef("Web Animations") }}

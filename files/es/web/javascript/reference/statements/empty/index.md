@@ -1,7 +1,6 @@
 ---
 title: empty
 slug: Web/JavaScript/Reference/Statements/Empty
-original_slug: Web/JavaScript/Referencia/Sentencias/Empty
 ---
 
 {{jsSidebar("Statements")}}

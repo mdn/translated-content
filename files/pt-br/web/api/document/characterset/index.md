@@ -28,10 +28,8 @@ var string = document.characterSet;
 
 ## Especificações
 
-| Specification                                                                                    | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('DOM WHATWG', '#dom-document-characterset', 'characterSet')}} | {{Spec2('DOM WHATWG')}} | Definição Inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.characterSet")}}
+{{Compat}}

@@ -94,7 +94,7 @@ console.log(number.toLocaleString("en-IN"));
 // → 1,23,456.789
 
 // nu 拡張キーでは、漢数字などの計数法をリクエストする
-console.log(number.toLocaleString('zh-Hans-CN-u-nu-hanidec'));
+console.log(number.toLocaleString("zh-Hans-CN-u-nu-hanidec"));
 // → 一二三,四五六.七八九
 
 // バリ語など対応していない可能性のある言語をリクエストする場合は、

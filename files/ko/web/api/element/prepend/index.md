@@ -66,7 +66,7 @@ div.prepend("Some text", p);
 console.log(div.childNodes); // NodeList [ #text "Some text", <p> ]
 ```
 
-### prepend 메서드는 범위가 지정되지 않습니다.
+### prepend 메서드는 범위가 지정되지 않습니다
 
 `prepend()` 메서드는 `with` 문으로 범위가 지정되지 않습니다.
 자세한 내용은 {{jsxref("Symbol.unscopables")}} 참고하시기 바랍니다.

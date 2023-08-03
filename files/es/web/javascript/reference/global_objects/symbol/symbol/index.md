@@ -1,7 +1,6 @@
 ---
 title: Symbol() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
 l10n:
   sourceCommit: dc3dc7a9522107392cfea07243ff3c2cb34cb9a4
 ---

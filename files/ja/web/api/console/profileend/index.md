@@ -22,7 +22,7 @@ i10n:
 ## 構文
 
 ```js
-profileEnd(profileName)
+profileEnd(profileName);
 ```
 
 ### 引数

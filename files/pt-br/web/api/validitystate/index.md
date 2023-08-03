@@ -37,15 +37,11 @@ Para cada uma das propriedades Booleanas abaixo, caso retorne **`true`**, isso i
 
 ## Especificações
 
-| Especificação                                                                                                            | Status                           | Comentário                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', 'forms.html#the-constraint-validation-api', 'ValidityState') }} | {{Spec2('HTML WHATWG')}} | Live Standard                                                                     |
-| {{ SpecName('HTML5.1', '#the-constraint-validation-api', 'ValidityState') }}                     | {{Spec2('HTML5.1')}}     | No change from the previous snapshot {{SpecName('HTML5 W3C')}}.            |
-| {{ SpecName('HTML5 W3C', 'forms.html#the-constraint-validation-api', 'ValidityState') }}     | {{Spec2('HTML5 W3C')}}     | First snapshot of {{SpecName('HTML WHATWG')}} containing this interface. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.ValidityState")}}
+{{Compat}}
 
 ## Veja também
 

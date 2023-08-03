@@ -1,7 +1,6 @@
 ---
 title: Basic concepts of grid layout
 slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
-original_slug: Web/CSS/CSS_Grid_Layout/Conceptos_Básicos_del_Posicionamiento_con_Rejillas
 ---
 
 [CSS Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout) presenta un sistema de cuadrícula bidimensional para CSS. Las cuadrículas se pueden utilizar para posicionar áreas principales de la página o pequeños elementos de la interfaz de usuario. Este artículo lo introduce a Grid Layout de CSS y la nueva terminología que forma parte de la especificación CSS Grid Layout Nivel 1. Las características mostradas en este resumen se explicarán con mayor detalle en el resto de esta guía.

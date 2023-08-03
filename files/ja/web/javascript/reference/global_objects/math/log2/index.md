@@ -39,9 +39,10 @@ Math.log2(x)
 このポリフィルは `Math.log2` 関数をエミュレートします。なお、これは入力値によっては不正確な値を返すので (1 << 29 など)、ビットマスクで使用するときは {{jsxref("Math.round()")}} で囲んでください。
 
 ```js
-if (!Math.log2) Math.log2 = function(x) {
-  return Math.log(x) * Math.LOG2E;
-};
+if (!Math.log2)
+  Math.log2 = function (x) {
+    return Math.log(x) * Math.LOG2E;
+  };
 ```
 
 ## 例
@@ -49,11 +50,11 @@ if (!Math.log2) Math.log2 = function(x) {
 ### Math.log2() の使用
 
 ```js
-Math.log2(3);    // 1.584962500721156
-Math.log2(2);    // 1
-Math.log2(1);    // 0
-Math.log2(0);    // -Infinity
-Math.log2(-2);   // NaN
+Math.log2(3); // 1.584962500721156
+Math.log2(2); // 1
+Math.log2(1); // 0
+Math.log2(0); // -Infinity
+Math.log2(-2); // NaN
 Math.log2(1024); // 10
 ```
 
