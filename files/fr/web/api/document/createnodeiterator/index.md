@@ -1,11 +1,6 @@
 ---
 title: Document.createNodeIterator()
 slug: Web/API/Document/createNodeIterator
-tags:
-  - API
-  - DOM
-  - Méthodes
-translation_of: Web/API/Document/createNodeIterator
 ---
 
 {{APIRef("DOM")}}
@@ -148,16 +143,18 @@ var nodeIterator = document.createNodeIterator(root, whatToShow, filter);
 
 ```js
 var nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    function(node) {
-        return node.nodeName.toLowerCase() === 'p' ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
-    }
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  function (node) {
+    return node.nodeName.toLowerCase() === "p"
+      ? NodeFilter.FILTER_ACCEPT
+      : NodeFilter.FILTER_REJECT;
+  },
 );
 var pars = [];
 var currentNode;
 
-while (currentNode = nodeIterator.nextNode()) {
+while ((currentNode = nodeIterator.nextNode())) {
   pars.push(currentNode);
 }
 ```

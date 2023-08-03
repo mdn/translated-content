@@ -28,7 +28,10 @@ transition-property: sliding-vertically;
 /* 複数の値 */
 transition-property: test1, animation4;
 transition-property: all, height, color;
-transition-property: all, -moz-specific, sliding;
+transition-property:
+  all,
+  -moz-specific,
+  sliding;
 
 /* グローバル値 */
 transition-property: inherit;

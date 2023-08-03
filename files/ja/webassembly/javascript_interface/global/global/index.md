@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Global() コンストラクター
 slug: WebAssembly/JavaScript_interface/Global/Global
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global
 ---
 
 {{WebAssemblySidebar}}
@@ -11,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global
 ## 構文
 
 ```js
-new WebAssembly.Global(descriptor, value)
+new WebAssembly.Global(descriptor, value);
 ```
 
 ### 引数
@@ -36,28 +35,36 @@ new WebAssembly.Global(descriptor, value)
 その後、グローバルの値は、まず `Global.value` プロパティを使用して `42` に変更され、次に `global.wasm` モジュールからエクスポートされた `incGlobal()` 関数を使用して 43 に変更されます (これは、与えられた値に 1 を追加してから新しい値を返します)。
 
 ```js
-const output = document.getElementById('output');
+const output = document.getElementById("output");
 
 function assertEq(msg, got, expected) {
   output.innerHTML += `Testing ${msg}: `;
   if (got !== expected)
     output.innerHTML += `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
-  else
-    output.innerHTML += `SUCCESS! Got: ${got}<br>`;
+  else output.innerHTML += `SUCCESS! Got: ${got}<br>`;
 }
 
 assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
 
-const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 
-WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
-.then(({instance}) => {
-    assertEq("getting initial value from wasm", instance.exports.getGlobal(), 0);
+WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
+  ({ instance }) => {
+    assertEq(
+      "getting initial value from wasm",
+      instance.exports.getGlobal(),
+      0,
+    );
     global.value = 42;
-    assertEq("getting JS-updated value from wasm", instance.exports.getGlobal(), 42);
+    assertEq(
+      "getting JS-updated value from wasm",
+      instance.exports.getGlobal(),
+      42,
+    );
     instance.exports.incGlobal();
     assertEq("getting wasm-updated value from JS", global.value, 43);
-});
+  },
+);
 ```
 
 > **メモ:** この例は[GitHub 上の実行例](https://mdn.github.io/webassembly-examples/js-api-examples/global.html)で確認できます。また、[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html)も参照してください。

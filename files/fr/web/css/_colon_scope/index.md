@@ -1,12 +1,6 @@
 ---
-title: ':scope'
+title: ":scope"
 slug: Web/CSS/:scope
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:scope
 ---
 
 {{CSSRef}}
@@ -44,9 +38,7 @@ if (paragraphe.matches(":scope")) {
 ### HTML
 
 ```html
-<p id="para">
-  Voici un paragraphe, pas vraiment intéressant mais bon.
-</p>
+<p id="para">Voici un paragraphe, pas vraiment intéressant mais bon.</p>
 <p id="output"></p>
 ```
 

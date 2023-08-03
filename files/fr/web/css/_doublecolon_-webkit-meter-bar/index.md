@@ -1,12 +1,6 @@
 ---
-title: '::-webkit-meter-bar'
+title: "::-webkit-meter-bar"
 slug: Web/CSS/::-webkit-meter-bar
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::-webkit-meter-bar
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -19,13 +13,13 @@ Le pseudo-élément **`::-webkit-meter-bar`** est un pseudo-élément spécifiqu
 
 ```css
 meter {
-   /* On réinitialise l'apparence par défaut */
+  /* On réinitialise l'apparence par défaut */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-meter::-webkit-meter-bar  {
+meter::-webkit-meter-bar {
   background: #eee;
   box-shadow: 0 2px 3px rgba (0, 0, 0, 0.2) inset;
   border-radius: 3px;

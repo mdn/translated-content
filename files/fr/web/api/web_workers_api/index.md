@@ -1,10 +1,6 @@
 ---
 title: API Web Workers
 slug: Web/API/Web_Workers_API
-tags:
-  - API
-  - DOM
-translation_of: Web/API/Web_Workers_API
 ---
 
 {{DefaultAPISidebar("Web Workers API")}}

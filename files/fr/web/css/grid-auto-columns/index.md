@@ -1,12 +1,6 @@
 ---
 title: grid-auto-columns
 slug: Web/CSS/grid-auto-columns
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/grid-auto-columns
 ---
 
 {{CSSRef}}

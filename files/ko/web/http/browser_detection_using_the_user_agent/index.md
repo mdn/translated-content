@@ -1,7 +1,6 @@
 ---
 title: 사용자 에이전트를 이용한 브라우저 감지
 slug: Web/HTTP/Browser_detection_using_the_user_agent
-original_slug: Web/HTTP/User_agent를_이용한_브라우저_감지
 ---
 
 {{HTTPSidebar}}
@@ -29,25 +28,25 @@ user agent 감지를 피하는 몇 가지 방법이 있습니다!
 
 - `기능 탐지` 기능 탐지는 어떤 브라우저가 당신의 페이지를 렌더링하는지를 알아내려고 할 때가 아니라, 어떤 특정한 기능을 당신이 사용가능한지를 확인할 때 사용합니다. 그렇지 않다면, 대비책을 사용하세요. 브라우저 간의 차이점을 찾는 몇 안되는 경우에서는 user agent 문자열을 사용하는 대신, 브라우저가 API를 구현하는 방법을 탐지하고 API를 사용하는 방법을 결정하는 테스트를 구현하는 것이 좋습니다. 아래는 기능탐지의 좋은 최신 예시 입니다. 최근 크롬은[experimental lookbehind support to regular expressions](https://www.chromestatus.com/feature/5668726032564224)을 추가했지만, 다른 브라우저들은 이를 지원하지 않습니다. 그러므로 당신은 이와 같이 해야 한다고 잘못 생각하고 있을 것입니다.
 
- ```js
- // 아래 코드 조각은 한 문자열을 특별한 표기법으로 쪼갭니다.
+```js
+// 아래 코드 조각은 한 문자열을 특별한 표기법으로 쪼갭니다.
 
-if (navigator.userAgent.indexOf("Chrome") !== -1){
-// 네! 이 사용자가 정규표현식의 look-behind 기능을 사용하려는 것
-// 같습니다.
-// /(?&#x3C;=[A-Z])/를 사용하지 마십시오. 정규표현식의
-// look-behind 기능을 지원하지 않는 브라우저에서는 문법오류가
-// 발생할 것입니다. 왜냐하면, 모든 브라우저들은 실제로 실행되지
-// 않는 부분을 포함한 전체 스크립트를 해석하기 때문입니다.
-var camelCaseExpression = new RegExp("(?&#x3C;=[A-Z])");
-var splitUpString = function(str) {
-return (""+str).split(camelCaseExpression);
-};
+if (navigator.userAgent.indexOf("Chrome") !== -1) {
+  // 네! 이 사용자가 정규표현식의 look-behind 기능을 사용하려는 것
+  // 같습니다.
+  // /(?&#x3C;=[A-Z])/를 사용하지 마십시오. 정규표현식의
+  // look-behind 기능을 지원하지 않는 브라우저에서는 문법오류가
+  // 발생할 것입니다. 왜냐하면, 모든 브라우저들은 실제로 실행되지
+  // 않는 부분을 포함한 전체 스크립트를 해석하기 때문입니다.
+  var camelCaseExpression = new RegExp("(?&#x3C;=[A-Z])");
+  var splitUpString = function (str) {
+    return ("" + str).split(camelCaseExpression);
+  };
 } else {
-/_아래 fallback 코드는 성능이 떨어지지만 작동하긴 합니다._/
-var splitUpString = function(str){
-return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
-};
+  /_아래 fallback 코드는 성능이 떨어지지만 작동하긴 합니다._/;
+  var splitUpString = function (str) {
+    return str.replace(/[A-Z]/g, "z$1").split(/z(?=[A-Z])/g);
+  };
 }
 console.log(splitUpString("fooBare")); // ["fooB", "are"]
 console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
@@ -65,19 +64,21 @@ look-behind 지원여부 자체를 테스트함으로써 이 문제들을 회피
 var isLookBehindSupported = false;
 
 try {
-new RegExp("(?&#x3C;=)");
-isLookBehindSupported = true;
+  new RegExp("(?&#x3C;=)");
+  isLookBehindSupported = true;
 } catch (err) {
-// agent가 look-behind 기능을 지원하지 않는다면, 위 문법을 사용한
-// RegExp 객체의 생성이 에러를 던질 것이고, isLookBehindSupported는
-// 여전히 false일 것입니다.
+  // agent가 look-behind 기능을 지원하지 않는다면, 위 문법을 사용한
+  // RegExp 객체의 생성이 에러를 던질 것이고, isLookBehindSupported는
+  // 여전히 false일 것입니다.
 }
 
-var splitUpString = isLookBehindSupported ? function(str) {
-return (""+str).split(new RegExp("(?&#x3C;=[A-Z])"));
-} : function(str) {
-return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
-};
+var splitUpString = isLookBehindSupported
+  ? function (str) {
+      return ("" + str).split(new RegExp("(?&#x3C;=[A-Z])"));
+    }
+  : function (str) {
+      return str.replace(/[A-Z]/g, "z$1").split(/z(?=[A-Z])/g);
+    };
 ```
 
 위의 코드가 시범을 보였듯이, user agent를 살펴보지 않고도 어떤 기능에 대한 브라우저 지원 여부를 시험할 수 있는 방법이 **항상** 존재합니다. 기능 지원 여부를 확인하기 위해 user agent 문자열을 확인할 필요가 **전혀** 없습니다.
@@ -92,7 +93,7 @@ return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
   - : This is a top-down approach in which you build the best possible site using all the features you want, then tweak it to make it work on older browsers. This can be harder to do, and less effective, than progressive enhancement, but may be useful in some cases.
 - Mobile device detection
 
-  - : Arguably the most common use and misuse of user agent sniffing is to detect if the device is a mobile device. However, people too often overlook what they are really after. People use user agent sniffing to detect if the users' device is touch-friendly and has a small screen so they can optimize their website accordingly. While user agent sniffing can sometimes detect these, not all devices are the same: some mobile devices have big screen sizes, some desktops have a small touchscreen, some people use smart TV's which are an entirely different ballgame altogether, and some people can dynamically change the width and height of their screen by flipping their tablet on its side! So, user agent sniffing is definitely not the way to go. Thankfully, there are much better alternatives. Use [Navigator.maxTouchPoints](/en-US/docs/Web/API/Navigator/maxTouchPoints) to detect if the user's device has a touchscreen. Then, default back to checking the user agent screen only _if (!("maxTouchPoints" in navigator)) { /\*Code here\*/}_. Using this information of whether the device has a touchscreen, do not change the entire layout of the website just for touch devices: you will only create more work and maintenance for yourself. Rather, add in touch conveniences such as bigger, more easily clickable buttons (you can do this using CSS by increasing the font size). Here is an example of code that increases the padding of #exampleButton to 1em on mobile devices.
+  - : Arguably the most common use and misuse of user agent sniffing is to detect if the device is a mobile device. However, people too often overlook what they are really after. People use user agent sniffing to detect if the users' device is touch-friendly and has a small screen so they can optimize their website accordingly. While user agent sniffing can sometimes detect these, not all devices are the same: some mobile devices have big screen sizes, some desktops have a small touchscreen, some people use smart TV's which are an entirely different ballgame altogether, and some people can dynamically change the width and height of their screen by flipping their tablet on its side! So, user agent sniffing is definitely not the way to go. Thankfully, there are much better alternatives. Use [Navigator.maxTouchPoints](/ko/docs/Web/API/Navigator/maxTouchPoints) to detect if the user's device has a touchscreen. Then, default back to checking the user agent screen only _if (!("maxTouchPoints" in navigator)) { /\*Code here\*/}_. Using this information of whether the device has a touchscreen, do not change the entire layout of the website just for touch devices: you will only create more work and maintenance for yourself. Rather, add in touch conveniences such as bigger, more easily clickable buttons (you can do this using CSS by increasing the font size). Here is an example of code that increases the padding of #exampleButton to 1em on mobile devices.
 
 ```js
 let hasTouchScreen = false;
@@ -120,16 +121,16 @@ if (hasTouchScreen) {
 }
 ```
 
-As for the screen size, use _window\.innerWidth_ and window\.addEventListener("resize", () => { /\*refresh screen size dependent things\*/ }). What you want to do for screen size is not slash off information on smaller screens. That will only annoy people because it will force them to use the desktop version. Rather, try to have fewer columns of information in a longer page on smaller screens while having more columns with a shorter page on larger screen sizes. This effect can be easily achieved using CSS [flexboxes](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), sometimes with [floats](/en-US/docs/Learn/CSS/CSS_layout/Floats) as a partial fallback.
+As for the screen size, use _window\.innerWidth_ and window\.addEventListener("resize", () => { /\*refresh screen size dependent things\*/ }). What you want to do for screen size is not slash off information on smaller screens. That will only annoy people because it will force them to use the desktop version. Rather, try to have fewer columns of information in a longer page on smaller screens while having more columns with a shorter page on larger screen sizes. This effect can be easily achieved using CSS [flexboxes](/ko/docs/Learn/CSS/CSS_layout/Flexbox), sometimes with [floats](/ko/docs/Learn/CSS/CSS_layout/Floats) as a partial fallback.
 
-Also try to move less relevant/important information down to the bottom and group the page's content together meaningfully. Although it is off-topic, perhaps the following detailed example might give you insights and ideas that persuade you to forgo user agent sniffing. Let us imagine a page composed of boxes of information; each box is about a different feline breed or canine breed. Each box has an image, an overview, and a historical fun fact. The pictures are kept to a maximum reasonable size even on large screens. For the purposes of grouping the content meaningfully, all the cat boxes are separated from all the dog boxes such that the cat and dog boxes are not intermixed together. On a large screen, it saves space to have multiple columns to reduce the space wasted to the left and to the right of the pictures. The boxes can be separated into multiple columns via two equally fair method. From this point on, we shall assume that all the dog boxes are at the top of the source code, that all the cat boxes are at the bottom of the source code, and that all these boxes have the same parent element. There a single instance of a dog box immediately above a cat box, of course. The first method uses horizontal [Flexboxes](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) to group the content such that when the page is displayed to the end user, all the dogs boxes are at the top of the page and all the cat boxes are lower on the page. The second method uses a [Column](/en-US/docs/Web/CSS/Layout_cookbook/Column_layouts) layout and resents all the dogs to the left and all the cats to the right. Only in this particular scenario, it is appropriate to provide no fallback for the flexboxes/multicolumns, resulting in a single column of very wide boxes on old browsers. Also consider the following. If more people visit the webpage to see the cats, then it might be a good idea to put all the cats higher in the source code than the dogs so that more people can find what they are looking for faster on smaller screens where the content collapses down to one column.
+Also try to move less relevant/important information down to the bottom and group the page's content together meaningfully. Although it is off-topic, perhaps the following detailed example might give you insights and ideas that persuade you to forgo user agent sniffing. Let us imagine a page composed of boxes of information; each box is about a different feline breed or canine breed. Each box has an image, an overview, and a historical fun fact. The pictures are kept to a maximum reasonable size even on large screens. For the purposes of grouping the content meaningfully, all the cat boxes are separated from all the dog boxes such that the cat and dog boxes are not intermixed together. On a large screen, it saves space to have multiple columns to reduce the space wasted to the left and to the right of the pictures. The boxes can be separated into multiple columns via two equally fair method. From this point on, we shall assume that all the dog boxes are at the top of the source code, that all the cat boxes are at the bottom of the source code, and that all these boxes have the same parent element. There a single instance of a dog box immediately above a cat box, of course. The first method uses horizontal [Flexboxes](/ko/docs/Learn/CSS/CSS_layout/Flexbox) to group the content such that when the page is displayed to the end user, all the dogs boxes are at the top of the page and all the cat boxes are lower on the page. The second method uses a [Column](/ko/docs/Web/CSS/Layout_cookbook/Column_layouts) layout and resents all the dogs to the left and all the cats to the right. Only in this particular scenario, it is appropriate to provide no fallback for the flexboxes/multicolumns, resulting in a single column of very wide boxes on old browsers. Also consider the following. If more people visit the webpage to see the cats, then it might be a good idea to put all the cats higher in the source code than the dogs so that more people can find what they are looking for faster on smaller screens where the content collapses down to one column.
 
 Next, always make your code dynamic.
 The user can flip their mobile device on its side, changing the width and height of the page.
 Or, there might be some weird flip-phone-like device thing in the future where flipping it out extends the screen.
 Do not be the developer having a headache over how to deal with the flip-phone-like device thing.
 Never be satisfied with your webpage until you can open up the dev tools side panel and resize the screen while the webpage looks smooth, fluid, and dynamically resized.
-The simplest way to do this is to separate all the code that moves content around based on screen size to a single function that is called when the page is loaded and at each [resize](/en-US/docs/Web/API/Window/resize_event) event thereafter. If there is a lot calculated by this layout function before it determines the new layout of the page, then consider debouncing the event listener such that it is not called as often.
+The simplest way to do this is to separate all the code that moves content around based on screen size to a single function that is called when the page is loaded and at each [resize](/ko/docs/Web/API/Window/resize_event) event thereafter. If there is a lot calculated by this layout function before it determines the new layout of the page, then consider debouncing the event listener such that it is not called as often.
 Also note that there is a huge difference between the media queries `(max-width: 25em)`, `not all and (min-width: 25em)`, and `(max-width: 24.99em)`: `(max-width: 25em)` excludes `(max-width: 25em)`, whereas `not all and (min-width: 25em)` includes `(max-width: 25em)`.
 `(max-width: 24.99em)` is a poor man's version of `not all and (min-width: 25em)`: do not use `(max-width: 24.99em)` because the layout _might_ break on very high font sizes on very high definition devices in the future.
 Always be very deliberate about choosing the right media query and choosing the right >=, <=, >, or < in any corresponding JavaScript because it is very easy to get these mixed up, resulting in the website looking wonky right at the screen size where the layout changes.
@@ -141,7 +142,7 @@ After reviewing all of the above better alternatives to user agent sniffing, the
 
 One such case is using user agent sniffing as a fallback when detecting if the device has a touch screen. See the [Mobile Device Detection](#mobile_device_detection) section for more information.
 
-Another such case is for fixing bugs in browsers that do not automatically update. Internet Explorer (on Windows) and Webkit (on iOS) are two perfect examples. Prior to version 9, Internet Explorer had issues with rendering bugs, CSS bugs, API bugs, and so forth. However, prior to version 9, Internet Explorer was very easy to detect based upon the browser-specific features available. Webkit is a bit worse because Apple forces all of the browsers on IOS to use Webkit internally, thus the user has no way to get a better more updated browser on older devices. Most bugs can be detected, but some bugs take more effort to detect than others. In such cases, it might be beneficial to use user agent sniffing to save on performance. For example, Webkit 6 has a bug whereby when the device orientation changes, the browser might not fire [MediaQueryList](/en-US/docs/Web/API/MediaQueryList) listeners when it should. To overcome this bug, observe the code below.
+Another such case is for fixing bugs in browsers that do not automatically update. Internet Explorer (on Windows) and Webkit (on iOS) are two perfect examples. Prior to version 9, Internet Explorer had issues with rendering bugs, CSS bugs, API bugs, and so forth. However, prior to version 9, Internet Explorer was very easy to detect based upon the browser-specific features available. Webkit is a bit worse because Apple forces all of the browsers on IOS to use Webkit internally, thus the user has no way to get a better more updated browser on older devices. Most bugs can be detected, but some bugs take more effort to detect than others. In such cases, it might be beneficial to use user agent sniffing to save on performance. For example, Webkit 6 has a bug whereby when the device orientation changes, the browser might not fire [MediaQueryList](/ko/docs/Web/API/MediaQueryList) listeners when it should. To overcome this bug, observe the code below.
 
 ```js
 const UA = navigator.userAgent;
@@ -185,7 +186,7 @@ addEventListener(
   () => {
     orientationChanged = true;
   },
-  PASSIVE_LISTENER_OPTION
+  PASSIVE_LISTENER_OPTION,
 );
 
 addEventListener("resize", () =>
@@ -196,7 +197,7 @@ addEventListener("resize", () =>
       }
     }
     mediaQueryUpdated = orientationChanged = false;
-  }, 0)
+  }, 0),
 );
 ```
 

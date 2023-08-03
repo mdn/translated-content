@@ -1,18 +1,6 @@
 ---
 title: Perceivable
 slug: Web/Accessibility/Understanding_WCAG/Perceivable
-tags:
-  - Accessibility
-  - NeedsTranslation
-  - Principle 1
-  - TopicStub
-  - WCAG
-  - Web Content Accessibility Guidelines
-  - contrast
-  - different presentation
-  - text alternatives
-  - time-based media
-translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
 ---
 
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Perceivable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Perceivable states that users must be able to perceive it in some way, using one or more of their senses.
@@ -625,7 +613,7 @@ This guideline relates to making sure core content is easy to discern from backg
 
 ## See also
 
-- [WCAG](en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG)
 
   1. Perceivable
   2. [Operable](/ru/docs/Web/Accessibility/Understanding_WCAG/Operable)

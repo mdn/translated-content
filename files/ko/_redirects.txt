@@ -12,10 +12,8 @@
 /ko/docs/About_the_Document_Object_Model	/ko/docs/Web/API/Document_Object_Model
 /ko/docs/Accessibility	/ko/docs/Web/Accessibility
 /ko/docs/Accessibility/ARIA	/ko/docs/Web/Accessibility/ARIA
-/ko/docs/Accessibility/An_overview_of_accessible_web_applications_and_widgets	/ko/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /ko/docs/Alternative_style_sheets	/ko/docs/Web/CSS/Alternative_style_sheets
 /ko/docs/Apps/Progressive	/ko/docs/Web/Progressive_web_apps
-/ko/docs/Apps/Progressive/Add_to_home_screen	/ko/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /ko/docs/Apps/Progressive/App_structure	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 /ko/docs/Apps/Progressive/Installable_PWAs	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 /ko/docs/Apps/Progressive/Offline_Service_workers	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
@@ -333,7 +331,6 @@
 /ko/docs/Learn/접근성	/ko/docs/Learn/Accessibility
 /ko/docs/Learn/접근성/HTML	/ko/docs/Learn/Accessibility/HTML
 /ko/docs/Learn/접근성/What_is_accessibility	/ko/docs/Learn/Accessibility/What_is_accessibility
-/ko/docs/Learn/접근성/모바일	/ko/docs/Learn/Accessibility/Mobile
 /ko/docs/Localization	/ko/docs/Glossary/Localization
 /ko/docs/MDN/About	/ko/docs/MDN/Writing_guidelines
 /ko/docs/MDN/Contribute/Content/Best_practices	/ko/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
@@ -368,6 +365,7 @@
 /ko/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/create	/ko/docs/Mozilla/Add-ons/WebExtensions/API/menus/create
 /ko/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/getTargetElement	/ko/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
 /ko/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/onShown	/ko/docs/Mozilla/Add-ons/WebExtensions/API/menus/onShown
+/ko/docs/Mozilla/Add-ons/WebExtensions/Prerequisites	/ko/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
 /ko/docs/Mozilla/애드온들	/ko/docs/Mozilla/Add-ons
 /ko/docs/Mozilla/애드온들/AMO/Policy/Featured	https://extensionworkshop.com/documentation/publish/recommended-extensions/
 /ko/docs/Mozilla/애드온들/Listing	https://extensionworkshop.com/documentation/develop/create-an-appealing-listing/
@@ -397,7 +395,7 @@
 /ko/docs/Mozilla/애드온들/WebExtensions/Examples	/ko/docs/Mozilla/Add-ons/WebExtensions/Examples
 /ko/docs/Mozilla/애드온들/WebExtensions/Package_your_extension_	https://extensionworkshop.com/documentation/publish/package-your-extension/
 /ko/docs/Mozilla/애드온들/WebExtensions/Porting_a_Google_Chrome_extension	https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/
-/ko/docs/Mozilla/애드온들/WebExtensions/Prerequisites	/ko/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
+/ko/docs/Mozilla/애드온들/WebExtensions/Prerequisites	/ko/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
 /ko/docs/Mozilla/애드온들/WebExtensions/Temporary_Installation_in_Firefox	https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/
 /ko/docs/Mozilla/애드온들/WebExtensions/User_actions	/ko/docs/Mozilla/Add-ons/WebExtensions/User_actions
 /ko/docs/Mozilla/애드온들/WebExtensions/What_are_WebExtensions	/ko/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
@@ -817,7 +815,6 @@
 /ko/docs/Web/Media/Formats/코덱파라미터	/ko/docs/Web/Media/Formats/codecs_parameter
 /ko/docs/Web/Performance/브라우저는_어떻게_동작하는가	/ko/docs/Web/Performance/How_browsers_work
 /ko/docs/Web/Performance/중요_렌더링_경로	/ko/docs/Web/Performance/Critical_rendering_path
-/ko/docs/Web/Progressive_web_apps/Add_to_home_screen	/ko/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /ko/docs/Web/Progressive_web_apps/App_structure	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 /ko/docs/Web/Progressive_web_apps/Installable_PWAs	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 /ko/docs/Web/Progressive_web_apps/Introduction	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames

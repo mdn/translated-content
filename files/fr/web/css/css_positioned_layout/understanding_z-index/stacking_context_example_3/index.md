@@ -1,12 +1,6 @@
 ---
 title: Exemple d'empilement 3
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3
-tags:
-  - Avancé
-  - CSS
-  - Guide
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
 ---
 
 {{PreviousMenuNext("Web/CSS/Comprendre_z-index/Exemple_2","", "Web/CSS/Comprendre_z-index")}}
@@ -110,14 +104,13 @@ div.lev3 {
 ### HTML
 
 ```html
-<br/>
+<br />
 
 <div class="lev1">
-<span class="bold">LEVEL #1</span>
+  <span class="bold">LEVEL #1</span>
   <div id="container1">
     <div class="lev2">
-      <br/><span class="bold">LEVEL #2</span>
-      <br/>z-index: 1;
+      <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
       <div id="container2">
         <div class="lev3"><span class="bold">LEVEL #3</span></div>
         <div class="lev3"><span class="bold">LEVEL #3</span></div>
@@ -133,8 +126,7 @@ div.lev3 {
       </div>
     </div>
     <div class="lev2">
-      <br/><span class="bold">LEVEL #2</span>
-      <br/>z-index: 1;
+      <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
     </div>
   </div>
 </div>

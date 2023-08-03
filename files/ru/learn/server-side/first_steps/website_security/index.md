@@ -1,9 +1,8 @@
 ---
 title: Веб-безопасность
 slug: Learn/Server-side/First_steps/Website_security
-translation_of: Learn/Server-side/First_steps/Website_security
-original_slug: Learn/Server-side/First_steps/Веб_Безопасность
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
 Безопасность сайта требует бдительности во всех аспектах дизайна и использования сайта. Эта вводная статья не сделает из вас гуру безопасности веб-сайта, но она поможет вам понять, откуда приходят угрозы, и что вы можете сделать, чтобы укрепить своё веб-приложение против наиболее распространённых атак.

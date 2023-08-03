@@ -1,7 +1,6 @@
 ---
 title: browserAction.getBadgeBackgroundColor()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeBackgroundColor
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeBackgroundColor
 ---
 
 {{AddonSidebar()}}
@@ -13,9 +12,9 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-browser.browserAction.getBadgeBackgroundColor (
-  details // object
-)
+browser.browserAction.getBadgeBackgroundColor(
+  details, // object
+);
 ```
 
 ### Paramètres

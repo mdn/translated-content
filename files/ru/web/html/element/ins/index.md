@@ -1,7 +1,6 @@
 ---
 title: <ins>
 slug: Web/HTML/Element/ins
-translation_of: Web/HTML/Element/ins
 ---
 **Элемент** **HTML `<ins>` **представляет собой диапазон текста, который был добавлен в документ
 

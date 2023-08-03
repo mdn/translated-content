@@ -32,9 +32,11 @@ slug: Web/HTML/Element/span
 ## 例 2
 
 ```html
-<li><span>
+<li>
+  <span>
     <a href="portfolio.html" target="_blank">See my portfolio</a>
-</span></li>
+  </span>
+</li>
 ```
 
 ### CSS
@@ -42,7 +44,7 @@ slug: Web/HTML/Element/span
 ```css
 li span {
   background: gold;
- }
+}
 ```
 
 ### 结果

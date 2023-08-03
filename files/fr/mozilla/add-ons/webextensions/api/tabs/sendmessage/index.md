@@ -1,7 +1,6 @@
 ---
 title: tabs.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
 ---
 
 {{AddonSidebar()}}Envoi un message unique depuis le script d'arrière plan d'extension (ou autre scripts accrédité, comme les scripts popup ou les scripts de page d'options) vers n'importe quel [script de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) concerné par l'extension et qui s'execute dans l'onglet spécifié.Ce message sera reçu dans script de contenu par n'importe quel gestionnaire d'évènements à l'écoute de l'évènement
@@ -16,10 +15,10 @@ Il s'agit d'une fonction asynchrone qui renvoit un objet [`Promise`](/fr/docs/We
 
 ```js
 var sending = browser.tabs.sendMessage(
-  tabId,                   // integer
-  message,                 // any
-  options                  // optional object
-)
+  tabId, // integer
+  message, // any
+  options, // optional object
+);
 ```
 
 ### Paramètres
@@ -53,21 +52,24 @@ function onError(error) {
 
 function sendMessageToTabs(tabs) {
   for (let tab of tabs) {
-    browser.tabs.sendMessage(
-      tab.id,
-      {greeting: "Hi from background script"}
-    ).then(response => {
-      console.log("Message from the content script:");
-      console.log(response.response);
-    }).catch(onError);
+    browser.tabs
+      .sendMessage(tab.id, { greeting: "Hi from background script" })
+      .then((response) => {
+        console.log("Message from the content script:");
+        console.log(response.response);
+      })
+      .catch(onError);
   }
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  browser.tabs.query({
-    currentWindow: true,
-    active: true
-  }).then(sendMessageToTabs).catch(onError);
+  browser.tabs
+    .query({
+      currentWindow: true,
+      active: true,
+    })
+    .then(sendMessageToTabs)
+    .catch(onError);
 });
 ```
 
@@ -77,10 +79,10 @@ Voici le script de contenu associé:
 // content-script.js
 "use strict";
 
-browser.runtime.onMessage.addListener(request => {
+browser.runtime.onMessage.addListener((request) => {
   console.log("Message from the background script:");
   console.log(request.greeting);
-  return Promise.resolve({response: "Hi from content script"});
+  return Promise.resolve({ response: "Hi from content script" });
 });
 ```
 

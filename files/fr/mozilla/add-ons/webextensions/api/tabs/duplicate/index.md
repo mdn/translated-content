@@ -1,7 +1,6 @@
 ---
 title: tabs.duplicate()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
 ---
 
 {{AddonSidebar()}}
@@ -14,8 +13,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [promesse (`Promise`)](/fr/d
 
 ```js
 let duplicating = browser.tabs.duplicate(
-  tabId,              // entier
-  duplicateProperties // objet optionnel
+  tabId, // entier
+  duplicateProperties, // objet optionnel
 );
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: bookmarks.move()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 ---
 
 {{AddonSidebar()}}
@@ -16,9 +15,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var movingBookmark = browser.bookmarks.move(
-  id,                    // string
-  destination           // object
-)
+  id, // string
+  destination, // object
+);
 ```
 
 ### Paramètres
@@ -53,7 +52,7 @@ function onRejected(error) {
 
 var bookmarkId = "abcdefghilkl";
 
-var movingBookmark = browser.bookmarks.move(bookmarkId, {index: 0});
+var movingBookmark = browser.bookmarks.move(bookmarkId, { index: 0 });
 movingBookmark.then(onMoved, onRejected);
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: BigInt.asUintN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
-title: 'Window: message イベント'
+title: "Window: message イベント"
 slug: Web/API/Window/message_event
-original_slug: Web/API/WindowEventHandlers/onmessage
 l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---

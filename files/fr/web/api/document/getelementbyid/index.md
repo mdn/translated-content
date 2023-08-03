@@ -1,7 +1,6 @@
 ---
 title: document.getElementById
 slug: Web/API/Document/getElementById
-translation_of: Web/API/Document/getElementById
 ---
 
 {{ ApiRef("DOM") }}
@@ -31,14 +30,14 @@ Un objet {{domxref("Element")}} décrivant l'objet élément du DOM correspondan
 
 ```html
 <html>
-<head>
-  <title>getElementById example</title>
-</head>
-<body>
-  <p id="para">Some text here</p>
-  <button onclick="changeColor('blue');">blue</button>
-  <button onclick="changeColor('red');">red</button>
-</body>
+  <head>
+    <title>getElementById example</title>
+  </head>
+  <body>
+    <p id="para">Some text here</p>
+    <button onclick="changeColor('blue');">blue</button>
+    <button onclick="changeColor('red');">red</button>
+  </body>
 </html>
 ```
 
@@ -46,7 +45,7 @@ Un objet {{domxref("Element")}} décrivant l'objet élément du DOM correspondan
 
 ```js
 function changeColor(newColor) {
-  var elem = document.getElementById('para');
+  var elem = document.getElementById("para");
   elem.style.color = newColor;
 }
 ```
@@ -66,24 +65,24 @@ Contrairement à d'autres méthodes de recherche d'éléments, comme {{domxref("
 ```html
 <!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="parent-id">
-        <p>hello word1</p>
-        <p id="test1">hello word2</p>
-        <p>hello word3</p>
-        <p>hello word4</p>
+      <p>hello word1</p>
+      <p id="test1">hello word2</p>
+      <p>hello word3</p>
+      <p>hello word4</p>
     </div>
     <script>
-        var parentDOM = document.getElementById('parent-id');
-        var test1=parentDOM.getElementById('test1');
-        //erreur de lancement
-        //TypeError inattendu : parentDOM.getElementById n'est pas une fonction
+      var parentDOM = document.getElementById("parent-id");
+      var test1 = parentDOM.getElementById("test1");
+      //erreur de lancement
+      //TypeError inattendu : parentDOM.getElementById n'est pas une fonction
     </script>
-</body>
+  </body>
 </html>
 ```
 
@@ -92,9 +91,9 @@ S'il n'y a pas d'élément avec l'identifiant (`id`) fourni, cette fonction reto
 **Les éléments absents du document** ne sont pas cherchés par `getElementById()`. Quand vous créez un élément et y assignez un ID, vous devez insérer l'élément dans l'arbre du document avec {{domxref("Node.insertBefore()")}} ou une méthode similaire avant de pouvoir y accéder avec `getElementById()` :
 
 ```js
-var element = document.createElement('div');
-element.id = 'testqq';
-var el = document.getElementById('testqq'); // el vaudra null !
+var element = document.createElement("div");
+element.id = "testqq";
+var el = document.getElementById("testqq"); // el vaudra null !
 ```
 
 **Les documents non-HTML.** Les implémentations du DOM doivent avoir une information qui précise quels attributs sont de type ID. Un attribut portant le nom «&nbsp;id&nbsp;» n'est pas de type ID tant qu'il n'a pas été explicitement défini ainsi (dans la DTD du document). L'attribut `id` est défini comme étant de type ID dans les langages courants comme [XHTML](/fr/XHTML) ou [XUL](/fr/XUL). Les implémentations ne sachant pas déterminer si les attributs sont de type ID ou non sont supposées renvoyer `null`.

@@ -21,8 +21,7 @@ function Overloaded(arg1, arg2, ...,argN){
 Para llamar al constructor de una clase en Javascript, use el operador `new` para asignar un objeto de referencia ({{glossary("object reference")}}) a una {{glossary("variable")}}.
 
 ```js
-function Default() {
-}
+function Default() {}
 
 // A new reference of a Default object assigned to a
 // local variable defaultReference
@@ -33,7 +32,7 @@ var defaultReference = new Default();
 
 ### Conocimiento general
 
-- [Constructor](https://es.wikipedia.org/wiki/Constructor_(inform%C3%A1tica)) en Wikipedia
+- [Constructor](<https://es.wikipedia.org/wiki/Constructor_(inform%C3%A1tica)>) en Wikipedia
 
 ### Referencia técnica
 

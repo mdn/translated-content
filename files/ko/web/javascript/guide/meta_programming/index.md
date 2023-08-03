@@ -1,7 +1,6 @@
 ---
 title: 메타 프로그래밍
 slug: Web/JavaScript/Guide/Meta_programming
-original_slug: Web/JavaScript/Guide/메타_프로그래밍
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}
@@ -42,7 +41,7 @@ The following terms are used when talking about the functionality of proxies.
 
 ## Handlers and traps
 
-The following table summarizes the available traps available to `Proxy` objects. See the [reference pages](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler) for detailed explanations and examples.
+The following table summarizes the available traps available to `Proxy` objects. See the [reference pages](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler) for detailed explanations and examples.
 
 <table>
   <thead>
@@ -368,7 +367,7 @@ typeof proxy;            // "object", typeof doesn't trigger any trap
 
 `Reflect` helps with forwarding default operations from the handler to the target.
 
-With {{jsxref("Reflect.has()")}} for example, you get the [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) as a function:
+With {{jsxref("Reflect.has()")}} for example, you get the [`in` operator](/ko/docs/Web/JavaScript/Reference/Operators/in) as a function:
 
 ```js
     Reflect.has(Object, 'assign'); // true
@@ -376,7 +375,7 @@ With {{jsxref("Reflect.has()")}} for example, you get the [`in` operator](/en-US
 
 ### A better `apply` function
 
-In ES5, you typically use the {{jsxref("Function.prototype.apply()")}} method to call a function with a given `this` value and `arguments` provided as an array (or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
+In ES5, you typically use the {{jsxref("Function.prototype.apply()")}} method to call a function with a given `this` value and `arguments` provided as an array (or an [array-like object](/ko/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
 
 ```js
     Function.prototype.apply.call(Math.floor, undefined, [1.75]);

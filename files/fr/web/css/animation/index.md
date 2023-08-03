@@ -1,7 +1,6 @@
 ---
 title: animation
 slug: Web/CSS/animation
-translation_of: Web/CSS/animation
 ---
 
 {{CSSRef}}
@@ -24,13 +23,13 @@ C'est une propriété qui synthétise les propriétés suivantes :
 ```css
 /* @keyframes duration | timing-function | delay |
    iteration-count | direction | fill-mode | play-state | name */
-  animation: 3s ease-in 1s 2 reverse both paused slidein;
+animation: 3s ease-in 1s 2 reverse both paused slidein;
 
 /* @keyframes duration | timing-function | delay | name */
-  animation: 3s linear 1s slidein;
+animation: 3s linear 1s slidein;
 
 /* @keyframes duration | name */
-  animation: 3s slidein;
+animation: 3s slidein;
 ```
 
 ## Exemple d'animation
@@ -40,17 +39,21 @@ C'est une propriété qui synthétise les propriétés suivantes :
   <div class="col">
     <div class="note">
       Avec l'animation suivante :
-      <pre>@keyframes slidein {
+      <pre>
+@keyframes slidein {
   from { transform: scaleX(0); }
   to   { transform: scaleX(1); }
-}</pre>
+}</pre
+      >
     </div>
     <div class="row">
       <div class="cell">
         <button class="play" title="LECTURE"></button>
       </div>
       <div class="cell flx">
-        <div class="overlay">animation: 3s ease-in 1s 2 reverse both paused slidein;</div>
+        <div class="overlay">
+          animation: 3s ease-in 1s 2 reverse both paused slidein;
+        </div>
         <div class="animation a1"></div>
       </div>
     </div>
@@ -77,13 +80,19 @@ C'est une propriété qui synthétise les propriétés suivantes :
 ```
 
 ```css hidden
-html,body {
+html,
+body {
   height: 100%;
   box-sizing: border-box;
 }
 
-pre { margin-bottom: 0; }
-svg { width: 1.5em; height: 1.5em; }
+pre {
+  margin-bottom: 0;
+}
+svg {
+  width: 1.5em;
+  height: 1.5em;
+}
 
 button {
   width: 27px;
@@ -96,22 +105,22 @@ button {
 }
 
 button.play {
-  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cstyle%3Epath%20%7Bdisplay%3Anone%7D%20path%3Atarget%7Bdisplay%3Ablock%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22play%22%20d%3D%22M3%2C3%20L3%2C13%20L13%2C8%20Z%22%20%2F%3E%3Cpath%20id%3D%22pause%22%20d%3D%22M5%2C4%20L7%2C4%20L7%2C13%20L5%2C13%20Z%20M9%2C4%20L11%2C4%20L11%2C13%20L9%2C13%20Z%22%20%2F%3E%3Cpath%20id%3D%22restart%22%20d%3D%22M13%2C9%20A5%2C5%2C1%2C1%2C1%2C8%2C4%20L8%2C2%20L12%2C5%20L8%2C8%20L8%2C6%20A3%2C3%2C1%2C1%2C0%2C11%2C9%20A1%2C1%2C1%2C1%2C1%2C13%2C9%20z%22%20%2F%3E%3C%2Fsvg%3E#play');
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cstyle%3Epath%20%7Bdisplay%3Anone%7D%20path%3Atarget%7Bdisplay%3Ablock%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22play%22%20d%3D%22M3%2C3%20L3%2C13%20L13%2C8%20Z%22%20%2F%3E%3Cpath%20id%3D%22pause%22%20d%3D%22M5%2C4%20L7%2C4%20L7%2C13%20L5%2C13%20Z%20M9%2C4%20L11%2C4%20L11%2C13%20L9%2C13%20Z%22%20%2F%3E%3Cpath%20id%3D%22restart%22%20d%3D%22M13%2C9%20A5%2C5%2C1%2C1%2C1%2C8%2C4%20L8%2C2%20L12%2C5%20L8%2C8%20L8%2C6%20A3%2C3%2C1%2C1%2C0%2C11%2C9%20A1%2C1%2C1%2C1%2C1%2C13%2C9%20z%22%20%2F%3E%3C%2Fsvg%3E#play");
 }
 
 button.pause {
-  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cstyle%3Epath%20%7Bdisplay%3Anone%7D%20path%3Atarget%7Bdisplay%3Ablock%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22play%22%20d%3D%22M3%2C3%20L3%2C13%20L13%2C8%20Z%22%20%2F%3E%3Cpath%20id%3D%22pause%22%20d%3D%22M5%2C4%20L7%2C4%20L7%2C13%20L5%2C13%20Z%20M9%2C4%20L11%2C4%20L11%2C13%20L9%2C13%20Z%22%20%2F%3E%3Cpath%20id%3D%22restart%22%20d%3D%22M13%2C9%20A5%2C5%2C1%2C1%2C1%2C8%2C4%20L8%2C2%20L12%2C5%20L8%2C8%20L8%2C6%20A3%2C3%2C1%2C1%2C0%2C11%2C9%20A1%2C1%2C1%2C1%2C1%2C13%2C9%20z%22%20%2F%3E%3C%2Fsvg%3E#pause');
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cstyle%3Epath%20%7Bdisplay%3Anone%7D%20path%3Atarget%7Bdisplay%3Ablock%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22play%22%20d%3D%22M3%2C3%20L3%2C13%20L13%2C8%20Z%22%20%2F%3E%3Cpath%20id%3D%22pause%22%20d%3D%22M5%2C4%20L7%2C4%20L7%2C13%20L5%2C13%20Z%20M9%2C4%20L11%2C4%20L11%2C13%20L9%2C13%20Z%22%20%2F%3E%3Cpath%20id%3D%22restart%22%20d%3D%22M13%2C9%20A5%2C5%2C1%2C1%2C1%2C8%2C4%20L8%2C2%20L12%2C5%20L8%2C8%20L8%2C6%20A3%2C3%2C1%2C1%2C0%2C11%2C9%20A1%2C1%2C1%2C1%2C1%2C13%2C9%20z%22%20%2F%3E%3C%2Fsvg%3E#pause");
 }
 
 button.restart {
-  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cstyle%3Epath%20%7Bdisplay%3Anone%7D%20path%3Atarget%7Bdisplay%3Ablock%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22play%22%20d%3D%22M3%2C3%20L3%2C13%20L13%2C8%20Z%22%20%2F%3E%3Cpath%20id%3D%22pause%22%20d%3D%22M5%2C4%20L7%2C4%20L7%2C13%20L5%2C13%20Z%20M9%2C4%20L11%2C4%20L11%2C13%20L9%2C13%20Z%22%20%2F%3E%3Cpath%20id%3D%22restart%22%20d%3D%22M13%2C9%20A5%2C5%2C1%2C1%2C1%2C8%2C4%20L8%2C2%20L12%2C5%20L8%2C8%20L8%2C6%20A3%2C3%2C1%2C1%2C0%2C11%2C9%20A1%2C1%2C1%2C1%2C1%2C13%2C9%20z%22%20%2F%3E%3C%2Fsvg%3E#restart');
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cstyle%3Epath%20%7Bdisplay%3Anone%7D%20path%3Atarget%7Bdisplay%3Ablock%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22play%22%20d%3D%22M3%2C3%20L3%2C13%20L13%2C8%20Z%22%20%2F%3E%3Cpath%20id%3D%22pause%22%20d%3D%22M5%2C4%20L7%2C4%20L7%2C13%20L5%2C13%20Z%20M9%2C4%20L11%2C4%20L11%2C13%20L9%2C13%20Z%22%20%2F%3E%3Cpath%20id%3D%22restart%22%20d%3D%22M13%2C9%20A5%2C5%2C1%2C1%2C1%2C8%2C4%20L8%2C2%20L12%2C5%20L8%2C8%20L8%2C6%20A3%2C3%2C1%2C1%2C0%2C11%2C9%20A1%2C1%2C1%2C1%2C1%2C13%2C9%20z%22%20%2F%3E%3C%2Fsvg%3E#restart");
 }
 
 .grid {
   width: 100%;
   height: 100%;
   display: flex;
-  background: #EEE;
+  background: #eee;
   font: 1em monospace;
 }
 
@@ -131,9 +140,9 @@ button.restart {
 
 .cell {
   box-sizing: border-box;
-  margin: .5em;
+  margin: 0.5em;
   padding: 0;
-  background-color: #FFF;
+  background-color: #fff;
   overflow: hidden;
   text-align: left;
 }
@@ -145,25 +154,37 @@ button.restart {
 .note {
   background: #fff3d4;
   padding: 1em;
-  margin: .5em;
-  font: .8em sans-serif;
+  margin: 0.5em;
+  font: 0.8em sans-serif;
   text-align: left;
   flex: none;
 }
 
-.overlay { padding: .5em; }
-
-@keyframes slidein {
-  from { transform: scaleX(0); }
-  to { transform: scaleX(1); }
+.overlay {
+  padding: 0.5em;
 }
 
-.a1 { animation: 3s ease-in 1s 2 reverse both paused slidein; }
-.a2 { animation: 3s linear 1s slidein; }
-.a3 { animation: 3s slidein; }
+@keyframes slidein {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.a1 {
+  animation: 3s ease-in 1s 2 reverse both paused slidein;
+}
+.a2 {
+  animation: 3s linear 1s slidein;
+}
+.a3 {
+  animation: 3s slidein;
+}
 
 .animation {
-  background: #3F87A6;
+  background: #3f87a6;
   width: 100%;
   height: calc(100% - 1.5em);
   transform-origin: left center;
@@ -171,45 +192,51 @@ button.restart {
 ```
 
 ```js hidden
-window.addEventListener('load', function () {
-  var ANIMATION = Array.from(document.querySelectorAll('.animation'));
-  var BUTTON    = Array.from(document.querySelectorAll('button'));
+window.addEventListener("load", function () {
+  var ANIMATION = Array.from(document.querySelectorAll(".animation"));
+  var BUTTON = Array.from(document.querySelectorAll("button"));
 
-  function toggleButton (btn, type) {
-    btn.classList.remove('play', 'pause', 'restart');
+  function toggleButton(btn, type) {
+    btn.classList.remove("play", "pause", "restart");
     btn.classList.add(type);
     btn.title = type.toUpperCase(type);
   }
 
-  function playPause (i) {
-    var btn  = BUTTON[i];
+  function playPause(i) {
+    var btn = BUTTON[i];
     var anim = ANIMATION[i];
 
-    if (btn.classList.contains('play')) {
-      anim.style.animationPlayState = 'running';
-      toggleButton(btn, 'pause');
-    } else if (btn.classList.contains('pause')) {
-      anim.style.animationPlayState = 'paused';
-      toggleButton(btn, 'play');
+    if (btn.classList.contains("play")) {
+      anim.style.animationPlayState = "running";
+      toggleButton(btn, "pause");
+    } else if (btn.classList.contains("pause")) {
+      anim.style.animationPlayState = "paused";
+      toggleButton(btn, "play");
     } else {
-      anim.classList.remove('a' + (i + 1));
+      anim.classList.remove("a" + (i + 1));
       setTimeout(function () {
-        toggleButton(btn, i === 0 ? 'play' : 'pause');
-        anim.style.animationPlayState = '';
-        anim.classList.add('a' + (i + 1));
-      }, 100)
+        toggleButton(btn, i === 0 ? "play" : "pause");
+        anim.style.animationPlayState = "";
+        anim.classList.add("a" + (i + 1));
+      }, 100);
     }
   }
 
   ANIMATION.forEach(function (node, index) {
-    node.addEventListener('animationstart', function () { toggleButton(BUTTON[index], 'pause');   });
-    node.addEventListener('animationend',   function () { toggleButton(BUTTON[index], 'restart'); });
+    node.addEventListener("animationstart", function () {
+      toggleButton(BUTTON[index], "pause");
+    });
+    node.addEventListener("animationend", function () {
+      toggleButton(BUTTON[index], "restart");
+    });
   });
 
   BUTTON.forEach(function (btn, index) {
-    btn.addEventListener('click', function () { playPause(index); });
+    btn.addEventListener("click", function () {
+      playPause(index);
+    });
   });
-})
+});
 ```
 
 {{EmbedLiveSample("Exemple_danimation", "100%", 260, "", "", "example-outcome-frame")}}
@@ -266,9 +293,7 @@ L'ordre des valeurs est également important pour chaque définition d'animation
 
 ```html
 <div class="view_port">
-  <div class="polling_message">
-    En attente
-  </div>
+  <div class="polling_message">En attente</div>
   <div class="cylon_eye"></div>
 </div>
 ```
@@ -291,17 +316,36 @@ L'ordre des valeurs est également important pour chaque définition d'animation
 
 .cylon_eye {
   background-color: red;
-  background-image:         linear-gradient(to right, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.9) 75%
+  );
   color: white;
   height: 100%;
   width: 20%;
 
   -webkit-animation: 4s linear 0s infinite alternate move_eye;
-          animation: 4s linear 0s infinite alternate move_eye;
+  animation: 4s linear 0s infinite alternate move_eye;
 }
 
-@-webkit-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
-        @keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+@-webkit-keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+@keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
 ```
 
 #### Résultat
@@ -317,7 +361,7 @@ Veillez à fournir un mécanisme qui permette d'interrompre ou de désactiver l'
 - [_Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article_ (en anglais)](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
 - [_An Introduction to the Reduced Motion Media Query - CSS-Tricks_ (en anglais)](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [_Responsive Design for Motion - WebKit_ (en anglais)](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [Comprendre les règles WCAG 2.2](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
+- [Comprendre les règles WCAG 2.2](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_—_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
 - _[Understanding Success Criterion 2.2.2 - W3C Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)_
 
 ## Spécifications

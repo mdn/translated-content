@@ -1,20 +1,6 @@
 ---
 title: VRDisplay
 slug: Web/API/VRDisplay
-tags:
-  - API
-  - DOM
-  - Experimental
-  - Interface
-  - Media
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-translation_of: Web/API/VRDisplay
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
@@ -78,12 +64,12 @@ An array of all connected VR Devices can be returned by invoking the {{domxref("
 ## Examples
 
 ```js
-if(navigator.getVRDisplays) {
-  console.log('WebVR 1.1 supported');
+if (navigator.getVRDisplays) {
+  console.log("WebVR 1.1 supported");
   // Then get the displays attached to the computer
-  navigator.getVRDisplays().then(function(displays) {
+  navigator.getVRDisplays().then(function (displays) {
     // If a display is available, use it to present the scene
-    if(displays.length > 0) {
+    if (displays.length > 0) {
       vrDisplay = displays[0];
       // Now we have our VRDisplay object and can do what we want with it
     }
@@ -95,9 +81,7 @@ if(navigator.getVRDisplays) {
 
 ## Specifications
 
-| Specification                                                                        | Status                       | Comment            |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#interface-vrdisplay', 'VRDisplay')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,8 +1,6 @@
 ---
 title: CSS Ruby Layout
 slug: Web/CSS/CSS_ruby_layout
-translation_of: Web/CSS/CSS_Ruby
-original_slug: Web/CSS/CSS_Ruby
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: aural
 slug: Web/CSS/@media/aural
-original_slug: Web/CSS/aural
 ---
 
 {{CSSRef}} {{deprecated_header}}

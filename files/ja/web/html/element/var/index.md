@@ -1,5 +1,5 @@
 ---
-title: '<var>: 変数要素'
+title: "<var>: 変数要素"
 slug: Web/HTML/Element/var
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Same-origin policy
 slug: Web/Security/Same-origin_policy
-translation_of: Web/Security/Same-origin_policy
 ---
 
 **Политика одинакового источника** (same-origin policy) определяет как документ или скрипт, загруженный из одного источника ({{Glossary("origin")}}), может взаимодействовать с ресурсом из другого источника. Это помогает изолировать потенциально вредоносные документы, снижая количество возможных векторов атак.

@@ -1,7 +1,6 @@
 ---
 title: omnibox.SuggestResult
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/SuggestResult
-translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/SuggestResult
 ---
 
 {{AddonSidebar()}}

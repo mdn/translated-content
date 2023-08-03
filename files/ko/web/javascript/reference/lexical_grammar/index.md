@@ -79,7 +79,7 @@ slug: Web/JavaScript/Reference/Lexical_grammar
 
 ## 개행 문자
 
-공백문자와 더불어, 개행 문자는 소스 본문의 가독성을 향상시킵니다. 하지만, 몇몇 상황에서 개행 문자는 코드 내부에 숨겨지기 때문에 자바스크립트 코드 실행에 영향을 미칩니다. 개행 문자는 자동 새미콜론 삽입([automatic semicolon insertion](#Automatic_semicolon_insertion)) 규칙에도 영향을 줍니다. 개행 문자는 표준 표현방식([regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))의 클래스인 \s로 매치됩니다.
+공백문자와 더불어, 개행 문자는 소스 본문의 가독성을 향상시킵니다. 하지만, 몇몇 상황에서 개행 문자는 코드 내부에 숨겨지기 때문에 자바스크립트 코드 실행에 영향을 미칩니다. 개행 문자는 자동 새미콜론 삽입([automatic semicolon insertion](#Automatic_semicolon_insertion)) 규칙에도 영향을 줍니다. 개행 문자는 표준 표현방식([regular expressions](/ko/docs/Web/JavaScript/Guide/Regular_Expressions))의 클래스인 \s로 매치됩니다.
 
 아래의 유니코드 문자만이 ECMAScript에서 라인 종결자로 다뤄지며, 라인을 바꾸는 다른 문자들은 공백으로 생각하시면 됩니다(예를 들어, Next Line, NEL, U+0085는 공백으로 간주).
 
@@ -274,7 +274,7 @@ function import() {} // Illegal.
 
 ### Null 리터럴
 
-See also [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) for more information.
+See also [`null`](/ko/docs/Web/JavaScript/Reference/Global_Objects/null) for more information.
 
 ```js
 null
@@ -282,7 +282,7 @@ null
 
 ### 불리언 리터럴
 
-See also [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) for more information.
+See also [`Boolean`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean) for more information.
 
 ```js
 true
@@ -302,7 +302,7 @@ false
 0777 // parsed as octal, 511 in decimal
 ```
 
-Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but If all digits after the leading `0` are smaller than 8, the number is interpreted as an octal number. This won't throw in JavaScript, see [Firefox bug 957513](https://bugzil.la/957513). See also the page about [`parseInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix).
+Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but If all digits after the leading `0` are smaller than 8, the number is interpreted as an octal number. This won't throw in JavaScript, see [Firefox bug 957513](https://bugzil.la/957513). See also the page about [`parseInt()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix).
 
 ##### Exponential
 
@@ -319,7 +319,7 @@ The decimal exponential literal is specified by the following format: `beN`; whe
 
 #### 2진법
 
-Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). Because this syntax is new in ECMAScript 2015, see the browser compatibility table, below. If the digits after the `0b` are not 0 or 1, the following [`SyntaxError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) is thrown: "Missing binary digits after 0b".
+Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). Because this syntax is new in ECMAScript 2015, see the browser compatibility table, below. If the digits after the `0b` are not 0 or 1, the following [`SyntaxError`](/ko/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) is thrown: "Missing binary digits after 0b".
 
 ```js
 var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
@@ -329,7 +329,7 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 
 #### 8진법
 
-Octal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (`0o` or `0O)`. Because this syntax is new in ECMAScript 2015, see the browser compatibility table, below. If the digits after the `0o` are outside the range (01234567), the following [`SyntaxError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) is thrown: "Missing octal digits after 0o".
+Octal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (`0o` or `0O)`. Because this syntax is new in ECMAScript 2015, see the browser compatibility table, below. If the digits after the `0o` are outside the range (01234567), the following [`SyntaxError`](/ko/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) is thrown: "Missing octal digits after 0o".
 
 ```js
 var n = 0O755; // 493
@@ -342,7 +342,7 @@ var m = 0o644; // 420
 
 #### 16진법
 
-Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X)`. If the digits after 0x are outside the range (0123456789ABCDEF), the following [`SyntaxError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) is thrown: "Identifier starts immediately after numeric literal".
+Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X)`. If the digits after 0x are outside the range (0123456789ABCDEF), the following [`SyntaxError`](/ko/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) is thrown: "Identifier starts immediately after numeric literal".
 
 ```js
 0xFFFFFFFFFFFFFFFFF // 295147905179352830000
@@ -374,7 +374,7 @@ For octal `BigInt` numbers, always use zero followed by the letter "o" (uppercas
 0o755n
 ```
 
-For more information about `BigInt`, see also [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures#BigInt_type).
+For more information about `BigInt`, see also [JavaScript data structures](/ko/docs/Web/JavaScript/Data_structures#BigInt_type).
 
 #### Numeric separators
 
@@ -413,7 +413,7 @@ Note these limitations:
 
 ### 객체 리터럴
 
-See also {{jsxref("Object")}} and [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) for more information.
+See also {{jsxref("Object")}} and [Object initializer](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer) for more information.
 
 ```js
 var o = { a: 'foo', b: 'bar', c: 42 };
@@ -484,7 +484,7 @@ See also {{jsxref("String.fromCodePoint()")}} and {{jsxref("String.prototype.cod
 
 ### 정규 표현식 리터럴
 
-See also [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) for more information.
+See also [`RegExp`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp) for more information.
 
 ```js
 /ab+c/g
@@ -497,7 +497,7 @@ See also [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) 
 
 ### 템플릿 리터럴
 
-See also [template strings](/en-US/docs/Web/JavaScript/Reference/template_strings) for more information.
+See also [template strings](/ko/docs/Web/JavaScript/Reference/template_strings) for more information.
 
 ```js
 `string text`
@@ -512,7 +512,7 @@ tag `string text ${expression} string text`
 
 ## 자동 세미콜론 삽입
 
-Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements) must be terminated with semicolons and are therefore affected by automatic semicolon insertion (ASI):
+Some [JavaScript statements](/ko/docs/Web/JavaScript/Reference/Statements) must be terminated with semicolons and are therefore affected by automatic semicolon insertion (ASI):
 
 - Empty statement
 - `let`, `const`, variable statement
@@ -536,7 +536,7 @@ The ECMAScript specification mentions [three rules of semicolon insertion](https
 
 2. A semicolon is inserted at the end, when the end of the input stream of tokens is detected and the parser is unable to parse the single input stream as a complete program.
 
-    Here `++` is not treated as a [postfix operator](/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment) applying to variable `b`, because a line terminator occurs between `b` and `++`.
+    Here `++` is not treated as a [postfix operator](/ko/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment) applying to variable `b`, because a line terminator occurs between `b` and `++`.
 
     ```js
     a = b

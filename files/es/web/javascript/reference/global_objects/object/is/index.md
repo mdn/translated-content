@@ -1,7 +1,6 @@
 ---
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/is
 ---
 
 {{JSRef}}

@@ -56,15 +56,15 @@ Se aceptan los siguientes valores:
 ```html
 <h4>Esto es un Column-Reverse</h4>
 <div id="content">
-    <div class="box" style="background-color:red;">A</div>
-    <div class="box" style="background-color:lightblue;">B</div>
-    <div class="box" style="background-color:yellow;">C</div>
+  <div class="box" style="background-color:red;">A</div>
+  <div class="box" style="background-color:lightblue;">B</div>
+  <div class="box" style="background-color:yellow;">C</div>
 </div>
 <h4>Esto es un Row-Reverse</h4>
 <div id="content1">
-    <div class="box1" style="background-color:red;">A</div>
-    <div class="box1" style="background-color:lightblue;">B</div>
-    <div class="box1" style="background-color:yellow;">C</div>
+  <div class="box1" style="background-color:red;">A</div>
+  <div class="box1" style="background-color:lightblue;">B</div>
+  <div class="box1" style="background-color:yellow;">C</div>
 </div>
 ```
 

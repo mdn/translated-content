@@ -54,7 +54,7 @@ slug: Learn/CSS/CSS_layout/Flexbox
 
 ```css
 section {
-  display:flex
+  display: flex;
 }
 ```
 
@@ -102,7 +102,7 @@ flex-direction: column;
 在这里我们看到，子代确实超出了它们的容器。解决此问题的一种方法是将以下声明添加到 section css 规则中：
 
 ```css
-flex-wrap: wrap
+flex-wrap: wrap;
 ```
 
 同时，把以下规则也添加到 {{htmlelement("article")}} 规则中：

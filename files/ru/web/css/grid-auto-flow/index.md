@@ -1,7 +1,6 @@
 ---
 title: grid-auto-flow
 slug: Web/CSS/grid-auto-flow
-translation_of: Web/CSS/grid-auto-flow
 ---
 CSS-свойство управляет поведением автоматически размещаемых элементов, точно указывая, как они попадают в сетку.
 

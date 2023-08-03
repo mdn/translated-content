@@ -40,7 +40,7 @@ HTTP/1.1 표준은 서버 주도 협상을 시작하는 표준 헤더 목록({{H
 
 {{HTTPHeader("Accept")}} 헤더는 에이전트가 처리하고자 하는 미디어 리소스의 MIME 타입을 나열합니다. 그것은 MIME 타입을 쉼표로 구분한 목록이며, 각각 품질 인자와 함께 나열되어 있으며, 다른 MIME 타입 사이의 상대적인 선호도를 나타내는 파라메터이기도 합니다.
 
-{{HTTPHeader("Accept")}} 헤더는 브라우저나 다른 에이전트에 의해 정의되며 HTML 페이지 혹은 이미지나 비디오 또는 스크립트들을 가져오는 것처럼, 컨텍스트에 따라 다양해질 수 있습니다: 주소창에 입력된 문서를 내려 받을 때와 {{ HTMLElement("img") }}, {{ HTMLElement("video") }} 혹은 {{ HTMLElement("audio") }} 엘리먼트를 통해 링크된 요소를 내려받을 때가 다릅니다. 브라우저는 그들이 판단하기에 가장 적절한 헤더의 값을 마음껏 사용할 것입니다. [일반적인 브라우저를 위한 기본적인 값](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values)의 전체 목록을 참고하기 바랍니다.
+{{HTTPHeader("Accept")}} 헤더는 브라우저나 다른 에이전트에 의해 정의되며 HTML 페이지 혹은 이미지나 비디오 또는 스크립트들을 가져오는 것처럼, 컨텍스트에 따라 다양해질 수 있습니다: 주소창에 입력된 문서를 내려 받을 때와 {{ HTMLElement("img") }}, {{ HTMLElement("video") }} 혹은 {{ HTMLElement("audio") }} 엘리먼트를 통해 링크된 요소를 내려받을 때가 다릅니다. 브라우저는 그들이 판단하기에 가장 적절한 헤더의 값을 마음껏 사용할 것입니다. [일반적인 브라우저를 위한 기본적인 값](/ko/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values)의 전체 목록을 참고하기 바랍니다.
 
 ### `Accept-CH` 헤더 {{experimental_inline}}
 

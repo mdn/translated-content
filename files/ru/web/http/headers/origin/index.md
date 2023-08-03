@@ -1,8 +1,6 @@
 ---
 title: Origin
 slug: Web/HTTP/Headers/Origin
-translation_of: Web/HTTP/Headers/Origin
-original_slug: Web/HTTP/Заголовки/Origin
 ---
 {{HTTPSidebar}}Заголовок запроса **`Origin`** показывает откуда будет производиться загрузка. Он не включает в себя какую-либо информацию о пути, содержит в себе лишь имя сервера. Заголовок отправляется как с {{Glossary("CORS")}}, так и с {{HTTPMethod("POST")}} запросами. Он похож на заголовок {{HTTPHeader("Referer")}}, но, в отличие от этого заголовка, не раскрывает весь путь.
 

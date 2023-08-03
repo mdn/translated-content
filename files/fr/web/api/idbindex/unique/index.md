@@ -1,13 +1,6 @@
 ---
 title: IDBIndex.unique
 slug: Web/API/IDBIndex/unique
-tags:
-  - API
-  - IDBIndex
-  - IndexedDB
-  - Propriété
-  - Reference
-translation_of: Web/API/IDBIndex/unique
 ---
 
 {{APIRef("IndexedDB")}}
@@ -21,7 +14,7 @@ Cette caractéristique est décidée lors de la création de l'index, avec la m�
 ## Syntaxe
 
 ```js
-var myIndex = objectStore.index('index');
+var myIndex = objectStore.index("index");
 ```
 
 ### Valeur
@@ -38,33 +31,50 @@ Enfin, on parcourt chaque enregistrement et on insère les données dans le tabl
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = '';
-  var transaction = db.transaction(['contactsList'], 'readonly');
-  var objectStore = transaction.objectStore('contactsList');
+  tableEntry.innerHTML = "";
+  var transaction = db.transaction(["contactsList"], "readonly");
+  var objectStore = transaction.objectStore("contactsList");
 
-  var myIndex = objectStore.index('lName');
+  var myIndex = objectStore.index("lName");
   console.log(myIndex.unique);
 
-  myIndex.openCursor().onsuccess = function(event) {
+  myIndex.openCursor().onsuccess = function (event) {
     var cursor = event.target.result;
-    if(cursor) {
-      var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
-                           + '<td>' + cursor.value.lName + '</td>'
-                           + '<td>' + cursor.value.fName + '</td>'
-                           + '<td>' + cursor.value.jTitle + '</td>'
-                           + '<td>' + cursor.value.company + '</td>'
-                           + '<td>' + cursor.value.eMail + '</td>'
-                           + '<td>' + cursor.value.phone + '</td>'
-                           + '<td>' + cursor.value.age + '</td>';
+    if (cursor) {
+      var tableRow = document.createElement("tr");
+      tableRow.innerHTML =
+        "<td>" +
+        cursor.value.id +
+        "</td>" +
+        "<td>" +
+        cursor.value.lName +
+        "</td>" +
+        "<td>" +
+        cursor.value.fName +
+        "</td>" +
+        "<td>" +
+        cursor.value.jTitle +
+        "</td>" +
+        "<td>" +
+        cursor.value.company +
+        "</td>" +
+        "<td>" +
+        cursor.value.eMail +
+        "</td>" +
+        "<td>" +
+        cursor.value.phone +
+        "</td>" +
+        "<td>" +
+        cursor.value.age +
+        "</td>";
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
     } else {
-      console.log('Les éléments sont affichés.');
+      console.log("Les éléments sont affichés.");
     }
   };
-};
+}
 ```
 
 ## Spécifications

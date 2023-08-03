@@ -1,7 +1,6 @@
 ---
 title: Firefox 65 для разработчиков
 slug: Mozilla/Firefox/Releases/65
-translation_of: Mozilla/Firefox/Releases/65
 ---
 
 {{FirefoxSidebar}}
@@ -80,7 +79,8 @@ translation_of: Mozilla/Firefox/Releases/65
   - `user-select: all`, установленное на элемент, больше не перекрывает значения `user-select` дочерних элементов. Пример:
 
     ```html
-    <div style="-webkit-user-select: all">All
+    <div style="-webkit-user-select: all">
+      All
       <div style="-webkit-user-select: none">None</div>
     </div>
     ```

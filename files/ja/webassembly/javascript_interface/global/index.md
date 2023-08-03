@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Global
 slug: WebAssembly/JavaScript_interface/Global
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 ---
 
 {{WebAssemblySidebar}}
@@ -40,28 +39,36 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 その後この値は、`Global.value` プロパティを使うことによって `42` に、`global.wasm` モジュールから公開された (どんな値が与えられても 1 を加算して、新しい値を返す) `incGlobal()` 関数を使うことによって `43` になります。
 
 ```js
-const output = document.getElementById('output');
+const output = document.getElementById("output");
 
 function assertEq(msg, got, expected) {
   output.innerHTML += `Testing ${msg}: `;
   if (got !== expected)
     output.innerHTML += `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
-  else
-    output.innerHTML += `SUCCESS! Got: ${got}<br>`;
+  else output.innerHTML += `SUCCESS! Got: ${got}<br>`;
 }
 
 assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
 
-const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 
-WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
-.then(({instance}) => {
-    assertEq("getting initial value from wasm", instance.exports.getGlobal(), 0);
+WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
+  ({ instance }) => {
+    assertEq(
+      "getting initial value from wasm",
+      instance.exports.getGlobal(),
+      0,
+    );
     global.value = 42;
-    assertEq("getting JS-updated value from wasm", instance.exports.getGlobal(), 42);
+    assertEq(
+      "getting JS-updated value from wasm",
+      instance.exports.getGlobal(),
+      42,
+    );
     instance.exports.incGlobal();
     assertEq("getting wasm-updated value from JS", global.value, 43);
-});
+  },
+);
 ```
 
 > **メモ:** この例は[GitHub 上の実行例](https://mdn.github.io/webassembly-examples/js-api-examples/global.html)で確認できます。また、[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html)も参照してください。

@@ -1,15 +1,6 @@
 ---
-title: ':defined'
+title: ":defined"
 slug: Web/CSS/:defined
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-translation_of: Web/CSS/:defined
-browser-compat: css.selectors.defined
 ---
 
 {{CSSRef}}
@@ -39,18 +30,19 @@ Les fragments de code qui suivent sont tirés [du dépôt `defined-pseudo-class`
 Pour cette démonstration on définit un élément personnalisé trivial :
 
 ```js
-customElements.define('simple-custom',
+customElements.define(
+  "simple-custom",
   class extends HTMLElement {
     constructor() {
       super();
 
-      let divElem = document.createElement('div');
-      divElem.textContent = this.getAttribute('text');
+      let divElem = document.createElement("div");
+      divElem.textContent = this.getAttribute("text");
 
-      let shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(divElem);
-  }
-})
+      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
+    }
+  },
+);
 ```
 
 On insère ensuite une copie de cet élément dans le document, à côté d'un paragraphe classique `<p>` :

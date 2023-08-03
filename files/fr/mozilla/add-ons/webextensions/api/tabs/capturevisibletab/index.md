@@ -1,7 +1,6 @@
 ---
 title: tabs.captureVisibleTab()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
 ---
 
 {{AddonSidebar()}}
@@ -14,9 +13,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var capturing = browser.tabs.captureVisibleTab(
-  windowId,               // optional integer
-  options                 // optional extensionTypes.ImageDetails
-)
+  windowId, // optional integer
+  options, // optional extensionTypes.ImageDetails
+);
 ```
 
 ### Paramètres
@@ -43,7 +42,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var capturing = browser.tabs.captureVisibleTab();
   capturing.then(onCaptured, onError);
 });

@@ -1,7 +1,6 @@
 ---
 title: Параметр "codecs" для распространённых типов носителей
 slug: Web/Media/Formats/codecs_parameter
-translation_of: Web/Media/Formats/codecs_parameter
 ---
 
 {{QuickLinksWithSubpages("/ru/docs/Web/Media")}}
@@ -541,7 +540,7 @@ The first five components are required; everything from `cp` (color primaries) o
         <p>
           A two-digit value indicating which chroma subsampling format to use.
           The following table lists permitted values; see
-          {{SectionOnPage("en-US/docs/Web/Media/Formats/Video_concepts", "Chroma subsampling")}}
+          {{SectionOnPage("/en-US/docs/Web/Media/Formats/Video_concepts", "Chroma subsampling")}}
           for additional information about this topic and others.
         </p>
         <table class="standard-table">

@@ -1,8 +1,6 @@
 ---
 title: Validation des données de formulaires
 slug: Learn/Forms/Form_validation
-translation_of: Learn/Forms/Form_validation
-original_slug: Web/Guide/HTML/Formulaires/Validation_donnees_formulaire
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
@@ -88,7 +86,7 @@ Commençons par un exemple simple — une entrée ouvrant un choix, selon votre 
 ```html hidden
 <form>
   <label for="choose">Préférez‑vous la banane ou la cerise&nbsp;?</label>
-  <input id="choose" name="i_like">
+  <input id="choose" name="i_like" />
   <button>Soumettre</button>
 </form>
 ```
@@ -116,7 +114,7 @@ Ajoutez un attribut `required` à votre saisie, comme montré ci‑dessous&nbsp;
 ```html
 <form>
   <label for="choose">Préférez-vous la banane ou la cerise&nbsp;?</label>
-  <input id="choose" name="i_like" required>
+  <input id="choose" name="i_like" required />
   <button>Soumettre</button>
 </form>
 ```
@@ -171,7 +169,7 @@ Voyons un exemple — mettons à jour notre HTML en y ajoutant un attribut `patt
 ```html
 <form>
   <label for="choose">Préférez‑vous la banane ou la cerise&nbsp;?</label>
-  <input id="choose" name="i_like" required pattern="banane|cerise">
+  <input id="choose" name="i_like" required pattern="banane|cerise" />
   <button>Soumettre</button>
 </form>
 ```
@@ -210,11 +208,11 @@ Supprimez maintenant le contenu de l'élément `<body>` et remplacez-le par le s
 <form>
   <div>
     <label for="choose">Préférez‑vous la banane ou la cerise&nbsp;?</label>
-    <input id="choose" name="i_like" required minlength="6" maxlength="6">
+    <input id="choose" name="i_like" required minlength="6" maxlength="6" />
   </div>
   <div>
     <label for="number">Combien en voulez‑vous&nbsp;?</label>
-    <input type="number" id="number" name="amount" value="1" min="1" max="10">
+    <input type="number" id="number" name="amount" value="1" min="1" max="10" />
   </div>
   <div>
     <button>Soumettre</button>
@@ -225,7 +223,7 @@ Supprimez maintenant le contenu de l'élément `<body>` et remplacez-le par le s
 - Ici, nous avons donné au champ de texte une taille minimale et maximale de 6 caractères — la même que celle de _banane_ ou _cerise_. La saisie de moins de 6 caractères s'affichera comme non valide et la saisie de plus de 6 caractères ne sera pas possible dans la plupart des navigateurs.
 - Nous avons également contraint le champ `number` à un `min` de 1 et un `max` de 10 — les nombres entrés hors de cette plage seront affichés comme non valides, et vous ne pourrez pas utiliser les flèches d'incrémentation/décrémentation pour porter la valeur en dehors de cette plage.
 
-```html hidden
+```css hidden
 input:invalid {
   border: 2px dashed red;
 }
@@ -298,7 +296,7 @@ Voici un exemple complet montrant l'utilisation des fonctionnalités HTML intég
 body {
   font: 1em sans-serif;
   padding: 0;
-  margin : 0;
+  margin: 0;
 }
 
 form {
@@ -311,16 +309,16 @@ p > label {
   display: block;
 }
 
-input[type=text],
-input[type=email],
-input[type=number],
+input[type="text"],
+input[type="email"],
+input[type="number"],
 textarea,
 fieldset {
-/* requis pour composer de manière appropriée les éléments
+  /* requis pour composer de manière appropriée les éléments
    de formulaire sur les navigateurs fondés sur WebKit */
   -webkit-appearance: none;
 
-  width : 100%;
+  width: 100%;
   border: 1px solid #333;
   margin: 0;
 
@@ -364,7 +362,7 @@ HMTL5 fournit une [API de contraintes de validation](https://www.w3.org/TR/html5
 ```html
 <form>
   <label for="mail">Pourriez-vous nous fournir une adresse mail ?</label>
-  <input type="email" id="mail" name="mail">
+  <input type="email" id="mail" name="mail" />
   <button>Envoyer</button>
 </form>
 ```
@@ -375,7 +373,7 @@ En JavaScript, il faut appeler la méthode [`setCustomValidity()`](</fr/docs/HTM
 var email = document.getElementById("mail");
 
 email.addEventListener("keyup", function (event) {
-  if(email.validity.typeMismatch) {
+  if (email.validity.typeMismatch) {
     email.setCustomValidity("J'attends un e-mail, mon cher !");
   } else {
     email.setCustomValidity("");
@@ -398,23 +396,23 @@ Propriétés de l'API de validation des contraintes
 | Propriétés                 | Description                                                                                                                                                                                                                                                                                  |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `validationMessage`        | Un message (dans la langue locale) décrivant les contraintes de validation que le contrôle ne satisfait pas (si c'est le cas), ou une chaîne vide si le contrôle n'est pas soumis à validation (`willValidate` est alors `false`), ou bien la valeur de l'élément satisfait ses contraintes. |
-| `validity`                 | Un objet {{domxref("ValidityState")}} qui décrit l'état de validité de l'élément.                                                                                                                                                                                                    |
+| `validity`                 | Un objet {{domxref("ValidityState")}} qui décrit l'état de validité de l'élément.                                                                                                                                                                                                            |
 | `validity.customError`     | Renvoie `true` si l'élément à une erreur personnalisée, `false` a contrario.                                                                                                                                                                                                                 |
-| `validity.patternMismatch` | Renvoie `true` si la valeur de l'élément ne correspond pas au motif fourni, `false` dans le cas contraire. Si la méthode renvoie `true`, l'élément fera partie de la pseudo-classe CSS {{cssxref(":invalid")}}.                                                                     |
-| `validity.rangeOverflow`   | Renvoie `true` si la valeur de l'élément est supérieure au maximum défini, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                                   |
-| `validity.rangeUnderflow`  | Renvoie `true` si la valeur de l'élément est plus petite que le minimum défini, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                               |
-| `validity.stepMismatch`    | Renvoie `true` si la valeur de l'élément ne correspond pas aux règles définies par l'attribut `step`, `false` a contrario. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                    |
-| `validity.tooLong`         | Renvoie `true` si la taille de l'élément est supérieure à la longueur maximum définie, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                        |
-| `validity.typeMismatch`    | Renvoie `true` si la syntaxe de la valeur de l'élément n'est pas correcte ; `false` dans le cas contraire. Si le retour est `true`, l'élément sera de la pseudo-classe CSS {{cssxref(":invalid")}}.                                                                                 |
-| `validity.valid`           | Renvoie `true` si la valeur de l'élément n'a pas de problème de validité, sinon `false`. L'élément sera de la pseudo-classe CSS {{cssxref(":valid")}} si le retour est `true`&nbsp;; de la pseudo-classe CSS {{cssxref(":invalid")}} si le retour est `false`.                    |
-| `validity.valueMissing`    | Renvoie `true` si l'élément n'a pas de valeur alors que le champ est requis, sinon `false`. L'élément sera de la pseudo-classe CSS {{cssxref(":invalid")}} si le retour est `true`.                                                                                                  |
+| `validity.patternMismatch` | Renvoie `true` si la valeur de l'élément ne correspond pas au motif fourni, `false` dans le cas contraire. Si la méthode renvoie `true`, l'élément fera partie de la pseudo-classe CSS {{cssxref(":invalid")}}.                                                                              |
+| `validity.rangeOverflow`   | Renvoie `true` si la valeur de l'élément est supérieure au maximum défini, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                                                     |
+| `validity.rangeUnderflow`  | Renvoie `true` si la valeur de l'élément est plus petite que le minimum défini, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                                                |
+| `validity.stepMismatch`    | Renvoie `true` si la valeur de l'élément ne correspond pas aux règles définies par l'attribut `step`, `false` a contrario. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                                    |
+| `validity.tooLong`         | Renvoie `true` si la taille de l'élément est supérieure à la longueur maximum définie, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                                         |
+| `validity.typeMismatch`    | Renvoie `true` si la syntaxe de la valeur de l'élément n'est pas correcte ; `false` dans le cas contraire. Si le retour est `true`, l'élément sera de la pseudo-classe CSS {{cssxref(":invalid")}}.                                                                                          |
+| `validity.valid`           | Renvoie `true` si la valeur de l'élément n'a pas de problème de validité, sinon `false`. L'élément sera de la pseudo-classe CSS {{cssxref(":valid")}} si le retour est `true`&nbsp;; de la pseudo-classe CSS {{cssxref(":invalid")}} si le retour est `false`.                               |
+| `validity.valueMissing`    | Renvoie `true` si l'élément n'a pas de valeur alors que le champ est requis, sinon `false`. L'élément sera de la pseudo-classe CSS {{cssxref(":invalid")}} si le retour est `true`.                                                                                                          |
 | `willValidate`             | Retourne `true` si l'élément est validé lorsque le formulaire est soumis, `false` dans le cas contraire.                                                                                                                                                                                     |
 
 #### Méthodes de l'API de validation des contraintes
 
-| Méthodes                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `checkValidity()`            | Renvoie `true` si la valeur de l'élément n'a pas de problème de validation, `false` autrement. Si l'élément est invalide, cette méthode déclenche aussi un événement [`invalid`](/fr//docs/Web/API/HTMLInputElement/invalid_event) sur cet élément.                                                                                                                                                                                                                                                                                                                     |
+| Méthodes                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `checkValidity()`            | Renvoie `true` si la valeur de l'élément n'a pas de problème de validation, `false` autrement. Si l'élément est invalide, cette méthode déclenche aussi un événement [`invalid`](/fr//docs/Web/API/HTMLInputElement/invalid_event) sur cet élément.                                                                                                                                                                                                                                                                                         |
 | `setCustomValidity(message)` | Ajoute un message d'erreur personnalisé à l'élément&nbsp;; si vous définissez un message d'erreur personnalisé, l'élément est considéré comme invalide, et le message spécifié est affiché. Cela vous permet d'utiliser du code JavaScript pour établir une erreur de validation autre que celles offertes par l'API standard des contraintes de validation. Le message est affiché à l'utilisateur lorsque le problème est rapporté. Si l'argument est une chaîne de caractères vide, l'erreur personnalisée est considérée comme effacée. |
 
 Pour les anciens navigateurs, il existe [une prothèse d'émulation (_polyfill_) comme Hyperform](https://hyperform.js.org/), pour compenser le défaut de prise en charge de cette API. Comme vous utilisez déjà JavaScript, l'utilisation d'une prethèse d'émulation n'est pas un souci supplémentaire pour la conception ou l'implémentation de votre site ou application Web.
@@ -428,11 +426,14 @@ Voyons comment utiliser l'API pour créer des messages d'erreur personnalisés. 
   <p>
     <label for="mail">
       <span>Veuillez saisir une adresse e-mail :</span>
-      <input type="email" id="mail" name="mail">
+      <input type="email" id="mail" name="mail" />
       <span class="error" aria-live="polite"></span>
     </label>
+  </p>
+
   <p>
-  <button>Envoyer</button>
+    <button>Envoyer</button>
+  </p>
 </form>
 ```
 
@@ -449,7 +450,7 @@ Ce CSS compose le formulaire et les messages d'erreur pour les rendre plus attra
 body {
   font: 1em sans-serif;
   padding: 0;
-  margin : 0;
+  margin: 0;
 }
 
 form {
@@ -460,7 +461,7 @@ p * {
   display: block;
 }
 
-input[type=email]{
+input[type="email"] {
   -webkit-appearance: none;
 
   width: 100%;
@@ -475,9 +476,9 @@ input[type=email]{
 }
 
 /* Voici notre composition pour les champs invalides */
-input:invalid{
+input:invalid {
   border-color: #900;
-  background-color: #FDD;
+  background-color: #fdd;
 }
 
 input:focus:invalid {
@@ -486,7 +487,7 @@ input:focus:invalid {
 
 /* Voici la mise en forme pour les erreurs */
 .error {
-  width  : 100%;
+  width: 100%;
   padding: 0;
 
   font-size: 80%;
@@ -512,32 +513,40 @@ Le code JavaScript suivant gère la validation personnalisée des erreurs.
 // le formulaire et le champ d'e-mail ainsi que l'élément span
 // dans lequel on placera le message d'erreur
 
-var form  = document.getElementsByTagName('form')[0];
-var email = document.getElementById('mail');
-var error = document.querySelector('.error');
+var form = document.getElementsByTagName("form")[0];
+var email = document.getElementById("mail");
+var error = document.querySelector(".error");
 
-email.addEventListener("input", function (event) {
-  // Chaque fois que l'utilisateur saisit quelque chose
-  // on vérifie la validité du champ e-mail.
-  if (email.validity.valid) {
-    // S'il y a un message d'erreur affiché et que le champ
-    // est valide, on retire l'erreur
-    error.innerHTML = ""; // On réinitialise le contenu
-    error.className = "error"; // On réinitialise l'état visuel du message
-  }
-}, false);
-form.addEventListener("submit", function (event) {
-  // Chaque fois que l'utilisateur tente d'envoyer les données
-  // on vérifie que le champ email est valide.
-  if (!email.validity.valid) {
-
-    // S'il est invalide, on affiche un message d'erreur personnalisé
-    error.innerHTML = "J'attends une adresse e-mail correcte, mon cher&nbsp;!";
-    error.className = "error active";
-    // Et on empêche l'envoi des données du formulaire
-    event.preventDefault();
-  }
-}, false);
+email.addEventListener(
+  "input",
+  function (event) {
+    // Chaque fois que l'utilisateur saisit quelque chose
+    // on vérifie la validité du champ e-mail.
+    if (email.validity.valid) {
+      // S'il y a un message d'erreur affiché et que le champ
+      // est valide, on retire l'erreur
+      error.innerHTML = ""; // On réinitialise le contenu
+      error.className = "error"; // On réinitialise l'état visuel du message
+    }
+  },
+  false,
+);
+form.addEventListener(
+  "submit",
+  function (event) {
+    // Chaque fois que l'utilisateur tente d'envoyer les données
+    // on vérifie que le champ email est valide.
+    if (!email.validity.valid) {
+      // S'il est invalide, on affiche un message d'erreur personnalisé
+      error.innerHTML =
+        "J'attends une adresse e-mail correcte, mon cher&nbsp;!";
+      error.className = "error active";
+      // Et on empêche l'envoi des données du formulaire
+      event.preventDefault();
+    }
+  },
+  false,
+);
 ```
 
 Voici le résultat:
@@ -573,14 +582,17 @@ Afin d'illustrer le propos, réécrivons le précédent exemple afin qu'il fonct
 <form>
   <p>
     <label for="mail">
-        <span>Veuillez saisir une adresse e-mail :</span>
-        <input type="text" class="mail" id="mail" name="mail">
-        <span class="error" aria-live="polite"></span>
+      <span>Veuillez saisir une adresse e-mail :</span>
+      <input type="text" class="mail" id="mail" name="mail" />
+      <span class="error" aria-live="polite"></span>
     </label>
+  </p>
+
   <p>
-  <!-- Certains navigateurs historiques ont besoin de l'attribut
+    <!-- Certains navigateurs historiques ont besoin de l'attribut
        `type` avec la valeur `submit` sur l'élément `button` -->
-  <button type="submit">Envoyer</button>
+    <button type="submit">Envoyer</button>
+  </p>
 </form>
 ```
 
@@ -595,7 +607,7 @@ De même, nous n'avons pas eu à changer radicalement les CSS&nbsp;; nous avons 
 body {
   font: 1em sans-serif;
   padding: 0;
-  margin : 0;
+  margin: 0;
 }
 
 form {
@@ -621,9 +633,9 @@ input.mail {
 }
 
 /* Voici les règles de mise en forme pour les champs invalides */
-input.invalid{
+input.invalid {
   border-color: #900;
-  background-color: #FDD;
+  background-color: #fdd;
 }
 
 input:focus.invalid {
@@ -632,7 +644,7 @@ input:focus.invalid {
 
 /* Voici les règles utilisées pour les messages d'erreur */
 .error {
-  width  : 100%;
+  width: 100%;
   padding: 0;
 
   font-size: 80%;
@@ -656,8 +668,8 @@ Les changements les plus importants sont dans le code JavaScript, qui nécessite
 ```js
 // Il existe moins de méthode pour sélectionner un nœud DOM
 // avec les navigateurs historiques
-var form  = document.getElementsByTagName('form')[0];
-var email = document.getElementById('mail');
+var form = document.getElementsByTagName("form")[0];
+var email = document.getElementById("mail");
 
 // Ce qui suit est une bidouille pour atteindre le prochain nœud Element dans le DOM
 // Attention à cette méthode, elle peut permettre de construire une boucle
@@ -666,13 +678,14 @@ var error = email;
 while ((error = error.nextSibling).nodeType != 1);
 
 // Pour respecter la spécification HTML5
-var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+var emailRegExp =
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 // De nombreux navigateurs historiques ne supportent pas la méthode
 // addEventListener. Voici une méthode simple (il en existe d'autres)
 function addEvent(element, event, callback) {
-  var previousEventCallBack = element["on"+event];
-  element["on"+event] = function (e) {
+  var previousEventCallBack = element["on" + event];
+  element["on" + event] = function (e) {
     var output = callback(e);
 
     // Une fonction de rappel (callback) qui renvoie `false`
@@ -680,12 +693,12 @@ function addEvent(element, event, callback) {
     // et interrompre l'exécution du callback d'événement.
     if (output === false) return false;
 
-    if (typeof previousEventCallBack === 'function') {
+    if (typeof previousEventCallBack === "function") {
       output = previousEventCallBack(e);
-      if(output === false) return false;
+      if (output === false) return false;
     }
-  }
-};
+  };
+}
 
 // On peut désormais reconstruire notre validation de contrainte
 // Étant donné qu'on n'utilise pas la pseudo-classe CSS, il faut

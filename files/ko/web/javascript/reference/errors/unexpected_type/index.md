@@ -51,7 +51,7 @@ Object.create(foo); // TypeError: "foo" is not an object or null
 
 ### Fixing the issue
 
-undefined 나 null 값을 가진 null 포인터를 고치기 위해서 아래 예제와 같이 [typeof](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) 연산자를 사용할 수 있다.
+undefined 나 null 값을 가진 null 포인터를 고치기 위해서 아래 예제와 같이 [typeof](/ko/docs/Web/JavaScript/Reference/Operators/typeof) 연산자를 사용할 수 있다.
 
 ```js
 if (typeof foo !== 'undefined') {

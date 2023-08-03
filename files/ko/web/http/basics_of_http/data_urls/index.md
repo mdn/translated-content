@@ -1,7 +1,6 @@
 ---
 title: 데이터 URIs
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
-original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
 
 {{HTTPSidebar}}

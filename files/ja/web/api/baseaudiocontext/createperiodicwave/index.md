@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createPeriodicWave()
 slug: Web/API/BaseAudioContext/createPeriodicWave
-original_slug: Web/API/AudioContext/createPeriodicWave
 ---
 
 {{ APIRef("Web Audio API") }}

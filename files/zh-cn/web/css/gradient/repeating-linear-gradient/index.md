@@ -1,7 +1,6 @@
 ---
 title: repeating-linear-gradient()
 slug: Web/CSS/gradient/repeating-linear-gradient
-original_slug: Web/CSS/gradient/repeating-linear-gradient()
 ---
 
 {{CSSRef}}
@@ -59,27 +58,33 @@ where <side-or-corner> = [left | right] || [top | bottom]
 
 ```css
 #grad1 {
-  background-image: repeating-linear-gradient(180deg,
-      rgb(26,198,204),
-      rgb(26,198,204) 7%,
-      rgb(100,100,100) 10%);
+  background-image: repeating-linear-gradient(
+    180deg,
+    rgb(26, 198, 204),
+    rgb(26, 198, 204) 7%,
+    rgb(100, 100, 100) 10%
+  );
 }
 
 #grad2 {
-  background-image: repeating-linear-gradient(-45deg,
-      transparent,
-      transparent 25px,
-      rgba(255,255,255,1) 25px,
-      rgba(255,255,255,1) 50px);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 25px,
+    rgba(255, 255, 255, 1) 25px,
+    rgba(255, 255, 255, 1) 50px
+  );
 }
 ```
 
 ```html
 <ol>
-  <li>Repeating horizontal bars
+  <li>
+    Repeating horizontal bars
     <div id="grad1"></div>
   </li>
-  <li>Zebra stripes
+  <li>
+    Zebra stripes
     <div id="grad2"></div>
   </li>
 </ol>
@@ -95,28 +100,80 @@ div {
 }
 
 #grad1 {
-  background-image: -moz-repeating-linear-gradient(180deg,rgb(26,198,204),rgb(26,198,204) 7%, rgb(100,100,100) 10%);
-  background-image: -webkit-repeating-linear-gradient(180deg,rgb(26,198,204),rgb(26,198,204) 7%, rgb(100,100,100) 10%);
-  background-image: -o-repeating-linear-gradient(180deg,rgb(26,198,204),rgb(26,198,204) 7%, rgb(100,100,100) 10%);
-  background-image: repeating-linear-gradient(180deg,rgb(26,198,204),rgb(26,198,204) 7%, rgb(100,100,100) 10%);
+  background-image: -moz-repeating-linear-gradient(
+    180deg,
+    rgb(26, 198, 204),
+    rgb(26, 198, 204) 7%,
+    rgb(100, 100, 100) 10%
+  );
+  background-image: -webkit-repeating-linear-gradient(
+    180deg,
+    rgb(26, 198, 204),
+    rgb(26, 198, 204) 7%,
+    rgb(100, 100, 100) 10%
+  );
+  background-image: -o-repeating-linear-gradient(
+    180deg,
+    rgb(26, 198, 204),
+    rgb(26, 198, 204) 7%,
+    rgb(100, 100, 100) 10%
+  );
+  background-image: repeating-linear-gradient(
+    180deg,
+    rgb(26, 198, 204),
+    rgb(26, 198, 204) 7%,
+    rgb(100, 100, 100) 10%
+  );
 }
 
 #grad2 {
   background-color: black;
-  background-image: -moz-repeating-linear-gradient(-45deg, transparent, transparent 25px, rgba(255,255,255,1) 25px, rgba(255,255,255,1) 50px);
-  background-image: -webkit-repeating-linear-gradient(-45deg, transparent, transparent 25px, rgba(255,255,255,1) 25px, rgba(255,255,255,1) 50px);
-  background-image: -o-repeating-linear-gradient(-45deg, transparent, transparent 25px, rgba(255,255,255,1) 25px, rgba(255,255,255,1) 50px);
-  background-image: -ms-repeating-linear-gradient(-45deg, transparent, transparent 25px, rgba(255,255,255,1) 25px, rgba(255,255,255,1) 50px);
-  background-image: repeating-linear-gradient(-45deg, transparent, transparent 25px, rgba(255,255,255,1) 25px, rgba(255,255,255,1) 50px);
+  background-image: -moz-repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 25px,
+    rgba(255, 255, 255, 1) 25px,
+    rgba(255, 255, 255, 1) 50px
+  );
+  background-image: -webkit-repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 25px,
+    rgba(255, 255, 255, 1) 25px,
+    rgba(255, 255, 255, 1) 50px
+  );
+  background-image: -o-repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 25px,
+    rgba(255, 255, 255, 1) 25px,
+    rgba(255, 255, 255, 1) 50px
+  );
+  background-image: -ms-repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 25px,
+    rgba(255, 255, 255, 1) 25px,
+    rgba(255, 255, 255, 1) 50px
+  );
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 25px,
+    rgba(255, 255, 255, 1) 25px,
+    rgba(255, 255, 255, 1) 50px
+  );
 }
 ```
 
 ```html hidden
 <ol>
-  <li>repeating gradient
+  <li>
+    repeating gradient
     <div id="grad1"></div>
   </li>
-  <li>Zebra pattern
+  <li>
+    Zebra pattern
     <div id="grad2"></div>
   </li>
 </ol>

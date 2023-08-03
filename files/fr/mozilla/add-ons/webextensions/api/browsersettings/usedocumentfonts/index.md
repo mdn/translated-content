@@ -1,7 +1,6 @@
 ---
 title: browserSettings.useDocumentFonts
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/useDocumentFonts
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/useDocumentFonts
 ---
 
 {{AddonSidebar()}}
@@ -28,8 +27,7 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.useDocumentFonts.set({value: false}).
-  then(logResult);
+browser.browserSettings.useDocumentFonts.set({ value: false }).then(logResult);
 ```
 
 {{WebExtExamples}}

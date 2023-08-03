@@ -1,7 +1,6 @@
 ---
 title: sidebarAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle
-translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle
 ---
 
 {{AddonSidebar()}}
@@ -22,8 +21,8 @@ Si vous définissez un nouveau titre à l'aide de `setTitle()`, et omettre les o
 
 ```js
 browser.sidebarAction.setTitle(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -36,7 +35,7 @@ browser.sidebarAction.setTitle(
 
       - : `string` ou `null`. Le nouveau titre de la barre latérale.
 
-        si le `titre`  est une chaîne vide, le titre utilisé sera le nom de l'extension, mais {{WebExtAPIRef("sidebarAction.getTitle")}} fournira toujours la chaîne vide.
+        si le `titre` est une chaîne vide, le titre utilisé sera le nom de l'extension, mais {{WebExtAPIRef("sidebarAction.getTitle")}} fournira toujours la chaîne vide.
 
         Si le `titre` est `null`, alors un titre précédemment défini sera supprimé, de sorte que :
 
@@ -62,7 +61,7 @@ Ce code modifie le titre de la barre latérale lorsque l'utilisateur clique sur 
 var title = "A different title";
 
 function setTitleForTab(tab) {
-  browser.sidebarAction.setTitle({title, tabId: tab.id});
+  browser.sidebarAction.setTitle({ title, tabId: tab.id });
 }
 
 browser.browserAction.onClicked.addListener(setTitleForTab);

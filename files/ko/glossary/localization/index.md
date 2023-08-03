@@ -1,7 +1,6 @@
 ---
 title: Localization
 slug: Glossary/Localization
-original_slug: Localization
 ---
 
 **현지화**(**l10n**)는 소프트웨어 사용자 인터페이스를 특정 문화에 적응시키는 과정이다.

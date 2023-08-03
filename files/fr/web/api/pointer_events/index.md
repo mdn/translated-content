@@ -1,12 +1,6 @@
 ---
 title: Événements de pointeur
 slug: Web/API/Pointer_events
-tags:
-  - API
-  - NeedsTranslation
-  - Overview
-  - TopicStub
-translation_of: Web/API/Pointer_events
 ---
 
 {{DefaultAPISidebar("Pointer Events")}}
@@ -55,18 +49,18 @@ L'interface {{domxref("PointerEvent")}} hérite de l'interface {{domxref("MouseE
 
 Il existe dix types d'événement de pointeur, dont sept qui ont la même sémantique que les événements souris (`down, up, move, over, out, enter, leave`). Vous trouverez ci-dessous une courte description de chaque type d'événement et son {{domxref("GlobalEventHandlers","gestionnaire d'événement global")}} associé.
 
-| Event                                    | On Event Handler                                                                             | Description                                                                                                                                                                                                                                   |
-| ---------------------------------------- | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`pointerover`](/fr/docs/Web/API/Element/pointerover_event)         | {{domxref('GlobalEventHandlers.onpointerover','onpointerover')}}         | déclenché quand un pointeur entre à l'intérieur des limites du [hit test](#term_hit_test) d'un élément.                                                                                                                                       |
-| [`pointerenter`](/fr/docs/Web/API/Element/pointerenter_event)         | {{domxref('GlobalEventHandlers.onpointerenter','onpointerenter')}}     | déclenché quand un pointeur entre à l'intérieur des limites du [hit test](#term_hit_test) d'un élément ou d'un de ses descendants.                                                                                                            |
-| [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event)         | {{domxref('GlobalEventHandlers.onpointerdown','onpointerdown')}}         | déclenché quand le pointeur devient _actif_ (que le contact est établit).                                                                                                                                                                     |
-| [`pointermove`](/fr/docs/Web/API/Element/pointermove_event)         | {{domxref('GlobalEventHandlers.onpointermove','onpointermove')}}         | déclenché quand les coordonnées du pointeur changent (que le pointeur bouge).                                                                                                                                                                 |
-| [`pointerup`](/fr/docs/Web/API/Element/pointerup_event)             | {{domxref('GlobalEventHandlers.onpointerup','onpointerup')}}             | déclenché quand le pointeur n'est plus _actif_ (que le contact est relaché).                                                                                                                                                                  |
-| [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event)     | {{domxref('GlobalEventHandlers.onpointercancel','onpointercancel')}} | le navigateur déclenche cet événement s'il détecte que le pointeur ne pourra plus générer d'événement (si l'appareil est désactivé par exemple).                                                                                              |
-| [`pointerout`](/fr/docs/Web/API/Element/pointerout_event)         | {{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}         | déclenché quand le pointeur n'est plus affecté à l'élément: qu'il sort des limites du [hit test](term_hit_test) de l'élément; qu'il déclenche l'événement pointerup ou pointercancel; que le stylet sort de la zone de l'écran de l'appareil. |
-| [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event)         | {{domxref('GlobalEventHandlers.onpointerleave','onpointerleave')}}     | déclenché quand le pointeur sort des limites du [hit test](term_hit_test) de l'élément. Cet événement est également déclenché lorsqu'on utilise un stylet et qu'il sort de la zone détectable par le numériseur.                              |
-| [`gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event) | Aucun (voir [Extensions d'Elements](#Extensions_d'Element))                                  | déclenché quand un élément reçoit la capture du pointeur.                                                                                                                                                                                     |
-| [`lostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event) | Aucun (voir [Extensions d'Element](#Extensions_d'Element))                                   | déclenché quand la capture du pointeur est désactivée.                                                                                                                                                                                        |
+| Event                                                                     | On Event Handler                                                     | Description                                                                                                                                                                                                                                   |
+| ------------------------------------------------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`pointerover`](/fr/docs/Web/API/Element/pointerover_event)               | {{domxref('GlobalEventHandlers.onpointerover','onpointerover')}}     | déclenché quand un pointeur entre à l'intérieur des limites du [hit test](#term_hit_test) d'un élément.                                                                                                                                       |
+| [`pointerenter`](/fr/docs/Web/API/Element/pointerenter_event)             | {{domxref('GlobalEventHandlers.onpointerenter','onpointerenter')}}   | déclenché quand un pointeur entre à l'intérieur des limites du [hit test](#term_hit_test) d'un élément ou d'un de ses descendants.                                                                                                            |
+| [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event)               | {{domxref('GlobalEventHandlers.onpointerdown','onpointerdown')}}     | déclenché quand le pointeur devient _actif_ (que le contact est établit).                                                                                                                                                                     |
+| [`pointermove`](/fr/docs/Web/API/Element/pointermove_event)               | {{domxref('GlobalEventHandlers.onpointermove','onpointermove')}}     | déclenché quand les coordonnées du pointeur changent (que le pointeur bouge).                                                                                                                                                                 |
+| [`pointerup`](/fr/docs/Web/API/Element/pointerup_event)                   | {{domxref('GlobalEventHandlers.onpointerup','onpointerup')}}         | déclenché quand le pointeur n'est plus _actif_ (que le contact est relaché).                                                                                                                                                                  |
+| [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event)           | {{domxref('GlobalEventHandlers.onpointercancel','onpointercancel')}} | le navigateur déclenche cet événement s'il détecte que le pointeur ne pourra plus générer d'événement (si l'appareil est désactivé par exemple).                                                                                              |
+| [`pointerout`](/fr/docs/Web/API/Element/pointerout_event)                 | {{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}       | déclenché quand le pointeur n'est plus affecté à l'élément: qu'il sort des limites du [hit test](term_hit_test) de l'élément; qu'il déclenche l'événement pointerup ou pointercancel; que le stylet sort de la zone de l'écran de l'appareil. |
+| [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event)             | {{domxref('GlobalEventHandlers.onpointerleave','onpointerleave')}}   | déclenché quand le pointeur sort des limites du [hit test](term_hit_test) de l'élément. Cet événement est également déclenché lorsqu'on utilise un stylet et qu'il sort de la zone détectable par le numériseur.                              |
+| [`gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event)   | Aucun (voir [Extensions d'Elements](#Extensions_d'Element))          | déclenché quand un élément reçoit la capture du pointeur.                                                                                                                                                                                     |
+| [`lostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event) | Aucun (voir [Extensions d'Element](#Extensions_d'Element))           | déclenché quand la capture du pointeur est désactivée.                                                                                                                                                                                        |
 
 ### Extensions d'Element
 
@@ -91,36 +85,36 @@ This example registers a handler for every event type for the given element.
 
 ```html
 <html>
-<script>
-function over_handler(event) { }
-function enter_handler(event) { }
-function down_handler(event) { }
-function move_handler(event) { }
-function up_handler(event) { }
-function cancel_handler(event) { }
-function out_handler(event) { }
-function leave_handler(event) { }
-function gotcapture_handler(event) { }
-function lostcapture_handler(event) { }
+  <script>
+    function over_handler(event) {}
+    function enter_handler(event) {}
+    function down_handler(event) {}
+    function move_handler(event) {}
+    function up_handler(event) {}
+    function cancel_handler(event) {}
+    function out_handler(event) {}
+    function leave_handler(event) {}
+    function gotcapture_handler(event) {}
+    function lostcapture_handler(event) {}
 
-function init() {
- var el=document.getElementById("target");
- // Register pointer event handlers
- el.onpointerover = over_handler;
- el.onpointerenter = enter_handler;
- el.onpointerdown = down_handler;
- el.onpointermove = move_handler;
- el.onpointerup = up_handler;
- el.onpointercancel = cancel_handler;
- el.onpointerout = out_handler;
- el.onpointerleave = leave_handler;
- el.gotpointercapture = gotcapture_handler;
- el.lostpointercapture = lostcapture_handler;
-}
-</script>
-<body onload="init();">
-<div id="target"> Touch me ... </div>
-</body>
+    function init() {
+      var el = document.getElementById("target");
+      // Register pointer event handlers
+      el.onpointerover = over_handler;
+      el.onpointerenter = enter_handler;
+      el.onpointerdown = down_handler;
+      el.onpointermove = move_handler;
+      el.onpointerup = up_handler;
+      el.onpointercancel = cancel_handler;
+      el.onpointerout = out_handler;
+      el.onpointerleave = leave_handler;
+      el.gotpointercapture = gotcapture_handler;
+      el.lostpointercapture = lostcapture_handler;
+    }
+  </script>
+  <body onload="init();">
+    <div id="target">Touch me ...</div>
+  </body>
 </html>
 ```
 
@@ -130,72 +124,72 @@ This example illustrates accessing all of a touch event's properties.
 
 ```html
 <html>
-<script>
-var id = -1;
+  <script>
+    var id = -1;
 
-function process_id(event) {
-  // Process this event based on the event's identifier
-}
-function process_mouse(event) {
-  // Process the mouse pointer event
-}
-function process_pen(event) {
-  // Process the pen pointer event
-}
-function process_touch(event) {
-  // Process the touch pointer event
-}
-function process_tilt(tiltX, tiltY) {
-  // Tilt data handler
-}
-function process_pressure(pressure) {
-  // Pressure handler
-}
-function process_non_primary(event) {
-  // Pressure handler
-}
+    function process_id(event) {
+      // Process this event based on the event's identifier
+    }
+    function process_mouse(event) {
+      // Process the mouse pointer event
+    }
+    function process_pen(event) {
+      // Process the pen pointer event
+    }
+    function process_touch(event) {
+      // Process the touch pointer event
+    }
+    function process_tilt(tiltX, tiltY) {
+      // Tilt data handler
+    }
+    function process_pressure(pressure) {
+      // Pressure handler
+    }
+    function process_non_primary(event) {
+      // Pressure handler
+    }
 
-function down_handler(ev) {
- // Calculate the touch point's contact area
- var area = ev.width * ev.height;
+    function down_handler(ev) {
+      // Calculate the touch point's contact area
+      var area = ev.width * ev.height;
 
- // Compare cached id with this event's id and process accordingly
- if (id == ev.identifier) process_id(ev);
+      // Compare cached id with this event's id and process accordingly
+      if (id == ev.identifier) process_id(ev);
 
- // Call the appropriate pointer type handler
- switch (ev.pointerType) {
-   case "mouse":
-     process_mouse(ev);
-     break;
-   case "pen":
-     process_pen(ev);
-     break;
-   case "touch":
-     process_touch(ev);
-     break;
-   default:
-     console.log("pointerType " + ev.pointerType + " is Not suported");
- }
+      // Call the appropriate pointer type handler
+      switch (ev.pointerType) {
+        case "mouse":
+          process_mouse(ev);
+          break;
+        case "pen":
+          process_pen(ev);
+          break;
+        case "touch":
+          process_touch(ev);
+          break;
+        default:
+          console.log("pointerType " + ev.pointerType + " is Not suported");
+      }
 
- // Call the tilt handler
- if (ev.tiltX != 0 && ev.tiltY != 0) process_tilt(ev.tiltX, ev.tiltY);
+      // Call the tilt handler
+      if (ev.tiltX != 0 && ev.tiltY != 0) process_tilt(ev.tiltX, ev.tiltY);
 
- // Call the pressure handler
- process_pressure(ev.pressure);
+      // Call the pressure handler
+      process_pressure(ev.pressure);
 
- // If this event is not primary, call the non primary handler
- if (!ev.isPrimary) process_non_primary(evt);
-}
+      // If this event is not primary, call the non primary handler
+      if (!ev.isPrimary) process_non_primary(evt);
+    }
 
-function init() {
- var el=document.getElementById("target");
- // Register pointerdown handler
- el.onpointerdown = down_handler;
-}
-</script>
-<body onload="init();">
- <div id="target"> Touch me ... </div>
-</body>
+    function init() {
+      var el = document.getElementById("target");
+      // Register pointerdown handler
+      el.onpointerdown = down_handler;
+    }
+  </script>
+  <body onload="init();">
+    <div id="target">Touch me ...</div>
+  </body>
 </html>
 ```
 
@@ -227,20 +221,20 @@ The following example shows pointer capture being set on an element.
 
 ```html
 <html>
-<script>
-function downHandler(ev) {
- var el=document.getElementById("target");
- //Element 'target' will receive/capture further events
- el.setPointerCapture(ev.pointerId);
-}
-function init() {
- var el=document.getElementById("target");
- el.onpointerdown = downHandler;
-}
-</script>
-<body onload="init();">
-<div id="target"> Touch me ... </div>
-</body>
+  <script>
+    function downHandler(ev) {
+      var el = document.getElementById("target");
+      //Element 'target' will receive/capture further events
+      el.setPointerCapture(ev.pointerId);
+    }
+    function init() {
+      var el = document.getElementById("target");
+      el.onpointerdown = downHandler;
+    }
+  </script>
+  <body onload="init();">
+    <div id="target">Touch me ...</div>
+  </body>
 </html>
 ```
 
@@ -248,27 +242,27 @@ The following example shows a pointer capture being released (when a [`pointerca
 
 ```html
 <html>
-<script>
-function downHandler(ev) {
- var el=document.getElementById("target");
- // Element "target" will receive/capture further events
- el.setPointerCapture(ev.pointerId);
-}
-function cancelHandler(ev) {
- var el=document.getElementById("target");
- // Release the pointer capture
- el.releasePointerCapture(ev.pointerId);
-}
-function init() {
- var el=document.getElementById("target");
- // Register pointerdown and pointercancel handlers
- el.onpointerdown = downHandler;
- el.onpointercancel = cancelHandler;
-}
-</script>
-<body onload="init();">
-<div id="target"> Touch me ... </div>
-</body>
+  <script>
+    function downHandler(ev) {
+      var el = document.getElementById("target");
+      // Element "target" will receive/capture further events
+      el.setPointerCapture(ev.pointerId);
+    }
+    function cancelHandler(ev) {
+      var el = document.getElementById("target");
+      // Release the pointer capture
+      el.releasePointerCapture(ev.pointerId);
+    }
+    function init() {
+      var el = document.getElementById("target");
+      // Register pointerdown and pointercancel handlers
+      el.onpointerdown = downHandler;
+      el.onpointercancel = cancelHandler;
+    }
+  </script>
+  <body onload="init();">
+    <div id="target">Touch me ...</div>
+  </body>
 </html>
 ```
 
@@ -282,9 +276,9 @@ In the following example, the browser's default touch behavior is disabled for t
 
 ```html
 <html>
-<body>
- <div style="touch-action:none;">Can't touch this ... </div>
-</body>
+  <body>
+    <div style="touch-action:none;">Can't touch this ...</div>
+  </body>
 </html>
 ```
 

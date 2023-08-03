@@ -3,7 +3,6 @@ title: 基本的なネイティブフォームコントロール
 slug: Learn/Forms/Basic_native_form_controls
 l10n:
   sourceCommit: 25233e77fc3d3de84511203fd41eaddf361880ef
-original_slug: Learn/Forms/The_native_form_widgets
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
@@ -61,7 +60,7 @@ original_slug: Learn/Forms/The_native_form_widgets
 基本的な単一行のテキストフィールドの例を示します。
 
 ```html
-<input type="text" id="comment" name="comment" value="I'm a text field">
+<input type="text" id="comment" name="comment" value="I'm a text field" />
 ```
 
 単一行のテキストフィールドは、ひとつだけ厳密な制約があります。改行を含むテキストを入力した場合、ブラウザーはデータを送信する前に改行を取り除きます。
@@ -77,7 +76,7 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 元からあった入力型の一つが、 `password` テキストフィールド型でした。
 
 ```html
-<input type="password" id="pwd" name="pwd">
+<input type="password" id="pwd" name="pwd" />
 ```
 
 `password` の値は、入力されるテキストに特別な制約を加えるものではありませんが、フィールドに入力された値を (ドットやアスタリスクなどで) 不明瞭にして、他の人が簡単に読めないようにします。
@@ -91,7 +90,7 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 もう一つの元からあるテキストコントロールは `hidden` 入力型です。これは、ユーザーには見えないが、送信されると他のフォームデータと一緒にサーバーに送信されるフォームコントロールを作成するために使用されます。 — 例えば、注文が行われた時のタイムスタンプをサーバーに送信したい場合などです。表示されないので、ユーザーは値を見ることも、意図的に編集することもできず、フォーカスを受けることもなく、スクリーンリーダーも知らせることはありません。
 
 ```html
-<input type="hidden" id="timestamp" name="timestamp" value="1286705410">
+<input type="hidden" id="timestamp" name="timestamp" value="1286705410" />
 ```
 
 このような要素を作成する場合は、 `name` 属性と `value` 属性の設定が必要です。この値は JavaScript にて動的にセットできます。`hidden` 入力型には関連したラベルはありません。
@@ -113,7 +112,7 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 チェックボックスは、 {{HTMLElement("input")}} 要素で [`type`](/ja/docs/Web/HTML/Element/input#type) 属性を {{HTMLElement("input/checkbox", "checkbox")}} に設定して作成します。
 
 ```html
-<input type="checkbox" id="questionOne" name="subscribe" value="yes" checked>
+<input type="checkbox" id="questionOne" name="subscribe" value="yes" checked />
 ```
 
 関連するチェックボックス項目には、同じ [`name`](/ja/docs/Web/HTML/Element/input#name) 属性を使用してください。 [`checked`](/ja/docs/Web/HTML/Element/input/checkbox#checked) 属性を含めると、ページが読み込まれたときにチェックボックスが自動的にチェックされます。チェックボックス自体または関連づけられたラベルをクリックすると、チェックボックスのオンとオフが切り替わります。
@@ -124,15 +123,20 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
   <ul>
     <li>
       <label for="carrots">Carrots</label>
-      <input type="checkbox" id="carrots" name="vegetable" value="carrots" checked>
+      <input
+        type="checkbox"
+        id="carrots"
+        name="vegetable"
+        value="carrots"
+        checked />
     </li>
     <li>
       <label for="peas">Peas</label>
-      <input type="checkbox" id="peas" name="vegetable" value="peas">
+      <input type="checkbox" id="peas" name="vegetable" value="peas" />
     </li>
     <li>
       <label for="cabbage">Cabbage</label>
-      <input type="checkbox" id="cabbage" name="vegetable" value="cabbage">
+      <input type="checkbox" id="cabbage" name="vegetable" value="cabbage" />
     </li>
   </ul>
 </fieldset>
@@ -151,7 +155,7 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 ラジオボタンは、 {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Element/input#type) 属性を `radio` に設定して生成します。
 
 ```html
-<input type="radio" id="soup" name="meal" checked>
+<input type="radio" id="soup" name="meal" checked />
 ```
 
 複数のラジオボタンを結びつけることができます。 [`name`](/ja/docs/Web/HTML/Element/input#name) 属性の値が同じであれば、同じグループのボタンであるとみなされます。グループ内のボタンは同時に一つしかチェックできません。つまり、あるボタンがチェックされると、他のボタンは自動的にチェックが外されます。フォームが送信される際には、チェックされたラジオボタンの値のみが送信されます。一つもチェックされていない場合、ラジオボタンのグループ全体が未知の状態であるとみなされ、値はフォームと共に送信されません。同じ名前のグループのラジオボタンの一つがチェックされると、ユーザーはフォームをリセットせずに、すべてのボタンのチェックを外すことはできません。
@@ -162,15 +166,15 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
   <ul>
     <li>
       <label for="soup">Soup</label>
-      <input type="radio" id="soup" name="meal" value="soup" checked>
+      <input type="radio" id="soup" name="meal" value="soup" checked />
     </li>
     <li>
       <label for="curry">Curry</label>
-      <input type="radio" id="curry" name="meal" value="curry">
+      <input type="radio" id="curry" name="meal" value="curry" />
     </li>
     <li>
       <label for="pizza">Pizza</label>
-      <input type="radio" id="pizza" name="meal" value="pizza">
+      <input type="radio" id="pizza" name="meal" value="pizza" />
     </li>
   </ul>
 </fieldset>
@@ -202,31 +206,25 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 ### submit
 
 ```html
-<button type="submit">
-    これは<strong>送信ボタン</strong>です
-</button>
+<button type="submit">これは<strong>送信ボタン</strong>です</button>
 
-<input type="submit" value="これは送信ボタンです">
+<input type="submit" value="これは送信ボタンです" />
 ```
 
 ### reset
 
 ```html
-<button type="reset">
-    これは<strong>リセットボタン</strong>です
-</button>
+<button type="reset">これは<strong>リセットボタン</strong>です</button>
 
-<input type="reset" value="これはリセットボタンです">
+<input type="reset" value="これはリセットボタンです" />
 ```
 
 ### ただのボタン
 
 ```html
-<button type="button">
-    これは<strong>ただのボタン</strong>です
-</button>
+<button type="button">これは<strong>ただのボタン</strong>です</button>
 
-<input type="button" value="これはただのボタンです">
+<input type="button" value="これはただのボタンです" />
 ```
 
 ボタンは {{HTMLElement("button")}} 要素と {{HTMLElement("input")}} 要素のどちらを使用しても常に同じ動作になります。しかし、上記の例で分かるように、 {{HTMLElement("button")}} 要素は中身として HTML を使用することができ、これが `<button>` の開始・終了タグの間に挿入されます。一方で{{HTMLElement("input")}} 要素は空要素です。つまり `value` 属性に中身が挿入され、したがってプレーンテキストのコンテンツのみ使用できます。
@@ -242,7 +240,7 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 画像ボタンは、 {{HTMLElement("input")}} 要素の[`type`](/ja/docs/Web/HTML/Element/input#type) 属性を `image` に設定することで作成します。この要素は {{HTMLElement("img")}} 要素とまったく同じ属性に対応しており、さらに他のフォームボタンが対応している属性にもすべて対応しています。
 
 ```html
-<input type="image" alt="Click me!" src="my-img.png" width="80" height="30">
+<input type="image" alt="Click me!" src="my-img.png" width="80" height="30" />
 ```
 
 画像ボタンをフォームの送信に使用する場合、このウィジェットは自身の値を送信しませんが、代わりに画像上でクリックした位置の X 座標と Y 座標を送信します (座標は画像に対して相対的、つまり画像の左上隅が座標 (0, 0) になります)。座標は 2 つのキーと値の組として送信されます。
@@ -269,15 +267,15 @@ http://foo.com?pos.x=123&pos.y=456
 以下の例では、画像ファイルを要求するファイルピッカーを作成しています。ユーザーは複数のファイルを指定できます。
 
 ```html
-<input type="file" name="file" id="file" accept="image/*" multiple>
+<input type="file" name="file" id="file" accept="image/*" multiple />
 ```
 
 いくつかのモバイル端末では、ファイルピッカーは、次のようにキャプチャー情報を `accept` 属性に追加することで、端末のカメラやマイクでキャプチャーされた写真、動画、音声にアクセスすることができます。
 
 ```html
-<input type="file" accept="image/*;capture=camera">
-<input type="file" accept="video/*;capture=camcorder">
-<input type="file" accept="audio/*;capture=microphone">
+<input type="file" accept="image/*;capture=camera" />
+<input type="file" accept="video/*;capture=camcorder" />
+<input type="file" accept="audio/*;capture=microphone" />
 ```
 
 ## 共通の属性

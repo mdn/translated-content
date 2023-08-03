@@ -1,7 +1,6 @@
 ---
 title: AbortSignal.timeout()
 slug: Web/API/AbortSignal/timeout_static
-original_slug: Web/API/AbortSignal/timeout
 ---
 
 {{APIRef("DOM")}}
@@ -16,8 +15,8 @@ original_slug: Web/API/AbortSignal/timeout
 
 ## 语法
 
-```js
-timeout(time)
+```js-nolint
+AbortSignal.timeout(time)
 ```
 
 ### 参数
@@ -46,7 +45,9 @@ try {
   if (err.name === "TimeoutError") {
     console.error("Timeout: It took more than 5 seconds to get the result!");
   } else if (err.name === "AbortError") {
-    console.error("Fetch aborted by user action (browser stop button, closing tab, etc.");
+    console.error(
+      "Fetch aborted by user action (browser stop button, closing tab, etc.",
+    );
   } else if (err.name === "TypeError") {
     console.error("AbortSignal.timeout() method is not supported");
   } else {

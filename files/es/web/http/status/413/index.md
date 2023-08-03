@@ -1,7 +1,6 @@
 ---
 title: 413 Payload Too Large
 slug: Web/HTTP/Status/413
-original_slug: Web/HTTP/Status/8080
 ---
 
 {{HTTPSidebar}}
@@ -16,8 +15,8 @@ The HTTP **`413 Payload Too Large`** response status code indicates that the req
 
 ## Specifications
 
-| Specification                                                        | Title                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Specification                                       | Title                                                         |
+| --------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "413 Payload Too Large" , "6.5.11")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## See also

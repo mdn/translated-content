@@ -1,7 +1,6 @@
 ---
 title: XHTML
 slug: Glossary/XHTML
-translation_of: Glossary/XHTML
 ---
 
 [HTML](/fr/docs/Web/HTML) peut voyager sur le réseau vers un navigateur soit en syntaxe HTML soit en syntaxe XML appelée XHTML.
@@ -15,13 +14,12 @@ Cet exemple montre un document HTML et un document XHTML inclus dans l'en-tête 
 ### Document HTML
 
 ```html
-HTTP/1.1 200 OK
-Content-Type: text/html
+HTTP/1.1 200 OK Content-Type: text/html
 
-<!DOCTYPE html>
-<html lang=en>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset=utf-8>
+    <meta charset="utf-8" />
     <title>HTML</title>
   </head>
   <body>
@@ -73,7 +71,7 @@ Voir [Utilisation correcte de CSS et JavaScript dans les documents XHTML](/fr/do
 
 ## Outils
 
-- [Outils de création conformes aux normes](/fr/Outils_d'%c3%a9dition_respectueux_des_standards)
+- [Outils de création conformes aux normes](/fr/Outils_d'édition_respectueux_des_standards)
 
 ## Voir aussi
 

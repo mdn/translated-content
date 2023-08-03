@@ -1,23 +1,6 @@
 ---
-title: 'Tableaux HTML : notions de base'
+title: "Tableaux HTML : notions de base"
 slug: Learn/HTML/Tables/Basics
-tags:
-  - Apprentissage
-  - Article
-  - Bases
-  - Codage
-  - Débutant
-  - En-têtes
-  - HTML
-  - Tableaux
-  - cellule
-  - col
-  - colgroup
-  - colspan
-  - rangées
-  - rowspan
-translation_of: Learn/HTML/Tables/Basics
-original_slug: Apprendre/HTML/Tableaux/Basics
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
@@ -30,7 +13,7 @@ Cet article vous initie aux tableaux en HTML. Il porte sur les bases comme les r
       <th scope="row">Prérequis :</th>
       <td>
         Les bases de HTML (voir
-        <a href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML"
+        <a href="/fr/Apprendre/HTML/Introduction_à_HTML"
           >Introduction au HTML</a
         >).
       </td>
@@ -229,18 +212,18 @@ Nous avons assez parlé théorie, alors, plongeons dans un exemple pratique et c
 2. Le contenu de chaque tableau est encadré par ces deux balises : **[`<table></table>`](/fr/docs/Web/HTML/Element/table)**. Ajoutez‑les dans le corps de votre HTML.
 3. Le plus petit conteneur d'un tableau est la cellule&nbsp;; elle est créée avec l'élément **[`<td>`](/fr/docs/Web/HTML/Element/td)** («&nbsp;td » comme «&nbsp;tableau données&nbsp;»). Ajoutez ceci entre les balises du tableau :
 
-    ```html
-    <td>Bonjour, je suis votre première cellule.</td>
-    ```
+   ```html
+   <td>Bonjour, je suis votre première cellule.</td>
+   ```
 
 4. Si nous voulons une rangée de quatre cellules, nous devons copier la première trois fois. Mettez à jour le contenu du tableau pour avoir quelque chose comme&nbsp;:
 
-    ```html
-    <td>Bonjour, je suis votre première cellule </td>
-    <td>je suis votre deuxième cellule</td>
-    <td>je suis votre troisième cellule</td>
-    <td>je suis votre quatrième cellule</td>
-    ```
+   ```html
+   <td>Bonjour, je suis votre première cellule</td>
+   <td>je suis votre deuxième cellule</td>
+   <td>je suis votre troisième cellule</td>
+   <td>je suis votre quatrième cellule</td>
+   ```
 
 Comme vous le verrez, les cellules ne sont pas placées les unes en dessous des autres, mais elles sont automatiquement affichées dans une même ligne. chaque élément `<td>` crée une cellule simple et ensemble elles forment la première ligne. Toutes les cellules que nous ajoutons allongent la ligne.
 
@@ -248,14 +231,14 @@ Pour empêcher cette ligne de croître et commencer à placer les cellules suiva
 
 1. Placez les quatre cellules que vous avez créées entre deux balises `<tr>` ainsi :
 
-    ```html
-    <tr>
-      <td>Bonjour, je suis votre première cellule </td>
-      <td>je suis votre deuxième cellule </td>
-      <td>je suis votre troisième cellule </td>
-      <td>je suis votre quatrième cellule </td>
-    </tr>
-    ```
+   ```html
+   <tr>
+     <td>Bonjour, je suis votre première cellule</td>
+     <td>je suis votre deuxième cellule</td>
+     <td>je suis votre troisième cellule</td>
+     <td>je suis votre quatrième cellule</td>
+   </tr>
+   ```
 
 2. Maintenant, vous avez fait une ligne, faites en encore une ou deux — chaque ligne doit être encadrée de `<tr>`, et comprend chaque cellule encadrée par `<td>`.
 
@@ -495,10 +478,10 @@ Ce n'est pas idéal, car nous devons répéter les informations de style dans le
 ### Autres exemples
 
 ```html
- <table>
-   <colgroup>
-    <col>
-    <col style="background-color: yellow">
+<table>
+  <colgroup>
+    <col />
+    <col style="background-color: yellow" />
   </colgroup>
   <tr>
     <th>Data 1</th>
@@ -515,13 +498,13 @@ Ce n'est pas idéal, car nous devons répéter les informations de style dans le
 </table>
 ```
 
-En effet, nous définissons deux «&nbsp;styles de colonnes&nbsp;», les informations de style pour chaque colonne. Nous n'appliquons pas de style pour la première colonne, mais nous devons inclure un élément `<col>`  vide — si nous ne le faisons pas, le style indiqué s'appliquera à la première colonne.
+En effet, nous définissons deux «&nbsp;styles de colonnes&nbsp;», les informations de style pour chaque colonne. Nous n'appliquons pas de style pour la première colonne, mais nous devons inclure un élément `<col>` vide — si nous ne le faisons pas, le style indiqué s'appliquera à la première colonne.
 
 Si nous voulions appliquer les informations de style aux deux colonnes, nous devrions juste inclure un élément `<col>` avec un attribut span, comme ceci :
 
 ```html
 <colgroup>
-  <col style="background-color: yellow" span="2">
+  <col style="background-color: yellow" span="2" />
 </colgroup>
 ```
 
@@ -538,7 +521,7 @@ Ci-dessous, vous pouvez voir le planning d'un professeur de langues. Le vendredi
 Recréez le tableau en suivant les étapes ci-dessous.
 
 1. Tout d'abord, faites une copie locale du fichier [timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) dans un nouveau répertoire sur votre ordinateur. Le HTML contient le tableau vu ci-dessus, à l'exception des informations de style des colonnes.
-2. Ajoutez un élément `<colgroup>`  au début du tableau, juste en dessous de la balise `<table>`,dans lequel vous pouvez ajouter vos éléments `<col>` (voir les étapes restantes ci-dessous).
+2. Ajoutez un élément `<colgroup>` au début du tableau, juste en dessous de la balise `<table>`,dans lequel vous pouvez ajouter vos éléments `<col>` (voir les étapes restantes ci-dessous).
 3. Les deux premières colonnes doivent rester sans style.
 4. Ajoutez une couleur de fond à la troisième colonne. La valeur de votre attribut `style` est `background-color:#97DB9A;`
 5. Définissez une largeur différente pour la quatrième colonne. La valeur de votre attribut `style` est `width: 42px;`

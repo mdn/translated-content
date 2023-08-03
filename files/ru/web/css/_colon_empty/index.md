@@ -1,14 +1,6 @@
 ---
-title: ':empty'
+title: ":empty"
 slug: Web/CSS/:empty
-tags:
-  - CSS
-  - CSS Pseudo-class
-  - Layout
-  - Reference
-  - Web
-  - Псевдоклассы
-translation_of: Web/CSS/:empty
 ---
 {{ CSSRef() }}
 

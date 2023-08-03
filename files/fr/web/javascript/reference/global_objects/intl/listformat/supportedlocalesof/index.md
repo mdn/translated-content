@@ -1,15 +1,6 @@
 ---
 title: Intl.ListFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf
-tags:
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Méthode
-  - Reference
-  - i18n
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat/supportedLocalesOf
 ---
 
 {{JSRef}}
@@ -48,9 +39,9 @@ Cette méthode renvoie un tableau qui est un sous-ensemble des balises de locale
 Si on dispose d'un environnement (un navigateur par exemple) qui supporte le formatage des listes dans les locales indonésienne, allemande mais pas balinaise, `supportedLocalesOf` renvoie les balises pour l'indonésien et l'allemand quand bien même le formatage des listes pinyin n'est pas utilisée avec l'indonésien et qu'il n'existe pas une version spécifique de l'allemand pour l'Indonésie. On illustre ici l'algorithme `"lookup"`. SI on utilisait `"best fit"` pour trouver les locales correspondantes, on aurait pu avoir une balise supplémentaire pour le balinais en plus car la plupart des balinais comprennent l'indonésien.
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.ListFormat.supportedLocalesOf(locales, options).join(', '));
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(Intl.ListFormat.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: Применение эффектов SVG к содержимому HTML
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
-translation_of: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
 Современные браузеры поддерживают [SVG](/ru/docs/SVG) в стилях [CSS](/ru/docs/Web/CSS) для применения графических эффектов к HTML-контенту.
 

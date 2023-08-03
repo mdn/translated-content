@@ -1,10 +1,6 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
-tags:
-  - JavaScript
-  - Оператор
-translation_of: Web/JavaScript/Reference/Statements/return
 ---
 
 {{jsSidebar("Statements")}}

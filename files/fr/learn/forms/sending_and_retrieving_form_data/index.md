@@ -1,19 +1,6 @@
 ---
 title: Envoyer et extraire les données des formulaires
 slug: Learn/Forms/Sending_and_retrieving_form_data
-tags:
-  - Beginner
-  - CodingScripting
-  - Files
-  - Forms
-  - Guide
-  - HTML
-  - HTTP
-  - Headers
-  - Security
-  - Web
-translation_of: Learn/Forms/Sending_and_retrieving_form_data
-original_slug: Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
@@ -70,25 +57,25 @@ Cet attribut définit où les données sont envoyées. Sa valeur doit être une 
 Dans cet exemple, les données sont envoyées à une URL précise — `http://foo.com` :
 
 ```html
-<form action="http://foo.com">
+<form action="http://foo.com"></form>
 ```
 
 Ici, nous utilisons une URL relative — les données sont envoyées à une URL différente sur le serveur&nbsp;:
 
 ```html
-<form action="/somewhere_else">
+<form action="/somewhere_else"></form>
 ```
 
 Sans attribut, comme ci-dessous, les données de [`<form>`](/fr/docs/Web/HTML/Element/Form) sont envoyées à la même page que celle du formulaire :
 
 ```html
-<form>
+<form></form>
 ```
 
 De nombreuses pages anciennes utilisent la notation suivante pour indiquer que les données doivent être envoyées à la page qui contient le formulaire. C'était nécessaire car jusqu'à HTML5, l'attribut [`action`](/fr/docs/Web/HTML/Element/Form#attr-action) était requis. Il n'y en a donc plus besoin.
 
 ```html
-<form action="#">
+<form action="#"></form>
 ```
 
 > **Note :** Il est possible de spécifier une URL qui utilise le protocole HTTPS (HTTP sécurisé). Quand vous faites ceci, les données sont chiffrées avec le reste de la requête, même si le formulaire lui-même est hébergé dans une page non sécurisée à laquelle on accède via HTTP. D'autre part, si le formulaire est hébergé sur une page sécurisée mais qu'on spécifie une URL non sécurisée avec l'attribut [`action`](/fr/docs/Web/HTML/Element/Form#attr-action), tous les navigateurs affichent une alerte de sécurité pour l'utilisateur chaque fois qu'il envoie des données car celles-ci ne sont pas chiffrées.
@@ -109,11 +96,11 @@ Considérons le formulaire suivant :
 <form action="http://foo.com" method="get">
   <div>
     <label for="say">Quelle salutation voulez-vous adresser&nbsp;?</label>
-    <input name="say" id="say" value="Salut">
+    <input name="say" id="say" value="Salut" />
   </div>
   <div>
     <label for="to">À qui voulez‑vous l'adresser ?</label>
-    <input name="to" value="Maman">
+    <input name="to" value="Maman" />
   </div>
   <div>
     <button>Envoyer mes salutations</button>
@@ -149,11 +136,11 @@ Voyons un exemple — c'est le même formulaire que celui que nous avons vu pour
 <form action="http://www.foo.com" method="POST">
   <div>
     <label for="say">Quelle salutation voulez-vous dire ?</label>
-    <input name="say" id="say" value="Salut">
+    <input name="say" id="say" value="Salut" />
   </div>
   <div>
     <label for="to">A qui voulez-vous le dire ?</label>
-    <input name="to" id="to" value="Maman">
+    <input name="to" id="to" value="Maman" />
   </div>
   <div>
     <button>Envoyer mes salutations</button>
@@ -283,7 +270,7 @@ Par exemple :
 <form method="post" action="https://www.foo.com" enctype="multipart/form-data">
   <div>
     <label for="file">Choisir un fichier</label>
-    <input type="file" id="file" name="myFile">
+    <input type="file" id="file" name="myFile" />
   </div>
   <div>
     <button>Envoyer le fichier</button>

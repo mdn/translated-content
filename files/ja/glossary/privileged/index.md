@@ -9,7 +9,7 @@ slug: Glossary/Privileged
 
 ### 一般知識
 
-- Wikipedia 上の [Privilege (computing)](https://en.wikipedia.org/wiki/Privilege_(computing)) (英語)
+- Wikipedia 上の [Privilege (computing)](<https://en.wikipedia.org/wiki/Privilege_(computing)>) (英語)
 
 ### これについて学ぶ
 

@@ -1,13 +1,6 @@
 ---
-title: '<link>: Элемент - ссылка на внешний ресурс'
+title: "<link>: Элемент - ссылка на внешний ресурс"
 slug: Web/HTML/Element/link
-tags:
-  - Ссылки
-  - загрузка
-  - метаданные
-  - предзагрузка
-translation_of: Web/HTML/Element/link
-original_slug: Web/HTML/Element/ссылка
 ---
 {{HTMLSidebar}}
 

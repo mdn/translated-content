@@ -2,7 +2,7 @@
 title: 동등 연산자(==)
 slug: Web/JavaScript/Reference/Operators/Equality
 l10n:
-  sourceCommit:3e2369d97e2d6fbfe33a3c496a8edd90e0b539e2
+  sourceCommit: 3e2369d97e2d6fbfe33a3c496a8edd90e0b539e2
 ---
 {{jsSidebar("Operators")}}
 
@@ -132,6 +132,6 @@ c == d; // true
 
 ## See also
 
-- [Inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [Strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
-- [Strict inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- [Inequality operator](/ko/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Strict equality operator](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [Strict inequality operator](/ko/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

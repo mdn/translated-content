@@ -1,7 +1,6 @@
 ---
 title: Construction d'une extension multi-navigateur
 slug: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
-translation_of: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 ---
 
 {{AddonSidebar()}}
@@ -61,13 +60,10 @@ Ainsi, par exemple, ce code `manifest.json` rend le _polyfill_ disponible pour v
 
 ```json
 {
- // ...
- "background": {
-   "scripts": [
-     "browser-polyfill.js",
-     "background.js"
-   ]
- }
+  // ...
+  "background": {
+    "scripts": ["browser-polyfill.js", "background.js"]
+  }
 }
 ```
 

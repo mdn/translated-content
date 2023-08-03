@@ -172,10 +172,10 @@ const myBoundMethod = function (sProperty) {
   console.log(arguments.length > 0 ? this[sProperty] : this);
 }.bind(myArray);
 
-myBoundMethod(); // 输出 "zero,one,two"。因为 'this' 在函数中绑定到了 myArray 
+myBoundMethod(); // 输出 "zero,one,two"。因为 'this' 在函数中绑定到了 myArray
 myBoundMethod(1); // 输出 "one"
 setTimeout(myBoundMethod, 1.0 * 1000); // 由于绑定问题，还是在 1 秒后输出 "zero,one,two"
-setTimeout(myBoundMethod, 1.5 * 1000, "1"); // 在 1.5 秒后输出 "one" 
+setTimeout(myBoundMethod, 1.5 * 1000, "1"); // 在 1.5 秒后输出 "one"
 ```
 
 ### 传递字符串字面量

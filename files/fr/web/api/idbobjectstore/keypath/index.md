@@ -1,14 +1,6 @@
 ---
 title: IDBObjectStore.keyPath
 slug: Web/API/IDBObjectStore/keyPath
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Propriété
-  - Reference
-  - keyPath
-translation_of: Web/API/IDBObjectStore/keyPath
 ---
 
 {{APIRef("IndexedDB")}}

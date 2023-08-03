@@ -1,13 +1,6 @@
 ---
 title: WebGLRenderingContext.bindBuffer()
 slug: Web/API/WebGLRenderingContext/bindBuffer
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/bindBuffer
 ---
 
 {{APIRef("WebGL")}}
@@ -56,8 +49,8 @@ Une seule cible peut être liée à un {{domxref ("WebGLBuffer")}} donné. Une t
 ### Liaison d'un tampon à une cible
 
 ```js
-var canevas = document.getElementById('canevas');
-var gl = canevas.getContext('webgl');
+var canevas = document.getElementById("canevas");
+var gl = canevas.getContext("webgl");
 var tampon = gl.createBuffer();
 
 gl.bindBuffer(gl.ARRAY_BUFFER, tampon);

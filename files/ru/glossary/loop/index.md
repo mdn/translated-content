@@ -1,14 +1,6 @@
 ---
 title: Loop
 slug: Glossary/Loop
-tags:
-  - Glossary
-  - control flow
-  - Программирование
-  - Глоссарий
-  - контроль потока
-translation_of: Glossary/loop
-original_slug: Глоссарий/loop
 ---
 
 Цикл - это последовательность инструкций, которая постоянно повторяется до тех пор, пока в {{Glossary('computer programming', 'программе')}} не будет выполнено определённое условие. Примером может служить процесс получения элемента данных, его последующего изменения, а затем проверки некоторых {{Glossary ('conditional', 'условий')}}, например, что счётчик достиг заданного числа.
@@ -32,8 +24,8 @@ for (statement 1; statement 2; statement 3){
 #### Пример
 
 ```js
-for(var i = 0; i < 10; i++){
-    console.log(i)
+for (var i = 0; i < 10; i++) {
+  console.log(i);
 }
 //Этот цикл будет печатать числа 0-9 и остановится, когда условие будет выполнено (i = 10)
 ```
@@ -60,9 +52,9 @@ while (condition){
 
 ```js
 var i = 0;
-while(i < 5){
-    console.log(i)
-    i++
+while (i < 5) {
+  console.log(i);
+  i++;
 }
 //Этот цикл выведет числа 0-4 и остановится, когда условие станет ложным (i >=5)
 ```
@@ -73,4 +65,4 @@ while(i < 5){
 
 1. [MDN Web Docs Glossary](/ru/docs/Glossary)
 
-    1. {{Glossary("Loop")}}
+   1. {{Glossary("Loop")}}

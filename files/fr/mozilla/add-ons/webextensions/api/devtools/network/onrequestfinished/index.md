@@ -1,7 +1,6 @@
 ---
 title: devtools.network.onRequestFinished
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.network/onRequestFinished
 ---
 
 {{AddonSidebar()}}
@@ -15,9 +14,9 @@ Notez que bien que votre extension puisse ajouter un écouteur à tout moment,el
 ## Syntaxe
 
 ```js
-browser.devtools.network.onRequestFinished.addListener(listener)
-browser.devtools.network.onRequestFinished.removeListener(listener)
-browser.devtools.network.onRequestFinished.hasListener(listener)
+browser.devtools.network.onRequestFinished.addListener(listener);
+browser.devtools.network.onRequestFinished.removeListener(listener);
+browser.devtools.network.onRequestFinished.hasListener(listener);
 ```
 
 Les événements ont trois fonctions
@@ -25,7 +24,7 @@ Les événements ont trois fonctions
 - `addListener(listener)`
   - : Ajoute un écouteur à cet événement.
 - `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument de `listener`  est l'écouteur à supprimer.
+  - : Arrêtez d'écouter cet événement. L'argument de `listener` est l'écouteur à supprimer.
 - `hasListener(listener)`
   - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true`s'il écoute, sinon `false`.
 
@@ -51,7 +50,7 @@ Ajoutez un écouteur qui consigne l'adresse IP du serveur et le corps de la rép
 ```js
 function handleRequestFinished(request) {
   console.log("Server IP: ", request.serverIPAddress);
-  request.getContent().then(content => {
+  request.getContent().then((content) => {
     console.log("Content: ", content);
   });
 }

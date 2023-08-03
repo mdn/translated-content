@@ -1,7 +1,6 @@
 ---
 title: Introduction
 slug: Web/JavaScript/Guide/Introduction
-translation_of: Web/JavaScript/Guide/Introduction
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
@@ -88,14 +87,14 @@ La console fonctionne exactement de la même manière que `eval`&nbsp;: la derni
 
 ```js
 function saluer(votreNom) {
-  alert("Hello " + votreNom)
+  alert("Hello " + votreNom);
 }
-console.log(eval('3 + 5'))
+console.log(eval("3 + 5"));
 ```
 
 ### Le mode éditeur multiligne
 
-La console est pratique quand il s'agit d'exécuter des instructions ligne par ligne. Cependant dès qu'on souhaite exécuter un script plus complexe de plusieurs lignes, la console devient vite limitée. Pour ça, on pourra utiliser [le mode éditeur multiligne](/fr/docs/Tools/Web_Console/The_command_line_interpreter#le_mode_%C3%A9diteur_multiligne).
+La console est pratique quand il s'agit d'exécuter des instructions ligne par ligne. Cependant dès qu'on souhaite exécuter un script plus complexe de plusieurs lignes, la console devient vite limitée. Pour ça, on pourra utiliser [le mode éditeur multiligne](/fr/docs/Tools/Web_Console/The_command_line_interpreter#le_mode_éditeur_multiligne).
 
 ### Coucou monde (_hello world_)
 

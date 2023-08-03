@@ -1,7 +1,6 @@
 ---
 title: Formularios en HTML5
 slug: Learn/Forms
-original_slug: HTML/HTML5/Forms_in_HTML5
 ---
 
 Los elementos y atributos para formularios en HTML5 proveen un mayor grado de marcado semántico que en HTML4 y eliminan gran parte del tedioso trabajo de programar y diseñar que se necesitaba en HTML4. Las funcionalidades de los formularios en HTML5 brindan una experiencia mejor para los usuarios al permitir que los formularios tengan un comportamiento más consistente entre diferentes sitios web y al darle una devolución inmediata acerca de la información ingresada. También proveen esta experiencia a los usuarios que han deshabilitado javascript en sus navegadores.
@@ -41,8 +40,8 @@ Puedes usar el atributo [`list`](/es/docs/Web/HTML/Element/input#list) en un ele
 <label>Superhéroe favorito</label>
 <input list="superheroes" name="list" />
 <datalist id="superheroes">
-    <option label="Iron Man" value="Iron Man">
-    <option label="The Hulk" value="The Hulk">
+  <option label="Iron Man" value="Iron Man"></option>
+  <option label="The Hulk" value="The Hulk"></option>
 </datalist>
 ```
 
@@ -57,7 +56,11 @@ Puedes usar el atributo [`for`](/es/docs/Web/HTML/Element/output#for) para espec
 El atributo [`placeholder`](/es/docs/Web/HTML/Element/input#placeholder) en elementos `{{ HTMLElement("input") }}` y `{{ HTMLElement("textarea") }}` provee una ayuda a los usuarios acerca de qué debe ser ingresado en el campo. El texto introducido en el placeholder no debe contener «enters» o saltos de línea.
 
 ```html
-<input type="email" id="user-email" placeholder="e.g. john.doe@mozilla.com" required/>
+<input
+  type="email"
+  id="user-email"
+  placeholder="e.g. john.doe@mozilla.com"
+  required />
 ```
 
 ### El atributo autofocus

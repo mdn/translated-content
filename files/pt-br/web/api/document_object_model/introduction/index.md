@@ -1,7 +1,6 @@
 ---
 title: Introdução ao DOM
 slug: Web/API/Document_Object_Model/Introduction
-original_slug: DOM/Referencia_do_DOM/Introdução
 ---
 
 O DOM (Document Object Model) é a representação de dados dos objetos que compõem a estrutura e o conteúdo de um documento na Web. Neste guia, apresentaremos brevemente o DOM. Veremos como o DOM representa um documento {{Glossary ("HTML")}} ou {{Glossary ("XML")}} na memória e como você usa APIs para criar aplicativos e conteúdo da Web.
@@ -104,7 +103,7 @@ A tabela a seguir descreve brevemente esses tipos de dados.
         exemplo, a propriedade <strong><code>ownerDocument </code></strong>de um
         elemento retorna o <code>document</code> ao qual ele pertence),esse
         objeto é o próprio objeto de <code>document</code> raiz. O capítulo
-        <a href="/en-US/docs/Web/API/Document"
+        <a href="/pt-BR/docs/Web/API/Document"
           >DOM <code>document</code> Reference</a
         >
         descreve o objeto do <code>document</code> .

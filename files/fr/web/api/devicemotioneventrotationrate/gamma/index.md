@@ -1,23 +1,11 @@
 ---
 title: DeviceRotationRate.gamma
 slug: Web/API/DeviceMotionEventRotationRate/gamma
-tags:
-  - API
-  - DOM
-  - Mobile
-  - Orientation
-  - Propriétés
-  - axes
-  - rotation
-  - 'y'
-translation_of: Web/API/DeviceMotionEventRotationRate/gamma
-translation_of_original: Web/API/DeviceRotationRate/gamma
-original_slug: Web/API/DeviceRotationRate/gamma
 ---
 
 {{ ApiRef("Device Orientation Events") }}
 
-Cette propriété indique la vitesse de rotation autour de l'axe Y -- en degrés par seconde -- dans un objet {{ domxref("DeviceRotationRate") }}.
+Cette propriété indique la vitesse de rotation autour de l'axe Y — en degrés par seconde — dans un objet {{ domxref("DeviceRotationRate") }}.
 
 ## Syntaxe
 

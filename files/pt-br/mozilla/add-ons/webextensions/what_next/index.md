@@ -1,7 +1,6 @@
 ---
 title: O que vem a seguir ?
 slug: Mozilla/Add-ons/WebExtensions/What_next
-original_slug: Mozilla/Add-ons/WebExtensions/What_next_
 ---
 
 {{AddonSidebar}}
@@ -32,19 +31,19 @@ Browser extensions need to be signed to install into the release or beta version
 
 ## The review process
 
-When a browser extension is submitted for signing, it's subject to automated review. It may also be subject to a manual review, when the automated review determines that a manual review is needed. Your browser extension won't be signed until it’s passed the automated review and may have its signing revoked if it fails to pass the manual review. The review process follows a strict set of guidelines, so it’s easy to check and avoid any likely review problems.
+When a browser extension is submitted for signing, it's subject to automated review. It may also be subject to a manual review, when the automated review determines that a manual review is needed. Your browser extension won't be signed until it's passed the automated review and may have its signing revoked if it fails to pass the manual review. The review process follows a strict set of guidelines, so it's easy to check and avoid any likely review problems.
 
 [Check out the review policy and guidelines](/pt-BR/Add-ons/AMO/Policy/Reviews)
 
 ## AMO featured browser extensions
 
-If you choose to list your browser extension on AMO, your extension could be featured on the AMO website, in the Firefox browser’s add-on manager, or elsewhere on a Mozilla website. We've compiled a list of guidelines about how extensions are selected for featuring, by following these guidelines you give your extension the best chance of being featured.
+If you choose to list your browser extension on AMO, your extension could be featured on the AMO website, in the Firefox browser's add-on manager, or elsewhere on a Mozilla website. We've compiled a list of guidelines about how extensions are selected for featuring, by following these guidelines you give your extension the best chance of being featured.
 
 [Learn more about getting your add-ons featured](/pt-BR/Add-ons/AMO/Policy/Featured)
 
 ## Continue your learning experience
 
-Now you know what lies ahead, it's time to dive into more details about browser extension development. In the sections that follow, you’ll discover:
+Now you know what lies ahead, it's time to dive into more details about browser extension development. In the sections that follow, you'll discover:
 
 - More about the fundamental concepts behind browser extensions, starting with details on how to [use the JavaScript APIs](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs).
 - A guide to the [user interface components](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface) available to your browser extensions.

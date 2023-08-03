@@ -32,7 +32,9 @@ column-rule-color: inherit;
 ## Example
 
 ```css
-#header { column-rule-color: blue; }
+#header {
+  column-rule-color: blue;
+}
 ```
 
 ## Specifications

@@ -1,7 +1,6 @@
 ---
 title: Formateo de texto avanzado
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-original_slug: Learn/HTML/Introduccion_a_HTML/Advanced_text_formatting
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
@@ -209,7 +208,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -259,8 +258,7 @@ Para convertir esto en una cita en bloque independiente, simplemente harías lo 
 ```html
 <p>A continuación se muestra una cita en bloque independiente...</p>
 <blockquote
-  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote"
->
+  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
   <p>
     El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
     <em>elemento HTML de cita en bloque independiente</em>) indica que el texto
@@ -305,8 +303,7 @@ Hay un elemento {{HTMLElement("cite")}}, pero está destinado a contener el tít
 </p>
 
 <blockquote
-  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote"
->
+  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
   <p>
     El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
     <em>elemento HTML de cita en bloque independiente</em>) indica que el texto
@@ -449,7 +446,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -604,7 +601,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;

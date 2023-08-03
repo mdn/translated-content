@@ -1,7 +1,6 @@
 ---
 title: Bugs importants corrigés dans Firefox 3
 slug: Mozilla/Firefox/Releases/3/Notable_bugs_fixed
-translation_of: Mozilla/Firefox/Releases/3/Notable_bugs_fixed
 ---
 
 {{FirefoxSidebar}}
@@ -25,4 +24,4 @@ Cet article fait la liste des corrections importantes faisant partie de Firefox 
 
 ### Voir aussi
 
-- [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_d%c3%a9veloppeurs)
+- [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_développeurs)

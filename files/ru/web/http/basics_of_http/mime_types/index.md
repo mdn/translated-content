@@ -1,9 +1,6 @@
 ---
 title: MIME types
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
-tags:
-  - HTTP
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
 **Медиа тип** (так же известный как **Multipurpose Internet Mail Extensions** или **MIME тип)** является стандартом, который описывает природу и формат документа, файла или набора байтов. Он определён и стандартизирован в спецификации {{RFC(6838)}} .
 
@@ -126,7 +123,7 @@ CSS документы, используемые для стилизации web
 
 Лишь несколько типов изображений достаточно распространены, чтобы безопасно использоваться на веб-страницах.
 
-{{page("ru/docs/Web/Media/Formats/Image_types", "table-of-image-file-types")}}
+{{page("/ru/docs/Web/Media/Formats/Image_types", "table-of-image-file-types")}}
 
 ### Аудио и видео типы
 

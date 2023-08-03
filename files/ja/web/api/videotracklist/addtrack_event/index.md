@@ -1,5 +1,5 @@
 ---
-title: 'VideoTrackList: addtrack イベント'
+title: "VideoTrackList: addtrack イベント"
 slug: Web/API/VideoTrackList/addtrack_event
 l10n:
   sourceCommit: 19dbdc2139ab1c68651da2b9338061d64567665d

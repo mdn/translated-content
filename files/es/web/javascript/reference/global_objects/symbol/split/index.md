@@ -1,7 +1,6 @@
 ---
 title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 l10n:
   sourceCommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
 ---

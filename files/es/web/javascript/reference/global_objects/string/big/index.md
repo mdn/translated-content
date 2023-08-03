@@ -1,7 +1,6 @@
 ---
 title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/big
 ---
 
 {{JSRef("Objetos_globales", "String")}}

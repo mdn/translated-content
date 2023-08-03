@@ -1,7 +1,6 @@
 ---
 title: String.prototype.trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/trimEnd
 ---
 
 {{JSRef}}

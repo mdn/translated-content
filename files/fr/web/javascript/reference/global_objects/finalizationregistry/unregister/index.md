@@ -1,8 +1,6 @@
 ---
 title: FinalizationRegistry.prototype.unregister()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
-translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
-browser-compat: javascript.builtins.FinalizationRegistry.unregister
 ---
 
 {{JSRef}}
@@ -36,9 +34,11 @@ Cet exemple illustre l'enregistrement d'un objet en l'utilisant lui-même comme 
 
 ```js
 class Bidule {
-  #cleanup = label => {
-  //         ^^^^^−−−−− valeur tenue
-    console.error(`La méthode \`release\` n'a jamais été appelée pour l'objet avec l'étiquette "${label}"`);
+  #cleanup = (label) => {
+    //        ^^^^^−−−−− valeur tenue
+    console.error(
+      `La méthode \`release\` n'a jamais été appelée pour l'objet avec l'étiquette "${label}"`,
+    );
   };
   #registry = new FinalizationRegistry(this.#cleanup);
 
@@ -58,8 +58,8 @@ class Bidule {
    * Libère les ressources tenues par cette instance de `Bidule` .
    */
   release() {
-      this.#registry.unregister(this);
-      //                        ^^^^−−−−− jeton de désenregistrement
+    this.#registry.unregister(this);
+    //                        ^^^^−−−−− jeton de désenregistrement
   }
 }
 ```
@@ -68,9 +68,11 @@ Dans l'exemple qui suit, on illustre l'enregistrement en utilisant un autre obje
 
 ```js
 class Bidule {
-  #cleanup = label => {
-  //         ^^^^−−−−− valeur tenue
-    console.error(`La méthode \`release\` n'a jamais été appelée pour \`Bidule\` pour le fichier "${file.name}"`);
+  #cleanup = (label) => {
+    //        ^^^^^−−−−− valeur tenue
+    console.error(
+      `La méthode \`release\` n'a jamais été appelée pour \`Bidule\` pour le fichier "${file.name}"`,
+    );
   };
   #registry = new FinalizationRegistry(this.#cleanup);
 

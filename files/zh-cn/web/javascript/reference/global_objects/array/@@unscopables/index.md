@@ -45,7 +45,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 ```js
 var keys = [];
 
-with(Array.prototype) {
+with (Array.prototype) {
   keys.push("something");
 }
 ```

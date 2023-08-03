@@ -1,12 +1,6 @@
 ---
 title: TextMetrics
 slug: Web/API/TextMetrics
-tags:
-  - API
-  - Canevas
-  - Reference
-  - TextMetrics
-translation_of: Web/API/TextMetrics
 ---
 
 {{APIRef("Canvas API")}}

@@ -1,17 +1,6 @@
 ---
 title: Window.frames
 slug: Web/API/Window/frames
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - DOM_0
-  - Gecko
-  - NeedsContent
-  - NeedsUpdate
-  - Property
-  - Reference
-translation_of: Web/API/Window/frames
 ---
 
 {{ApiRef("Window")}}

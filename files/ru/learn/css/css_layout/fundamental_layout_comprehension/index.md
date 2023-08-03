@@ -1,12 +1,6 @@
 ---
 title: Фундаментальное понимание раскладки
 slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
-tags:
-  - CSS
-  - Начинающий
-  - Обучение
-  - Раскладка
-translation_of: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 ---
 
 {{LearnSidebar}}

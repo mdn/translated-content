@@ -13,6 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/mdn/translated-content.git"
   },
+  "type": "module",
   "scripts": {
     "fix:json": "prettier -w \"**/*.json\"",
     "fix:md": "markdownlint-cli2-fix \"**/*.md\" && prettier -w \"**/*.md\"",
@@ -26,10 +27,16 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
+    "cld": "^2.9.0",
+    "fdir": "^6.0.2",
+    "fs-extra": "^11.1.1",
     "husky": "8.0.3",
     "lint-staged": "13.2.3",
+    "markdown-it": "^13.0.1",
     "markdownlint-cli2": "0.8.1",
     "markdownlint-rule-search-replace": "1.1.0",
-    "prettier": "3.0.0"
+    "ora": "^7.0.1",
+    "prettier": "3.0.1",
+    "yargs": "^17.7.2"
   }
 }

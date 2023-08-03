@@ -1,7 +1,6 @@
 ---
 title: Compositing and Blending
 slug: Web/CSS/CSS_compositing_and_blending
-original_slug: Web/CSS/Compositing_and_Blending
 ---
 
 {{CSSRef}}

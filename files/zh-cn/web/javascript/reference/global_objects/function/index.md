@@ -46,22 +46,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Function
 var x = 10;
 
 function createFunction1() {
-    var x = 20;
-    return new Function('return x;'); // 这里的 x 指向最上面全局作用域内的 x
+  var x = 20;
+  return new Function("return x;"); // 这里的 x 指向最上面全局作用域内的 x
 }
 
 function createFunction2() {
-    var x = 20;
-    function f() {
-        return x; // 这里的 x 指向上方本地作用域内的 x
-    }
-    return f;
+  var x = 20;
+  function f() {
+    return x; // 这里的 x 指向上方本地作用域内的 x
+  }
+  return f;
 }
 
 var f1 = createFunction1();
-console.log(f1());          // 10
+console.log(f1()); // 10
 var f2 = createFunction2();
-console.log(f2());          // 20
+console.log(f2()); // 20
 ```
 
 虽然这段代码可以在浏览器中正常运行，但在 Node.js 中 `f1()` 会产生一个“找不到变量 `x`”的 `ReferenceError`。这是因为在 Node 中顶级作用域不是全局作用域，而 `x` 其实是在当前模块的作用域之中。

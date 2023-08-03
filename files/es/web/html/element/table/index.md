@@ -1,7 +1,6 @@
 ---
 title: tabla
 slug: Web/HTML/Element/table
-original_slug: Web/HTML/Elemento/table
 ---
 
 ## Resumen
@@ -261,8 +260,8 @@ Este elemento implementa la interfaz [`HTMLTableElement`](/es/docs/DOM/HTMLTable
 <!-- Table with colgroup and col -->
 <table>
   <colgroup>
-    <col class="column1">
-    <col class="columns2plus3" span="2">
+    <col class="column1" />
+    <col class="columns2plus3" span="2" />
   </colgroup>
   <tr>
     <th>Lime</th>
@@ -278,7 +277,9 @@ Este elemento implementa la interfaz [`HTMLTableElement`](/es/docs/DOM/HTMLTable
 
 <!-- Simple table with caption -->
 <table>
-  <caption>Awesome caption</caption>
+  <caption>
+    Awesome caption
+  </caption>
   <tr>
     <td>Awesome data</td>
   </tr>
@@ -293,7 +294,8 @@ table {
   width: 100%;
   margin-top: 1rem;
 }
-td, th {
+td,
+th {
   border: 1px solid black;
 }
 ```

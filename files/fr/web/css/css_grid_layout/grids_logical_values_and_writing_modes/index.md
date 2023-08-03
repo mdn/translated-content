@@ -1,8 +1,6 @@
 ---
 title: Les grilles CSS, les valeurs logiques et les modes d'écriture
 slug: Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
-translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes
-original_slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
 ---
 
 {{CSSRef}}
@@ -82,8 +80,12 @@ Sur le Web, c'est la valeur `horizontal-tb` qui est la valeur par défaut pour l
 
 ```html
 <div class="wrapper">
-  <p style="writing-mode: horizontal-tb">Mon mode d'écriture est celui par défaut <code>horizontal-tb</code></p>
-  <p style="writing-mode: vertical-rl">Moi je suis écrit avec <code>vertical-rl</code></p>
+  <p style="writing-mode: horizontal-tb">
+    Mon mode d'écriture est celui par défaut <code>horizontal-tb</code>
+  </p>
+  <p style="writing-mode: vertical-rl">
+    Moi je suis écrit avec <code>vertical-rl</code>
+  </p>
 </div>
 ```
 
@@ -98,7 +100,9 @@ Si on reprend l'exemple avec la grille, on comprend mieux l'effet du changement 
 Dans le prochain exemple, la grille possède trois colonnes et deux lignes. Cela signifie qu'il y a trois pistes qui traversent l'axe de bloc. Avec le mode d'écriture par défaut, la grille commence par placer les objets en haut à gauche en remplissant les trois cellules sur la première ligne avant de passer à la suivante, en formant une nouvelle ligne, etc.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -141,7 +145,9 @@ Dans le prochain exemple, la grille possède trois colonnes et deux lignes. Cela
 Si on ajoute `writing-mode: vertical-lr` au conteneur de la grille, on peut voir que les axes logiques s'appliquent désormais dans une autre direction. L'axe de bloc (aussi appelé l'axe des colonnes pour la grille) s'étend maintenant de gauche à droite et l'axe en ligne court verticalement.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -189,7 +195,9 @@ Dans les exemples précédents, on a vu comment les axes de bloc et en ligne pou
 Dans le prochain exemple, on aligne des objets dans une grille pour laquelle `writing-mode: vertical-lr`. Les valeurs `start` et `end` fonctionnent de la même façon qu'avec le mode d'écriture par défaut mais, parce qu'elles sont logiques, on voit que la grille est bien renversée.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -263,7 +271,9 @@ Dans l'exemple suivant, on a une grille avec la direction `ltr` et on positionne
 ### Placement sur les lignes pour du texte de gauche à droite
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -288,7 +298,7 @@ Dans l'exemple suivant, on a une grille avec la direction `ltr` et on positionne
   grid-gap: 10px;
 }
 .item1 {
-  grid-column: 1 ;
+  grid-column: 1;
 }
 .item2 {
   grid-column: -1 / -3;
@@ -314,7 +324,9 @@ Dans l'exemple suivant, on a une grille avec la direction `ltr` et on positionne
 Si on ajoute alors la propriété {{cssxref("direction")}} avec la valeur `rtl` pour le conteneur de la grille, la colonne 1 sera la plus à droite et la colonne 1 sera à gauche.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -340,7 +352,7 @@ Si on ajoute alors la propriété {{cssxref("direction")}} avec la valeur `rtl` 
   grid-gap: 10px;
 }
 .item1 {
-  grid-column: 1 ;
+  grid-column: 1;
 }
 .item2 {
   grid-column: -1 / -3;
@@ -392,7 +404,10 @@ Les modes d'écritures permettent d'afficher les documents en respectant les rè
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr auto;
-  font: 1em Helvetica, Arial, sans-serif;
+  font:
+    1em Helvetica,
+    Arial,
+    sans-serif;
 }
 .wrapper nav {
   writing-mode: vertical-lr;
@@ -412,8 +427,23 @@ Les modes d'écritures permettent d'afficher les documents en respectant les rè
 ```html
 <div class="wrapper">
   <div class="content">
-    <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
-    <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jícama salsify.</p>
+    <p>
+      Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+      kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+      winter purslane kale. Celery potato scallion desert raisin horseradish
+      spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo
+      shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.
+      Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi
+      beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki
+      bean chickweed potato bell pepper artichoke.
+    </p>
+    <p>
+      Nori grape silver beet broccoli kombu beet greens fava bean potato
+      quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil
+      turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter
+      purslane fennel azuki bean earthnut pea sierra leone bologi leek soko
+      chicory celtuce parsley jícama salsify.
+    </p>
   </div>
   <nav>
     <ul>

@@ -1,7 +1,6 @@
 ---
 title: 代理自动配置文件（PAC）文件
 slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
-original_slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file
 ---
 
 {{HTTPSidebar}}
@@ -155,8 +154,8 @@ isPlainHostName(host)
 #### 例子
 
 ```js
-isPlainHostName("www.mozilla.org") // false
-isPlainHostName("www") // true
+isPlainHostName("www.mozilla.org"); // false
+isPlainHostName("www"); // true
 ```
 
 ### dnsDomainIs()
@@ -181,8 +180,8 @@ dnsDomainIs(host, domain)
 #### 例子
 
 ```js
-dnsDomainIs("www.mozilla.org", ".mozilla.org") // true
-dnsDomainIs("www", ".mozilla.org") // false
+dnsDomainIs("www.mozilla.org", ".mozilla.org"); // true
+dnsDomainIs("www", ".mozilla.org"); // false
 ```
 
 ### localHostOrDomainIs()
@@ -207,10 +206,10 @@ localHostOrDomainIs(host, hostdom)
 #### 例子
 
 ```js
-localHostOrDomainIs("www.mozilla.org" , "www.mozilla.org") // true (exact match)
-localHostOrDomainIs("www"             , "www.mozilla.org") // true (hostname match, domain not specified)
-localHostOrDomainIs("www.google.com"  , "www.mozilla.org") // false (domain name mismatch)
-localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mismatch)
+localHostOrDomainIs("www.mozilla.org", "www.mozilla.org"); // true (exact match)
+localHostOrDomainIs("www", "www.mozilla.org"); // true (hostname match, domain not specified)
+localHostOrDomainIs("www.google.com", "www.mozilla.org"); // false (domain name mismatch)
+localHostOrDomainIs("home.mozilla.org", "www.mozilla.org"); // false (hostname mismatch)
 ```
 
 ### isResolvable()
@@ -231,7 +230,7 @@ isResolvable(host)
 #### 例子：
 
 ```js
-isResolvable("www.mozilla.org") // true
+isResolvable("www.mozilla.org"); // true
 ```
 
 ### isInNet()
@@ -258,9 +257,11 @@ Pattern and mask specification is done the same way as for SOCKS configuration.
 #### 例子：
 
 ```js
-function alert_eval(str) { alert(str + ' is ' + eval(str)) }
+function alert_eval(str) {
+  alert(str + " is " + eval(str));
+}
 function FindProxyForURL(url, host) {
-  alert_eval('isInNet(host, "63.245.213.24", "255.255.255.255")')
+  alert_eval('isInNet(host, "63.245.213.24", "255.255.255.255")');
   // "PAC-alert: isInNet(host, "63.245.213.24", "255.255.255.255") is true"
 }
 ```
@@ -324,7 +325,7 @@ myIpAddress()
 #### 例子
 
 ```js
-myIpAddress() //returns the string "127.0.1.1" if you were running Firefox on that localhost
+myIpAddress(); //returns the string "127.0.1.1" if you were running Firefox on that localhost
 ```
 
 ### dnsDomainLevels()
@@ -345,8 +346,8 @@ dnsDomainLevels(host)
 #### 例子：
 
 ```js
-dnsDomainLevels("www");             // 0
-dnsDomainLevels("mozilla.org");     // 1
+dnsDomainLevels("www"); // 0
+dnsDomainLevels("mozilla.org"); // 1
 dnsDomainLevels("www.mozilla.org"); // 2
 ```
 
@@ -372,7 +373,7 @@ shExpMatch(str, shexp)
 #### 例子
 
 ```js
-shExpMatch("http://home.netscape.com/people/ari/index.html"     , "*/ari/*"); // returns true
+shExpMatch("http://home.netscape.com/people/ari/index.html", "*/ari/*"); // returns true
 shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); // returns false
 ```
 
@@ -389,6 +390,7 @@ weekdayRange(wd1, wd2, [gmt])
 #### 参数
 
 - wd1 和 wd2
+
   - : One of the ordered weekday strings:
 
   ```plain
@@ -410,11 +412,11 @@ If both **wd1** and **wd1** are defined, the condition is true if the current we
 #### 例子
 
 ```js
-weekdayRange("MON", "FRI");        // returns true Monday through Friday (local timezone)
+weekdayRange("MON", "FRI"); // returns true Monday through Friday (local timezone)
 weekdayRange("MON", "FRI", "GMT"); // returns true Monday through Friday (GMT timezone)
-weekdayRange("SAT");               // returns true on Saturdays local time
-weekdayRange("SAT", "GMT");        // returns true on Saturdays GMT time
-weekdayRange("FRI", "MON");        // returns true Friday and Monday only (note, order does matter!)
+weekdayRange("SAT"); // returns true on Saturdays local time
+weekdayRange("SAT", "GMT"); // returns true on Saturdays GMT time
+weekdayRange("FRI", "MON"); // returns true Friday and Monday only (note, order does matter!)
 ```
 
 ### dateRange()
@@ -461,10 +463,10 @@ If only a single value is specified (from each category: day, month, year), the 
 #### 例子
 
 ```js
-dateRange(1);            // returns true on the first day of each month, local timezone
-dateRange(1, "GMT")      // returns true on the first day of each month, GMT timezone
-dateRange(1, 15);        // returns true on the first half of each month
-dateRange(24, "DEC");    // returns true on 24th of December each year
+dateRange(1); // returns true on the first day of each month, local timezone
+dateRange(1, "GMT"); // returns true on the first day of each month, GMT timezone
+dateRange(1, 15); // returns true on the first half of each month
+dateRange(24, "DEC"); // returns true on 24th of December each year
 dateRange("JAN", "MAR"); // returns true on the first quarter of the year
 
 dateRange(1, "JUN", 15, "AUG");
@@ -514,11 +516,11 @@ If only a single value is specified (from each category: hour, minute, second), 
 #### 例子
 
 ```js
-timerange(12);                // returns true from noon to 1pm
-timerange(12, 13);            // returns true from noon to 1pm
-timerange(12, "GMT");         // returns true from noon to 1pm, in GMT timezone
-timerange(9, 17);             // returns true from 9am to 5pm
-timerange(8, 30, 17, 00);     // returns true from 8:30am to 5:00pm
+timerange(12); // returns true from noon to 1pm
+timerange(12, 13); // returns true from noon to 1pm
+timerange(12, "GMT"); // returns true from noon to 1pm, in GMT timezone
+timerange(9, 17); // returns true from 9am to 5pm
+timerange(8, 30, 17, 00); // returns true from 8:30am to 5:00pm
 timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds past midnight
 ```
 
@@ -555,7 +557,7 @@ function FindProxyForURL(url, host) {
     !localHostOrDomainIs(host, "www.mozilla.org") &&
     !localHostOrDoaminIs(host, "merchant.mozilla.org")
   ) {
-        return "DIRECT";
+    return "DIRECT";
   } else {
     return "PROXY w3proxy.mozilla.org:8080; DIRECT";
   }
@@ -574,10 +576,8 @@ function FindProxyForURL(url, host) {
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isResolvable(host))
-    return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+  if (isResolvable(host)) return "DIRECT";
+  else return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -605,10 +605,8 @@ function FindProxyForURL(url, host) {
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isInNet(host, "198.95.0.0", "255.255.0.0"))
-    return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+  if (isInNet(host, "198.95.0.0", "255.255.0.0")) return "DIRECT";
+  else return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -645,21 +643,20 @@ All local accesses are desired to be direct. All proxy servers run on the port 8
 
 ```js
 function FindProxyForURL(url, host) {
-
   if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com"))
     return "DIRECT";
-
   else if (shExpMatch(host, "*.com"))
-    return "PROXY proxy1.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
-
+    return (
+      "PROXY proxy1.mydomain.com:8080; " + "PROXY proxy4.mydomain.com:8080"
+    );
   else if (shExpMatch(host, "*.edu"))
-    return "PROXY proxy2.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
-
+    return (
+      "PROXY proxy2.mydomain.com:8080; " + "PROXY proxy4.mydomain.com:8080"
+    );
   else
-    return "PROXY proxy3.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
+    return (
+      "PROXY proxy3.mydomain.com:8080; " + "PROXY proxy4.mydomain.com:8080"
+    );
 }
 ```
 
@@ -694,11 +691,10 @@ function FindProxyForURL(url, host) {
 >
 > ```js
 > // ...
-> if (shExpMatch(url, "http:\*")) {
-> return "PROXY http-proxy.mydomain.com:8080";
+> if (shExpMatch(url, "http:*")) {
+>   return "PROXY http-proxy.mydomain.com:8080";
 > }
 > // ...
->
 > ```
 
 > **备注：** 自动配置脚本也可以在服务端动态生成。这在某些情况下比较有用，例如根据客户端地址指定不同的代理服务器。`isInNet()`， `isResolvable()` 和 `dnsResolve()` 应该谨慎使用，这些函数会进行 DNS 查询。其他函数则大都是字符处理函数，不需要 DNS。如果通过代理连接，代理本身也会进行一次 DNS 查询，这产生了额外的 DNS 请求。并且绝大多数情况下，不需要这些函数来实现特定的功能。

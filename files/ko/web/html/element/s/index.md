@@ -67,7 +67,7 @@ slug: Web/HTML/Element/s
 ## 예제
 
 ```html
-<s>Today's Special: Salmon</s> SOLD OUT<br>
+<s>Today's Special: Salmon</s> SOLD OUT<br />
 ```
 
 {{EmbedLiveSample("예제")}}

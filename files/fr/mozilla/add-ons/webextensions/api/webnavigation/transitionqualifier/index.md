@@ -1,7 +1,6 @@
 ---
 title: webNavigation.TransitionQualifier
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionQualifier
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionQualifier
 ---
 
 {{AddonSidebar()}}Informations supplémentaires sur une transition.Notez que beaucoup de valeurs ne sont actuellement pas supportées dans Firefox : voir la [table de compatibilité](/fr/Add-ons/WebExtensions/API/WebNavigation/TransitionQualifier#Browser_compatibility) pour plus de détails.

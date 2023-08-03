@@ -1,7 +1,6 @@
 ---
 title: contextMenuShowEvent
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/contextMenuShowEvent
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/contextMenuShowEvent
 ---
 
 {{AddonSidebar()}}
@@ -25,8 +24,9 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.contextMenuShowEvent.set({value: "mouseup"}).
-  then(logResult);
+browser.browserSettings.contextMenuShowEvent
+  .set({ value: "mouseup" })
+  .then(logResult);
 ```
 
 {{WebExtExamples}}

@@ -1,11 +1,6 @@
 ---
 title: id
 slug: Web/HTML/Global_attributes/id
-tags:
-  - HTML
-  - Глобальные атрибуты
-  - Справка
-translation_of: Web/HTML/Global_attributes/id
 ---
 {{HTMLSidebar("Global_attributes")}}
 

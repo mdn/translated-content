@@ -25,20 +25,23 @@ constructor = customElements.get(name);
 ## 例子
 
 ```js
-customElements.define('my-paragraph',
+customElements.define(
+  "my-paragraph",
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById('my-paragraph');
+      let template = document.getElementById("my-paragraph");
       let templateContent = template.content;
 
-      const shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(templateContent.cloneNode(true));
-  }
-})
+      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
+        templateContent.cloneNode(true),
+      );
+    }
+  },
+);
 
 // Return a reference to the my-paragraph constructor
-let ctor = customElements.get('my-paragraph');
+let ctor = customElements.get("my-paragraph");
 ```
 
 ## 规范

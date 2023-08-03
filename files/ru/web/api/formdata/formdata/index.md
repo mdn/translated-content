@@ -1,7 +1,6 @@
 ---
 title: FormData()
 slug: Web/API/FormData/FormData
-translation_of: Web/API/FormData/FormData
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -11,7 +10,7 @@ translation_of: Web/API/FormData/FormData
 ## Синтаксис
 
 ```js
-var formData = new FormData(form)
+var formData = new FormData(form);
 ```
 
 ### Параметры
@@ -23,21 +22,15 @@ var formData = new FormData(form)
 
 ```html
 <form name="test">
-  <input type="text" name="code" value="12345">
-  <input type="submit" value="Отправить">
+  <input type="text" name="code" value="12345" />
+  <input type="submit" value="Отправить" />
 </form>
 ```
 
 ```js
-var
-    oldForm = document.forms.test,
-    formData = new FormData(oldForm)
-;
-
-console.log(
-    formData.get("code"),
-    formData === oldForm
-);
+var oldForm = document.forms.test,
+  formData = new FormData(oldForm);
+console.log(formData.get("code"), formData === oldForm);
 ```
 
 ### Методы

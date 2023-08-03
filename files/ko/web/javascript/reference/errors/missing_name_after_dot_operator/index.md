@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing name after . operator'
+title: "SyntaxError: missing name after . operator"
 slug: Web/JavaScript/Reference/Errors/Missing_name_after_dot_operator
 ---
 
@@ -17,13 +17,13 @@ slug: Web/JavaScript/Reference/Errors/Missing_name_after_dot_operator
 
 ## 무엇이 잘 못 되었을까?
 
-점 연산자 (`.`)는 [프로퍼티 접근](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)을 위해 사용합니다. 접근해야 하는 프로퍼티 명은 제대로 명시 해야 합니다. 연산 프로퍼티에 접근하려면, 점 연산자를 사용하지 않고 대괄호를 사용하는 것으로 프로퍼티 접근 방식을 바꿔야 합니다. 이런 방식들이 표현식의 계산을 수행시켜줄 것입니다. 아마 당신은 연결을 하려고 했을 것입니다. 이 경우에는 더하기 연산자(`+`)가 필요합니다. 아래의 예제를 봐주세요.
+점 연산자 (`.`)는 [프로퍼티 접근](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)을 위해 사용합니다. 접근해야 하는 프로퍼티 명은 제대로 명시 해야 합니다. 연산 프로퍼티에 접근하려면, 점 연산자를 사용하지 않고 대괄호를 사용하는 것으로 프로퍼티 접근 방식을 바꿔야 합니다. 이런 방식들이 표현식의 계산을 수행시켜줄 것입니다. 아마 당신은 연결을 하려고 했을 것입니다. 이 경우에는 더하기 연산자(`+`)가 필요합니다. 아래의 예제를 봐주세요.
 
 ## 예제
 
 ### 프로퍼티 접근
 
-JavaScript [프로퍼티 접근자](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)는 점(.) 또는 대괄호(`[]`) 중 하나만 사용한다. 대괄호는 연산 프로퍼티에 접근을 허용합니다.
+JavaScript [프로퍼티 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)는 점(.) 또는 대괄호(`[]`) 중 하나만 사용한다. 대괄호는 연산 프로퍼티에 접근을 허용합니다.
 
 ```js example-bad
 var obj = { foo: { bar: "baz", bar2: "baz2" } };
@@ -65,4 +65,4 @@ console.log("Hello" + "World");
 
 ## 참조
 
-- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Property accessors](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)

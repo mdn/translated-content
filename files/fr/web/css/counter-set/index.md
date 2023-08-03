@@ -1,11 +1,6 @@
 ---
 title: counter-set
 slug: Web/CSS/counter-set
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/counter-set
 ---
 
 {{CSSRef}}

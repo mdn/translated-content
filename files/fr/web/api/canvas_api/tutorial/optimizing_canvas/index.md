@@ -1,8 +1,6 @@
 ---
 title: Optimiser les Canvas
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
-translation_of: Web/API/Canvas_API/Tutorial/Optimizing_canvas
-original_slug: Web/API/Canvas_API/Tutoriel_canvas/Optimizing_canvas
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
@@ -58,12 +56,20 @@ Par exemple, on peut créer un calque UI, dessiné au-dessus de tous les autres 
     width: 480px;
     height: 320px;
     position: relative;
-    border: 2px solid black
+    border: 2px solid black;
   }
-  canvas { position: absolute; }
-  #ui-layer { z-index: 3 }
-  #game-layer { z-index: 2 }
-  #background-layer { z-index: 1 }
+  canvas {
+    position: absolute;
+  }
+  #ui-layer {
+    z-index: 3;
+  }
+  #game-layer {
+    z-index: 2;
+  }
+  #background-layer {
+    z-index: 1;
+  }
 </style>
 ```
 

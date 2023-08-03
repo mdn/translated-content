@@ -1,12 +1,6 @@
 ---
 title: Disposition de flux et modes d'écriture
 slug: Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes
-tags:
-  - CSS
-  - Guide
-  - Mode d'écriture
-translation_of: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes
-original_slug: Web/CSS/CSS_Flow_Layout/Disposition_flux_et_modes_écriture
 ---
 
 La spécification CSS 2.1, qui décrit le comportement classique du flux normal, prend l'hypothèse d'un mode d'écriture horizontal. [Les propriétés liées à la disposition](/fr/docs/Web/CSS/CSS_Flow_Layout/Disposition_de_bloc_en_ligne_avec_flux_normal) devraient fonctionner de façon identique pour les modes d'écritures verticaux. Dans ce guide, nous verrons comment le flux normal se comporte selon les différents modes d'écriture.
