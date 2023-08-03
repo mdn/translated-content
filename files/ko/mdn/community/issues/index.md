@@ -1,7 +1,6 @@
 ---
 title: MDN에 문제 보고하기
 slug: MDN/Community/Issues
-original_slug: MDN/Contribute/Howto/Report_a_problem
 ---
 
 <div>{{MDNSidebar}}</div>

@@ -1,7 +1,6 @@
 ---
 title: 가변상자의 대표적인 사용례
 slug: Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
-original_slug: Web/CSS/CSS_Flexible_Box_Layout/가변상자의_대표적인_사용례
 ---
 
 {{CSSRef}}

@@ -1,8 +1,7 @@
 ---
 title: 동등 연산자(==)
 slug: Web/JavaScript/Reference/Operators/Equality
-l10n:
-  sourceCommit:3e2369d97e2d6fbfe33a3c496a8edd90e0b539e2
+l10n: sourceCommit:3e2369d97e2d6fbfe33a3c496a8edd90e0b539e2
 ---
 {{jsSidebar("Operators")}}
 

@@ -1,7 +1,6 @@
 ---
 title: 소개
 slug: Web/JavaScript/Guide/Introduction
-original_slug: Web/JavaScript/Guide/소개
 l10n:
   sourceCommit: 9c4fb236cd9ced12b1eb8e7696d8e6fcb8d8bad3
 ---
