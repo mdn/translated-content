@@ -64,7 +64,6 @@ build/
 /files/pt-br/web/svg/**/*.md
 
 # ru
-/files/ru/web/api/**/*.md
 /files/ru/web/css/**/*.md
 /files/ru/web/html/**/*.md
 /files/ru/web/http/**/*.md

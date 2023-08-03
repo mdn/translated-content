@@ -25,11 +25,11 @@ var htmlCollection = document.images;
 ```js
 var images = document.images;
 
-for(var i = 0; i < images.length; i++) {
-    if(images[i].src == "banner.gif") {
-      alert('Баннер найден!');
-    };
-};
+for (var i = 0; i < images.length; i++) {
+  if (images[i].src == "banner.gif") {
+    alert("Баннер найден!");
+  }
+}
 ```
 
 ### Примечания

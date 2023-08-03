@@ -39,7 +39,7 @@ var curElement = document.activeElement;
 ## Пример
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <script type="text/javascript" charset="utf-8">
