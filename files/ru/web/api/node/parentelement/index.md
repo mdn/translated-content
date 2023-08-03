@@ -24,15 +24,13 @@ if (node.parentElement) {
 }
 ```
 
+## Спецификации
+
+{{Specifications}}
+
 ## Совместимость с браузерами
 
-В некоторых браузерах, свойство `parentElement` определено только для узлов, которые сами {{domxref("Element")}}. В частности, не определено для текстовых узлов.
-
 {{Compat}}
-
-## Спецификация
-
-- {{spec("http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#parent-element", "DOM Level 4: Node.parentElement", "WD")}}
 
 ## Смотрите также
 

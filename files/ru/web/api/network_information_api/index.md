@@ -48,22 +48,13 @@ if (connection) {
 
 ## Спецификации
 
-| Specification                                              |
-| ---------------------------------------------------------- |
-| [Network Information API](https://wicg.github.io/netinfo/) |
+{{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
-### `NetworkInformation`
-
-{{Compat("api.NetworkInformation")}}
-
-### `Navigator.connection`
-
-{{Compat("api.Navigator.connection")}}
+{{Compat}}
 
 ## See also
 
-- {{spec("http://w3c.github.io/netinfo/", "Network Information API Specification", "ED")}}
 - [Online and offline events](/ru/docs/Online_and_offline_events)
 - {{domxref("Navigator.connection", "window.navigator.connection")}}

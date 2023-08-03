@@ -57,5 +57,8 @@ output.innerHTML += "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) 
 
 ## Спецификации
 
-- {{spec("https://dom.spec.whatwg.org/#dom-node-isequalnode","DOM Standard","LS")}}
-- {{spec("http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-isEqualNode","DOM Level 3 Core: isEqualNode","REC")}}
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

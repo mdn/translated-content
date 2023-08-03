@@ -47,12 +47,10 @@ var dupNode = node.cloneNode(deep);
 
 Чтобы клонировать узел для добавления к другому документу используйте {{domxref("Document.importNode()")}} вместо этого.
 
+## Спецификации
+
+{{Specifications}}
+
 ## Совместимость с браузерами
 
 {{Compat}}
-
-## Спецификации
-
-- {{Spec("http://w3.org/TR/DOM-Level-2-Core/core.html#ID-3A0ED0A4","DOM Level 2 Core: cloneNode","REC")}}
-- {{Spec("http://w3.org/TR/DOM-Level-3-Core/core.html#ID-3A0ED0A4","DOM Level 3 Core: cloneNode","REC")}}
-- [DOM4: cloneNode](http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-node-clonenode) (черновик)
