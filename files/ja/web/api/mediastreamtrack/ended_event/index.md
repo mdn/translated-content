@@ -1,5 +1,5 @@
 ---
-title: 'MediaStreamTrack: ended イベント'
+title: "MediaStreamTrack: ended イベント"
 slug: Web/API/MediaStreamTrack/ended_event
 ---
 

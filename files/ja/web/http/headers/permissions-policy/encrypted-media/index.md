@@ -1,5 +1,5 @@
 ---
-title: 'Feature-Policy: encrypted-media'
+title: "Feature-Policy: encrypted-media"
 slug: Web/HTTP/Headers/Permissions-Policy/encrypted-media
 ---
 

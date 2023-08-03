@@ -1,5 +1,5 @@
 ---
-title: 'Worker: error イベント'
+title: "Worker: error イベント"
 slug: Web/API/Worker/error_event
 l10n:
   sourceCommit: 6d697b8a86ea3ce1bf82615c5dc006aeaa22d90b

@@ -1,5 +1,5 @@
 ---
-title: 'Feature-Policy: autoplay'
+title: "Feature-Policy: autoplay"
 slug: Web/HTTP/Headers/Permissions-Policy/autoplay
 ---
 

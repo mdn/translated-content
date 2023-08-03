@@ -1,5 +1,5 @@
 ---
-title: 'BaseAudioContext: statechange イベント'
+title: "BaseAudioContext: statechange イベント"
 slug: Web/API/BaseAudioContext/statechange_event
 ---
 

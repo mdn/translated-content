@@ -1,7 +1,6 @@
 ---
 title: 論理的プロパティと値の基本概念
-slug: >-
-  Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values
+slug: Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values
 ---
 
 {{CSSRef}}
