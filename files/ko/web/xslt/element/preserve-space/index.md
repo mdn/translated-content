@@ -1,7 +1,6 @@
 ---
 title: preserve-space
 slug: Web/XSLT/Element/preserve-space
-original_slug: Web/XSLT/preserve-space
 ---
 
 {{ XsltRef() }}

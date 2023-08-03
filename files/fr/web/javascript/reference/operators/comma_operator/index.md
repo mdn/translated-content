@@ -1,7 +1,6 @@
 ---
 title: L'opérateur virgule
 slug: Web/JavaScript/Reference/Operators/Comma_operator
-translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
 ---
 
 {{jsSidebar("Operators")}}

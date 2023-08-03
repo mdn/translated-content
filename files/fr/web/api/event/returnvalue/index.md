@@ -1,7 +1,6 @@
 ---
 title: Event.returnValue
 slug: Web/API/Event/returnValue
-translation_of: Web/API/Event/returnValue
 ---
 
 {{APIRef("DOM Events")}}{{Non-standard_header}}{{ Deprecated_header() }}

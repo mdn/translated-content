@@ -1,10 +1,6 @@
 ---
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-tags:
-  - Буфер
-  - Типизированные массивы
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
 {{JSRef}}
 

@@ -1,5 +1,5 @@
 ---
-title: '@charset'
+title: "@charset"
 slug: Web/CSS/@charset
 ---
 {{ CSSRef }}

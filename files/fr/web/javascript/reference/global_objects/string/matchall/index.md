@@ -1,7 +1,6 @@
 ---
 title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
-translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
 ---
 
 {{JSRef}}

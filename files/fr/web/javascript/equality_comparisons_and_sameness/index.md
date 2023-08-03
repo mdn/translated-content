@@ -1,7 +1,6 @@
 ---
 title: Utiliser les différents tests d'égalité
 slug: Web/JavaScript/Equality_comparisons_and_sameness
-translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 ---
 
 {{jsSidebar("Intermediate")}}

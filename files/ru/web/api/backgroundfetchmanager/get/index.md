@@ -1,17 +1,6 @@
 ---
 title: BackgroundFetchManager.get()
 slug: Web/API/BackgroundFetchManager/get
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - get
-  - BackgroundFetchManager
-  - Experimental
-  - Service Workers
-  - Fetch
-browser-compat: api.BackgroundFetchManager.get
 ---
 
 {{DefaultAPISidebar("Background Fetch API")}}

@@ -1,7 +1,6 @@
 ---
 title: menus.OnClickData
 slug: Mozilla/Add-ons/WebExtensions/API/menus/OnClickData
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/OnClickData
 ---
 
 {{AddonSidebar()}}

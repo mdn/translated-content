@@ -1,7 +1,6 @@
 ---
 title: Éléments
 slug: Web/XSLT/Element
-translation_of: Web/XSLT/Element
 ---
 
 {{ XsltRef() }} Ce document traite de deux types d'éléments&nbsp;: les éléments de haut niveau, et les instructions. Un élément de haut niveau doit toujours apparaître en tant qu'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`. Une instruction, de son côté, est associée à un modèle. Une feuille de style peut comporter plusieurs modèles. Un troisième type d'élément, que nous n'aborderons pas ici, est le «&nbsp;Literal Result Element (LRE)&nbsp;». Un LRE appartient également à un modèle. Le terme regroupe tout ce qui n'est pas une instruction et qui doit être recopié tel-quel dans le document de sortie, par exemple, un élément `<hr>` dans feuille de style de conversion HTML.

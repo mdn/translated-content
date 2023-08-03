@@ -1,5 +1,5 @@
 ---
-title: 'URIError: malformed URI sequence'
+title: "URIError: malformed URI sequence"
 slug: Web/JavaScript/Reference/Errors/Malformed_URI
 ---
 

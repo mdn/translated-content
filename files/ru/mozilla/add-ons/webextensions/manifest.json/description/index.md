@@ -1,11 +1,6 @@
 ---
 title: description
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/description
-tags:
-  - Reference
-  - WebExtensions
-  - description
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/description
 ---
 
 {{AddonSidebar}}

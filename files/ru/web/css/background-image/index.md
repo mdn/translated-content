@@ -1,12 +1,6 @@
 ---
 title: background-image
 slug: Web/CSS/background-image
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/background-image
 ---
 
 {{CSSRef}}

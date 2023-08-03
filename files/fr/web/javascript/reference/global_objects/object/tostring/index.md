@@ -1,7 +1,6 @@
 ---
 title: Object.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
 ---
 
 {{JSRef}}

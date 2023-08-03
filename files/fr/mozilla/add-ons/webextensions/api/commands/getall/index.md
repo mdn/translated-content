@@ -1,7 +1,6 @@
 ---
 title: getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/getAll
-translation_of: Mozilla/Add-ons/WebExtensions/API/commands/getAll
 ---
 
 {{AddonSidebar()}}

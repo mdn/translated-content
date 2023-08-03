@@ -1,7 +1,6 @@
 ---
 title: AnalyserNode
 slug: Web/API/AnalyserNode
-translation_of: Web/API/AnalyserNode
 ---
 
 {{APIRef("Web Audio API")}}
@@ -68,9 +67,11 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 - {{domxref("AnalyserNode.getFloatFrequencyData()")}}
+
   - : Copies the current frequency data into a {{domxref("Float32Array")}} array passed into it.
 
 - {{domxref("AnalyserNode.getByteFrequencyData()")}}
+
   - : Copies the current frequency data into a {{domxref("Uint8Array")}} (unsigned byte array) passed into it.
 
 - {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
@@ -87,7 +88,7 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
 
 ```js
-var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 
 // ...
@@ -104,7 +105,6 @@ var canvasCtx = canvas.getContext("2d");
 // draw an oscilloscope of the current audio source
 
 function draw() {
-
   requestAnimationFrame(draw);
 
   analyser.getByteTimeDomainData(dataArray);
@@ -117,13 +117,12 @@ function draw() {
 
   canvasCtx.beginPath();
 
-  var sliceWidth = canvas.width * 1.0 / bufferLength;
+  var sliceWidth = (canvas.width * 1.0) / bufferLength;
   var x = 0;
 
   for (var i = 0; i < bufferLength; i++) {
-
     var v = dataArray[i] / 128.0;
-    var y = v * canvas.height / 2;
+    var y = (v * canvas.height) / 2;
 
     if (i === 0) {
       canvasCtx.moveTo(x, y);
@@ -141,13 +140,11 @@ function draw() {
 draw();
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                        | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#the-analysernode-interface', 'AnalyserNode')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

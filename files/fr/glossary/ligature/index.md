@@ -1,7 +1,6 @@
 ---
 title: Ligature
 slug: Glossary/Ligature
-translation_of: Glossary/Ligature
 ---
 
 Une **ligature** est une fusion de deux caractères en un seul nouveau caractère. Par exemple, en français, "œ" est une ligature de "oe".

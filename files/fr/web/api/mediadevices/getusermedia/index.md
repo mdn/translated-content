@@ -1,7 +1,6 @@
 ---
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
-translation_of: Web/API/MediaDevices/getUserMedia
 ---
 
 {{APIRef("WebRTC")}}

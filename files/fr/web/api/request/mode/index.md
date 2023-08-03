@@ -1,7 +1,6 @@
 ---
 title: Request.mode
 slug: Web/API/Request/mode
-translation_of: Web/API/Request/mode
 ---
 
 {{APIRef("Fetch")}}{{SeeCompatTable}}

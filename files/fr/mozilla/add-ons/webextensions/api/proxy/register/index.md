@@ -1,7 +1,6 @@
 ---
 title: proxy.register()
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/register
-translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/register
 ---
 
 {{AddonSidebar()}} {{deprecated_header}}

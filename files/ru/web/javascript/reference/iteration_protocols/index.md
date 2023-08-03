@@ -1,9 +1,6 @@
 ---
 title: The Iterator protocol
 slug: Web/JavaScript/Reference/Iteration_protocols
-tags:
-  - Итератор
-translation_of: Web/JavaScript/Reference/Iteration_protocols
 ---
 
 {{jsSidebar("More")}}

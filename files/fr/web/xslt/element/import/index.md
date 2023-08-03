@@ -1,7 +1,6 @@
 ---
 title: import
 slug: Web/XSLT/Element/import
-translation_of: Web/XSLT/Element/import
 ---
 
 {{ XsltRef() }}

@@ -1,7 +1,6 @@
 ---
 title: ウェブアプリケーションからのファイルの使用
 slug: Web/API/File_API/Using_files_from_web_applications
-original_slug: Web/API/File/Using_files_from_web_applications
 l10n:
   sourceCommit: b079d9c8113879d70c668fc94347d50c35fc2fac
 ---

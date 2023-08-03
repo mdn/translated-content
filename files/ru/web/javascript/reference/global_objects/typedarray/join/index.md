@@ -1,12 +1,6 @@
 ---
 title: TypedArray.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
-tags:
-  - JavaScript
-  - Prototype
-  - TypedArray
-  - Массив
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/join
 ---
 
 {{JSRef}}

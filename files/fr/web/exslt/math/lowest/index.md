@@ -1,7 +1,6 @@
 ---
 title: math:lowest()
 slug: Web/EXSLT/math/lowest
-translation_of: Web/EXSLT/math/lowest
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}

@@ -1,18 +1,6 @@
 ---
 title: String.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
-tags:
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 ---
 
 {{JSRef("Global_Objects", "String")}}

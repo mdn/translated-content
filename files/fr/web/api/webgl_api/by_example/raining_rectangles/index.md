@@ -1,7 +1,6 @@
 ---
 title: Une pluie de rectangle
 slug: Web/API/WebGL_API/By_example/Raining_rectangles
-translation_of: Web/API/WebGL_API/By_example/Raining_rectangles
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique","Apprendre/WebGL/Par_exemple/Hello_GLSL")}}

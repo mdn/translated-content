@@ -1,12 +1,6 @@
 ---
 title: <input type="button">
 slug: Web/HTML/Element/input/button
-page-type: html-element
-tags:
-  - HTML формы
-  - Формы
-  - Элемент Input
-translation_of: Web/HTML/Element/input/button
 ---
 
 {{HTMLSidebar}}

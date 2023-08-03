@@ -1,13 +1,6 @@
 ---
 title: Last-Modified
 slug: Web/HTTP/Headers/Last-Modified
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
-translation_of: Web/HTTP/Headers/Last-Modified
-original_slug: Web/HTTP/Заголовки/Last-Modified
 ---
 {{HTTPSidebar}}
 

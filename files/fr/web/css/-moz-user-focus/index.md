@@ -1,7 +1,6 @@
 ---
 title: "-moz-user-focus"
 slug: Web/CSS/-moz-user-focus
-translation_of: Web/CSS/-moz-user-focus
 ---
 
 {{CSSRef}}{{Non-standard_header}}

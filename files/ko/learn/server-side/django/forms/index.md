@@ -577,7 +577,7 @@ The "create" and "update" views use the same template by default, which will be 
 Create the template file **locallibrary/catalog/templates/catalog/author_form.html** and copy in the text below.
 
 ```django
-{% extends "base_generic.html" %} 
+{% extends "base_generic.html" %}
 
 {% block content %}
   <form action="" method="post">

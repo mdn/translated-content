@@ -1,7 +1,6 @@
 ---
 title: Object.fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/fromEntries
 ---
 
 {{JSRef}}

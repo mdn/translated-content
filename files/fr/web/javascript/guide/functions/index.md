@@ -1,7 +1,6 @@
 ---
 title: Fonctions
 slug: Web/JavaScript/Guide/Functions
-translation_of: Web/JavaScript/Guide/Functions
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Boucles_et_itération", "Web/JavaScript/Guide/Expressions_et_Opérateurs")}}

@@ -2,7 +2,7 @@
 title: Qu'est-ce que les WebExtensions ?
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 l10n:
-  source: 5d88855e1d963ca0b0c3c14aeaa6414f8386c64e
+  sourceCommit: 5d88855e1d963ca0b0c3c14aeaa6414f8386c64e
 ---
 
 {{AddonSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: message
 slug: Web/XSLT/Element/message
-translation_of: Web/XSLT/Element/message
 ---
 
 {{ XsltRef() }}

@@ -1,7 +1,6 @@
 ---
 title: WindowEventHandlers
 slug: orphaned/Web/API/WindowEventHandlers
-original_slug: Web/API/WindowEventHandlers
 ---
 
 {{APIRef("HTML DOM")}}

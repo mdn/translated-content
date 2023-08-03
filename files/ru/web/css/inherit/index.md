@@ -1,18 +1,6 @@
 ---
 title: inherit
 slug: Web/CSS/inherit
-tags:
-  - CSS
-  - CSS Cascade
-  - CSS Value
-  - Cascade
-  - Inheritance
-  - Keyword
-  - Layout
-  - Reference
-  - Style
-  - inherit
-browser-compat: css.types.global_keywords.inherit
 ---
 {{CSSRef}}
 

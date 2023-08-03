@@ -1,15 +1,6 @@
 ---
 title: String.prototype.strike()
 slug: Web/JavaScript/Reference/Global_Objects/String/strike
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Методы оборачивания в HTML
-translation_of: Web/JavaScript/Reference/Global_Objects/String/strike
 ---
 
 {{JSRef("Global_Objects", "String")}} {{deprecated_header}}

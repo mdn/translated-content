@@ -1,7 +1,6 @@
 ---
 title: String — Cadena de caracteres
 slug: Web/JavaScript/Reference/Global_Objects/String
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String
 ---
 
 {{JSRef}}

@@ -1,18 +1,6 @@
 ---
-title: '<div>: базовый блочный элемент'
+title: "<div>: базовый блочный элемент"
 slug: Web/HTML/Element/div
-tags:
-  - Element
-  - HTML
-  - Web
-  - div
-  - Веб
-  - Группировка контента
-  - Потоковый контент
-  - Разделение контента
-  - Справка
-  - Элемент
-translation_of: Web/HTML/Element/div
 ---
 
 {{HTMLSidebar}}

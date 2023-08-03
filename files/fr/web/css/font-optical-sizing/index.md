@@ -1,7 +1,6 @@
 ---
 title: font-optical-sizing
 slug: Web/CSS/font-optical-sizing
-translation_of: Web/CSS/font-optical-sizing
 ---
 
 {{CSSRef}}

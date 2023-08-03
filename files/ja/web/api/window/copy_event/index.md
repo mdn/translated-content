@@ -1,5 +1,5 @@
 ---
-title: 'Window: copy イベント'
+title: "Window: copy イベント"
 slug: Web/API/Window/copy_event
 ---
 
