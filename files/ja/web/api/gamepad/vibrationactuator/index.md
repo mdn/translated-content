@@ -1,11 +1,12 @@
 ---
-title: Gamepad.vibrationActuator
+title: "Gamepad: vibrationActuator プロパティ"
+short-title: vibrationActuator
 slug: Web/API/Gamepad/vibrationActuator
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("Gamepad")}}{{SeeCompatTable}}{{Non-standard_Header}}
+{{APIRef("Gamepad")}}{{Non-standard_Header}}
 
 **`vibrationActuator`** は {{domxref("Gamepad")}} インターフェイスの読み取り専用プロパティで、このコントローラーで利用できる触覚フィードバックハードウェアを表す {{domxref("GamepadHapticActuator")}} オブジェクトを返します。
 
@@ -18,7 +19,7 @@ l10n:
 ```js
 const gamepad = navigator.getGamepads()[0];
 
-gamepad.vibrationActuator.playEffect('dual-rumble', {
+gamepad.vibrationActuator.playEffect("dual-rumble", {
   startDelay: 0,
   duration: 200,
   weakMagnitude: 1.0,

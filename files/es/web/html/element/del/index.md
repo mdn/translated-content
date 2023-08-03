@@ -1,7 +1,6 @@
 ---
 title: del
 slug: Web/HTML/Element/del
-original_slug: Web/HTML/Elemento/del
 ---
 
 ### Definición

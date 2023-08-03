@@ -1,7 +1,6 @@
 ---
 title: fieldset
 slug: Web/HTML/Element/fieldset
-original_slug: Web/HTML/Elemento/fieldset
 ---
 
 ### Definición

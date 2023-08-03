@@ -13,7 +13,7 @@ Null 合体代入 (`x ??= y`) 演算子は、`x` が {{Glossary("nullish")}} (`n
 ## 構文
 
 ```js
-expr1 ??= expr2
+expr1 ??= expr2;
 ```
 
 ## 解説

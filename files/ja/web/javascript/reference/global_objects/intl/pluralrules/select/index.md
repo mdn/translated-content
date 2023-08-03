@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
 ## 構文
 
 ```js
-select(number)
+select(number);
 ```
 
 ### 引数
@@ -31,19 +31,19 @@ select(number)
 ### select() の使用
 
 ```js
- new Intl.PluralRules('ar-EG').select(0);
+new Intl.PluralRules("ar-EG").select(0);
 // → 'zero'
 
-new Intl.PluralRules('ar-EG').select(1);
+new Intl.PluralRules("ar-EG").select(1);
 // → 'one'
 
-new Intl.PluralRules('ar-EG').select(2);
+new Intl.PluralRules("ar-EG").select(2);
 // → 'two'
 
-new Intl.PluralRules('ar-EG').select(6);
+new Intl.PluralRules("ar-EG").select(6);
 // → 'few'
 
-new Intl.PluralRules('ar-EG').select(18);
+new Intl.PluralRules("ar-EG").select(18);
 // → 'many'
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: Web 媒体技术
 slug: Web/Media
-original_slug: Web/媒体
 ---
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}

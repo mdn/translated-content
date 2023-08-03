@@ -17,17 +17,23 @@ windowObj.onstorage = function() { ... };
 ## Exemplos
 
 ```js
-window.onstorage = function(e) {
-  console.log('The ' + e.key + ' key has been changed from ' + e.oldValue + ' to ' + e.newValue + '.');
+window.onstorage = function (e) {
+  console.log(
+    "The " +
+      e.key +
+      " key has been changed from " +
+      e.oldValue +
+      " to " +
+      e.newValue +
+      ".",
+  );
 };
 ```
 
 ## Especificações
 
-| Especificação                                                                                                | Status                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-window-onstorage','onstorage')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Window.storage_event")}}
+{{Compat}}

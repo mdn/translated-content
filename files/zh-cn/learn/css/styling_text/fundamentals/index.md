@@ -1,7 +1,6 @@
 ---
 title: 基本文本和字体样式
 slug: Learn/CSS/Styling_text/Fundamentals
-original_slug: Learn/CSS/为文本添加样式/Fundamentals
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
