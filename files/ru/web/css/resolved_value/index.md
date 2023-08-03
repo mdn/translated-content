@@ -1,8 +1,6 @@
 ---
 title: Решённое значение
 slug: Web/CSS/resolved_value
-tags:
-  - CSS
 ---
 
 {{cssref}}

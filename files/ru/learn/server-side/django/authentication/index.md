@@ -1,20 +1,6 @@
 ---
 title: "Руководство Django Часть 8: Аутентификация и авторизация пользователя"
 slug: Learn/Server-side/Django/Authentication
-tags:
-  - Python
-  - Аутентификация
-  - Аутентификация django
-  - Django
-  - Начинающий
-  - Обучение
-  - Разграничение доступа
-  - Руководство
-  - Сервер
-  - Статья
-  - Формы
-  - на стороне сервера
-  - сессии
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}

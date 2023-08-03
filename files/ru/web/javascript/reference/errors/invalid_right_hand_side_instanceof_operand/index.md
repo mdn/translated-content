@@ -1,7 +1,5 @@
 ---
-title: >-
-  TypeError: invalid 'instanceof' operand 'x'(Тип ошибки:  неверный
-  'экземпляром' операнд 'х')
+title: "TypeError: invalid 'instanceof' operand 'x'(Тип ошибки:  неверный 'экземпляром' операнд 'х')"
 slug: Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
 ---
 

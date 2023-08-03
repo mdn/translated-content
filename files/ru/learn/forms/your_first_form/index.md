@@ -1,15 +1,6 @@
 ---
 title: Example
 slug: Learn/Forms/Your_first_form
-tags:
-  - Beginner
-  - CodingScripting
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Learn
-  - Web
 ---
 
 This is the example code for the article [Your first HTML form](/ru/docs/Learn/Forms/Your_first_form).

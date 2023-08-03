@@ -1,14 +1,6 @@
 ---
 title: Логическое нулевое присваивание (??=)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
-browser-compat: javascript.operators.logical_nullish_assignment
 ---
 
 {{jsSidebar("Operators")}}

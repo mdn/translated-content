@@ -1,9 +1,6 @@
 ---
 title: <mstyle>
 slug: Web/MathML/Element/mstyle
-tags:
-  - MathML
-  - MathML:Element
 ---
 
 {{MathMLRef}}

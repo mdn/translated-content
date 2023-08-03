@@ -1,10 +1,6 @@
 ---
 title: CanvasRenderingContext2D.font
 slug: Web/API/CanvasRenderingContext2D/font
-tags:
-  - API
-  - Canvas
-  - Property
 ---
 
 {{APIRef}}

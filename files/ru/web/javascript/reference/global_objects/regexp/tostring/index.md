@@ -1,13 +1,6 @@
 ---
 title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - регулярные выражения
 ---
 
 {{JSRef("Global_Objects", "RegExp")}}

@@ -1,13 +1,6 @@
 ---
 title: CanvasRenderingContext2D.arc()
 slug: Web/API/CanvasRenderingContext2D/arc
-tags:
-  - API
-  - Рисование
-  - Рисование в 2d
-  - Функция
-  - Холст
-  - метод
 ---
 
 {{APIRef}}

@@ -1,12 +1,6 @@
 ---
 title: animation-iteration-count
 slug: Web/CSS/animation-iteration-count
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Experimental
-  - Reference
 ---
 {{ CSSRef() }}{{ SeeCompatTable() }}
 

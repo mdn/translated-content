@@ -1,10 +1,6 @@
 ---
 title: Комбинаторы
 slug: Learn/CSS/Building_blocks/Selectors/Combinators
-tags:
-  - CSS
-  - Селекторы
-  - комбинаторы
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}

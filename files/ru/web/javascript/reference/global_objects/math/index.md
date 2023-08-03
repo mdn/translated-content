@@ -1,10 +1,6 @@
 ---
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
-tags:
-  - JavaScript
-  - Math
-  - Reference
 ---
 {{JSRef("Global_Objects", "Math")}}
 

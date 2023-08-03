@@ -1,13 +1,6 @@
 ---
 title: Document.origin
 slug: Web/API/origin
-tags:
-  - API
-  - DOM
-  - Read-only
-  - Интерфейс
-  - Свойство
-  - Экспериментальный
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}

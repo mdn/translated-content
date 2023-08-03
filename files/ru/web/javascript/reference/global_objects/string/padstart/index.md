@@ -1,12 +1,6 @@
 ---
 title: String.prototype.padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
 ---
 {{JSRef}}{{SeeCompatTable}}
 

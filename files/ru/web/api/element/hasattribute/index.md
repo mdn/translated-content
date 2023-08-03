@@ -1,10 +1,6 @@
 ---
 title: Element.hasAttribute()
 slug: Web/API/Element/hasAttribute
-tags:
-  - ОМД
-  - Элемент
-  - метод
 ---
 
 {{APIRef("DOM")}}

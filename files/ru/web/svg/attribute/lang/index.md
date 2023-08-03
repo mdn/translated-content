@@ -1,8 +1,6 @@
 ---
 title: lang
 slug: Web/SVG/Attribute/lang
-tags:
-  - SVG
 ---
 
 {{SVGRef}}

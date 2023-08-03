@@ -1,8 +1,6 @@
 ---
 title: Использование изображений
 slug: Web/API/Canvas_API/Tutorial/Using_images
-tags:
-  - Графика
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Трансформации")}}

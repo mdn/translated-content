@@ -1,8 +1,6 @@
 ---
 title: Селектор следующего элемента
 slug: Web/CSS/General_sibling_combinator
-tags:
-  - смежные селекторы CSS спецификация комбинатор
 ---
 
 {{CSSRef("Selectors")}}

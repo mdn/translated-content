@@ -1,10 +1,6 @@
 ---
 title: ArrayBuffer.isView()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - TypedArrays
 ---
 {{JSRef}}
 

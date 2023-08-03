@@ -1,11 +1,6 @@
 ---
-title: '::grammar-error'
+title: "::grammar-error"
 slug: Web/CSS/::grammar-error
-tags:
-  - CSS
-  - Псевдо-элемент
-  - Экспериментальные
-  - селектор
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

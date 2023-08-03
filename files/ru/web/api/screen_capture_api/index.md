@@ -1,25 +1,6 @@
 ---
 title: Screen Capture API
 slug: Web/API/Screen_Capture_API
-tags:
-  - API
-  - Capture
-  - Conference
-  - Media
-  - MediaDevices
-  - MediaStream
-  - NeedsTranslation
-  - Overview
-  - Screen Capture
-  - Screen Capture API
-  - Screen Sharing
-  - Sharing
-  - TopicStub
-  - Video
-  - Window
-  - display
-  - getDisplayMedia
-  - screen
 ---
 
 {{DefaultAPISidebar("Screen Capture API")}}

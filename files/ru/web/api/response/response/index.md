@@ -1,12 +1,6 @@
 ---
 title: Response()
 slug: Web/API/Response/Response
-tags:
-  - API
-  - Constructor
-  - Fetch
-  - Reference
-  - Response
 ---
 
 {{APIRef("Fetch")}}

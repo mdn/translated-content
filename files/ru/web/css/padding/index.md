@@ -1,10 +1,6 @@
 ---
 title: padding
 slug: Web/CSS/padding
-tags:
-  - CSS
-  - CSS Padding
-  - CSS-свойство
 ---
 {{CSSRef}}
 

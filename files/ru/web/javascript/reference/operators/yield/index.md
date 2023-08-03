@@ -1,13 +1,6 @@
 ---
 title: yield
 slug: Web/JavaScript/Reference/Operators/yield
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Генераторы
-  - Итераторы
-  - Оператор
-  - Экспериментальный
 ---
 
 {{jsSidebar("Operators")}}

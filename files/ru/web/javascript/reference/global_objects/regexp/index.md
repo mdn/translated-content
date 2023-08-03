@@ -1,13 +1,6 @@
 ---
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - RegExp
-  - Référence(2)
-  - регулярные выражения
 ---
 
 {{JSRef("Global_Objects", "RegExp")}}

@@ -1,13 +1,6 @@
 ---
 title: ClipboardEvent
 slug: Web/API/ClipboardEvent
-tags:
-  - API
-  - Clipboard API
-  - Event
-  - Experimental
-  - Interface
-  - Буфер обмена
 ---
 
 {{APIRef("Clipboard API")}} {{SeeCompatTable}}

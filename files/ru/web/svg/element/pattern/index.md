@@ -1,8 +1,6 @@
 ---
 title: <pattern>
 slug: Web/SVG/Element/pattern
-tags:
-  - SVG
 ---
 
 {{SVGRef}}

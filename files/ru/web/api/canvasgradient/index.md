@@ -1,13 +1,6 @@
 ---
 title: CanvasGradient
 slug: Web/API/CanvasGradient
-tags:
-  - API
-  - Canvas
-  - CanvasGradient
-  - Градиенты
-  - Интерфейс
-  - Справка
 ---
 
 {{APIRef("Canvas API")}}

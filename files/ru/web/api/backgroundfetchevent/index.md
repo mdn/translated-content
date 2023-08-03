@@ -1,14 +1,6 @@
 ---
 title: BackgroundFetchEvent
 slug: Web/API/BackgroundFetchEvent
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - BackgroundFetchEvent
-  - Experimental
-browser-compat: api.BackgroundFetchEvent
 ---
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}

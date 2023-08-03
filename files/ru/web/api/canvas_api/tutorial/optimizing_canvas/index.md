@@ -1,15 +1,6 @@
 ---
 title: Оптимизация canvas
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
-tags:
-  - Canvas
-  - Graphics
-  - HTML
-  - HTML5
-  - Tutorial
-  - Оптимизация
-  - Урок
-  - Холст
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}

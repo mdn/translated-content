@@ -1,17 +1,6 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
-tags:
-  - Array
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - polyfill
 ---
 {{JSRef}}
 

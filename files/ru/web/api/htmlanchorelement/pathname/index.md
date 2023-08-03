@@ -1,12 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.pathname
 slug: Web/API/HTMLAnchorElement/pathname
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - URL API
 ---
 
 {{ApiRef("URL API")}}

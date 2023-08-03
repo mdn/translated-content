@@ -1,10 +1,6 @@
 ---
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
-tags:
-  - Internationalization
-  - JavaScript
-  - Reference
 ---
 
 {{JSRef("Global_Objects", "Intl", "Collator,DateTimeFormat,NumberFormat")}}

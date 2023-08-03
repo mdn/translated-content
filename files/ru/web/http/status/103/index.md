@@ -1,13 +1,6 @@
 ---
 title: 103 Early Hints
 slug: Web/HTTP/Status/103
-tags:
-  - HTTP
-  - Информация
-  - Код состояния
-  - ТаблицаСоответствия
-  - Требуется Содержание
-  - Черновик
 ---
 
 {{HTTPSidebar}}

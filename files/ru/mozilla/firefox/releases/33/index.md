@@ -1,12 +1,6 @@
 ---
 title: Firefox 33 для разработчиков
 slug: Mozilla/Firefox/Releases/33
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Method
-  - Release
 ---
 
 {{FirefoxSidebar}}Хотите помочь с документацией к Firefox 33? Взгляните на [список багов нуждающихся в описании](http://beta.elchi3.de/doctracker/#list=fx&version=33.0) и помогите нам!

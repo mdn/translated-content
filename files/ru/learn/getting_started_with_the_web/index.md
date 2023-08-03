@@ -1,20 +1,6 @@
 ---
 title: Начало работы с Вебом
 slug: Learn/Getting_started_with_the_web
-tags:
-  - Beginner
-  - CSS
-  - Design
-  - Guide
-  - HTML
-  - Index
-  - TopicStub
-  - publishing
-  - theory
-  - Новичку
-  - Обучающая зона
-  - Обучение
-  - Руководство
 ---
 
 {{LearnSidebar}}

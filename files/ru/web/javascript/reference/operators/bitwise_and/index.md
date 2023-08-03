@@ -1,11 +1,6 @@
 ---
 title: Bitwise AND (&)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND
-tags:
-  - JavaScript
-  - Оператор
-  - По
-  - Побитовые операторы
 ---
 
 {{jsSidebar("Operators")}}

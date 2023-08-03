@@ -1,12 +1,6 @@
 ---
 title: Видимость страницы API
 slug: Web/API/Page_Visibility_API
-tags:
-  - API
-  - DOM
-  - Документ
-  - Показать страницу
-  - Скрыть страницу
 ---
 
 {{DefaultAPISidebar("Page Visibility API")}}

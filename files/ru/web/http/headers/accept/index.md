@@ -1,10 +1,6 @@
 ---
 title: Accept
 slug: Web/HTTP/Headers/Accept
-tags:
-  - HTTP
-  - Заголовки HTTP
-  - Заголовки запроса HTTP
 ---
 {{HTTPSidebar}}
 

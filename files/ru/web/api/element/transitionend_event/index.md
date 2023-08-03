@@ -1,8 +1,6 @@
 ---
 title: transitionend
 slug: Web/API/Element/transitionend_event
-tags:
-  - CSS
 ---
 
 Событие `transitionend` срабатывает, когда [CSS transition](/ru/docs/CSS/Using_CSS_transitions) закончил своё выполнение. В случае, когда анимация удаляется до её завершения(например, если [transition-property \[en-US\]](/ru/docs/Web/CSS/transition-property) удаляется), то событие не срабатывает.

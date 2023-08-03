@@ -1,10 +1,6 @@
 ---
 title: lighting-color
 slug: Web/SVG/Attribute/lighting-color
-tags:
-  - SVG
-  - SVG атрибуты
-  - SVG фильтры
 ---
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)

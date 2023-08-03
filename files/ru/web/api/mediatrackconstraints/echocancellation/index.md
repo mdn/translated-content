@@ -1,17 +1,6 @@
 ---
 title: MediaTrackConstraints.echoCancellation
 slug: Web/API/MediaTrackConstraints/echoCancellation
-tags:
-  - API
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstrains
-  - WebRTC
-  - Медиа
-  - Ограничения
-  - Свойство
-  - Эхоподавление
-  - справочник
 ---
 
 {{APIRef("Media Capture and Streams")}}

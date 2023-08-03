@@ -1,9 +1,6 @@
 ---
 title: justify-content
 slug: Web/CSS/justify-content
-tags:
-  - CSS
-  - justify-content
 ---
 {{CSSRef}}
 

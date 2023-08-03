@@ -1,10 +1,6 @@
 ---
 title: SVG
 slug: Web/SVG
-tags:
-  - 2D Graphics
-  - References
-  - SVG
 ---
 **[С чего начать](/ru/docs/Web/SVG/Tutorial)**
 Этот урок поможет вам начать использовать SVG.

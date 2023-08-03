@@ -1,12 +1,6 @@
 ---
 title: Галерея изображений
 slug: Learn/JavaScript/Building_blocks/Image_gallery
-tags:
-  - Обработчик событий
-  - Оценка
-  - начальный уровень
-  - события
-  - циклы
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}

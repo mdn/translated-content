@@ -1,17 +1,6 @@
 ---
 title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
-tags:
-  - Array
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
 ---
 {{JSRef}}
 

@@ -1,11 +1,6 @@
 ---
 title: Пиксельная манипуляция с холстом
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
-tags:
-  - Графика
-  - Промежуточный
-  - Руководство
-  - Холст
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}

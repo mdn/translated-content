@@ -1,8 +1,6 @@
 ---
 title: VRStageParameters.sittingToStandingTransform
 slug: Web/API/VRStageParameters/sittingToStandingTransform
-tags:
-  - Виртуальная реальность
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}

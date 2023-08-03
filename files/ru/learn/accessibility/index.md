@@ -1,12 +1,6 @@
 ---
 title: Доступность
 slug: Learn/Accessibility
-tags:
-  - CSS
-  - HTML
-  - JavaScript
-  - Удобство
-  - доступность
 ---
 
 {{LearnSidebar}}

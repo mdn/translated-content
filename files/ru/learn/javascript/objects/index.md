@@ -1,11 +1,6 @@
 ---
 title: Введение в объекты JavaScript
 slug: Learn/JavaScript/Objects
-tags:
-  - JavaScript
-  - Начинающим
-  - Объекты
-  - Руководства
 ---
 
 {{LearnSidebar}}

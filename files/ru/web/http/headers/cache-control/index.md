@@ -1,8 +1,6 @@
 ---
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
-tags:
-  - Кеширование
 ---
 
 {{HTTPSidebar}}

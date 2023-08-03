@@ -1,12 +1,6 @@
 ---
 title: this
 slug: Web/JavaScript/Reference/Operators/this
-tags:
-  - JavaScript
-  - Operator
-  - Reference
-  - this
-  - свойства языка
 ---
 {{jsSidebar("Operators")}}
 

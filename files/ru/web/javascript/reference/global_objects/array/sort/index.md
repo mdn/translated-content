@@ -1,11 +1,6 @@
 ---
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
 ---
 
 {{JSRef("Global_Objects", "Array")}}

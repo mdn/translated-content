@@ -1,11 +1,6 @@
 ---
 title: margin-top
 slug: Web/CSS/margin-top
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - справочник
 ---
 
 {{CSSRef}}

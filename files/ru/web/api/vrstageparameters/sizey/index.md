@@ -1,8 +1,6 @@
 ---
 title: VRStageParameters.sizeY
 slug: Web/API/VRStageParameters/sizeY
-tags:
-  - Виртуальная реальность
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}

@@ -1,18 +1,6 @@
 ---
 title: <img>
 slug: Web/HTML/Element/img
-tags:
-  - Element
-  - HTML
-  - Web
-  - Веб
-  - Графика
-  - Изображение
-  - Картинки
-  - Справка
-  - Фотографии
-  - Элемент
-  - мультимедиа
 ---
 
 {{HTMLSidebar}}

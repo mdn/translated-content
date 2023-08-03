@@ -1,10 +1,6 @@
 ---
 title: Блоковая модель (боксовая модель, box model)
 slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
-tags:
-  - CSS
-  - Guide
-  - Веб
 ---
 
 ## Описание

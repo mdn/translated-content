@@ -1,12 +1,6 @@
 ---
 title: Intl.Collator.prototype.compare
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
-tags:
-  - Collator
-  - Internationalization
-  - JavaScript
-  - Property
-  - Prototype
 ---
 
 {{JSRef("Global_Objects", "Collator", "Intl,DateTimeFormat,NumberFormat")}}

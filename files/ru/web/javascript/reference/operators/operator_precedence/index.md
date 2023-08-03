@@ -1,11 +1,6 @@
 ---
 title: Приоритет операторов
 slug: Web/JavaScript/Reference/Operators/Operator_precedence
-tags:
-  - JavaScript
-  - Операторы
-  - подробности об операторах
-  - приоритет операторов
 ---
 
 {{jsSidebar("Operators")}}

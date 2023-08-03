@@ -1,17 +1,6 @@
 ---
-title: '::backdrop'
+title: "::backdrop"
 slug: Web/CSS/::backdrop
-tags:
-  - API
-  - CSS
-  - Dialog
-  - Fullscreen API
-  - HTML DOM
-  - Полный экран
-  - Псевдо-элемент
-  - Разметка
-  - диалоговое окно
-  - полноэкранный режим
 ---
 
 {{CSSRef}}

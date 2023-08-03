@@ -1,9 +1,6 @@
 ---
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
-tags:
-  - JavaScript
-  - Statement
 ---
 {{jsSidebar("Statements")}}
 

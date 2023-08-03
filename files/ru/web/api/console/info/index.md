@@ -1,9 +1,6 @@
 ---
 title: Console.info()
 slug: Web/API/console/info
-tags:
-  - Debugging
-  - Web Development
 ---
 
 {{APIRef("Console API")}}

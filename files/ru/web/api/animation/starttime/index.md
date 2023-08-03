@@ -1,10 +1,6 @@
 ---
 title: Window.mozAnimationStartTime
 slug: Web/API/Animation/startTime
-tags:
-  - >-
-    API  HTML DOM  NeedsExample  NeedsMarkupWork NeedsSpecTable  Property 
-    Reference  Window
 ---
 
 {{ APIRef() }}{{ non-standard_header() }}

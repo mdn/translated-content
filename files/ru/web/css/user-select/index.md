@@ -1,9 +1,6 @@
 ---
 title: user-select
 slug: Web/CSS/user-select
-tags:
-  - Вёрстка
-  - Свойство
 ---
 
 {{CSSRef}}

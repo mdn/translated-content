@@ -1,10 +1,6 @@
 ---
 title: <angle>
 slug: Web/CSS/angle
-tags:
-  - CSS
-  - Web
-  - Тип данных CSS
 ---
 
 {{ CSSRef() }}

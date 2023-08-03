@@ -1,14 +1,6 @@
 ---
 title: USB.requestDevice()
 slug: Web/API/USB/requestDevice
-tags:
-  - API
-  - USB
-  - WebUSB
-  - WebUSB API
-  - getDevices()
-  - Определение
-  - метод
 ---
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}

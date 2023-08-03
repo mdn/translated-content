@@ -1,10 +1,6 @@
 ---
 title: Reflect.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
-tags:
-  - ECMAScript 2015
-  - Method
-  - Reflect
 ---
 
 {{JSRef}}

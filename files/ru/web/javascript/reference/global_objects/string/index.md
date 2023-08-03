@@ -1,11 +1,6 @@
 ---
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
-tags:
-  - JavaScript
-  - NeedsUpdate
-  - Reference
-  - String
 ---
 
 {{JSRef("Global_Objects", "String")}}

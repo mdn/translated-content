@@ -1,11 +1,6 @@
 ---
 title: grid
 slug: Web/CSS/grid
-tags:
-  - CSS
-  - CSS-свойства
-  - CSS сетка
-  - Ссылки
 ---
 ## Общие сведения
 

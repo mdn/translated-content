@@ -1,14 +1,6 @@
 ---
 title: XMLHttpRequest()
 slug: Web/API/XMLHttpRequest/XMLHttpRequest
-tags:
-  - API
-  - Reference
-  - XHR
-  - XMLHttpRequest
-  - Конструктор
-  - Получение данных
-  - Чтение данных
 ---
 
 #### XMLHttpRequest

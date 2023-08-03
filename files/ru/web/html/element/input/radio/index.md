@@ -1,17 +1,6 @@
 ---
 title: <input type="radio">
 slug: Web/HTML/Element/input/radio
-tags:
-  - HTML
-  - Input
-  - Reference
-  - form
-  - radio button
-  - Варианты
-  - Группа радиокнопок
-  - Радиокнопка
-  - Справка
-  - Ссылки
 ---
 
 {{HTMLSidebar}}

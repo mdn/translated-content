@@ -1,11 +1,6 @@
 ---
 title: <defs>
 slug: Web/SVG/Element/defs
-tags:
-  - NeedsUpdate
-  - SVG
-  - Контейнер SVG
-  - Элемент
 ---
 
 {{SVGRef}}

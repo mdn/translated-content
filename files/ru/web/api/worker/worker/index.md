@@ -1,14 +1,6 @@
 ---
 title: Worker()
 slug: Web/API/Worker/Worker
-tags:
-  - API
-  - Constructor
-  - Reference
-  - Web Workers
-  - Worker
-  - Конструктор
-  - Ссылка
 ---
 
 {{APIRef("Web Workers API")}}

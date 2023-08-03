@@ -1,9 +1,6 @@
 ---
 title: clear
 slug: Web/CSS/clear
-tags:
-  - CSS
-  - Справка
 ---
 {{CSSRef}}
 

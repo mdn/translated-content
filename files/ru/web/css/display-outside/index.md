@@ -1,13 +1,6 @@
 ---
 title: <display-outside>
 slug: Web/CSS/display-outside
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Display
-  - Reference
-  - display-outside
-  - Справка
 ---
 
 {{CSSRef}}

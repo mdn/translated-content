@@ -1,9 +1,6 @@
 ---
 title: Встраиваемый скрипт
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
-tags:
-  - Web-расширение
-  - Расширение
 ---
 
 {{AddonSidebar}}

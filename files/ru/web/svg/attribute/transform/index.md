@@ -1,9 +1,6 @@
 ---
 title: transform
 slug: Web/SVG/Attribute/transform
-tags:
-  - SVG
-  - SVG атрибуты
 ---
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)

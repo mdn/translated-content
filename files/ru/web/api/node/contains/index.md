@@ -1,11 +1,6 @@
 ---
 title: Node.contains
 slug: Web/API/Node/contains
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
 ---
 
 {{APIRef("DOM")}}Метод **`Node.contains()`** возвращает {{jsxref ("Boolean")}} значение, указывающее, является ли узел потомком данного узла, т. е. сам узел, один из его прямых потомков ({{domxref ("Node. childNodes "," childNodes ")}}), один из детей его детей и так далее.

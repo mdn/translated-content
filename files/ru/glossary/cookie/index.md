@@ -1,9 +1,6 @@
 ---
 title: Cookie
 slug: Glossary/Cookie
-tags:
-  - Glossary
-  - WebMechanics
 ---
 
 Cookie - это небольшой фрагмент информации, сохранённый на компьютере посетителя веб-сайтом через веб-браузер.

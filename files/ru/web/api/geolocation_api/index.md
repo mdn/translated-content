@@ -1,10 +1,6 @@
 ---
 title: Использование геолокации
 slug: Web/API/Geolocation_API
-tags:
-  - Geolocation API
-  - Guide
-  - Intermediate
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}

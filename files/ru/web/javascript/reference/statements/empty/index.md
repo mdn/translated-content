@@ -1,8 +1,6 @@
 ---
 title: Пустая инструкция
 slug: Web/JavaScript/Reference/Statements/Empty
-tags:
-  - Statement, инструкция, пустая инструкция
 ---
 {{jsSidebar("Statements")}}
 

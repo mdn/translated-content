@@ -1,12 +1,6 @@
 ---
 title: URL()
 slug: Web/API/URL/URL
-tags:
-  - API
-  - Constructor
-  - Reference
-  - URL
-  - URL API
 ---
 
 {{APIRef("URL API")}}

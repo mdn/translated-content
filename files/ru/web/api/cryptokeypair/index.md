@@ -1,10 +1,6 @@
 ---
 title: CryptoKeyPair
 slug: Web/API/CryptoKeyPair
-tags:
-  - API
-  - CryptoKeyPair
-  - Web Crypto API
 ---
 
 {{APIRef("Web Crypto API")}}

@@ -1,9 +1,6 @@
 ---
 title: x
 slug: Web/SVG/Attribute/x
-tags:
-  - SVG
-  - SVG атрибуты
 ---
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)

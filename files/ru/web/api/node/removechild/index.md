@@ -1,11 +1,6 @@
 ---
 title: Node.removeChild
 slug: Web/API/Node/removeChild
-tags:
-  - API
-  - DOM
-  - DOM Element Methods
-  - Method
 ---
 
 {{ApiRef}}

@@ -1,9 +1,6 @@
 ---
 title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
-tags:
-  - JavaScript
-  - Отладка
 ---
 {{jsSidebar("Statements")}}
 

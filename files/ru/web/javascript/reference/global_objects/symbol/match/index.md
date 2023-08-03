@@ -1,11 +1,6 @@
 ---
 title: Symbol.match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Свойство
-  - Символы
 ---
 {{JSRef}}
 

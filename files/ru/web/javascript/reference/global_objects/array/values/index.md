@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
-tags:
-  - Array
-  - ECMAScript6
-  - Experimental
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 ---
 
 {{JSRef("Global_Objects", "Array")}}

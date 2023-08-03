@@ -1,10 +1,6 @@
 ---
 title: Замечания к релизу Firefox для разработчиков
 slug: Mozilla/Firefox/Releases
-tags:
-  - Firefox
-  - NeedsTranslation
-  - TopicStub
 ---
 
 {{FirefoxSidebar}}

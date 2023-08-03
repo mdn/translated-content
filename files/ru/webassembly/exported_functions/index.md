@@ -1,11 +1,6 @@
 ---
 title: Экспортируемые функции WebAssembly
 slug: WebAssembly/Exported_functions
-tags:
-  - JavaScript
-  - WebAssembly
-  - wasm
-  - Экспортированные функции
 ---
 
 {{WebAssemblySidebar}}

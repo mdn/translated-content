@@ -1,14 +1,6 @@
 ---
 title: <html>
 slug: Web/HTML/Element/html
-tags:
-  - Element
-  - HTML
-  - Web
-  - Веб
-  - Справка
-  - Элемент
-  - корневой элемент HTML
 ---
 {{HTMLSidebar}}
 

@@ -1,14 +1,6 @@
 ---
-title: '<head>: элемент метаданных документа'
+title: "<head>: элемент метаданных документа"
 slug: Web/HTML/Element/head
-tags:
-  - Element
-  - HTML
-  - Web
-  - Веб
-  - Справка
-  - метаданные
-  - метаданные документа HTML
 ---
 
 {{HTMLSidebar}}

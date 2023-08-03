@@ -1,9 +1,6 @@
 ---
 title: <meter>
 slug: Web/HTML/Element/meter
-tags:
-  - Формы
-  - прогресс
 ---
 
 {{HTMLSidebar}}

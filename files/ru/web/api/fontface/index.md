@@ -1,9 +1,6 @@
 ---
 title: FontFace
 slug: Web/API/FontFace
-tags:
-  - Интерфейс
-  - Шрифты
 ---
 
 {{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}

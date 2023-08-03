@@ -1,10 +1,6 @@
 ---
 title: description
 slug: Web/Manifest/description
-tags:
-  - Manifest
-  - Web
-  - description
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}

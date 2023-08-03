@@ -1,9 +1,6 @@
 ---
 title: Адресная строка
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
-tags:
-  - Web-расширение
-  - Расширение
 ---
 
 {{AddonSidebar()}}

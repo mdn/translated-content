@@ -1,9 +1,6 @@
 ---
 title: Замыкания
 slug: Web/JavaScript/Closures
-tags:
-  - ES5
-  - Замыкание
 ---
 {{jsSidebar("Intermediate")}}
 

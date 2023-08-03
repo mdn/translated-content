@@ -1,9 +1,6 @@
 ---
 title: Document.embeds
 slug: Web/API/Document/embeds
-tags:
-  - API
-  - Document
 ---
 
 {{ApiRef}}

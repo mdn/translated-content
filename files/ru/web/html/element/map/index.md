@@ -1,8 +1,6 @@
 ---
 title: <map>
 slug: Web/HTML/Element/map
-tags:
-  - Элемент
 ---
 
 {{HTMLSidebar}}

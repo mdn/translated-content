@@ -1,18 +1,6 @@
 ---
 title: Введение в HTML
 slug: Learn/HTML/Introduction_to_HTML
-tags:
-  - HTML
-  - Введение
-  - Для чайников
-  - Заголовок
-  - Начинающим
-  - Новичкам
-  - Основы HTML
-  - Семантика
-  - Ссылки
-  - Структура
-  - Текст
 ---
 
 {{LearnSidebar}}

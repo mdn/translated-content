@@ -1,11 +1,6 @@
 ---
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
-tags:
-  - HTTP
-  - HTTP Заголовок
-  - Заголовок
-  - заголовок запроса
 ---
 
 {{HTTPSidebar}}

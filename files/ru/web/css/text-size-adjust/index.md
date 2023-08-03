@@ -1,8 +1,6 @@
 ---
 title: text-size-adjust
 slug: Web/CSS/text-size-adjust
-tags:
-  - Экспериментально
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

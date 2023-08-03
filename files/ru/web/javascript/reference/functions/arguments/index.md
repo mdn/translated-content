@@ -1,11 +1,6 @@
 ---
 title: Объект arguments
 slug: Web/JavaScript/Reference/Functions/arguments
-tags:
-  - Functions
-  - JavaScript
-  - Reference
-  - arguments
 ---
 
 {{jsSidebar("Functions")}}

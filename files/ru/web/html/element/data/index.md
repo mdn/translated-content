@@ -1,13 +1,6 @@
 ---
 title: <data>
 slug: Web/HTML/Element/data
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-  - Веб
-  - Элемент
 ---
 
 {{HTMLSidebar}}

@@ -1,10 +1,6 @@
 ---
 title: void operator
 slug: Web/JavaScript/Reference/Operators/void
-tags:
-  - JavaScript
-  - Операторы
-  - Унарные
 ---
 
 {{jsSidebar("Operators")}}

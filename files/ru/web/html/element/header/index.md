@@ -1,13 +1,6 @@
 ---
 title: <header>
 slug: Web/HTML/Element/header
-tags:
-  - Element
-  - HTML
-  - Разделы
-  - Разделы HTML
-  - Справка
-  - Элемент
 ---
 
 {{HTMLSidebar}}

@@ -1,10 +1,6 @@
 ---
 title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
-tags:
-  - ECMAScript6
-  - JavaScript
-  - WeakSet
 ---
 
 {{JSRef()}}

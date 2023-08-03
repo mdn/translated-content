@@ -1,12 +1,6 @@
 ---
 title: Node.appendChild
 slug: Web/API/Node/appendChild
-tags:
-  - API
-  - DOM
-  - DOM Element Mehods
-  - Method
-  - WebAPI
 ---
 
 ## Аннотация

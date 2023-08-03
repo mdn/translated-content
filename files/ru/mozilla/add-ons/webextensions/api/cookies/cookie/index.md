@@ -1,14 +1,6 @@
 ---
 title: cookies.Cookie
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
-tags:
-  - API
-  - Cookies
-  - cookie
-  - Дополнения
-  - Расширения
-  - Справка
-  - данные
 ---
 
 {{AddonSidebar()}}

@@ -1,12 +1,6 @@
 ---
 title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-  - Reference
 ---
 {{JSRef("Global_Objects", "Number")}}
 

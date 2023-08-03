@@ -1,11 +1,6 @@
 ---
 title: If-Modified-Since
 slug: Web/HTTP/Headers/If-Modified-Since
-tags:
-  - HTTP
-  - Заголовки HTTP
-  - Заголовки запроса
-  - Условные запросы
 ---
 
 {{HTTPSidebar}}

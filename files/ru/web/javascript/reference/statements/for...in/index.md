@@ -1,10 +1,6 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-tags:
-  - JavaScript
-  - Выражение
-  - Цикл
 ---
 {{jsSidebar("Statements")}}
 

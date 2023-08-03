@@ -1,11 +1,6 @@
 ---
 title: Выполняемые на сервере веб-фреймворки
 slug: Learn/Server-side/First_steps/Web_frameworks
-tags:
-  - "-фреймворк"
-  - Программирование серверной части
-  - Сервер
-  - начальный уровень
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}

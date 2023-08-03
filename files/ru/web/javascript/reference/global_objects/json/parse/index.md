@@ -1,12 +1,6 @@
 ---
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
-tags:
-  - ECMAScript5
-  - JSON
-  - JavaScript
-  - Method
-  - Reference
 ---
 
 {{JSRef("Global_Objects", "JSON")}}

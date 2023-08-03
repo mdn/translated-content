@@ -1,18 +1,6 @@
 ---
 title: CSS и JavaScript доступность - лучшие практики
 slug: Learn/Accessibility/CSS_and_JavaScript
-tags:
-  - Доступность
-  - Статья
-  - CSS
-  - CodingScripting
-  - Руководство
-  - JavaScript
-  - Обучение
-  - Цвет
-  - Контраст
-  - Скрытие
-  - Ненавязчивость
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}

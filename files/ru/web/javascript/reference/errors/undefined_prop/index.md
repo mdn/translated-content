@@ -1,11 +1,6 @@
 ---
 title: 'ReferenceError: reference to undefined property "x"'
 slug: Web/JavaScript/Reference/Errors/Undefined_prop
-tags:
-  - JavaScript
-  - ReferenceError
-  - Ошибки
-  - Строгий режим
 ---
 
 {{jsSidebar("Errors")}}

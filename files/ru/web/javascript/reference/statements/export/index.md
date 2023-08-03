@@ -1,13 +1,6 @@
 ---
 title: export
 slug: Web/JavaScript/Reference/Statements/export
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Statement
-  - export
-  - Инструкция
-  - Модули
 ---
 
 {{jsSidebar("Statements")}}

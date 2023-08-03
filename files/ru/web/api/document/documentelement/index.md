@@ -1,12 +1,6 @@
 ---
 title: Document.documentElement
 slug: Web/API/Document/documentElement
-tags:
-  - API,
-  - DOM
-  - Свойство
-  - Ссылка
-  - Только для чтения
 ---
 
 {{ ApiRef("DOM") }}

@@ -1,19 +1,6 @@
 ---
 title: Clipboard API
 slug: Web/API/Clipboard_API
-tags:
-  - API
-  - Async Clipboard API
-  - Clipboard
-  - Clipboard API
-  - Clipboard Event API
-  - ClipboardEvent
-  - ClipboardItem
-  - Cut
-  - Landing
-  - Reference
-  - copy
-  - paste
 ---
 
 {{DefaultAPISidebar("Clipboard API")}}**Clipboard API** предоставляет возможность реагировать на команды буфера обмена (вырезать, копировать и вставить), а также выполнять асинхронные чтение/запись в системный буфер обмена. Доступ к содержимому буфера обмена осуществляется через [Permissions API](/ru/docs/Web/API/Permissions_API): `clipboard-write` (разрешение на запись) в буфер обмена автоматически предоставляется страницам, когда они находятся на активной вкладке. Для `clipboard-read` (чтение из буфера обмена) должно быть запрошено разрешение пользователя. Можно сделать запрос на разрешение, попытавшись прочитать данные из буфера обмена.

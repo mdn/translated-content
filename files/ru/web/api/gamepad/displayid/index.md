@@ -1,8 +1,6 @@
 ---
 title: Gamepad.displayId
 slug: Web/API/Gamepad/displayId
-tags:
-  - Виртуальная реальность
 ---
 
 {{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}

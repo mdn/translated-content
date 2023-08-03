@@ -1,14 +1,6 @@
 ---
 title: USB.onconnect
 slug: Web/API/USB/connect_event
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - WebUSB
-  - WebUSB API
-  - onconnect
 ---
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}

@@ -1,12 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.protocol
 slug: Web/API/HTMLAnchorElement/protocol
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - URL API
 ---
 
 {{ApiRef("URL API")}}

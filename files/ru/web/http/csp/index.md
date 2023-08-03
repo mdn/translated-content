@@ -1,9 +1,6 @@
 ---
 title: Content Security Policy (CSP)
 slug: Web/HTTP/CSP
-tags:
-  - Безопасность
-  - Справка
 ---
 
 {{HTTPSidebar}}

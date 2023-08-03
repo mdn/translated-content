@@ -1,11 +1,6 @@
 ---
 title: bottom
 slug: Web/CSS/bottom
-tags:
-  - CSS
-  - CSS Позиционирование
-  - CSS-свойство
-  - Справка
 ---
 
 {{CSSRef}}

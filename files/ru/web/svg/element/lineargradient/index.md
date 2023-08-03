@@ -1,10 +1,6 @@
 ---
 title: <linearGradient>
 slug: Web/SVG/Element/linearGradient
-tags:
-  - SVG
-  - SVG градиент
-  - Элемент
 ---
 
 {{SVGRef}}

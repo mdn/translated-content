@@ -1,15 +1,6 @@
 ---
 title: Каскад и наследование
 slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
-tags:
-  - CSS
-  - Каскад
-  - Наследование
-  - Начинающий
-  - Обучение
-  - Порядок следования
-  - Правила
-  - Специфичность
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}

@@ -1,9 +1,6 @@
 ---
 title: Console.timeStamp()
 slug: Web/API/console/timeStamp
-tags:
-  - API
-  - DOM
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}

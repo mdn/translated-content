@@ -1,8 +1,6 @@
 ---
 title: VRFrameData
 slug: Web/API/VRFrameData
-tags:
-  - Виртуальная реальность
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}

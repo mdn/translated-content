@@ -1,13 +1,6 @@
 ---
 title: Django введение
 slug: Learn/Server-side/Django/Introduction
-tags:
-  - Python
-  - django
-  - Вступление
-  - Django
-  - Начинающим
-  - Серверное программирование
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}

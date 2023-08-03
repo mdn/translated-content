@@ -1,9 +1,6 @@
 ---
 title: Firefox 43 для разработчиков
 slug: Mozilla/Firefox/Releases/43
-tags:
-  - Firefox
-  - Release Notes
 ---
 
 {{FirefoxSidebar}}

@@ -1,10 +1,6 @@
 ---
 title: Оператор new
 slug: Web/JavaScript/Reference/Operators/new
-tags:
-  - JavaScript
-  - Левосторонние выражения
-  - Оператор
 ---
 
 {{jsSidebar("Operators")}}

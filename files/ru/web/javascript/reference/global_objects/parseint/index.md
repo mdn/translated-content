@@ -1,9 +1,6 @@
 ---
 title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
-tags:
-  - JavaScript
-  - Reference
 ---
 
 {{jsSidebar("Objects")}}

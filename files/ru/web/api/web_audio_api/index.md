@@ -1,14 +1,6 @@
 ---
 title: Web Audio API
 slug: Web/API/Web_Audio_API
-tags:
-  - API
-  - Guide
-  - NeedsTranslation
-  - Reference
-  - Référence(2)
-  - TopicStub
-  - Web Audio API
 ---
 
 Web audio API - мощный и многогранный инструмент для манипуляции звуковой составляющей на веб-странице, что даёт возможность разработчикам выбрать источники, добавить к ним специальные звуковые эффекты (такие как panning), визуализировать их и многое другое.

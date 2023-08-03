@@ -1,12 +1,6 @@
 ---
 title: Navigation Timing API
 slug: Web/API/Performance_API/Navigation_timing
-tags:
-  - API
-  - Client side performance
-  - Navigation Timing
-  - Performance
-  - Производительность
 ---
 
 {{DefaultAPISidebar("Navigation Timing")}}

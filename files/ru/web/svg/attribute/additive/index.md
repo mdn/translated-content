@@ -1,9 +1,6 @@
 ---
 title: additive
 slug: Web/SVG/Attribute/additive
-tags:
-  - SVG
-  - SVG атрибуты
 ---
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)

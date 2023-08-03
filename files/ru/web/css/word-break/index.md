@@ -1,8 +1,6 @@
 ---
 title: word-break
 slug: Web/CSS/word-break
-tags:
-  - CSS
 ---
 
 {{CSSRef}}

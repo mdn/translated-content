@@ -1,9 +1,6 @@
 ---
 title: Заголовки HTTP
 slug: Web/HTTP/Headers
-tags:
-  - HTTP
-  - Заголовки
 ---
 
 {{ HTTPSidebar }}

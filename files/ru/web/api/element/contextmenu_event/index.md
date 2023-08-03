@@ -1,12 +1,6 @@
 ---
 title: GlobalEventHandlers.oncontextmenu
 slug: Web/API/Element/contextmenu_event
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - oncontextmenu
 ---
 
 {{ ApiRef("HTML DOM") }}

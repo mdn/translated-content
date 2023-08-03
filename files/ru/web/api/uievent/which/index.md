@@ -1,12 +1,6 @@
 ---
 title: KeyboardEvent.which
 slug: Web/API/UIEvent/which
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Property
-  - Reference
 ---
 
 {{APIRef ("События DOM")}} {{Deprecated_header}}

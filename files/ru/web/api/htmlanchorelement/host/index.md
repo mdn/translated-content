@@ -1,12 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.host
 slug: Web/API/HTMLAnchorElement/host
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - URL API
 ---
 
 {{ApiRef("URL API")}}

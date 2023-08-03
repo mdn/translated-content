@@ -1,8 +1,6 @@
 ---
-title: ':invalid'
+title: ":invalid"
 slug: Web/CSS/:invalid
-tags:
-  - Псевдо-классы
 ---
 {{ CSSRef() }}
 

@@ -1,10 +1,6 @@
 ---
 title: style
 slug: Web/HTML/Global_attributes/style
-tags:
-  - HTML
-  - Глобальные атрибуты
-  - Руководство
 ---
 
 {{HTMLSidebar("Global_attributes")}}

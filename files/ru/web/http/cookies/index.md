@@ -1,8 +1,6 @@
 ---
 title: HTTP-куки
 slug: Web/HTTP/Cookies
-tags:
-  - Куки
 ---
 
 {{HTTPSidebar}}

@@ -1,11 +1,6 @@
 ---
 title: 425 Too Early
 slug: Web/HTTP/Status/425
-tags:
-  - HTTP
-  - Браузер
-  - Код состояния
-  - Ошибка клиента
 ---
 
 {{SeeCompatTable}}{{HTTPSidebar}}

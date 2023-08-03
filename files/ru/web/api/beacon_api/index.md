@@ -1,10 +1,6 @@
 ---
 title: Beacon API
 slug: Web/API/Beacon_API
-tags:
-  - Beacon
-  - JSAPI Reference
-  - Производительность
 ---
 
 {{DefaultAPISidebar("Beacon")}}{{SeeCompatTable}}

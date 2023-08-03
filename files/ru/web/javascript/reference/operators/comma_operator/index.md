@@ -1,8 +1,6 @@
 ---
 title: Оператор Запятая
 slug: Web/JavaScript/Reference/Operators/Comma_operator
-tags:
-  - Оператор запятая
 ---
 
 {{jsSidebar("Operators")}}

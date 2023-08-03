@@ -1,8 +1,6 @@
 ---
 title: 10-летие MDN
 slug: MDN/At_ten
-tags:
-  - MDN
 ---
 
 Празднуем 10-летие документирования Web.

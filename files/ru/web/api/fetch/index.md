@@ -1,10 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.fetch()
 slug: Web/API/fetch
-tags:
-  - Справка
-  - запрос
-  - метод
 ---
 
 {{APIRef("Fetch API")}}

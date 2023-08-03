@@ -1,8 +1,6 @@
 ---
 title: <ellipse>
 slug: Web/SVG/Element/ellipse
-tags:
-  - NeedsUpdate
 ---
 {{SVGRef}}
 

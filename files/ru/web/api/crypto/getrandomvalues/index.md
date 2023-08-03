@@ -1,11 +1,6 @@
 ---
 title: RandomSource.getRandomValues()
 slug: Web/API/Crypto/getRandomValues
-tags:
-  - API
-  - Криптография
-  - Справка
-  - метод
 ---
 
 {{APIRef("Web Crypto API")}}

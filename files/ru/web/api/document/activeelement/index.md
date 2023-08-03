@@ -1,13 +1,6 @@
 ---
 title: Document.activeElement
 slug: Web/API/Document/activeElement
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-translation_of_original: Web/API/Document/activeElement
 ---
 
 {{ ApiRef() }}

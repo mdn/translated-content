@@ -1,11 +1,6 @@
 ---
-title: '::first-letter (:first-letter)'
+title: "::first-letter (:first-letter)"
 slug: Web/CSS/::first-letter
-tags:
-  - CSS
-  - Layout
-  - Reference
-  - Псевдоэлементы
 ---
 
 {{CSSRef}}

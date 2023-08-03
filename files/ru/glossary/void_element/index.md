@@ -1,11 +1,6 @@
 ---
 title: Пустой элемент
 slug: Glossary/Void_element
-tags:
-  - CodingScripting
-  - Glossary
-  - Intermediate
-  - Глоссарий
 ---
 
 **Пустой элемент** — {{Glossary("element", "элемент")}} HTML, SVG или MathML, который **не может** иметь дочерних узлов (т.е. вложенных элементов или текста внутри себя).

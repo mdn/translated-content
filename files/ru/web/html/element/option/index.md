@@ -1,9 +1,6 @@
 ---
 title: <option>
 slug: Web/HTML/Element/option
-tags:
-  - опция
-  - селект
 ---
 
 {{HTMLSidebar}}

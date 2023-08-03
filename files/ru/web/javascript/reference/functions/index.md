@@ -1,9 +1,6 @@
 ---
 title: Функции
 slug: Web/JavaScript/Reference/Functions
-tags:
-  - Функции
-  - Функция
 ---
 {{jsSidebar("Functions")}}
 

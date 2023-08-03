@@ -1,11 +1,6 @@
 ---
 title: Элемент
 slug: Web/HTML/Element
-tags:
-  - HTML
-  - Веб
-  - Справка
-  - элементы
 ---
 
 {{HTMLSidebar("Elements")}}

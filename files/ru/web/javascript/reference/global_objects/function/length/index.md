@@ -1,11 +1,6 @@
 ---
 title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
-tags:
-  - Function
-  - JavaScript
-  - Property
-  - Reference
 ---
 {{JSRef("Global_Objects", "Function")}}
 

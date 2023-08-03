@@ -1,9 +1,6 @@
 ---
 title: Проект MDN
 slug: MDN
-tags:
-  - Landing
-  - MDN Meta
 ---
 
 {{MDNSidebar}}

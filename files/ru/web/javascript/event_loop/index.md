@@ -1,8 +1,6 @@
 ---
 title: Параллельная модель и цикл событий.
 slug: Web/JavaScript/Event_loop
-tags:
-  - Руководство
 ---
 
 {{JsSidebar("Advanced")}}

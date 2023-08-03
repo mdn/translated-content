@@ -1,9 +1,6 @@
 ---
 title: <rect>
 slug: Web/SVG/Element/rect
-tags:
-  - NeedsUpdate
-  - SVG
 ---
 
 {{SVGRef}}

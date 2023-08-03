@@ -1,9 +1,6 @@
 ---
 title: Stacking without z-index
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
-tags:
-  - CSS
-  - z-index
 ---
 
 ### Наложения без Z-индекса

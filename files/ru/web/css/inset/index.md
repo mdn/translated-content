@@ -1,8 +1,6 @@
 ---
 title: inset
 slug: Web/CSS/inset
-tags:
-  - смещение элемента
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

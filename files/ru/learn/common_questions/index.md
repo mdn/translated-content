@@ -1,10 +1,6 @@
 ---
 title: Распространённые вопросы
 slug: Learn/Common_questions
-tags:
-  - Веб
-  - Механика Веба
-  - распространённые вопросы
 ---
 
 {{LearnSidebar}}

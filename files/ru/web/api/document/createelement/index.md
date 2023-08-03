@@ -1,9 +1,6 @@
 ---
 title: document.createElement
 slug: Web/API/Document/createElement
-tags:
-  - DOM
-  - Gecko
 ---
 
 {{ ApiRef() }}

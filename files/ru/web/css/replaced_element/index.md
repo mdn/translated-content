@@ -1,10 +1,6 @@
 ---
 title: Замещаемый элемент
 slug: Web/CSS/Replaced_element
-tags:
-  - CSS
-  - Reference
-  - замещаемый элемент
 ---
 
 {{CSSRef}}

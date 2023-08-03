@@ -1,10 +1,6 @@
 ---
 title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
-tags:
-  - JavaScript
-  - NeedsUpdate
-  - Reference
 ---
 
 {{jsSidebar("Objects")}}

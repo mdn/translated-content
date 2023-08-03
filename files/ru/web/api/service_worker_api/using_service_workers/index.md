@@ -1,8 +1,6 @@
 ---
 title: Использование Service Worker
 slug: Web/API/Service_Worker_API/Using_Service_Workers
-tags:
-  - основы ServiceWorker Workers руководство
 ---
 
 {{DefaultAPISidebar("Service Workers API")}}

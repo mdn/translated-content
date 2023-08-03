@@ -1,10 +1,6 @@
 ---
 title: FileList
 slug: Web/API/FileList
-tags:
-  - API
-  - File API
-  - Files
 ---
 
 {{APIRef("File API")}}

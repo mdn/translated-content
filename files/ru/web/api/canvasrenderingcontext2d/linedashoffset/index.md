@@ -1,13 +1,6 @@
 ---
 title: CanvasRenderingContext2D.lineDashOffset
 slug: Web/API/CanvasRenderingContext2D/lineDashOffset
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - JavaScript
-  - Property
-  - Reference
 ---
 
 {{APIRef}}

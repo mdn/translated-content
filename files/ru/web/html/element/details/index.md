@@ -1,13 +1,6 @@
 ---
 title: <details>
 slug: Web/HTML/Element/details
-tags:
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Web
-  - details
 ---
 
 {{HTMLSidebar}}

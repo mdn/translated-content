@@ -1,8 +1,6 @@
 ---
-title: ':link'
+title: ":link"
 slug: Web/CSS/:link
-tags:
-  - Псевдо-классы
 ---
 
 {{ CSSRef() }}

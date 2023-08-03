@@ -1,11 +1,6 @@
 ---
 title: HTTP
 slug: Web/HTTP
-tags:
-  - HTTP
-  - l10n:priority
-  - Веб
-  - Справка
 ---
 {{HTTPSidebar}}
 

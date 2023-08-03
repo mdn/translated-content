@@ -1,12 +1,6 @@
 ---
 title: Math.ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Référence(2)
 ---
 
 {{JSRef("Global_Objects", "Math")}}

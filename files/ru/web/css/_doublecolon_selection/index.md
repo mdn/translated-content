@@ -1,12 +1,6 @@
 ---
-title: '::selection'
+title: "::selection"
 slug: Web/CSS/::selection
-tags:
-  - CSS
-  - Experimental
-  - Layoout
-  - Reference
-  - Псевдоэлементы
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

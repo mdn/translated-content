@@ -1,13 +1,6 @@
 ---
 title: ValidityState.rangeUnderflow
 slug: Web/API/ValidityState/rangeUnderflow
-tags:
-  - API
-  - Constraint Validation API
-  - DOM
-  - Свойство
-  - Справочник
-browser-compat: api.ValidityState.rangeUnderflow
 ---
 
 Доступное только для чтения свойство **`rangeUnderflow`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, соответствует ли значение {{HTMLElement("input")}} после изменения пользователем ограничениям, установленным атрибутом [`min`](/ru/docs/Web/HTML/Attributes/min).

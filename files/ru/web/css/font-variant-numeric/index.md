@@ -1,10 +1,6 @@
 ---
 title: font-variant-numeric
 slug: Web/CSS/font-variant-numeric
-tags:
-  - CSS
-  - Свойства CSS
-  - Шрифты CSS
 ---
 
 {{CSSRef}}

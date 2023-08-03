@@ -1,8 +1,6 @@
 ---
 title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
-tags:
-  - JavaScript
 ---
 {{jsSidebar("Objects")}}
 

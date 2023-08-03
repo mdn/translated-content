@@ -1,13 +1,6 @@
 ---
 title: Использование CSS-анимации
 slug: Web/CSS/CSS_animations/Using_CSS_animations
-tags:
-  - Advanced
-  - CSS
-  - CSS Animations
-  - Example
-  - Experimental
-  - Guide
 ---
 
 {{SeeCompatTable}}{{CSSRef}}

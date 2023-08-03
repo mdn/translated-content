@@ -1,11 +1,6 @@
 ---
 title: JavaScript
 slug: Learn/JavaScript
-tags:
-  - JavaScript
-  - Начала
-  - Начинающий
-  - Основы
 ---
 
 {{LearnSidebar}}

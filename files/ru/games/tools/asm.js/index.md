@@ -1,10 +1,6 @@
 ---
 title: asm.js
 slug: Games/Tools/asm.js
-tags:
-  - JavaScript
-  - WebAssembly
-  - asm.js
 ---
 
 {{GamesSidebar}}

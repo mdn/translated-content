@@ -1,12 +1,6 @@
 ---
 title: Масштабирование
 slug: Games/Tutorials/2D_breakout_game_Phaser/Scaling
-tags:
-  - 2D
-  - Canvas
-  - JavaScript
-  - Phaser
-  - Начинающий
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Load_the_assets_and_print_them_on_screen")}}

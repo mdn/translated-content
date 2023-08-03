@@ -1,10 +1,6 @@
 ---
-title: '<caption>: The Table Caption element'
+title: "<caption>: The Table Caption element"
 slug: Web/HTML/Element/caption
-tags:
-  - Выравнивание
-  - Заголовок
-  - Стилизация
 ---
 
 {{HTMLSidebar}}

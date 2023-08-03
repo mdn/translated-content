@@ -1,14 +1,6 @@
 ---
 title: BroadcastChannel.postMessage()
 slug: Web/API/BroadcastChannel/postMessage
-tags:
-  - API
-  - Broadcast Channel API
-  - BroadcastChannel
-  - HTML API
-  - Определение
-  - Экспериментальное
-  - метод
 ---
 
 {{APIRef("BroadCastChannel API")}}

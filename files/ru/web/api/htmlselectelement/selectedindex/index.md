@@ -1,9 +1,6 @@
 ---
 title: HTMLSelectElement.selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
-tags:
-  - HTML формы
-  - HTMLSelectElement
 ---
 
 {{APIRef("HTML DOM")}}

@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: unterminated string literal(незавершённый строковый литерал)'
+title: "SyntaxError: unterminated string literal(незавершённый строковый литерал)"
 slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 ---
 {{jsSidebar("Errors")}}

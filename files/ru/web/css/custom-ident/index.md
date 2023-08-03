@@ -1,16 +1,6 @@
 ---
 title: <custom-ident>
 slug: Web/CSS/custom-ident
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Тип Данных
-  - Data Type
-  - Layout
-  - Reference
-  - Web
-  - Разметка
-  - тип данных
 ---
 
 {{CSSRef}}

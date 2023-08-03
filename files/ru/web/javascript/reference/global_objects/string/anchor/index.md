@@ -1,14 +1,6 @@
 ---
 title: String.prototype.anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - String
-  - Методы оборачивания в HTML
 ---
 {{JSRef("Global_Objects", "String")}} {{deprecated_header}}
 

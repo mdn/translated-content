@@ -1,12 +1,6 @@
 ---
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
-tags:
-  - JSON
-  - JavaScript
-  - Object
-  - Reference
-  - polyfill
 ---
 {{JSRef("Global_Objects", "JSON")}}
 

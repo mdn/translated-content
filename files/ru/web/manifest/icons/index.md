@@ -1,10 +1,6 @@
 ---
 title: icons
 slug: Web/Manifest/icons
-tags:
-  - Icons
-  - Manifest
-  - Web
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}

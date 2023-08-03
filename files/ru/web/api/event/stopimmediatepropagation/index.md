@@ -1,16 +1,6 @@
 ---
 title: Event.stopImmediatePropagation()
 slug: Web/API/Event/stopImmediatePropagation
-tags:
-  - API
-  - Gecko DOM Reference
-  - NeedsBrowserCompatibility
-  - stopImmediatePropagation
-  - Событие
-  - Ссылка
-  - Уровень 3
-  - Экспериментальные функции
-  - метод
 ---
 
 {{APIRef("DOM")}}

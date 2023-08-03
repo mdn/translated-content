@@ -1,10 +1,6 @@
 ---
-title: 'RangeError: invalid date'
+title: "RangeError: invalid date"
 slug: Web/JavaScript/Reference/Errors/Invalid_date
-tags:
-  - Errors
-  - JavaScript
-  - RangeError
 ---
 
 {{jsSidebar("Errors")}}

@@ -1,14 +1,6 @@
 ---
 title: <main>
 slug: Web/HTML/Element/main
-tags:
-  - Element
-  - HTML
-  - HTML группировка контента
-  - HTML секции
-  - main
-  - Справка
-  - Элемент
 ---
 {{HTMLSidebar}}
 

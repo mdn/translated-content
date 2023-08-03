@@ -1,16 +1,6 @@
 ---
 title: <body>
 slug: Web/HTML/Element/body
-tags:
-  - Element
-  - HTML
-  - Web
-  - Веб
-  - Корневой элемент
-  - Разделы
-  - Секционирование
-  - Справка
-  - Элемент
 ---
 
 {{HTMLSidebar}}

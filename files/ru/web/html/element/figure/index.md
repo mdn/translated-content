@@ -1,16 +1,6 @@
 ---
 title: "<figure>: Элемент иллюстрации с необязательной подписью"
 slug: Web/HTML/Element/figure
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - figure
-  - Диаграммы
-  - Иллюстрации
-  - Представление
-  - Элемент
 ---
 
 {{HTMLSidebar}}

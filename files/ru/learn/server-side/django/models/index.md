@@ -1,11 +1,6 @@
 ---
 title: "Django учебник Часть 3: Использование моделей"
 slug: Learn/Server-side/Django/Models
-tags:
-  - Django
-  - данные
-  - модель
-  - туториал
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}

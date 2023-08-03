@@ -1,10 +1,6 @@
 ---
 title: Как сообщить о проблеме в MDN
 slug: MDN/Community/Issues
-tags:
-  - MDN Мета
-  - Инструкция
-  - Руководство
 ---
 
 {{MDNSidebar}}

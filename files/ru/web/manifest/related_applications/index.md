@@ -1,10 +1,6 @@
 ---
 title: related_applications
 slug: Web/Manifest/related_applications
-tags:
-  - Manifest
-  - Web
-  - related_applications
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}

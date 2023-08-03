@@ -1,9 +1,6 @@
 ---
 title: Введение
 slug: Web/SVG/Tutorial/Introduction
-tags:
-  - SVG
-  - Руководство
 ---
 
 {{ PreviousNext("Web/SVG/Руководство", "Web/SVG/Руководство/Введение") }}

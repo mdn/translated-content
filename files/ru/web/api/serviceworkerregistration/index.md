@@ -1,17 +1,6 @@
 ---
 title: ServiceWorkerRegistration
 slug: Web/API/ServiceWorkerRegistration
-tags:
-  - API
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorkerRegistration
-  - TopicStub
-  - Workers
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

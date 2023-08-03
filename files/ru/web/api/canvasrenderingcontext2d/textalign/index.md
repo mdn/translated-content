@@ -1,12 +1,6 @@
 ---
 title: CanvasRenderingContext2D.textAlign
 slug: Web/API/CanvasRenderingContext2D/textAlign
-tags:
-  - API
-  - Canvas
-  - Выравнивание
-  - Значение
-  - Текст
 ---
 
 {{APIRef}}

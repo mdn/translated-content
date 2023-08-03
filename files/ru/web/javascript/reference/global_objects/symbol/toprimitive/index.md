@@ -1,10 +1,6 @@
 ---
 title: Symbol.toPrimitive
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
-tags:
-  - '@@toPrimitive'
-  - JavaScript
-  - toPrimitive
 ---
 
 {{JSRef}}

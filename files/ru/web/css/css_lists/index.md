@@ -1,13 +1,6 @@
 ---
 title: CSS Lists and Counters
 slug: Web/CSS/CSS_lists
-tags:
-  - CSS
-  - CSS Lists and Counters
-  - CSS Reference
-  - NeedsTranslation
-  - Overview
-  - TopicStub
 ---
 
 {{CSSRef}}

@@ -1,10 +1,6 @@
 ---
 title: Выравнивание блоков в разметке Flexbox
 slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
-tags:
-  - CSS
-  - flexbox
-  - выравнивание блоков
 ---
 
 {{CSSRef}}

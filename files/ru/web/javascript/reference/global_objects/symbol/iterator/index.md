@@ -1,11 +1,6 @@
 ---
 title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Свойство
-  - Символы
 ---
 
 {{JSRef}}

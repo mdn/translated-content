@@ -1,14 +1,6 @@
 ---
 title: CSS Background and Borders
 slug: Web/CSS/CSS_backgrounds_and_borders
-tags:
-  - CSS
-  - CSS Backgrounds and Borders
-  - CSS Reference
-  - NeedsTranslation
-  - Overview
-  - TopicStub
-translation_of_original: Web/CSS/CSS_Background_and_Borders
 ---
 
 {{CSSRef}}

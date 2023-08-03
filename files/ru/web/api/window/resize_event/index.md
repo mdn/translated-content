@@ -1,10 +1,6 @@
 ---
 title: resize
 slug: Web/API/Window/resize_event
-tags:
-  - Веб
-  - Ссылки
-  - события
 ---
 
 {{APIRef}}

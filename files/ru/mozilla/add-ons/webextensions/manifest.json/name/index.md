@@ -1,10 +1,6 @@
 ---
 title: ключ name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/name
-tags:
-  - Reference
-  - WebExtensions
-  - name
 ---
 
 {{AddonSidebar}}

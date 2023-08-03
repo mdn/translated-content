@@ -1,12 +1,6 @@
 ---
 title: Window.location
 slug: Web/API/Window/location
-tags:
-  - API
-  - HTML DOM
-  - Window
-  - Свойство
-  - Ссылки
 ---
 
 {{APIRef}}

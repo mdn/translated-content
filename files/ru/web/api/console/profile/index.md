@@ -1,11 +1,6 @@
 ---
 title: Console.profile()
 slug: Web/API/console/profile
-tags:
-  - API
-  - Профайлер
-  - дебаггинг
-  - профилировщик
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}

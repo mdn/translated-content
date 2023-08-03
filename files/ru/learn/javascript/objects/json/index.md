@@ -1,10 +1,6 @@
 ---
 title: Работа с JSON
 slug: Learn/JavaScript/Objects/JSON
-tags:
-  - Beginner
-  - JSON
-  - JavaScript
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}

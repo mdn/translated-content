@@ -1,9 +1,6 @@
 ---
 title: SVGTextContentElement
 slug: Web/API/SVGTextContentElement
-tags:
-  - SVG
-  - Справка
 ---
 
 {{APIRef("SVG")}}

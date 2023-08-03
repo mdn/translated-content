@@ -1,10 +1,6 @@
 ---
 title: font-size
 slug: Web/CSS/font-size
-tags:
-  - CSS
-  - CSS-свойства
-  - css шрифты
 ---
 
 {{CSSRef}}

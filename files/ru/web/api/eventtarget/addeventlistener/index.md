@@ -1,13 +1,6 @@
 ---
 title: Метод EventTarget.addEventListener()
 slug: Web/API/EventTarget/addEventListener
-tags:
-  - DOM
-  - EventTarget
-  - addEventListener
-  - Обработчик
-  - Событие
-  - метод
 ---
 
 {{apiref("DOM Events")}}

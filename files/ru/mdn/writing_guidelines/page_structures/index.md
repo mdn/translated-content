@@ -1,12 +1,6 @@
 ---
 title: Структуры документов
 slug: MDN/Writing_guidelines/Page_structures
-tags:
-  - Landing
-  - MDN Meta
-  - NeedsTranslation
-  - Structures
-  - TopicStub
 ---
 
 {{MDNSidebar}}

@@ -1,10 +1,6 @@
 ---
 title: Number.NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
-tags:
-  - JavaScript
-  - Number
-  - Property
 ---
 
 {{JSRef("Global_Objects", "Number")}}

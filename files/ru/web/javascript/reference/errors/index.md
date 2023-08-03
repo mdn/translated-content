@@ -1,9 +1,6 @@
 ---
 title: JavaScript ссылки на ошибки
 slug: Web/JavaScript/Reference/Errors
-tags:
-  - JavaScript
-  - NeedsTranslation
 ---
 
 {{jsSidebar("Errors")}}

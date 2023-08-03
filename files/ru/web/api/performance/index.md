@@ -1,12 +1,6 @@
 ---
 title: Performance
 slug: Web/API/Performance
-tags:
-  - API
-  - Navigation Timing
-  - NeedsTranslation
-  - Performance
-  - TopicStub
 ---
 
 {{APIRef("Navigation Timing")}}

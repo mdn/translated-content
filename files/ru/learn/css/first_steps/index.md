@@ -1,14 +1,6 @@
 ---
 title: Введение в CSS
 slug: Learn/CSS/First_steps
-tags:
-  - Beginner
-  - CSS
-  - Landing
-  - Learn
-  - first steps
-  - Введение
-  - Начинающий
 ---
 
 {{LearnSidebar}}

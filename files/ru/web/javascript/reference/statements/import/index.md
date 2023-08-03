@@ -1,15 +1,6 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-tags:
-  - ECMAScript 2015
-  - ECMAScript6
-  - JavaScript
-  - import
-  - Инструкция
-  - Модули
-  - динамический импорт
-  - импорт
 ---
 
 {{jsSidebar("Statements")}}

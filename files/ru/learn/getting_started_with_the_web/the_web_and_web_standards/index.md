@@ -1,9 +1,6 @@
 ---
 title: Всемирная сеть (веб) и веб-стандарты
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
-tags:
-  - Веб-стандарты
-  - Изучение
 ---
 
 {{learnsidebar}}

@@ -1,17 +1,6 @@
 ---
 title: MediaError.code
 slug: Web/API/MediaError/code
-tags:
-  - API
-  - HTML DOM
-  - MediaError
-  - Видео
-  - Код
-  - Медиа
-  - Ошибки
-  - Свойство
-  - Справка
-  - аудио
 ---
 
 {{APIRef("HTML DOM")}}

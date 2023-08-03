@@ -1,11 +1,6 @@
 ---
 title: Math.LN10
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN10
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
 ---
 
 {{JSRef("Global_Objects", "Math")}}

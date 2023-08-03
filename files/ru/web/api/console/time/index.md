@@ -1,12 +1,6 @@
 ---
 title: Console.time()
 slug: Web/API/console/time
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - console
 ---
 
 {{APIRef("Console API")}}

@@ -1,14 +1,6 @@
 ---
 title: <transform-function>
 slug: Web/CSS/transform-function
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Transforms
-  - Data Type
-  - Layout
-  - Reference
-browser-compat: css.types.transform-function
 ---
 
 {{CSSRef}}

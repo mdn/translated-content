@@ -1,14 +1,6 @@
 ---
 title: 2D игра на чистом JavaScript
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
-tags:
-  - 2D
-  - Canvas
-  - JavaScript
-  - TopicStub
-  - Игры
-  - Начинающий
-  - Руководство
 ---
 
 {{GamesSidebar}}{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создание_Canvas_и_рисование_на_нём")}}

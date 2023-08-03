@@ -1,12 +1,6 @@
 ---
 title: Руководство по HTML-формам
 slug: Learn/Forms
-tags:
-  - HTML
-  - Web
-  - Начинающие
-  - Руководство
-  - Формы
 ---
 
 {{LearnSidebar}}

@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: repeat count must be less than infinity'
+title: "RangeError: repeat count must be less than infinity"
 slug: Web/JavaScript/Reference/Errors/Resulting_string_too_large
 ---
 

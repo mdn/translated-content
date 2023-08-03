@@ -1,13 +1,6 @@
 ---
-title: 'Кастомные свойства (--*): CSS переменные'
+title: "Кастомные свойства (--*): CSS переменные"
 slug: Web/CSS/--*
-page-type: guide
-tags:
-  - CSS
-  - CSS Custom Properties
-  - Guide
-  - Reference
-browser-compat: css.properties.custom-property
 ---
 
 {{CSSRef}}

@@ -1,9 +1,6 @@
 ---
 title: Список селекторов
 slug: Web/CSS/Selector_list
-tags:
-  - Вёрстка
-  - список селекторов
 ---
 
 {{CSSRef}}

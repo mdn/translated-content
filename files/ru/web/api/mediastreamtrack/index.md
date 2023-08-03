@@ -1,16 +1,6 @@
 ---
 title: MediaStreamTrack
 slug: Web/API/MediaStreamTrack
-tags:
-  - API
-  - API потоков медия
-  - MediaStreamTrack
-  - WebRTC
-  - Видео
-  - Запись медиа и API для потоков
-  - Интерфейс
-  - Медиа
-  - аудио
 ---
 
 {{APIRef("Media Capture and Streams")}}

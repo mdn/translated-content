@@ -1,7 +1,5 @@
 ---
-title: >-
-  TypeError: "x" is not a non-null object(Тип ошибки: "x" не является ненулевым
-  объектом)
+title: 'TypeError: "x" is not a non-null object(Тип ошибки: "x" не является ненулевым объектом)'
 slug: Web/JavaScript/Reference/Errors/No_non-null_object
 ---
 

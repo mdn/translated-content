@@ -1,10 +1,6 @@
 ---
 title: POST
 slug: Web/HTTP/Methods/POST
-tags:
-  - HTTP
-  - Метод запроса
-  - Справка
 ---
 {{HTTPSidebar}}
 

@@ -1,18 +1,6 @@
 ---
 title: Изучение веб-разработки
 slug: Learn
-tags:
-  - CSS
-  - HTML
-  - Index
-  - Landing
-  - Learn
-  - NeedsContent
-  - TopicStub
-  - Web
-  - Новичок
-  - Обучающий раздел
-  - Обучение
 ---
 
 {{LearnSidebar}}

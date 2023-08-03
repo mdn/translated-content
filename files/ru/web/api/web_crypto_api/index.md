@@ -1,8 +1,6 @@
 ---
 title: Web Crypto API
 slug: Web/API/Web_Crypto_API
-tags:
-  - API
 ---
 
 {{DefaultAPISidebar("Web Crypto API")}}{{SeeCompatTable}}

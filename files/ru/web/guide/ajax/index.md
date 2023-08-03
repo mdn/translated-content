@@ -1,9 +1,6 @@
 ---
 title: AJAX
 slug: Web/Guide/AJAX
-tags:
-  - AJAX characteristic of the method node.length in IE and Mozilla
-  - поведение метода length объекта XML в IE и Mozilla
 ---
 
 ## Введение в AJAX

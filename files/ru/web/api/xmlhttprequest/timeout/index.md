@@ -1,11 +1,6 @@
 ---
 title: XMLHttpRequest.timeout
 slug: Web/API/XMLHttpRequest/timeout
-tags:
-  - AJAX
-  - XMLHttpRequest
-  - Свойство
-  - Ссылка
 ---
 
 {{APIRef('XMLHttpRequest')}}

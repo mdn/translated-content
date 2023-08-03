@@ -1,10 +1,6 @@
 ---
 title: <ratio>
 slug: Web/CSS/ratio
-tags:
-  - медиавыражение
-  - тип данных
-  - формат экрана
 ---
 {{CSSRef}}
 

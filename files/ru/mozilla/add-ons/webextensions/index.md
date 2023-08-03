@@ -1,11 +1,6 @@
 ---
 title: Расширения браузера
 slug: Mozilla/Add-ons/WebExtensions
-tags:
-  - Landing
-  - WebExtensions
-  - Дополнения
-  - Расширения
 ---
 
 {{AddonSidebar}}

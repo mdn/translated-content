@@ -1,10 +1,6 @@
 ---
 title: <tfoot>
 slug: Web/HTML/Element/tfoot
-tags:
-  - HTML
-  - Tables
-  - Web
 ---
 _HTML_ элемент подвала таблицы (`<tfoot>`) определяющий набор строк суммирующих столбцы таблицы.
 

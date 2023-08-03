@@ -1,13 +1,6 @@
 ---
 title: Использование ваших новых знаний
 slug: Learn/CSS/First_steps/Styling_a_biography_page
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - Playground
-  - Начинающий
-  - Обучение
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

@@ -1,13 +1,6 @@
 ---
 title: Справка по HTML
 slug: Web/HTML/Reference
-tags:
-  - HTML
-  - Landing
-  - Web
-  - Веб
-  - Справка
-  - лендинг
 ---
 
 {{HTMLSidebar}}

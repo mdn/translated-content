@@ -1,12 +1,6 @@
 ---
 title: <bdi>
 slug: Web/HTML/Element/bdi
-tags:
-  - BDI
-  - HTML
-  - Веб
-  - Текстовая семантика
-  - Элемент
 ---
 ## Описание
 

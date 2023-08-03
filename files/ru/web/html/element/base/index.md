@@ -1,11 +1,6 @@
 ---
 title: <base>
 slug: Web/HTML/Element/base
-tags:
-  - <base>
-  - HTML
-  - атрибуты <base>
-  - метаданные
 ---
 
 {{HTMLSidebar}}

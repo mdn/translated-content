@@ -1,14 +1,6 @@
 ---
 title: Background Fetch API
 slug: Web/API/Background_Fetch_API
-page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - Reference
-  - Background Fetch API
-  - Experimental
-browser-compat: api.BackgroundFetchManager
 ---
 
 {{DefaultAPISidebar("Background Fetch API")}} {{SeeCompatTable}}

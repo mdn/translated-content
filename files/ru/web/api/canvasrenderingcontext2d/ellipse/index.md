@@ -1,12 +1,6 @@
 ---
 title: CanvasRenderingContext2D.ellipse()
 slug: Web/API/CanvasRenderingContext2D/ellipse
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Справка
-  - метод
 ---
 
 {{APIRef}}

@@ -1,16 +1,6 @@
 ---
 title: Request
 slug: Web/API/Request
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Interface
-  - NeedsTranslation
-  - Networking
-  - Reference
-  - TopicStub
-  - request
 ---
 
 {{APIRef("Fetch")}}

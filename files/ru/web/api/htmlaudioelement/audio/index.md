@@ -1,8 +1,6 @@
 ---
 title: Audio()
 slug: Web/API/HTMLAudioElement/Audio
-tags:
-  - аудио
 ---
 
 {{APIRef("HTML DOM")}}

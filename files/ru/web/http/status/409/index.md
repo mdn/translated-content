@@ -1,11 +1,6 @@
 ---
 title: 409 Conflict
 slug: Web/HTTP/Status/409
-tags:
-  - HTTP
-  - HTTP Статус Код
-  - Ошибка клиента
-  - Ссылка
 ---
 {{HTTPSidebar}}
 

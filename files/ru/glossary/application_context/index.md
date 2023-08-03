@@ -1,10 +1,6 @@
 ---
 title: Контекст приложения
 slug: Glossary/Application_context
-tags:
-  - CodingScripting
-  - Glossary
-  - Глоссарий
 ---
 
 Контекст приложения - это {{glossary("browsing context","контекст просмотра")}} верхнего уровня, к которому применяется [манифест](/ru/docs/Web/Manifest).

@@ -1,9 +1,6 @@
 ---
 title: Window.scrollTo()
 slug: Web/API/Window/scrollTo
-tags:
-  - Плавная прокрутка
-  - Плавный скролл
 ---
 
 {{ APIRef }}

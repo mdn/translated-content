@@ -1,10 +1,6 @@
 ---
 title: <time>
 slug: Web/CSS/time
-tags:
-  - Вёрстка
-  - Типы данных
-  - время
 ---
 
 {{CSSRef}}

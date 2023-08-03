@@ -1,10 +1,6 @@
 ---
 title: Console.table()
 slug: Web/API/console/table
-tags:
-  - API
-  - Дебаг
-  - консоль
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}

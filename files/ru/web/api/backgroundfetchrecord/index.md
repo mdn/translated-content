@@ -1,14 +1,6 @@
 ---
 title: BackgroundFetchRecord
 slug: Web/API/BackgroundFetchRecord
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - BackgroundFetchRecord
-  - Experimental
-browser-compat: api.BackgroundFetchRecord
 ---
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}

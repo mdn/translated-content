@@ -1,11 +1,6 @@
 ---
 title: Использование ARIA
 slug: Web/Accessibility/ARIA/ARIA_Techniques
-tags:
-  - ARIA
-  - Accessibility
-  - NeedsTranslation
-  - TopicStub
 ---
 
 ## Роли

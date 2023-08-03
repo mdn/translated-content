@@ -1,11 +1,6 @@
 ---
 title: HTMLCanvasElement.width
 slug: Web/API/HTMLCanvasElement/width
-tags:
-  - API
-  - Canvas
-  - HTMLCanvasElement
-  - Свойство
 ---
 
 {{APIRef("Canvas API")}}

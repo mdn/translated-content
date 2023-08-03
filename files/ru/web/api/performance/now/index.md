@@ -1,10 +1,6 @@
 ---
 title: performance.now()
 slug: Web/API/Performance/now
-tags:
-  - API
-  - Performance
-  - Web Performance API
 ---
 
 {{APIRef("Navigation Timing")}}

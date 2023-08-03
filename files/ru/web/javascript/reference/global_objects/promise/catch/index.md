@@ -1,12 +1,6 @@
 ---
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Prototype
-  - Промис
-  - метод
 ---
 {{JSRef}}
 

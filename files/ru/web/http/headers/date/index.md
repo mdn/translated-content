@@ -1,11 +1,6 @@
 ---
 title: Date
 slug: Web/HTTP/Headers/Date
-tags:
-  - HTTP
-  - Reference
-  - Заголовок
-  - Основной заголовок
 ---
 {{HTTPSidebar}}
 

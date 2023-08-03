@@ -1,11 +1,6 @@
 ---
 title: Основы HTML
 slug: Learn/Getting_started_with_the_web/HTML_basics
-tags:
-  - HTML
-  - Web
-  - Новичку
-  - Обучение
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}

@@ -1,12 +1,6 @@
 ---
 title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakSet
 ---
 {{JSRef("Global_Objects", "WeakSet")}}
 

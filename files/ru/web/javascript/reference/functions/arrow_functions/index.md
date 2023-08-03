@@ -1,10 +1,6 @@
 ---
 title: Стрелочные функции
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Функции
 ---
 
 {{jsSidebar("Functions")}}

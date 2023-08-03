@@ -1,14 +1,6 @@
 ---
 title: Navigator.sendBeacon()
 slug: Web/API/Navigator/sendBeacon
-tags:
-  - API
-  - Beacon
-  - sendBeacon
-  - Маяк
-  - Производительность
-  - метод
-  - сеть
 ---
 
 {{APIRef("HTML DOM")}}
