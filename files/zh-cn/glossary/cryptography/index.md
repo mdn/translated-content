@@ -12,8 +12,6 @@ slug: Glossary/Cryptography
 ## 参见
 
 - 维基百科上的[密码学](https://zh.wikipedia.org/wiki/密码学)
-- [信息安全教程](/zh-CN/docs/Web/Security/Information_Security_Basics)
-- [加密和解密](/zh-CN/docs/Archive/Security/Encryption_and_Decryption)
 - [MDN Web 文档术语](/zh-CN/docs/Glossary)
 
   - {{Glossary("Block cipher mode of operation", "块密码操作模式")}}
@@ -21,7 +19,6 @@ slug: Glossary/Cryptography
   - {{Glossary("Ciphertext", "密文")}}
   - {{Glossary("Cipher suite", "密码套件")}}
   - {{Glossary("Cryptanalysis", "密码分析")}}
-  - {{Glossary("Cryptography", "密码学")}}
   - {{Glossary("Decryption", "解密")}}
   - {{Glossary("Encryption", "加密")}}
   - {{Glossary("Key", "密钥")}}
