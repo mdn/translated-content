@@ -1,7 +1,7 @@
 ---
 title: MDN は 10 周年を迎えました
 slug: MDN/At_ten
-i10n:
+l10n:
   sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
