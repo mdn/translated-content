@@ -1,5 +1,5 @@
 ---
-title: 'Feature-Policy: battery'
+title: "Feature-Policy: battery"
 slug: Web/HTTP/Headers/Permissions-Policy/battery
 ---
 

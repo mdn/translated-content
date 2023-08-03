@@ -1,5 +1,5 @@
 ---
-title: 'Feature-Policy: xr-spatial-tracking'
+title: "Feature-Policy: xr-spatial-tracking"
 slug: Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking
 ---
 

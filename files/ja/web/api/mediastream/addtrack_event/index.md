@@ -1,5 +1,5 @@
 ---
-title: 'MediaStream: addtrack イベント'
+title: "MediaStream: addtrack イベント"
 slug: Web/API/MediaStream/addtrack_event
 ---
 

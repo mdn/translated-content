@@ -1,5 +1,5 @@
 ---
-title: 'Feature-Policy: camera'
+title: "Feature-Policy: camera"
 slug: Web/HTTP/Headers/Permissions-Policy/camera
 ---
 

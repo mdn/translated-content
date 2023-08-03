@@ -1,5 +1,5 @@
 ---
-title: 'MediaQueryList: change イベント'
+title: "MediaQueryList: change イベント"
 slug: Web/API/MediaQueryList/change_event
 ---
 

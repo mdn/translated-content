@@ -1,5 +1,5 @@
 ---
-title: 'Feature-Policy: midi'
+title: "Feature-Policy: midi"
 slug: Web/HTTP/Headers/Permissions-Policy/midi
 ---
 

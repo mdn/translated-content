@@ -1,5 +1,5 @@
 ---
-title: 'Notification: close イベント'
+title: "Notification: close イベント"
 slug: Web/API/Notification/close_event
 l10n:
   sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84

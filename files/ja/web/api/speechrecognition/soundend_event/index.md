@@ -1,5 +1,5 @@
 ---
-title: 'SpeechRecognition: soundend イベント'
+title: "SpeechRecognition: soundend イベント"
 slug: Web/API/SpeechRecognition/soundend_event
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1

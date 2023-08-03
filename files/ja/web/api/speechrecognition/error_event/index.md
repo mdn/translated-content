@@ -1,5 +1,5 @@
 ---
-title: 'SpeechRecognition: error イベント'
+title: "SpeechRecognition: error イベント"
 slug: Web/API/SpeechRecognition/error_event
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1

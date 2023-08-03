@@ -1,5 +1,5 @@
 ---
-title: 'ServiceWorkerGlobalScope: notificationclick イベント'
+title: "ServiceWorkerGlobalScope: notificationclick イベント"
 slug: Web/API/ServiceWorkerGlobalScope/notificationclick_event
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1

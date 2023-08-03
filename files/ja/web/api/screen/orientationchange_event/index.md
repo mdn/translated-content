@@ -1,5 +1,5 @@
 ---
-title: 'Screen: orientationchange イベント'
+title: "Screen: orientationchange イベント"
 slug: Web/API/Screen/orientationchange_event
 ---
 
