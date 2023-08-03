@@ -1,7 +1,6 @@
 ---
 title: CloseEvent.initCloseEvent()
 slug: conflicting/Web/API/CloseEvent
-original_slug: Web/API/CloseEvent/initCloseEvent
 ---
 
 {{APIRef("Websockets API")}}{{deprecated_header}}

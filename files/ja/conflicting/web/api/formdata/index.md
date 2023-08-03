@@ -1,7 +1,6 @@
 ---
 title: FormDataEntryValue
 slug: conflicting/Web/API/FormData
-original_slug: Web/API/FormDataEntryValue
 ---
 
 {{APIRef("XMLHttpRequest")}}

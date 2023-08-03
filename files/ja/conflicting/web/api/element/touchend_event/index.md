@@ -1,7 +1,6 @@
 ---
 title: Document:touchend イベント
 slug: conflicting/Web/API/Element/touchend_event
-original_slug: Web/API/Document/touchend_event
 ---
 
 {{APIRef}}

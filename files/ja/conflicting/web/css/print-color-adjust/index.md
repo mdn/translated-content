@@ -1,7 +1,6 @@
 ---
 title: color-adjust
 slug: conflicting/Web/CSS/print-color-adjust
-original_slug: Web/CSS/color-adjust
 ---
 
 {{CSSRef}}

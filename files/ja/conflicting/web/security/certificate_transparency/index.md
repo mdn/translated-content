@@ -1,7 +1,6 @@
 ---
 title: HTTP Public Key Pinning (HPKP)
 slug: conflicting/Web/Security/Certificate_Transparency
-original_slug: Web/HTTP/Public_Key_Pinning
 ---
 
 {{HTTPSidebar}}{{deprecated_header}}

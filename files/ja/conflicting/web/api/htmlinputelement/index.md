@@ -1,7 +1,6 @@
 ---
 title: HTMLInputElement.mozGetFileNameArray()
 slug: conflicting/Web/API/HTMLInputElement
-original_slug: Web/API/HTMLInputElement/mozGetFileNameArray
 ---
 
 {{ APIRef("HTML DOM") }}{{Non-standard_header}}

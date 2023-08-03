@@ -1,7 +1,6 @@
 ---
-title: 'Feature-Policy: xr'
+title: "Feature-Policy: xr"
 slug: conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
-original_slug: Web/HTTP/Headers/Feature-Policy/xr
 ---
 
 {{HTTPSidebar}}

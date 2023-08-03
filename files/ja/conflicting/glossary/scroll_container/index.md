@@ -1,7 +1,6 @@
 ---
 title: Scrollport (スクロールポート)
 slug: conflicting/Glossary/Scroll_container
-original_slug: Glossary/Scrollport
 ---
 
 **スクロールポート** (scrollport) は、文書の{{glossary("Scroll container", "スクロールコンテナー")}}の視覚的なビューポートです。スクロールコンテナーはコンテナーに `overflow: scroll` を適用するか、 `overflow: auto` であふれるほどの量のコンテンツがあるときに生成されます。スクロールポートはコンテナーのパディングボックスと一致し、ボックスとして見ることができるコンテンツがスクロールすることを表します。

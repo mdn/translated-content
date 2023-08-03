@@ -1,7 +1,6 @@
 ---
-title: 'Document: touchcancel イベント'
+title: "Document: touchcancel イベント"
 slug: conflicting/Web/API/Element/touchcancel_event
-original_slug: Web/API/Document/touchcancel_event
 ---
 
 {{APIRef}}

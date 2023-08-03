@@ -1,7 +1,6 @@
 ---
 title: Text.replaceWholeText()
 slug: conflicting/Web/API/Text
-original_slug: Web/API/Text/replaceWholeText
 ---
 
 {{ApiRef("DOM")}}{{deprecated_header}}

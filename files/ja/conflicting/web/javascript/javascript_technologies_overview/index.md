@@ -1,7 +1,6 @@
 ---
 title: JavaScript 言語情報
 slug: conflicting/Web/JavaScript/JavaScript_technologies_overview
-original_slug: Web/JavaScript/Language_Resources
 ---
 
 {{JsSidebar}}
