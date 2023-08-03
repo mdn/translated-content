@@ -3,7 +3,6 @@ title: getter
 slug: Web/JavaScript/Reference/Functions/get
 tags:
   - геттер
-translation_of: Web/JavaScript/Reference/Functions/get
 ---
 
 {{jsSidebar("Functions")}}

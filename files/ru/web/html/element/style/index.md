@@ -8,7 +8,6 @@ tags:
   - Веб
   - метаданные документа HTML
   - элементы
-translation_of: Web/HTML/Element/style
 ---
 
 ## Краткое описание

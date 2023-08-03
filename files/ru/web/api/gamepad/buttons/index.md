@@ -1,7 +1,6 @@
 ---
 title: Gamepad.buttons
 slug: Web/API/Gamepad/buttons
-translation_of: Web/API/Gamepad/buttons
 ---
 
 {{APIRef("Gamepad API")}}

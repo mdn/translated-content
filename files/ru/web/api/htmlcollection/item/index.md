@@ -6,7 +6,6 @@ tags:
   - HTML DOM
   - Property
   - Reference
-translation_of: Web/API/HTMLCollection/item
 ---
 
 {{APIRef("HTML DOM")}}

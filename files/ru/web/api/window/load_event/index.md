@@ -1,7 +1,6 @@
 ---
 title: load
 slug: Web/API/Window/load_event
-translation_of: Web/API/Window/load_event
 ---
 
 Событие `load` происходит когда ресурс и его зависимые ресурсы закончили загружаться.

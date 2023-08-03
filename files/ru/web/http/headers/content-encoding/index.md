@@ -5,7 +5,6 @@ tags:
   - Content-Encoding
   - HTTP
   - Headers
-translation_of: Web/HTTP/Headers/Content-Encoding
 ---
 
 {{HTTPSidebar}}

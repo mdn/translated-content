@@ -5,7 +5,6 @@ tags:
   - WCAG
   - Контраст
   - доступность
-translation_of: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 ---
 
 ## Описание проблемы

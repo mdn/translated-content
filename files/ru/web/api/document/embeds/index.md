@@ -4,7 +4,6 @@ slug: Web/API/Document/embeds
 tags:
   - API
   - Document
-translation_of: Web/API/Document/embeds
 ---
 
 {{ApiRef}}

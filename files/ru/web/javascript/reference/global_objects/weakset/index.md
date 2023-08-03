@@ -5,7 +5,6 @@ tags:
   - ECMAScript6
   - JavaScript
   - WeakSet
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 ---
 
 {{JSRef()}}

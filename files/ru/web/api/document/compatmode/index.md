@@ -9,7 +9,6 @@ tags:
   - standards
   - Свойство
   - режимы
-translation_of: Web/API/Document/compatMode
 ---
 
 {{ ApiRef("DOM") }}

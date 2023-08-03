@@ -9,7 +9,6 @@ tags:
   - WebAPI
   - Свойство
   - Справка
-translation_of: Web/API/History/length
 ---
 
 {{ APIRef("HTML DOM") }}

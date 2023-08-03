@@ -8,7 +8,6 @@ tags:
   - кофейник
   - чайник
   - шутка
-translation_of: Web/HTTP/Status/418
 ---
 
 {{HTTPSidebar}}

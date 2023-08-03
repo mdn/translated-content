@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onclick
 slug: Web/API/Element/click_event
-translation_of: Web/API/GlobalEventHandlers/onclick
 ---
 
 {{ ApiRef("HTML DOM") }}

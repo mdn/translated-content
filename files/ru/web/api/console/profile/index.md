@@ -6,7 +6,6 @@ tags:
   - Профайлер
   - дебаггинг
   - профилировщик
-translation_of: Web/API/Console/profile
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}

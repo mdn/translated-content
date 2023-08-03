@@ -1,7 +1,6 @@
 ---
 title: Типы ссылок
 slug: Web/HTML/Attributes/rel
-translation_of: Web/HTML/Link_types
 ---
 
 {{HTMLSidebar}}

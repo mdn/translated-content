@@ -4,7 +4,6 @@ slug: Web/API/Document/readyState
 tags:
   - API
   - Property
-translation_of: Web/API/Document/readyState
 ---
 
 {{APIRef("DOM")}}

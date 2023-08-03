@@ -7,7 +7,6 @@ tags:
   - Reference
   - URL
   - URL API
-translation_of: Web/API/URL/URL
 ---
 
 {{APIRef("URL API")}}

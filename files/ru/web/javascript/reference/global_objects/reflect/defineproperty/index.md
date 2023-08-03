@@ -5,7 +5,6 @@ tags:
   - ECMAScript 2015
   - Method
   - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 ---
 
 {{JSRef}}

@@ -17,7 +17,6 @@ tags:
   - Элемент
   - метаданные
   - метаданные документа HTML
-translation_of: Web/HTML/Element/title
 ---
 
 {{HTMLSidebar}}

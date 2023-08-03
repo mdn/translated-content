@@ -3,7 +3,6 @@ title: VRPose.position
 slug: Web/API/VRPose/position
 tags:
   - Виртуальная реальность
-translation_of: Web/API/VRPose/position
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}

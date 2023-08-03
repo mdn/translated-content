@@ -5,7 +5,6 @@ tags:
   - SVG
   - SVG градиент
   - Элемент
-translation_of: Web/SVG/Element/linearGradient
 ---
 
 {{SVGRef}}

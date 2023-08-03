@@ -6,7 +6,6 @@ tags:
   - Начала
   - Начинающий
   - Основы
-translation_of: Learn/JavaScript
 ---
 
 {{LearnSidebar}}

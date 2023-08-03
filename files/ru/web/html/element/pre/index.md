@@ -6,7 +6,6 @@ tags:
   - HTML группировка контента
   - 'HTML: поток контента'
   - Элемент
-translation_of: Web/HTML/Element/pre
 ---
 
 {{HTMLSidebar}}

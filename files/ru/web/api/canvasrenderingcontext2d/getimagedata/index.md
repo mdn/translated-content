@@ -5,7 +5,6 @@ tags:
   - API
   - Canvas
   - Method
-translation_of: Web/API/CanvasRenderingContext2D/getImageData
 ---
 
 {{APIRef}}

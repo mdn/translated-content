@@ -7,7 +7,6 @@ tags:
   - Layoout
   - Reference
   - Псевдоэлементы
-translation_of: Web/CSS/::selection
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

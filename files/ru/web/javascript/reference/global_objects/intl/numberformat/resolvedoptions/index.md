@@ -8,7 +8,6 @@ tags:
   - NeedsExample
   - NumberFormat
   - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
 ---
 
 {{JSRef("Global_Objects", "NumberFormat", "Intl,Collator,DateTimeFormat")}}

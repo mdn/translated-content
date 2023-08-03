@@ -8,7 +8,6 @@ tags:
   - Method
   - Prototype
   - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getYear
 ---
 
 {{JSRef("Global_Objects", "Date")}} {{deprecated_header("")}}

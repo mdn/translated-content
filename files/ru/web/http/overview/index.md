@@ -6,7 +6,6 @@ tags:
   - HTTP
   - Веб-механизмы
   - Обзор
-translation_of: Web/HTTP/Overview
 ---
 
 {{HTTPSidebar}}

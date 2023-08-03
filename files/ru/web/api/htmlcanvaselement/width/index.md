@@ -6,7 +6,6 @@ tags:
   - Canvas
   - HTMLCanvasElement
   - Свойство
-translation_of: Web/API/HTMLCanvasElement/width
 ---
 
 {{APIRef("Canvas API")}}

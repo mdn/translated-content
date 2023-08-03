@@ -4,7 +4,6 @@ slug: Web/MathML/Element/mstyle
 tags:
   - MathML
   - MathML:Element
-translation_of: Web/MathML/Element/mstyle
 ---
 
 {{MathMLRef}}

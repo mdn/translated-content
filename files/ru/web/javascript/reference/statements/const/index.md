@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - const
   - Константы
-translation_of: Web/JavaScript/Reference/Statements/const
 ---
 
 {{jsSidebar("Statements")}}

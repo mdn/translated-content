@@ -5,7 +5,6 @@ tags:
   - Gecko
   - Glossary
   - Глоссарий
-translation_of: Glossary/Gecko
 ---
 
 **Gecko -** это движок обработки и рендеринга макетов веб-страниц, разработанный в рамках Mozilla Project и используемый многими приложениями и устройствами, включая {{glossary("Mozilla Firefox","Firefox")}} и {{glossary("Firefox OS")}}.

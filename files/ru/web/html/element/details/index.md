@@ -8,7 +8,6 @@ tags:
   - Reference
   - Web
   - details
-translation_of: Web/HTML/Element/details
 ---
 
 {{HTMLSidebar}}

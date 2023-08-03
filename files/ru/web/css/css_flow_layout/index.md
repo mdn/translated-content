@@ -7,7 +7,6 @@ tags:
   - Руководство
   - поток
   - поточная раскладка
-translation_of: Web/CSS/CSS_Flow_Layout
 ---
 
 {{CSSRef}}

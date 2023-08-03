@@ -8,7 +8,6 @@ tags:
   - Обработчик
   - Событие
   - метод
-translation_of: Web/API/EventTarget/addEventListener
 ---
 
 {{apiref("DOM Events")}}

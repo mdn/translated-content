@@ -5,7 +5,6 @@ tags:
   - CSS
   - Свойства CSS
   - Шрифты CSS
-translation_of: Web/CSS/font-variant-numeric
 ---
 
 {{CSSRef}}

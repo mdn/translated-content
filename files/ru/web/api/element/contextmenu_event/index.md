@@ -7,7 +7,6 @@ tags:
   - Property
   - Reference
   - oncontextmenu
-translation_of: Web/API/GlobalEventHandlers/oncontextmenu
 ---
 
 {{ ApiRef("HTML DOM") }}

@@ -6,7 +6,6 @@ tags:
   - Reference
   - Псевдоэлементы
   - Селекторы
-translation_of: Web/CSS/Pseudo-elements
 ---
 {{CSSRef}}
 

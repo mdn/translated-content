@@ -7,7 +7,6 @@ tags:
   - Interface
   - Location
   - Refernce
-translation_of: Web/API/Location
 ---
 
 {{APIRef("HTML DOM")}}

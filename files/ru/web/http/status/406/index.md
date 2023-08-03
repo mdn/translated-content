@@ -4,7 +4,6 @@ slug: Web/HTTP/Status/406
 tags:
   - HTTP
   - Код состояния HTTP
-translation_of: Web/HTTP/Status/406
 ---
 
 {{HTTPSidebar}}

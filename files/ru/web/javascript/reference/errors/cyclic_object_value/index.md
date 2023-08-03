@@ -4,7 +4,6 @@ slug: Web/JavaScript/Reference/Errors/Cyclic_object_value
 tags:
   - Ошибка
   - Ошибки
-translation_of: Web/JavaScript/Reference/Errors/Cyclic_object_value
 ---
 
 {{jsSidebar("Errors")}}

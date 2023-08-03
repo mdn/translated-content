@@ -4,7 +4,6 @@ slug: Web/SVG/Attribute/overflow
 tags:
   - SVG
   - SVG атрибуты
-translation_of: Web/SVG/Attribute/overflow
 ---
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)

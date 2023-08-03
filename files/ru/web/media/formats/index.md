@@ -17,7 +17,6 @@ tags:
   - Video
   - Web
   - formats
-translation_of: Web/Media/Formats
 ---
 
 {{QuickLinksWithSubpages("/ru/docs/Web/Media")}}

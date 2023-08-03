@@ -4,7 +4,6 @@ slug: Web/API/Document/createElement
 tags:
   - DOM
   - Gecko
-translation_of: Web/API/Document/createElement
 ---
 
 {{ ApiRef() }}

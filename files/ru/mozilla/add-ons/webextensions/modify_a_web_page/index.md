@@ -1,7 +1,6 @@
 ---
 title: Модификация веб страницы
 slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
-translation_of: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 ---
 
 {{AddonSidebar}}

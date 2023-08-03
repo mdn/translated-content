@@ -9,7 +9,6 @@ tags:
   - Reference
   - Справка
   - Экспериментальный
-translation_of: Web/CSS/block-size
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

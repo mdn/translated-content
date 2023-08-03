@@ -4,7 +4,6 @@ slug: Web/CSS/word-spacing
 tags:
   - Текст
   - форматирование
-translation_of: Web/CSS/word-spacing
 ---
 {{CSSRef}}
 

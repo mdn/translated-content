@@ -6,7 +6,6 @@ tags:
   - Math
   - Property
   - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/E
 ---
 
 {{JSRef("Global_Objects", "Math")}}

@@ -6,7 +6,6 @@ tags:
   - Canvas
   - HTMLCanvasElement
   - Property
-translation_of: Web/API/HTMLCanvasElement/height
 ---
 
 {{APIRef("Canvas API")}}

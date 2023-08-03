@@ -7,7 +7,6 @@ tags:
   - CanvasRenderingContext2D
   - Method
   - Reference
-translation_of: Web/API/CanvasRenderingContext2D/strokeRect
 ---
 
 {{APIRef}}

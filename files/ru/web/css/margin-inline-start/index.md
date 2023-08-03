@@ -9,7 +9,6 @@ tags:
   - Reference
   - Экспериментальный
   - справочник
-translation_of: Web/CSS/margin-inline-start
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

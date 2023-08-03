@@ -5,7 +5,6 @@ tags:
   - Function
   - JavaScript
   - Method
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 ---
 {{JSRef("Global_Objects", "Function")}}
 

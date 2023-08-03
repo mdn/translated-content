@@ -6,7 +6,6 @@ tags:
   - MathML Reference
   - MathML:Element
   - MathML:General Layout Schemata
-translation_of: Web/MathML/Element/merror
 ---
 
 {{MathMLRef}}

@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - SyntaxError
   - Ошибки
-translation_of: Web/JavaScript/Reference/Errors/Redeclared_parameter
 ---
 
 {{jsSidebar("Errors")}}

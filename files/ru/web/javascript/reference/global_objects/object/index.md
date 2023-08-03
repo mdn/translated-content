@@ -7,7 +7,6 @@ tags:
   - Object
   - Reference
   - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Object
 ---
 
 {{JSRef("Global_Objects", "Object")}}

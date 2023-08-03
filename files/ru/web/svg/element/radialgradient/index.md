@@ -4,7 +4,6 @@ slug: Web/SVG/Element/radialGradient
 tags:
   - NeedsUpdate
   - SVG
-translation_of: Web/SVG/Element/radialGradient
 ---
 
 {{SVGRef}}

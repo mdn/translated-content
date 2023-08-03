@@ -6,7 +6,6 @@ tags:
   - DOM
   - Ссылки
   - метод
-translation_of: Web/API/Document/getElementsByTagName
 ---
 
 {{ ApiRef("DOM") }}

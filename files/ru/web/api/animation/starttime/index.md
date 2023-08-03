@@ -5,7 +5,6 @@ tags:
   - >-
     API  HTML DOM  NeedsExample  NeedsMarkupWork NeedsSpecTable  Property 
     Reference  Window
-translation_of: Web/API/Window/mozAnimationStartTime
 ---
 
 {{ APIRef() }}{{ non-standard_header() }}

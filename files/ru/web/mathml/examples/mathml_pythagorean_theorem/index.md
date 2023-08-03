@@ -12,7 +12,6 @@ tags:
   - Гайд
   - Начинающий
   - Пример
-translation_of: Web/MathML/Examples/MathML_Pythagorean_Theorem
 ---
 
 Сейчас мы докажем Теорему Пифагора:

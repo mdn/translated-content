@@ -6,7 +6,6 @@ tags:
   - HTML формы
   - Формы
   - Элемент Input
-translation_of: Web/HTML/Element/input/button
 ---
 
 {{HTMLSidebar}}

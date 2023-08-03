@@ -6,7 +6,6 @@ tags:
   - DOM
   - Document
   - Read-only
-translation_of: Web/API/Document/characterSet
 ---
 
 {{ ApiRef("DOM") }}

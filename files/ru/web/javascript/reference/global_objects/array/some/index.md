@@ -12,7 +12,6 @@ tags:
   - Référence(2)
   - Массив
   - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
 
 {{JSRef}}

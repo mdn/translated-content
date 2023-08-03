@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - Property
   - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 ---
 {{JSRef}}
 

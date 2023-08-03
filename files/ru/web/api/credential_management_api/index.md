@@ -9,7 +9,6 @@ tags:
   - Overview
   - Reference
   - credential management
-translation_of: Web/API/Credential_Management_API
 ---
 
 {{DefaultAPISidebar("Credential Management API")}}{{ SeeCompatTable() }}

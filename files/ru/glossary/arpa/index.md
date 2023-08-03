@@ -6,7 +6,6 @@ tags:
   - Infrastructure
   - Глоссарий
   - инфраструктура
-translation_of: Glossary/ARPA
 ---
 
 **.arpa** (Address and Routing Parameter Area) является {{glossary("TLD","доменом верхнего уровня")}}, который используется в интернет-инфраструктуре, особенно в обратном DNS запросе (т.е., определить {{glossary("domain name", "имя домена")}} для заданного {{glossary("IP address", "IP адреса")}}).

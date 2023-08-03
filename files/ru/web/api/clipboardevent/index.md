@@ -8,7 +8,6 @@ tags:
   - Experimental
   - Interface
   - Буфер обмена
-translation_of: Web/API/ClipboardEvent
 ---
 
 {{APIRef("Clipboard API")}} {{SeeCompatTable}}

@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - Остаточные параметры
   - Функции
-translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 ---
 
 {{jsSidebar("Functions")}}

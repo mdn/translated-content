@@ -5,7 +5,6 @@ tags:
   - CSS
   - Руководство
   - Справка
-translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 ---
 
 {{CSSRef}}

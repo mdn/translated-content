@@ -7,7 +7,6 @@ tags:
   - Псевдо-класс
   - Экспериментальное
   - селектор
-translation_of: Web/CSS/:-moz-only-whitespace
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

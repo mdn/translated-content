@@ -5,7 +5,6 @@ tags:
   - '@@toPrimitive'
   - JavaScript
   - toPrimitive
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 ---
 
 {{JSRef}}

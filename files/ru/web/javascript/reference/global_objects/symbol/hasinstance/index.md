@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - Property
   - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 ---
 
 {{JSRef}}

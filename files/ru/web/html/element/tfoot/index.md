@@ -5,7 +5,6 @@ tags:
   - HTML
   - Tables
   - Web
-translation_of: Web/HTML/Element/tfoot
 ---
 _HTML_ элемент подвала таблицы (`<tfoot>`) определяющий набор строк суммирующих столбцы таблицы.
 

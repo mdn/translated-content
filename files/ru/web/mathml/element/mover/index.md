@@ -8,7 +8,6 @@ tags:
   - MathML:Script and Limit Schemata
   - Справка по MathML
   - Элемент MathML
-translation_of: Web/MathML/Element/mover
 ---
 
 {{MathMLRef}}

@@ -8,7 +8,6 @@ tags:
   - stopPropagation
   - Событие
   - метод
-translation_of: Web/API/Event/stopPropagation
 ---
 
 {{APIRef("DOM")}}

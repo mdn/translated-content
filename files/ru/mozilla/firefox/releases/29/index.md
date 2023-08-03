@@ -4,7 +4,6 @@ slug: Mozilla/Firefox/Releases/29
 tags:
   - firefox developers
   - firefox29
-translation_of: Mozilla/Firefox/Releases/29
 ---
 
 {{FirefoxSidebar}}

@@ -8,7 +8,6 @@ tags:
   - TopicStub
   - cookbook
   - recipes
-translation_of: Web/CSS/Layout_cookbook
 ---
 {{CSSRef}}
 Книга рецептов CSS объединяет примеры большинства наиболее распространённых лейаут паттернов, которые могу встретиться вам при разработке веб-сайтов.

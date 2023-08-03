@@ -6,7 +6,6 @@ tags:
   - HTTP Статус Код
   - Ошибка клиента
   - Ссылка
-translation_of: Web/HTTP/Status/409
 ---
 {{HTTPSidebar}}
 

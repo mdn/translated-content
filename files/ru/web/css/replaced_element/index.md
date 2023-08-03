@@ -5,7 +5,6 @@ tags:
   - CSS
   - Reference
   - замещаемый элемент
-translation_of: Web/CSS/Replaced_element
 ---
 
 {{CSSRef}}

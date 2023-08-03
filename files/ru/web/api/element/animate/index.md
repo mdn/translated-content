@@ -9,7 +9,6 @@ tags:
   - Method
   - Reference
   - web animation
-translation_of: Web/API/Element/animate
 ---
 
 {{APIRef('Web Animations')}} {{SeeCompatTable}}

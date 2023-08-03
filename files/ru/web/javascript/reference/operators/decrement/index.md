@@ -4,7 +4,6 @@ slug: Web/JavaScript/Reference/Operators/Decrement
 tags:
   - Декремент
   - Оператор
-translation_of: Web/JavaScript/Reference/Operators/Decrement
 ---
 
 {{jsSidebar("Operators")}}

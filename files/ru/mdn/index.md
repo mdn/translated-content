@@ -4,7 +4,6 @@ slug: MDN
 tags:
   - Landing
   - MDN Meta
-translation_of: MDN
 ---
 
 {{MDNSidebar}}

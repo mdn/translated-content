@@ -5,7 +5,6 @@ tags:
   - медиавыражение
   - тип данных
   - формат экрана
-translation_of: Web/CSS/ratio
 ---
 {{CSSRef}}
 

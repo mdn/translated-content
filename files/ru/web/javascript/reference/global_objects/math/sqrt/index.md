@@ -6,7 +6,6 @@ tags:
   - Math
   - Method
   - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 ---
 {{JSRef("Global_Objects", "Math")}}
 

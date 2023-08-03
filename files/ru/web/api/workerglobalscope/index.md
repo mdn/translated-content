@@ -9,7 +9,6 @@ tags:
   - TopicStub
   - WorkerGlobalScope
   - Workers
-translation_of: Web/API/WorkerGlobalScope
 ---
 
 {{APIRef("Web Workers API")}}

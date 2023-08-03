@@ -15,7 +15,6 @@ tags:
   - Обучающая зона
   - Обучение
   - Руководство
-translation_of: Learn/Getting_started_with_the_web
 ---
 
 {{LearnSidebar}}

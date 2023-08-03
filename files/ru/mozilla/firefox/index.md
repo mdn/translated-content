@@ -5,7 +5,6 @@ tags:
   - Firefox
   - Landing
   - Mozilla
-translation_of: Mozilla/Firefox
 ---
 
 {{FirefoxSidebar}}

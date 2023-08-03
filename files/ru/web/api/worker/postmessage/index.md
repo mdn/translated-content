@@ -9,7 +9,6 @@ tags:
   - postMessage
   - Ссылка
   - метод
-translation_of: Web/API/Worker/postMessage
 ---
 
 {{APIRef("Web Workers API")}}

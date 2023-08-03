@@ -4,7 +4,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 tags:
   - Прокси
   - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 ---
 {{JSRef}}
 

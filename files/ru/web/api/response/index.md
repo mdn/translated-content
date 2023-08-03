@@ -8,7 +8,6 @@ tags:
   - Interface
   - Reference
   - Response
-translation_of: Web/API/Response
 ---
 
 {{APIRef("Fetch API")}}

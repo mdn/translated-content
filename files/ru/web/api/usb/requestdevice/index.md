@@ -9,7 +9,6 @@ tags:
   - getDevices()
   - Определение
   - метод
-translation_of: Web/API/USB/requestDevice
 ---
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}

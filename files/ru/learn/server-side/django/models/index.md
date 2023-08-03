@@ -6,7 +6,6 @@ tags:
   - данные
   - модель
   - туториал
-translation_of: Learn/Server-side/Django/Models
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}

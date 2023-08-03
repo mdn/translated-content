@@ -9,7 +9,6 @@ tags:
   - Элемент
   - Определение
 browser-compat: api.Element.append
-translation_of: Web/API/Element/append
 ---
 
 {{APIRef("DOM")}}

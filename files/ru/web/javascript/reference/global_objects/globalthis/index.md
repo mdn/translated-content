@@ -7,7 +7,6 @@ tags:
   - global
   - globalThis
   - this
-translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 ---
 {{jsSidebar("Objects")}}
 

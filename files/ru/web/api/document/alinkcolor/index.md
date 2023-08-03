@@ -5,7 +5,6 @@ tags:
   - API
   - Obsolete
   - Property
-translation_of: Web/API/Document/alinkColor
 ---
 
 {{APIRef("DOM")}} {{ Deprecated_header() }}

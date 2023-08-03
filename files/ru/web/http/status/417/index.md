@@ -7,7 +7,6 @@ tags:
   - Код статуса HTTP
   - Ошибка клиента
   - Справка
-translation_of: Web/HTTP/Status/417
 ---
 
 {{HTTPSidebar}}

@@ -4,7 +4,6 @@ slug: Web/API/Web_Workers_API/Using_web_workers
 tags:
   - воркер
   - поток
-translation_of: Web/API/Web_Workers_API/Using_web_workers
 ---
 
 {{DefaultAPISidebar("Web Workers API")}}

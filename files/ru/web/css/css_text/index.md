@@ -7,7 +7,6 @@ tags:
   - CSS Text
   - Guide
   - Overview
-translation_of: Web/CSS/CSS_Text
 ---
 
 {{CSSRef}}

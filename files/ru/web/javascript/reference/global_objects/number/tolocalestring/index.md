@@ -7,7 +7,6 @@ tags:
   - Method
   - Number
   - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 ---
 {{JSRef("Global_Objects", "Number")}}
 

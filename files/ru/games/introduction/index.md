@@ -5,7 +5,6 @@ tags:
   - Firefox OS
   - Игры
   - уроки
-translation_of: Games/Introduction
 ---
 
 {{GamesSidebar}}

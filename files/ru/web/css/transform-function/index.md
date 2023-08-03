@@ -8,7 +8,6 @@ tags:
   - Data Type
   - Layout
   - Reference
-translation_of: Web/CSS/transform-function
 browser-compat: css.types.transform-function
 ---
 

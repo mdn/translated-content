@@ -1,7 +1,6 @@
 ---
 title: CSSStyleDeclaration.getPropertyValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyValue
-translation_of: Web/API/CSSStyleDeclaration/getPropertyValue
 ---
 
 {{ APIRef("CSSOM") }}

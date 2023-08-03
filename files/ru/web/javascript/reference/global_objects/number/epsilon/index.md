@@ -7,7 +7,6 @@ tags:
   - Number
   - Property
   - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 ---
 
 {{JSRef}}

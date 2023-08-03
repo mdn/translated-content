@@ -5,7 +5,6 @@ tags:
   - WebExtensions
   - Веб-расширения
   - Интерфейс
-translation_of: Mozilla/Add-ons/WebExtensions/Examples
 ---
 
 {{AddonSidebar}}

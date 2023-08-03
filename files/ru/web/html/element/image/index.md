@@ -4,7 +4,6 @@ slug: Web/HTML/Element/image
 tags:
   - HTML
   - Non-standard
-translation_of: Web/HTML/Element/image
 ---
 
 {{non-standard_header}}

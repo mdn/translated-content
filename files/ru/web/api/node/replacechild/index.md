@@ -8,7 +8,6 @@ tags:
   - Gecko
   - Method
   - Node
-translation_of: Web/API/Node/replaceChild
 ---
 
 {{ApiRef}}

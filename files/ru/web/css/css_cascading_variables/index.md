@@ -8,7 +8,6 @@ tags:
   - Guide
   - Overview
   - Reference
-translation_of: Web/CSS/CSS_Variables
 ---
 
 {{CSSRef}}

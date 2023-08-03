@@ -5,7 +5,6 @@ tags:
   - CSS
   - Guide
   - Web
-translation_of: Web/CSS/computed_value
 ---
 
 {{cssref}}

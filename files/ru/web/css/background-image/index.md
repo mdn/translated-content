@@ -6,7 +6,6 @@ tags:
   - CSS Background
   - CSS Property
   - Reference
-translation_of: Web/CSS/background-image
 ---
 
 {{CSSRef}}

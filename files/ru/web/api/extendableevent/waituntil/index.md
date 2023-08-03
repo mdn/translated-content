@@ -1,7 +1,6 @@
 ---
 title: ExtendableEvent.waitUntil()
 slug: Web/API/ExtendableEvent/waitUntil
-translation_of: Web/API/ExtendableEvent/waitUntil
 ---
 
 {{APIRef("Service Workers API")}}

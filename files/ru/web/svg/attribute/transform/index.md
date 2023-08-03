@@ -4,7 +4,6 @@ slug: Web/SVG/Attribute/transform
 tags:
   - SVG
   - SVG атрибуты
-translation_of: Web/SVG/Attribute/transform
 ---
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)

@@ -6,7 +6,6 @@ tags:
   - Возможности языка
   - Справочник
   - Оператор
-translation_of: Web/JavaScript/Reference/Statements/break
 browser-compat: javascript.statements.break
 ---
 {{jsSidebar("Statements")}}

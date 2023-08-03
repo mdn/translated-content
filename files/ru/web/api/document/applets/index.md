@@ -7,7 +7,6 @@ tags:
   - HTML DOM
   - Апплеты
   - Документ
-translation_of: Web/API/Document/applets
 ---
 
 {{APIRef("DOM")}}

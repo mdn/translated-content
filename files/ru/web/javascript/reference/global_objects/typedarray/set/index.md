@@ -6,7 +6,6 @@ tags:
   - Типизированный массив
   - метод
   - прототип
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 ---
 
 {{JSRef}}

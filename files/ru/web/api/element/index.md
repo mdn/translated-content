@@ -7,7 +7,6 @@ tags:
   - Element
   - Interface
   - Reference
-translation_of: Web/API/Element
 ---
 
 {{ APIRef("DOM") }}

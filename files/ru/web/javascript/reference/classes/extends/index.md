@@ -5,7 +5,6 @@ tags:
   - Классы
   - Наследование
   - Расширение
-translation_of: Web/JavaScript/Reference/Classes/extends
 ---
 
 {{jsSidebar("Classes")}}

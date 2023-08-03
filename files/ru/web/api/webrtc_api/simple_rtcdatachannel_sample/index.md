@@ -1,7 +1,6 @@
 ---
 title: Простой пример RTCDataChannel
 slug: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
-translation_of: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 ---
 
 {{DefaultAPISidebar("WebRTC")}}

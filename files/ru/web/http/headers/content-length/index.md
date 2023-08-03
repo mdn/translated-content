@@ -8,7 +8,6 @@ tags:
   - Длина контента
   - Заголовок
   - запрос
-translation_of: Web/HTTP/Headers/Content-Length
 ---
 
 {{HTTPSidebar}}

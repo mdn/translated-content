@@ -6,7 +6,6 @@ tags:
   - Начинающим
   - Объекты
   - Руководства
-translation_of: Learn/JavaScript/Objects
 ---
 
 {{LearnSidebar}}

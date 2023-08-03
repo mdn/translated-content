@@ -5,7 +5,6 @@ tags:
   - Веб
   - Ссылки
   - события
-translation_of: Web/API/Window/resize_event
 ---
 
 {{APIRef}}

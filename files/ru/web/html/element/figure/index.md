@@ -11,7 +11,6 @@ tags:
   - Иллюстрации
   - Представление
   - Элемент
-translation_of: Web/HTML/Element/figure
 ---
 
 {{HTMLSidebar}}

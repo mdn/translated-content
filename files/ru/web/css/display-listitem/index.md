@@ -8,7 +8,6 @@ tags:
   - Reference
   - list-item
   - Справка
-translation_of: Web/CSS/display-listitem
 ---
 
 {{CSSRef}}

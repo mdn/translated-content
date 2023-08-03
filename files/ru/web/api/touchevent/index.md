@@ -9,7 +9,6 @@ tags:
   - Reference
   - TopicStub
   - touch
-translation_of: Web/API/TouchEvent
 ---
 
 {{ APIRef("Touch Events") }}

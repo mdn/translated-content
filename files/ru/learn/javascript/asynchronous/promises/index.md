@@ -5,7 +5,6 @@ tags:
   - Асинхронность
   - Гайд
   - Для новичков
-translation_of: Learn/JavaScript/Asynchronous/Async_await
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}

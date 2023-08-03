@@ -1,7 +1,6 @@
 ---
 title: Обработка коллизий
 slug: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Создание_кирпичей", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Очки")}}

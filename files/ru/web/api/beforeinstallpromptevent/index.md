@@ -8,7 +8,6 @@ tags:
   - Experimental
   - Interface
   - Reference
-translation_of: Web/API/BeforeInstallPromptEvent
 ---
 
 Событие **`BeforeInstallPromptEvent`** запускается в обработчике {{domxref("Window.onbeforeinstallprompt")}} перед тем, как пользователю будет предложено "установить" веб-сайт на главный экран мобильного устройства.Этот интерфейс наследуется от интерфейса {{domxref("Event")}}.

@@ -7,7 +7,6 @@ tags:
   - Window
   - Свойство
   - Ссылки
-translation_of: Web/API/Window/location
 ---
 
 {{APIRef}}

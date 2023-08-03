@@ -12,7 +12,6 @@ tags:
   - ServiceWorkerRegistration
   - TopicStub
   - Workers
-translation_of: Web/API/ServiceWorkerRegistration
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

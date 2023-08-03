@@ -7,7 +7,6 @@ tags:
   - Fetch
   - Reference
   - Response
-translation_of: Web/API/Response/Response
 ---
 
 {{APIRef("Fetch")}}

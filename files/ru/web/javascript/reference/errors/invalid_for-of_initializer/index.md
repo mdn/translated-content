@@ -7,7 +7,6 @@ tags:
   - Error
   - JavaScript
   - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
 ---
 
 {{jsSidebar("Errors")}}

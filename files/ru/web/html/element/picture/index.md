@@ -5,7 +5,6 @@ tags:
   - HTML
   - Встроенный контент
   - Элемент picture
-translation_of: Web/HTML/Element/picture
 ---
 {{HTMLSidebar}}
 

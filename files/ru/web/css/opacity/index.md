@@ -7,7 +7,6 @@ tags:
   - Opacity
   - Непрозрачность
   - Прозрачность
-translation_of: Web/CSS/opacity
 ---
 {{CSSRef}}
 

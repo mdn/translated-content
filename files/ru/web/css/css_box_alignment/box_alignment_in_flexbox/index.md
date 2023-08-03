@@ -5,7 +5,6 @@ tags:
   - CSS
   - flexbox
   - выравнивание блоков
-translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Web Authentication API
 slug: Web/API/Web_Authentication_API
-translation_of: Web/API/Web_Authentication_API
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}

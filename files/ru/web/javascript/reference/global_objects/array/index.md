@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - Reference
   - Глобальные объекты
-translation_of: Web/JavaScript/Reference/Global_Objects/Array
 ---
 {{JSRef("Global_Objects", "Array")}}
 

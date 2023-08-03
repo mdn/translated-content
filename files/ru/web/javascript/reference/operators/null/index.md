@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - Literal
   - Primitive
-translation_of: Web/JavaScript/Reference/Global_Objects/null
 ---
 
 {{jsSidebar("Objects")}}

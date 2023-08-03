@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.lineWidth
 slug: Web/API/CanvasRenderingContext2D/lineWidth
-translation_of: Web/API/CanvasRenderingContext2D/lineWidth
 ---
 
 {{APIRef}}

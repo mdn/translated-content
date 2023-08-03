@@ -7,7 +7,6 @@ tags:
   - Method
   - Prototype
   - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 ---
 
 {{JSRef}}

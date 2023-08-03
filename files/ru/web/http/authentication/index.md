@@ -5,7 +5,6 @@ tags:
   - Аутентификация
   - Разграничение доступа
   - Руководство
-translation_of: Web/HTTP/Authentication
 ---
 {{HTTPSidebar}}
 

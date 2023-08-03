@@ -8,7 +8,6 @@ tags:
   - HTML
   - input
   - hidden
-translation_of: Web/HTML/Element/input/hidden
 ---
 
 {{HTMLSidebar}}

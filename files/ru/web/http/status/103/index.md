@@ -8,7 +8,6 @@ tags:
   - ТаблицаСоответствия
   - Требуется Содержание
   - Черновик
-translation_of: Web/HTTP/Status/103
 ---
 
 {{HTTPSidebar}}

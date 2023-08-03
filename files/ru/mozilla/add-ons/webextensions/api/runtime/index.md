@@ -11,7 +11,6 @@ tags:
   - TopicStub
   - WebExtensions
   - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
 ---
 
 {{AddonSidebar}}

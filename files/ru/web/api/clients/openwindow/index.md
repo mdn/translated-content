@@ -10,7 +10,6 @@ tags:
   - Service Workers
   - ServiceWorker
   - openWindow
-translation_of: Web/API/Clients/openWindow
 ---
 
 {{APIRef("Service Workers API")}}

@@ -4,7 +4,6 @@ slug: Web/HTTP/Headers/Pragma
 tags:
   - Прагма
   - кеш
-translation_of: Web/HTTP/Headers/Pragma
 ---
 
 {{HTTPSidebar}}

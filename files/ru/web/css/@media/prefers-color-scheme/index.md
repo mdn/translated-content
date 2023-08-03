@@ -6,7 +6,6 @@ tags:
   - CSS
   - Reference
   - prefers-color-scheme
-translation_of: Web/CSS/@media/prefers-color-scheme
 ---
 
 [CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/Media_Queries/Using_media_queries) **`prefers-color-scheme`** может использоваться для определения того, светлую или тёмную тему использует пользователь в операционной системе.

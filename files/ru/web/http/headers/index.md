@@ -4,7 +4,6 @@ slug: Web/HTTP/Headers
 tags:
   - HTTP
   - Заголовки
-translation_of: Web/HTTP/Headers
 ---
 
 {{ HTTPSidebar }}

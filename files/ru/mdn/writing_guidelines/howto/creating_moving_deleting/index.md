@@ -7,7 +7,6 @@ tags:
   - Как
   - Новичок
   - Стартовая
-translation_of: MDN/Contribute/Howto/Create_and_edit_pages
 ---
 
 {{MDNSidebar}}

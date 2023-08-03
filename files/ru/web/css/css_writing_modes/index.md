@@ -4,7 +4,6 @@ slug: Web/CSS/CSS_writing_modes
 tags:
   - CSS
   - Режимы письма
-translation_of: Web/CSS/CSS_Writing_Modes
 ---
 
 {{CSSRef}}

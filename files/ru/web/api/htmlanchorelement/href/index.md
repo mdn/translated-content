@@ -9,7 +9,6 @@ tags:
   - Property
   - Reference
   - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/href
 ---
 
 {{ApiRef("URL API")}}

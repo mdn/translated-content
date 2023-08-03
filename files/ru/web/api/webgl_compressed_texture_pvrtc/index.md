@@ -1,7 +1,6 @@
 ---
 title: WEBGL_compressed_texture_pvrtc
 slug: Web/API/WEBGL_compressed_texture_pvrtc
-translation_of: Web/API/WEBGL_compressed_texture_pvrtc
 ---
 
 {{APIRef("WebGL")}}

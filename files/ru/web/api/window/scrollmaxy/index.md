@@ -6,7 +6,6 @@ tags:
   - HTML DOM
   - Window
   - Свойство
-translation_of: Web/API/Window/scrollMaxY
 ---
 
 {{APIRef}} {{Non-standard_header}}

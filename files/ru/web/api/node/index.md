@@ -4,7 +4,6 @@ slug: Web/API/Node
 tags:
   - API
   - DOM
-translation_of: Web/API/Node
 ---
 
 {{APIRef("DOM")}}

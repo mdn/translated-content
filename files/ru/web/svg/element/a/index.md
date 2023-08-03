@@ -3,7 +3,6 @@ title: a
 slug: Web/SVG/Element/a
 tags:
   - SVG
-translation_of: Web/SVG/Element/a
 ---
 {{SVGRef}}
 

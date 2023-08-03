@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - RangeError
   - Ошибки
-translation_of: Web/JavaScript/Reference/Errors/Precision_range
 ---
 
 {{jsSidebar("Errors")}}

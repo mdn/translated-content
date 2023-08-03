@@ -8,7 +8,6 @@ tags:
   - UI Events
   - Интерфейс
   - Событие
-translation_of: Web/API/KeyboardEvent
 ---
 
 {{APIRef("DOM Events")}}

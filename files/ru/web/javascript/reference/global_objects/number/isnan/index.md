@@ -9,7 +9,6 @@ tags:
   - Reference
   - Référence(2)
   - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 ---
 {{JSRef("Global_Objects", "Number")}}
 

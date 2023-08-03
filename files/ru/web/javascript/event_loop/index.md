@@ -3,7 +3,6 @@ title: Параллельная модель и цикл событий.
 slug: Web/JavaScript/Event_loop
 tags:
   - Руководство
-translation_of: Web/JavaScript/EventLoop
 ---
 
 {{JsSidebar("Advanced")}}

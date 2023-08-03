@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - Свойство
   - Символы
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
 ---
 {{JSRef}}
 

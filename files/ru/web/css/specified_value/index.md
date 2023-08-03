@@ -4,7 +4,6 @@ slug: Web/CSS/specified_value
 tags:
   - CSS
   - CSS Reference
-translation_of: Web/CSS/specified_value
 ---
 
 {{CSSRef}}

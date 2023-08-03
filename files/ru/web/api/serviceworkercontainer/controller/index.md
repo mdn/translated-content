@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerContainer.controller
 slug: Web/API/ServiceWorkerContainer/controller
-translation_of: Web/API/ServiceWorkerContainer/controller
 ---
 
 {{APIRef("Service Workers API")}}

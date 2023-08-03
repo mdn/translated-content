@@ -4,7 +4,6 @@ slug: Web/Guide
 tags:
   - Web
   - Руководство
-translation_of: Web/Guide
 ---
 
 **Эти статьи помогут изучить веб-технологии и интерфейсы API.**

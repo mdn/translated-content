@@ -6,7 +6,6 @@ tags:
   - Нужно описание
   - Нужны примеры
   - Совместимость
-translation_of: Web/API/Window/crypto
 ---
 
 {{APIRef}}

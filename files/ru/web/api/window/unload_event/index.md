@@ -1,7 +1,6 @@
 ---
 title: WindowEventHandlers.onunload
 slug: Web/API/Window/unload_event
-translation_of: Web/API/WindowEventHandlers/onunload
 ---
 
 {{APIRef("HTML DOM")}}

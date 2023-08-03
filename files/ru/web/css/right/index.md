@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Позиционирование
   - CSS-свойство
-translation_of: Web/CSS/right
 ---
 {{CSSRef}}
 

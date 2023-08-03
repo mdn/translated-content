@@ -6,7 +6,6 @@ tags:
   - NeedsUpdate
   - Reference
   - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String
 ---
 
 {{JSRef("Global_Objects", "String")}}

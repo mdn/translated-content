@@ -10,7 +10,6 @@ tags:
   - Reference
   - forEach
   - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 ---
 {{JSRef("Global_Objects", "Array")}}
 

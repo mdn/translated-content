@@ -9,7 +9,6 @@ tags:
   - Потоковый контент
   - Справка
   - Элемент
-translation_of: Web/HTML/Element/span
 ---
 
 {{HTMLSidebar}}

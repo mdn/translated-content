@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - TypeError
   - Ошибки
-translation_of: Web/JavaScript/Reference/Errors/No_properties
 ---
 
 {{jsSidebar("Errors")}}

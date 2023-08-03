@@ -7,7 +7,6 @@ tags:
   - Игры
   - Обзор
   - Экспериментальный
-translation_of: Web/API/Gamepad_API
 ---
 
 {{DefaultAPISidebar("Gamepad API")}}

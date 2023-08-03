@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - Reference
   - statements
-translation_of: Web/JavaScript/Reference/Statements
 ---
 
 {{jsSidebar("Statements")}}

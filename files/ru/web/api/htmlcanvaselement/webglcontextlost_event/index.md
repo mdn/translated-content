@@ -5,7 +5,6 @@ tags:
   - Event
   - Reference
   - WebGL
-translation_of: Web/API/HTMLCanvasElement/webglcontextlost_event
 ---
 
 {{APIRef}}

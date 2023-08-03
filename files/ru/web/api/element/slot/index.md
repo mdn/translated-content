@@ -8,7 +8,6 @@ tags:
   - Property
   - Reference
   - shadow dom
-translation_of: Web/API/Element/slot
 ---
 
 {{APIRef("Shadow DOM")}}

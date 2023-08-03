@@ -9,7 +9,6 @@ tags:
   - Массив
   - inArray
   - Метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
 ---
 {{JSRef}}
 

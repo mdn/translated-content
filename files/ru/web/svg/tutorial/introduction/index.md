@@ -4,7 +4,6 @@ slug: Web/SVG/Tutorial/Introduction
 tags:
   - SVG
   - Руководство
-translation_of: Web/SVG/Tutorial/Introduction
 ---
 
 {{ PreviousNext("Web/SVG/Руководство", "Web/SVG/Руководство/Введение") }}

@@ -6,7 +6,6 @@ tags:
   - Firefox
   - Mozzila
   - Релиз
-translation_of: Mozilla/Firefox/Releases/68
 ---
 
 {{FirefoxSidebar}}

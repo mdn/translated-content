@@ -9,7 +9,6 @@ tags:
   - Overview
   - Reference
   - TopicStub
-translation_of: Web/CSS/CSS_Transitions
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

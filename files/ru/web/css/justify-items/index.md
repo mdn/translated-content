@@ -6,7 +6,6 @@ tags:
   - CSS атрибут
   - CSS выравнивание блоков
   - Ссылки
-translation_of: Web/CSS/justify-items
 ---
 
 {{CSSRef}}

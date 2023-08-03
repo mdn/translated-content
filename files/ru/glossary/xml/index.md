@@ -4,7 +4,6 @@ slug: Glossary/XML
 tags:
   - Glossary
   - XML
-translation_of: Glossary/XML
 ---
 
 eXtensible Markup Language (XML) - расширяемый язык разметки, рекомендованный Консорциумом Всемирной паутины (W3C). В отрасли информационных технологий (ИТ) используется множество языков на основе XML в качестве языков описания данных.

@@ -5,7 +5,6 @@ tags:
   - Errors
   - JavaScript
   - RangeError
-translation_of: Web/JavaScript/Reference/Errors/Invalid_date
 ---
 
 {{jsSidebar("Errors")}}

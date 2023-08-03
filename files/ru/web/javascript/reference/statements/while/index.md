@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - Оператор
   - Цикл
-translation_of: Web/JavaScript/Reference/Statements/while
 ---
 {{jsSidebar("Statements")}}
 

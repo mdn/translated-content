@@ -7,7 +7,6 @@ tags:
   - HTML DOM
   - Read-only
   - Свойство
-translation_of: Web/API/Document/location
 ---
 
 {{APIRef("DOM")}}

@@ -4,7 +4,6 @@ slug: Web/SVG/Tutorial/Getting_Started
 tags:
   - SVG
   - SVG:Руководство
-translation_of: Web/SVG/Tutorial/Getting_Started
 ---
 
 {{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}

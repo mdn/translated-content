@@ -8,7 +8,6 @@ tags:
   - TopicStub
   - Web
   - XML
-translation_of: Web/XML
 ---
 
 {{QuickLinksWithSubpages("/ru/docs/Web/XML")}}

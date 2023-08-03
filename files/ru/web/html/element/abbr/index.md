@@ -5,7 +5,6 @@ tags:
   - HTML
   - Тег
   - Элемент
-translation_of: Web/HTML/Element/abbr
 ---
 {{HTMLSidebar}}
 

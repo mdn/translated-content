@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.duration
 slug: Web/API/HTMLMediaElement/duration
-translation_of: Web/API/HTMLMediaElement/duration
 ---
 
 {{APIRef("HTML DOM")}}

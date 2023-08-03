@@ -3,7 +3,6 @@ title: ':first-child'
 slug: Web/CSS/:first-child
 tags:
   - Псевдо-классы
-translation_of: Web/CSS/:first-child
 ---
 {{CSSRef}}
 

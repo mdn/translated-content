@@ -3,7 +3,6 @@ title: ':invalid'
 slug: Web/CSS/:invalid
 tags:
   - Псевдо-классы
-translation_of: Web/CSS/:invalid
 ---
 {{ CSSRef() }}
 

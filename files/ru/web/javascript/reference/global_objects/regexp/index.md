@@ -8,7 +8,6 @@ tags:
   - RegExp
   - Référence(2)
   - регулярные выражения
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
 
 {{JSRef("Global_Objects", "RegExp")}}

@@ -6,7 +6,6 @@ tags:
   - HTML DOM
   - Navigator
   - Window
-translation_of: Web/API/Window/navigator
 ---
 
 {{APIRef}}

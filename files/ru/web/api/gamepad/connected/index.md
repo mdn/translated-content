@@ -1,7 +1,6 @@
 ---
 title: Gamepad.connected
 slug: Web/API/Gamepad/connected
-translation_of: Web/API/Gamepad/connected
 ---
 
 {{APIRef("Gamepad API")}}

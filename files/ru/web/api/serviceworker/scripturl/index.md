@@ -1,7 +1,6 @@
 ---
 title: ServiceWorker.scriptURL
 slug: Web/API/ServiceWorker/scriptURL
-translation_of: Web/API/ServiceWorker/scriptURL
 ---
 
 {{APIRef("Service Workers API")}}

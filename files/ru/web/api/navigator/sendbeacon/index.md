@@ -9,7 +9,6 @@ tags:
   - Производительность
   - метод
   - сеть
-translation_of: Web/API/Navigator/sendBeacon
 ---
 
 {{APIRef("HTML DOM")}}

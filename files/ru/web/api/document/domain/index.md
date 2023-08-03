@@ -10,7 +10,6 @@ tags:
   - Same Origin
   - Same Origin Policy
   - iframe
-translation_of: Web/API/Document/domain
 ---
 
 {{ApiRef}}

@@ -5,7 +5,6 @@ tags:
   - API
   - HTML DOM
   - Navigator
-translation_of: Web/API/Navigator
 ---
 
 {{ apiref() }}

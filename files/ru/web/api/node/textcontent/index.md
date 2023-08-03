@@ -8,7 +8,6 @@ tags:
   - Node
   - Property
   - Reference
-translation_of: Web/API/Node/textContent
 ---
 
 {{ApiRef}}

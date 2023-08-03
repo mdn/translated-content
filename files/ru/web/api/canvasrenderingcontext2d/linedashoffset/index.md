@@ -8,7 +8,6 @@ tags:
   - JavaScript
   - Property
   - Reference
-translation_of: Web/API/CanvasRenderingContext2D/lineDashOffset
 ---
 
 {{APIRef}}

@@ -6,7 +6,6 @@ tags:
   - Руководство
   - разрыв страницы
   - справочник
-translation_of: Web/CSS/Paged_Media
 ---
 
 {{cssref}}

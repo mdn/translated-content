@@ -5,7 +5,6 @@ tags:
   - HTTP
   - Код ответа
   - Перенаправление
-translation_of: Web/HTTP/Status/303
 ---
 {{HTTPSidebar}}
 

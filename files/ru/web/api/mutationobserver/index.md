@@ -9,7 +9,6 @@ tags:
   - NeedsContent
   - NeedsUpdate
   - Reference
-translation_of: Web/API/MutationObserver
 ---
 
 {{APIRef("DOM")}}

@@ -7,7 +7,6 @@ tags:
   - Django
   - Изучать
   - Начинающим
-translation_of: Learn/Server-side/Django
 ---
 
 {{LearnSidebar}}

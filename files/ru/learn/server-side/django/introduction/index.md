@@ -8,7 +8,6 @@ tags:
   - Django
   - Начинающим
   - Серверное программирование
-translation_of: Learn/Server-side/Django/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}

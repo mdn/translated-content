@@ -8,7 +8,6 @@ tags:
   - NeedsTranslation
   - Overview
   - TopicStub
-translation_of: Web/CSS/CSS_Lists_and_Counters
 ---
 
 {{CSSRef}}

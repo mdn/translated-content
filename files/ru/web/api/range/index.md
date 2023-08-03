@@ -4,7 +4,6 @@ slug: Web/API/Range
 tags:
   - API
   - DOM
-translation_of: Web/API/Range
 ---
 
 {{ APIRef("DOM") }}

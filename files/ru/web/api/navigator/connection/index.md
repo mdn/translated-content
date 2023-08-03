@@ -1,7 +1,6 @@
 ---
 title: NetworkInformation.connection
 slug: Web/API/Navigator/connection
-translation_of: Web/API/Navigator/connection
 ---
 
 {{ apiref("Network Information API") }}

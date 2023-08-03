@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - Object
   - RangeError
-translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
 ---
 {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 

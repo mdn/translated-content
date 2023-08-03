@@ -6,7 +6,6 @@ tags:
   - Web Crypto API
   - Интерфейс
   - Справка
-translation_of: Web/API/Crypto
 ---
 
 {{APIRef("Web Crypto API")}}

@@ -12,7 +12,6 @@ tags:
   - TopicStub
   - WebExtensions
   - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 ---
 
 {{AddonSidebar}}

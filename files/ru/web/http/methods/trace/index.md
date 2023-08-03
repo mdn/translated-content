@@ -5,7 +5,6 @@ tags:
   - HTTP
   - Метод трассировки
   - Справка
-translation_of: Web/HTTP/Methods/TRACE
 ---
 
 {{HTTPSidebar}}

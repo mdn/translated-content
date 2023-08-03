@@ -4,7 +4,6 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 tags:
   - Мобильная разработка
   - доступность
-translation_of: Web/Accessibility/Mobile_accessibility_checklist
 ---
 
 Этот документ содержит краткий список требований доступности для разработчиков мобильных приложений. Он будет обновляться по мере появления новых техник и подходов.

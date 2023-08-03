@@ -8,7 +8,6 @@ tags:
   - Reference
   - Справка
   - метод
-translation_of: Web/API/CanvasRenderingContext2D/fill
 ---
 
 {{APIRef}}

@@ -7,7 +7,6 @@ tags:
   - XMLHttpRequest
   - Свойство
   - Справка
-translation_of: Web/API/XMLHttpRequest/withCredentials
 ---
 
 {{APIRef('XMLHttpRequest')}}

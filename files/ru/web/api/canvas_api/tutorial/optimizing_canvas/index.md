@@ -10,7 +10,6 @@ tags:
   - Оптимизация
   - Урок
   - Холст
-translation_of: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}

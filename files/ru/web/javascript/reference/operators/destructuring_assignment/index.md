@@ -4,7 +4,6 @@ slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 tags:
   - JavaScript
   - Оператор
-translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
 
 Синтаксис **деструктурирующего присваивания** в выражениях JavaScript позволяет извлекать данные из массивов или объектов при помощи синтаксиса, подобного объявлению массива или литералов в объекте.

@@ -7,7 +7,6 @@ tags:
   - Reference
   - String
   - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 ---
 {{JSRef}}
 

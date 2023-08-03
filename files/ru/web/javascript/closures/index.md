@@ -4,7 +4,6 @@ slug: Web/JavaScript/Closures
 tags:
   - ES5
   - Замыкание
-translation_of: Web/JavaScript/Closures
 ---
 {{jsSidebar("Intermediate")}}
 

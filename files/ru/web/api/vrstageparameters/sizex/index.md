@@ -3,7 +3,6 @@ title: VRStageParameters.sizeX
 slug: Web/API/VRStageParameters/sizeX
 tags:
   - Виртуальная реальность
-translation_of: Web/API/VRStageParameters/sizeX
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}

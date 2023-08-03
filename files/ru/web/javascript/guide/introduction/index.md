@@ -5,7 +5,6 @@ tags:
   - Beginner
   - Guide
   - JavaScript
-translation_of: Web/JavaScript/Guide/Introduction
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Values,_variables,_and_literals")}}

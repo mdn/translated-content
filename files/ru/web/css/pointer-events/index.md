@@ -4,7 +4,6 @@ slug: Web/CSS/pointer-events
 tags:
   - CSS-свойства
   - Ссылка
-translation_of: Web/CSS/pointer-events
 ---
 {{CSSRef}}
 

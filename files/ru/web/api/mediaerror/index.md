@@ -11,7 +11,6 @@ tags:
   - Ошибки
   - Справка
   - аудио
-translation_of: Web/API/MediaError
 ---
 
 {{APIRef("HTML DOM")}}

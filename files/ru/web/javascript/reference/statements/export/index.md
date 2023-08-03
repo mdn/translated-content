@@ -8,7 +8,6 @@ tags:
   - export
   - Инструкция
   - Модули
-translation_of: Web/JavaScript/Reference/Statements/export
 ---
 
 {{jsSidebar("Statements")}}

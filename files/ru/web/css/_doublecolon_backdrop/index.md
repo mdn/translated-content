@@ -12,7 +12,6 @@ tags:
   - Разметка
   - диалоговое окно
   - полноэкранный режим
-translation_of: Web/CSS/::backdrop
 ---
 
 {{CSSRef}}

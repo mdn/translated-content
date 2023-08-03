@@ -5,7 +5,6 @@ tags:
   - API
   - DOM
   - Property
-translation_of: Web/API/Document/defaultView
 ---
 
 {{ ApiRef() }}

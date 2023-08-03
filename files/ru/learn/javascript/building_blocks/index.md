@@ -20,7 +20,6 @@ tags:
   - лендинг
   - события
   - циклы
-translation_of: Learn/JavaScript/Building_blocks
 ---
 
 {{LearnSidebar}}

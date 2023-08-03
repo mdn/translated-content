@@ -1,7 +1,6 @@
 ---
 title: Жизни
 slug: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Победа", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Анимация")}}

@@ -6,7 +6,6 @@ tags:
   - Псевдо-элемент
   - Экспериментальные
   - селектор
-translation_of: Web/CSS/::grammar-error
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

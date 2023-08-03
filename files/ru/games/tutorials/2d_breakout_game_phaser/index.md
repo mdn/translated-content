@@ -10,7 +10,6 @@ tags:
   - Начинающий
   - Руководство
   - туториал
-translation_of: Games/Tutorials/2D_breakout_game_Phaser
 ---
 
 {{GamesSidebar}}{{Next("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework")}}

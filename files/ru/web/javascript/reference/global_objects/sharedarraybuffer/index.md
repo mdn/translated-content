@@ -7,7 +7,6 @@ tags:
   - Разделяемая память
   - SharedArrayBuffer
   - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 ---
 
 {{JSRef}}

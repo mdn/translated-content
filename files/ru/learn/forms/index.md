@@ -7,7 +7,6 @@ tags:
   - Начинающие
   - Руководство
   - Формы
-translation_of: Learn/Forms
 ---
 
 {{LearnSidebar}}

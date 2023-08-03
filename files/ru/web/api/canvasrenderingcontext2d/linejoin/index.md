@@ -5,7 +5,6 @@ tags:
   - API
   - Canvas
   - Property
-translation_of: Web/API/CanvasRenderingContext2D/lineJoin
 ---
 
 {{APIRef}}

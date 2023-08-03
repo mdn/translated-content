@@ -10,7 +10,6 @@ tags:
   - Для начинающих
   - Массивы
   - Статья
-translation_of: Learn/JavaScript/First_steps/Arrays
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Useful_string_methods", "Learn/JavaScript/Первые_шаги/Создатель_глупых_историй", "Learn/JavaScript/Первые_шаги")}}

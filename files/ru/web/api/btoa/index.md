@@ -1,7 +1,6 @@
 ---
 title: WindowBase64.btoa()
 slug: Web/API/btoa
-translation_of: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
 
 {{APIRef("HTML DOM")}}

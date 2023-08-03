@@ -6,7 +6,6 @@ tags:
   - Errors
   - JavaScript
   - Security
-translation_of: Web/JavaScript/Reference/Errors/Property_access_denied
 ---
 
 {{jsSidebar("Errors")}}

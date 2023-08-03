@@ -4,7 +4,6 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 tags:
   - Sidebar
   - Боковая панель
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 ---
 
 {{AddonSidebar}}

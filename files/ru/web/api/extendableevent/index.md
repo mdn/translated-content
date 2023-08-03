@@ -13,7 +13,6 @@ tags:
   - ServiceWorker
   - TopicStub
   - Workers
-translation_of: Web/API/ExtendableEvent
 ---
 
 {{APIRef("Service Workers API")}}

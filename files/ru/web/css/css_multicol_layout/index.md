@@ -7,7 +7,6 @@ tags:
   - NeedsTranslation
   - Overview
   - TopicStub
-translation_of: Web/CSS/CSS_Columns
 ---
 
 {{CSSRef}}

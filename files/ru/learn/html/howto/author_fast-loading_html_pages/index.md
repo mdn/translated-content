@@ -1,7 +1,6 @@
 ---
 title: Tips for authoring fast-loading HTML pages
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-translation_of: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 ---
 
 Эти советы основаны на общих знаниях и экспериментах.

@@ -4,7 +4,6 @@ slug: Web/API/Intersection_Observer_API
 tags:
   - Intersection Observer API
   - пересечение объектов
-translation_of: Web/API/Intersection_Observer_API
 ---
 
 {{DefaultAPISidebar("Intersection Observer API")}}

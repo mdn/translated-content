@@ -8,7 +8,6 @@ tags:
   - Method
   - Reference
   - Text Field Selection API
-translation_of: Web/API/HTMLInputElement/setSelectionRange
 ---
 
 {{APIRef("HTML DOM")}}

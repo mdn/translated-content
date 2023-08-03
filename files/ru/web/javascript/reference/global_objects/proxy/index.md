@@ -8,7 +8,6 @@ tags:
   - Reference
   - Объект
   - Прокси
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
 Объект `Proxy` позволяет создать прокси для другого объекта, может перехватывать и переопределить основные операции для данного объекта.
 

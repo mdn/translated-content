@@ -1,7 +1,6 @@
 ---
 title: CRLF
 slug: Glossary/CRLF
-translation_of: Glossary/CRLF
 ---
 
 CR и LF это [управляющие символы](https://en.wikipedia.org/wiki/Control_character) или [байт-код](https://en.wikipedia.org/wiki/Bytecode) которые можно использовать для обозначения разрыва строки в текстовых файлах.

@@ -8,7 +8,6 @@ tags:
   - Программирование
   - Руководство
   - Статья
-translation_of: Learn/Server-side/Django/skeleton_website
 ---
 
 {{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}

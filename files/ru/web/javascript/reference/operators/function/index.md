@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - Оператор
   - Функция
-translation_of: Web/JavaScript/Reference/Operators/function
 ---
 
 {{jsSidebar("Operators")}}

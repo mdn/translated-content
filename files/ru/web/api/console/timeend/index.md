@@ -7,7 +7,6 @@ tags:
   - Веб-разработка
   - Отладка
   - консоль
-translation_of: Web/API/Console/timeEnd
 ---
 
 {{APIRef("Console API")}}

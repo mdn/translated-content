@@ -8,7 +8,6 @@ tags:
   - Руководство
   - Сообщество
   - Участие
-translation_of: MDN/About
 ---
 
 {{MDNSidebar}}

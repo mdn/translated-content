@@ -9,7 +9,6 @@ tags:
   - Reference
   - Свойства
   - Ссылки
-translation_of: Web/API/CanvasRenderingContext2D/globalAlpha
 ---
 
 {{APIRef}}

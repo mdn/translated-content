@@ -8,7 +8,6 @@ tags:
   - Reference
   - Rotate
   - transform
-translation_of: Web/CSS/transform-function/rotate()
 ---
 
 {{CSSRef}}

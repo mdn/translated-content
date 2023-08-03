@@ -6,7 +6,6 @@ tags:
   - Canvas
   - Обзор
   - Справка
-translation_of: Web/API/Canvas_API
 ---
 
 {{DefaultAPISidebar("Canvas API")}}

@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - Возможности языка
   - Метка
-translation_of: Web/JavaScript/Reference/Statements/label
 browser-compat: javascript.statements.label
 ---
 

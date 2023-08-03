@@ -8,7 +8,6 @@ tags:
   - Видео
   - Медиа
   - аудио
-translation_of: Web/API/Media_Session_API
 ---
 
 {{DefaultAPISidebar("Media Session API")}}

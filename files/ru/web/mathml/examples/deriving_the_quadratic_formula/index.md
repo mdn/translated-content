@@ -9,7 +9,6 @@ tags:
   - HTML5
   - MathML
   - NeedsBeginnerUpdate
-translation_of: Web/MathML/Examples/Deriving_the_Quadratic_Formula
 ---
 
 На этой странице описывается вывод Квадратичной Формулы.

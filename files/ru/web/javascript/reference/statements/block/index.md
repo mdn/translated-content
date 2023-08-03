@@ -6,7 +6,6 @@ tags:
   - Инструкция
   - Оператор
   - справочник
-translation_of: Web/JavaScript/Reference/Statements/block
 ---
 {{jsSidebar("Statements")}}
 

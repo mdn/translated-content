@@ -5,7 +5,6 @@ tags:
   - NeedsUpdate
   - SVG
   - SVG text
-translation_of: Web/SVG/Element/text
 ---
 {{SVGRef}}
 

@@ -11,7 +11,6 @@ tags:
   - Опции
   - Функции
   - состоит
-translation_of: Learn/CSS/Building_blocks
 ---
 
 {{LearnSidebar}}

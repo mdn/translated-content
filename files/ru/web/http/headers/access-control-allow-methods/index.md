@@ -5,7 +5,6 @@ tags:
   - CORS
   - HTTP
   - Заголовки
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Methods
 ---
 
 {{HTTPSidebar}}

@@ -7,7 +7,6 @@ tags:
   - HTML DOM
   - Property
   - Reference
-translation_of: Web/API/DocumentOrShadowRoot/activeElement
 translation_of_original: Web/API/Document/activeElement
 ---
 

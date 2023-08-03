@@ -7,7 +7,6 @@ tags:
   - Element
   - Method
   - Reference
-translation_of: Web/API/Element/closest
 ---
 
 {{APIRef("DOM")}}

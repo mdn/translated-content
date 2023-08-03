@@ -10,7 +10,6 @@ tags:
   - XMLHttpRequest Status
   - result
   - status
-translation_of: Web/API/XMLHttpRequest/status
 ---
 
 {{APIRef('XMLHttpRequest')}}

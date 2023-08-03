@@ -9,7 +9,6 @@ tags:
   - Свойство
   - Событие
   - Ссылка
-translation_of: Web/API/XMLHttpRequest/onreadystatechange
 ---
 
 {{APIRef}}

@@ -6,7 +6,6 @@ tags:
   - Method
   - Number
   - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 ---
 {{JSRef("Global_Objects", "Number")}}
 

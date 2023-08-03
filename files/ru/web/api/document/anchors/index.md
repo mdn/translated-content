@@ -8,7 +8,6 @@ tags:
   - id
   - name
   - Якоря
-translation_of: Web/API/Document/anchors
 ---
 
 {{APIRef("DOM")}}

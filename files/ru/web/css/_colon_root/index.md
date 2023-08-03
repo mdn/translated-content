@@ -8,7 +8,6 @@ tags:
   - Reference
   - Web
   - Псевдоклассы
-translation_of: Web/CSS/:root
 ---
 
 {{CSSRef}}

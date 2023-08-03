@@ -7,7 +7,6 @@ tags:
   - HTML DOM
   - HTMLDialogElement
   - open
-translation_of: Web/API/HTMLDialogElement/open
 ---
 
 {{ APIRef("HTML DOM") }}

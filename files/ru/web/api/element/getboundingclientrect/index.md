@@ -12,7 +12,6 @@ tags:
   - Справка
   - Элемент
   - метод
-translation_of: Web/API/Element/getBoundingClientRect
 ---
 
 {{APIRef("DOM")}}

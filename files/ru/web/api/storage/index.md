@@ -9,7 +9,6 @@ tags:
   - Storage
   - Web Storage
   - data
-translation_of: Web/API/Storage
 ---
 
 {{APIRef("Web Storage API")}}

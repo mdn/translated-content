@@ -9,7 +9,6 @@ tags:
   - Method
   - Reference
   - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/imul
 ---
 {{JSRef("Global_Objects", "Math")}}
 

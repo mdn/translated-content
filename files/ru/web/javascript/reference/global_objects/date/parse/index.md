@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - Method
   - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 ---
 
 {{JSRef("Global_Objects", "Date")}}

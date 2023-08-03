@@ -3,7 +3,6 @@ title: ':valid'
 slug: Web/CSS/:valid
 tags:
   - Псевдо-классы
-translation_of: Web/CSS/:valid
 ---
 {{ CSSRef() }}
 

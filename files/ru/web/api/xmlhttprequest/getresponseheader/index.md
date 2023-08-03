@@ -7,7 +7,6 @@ tags:
   - XMLHttpRequest
   - getResponseHeader
   - метод
-translation_of: Web/API/XMLHttpRequest/getResponseHeader
 ---
 
 {{APIRef('XMLHttpRequest')}}

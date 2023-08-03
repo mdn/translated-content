@@ -3,7 +3,6 @@ title: VRDisplayCapabilities
 slug: Web/API/VRDisplayCapabilities
 tags:
   - Виртуальная реальность
-translation_of: Web/API/VRDisplayCapabilities
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}

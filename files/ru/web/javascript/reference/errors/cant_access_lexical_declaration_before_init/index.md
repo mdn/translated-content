@@ -5,7 +5,6 @@ tags:
   - Errors
   - JavaScript
   - ReferenceError
-translation_of: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 ---
 
 {{jsSidebar("Errors")}}

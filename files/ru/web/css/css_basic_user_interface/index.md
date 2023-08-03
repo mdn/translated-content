@@ -6,7 +6,6 @@ tags:
   - CSS Basic User Interface
   - Overview
   - Reference
-translation_of: Web/CSS/CSS_Basic_User_Interface
 ---
 
 {{CSSRef}}

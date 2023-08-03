@@ -6,7 +6,6 @@ tags:
   - загрузка
   - метаданные
   - предзагрузка
-translation_of: Web/HTML/Element/link
 ---
 {{HTMLSidebar}}
 

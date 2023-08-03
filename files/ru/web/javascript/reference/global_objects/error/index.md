@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - NeedsUpdate
   - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Error
 ---
 
 {{JSRef}}

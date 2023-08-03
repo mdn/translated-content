@@ -5,7 +5,6 @@ tags:
   - HTTP
   - Начинающий
   - Руководство
-translation_of: Web/HTTP/Redirections
 ---
 
 {{HTTPSidebar}}

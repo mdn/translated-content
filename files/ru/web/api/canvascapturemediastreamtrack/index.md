@@ -1,7 +1,6 @@
 ---
 title: CanvasCaptureMediaStreamTrack
 slug: Web/API/CanvasCaptureMediaStreamTrack
-translation_of: Web/API/CanvasCaptureMediaStreamTrack
 ---
 
 {{APIRef ("захват мультимедиа и потоки")}}

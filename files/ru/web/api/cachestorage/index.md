@@ -11,7 +11,6 @@ tags:
   - Service Workers
   - ServiceWorker
   - TopicStub
-translation_of: Web/API/CacheStorage
 ---
 
 {{APIRef("Service Workers API")}}

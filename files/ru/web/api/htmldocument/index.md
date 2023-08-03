@@ -5,7 +5,6 @@ tags:
   - API
   - HTML DOM
   - Интерфейс
-translation_of: Web/API/HTMLDocument
 ---
 
 {{ APIRef("HTML DOM") }}

@@ -6,7 +6,6 @@ tags:
   - WebAssembly
   - wasm
   - Экспортированные функции
-translation_of: WebAssembly/Exported_functions
 ---
 
 {{WebAssemblySidebar}}

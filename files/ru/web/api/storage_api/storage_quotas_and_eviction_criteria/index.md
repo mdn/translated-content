@@ -5,7 +5,6 @@ tags:
   - IndexedDB
   - данных
   - клиентская сторона
-translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}

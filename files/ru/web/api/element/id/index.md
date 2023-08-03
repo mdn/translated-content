@@ -7,7 +7,6 @@ tags:
   - Element
   - Property
   - Reference
-translation_of: Web/API/Element/id
 ---
 
 {{ ApiRef("DOM") }}Свойство **`id`** представляет идентификатор элемента, отражая глобальный атрибут **[id](/ru/docs/Web/HTML/Global_attributes/id)**.

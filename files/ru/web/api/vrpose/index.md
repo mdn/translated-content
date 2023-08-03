@@ -12,7 +12,6 @@ tags:
   - VRPose
   - Virtual Reality
   - WebVR
-translation_of: Web/API/VRPose
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}

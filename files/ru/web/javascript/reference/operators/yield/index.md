@@ -8,7 +8,6 @@ tags:
   - Итераторы
   - Оператор
   - Экспериментальный
-translation_of: Web/JavaScript/Reference/Operators/yield
 ---
 
 {{jsSidebar("Operators")}}

@@ -12,7 +12,6 @@ tags:
   - TopicStub
   - Интерфейс
   - Ссылка
-translation_of: Web/API/HTMLMediaElement
 ---
 
 {{APIRef("HTML DOM")}}

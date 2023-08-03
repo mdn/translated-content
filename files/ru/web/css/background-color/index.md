@@ -8,7 +8,6 @@ tags:
   - Графика
   - Определение
   - Раскладка
-translation_of: Web/CSS/background-color
 ---
 {{CSSRef}}
 

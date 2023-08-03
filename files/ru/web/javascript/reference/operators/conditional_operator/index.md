@@ -4,7 +4,6 @@ slug: Web/JavaScript/Reference/Operators/Conditional_operator
 tags:
   - JavaScript
   - Оператор
-translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 ---
 
 {{jsSidebar("Operators")}}

@@ -6,7 +6,6 @@ tags:
   - NeedsTranslation
   - Overview
   - TopicStub
-translation_of: Web/HTTP/Basics_of_HTTP
 ---
 
 {{HTTPSidebar}}

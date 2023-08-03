@@ -5,7 +5,6 @@ tags:
   - CSS
   - Guide
   - Web
-translation_of: Web/CSS/actual_value
 ---
 
 {{CSSRef}}

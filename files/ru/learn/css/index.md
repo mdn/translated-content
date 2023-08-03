@@ -11,7 +11,6 @@ tags:
   - Тема
   - Длина
   - Специфичность
-translation_of: Learn/CSS
 ---
 
 {{LearnSidebar}}

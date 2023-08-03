@@ -7,7 +7,6 @@ tags:
   - Property
   - Reference
   - onchange
-translation_of: Web/API/GlobalEventHandlers/onchange
 ---
 
 {{ ApiRef("HTML DOM") }}

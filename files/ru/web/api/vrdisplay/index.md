@@ -14,7 +14,6 @@ tags:
   - VRDisplay
   - Virtual Reality
   - WebVR
-translation_of: Web/API/VRDisplay
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}

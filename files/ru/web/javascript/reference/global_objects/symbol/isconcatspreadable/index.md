@@ -5,7 +5,6 @@ tags:
   - ECMScript 2015
   - JavaScript
   - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 ---
 {{JSRef}}
 

@@ -4,7 +4,6 @@ slug: Web/HTML/Global_attributes/accesskey
 tags:
   - HTML
   - Reference
-translation_of: Web/HTML/Global_attributes/accesskey
 ---
 {{HTMLSidebar("Global_attributes")}}
 

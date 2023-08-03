@@ -4,7 +4,6 @@ slug: Web/CSS/list-style-image
 tags:
   - маркер списка
   - список
-translation_of: Web/CSS/list-style-image
 ---
 {{CSSRef}}
 

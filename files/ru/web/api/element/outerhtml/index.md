@@ -7,7 +7,6 @@ tags:
   - Свойство
   - Сериализация
   - Ссылка
-translation_of: Web/API/Element/outerHTML
 ---
 
 {{APIRef("DOM")}}

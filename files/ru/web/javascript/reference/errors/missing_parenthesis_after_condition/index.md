@@ -6,7 +6,6 @@ tags:
   - Errors
   - JavaScript
   - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_condition
 ---
 
 {{jsSidebar("Errors")}}

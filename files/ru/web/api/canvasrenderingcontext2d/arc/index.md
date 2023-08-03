@@ -8,7 +8,6 @@ tags:
   - Функция
   - Холст
   - метод
-translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
 
 {{APIRef}}

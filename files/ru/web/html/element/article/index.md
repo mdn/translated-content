@@ -10,7 +10,6 @@ tags:
   - Разделы HTML
   - Справка
   - Элемент
-translation_of: Web/HTML/Element/article
 ---
 
 {{HTMLSidebar}}

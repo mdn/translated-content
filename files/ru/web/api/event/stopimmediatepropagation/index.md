@@ -11,7 +11,6 @@ tags:
   - Уровень 3
   - Экспериментальные функции
   - метод
-translation_of: Web/API/Event/stopImmediatePropagation
 ---
 
 {{APIRef("DOM")}}

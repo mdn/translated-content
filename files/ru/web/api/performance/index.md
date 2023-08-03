@@ -7,7 +7,6 @@ tags:
   - NeedsTranslation
   - Performance
   - TopicStub
-translation_of: Web/API/Performance
 ---
 
 {{APIRef("Navigation Timing")}}

@@ -1,7 +1,6 @@
 ---
 title: Сигнализированные и видео вызов
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
-translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 ---
 
 {{DefaultAPISidebar("WebRTC")}}

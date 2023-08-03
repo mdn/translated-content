@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Flexible Boxes
   - CSS-свойства
-translation_of: Web/CSS/order
 ---
 {{CSSRef}}
 

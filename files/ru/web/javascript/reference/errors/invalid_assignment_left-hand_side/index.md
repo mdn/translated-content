@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - ReferenceError
   - Ошибки
-translation_of: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
 ---
 {{jsSidebar("Errors")}}
 

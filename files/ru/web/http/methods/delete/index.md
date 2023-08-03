@@ -6,7 +6,6 @@ tags:
   - HTTP методы
   - Метод запроса
   - Справка
-translation_of: Web/HTTP/Methods/DELETE
 ---
 
 {{HTTPSidebar}}

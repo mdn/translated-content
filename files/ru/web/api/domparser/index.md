@@ -6,7 +6,6 @@ tags:
   - DOM
   - XML
   - Экспериментальное
-translation_of: Web/API/DOMParser
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}

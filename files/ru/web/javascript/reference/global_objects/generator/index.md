@@ -10,7 +10,6 @@ tags:
   - NeedsTranslation
   - Reference
   - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator
 ---
 
 {{JSRef}}

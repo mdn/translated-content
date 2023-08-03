@@ -4,7 +4,6 @@ slug: Web/JavaScript/Reference/Statements/switch
 tags:
   - JavaScript
   - Statement
-translation_of: Web/JavaScript/Reference/Statements/switch
 ---
 {{jsSidebar("Statements")}}
 

@@ -5,7 +5,6 @@ tags:
   - Errors
   - InternalError
   - JavaScript
-translation_of: Web/JavaScript/Reference/Errors/Too_much_recursion
 ---
 
 {{jsSidebar("Errors")}}

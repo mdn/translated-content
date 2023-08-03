@@ -8,7 +8,6 @@ tags:
   - Градиенты
   - Интерфейс
   - Справка
-translation_of: Web/API/CanvasGradient
 ---
 
 {{APIRef("Canvas API")}}

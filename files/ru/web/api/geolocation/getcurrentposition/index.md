@@ -1,7 +1,6 @@
 ---
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
-translation_of: Web/API/Geolocation/getCurrentPosition
 ---
 
 {{securecontext_header}}{{ APIRef("Geolocation API") }}Метод **`Geolocation.getCurrentPosition()`** используется для получения текущего местоположения устройства.

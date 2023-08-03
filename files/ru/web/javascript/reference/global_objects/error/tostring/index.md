@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - Method
   - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
 ---
 {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 

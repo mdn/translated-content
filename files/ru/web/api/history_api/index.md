@@ -6,7 +6,6 @@ tags:
   - DOM
   - HTML5
   - История
-translation_of: Web/API/History_API
 ---
 
 {{DefaultAPISidebar("History API")}}

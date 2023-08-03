@@ -7,7 +7,6 @@ tags:
   - console
   - web console
   - Отладка
-translation_of: Web/API/console/assert
 ---
 
 {{APIRef("Console API")}}{{Non-standard_Header}}

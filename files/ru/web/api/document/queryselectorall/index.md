@@ -7,7 +7,6 @@ tags:
   - Document
   - Method
   - Selectors
-translation_of: Web/API/Document/querySelectorAll
 ---
 
 {{ ApiRef("DOM") }}

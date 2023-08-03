@@ -8,7 +8,6 @@ tags:
   - Веб
   - Справка
   - лендинг
-translation_of: Web/HTML/Reference
 ---
 
 {{HTMLSidebar}}

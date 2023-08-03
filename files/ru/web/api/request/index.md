@@ -11,7 +11,6 @@ tags:
   - Reference
   - TopicStub
   - request
-translation_of: Web/API/Request
 ---
 
 {{APIRef("Fetch")}}

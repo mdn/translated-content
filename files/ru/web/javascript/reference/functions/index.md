@@ -4,7 +4,6 @@ slug: Web/JavaScript/Reference/Functions
 tags:
   - Функции
   - Функция
-translation_of: Web/JavaScript/Reference/Functions
 ---
 {{jsSidebar("Functions")}}
 

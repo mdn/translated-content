@@ -1,7 +1,6 @@
 ---
 title: Список экземпляров книг
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 ---
 
 Далее мы реализуем список всех имеющихся в библиотеке копий книги (`BookInstance`) . Эта страница должна включать название книги из `Book`, с которой связаны экземпляры `BookInstance` (linked to its detail page), а также дополнительную информацию, имеющуюся в модели `BookInstance`, включая статус, издание, и уникальный идентификатор каждой копии. Уникальное значение идентификатора копии должно быть связано со страницей детальной информации `BookInstance`.

@@ -5,7 +5,6 @@ tags:
   - SVG
   - SVG Reference
   - Руководство
-translation_of: Web/SVG/Element
 ---
 
 « [SVG](/ru/docs/Web/SVG) / [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute) »

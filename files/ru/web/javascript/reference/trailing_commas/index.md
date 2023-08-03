@@ -7,7 +7,6 @@ tags:
   - Висящая запятая
   - Запятая
   - Синтаксис
-translation_of: Web/JavaScript/Reference/Trailing_commas
 ---
 
 {{JsSidebar("More")}}

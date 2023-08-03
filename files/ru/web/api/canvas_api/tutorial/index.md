@@ -4,7 +4,6 @@ slug: Web/API/Canvas_API/Tutorial
 tags:
   - Canvas
   - Graphics
-translation_of: Web/API/Canvas_API/Tutorial
 ---
 
 [![](canvas_tut_examples.jpg)](/ru/docs/Web/API/Canvas_API){{DefaultAPISidebar("Canvas API")}}

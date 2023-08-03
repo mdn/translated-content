@@ -12,7 +12,6 @@ tags:
   - Радиокнопка
   - Справка
   - Ссылки
-translation_of: Web/HTML/Element/input/radio
 ---
 
 {{HTMLSidebar}}

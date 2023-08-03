@@ -10,7 +10,6 @@ tags:
   - Веб-консоль
   - Отладка
   - Справочник по DOM Gecko
-translation_of: Web/API/Console
 ---
 
 {{APIRef("Console API")}}

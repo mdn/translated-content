@@ -4,7 +4,6 @@ slug: Web/SVG/Element/image
 tags:
   - NeedsUpdate
   - SVG
-translation_of: Web/SVG/Element/image
 ---
 {{SVGRef}}
 

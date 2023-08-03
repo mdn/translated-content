@@ -5,7 +5,6 @@ tags:
   - API
   - DOM
   - метод
-translation_of: Web/API/Window/clearImmediate
 ---
 
 {{ Apiref() }}

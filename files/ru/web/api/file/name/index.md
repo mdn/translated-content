@@ -7,7 +7,6 @@ tags:
   - Files
   - Property
   - Reference
-translation_of: Web/API/File/name
 ---
 
 {{APIRef("File API")}}

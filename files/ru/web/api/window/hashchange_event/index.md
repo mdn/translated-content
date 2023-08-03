@@ -1,7 +1,6 @@
 ---
 title: hashchange
 slug: Web/API/Window/hashchange_event
-translation_of: Web/API/Window/hashchange_event
 ---
 
 Событие `hashchange` генерируется когда изменяется идентификатор фрагмента URL (т.е. часть URL следующая за символом #, включая сам символ #).

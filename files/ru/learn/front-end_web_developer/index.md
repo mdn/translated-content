@@ -5,7 +5,6 @@ tags:
   - Начинающий
   - Стандарты веб-разработки
   - Фронтенд
-translation_of: Learn/Front-end_web_developer
 ---
 
 {{learnsidebar}}

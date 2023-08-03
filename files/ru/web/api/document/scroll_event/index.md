@@ -9,7 +9,6 @@ tags:
   - Scroll
   - UIEvent
   - Источник
-translation_of: Web/API/Document/scroll_event
 ---
 
 {{APIRef}}

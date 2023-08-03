@@ -6,7 +6,6 @@ tags:
   - CSS-свойство
   - Скругление
   - Углы
-translation_of: Web/CSS/border-radius
 ---
 
 {{CSSRef}}

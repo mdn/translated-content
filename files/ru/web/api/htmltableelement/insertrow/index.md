@@ -7,7 +7,6 @@ tags:
   - HTMLTableElement
   - Method
   - Reference
-translation_of: Web/API/HTMLTableElement/insertRow
 ---
 
 {{APIRef("HTML DOM")}}

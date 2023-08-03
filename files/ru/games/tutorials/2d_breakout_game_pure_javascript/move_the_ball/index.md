@@ -9,7 +9,6 @@ tags:
   - Цикл
   - передвижение
   - пишем игру на javascript
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создание_Canvas_и_рисование_на_нём", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}

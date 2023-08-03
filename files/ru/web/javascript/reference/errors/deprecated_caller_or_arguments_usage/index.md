@@ -6,7 +6,6 @@ tags:
   - Ошибки
   - Строгий режим
   - предупреждение
-translation_of: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
 ---
 
 {{jsSidebar("Errors")}}

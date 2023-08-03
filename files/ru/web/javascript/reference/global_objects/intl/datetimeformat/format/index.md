@@ -7,7 +7,6 @@ tags:
   - JavaScript
   - Property
   - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
 ---
 
 {{JSRef("Global_Objects", "DateTimeFormat", "Intl,Collator,NumberFormat")}}

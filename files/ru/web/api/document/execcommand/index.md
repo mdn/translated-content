@@ -6,7 +6,6 @@ tags:
   - DOM
   - editor
   - wysiwyg
-translation_of: Web/API/Document/execCommand
 ---
 
 {{ApiRef("DOM")}}

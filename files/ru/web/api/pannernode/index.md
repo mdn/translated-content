@@ -1,7 +1,6 @@
 ---
 title: PannerNode
 slug: Web/API/PannerNode
-translation_of: Web/API/PannerNode
 ---
 
 {{ APIRef("Web Audio API") }}

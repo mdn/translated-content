@@ -7,7 +7,6 @@ tags:
   - DOM Element Mehods
   - Method
   - WebAPI
-translation_of: Web/API/Node/appendChild
 ---
 
 ## Аннотация

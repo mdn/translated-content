@@ -8,7 +8,6 @@ tags:
   - Reference
   - Selection
 browser-compat: api.Selection
-translation_of: Web/API/Selection
 ---
 
 {{ApiRef("Selection API")}}

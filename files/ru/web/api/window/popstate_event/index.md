@@ -1,7 +1,6 @@
 ---
 title: popstate
 slug: Web/API/Window/popstate_event
-translation_of: Web/API/Window/popstate_event
 ---
 
 Событие `popstate` вызывается, когда изменяется активная запись истории. Если изменение записи истории было вызвано методом [`history.pushState()`](<https://developer.mozilla.org/ru/docs/Web/API/History_API#The_pushState()_method>) или [`history.replaceState()`](<https://developer.mozilla.org/ru/docs/Web/API/History_API#The_replaceState()_method>), то состояние события `popstate` будет содержать `state` копии входящего в историю объекта

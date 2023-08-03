@@ -9,7 +9,6 @@ tags:
   - Reference
   - String
   - Unicode
-translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
 ---
 {{JSRef("Global_Objects", "String")}}
 

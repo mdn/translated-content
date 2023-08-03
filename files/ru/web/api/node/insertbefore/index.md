@@ -7,7 +7,6 @@ tags:
   - DOM Element Methods
   - Method
   - WebAPI
-translation_of: Web/API/Node/insertBefore
 ---
 
 {{APIRef("DOM")}}

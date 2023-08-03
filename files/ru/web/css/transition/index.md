@@ -7,7 +7,6 @@ tags:
   - Reference
   - transition
   - Свойство CSS
-translation_of: Web/CSS/transition
 ---
 {{CSSRef}}
 

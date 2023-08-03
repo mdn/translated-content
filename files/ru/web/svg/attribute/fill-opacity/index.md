@@ -4,7 +4,6 @@ slug: Web/SVG/Attribute/fill-opacity
 tags:
   - SVG
   - SVG атрибуты
-translation_of: Web/SVG/Attribute/fill-opacity
 ---
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)

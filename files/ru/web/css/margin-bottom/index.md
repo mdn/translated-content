@@ -4,7 +4,6 @@ slug: Web/CSS/margin-bottom
 tags:
   - CSS
   - CSS-свойство
-translation_of: Web/CSS/margin-bottom
 ---
 
 {{CSSRef}}

@@ -9,7 +9,6 @@ tags:
   - NeedsTranslation
   - Reference
   - TopicStub
-translation_of: Web/API/HTMLCanvasElement
 ---
 
 {{APIRef("Canvas API")}}

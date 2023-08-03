@@ -7,7 +7,6 @@ tags:
   - Выравнивание
   - Значение
   - Текст
-translation_of: Web/API/CanvasRenderingContext2D/textAlign
 ---
 
 {{APIRef}}

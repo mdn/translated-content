@@ -7,7 +7,6 @@ tags:
   - Web Storage
   - localStorage
   - Справка
-translation_of: Web/API/Storage/setItem
 ---
 
 {{APIRef("Web Storage API")}}

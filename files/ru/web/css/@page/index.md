@@ -5,7 +5,6 @@ tags:
   - Вёрстка
   - печать
   - страница
-translation_of: Web/CSS/@page
 ---
 {{CSSRef}}
 

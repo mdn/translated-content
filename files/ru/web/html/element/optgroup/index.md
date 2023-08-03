@@ -7,7 +7,6 @@ tags:
   - Описание
   - Формы
   - Элемент
-translation_of: Web/HTML/Element/optgroup
 ---
 
 **HTML-элемент `<optgroup>` **позволяет группировать опции, находящиеся внутри элемента {{HTMLElement("select")}}.

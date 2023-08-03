@@ -8,7 +8,6 @@ tags:
   - Reference
   - display
   - Справка
-translation_of: Web/CSS/display
 ---
 
 {{CSSRef}}

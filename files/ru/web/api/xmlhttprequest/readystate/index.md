@@ -6,7 +6,6 @@ tags:
   - XMLHttpRequest
   - Свойство
   - Ссылка
-translation_of: Web/API/XMLHttpRequest/readyState
 ---
 
 {{APIRef('XMLHttpRequest')}}

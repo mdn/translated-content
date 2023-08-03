@@ -5,7 +5,6 @@ tags:
   - CSS
   - Guide
   - Reference
-translation_of: Web/CSS/Shorthand_properties
 ---
 {{cssref}}
 

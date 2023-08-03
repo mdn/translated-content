@@ -13,7 +13,6 @@ tags:
   - upper
   - Обучение
   - Регистр
-translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 ---
 
 {{LearnSidebar}}

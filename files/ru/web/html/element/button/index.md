@@ -7,7 +7,6 @@ tags:
   - Web
   - Средний уровень
   - Формы
-translation_of: Web/HTML/Element/button
 ---
 
 ## Описание

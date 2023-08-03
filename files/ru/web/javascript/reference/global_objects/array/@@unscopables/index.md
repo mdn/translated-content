@@ -7,7 +7,6 @@ tags:
   - Property
   - Prototype
   - Массив
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 ---
 
 {{JSRef}}

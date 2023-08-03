@@ -5,7 +5,6 @@ tags:
   - NeedsCompatTable
   - SVG
   - SVG атрибуты
-translation_of: Web/SVG/Attribute/attributeName
 ---
 
 {{SVGRef}}

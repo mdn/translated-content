@@ -1,7 +1,6 @@
 ---
 title: If-Match
 slug: Web/HTTP/Headers/If-Match
-translation_of: Web/HTTP/Headers/If-Match
 ---
 
 {{HTTPSidebar}}

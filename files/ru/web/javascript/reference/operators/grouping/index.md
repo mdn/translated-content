@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - Оператор
   - Основные выражения
-translation_of: Web/JavaScript/Reference/Operators/Grouping
 ---
 
 {{jsSidebar("Operators")}}

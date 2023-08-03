@@ -13,7 +13,6 @@ tags:
   - Сообщения
   - консоль
   - причины
-translation_of: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 ---
 {{HTTPSidebar}}
 

@@ -4,7 +4,6 @@ slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 tags:
   - Accessibility
   - DOM
-translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 ---
 
 Как сделать для JavaScript-виджетов на основе span или div возможность навигации с клавиатуры.

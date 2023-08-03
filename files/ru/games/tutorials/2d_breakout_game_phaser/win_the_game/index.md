@@ -1,7 +1,6 @@
 ---
 title: Победа
 slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Очки", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Жизни")}}

@@ -11,7 +11,6 @@ tags:
   - Руководство
   - С нуля
   - Тема
-translation_of: Learn/HTML
 ---
 
 {{LearnSidebar}}

@@ -8,7 +8,6 @@ tags:
   - Reference
   - Window
   - screenX
-translation_of: Web/API/Window/screenX
 ---
 
 {{APIRef}}

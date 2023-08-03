@@ -3,7 +3,6 @@ title: inset
 slug: Web/CSS/inset
 tags:
   - смещение элемента
-translation_of: Web/CSS/inset
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

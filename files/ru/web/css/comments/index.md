@@ -8,7 +8,6 @@ tags:
   - Комментарии
   - Новичку
   - Руководство
-translation_of: Web/CSS/Comments
 ---
 {{CSSRef}}
 

@@ -5,7 +5,6 @@ tags:
   - API
   - CryptoKeyPair
   - Web Crypto API
-translation_of: Web/API/CryptoKeyPair
 ---
 
 {{APIRef("Web Crypto API")}}

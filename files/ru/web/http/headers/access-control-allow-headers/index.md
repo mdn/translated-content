@@ -6,7 +6,6 @@ tags:
   - HTTP
   - Заголовок
   - Справка
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
 
 {{HTTPSidebar}}

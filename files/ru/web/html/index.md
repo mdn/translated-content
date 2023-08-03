@@ -11,7 +11,6 @@ tags:
   - Справка
   - гипертекст
   - лендинг
-translation_of: Web/HTML
 ---
 {{HTMLSidebar}}
 

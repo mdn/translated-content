@@ -6,7 +6,6 @@ tags:
   - HTML DOM
   - Свойство
   - Ссылка
-translation_of: Web/API/GlobalEventHandlers/onerror
 ---
 
 {{ ApiRef("HTML DOM") }}

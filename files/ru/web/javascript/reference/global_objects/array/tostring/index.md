@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - Method
   - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/toString
 ---
 {{JSRef("Global_Objects", "Array")}}
 

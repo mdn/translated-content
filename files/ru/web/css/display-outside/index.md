@@ -8,7 +8,6 @@ tags:
   - Reference
   - display-outside
   - Справка
-translation_of: Web/CSS/display-outside
 ---
 
 {{CSSRef}}

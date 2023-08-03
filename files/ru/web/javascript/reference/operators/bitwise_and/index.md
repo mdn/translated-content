@@ -6,7 +6,6 @@ tags:
   - Оператор
   - По
   - Побитовые операторы
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_AND
 ---
 
 {{jsSidebar("Operators")}}

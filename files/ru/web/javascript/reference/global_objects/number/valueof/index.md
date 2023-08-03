@@ -7,7 +7,6 @@ tags:
   - Number
   - Prototype
   - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 ---
 {{JSRef("Global_Objects", "Number")}}
 

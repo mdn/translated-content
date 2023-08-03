@@ -4,7 +4,6 @@ slug: Learn/JavaScript/Objects/Object_building_practice
 tags:
   - Guide
   - JavaScript
-translation_of: Learn/JavaScript/Objects/Object_building_practice
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}

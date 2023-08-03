@@ -9,7 +9,6 @@ tags:
   - Read-only
   - Reference
   - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/origin
 ---
 
 {{APIRef("URL API")}}

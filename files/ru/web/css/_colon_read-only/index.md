@@ -3,7 +3,6 @@ title: ':read-only'
 slug: Web/CSS/:read-only
 tags:
   - Псевдо-элементы
-translation_of: Web/CSS/:read-only
 ---
 {{ CSSRef() }}
 

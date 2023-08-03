@@ -11,7 +11,6 @@ tags:
   - Reference
   - initial
   - Справка
-translation_of: Web/CSS/initial
 ---
 {{CSSRef}}
 

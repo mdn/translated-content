@@ -11,7 +11,6 @@ tags:
   - Reference
   - Référence(2)
   - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 ---
 {{JSRef}}
 

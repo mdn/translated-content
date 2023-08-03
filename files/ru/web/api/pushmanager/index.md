@@ -12,7 +12,6 @@ tags:
   - Référence(2)
   - Service Workers
   - TopicStub
-translation_of: Web/API/PushManager
 ---
 
 {{SeeCompatTable}}{{ApiRef("Push API")}}

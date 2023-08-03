@@ -9,7 +9,6 @@ tags:
   - TopicStub
   - Web Workers
   - Workers
-translation_of: Web/API/Web_Workers_API
 ---
 
 {{DefaultAPISidebar("Web Workers API")}}

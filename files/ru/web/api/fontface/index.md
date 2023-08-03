@@ -4,7 +4,6 @@ slug: Web/API/FontFace
 tags:
   - Интерфейс
   - Шрифты
-translation_of: Web/API/FontFace
 ---
 
 {{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}

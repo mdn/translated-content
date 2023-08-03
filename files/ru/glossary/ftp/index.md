@@ -6,7 +6,6 @@ tags:
   - FTP
   - Glossary
   - протокол
-translation_of: Glossary/FTP
 ---
 
 **FTP** (англ. file transfer protocol — протокол передачи файлов) — стандартный сетевой {{glossary("protocol", "протокол")}} для передачи файлов с одного {{glossary("host", "хост")}}а на другой через Интернет по протоколу {{Glossary("TCP")}}.

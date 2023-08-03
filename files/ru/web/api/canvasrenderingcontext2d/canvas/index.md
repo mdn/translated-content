@@ -7,7 +7,6 @@ tags:
   - CanvasRenderingContext2D
   - Property
   - Reference
-translation_of: Web/API/CanvasRenderingContext2D/canvas
 ---
 
 {{APIRef}}

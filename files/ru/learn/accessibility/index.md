@@ -7,7 +7,6 @@ tags:
   - JavaScript
   - Удобство
   - доступность
-translation_of: Learn/Accessibility
 ---
 
 {{LearnSidebar}}

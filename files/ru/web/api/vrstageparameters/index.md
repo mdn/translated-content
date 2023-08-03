@@ -12,7 +12,6 @@ tags:
   - VRStageParameters
   - Virtual Reality
   - WebVR
-translation_of: Web/API/VRStageParameters
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}

@@ -13,7 +13,6 @@ tags:
   - TopicStub
   - console
   - troubleshooting
-translation_of: Web/HTTP/CORS/Errors
 ---
 
 {{HTTPSidebar}}

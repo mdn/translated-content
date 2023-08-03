@@ -6,7 +6,6 @@ tags:
   - Веб
   - Заголовки
   - Справка
-translation_of: Web/HTTP/Headers/Connection
 ---
 
 {{HTTPSidebar}}

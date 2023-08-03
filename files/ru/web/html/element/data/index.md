@@ -8,7 +8,6 @@ tags:
   - Web
   - Веб
   - Элемент
-translation_of: Web/HTML/Element/data
 ---
 
 {{HTMLSidebar}}

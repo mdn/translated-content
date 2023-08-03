@@ -6,7 +6,6 @@ tags:
   - Reference
   - Заголовок
   - Основной заголовок
-translation_of: Web/HTTP/Headers/Date
 ---
 {{HTTPSidebar}}
 

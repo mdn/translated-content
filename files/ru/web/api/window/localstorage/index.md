@@ -11,7 +11,6 @@ tags:
   - Window
   - WindowLocalStorage
   - localStorage
-translation_of: Web/API/Window/localStorage
 ---
 
 {{APIRef("Web Storage API")}}

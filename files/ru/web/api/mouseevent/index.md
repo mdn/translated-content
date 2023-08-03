@@ -8,7 +8,6 @@ tags:
   - Interface
   - NeedsTranslation
   - Reference
-translation_of: Web/API/MouseEvent
 ---
 
 {{APIRef("DOM Events")}}

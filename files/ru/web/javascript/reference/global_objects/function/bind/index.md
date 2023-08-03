@@ -9,7 +9,6 @@ tags:
   - Method
   - Reference
   - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 ---
 
 {{JSRef("Global_Objects", "Function")}}

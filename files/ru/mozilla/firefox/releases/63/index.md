@@ -6,7 +6,6 @@ tags:
   - Firefox
   - Mozilla
   - Выпуск
-translation_of: Mozilla/Firefox/Releases/63
 ---
 
 {{FirefoxSidebar}}

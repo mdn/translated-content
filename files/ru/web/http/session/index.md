@@ -3,7 +3,6 @@ title: HTTP сессия
 slug: Web/HTTP/Session
 tags:
   - HTTP
-translation_of: Web/HTTP/Session
 ---
 {{HTTPSidebar}}
 

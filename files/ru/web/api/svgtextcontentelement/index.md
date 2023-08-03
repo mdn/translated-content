@@ -4,7 +4,6 @@ slug: Web/API/SVGTextContentElement
 tags:
   - SVG
   - Справка
-translation_of: Web/API/SVGTextContentElement
 ---
 
 {{APIRef("SVG")}}

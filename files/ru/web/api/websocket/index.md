@@ -5,7 +5,6 @@ tags:
   - API
   - WebSocket
   - WebSockets
-translation_of: Web/API/WebSocket
 ---
 
 Объект **WebSocket** предоставляет API для создания и управления [веб-сокет](/ru/docs/Web/API/WebSockets_API)-подключения к серверу, а также для отправки и получения данных в этом подключении.

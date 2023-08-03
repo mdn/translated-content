@@ -1,7 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.atob()
 slug: Web/API/atob
-translation_of: Web/API/WindowOrWorkerGlobalScope/atob
 ---
 
 {{APIRef("HTML DOM")}}

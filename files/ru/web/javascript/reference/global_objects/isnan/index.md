@@ -7,7 +7,6 @@ tags:
   - Method
   - NeedsUpdate
   - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 ---
 {{jsSidebar("Objects")}}
 

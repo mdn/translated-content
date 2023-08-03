@@ -6,7 +6,6 @@ tags:
   - Макет
   - Псевдоклассы
   - Руководство
-translation_of: Web/CSS/:checked
 ---
 {{CSSRef}}
 

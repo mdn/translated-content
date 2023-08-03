@@ -7,7 +7,6 @@ tags:
   - JavaScript
   - Reference
   - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
 {{JSRef()}}
 

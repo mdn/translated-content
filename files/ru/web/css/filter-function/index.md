@@ -3,7 +3,6 @@ title: <filter-function>
 slug: Web/CSS/filter-function
 tags:
   - фильтры
-translation_of: Web/CSS/filter-function
 ---
 
 {{cssref}}

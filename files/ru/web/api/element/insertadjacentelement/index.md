@@ -9,7 +9,6 @@ tags:
   - Method
   - Reference
   - insertAdjacentElement
-translation_of: Web/API/Element/insertAdjacentElement
 ---
 
 {{APIRef("DOM")}}

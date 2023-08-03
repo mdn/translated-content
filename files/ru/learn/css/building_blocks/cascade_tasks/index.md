@@ -4,7 +4,6 @@ slug: Learn/CSS/Building_blocks/Cascade_tasks
 tags:
   - CSS
   - Начинающий
-translation_of: Learn/CSS/Building_blocks/Cascade_tasks
 ---
 
 {{LearnSidebar}}

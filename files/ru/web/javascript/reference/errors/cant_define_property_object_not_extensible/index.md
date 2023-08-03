@@ -7,7 +7,6 @@ tags:
   - JavaScript
   - TypeError
   - Исключение
-translation_of: Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
 ---
 
 {{jsSidebar("Errors")}}

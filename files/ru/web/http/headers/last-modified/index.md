@@ -6,7 +6,6 @@ tags:
   - HTTP Header
   - Reference
   - Response Header
-translation_of: Web/HTTP/Headers/Last-Modified
 ---
 {{HTTPSidebar}}
 

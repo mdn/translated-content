@@ -5,7 +5,6 @@ tags:
   - Firefox
   - NeedsTranslation
   - TopicStub
-translation_of: Mozilla/Firefox/Releases
 ---
 
 {{FirefoxSidebar}}

@@ -5,7 +5,6 @@ tags:
   - API
   - File API
   - Files
-translation_of: Web/API/FileList
 ---
 
 {{APIRef("File API")}}

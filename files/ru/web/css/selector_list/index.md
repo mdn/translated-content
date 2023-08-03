@@ -4,7 +4,6 @@ slug: Web/CSS/Selector_list
 tags:
   - Вёрстка
   - список селекторов
-translation_of: Web/CSS/Selector_list
 ---
 
 {{CSSRef}}

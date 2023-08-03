@@ -5,7 +5,6 @@ tags:
   - Ориентация экрана
   - Положение экрана
   - Руководство
-translation_of: Web/API/CSS_Object_Model/Managing_screen_orientation
 ---
 
 {{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}

@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - Method
   - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 ---
 {{JSRef("Global_Objects", "Boolean")}}
 

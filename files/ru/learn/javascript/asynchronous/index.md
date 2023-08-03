@@ -17,7 +17,6 @@ tags:
   - setTimeout
   - Асинхронность
   - асинхронное программирование
-translation_of: Learn/JavaScript/Asynchronous
 ---
 
 {{LearnSidebar}}

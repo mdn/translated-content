@@ -7,7 +7,6 @@ tags:
   - KeyboardEvent
   - Property
   - Read-only
-translation_of: Web/API/KeyboardEvent/key
 ---
 
 {{APIRef("События DOM")}}

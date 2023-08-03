@@ -9,7 +9,6 @@ tags:
   - Расширения
   - Справка
   - данные
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 ---
 
 {{AddonSidebar()}}

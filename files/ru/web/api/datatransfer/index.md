@@ -3,7 +3,6 @@ title: DataTransfer
 slug: Web/API/DataTransfer
 tags:
   - API
-translation_of: Web/API/DataTransfer
 ---
 
 {{APIRef("HTML DOM")}}

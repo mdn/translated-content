@@ -1,7 +1,6 @@
 ---
 title: Firefox 53 для разработчиков
 slug: Mozilla/Firefox/Releases/53
-translation_of: Mozilla/Firefox/Releases/53
 ---
 
 {{FirefoxSidebar}}

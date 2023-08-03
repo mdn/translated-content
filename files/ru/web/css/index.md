@@ -13,7 +13,6 @@ tags:
   - Дизайн
   - Справка
   - Стиль
-translation_of: Web/CSS
 ---
 
 {{CSSRef}}

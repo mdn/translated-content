@@ -8,7 +8,6 @@ tags:
   - Gecko DOM Reference
   - Property
   - Reference
-translation_of: Web/API/Event/eventPhase
 ---
 
 {{ ApiRef("DOM") }}

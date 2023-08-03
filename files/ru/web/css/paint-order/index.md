@@ -7,7 +7,6 @@ tags:
   - SVG
   - Web
   - recipe:css-property
-translation_of: Web/CSS/paint-order
 browser-compat: css.properties.paint-order
 ---
 

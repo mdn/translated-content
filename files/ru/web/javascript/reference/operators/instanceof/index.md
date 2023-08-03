@@ -8,7 +8,6 @@ tags:
   - Объект
   - Оператор
   - прототип
-translation_of: Web/JavaScript/Reference/Operators/instanceof
 ---
 
 {{jsSidebar("Operators")}}

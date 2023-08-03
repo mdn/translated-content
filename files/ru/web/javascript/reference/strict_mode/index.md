@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - Strict Mode
   - Строгий режим
-translation_of: Web/JavaScript/Reference/Strict_mode
 ---
 
 {{JsSidebar("More")}}

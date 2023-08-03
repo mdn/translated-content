@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - async
   - Асинхронность
-translation_of: Web/JavaScript/Reference/Statements/for-await...of
 ---
 
 {{jsSidebar("Statements")}}

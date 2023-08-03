@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - Method
   - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
 ---
 {{JSRef("Global_Objects", "Date")}}
 

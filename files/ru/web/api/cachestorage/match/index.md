@@ -9,7 +9,6 @@ tags:
   - ServiceWorker
   - match
   - Экспериментальная функция
-translation_of: Web/API/CacheStorage/match
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}

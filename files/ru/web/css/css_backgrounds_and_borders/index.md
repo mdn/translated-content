@@ -8,7 +8,6 @@ tags:
   - NeedsTranslation
   - Overview
   - TopicStub
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders
 translation_of_original: Web/CSS/CSS_Background_and_Borders
 ---
 

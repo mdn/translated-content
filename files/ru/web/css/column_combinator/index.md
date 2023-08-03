@@ -4,7 +4,6 @@ slug: Web/CSS/Column_combinator
 tags:
   - Вёрстка
   - Селекторы
-translation_of: Web/CSS/Column_combinator
 ---
 
 {{CSSRef("Selectors")}}{{SeeCompatTable}}

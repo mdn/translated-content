@@ -8,7 +8,6 @@ tags:
   - Intersection Observer
   - Intersection Observer API
   - Гайды
-translation_of: Web/API/Intersection_Observer_API/Timing_element_visibility
 ---
 
 {{DefaultAPISidebar("Intersection Observer API")}}

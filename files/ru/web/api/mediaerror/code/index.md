@@ -12,7 +12,6 @@ tags:
   - Свойство
   - Справка
   - аудио
-translation_of: Web/API/MediaError/code
 ---
 
 {{APIRef("HTML DOM")}}

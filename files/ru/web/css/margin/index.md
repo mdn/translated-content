@@ -6,7 +6,6 @@ tags:
   - CSS Property
   - Reference
   - справочник
-translation_of: Web/CSS/margin
 translation_of_original: Web/CSS/margin-new
 ---
 

@@ -6,7 +6,6 @@ tags:
   - Dialog
   - HTMLDialogElement
   - Interface
-translation_of: Web/API/HTMLDialogElement
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}

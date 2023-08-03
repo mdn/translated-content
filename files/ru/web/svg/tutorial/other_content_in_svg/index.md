@@ -4,7 +4,6 @@ slug: Web/SVG/Tutorial/Other_content_in_SVG
 tags:
   - SVG
   - SVG:Руководство
-translation_of: Web/SVG/Tutorial/Other_content_in_SVG
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
 

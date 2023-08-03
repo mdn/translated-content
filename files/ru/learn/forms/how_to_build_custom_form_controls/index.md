@@ -8,7 +8,6 @@ tags:
   - Продвинутый
   - Руководство
   - Формы
-translation_of: Learn/Forms/How_to_build_custom_form_controls
 ---
 
 {{LearnSidebar}}

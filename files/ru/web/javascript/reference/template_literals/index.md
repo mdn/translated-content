@@ -7,7 +7,6 @@ tags:
   - Строки
   - Шаблонные строки
   - Экспериментальный
-translation_of: Web/JavaScript/Reference/Template_literals
 ---
 
 {{JsSidebar("More")}}

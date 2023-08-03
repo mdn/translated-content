@@ -1,7 +1,6 @@
 ---
 title: Range.getBoundingClientRect
 slug: Web/API/Range/getBoundingClientRect
-translation_of: Web/API/Range/getBoundingClientRect
 ---
 
 {{ ApiRef("Range") }}{{SeeCompatTable}}

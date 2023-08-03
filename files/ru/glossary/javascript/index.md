@@ -5,7 +5,6 @@ tags:
   - Glossary
   - JavaScript
   - Глоссарий
-translation_of: Glossary/JavaScript
 ---
 
 JavaScript (JS) это язык программирования, который в основном используется для создания динамических скриптов на веб-страницах, но он так же часто применяется на стороне {{Glossary("Server", "сервера")}}, используя пакеты, такие как [Node.JS](http://nodejs.org/).

@@ -13,7 +13,6 @@ tags:
   - Шаблон
   - Веб
   - Веб-компоненты
-translation_of: Web/HTML/Element/template
 browser-compat: html.elements.template
 ---
 

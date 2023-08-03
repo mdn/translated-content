@@ -6,7 +6,6 @@ tags:
   - SVG Графика
   - Ссылка
   - Элемент
-translation_of: Web/SVG/Element/use
 ---
 
 {{SVGRef}}

@@ -12,7 +12,6 @@ tags:
   - Экспериментальное
   - псевдокласс
   - селектор
-translation_of: Web/CSS/:any-link
 ---
 
 {{CSSRef}} {{SeeCompatTable}}

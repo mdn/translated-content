@@ -6,7 +6,6 @@ tags:
   - JavaScript
   - Промис
   - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
 
 {{JSRef}}

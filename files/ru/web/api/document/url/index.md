@@ -5,7 +5,6 @@ tags:
   - API
   - Document
   - Property
-translation_of: Web/API/Document/URL
 ---
 
 {{APIRef("DOM")}}
