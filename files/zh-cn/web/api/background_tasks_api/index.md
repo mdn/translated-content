@@ -86,7 +86,7 @@ window.cancelIdleCallback =
 为了了解我们的目标，看一下 HTML。这里创建了一个盒子（`id="container"`）来显示操作进度（因为毕竟我们没法知道解码“量子丝极谱发射”会用多长时间），还创建了一个次要的盒子（`id="logBox"`）来展示文本输出。
 
 ```html
-<p>使用 <code>requestIdleCallback()</code> 方法的后台任务协作调度演示 。</p>
+<p>使用 <code>requestIdleCallback()</code> 方法的后台任务协作调度演示。</p>
 
 <div id="container">
   <div class="label">解码量子丝极谱发射中...</div>
