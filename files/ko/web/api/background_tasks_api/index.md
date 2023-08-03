@@ -86,8 +86,7 @@ Background Tasks API 는 단 하나의 새 인터페이스를 추가합니다:
 ```html
 <p>
   Demonstration of using
-  <a
-    href="https://developer.mozilla.org/ko/docs/Web/API/Background_Tasks_API">
+  <a href="https://developer.mozilla.org/ko/docs/Web/API/Background_Tasks_API">
     cooperatively scheduled background tasks</a
   >
   using the <code>requestIdleCallback()</code>
