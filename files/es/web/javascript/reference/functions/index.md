@@ -627,9 +627,9 @@ La siguiente función devuelve una cadena que contiene la representación format
 // Esta función devuelve una cadena rellenada con ceros a la izquierda
 
 function padZeros(num, totalLen) {
-  var numStr = num.toString(); // Inicializa un valor de retorno como cadena
-  var numZeros = totalLen - numStr.length; // Calcula el no. de ceros
-  for (var i = 1; i <= numZeros; i++) {
+  let numStr = num.toString(); // Inicializa un valor de retorno como cadena
+  let numZeros = totalLen - numStr.length; // Calcula el no. de ceros
+  for (let i = 1; i <= numZeros; i++) {
     numStr = "0" + numStr;
   }
   return numStr;
