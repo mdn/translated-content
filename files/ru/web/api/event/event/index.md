@@ -31,7 +31,7 @@ translation_of: Web/API/Event/Event
 ```js
 //  создать событие "look", событие всплывающее и не может быть отменено
 
-var evt = new Event("look", {"bubbles":true, "cancelable":false});
+var evt = new Event("look", { bubbles: true, cancelable: false });
 document.dispatchEvent(evt);
 
 // событие может быть инициализировано на любом элементе, а не только на документе
@@ -40,11 +40,9 @@ myDiv.dispatchEvent(evt);
 
 ## Спецификации
 
-| Спецификация                                                             | Статус                           | Комментарий         |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#interface-event','Event()')}} | {{Spec2('DOM WHATWG')}} | Initial definition. |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
