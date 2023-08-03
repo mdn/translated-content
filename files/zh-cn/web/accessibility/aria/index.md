@@ -77,7 +77,7 @@ function updateProgress(percentComplete) {
 
 > **备注：** {{HTMLElement('progress')}} 元素不允许 `min` 属性，最小值永远为 0。
 
-> HTML 地标元素（{{HTMLElement("main")}}、{{HTMLElement("header")}}、{{HTMLElement("nav")}} 等）具有内置的 ARIA 角色，因此有无需复制它们。
+> **备注：** HTML 地标元素（{{HTMLElement("main")}}、{{HTMLElement("header")}}、{{HTMLElement("nav")}} 等）具有内置的 ARIA 角色，因此有无需复制它们。
 
 ## 支持
 
