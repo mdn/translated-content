@@ -1,7 +1,6 @@
 ---
 title: Contenu
 slug: Learn/CSS/Howto/Generated_content
-translation_of: Learn/CSS/Howto/Generated_content
 ---
 
 {{LearnSidebar}}

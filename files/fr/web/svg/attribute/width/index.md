@@ -1,7 +1,6 @@
 ---
 title: width
 slug: Web/SVG/Attribute/width
-translation_of: Web/SVG/Attribute/width
 ---
 
 {{SVGRef}}

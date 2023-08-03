@@ -3,7 +3,6 @@ title: >-
   SyntaxError: a declaration in the head of a for-of loop can't have an
   initializer
 slug: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
-translation_of: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
 ---
 
 {{jsSidebar("Errors")}}

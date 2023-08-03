@@ -1,7 +1,6 @@
 ---
 title: Document.mozSetImageElement()
 slug: Web/API/Document/mozSetImageElement
-translation_of: Web/API/Document/mozSetImageElement
 ---
 
 {{ ApiRef("DOM") }}{{ non-standard_header() }}

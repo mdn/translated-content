@@ -1,7 +1,6 @@
 ---
 title: tabs.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onRemoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onRemoved
 ---
 
 {{AddonSidebar()}}

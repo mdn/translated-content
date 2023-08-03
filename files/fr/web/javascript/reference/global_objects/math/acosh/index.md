@@ -1,7 +1,6 @@
 ---
 title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/acosh
 ---
 
 {{JSRef}}

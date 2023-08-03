@@ -1,7 +1,6 @@
 ---
 title: PerformanceServerTiming.description
 slug: Web/API/PerformanceServerTiming/description
-translation_of: Web/API/PerformanceServerTiming/description
 ---
 
 {{APIRef("Resource Timing API")}}

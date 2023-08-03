@@ -1,7 +1,6 @@
 ---
 title: "<var> : l'élément de variable"
 slug: Web/HTML/Element/var
-translation_of: Web/HTML/Element/var
 ---
 
 {{HTMLSidebar}}

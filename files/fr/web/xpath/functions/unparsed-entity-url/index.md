@@ -1,7 +1,6 @@
 ---
 title: unparsed-entity-url
 slug: Web/XPath/Functions/unparsed-entity-url
-translation_of: Web/XPath/Functions/unparsed-entity-url
 ---
 
 {{ XsltRef() }}

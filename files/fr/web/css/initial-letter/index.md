@@ -1,7 +1,6 @@
 ---
 title: initial-letter
 slug: Web/CSS/initial-letter
-translation_of: Web/CSS/initial-letter
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

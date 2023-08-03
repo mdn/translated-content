@@ -1,7 +1,6 @@
 ---
 title: Constructeur Int8Array()
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array/Int8Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Int8Array/Int8Array
 ---
 
 {{JSRef}}

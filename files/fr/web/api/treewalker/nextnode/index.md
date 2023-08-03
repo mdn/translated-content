@@ -1,7 +1,6 @@
 ---
 title: TreeWalker.nextNode()
 slug: Web/API/TreeWalker/nextNode
-translation_of: Web/API/TreeWalker/nextNode
 ---
 
 {{ APIRef("DOM") }}

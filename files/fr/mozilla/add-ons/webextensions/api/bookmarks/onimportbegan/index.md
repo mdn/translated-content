@@ -1,7 +1,6 @@
 ---
 title: bookmarks.onImportBegan
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportBegan
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportBegan
 ---
 
 {{AddonSidebar()}}

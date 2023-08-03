@@ -1,7 +1,6 @@
 ---
 title: omnibox.onInputStarted
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputStarted
-translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputStarted
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: Introduction à la mise en page en CSS
 slug: Learn/CSS/CSS_layout/Introduction
-translation_of: Learn/CSS/CSS_layout/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Apprendre/CSS/CSS_layout/Normal_Flow", "Apprendre/CSS/CSS_layout")}}

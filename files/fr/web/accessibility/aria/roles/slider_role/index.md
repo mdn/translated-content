@@ -1,7 +1,6 @@
 ---
 title: Utiliser le rôle slider
 slug: Web/Accessibility/ARIA/Roles/slider_role
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 ---
 
 ### Description

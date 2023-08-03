@@ -1,7 +1,6 @@
 ---
 title: lang
 slug: Web/HTML/Global_attributes/lang
-translation_of: Web/HTML/Global_attributes/lang
 ---
 
 {{HTMLSidebar("Global_attributes")}}

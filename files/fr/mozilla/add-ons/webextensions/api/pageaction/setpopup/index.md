@@ -1,7 +1,6 @@
 ---
 title: pageAction.setPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/setPopup
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/setPopup
 ---
 
 {{AddonSidebar()}}

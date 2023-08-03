@@ -1,7 +1,6 @@
 ---
 title: Location
 slug: Web/API/Location
-translation_of: Web/API/Location
 ---
 
 {{APIRef("HTML DOM")}}

@@ -1,7 +1,6 @@
 ---
 title: browsingData.settings()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/settings
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/settings
 ---
 
 {{AddonSidebar()}}

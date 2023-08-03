@@ -1,7 +1,6 @@
 ---
 title: Notification.silent
 slug: Web/API/Notification/silent
-translation_of: Web/API/Notification/silent
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

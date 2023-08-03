@@ -1,7 +1,6 @@
 ---
 title: Constructeur Symbol()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
 ---
 
 {{JSRef}}

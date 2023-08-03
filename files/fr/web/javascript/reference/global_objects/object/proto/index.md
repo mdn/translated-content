@@ -1,7 +1,6 @@
 ---
 title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 ---
 
 {{JSRef}}{{Deprecated_header}}
