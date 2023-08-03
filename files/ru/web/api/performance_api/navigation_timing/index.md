@@ -8,7 +8,6 @@ tags:
   - Performance
   - Производительность
 translation_of: Web/API/Navigation_timing_API
-original_slug: Web/API/Navigation_timing_API
 ---
 
 {{DefaultAPISidebar("Navigation Timing")}}

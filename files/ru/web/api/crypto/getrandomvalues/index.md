@@ -7,7 +7,6 @@ tags:
   - Справка
   - метод
 translation_of: Web/API/Crypto/getRandomValues
-original_slug: Web/API/RandomSource/getRandomValues
 ---
 
 {{APIRef("Web Crypto API")}}

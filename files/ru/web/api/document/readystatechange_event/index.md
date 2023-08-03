@@ -4,7 +4,6 @@ slug: Web/API/Document/readystatechange_event
 tags:
   - события
 translation_of: Web/API/Document/readystatechange_event
-original_slug: Web/Events/readystatechange
 ---
 
 {{ApiRef}}

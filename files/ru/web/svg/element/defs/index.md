@@ -7,7 +7,6 @@ tags:
   - Контейнер SVG
   - Элемент
 translation_of: Web/SVG/Element/defs
-original_slug: Web/SVG/Элемент/defs
 ---
 
 {{SVGRef}}

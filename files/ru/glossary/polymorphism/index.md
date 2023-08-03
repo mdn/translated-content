@@ -5,7 +5,6 @@ tags:
   - CodingScripting
   - Glossary
 translation_of: Glossary/Polymorphism
-original_slug: Глоссарий/Polymorphism
 ---
 
 **Полиморфизм** - это представление одного интерфейса для разных типов данных.

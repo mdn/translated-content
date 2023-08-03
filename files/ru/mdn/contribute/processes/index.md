@@ -6,7 +6,6 @@ tags:
   - MDN Meta
   - Процессы
 translation_of: MDN/Contribute/Processes
-original_slug: MDN/Contribute/Процессы
 ---
 
 {{MDNSidebar}}

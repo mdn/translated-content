@@ -5,7 +5,6 @@ tags:
   - JavaScript
   - Оператор
 translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
-original_slug: Web/JavaScript/Reference/Operators/Условный_оператор
 ---
 
 {{jsSidebar("Operators")}}

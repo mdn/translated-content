@@ -10,7 +10,6 @@ tags:
   - WebUSB API
   - onconnect
 translation_of: Web/API/USB/onconnect
-original_slug: Web/API/USB/onconnect
 ---
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}

@@ -6,7 +6,6 @@ tags:
   - MathML Reference
   - Справка по MathML
 translation_of: Web/MathML/Attribute
-original_slug: Web/MathML/Атрибут
 ---
 
 {{MathMLRef}}

@@ -5,7 +5,6 @@ tags:
   - Прагма
   - кеш
 translation_of: Web/HTTP/Headers/Pragma
-original_slug: Web/HTTP/Заголовки/Pragma
 ---
 
 {{HTTPSidebar}}

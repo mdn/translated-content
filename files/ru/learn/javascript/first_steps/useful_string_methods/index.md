@@ -14,7 +14,6 @@ tags:
   - Обучение
   - Регистр
 translation_of: Learn/JavaScript/First_steps/Useful_string_methods
-original_slug: Learn/JavaScript/Первые_шаги/Useful_string_methods
 ---
 
 {{LearnSidebar}}

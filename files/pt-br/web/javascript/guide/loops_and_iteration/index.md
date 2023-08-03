@@ -1,7 +1,6 @@
 ---
 title: Laços e iterações
 slug: Web/JavaScript/Guide/Loops_and_iteration
-original_slug: Web/JavaScript/Guide/Lacos_e_iteracoes
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}

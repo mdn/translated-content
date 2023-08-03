@@ -6,7 +6,6 @@ tags:
   - Заголовки HTTP
   - Заголовки запроса HTTP
 translation_of: Web/HTTP/Headers/Accept
-original_slug: Web/HTTP/Заголовки/Accept
 ---
 {{HTTPSidebar}}
 

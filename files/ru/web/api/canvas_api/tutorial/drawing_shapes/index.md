@@ -2,7 +2,6 @@
 title: Рисование фигур с помощью canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
-original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}

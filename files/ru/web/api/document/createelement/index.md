@@ -5,7 +5,6 @@ tags:
   - DOM
   - Gecko
 translation_of: Web/API/Document/createElement
-original_slug: DOM/document.createElement
 ---
 
 {{ ApiRef() }}

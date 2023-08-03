@@ -2,7 +2,6 @@
 title: GlobalEventHandler.onanimationend
 slug: Web/API/Element/animationend_event
 translation_of: Web/API/GlobalEventHandlers/onanimationend
-original_slug: Web/API/GlobalEventHandlers/onanimationend
 ---
 
 {{APIRef("CSS3 Animations")}}

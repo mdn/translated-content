@@ -6,7 +6,6 @@ tags:
   - Массивы
   - Новичкам
 translation_of: Learn/JavaScript/First_steps
-original_slug: Learn/JavaScript/Первые_шаги
 ---
 
 {{LearnSidebar}}

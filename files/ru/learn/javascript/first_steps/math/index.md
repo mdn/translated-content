@@ -12,7 +12,6 @@ tags:
   - Статья
   - кодинг
 translation_of: Learn/JavaScript/First_steps/Math
-original_slug: Learn/JavaScript/Первые_шаги/Math
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Variables", "Learn/JavaScript/Первые_шаги/Строки", "Learn/JavaScript/Первые_шаги")}}

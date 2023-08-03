@@ -11,7 +11,6 @@ tags:
   - Responsive Design
   - TopicStub
 translation_of: Web/CSS/Media_Queries
-original_slug: Web/CSS/Media_Queries
 ---
 
 {{CSSRef("CSS3 Media Queries")}}

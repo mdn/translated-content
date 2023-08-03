@@ -5,7 +5,6 @@ tags:
   - NeedsUpdate
   - SVG
 translation_of: Web/SVG/Element/image
-original_slug: Web/SVG/Элемент/image
 ---
 {{SVGRef}}
 

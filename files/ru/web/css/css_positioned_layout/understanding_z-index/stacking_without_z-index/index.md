@@ -5,7 +5,6 @@ tags:
   - CSS
   - z-index
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 ---
 
 ### Наложения без Z-индекса

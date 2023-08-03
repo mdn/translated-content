@@ -8,7 +8,6 @@ tags:
   - Руководство
   - мануал
 translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
-original_slug: Web/API/Canvas_API/Tutorial/Рисование_текста
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}

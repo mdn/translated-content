@@ -7,7 +7,6 @@ tags:
   - заголовок ответа
   - ответ
 translation_of: Web/HTTP/Headers/Retry-After
-original_slug: Web/HTTP/Заголовки/Retry-After
 ---
 {{HTTPSidebar}}
 

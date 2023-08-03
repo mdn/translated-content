@@ -2,7 +2,6 @@
 title: Node.localName
 slug: Web/API/Element/localName
 translation_of: Web/API/Node/localName
-original_slug: Web/API/Node/localName
 ---
 
 {{APIRef("DOM")}}

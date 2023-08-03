@@ -5,7 +5,6 @@ tags:
   - Веб-стандарты
   - Изучение
 translation_of: Learn/Getting_started_with_the_web/The_web_and_web_standards
-original_slug: Learn/Getting_started_with_the_web/Веб_и_веб_стандарты
 ---
 
 {{learnsidebar}}

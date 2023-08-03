@@ -9,7 +9,6 @@ tags:
   - Reference
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/trimStart
-original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimLeft
 ---
 {{JSRef("Global_Objects", "String")}} {{non-standard_header}}
 

@@ -7,7 +7,6 @@ tags:
   - Заголовки
   - Справка
 translation_of: Web/HTTP/Headers/Connection
-original_slug: Web/HTTP/Заголовки/Connection
 ---
 
 {{HTTPSidebar}}

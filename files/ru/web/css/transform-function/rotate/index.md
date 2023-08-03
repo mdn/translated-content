@@ -9,7 +9,6 @@ tags:
   - Rotate
   - transform
 translation_of: Web/CSS/transform-function/rotate()
-original_slug: Web/CSS/transform-function/rotate()
 ---
 
 {{CSSRef}}

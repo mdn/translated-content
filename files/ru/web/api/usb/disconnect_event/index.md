@@ -10,7 +10,6 @@ tags:
   - WebUSB API
   - ondisconnect
 translation_of: Web/API/USB/ondisconnect
-original_slug: Web/API/USB/ondisconnect
 ---
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}

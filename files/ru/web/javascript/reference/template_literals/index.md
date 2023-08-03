@@ -8,7 +8,6 @@ tags:
   - Шаблонные строки
   - Экспериментальный
 translation_of: Web/JavaScript/Reference/Template_literals
-original_slug: Web/JavaScript/Reference/template_strings
 ---
 
 {{JsSidebar("More")}}

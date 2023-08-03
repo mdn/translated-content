@@ -11,7 +11,6 @@ tags:
   - web animation
   - web animation api
 translation_of: Web/API/EffectTiming
-original_slug: Web/API/EffectTiming
 ---
 
 {{ SeeCompatTable() }}{{ APIRef("Web Animations") }}

@@ -6,7 +6,6 @@ tags:
   - запрос
   - метод
 translation_of: Web/API/WindowOrWorkerGlobalScope/fetch
-original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
 
 {{APIRef("Fetch API")}}

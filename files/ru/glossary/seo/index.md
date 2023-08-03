@@ -2,7 +2,6 @@
 title: SEO
 slug: Glossary/SEO
 translation_of: Glossary/SEO
-original_slug: Глоссарий/SEO
 ---
 
 **SEO** (Search Engine Optimization) Поисковая оптимизация - это комплекс мер по оптимизации, для поднятия сайта в рейтингах поисковых систем. Её ещё называют "Повышением поискового рейтинга"

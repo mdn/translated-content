@@ -11,7 +11,6 @@ tags:
   - Web
   - WebRTC
 translation_of: Glossary/WebRTC
-original_slug: Глоссарий/WebRTC
 ---
 
 **WebRTC** (_Web Real-Time Communication_) — это {{Glossary("API")}}, который может использоваться в видео- и аудио-чатах, а также для обмена файлов через одноранговую сеть (P2P).

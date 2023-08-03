@@ -1,7 +1,6 @@
 ---
 title: 'MediaQueryList: change イベント'
 slug: Web/API/MediaQueryList/change_event
-original_slug: Web/API/MediaQueryList/change_event
 ---
 
 {{APIRef("CSSOM")}}

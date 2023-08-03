@@ -7,7 +7,6 @@ tags:
   - разрыв страницы
   - справочник
 translation_of: Web/CSS/Paged_Media
-original_slug: Web/CSS/Paged_Media
 ---
 
 {{cssref}}

@@ -2,7 +2,6 @@
 title: PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
 slug: >-
   Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable_static
-original_slug: Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}

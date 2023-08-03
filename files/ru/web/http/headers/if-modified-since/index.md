@@ -7,7 +7,6 @@ tags:
   - Заголовки запроса
   - Условные запросы
 translation_of: Web/HTTP/Headers/If-Modified-Since
-original_slug: Web/HTTP/Заголовки/If-Modified-Since
 ---
 
 {{HTTPSidebar}}

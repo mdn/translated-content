@@ -6,7 +6,6 @@ tags:
   - Guide
   - Tutorial
 translation_of: Web/API/Geolocation_API/Using_the_Geolocation_API
-original_slug: Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}

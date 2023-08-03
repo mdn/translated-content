@@ -6,7 +6,6 @@ tags:
   - Разграничение доступа
   - Руководство
 translation_of: Web/HTTP/Authentication
-original_slug: Web/HTTP/Аутентификация
 ---
 {{HTTPSidebar}}
 

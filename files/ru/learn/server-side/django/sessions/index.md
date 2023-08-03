@@ -13,7 +13,6 @@ tags:
   - применение сессий
   - сессии
 translation_of: Learn/Server-side/Django/Sessions
-original_slug: Learn/Server-side/Django/Сессии
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}

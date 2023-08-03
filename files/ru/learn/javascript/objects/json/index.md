@@ -6,7 +6,6 @@ tags:
   - JSON
   - JavaScript
 translation_of: Learn/JavaScript/Objects/JSON
-original_slug: Learn/JavaScript/Объекты/JSON
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}

@@ -6,7 +6,6 @@ tags:
   - начинающему
   - стоимость
 translation_of: Learn/Common_questions/How_much_does_it_cost
-original_slug: Learn/Common_questions/How_much_does_it_cost
 ---
 
 Веб-разработка обходится не так дёшево, как вам может показаться. В этой статье мы обсудим, как много вам потребуется потратить и почему.

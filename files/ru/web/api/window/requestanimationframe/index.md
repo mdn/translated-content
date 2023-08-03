@@ -4,7 +4,6 @@ slug: Web/API/window/requestAnimationFrame
 tags:
   - Анимация
 translation_of: Web/API/window/requestAnimationFrame
-original_slug: DOM/window.requestAnimationFrame
 ---
 
 {{APIRef}}

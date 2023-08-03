@@ -2,7 +2,6 @@
 title: Content-Language
 slug: Web/HTTP/Headers/Content-Language
 translation_of: Web/HTTP/Headers/Content-Language
-original_slug: Web/HTTP/Заголовки/Content-Language
 ---
 
 {{HTTPSidebar}}

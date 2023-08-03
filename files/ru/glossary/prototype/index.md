@@ -4,7 +4,6 @@ slug: Glossary/Prototype
 tags:
   - прототип
 translation_of: Glossary/Prototype
-original_slug: Глоссарий/Прототип
 ---
 
 Прототип — модель, отображающая внешний вид и поведение приложения или продукта в начале цикла разработки.

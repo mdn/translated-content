@@ -14,7 +14,6 @@ tags:
   - Скрытие
   - Ненавязчивость
 translation_of: Learn/Accessibility/CSS_and_JavaScript
-original_slug: Learn/Доступность/CSS_and_JavaScript
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}

@@ -9,7 +9,6 @@ tags:
   - MDN Project
   - Новые участники
 translation_of: MDN/Contribute/Getting_started
-original_slug: MDN/Contribute/Getting_started
 ---
 
 {{MDNSidebar}}

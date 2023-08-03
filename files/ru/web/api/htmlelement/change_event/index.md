@@ -8,7 +8,6 @@ tags:
   - Reference
   - onchange
 translation_of: Web/API/GlobalEventHandlers/onchange
-original_slug: Web/API/GlobalEventHandlers/onchange
 ---
 
 {{ ApiRef("HTML DOM") }}

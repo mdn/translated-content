@@ -10,7 +10,6 @@ tags:
   - HTML
   - Learn
   - Web
-original_slug: Learn/Forms/Your_first_form/Example
 ---
 
 This is the example code for the article [Your first HTML form](/ru/docs/Learn/Forms/Your_first_form).

@@ -5,7 +5,6 @@ tags:
   - HTTP
   - Заголовки
 translation_of: Web/HTTP/Headers
-original_slug: Web/HTTP/Заголовки
 ---
 
 {{ HTTPSidebar }}

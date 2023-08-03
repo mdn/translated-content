@@ -7,7 +7,6 @@ tags:
   - Заголовок
   - Основной заголовок
 translation_of: Web/HTTP/Headers/Date
-original_slug: Web/HTTP/Заголовки/Date
 ---
 {{HTTPSidebar}}
 

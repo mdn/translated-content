@@ -8,7 +8,6 @@ tags:
   - доменное имя
   - начальный уровень
 translation_of: Learn/Common_questions/What_is_a_domain_name
-original_slug: Learn/Common_questions/What_is_a_domain_name
 ---
 
 В этом материале мы обсудим доменные имена: что это такое, как они формируются и как зарегистрировать домен для себя.

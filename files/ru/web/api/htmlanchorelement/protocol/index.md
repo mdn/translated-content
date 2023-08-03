@@ -8,7 +8,6 @@ tags:
   - Property
   - URL API
 translation_of: Web/API/HTMLHyperlinkElementUtils/protocol
-original_slug: Web/API/HTMLHyperlinkElementUtils/protocol
 ---
 
 {{ApiRef("URL API")}}

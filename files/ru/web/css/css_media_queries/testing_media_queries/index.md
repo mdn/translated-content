@@ -5,7 +5,6 @@ tags:
   - Выражения
   - медиавыражения
 translation_of: Web/CSS/Media_Queries/Testing_media_queries
-original_slug: Web/CSS/Media_Queries/Testing_media_queries
 ---
 
 {{cssref}}

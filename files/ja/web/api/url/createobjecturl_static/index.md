@@ -1,7 +1,6 @@
 ---
 title: "URL: createObjectURL() 静的メソッド"
 slug: Web/API/URL/createObjectURL_static
-original_slug: Web/API/URL/createObjectURL
 short-title: createObjectURL()
 l10n:
   sourceCommit: a0f6bf6f7d148f368f6965255058df1ed1f43839

@@ -8,7 +8,6 @@ tags:
   - Property
   - Reference
 translation_of: Web/API/ParentNode/childElementCount
-original_slug: Web/API/ParentNode/childElementCount
 ---
 
 {{ APIRef("DOM") }}

@@ -1,7 +1,6 @@
 ---
 title: "Tutorial e exemplo: Teclado de Sintetizador Simples"
 slug: Web/API/Web_Audio_API/Simple_synth
-original_slug: Web/API/API_Web_Audio/Sintetizador_simples
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}

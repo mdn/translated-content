@@ -4,7 +4,6 @@ slug: Web/SVG/Element/line
 tags:
   - SVG
 translation_of: Web/SVG/Element/line
-original_slug: Web/SVG/Элемент/line
 ---
 {{SVGRef}}
 

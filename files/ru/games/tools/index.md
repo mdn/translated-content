@@ -2,7 +2,6 @@
 title: Инструменты для разработки игр
 slug: Games/Tools
 translation_of: Games/Tools
-original_slug: Games/Инструменты
 ---
 
 {{GamesSidebar}}

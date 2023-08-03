@@ -2,7 +2,6 @@
 title: WebRTC подключение
 slug: Web/API/WebRTC_API/Connectivity
 translation_of: Web/API/WebRTC_API/Connectivity
-original_slug: Web/API/WebRTC_API/связь
 ---
 
 {{DefaultAPISidebar("WebRTC")}}

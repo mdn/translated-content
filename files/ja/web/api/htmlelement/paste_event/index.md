@@ -1,7 +1,6 @@
 ---
 title: "HTMLElement: paste イベント"
 slug: Web/API/HTMLElement/paste_event
-original_slug: Web/API/HTMLElement/onpaste
 ---
 
 {{ APIRef("HTML DOM") }}

@@ -10,7 +10,6 @@ tags:
   - TopicStub
 translation_of: Web/CSS/CSS_Backgrounds_and_Borders
 translation_of_original: Web/CSS/CSS_Background_and_Borders
-original_slug: Web/CSS/CSS_Background_and_Borders
 ---
 
 {{CSSRef}}

@@ -2,7 +2,6 @@
 title: Интернационализация
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
 translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
-original_slug: Mozilla/Add-ons/WebExtensions/Интернационализация
 ---
 
 {{AddonSidebar}}

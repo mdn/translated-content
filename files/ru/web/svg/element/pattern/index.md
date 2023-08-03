@@ -4,7 +4,6 @@ slug: Web/SVG/Element/pattern
 tags:
   - SVG
 translation_of: Web/SVG/Element/pattern
-original_slug: Web/SVG/Элемент/pattern
 ---
 
 {{SVGRef}}

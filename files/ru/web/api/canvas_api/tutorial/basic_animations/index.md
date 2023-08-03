@@ -9,7 +9,6 @@ tags:
   - Средний уровень
   - Холст
 translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
-original_slug: Web/API/Canvas_API/Tutorial/Основы_анимации
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}

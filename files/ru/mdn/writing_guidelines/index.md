@@ -9,7 +9,6 @@ tags:
   - Сообщество
   - Участие
 translation_of: MDN/About
-original_slug: MDN/About
 ---
 
 {{MDNSidebar}}

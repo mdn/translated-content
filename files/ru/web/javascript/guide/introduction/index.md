@@ -6,7 +6,6 @@ tags:
   - Guide
   - JavaScript
 translation_of: Web/JavaScript/Guide/Introduction
-original_slug: Web/JavaScript/Guide/Введение_в_JavaScript
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Values,_variables,_and_literals")}}

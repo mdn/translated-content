@@ -7,7 +7,6 @@ tags:
   - Ссылка
   - Элемент
 translation_of: Web/SVG/Element/use
-original_slug: Web/SVG/Элемент/use
 ---
 
 {{SVGRef}}

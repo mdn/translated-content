@@ -6,7 +6,6 @@ tags:
   - Guide
   - Веб
 translation_of: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
-original_slug: Web/CSS/box_model
 ---
 
 ## Описание

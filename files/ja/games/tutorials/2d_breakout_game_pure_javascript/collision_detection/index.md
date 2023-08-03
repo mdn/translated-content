@@ -1,7 +1,6 @@
 ---
 title: 衝突検出
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 ---
 
 {{GamesSidebar}}

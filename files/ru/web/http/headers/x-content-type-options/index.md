@@ -7,7 +7,6 @@ tags:
   - Ответы заголовка
   - Справка
 translation_of: Web/HTTP/Headers/X-Content-Type-Options
-original_slug: Web/HTTP/Заголовки/X-Content-Type-Options
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: 변형 (transformations)
 slug: Web/API/Canvas_API/Tutorial/Transformations
-original_slug: Web/HTML/Canvas/Tutorial/변형
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

@@ -6,7 +6,6 @@ tags:
   - Обзор
   - Селекторы
 translation_of: Web/CSS/CSS_Selectors
-original_slug: Web/CSS/CSS_Селекторы
 ---
 
 {{CSSRef}}

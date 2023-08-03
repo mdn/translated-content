@@ -5,7 +5,6 @@ tags:
   - Glossary
   - WebMechanics
 translation_of: Glossary/Cookie
-original_slug: Глоссарий/Cookie
 ---
 
 Cookie - это небольшой фрагмент информации, сохранённый на компьютере посетителя веб-сайтом через веб-браузер.

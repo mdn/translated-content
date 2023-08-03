@@ -8,7 +8,6 @@ tags:
   - Overview
   - TopicStub
 translation_of: Web/CSS/CSS_Columns
-original_slug: Web/CSS/CSS_Columns
 ---
 
 {{CSSRef}}

@@ -8,7 +8,6 @@ tags:
   - Logical Operator
   - Operator
   - Reference
-original_slug: Web/JavaScript/Reference/Operators/Logical_nullish_assignment
 browser-compat: javascript.operators.logical_nullish_assignment
 ---
 

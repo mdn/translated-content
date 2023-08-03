@@ -9,7 +9,6 @@ tags:
   - Свойство
   - Экспериментальный
 translation_of: Web/API/Document/origin
-original_slug: Web/API/Document/origin
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
