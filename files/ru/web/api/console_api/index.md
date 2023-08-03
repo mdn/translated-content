@@ -29,21 +29,21 @@ Console API изначально было собственным API с разл
 ## Примеры
 
 ```js
-let myString = 'Hello world';
+let myString = "Hello world";
 
 // Вывод "Hello world" в консоль
-console.log(myString)
+console.log(myString);
 ```
 
 Смотрите больше примеров на странице [Console](/ru/docs/Web/API/Console#Usage).
 
 ## Спецификации
 
-{{Specifications("api.console")}}
+{{Specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat("api.console")}}
+{{Compat}}
 
 ## Смотрите также
 

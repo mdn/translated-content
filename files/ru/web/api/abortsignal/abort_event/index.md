@@ -37,8 +37,8 @@ translation_of: Web/API/AbortSignal/abort_event
 var controller = new AbortController();
 var signal = controller.signal;
 
-signal.onabort = function() {
-  console.log('Request aborted');
+signal.onabort = function () {
+  console.log("Request aborted");
 };
 ```
 

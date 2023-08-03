@@ -23,14 +23,14 @@ translation_of: Web/API/Window/hashchange_event
 
 ## Свойства
 
-| Property                              | Type                                 | Description                                           |
-| ------------------------------------- | ------------------------------------ | ----------------------------------------------------- |
+| Property                        | Type                       | Description                                           |
+| ------------------------------- | -------------------------- | ----------------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The browsing context (`window`).                      |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                    |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.            |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.              |
-| `oldURL` {{readonlyInline}}     | {{jsxref("String")}}         | The previous URL from which the window was navigated. |
-| newURL {{readonlyInline}}       | {{jsxref("String")}}         |                                                       |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                    |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.            |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.              |
+| `oldURL` {{readonlyInline}}     | {{jsxref("String")}}       | The previous URL from which the window was navigated. |
+| newURL {{readonlyInline}}       | {{jsxref("String")}}       |                                                       |
 
 ## Совместимость с браузерами
 

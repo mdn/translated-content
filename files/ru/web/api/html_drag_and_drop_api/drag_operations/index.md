@@ -26,7 +26,9 @@ original_slug: Web/Guide/HTML/Drag_and_drop/Drag_operations
 Вот пример, который позволяет перетаскивать часть содержимого.
 
 ```html
-<p draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+<p
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
   This text <strong>may</strong> be dragged.
 </p>
 ```
@@ -42,7 +44,9 @@ original_slug: Web/Guide/HTML/Drag_and_drop/Drag_operations
 В примере, обработчик добавлен для события {{event("dragstart")}} с использованием атрибута`{{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}`.
 
 ```html
-<p draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+<p
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
   This text <strong>may</strong> be dragged.
 </p>
 ```
@@ -124,7 +128,7 @@ function dragWithCustomImage(event) {
   ctx.stroke();
 
   const dt = event.dataTransfer;
-  dt.setData('text/plain', 'Data to Drag');
+  dt.setData("text/plain", "Data to Drag");
   dt.setDragImage(canvas, 25, 25);
 }
 ```
@@ -190,7 +194,8 @@ event.dataTransfer.dropEffect = "copy";
 
 ```html
 <div ondragover="return false">
-<div ondragover="event.preventDefault()">
+  <div ondragover="event.preventDefault()"></div>
+</div>
 ```
 
 Вызывая метод {{domxref("Event.preventDefault","preventDefault()")}} во время обоих событий `{{event("dragenter")}}` и `{{event("dragover")}}` укажите, что падение разрешено в этом месте. Однако обычно вы захотите вызвать метод {{domxref("Event.preventDefault","preventDefault()")}} события только в определённых ситуациях (например, только при перетаскивании ссылки).
@@ -265,13 +270,14 @@ You can retrieve other types of data as well. If the data is a link, it should h
 ```js
 function doDrop(event) {
   const lines = event.dataTransfer.getData("text/uri-list").split("\n");
-  lines.filter(line => !line.startsWith("#"))
-    .forEach(line => {
+  lines
+    .filter((line) => !line.startsWith("#"))
+    .forEach((line) => {
       const link = document.createElement("a");
       link.href = line;
       link.textContent = line;
       event.target.appendChild(link);
-    })
+    });
   event.preventDefault();
 }
 ```
@@ -294,8 +300,14 @@ The following example returns the data associated with the best-supported format
 
 ```js
 function doDrop(event) {
-  const supportedTypes = ["application/x-moz-file", "text/uri-list", "text/plain"];
-  const types = event.dataTransfer.types.filter(type => supportedTypes.includes(type));
+  const supportedTypes = [
+    "application/x-moz-file",
+    "text/uri-list",
+    "text/plain",
+  ];
+  const types = event.dataTransfer.types.filter((type) =>
+    supportedTypes.includes(type),
+  );
   if (types.length) {
     const data = event.dataTransfer.getData(types[0]);
   }

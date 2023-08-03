@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.BackgroundFetchEvent
 ---
+
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 Интерфейс **`BackgroundFetchEvent`** {{domxref('Background Fetch API','','',' ')}} это тип события для событий фоновых запросов, отправляемых в {{domxref("ServiceWorkerGlobalScope", "глобальный контекст выполнения сервис-воркера")}}.
@@ -43,13 +44,13 @@ _Наследует свойства от своего предка, {{domxref("
 В этом примере, если пользователь кликнет по элементу, отображающему ход загрузки, то откроется новое окно. Текущий {{domxref("BackgroundFetchRegistration")}} возвращается вызовом `event.registration`.
 
 ```js
-addEventListener('backgroundfetchclick', (event) => {
+addEventListener("backgroundfetchclick", (event) => {
   const bgFetch = event.registration;
 
-  if (bgFetch.result === 'success') {
-    clients.openWindow('/latest-podcasts');
+  if (bgFetch.result === "success") {
+    clients.openWindow("/latest-podcasts");
   } else {
-    clients.openWindow('/download-progress');
+    clients.openWindow("/download-progress");
   }
 });
 ```

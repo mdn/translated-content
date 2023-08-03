@@ -27,7 +27,7 @@ var name = file.name;
 ## Пример
 
 ```html
-<input type="file" multiple onchange="processSelectedFiles(this)">
+<input type="file" multiple onchange="processSelectedFiles(this)" />
 ```
 
 ```js

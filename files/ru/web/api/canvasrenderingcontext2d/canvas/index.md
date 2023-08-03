@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/canvas
 ---
+
 {{APIRef}}
 
 Свойство **`CanvasRenderingContext2D.canvas`** является доступной только для чтения ссылкой на объект {{domxref("HTMLCanvasElement")}}, связанный с текущим контекстом. Может иметь значение {{jsxref("null")}}, если контекст не связан с элементом {{HTMLElement("canvas")}}.
@@ -32,7 +33,7 @@ ctx.canvas;
 ```js
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-ctx.canvas // HTMLCanvasElement
+ctx.canvas; // HTMLCanvasElement
 ```
 
 ## Спецификации

@@ -30,9 +30,7 @@ None.
 
 ## Specifications
 
-| Specification                                                                                            | Status                           | Comment             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('Presentation','#interface-presentation','Presentation interface')}} | {{Spec2('Presentation')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser Compatibility
 

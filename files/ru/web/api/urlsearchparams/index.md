@@ -54,7 +54,7 @@ _Отсутствует наследование методов_
 ## Пример
 
 ```js
-var paramsString = "q=URLUtils.searchParams&topic=api"
+var paramsString = "q=URLUtils.searchParams&topic=api";
 var searchParams = new URLSearchParams(paramsString);
 
 // Итерируем параметры поиска.

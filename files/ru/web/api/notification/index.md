@@ -136,7 +136,7 @@ function notifyMe() {
   }
 
   // В противном случае, запрашиваем разрешение
-  else if (Notification.permission !== 'denied') {
+  else if (Notification.permission !== "denied") {
     Notification.requestPermission(function (permission) {
       // Если пользователь разрешил, то создаём уведомление
       if (permission === "granted") {
@@ -156,7 +156,7 @@ function notifyMe() {
 В большинстве случаев вам не надо быть столь многословными. Например в нашем [демо Emogotchi](http://mdn.github.io/emogotchi/) ([исходный код](https://github.com/mdn/emogotchi)), мы просто запускаем {{domxref("Notification.requestPermission")}} несмотря ни на что, чтобы быть уверенными, что мы сможем получить разрешение на отправку уведомлений (тут используется синтаксис новейшего promise-based метода):
 
 ```js
-Notification.requestPermission().then(function(result) {
+Notification.requestPermission().then(function (result) {
   console.log(result);
 });
 ```
@@ -166,8 +166,8 @@ Notification.requestPermission().then(function(result) {
 ```js
 function spawnNotification(body, icon, title) {
   var options = {
-      body: body,
-      icon: icon
+    body: body,
+    icon: icon,
   };
   var n = new Notification(title, options);
 }
@@ -184,5 +184,3 @@ function spawnNotification(body, icon, title) {
 ## Смотрите также
 
 - [Using the Notifications API](/ru/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-
--

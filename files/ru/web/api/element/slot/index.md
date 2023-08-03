@@ -43,7 +43,7 @@ element.slot = aString
 В нашем JavaScript файле мы получаем ссылку {{htmlelement("span")}}, показанную выше, а затем регистрируем ссылку на имя соответствующего элемента `<slot>`.
 
 ```js
-let slottedSpan = document.querySelector('my-paragraph span')
+let slottedSpan = document.querySelector("my-paragraph span");
 console.log(slottedSpan.slot); // logs 'my-text'
 ```
 
@@ -51,6 +51,6 @@ console.log(slottedSpan.slot); // logs 'my-text'
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

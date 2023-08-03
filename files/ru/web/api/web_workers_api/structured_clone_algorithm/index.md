@@ -36,12 +36,12 @@ translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
 | String object                                                                   |                                                                                                    |
 | [Date](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date)                   |                                                                                                    |
 | [RegExp](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp)               | The `lastIndex` field is not preserved.                                                            |
-| {{ domxref("Blob") }}                                                    |                                                                                                    |
-| {{ domxref("File") }}                                                    |                                                                                                    |
-| {{ domxref("FileList") }}                                                |                                                                                                    |
+| {{ domxref("Blob") }}                                                           |                                                                                                    |
+| {{ domxref("File") }}                                                           |                                                                                                    |
+| {{ domxref("FileList") }}                                                       |                                                                                                    |
 | [ArrayBuffer](/ru/docs/Web/API/ArrayBuffer)                                     |                                                                                                    |
 | [ArrayBufferView](/ru/docs/Web/API/ArrayBufferView)                             | This basically means all [typed arrays](/ru/docs/Web/JavaScript/Typed_arrays) like Int32Array etc. |
-| {{ domxref("ImageData") }}                                            |                                                                                                    |
+| {{ domxref("ImageData") }}                                                      |                                                                                                    |
 | [Array](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array)                 |                                                                                                    |
 | [Object](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object)               | This just includes plain objects (e.g. from object literals)                                       |
 | [Map](/ru/docs/Web/JavaScript/Reference/Global_Objects/Map)                     |                                                                                                    |

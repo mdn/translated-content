@@ -27,15 +27,18 @@ object.host = string;
 ```js
 var anchor = document.createElement("a");
 
-anchor.href = "https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils.host"
-anchor.host == "developer.mozilla.org"
+anchor.href =
+  "https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils.host";
+anchor.host == "developer.mozilla.org";
 
-anchor.href = "https://developer.mozilla.org:443/en-US/HTMLHyperlinkElementUtils.host"
-anchor.host == "developer.mozilla.org"
+anchor.href =
+  "https://developer.mozilla.org:443/en-US/HTMLHyperlinkElementUtils.host";
+anchor.host == "developer.mozilla.org";
 // Номер порта пропущен, потому что 443 используется по умолчанию
 
-anchor.href = "https://developer.mozilla.org:4097/en-US/HTMLHyperlinkElementUtils.host"
-anchor.host == "developer.mozilla.org:4097"
+anchor.href =
+  "https://developer.mozilla.org:4097/en-US/HTMLHyperlinkElementUtils.host";
+anchor.host == "developer.mozilla.org:4097";
 ```
 
 ## Спецификации

@@ -38,7 +38,7 @@ var myMode = request.mode;
 В этой части кода создаётся новый запрос (для взятия файла картинки) через конструктор {{domxref("Request.Request()")}}, затем полученный режим сохраняется в переменной:
 
 ```js
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 var myMode = myRequest.mode; // вернёт "cors" по умолчанию
 ```
 
