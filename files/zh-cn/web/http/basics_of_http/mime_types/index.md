@@ -174,7 +174,7 @@ MIME 类型为 `image` 的文件包含图像数据。子类型指定数据所代
 
 `multipart/form-data` 可用于 [HTML 表单](/zh-CN/docs/Learn/Forms)从浏览器发送信息给服务器。
 
-作为多部分文档格式，它由边界线（一个由双横滑线 `--` 开始的字符串）划分出的不同部分组成。每一部分有自己的实体，以及自己的 HTTP 请求头，{{HTTPHeader("Content-Disposition")}} 和  {{HTTPHeader("Content-Type")}} 用于文件上传字段。
+作为多部分文档格式，它由边界线（一个由双横滑线 `--` 开始的字符串）划分出的不同部分组成。每一部分有自己的实体，以及自己的 HTTP 请求头，{{HTTPHeader("Content-Disposition")}} 和 {{HTTPHeader("Content-Type")}} 用于文件上传字段。
 
 ```http
 Content-Type: multipart/form-data; boundary=aBoundaryString
