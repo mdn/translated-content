@@ -1,5 +1,5 @@
 ---
-title: '@media'
+title: "@media"
 slug: Web/CSS/@media
 ---
 
