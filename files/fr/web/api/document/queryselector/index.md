@@ -40,6 +40,17 @@ Si le sélecteur correspond à un ID et que cet ID est utilisé de façon erron�
 
 Les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) CSS ne retourneront jamais aucun élément, comme spécifié dans l'[API des sélecteurs](http://www.w3.org/TR/selectors-api/#grammar) (en).
 
+> **Note :** Si le sélecteur correspond à un ID et que cet ID commence par un nombre (0-9), une erreur de syntaxe sera renvoyée.
+```html
+<div id="0123"></div>
+<div id="abcd"></div>
+
+<script>
+  document.querySelector("#0123"); // erreur syntaxe
+  document.querySelector("#abcd"); // correspond au second div
+</script>
+```
+
 ### Échapper des caractères spéciaux
 
 Pour faire correspondre un ID (_identifiant_) ou un sélecteur qui ne respecte pas la syntaxe CSS (en utilisant un point virgule ou un espace par exemple), vous devez échapper le caractère avec un antislash (\\). Comme l'antislash est un caractère d'échappement en JavaScript, si vous entrez une chaîne de caractères littérale, vous devez donc l'échapper _deux fois_ (une pour la chaîne de caractères JavaScript et une autre fois pour `querySelector`)&nbsp;:
