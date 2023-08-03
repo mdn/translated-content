@@ -245,7 +245,7 @@ console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (1) d"
 
 ## 参见
 
-- [在 `core-js` 中，`String.prototype.replace` 的 Polyfill 实现修复了一些问题，并支持现代行为，比如 `Symbol.replace` 的支持。](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [在 `core-js` 中，`String.prototype.replace` 的 Polyfill 实现修复了一些问题，并支持现代行为，比如 `Symbol.replace` 的支持](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.replaceAll", "String.prototype.replaceAll()")}}
 - {{jsxref("String.prototype.match", "String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}
