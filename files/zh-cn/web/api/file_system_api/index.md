@@ -1,6 +1,7 @@
 ---
 title: 文件系统访问 API
-slug: Web/API/File_System_Access_API
+slug: Web/API/File_System_API
+original_slug: Web/API/File_System_Access_API
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
