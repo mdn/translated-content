@@ -172,7 +172,7 @@ function handleCommand(event) {
 }
 ```
 
-{{EmbedLiveSample("Basic_button_example")}}
+{{EmbedLiveSample("基本按钮示例")}}
 
 ### 切换按钮示例
 
