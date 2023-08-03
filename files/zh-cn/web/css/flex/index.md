@@ -25,22 +25,22 @@ flex: auto;
 flex: initial;
 flex: none;
 
-/* 一个值，无单位数字：flex-grow
+/* 单值，无单位数字：flex-grow
 flex-basis 此时等于 0。 */
 flex: 2;
 
-/* 一个值，width/height: flex-basis */
+/* 单值，宽度/高度：flex-basis */
 flex: 10em;
 flex: 30px;
 flex: min-content;
 
-/* 两个值：flex-grow | flex-basis */
+/* 双值：flex-grow | flex-basis */
 flex: 1 30px;
 
-/* 两个值：flex-grow | flex-shrink */
+/* 双值：flex-grow | flex-shrink */
 flex: 2 2;
 
-/* 三个值：flex-grow | flex-shrink | flex-basis */
+/* 三值：flex-grow | flex-shrink | flex-basis */
 flex: 2 2 10%;
 
 /* 全局值 */
