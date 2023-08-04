@@ -10,7 +10,7 @@ HTTP の **`WWW-Authenticate`** レスポンスヘッダーは、リソースへ
 > **メモ:** このヘッダーは、[一般的な HTTP 認証の枠組み](/ja/docs/Web/HTTP/Authentication#一般的な_http_認証の枠組み)の一部であり、多くの[認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)で使用することができます。
 > それぞれの「チャレンジ」には、サーバーが対応している方式と、その方式型に定義されている追加引数が記載されています。
 
-[HTTP 認証](<(/ja/docs/Web/HTTP/Authentication)>)を使用するサーバーは、保護されたリソースへのリクエストに対して {{HTTPStatus("401")}} `Unauthorized` レスポンスを返します。このレスポンスには、1 つ以上の `WWW-Authenticate` ヘッダーと 1 つ以上の{{Glossary("challenge", "チャレンジ")}}が含まれていなければならず、リソースへのアクセスにどのような認証方式が使用できるか (およびそれぞれの方式が必要とする追加データ) を示します。
+[HTTP 認証](/ja/docs/Web/HTTP/Authentication)を使用するサーバーは、保護されたリソースへのリクエストに対して {{HTTPStatus("401")}} `Unauthorized` レスポンスを返します。このレスポンスには、1 つ以上の `WWW-Authenticate` ヘッダーと 1 つ以上の{{Glossary("challenge", "チャレンジ")}}が含まれていなければならず、リソースへのアクセスにどのような認証方式が使用できるか (およびそれぞれの方式が必要とする追加データ) を示します。
 
 1 つの `WWW-Authenticate` ヘッダーには複数のチャレンジが許され、1 つのレスポンスには複数の `WWW-Authenticate` ヘッダーが許されます。
 サーバーは、他のレスポンスメッセージに `WWW-Authenticate` ヘッダーを含めることで、資格情報を提供することがレスポンスに影響を与える可能性があることを示すこともできます。
