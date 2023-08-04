@@ -45,7 +45,7 @@ button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按�
 <div role="button"><h3 role="presentation">按钮的标题</h3></div>
 ```
 
-从辅助技术的视角来看，这个标题不存在，因为前面的代码片段在 [辅助功能树](/zh-CN/docs/Glossary/Accessibility_tree) 中相当于以下内容：
+从辅助技术的视角来看，这个标题不存在，因为前面的代码片段在[无障碍树](/zh-CN/docs/Glossary/Accessibility_tree)中相当于以下内容：
 
 ```html
 <div role="button">按钮的标题</div>
