@@ -46,9 +46,9 @@ Origin: https://developer.mozilla.org
 
 ## Especificações
 
-| Especificação                                                            | Comentários                                              |
-| ------------------------------------------------------------------------ | -------------------------------------------------------- |
-| {{RFC("6454", "Origin", "7")}}                                 | Conceito da Origem da Internet                           |
+| Especificação                                          | Comentários                                              |
+| ------------------------------------------------------ | -------------------------------------------------------- |
+| {{RFC("6454", "Origin", "7")}}                         | Conceito da Origem da Internet                           |
 | {{SpecName('Fetch','#origin-header','Origin header')}} | Substitui o cabeçalho `Origin` como definido na RFC6454. |
 
 ## Compatibilidade com navegadores
