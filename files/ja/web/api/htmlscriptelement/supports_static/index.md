@@ -1,7 +1,9 @@
 ---
-title: HTMLScriptElement.supports()
+title: "HTMLScriptElement: supports() 静的メソッド"
+short-title: supports()
 slug: Web/API/HTMLScriptElement/supports_static
-original_slug: Web/API/HTMLScriptElement/supports
+l10n:
+  sourceCommit: a0f6bf6f7d148f368f6965255058df1ed1f43839
 ---
 
 {{APIRef}}
@@ -13,7 +15,7 @@ original_slug: Web/API/HTMLScriptElement/supports
 ## 構文
 
 ```js-nolint
-supports(type)
+HTMLScriptElement.supports(type)
 ```
 
 ### 引数
@@ -21,7 +23,7 @@ supports(type)
 - `type`
 
   - : 対応しているかどうかを調べるスクリプトの種類を示す文字列リテラルです。
-    対応している値は、以下の通りで、大文字と小文字が区別されます。
+    対応している値は以下の通りで、大文字と小文字が区別されます。
 
     - `"classic"`
       - : クラシックスクリプトが対応しているかどうかをテストします。
@@ -43,26 +45,29 @@ supports(type)
 
 下記のコードは `HTMLScriptElement.supports()` が定義されているかどうかを調べ、定義されている場合はそれを使用して特定の種類のスクリプトに対応しているかどうかをテストする方法を示しています。
 
-```html hidden
-<textarea id="log" rows="5" cols="110"></textarea>
+```js
+const log = document.getElementById("log");
+
+function checkSupport(type) {
+  const result = HTMLScriptElement.supports(type) ? "true" : "false";
+  log.textContent += `HTMLScriptElement.supports('${type}') は ${result}\n`;
+}
+
+if (typeof HTMLScriptElement.supports === "undefined") {
+  log.textContent = "HTMLScriptElement.supports() メソッドに対応していません";
+} else {
+  // 様々な種類のスクリプトに対応しているかどうかをチェック
+  checkSupport("module");
+  checkSupport("classic");
+  checkSupport("importmap");
+  checkSupport("speculationrules");
+  // 他の値ならば、このメソッドは false を返す
+  checkSupport("anything else");
+}
 ```
 
-```js
-if (typeof HTMLScriptElement.supports === 'undefined') {
-  //Check if method is defined
-  console.log("HTMLScriptElement.supports() method is not supported");
-}
-else
-{
-  //Returns true for the supported values
-  console.log(`HTMLScriptElement.supports('module'): ${HTMLScriptElement.supports('module')}`);
-  console.log(`HTMLScriptElement.supports('classic'): ${HTMLScriptElement.supports('classic')}`);
-  console.log(`HTMLScriptElement.supports('importmap'): ${HTMLScriptElement.supports('importmap')}`);
-  console.log(`HTMLScriptElement.supports('speculationrules'): ${HTMLScriptElement.supports('speculationrules')}`);
-
-  //Returns false for any other values
-  console.log(`HTMLScriptElement.supports('anything else'): ${HTMLScriptElement.supports('anything else')}`);
-}
+```html hidden
+<textarea id="log" rows="6" cols="80"></textarea>
 ```
 
 {{ EmbedLiveSample('Examples') }}

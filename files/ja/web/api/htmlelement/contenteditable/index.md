@@ -1,6 +1,8 @@
 ---
-title: HTMLElement.contentEditable
+title: "HTMLElement: contentEditable プロパティ"
 slug: Web/API/HTMLElement/contentEditable
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -27,10 +29,7 @@ slug: Web/API/HTMLElement/contentEditable
 
 {{Compat}}
 
-Internet Explorer では、`contenteditable` を {{htmlelement("table")}}、{{htmlelement("col")}}、{{htmlelement("colgroup")}}、{{htmlelement("tbody")}}、{{htmlelement("td")}}、{{htmlelement("tfoot")}}、{{htmlelement("th")}}、{{htmlelement("thead")}}、{{htmlelement("tr")}} 要素に直接適用することはできません。コンテンツを編集可能な {{htmlelement("span")}} または {{htmlelement("div")}} 要素を、表の個々のセル内に配置できます。
-
 ## 関連情報
 
-- [コンテンツを編集可能にする](/ja/docs/Web/Guide/HTML/Editable_content)
 - {{domxref("HTMLElement.isContentEditable")}}
 - [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) グローバル属性

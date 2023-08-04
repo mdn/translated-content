@@ -1,14 +1,13 @@
 ---
-title: '::-webkit-slider-thumb'
+title: "::-webkit-slider-thumb"
 slug: Web/CSS/::-webkit-slider-thumb
-translation_of: Web/CSS/::-webkit-slider-thumb
 ---
 
 {{CSSRef}}{{Non-standard_header}}
 
 ## Описание
 
-`Псевдоэлемент CSS ::-webkit-slider-thumb` представляет собой ползунок, передвигаемый пользователем по линейке элемента {{HTMLElement("input")}} типа `"range"` для изменения числового значения атрибута [value](en-US/docs/Web/HTML/Element/input#attr-value).
+`Псевдоэлемент CSS ::-webkit-slider-thumb` представляет собой ползунок, передвигаемый пользователем по линейке элемента {{HTMLElement("input")}} типа `"range"` для изменения числового значения атрибута [value](/en-US/docs/Web/HTML/Element/input#attr-value).
 
 ## Спецификация
 

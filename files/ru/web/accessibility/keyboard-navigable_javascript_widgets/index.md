@@ -1,10 +1,6 @@
 ---
 title: Навигация с клавиатуры в JavaScript
 slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
-tags:
-  - Accessibility
-  - DOM
-translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 ---
 
 Как сделать для JavaScript-виджетов на основе span или div возможность навигации с клавиатуры.
@@ -35,22 +31,22 @@ _Пример 1: Простой виджет, эмулирующий работ�
 ```html
 <!-- Без атрибута tabindex, элементы <span> не смогут принимать фокус с клавиатуры -->
 <div>
-    <span role="checkbox" aria-checked="true" tabindex="0">
-        <img src="checked.gif" role="presentation" alt="" />
-        Добавить декоративную корзину с фруктами
-    </span>
+  <span role="checkbox" aria-checked="true" tabindex="0">
+    <img src="checked.gif" role="presentation" alt="" />
+    Добавить декоративную корзину с фруктами
+  </span>
 </div>
 <div>
-    <span role="checkbox" aria-checked="true" tabindex="0">
-        <img src="checked.gif" role="presentation" alt="" />
-        Добавить поющую телеграмму
-    </span>
+  <span role="checkbox" aria-checked="true" tabindex="0">
+    <img src="checked.gif" role="presentation" alt="" />
+    Добавить поющую телеграмму
+  </span>
 </div>
 <div>
-    <span role="checkbox" aria-checked="false" tabindex="0">
-        <img src="unchecked.gif" role="presentation" alt="" />
-        С предоплатой
-    </span>
+  <span role="checkbox" aria-checked="false" tabindex="0">
+    <img src="unchecked.gif" role="presentation" alt="" />
+    С предоплатой
+  </span>
 </div>
 ```
 
@@ -64,7 +60,8 @@ _Пример 2: Меню, использующее атрибут tabindex дл
 
 ```html
 <ul id="mb1" tabindex="0">
-  <li id="mb1_menu1" tabindex="-1"> Шрифт
+  <li id="mb1_menu1" tabindex="-1">
+    Шрифт
     <ul id="fontMenu" title="Шрифт" tabindex="-1">
       <li id="sans-serif" tabindex="-1">Sans-serif</li>
       <li id="serif" tabindex="-1">Serif</li>
@@ -72,14 +69,16 @@ _Пример 2: Меню, использующее атрибут tabindex дл
       <li id="fantasy" tabindex="-1">Fantasy</li>
     </ul>
   </li>
-  <li id="mb1_menu2" tabindex="-1"> Стиль
+  <li id="mb1_menu2" tabindex="-1">
+    Стиль
     <ul id="styleMenu" title="Стиль" tabindex="-1">
       <li id="italic" tabindex="-1">Наклонный</li>
       <li id="bold" tabindex="-1">Жирный</li>
       <li id="underline" tabindex="-1">Подчёркнутый</li>
     </ul>
   </li>
-  <li id="mb1_menu3" tabindex="-1"> Выравнивание
+  <li id="mb1_menu3" tabindex="-1">
+    Выравнивание
     <ul id="justificationMenu" title="Выравнивание" tabindex="-1">
       <li id="left" tabindex="-1">Слева</li>
       <li id="center" tabindex="-1">По центру</li>
@@ -171,7 +170,7 @@ If your widget handles a key event, prevent the browser from also handling it (f
 For example:
 
 ```html
-<span tabindex="-1" onkeydown="return handleKeyDown();">
+<span tabindex="-1" onkeydown="return handleKeyDown();"></span>
 ```
 
 If `handleKeyDown()` returns `false`, the event will be consumed, preventing the browser from performing any action based on the keystroke.

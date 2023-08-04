@@ -24,8 +24,8 @@ var rootElement = document.documentElement;
 var firstTier = rootElement.childNodes;
 // firstTier el la NodeList de los hijos directos del elemento raízof the direct children of the root element
 for (var i = 0; i < firstTier.length; i++) {
-   // hacer algo con cada uno de los hijos directos del elemento raíz
-   // como firstTier[i]
+  // hacer algo con cada uno de los hijos directos del elemento raíz
+  // como firstTier[i]
 }
 ```
 

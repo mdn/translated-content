@@ -1,7 +1,6 @@
 ---
 title: Object.isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isSealed
 ---
 
 {{JSRef}}

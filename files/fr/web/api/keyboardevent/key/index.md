@@ -1,28 +1,19 @@
 ---
 title: KeyboardEvent.key
 slug: Web/API/KeyboardEvent/key
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Lecture-seule
-  - Propriété
-  - Reference
-  - UI Events
-translation_of: Web/API/KeyboardEvent/key
 ---
 
 {{APIRef("DOM Events")}}
 
-La propriété en lecture seule de `key` de l'interface {{domxref("KeyboardEvent")}} retourne la valeur d’une ou plusieurs touches pressées par l’utilisateur, tout en tenant compte de l'état des touches de modification telles que la touche <kbd>Shift</kbd> (_majuscules_) ainsi que les paramètres régionaux des clavier et mise en page. Ce peut être l’une des valeurs suivantes :
+La propriété en lecture seule de `key` de l'interface {{domxref("KeyboardEvent")}} retourne la valeur d'une ou plusieurs touches pressées par l'utilisateur, tout en tenant compte de l'état des touches de modification telles que la touche <kbd>Shift</kbd> (_majuscules_) ainsi que les paramètres régionaux des clavier et mise en page. Ce peut être l'une des valeurs suivantes :
 
 #### Valeurs des touches
 
 Voir une liste complète des [valeurs de touches](/fr/docs/Web/API/KeyboardEvent/key/Key_Values)
 
-- Si la valeur a une représentation d’impression, ce sera une chaîne de caractères Unicode non vide
+- Si la valeur a une représentation d'impression, ce sera une chaîne de caractères Unicode non vide
 - Si la valeur est une touche de contrôle, une des [valeurs de touches pré-définies](#Key_values).
-- Si le `KeyboardEvent` est causé par l’appui sur une touche morte, la valeur de la touche sera "`Dead`".
+- Si le `KeyboardEvent` est causé par l'appui sur une touche morte, la valeur de la touche sera "`Dead`".
 - Certaines touches de clavier spécialisées (telles que les touches étendues de contrôle des médias sur les claviers multimédias) ne génèrent pas de codes de touches sous Windows ; à la place, ils déclenchent les événements `WM_APPCOMMAND`. Ces événements sont connectés aux événements de clavier DOM et sont répertoriés parmi les «codes de touche virtuelle» pour Windows, même s'ils ne sont pas réellement des codes de touche.
 - Si la valeur ne peut être identifiée, '`Unidentified`' sera retourné.
 
@@ -44,31 +35,31 @@ Essayez d'expérimenter en utilisant les deux cas de test suivants :
 
 1. Maintenez la touche
 
-    <kbd>shift</kbd>
+   <kbd>shift</kbd>
 
-    enfoncée, puis appuyez sur
+   enfoncée, puis appuyez sur
 
-    <kbd>2</kbd>
+   <kbd>2</kbd>
 
-    et relâchez-la. Ensuite, relâchez la touche
+   et relâchez-la. Ensuite, relâchez la touche
 
-    <kbd>shift</kbd>
+   <kbd>shift</kbd>
 
-    .
+   .
 
 2. Maintenez la touche `shift` enfoncée, puis appuyez sur
 
-    <kbd>2</kbd>
+   <kbd>2</kbd>
 
-    . Relâchez la touche
+   . Relâchez la touche
 
-    <kbd>shift</kbd>
+   <kbd>shift</kbd>
 
-    . Finalement, relâchez la touche
+   . Finalement, relâchez la touche
 
-    <kbd>2</kbd>
+   <kbd>2</kbd>
 
-    .
+   .
 
 ### HTML
 
@@ -76,7 +67,9 @@ Essayez d'expérimenter en utilisant les deux cas de test suivants :
 <div class="fx">
   <div>
     <textarea rows="5" name="test-target" id="test-target"></textarea>
-    <button type="button" name="btn-clear-console" id="btn-clear-console">clear console</button>
+    <button type="button" name="btn-clear-console" id="btn-clear-console">
+      clear console
+    </button>
   </div>
   <div class="flex">
     <div id="console-log"></div>
@@ -100,7 +93,7 @@ Essayez d'expérimenter en utilisant les deux cas de test suivants :
 }
 
 .fx > div:first-child {
-   width: 30%;
+  width: 30%;
 }
 
 .flex {
@@ -118,40 +111,39 @@ Essayez d'expérimenter en utilisant les deux cas de test suivants :
 ### JavaScript
 
 ```js
-let textarea = document.getElementById('test-target'),
-consoleLog = document.getElementById('console-log'),
-btnClearConsole = document.getElementById('btn-clear-console');
+let textarea = document.getElementById("test-target"),
+  consoleLog = document.getElementById("console-log"),
+  btnClearConsole = document.getElementById("btn-clear-console");
 
 function logMessage(message) {
-  let p = document.createElement('p');
+  let p = document.createElement("p");
   p.appendChild(document.createTextNode(message));
   consoleLog.appendChild(p);
 }
 
-textarea.addEventListener('keydown', (e) => {
+textarea.addEventListener("keydown", (e) => {
   if (!e.repeat)
     logMessage(`first keydown event. key property value is "${e.key}"`);
-  else
-    logMessage(`keydown event repeats. key property value is "${e.key}"`);
+  else logMessage(`keydown event repeats. key property value is "${e.key}"`);
 });
 
-textarea.addEventListener('beforeinput', (e) => {
+textarea.addEventListener("beforeinput", (e) => {
   logMessage(`beforeinput event. you are about inputing "${e.data}"`);
 });
 
-textarea.addEventListener('input', (e) => {
+textarea.addEventListener("input", (e) => {
   logMessage(`input event. you have just inputed "${e.data}"`);
 });
 
-textarea.addEventListener('keyup', (e) => {
+textarea.addEventListener("keyup", (e) => {
   logMessage(`keyup event. key property value is "${e.key}"`);
 });
 
-btnClearConsole.addEventListener('click', (e) => {
+btnClearConsole.addEventListener("click", (e) => {
   let child = consoleLog.firstChild;
   while (child) {
-   consoleLog.removeChild(child);
-   child = consoleLog.firstChild;
+    consoleLog.removeChild(child);
+    child = consoleLog.firstChild;
   }
 });
 ```
@@ -187,37 +179,41 @@ Lorsque nous relâchons enfin la touche `key 2`, un événement [`keyup`](/fr/do
 Cet exemple utilise {{domxref("EventTarget.addEventListener()")}} pour écouter les événements [`keydown`](/fr/docs/Web/API/Element/keydown_event) . Quand ils se produisent, la valeur de la touche est vérifiée pour voir si c'est l'une des touches qui intéressent le code, et si c'est le cas, elle est traitée (éventuellement en pilotant un vaisseau spatial, peut-être en changeant la cellule sélectionnée dans une feuille de calcul).
 
 ```js
-window.addEventListener("keydown", function (event) {
-  if (event.defaultPrevented) {
-    return; // Ne devrait rien faire si l'événement de la touche était déjà consommé.
-  }
+window.addEventListener(
+  "keydown",
+  function (event) {
+    if (event.defaultPrevented) {
+      return; // Ne devrait rien faire si l'événement de la touche était déjà consommé.
+    }
 
-  switch (event.key) {
-    case "ArrowDown":
-      // Faire quelque chose pour la touche "flèche vers le bas" pressée.
-      break;
-    case "ArrowUp":
-      // Faire quelque chose pour la touche "up arrow" pressée.
-      break;
-    case "ArrowLeft":
-      // Faire quelque chose pour la touche "left arrow" pressée.
-      break;
-    case "ArrowRight":
-      // Faire quelque chose pour la touche "right arrow" pressée.
-      break;
-    case "Enter":
-      // Faire quelque chose pour les touches "enter" ou "return" pressées.
-      break;
-    case "Escape":
-      // Faire quelque chose pour la touche "esc" pressée.
-      break;
-    default:
-      return; // Quitter lorsque cela ne gère pas l'événement touche.
-  }
+    switch (event.key) {
+      case "ArrowDown":
+        // Faire quelque chose pour la touche "flèche vers le bas" pressée.
+        break;
+      case "ArrowUp":
+        // Faire quelque chose pour la touche "up arrow" pressée.
+        break;
+      case "ArrowLeft":
+        // Faire quelque chose pour la touche "left arrow" pressée.
+        break;
+      case "ArrowRight":
+        // Faire quelque chose pour la touche "right arrow" pressée.
+        break;
+      case "Enter":
+        // Faire quelque chose pour les touches "enter" ou "return" pressées.
+        break;
+      case "Escape":
+        // Faire quelque chose pour la touche "esc" pressée.
+        break;
+      default:
+        return; // Quitter lorsque cela ne gère pas l'événement touche.
+    }
 
-  // Annuler l'action par défaut pour éviter qu'elle ne soit traitée deux fois.
-  event.preventDefault();
-}, true);
+    // Annuler l'action par défaut pour éviter qu'elle ne soit traitée deux fois.
+    event.preventDefault();
+  },
+  true,
+);
 ```
 
 ## Spécifications

@@ -1,8 +1,6 @@
 ---
 title: Détection du navigateur à l'aide de User-Agent
 slug: Web/HTTP/Browser_detection_using_the_user_agent
-translation_of: Web/HTTP/Browser_detection_using_the_user_agent
-original_slug: Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent
 ---
 
 {{HTTPSidebar}}
@@ -20,6 +18,7 @@ Lorsque vous cherchez à analyser le contenu de la chaîne de caractères de l'e
 - Êtes-vous en train d'essayer de corriger un bogue pour une version spécifique d'un navigateur&nbsp;?
   - : Recherchez ou demandez sur les forums spécialisés&nbsp;: vous n'êtes certainement pas la première ou le premier à rencontrer le problème. Des expertes, experts ou d'autres personnes avec un point de vue différent peuvent vous donner des idées pour contourner le problème. Si le bogue n'est pas fréquent, il peut être utile de vérifier s'il a déjà été signalé à l'éditeur du navigateur dans son système de suivi des bogues ([Mozilla](https://bugzilla.mozilla.org/), [WebKit](https://bugs.webkit.org/), [Opera](https://bugs.opera.com)). Les éditeurs sont attentifs aux bogues signalés, leur analyse du problème peut apporter un éclairage nouveau permettant de le contourner.
 - Cherchez-vous à vérifier l'existence d'une fonctionnalité particulière&nbsp;?
+
   - : Votre site a besoin d'une fonctionnalité qui n'est pas encore prise en charge par certains navigateurs et vous souhaitez servir à leurs utilisateurs une version plus ancienne du site, avec moins de fonctionnalités mais pour lesquelles vous avez la certitude de leur fonctionnement. Il s'agit de la pire raison pour utiliser l'en-tête `User-Agent`, car il y a de grandes chances que ces navigateurs finissent par rattraper leur retard, qu'il n'est pas pratique de tester tous les navigateurs qui existent. Dans ce cas, le mieux est d'éviter d'utiliser l'en-tête `User-Agent` et de détecter les fonctionnalités disponibles.
 
 - Voulez-vous servir un code HTML différent selon le navigateur utilisé&nbsp;?
@@ -33,22 +32,22 @@ Il existe des options possibles à considérer pour éviter d'avoir à détecter
   - : La détection de fonctionnalités consiste à ne pas détecter quel navigateur affiche la page mais plutôt à vérifier qu'une fonctionnalité est disponible. Dans le cas contraire vous pouvez utiliser une solution de contournement. Dans les rares cas où les comportements des fonctionnalités varient entre les navigateurs, on évitera d'analyser l'en-tête `User-Agent` et on implémentera plutôt un test permettant de détecter la façon dont le navigateur implémente l'API afin de déterminer comment l'utiliser dans son programme. En 2017, Chrome [a retiré la préférence masquant la prise en charge expérimentale des références arrières dans les expressions rationnelles](https://chromestatus.com/feature/5668726032564224) alors qu'aucun autre navigateur n'implémentait cette fonctionnalité. On aurait pu être tenté⋅e d'écrire ceci&nbsp;:
 
 ```js
-if (navigator.userAgent.indexOf("Chrome") !== -1){
-    // On pense que les références arrières sont prises en charge
-    // Attention à ne pas utiliser la notation littérale /(?<=[A-Z])/,
-    // car cela entraînerait une erreur de syntaxe pour les navigateurs
-    // qui n'implémentent pas cette fonctionnalité. En effet, les
-    // navigateurs analysent le script en entier, y compris les
-    // branches du code qui ne sont jamais utilisées.
-    var camelCaseExpression = new RegExp("(?<=[A-Z])");
-    var splitUpString = function(str) {
-        return (""+str).split(camelCaseExpression);
-    };
+if (navigator.userAgent.indexOf("Chrome") !== -1) {
+  // On pense que les références arrières sont prises en charge
+  // Attention à ne pas utiliser la notation littérale /(?<=[A-Z])/,
+  // car cela entraînerait une erreur de syntaxe pour les navigateurs
+  // qui n'implémentent pas cette fonctionnalité. En effet, les
+  // navigateurs analysent le script en entier, y compris les
+  // branches du code qui ne sont jamais utilisées.
+  var camelCaseExpression = new RegExp("(?<=[A-Z])");
+  var splitUpString = function (str) {
+    return ("" + str).split(camelCaseExpression);
+  };
 } else {
-    /* Ce code alternatif est bien moins performant mais fonctionne */
-    var splitUpString = function(str){
-        return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
-    };
+  /* Ce code alternatif est bien moins performant mais fonctionne */
+  var splitUpString = function (str) {
+    return str.replace(/[A-Z]/g, "z$1").split(/z(?=[A-Z])/g);
+  };
 }
 console.log(splitUpString("totoTruc")); // ["totoT", "ruc"]
 console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
@@ -66,20 +65,22 @@ Pour éviter ce type de problèmes, on pourra tester la présence même de la fo
 let isLookBehindSupported = false;
 
 try {
-    new RegExp("(?<=)");
-    isLookBehindSupported = true;
+  new RegExp("(?<=)");
+  isLookBehindSupported = true;
 } catch (err) {
-    // Si l'agent utilisateur ne prend pas en charge cette
-    // fonctionnalité, la tentative de création ci-avant
-    // échouera et déclenchera une erreur et 
-    // isLookBehindSupported restera à false.
+  // Si l'agent utilisateur ne prend pas en charge cette
+  // fonctionnalité, la tentative de création ci-avant
+  // échouera et déclenchera une erreur et
+  // isLookBehindSupported restera à false.
 }
 
-const splitUpString = isLookBehindSupported ? function(str) {
-    return (""+str).split(new RegExp("(?<=[A-Z])"));
-} : function(str) {
-    return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
-};
+const splitUpString = isLookBehindSupported
+  ? function (str) {
+      return ("" + str).split(new RegExp("(?<=[A-Z])"));
+    }
+  : function (str) {
+      return str.replace(/[A-Z]/g, "z$1").split(/z(?=[A-Z])/g);
+    };
 ```
 
 Comme le code précédent le montre, il y a **toujours** un moyen de tester la prise en charge d'un navigateur sans chercher à analyser la chaîne `userAgent`. Ce n'est **jamais** une bonne raison pour utiliser cette information.
@@ -97,26 +98,25 @@ Enfin, le code précédent illustre un problème critique avec le développement
 ```js
 var hasTouchScreen = false;
 if ("maxTouchPoints" in navigator) {
-    hasTouchScreen = navigator.maxTouchPoints > 0;
+  hasTouchScreen = navigator.maxTouchPoints > 0;
 } else if ("msMaxTouchPoints" in navigator) {
-    hasTouchScreen = navigator.msMaxTouchPoints > 0;
+  hasTouchScreen = navigator.msMaxTouchPoints > 0;
 } else {
-    var mQ = window.matchMedia && matchMedia("(pointer:coarse)");
-    if (mQ && mQ.media === "(pointer:coarse)") {
-        hasTouchScreen = !!mQ.matches;
-    } else if ('orientation' in window) {
-        hasTouchScreen = true; // dépréciée mais utile au cas où
-    } else {
-        // en dernier recours, on regarde userAgent
-        var UA = navigator.userAgent;
-        hasTouchScreen = (
-            /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
-            /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA)
-        );
-    }
+  var mQ = window.matchMedia && matchMedia("(pointer:coarse)");
+  if (mQ && mQ.media === "(pointer:coarse)") {
+    hasTouchScreen = !!mQ.matches;
+  } else if ("orientation" in window) {
+    hasTouchScreen = true; // dépréciée mais utile au cas où
+  } else {
+    // en dernier recours, on regarde userAgent
+    var UA = navigator.userAgent;
+    hasTouchScreen =
+      /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
+      /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA);
+  }
 }
 if (hasTouchScreen)
-    document.getElementById("boutonExemple").style.padding="1em";
+  document.getElementById("boutonExemple").style.padding = "1em";
 ```
 
 En ce qui concerne la taille de l'écran, on utilisera `window.innerWidth` et `window.addEventListener("resize", function(){ /\*refresh screen size dependent things\*/ })`. Sur ce sujet, on ne veut pas que des informations soient masquées sur les plus petits écrans. Cela sera source de frustration et forcera à utiliser la version pour ordinateur. On essaiera plutôt d'avoir moins de colonnes d'informations sur une page plus longue pour les écrans plus étroits et une page avec plus de colonnes mais plus courte sur les écrans plus larges. On peut obtenir cet effet en CSS avec [les boîtes flexibles](/fr/docs/Learn/CSS/CSS_layout/Flexbox), voire avec [le flottement](/fr/docs/Learn/CSS/CSS_layout/Floats) comme méthode alternative de recours.
@@ -132,33 +132,55 @@ Un de ces cas est l'utilisation en méthode de dernier recours pour détecter si
 Un autre cas porte sur la correction de bogues dans les navigateurs qui ne sont pas automatiquement mis à jour. Internet Explorer (sur Windows) et Webkit (sur iOS) sont deux bons exemples ici. Avant sa version 9, Internet Explorer avait de nombreux problèmes, mais il était simple de l'identifier en raison des fonctionnalités spécifiques disponibles. Webkit est utilisé dans tous les navigateurs sur iOS et on ne peut donc pas accéder à un navigateur mis à jour sur un appareil plus ancien. Certains bogues peuvent être détectés mais pas tous avec la même facilité. Dans de tels cas, il peut être bénéfique que d'utiliser l'analyse de `userAgent` pour économiser des performances. Par exemple, Webkit 6 a un bogue où, lorsque l'orientation de l'appareil change, le navigateur peut ne pas déclencher [`MediaQueryList`](/fr/docs/Web/API/MediaQueryList) alors qu'il devrait. Pour contourner ce bogue, voyez le code qui suit.
 
 ```js
-var UA=navigator.userAgent, isWebkit=/\b(iPad|iPhone|iPod)\b/.test(UA) &&
-               /WebKit/.test(UA) && !/Edge/.test(UA) && !window.MSStream;
+var UA = navigator.userAgent,
+  isWebkit =
+    /\b(iPad|iPhone|iPod)\b/.test(UA) &&
+    /WebKit/.test(UA) &&
+    !/Edge/.test(UA) &&
+    !window.MSStream;
 
-var mediaQueryUpdated = true, mqL = [];
-function whenMediaChanges(){mediaQueryUpdated = true}
+var mediaQueryUpdated = true,
+  mqL = [];
+function whenMediaChanges() {
+  mediaQueryUpdated = true;
+}
 
-var listenToMediaQuery = isWebkit ? function(mQ, f) {
-    if(/height|width/.test(mQ.media)) mqL.push([mQ, f]);
-    mQ.addListener(f), mQ.addListener(whenMediaChanges);
-} : function(){};
-var destroyMediaQuery = isWebkit ? function(mQ) {
-    for (var i=0,len=mqL.length|0; i<len; i=i+1|0)
+var listenToMediaQuery = isWebkit
+  ? function (mQ, f) {
+      if (/height|width/.test(mQ.media)) mqL.push([mQ, f]);
+      mQ.addListener(f), mQ.addListener(whenMediaChanges);
+    }
+  : function () {};
+var destroyMediaQuery = isWebkit
+  ? function (mQ) {
+      for (var i = 0, len = mqL.length | 0; i < len; i = (i + 1) | 0)
         if (mqL[i][0] === mQ) mqL.splice(i, 1);
-    mQ.removeListener(whenMediaChanges);
-} : listenToMediaQuery;
+      mQ.removeListener(whenMediaChanges);
+    }
+  : listenToMediaQuery;
 
 var orientationChanged = false;
-addEventListener("orientationchange", function(){
+addEventListener(
+  "orientationchange",
+  function () {
     orientationChanged = true;
-}, PASSIVE_LISTENER_OPTION);
+  },
+  PASSIVE_LISTENER_OPTION,
+);
 
-addEventListener("resize", setTimeout.bind(0,function(){
-    if (orientationChanged && !mediaQueryUpdated)
-        for (var i=0,len=mqL.length|0; i<len; i=i+1|0)
-            mqL[i][1]( mqL[i][0] );
-    mediaQueryUpdated = orientationChanged = false;
-},0));
+addEventListener(
+  "resize",
+  setTimeout.bind(
+    0,
+    function () {
+      if (orientationChanged && !mediaQueryUpdated)
+        for (var i = 0, len = mqL.length | 0; i < len; i = (i + 1) | 0)
+          mqL[i][1](mqL[i][0]);
+      mediaQueryUpdated = orientationChanged = false;
+    },
+    0,
+  ),
+);
 ```
 
 ## Où se trouve l'information recherchée dans le User-Agent
@@ -173,17 +195,17 @@ La plupart des navigateurs notent leur nom et version suivant le format _NomDuNa
 
 Faites aussi attention à ne pas utiliser une expression rationnelle trop simple sur le nom du navigateur, car `User-Agent` contient d'autres chaînes de caractères ne respectant pas le format clé/valeur. Par exemple, `User-Agent` pour Safari et Chrome contient une chaîne "like Gecko".
 
-| Moteur                          | Doit contenir            | Ne doit pas contenir               |
-| ------------------------------- | ----------------------- | ------------------------------ |
-| Firefox                         | `Firefox/xyz`           | `Seamonkey/xyz`                |
-| Seamonkey                       | `Seamonkey/xyz`         |                                |
-| Chrome                          | `Chrome/xyz`            | `Chromium/xyz`                 |
-| Chromium                        | `Chromium/xyz`          |                                |
-| Safari                          | `Safari/xyz`            | `Chrome/xyz` ou `Chromium/xyz` |
-| Opera 15+ (Blink)               | `OPR/xyz`               |                                |
-| Opera 12- (Presto)              | `Opera/xyz`             |                                |
-| Internet Explorer 10-           | `; MSIE xyz;`           |                                |
-| Internet Explorer 11            | `Trident/7.0; .*rv:xyz` |                                |
+| Moteur                | Doit contenir           | Ne doit pas contenir           |
+| --------------------- | ----------------------- | ------------------------------ |
+| Firefox               | `Firefox/xyz`           | `Seamonkey/xyz`                |
+| Seamonkey             | `Seamonkey/xyz`         |                                |
+| Chrome                | `Chrome/xyz`            | `Chromium/xyz`                 |
+| Chromium              | `Chromium/xyz`          |                                |
+| Safari                | `Safari/xyz`            | `Chrome/xyz` ou `Chromium/xyz` |
+| Opera 15+ (Blink)     | `OPR/xyz`               |                                |
+| Opera 12- (Presto)    | `Opera/xyz`             |                                |
+| Internet Explorer 10- | `; MSIE xyz;`           |                                |
+| Internet Explorer 11  | `Trident/7.0; .*rv:xyz` |                                |
 
 \[1] Safari fournit deux numéros de version&nbsp;: un numéro technique avec le fragment `Safari/xyz` token, et un numéro grand public avec le fragment `Version/xyz`.
 
@@ -201,14 +223,14 @@ Comme indiqué plus haut, chercher le nom du moteur de rendu est la plupart du t
 
 Il y a cinq principaux moteurs de rendu&nbsp;: Trident, Gecko, Presto, Blink et Webkit. Puisque détecter le nom du moteur de rendu est courant, d'autres noms sont ajoutés dans beaucoup d'autres chaînes `User-Agent`. Il est donc important de faire attention aux faux positifs lorsqu'on cherche à détecter le moteur de rendu.
 
-| Moteur   | Doit contenir     | Commentaire                                                                                                                                                                                  |
-| -------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Gecko    | `Gecko/xyz`       |                                                                                                                                                                                              |
-| WebKit   | `AppleWebKit/xyz` | Attention, les navigateurs WebKit ajoutent une chaîne 'like Gecko' qui peut produire des faux positifs.                                                          |
-| Presto   | `Opera/xyz`       | **Note :** Presto n'est plus utilisé pour les versions d'Opera >= 15 (voir 'Blink')                                                                                                       |
-| Trident  | `Trident/xyz`     | Internet Explorer place ce fragment dans la partie _commentaires_ de la chaîne `User-Agent`                                                                                                              |
+| Moteur   | Doit contenir     | Commentaire                                                                                                                                                                                                                                |
+| -------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Gecko    | `Gecko/xyz`       |                                                                                                                                                                                                                                            |
+| WebKit   | `AppleWebKit/xyz` | Attention, les navigateurs WebKit ajoutent une chaîne 'like Gecko' qui peut produire des faux positifs.                                                                                                                                    |
+| Presto   | `Opera/xyz`       | **Note :** Presto n'est plus utilisé pour les versions d'Opera >= 15 (voir 'Blink')                                                                                                                                                        |
+| Trident  | `Trident/xyz`     | Internet Explorer place ce fragment dans la partie _commentaires_ de la chaîne `User-Agent`                                                                                                                                                |
 | EdgeHTML | `Edge/xyz`        | La version de Edge non-basée sur Chromium indique la version du moteur après le fragment `Edge/`, mais pas la version de l'application. **Note :** EdgeHTML n'est plus utilisé pour le navigateur Edge après la version 79 (voir 'Blink'). |
-| Blink    | `Chrome/xyz`      |                                                                                                                                                                                              |
+| Blink    | `Chrome/xyz`      |                                                                                                                                                                                                                                            |
 
 ## Version du moteur de rendu
 
@@ -229,14 +251,14 @@ La raison la plus courante de détecter le User-Agent et de déterminer sur quel
 
 Le tableau suivant résume de quelle façon les principaux navigateurs indiquent qu'ils fonctionnent sur un appareil mobile&nbsp;:
 
-| Navigateur                                                             | Rule                                                                                                                                                                                                                                                | Exemple                                                                                                                                                          |
-| ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mozilla (Gecko, Firefox)                                               | `Mobile` ou `Tablet` dans le commentaire.                                                                                                                                                                                                            | `Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0`                                                                                                 |
+| Navigateur                                                             | Rule                                                                                                                                                                                                                                                         | Exemple                                                                                                                                                          |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mozilla (Gecko, Firefox)                                               | `Mobile` ou `Tablet` dans le commentaire.                                                                                                                                                                                                                    | `Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0`                                                                                                 |
 | Basé sur WebKit (Android, Safari)                                      | Fragment `Mobile Safari` [en dehors du commentaire](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/OptimizingforSafarioniPhone/OptimizingforSafarioniPhone.html#//apple_ref/doc/uid/TP40006517-SW3). | `Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30`               |
-| Basé sur Blink (Chromium, Google Chrome, Opera 15+, Edge pour Android) | Fragment `Mobile Safari` [en dehors du commentaire](https://developer.chrome.com/docs/multidevice/user-agent/).                                                                                                                                           | `Mozilla/5.0 (Linux; Android 4.4.2); Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Mobile Safari/537.36 OPR/20.0.1396.72047` |
-| Presto-based (Opera 12-)                                               | Fragment `Opera Mobi/xyz` [dans le commentaire](https://developers.whatismybrowser.com/useragents/explore/layout_engine_name/presto/).                                                                                                                                                       | `Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50`                                                            |
-| Internet Explorer                                                      | Fragment `IEMobile/xyz` dans le commentaire.                                                                                                                                                                                                                | `Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)`                                                                            |
-| Edge sur Windows 10 Mobile                                             | Fragments `Mobile/xyz` et `Edge/` en dehors du commentaire.                                                                                                                                                                                                | `Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Mobile Safari/537.36 Edge/16.16299` |
+| Basé sur Blink (Chromium, Google Chrome, Opera 15+, Edge pour Android) | Fragment `Mobile Safari` [en dehors du commentaire](https://developer.chrome.com/docs/multidevice/user-agent/).                                                                                                                                              | `Mozilla/5.0 (Linux; Android 4.4.2); Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Mobile Safari/537.36 OPR/20.0.1396.72047` |
+| Presto-based (Opera 12-)                                               | Fragment `Opera Mobi/xyz` [dans le commentaire](https://developers.whatismybrowser.com/useragents/explore/layout_engine_name/presto/).                                                                                                                       | `Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50`                                                            |
+| Internet Explorer                                                      | Fragment `IEMobile/xyz` dans le commentaire.                                                                                                                                                                                                                 | `Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)`                                                                            |
+| Edge sur Windows 10 Mobile                                             | Fragments `Mobile/xyz` et `Edge/` en dehors du commentaire.                                                                                                                                                                                                  | `Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Mobile Safari/537.36 Edge/16.16299` |
 
 En résumé, nous recommandons de chercher la chaîne `Mobi` dans la chaîne `User-Agent` pour détecter un appareil mobile.
 

@@ -1,7 +1,6 @@
 ---
 title: XRReferenceSpaceType
 slug: Web/API/XRSession/requestReferenceSpace
-original_slug: Web/API/XRReferenceSpaceType
 ---
 
 {{APIRef("WebXR Device API")}}

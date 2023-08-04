@@ -10,7 +10,11 @@ Carga un recurso en el contexto de un nuevo navegador (como una ventana) o uno q
 ## Sintaxis
 
 ```js
-var referencia_objeto_window = window.open([url],[nombre_de_la_ventana],[configuracion_ventana]);
+var referencia_objeto_window = window.open(
+  [url],
+  [nombre_de_la_ventana],
+  [configuracion_ventana],
+);
 ```
 
 ## Parámetros
@@ -34,10 +38,15 @@ Observe que las URLs no cargarán inmediatamente. Cuando `window.open()` retorna
 
 ```js
 var objeto_window_referencia;
-var configuracion_ventana = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
+var configuracion_ventana =
+  "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
 
 function abrir_Popup() {
-  objeto_window_referencia = window.open("http://www.cnn.com/", "Pagina_CNN", configuracion_ventana);
+  objeto_window_referencia = window.open(
+    "http://www.cnn.com/",
+    "Pagina_CNN",
+    configuracion_ventana,
+  );
 }
 
 // Llamamos a la función
@@ -52,7 +61,7 @@ function openRequestedPopup() {
   windowObjectReference = window.open(
     "http://www.domainname.ext/path/ImageFile.png",
     "DescriptiveWindowName",
-    "resizable,scrollbars,status"
+    "resizable,scrollbars,status",
   );
 }
 ```
@@ -115,11 +124,13 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 - toolbar
   - : If this feature is on, then the new secondary window renders the Navigation Toolbar (Back, Forward, Reload, Stop buttons). In addition to the Navigation Toolbar, Mozilla-based browsers will render the Tab Bar if it is visible, present in the parent window. (If this feature is set to _no_ all toolbars in the window will be invisible, for example extension toolbars). Mozilla and Firefox users can force new windows to always render the Navigation Toolbar by setting `dom.disable_window_open_feature.toolbar` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - location
+
   - : If this feature is on, then the new secondary window renders the Location bar in Mozilla-based browsers. MSIE 5+ and Opera 7.x renders the Address Bar. Mozilla and Firefox users can force new windows to always render the location bar by setting `dom.disable_window_open_feature.location` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js).
 
     > **Nota:** In Firefox 3, `dom.disable_window_open_feature.location` now defaults to _true_, forcing the presence of the Location Bar much like in IE7. See bug 337344 for more information.
 
     Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png), ![Opera 6+](opera6.gif)
+
 - personalbar
   - : If this feature is on, then the new secondary window renders the Personal Toolbar in Netscape 6.x, Netscape 7.x and Mozilla browser. It renders the Bookmarks Toolbar in Firefox. In addition to the Personal Toolbar, Mozilla browser will render the Site Navigation Bar if such toolbar is visible, present in the parent window. Mozilla and Firefox users can force new windows to always render the Personal Toolbar/Bookmarks toolbar by setting `dom.disable_window_open_feature.personalbar` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - directories {{deprecated_inline}}
@@ -131,7 +142,7 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 
 - attention {{NonStandardBadge}}
 
-  - : If this feature is specified, the window is able to open even if another application is already in the foreground. This feature is for Firefox OS applications only, and is currently restricted to certified applications. See [Internal (Certified) app permissions](/es/docs/Archive/B2G_OS/Firefox_OS_apps/App_permissions#internal_(certified)_app_permissions) for more information. Supported in: ![](firefox_os_logo_wordmark-75px.png)
+  - : If this feature is specified, the window is able to open even if another application is already in the foreground. This feature is for Firefox OS applications only, and is currently restricted to certified applications. See [Internal (Certified) app permissions](</es/docs/Archive/B2G_OS/Firefox_OS_apps/App_permissions#internal_(certified)_app_permissions>) for more information. Supported in: ![](firefox_os_logo_wordmark-75px.png)
 
 - dependent
   - : If on, the new window is said to be dependent of its parent window. A dependent window closes when its parent window closes. A dependent window is minimized on the Windows task bar only when its parent window is minimized. On Windows platforms, a dependent window does not show on the task bar. A dependent window also stays in front of the parent window. Dependent windows are not implemented on MacOS X, this option will be ignored. The dependent feature is currently under revision to be removed ([Error 214867 en Firefox](https://bugzil.la/214867)) In MSIE 6, the nearest equivalent to this feature is the `showModelessDialog()` method. Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
@@ -203,7 +214,7 @@ function openRequestedPopup() {
   windowObjectReference = window.open(
     "http://www.domainname.ext/path/ImgFile.png",
     "DescriptiveWindowName",
-    "width=420,height=230,resizable,scrollbars=yes,status=1"
+    "width=420,height=230,resizable,scrollbars=yes,status=1",
   );
 }
 ```
@@ -537,7 +548,7 @@ In cases where `left` and `screenX` (and/or `top` and `screenY`) have conflictin
 windowObjectReference = window.open(
   "http://news.bbc.co.uk/",
   "BBCWorldNewsWindowName",
-  "left=100,screenX=200,resizable,scrollbars,status"
+  "left=100,screenX=200,resizable,scrollbars,status",
 );
 ```
 
@@ -549,7 +560,7 @@ outerWidth has precedence over width and width has precedence over innerWidth. o
 windowObjectReference = window.open(
   "http://www.wwf.org/",
   "WWildlifeOrgWindowName",
-  "outerWidth=600,width=500,innerWidth=400,resizable,scrollbars,status"
+  "outerWidth=600,width=500,innerWidth=400,resizable,scrollbars,status",
 );
 ```
 

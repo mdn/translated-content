@@ -301,13 +301,13 @@ History API 接口允许你访问有关浏览器历史记录的信息，并通�
 
 ```js
 const nameField = document.getElementById("userName");
-const sendButton = document.getElementById("sendButton")
+const sendButton = document.getElementById("sendButton");
 
 sendButton.disabled = true;
 // [提示: 这是被禁用的，因为它会导致文章始终加载此示例，并将其聚焦和滚动到视图中]
 //nameField.focus();
 
-nameField.addEventListener("input", event => {
+nameField.addEventListener("input", (event) => {
   const elem = event.target;
   const valid = elem.value.length != 0;
 
@@ -336,13 +336,13 @@ nameField.addEventListener("input", event => {
 <form action="" method="get">
   <p>
     <label for="userName" required>用户名：</label>
-    <input type="text" id="userName"> (*)
+    <input type="text" id="userName" /> (*)
   </p>
   <p>
     <label for="email">邮箱：</label>
-    <input type="email" id="userEmail">
+    <input type="email" id="userEmail" />
   </p>
-  <input type="submit" value="发送" id="sendButton">
+  <input type="submit" value="发送" id="sendButton" />
 </form>
 ```
 

@@ -1,13 +1,6 @@
 ---
 title: Веб-фреймворк Django (Python)
 slug: Learn/Server-side/Django
-tags:
-  - back-end программирование
-  - Введение
-  - Django
-  - Изучать
-  - Начинающим
-translation_of: Learn/Server-side/Django
 ---
 
 {{LearnSidebar}}

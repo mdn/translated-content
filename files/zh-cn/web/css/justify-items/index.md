@@ -26,15 +26,15 @@ justify-items: normal;
 justify-items: stretch;
 
 /* Positional alignment */
-justify-items: center;     /* Pack items around the center */
-justify-items: start;      /* Pack items from the start */
-justify-items: end;        /* Pack items from the end */
+justify-items: center; /* Pack items around the center */
+justify-items: start; /* Pack items from the start */
+justify-items: end; /* Pack items from the end */
 justify-items: flex-start; /* Pack flex items from the start */
-justify-items: flex-end;   /* Pack flex items from the end */
+justify-items: flex-end; /* Pack flex items from the end */
 justify-items: self-start;
 justify-items: self-end;
-justify-items: left;       /* Pack items from the left */
-justify-items: right;      /* Pack items from the right */
+justify-items: left; /* Pack items from the left */
+justify-items: right; /* Pack items from the right */
 
 /* Baseline alignment */
 justify-items: baseline;
@@ -124,7 +124,7 @@ justify-items: unset;
 
 ## 另见
 
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment)
 - The {{CSSxRef("place-items")}} shorthand property
 - The {{CSSxRef("justify-self")}} property

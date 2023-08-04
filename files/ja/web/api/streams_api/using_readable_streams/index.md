@@ -16,7 +16,7 @@ JavaScript 開発者として、ネットワークを介して受信したデー
 ## ブラウザーの対応
 
 Fetch の本文オブジェクトをストリームとして消費し、自分自身で読み取り可能なストリームを作成することができます。ほとんどのブラウザーで可能です。
-[パイプチェーン](/ja/docs/Web/API/Streams_API/Concepts#pipe_chains)の対応はまだ普遍的ではないので、互換性一覧表を調べる価値があるかもしれません（例えば、 {{domxref("ReadableStream.pipeThrough()")}} を参照してください）。
+[パイプチェーン](/ja/docs/Web/API/Streams_API/Concepts#パイプチェーン)の対応はまだ普遍的ではないので、互換性一覧表を調べる価値があるかもしれません（例えば、 {{domxref("ReadableStream.pipeThrough()")}} を参照してください）。
 
 ## いくつかの例を見つける
 
@@ -325,7 +325,7 @@ function teeStream() {
 
 ## パイプチェーン
 
-ストリームのもう一つの機能として、ストリームを互いにパイプ接続する機能（[パイプチェーン](/ja/docs/Web/API/Streams_API/Concepts#pipe_chains)と呼ばれる）があります。このメソッドには、読み取り可能なストリームをライターとリーダーのペアを通してパイプ接続し、あるデータ形式を別の形式に変換する {{domxref("ReadableStream.pipeThrough()")}} と、パイプチェーンの終点として動作するライターに読み取り可能なストリームをパイプする {{domxref("ReadableStream.pipeTo()")}} の 2 つが含まれます。
+ストリームのもう一つの機能として、ストリームを互いにパイプ接続する機能（[パイプチェーン](/ja/docs/Web/API/Streams_API/Concepts#パイプチェーン)と呼ばれる）があります。このメソッドには、読み取り可能なストリームをライターとリーダーのペアを通してパイプ接続し、あるデータ形式を別の形式に変換する {{domxref("ReadableStream.pipeThrough()")}} と、パイプチェーンの終点として動作するライターに読み取り可能なストリームをパイプする {{domxref("ReadableStream.pipeTo()")}} の 2 つが含まれます。
 
 [Unpack Chunks of a PNG](https://github.com/mdn/dom-examples/tree/main/streams/png-transform-stream) ([ライブでも確認](https://mdn.github.io/dom-examples/streams/png-transform-stream/)) という簡単な例を見てみましょう。これは、画像をストリームとして取得し、それをカスタム PNG 変換ストリームに接続して、バイナリーデータストリームから PNG チャンクを取得するものです。
 

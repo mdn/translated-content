@@ -2,18 +2,18 @@
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: 494da677b2f5df61c97ba8b8efe8e80881e9d688
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLFormElement`** インターフェイスは DOM 内で {{HTMLElement("form")}} 要素を表します。これは、フォームのコンポーネント要素へのアクセスだけでなく、フォームの様々な側面へのアクセスや、場合によっては変更を可能にします。
+**`HTMLFormElement`** インターフェイスは DOM 内の {{HTMLElement("form")}} 要素を表します。これは、フォームのコンポーネント要素へのアクセスだけでなく、フォームの様々な側面へのアクセスや、場合によっては変更を可能にします。
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
-_このインターフェイスは親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
+_このインターフェイスには親である {{domxref("HTMLElement")}} から継承したプロパティもあります。_
 
 - {{domxref("HTMLFormElement.elements")}} {{ReadOnlyInline}}
   - : {{domxref("HTMLFormControlsCollection")}} で、このフォーム要素に所属するすべてのフォームコントロールを保持します。
@@ -38,9 +38,9 @@ _このインターフェイスは親である {{domxref("HTMLElement")}} から
 
 名前の付いた入力欄がプロパティとしてオーナーのフォームのインスタンスに追加され、同じ名前のネイティブのプロパティがあると上書きしてしまいます（例えば、フォームに `action` という名前の入力欄がある場合、 `action` プロパティはフォームの [`action`](/ja/docs/Web/HTML/Element/form#action) 属性ではなくその入力欄を返します）。
 
-## メソッド
+## インスタンスメソッド
 
-_このインターフェイスは親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
+_このインターフェイスには親である {{domxref("HTMLElement")}} から継承したメソッドもあります。_
 
 - {{domxref("HTMLFormElement.checkValidity", "checkValidity()")}}
   - : この要素の子コントロールが[制約検証](/ja/docs/Web/HTML/Constraint_validation)の対象となり、それらの制約を満たしている場合は `true` を返します。制約を満たさないコントロールがある場合は `false` を返します。制約を満たさないコントロールに対して、{{domxref("HTMLInputElement/invalid_event", "invalid")}} という名前のイベントを発生させます。イベントがキャンセルされない場合、そのようなコントロールは無効とみなされます。`false` にどう対応するかはプログラマー次第です。
@@ -88,7 +88,7 @@ _このインターフェイスは親である {{domxref("HTMLElement")}} から
 
 フォームのデータを含む要素の一覧にアクセスするには、フォームの {{domxref("HTMLFormElement.elements", "elements")}} プロパティを調べることでできます。これはフォームのユーザーデータ入力要素をすべて列挙する {{domxref("HTMLFormControlsCollection")}} を返します。これには `<form>` の子孫と、 `form` 属性を使ったフォームのメンバーからなるものの両方が返されます。
 
-フォームの要素を探すのに `form` のキーとして `name` 属性を使うこともできますが、 `elements` を使うのがより良い方法です。フォーム要素*のみ*を含み、`form`の他の属性と混合されることがないからです。
+フォームの要素を探すのに `form` のキーとして `name` 属性を使うこともできますが、 `elements` を使うのがより良い方法です。フォーム要素*のみ*を含み、`form` の他の属性と混合されることがないからです。
 
 ### 要素の名前付けの問題
 
@@ -97,7 +97,7 @@ _このインターフェイスは親である {{domxref("HTMLElement")}} から
 例えば、
 
 - `<input name="id">` は `<form id="…">` よりも優先されます。つまり `form.id` ではフォームの id を参照せずに、名前が "`id`" である要素を参照します。その他のプロパティも同様であり、例えば `<input name="action">` や `<input name="post">` もそうです。
-- `<input name="elements">` を使うと、 `elements` のコレクションをアクセス不能にします。`form.elements` は特定の要素を参照するようになります。
+- `<input name="elements">` を使うと、`elements` のコレクションがアクセス不能になります。`form.elements` は特定の要素を参照するようになります。
 
 要素名のこうした問題を避けるには、
 
@@ -126,10 +126,10 @@ JavaScript を使っていなければ、これは問題になりません。
 
 ```js
 const f = document.createElement("form"); // フォームを作成
-document.body.appendChild(f);             // 文書の本体に追加
-f.action = "/cgi-bin/some.cgi";           // action および method 属性を追加
+document.body.appendChild(f); // 文書の本体に追加
+f.action = "/cgi-bin/some.cgi"; // action および method 属性を追加
 f.method = "POST";
-f.submit();                               // フォームの submit() メソッド
+f.submit(); // フォームの submit() メソッド
 ```
 
 `<form>` 要素から情報を取り出し、その属性のいくつかを設定します。
@@ -234,10 +234,6 @@ f.submit();                               // フォームの submit() メソッ�
   </body>
 </html>
 ```
-
-### XMLHttpRequest を使用したフォームの送信とファイルのアップロード
-
-{{domxref("XMLHttpRequest")}} API を使用したシリアライズと送信の方法を知りたい場合は、[この段落](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#フォームの投稿とファイルのアップロード)をお読みください。
 
 ## 仕様書
 

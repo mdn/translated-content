@@ -1,16 +1,6 @@
 ---
 title: NodeList.entries()
 slug: Web/API/NodeList/entries
-tags:
-  - API
-  - DOM
-  - Iteration
-  - Liste
-  - Méthodes
-  - Node
-  - NodeList
-  - Noeuds
-translation_of: Web/API/NodeList/entries
 ---
 
 {{APIRef("DOM")}}

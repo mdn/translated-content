@@ -1,5 +1,5 @@
 ---
-title: '<html>: HTML 文書 / ルート要素'
+title: "<html>: HTML 文書 / ルート要素"
 slug: Web/HTML/Element/html
 l10n:
   sourceCommit: 4a2b6cafbf9bc5b006eedbdf0e9fdf2c8626d5b6
@@ -13,7 +13,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>

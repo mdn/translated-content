@@ -1,8 +1,8 @@
 ---
 title: Navigator.cookieEnabled
 slug: Web/API/Navigator/cookieEnabled
-translation_of: Web/API/Navigator/cookieEnabled
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 Возвращает логическое значение (Boolean), показывающее включены ли куки или нет.(свойство только для чтения.
@@ -22,7 +22,11 @@ if (!navigator.cookieEnabled) {
   // пусть пользователь знает, что включённые куки делают страницу более полезной.
 ```
 
-## Совместимость в браузере
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
 
 {{Compat}}
 

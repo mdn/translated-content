@@ -1,8 +1,8 @@
 ---
 title: Update Book form
 slug: Learn/Server-side/Express_Nodejs/forms/Update_Book_form
-translation_of: Learn/Server-side/Express_Nodejs/forms/Update_Book_form
 ---
+
 Наконец, в разделе показано, как определить страницу для обновления объектов `Book`. Обработка форм при обновлении книги аналогична обработке форм при создании книги, за исключением того, что необходимо заполнить форму в маршруте `GET` значениями из базы данных.
 
 ## Controller—get route
@@ -11,38 +11,61 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Update_Book_form
 
 ```js
 // Display book update form on GET.
-exports.book_update_get = function(req, res, next) {
-
-    // Get book, authors and genres for form.
-    async.parallel({
-        book: function(callback) {
-            Book.findById(req.params.id).populate('author').populate('genre').exec(callback);
-        },
-        authors: function(callback) {
-            Author.find(callback);
-        },
-        genres: function(callback) {
-            Genre.find(callback);
-        },
-        }, function(err, results) {
-            if (err) { return next(err); }
-            if (results.book==null) { // No results.
-                var err = new Error('Book not found');
-                err.status = 404;
-                return next(err);
-            }
-            // Success.
-            // Mark our selected genres as checked.
-            for (var all_g_iter = 0; all_g_iter < results.genres.length; all_g_iter++) {
-                for (var book_g_iter = 0; book_g_iter < results.book.genre.length; book_g_iter++) {
-                    if (results.genres[all_g_iter]._id.toString()==results.book.genre[book_g_iter]._id.toString()) {
-                        results.genres[all_g_iter].checked='true';
-                    }
-                }
-            }
-            res.render('book_form', { title: 'Update Book', authors:results.authors, genres:results.genres, book: results.book });
-        });
-
+exports.book_update_get = function (req, res, next) {
+  // Get book, authors and genres for form.
+  async.parallel(
+    {
+      book: function (callback) {
+        Book.findById(req.params.id)
+          .populate("author")
+          .populate("genre")
+          .exec(callback);
+      },
+      authors: function (callback) {
+        Author.find(callback);
+      },
+      genres: function (callback) {
+        Genre.find(callback);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      }
+      if (results.book == null) {
+        // No results.
+        var err = new Error("Book not found");
+        err.status = 404;
+        return next(err);
+      }
+      // Success.
+      // Mark our selected genres as checked.
+      for (
+        var all_g_iter = 0;
+        all_g_iter < results.genres.length;
+        all_g_iter++
+      ) {
+        for (
+          var book_g_iter = 0;
+          book_g_iter < results.book.genre.length;
+          book_g_iter++
+        ) {
+          if (
+            results.genres[all_g_iter]._id.toString() ==
+            results.book.genre[book_g_iter]._id.toString()
+          ) {
+            results.genres[all_g_iter].checked = "true";
+          }
+        }
+      }
+      res.render("book_form", {
+        title: "Update Book",
+        authors: results.authors,
+        genres: results.genres,
+        book: results.book,
+      });
+    },
+  );
 };
 ```
 
@@ -55,80 +78,88 @@ exports.book_update_get = function(req, res, next) {
 ```js
 // Handle book update on POST.
 exports.book_update_post = [
-
-    // Convert the genre to an array
-    (req, res, next) => {
-        if(!(req.body.genre instanceof Array)){
-            if(typeof req.body.genre==='undefined')
-            req.body.genre=[];
-            else
-            req.body.genre=new Array(req.body.genre);
-        }
-        next();
-    },
-
-    // Validate fields.
-    body('title', 'Title must not be empty.').isLength({ min: 1 }).trim(),
-    body('author', 'Author must not be empty.').isLength({ min: 1 }).trim(),
-    body('summary', 'Summary must not be empty.').isLength({ min: 1 }).trim(),
-    body('isbn', 'ISBN must not be empty').isLength({ min: 1 }).trim(),
-
-    // Sanitize fields.
-    sanitizeBody('title').trim().escape(),
-    sanitizeBody('author').trim().escape(),
-    sanitizeBody('summary').trim().escape(),
-    sanitizeBody('isbn').trim().escape(),
-    sanitizeBody('genre.*').trim().escape(),
-
-    // Process request after validation and sanitization.
-    (req, res, next) => {
-
-        // Extract the validation errors from a request.
-        const errors = validationResult(req);
-
-        // Create a Book object with escaped/trimmed data and old id.
-        var book = new Book(
-          { title: req.body.title,
-            author: req.body.author,
-            summary: req.body.summary,
-            isbn: req.body.isbn,
-            genre: (typeof req.body.genre==='undefined') ? [] : req.body.genre,
-            _id:req.params.id //This is required, or a new ID will be assigned!
-           });
-
-        if (!errors.isEmpty()) {
-            // There are errors. Render form again with sanitized values/error messages.
-
-            // Get all authors and genres for form.
-            async.parallel({
-                authors: function(callback) {
-                    Author.find(callback);
-                },
-                genres: function(callback) {
-                    Genre.find(callback);
-                },
-            }, function(err, results) {
-                if (err) { return next(err); }
-
-                // Mark our selected genres as checked.
-                for (let i = 0; i < results.genres.length; i++) {
-                    if (book.genre.indexOf(results.genres[i]._id) > -1) {
-                        results.genres[i].checked='true';
-                    }
-                }
-                res.render('book_form', { title: 'Update Book',authors:results.authors, genres:results.genres, book: book, errors: errors.array() });
-            });
-            return;
-        }
-        else {
-            // Data from form is valid. Update the record.
-            Book.findByIdAndUpdate(req.params.id, book, {}, function (err,thebook) {
-                if (err) { return next(err); }
-                   // Successful - redirect to book detail page.
-                   res.redirect(thebook.url);
-                });
-        }
+  // Convert the genre to an array
+  (req, res, next) => {
+    if (!(req.body.genre instanceof Array)) {
+      if (typeof req.body.genre === "undefined") req.body.genre = [];
+      else req.body.genre = new Array(req.body.genre);
     }
+    next();
+  },
+
+  // Validate fields.
+  body("title", "Title must not be empty.").isLength({ min: 1 }).trim(),
+  body("author", "Author must not be empty.").isLength({ min: 1 }).trim(),
+  body("summary", "Summary must not be empty.").isLength({ min: 1 }).trim(),
+  body("isbn", "ISBN must not be empty").isLength({ min: 1 }).trim(),
+
+  // Sanitize fields.
+  sanitizeBody("title").trim().escape(),
+  sanitizeBody("author").trim().escape(),
+  sanitizeBody("summary").trim().escape(),
+  sanitizeBody("isbn").trim().escape(),
+  sanitizeBody("genre.*").trim().escape(),
+
+  // Process request after validation and sanitization.
+  (req, res, next) => {
+    // Extract the validation errors from a request.
+    const errors = validationResult(req);
+
+    // Create a Book object with escaped/trimmed data and old id.
+    var book = new Book({
+      title: req.body.title,
+      author: req.body.author,
+      summary: req.body.summary,
+      isbn: req.body.isbn,
+      genre: typeof req.body.genre === "undefined" ? [] : req.body.genre,
+      _id: req.params.id, //This is required, or a new ID will be assigned!
+    });
+
+    if (!errors.isEmpty()) {
+      // There are errors. Render form again with sanitized values/error messages.
+
+      // Get all authors and genres for form.
+      async.parallel(
+        {
+          authors: function (callback) {
+            Author.find(callback);
+          },
+          genres: function (callback) {
+            Genre.find(callback);
+          },
+        },
+        function (err, results) {
+          if (err) {
+            return next(err);
+          }
+
+          // Mark our selected genres as checked.
+          for (let i = 0; i < results.genres.length; i++) {
+            if (book.genre.indexOf(results.genres[i]._id) > -1) {
+              results.genres[i].checked = "true";
+            }
+          }
+          res.render("book_form", {
+            title: "Update Book",
+            authors: results.authors,
+            genres: results.genres,
+            book: book,
+            errors: errors.array(),
+          });
+        },
+      );
+      return;
+    } else {
+      // Data from form is valid. Update the record.
+      Book.findByIdAndUpdate(req.params.id, book, {}, function (err, thebook) {
+        if (err) {
+          return next(err);
+        }
+        // Successful - redirect to book detail page.
+        res.redirect(thebook.url);
+      });
+    }
+  },
 ];
 ```
 
@@ -138,7 +169,7 @@ exports.book_update_post = [
 
 Откройте **/views/book_form.pug** и обновите раздел, в котором элемент управления "форма автора" имеет условный код, показанный ниже.
 
-```html
+```pug
     div.form-group
       label(for='author') Author:
       select#author.form-control(type='select' placeholder='Select author' name='author' required='true' )
@@ -162,7 +193,7 @@ exports.book_update_post = [
 
 Откройте **book_detail.pug** и убедитесь, что есть ссылки для удаления и обновления книг в нижней части страницы, как показано ниже.
 
-```html
+```pug
   hr
   p
     a(href=book.url+'/delete') Delete Book

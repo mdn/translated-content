@@ -1,7 +1,6 @@
 ---
 title: Adicionando conteúdo 2D a um contexto WebGL
 slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
-original_slug: Web/API/WebGL_API/Tutorial/Adicionando_conteudo_2D_a_um_contexto_WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
@@ -36,7 +35,10 @@ function initShaders() {
 
   gl.useProgram(shaderProgram);
 
-  vertexPositionAttribute = gl.getAttribLocation(shaderProgram, "aVertexPosition");
+  vertexPositionAttribute = gl.getAttribLocation(
+    shaderProgram,
+    "aVertexPosition",
+  );
   gl.enableVertexAttribArray(vertexPositionAttribute);
 }
 ```
@@ -74,14 +76,14 @@ function getShader(gl, id) {
 Uma vez que o elemento com o ID específico é encontrado, seu texto é lido na variável theSource.
 
 ```js
-  if (shaderScript.type == "x-shader/x-fragment") {
-    shader = gl.createShader(gl.FRAGMENT_SHADER);
-  } else if (shaderScript.type == "x-shader/x-vertex") {
-    shader = gl.createShader(gl.VERTEX_SHADER);
-  } else {
-     // Tipo de shader desconhecido
-     return null;
-  }
+if (shaderScript.type == "x-shader/x-fragment") {
+  shader = gl.createShader(gl.FRAGMENT_SHADER);
+} else if (shaderScript.type == "x-shader/x-vertex") {
+  shader = gl.createShader(gl.VERTEX_SHADER);
+} else {
+  // Tipo de shader desconhecido
+  return null;
+}
 ```
 
 Uma vez que o código para o shader tenha sido lido, nós observamos o tipo MIME do objeto shader para determinar se é um sombreamento de vértice (MIME type "x-shader/x-vertex") ou um fragmento de shader (MIME type "x-shader/x-fragment"), em seguinda crie um tipo de shader apropriado para a partir do código fonte recuperado.
@@ -141,20 +143,17 @@ A vértice (vertex) do shader define a posição e a forma de cada vértice.
 
 ## Criando um objeto
 
-Before we can render our square, we need to create the buffer that contains its vertices. We'll do that using a function we call `initBuffers()`; as we explore more advanced WebGL concepts, this routine will be augmented to create more -- and more complex -- 3D objects.
+Before we can render our square, we need to create the buffer that contains its vertices. We'll do that using a function we call `initBuffers()`; as we explore more advanced WebGL concepts, this routine will be augmented to create more — and more complex — 3D objects.
 
 ```js
-var horizAspect = 480.0/640.0;
+var horizAspect = 480.0 / 640.0;
 
 function initBuffers() {
   squareVerticesBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, squareVerticesBuffer);
 
   var vertices = [
-    1.0,  1.0,  0.0,
-    -1.0, 1.0,  0.0,
-    1.0,  -1.0, 0.0,
-    -1.0, -1.0, 0.0
+    1.0, 1.0, 0.0, -1.0, 1.0, 0.0, 1.0, -1.0, 0.0, -1.0, -1.0, 0.0,
   ];
 
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
@@ -173,7 +172,7 @@ Once the shaders are established and the object constructed, we can actually ren
 function drawScene() {
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
-  perspectiveMatrix = makePerspective(45, 640.0/480.0, 0.1, 100.0);
+  perspectiveMatrix = makePerspective(45, 640.0 / 480.0, 0.1, 100.0);
 
   loadIdentity();
   mvTranslate([-0.0, 0.0, -6.0]);
@@ -216,7 +215,11 @@ function mvTranslate(v) {
 
 function setMatrixUniforms() {
   var pUniform = gl.getUniformLocation(shaderProgram, "uPMatrix");
-  gl.uniformMatrix4fv(pUniform, false, new Float32Array(perspectiveMatrix.flatten()));
+  gl.uniformMatrix4fv(
+    pUniform,
+    false,
+    new Float32Array(perspectiveMatrix.flatten()),
+  );
 
   var mvUniform = gl.getUniformLocation(shaderProgram, "uMVMatrix");
   gl.uniformMatrix4fv(mvUniform, false, new Float32Array(mvMatrix.flatten()));

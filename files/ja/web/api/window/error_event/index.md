@@ -1,5 +1,5 @@
 ---
-title: 'Window: error イベント'
+title: "Window: error イベント"
 slug: Web/API/Window/error_event
 ---
 

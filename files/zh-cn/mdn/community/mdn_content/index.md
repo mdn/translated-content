@@ -1,7 +1,6 @@
 ---
 title: 改正内容错误
 slug: MDN/Community/MDN_content
-original_slug: MDN/Contribute/Fixing_MDN_content_bugs
 ---
 
 {{MDNSidebar}}
@@ -16,11 +15,11 @@ MDN 文档的问题被报告在 [content 仓库的 issues](https://github.com/md
 
 下面的标签可以帮助你根据空闲时间来选择任务。
 
-| 标签                                                                                                                                       | 描述                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| [内容仓库中花费不到 30 分钟的任务](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22time%3A+-30mins%22) |可能需要花费不到 30 分钟的任务。              |
-| [内容仓库中花费不到 3 小时的任务](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22time%3A+-3hr%22)       | 可能需要花费不到 3 小时的任务。                  |
-| [内容仓库中花费不到 2 天的任务](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22time%3A+-2days%22)      | 可能需要花费不到 2 天的任务。             |
+| 标签                                                                                                                           | 描述                             |
+| ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- |
+| [内容仓库中花费不到 30 分钟的任务](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22time%3A+-30mins%22) | 可能需要花费不到 30 分钟的任务。 |
+| [内容仓库中花费不到 3 小时的任务](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22time%3A+-3hr%22)     | 可能需要花费不到 3 小时的任务。  |
+| [内容仓库中花费不到 2 天的任务](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22time%3A+-2days%22)     | 可能需要花费不到 2 天的任务。    |
 
 如果你更愿意浏览任务并按技术类别来选择，你还可以在[内容仓库的议题](https://github.com/mdn/content/issues)上找到内容类型的标签。
 

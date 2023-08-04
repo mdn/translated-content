@@ -22,7 +22,7 @@ Object.isFrozen(obj)
 
 ### 返回值
 
-指示给定对象是否被冻结的 {{jsxref("Boolean")}}。
+指示给定对象是否被冻结的{{jsxref("Boolean", "布尔值", "", 1)}}。
 
 ## 描述
 
@@ -30,7 +30,7 @@ Object.isFrozen(obj)
 
 ## 示例
 
-### 使用 Object.isFrozen
+### 使用 Object.isFrozen()
 
 ```js
 // 一个新对象是默认是可扩展的，所以它也是非冻结的。

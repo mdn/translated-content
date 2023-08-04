@@ -1,10 +1,6 @@
 ---
 title: Контрольный список по мобильной доступности
 slug: Web/Accessibility/Mobile_accessibility_checklist
-tags:
-  - Мобильная разработка
-  - доступность
-translation_of: Web/Accessibility/Mobile_accessibility_checklist
 ---
 
 Этот документ содержит краткий список требований доступности для разработчиков мобильных приложений. Он будет обновляться по мере появления новых техник и подходов.
@@ -56,9 +52,9 @@ translation_of: Web/Accessibility/Mobile_accessibility_checklist
 
   ```html
   <h1>Заголовок верхнего уровня</h1>
-    <h2>Вторичный заголовок</h2>
-    <h2>Другой вторичный заголовок</h2>
-      <h3>Заголовок низкого уровня</h3>
+  <h2>Вторичный заголовок</h2>
+  <h2>Другой вторичный заголовок</h2>
+  <h3>Заголовок низкого уровня</h3>
   ```
 
 - [ARIA Landmark Roles](http://www.w3.org/TR/wai-aria/roles#landmark_roles_header) **СЛЕДУЕТ** использовать для описания приложения или структуры документа, такие как `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.

@@ -166,7 +166,7 @@ A saída HTML acima será:
 
   - a propriedade [list-style](/pt-BR/CSS/list-style), conveniente para escolher a maneira como os ordinais serão mostrados,
   - [CSS counters](/pt-BR/CSS_Counters), eficientes para guiar listas complexas aninhadas,
-  - a propriedade [line-height](/pt-BR/CSS/line-height), válida para simular o atributo ultrapassado {{ htmlattrxref("compact", "ul") }},
+  - a propriedade [line-height](/pt-BR/CSS/line-height), válida para simular o atributo ultrapassado [`compact`](/pt-BR/docs/Web/HTML/Element/ul#compact),
   - a propriedade [margin](/pt-BR/CSS/margin), proveitosa para controlar a indentação da lista.
 
 {{ HTMLSidebar }}

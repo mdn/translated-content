@@ -1,5 +1,5 @@
 ---
-title: '<details>: 詳細折りたたみ要素'
+title: "<details>: 詳細折りたたみ要素"
 slug: Web/HTML/Element/details
 ---
 
@@ -15,52 +15,11 @@ slug: Web/HTML/Element/details
 
 ユーザーがウィジェットをクリックするか、フォーカスしてスペースバーを押すと、ウィジェットは「ツイスト」して開き、中身が見えるようになります。ウィジェットの開閉を表すために、回転したりねじれたりする三角形を使用することが多いため、「ツイスティ」 (twisty) と呼ばれることもある。
 
-CSS を使用して折り畳みウィジェットのスタイルを設定することができます。また、 [`open`](/ja/docs/Web/HTML/Element/details#open) 属性を設定したり削除したりすることによって、プログラムによってウィジェットを開いたり閉じたりすることも可能です。残念ながら、現時点では、開閉の遷移をアニメーションで表現する方法は組み込まれていません。
+CSS を使用して折り畳みウィジェットのスタイルを設定することができます。また、 [`open`](open) 属性を設定したり削除したりすることによって、プログラムによってウィジェットを開いたり閉じたりすることも可能です。残念ながら、現時点では、開閉の遷移をアニメーションで表現する方法は組み込まれていません。
 
 既定では、ウィジェットが閉じている時、折りたたみの三角形と概要が表示できるだけの高さしかありません。ウィジェットが開くと、要素は中に含まれた詳細が表示できるだけの大きさに拡大されます。
 
 完全な標準互換の実装では、 CSS の `{{cssxref("display")}}: list-item` が自動的に {{HTMLElement("summary")}} に適用されます。この表示方法はカスタマイズすることができます。詳しくは[折りたたみウィジェットのカスタマイズ](#表示方法のカスタマイズ)を参照してください。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a>
-      </th>
-      <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、区分化ルート、対話型コンテンツ、知覚可能コンテンツ
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>
-        1 つの {{HTMLElement("summary")}} 要素と、それに続く <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙的な ARIA ロール</th>
-      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code></td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLDetailsElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 属性
 
@@ -68,9 +27,9 @@ CSS を使用して折り畳みウィジェットのスタイルを設定する�
 
 - `open`
 
-  - : この論理属性は、現在 — つまり `<details>` 要素の内容 — が現在表示されているかどうかを示します。この属性がある場合は詳細が表示され、この属性がない場合は非表示になります。既定では、この属性は存在しないため、詳細は表示されません。
+  - : この論理属性は、現在詳細（つまり `<details>` 要素の内容）が現在表示されていることを示します。この属性がある場合は詳細が表示され、この属性がない場合は非表示になります。既定では、この属性は存在しないため、詳細は表示されません。
 
- <strong>注:</strong> 詳細を非表示にするには、この属性を完全に削除する必要があります。この属性は論理属性なので、 `open="false"` では詳細が表示状態になります。
+    > **メモ:** 詳細を非表示にするには、この属性を完全に削除する必要があります。この属性は論理属性なので、 `open="false"` では詳細が表示状態になります。
 
 ## イベント
 
@@ -90,43 +49,41 @@ details.addEventListener("toggle", (event) => {
 
 ## 例
 
-## 単純な折りたたみの例
+### 単純な折りたたみの例
 
 この例では `<details>` 要素を `<summary>` 付きで表示します。
 
 ```html
 <details>
-  <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <summary>システム要件</summary>
+  <p>
+    オペレーティングシステムを実行するコンピューターが必要です。コンピューターにはメモリーがあり、できれば何らかの長期保存用の記憶装置があること。入力機器と何らかの出力機器を推奨。
+  </p>
 </details>
 ```
 
-この HTML の結果は次のようになります。
+#### 結果
 
 {{EmbedLiveSample("A_simple_disclosure_example", 650, 150)}}
 
-## 折りたたみボックスの作成
+### 折りたたみボックスの作成
 
 `<details>` ボックスを開いた状態にするために、論理値の `open` 属性を追加しましょう。
 
 ```html
 <details open>
-  <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <summary>システム要件</summary>
+  <p>
+    オペレーティングシステムを実行するコンピューターが必要です。コンピューターにはメモリーがあり、できれば何らかの長期保存用の記憶装置があること。入力機器と何らかの出力機器を推奨。
+  </p>
 </details>
 ```
 
-これだけで、次のような結果になります。
+#### 結果
 
 {{EmbedLiveSample("Creating_an_open_disclosure_box", 650, 150)}}
 
-## 表示方法のカスタマイズ
+### 表示方法のカスタマイズ
 
 では、いくらか CSS を適用して折りたたみボックスの外見をカスタマイズしましょう。
 
@@ -168,11 +125,10 @@ details[open] > summary {
 
 ```html
 <details>
-  <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <summary>システム要件</summary>
+  <p>
+    オペレーティングシステムを実行するコンピューターが必要です。コンピューターにはメモリーがあり、できれば何らかの長期保存用の記憶装置があること。入力機器と何らかの出力機器を推奨。
+  </p>
 </details>
 ```
 
@@ -219,17 +175,67 @@ details > p {
 
 ```html
 <details>
-  <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <summary>システム要件</summary>
+  <p>
+    オペレーティングシステムを実行するコンピューターが必要です。コンピューターにはメモリーがあり、できれば何らかの長期保存用の記憶装置があること。入力機器と何らかの出力機器を推奨。
+  </p>
 </details>
 ```
 
 #### 結果
 
 {{EmbedLiveSample("Customizing_the_disclosure_widget", 650, 150)}}
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >、区分化ルート、対話型コンテンツ、知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        1 つの {{HTMLElement("summary")}} 要素と、それに続く <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙的な ARIA ロール</th>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a></td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLDetailsElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

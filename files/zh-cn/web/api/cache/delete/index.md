@@ -35,11 +35,11 @@ cache.delete(request,{options}).then(function(true) {
 ## 示例
 
 ```js
-caches.open('v1').then(function(cache) {
-  cache.delete('/images/image.png').then(function(response) {
+caches.open("v1").then(function (cache) {
+  cache.delete("/images/image.png").then(function (response) {
     someUIUpdateFunction();
   });
-})
+});
 ```
 
 ## 规范

@@ -1,7 +1,6 @@
 ---
 title: itemref
 slug: Web/HTML/Global_attributes/itemref
-original_slug: Web/HTML/Atributos_Globales/itemref
 ---
 
 ## Resumen
@@ -18,11 +17,11 @@ El atributo itemref puede ser solo especificado en elementos que tienen un atrib
 
 ```html
 <div itemscope id="amanda" itemref="a b"></div>
-<p id="a">Name: <span itemprop="name">Amanda</span> </p>
+<p id="a">Name: <span itemprop="name">Amanda</span></p>
 <div id="b" itemprop="band" itemscope itemref="c"></div>
 <div id="c">
-    <p>Band: <span itemprop="name">Jazz Band</span> </p>
-    <p>Size: <span itemprop="size">12</span> players</p>
+  <p>Band: <span itemprop="name">Jazz Band</span></p>
+  <p>Size: <span itemprop="size">12</span> players</p>
 </div>
 ```
 

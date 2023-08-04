@@ -1,8 +1,6 @@
 ---
-title: 'Element : évènement mousedown'
+title: "Element : évènement mousedown"
 slug: Web/API/Element/mousedown_event
-translation_of: Web/API/Element/mousedown_event
-browser-compat: api.Element.mousedown_event
 ---
 
 {{APIRef}}

@@ -124,9 +124,8 @@ column-gap: unset;
 
 ```html
 <p class="content-box">
-  This is some multi-column text with a 40px column
-  gap created with the CSS `column-gap` property.
-  Don't you think that's fun and exciting? I sure do!
+  This is some multi-column text with a 40px column gap created with the CSS
+  `column-gap` property. Don't you think that's fun and exciting? I sure do!
 </p>
 ```
 
@@ -154,5 +153,5 @@ column-gap: unset;
 ## 参见
 
 - 相关 CSS 属性：{{cssxref("row-gap")}}、{{cssxref("gap")}}
-- 网格布局指南：_[网格布局基本概念 - 网格间距](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#网格间距)_
+- 网格布局指南：_[网格布局基本概念 - 网格间距](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#网格间距)_
 - Multi-column 布局指南：_[Styling Columns](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Styling_columns)_

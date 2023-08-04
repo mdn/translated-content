@@ -1,5 +1,5 @@
 ---
-title: ':default'
+title: ":default"
 slug: Web/CSS/:default
 ---
 
@@ -27,16 +27,16 @@ input:default {
 ### HTML
 
 ```html
-<input type="radio" name="season" id="spring">
+<input type="radio" name="season" id="spring" />
 <label for="spring">Spring</label>
 
-<input type="radio" name="season" id="summer" checked>
+<input type="radio" name="season" id="summer" checked />
 <label for="summer">Summer</label>
 
-<input type="radio" name="season" id="fall">
+<input type="radio" name="season" id="fall" />
 <label for="fall">Fall</label>
 
-<input type="radio" name="season" id="winter">
+<input type="radio" name="season" id="winter" />
 <label for="winter">Winter</label>
 ```
 

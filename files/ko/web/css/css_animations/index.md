@@ -1,6 +1,6 @@
 ---
 title: CSS Animations
-slug: Web/CSS/CSS_Animations
+slug: Web/CSS/CSS_animations
 ---
 
 {{CSSRef}}

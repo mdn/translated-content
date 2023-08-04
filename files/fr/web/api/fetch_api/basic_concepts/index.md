@@ -1,7 +1,6 @@
 ---
-title: 'Fetch : concepts de départ'
+title: "Fetch : concepts de départ"
 slug: Web/API/Fetch_API/Basic_concepts
-translation_of: Web/API/Fetch_API/Basic_concepts
 ---
 
 {{DefaultAPISidebar("Fetch API")}}

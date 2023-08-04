@@ -82,12 +82,12 @@ const bar = {};
 ws.add(foo);
 ws.add(bar);
 
-ws.has(foo);    // true
-ws.has(bar);    // true
+ws.has(foo); // true
+ws.has(bar); // true
 
 ws.delete(foo); // 从 set 中删除 foo 对象
-ws.has(foo);    // false，foo 对象已经被删除了
-ws.has(bar);    // true，bar 依然存在
+ws.has(foo); // false，foo 对象已经被删除了
+ws.has(bar); // true，bar 依然存在
 ```
 
 注意，`foo !== bar`。尽管它们是相似的对象，但是它们不是**_同一个对象_**。因此，它们都可以被加入到 set 中。

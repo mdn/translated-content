@@ -1,12 +1,6 @@
 ---
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Promise
-  - Промисы
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 ---
 {{JSRef}}
 
@@ -213,7 +207,7 @@ if ("Promise" in window) {
 
 ### Загрузка изображения при помощи XHR
 
-Другой простой пример использования `Promise` и [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) для загрузки изображения доступен в репозитории MDN[promise-test](https://github.com/mdn/js-examples/tree/master/promises-test) на GitHub. Вы также можете [посмотреть его в действии](https://mdn.github.io/js-examples/promises-test/). Каждый шаг прокомментирован и вы можете подробно исследовать Promise и XHR.
+Другой простой пример использования `Promise` и [`XMLHttpRequest`](/ru/docs/Web/API/XMLHttpRequest) для загрузки изображения доступен в репозитории MDN[promise-test](https://github.com/mdn/js-examples/tree/master/promises-test) на GitHub. Вы также можете [посмотреть его в действии](https://mdn.github.io/js-examples/promises-test/). Каждый шаг прокомментирован и вы можете подробно исследовать Promise и XHR.
 
 ## Спецификации
 

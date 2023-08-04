@@ -50,56 +50,56 @@ In the following code snippet, we open a database asynchronously ({{domxref("IDB
 
 ```js
 // Let us open our database
-  var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-  // these two event handlers act on the IDBDatabase object, when the database is opened successfully, or not
-  DBOpenRequest.onerror = function(event) {
-    note.innerHTML += '<li>Error loading database.</li>';
+// these two event handlers act on the IDBDatabase object, when the database is opened successfully, or not
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>Error loading database.</li>";
+};
+
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Database initialised.</li>";
+
+  // store the result of opening the database in the db variable. This is used a lot later on
+  db = DBOpenRequest.result;
+
+  // Run the displayData() function to populate the task list with all the to-do list data already in the IDB
+  displayData();
+};
+
+// This event handles the event whereby a new version of the database needs to be created
+// Either one has not been created before, or a new version number has been submitted via the
+// window.indexedDB.open line above
+
+DBOpenRequest.onupgradeneeded = function (event) {
+  var db = event.target.result;
+
+  db.onerror = function (event) {
+    note.innerHTML += "<li>Error loading database.</li>";
   };
 
-  DBOpenRequest.onsuccess = function(event) {
-    note.innerHTML += '<li>Database initialised.</li>';
+  // Create an objectStore for this database using IDBDatabase.createObjectStore
 
-    // store the result of opening the database in the db variable. This is used a lot later on
-    db = DBOpenRequest.result;
+  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
 
-    // Run the displayData() function to populate the task list with all the to-do list data already in the IDB
-    displayData();
-  };
+  // define what data items the objectStore will contain
 
-  // This event handles the event whereby a new version of the database needs to be created
-  // Either one has not been created before, or a new version number has been submitted via the
-  // window.indexedDB.open line above
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 
-  DBOpenRequest.onupgradeneeded = function(event) {
-    var db = event.target.result;
+  objectStore.createIndex("notified", "notified", { unique: false });
 
-    db.onerror = function(event) {
-      note.innerHTML += '<li>Error loading database.</li>';
-    };
-
-    // Create an objectStore for this database using IDBDatabase.createObjectStore
-
-    var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
-
-    // define what data items the objectStore will contain
-
-    objectStore.createIndex("hours", "hours", { unique: false });
-    objectStore.createIndex("minutes", "minutes", { unique: false });
-    objectStore.createIndex("day", "day", { unique: false });
-    objectStore.createIndex("month", "month", { unique: false });
-    objectStore.createIndex("year", "year", { unique: false });
-
-    objectStore.createIndex("notified", "notified", { unique: false });
-
-    note.innerHTML += '<li>Object store created.</li>';
-  };
+  note.innerHTML += "<li>Object store created.</li>";
+};
 ```
 
 This next line opens up a transaction on the Database, then opens an object store that we can then manipulate the data inside of.
 
 ```js
-    var objectStore = db.transaction('toDoList').objectStore('toDoList');
+var objectStore = db.transaction("toDoList").objectStore("toDoList");
 ```
 
 ## 規範

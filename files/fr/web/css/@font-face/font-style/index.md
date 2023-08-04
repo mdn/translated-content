@@ -1,11 +1,6 @@
 ---
 title: font-style
 slug: Web/CSS/@font-face/font-style
-tags:
-  - CSS
-  - Descripteur
-  - Reference
-translation_of: Web/CSS/@font-face/font-style
 ---
 
 {{CSSRef}}
@@ -52,7 +47,7 @@ Dans les exemples qui suivent, on utilisera les différentes formes liées à la
 ```css
 @font-face {
   font-family: garamond;
-  src: url('garamond.ttf');
+  src: url("garamond.ttf");
 }
 ```
 
@@ -67,7 +62,7 @@ En revanche, si on dispose d'une vraie version italique, on peut l'indiquer via 
 ```css
 @font-face {
   font-family: garamond;
-  src: url('garamond-italic.ttf');
+  src: url("garamond-italic.ttf");
   /* On indique ici que la police est italique */
   font-style: italic;
 }

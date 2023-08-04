@@ -35,7 +35,7 @@ regexObj.test(str)
 一个简单的例子，测试 "hello" 是否包含在字符串的最开始，返回布尔值。
 
 ```js
-let str = 'hello world!';
+let str = "hello world!";
 let result = /^hello/.test(str);
 console.log(result);
 // true
@@ -44,14 +44,14 @@ console.log(result);
 下例打印一条信息，该信息内容取决于是否成功通过指定测试：
 
 ```js
-function testinput(re, str){
-    var midstring;
-    if (re.test(str)) {
-        midstring = " contains ";
-    } else {
-        midstring = " does not contain ";
-    }
-    console.log(str + midstring + re.source);
+function testinput(re, str) {
+  var midstring;
+  if (re.test(str)) {
+    midstring = " contains ";
+  } else {
+    midstring = " does not contain ";
+  }
+  console.log(str + midstring + re.source);
 }
 ```
 
@@ -65,10 +65,10 @@ function testinput(re, str){
 var regex = /foo/g;
 
 // regex.lastIndex is at 0
-regex.test('foo'); // true
+regex.test("foo"); // true
 
 // regex.lastIndex is now at 3
-regex.test('foo'); // false
+regex.test("foo"); // false
 ```
 
 ## 规范

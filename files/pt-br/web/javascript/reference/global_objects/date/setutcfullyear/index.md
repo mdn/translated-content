@@ -45,8 +45,8 @@ theBigDay.setUTCFullYear(1997);
 
 ## Especificações
 
-| Especificação                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                                                  |
+| ---------------------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-date.prototype.setutcfullyear', 'Date.prototype.setUTCFullYear')}} |
 
 ## Compatibilidade com navegadores

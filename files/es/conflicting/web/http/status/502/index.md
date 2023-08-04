@@ -1,7 +1,6 @@
 ---
-title: '502'
+title: "502"
 slug: conflicting/Web/HTTP/Status/502
-original_slug: Glossary/502
 ---
 
 Un código código de error {{Glossary("HTTP")}} que significa "Bad Gateway" (Pasarela incorrecta).

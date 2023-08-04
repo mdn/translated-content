@@ -2,6 +2,7 @@
 title: 2D breakout game using Phaser
 slug: Games/Tutorials/2D_breakout_game_Phaser
 ---
+
 {{GamesSidebar}}
 
 {{Next("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/캔버스_생성과_그리기")}}

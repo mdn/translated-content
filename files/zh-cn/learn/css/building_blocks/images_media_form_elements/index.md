@@ -13,7 +13,7 @@ slug: Learn/CSS/Building_blocks/Images_media_form_elements
       <th scope="row">预备知识：</th>
       <td>
         计算机基础知识、<a
-          href="zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >安装基础软件</a
         >、<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -116,8 +116,8 @@ button,
 input,
 select,
 textarea {
-  font-family : inherit;
-  font-size : 100%;
+  font-family: inherit;
+  font-size: 100%;
 }
 ```
 
@@ -160,7 +160,8 @@ textarea {
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  padding: 0; margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 textarea {

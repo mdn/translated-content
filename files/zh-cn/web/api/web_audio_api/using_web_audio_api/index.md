@@ -60,7 +60,7 @@ const audioContext = new AudioContext();
 
 ```js
 // get the audio element
-const audioElement = document.querySelector('audio');
+const audioElement = document.querySelector("audio");
 
 // pass it into the audio context
 const track = audioContext.createMediaElementSource(audioElement);
@@ -80,7 +80,7 @@ const track = audioContext.createMediaElementSource(audioElement);
 
 ```html
 <button data-playing="false" role="switch" aria-checked="false">
-    <span>Play/Pause</span>
+  <span>Play/Pause</span>
 </button>
 ```
 
@@ -100,33 +100,39 @@ track.connect(audioContext.destination);
 
 ```js
 // select our play button
-const playButton = document.querySelector('button');
+const playButton = document.querySelector("button");
 
-playButton.addEventListener('click', function() {
-
+playButton.addEventListener(
+  "click",
+  function () {
     // check if context is in suspended state (autoplay policy)
-    if (audioContext.state === 'suspended') {
-        audioContext.resume();
+    if (audioContext.state === "suspended") {
+      audioContext.resume();
     }
 
     // play or pause track depending on state
-    if (this.dataset.playing === 'false') {
-        audioElement.play();
-        this.dataset.playing = 'true';
-    } else if (this.dataset.playing === 'true') {
-        audioElement.pause();
-        this.dataset.playing = 'false';
+    if (this.dataset.playing === "false") {
+      audioElement.play();
+      this.dataset.playing = "true";
+    } else if (this.dataset.playing === "true") {
+      audioElement.pause();
+      this.dataset.playing = "false";
     }
-
-}, false);
+  },
+  false,
+);
 ```
 
 我们也需要考虑到当音频播放完毕后做什么。我们的 `HTMLMediaElement` 一旦播放完毕会触发一个 `ended` 事件，所以我们可以监听它并运行相应代码：
 
 ```js
-audioElement.addEventListener('ended', () => {
-    playButton.dataset.playing = 'false';
-}, false);
+audioElement.addEventListener(
+  "ended",
+  () => {
+    playButton.dataset.playing = "false";
+  },
+  false,
+);
 ```
 
 ## 关于 Web Audio 编辑器
@@ -170,11 +176,15 @@ track.connect(gainNode).connect(audioContext.destination);
 所以当用户更改输入节点值时，获取此输入值并更新增益值：
 
 ```js
-const volumeControl = document.querySelector('#volume');
+const volumeControl = document.querySelector("#volume");
 
-volumeControl.addEventListener('input', function() {
+volumeControl.addEventListener(
+  "input",
+  function () {
     gainNode.gain.value = this.value;
-}, false);
+  },
+  false,
+);
 ```
 
 > **备注：** 节点对象的值（例如， `GainNode.gain` ）不是简单值；它们实际上是 {{domxref("AudioParam")}} 类型对象 — 这些被称为参数。这也是为什么我们需要设置 `GainNode.gain` 的 `value` 属性，而不是直接设置 `gain` 的值。这使得它们更加的灵活，允许传入一系列特定的值以在例如一段时间内改变。
@@ -211,11 +221,15 @@ const panner = new StereoPannerNode(audioContext, pannerOptions);
 与我们之前一样，我们使用来自这个 input 的值来调整我们的 panner 的值：
 
 ```js
-const pannerControl = document.querySelector('#panner');
+const pannerControl = document.querySelector("#panner");
 
-pannerControl.addEventListener('input', function() {
+pannerControl.addEventListener(
+  "input",
+  function () {
     panner.pan.value = this.value;
-}, false);
+  },
+  false,
+);
 ```
 
 让我们再次调整我们的音频图，将所有节点连接在一起：
@@ -338,7 +352,7 @@ gainNode.connect(audioCtx.destination);
 现在 audio 节点图已经建立，我们可以设置属性值及调用音频节点的方法来调节想要的音效。在这个简单的例子，我们可以设置特殊的音调，以赫兹为单位，设置为特殊类型，以及指示音乐播放：
 
 ```js
-oscillator.type = 'sine'; // sine wave — other values are 'square', 'sawtooth', 'triangle' and 'custom'
+oscillator.type = "sine"; // sine wave — other values are 'square', 'sawtooth', 'triangle' and 'custom'
 oscillator.frequency.value = 2500; // value in hertz
 oscillator.start();
 ```
@@ -357,7 +371,7 @@ var initialVol = 0.5;
 
 // set options for the oscillator
 
-oscillator.type = 'sine'; // sine wave — other values are 'square', 'sawtooth', 'triangle' and 'custom'
+oscillator.type = "sine"; // sine wave — other values are 'square', 'sawtooth', 'triangle' and 'custom'
 oscillator.frequency.value = initialFreq; // value in hertz
 oscillator.start();
 
@@ -378,13 +392,23 @@ var CurY;
 document.onmousemove = updatePage;
 
 function updatePage(e) {
-    CurX = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-    CurY = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+  CurX = window.Event
+    ? e.pageX
+    : event.clientX +
+      (document.documentElement.scrollLeft
+        ? document.documentElement.scrollLeft
+        : document.body.scrollLeft);
+  CurY = window.Event
+    ? e.pageY
+    : event.clientY +
+      (document.documentElement.scrollTop
+        ? document.documentElement.scrollTop
+        : document.body.scrollTop);
 
-    oscillator.frequency.value = (CurX/WIDTH) * maxFreq;
-    gainNode.gain.value = (CurY/HEIGHT) * maxVol;
+  oscillator.frequency.value = (CurX / WIDTH) * maxFreq;
+  gainNode.gain.value = (CurY / HEIGHT) * maxVol;
 
-    canvasDraw();
+  canvasDraw();
 }
 ```
 
@@ -393,28 +417,44 @@ function updatePage(e) {
 每次鼠标的移动，canvasDraw() 方法会被调用，鼠标停留的位置会画出一个多圆圈组成的小簇，它的大小以及颜色会基于 frequency/gain 的值。
 
 ```js
-function random(number1,number2) {
-  var randomNo = number1 + (Math.floor(Math.random() * (number2 - number1)) + 1);
+function random(number1, number2) {
+  var randomNo =
+    number1 + (Math.floor(Math.random() * (number2 - number1)) + 1);
   return randomNo;
 }
 
-var canvas = document.querySelector('.canvas');
+var canvas = document.querySelector(".canvas");
 canvas.width = WIDTH;
 canvas.height = HEIGHT;
 
-var canvasCtx = canvas.getContext('2d');
+var canvasCtx = canvas.getContext("2d");
 
 function canvasDraw() {
   rX = CurX;
   rY = CurY;
-  rC = Math.floor((gainNode.gain.value/maxVol)*30);
+  rC = Math.floor((gainNode.gain.value / maxVol) * 30);
 
   canvasCtx.globalAlpha = 0.2;
 
-  for(i=1;i<=15;i=i+2) {
+  for (i = 1; i <= 15; i = i + 2) {
     canvasCtx.beginPath();
-    canvasCtx.fillStyle = 'rgb(' + 100+(i*10) + ',' + Math.floor((gainNode.gain.value/maxVol)*255) + ',' + Math.floor((oscillator.frequency.value/maxFreq)*255) + ')';
-    canvasCtx.arc(rX+random(0,50),rY+random(0,50),rC/2+i,(Math.PI/180)*0,(Math.PI/180)*360,false);
+    canvasCtx.fillStyle =
+      "rgb(" +
+      100 +
+      i * 10 +
+      "," +
+      Math.floor((gainNode.gain.value / maxVol) * 255) +
+      "," +
+      Math.floor((oscillator.frequency.value / maxFreq) * 255) +
+      ")";
+    canvasCtx.arc(
+      rX + random(0, 50),
+      rY + random(0, 50),
+      rC / 2 + i,
+      (Math.PI / 180) * 0,
+      (Math.PI / 180) * 360,
+      false,
+    );
     canvasCtx.fill();
     canvasCtx.closePath();
   }
@@ -426,10 +466,10 @@ function canvasDraw() {
 当静音按钮点击，以下方法会被调用，disconnect 方法，将切断 gain node 与 destination 节点的链接，有效阻止了节点图的链接，所以没有声音会被产生。再次点击效果相反。
 
 ```js
-var mute = document.querySelector('.mute');
+var mute = document.querySelector(".mute");
 
-mute.onclick = function() {
-  if(mute.id == "") {
+mute.onclick = function () {
+  if (mute.id == "") {
     gainNode.disconnect(audioCtx.destination);
     mute.id = "activated";
     mute.innerHTML = "Unmute";
@@ -438,7 +478,7 @@ mute.onclick = function() {
     mute.id = "";
     mute.innerHTML = "Mute";
   }
-}
+};
 ```
 
 ## 其他节点选择
@@ -459,18 +499,18 @@ var distortion = audioCtx.createWaveShaper();
 
 ```js
 function makeDistortionCurve(amount) {
-  var k = typeof amount === 'number' ? amount : 50,
+  var k = typeof amount === "number" ? amount : 50,
     n_samples = 44100,
     curve = new Float32Array(n_samples),
     deg = Math.PI / 180,
     i = 0,
     x;
-  for ( ; i < n_samples; ++i ) {
-    x = i * 2 / n_samples - 1;
-    curve[i] = ( 3 + k ) * x * 20 * deg / ( Math.PI + k * Math.abs(x) );
+  for (; i < n_samples; ++i) {
+    x = (i * 2) / n_samples - 1;
+    curve[i] = ((3 + k) * x * 20 * deg) / (Math.PI + k * Math.abs(x));
   }
   return curve;
-};
+}
 ```
 
 在 Voice-change-O-matic 的演示中，我们连接到 audio 图表上的 ditortion 节点，当需要的时候可以运用：

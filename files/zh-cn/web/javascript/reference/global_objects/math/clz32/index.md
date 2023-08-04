@@ -35,14 +35,27 @@ Math.clz32 (x)
 ## 示例
 
 ```js
-Math.clz32(1)                // 31
-Math.clz32(1000)             // 22
-Math.clz32()                 // 32
-[NaN, Infinity, -Infinity, 0, -0, null, undefined, "foo", {}, []].filter(function (n) {
-  return Math.clz32(n) !== 32
-})                           // []
-Math.clz32(true)             // 31
-Math.clz32(3.5)              // 30
+Math.clz32(1); // 31
+Math.clz32(1000); // 22
+Math.clz32(); // 32
+
+const stuff = [
+  NaN,
+  Infinity,
+  -Infinity,
+  0,
+  -0,
+  false,
+  null,
+  undefined,
+  "foo",
+  {},
+  [],
+];
+stuff.every((n) => Math.clz32(n) === 32); // true
+
+Math.clz32(true); // 31
+Math.clz32(3.5); // 30
 ```
 
 ## 计算前导 1 的个数
@@ -51,43 +64,46 @@ Math.clz32(3.5)              // 30
 
 先看以下代码：
 
-```plain
-var a = 32776;   // 00000000000000001000000000001000 (16 个前导 0)
-Math.clz32(a);   // 16
+```js
+const a = 32776; // 00000000000000001000000000001000（16 个前导 0）
+Math.clz32(a); // 16
 
-var b = ~32776;  // 11111111111111110111111111110111 (对 32776 取反，0 个前导 0)
-Math.clz32(b);   // 0 (相当于 0 个前导 1)
+const b = ~32776; // 11111111111111110111111111110111（对 32776 取反，0 个前导 0）
+Math.clz32(b); // 0（这与 a 中有多少个前导 0 等价）
 ```
 
 通过以上方法，`clon` 函数可以定义如下：
 
-```plain
-var clz = Math.clz32;
-function clon(integer){
-    return clz(~integer);
+```js
+const clz = Math.clz32;
+
+function clon(integer) {
+  return clz(~integer);
 }
 ```
 
-现在，我们可以进一步实现计算“尾随 0”和“尾随 1”的个数了。下面的`ctrz`函数将第一个 1 之后的高数位全部置为 1 然后取反，再用`Math.clz32 求得`尾随 0 的个数。
+现在，我们可以进一步实现计算“尾随 0”和“尾随 1”的个数了。下面的 `ctrz` 函数将第一个 1 之后的高数位全部置为 1 然后取反，再用 `Math.clz32` 求得尾随 0 的个数。
 
-```plain
+```js
 var clz = Math.clz32;
-function ctrz(integer){ // 计算尾随 0 个数
-    // 1. 将第一个 1 之后的高数位全部置为 1
-    // 00000000000000001000000000001000 => 11111111111111111111111111111000
-    integer |= integer << 16;
-    integer |= integer << 8;
-    integer |= integer << 4;
-    integer |= integer << 2;
-    integer |= integer << 1;
-    // 2. 然后，对该数取反，此时低位的 1 的个数即为所求
-    return 32 - clz(~integer) |0; // `|0`用于保证结果为整数
+function ctrz(integer) {
+  // 计算尾随 0 个数
+  // 1. 将第一个 1 之后的高数位全部置为 1
+  // 00000000000000001000000000001000 => 11111111111111111111111111111000
+  integer |= integer << 16;
+  integer |= integer << 8;
+  integer |= integer << 4;
+  integer |= integer << 2;
+  integer |= integer << 1;
+  // 2. 然后，对该数取反，此时低位的 1 的个数即为所求
+  return (32 - clz(~integer)) | 0; // `| 0` 用于保证结果为整数
 }
-function ctron(integer){ // 计算尾随 1 个数
-    // JavaScript 中没有移位补 1 的运算符
-    // 所以下面的代码是最快的
-    return ctrz(~integer);
-    /* 为了看起来比较对称，你也可以使用以下代码：
+function ctron(integer) {
+  // 计算尾随 1 个数
+  // JavaScript 中没有移位补 1 的运算符
+  // 所以下面的代码是最快的
+  return ctrz(~integer);
+  /* 为了看起来比较对称，你也可以使用以下代码：
        // 1. 将第一个 0 之后的高数位全部置为 0
        integer &= (integer << 16) | 0xffff;
        integer &= (integer << 8 ) | 0x00ff;
@@ -102,29 +118,31 @@ function ctron(integer){ // 计算尾随 1 个数
 
 将以上函数改写成 ASM.JS 模块——然后，你就可以去跟别人炫耀了！ASM.JS 就是用来干这个的。
 
-```plain
-var countTrailsMethods = (function(stdlib, foreign, heap) {
-    "use asm";
-    var clz = stdlib.Math.clz32;
-    function ctrz(integer) { // 计算尾随 0 个数
-        integer = integer | 0; // 确保是整数
-        // 1. 将第一个 1 之后的高数位全部置为 1
-        // ASMjs 中不允许^=、&=、和 |=
-        integer = integer | (integer << 16);
-        integer = integer | (integer << 8);
-        integer = integer | (integer << 4);
-        integer = integer | (integer << 2);
-        integer = integer | (integer << 1);
-        // 2. 然后，对该数取反，此时低位的 1 的个数即为所求
-        return 32 - clz(~integer) |0;
-    }
-    function ctron(integer) { // 计算尾随 1 个数
-        integer = integer | 0; // 确保是整数
-        return ctrz(~integer) |0;
-    }
-    // 蛋疼的是，ASM.JS 必须使用糟糕的 object 类型：
-    // unfourtunately, ASM.JS demands slow crummy objects:
-    return {a: ctrz, b: ctron};
+```js
+var countTrailsMethods = (function (stdlib, foreign, heap) {
+  "use asm";
+  var clz = stdlib.Math.clz32;
+  function ctrz(integer) {
+    // 计算尾随 0 个数
+    integer = integer | 0; // 确保是整数
+    // 1. 将第一个 1 之后的高数位全部置为 1
+    // ASMjs 中不允许^=、&=、和 |=
+    integer = integer | (integer << 16);
+    integer = integer | (integer << 8);
+    integer = integer | (integer << 4);
+    integer = integer | (integer << 2);
+    integer = integer | (integer << 1);
+    // 2. 然后，对该数取反，此时低位的 1 的个数即为所求
+    return (32 - clz(~integer)) | 0;
+  }
+  function ctron(integer) {
+    // 计算尾随 1 个数
+    integer = integer | 0; // 确保是整数
+    return ctrz(~integer) | 0;
+  }
+  // 蛋疼的是，ASM.JS 必须使用糟糕的 object 类型：
+  // unfourtunately, ASM.JS demands slow crummy objects:
+  return { a: ctrz, b: ctron };
 })(window, null, null);
 var ctrz = countTrailsMethods.a;
 var ctron = countTrailsMethods.b;
@@ -134,16 +152,17 @@ var ctron = countTrailsMethods.b;
 
 这个 polyfill 效率最高。
 
-```plain
-if (!Math.clz32) Math.clz32 = (function(log, LN2){
-  return function(x) {
-    var asUint = x >>> 0; // 将 x 转换为 Uint32 类型
-    if (asUint === 0) {
-      return 32;
-    }
-    return 31 - (log(asUint) / LN2 | 0) |0; // "| 0"相当于 Math.floor
-  };
-})(Math.log, Math.LN2);
+```js
+if (!Math.clz32)
+  Math.clz32 = (function (log, LN2) {
+    return function (x) {
+      var asUint = x >>> 0; // 将 x 转换为 Uint32 类型
+      if (asUint === 0) {
+        return 32;
+      }
+      return (31 - ((log(asUint) / LN2) | 0)) | 0; // “| 0”相当于 Math.floor
+    };
+  })(Math.log, Math.LN2);
 ```
 
 ## 规范

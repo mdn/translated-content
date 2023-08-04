@@ -2,7 +2,7 @@
 title: <input type="button">
 slug: Web/HTML/Element/input/button
 l10n:
-  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
+  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
 {{HTMLSidebar}}
@@ -12,38 +12,6 @@ l10n:
 {{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
 
 > **メモ:** `<input>` 要素の `button` 型は完全に妥当な HTML ですが、より新しい {{HTMLElement("button")}} 要素が、ボタンの作成にはより好まれるようになりました。 {{HTMLElement("button")}} のラベル文字列は開始タグと終了タグの間に挿入され、ラベルに画像を含む HTML を含めることができます。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">値</a></strong></td>
-      <td>ボタンのラベルとして使われる文字列</td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>{{domxref("Element/click_event", "click")}}</td>
-    </tr>
-    <tr>
-      <td><strong>対応している共通属性</strong></td>
-      <td>
-        <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> および
-        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td><code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>なし</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 値
 
@@ -77,24 +45,24 @@ l10n:
 
 ```html
 <form>
-  <input type="button" value="マシンを起動">
+  <input type="button" value="マシンを起動" />
 </form>
 <p>マシンが停止しています。</p>
 ```
 
 ```js
-const button = document.querySelector('input');
-const paragraph = document.querySelector('p');
+const button = document.querySelector("input");
+const paragraph = document.querySelector("p");
 
-button.addEventListener('click', updateButton);
+button.addEventListener("click", updateButton);
 
 function updateButton() {
-  if (button.value === 'マシンを起動') {
-    button.value = 'マシンを停止';
-    paragraph.textContent = 'マシンが起動しています！';
+  if (button.value === "マシンを起動") {
+    button.value = "マシンを停止";
+    paragraph.textContent = "マシンが起動しています！";
   } else {
-    button.value = 'マシンを起動';
-    paragraph.textContent = 'マシンが停止しています。';
+    button.value = "マシンを起動";
+    paragraph.textContent = "マシンが停止しています。";
   }
 }
 ```
@@ -117,18 +85,18 @@ function updateButton() {
 ```
 
 ```js hidden
-const button = document.querySelector('input');
-const paragraph = document.querySelector('p');
+const button = document.querySelector("input");
+const paragraph = document.querySelector("p");
 
-button.addEventListener('click', updateButton);
+button.addEventListener("click", updateButton);
 
 function updateButton() {
-  if (button.value === 'マシンを起動') {
-    button.value = 'マシンを停止';
-    paragraph.textContent = 'マシンが起動しています！';
+  if (button.value === "マシンを起動") {
+    button.value = "マシンを停止";
+    paragraph.textContent = "マシンが起動しています！";
   } else {
-    button.value = 'マシンを起動';
-    paragraph.textContent = 'マシンが停止しています。';
+    button.value = "マシンを起動";
+    paragraph.textContent = "マシンが停止しています。";
   }
 }
 ```
@@ -154,16 +122,16 @@ function updateButton() {
 ```
 
 ```js
-const button = document.querySelector('input');
+const button = document.querySelector("input");
 
-button.addEventListener('click', disableButton);
+button.addEventListener("click", disableButton);
 
 function disableButton() {
   button.disabled = true;
-  button.value = 'Disabled';
+  button.value = "Disabled";
   setTimeout(() => {
     button.disabled = false;
-    button.value = 'Enabled';
+    button.value = "Enabled";
   }, 2000);
 }
 ```
@@ -186,10 +154,10 @@ function disableButton() {
 ```
 
 ```js
-const button = document.querySelector('input');
-const fieldset = document.querySelector('fieldset');
+const button = document.querySelector("input");
+const fieldset = document.querySelector("fieldset");
 
-button.addEventListener('click', disableButton);
+button.addEventListener("click", disableButton);
 
 function disableButton() {
   fieldset.disabled = true;
@@ -260,29 +228,29 @@ span {
 ```
 
 ```js
-const canvas = document.querySelector('.myCanvas');
-const width = canvas.width = window.innerWidth;
-const height = canvas.height = window.innerHeight - 85;
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector(".myCanvas");
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight - 85);
+const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'rgb(0,0,0)';
-ctx.fillRect(0,0,width,height);
+ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillRect(0, 0, width, height);
 
 const colorPicker = document.querySelector('input[type="color"]');
 const sizePicker = document.querySelector('input[type="range"]');
-const output = document.querySelector('.output');
+const output = document.querySelector(".output");
 const clearBtn = document.querySelector('input[type="button"]');
 
 // 角度をラジアンに変換する
 function degToRad(degrees) {
-  return degrees * Math.PI / 180;
-};
+  return (degrees * Math.PI) / 180;
+}
 
 // 選択した大きさの値を反映
 
 sizePicker.oninput = () => {
   output.textContent = sizePicker.value;
-}
+};
 
 // マウスポインターと、ボタンが押されているかどうかを格納
 let curX;
@@ -293,7 +261,7 @@ let pressed = false;
 document.onmousemove = (e) => {
   curX = e.pageX;
   curY = e.pageY;
-}
+};
 
 canvas.onmousedown = () => {
   pressed = true;
@@ -301,18 +269,25 @@ canvas.onmousedown = () => {
 
 canvas.onmouseup = () => {
   pressed = false;
-}
+};
 
 clearBtn.onclick = () => {
-  ctx.fillStyle = 'rgb(0,0,0)';
-  ctx.fillRect(0,0,width,height);
-}
+  ctx.fillStyle = "rgb(0,0,0)";
+  ctx.fillRect(0, 0, width, height);
+};
 
 function draw() {
   if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
-    ctx.arc(curX, curY - 85, sizePicker.value, degToRad(0), degToRad(360), false);
+    ctx.arc(
+      curX,
+      curY - 85,
+      sizePicker.value,
+      degToRad(0),
+      degToRad(360),
+      false
+    );
     ctx.fill();
   }
 
@@ -323,6 +298,44 @@ draw();
 ```
 
 {{EmbedLiveSample("Examples", '100%', 600)}}
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">値</a></strong></td>
+      <td>ボタンのラベルとして使われる文字列</td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>{{domxref("Element/click_event", "click")}}</td>
+    </tr>
+    <tr>
+      <td><strong>対応している共通属性</strong></td>
+      <td>
+        <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> および
+        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

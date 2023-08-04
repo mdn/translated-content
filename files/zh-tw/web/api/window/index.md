@@ -327,8 +327,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when the orientation is changed (For mobile devices)
 - {{domxref("Window.ondeviceorientationabsolute")}} {{non-standard_inline}} Chrome only
   - : An event handler property for any device orientation changes.
-- {{domxref("Window.ondeviceproximity")}}
-  - : An event handler property for device proximity event
 - {{domxref("GlobalEventHandlers.onerror")}}
   - : Called when a resource fails to load OR when an error occurs at runtime. See [`error`](/zh-TW/docs/Web/API/Element/error_event) event.
 - {{domxref("GlobalEventHandlers.onfocus")}}
@@ -401,8 +399,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : An event handler for unhandled {{jsxref("Promise")}} rejection events.
 - {{domxref("WindowEventHandlers.onunload")}}
   - : Called when the user navigates away from the page.
-- {{domxref("Window.onuserproximity")}}
-  - : An event handler property for user proximity events.
 - {{domxref("Window.onvrdisplayconnect")}}
   - : Represents an event handler that will run when a compatible VR device has been connected to the computer (when the `vrdisplayconnected` event fires).
 - {{domxref("Window.onvrdisplaydisconnect")}}

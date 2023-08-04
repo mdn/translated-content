@@ -42,7 +42,7 @@ Este elemento inclui os atributos globais.
     - `off`: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method; the browser does not automatically complete the entry.
     - `on`: O navegador pode concluir automaticamente o valor com base nos valores inseridos pelo usuário durante os usos anteriores.
 
-    Se o `autocomplete` atributo não está especificado em um `<textarea>` elemento, o navegador usa o elemento `autocomplete` valor do atributo `<textarea>` proprietário do formulário do elemento. O proprietário do formulário é o {{HTMLElement("form")}} elemento que este`<textarea>` elemento é um descendente ou o elemento de formulário cuja `id` é especificado pelo `form` atributo do elemento de entrada. Para mais informações, consulte o {{htmlattrxref("autocomplete", "form")}} atribuno no {{HTMLElement("form")}}.
+    Se o `autocomplete` atributo não está especificado em um `<textarea>` elemento, o navegador usa o elemento `autocomplete` valor do atributo `<textarea>` proprietário do formulário do elemento. O proprietário do formulário é o {{HTMLElement("form")}} elemento que este`<textarea>` elemento é um descendente ou o elemento de formulário cuja `id` é especificado pelo `form` atributo do elemento de entrada. Para mais informações, consulte o [`autocomplete`](/pt-BR/docs/Web/HTML/Element/form#autocomplete) atribuno no {{HTMLElement("form")}}.
 
 - {{ htmlattrdef("autofocus") }}
   - : Esse atributo booleano permite especificar que um controle de formulário tenha foco de entrada quando a página for carregada. Somente um elemento associado ao formulário em um documento pode ter esse atributo especificado.
@@ -62,7 +62,7 @@ Este elemento inclui os atributos globais.
 
   - : Uma dica para o usuário sobre o que pode ser inserido no controle. Retornos de carro ou feeds de linha no texto do espaço reservado devem ser tratados como quebras de linha ao renderizar a dica.
 
-    > **Note:** **Nota: Os espaços reservados devem ser usados apenas para mostrar um exemplo do tipo de dados que deve ser inserido em um formulário; eles não substituem uma adequada** {{HTMLElement("label")}} elemento vinculado à entrada. Veja {{SectionOnPage("/pt-BR/docs/Web/HTML/Element/input", "Labels and placeholders")}} para uma explicação completa.
+    > **Note:** **Nota: Os espaços reservados devem ser usados apenas para mostrar um exemplo do tipo de dados que deve ser inserido em um formulário; eles não substituem uma adequada** {{HTMLElement("label")}} elemento vinculado à entrada. Veja [Labels e placeholders](/pt-BR/docs/Web/HTML/Element/input#labels_and_placeholders) para uma explicação completa.
 
 - {{ htmlattrdef("readonly") }}
   - : Esse atributo booleano indica que o usuário não pode modificar o valor do controle. Ao contrário do `disabled` atributo, o`readonly` O atributo não impede o usuário de clicar ou selecionar no controle. O valor de um controle somente leitura ainda é enviado com o formulário.
@@ -161,7 +161,7 @@ Este exemplo tem um espaço reservado definido. Observe como ele desaparece quan
 
 {{ EmbedLiveSample('Placeholder','600','80') }}
 
-> **Note:** **Nota: Os espaços reservados devem ser usados apenas para mostrar um exemplo do tipo de dados que deve ser inserido em um formulário; eles não substituem uma adequada**{{HTMLElement("label")}} elemento vinculado à entrada. Veja {{SectionOnPage("/pt-BR/docs/Web/HTML/Element/input", "Labels and placeholders")}} para uma explicação completa.
+> **Note:** **Nota: Os espaços reservados devem ser usados apenas para mostrar um exemplo do tipo de dados que deve ser inserido em um formulário; eles não substituem uma adequada**{{HTMLElement("label")}} elemento vinculado à entrada. Veja [Labels e placeholders](/pt-BR/docs/Web/HTML/Element/input#labels_and_placeholders) para uma explicação completa.
 
 ### Desativado e somente leitura
 

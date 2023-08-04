@@ -3,6 +3,8 @@ title: DoS 攻击
 slug: Glossary/DOS_attack
 ---
 
+{{GlossarySidebar}}
+
 DoS（拒绝服务攻击，Denial of Service）是一种网络攻击手段，它通过给{{glossary("server","服务器")}}发送大量请求来阻止对资源的合法使用。
 
 计算机资源有限，比如算力和内存。当这些资源过载时，程序可能会发生冻结或崩溃，使程序不可用。DoS 攻击结合多种技术来消耗资源，使合法用户无法使用服务器或网络，或者至少让服务器反应迟缓。

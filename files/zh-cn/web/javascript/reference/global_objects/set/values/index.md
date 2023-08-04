@@ -27,9 +27,9 @@ values()
 
 ```js
 const mySet = new Set();
-mySet.add('foo');
-mySet.add('bar');
-mySet.add('baz');
+mySet.add("foo");
+mySet.add("bar");
+mySet.add("baz");
 
 const setIter = mySet.values();
 

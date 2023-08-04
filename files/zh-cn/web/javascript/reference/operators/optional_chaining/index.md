@@ -1,7 +1,6 @@
 ---
 title: 可选链运算符（?.）
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
-original_slug: Web/JavaScript/Reference/Operators/可选链
 ---
 
 {{JSSidebar("Operators")}}
@@ -44,7 +43,7 @@ let nestedProp = obj.first?.second;
 
 ```js
 let temp = obj.first;
-let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);
+let nestedProp = temp === null || temp === undefined ? undefined : temp.second;
 ```
 
 ### 可选链与函数调用
@@ -70,9 +69,9 @@ let result = someInterface.customMethod?.();
 function doSomething(onContent, onError) {
   try {
     // ... do something with the data
-  }
-  catch (err) {
-    if (onError) { // 校验 onError 是否真的存在
+  } catch (err) {
+    if (onError) {
+      // 校验 onError 是否真的存在
       onError(err.message);
     }
   }
@@ -83,9 +82,8 @@ function doSomething(onContent, onError) {
 // 使用可选链进行函数调用
 function doSomething(onContent, onError) {
   try {
-   // ... do something with the data
-  }
-  catch (err) {
+    // ... do something with the data
+  } catch (err) {
     onError?.(err.message); // 如果 onError 是 undefined 也不会有异常
   }
 }
@@ -96,7 +94,7 @@ function doSomething(onContent, onError) {
 当使用[方括号与属性名](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors#方括号表示法)的形式来访问属性时，你也可以使用可选链运算符：
 
 ```js
-let nestedProp = obj?.['prop' + 'Name'];
+let nestedProp = obj?.["prop" + "Name"];
 ```
 
 ### 可选链不能用于赋值
@@ -120,7 +118,7 @@ let arrayItem = arr?.[42];
 
 ```js
 let myMap = new Map();
-myMap.set("foo", {name: "baz", desc: "inga"});
+myMap.set("foo", { name: "baz", desc: "inga" });
 
 let nameBar = myMap.get("bar")?.name;
 ```
@@ -146,8 +144,8 @@ let customer = {
   name: "Carl",
   details: {
     age: 82,
-    location: "Paradise Falls" // details 的 address 属性未有定义
-  }
+    location: "Paradise Falls", // details 的 address 属性未有定义
+  },
 };
 let customerCity = customer.details?.address?.city;
 
@@ -162,7 +160,7 @@ let duration = vacations.trip?.getTime?.();
 ```js
 let customer = {
   name: "Carl",
-  details: { age: 82 }
+  details: { age: 82 },
 };
 let customerCity = customer?.city ?? "暗之城";
 console.log(customerCity); // “暗之城”

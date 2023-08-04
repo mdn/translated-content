@@ -1,9 +1,6 @@
 ---
-title: '<bdo>: Элемент переопределения направления текста'
+title: "<bdo>: Элемент переопределения направления текста"
 slug: Web/HTML/Element/bdo
-tags:
-  - направление текста
-translation_of: Web/HTML/Element/bdo
 ---
 
 {{HTMLSidebar}}
@@ -20,7 +17,7 @@ translation_of: Web/HTML/Element/bdo
 | Закрывающий тег                                        | {{no_tag_omission}}                                                                                                                                                               |
 | Допустимые родители                                    | Все элементы, принимающие [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content),                                                                                       |
 | Допустимые ARIA-роли                                   | Любые                                                                                                                                                                                  |
-| DOM-интерфейс                                          | {{domxref("HTMLElement")}} до Gecko 1.9.2 (Firefox 4) включительно, Firefox реализует интерфейс [`HTMLSpanElement`](/en-US/docs/Web/API/HTMLSpanElement) для этого элемента. |
+| DOM-интерфейс                                          | {{domxref("HTMLElement")}} до Gecko 1.9.2 (Firefox 4) включительно, Firefox реализует интерфейс [`HTMLSpanElement`](/ru/docs/Web/API/HTMLSpanElement) для этого элемента. |
 
 ## Атрибуты
 

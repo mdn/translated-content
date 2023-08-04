@@ -1,11 +1,6 @@
 ---
-title: 'Kuma: вики-платформа MDN'
+title: "Kuma: вики-платформа MDN"
 slug: orphaned/MDN/Yari
-tags:
-  - Kuma
-  - Главная
-translation_of: MDN/Kuma
-original_slug: MDN/Yari
 ---
 
 {{MDNSidebar}}

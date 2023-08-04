@@ -1,16 +1,6 @@
 ---
 title: Как работает CSS
 slug: Learn/CSS/First_steps/How_CSS_works
-tags:
-  - Beginner
-  - CSS
-  - DOM
-  - DOM дерево
-  - Learn
-  - Начинающий
-  - Обучение
-  - дерево
-translation_of: Learn/CSS/First_steps/How_CSS_works
 ---
 
 {{LearnSidebar}}
@@ -76,7 +66,9 @@ P
 {{EmbedLiveSample('A_real_DOM_representation', '100%', 55)}}
 
 ```css hidden
-p {margin:0;}
+p {
+  margin: 0;
+}
 ```
 
 ## Добавление CSS в DOM
@@ -122,7 +114,7 @@ span {
 Ниже я использовал британское написание слова _color_, что делает свойство некорректным. Поэтому текст не будет синим. Однако всё остальное будет работать; пропущено только недействительное свойство.
 
 ```html
-<p> I want this text to be large, bold and blue.</p>
+<p>I want this text to be large, bold and blue.</p>
 ```
 
 ```css

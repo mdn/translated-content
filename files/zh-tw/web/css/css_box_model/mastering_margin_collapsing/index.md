@@ -83,11 +83,7 @@ slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 
 以上這些內容都是發生在 Block-Level 的元素，設定 floating 和 absolutely positioned 的元素完全不用擔心邊界重疊的計算。
 
-## 標準文件
-
-{{Specifications}}
-
-## 參考
+## 參見
 
 - [CSS Reference](/zh-TW/docs/Web/CSS/CSS_Reference)
 - CSS 重要概念：

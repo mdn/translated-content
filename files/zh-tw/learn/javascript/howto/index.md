@@ -6,7 +6,7 @@ slug: Learn/JavaScript/Howto
 {{LearnSidebar}}
 以下連結針對你需要修復的常見問題提供解決方案，以便讓你的 JavaScript 正確執行。
 
-## **初學者常見的錯誤**
+## 初學者常見的錯誤
 
 ### 糾正語法與程式碼
 

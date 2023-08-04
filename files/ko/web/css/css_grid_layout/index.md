@@ -1,6 +1,6 @@
 ---
 title: CSS 그리드 레이아웃
-slug: Web/CSS/CSS_Grid_Layout
+slug: Web/CSS/CSS_grid_layout
 ---
 
 <strong>CSS 그리드 레이아웃(Grid Layout)</strong>은 페이지를 여러 주요 영역으로 나누거나, 크기와 위치 및 문서 계층 구조의 관점에서 HTML 기본 요소로 작성된 콘트롤 간의 관계를 정의하는 데 아주 탁월합니다.
@@ -158,8 +158,8 @@ slug: Web/CSS/CSS_Grid_Layout
 - [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
 - [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
 - [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
-- [Subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
-- [Masonry layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) {{Experimental_Inline}}
+- [Subgrid](/ko/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- [Masonry layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) {{Experimental_Inline}}
 
 ## 명세서
 
@@ -168,15 +168,15 @@ slug: Web/CSS/CSS_Grid_Layout
 ## 같이 보기
 
 - Glossary terms:
-  - [Grid](/en-US/docs/Glossary/Grid)
-  - [Grid lines](/en-US/docs/Glossary/Grid_Lines)
-  - [Grid tracks](/en-US/docs/Glossary/Grid_Tracks)
-  - [Grid cell](/en-US/docs/Glossary/Grid_Cell)
-  - [Grid area](/en-US/docs/Glossary/Grid_Areas)
-  - [Gutters](/en-US/docs/Glossary/Gutters)
-  - [Grid axis](/en-US/docs/Glossary/Grid_Axis)
-  - [Grid row](/en-US/docs/Glossary/Grid_Rows)
-  - [Grid column](/en-US/docs/Glossary/Grid_Column)
+  - [Grid](/ko/docs/Glossary/Grid)
+  - [Grid lines](/ko/docs/Glossary/Grid_Lines)
+  - [Grid tracks](/ko/docs/Glossary/Grid_Tracks)
+  - [Grid cell](/ko/docs/Glossary/Grid_Cell)
+  - [Grid area](/ko/docs/Glossary/Grid_Areas)
+  - [Gutters](/ko/docs/Glossary/Gutters)
+  - [Grid axis](/ko/docs/Glossary/Grid_Axis)
+  - [Grid row](/ko/docs/Glossary/Grid_Rows)
+  - [Grid column](/ko/docs/Glossary/Grid_Column)
 - [Grid by Example](https://gridbyexample.com/) - A collection of usage examples and video tutorials
 - [CSS Grid Reference - Codrops](https://tympanus.net/codrops/css_reference/grid/)
 - [CSS Grid Inspector - Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)

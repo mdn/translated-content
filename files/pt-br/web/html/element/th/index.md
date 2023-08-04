@@ -5,7 +5,7 @@ slug: Web/HTML/Element/th
 
 {{HTMLSidebar}}
 
-O **elemento HTML `<th>`** define uma célula cabeçalho do grupo de células de sua tabela. A exatidão natural deste grupo é definida pelos atributos {{htmlattrxref("scope", "th")}} e {{htmlattrxref("headers", "th")}}.
+O **elemento HTML `<th>`** define uma célula cabeçalho do grupo de células de sua tabela. A exatidão natural deste grupo é definida pelos atributos [`scope`](/pt-BR/docs/Web/HTML/Element/th#scope) e [`headers`](/pt-BR/docs/Web/HTML/Element/th#headers).
 
 {{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}
 
@@ -89,19 +89,19 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     - `center`: O conteúdo é centralizado da célula.
     - `right`: O conteúdo é alinhado a direita da célula.
     - `justify` (somente com texto): O conteúdo é estendido dentro da célula para cobrir toda a sua largura.
-    - `char` (somente com texto): O conteúdo está alinhado a um caractere dentro do elemento `<th>` com deslocamento mínimo. Esse caractere é definido pelos atributos {{htmlattrxref("char", "th")}} e {{htmlattrxref("charoff", "th")}}.
+    - `char` (somente com texto): O conteúdo está alinhado a um caractere dentro do elemento `<th>` com deslocamento mínimo. Esse caractere é definido pelos atributos [`char`](/pt-BR/docs/Web/HTML/Element/th#char) e [`charoff`](/pt-BR/docs/Web/HTML/Element/th#charoff).
 
     O valor padrão quando não especificado é `left`.
 
     > **Note:**Não use esse atributo, pois ele está obsoleto no padrão mais recente.- Para alcançar o mesmo efeito que os valores `left`, `center`, `right` ou `justify`, aplique a propriedade CSS {{cssxref("text-align")}} no elemento.
     >
-    > - Para alcançar o mesmo efeito que os valor `char`, atribue a {{cssxref("text-align")}} o mesmo valor que você usaria para {{htmlattrxref("char", "th")}}. {{unimplemented_inline}} no CSS3.
+    > - Para alcançar o mesmo efeito que os valor `char`, atribue a {{cssxref("text-align")}} o mesmo valor que você usaria para [`char`](/pt-BR/docs/Web/HTML/Element/th#char). {{unimplemented_inline}} no CSS3.
 
 - {{htmlattrdef("axis")}}
 
   - : Este atributo contém uma lista de palavras separadas por espaço. Cada palavra é o `id` de um grupo de células às quais este cabeçalho se aplica.
 
-    > **Note:** Não use esse atributo, pois ele está obsoleto no padrão mais recente: use o atributo {{htmlattrxref("scope", "th")}}.
+    > **Note:** Não use esse atributo, pois ele está obsoleto no padrão mais recente: use o atributo [`scope`](/pt-BR/docs/Web/HTML/Element/th#scope).
 
 - {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
 
@@ -121,7 +121,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 - {{htmlattrdef("char")}}
 
-  - : O conteúdo da célula está alinhado a um caractere. Os valores típicos incluem um ponto (.) para alinhar números ou valores monetários. Se {{htmlattrxref("align", "th")}} não está definido no `char`, o atributo é ignorado.
+  - : O conteúdo da célula está alinhado a um caractere. Os valores típicos incluem um ponto (.) para alinhar números ou valores monetários. Se [`align`](/pt-BR/docs/Web/HTML/Element/th#align) não está definido no `char`, o atributo é ignorado.
 
     > **Note:** Não use esse atributo, pois ele está obsoleto no padrão mais recente. Para obter o mesmo efeito, você pode especificar o caractere como o primeiro valor da propriedade {{cssxref("text-align")}}, {{unimplemented_inline}} no CSS3.
 

@@ -60,7 +60,7 @@ HTTPS によって確立される安全なコネクションでは、もう 1 �
 ウェブサーバーへのコネクションが確立されると、ブラウザーはユーザーに代わって最初の [HTTP `GET` リクエスト](/ja/docs/Web/HTTP/Methods)を送信します。ウェブサイトであれば、多くの場合その対象は HTML ファイルです。リクエストを受け取ったサーバーは、適当なレスポンスヘッダーと HTML のコンテンツを返します。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -152,7 +152,7 @@ CSS が解釈され、CSSOM が生成される間、JavaScript ファイルを�
 
 ブラウザーはコンテンツを理解し翻訳する補助機器で使用される[アクセシビリティ](/ja/docs/Learn/Accessibility)ツリーも構築します。アクセシビリティオブジェクトモデル (AOM) は補助機器向けの DOM のようなものです。ブラウザーは、DOM が更新されるとアクセシビリティツリーも更新します。アクセシビリティツリーは補助機能それ自体からは変更できません。
 
-AOM が構築されるまで、[画面リーダー](/ja/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide)でコンテンツにアクセスできません。
+AOM が構築されるまで、[スクリーンリーダー](/ja/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide)でコンテンツにアクセスできません。
 
 ## レンダリング
 

@@ -1,7 +1,6 @@
 ---
 title: MediaRecorder.isTypeSupported()
 slug: Web/API/MediaRecorder/isTypeSupported_static
-original_slug: Web/API/MediaRecorder/isTypeSupported
 ---
 
 {{APIRef("MediaStream Recording")}}

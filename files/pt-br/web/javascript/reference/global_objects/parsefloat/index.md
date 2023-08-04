@@ -49,7 +49,7 @@ parseFloat("0.0314E+2");
 parseFloat("3.14more non-digit characters");
 ```
 
-### `parseFloat` retornando `NaN`:
+### `parseFloat` retornando `NaN`
 
 O exemplo a seguir retorna `NaN`
 

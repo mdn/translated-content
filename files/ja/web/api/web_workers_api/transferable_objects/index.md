@@ -1,7 +1,6 @@
 ---
 title: 移譲可能オブジェクト
 slug: Web/API/Web_Workers_API/Transferable_objects
-original_slug: Glossary/Transferable_objects
 l10n:
   sourceCommit: b4abbb2165f43c02130dbe68833052613fd16e05
 ---

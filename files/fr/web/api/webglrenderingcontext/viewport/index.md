@@ -1,13 +1,6 @@
 ---
 title: WebGLRenderingContext.viewport()
 slug: Web/API/WebGLRenderingContext/viewport
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/viewport
 ---
 
 {{APIRef("WebGL")}}
@@ -37,7 +30,7 @@ Aucune.
 
 ### Erreurs déclenchées
 
-Si *largeur* ou *hauteur* est une valeur négative, une erreur `gl.INVALID_VALUE` est déclenchée.
+Si _largeur_ ou _hauteur_ est une valeur négative, une erreur `gl.INVALID_VALUE` est déclenchée.
 
 ## Exemples
 

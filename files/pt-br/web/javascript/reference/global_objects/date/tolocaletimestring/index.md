@@ -45,9 +45,9 @@ Os argumentos `locales` e `options` não são suportados em todos os browsers ai
 ```js
 function toLocaleTimeStringSupportsLocales() {
   try {
-    new Date().toLocaleTimeString('i');
+    new Date().toLocaleTimeString("i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -64,24 +64,24 @@ var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // America/Los_Angeles for the US
 
 // US English usa o formato 12 horas com AM/PM
-console.log(date.toLocaleTimeString('en-US'));
+console.log(date.toLocaleTimeString("en-US"));
 // → "7:00:00 PM"
 
 // British English usa o formato 24 horas sem AM/PM
-console.log(date.toLocaleTimeString('en-GB'));
+console.log(date.toLocaleTimeString("en-GB"));
 // → "03:00:00"
 
 // Korean usa o formato 12 horas com AM/PM
-console.log(date.toLocaleTimeString('ko-KR'));
+console.log(date.toLocaleTimeString("ko-KR"));
 // → "오후 12:00:00"
 
 // Arabic na maiorias dos países que falam árabe usa-se os dígitos arábicos reais
-console.log(date.toLocaleTimeString('ar-EG'));
+console.log(date.toLocaleTimeString("ar-EG"));
 // → "٧:٠٠:٠٠ م"
 
 // quando solicitar um idioma que talvez não seja suportado, como o
 // Balinese, inclua um idioma de fallback, nesse caso Indonesian
-console.log(date.toLocaleTimeString(['ban', 'id']));
+console.log(date.toLocaleTimeString(["ban", "id"]));
 // → "11.00.00"
 ```
 
@@ -93,12 +93,12 @@ Os resultados fornecidos por `toLocaleTimeString()` podem ser customizados usand
 var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // uma aplicação pode querer usar UTC e tornar isso visível
-var options = { timeZone: 'UTC', timeZoneName: 'short' };
-console.log(date.toLocaleTimeString('en-US', options));
+var options = { timeZone: "UTC", timeZoneName: "short" };
+console.log(date.toLocaleTimeString("en-US", options));
 // → "3:00:00 AM GMT"
 
 // ás vezes, até em US precise usar o formato 24 horas
-console.log(date.toLocaleTimeString('en-US', { hour12: false }));
+console.log(date.toLocaleTimeString("en-US", { hour12: false }));
 // → "19:00:00"
 ```
 
@@ -108,14 +108,14 @@ Quando se formata um grande número de datas, é aconselhável criar um objeto {
 
 ## Especificações
 
-| Especificação                                                                                                                                    | Status                           | Comentário                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                                                         | {{Spec2('ES3')}}             | Definição inicial, Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.7', 'Date.prototype.toLocaleTimeString')}}                                             | {{Spec2('ES5.1')}}         |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleTimeString')}}                     | {{Spec2('ES6')}}             |                                                    |
-| {{SpecName('ESDraft', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleTimeString')}}             | {{Spec2('ESDraft')}}     |                                                    |
-| {{SpecName('ES Int 1.0', '#sec-13.3.3', 'Date.prototype.toLocaleTimeString')}}                                         | {{Spec2('ES Int 1.0')}} | Define os argumentos `locales` e `options`.        |
-| {{SpecName('ES Int 2.0', '#sec-13.3.3', 'Date.prototype.toLocaleTimeString')}}                                         | {{Spec2('ES Int 2.0')}} |                                                    |
+| Especificação                                                                                               | Status                    | Comentário                                         |
+| ----------------------------------------------------------------------------------------------------------- | ------------------------- | -------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                                         | {{Spec2('ES3')}}          | Definição inicial, Implementado no JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.7', 'Date.prototype.toLocaleTimeString')}}                                 | {{Spec2('ES5.1')}}        |                                                    |
+| {{SpecName('ES6', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleTimeString')}}              | {{Spec2('ES6')}}          |                                                    |
+| {{SpecName('ESDraft', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleTimeString')}}          | {{Spec2('ESDraft')}}      |                                                    |
+| {{SpecName('ES Int 1.0', '#sec-13.3.3', 'Date.prototype.toLocaleTimeString')}}                              | {{Spec2('ES Int 1.0')}}   | Define os argumentos `locales` e `options`.        |
+| {{SpecName('ES Int 2.0', '#sec-13.3.3', 'Date.prototype.toLocaleTimeString')}}                              | {{Spec2('ES Int 2.0')}}   |                                                    |
 | {{SpecName('ES Int Draft', '#sec-Date.prototype.toLocaleTimeString', 'Date.prototype.toLocaleTimeString')}} | {{Spec2('ES Int Draft')}} |                                                    |
 
 ## Compatibilidade com navegadores

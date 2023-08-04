@@ -1,11 +1,6 @@
 ---
 title: Указанное значение
 slug: Web/CSS/specified_value
-tags:
-  - CSS
-  - CSS Reference
-translation_of: Web/CSS/specified_value
-original_slug: Web/CSS/Указанное_значение
 ---
 
 {{CSSRef}}

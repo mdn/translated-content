@@ -14,7 +14,7 @@ Retorna una referencia al documento contenido en la ventana.
 ## Sintaxis
 
 ```js
-doc = window.document
+doc = window.document;
 ```
 
 ### Parámetros
@@ -24,19 +24,17 @@ doc = window.document
 ## Example
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-   <title>Hola, Mundo!</title>
-</head>
-<body>
-
-<script type="text/javascript">
-   var doc = window.document;
-   console.log(doc.title); // Hola, Mundo!
-</script>
-
-</body>
+  <head>
+    <title>Hola, Mundo!</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var doc = window.document;
+      console.log(doc.title); // Hola, Mundo!
+    </script>
+  </body>
 </html>
 ```
 

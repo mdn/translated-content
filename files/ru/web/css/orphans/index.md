@@ -1,12 +1,6 @@
 ---
 title: orphans
 slug: Web/CSS/orphans
-tags:
-  - Вёрстка
-  - печать
-  - разрыв страницы
-  - фрагментация
-translation_of: Web/CSS/orphans
 ---
 
 {{CSSRef}}

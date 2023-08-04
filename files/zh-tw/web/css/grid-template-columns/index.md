@@ -114,5 +114,5 @@ grid-template-columns: unset;
 ## See also
 
 - Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- Grid Layout Guide: _[Basic concepts of grid layout - Grid Tracks](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Grid_Tracks)_
+- Grid Layout Guide: _[Basic concepts of grid layout - Grid Tracks](/zh-TW/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#Grid_Tracks)_
 - Video tutorial: _[Defining a Grid](http://gridbyexample.com/video/series-define-a-grid/)_

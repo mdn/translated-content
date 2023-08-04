@@ -1,7 +1,6 @@
 ---
 title: transition-duration
 slug: Web/CSS/transition-duration
-translation_of: Web/CSS/transition-duration
 ---
 {{CSSRef}}
 

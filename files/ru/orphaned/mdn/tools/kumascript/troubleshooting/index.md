@@ -1,16 +1,6 @@
 ---
 title: Решение проблем с ошибками в KumaScript
 slug: orphaned/MDN/Tools/KumaScript/Troubleshooting
-tags:
-  - Errors
-  - KumaScript
-  - MDN Meta
-  - Tools
-  - Ошибки
-  - Руководство
-  - инструменты
-translation_of: MDN/Tools/KumaScript/Troubleshooting
-original_slug: MDN/Tools/KumaScript/Troubleshooting
 ---
 
 {{MDNSidebar}}

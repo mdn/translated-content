@@ -1,15 +1,6 @@
 ---
 title: Appliquer des découpes simples
 slug: Web/API/WebGL_API/By_example/Basic_scissoring
-tags:
-  - Apprendre
-  - Débutant
-  - Exemple
-  - Graphisme
-  - Tutoriel
-  - WebGL
-translation_of: Web/API/WebGL_API/By_example/Basic_scissoring
-original_slug: Web/API/WebGL_API/By_example/Appliquer_des_découpes_simples
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Masque_de_couleur","Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL")}}
@@ -34,58 +25,63 @@ Par défaut, l'étape de découpe est désactivée dans le processus. Ici, on l'
 
 ```html
 <p>Le résultat de la découpe.</p>
-<canvas>Il semblerait que votre navigateur
-    ne supporte pas l'élément canvas.</canvas>
+<canvas
+  >Il semblerait que votre navigateur ne supporte pas l'élément canvas.</canvas
+>
 ```
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : block;
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: block;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 ```
 
 ```js
-window.addEventListener("load", function setupWebGL (evt) {
-  "use strict"
-  window.removeEventListener(evt.type, setupWebGL, false);
-  var paragraph = document.querySelector("p");
-  var canvas = document.querySelector("canvas");
+window.addEventListener(
+  "load",
+  function setupWebGL(evt) {
+    "use strict";
+    window.removeEventListener(evt.type, setupWebGL, false);
+    var paragraph = document.querySelector("p");
+    var canvas = document.querySelector("canvas");
 
-  // Les deux lignes suivantes définissent la taille,
-  // en pixels CSS, du buffer de dessin qui est la même
-  // que celle du canevas (définie avec CSS).
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
+    // Les deux lignes suivantes définissent la taille,
+    // en pixels CSS, du buffer de dessin qui est la même
+    // que celle du canevas (définie avec CSS).
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
 
-  var gl = canvas.getContext("webgl")
-    || canvas.getContext("experimental-webgl");
-  if (!gl) {
-    paragraph.innerHTML = "Échec de la récupération du "
-      + "contexte WebGL. Votre navigateur pourrait ne pas "
-      + "supporter WebGL.";
-    return;
-  }
-  gl.viewport(0, 0,
-    gl.drawingBufferWidth, gl.drawingBufferHeight);
+    var gl =
+      canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+    if (!gl) {
+      paragraph.innerHTML =
+        "Échec de la récupération du " +
+        "contexte WebGL. Votre navigateur pourrait ne pas " +
+        "supporter WebGL.";
+      return;
+    }
+    gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
 
-  // On applique une découpe et on définit la taille de
-  // la zone de découpe.
-  gl.enable(gl.SCISSOR_TEST);
-  gl.scissor(40, 20, 60, 170);
+    // On applique une découpe et on définit la taille de
+    // la zone de découpe.
+    gl.enable(gl.SCISSOR_TEST);
+    gl.scissor(40, 20, 60, 170);
 
-  // On applique un jaune uni dans le contexte de rendu.
-  gl.clearColor(1.0, 1.0, 0.0, 1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT);
-}, false);
+    // On applique un jaune uni dans le contexte de rendu.
+    gl.clearColor(1.0, 1.0, 0.0, 1.0);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+  },
+  false,
+);
 ```
 
 Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/basic-scissoring).

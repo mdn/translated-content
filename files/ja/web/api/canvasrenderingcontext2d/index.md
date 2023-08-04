@@ -214,11 +214,11 @@ ctx.stroke();
 {{domxref("ImageData")}} オブジェクトも参照してください。
 
 - {{domxref("CanvasRenderingContext2D.createImageData()")}}
-  - : 引数で指定した領域から空の {{domxref("ImageData")}} オブジェクトを作成します。そのオブジェクトはすべてのピクセルが透明な黒で構成されています。
+  - : 引数で指定したサイズの空の {{domxref("ImageData")}} オブジェクトを作成します。そのオブジェクトはすべてのピクセルが透明な黒で構成されています。
 - {{domxref("CanvasRenderingContext2D.getImageData()")}}
-  - : キャンバス内の座標 _(sx, sy)_ から 幅 _sw_ と 高さ _sh_ のサイズで示される基本のピクセルデータの {{domxref("ImageData")}} オブジェクトを取得します。
+  - : キャンバス内の座標 _(sx, sy)_ から 幅 _sw_ と 高さ _sh_ のサイズで示される部分に対応するピクセルデータの {{domxref("ImageData")}} オブジェクトを取得します。
 - {{domxref("CanvasRenderingContext2D.putImageData()")}}
-  - : 引数で指定した {{domxref("ImageData")}} オブジェクトのデータをビットマップ上に描画します。不適切な四角形が指定された場合は、その四角形のピクセルだけが描画されます。
+  - : 引数で指定した {{domxref("ImageData")}} オブジェクトのデータをビットマップ上に描画します。再描画対象の四角形が指定された場合は、その四角形のピクセルだけが描画されます。
 
 ### 画像の平滑化
 

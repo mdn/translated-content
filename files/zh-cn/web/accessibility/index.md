@@ -4,7 +4,7 @@ slug: Web/Accessibility
 ---
 
 <section id="Quick_links">
-  {{ListSubpagesForSidebar("zh-CN/docs/Web/Accessibility", 1)}}
+  {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility", 1)}}
 </section>
 
 在 Web 开发无障碍性意味着使尽可能多的人能够使用 Web 站点，即使这些人的能力是有限的。这里我们提供关于开发易访问的内容的信息。

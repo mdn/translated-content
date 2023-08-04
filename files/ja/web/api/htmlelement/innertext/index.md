@@ -1,6 +1,8 @@
 ---
-title: HTMLElement.innerText
+title: "HTMLElement: innerText プロパティ"
 slug: Web/API/HTMLElement/innerText
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -14,9 +16,11 @@ slug: Web/API/HTMLElement/innerText
 
 ## 値
 
-{{domxref("DOMString")}} で、要素の表示されたテキストの内容を表します。
+文字列で、要素の表示されたテキストの内容を表します。
 
 要素自身が[表示されないとき](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered)（例えば、文書から切り離されたり、表示から隠されたりしている場合）、返値は {{domxref("Node.textContent")}} プロパティと同じ値になります。
+
+> **警告:** `innerText` をノードに設定すると、そのノードの _すべての_ 子ノードが取り除かれ、指定した文字列値のテキストノード 1 つに置き換えられます。
 
 ## 例
 
@@ -27,14 +31,25 @@ slug: Web/API/HTMLElement/innerText
 ```html
 <h3>元の要素:</h3>
 <p id="source">
-  <style>#source { color: red;  } #text { text-transform: uppercase; }</style>
-<span id=text>このテキストが<br>どう扱われるか<br>下で見てみてください。</span>
+  <style>
+    #source {
+       color: red;
+    }
+    #text {
+      text-transform: uppercase;
+    }
+  </style>
+  <span id="text">
+    このテキストが<br />
+    どう扱われるか<br />
+    下で見てみてください。
+  </span>
   <span style="display:none">隠しテキスト</span>
 </p>
 <h3>textContent の結果:</h3>
-<textarea id="textContentOutput" rows="6" cols="30" readonly>...</textarea>
+<textarea id="textContentOutput" rows="6" cols="30" readonly>…</textarea>
 <h3>innerText の結果:</h3>
-<textarea id="innerTextOutput" rows="6" cols="30" readonly>...</textarea>
+<textarea id="innerTextOutput" rows="6" cols="30" readonly>…</textarea>
 ```
 
 ### JavaScript
@@ -50,7 +65,7 @@ innerTextOutput.value = source.innerText;
 
 ### 結果
 
-{{EmbedLiveSample("Example", 700, 450)}}
+{{EmbedLiveSample("Examples", 700, 450)}}
 
 ## 仕様書
 

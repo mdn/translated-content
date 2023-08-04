@@ -1,23 +1,18 @@
 ---
 title: Итераторы и  генераторы
 slug: Web/JavaScript/Guide/Iterators_and_generators
-tags:
-  - yield
-  - Генераторы
-  - Итераторы
-translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Meta_programming")}}
 
-Обработка каждого элемента коллекции является весьма распространённой операцией. JavaScript предоставляет несколько способов перебора коллекции, от простого цикла [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) до [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) и [array comprehensions](/ru/docs/Web/JavaScript/Reference/Operators/Array_comprehensions). Итераторы и генераторы внедряют концепцию перебора непосредственно в ядро языка и обеспечивают механизм настройки поведения [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) циклов.
+Обработка каждого элемента коллекции является весьма распространённой операцией. JavaScript предоставляет несколько способов перебора коллекции, от простого цикла [`for`](/ru/docs/Web/JavaScript/Reference/Statements/for) до [`map()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`filter()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) и [array comprehensions](/ru/docs/Web/JavaScript/Reference/Operators/Array_comprehensions). Итераторы и генераторы внедряют концепцию перебора непосредственно в ядро языка и обеспечивают механизм настройки поведения [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of) циклов.
 
 Подробнее см. также:
 
 - [Iteration protocols](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-- [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*) и {{jsxref("Generator")}}
-- [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) и [`yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*)
+- [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of)
+- [`function*`](/ru/docs/Web/JavaScript/Reference/Statements/function*) и {{jsxref("Generator")}}
+- [`yield`](/ru/docs/Web/JavaScript/Reference/Operators/yield) и [`yield*`](/ru/docs/Web/JavaScript/Reference/Operators/yield*)
 - [Generator comprehensions](/ru/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions) {{experimental_inline}}
 
 ## Итераторы
@@ -96,7 +91,7 @@ myIterable[Symbol.iterator] = function* () {
 
 ### Синтаксис для итерируемых объектов
 
-Некоторые выражения работают с итерируемыми объектами, например, [`for-of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) циклы, [spread operator](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator), [`yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*), и [destructuring assignment](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+Некоторые выражения работают с итерируемыми объектами, например, [`for-of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of) циклы, [spread operator](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator), [`yield*`](/ru/docs/Web/JavaScript/Reference/Operators/yield*), и [destructuring assignment](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
 ```js
 for(let value of ["a", "b", "c"]){

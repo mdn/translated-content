@@ -1,13 +1,6 @@
 ---
 title: IDBIndex.getKey()
 slug: Web/API/IDBIndex/getKey
-tags:
-  - API
-  - IDBIndex
-  - IndexedDB
-  - Méthode
-  - Reference
-translation_of: Web/API/IDBIndex/getKey
 ---
 
 {{APIRef("IndexedDB")}}
@@ -21,7 +14,7 @@ Si la méthode trouve une clé, ce sera alors la propriété `result` de la requ
 ## Syntaxe
 
 ```js
-var myIndex = objectStore.index('index');
+var myIndex = objectStore.index("index");
 var request = myIndex.getKey(key);
 ```
 
@@ -78,35 +71,52 @@ Enfin, on parcourt les enregistrements pour remplir un tableau HTML. Le dépôt 
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = '';
-  var transaction = db.transaction(['contactsList'], 'readonly');
-  var objectStore = transaction.objectStore('contactsList');
-  var myIndex = objectStore.index('lName');
-  var getKeyRequest = myIndex.getKey('Bungle');
-  getKeyRequest.onsuccess = function() {
+  tableEntry.innerHTML = "";
+  var transaction = db.transaction(["contactsList"], "readonly");
+  var objectStore = transaction.objectStore("contactsList");
+  var myIndex = objectStore.index("lName");
+  var getKeyRequest = myIndex.getKey("Bungle");
+  getKeyRequest.onsuccess = function () {
     console.log(getKeyRequest.result);
-  }
+  };
 
-  myIndex.openCursor().onsuccess = function(event) {
+  myIndex.openCursor().onsuccess = function (event) {
     var cursor = event.target.result;
-    if(cursor) {
-      var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
-                           + '<td>' + cursor.value.lName + '</td>'
-                           + '<td>' + cursor.value.fName + '</td>'
-                           + '<td>' + cursor.value.jTitle + '</td>'
-                           + '<td>' + cursor.value.company + '</td>'
-                           + '<td>' + cursor.value.eMail + '</td>'
-                           + '<td>' + cursor.value.phone + '</td>'
-                           + '<td>' + cursor.value.age + '</td>';
+    if (cursor) {
+      var tableRow = document.createElement("tr");
+      tableRow.innerHTML =
+        "<td>" +
+        cursor.value.id +
+        "</td>" +
+        "<td>" +
+        cursor.value.lName +
+        "</td>" +
+        "<td>" +
+        cursor.value.fName +
+        "</td>" +
+        "<td>" +
+        cursor.value.jTitle +
+        "</td>" +
+        "<td>" +
+        cursor.value.company +
+        "</td>" +
+        "<td>" +
+        cursor.value.eMail +
+        "</td>" +
+        "<td>" +
+        cursor.value.phone +
+        "</td>" +
+        "<td>" +
+        cursor.value.age +
+        "</td>";
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
     } else {
-      console.log('Les éléments sont affichés.');
+      console.log("Les éléments sont affichés.");
     }
   };
-};
+}
 ```
 
 ## Spécifications

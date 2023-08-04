@@ -1,15 +1,8 @@
 ---
 title: Доставка аудио и видео контента
 slug: Web/Guide/Audio_and_video_delivery
-tags:
-  - Audio
-  - HTML5
-  - Media
-  - NeedsTranslation
-  - TopicStub
-  - Video
-translation_of: Web/Guide/Audio_and_video_delivery
 ---
+
 Мы можем доставлять аудио и видео контент различными способами. Это могут быть как статичные медиа файлы, так и потоковые данные. Эта статья является отправной точкой в изучении различных механизмов доставки медиа ресурсов и совместимости работы с популярными браузерами.
 
 ## Аудио и видео элементы
@@ -30,10 +23,10 @@ To deliver video and audio, the general workflow is usually something like this:
 
 ```html
 <audio controls preload="auto">
-  <source src="audiofile.mp3" type="audio/mpeg">
+  <source src="audiofile.mp3" type="audio/mpeg" />
 
   <!-- fallback for browsers that don't suppport mp3 -->
-  <source src="audiofile.ogg" type="audio/ogg">
+  <source src="audiofile.ogg" type="audio/ogg" />
 
   <!-- fallback for browsers that don't support audio tag -->
   <a href="audiofile.mp3">download audio</a>
@@ -49,15 +42,25 @@ For further info see [Cross Browser Audio Basics (HTML5 Audio In Detail)](/en-US
 ### HTML Video
 
 ```html
-<video controls width="640" height="480" poster="initialimage.png" autoplay muted>
-  <source src="videofile.mp4" type="video/mp4">
+<video
+  controls
+  width="640"
+  height="480"
+  poster="initialimage.png"
+  autoplay
+  muted>
+  <source src="videofile.mp4" type="video/mp4" />
 
   <!-- fallback for browsers that don't suppport mp4 -->
-  <source src="videofile.webm" type="video/webm">
+  <source src="videofile.webm" type="video/webm" />
 
   <!-- specifying subtitle files -->
-  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
-  <track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
+  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" />
+  <track
+    src="subtitles_no.vtt"
+    kind="subtitles"
+    srclang="no"
+    label="Norwegian" />
 
   <!-- fallback for browsers that don't support video tag -->
   <a href="videofile.mp4">download video</a>
@@ -76,13 +79,19 @@ You can create a more comprehensive Fallback using Flash. [Using flashmediaeleme
 
 ```html
 <audio controls>
-  <source src="audiofile.mp3" type="audio/mpeg">
-  <source src="audiofile.ogg" type="audio/ogg">
+  <source src="audiofile.mp3" type="audio/mpeg" />
+  <source src="audiofile.ogg" type="audio/ogg" />
   <!-- fallback for non supporting browsers goes here -->
   <a href="audiofile.mp3">download audio</a>
-  <object width="320" height="30" type="application/x-shockwave-flash" data="flashmediaelement.swf">
+  <object
+    width="320"
+    height="30"
+    type="application/x-shockwave-flash"
+    data="flashmediaelement.swf">
     <param name="movie" value="flashmediaelement.swf" />
-    <param name="flashvars" value="controls=true&isvideo=false&file=audiofile.mp3" />
+    <param
+      name="flashvars"
+      value="controls=true&isvideo=false&file=audiofile.mp3" />
   </object>
 </audio>
 ```
@@ -94,12 +103,12 @@ The process is very similar with video — just remember to set `isvideo=true` i
 ### JavaScript Audio
 
 ```js
-var myAudio = document.createElement('audio');
+var myAudio = document.createElement("audio");
 
-if (myAudio.canPlayType('audio/mpeg')) {
-  myAudio.setAttribute('src','audiofile.mp3');
-} else if (myAudio.canPlayType('audio/ogg')) {
-  myAudio.setAttribute('src','audiofile.ogg');
+if (myAudio.canPlayType("audio/mpeg")) {
+  myAudio.setAttribute("src", "audiofile.mp3");
+} else if (myAudio.canPlayType("audio/ogg")) {
+  myAudio.setAttribute("src", "audiofile.ogg");
 }
 
 myAudio.currentTime = 5;
@@ -121,12 +130,12 @@ It's also possible to feed an {{ htmlelement("audio") }} element a base64 encode
 ### JavaScript Video
 
 ```js
-var myVideo = document.createElement('video');
+var myVideo = document.createElement("video");
 
-if (myVideo.canPlayType('video/mp4')) {
-  myVideo.setAttribute('src','videofile.mp4');
-} else if (myVideo.canPlayType('video/webm')) {
-  myVideo.setAttribute('src','videofile.webm');
+if (myVideo.canPlayType("video/mp4")) {
+  myVideo.setAttribute("src", "videofile.mp4");
+} else if (myVideo.canPlayType("video/webm")) {
+  myVideo.setAttribute("src", "videofile.webm");
 }
 
 myVideo.width = 480;
@@ -138,31 +147,34 @@ We set the source of the video depending on the type of video file the browser s
 ## Web Audio API
 
 ```js
-  var context;
-  var request;
-  var source;
+var context;
+var request;
+var source;
 
-  try {
-    context = new AudioContext();
-    request = new XMLHttpRequest();
-    request.open("GET","http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",true);
-    request.responseType = "arraybuffer";
+try {
+  context = new AudioContext();
+  request = new XMLHttpRequest();
+  request.open(
+    "GET",
+    "http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",
+    true,
+  );
+  request.responseType = "arraybuffer";
 
-    request.onload = function() {
-      context.decodeAudioData(request.response, function(buffer) {
-        source = context.createBufferSource();
-        source.buffer = buffer;
-        source.connect(context.destination);
-        // auto play
-        source.start(0); // start was previously noteOn
-      });
-    };
+  request.onload = function () {
+    context.decodeAudioData(request.response, function (buffer) {
+      source = context.createBufferSource();
+      source.buffer = buffer;
+      source.connect(context.destination);
+      // auto play
+      source.start(0); // start was previously noteOn
+    });
+  };
 
-    request.send();
-
-  } catch(e) {
-    alert('web audio api not supported');
-  }
+  request.send();
+} catch (e) {
+  alert("web audio api not supported");
+}
 ```
 
 In this example we retrieve an MP3 file via XHR, load it into a source and play it ([Try it for yourself](http://jsbin.com/facutone/1/edit?js)). Find more about Web Audio API basics in [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API).
@@ -181,17 +193,20 @@ Next, if supported connect the webcam source to the video element:
 
 ```js
 if (navigator.mediaDevices) {
-  navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-  .then(function onSuccess(stream) {
-    var video = document.getElementById('webcam');
-    video.autoplay = true;
-    video.srcObject = stream;
-  })
-  .catch(function onError() {
-    alert('There has been a problem retreiving the streams - are you running on file:/// or did you disallow access?');
-  });
+  navigator.mediaDevices
+    .getUserMedia({ video: true, audio: false })
+    .then(function onSuccess(stream) {
+      var video = document.getElementById("webcam");
+      video.autoplay = true;
+      video.srcObject = stream;
+    })
+    .catch(function onError() {
+      alert(
+        "There has been a problem retreiving the streams - are you running on file:/// or did you disallow access?",
+      );
+    });
 } else {
-  alert('getUserMedia is not supported in this browser.');
+  alert("getUserMedia is not supported in this browser.");
 }
 ```
 
@@ -204,23 +219,24 @@ New standards are being rolled out to allow your browser to grab media from your
 The main mechanism is outlined below:
 
 ```js
-navigator.mediaDevices.getUserMedia({audio:true})
+navigator.mediaDevices
+  .getUserMedia({ audio: true })
   .then(function onSuccess(stream) {
     var recorder = new MediaRecorder(stream);
 
     var data = [];
-    recorder.ondataavailable = function(e) {
+    recorder.ondataavailable = function (e) {
       data.push(e.data);
     };
     recorder.start();
-    recorder.onerror = function(e) {
+    recorder.onerror = function (e) {
       throw e.error || new Error(e.name); // e.name is FF non-spec
-    }
-    recorder.onstop = function(e) {
-      var audio = document.createElement('audio');
+    };
+    recorder.onstop = function (e) {
+      var audio = document.createElement("audio");
       audio.src = window.URL.createObjectURL(new Blob(data));
-    }
-    setTimeout(function() {
+    };
+    setTimeout(function () {
       rec.stop();
     }, 5000);
   })
@@ -266,17 +282,18 @@ You may detect click, touch and/or keyboard events to trigger actions such as pl
 A quick example — first set up your audio and custom controls in HTML:
 
 ```html
-  <audio id="my-audio" src="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"></audio>
-  <button id="my-control">play</button>
+<audio
+  id="my-audio"
+  src="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"></audio>
+<button id="my-control">play</button>
 ```
 
 add a bit of JavaScript to detect events to play and pause the audio:
 
 ```js
-window.onload = function() {
-
-  var myAudio = document.getElementById('my-audio');
-  var myControl = document.getElementById('my-control');
+window.onload = function () {
+  var myAudio = document.getElementById("my-audio");
+  var myControl = document.getElementById("my-control");
 
   function switchState() {
     if (myAudio.paused == true) {
@@ -289,17 +306,22 @@ window.onload = function() {
   }
 
   function checkKey(e) {
-    if (e.keycode == 32 ) { //spacebar
+    if (e.keycode == 32) {
+      //spacebar
       switchState();
     }
   }
 
-  myControl.addEventListener('click', function() {
-    switchState();
-  }, false);
+  myControl.addEventListener(
+    "click",
+    function () {
+      switchState();
+    },
+    false,
+  );
 
-  window.addEventListener( "keypress", checkKey, false );
-}
+  window.addEventListener("keypress", checkKey, false);
+};
 ```
 
 You can [try this example out here](http://jsbin.com/jujeladu/2/edit). For more information, see [Creating your own custom audio player](/en-US/Apps/Build/Manipulating_media/Cross-browser_audio_basics#Creating_your_own_custom_audio_player).
@@ -329,11 +351,11 @@ Media elements provide support for moving the current playback position to speci
 You can use the element's `seekable` property to determine the ranges of the media that are currently available for seeking to. This returns a {{ domxref("TimeRanges") }} object listing the ranges of times that you can seek to.
 
 ```js
-var mediaElement = document.querySelector('#mediaElementID');
-mediaElement.seekable.start(0);  // Returns the starting time (in seconds)
-mediaElement.seekable.end(0);    // Returns the ending time (in seconds)
+var mediaElement = document.querySelector("#mediaElementID");
+mediaElement.seekable.start(0); // Returns the starting time (in seconds)
+mediaElement.seekable.end(0); // Returns the ending time (in seconds)
 mediaElement.currentTime = 122; // Seek to 122 seconds
-mediaElement.played.end(0);      // Returns the number of seconds the browser has played
+mediaElement.played.end(0); // Returns the number of seconds the browser has played
 ```
 
 ### Specifying playback range
@@ -454,14 +476,18 @@ Another way to show the fallback content of a video, when none of the sources co
 ```
 
 ```js
-var v = document.querySelector('video'),
-    sources = v.querySelectorAll('source'),
-    lastsource = sources[sources.length-1];
-lastsource.addEventListener('error', function(ev) {
-  var d = document.createElement('div');
-  d.innerHTML = v.innerHTML;
-  v.parentNode.replaceChild(d, v);
-}, false);
+var v = document.querySelector("video"),
+  sources = v.querySelectorAll("source"),
+  lastsource = sources[sources.length - 1];
+lastsource.addEventListener(
+  "error",
+  function (ev) {
+    var d = document.createElement("div");
+    d.innerHTML = v.innerHTML;
+    v.parentNode.replaceChild(d, v);
+  },
+  false,
+);
 ```
 
 ## Audio/Video JavaScript Libraries

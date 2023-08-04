@@ -1,8 +1,8 @@
 ---
 title: MDN Web Docs에 대해
 slug: MDN/Writing_guidelines
-original_slug: MDN/About
 ---
+
 {{MDNSidebar}}
 
 MDN Web Docs는 [CSS](/ko/docs/Web/CSS), [HTML](/ko/docs/Web/HTML),
@@ -45,12 +45,12 @@ MDN 콘텐츠를 재사용할 땐 다음의 두 가지를 기억해주세요.
 
 1. 원본 콘텐츠로의 출처를 표기해야 합니다.
 
-    저작자로 "Mozilla 기여자"를 명시해주세요. 원본 콘텐츠 페이지로의 하이퍼링크(온라인) 또는 URL(출력물)을 포함해야
-    합니다. 예를 들어, 이 글의 출처를 표기할 땐 다음처럼 작성해주세요.
+   저작자로 "Mozilla 기여자"를 명시해주세요. 원본 콘텐츠 페이지로의 하이퍼링크(온라인) 또는 URL(출력물)을 포함해야
+   합니다. 예를 들어, 이 글의 출처를 표기할 땐 다음처럼 작성해주세요.
 
-    > [Mozilla 기여자](/ko/docs/MDN/About/contributors.txt)가 작성한
-    > [MDN에 대해](/ko/docs/MDN/About)는
-    > [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) 라이선스에 따라 사용할 수 있습니다.
+   > [Mozilla 기여자](/ko/docs/MDN/About/contributors.txt)가 작성한
+   > [MDN에 대해](/ko/docs/MDN/About)는
+   > [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) 라이선스에 따라 사용할 수 있습니다.
 
 2. 여러분의 콘텐츠 역시 원본 콘텐츠와 동일한 라이선스, 즉 CC-BY-SA v2.5 또는 그 이후 버전을 적용해야 합니다.
 

@@ -5,212 +5,329 @@ slug: Web/CSS/easing-function
 
 {{CSSRef}}
 
-The **`<easing-function>`** [CSS](/zh-CN/docs/Web/CSS) [data type](/zh-CN/docs/Web/CSS/CSS_Types) denotes a mathematical function that describes how fast one-dimensional values change during animations. This lets you vary the animation's speed over the course of its duration.
+[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) **`<easing-function>`** 表示描述某数值变化速率的数学函数。
 
-The easing functions in the cubic-bezier subset of easing functions are often called "smooth" easing functions, because they can be used to smooth down the start and end of the animation. They correlate a time ratio to an output ratio, both expressed as {{cssxref("&lt;number&gt;")}}s. For these values, `0.0` represents the initial state, and `1.0` represents the final state.
+这种两值之间的过渡可应用于不同情境，可用于描述属性值在动画中变化的快慢程度，由此得以在动画的持续过程中改变其速度。你可为 CSS [过渡](/zh-CN/docs/Web/CSS/transition-timing-function)和[动画](/zh-CN/docs/Web/CSS/animation-timing-function)指定缓动函数。
 
-![](/files/3434/TF_with_output_gt_than_1.png)![](/files/3435/TF_with_output_gt_than_1_clipped.png)Depending on the specific function used, the calculated output can sometimes grow to be greater than `1.0` or smaller than `0.0` during the course of an animation. This causes the animation to go farther than the final state, and then return. For some properties, such as {{cssxref("left")}} or {{cssxref("right")}}, this creates a kind of "bouncing" effect.
-
-However, certain properties will restrict the output if it goes outside an allowable range. For example, a color component greater than `255` or smaller than `0` will be clipped to the closest allowed value (`255` and `0`, respectively). Some `cubic-bezier()` curves exhibit this property.
-
-## Easing functions
-
-CSS supports two kinds of easing functions: the subset of the cubic Bézier curves that are functions, and staircase functions. The most useful of these functions are given a keyword that allows them to be easily referenced.
-
-### The `cubic-bezier()` class of easing functions
-
-![](/files/3433/cubic-bezier,%20example.png)
-
-The `cubic-bezier()` functional notation defines a [cubic Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves). As these curves are continuous, they are often used to smooth down the start and end of the animation and are therefore sometimes called _easing functions_.
-
-A cubic Bézier curve is defined by four points P0, P1, P2, and P3. P0 and P3 are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios (the abscissa the ratio of time, the ordinate the ratio of the output range). P0 is `(0, 0)` and represents the initial time and the initial state, P3 is `(1, 1)` and represents the final time and the final state.
-
-Not all cubic Bézier curves are suitable as easing functions as not all are [mathematical functions](https://en.wikipedia.org/wiki/Function_%28mathematics%29); i.e., curves that for a given abscissa have zero or one value. With P0 and P3 fixed as defined by CSS, a cubic Bézier curve is a function, and is therefore valid, if and only if the abscissas of P1 and P2 are both in the `[0, 1]` range.
-
-Cubic Bézier curves with the P1 or P2 ordinate outside the `[0, 1]` range may generate _bouncing_ effects.
-
-When you specify an invalid `cubic-bezier` curve, CSS ignores the whole property.
-
-#### Syntax
-
-```
-cubic-bezier(x1, y1, x2, y2)
-```
-
-where:
-
-- **_x1_, _y1_, _x2_, _y2_**
-  - : Are {{cssxref("&lt;number&gt;")}} values representing the abscissas, and ordinates of the P1 and P2 points defining the cubic Bézier curve. x1 and x2 must be in the range \[0, 1] or the value is invalid.
-
-#### Examples
-
-These cubic Bézier curves are valid for use in CSS:
+## 语法
 
 ```css
-/* The canonical Bézier curve with four <number> in the [0,1] range. */
+/* 线性函数和关键字 */
+/* linear(<point-list>) */
+linear(1, -0.5, 0)
+linear
+
+/* 三次贝塞尔函数和关键字 */
+/* cubic-bezier(<x1>, <y1>, <x2>, <y2>) */
+cubic-bezier(0.42, 0.0, 1.0, 1.0)
+ease
+ease-in
+ease-out
+ease-in-out
+
+/* 阶跃函数和关键字 */
+/* steps(<number-of-steps>, <direction>) */
+steps(4, end)
+step-start
+step-end
+```
+
+### 取值
+
+- `<point-list>`
+
+  - : 线性定格列表。
+
+- `linear`
+
+  - : 表示线性插值。此关键字表示缓动函数 `linear(0, 1)`。
+
+![“输出进度”关于“输入进度”的图像，展示了从原点延伸至 (1, 1) 的直线](linear.svg)
+
+- `<x1>`, `<y1>`, `<x2>`, `<y2>`
+
+  - : 表示定义三次贝塞尔曲线的 [P1 和 P2 点](#三次贝塞尔函数)的横纵坐标的 {{CSSXref("&lt;number&gt;")}} 值。`x1` 和 `x2` 须位于 `[0, 1]` 范围中，否则此值无效。
+
+- `ease`
+
+  - : 表示插值缓慢开始，陡然加速，再逐渐减速至结束。此关键字表示缓动函数 `cubic-bezier(0.25, 0.1, 0.25, 1.0)`。其与 [`ease-in-out`](#ease-in-out) 相似，但在开始时加速更陡。
+
+- `ease-in`
+
+  - : 表示插值缓慢开始，再逐渐加速至结束，最终突然停止。此关键字表示缓动函数 `cubic-bezier(0.42, 0.0, 1.0, 1.0)`。
+
+- `ease-out`
+
+  - : 表示插值突然开始，再逐渐减速至结束。此关键字表示缓动函数 `cubic-bezier(0.0, 0.0, 0.58, 1.0)`。
+
+- `ease-in-out`
+
+  - : 表示插值缓慢开始，然后加速，再减速至结束。此关键字表示缓动函数 `cubic-bezier(0.42, 0.0, 0.58, 1.0)`。在开始时，此关键字表现同 [`ease-in`](#ease-in) 关键字；在结束时，表现同 [`ease-out`](#ease-out) 关键字。
+
+![“输出进度”关于“输入进度”的图像，其中“ease”展示了从原点快速升至 (1, 1) 的曲线；“ease-in”展示了发自原点且在接近 (1, 1) 时变平的略微弯曲的线；“ease-out”展示了在接近 (1, 1) 时略微变弯的斜线；“ease-in-out”展示了从原点到 (1, 1) 的对称 S 形曲线](ease.svg)
+
+- `<number-of-steps>`
+
+  - : 严格正的 {{CSSXref("&lt;integer&gt;")}}，表示构成阶跃函数的等距步数。
+
+- `<direction>`
+
+  - : 下列表示跳跃何时出现的关键字之一：
+    - `jump-start` 表示第一步（即第一次跳跃）在插值开始时发生。
+    - `jump-end` 表示最后一步（即最后一次跳跃）在插值结束时发生。
+    - `jump-both` 表示在 0% 和 100% 处均出现跳跃，相当于在插值过程中加上一步。
+    - `jump-none` 表示两端均无跳跃，而是在 0% 处和 100% 处将值各保持 1/n 的时长。
+    - `start` 与 `jump-start` 等价。
+    - `end` 与 `jump-end` 等价。此关键字为默认值。
+
+- `step-start`
+
+  - : 表示插值立即跳跃至其最终状态，再保持至结束。此关键字表示缓动函数 `steps(1, jump-start)` 或 `steps(1, start)`。
+
+- `step-end`
+
+  - : 表示插值保持其初始状态至结束，再直接跳跃至其最终状态。此关键字表示缓动函数 `steps(1, jump-end)` 或 `steps(1, end)`。
+
+![“输出进度”关于“输入进度”的图像，其中“step-start”展示了空心原点和从 (0, 1) 延伸至 (1, 1) 的水平直线；“step-end”展示了从原点延伸至 (1, 0)（空心）的水平直线和位于 (1, 1) 的点](step.svg)
+
+## 描述
+
+缓动函数有三种类型：
+
+- [线性](#线性缓动函数)
+- [三次贝塞尔](#三次贝塞尔缓动函数)
+- [阶跃](#阶跃缓动函数)
+
+### 线性缓动函数
+
+`linear()` 函数定义了在各点之间线性插值的分段线性函数，由此可以近似如反弹和弹性效应等更复杂的动画。插值自始至终以恒定速率进行。`linear()` 函数的一个典型用处在于提供很多点逼近任意曲线。
+
+在定义 `linear()` 函数时，可由列表指定*线性缓动点*，例如 `linear(0, 0.25, 1)`。此 `linear()` 函数所产生的缓动函数从 `0` 线性移动至 `0.25`，再移动至 `1`。
+
+![“输出进度”关于“输入进度”的图像，其中“linear(0, 0.25, 1)”展示了连接原点、(0.5, 0.25) 和 (1, 1) 的折线；“linear(0, 0.25 75%, 1)”展示了连接原点、(0.75, 0.25) 和 (1, 1) 的折线](linear_function.svg)
+
+考虑此函数另一例子——`linear(0, 0.25 75%, 1)`。此例所产生的线性缓动函数用 75% 的时间从 `0` 过渡到 `0.25`，余下 25% 的时间从 `0.25` 过渡到 `1`。
+
+[`linear`](#linear) 关键字等价于缓动函数 `linear(0, 1)`。
+
+### 三次贝塞尔缓动函数
+
+函数记号 `cubic-bezier()` 定义了三次[贝塞尔曲线](/zh-CN/docs/Glossary/Bezier_curve)。属于三次贝塞尔类的缓动函数常被称为“平滑”缓动函数，这是因为这些函数可用于抚平{{Glossary("interpolation", "插值")}}的起止。这些函数将输入进度与输出进度相关联，两个进度均以 {{CSSXref("&lt;number&gt;")}} 表示。对于这些值，`0.0` 表示初始状态，`1.0` 表示最终状态。
+
+![“输出进度”关于“输入进度”的图像，展示了从原点到 (1, 1) 的 S 形曲线和贝塞尔控制点 P1(0.1, 0.6) 和 P2(0.7, 0.2)](cubic-bezier.svg)
+
+三次贝塞尔曲线由 P0、P1、P2 和 P3 四点所定义。点 P0 和 P3 表示曲线的起止点。在 CSS 中，由于坐标为进度（横坐标为输入进度，纵坐标为输出进度），故这两点为定点。P0 为 `(0, 0)`，表示初始进度和初始状态。P3 为 `(1, 1)`，表示最终进度和最终状态。
+
+并非所有三次贝塞尔曲线均适合作为缓动函数，这是因为某些曲线并非[数学函数](https://zh.wikipedia.org/wiki/函数)，即对于指定的横坐标有零个或一个值的曲线。由于 CSS 定义 P0 和 P3 为定点，故当且仅当 P1 和 P2 的横坐标均位于 `[0, 1]` 范围中时，三次贝塞尔曲线为函数，进而有效。
+
+P1 和 P2 的纵坐标位于 `[0, 1]` 范围外的三次贝塞尔曲线可导致值超过最终状态后再折返。在动画中，对于例如 {{CSSXref("left")}} 和 {{CSSXref("right")}} 等某些属性由此创造某种“反弹”效应。
+
+![缓动函数“cubic-bezier(0.3, 0.2, 0.2, 1.4)”的图像，其一展示了输出进度从某一输入进度起超过 1，另一个展示了输出进度达到 1 再保持不变](cubic-bezier_out_of_range.svg)
+
+然而某些属性将限制超出允许范围的输出。例如在 {{CSSXref("color_value/rgb", "rgb()")}} 中大于 `255` 或小于 `0` 的颜色分量将被截断至最近的允许值（分别为 `255` 和 `0`）。某些 `cubic-bezier()` 函数展现了此性质。
+
+当指定无效的三次贝塞尔曲线时，CSS 将无视整个属性。
+
+关键字 [`ease`](#ease)、[`ease-in`](#ease-in)、[`ease-out`](#ease-out) 和 [`ease-in-out`](#ease-in-out) 中的每一个均等价于特定的 `cubic-bezier()` 值。
+
+### 阶跃缓动函数
+
+函数记号 `steps()` 定义了将输出值域分为等距步长的[阶跃函数](https://zh.wikipedia.org/wiki/阶跃函数)。此类阶跃函数有时也称为*阶梯函数*。
+
+展示 `steps()` 函数用法的若干示例：
+
+```css
+steps(2, jump-start) /* 同 steps(2, start) */
+steps(4, jump-end) /* 同 steps(4, end) */
+steps(5, jump-none)
+steps(3, jump-both)
+```
+
+![“输出进度”关于“输入进度”的图像，其中“steps(2, jump-start)”展示了分别从 (0, 0.5) 和 (0.5, 1) 延伸 0.5 个单位的水平直线及位于原点和 (0.5, 0.5) 的空心点；“steps(4, jump-end)”展示了分别从 (0, 0)、(0.25, 0.25)、(0.5, 0.5) 和 (0.75, 0.75) 延伸 0.25 个单位的水平直线、位于 (0.25, 0)、(0.5, 0.25) 和 (0.75, 0.5) 的空心点及位于 (1, 1) 的点；“steps(5, jump-none)”展示了分别从 (0, 0)、(0.2, 0.25)、(0.4, 0.5)、(0.6, 0.75) 和 (0.8, 1) 延伸 0.2 个单位的水平直线及位于 (0.2, 0)、(0.4, 0.25)、(0.6, 0.5) 和 (0.8, 0.75) 的空心点；“steps(3, jump-both)”展示了分别从 (0, 0.25)、(1/3, 0.5) 和 (2/3, 0.75) 延伸 1/3 个单位的水平直线、位于 (1, 1) 的点及位于原点、(1/3, 0.25)、(2/3, 0.5) 和 (1, 0.75) 的空心点](jump.svg)
+
+关键字 [`step-start`](#step-start) 和 [`step-end`](#step-end) 中的任意一个均等价于特定的 `steps()` 值。
+
+## 形式语法
+
+{{CSSSyntax}}
+
+## 示例
+
+### 比较各种缓动函数
+
+此示例用动画提供了不同的缓动函数之间的简单比较。在下拉菜单中可选择缓动函数——有若干关键字和一些 `cubic-bezier()` 和 `steps()` 选项。在选择选项后，可用所提供的按钮开始和停止动画。
+
+#### HTML
+
+```html
+<div>
+  <div></div>
+</div>
+<ul>
+  <li>
+    <button class="animation-button">开始动画</button>
+  </li>
+  <li>
+    <label for="easing-select">选择缓动函数：</label>
+    <select id="easing-select">
+      <option selected>linear</option>
+      <option>linear(0, 0.5 50%, 1)</option>
+      <option>ease</option>
+      <option>ease-in</option>
+      <option>ease-in-out</option>
+      <option>ease-out</option>
+      <option>cubic-bezier(0.1, -0.6, 0.2, 0)</option>
+      <option>cubic-bezier(0, 1.1, 0.8, 4)</option>
+      <option>steps(5, end)</option>
+      <option>steps(3, start)</option>
+      <option>steps(4)</option>
+    </select>
+  </li>
+</ul>
+```
+
+#### CSS
+
+```css
+body > div {
+  position: relative;
+  height: 100px;
+}
+
+div > div {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  background-image: radial-gradient(
+    circle at 10px 10px,
+    rgba(25, 255, 255, 0.8),
+    rgba(25, 255, 255, 0.4)
+  );
+  border-radius: 50%;
+  top: 25px;
+  animation: 1.5s infinite alternate;
+}
+
+@keyframes move-right {
+  from {
+    left: 10%;
+  }
+
+  to {
+    left: 90%;
+  }
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+```
+
+#### JavaScript
+
+```js
+const selectElem = document.querySelector("select");
+const startBtn = document.querySelector("button");
+const divElem = document.querySelector("div > div");
+
+startBtn.addEventListener("click", () => {
+  if (startBtn.textContent === "开始动画") {
+    divElem.style.animationName = "move-right";
+    startBtn.textContent = "停止动画";
+    divElem.style.animationTimingFunction = selectElem.value;
+  } else {
+    divElem.style.animationName = "unset";
+    startBtn.textContent = "开始动画";
+  }
+});
+
+selectElem.addEventListener("change", () => {
+  divElem.style.animationTimingFunction = selectElem.value;
+});
+```
+
+#### 结果
+
+{{EmbedLiveSample("比较各种缓动函数", "100%", 200)}}
+
+### 使用 cubic-bezier() 函数
+
+这些三次贝塞尔曲线在用于 CSS 时有效：
+
+```css example-good
+/* 含四个位于 [0, 1] 范围中的 <number> 的标准贝塞尔曲线 */
 cubic-bezier(0.1, 0.7, 1.0, 0.1)
 
-/* Using <integer> is valid as any <integer> is also a <number>. */
+/* 因为任意 <integer> 也均为 <number>，所以使用 <integer> 有效。*/
 cubic-bezier(0, 0, 1, 1)
 
-/* Negative values for ordinates are valid, leading to bouncing effects.*/
+/* 负值为有效的纵坐标，将导致反弹效果。*/
 cubic-bezier(0.1, -0.6, 0.2, 0)
 
-/* Values > 1.0 for ordinates are also valid. */
+/* 大于 1.0 的值也为有效的纵坐标。*/
 cubic-bezier(0, 1.1, 0.8, 4)
 ```
 
-These cubic Bézier curves definitions are invalid:
+这些三次贝塞尔曲线的定义无效：
 
 ```css example-bad
-/* Though the animated output type may be a color,
-   Bézier curves work w/ numerical ratios.*/
+/* 尽管动画的输出类型可能为颜色，但是贝塞尔曲线使用数值比值。*/
 cubic-bezier(0.1, red, 1.0, green)
 
-/* Abscissas must be in the [0, 1] range or
-   the curve is not a function of time. */
+/* 横坐标须位于 [0, 1] 范围中，否则曲线不是关于时间的函数。*/
 cubic-bezier(2.45, 0.6, 4, 0.1)
 
-/* The two points must be defined, there is no default value. */
+/* 两个点均须定义，无默认值。*/
 cubic-bezier(0.3, 2.1)
 
-/* Abscissas must be in the [0, 1] range or
-   the curve is not a function of time. */
+/* 横坐标须位于 [0, 1] 范围中，否则曲线不是关于时间的函数。*/
 cubic-bezier(-1.9, 0.3, -0.2, 2.1)
 ```
 
-### Keywords for common cubic-bezier easing functions
+### 使用 steps() 函数
 
-#### `linear`
+这些缓动函数有效：
 
-![](/files/3425/cubic-bezier,linear.png)
-
-动画以恒定速度运行。此关键词表示缓冲函数 `cubic-bezier(0.0, 0.0, 1.0, 1.0)`。
-
-#### `ease`
-
-![](/files/3429/cubic-bezier,ease.png)
-
-动画缓慢开始，然后突然加速，最后缓慢移向目标。此关键词表示缓冲函数 `cubic-bezier(0.25, 0.1, 0.25, 1.0)`.。它与 [`ease-in-out`](#ease-in-out) 类似，但它在开始时加速更快。
-
-#### `ease-in`
-
-![](/files/3426/cubic-bezier,ease-in.png)
-
-动画缓慢开始，然后逐渐加速直到结束，在结束点时突然停止。此关键词表示缓冲函数 `cubic-bezier(0.42, 0.0, 1.0, 1.0)`。
-
-#### `ease-in-out`
-
-![](/files/3428/cubic-bezier,ease-in-out.png)
-
-动画缓慢开始，然后加速，最后减速直至结束。此关键词表示缓冲函数 `cubic-bezier(0.42, 0.0, 0.58, 1.0)`。开始时，其表现与 [`ease-in`](#ease-in) 函数类似；结束时，与 [`ease-out`](#ease-out) 函数类似。
-
-#### `ease-out`
-
-![](/files/3427/cubic-bezer,ease-out.png)
-
-此动画突然开始，然后逐渐减速直至结束。此关键词表示缓冲函数 `cubic-bezier(0.0, 0.0, 0.58, 1.0)`。
-
-### The `steps()` class of easing functions
-
-The `steps()` functional notation defines a [step function](https://en.wikipedia.org/wiki/Step_function) dividing the domain of output values in equidistant steps.This subclass of step functions are sometimes also called staircase functions.
-
-#### Syntax
-
-```
-steps(number_of_steps, direction)
-```
-
-where:
-
-- _number_of_steps_
-  - : Is a strictly positive {{cssxref("&lt;integer&gt;")}}, representing the amount of equidistant treads composing the stepping function.
-- _direction_
-
-  - : Is a keyword indicating if it the function is [left- or right-continuous](https://en.wikipedia.org/wiki/Left-continuous#Directional_and_semi-continuity):
-
-    - `jump-start` denotes a left-continuous function, so that the first step or jump happens when the animation begins;
-    - `jump-end` denotes a right-continuous function, so that the last step or jump happens when the animation ends;
-    - `jump-both` denotes a right and left continuous function, includes pauses at both the 0% and 100% marks, effectively adding a step during the animation iteration;
-    - `jump-none` There is no jump on either end. Instead, holding at both the 0% mark and the 100% mark, each for 1/n of the duration
-    - `start` is the equivalent of `jump-start`
-    - `end` is the equivalent of `jump-end`
-
-    `end` is the default.
-
-#### `steps( n, <direction> )`
-
-- `steps(2, jump-start)`
-  `steps(2, start)`
-
-  ![](</files/3436/steps(2,start).png>)
-
-- `steps(4, jump-end) steps(4, end)`
-
-  ![four steps, with a jump from the fourth step to the final value at the 100% mark](</files/3437/steps(4,end).png>)
-
-- `steps(5, jump-none)`
-
-  ![five steps, with no jumps, so 20% of the time is at the beginning state or 0% mark and the last 20% is at the final state, or 100% mark](/files/16419/step5none.png)
-
-- `steps(3, jump-both)`
-
-  ![](step3both.png)
-
-- `steps-start`
-  - : The equivalent of `steps(1, jump-start)`
-- `steps-end`
-  - : The equivalent of `steps(1, jump-end)`
-
-#### `step-start`
-
-![](</files/3423/steps(1,start).png>) The animation jumps immediately to its final state, where it stays until the end. This keyword represents the easing function `steps(1, jump-start)` or `steps(1, start)`.
-
-#### `step-end`
-
-![](</files/3424/steps(1,end).png>) The animation stays in its initial state until the end, at which point it jumps directly to its final state. This keyword represents the easing function `steps(1, jump-end)` or `steps(1, end)`.
-
-#### Examples
-
-These easing functions are valid:
-
-```css
-/* There is 5 treads, the last one happens
-   right before the end of the animation. */
+```css example-good
+/* 有 5 次踏步，最后一步恰好发生在动画结束前。*/
 steps(5, end)
 
-/* A two-step staircase, the first one happening
-   at the start of the animation. */
+/* 两步阶梯，第一步发生在动画开始时。*/
 steps(2, start)
 
-/* The second parameter is optional. */
+/* 第二个参数为可选的。*/
 steps(2)
 ```
 
-These easing function are invalid:
+> **备注：** 若动画含有多个定格，则在 `steps()` 中所指定的步子将应用于每一段。因此含三个区段和 `steps(2)` 的动画将总共含有 6 步，每段 2 步。
+
+这些缓动函数无效：
 
 ```css example-bad
-/* The first parameter must be an <integer> and
-   cannot be a real value, even if it is equal to one. */
+/* 第一个参数须为 <integer>，不能为实数值，即使此值等于某 <integer> 也不行。*/
 steps(2.0, jump-end)
 
-/* The amount of steps must be non-negative. */
+/* 步数须非负。*/
 steps(-3, start)
 
-/* There must be at least one step.*/
+/* 须至少有一步。*/
 steps(0, jump-none)
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [CSS Animations](/zh-CN/docs/Web/CSS/CSS_animations)
-- [CSS Transitions](/zh-CN/docs/Web/CSS/CSS_transitions)
-- [cubic-bezier](http://cubic-bezier.com/)
+- [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)
+- [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)
+- [cubic-bezier](https://cubic-bezier.com/)

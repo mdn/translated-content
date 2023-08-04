@@ -1,7 +1,6 @@
 ---
 title: 渲染页面：浏览器的工作原理
 slug: Web/Performance/How_browsers_work
-original_slug: Web/Performance/浏览器渲染页面的工作原理
 ---
 
 页面内容快速加载和流畅的交互是用户希望得到的 Web 体验，因此，开发者应力争实现这两个目标。
@@ -57,22 +56,22 @@ TCP 的“三次握手”技术经常被称为“SYN-SYN-ACK”——更确切�
 一旦我们建立了到 web 服务器的连接，浏览器就代表用户发送一个初始的 [HTTP `GET` 请求](/zh-CN/docs/Web/HTTP/Methods)，对于网站来说，这个请求通常是一个 HTML 文件。一旦服务器收到请求，它将使用相关的响应头和 HTML 的内容进行回复。
 
 ```html
-<!doctype HTML>
+<!doctype html>
 <html>
- <head>
-  <meta charset="UTF-8"/>
-  <title>My simple page</title>
-  <link rel="stylesheet" src="styles.css"/>
-  <script src="myscript.js"></script>
-</head>
-<body>
-  <h1 class="heading">My Page</h1>
-  <p>A paragraph with a <a href="https://example.com/about">link</a></p>
-  <div>
-    <img src="myimage.jpg" alt="image description"/>
-  </div>
-  <script src="anotherscript.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My simple page</title>
+    <link rel="stylesheet" src="styles.css" />
+    <script src="myscript.js"></script>
+  </head>
+  <body>
+    <h1 class="heading">My Page</h1>
+    <p>A paragraph with a <a href="https://example.com/about">link</a></p>
+    <div>
+      <img src="myimage.jpg" alt="image description" />
+    </div>
+    <script src="anotherscript.js"></script>
+  </body>
 </html>
 ```
 
@@ -119,9 +118,9 @@ DOM 树描述了文档的内容。[`<html>`](/zh-CN/docs/Web/HTML/Element/html) 
 浏览器构建 DOM 树时，这个过程占用了主线程。当这种情况发生时，预加载扫描仪将解析可用的内容并请求高优先级资源，如 CSS、JavaScript 和 web 字体。多亏了预加载扫描器，我们不必等到解析器找到对外部资源的引用来请求它。它将在后台检索资源，以便在主 HTML 解析器到达请求的资源时，它们可能已经在运行，或者已经被下载。预加载扫描仪提供的优化减少了阻塞。
 
 ```html
-<link rel="stylesheet" src="styles.css"/>
+<link rel="stylesheet" src="styles.css" />
 <script src="myscript.js" async></script>
-<img src="myimage.jpg" alt="image description"/>
+<img src="myimage.jpg" alt="image description" />
 <script src="anotherscript.js" async></script>
 ```
 

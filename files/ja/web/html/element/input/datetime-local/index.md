@@ -2,7 +2,7 @@
 title: <input type="datetime-local">
 slug: Web/HTML/Element/input/datetime-local
 l10n:
-  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
+  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
 {{HTMLSidebar}}
@@ -19,53 +19,9 @@ l10n:
 
 一部のブラウザーでは、テキストのみの入力要素を表示し、結果をサーバーに送信する前に妥当な日付/時刻値であることを検証するものもありますが、予期しない動作をすることがあるので、この動作に頼るべきではありません。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#値">値</a></strong></td>
-      <td>
-        (ローカルタイムゾーンでの) 日付と時刻を表す文字列、または空欄。
-      </td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} および {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>対応している共通属性</strong></td>
-      <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#step"><code>step</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td>
-        <code>list</code>, <code>value</code>, <code>valueAsNumber</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## 値
 
-入力欄に入力された日付の値を表す文字列です。この入力型で使われる日付と時刻の値の形式は、[ローカル日時の文字列](/ja/docs/Web/HTML/Date_and_time_formats#ローカル日時の文字列)で説明されています。
+入力欄に入力された日付の値を表す文字列です。この入力型で使われる日付と時刻の値の形式は、[ローカル日時文字列](/ja/docs/Web/HTML/Date_and_time_formats#ローカル日時文字列)で説明されています。
 
 次のように、 [`value`](/ja/docs/Web/HTML/Element/input#value) 属性に日付と時刻を入れることで、入力欄の既定値を設定することができます。
 
@@ -88,7 +44,7 @@ l10n:
 
 ```js
 const dateControl = document.querySelector('input[type="datetime-local"]');
-dateControl.value = '2017-06-01T08:30';
+dateControl.value = "2017-06-01T08:30";
 ```
 
 JavaScript の {{jsxref("Date")}} では、数値の日付情報を適切な書式化された文字列に変換するために使用することができるメソッドがいくつか提供されています。例えば {{jsxref("Date.toISOString()")}} メソッドは UTC の日付/時刻を、そのタイムゾーンを表す接尾辞 "`Z`" とともに返します。"`Z`" を取り除くと、 `datetime-local` 入力が期待する形式の値を提供することができます。
@@ -251,7 +207,7 @@ input:valid + span::after {
 }
 ```
 
-> **警告:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用にはなりません。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ (または大きすぎるデータ、誤った種類のデータなど) が送信された場合に障害が発生するおそれがあります。
+> **警告:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用にはなりません。HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ (または大きすぎるデータ、誤った種類のデータなど) が送信された場合に障害が発生するおそれがあります。
 
 ## ブラウザーの互換性の扱い
 
@@ -329,15 +285,15 @@ input:valid + span::after {
 
 ブラウザーに依存しない方法によってフォームで日付を扱う最善の方法は、現時点では年月日を別々なコントロール ({{htmlelement("select")}} 要素が一般的です。以下の実装を見てください) にするか、 [jQuery date picker](https://jqueryui.com/datepicker/) や [jQuery timepicker plugin](https://timepicker.co/) のような JavaScript ライブラリを使用することです。
 
-## 2038 年問題 (主にサーバー側)
+## 2038 年問題（主にサーバー側）
 
 JavaScript は日付を格納するとき、すべての数値と同様に、倍精度浮動小数点を使用しますので、 JavaScript のコードは整数への変換やビット操作が行われない限り、2038 年問題に悩まされることはありません。ビット操作演算は、 32 ビットの符号付き 2 の補数で演算を行っているので影響を受ける可能性があります。
 
 問題はサーバー側で、 2^31 - 1 よりも大きな日付値を格納する場合です。この問題を解決するには、すべての日付を符号なしの 32 ビット整数、符号付きの 64 ビット整数、または倍精度の浮動小数点のいずれかでサーバーに格納する必要があります。サーバーが PHP で書かれている場合は、PHP 8 または 7 にアップグレードし、ハードウェアを x86_64 または IA64 にアップグレードするだけで解決できるかもしれません。他のハードウェアで行き詰っている場合は、 32 ビット仮想マシン内で 64 ビットハードウェアをエミュレートすることもできますが、ほとんどの仮想マシンはこの種の仮想化をサポートしていないため、安定性が損なわれ、性能が大きく低下する可能性があります。
 
-## 10000 年問題 (主にクライアント側)
+## 10000 年問題（主にクライアント側）
 
-多くのサーバーでは、日付を文字列ではなく数値として保存します。 10000 年以降は、これらの数字は以前よりも少し大きくなるだけなので、多くのサーバーでは 10000 年以降をフォームで送信しても問題が発生することはありません。
+多くのサーバーでは、日付は文字列ではなく数値として格納されます。数値は固定された大きさで、（エンディアンを除けば）形式にとらわれません。10,000 年以降は、これらの数字は以前よりも少し大きくなるだけなので、多くのサーバーでは 10,000 年以降をフォームで送信しても問題が発生することはありません。
 
 問題はクライアント側の問題です。年に 4 桁以上の数字を持つ日付の解析です。
 
@@ -350,12 +306,12 @@ JavaScript は日付を格納するとき、すべての数値と同様に、倍
 
 ```js
 function setValue(element, date) {
-  const isoString = date.toISOString()
+  const isoString = date.toISOString();
   element.value = isoString.substring(0, isoString.indexOf("T") + 6);
 }
 ```
 
-もしこれがあなたの死後何世紀も経ってから起こるのであれば、なぜ 10000 年問題を心配するのかでしょうか。その通り、あなたはすでに死んでいるので、あなたのソフトウェアを使っている企業は、システムを十分に知っている他のコーダーが入ってきてそれを修正することなく、あなたのソフトウェアを使うと行き詰まってしまうからです。
+もしこれがあなたの死後何世紀も経ってから起こるのであれば、なぜ 10,000 年問題を心配するのかでしょうか。その通り、あなたはすでに死んでいるので、あなたのソフトウェアを使っている企業は、システムを十分に知っている他のコーダーが入ってきてそれを修正することなく、あなたのソフトウェアを使うと行き詰まってしまうからです。
 
 ## 例
 
@@ -369,7 +325,7 @@ HTML は次のようになります。
 <form>
   <div class="nativeDateTimePicker">
     <label for="party">希望するパーティーの日時を選択して下さい。</label>
-    <input type="datetime-local" id="party" name="bday">
+    <input type="datetime-local" id="party" name="bday" />
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">希望するパーティーの日時を選択して下さい。</p>
@@ -419,7 +375,7 @@ HTML は次のようになります。
 </form>
 ```
 
-月は (常に同じなので) ハードコーディングされていますが、年と日の値は、現在の年、および現在選択されている年と月によってそれぞれ動的に生成されます (どのように動作するかについての詳細な説明は、以下のコードのコメントを参照してください)。時と分についても、とても多いので動的に生成するようにしました。
+月は（常に同じなので）ハードコーディングされていますが、年と日の値は、現在の年、および現在選択されている年と月によってそれぞれ動的に生成されます（どのように動作するかについての詳細な説明は、以下のコードのコメントを参照してください）。時と分についても、とても多いので動的に生成するようにしました。
 
 ```css hidden
 div {
@@ -452,35 +408,35 @@ input:valid + span::after {
 
 ```js
 // 変数を定義
-const nativePicker = document.querySelector('.nativeDateTimePicker');
-const fallbackPicker = document.querySelector('.fallbackDateTimePicker');
-const fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector(".nativeDateTimePicker");
+const fallbackPicker = document.querySelector(".fallbackDateTimePicker");
+const fallbackLabel = document.querySelector(".fallbackLabel");
 
-const yearSelect = document.querySelector('#year');
-const monthSelect = document.querySelector('#month');
-const daySelect = document.querySelector('#day');
-const hourSelect = document.querySelector('#hour');
-const minuteSelect = document.querySelector('#minute');
+const yearSelect = document.querySelector("#year");
+const monthSelect = document.querySelector("#month");
+const daySelect = document.querySelector("#day");
+const hourSelect = document.querySelector("#hour");
+const minuteSelect = document.querySelector("#minute");
 
 // 最初はフォールバックを非表示にする
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // 新しい日付入力が文字列入力にフォールバックされるかどうか
-const test = document.createElement('input');
+const test = document.createElement("input");
 
 try {
-  test.type = 'datetime-local';
+  test.type = "datetime-local";
 } catch (e) {
   console.log(e.description);
 }
 
 // もし文字列入力になるならば、 if () {} ブロックの中のコードを実行する
-if (test.type === 'text') {
+if (test.type === "text") {
   // ネイティブの日付選択を隠してフォールバック版を表示
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // 日と年を動的に生成する
   //  (月は常に同じなのでハードコーディング)
@@ -501,9 +457,19 @@ function populateDays(month) {
   let dayNum;
 
   // 31 か 30 日か
-  if (['1', '3', '5', '7', '8', '10', '12'].includes(month)) {
+  if (
+    [
+      "1",
+      "3",
+      "5",
+      "7",
+      "8",
+      "10",
+      "12",
+    ].includes(month)
+  ) {
     dayNum = 31;
-  } else if (['4', '6', '9', '11'].includes(month)) {
+  } else if (["4", "6", "9", "11"].includes(month)) {
     dayNum = 30;
   } else {
   // 2 月の場合は、閏年かどうかを計算する
@@ -514,7 +480,7 @@ function populateDays(month) {
 
   // 日付の <select> に正しい数の新しい <option> 要素を
   for (let i = 1; i <= dayNum; i++) {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.textContent = i;
     daySelect.appendChild(option);
   }
@@ -549,7 +515,7 @@ function populateYears() {
 
   // 今年から 100 年前までの年が <select> で選択できるようにする
   for (let i = 0; i <= 100; i++) {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.textContent = year - i;
     yearSelect.appendChild(option);
   }
@@ -558,8 +524,8 @@ function populateYears() {
 function populateHours() {
   // populate the hours <select> with the 24 hours of the day
   for (let i = 0; i <= 23; i++) {
-    const option = document.createElement('option');
-    option.textContent = (i < 10) ? `0${i}` : i;
+    const option = document.createElement("option");
+    option.textContent = i < 10 ? `0${i}` : i;
     hourSelect.appendChild(option);
   }
 }
@@ -567,8 +533,8 @@ function populateHours() {
 function populateMinutes() {
   // populate the minutes <select> with the 60 hours of each minute
   for (let i = 0; i <= 59; i++) {
-    const option = document.createElement('option');
-    option.textContent = (i < 10) ? `0${i}` : i;
+    const option = document.createElement("option");
+    option.textContent = i < 10 ? `0${i}` : i;
     minuteSelect.appendChild(option);
   }
 }
@@ -577,11 +543,11 @@ function populateMinutes() {
 // 再実行して日数を調整する
 yearSelect.onchange = () => {
   populateDays(monthSelect.value);
-}
+};
 
 monthSelect.onchange = () => {
   populateDays(monthSelect.value);
-}
+};
 
 //日数を保存
 let previousDay;
@@ -590,10 +556,60 @@ let previousDay;
 // 使い方は populateDays() を参照
 daySelect.onchange = () => {
   previousDay = daySelect.value;
-}
+};
 ```
 
 > **メモ:** 53 週ある年もあることを忘れないでください ([年あたりの週数](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)を参照)。商品のアプリを開発するときはこれを念頭に置いておく必要があります。
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#値">値</a></strong></td>
+      <td>
+        （ローカルタイムゾーンでの）日付と時刻を表す文字列、または空欄。
+      </td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} および {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>対応している共通属性</strong></td>
+      <td>
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#step"><code>step</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td>
+        <code>list</code>, <code>value</code>, <code>valueAsNumber</code>.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
+        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>対応するロールなし</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

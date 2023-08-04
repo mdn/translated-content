@@ -1,73 +1,19 @@
 ---
-title: '<embed>: 埋め込み外部コンテンツ要素'
+title: "<embed>: 埋め込み外部コンテンツ要素"
 slug: Web/HTML/Element/embed
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<embed>` 要素**は、外部のコンテンツを文書中の指定された場所に埋め込みます。コンテンツは外部アプリケーションや、対話型コンテンツの他の出所 (ブラウザーのプラグインなど) によって提供されます。
+**`<embed>`** は [HTML](/ja/docs/Web/HTML) の要素で、外部のコンテンツを文書中の指定された場所に埋め込みます。コンテンツは外部アプリケーションや、対話型コンテンツの他の出所（ブラウザーのプラグインなど）によって提供されます。
 
 {{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
 
-> **メモ:** 本文書は、 HTML5 の一部として定義された要素についてのみ記載します。以前の標準化されていない要素の実装については扱いません。
+> **メモ:** 本文書は、[HTML Living Standard](https://html.spec.whatwg.org/#the-embed-element) の一部として定義された要素についてのみ記載します。以前の標準化されていない要素の実装については扱いません。
 
 最近のほとんどのブラウザーは、ブラウザーのプラグインの対応を非推奨にして削除しているため、サイトを平均的なユーザーのブラウザーで操作できるようにしたいのであれば、 `<embed>` に頼ることは賢明ではないということを意識しておいてください。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
-          >コンテンツカテゴリ</a
-        >
-      </th>
-      <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
-          >フローコンテンツ</a
-        >、<a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
-          >記述コンテンツ</a
-        >、埋め込みコンテンツ、対話型コンテンツ、<a
-          href="/ja/docs/Web/Guide/HTML/Content_categories#知覚可能コンテンツ"
-          >知覚可能コンテンツ</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>
-        なし。これは{{Glossary("empty element", "空要素")}}です。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>開始タグは必須。終了タグを記述してはならない。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>埋め込みコンテンツを受け入れるすべての要素。</td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/img_role">img</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLEmbedElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 属性
 
@@ -89,12 +35,73 @@ slug: Web/HTML/Element/embed
 ## 例
 
 ```html
-<embed type="video/quicktime" src="movie.mov" width="640" height="480" title="私の動画の題名">
+<embed
+  type="video/quicktime"
+  src="movie.mov"
+  width="640"
+  height="480"
+  title="Title of my video" />
 ```
 
 ## アクセシビリティの考慮
 
 `embed` 要素に [`title` 属性](/ja/docs/Web/HTML/Global_attributes/title)を使用してコンテンツにラベルを付けるようにしてください。そうすれば、読み上げソフトのような支援技術を使用して捜査している人々が内容を理解することができるようになります。題名がないと、埋め込みコンテンツが何であるかを特定することができません。このようにして文脈を見失うと、特に `embed` 要素が動画や音声のような対話的なコンテンツを含んでいたとに、混乱したり時間を浪費したりします。
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >、<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >、埋め込みコンテンツ、対話型コンテンツ、<a
+          href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ"
+          >知覚可能コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>なし。これは{{Glossary("void element", "空要素")}}です。</td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>開始タグは必須。終了タグを記述してはならない。</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>埋め込みコンテンツを受け入れるすべての要素。</td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLEmbedElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 
@@ -102,9 +109,7 @@ slug: Web/HTML/Element/embed
 
 ## ブラウザーの互換性
 
-> **メモ:** Firefox のバージョン 45 以前では HTML リソースの内容を表示せず、プラグインが必要である旨の汎用的なメッセージを表示します ([Firefox バグ 730768](https://bugzil.la/730768) をご覧ください)。
-
-{{Compat("html.elements.embed")}}
+{{Compat}}
 
 ## 関連情報
 

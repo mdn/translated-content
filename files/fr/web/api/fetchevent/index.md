@@ -1,7 +1,6 @@
 ---
 title: FetchEvent
 slug: Web/API/FetchEvent
-translation_of: Web/API/FetchEvent
 ---
 
 {{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
@@ -45,28 +44,32 @@ Ce extrait de code provient de l'exemple [Service Worker Fetch](https://github.c
 Le code gère aussi les exceptions émises depuis l'opération {{domxref("ServiceWorkerGlobalScope.fetch()")}}. A noter que qu'une réponse d'erreur HTTP (e.g., 404) ne déclenche pas d'exception. Elle retourne un objet de réponse normal avec le code d'erreur approprié.
 
 ```js
-self.addEventListener('fetch', function(event) {
-  console.log('Gestion de l\'évènement de fetch pour', event.request.url);
+self.addEventListener("fetch", function (event) {
+  console.log("Gestion de l'évènement de fetch pour", event.request.url);
 
   event.respondWith(
-    caches.match(event.request).then(function(response) {
+    caches.match(event.request).then(function (response) {
       if (response) {
-        console.log('Réponse trouvée en cache:', response);
+        console.log("Réponse trouvée en cache:", response);
 
         return response;
       }
-      console.log('Pas de réponse trouvée en cache. Sur le point de la récupérer via le réseau...');
+      console.log(
+        "Pas de réponse trouvée en cache. Sur le point de la récupérer via le réseau...",
+      );
 
-      return fetch(event.request).then(function(response) {
-        console.log('La réponse du réseau est:', response);
+      return fetch(event.request)
+        .then(function (response) {
+          console.log("La réponse du réseau est:", response);
 
-        return response;
-      }).catch(function(error) {
-        console.error('Récupération échouée:', error);
+          return response;
+        })
+        .catch(function (error) {
+          console.error("Récupération échouée:", error);
 
-        throw error;
-      });
-    })
+          throw error;
+        });
+    }),
   );
 });
 ```

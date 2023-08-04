@@ -1,14 +1,6 @@
 ---
 title: super
 slug: Web/JavaScript/Reference/Operators/super
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Классы
-  - Возможности языка
-  - Левая часть выражения
-  - Оператор
-translation_of: Web/JavaScript/Reference/Operators/super
 ---
 {{jsSidebar("Operators")}}
 

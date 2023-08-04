@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing variable name'
+title: "SyntaxError: missing variable name"
 slug: Web/JavaScript/Reference/Errors/No_variable_name
 ---
 
@@ -85,5 +85,5 @@ var arr = [1,2,3,4,5];
 ## 더 보기
 
 - [Good variable names](http://wiki.c2.com/?GoodVariableNames)
-- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)
-- [Variable declarations in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations)
+- [`var`](/ko/docs/Web/JavaScript/Reference/Statements/var)
+- [Variable declarations in the JavaScript Guide](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations)

@@ -1,7 +1,6 @@
 ---
 title: Работа с объектами
 slug: Web/JavaScript/Guide/Working_with_objects
-translation_of: Web/JavaScript/Guide/Working_with_Objects
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
@@ -415,9 +414,7 @@ console.log(o.a); // 25
 - `o.b` — геттер, который возвращает `o.a` плюс 1
 - `o.c` — сеттер, который присваивает значение `o.a` половине значения которое передано в `o.c`
 
-Следует особо отметить, что имена функций, указанные в литеральной форме "\[gs]et _propertyName_() { }" не будут в действительности являться именами геттера и сеттера. Чтобы задать в качестве геттера и сеттера функции с явно определёнными именами, используйте метод [`Object.defineProperty`](/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperty "en-US/docs/Core JavaScript 1.5 Reference/Global
-Objects/Object/defineProperty") (или его устаревший аналог [`Object.prototype.__defineGetter__`](/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineGetter "en-US/docs/Core JavaScript 1.5 Reference/Global
-Objects/Object/defineGetter")).
+Следует особо отметить, что имена функций, указанные в литеральной форме "\[gs]et _propertyName_() { }" не будут в действительности являться именами геттера и сеттера. Чтобы задать в качестве геттера и сеттера функции с явно определёнными именами, используйте метод [`Object.defineProperty`](/ru/docs/JavaScript/Reference/Global_Objects/Object/defineProperty) (или его устаревший аналог [`Object.prototype.__defineGetter__`](/ru/docs/JavaScript/Reference/Global_Objects/Object/defineGetter)).
 
 В коде ниже показано, как с помощью геттера и сеттера можно расширить прототип объекта {{jsxref("Date")}} и добавить ему свойство `year,` которое будет работать у всех экземпляров класса `Date`. Этот код использует существующие методы класса `Date` - `getFullYear` и `setFullYear` для работы геттера и сеттера.
 

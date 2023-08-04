@@ -1,7 +1,6 @@
 ---
 title: abort
 slug: Web/API/HTMLMediaElement/abort_event
-original_slug: Web/Events/abort
 ---
 
 {{APIRef}}
@@ -25,8 +24,8 @@ original_slug: Web/Events/abort
 
 ## 屬性
 
-| 屬性                                  | 型態                                             | 描述                                                                                            |
-| ------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
+| 屬性                            | 型態                                             | 描述                                                                                            |
+| ------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
 | `target` {{readonlyInline}}     | [`EventTarget`](/zh-TW/docs/Web/API/EventTarget) | 事件的目標對象 (DOM 樹中最頂層的對象)。                                                         |
 | `type` {{readonlyInline}}       | [`DOMString`](/zh-TW/docs/Web/API/DOMString)     | 事件的型態。                                                                                    |
 | `bubbles` {{readonlyInline}}    | [`Boolean`](/zh-TW/docs/Web/API/Boolean)         | 事件是否向上冒泡。                                                                              |

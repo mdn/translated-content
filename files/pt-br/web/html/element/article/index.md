@@ -11,7 +11,7 @@ O _Elemento HTML Article_ (\<article>) representa uma composição independente 
 >
 > - Quando um elemento `<article>` está aninhado, o elemento interior representa um artigo relacionado com o elemento exterior. Por exemplo, os comentários do post de um blog podem ser elementos `<article>` aninhados em `<article>` representando o post do blog.
 > - Informações sobre o autor de um elemento `<article>` podem ser fornecidas através do elemento {{ HTMLElement("address") }} ,mas ele não se aplica aos elementos `<article>` aninhados.
-> - A data e hora de publicação de um elemento `<article>` pode ser descrita usando o atributo {{ htmlattrxref("pubdate", "time") }} de um elemento {{ HTMLElement("time") }}.
+> - A data e hora de publicação de um elemento `<article>` pode ser descrita usando o atributo [`pubdate`](/pt-BR/docs/Web/HTML/Element/time#pubdate) de um elemento {{ HTMLElement("time") }}.
 
 ## Contexto de uso
 

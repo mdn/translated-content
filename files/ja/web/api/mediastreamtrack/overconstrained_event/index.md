@@ -1,7 +1,6 @@
 ---
-title: 'MediaStreamTrack: overconstrained イベント'
+title: "MediaStreamTrack: overconstrained イベント"
 slug: Web/API/MediaStreamTrack/overconstrained_event
-original_slug: Web/API/MediaStreamTrack/onoverconstrained
 ---
 
 {{ APIRef("Media Capture and Streams") }}{{deprecated_header}}

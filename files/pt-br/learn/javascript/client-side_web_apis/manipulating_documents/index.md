@@ -1,7 +1,6 @@
 ---
 title: JavaScript e CSS
 slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-original_slug: Web/CSS/Getting_Started/JavaScript
 ---
 
 Esta é a primeira sessão da Parte II do [Tutorial de CSS](/pt-BR/CSS/Getting_Started). A parte II contém alguns exemplos que mostram o escopo do CSS usado com outras tecnologias web e Mozilla.
@@ -26,30 +25,28 @@ Há três formas de fazer isso:
 - Trabalhando com um documento individual na DOM — modificando seu estilo independentemente do stylesheets do documento.
 
 | Para mais informações sobre JavaScript, veja a página [JavaScript](/pt-BR/JavaScript) nesta wiki. |
-| -------------------------------------------------------------------------------------------------------------- |
+| ------------------------------------------------------------------------------------------------- |
 
 ### Ação: Uma demonstração de JavaScript
 
 Faça um novo documento em HTML, `doc5.html`. Copie e cole o conteúdo daqui, tenha certeza de rolar para copiar todo o código:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <title>Mozilla CSS Getting Started - JavaScript demonstration</title>
+    <link rel="stylesheet" type="text/css" href="style5.css" />
+    <script type="text/javascript" src="script5.js"></script>
+  </head>
 
-<head>
-<title>Mozilla CSS Getting Started - JavaScript demonstration</title>
-<link rel="stylesheet" type="text/css" href="style5.css" />
-<script type="text/javascript" src="script5.js"></script>
-</head>
+  <body>
+    <h1>JavaScript sample</h1>
 
-<body>
-<h1>JavaScript sample</h1>
+    <div id="square"></div>
 
-<div id="square"></div>
-
-<button type="button" onclick="doDemo(this);">Click Me</button>
-
-</body>
+    <button type="button" onclick="doDemo(this);">Click Me</button>
+  </body>
 </html>
 ```
 
@@ -65,7 +62,7 @@ Crie um novo arquivo CSS, `style5.css`. Copie e cole o conteúdo daqui:
 }
 
 button {
-  padding: .5em 2em;
+  padding: 0.5em 2em;
 }
 ```
 
@@ -73,14 +70,14 @@ Crie um novo arquivo de texto, `script5.js`. Copie e cole o conteúdo daqui:
 
 ```js
 // JavaScript demonstration
-function doDemo (button) {
+function doDemo(button) {
   var square = document.getElementById("square");
   square.style.backgroundColor = "#fa4";
   button.setAttribute("disabled", "true");
   setTimeout(clearDemo, 2000, button);
 }
 
-function clearDemo (button) {
+function clearDemo(button) {
   var square = document.getElementById("square");
   square.style.backgroundColor = "transparent";
   button.removeAttribute("disabled");

@@ -7,10 +7,10 @@ slug: Web/HTML/Element/link
 
 O **Elemento HTML _\<link>_** especifica as relações entre o documento atual e um recurso externo. Possíveis usos para este elemento incluem a definição de uma estrutura relacional para navegação. Este elemento é mais usado para vincular as folhas de estilo.
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ Metadata content. If {{htmlattrxref("itemprop", "link")}} is present: [flow content](/pt-BR/docs/Web/HTML/Content_categories#Flow_content) [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content)
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ Metadata content. If [`itemprop`](/pt-BR/docs/Web/HTML/Element/link#itemprop) is present: [flow content](/pt-BR/docs/Web/HTML/Content_categories#Flow_content) [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content)
 - _Conteúdo permitido_ None, it is an {{Glossary("empty element")}}.
 - _Omissão de tag_ As it is a void element, the start tag must be present and the end tag must not be present
-- _Elementos pai permitidos_ Any element that accepts metadata elements. If {{htmlattrxref("itemprop", "link")}} is present: any element that accepts [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content).
+- _Elementos pai permitidos_ Any element that accepts metadata elements. If [`itemprop`](/pt-BR/docs/Web/HTML/Element/link#itemprop) is present: any element that accepts [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content).
 - _Interface de DOM_ {{domxref("HTMLLinkElement")}}
 
 ## Atributos
@@ -50,7 +50,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - {{htmlattrdef("href")}}
   - : Esse atributo especifica a [URL](/pt-BR/docs/URIs_and_URLs) do recurso vinculado. Uma URL pode ser absolute or relative.
 - {{htmlattrdef("hreflang")}}
-  - : Esse atributo indica o idioma do recurso vinculado. É meramente consultivo. Os valores permitidos são determindaos por [BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt) para HTML5 e por [RFC1766](http://www.ietf.org/rfc/rfc1766.txt) para HTML 4. Use esse atributo se apenas os atributos {{htmlattrxref("href", "a")}} estiverem presentes.
+  - : Esse atributo indica o idioma do recurso vinculado. É meramente consultivo. Os valores permitidos são determindaos por [BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt) para HTML5 e por [RFC1766](http://www.ietf.org/rfc/rfc1766.txt) para HTML 4. Use esse atributo se apenas os atributos [`href`](/pt-BR/docs/Web/HTML/Element/a#href) estiverem presentes.
 - {{htmlattrdef("media")}}
 
   - : This attribute specifies the media which the linked resource applies to. Its value must be a [media query](/pt-BR/docs/CSS/Media_queries). This attribute is mainly useful when linking to external stylesheets by allowing the user agent to pick the best adapted one for the device it runs on.
@@ -65,18 +65,18 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
   - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of the [link types values](/pt-BR/docs/Web/HTML/Link_types). The most common use of this attribute is to specify a link to an external style sheet: the **rel** attribute is set to `stylesheet`, and the **href** attribute is set to the URL of an external style sheet to format the page. WebTV also supports the use of the value `next` for **rel** to preload the next page in a document series.
 - {{htmlattrdef("rev")}}
 
-  - : The value of this attribute shows the relationship of the current document to the linked document, as defined by the {{htmlattrxref("href", "link")}} attribute. The attribute thus defines the reverse relationship compared to the value of the **rel** attribute. [Link types values](/pt-BR/docs/Web/HTML/Link_types) for the attribute are similar to the possible values for {{htmlattrxref("rel", "link")}}.
+  - : The value of this attribute shows the relationship of the current document to the linked document, as defined by the [`href`](/pt-BR/docs/Web/HTML/Element/link#href) attribute. The attribute thus defines the reverse relationship compared to the value of the **rel** attribute. [Link types values](/pt-BR/docs/Web/HTML/Link_types) for the attribute are similar to the possible values for [`rel`](/pt-BR/docs/Web/HTML/Element/link#rel).
 
-    > **Nota:** This attribute is obsolete in HTML5. **Do not use it**. To achieve its effect, use the {{htmlattrxref("rel", "link")}} attribute with the opposite [link types values](/pt-BR/docs/Web/HTML/Link_types), e.g. made should be replaced by author. Also this attribute doesn't mean _revision_ and must not be used with a version number, which is unfortunately the case on numerous sites.
+    > **Nota:** This attribute is obsolete in HTML5. **Do not use it**. To achieve its effect, use the [`rel`](/pt-BR/docs/Web/HTML/Element/link#rel) attribute with the opposite [link types values](/pt-BR/docs/Web/HTML/Link_types), e.g. made should be replaced by author. Also this attribute doesn't mean _revision_ and must not be used with a version number, which is unfortunately the case on numerous sites.
 
 - {{htmlattrdef("sizes")}}
 
-  - : This attribute defines the sizes of the icons for visual media contained in the resource. It must be present only if the {{htmlattrxref("rel","link")}} contains the icon [link types value](/pt-BR/docs/Web/HTML/Link_types). It may have the following values:
+  - : This attribute defines the sizes of the icons for visual media contained in the resource. It must be present only if the [`rel`](/pt-BR/docs/Web/HTML/Element/link#rel) contains the icon [link types value](/pt-BR/docs/Web/HTML/Link_types). It may have the following values:
 
     - `any`, meaning that the icon can be scaled to any size as it is in a vector format, like `image/svg+xml`.
     - a white-space separated list of sizes, each in the format `<width in pixels>x<height in pixels>` or `<width in pixels>X<height in pixels>`. Each of these sizes must be contained in the resource.
 
-    > **Nota:** Most icon formats are only able to store one single icon; therefore most of the time the {{HTMLAttrxRef("sizes")}} attribute contains only one entry.
+    > **Nota:** Most icon formats are only able to store one single icon; therefore most of the time the [`sizes`](/pt-BR/docs/Web/HTML/Global_attributes#sizes) attribute contains only one entry.
     > MS's ICO format does, as well as Apple's ICNS. ICO is more ubiquitous, so you should use this format if cross-browser support is a concern (especially for old IE versions).
 
 - {{htmlattrdef("target")}}{{Non-standard_inline}}

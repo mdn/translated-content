@@ -1,7 +1,6 @@
 ---
 title: 공통된 CSS 질문들
 slug: Learn/CSS/Howto/CSS_FAQ
-original_slug: Web/CSS/Common_CSS_Questions
 ---
 
 ## 왜 유효한 내 CSS가 왜 올바르게 그려지지 않는가?
@@ -18,7 +17,7 @@ Gecko-based browsers, have a third _[Almost Standards Mode](/ko/docs/Mozilla/Gec
 The standard `DOCTYPE` declaration that will trigger standards mode is:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 ```
 
 When at all possible, you should just use the above doctype. There are other valid legacy doctypes that will trigger Standards or Almost Standards mode:

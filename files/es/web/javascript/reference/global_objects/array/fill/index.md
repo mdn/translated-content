@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/fill
 ---
 
 {{JSRef}}

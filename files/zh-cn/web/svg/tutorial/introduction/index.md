@@ -7,7 +7,7 @@ slug: Web/SVG/Tutorial/Introduction
 
 {{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
 
-[SVG](/zh-CN/docs/Web/SVG) 是一种 [XML](/zh-CN/docs/Web/XML) 语言，类似 [XHTML](/zh-CN/docs/Glossary/XHTML)，可以用来绘制矢量图形，例如右面展示的图形。SVG 可以通过定义必要的线和形状来创建一个图形，也可以修改已有的位图，或者将这两种方式结合起来创建图形。图形和其组成部分可以形变（be transformed）、合成、或者通过滤镜完全改变外观。
+[SVG](/zh-CN/docs/Web/SVG) 是一种 [XML](/zh-CN/docs/Web/XML) 语言，类似 [XHTML](/zh-CN/docs/Glossary/XHTML)，可以用来绘制矢量图形，例如下面展示的图形。SVG 可以通过定义必要的线和形状来创建一个图形，也可以修改已有的位图，或者将这两种方式结合起来创建图形。图形和其组成部分可以形变（be transformed）、合成、或者通过滤镜完全改变外观。
 
 ![Mozilla dino logo](dino.svg)
 

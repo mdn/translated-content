@@ -1,7 +1,6 @@
 ---
 title: String.prototype.link()
 slug: Web/JavaScript/Reference/Global_Objects/String/link
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/link
 ---
 
 {{JSRef("Objetos_globales", "String")}}
@@ -19,7 +18,7 @@ cadena.link(atributoHref)
 ### Parámetros
 
 - `atributoHref`
-  - : Cualquier cadena que especifique el atributo {{htmlattrxref("href", "a")}} de la etiqueta {{HTMLElement("a")}}; debería ser una URL válida (relativa o absoluta).
+  - : Cualquier cadena que especifique el atributo [`href`](/es/docs/Web/HTML/Element/a#href) de la etiqueta {{HTMLElement("a")}}; debería ser una URL válida (relativa o absoluta).
 
 ## Descripción
 

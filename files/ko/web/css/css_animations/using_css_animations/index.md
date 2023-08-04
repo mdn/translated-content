@@ -1,6 +1,6 @@
 ---
 title: CSS 애니메이션 사용하기
-slug: Web/CSS/CSS_Animations/Using_CSS_animations
+slug: Web/CSS/CSS_animations/Using_CSS_animations
 ---
 
 {{SeeCompatTable}}{{CSSRef}}

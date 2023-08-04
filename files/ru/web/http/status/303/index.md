@@ -1,11 +1,6 @@
 ---
 title: 303 See Other
 slug: Web/HTTP/Status/303
-tags:
-  - HTTP
-  - Код ответа
-  - Перенаправление
-translation_of: Web/HTTP/Status/303
 ---
 {{HTTPSidebar}}
 

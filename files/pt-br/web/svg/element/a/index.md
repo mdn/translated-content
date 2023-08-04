@@ -58,28 +58,28 @@ svg|a:hover, svg|a:active {
 
 ## Attributes
 
-- {{htmlattrxref("download", "a")}} {{experimental_inline}}
+- [`download`](/pt-BR/docs/Web/HTML/Element/a#download) {{experimental_inline}}
   - : Instructs browsers to download a {{Glossary("URL")}} instead of navigating to it, so the user will be prompted to save it as a local file.
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("href")}}
   - : The {{Glossary("URL")}} or URL fragment the hyperlink points to.
     _Value type_: **[\<URL>](/docs/Web/SVG/Content_type#URL)** ; _Default value_: _none_; _Animatable_: **yes**
-- {{htmlattrxref("hreflang", "a")}}
+- [`hreflang`](/pt-BR/docs/Web/HTML/Element/a#hreflang)
   - : The human language of the URL or URL fragment that the hyperlink points to.
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
-- {{htmlattrxref("ping", "a")}} {{experimental_inline}}
+- [`ping`](/pt-BR/docs/Web/HTML/Element/a#ping) {{experimental_inline}}
   - : A space-separated list of URLs to which, when the hyperlink is followed, [`POST`](/pt-BR/docs/Web/HTTP/Methods/POST) requests with the body `PING` will be sent by the browser (in the background). Typically used for tracking. For a more widely-supported feature addressing the same use cases, see [Navigator.sendBeacon()](/pt-BR/docs/Web/API/Navigator/sendBeacon).
     _Value type_: **[\<list-of-URLs>](/docs/Web/SVG/Content_type#List-of-Ts)** ; _Default value_: _none_; _Animatable_: **no**
-- {{htmlattrxref("referrerpolicy", "a")}} {{experimental_inline}}
+- [`referrerpolicy`](/pt-BR/docs/Web/HTML/Element/a#referrerpolicy) {{experimental_inline}}
   - : Which [referrer](/pt-BR/docs/Web/HTTP/Headers/Referer) to send when fetching the {{Glossary("URL")}}.
     _Value type_: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; _Default value_: _none_; _Animatable_: **no**
-- {{htmlattrxref("rel", "a")}} {{experimental_inline}}
+- [`rel`](/pt-BR/docs/Web/HTML/Element/a#rel) {{experimental_inline}}
   - : The relationship of the target object to the link object.
     _Value type_: **[\<list-of-Link-Types>](/docs/Web/HTML/Link_types)** ; _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("target")}}
   - : Where to display the linked {{Glossary("URL")}}.
     _Value type_: `_self`|`_parent`|`_top`|`_blank`|**\<name>** ; _Default value_: `_self`; _Animatable_: **yes**
-- {{htmlattrxref("type", "a")}}
+- [`type`](/pt-BR/docs/Web/HTML/Element/a#type)
   - : A {{Glossary("MIME type")}} for the linked URL.
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}

@@ -67,7 +67,7 @@ console.log(parent.childNodes); // NodeList [ #text "Some text", <p> ]
 ```js
 var parent = document.createElement("div");
 
-with(parent) {
+with (parent) {
   prepend("foo");
 }
 // ReferenceError: prepend is not defined
@@ -80,19 +80,23 @@ with(parent) {
 ```js
 // from: https://github.com/jserz/js_piece/blob/master/DOM/Element/prepend()/prepend().md
 (function (arr) {
-    arr.forEach(function (item) {
-        item.prepend = item.prepend || function () {
-            var argArr = Array.prototype.slice.call(arguments),
-                docFrag = document.createDocumentFragment();
+  arr.forEach(function (item) {
+    item.prepend =
+      item.prepend ||
+      function () {
+        var argArr = Array.prototype.slice.call(arguments),
+          docFrag = document.createDocumentFragment();
 
-            argArr.forEach(function (argItem) {
-                var isNode = argItem instanceof Node;
-                docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
-            });
+        argArr.forEach(function (argItem) {
+          var isNode = argItem instanceof Node;
+          docFrag.appendChild(
+            isNode ? argItem : document.createTextNode(String(argItem)),
+          );
+        });
 
-            this.insertBefore(docFrag, this.firstChild);
-        };
-    });
+        this.insertBefore(docFrag, this.firstChild);
+      };
+  });
 })([Element.prototype, Document.prototype, DocumentFragment.prototype]);
 ```
 

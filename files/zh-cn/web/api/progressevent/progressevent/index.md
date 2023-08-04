@@ -9,7 +9,7 @@ slug: Web/API/ProgressEvent/ProgressEvent
 
 ## 语法
 
-```js
+```js-nolint
 new ProgressEvent(type)
 new ProgressEvent(type, options)
 ```

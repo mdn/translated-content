@@ -11,7 +11,7 @@ slug: Web/CSS/transition
 
 Transitions 讓你可以定義元件在兩個狀態之間切換的轉場效果。兩個不同狀態可以使用[虛擬類別](/zh-TW/docs/Web/CSS/Pseudo-classes) 定義，像是{{cssxref(":hover")}} 或 {{cssxref(":active")}} 亦或是 使用 JavaScript 設定的狀態變化。
 
-## **語法**
+## 語法
 
 ```css
 /* Apply to 1 property */
@@ -28,7 +28,9 @@ transition: margin-right 4s ease-in-out;
 transition: margin-right 4s ease-in-out 1s;
 
 /* Apply to 2 properties */
-transition: margin-right 4s, color 1s;
+transition:
+  margin-right 4s,
+  color 1s;
 
 /* Apply to all changed properties */
 transition: all 0.5s ease-out;

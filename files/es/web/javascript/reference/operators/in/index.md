@@ -1,7 +1,6 @@
 ---
 title: in
 slug: Web/JavaScript/Reference/Operators/in
-original_slug: Web/JavaScript/Referencia/Operadores/in
 ---
 
 {{jsSidebar("Operators")}}El **operador `in`** devuelve `true` si la propiedad especificada está en el objeto especificado o su prototipo.

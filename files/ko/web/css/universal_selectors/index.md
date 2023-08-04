@@ -33,7 +33,7 @@ CSS 3부터는 별표를 {{cssxref("CSS_Namespaces", "네임스페이스")}}와 
 ### CSS
 
 ```css
-* [lang^=en] {
+* [lang^="en"] {
   color: green;
 }
 
@@ -46,7 +46,7 @@ CSS 3부터는 별표를 {{cssxref("CSS_Namespaces", "네임스페이스")}}와 
 }
 
 .floating {
-  float: left
+  float: left;
 }
 
 /* automatically clear the next sibling after a floating element */

@@ -1,7 +1,6 @@
 ---
 title: NodeFilter
 slug: Web/API/Document/createNodeIterator
-original_slug: Web/API/NodeFilter
 ---
 
 {{APIRef("DOM")}}
@@ -19,34 +18,35 @@ _This interface neither implements, nor inherits, any properties._
 _This interface doesn't inherit any methods._
 
 - {{domxref("NodeFilter.acceptNode()")}}
-  - | : Returns an `unsigned short` that will be used to tell if a given {{domxref("Node")}} must be accepted or not by the {{ domxref("NodeIterator") }} or {{ domxref("TreeWalker") }} iteration algorithm. This method is expected to be written by the user of a `NodeFilter`. Possible return values are: | Constant                                                                                                                                                                                                                                                                                                           | Description |
-    | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-    | `FILTER_ACCEPT`                                                                                                                                                                                                                                                                                                                   | Value returned by the {{ domxref("NodeFilter.acceptNode()") }} method when a node should be accepted.                                                                                                                                                                                                  |
-    | `FILTER_REJECT`                                                                                                                                                                                                                                                                                                                   | Value to be returned by the {{ domxref("NodeFilter.acceptNode()") }} method when a node should be rejected. For {{ domxref("TreeWalker") }}, child nodes are also rejected. For {{ domxref("NodeIterator") }}, this flag is synonymous with FILTER_SKIP.                           |
-    | `FILTER_SKIP`                                                                                                                                                                                                                                                                                                                     | Value to be returned by {{ domxref("NodeFilter.acceptNode()") }} for nodes to be skipped by the {{ domxref("NodeIterator") }} or {{ domxref("TreeWalker") }} object. The children of skipped nodes are still considered. This is treated as "skip this node but not its children". |
+  - | : Returns an `unsigned short` that will be used to tell if a given {{domxref("Node")}} must be accepted or not by the {{ domxref("NodeIterator") }} or {{ domxref("TreeWalker") }} iteration algorithm. This method is expected to be written by the user of a `NodeFilter`. Possible return values are: | Constant                                                                                                                                                                                                                                                                           | Description |
+    | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+    | `FILTER_ACCEPT`                                                                                                                                                                                                                                                                                          | Value returned by the {{ domxref("NodeFilter.acceptNode()") }} method when a node should be accepted.                                                                                                                                                                              |
+    | `FILTER_REJECT`                                                                                                                                                                                                                                                                                          | Value to be returned by the {{ domxref("NodeFilter.acceptNode()") }} method when a node should be rejected. For {{ domxref("TreeWalker") }}, child nodes are also rejected. For {{ domxref("NodeIterator") }}, this flag is synonymous with FILTER_SKIP.                           |
+    | `FILTER_SKIP`                                                                                                                                                                                                                                                                                            | Value to be returned by {{ domxref("NodeFilter.acceptNode()") }} for nodes to be skipped by the {{ domxref("NodeIterator") }} or {{ domxref("TreeWalker") }} object. The children of skipped nodes are still considered. This is treated as "skip this node but not its children". |
 
 ## Example
 
 ```js
 var nodeIterator = document.createNodeIterator(
   // Node to use as root
-  document.getElementById('someId'),
+  document.getElementById("someId"),
 
   // Only consider nodes that are text nodes (nodeType 3)
   NodeFilter.SHOW_TEXT,
 
   // Object containing the function to use for the acceptNode method
   // of the NodeFilter
-    { acceptNode: function(node) {
+  {
+    acceptNode: function (node) {
       // Logic to determine whether to accept, reject or skip node
       // In this case, only accept nodes that have content
       // other than whitespace
-      if ( ! /^\s*$/.test(node.data) ) {
+      if (!/^\s*$/.test(node.data)) {
         return NodeFilter.FILTER_ACCEPT;
       }
-    }
+    },
   },
-  false
+  false,
 );
 
 // Show the content of every non-empty text node that is a child of root

@@ -5,37 +5,31 @@ slug: Web/MathML/Element/msub
 
 {{MathMLRef}}
 
-MathML **`<msub>`** 元素用来为表达式加下标，语法如下：**`<msub> base subscript </msub>`**。
+[MathML](/zh-CN/docs/Web/MathML) **`<msub>`** 元素用于为表达式附加下标。
+
+使用语法如下：`<msub> base subscript </msub>`。
 
 ## 属性
 
-- class, id, style
-  - : 供[样式表](/zh-CN/docs/CSS)使用。
-- href
-  - : 用来设置标签点击后跳转的链接。
-- mathbackground
-  - : 用来设置标签的背景色，可以使用 **`#rgb`**、**`#rrggbb`** 或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
-- mathcolor
-  - : 用来设置标签文字的颜色，同样可以使用 **`#rgb`**、**`#rrggbb`** 或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
-- subscriptshift
-  - : 用来设置下标相对于表达式的基线的最小距离，它是一个[长度值](/zh-CN/docs/MathML/Attributes/Values#Lengths)。
+该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)和以下已弃用的属性：
 
-## 例子
+- `subscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
+  - : [`<length-percentage>`](/zh-CN/docs/Web/CSS/length-percentage) 值，表示下标基线向下移动的最小距离。
 
-下述代码表示：![x1](/files/3202/msub.png)
+> **备注：** 对于 `subscriptshift` 属性，一些浏览器可能也会接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
 
-您的浏览器的渲染结果： <math><msub><mi>X</mi> <mn>1</mn></msub></math>
+## 示例
 
 ```html
-<math>
-
+<math display="block">
   <msub>
     <mi>X</mi>
     <mn>1</mn>
   </msub>
-
 </math>
 ```
+
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 
@@ -45,12 +39,8 @@ MathML **`<msub>`** 元素用来为表达式加下标，语法如下：**`<msub>
 
 {{Compat}}
 
-## 关于 Gecko 的特殊说明
+## 参见
 
-- 从 Gecko 26.0 开始，不允许使用\<none />作为子元素。The rendering has been made more consistent with equivalent configurations of {{MathMLElement("msup")}} and {{MathMLElement("mmultiscripts")}} and a bug with an incorrect application of the `superscriptshift` attribute has been fixed (see [Firefox bug 827713](https://bugzil.la/827713) for details).
-
-## 相关链接
-
-- {{ MathMLElement("msup") }} (Superscript)
-- {{ MathMLElement("msubsup") }} (Subscript-superscript pair)
-- {{ MathMLElement("mmultiscripts") }} (Prescripts and tensor indices)
+- {{ MathMLElement("msup") }}（上标）
+- {{ MathMLElement("msubsup") }}（上下标）
+- {{ MathMLElement("mmultiscripts") }}（四角标，张量式标记）

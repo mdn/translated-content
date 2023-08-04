@@ -1,10 +1,8 @@
 ---
 title: VRDisplayCapabilities
 slug: Web/API/VRDisplayCapabilities
-tags:
-  - Виртуальная реальность
-translation_of: Web/API/VRDisplayCapabilities
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 Интерфейс **VRDisplayCapabilities** WebVR API описывает возможности {{domxref ("VRDisplay")}} - его функции можно использовать для тестирования возможностей устройства Виртуальной Реальности (VR), например, он может возвращать информацию о местоположении.
@@ -28,19 +26,29 @@ translation_of: Web/API/VRDisplayCapabilities
 
 ```js
 function reportDisplays() {
-  navigator.getVRDisplays().then(function(displays) {
-    for(var i = 0; i < displays.length; i++) {
+  navigator.getVRDisplays().then(function (displays) {
+    for (var i = 0; i < displays.length; i++) {
       var cap = displays[i].capabilities;
       // cap is a VRDisplayCapabilities object
-      var listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>Display ' + (i+1) + '</strong>'
-                   + '<br>VR Display ID: ' + displays[i].displayId
-                   + '<br>VR Display Name: ' + displays[i].displayName
-                   + '<br>Display can present content: ' + cap.canPresent
-                   + '<br>Display is separate from the computer\'s main display: ' + cap.hasExternalDisplay
-                   + '<br>Display can return position info: ' + cap.hasPosition
-                   + '<br>Display can return orientation info: ' + cap.hasOrientation
-                   + '<br>Display max layers: ' + cap.maxLayers;
+      var listItem = document.createElement("li");
+      listItem.innerHTML =
+        "<strong>Display " +
+        (i + 1) +
+        "</strong>" +
+        "<br>VR Display ID: " +
+        displays[i].displayId +
+        "<br>VR Display Name: " +
+        displays[i].displayName +
+        "<br>Display can present content: " +
+        cap.canPresent +
+        "<br>Display is separate from the computer's main display: " +
+        cap.hasExternalDisplay +
+        "<br>Display can return position info: " +
+        cap.hasPosition +
+        "<br>Display can return orientation info: " +
+        cap.hasOrientation +
+        "<br>Display max layers: " +
+        cap.maxLayers;
       list.appendChild(listItem);
     }
   });

@@ -2,7 +2,7 @@
 title: Firefox 113 for developers
 slug: Mozilla/Firefox/Releases/113
 l10n:
-  sourceCommit: 06dbfba6e15b22775889c7ac1a8d3d0b3ed20830
+  sourceCommit: 14c50bd73f6fee50b35b95b9fbb52387ff443321
 ---
 
 {{FirefoxSidebar}}
@@ -23,6 +23,7 @@ l10n:
 - [`:nth-child of <selector>` 構文](/ja/docs/Web/CSS/:nth-child#the_of_selector_syntax) で、定義したセレクターにも一致する、`An+B` 規則に基づく子要素のグループを対象にできるようになりました。
   詳しくは ([Firefox bug 1808229](https://bugzil.la/1808229)) をご覧ください。
 - [`scripting`](/ja/docs/Web/CSS/@media/scripting) メディア特性をサポートしました。詳しくは ([Firefox bug 1166581](https://bugzil.la/1166581)) をご覧ください。
+- [`content`](/ja/docs/Web/CSS/content) プロパティで、`<gradient>`、`image-set()`、`url()` を含むすべての画像型をサポートしました。詳しくは ([Firefox bug 1684958](https://bugzil.la/1684958)) をご覧ください。現在は、`::before` および `::after` 擬似セレクターを伴うと `<gradient>` が描画されない不具合があります。詳しくは ([Firefox bug 1832901](https://bugzil.la/1832901)) をご覧ください。
 
 ### JavaScript
 
@@ -34,11 +35,13 @@ l10n:
   ([Firefox bug 1709347](https://bugzil.la/1709347))
 - [Compression Streams API](/ja/docs/Web/API/Compression_Streams_API) をサポートしました。
   この API が提供するインターフェイスは、`gzip` および `deflate` 型式を使用したデータの圧縮や展開に使用できます ([Firefox bug 1823619](https://bugzil.la/1823619))。
+- 非推奨かつ非標準の `mozImageSmoothingEnabled` プロパティを無効にしました。
+  スケーリングされた画像の平滑化については、[`imageSmoothingEnabled`](/ja/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled) プロパティをご覧ください ([Firefox bug 1822955](https://bugzil.la/1822955))。
 
 #### Media、WebRTC、Web Audio
 
 - [AV1 動画コーデック](/ja/docs/Web/Media/Formats/Video_codecs#av1) を Android で有効化しました。デバイスがサポートしていれば、デコードでハードウェアアクセラレーションを使用します ([Firefox bug 1672276](https://bugzil.la/1672276))。
-- 以下の WebRTC メソッド、プロパティおよびディクショナリーをサポートしました: [`RTCRtpSender.getCapabilities()`](/ja/docs/Web/API/RTCRtpSender/getCapabilities)、[`RTCRtpSender.setStreams()`](/ja/docs/Web/API/RTCRtpSender/setStreams)、[`RTCSctpTransport`](/ja/docs/Web/API/RTCSctpTransport)、[`RTCPeerConnection.sctp`](/ja/docs/Web/API/RTCPeerConnection/sctp)、[`RTCMediaSourceStats`](/ja/docs/Web/API/RTCMediaSourceStats)、[`RTCPeerConnection.connectionState`](/ja/docs/Web/API/RTCPeerConnection/connectionState)、[`RTCPeerConnectionStats`](/ja/docs/Web/API/RTCPeerConnectionStats)。
+- 以下の WebRTC メソッド、プロパティおよびディクショナリーをサポートしました: [`RTCRtpSender.getCapabilities()`](/ja/docs/Web/API/RTCRtpSender/getCapabilities)、[`RTCRtpReceiver.getCapabilities()`](/ja/docs/Web/API/RTCRtpReceiver/getCapabilities)、[`RTCRtpSender.setStreams()`](/ja/docs/Web/API/RTCRtpSender/setStreams)、[`RTCSctpTransport`](/ja/docs/Web/API/RTCSctpTransport)、[`RTCPeerConnection.sctp`](/ja/docs/Web/API/RTCPeerConnection/sctp)、[`RTCMediaSourceStats`](/ja/docs/Web/API/RTCMediaSourceStats)、[`RTCPeerConnection.connectionState`](/ja/docs/Web/API/RTCPeerConnection/connectionState)、[`RTCPeerConnectionStats`](/ja/docs/Web/API/RTCPeerConnectionStats)。
   それぞれに対応するバグ報告は、[Firefox bug 1531460](https://bugzil.la/1531460)、[Firefox bug 1510802](https://bugzil.la/1510802)、[Firefox bug 1278299](https://bugzil.la/1278299)、[Firefox bug 1804678](https://bugzil.la/1804678)、[Firefox bug 1265827](https://bugzil.la/1265827)、[Firefox bug 1531087](https://bugzil.la/1531087) です。
 
 #### 廃止

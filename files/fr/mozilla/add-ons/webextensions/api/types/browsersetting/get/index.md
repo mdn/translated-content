@@ -1,16 +1,6 @@
 ---
 title: get()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Types
-  - WebExtensions
-  - get
-translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get
 ---
 
 {{AddonSidebar()}}
@@ -23,8 +13,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var getting = setting.get(
-  details     // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres

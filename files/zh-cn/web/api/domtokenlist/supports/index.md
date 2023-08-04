@@ -25,15 +25,15 @@ supports(token);
 ## 示例
 
 ```js
-const iframe = document.getElementById('display');
+const iframe = document.getElementById("display");
 
-if (iframe.sandbox.supports('an-upcoming-feature')) {
+if (iframe.sandbox.supports("an-upcoming-feature")) {
   // support code for mystery future feature
 } else {
   // fallback code
 }
 
-if (iframe.sandbox.supports('allow-scripts')) {
+if (iframe.sandbox.supports("allow-scripts")) {
   // instruct frame to run JavaScript
   //
   // (NOTE: This feature is well-supported; this is just an example!)

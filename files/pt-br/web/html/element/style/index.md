@@ -71,7 +71,7 @@ body {
 
 {{Compat("html.elements.style")}}
 
-## Veja também:
+## Veja também
 
 - O elemento {{HTMLElement("link")}} que permite usar folhas de estilo externas.
 

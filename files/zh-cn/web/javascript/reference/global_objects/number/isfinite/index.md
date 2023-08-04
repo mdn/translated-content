@@ -31,25 +31,26 @@ Number.isFinite(value)
 ## Polyfill
 
 ```js
-if (Number.isFinite === undefined) Number.isFinite = function(value) {
-    return typeof value === 'number' && isFinite(value);
-}
+if (Number.isFinite === undefined)
+  Number.isFinite = function (value) {
+    return typeof value === "number" && isFinite(value);
+  };
 ```
 
 ## 示例
 
 ```js
-Number.isFinite(Infinity);  // false
-Number.isFinite(NaN);       // false
+Number.isFinite(Infinity); // false
+Number.isFinite(NaN); // false
 Number.isFinite(-Infinity); // false
 
-Number.isFinite(0);         // true
-Number.isFinite(2e64);      // true
+Number.isFinite(0); // true
+Number.isFinite(2e64); // true
 
-Number.isFinite('0');       // false, would've been true with
-                            // global isFinite('0')
-Number.isFinite(null);      // false, would've been true with
-                            // global isFinite(null)
+Number.isFinite("0"); // false, would've been true with
+// global isFinite('0')
+Number.isFinite(null); // false, would've been true with
+// global isFinite(null)
 ```
 
 ## 规范

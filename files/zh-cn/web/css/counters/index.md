@@ -1,7 +1,6 @@
 ---
 title: counters()
 slug: Web/CSS/counters
-original_slug: Web/CSS/counters()
 ---
 
 {{CSSRef}}
@@ -16,7 +15,7 @@ counters(countername, '-');
 counters(countername, '.', upper-roman)
 ```
 
-一个[计数器](/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)本身没有可见的效果，而是通过`counter()`函数（和[`counters()`](/zh-CN/docs/Web/CSS/counters)函数）返回开发人员定义的字符串（或图像）从而使计数器拥有很棒的作用。
+一个[计数器](/zh-CN/docs/Web/CSS/CSS_lists/Using_CSS_counters)本身没有可见的效果，而是通过 `counter()` 函数（和 [`counters()`](/zh-CN/docs/Web/CSS/counters) 函数）返回开发人员定义的字符串（或图像）从而使计数器拥有很棒的作用。
 
 > **备注：** `counter()` 函数可以与任何 CSS 属性一起使用，但是对[`"content"`](/zh-CN/docs/Web/CSS/content)以外的属性的支持是试验性的，对 type-or-unit 参数的支持很少。
 >
@@ -54,25 +53,25 @@ where
 ```html
 <ol>
   <li>
-     <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ol>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
   </li>
   <li></li>
   <li></li>
   <li>
-     <ol>
-        <li></li>
-        <li>
-           <ol>
-              <li></li>
-              <li></li>
-              <li></li>
-           </ol>
-        </li>
-      </ol>
+    <ol>
+      <li></li>
+      <li>
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </li>
+    </ol>
   </li>
 </ol>
 ```
@@ -87,10 +86,14 @@ li {
   counter-increment: listCounter;
 }
 li::marker {
-   content:  counters(listCounter, '.', upper-roman) ') ';
+  content: counters(listCounter, ".", upper-roman) ") ";
 }
 li::before {
-  content:  counters(listCounter, ".") " == " counters(listCounter, ".", lower-roman) ;
+  content: counters(listCounter, ".") " == " counters(
+      listCounter,
+      ".",
+      lower-roman
+    );
 }
 ```
 
@@ -105,25 +108,25 @@ li::before {
 ```html
 <ol>
   <li>
-     <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ol>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
   </li>
   <li></li>
   <li></li>
   <li>
-     <ol>
-        <li></li>
-        <li>
-           <ol>
-              <li></li>
-              <li></li>
-              <li></li>
-           </ol>
-        </li>
-      </ol>
+    <ol>
+      <li></li>
+      <li>
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </li>
+    </ol>
   </li>
 </ol>
 ```
@@ -138,10 +141,14 @@ li {
   counter-increment: count;
 }
 li::marker {
-   content: counters(count, '.', upper-alpha) ') ';
+  content: counters(count, ".", upper-alpha) ") ";
 }
 li::before {
-  content: counters(count, ".", decimal-leading-zero) " == " counters(count, ".", lower-alpha);
+  content: counters(count, ".", decimal-leading-zero) " == " counters(
+      count,
+      ".",
+      lower-alpha
+    );
 }
 ```
 
@@ -159,7 +166,7 @@ li::before {
 
 ## 参见
 
-- [Using CSS Counters](/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- [Using CSS Counters](/zh-CN/docs/Web/CSS/CSS_lists/Using_CSS_counters)
 - {{cssxref("counter-set")}}
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-increment")}}

@@ -1,12 +1,6 @@
 ---
 title: 'ReferenceError: assignment to undeclared variable "x"'
 slug: Web/JavaScript/Reference/Errors/Undeclared_var
-tags:
-  - Erreurs
-  - JavaScript
-  - ReferenceError
-translation_of: Web/JavaScript/Reference/Errors/Undeclared_var
-original_slug: Web/JavaScript/Reference/Erreurs/Undeclared_var
 ---
 
 {{jsSidebar("Errors")}}

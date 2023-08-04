@@ -1,7 +1,6 @@
 ---
 title: メディアクエリーの使用
 slug: Web/CSS/CSS_media_queries/Using_media_queries
-original_slug: Web/CSS/Media_Queries/Using_media_queries
 ---
 
 {{CSSRef}}
@@ -41,7 +40,7 @@ original_slug: Web/CSS/Media_Queries/Using_media_queries
 
 ## メディア種別を対象にする
 
-メディア種別は、その機器の一般的な分類を記述します。ウェブサイトは一般的に画面を想定してデザインされていますが、プリンターや、音声ベースの画面リーダーのような特殊な機器を対象としたスタイルを作成したい場合もあるでしょう。例えば、この CSS はプリンターを対象としています。
+メディア種別は、その機器の一般的な分類を記述します。ウェブサイトは一般的に画面を想定してデザインされていますが、プリンターや、音声ベースのスクリーンリーダーのような特殊な機器を対象としたスタイルを作成したい場合もあるでしょう。例えば、この CSS はプリンターを対象としています。
 
 ```css
 @media print { ... }

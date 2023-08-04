@@ -1,7 +1,6 @@
 ---
 title: keygen
 slug: orphaned/Web/HTML/Element/keygen
-original_slug: Web/HTML/Element/keygen
 ---
 
 El elemento `keygen` de HTML existe para facilitar la generación de llaves, y el envío de la clave pública como parte de un formulario HTML. Este mecanismo está diseñado para utilizarse con sistemas de gestión de certificados basados en la Web. Se espera que el elemento `keygen` se utilice en un formulario HTML, junto con otra información necesaria para la construcción de una solicitud de certificado, y que el resultado del proceso será un certificado firmado.
@@ -21,13 +20,13 @@ El elemento `keygen` de HTML existe para facilitar la generación de llaves, y e
 
 - autofocus
   - : Este atributo booleano permite especificar que el control debe tener el foco de entrada cuando se cargue la página, a menos que el usuario lo anule, por ejemplo, al escribir en un control diferente. Sólo un elemento de formulario en un documento puede tener el atributo **autofocus,** que es un valor booleano.
-- {{ Htmlattrdef ("challenge") }}
+- `challenge`
   - : Una cadena de desafío que se presenta junto con la clave pública. El valor predeterminado es una cadena vacía si no se especifica.
-- {{ Htmlattrdef ("disabled") }}
+- `disabled`
   - : Este atributo booleano indica que el control del formulario no está disponible para la interacción.
 - form
   - : El elemento form al que este elemento está asociado (el _propietario del formulario)._ El valor del atributo debe ser un **id** de un elemento {{ HTMLElement ("form") }} en el mismo documento. Si este atributo no se especifica, este elemento debe ser un descendiente de un elemento {{ HTMLElement ("form") }}. Este atributo le permite colocar elementos \<keygen> en cualquier lugar dentro de un documento, no sólo como descendientes del formulario.
-- {{ Htmlattrdef ("keytype") }}
+- `keytype`
   - : El tipo de clave generada. El valor por defecto es `RSA` .
 - name
   - : El nombre del control, que se envía con los datos del formulario.

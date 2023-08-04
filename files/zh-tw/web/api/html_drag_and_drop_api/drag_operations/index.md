@@ -24,7 +24,9 @@ In HTML, apart from the default behavior for images, links, and selections, no o
 以下是一段簡單的範例。
 
 ```html
-<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+<div
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
   This text <strong>may</strong> be dragged.
 </div>
 ```
@@ -36,7 +38,9 @@ draggable 為 true 後，該 DIV 元素便可以拖曳，反之，倘若 draggab
 至於 XUL 元素則是預設皆可拖曳。
 
 ```html
-<button label="Drag Me" ondragstart="event.dataTransfer.setData('text/plain', 'Drag Me Button');">
+<button
+  label="Drag Me"
+  ondragstart="event.dataTransfer.setData('text/plain', 'Drag Me Button');"></button>
 ```
 
 ## 開始拖曳
@@ -44,7 +48,9 @@ draggable 為 true 後，該 DIV 元素便可以拖曳，反之，倘若 draggab
 下方範例在 dragstart 註冊一個事件處理器。
 
 ```html
-<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+<div
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
   This text <strong>may</strong> be dragged.
 </div>
 ```
@@ -69,7 +75,7 @@ draggable 為 true 後，該 DIV 元素便可以拖曳，反之，倘若 draggab
 event.dataTransfer.setData("text/plain", "Text to drag");
 ```
 
-上例資料是”Text to drag”文字，型態是 text/plain。
+上例資料是「Text to drag」文字，型態是 text/plain。
 
 呼叫多次 setData 我們就可以攜帶多種資料。
 
@@ -80,7 +86,7 @@ dt.setData("text/uri-list", "http://www.mozilla.org");
 dt.setData("text/plain", "http://www.mozilla.org");
 ```
 
-這裡加入了三種資料，第一種是自定義的”application/x-bookmark”，雖然有更豐富的內容可使用，但只有我們自己認識，而另外我們又為其他網站或應用加入了兩種比較常見的資料，”text/uri-list”以及”text/plain”。
+這裡加入了三種資料，第一種是自定義的「application/x-bookmark」，雖然有更豐富的內容可使用，但只有我們自己認識，而另外我們又為其他網站或應用加入了兩種比較常見的資料，「text/uri-list」以及「text/plain」。
 
 如果對同一種資料型態加入兩次資料，則新加資料會取代舊資料。
 
@@ -106,7 +112,10 @@ setDragImage 需要三個參數，一是圖片來源(通常是圖片元素，但
 
 ```js
 function dragWithCustomImage(event) {
-  var canvas = document.createElementNS("http://www.w3.org/1999/xhtml","canvas");
+  var canvas = document.createElementNS(
+    "http://www.w3.org/1999/xhtml",
+    "canvas",
+  );
   canvas.width = canvas.height = 50;
 
   var ctx = canvas.getContext("2d");
@@ -118,7 +127,7 @@ function dragWithCustomImage(event) {
   ctx.stroke();
 
   var dt = event.dataTransfer;
-  dt.setData('text/plain', 'Data to Drag');
+  dt.setData("text/plain", "Data to Drag");
   dt.setDragImage(canvas, 25, 25);
 }
 ```
@@ -184,7 +193,8 @@ dragenter 和 dragover 事件就是用來指定拖曳目標區，也就是放置
 
 ```html
 <div ondragover="return false">
-<div ondragover="event.preventDefault()">
+  <div ondragover="event.preventDefault()"></div>
+</div>
 ```
 
 通常我們只有在適當的時機點才需要呼叫 event.preventDefault 方法、取消預設事件行為，比如說被拖曳進來的是連結。所以檢查被拖曳進來的物件，當符合條件後再來取消預設事件行為。
@@ -192,11 +202,9 @@ dragenter 和 dragover 事件就是用來指定拖曳目標區，也就是放置
 藉由檢查拖曳資料型態來決定是否允許放置，是最常見的作法。dataTransfer 物件的[types](/zh-TW/docs/DragDrop/DataTransfer#types.28.29)屬性是一個拖曳資料型態的列表，其中順序按照資料被加入之先後排序。
 
 ```js
-function doDragOver(event)
-{
+function doDragOver(event) {
   var isLink = event.dataTransfer.types.contains("text/uri-list");
-  if (isLink)
-    event.preventDefault();
+  if (isLink) event.preventDefault();
 }
 ```
 
@@ -211,7 +219,7 @@ Note that the latest spec now dictates that {{domxref("DataTransfer.types")}} sh
 As a result, the [contains](/zh-TW/docs/Web/API/Node/contains) method no longer works on the property; the [includes](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method should be used instead to check if a specific type of data is provided, using code like the following:
 
 ```js
-if ([...event.dataTransfer.types].includes('text/html')) {
+if ([...event.dataTransfer.types].includes("text/html")) {
   // Do something
 }
 ```
@@ -245,8 +253,7 @@ You could always use some feature detection to determine which method is support
 要取出被丟入的資料，那就要呼叫 dataTransfer 物件的[getData](/zh-TW/docs/DragDrop/DataTransfer#getData.28.29)方法。getData 方法接受資料型態的參數，它會回傳[setData](/zh-TW/docs/DragDrop/DataTransfer#setData.28.29)所存入的對應資料型態的資料，倘若沒有對應型態資料，那空字串就會被回傳。
 
 ```js
-function onDrop(event)
-{
+function onDrop(event) {
   var data = event.dataTransfer.getData("text/plain");
   event.target.textContent = data;
   event.preventDefault();
@@ -276,7 +283,7 @@ function doDrop(event)
 }
 ```
 
-上面的範例取得連結資料，然後生成連結元素、加入頁面。從 text/uri-list 字面上不難猜出這種資料是一行行的 URL，所以我們呼叫[split](/zh-TW/docs/JavaScript/Reference/Global_Objects/String/split)方法拆開一行行的 URL，再將 URL 一個一個加入頁面。請注意我們有避開開頭為”#”字元的註解。
+上面的範例取得連結資料，然後生成連結元素、加入頁面。從 text/uri-list 字面上不難猜出這種資料是一行行的 URL，所以我們呼叫 [split](/zh-TW/docs/JavaScript/Reference/Global_Objects/String/split) 方法拆開一行行的 URL，再將 URL 一個一個加入頁面。請注意我們有避開開頭為「#」字元的註解。
 
 更簡單的作法是採用特別 URL 型態。URL 型態是一個特殊簡寫用途形態，它不會出現在{types}屬性中，但它可以方便的取得第一個連結，如下:
 

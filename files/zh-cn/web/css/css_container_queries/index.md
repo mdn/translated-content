@@ -16,9 +16,9 @@ slug: Web/CSS/CSS_container_queries
 这些值具有以下效果：
 
 - `size`
-  - : 查询将基于容器的[行向和块向](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#块向与行向尺度)尺度，将布局、样式和大小的限制应用于容器。
+  - : 查询将基于容器的[行向和块向](Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#块向与行向尺度)尺度，将布局、样式和大小的限制应用于容器。
 - `inline-size`
-  - : 查询将基于容器的[行向](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#块向与行向尺度)尺度，将布局、样式和行向大小的限制应用于元素。
+  - : 查询将基于容器的[行向](Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#块向与行向尺度)尺度，将布局、样式和行向大小的限制应用于元素。
 - `normal`
   - : 该元素不是任何容器大小查询的查询容器，但仍然是容器样式查询的查询容器。
 

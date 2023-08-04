@@ -1,7 +1,6 @@
 ---
 title: DOMTokenList.length
 slug: Web/API/DOMTokenList/length
-translation_of: Web/API/DOMTokenList/length
 ---
 
 {{APIRef("DOM")}}
@@ -35,7 +34,7 @@ var span = document.querySelector("span");
 var classes = span.classList;
 var length = classes.length;
 
-span.textContent = 'classList length = ' + length;
+span.textContent = "classList length = " + length;
 ```
 
 La sortie ressemble à ceci :

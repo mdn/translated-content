@@ -27,7 +27,7 @@ slug: Web/CSS/Layout_cookbook/Card
 
 ## 所选方案
 
-尽管是单维布局，该卡片还是使用 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)技术进行布局，因为它可以为网格轨道使用内容大小。在设置单列网格时，我使用了以下方法：
+尽管是单维布局，该卡片还是使用 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)技术进行布局，因为它可以为网格轨道使用内容大小。在设置单列网格时，我使用了以下方法：
 
 ```css
 .card {

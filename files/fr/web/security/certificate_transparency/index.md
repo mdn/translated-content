@@ -1,19 +1,13 @@
 ---
 title: Public Key Pinning
 slug: Web/Security/Certificate_Transparency
-tags:
-  - HTTPS
-  - Référence(2)
-  - Sécurité
-translation_of: Web/HTTP/Public_Key_Pinning
-original_slug: Web/HTTP/Public_Key_Pinning
 ---
 
 L'extention **Public Key Pinning pour HTTP** (HPKP) est une fonctionnalité de sécurité qui dit au client web d'associer une clé publique cryptographique avec un certain serveur web pour éviter les attaques [MITM](https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu) avec des certificats contrefaits.
 
 > **Note :** La Public Key Pinning décrite ici est différente du limité [preload list based key pinning](http://monica-at-mozilla.blogspot.de/2014/08/firefox-32-supports-public-key-pinning.html) introduit dans Firefox 32.
 
-Pour s'assurer de l’authenticité de la clé publique du serveur utilisé dans une session TLS, cette clé publique est enveloppée dans un certificat X.509 qui est généralement signé par une autorité de certifications (CA, pour Certificate Authority). Les clients web tels que les navigateurs font confiance à beaucoup de ces autorités de certifications, et chacune d'entre elles peut créer des certificats pour des domaines arbitraires. Si un attaquant est capable de compromettre une seule de ces CA, il peut pratiquer des attaques {{Glossary("MitM")}} sur diverses connections TLS. HPKP peut contourner cette menace pour le protocole HTTPS en disant au client web quelles clés publiques appartiennent à un certain serveur web.
+Pour s'assurer de l'authenticité de la clé publique du serveur utilisé dans une session TLS, cette clé publique est enveloppée dans un certificat X.509 qui est généralement signé par une autorité de certifications (CA, pour Certificate Authority). Les clients web tels que les navigateurs font confiance à beaucoup de ces autorités de certifications, et chacune d'entre elles peut créer des certificats pour des domaines arbitraires. Si un attaquant est capable de compromettre une seule de ces CA, il peut pratiquer des attaques {{Glossary("MitM")}} sur diverses connections TLS. HPKP peut contourner cette menace pour le protocole HTTPS en disant au client web quelles clés publiques appartiennent à un certain serveur web.
 
 HPKP est une technique qui s'appuie sur la confiance au premier accès (TOFU, _Trust on First Use_). La première fois un serveur web dit au client en utilisant l'en-tête HTTP HPKP quelles clés publiques lui appartiennent, le client sauvegarde cette information pour une période de temps donnée. Quand le client visite le serveur à nouveau, il s'attend à un certificat contenant une clé publique dont l'empreinte est sauvegardée. Si le serveur présente une clé publique inconnue, le client doit présenter un avertissement à l'utilisateur.
 
@@ -28,7 +22,7 @@ Public-Key-Pins: pin-sha256="base64=="; max-age=expireTime [; includeSubdomains]
 ```
 
 - `pin-sha256`
-  - : La chaîne de caractère entre guillemets est l’empreinte du *Subject Public Key Information* (SPKI) encodé en base 64. Il est possible de spécifier plusieurs épinglage (pin) pour différentes clé publiques. Certains navigateurs pourraient autoriser dans le future d'autres algorithmes de hachage que SHA-256. Voir plus bas comment extraire cette information depuis le fichier d'un certificat ou d'une clé.
+  - : La chaîne de caractère entre guillemets est l'empreinte du _Subject Public Key Information_ (SPKI) encodé en base 64. Il est possible de spécifier plusieurs épinglage (pin) pour différentes clé publiques. Certains navigateurs pourraient autoriser dans le future d'autres algorithmes de hachage que SHA-256. Voir plus bas comment extraire cette information depuis le fichier d'un certificat ou d'une clé.
 - `max-age`
   - : Le temps, en seconde, pendant laquelle le navigateur doit mémoriser que le site ne doit être visité qu'avec l'une des clés épinglées.
 - `includeSubdomains` {{ optional_inline() }}

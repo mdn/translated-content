@@ -3,6 +3,8 @@ title: 在地化
 slug: Glossary/Localization
 ---
 
+{{GlossarySidebar}}
+
 **在地化 (Localization)**（有時稱本地化）是將程式介面由一種語言翻譯成另一種語言，並調整各部份為適合當地文化及習慣的過程。下面的資源可協助建立 Mozilla 相關程式或套件的在地化工作。
 
 #### 精選文件

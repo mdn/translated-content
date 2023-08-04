@@ -1,15 +1,6 @@
 ---
 title: IntersectionObserver.disconnect()
 slug: Web/API/IntersectionObserver/disconnect
-tags:
-  - API
-  - Disconnect
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Method
-  - Reference
-translation_of: Web/API/IntersectionObserver/disconnect
 ---
 
 {{APIRef("Intersection Observer API")}}

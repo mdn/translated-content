@@ -1,12 +1,6 @@
 ---
 title: Объект arguments
 slug: Web/JavaScript/Reference/Functions/arguments
-tags:
-  - Functions
-  - JavaScript
-  - Reference
-  - arguments
-translation_of: Web/JavaScript/Reference/Functions/arguments
 ---
 
 {{jsSidebar("Functions")}}
@@ -88,11 +82,11 @@ var args = [...arguments];
 
 - [`arguments.callee`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/callee)
   - : Ссылка на функцию, которая выполняется в текущий момент.
-- [`arguments.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller)
+- [`arguments.caller`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/caller)
   - : Ссылка на функцию, которая вызвала функцию, выполняющуюся в текущий момент.
 - [`arguments.length`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/length)
   - : Количество переданных в функцию аргументов.
-- [`arguments[@@iterator]`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
+- [`arguments[@@iterator]`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
   - : Возвращает новый объект `Array Iterator`, содержащий значения для каждого индекса в массиве.
 
 ## Примеры

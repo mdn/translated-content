@@ -1,7 +1,6 @@
 ---
 title: setInterval()
 slug: Web/API/setInterval
-original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 l10n:
   sourceCommit: c8485a8f94319d289a8892fd261d2fe38b623aa0
 ---

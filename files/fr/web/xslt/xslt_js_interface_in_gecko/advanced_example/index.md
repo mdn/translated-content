@@ -1,10 +1,6 @@
 ---
 title: Exemple avancé
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
-tags:
-  - Traduction_à_relire
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
-original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko/Exemple_avancé
 ---
 
 ## Exemple avancé
@@ -45,13 +41,13 @@ var myDOM;
 var xmlRef = document.implementation.createDocument("", "", null);
 
 function sort() {
-  if (!xslloaded){
+  if (!xslloaded) {
     p = new XMLHttpRequest();
     p.open("GET", "example2.xsl", false);
     p.send(null);
 
     xslRef = p.responseXML;
-    xsltProcessor.importStylesheet(xslRef)
+    xsltProcessor.importStylesheet(xslRef);
     xslloaded = true;
   }
 
@@ -70,10 +66,11 @@ function sort() {
   // définition du paramètre de tri dans le fichier XSL
   var sortVal = xsltProcessor.getParameter(null, "myOrder");
 
-  if (sortVal == "" || sortVal == "descending")
+  if (sortVal == "" || sortVal == "descending") {
     xsltProcessor.setParameter(null, "myOrder", "ascending");
-  else
+  } else {
     xsltProcessor.setParameter(null, "myOrder", "descending");
+  }
 
   // initialisation de la transformation
   var fragment = xsltProcessor.transformToFragment(xmlRef, document);
@@ -83,7 +80,7 @@ function sort() {
 
   myDOM = fragment;
   // ajout du nouveau contenu depuis la transformation
-  document.getElementById("example").appendChild(fragment)
+  document.getElementById("example").appendChild(fragment);
 }
 ```
 

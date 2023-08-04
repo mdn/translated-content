@@ -37,17 +37,17 @@ _Inherits properties from its parents {{domxref("EventTarget")}}_.\[1]
   - | : Returns an `unsigned short` representing the type of the node. Possible values are: | Name | Value |
     | ------------------------------------------------------------------------------------- | ---- | ----- |
     | `ELEMENT_NODE`                                                                        | `1`  |
-    | `ATTRIBUTE_NODE` {{deprecated_inline()}}                                     | `2`  |
+    | `ATTRIBUTE_NODE` {{deprecated_inline()}}                                              | `2`  |
     | `TEXT_NODE`                                                                           | `3`  |
-    | `CDATA_SECTION_NODE` {{deprecated_inline()}}                                 | `4`  |
-    | `ENTITY_REFERENCE_NODE` {{deprecated_inline()}}                              | `5`  |
-    | `ENTITY_NODE` {{deprecated_inline()}}                                        | `6`  |
+    | `CDATA_SECTION_NODE` {{deprecated_inline()}}                                          | `4`  |
+    | `ENTITY_REFERENCE_NODE` {{deprecated_inline()}}                                       | `5`  |
+    | `ENTITY_NODE` {{deprecated_inline()}}                                                 | `6`  |
     | `PROCESSING_INSTRUCTION_NODE`                                                         | `7`  |
     | `COMMENT_NODE`                                                                        | `8`  |
     | `DOCUMENT_NODE`                                                                       | `9`  |
     | `DOCUMENT_TYPE_NODE`                                                                  | `10` |
     | `DOCUMENT_FRAGMENT_NODE`                                                              | `11` |
-    | `NOTATION_NODE` {{deprecated_inline()}}                                      | `12` |
+    | `NOTATION_NODE` {{deprecated_inline()}}                                               | `12` |
 - {{domxref("Node.nodeValue")}}
   - : Returns / Sets the value of the current node
 - {{domxref("Node.ownerDocument")}} {{readonlyInline}}
@@ -69,13 +69,17 @@ _Inherits properties from its parents {{domxref("EventTarget")}}_.\[1]
 ### Obsolete properties
 
 - {{domxref("Node.localName")}} {{Deprecated_Inline}}{{readonlyInline}}
+
   - : Returns a {{domxref("DOMString")}} representing the local part of the qualified name of an element.
 
     > **備註：** In Firefox 3.5 and earlier, the property upper-cases the local name for HTML elements (but not XHTML elements). In later versions, this does not happen, so the property is in lower case for both HTML and XHTML.
+
 - {{domxref("Node.namespaceURI")}} {{Deprecated_Inline}}{{readonlyInline}}
+
   - : The namespace URI of this node, or `null` if it is no namespace.
 
     > **備註：** In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`https://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/) namespace in both HTML and XML trees.
+
 - {{domxref("Node.prefix")}} {{Deprecated_Inline}}{{readonlyInline}}
   - : Is a {{domxref("DOMString")}} representing the namespace prefix of the node, or `null` if no prefix is specified.
 
@@ -135,7 +139,7 @@ _Inherits methods from its parent, {{domxref("EventTarget")}}_.\[1]
 The following function recursively cycles all child nodes of a node and executes a callback function upon them (and upon the parent node itself).
 
 ```js
-function DOMComb (oParent, oCallback) {
+function DOMComb(oParent, oCallback) {
   if (oParent.hasChildNodes()) {
     for (var oNode = oParent.firstChild; oNode; oNode = oNode.nextSibling) {
       DOMComb(oNode, oCallback);
@@ -167,8 +171,10 @@ Recursively cycle all child nodes of `parentNode` and `parentNode` itself and ex
 The following example send to the `console.log` the text content of the body:
 
 ```js
-function printContent () {
-  if (this.nodeValue) { console.log(this.nodeValue); }
+function printContent() {
+  if (this.nodeValue) {
+    console.log(this.nodeValue);
+  }
 }
 
 onload = function () {
@@ -180,7 +186,9 @@ onload = function () {
 
 ```js
 Element.prototype.removeAll = function () {
-  while (this.firstChild) { this.removeChild(this.firstChild); }
+  while (this.firstChild) {
+    this.removeChild(this.firstChild);
+  }
   return this;
 };
 ```

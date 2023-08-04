@@ -1,14 +1,6 @@
 ---
 title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
 ---
 {{JSRef}}
 
@@ -48,8 +40,8 @@ while ((matches = regexp.exec(str)) !== null) {
 }
 ```
 
-С появлением `matchAll`, нет необходимости использовать цикл [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) и метод `exec` с флагом `/g`.
-Используя вместо этого метод `matchAll`, вы получаете итератор, который вы можете использовать более удобно с конструкциями [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), [array spread](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax), или {{jsxref("Array.from()")}} :
+С появлением `matchAll`, нет необходимости использовать цикл [`while`](/ru/docs/Web/JavaScript/Reference/Statements/while) и метод `exec` с флагом `/g`.
+Используя вместо этого метод `matchAll`, вы получаете итератор, который вы можете использовать более удобно с конструкциями [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of), [array spread](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax), или {{jsxref("Array.from()")}} :
 
 ```js
 const regexp = RegExp('foo*','g');
@@ -72,7 +64,7 @@ Array.from(matches, m => m[0]);
 
 ### Улучшенный доступ к группам захвата
 
-Ещё одна веская причина использовать `matchAll` это улучшенный доступ к группам захвата. Группы захвата игнорируются при использовании [`match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) с глобальным флагом `/g`:
+Ещё одна веская причина использовать `matchAll` это улучшенный доступ к группам захвата. Группы захвата игнорируются при использовании [`match()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/match) с глобальным флагом `/g`:
 
 ```js
 var regexp = /t(e)(st(\d?))/g;

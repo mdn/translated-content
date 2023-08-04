@@ -37,10 +37,14 @@ Gamepad 对象有两种方式返回值：通过 [`gamepadconnected`](/zh-CN/docs
 ## 示例
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
-  console.log("控制器已连接与 %d 位：%s. %d 个按钮，%d 个坐标方向。",
-  e.gamepad.index, e.gamepad.id,
-  e.gamepad.buttons.length, e.gamepad.axes.length);
+window.addEventListener("gamepadconnected", function (e) {
+  console.log(
+    "控制器已连接与 %d 位：%s. %d 个按钮，%d 个坐标方向。",
+    e.gamepad.index,
+    e.gamepad.id,
+    e.gamepad.buttons.length,
+    e.gamepad.axes.length,
+  );
 });
 ```
 

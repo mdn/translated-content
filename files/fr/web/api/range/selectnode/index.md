@@ -1,12 +1,6 @@
 ---
 title: Range.selectNode()
 slug: Web/API/Range/selectNode
-tags:
-  - API
-  - DOM
-  - Méthode
-  - Range
-translation_of: Web/API/Range/selectNode
 ---
 
 {{ApiRef("DOM")}}

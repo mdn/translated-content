@@ -35,22 +35,22 @@ Here is an example which can do just that. It allows creation of a simple range 
 
 ```js
 function makeRangeIterator(start = 0, end = Infinity, step = 1) {
-    let nextIndex = start;
-    let iterationCount = 0;
+  let nextIndex = start;
+  let iterationCount = 0;
 
-    const rangeIterator = {
-       next: function() {
-           let result;
-           if (nextIndex <= end) {
-               result = { value: nextIndex, done: false }
-               nextIndex += step;
-               iterationCount++;
-               return result;
-           }
-           return { value: iterationCount, done: true }
-       }
-    };
-    return rangeIterator;
+  const rangeIterator = {
+    next: function () {
+      let result;
+      if (nextIndex <= end) {
+        result = { value: nextIndex, done: false };
+        nextIndex += step;
+        iterationCount++;
+        return result;
+      }
+      return { value: iterationCount, done: true };
+    },
+  };
+  return rangeIterator;
 }
 ```
 
@@ -61,8 +61,8 @@ let it = makeRangeIterator(1, 10, 2);
 
 let result = it.next();
 while (!result.done) {
- console.log(result.value); // 1 3 5 7 9
- result = it.next();
+  console.log(result.value); // 1 3 5 7 9
+  result = it.next();
 }
 
 console.log("Iterated over sequence of size: ", result.value); // 5
@@ -80,9 +80,9 @@ We can now adapt the example from above. The behavior of this code is identical,
 
 ```js
 function* makeRangeIterator(start = 0, end = 100, step = 1) {
-    for (let i = start; i < end; i += step) {
-        yield i;
-    }
+  for (let i = start; i < end; i += step) {
+    yield i;
+  }
 }
 ```
 
@@ -128,22 +128,22 @@ or
 Some statements and expressions are expecting iterables, for example the {{jsxref("Statements/for...of","for-of")}} loops, {{jsxref("Operators/yield*","yield*")}}.
 
 ```js
-for (let value of ['a', 'b', 'c']) {
-    console.log(value);
+for (let value of ["a", "b", "c"]) {
+  console.log(value);
 }
 // "a"
 // "b"
 // "c"
 
-[...'abc']; // ["a", "b", "c"]
+[..."abc"]; // ["a", "b", "c"]
 
 function* gen() {
-  yield* ['a', 'b', 'c'];
+  yield* ["a", "b", "c"];
 }
 
 gen().next(); // { value: "a", done: false }
 
-[a, b, c] = new Set(['a', 'b', 'c']);
+[a, b, c] = new Set(["a", "b", "c"]);
 a; // "a"
 ```
 
@@ -165,24 +165,24 @@ function* fibonacci() {
     fn2 = current + fn1;
     var reset = yield current;
     if (reset) {
-        fn1 = 0;
-        fn2 = 1;
+      fn1 = 0;
+      fn2 = 1;
     }
   }
 }
 
 var sequence = fibonacci();
-console.log(sequence.next().value);     // 0
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 2
-console.log(sequence.next().value);     // 3
-console.log(sequence.next().value);     // 5
-console.log(sequence.next().value);     // 8
+console.log(sequence.next().value); // 0
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 2
+console.log(sequence.next().value); // 3
+console.log(sequence.next().value); // 5
+console.log(sequence.next().value); // 8
 console.log(sequence.next(true).value); // 0
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 2
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 2
 ```
 
 You can force a generator to throw an exception by calling its {{jsxref("Global_Objects/Generator/throw","throw()")}} method and passing the exception value it should throw. This exception will be thrown from the current suspended context of the generator, as if the `yield` that is currently suspended were instead a `throw value` statement.

@@ -3,6 +3,8 @@ title: 表示标头（Representation header）
 slug: Glossary/Representation_header
 ---
 
+{{GlossarySidebar}}
+
 **表示标头**（representation header）是一种 {{glossary("HTTP_header", "HTTP 标头")}}，用于描述 HTTP 消息主体中发送资源的特定的*表示*形式。
 
 所谓表示（representation）就是特定的资源不同的表示形式。例如，相同的数据，其可能被格式化为例如 XML 或 JSON 等特定媒体类别的格式，被本地化为特定的书面语言或者地理区域，或者通过压缩或者其他方式编码以进行传输。底层资源在每种情况下都是一样的，但是它的表示形式是不同的。

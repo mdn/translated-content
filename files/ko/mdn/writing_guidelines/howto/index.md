@@ -1,7 +1,6 @@
 ---
 title: 페이지에 올바르게 태그하는 방법
 slug: MDN/Writing_guidelines/Howto
-original_slug: MDN/Writing_guidelines/Howto/Tag
 ---
 
 {{MDNSidebar}}
@@ -176,37 +175,37 @@ MDN 페이지에 올바르게 태그를 지정하지 않으면 검색 필터가 
 
 > **참고:** If multiple tags are listed under "Tag name," that means any one or more of these tags must be present for the article to match.
 
-| 필터 그룹 | 검색명                | 태그명                                                                                                                |
-| --------- | --------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| 주제      | Open Web Apps         | Apps                                                                                                  |
-|           | HTML                  | HTML                                                                                                  |
-|           | CSS                   | CSS                                                                                                  |
-|           | JavaScript            | JavaScript                                                                                          |
-|           | APIs and DOM          | API                                                                                                  |
-|           | Canvas                | Canvas                                                                                              |
-|           | SVG                   | SVG                                                                                                  |
-|           | MathML                | MathML                                                                                              |
-|           | WebGL                 | WebGL                                                                                                  |
-|           | XUL                   | XUL                                                                                                  |
-|           | Marketplace           | Marketplace                                                                                          |
-|           | Firefox               | Firefox                                                                                              |
-|           | 안드로이드 용 Firefox | Firefox Mobile                                                                                      |
-|           | 데스크탑 용Firefox    | Firefox Desktop                                                                                  |
-|           | Firefox 운영체제      | Firefox OS                                                                                          |
-|           | 모바일                | Mobile                                                                                              |
-|           | 웹 개발               | Web Development                                                                                  |
-|           | 애드온 & 확장프로그램 | Add-ons \|\| Extensions \|\| Plugins \|\| Themes |
-|           | 게임                  | Games                                                                                                  |
-| 기술 수준 | 전문가                | Advanced                                                                                              |
-|           | 중급자                | Intermediate                                                                                      |
-|           | 초급자                | Beginner                                                                                              |
-| 문서 형식 | 문서                  | _This restricts the search to docs content, leaving out Hacks and other MDN content._                                 |
-|           | 체험판                | _This includes Demo Studio content in the search results._                                                            |
-|           | 도구                  | Tools                                                                                                  |
-|           | 코드 샘플             | Example                                                                                              |
-|           | 튜토리얼              | Guide                                                                                                  |
-|           | 개발자 프로필         | _This includes developer profiles from the MDN site in the search results._                                           |
-|           | 외부 리소스           | _The dev team is still figuring this out..._                                                                          |
+| 필터 그룹 | 검색명                | 태그명                                                                                |
+| --------- | --------------------- | ------------------------------------------------------------------------------------- |
+| 주제      | Open Web Apps         | Apps                                                                                  |
+|           | HTML                  | HTML                                                                                  |
+|           | CSS                   | CSS                                                                                   |
+|           | JavaScript            | JavaScript                                                                            |
+|           | APIs and DOM          | API                                                                                   |
+|           | Canvas                | Canvas                                                                                |
+|           | SVG                   | SVG                                                                                   |
+|           | MathML                | MathML                                                                                |
+|           | WebGL                 | WebGL                                                                                 |
+|           | XUL                   | XUL                                                                                   |
+|           | Marketplace           | Marketplace                                                                           |
+|           | Firefox               | Firefox                                                                               |
+|           | 안드로이드 용 Firefox | Firefox Mobile                                                                        |
+|           | 데스크탑 용Firefox    | Firefox Desktop                                                                       |
+|           | Firefox 운영체제      | Firefox OS                                                                            |
+|           | 모바일                | Mobile                                                                                |
+|           | 웹 개발               | Web Development                                                                       |
+|           | 애드온 & 확장프로그램 | Add-ons \|\| Extensions \|\| Plugins \|\| Themes                                      |
+|           | 게임                  | Games                                                                                 |
+| 기술 수준 | 전문가                | Advanced                                                                              |
+|           | 중급자                | Intermediate                                                                          |
+|           | 초급자                | Beginner                                                                              |
+| 문서 형식 | 문서                  | _This restricts the search to docs content, leaving out Hacks and other MDN content._ |
+|           | 체험판                | _This includes Demo Studio content in the search results._                            |
+|           | 도구                  | Tools                                                                                 |
+|           | 코드 샘플             | Example                                                                               |
+|           | 튜토리얼              | Guide                                                                                 |
+|           | 개발자 프로필         | _This includes developer profiles from the MDN site in the search results._           |
+|           | 외부 리소스           | _The dev team is still figuring this out..._                                          |
 
 ## 해결할 수 있는 태그 추가 문제
 

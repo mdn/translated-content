@@ -1,7 +1,6 @@
 ---
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
-original_slug: Web/HTTP/X-Frame-Options
 ---
 
 {{HTTPSidebar}}
@@ -110,16 +109,16 @@ http-response set-header X-Frame-Options SAMEORIGIN
 要配置 Express 以发送 `X-Frame-Options` 响应头，你可以使用借助了 [frameguard](https://helmetjs.github.io/docs/frameguard/) 的 [helmet](https://helmetjs.github.io/) 来设置首部。在你的服务器配置里面添加：
 
 ```js
-const helmet = require('helmet');
+const helmet = require("helmet");
 const app = express();
-app.use(helmet.frameguard({ action: 'SAMEORIGIN' }));
+app.use(helmet.frameguard({ action: "SAMEORIGIN" }));
 ```
 
 或者，你也可以直接用 frameguard：
 
 ```js
-const frameguard = require('frameguard')
-app.use(frameguard({ action: 'SAMEORIGIN' }))
+const frameguard = require("frameguard");
+app.use(frameguard({ action: "SAMEORIGIN" }));
 ```
 
 ## 规范

@@ -1,7 +1,6 @@
 ---
 title: API 레퍼런스의 사이드바
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
-original_slug: MDN/Contribute/Howto/Write_an_API_reference/Sidebars
 ---
 
 {{MDNSidebar}}
@@ -65,26 +64,28 @@ GroupData 엔트리에 추가할 수 있는 하위 멤버 목록입니다.
 리스트업된 하위 멤버값 대부분은 링크걸 텍스트와 링크 생성을 위해 메인 API 색인 페이지(`https://developer.mozilla.org/<language-code>/docs/Web/API`) 끝에 추가될 슬러그입니다. 예를 들어 en-US 로케일에서 "Body"는 아래 링크를 만듭니다.
 
 ```html
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API">Body</a></li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/API">Body</a></li>
 ```
 
 몇가지 예외가 있습니다.. 예를 들어 "guides" 하위 멤버는 가이드/튜토리얼 관련 링크를 정의할 하나이상의 링크 정보(타이틀과 슬러그)를 갖고 있는데, 이경우 슬러그는 MDN 어디든 추가될 수 있도록 MDN 문서 루트(`https://developer.mozilla.org/<language-code>/docs`)의 끝에 추가됩니다.
 
 사용가능한 멤버들입니다. 로케일은 en-US로 가정합니다.
 
-1. `"overview"` — 값은 배열이고, API 오버뷰 문서의 슬러그입니다. 하나인 경우 "Fetch API"이면 다음 같은 링크를 만듭니다. [https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API](/ko/docs/Web/API/Fetch_API).
-2. `"interfaces"` — 해당 API의 인터페이스 전체 목록을 담은 배열 입니다. 값이 "Body"이면 다음 과 같은 링크를 만듭니다. [https://developer.mozilla.org/en-US/docs/Web/API/Body](/ko/docs/Web/API/Body).
-3. `"methods"` — the value is an array that should contain any methods the spec adds to interfaces associated with other APIs, such as instantiation methods created on {{domxref("Navigator")}} or {{domxref("Window")}}. If there are a huge number of methods, you might want to consider only listing the most popular ones, or putting them first in the list. "fetch()" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/fetch](/ko/docs/Web/API/fetch).
-4. `"properties"` — the value is an array that should contain all of the properties associated with the API. This can include properties that are members of interfaces defined in the API spec, and properties the API defines on other interfaces. If there are a huge number of properties, you might want to consider only listing the most popular ones, or putting them first in the list. "Headers.append" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/Headers/append](/ko/docs/Web/API/Headers/append).
-5. `"events"` — the value is an array that should contain all of the events associated with the API, defined in the API spec, or elsewhere. If there are a huge number of events, you might want to consider only listing the most popular ones, or putting them first in the list. "animationstart" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/Events/animationstart](/ko/docs/Web/Events/animationstart).
+1. `"overview"` — 값은 배열이고, API 오버뷰 문서의 슬러그입니다. 하나인 경우 "Fetch API"이면 다음 같은 링크를 만듭니다. [https://developer.mozilla.org/ko/docs/Web/API/Fetch_API](/ko/docs/Web/API/Fetch_API).
+2. `"interfaces"` — 해당 API의 인터페이스 전체 목록을 담은 배열 입니다. 값이 "Body"이면 다음 과 같은 링크를 만듭니다. [https://developer.mozilla.org/ko/docs/Web/API/Body](/ko/docs/Web/API/Body).
+3. `"methods"` — the value is an array that should contain any methods the spec adds to interfaces associated with other APIs, such as instantiation methods created on {{domxref("Navigator")}} or {{domxref("Window")}}. If there are a huge number of methods, you might want to consider only listing the most popular ones, or putting them first in the list. "fetch()" results in a link being made to [https://developer.mozilla.org/ko/docs/Web/API/fetch](/ko/docs/Web/API/fetch).
+4. `"properties"` — the value is an array that should contain all of the properties associated with the API. This can include properties that are members of interfaces defined in the API spec, and properties the API defines on other interfaces. If there are a huge number of properties, you might want to consider only listing the most popular ones, or putting them first in the list. "Headers.append" results in a link being made to [https://developer.mozilla.org/ko/docs/Web/API/Headers/append](/ko/docs/Web/API/Headers/append).
+5. `"events"` — the value is an array that should contain all of the events associated with the API, defined in the API spec, or elsewhere. If there are a huge number of events, you might want to consider only listing the most popular ones, or putting them first in the list. "animationstart" results in a link being made to [https://developer.mozilla.org/ko/docs/Web/Events/animationstart](/ko/docs/Web/Events/animationstart).
 6. `"guides"` — the value is an array containing one or more objects that define links to guides explain how to use the API. Each object contains two submembers — "url", which contains the partial URL pointing to the guide article, and "title", which defines the link test for the link. As an example, the following object:
 
-    ```json
-    { "url":   "/docs/Web/API/Detecting_device_orientation",
-    "title": "Detecting device orientation" }
-    ```
+   ```json
+   {
+     "url": "/docs/Web/API/Detecting_device_orientation",
+     "title": "Detecting device orientation"
+   }
+   ```
 
-    Creates a link with the title "Detecting device orientation", which points to [https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation](/ko/docs/Web/API/Detecting_device_orientation).
+   Creates a link with the title "Detecting device orientation", which points to [https://developer.mozilla.org/ko/docs/Web/API/Detecting_device_orientation](/ko/docs/Web/API/Detecting_device_orientation).
 
 ### API Submembers and Tags
 

@@ -1,7 +1,6 @@
 ---
 title: tabs.hide()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/hide
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/hide
 ---
 
 {{AddonSidebar()}}
@@ -10,7 +9,7 @@ Hides one or more tabs.
 
 Hidden tabs are no longer visible in the browser's tabstrip. Hidden tabs are not automatically [discarded](/en-US/Add-ons/WebExtensions/API/tabs/discard): the code running in them continues to run. You can explicitly discard tabs whenever you hide them: although this is not appropriate in all situations, it will help to reduce the resources used by the browser.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+This is an asynchronous function that returns a [`Promise`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 Not all tabs are eligible for being hidden:
 
@@ -27,8 +26,8 @@ To use this API you must have the "tabHide" [permission](/en-US/Add-ons/WebExten
 
 ```js
 var hiding = browser.tabs.hide(
-  tabIds          // integer or integer array
-)
+  tabIds, // integer or integer array
+);
 ```
 
 ### Parameters
@@ -43,7 +42,7 @@ var hiding = browser.tabs.hide(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array containing the IDs of the tabs that were hidden. If any error occurs, the promise will be rejected with an error message.
+A [`Promise`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array containing the IDs of the tabs that were hidden. If any error occurs, the promise will be rejected with an error message.
 
 ## Browser compatibility
 

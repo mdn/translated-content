@@ -21,7 +21,7 @@ findIndex(callbackFn, thisArg)
 ### 参数
 
 - `callbackFn`
-  - : 为数组中的每个元素执行的函数。它应该返回一个[真值](/zh-CN/docs/Glossary/Truthy)值以指示已找到匹配元素，否则返回一个[假值](/zh-CN/docs/Glossary/Falsy)。该函数被调用时将传入以下参数：
+  - : 为数组中的每个元素执行的函数。它应该返回一个[真值](/zh-CN/docs/Glossary/Truthy)以指示已找到匹配元素，否则返回一个[假值](/zh-CN/docs/Glossary/Falsy)。该函数被调用时将传入以下参数：
     - `element`
       - : 数组中当前正在处理的元素。
     - `index`
@@ -41,7 +41,7 @@ findIndex(callbackFn, thisArg)
 
 `callbackFn` 被调用来处理数组的*每一个*索引，而不仅仅是那些有值的索引。在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中，未赋值的空槽与 `undefined` 表现相同。
 
-`findIndex()` 不会改变被调用的数组，但是提供给 `callbackFn` 的函数可能会改变它。但需要注意的是，在第一次调用 `callbackFn` *之前*，数组的长度会被保存。因此：
+`findIndex()` 不会改变被调用的数组，但是提供给 `callbackFn` 的函数可能会改变它。但需要注意的是，在第一次调用 `callbackFn` _之前_，数组的长度会被保存。因此：
 
 - 当调用 `findIndex()` 时，`callbackFn` 不会访问超出数组初始长度的任何元素。
 - 对已经访问过的索引的更改不会导致再次在这些元素上调用 `callbackFn`。
