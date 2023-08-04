@@ -1,7 +1,6 @@
 ---
 title: runtime.onConnectExternal
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal
 ---
 
 {{AddonSidebar()}}
@@ -15,9 +14,9 @@ L'écouteur reçoit un objet {{WebExtAPIRef('runtime.Port')}} qu'il peut ensuite
 ## Syntaxe
 
 ```js
-browser.runtime.onConnectExternal.addListener(listener)
-browser.runtime.onConnectExternal.removeListener(listener)
-browser.runtime.onConnectExternal.hasListener(listener)
+browser.runtime.onConnectExternal.addListener(listener);
+browser.runtime.onConnectExternal.removeListener(listener);
+browser.runtime.onConnectExternal.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -50,16 +49,14 @@ Dans cet exemple, l'extension Hansel se connecte à l'extension Gretel :
 
 ```js
 console.log("connecting to Gretel");
-var myPort = browser.runtime.connect(
-  "gretel@mozilla.org"
-);
+var myPort = browser.runtime.connect("gretel@mozilla.org");
 
 myPort.onMessage.addListener((message) => {
   console.log(`From Gretel: ${message.content}`);
 });
 
 browser.browserAction.onClicked.addListener(() => {
-  myPort.postMessage({content: "Hello from Hansel"});
+  myPort.postMessage({ content: "Hello from Hansel" });
 });
 ```
 
@@ -80,7 +77,7 @@ browser.runtime.onConnectExternal.addListener((port) => {
 });
 
 browser.browserAction.onClicked.addListener(() => {
-   portFromHansel.postMessage({content: "Message from Gretel"});
+  portFromHansel.postMessage({ content: "Message from Gretel" });
 });
 ```
 

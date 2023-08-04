@@ -1,16 +1,6 @@
 ---
 title: Оптимизация canvas
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
-tags:
-  - Canvas
-  - Graphics
-  - HTML
-  - HTML5
-  - Tutorial
-  - Оптимизация
-  - Урок
-  - Холст
-translation_of: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
@@ -26,11 +16,11 @@ translation_of: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 Если вы повторяете одни и те же операции рисования в каждом кадре анимации, рассмотрите возможность их выгрузки на offscreen canvas. Затем вы можете визуализировать закадровое изображение на свой основной canvas так часто, как это необходимо, без необходимости повторять шаги, необходимые для его генерации.
 
 ```js
-myCanvas.offscreenCanvas = document.createElement('canvas');
+myCanvas.offscreenCanvas = document.createElement("canvas");
 myCanvas.offscreenCanvas.width = myCanvas.width;
 myCanvas.offscreenCanvas.height = myCanvas.height;
 
-myCanvas.getContext('2d').drawImage(myCanvas.offScreenCanvas, 0, 0);
+myCanvas.getContext("2d").drawImage(myCanvas.offScreenCanvas, 0, 0);
 ```
 
 ### Избегайте координат с плавающей точкой и используйте вместо них целые числа
@@ -68,10 +58,18 @@ ctx.drawImage(myImage, 0.3, 0.5);
     border: 2px solid black;
   }
 
-  canvas { position: absolute; }
-  #ui-layer { z-index: 3; }
-  #game-layer { z-index: 2; }
-  #background-layer { z-index: 1; }
+  canvas {
+    position: absolute;
+  }
+  #ui-layer {
+    z-index: 3;
+  }
+  #game-layer {
+    z-index: 2;
+  }
+  #background-layer {
+    z-index: 1;
+  }
 </style>
 ```
 
@@ -90,8 +88,8 @@ var scaleY = window.innerHeight / canvas.height;
 var scaleToFit = Math.min(scaleX, scaleY);
 var scaleToCover = Math.max(scaleX, scaleY);
 
-stage.style.transformOrigin = '0 0'; //scale from top left
-stage.style.transform = 'scale(' + scaleToFit + ')';
+stage.style.transformOrigin = "0 0"; //scale from top left
+stage.style.transform = "scale(" + scaleToFit + ")";
 ```
 
 ### Отключите прозрачность
@@ -99,7 +97,7 @@ stage.style.transform = 'scale(' + scaleToFit + ')';
 Если ваше приложение использует canvas и не нуждается в прозрачном фоне, установите для параметра `alpha` значение `false` при создании контекста рисования с помощью {{domxref("HTMLCanvasElement.getContext()")}}. Эта информация может использоваться браузером для оптимизации рендеринга.
 
 ```js
-var ctx = canvas.getContext('2d', { alpha: false });
+var ctx = canvas.getContext("2d", { alpha: false });
 ```
 
 ### Другие советы

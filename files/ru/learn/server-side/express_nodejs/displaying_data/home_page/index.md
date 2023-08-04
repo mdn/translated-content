@@ -1,8 +1,8 @@
 ---
 title: Home page
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 ---
+
 Первой создаваемой страницей будет домашняя страница веб-сайта, доступная из корня сайта (`'/'`) или из каталога (`catalog/`). На странице будет виден статический текст, описывающий сайт, и динамически вычисляемые "количества" записей разных типов имеющихся в БД.
 
 Маршрут для домашней страницы уже создан. Для завершения страницы обновить функции контроллера, чтобы он извлекал количество записей из БД, и создавал представление (шаблон), который можно использовать для презентации страницы.
@@ -13,15 +13,15 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 
 ```js
 // GET catalog home page.
-router.get('/', book_controller.index);  //This actually maps to /catalog/ because we import the route with a /catalog prefix
+router.get("/", book_controller.index); //This actually maps to /catalog/ because we import the route with a /catalog prefix
 ```
 
 Параметр колбэк-функции определён в **/controllers/bookController.js**:
 
 ```js
-exports.index = function(req, res, next) {
-    res.send('NOT IMPLEMENTED: Site Home Page');
-}
+exports.index = function (req, res, next) {
+  res.send("NOT IMPLEMENTED: Site Home Page");
+};
 ```
 
 Именно эту функцию контроллера мы расширим, чтобы получать информацию из моделей и затем отображать её, используя шаблоны (представления).
@@ -33,10 +33,13 @@ exports.index = function(req, res, next) {
 > **Примечание:** Количество экземпляров в каждой модели вычисляется при помощи метода [`countDocuments()`](http://mongoosejs.com/docs/api.html#model_Model.countDocuments) . Он вызывается для модели с возможным набором условий, необходимых для проверки соответствия первому аргументу и колбэк-функции второго аргумента (обсуждалось ранее в "Использование базы данных с Mongoose" [Using a Database (with Mongoose)](/ru/docs/Learn/Server-side/Express_Nodejs/mongoose)), причём можно вернуть также запрос `Query,` а затем выполнить его позже при помощи callback. Эта колбэк-функция будет выполняться, когда БД вернёт количество записей. Значение ошибки (or `null`) будет первым параметром, а количество записей (или null, если была ошибка) - вторым параметром.
 >
 > ```js
-> SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
->  // ... do something if there is an err
->  // ... do something with the count if there was no error
->  });
+> SomeModel.countDocuments(
+>   { a_model_field: "match_value" },
+>   function (err, count) {
+>     // ... do something if there is an err
+>     // ... do something with the count if there was no error
+>   },
+> );
 > ```
 
 Откройте файл **/controllers/bookController.js**. Почти в самом начале вы должны увидеть экспортируемую функцию `index()` .
@@ -52,35 +55,41 @@ exports.index = function(req, res, next) {
 Замените весь код, показанный выше, на следующий фрагмент кода. Первое, что он делает - импортирует (`require()`) все модели (выделено жирным). Это требуется, поскольку они нужны для подсчёта числа записей. Затем импортируется модуль _async_ .
 
 ```js
-var Book = require('../models/book');
-var Author = require('../models/author');
-var Genre = require('../models/genre');
-var BookInstance = require('../models/bookinstance');
+var Book = require("../models/book");
+var Author = require("../models/author");
+var Genre = require("../models/genre");
+var BookInstance = require("../models/bookinstance");
 
-var async = require('async');
+var async = require("async");
 
-exports.index = function(req, res) {
-
-    async.parallel({
-        book_count: function(callback) {
-            Book.countDocuments({}, callback); // Pass an empty object as match condition to find all documents of this collection
-// countDocuments не работает, работает только просто count
-        },
-        book_instance_count: function(callback) {
-            BookInstance.countDocuments({}, callback);
-        },
-        book_instance_available_count: function(callback) {
-            BookInstance.countDocuments({status:'Available'}, callback);
-        },
-        author_count: function(callback) {
-            Author.countDocuments({}, callback);
-        },
-        genre_count: function(callback) {
-            Genre.countDocuments({}, callback);
-        }
-    }, function(err, results) {
-        res.render('index', { title: 'Local Library Home', error: err, data: results });
-    });
+exports.index = function (req, res) {
+  async.parallel(
+    {
+      book_count: function (callback) {
+        Book.countDocuments({}, callback); // Pass an empty object as match condition to find all documents of this collection
+        // countDocuments не работает, работает только просто count
+      },
+      book_instance_count: function (callback) {
+        BookInstance.countDocuments({}, callback);
+      },
+      book_instance_available_count: function (callback) {
+        BookInstance.countDocuments({ status: "Available" }, callback);
+      },
+      author_count: function (callback) {
+        Author.countDocuments({}, callback);
+      },
+      genre_count: function (callback) {
+        Genre.countDocuments({}, callback);
+      },
+    },
+    function (err, results) {
+      res.render("index", {
+        title: "Local Library Home",
+        error: err,
+        data: results,
+      });
+    },
+  );
 };
 ```
 

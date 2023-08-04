@@ -1,7 +1,6 @@
 ---
 title: Apte à être mis en cache
 slug: Glossary/Cacheable
-translation_of: Glossary/cacheable
 ---
 
 Une réponse apte à être mise en cache (_cacheable_) est une réponse HTTP qui peut être mise en cache, qui est stockée pour être récupérée et utilisée plus tard, en enregistrant une nouvelle requête sur le serveur. Toutes les réponses HTTP ne peuvent pas être mises en cache, les contraintes suivantes sont requises pour qu'une réponse HTTP soit mise en cache :

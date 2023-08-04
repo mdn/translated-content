@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: dialog role'
+title: "ARIA: dialog role"
 slug: Web/Accessibility/ARIA/Roles/dialog_role
 ---
 
@@ -10,10 +10,14 @@ slug: Web/Accessibility/ARIA/Roles/dialog_role
 [`dialog`](http://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog) 역할(role)은 HTML 기반의 애플리케이션의 다이얼로그 또는 콘텐츠를 분리하는 창 또는 다른 웹 애플리케이션의 UI 혹은 페이지를 마크업하는데 사용됩니다. 다이얼로그는 일반적으로 오버레이를 사용하여 페이지 위에 표시됩니다. 다이얼로그는 비모달(non-modal) (열린 이후에도 다이얼로그 바깥의 콘텐츠와 상호작용할 수 있습니다) 또는 모달(오로지 다이얼로그 콘텐츠와 상호작용할 수 있습니다) 형태일 수 있습니다.
 
 ```html
-<div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+<div
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
   <h2 id="dialog1Title">귀하의 개인정보가 성공적으로 갱신되었습니다.</h2>
   <p id="dialog1Desc">
-    <a href="/account">개인정보 관리</a> 페이지에서 언제든지 개인정보를 수정할 수 있습니다.
+    <a href="/account">개인정보 관리</a> 페이지에서 언제든지 개인정보를 수정할
+    수 있습니다.
   </p>
   <button>닫기</button>
 </div>
@@ -35,10 +39,14 @@ slug: Web/Accessibility/ARIA/Roles/dialog_role
 만약 다이얼로그가 이미 눈에 보이는 타이틀바를 가지고 있다면, 그 안속의 텍스트는 다이얼로그를 레이블하는데 사용될 수 있습니다. 이를 이루기 위해 `role="dialog"` 속성을 가진 요소에 `aria-labelledby` 속성을 사용합니다. 또한, 만약 다이얼로그에 제목 외의 추가적인 설명 텍스트가 있다면, 그 텍스트는 `aria-describedby` 속성을 사용하여 다이얼로그에 관련되게 만들 수 있습니다. 이러한 방법은 아래 코드를 통해 확인하실 수 있습니다:
 
 ```html
-<div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+<div
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
   <h2 id="dialog1Title">귀하의 개인정보가 성공적으로 갱신되었습니다.</h2>
   <p id="dialog1Desc">
-    <a href="/account">개인정보 관리</a> 페이지에서 언제든지 개인정보를 수정할 수 있습니다.
+    <a href="/account">개인정보 관리</a> 페이지에서 언제든지 개인정보를 수정할
+    수 있습니다.
   </p>
   <button>닫기</button>
 </div>
@@ -79,27 +87,30 @@ When the dialog is correctly labeled and focus is moved to a control inside the 
 #### 예제 1: 폼을 포함하는 다이얼로그
 
 ```html
- <div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
-   <h2 id="dialog1Title">구독하기</h2>
-   <p id="dialog1Desc">우리는 이 정보를 제 3자에게 제공하지 않습니다.</p>
-   <form>
-     <p>
-       <label for="firstName">이름</label>
-       <input id="firstName" type="text" />
-     </p>
-     <p>
-       <label for="lastName">성</label>
-       <input id="lastName" type="text"/>
-     </p>
-     <p>
-       <label for="interests">관심분야</label>
-       <textarea id="interests"></textarea>
-     </p>
-     <p>
-         <input type="submit" value="정보 저장하기"/>
-     </p>
-   </form>
- </div>
+<div
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
+  <h2 id="dialog1Title">구독하기</h2>
+  <p id="dialog1Desc">우리는 이 정보를 제 3자에게 제공하지 않습니다.</p>
+  <form>
+    <p>
+      <label for="firstName">이름</label>
+      <input id="firstName" type="text" />
+    </p>
+    <p>
+      <label for="lastName">성</label>
+      <input id="lastName" type="text" />
+    </p>
+    <p>
+      <label for="interests">관심분야</label>
+      <textarea id="interests"></textarea>
+    </p>
+    <p>
+      <input type="submit" value="정보 저장하기" />
+    </p>
+  </form>
+</div>
 ```
 
 #### Example 2: A dialog based on a Fieldset as fallback content
@@ -107,17 +118,25 @@ When the dialog is correctly labeled and focus is moved to a control inside the 
 To support browsers or AT products that do not support ARIA mark up, it's also possible to use apply the dialog markup to a fieldset element as fallback content. This way the dialog title will still be announced correctly:
 
 ```html
-<fieldset role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+<fieldset
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
   <legend>
-    <span id="dialog1Title">Your personal details were successfully updated.</span>
-    <span id="dialog1Desc">You can change your details at any time in the user account section.</span>
+    <span id="dialog1Title"
+      >Your personal details were successfully updated.</span
+    >
+    <span id="dialog1Desc"
+      >You can change your details at any time in the user account
+      section.</span
+    >
   </legend>
 
   <button>Close</button>
 </fieldset>
 ```
 
-#### 작업된 예제:
+#### 작업된 예제
 
 - [jQuery-UI Dialog](http://jqueryui.com/demos/dialog/)
 

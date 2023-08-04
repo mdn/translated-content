@@ -1,8 +1,8 @@
 ---
 title: HTMLElement.offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
-translation_of: Web/API/HTMLElement/offsetHeight
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.offsetHeight`** - высота элемента с учётом вертикальных полей и границ в пикселях. Свойство неизменяемое, только для чтения. Возвращаемое значение - целочисленное.
@@ -15,7 +15,7 @@ For the document body object, the measurement includes total linear content heig
 
 ## Syntax
 
-```
+```js
 var intElemOffsetHeight = document.getElementById(id_attribute_value).offsetHeight;
 ```
 
@@ -29,9 +29,7 @@ The example image above shows a scrollbar and an offsetHeight which fits on the 
 
 ## Specification
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsetHeight', 'offsetLeft')}} | {{Spec2('CSSOM View')}} |         |
+{{Specifications}}
 
 ### Notes
 

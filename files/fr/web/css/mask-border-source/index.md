@@ -1,12 +1,6 @@
 ---
 title: mask-border-source
 slug: Web/CSS/mask-border-source
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/mask-border-source
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

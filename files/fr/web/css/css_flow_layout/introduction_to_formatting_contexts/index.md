@@ -1,12 +1,6 @@
 ---
 title: Explications quant aux contextes de formatage
 slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
-tags:
-  - CSS
-  - Guide
-  - Intermédiaire
-translation_of: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
-original_slug: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 ---
 
 {{CSSRef}}
@@ -80,7 +74,7 @@ Dans ce guide, nous avons approfondi les notions relatives aux contextes de form
 
 ## Voir aussi
 
-- [Contexte de formatage de bloc (ou *Block Formatting Context* (BFC) en anglais)](/fr/docs/Web/CSS/Block_formatting_context)
+- [Contexte de formatage de bloc (ou _Block Formatting Context_ (BFC) en anglais)](/fr/docs/Web/CSS/Block_formatting_context)
 - [Modèle de formatage visuel](/fr/docs/Web/CSS/Modèle_de_mise_en_forme_visuelle)
 - [Modèle de boîte CSS](/fr/docs/Web/CSS/Modèle_de_boîte_CSS)
 

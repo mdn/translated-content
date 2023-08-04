@@ -1,7 +1,6 @@
 ---
 title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
-original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap
 ---
 
 {{JSRef}}

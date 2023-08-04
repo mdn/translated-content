@@ -1,12 +1,6 @@
 ---
 title: padding-block-start
 slug: Web/CSS/padding-block-start
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/padding-block-start
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -27,7 +21,7 @@ padding-block-start: 1em;
 
 /* Valeurs de proportions */
 /* Type <percentage>      */
-padding-block-start: 5%;  /* Relatif à la largeur du bloc englobant */
+padding-block-start: 5%; /* Relatif à la largeur du bloc englobant */
 
 /* Valeurs globales */
 padding-block-start: inherit;
@@ -69,7 +63,7 @@ div {
 .exemple {
   writing-mode: vertical-lr;
   padding-block-start: 20px;
-  background-color: #C8C800;
+  background-color: #c8c800;
 }
 ```
 

@@ -34,9 +34,9 @@ WebAssembly 関数 `exported_func` は私たちの環境（WebAssembly モジュ
 3. ツールをビルドしたら、 `/wabt/out/clang/Debug` ディレクトリーをシステムの `PATH` に追加します。
 4. 次に、wat2wasm プログラムを実行します。入力ファイルパス、続いて `-o` 引数と、その後に出力ファイルパスを指定します。
 
-    ```bash
-    wat2wasm simple.wat -o simple.wasm
-    ```
+   ```bash
+   wat2wasm simple.wat -o simple.wasm
+   ```
 
 これで `simple.wasm` という名前のファイルに wasm が出力されます。これには `.wasm` アセンブリーのコードが含まれます。
 

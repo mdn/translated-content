@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection.currentLocalDescription
 slug: Web/API/RTCPeerConnection/currentLocalDescription
-translation_of: Web/API/RTCPeerConnection/currentLocalDescription
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 Только для чтения свойство **`RTCPeerConnection.currentLocalDescription`** возвращает объект {{domxref("RTCSessionDescription")}} , описывающий локальную сторону соединения, как самый последний, удачно согласованный объект описания, с момента последнего завершения согласования {{domxref("RTCPeerConnection")}} и соединения с удалённым пиром (участником соединения) .

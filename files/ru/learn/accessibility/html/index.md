@@ -1,19 +1,6 @@
 ---
-title: 'HTML: Хорошая основа для доступности'
+title: "HTML: Хорошая основа для доступности"
 slug: Learn/Accessibility/HTML
-tags:
-  - HTML
-  - a11y
-  - Клавиатура
-  - Кнопки
-  - Начинающий
-  - Семантика
-  - Ссылки
-  - Формы
-  - вспомогательные технологии
-  - доступность
-translation_of: Learn/Accessibility/HTML
-original_slug: Learn/Доступность/HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
@@ -81,7 +68,10 @@ HTML-элементы `<button>` не только имеют соответст
 
 <h2>Мой подзаголовок</h2>
 
-<p>Это первый подраздел моей страницы. Я бы хотела, чтобы люди могли найти этот контент!</p>
+<p>
+  Это первый подраздел моей страницы. Я бы хотела, чтобы люди могли найти этот
+  контент!
+</p>
 
 <h2>Мой второй подзаголовок</h2>
 
@@ -98,24 +88,24 @@ HTML-элементы `<button>` не только имеют соответст
 Иногда люди используют презентационные элементы HTML и перенос строки, чтобы написать заголовки или параграфы:
 
 ```html example-bad
-<font size="7">Мой заголовок</font>
-<br><br>
+<font size="7">Мой заголовок</font> <br /><br />
 Это первый раздел моей страницы.
-<br><br>
+<br /><br />
 Я добавлю ещё один параграф тут.
-<br><br>
+<br /><br />
 1. Это
-<br><br>
+<br /><br />
 2. список для
-<br><br>
+<br /><br />
 3. чтения
-<br><br>
+<br /><br />
 <font size="5">Мой подзаголовок</font>
-<br><br>
-Это первый подраздел моей страницы. Я бы хотела, чтобы люди могли найти этот контент!
-<br><br>
+<br /><br />
+Это первый подраздел моей страницы. Я бы хотела, чтобы люди могли найти этот
+контент!
+<br /><br />
 <font size="5">Мой второй подзаголовок</font>
-<br><br>
+<br /><br />
 Это второй подраздел. Думаю, он намного интереснее, чем предыдущий.
 ```
 
@@ -139,69 +129,61 @@ HTML-элементы `<button>` не только имеют соответст
 
 ```html
 <table width="1200">
-      <!-- main heading row -->
-      <tr id="heading">
-        <td colspan="6">
+  <!-- main heading row -->
+  <tr id="heading">
+    <td colspan="6">
+      <h1 align="center">Шапка</h1>
+    </td>
+  </tr>
+  <!-- nav menu row  -->
+  <tr id="nav" bgcolor="#ffffff">
+    <td width="200">
+      <a href="#" align="center">Главная</a>
+    </td>
+    <td width="200">
+      <a href="#" align="center">Наша команда</a>
+    </td>
+    <td width="200">
+      <a href="#" align="center">Проекты</a>
+    </td>
+    <td width="200">
+      <a href="#" align="center">Контакты</a>
+    </td>
+    <td width="300">
+      <form width="300">
+        <input type="search" name="q" placeholder="Поиск" width="300" />
+      </form>
+    </td>
+    <td width="100">
+      <button width="100">Вперёд!</button>
+    </td>
+  </tr>
+  <!-- spacer row -->
+  <tr id="spacer" height="10">
+    <td></td>
+  </tr>
+  <!-- main content and aside row -->
+  <tr id="main">
+    <td id="content" colspan="4" bgcolor="#ffffff">
+      <!-- основной контент -->
+    </td>
+    <td id="aside" colspan="2" bgcolor="#ff80ff" valign="top">
+      <h2>Связанный контент</h2>
 
-          <h1 align="center">Шапка</h1>
-
-        </td>
-      </tr>
-      <!-- nav menu row  -->
-      <tr id="nav" bgcolor="#ffffff">
-        <td width="200">
-          <a href="#" align="center">Главная</a>
-        </td>
-        <td width="200">
-          <a href="#" align="center">Наша команда</a>
-        </td>
-        <td width="200">
-          <a href="#" align="center">Проекты</a>
-        </td>
-        <td width="200">
-          <a href="#" align="center">Контакты</a>
-        </td>
-        <td width="300">
-          <form width="300">
-            <input type="search" name="q" placeholder="Поиск" width="300">
-          </form>
-        </td>
-        <td width="100">
-          <button width="100">Вперёд!</button>
-        </td>
-      </tr>
-      <!-- spacer row -->
-      <tr id="spacer" height="10">
-        <td>
-
-        </td>
-      </tr>
-      <!-- main content and aside row -->
-      <tr id="main">
-        <td id="content" colspan="4" bgcolor="#ffffff">
-
-          <!-- основной контент -->
-        </td>
-        <td id="aside" colspan="2" bgcolor="#ff80ff" valign="top">
-          <h2>Связанный контент</h2>
-
-          <!-- второстепенный контент -->
-
-        </td>
-      </tr>
-      <!-- spacer row -->
-      <tr id="spacer" height="10">
-        <td>
-
-        </td>
-      </tr>
-      <!-- footer row -->
-      <tr id="footer" bgcolor="#ffffff">
-        <td colspan="6">
-          <p>© 2050 никто. Все права защищены.</p>
-        </td>
-      </tr>
-    </table>
+      <!-- второстепенный контент -->
+    </td>
+  </tr>
+  <!-- spacer row -->
+  <tr id="spacer" height="10">
+    <td></td>
+  </tr>
+  <!-- footer row -->
+  <tr id="footer" bgcolor="#ffffff">
+    <td colspan="6">
+      <p>© 2050 никто. Все права защищены.</p>
+    </td>
+  </tr>
+</table>
 ```
 
 Если вы попробуете поперемещаться с помощью скринридера, вероятно, он скажет вам, что перед вами таблица (хотя некоторые скринридеры могу различать табличную вёрстку от таблиц данных). После этого, скорее всего (в зависимости от того, какой скринридер вы используете), вам придётся переместиться в таблицу как в объект, посмотрев каждый элемент по отдельности, затем выйти из таблицы, чтобы продолжить перемещение по контенту.
@@ -221,7 +203,6 @@ HTML-элементы `<button>` не только имеют соответст
 
 <!-- Основной контент нашей страницы -->
 <main>
-
   <!-- На ней есть статьи -->
   <article>
     <h2>Заголовок статьи</h2>
@@ -234,7 +215,6 @@ HTML-элементы `<button>` не только имеют соответст
 
     <!-- второстепенный контент -->
   </aside>
-
 </main>
 
 <!-- А здесь наш основной подвал, который используется на всех страницах нашего сайта -->
@@ -269,7 +249,10 @@ HTML-элементы `<button>` не только имеют соответст
 
 <p>Это ссылка ведёт на сайт <a href="https://www.mozilla.org">Mozilla</a>.</p>
 
-<p>Другая ссылка на <a href="https://developer.mozilla.org">Mozilla Developer Network</a>.</p>
+<p>
+  Другая ссылка на
+  <a href="https://developer.mozilla.org">Mozilla Developer Network</a>.
+</p>
 
 <h2>Кнопки</h2>
 
@@ -284,11 +267,11 @@ HTML-элементы `<button>` не только имеют соответст
 <form>
   <div>
     <label for="name">Укажите ваше имя:</label>
-    <input type="text" id="name" name="name">
+    <input type="text" id="name" name="name" />
   </div>
   <div>
     <label for="age">Укажите ваш возраст:</label>
-    <input type="text" id="age" name="age">
+    <input type="text" id="age" name="age" />
   </div>
   <div>
     <label for="mood">Выберите ваше настроение:</label>
@@ -332,8 +315,9 @@ HTML-элементы `<button>` не только имеют соответст
 Хотя дополнение, которые мы сделали, позволяет нам перемещаться по кнопкам с помощью <kbd>Tab</kbd>, оно не позволяет нам активировать их кнопкой <kbd>Enter</kbd>. Для этого нам необходимо добавить хитрый кусочек JavaScript:
 
 ```js
-document.onkeydown = function(e) {
-  if(e.keyCode === 13) { // Кнопка Enter
+document.onkeydown = function (e) {
+  if (e.keyCode === 13) {
+    // Кнопка Enter
     document.activeElement.click();
   }
 };
@@ -354,13 +338,18 @@ document.onkeydown = function(e) {
 Удостоверьтесь, что описания вне контекста имеют смысл, так же как и в контексте параграфа, в котором они содержаться. Например, вот хороший текст для ссылки:
 
 ```html example-good
-<p>Киты очень классные существа. <a href="whales.html">Узнай больше о китах</a>.</p>
+<p>
+  Киты очень классные существа. <a href="whales.html">Узнай больше о китах</a>.
+</p>
 ```
 
 а это плохой текст для ссылки:
 
 ```html example-bad
-<p>Киты очень классные существа. Чтобы узнать больше о китах, <a href="whales.html">нажмите здесь</a>.</p>
+<p>
+  Киты очень классные существа. Чтобы узнать больше о китах,
+  <a href="whales.html">нажмите здесь</a>.
+</p>
 ```
 
 > **Примечание:**Более подробно о создании ссылок и лучших практиках можно почитать в статье «[Создание ссылок](/ru/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)». Также посмотреть на примеры хороших и плохих ссылок можно на [good-links.html](http://mdn.github.io/learning-area/accessibility/html/good-links.html) и [bad-links.html](http://mdn.github.io/learning-area/accessibility/html/bad-links.html).
@@ -368,7 +357,7 @@ document.onkeydown = function(e) {
 Описания форм также важны для понимания, что нужно вводить в каждое текстовое поле. Следующий пример кажется достаточно разумным:
 
 ```html example-bad
-Укажите ваше имя: <input type="text" id="name" name="name">
+Укажите ваше имя: <input type="text" id="name" name="name" />
 ```
 
 Однако, это не совсем удобно для пользователей с ограниченными возможностями. В примере нет ничего, что могло бы однозначно связать описание текстового поля с самим текстовым полем, и чётко указать, как его заполнить, если вы не можете видеть. Если бы вы воспользовались скринридером, скорее всего он озвучил описание примерно как «редактировать текст».
@@ -378,7 +367,7 @@ document.onkeydown = function(e) {
 ```html example-good
 <div>
   <label for="name">Укажите ваше имя:</label>
-  <input type="text" id="name" name="name">
+  <input type="text" id="name" name="name" />
 </div>
 ```
 
@@ -469,9 +458,9 @@ document.onkeydown = function(e) {
 Давайте взглянем на четвёртый способ:
 
 ```html
-<img src="dinosaur.png" aria-labelledby="dino-label">
+<img src="dinosaur.png" aria-labelledby="dino-label" />
 
-<p id="dino-label">Красный тираннозавр Mozilla ... </p>
+<p id="dino-label">Красный тираннозавр Mozilla ...</p>
 ```
 
 В этом случае мы вообще не используем атрибут `alt`. Вместо этого мы представили наше описание изображения как обычный параграф, указали `id`, и потом использовали атрибут `aria-labelledby`, сославшись на тот `id`. Это вынуждает скринридеры использовать параграф как альтернативный текст/описание изображения. Это особенно удобно, если вы хотите использовать один текст как описание для нескольких изображений, что невозможно с помощью атрибута `alt`.
@@ -483,7 +472,7 @@ document.onkeydown = function(e) {
 У изображений есть ещё один механизм для предоставления описательного текста. Например, есть атрибут `longdesc`, который предназначен для указания отдельной веб-страницы, содержащей расширенное описание изображения:
 
 ```html
-<img src="dinosaur.png" longdesc="dino-info.html">
+<img src="dinosaur.png" longdesc="dino-info.html" />
 ```
 
 Звучит, как хорошая идея, особенно для такой инфографики как диаграммы с большим количеством информации, которую, в качестве альтернативы, можно представить в виде доступной таблицы с данными (смотрите предыдущий раздел). Однако, `longdesc` нестабильно поддерживается скринридерами, и контент полностью недоступен пользователям, которые не используют скринридеры. Пожалуй, намного лучше будет вставить длинное описание на страницу вместе с изображением, или указать обычную ссылку.
@@ -492,8 +481,12 @@ HTML5 содержит два новых элемента — {{htmlelement("fig
 
 ```html
 <figure>
-  <img src="dinosaur.png" alt="Тираннозавр организации Mozilla">
-  <figcaption>Красный тираннозавр Рекс: стоящий как человек двуногий динозавр, с маленькими передними лапами и большой головой с большим количеством острых зубов.</figcaption>
+  <img src="dinosaur.png" alt="Тираннозавр организации Mozilla" />
+  <figcaption>
+    Красный тираннозавр Рекс: стоящий как человек двуногий динозавр, с
+    маленькими передними лапами и большой головой с большим количеством острых
+    зубов.
+  </figcaption>
 </figure>
 ```
 
@@ -503,7 +496,7 @@ HTML5 содержит два новых элемента — {{htmlelement("fig
 
 ```html
 <h3>
-  <img src="article-icon.png" alt="">
+  <img src="article-icon.png" alt="" />
   Тираннозавр Рекс: король динозавров
 </h3>
 ```

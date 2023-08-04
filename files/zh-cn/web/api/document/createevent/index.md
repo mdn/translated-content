@@ -22,15 +22,19 @@ var event = document.createEvent(type);
 
 ```js
 // 创建事件
-var event = document.createEvent('Event');
+var event = document.createEvent("Event");
 
 // 定义事件名为'build'.
-event.initEvent('build', true, true);
+event.initEvent("build", true, true);
 
 // 监听事件
-elem.addEventListener('build', function (e) {
-  // e.target matches elem
-}, false);
+elem.addEventListener(
+  "build",
+  function (e) {
+    // e.target matches elem
+  },
+  false,
+);
 
 // 触发对象可以是任何元素或其他事件目标
 elem.dispatchEvent(event);

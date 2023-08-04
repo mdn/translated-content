@@ -1,10 +1,6 @@
 ---
 title: Window.resizeBy()
 slug: Web/API/Window/resizeBy
-tags:
-  - API
-  - Window
-translation_of: Web/API/Window/resizeBy
 ---
 
 {{APIRef}}
@@ -14,7 +10,7 @@ La méthode **`Window.resizeBy()`** redimensionne la fenêtre actuelle d'une tai
 ## Syntaxe
 
 ```js
-window.resizeBy(xDelta, yDelta)
+window.resizeBy(xDelta, yDelta);
 ```
 
 ### Paramètres
@@ -41,7 +37,11 @@ Même si vous créez une fenêtre avec `window.open()` **elle n'est pas redimens
 
 ```js
 // Créer une fenêtre redimensionnable
-myExternalWindow = window.open("http://myurl.domain", "myWindowName", "resizable");
+myExternalWindow = window.open(
+  "http://myurl.domain",
+  "myWindowName",
+  "resizable",
+);
 
 // Redimensionner la fenêtre à 500 x 500
 myExternalWindow.resizeTo(500, 500);

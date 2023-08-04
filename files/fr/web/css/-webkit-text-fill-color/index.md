@@ -1,7 +1,6 @@
 ---
-title: '-webkit-text-fill-color'
+title: "-webkit-text-fill-color"
 slug: Web/CSS/-webkit-text-fill-color
-translation_of: Web/CSS/-webkit-text-fill-color
 ---
 
 {{CSSRef}}{{Non-standard_header}}

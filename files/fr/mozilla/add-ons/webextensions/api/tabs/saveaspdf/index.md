@@ -1,7 +1,6 @@
 ---
 title: tabs.saveAsPDF()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF
 ---
 
 {{AddonSidebar()}}
@@ -14,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var saving = browser.tabs.saveAsPDF(
-  pageSettings   // object
-)
+  pageSettings, // object
+);
 ```
 
 ### Paramètres
@@ -39,10 +38,9 @@ Dans cet exemple, un script d'arrière-plan écoute un clic sur une [action du n
 
 ```js
 browser.browserAction.onClicked.addListener(() => {
-  browser.tabs.saveAsPDF({})
-    .then((status) => {
-      console.log(status);
-    });
+  browser.tabs.saveAsPDF({}).then((status) => {
+    console.log(status);
+  });
 });
 ```
 

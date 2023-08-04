@@ -1,14 +1,6 @@
 ---
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Micro-données
-  - Microdata
-translation_of: Web/HTML/Global_attributes/itemprop
-original_slug: Web/HTML/Attributs_universels/itemprop
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -22,13 +14,15 @@ L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`itemprop`** es
 ```html
 <div itemscope itemtype="http://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
-  <span>Director:
+  <span
+    >Director:
     <span itemprop="director">James Cameron</span>
     (born August 16, 1954)
   </span>
   <span itemprop="genre">Science fiction</span>
-  <a href="../movies/avatar-theatrical-trailer.html"
-    itemprop="trailer">Trailer</a>
+  <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer"
+    >Trailer</a
+  >
 </div>
 ```
 
@@ -79,15 +73,9 @@ Les valeurs des propriétés sont généralement des chaînes de caractères ou 
 
 ```html
 <div itemscope>
- <p>My name is
-   <span itemprop="name">Neil</span>.
- </p>
- <p>My band is called
-   <span itemprop="band">Four Parts Water</span>.
- </p>
- <p>I am
-   <span itemprop="nationality">British</span>.
- </p>
+  <p>My name is <span itemprop="name">Neil</span>.</p>
+  <p>My band is called <span itemprop="band">Four Parts Water</span>.</p>
+  <p>I am <span itemprop="nationality">British</span>.</p>
 </div>
 ```
 
@@ -95,8 +83,7 @@ Les valeurs des propriétés sont généralement des chaînes de caractères ou 
 
 ```html
 <div itemscope>
- <img itemprop="image"
-  src="google-logo.png" alt="Google">
+  <img itemprop="image" src="google-logo.png" alt="Google" />
 </div>
 ```
 
@@ -104,8 +91,7 @@ Les valeurs des propriétés sont généralement des chaînes de caractères ou 
 
 ```html
 <h1 itemscope>
- <data itemprop="product-id"
-  value="9678AOU879">The Instigator 2000</data>
+  <data itemprop="product-id" value="9678AOU879">The Instigator 2000</data>
 </h1>
 ```
 
@@ -115,18 +101,17 @@ Lorsqu'une chaîne est décrite avec un format machine plutôt qu'un format « h
 
 ```html
 <div itemscope itemtype="http://schema.org/Product">
- <span itemprop="name">
-   Panasonic White 60L Refrigerator
- </span>
- <img src="panasonic-fridge-60l-white.jpg" alt="">
-  <div itemprop="aggregateRating"
-       itemscope
-       itemtype="http://schema.org/AggregateRating">
-   <meter itemprop="ratingValue" min=0 value=3.5 max=5>
-     Rated 3.5/5
-   </meter>
-   (based on <span itemprop="reviewCount">11</span>
-   customer reviews)
+  <span itemprop="name"> Panasonic White 60L Refrigerator </span>
+  <img src="panasonic-fridge-60l-white.jpg" alt="" />
+  <div
+    itemprop="aggregateRating"
+    itemscope
+    itemtype="http://schema.org/AggregateRating">
+    <meter itemprop="ratingValue" min="0" value="3.5" max="5">
+      Rated 3.5/5
+    </meter>
+    (based on <span itemprop="reviewCount">11</span>
+    customer reviews)
   </div>
 </div>
 ```
@@ -137,10 +122,8 @@ Pour les données numériques, on peut utiliser l'élément {{HTMLElement("meter
 
 ```html
 <div itemscope>
- I was born on
- <time itemprop="birthday" datetime="2009-05-10">
-   May 10th 2009
- </time>.
+  I was born on
+  <time itemprop="birthday" datetime="2009-05-10"> May 10th 2009 </time>.
 </div>
 ```
 
@@ -150,15 +133,17 @@ Pour les valeurs temporelles, on utilisera les éléments {{HTMLElement("time")}
 
 ```html
 <div itemscope>
- <p>Name:
-   <span itemprop="name">Amanda</span>
- </p>
- <p>Band:
-   <span itemprop="band" itemscope>
-     <span itemprop="name">Jazz Band</span>
-    (<span itemprop="size">12</span> players)
-   </span>
- </p>
+  <p>
+    Name:
+    <span itemprop="name">Amanda</span>
+  </p>
+  <p>
+    Band:
+    <span itemprop="band" itemscope>
+      <span itemprop="name">Jazz Band</span>
+      (<span itemprop="size">12</span> players)
+    </span>
+  </p>
 </div>
 ```
 
@@ -173,8 +158,8 @@ L'élément de plus haut niveau possède deux propriétés `name` et `band`. La 
 <p id="a">Name: <span itemprop="name">Amanda</span></p>
 <div id="b" itemprop="band" itemscope itemref="c"></div>
 <div id="c">
- <p>Band: <span itemprop="name">Jazz Band</span></p>
- <p>Size: <span itemprop="size">12</span> players</p>
+  <p>Band: <span itemprop="name">Jazz Band</span></p>
+  <p>Size: <span itemprop="size">12</span> players</p>
 </div>
 ```
 
@@ -184,11 +169,11 @@ On obtient le même résultat qu'avec l'exemple précédent. Le premier objet po
 
 ```html
 <div itemscope>
- <p>Flavors in my favorite ice cream:</p>
- <ul>
-  <li itemprop="flavor">Lemon sorbet</li>
-  <li itemprop="flavor">Apricot sorbet</li>
- </ul>
+  <p>Flavors in my favorite ice cream:</p>
+  <ul>
+    <li itemprop="flavor">Lemon sorbet</li>
+    <li itemprop="flavor">Apricot sorbet</li>
+  </ul>
 </div>
 ```
 
@@ -198,9 +183,7 @@ Cet objet possède deux fois la même propriété `flavor`, qui prend deux valeu
 
 ```html
 <div itemscope>
- <span itemprop="favorite-color favorite-fruit">
-  orange
- </span>
+  <span itemprop="favorite-color favorite-fruit"> orange </span>
 </div>
 ```
 
@@ -210,23 +193,23 @@ On peut définir deux propriétés au même endroit si elles prennent la même v
 
 ```html
 <figure>
- <img src="castle.jpeg">
- <figcaption>
-  <span itemscope>
-    <span itemprop="name">The Castle</span>
-  </span>
-  (1986)
- </figcaption>
+  <img src="castle.jpeg" />
+  <figcaption>
+    <span itemscope>
+      <span itemprop="name">The Castle</span>
+    </span>
+    (1986)
+  </figcaption>
 </figure>
 ```
 
 ```html
 <span itemscope>
-  <meta itemprop="name" content="The Castle">
+  <meta itemprop="name" content="The Castle" />
 </span>
 <figure>
- <img src="castle.jpeg">
- <figcaption>The Castle (1986)</figcaption>
+  <img src="castle.jpeg" />
+  <figcaption>The Castle (1986)</figcaption>
 </figure>
 ```
 
@@ -287,13 +270,13 @@ Une propriété est un ensemble non-ordonné de composants uniques sensibles à 
 
 1. Si un objet est un objet typé, il doit être :
 
-    1. Un nom de propriété autorisé par la spécification qui définit les types pertinents pour un objet ou
-    2. Une URL valide qui est une URL absolue qui définit un nom faisant partie de la spécification du vocabulaire ou
-    3. Une URL valide qui est une URL absolue utilisée comme un nom propriétaire ou
+   1. Un nom de propriété autorisé par la spécification qui définit les types pertinents pour un objet ou
+   2. Une URL valide qui est une URL absolue qui définit un nom faisant partie de la spécification du vocabulaire ou
+   3. Une URL valide qui est une URL absolue utilisée comme un nom propriétaire ou
 
 2. Si un objet n'est pas un objet typé, le nom doit être :
 
-    1. Une chaîne qui ne contient pas de caractères "**.**" (U+002E FULL STOP) ou "**:**" (U+003A COLON) et qui est utilisée comme un nom « propriétaire » pour la propriété (c'est-à-dire avec un nom qui n'est pas défini dans une spécification publique).
+   1. Une chaîne qui ne contient pas de caractères "**.**" (U+002E FULL STOP) ou "**:**" (U+003A COLON) et qui est utilisée comme un nom « propriétaire » pour la propriété (c'est-à-dire avec un nom qui n'est pas défini dans une spécification publique).
 
 > **Note :** Les caractères « : » sont interdits pour les valeurs qui ne sont pas des URL afin de pouvoir distinguer les URL du reste. Les valeurs avec les caractères « . » sont réservés pour de futurs ajouts et les blancs ne sont pas autorisés car les valeurs seraient analysées comme plusieurs valeurs distinctes.
 
@@ -347,35 +330,35 @@ L'ordre des noms n'a pas d'importance mais si une propriété possède plusieurs
 
 ```html
 <div itemscope>
- <p itemprop="a">1</p>
- <p itemprop="a">2</p>
- <p itemprop="b">test</p>
+  <p itemprop="a">1</p>
+  <p itemprop="a">2</p>
+  <p itemprop="b">test</p>
 </div>
 ```
 
 ```html
 <div itemscope>
- <p itemprop="b">test</p>
- <p itemprop="a">1</p>
- <p itemprop="a">2</p>
+  <p itemprop="b">test</p>
+  <p itemprop="a">1</p>
+  <p itemprop="a">2</p>
 </div>
 ```
 
 ```html
 <div itemscope>
- <p itemprop="a">1</p>
- <p itemprop="b">test</p>
- <p itemprop="a">2</p>
+  <p itemprop="a">1</p>
+  <p itemprop="b">test</p>
+  <p itemprop="a">2</p>
 </div>
 ```
 
 ```html
 <div id="x">
- <p itemprop="a">1</p>
+  <p itemprop="a">1</p>
 </div>
 <div itemscope itemref="x">
- <p itemprop="b">test</p>
- <p itemprop="a">2</p>
+  <p itemprop="b">test</p>
+  <p itemprop="a">2</p>
 </div>
 ```
 
@@ -394,16 +377,18 @@ itemprop = "name", value
 Un exemple sur un livre qu'on décrit avec les différents attributs.
 
 ```html
-<dl itemscope
-    itemtype="http://vocab.example.net/book"
-    itemid="urn:isbn:0-330-34032-8">
- <dt>Title <dd itemprop="title">The Reality Dysfunction
- <dt>Author <dd itemprop="author">Peter F. Hamilton
- <dt>Publication date
- <dd>
-  <time itemprop="pubdate" datetime="1996-01-26">
-    26 January 1996
-  </time>
+<dl
+  itemscope
+  itemtype="http://vocab.example.net/book"
+  itemid="urn:isbn:0-330-34032-8">
+  <dt>Title</dt>
+  <dd itemprop="title">The Reality Dysfunction</dd>
+  <dt>Author</dt>
+  <dd itemprop="author">Peter F. Hamilton</dd>
+  <dt>Publication date</dt>
+  <dd>
+    <time itemprop="pubdate" datetime="1996-01-26"> 26 January 1996 </time>
+  </dd>
 </dl>
 ```
 

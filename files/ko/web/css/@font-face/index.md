@@ -1,5 +1,5 @@
 ---
-title: '@font-face'
+title: "@font-face"
 slug: Web/CSS/@font-face
 ---
 {{CSSRef}}
@@ -86,7 +86,7 @@ slug: Web/CSS/@font-face
 
 ## 참고자료(See also)
 
-- [About WOFF](/en-US/docs/Web/Guide/WOFF)
+- [About WOFF](/ko/docs/Web/Guide/WOFF)
 - [FontSquirrel @font-face generator](http://www.fontsquirrel.com/fontface/generator)
 - [Beautiful fonts with @font-face](http://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
 - [Open Font Library](http://openfontlibrary.org/)

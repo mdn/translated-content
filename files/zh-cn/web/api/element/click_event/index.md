@@ -16,9 +16,9 @@ slug: Web/API/Element/click_event
 在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener('click', (event) => {});
+addEventListener("click", (event) => {});
 
-onclick = (event) => { };
+onclick = (event) => {};
 ```
 
 ## 事件类型
@@ -130,9 +130,9 @@ Safari 手机版里，以下元素是交互式的（因此不会受到上述错�
 ### JavaScript
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', (event) => {
+button.addEventListener("click", (event) => {
   button.textContent = `Click count: ${event.detail}`;
 });
 ```

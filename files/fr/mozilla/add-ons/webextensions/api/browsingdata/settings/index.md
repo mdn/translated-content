@@ -1,7 +1,6 @@
 ---
 title: browsingData.settings()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/settings
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/settings
 ---
 
 {{AddonSidebar()}}
@@ -17,7 +16,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var getSettings = browser.browsingData.settings()
+var getSettings = browser.browsingData.settings();
 ```
 
 ### Paramètres

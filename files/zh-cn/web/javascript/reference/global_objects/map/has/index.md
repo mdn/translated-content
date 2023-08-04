@@ -32,8 +32,8 @@ has(key)
 const myMap = new Map();
 myMap.set("bar", "foo");
 
-console.log(myMap.has("bar"));  // true
-console.log(myMap.has("baz"));  // false
+console.log(myMap.has("bar")); // true
+console.log(myMap.has("baz")); // false
 ```
 
 ## 规范

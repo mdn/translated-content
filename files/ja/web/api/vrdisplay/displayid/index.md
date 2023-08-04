@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.displayId
 slug: Web/API/VRDisplay/displayId
-original_slug: Web/API/VRDevice/displayId
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

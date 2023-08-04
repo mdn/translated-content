@@ -1,7 +1,6 @@
 ---
 title: permissions
 slug: Mozilla/Add-ons/WebExtensions/API/permissions
-translation_of: Mozilla/Add-ons/WebExtensions/API/permissions
 ---
 
 {{AddonSidebar}}Permet aux extensions de demander des permissions supplémentaires lors de l'exécution, après leur installation.
@@ -19,7 +18,7 @@ Avec l'API de permissions, une extension peut demander des permissions suppléme
 - L'extension peut gérer le refus de permission de manière gracieuse au lieu de présenter à l'utilisateur un choix global "tout ou rien" au moment de l'installation. Vous pouvez toujours obtenir beaucoup de cette carte d'extension sans lui donner accès à votre emplacement, par exemple.
 - L'extension peut avoir besoin des [permissions hôtes](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), mais ne sait pas à l'installation exactement quelles permissions d'hôte qu'il a besoin. Par exemple, la liste des hôtes peut être un paramètre utilisateur. Dans ce scénario, demander une gamme plus spécifique d'hôtes au moment de l'exécution peut être une alternative à demander "\<all_urls>" au moment de l'installation.
 
-Pour utiliser l'API de permissions, déterminez les permissions que votre extension peut demander lors de l'exécution, et indiquez-les dans [`optional_permissions`](/fr/docs/Add-ons/WebExtensions/manifest.json/optional_permissions). Après cela, vous pouvez demander toutes les permissions incluses dans `optional_permissions`. Les demandes peuvent uniquement être effectuées dans le gestionnaire pour une action de l'utilisateur (par exemple, un gestionnaire de clics). Pour des conseils sur la conception de votre demande d'autorisations d'exécution, afin de maximiser la probabilité que les utilisateurs les accordent, consultez la section [Demande de permissions à exécuter](/fr/Mozilla/Add-ons/WebExtensions/demander_les_bonnes_permissions#Demander_les_permissions_%C3%A0_%C3%A9x%C3%A9cuter)
+Pour utiliser l'API de permissions, déterminez les permissions que votre extension peut demander lors de l'exécution, et indiquez-les dans [`optional_permissions`](/fr/docs/Add-ons/WebExtensions/manifest.json/optional_permissions). Après cela, vous pouvez demander toutes les permissions incluses dans `optional_permissions`. Les demandes peuvent uniquement être effectuées dans le gestionnaire pour une action de l'utilisateur (par exemple, un gestionnaire de clics). Pour des conseils sur la conception de votre demande d'autorisations d'exécution, afin de maximiser la probabilité que les utilisateurs les accordent, consultez la section [Demande de permissions à exécuter](/fr/Mozilla/Add-ons/WebExtensions/demander_les_bonnes_permissions#Demander_les_permissions_à_éxécuter)
 
 ## Types
 

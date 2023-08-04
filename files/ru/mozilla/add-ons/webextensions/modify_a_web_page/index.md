@@ -1,9 +1,8 @@
 ---
 title: Модификация веб страницы
 slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
-translation_of: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
-original_slug: Mozilla/Add-ons/WebExtensions/модификация_веб_страницы
 ---
+
 {{AddonSidebar}}
 
 Одним из наиболее распространённых вариантов использования расширений является внесение изменение в веб-страницу. К примеру, расширение может изменить стиль, применённый к странице, скрыть существующие или вставить на страницу дополнительные DOM-узлы.
@@ -27,7 +26,6 @@ original_slug: Mozilla/Add-ons/WebExtensions/модификация_веб_ст�
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "modify-page",
   "version": "1.0",
@@ -38,7 +36,6 @@ original_slug: Mozilla/Add-ons/WebExtensions/модификация_веб_ст�
       "js": ["page-eater.js"]
     }
   ]
-
 }
 ```
 
@@ -53,7 +50,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/модификация_веб_ст�
 ```js
 document.body.textContent = "";
 
-var header = document.createElement('h1');
+var header = document.createElement("h1");
 header.textContent = "Эта страница была съедена";
 document.body.appendChild(header);
 ```
@@ -72,20 +69,15 @@ document.body.appendChild(header);
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "modify-page",
   "version": "1.0",
 
-  "permissions": [
-    "activeTab",
-    "contextMenus"
-  ],
+  "permissions": ["activeTab", "contextMenus"],
 
   "background": {
     "scripts": ["background.js"]
   }
-
 }
 ```
 
@@ -99,13 +91,13 @@ document.body.appendChild(header);
 ```js
 browser.contextMenus.create({
   id: "eat-page",
-  title: "Съесть эту страницу"
+  title: "Съесть эту страницу",
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "eat-page") {
     browser.tabs.executeScript({
-      file: "page-eater.js"
+      file: "page-eater.js",
     });
   }
 });
@@ -115,7 +107,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 На данном этапе расширение должно иметь следующий вид:
 
-```html
+```plain
 modify-page/
     background.js
     manifest.json
@@ -144,24 +136,24 @@ modify-page/
 ```js
 browser.contextMenus.create({
   id: "eat-page",
-  title: "Съесть эту страницу"
+  title: "Съесть эту страницу",
 });
 
 function messageTab(tabs) {
   browser.tabs.sendMessage(tabs[0].id, {
-    replacement: "Message from the extension!"
+    replacement: "Message from the extension!",
   });
 }
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "eat-page") {
     browser.tabs.executeScript({
-      file: "page-eater.js"
+      file: "page-eater.js",
     });
 
     var querying = browser.tabs.query({
       active: true,
-      currentWindow: true
+      currentWindow: true,
     });
     querying.then(messageTab);
   }
@@ -176,7 +168,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 function eatPage(request, sender, sendResponse) {
   document.body.textContent = "";
 
-  var header = document.createElement('h1');
+  var header = document.createElement("h1");
   header.textContent = request.replacement;
   document.body.appendChild(header);
 }

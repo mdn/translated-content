@@ -1,7 +1,6 @@
 ---
 title: browserAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
 ---
 
 {{AddonSidebar()}}
@@ -20,8 +19,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var settingIcon = browser.browserAction.setIcon(
-  details         // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -53,8 +52,8 @@ var settingIcon = browser.browserAction.setIcon(
 
         ```json
         {
-          16: "path/to/image16.jpg",
-          32: "path/to/image32.jpg"
+          "16": "path/to/image16.jpg",
+          "32": "path/to/image32.jpg"
         }
         ```
 
@@ -92,15 +91,15 @@ function logResponseHeaders(requestDetails) {
 function startListening() {
   browser.webRequest.onHeadersReceived.addListener(
     logResponseHeaders,
-    {urls: ["<all_urls>"]},
-    ["responseHeaders"]
+    { urls: ["<all_urls>"] },
+    ["responseHeaders"],
   );
-  browser.browserAction.setIcon({path: "icons/listening-on.svg"});
+  browser.browserAction.setIcon({ path: "icons/listening-on.svg" });
 }
 
 function stopListening() {
   browser.webRequest.onHeadersReceived.removeListener(logResponseHeaders);
-  browser.browserAction.setIcon({path: "icons/listening-off.svg"});
+  browser.browserAction.setIcon({ path: "icons/listening-off.svg" });
 }
 
 function toggleListener() {
@@ -128,7 +127,7 @@ function getImageData() {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  browser.browserAction.setIcon({imageData: getImageData()});
+  browser.browserAction.setIcon({ imageData: getImageData() });
 });
 ```
 
@@ -137,7 +136,8 @@ L'extrait suivant met à jour l'icône lorsque l'utilisateur clique, mais unique
 ```js
 browser.browserAction.onClicked.addListener((tab) => {
   browser.browserAction.setIcon({
-    tabId: tab.id, path: "icons/updated-48.png"
+    tabId: tab.id,
+    path: "icons/updated-48.png",
   });
 });
 ```

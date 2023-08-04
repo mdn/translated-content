@@ -1,12 +1,6 @@
 ---
-title: '<param> : l''élément paramètre d''un objet'
+title: "<param> : l'élément paramètre d'un objet"
 slug: Web/HTML/Element/param
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/param
 ---
 
 {{HTMLSidebar}}
@@ -38,7 +32,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ```html
 <object data="animation.swf" type="application/x-shockwave-flash">
-  <param name="param11" value="valeurConf">
+  <param name="param11" value="valeurConf" />
 </object>
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: runtime.onMessageExternal
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal
 ---
 
 {{AddonSidebar()}}Utilisez cet événement pour écouter les messages d'une autre extension.
@@ -18,9 +17,9 @@ Cette API ne peut pas être utilisée dans un script de contenu.
 ## Syntaxe
 
 ```js
-browser.runtime.onMessageExternal.addListener()
-browser.runtime.onMessageExternal.removeListener(listener)
-browser.runtime.onMessageExternal.hasListener(listener)
+browser.runtime.onMessageExternal.addListener();
+browser.runtime.onMessageExternal.removeListener(listener);
+browser.runtime.onMessageExternal.hasListener(listener);
 ```
 
 Les événements ont trois fonctions:
@@ -73,10 +72,7 @@ Dans cet exemple, l'extension "blue\@mozilla.org" envoie un message à l'extensi
 // sender: browser.runtime.id == "blue@mozilla.org"
 
 // Send a message to the extension whose ID is "red@mozilla.org"
-browser.runtime.sendMessage(
-    "red@mozilla.org",
-    "my message"
-  );
+browser.runtime.sendMessage("red@mozilla.org", "my message");
 ```
 
 ```js

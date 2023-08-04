@@ -1,11 +1,6 @@
 ---
-title: '<code>: элемент отображения кода'
+title: "<code>: элемент отображения кода"
 slug: Web/HTML/Element/code
-tags:
-  - HTML
-  - Код
-  - Элемент
-translation_of: Web/HTML/Element/code
 ---
 
 {{HTMLSidebar}}

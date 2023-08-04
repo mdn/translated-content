@@ -1,7 +1,6 @@
 ---
 title: tabs.getZoom()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getZoom
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/getZoom
 ---
 
 {{AddonSidebar()}}
@@ -14,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingZoom = browser.tabs.getZoom(
-  tabId                     // optional integer
-)
+  tabId, // optional integer
+);
 ```
 
 ### Paramètres

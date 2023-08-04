@@ -1,7 +1,6 @@
 ---
 title: cookies.set()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/set
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/set
 ---
 
 {{AddonSidebar()}}
@@ -16,8 +15,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var setting = browser.cookies.set(
-  details               // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -60,14 +59,14 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 Cet exemple définit un cookie pour le document hébergé par l'onglet actuellement actif :
 
 ```js
-var getActive = browser.tabs.query({active: true, currentWindow: true});
+var getActive = browser.tabs.query({ active: true, currentWindow: true });
 getActive.then(setCookie);
 
 function setCookie(tabs) {
   browser.cookies.set({
     url: tabs[0].url,
     name: "favourite-colour",
-    value: "red"
+    value: "red",
   });
 }
 ```

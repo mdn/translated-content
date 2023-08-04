@@ -1,7 +1,6 @@
 ---
 title: CSS のコード例を整形するためのガイドライン
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
-original_slug: MDN/Guidelines/Code_guidelines/CSS
 ---
 
 {{MDNSidebar}}
@@ -138,6 +137,7 @@ h3 {
 ## セレクター
 
 - ID セレクターを使用しないでください。理由は以下の通りです。
+
   - ID セレクターは柔軟性に欠け、複数必要だとわかっても追加できません。
   - クラスよりも特異性が高く、必要な場合に上書きするのが難しいです。
 
@@ -169,7 +169,9 @@ h3 {
   次のようにはしないでください。
 
   ```css example-bad
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-family: sans-serif;
     text-align: center;
   }
@@ -205,7 +207,11 @@ p {
 ```
 
 ```css example-bad
-p { color: white; background-color: black; padding: 1rem; }
+p {
+  color: white;
+  background-color: black;
+  padding: 1rem;
+}
 ```
 
 ### border などのプロパティをオフにする

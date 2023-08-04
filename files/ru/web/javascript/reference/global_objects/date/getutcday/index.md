@@ -1,13 +1,6 @@
 ---
 title: Date.prototype.getUTCDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
 ---
 
 {{JSRef("Global_Objects", "Date")}}

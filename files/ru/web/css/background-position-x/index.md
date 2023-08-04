@@ -1,7 +1,6 @@
 ---
 title: background-position-x
 slug: Web/CSS/background-position-x
-translation_of: Web/CSS/background-position-x
 ---
 {{CSSRef}}
 

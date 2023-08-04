@@ -1,7 +1,6 @@
 ---
 title: icons
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/icons
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/icons
 ---
 
 {{AddonSidebar}}
@@ -61,7 +60,7 @@ Vous pouvez utiliser SVG et le navigateur mettra à l'échelle appropriée votre
    <svg viewBox="0 0 48 48" width="48" height="48" ...
    ```
 
-2. Même si vous pouvez utiliser un fichier, vous devez toujours spécifier différentes tailles de l'icône dans votre`manifest.`Par exemple :
+2. Même si vous pouvez utiliser un fichier, vous devez toujours spécifier différentes tailles de l'icône dans votre `manifest`. Par exemple :
 
    ```json
    "icons": {

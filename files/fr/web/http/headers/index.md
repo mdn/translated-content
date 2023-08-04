@@ -1,14 +1,6 @@
 ---
 title: En-têtes HTTP
 slug: Web/HTTP/Headers
-tags:
-  - En-têtes
-  - HTTP
-  - Headers
-  - Networking
-  - Overview
-  - Reference
-translation_of: Web/HTTP/Headers
 ---
 
 {{HTTPSidebar}}
@@ -365,7 +357,7 @@ HTTP Public Key Pinning a été déprécié et supprimé au profit de Certificat
 - {{HTTPHeader("Service-Worker-Allowed")}}
   - : utilisé pour supprimer la [restriction de chemin](https://w3c.github.io/ServiceWorker/#path-restriction) en incluant cet en-tête [dans la réponse d'un script Service Worker](https://w3c.github.io/ServiceWorker/#service-worker-script-response).
 - {{HTTPHeader("SourceMap")}}
-  - : liens ayant généré du code sur une [source](/fr/docs/Outils/D%C3%A9bogueur/Comment/Utiliser_une_source_map).
+  - : liens ayant généré du code sur une [source](/fr/docs/Outils/Débogueur/Comment/Utiliser_une_source_map).
 - {{HTTPHeader("Upgrade")}}
   - : le document RFC associé pour le [champ d'en-tête Upgrade est RFC 7230, section 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). Le standard établit des règles pour la mise à niveau ou la modification d'un protocole différent sur le client, le serveur et la connexion au protocole de transport actuels. Par exemple, cette norme d'en-tête permet à un client de passer de HTTP 1.1 à HTTP 2.0, en supposant que le serveur décide de reconnaître et d'implémenter le champ d'en-tête Upgrade. Une requête de ce type ne peut etre contraignante et le serveur peut répondre en utilisant le protocole initial. Il peut être utilisé dans les en-têtes client et serveur. Si le champ d'en-tête Upgrade est spécifié, l'expéditeur DOIT également envoyer le champ d'en-tête Connection avec l'option de mise à niveau spécifiée. Pour plus de détails sur le [champ d'en-tête Connection, veuillez vous reporter à la section 6.1 du RFC susmentionné](https://tools.ietf.org/html/rfc7230#section-6.1).
 - {{HTTPHeader("X-DNS-Prefetch-Control")}}

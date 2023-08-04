@@ -1,7 +1,6 @@
 ---
 title: tabs.getCurrent()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getCurrent
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/getCurrent
 ---
 
 {{AddonSidebar()}}
@@ -15,7 +14,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var gettingCurrent = browser.tabs.getCurrent()
+var gettingCurrent = browser.tabs.getCurrent();
 ```
 
 ### Paramètres

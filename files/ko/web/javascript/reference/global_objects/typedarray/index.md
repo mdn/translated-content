@@ -195,7 +195,7 @@ Object.freeze(i8);
 // TypeError: Cannot freeze array buffer views with elements
 ```
 
-### ByteOffset는 반드시 정렬되어야 합니다.
+### ByteOffset는 반드시 정렬되어야 합니다
 
 `TypedArray`를 `ArrayBuffer`에 대한 보기로 구성할 때 `byteOffset` 인수는 요소 크기에 맞춰 정렬되어야 합니다. 즉, 오프셋은 B`YTES_PER_ELEMENT`의 배수여야 합니다.
 
@@ -208,7 +208,7 @@ const i32 = new Int32Array(new ArrayBuffer(4), 1);
 const i32 = new Int32Array(new ArrayBuffer(4), 0);
 ```
 
-### ByteLength는 반드시 정렬되어야 합니다.
+### ByteLength는 반드시 정렬되어야 합니다
 
 `byteOffset` 매개변수와 마찬가지로 `TypedArray`의 생성자에 전달된 `ArrayBuffer`의 `byteLength` 속성은 생성자의 `BYTES_PER_ELEMENT`의 배수여야 합니다.
 

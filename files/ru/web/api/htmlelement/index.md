@@ -1,7 +1,6 @@
 ---
 title: HTMLElement
 slug: Web/API/HTMLElement
-translation_of: Web/API/HTMLElement
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -14,7 +13,7 @@ translation_of: Web/API/HTMLElement
 
 _Наследует свойства родителя, {{domxref("Element")}}, и реализует их через {{domxref("GlobalEventHandlers")}} и {{domxref("TouchEventHandlers")}}._
 
-- {{domxref("HTMLElement.accessKey")}} -- ключ доступа
+- {{domxref("HTMLElement.accessKey")}} — ключ доступа
   - : Эта строковая переменная {{domxref("DOMString")}} отображает ключ доступа, сопоставленный элементу _{{domxref("Element")}}_.
 - {{domxref("HTMLElement.accessKeyLabel")}} {{readonlyInline}}
   - : Возвращает {{domxref ("DOMString")}}, содержащий назначенный ключ доступа элемента.
@@ -24,7 +23,7 @@ _Наследует свойства родителя, {{domxref("Element")}}, �
   - : Возвращает {{domxref ("Boolean")}}, который указывает, можно ли редактировать содержимое элемента.
 - {{domxref("HTMLElement.contextMenu")}}
   - : Является {{domxref ("HTMLMenuElement")}}, представляющим контекстное меню, связанное с элементом. Может быть null
-- {{domxref("HTMLElement.dataset")}} {{readonlyInline}} -- набор данных
+- {{domxref("HTMLElement.dataset")}} {{readonlyInline}} — набор данных
   - : Возвращает {{domxref("domstringmap")}}, который позволяет получить доступ к чтению и записи атрибутов пользовательских данных элемента (data-\*) .
 - {{domxref("HTMLElement.dir")}}
   - : Is a {{domxref("DOMString")}}, reflecting the `dir` global attribute, representing the directionality of the element. Possible values are `"ltr"`, `"rtl"`, and `"auto"`.
@@ -109,13 +108,7 @@ _Inherits methods from its parent, {{domxref("Element")}}._
 
 ## Specifications
 
-| Specification                                                                                                    | Status                           | Comment                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSSOM View', '#extensions-to-the-htmlelement-interface', 'HTMLElement')}} | {{Spec2('CSSOM View')}} | Added the following properties: `offsetParent`, `offsetTop`, `offsetLeft`, `offsetWidth`, and `offsetHeight`.                                                                                                                                                                                                                                                                                                                       |
-| {{SpecName('HTML WHATWG', 'elements.html#htmlelement', 'HTMLElement')}}                 | {{Spec2('HTML WHATWG')}} | Added the following properties: `translate`, `itemScope`, `itemType`, `itemId`, `itemRef`, `itemProp`, `properties`, and `itemValue`. Added the following method: `forceSpellcheck()`. Moved the `onXYZ` attributes to the {{domxref("GlobalEventHandlers")}} interface and added an inheritance from it.                                                                                                                 |
-| {{SpecName('HTML5 W3C', 'dom.html#htmlelement', 'HTMLElement')}}                             | {{Spec2('HTML5 W3C')}}     | Added the following properties: `dataset`, `hidden`, `tabindex`, `accessKey`, `accessKeyLabel`, `draggable`, `dropzone`, `contentEditable`, `isContentEditable`, `contextMenu`, `spellcheck`, `commandType`, `commandLabel`, `commandIcon`, `commandHidden`, `commandDisabled`, `commandChecked`, `style`, and all the `onXYZ` properties. Moved the `id` and `className` properties to the {{domxref("Element")}} interface. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-011100101', 'HTMLElement')}}                         | {{Spec2('DOM2 HTML')}}     | No change from {{SpecName('DOM2 HTML')}}                                                                                                                                                                                                                                                                                                                                                                                     |
-| {{SpecName('DOM1', 'level-one-html.html#ID-011100101', 'HTMLElement')}}                 | {{Spec2('DOM1')}}         | Initial definition.                                                                                                                                                                                                                                                                                                                                                                                                                 |
+{{Specifications}}
 
 ## Browser compatibility
 

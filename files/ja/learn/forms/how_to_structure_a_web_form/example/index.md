@@ -3,7 +3,6 @@ title: 例
 slug: Learn/Forms/How_to_structure_a_web_form/Example
 l10n:
   sourceCommit: 615d347dfc822fd49638f804317f3e95df2f7288
-original_slug: Learn/Forms/How_to_structure_an_HTML_form/Example
 ---
 
 これは記事 [ウェブフォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)の基本的なお支払いフォームの例です。
@@ -15,7 +14,10 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form/Example
 ```html
 <form method="post">
   <h1>お支払いフォーム</h1>
-  <p>必須のフィールドには <strong><span aria-label="required">*</span></strong> が付いています。</p>
+  <p>
+    必須のフィールドには
+    <strong><span aria-label="required">*</span></strong> が付いています。
+  </p>
   <section>
     <h2>連絡先情報</h2>
     <fieldset>
@@ -23,19 +25,19 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form/Example
       <ul>
         <li>
           <label for="title_1">
-            <input type="radio" id="title_1" name="title" value="A">
+            <input type="radio" id="title_1" name="title" value="A" />
             エース
           </label>
         </li>
         <li>
           <label for="title_2">
-            <input type="radio" id="title_2" name="title" value="K" >
+            <input type="radio" id="title_2" name="title" value="K" />
             キング
           </label>
         </li>
         <li>
           <label for="title_3">
-            <input type="radio" id="title_3" name="title" value="Q">
+            <input type="radio" id="title_3" name="title" value="Q" />
             クイーン
           </label>
         </li>
@@ -46,21 +48,21 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form/Example
         <span>氏名: </span>
         <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="text" id="name" name="username">
+      <input type="text" id="name" name="username" />
     </p>
     <p>
       <label for="mail">
         <span>メールアドレス: </span>
         <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="email" id="mail" name="usermail">
+      <input type="email" id="mail" name="usermail" />
     </p>
     <p>
       <label for="pwd">
         <span>パスワード: </span>
         <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="password" id="pwd" name="password">
+      <input type="password" id="pwd" name="password" />
     </p>
   </section>
   <section>
@@ -80,18 +82,23 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form/Example
         <span>カード番号:</span>
         <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="tel" id="number" name="cardnumber">
+      <input type="tel" id="number" name="cardnumber" />
     </p>
     <p>
       <label for="expiration">
         <span>有効期限:</span>
         <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="text" id="expiration" required="true" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
+      <input
+        type="text"
+        id="expiration"
+        required="true"
+        placeholder="MM/YY"
+        pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
     </p>
   </section>
   <section>
-    <p> <button type="submit">お支払いを検証</button> </p>
+    <p><button type="submit">お支払いを検証</button></p>
   </section>
 </form>
 ```
@@ -100,64 +107,67 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form/Example
 
 ```css
 h1 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 form {
-    margin: 0 auto;
-    width: 400px;
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
+  margin: 0 auto;
+  width: 400px;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
 }
 
-div+div {
-    margin-top: 1em;
+div + div {
+  margin-top: 1em;
 }
 
 label span {
-    display: inline-block;
-    width: 120px;
-    text-align: right;
+  display: inline-block;
+  width: 120px;
+  text-align: right;
 }
 
-input, textarea {
-    font: 1em sans-serif;
-    width: 250px;
-    box-sizing: border-box;
-    border: 1px solid #999;
+input,
+textarea {
+  font: 1em sans-serif;
+  width: 250px;
+  box-sizing: border-box;
+  border: 1px solid #999;
 }
 
-input[type=checkbox], input[type=radio] {
-    width: auto;
-    border: none;
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  border: none;
 }
 
-input:focus, textarea:focus {
-    border-color: #000;
+input:focus,
+textarea:focus {
+  border-color: #000;
 }
 
 textarea {
-    vertical-align: top;
-    height: 5em;
-    resize: vertical;
+  vertical-align: top;
+  height: 5em;
+  resize: vertical;
 }
 
 fieldset {
-    width: 250px;
-    box-sizing: border-box;
-    margin-left: 136px;
-    border: 1px solid #999;
+  width: 250px;
+  box-sizing: border-box;
+  margin-left: 136px;
+  border: 1px solid #999;
 }
 
 button {
-    margin: 20px 0 0 124px;
+  margin: 20px 0 0 124px;
 }
 
 label {

@@ -1,39 +1,46 @@
 ---
-title: gamepaddisconnected
+title: "Window: gamepaddisconnected イベント"
+short-title: gamepaddisconnected
 slug: Web/API/Window/gamepaddisconnected_event
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-ゲームパッドが切断されたことをブラウザが検出すると、`gampaddisconnected` イベントが発生します。
+{{APIRef}}
 
-## 一般的な情報
+`gamepaddisconnected` イベントは、ゲームパッドが切断されたことをブラウザーが検出したときに発行されます。
 
-- 仕様
-  - : [Gamepad](http://www.w3.org/TR/gamepad/#the-gamepaddisconnected-event)
-- インターフェース
-  - : Event
-- バブリング
-  - : No
-- キャンセル可能
-  - : No
-- 対象
-  - : DefaultView (`<window>`)
-- 標準の動作
-  - : None
+このイベントは、文書の {{httpheader('Permissions-Policy/gamepad','gamepad')}} [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)が不許可になっている場合には発生しません。
 
-## 属性
+このイベントはキャンセル不可で、バブリングしません。
 
-| Property                              | Type                                 | Description                                                                                 |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree).                                      |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                                                          |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.                                                  |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.                                                    |
-| `gamepad` {{readonlyInline}}    | {{domxref("Gamepad")}}         | The single gamepad attribute provides access to the associated gamepad data for this event. |
+## 例
 
-## 関連するイベント
+ゲームパッドが切断されたことを通知するには、{{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用してウィンドウにハンドラーを追加します。
 
-- [gamepadconnected](/ja/docs/Web/Reference/Events/gamepadconnected)
+```js
+window.addEventListener("gamepaddisconnected", (event) => {
+  console.log("ゲームパッドの接続が失われました。");
+});
+```
 
-## 参照
+また、`window.ongamepaddisconnected` イベントハンドラプロパティを使用して、`gamepaddisconnected` イベントのハンドラーを確立することもできます。
 
+```js
+window.ongamepaddisconnected = (event) => {
+  console.log("ゲームパッドの接続が失われました。");
+};
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [gamepadconnected](/ja/docs/Web/API/Window/gamepadconnected_event)
 - [Gamepad API の利用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

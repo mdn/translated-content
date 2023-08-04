@@ -1,8 +1,6 @@
 ---
-title: ':picture-in-picture'
+title: ":picture-in-picture"
 slug: Web/CSS/:picture-in-picture
-translation_of: Web/CSS/:picture-in-picture
-browser-compat: css.selectors.picture-in-picture
 l10n:
   sourceCommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
 ---

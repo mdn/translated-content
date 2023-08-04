@@ -2,6 +2,7 @@
 title: Document.characterSet
 slug: Web/API/Document/characterSet
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.characterSet`** 읽기 전용 속성은 현재 문서가 렌더링에 사용하는 [문자 인코딩](/ko/docs/Glossary/character_encoding)을 반환합니다.

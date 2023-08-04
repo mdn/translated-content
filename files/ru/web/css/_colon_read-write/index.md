@@ -1,9 +1,6 @@
 ---
-title: ':read-write'
+title: ":read-write"
 slug: Web/CSS/:read-write
-tags:
-  - Псевдо-классы
-translation_of: Web/CSS/:read-write
 ---
 
 {{ CSSRef() }}

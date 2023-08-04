@@ -1,15 +1,6 @@
 ---
 title: Créer une animation avec découpe et applique
 slug: Web/API/WebGL_API/By_example/Scissor_animation
-tags:
-  - Apprendre
-  - Débutant
-  - Exemple
-  - Graphisme
-  - Tutoriel
-  - WebGL
-translation_of: Web/API/WebGL_API/By_example/Scissor_animation
-original_slug: Web/API/WebGL_API/By_example/Créer_une_animation_avec_découpe_et_applique
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Modèle_1","Apprendre/WebGL/Par_exemple/Une_pluie_de_rectangle")}}
@@ -25,33 +16,38 @@ Dans cet exemple, on anime des carrés grâce aux méthodes {{domxref("WebGLRend
 En revanche, la couleur du carré (définie avec {{domxref("WebGLRenderingContext.clearColor()","clearColor")}}) est uniquement mise à jour lorsqu'un nouveau carré est créé. On voit ici que {{Glossary("WebGL")}} est un automate. Pour chaque carré, on définit sa couleur une fois puis on met à jour sa position à chaque _frame_. L'état lié à la couleur reste tel quel jusqu'à ce qu'un nouveau carré soit créé.
 
 ```html hidden
-<p>Une animation WebGL obtenue en appliquant des couleurs
-unies sur le buffer de dessin et en utilisant des tests de découpe.</p>
+<p>
+  Une animation WebGL obtenue en appliquant des couleurs unies sur le buffer de
+  dessin et en utilisant des tests de découpe.
+</p>
 <button id="animation-onoff">
   Cliquez ici pour
-<strong>[verbe ici]</strong>
-  l'animation</button>
-<canvas>Il semblerait que votre navigateur
-    ne supporte pas l'élément HTML5 canvas.</canvas>
+  <strong>[verbe ici]</strong>
+  l'animation
+</button>
+<canvas
+  >Il semblerait que votre navigateur ne supporte pas l'élément HTML5
+  canvas.</canvas
+>
 ```
 
 ```css hidden
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 button {
-  display : block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 
@@ -60,7 +56,7 @@ button {
 ```
 
 ```js
-"use strict"
+"use strict";
 window.addEventListener("load", setupAnimation, false);
 // Voici les variables qui permettront de
 // manipuler le contexte WebGL, la couleur
@@ -69,10 +65,9 @@ var gl,
   color = getRandomColor(),
   position;
 
-function setupAnimation (evt) {
+function setupAnimation(evt) {
   window.removeEventListener(evt.type, setupAnimation, false);
-  if (!(gl = getRenderingContext()))
-    return;
+  if (!(gl = getRenderingContext())) return;
 
   gl.enable(gl.SCISSOR_TEST);
   gl.clearColor(color[0], color[1], color[2], 1.0);
@@ -99,15 +94,15 @@ function setupAnimation (evt) {
     document.querySelector("strong").innerHTML = "lancer";
     clearInterval(timer);
   }
-  stopAnimation({type: "click"});
+  stopAnimation({ type: "click" });
 }
 
 // Les variables qui permettront de stocker la taille
 // et la vitesse du carré.
 var size = [60, 60],
   velocity = 3.0;
-function drawAnimation () {
-  gl.scissor(position[0], position[1], size[0] , size[1]);
+function drawAnimation() {
+  gl.scissor(position[0], position[1], size[0], size[1]);
   gl.clear(gl.COLOR_BUFFER_BIT);
   // À chaque frame, on définit une position plus basse
   // pour le carré, c'est cela qui crée une illusion
@@ -121,12 +116,12 @@ function drawAnimation () {
     // La position verticale correspond au haut
     // du buffer de dessin.
     position = [
-      Math.random()*(gl.drawingBufferWidth - size[0]),
-      gl.drawingBufferHeight
+      Math.random() * (gl.drawingBufferWidth - size[0]),
+      gl.drawingBufferHeight,
     ];
     // Ici on détermine une vitesse aléatoire
     // comprise entre 1.0 et 7.0
-    velocity = 1.0 + 6.0*Math.random();
+    velocity = 1.0 + 6.0 * Math.random();
     color = getRandomColor();
     gl.clearColor(color[0], color[1], color[2], 1.0);
   }
@@ -142,17 +137,17 @@ function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
-  var gl = canvas.getContext("webgl")
-    || canvas.getContext("experimental-webgl");
+  var gl =
+    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
   if (!gl) {
     var paragraph = document.querySelector("p");
-    paragraph.innerHTML = "Échec de l'obtention du contexte "
-      + "WebGL. Votre navigateur ne supporte peut-être pas "
-      + "WebGL.";
+    paragraph.innerHTML =
+      "Échec de l'obtention du contexte " +
+      "WebGL. Votre navigateur ne supporte peut-être pas " +
+      "WebGL.";
     return null;
   }
-  gl.viewport(0, 0,
-    gl.drawingBufferWidth, gl.drawingBufferHeight);
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;

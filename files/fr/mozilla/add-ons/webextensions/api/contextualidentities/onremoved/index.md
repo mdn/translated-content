@@ -1,7 +1,6 @@
 ---
 title: contextualIdentities.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved
 ---
 
 {{AddonSidebar()}}
@@ -11,9 +10,9 @@ Lancé lorsqu'une nouvelle identité contextuelle est supprimée. Les identités
 ## Syntaxe
 
 ```js
-browser.contextualIdentities.onRemoved.addListener(listener)
-browser.contextualIdentities.onRemoved.removeListener(listener)
-browser.contextualIdentities.onRemoved.hasListener(listener)
+browser.contextualIdentities.onRemoved.addListener(listener);
+browser.contextualIdentities.onRemoved.removeListener(listener);
+browser.contextualIdentities.onRemoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

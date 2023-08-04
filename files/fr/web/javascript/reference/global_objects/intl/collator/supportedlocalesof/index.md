@@ -1,16 +1,6 @@
 ---
 title: Intl.Collator.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
-tags:
-  - Collator
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - Reference
-  - i18n
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Collator/supportedLocalesOf
 ---
 
 {{JSRef}}
@@ -50,7 +40,7 @@ Si on dispose d'un environnement (un navigateur par exemple) qui supporte la com
 
 ```js
 var locales = ["ban", "id-u-co-pinyin", "de-ID"];
-var options = {localeMatcher: "lookup"};
+var options = { localeMatcher: "lookup" };
 console.log(Intl.Collator.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```

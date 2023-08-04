@@ -1,7 +1,6 @@
 ---
 title: privacy.services
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/services
-translation_of: Mozilla/Add-ons/WebExtensions/API/privacy/services
 ---
 
 {{AddonSidebar}}
@@ -30,19 +29,21 @@ function onSet(result) {
   }
 }
 
-  var getting = browser.privacy.services.passwordSavingEnabled.get({});
-  getting.then((got) => {
-    console.log(got.value);
-    if ((got.levelOfControl === "controlled_by_this_extension") ||
-        (got.levelOfControl === "controllable_by_this_extension")) {
-      var setting = browser.privacy.services.passwordSavingEnabled.set({
-        value: false
-      });
-      setting.then(onSet);
-    } else {
-      console.log("Not able to set passwordSavingEnabled");
-    }
-  });
+var getting = browser.privacy.services.passwordSavingEnabled.get({});
+getting.then((got) => {
+  console.log(got.value);
+  if (
+    got.levelOfControl === "controlled_by_this_extension" ||
+    got.levelOfControl === "controllable_by_this_extension"
+  ) {
+    var setting = browser.privacy.services.passwordSavingEnabled.set({
+      value: false,
+    });
+    setting.then(onSet);
+  } else {
+    console.log("Not able to set passwordSavingEnabled");
+  }
+});
 ```
 
 {{WebExtExamples}}

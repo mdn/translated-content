@@ -2,6 +2,7 @@
 title: Element.getAttribute()
 slug: Web/API/Element/getAttribute
 ---
+
 {{APIRef}}
 
 ## 요약

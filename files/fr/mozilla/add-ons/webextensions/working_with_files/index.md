@@ -1,7 +1,6 @@
 ---
 title: Travailler avec des fichiers
 slug: Mozilla/Add-ons/WebExtensions/Working_with_files
-translation_of: Mozilla/Add-ons/WebExtensions/Working_with_files
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: Uso de Fetch
 slug: Web/API/Fetch_API/Using_Fetch
-original_slug: Web/API/Fetch_API/Utilizando_Fetch
 ---
 
 {{DefaultAPISidebar("Fetch API")}}{{ SeeCompatTable }}
@@ -75,19 +74,20 @@ Tenga en cuenta que `mode: "no-cors"` solo permite un conjunto limitado de encab
 Una petición promise {{domxref("GlobalFetch.fetch","fetch()")}} será rechazada con {{jsxref("TypeError")}} cuando se encuentre un error de red, aunque esto normalmente significa problemas de permisos o similares — por ejemplo, un 404 no constituye un error de red. Una forma precisa de comprobar que la petición `fetch()` es satisfactoria pasa por comprobar si la promesa ha sido resuelta, además de comprobar que la propiedad {{domxref("Response.ok")}} tiene el valor `true` que indica que el estado de la petición HTTP es OK (código 200-299). El código sería algo así:
 
 ```js
-fetch('flores.jpg').then(function(response) {
-  if(response.ok) {
-    response.blob().then(function(miBlob) {
-      var objectURL = URL.createObjectURL(miBlob);
-      miImagen.src = objectURL;
-    });
-  } else {
-    console.log('Respuesta de red OK pero respuesta HTTP no OK');
-  }
-})
-.catch(function(error) {
-  console.log('Hubo un problema con la petición Fetch:' + error.message);
-});
+fetch("flores.jpg")
+  .then(function (response) {
+    if (response.ok) {
+      response.blob().then(function (miBlob) {
+        var objectURL = URL.createObjectURL(miBlob);
+        miImagen.src = objectURL;
+      });
+    } else {
+      console.log("Respuesta de red OK pero respuesta HTTP no OK");
+    }
+  })
+  .catch(function (error) {
+    console.log("Hubo un problema con la petición Fetch:" + error.message);
+  });
 ```
 
 ### Proporcionando tu propio objeto Request
@@ -97,21 +97,23 @@ En lugar de pasar la ruta al recurso que deseas solicitar a la llamada del méto
 ```js
 var myHeaders = new Headers();
 
-var myInit = { method: 'GET',
-               headers: myHeaders,
-               mode: 'cors',
-               cache: 'default' };
+var myInit = {
+  method: "GET",
+  headers: myHeaders,
+  mode: "cors",
+  cache: "default",
+};
 
-var myRequest = new Request('flowers.jpg', myInit);
+var myRequest = new Request("flowers.jpg", myInit);
 
 fetch(myRequest)
-.then(function(response) {
-  return response.blob();
-})
-.then(function(myBlob) {
-  var objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
-});
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (myBlob) {
+    var objectURL = URL.createObjectURL(myBlob);
+    myImage.src = objectURL;
+  });
 ```
 
 `Request()` acepta exactamente los mismos parámetros que el método `fetch()`. Puedes incluso pasar un objeto de petición existente para crear una copia del mismo:
@@ -129,9 +131,9 @@ Esto es muy útil ya que el cuerpo de las solicitudes y respuestas son de un só
 Para producir que los navegadores envien una petición con las credenciales incluidas, incluso para una llamada de origen cruzado, añadimos `credentials: 'include'` en el el objeto `init` que se pasa al método `fetch()`.
 
 ```js
-fetch('https://example.com', {
-  credentials: 'include'
-})
+fetch("https://example.com", {
+  credentials: "include",
+});
 ```
 
 Si solo quieres enviar la credenciales si la URL de la petición está en el mismo origen desde donde se llamada el script, añade `credentials: 'same-origin'`.
@@ -139,17 +141,17 @@ Si solo quieres enviar la credenciales si la URL de la petición está en el mis
 ```js
 // El script fué llamado desde el origen 'https://example.com'
 
-fetch('https://example.com', {
-  credentials: 'same-origin'
-})
+fetch("https://example.com", {
+  credentials: "same-origin",
+});
 ```
 
 Sin embargo para asegurarte que el navegador no incluye las credenciales en la petición, usa `credentials: 'omit'`.
 
 ```js
-fetch('https://example.com', {
-  credentials: 'omit'
-})
+fetch("https://example.com", {
+  credentials: "omit",
+});
 ```
 
 ### Enviando datos JSON
@@ -157,18 +159,19 @@ fetch('https://example.com', {
 Usa {{domxref("GlobalFetch.fetch","fetch()")}} para enviar una petición POST con datos codificados en JSON .
 
 ```js
-var url = 'https://example.com/profile';
-var data = {username: 'example'};
+var url = "https://example.com/profile";
+var data = { username: "example" };
 
 fetch(url, {
-  method: 'POST', // or 'PUT'
+  method: "POST", // or 'PUT'
   body: JSON.stringify(data), // data can be `string` or {object}!
-  headers:{
-    'Content-Type': 'application/json'
-  }
-}).then(res => res.json())
-.catch(error => console.error('Error:', error))
-.then(response => console.log('Success:', response));
+  headers: {
+    "Content-Type": "application/json",
+  },
+})
+  .then((res) => res.json())
+  .catch((error) => console.error("Error:", error))
+  .then((response) => console.log("Success:", response));
 ```
 
 ### Enviando un archivo
@@ -179,16 +182,16 @@ Los archivos pueden ser subido mediante el HTML de un elemento input `<input typ
 var formData = new FormData();
 var fileField = document.querySelector("input[type='file']");
 
-formData.append('username', 'abc123');
-formData.append('avatar', fileField.files[0]);
+formData.append("username", "abc123");
+formData.append("avatar", fileField.files[0]);
 
-fetch('https://example.com/profile/avatar', {
-  method: 'PUT',
-  body: formData
+fetch("https://example.com/profile/avatar", {
+  method: "PUT",
+  body: formData,
 })
-.then(response => response.json())
-.catch(error => console.error('Error:', error))
-.then(response => console.log('Success:', response));
+  .then((response) => response.json())
+  .catch((error) => console.error("Error:", error))
+  .then((response) => console.log("Success:", response));
 ```
 
 ## Cabeceras
@@ -236,7 +239,7 @@ Todos los métodosde de `headers` lanzan un `TypeError` si un nombre de cabecera
 var myResponse = Response.error();
 try {
   myResponse.headers.set("Origin", "http://mybank.com");
-} catch(e) {
+} catch (e) {
   console.log("Cannot pretend to be a bank!");
 }
 ```
@@ -244,10 +247,10 @@ try {
 Un buen caso de uso para `headers` es comprobar cuando el tipo de contenido es correcto antes de que se procese:
 
 ```js
-fetch(myRequest).then(function(response) {
+fetch(myRequest).then(function (response) {
   var contentType = response.headers.get("content-type");
-  if(contentType && contentType.indexOf("application/json") !== -1) {
-    return response.json().then(function(json) {
+  if (contentType && contentType.indexOf("application/json") !== -1) {
+    return response.json().then(function (json) {
       // process your JSON further
     });
   } else {
@@ -285,11 +288,11 @@ Estos pueden también creados programáticamente a través de JavaScript, pero e
 ```js
 var myBody = new Blob();
 
-addEventListener('fetch', function(event) {
+addEventListener("fetch", function (event) {
   event.respondWith(
     new Response(myBody, {
-      headers: { "Content-Type" : "text/plain" }
-    })
+      headers: { "Content-Type": "text/plain" },
+    }),
   );
 });
 ```
@@ -322,10 +325,10 @@ Este hace uso de los datos no texttuales mucho mas facil que si fuera con XHR.
 Las peticiones body pueden ser establecidas pasando el parametro body:
 
 ```js
-var form = new FormData(document.getElementById('login-form'));
+var form = new FormData(document.getElementById("login-form"));
 fetch("/login", {
   method: "POST",
-  body: form
+  body: form,
 });
 ```
 
@@ -337,9 +340,9 @@ Puedes comprobar si el navegador soporta la API de Fetch comprobando la existenc
 
 ```js
 if (self.fetch) {
-    // run my fetch request here
+  // run my fetch request here
 } else {
-    // do something with XMLHttpRequest?
+  // do something with XMLHttpRequest?
 }
 ```
 

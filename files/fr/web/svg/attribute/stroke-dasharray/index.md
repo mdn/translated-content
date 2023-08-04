@@ -1,8 +1,6 @@
 ---
 title: stroke-dasharray
 slug: Web/SVG/Attribute/stroke-dasharray
-translation_of: Web/SVG/Attribute/stroke-dasharray
-browser-compat: svg.attributes.presentation.stroke-dasharray
 ---
 
 {{SVGRef}}

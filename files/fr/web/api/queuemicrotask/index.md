@@ -1,10 +1,6 @@
 ---
 title: queueMicrotask()
 slug: Web/API/queueMicrotask
-translation_of: Web/API/queueMicrotask
-page-type: web-api-global-function
-original_slug: Web/API/WindowOrWorkerGlobalScope/queueMicrotask
-browser-compat: api.queueMicrotask
 ---
 
 {{APIRef("HTML DOM")}}
@@ -40,7 +36,7 @@ Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 self.queueMicrotask(() => {
   // Le contenu de la fonction à appeler
   // comme micro-tâche
-})
+});
 ```
 
 Tiré de la [spécification de `queueMicrotask()`](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing)&nbsp;:
@@ -53,11 +49,13 @@ MyElement.prototype.loadData = function (url) {
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then(res => res.arrayBuffer()).then(data => {
-      this._cache[url] = data;
-      this._setData(data);
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((res) => res.arrayBuffer())
+      .then((data) => {
+        this._cache[url] = data;
+        this._setData(data);
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
 ```
@@ -71,7 +69,11 @@ if (typeof self.queueMicrotask !== "function") {
   self.queueMicrotask = function (callback) {
     Promise.resolve()
       .then(callback)
-      .catch(e => setTimeout(() => { throw e; })); // gérer les exceptions
+      .catch((e) =>
+        setTimeout(() => {
+          throw e;
+        }),
+      ); // gérer les exceptions
   };
 }
 ```

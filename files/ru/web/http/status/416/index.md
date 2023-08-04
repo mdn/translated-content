@@ -1,11 +1,6 @@
 ---
 title: 416 Range Not Satisfiable
 slug: Web/HTTP/Status/416
-tags:
-  - HTTP
-  - Код состояния
-  - Ошибка клиента
-translation_of: Web/HTTP/Status/416
 ---
 
 {{HTTPSidebar}}

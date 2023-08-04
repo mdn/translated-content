@@ -34,17 +34,17 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     ctx.fillRect(25, 25, 100, 100);
     ctx.clearRect(45, 45, 60, 60);
@@ -99,17 +99,17 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="100" height="100"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="100" height="100"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     ctx.beginPath();
     ctx.moveTo(75, 50);
@@ -137,26 +137,26 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-    var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
     ctx.beginPath();
     ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // 绘制
     ctx.moveTo(110, 75);
-    ctx.arc(75, 75, 35, 0, Math.PI, false);   // 口 (顺时针)
+    ctx.arc(75, 75, 35, 0, Math.PI, false); // 口 (顺时针)
     ctx.moveTo(65, 65);
-    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // 左眼
+    ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // 左眼
     ctx.moveTo(95, 65);
-    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // 右眼
+    ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // 右眼
     ctx.stroke();
   }
 }
@@ -183,32 +183,32 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-  var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
-  // 填充三角形
-  ctx.beginPath();
-  ctx.moveTo(25, 25);
-  ctx.lineTo(105, 25);
-  ctx.lineTo(25, 105);
-  ctx.fill();
+    // 填充三角形
+    ctx.beginPath();
+    ctx.moveTo(25, 25);
+    ctx.lineTo(105, 25);
+    ctx.lineTo(25, 105);
+    ctx.fill();
 
-  // 描边三角形
-  ctx.beginPath();
-  ctx.moveTo(125, 125);
-  ctx.lineTo(125, 45);
-  ctx.lineTo(45, 125);
-  ctx.closePath();
-  ctx.stroke();
+    // 描边三角形
+    ctx.beginPath();
+    ctx.moveTo(125, 125);
+    ctx.lineTo(125, 45);
+    ctx.lineTo(45, 125);
+    ctx.closePath();
+    ctx.stroke();
   }
 }
 ```
@@ -246,20 +246,20 @@ x,y 坐标是可变的。半径（radius）和开始角度（startAngle）都是
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="200"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="200"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-    var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
-    for(var i = 0; i < 4; i++){
-      for(var j = 0; j < 3; j++){
+    for (var i = 0; i < 4; i++) {
+      for (var j = 0; j < 3; j++) {
         ctx.beginPath();
         var x = 25 + j * 50; // x 坐标值
         var y = 25 + i * 50; // y 坐标值
@@ -270,7 +270,7 @@ function draw() {
 
         ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
 
-        if (i>1){
+        if (i > 1) {
           ctx.fill();
         } else {
           ctx.stroke();
@@ -306,17 +306,17 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     // 二次贝塞尔曲线
     ctx.beginPath();
@@ -328,7 +328,7 @@ function draw() {
     ctx.quadraticCurveTo(125, 100, 125, 62.5);
     ctx.quadraticCurveTo(125, 25, 75, 25);
     ctx.stroke();
-   }
+  }
 }
 ```
 
@@ -340,19 +340,19 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-    var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
-     //三次贝塞尔曲线
+    //三次贝塞尔曲线
     ctx.beginPath();
     ctx.moveTo(75, 40);
     ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
@@ -383,17 +383,17 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-    var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
     roundedRect(ctx, 12, 12, 150, 150, 15);
     roundedRect(ctx, 19, 19, 150, 150, 9);
@@ -407,15 +407,15 @@ function draw() {
     ctx.lineTo(31, 37);
     ctx.fill();
 
-    for(var i = 0; i < 8; i++){
+    for (var i = 0; i < 8; i++) {
       ctx.fillRect(51 + i * 16, 35, 4, 4);
     }
 
-    for(i = 0; i < 6; i++){
+    for (i = 0; i < 6; i++) {
       ctx.fillRect(115, 51 + i * 16, 4, 4);
     }
 
-    for(i = 0; i < 8; i++){
+    for (i = 0; i < 8; i++) {
       ctx.fillRect(51 + i * 16, 99, 4, 4);
     }
 
@@ -460,7 +460,7 @@ function draw() {
 
 // 封装的一个用于绘制圆角矩形的函数。
 
-function roundedRect(ctx, x, y, width, height, radius){
+function roundedRect(ctx, x, y, width, height, radius) {
   ctx.beginPath();
   ctx.moveTo(x, y + radius);
   ctx.lineTo(x, y + height - radius);
@@ -493,9 +493,9 @@ function roundedRect(ctx, x, y, width, height, radius){
   - : `Path2D()`会返回一个新初始化的 Path2D 对象（可能将某一个路径作为变量——创建一个它的副本，或者将一个包含 SVG path 数据的字符串作为变量）。
 
 ```js
-new Path2D();     // 空的 Path 对象
+new Path2D(); // 空的 Path 对象
 new Path2D(path); // 克隆 Path 对象
-new Path2D(d);    // 从 SVG 建立 Path 对象
+new Path2D(d); // 从 SVG 建立 Path 对象
 ```
 
 所有的路径方法比如`moveTo`, `rect`, `arc`或`quadraticCurveTo`等，如我们前面见过的，都可以在 Path2D 中使用。
@@ -511,17 +511,17 @@ Path2D API 添加了 `addPath`作为将`path`结合起来的方法。当你想�
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="130" height="100"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="130" height="100"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-    var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
     var rectangle = new Path2D();
     rectangle.rect(10, 10, 50, 50);

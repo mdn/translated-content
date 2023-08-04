@@ -1,7 +1,6 @@
 ---
 title: tabs.setZoomSettings()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/setZoomSettings
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/setZoomSettings
 ---
 
 {{AddonSidebar()}}
@@ -14,9 +13,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var settingZoomSettings = browser.tabs.setZoomSettings(
-  tabId,           // optional integer
-  zoomSettings     // ZoomSettings
-)
+  tabId, // optional integer
+  zoomSettings, // ZoomSettings
+);
 ```
 
 ### Paramètres
@@ -43,7 +42,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var setting = browser.tabs.setZoomSettings({mode:"disabled"});
+var setting = browser.tabs.setZoomSettings({ mode: "disabled" });
 setting.then(onSet, onError);
 ```
 

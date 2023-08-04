@@ -1,7 +1,6 @@
 ---
 title: La web y los estándares web
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
-original_slug: Learn/Getting_started_with_the_web/La_web_y_los_estandares_web
 ---
 
 {{learnsidebar}}

@@ -1,7 +1,6 @@
 ---
 title: downloads.resume()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/resume
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/resume
 ---
 
 {{AddonSidebar()}}
@@ -14,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var resuming = browser.downloads.resume(
-  downloadId      // integer
-)
+  downloadId, // integer
+);
 ```
 
 ### Paramètres

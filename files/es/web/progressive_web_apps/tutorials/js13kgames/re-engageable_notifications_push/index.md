@@ -1,9 +1,6 @@
 ---
-title: >-
-  Cómo hacer que las PWAs se puedan volver a conectar usando Notificaciones y
-  Push
+title: Cómo hacer que las PWAs se puedan volver a conectar usando Notificaciones y Push
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
-original_slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
 
 {{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}

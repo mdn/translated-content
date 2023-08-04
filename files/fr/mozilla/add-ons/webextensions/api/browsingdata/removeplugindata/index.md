@@ -1,7 +1,6 @@
 ---
 title: browsingData.removePluginData()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removePluginData
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removePluginData
 ---
 
 {{AddonSidebar()}}
@@ -19,8 +18,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removing = browser.browsingData.removePluginData(
-  removalOptions            // RemovalOptions object
-)
+  removalOptions, // RemovalOptions object
+);
 ```
 
 ### Paramètres
@@ -53,10 +52,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+var oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removePluginData({since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removePluginData({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Supprimer toutes les données stockées par les plugins :
@@ -70,8 +70,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removePluginData({}).
-then(onRemoved, onError);
+browser.browsingData.removePluginData({}).then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}

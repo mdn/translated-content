@@ -1,10 +1,6 @@
 ---
 title: <feOffset>
 slug: Web/SVG/Element/feOffset
-tags:
-  - SVG
-  - SVG Filter
-translation_of: Web/SVG/Element/feOffset
 ---
 
 {{SVGRef}}

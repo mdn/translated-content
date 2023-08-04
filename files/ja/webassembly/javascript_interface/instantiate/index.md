@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.instantiate()
 slug: WebAssembly/JavaScript_interface/instantiate
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 ---
 
 {{WebAssemblySidebar}}
@@ -73,19 +72,16 @@ fetch を使用して WebAssembly バイトコードを読み込んだ後、 {{j
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
-).then(result =>
-  result.instance.exports.exported_func()
-);
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((result) => result.instance.exports.exported_func());
 ```
 
 > **メモ:** この例は Github 上の [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) でも見ることができます ([動作例](https://mdn.github.io/webassembly-examples/js-api-examples/))。
@@ -97,9 +93,8 @@ fetch('simple.wasm').then(response =>
 ```js
 var worker = new Worker("wasm_worker.js");
 
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(mod =>
-  worker.postMessage(mod)
+WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
+  worker.postMessage(mod),
 );
 ```
 
@@ -108,17 +103,17 @@ WebAssembly.compileStreaming(fetch('simple.wasm'))
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-onmessage = function(e) {
-  console.log('module received from main thread');
+onmessage = function (e) {
+  console.log("module received from main thread");
   var mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function(instance) {
+  WebAssembly.instantiate(mod, importObject).then(function (instance) {
     instance.exports.exported_func();
   });
 };

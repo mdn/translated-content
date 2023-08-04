@@ -1,7 +1,6 @@
 ---
 title: runtime.MessageSender
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
 ---
 
 {{AddonSidebar()}}
@@ -19,7 +18,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `frameId`{{optional_inline}}
   - : `integer`. Le cadre qui a ouvert la connexion. Zéro pour les cadres de haut niveau, positif pour les cadres enfants. Cela ne sera défini que lorsque l'`onglet` est défini.
 - `id`{{optional_inline}}
-  - : `string`. L'ID de l'extension qui a envoyé le message, si le message a été envoyé par une extension. Si l'expéditeur définit explicitement un ID à l'aide de la clé des [applications](/fr/Add-ons/WebExtensions/manifest.json/applications) dans manifest.json, then `id`  aura cette valeur. Sinon, il aura l'ID qui a été généré pour l'expéditeur. Notez que dans Firefox, avant la version 54, cette valeur était l'ID interne de l'extension (c'est-à-dire l'[UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) qui apparaît dans l'URL de l'extension).
+  - : `string`. L'ID de l'extension qui a envoyé le message, si le message a été envoyé par une extension. Si l'expéditeur définit explicitement un ID à l'aide de la clé des [applications](/fr/Add-ons/WebExtensions/manifest.json/applications) dans manifest.json, then `id` aura cette valeur. Sinon, il aura l'ID qui a été généré pour l'expéditeur. Notez que dans Firefox, avant la version 54, cette valeur était l'ID interne de l'extension (c'est-à-dire l'[UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) qui apparaît dans l'URL de l'extension).
 - `url`{{optional_inline}}
   - : `string`. L'URL de la page ou du cadre hébergeant le script qui a envoyé le message. Si l'expéditeur est un script s'exécutant dans une page d'extension (telle qu'une [page d'arrière-plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts), une [page d'options](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages), ou une [action de navigateur](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2) ou une [action contextuelle](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Page_actions)), l'URL sera au format `"moz-extension://<extension-internal-id>/path/to/page.html"`. Si l'expéditeur est un script d'arrière-plan et que vous n'avez pas inclus une page d'arrière-plan, ce sera `"moz-extension://<extension-internal-id>/_generated_background_page.html"`. Si l'expéditeur est un script s'exécutant sur une page Web (y compris les scripts de contenu et les scripts de page normaux), alors l'`url` sera l'URL de la page web. Si le script s'exécute dans un iframe, `url` sera l'URL de l'iframe.
 - `tlsChannelId`{{optional_inline}}

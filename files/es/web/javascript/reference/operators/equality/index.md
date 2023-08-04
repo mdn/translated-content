@@ -1,7 +1,6 @@
 ---
 title: Comparación (==)
 slug: Web/JavaScript/Reference/Operators/Equality
-original_slug: Web/JavaScript/Referencia/Operadores/Comparacion
 ---
 
 {{jsSidebar("Operators")}}

@@ -1,7 +1,6 @@
 ---
 title: history.addUrl()
 slug: Mozilla/Add-ons/WebExtensions/API/history/addUrl
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/addUrl
 ---
 
 {{AddonSidebar()}}
@@ -14,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var addingUrl = browser.history.addUrl(
-  details         // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -57,19 +56,19 @@ function onAdded() {
   var searching = browser.history.search({
     text: "https://example.org/",
     startTime: 0,
-    maxResults: 1
+    maxResults: 1,
   });
   searching.then(onGot);
 }
 
-var addingUrl = browser.history.addUrl({url: "https://example.org/"});
+var addingUrl = browser.history.addUrl({ url: "https://example.org/" });
 addingUrl.then(onAdded);
 ```
 
-Ajouter un enregistrement d'une visite à "https\://example.org", mais lui donner une `visitTime` de 24 heures dans le passé, et une `transition`  "typed":
+Ajouter un enregistrement d'une visite à "https\://example.org", mais lui donner une `visitTime` de 24 heures dans le passé, et une `transition` "typed":
 
 ```js
-const DAY = 24 * 60* 60 * 1000;
+const DAY = 24 * 60 * 60 * 1000;
 
 function oneDayAgo() {
   return Date.now() - DAY;
@@ -84,7 +83,7 @@ function onGot(visits) {
 
 function onAdded() {
   var gettingVisits = browser.history.getVisits({
-    url: "https://example.org/"
+    url: "https://example.org/",
   });
 
   gettingVisits.then(onGot);
@@ -93,7 +92,7 @@ function onAdded() {
 var addingUrl = browser.history.addUrl({
   url: "https://example.org/",
   visitTime: oneDayAgo(),
-  transition: "typed"
+  transition: "typed",
 });
 
 addingUrl.then(onAdded);

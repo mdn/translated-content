@@ -1,5 +1,5 @@
 ---
-title: 'Window: blur event'
+title: "Window: blur event"
 slug: Web/API/Window/blur_event
 ---
 
@@ -65,19 +65,20 @@ slug: Web/API/Window/blur_event
 
 ```js
 function pause() {
-  document.body.classList.add('paused');
-  log.textContent = 'FOCUS LOST!';
+  document.body.classList.add("paused");
+  log.textContent = "FOCUS LOST!";
 }
 
 function play() {
-  document.body.classList.remove('paused');
-  log.textContent = 'This document has focus. Click outside the document to lose focus.';
+  document.body.classList.remove("paused");
+  log.textContent =
+    "This document has focus. Click outside the document to lose focus.";
 }
 
-const log = document.getElementById('log');
+const log = document.getElementById("log");
 
-window.addEventListener('blur', pause);
-window.addEventListener('focus', play);
+window.addEventListener("blur", pause);
+window.addEventListener("focus", play);
 ```
 
 #### 结果

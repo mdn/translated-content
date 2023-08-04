@@ -1,14 +1,6 @@
 ---
 title: WebGLRenderingContext.getTexParameter()
 slug: Web/API/WebGLRenderingContext/getTexParameter
-tags:
-  - API
-  - Méthode
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/getTexParameter
 ---
 
 {{APIRef("WebGL")}}

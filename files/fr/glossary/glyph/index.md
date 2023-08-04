@@ -1,7 +1,6 @@
 ---
 title: Glyphe
 slug: Glossary/Glyph
-translation_of: Glossary/Glyph
 ---
 
 Un **glyphe** est un terme utilisé en typographie pour désigner la représentation visuelle d'un (ou plusieurs) {{Glossary("Character", "caractère")}}.

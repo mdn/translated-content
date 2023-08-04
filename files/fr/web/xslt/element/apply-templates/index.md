@@ -1,10 +1,6 @@
 ---
 title: apply-templates
 slug: Web/XSLT/Element/apply-templates
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/apply-templates
-original_slug: Web/XSLT/apply-templates
 ---
 
 {{ XsltRef() }}

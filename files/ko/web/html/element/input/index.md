@@ -1,5 +1,5 @@
 ---
-title: '<input>: 입력 요소'
+title: "<input>: 입력 요소"
 slug: Web/HTML/Element/input
 ---
 
@@ -393,7 +393,7 @@ A few additional non-standard attributes are listed following the descriptions o
   - : Introduced in the HTML Media Capture specification and valid for the `file` input type only, the `capture` attribute defines which media - microphone, video, or camera - should be used to capture a new file for upload with `file` upload control in supporting scenarios. See the {{HTMLElement("input/file", "file")}} input type.
 - {{htmlattrdef("checked")}}
 
-  - : Valid for both `radio` and `checkbox` types, `checked` is a Boolean attribute. If present on a radio type, it indicates that that radio button is the currently selected one in the group of same-named radio buttons. If present on a `checkbox` type, it indicates that the checkbox is checked by default (when the page loads). It does _not_ indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the [`HTMLInputElement`’s `checked` IDL attribute](/ko/docs/Web/API/HTMLInputElement) is updated.)
+  - : Valid for both `radio` and `checkbox` types, `checked` is a Boolean attribute. If present on a radio type, it indicates that that radio button is the currently selected one in the group of same-named radio buttons. If present on a `checkbox` type, it indicates that the checkbox is checked by default (when the page loads). It does _not_ indicate whether this checkbox is currently checked: if the checkbox's state is changed, this content attribute does not reflect the change. (Only the [`HTMLInputElement`'s `checked` IDL attribute](/ko/docs/Web/API/HTMLInputElement) is updated.)
 
     > **참고:** Unlike other input controls, a checkboxes and radio buttons value are only included in the submitted data if they are currently `checked`. If they are, the name and the value(s) of the checked controls are submitted.
     >
@@ -482,11 +482,25 @@ A few additional non-standard attributes are listed following the descriptions o
       <option>https://www.youtube.com/user/firefoxchannel</option>
     </datalist>
 
-    <p><label for="textx">Text</label> <input type="text" list="fruitsxx" id="textx"/></p>
-    <p><label for="colorx">Color</label> <input type="color" list="colorsxx" id="colorx"/></p>
-    <p><label for="rangex">Range</label> <input type="range" min="0" max="64" list="numbersxx" id="rangex"/></p>
-    <p><label for="numberx">Number</label> <input type="number" min="0" max="64" list="numbersxx" id="numberx"/></p>
-    <p><label for="urlx">URL</label> <input type="url" list="urlsxx" id="urlx"/></p>
+    <p>
+      <label for="textx">Text</label>
+      <input type="text" list="fruitsxx" id="textx" />
+    </p>
+    <p>
+      <label for="colorx">Color</label>
+      <input type="color" list="colorsxx" id="colorx" />
+    </p>
+    <p>
+      <label for="rangex">Range</label>
+      <input type="range" min="0" max="64" list="numbersxx" id="rangex" />
+    </p>
+    <p>
+      <label for="numberx">Number</label>
+      <input type="number" min="0" max="64" list="numbersxx" id="numberx" />
+    </p>
+    <p>
+      <label for="urlx">URL</label> <input type="url" list="urlsxx" id="urlx" />
+    </p>
     ```
 
     {{EmbedLiveSample("datalist",400,275,"","", "nobutton")}}
@@ -593,7 +607,7 @@ When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} 
 
   - : Valid for the numeric input types, including `number`, date/time input types, and `range`, the [`step`](/ko/docs/Web/HTML/Attributes/step) attribute is a number that specifies the granularity that the value must adhere to.
 
-    If not explicitly included, `step` defaults to 1 for `number` and `range`, and 1 unit type (second, week, month, day) for the date/time input types. The value can must be a positive number - integer or float -- or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
+    If not explicitly included, `step` defaults to 1 for `number` and `range`, and 1 unit type (second, week, month, day) for the date/time input types. The value can must be a positive number - integer or float — or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
     If `any` is not explicity set, valid values for the `number`, date/time input types, and `range` input types are equal to the basis for stepping - the [`min`](#min) value and increments of the step value, up to the [`max`](#max) value, if specified. For example, if we have `<input type="number" min="10" step="2">` any even integer, 10 or great, is valid. If omitted, `<input type="number">`, any integer is valid, but floats, like 4.2, are not valid, as `step` defaults to 1. For 4.2 to be valid, `step` would have had to be set to `any`, 0.1, 0.2, or any the min value would have had to be a number ending in .2, such as `<input type="number" min="-5.2">`
 
@@ -624,7 +638,7 @@ When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} 
 
 ```html
 <!-- A basic input -->
-<input type="text" name="input" value="Type here">
+<input type="text" name="input" value="Type here" />
 ```
 
 ### A common use-case scenario
@@ -632,10 +646,10 @@ When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} 
 ```html
 <!-- A common form that includes input tags -->
 <form action="getform.php" method="get">
-    <label>First name: <input type="text" name="first_name" /></label><br />
-    <label>Last name: <input type="text" name="last_name" /></label><br />
-    <label>E-mail: <input type="email" name="user_email" /></label><br />
-    <input type="submit" value="Submit" />
+  <label>First name: <input type="text" name="first_name" /></label><br />
+  <label>Last name: <input type="text" name="last_name" /></label><br />
+  <label>E-mail: <input type="email" name="user_email" /></label><br />
+  <input type="submit" value="Submit" />
 </form>
 ```
 

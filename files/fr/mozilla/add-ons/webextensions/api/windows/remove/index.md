@@ -1,7 +1,6 @@
 ---
 title: windows.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/remove
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/remove
 ---
 
 {{AddonSidebar()}}
@@ -14,8 +13,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var removing = browser.windows.remove(
-  windowId        // integer
-)
+  windowId, // integer
+);
 ```
 
 ### Paramètres
@@ -45,10 +44,8 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-
   var removing = browser.windows.remove(tab.windowId);
   removing.then(onRemoved, onError);
-
 });
 ```
 
@@ -56,12 +53,16 @@ Fermez la fenêtre en cours, par exemple une fenêtre contextuelle, lorsque l'ut
 
 ```js
 // in a script loaded by the page in the window
-document.querySelector('#close').addEventListener(async ({ button, }) => { try {
-  if (button) return; // not a left click
-  const windowId = (await browser.windows.getCurrent()).id;
-  await browser.windows.remove(windowId);
-  // this point will never be reached, since the window is gone
-} catch (error) { console.error('Closing failed:', error); } });
+document.querySelector("#close").addEventListener(async ({ button }) => {
+  try {
+    if (button) return; // not a left click
+    const windowId = (await browser.windows.getCurrent()).id;
+    await browser.windows.remove(windowId);
+    // this point will never be reached, since the window is gone
+  } catch (error) {
+    console.error("Closing failed:", error);
+  }
+});
 ```
 
 Dans Firefox, la même chose pourrait être réalisée avec la propriété de création de fenêtre `.allowScriptsToClose` et `window.close()`.

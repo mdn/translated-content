@@ -1,7 +1,6 @@
 ---
 title: bookmarks.CreateDetails
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
 ---
 
 {{AddonSidebar()}}

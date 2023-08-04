@@ -1,14 +1,11 @@
 ---
 title: url()
 slug: Web/CSS/url
-translation_of: Web/CSS/url()
-original_slug: Web/CSS/url()
-browser-compat: css.types.url
 ---
 
 {{CSSRef}}
 
-La fonction [CSS](/fr/docs/Web/CSS) **`url()`** est utilisée afin d'inclure un fichier. Le paramètre est une URL absolue, une URL relative ou un URI de donnée. La fonction **`url()`** peut être utilisée comme paramètre d'une autre fonction comme [`attr()`](/fr/docs/Web/CSS/attr()). Selon la propriété pour laquelle elle est utilisée, la ressource utilisée peut être une image, une police ou une feuille de style.
+La fonction [CSS](/fr/docs/Web/CSS) **`url()`** est utilisée afin d'inclure un fichier. Le paramètre est une URL absolue, une URL relative ou un URI de donnée. La fonction **`url()`** peut être utilisée comme paramètre d'une autre fonction comme [`attr()`](</fr/docs/Web/CSS/attr()>). Selon la propriété pour laquelle elle est utilisée, la ressource utilisée peut être une image, une police ou une feuille de style.
 
 La notation fonctionnelle `url()` correspond au type de donnée CSS `<url>`.
 
@@ -95,7 +92,7 @@ url( <string> <url-modifier>* )
 
 ```css
 .topbanner {
-  background: url("banniere_haut.png") #00D no-repeat fixed;
+  background: url("banniere_haut.png") #00d no-repeat fixed;
 }
 ```
 
@@ -123,7 +120,7 @@ ul {
 
 ```css
 li::after {
-  content: ' - ' url(star.gif);
+  content: " - " url(star.gif);
 }
 ```
 
@@ -188,7 +185,7 @@ Lorsqu'une URL est utilisée comme chemin d'un filtre, l'URL doit être&nbsp;:
 ## Voir aussi
 
 - [`<gradient>`](/fr/docs/Web/CSS/gradient)
-- [`element()`](/fr/docs/Web/CSS/element())
-- [`image()`](/fr/docs/Web/CSS/image/image())
-- [`image-set()`](/fr/docs/Web/CSS/image/image-set())
-- [`cross-fade()`](/fr/docs/Web/CSS/cross-fade())
+- [`element()`](</fr/docs/Web/CSS/element()>)
+- [`image()`](</fr/docs/Web/CSS/image/image()>)
+- [`image-set()`](</fr/docs/Web/CSS/image/image-set()>)
+- [`cross-fade()`](</fr/docs/Web/CSS/cross-fade()>)

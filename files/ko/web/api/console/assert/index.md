@@ -2,6 +2,7 @@
 title: console.assert()
 slug: Web/API/console/assert
 ---
+
 {{APIRef("Console API")}}
 
 **`console.assert()`** 메서드는 주어진 가정이 거짓인 경우 콘솔에 오류 메시지를 출력합니다. 참인 경우, 아무것도 하지 않습니다.
@@ -31,12 +32,12 @@ console.assert(assertion, msg [, subst1, ..., substN]); // C-like message format
 다음 예제는 객체와 가정을 함께 사용하는 법을 보입니다.
 
 ```js
-const errorMsg = 'the # is not even';
+const errorMsg = "the # is not even";
 for (let number = 2; number <= 5; number += 1) {
-    console.log('the # is ' + number);
-    console.assert(number % 2 === 0, {number: number, errorMsg: errorMsg});
-    // or, using ES2015 object property shorthand:
-    // console.assert(number % 2 === 0, {number, errorMsg});
+  console.log("the # is " + number);
+  console.assert(number % 2 === 0, { number: number, errorMsg: errorMsg });
+  // or, using ES2015 object property shorthand:
+  // console.assert(number % 2 === 0, {number, errorMsg});
 }
 // output:
 // the # is 2

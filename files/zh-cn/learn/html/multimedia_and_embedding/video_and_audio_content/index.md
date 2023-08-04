@@ -51,7 +51,9 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 
 ```html
 <video src="rabbit320.webm" controls>
-  <p>你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看</p>
+  <p>
+    你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看
+  </p>
 </video>
 ```
 
@@ -112,9 +114,11 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 
 ```html
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看
+  </p>
 </video>
 ```
 
@@ -129,12 +133,19 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 这里有许多你可以用在 HTML5 `<video>` 上的特性，请看我们的第三个例子：
 
 ```html
-<video controls width="400" height="400"
-       autoplay loop muted
-       poster="poster.png">
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看</p>
+<video
+  controls
+  width="400"
+  height="400"
+  autoplay
+  loop
+  muted
+  poster="poster.png">
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看
+  </p>
 </video>
 ```
 
@@ -170,8 +181,8 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 
 ```html
 <audio controls>
-  <source src="viper.mp3" type="audio/mp3">
-  <source src="viper.ogg" type="audio/ogg">
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
   <p>你的浏览器不支持 HTML5 音频，可点击<a href="viper.mp3">此链接</a>收听。</p>
 </audio>
 ```
@@ -204,9 +215,9 @@ mediaElem.load();
 
 ```js
 const mediaElem = document.querySelector("video");
-mediaElem.audioTracks.onaddtrack = function(event) {
+mediaElem.audioTracks.onaddtrack = function (event) {
   audioTrackAdded(event.track);
-}
+};
 ```
 
 你可以在我们的 {{domxref("TrackEvent")}} 文档中找到更多有用的信息。
@@ -257,9 +268,9 @@ WEBVTT
 
 ```html
 <video controls>
-    <source src="example.mp4" type="video/mp4">
-    <source src="example.webm" type="video/webm">
-    <track kind="subtitles" src="subtitles_en.vtt" srclang="en">
+  <source src="example.mp4" type="video/mp4" />
+  <source src="example.webm" type="video/webm" />
+  <track kind="subtitles" src="subtitles_en.vtt" srclang="en" />
 </video>
 ```
 

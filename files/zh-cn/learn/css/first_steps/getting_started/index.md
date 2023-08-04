@@ -1,7 +1,6 @@
 ---
 title: 让我们开始 CSS 的学习之旅
 slug: Learn/CSS/First_steps/Getting_started
-original_slug: Learn/CSS/First_steps/开始
 ---
 
 {{LearnSidebar}}
@@ -30,28 +29,27 @@ original_slug: Learn/CSS/First_steps/开始
 ```html
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>开始学习 CSS</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>我是一级标题</h1>
 
-    <p>这是一个段落文本。在文本中有一个 <span>span element</span>
-并且还有一个 <a href="http://example.com">链接</a>.</p>
+    <p>
+      这是一个段落文本。在文本中有一个 <span>span element</span> 并且还有一个
+      <a href="http://example.com">链接</a>.
+    </p>
 
     <p>这是第二段。包含了一个 <em>强调</em> 元素。</p>
 
     <ul>
-        <li>项目 1</li>
-        <li>项目 2</li>
-        <li>项目 <em>三</em></li>
+      <li>项目 1</li>
+      <li>项目 2</li>
+      <li>项目 <em>三</em></li>
     </ul>
-
-</body>
-
+  </body>
 </html>
 ```
 
@@ -66,7 +64,7 @@ original_slug: Learn/CSS/First_steps/开始
 为了把 `styles.css` 和 `index.html` 连接起来，可以在 HTML 文档中，{{htmlelement("head")}} 语句模块里面加上下面的代码：
 
 ```html
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css" />
 ```
 
 {{htmlelement("link")}} 语句块里面，我们用属性 `rel`，让浏览器知道有 CSS 文档存在（所以需要遵守 CSS 样式的规定），并利用属性 `href` 指定，寻找 CSS 文件的位置。你可以做测试来验证 CSS 是否有效：在 `styles.css` 里面加上 CSS 样式并观察显示的结果。下面，用你的编辑器打出下面的代码。
@@ -94,8 +92,9 @@ p {
 用逗号将不同选择器隔开，即可一次使用多个选择器。譬如，若要将所有段落与列表变成绿色，只需：
 
 ```css
-p, li {
-    color: green;
+p,
+li {
+  color: green;
 }
 ```
 
@@ -153,7 +152,7 @@ li {
 ```css
 li.special {
   color: orange;
-  font-weight: bold; 
+  font-weight: bold;
 }
 ```
 

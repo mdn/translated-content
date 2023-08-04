@@ -1,7 +1,6 @@
 ---
 title: Response.body
 slug: Web/API/Response/body
-original_slug: Web/API/Body/body
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---

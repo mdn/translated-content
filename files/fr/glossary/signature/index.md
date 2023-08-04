@@ -1,7 +1,6 @@
 ---
 title: Signature
 slug: Glossary/Signature
-translation_of: Glossary/Signature
 ---
 
 Le terme **signature** peut avoir plusieurs significations selon le contexte. Il peut s'agir de :

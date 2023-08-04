@@ -1,12 +1,6 @@
 ---
 title: CSS Generated Content
 slug: Web/CSS/CSS_generated_content
-tags:
-  - Aperçu
-  - CSS
-  - CSS Generated Content
-  - Reference
-translation_of: Web/CSS/CSS_Generated_Content
 ---
 
 {{CSSRef}}

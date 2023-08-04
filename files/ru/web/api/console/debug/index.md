@@ -1,7 +1,6 @@
 ---
 title: Console.debug()
 slug: Web/API/console/debug
-translation_of: Web/API/Console/debug
 ---
 
 {{APIRef("Console API")}}

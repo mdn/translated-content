@@ -1,13 +1,6 @@
 ---
 title: Event.bubbles
 slug: Web/API/Event/bubbles
-tags:
-  - API
-  - DOM
-  - Propagation
-  - Propriétés
-  - évènements
-translation_of: Web/API/Event/bubbles
 ---
 
 {{ ApiRef("DOM") }}
@@ -19,7 +12,7 @@ Indique si l'événement donné se propage à travers le DOM ou non.
 ## Syntaxe
 
 ```js
-event.bubbles
+event.bubbles;
 ```
 
 ### Valeur
@@ -32,11 +25,11 @@ Retourne un booléen dont la valeur est `true` (_vraie_) si l'événement se pro
 function goInput(e) {
   // vérifie la propagation et
   if (!e.bubbles) {
-     // la lance si elle ne l'a pas été
-     passItOn(e);
+    // la lance si elle ne l'a pas été
+    passItOn(e);
   }
   // déjà propagé
-  doOutput(e)
+  doOutput(e);
 }
 ```
 

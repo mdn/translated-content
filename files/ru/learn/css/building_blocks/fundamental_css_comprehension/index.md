@@ -1,9 +1,8 @@
 ---
 title: Понимание основ CSS
 slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
-translation_of: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
-original_slug: Learn/CSS/Introduction_to_CSS/Ponimanie_osnov_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
 
 Вы многое прошли в этом модуле, и должно быть вас посетило это прекрасное чувство, что дошли до конца! Последний шаг перед тем, как двигаться дальше, это попытка пройти проверку по материалам модуля — это включает в себя ряд соответствующих упражнений, которые должны быть выполнены для того, чтобы создать заключительный проект — визитка, карточка игрока, профиль в социальной сети.

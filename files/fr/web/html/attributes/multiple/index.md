@@ -1,12 +1,6 @@
 ---
-title: 'Attribut HTML : multiple'
+title: "Attribut HTML : multiple"
 slug: Web/HTML/Attributes/multiple
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-translation_of: Web/HTML/Attributes/multiple
 ---
 
 {{HTMLSidebar}}
@@ -18,7 +12,7 @@ Selon le type, le contrôle de formulaire peut avoir une apparence différente s
 Lorsque `multiple` est défini sur le type de saisie [`email`](/fr/docs/Web/HTML/Element/Input/email), l'utilisateur peut inclure zéro (si ce n'est pas également [`required`](/fr/docs/Web/HTML/Attributes/required)), une ou plusieurs adresses électroniques séparées par des virgules.
 
 ```html
-<input type="email" multiple name="emails" id="emails">
+<input type="email" multiple name="emails" id="emails" />
 ```
 
 Si et seulement si l'attribut `multiple` est spécifié, la valeur peut être une liste d'adresses électroniques correctement formées et séparées par des virgules. Tout espace blanc de queue et de tête est supprimé de chaque adresse de la liste.
@@ -26,7 +20,7 @@ Si et seulement si l'attribut `multiple` est spécifié, la valeur peut être un
 Lorsque `multiple` est défini sur le type d'entrée [`file`](/fr/docs/Web/HTML/Element/Input/file), l'utilisateur peut sélectionner un ou plusieurs fichiers. L'utilisateur peut choisir plusieurs fichiers dans le sélecteur de fichiers de n'importe quelle manière que la plateforme qu'il a choisie permet (par exemple, en maintenant la touche <kbd>Maj</kbd> ou <kbd>Ctrl</kbd> enfoncée, puis en cliquant).
 
 ```html
-<input type="file" multiple name="uploads" id="uploads">
+<input type="file" multiple name="uploads" id="uploads" />
 ```
 
 Lorsque l'attribut est omis, l'utilisateur ne peut sélectionner qu'un seul fichier par `<input>`.
@@ -53,7 +47,14 @@ Lorsque `multiple` est spécifié, la plupart des navigateurs affichent une boî
 
 ```html
 <label for="emails">A qui voulez-vous adresser un courriel ?</label>
-<input type="email" multiple name="emails" id="emails" list="dwarfemails" required size="64">
+<input
+  type="email"
+  multiple
+  name="emails"
+  id="emails"
+  list="dwarfemails"
+  required
+  size="64" />
 
 <datalist id="dwarfemails">
   <option value="grincheux@menuisiers.fr">Grincheux</option>
@@ -67,7 +68,9 @@ Lorsque `multiple` est spécifié, la plupart des navigateurs affichent une boî
 ```
 
 ```css
-input:invalid {border: red solid 3px;}
+input:invalid {
+  border: red solid 3px;
+}
 ```
 
 Si et seulement si l'attribut `multiple` est spécifié, la valeur peut être une liste d'adresses électroniques correctement formées et séparées par des virgules. Tout espace blanc de queue et de tête est supprimé de chaque adresse de la liste. Si l'attribut [`required`](/fr/docs/Web/HTML/Attributs/required) est présent, au moins une adresse électronique est requise.
@@ -86,14 +89,19 @@ Lorsque `multiple` est défini sur le type de saisie [`file`](/fr/docs/Web/HTML/
     <label for="uploads">
       Choisissez les images que vous voulez télécharger :
     </label>
-    <input type="file" id="uploads" name="uploads" accept=".jpg, .jpeg, .png, .svg, .gif" multiple>
+    <input
+      type="file"
+      id="uploads"
+      name="uploads"
+      accept=".jpg, .jpeg, .png, .svg, .gif"
+      multiple />
   </p>
   <p>
     <label for="text">Choisissez un fichier texte à télécharger :</label>
-    <input type="file" id="text" name="text" accept=".txt">
- </p>
+    <input type="file" id="text" name="text" accept=".txt" />
+  </p>
   <p>
-    <input type="submit" value="Soumettre">
+    <input type="submit" value="Soumettre" />
   </p>
 </form>
 ```
@@ -110,33 +118,33 @@ L'attribut `multiple` de l'élément [`<select>`](/fr/docs/Web/HTML/Element/sele
 
 ```html
 <form method="get" action="#">
-<p>
- <label for="dwarfs">Sélectionnez les menuisiers que vous aimez :</label>
-  <select multiple name="dwarfs" id="dwarfs">
-    <option>grincheux@menuisiers.fr</option>
-    <option>joyeux@menuisiers.fr</option>
-    <option>dormeur@menuisiers.fr</option>
-    <option>timide@menuisiers.fr</option>
-    <option>atchoum@menuisiers.fr</option>
-    <option>simplet@menuisiers.fr</option>
-    <option>doc@menuisiers.fr</option>
-  </select>
-</p>
-<p>
- <label for="favoriteOnly">Sélectionnez votre préféré :</label>
-  <select name="favoriteOnly" id="favoriteOnly">
-    <option>grincheux@menuisiers.fr</option>
-    <option>joyeux@menuisiers.fr</option>
-    <option>dormeur@menuisiers.fr</option>
-    <option>timide@menuisiers.fr</option>
-    <option>atchoum@menuisiers.fr</option>
-    <option>simplet@menuisiers.fr</option>
-    <option>doc@menuisiers.fr</option>
-  </select>
-</p>
-<p>
-  <input type="submit" value="Soumettre">
-</p>
+  <p>
+    <label for="dwarfs">Sélectionnez les menuisiers que vous aimez :</label>
+    <select multiple name="dwarfs" id="dwarfs">
+      <option>grincheux@menuisiers.fr</option>
+      <option>joyeux@menuisiers.fr</option>
+      <option>dormeur@menuisiers.fr</option>
+      <option>timide@menuisiers.fr</option>
+      <option>atchoum@menuisiers.fr</option>
+      <option>simplet@menuisiers.fr</option>
+      <option>doc@menuisiers.fr</option>
+    </select>
+  </p>
+  <p>
+    <label for="favoriteOnly">Sélectionnez votre préféré :</label>
+    <select name="favoriteOnly" id="favoriteOnly">
+      <option>grincheux@menuisiers.fr</option>
+      <option>joyeux@menuisiers.fr</option>
+      <option>dormeur@menuisiers.fr</option>
+      <option>timide@menuisiers.fr</option>
+      <option>atchoum@menuisiers.fr</option>
+      <option>simplet@menuisiers.fr</option>
+      <option>doc@menuisiers.fr</option>
+    </select>
+  </p>
+  <p>
+    <input type="submit" value="Soumettre" />
+  </p>
 </form>
 ```
 

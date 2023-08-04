@@ -1,7 +1,6 @@
 ---
 title: runtime.onRestartRequired
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onRestartRequired
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onRestartRequired
 ---
 
 {{AddonSidebar()}}
@@ -11,9 +10,9 @@ Lancé lorsqu'une application ou le périphérique sur lequel elle s'exécute do
 ## Syntaxe
 
 ```js
-browser.runtime.onRestartRequired.addListener(listener)
-browser.runtime.onRestartRequired.removeListener(listener)
-browser.runtime.onRestartRequired.hasListener(listener)
+browser.runtime.onRestartRequired.addListener(listener);
+browser.runtime.onRestartRequired.removeListener(listener);
+browser.runtime.onRestartRequired.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

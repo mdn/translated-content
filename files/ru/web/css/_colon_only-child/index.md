@@ -1,9 +1,6 @@
 ---
-title: ':only-child'
+title: ":only-child"
 slug: Web/CSS/:only-child
-tags:
-  - Псевдоклассы
-translation_of: Web/CSS/:only-child
 ---
 
 {{CSSRef}}

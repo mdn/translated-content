@@ -57,7 +57,7 @@ PATCH /file.txt HTTP/1.1
 
 ### Petición
 
-```html
+```http
 PATCH /file.txt HTTP/1.1
 Host: www.example.com
 Content-Type: application/example
@@ -79,8 +79,8 @@ ETag: "e0023aa4f"
 
 ## Especificaciones
 
-| Especificación                   | Título                |
-| -------------------------------- | --------------------- |
+| Especificación           | Título                |
+| ------------------------ | --------------------- |
 | {{RFC("5789", "PATCH")}} | PATCH Method for HTTP |
 
 ## Ver también

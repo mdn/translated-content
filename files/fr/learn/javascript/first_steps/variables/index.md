@@ -1,7 +1,6 @@
 ---
 title: Stocker les informations nécessaires — les variables
 slug: Learn/JavaScript/First_steps/Variables
-translation_of: Learn/JavaScript/First_steps/Variables
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
@@ -41,12 +40,12 @@ Une variable est un conteneur pour une valeur, tel un nombre à utiliser pour un
 ```
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.onclick = function() {
-  let name = prompt('Quel est votre nom&nbsp;?');
-  alert('Salut ' + name + ', sympa de vous voir&nbsp;!');
-}
+button.onclick = function () {
+  let name = prompt("Quel est votre nom&nbsp;?");
+  alert("Salut " + name + ", sympa de vous voir&nbsp;!");
+};
 ```
 
 {{ EmbedLiveSample('Qu\'est_ce_qu\'une_variable_?', '100%', 50) }}
@@ -95,10 +94,10 @@ let myAge;
 Dans ces lignes, nous venons de créer deux variables nommées respectivement `myName` et `myAge`. Saisissez les maintenant dans la console de votre navigateur, ou dans la console au bas de la page (Vous [ouvrez cette console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) soit dans un onglet séparé, soit dans une fenêtre selon votre préférence). Après cela, essayez de créer une variable (ou deux) en choisissant vous même le nom.
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>JavaScript console</title>
     <style>
       * {
@@ -106,7 +105,7 @@ Dans ces lignes, nous venons de créer deux variables nommées respectivement `m
       }
 
       html {
-        background-color: #0C323D;
+        background-color: #0c323d;
         color: #809089;
         font-family: monospace;
       }
@@ -140,64 +139,59 @@ Dans ces lignes, nous venons de créer deux variables nommées respectivement `m
         line-height: 1.5;
         font-family: monospace;
         padding: 0;
-        background: #0C323D;
+        background: #0c323d;
         color: #809089;
       }
 
       div {
         clear: both;
       }
-
     </style>
   </head>
-  <body>
-
-
-  </body>
+  <body></body>
 
   <script>
     var geval = eval;
     function createInput() {
-      var inputDiv = document.createElement('div');
-      var inputPara = document.createElement('p');
-      var inputForm = document.createElement('input');
+      var inputDiv = document.createElement("div");
+      var inputPara = document.createElement("p");
+      var inputForm = document.createElement("input");
 
-      inputDiv.setAttribute('class','input');
-      inputPara.textContent = '>';
+      inputDiv.setAttribute("class", "input");
+      inputPara.textContent = ">";
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
 
-      if(document.querySelectorAll('div').length > 1) {
+      if (document.querySelectorAll("div").length > 1) {
         inputForm.focus();
       }
 
-      inputForm.addEventListener('change', executeCode);
+      inputForm.addEventListener("change", executeCode);
     }
 
     function executeCode(e) {
       try {
         var result = geval(e.target.value);
-      } catch(e) {
-        var result = 'error — ' + e.message;
+      } catch (e) {
+        var result = "error — " + e.message;
       }
 
-      var outputDiv = document.createElement('div');
-      var outputPara = document.createElement('p');
+      var outputDiv = document.createElement("div");
+      var outputPara = document.createElement("p");
 
-      outputDiv.setAttribute('class','output');
-      outputPara.textContent = 'Result: ' + result;
+      outputDiv.setAttribute("class", "output");
+      outputPara.textContent = "Result: " + result;
       outputDiv.appendChild(outputPara);
       document.body.appendChild(outputDiv);
 
       e.target.disabled = true;
-      e.target.parentNode.style.opacity = '0.5';
+      e.target.parentNode.style.opacity = "0.5";
 
-      createInput()
+      createInput();
     }
 
     createInput();
-
   </script>
 </html>
 ```
@@ -219,14 +213,14 @@ Actuellement elles ne contiennent aucune valeur&nbsp;; ce sont des conteneurs vi
 scoobyDoo;
 ```
 
-> **Note :** Ne confondez pas une variable qui existe mais sans valeur définie avec une variable qui n'existe pas du tout — ce sont deux choses tout à fait différentes. Dans l'analogie des boîtes, _ne pas exister_ correspond à l'absence de boîte ; *valeur indéfinie* correspond à une boîte vide.
+> **Note :** Ne confondez pas une variable qui existe mais sans valeur définie avec une variable qui n'existe pas du tout — ce sont deux choses tout à fait différentes. Dans l'analogie des boîtes, _ne pas exister_ correspond à l'absence de boîte ; _valeur indéfinie_ correspond à une boîte vide.
 
 ## Initialisation d'une variable
 
 Une fois la variable déclarée, vous pouvez l'initialiser avec une valeur. On réalise cela en saisissant le nom de la variable, suivi d'un signe égale (`=`), lui-même suivi de la valeur souhaitée pour la variable. Par exemple&nbsp;:
 
 ```js
-myName = 'Chris';
+myName = "Chris";
 myAge = 37;
 ```
 
@@ -240,7 +234,7 @@ myAge;
 Il est possible de déclarer et initialiser une variable en même temps, comme ceci&nbsp;:
 
 ```js
-let myDog = 'Rover';
+let myDog = "Rover";
 ```
 
 C'est probablement ce que vous ferez la plupart du temps, c'est plus rapide que d'effectuer ces deux actions sur deux lignes distinctes.
@@ -249,17 +243,17 @@ C'est probablement ce que vous ferez la plupart du temps, c'est plus rapide que 
 
 A ce moment de votre apprentissage, vous vous demandez sans doute : mais quel besoin de deux mot-clé pour définir une variable ? Pourquoi `var` et `let` ?
 
-Les raisons sont d'ordre historique. A l'origine, quand Javascript fut créé, il n'y avait que `var`. Cela fonctionnait plutôt bien dans la plupart des cas, avec parfois quelques surprises -- l'implémentation étonnante du `var` peut amener à une mauvaise interprétation, voire à des soucis. Ainsi, `let` a été ajouté dans les versions plus récentes de Javascript, un nouveau mot-clé pour créer des variables, avec un fonctionnement différent de celui du `var`, réglant ainsi les difficultés évoquées ci-dessus.
+Les raisons sont d'ordre historique. A l'origine, quand Javascript fut créé, il n'y avait que `var`. Cela fonctionnait plutôt bien dans la plupart des cas, avec parfois quelques surprises — l'implémentation étonnante du `var` peut amener à une mauvaise interprétation, voire à des soucis. Ainsi, `let` a été ajouté dans les versions plus récentes de Javascript, un nouveau mot-clé pour créer des variables, avec un fonctionnement différent de celui du `var`, réglant ainsi les difficultés évoquées ci-dessus.
 
 Nous évoquons ci-dessous quelques unes de ces différences, sans pouvoir faire ici le tour complet de la question. Vous comprendrez mieux la différence entre ces deux constructions au fur et à mesure de votre progression en JavaScript (si vous ne pouvez pas attendre, consultez la page de référence du `let`).
 
 Pour commencer, si vous écrivez un programme JavaScript multi-lignes qui déclare et initialise une variable, vous pouvez déclarez une variable avec le mot-clé `var` après l'avoir initialisée. Cela fonctionnera. Par exemple :
 
 ```js
-myName = 'Chris';
+myName = "Chris";
 
-function logName(){
-    console.log(myName);
+function logName() {
+  console.log(myName);
 }
 
 logName();
@@ -276,23 +270,23 @@ Le hissage ne fonctionne plus avec `let`. Si on remplaçait var par let dans l'e
 Deuxièmement, quand vous utilisez `var`, vous pouvez déclarer la même variable autant de fois que vous le désirez, avec `let` c'est impossible. Le code suivant s'exécute sans erreur :
 
 ```js
-var myName = 'Chris';
-var myName = 'Bob';
+var myName = "Chris";
+var myName = "Bob";
 ```
 
 Celui là produit une erreur sur la seconde ligne&nbsp;:
 
 ```js
-let myName = 'Chris';
-let myName = 'Bob';
+let myName = "Chris";
+let myName = "Bob";
 ```
 
 Le code correct serait :
 
 ```js
-let myName = 'Chris' ;
+let myName = "Chris";
 
-myName = 'Bob' ;
+myName = "Bob";
 ```
 
 Encore une fois, c'est une décision sensée des concepteurs du langage. Il n'y a aucune bonne raison de redéclarer une variable — cela rend les choses obscures.
@@ -304,7 +298,7 @@ Pour ces raisons, et d'autres, nous recommandons d'utiliser `let` plutôt que `v
 Une fois la variable initialisée avec une valeur, vous pouvez simplement modifier (ou mettre à jour) cette valeur en lui assignant une nouvelle valeur. Entrez ces deux lignes dans la console&nbsp;:
 
 ```js
-myName = 'Bob';
+myName = "Bob";
 myAge = 40;
 ```
 
@@ -351,9 +345,9 @@ thisisareallylongstupidvariablenameman
 Parmi ces noms, les suivants déclenchent une `SyntaxError` &nbsp;:
 
 ```js example-bad
-1 //la variable commence par un chiffre
-var //mot réservé
-document //mot réservé
+1; //la variable commence par un chiffre
+var; //mot réservé
+document; //mot réservé
 ```
 
 Essayez maintenant de créer quelques variables supplémentaires en tenant compte de ce qui précède.
@@ -377,7 +371,7 @@ var myAge = 17;
 Les chaînes sont des mots ou des suites de mots. Quand vous stockez dans une variable une valeur chaîne, vous devez la mettre entre guillemets simples ou doubles, sinon JavaScript va tenter de l'interpréter en tant qu'un autre nom de variable.
 
 ```js
-var dolphinGoodbye = 'So long and thanks for all the fish';
+var dolphinGoodbye = "So long and thanks for all the fish";
 ```
 
 ### Booléens
@@ -401,8 +395,8 @@ Cette expression utilise l'opérateur «&nbsp;inférieur à&nbsp;» (`<`) pour t
 Un tableau est un objet unique contenant plusieurs valeurs entre crochets séparées par des virgules. Saisissez les lignes suivantes dans la console&nbsp;:
 
 ```js
-var myNameArray = ['Chris', 'Bob', 'Jim'];
-var myNumberArray = [10,15,40];
+var myNameArray = ["Chris", "Bob", "Jim"];
+var myNumberArray = [10, 15, 40];
 ```
 
 Un fois ces tableaux définis, vous pouvez avoir accès à chaque valeur en fonction de leur emplacement dans le tableau. Voyez ces lignes&nbsp;:
@@ -423,13 +417,13 @@ En programmation, un objet est une structure de code qui modélise un objet du r
 Entrez la ligne suivant dans la console de votre explorateur&nbsp;:
 
 ```js
-var dog = { name : 'Spot', breed : 'Dalmatian' };
+var dog = { name: "Spot", breed: "Dalmatian" };
 ```
 
 Pour récupérer une information stockée dans un objet, vous pouvez utiliser la syntaxe suivante&nbsp;:
 
 ```js
-dog.name
+dog.name;
 ```
 
 Nous en resterons là avec les objets pour le moment — vous en saurez plus à leur propos dans un module ultérieur.
@@ -441,16 +435,16 @@ JavaScript est un «&nbsp;langage faiblement typé&nbsp;», ce qui veut dire que
 Par exemple, si vous déclarez une variable et si vous y placez une valeur entre guillemets, le navigateur la traitera comme étant une chaîne&nbsp;:
 
 ```js
-var myString = 'Hello';
+var myString = "Hello";
 ```
 
 Ce sera toujours une chaîne, même si ce sont des nombres, donc soyez prudents&nbsp;:
 
 ```js
-var myNumber = '500'; // oops, c'est toujours une chaîne
-typeof(myNumber);
+var myNumber = "500"; // oops, c'est toujours une chaîne
+typeof myNumber;
 myNumber = 500; // mieux — maintenant c'est un nombre
-typeof(myNumber);
+typeof myNumber;
 ```
 
 Entrez ces quatre lignes dans la console les unes à la suite des autres, et voyez les résultats. Notez l'emploi de la fonction spéciale `typeof()` — elle renvoie le type de donnée placé dans la variable. À son premier appel, elle renverra `string`, car à ce stade la variable `myNumber` contient la chaîne `'500'`. Observez bien et voyez ce que la fonction renvoie au second appel.

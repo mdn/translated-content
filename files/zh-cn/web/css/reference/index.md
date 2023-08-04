@@ -57,11 +57,11 @@ div.menu-bar li:hover > ul {
 
 ## 选择器
 
-以下是一些[选择器](/zh-CN/docs/Web/CSS/CSS_Selectors)的列表，它们允许根据 DOM 内元素的各种特征对样式进行条件限制。
+以下是一些[选择器](/zh-CN/docs/Web/CSS/CSS_selectors)的列表，它们允许根据 DOM 内元素的各种特征对样式进行条件限制。
 
 ### 基本选择器
 
-[基本选择器](/zh-CN/docs/Web/CSS/CSS_Selectors#基本选择器)是选择器中最初级的，通常由它们的组合构成其他更复杂的选择器。
+[基本选择器](/zh-CN/docs/Web/CSS/CSS_selectors#基本选择器)是选择器中最初级的，通常由它们的组合构成其他更复杂的选择器。
 
 - [通配选择器](/zh-CN/docs/Web/CSS/Universal_selectors) `*`
 - [元素选择器](/zh-CN/docs/Web/CSS/Type_selectors) `elementname`（元素名称）
