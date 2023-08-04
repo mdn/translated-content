@@ -1,7 +1,6 @@
 ---
 title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
-translation_of: Web/JavaScript/Reference/Global_Objects/unescape
 ---
 {{jsSidebar("Objects")}} {{deprecated_header()}}
 

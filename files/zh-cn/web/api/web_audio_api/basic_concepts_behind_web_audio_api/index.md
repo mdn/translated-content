@@ -36,7 +36,7 @@ slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 
 更多的细节可以查看维基百科的[采样](http://wikipedia.org/wiki/Sampling_%28signal_processing%29)页面。
 
-## 音频片段：帧，样本和声道
+## 音频片段：帧、样本和声道
 
 一个 音频片段 ({{ domxref("AudioBuffer") }}) 会包含几个组成参数：一个或几个声道（1 代表*单声道*，2 代表*立体声*等等），一个长度（代表片段中采样帧的数目）和一个采样率（是每秒钟采样帧的个数）。
 

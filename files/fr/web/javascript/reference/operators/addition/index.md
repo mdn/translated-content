@@ -1,7 +1,6 @@
 ---
 title: Addition (+)
 slug: Web/JavaScript/Reference/Operators/Addition
-translation_of: Web/JavaScript/Reference/Operators/Addition
 ---
 
 {{jsSidebar("Operators")}}
@@ -13,7 +12,7 @@ L'opérateur d'addition (`+`) produit la somme de deux opérandes numériques ou
 ## Syntaxe
 
 ```js
-Opérateur : x + y
+Opérateur: x + y;
 ```
 
 ## Exemples
@@ -22,26 +21,26 @@ Opérateur : x + y
 
 ```js
 // Number + Number -> addition
-1 + 2 // 3
+1 + 2; // 3
 
 // Boolean + Number -> addition
-true + 1 // 2
+true + 1; // 2
 
 // Boolean + Boolean -> addition
-false + false // 0
+false + false; // 0
 ```
 
 ### Concaténation de chaînes de caractères
 
 ```js
 // String + String -> concatenation
-'toto' + 'truc' // "tototruc"
+"toto" + "truc"; // "tototruc"
 
 // Number + String -> concatenation
-5 + 'toto' // "5toto"
+5 + "toto"; // "5toto"
 
 // String + Boolean -> concatenation
-'toto' + false // "totofalse"
+"toto" + false; // "totofalse"
 ```
 
 ## Spécifications

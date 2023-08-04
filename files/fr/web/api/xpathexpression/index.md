@@ -1,7 +1,6 @@
 ---
 title: XPathExpression
 slug: Web/API/XPathExpression
-translation_of: Web/API/XPathExpression
 ---
 
 {{APIRef}}

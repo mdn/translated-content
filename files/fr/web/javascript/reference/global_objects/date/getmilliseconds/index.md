@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`getMilliseconds()`** renvoie les millièmes de secondes de la dat
 ## Syntaxe
 
 ```js
-dateObj.getMilliseconds()
+dateObj.getMilliseconds();
 ```
 
 ### Valeur de retour

@@ -1,7 +1,6 @@
 ---
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Error
 ---
 
 {{JSRef}}

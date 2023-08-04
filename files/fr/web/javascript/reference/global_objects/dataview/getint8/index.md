@@ -1,7 +1,6 @@
 ---
 title: DataView.prototype.getInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`getInt8()`** permet de lire un entier signé sur 8 bits à l'octe
 ## Syntaxe
 
 ```js
-dataview.getInt8(positionOctet)
+dataview.getInt8(positionOctet);
 ```
 
 ### Paramètres

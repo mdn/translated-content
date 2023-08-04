@@ -1,7 +1,6 @@
 ---
 title: JSON
 slug: Glossary/JSON
-translation_of: Glossary/JSON
 ---
 
 **JSON** (_JavaScript Object Notation_) est un format d'échange de données. Bien qu'il n'en soit pas un sous-ensemble au sens strict, JSON ressemble fortement à un sous-ensemble de la syntaxe {{Glossary("JavaScript")}}. Le format JSON est accepté par de nombreux langages de programmation, mais il s'avère particulièrement utile pour les applications basées sur JavaScript comme les sites web et les extensions des navigateurs.

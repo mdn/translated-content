@@ -30,13 +30,11 @@ A new {{domxref("Blob")}} object containing the specified data from the source {
 
 ## Specifications
 
-| Specification                                                            | Status                       | Comment            |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName("File API", "#dfn-slice", "Blob.slice()")}} | {{Spec2("File API")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Blob.slice")}}
+{{Compat}}
 
 ## See also
 

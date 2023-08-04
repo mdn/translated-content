@@ -1,5 +1,5 @@
 ---
-title: '@layer'
+title: "@layer"
 slug: Web/CSS/@layer
 ---
 
@@ -20,11 +20,11 @@ Você pode utilizar o `@layer` para criar uma camada de cascata de três maneira
 ```css
 @layer utilitarios {
   .padding-sm {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
   .padding-lg {
-    padding: .8rem;
+    padding: 0.8rem;
   }
 }
 ```
@@ -32,7 +32,7 @@ Você pode utilizar o `@layer` para criar uma camada de cascata de três maneira
 A camada de cascata também pode ser criada com o {{cssxref("@import")}}, neste caso as regras estarão no arquivo CSS importado:
 
 ```css
-@import(utilitarios.css) layer(utilitarios);
+@import (utilitarios.css) layer(utilitarios);
 ```
 
 Você também pode criar uma camada de cascata nomeada sem atrelar à nenhum estilo. Você pode definir uma única camada:
@@ -62,7 +62,6 @@ Camadas podem ser aninhadas (nested), como no exemplo abaixo:
 ```css
 @layer framework {
   @layer layout {
-
   }
 }
 ```
@@ -140,9 +139,11 @@ No exemplo seguinte, duas camadas são criadas sem regras definidas, e depois s�
 #### HTML
 
 ```html
-<div class="item">Eu estou sendo mostrado com <code>color: rebeccapurple</code>
-pois a camada <code>especial</code> vem depois da camada <code>base</code>.
-Minha borda verde, font-size, e padding vem da camada <code>base</code>.</div>
+<div class="item">
+  Eu estou sendo mostrado com <code>color: rebeccapurple</code> pois a camada
+  <code>especial</code> vem depois da camada <code>base</code>. Minha borda
+  verde, font-size, e padding vem da camada <code>base</code>.
+</div>
 ```
 
 #### CSS
@@ -161,7 +162,7 @@ Minha borda verde, font-size, e padding vem da camada <code>base</code>.</div>
     color: green;
     border: 5px solid green;
     font-size: 1.3em;
-    padding: .5em;
+    padding: 0.5em;
   }
 }
 ```

@@ -1,7 +1,6 @@
 ---
 title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
-translation_of: Web/CSS/@media/prefers-reduced-motion
 ---
 
 {{CSSRef}}

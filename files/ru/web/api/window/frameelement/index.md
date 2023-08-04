@@ -1,8 +1,8 @@
 ---
 title: Window.frameElement
 slug: Web/API/Window/frameElement
-translation_of: Web/API/Window/frameElement
 ---
+
 {{ ApiRef() }}
 
 ## Сводка
@@ -23,7 +23,7 @@ frameEl = window.frameElement;
 var frameEl = window.frameElement;
 // Если мы внутри фрейма, то изменить его URL на 'http://mozilla.org/'
 if (frameEl) {
-  frameEl.src = 'http://mozilla.org/';
+  frameEl.src = "http://mozilla.org/";
 }
 ```
 

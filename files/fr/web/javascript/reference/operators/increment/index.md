@@ -1,7 +1,6 @@
 ---
 title: Incrémentation (++)
 slug: Web/JavaScript/Reference/Operators/Increment
-translation_of: Web/JavaScript/Reference/Operators/Increment
 ---
 
 {{jsSidebar("Operators")}}

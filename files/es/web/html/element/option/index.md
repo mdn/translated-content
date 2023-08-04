@@ -1,7 +1,6 @@
 ---
 title: <option>
 slug: Web/HTML/Element/option
-original_slug: Web/HTML/Elemento/option
 ---
 
 {{HTMLSidebar}}

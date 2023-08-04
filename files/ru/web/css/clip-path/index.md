@@ -1,7 +1,6 @@
 ---
 title: clip-path
 slug: Web/CSS/clip-path
-translation_of: Web/CSS/clip-path
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

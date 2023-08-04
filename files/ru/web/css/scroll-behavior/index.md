@@ -1,7 +1,6 @@
 ---
 title: scroll-behavior
 slug: Web/CSS/scroll-behavior
-translation_of: Web/CSS/scroll-behavior
 ---
 {{ CSSRef }}
 

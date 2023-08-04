@@ -40,8 +40,8 @@ header {
 
 ```css
 .sound-clips {
-  box-shadow: inset 0 3px 4px rgba(0,0,0,0.7);
-  background-color: rgba(0,0,0,0.1);
+  box-shadow: inset 0 3px 4px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.1);
   height: calc(100% - 240px - 0.7rem);
   overflow: scroll;
 }
@@ -55,22 +55,22 @@ header {
 
 ```css
 label {
-    font-family: 'NotoColorEmoji';
-    font-size: 3rem;
-    position: absolute;
-    top: 2px;
-    right: 3px;
-    z-index: 5;
-    cursor: pointer;
+  font-family: "NotoColorEmoji";
+  font-size: 3rem;
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  z-index: 5;
+  cursor: pointer;
 }
 ```
 
 然后，我们隐藏实际的复选框，因为我们不希望它在我们的 UI 上乱七八糟：
 
 ```css
-input[type=checkbox] {
-   position: absolute;
-   top: -100px;
+input[type="checkbox"] {
+  position: absolute;
+  top: -100px;
 }
 ```
 
@@ -78,23 +78,27 @@ input[type=checkbox] {
 
 ```css
 aside {
-   position: fixed;
-   top: 0;
-   left: 0;
-   text-shadow: 1px 1px 1px black;
-   width: 100%;
-   height: 100%;
-   transform: translateX(100%);
-   transition: 0.6s all;
-   background-color: #999;
-   background-image: linear-gradient(to top right, rgba(0,0,0,0), rgba(0,0,0,0.5));
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-shadow: 1px 1px 1px black;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: 0.6s all;
+  background-color: #999;
+  background-image: linear-gradient(
+    to top right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.5)
+  );
 }
 ```
 
 最后，我们编写一个规则，当选中复选框（当我们点击/聚焦标签）时，相邻的\<aside >元素将使它的水平平移值发生变化，并平滑地转换成视图：
 
 ```css
-input[type=checkbox]:checked ~ aside {
+input[type="checkbox"]:checked ~ aside {
   transform: translateX(0);
 }
 ```
@@ -106,35 +110,33 @@ input[type=checkbox]:checked ~ aside {
 我们将声明记录和停止按钮变量，[\<article>元素](/zh-CN/docs/Web/HTML/Element/article)将包含生成的音频播放器：
 
 ```js
-var record = document.querySelector('.record');
-var stop = document.querySelector('.stop');
-var soundClips = document.querySelector('.sound-clips');
+var record = document.querySelector(".record");
+var stop = document.querySelector(".stop");
+var soundClips = document.querySelector(".sound-clips");
 ```
 
 最后，在本节中，我们建立了基本的 getUserMedia 结构：
 
 ```js
 if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-   console.log('getUserMedia supported.');
-   navigator.mediaDevices.getUserMedia (
+  console.log("getUserMedia supported.");
+  navigator.mediaDevices
+    .getUserMedia(
       // constraints - only audio needed for this app
       {
-         audio: true
-      })
+        audio: true,
+      },
+    )
 
-      // Success callback
-      .then(function(stream) {
+    // Success callback
+    .then(function (stream) {})
 
-
-      })
-
-      // Error callback
-      .catch(function(err) {
-         console.log('The following getUserMedia error occured: ' + err);
-      }
-   );
+    // Error callback
+    .catch(function (err) {
+      console.log("The following getUserMedia error occured: " + err);
+    });
 } else {
-   console.log('getUserMedia not supported on your browser!');
+  console.log("getUserMedia not supported on your browser!");
 }
 ```
 
@@ -157,13 +159,13 @@ var mediaRecorder = new MediaRecorder(stream);
 为了能够方便的控制音频的录制，{{domxref("MediaRecorder")}}的实例提供了一系列有用的方法和事件，在 Web Dictaphone 这个简单的项目中我们只需使用其中的 2 个方法和一些事件。首先，为了能在点击 Record 按钮的时候开始录音，需要调用{{domxref("MediaRecorder.start()")}}：
 
 ```js
-record.onclick = function() {
+record.onclick = function () {
   mediaRecorder.start();
   console.log(mediaRecorder.state);
   console.log("recorder started");
   record.style.background = "red";
   record.style.color = "black";
-}
+};
 ```
 
 当{{domxref("MediaRecorder")}}正在记录时，调用{{domxref("MediaRecorder.state")}}会返回"recording"。
@@ -173,9 +175,9 @@ record.onclick = function() {
 ```js
 var chunks = [];
 
-mediaRecorder.ondataavailable = function(e) {
+mediaRecorder.ondataavailable = function (e) {
   chunks.push(e.data);
-}
+};
 ```
 
 浏览器会在需要的时候触发这个事件，我们也可以通过为{{domxref("MediaRecorder.start()")}}传递一个时间（毫秒）来周期性的触发这个事件或者调用{{domxref("MediaRecorder.requestData()")}}来直接触发。
@@ -183,13 +185,13 @@ mediaRecorder.ondataavailable = function(e) {
 最后在点击 Stop 按钮时我们调用{{domxref("MediaRecorder.stop()")}}方法结束录制，录制所产生的{{domxref("Blob")}}数据会在后面使用。
 
 ```js
-stop.onclick = function() {
+stop.onclick = function () {
   mediaRecorder.stop();
   console.log(mediaRecorder.state);
   console.log("recorder stopped");
   record.style.background = "";
   record.style.color = "";
-}
+};
 ```
 
 注意，当媒体流结束时会导致录音终止。例如歌曲播放结束，或者用户停止共享他们的麦克风。
@@ -199,18 +201,18 @@ stop.onclick = function() {
 在停止录制后，实例的 state 属性会返回"inactive"，stop 事件也被触发。我们需要监听这个事件去处理我们收到的所有录制数据：
 
 ```js
-mediaRecorder.onstop = function(e) {
+mediaRecorder.onstop = function (e) {
   console.log("recorder stopped");
 
-  var clipName = prompt('Enter a name for your sound clip');
+  var clipName = prompt("Enter a name for your sound clip");
 
-  var clipContainer = document.createElement('article');
-  var clipLabel = document.createElement('p');
-  var audio = document.createElement('audio');
-  var deleteButton = document.createElement('button');
+  var clipContainer = document.createElement("article");
+  var clipLabel = document.createElement("p");
+  var audio = document.createElement("audio");
+  var deleteButton = document.createElement("button");
 
-  clipContainer.classList.add('clip');
-  audio.setAttribute('controls', '');
+  clipContainer.classList.add("clip");
+  audio.setAttribute("controls", "");
   deleteButton.innerHTML = "Delete";
   clipLabel.innerHTML = clipName;
 
@@ -219,16 +221,16 @@ mediaRecorder.onstop = function(e) {
   clipContainer.appendChild(deleteButton);
   soundClips.appendChild(clipContainer);
 
-  var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
+  var blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
   chunks = [];
   var audioURL = window.URL.createObjectURL(blob);
   audio.src = audioURL;
 
-  deleteButton.onclick = function(e) {
+  deleteButton.onclick = function (e) {
     var evtTgt = e.target;
     evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
-  }
-}
+  };
+};
 ```
 
 我们来看一下上面的代码干了什么：

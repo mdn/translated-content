@@ -1,14 +1,8 @@
 ---
 title: KeyboardEvent.key
 slug: Web/API/KeyboardEvent/key
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-translation_of: Web/API/KeyboardEvent/key
 ---
+
 {{APIRef("События DOM")}}
 
 Ключ события {{domxref("KeyboardEvent")}} **`key`** доступен только для чтения, возвращает значение клавиши, нажатой пользователем, принимая во внимание состояние клавиш-модификаторов, таких как <kbd>Shift</kbd> , а также локаль и раскладку клавиатуры. Его значение определяется следующим образом:
@@ -41,35 +35,35 @@ Try experimenting using the following two test cases:
 
 1. Press and hold the&#x20;
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    &#x20;key, then press&#x20;
+   &#x20;key, then press&#x20;
 
-    <kbd>2</kbd>
+   <kbd>2</kbd>
 
-    &#x20;and release it. Next, release the&#x20;
+   &#x20;and release it. Next, release the&#x20;
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    &#x20;key.
+   &#x20;key.
 
 2. Press and hold the&#x20;
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    &#x20;key, then press and hold&#x20;
+   &#x20;key, then press and hold&#x20;
 
-    <kbd>2</kbd>
+   <kbd>2</kbd>
 
-    . Release the&#x20;
+   . Release the&#x20;
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    &#x20;key. Finally, release&#x20;
+   &#x20;key. Finally, release&#x20;
 
-    <kbd>2</kbd>
+   <kbd>2</kbd>
 
-    .
+   .
 
 ### HTML
 
@@ -101,7 +95,7 @@ Try experimenting using the following two test cases:
 }
 
 .fx > div:first-child {
-   width: 30%;
+  width: 30%;
 }
 
 .flex {
@@ -119,38 +113,36 @@ Try experimenting using the following two test cases:
 ### JavaScript
 
 ```js
-let textarea = document.getElementById('test-target'),
-consoleLog = document.getElementById('console-log'),
-btnClearConsole = document.getElementById('btn-clear-console');
+let textarea = document.getElementById("test-target"),
+  consoleLog = document.getElementById("console-log"),
+  btnClearConsole = document.getElementById("btn-clear-console");
 
 function logMessage(message) {
   document.getElementById("console-log").innerHTML += message + "<br>";
 }
 
-textarea.addEventListener('keydown', (e) => {
-  if (!e.repeat)
-    logMessage(`Key "${e.key}" pressed  [event: keydown]`);
-  else
-    logMessage(`Key "${e.key}" repeating  [event: keydown]`);
+textarea.addEventListener("keydown", (e) => {
+  if (!e.repeat) logMessage(`Key "${e.key}" pressed  [event: keydown]`);
+  else logMessage(`Key "${e.key}" repeating  [event: keydown]`);
 });
 
-textarea.addEventListener('beforeinput', (e) => {
+textarea.addEventListener("beforeinput", (e) => {
   logMessage(`Key "${e.data}" about to be input  [event: beforeinput]`);
 });
 
-textarea.addEventListener('input', (e) => {
+textarea.addEventListener("input", (e) => {
   logMessage(`Key "${e.data}" input  [event: input]`);
 });
 
-textarea.addEventListener('keyup', (e) => {
+textarea.addEventListener("keyup", (e) => {
   logMessage(`Key "${e.key}" released  [event: keyup]`);
 });
 
-btnClearConsole.addEventListener('click', (e) => {
+btnClearConsole.addEventListener("click", (e) => {
   let child = consoleLog.firstChild;
   while (child) {
-   consoleLog.removeChild(child);
-   child = consoleLog.firstChild;
+    consoleLog.removeChild(child);
+    child = consoleLog.firstChild;
   }
 });
 ```
@@ -186,50 +178,51 @@ As we finally release the `key 2`, a {{event("keyup")}} event is fired but the `
 This example uses {{domxref("EventTarget.addEventListener()")}} to listen for {{event("keydown")}} events. When they occur, the key's value is checked to see if it's one of the keys the code is interested in, and if it is, it gets processed in some way (possibly by steering a spacecraft, perhaps by changing the selected cell in a spreadsheet).
 
 ```js
-window.addEventListener("keydown", function (event) {
-  if (event.defaultPrevented) {
-    return; // Do nothing if the event was already processed
-  }
+window.addEventListener(
+  "keydown",
+  function (event) {
+    if (event.defaultPrevented) {
+      return; // Do nothing if the event was already processed
+    }
 
-  switch (event.key) {
-    case "Down": // IE/Edge specific value
-    case "ArrowDown":
-      // Do something for "down arrow" key press.
-      break;
-    case "Up": // IE/Edge specific value
-    case "ArrowUp":
-      // Do something for "up arrow" key press.
-      break;
-    case "Left": // IE/Edge specific value
-    case "ArrowLeft":
-      // Do something for "left arrow" key press.
-      break;
-    case "Right": // IE/Edge specific value
-    case "ArrowRight":
-      // Do something for "right arrow" key press.
-      break;
-    case "Enter":
-      // Do something for "enter" or "return" key press.
-      break;
-    case "Esc": // IE/Edge specific value
-    case "Escape":
-      // Do something for "esc" key press.
-      break;
-    default:
-      return; // Quit when this doesn't handle the key event.
-  }
+    switch (event.key) {
+      case "Down": // IE/Edge specific value
+      case "ArrowDown":
+        // Do something for "down arrow" key press.
+        break;
+      case "Up": // IE/Edge specific value
+      case "ArrowUp":
+        // Do something for "up arrow" key press.
+        break;
+      case "Left": // IE/Edge specific value
+      case "ArrowLeft":
+        // Do something for "left arrow" key press.
+        break;
+      case "Right": // IE/Edge specific value
+      case "ArrowRight":
+        // Do something for "right arrow" key press.
+        break;
+      case "Enter":
+        // Do something for "enter" or "return" key press.
+        break;
+      case "Esc": // IE/Edge specific value
+      case "Escape":
+        // Do something for "esc" key press.
+        break;
+      default:
+        return; // Quit when this doesn't handle the key event.
+    }
 
-  // Cancel the default action to avoid it being handled twice
-  event.preventDefault();
-}, true);
+    // Cancel the default action to avoid it being handled twice
+    event.preventDefault();
+  },
+  true,
+);
 ```
 
 ## Specification
 
-| Specification                                                                                        | Status                           | Comment                                  |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------- |
-| {{SpecName('DOM3 Events', '#widl-KeyboardEvent-key', 'KeyboardEvent.key')}} | {{Spec2('DOM3 Events')}} | Initial definition, included key values. |
-| {{SpecName('UI Events', '#dom-keyboardevent-key', 'KeyboardEvent.key')}}     | {{Spec2('UI Events')}}     |                                          |
+{{Specifications}}
 
 ## Browser compatibility
 

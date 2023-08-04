@@ -36,12 +36,12 @@ str.startsWith(searchString[, position])
 
 ```js
 if (!String.prototype.startsWith) {
-    Object.defineProperty(String.prototype, 'startsWith', {
-        value: function(search, pos) {
-            pos = !pos || pos < 0 ? 0 : +pos;
-            return this.substring(pos, pos + search.length) === search;
-        }
-    });
+  Object.defineProperty(String.prototype, "startsWith", {
+    value: function (search, pos) {
+      pos = !pos || pos < 0 ? 0 : +pos;
+      return this.substring(pos, pos + search.length) === search;
+    },
+  });
 }
 ```
 
@@ -54,8 +54,8 @@ Mathias Bynens 在 Github 上提供了[一份更为稳定有效（完全符合 E
 ```js
 var str = "To be, or not to be, that is the question.";
 
-alert(str.startsWith("To be"));         // true
-alert(str.startsWith("not to be"));     // false
+alert(str.startsWith("To be")); // true
+alert(str.startsWith("not to be")); // false
 alert(str.startsWith("not to be", 10)); // true
 ```
 

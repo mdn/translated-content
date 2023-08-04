@@ -1,7 +1,6 @@
 ---
 title: "MediaRecorder: resume イベント"
 slug: Web/API/MediaRecorder/resume_event
-original_slug: Web/API/MediaRecorder/onresume
 l10n:
   sourceCommit: bbecba9e7d688493adbdc37fc70e02d87adfe371
 ---

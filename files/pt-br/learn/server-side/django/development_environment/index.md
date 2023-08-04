@@ -1,7 +1,6 @@
 ---
 title: Configurando um ambiente de desenvolvimento Django
 slug: Learn/Server-side/Django/development_environment
-original_slug: Learn/Server-side/Django/ambiente_de_desenvolvimento
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}

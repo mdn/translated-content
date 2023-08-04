@@ -1,7 +1,6 @@
 ---
 title: Navigator
 slug: Web/API/Navigator
-translation_of: Web/API/Navigator
 ---
 
 {{APIRef("DOM")}}

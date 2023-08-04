@@ -9,9 +9,9 @@ slug: Web/HTTP/Headers/ETag
 
 如果给定 URL 中的资源更改，则*一定*要生成新的 `ETag` 值。比较这些 `ETag` 能快速确定此资源是否变化。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 
@@ -60,7 +60,7 @@ If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
-服务器将客户端的 ETag（作为 If-None-Match 字段的值一起发送）与其当前版本的资源的 ETag 进行比较，如果两个值匹配（即资源未更改），服务器将返回不带任何内容的{{HTTPStatus("304")}}未修改状态，告诉客户端缓存版本可用（新鲜）。
+服务器将客户端的 `ETag`（与 `If-None-Match` 一起发送）与其当前版本的资源的 `ETag` 进行比较，如果两个值匹配（即资源未更改），服务器将返回不带任何内容的 {{HTTPStatus("304")}} `Not Modified` 状态，告诉客户端缓存版本可用（_fresh_）。
 
 ## 规范
 

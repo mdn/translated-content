@@ -1,7 +1,6 @@
 ---
 title: Map.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La valeur initiale de la propriété **`@@iterator`** est la même fonction que 
 ## Syntaxe
 
 ```js
-maMap[Symbol.iterator]
+maMap[Symbol.iterator];
 ```
 
 ### Valeur de retour

@@ -2,6 +2,7 @@
 title: Event.bubbles
 slug: Web/API/Event/bubbles
 ---
+
 {{ ApiRef("DOM") }}
 
 {{domxref("Event")}} 인터페이스의 **`bubbles`** 읽기 전용 속성은 이벤트가 DOM 트리를 타고 위쪽으로 버블링되는지 나타냅니다.

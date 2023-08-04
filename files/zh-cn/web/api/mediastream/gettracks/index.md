@@ -9,8 +9,8 @@ slug: Web/API/MediaStream/getTracks
 
 ## 语法
 
-```js
-var mediaStreamTracks = mediaStream.getTracks()
+```js-nolint
+getTracks()
 ```
 
 ### 参数
@@ -24,15 +24,16 @@ var mediaStreamTracks = mediaStream.getTracks()
 ## 示例
 
 ```js
-navigator.mediaDevices.getUserMedia({audio: false, video: true})
-.then(mediaStream => {
-  document.querySelector('video').srcObject = mediaStream;
-  // Stop the stream after 5 seconds
-  setTimeout(() => {
-    const tracks = mediaStream.getTracks()
-    tracks[0].stop()
-  }, 5000)
-})
+navigator.mediaDevices
+  .getUserMedia({ audio: false, video: true })
+  .then((mediaStream) => {
+    document.querySelector("video").srcObject = mediaStream;
+    // Stop the stream after 5 seconds
+    setTimeout(() => {
+      const tracks = mediaStream.getTracks();
+      tracks[0].stop();
+    }, 5000);
+  });
 ```
 
 ## 规范

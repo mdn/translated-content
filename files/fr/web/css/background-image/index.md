@@ -1,7 +1,6 @@
 ---
 title: background-image
 slug: Web/CSS/background-image
-translation_of: Web/CSS/background-image
 ---
 
 {{CSSRef}}

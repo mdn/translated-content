@@ -1,7 +1,6 @@
 ---
 title: super
 slug: Web/JavaScript/Reference/Operators/super
-original_slug: Web/JavaScript/Referencia/Operadores/super
 ---
 
 {{jsSidebar("Operators")}}

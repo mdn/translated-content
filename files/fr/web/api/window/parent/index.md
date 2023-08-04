@@ -1,7 +1,6 @@
 ---
 title: Window.parent
 slug: Web/API/Window/parent
-translation_of: Web/API/Window/parent
 ---
 
 {{APIRef}}

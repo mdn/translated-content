@@ -1,8 +1,8 @@
 ---
 title: Cross-global fetch usage
 slug: Web/API/Fetch_API/Cross-global_fetch_usage
-translation_of: Web/API/Fetch_API/Cross-global_fetch_usage
 ---
+
 Эта статья объясняет крайний случай, который случается с fetch (и потенциально с другими API, предоставляющими такой же способ получения данных). Когда cross-origin fetch, включающий относительный URL, инициируется из {{htmlelement("iframe")}}, относительный URL может использовать текущий глобальный location вместо того что задаётся в iframe.
 
 ## Крайний случай
@@ -19,7 +19,7 @@ translation_of: Web/API/Fetch_API/Cross-global_fetch_usage
 В прошлом мы разрешали относительный URL адрес вместо текущего глобального, для примера:
 
 ```js
-let absolute = new URL(relative, window.location.href)
+let absolute = new URL(relative, window.location.href);
 ```
 
 Это не проблема как таковая. Просто разные API, демонстрирующие такое поведение, делали его несовместимым с поведением, определённым в спецификации, что может привести к проблемам в дальнейшем.
@@ -29,7 +29,7 @@ let absolute = new URL(relative, window.location.href)
 В Firefox 60 и далее, Mozilla сопоставляет относительный URL с глобальным, которой принадлежит используемой функции `fetch()` (смотри {{bug(1432272)}}). Таким образом в случае описанном выше, он разрешается в зависимости от расположения iframe:
 
 ```js
-let absolute = new URL(relative, frame.contentWindow.location.href)
+let absolute = new URL(relative, frame.contentWindow.location.href);
 ```
 
 Ведётся много дискуссий о том, как привести новые спецификации в соответствие с этим изменением поведения, для того чтобы уменьшить возможные проблемы в будущем.

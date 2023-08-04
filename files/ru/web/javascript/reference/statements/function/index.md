@@ -1,10 +1,6 @@
 ---
 title: function
 slug: Web/JavaScript/Reference/Statements/function
-tags:
-  - JavaScript
-  - Функция
-translation_of: Web/JavaScript/Reference/Statements/function
 ---
 
 {{jsSidebar("Statements")}}

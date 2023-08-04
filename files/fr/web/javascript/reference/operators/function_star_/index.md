@@ -1,7 +1,6 @@
 ---
 title: Expression function*
 slug: Web/JavaScript/Reference/Operators/function*
-translation_of: Web/JavaScript/Reference/Operators/function*
 ---
 
 {{jsSidebar("Operators")}}
@@ -36,8 +35,8 @@ Une expression `function*` est très semblable à une instruction {{jsxref('Inst
 L'exemple qui suit illustre comment définir une génératrice anonyme et l'affecter à une variable `x`. Cette fonction génèrera le carré de son argument :
 
 ```js
-var x = function*(y) {
-   yield y * y;
+var x = function* (y) {
+  yield y * y;
 };
 ```
 

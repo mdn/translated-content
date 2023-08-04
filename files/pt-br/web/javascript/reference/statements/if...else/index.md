@@ -72,10 +72,10 @@ if (b) // essa condição é avaliada como true
 
 ```js
 if (cipher_char === from_char) {
-   result = result + to_char;
-   x++;
+  result = result + to_char;
+  x++;
 } else {
-   result = result + clear_char;
+  result = result + clear_char;
 }
 ```
 
@@ -85,11 +85,8 @@ Perceba que não existe sintaxe de `elseif` em JavaScript. Entretanto, você pod
 
 ```js
 if (x > 5) {
-
 } else if (x > 50) {
-
 } else {
-
 }
 ```
 
@@ -97,9 +94,9 @@ if (x > 5) {
 
 É recomendado não utilizar atribuições simples junto de uma expressão condicional, visto que atribuições podem ser confundidas com igualdade ao olhar o código. Por exemplo, não use o código abaixo:
 
-```js
+```js-nolint
 if (x = y) {
-   /* faça a coisa certa */
+  /* faça a coisa certa */
 }
 ```
 
@@ -107,19 +104,19 @@ Caso você precise utilizar uma atribuição em uma expressão condicional, uma 
 
 ```js
 if ((x = y)) {
-   /* faça a coisa certa */
+  /* faça a coisa certa */
 }
 ```
 
 ## Especificações
 
-| Especificação                                                                    | Status                       | Comentário        |
-| -------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
+| Especificação                                                | Status               | Comentário        |
+| ------------------------------------------------------------ | -------------------- | ----------------- |
 | {{SpecName('ESDraft', '#sec-if-statement', 'if statement')}} | {{Spec2('ESDraft')}} |                   |
-| {{SpecName('ES6', '#sec-if-statement', 'if statement')}}     | {{Spec2('ES6')}}         |                   |
-| {{SpecName('ES5.1', '#sec-12.5', 'if statement')}}             | {{Spec2('ES5.1')}}     |                   |
-| {{SpecName('ES3', '#sec-12.5', 'if statement')}}                 | {{Spec2('ES3')}}         |                   |
-| {{SpecName('ES1', '#sec-12.5', 'if statement')}}                 | {{Spec2('ES1')}}         | Definição Inicial |
+| {{SpecName('ES6', '#sec-if-statement', 'if statement')}}     | {{Spec2('ES6')}}     |                   |
+| {{SpecName('ES5.1', '#sec-12.5', 'if statement')}}           | {{Spec2('ES5.1')}}   |                   |
+| {{SpecName('ES3', '#sec-12.5', 'if statement')}}             | {{Spec2('ES3')}}     |                   |
+| {{SpecName('ES1', '#sec-12.5', 'if statement')}}             | {{Spec2('ES1')}}     | Definição Inicial |
 
 ## Compatibilidade com navegadores
 

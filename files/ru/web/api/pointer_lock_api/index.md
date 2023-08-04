@@ -1,8 +1,8 @@
 ---
 title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
-translation_of: Web/API/Pointer_Lock_API
 ---
+
 **Pointer lock** **API**(прежнее название Mouse Lock API) обеспечивает методы ввода, основанные на движении мыши , а не только абсолютно позиционированых координатах курсора в окне. Это даёт вам доступ к необработанным движениям мыши, прикрепляет курсор мыши к любому элементу в окне браузера, предоставляет возможность вычислять координаты мыши не ограниченной областью окна проекции, и скрывает курсор из поля зрения. Это идеальное решение для 3D игр, например.
 
 Более того, API полезно для любых приложений, которые используют данные мыши для управления движениями, вращения объектов и изменения записей. Например пользователь может управлять наклоном просто двигая мышь, не нажимая ни на какие кнопки. Сами кнопки освобождаются под другие задачи. Примерами могут послужить программы для просмотра карт или спутниковой съёмки.
@@ -27,11 +27,12 @@ Pointer lock is related to [mouse capture](/en/DOM/element.setCapture). Mouse ca
 The Pointer lock API, similar to the [Fullscreen API](/ru/docs/Web/Guide/API/DOM/Using_full_screen_mode), extends DOM elements by adding a new method, {{domxref("Element.requestPointerLock","requestPointerLock")}}, which is vendor-prefixed for now. You would currently declare it something like this, for example if you wanted to request pointer lock on a `canvas` element.:
 
 ```js
-canvas.requestPointerLock = canvas.requestPointerLock ||
-                            canvas.mozRequestPointerLock ||
-                            canvas.webkitRequestPointerLock;
+canvas.requestPointerLock =
+  canvas.requestPointerLock ||
+  canvas.mozRequestPointerLock ||
+  canvas.webkitRequestPointerLock;
 
-canvas.requestPointerLock()
+canvas.requestPointerLock();
 ```
 
 ### pointerLockElement and exitPointerLock()
@@ -43,21 +44,24 @@ The {{domxref("Document.pointerLockElement","pointerLockElement")}} property is 
 Here is an example of using `pointerLockElement`:
 
 ```js
-if(document.pointerLockElement === canvas ||
+if (
+  document.pointerLockElement === canvas ||
   document.mozPointerLockElement === canvas ||
-  document.webkitPointerLockElement === canvas) {
-    console.log('The pointer lock status is now locked');
+  document.webkitPointerLockElement === canvas
+) {
+  console.log("The pointer lock status is now locked");
 } else {
-    console.log('The pointer lock status is now unlocked');
+  console.log("The pointer lock status is now unlocked");
 }
 ```
 
 The {{domxref("Document.exitPointerLock")}} method is used to exit pointer lock, and like {{domxref("Element.requestPointerLock","requestPointerLock")}}, works asynchronously using the {{event("pointerlockchange")}} and {{event("pointerlockerror")}} events, which you'll see more about below.
 
 ```js
-document.exitPointerLock = document.exitPointerLock    ||
-                           document.mozExitPointerLock ||
-                           document.webkitExitPointerLock;
+document.exitPointerLock =
+  document.exitPointerLock ||
+  document.mozExitPointerLock ||
+  document.webkitExitPointerLock;
 
 // Attempt to unlock
 document.exitPointerLock();
@@ -69,21 +73,23 @@ When the Pointer lock state changes—for example, when calling {{domxref("Eleme
 
 ```js
 if ("onpointerlockchange" in document) {
-  document.addEventListener('pointerlockchange', lockChangeAlert, false);
+  document.addEventListener("pointerlockchange", lockChangeAlert, false);
 } else if ("onmozpointerlockchange" in document) {
-  document.addEventListener('mozpointerlockchange', lockChangeAlert, false);
+  document.addEventListener("mozpointerlockchange", lockChangeAlert, false);
 } else if ("onwebkitpointerlockchange" in document) {
-  document.addEventListener('webkitpointerlockchange', lockChangeAlert, false);
+  document.addEventListener("webkitpointerlockchange", lockChangeAlert, false);
 }
 
 function lockChangeAlert() {
-  if(document.pointerLockElement === canvas ||
-  document.mozPointerLockElement === canvas ||
-  document.webkitPointerLockElement === canvas) {
-    console.log('The pointer lock status is now locked');
+  if (
+    document.pointerLockElement === canvas ||
+    document.mozPointerLockElement === canvas ||
+    document.webkitPointerLockElement === canvas
+  ) {
+    console.log("The pointer lock status is now locked");
     // Do something useful in response
   } else {
-    console.log('The pointer lock status is now unlocked');
+    console.log("The pointer lock status is now unlocked");
     // Do something useful in response
   }
 }
@@ -94,9 +100,9 @@ function lockChangeAlert() {
 When there is an error caused by calling {{domxref("Element.requestPointerLock","requestPointerLock")}} or {{domxref("Document.exitPointerLock","exitPointerLock")}}, the {{event("pointerlockerror")}} event is dispatched to the `document`. This is a simple event and contains no extra data.
 
 ```js
-document.addEventListener('pointerlockerror', lockError, false);
-document.addEventListener('mozpointerlockerror', lockError, false);
-document.addEventListener('webkitpointerlockerror', lockError, false);
+document.addEventListener("pointerlockerror", lockError, false);
+document.addEventListener("mozpointerlockerror", lockError, false);
+document.addEventListener("webkitpointerlockerror", lockError, false);
 
 function lockError(e) {
   alert("Pointer lock failed");
@@ -149,28 +155,28 @@ The `canvasDraw()` function draws the ball in the current x and y positions, but
 
 ```js
 function canvasDraw() {
-  if(x > canvas.clientWidth+20) {
+  if (x > canvas.clientWidth + 20) {
     x = 0;
   }
 
-  if(y > canvas.clientHeight+20) {
+  if (y > canvas.clientHeight + 20) {
     y = 0;
   }
 
-  if(x < -20) {
+  if (x < -20) {
     x = canvas.clientWidth;
   }
 
-  if(y < -20) {
+  if (y < -20) {
     y = canvas.clientHeight;
   }
 
   ctx.fillStyle = "black";
-  ctx.fillRect(0,0,canvas.clientWidth,canvas.clientHeight);
+  ctx.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
   ctx.fillStyle = "#f00";
 
   ctx.beginPath();
-  ctx.arc(x,y,20,0,degToRad(360), true);
+  ctx.arc(x, y, 20, 0, degToRad(360), true);
   ctx.fill();
 }
 ```
@@ -178,23 +184,25 @@ function canvasDraw() {
 The pointer lock methods are currently prefixed, so next we'll fork them for the different browser implementations.
 
 ```js
-canvas.requestPointerLock = canvas.requestPointerLock ||
-           canvas.mozRequestPointerLock ||
-           canvas.webkitRequestPointerLock;
+canvas.requestPointerLock =
+  canvas.requestPointerLock ||
+  canvas.mozRequestPointerLock ||
+  canvas.webkitRequestPointerLock;
 // pointer lock object forking for cross browser
 
-document.exitPointerLock = document.exitPointerLock ||
-         document.mozExitPointerLock ||
-         document.webkitExitPointerLock;
+document.exitPointerLock =
+  document.exitPointerLock ||
+  document.mozExitPointerLock ||
+  document.webkitExitPointerLock;
 //document.exitPointerLock();
 ```
 
 Now we set up an event listener to run the requestPointerLock() method on the canvas when it is clicked, which initiates pointer lock.
 
 ```js
-canvas.onclick = function() {
+canvas.onclick = function () {
   canvas.requestPointerLock();
-}
+};
 ```
 
 Now for the dedicated pointer lock event listener: `pointerlockchange`. When this occurs, we run a function called `lockChangeAlert()` to handle the change.
@@ -203,22 +211,24 @@ Now for the dedicated pointer lock event listener: `pointerlockchange`. When thi
 // pointer lock event listener
 
 // Hook pointer lock state change events for different browsers
-document.addEventListener('pointerlockchange', lockChangeAlert, false);
-document.addEventListener('mozpointerlockchange', lockChangeAlert, false);
-document.addEventListener('webkitpointerlockchange', lockChangeAlert, false);
+document.addEventListener("pointerlockchange", lockChangeAlert, false);
+document.addEventListener("mozpointerlockchange", lockChangeAlert, false);
+document.addEventListener("webkitpointerlockchange", lockChangeAlert, false);
 ```
 
 This function checks the pointLockElement property to see if it is our canvas. If so, it attached an event listener to handle the mouse movements with the `canvasLoop()` function. If not, it removes the event listener again.
 
 ```js
 function lockChangeAlert() {
-  if(document.pointerLockElement === canvas ||
-  document.mozPointerLockElement === canvas ||
-  document.webkitPointerLockElement === canvas) {
-    console.log('The pointer lock status is now locked');
+  if (
+    document.pointerLockElement === canvas ||
+    document.mozPointerLockElement === canvas ||
+    document.webkitPointerLockElement === canvas
+  ) {
+    console.log("The pointer lock status is now locked");
     document.addEventListener("mousemove", canvasLoop, false);
   } else {
-    console.log('The pointer lock status is now unlocked');
+    console.log("The pointer lock status is now unlocked");
     document.removeEventListener("mousemove", canvasLoop, false);
   }
 }
@@ -227,13 +237,13 @@ function lockChangeAlert() {
 A tracker is set up to write out the X and Y values to the screen, for reference.
 
 ```js
-  var tracker = document.createElement('p');
-  var body = document.querySelector('body');
-  body.appendChild(tracker);
-  tracker.style.position = 'absolute';
-  tracker.style.top = '0';
-  tracker.style.right = '10px';
-  tracker.style.backgroundColor = 'white';
+var tracker = document.createElement("p");
+var body = document.querySelector("body");
+body.appendChild(tracker);
+tracker.style.position = "absolute";
+tracker.style.top = "0";
+tracker.style.right = "10px";
+tracker.style.backgroundColor = "white";
 ```
 
 The `canvasLoop()` function first forks the `movementX` and `movementY` properties, as they are also prefixed currently in some browsers. It then adds those property's values to x and y, and reruns `canvasDraw()` with those new values so the ball position is updated. Finally, we use `requestAnimationFrame()` to run the loop again and again.
@@ -269,13 +279,11 @@ While iframes work by default, "sandboxed" iframes block Pointer lock. The abili
 
 ## Specifications
 
-| Specification                        | Status                           | Comment                |
-| ------------------------------------ | -------------------------------- | ---------------------- |
-| {{SpecName('Pointer Lock')}} | {{Spec2('Pointer Lock')}} | Initial specification. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Element.requestPointerLock")}}
+{{Compat}}
 
 ## See also
 

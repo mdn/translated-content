@@ -1,7 +1,6 @@
 ---
 title: "<head> : l'élément de métadonnées (en-tête) du document"
 slug: Web/HTML/Element/head
-translation_of: Web/HTML/Element/head
 ---
 
 {{HTMLSidebar}}

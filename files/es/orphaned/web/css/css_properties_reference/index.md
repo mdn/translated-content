@@ -1,7 +1,6 @@
 ---
 title: CSS Properties Reference
 slug: orphaned/Web/CSS/CSS_Properties_Reference
-original_slug: Web/CSS/CSS_Properties_Reference
 ---
 
 ## Propiedades CSS Básicas Referencia

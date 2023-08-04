@@ -1,5 +1,5 @@
 ---
-title: 'CSP: connect-src'
+title: "CSP: connect-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
 ---
 
@@ -76,7 +76,8 @@ Content-Security-Policy: connect-src https://example.com/
     navigator.sendBeacon("https://not-example.com/", {
       /* … */
     });
-  </script></a>
+  </script></a
+>
 ```
 
 ## 规范

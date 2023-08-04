@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
-translation_of: Web/API/CanvasRenderingContext2D
 ---
 
 {{APIRef}}

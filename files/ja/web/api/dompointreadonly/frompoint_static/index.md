@@ -1,7 +1,6 @@
 ---
 title: DOMPointReadOnly.fromPoint()
 slug: Web/API/DOMPointReadOnly/fromPoint_static
-original_slug: Web/API/DOMPointReadOnly/fromPoint
 ---
 
 {{APIRef("DOM")}}

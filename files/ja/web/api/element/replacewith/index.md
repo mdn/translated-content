@@ -2,7 +2,6 @@
 title: "Element: replaceWith() メソッド"
 short-title: replaceWith()
 slug: Web/API/Element/replaceWith
-original_slug: Web/API/ChildNode/replaceWith
 l10n:
   sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---

@@ -1,7 +1,6 @@
 ---
 title: mask-origin
 slug: Web/CSS/mask-origin
-translation_of: Web/CSS/mask-origin
 ---
 
 {{CSSRef}}

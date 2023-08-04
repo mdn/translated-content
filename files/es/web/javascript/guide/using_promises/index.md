@@ -1,7 +1,6 @@
 ---
 title: Usar promesas
 slug: Web/JavaScript/Guide/Using_promises
-original_slug: Web/JavaScript/Guide/Usar_promesas
 ---
 
 {{jsSidebar("JavaScript Guide")}}

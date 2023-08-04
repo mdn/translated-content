@@ -1,7 +1,6 @@
 ---
 title: Navigator.userAgent
 slug: Web/API/Navigator/userAgent
-original_slug: Web/API/NavigatorID/userAgent
 ---
 
 {{ApiRef("HTML DOM")}}

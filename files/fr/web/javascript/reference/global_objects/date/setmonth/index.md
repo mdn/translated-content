@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.setMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 ---
 
 {{JSRef}}
@@ -19,7 +18,7 @@ dateObj.setMonth(valeurMois[, valeurJour])
 ### Versions antérieures à JavaScript 1.3
 
 ```js
-dateObj.setMonth(valeurMois)
+dateObj.setMonth(valeurMois);
 ```
 
 ### Paramètres

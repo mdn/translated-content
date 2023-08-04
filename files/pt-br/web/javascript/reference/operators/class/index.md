@@ -22,7 +22,7 @@ Uma expressão de classe tem uma sintaxe similar a uma [declaração de classe](
 Assim como declarações de classes, o corpo das expressões de classe são executados em [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode).
 
 ```js
-'use strict';
+"use strict";
 var Foo = class {}; // propriedade de construtor é opcional
 var Foo = class {}; // Re-declaração é permitida
 
@@ -31,7 +31,7 @@ typeof class {}; //retorna "function"
 
 Foo instanceof Object; // true
 Foo instanceof Function; // true
-class Foo {}; // Throws TypeError, não permite re-declaração
+class Foo {} // Throws TypeError, não permite re-declaração
 ```
 
 ## Exemplos
@@ -44,7 +44,7 @@ Isso é apenas uma simples classe anônima que você pode referir usando a vari�
 var Foo = class {
   constructor() {}
   bar() {
-    return 'Olá mundo!';
+    return "Olá mundo!";
   }
 };
 
@@ -63,7 +63,7 @@ var Foo = class NamedFoo {
   whoIsThere() {
     return NamedFoo.name;
   }
-}
+};
 var bar = new Foo();
 bar.whoIsThere(); // "NamedFoo"
 NamedFoo.name; // ReferenceError: NamedFoo is not defined
@@ -72,11 +72,11 @@ Foo.name; // "NamedFoo"
 
 ## Especificações
 
-| Especificação                                                                                | Situação                     | Comentário         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2015')}}     | Definição inicial. |
-| {{SpecName('ES2016', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2016')}}     |                    |
-| {{SpecName('ES2017', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2017')}}     |                    |
+| Especificação                                                          | Situação             | Comentário         |
+| ---------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
+| {{SpecName('ES2016', '#sec-class-definitions', 'Class definitions')}}  | {{Spec2('ES2016')}}  |                    |
+| {{SpecName('ES2017', '#sec-class-definitions', 'Class definitions')}}  | {{Spec2('ES2017')}}  |                    |
 | {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

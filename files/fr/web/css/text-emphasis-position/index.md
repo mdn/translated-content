@@ -1,7 +1,6 @@
 ---
 title: text-emphasis-position
 slug: Web/CSS/text-emphasis-position
-translation_of: Web/CSS/text-emphasis-position
 ---
 
 {{CSSRef}}

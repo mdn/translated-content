@@ -1,7 +1,6 @@
 ---
 title: NodeList.entries()
 slug: Web/API/NodeList/entries
-translation_of: Web/API/NodeList/entries
 ---
 
 {{APIRef("DOM")}}

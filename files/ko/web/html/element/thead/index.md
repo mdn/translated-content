@@ -1,5 +1,5 @@
 ---
-title: '<thead>: 표 머릿글 요소'
+title: "<thead>: 표 머릿글 요소"
 slug: Web/HTML/Element/thead
 ---
 
@@ -71,14 +71,14 @@ slug: Web/HTML/Element/thead
     - `center`, 컨텐츠를 셀의 가운데로 정렬합니다.
     - `right`, 컨텐츠를 셀의 오른쪽으로 정렬합니다.
     - `justify`, 컨텐츠가 셀의 양쪽으로 정렬되도록 텍스트 컨텐츠에 공백을 삽입합니다.
-    - `char`, {{htmlattrxref("char", "thead")}} 와 {{htmlattrxref("charoff", "thead")}} 특성에 의해 정해지는 최소 오프셋을 가진 특수 문자에 대해 텍스트 컨텐츠를 정렬합니다.
+    - `char`, [`char`](/ko/docs/Web/HTML/Element/thead#char) 와 [`charoff`](/ko/docs/Web/HTML/Element/thead#charoff) 특성에 의해 정해지는 최소 오프셋을 가진 특수 문자에 대해 텍스트 컨텐츠를 정렬합니다.
 
     만약 값이 따로 할당되어 있지 않다면 `left` 가 기본값으로 지정됩니다.
 
     > **주의:** 이 속성은 최신 표준에서는 사용되지 않으며 지원되지 않으므로 사용하지 마십시오.
     >
     > - `left`, `center`, `right` 또는 `justify` 값과 같은 효과를 내고 싶다면, CSS {{cssxref("text-align")}} 속성을 적용하세요.
-    > - `char` 값과 같은 효과를 내고 싶다면, CSS3에서 {{cssxref("text-align")}} 속성의 값으로 {{htmlattrxref("char", "thead")}}의 값을 사용할 수 있습니다.
+    > - `char` 값과 같은 효과를 내고 싶다면, CSS3에서 {{cssxref("text-align")}} 속성의 값으로 [`char`](/ko/docs/Web/HTML/Element/thead#char)의 값을 사용할 수 있습니다.
 
 - {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
 
@@ -105,9 +105,9 @@ slug: Web/HTML/Element/thead
 
 - {{htmlattrdef("char")}} {{deprecated_inline}}
 
-  - : 이 특성은 열의 셀을 정렬할 문자를 설정하는 데 사용됩니다. 숫자 또는 통화 값을 정렬할 때에는 일반적으로 마침표(.)가 포함됩니다. 만약 {{htmlattrxref("align", "thead")}}이 `char`로 설정되어 있지 않으면, 이 특성은 무시됩니다.
+  - : 이 특성은 열의 셀을 정렬할 문자를 설정하는 데 사용됩니다. 숫자 또는 통화 값을 정렬할 때에는 일반적으로 마침표(.)가 포함됩니다. 만약 [`align`](/ko/docs/Web/HTML/Element/thead#align)이 `char`로 설정되어 있지 않으면, 이 특성은 무시됩니다.
 
-    > **Note:** 이 특성은 최신 표준에서는 사용되지 않으며 지원되지 않으므로 사용하지 마십시오. {{htmlattrxref("char", "thead")}}와 같은 효과를 내고 싶다면, CSS3에서 {{htmlattrxref("char", "thead")}} 특성을 {{cssxref("text-align")}} 속성의 값으로 하여 문자 집합을 사용할 수 있습니다.
+    > **Note:** 이 특성은 최신 표준에서는 사용되지 않으며 지원되지 않으므로 사용하지 마십시오. [`char`](/ko/docs/Web/HTML/Element/thead#char)와 같은 효과를 내고 싶다면, CSS3에서 [`char`](/ko/docs/Web/HTML/Element/thead#char) 특성을 {{cssxref("text-align")}} 속성의 값으로 하여 문자 집합을 사용할 수 있습니다.
 
 - {{htmlattrdef("charoff")}} {{deprecated_inline}}
 

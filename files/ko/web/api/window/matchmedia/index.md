@@ -2,6 +2,7 @@
 title: Window.matchMedia()
 slug: Web/API/Window/matchMedia
 ---
+
 {{APIRef}}
 
 **`Window.matchMedia()`** 메서드는 주어진 [미디어 쿼리](/ko/docs/Web/Guide/CSS/Media_queries) 문자열의 분석 결과를 나타내는 {{domxref("MediaQueryList")}} 객체를 반환합니다.
@@ -9,7 +10,7 @@ slug: Web/API/Window/matchMedia
 ## 구문
 
 ```js
-window.matchMedia(mediaQueryString)
+window.matchMedia(mediaQueryString);
 ```
 
 ### 매개변수

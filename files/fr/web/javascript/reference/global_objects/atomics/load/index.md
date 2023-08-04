@@ -1,7 +1,6 @@
 ---
 title: Atomics.load()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/load
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode statique **`Atomics.load()`** renvoie une valeur située à une posi
 ## Syntaxe
 
 ```js
-Atomics.load(typedArray, index)
+Atomics.load(typedArray, index);
 ```
 
 ### Paramètres

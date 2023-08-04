@@ -1,7 +1,6 @@
 ---
 title: "Attribut HTML : min"
 slug: Web/HTML/Attributes/min
-translation_of: Web/HTML/Attributes/min
 ---
 
 {{HTMLSidebar}}

@@ -1,11 +1,6 @@
 ---
 title: Вычисленное значение
 slug: Web/CSS/computed_value
-tags:
-  - CSS
-  - Guide
-  - Web
-translation_of: Web/CSS/computed_value
 ---
 
 {{cssref}}

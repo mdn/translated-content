@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.deleteBuffer()
 slug: Web/API/WebGLRenderingContext/deleteBuffer
-translation_of: Web/API/WebGLRenderingContext/deleteBuffer
 ---
 
 {{APIRef("WebGL")}}

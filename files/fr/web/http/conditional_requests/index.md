@@ -1,7 +1,6 @@
 ---
 title: "HTTP : Requêtes conditionnelles"
 slug: Web/HTTP/Conditional_requests
-translation_of: Web/HTTP/Conditional_requests
 ---
 
 {{HTTPSidebar}}

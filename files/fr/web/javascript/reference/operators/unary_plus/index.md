@@ -1,7 +1,6 @@
 ---
 title: Plus unaire (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
-translation_of: Web/JavaScript/Reference/Operators/Unary_plus
 ---
 
 {{jsSidebar("Operators")}}
@@ -13,7 +12,7 @@ L'opérateur de plus unaire (`+`) précède son opérande et évalue son opéran
 ## Syntaxe
 
 ```js
-Opérateur : +x
+Opérateur: +x;
 ```
 
 ## Description
@@ -37,11 +36,13 @@ console.log(+y);
 ### Avec des valeurs non-numériques
 
 ```js
-+true  // 1
-+false // 0
-+null  // 0
-+function(val){ return val } // NaN
-+1n    // throws TypeError: Cannot convert BigInt value to number
++true; // 1
++false; // 0
++null; // 0
++function (val) {
+  return val;
+}; // NaN
++1n; // throws TypeError: Cannot convert BigInt value to number
 ```
 
 ## Spécifications

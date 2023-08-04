@@ -1,7 +1,6 @@
 ---
 title: runtime.Port
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/Port
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/Port
 ---
 
 {{AddonSidebar()}}

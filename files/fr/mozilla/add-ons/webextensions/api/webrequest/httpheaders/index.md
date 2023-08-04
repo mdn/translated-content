@@ -1,7 +1,6 @@
 ---
 title: webRequest.HttpHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/HttpHeaders
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/HttpHeaders
 ---
 
 {{AddonSidebar()}}

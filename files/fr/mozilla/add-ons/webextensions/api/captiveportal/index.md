@@ -1,7 +1,6 @@
 ---
 title: captivePortal
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal
-translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal
 ---
 
 {{AddonSidebar}}

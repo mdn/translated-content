@@ -1,7 +1,6 @@
 ---
 title: Introduction
 slug: Web/JavaScript/Guide/Introduction
-translation_of: Web/JavaScript/Guide/Introduction
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
@@ -88,9 +87,9 @@ La console fonctionne exactement de la même manière que `eval`&nbsp;: la derni
 
 ```js
 function saluer(votreNom) {
-  alert("Hello " + votreNom)
+  alert("Hello " + votreNom);
 }
-console.log(eval('3 + 5'))
+console.log(eval("3 + 5"));
 ```
 
 ### Le mode éditeur multiligne

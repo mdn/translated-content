@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.setUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`setUTCMilliseconds()`** définit les millièmes de secondes pour 
 ## Syntaxe
 
 ```js
-dateObj.setUTCMilliseconds(valeurMs)
+dateObj.setUTCMilliseconds(valeurMs);
 ```
 
 ### Paramètres

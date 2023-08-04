@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/values
 ---
 
 {{JSRef}}

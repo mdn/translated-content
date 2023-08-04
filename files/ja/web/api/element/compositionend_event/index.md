@@ -1,5 +1,5 @@
 ---
-title: 'Element: compositionend イベント'
+title: "Element: compositionend イベント"
 slug: Web/API/Element/compositionend_event
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: 链接类型：prefetch
 slug: Web/HTML/Attributes/rel/prefetch
-original_slug: Web/HTML/Link_types/prefetch
 ---
 
 {{HTMLSidebar}}

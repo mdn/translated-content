@@ -23,14 +23,15 @@ slug: Web/HTML/Element/datalist
 ## 示例
 
 ```html
-<label>Choose a browser from this list:
-<input list="browsers" name="myBrowser" /></label>
+<label
+  >Choose a browser from this list: <input list="browsers" name="myBrowser"
+/></label>
 <datalist id="browsers">
-  <option value="Chrome">
-  <option value="Firefox">
-  <option value="Internet Explorer">
-  <option value="Opera">
-  <option value="Safari">
+  <option value="Chrome"></option>
+  <option value="Firefox"></option>
+  <option value="Internet Explorer"></option>
+  <option value="Opera"></option>
+  <option value="Safari"></option>
 </datalist>
 ```
 

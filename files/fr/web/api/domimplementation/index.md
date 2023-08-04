@@ -1,7 +1,6 @@
 ---
 title: DOMImplementation
 slug: Web/API/DOMImplementation
-translation_of: Web/API/DOMImplementation
 ---
 
 {{ ApiRef("DOM") }}

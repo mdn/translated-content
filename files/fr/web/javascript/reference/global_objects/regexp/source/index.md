@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype.source
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/source
 ---
 
 {{JSRef}}
@@ -15,7 +14,7 @@ La propriété **`source`** renvoie une chaîne de caractères qui contient le t
 ### Utiliser `source`
 
 ```js
-var regex = /totoMachin/ig;
+var regex = /totoMachin/gi;
 
 console.log(regex.source); // "totoMachin"
 ```
@@ -27,8 +26,8 @@ console.log(regex.source); // "totoMachin"
 ```js
 new RegExp().source; // "(?:)"
 
-new RegExp('\n').source === "\n";  // true avant ES5
-new RegExp('\n').source === "\\n"; // true à partir d'ES5
+new RegExp("\n").source === "\n"; // true avant ES5
+new RegExp("\n").source === "\\n"; // true à partir d'ES5
 ```
 
 ## Spécifications

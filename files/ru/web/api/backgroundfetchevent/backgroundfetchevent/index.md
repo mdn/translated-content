@@ -1,15 +1,8 @@
 ---
 title: BackgroundFetchEvent()
 slug: Web/API/BackgroundFetchEvent/BackgroundFetchEvent
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - BackgroundFetchEvent
-  - Experimental
-browser-compat: api.BackgroundFetchEvent.BackgroundFetchEvent
 ---
+
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 Конструктор **`BackgroundFetchEvent()`** создаёт новый объект {{domxref("BackgroundFetchEvent")}}. Этот конструктор обычно не используется, так как браузер создаёт такие объекты самостоятельно и, затем, передаёт их для колбэков событий фоновых запросов.
@@ -17,7 +10,7 @@ browser-compat: api.BackgroundFetchEvent.BackgroundFetchEvent
 ## Синтаксис
 
 ```js
-new BackgroundFetchEvent(type, options)
+new BackgroundFetchEvent(type, options);
 ```
 
 ### Параметры

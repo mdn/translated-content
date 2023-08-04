@@ -1,7 +1,6 @@
 ---
 title: Les tableaux en HTML
 slug: Learn/HTML/Tables
-translation_of: Learn/HTML/Tables
 ---
 
 {{LearnSidebar}}

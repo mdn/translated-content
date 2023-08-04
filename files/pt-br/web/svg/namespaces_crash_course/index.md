@@ -1,7 +1,6 @@
 ---
 title: Intensivo de Namespaces
 slug: Web/SVG/Namespaces_Crash_Course
-original_slug: Web/SVG/Intensivo_de_Namespaces
 ---
 
 Como um dialeto [XML](/pt-BR/docs/Glossario/XML), o [SVG](/pt-BR/docs/Web/SVG) tem _namespace_. É importante entender o conceito de _[namespaces](/pt-BR/docs/Web/SVG/Intensivo_de_Namespaces)_ e como eles são usados se você planeja criar seu próprio conteúdo em SVG. Versões de visualizadores SVG prévias ao lançamento do Firefox 1.5 infelizmente deu pouca atenção aos _namespaces_ mas eles são essenciais para dialetos multi-XML suportando agentes de usuários como navegadores baseados em [Gecko](/pt-BR/docs/Mozilla/Gecko) que devem ser muito rigorosos. Tome um tempo para entender _namespaces_ agora e irá te privar de muita dor de cabeça no futuro.

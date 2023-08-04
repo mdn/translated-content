@@ -1,7 +1,6 @@
 ---
 title: shape-margin
 slug: Web/CSS/shape-margin
-translation_of: Web/CSS/shape-margin
 ---
 
 {{CSSRef}}

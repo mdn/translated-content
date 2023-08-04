@@ -1,5 +1,5 @@
 ---
-title: 'HTML 属性: required'
+title: "HTML 属性: required"
 slug: Web/HTML/Attributes/required
 ---
 

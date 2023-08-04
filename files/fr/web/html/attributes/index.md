@@ -1,7 +1,6 @@
 ---
 title: Référence des attributs HTML
 slug: Web/HTML/Attributes
-translation_of: Web/HTML/Attributes
 ---
 
 {{HTMLSidebar}}

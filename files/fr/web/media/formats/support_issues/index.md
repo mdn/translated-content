@@ -1,7 +1,6 @@
 ---
 title: Traiter les questions de soutien aux médias dans le contenu web
 slug: Web/Media/Formats/Support_issues
-translation_of: Web/Media/Formats/Support_issues
 ---
 
 {{QuickLinksWithSubpages("/fr/docs/Web/Media")}}

@@ -14,14 +14,17 @@ slug: Web/HTML/Global_attributes/itemprop
 ### HTML
 
 ```html
-<div itemscope itemtype ="http://schema.org/Movie">
+<div itemscope itemtype="http://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
-  <span>Director:
+  <span
+    >Director:
     <span itemprop="director">James Cameron</span>
-    (born August 16, 1954)</span>
+    (born August 16, 1954)</span
+  >
   <span itemprop="genre">Science fiction</span>
-  <a href="../movies/avatar-theatrical-trailer.html"
-    itemprop="trailer">Trailer</a>
+  <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer"
+    >Trailer</a
+  >
 </div>
 ```
 
@@ -62,18 +65,15 @@ slug: Web/HTML/Global_attributes/itemprop
 
 ## 속성
 
-속성은 문자열이나 {{glossary("URL")}}을 값으로 가질 수 있습니다. 문자열 값으로 URL을 지정할 경우 {{htmlelement("a")}}와 {{htmlattrxref("href", "a")}} 특성, {{htmlelement("img")}} 요소와 {{htmlelement("src", "img")}} 특성, 또는 그 외의 외부 리소스를 연결하는 기타 요소를 사용해 표현합니다.
+속성은 문자열이나 {{glossary("URL")}}을 값으로 가질 수 있습니다. 문자열 값으로 URL을 지정할 경우 {{htmlelement("a")}}와 [`href`](/ko/docs/Web/HTML/Element/a#href) 특성, {{htmlelement("img")}} 요소와 {{htmlelement("src", "img")}} 특성, 또는 그 외의 외부 리소스를 연결하는 기타 요소를 사용해 표현합니다.
 
 ### 문자열을 값으로 갖는 세 개의 속성
 
 ```html
 <div itemscope>
- <p>My name is
-   <span itemprop="name">Neil</span>.</p>
- <p>My band is called
-   <span itemprop="band">Four Parts Water</span>.</p>
- <p>I am
-   <span itemprop="nationality">British</span>.</p>
+  <p>My name is <span itemprop="name">Neil</span>.</p>
+  <p>My band is called <span itemprop="band">Four Parts Water</span>.</p>
+  <p>I am <span itemprop="nationality">British</span>.</p>
 </div>
 ```
 
@@ -81,12 +81,11 @@ slug: Web/HTML/Global_attributes/itemprop
 
 ```html
 <div itemscope>
- <img itemprop="image"
-   src="google-logo.png" alt="Google">
+  <img itemprop="image" src="google-logo.png" alt="Google" />
 </div>
 ```
 
-숫자와 문자로 구성된 긴 문자열처럼 사람이 쉽게 읽고 이해할 수 없는 문자열이 값일 경우, {{htmlelement("data")}} 요소의 {{htmlattrxref("value", "data")}} 특성 값을 사용해 나타내고, 사람이 보다 쉽게 읽을 수 있도록 표현한 문자열을 `<data>`의 콘텐츠로 지정할 수 있습니다. (`<data>` 콘텐츠는 구조화된 데이터의 일부가 아닙니다. 아래 예제를 참고하세요.)
+숫자와 문자로 구성된 긴 문자열처럼 사람이 쉽게 읽고 이해할 수 없는 문자열이 값일 경우, {{htmlelement("data")}} 요소의 [`value`](/ko/docs/Web/HTML/Element/data#value) 특성 값을 사용해 나타내고, 사람이 보다 쉽게 읽을 수 있도록 표현한 문자열을 `<data>`의 콘텐츠로 지정할 수 있습니다. (`<data>` 콘텐츠는 구조화된 데이터의 일부가 아닙니다. 아래 예제를 참고하세요.)
 
 ### 값이 상품 ID인 속성을 가진 아이템
 
@@ -94,41 +93,39 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 
 ```html
 <h1 itemscope>
- <data itemprop="product-id"
-   value="9678AOU879">The Instigator 2000</data>
+  <data itemprop="product-id" value="9678AOU879">The Instigator 2000</data>
 </h1>
 ```
 
-숫자 값으로는 {{htmlelement("meter")}} 요소와 그 {{htmlattrxref("value", "meter")}} 특성을 대신 사용할 수 있습니다.
+숫자 값으로는 {{htmlelement("meter")}} 요소와 그 [`value`](/ko/docs/Web/HTML/Element/meter#value) 특성을 대신 사용할 수 있습니다.
 
 ### `<meter>` 요소
 
 ```html
 <div itemscope itemtype="http://schema.org/Product">
- <span itemprop="name">Panasonic White
-   60L Refrigerator</span>
- <img src="panasonic-fridge-60l-white.jpg" alt="">
-  <div itemprop="aggregateRating"
-       itemscope
-       itemtype="http://schema.org/AggregateRating">
-   <meter itemprop="ratingValue"
-     min=0 value=3.5 max=5>Rated 3.5/5</meter>
-   (based on <span
-     itemprop="reviewCount">11</span>
-     customer reviews)
+  <span itemprop="name">Panasonic White 60L Refrigerator</span>
+  <img src="panasonic-fridge-60l-white.jpg" alt="" />
+  <div
+    itemprop="aggregateRating"
+    itemscope
+    itemtype="http://schema.org/AggregateRating">
+    <meter itemprop="ratingValue" min="0" value="3.5" max="5">
+      Rated 3.5/5
+    </meter>
+    (based on <span itemprop="reviewCount">11</span>
+    customer reviews)
   </div>
 </div>
 ```
 
-비슷하게, 날짜와 시간 관련 데이터는 {{htmlelement("time")}}과 그 {{htmlattrxref("datetime", "time")}} 특성을 사용할 수 있습니다.
+비슷하게, 날짜와 시간 관련 데이터는 {{htmlelement("time")}}과 그 [`datetime`](/ko/docs/Web/HTML/Element/time#datetime) 특성을 사용할 수 있습니다.
 
 ### 날짜 값인 생년월일 속성을 가지는 아이템
 
 ```html
 <div itemscope>
- I was born on <time
-   itemprop="birthday"
-   datetime="2009-05-10">May 10th 2009</time>.
+  I was born on
+  <time itemprop="birthday" datetime="2009-05-10">May 10th 2009</time>.
 </div>
 ```
 
@@ -138,13 +135,14 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 
 ```html
 <div itemscope>
- <p>Name:
-   <span itemprop="name">Amanda</span></p>
- <p>Band:
-   <span itemprop="band" itemscope>
-     <span itemprop="name">Jazz Band</span>
-     (<span itemprop="size">12</span>
-     players)</span></p>
+  <p>Name: <span itemprop="name">Amanda</span></p>
+  <p>
+    Band:
+    <span itemprop="band" itemscope>
+      <span itemprop="name">Jazz Band</span>
+      (<span itemprop="size">12</span> players)</span
+    >
+  </p>
 </div>
 ```
 
@@ -156,16 +154,11 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 
 ```html
 <div itemscope id="amanda" itemref="a b"></div>
-<p id="a">Name:
-  <span itemprop="name">Amanda</span></p>
-<div id="b"
-  itemprop="band"
-  itemscope itemref="c"></div>
+<p id="a">Name: <span itemprop="name">Amanda</span></p>
+<div id="b" itemprop="band" itemscope itemref="c"></div>
 <div id="c">
- <p>Band:
-   <span itemprop="name">Jazz Band</span></p>
- <p>Size:
-   <span itemprop="size">12</span> players</p>
+  <p>Band: <span itemprop="name">Jazz Band</span></p>
+  <p>Size: <span itemprop="size">12</span> players</p>
 </div>
 ```
 
@@ -177,11 +170,11 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 
 ```html
 <div itemscope>
- <p>Flavors in my favorite ice cream:</p>
- <ul>
-  <li itemprop="flavor">Lemon sorbet</li>
-  <li itemprop="flavor">Apricot sorbet</li>
- </ul>
+  <p>Flavors in my favorite ice cream:</p>
+  <ul>
+    <li itemprop="flavor">Lemon sorbet</li>
+    <li itemprop="flavor">Apricot sorbet</li>
+  </ul>
 </div>
 ```
 
@@ -193,9 +186,11 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 
 ```html
 <div itemscope>
- <span
-  itemprop="favorite-color
-    favorite-fruit">orange</span>
+  <span
+    itemprop="favorite-color
+    favorite-fruit"
+    >orange</span
+  >
 </div>
 ```
 
@@ -207,22 +202,18 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 
 ```html
 <figure>
- <img src="castle.jpeg">
- <figcaption><span
-   itemscope><span
-   itemprop="name">The Castle</span></span>
-     (1986)</figcaption>
+  <img src="castle.jpeg" />
+  <figcaption>
+    <span itemscope><span itemprop="name">The Castle</span></span> (1986)
+  </figcaption>
 </figure>
 ```
 
 ```html
-<span itemscope><meta
-  itemprop="name"
-  content="The Castle"></span>
+<span itemscope><meta itemprop="name" content="The Castle" /></span>
 <figure>
- <img src="castle.jpeg">
- <figcaption>The Castle
-  (1986)</figcaption>
+  <img src="castle.jpeg" />
+  <figcaption>The Castle (1986)</figcaption>
 </figure>
 ```
 
@@ -283,13 +274,13 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 
 1. 아이템이 typed item일 경우 다음 중 하나이어야 합니다:
 
-    1. 정의된 프로퍼티 이름이거나
-    2. 어휘(vocabulary)의 정의를 참조하는 유효한 URL이거나
-    3. 전용(proprietary) 아이템 프로퍼티(예: 공개된 명세서에 정의되지 않은)로 사용되는 유효한 URL이어야 합니다.
+   1. 정의된 프로퍼티 이름이거나
+   2. 어휘(vocabulary)의 정의를 참조하는 유효한 URL이거나
+   3. 전용(proprietary) 아이템 프로퍼티(예: 공개된 명세서에 정의되지 않은)로 사용되는 유효한 URL이어야 합니다.
 
 2. 아이템이 typed item이 아닐 경우 다음을 따라야 합니다:
 
-    1. "**.**" (U+002E FULL STOP) 문자나 "**:**" characters (U+003A COLON) 문자를 포함하지 않는 문자열로 전용(proprietary) 아이템 프로퍼티(예: 공개된 명세서에 정의되지 않은)로 사용되는 유효한 URL이어야 합니다.
+   1. "**.**" (U+002E FULL STOP) 문자나 "**:**" characters (U+003A COLON) 문자를 포함하지 않는 문자열로 전용(proprietary) 아이템 프로퍼티(예: 공개된 명세서에 정의되지 않은)로 사용되는 유효한 URL이어야 합니다.
 
 > **참고:** 위에서 금지한, URL 값이 아닌 경우 ":" 문자가 포함되면 안되는 이유는 이 문자가 문자열에 포함되어 있으면 URL과 구분할 수 없기 때문입니다. "."를 포함하는 문자는 향후 확장을 고려해 예약된 것입니다. 공백(space) 문자는 공백이 포함되어 있을 경우 여러 개의 토큰으로 파싱될 수 있기 때문에 금지되어 있습니다.
 
@@ -339,41 +330,41 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 
 이름은 서로 순서가 없지만, 특정한 이름이 여러 값을 가지는 경우라면 상대적인 순서를 가집니다.
 
-#### 다음 예제에서 "a" 프로퍼티는 순서대로 "1"과 "2"의 값을 가지지만, "a" 프로퍼티가 "b" 프로퍼티 보다 먼저 오는지 아닌지는 중요하지 않습니다.
+#### 다음 예제에서 "a" 프로퍼티는 순서대로 "1"과 "2"의 값을 가지지만, "a" 프로퍼티가 "b" 프로퍼티 보다 먼저 오는지 아닌지는 중요하지 않습니다
 
 ```html
 <div itemscope>
- <p itemprop="a">1</p>
- <p itemprop="a">2</p>
- <p itemprop="b">test</p>
+  <p itemprop="a">1</p>
+  <p itemprop="a">2</p>
+  <p itemprop="b">test</p>
 </div>
 ```
 
-#### 다음 세 예제는 모두 같습니다.
+#### 다음 세 예제는 모두 같습니다
 
 ```html
 <div itemscope>
- <p itemprop="b">test</p>
- <p itemprop="a">1</p>
- <p itemprop="a">2</p>
+  <p itemprop="b">test</p>
+  <p itemprop="a">1</p>
+  <p itemprop="a">2</p>
 </div>
 ```
 
 ```html
 <div itemscope>
- <p itemprop="a">1</p>
- <p itemprop="b">test</p>
- <p itemprop="a">2</p>
+  <p itemprop="a">1</p>
+  <p itemprop="b">test</p>
+  <p itemprop="a">2</p>
 </div>
 ```
 
 ```html
 <div id="x">
- <p itemprop="a">1</p>
+  <p itemprop="a">1</p>
 </div>
 <div itemscope itemref="x">
- <p itemprop="b">test</p>
- <p itemprop="a">2</p>
+  <p itemprop="b">test</p>
+  <p itemprop="a">2</p>
 </div>
 ```
 
@@ -382,19 +373,16 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 ### HTML
 
 ```html
-<dl itemscope
+<dl
+  itemscope
   itemtype="http://vocab.example.net/book"
   itemid="urn:isbn:0-330-34032-8">
- <dt>Title
-   <dd
-    itemprop="title">The Reality Dysfunction
- <dt>Author
-   <dd
-     itemprop="author">Peter F. Hamilton
- <dt>Publication date
- <dd><time
-   itemprop="pubdate"
-   datetime="1996-01-26">26 January 1996</time>
+  <dt>Title</dt>
+  <dd itemprop="title">The Reality Dysfunction</dd>
+  <dt>Author</dt>
+  <dd itemprop="author">Peter F. Hamilton</dd>
+  <dt>Publication date</dt>
+  <dd><time itemprop="pubdate" datetime="1996-01-26">26 January 1996</time></dd>
 </dl>
 ```
 
@@ -444,8 +432,7 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 - [다른 전역 특성](/ko/docs/Web/HTML/Global_attributes)
 - 다른 마이크로데이터와 관련된 전역 속성:
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/ko/docs/Web/HTML/Global_attributes#itemid)
+  - [`itemref`](/ko/docs/Web/HTML/Global_attributes#itemref)
+  - [`itemscope`](/ko/docs/Web/HTML/Global_attributes#itemscope)
+  - [`itemtype`](/ko/docs/Web/HTML/Global_attributes#itemtype)

@@ -1,16 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.toString()
 slug: Web/API/HTMLAnchorElement/toString
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Location
-  - Method
-  - Stringifier
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/toString
-original_slug: Web/API/HTMLHyperlinkElementUtils/toString
 ---
 
 {{ApiRef("URL API")}}

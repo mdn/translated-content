@@ -1,7 +1,6 @@
 ---
 title: HTMLDialogElement
 slug: Web/API/HTMLDialogElement
-translation_of: Web/API/HTMLDialogElement
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}

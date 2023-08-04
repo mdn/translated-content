@@ -1,13 +1,6 @@
 ---
 title: Логическое НЕ (!)
 slug: Web/JavaScript/Reference/Operators/Logical_NOT
-tags:
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
-browser-compat: javascript.operators.logical_not
 ---
 {{jsSidebar("Operators")}}
 

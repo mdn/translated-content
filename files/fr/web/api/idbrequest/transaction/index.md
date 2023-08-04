@@ -1,7 +1,6 @@
 ---
 title: IDBRequest.transaction
 slug: Web/API/IDBRequest/transaction
-translation_of: Web/API/IDBRequest/transaction
 ---
 
 {{ APIRef("IndexedDB") }}

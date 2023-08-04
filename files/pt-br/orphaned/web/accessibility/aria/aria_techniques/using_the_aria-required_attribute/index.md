@@ -1,8 +1,6 @@
 ---
 title: Usando o atributo aria-required
-slug: >-
-  orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
+slug: orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 ---
 
 ### Descrição

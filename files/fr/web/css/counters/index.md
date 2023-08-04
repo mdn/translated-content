@@ -1,7 +1,6 @@
 ---
 title: counters()
 slug: Web/CSS/counters
-translation_of: Web/CSS/counters()
 ---
 
 {{CSSRef}}

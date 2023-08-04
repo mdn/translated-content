@@ -1,7 +1,6 @@
 ---
 title: PerformanceResourceTiming.toJSON()
 slug: Web/API/PerformanceResourceTiming/toJSON
-translation_of: Web/API/PerformanceResourceTiming/toJSON
 ---
 
 {{APIRef("Resource Timing API")}}
