@@ -164,10 +164,11 @@ export function getUsefulContents(url, callback) {
 **O programa principal: main.js**
 
 ```js
-import { getUsefulContents } from '/modules/file.js';
+import { getUsefulContents } from "/modules/file.js";
 
-getUsefulContents('http://www.example.com',
-    data => { doSomethingUseful(data); });
+getUsefulContents("http://www.example.com", (data) => {
+  doSomethingUseful(data);
+});
 ```
 
 ### Dynamic Import
@@ -177,14 +178,14 @@ Este exemplo mostra como carregar a funcionalidade em uma página com base em um
 ```js
 const main = document.querySelector("main");
 for (const link of document.querySelectorAll("nav > a")) {
-  link.addEventListener("click", e => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
 
-    import('/modules/my-module.js')
-      .then(module => {
+    import("/modules/my-module.js")
+      .then((module) => {
         module.loadPageInto(main);
       })
-      .catch(err => {
+      .catch((err) => {
         main.textContent = err.message;
       });
   });
@@ -193,14 +194,14 @@ for (const link of document.querySelectorAll("nav > a")) {
 
 ## Especificações
 
-| Especificação                                                                                          | Estado                       | Comentário         |
-| ------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| ["function-like" dynamic `import()` proposal](https://github.com/tc39/proposal-dynamic-import/#import) | Stage 3                      |                    |
-| {{SpecName("ESDraft", "#sec-imports", "Imports")}}                                   | {{Spec2("ESDraft")}} |                    |
-| {{SpecName("ES2018", "#sec-imports", "Imports")}}                                       | {{Spec2("ES2018")}}     |                    |
-| {{SpecName("ES2017", "#sec-imports", "Imports")}}                                       | {{Spec2("ES2017")}}     |                    |
-| {{SpecName("ES2016", "#sec-imports", "Imports")}}                                       | {{Spec2("ES2016")}}     |                    |
-| {{SpecName("ES2015", "#sec-imports", "Imports")}}                                       | {{Spec2("ES2015")}}     | Definição inicial. |
+| Especificação                                                                                          | Estado               | Comentário         |
+| ------------------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
+| ["function-like" dynamic `import()` proposal](https://github.com/tc39/proposal-dynamic-import/#import) | Stage 3              |                    |
+| {{SpecName("ESDraft", "#sec-imports", "Imports")}}                                                     | {{Spec2("ESDraft")}} |                    |
+| {{SpecName("ES2018", "#sec-imports", "Imports")}}                                                      | {{Spec2("ES2018")}}  |                    |
+| {{SpecName("ES2017", "#sec-imports", "Imports")}}                                                      | {{Spec2("ES2017")}}  |                    |
+| {{SpecName("ES2016", "#sec-imports", "Imports")}}                                                      | {{Spec2("ES2016")}}  |                    |
+| {{SpecName("ES2015", "#sec-imports", "Imports")}}                                                      | {{Spec2("ES2015")}}  | Definição inicial. |
 
 ## Compatibilidade com navegadores
 

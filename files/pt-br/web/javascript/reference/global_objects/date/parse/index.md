@@ -56,30 +56,30 @@ However, invalid values in date strings not recognized as ISO format as defined 
 
 ```js
 // Non-ISO string with invalid date values
-new Date('23/25/2014');
+new Date("23/25/2014");
 ```
 
 will be treated as a local date of 25 November, 2015 in Firefox 30 and an invalid date in Safari 7. However, if the string is recognized as an ISO format string and it contains invalid values, it will return {{jsxref("Global_Objects/NaN", "NaN")}} in all browsers compliant with ES5:
 
 ```js
 // ISO string with invalid values
-new Date('2014-25-23').toISOString();
+new Date("2014-25-23").toISOString();
 // returns "RangeError: invalid date" in all es5 compliant browsers
 ```
 
 SpiderMonkey's implementation-specific heuristic can be found in [`jsdate.cpp`](http://mxr.mozilla.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889). The string `"10 06 2014"` is an example of a non–conforming ISO format and thus falls back to a custom routine. See also this [rough outline](https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6) on how the parsing works.
 
 ```js
-new Date('10 06 2014');
+new Date("10 06 2014");
 ```
 
 will be treated as a local date of 6 October, 2014 and not 10 June, 2014. Other examples:
 
 ```js
-new Date('foo-bar 2014').toString();
+new Date("foo-bar 2014").toString();
 // returns: "Invalid Date"
 
-Date.parse('foo-bar 2014');
+Date.parse("foo-bar 2014");
 // returns: NaN
 ```
 
@@ -90,54 +90,54 @@ Date.parse('foo-bar 2014');
 If `IPOdate` is an existing {{jsxref("Global_Objects/Date", "Date")}} object, it can be set to August 9, 1995 (local time) as follows:
 
 ```js
-IPOdate.setTime(Date.parse('Aug 9, 1995'));
+IPOdate.setTime(Date.parse("Aug 9, 1995"));
 ```
 
 Some other examples of parsing non–standard date strings:
 
 ```js
-Date.parse('Aug 9, 1995');
+Date.parse("Aug 9, 1995");
 ```
 
 Returns `807937200000` in time zone GMT-0300, and other values in other time zones, since the string does not specify a time zone and is not ISO format, therefore the time zone defaults to local.
 
 ```js
-Date.parse('Wed, 09 Aug 1995 00:00:00 GMT');
+Date.parse("Wed, 09 Aug 1995 00:00:00 GMT");
 ```
 
 Returns `807926400000` no matter the local time zone as GMT (UTC) is provided.
 
 ```js
-Date.parse('Wed, 09 Aug 1995 00:00:00');
+Date.parse("Wed, 09 Aug 1995 00:00:00");
 ```
 
 Returns `807937200000` in time zone GMT-0300, and other values in other time zones, since there is no time zone specifier in the argument and it is not ISO format, so is treated as local.
 
 ```js
-Date.parse('Thu, 01 Jan 1970 00:00:00 GMT');
+Date.parse("Thu, 01 Jan 1970 00:00:00 GMT");
 ```
 
 Returns `0` no matter the local time zone as a time zone GMT (UTC) is provided.
 
 ```js
-Date.parse('Thu, 01 Jan 1970 00:00:00');
+Date.parse("Thu, 01 Jan 1970 00:00:00");
 ```
 
 Returns `14400000` in time zone GMT-0400, and other values in other time zones, since no time zone is provided and the string is not in ISO format, therfore the local time zone is used.
 
 ```js
-Date.parse('Thu, 01 Jan 1970 00:00:00 GMT-0400');
+Date.parse("Thu, 01 Jan 1970 00:00:00 GMT-0400");
 ```
 
 Returns `14400000` no matter the local time zone as a time zone GMT (UTC) is provided.
 
 ## Specifications
 
-| Specification                                                        | Status                   | Comment                                            |
-| -------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                                              | Standard                 | Initial definition. Implemented in JavaScript 1.0. |
+| Specification                                        | Status             | Comment                                            |
+| ---------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| ECMAScript 1st Edition.                              | Standard           | Initial definition. Implemented in JavaScript 1.0. |
 | {{SpecName('ES5.1', '#sec-15.9.4.2', 'Date.parse')}} | {{Spec2('ES5.1')}} | ISO 8601 format added.                             |
-| {{SpecName('ES6', '#sec-date.parse', 'Date.parse')}} | {{Spec2('ES6')}}     |                                                    |
+| {{SpecName('ES6', '#sec-date.parse', 'Date.parse')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade com navegadores
 

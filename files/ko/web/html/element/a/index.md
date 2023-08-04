@@ -5,7 +5,7 @@ slug: Web/HTML/Element/a
 
 {{HTMLSidebar}}
 
-**HTML `<a>` 요소**(앵커 요소)는 {{htmlattrxref("href", "a")}} 특성을 통해 다른 페이지나 같은 페이지의 어느 위치, 파일, 이메일 주소와 그 외 다른 URL로 연결할 수 있는 하이퍼링크를 만듭니다. `<a>` 안의 콘텐츠는 링크 목적지의 설명을 **나타내야 합니다**.
+**HTML `<a>` 요소**(앵커 요소)는 [`href`](/ko/docs/Web/HTML/Element/a#href) 특성을 통해 다른 페이지나 같은 페이지의 어느 위치, 파일, 이메일 주소와 그 외 다른 URL로 연결할 수 있는 하이퍼링크를 만듭니다. `<a>` 안의 콘텐츠는 링크 목적지의 설명을 **나타내야 합니다**.
 
 {{EmbedInteractiveExample("pages/tabbed/a.html")}}
 
@@ -232,7 +232,7 @@ a {
 
 ### `download` 특성으로 `<canvas>`를 PNG로 저장하기
 
-{{htmlattrxref("download", "a")}} 특성과 `data:` URL을 사용해 {{HTMLElement("canvas")}} 요소의 콘텐츠를 이미지로 저장할 수 있습니다.
+[`download`](/ko/docs/Web/HTML/Element/a#download) 특성과 `data:` URL을 사용해 {{HTMLElement("canvas")}} 요소의 콘텐츠를 이미지로 저장할 수 있습니다.
 
 #### 저장 링크를 가진 그림판 예제
 
@@ -357,7 +357,7 @@ document
 <a href="2017-annual-report.ppt">2017 연간 보고서 (PowerPoint)</a>
 ```
 
-아이콘을 사용해 링크의 행동을 강조할 땐 {{HTMLAttrxRef("alt", "img", "대체 텍스트", 1)}}를 꼭 지정하세요.
+아이콘을 사용해 링크의 행동을 강조할 땐 [대체 텍스트](/ko/docs/Web/HTML/Element/img#alt)를 꼭 지정하세요.
 
 ```html
 <a target="_blank" href="https://ko.wikipedia.org">

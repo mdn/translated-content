@@ -47,8 +47,8 @@ theBigDay.setUTCHours(8);
 
 ## Especificações
 
-| Especificação                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                                            |
+| ---------------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-date.prototype.setutchours', 'Date.prototype.setUTCHours')}} |
 
 ## Compatibilidade com navegadores
