@@ -21,7 +21,7 @@ button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按�
 <button type="button" id="saveChanges">保存</button>
 ```
 
-> **备注：** 如果使用 `role="button"` 而不是语义化的 `<button>` 或 `<input type="button">` 元素，你需要让这个元素可聚焦并定义事件处理器 {{domxref("Element/click_event", "click")}} 和 {{domxref("Element/keydown_event", "keydown")}}。这包括了按下 <kbd>Enter</kbd> 和 <kbd>Space</kbd> 键盘按键以处理各种形式的用户输入。参见[官方的 WAI-ARIA 示例代码](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)。
+> **备注：** 如果使用 `role="button"` 而不是语义化的 `<button>` 或 `<input type="button">` 你需要让这个元素可聚焦并定义 {{domxref("Element/click_event", "click")}} 和 {{domxref("Element/keydown_event", "keydown")}} 事件的事件处理器。这包括了对按下 <kbd>Enter</kbd> 和 <kbd>Space</kbd> 的事件的处理，以处理各种形式的用户输入。参见[官方的 WAI-ARIA 示例代码](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)。
 
 除了常见的按钮部件之外，使用非按钮元素创建切换按钮和菜单按钮时，应该使用 `role="button"`。
 
@@ -31,7 +31,7 @@ button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按�
 
 ### 所有子元素都是 presentation
 
-有些类型的用户界面元件，当呈现为平台无障碍 API 时，仅可包含文本。无障碍 API 没有呈现 `button` 中包含的语义元素的方式。要处理这个限制，浏览器会自动为任何 `button` 的后代元素应用角色 [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role)，因为按钮这种角色不支持带有语义的子元素。
+有些类型的用户界面元件，呈现在平台无障碍 API 中时，仅可包含文本。无障碍 API 没有呈现 `button` 中包含的语义元素的方式。要处理这个限制，浏览器会自动为任何 `button` 的后代元素应用角色 [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role)，因为按钮这种角色不支持带有语义的子元素。
 
 例如，请看这个 `button` 按钮，有如下内容：
 
