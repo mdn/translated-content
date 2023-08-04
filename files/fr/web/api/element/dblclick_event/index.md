@@ -1,7 +1,6 @@
 ---
 title: "Element : évènement dblclick"
 slug: Web/API/Element/dblclick_event
-translation_of: Web/API/Element/dblclick_event
 ---
 
 {{APIRef}}

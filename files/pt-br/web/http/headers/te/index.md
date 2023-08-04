@@ -51,8 +51,8 @@ TE: trailers, deflate;q=0.5
 
 ## Especificações
 
-| Especificação                        | Título                                                             |
-| ------------------------------------ | ------------------------------------------------------------------ |
+| Especificação                | Título                                                             |
+| ---------------------------- | ------------------------------------------------------------------ |
 | {{RFC("7230", "TE", "4.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
 ## Compatibilidade com navegadores

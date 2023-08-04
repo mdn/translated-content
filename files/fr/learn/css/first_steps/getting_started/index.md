@@ -1,7 +1,6 @@
 ---
 title: Démarrer avec CSS
 slug: Learn/CSS/First_steps/Getting_started
-translation_of: Learn/CSS/First_steps/Getting_started
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}

@@ -1,7 +1,6 @@
 ---
-title: '@scroll-timeline'
+title: "@scroll-timeline"
 slug: Web/CSS/scroll-timeline
-original_slug: Web/CSS/@scroll-timeline
 ---
 
 {{CSSRef}}

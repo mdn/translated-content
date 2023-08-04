@@ -1,5 +1,5 @@
 ---
-title: 'WorkerGlobalScope: languagechange イベント'
+title: "WorkerGlobalScope: languagechange イベント"
 slug: Web/API/WorkerGlobalScope/languagechange_event
 l10n:
   sourceCommit: 2c732b2ab1969d6ae887b865b11ba27de225f291

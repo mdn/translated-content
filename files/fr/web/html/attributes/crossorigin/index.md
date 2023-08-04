@@ -1,7 +1,6 @@
 ---
 title: "Attribut HTML : crossorigin"
 slug: Web/HTML/Attributes/crossorigin
-translation_of: Web/HTML/Attributes/crossorigin
 ---
 
 {{HTMLSidebar}}

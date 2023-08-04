@@ -1,11 +1,6 @@
 ---
 title: Функциональное выражение
 slug: Web/JavaScript/Reference/Operators/function
-tags:
-  - JavaScript
-  - Оператор
-  - Функция
-translation_of: Web/JavaScript/Reference/Operators/function
 ---
 
 {{jsSidebar("Operators")}}

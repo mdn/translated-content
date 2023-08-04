@@ -1,7 +1,6 @@
 ---
 title: API Push
 slug: Web/API/Push_API
-original_slug: Web/API/API_Push
 ---
 
 {{DefaultAPISidebar("Push API")}}{{SeeCompatTable}}

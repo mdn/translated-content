@@ -1,11 +1,6 @@
 ---
-title: '<abbr>: Элемент Аббревиатура'
+title: "<abbr>: Элемент Аббревиатура"
 slug: Web/HTML/Element/abbr
-tags:
-  - HTML
-  - Тег
-  - Элемент
-translation_of: Web/HTML/Element/abbr
 ---
 {{HTMLSidebar}}
 

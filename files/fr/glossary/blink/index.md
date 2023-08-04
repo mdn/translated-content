@@ -1,7 +1,6 @@
 ---
 title: Blink
 slug: Glossary/Blink
-translation_of: Glossary/Blink
 ---
 
 **Blink** est un moteur de rendu HTML libre basé sur {{Glossary("WebKit")}} et développé principalement par Google dans le cadre du projet Chromium (et par conséquent présent dans Chrome aussi). Plus particulièrement, Blink est une branche de la bibliothèque WebCore de WebKit qui gère l'agencement, le rendu et le {{Glossary("DOM")}}.

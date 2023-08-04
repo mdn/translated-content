@@ -1,7 +1,6 @@
 ---
 title: "<tr> : l'élément de ligne d'un tableau"
 slug: Web/HTML/Element/tr
-translation_of: Web/HTML/Element/tr
 ---
 
 {{HTMLSidebar}}

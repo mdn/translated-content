@@ -1,12 +1,6 @@
 ---
 title: Параметры по умолчанию
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Функции
-  - Экспериментальный
-translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 ---
 {{jsSidebar("Functions")}}
 

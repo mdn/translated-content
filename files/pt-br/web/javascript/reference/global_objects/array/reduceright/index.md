@@ -40,7 +40,7 @@ arr.reduceRight(callback[, initialValue])
 A chamada ao callback reduceRight irá parecer com uma chamada assim:
 
 ```js
-array.reduceRight(function(previousValue, currentValue, index, array) {
+array.reduceRight(function (previousValue, currentValue, index, array) {
   // ...
 });
 ```
@@ -52,9 +52,11 @@ Se o array é vazio e nenhum `initialValue` foi recebido, {{jsxref("Global_Objec
 Alguns exemplos de execuções da função e como será parecida a chamada:
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
-  return previousValue + currentValue;
-});
+[0, 1, 2, 3, 4].reduceRight(
+  function (previousValue, currentValue, index, array) {
+    return previousValue + currentValue;
+  },
+);
 ```
 
 O callback será invocado quatro vezes, com os argumentos e valores de retornos em cada chamada será como o seguinte:
@@ -71,7 +73,12 @@ O valor retornado pelo `reduceRight` será o valor retornado pela ultima chamada
 E se você também passou um `initialValue`, o resultado irá ser como a seguir:
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
+[0, 1, 2, 3, 4].reduceRight(function (
+  previousValue,
+  currentValue,
+  index,
+  array,
+) {
   return previousValue + currentValue;
 }, 10);
 ```
@@ -91,7 +98,7 @@ O valor retornado pelo `reduceRight` desta vez será, obviamente, `20`.
 ### Exemplo: Somando todos os valores presente em um array
 
 ```js
-var total = [0, 1, 2, 3].reduceRight(function(a, b) {
+var total = [0, 1, 2, 3].reduceRight(function (a, b) {
   return a + b;
 });
 // total == 6
@@ -100,8 +107,12 @@ var total = [0, 1, 2, 3].reduceRight(function(a, b) {
 ### Exemplo: Juntando um array de arrays
 
 ```js
-var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
-    return a.concat(b);
+var flattened = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+].reduceRight(function (a, b) {
+  return a.concat(b);
 }, []);
 // flattened is [4, 5, 2, 3, 0, 1]
 ```
@@ -113,16 +124,19 @@ var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
 ```js
 // Production steps of ECMA-262, Edition 5, 15.4.4.22
 // Reference: http://es5.github.io/#x15.4.4.22
-if ('function' !== typeof Array.prototype.reduceRight) {
-  Array.prototype.reduceRight = function(callback /*, initialValue*/) {
-    'use strict';
-    if (null === this || 'undefined' === typeof this) {
-      throw new TypeError('Array.prototype.reduce called on null or undefined' );
+if ("function" !== typeof Array.prototype.reduceRight) {
+  Array.prototype.reduceRight = function (callback /*, initialValue*/) {
+    "use strict";
+    if (null === this || "undefined" === typeof this) {
+      throw new TypeError("Array.prototype.reduce called on null or undefined");
     }
-    if ('function' !== typeof callback) {
-      throw new TypeError(callback + ' is not a function');
+    if ("function" !== typeof callback) {
+      throw new TypeError(callback + " is not a function");
     }
-    var t = Object(this), len = t.length >>> 0, k = len - 1, value;
+    var t = Object(this),
+      len = t.length >>> 0,
+      k = len - 1,
+      value;
     if (arguments.length >= 2) {
       value = arguments[1];
     } else {
@@ -130,7 +144,7 @@ if ('function' !== typeof Array.prototype.reduceRight) {
         k--;
       }
       if (k < 0) {
-        throw new TypeError('Reduce of empty array with no initial value');
+        throw new TypeError("Reduce of empty array with no initial value");
       }
       value = t[k--];
     }
@@ -146,10 +160,10 @@ if ('function' !== typeof Array.prototype.reduceRight) {
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                   | Comentário                                         |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.22', 'Array.prototype.reduceRight')}}                         | {{Spec2('ES5.1')}} | Definição inicial. Implementado em JavaScript 1.8. |
-| {{SpecName('ES6', '#sec-array.prototype.reduceright', 'Array.prototype.reduceRight')}} | {{Spec2('ES6')}}     |                                                    |
+| Especificação                                                                          | Status             | Comentário                                         |
+| -------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.4.4.22', 'Array.prototype.reduceRight')}}                 | {{Spec2('ES5.1')}} | Definição inicial. Implementado em JavaScript 1.8. |
+| {{SpecName('ES6', '#sec-array.prototype.reduceright', 'Array.prototype.reduceRight')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade com os navegadores
 

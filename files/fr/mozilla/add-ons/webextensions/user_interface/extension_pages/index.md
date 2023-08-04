@@ -1,7 +1,6 @@
 ---
 title: Extension pages
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 ---
 
 {{AddonSidebar()}}

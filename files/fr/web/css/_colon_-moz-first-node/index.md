@@ -1,7 +1,6 @@
 ---
 title: ":-moz-first-node"
 slug: Web/CSS/:-moz-first-node
-translation_of: Web/CSS/:-moz-first-node
 ---
 
 {{Non-standard_header}}{{CSSRef}}

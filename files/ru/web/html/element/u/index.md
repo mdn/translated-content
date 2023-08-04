@@ -1,7 +1,6 @@
 ---
-title: '<u>: Элемент слабой аннотации (подчёркивание)'
+title: "<u>: Элемент слабой аннотации (подчёркивание)"
 slug: Web/HTML/Element/u
-translation_of: Web/HTML/Element/u
 ---
 
 {{HTMLSidebar}}

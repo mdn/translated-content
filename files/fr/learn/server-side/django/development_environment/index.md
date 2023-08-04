@@ -1,7 +1,6 @@
 ---
 title: Mettre en place un environnement de développement Django
 slug: Learn/Server-side/Django/development_environment
-translation_of: Learn/Server-side/Django/development_environment
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}

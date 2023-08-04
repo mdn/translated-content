@@ -1,17 +1,6 @@
 ---
 title: HTML
 slug: Web/HTML
-tags:
-  - HTML
-  - HTML5
-  - Landing
-  - Web
-  - Веб
-  - Главная
-  - Справка
-  - гипертекст
-  - лендинг
-translation_of: Web/HTML
 ---
 {{HTMLSidebar}}
 

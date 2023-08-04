@@ -1,7 +1,6 @@
 ---
 title: Zones live ARIA
 slug: Web/Accessibility/ARIA/ARIA_Live_Regions
-translation_of: Web/Accessibility/ARIA/ARIA_Live_Regions
 ---
 
 ## Introduction

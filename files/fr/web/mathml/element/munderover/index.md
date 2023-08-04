@@ -1,7 +1,6 @@
 ---
 title: <munderover>
 slug: Web/MathML/Element/munderover
-translation_of: Web/MathML/Element/munderover
 ---
 
 {{MathMLRef()}}

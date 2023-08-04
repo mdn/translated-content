@@ -1,7 +1,6 @@
 ---
 title: translate
 slug: Web/XPath/Functions/translate
-translation_of: Web/XPath/Functions/translate
 ---
 
 {{ XsltRef() }}

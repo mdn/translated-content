@@ -1,7 +1,6 @@
 ---
 title: Element.openOrClosedShadowRoot
 slug: Mozilla/Add-ons/WebExtensions/API/dom/openOrClosedShadowRoot
-original_slug: Web/API/Element/openOrClosedShadowRoot
 ---
 
 {{APIRef("Shadow DOM")}}{{non-standard_header}}

@@ -1,7 +1,6 @@
 ---
 title: Используем Web Audio API
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
-translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
 ---
 
 [Web Audio API](/ru/docs/Web_Audio_API) обеспечивает простой, но мощный механизм реализации и управления аудио-контентом внутри web приложения. Это позволяет разрабатывать сложные аудио миксины, эффекты и т.д. В этой статье мы постараемся объяснить основы использования Web Audio API, посредством пары простых примеров.
@@ -108,7 +107,7 @@ This would create an audio graph like this:
 Now that the audio graph is set up, we can set property values and invoke methods on our audio nodes to adjust the effect they have on the sound. In this simple example we can set a specific pitch in hertz for our oscillator, set it to a specific type, and tell our sound to play like so:
 
 ```js
-oscillator.type = 'sine'; // sine wave — other values are 'square', 'sawtooth', 'triangle' and 'custom'
+oscillator.type = "sine"; // sine wave — other values are 'square', 'sawtooth', 'triangle' and 'custom'
 oscillator.frequency.value = 2500; // value in hertz
 oscillator.start();
 ```
@@ -127,7 +126,7 @@ var initialVol = 0.5;
 
 // set options for the oscillator
 
-oscillator.type = 'sine'; // sine wave — other values are 'square', 'sawtooth', 'triangle' and 'custom'
+oscillator.type = "sine"; // sine wave — other values are 'square', 'sawtooth', 'triangle' and 'custom'
 oscillator.frequency.value = initialFreq; // value in hertz
 oscillator.start();
 
@@ -148,13 +147,23 @@ var CurY;
 document.onmousemove = updatePage;
 
 function updatePage(e) {
-    CurX = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-    CurY = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+  CurX = window.Event
+    ? e.pageX
+    : event.clientX +
+      (document.documentElement.scrollLeft
+        ? document.documentElement.scrollLeft
+        : document.body.scrollLeft);
+  CurY = window.Event
+    ? e.pageY
+    : event.clientY +
+      (document.documentElement.scrollTop
+        ? document.documentElement.scrollTop
+        : document.body.scrollTop);
 
-    oscillator.frequency.value = (CurX/WIDTH) * maxFreq;
-    gainNode.gain.value = (CurY/HEIGHT) * maxVol;
+  oscillator.frequency.value = (CurX / WIDTH) * maxFreq;
+  gainNode.gain.value = (CurY / HEIGHT) * maxVol;
 
-    canvasDraw();
+  canvasDraw();
 }
 ```
 
@@ -163,28 +172,44 @@ function updatePage(e) {
 A `canvasDraw()` function is also invoked after each mouse movement, this draws a little cluster of circles where the mouse pointer currently is, the size and colour of which are based on the frequency/gain values.
 
 ```js
-function random(number1,number2) {
-  var randomNo = number1 + (Math.floor(Math.random() * (number2 - number1)) + 1);
+function random(number1, number2) {
+  var randomNo =
+    number1 + (Math.floor(Math.random() * (number2 - number1)) + 1);
   return randomNo;
 }
 
-var canvas = document.querySelector('.canvas');
+var canvas = document.querySelector(".canvas");
 canvas.width = WIDTH;
 canvas.height = HEIGHT;
 
-var canvasCtx = canvas.getContext('2d');
+var canvasCtx = canvas.getContext("2d");
 
 function canvasDraw() {
   rX = CurX;
   rY = CurY;
-  rC = Math.floor((gainNode.gain.value/maxVol)*30);
+  rC = Math.floor((gainNode.gain.value / maxVol) * 30);
 
   canvasCtx.globalAlpha = 0.2;
 
-  for(i=1;i<=15;i=i+2) {
+  for (i = 1; i <= 15; i = i + 2) {
     canvasCtx.beginPath();
-    canvasCtx.fillStyle = 'rgb(' + 100+(i*10) + ',' + Math.floor((gainNode.gain.value/maxVol)*255) + ',' + Math.floor((oscillator.frequency.value/maxFreq)*255) + ')';
-    canvasCtx.arc(rX+random(0,50),rY+random(0,50),rC/2+i,(Math.PI/180)*0,(Math.PI/180)*360,false);
+    canvasCtx.fillStyle =
+      "rgb(" +
+      100 +
+      i * 10 +
+      "," +
+      Math.floor((gainNode.gain.value / maxVol) * 255) +
+      "," +
+      Math.floor((oscillator.frequency.value / maxFreq) * 255) +
+      ")";
+    canvasCtx.arc(
+      rX + random(0, 50),
+      rY + random(0, 50),
+      rC / 2 + i,
+      (Math.PI / 180) * 0,
+      (Math.PI / 180) * 360,
+      false,
+    );
     canvasCtx.fill();
     canvasCtx.closePath();
   }
@@ -196,10 +221,10 @@ function canvasDraw() {
 When the Mute button is pressed, the function seen below is invoked, which disconnects the gain node from the destination node, effectively breaking the graph up so no sound can be produced. Pressing it again reverses the effect.
 
 ```js
-var mute = document.querySelector('.mute');
+var mute = document.querySelector(".mute");
 
-mute.onclick = function() {
-  if(mute.id == "") {
+mute.onclick = function () {
+  if (mute.id == "") {
     gainNode.disconnect(audioCtx.destination);
     mute.id = "activated";
     mute.innerHTML = "Unmute";
@@ -208,7 +233,7 @@ mute.onclick = function() {
     mute.id = "";
     mute.innerHTML = "Mute";
   }
-}
+};
 ```
 
 ## Other node options
@@ -229,18 +254,18 @@ This object must then be fed a mathmatically defined wave shape, which is applie
 
 ```js
 function makeDistortionCurve(amount) {
-  var k = typeof amount === 'number' ? amount : 50,
+  var k = typeof amount === "number" ? amount : 50,
     n_samples = 44100,
     curve = new Float32Array(n_samples),
     deg = Math.PI / 180,
     i = 0,
     x;
-  for ( ; i < n_samples; ++i ) {
-    x = i * 2 / n_samples - 1;
-    curve[i] = ( 3 + k ) * x * 20 * deg / ( Math.PI + k * Math.abs(x) );
+  for (; i < n_samples; ++i) {
+    x = (i * 2) / n_samples - 1;
+    curve[i] = ((3 + k) * x * 20 * deg) / (Math.PI + k * Math.abs(x));
   }
   return curve;
-};
+}
 ```
 
 In the Voice-change-O-matic demo, we connect the `distortion` node up to the audio graph, then apply this to the distortion node when needed:

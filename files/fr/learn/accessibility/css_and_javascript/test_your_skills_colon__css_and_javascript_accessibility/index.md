@@ -1,7 +1,6 @@
 ---
 title: "Testez vos compétences : l'accessibilité en CSS et JavaScript"
-slug: >-
-  Learn/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility
+slug: Learn/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility
 ---
 
 {{LearnSidebar}}

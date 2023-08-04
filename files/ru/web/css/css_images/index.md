@@ -1,10 +1,6 @@
 ---
 title: CSS Images
 slug: Web/CSS/CSS_images
-tags:
-  - CSS Images
-  - CSS руководство
-translation_of: Web/CSS/CSS_Images
 ---
 
 {{CSSRef}}

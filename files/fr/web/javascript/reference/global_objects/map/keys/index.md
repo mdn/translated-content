@@ -1,7 +1,6 @@
 ---
 title: Map.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Map/keys
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/keys
 ---
 
 {{JSRef}}

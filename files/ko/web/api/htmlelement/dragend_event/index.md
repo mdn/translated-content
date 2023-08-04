@@ -1,7 +1,6 @@
 ---
 title: "Document: dragend 이벤트"
 slug: Web/API/HTMLElement/dragend_event
-original_slug: Web/API/Document/dragend_event
 ---
 
 {{APIRef}}

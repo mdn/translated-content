@@ -1,7 +1,6 @@
 ---
 title: 能力と制約と設定
 slug: Web/API/Media_Capture_and_Streams_API/Constraints
-original_slug: Web/API/Media_Streams_API/Constraints
 l10n:
   sourceCommit: 19dbdc2139ab1c68651da2b9338061d64567665d
 ---

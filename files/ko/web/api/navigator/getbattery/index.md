@@ -1,7 +1,6 @@
 ---
 title: window.navigator.battery
 slug: Web/API/Navigator/getBattery
-original_slug: Web/API/Navigator/battery
 ---
 
 {{ Apiref() }}

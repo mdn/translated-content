@@ -1,7 +1,6 @@
 ---
 title: cookies.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/remove
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/remove
 ---
 
 {{AddonSidebar()}}

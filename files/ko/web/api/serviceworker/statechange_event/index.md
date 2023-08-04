@@ -1,7 +1,6 @@
 ---
 title: ServiceWorker.onstatechange
 slug: Web/API/ServiceWorker/statechange_event
-original_slug: Web/API/ServiceWorker/onstatechange
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

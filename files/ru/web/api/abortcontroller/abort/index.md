@@ -1,7 +1,6 @@
 ---
 title: AbortController.abort()
 slug: Web/API/AbortController/abort
-translation_of: Web/API/AbortController/abort
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}

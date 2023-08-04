@@ -1,7 +1,6 @@
 ---
 title: Atomics.add()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/add
 ---
 
 {{JSRef}}

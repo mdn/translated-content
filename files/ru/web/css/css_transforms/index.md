@@ -1,14 +1,6 @@
 ---
 title: CSS Transforms
 slug: Web/CSS/CSS_transforms
-page-type: css-module
-tags:
-  - CSS
-  - CSS Transforms
-  - Guide
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Transforms
 ---
 
 {{CSSRef}}

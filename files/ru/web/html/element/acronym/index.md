@@ -1,9 +1,6 @@
 ---
 title: <acronym>
 slug: Web/HTML/Element/acronym
-tags:
-  - Obsolete
-translation_of: Web/HTML/Element/acronym
 ---
 
 ## Аннотация

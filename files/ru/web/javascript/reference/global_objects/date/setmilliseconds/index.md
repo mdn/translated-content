@@ -1,13 +1,6 @@
 ---
 title: Date.prototype.setMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
 ---
 
 {{JSRef("Global_Objects", "Date")}}

@@ -1,7 +1,6 @@
 ---
 title: String.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/indexOf
 ---
 
 {{JSRef("Objetos_globales", "String")}}

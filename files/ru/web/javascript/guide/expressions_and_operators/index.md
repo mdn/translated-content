@@ -1,13 +1,6 @@
 ---
 title: Выражения и операторы
 slug: Web/JavaScript/Guide/Expressions_and_operators
-tags:
-  - Beginner
-  - Expressions
-  - Guide
-  - Operators
-  - Начинающий
-translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}

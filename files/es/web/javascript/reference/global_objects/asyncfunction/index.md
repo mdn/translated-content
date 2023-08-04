@@ -1,7 +1,6 @@
 ---
 title: Funciones asíncronas
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Funcionesasíncronas
 ---
 
 {{JSRef}}

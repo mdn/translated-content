@@ -1,8 +1,7 @@
 ---
 title: 学習フォーラム
 slug: MDN/Community/Learn_forum
-original_slug: MDN/Contribute/Help_beginners
-i10n:
+l10n:
   sourceCommit: 4c6b993ad0d43bc679688a3488e13a4ec0b2c3ec
 ---
 

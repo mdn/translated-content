@@ -1,7 +1,6 @@
 ---
 title: FocusEvent
 slug: Web/API/FocusEvent
-translation_of: Web/API/FocusEvent
 ---
 
 {{APIRef("DOM Events")}}{{SeeCompatTable}}

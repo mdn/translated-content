@@ -1,18 +1,6 @@
 ---
 title: AudioParam
 slug: Web/API/AudioParam
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Interface
-  - NeedsTranslation
-  - Parameter
-  - Reference
-  - TopicStub
-  - Web Audio API
-  - sound
-translation_of: Web/API/AudioParam
 ---
 
 {{APIRef("Web Audio API")}}
@@ -81,9 +69,7 @@ compressor.release.setValueAtTime(0.25, audioCtx.currentTime);
 
 ## Specifications
 
-| Specification                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#AudioParam', 'AudioParam')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

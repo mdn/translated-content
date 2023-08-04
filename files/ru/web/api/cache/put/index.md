@@ -1,7 +1,6 @@
 ---
 title: Cache.put()
 slug: Web/API/Cache/put
-translation_of: Web/API/Cache/put
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
@@ -11,12 +10,12 @@ translation_of: Web/API/Cache/put
 Often, you will just want to {{domxref("WindowOrWorkerGlobalScope.fetch","fetch()")}} one or more requests, then add the result straight to your cache. In such cases you are better off using {{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}}, as they are shorthand functions for one or more of these operations.
 
 ```js
-fetch(url).then(function(response) {
+fetch(url).then(function (response) {
   if (!response.ok) {
-    throw new TypeError('Bad response status');
+    throw new TypeError("Bad response status");
   }
   return cache.put(url, response);
-})
+});
 ```
 
 > **Примечание:** `put()` will overwrite any key/value pair previously stored in the cache that matches the request.
@@ -28,7 +27,7 @@ fetch(url).then(function(response) {
 ## Syntax
 
 ```js
-cache.put(request, response).then(function() {
+cache.put(request, response).then(function () {
   // request/response pair has been added to the cache
 });
 ```
@@ -56,24 +55,26 @@ This example is from the MDN [sw-test example](https://github.com/mdn/sw-test/) 
 
 ```js
 var response;
-var cachedResponse = caches.match(event.request).catch(function() {
-  return fetch(event.request);
-}).then(function(r) {
-  response = r;
-  caches.open('v1').then(function(cache) {
-    cache.put(event.request, response);
+var cachedResponse = caches
+  .match(event.request)
+  .catch(function () {
+    return fetch(event.request);
+  })
+  .then(function (r) {
+    response = r;
+    caches.open("v1").then(function (cache) {
+      cache.put(event.request, response);
+    });
+    return response.clone();
+  })
+  .catch(function () {
+    return caches.match("/sw-test/gallery/myLittleVader.jpg");
   });
-  return response.clone();
-}).catch(function() {
-  return caches.match('/sw-test/gallery/myLittleVader.jpg');
-});
 ```
 
 ## Specifications
 
-| Specification                                                                        | Status                               | Comment             |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#dom-cache-put', 'Cache: put')}} | {{Spec2('Service Workers')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

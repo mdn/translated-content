@@ -1,9 +1,6 @@
 ---
 title: Время загрузки страницы и ресурсов
 slug: Web/Performance/Navigation_and_resource_timings
-tags:
-  - Производительность
-translation_of: Web/Performance/Navigation_and_resource_timings
 ---
 
 **Тайминги навигации (Navigation timings)** - это показатели, указывающие временные метки, в которые произошли события навигации. **Тайминги ресурсов (Resource timings)** - это детальные показатели по времени загрузки ресурсов.

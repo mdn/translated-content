@@ -1,7 +1,6 @@
 ---
 title: Atributos
 slug: Web/HTML/Attributes
-original_slug: HTML/Attributes
 ---
 
 | Nome do Atributo | Elementos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Descrição                                                                                                                                                                                                                                                                                                        |

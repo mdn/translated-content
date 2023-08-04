@@ -1,12 +1,6 @@
 ---
 title: Дата
 slug: Web/JavaScript/Reference/Global_Objects/Date
-tags:
-  - Date
-  - JavaScript
-  - Reference
-  - время
-translation_of: Web/JavaScript/Reference/Global_Objects/Date
 ---
 {{JSRef("Global_Objects", "Date")}}
 

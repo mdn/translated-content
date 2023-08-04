@@ -1,21 +1,6 @@
 ---
 title: Узконаправленные функции CSS
 slug: Learn/CSS/Building_blocks/Advanced_styling_effects
-tags:
-  - Beginner
-  - Blend
-  - Boxes
-  - CSS
-  - Filters
-  - Styling
-  - effects
-  - Контейнеры
-  - Начинающий
-  - Смешивание
-  - Формы
-  - фигуры
-  - фильтры
-translation_of: Learn/CSS/Building_blocks/Advanced_styling_effects
 ---
 
 {{LearnSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Tutoriel canvas
 slug: Web/API/Canvas_API/Tutorial
-translation_of: Web/API/Canvas_API/Tutorial
 ---
 
 {{DefaultAPISidebar("Canvas API")}}

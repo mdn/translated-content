@@ -40,47 +40,48 @@ Os modos de mistura devem ser definidos na mesma ordem que a propriedade CSS {{c
 ```html hidden
 <div id="div"></div>
 <select id="select">
-    <option>normal</option>
-    <option>multiply</option>
-    <option selected>screen</option>
-    <option>overlay</option>
-    <option>darken</option>
-    <option>lighten</option>
-    <option>color-dodge</option>
-    <option>color-burn</option>
-    <option>hard-light</option>
-    <option>soft-light</option>
-    <option>difference</option>
-    <option>exclusion</option>
-    <option>hue</option>
-    <option>saturation</option>
-    <option>color</option>
-    <option>luminosity</option>
+  <option>normal</option>
+  <option>multiply</option>
+  <option selected>screen</option>
+  <option>overlay</option>
+  <option>darken</option>
+  <option>lighten</option>
+  <option>color-dodge</option>
+  <option>color-burn</option>
+  <option>hard-light</option>
+  <option>soft-light</option>
+  <option>difference</option>
+  <option>exclusion</option>
+  <option>hue</option>
+  <option>saturation</option>
+  <option>color</option>
+  <option>luminosity</option>
 </select>
 ```
 
 ```css hidden
 #div {
-    width: 300px;
-    height: 300px;
-    background: url('br.png'),url('tr.png');
-    background-blend-mode: screen;
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: screen;
 }
 ```
 
 ```js hidden
-document.getElementById("select").onchange = function(event) {
-    document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
-}
-console.log(document.getElementById('div'));
+document.getElementById("select").onchange = function (event) {
+  document.getElementById("div").style.backgroundBlendMode =
+    document.getElementById("select").selectedOptions[0].innerHTML;
+};
+console.log(document.getElementById("div"));
 ```
 
 {{ EmbedLiveSample('Examples', "330", "330") }}
 
 ## Especificações
 
-| Especificação                                                                                                | Status                               | Comentário         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
+| Especificação                                                                    | Status                     | Comentário         |
+| -------------------------------------------------------------------------------- | -------------------------- | ------------------ |
 | {{ SpecName('Compositing', '#background-blend-mode', 'background-blend-mode') }} | {{ Spec2('Compositing') }} | Initial definition |
 
 ## Compatibilidade com navegadores
