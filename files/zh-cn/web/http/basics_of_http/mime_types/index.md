@@ -13,7 +13,7 @@ slug: Web/HTTP/Basics_of_HTTP/MIME_types
 
 ## MIME 类型的结构
 
-MIME 类型通常仅包含两个部分：*类型*（type）和*子类型*（subtype），中间由斜杠 `/` 分割，中间没有空白字符：
+MIME 类型通常仅包含两个部分：_类型_（type）和*子类型*（subtype），中间由斜杠 `/` 分割，中间没有空白字符：
 
 ```plain
 type/subtype
@@ -281,7 +281,7 @@ Content-Range: bytes 300-400/1270
 
 ## MIME 嗅探
 
-在缺失 MIME 类型或客户端认为文件设置了错误的 MIME 类型时，浏览器可能会通过查看资源来进行*MIME 嗅探*。
+在缺失 MIME 类型或客户端认为文件设置了错误的 MIME 类型时，浏览器可能会通过查看资源来进行 _MIME 嗅探_。
 
 每一个浏览器在不同的情况下会执行不同的操作。（例如，Safari 会在发送的 MIME 类型不合适时查看文件的扩展名。）由于某些 MIME 类型可能代表可执行内容，会存在一些安全问题。服务器可以通过发送 {{HTTPHeader("X-Content-Type-Options")}} 标头来阻止 MIME 嗅探。
 
