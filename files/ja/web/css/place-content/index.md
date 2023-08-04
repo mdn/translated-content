@@ -1,16 +1,8 @@
 ---
 title: place-content
 slug: Web/CSS/place-content
-tags:
-  - CSS
-  - CSS ボックス配置
-  - CSS プロパティ
-  - リファレンス
-  - place-content
-  - recipe:css-shorthand-property
-browser-compat: css.properties.place-content
-translation_of: Web/CSS/place-content
 ---
+
 {{CSSRef}}
 
 **`place-content`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、ブロック方向とインライン方向の内容物の配置 (すなわち {{CSSxRef("align-content")}} および {{CSSxRef("justify-content")}}) を、[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)や[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などのレイアウトシステムにおいて、一度に指定することができます。
@@ -56,7 +48,7 @@ place-content: unset;
 
 最初の値は {{CSSxRef("align-content")}} プロパティの値で、2 番目の値は {{CSSxRef("justify-content")}} の値です。
 
-> **Note:** 2 番目の値がない場合、最初の値に両方に有効な値が設定されていれば、両方に使用されます。どちらかに無効な値であれば、値自体が無効になります。
+> **メモ:** 2 番目の値がない場合、最初の値に両方に有効な値が設定されていれば、両方に使用されます。どちらかに無効な値であれば、値自体が無効になります。
 
 ### 値
 

@@ -1,16 +1,11 @@
 ---
-title: HTMLTableElement.tBodies
+title: "HTMLTableElement: tBodies プロパティ"
+short-title: tBodies
 slug: Web/API/HTMLTableElement/tBodies
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.HTMLTableElement.tBodies
-translation_of: Web/API/HTMLTableElement/tBodies
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.tBodies`** は読み取り専用のプロパティで、生きた {{domxref("HTMLCollection")}} で {{htmlElement("table")}} の本体を返します。
@@ -29,11 +24,9 @@ translation_of: Web/API/HTMLTableElement/tBodies
 
 上記の HTML から生成される HTML DOM には、 HTML ソースにタグが含まれていなくても、 {{HTMLElement("tbody")}} 要素が存在しています。
 
-## 構文
+## 値
 
-```js
-HTMLCollectionObject = table.tBodies
-```
+生きた {{domxref("HTMLCollection")}} です。
 
 ## 例
 

@@ -1,12 +1,8 @@
 ---
 title: 'TypeError: can''t define property "x": "obj" is not extensible'
 slug: Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 A exceção de modo strict do Javascript "can't define property "x": "obj" is not extensible" ocorre

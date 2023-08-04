@@ -1,12 +1,8 @@
 ---
 title: <time-percentage>
 slug: Web/CSS/time-percentage
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/time-percentage
 ---
+
 {{CSSRef}}
 
 Le type de donnée **`<time-percentage>`** représente une valeur qui peut être de type {{Cssxref("time")}} ou une valeur qui peut être de type {{Cssxref("percentage")}}.
@@ -21,11 +17,8 @@ Lorsqu'une valeur de type `<time-percentage>` est autorisée dans une déclarati
 
 ## Spécifications
 
-| Spécification                                                                                        | État                             | Commentaires                                              |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------- |
-| {{SpecName('CSS4 Values', '#mixed-percentages', '&lt;time-percentage&gt;')}} | {{Spec2('CSS4 Values')}} |                                                           |
-| {{SpecName('CSS3 Values', '#mixed-percentages', '&lt;time-percentage&gt;')}} | {{Spec2('CSS3 Values')}} | Définition du type `<time-percentage>`. Ajout de `calc()` |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.time-percentage")}}
+{{Compat}}

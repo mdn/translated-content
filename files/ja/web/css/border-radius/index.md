@@ -1,15 +1,8 @@
 ---
 title: border-radius
 slug: Web/CSS/border-radius
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-radius
-translation_of: Web/CSS/border-radius
 ---
+
 {{CSSRef}}
 
 **`border-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の外側の角を丸めます。1 つの半径を設定すると円の角になり、2 つの半径を設定すると楕円の角になります。
@@ -20,7 +13,7 @@ translation_of: Web/CSS/border-radius
 
 `border-radius` プロパティは {{cssxref("border-collapse")}} が `collapse` の table 要素には適用されません。
 
-> **Note:** 他の一括指定プロパティと同様、個別のサブプロパティは `border-radius:0 0 inherit inherit` のように既存の定義を部分的に上書きして継承させることはできません。代わりに、それぞれの個別指定プロパティを使用する必要があります。
+> **メモ:** 他の一括指定プロパティと同様、個別のサブプロパティは `border-radius:0 0 inherit inherit` のように既存の定義を部分的に上書きして継承させることはできません。代わりに、それぞれの個別指定プロパティを使用する必要があります。
 
 ## 構成要素のプロパティ
 

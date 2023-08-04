@@ -1,14 +1,8 @@
 ---
-title: 'null'
+title: "null"
 slug: Web/JavaScript/Reference/Operators/null
-tags:
-  - JavaScript
-  - Littéral
-  - Primitive
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/null
-original_slug: Web/JavaScript/Reference/Global_Objects/null
 ---
+
 {{jsSidebar("Objects")}}
 
 La valeur **`null`** est un littéral JavaScript représentant la nullité au sens où aucune valeur pour l'objet n'est présente. C'est une des valeurs primitives de JavaScript.
@@ -18,7 +12,7 @@ La valeur **`null`** est un littéral JavaScript représentant la nullité au se
 ## Syntaxe
 
 ```js
-null
+null;
 ```
 
 ## Description
@@ -28,7 +22,7 @@ La valeur `null` est un littéral (et non pas une propriété de l'objet global 
 ```js
 // toto n'existe pas, n'a pas été défini et n'a jamais été initialisé
 toto;
-"ReferenceError: toto is not defined"
+("ReferenceError: toto is not defined");
 
 // toto existe mais n'a ni type ni valeur
 var toto = null;
@@ -38,29 +32,24 @@ console.log(toto); // null
 ### Différence entre `null` et `undefined`
 
 ```js
-typeof null;           // "object" (pas null pour des raisons historiques)
-typeof undefined;      // "undefined"
-null === undefined;    // false
-null  == undefined;    // true
-null === null;         // true
-null  == null;         // true
-!null;                 // true
-isNaN(1 + null);       // false
-isNaN(1 + undefined);  // true
+typeof null; // "object" (pas null pour des raisons historiques)
+typeof undefined; // "undefined"
+null === undefined; // false
+null == undefined; // true
+null === null; // true
+null == null; // true
+!null; // true
+isNaN(1 + null); // false
+isNaN(1 + undefined); // true
 ```
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-4.3.11', 'null value')}}         | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-null-value', 'null value')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-null-value', 'null value')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.null")}}
+{{Compat}}
 
 ## Voir aussi
 

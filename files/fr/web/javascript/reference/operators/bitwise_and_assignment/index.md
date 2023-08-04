@@ -1,14 +1,8 @@
 ---
 title: Affectation après ET binaire (&=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.bitwise_and_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur d'affectation après ET binaire (`&=`) utilise la représentation binaire des deux opérandes, applique un ET logique entre chaque puis affecte le résultat de l'opération à la variable représentée par l'opérande gauche.
@@ -18,8 +12,8 @@ L'opérateur d'affectation après ET binaire (`&=`) utilise la représentation b
 ## Syntaxe
 
 ```js
-Opérateur : x &= y
-Signification :  x  = x & y
+Opérateur: x &= y;
+Signification: x = x & y;
 ```
 
 ## Exemples

@@ -1,13 +1,8 @@
 ---
 title: NDEFRecord.data
 slug: Web/API/NDEFRecord/data
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-browser-compat: api.NDEFRecord.data
-translation_of: Web/API/NDEFRecord/data
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 **`data`** は {{DOMxRef("NDEFRecord")}} インターフェイスのプロパティで、このレコードのペイロードの生のバイト列が入った {{jsxref("DataView")}} を返します。

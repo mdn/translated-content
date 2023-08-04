@@ -1,15 +1,8 @@
 ---
 title: ReadableStreamDefaultController.error()
 slug: Web/API/ReadableStreamDefaultController/error
-tags:
-  - API
-  - Error
-  - Method
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
-translation_of: Web/API/ReadableStreamDefaultController/error
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultController")}} 接口的 **`error()`** 方法会导致未来任何与关联流的交互出错。
@@ -18,7 +11,7 @@ translation_of: Web/API/ReadableStreamDefaultController/error
 
 ## 语法
 
-```js
+```js-nolint
 error(e)
 ```
 
@@ -47,3 +40,8 @@ error(e)
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStreamDefaultController")}}

@@ -1,13 +1,8 @@
 ---
-title: '-moz-orient'
+title: "-moz-orient"
 slug: Web/CSS/-moz-orient
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/-moz-orient
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-moz-orient`** définit l'orientation de l'élément sur lequel elle est appliquée.
@@ -37,15 +32,12 @@ La propriété `moz-orient` est définie avec un mot-clé parmi ceux de la liste
 
 ```html
 <p>
-  La barre de progression suivante est
-  horizontale (le comportement par défaut) :
+  La barre de progression suivante est horizontale (le comportement par défaut)
+  :
 </p>
 <progress max="100" value="75"></progress>
 
-<p>
-  La barre de progression suivante
-  est verticale :
-</p>
+<p>La barre de progression suivante est verticale :</p>
 <progress class="vert" max="100" value="75"></progress>
 ```
 
@@ -71,7 +63,7 @@ Bien que [proposée](https://lists.w3.org/Archives/Public/www-style/2014Jun/0396
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-moz-orient")}}
+{{Compat}}
 
 ## Voir aussi
 

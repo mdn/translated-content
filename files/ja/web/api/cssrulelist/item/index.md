@@ -1,14 +1,8 @@
 ---
 title: CSSRuleList.item()
 slug: Web/API/CSSRuleList/item
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - item
-  - CSSRuleList
-browser-compat: api.CSSRuleList.item
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`item()`** は {{domxref("CSSRuleList")}} インターフェイスのメソッドで、 `index` で指定された {{domxref("CSSRule")}} オブジェクトを返します。指定された `index` が存在しなければ `null` を返します。

@@ -1,17 +1,8 @@
 ---
 title: webRequest.filterResponseData()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - filterResponseData
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData
 ---
+
 {{AddonSidebar()}}
 
 Utilisez cette fonction pour créer un objet {{WebExtAPIRef("webRequest.StreamFilter")}} pour une requête particulière.
@@ -23,8 +14,8 @@ Pour utiliser cette API, vous devez avoir la [permission de l'API](/fr/Add-ons/W
 
 ```js
 var filter = browser.webRequest.filterResponseData(
-  requestId       // string
-)
+  requestId, // string
+);
 ```
 
 ### Paramètres
@@ -38,7 +29,7 @@ Un objet {{WebExtAPIRef("webRequest.StreamFilter")}} que vous pouvez utiliser po
 
 ## Exemples
 
-Cet exemple, tiré de l'extension [http-response](https://github.com/mdn/webextensions-examples/tree/master/http-response), crée un filtre dans  {{WebExtAPIRef("webRequest.onBeforeRequest")}} et l'utilise pour modifier la réponse :
+Cet exemple, tiré de l'extension [http-response](https://github.com/mdn/webextensions-examples/tree/master/http-response), crée un filtre dans {{WebExtAPIRef("webRequest.onBeforeRequest")}} et l'utilise pour modifier la réponse :
 
 ```js
 function listener(details) {
@@ -46,27 +37,27 @@ function listener(details) {
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
 
-  filter.ondata = event => {
-    let str = decoder.decode(event.data, {stream: true});
+  filter.ondata = (event) => {
+    let str = decoder.decode(event.data, { stream: true });
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.
-    str = str.replace(/Example/g, 'WebExtension Example');
+    str = str.replace(/Example/g, "WebExtension Example");
     filter.write(encoder.encode(str));
     filter.disconnect();
-  }
+  };
 
   return {};
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.com/*"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.com/*"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.filterResponseData", 10)}}
+{{Compat}}

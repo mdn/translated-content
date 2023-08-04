@@ -1,18 +1,6 @@
 ---
 title: MediaQueryList.media
 slug: Web/API/MediaQueryList/media
-tags:
-  - API
-  - CSSOM View
-  - Media
-  - Media Queries
-  - MediaQueryList
-  - Property
-  - Reference
-  - プロパティ
-  - メディア
-  - メディアクエリー
-translation_of: Web/API/MediaQueryList/media
 ---
 
 {{APIRef("CSSOM")}}

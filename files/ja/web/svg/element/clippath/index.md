@@ -1,13 +1,8 @@
 ---
 title: <clipPath>
 slug: Web/SVG/Element/clipPath
-tags:
-  - 要素
-  - リファレンス
-  - SVG
-browser-compat: svg.elements.clipPath
-translation_of: Web/SVG/Element/clipPath
 ---
+
 {{SVGRef}}
 
 **`<clipPath>`** は [SVG](/ja/docs/Web/SVG) の要素で、 {{SVGAttr("clip-path")}} プロパティで使用されるクリッピングパスを定義します。
@@ -22,22 +17,22 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 100 100">
-  <clipPath id="myClip">
+  <clipPath id="myClip">
     <!--
       Everything outside the circle will be
       clipped and therefore invisible.
     -->
-    <circle cx="40" cy="35" r="35" />
-  </clipPath>
+    <circle cx="40" cy="35" r="35" />
+  </clipPath>
 
   <!-- The original black heart, for reference -->
-  <path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
+  <path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
 
   <!--
     Only the portion of the red heart
     inside the clip circle is visible.
   -->
-  <use clip-path="url(#myClip)" xlink:href="#heart" fill="red" />
+  <use clip-path="url(#myClip)" xlink:href="#heart" fill="red" />
 </svg>
 ```
 
@@ -62,7 +57,7 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("clipPathUnits")}}
   - : `<clipPath>` 要素の内容物の座標系を定義します。
-    *値の型*: `userSpaceOnUse`|`objectBoundingBox` ; *既定値*: `userSpaceOnUse`; *アニメーション*: **可**
+    *値の型*: `userSpaceOnUse`|`objectBoundingBox` ; *既定値*: `userSpaceOnUse`; *アニメーション*: **可**
 
 ### グローバル属性
 

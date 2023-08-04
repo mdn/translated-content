@@ -1,17 +1,8 @@
 ---
 title: DOMPoint.z
 slug: Web/API/DOMPointReadOnly/z
-tags:
-  - API
-  - Coordonnées
-  - DOM
-  - Géométrie
-  - Point
-  - Propriétés
-  - Quadrilatère
-  - z
-translation_of: Web/API/DOMPointReadOnly/z
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 La propriété en lecture seule **`z`** de l'interface **`DOMPointReadOnly`** représente la coordonnée z d'un point.
@@ -30,13 +21,11 @@ Un double.
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                                       | Commentaire                                        |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------- |
-| {{SpecName('Geometry Interfaces', '#dom-dompointreadonly-z', 'z')}} | {{Spec2('Geometry Interfaces')}} | La dernière version de la spécification est un ED. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMPointReadOnly.z")}}
+{{Compat}}
 
 ## Voir aussi
 

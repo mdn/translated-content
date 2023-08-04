@@ -1,13 +1,10 @@
 ---
-title: Node.parentElement
+title: "Node: parentElement プロパティ"
 slug: Web/API/Node/parentElement
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.parentElement
-translation_of: Web/API/Node/parentElement
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
+
 {{APIRef("DOM")}}
 
 **`parentElement`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、この DOM ノードの親である要素 ({{DOMxRef("Element")}}) を返します。このノードに親ノードがないか、親が DOM の {{DOMxRef("Element")}} でない場合は `null` を返します。
@@ -20,7 +17,7 @@ translation_of: Web/API/Node/parentElement
 
 ```js
 if (node.parentElement) {
-    node.parentElement.style.color = "red";
+  node.parentElement.style.color = "red";
 }
 ```
 

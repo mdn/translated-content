@@ -1,9 +1,8 @@
 ---
 title: Constructeur Uint8Array()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/Uint8Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint8Array/Uint8Array
-browser-compat: javascript.builtins.Uint8Array.Uint8Array
 ---
+
 {{JSRef}}
 
 Le constructeur **`Uint8Array()`** crée un tableau typé contenant des entiers non-signés sur 8 bits. Le contenu de ces éléments est initialisé à `0`. Une fois le tableau construit, on peut faire référence aux éléments du tableau à l'aide des méthodes de l'objet ou en utilisant la notation usuelle pour les tableaux avec les crochets.
@@ -45,7 +44,7 @@ console.log(uint8.length); // 2
 console.log(uint8.BYTES_PER_ELEMENT); // 1
 
 // Construction à partir d'un tableau
-let arr = new Uint8Array([21,31]);
+let arr = new Uint8Array([21, 31]);
 console.log(arr[1]); // 31
 
 // Construction à partir d'un tableau typé
@@ -58,7 +57,9 @@ let buffer = new ArrayBuffer(8);
 let z = new Uint8Array(buffer, 1, 4);
 
 // Construction à partir d'un itérable
-let iterable = function*(){ yield* [1,2,3]; }();
+let iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 let uint8 = new Uint8Array(iterable);
 // Uint8Array[1, 2, 3]
 ```

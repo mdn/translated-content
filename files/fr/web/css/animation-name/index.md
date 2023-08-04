@@ -1,12 +1,8 @@
 ---
 title: animation-name
 slug: Web/CSS/animation-name
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/animation-name
 ---
+
 {{CSSRef}}
 
 La propriété **`animation-name`** définit une liste d'animations qui doivent être appliquées à l'élément ciblé. Chaque nom indique une règle @ {{cssxref("@keyframes")}} qui définit les valeurs des propriétés pour la séquence.
@@ -42,9 +38,13 @@ animation-name: unset
 
 > **Note :** Lorsqu'on utiliser plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/Animations_CSS/Utiliser_les_animations_CSS).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -73,9 +73,9 @@ p {
 
 ```html
 <p>
-  La Chenille et Alice se considérèrent un instant en silence.
-  Enfin la Chenille sortit le houka de sa bouche, et lui adressa
-  la parole d’une voix endormie et traînante.
+  La Chenille et Alice se considérèrent un instant en silence. Enfin la Chenille
+  sortit le houka de sa bouche, et lui adressa la parole d’une voix endormie et
+  traînante.
 </p>
 ```
 
@@ -85,15 +85,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Animations', '#animation-name', 'animation-name')}} | {{Spec2('CSS3 Animations')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.animation-name")}}
+{{Compat}}
 
 ## Voir aussi
 

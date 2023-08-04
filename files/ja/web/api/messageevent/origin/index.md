@@ -1,29 +1,22 @@
 ---
 title: MessageEvent.origin
 slug: Web/API/MessageEvent/origin
-tags:
-  - API
-  - DOM
-  - MessageEvent
-  - プロパティ
-  - リファレンス
-  - messaging
-  - origin
-browser-compat: api.MessageEvent.origin
-translation_of: Web/API/MessageEvent/origin
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
+
 {{APIRef("HTML DOM")}}
 
-**`origin`** は {{domxref("MessageEvent")}} インターフェイスの読み取り専用プロパティで、メッセージ送信元のオリジンを表す {{domxref("USVString")}} です。
+**`origin`** は {{domxref("MessageEvent")}} インターフェイスの読み取り専用プロパティで、メッセージ送信元のオリジンを表す文字列です。
 
 ## 値
 
-オリジンを表す {{domxref("USVString")}} です。
+オリジンを表す文字列です。
 
 ## 例
 
 ```js
-myWorker.onmessage = function(e) {
+myWorker.onmessage = (e) => {
   result.textContent = e.data;
   console.log('Message received from worker');
   console.log(e.origin);

@@ -1,16 +1,10 @@
 ---
 title: HTMLMediaElement.paused
 slug: Web/API/HTMLMediaElement/paused
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Read-only
-browser-compat: api.HTMLMediaElement.paused
-translation_of: Web/API/HTMLMediaElement/paused
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.paused`** プロパティは読み取り専用で、メディア要素が一時停止しているかどうかを示します。
@@ -22,7 +16,7 @@ translation_of: Web/API/HTMLMediaElement/paused
 ## 例
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.paused); // true
 ```
 

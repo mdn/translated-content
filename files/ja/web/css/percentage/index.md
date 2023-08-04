@@ -1,21 +1,13 @@
 ---
 title: <percentage>
 slug: Web/CSS/percentage
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - レイアウト
-  - リファレンス
-  - ウェブ
-browser-compat: css.types.percentage
-translation_of: Web/CSS/percentage
 ---
+
 {{CSSRef}}
 
 **`<percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、パーセント値による割合を表します。要素の親オブジェクトからの相対的な寸法を定義するためによく使われます。 {{CSSxRef("width")}}、 {{CSSxRef("height")}}, {{CSSxRef("margin")}}, {{CSSxRef("padding")}}、 {{CSSxRef("font-size")}} など、たくさんのプロパティでパーセント値を使うことができます。
 
-> **Note:** 継承されるのは計算値だけです。親要素のプロパティでパーセント値が使われても、継承したプロパティではパーセント値ではなく、実数値 ({{CSSxRef("&lt;length&gt;")}} 値に向けたピクセル単位の幅など) にのみアクセスできます。
+> **メモ:** 継承されるのは計算値だけです。親要素のプロパティでパーセント値が使われても、継承したプロパティではパーセント値ではなく、実数値 ({{CSSxRef("&lt;length&gt;")}} 値に向けたピクセル単位の幅など) にのみアクセスできます。
 
 ## 構文
 

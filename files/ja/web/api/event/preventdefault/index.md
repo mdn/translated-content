@@ -1,13 +1,8 @@
 ---
 title: Event.preventDefault()
 slug: Web/API/Event/preventDefault
-page-type: web-api-instance-method
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Event.preventDefault
-translation_of: Web/API/Event/preventDefault
 ---
+
 {{apiref("DOM")}}
 
 **`preventDefault()`** は {{domxref("Event")}} インターフェイスのメソッドで、{{Glossary("user agent", "ユーザーエージェント")}}に、このイベントが明示的に処理されない場合に、その既定のアクションを通常どおりに行うべきではないことを伝えます。

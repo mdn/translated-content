@@ -1,13 +1,8 @@
 ---
 title: justify-content
 slug: Web/CSS/justify-content
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - flexbox
-translation_of: Web/CSS/justify-content
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`justify-content`** indique la façon dont l'espace doit être réparti entre et autour des éléments selon [l'axe principal](/fr/docs/Web/CSS/CSS_Box_Alignment#Concepts_majeurs_et_terminologie) d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.
@@ -22,13 +17,13 @@ L'alignement est appliqué après que les longueurs et les marges automatiques o
 
 ```css
 /* Alignement « géométrique » */
-justify-content: center;     /* Éléments groupés au centre */
-justify-content: start;      /* Éléments groupés au début */
-justify-content: end;        /* Éléments groupés à la fin */
+justify-content: center; /* Éléments groupés au centre */
+justify-content: start; /* Éléments groupés au début */
+justify-content: end; /* Éléments groupés à la fin */
 justify-content: flex-start; /* Éléments flexibles groupés au début */
-justify-content: flex-end;   /* Éléments flexibles groupés à la fin */
-justify-content: left;       /* Éléments groupés à gauche */
-justify-content: right;      /* Éléments groupés à droite */
+justify-content: flex-end; /* Éléments flexibles groupés à la fin */
+justify-content: left; /* Éléments groupés à gauche */
+justify-content: right; /* Éléments groupés à droite */
 
 /* Alignement par rapport à la ligne de base */
 /* justify-content ne prend pas de valeurs relatives à la ligne de base */
@@ -41,15 +36,15 @@ justify-content: space-between; /* Les éléments sont répartis équitablement
                                    Le bord du premier est aligné sur le
                                    début du conteneur et la fin du dernier
                                    est alignée sur la fin du conteneur */
-justify-content: space-around;  /* Les éléments sont répartis équitablement
+justify-content: space-around; /* Les éléments sont répartis équitablement
                                    À chaque extrémité, entre le bord du
                                    conteneur et le premier/dernier élément
                                    on a la moitié de l'espace appliqué entre
                                    chaque élément */
-justify-content: space-evenly;  /* Les éléments sont répartis équitablement
+justify-content: space-evenly; /* Les éléments sont répartis équitablement
                                    Tous les éléments sont séparés par le même
                                    espace */
-justify-content: stretch;       /* Les éléments sont répartis équitablement et
+justify-content: stretch; /* Les éléments sont répartis équitablement et
                                    les éléments dimensionnés avec 'auto' sont
                                    étirés afin de remplir le conteneur */
 
@@ -97,9 +92,13 @@ justify-content: unset;
 - `unsafe`
   - : Cette valeur doit être utilisée avec un mot-clé pour l'alignement. Quelle que soit la situation de dépassement ou les contraintes de taille, la valeur utilisée pour l'alignement est respectée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -146,8 +145,7 @@ justify-content: unset;
 ```js hidden
 var justifyContent = document.getElementById("justifyContent");
 justifyContent.addEventListener("change", function (evt) {
-  document.getElementById("container").style.justifyContent =
-      evt.target.value;
+  document.getElementById("container").style.justifyContent = evt.target.value;
 });
 ```
 
@@ -157,22 +155,11 @@ justifyContent.addEventListener("change", function (evt) {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                     | Commentaires                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Flexbox', '#propdef-justify-content', 'justify-content')}}         | {{Spec2('CSS3 Flexbox')}}         | Définition initiale.                                                                                                |
-| {{SpecName('CSS3 Box Alignment', '#propdef-justify-content', 'justify-content')}} | {{Spec2('CSS3 Box Alignment')}} | Ajout des valeurs `space-evenly, [ first \| last ]? baseline`, `start`, `end`, `left`, `right`, `safe` et `unsafe`. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Prise en charge pour les dispositions flexibles
-
-{{Compat("css.properties.justify-content.flex_context")}}
-
-### Prise en charge pour les grilles
-
-{{Compat("css.properties.justify-content.grid_context")}}
+{{Compat}}
 
 ## Voir aussi
 

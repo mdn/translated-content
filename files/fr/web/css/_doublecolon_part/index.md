@@ -1,20 +1,11 @@
 ---
-title: '::part()'
+title: "::part()"
 slug: Web/CSS/::part
-tags:
-  - '::part'
-  - CSS
-  - Draft
-  - Exp
-  - NeedsBrowserCompatibility
-  - NeedsExample
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::part
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::part`** représente n’importe quel élément dans un [arbre fantôme](/fr/docs/Web/Web_Components/Using_shadow_DOM) qui a un attribut {{HTMLAttrxRef("part")}} correspondant.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::part`** représente n'importe quel élément dans un [arbre fantôme](/fr/docs/Web/Web_Components/Using_shadow_DOM) qui a un attribut [`part`](/fr/docs/Web/HTML/Global_attributes#part) correspondant.
 
 ```css
 custom-element::part(foo) {
@@ -34,7 +25,9 @@ custom-element::part(foo) {
 
 ```html
 <style type="text/css">
-  *, ::before, ::after {
+  *,
+  ::before,
+  ::after {
     box-sizing: border-box;
   }
 
@@ -42,15 +35,9 @@ custom-element::part(foo) {
     display: flex;
   }
 </style>
-<div part="tab active">
-  Tab 1
-</div>
-<div part="tab">
-  Tab 2
-</div>
-<div part="tab">
-  Tab 3
-</div>
+<div part="tab active">Tab 1</div>
+<div part="tab">Tab 2</div>
+<div part="tab">Tab 3</div>
 ```
 
 #### Feuille de style chargée dans un arbre léger
@@ -85,16 +72,14 @@ tabbed-custom-element::part(active tab) {
 
 ## Spécifications
 
-| Spécification                                                        | État                                    | Commentaires         |
-| -------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS Shadow Parts", "#part", "::part")}} | {{Spec2("CSS Shadow Parts")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.part")}}
+{{Compat}}
 
 ## Voir aussi
 
-- L’attribut {{HTMLAttrxRef("part")}} - Utilisé pour définir des parties qui peuvent être sélectionnées par le sélecteur `::part()`
-- L'attribut {{HTMLattrxref("exportparts")}} qui est utilisé pour exporter les parties d'un arbre _shadow_ imbriqué vers un arbre classique
+- L'attribut [`part`](/fr/docs/Web/HTML/Global_attributes#part) - Utilisé pour définir des parties qui peuvent être sélectionnées par le sélecteur `::part()`
+- L'attribut [`exportparts`](/fr/docs/Web/HTML/Global_attributes#exportparts) qui est utilisé pour exporter les parties d'un arbre _shadow_ imbriqué vers un arbre classique
 - [Utilisation de CSS Shadow : `::part` et `::theme`](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md)

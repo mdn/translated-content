@@ -1,11 +1,11 @@
 ---
 title: Game promotion
 slug: Games/Publishing_games/Game_promotion
-translation_of: Games/Publishing_games/Game_promotion
 ---
+
 {{GamesSidebar}}
 
-开发与发行你的游戏并不是全部.。你应该让大家知道你有个大家会喜欢玩的游戏。这儿有很多方法去推广你的游戏——大部分方法是免费的，所以即使即使你正努力以一名零预算的独立开发者的身份谋生，你也可以让人们知道你的新游戏.。推广游戏也对之后的[游戏收益化](/en-US/docs/Games/Techniques/Publishing_games/Game_monetization)大有裨益，所以正确地推广游戏是很重要的。
+开发与发行你的游戏并不是全部.。你应该让大家知道你有个大家会喜欢玩的游戏。这儿有很多方法去推广你的游戏——大部分方法是免费的，所以即使即使你正努力以一名零预算的独立开发者的身份谋生，你也可以让人们知道你的新游戏.。推广游戏也对之后的[游戏收益化](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization)大有裨益，所以正确地推广游戏是很重要的。
 
 ## 竞赛
 
@@ -28,7 +28,7 @@ translation_of: Games/Publishing_games/Game_promotion
 
 ## 游戏门户网站
 
-设立门户网站主要与[收益化](/en-US/docs/Games/Techniques/Publishing_games/Game_monetization)挂钩， 但是如果你不打算[售卖许可](/en-US/docs/Games/Techniques/Publishing_games/Game_monetization#Licensing)来让人们可以购买你的游戏而是打算[发布广告](/en-US/docs/Games/Techniques/Publishing_games/Game_monetization#Advertisements) , 在免费的门户网站上推广游戏会更有效。你可以在公共门户网站，比如[HTML5Games.com](http://html5games.com/)发布游戏，比起传统的游戏发行平台，它更像一个宣传平台。
+设立门户网站主要与[收益化](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization)挂钩，但是如果你不打算[售卖许可](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization#Licensing)来让人们可以购买你的游戏而是打算[发布广告](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization#Advertisements) , 在免费的门户网站上推广游戏会更有效。你可以在公共门户网站，比如[HTML5Games.com](http://html5games.com/)发布游戏，比起传统的游戏发行平台，它更像一个宣传平台。
 
 免费的门户网站带来了流量，但是，只有最好的广告才足够受欢迎，能够从发布的广告中获得一些业绩。另一方面，如果你没有预算和有限的时间，门户网站也是一个完美的工具，它可以让更多人看到你的游戏
 
@@ -40,11 +40,11 @@ translation_of: Games/Publishing_games/Game_promotion
 
 ## 教程
 
-与其他开发者互通有无是很好的 — 毕竟你可能也曾在网上的一两篇文章上学到了些东西，所以你要花时间把这些知识传递出去。谈论或写一些你取得的成就或克服的问题是人们会感兴趣的事情。你可以拿你自己的游戏做例子，特别是当你[展示你已经实现的事情](/en-US/docs/Games/Techniques/Controls_Gamepad_API). 这样每个人都会受益——人们学习新的技能，你的游戏会得到推广，如果你足够幸运，你甚至可以因为编写教程而获得报酬
+与其他开发者互通有无是很好的 — 毕竟你可能也曾在网上的一两篇文章上学到了些东西，所以你要花时间把这些知识传递出去。谈论或写一些你取得的成就或克服的问题是人们会感兴趣的事情。你可以拿你自己的游戏做例子，特别是当你[展示你已经实现的事情](/zh-CN/docs/Games/Techniques/Controls_Gamepad_API). 这样每个人都会受益——人们学习新的技能，你的游戏会得到推广，如果你足够幸运，你甚至可以因为编写教程而获得报酬
 
-像是[Tuts+ Game Development](http://gamedevelopment.tutsplus.com/) 这样的网站可能会更让人开心——他们为文章付稿费。 但并不是所有的主旨都会被接受。当你在写教程的时候，记住要把重点放在给读者提供一些有价值的东西上。他们想要学习一些东西——提供你的专业知识并将你的游戏作为案例研究。专注于一个方面，并试图解释它的全部和细节。如果人们有任何问题，请记得在评论中跟进讨论。
+像是[Tuts+ Game Development](http://gamedevelopment.tutsplus.com/) 这样的网站可能会更让人开心——他们为文章付稿费。但并不是所有的主旨都会被接受。当你在写教程的时候，记住要把重点放在给读者提供一些有价值的东西上。他们想要学习一些东西——提供你的专业知识并将你的游戏作为案例研究。专注于一个方面，并试图解释它的全部和细节。如果人们有任何问题，请记得在评论中跟进讨论。
 
-如果您联系的门户网站因你未写过教程而未采纳你的教程，可以在[自己的博客](/en-US/docs/Games/Publishing_games/Game_promotion#Website_and_blog)先发布教程，这是锻炼你的写作技巧的最简单的方式。
+如果您联系的门户网站因你未写过教程而未采纳你的教程，可以在[自己的博客](/zh-CN/docs/Games/Publishing_games/Game_promotion#Website_and_blog)先发布教程，这是锻炼你的写作技巧的最简单的方式。
 
 ## YouTuber 视频主 (YouTubers)
 
@@ -76,4 +76,4 @@ translation_of: Games/Publishing_games/Game_promotion
 
 任何推广你的游戏的方法都是好的。你有很多选择，其中大部分都是免费的，所以关键在于你的热情和可用时间。有时候你不得不花更多的时间去推广一款游戏，而不是真正去开发它。记住，如果没有人知道世界上最好的游戏的存在，那么拥有它是没有任何意义的。
 
-现在让我们进入[游戏收益化](/en-US/docs/Games/Techniques/Publishing_games/Game_monetization)部分，然后挣口饭吃吧。
+现在让我们进入[游戏收益化](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization)部分，然后挣口饭吃吧。

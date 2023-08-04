@@ -1,14 +1,8 @@
 ---
 title: FinalizationRegistry
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
-tags:
-  - Class
-  - FinalizationRegistry
-  - JavaScript
-  - Reference
-browser-compat: javascript.builtins.FinalizationRegistry
-translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
 ---
+
 {{JSRef}}
 
 **`FinalizationRegistry`** オブジェクトにより、オブジェクトがガベージコレクションで回収されるときにコールバックを要求することができます。
@@ -17,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
 
 `FinalizationRegistry` は、レジストリーに登録されているオブジェクトが*回収*される (ガベージコレクションされる) 時に*クリーンアップコールバック*を要求する方法を提供します。(クリーンアップコールバックは*ファイナライザー*と呼ばれることもあります。)</p>
 
-> **Note:** クリーンアップコールバックは、重要なプログラムロジックには使用しないでください。詳細は、[クリーンアップコールバックに関する注意事項](#notes_on_cleanup_callbacks)を参照してください。
+> **メモ:** クリーンアップコールバックは、重要なプログラムロジックには使用しないでください。詳細は、[クリーンアップコールバックに関する注意事項](#notes_on_cleanup_callbacks)を参照してください。
 
 コールバックで渡すレジストリーを作成します。
 

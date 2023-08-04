@@ -1,15 +1,8 @@
 ---
 title: PerformanceElementTiming.loadTime
 slug: Web/API/PerformanceElementTiming/loadTime
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - loadTime
-  - PerformanceElementTiming
-translation_of: Web/API/PerformanceElementTiming/loadTime
 ---
+
 {{APIRef("Element Timing API")}}
 
 La propriété en lecture seule **`loadTime`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie toujours 0 pour le texte. Pour les images, elle renvoie le temps qui est le plus tardif entre le moment où la ressource image est chargée et le moment où elle est attachée à l'élément.
@@ -29,7 +22,11 @@ Un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) avec le t
 Dans cet exemple, l'appel à `entry.loadTime` renvoie le temps de chargement de l'image.
 
 ```html
-<img src="image.jpg" alt="une belle image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="une belle image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js
@@ -47,10 +44,8 @@ observer.observe({ entryTypes: ["element"] });
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Element Timing API','#dom-performanceelementtiming-loadtime','PerformanceElementTiming.loadTime')}} | {{Spec2('Element Timing API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceElementTiming.loadTime")}}
+{{Compat}}

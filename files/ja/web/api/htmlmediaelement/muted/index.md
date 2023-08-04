@@ -1,19 +1,13 @@
 ---
 title: HTMLMediaElement.muted
 slug: Web/API/HTMLMediaElement/muted
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
-browser-compat: api.HTMLMediaElement.muted
-translation_of: Web/API/HTMLMediaElement/muted
+l10n:
+  sourceCommit: 5e10a2aab4ec9ecbcf8cf79f589f9b7ece88ef60
 ---
+
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.muted`** は、メディア要素がミュートされているかどうかを示します。
+**`HTMLMediaElement.muted`** プロパティは、メディア要素がミュートされているかどうかを示します。
 
 ## 値
 
@@ -22,7 +16,7 @@ translation_of: Web/API/HTMLMediaElement/muted
 ## 例
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.muted); // false
 ```
 

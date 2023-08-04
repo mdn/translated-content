@@ -1,15 +1,8 @@
 ---
 title: animation-timing-function
 slug: Web/CSS/animation-timing-function
-tags:
-  - CSS
-  - CSS アニメーション
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.animation-timing-function
-translation_of: Web/CSS/animation-timing-function
 ---
+
 {{CSSRef}}
 
 **`animation-timing-function`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションがそれぞれの周期の中でどのように進行するかを設定します。
@@ -97,7 +90,7 @@ animation-timing-function: unset;
 - `step-end`
   - : `steps(1, jump-end)` と同じです。
 
-> **Note:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} プロパティで指定したアニメーションに割り当てられますが、いくつあるかによって異なる方法で割り当てられます。詳しくは、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values)を参照してください。
+> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} プロパティで指定したアニメーションに割り当てられますが、いくつあるかによって異なる方法で割り当てられます。詳しくは、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values)を参照してください。
 
 ## 公式定義
 

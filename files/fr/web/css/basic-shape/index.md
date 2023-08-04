@@ -1,12 +1,8 @@
 ---
 title: <basic-shape>
 slug: Web/CSS/basic-shape
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/basic-shape
 ---
+
 {{CSSRef}}
 
 Le type **`<basic-shape>`** permet de définir une forme simple en utilisant des fonctions et est notamment utilisé pour les propriétés {{cssxref("clip-path")}}, {{cssxref("shape-outside")}} ou {{cssxref("offset-path")}}.
@@ -17,7 +13,7 @@ Le type **`<basic-shape>`** permet de définir une forme simple en utilisant des
 
 Lorsque cette syntaxe est utilisée pour définir des formes, la boîte de référence sera indiquée par chaque propriété qui utilise des valeurs `<basic-shape>`. L'origine du repère utilisé se situe dans le coin en haut à gauche de la boîte de référence avec un axe des abscisses allant vers la droite et un axe des ordonnées allant vers le bas. Toutes les longueurs exprimées en pourcentages sont calculées en fonction des dimensions de la boîte de référence.
 
-Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>` sont créées via une notation fonctionnelle (pour analyser la syntaxe, se référer à [cette page explicative](/fr/docs/Web/CSS/Syntaxe_de_d%C3%A9finition_des_valeurs)).
+Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>` sont créées via une notation fonctionnelle (pour analyser la syntaxe, se référer à [cette page explicative](/fr/docs/Web/CSS/Syntaxe_de_définition_des_valeurs)).
 
 - `inset()`
 
@@ -97,7 +93,7 @@ Les arguments qui ne sont pas définis ci-avant suivent cette syntaxe :
 Les valeurs d'une fonction `<basic-shape>` sont calculées comme indiqué, avec ces exceptions :
 
 - Les valeurs absentes sont incluses et leurs valeurs calculées sont leurs valeurs par défaut.
-- Une valeur {{cssxref("&lt;position&gt;")}} pour `circle()` ou  `ellipse()` est calculée comme une paire de distances indiquant les décalages (horizontaux puis verticaux) depuis l'origine en haut à gauche. Chaque décalage est indiqué comme une combinaison d'une longueur absolue et d'un pourcentage.
+- Une valeur {{cssxref("&lt;position&gt;")}} pour `circle()` ou `ellipse()` est calculée comme une paire de distances indiquant les décalages (horizontaux puis verticaux) depuis l'origine en haut à gauche. Chaque décalage est indiqué comme une combinaison d'une longueur absolue et d'un pourcentage.
 - Pour `inset()`, une valeur {{cssxref("border-radius")}} est calculée comme une liste développée de de huit valeurs {{cssxref("length")}} ou de huit pourcentages.
 
 ## L'interpolation des formes simples
@@ -126,7 +122,10 @@ Afin d'obtenir une interpolation entre deux formes simples, il faut que les règ
 #### HTML
 
 ```html
-<img class="clipped" src="https://pixabay.com/static/uploads/photo/2016/01/17/04/29/rain-drops-1144448_960_720.jpg" alt="Rain Drops">
+<img
+  class="clipped"
+  src="https://pixabay.com/static/uploads/photo/2016/01/17/04/29/rain-drops-1144448_960_720.jpg"
+  alt="Rain Drops" />
 ```
 
 #### Résultat
@@ -173,13 +172,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS Shapes', '#basic-shape-functions', '&lt;basic-shape&gt;')}} | {{Spec2('CSS Shapes')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.basic-shape")}}
+{{Compat}}
 
 ## Voir aussi
 

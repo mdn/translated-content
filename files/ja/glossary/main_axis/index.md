@@ -1,13 +1,8 @@
 ---
 title: Main Axis (主軸)
 slug: Glossary/Main_Axis
-tags:
-  - CSS
-  - 用語集
-  - 主軸
-  - フレックスボックス
-translation_of: Glossary/Main_Axis
 ---
+
 {{glossary("flexbox")}} における主軸は、{{cssxref("flex-direction")}} プロパティの設定方向によって定義されます。`flex-direction` が取り得る値は以下の 4 つです。
 
 - `row`

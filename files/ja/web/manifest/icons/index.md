@@ -1,13 +1,8 @@
 ---
 title: icons
 slug: Web/Manifest/icons
-tags:
-  - アイコン
-  - マニフェスト
-  - ウェブ
-browser-compat: html.manifest.icons
-translation_of: Web/Manifest/icons
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">
@@ -91,7 +86,7 @@ translation_of: Web/Manifest/icons
             <code>monochrome</code>: ユーザーエージェントは、このアイコンを、 <a href="https://w3c.github.io/manifest/#monochrome-icons-and-solid-fills">塗りつぶしのあるモノクロのアイコン</a>が必要なときに表示することができます。アイコンの色情報は破棄され、アルファデータのみが使用されます。アルファデータのみが使用されます。このアイコンは、ユーザーエージェントが塗りつぶしのマスクのように使うことができます。
           </li>
           <li>
-            <code>maskable</code>:  画像が<a href="https://w3c.github.io/manifest/#icon-masks">アイコンのマスクと安全領域</a>に配慮して設計されており、画像の安全領域外の部分をユーザーエージェントが無視したりマスクしたりしても安全になるようになっています。
+            <code>maskable</code>: 画像が<a href="https://w3c.github.io/manifest/#icon-masks">アイコンのマスクと安全領域</a>に配慮して設計されており、画像の安全領域外の部分をユーザーエージェントが無視したりマスクしたりしても安全になるようになっています。
           </li>
           <li>
             <code>any</code>: ユーザーエージェントはどのような場合でも、自由にこのアイコンを表示することができます (これが既定値です)。

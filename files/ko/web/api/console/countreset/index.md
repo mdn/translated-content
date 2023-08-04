@@ -1,18 +1,8 @@
 ---
 title: console.countReset()
 slug: Web/API/console/countReset
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Reference
-  - Web Development
-  - console
-  - web console
-browser-compat: api.console.countReset
-translation_of: Web/API/Console/countReset
 ---
+
 {{APIRef("Console API")}}
 
 **`console.countReset()`** 메서드는 {{domxref("console.count()")}}의 카운터를 초기화합니다.

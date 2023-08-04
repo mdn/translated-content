@@ -1,18 +1,8 @@
 ---
 title: runtime.getPlatformInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getPlatformInfo
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getPlatformInfo
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getPlatformInfo
 ---
+
 {{AddonSidebar()}}
 
 Renvoies des informations sur la plate-forme actuelle. Ceci ne peut être appelé que dans le contexte du script d'arrière-plan.
@@ -22,7 +12,7 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-var getting = browser.runtime.getPlatformInfo()
+var getting = browser.runtime.getPlatformInfo();
 ```
 
 ### Paramètres
@@ -33,9 +23,9 @@ None.
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une valeur {{WebExtAPIRef('runtime.PlatformInfo')}} représentant la plate-forme actuelle.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.getPlatformInfo")}}
+{{Compat}}
 
 ## Exemples
 
@@ -58,7 +48,8 @@ gettingInfo.then(gotPlatformInfo);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -85,4 +76,4 @@ gettingInfo.then(gotPlatformInfo);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

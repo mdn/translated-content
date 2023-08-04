@@ -1,18 +1,8 @@
 ---
 title: extension.isAllowedFileSchemeAccess()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedFileSchemeAccess
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - isAllowedFileSchemeAccess
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedFileSchemeAccess
 ---
+
 {{AddonSidebar()}}Renvoie `true` si l'extension peut accéder au schéma "file://", sinon `false`.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
@@ -20,7 +10,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var isAllowed = browser.extension.isAllowedFileSchemeAccess()
+var isAllowed = browser.extension.isAllowedFileSchemeAccess();
 ```
 
 ### Paramètres
@@ -33,9 +23,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 Firefox retournera toujours `false`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.isAllowedFileSchemeAccess")}}
+{{Compat}}
 
 ## Exemples
 
@@ -56,7 +46,8 @@ isAllowed.then(logIsAllowed);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -83,4 +74,4 @@ isAllowed.then(logIsAllowed);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,17 +1,8 @@
 ---
 title: offset-anchor
 slug: Web/CSS/offset-anchor
-tags:
-  - CSS
-  - CSS モーションパス
-  - 実験的
-  - モーションパス
-  - リファレンス
-  - offset-anchor
-  - recipe:css-property
-browser-compat: css.properties.offset-anchor
-translation_of: Web/CSS/offset-anchor
 ---
+
 {{CSSRef}}
 
 **`offset-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("offset-path")}} に沿って実際に移動している要素のボックス内の点を指定します。

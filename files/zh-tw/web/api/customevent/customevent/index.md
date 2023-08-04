@@ -1,8 +1,8 @@
 ---
 title: CustomEvent()
 slug: Web/API/CustomEvent/CustomEvent
-translation_of: Web/API/CustomEvent/CustomEvent
 ---
+
 {{APIRef("DOM")}}
 
 `CustomEvent()` constructor 可用來建立 {{domxref("CustomEvent")}}物件。
@@ -10,16 +10,16 @@ translation_of: Web/API/CustomEvent/CustomEvent
 ## 語法
 
 ```javascript
-new CustomEvent(type)
-new CustomEvent(type, options)
+new CustomEvent(type);
+new CustomEvent(type, options);
 ```
 
 ### 參數
 
-- `type` 
+- `type`
   - : 一個 {{domxref("DOMString")}} 用來表示事件名稱。
 - `options`{{optional_inline}}
-  - : 一個<i>繼承自{{domxref("Event/Event", "Event()")}}</i>的參數，其類型為 object。它有以下參數
+  - : 一個繼承自{{domxref("Event/Event", "Event()")}}的參數，其類型為 object。它有以下參數
     - `detail` {{optional_inline}}
       - : 用來表示事件相關的資訊。它能藉由 {{domxref("CustomEvent.detail")}} 屬性來取得值。
         其默認值為`null`。
@@ -32,18 +32,18 @@ new CustomEvent(type, options)
 
 ```javascript
 // create custom events
-const catFound = new CustomEvent('animalfound', {
+const catFound = new CustomEvent("animalfound", {
   detail: {
-    name: 'cat'
-  }
+    name: "cat",
+  },
 });
-const dogFound = new CustomEvent('animalfound', {
+const dogFound = new CustomEvent("animalfound", {
   detail: {
-    name: 'dog'
-  }
+    name: "dog",
+  },
 });
 // add an appropriate event listener
-obj.addEventListener('animalfound', (e) => console.log(e.detail.name));
+obj.addEventListener("animalfound", (e) => console.log(e.detail.name));
 // dispatch the events
 obj.dispatchEvent(catFound);
 obj.dispatchEvent(dogFound);
@@ -69,12 +69,17 @@ obj.dispatchEvent(dogFound);
 
 ```javascript
 (function () {
-  function CustomEvent ( event, params ) {
+  function CustomEvent(event, params) {
     params = params || { bubbles: false, cancelable: false, detail: undefined };
-    var evt = document.createEvent( 'CustomEvent' );
-    evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+    var evt = document.createEvent("CustomEvent");
+    evt.initCustomEvent(
+      event,
+      params.bubbles,
+      params.cancelable,
+      params.detail,
+    );
     return evt;
-   }
+  }
 
   CustomEvent.prototype = window.Event.prototype;
 

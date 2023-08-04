@@ -1,30 +1,28 @@
 ---
-title: Node.isDefaultNamespace()
+title: "Node: isDefaultNamespace() メソッド"
 slug: Web/API/Node/isDefaultNamespace
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.isDefaultNamespace
-translation_of: Web/API/Node/isDefaultNamespace
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
+
 {{APIRef("DOM")}}
 
 **`isDefaultNamespace()`** は {{domxref("Node")}} インターフェイスのメソッドで、名前空間 URI を引数として受け取ります。
 その名前空間がこのノードの既定の名前空間である場合は `true` を返し、そうでない場合は `false` を返します。
 
-> **Note:** 既定の名前空間は、 HTML 要素では常に `""` です。 SVG 要素では、 `xmlns` 属性で設定されます。
+> **メモ:** 既定の名前空間は、 HTML 要素では常に `""` です。 SVG 要素では、 `xmlns` 属性で設定されます。
 
 ## 構文
 
-```js
-isDefaultNamespace(namespaceURI);
+```js-nolint
+isDefaultNamespace(namespaceURI)
 ```
 
 ### 引数
 
 - `namespaceURI`
   - : 要素の検査対象となる名前空間を表す文字列です。
-    > **Note:** `namespaceURI` は省略可能ではありませんが、 `null` に設定することはできます。
+    > **メモ:** `namespaceURI` は省略可能ではありませんが、 `null` に設定することはできます。
 
 ### 返値
 
@@ -42,12 +40,12 @@ isDefaultNamespace(namespaceURI);
 ```
 
 ```js
-const button = document.getElementsByTagName('button')[0];
-button.addEventListener("click", function () {
-  const aHtmlElt = document.getElementsByTagName('output')[0];
-  const aSvgElt = document.getElementsByTagName('svg')[0];
+const button = document.querySelector("button");
+button.addEventListener("click", () => {
+  const aHtmlElt = document.querySelector("output");
+  const aSvgElt = document.querySelector("svg");
 
-  const result = document.getElementsByTagName('output');
+  const result = document.getElementsByTagName("output");
   result[0].value = aHtmlElt.isDefaultNamespace(""); // true
   result[1].value = aHtmlElt.isDefaultNamespace("http://www.w3.org/2000/svg"); // false
   result[2].value = aSvgElt.isDefaultNamespace(""); // true

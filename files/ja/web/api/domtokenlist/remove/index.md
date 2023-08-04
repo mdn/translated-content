@@ -1,38 +1,32 @@
 ---
-title: DOMTokenList.remove()
+title: "DOMTokenList: remove() メソッド"
+short-title: remove()
 slug: Web/API/DOMTokenList/remove
-tags:
-  - API
-  - DOM
-  - DOMTokenList
-  - メソッド
-  - リファレンス
-  - remove
-browser-compat: api.DOMTokenList.remove
-translation_of: Web/API/DOMTokenList/remove
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
+
 {{APIRef("DOM")}}
 
 **`remove()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、リストから指定されたトークンを取り除きます。
 
 ## 構文
 
-```js
-remove(token);
-remove(token, token);
-remove(token, token, token);
-...
+```js-nolint
+remove(token1)
+remove(token1, token2)
+remove(token1, token2, /* … ,*/ tokenN)
 ```
 
 ## 引数
 
-- `token`
+- `token1`, …, `tokenN`
   - : リストから取り除きたいトークンを表す文字列です。
     文字列がリストにない場合は、エラーは発生せず、何も起こりません。
 
 ### 返値
 
-なし。
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -57,7 +51,7 @@ span.textContent = classes;
 複数のクラスを一度に削除するために、複数のトークンを渡すことができます。渡す順序は、リスト中に出現する順序と一致している必要はありません。
 
 ```js
-const span2 = document.getElementById("a")
+const span2 = document.getElementById("a");
 const classes2 = span2.classList;
 
 classes2.remove("c", "b");

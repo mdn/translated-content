@@ -1,16 +1,8 @@
 ---
 title: TextEncoderStream.writable
 slug: Web/API/TextEncoderStream/writable
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - writable
-  - TextEncoderStream
-  - Read-only
-translation_of: Web/API/TextEncoderStream/writable
 ---
+
 {{APIRef("Encoding API")}}
 
 {{domxref("TextEncoderStream")}} 接口的只读属性 **`writable`** 返回一个 {{domxref("WritableStream")}}。

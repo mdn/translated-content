@@ -1,18 +1,8 @@
 ---
 title: cookies.OnChangedCause
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Non-standard
-  - OnChangedCause
-  - Reference
-  - Type
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
 ---
+
 {{AddonSidebar()}}
 
 Le type `OnChangedCause` de l'API {{WebExtAPIRef("cookies")}} représente la raison pour laquelle un cookie a été modifié.
@@ -32,20 +22,25 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - `overwrite`
   - : Un appel à {{WebExtAPIRef("cookies.set()")}} a remplacé ce cookie par un autre.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.cookies.OnChangedCause")}}
+{{Compat}}
 
 ## Exemples
 
-Vous pouvez écouter l'événement {{WebExtAPIRef("cookies.onChanged")}} pour être averti lorsque les cookies changent. L'écouteur reçoit un objet  `changeInfo` qui contient une propriété `cause`, dont la valeur est une chaîne `OnChangeCaused` :
+Vous pouvez écouter l'événement {{WebExtAPIRef("cookies.onChanged")}} pour être averti lorsque les cookies changent. L'écouteur reçoit un objet `changeInfo` qui contient une propriété `cause`, dont la valeur est une chaîne `OnChangeCaused` :
 
 ```js
-browser.cookies.onChanged.addListener(function(changeInfo) {
-  console.log('Cookie changed: ' +
-              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
-              '\n * Cause: ' + changeInfo.cause +
-              '\n * Removed: ' + changeInfo.removed);
+browser.cookies.onChanged.addListener(function (changeInfo) {
+  console.log(
+    "Cookie changed: " +
+      "\n * Cookie: " +
+      JSON.stringify(changeInfo.cookie) +
+      "\n * Cause: " +
+      changeInfo.cause +
+      "\n * Removed: " +
+      changeInfo.removed,
+  );
 });
 ```
 
@@ -57,7 +52,8 @@ browser.cookies.onChanged.addListener(function(changeInfo) {
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -84,4 +80,4 @@ browser.cookies.onChanged.addListener(function(changeInfo) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

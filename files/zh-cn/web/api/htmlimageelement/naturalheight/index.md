@@ -1,16 +1,8 @@
 ---
 title: HTMLImageElement.naturalHeight
 slug: Web/API/HTMLImageElement/naturalHeight
-tags:
-- API
-- HTMLImageElement
-- Intrinsic Height
-- Reference
-- Property
-- Vertical
-- naturalHeight
-- size
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} 接口的 **`naturalHeight`** 属性是一个只读值，它返回图像固有的（自然的）、修正高度后的 {{Glossary("CSS pixel" , "CSS 像素")}}。
@@ -33,10 +25,11 @@ tags:
 
 ```html
 <div class="box">
-  <img src="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png" class="image">
+  <img
+    src="/zh-CN/docs/Web/HTML/Element/img/clock-demo-400px.png"
+    class="image" />
 </div>
-<div class="output">
-</div>
+<div class="output"></div>
 ```
 
 HTML 具有一个 400x398 像素的图像，该图像放置在一个 {{HTMLElement("div")}} 元素中。
@@ -66,11 +59,12 @@ HTML 具有一个 400x398 像素的图像，该图像放置在一个 {{HTMLEleme
 let output = document.querySelector(".output");
 let image = document.querySelector("img");
 
-window.addEventListener("load", event => {
-  output.innerHTML += `Natural size: ${image.naturalWidth} x ` +
-                      `${image.naturalHeight} pixels<br>`;
-  output.innerHTML += `Displayed size: ${image.width} x ` +
-                      `${image.height} pixels`;
+window.addEventListener("load", (event) => {
+  output.innerHTML +=
+    `Natural size: ${image.naturalWidth} x ` +
+    `${image.naturalHeight} pixels<br>`;
+  output.innerHTML +=
+    `Displayed size: ${image.width} x ` + `${image.height} pixels`;
 });
 ```
 

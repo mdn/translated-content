@@ -1,8 +1,8 @@
 ---
 title: CSSStyleDeclaration.cssText
 slug: Web/API/CSSStyleDeclaration/cssText
-translation_of: Web/API/CSSStyleDeclaration/cssText
 ---
+
 A ne pas confondre avec la règle de style de feuille de style {{domxref("CSSRule.cssText")}}.
 
 {{APIRef("CSSOM") }}
@@ -12,15 +12,13 @@ A ne pas confondre avec la règle de style de feuille de style {{domxref("CSSRul
 ## Syntaxe
 
 ```js
-chaine = elem.style.cssText
+chaine = elem.style.cssText;
 ```
 
 ## Exemple
 
 ```html
-<span id="s1" style="color: red;">
-Du texte
-</span>
+<span id="s1" style="color: red;"> Du texte </span>
 
 <script>
   var elem = document.getElementById("s1");

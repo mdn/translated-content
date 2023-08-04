@@ -1,18 +1,8 @@
 ---
 title: tabs.onAttached
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onAttached
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onAttached
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onAttached
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsqu'un onglet est attaché à une fenêtre, par exemple parce qu'il a été déplacé entre les fenêtres.
@@ -20,9 +10,9 @@ Lancé lorsqu'un onglet est attaché à une fenêtre, par exemple parce qu'il a 
 ## Syntaxe
 
 ```js
-browser.tabs.onAttached.addListener(listener)
-browser.tabs.onAttached.removeListener(listener)
-browser.tabs.onAttached.hasListener(listener)
+browser.tabs.onAttached.addListener(listener);
+browser.tabs.onAttached.removeListener(listener);
+browser.tabs.onAttached.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -75,9 +65,9 @@ browser.tabs.onAttached.addListener(handleAttached);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onAttached")}}
+{{Compat}}
 
 > **Note :**
 >
@@ -85,7 +75,8 @@ browser.tabs.onAttached.addListener(handleAttached);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,4 +103,4 @@ browser.tabs.onAttached.addListener(handleAttached);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

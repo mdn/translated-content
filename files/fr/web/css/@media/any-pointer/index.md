@@ -1,12 +1,8 @@
 ---
 title: any-pointer
 slug: Web/CSS/@media/any-pointer
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/any-pointer
 ---
+
 {{CSSRef}}
 
 **`any-pointer`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui peut être utilisée afin de déterminer si un des mécanismes de saisie/d'entrée disponibles est un dispositif de pointage et sa précision le cas échéant.
@@ -33,8 +29,7 @@ Dans cet exemple, on crée une petite case à cocher pour les utilisateurs qui d
 ### HTML
 
 ```html
-<input id="test" type="checkbox" />
-<label for="test">Coucou !</label>
+<input id="test" type="checkbox" /> <label for="test">Coucou !</label>
 ```
 
 ### CSS
@@ -73,13 +68,11 @@ input[type="checkbox"]:checked {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS4 Media Queries', '#descdef-media-any-pointer', 'any-pointer')}} | {{Spec2('CSS4 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.any-pointer")}}
+{{Compat}}
 
 ## Voir aussi
 

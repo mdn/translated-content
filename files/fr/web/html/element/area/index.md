@@ -1,19 +1,9 @@
 ---
-title: '<area> : l''élément de zone'
+title: "<area> : l'élément de zone"
 slug: Web/HTML/Element/area
-tags:
-  - Content
-  - Element
-  - HTML
-  - HTML:Flow content
-  - HTML:Phrasing content
-  - Multimedia
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/area
-browser-compat: html.elements.area
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<area>`** définit une zone particulière d'une image et peut lui associer un [lien hypertexte](/fr/docs/Glossary/Hyperlink). Cet élément n'est utilisé qu'au sein d'un élément [`<map>`](/fr/docs/Web/HTML/Element/map).
 
@@ -160,16 +150,21 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 - **`type`** {{deprecated_inline}}
   - : Sans effet car ignoré par les navigateurs.
 
-## Exemple
+## Exemples
 
 Dans cet exemple, la partie gauche est un lien vers une page et la partie droite est inactive.
 
 ```html
 <map name="exemple-map-1">
-  <area shape="rect" coords="0,0 200,200" href="https://developer.mozilla.org" target="_blank" alt="Page d'accueil MDN" />
+  <area
+    shape="rect"
+    coords="0,0 200,200"
+    href="https://developer.mozilla.org"
+    target="_blank"
+    alt="Page d'accueil MDN" />
   <area shape="default" />
 </map>
-<img usemap="#exemple-map-1" src="https://via.placeholder.com/350x150">
+<img usemap="#exemple-map-1" src="https://via.placeholder.com/350x150" />
 ```
 
 ### Résultat

@@ -1,20 +1,8 @@
 ---
 title: ResizeObserverEntry.contentRect
 slug: Web/API/ResizeObserverEntry/contentRect
-page-type: web-api-instance-property
-tags:
-  - API
-  - バウンディングボックス
-  - プロパティ
-  - リファレンス
-  - リサイズオブザーバー API
-  - ResizeObserver
-  - ResizeObserverEntry
-  - コンテンツボックス
-  - observers
-browser-compat: api.ResizeObserverEntry.contentRect
-translation_of: Web/API/ResizeObserverEntry/contentRect
 ---
+
 {{APIRef("Resize Observer API")}}
 
 `contentRect` は {{domxref("ResizeObserverEntry")}} インターフェイスの読み取り専用プロパティで、コールバックが実行されたときに {{domxref('DOMRectReadOnly')}} オブジェクトの形で監視中の要素の新しい寸法を返します。なお、これは {{domxref("ResizeObserverEntry.borderBoxSize")}} や {{domxref("ResizeObserverEntry.contentBoxSize")}} よりも広く対応されていますが、 Resize Observer API では早期に除外され、現在は互換性の目的で仕様書に存在しているため、将来のバージョンでは非推奨になる可能性があります。

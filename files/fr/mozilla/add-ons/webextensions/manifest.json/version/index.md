@@ -1,12 +1,8 @@
 ---
 title: version
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/version
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/version
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -58,4 +54,4 @@ console.log(browser.runtime.getManifest().version);
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.version")}}
+{{Compat}}

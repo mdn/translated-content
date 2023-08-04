@@ -1,20 +1,13 @@
 ---
 title: Window.moveTo()
 slug: Web/API/Window/moveTo
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Reference
-  - Window
-browser-compat: api.Window.moveTo
-translation_of: Web/API/Window/moveTo
 ---
+
 {{APIRef}}
 
 **`moveTo()`** は {{domxref("Window")}} インターフェイスのメソッドで、現在のウィンドウを指定された座標へ移動します。
 
-> **Note:** この関数はウィンドウを絶対位置へ移動します。それに対して、 {{domxref("window.moveBy()")}} はウィンドウを現在の位置からの相対位置へ移動します。
+> **メモ:** この関数はウィンドウを絶対位置へ移動します。それに対して、 {{domxref("window.moveBy()")}} はウィンドウを現在の位置からの相対位置へ移動します。
 
 ## 構文
 

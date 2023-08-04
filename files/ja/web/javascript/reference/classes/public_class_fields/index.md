@@ -1,12 +1,8 @@
 ---
 title: パブリッククラスフィールド
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
-tags:
-  - Classes
-  - JavaScript
-  - Language feature
-translation_of: Web/JavaScript/Reference/Classes/Public_class_fields
 ---
+
 {{JsSidebar("Classes")}}
 
 パブリックフィールドは、静的なものもインスタンスのものも書き込み可能、列挙可能、構成可能です。そのため、プライベートなものとは異なり、プロトタイプの継承に参加します。
@@ -43,7 +39,7 @@ class ClassWithStaticField {
 }
 
 console.log(ClassWithStaticField.staticField)
-// 期待される結果: "static field"​
+// 期待される結果: "static field"
 ```
 
 初期化子のないフィールドは `undefined` に初期化されます。
@@ -195,7 +191,7 @@ class ClassWithPublicInstanceMethod {
 
 const instance = new ClassWithPublicInstanceMethod()
 console.log(instance.publicMethod())
-// 期待される結果: "hello worl​d"
+// 期待される結果: "hello world"
 ```
 
 パブリックインスタンスメソッドは、{{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} を使用して、クラスの評価時にクラスプロトタイプに追加されます。これらのメソッドは書き込み可能、列挙不可、設定可能です。
@@ -228,7 +224,7 @@ class SubClass extends BaseClass {
 
 const instance = new SubClass()
 console.log(instance.subPublicMethod())
-// 期待される結果: "hello worl​d"
+// 期待される結果: "hello world"
 ```
 
 ゲッターとセッターは、クラスのプロパティにバインドする特別なメソッドで、そのプロパティがアクセスされたり設定されたりしたときに呼び出されます。[get](/ja/docs/Web/JavaScript/Reference/Functions/get) および [set](/ja/docs/Web/JavaScript/Reference/Functions/set) 構文を使用して、パブリックインスタンスのゲッターまたはセッターを宣言します。
@@ -246,7 +242,7 @@ class ClassWithGetSet {
 
 const instance = new ClassWithGetSet()
 console.log(instance.msg)
-// 期待される結果: "hello worl​d"
+// 期待される結果: "hello world"
 
 instance.msg = 'cake'
 console.log(instance.msg)
@@ -259,7 +255,7 @@ console.log(instance.msg)
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## 関連情報
 

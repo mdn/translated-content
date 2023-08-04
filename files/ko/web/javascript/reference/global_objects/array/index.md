@@ -1,15 +1,6 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
-tags:
-  - Array
-  - Class
-  - Example
-  - Global Objects
-  - JavaScript
-  - Reference
-browser-compat: javascript.builtins.Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Array
 ---
 {{JSRef}}
 
@@ -135,9 +126,9 @@ JavaScript 배열의 인덱스는 0부터 시작합니다. 즉, 배열 첫 번�
 잘못된 인덱스를 사용하면 `undefined`를 반환합니다.
 
 ```js
-let arr = ['첫 번재 요소입니다', '두 번째 요소입니다', '마지막 요소입니다']
-console.log(arr[0])              // '첫 번재 요소입니다'를 기록
-console.log(arr[1])              // '두 번재 요소입니다'를 기록
+let arr = ['첫 번째 요소입니다', '두 번째 요소입니다', '마지막 요소입니다']
+console.log(arr[0])              // '첫 번째 요소입니다'를 기록
+console.log(arr[1])              // '두 번째 요소입니다'를 기록
 console.log(arr[arr.length - 1]) // '마지막 요소입니다'를 기록
 ```
 
@@ -372,7 +363,7 @@ let deepCopy = JSON.parse(JSON.stringify(fruits));
 - {{jsxref("Array.prototype.lastIndexOf()")}}
   - : 배열에서 주어진 값과 일치하는 제일 뒤의 인덱스를 반환합니다. 없으면 `-1`을 반환합니다.
 - {{jsxref("Array.prototype.map()")}}
-  - : 배열의 모든 요소 각각에 대하여 주어진 콜백 함수를 호출하고, 그 반환 값을 모은 새로운 배열을 반환합니다.
+  - : 배열의 모든 요소 각각에 대하여 주어진 콜백 함수를 호출하고, 그 반환 값을 모은 새로운 배열을 반환합니다.
 - {{jsxref("Array.prototype.pop()")}}
   - : 배열에서 마지막 요소를 뽑아내고, 그 요소를 반환합니다.
 - {{jsxref("Array.prototype.push()")}}
@@ -384,7 +375,7 @@ let deepCopy = JSON.parse(JSON.stringify(fruits));
 - {{jsxref("Array.prototype.reverse()")}}
   - : 배열의 요소 순서를 뒤집습니다. 즉 첫 번째 요소가 마지막이 되고 마지막이 첫 번째가 됩니다.
 - {{jsxref("Array.prototype.shift()")}}
-  - : 배열에서 첫 번째 요소를 삭제하고, 그 요소를 반환합니다.
+  - : 배열에서 첫 번째 요소를 삭제하고, 그 요소를 반환합니다.
 - {{jsxref("Array.prototype.slice()")}}
   - : 배열의 일부를 추출한 새 배열을 반환합니다.
 - {{jsxref("Array.prototype.some()")}}

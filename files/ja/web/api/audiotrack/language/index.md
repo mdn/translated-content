@@ -1,24 +1,8 @@
 ---
 title: AudioTrack.language
 slug: Web/API/AudioTrack/language
-page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioTrack
-  - HTML DOM
-  - Language
-  - Localization
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Translated
-  - Translation
-  - track
-browser-compat: api.AudioTrack.language
-translation_of: Web/API/AudioTrack/language
 ---
+
 {{APIRef("HTML DOM")}}
 
 **{{domxref("AudioTrack")}}** の **`language`** プロパティは読み取り専用で、音声トラックで使用されている言語を識別する文字列を返します。

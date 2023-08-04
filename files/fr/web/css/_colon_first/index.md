@@ -1,12 +1,8 @@
 ---
-title: ':first'
+title: ":first"
 slug: Web/CSS/:first
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:first
 ---
+
 {{CSSRef}}
 
 La pseudo-classe **`:first`**, liée à la règle @ {{cssxref("@page")}} décrit la mise en forme de la première page lors de l'impression d'un document. ( voir {{cssxref(":first-child")}} pour le premier élément d'un noeud )
@@ -58,7 +54,7 @@ p {
 ### JavaScript
 
 ```js
-document.querySelector("button").addEventListener('click', () => {
+document.querySelector("button").addEventListener("click", () => {
   window.print();
 });
 ```
@@ -69,14 +65,11 @@ Appuyez sur le bouton "Imprimer!" pour imprimer l'exemple. Les mots sur la premi
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Paged Media', '#left-right-first', ':first')}} | {{Spec2('CSS3 Paged Media')}} | Aucune modification. |
-| {{SpecName('CSS2.1', 'page.html#page-selectors', ':first')}}     | {{Spec2('CSS2.1')}}                 | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.first")}}
+{{Compat}}
 
 ## Voir aussi
 

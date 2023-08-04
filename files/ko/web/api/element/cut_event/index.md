@@ -1,16 +1,8 @@
 ---
-title: 'Element: cut 이벤트'
+title: "Element: cut 이벤트"
 slug: Web/API/Element/cut_event
-tags:
-  - API
-  - Clipboard API
-  - Cut
-  - Element
-  - Event
-  - Reference
-  - Web
-browser-compat: api.Element.cut_event
 ---
+
 {{APIRef}}
 
 **`copy`** 이벤트는 사용자가 브라우저의 사용자 인터페이스를 통해 잘라내기를 했을 때 발생합니다.
@@ -53,32 +45,35 @@ browser-compat: api.Element.cut_event
 ### HTML
 
 ```html
-<div class="source" contenteditable="true">이 상자에서 텍스트를 잘라내 보세요...</div>
+<div class="source" contenteditable="true">
+  이 상자에서 텍스트를 잘라내 보세요...
+</div>
 <div class="target" contenteditable="true">...여기에 붙여 넣어 보세요.</div>
 ```
 
 ```css hidden
-div.source, div.target {
-    border: 1px solid gray;
-    margin: .5rem;
-    padding: .5rem;
-    height: 1rem;
-    background-color: #e9eef1;
+div.source,
+div.target {
+  border: 1px solid gray;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  height: 1rem;
+  background-color: #e9eef1;
 }
 ```
 
 ### JS
 
 ```js
-const source = document.querySelector('div.source');
+const source = document.querySelector("div.source");
 
-source.addEventListener('cut', (event) => {
-    const selection = document.getSelection();
-    const reversed = Array.from(selection.toString()).reverse().join('');
+source.addEventListener("cut", (event) => {
+  const selection = document.getSelection();
+  const reversed = Array.from(selection.toString()).reverse().join("");
 
-    event.clipboardData.setData('text/plain', reversed);
-    selection.deleteFromDocument();
-    event.preventDefault();
+  event.clipboardData.setData("text/plain", reversed);
+  selection.deleteFromDocument();
+  event.preventDefault();
 });
 ```
 
