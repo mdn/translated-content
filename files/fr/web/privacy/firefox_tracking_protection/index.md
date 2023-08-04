@@ -1,7 +1,6 @@
 ---
 title: Protection contre le pistage
 slug: Web/Privacy/Firefox_tracking_protection
-translation_of: Web/Privacy/Tracking_Protection
 ---
 
 ## La protection contre le pistage, qu'est-ce que c'est ?

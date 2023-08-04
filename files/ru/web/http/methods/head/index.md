@@ -1,11 +1,6 @@
 ---
 title: HEAD
 slug: Web/HTTP/Methods/HEAD
-tags:
-  - HTTP
-  - Метод запроса
-  - Справка
-translation_of: Web/HTTP/Methods/HEAD
 ---
 {{HTTPSidebar}}
 

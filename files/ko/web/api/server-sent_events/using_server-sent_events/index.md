@@ -2,6 +2,7 @@
 title: Server-Sent Events 사용하기
 slug: Web/API/Server-sent_events/Using_server-sent_events
 ---
+
 {{DefaultAPISidebar("Server Sent Events")}}
 
 [Server-Sent Events](/ko/docs/Web/API/Server-sent_events)를 사용하는 웹 애플리케이션 개발은 매우 간단하다. 웹 애플리케이션으로 스트림 이벤트를 보내는 약간의 코드가 서버 상에 필요하지만, 웹 애플리케이션 측은 [웹 소켓](/ko/docs/Web/API/WebSockets_API)에서 이벤트를 다루는 방식과 거의 차이가 없다.
@@ -17,19 +18,21 @@ var evtSource = new EventSource("ssedemo.php");
 이벤트를 생성하는 스크립트가 다른 도메인에 존재할 경우엔 URI와 옵션 딕셔너리를 모두 지정하여 새로운 [`EventSource`](/ko/docs/Server-sent_events/EventSource) 객체를 생성한다. 클라이언트 스크립트가 example.com에 있는 경우라면:
 
 ```js
-var evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
+var evtSource = new EventSource("//api.example.com/ssedemo.php", {
+  withCredentials: true,
+});
 ```
 
 이벤트 소스를 생성 했다면 `message` 이벤트에 대한 핸들러를 등록하여 서버로부터의 메시지 수신을 시작할 수 있다.
 
 ```js
-evtSource.onmessage = function(e) {
+evtSource.onmessage = function (e) {
   var newElement = document.createElement("li");
-  var eventList = document.getElementById('list');
+  var eventList = document.getElementById("list");
 
   newElement.innerHTML = "message: " + e.data;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 위 코드는 입력 메시지(즉, `event` 필드를 갖고 있지 않은 서버로부터의 알림)를 수신하여 그 메시지의 텍스트를 document의 HTML에 있는 목록에 추가한다.
@@ -37,7 +40,7 @@ evtSource.onmessage = function(e) {
 또는 `addEventListener()`를 사용하여 이벤트를 기다릴 수도 있다.
 
 ```js
-evtSource.addEventListener("ping", function(event) {
+evtSource.addEventListener("ping", function (event) {
   const newElement = document.createElement("li");
   const time = JSON.parse(event.data).time;
   newElement.textContent = "ping at " + time;
@@ -92,7 +95,7 @@ to break the loop if the connection has been closed (e.g. client closes the page
 문제가 발생한 경우(네크워크 타임아웃이나 [접근 제약](/ko/docs/HTTP/Access_control_CORS)과 관련한 문제)에는 오류 이벤트를 생성한다. `EventSource` 갹채에 `onerror` 콜백을 등록하면 에러를 프로그램으로 대처할 수 있다.
 
 ```js
-evtSource.onerror = function(e) {
+evtSource.onerror = function (e) {
   alert("EventSource failed.");
 };
 ```

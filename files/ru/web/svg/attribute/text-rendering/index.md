@@ -1,7 +1,6 @@
 ---
 title: text-rendering
 slug: Web/SVG/Attribute/text-rendering
-translation_of: Web/SVG/Attribute/text-rendering
 ---
 
 « [SVG Attribute reference home](/en/SVG/Attribute)

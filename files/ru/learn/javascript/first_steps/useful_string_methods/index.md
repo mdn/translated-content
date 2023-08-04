@@ -1,20 +1,6 @@
 ---
 title: Полезные методы для строк
 slug: Learn/JavaScript/First_steps/Useful_string_methods
-tags:
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - length
-  - lower
-  - replace
-  - split
-  - upper
-  - Обучение
-  - Регистр
-translation_of: Learn/JavaScript/First_steps/Useful_string_methods
-original_slug: Learn/JavaScript/Первые_шаги/Useful_string_methods
 ---
 
 {{LearnSidebar}}

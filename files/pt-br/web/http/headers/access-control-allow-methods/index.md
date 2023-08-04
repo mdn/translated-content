@@ -43,8 +43,8 @@ Access-Control-Allow-Methods: *
 
 ## Especificações
 
-| Especificação                                                                                                            | Status                   | Comentário        |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ----------------- |
+| Especificação                                                                              | Status             | Comentário        |
+| ------------------------------------------------------------------------------------------ | ------------------ | ----------------- |
 | {{SpecName('Fetch','#http-access-control-allow-methods', 'Access-Control-Allow-Methods')}} | {{Spec2("Fetch")}} | Definição inicial |
 
 ## Compatibilidade com navegadores

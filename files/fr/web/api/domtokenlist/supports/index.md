@@ -1,7 +1,6 @@
 ---
 title: DOMTokenList.supports()
 slug: Web/API/DOMTokenList/supports
-translation_of: Web/API/DOMTokenList/supports
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}

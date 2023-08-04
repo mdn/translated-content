@@ -1,7 +1,6 @@
 ---
 title: <blockquote> - элемент цитаты
 slug: Web/HTML/Element/blockquote
-translation_of: Web/HTML/Element/blockquote
 ---
 ## Описание
 

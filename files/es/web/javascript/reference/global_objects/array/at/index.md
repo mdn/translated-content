@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/at
 ---
 
 {{JSRef}}

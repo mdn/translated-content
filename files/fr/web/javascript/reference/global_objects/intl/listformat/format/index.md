@@ -1,7 +1,6 @@
 ---
 title: Intl.ListFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createScriptProcessor()
 slug: Web/API/BaseAudioContext/createScriptProcessor
-original_slug: Web/API/AudioContext/createScriptProcessor
 ---
 
 {{APIRef("Web Audio API")}}{{deprecated_header}}

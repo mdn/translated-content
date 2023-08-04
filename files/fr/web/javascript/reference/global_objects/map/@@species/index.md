@@ -1,7 +1,6 @@
 ---
 title: get Map[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@species
 ---
 
 {{JSRef}}

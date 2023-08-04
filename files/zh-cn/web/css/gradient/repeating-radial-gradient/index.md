@@ -1,7 +1,6 @@
 ---
 title: repeating-radial-gradient()
 slug: Web/CSS/gradient/repeating-radial-gradient
-original_slug: Web/CSS/gradient/repeating-radial-gradient()
 ---
 
 {{CSSRef}}

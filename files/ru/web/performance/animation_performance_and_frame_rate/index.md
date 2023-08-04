@@ -1,15 +1,6 @@
 ---
 title: Производительность анимации и частота кадров
 slug: Web/Performance/Animation_performance_and_frame_rate
-tags:
-  - CSS animation
-  - Developer Tools
-  - Web Performance
-  - Анимация
-  - Производительность
-  - инструменты
-translation_of: Web/Performance/Animation_performance_and_frame_rate
-original_slug: Web/Performance/Производительность_анимации
 ---
 
 Анимация в Вебе может быть сделана с помощью {{domxref('SVGAnimationElement', 'SVG')}}, {{domxref('window.requestAnimationFrame','JavaScript')}}, включая {{htmlelement('canvas')}} и {{domxref('WebGL_API', 'WebGL')}}, CSS {{cssxref('animation')}}, {{htmlelement('video')}}, анимированных GIF и даже с помощью анимированных PNG и других типов изображений. Производительность CSS-анимации может отличаться от одного CSS-свойства к другому, а попытка анимировать некоторые "дорогие" CSS-свойства может привести к зависаниям ({{glossary('jank')}}), даже несмотря на то, что браузер борется за то, чтобы смягчить частоту смены кадров {{glossary('frame rate')}}.

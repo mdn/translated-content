@@ -1,7 +1,6 @@
 ---
 title: touch-action
 slug: Web/CSS/touch-action
-translation_of: Web/CSS/touch-action
 ---
 {{CSSRef}}
 

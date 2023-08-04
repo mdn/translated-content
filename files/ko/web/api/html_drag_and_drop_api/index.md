@@ -1,7 +1,6 @@
 ---
 title: HTML 드래그 앤 드롭 API
 slug: Web/API/HTML_Drag_and_Drop_API
-original_slug: Web/API/HTML_드래그_앤_드롭_API
 ---
 
 {{DefaultAPISidebar("HTML 드래그 앤 드롭 API")}}

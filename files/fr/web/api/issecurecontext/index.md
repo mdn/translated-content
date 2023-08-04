@@ -1,7 +1,6 @@
 ---
 title: isSecureContext
 slug: Web/API/isSecureContext
-translation_of: Web/API/isSecureContext
 ---
 
 {{APIRef}}{{SeeCompatTable}}

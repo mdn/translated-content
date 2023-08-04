@@ -1,7 +1,6 @@
 ---
 title: Sécurisée
 slug: Glossary/Safe
-translation_of: Glossary/safe
 ---
 
 Une méthode HTTP est **sécurisée (_safe_)** si elle ne modifie pas l'état du serveur. En d'autres termes, une méthode est sécurisée si elle conduit à une opération en lecture seule. Plusieurs méthodes HTTP courantes sont sécurisées : {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}} ou {{HTTPMethod("OPTIONS")}}. Toutes les méthodes sécurisées sont aussi {{glossary("idempotent","idempotentes")}} ainsi que certaines méthodes non sécurisées comme {{HTTPMethod("PUT")}} ou {{HTTPMethod("DELETE")}}.

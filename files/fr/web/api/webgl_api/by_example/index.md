@@ -1,7 +1,6 @@
 ---
 title: WebGL par l'exemple
 slug: Web/API/WebGL_API/By_example
-translation_of: Web/API/WebGL_API/By_example
 ---
 
 {{Next("Apprendre/WebGL/Par_exemple/Détecter_WebGL")}}

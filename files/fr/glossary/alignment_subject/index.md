@@ -1,7 +1,6 @@
 ---
 title: Alignment subject
 slug: Glossary/Alignment_Subject
-translation_of: Glossary/Alignment_Subject
 ---
 
 Dans le [CSS Box Alignment (alignement des boîtes en CSS)](/fr/docs/Web/CSS/CSS_Box_Alignment) l'**alignment subject** (le sujet de l'alignement) est la ou les choses alignées par la propriété.

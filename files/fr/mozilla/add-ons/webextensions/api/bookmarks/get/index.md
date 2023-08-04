@@ -1,7 +1,6 @@
 ---
 title: bookmarks.get()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/get
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/get
 ---
 
 {{AddonSidebar()}}

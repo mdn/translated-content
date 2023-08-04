@@ -1,7 +1,6 @@
 ---
 title: event.layerX
 slug: Web/API/MouseEvent/layerX
-translation_of: Web/API/UIEvent/layerX
 ---
 
 {{APIRef("DOM Events")}} {{Non-standard_header}}

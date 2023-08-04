@@ -1,5 +1,5 @@
 ---
-title: 'Window: beforeprint イベント'
+title: "Window: beforeprint イベント"
 slug: Web/API/Window/beforeprint_event
 ---
 

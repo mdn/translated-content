@@ -1,7 +1,6 @@
 ---
-title: 'Feature-Policy: web-share'
+title: "Feature-Policy: web-share"
 slug: Web/HTTP/Headers/Permissions-Policy/web-share
-original_slug: Web/HTTP/Headers/Feature-Policy/web-share
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}

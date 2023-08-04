@@ -1,7 +1,6 @@
 ---
 title: First contentful paint
 slug: Glossary/First_contentful_paint
-translation_of: Glossary/First_contentful_paint
 ---
 
 Le **<i lang="en">First Contentful Paint</i>** (FCP) est un indicateur du moment où le navigateur restitue le premier bit de contenu du DOM, fournissant le premier retour à l'internaute que la page est en cours de chargement. La réponse à la question «&nbsp;Est-ce que quelque chose se passe&nbsp;?&nbsp;» devient «&nbsp;oui&nbsp;» lorsque la première peinture du contenu est terminée.

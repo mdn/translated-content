@@ -1,7 +1,6 @@
 ---
 title: CSS Grid Layout によるよくあるレイアウトの実現
 slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
-original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 ---
 
 {{CSSRef}}

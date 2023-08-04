@@ -1,7 +1,6 @@
 ---
 title: Console.count()
 slug: Web/API/console/count
-translation_of: Web/API/Console/count
 ---
 
 {{APIRef("Console API")}}Выводит число, равное тому, сколько раз была вызвана конкретная функция `count()`. Эта функция также принимает необязательный аргумент `label`.
@@ -81,12 +80,10 @@ console.count([label]);
 - `label`
   - : Строка. Если она передаётся, `count()` выводит такое число, которое соответствует количеству раз вызова данной функции с таким же точно `label`.
 
-## Specifications
+## Спецификации
 
-| Specification                                                                | Status                           | Comment            |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#count", "console.count()")}} | {{Spec2("Console API")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

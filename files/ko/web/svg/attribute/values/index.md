@@ -2,6 +2,7 @@
 title: values
 slug: Web/SVG/Attribute/values
 ---
+
 « [SVG Attribute reference home](/en/SVG/Attribute)
 
 `values` 속성은 사용하는 맥락에 따라 크게 두 가지 의미가 있습니다.
@@ -27,7 +28,7 @@ If the attribute is not specified, then the default behavior depends on the valu
 
 | Categories         | Animation value attribute                                                        |
 | ------------------ | -------------------------------------------------------------------------------- |
-| Value              | \<list>                                                                           |
+| Value              | \<list>                                                                          |
 | Animatable         | No                                                                               |
 | Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/animate.html#ValuesAttribute) |
 
@@ -35,7 +36,7 @@ If the attribute is not specified, then the default behavior depends on the valu
 
 | Categories         | _None_                                                                                        |
 | ------------------ | --------------------------------------------------------------------------------------------- |
-| Value              | \<list> \| [\<number>](/en/SVG/Content_type#Number)                 |
+| Value              | \<list> \| [\<number>](/en/SVG/Content_type#Number)                                           |
 | Animatable         | Yes                                                                                           |
 | Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#feColorMatrixValuesAttribute) |
 

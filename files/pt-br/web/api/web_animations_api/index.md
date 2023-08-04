@@ -44,11 +44,13 @@ The Web Animations API adds some new features to {{domxref("document")}} and {{d
 - {{domxref("Element.getAnimations()")}}
   - : Returns an Array of {{domxref("Animation")}} objects currently affecting an element or which are scheduled to do so in future.
 
-## Specifications
+## Especificações
 
-| Specification                            | Status                               | Comment            |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Web Animations')}} | {{Spec2('Web Animations')}} | Initial definition |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## See also
 

@@ -1,7 +1,6 @@
 ---
 title: Síncrono
 slug: Glossary/Synchronous
-original_slug: Glossario/Sincrono
 ---
 
 **Síncrono** refere-se a comunicação em tempo real onde cada parte recebe ( e se necessário, processa e responde) mensagens instantaneamente (ou o mais próximo possível do instantâneo).

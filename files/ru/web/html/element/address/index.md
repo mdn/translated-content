@@ -1,13 +1,6 @@
 ---
 title: <address> - элемент для контактных адресов
 slug: Web/HTML/Element/address
-tags:
-  - HTML
-  - HTML секции
-  - HTML справочник
-  - Веб
-  - Элемент
-translation_of: Web/HTML/Element/address
 ---
 {{HTMLSidebar}}
 

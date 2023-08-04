@@ -28,7 +28,7 @@ Instâncias de {{jsxref("Date")}} referem-se a um específico ponto no tempo. In
 ### Usando `toJSON()`
 
 ```js
-var jsonDate = (new Date()).toJSON();
+var jsonDate = new Date().toJSON();
 var backToDate = new Date(jsonDate);
 
 console.log(jsonDate); //2015-10-26T07:46:36.611Z
@@ -36,10 +36,10 @@ console.log(jsonDate); //2015-10-26T07:46:36.611Z
 
 ## Especificações
 
-| Especificação                                                                                            | Status                       | Comentários                                          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.9.5.44', 'Date.prototype.toJSON')}}                     | {{Spec2('ES5.1')}}     | Definição inicial. Implementado no JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}}     | {{Spec2('ES6')}}         |                                                      |
+| Especificação                                                                  | Status               | Comentários                                          |
+| ------------------------------------------------------------------------------ | -------------------- | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.9.5.44', 'Date.prototype.toJSON')}}               | {{Spec2('ES5.1')}}   | Definição inicial. Implementado no JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}}     | {{Spec2('ES6')}}     |                                                      |
 | {{SpecName('ESDraft', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}} | {{Spec2('ESDraft')}} |                                                      |
 
 ## Compatibilidade com navegadores

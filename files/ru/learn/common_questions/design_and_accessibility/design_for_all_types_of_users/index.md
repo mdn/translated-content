@@ -1,13 +1,6 @@
 ---
 title: Как создать дизайн, подходящий для всех пользователей?
 slug: Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users
-tags:
-  - Дизайн
-  - Мобильность
-  - Начинающий
-  - доступность
-translation_of: Learn/Common_questions/Design_for_all_types_of_users
-original_slug: Learn/Common_questions/Design_for_all_types_of_users
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

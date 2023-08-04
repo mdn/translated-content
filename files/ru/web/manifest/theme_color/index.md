@@ -1,11 +1,6 @@
 ---
 title: theme_color
 slug: Web/Manifest/theme_color
-tags:
-  - Manifest
-  - Web
-  - theme_color
-translation_of: Web/Manifest/theme_color
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}

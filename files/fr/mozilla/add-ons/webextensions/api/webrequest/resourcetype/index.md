@@ -1,7 +1,6 @@
 ---
 title: webRequest.ResourceType
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
 ---
 
 {{AddonSidebar()}}

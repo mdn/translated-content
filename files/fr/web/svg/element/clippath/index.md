@@ -1,7 +1,6 @@
 ---
 title: <clipPath>
 slug: Web/SVG/Element/clipPath
-translation_of: Web/SVG/Element/clipPath
 ---
 
 {{SVGRef}}

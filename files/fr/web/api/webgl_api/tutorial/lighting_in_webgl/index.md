@@ -1,7 +1,6 @@
 ---
 title: Éclairage en WebGL
 slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Utiliser_les_textures_avec_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}

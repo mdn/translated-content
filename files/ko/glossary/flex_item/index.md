@@ -2,6 +2,7 @@
 title: 플렉스 항목
 slug: Glossary/Flex_Item
 ---
+
 {{glossary("Flex Container", "플렉스 컨테이너")}}(`display: flex` 또는 `display: inline-flex`를 지정한 요소)의 바로 아래 자식은 **플렉스 항목**이 됩니다.
 
 플렉스 컨테이너 내의 텍스트 역시 플렉스 항목입니다.

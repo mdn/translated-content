@@ -1,7 +1,6 @@
 ---
 title: tabs.onSelectionChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onSelectionChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onSelectionChanged
 ---
 
 {{AddonSidebar()}}

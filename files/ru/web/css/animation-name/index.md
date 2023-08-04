@@ -1,7 +1,6 @@
 ---
 title: animation-name
 slug: Web/CSS/animation-name
-translation_of: Web/CSS/animation-name
 ---
 {{CSSRef}} {{SeeCompatTable}}
 

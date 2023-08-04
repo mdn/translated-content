@@ -1,7 +1,6 @@
 ---
 title: String.prototype.endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
-translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
 ---
 
 {{JSRef}}

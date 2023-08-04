@@ -1,8 +1,8 @@
 ---
 title: 데이터 속성 사용하기
 slug: Learn/HTML/Howto/Use_data_attributes
-original_slug: Learn/HTML/Howto/데이터_속성_사용하기
 ---
+
 {{LearnSidebar}}
 
 [HTML5](/ko/docs/Web/Guide/HTML/HTML5) 특정 요소와 연관되어 있지만 확정된 의미는 갖지 않는 데이터에 대한 확장 가능성을 염두에 두고 디자인되었습니다. [`data-*` 속성](/ko/docs/Web/HTML/Global_attributes#attr-dataset)은 표준이 아닌 속성이나 추가적인 DOM 속성, {{domxref("Node.setUserData()")}}과 같은 다른 조작을 하지 않고도, 의미론적 표준 HTML 요소에 추가 정보를 저장할 수 있도록 해줍니다.
@@ -17,7 +17,7 @@ original_slug: Learn/HTML/Howto/데이터_속성_사용하기
   data-columns="3"
   data-index-number="12314"
   data-parent="cars">
-...
+  ...
 </article>
 ```
 
@@ -28,11 +28,11 @@ original_slug: Learn/HTML/Howto/데이터_속성_사용하기
 `dataset` 객체를 통해 `data` 속성을 가져오기 위해서는 속성 이름의 `data-` 뒷 부분을 사용합니다.(대시들은 camelCase로 변환되는 것에 주의하세요.)
 
 ```js
-var article = document.getElementById('electriccars');
+var article = document.getElementById("electriccars");
 
-article.dataset.columns // "3"
-article.dataset.indexNumber // "12314"
-article.dataset.parent // "cars"
+article.dataset.columns; // "3"
+article.dataset.indexNumber; // "12314"
+article.dataset.parent; // "cars"
 ```
 
 각 속성은 문자열이며 읽거나 쓸 수 있습니다. 위의 경우에서 `article.dataset.columns = 5`와 같이 설정하면 해당 속성을 `"5"`로 변경할 것입니다.
@@ -50,10 +50,10 @@ article::before {
 CSS의 [속성 선택자](/ko/docs/Web/CSS/Attribute_selectors)도 데이터에 따라 스타일을 바꾸는데 사용할 수 있습니다.:
 
 ```css
-article[data-columns='3'] {
+article[data-columns="3"] {
   width: 400px;
 }
-article[data-columns='4'] {
+article[data-columns="4"] {
   width: 600px;
 }
 ```

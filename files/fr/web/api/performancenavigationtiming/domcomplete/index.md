@@ -1,7 +1,6 @@
 ---
 title: PerformanceNavigationTiming.domComplete
 slug: Web/API/PerformanceNavigationTiming/domComplete
-translation_of: Web/API/PerformanceNavigationTiming/domComplete
 ---
 
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}

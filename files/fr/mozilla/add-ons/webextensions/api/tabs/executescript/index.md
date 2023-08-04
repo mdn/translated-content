@@ -1,7 +1,6 @@
 ---
 title: tabs.executeScript()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 ---
 
 {{AddonSidebar()}}

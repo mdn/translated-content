@@ -1,7 +1,6 @@
 ---
 title: <small>
 slug: Web/HTML/Element/small
-translation_of: Web/HTML/Element/small
 ---
 
 {{HTMLSidebar}}

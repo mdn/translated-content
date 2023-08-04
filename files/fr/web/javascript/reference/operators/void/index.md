@@ -1,7 +1,6 @@
 ---
 title: L'opérateur void
 slug: Web/JavaScript/Reference/Operators/void
-translation_of: Web/JavaScript/Reference/Operators/void
 ---
 
 {{jsSidebar("Operators")}}

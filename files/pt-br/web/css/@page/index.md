@@ -1,5 +1,5 @@
 ---
-title: '@page'
+title: "@page"
 slug: Web/CSS/@page
 ---
 
@@ -31,10 +31,10 @@ Podemos fazer referência a vários [pseudo-classes](/pt-BR/docs/CSS/Pseudo-clas
 
 ## Especificações
 
-| Specification                                                                    | Status                                   | Comment                                                                                                |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS3 Paged Media', '#at-page-rule', '@page')}}     | {{Spec2('CSS3 Paged Media')}} | Sem mudanças para {{SpecName('CSS2.1')}}, though more CSS at-rules can be used inside a `@page`. |
-| {{SpecName('CSS2.1', 'page.html#page-selectors', '@page')}} | {{Spec2('CSS2.1')}}                 |                                                                                                        |
+| Specification                                               | Status                        | Comment                                                                                          |
+| ----------------------------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------ |
+| {{SpecName('CSS3 Paged Media', '#at-page-rule', '@page')}}  | {{Spec2('CSS3 Paged Media')}} | Sem mudanças para {{SpecName('CSS2.1')}}, though more CSS at-rules can be used inside a `@page`. |
+| {{SpecName('CSS2.1', 'page.html#page-selectors', '@page')}} | {{Spec2('CSS2.1')}}           |                                                                                                  |
 
 ## Compatibilidade com navegadores
 

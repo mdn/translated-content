@@ -1,5 +1,5 @@
 ---
-title: ':out-of-range'
+title: ":out-of-range"
 slug: Web/CSS/:out-of-range
 ---
 
@@ -29,10 +29,17 @@ Essa pseudo classe é muito útil por dar ao usuario uma indicacão visual de qu
 
 ```html
 <form action="" id="form1">
- <p>Valores entre 1 e 10 são validos.</p>
+  <p>Valores entre 1 e 10 são validos.</p>
   <ul>
     <li>
-      <input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12">
+      <input
+        id="value1"
+        name="value1"
+        type="number"
+        placeholder="1 to 10"
+        min="1"
+        max="10"
+        value="12" />
       <label for="value1">Seu valor está </label>
     </li>
   </ul>
@@ -61,11 +68,11 @@ input:out-of-range {
 }
 
 input:in-range + label::after {
-  content: 'dentro dos limites.';
+  content: "dentro dos limites.";
 }
 
 input:out-of-range + label::after {
-  content: 'Fora dos limites!';
+  content: "Fora dos limites!";
 }
 ```
 
@@ -75,10 +82,10 @@ input:out-of-range + label::after {
 
 ## Specifications
 
-| Specification                                                                                                    | Status                               | Comment                                                        |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-out-of-range', ':out-of-range')}} | {{Spec2('HTML WHATWG')}}     | Define quando `:out-of-range` se iguala aos elementos em HTML. |
-| {{SpecName('CSS4 Selectors', '#out-of-range-pseudo', ':out-of-range')}}                 | {{Spec2('CSS4 Selectors')}} | Definicao inicial.                                             |
+| Specification                                                                        | Status                      | Comment                                                        |
+| ------------------------------------------------------------------------------------ | --------------------------- | -------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'scripting.html#selector-out-of-range', ':out-of-range')}} | {{Spec2('HTML WHATWG')}}    | Define quando `:out-of-range` se iguala aos elementos em HTML. |
+| {{SpecName('CSS4 Selectors', '#out-of-range-pseudo', ':out-of-range')}}              | {{Spec2('CSS4 Selectors')}} | Definicao inicial.                                             |
 
 ## Compatibilidade com navegadores
 

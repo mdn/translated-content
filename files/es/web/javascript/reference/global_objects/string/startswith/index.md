@@ -1,7 +1,6 @@
 ---
 title: String.prototype.startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/startsWith
 ---
 
 {{JSRef}}

@@ -22,7 +22,7 @@ slug: Web/JavaScript/Reference/Statements/if...else
   - : 참 또는 거짓으로 평가되는 [표현식](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#표현식)입니다.
 - `statement1`
   - : 조건이 참으로 평가될 경우 실행되는 문입니다.
-    중첩된 if구문을 포함하여 어떤 구문이든 쓸 수 있습니다. 다중구문을 사용할 경우 ({ ... })[블럭](/en-US/docs/Web/JavaScript/Reference/Statements/block) 구문 으로 그룹화 하고 실행하지 않으려면 [빈](/en-US/docs/Web/JavaScript/Reference/Statements/Empty) 구문을 사용합니다.
+    중첩된 if구문을 포함하여 어떤 구문이든 쓸 수 있습니다. 다중구문을 사용할 경우 ({ ... })[블럭](/ko/docs/Web/JavaScript/Reference/Statements/block) 구문 으로 그룹화 하고 실행하지 않으려면 [빈](/ko/docs/Web/JavaScript/Reference/Statements/Empty) 구문을 사용합니다.
 - `statement2`
   - : 이 구문은 조건이 거짓일경우 다른 조항이 있을 때 실행되는 구문입니다. 블록 문과 if문의 중첩을 호함한 모든문이 될 수 있습니다.
 

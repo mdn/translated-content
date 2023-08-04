@@ -1,7 +1,6 @@
 ---
 title: cite
 slug: Web/HTML/Element/cite
-original_slug: Web/HTML/Elemento/cite
 ---
 
 ### Definición

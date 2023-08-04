@@ -1,7 +1,6 @@
 ---
 title: "-moz-device-pixel-ratio"
 slug: Web/CSS/@media/-moz-device-pixel-ratio
-translation_of: Web/CSS/@media/-moz-device-pixel-ratio
 ---
 
 {{cssref}} {{Non-standard_header}} {{Deprecated_header}}

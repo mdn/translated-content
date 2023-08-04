@@ -2,7 +2,6 @@
 title: "Element: pointermove イベント"
 short-title: pointermove
 slug: Web/API/Element/pointermove_event
-original_slug: Web/API/Document/pointermove_event
 l10n:
   sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
 ---

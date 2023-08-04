@@ -1,13 +1,6 @@
 ---
 title: Symbol
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
-tags:
-  - API
-  - ECMAScript6
-  - JavaScript
-  - Symbol
-  - Символы
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol
 ---
 
 {{JSRef}}

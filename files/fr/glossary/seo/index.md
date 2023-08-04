@@ -1,7 +1,6 @@
 ---
 title: SEO
 slug: Glossary/SEO
-translation_of: Glossary/SEO
 ---
 
 **SEO** (Search Engine Optimization ou, en français, _Optimisation pour les moteurs de recherche_) est le processus permettant de rendre un site web plus visible dans les résultats de recherche, également appelé amélioration des classements de recherche.

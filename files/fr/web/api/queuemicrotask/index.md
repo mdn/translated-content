@@ -1,7 +1,6 @@
 ---
 title: queueMicrotask()
 slug: Web/API/queueMicrotask
-translation_of: Web/API/queueMicrotask
 ---
 
 {{APIRef("HTML DOM")}}

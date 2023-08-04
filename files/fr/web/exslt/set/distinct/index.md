@@ -1,7 +1,6 @@
 ---
 title: distinct
 slug: Web/EXSLT/set/distinct
-translation_of: Web/EXSLT/set/distinct
 ---
 
 {{ XsltRef() }}

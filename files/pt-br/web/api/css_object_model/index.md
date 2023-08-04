@@ -56,18 +56,7 @@ Outras interfaces podem ser usadas com CSSOM:
 
 ## Especificações
 
-| Especificação                                    | Status                                       | Comentário |
-| ------------------------------------------------ | -------------------------------------------- | ---------- |
-| {{SpecName("CSSOM")}}                     | {{Spec2("CSSOM")}}                     |            |
-| {{SpecName("CSSOM View")}}             | {{Spec2("CSSOM View")}}             |            |
-| {{SpecName("Screen Orientation")}}     | {{Spec2("Screen Orientation")}}     |            |
-| {{SpecName("CSS3 Fonts")}}             | {{Spec2("CSS3 Fonts")}}             |            |
-| {{SpecName("CSS3 Animations")}}         | {{Spec2("CSS3 Animations")}}         |            |
-| {{SpecName("CSS3 Transitions")}}     | {{Spec2("CSS3 Transitions")}}     |            |
-| {{SpecName("CSS3 Variables")}}         | {{Spec2("CSS3 Variables")}}         |            |
-| {{SpecName("CSS3 Conditional")}}     | {{Spec2("CSS3 Conditional")}}     |            |
-| {{SpecName("CSS3 Device")}}             | {{Spec2("CSS3 Device")}}             |            |
-| {{SpecName("CSS3 Counter Styles")}} | {{Spec2("CSS3 Counter Styles")}} |            |
+{{Specifications}}
 
 ## Notas de compatibilidade do navegador
 

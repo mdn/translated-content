@@ -1,7 +1,6 @@
 ---
 title: Création d'hyperliens
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
 
 {{LearnSidebar}}

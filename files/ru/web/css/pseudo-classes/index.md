@@ -1,13 +1,6 @@
 ---
 title: Псевдоклассы
 slug: Web/CSS/Pseudo-classes
-tags:
-  - CSS
-  - Reference
-  - Псевдоклассы
-  - Селекторы
-translation_of: Web/CSS/Pseudo-classes
-original_slug: Web/CSS/Псевдо-классы
 ---
 {{CSSRef}}
 

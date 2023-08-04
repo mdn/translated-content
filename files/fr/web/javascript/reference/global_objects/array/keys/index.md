@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/keys
 ---
 
 {{JSRef}}

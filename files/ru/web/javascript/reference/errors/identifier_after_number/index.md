@@ -1,9 +1,6 @@
 ---
-title: >-
-  SyntaxError: identifier starts immediately after numeric literal(идентификатор
-  начинается сразу после числового литерала)
+title: "SyntaxError: identifier starts immediately after numeric literal(идентификатор начинается сразу после числового литерала)"
 slug: Web/JavaScript/Reference/Errors/Identifier_after_number
-translation_of: Web/JavaScript/Reference/Errors/Identifier_after_number
 ---
 {{JSSidebar("Errors")}}
 

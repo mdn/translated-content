@@ -1,11 +1,6 @@
 ---
 title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
-tags:
-  - CSS
-  - CSS-анимации
-  - CSS-свойства
-translation_of: Web/CSS/animation-fill-mode
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

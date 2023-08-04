@@ -1,5 +1,5 @@
 ---
-title: "<iframe>"
+title: <iframe>
 slug: Web/HTML/Element/iframe
 ---
 

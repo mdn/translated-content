@@ -1,7 +1,6 @@
 ---
 title: hyphens
 slug: Web/CSS/hyphens
-translation_of: Web/CSS/hyphens
 ---
 {{CSSRef}}
 

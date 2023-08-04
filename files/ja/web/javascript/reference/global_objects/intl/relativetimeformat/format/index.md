@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
 ## 構文
 
 ```js
-relativeTimeFormat.format(value, unit)
+relativeTimeFormat.format(value, unit);
 ```
 
 ### 引数
@@ -39,9 +39,9 @@ relativeTimeFormat.format(value, unit)
 // ロケールで既定値を明確に指定して
 // 相対時間フォーマッターを作成
 const rtf = new Intl.RelativeTimeFormat("en", {
-    localeMatcher: "best fit", // other values: "lookup"
-    numeric: "always", // other values: "auto"
-    style: "long", // other values: "short" or "narrow"
+  localeMatcher: "best fit", // other values: "lookup"
+  numeric: "always", // other values: "auto"
+  style: "long", // other values: "short" or "narrow"
 });
 
 // 負の値 (-1) を使った相対時間の書式化
