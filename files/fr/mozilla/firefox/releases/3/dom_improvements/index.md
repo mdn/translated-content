@@ -1,11 +1,6 @@
 ---
 title: Améliorations DOM dans Firefox 3
 slug: Mozilla/Firefox/Releases/3/DOM_improvements
-tags:
-  - DOM
-  - Firefox 3
-translation_of: Mozilla/Firefox/Releases/3/DOM_improvements
-original_slug: Améliorations_DOM_dans_Firefox_3
 ---
 
 {{FirefoxSidebar}}
@@ -24,10 +19,10 @@ Firefox 3 offre un certain nombre d'améliorations dans sa gestion du [modèle o
 
   <kbd>Shift</kbd>
 
-  — mise en majuscules). Consultez [L'évènement Keypress dans Gecko](/fr/L'%c3%a9v%c3%a8nement_Keypress_dans_Gecko).
+  — mise en majuscules). Consultez [L'évènement Keypress dans Gecko](/fr/L'évènement_Keypress_dans_Gecko).
 
 ### Voir aussi
 
-- [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_d%c3%a9veloppeurs)
-- [Améliorations CSS dans Firefox 3](/fr/Am%c3%a9liorations_CSS_dans_Firefox_3)
+- [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_développeurs)
+- [Améliorations CSS dans Firefox 3](/fr/Améliorations_CSS_dans_Firefox_3)
 - [DOM](/fr/DOM)

@@ -1,15 +1,8 @@
 ---
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
-tags:
-  - API
-  - DOM
-  - Event
-  - UI Events
-  - Интерфейс
-  - Событие
-translation_of: Web/API/KeyboardEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 Объекты **`KeyboardEvent`** описывают работу пользователя с клавиатурой. Каждое событие описывает клавишу; тип события (`keydown`, `keypress` или `keyup`) определяет произведённый тип действия.
@@ -207,7 +200,7 @@ _Этот интерфейс также наследует свойства от
 
 ## Пример
 
-```js
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -251,11 +244,7 @@ document.addEventListener('keyup', (event) => {
 
 ## Спецификации
 
-| Спецификация                                                                                     | Статус                           | Комментарий                |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------- |
-| {{SpecName('DOM3 Events', '#interface-keyboardevent', 'KeyboardEvent')}} | {{Spec2('DOM3 Events')}} | Первоначальное определение |
-
-Спецификация интерфейса `KeyboardEvent` прошла многочисленные черновые варианты, сперва в DOM Events Level 2, где её поддержка не добилась консенсуса, затем в DOM Events Level 3. Это привело к реализации нестандартных методов инициализации Gecko-браузерами в ранних версиях DOM Events Level 2 {{domxref("KeyboardEvent.initKeyEvent()")}} и в ранних версиях DOM Events Level 3 {{domxref("KeyboardEvent.initKeyboardEvent()")}} остальными браузерами. Но оба были заменены новой формой использования конструктора:{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
+{{Specifications}}
 
 ## Совместимость с браузерами
 

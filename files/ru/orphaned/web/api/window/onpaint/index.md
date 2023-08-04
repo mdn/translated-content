@@ -1,8 +1,6 @@
 ---
 title: Window.onpaint
 slug: orphaned/Web/API/Window/onpaint
-translation_of: Web/API/Window/onpaint
-original_slug: Web/API/Window/onpaint
 ---
 
 {{ ApiRef() }}{{Non-standard_header}}

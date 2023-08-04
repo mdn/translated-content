@@ -1,7 +1,6 @@
 ---
 title: 内容分类
 slug: Web/HTML/Content_categories
-original_slug: Web/Guide/HTML/Content_categories
 ---
 
 {{HTMLSidebar}}
@@ -14,7 +13,7 @@ original_slug: Web/Guide/HTML/Content_categories
 - 表单相关的内容类，描述了表单相关元素共有的内容规范；
 - 特殊内容类，描述了仅仅在某些特殊元素上才需要遵守的内容规范，通常这些元素都有特殊的上下文关系。
 
-[![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](content_categories_venn.png)](/en-US/docs/Web/Guide/HTML/Content_categories/content_categories_venn.png)
+[![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](content_categories_venn.png)](/zh-CN/docs/Web/Guide/HTML/Content_categories/content_categories_venn.png)
 
 ## 主内容分类
 
@@ -135,7 +134,10 @@ original_slug: Web/Guide/HTML/Content_categories
 例如，{{HTMLElement("del")}} 和 {{HTMLELement("ins")}} 是透明的：
 
 ```html
-<p>We hold these truths to be <del><em>sacred &amp; undeniable</em></del> <ins>self-evident</ins>.</p>
+<p>
+  We hold these truths to be <del><em>sacred &amp; undeniable</em></del>
+  <ins>self-evident</ins>.
+</p>
 ```
 
 即使这两个元素被移除，这个代码段依然是合法的（至少从代码语法上）。

@@ -365,9 +365,9 @@ console.log(docCookies.my_cookie1);
 
 ## Notas Especificas Gecko
 
-- No momento, `Object.getPrototypeOf(proxy)` retorna incondicionalmente um `Object.getPrototypeOf(target)`, porque a trap ES2015 getPrototypeOf não foi implementada ({{bug(795904)}}, {{bug(888969)}}).
-- `Array.isArray(proxy)` retorna incondicionalmente um `Array.isArray(target)` ({{bug(1096753)}}, {{bug(1111785)}}).
-- `Object.prototype.toString.call(proxy)` retorna incondicionalmente `Object.prototype.toString.call(target)`, porque ES2015 Symbol.toStringTag não foi implementado ({{bug(1114580)}}).
+- No momento, `Object.getPrototypeOf(proxy)` retorna incondicionalmente um `Object.getPrototypeOf(target)`, porque a trap ES2015 getPrototypeOf não foi implementada ([Erro do Firefox 795904](https://bugzil.la/795904), [Erro do Firefox 888969](https://bugzil.la/888969)).
+- `Array.isArray(proxy)` retorna incondicionalmente um `Array.isArray(target)` ([Erro do Firefox 1096753](https://bugzil.la/1096753), [Erro do Firefox 1111785](https://bugzil.la/1111785)).
+- `Object.prototype.toString.call(proxy)` retorna incondicionalmente `Object.prototype.toString.call(target)`, porque ES2015 Symbol.toStringTag não foi implementado ([Erro do Firefox 1114580](https://bugzil.la/1114580)).
 
 ## Veja também
 

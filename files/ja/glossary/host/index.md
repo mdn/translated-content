@@ -11,4 +11,4 @@ slug: Glossary/Host
 
 ### 一般知識
 
-- Wikipedia 上の記事「[ホスト (ネットワーク)](https://ja.wikipedia.org/wiki/ホスト_(ネットワーク))」
+- Wikipedia 上の記事「[ホスト (ネットワーク)](<https://ja.wikipedia.org/wiki/ホスト_(ネットワーク)>)」

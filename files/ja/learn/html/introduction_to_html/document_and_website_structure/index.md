@@ -83,7 +83,7 @@ HTML コードでは、それらの*機能*に基づいてコンテンツのセ�
 上記の例は次のコードで表されています ([この例は GitHub リポジトリーにもあります](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html))。上の例を見てから、下のリストを見て、どの部分がビジュアルのどの部分を構成しているかを確認してください。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

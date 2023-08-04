@@ -1,7 +1,6 @@
 ---
 title: Começando com React
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Comecando_com_React
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -14,11 +13,11 @@ Neste artigo mostraremos como dizer Olá para o React. Descobriremos um pouco so
       <th scope="row">Pré-requisitos:</th>
       <td>
         <p>
-          Familiaridade com <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>, e linguagem
-          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>, conhecimento de
+          Familiaridade com <a href="/pt-BR/docs/Learn/HTML">HTML</a>,
+          <a href="/pt-BR/docs/Learn/CSS">CSS</a>, e linguagem
+          <a href="/pt-BR/docs/Learn/JavaScript">JavaScript</a>, conhecimento de
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/linha de comandos.</a
           >
         </p>
@@ -66,9 +65,9 @@ React utiliza características de JavaScript moderno para muitos de seus padrõe
 const heading = <h1> Mozilla Developer Network</h1>;
 ```
 
-A constante _heading_ acima é conhecida como uma **expressão JSX.** React pode utilizá-la para renderizar a _tag_ [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) em nosso aplicativo.
+A constante _heading_ acima é conhecida como uma **expressão JSX.** React pode utilizá-la para renderizar a _tag_ [`<h1>`](/pt-BR/docs/Web/HTML/Element/Heading_Elements) em nosso aplicativo.
 
-Suponha que quiséssemos conter nosso cabeçalho em uma tag [`<header>`](/en-US/docs/Web/HTML/Element/header), por razões semânticas? A aproximação em JSX permite-nos aninhar nossos elementos dentro uns dos outros, do mesmo jeito que fazemos com o HTML:
+Suponha que quiséssemos conter nosso cabeçalho em uma tag [`<header>`](/pt-BR/docs/Web/HTML/Element/header), por razões semânticas? A aproximação em JSX permite-nos aninhar nossos elementos dentro uns dos outros, do mesmo jeito que fazemos com o HTML:
 
 ```js
 const header = (
@@ -81,18 +80,22 @@ const header = (
 > **Nota:** Os parenteses no recorte de código anterior não são exclusivos ao JSX e não têm nenhum efeito na sua aplicação. Eles estão lá para sinalizar para você (e seu computador) que as múltiplas linhas de código dentro do mesmo são parte da mesma expressão. Você poderia muito bem escrever a expressão do cabeçalho do seguinte jeito:
 >
 > ```js
-> const header = <header>
+> const header = (
+>   <header>
 >     <h1>Mozilla Developer Network</h1>
-> </header>
+>   </header>
+> );
 > ```
 >
-> Entretanto, isso é meio estranho, porquê a tag [`<header>`](/en-US/docs/Web/HTML/Element/header) que inicia a expressão não está alinhada na mesma posição que sua tag de fechamento correspondente.
+> Entretanto, isso é meio estranho, porquê a tag [`<header>`](/pt-BR/docs/Web/HTML/Element/header) que inicia a expressão não está alinhada na mesma posição que sua tag de fechamento correspondente.
 
 Claro, seu navegador não é capaz de ler o JSX sem alguma ajuda. Quando compilado (utilizando uma ferramenta como [Babel](https://babeljs.io/) ou [Parcel](https://parceljs.org/)), nossa expressão de cabeçalho ficaria assim:
 
 ```js
-const header = React.createElement("header", null,
-  React.createElement("h1", null, "Mozilla Developer Network")
+const header = React.createElement(
+  "header",
+  null,
+  React.createElement("h1", null, "Mozilla Developer Network"),
 );
 ```
 
@@ -106,7 +109,7 @@ Para ler mais sobre o JSX, confira este artigo do time do React, [JSX In Depth](
 
 Existem muitos jeitos de utilizar o React, mas nós iremos utilizar a ferramenta de interface de linha de comando (CLI), _create-react-app_, como mencionado anteriormente, que acelera o processo de desenvolvimento da aplicação em React instalando alguns pacotes e criando alguns arquivos para você, lidando com os processos de automação mencionados acima.
 
-É possível [adicionar React á um website sem create-react-app](https://reactjs.org/docs/add-react-to-a-website.html) copiando alguns elementos [`<script>`](/en-US/docs/Web/HTML/Element/script) em um arquivo HTML, mas o a interface de linha de comando _create-react-app_ é um ponto de partida comum para aplicações em React. Utilizar-lo vai permitir que você passe mais tempo construindo seu aplicativo e menos tempo incomodando-se com configurações.
+É possível [adicionar React á um website sem create-react-app](https://reactjs.org/docs/add-react-to-a-website.html) copiando alguns elementos [`<script>`](/pt-BR/docs/Web/HTML/Element/script) em um arquivo HTML, mas o a interface de linha de comando _create-react-app_ é um ponto de partida comum para aplicações em React. Utilizar-lo vai permitir que você passe mais tempo construindo seu aplicativo e menos tempo incomodando-se com configurações.
 
 ### Requisitos
 
@@ -116,7 +119,7 @@ Você também pode utilizar o gerenciador de pacotes _Yarn_ como uma alternativa
 
 Se você está utilizando o Windows, você vai precisar instalar alguns softwares adicionais para que você tenha as mesmas capacidades de um terminal Unix/macOS e utilizar os comandos de terminal que serão mencionados neste tutorial. **Gitbash** (que vem junto como parte do pacote de ferramentas [Git para o Windows](https://gitforwindows.org/)) ou o [subsistema Windows para Linux](https://docs.microsoft.com/en-us/windows/wsl/about) (**WSL**) ambos são adequados. Veja o [Curso intensivo - Linha de comando](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)para mais informações sobre estes e sobre comandos de terminal no geral.
 
-Mantenha em mente também que React e ReactDOM produzem aplicativos que funcionam apenas em navegadores consideravelmente modernos, IE9+ (Internet Explorer 9) com o auxílio de alguns _[polyfills](https://en.wikipedia.org/wiki/Polyfill_\(programming\))_. É recomendado que você utilize um navegador moderno com o Firefox, Safari, Chrome ou Edge enquanto estiver trabalhando nestes tutoriais.
+Mantenha em mente também que React e ReactDOM produzem aplicativos que funcionam apenas em navegadores consideravelmente modernos, IE9+ (Internet Explorer 9) com o auxílio de alguns [polyfills](<https://en.wikipedia.org/wiki/Polyfill_(programming)>). É recomendado que você utilize um navegador moderno com o Firefox, Safari, Chrome ou Edge enquanto estiver trabalhando nestes tutoriais.
 
 Veja também os seguintes artigos para mais informações:
 
@@ -178,7 +181,7 @@ moz-todo-react
 
 A pasta `src` é onde nós iremos ficar a maior parte do nosso tempo, é onde o código fonte da nossa aplicação vive.
 
-A pasta `public` contém arquivos que serão lidos pelo navegador enquanto você desenvolve o aplicativo; o mais importante de todos estes arquivos é o `index.html`. O React irá injetar seu código neste arquivo para que seu navegador possa executá-lo. Existem outras marcações que ajudam o _create-react-app_ a funcionar, então cuidado para não editar estas, a não ser que você saiba o que você está fazendo. Você é encorajado a mudar o texto dentro do elemento [`<title>`](/en-US/docs/Web/HTML/Element/title) neste arquivo, esta mudança irá refletir no título de sua aplicação. Títulos de páginas precisos são importante para acessibilidade!
+A pasta `public` contém arquivos que serão lidos pelo navegador enquanto você desenvolve o aplicativo; o mais importante de todos estes arquivos é o `index.html`. O React irá injetar seu código neste arquivo para que seu navegador possa executá-lo. Existem outras marcações que ajudam o _create-react-app_ a funcionar, então cuidado para não editar estas, a não ser que você saiba o que você está fazendo. Você é encorajado a mudar o texto dentro do elemento [`<title>`](/pt-BR/docs/Web/HTML/Element/title) neste arquivo, esta mudança irá refletir no título de sua aplicação. Títulos de páginas precisos são importante para acessibilidade!
 
 A pasta `public` também será publicada quando você construir e lançar uma versão de produção de seu aplicativo. Nós não cobriremos _lançamento_ (deploy) de aplicações neste tutorial, entretanto você provavelmente conseguirá implementar uma solução similar para isso descrito em nosso tutorial [Lançando nosso app](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment).
 
@@ -190,10 +193,10 @@ No React, um **componente** é um módulo reutilizável que renderiza parte de n
 
 Vamos o arquivo `src/App.js` dado que a mensagem exibida em nosso navegador está nos instigando a editá-lo. Esse arquivo contém nosso primeiro componente, `App`, e algumas outras linhas de código.
 
-```js
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+```jsx
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -207,8 +210,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -218,16 +220,16 @@ function App() {
 export default App;
 ```
 
-O arquivo `App.js` consiste de três partes principais: algumas declarações de [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) no topo, o componente `App` no meio, e uma declaração de [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) na parte de baixo. A maioria dos componentes React segue este padrão.
+O arquivo `App.js` consiste de três partes principais: algumas declarações de [`import`](/pt-BR/docs/Web/JavaScript/Reference/Statements/import) no topo, o componente `App` no meio, e uma declaração de [`export`](/pt-BR/docs/Web/JavaScript/Reference/Statements/export) na parte de baixo. A maioria dos componentes React segue este padrão.
 
 ### Declarações de _import_
 
 As declaração de `import` no topo de nosso arquivo `App.js` nos permitem utilizar código que foi definido em outro lugar fora de nosso arquivo. Vamos dar uma olhada nestas declarações mais de perto.
 
-```js
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+```jsx
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 ```
 
 A primeira declaração importa a própria biblioteca React mesmo. Por conta do React transformar o JSX que nós escrevemos em declarações de `React.createElement()`, todos componentes React devem importar o módulo `React`. Se você pular este passo, sua aplicação irá resultar em um erro.
@@ -244,7 +246,7 @@ Depois dos _imports,_ nós temos uma função chamada `App`. Enquanto a maior pa
 
 Vamos dar uma olhada em `App` mais de perto.
 
-```js
+```jsx
 function App() {
   return (
     <div className="App">
@@ -257,8 +259,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -269,21 +270,19 @@ function App() {
 
 A função `App` retrona uma expressão JSX. Essa expressão define o que, no fim, o seu navegador irá renderizar para o DOM.
 
-Alguns elementos na expressão têm atributos, que são escritos assim como no HTML, seguindo o seguinte padrão de `atributo="valor"`. Na linha 3, a tag [`<div>`](/en-US/docs/Web/HTML/Element/div) de abertaura tem o atributo _`className`_. Isso é o mesmo que o atributo [`class`](/pt-BR/docs/Web/HTML/Global_attributes/class)no HTML, porém por conta do JSX ser Javascript, nós não podemos utilizar a palavra `class` — esta é reservada, isso quer dizer que o JavaScript já utiliza-a para um propósito específico e causaria problemas no nosso código inseri-lá aqui. Alguns outros atributos de HTML são escritos diferentes em JSX em comparação com o HTML, pela mesma razão. Nós falaremos sobre estes quando encontrarmos os mesmos.
+Alguns elementos na expressão têm atributos, que são escritos assim como no HTML, seguindo o seguinte padrão de `atributo="valor"`. Na linha 3, a tag [`<div>`](/pt-BR/docs/Web/HTML/Element/div) de abertaura tem o atributo _`className`_. Isso é o mesmo que o atributo [`class`](/pt-BR/docs/Web/HTML/Global_attributes/class)no HTML, porém por conta do JSX ser Javascript, nós não podemos utilizar a palavra `class` — esta é reservada, isso quer dizer que o JavaScript já utiliza-a para um propósito específico e causaria problemas no nosso código inseri-lá aqui. Alguns outros atributos de HTML são escritos diferentes em JSX em comparação com o HTML, pela mesma razão. Nós falaremos sobre estes quando encontrarmos os mesmos.
 
-Tome um momento para mudar a _tag_ [`<p>`](/en-US/docs/Web/HTML/Element/p) na linha 6 para que esta diga "Hello, world!", e então salve o arquivo. Você irá notar que esta mudança é imediatamente refletida e renderiza no servidor de desenvolvimento executando em `http://localhost:3000` em seu navegador. Agora delete a _tag_ [`<a>`](/en-US/docs/Web/HTML/Element/a) e salve; o link _"Learn React"_ vai desaparecer.
+Tome um momento para mudar a _tag_ [`<p>`](/pt-BR/docs/Web/HTML/Element/p) na linha 6 para que esta diga "Hello, world!", e então salve o arquivo. Você irá notar que esta mudança é imediatamente refletida e renderiza no servidor de desenvolvimento executando em `http://localhost:3000` em seu navegador. Agora delete a _tag_ [`<a>`](/pt-BR/docs/Web/HTML/Element/a) e salve; o link _"Learn React"_ vai desaparecer.
 
 Seu componente `App` deve estar assim agora:
 
-```js
+```jsx
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, World!
-        </p>
+        <p>Hello, World!</p>
       </header>
     </div>
   );
@@ -298,14 +297,14 @@ Bem no final do seu arquivo `App.js`, a declaração `export default App` faz co
 
 Vamos abrir `src/index.js`, porque é onde nosso componente `App` está sendo utilizado. Esse arquivo é o ponto de entrada para nosso aplicativo, e inicialmente parece-se assim:
 
-```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+```jsx
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
@@ -328,13 +327,13 @@ Tudo isso diz para o React que nós queremos renderizar nossa aplicação React 
 
 Seu arquivo `index.js` final deve estar assim:
 
-```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+```jsx
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 ## Variáveis e props
@@ -353,16 +352,14 @@ Aqui, na _tag_`<img />` o atributo `src` está entre chaves ( { } ). É assim qu
 
 Vamos tentar fazer uma variável própria. Antes da declaração de _return_ de `App` adicione `const subject = 'React';`. Seu componente `App` deve estar assim agora:
 
-```js
+```jsx
 function App() {
   const subject = "React";
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, World!
-        </p>
+        <p>Hello, World!</p>
       </header>
     </div>
   );
@@ -371,16 +368,14 @@ function App() {
 
 Muda a linha 8 para usar a nossa variável `subject` em vez da palavra "world", desta forma:
 
-```js
+```jsx
 function App() {
   const subject = "React";
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, {subject}!
-        </p>
+        <p>Hello, {subject}!</p>
       </header>
     </div>
   );
@@ -397,8 +392,8 @@ Uma **prop** é qualquer dado passado para um componente React. _Props_ são esc
 
 Adicione a _prop_ `subject` na invocação do componente `<App/>`, com o valor de `Clarice`. Quando você terminar, seu código deve estar assim:
 
-```js
-ReactDOM.render(<App subject="Clarice" />, document.getElementById('root'));
+```jsx
+ReactDOM.render(<App subject="Clarice" />, document.getElementById("root"));
 ```
 
 De volta ao `App.js`, vamos revisitar a própria função App, que é lida da seuginte forma (com a declaração de `return` encurtada, a fim de ser breve.)

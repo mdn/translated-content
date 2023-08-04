@@ -1,14 +1,13 @@
 ---
 title: <form>
 slug: Web/HTML/Element/form
-translation_of: Web/HTML/Element/form
 ---
 
 ## Резюме
 
 _Элемент HTML form_ (`<form>`) представляет (собой) раздел документа, содержащий интерактивные элементы управления, которые позволяют пользователю отправлять информацию на веб-сервер.
 
-Можно использовать [`:valid`](/en-US/docs/CSS/%3Avalid) и [`:invalid`](/en-US/docs/CSS/%3Ainvalid) CSS псевдоклассы для стилизации `<form>` элемента, в зависимости от того, валиден или нет конкретный элемент {{domxref("HTMLFormElement.elements", "elements")}} внутри формы.
+Можно использовать [`:valid`](/ru/docs/CSS/%3Avalid) и [`:invalid`](/ru/docs/CSS/%3Ainvalid) CSS псевдоклассы для стилизации `<form>` элемента, в зависимости от того, валиден или нет конкретный элемент {{domxref("HTMLFormElement.elements", "elements")}} внутри формы.
 
 ## Контекст Использования
 

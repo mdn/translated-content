@@ -41,9 +41,9 @@ HTML 5 이전에는 `HTMLFormControlsCollection`을 기반으로 하는 {{domxre
 
 ```html
 <form id="my-form">
-  <input type="text" name="username">
-  <input type="text" name="full-name">
-  <input type="password" name="password">
+  <input type="text" name="username" />
+  <input type="text" name="full-name" />
+  <input type="password" name="password" />
 </form>
 ```
 

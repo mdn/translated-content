@@ -1,16 +1,6 @@
 ---
 title: <section> - элемент секции
 slug: Web/HTML/Element/section
-tags:
-  - Element
-  - HTML
-  - Web
-  - Веб
-  - Разделы
-  - Разделы HTML
-  - Справка
-  - Элемент
-translation_of: Web/HTML/Element/section
 ---
 
 {{HTMLSidebar}}

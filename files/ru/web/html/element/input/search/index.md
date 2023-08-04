@@ -1,12 +1,11 @@
 ---
 title: <input type="search">
 slug: Web/HTML/Element/input/search
-translation_of: Web/HTML/Element/input/search
 ---
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} элементы с типом **`search`** это текстовые поля разработанные для ввода пользователем поисковых запросов. Функциональность идентична элементам с типом [`text`](/en-US/docs/Web/HTML/Element/input/text), но может отличаться стилизация за счёт {{Glossary("user agent")}}, а также наличием специального **не стандартизированного** события {{domxref("HTMLElement/search_event", "onsearch")}}.
+{{HTMLElement("input")}} элементы с типом **`search`** это текстовые поля разработанные для ввода пользователем поисковых запросов. Функциональность идентична элементам с типом [`text`](/ru/docs/Web/HTML/Element/input/text), но может отличаться стилизация за счёт {{Glossary("user agent")}}, а также наличием специального **не стандартизированного** события {{domxref("HTMLElement/search_event", "onsearch")}}.
 
 {{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}
 
@@ -376,5 +375,5 @@ You can see a good example of a search form used in context at our [website-aria
 
 - [HTML Forms](/ru/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
-- [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
+- [`<input type="text">`](/ru/docs/Web/HTML/Element/input/text)
 - [Compatibility of CSS properties](/ru/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

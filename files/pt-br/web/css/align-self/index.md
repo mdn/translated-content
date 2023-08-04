@@ -68,7 +68,7 @@ align-self: unset;
   - : A caixa-margem do item flex é centralizada ao longo da linha no eixo transversal. Se o tamanho do item é superior to container flex, então ele irá transbordar de maneira equivalente em ambas direções.
 - `baseline first baseline`
   `last baseline`
-  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
+  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
     The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
 - `stretch`
   - : Caso o tamanho combinado dos itens ao longo do eixo transversal seja menor do que o tamanho do container de alinhamento, e caso o tamanho do item segue o estilo `auto`, seu tamanho cresce igualmente (mas não proporcionalmente), enquanto que ainda respeitando as restrições impostas por {{cssxref("max-height")}}/{{cssxref("max-width")}} (ou a funcionalidade equivalente), de maneira que o tamanho combinado de todos itens tamanho-`auto` preencha exatamente o container de alinhamento ao longo do eixo transversal.
@@ -121,10 +121,10 @@ div:nth-child(3) {
 
 ## Especificações
 
-| Especificação                                                                                    | Status                                   | Comentário                                   |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------------------------------- |
+| Especificação                                                           | Status                          | Comentário                                   |
+| ----------------------------------------------------------------------- | ------------------------------- | -------------------------------------------- |
 | {{SpecName("CSS3 Box Alignment", "#propdef-align-self", "align-self")}} | {{Spec2("CSS3 Box Alignment")}} | Atualiza para últimas definições de sintaxe. |
-| {{SpecName("CSS3 Flexbox", "#propdef-align-self", "align-self")}}         | {{Spec2("CSS3 Flexbox")}}         | Definição inicial.                           |
+| {{SpecName("CSS3 Flexbox", "#propdef-align-self", "align-self")}}       | {{Spec2("CSS3 Flexbox")}}       | Definição inicial.                           |
 
 {{cssinfo}}
 

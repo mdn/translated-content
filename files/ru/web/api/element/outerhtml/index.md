@@ -1,14 +1,8 @@
 ---
 title: Element.outerHTML
 slug: Web/API/Element/outerHTML
-tags:
-  - Парсинг
-  - Парсинг DOM
-  - Свойство
-  - Сериализация
-  - Ссылка
-translation_of: Web/API/Element/outerHTML
 ---
+
 {{APIRef("DOM")}}
 
 ## Описание
@@ -66,7 +60,7 @@ console.log(container.firstChild.nodeName); // логирует "P"
 Если у элемента нет родительской ветки, которая не является корневой веткой документа, установка его свойства `outerHTML` выбросит исключение [`DOMException`](/en/DOM/DOMException) с кодом ошибки `NO_MODIFICATION_ALLOWED_ERR`. Например:
 
 ```js
-document.documentElement.outerHTML = "test";  // бросает DOMException
+document.documentElement.outerHTML = "test"; // бросает DOMException
 ```
 
 Обратите внимание, когда произойдёт изменение элемента в документе, переменная, у которой было установлено свойство `outerHTML`, будет по-прежнему хранить ссылку на оригинальный элемент:
@@ -78,13 +72,11 @@ p.outerHTML = "<div>Этот div заменил параграф.</div>";
 console.log(p.nodeName); // всё ещё "P";
 ```
 
-## Specification
+## Спецификации
 
-| Specification                                                                        | Status                               | Comment |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('DOM Parsing', '#outerhtml', 'Element.outerHTML')}} | {{ Spec2('DOM Parsing') }} |         |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

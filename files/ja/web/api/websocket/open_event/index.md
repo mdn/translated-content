@@ -1,5 +1,5 @@
 ---
-title: 'WebSocket: open イベント'
+title: "WebSocket: open イベント"
 slug: Web/API/WebSocket/open_event
 l10n:
   sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331

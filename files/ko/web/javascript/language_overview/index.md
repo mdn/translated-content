@@ -1,7 +1,6 @@
 ---
 title: JavaScript 재입문하기 (JS 튜토리얼)
 slug: Web/JavaScript/Language_overview
-original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 
 {{jsSidebar}}

@@ -1,16 +1,6 @@
 ---
 title: Notification.onshow
 slug: Web/API/Notification/show_event
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - onshow
-translation_of: Web/API/Notification/onshow
-original_slug: Web/API/notification/onshow
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

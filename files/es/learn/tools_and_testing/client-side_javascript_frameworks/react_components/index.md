@@ -108,8 +108,7 @@ Con este componente importado, podemos reemplazar todos los elementos `li` en `A
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading">
   <Todo />
   <Todo />
   <Todo />
@@ -236,7 +235,7 @@ En `src/index.js`, crea una nueva `const` debajo de la última importación, per
 const DATA = [
   { id: "todo-0", name: "Eat", completed: true },
   { id: "todo-1", name: "Sleep", completed: false },
-  { id: "todo-2", name: "Repeat", completed: false }
+  { id: "todo-2", name: "Repeat", completed: false },
 ];
 ```
 
@@ -266,8 +265,7 @@ Intentemos reemplazar todos los hijos de `<ul>` con `taskList`:
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading">
   {taskList}
 </ul>
 ```
@@ -277,10 +275,10 @@ Falta la estructura de nuestro HTML - ¡la etiqueta `<li>` y sus casillas de ver
 
 ![Nuestra aplicación de lista de tareas con las etiquetas de elementos de tareas que se muestran agrupadas en una línea](todo-list-unstructured-names.png)
 
-Para corregirlo, necesitamos devolver un componente `<Todo />`  de nuestra función `map()` - ¡recuerda que JSX permite mezclar JavaScript y estructura de marcado! Probemos lo siguiente reemplazando lo que ya tenemos.
+Para corregirlo, necesitamos devolver un componente `<Todo />` de nuestra función `map()` - ¡recuerda que JSX permite mezclar JavaScript y estructura de marcado! Probemos lo siguiente reemplazando lo que ya tenemos.
 
 ```jsx
-  const taskList = props.tasks.map((task) => <Todo />);
+const taskList = props.tasks.map((task) => <Todo />);
 ```
 
 Mire nuevamente su aplicación; ahora nuestras tareas se parecen más a las de antes, pero les faltan los nombres de las propias tareas. Recuerde que cada tarea que mapeamos tiene las propiedades `id`, `name` y `completed` que queremos pasar a nuestro componente`<Todo />`. Si juntamos ese conocimiento, obtenemos un código como este:
@@ -301,14 +299,13 @@ Debido a que las claves deben ser únicas, vamos a reutilizar el `id` de cada ob
 
 ```jsx
 const taskList = props.tasks.map((task) => (
-    <Todo
-      id={task.id}
-      name={task.name}
-      completed={task.completed}
-      key={task.id}
-    />
-  )
-);
+  <Todo
+    id={task.id}
+    name={task.name}
+    completed={task.completed}
+    key={task.id}
+  />
+));
 ```
 
 **Siempre debe pasar una clave unica a cualquier cosa que renderice con iteración.** Obviamente no cambiará nada en tu navegador, pero si no usas claves únicas, ¡React mostrará una advertencia en la consola y tal vés tu aplicación se comporte extraño!
@@ -407,13 +404,12 @@ import Todo from "./components/Todo";
 function App(props) {
   const taskList = props.tasks.map((task) => (
     <Todo
-        id={task.id}
-        name={task.name}
-        completed={task.completed}
-        key={task.id}
-      />
-    )
-  );
+      id={task.id}
+      name={task.name}
+      completed={task.completed}
+      key={task.id}
+    />
+  ));
   return (
     <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
@@ -427,8 +423,7 @@ function App(props) {
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
-        aria-labelledby="list-heading"
-      >
+        aria-labelledby="list-heading">
         {taskList}
       </ul>
     </div>

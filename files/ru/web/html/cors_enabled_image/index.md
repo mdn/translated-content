@@ -1,13 +1,6 @@
 ---
 title: Разрешение использования изображений из разных источников и canvas
 slug: Web/HTML/CORS_enabled_image
-tags:
-  - Advanced
-  - Canvas
-  - HTML
-  - Reference
-  - Security
-translation_of: Web/HTML/CORS_enabled_image
 ---
 HTML предоставляет атрибут [`crossorigin`](/ru/docs/Web/HTML/Element/img#crossorigin) для изображений, которые в сочетании с соответствующим заголовком {{Glossary("CORS")}} позволяют использовать изображения, определённые элементом {{ HTMLElement("img") }}, загруженные из внешних источников, в {{HTMLElement("canvas")}} , как если бы они были загружены из текущего источника.
 
@@ -117,4 +110,4 @@ function imageReceived() {
 - [HTML Specification - the `crossorigin` attribute](http://whatwg.org/html#attr-img-crossorigin)
 - [Веб хранилище (API)](/ru/docs/Web/API/Web_Storage_API)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}
+{{QuickLinksWithSubpages("/ru/docs/Web/HTML/")}}

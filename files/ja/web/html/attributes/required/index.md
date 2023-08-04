@@ -1,5 +1,5 @@
 ---
-title: 'HTML 属性: required'
+title: "HTML 属性: required"
 slug: Web/HTML/Attributes/required
 ---
 
@@ -9,7 +9,7 @@ slug: Web/HTML/Attributes/required
 
 この属性は {{HTMLElement("input/range","range")}} と {{HTMLElement("input/color","color")}} は対応していませんし、どちらも既定値を持っているので関係がありません。 {{HTMLElement("input/hidden","hidden")}} は、非表示のフォームにユーザーが記入することを期待できないため、対応していません。また、 `image` を含むボタンの種類もいずれも対応していません。
 
-なお、 `color` と `range` は `required` に対応していませんが、 `color` 型は既定値が `#000000` であり、 `range` は、 `min` と `max` の中間点が既定値です。 -- 宣言されていない場合、ほとんどのブラウザーでは `min` と `max` の既定値はそれぞれ 0 と 100 です。 -- 従って、常に値があります。
+なお、 `color` と `range` は `required` に対応していませんが、 `color` 型は既定値が `#000000` であり、 `range` は、 `min` と `max` の中間点が既定値です。 — 宣言されていない場合、ほとんどのブラウザーでは `min` と `max` の既定値はそれぞれ 0 と 100 です。 — 従って、常に値があります。
 
 入力欄に `required` 属性がある場合、 {{cssxref(":required")}} 擬似クラスも適用されます。逆に、 `required` 属性に対応していて、この属性が設定されていない入力欄は、 {{cssxref(":optional")}} 擬似クラスに一致します。
 

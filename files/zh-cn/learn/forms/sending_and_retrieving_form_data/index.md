@@ -1,7 +1,6 @@
 ---
 title: 发送表单数据
 slug: Learn/Forms/Sending_and_retrieving_form_data
-original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms")}}
@@ -58,25 +57,25 @@ web 基于非常基本的客户端/服务器体系结构，可以总结如下:�
 在这个例子中，数据被发送到一个绝对 URL —— `http://foo.com`：
 
 ```html
-<form action="http://foo.com">
+<form action="http://foo.com">…</form>
 ```
 
 这里，我们使用相对 URL——数据被发送到服务器上的不同 URL
 
 ```html
-<form action="/somewhere_else">
+<form action="/somewhere_else">…</form>
 ```
 
 在没有属性的情况下，像下面一样，{{HTMLElement("form")}}数据被发送到表单出现的相同页面上：
 
 ```html
-<form>
+<form>…</form>
 ```
 
 许多较老的页面使用下面的符号表示数据应该被发送到包含表单的相同页面；这是必需的，因为直到 HTML5[`action`](/zh-CN/docs/Web/HTML/Element/form#action)属性都需要该符号。现在，这不再需要了。
 
 ```html
-<form action="#">
+<form action="#">…</form>
 ```
 
 > **备注：** 可以指定使用 HTTPS(安全 HTTP) 协议的 URL。当您这样做时，数据将与请求的其余部分一起加密，即使表单本身是托管在使用 HTTP 访问的不安全页面上。另一方面，如果表单是在安全页面上托管的，但是您指定了一个不安全的 HTTP URL，它带有[`action`](/zh-CN/docs/Web/HTML/Element/form#action)属性，所有的浏览器都会在每次尝试发送数据时向用户显示一个安全警告，因为数据不会被加密。
@@ -99,11 +98,11 @@ HTTP 请求由两个部分组成：一个包含关于浏览器功能的全局元
 <form action="http://foo.com" method="get">
   <div>
     <label for="say">What greeting do you want to say?</label>
-    <input name="say" id="say" value="Hi">
+    <input name="say" id="say" value="Hi" />
   </div>
   <div>
     <label for="to">Who do you want to say it to?</label>
-    <input name="to" id="to" value="Mom">
+    <input name="to" id="to" value="Mom" />
   </div>
   <div>
     <button>Send my greetings</button>
@@ -125,7 +124,7 @@ GET /?say=Hi&to=Mom HTTP/2.0
 Host: foo.com
 ```
 
-> **备注：** 你可以在 GitHub 上看到本例子——见 [get-method.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/get-method.html) ([预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
+> **备注：** 你可以在 GitHub 上看到本例子——见 [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) ([预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
 ##### POST 方法
 
@@ -137,11 +136,11 @@ Host: foo.com
 <form action="http://foo.com" method="post">
   <div>
     <label for="say">What greeting do you want to say?</label>
-    <input name="say" id="say" value="Hi">
+    <input name="say" id="say" value="Hi" />
   </div>
   <div>
     <label for="to">Who do you want to say it to?</label>
-    <input name="to" id="to" value="Mom">
+    <input name="to" id="to" value="Mom" />
   </div>
   <div>
     <button>Send my greetings</button>
@@ -162,7 +161,7 @@ say=Hi&to=Mom
 
 `Content-Length`数据头表示主体的大小，`Content-Type`数据头表示发送到服务器的资源类型。稍后我们将讨论这些标头。
 
-> **备注：** 你可以在 GitHub 上看到本例—— 见 [post-method.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/post-method.html) ([预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html)).
+> **备注：** 你可以在 GitHub 上看到本例—— 见 [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html) ([预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html)).
 
 #### 查看 HTTP 请求
 
@@ -202,7 +201,7 @@ HTTP 请求永远不会显示给用户 (如果您想要看到它们，您需要�
 ?>
 ```
 
-这个例子显示了一个带有我们发送的数据的页面。您可以在我们的示例[php-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.html)中看到这一点——该文件包含与我们之前看到的相同的示例表单，它使用了`post`的`method`和`php-example.php`的`action`。当提交时，它将表单数据发送到[php-example.php](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.php)，其中包含了上述代码块中所见的 php 代码。当执行此代码时，浏览器中的输出是`Hi Mom`。
+这个例子显示了一个带有我们发送的数据的页面。您可以在我们的示例[php-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/php-example.html)中看到这一点——该文件包含与我们之前看到的相同的示例表单，它使用了`post`的`method`和`php-example.php`的`action`。当提交时，它将表单数据发送到[php-example.php](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/php-example.php)，其中包含了上述代码块中所见的 php 代码。当执行此代码时，浏览器中的输出是`Hi Mom`。
 
 ![](php-result.png)
 
@@ -211,7 +210,7 @@ HTTP 请求永远不会显示给用户 (如果您想要看到它们，您需要�
 #### 例子：Python
 
 这个例子展示了如何使用 Python 完成同样的事情——在 web 页面上显示提交的数据。
-这将使用[Flask framework](http://flask.pocoo.org/)来呈现模板、处理表单数据提交等 (参见[python-example.py](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/python-example.py))。
+这将使用[Flask framework](http://flask.pocoo.org/)来呈现模板、处理表单数据提交等 (参见[python-example.py](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/python-example.py))。
 
 ```plain
 from flask import Flask, render_template, request
@@ -231,8 +230,8 @@ if __name__ == "__main__":
 
 以上代码中引用的两个模板如下：
 
-- [form.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html): 与我们在 [POST 方法](#post_方法) 小节中看到的相同的表单，但是将`action`设置为`\{{ url_for('hello') }}`。(这是一个[Jinja2](http://jinja.pocoo.org/docs/2.9/)模板，它基本上是 HTML，但是可以包含对运行包含在花括号中的 web 服务器的 Python 代码的调用。`url_for('hello')`基本上是在“提交表单时重定向到`/hello`”。
-- [greeting.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html): 这个模板只包含一行，用于呈现渲染时传递给它的两个数据块。
+- [form.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html): 与我们在 [POST 方法](#post_方法) 小节中看到的相同的表单，但是将`action`设置为`\{{ url_for('hello') }}`。(这是一个[Jinja2](http://jinja.pocoo.org/docs/2.9/)模板，它基本上是 HTML，但是可以包含对运行包含在花括号中的 web 服务器的 Python 代码的调用。`url_for('hello')`基本上是在“提交表单时重定向到`/hello`”。
+- [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html): 这个模板只包含一行，用于呈现渲染时传递给它的两个数据块。
   这是通过前面所见的`hello()`函数完成的，该函数在`/hello`URL 被导向时运行。
 
 > **备注：** 同样，如果您只是尝试将其直接加载到浏览器中，那么这段代码将无法工作。Python 的工作方式与 PHP 略有不同——要在本地运行此代码，您需要[安装 Python/pip](/zh-CN/docs/Learn/Server-side/Django/development_environment#Installing_Python_3)，然后使用`pip3 install flask`安装 Flask。此时，您应该能够使用`python3 python-example.py`来运行这个示例，然后在浏览器中导航到`localhost:5000`。
@@ -271,7 +270,7 @@ if __name__ == "__main__":
 <form method="post" enctype="multipart/form-data">
   <div>
     <label for="file">Choose a file</label>
-    <input type="file" id="file" name="myFile">
+    <input type="file" id="file" name="myFile" />
   </div>
   <div>
     <button>Send the file</button>

@@ -89,7 +89,7 @@ slug: Web/HTML/Element/span
 ```css
 li span {
   background: gold;
- }
+}
 ```
 
 #### Result

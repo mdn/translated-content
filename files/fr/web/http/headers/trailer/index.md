@@ -1,7 +1,6 @@
 ---
 title: Trailer
 slug: Web/HTTP/Headers/Trailer
-translation_of: Web/HTTP/Headers/Trailer
 ---
 
 {{HTTPSidebar}}
@@ -43,7 +42,7 @@ Trailer: header-names
 
 ## Exemple
 
-### Encodage de transfert en bloc en utilisant les en-têtes "trailer".
+### Encodage de transfert en bloc en utilisant les en-têtes "trailer"
 
 Dans cet exemple, l'en-tête {{HTTPHeader("Expires")}} est utilisée à la fin du bloc du message et sert en tant qu'un "trailing header".
 

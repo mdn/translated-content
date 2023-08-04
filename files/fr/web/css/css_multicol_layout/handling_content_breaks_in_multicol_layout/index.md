@@ -1,11 +1,6 @@
 ---
 title: Gérer la rupture du contenu entre les colonnes
 slug: Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout
-tags:
-  - CSS
-  - Guide
-translation_of: Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol
-original_slug: Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol
 ---
 
 {{CSSRef}}

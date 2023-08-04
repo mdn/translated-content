@@ -1,7 +1,6 @@
 ---
 title: Navigator.getVRDisplays()
 slug: Web/API/Navigator/getVRDisplays
-translation_of: Web/API/Navigator/getVRDisplays
 ---
 
 {{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}

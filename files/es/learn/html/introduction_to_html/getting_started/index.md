@@ -1,7 +1,6 @@
 ---
 title: Empezar con HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-original_slug: Learn/HTML/Introduccion_a_HTML/iniciar
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
@@ -165,7 +164,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -243,8 +242,7 @@ No todos los elementos siguen el patrón de etiqueta de apertura, contenido y et
 
 ```html
 <img
-  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"
-/>
+  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" />
 ```
 
 Este texto mostrará lo siguiente en tu página:
@@ -390,7 +388,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -502,7 +500,7 @@ Así que tendrás que hacer esto:
 Los elementos HTML no son muy útiles por sí mismos. Ahora veremos cómo combinar los elementos individuales para formar una página HTML completa:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -665,7 +663,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -699,8 +697,7 @@ En los ejemplos anteriores se han incluido espacios en blanco y saltos de línea
 ```html
 <p>Los perros son tontos.</p>
 
-<p>Los    perros        son
-         tontos.</p>
+<p>Los perros son tontos.</p>
 ```
 
 No importa cuántos espacios en blanco se utilicen (incluye tanto caracteres de espacio como saltos de línea) el intérprete de HTML reduce cada secuencia de espacio en blanco a un único espacio al interpretar el código. Entonces, ¿por qué utilizar espacios en blanco? La respuesta está en la legibilidad.
@@ -726,7 +723,8 @@ El equivalente de referencia de caracter podría recordarse fácilmente porque e
 Considera los dos siguientes párrafos:
 
 ```html
-<p>En HTML, defines un párrafo con el elemento <p>.</p>
+<p>En HTML, defines un párrafo con el elemento</p>
+<p>.</p>
 
 <p>En HTML, defines un párrafo con el elemento &lt;p&gt;.</p>
 ```

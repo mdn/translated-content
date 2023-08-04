@@ -1,7 +1,6 @@
 ---
-title: 'SpeechRecognition: nomatch イベント'
+title: "SpeechRecognition: nomatch イベント"
 slug: Web/API/SpeechRecognition/nomatch_event
-original_slug: Web/API/SpeechRecognition/onnomatch
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---

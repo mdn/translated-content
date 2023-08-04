@@ -1,7 +1,6 @@
 ---
 title: 'TypeError: invalid assignment to const "x"(недопустимое назначение const "x")'
 slug: Web/JavaScript/Reference/Errors/Invalid_const_assignment
-translation_of: Web/JavaScript/Reference/Errors/Invalid_const_assignment
 ---
 
 {{jsSidebar("Errors")}}
@@ -92,6 +91,6 @@ obj; // Object { foo: "baz" }
 
 ## Смотрите также
 
-- [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
-- [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)
-- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)
+- [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const)
+- [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let)
+- [`var`](/ru/docs/Web/JavaScript/Reference/Statements/var)

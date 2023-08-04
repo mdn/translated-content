@@ -26,17 +26,17 @@ Exemplares de {{jsxref("Date")}} referem-se a um ponto específico no tempo. Cha
 ```js
 var d = new Date(1993, 6, 28, 14, 39, 7);
 
-console.log(d.toString());     // exibe Wed Jul 28 1993 14:39:07 GMT-0600 (PDT) no log
+console.log(d.toString()); // exibe Wed Jul 28 1993 14:39:07 GMT-0600 (PDT) no log
 console.log(d.toDateString()); // exibe Wed Jul 28 1993 no log
 ```
 
 ## Especificações
 
-| Especificação                                                                                                            | Situação                     | Comentário         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ES3')}}                                                                                                 | {{Spec2('ES3')}}         | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.9.5.3', 'Date.prototype.toDateString')}}                             | {{Spec2('ES5.1')}}     |                    |
-| {{SpecName('ES6', '#sec-date.prototype.todatestring', 'Date.prototype.toDateString')}}     | {{Spec2('ES6')}}         |                    |
+| Especificação                                                                              | Situação             | Comentário         |
+| ------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
+| {{SpecName('ES3')}}                                                                        | {{Spec2('ES3')}}     | Definição inicial. |
+| {{SpecName('ES5.1', '#sec-15.9.5.3', 'Date.prototype.toDateString')}}                      | {{Spec2('ES5.1')}}   |                    |
+| {{SpecName('ES6', '#sec-date.prototype.todatestring', 'Date.prototype.toDateString')}}     | {{Spec2('ES6')}}     |                    |
 | {{SpecName('ESDraft', '#sec-date.prototype.todatestring', 'Date.prototype.toDateString')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

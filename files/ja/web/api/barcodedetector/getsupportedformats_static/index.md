@@ -1,7 +1,6 @@
 ---
 title: BarcodeDetector.getSupportedFormats()
 slug: Web/API/BarcodeDetector/getSupportedFormats_static
-original_slug: Web/API/BarcodeDetector/getSupportedFormats
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}

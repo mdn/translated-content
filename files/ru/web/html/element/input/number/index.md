@@ -1,7 +1,6 @@
 ---
 title: <input type="number">
 slug: Web/HTML/Element/input/number
-translation_of: Web/HTML/Element/input/number
 ---
 
 {{HTMLSidebar}}
@@ -53,9 +52,9 @@ The minimum value to accept for this input. If the [`value`](/ru/docs/Web/HTML/E
 
 This value must be less than or equal to the value of the `max` attribute.
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}
+{{page("/ru/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}
+{{page("/ru/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}
 
 ### {{htmlattrdef("step")}}
 
@@ -363,4 +362,4 @@ After declaring a few variables, we add an event listener to the button to contr
 
 - [HTML forms guide](/ru/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}}
-- [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
+- [`<input type="tel">`](/ru/docs/Web/HTML/Element/input/tel)

@@ -1,12 +1,11 @@
 ---
 title: <input type="tel">
 slug: Web/HTML/Element/input/tel
-translation_of: Web/HTML/Element/input/tel
 ---
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} элемент типа **`tel`** используется чтобы разрешить пользователю вводить и редактировать номер телефона. В отличии от[`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) и [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url) , введённое значение не проверяется автоматически по определённом формату, перед тем как форма может быть отправлена , потому что форматы телефонных номеров сильно различаются по всему миру
+{{HTMLElement("input")}} элемент типа **`tel`** используется чтобы разрешить пользователю вводить и редактировать номер телефона. В отличии от[`<input type="email">`](/ru/docs/Web/HTML/Element/input/email) и [`<input type="url">`](/ru/docs/Web/HTML/Element/input/url) , введённое значение не проверяется автоматически по определённом формату, перед тем как форма может быть отправлена , потому что форматы телефонных номеров сильно различаются по всему миру
 
 {{EmbedInteractiveExample("pages/tabbed/input-tel.html", "tabbed-standard")}}
 
@@ -439,5 +438,5 @@ input:valid+span:after {
 - [Forms and accessibility](/ru/docs/Web/Accessibility/ARIA/forms)
 - {{HTMLElement("input")}}
 
-  - [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
-  - [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
+  - [`<input type="text">`](/ru/docs/Web/HTML/Element/input/text)
+  - [`<input type="email">`](/ru/docs/Web/HTML/Element/input/email)

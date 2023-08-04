@@ -1,7 +1,6 @@
 ---
 title: <meta> - элемент для описания метаданных
 slug: Web/HTML/Element/meta
-translation_of: Web/HTML/Element/meta
 ---
 {{HTMLSidebar}}
 
@@ -140,8 +139,6 @@ translation_of: Web/HTML/Element/meta
       | Спецификация                                                                                             | Статус                           | Комментарий                                  |
       | -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------- |
       | {{SpecName('CSS3 Device', '#viewport-meta', '&lt;meta name="viewport"&gt;')}} | {{Spec2('CSS3 Device')}} | Ненормативно описывает элемент META Viewport |
-
-      Смотрите также: {{cssxref("@viewport")}}
 
       > **Примечание:**
       >

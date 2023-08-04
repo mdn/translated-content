@@ -1,7 +1,6 @@
 ---
 title: input
 slug: Web/HTML/Element/input
-original_slug: Web/HTML/Elemento/input
 ---
 
 ## Resumen
@@ -331,7 +330,9 @@ e.value = "foo";
 Para que Firefox presente un mensaje de error personalizado cuando la validación de un campo falla, se puede usar el atributo `x-moz-errormessage`:
 
 ```html
-<input type="email" x-moz-errormessage="Por favor, especifique una dirección de correo válida.">
+<input
+  type="email"
+  x-moz-errormessage="Por favor, especifique una dirección de correo válida." />
 ```
 
 Nótese, sin embargo, que esto no es estándar, y no tendrá efecto en otros navegadores.
@@ -344,7 +345,7 @@ Nótese, sin embargo, que esto no es estándar, y no tendrá efecto en otros nav
 
 ```html
 <p>Simple input box</p>
-<input type="text" value="Type here">
+<input type="text" value="Type here" />
 ```
 
 ### Resultado
@@ -358,10 +359,10 @@ Nótese, sin embargo, que esto no es estándar, y no tendrá efecto en otros nav
 ```html
 <p>A common form that includes input tags</p>
 <form action="getform.php" method="get">
-    <label>First name: <input type="text"></label><br>
-     <label>Last name: <input type="text"></label><br>
-        <label>E-mail: <input type="email"></label><br>
-<input type="submit" value="Submit">
+  <label>First name: <input type="text" /></label><br />
+  <label>Last name: <input type="text" /></label><br />
+  <label>E-mail: <input type="email" /></label><br />
+  <input type="submit" value="Submit" />
 </form>
 ```
 
@@ -374,7 +375,7 @@ Nótese, sin embargo, que esto no es estándar, y no tendrá efecto en otros nav
 Se puede usar el atributo [`mozactionhint`](/es/docs/Web/HTML/Element/input#mozactionhint) para especificar el texto para la etiqueta de la tecla Enter en el teclado virtual cuando el formulario es mostrado en Firefox mobile. Por ejemplo, para mostrar una etiqueta "Next", se puede hacer esto:
 
 ```html
-<input type="text" mozactionhint="next">
+<input type="text" mozactionhint="next" />
 ```
 
 El resultado es:

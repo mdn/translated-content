@@ -1,7 +1,6 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-original_slug: Web/JavaScript/Referencia/Sentencias/import
 ---
 
 {{jsSidebar("Sentencias")}}
@@ -39,7 +38,7 @@ import "module-name";
 
 El parámetro `name` es el nombre del objeto que recibirá los miembros exportados. El parámetro `member` especifica miembros individuales, mientras el parámetro `name` importa todos ellos. name puede también ser una función si el módulo exporta un sólo parámetro por defecto en lugar de una serie de miembros. Abajo hay ejemplos que explican la sintaxis.
 
-### Importa el contenido de todo un módulo.
+### Importa el contenido de todo un módulo
 
 Esto inserta `myModule` en el ámbito actual, que contiene todos los elementos exportados en el archivo ubicado en `/modules/my-module.js`.
 
@@ -53,7 +52,7 @@ Aquí, para acceder a los miembros exportados habrá que usar el alias del módu
 myModule.doAllTheAmazingThings();
 ```
 
-### Importa un solo miembro de un módulo.
+### Importa un solo miembro de un módulo
 
 Dado un objeto o valor llamado `myExport` que ha sido exportado del módulo `my-module` ya sea implícitamente (porque todo el módulo ha sido exportado) o explícitamente (usando la sentencia {{jsxref("Sentencias/export", "export")}} ), esto inserta `myExport` en el ámbito actual.
 
@@ -61,7 +60,7 @@ Dado un objeto o valor llamado `myExport` que ha sido exportado del módulo `my-
 import {myExport} from '/modules/my-module.js';
 ```
 
-### Importa multiples miembros de un módulo.
+### Importa multiples miembros de un módulo
 
 Esto inserta `foo` y `bar` en el ámbito actual.
 

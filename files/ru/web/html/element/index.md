@@ -1,12 +1,6 @@
 ---
 title: Элемент
 slug: Web/HTML/Element
-tags:
-  - HTML
-  - Веб
-  - Справка
-  - элементы
-translation_of: Web/HTML/Element
 ---
 
 {{HTMLSidebar("Elements")}}
@@ -238,7 +232,7 @@ HTML содержит в себе элементы, которые помога�
 | {{HTMLElement("big")}}       | Renders the enclosed text at a font size one level larger than the surrounding text (`medium` becomes `large`, for example). The size is capped at the browser's maximum permitted font size. |
 | {{HTMLElement("blink")}}     | Causes the enclosed text to flash slowly. |
 | {{HTMLElement("center")}}    | Displays its block-level or inline contents centered horizontally within its containing element. |
-| {{HTMLElement("content")}}   | An obsolete part of the [Web Components](/ru/docs/Web/Web_Components) suite of technologies—was used inside of [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) as an insertion point, and wasn't meant to be used in ordinary HTML. It has now been replaced by the {{HTMLElement("slot")}} element, which creates a point in the DOM at which a shadow DOM can be inserted. |
+| {{HTMLElement("content")}}   | An obsolete part of the [Web Components](/ru/docs/Web/Web_Components) suite of technologies—was used inside of [Shadow DOM](/ru/docs/Web/Web_Components/Using_shadow_DOM) as an insertion point, and wasn't meant to be used in ordinary HTML. It has now been replaced by the {{HTMLElement("slot")}} element, which creates a point in the DOM at which a shadow DOM can be inserted. |
 | {{HTMLElement("dir")}}       | Container for a directory of files and/or folders, potentially with styles and icons applied by the user agent. Do not use this obsolete element; instead, you should use the {{HTMLElement("ul")}} element for lists, including lists of files. |
 | {{HTMLElement("font")}}      | Определяет размер шрифта, цвета и лицо для его содержимого |
 | {{HTMLElement("frame")}}     | Defines a particular area in which another HTML document can be displayed. A frame should be used within a {{HTMLElement("frameset")}}. |
@@ -248,7 +242,7 @@ HTML содержит в себе элементы, которые помога�
 | {{HTMLElement("marquee")}}   | Used to insert a scrolling area of text. You can control what happens when the text reaches the edges of its content area using its attributes. |
 | {{HTMLElement("menuitem")}}  | HTML-элемент `<marquee>` используется для создания на странице прокручивающегося текста (бегущей строки). |
 | {{HTMLElement("nobr")}}      | Prevents the text it contains from automatically wrapping across multiple lines, potentially resulting in the user having to scroll horizontally to see the entire width of the text. |
-| {{HTMLElement("noembed")}}   | An obsolete, non-standard way to provide alternative, or "fallback", content for browsers that do not support the embed element or do not support the type of [embedded content](/en-US/docs/Web/HTML/Content_categories#embedded_content) an author wishes to use. This element was deprecated in HTML 4.01 and above in favor of placing fallback content between the opening and closing tags of an {{HTMLElement("object")}} element. |
+| {{HTMLElement("noembed")}}   | An obsolete, non-standard way to provide alternative, or "fallback", content for browsers that do not support the embed element or do not support the type of [embedded content](/ru/docs/Web/HTML/Content_categories#embedded_content) an author wishes to use. This element was deprecated in HTML 4.01 and above in favor of placing fallback content between the opening and closing tags of an {{HTMLElement("object")}} element. |
 | {{HTMLElement("noframes")}}  | Provides content to be presented in browsers that don't support (or have disabled support for) the {{HTMLElement("frame")}} element. Although most commonly-used browsers support frames, there are exceptions, including certain special-use browsers including some mobile browsers, as well as text-mode browsers. |
 | {{HTMLElement("param")}}     | Defines parameters for an {{HTMLElement("object")}} element. |
 | {{HTMLElement("plaintext")}} | Renders everything following the start tag as raw text, ignoring any following HTML. There is no closing tag, since everything after it is considered raw text. |

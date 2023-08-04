@@ -1,11 +1,6 @@
 ---
 title: a
 slug: Web/SVG/Element/a
-tags:
-  - Element
-  - SVG
-  - SVG Conteneur
-translation_of: Web/SVG/Element/a
 ---
 
 {{SVGRef}}
@@ -18,21 +13,26 @@ En SVG, l'élément `<a>` est un conteneur, ce qui veut dire que vous pouvez cr�
 
 ```css hidden
 @namespace svgns url(http://www.w3.org/2000/svg);
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- Un lien autour d'une forme -->
   <a href="/docs/Web/SVG/Element/circle">
-    <circle cx="50" cy="40" r="35"/>
+    <circle cx="50" cy="40" r="35" />
   </a>
 
   <!-- Un lien autour d'un texte -->
   <a href="/docs/Web/SVG/Element/circle">
-    <text x="50" y="90" text-anchor="middle">
-      &lt;circle&gt;
-    </text>
+    <text x="50" y="90" text-anchor="middle">&lt;circle&gt;</text>
   </a>
 </svg>
 ```
@@ -52,7 +52,8 @@ svgns|a text {
   text-decoration: underline;
 }
 
-svgns|a:hover, svgns|a:active {
+svgns|a:hover,
+svgns|a:active {
   outline: dotted 1px blue;
 }
 ```

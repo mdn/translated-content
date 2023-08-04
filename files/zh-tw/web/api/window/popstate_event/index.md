@@ -1,7 +1,6 @@
 ---
 title: window.onpopstate
 slug: Web/API/Window/popstate_event
-original_slug: Web/API/WindowEventHandlers/onpopstate
 ---
 
 {{ApiRef}}
@@ -31,7 +30,10 @@ window.onpopstate = funcRef;
 ```js
 window.onpopstate = function (event) {
   alert(
-    "location: " + document.location + ", state: " + JSON.stringify(event.state)
+    "location: " +
+      document.location +
+      ", state: " +
+      JSON.stringify(event.state),
   );
 };
 

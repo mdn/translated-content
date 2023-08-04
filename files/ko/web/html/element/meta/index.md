@@ -1,5 +1,5 @@
 ---
-title: '<meta>: 문서 레벨 메타데이터 요소'
+title: "<meta>: 문서 레벨 메타데이터 요소"
 slug: Web/HTML/Element/meta
 ---
 
@@ -134,10 +134,10 @@ slug: Web/HTML/Element/meta
 ## 예제
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 
 <!-- 3초 후 리다이렉트 -->
-<meta http-equiv="refresh" content="3;url=https://www.mozilla.org">
+<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
 ```
 
 ## 명세

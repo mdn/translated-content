@@ -68,7 +68,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
   - 不允许使用[数字分隔符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators)。
 - [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 抛出 {{jsxref("TypeError")}}，以防止意外的强制隐式转换损失精度。
 - [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 抛出 {{jsxref("TypeError")}}。
-- 对象首先按顺序调用 [`@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（将 `"number"` 作为 hint）、`valueOf()` 和 `toString()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。然后将生成的原始值转换为数值。
+- 对象首先按顺序调用 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（将 `"number"` 作为 hint）、`valueOf()` 和 `toString()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。然后将生成的原始值转换为数值。
 
 有两种方法可以在 JavaScript 中实现几乎相同的效果。
 

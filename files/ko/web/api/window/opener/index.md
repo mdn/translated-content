@@ -12,7 +12,7 @@ slug: Web/API/Window/opener
 ## 구문
 
 ```js
-const openerWindow = window.opener
+const openerWindow = window.opener;
 ```
 
 ### 값

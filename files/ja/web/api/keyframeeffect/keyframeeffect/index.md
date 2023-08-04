@@ -1,7 +1,6 @@
 ---
 title: EffectTiming
 slug: Web/API/KeyframeEffect/KeyframeEffect
-original_slug: Web/API/EffectTiming
 ---
 
 {{ SeeCompatTable() }}{{ APIRef("Web Animations") }}

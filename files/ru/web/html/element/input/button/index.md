@@ -1,12 +1,6 @@
 ---
 title: <input type="button">
 slug: Web/HTML/Element/input/button
-page-type: html-element
-tags:
-  - HTML формы
-  - Формы
-  - Элемент Input
-translation_of: Web/HTML/Element/input/button
 ---
 
 {{HTMLSidebar}}
@@ -44,7 +38,7 @@ translation_of: Web/HTML/Element/input/button
 
 ## Использование кнопок
 
-Элементы `<input type="button">` не имеют поведения по умолчанию (их двоюродные братья, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit) и [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset) используются для отправки и сброса форм соответственно). Чтобы кнопки делали что-либо, вы должны написать код JavaScript для выполнения работы.
+Элементы `<input type="button">` не имеют поведения по умолчанию (их двоюродные братья, [`<input type="submit">`](/ru/docs/Web/HTML/Element/input/submit) и [`<input type="reset">`](/ru/docs/Web/HTML/Element/input/reset) используются для отправки и сброса форм соответственно). Чтобы кнопки делали что-либо, вы должны написать код JavaScript для выполнения работы.
 
 ### Простая кнопка
 

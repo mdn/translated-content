@@ -27,9 +27,9 @@ var paddle;
 
 ```js
 function preload() {
-    // ...
-    game.load.image('ball', 'img/ball.png');
-    game.load.image('paddle', 'img/paddle.png');
+  // ...
+  game.load.image("ball", "img/ball.png");
+  game.load.image("paddle", "img/paddle.png");
 }
 ```
 
@@ -42,7 +42,11 @@ function preload() {
 接下来，我们将通过`add.sprite()`在`create()`函数中添加以下调用来初始化我们的桨，将其添加到底部：
 
 ```js
-paddle = game.add.sprite(game.world.width*0.5, game.world.height-5, 'paddle');
+paddle = game.add.sprite(
+  game.world.width * 0.5,
+  game.world.height - 5,
+  "paddle",
+);
 ```
 
 我们可以使用`world.width`和`world.height`值来将桨定位到我们想要的位置：`game.world.width*0.5`将在屏幕中间。在我们这个例子中，世界和画布是一样的，但是对于其他类型的游戏，例如侧滚滚，这个世界会变大，你可以修改它来创造有趣的效果。
@@ -50,7 +54,7 @@ paddle = game.add.sprite(game.world.width*0.5, game.world.height-5, 'paddle');
 你会注意到，如果你`index.html`在这一点上重新加载，那么桨是目前不完全在中间的。为什么？因为计算位置的锚总是从对象的左上角开始。我们可以改变它，使锚在桨的宽度的中间和它的高度的底部，所以更容易将其定位在底部边缘。添加以下新行以下的行：
 
 ```js
-paddle.anchor.set(0.5,1);
+paddle.anchor.set(0.5, 1);
 ```
 
 桨现在位于我们想要的地方。现在，为了使它与球碰撞，我们必须为桨提供物理效果。继续添加以下新行，再次在`create()`函数的底部：
@@ -63,7 +67,7 @@ game.physics.enable(paddle, Phaser.Physics.ARCADE);
 
 ```js
 function update() {
-    game.physics.arcade.collide(ball, paddle);
+  game.physics.arcade.collide(ball, paddle);
 }
 ```
 
@@ -81,15 +85,15 @@ paddle.body.immovable = true;
 
 ```js
 function update() {
-    game.physics.arcade.collide(ball, paddle);
-    paddle.x = game.input.x;
+  game.physics.arcade.collide(ball, paddle);
+  paddle.x = game.input.x;
 }
 ```
 
 现在在每个新的一帧上，桨的`x`位置将根据输入的`x`位置进行调整，但是当我们开始游戏时，桨的位置不在中间。这是因为输入位置尚未定义。要修复，我们可以将默认位置（如果输入位置尚未定义）设置为屏幕中间。更新上一行如下：
 
 ```js
-paddle.x = game.input.x || game.world.width*0.5;
+paddle.x = game.input.x || game.world.width * 0.5;
 ```
 
 如果您还没有这样做，请重新加载`index.html`并尝试！
@@ -99,7 +103,7 @@ paddle.x = game.input.x || game.world.width*0.5;
 我们有桨按预期工作，所以我们把球放在上面。它非常类似于定位桨 - 我们需要将其放置在屏幕中间水平和垂直的底部，与底部有一点偏移。要按照我们想要的方式放置它，我们将把锚定位到球的正中间。找到现有的行，并将其替换为以下两行：`ball = game.add.sprite( ... )`
 
 ```js
-ball = game.add.sprite(game.world.width*0.5, game.world.height-25, 'ball');
+ball = game.add.sprite(game.world.width * 0.5, game.world.height - 25, "ball");
 ball.anchor.set(0.5);
 ```
 

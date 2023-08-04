@@ -1,7 +1,6 @@
 ---
 title: <th>
 slug: Web/HTML/Element/th
-original_slug: Web/HTML/Elemento/th
 ---
 
 El elemento **HTML `<th>`** define una celda como encabezado de un grupo de celdas en una tabla. La naturaleza exacta de este grupo está definida por los atributos [`scope`](/es/docs/Web/HTML/Element/th#scope) y [`headers`](/es/docs/Web/HTML/Element/th#headers).
@@ -10,7 +9,7 @@ El elemento **HTML `<th>`** define una celda como encabezado de un grupo de celd
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories"
+        <a href="/es/docs/HTML/Content_categories"
           >Categorías de contenido</a
         >
       </th>

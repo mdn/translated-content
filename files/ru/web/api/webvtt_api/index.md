@@ -1,8 +1,8 @@
 ---
 title: Формат Web Video Text Tracks (WebVTT)
 slug: Web/API/WebVTT_API
-translation_of: Web/API/WebVTT_API
 ---
+
 {{APIRef("WebVTT")}}
 
 **Формат Web Video Text Tracks** (**WebVTT**)это формат для отображения синхронизированных текстовых треков (такие как субтитры или подписи) с помощью элементов {{HTMLElement("track")}}. Основная цель файлов WebVTT — добавить текстовые наложения к элементам {{HTMLElement("video")}}. WebVTT является текстовым форматом, который должен быть закодирован с использованием {{Glossary("UTF-8")}}. В этих файлах вы можете использовать пробелы и табы для отступов. Существует также небольшой API для представления и управления этими дорожками и данными, необходимыми для отображения текста в нужное время.
@@ -601,4 +601,4 @@ Prior to Firefox 58, the `REGION` keyword was creating {{domxref("VTTRegion")}} 
 
 ## See also
 
-- The CSS [`::cue` and `::cue()`](/en-US/docs/Web/CSS/::cue) pseudo-elements
+- The CSS [`::cue` and `::cue()`](/ru/docs/Web/CSS/::cue) pseudo-elements

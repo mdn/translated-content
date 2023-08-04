@@ -1,17 +1,6 @@
 ---
 title: Публикация вашего веб-сайта
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
-tags:
-  - FTP
-  - GitHub
-  - Google App Engine
-  - Веб
-  - Веб сервер
-  - Изучение
-  - Начинающий
-  - Публикация
-  - Хостинг
-translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
@@ -101,34 +90,34 @@ translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 
 1. Укажите в командной строке каталог `test-site` (или другое название каталога, содержащего ваш сайт). Для этого используйте команду `cd` (т.е. «change directory»). Вот то, что вы наберёте, если разместили свой веб-сайт в каталоге под названием `test-site` на рабочем столе:
 
-    ```bash
-    cd Desktop/test-site
-    ```
+   ```bash
+   cd Desktop/test-site
+   ```
 
 2. Когда командная строка указывает внутрь вашего каталога веб-сайта, введите следующую команду, которая сообщает инструменту `git`, чтобы он превратил каталог в репозиторий git:
 
-    ```bash
-    git init
-    ```
+   ```bash
+   git init
+   ```
 
 3. Далее вернёмся к сайту GitHub. На текущей странице вас интересует раздел "…or push an existing repository from the command line". Вы должны увидеть две строки кода в этом разделе. Скопируйте всю первую строку, вставьте её в командную строку и нажмите Enter. Команда должна выглядеть примерно так:
 
-    ```bash
-    git remote add origin https://github.com/bobsmith/bobsmith.github.io.git
-    ```
+   ```bash
+   git remote add origin https://github.com/bobsmith/bobsmith.github.io.git
+   ```
 
 4. Далее введите следующие две команды, нажимая Enter после каждой. Это подготовит код к загрузке на GitHub, и укажет Git управлять этими файлами.
 
-    ```bash
-    git add --all
-    git commit -m 'adding my files to my repository'
-    ```
+   ```bash
+   git add --all
+   git commit -m 'adding my files to my repository'
+   ```
 
 5. Наконец, загрузите код на GitHub - вернитесь на веб-страницу GitHub, на которой вы находились, и введите в терминал команду:
 
-    ```bash
-    git push -u origin master
-    ```
+   ```bash
+   git push -u origin master
+   ```
 
 6. Теперь, когда вы перейдёте по веб-адресу, созданному в GitHub, в новом окне браузера (_username.github.io_), вы увидите ваш сайт онлайн! Разошлите ссылку вашим друзьям, пусть оценят ваше мастерство.
 

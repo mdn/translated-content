@@ -146,7 +146,8 @@ slug: Web/HTML/Element/select
 下面的例子更加复杂，展示了可用在 `<select>` 元素上的更多功能：
 
 ```html
-<label>Please choose one or more pets:
+<label
+  >Please choose one or more pets:
   <select name="pets" multiple size="4">
     <optgroup label="4-legged pets">
       <option value="dog">Dog</option>

@@ -90,7 +90,7 @@ HTTP メッセージ（リクエストとレスポンスと呼ばれる）の実
 
   <p>これは文章の段落です。</p>
 
-  <img src="cat.jpg" alt="A picture of my cat">
+  <img src="cat.jpg" alt="A picture of my cat" />
   ```
 
   家づくりに例えるなら、HTML は家の土台や壁のようなもので、構造を与え、家を支えているものです。
@@ -108,8 +108,8 @@ HTTP メッセージ（リクエストとレスポンスと呼ばれる）の実
 - **JavaScript** は、動的なスタイルの切り替えから、サーバーからの更新の取得、複雑な 3D グラフィックに至るまで、ウェブサイトに対話性を追加するために使用されるプログラミング言語です。以下の簡単な JavaScript は、段落への参照をメモリーに格納し、その中のテキストを変更します。
 
   ```js
-  let pElem = document.querySelector('p');
-  pElem.textContent =  'We changed the text!';
+  let pElem = document.querySelector("p");
+  pElem.textContent = "We changed the text!";
   ```
 
   家に例えると、 JavaScript は炊飯器、テレビ、電子レンジ、ドライヤーなどです。家に便利な機能を与えるものです。

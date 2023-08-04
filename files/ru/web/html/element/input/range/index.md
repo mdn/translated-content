@@ -1,10 +1,6 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Element/input/range
-tags:
-  - контроллер
-  - слайдер
-translation_of: Web/HTML/Element/input/range
 ---
 
 {{HTMLSidebar("Input_types")}}
@@ -368,7 +364,7 @@ input[type="range"] {
 
 {{EmbedLiveSample("orient_attribute", 200, 200)}}
 
-### writing-mode: bt-lr;
+### writing-mode: bt-lr
 
 Свойство {{cssxref('writing-mode')}} может быть использовано для специальных эффектов
 
@@ -429,7 +425,7 @@ input[type="range"] {
 
 - [HTML Forms](/ru/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}} и интерфейс {{domxref("HTMLInputElement")}}, на котором он основан
-- [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number)
+- [`<input type="number">`](/ru/docs/Web/HTML/Element/input/number)
 - {{domxref('validityState.rangeOverflow')}} и{{domxref('validityState.rangeUnderflow')}}
 - [Controlling multiple parameters with ConstantSourceNode](/ru/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input)

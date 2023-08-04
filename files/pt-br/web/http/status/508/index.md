@@ -17,6 +17,6 @@ Indica que o servidor finalizou uma operação porque encontrou um loop infinito
 
 ## Specifications
 
-| Specification                                                | Title                                    |
-| ------------------------------------------------------------ | ---------------------------------------- |
+| Specification                                | Title                                    |
+| -------------------------------------------- | ---------------------------------------- |
 | {{RFC("5842", "508 Loop Detected" , "7.2")}} | Web Distributed Authoring and Versioning |

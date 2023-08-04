@@ -1,14 +1,6 @@
 ---
 title: Utiliser le shadow DOM
 slug: Web/API/Web_components/Using_shadow_DOM
-tags:
-  - API
-  - DOM
-  - Guide
-  - Web Components
-  - shadow dom
-translation_of: Web/Web_Components/Using_shadow_DOM
-original_slug: Web/Web_Components/Using_shadow_DOM
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -22,16 +14,21 @@ Un aspect important des composants web est l'encapsulation — être capable de 
 Cet article suppose que vous êtes déjà familier avec le concept de [DOM (Document Object Model)](/fr/docs/Web/API/Document_Object_Model/Introduction) — une structure arborescente de nœuds connectés représentant les différents éléments et chaines de textes apparaissant dans un document balisé (généralement un document HTML dans le cas de documents web). Par exemple, considérez le fragment HTML suivant :
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Simple exemple de DOM</title>
   </head>
   <body>
     <section>
-      <img src="dinosaur.png" alt="Un tyrannosaurus Rex rouge : un dinosaure bipède se tenant debout comme un humain, avec de petits bras et une large gueule à nombreuses dents tranchantes.">
-      <p>Nous ajouterons ici un lien vers la <a href="https://www.mozilla.org/">page d'accueil de Mozilla</a></p>
+      <img
+        src="dinosaur.png"
+        alt="Un tyrannosaurus Rex rouge : un dinosaure bipède se tenant debout comme un humain, avec de petits bras et une large gueule à nombreuses dents tranchantes." />
+      <p>
+        Nous ajouterons ici un lien vers la
+        <a href="https://www.mozilla.org/">page d'accueil de Mozilla</a>
+      </p>
     </section>
   </body>
 </html>
@@ -61,8 +58,8 @@ Notez que le DOM fantôme n'est pas une nouvelle chose du tout — les navigateu
 Vous pouvez associer une racine fantôme à tout élément en utilisant la méthode [`Element.attachShadow()`](/fr/docs/Web/API/Element/attachShadow). Elle prend en paramètres un objet d'options contenant une option — `mode` — ayant pour valeur `open` (ouvert) ou `closed` (fermé) :
 
 ```js
-let fantome = element.attachShadow({mode: 'open'});
-let fantome = element.attachShadow({mode: 'closed'});
+let fantome = element.attachShadow({ mode: "open" });
+let fantome = element.attachShadow({ mode: "closed" });
 ```
 
 `open` signifie que vous pouvez accéder au DOM fantôme en utilisant du JavaScript écrit dans le contexte de la page principale, par exemple en utilisant la propriété [`Element.shadowRoot`](/fr/docs/Web/API/ShadowRoot) :
@@ -78,13 +75,13 @@ Si vous associez une racine fantôme à un élément personnalisé avec la propr
 Si vous voulez associer un DOM fantôme à un élément personnalisé en tant que partie de son constructeur (de loin la plus utile application du DOM fantôme), vous devriez utiliser une instruction comme :
 
 ```js
-let shadow = this.attachShadow({mode: 'open'});
+let shadow = this.attachShadow({ mode: "open" });
 ```
 
 Lorsque vous avez associé un DOM fantôme à un élément, le manipuler consiste seulement à utiliser les API du DOM telles que vous les utilisez pour manipuler le DOM principal :
 
 ```js
-let paragraph = document.createElement('p');
+let paragraph = document.createElement("p");
 shadow.appendChild(paragraph);
 // etc.
 ```
@@ -114,7 +111,7 @@ Nous associons d'abord une racine fantôme à l'élément personnalisé :
 
 ```js
 // Créer une racine fantôme
-let fantome = this.attachShadow({mode: 'open'});
+let fantome = this.attachShadow({ mode: "open" });
 ```
 
 ### Créer la structure du DOM fantôme
@@ -123,26 +120,26 @@ Ensuite, nous utilisons des outils de manipulation du DOM pour créer la structu
 
 ```js
 // Créer les <span>
-let wrapper = document.createElement('span');
-wrapper.setAttribute('class','wrapper');
-let icon = document.createElement('span');
-icon.setAttribute('class','icon');
-icon.setAttribute('tabindex', 0);
-let info = document.createElement('span');
-info.setAttribute('class','info');
+let wrapper = document.createElement("span");
+wrapper.setAttribute("class", "wrapper");
+let icon = document.createElement("span");
+icon.setAttribute("class", "icon");
+icon.setAttribute("tabindex", 0);
+let info = document.createElement("span");
+info.setAttribute("class", "info");
 
 // Prendre le contenu de l'attribut et le placer à l'intérieur du span info
-let text = this.getAttribute('text');
+let text = this.getAttribute("text");
 info.textContent = text;
 
 // Insérer l'icône
 let imgUrl;
-if(this.hasAttribute('img')) {
-  imgUrl = this.getAttribute('img');
+if (this.hasAttribute("img")) {
+  imgUrl = this.getAttribute("img");
 } else {
-  imgUrl = 'img/default.png';
+  imgUrl = "img/default.png";
 }
-let img = document.createElement('img');
+let img = document.createElement("img");
 img.src = imgUrl;
 icon.appendChild(img);
 ```
@@ -153,7 +150,7 @@ Après cela, nous créons un élément [`<style>`](/fr/docs/Web/HTML/Element/sty
 
 ```js
 // Créer quelque CSS à appliquer au dom fantôme
-let style = document.createElement('style');
+let style = document.createElement("style");
 
 style.textContent = `
 .wrapper {
@@ -203,12 +200,14 @@ Une fois que la classe est définie, utiliser l'élément est aussi simple que d
 
 ```js
 // Définit le nouvel élément
-customElements.define('popup-info', PopUpInfo);
+customElements.define("popup-info", PopUpInfo);
 ```
 
 ```html
-<popup-info img="img/alt.png" text="Le code de validation de votre carte (CVC) est un élément de sécurité
-  supplémentaire. Il s'agit des 3 ou 4 derniers chiffres figurant au dos de votre carte.">
+<popup-info
+  img="img/alt.png"
+  text="Le code de validation de votre carte (CVC) est un élément de sécurité
+  supplémentaire. Il s'agit des 3 ou 4 derniers chiffres figurant au dos de votre carte."></popup-info>
 ```
 
 ### Styles internes ou styles externes
@@ -219,9 +218,9 @@ Par exemple, regardez ce code tiré de l'exemple [popup-info-box-external-styles
 
 ```js
 // Appliquer les styles externes au dom fantôme
-const linkElem = document.createElement('link');
-linkElem.setAttribute('rel', 'stylesheet');
-linkElem.setAttribute('href', 'style.css');
+const linkElem = document.createElement("link");
+linkElem.setAttribute("rel", "stylesheet");
+linkElem.setAttribute("href", "style.css");
 
 // Associer l'élément créé au dom fantôme
 fantome.appendChild(linkElem);

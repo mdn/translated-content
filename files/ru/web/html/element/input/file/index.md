@@ -1,7 +1,6 @@
 ---
 title: <input type="file">
 slug: Web/HTML/Element/input/file
-translation_of: Web/HTML/Element/input/file
 ---
 
 {{HTMLSidebar}}
@@ -237,7 +236,7 @@ input.addEventListener('change', updateImageDisplay);
 
 Whenever the `updateImageDisplay()` function is invoked, we:
 
-- Use a [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop to empty the previous contents of the preview `<div>`.
+- Use a [`while`](/ru/docs/Web/JavaScript/Reference/Statements/while) loop to empty the previous contents of the preview `<div>`.
 - Grab the {{domxref("FileList")}} object that contains the information on all the selected files, and store it in a variable called `curFiles`.
 - Check to see if no files were selected, by checking if `curFiles.length` is equal to 0. If so, print a message into the preview `<div>` stating that no files have been selected.
 - If files _have_ been selected, we loop through each one, printing information about it into the preview `<div>`. Things to note here:

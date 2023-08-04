@@ -1,7 +1,6 @@
 ---
 title: contextmenu
 slug: Web/HTML/Global_attributes/contextmenu
-original_slug: Web/HTML/Atributos_Globales/contextmenu
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -39,15 +38,18 @@ Un _menu contextual_ es un menu que aparece sobre la interacción del usuario , 
 en conjunto con este Javascript
 
 ```js
-function incFont(){
-  document.getElementById("fontSizing").style.fontSize="larger";
+function incFont() {
+  document.getElementById("fontSizing").style.fontSize = "larger";
 }
-function decFont(){
-  document.getElementById("fontSizing").style.fontSize="smaller";
+function decFont() {
+  document.getElementById("fontSizing").style.fontSize = "smaller";
 }
-function changeImage(){
-  var j = Math.ceil((Math.random()*39)+1);
-  document.images[0].src="https://developer.mozilla.org/media/img/promote/promobutton_mdn" + j + ".png";
+function changeImage() {
+  var j = Math.ceil(Math.random() * 39 + 1);
+  document.images[0].src =
+    "https://developer.mozilla.org/media/img/promote/promobutton_mdn" +
+    j +
+    ".png";
 }
 ```
 

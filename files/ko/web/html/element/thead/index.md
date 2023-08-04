@@ -1,5 +1,5 @@
 ---
-title: '<thead>: 표 머릿글 요소'
+title: "<thead>: 표 머릿글 요소"
 slug: Web/HTML/Element/thead
 ---
 

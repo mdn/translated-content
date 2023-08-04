@@ -2,6 +2,7 @@
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement`** 인터페이스는 \<canvas> 요소의 레이아웃이나 프레젠테이션을 조작하는 여러 프로퍼티와 메서드들을 제공합니다. 또한 `HTMLCanvasElement` 인터페이스는 {{domxref("HTMLElement")}} 인터페이스의 여러 프로퍼티와 메서드들을 상속받습니다.

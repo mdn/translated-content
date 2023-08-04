@@ -90,8 +90,9 @@ slug: Web/HTML/Element/meter
 #### HTML
 
 ```html
-<p>Heat the oven to <meter min="200" max="500"
-  value="350">350 degrees</meter>.</p>
+<p>
+  Heat the oven to <meter min="200" max="500" value="350">350 degrees</meter>.
+</p>
 ```
 
 #### 결과
@@ -100,7 +101,7 @@ slug: Web/HTML/Element/meter
 
 Google Chrome에서는 다음 그림처럼 보입니다.
 
-![current look of \<meter> in Google Chrome](screen_shot_2020-10-12_at_10.10.53_pm.png)
+![current look of 'meter' in Google Chrome](screen_shot_2020-10-12_at_10.10.53_pm.png)
 
 ### 높은 범위와 낮은 범위
 
@@ -109,8 +110,9 @@ Google Chrome에서는 다음 그림처럼 보입니다.
 #### HTML
 
 ```html
-<p>He got a <meter low="69" high="80" max="100"
-  value="84">B</meter> on the exam.</p>
+<p>
+  He got a <meter low="69" high="80" max="100" value="84">B</meter> on the exam.
+</p>
 ```
 
 #### 결과

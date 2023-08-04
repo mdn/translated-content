@@ -1,14 +1,6 @@
 ---
 title: Оператор нулевого слияния (??)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-  - nullish coalescing
-original_slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
-browser-compat: javascript.operators.nullish_coalescing
 ---
 
 {{JSSidebar("Operators")}}
@@ -18,7 +10,7 @@ browser-compat: javascript.operators.nullish_coalescing
 Этот оператор можно рассматривать как частный случай [логического оператора ИЛИ
 (`||`)](/ru/docs/Web/JavaScript/Reference/Operators/Logical_OR), который возвращает правый операнд, если в левом операнде хранится _любое_ {{Glossary("falsy", "ложноподобное")}} значение, а не только `null` или `undefined`. Другими словами, если вы используете оператор `||` для присваивания значения по умолчанию другой переменной `foo`, вы можете столкнуться с неожиданным поведением, если считаете некоторые ложноподобные значения пригодными для использования (например, `''` или `0`). Ниже вы увидите примеры.
 
-Оператор нулевого слияния вместе с `||` находится на [четвёртом по приоритетности месте](/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), непосредственно перед ним следует [условный (тернарный) оператор](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator).
+Оператор нулевого слияния вместе с `||` находится на [четвёртом по приоритетности месте](/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), непосредственно перед ним следует [условный (тернарный) оператор](/ru/docs/Web/JavaScript/Reference/Operators/Conditional_Operator).
 
 {{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}
 
@@ -51,7 +43,7 @@ console.log(valC); // 42
 
 ### Присваивание переменной значения по умолчанию
 
-Ранее, когда нужно было присвоить переменной значение по умолчанию, часто использовался оператор ИЛИ ([`||`](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)):
+Ранее, когда нужно было присвоить переменной значение по умолчанию, часто использовался оператор ИЛИ ([`||`](/ru/docs/Web/JavaScript/Reference/Operators/Logical_OR)):
 
 ```js
 let foo;
@@ -105,7 +97,7 @@ console.log( B() ?? C() );
 
 ### Использование вместе с операторами И или ИЛИ
 
-Не получится использовать оператор И (`&&`) и ИЛИ (`||`) вместе с оператором `??` в одном выражении. В таких случаях будет вызвана ошибка [`SyntaxError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError).
+Не получится использовать оператор И (`&&`) и ИЛИ (`||`) вместе с оператором `??` в одном выражении. В таких случаях будет вызвана ошибка [`SyntaxError`](/ru/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError).
 
 ```js example-bad
 null || undefined ?? "foo"; // вызывает SyntaxError

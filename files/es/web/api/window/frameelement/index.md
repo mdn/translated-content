@@ -23,7 +23,7 @@ frameEl = window.frameElement;
 var frameEl = window.frameElement;
 // Si estamos empotrados, cambia la URL de elemento contenedor to 'http://mozilla.org/'
 if (frameEl) {
-  frameEl.src = 'http://mozilla.org/';
+  frameEl.src = "http://mozilla.org/";
 }
 ```
 

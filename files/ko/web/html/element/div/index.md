@@ -1,5 +1,5 @@
 ---
-title: '<div>: 콘텐츠 분할 요소'
+title: "<div>: 콘텐츠 분할 요소"
 slug: Web/HTML/Element/div
 ---
 
@@ -84,8 +84,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 ```html
 <div>
-   <p>어떤 콘텐츠든 좋습니다.
-   &lt;p&gt;, &lt;table&gt;같이 말이죠. 써보세요!</p>
+  <p>어떤 콘텐츠든 좋습니다. &lt;p&gt;, &lt;table&gt;같이 말이죠. 써보세요!</p>
 </div>
 ```
 
@@ -101,8 +100,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 ```html
 <div class="shadowbox">
-  <p>Here's a very interesting note displayed in a
-  lovely shadowed box.</p>
+  <p>Here's a very interesting note displayed in a lovely shadowed box.</p>
 </div>
 ```
 

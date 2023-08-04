@@ -2,6 +2,7 @@
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLVideoElement`** 인터페이스는 Video object를 조작하는데 필요한 프로퍼티와 메소드를 제공합니다. {{domxref("HTMLMediaElement")}}와 {{domxref("HTMLElement")}}를 상속합니다.
@@ -64,7 +65,7 @@ _{{domxref("HTMLMediaElement")}}와 {{domxref("HTMLElement")}}의 메소드도 �
 
 ## Events
 
-_{{domxref("HTMLMediaElement")}}와 {{domxref("HTMLElement")}}의 이벤트를 상속합니다._ [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) 메소드 또는 `oneventname` 프로퍼티에 리스너를 전달하여 이벤트를 수신합니다.
+_{{domxref("HTMLMediaElement")}}와 {{domxref("HTMLElement")}}의 이벤트를 상속합니다._ [`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener) 메소드 또는 `oneventname` 프로퍼티에 리스너를 전달하여 이벤트를 수신합니다.
 
 ## 명세
 

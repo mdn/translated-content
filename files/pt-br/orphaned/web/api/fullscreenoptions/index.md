@@ -1,7 +1,6 @@
 ---
 title: FullscreenOptions
 slug: orphaned/Web/API/FullscreenOptions
-original_slug: Web/API/FullscreenOptions
 ---
 
 {{APIRef("Fullscreen API")}}

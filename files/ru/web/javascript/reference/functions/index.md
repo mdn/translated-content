@@ -1,10 +1,6 @@
 ---
 title: Функции
 slug: Web/JavaScript/Reference/Functions
-tags:
-  - Функции
-  - Функция
-translation_of: Web/JavaScript/Reference/Functions
 ---
 {{jsSidebar("Functions")}}
 
@@ -160,10 +156,10 @@ new Function (arg1, arg2, ... argN, functionBody)
 
 Внутри функции получить доступ к её аргументам можно через объект [arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments).
 
-- [`arguments`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments): Объект, похожий на массив и содержащий все аргументы, переданные в текущую функцию.
-- [`arguments.callee`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_inline}}: Функция, исполняемая в текущий момент.
-- [`arguments.caller`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller) : Функция, которая вызвала текущую функцию.
-- [`arguments.length`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): Число аргументов, переданных в функцию.
+- [`arguments`](/ru/docs/JavaScript/Reference/Functions_and_function_scope/arguments): Объект, похожий на массив и содержащий все аргументы, переданные в текущую функцию.
+- [`arguments.callee`](/ru/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_inline}}: Функция, исполняемая в текущий момент.
+- [`arguments.caller`](/ru/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller) : Функция, которая вызвала текущую функцию.
+- [`arguments.length`](/ru/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): Число аргументов, переданных в функцию.
 
 ## Определение методов
 

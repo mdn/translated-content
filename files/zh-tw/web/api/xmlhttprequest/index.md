@@ -117,7 +117,7 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 
 - MDN 上涵蓋 XMLHttpRequest 的相關教學：
 
-  - [Ajax — Getting Started](/zh-TW/docs/AJAX/Getting_Started)
+  - [Ajax](/zh-TW/docs/Web/Guide/AJAX)
   - [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
   - [HTML in XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
   - [`FormData`](/zh-TW/docs/Web/API/FormData)

@@ -1,7 +1,6 @@
 ---
 title: <video>
 slug: Web/HTML/Element/video
-translation_of: Web/HTML/Element/video
 ---
 
 {{HTMLSidebar}}
@@ -127,7 +126,7 @@ Your web host may provide an easy interface to MIME type configuration changes f
 
 ## Интерфейс DOM
 
-Этот элемент реализует интерфейс [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement).
+Этот элемент реализует интерфейс [`HTMLVideoElement`](/ru/docs/Web/API/HTMLVideoElement).
 
 ## Совместимость браузера
 

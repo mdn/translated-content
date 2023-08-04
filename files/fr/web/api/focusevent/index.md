@@ -1,13 +1,6 @@
 ---
 title: FocusEvent
 slug: Web/API/FocusEvent
-tags:
-  - API
-  - DOM
-  - Evènement
-  - Focus
-  - Interface
-translation_of: Web/API/FocusEvent
 ---
 
 {{APIRef("DOM Events")}}{{SeeCompatTable}}
@@ -28,7 +21,7 @@ _Hértite des propriétés de son parent domxref("UIEvent")}} et indirectement d
 
 ## Méthodes
 
-*Aucune méthode spécifique&nbsp;; hérite des propriétés de son parent [`UIEvent`](/fr/docs/Web/API/UIEvent) et indirectement de [`Event`](/fr/docs/Web/API/Event).*
+_Aucune méthode spécifique&nbsp;; hérite des propriétés de son parent [`UIEvent`](/fr/docs/Web/API/UIEvent) et indirectement de [`Event`](/fr/docs/Web/API/Event)._
 
 ## Spécifications
 

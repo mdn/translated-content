@@ -46,28 +46,35 @@ WebGL シェーダーを使うには、それほど多くは必要ありませ�
 使用する HTML の構造は次のとおりです。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>MDN Games: Shaders demo</title>
-  <style>
-    body { margin: 0; padding: 0; font-size: 0; }
-    canvas { width: 100%; height: 100%; }
-  </style>
-  <script src="three.min.js"></script>
-</head>
-<body>
-  <script id="vertexShader" type="x-shader/x-vertex">
-  // vertex shader's code goes here
-  </script>
-  <script id="fragmentShader" type="x-shader/x-fragment">
-  // fragment shader's code goes here
-  </script>
-  <script>
-  // scene setup goes here
-  </script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>MDN Games: Shaders demo</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+      }
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <script src="three.min.js"></script>
+  </head>
+  <body>
+    <script id="vertexShader" type="x-shader/x-vertex">
+      // vertex shader's code goes here
+    </script>
+    <script id="fragmentShader" type="x-shader/x-fragment">
+      // fragment shader's code goes here
+    </script>
+    <script>
+      // scene setup goes here
+    </script>
+  </body>
 </html>
 ```
 
@@ -97,7 +104,7 @@ void main() {
 
 結果の `gl_Position` は、モデルビュー行列と射影行列に各ベクトルを乗算して、いずれの場合も最終的な頂点位置を取得することによって計算されます。
 
-> **メモ:** [頂点処理の段落](/ja/docs/Games/Techniques/3D_on_the_web/Basic_theory#vertex_processing)から、*モデル変換*、*ビュー変換*、および*投影変換*について詳しく知ることができます。 また、この記事の最後にあるリンクからも、詳細を学ぶことができます。
+> **メモ:** [頂点処理の段落](/ja/docs/Games/Techniques/3D_on_the_web/Basic_theory#vertex_processing)から、_モデル変換_、_ビュー変換_、および*投影変換*について詳しく知ることができます。 また、この記事の最後にあるリンクからも、詳細を学ぶことができます。
 
 `projectionMatrix` と `modelViewMatrix` はどちらも Three.js によって提供され、ベクトルは新しい 3D 位置を渡します。 これにより、元の立方体がシェーダーを介して平行移動され `x` 軸に沿って 10 単位、`z` 軸に沿って 5 単位移動します。 4番目のパラメーターは無視して、デフォルトの `1.0` 値のままにしておくことができます。 これは、3D 空間の頂点位置のクリッピングを操作するために使用されますが、今回のケースでは必要ありません。
 
@@ -125,8 +132,8 @@ void main() {
 
 ```js
 var shaderMaterial = new THREE.ShaderMaterial({
-  vertexShader: document.getElementById('vertexShader').textContent,
-  fragmentShader: document.getElementById('fragmentShader').textContent
+  vertexShader: document.getElementById("vertexShader").textContent,
+  fragmentShader: document.getElementById("fragmentShader").textContent,
 });
 ```
 
@@ -152,57 +159,64 @@ Three.js は、このマテリアルが与えられたメッシュにアタッ�
 ```html
 <script src="https://end3r.github.io/MDN-Games-3D/Shaders/js/three.min.js"></script>
 <script id="vertexShader" type="x-shader/x-vertex">
-    void main() {
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
-    }
+  void main() {
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
+  }
 </script>
 <script id="fragmentShader" type="x-shader/x-fragment">
-    void main() {
-        gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
-    }
+  void main() {
+      gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
+  }
 </script>
 ```
 
 ### JavaScript
 
 ```js
-    var WIDTH = window.innerWidth;
-    var HEIGHT = window.innerHeight;
+var WIDTH = window.innerWidth;
+var HEIGHT = window.innerHeight;
 
-    var renderer = new THREE.WebGLRenderer({antialias:true});
-    renderer.setSize(WIDTH, HEIGHT);
-    renderer.setClearColor(0xDDDDDD, 1);
-    document.body.appendChild(renderer.domElement);
+var renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(WIDTH, HEIGHT);
+renderer.setClearColor(0xdddddd, 1);
+document.body.appendChild(renderer.domElement);
 
-    var scene = new THREE.Scene();
+var scene = new THREE.Scene();
 
-    var camera = new THREE.PerspectiveCamera(70, WIDTH/HEIGHT);
-    camera.position.z = 50;
-    scene.add(camera);
+var camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
+camera.position.z = 50;
+scene.add(camera);
 
-    var boxGeometry = new THREE.BoxGeometry(10, 10, 10);
+var boxGeometry = new THREE.BoxGeometry(10, 10, 10);
 
-    var shaderMaterial = new THREE.ShaderMaterial({
-        vertexShader: document.getElementById('vertexShader').textContent,
-        fragmentShader: document.getElementById('fragmentShader').textContent
-    });
+var shaderMaterial = new THREE.ShaderMaterial({
+  vertexShader: document.getElementById("vertexShader").textContent,
+  fragmentShader: document.getElementById("fragmentShader").textContent,
+});
 
-    var cube = new THREE.Mesh(boxGeometry, shaderMaterial);
-    scene.add(cube);
-    cube.rotation.set(0.4, 0.2, 0);
+var cube = new THREE.Mesh(boxGeometry, shaderMaterial);
+scene.add(cube);
+cube.rotation.set(0.4, 0.2, 0);
 
-    function render() {
-        requestAnimationFrame(render);
-        renderer.render(scene, camera);
-    }
-    render();
+function render() {
+  requestAnimationFrame(render);
+  renderer.render(scene, camera);
+}
+render();
 ```
 
 ### CSS
 
 ```css
-body { margin: 0; padding: 0; font-size: 0; }
-canvas { width: 100%; height: 100%; }
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+}
 ```
 
 ### 結果

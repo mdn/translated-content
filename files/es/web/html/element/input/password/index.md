@@ -1,7 +1,6 @@
 ---
 title: <input type="password">
 slug: Web/HTML/Element/input/password
-original_slug: Web/HTML/Elemento/input/password
 ---
 
 {{HTMLSidebar}}
@@ -12,13 +11,13 @@ Los elementos `<input>` de tipo **`"password"`** proporcionan una forma para que
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories">Content categories</a>
+        <a href="/es/docs/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/HTML/Content_categories#Flow_content"
           >Flow content</a
         >, listado, tabla enviable, reseteable, elementos de forma asociada,
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >, elementos etiquetables, contenido palpable.
       </td>
@@ -37,7 +36,7 @@ Los elementos `<input>` de tipo **`"password"`** proporcionan una forma para que
       <th scope="row">Elementos de parentescos</th>
       <td>
         Cualquier elemento que accepta
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -95,13 +94,13 @@ Además de los atributos listados abajo, este elemento puede tener cualquier [gl
 Para crear un widget que muestre una constraseña, use:
 
 ```html
-<input type="password">
+<input type="password" />
 ```
 
 Para crear un widget que muestre una contraseña con un patrón o diseño, use:
 
 ```html
-<input type="password" pattern=".{6,}">
+<input type="password" pattern=".{6,}" />
 ```
 
 El ejemplo de arriba creará un elemento password que deberá contener 6 o más carácteres.

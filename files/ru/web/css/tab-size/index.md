@@ -1,7 +1,6 @@
 ---
 title: tab-size
 slug: Web/CSS/tab-size
-translation_of: Web/CSS/tab-size
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

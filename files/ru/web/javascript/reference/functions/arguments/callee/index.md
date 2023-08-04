@@ -1,7 +1,6 @@
 ---
 title: arguments.callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
-translation_of: Web/JavaScript/Reference/Functions/arguments/callee
 ---
 
 {{jsSidebar("Functions")}}

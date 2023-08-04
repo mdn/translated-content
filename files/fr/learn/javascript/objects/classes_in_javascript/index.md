@@ -1,18 +1,6 @@
 ---
 title: L'héritage au sein de JavaScript
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-tags:
-  - Apprendre
-  - Article
-  - Débutant
-  - Héritage
-  - JS Orienté Objet
-  - JavaScript
-  - Objet
-  - Programmation orientée objet
-  - Prototype
-translation_of: Learn/JavaScript/Objects/Inheritance
-original_slug: Learn/JavaScript/Objects/Inheritance
 ---
 
 {{LearnSidebar}}
@@ -60,19 +48,19 @@ Tout d'abord, faites une copie du fichier [`oojs-class-inheritance-start.html`](
 function Personne(prenom, nom, age, genre, interets) {
   this.nom = {
     prenom,
-    nom
+    nom,
   };
   this.age = age;
   this.genre = genre;
   this.interets = interets;
-};
+}
 ```
 
 L'ensemble des méthodes est défini dans le prototype :
 
 ```js
-Personne.prototype.saluer = function() {
-  alert('Salut! Je suis ' + this.nom.prenom + '.');
+Personne.prototype.saluer = function () {
+  alert("Salut! Je suis " + this.nom.prenom + ".");
 };
 ```
 
@@ -105,7 +93,7 @@ Notez que nous aurions très bien pu écrire tout simplement ceci :
 function Professeur(prenom, nom, age, genre, interets, matiere) {
   this.nom_complet = {
     prenom,
-    nom
+    nom,
   };
   this.age = age;
   this.genre = genre;
@@ -134,7 +122,7 @@ function BlueGlassBrick() {
   Brick.call(this);
 
   this.opacity = 0.5;
-  this.color = 'blue';
+  this.color = "blue";
 }
 ```
 
@@ -156,9 +144,9 @@ Professeur.prototype = Object.create(Personne.prototype);
 2. Nous avons également besoin de faire encore une chose avant de continuer. Après avoir ajouté la ligne précédente, le constructeur du prototype de `Professeur()` est désormais équivalent à celui de `Personne()`, parce que nous avons défini `Professeur.prototype` pour référencer un objet qui hérite ses propriétés de `Personne.prototype`&nbsp;! Essayez, après avoir sauvegardé votre code et rechargé la page, d'entrer `Professeur.prototype.constructor` dans la console pour vérifier.
 3. Cela peut devenir problématique, autant le corriger dès maintenant. C'est possible via l'ajout de la ligne de code suivante à la fin&nbsp;:
 
-    ```js
-    Professeur.prototype.constructor = Professeur;
-    ```
+   ```js
+   Professeur.prototype.constructor = Professeur;
+   ```
 
 4. À présent, si vous sauvegardez et rafraichissez après avoir écrit `Professeur.prototype.constructor`, cela devrait retourner `Professeur()`, et en plus nous héritons maintenant de `Personne()`&nbsp;!
 
@@ -169,18 +157,36 @@ Pour terminer notre code, nous devons définir une nouvelle fonction `saluer()` 
 La façon la plus facile d'accomplir cela est de la définir sur le prototype de Professeur() — ajoutez ceci à la suite de votre code :
 
 ```js
-Professeur.prototype.saluer = function() {
+Professeur.prototype.saluer = function () {
   var prefix;
 
-  if (this.genre === 'mâle' || this.genre === 'Mâle' || this.genre === 'm' || this.genre === 'M') {
-    prefix = 'M.';
-  } else if (this.genre === 'femelle' || this.genre === 'Femelle' || this.genre === 'f' || this.genre === 'F') {
-    prefix = 'Mme';
+  if (
+    this.genre === "mâle" ||
+    this.genre === "Mâle" ||
+    this.genre === "m" ||
+    this.genre === "M"
+  ) {
+    prefix = "M.";
+  } else if (
+    this.genre === "femelle" ||
+    this.genre === "Femelle" ||
+    this.genre === "f" ||
+    this.genre === "F"
+  ) {
+    prefix = "Mme";
   } else {
-    prefix = '';
+    prefix = "";
   }
 
-  alert('Bonjour. Mon nom est ' + prefix + ' ' + this.nom_complet.nom + ', et j\'enseigne ' + this.matiere + '.');
+  alert(
+    "Bonjour. Mon nom est " +
+      prefix +
+      " " +
+      this.nom_complet.nom +
+      ", et j'enseigne " +
+      this.matiere +
+      ".",
+  );
 };
 ```
 
@@ -191,7 +197,14 @@ Ceci affiche la salutation du professeur, qui utilise le titre de civilité appr
 Une fois tout le code saisi, essayez de créer une instance d'objet `Professeur()` en ajoutant à la fin de votre JavaScript (ou à l'endroit de votre choix) :
 
 ```js
-var professeur1 = new Professeur('Cédric', 'Villani', 44, 'm', ['football', 'cuisine'], 'les mathématiques');
+var professeur1 = new Professeur(
+  "Cédric",
+  "Villani",
+  44,
+  "m",
+  ["football", "cuisine"],
+  "les mathématiques",
+);
 ```
 
 Sauvegardez et actualisez, et essayez d'accéder aux propriétés et méthodes de votre nouvel objet `professeur1`, par exemple :

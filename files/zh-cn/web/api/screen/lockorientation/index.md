@@ -48,7 +48,10 @@ lockedAllowed = window.screen.lockOrientation(orientation);
 ### 使用 `DOMString` 参数
 
 ```js
-screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+screen.lockOrientationUniversal =
+  screen.lockOrientation ||
+  screen.mozLockOrientation ||
+  screen.msLockOrientation;
 
 if (screen.lockOrientationUniversal("landscape-primary")) {
   // 方向已锁定成功
@@ -60,9 +63,14 @@ if (screen.lockOrientationUniversal("landscape-primary")) {
 ### 使用 `Array` 参数
 
 ```js
-screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+screen.lockOrientationUniversal =
+  screen.lockOrientation ||
+  screen.mozLockOrientation ||
+  screen.msLockOrientation;
 
-if (screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"])) {
+if (
+  screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"])
+) {
   // 方向已锁定成功
 } else {
   // 方向锁定失败

@@ -1,8 +1,6 @@
 ---
 title: Rétrocompatibilité des boîtes flexibles (flexbox)
 slug: Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
-original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
 ---
 
 {{CSSRef}}

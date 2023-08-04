@@ -1,10 +1,6 @@
 ---
 title: stroke
 slug: Web/SVG/Attribute/stroke
-tags:
-  - Attribut SVG
-  - SVG
-translation_of: Web/SVG/Attribute/stroke
 ---
 
 {{SVGRef}}
@@ -18,25 +14,26 @@ Cet attribut peut être appliqué à tout élément, en revanche il n'aura d'eff
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
-
   <!-- Simple trait de couleur -->
-  <circle cx="5" cy="5" r="4" fill="none"
-          stroke="green" />
+  <circle cx="5" cy="5" r="4" fill="none" stroke="green" />
 
   <!-- Utiliser un degradé comme contour -->
   <defs>
     <linearGradient id="myGradient">
-      <stop offset="0%"   stop-color="green" />
+      <stop offset="0%" stop-color="green" />
       <stop offset="100%" stop-color="white" />
     </linearGradient>
   </defs>
-  <circle cx="15" cy="5" r="4" fill="none"
-          stroke="url(#myGradient)" />
+  <circle cx="15" cy="5" r="4" fill="none" stroke="url(#myGradient)" />
 </svg>
 ```
 

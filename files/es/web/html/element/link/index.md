@@ -1,7 +1,6 @@
 ---
 title: link
 slug: Web/HTML/Element/link
-original_slug: Web/HTML/Elemento/link
 ---
 
 {{HTMLSidebar}}
@@ -11,11 +10,11 @@ El **elemento HTML `<link>`** especifica la relación entre el documento actual 
 > **Nota:** El atributo [`rel`](/es/docs/Web/HTML/Element/link#rel) puede ser establecido con muchos valores diferentes. Estos se encuentran [listados](/es/docs/Web/HTML/Tipos_de_enlaces) en una página separada.
 
 | [Categorías de contenido](/es/docs/Web/Guide/HTML/categorias_de_contenido) | Contenido en metadatos. Si [`itemprop`](/es/docs/Web/HTML/Element/link#itemprop) está presente: [contenido dinámico](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico) y [contenido textual o estático](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático) |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                                        | Ninguno, es un {{Glossary("empty element", "elemento vacío")}}.                                                                                                                                                                                                                   |
-| Omisión de etiqueta                                                        | Siendo un elemento vacío, la etiqueta de inicio debe estar presente y la etiqueta de cierre no debe estarlo                                                                                                                                                                                        |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido                                                        | Ninguno, es un {{Glossary("empty element", "elemento vacío")}}.                                                                                                                                                                                                                                         |
+| Omisión de etiqueta                                                        | Siendo un elemento vacío, la etiqueta de inicio debe estar presente y la etiqueta de cierre no debe estarlo                                                                                                                                                                                             |
 | Elementos padre permitidos                                                 | Cualquier elemento que acepte elementos de metadatos. Si está presente el atributo [`itemprop`](/es/docs/Web/HTML/Element/link#itemprop): cualquier elemento que acepte [contenido textual o estático](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático).                   |
-| Interfaz DOM                                                               | {{domxref("HTMLLinkElement")}}                                                                                                                                                                                                                                                           |
+| Interfaz DOM                                                               | {{domxref("HTMLLinkElement")}}                                                                                                                                                                                                                                                                          |
 
 ## Atributos
 
@@ -30,12 +29,13 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
     - `"use-credentials"`
       - : Una solicitud a un origen cruzado (esto es, con el encabezado HTTP `Origin:`) es realizada, enviando credenciales (es decir, se envían cookies, certificado y autenticación básica HTTP). Si el servidor no otorga credenciales al sitio de origen (a través del encabezado HTTP `Access-Control-Allow-Credentials:`), la imagen estará _corrupta_, y su uso estará restringido.Si no está presente, el recurso es obtenido sin una solicitud CORS (sin enviar el encabezado HTTP `Origin:`), previniendo así su uso no corrupto en elementos {{HTMLElement('canvas')}}. Si se introduce un valor no permitido, se maneja como si usara el valor **anonymous**. Véase [atributos de configuración CORS](/es/docs/Web/HTML/Atributos_de_configuracion_CORS) para más información.
 - `disabled` {{Non-standard_inline}}
+
   - : Este atributo es usado para deshabilitar una relación de enlace. Agregando programación, este atributo puede ser usado para habilitar o deshabilitar la relación con distintas hojas de estilos.
     > **Nota:** Aunque no hay atributo `disabled` en el estándar de HTML, **sí** hay un atributo `disabled` en el objeto DOM `HTMLLinkElement`.El uso de `disabled` como atributo HTML no es estándar, y solo puede ser usado en algunos navegadores ([W3 #27677](https://www.w3.org/Bugs/Public/show_bug.cgi?id=27677)). **No debe usarse**. Para lograr un efecto similar, se puede usar una de las siguientes técnicas:
     >
     > - Si el atributo `disabled` fue añadido directamente al elemento en la página, no incluya el elemento {{HTMLElement("link")}} en vez de eso;
     > - Establezca la **propiedad** `disabled` del objeto DOM `StyleSheet` vía programación.
-    >
+
 - `href`
   - : Este atributo especifica la {{glossary("URL")}} del recurso enlazado. La URL debe ser absoluta o relativa.
 - `hreflang`
@@ -43,6 +43,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 - `integrity` {{experimental_inline}}
   - : Contiene metadatos en línea, el valor criptográfico codificado a base 64 de un recurso (archivo) que se le está indicando al navegador que obtenga, el cual puede ser utilizado por el agente usuario para verificar si el recurso obtenido ha sido entregado libre de manipulaciones inesperadas. Véase [Integridad de subrecursos](/es/docs/Web/Security/Subresource_Integrity).
 - `media`
+
   - : Este atributo especifica el tipo de medio al que aplica el recurso enlazado. Su valor debe ser un [media query](/es/docs/CSS/Media_queries). Este atributo es usado principalmente cuando se enlaza a una hoja de esetilos externa en la que se le permita al agenete usuario seleccionar la que mejor se adapte al dispositivo sobre el que se ejecuta.
     > **Nota:**
     >
@@ -63,6 +64,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
   - : El valor de este atributo muestra la relación del documento actual al documento enlazado, como se define en el atributo [`href`](/es/docs/Web/HTML/Element/link#href). En consecuencia, este atributo define la relación inversa, en comparación al valor del atributo **rel**. Los [tipos de enlace](/es/docs/Web/HTML/Tipos_de_enlaces) para este atributo son similares a los disponibles para [`rel`](/es/docs/Web/HTML/Element/link#rel).
     > **Nota:** Este atributo es obsoleto en HTML5. **No debe usarse**. Para lograr este efecto, use el atributo [`rel`](/es/docs/Web/HTML/Element/link#rel) con el [tipo de enlace](/es/docs/Web/HTML/Tipos_de_enlaces) contrario, por ejemplo, made debe reemplazar a author. Además, este atributo no significa _revision_ y no debe ser usado con un número de versión, que es desafortunadamente el caso de muchos sitios.
 - `sizes`
+
   - : Este atributo define los tamaños de los íconos para medios visuales contenidos en el recurso. Debe estar presente solo si el atributo [`rel`](/es/docs/Web/HTML/Element/link#rel) contiene el [tipo de enlace](/es/docs/Web/HTML/Tipos_de_enlaces) icon. Puede tener los siguientes valores:
     - `any`, significa que el ícono puede ser escalado a cualquier tamaño, ya que está en un formato vectorial, como `image/svg+xml`.
     - una lista de tamaños separados por espacios en blanco, cada uno en formato `<anchura en píxeles>` x `<altura en píxeles>` or `<anchura en píxeles>` X `<altura en píxeles>`. Cada uno de estos tamaños debe estar contenido en el recurso.
@@ -85,7 +87,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 Para incluir una hoja de estilos en una página, use la siguiente sintaxis:
 
 ```html
-<link href="style.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet" />
 ```
 
 ### Proporcionando hojas de estilos alternativas
@@ -95,9 +97,9 @@ También se pueden especificar [hojas de estilos alternativas](/es/docs/Web/CSS/
 El usuario puede elegir cuál hoja de estilos usar, seleccionándola desde el menú Ver > Estilo de Página. Esto proporciona una manera en que los usuarios pueden ver múltiples versiones de una misma página.
 
 ```html
-<link href="default.css" rel="stylesheet" title="Default Style">
-<link href="fancy.css" rel="alternate stylesheet" title="Fancy">
-<link href="basic.css" rel="alternate stylesheet" title="Basic">
+<link href="default.css" rel="stylesheet" title="Default Style" />
+<link href="fancy.css" rel="alternate stylesheet" title="Fancy" />
+<link href="basic.css" rel="alternate stylesheet" title="Basic" />
 ```
 
 ### Eventos de carga de hojas de estilos
@@ -106,16 +108,20 @@ Se puede determinar cuando una hoja de estilos fue cargada estableciendo la ejec
 
 ```html
 <script>
-function sheetLoaded() {
-  // Hacer algo interesante; la hoja de estilos ha sido cargada
-}
+  function sheetLoaded() {
+    // Hacer algo interesante; la hoja de estilos ha sido cargada
+  }
 
-function sheetError() {
-  alert("¡Ocurrió un error al cargar la hoja de estilos!");
-}
+  function sheetError() {
+    alert("¡Ocurrió un error al cargar la hoja de estilos!");
+  }
 </script>
 
-<link rel="stylesheet" href="mystylesheet.css" onload="sheetLoaded()" onerror="sheetError()">
+<link
+  rel="stylesheet"
+  href="mystylesheet.css"
+  onload="sheetLoaded()"
+  onerror="sheetError()" />
 ```
 
 > **Nota:** El evento `load` se dispara una vez que la hoja de estilos y todo su contenido importado ha sido cargado y procesado, e inmediatamente antes de que los estilos sean aplicados al contenido.

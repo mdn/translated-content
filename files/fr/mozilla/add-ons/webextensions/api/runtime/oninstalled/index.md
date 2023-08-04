@@ -1,17 +1,6 @@
 ---
 title: runtime.onInstalled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onInstalled
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled
 ---
 
 {{AddonSidebar()}}
@@ -23,9 +12,9 @@ Notez que `runtime.onInstalled` n'est pas la même chose {{WebExtAPIRef("managem
 ## Syntaxe
 
 ```js
-browser.runtime.onInstalled.addListener(listener)
-browser.runtime.onInstalled.removeListener(listener)
-browser.runtime.onInstalled.hasListener(listener)
+browser.runtime.onInstalled.addListener(listener);
+browser.runtime.onInstalled.removeListener(listener);
+browser.runtime.onInstalled.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -70,7 +59,7 @@ Lorsque l'extensin est installé, connectez-vous à la raison de l'installon et 
 function handleInstalled(details) {
   console.log(details.reason);
   browser.tabs.create({
-    url: "http://chilloutandwatchsomecatgifs.com/"
+    url: "http://chilloutandwatchsomecatgifs.com/",
   });
 }
 

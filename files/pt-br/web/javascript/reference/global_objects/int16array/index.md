@@ -124,7 +124,7 @@ console.log(int16.length); // 2
 console.log(int16.BYTES_PER_ELEMENT); // 2
 
 // De uma array
-var arr = new Int16Array([21,31]);
+var arr = new Int16Array([21, 31]);
 console.log(arr[1]); // 31
 
 // De um outro TypedArray
@@ -137,17 +137,19 @@ var buffer = new ArrayBuffer(8);
 var z = new Int16Array(buffer, 0, 4);
 
 // De um interável
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var int16 = new Int16Array(iterable);
 // Int16Array[1, 2, 3]
 ```
 
 ## Especificações
 
-| Especificação                                                                        | Status                           | Comentário                                                                                                             |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Substituído pelo ECMAScript 2015.                                                                                      |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}} | {{Spec2('ES2015')}}         | Definição inicial em um padrão ECMA. Especificado `new` como requerido.                                                |
+| Especificação                                                   | Status                   | Comentário                                                                                                             |
+| --------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('Typed Array')}}                                     | {{Spec2('Typed Array')}} | Substituído pelo ECMAScript 2015.                                                                                      |
+| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}}  | {{Spec2('ES2015')}}      | Definição inicial em um padrão ECMA. Especificado `new` como requerido.                                                |
 | {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 mudou o construtor `Int16Array` para usar a operação `ToIndex` e permitir construtores sem argumentos. |
 
 ## Compatibilidade com navegadores

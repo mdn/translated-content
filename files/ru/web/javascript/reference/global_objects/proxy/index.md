@@ -1,14 +1,6 @@
 ---
 title: Прокси
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
-tags:
-  - ECMAScript6
-  - JavaScript
-  - NeedsUpdate
-  - Reference
-  - Объект
-  - Прокси
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
 Объект `Proxy` позволяет создать прокси для другого объекта, может перехватывать и переопределить основные операции для данного объекта.
 
@@ -336,7 +328,7 @@ console.log(products.number); // 3
 ```js
 /*
   var docCookies = ... получить объект "docCookies" можно здесь:
-  https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
+  https://developer.mozilla.org/ru/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
 */
 
 var docCookies = new Proxy(docCookies, {

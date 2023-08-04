@@ -1,11 +1,6 @@
 ---
 title: Стрелочные функции
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Функции
-translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
 
 {{jsSidebar("Functions")}}
@@ -260,7 +255,7 @@ var b = new (() => {})
 
 ### Использование ключевого слова `yield`
 
-Ключевое слово [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) не может быть использовано в теле стрелочной функции (за исключением случаев, когда разрешается использовать в функциях, вложенных в тело стрелочной функции). Как следствие стрелочные функции не могут быть использованы как генераторы.
+Ключевое слово [`yield`](/ru/docs/Web/JavaScript/Reference/Operators/yield) не может быть использовано в теле стрелочной функции (за исключением случаев, когда разрешается использовать в функциях, вложенных в тело стрелочной функции). Как следствие стрелочные функции не могут быть использованы как генераторы.
 
 ## Тело функции
 

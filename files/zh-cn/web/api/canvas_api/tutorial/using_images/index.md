@@ -54,8 +54,8 @@ canvas 的 API 可以使用下面这些类型中的一种作为图片的源：
 或者我们可以用脚本创建一个新的 {{domxref("HTMLImageElement")}} 对象。要实现这个方法，我们可以使用很方便的 `Image()` 构造函数。
 
 ```js
-var img = new Image();   // 创建一个<img>元素
-img.src = 'myImage.png'; // 设置图片源地址
+var img = new Image(); // 创建一个<img>元素
+img.src = "myImage.png"; // 设置图片源地址
 ```
 
 当脚本执行后，图片开始装载。
@@ -63,11 +63,11 @@ img.src = 'myImage.png'; // 设置图片源地址
 若调用 `drawImage` 时，图片没装载完，那什么都不会发生（在一些旧的浏览器中可能会抛出异常）。因此你应该用 load 事件来保证不会在加载完毕之前使用这个图片：
 
 ```js
-var img = new Image();   // 创建 img 元素
-img.onload = function(){
+var img = new Image(); // 创建 img 元素
+img.onload = function () {
   // 执行 drawImage 语句
-}
-img.src = 'myImage.png'; // 设置图片源地址
+};
+img.src = "myImage.png"; // 设置图片源地址
 ```
 
 如果你只用到一张图片的话，这已经够了。但一旦需要不止一张图片，那就需要更加复杂的处理方法，但图片预加载策略超出本教程的范围。
@@ -77,7 +77,8 @@ img.src = 'myImage.png'; // 设置图片源地址
 我们还可以通过 [data:url](http://en.wikipedia.org/wiki/Data:_URL) 方式来引用图像。Data urls 允许用一串 Base64 编码的字符串的方式来定义一个图片。
 
 ```js
-img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==';
+img.src =
+  "data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==";
 ```
 
 其优点就是图片内容即时可用，无须再到服务器兜一圈。（还有一个优点是，可以将 CSS，JavaScript，HTML 和 图片全部封装在一起，迁移起来十分方便。）缺点就是图像没法缓存，图片大的话内嵌的 url 数据会相当的长：
@@ -88,11 +89,11 @@ img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAs
 
 ```js
 function getMyVideo() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
-    return document.getElementById('myvideo');
+    return document.getElementById("myvideo");
   }
 }
 ```
@@ -116,27 +117,27 @@ function getMyVideo() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="180" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="180" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
-  function draw() {
-    var ctx = document.getElementById('canvas').getContext('2d');
-    var img = new Image();
-    img.onload = function(){
-      ctx.drawImage(img,0,0);
-      ctx.beginPath();
-      ctx.moveTo(30,96);
-      ctx.lineTo(70,66);
-      ctx.lineTo(103,76);
-      ctx.lineTo(170,15);
-      ctx.stroke();
-    }
-    img.src = 'backdrop.png';
-  }
+function draw() {
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var img = new Image();
+  img.onload = function () {
+    ctx.drawImage(img, 0, 0);
+    ctx.beginPath();
+    ctx.moveTo(30, 96);
+    ctx.lineTo(70, 66);
+    ctx.lineTo(103, 76);
+    ctx.lineTo(170, 15);
+    ctx.stroke();
+  };
+  img.src = "backdrop.png";
+}
 ```
 
 结果看起来是这样的：
@@ -160,24 +161,24 @@ function getMyVideo() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   var img = new Image();
-  img.onload = function(){
-    for (var i=0;i<4;i++){
-      for (var j=0;j<3;j++){
-        ctx.drawImage(img,j*50,i*38,50,38);
+  img.onload = function () {
+    for (var i = 0; i < 4; i++) {
+      for (var j = 0; j < 3; j++) {
+        ctx.drawImage(img, j * 50, i * 38, 50, 38);
       }
     }
   };
-  img.src = 'rhino.jpg';
+  img.src = "rhino.jpg";
 }
 ```
 
@@ -206,27 +207,36 @@ function draw() {
 
 ```html
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
-   <div style="display:none;">
-     <img id="source" src="rhino.jpg" width="300" height="227">
-     <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
-   </div>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+    <div style="display:none;">
+      <img id="source" src="rhino.jpg" width="300" height="227" />
+      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+    </div>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
 
   // Draw slice
-  ctx.drawImage(document.getElementById('source'),
-                33,71,104,124,21,20,87,104);
+  ctx.drawImage(
+    document.getElementById("source"),
+    33,
+    71,
+    104,
+    124,
+    21,
+    20,
+    87,
+    104,
+  );
 
   // Draw frame
-  ctx.drawImage(document.getElementById('frame'),0,0);
+  ctx.drawImage(document.getElementById("frame"), 0, 0);
 }
 ```
 
@@ -242,29 +252,29 @@ function draw() {
 
 ```html
 <html>
- <body onload="draw();">
-     <table>
+  <body onload="draw();">
+    <table>
       <tr>
-        <td><img src="gallery_1.jpg"></td>
-        <td><img src="gallery_2.jpg"></td>
-        <td><img src="gallery_3.jpg"></td>
-        <td><img src="gallery_4.jpg"></td>
+        <td><img src="gallery_1.jpg" /></td>
+        <td><img src="gallery_2.jpg" /></td>
+        <td><img src="gallery_3.jpg" /></td>
+        <td><img src="gallery_4.jpg" /></td>
       </tr>
       <tr>
-        <td><img src="gallery_5.jpg"></td>
-        <td><img src="gallery_6.jpg"></td>
-        <td><img src="gallery_7.jpg"></td>
-        <td><img src="gallery_8.jpg"></td>
+        <td><img src="gallery_5.jpg" /></td>
+        <td><img src="gallery_6.jpg" /></td>
+        <td><img src="gallery_7.jpg" /></td>
+        <td><img src="gallery_8.jpg" /></td>
       </tr>
-     </table>
-     <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
- </body>
+    </table>
+    <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+  </body>
 </html>
 ```
 
 ```css
 body {
-  background: 0 -100px repeat-x url(bg_gallery.png) #4F191A;
+  background: 0 -100px repeat-x url(bg_gallery.png) #4f191a;
   margin: 10px;
 }
 
@@ -283,28 +293,25 @@ td {
 
 ```js
 function draw() {
-
   // Loop through all images
-  for (i=0;i<document.images.length;i++){
-
+  for (i = 0; i < document.images.length; i++) {
     // Don't add a canvas for the frame image
-    if (document.images[i].getAttribute('id')!='frame'){
-
+    if (document.images[i].getAttribute("id") != "frame") {
       // Create canvas element
-      canvas = document.createElement('CANVAS');
-      canvas.setAttribute('width',132);
-      canvas.setAttribute('height',150);
+      canvas = document.createElement("CANVAS");
+      canvas.setAttribute("width", 132);
+      canvas.setAttribute("height", 150);
 
       // Insert before the image
-      document.images[i].parentNode.insertBefore(canvas,document.images[i]);
+      document.images[i].parentNode.insertBefore(canvas, document.images[i]);
 
-      ctx = canvas.getContext('2d');
+      ctx = canvas.getContext("2d");
 
       // Draw image to canvas
-      ctx.drawImage(document.images[i],15,20);
+      ctx.drawImage(document.images[i], 15, 20);
 
       // Add frame
-      ctx.drawImage(document.getElementById('frame'),0,0);
+      ctx.drawImage(document.getElementById("frame"), 0, 0);
     }
   }
 }

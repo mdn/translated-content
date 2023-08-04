@@ -1,16 +1,6 @@
 ---
 title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
-tags:
-  - Deprecated
-  - ECMAScript 2015
-  - JavaScript
-  - Object
-  - Propriété
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/proto
 ---
 
 {{JSRef}}{{Deprecated_header}}
@@ -61,8 +51,12 @@ console.log(aucunProto.__proto__); // 17
 console.log(Object.getPrototypeOf(aucunProto)); // null
 
 var protoCaché = {};
-Object.defineProperty(protoCaché, "__proto__",
-                      { value: 42, writable: true, configurable: true, enumerable: true });
+Object.defineProperty(protoCaché, "__proto__", {
+  value: 42,
+  writable: true,
+  configurable: true,
+  enumerable: true,
+});
 
 console.log(protoCaché.__proto__); // 42
 console.log(Object.getPrototypeOf(protoCaché) === Object.prototype); // true
@@ -110,9 +104,16 @@ On notera que même la propriété `__proto__` de `Object.prototype` peut être 
 ```js
 var b = {};
 
-Object.prototype.__proto__ =
-    Object.create(null, //[[Prototype]]
-                  { salut: { value: function () {console.log('salut');}}});
+Object.prototype.__proto__ = Object.create(
+  null, //[[Prototype]]
+  {
+    salut: {
+      value: function () {
+        console.log("salut");
+      },
+    },
+  },
+);
 
 b.salut();
 ```

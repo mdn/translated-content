@@ -1,5 +1,5 @@
 ---
-title: '<em>: O elemento de ênfase'
+title: "<em>: O elemento de ênfase"
 slug: Web/HTML/Element/em
 ---
 

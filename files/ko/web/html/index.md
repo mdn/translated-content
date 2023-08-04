@@ -1,5 +1,5 @@
 ---
-title: 'HTML: Hypertext Markup Language'
+title: "HTML: Hypertext Markup Language"
 slug: Web/HTML
 ---
 

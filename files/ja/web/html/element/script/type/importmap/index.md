@@ -1,8 +1,8 @@
 ---
-title: '<script type="importmap">'
+title: <script type="importmap">
 slug: Web/HTML/Element/script/type/importmap
 l10n:
-  sourceCommit: 4a2b6cafbf9bc5b006eedbdf0e9fdf2c8626d5b6
+  sourceCommit: 584921f4ba65580c5dce7f9c4181ad7a12f41bd9
 ---
 
 {{HTMLSidebar}}
@@ -12,6 +12,7 @@ l10n:
 インポートマップは、[JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)をインポートする際に、ブラウザがモジュール指定子を解決する方法を開発者が制御できるようにするための JSON オブジェクトです。これは、[`import` 文](/ja/docs/Web/JavaScript/Reference/Statements/import)や [`import()` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/import)でモジュール指定子として使用されたテキストと、指定子を解決するときにテキストを置き換える対応する値との間の対応表を提供します。
 JSON オブジェクトは、[JSON のインポートマップ表現](#json_のインポートマップ表現)に適合している必要があります。
 
+インポートマップは、静的インポートや動的インポートのモジュール指定子を解決するために使用されるため、マップ内で宣言された指定子を使用してモジュールをインポートする `<script>` 要素の前に宣言し、処理する必要があります。
 インポートマップは [`import` 文](/ja/docs/Web/JavaScript/Reference/Statements/import)や [`import()` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/import)にあるモジュール指定子のみに適用され、 `<script>` 要素の `src` 属性のパスには適用されないことに注意をしてください。
 
 詳しい情報は、JavaScript モジュールガイドの[インポートマップを使用したモジュールのインポート](/ja/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)の節を参照してください。
@@ -27,7 +28,6 @@ JSON オブジェクトは、[JSON のインポートマップ表現](#json_の�
 `src`、`async`、`nomodule`、`defer`、`crossorigin`、`integrity`、`referrerpolicy` の各属性は指定することはできません。
 
 文書内のインライン定義された最初のインポートマップのみが処理され、それ以降のインポートマップや外部インポートマップは無視されます。
-処理されない（無視される） `type="importmap"` を持つスクリプト要素では [`error` イベント](/ja/docs/Web/API/Element/error_event)が発行されます。
 
 ### 例外
 
@@ -35,6 +35,9 @@ JSON オブジェクトは、[JSON のインポートマップ表現](#json_の�
   - : インポートマップの定義が JSON オブジェクトでない、`importmap` のキーは定義されているがその値が JSON オブジェクトでない、`scopes` のキーは定義されているが、その値が JSON オブジェクトでない。
 
 ブラウザーは、インポートマップの JSON が[インポートマップ](#json_のインポートマップ表現)スキーマに適合していない他の場合、コンソール警告を生成します。
+
+処理されない `type="importmap"` を持つスクリプト要素では [`error` イベント](/ja/docs/Web/API/HTMLElement/error_event)が発行されます。
+これは例えば、インポートマップが処理されるときにモジュールの読み込みが既に始まっている場合や、複数のインポートマップがページ内で定義されている場合に発生することがあります。
 
 ## 解説
 
@@ -91,7 +94,7 @@ import { name as circleName } from "circle";
 そして、次のように circle モジュールをインポートすることができました。
 
 ```js
-import { name as squareName, draw } from "shapes/circle.js";
+import { name as circleName } from "shapes/circle.js";
 ```
 
 ### モジュール指定された対応表のキーに含まれるパス
@@ -172,7 +175,7 @@ scopes` キーを使って、モジュールをインポートするスクリプ
     scopes オブジェクトは有効な JSON オブジェクトで、各プロパティは `<scope key>` で、これは URL パスであり、対応する値は `<モジュール指定子マップ>` です。
 
     モジュールをインポートしているスクリプトの URL が `<scope key>` のパスに一致する場合、そのキーに関連付けられた `<モジュール指定子マップ>` の値が最初に指定子を一致するかどうか調べます。
-    一致するスコープキーが複数ある場合は、最も詳細な/深いスコープパスに関連付けられた値が、最初に一致する修飾子指定されるかどうかを調べます。
+    一致するスコープキーが複数ある場合は、最も詳細な/深いスコープパスに関連付けられた値が、最初に一致するモジュール指定子であるかどうかを調べます。
     一致するスコープ付きモジュール指定子マップのいずれにも一致するモジュール指定子キーがない場合には、`imports` にあるフォールバックモジュール指定子マップが使用されます。
 
     なお、スコープによってアドレスの解決方法が変わることはありません。相対アドレスは常にインポートマップのベース URL に解決されます。
@@ -188,6 +191,6 @@ scopes` キーを使って、モジュールをインポートするスクリプ
 ## 関連情報
 
 - [JavaScript モジュール > インポートマップを使用したモジュールのインポート](/ja/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)
-- [HTML の `<script>` 要素の `type` 属性](/ja/docs/Web/HTML/Element/script#attr-type)
+- [HTML の `<script>` 要素の `type` 属性](/ja/docs/Web/HTML/Element/script#type)
 - [`import` 文](/ja/docs/Web/JavaScript/Reference/Statements/import)
 - [`import()` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/import)

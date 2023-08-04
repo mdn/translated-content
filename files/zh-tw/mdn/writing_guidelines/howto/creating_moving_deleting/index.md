@@ -1,7 +1,6 @@
 ---
 title: 編輯以及新增頁面
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
-original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 ---
 
 {{MDNSidebar}}
@@ -75,7 +74,7 @@ original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 為了建立一個非基於連結而建立的新頁面，您需要於 URL 區塊後輸入一個獨一無二的頁面名稱。舉例來說，若您輸入:
 
 ```plain
-https://developer.mozilla.org/en-US/docs/FooBar
+https://developer.mozilla.org/zh-TW/docs/FooBar
 ```
 
 MDN 會心建立一個標題為「FooBar」而且會於開啟編輯器讓您能夠編輯此新頁面。請參考 [Editing an existing page](#Editing_an_existing_page) section of this article for how to use the editor mode.

@@ -1,7 +1,6 @@
 ---
 title: ServiceWorker
 slug: Web/API/ServiceWorker
-translation_of: Web/API/ServiceWorker
 ---
 
 {{APIRef("Service Workers API")}}
@@ -35,41 +34,42 @@ _Интерфейс `ServiceWorker` наследует все методы ин�
 Этот фрагмент кода из [примера событий Service Worker](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([демо](https://googlechrome.github.io/samples/service-worker/registration-events/)). Данный код возвращает значение {{domxref("ServiceWorker.state")}} при каждом изменении состояния.
 
 ```js
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js', {
-        scope: './'
-    }).then(function (registration) {
-        var serviceWorker;
-        if (registration.installing) {
-            serviceWorker = registration.installing;
-            document.querySelector('#kind').textContent = 'installing';
-        } else if (registration.waiting) {
-            serviceWorker = registration.waiting;
-            document.querySelector('#kind').textContent = 'waiting';
-        } else if (registration.active) {
-            serviceWorker = registration.active;
-            document.querySelector('#kind').textContent = 'active';
-        }
-        if (serviceWorker) {
-            // logState(serviceWorker.state);
-            serviceWorker.addEventListener('statechange', function (e) {
-                // logState(e.target.state);
-            });
-        }
-    }).catch (function (error) {
-        // Произошла ошибка при регистрации Service Worker.
-        // Файл service-worker.js может быть недоступным или содержать ошибки синтаксиса.
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("service-worker.js", {
+      scope: "./",
+    })
+    .then(function (registration) {
+      var serviceWorker;
+      if (registration.installing) {
+        serviceWorker = registration.installing;
+        document.querySelector("#kind").textContent = "installing";
+      } else if (registration.waiting) {
+        serviceWorker = registration.waiting;
+        document.querySelector("#kind").textContent = "waiting";
+      } else if (registration.active) {
+        serviceWorker = registration.active;
+        document.querySelector("#kind").textContent = "active";
+      }
+      if (serviceWorker) {
+        // logState(serviceWorker.state);
+        serviceWorker.addEventListener("statechange", function (e) {
+          // logState(e.target.state);
+        });
+      }
+    })
+    .catch(function (error) {
+      // Произошла ошибка при регистрации Service Worker.
+      // Файл service-worker.js может быть недоступным или содержать ошибки синтаксиса.
     });
 } else {
-    // Данный браузер не поддерживает Service Worker.
+  // Данный браузер не поддерживает Service Worker.
 }
 ```
 
 ## Спецификации
 
-| Спецификация                                                                             | Статус                               | Комментарии              |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------ |
-| {{SpecName('Service Workers', '#serviceworker', 'ServiceWorker')}} | {{Spec2('Service Workers')}} | Изначальное определение. |
+{{Specifications}}
 
 ## Поддержка
 

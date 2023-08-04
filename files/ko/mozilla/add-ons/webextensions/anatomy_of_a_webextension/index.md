@@ -2,6 +2,7 @@
 title: Anatomy of an extension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
+
 {{AddonSidebar}}
 
 확장앱은 배포 및 설치를 위해 패키징 된 파일 모음으로 구성됩니다. 이 아티클은 확장앱에 있을 수 있는 파일들을 빠르게 살펴봅니다.
@@ -47,7 +48,7 @@ manifest에 참조 된 항목 외에도, [Extension pages](/en-US/Add-ons/WebExt
 
 #### DOM APIs
 
-백그라운드 스크립트는 background pages라는 특별한 페이지의 context에서 실행됩니다. 이것은 백그라운드 스크립트에 모든 표준 DOM API들을 제공하는 전역 [`window`](/en-US/docs/Web/API/Window) 객체를 제공합니다.
+백그라운드 스크립트는 background pages라는 특별한 페이지의 context에서 실행됩니다. 이것은 백그라운드 스크립트에 모든 표준 DOM API들을 제공하는 전역 [`window`](/ko/docs/Web/API/Window) 객체를 제공합니다.
 
 background page를 제공할 필요는 없습니다. 백그라운드 스크립트를 추가했다면 빈 background page가 생성됩니다.
 
@@ -75,7 +76,7 @@ background page를 제공할 필요는 없습니다. 백그라운드 스크립�
 
 #### Content security policy
 
-백그라운드 스크립트는 [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) 사용과 같이 잠재적으로 위험할 수 있는 특정 작업을 제한합니다. 자세한 내용은 [컨텐츠 보안 정책](/ko/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)을 참조하십시오.
+백그라운드 스크립트는 [`eval()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/eval) 사용과 같이 잠재적으로 위험할 수 있는 특정 작업을 제한합니다. 자세한 내용은 [컨텐츠 보안 정책](/ko/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)을 참조하십시오.
 
 ## Sidebars, popups, options pages
 

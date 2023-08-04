@@ -43,8 +43,8 @@ A interface `File` herda as propriedades da interface {{domxref("Blob")}}.
 
 ## Especificações
 
-| Especificação                    | Status                       | Comentários        |
-| -------------------------------- | ---------------------------- | ------------------ |
+| Especificação            | Status                | Comentários        |
+| ------------------------ | --------------------- | ------------------ |
 | {{SpecName('File API')}} | {{Spec2('File API')}} | Definição Inicial. |
 
 ## Compatibilidade com os Navegadores

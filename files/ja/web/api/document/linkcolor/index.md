@@ -23,7 +23,7 @@ document.linkColor = color
 ## 例
 
 ```js
-document.linkColor = 'blue';
+document.linkColor = "blue";
 ```
 
 ## 仕様書

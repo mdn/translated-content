@@ -1,13 +1,6 @@
 ---
 title: Валидация ограничений
 slug: Web/HTML/Constraint_validation
-tags:
-  - CSS
-  - Руководство
-  - HTML5
-  - NeedsContent
-  - Селекторы
-original_slug: Web/Guide/HTML/Constraint_validation
 ---
 
 Создание веб-форм всегда было сложной задачей. Хотя сверстать саму форму достаточно просто, проверить, имеет ли каждое поле валидное значение — сложнее, а информирование пользователя о проблеме может стать настоящей головной болью. [HTML5](/ru/docs/Web/Guide/HTML/HTML5) представил для форм новый механизм: он добавляет элементу {{ HTMLElement("input") }} новые семантические типы и _constraint validation_, чтобы облегчить проверку содержимого на стороне клиента. С помощью новых атрибутов основные ограничения могут быть проверены без использования JavaScript; более сложные ограничения могут быть проверены с помощью [Constraint validation API](/ru/docs/Web/API/Constraint_validation).
@@ -29,8 +22,8 @@ original_slug: Web/Guide/HTML/Constraint_validation
 
 | Тип input                                                          | Описание ограничения                                                                                                                                  | Связанное нарушение                                                                   |
 | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| [`<input type="URL">`](/en-US/docs/Web/HTML/Element/input/url)     | Значение должно быть [URL-адресом](/ru/docs/Learn/Common_questions/What_is_a_URL), как указано в [URL Living Standard](https://url.spec.whatwg.org/). | Нарушение ограничения **[TypeMismatch](/ru/docs/Web/API/ValidityState/typeMismatch)** |
-| [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) | Значение должно быть синтаксически правильным email-адресом, который обычно имеет формат `username@hostname.tld`.                                     | Нарушение ограничения **[TypeMismatch](/ru/docs/Web/API/ValidityState/typeMismatch)** |
+| [`<input type="URL">`](/ru/docs/Web/HTML/Element/input/url)     | Значение должно быть [URL-адресом](/ru/docs/Learn/Common_questions/What_is_a_URL), как указано в [URL Living Standard](https://url.spec.whatwg.org/). | Нарушение ограничения **[TypeMismatch](/ru/docs/Web/API/ValidityState/typeMismatch)** |
+| [`<input type="email">`](/ru/docs/Web/HTML/Element/input/email) | Значение должно быть синтаксически правильным email-адресом, который обычно имеет формат `username@hostname.tld`.                                     | Нарушение ограничения **[TypeMismatch](/ru/docs/Web/API/ValidityState/typeMismatch)** |
 
 Для обоих этих типов input, если установлен атрибут [`multiple`](/ru/docs/Web/HTML/Element/input#multiple) допускается ввод нескольких разделённых запятыми значений. Если какое-то из значений не удовлетворяет условию, описанному выше, срабатывает нарушение ограничения **Type mismatch**.
 
@@ -60,7 +53,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
         <code>tel</code>, <code>email</code>, <code>password</code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions"
+        <a href="/ru/docs/Web/JavaScript/Guide/Regular_Expressions"
           >Регулярное выражение JavaScript</a
         >
         (без
@@ -76,7 +69,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
         <code
           >Нарушение ограничения
           <strong
-            ><a href="/en-US/docs/Web/API/ValidityState/patternMismatch"
+            ><a href="/ru/docs/Web/API/ValidityState/patternMismatch"
               >patternMismatch</a
             ></strong
           ></code
@@ -85,7 +78,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
     </tr>
     <tr>
       <td rowspan="3">
-        <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code>
+        <code><a href="/ru/docs/Web/HTML/Attributes/min">min</a></code>
       </td>
       <td><code>range</code>, <code>number</code></td>
       <td>Валидное число</td>
@@ -96,7 +89,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
         Нарушение ограничения
         <strong
           ><code
-            ><a href="/en-US/docs/Web/API/ValidityState/rangeUnderflow"
+            ><a href="/ru/docs/Web/API/ValidityState/rangeUnderflow"
               >rangeUnderflow</a
             ></code
           ></strong
@@ -115,7 +108,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
     </tr>
     <tr>
       <td rowspan="3">
-        <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code>
+        <code><a href="/ru/docs/Web/HTML/Attributes/max">max</a></code>
       </td>
       <td><code>range</code>, <code>number</code></td>
       <td>Валидное число</td>
@@ -126,7 +119,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
         Нарушение ограничения
         <strong
           ><code
-            ><a href="/en-US/docs/Web/API/ValidityState/rangeOverflow"
+            ><a href="/ru/docs/Web/API/ValidityState/rangeOverflow"
               >rangeOverflow</a
             ></code
           ></strong
@@ -146,7 +139,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code
+          ><a href="/ru/docs/Web/HTML/Attributes/required">required</a></code
         >
       </td>
       <td>
@@ -166,7 +159,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
       <td>
         <strong
           ><code
-            ><a href="/en-US/docs/Web/API/ValidityState/valueMissing"
+            ><a href="/ru/docs/Web/API/ValidityState/valueMissing"
               >valueMissing</a
             ></code
           ></strong
@@ -176,7 +169,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
     </tr>
     <tr>
       <td rowspan="5">
-        <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code>
+        <code><a href="/ru/docs/Web/HTML/Attributes/step">step</a></code>
       </td>
       <td><code>date</code></td>
       <td>Целое число дней</td>
@@ -188,7 +181,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
         Нарушение ограничения
         <strong
           ><code
-            ><a href="/en-US/docs/Web/API/ValidityState/stepMismatch"
+            ><a href="/ru/docs/Web/API/ValidityState/stepMismatch"
               >stepMismatch</a
             ></code
           ></strong
@@ -216,7 +209,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/minlength"
+          ><a href="/ru/docs/Web/HTML/Attributes/minlength"
             >minlength</a
           ></code
         >
@@ -237,7 +230,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
         Нарушение ограничения
         <strong
           ><code
-            ><a href="/en-US/docs/Web/API/ValidityState/tooShort"
+            ><a href="/ru/docs/Web/API/ValidityState/tooShort"
               >tooShort</a
             ></code
           ></strong
@@ -247,7 +240,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/maxlength"
+          ><a href="/ru/docs/Web/HTML/Attributes/maxlength"
             >maxlength</a
           ></code
         >
@@ -266,7 +259,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
         Нарушение ограничения
         <strong
           ><code
-            ><a href="/en-US/docs/Web/API/ValidityState/tooLong"
+            ><a href="/ru/docs/Web/API/ValidityState/tooLong"
               >tooLong</a
             ></code
           ></strong
@@ -280,7 +273,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
 
 Валидация ограничений выполняется с помощью Constraint Validation API либо на отдельном элементе формы, либо на уровне формы, на самом элементе {{ HTMLElement("form") }}. Способы валидации:
 
-- Вызов метода `checkValidity()` или `reportValidity()` связанного с формой DOM-интерфейса, ([`HTMLInputElement`](/ru/docs/Web/API/HTMLInputElement), [`HTMLSelectElement`](/ru/docs/Web/API/HTMLSelectElement), [`HTMLButtonElement`](/ru/docs/Web/API/HTMLButtonElement), [`HTMLOutputElement`](/en-US/docs/Web/API/HTMLOutputElement) или [`HTMLTextAreaElement`](/en-US/docs/Web/API/HTMLTextAreaElement)), который оценивает ограничения только на данном элементе, позволяя скрипту получить эту информацию. Метод `checkValidity()` возвращает логическое значение, указывающее, соотвествует ли значение элемента его ограничениям. (Обычно это делает браузер при определении того, какой CSS-псевдоклассов применяется: {{ Cssxref(":valid") }} или {{ Cssxref(":invalid") }}.) Напротив, метод `reportValidity()` сообщает пользователю о любых нарушениях ограничений.
+- Вызов метода `checkValidity()` или `reportValidity()` связанного с формой DOM-интерфейса, ([`HTMLInputElement`](/ru/docs/Web/API/HTMLInputElement), [`HTMLSelectElement`](/ru/docs/Web/API/HTMLSelectElement), [`HTMLButtonElement`](/ru/docs/Web/API/HTMLButtonElement), [`HTMLOutputElement`](/ru/docs/Web/API/HTMLOutputElement) или [`HTMLTextAreaElement`](/ru/docs/Web/API/HTMLTextAreaElement)), который оценивает ограничения только на данном элементе, позволяя скрипту получить эту информацию. Метод `checkValidity()` возвращает логическое значение, указывающее, соотвествует ли значение элемента его ограничениям. (Обычно это делает браузер при определении того, какой CSS-псевдоклассов применяется: {{ Cssxref(":valid") }} или {{ Cssxref(":invalid") }}.) Напротив, метод `reportValidity()` сообщает пользователю о любых нарушениях ограничений.
 - Вызов метода `checkValidity()` или `reportValidity()` интерфейса [`HTMLFormElement`](/ru/docs/Web/API/HTMLFormElement).
 - Отправка самой формы.
 

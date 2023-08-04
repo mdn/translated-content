@@ -1,7 +1,6 @@
 ---
 title: 处理不同方向的文本
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
-original_slug: Learn/CSS/Building_blocks/处理_不同_方向的_文本
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}

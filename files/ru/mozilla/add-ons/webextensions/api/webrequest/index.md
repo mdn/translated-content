@@ -1,8 +1,8 @@
 ---
 title: Веб Запрос
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 ---
+
 {{AddonSidebar}}
 
 Добавляет обработчики событий на различных стадиях HTTP запроса. Обработчик получить детальную информацию о запросе и способен изменить или отменить запрос.

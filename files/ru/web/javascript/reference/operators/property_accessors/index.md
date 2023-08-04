@@ -1,7 +1,6 @@
 ---
 title: Property accessors
 slug: Web/JavaScript/Reference/Operators/Property_accessors
-translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
 ---
 
 {{jsSidebar("Operators")}}
@@ -116,7 +115,7 @@ console.log(object[bar]);
 
 ### Привязка методов
 
-Метод не привязан к содержащему его объекту. Это значит, что значение `this` в методах объекта не всегда указывает на него. Вместо этого, `this` "передаётся" при вызове метода. Смотрите подробнее [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this#Method_binding).
+Метод не привязан к содержащему его объекту. Это значит, что значение `this` в методах объекта не всегда указывает на него. Вместо этого, `this` "передаётся" при вызове метода. Смотрите подробнее [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this#Method_binding).
 
 ## Примеры
 

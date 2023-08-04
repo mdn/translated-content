@@ -24,23 +24,21 @@ document.write(markup);
 
 ```html
 <html>
+  <head>
+    <title>Escreva exemplo</title>
 
-<head>
-  <title>Escreva exemplo</title>
+    <script>
+      function newContent() {
+        document.open();
+        document.write("<h1>Sair com o velho - entrar com o novo!</h1>");
+        document.close();
+      }
+    </script>
+  </head>
 
-  <script>
-    function newContent() {
-      document.open();
-      document.write("<h1>Sair com o velho - entrar com o novo!</h1>");
-      document.close();
-    }
-  </script>
-</head>
-
-<body onload="newContent();">
-  <p>Algum conteúdo do documento original.</p>
-</body>
-
+  <body onload="newContent();">
+    <p>Algum conteúdo do documento original.</p>
+  </body>
 </html>
 ```
 
@@ -54,7 +52,7 @@ Se chamar `document.write()` incorporada em uma tag HTML `<script>` embutida, en
 
 ```html
 <script>
-  document.write("<h1>Título principal</h1>")
+  document.write("<h1>Título principal</h1>");
 </script>
 ```
 
@@ -68,14 +66,11 @@ Se chamar `document.write()` incorporada em uma tag HTML `<script>` embutida, en
 
 ## Especificações
 
-| Especificações                                                                                   | Status                           | Comentario |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName("HTML WHATWG", "#dom-document-write", "document.write(...)")}} | {{Spec2("HTML WHATWG")}} |            |
-| {{SpecName("DOM2 HTML", "html.html#ID-75233634", "document.write(...)")}} | {{Spec2("DOM2 HTML")}}     |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.write")}}
+{{Compat}}
 
 ## Veja também
 

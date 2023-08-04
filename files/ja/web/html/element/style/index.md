@@ -1,40 +1,40 @@
 ---
-title: '<style>: スタイル情報要素'
+title: "<style>: スタイル情報要素"
 slug: Web/HTML/Element/style
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<style>` 要素**は、文書あるいは文書の一部分のスタイル情報を含みます。 `<style>` 要素を含んでいる文書のコンテンツに適用される CSS を含みます。
+**`<style>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書あるいは文書の一部分のスタイル情報を含みます。 `<style>` 要素を含んでいる文書のコンテンツに適用される CSS を含みます。
 
 {{EmbedInteractiveExample("pages/tabbed/style.html", "tabbed-standard")}}
 
 `<style>` 要素は文書の {{htmlelement("head")}} 要素の中に入れる必要があります。一般に、スタイルを外部スタイルシートに入れて {{htmlelement("link")}} 要素を使用することをより推奨します。
 
-文書に複数の `<style>` 及び `<link>` が含まれている場合、これらは含まれている文書の DOM 上の順序で適用されます。 — 予期しないカスケード問題を防ぐために、含まれている順序が正しいことを確認してください。
+文書に複数の `<style>` および `<link>` が含まれている場合、これらは含まれている文書の DOM 上の順序で適用されます。 — 予期しないカスケード問題を防ぐために、含まれている順序が正しいことを確認してください。
 
-`<link>` 要素と同じ方法で、 `<style>` 要素に `media` 属性を付けて[メディアクエリ](/ja/docs/Web/CSS/Media_Queries)を含めると、ビューポートの幅などのメディア特性に依存して内部スタイルシートを選択的に適用することができます。
+`<link>` 要素と同じ方法で、 `<style>` 要素に `media` 属性を付けて[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を含めると、ビューポートの幅などのメディア特性に依存して内部スタイルシートを選択的に適用することができます。
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- `type`
-  - : この属性は、スタイル言語を MIME タイプで定義します (文字セットは指定すべきではありません)。この属性は省略可能であり、省略した場合の既定値は `text/css` です。空文字列と `text/css` 以外の値は使用されません。 **注:** 現代のウェブ文書では、この属性を含める理由はほとんどありません。
 - `media`
-  - : この属性はスタイルを適用するメディアを定義します。値は[メディアクエリ](/ja/docs/Web/Guide/CSS/Media_queries)であり、省略した場合の既定値は `all` です。
+  - : この属性はスタイルを適用するメディアを定義します。値は[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)であり、省略した場合の既定値は `all` です。
 - `nonce`
-  - : [script-src コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)内の行内スクリプトをホワイトリストに入れるために使われる暗号ノンス (ワンタイム番号) です。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスとして推測できないノンスを提供することが重要です。
+  - : [style-src コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/style-src)内のインラインスクリプトをホワイトリストに入れるために使われる暗号ノンス（ワンタイム番号）です。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスとして推測できないノンスを提供することが重要です。
 - `title`
   - : この属性は[代替スタイルシート](/ja/docs/Web/CSS/Alternative_style_sheets)のセットを指定します。
+- `blocking` {{Experimental_Inline}}
+  - : この属性は、クリティカルなサブリソースの取得時に、特定の処理をブロックすべきであることを明示的に示します。[`@import`](/ja/docs/Web/CSS/@import) でインポートされたスタイルシートは、ふつうクリティカルなサブリソースと見なされますが、一方で [`background-image`](/ja/docs/Web/CSS/background-image) やフォントはそうとはみなされません。
+    - `render`: 画面へのコンテンツの描画がブロックされます。
 
 ### 非推奨の属性
 
-- `scoped` {{non-standard_inline}} {{deprecated_inline}}
-
-  - : この属性が指定された場合、スタイルは、その親要素および親要素の子要素にのみ適用されます。
-
-    > **メモ:** この属性は、 <https://github.com/w3c/csswg-drafts/issues/3547> により、将来再導入されるかもしれません。今この属性を使用したい場合は、[ポリフィル](https://github.com/samthor/scoped)を利用することができます。
+- `type` {{deprecated_inline}}
+  - : この属性は指定すべきではありません。指定した場合、許可される値は空文字列か `text/css` と大文字と小文字を区別せずに一致するものだけです。
 
 ## 例
 
@@ -44,83 +44,95 @@ slug: Web/HTML/Element/style
 
 ```html
 <!doctype html>
-<html>
-<head>
-  <style>
-    p {
-      color: red;
-    }
-  </style>
-</head>
-<body>
-  <p>This is my paragraph.</p>
-</body>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test page</title>
+    <style>
+      p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is my paragraph.</p>
+  </body>
 </html>
 ```
 
-{{EmbedLiveSample('A_simple_stylesheet', '100%', '60')}}
+#### 結果
+
+{{EmbedLiveSample('A_simple_stylesheet', '100%', '100')}}
 
 ### 複数の style 要素
 
-この例には、二つの `<style>` 要素が含まれています。 — 競合する宣言は、[詳細度](/ja/docs/Web/CSS/Specificity)が同じであれば、後の `<style>` 要素が優先されることに注意してください。
+この例には、2 つの `<style>` 要素が含まれています。 — 競合する宣言は、[詳細度](/ja/docs/Web/CSS/Specificity)が同じであれば、後の `<style>` 要素が優先されることに注意してください。
 
 ```html
 <!doctype html>
-<html>
-<head>
-  <style>
-    p {
-      color: white;
-      background-color: blue;
-      padding: 5px;
-      border: 1px solid black;
-    }
-  </style>
-  <style>
-    p {
-      color: blue;
-      background-color: yellow;
-    }
-  </style>
-</head>
-<body>
-  <p>This is my paragraph.</p>
-</body>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test page</title>
+    <style>
+      p {
+        color: white;
+        background-color: blue;
+        padding: 5px;
+        border: 1px solid black;
+      }
+    </style>
+    <style>
+      p {
+        color: blue;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is my paragraph.</p>
+  </body>
 </html>
 ```
 
-{{EmbedLiveSample('Multiple_style_elements', '100%', '60')}}
+#### 結果
 
-### メディアクエリが含まれるもの
+{{EmbedLiveSample('Multiple_style_elements', '100%', '100')}}
 
-この例では一つ前に作ったものに対して、二番目の `<style>` 要素に `media` 属性を設定してあるので、ビューポートが 500px 未満の場合のみ適用されるようにします。
+### メディアクエリーが含まれるもの
+
+この例では一つ前に作ったものに対して、2 番目の `<style>` 要素に `media` 属性を設定してあるので、ビューポートが 500px 未満の場合のみ適用されるようにします。
 
 ```html
 <!doctype html>
-<html>
-<head>
-  <style>
-    p {
-      color: white;
-      background-color: blue;
-      padding: 5px;
-      border: 1px solid black;
-    }
-  </style>
-  <style media="all and (max-width: 500px)">
-    p {
-      color: blue;
-      background-color: yellow;
-    }
-  </style>
-</head>
-<body>
-  <p>This is my paragraph.</p>
-</body>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test page</title>
+    <style>
+      p {
+        color: white;
+        background-color: blue;
+        padding: 5px;
+        border: 1px solid black;
+      }
+    </style>
+    <style media="all and (max-width: 500px)">
+      p {
+        color: blue;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is my paragraph.</p>
+  </body>
 </html>
 ```
 
-{{EmbedLiveSample('Including_a_media_query', '100%', '60')}}
+#### 結果
+
+{{EmbedLiveSample('Including_a_media_query', '100%', '100')}}
 
 ## 技術的概要
 
@@ -128,7 +140,7 @@ slug: Web/HTML/Element/style
   <tbody>
     <tr>
       <th>
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
@@ -148,7 +160,7 @@ slug: Web/HTML/Element/style
     </tr>
     <tr>
       <th>タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>どちらのタグも省略できません。</td>
     </tr>
     <tr>
       <th>許可されている親要素</th>
@@ -183,7 +195,7 @@ slug: Web/HTML/Element/style
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.style")}}
+{{Compat}}
 
 ## 関連情報
 

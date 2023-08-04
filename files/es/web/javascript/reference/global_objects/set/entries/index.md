@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Set/entries
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/entries
 ---
 
 {{JSRef}}

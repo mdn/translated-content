@@ -57,7 +57,7 @@ slug: Learn/Common_questions/Design_and_accessibility/Common_web_layouts
 
 ## 深入学习
 
-*目前还没有可以深入学习的文章。[何不考虑发一篇？](/zh-CN/docs/MDN/Contribute/Getting_started)。*
+_目前还没有可以深入学习的文章。[何不考虑发一篇？](/zh-CN/docs/MDN/Contribute/Getting_started)。_
 
 ## 深入了解
 

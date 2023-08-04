@@ -1,7 +1,6 @@
 ---
 title: Document.createTreeWalker()
 slug: Web/API/Document/createTreeWalker
-original_slug: Web/API/document.createTreeWalker
 ---
 
 {{ApiRef("Document")}}
@@ -53,7 +52,7 @@ var treeWalker = document.createTreeWalker(
       return NodeFilter.FILTER_ACCEPT;
     },
   },
-  false
+  false,
 );
 
 var nodeList = [];

@@ -1,11 +1,6 @@
 ---
 title: text-anchor
 slug: Web/SVG/Attribute/text-anchor
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/text-anchor
-browser-compat: svg.attributes.presentation.text-anchor
 ---
 
 {{SVGRef}}
@@ -27,7 +22,9 @@ Cet attribut peut être utilisé pour les éléments SVG suivants :
 ## Exemple
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -35,7 +32,9 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
   <!-- Matérialisation des ancrages -->
-  <path d="M60,15 L60,110 M30,40 L90,40 M30,75 L90,75 M30,110 L90,110" stroke="grey" />
+  <path
+    d="M60,15 L60,110 M30,40 L90,40 M30,75 L90,75 M30,110 L90,110"
+    stroke="grey" />
 
   <!-- Ancres en action -->
   <text text-anchor="start" x="60" y="40">A</text>
@@ -47,11 +46,13 @@ html, body, svg {
   <circle cx="60" cy="75" r="3" fill="red" />
   <circle cx="60" cy="110" r="3" fill="red" />
 
-  <style><![CDATA[
-  text {
-    font: bold 36px Verdana, Helvetica, Arial, sans-serif;
-  }
-  ]]></style>
+  <style>
+    <![CDATA[
+      text {
+        font: bold 36px Verdana, Helvetica, Arial, sans-serif;
+      }
+      ]]>
+  </style>
 </svg>
 ```
 

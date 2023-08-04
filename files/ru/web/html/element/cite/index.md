@@ -1,12 +1,6 @@
 ---
 title: <cite>
 slug: Web/HTML/Element/cite
-tags:
-  - HTML
-  - Источник
-  - Цитата
-  - Элемент
-translation_of: Web/HTML/Element/cite
 ---
 
 ## Описание

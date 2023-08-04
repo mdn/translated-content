@@ -1,9 +1,6 @@
 ---
 title: Gamepad.displayId
 slug: Web/API/Gamepad/displayId
-tags:
-  - Виртуальная реальность
-translation_of: Web/API/Gamepad/displayId
 ---
 
 {{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}
@@ -25,22 +22,22 @@ var myDisplayId = gamepadInstance.displayId;
 ## Examples
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
-  if(!e.gamepad.displayId) {
-    console.log('Gamepad connected');
+window.addEventListener("gamepadconnected", function (e) {
+  if (!e.gamepad.displayId) {
+    console.log("Gamepad connected");
   } else {
-    console.log('Gamepad connected, associated with VR display ' + e.gamepad.displayId);
+    console.log(
+      "Gamepad connected, associated with VR display " + e.gamepad.displayId,
+    );
   }
 });
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                        | Status                       | Comment            |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#gamepad-getvrdisplays-attribute', 'displayId')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

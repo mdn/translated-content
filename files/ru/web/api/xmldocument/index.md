@@ -1,8 +1,6 @@
 ---
 title: Document.async
 slug: Web/API/XMLDocument
-translation_of: Web/API/XMLDocument/async
-original_slug: Web/API/XMLDocument/async
 ---
 
 {{APIRef("DOM")}}{{Deprecated_header}} {{Non-standard_header}}
@@ -22,7 +20,7 @@ var xmlDoc = document.implementation.createDocument("", "test", null);
 
 xmlDoc.async = false;
 xmlDoc.onload = loadXMLData;
-xmlDoc.load('querydata.xml');
+xmlDoc.load("querydata.xml");
 ```
 
 ## Спецификация

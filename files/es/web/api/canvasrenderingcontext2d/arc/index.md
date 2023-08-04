@@ -43,8 +43,8 @@ Esto es sólo un simple fragmento de código dibujando un círculo.
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.arc(75, 75, 50, 0, 2 * Math.PI);
@@ -62,7 +62,8 @@ Edite el código de abajo y vea su actualización de cambios en vivo en el lienz
 <textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.arc(50, 50, 50, 0, 2 * Math.PI, false);
-ctx.stroke();</textarea>
+ctx.stroke();</textarea
+>
 ```
 
 ```js hidden
@@ -78,14 +79,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -102,19 +103,19 @@ En este ejemplo se dibujan diferentes formas para mostrar lo que es posible al u
 ```
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 // Draw shapes
 for (var i = 0; i < 4; i++) {
-  for(var j = 0; j < 3; j++) {
+  for (var j = 0; j < 3; j++) {
     ctx.beginPath();
-    var x              = 25 + j * 50;               // x coordinate
-    var y              = 25 + i * 50;               // y coordinate
-    var radius         = 20;                    // Arc radius
-    var startAngle     = 0;                     // Starting point on circle
-    var endAngle       = Math.PI + (Math.PI * j) /2; // End point on circle
-    var anticlockwise  = i % 2 == 1;                // Draw anticlockwise
+    var x = 25 + j * 50; // x coordinate
+    var y = 25 + i * 50; // y coordinate
+    var radius = 20; // Arc radius
+    var startAngle = 0; // Starting point on circle
+    var endAngle = Math.PI + (Math.PI * j) / 2; // End point on circle
+    var anticlockwise = i % 2 == 1; // Draw anticlockwise
 
     ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
 

@@ -1,10 +1,6 @@
 ---
 title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
-tags:
-  - ECMAScript6
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Operators/new.target
 ---
 
 {{JSSidebar("Operators")}}Свойство **`new.target`** позволяет определить была ли функция или конструктор вызваны с помощью оператора [new](/ru/docs/Web/JavaScript/Reference/Operators/new). В конструкторах и функциях инстанциированных с помощью оператора [new](/ru/docs/Web/JavaScript/Reference/Operators/new), `new.target` возвращает ссылку на конструктор или функцию. При обычном вызове функции `new.target` имеет значение {{jsxref("undefined")}}.
@@ -66,5 +62,5 @@ var b = new B(); // вернёт "B"
 
 - [Functions](/ru/docs/Web/JavaScript/Reference/Functions)
 - [Classes](/ru/docs/Web/JavaScript/Reference/Classes)
-- [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)
-- [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
+- [`new`](/ru/docs/Web/JavaScript/Reference/Operators/new)
+- [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this)

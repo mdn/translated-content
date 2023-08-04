@@ -1,13 +1,6 @@
 ---
 title: Логическое И (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
-tags:
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
-browser-compat: javascript.operators.logical_and
 ---
 {{jsSidebar("Operators")}}
 
@@ -47,7 +40,7 @@ result = 'foo' && 4;   // result is assigned 4
 ```
 
 Несмотря на то, что оператор `&&` может использоваться с операндами, не содержащие логических значений, он всё равно останется булевым оператором, поскольку его возвращаемое значение всегда можно преобразовать в [булевый примитив](/ru/docs/Web/JavaScript/Data_structures#Boolean_type).
-Чтобы явно преобразовать возвращаемое значение этого оператора (или вообще любое выражение) в соответствующее значение булевого типа, используйте двойной [`оператор НЕ`](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT) или конструктор {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}.
+Чтобы явно преобразовать возвращаемое значение этого оператора (или вообще любое выражение) в соответствующее значение булевого типа, используйте двойной [`оператор НЕ`](/ru/docs/Web/JavaScript/Reference/Operators/Logical_NOT) или конструктор {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}.
 
 ### Сокращённое вычисление
 
@@ -76,7 +69,7 @@ console.log( A() && B() );
 
 ### Приоритет операторов
 
-Оператор И имеет более высокий приоритет, чем оператор ИЛИ, поэтому оператор `&&` выполнится раньше оператора `||` (см. [приоритет операторов](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
+Оператор И имеет более высокий приоритет, чем оператор ИЛИ, поэтому оператор `&&` выполнится раньше оператора `||` (см. [приоритет операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
 
 ```js
 false || true && true            // вернёт true

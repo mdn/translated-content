@@ -1,15 +1,6 @@
 ---
 title: <main>
 slug: Web/HTML/Element/main
-tags:
-  - Element
-  - HTML
-  - HTML группировка контента
-  - HTML секции
-  - main
-  - Справка
-  - Элемент
-translation_of: Web/HTML/Element/main
 ---
 {{HTMLSidebar}}
 
@@ -24,7 +15,7 @@ translation_of: Web/HTML/Element/main
 | Допустимое содержимое                                            | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток).                                                                                                                                                                                                                           |
 | Пропуск тегов                                                    | Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.                                                                                                                                                                                                                                |
 | Допустимые родители                                              | Те, в которых разрешается [контент основного потока](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток) в качестве содержимого, но только если это [иерархически корректный `main` элемент](https://html.spec.whatwg.org/multipage/grouping-content.html#hierarchically-correct-main-element). |
-| Допустимые ARIA-роли                                             | Роль `main` применяется к `<main>` по умолчанию, и роль [`presentation`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role) также разрешена.                                                                                                                              |
+| Допустимые ARIA-роли                                             | Роль `main` применяется к `<main>` по умолчанию, и роль [`presentation`](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role) также разрешена.                                                                                                                              |
 | DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                   |
 
 ## Атрибуты

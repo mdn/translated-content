@@ -1,7 +1,6 @@
 ---
 title: Debugging HTML
 slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
-original_slug: Aprender/HTML/Introducao_ao_HTML/Debugging_HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
@@ -69,53 +68,56 @@ O próprio HTML não sofre de erros de sintaxe porque os navegadores o analisam 
 2. Em seguida, abra o arquivo em um navegador. Você verá algo como:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
 3. Isso claramente não parece bom; vamos dar uma olhada no código fonte para tentar achar os erros (somente o conteúdo de _body_ é mostrado):
 
-    ```html
-    <h1>Exemplo de debugação HTML</h1>
+   ```html
+   <h1>Exemplo de debugação HTML</h1>
 
-    <p>O quê causa erros em HTML?
+   <p>O quê causa erros em HTML?
 
-    <ul>
-      <li>Elementos não fechados: Se um elemento não for <strong>fechado corretamente,
-          pode se espalhar e afetar áreas que você não imaginava
+   <ul>
+     <li>Elementos não fechados: Se um elemento não for <strong>fechado corretamente,
+         pode se espalhar e afetar áreas que você não imaginava
 
-      <li>Elementos desagrupados: Agrupar elementos corretamente é importante para
-        o comportamento do código. <strong>negrito <em>negrito sublinhado?</strong>
-          O que é isso?</em>
+     <li>Elementos desagrupados: Agrupar elementos corretamente é importante para
+       o comportamento do código. <strong>negrito <em>negrito sublinhado?</strong>
+         O que é isso?</em>
 
-      <li>Atributos não fechados: Outra fonte comum de problemas HTML. Vamos dar uma olhada: <a href="https://www.mozilla.org/>Link para página da Mozilla</a>
-    </ul>
-    ```
+     <li>Atributos não fechados: Outra fonte comum de problemas HTML. Vamos dar uma olhada: <a href="https://www.mozilla.org/>Link para página da Mozilla</a>
+   </ul>
+   ```
 
 4. Vamos analisar os erros:
 
-    - Os elementos {{htmlelement("p","parágrafo")}} e {{htmlelement("li","item da lista")}} não possuem _tags_ de fechamento. Olhando a imagem acima, isso não parece ter afetado muito a renderização do HTML já que é fácil deduzir onde um elemento deveria terminar e outro, começar.
-    - O primeiro elemento {{htmlelement("strong")}} não possui _tag_ de fechamento. Isto é um pouco mais problemático porque não é necessariamente fácil determinar onde um elemento deveria terminar. Assim, todo o resto do texto foi fortemente enfatizado.
-    - Essa seção foi aninhada incorretamente: `<strong>negrito <em>negrito sublinhado?</strong> O que é isso?</em>`. Não é fácil dizer como esse trecho foi interpretado por causa do problema anterior.
-    - O valor do atributo [`href`](/pt-BR/docs/Web/HTML/Element/a#href) não tem as aspas de fechamento. Isso parece ter causado o maior problema — o _link_ não foi renderizado.
+   - Os elementos {{htmlelement("p","parágrafo")}} e {{htmlelement("li","item da lista")}} não possuem _tags_ de fechamento. Olhando a imagem acima, isso não parece ter afetado muito a renderização do HTML já que é fácil deduzir onde um elemento deveria terminar e outro, começar.
+   - O primeiro elemento {{htmlelement("strong")}} não possui _tag_ de fechamento. Isto é um pouco mais problemático porque não é necessariamente fácil determinar onde um elemento deveria terminar. Assim, todo o resto do texto foi fortemente enfatizado.
+   - Essa seção foi aninhada incorretamente: `<strong>negrito <em>negrito sublinhado?</strong> O que é isso?</em>`. Não é fácil dizer como esse trecho foi interpretado por causa do problema anterior.
+   - O valor do atributo [`href`](/pt-BR/docs/Web/HTML/Element/a#href) não tem as aspas de fechamento. Isso parece ter causado o maior problema — o _link_ não foi renderizado.
 
 5. Agora vamos dar uma olhada no HTML que o navegador renderizou, comparando-o com o nosso código fonte. Para fazer isso, usaremos as ferramentas de desenvolvimento oferecidas pelo navegador. Se você não está familiarizado com estas ferramentas, dê uma olhadinha nesse tutorial: [O que são as ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools).
 6. No inspetor DOM, você pode ver como o HTML renderizado fica: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
 7. Utilizando o inspetor DOM, vamos explorar nosso código detalhadamente para ver como o navegador tentou consertar os erros do código HTML (nós fizemos a análise com o Firefox, mas outros navegadores modernos _devem_ apresentar o mesmo resultado):
 
-    - As _tags_ de fechamento foram colocadas nos parágrafos e itens da lista.
-    - Não está claro onde o primeiro elemento `<strong>` deveria terminar, portanto o navegador envolveu cada bloco subsequente em uma _tag_ _strong_ própria até o fim do documento!
-    - O aninhamento incorreto foi corrigido pelo navegador da seguinte maneira:
+   - As _tags_ de fechamento foram colocadas nos parágrafos e itens da lista.
+   - Não está claro onde o primeiro elemento `<strong>` deveria terminar, portanto o navegador envolveu cada bloco subsequente em uma _tag_ _strong_ própria até o fim do documento!
+   - O aninhamento incorreto foi corrigido pelo navegador da seguinte maneira:
 
-      ```html
-      <strong>strong
-        <em>strong emphasised?</em>
-      </strong>
-      <em> what is this?</em>
-      ```
+     ```html
+     <strong
+       >strong
+       <em>strong emphasised?</em>
+     </strong>
+     <em> what is this?</em>
+     ```
 
-    - O link cujas aspas de fechamento não estavam presentes foi totalmente excluído da renderização. Então o último item ficou assim:
+   - O link cujas aspas de fechamento não estavam presentes foi totalmente excluído da renderização. Então o último item ficou assim:
 
-      ```html
-      <li>
-        <strong>Unclosed attributes: Another common source of HTML problems.
-        Let's look at an example: </strong>
-      </li>
-      ```
+     ```html
+     <li>
+       <strong
+         >Unclosed attributes: Another common source of HTML problems. Let's
+         look at an example:
+       </strong>
+     </li>
+     ```
 
 ### Validação HTML
 

@@ -76,9 +76,9 @@ Geralmente você cria um objeto `Error` com a intenção de lançá-lo usando a 
 
 ```js
 try {
-  throw new Error('Oooops!');
+  throw new Error("Oooops!");
 } catch (e) {
-  alert(e.name + ': ' + e.message);
+  alert(e.name + ": " + e.message);
 }
 ```
 
@@ -91,9 +91,9 @@ try {
   Objeto.Metodo();
 } catch (e) {
   if (e instanceof EvalError) {
-    alert(e.name + ': ' + e.message);
+    alert(e.name + ": " + e.message);
   } else if (e instanceof RangeError) {
-    alert(e.name + ': ' + e.message);
+    alert(e.name + ": " + e.message);
   }
   // ... etc
 }
@@ -110,9 +110,9 @@ Veja também ["esta discussão no Stackoverflow (em inglês): What's a good way 
 ```js
 // Cria um novo objeto que herda o construtor de Error através do prototype.
 function MeuErro(message) {
-  this.name = 'MeuErro';
-  this.message = message || 'Mensagem de erro padrão';
-  this.stack = (new Error()).stack;
+  this.name = "MeuErro";
+  this.message = message || "Mensagem de erro padrão";
+  this.stack = new Error().stack;
 }
 MeuErro.prototype = Object.create(MeuErro.prototype);
 MeuErro.prototype.constructor = MeuErro;
@@ -120,25 +120,25 @@ MeuErro.prototype.constructor = MeuErro;
 try {
   throw new MeuErro();
 } catch (e) {
-  console.log(e.name);     // 'MeuErro'
-  console.log(e.message);  // 'Mensagem de erro padrão'
+  console.log(e.name); // 'MeuErro'
+  console.log(e.message); // 'Mensagem de erro padrão'
 }
 
 try {
-  throw new MeuErro('Mensagem customizada');
+  throw new MeuErro("Mensagem customizada");
 } catch (e) {
-  console.log(e.name);     // 'MeuErro'
-  console.log(e.message);  // 'Mensagem customizada'
+  console.log(e.name); // 'MeuErro'
+  console.log(e.message); // 'Mensagem customizada'
 }
 ```
 
 ## Especificações
 
-| Especificação                                                        | Status                   | Comentário                                         |
-| -------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}     | Definição inicial. Implementada no JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.11', 'Error')}}         | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-error-objects', 'Error')}} | {{Spec2('ES6')}}     |                                                    |
+| Especificação                                      | Status             | Comentário                                         |
+| -------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                | {{Spec2('ES1')}}   | Definição inicial. Implementada no JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.11', 'Error')}}       | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-error-objects', 'Error')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade com navegadores
 

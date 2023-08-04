@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getTime
 ---
 
 {{JSRef("Global_Objects", "Date")}}
@@ -24,7 +23,7 @@ El valor devuelto por el método `getTime()` es un número de milisegundos desde
 
 ## Ejemplos
 
-### Ejemplo: Uso de `getTime()` para copiar fechas.
+### Ejemplo: Uso de `getTime()` para copiar fechas
 
 Construir un objeto de fecha con el mismo valor de tiempo.
 

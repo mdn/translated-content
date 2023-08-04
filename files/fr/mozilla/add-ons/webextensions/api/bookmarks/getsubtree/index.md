@@ -1,17 +1,6 @@
 ---
 title: bookmarks.getSubTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getSubTree
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
 ---
 
 {{AddonSidebar()}}
@@ -26,8 +15,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingSubTree = browser.bookmarks.getSubTree(
-  id                     // string
-)
+  id, // string
+);
 ```
 
 ### Paramètres

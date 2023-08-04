@@ -1,7 +1,6 @@
 ---
 title: Doc sprints
 slug: orphaned/MDN/Community/Doc_sprints
-original_slug: MDN/Community/Doc_sprints
 ---
 
 {{MDNSidebar}}

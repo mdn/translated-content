@@ -1,14 +1,13 @@
 ---
 title: <input type="datetime-local">
 slug: Web/HTML/Element/input/datetime-local
-translation_of: Web/HTML/Element/input/datetime-local
 ---
 
 {{HTMLSidebar}}
 
 {{htmlelement("input")}} элемент типа **`datetime-local`** создаёт поля ввода, позволяющие легко ввести дату и время — год, месяц, день, часы и минуты.
 
-Интерфейс управления варьируется от браузера к браузеру, на данный момент поддержка носит фрагментарный характер, только с Chrome/Opera и EDGE на рабочем столе — и большинство современных мобильных версиях браузера — наличие полезной реализации. В других браузерах элемент управления сводиться до простого [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text).
+Интерфейс управления варьируется от браузера к браузеру, на данный момент поддержка носит фрагментарный характер, только с Chrome/Opera и EDGE на рабочем столе — и большинство современных мобильных версиях браузера — наличие полезной реализации. В других браузерах элемент управления сводиться до простого [`<input type="text">`](/ru/docs/Web/HTML/Element/input/text).
 
 ```html
 <input id="datetime" type="datetime-local">
@@ -100,9 +99,9 @@ dateControl.value = '2017-06-01T08:30';
 
 ### Setting timezones
 
-One thing the `datetime-local` input type doesn't provide is a way to set the timezone/locale of the datetime. This was available in the [`datetime`](/en-US/docs/Web/HTML/Element/input/datetime) input type, but this type is now obsolete, having been removed from the spec. The main reasons why this was removed are a lack of implementation in browsers, and concerns over the user interface/experience. It is easier to just have a control (or controls) for setting the date/time and then deal with the locale in a separate control.
+One thing the `datetime-local` input type doesn't provide is a way to set the timezone/locale of the datetime. This was available in the [`datetime`](/ru/docs/Web/HTML/Element/input/datetime) input type, but this type is now obsolete, having been removed from the spec. The main reasons why this was removed are a lack of implementation in browsers, and concerns over the user interface/experience. It is easier to just have a control (or controls) for setting the date/time and then deal with the locale in a separate control.
 
-For example, if you are creating a system where the user is likely to already be logged in, with their locale already set, you could provide the timezone in a [`hidden`](/en-US/docs/Web/HTML/Element/input/hidden) input type. For example:
+For example, if you are creating a system where the user is likely to already be logged in, with their locale already set, you could provide the timezone in a [`hidden`](/ru/docs/Web/HTML/Element/input/hidden) input type. For example:
 
 ```html
 <input type="hidden" id="timezone" name="timezone" value="-08:00">
