@@ -1,7 +1,6 @@
 ---
 title: will-change
 slug: Web/CSS/will-change
-translation_of: Web/CSS/will-change
 ---
 
 {{ CSSRef() }}{{SeeCompatTable}}

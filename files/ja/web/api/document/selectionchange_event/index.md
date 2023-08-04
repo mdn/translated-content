@@ -1,5 +1,5 @@
 ---
-title: 'Document: selectionchange イベント'
+title: "Document: selectionchange イベント"
 slug: Web/API/Document/selectionchange_event
 ---
 
@@ -34,7 +34,7 @@ slug: Web/API/Document/selectionchange_event
 
 ```js
 // addEventListener version
-document.addEventListener('selectionchange', () => {
+document.addEventListener("selectionchange", () => {
   console.log(document.getSelection());
 });
 

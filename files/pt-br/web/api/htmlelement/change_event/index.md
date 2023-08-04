@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onchange
 slug: Web/API/HTMLElement/change_event
-original_slug: Web/API/GlobalEventHandlers/onchange
 ---
 
 {{ ApiRef("HTML DOM") }}

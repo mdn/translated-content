@@ -1,8 +1,6 @@
 ---
 title: Access-Control-Allow-Origin
 slug: Web/HTTP/Headers/Access-Control-Allow-Origin
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Origin
-original_slug: Web/HTTP/Заголовки/Access-Control-Allow-Origin
 ---
 {{HTTPSidebar}}
 

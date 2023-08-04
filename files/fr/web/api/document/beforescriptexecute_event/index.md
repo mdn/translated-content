@@ -1,7 +1,6 @@
 ---
 title: Document.onbeforescriptexecute
 slug: Web/API/Document/beforescriptexecute_event
-translation_of: Web/API/Document/onbeforescriptexecute
 ---
 
 {{ApiRef("DOM")}} {{non-standard_header }}

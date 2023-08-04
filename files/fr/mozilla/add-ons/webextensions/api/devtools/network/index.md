@@ -1,7 +1,6 @@
 ---
 title: devtools.network
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.network
 ---
 
 {{AddonSidebar}}

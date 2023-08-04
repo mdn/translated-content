@@ -1,7 +1,6 @@
 ---
 title: <feSpecularLighting>
 slug: Web/SVG/Element/feSpecularLighting
-translation_of: Web/SVG/Element/feSpecularLighting
 ---
 
 {{SVGRef}}

@@ -2,7 +2,6 @@
 title: "Element: transitionrun イベント"
 short-title: transitionrun
 slug: Web/API/Element/transitionrun_event
-original_slug: Web/API/Document/transitionrun_event
 l10n:
   sourceCommit: 1b094710cd2816a6669ce616b6f56d0a5b25e6ad
 ---

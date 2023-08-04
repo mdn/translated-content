@@ -1,7 +1,6 @@
 ---
 title: "<dialog> : l'élément de boîte de dialogue"
 slug: Web/HTML/Element/dialog
-translation_of: Web/HTML/Element/dialog
 ---
 
 {{HTMLSidebar}}

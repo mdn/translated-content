@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.tabIndex
 slug: Web/API/HTMLElement/tabIndex
-translation_of: Web/API/HTMLElement/tabIndex
 ---
 
 {{APIRef("HTML DOM")}}

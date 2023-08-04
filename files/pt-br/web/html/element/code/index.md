@@ -1,5 +1,5 @@
 ---
-title: '<code>: O Elemento Inline Code'
+title: "<code>: O Elemento Inline Code"
 slug: Web/HTML/Element/code
 ---
 

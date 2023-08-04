@@ -1,12 +1,6 @@
 ---
 title: top
 slug: Web/CSS/top
-tags:
-  - CSS
-  - CSS Позиционирование
-  - CSS-свойство
-  - Справка
-translation_of: Web/CSS/top
 ---
 
 {{CSSRef}}

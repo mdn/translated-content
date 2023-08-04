@@ -1,7 +1,6 @@
 ---
 title: Introdução ao Django
 slug: Learn/Server-side/Django/Introduction
-original_slug: Learn/Server-side/Django/Introdução
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}

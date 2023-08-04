@@ -1,7 +1,6 @@
 ---
 title: transform-style
 slug: Web/CSS/transform-style
-translation_of: Web/CSS/transform-style
 ---
 
 {{CSSRef("CSS Transforms")}}{{SeeCompatTable}}

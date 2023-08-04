@@ -1,7 +1,6 @@
 ---
 title: Utilisation de dégradés CSS
 slug: Web/CSS/CSS_images/Using_CSS_gradients
-translation_of: Web/CSS/CSS_Images/Using_CSS_gradients
 ---
 
 {{CSSRef}}

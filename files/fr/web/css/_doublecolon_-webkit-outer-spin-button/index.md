@@ -1,7 +1,6 @@
 ---
 title: "::-webkit-outer-spin-button"
 slug: Web/CSS/::-webkit-outer-spin-button
-translation_of: Web/CSS/::-webkit-outer-spin-button
 ---
 
 {{CSSRef}}{{Non-standard_header}}

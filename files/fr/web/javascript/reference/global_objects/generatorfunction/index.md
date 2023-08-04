@@ -1,7 +1,6 @@
 ---
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
-translation_of: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 ---
 
 {{JSRef}}

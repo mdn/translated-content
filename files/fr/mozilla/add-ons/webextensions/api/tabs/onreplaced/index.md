@@ -1,7 +1,6 @@
 ---
 title: tabs.onReplaced
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onReplaced
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onReplaced
 ---
 
 {{AddonSidebar()}}

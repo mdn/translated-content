@@ -1,7 +1,6 @@
 ---
 title: Number.parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
-original_slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 ---
 
 {{JSRef}}

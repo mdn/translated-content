@@ -1,7 +1,6 @@
 ---
 title: Заливка и обводка
 slug: Web/SVG/Tutorial/Fills_and_Strokes
-translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
 

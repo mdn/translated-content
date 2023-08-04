@@ -1,7 +1,6 @@
 ---
 title: CustomEvent.initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
-translation_of: Web/API/CustomEvent/initCustomEvent
 ---
 
 {{APIRef("DOM")}}{{deprecated_header}}

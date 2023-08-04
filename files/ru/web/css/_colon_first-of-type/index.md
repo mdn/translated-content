@@ -1,9 +1,6 @@
 ---
-title: ':first-of-type'
+title: ":first-of-type"
 slug: Web/CSS/:first-of-type
-tags:
-  - Псевдоклассы
-translation_of: Web/CSS/:first-of-type
 ---
 
 {{CSSRef}}

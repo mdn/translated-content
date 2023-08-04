@@ -1,7 +1,6 @@
 ---
-title: ':dir()'
+title: ":dir()"
 slug: Web/CSS/:dir
-translation_of: Web/CSS/:dir
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

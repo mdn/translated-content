@@ -1,14 +1,6 @@
 ---
 title: Специфичность
 slug: Web/CSS/Specificity
-tags:
-  - CSS
-  - specifity
-  - Порядок применения правил
-  - Примеры
-  - Руководство
-  - Специфичность селектора
-translation_of: Web/CSS/Specificity
 ---
 
 {{cssref}}

@@ -1,7 +1,6 @@
 ---
 title: La desestructuración
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-original_slug: Web/JavaScript/Referencia/Operadores/Destructuring_assignment
 ---
 
 {{jsSidebar("Operators", "Operadores")}}

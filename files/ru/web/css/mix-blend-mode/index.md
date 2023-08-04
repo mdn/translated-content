@@ -1,11 +1,6 @@
 ---
 title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
-tags:
-  - CSS
-  - CSS композитинг
-  - CSS-свойство
-translation_of: Web/CSS/mix-blend-mode
 ---
 
 {{CSSRef}}

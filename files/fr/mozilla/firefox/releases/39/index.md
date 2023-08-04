@@ -1,7 +1,6 @@
 ---
 title: Firefox 39 for developers
 slug: Mozilla/Firefox/Releases/39
-translation_of: Mozilla/Firefox/Releases/39
 ---
 
 {{FirefoxSidebar}}

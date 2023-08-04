@@ -1,7 +1,6 @@
 ---
 title: mask-position
 slug: Web/CSS/mask-position
-translation_of: Web/CSS/mask-position
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Compression dans HTTP
 slug: Web/HTTP/Compression
-translation_of: Web/HTTP/Compression
 ---
 
 {{HTTPSidebar}}

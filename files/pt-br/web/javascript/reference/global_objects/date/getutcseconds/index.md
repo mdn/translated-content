@@ -34,11 +34,11 @@ var seconds = today.getUTCSeconds();
 
 ## Especificações
 
-| Especificação                                                                                                                | Estado                       | Comentário                                         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.23', 'Date.prototype.getUTCSeconds')}}                             | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.getutcseconds', 'Date.prototype.getUTCSeconds')}}         | {{Spec2('ES6')}}         |                                                    |
+| Especificação                                                                                | Estado               | Comentário                                         |
+| -------------------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                          | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.23', 'Date.prototype.getUTCSeconds')}}                      | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-date.prototype.getutcseconds', 'Date.prototype.getUTCSeconds')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-date.prototype.getutcseconds', 'Date.prototype.getUTCSeconds')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Compatibilidade com navegadores

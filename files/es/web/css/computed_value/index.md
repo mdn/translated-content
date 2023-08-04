@@ -1,7 +1,6 @@
 ---
 title: Valor calculado
 slug: Web/CSS/computed_value
-original_slug: Web/CSS/Valor_calculado
 ---
 
 {{ CSSRef() }}

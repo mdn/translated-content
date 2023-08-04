@@ -1,7 +1,6 @@
 ---
-title: ':right'
+title: ":right"
 slug: Web/CSS/:right
-translation_of: Web/CSS/:right
 ---
 
 {{ CSSRef() }}

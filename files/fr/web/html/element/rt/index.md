@@ -1,7 +1,6 @@
 ---
 title: "<rt> : l'élément de texte Ruby"
 slug: Web/HTML/Element/rt
-translation_of: Web/HTML/Element/rt
 ---
 
 {{HTMLSidebar}}

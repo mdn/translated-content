@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 ## 構文
 
 ```js
-__lookupGetter__(sprop)
+__lookupGetter__(sprop);
 ```
 
 ### 引数
@@ -35,12 +35,12 @@ __lookupGetter__(sprop)
 ```js
 var obj = {
   get foo() {
-    return Math.random() > 0.5 ? 'foo' : 'bar';
-  }
+    return Math.random() > 0.5 ? "foo" : "bar";
+  },
 };
 
 // 標準外かつ非推奨の方法
-obj.__lookupGetter__('foo');
+obj.__lookupGetter__("foo");
 // (function() { return Math.random() > 0.5 ? 'foo' : 'bar'; })
 
 // 標準準拠の方法

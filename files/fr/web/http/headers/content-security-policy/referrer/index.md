@@ -1,7 +1,6 @@
 ---
 title: "CSP: referrer"
 slug: Web/HTTP/Headers/Content-Security-Policy/referrer
-translation_of: Web/HTTP/Headers/Content-Security-Policy/referrer
 ---
 
 {{HTTPSidebar}} {{deprecated_header}}

@@ -1,7 +1,6 @@
 ---
 title: tabs.detectLanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/detectLanguage
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/detectLanguage
 ---
 
 {{AddonSidebar()}}

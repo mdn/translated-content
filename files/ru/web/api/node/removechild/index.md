@@ -1,13 +1,8 @@
 ---
 title: Node.removeChild
 slug: Web/API/Node/removeChild
-tags:
-  - API
-  - DOM
-  - DOM Element Methods
-  - Method
-translation_of: Web/API/Node/removeChild
 ---
+
 {{ApiRef}}
 
 ## Аннотация
@@ -62,11 +57,13 @@ while (element.firstChild) {
 }
 ```
 
-## Спецификация
+## Спецификации
 
-- [DOM Level 1 Core: removeChild](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild)
-- [DOM Level 2 Core: removeChild](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066)
-- [DOM Level 3 Core: removeChild](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
 
 ## Смотрите также
 

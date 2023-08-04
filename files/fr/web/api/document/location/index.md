@@ -1,7 +1,6 @@
 ---
 title: Document.location
 slug: Web/API/Document/location
-translation_of: Web/API/Document/location
 ---
 
 La propriété en lecture seule **`Document.location`** renvoie un objet [`Location`](/fr/docs/Web/API/Location), contenant les informations sur l'URL du document et fournit des moyens pour modifier cette URL ou charger une autre URL.

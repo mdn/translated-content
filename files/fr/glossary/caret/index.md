@@ -1,7 +1,6 @@
 ---
 title: Curseur "caret"
 slug: Glossary/Caret
-translation_of: Glossary/caret
 ---
 
 Un curseur (_"caret"_ parfois appelé "curseur de texte") est un indicateur affiché sur l'écran pour indiquer où la saisie de texte sera insérée. La plupart des interfaces utilisateur représentent le curseur à l'aide d'une fine ligne verticale ou d'une boîte de taille de caractère qui clignote, mais cela peut varier. Ce point dans le texte est appelé le point d'insertion. Le mot anglais "_caret_" différencie le point d'insertion du texte du curseur (_cursor_) de la souris.

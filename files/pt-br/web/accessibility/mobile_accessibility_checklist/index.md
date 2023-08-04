@@ -1,7 +1,6 @@
 ---
 title: Acessibilidade para plataforma móvel
 slug: Web/Accessibility/Mobile_accessibility_checklist
-original_slug: Web/Acessibilidade/Accessibilidade_para_plataforma_movel
 ---
 
 Este documento contém uma lista concisa de requisitos para desenvolvedores de aplicativos móveis. Tem como intenção evoluir continuamente conforme forem aparecendo outros padrões.

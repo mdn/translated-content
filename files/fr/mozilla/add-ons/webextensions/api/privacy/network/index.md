@@ -1,7 +1,6 @@
 ---
 title: privacy.network
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/network
-translation_of: Mozilla/Add-ons/WebExtensions/API/privacy/network
 ---
 
 {{AddonSidebar}}

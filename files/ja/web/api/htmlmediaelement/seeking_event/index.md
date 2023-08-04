@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: seeking イベント'
+title: "HTMLMediaElement: seeking イベント"
 slug: Web/API/HTMLMediaElement/seeking_event
 l10n:
   sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b

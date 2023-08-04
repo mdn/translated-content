@@ -1,9 +1,6 @@
 ---
-title: ':visited'
+title: ":visited"
 slug: Web/CSS/:visited
-tags:
-  - Псевдо-классы
-translation_of: Web/CSS/:visited
 ---
 {{ CSSRef() }}
 

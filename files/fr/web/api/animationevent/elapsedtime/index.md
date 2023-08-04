@@ -1,7 +1,6 @@
 ---
 title: AnimationEvent.elapsedTime
 slug: Web/API/AnimationEvent/elapsedTime
-translation_of: Web/API/AnimationEvent/elapsedTime
 ---
 
 {{SeeCompatTable}}{{ apiref("AnimationEvent") }}

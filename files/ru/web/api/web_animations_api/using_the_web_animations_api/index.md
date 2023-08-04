@@ -1,10 +1,8 @@
 ---
 title: Using the Web Animations API
 slug: Web/API/Web_Animations_API/Using_the_Web_Animations_API
-tags:
-  - Анимация
-translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 ---
+
 {{DefaultAPISidebar("Web Animations")}}
 
 Web Animations API позволяет нам создать анимацию и управлять её воспроизведением с помощью JavaScript. Эта статья будет правильным руководством для старта c весёлыми демками и уроками с Алисой в Стране Чудес.
@@ -64,9 +62,9 @@ Web Animations API позволяет нам создать анимацию и 
 
 ```js
 var aliceTumbling = [
-  { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
-  { color: '#431236', offset: 0.333},
-  { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
+  { transform: "rotate(0) translate3D(-50%, -50%, 0)", color: "#000" },
+  { color: "#431236", offset: 0.333 },
+  { transform: "rotate(360deg) translate3D(-50%, -50%, 0)", color: "#000" },
 ];
 ```
 
@@ -85,8 +83,8 @@ var aliceTumbling = [
 ```js
 var aliceTiming = {
   duration: 3000,
-  iterations: Infinity
-}
+  iterations: Infinity,
+};
 ```
 
 Вы увидите здесь несколько отличий того, как соответствующие значения представлены в CSS:
@@ -101,10 +99,7 @@ var aliceTiming = {
 Сейчас соберём все части вместе используя {{domxref("Element.animate()")}} метод:
 
 ```js
-document.getElementById("alice").animate(
-  aliceTumbling,
-  aliceTiming
-)
+document.getElementById("alice").animate(aliceTumbling, aliceTiming);
 ```
 
 И вуаля, анимация работает(смотрите готовый вариант на [version on Codepen](http://codepen.io/rachelnabors/pen/rxpmJL)).
@@ -114,13 +109,14 @@ The `animate()` метод может быть применён на любой 
 ```js
 document.getElementById("alice").animate(
   [
-    { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
-    { color: '#431236', offset: 0.333},
-    { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
-  ], {
+    { transform: "rotate(0) translate3D(-50%, -50%, 0)", color: "#000" },
+    { color: "#431236", offset: 0.333 },
+    { transform: "rotate(360deg) translate3D(-50%, -50%, 0)", color: "#000" },
+  ],
+  {
     duration: 3000,
-    iterations: Infinity
-  }
+    iterations: Infinity,
+  },
 );
 ```
 
@@ -129,10 +125,12 @@ document.getElementById("alice").animate(
 ```js
 document.getElementById("alice").animate(
   [
-    { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
-    { color: '#431236', offset: 0.333},
-    { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
-  ], 3000);
+    { transform: "rotate(0) translate3D(-50%, -50%, 0)", color: "#000" },
+    { color: "#431236", offset: 0.333 },
+    { transform: "rotate(360deg) translate3D(-50%, -50%, 0)", color: "#000" },
+  ],
+  3000,
+);
 ```
 
 ## Управление воспроизведением с помощью play(), pause(), reverse() and playbackRate
@@ -148,15 +146,16 @@ document.getElementById("alice").animate(
 Мы поговорим об анимации Алисы позже, а сейчас посмотрим поближе на анимации кекса:
 
 ```js
-var nommingCake = document.getElementById('eat-me_sprite').animate(
-[
-  { transform: 'translateY(0)' },
-  { transform: 'translateY(-80%)' }
-], {
-  fill: 'forwards',
-  easing: 'steps(4, end)',
-  duration: aliceChange.effect.timing.duration / 2
-});
+var nommingCake = document
+  .getElementById("eat-me_sprite")
+  .animate(
+    [{ transform: "translateY(0)" }, { transform: "translateY(-80%)" }],
+    {
+      fill: "forwards",
+      easing: "steps(4, end)",
+      duration: aliceChange.effect.timing.duration / 2,
+    },
+  );
 ```
 
 Метод {{domxref("Element.animate()")}} будет выполняться сразу же как начнётся игра. Чтобы предотвратить автоматическое поедание кекса до того, как пользователь на него нажмёт, мы вызываем {{domxref("Animation.pause()")}} сразу же как игра открывается, например так:
@@ -174,15 +173,13 @@ nommingCake.play();
 Нам необходимо связать его с анимацией Алисы, чтобы она росла всякий раз, когда съедала кекс. Мы можем сделать это с помощью функции:
 
 ```js
-var growAlice = function() {
-
+var growAlice = function () {
   // Play Alice's animation.
   aliceChange.play();
 
   // Play the cake's animation.
   nommingCake.play();
-
-}
+};
 ```
 
 Когда пользователь поместит указатель мыши вниз или нажимает пальцем на торт на сенсорном экране, мы можем вызвать growAlice, чтобы выполнить все анимации:
@@ -203,10 +200,10 @@ cake.addEventListener("touchstart", growAlice, false);
 Давайте посмотрим на первый playbackRate— отрицательное значение будет запускать анимацию в обратном направлении. Когда Алиса пьёт из бутылки, она становится меньше. Это происходит потому, что бутылка изменяет её анимацию playbackRate от 1 до -1:
 
 ```js
-var shrinkAlice = function() {
+var shrinkAlice = function () {
   aliceChange.playbackRate = -1;
   aliceChange.play();
-}
+};
 
 bottle.addEventListener("mousedown", shrinkAlice, false);
 bottle.addEventListener("touchstart", shrinkAlice, false);
@@ -219,24 +216,20 @@ bottle.addEventListener("touchstart", shrinkAlice, false);
 Так как маленькие дети легко устают, в отличии от шахматных фигур, Алиса постоянно замедляется. Мы отобразили это в коде путём ослабления (уменьшения скорости) playbackRate анимации.
 
 ```js
-setInterval( function() {
-
+setInterval(function () {
   // Make sure the playback rate never falls below .4
-  if (redQueen_alice.playbackRate > .4) {
-    redQueen_alice.playbackRate *= .9;
+  if (redQueen_alice.playbackRate > 0.4) {
+    redQueen_alice.playbackRate *= 0.9;
   }
-
 }, 3000);
 ```
 
 Но постоянно нажимая на них мышью, мы заставляем их ускориться путём умножения playbackRate (скорости анимации)
 
 ```js
-var goFaster = function() {
-
+var goFaster = function () {
   redQueen_alice.playbackRate *= 1.1;
-
-}
+};
 
 document.addEventListener("click", goFaster);
 document.addEventListener("touchstart", goFaster);
@@ -249,11 +242,9 @@ document.addEventListener("touchstart", goFaster);
 Представьте, что мы могли бы использовать playbackRate, как улучшения доступности сайта для пользователей с вестибулярными расстройствами, позволяя им замедлить анимацию на всех страницах сайта. Это невозможно сделать с помощью CSS без пересчёта длительности в каждом правиле CSS, но с веб-анимации API, мы могли бы использовать в будущем (пока не поддерживается в браузерах!) Метод {{domxref("document.getAnimations()")}} систему циклов по каждой анимации на странице и сократить скорость анимации вот так:
 
 ```js
-document.getAnimations().forEach(
-  function (animation) {
-    animation.playbackRate *= .5;
-  }
-);
+document.getAnimations().forEach(function (animation) {
+  animation.playbackRate *= 0.5;
+});
 ```
 
 С Web Animations API нужно изменить только одно свойство.
@@ -261,21 +252,25 @@ document.getAnimations().forEach(
 Другое дело, что это трудно делать только с CSS Animations, создавать зависимости от значения предусмотренные для других анимации. В примере игры про рост и уменьшение Алисы, вы можете заметить некоторые странности у кекса:
 
 ```js
-duration: aliceChange.effect.timing.duration / 2
+duration: aliceChange.effect.timing.duration / 2;
 ```
 
 Чтобы понять, что здесь происходит, давайте посмотрим на анимацию Алисы:
 
 ```js
-var aliceChange = document.getElementById('alice').animate(
-  [
-    { transform: 'translate(-50%, -50%) scale(.5)' },
-    { transform: 'translate(-50%, -50%) scale(2)' }
-  ], {
-    duration: 8000,
-    easing: 'ease-in-out',
-    fill: 'both'
-  });
+var aliceChange = document
+  .getElementById("alice")
+  .animate(
+    [
+      { transform: "translate(-50%, -50%) scale(.5)" },
+      { transform: "translate(-50%, -50%) scale(2)" },
+    ],
+    {
+      duration: 8000,
+      easing: "ease-in-out",
+      fill: "both",
+    },
+  );
 ```
 
 Изменение размера Алисы в два раза происходит за 8 секунд. Затем мы останавливаем её:
@@ -301,14 +296,12 @@ aliceChange.currentTime = aliceChange.effect.timing.duration / 2;
 Теперь мы можем запустить её в обратном порядке и играться анимацией в любом направлении, чтобы заставить её расти или уменьшаться
 
 ```js
-var drinking = document.getElementById('liquid').animate(
-[
-  { height: '100%' },
-  { height: '0' }
-], {
-  fill: 'forwards',
-  duration: aliceChange.effect.timing.duration / 2
-});
+var drinking = document
+  .getElementById("liquid")
+  .animate([{ height: "100%" }, { height: "0" }], {
+    fill: "forwards",
+    duration: aliceChange.effect.timing.duration / 2,
+  });
 drinking.pause();
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: element.normalize
 slug: Web/API/Node/normalize
-translation_of: Web/API/Node/normalize
 ---
 
 {{ ApiRef("DOM") }}

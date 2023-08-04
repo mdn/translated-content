@@ -1,7 +1,6 @@
 ---
 title: DataTransfer.mozItemCount
 slug: orphaned/Web/API/DataTransfer/mozItemCount
-original_slug: Web/API/DataTransfer/mozItemCount
 ---
 
 {{APIRef("HTML Drag and Drop API")}}

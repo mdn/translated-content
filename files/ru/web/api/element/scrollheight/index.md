@@ -1,8 +1,8 @@
 ---
 title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
-translation_of: Web/API/Element/scrollHeight
 ---
+
 {{ APIRef("DOM") }}
 
 Свойство **`Element.scrollHeight`** (только чтение) - измерение высоты контента в элементе, включая содержимое, невидимое из-за прокрутки. Значение `scrollHeight` равно минимальному `clientHeight`, которое потребуется элементу для того, чтобы поместить всё содержимое в видимую область (viewport), не используя вертикальную полосу прокрутки. Оно включает в себя padding элемента, но не его margin.
@@ -89,14 +89,14 @@ element.scrollHeight - element.scrollTop === element.clientHeight
   border-radius: 5px;
   width: 600px;
   padding: 5px;
-  border: 2px #7FDF55 solid;
+  border: 2px #7fdf55 solid;
 }
 
 #rules {
   width: 600px;
   height: 130px;
   padding: 5px;
-  border: #2A9F00 solid 2px;
+  border: #2a9f00 solid 2px;
   border-radius: 5px;
 }
 ```
@@ -104,13 +104,17 @@ element.scrollHeight - element.scrollTop === element.clientHeight
 ### JavaScript
 
 ```js
-function checkReading () {
+function checkReading() {
   if (checkReading.read) {
     return;
   }
   checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
-  checkReading.noticeBox.innerHTML = checkReading.read ? "Спасибо вам." : "Пожалуйста, прокрутите и прочитайте следующий текст.";
+  document.registration.accept.disabled = document.getElementById(
+    "nextstep",
+  ).disabled = !checkReading.read;
+  checkReading.noticeBox.innerHTML = checkReading.read
+    ? "Спасибо вам."
+    : "Пожалуйста, прокрутите и прочитайте следующий текст.";
 }
 
 onload = function () {
@@ -122,27 +126,18 @@ onload = function () {
   oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
   oToBeRead.onscroll = checkReading;
   checkReading.call(oToBeRead);
-}
+};
 ```
 
 {{ EmbedLiveSample('scrollHeight_Demo', '640', '400') }}
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                             | Статус                           | Комментарий             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
-| {{SpecName("CSSOM View", "#dom-element-scrollheight", "Element.scrollHeight")}} | {{Spec2("CSSOM View")}} | Изначальное определение |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
-| Браузеры                   | Начальная версия        |
-| -------------------------- | ----------------------- |
-| Internet Explorer          | **8.0**                 |
-| Firefox (Gecko)            | **3.0** (1.9)           |
-| Opera                      | ?                       |
-| Safari \| Chrome \| WebKit | **4.0** \| **4.0** \| ? |
-
-**В версиях Firefox до 21-й:** когда контент элемента не создаёт вертикальную полосу прокрутки, его свойство `scrollHeight` равно значению `clientHeight`. Это может означать либо то, что контента слишком мало, чтобы ему потребовалась полоса прокрутки, либо то, что у элемента значение CSS-свойства overflow равно visible (в этом случае прокрутка отсутствует).
+{{Compat}}
 
 ## Смотрите также
 

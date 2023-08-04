@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Logical_OR
 ## 構文
 
 ```js
-expr1 || expr2
+expr1 || expr2;
 ```
 
 ## 解説
@@ -40,10 +40,16 @@ false に変換されうる式の例を示します。
 短絡とは、上記の `expr` の部分が**評価されず**、したがって、これを行うことの副作用が効果を及ぼさないことを意味します（例えば、 `expr` が関数呼び出しであった場合、この場では呼び出されません）。これは、最初のオペランドが評価された時点で、すでに演算子の値が決定しているためです。例を示します。
 
 ```js
-function A(){ console.log('called A'); return false; }
-function B(){ console.log('called B'); return true; }
+function A() {
+  console.log("called A");
+  return false;
+}
+function B() {
+  console.log("called B");
+  return true;
+}
 
-console.log( B() || A() );
+console.log(B() || A());
 // 関数呼び出しによって "called B" がログ出力され、
 // それから true (演算子の結果の値) が出力されます。
 ```
@@ -53,8 +59,8 @@ console.log( B() || A() );
 以下の式は同じであるように見えるかもしれませんが、異なります。 `&&` 演算子は `||` 演算子よりも先に実行されるからです（[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)を参照）。
 
 ```js
-true || false && false      //  true を返す。 && が先に実行されるため
-(true || false) && false    // false を返す。演算子の優先順位が適用されないため
+true || false && false; // true を返す。 && が先に実行されるため
+(true || false) && false; // false を返す。演算子の優先順位が適用されないため
 ```
 
 ## 例
@@ -64,16 +70,16 @@ true || false && false      //  true を返す。 && が先に実行されるた
 以下のコードは `||` (論理和) 演算子の例を示しています。
 
 ```js
-o1 = true  || true       // t || t は true を返す
-o2 = false || true       // f || t は true を返す
-o3 = true  || false      // t || f は true を返す
-o4 = false || (3 == 4)   // f || f は false を返す
-o5 = 'Cat' || 'Dog'      // t || t は "Cat" を返す
-o6 = false || 'Cat'      // f || t は "Cat" を返す
-o7 = 'Cat' || false      // t || f は "Cat" を返す
-o8 = ''    || false      // f || f は false を返す
-o9 = false || ''         // f || f は "" を返す
-o10 = false || varObject // f || オブジェクトは varObject を返す
+o1 = true || true; // t || t は true を返す
+o2 = false || true; // f || t は true を返す
+o3 = true || false; // t || f は true を返す
+o4 = false || 3 == 4; // f || f は false を返す
+o5 = "Cat" || "Dog"; // t || t は "Cat" を返す
+o6 = false || "Cat"; // f || t は "Cat" を返す
+o7 = "Cat" || false; // t || f は "Cat" を返す
+o8 = "" || false; // f || f は false を返す
+o9 = false || ""; // f || f は "" を返す
+o10 = false || varObject; // f || オブジェクトは varObject を返す
 ```
 
 > **メモ:** この演算子を使用していくつかの変数に既定値を提供する場合、*偽値*が使用されないことに注意してください。 {{jsxref("null")}} や {{jsxref("undefined")}} をフィルタリングする必要がある場合は、[Null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)の使用を検討してください。
@@ -85,13 +91,13 @@ o10 = false || varObject // f || オブジェクトは varObject を返す
 **論理型**に関する以下の操作は、
 
 ```js
-bCondition1 && bCondition2
+bCondition1 && bCondition2;
 ```
 
 常に以下のものと等しくなります。
 
 ```js
-!(!bCondition1 || !bCondition2)
+!(!bCondition1 || !bCondition2);
 ```
 
 #### OR から AND への変換
@@ -99,13 +105,13 @@ bCondition1 && bCondition2
 **論理型**に関する以下の操作は、
 
 ```js
-bCondition1 || bCondition2
+bCondition1 || bCondition2;
 ```
 
 常に以下のものと等しくなります。
 
 ```js
-!(!bCondition1 && !bCondition2)
+!(!bCondition1 && !bCondition2);
 ```
 
 ### 入れ子になった括弧の除去
@@ -115,13 +121,13 @@ bCondition1 || bCondition2
 **論理型**に関する以下の複合操作は、
 
 ```js
-bCondition1 && (bCondition2 || bCondition3)
+bCondition1 && (bCondition2 || bCondition3);
 ```
 
 常に以下のものと等しくなります。
 
 ```js
-!(!bCondition1 || !bCondition2 && !bCondition3)
+!(!bCondition1 || (!bCondition2 && !bCondition3));
 ```
 
 ## 仕様書
