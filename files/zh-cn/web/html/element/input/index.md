@@ -319,7 +319,7 @@ slug: Web/HTML/Element/input
 
   - : 一个布尔属性，如果存在，表示当页面加载完毕（或包含该元素的 `<dialog>` 显示完毕）时，该 input 元素应该自动拥有焦点。
 
-    > **备注：** 具有 `autofocus` 属性的元素可能在 {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}} 事件触发前获得焦点。
+    > **备注：** 具有 `autofocus` 属性的元素可能在 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 事件触发前获得焦点。
 
     文档中只有一个表单元素可以具有 `autofocus` 属性。如果放置了多于一个元素，会聚焦第一个具有该属性的元素。
 
