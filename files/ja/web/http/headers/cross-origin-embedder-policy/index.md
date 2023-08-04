@@ -1,18 +1,11 @@
 ---
 title: Cross-Origin-Embedder-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Embedder-Policy
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
-  - header
-browser-compat: http.headers.Cross-Origin-Embedder-Policy
-translation_of: Web/HTTP/Headers/Cross-Origin-Embedder-Policy
 ---
+
 {{HTTPSidebar}}
 
-HTTP の **`Cross-Origin-Embedder-Policy`** (COEP) レスポンスヘッダーは、（[CORP](</ja/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>) または  [CORS](/ja/docs/Web/HTTP/CORS) を使用して）文書に明示的に許可を与えていない外部オリジンのリソースが、文書に読み込まれることを防止するものです。
+HTTP の **`Cross-Origin-Embedder-Policy`** (COEP) レスポンスヘッダーは、（[CORP](</ja/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>) または [CORS](/ja/docs/Web/HTTP/CORS) を使用して）文書に明示的に許可を与えていない外部オリジンのリソースが、文書に読み込まれることを防止するものです。
 
 <table class="properties">
   <tbody>
@@ -54,7 +47,7 @@ Cross-Origin-Opener-Policy: same-origin
 
 また、 {{HTTPHeader("Cross-Origin-Opener-Policy")}} ヘッダーも同様に設定する必要がありますので、参照してください。
 
-クロスオリジンの分離に成功したかどうかを確認するには、ウィンドウとワーカーのコンテキストで利用可能な [`crossOriginIsolated`] (/ja/docs/Web/API/crossOriginIsolated) プロパティで検査してください。
+クロスオリジンの分離に成功したかどうかを確認するには、ウィンドウとワーカーのコンテキストで利用可能な {{domxref("crossOriginIsolated")}} プロパティで検査してください。
 
 ```js
 if (crossOriginIsolated) {

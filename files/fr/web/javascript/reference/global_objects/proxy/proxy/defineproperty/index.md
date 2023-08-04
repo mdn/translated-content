@@ -1,15 +1,8 @@
 ---
 title: handler.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/defineProperty
 ---
+
 {{JSRef}}
 
 La méthode **`handler.defineProperty()`** est une trappe pour {{jsxref("Object.defineProperty()")}}.
@@ -20,8 +13,7 @@ La méthode **`handler.defineProperty()`** est une trappe pour {{jsxref("Object.
 
 ```js
 var p = new Proxy(cible, {
-  defineProperty: function(cible, propriété, descripteur) {
-  }
+  defineProperty: function (cible, propriété, descripteur) {},
 });
 ```
 
@@ -66,11 +58,14 @@ Si les contraintes d'invariances suivantes ne sont pas respectées, le proxy ren
 Dans le code suivant, on piège l'appel à {{jsxref("Object.defineProperty()")}}.
 
 ```js
-var p = new Proxy({}, {
-  defineProperty: function(target, prop, descriptor) {
-    console.log("appelé avec : " + prop);
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    defineProperty: function (target, prop, descriptor) {
+      console.log("appelé avec : " + prop);
+    },
+  },
+);
 
 var desc = { configurable: true, enumerable: true, value: 10 };
 Object.defineProperty(p, "a", desc); // "appelé avec : a"
@@ -102,14 +97,11 @@ Object.defineProperty(p, "name, {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-defineownproperty-p-desc', '[[DefineOwnProperty]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-defineownproperty-p-desc', '[[DefineOwnProperty]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.defineProperty")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,15 @@
 ---
 title: CanvasRenderingContext2D.lineJoin
 slug: Web/API/CanvasRenderingContext2D/lineJoin
-translation_of: Web/API/CanvasRenderingContext2D/lineJoin
 ---
+
 {{APIRef}}
 
 La propriété **`CanvasRenderingContext2D.lineJoin`** de l'API Canvas 2D détermine la forme à utiliser pour joindre deux segments de ligne à leur intersection.
 
 Cette propriété n'a aucun effet quand deux segments connectés ont la même direction, car aucune zone de jonction ne sera ajoutée dans ce cas. Les segments dégénérés d'une longueur de zéro (c'est à dire avec les extrémités à la même position) seront ignorés.
 
-> **Note :** Les lignes peuvent être dessinées aves les méthodes  {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}} et {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}}.
+> **Note :** Les lignes peuvent être dessinées aves les méthodes {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}} et {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}}.
 
 ## Syntaxe
 
@@ -45,11 +45,11 @@ Cet exemple applique des jointures arrondies au tracé.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.lineWidth = 20;
-ctx.lineJoin = 'round';
+ctx.lineJoin = "round";
 ctx.beginPath();
 ctx.moveTo(20, 20);
 ctx.lineTo(190, 100);
@@ -71,8 +71,8 @@ L'exemple dessine 3 tracés différents, illustrant chacune des trois valeurs de
 ```
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
-var lineJoin = ['round', 'bevel', 'miter'];
+var ctx = document.getElementById("canvas").getContext("2d");
+var lineJoin = ["round", "bevel", "miter"];
 ctx.lineWidth = 10;
 
 for (let i = 0; i < lineJoin.length; i++) {
@@ -91,17 +91,11 @@ for (let i = 0; i < lineJoin.length; i++) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-linejoin", "CanvasRenderingContext2D.lineJoin")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Compatibilité des naviagateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.lineJoin")}}
-
-### WebKit/Blink-notes particulières
-
-- Dans les navigateurs basés sur WebKit et Blink, une méthode `ctx.setLineJoin()` non-standard et obsolète est implémentée en plus de cette propriété.
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,9 +1,8 @@
 ---
-title: 'CSP : worker-src'
+title: "CSP : worker-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/worker-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/worker-src
-browser-compat: http.headers.csp.Content-Security-Policy.worker-src
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`worker-src`** spécifie les sources valides pour les scripts de type [`Worker`](/fr/docs/Web/API/Worker), [`SharedWorker`](/fr/docs/Web/API/SharedWorker) et [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker).
@@ -58,7 +57,7 @@ Content-Security-Policy: worker-src https://example.com/
 <script>
   let blockedWorker = new Worker("data:application/javascript,...");
   blockedWorker = new SharedWorker("https://not-example.com/");
-  navigator.serviceWorker.register('https://not-example.com/sw.js');
+  navigator.serviceWorker.register("https://not-example.com/sw.js");
 </script>
 ```
 

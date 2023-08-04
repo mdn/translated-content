@@ -1,15 +1,8 @@
 ---
 title: paint-order
 slug: Web/CSS/paint-order
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-  - SVG
-  - Web
-translation_of: Web/CSS/paint-order
 ---
+
 {{CSSRef}}{{seecompattable}}
 
 La propriété **`paint-order`** permet de contrôler l'ordre dans lequel le remplissage, les marqueurs de peinture et le contour du texte et des formes sont dessinés.
@@ -55,9 +48,13 @@ Lorsqu'une seule valeur est indiquée, c'est celle-ci qui est appliquée par dé
 
   - : Indiquent les valeurs dans l'ordre dans lequel on veut qu'elles soient peintes.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -93,12 +90,8 @@ text {
 
 ## Spécifications
 
-| Spécification                                                                        | État                     | Commentaires         |
-| ------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName('SVG2', 'painting.html#PaintOrder', 'paint-order')}} | {{Spec2('SVG2')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.paint-order")}}
+{{Compat}}

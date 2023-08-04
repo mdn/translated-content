@@ -1,9 +1,8 @@
 ---
 title: BatteryManager.chargingTime
 slug: Web/API/BatteryManager/chargingTime
-translation_of: Web/API/BatteryManager/chargingTime
-browser-compat: api.BatteryManager.chargingTime
 ---
+
 {{APIRef("Battery API")}}
 
 La propriété **`BatteryManager.chargingTime`** indique le temps, en secondes, qu'il reste jusqu'à que la batterie soit rechargée, ou vaut `0` si la batterie est déjà rechargée. Si la batterie est en décharge, la variable vaut [`Infinity`](/fr/docs/JavaScript/Reference/Global_Objects/Infinity). Lorsque sa valeur change, l'évènement [`chargingtimechange`](/fr/docs/Web/API/BatteryManager/chargingtimechange_event) est déclenché.
@@ -21,10 +20,10 @@ La propriété **`BatteryManager.chargingTime`** indique le temps, en secondes, 
 ### JavaScript
 
 ```js
-navigator.getBattery().then(battery => {
+navigator.getBattery().then((battery) => {
   const time = battery.chargingTime;
 
-  document.querySelector('#chargingTime').textContent = battery.chargingTime;
+  document.querySelector("#chargingTime").textContent = battery.chargingTime;
 });
 ```
 

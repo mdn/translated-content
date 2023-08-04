@@ -1,14 +1,8 @@
 ---
 title: ShadowRoot
 slug: Web/API/ShadowRoot
-tags:
-  - API
-  - Interface
-  - Reference
-  - ShadowRoot
-  - Web Components
-translation_of: Web/API/ShadowRoot
 ---
+
 {{APIRef('Shadow DOM')}}
 
 L'interface **`ShadowRoot`**, relative à l'API _Shadow DOM_, représente la racine d'un sous-arbre du DOM dont le rendu est effectué séparément de celui du DOM de l'arbre principal.
@@ -72,14 +66,20 @@ Quant à la fonction `updateStyle()`, voyons ici son fonctionnement. On récupè
 function updateStyle(elem) {
   var shadow = elem.shadowRoot;
   var childNodes = shadow.childNodes;
-  for(var i = 0; i < childNodes.length; i++) {
-    if(childNodes[i].nodeName === 'STYLE') {
+  for (var i = 0; i < childNodes.length; i++) {
+    if (childNodes[i].nodeName === "STYLE") {
       childNodes[i].textContent =
-        'div {' +
-          'width: ' + elem.getAttribute('l') + 'px;' +
-          'height: ' + elem.getAttribute('l') + 'px;' +
-          'background-color: ' + elem.getAttribute('c') + ';' +
-        '}';
+        "div {" +
+        "width: " +
+        elem.getAttribute("l") +
+        "px;" +
+        "height: " +
+        elem.getAttribute("l") +
+        "px;" +
+        "background-color: " +
+        elem.getAttribute("c") +
+        ";" +
+        "}";
     }
   }
 }
@@ -87,10 +87,8 @@ function updateStyle(elem) {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('DOM WHATWG','#interface-shadowroot','Interface ShadowRoot')}} | {{Spec2('DOM WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ShadowRoot")}}
+{{Compat}}

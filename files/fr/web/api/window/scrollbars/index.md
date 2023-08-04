@@ -1,14 +1,8 @@
 ---
 title: Window.scrollbars
 slug: Web/API/Window/scrollbars
-tags:
-  - API
-  - HTML DOM
-  - Propriété
-  - Reference
-  - Window
-translation_of: Web/API/Window/scrollbars
 ---
+
 {{APIRef()}}
 
 La propriété **`Window.scrollbars`** renvoie l'objet `scrollbars`, dont la visibilité peut être vérifié.
@@ -16,7 +10,7 @@ La propriété **`Window.scrollbars`** renvoie l'objet `scrollbars`, dont la vis
 ## Syntaxe
 
 ```js
-objRef = window.scrollbars
+objRef = window.scrollbars;
 ```
 
 ## Exemple
@@ -26,30 +20,27 @@ L'exemple HTML complet suivant montre comment la propriété `visible` de l'obje
 ```html
 <!doctype html>
 <html>
-<head>
-  <title>Divers Tests DOM</title>
-  <script>
-    let visibleScrollbars = window.scrollbars.visible;
-  </script>
-</head>
-<body>
-  <p>Divers Tests DOM</p>
-</body>
+  <head>
+    <title>Divers Tests DOM</title>
+    <script>
+      let visibleScrollbars = window.scrollbars.visible;
+    </script>
+  </head>
+  <body>
+    <p>Divers Tests DOM</p>
+  </body>
 </html>
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-scrollbars', 'Window.scrollbars')}} | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-scrollbars', 'Window.scrollbars')}}     | {{Spec2('HTML5 W3C')}}     |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.scrollbars")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("window.locationbar")}}
 - {{domxref("window.menubar")}}

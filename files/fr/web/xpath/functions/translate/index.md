@@ -1,11 +1,8 @@
 ---
 title: translate
 slug: Web/XPath/Functions/translate
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/translate
-original_slug: Web/XPath/Fonctions/translate
 ---
+
 {{ XsltRef() }}
 
 La fonction `translate` évalue une chaîne et un ensemble de caractères à traduire, et retourne la chaîne traduite.
@@ -44,7 +41,7 @@ Cependant, `translate` est à l'heure actuelle la fonction la plus proche d'une 
 #### Exemple
 
 ```xml
-<xsl:value-of select="translate('Le rapide renard.', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'") />
+<xsl:value-of select="translate('Le rapide renard.', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
 ```
 
 #### Sortie

@@ -1,9 +1,8 @@
 ---
 title: window.navigator.battery
 slug: Web/API/Navigator/getBattery
-translation_of: Web/API/Navigator/battery
-original_slug: Web/API/Navigator/battery
 ---
+
 {{ Apiref() }}
 
 {{ SeeCompatTable() }}
@@ -38,7 +37,8 @@ L'API Battery Status fournit des informations sur le niveau de charge du systèm
 Voir aussi [l'exemple dans la specification](http://dev.w3.org/2009/dap/system-info/battery-status.html#introduction).
 
 ```js
-var battery = navigator.battery || navigator.mozBattery || navigator.webkitBattery;
+var battery =
+  navigator.battery || navigator.mozBattery || navigator.webkitBattery;
 
 function updateBatteryStatus() {
   alert("Battery status: " + battery.level * 100 + " %");
@@ -55,7 +55,7 @@ updateBatteryStatus();
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.battery")}}
+{{Compat}}
 
 ## Voir aussi
 

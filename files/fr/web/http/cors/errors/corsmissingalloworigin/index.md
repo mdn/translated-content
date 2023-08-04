@@ -1,9 +1,8 @@
 ---
 title: "Raison : l'en-tête CORS « Access-Control-Allow-Origin » est manquant"
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
-translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
-original_slug: Web/HTTP/CORS/Errors/CORSAllowOriginManquant
 ---
+
 {{HTTPSidebar}}
 
 ## Message

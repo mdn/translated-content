@@ -1,12 +1,8 @@
 ---
 title: font-style
 slug: Web/CSS/@font-face/font-style
-tags:
-  - CSS
-  - Descripteur
-  - Reference
-translation_of: Web/CSS/@font-face/font-style
 ---
+
 {{CSSRef}}
 
 Le descripteur **`font-style`**, associé à [la règle @](/fr/docs/Web/CSS/At-rule) {{cssxref("@font-face")}}, permet d'indiquer le style de police pour la police définie via la règle.
@@ -36,9 +32,13 @@ font-style: oblique 30deg 50deg;
 - `oblique` avec un intervalle d'angle
   - : Utilise une fonte comme `oblique` et indique un intervalle d'angles possibles pour la pente du texte. On notera que l'intervalle est uniquement pris en compte pour la valeur `oblique`, aucune autre valeur n'est autorisée après `normal` ou `italic`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -47,7 +47,7 @@ Dans les exemples qui suivent, on utilisera les différentes formes liées à la
 ```css
 @font-face {
   font-family: garamond;
-  src: url('garamond.ttf');
+  src: url("garamond.ttf");
 }
 ```
 
@@ -62,7 +62,7 @@ En revanche, si on dispose d'une vraie version italique, on peut l'indiquer via 
 ```css
 @font-face {
   font-family: garamond;
-  src: url('garamond-italic.ttf');
+  src: url("garamond-italic.ttf");
   /* On indique ici que la police est italique */
   font-style: italic;
 }
@@ -72,13 +72,8 @@ En revanche, si on dispose d'une vraie version italique, on peut l'indiquer via 
 
 ## Spécifications
 
-| Spécification                                                                    | État                             | Commentaires                                                                          |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Fonts', '#font-prop-desc', 'font-style')}} | {{Spec2('CSS4 Fonts')}} | Ajoute la possibilité d'utiliser le mot-clé `oblique` suivi par une valeur angulaire. |
-| {{SpecName('CSS3 Fonts', '#font-prop-desc', 'font-style')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale.                                                                  |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.font-face.font-style")}}
+{{Compat}}

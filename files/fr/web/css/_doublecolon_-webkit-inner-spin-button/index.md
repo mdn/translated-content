@@ -1,13 +1,8 @@
 ---
-title: '::-webkit-inner-spin-button'
+title: "::-webkit-inner-spin-button"
 slug: Web/CSS/::-webkit-inner-spin-button
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::-webkit-inner-spin-button
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 Le pseudo-élément **`::-webkit-inner-spin-button`** permet de mettre en forme la partie intérieure de la roulette qui permet de choisir la valeur d'un élément {{HTMLElement("input")}} de type `number`.
@@ -17,7 +12,7 @@ Le pseudo-élément **`::-webkit-inner-spin-button`** permet de mettre en forme 
 ### CSS
 
 ```css
-input[type=number]::-webkit-inner-spin-button {
+input[type="number"]::-webkit-inner-spin-button {
   cursor: pointer;
 }
 ```
@@ -25,7 +20,7 @@ input[type=number]::-webkit-inner-spin-button {
 ### HTML
 
 ```html
-<input type="number">
+<input type="number" />
 ```
 
 ### Résultat
@@ -38,10 +33,10 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-inner-spin-button")}}
+{{Compat}}
 
 ## Voir aussi
 
 - {{cssxref("::-webkit-outer-spin-button")}}
 - {{cssxref("::-webkit-textfield-decoration-container")}}
-- [Mettre en forme les contrôles de formulaires  – WebKit (en anglais)](https://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement)
+- [Mettre en forme les contrôles de formulaires – WebKit (en anglais)](https://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement)

@@ -1,19 +1,8 @@
 ---
 title: offset-distance
 slug: Web/CSS/offset-distance
-tags:
-  - CSS
-  - CSS モーションパス
-  - CSS プロパティ
-  - 実験的
-  - モーションパス
-  - リファレンス
-  - motion-offset
-  - offset-distance
-  - recipe:css-property
-browser-compat: css.properties.offset-distance
-translation_of: Web/CSS/offset-distance
 ---
+
 {{CSSRef}}
 
 **`offset-distance`** は CSS プロパティで、 {{CSSxRef("offset-path")}} 上の要素を配置する位置を指定します。

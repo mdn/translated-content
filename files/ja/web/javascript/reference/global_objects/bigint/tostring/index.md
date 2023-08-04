@@ -1,15 +1,8 @@
 ---
 title: BigInt.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toString
-tags:
-  - BigInt
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - toString()
-browser-compat: javascript.builtins.BigInt.toString
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** メソッドは、指定した {{jsxref("BigInt")}} オブジェクトを表す文字列を返します。末尾の "n" は文字列の一部にはなりません。
@@ -61,7 +54,7 @@ toString(radix)
 
 ### `BigInt` における負の 0
 
-整数に負の 0 が存在しないのと同様に、`BigInt` には負の 0 がありません。 `-0.0` は JavaScript の [`Number`](/ja/docs/Web/JavaScript/Data_structures#数値型_number) 型にのみ現れる、IEEE 浮動小数点数の概念です。
+整数に負の 0 が存在しないのと同様に、`BigInt` には負の 0 がありません。 `-0.0` は JavaScript の [`Number`](/ja/docs/Web/JavaScript/Data_structures#数値型) 型にのみ現れる、IEEE 浮動小数点数の概念です。
 
 ```js
 (-0n).toString();      // '0'

@@ -1,14 +1,8 @@
 ---
 title: Element.getAttributeNames()
 slug: Web/API/Element/getAttributeNames
-tags:
-  - API
-  - Attributs
-  - DOM
-  - Element
-  - Méthodes
-translation_of: Web/API/Element/getAttributeNames
 ---
+
 {{APIRef("DOM")}}
 
 `Element.getAttributeNames()` renvoie les noms des attributs de l'élément sous la forme d'un {{jsxref("Array")}} (_tableau_) de chaînes de caractères. Si l'élément n'a pas d'attributs, il retourne un tableau vide.
@@ -25,8 +19,7 @@ let attributeNames = element.getAttributeNames();
 
 ```js
 // Itérer sur les attributs de l'élément
-for(let name of element.getAttributeNames())
-{
+for (let name of element.getAttributeNames()) {
   let value = element.getAttribute(name);
   console.log(name, value);
 }
@@ -34,7 +27,7 @@ for(let name of element.getAttributeNames())
 
 ## Polyfill
 
-```html
+```js
 if (Element.prototype.getAttributeNames == undefined) {
   Element.prototype.getAttributeNames = function () {
     var attributes = this.attributes;
@@ -50,10 +43,8 @@ if (Element.prototype.getAttributeNames == undefined) {
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("DOM WHATWG", "#dom-element-getattributenames", "Element.getAttributeNames")}} | {{Spec2("DOM WHATWG")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.getAttributeNames")}}
+{{Compat}}

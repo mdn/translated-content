@@ -1,14 +1,8 @@
 ---
 title: URLSearchParams.toString()
 slug: Web/API/URLSearchParams/toString
-tags:
-  - API
-  - Method
-  - URL API
-  - URLSearchParams
-browser-compat: api.URLSearchParams.toString
-translation_of: Web/API/URLSearchParams/toString
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URLSearchParams")}} 인터페이스의 **`toString()`** 메서드는 URL에 사용할 수 있는 쿼리 문자열을 반환합니다.
@@ -20,7 +14,7 @@ translation_of: Web/API/URLSearchParams/toString
 ## 구문
 
 ```js
-toString()
+toString();
 ```
 
 ### 매개변수
@@ -34,11 +28,11 @@ toString()
 ## 예제
 
 ```js
-const url = new URL('https://example.com?foo=1&bar=2');
+const url = new URL("https://example.com?foo=1&bar=2");
 const params = new URLSearchParams(url.search);
 
 // 두 번째 foo 매개변수 추가
-params.append('foo', 4);
+params.append("foo", 4);
 console.log(params.toString()); // 'foo=1&bar=2&foo=4' 출력
 ```
 

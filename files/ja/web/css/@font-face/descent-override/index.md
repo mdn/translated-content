@@ -1,16 +1,8 @@
 ---
 title: descent-override
 slug: Web/CSS/@font-face/descent-override
-tags:
-  - '@font-face'
-  - アットルール記述子
-  - CSS
-  - リファレンス
-  - 記述子
-  - descent-override
-browser-compat: css.at-rules.font-face.descent-override
-translation_of: Web/CSS/@font-face/descent-override
 ---
+
 {{CSSRef}}
 
 **`descent-override`** は CSS の記述子で、フォントのディセンダーの寸法を定義します。ディセンダーの寸法は CSS がインライン整形コンテキストで行ボックスをレイアウトするために使用するベースラインの下の高さです。

@@ -1,20 +1,8 @@
 ---
 title: inherit
 slug: Web/CSS/inherit
-tags:
-  - CSS
-  - CSS カスケード
-  - CSS 値
-  - カスケード
-  - 継承
-  - キーワード
-  - レイアウト
-  - リファレンス
-  - スタイル
-  - inherit
-browser-compat: css.types.global_keywords.inherit
-translation_of: Web/CSS/inherit
 ---
+
 {{CSSRef}}
 
 **`inherit`** は CSS のキーワードで、要素のプロパティの[計算値](/ja/docs/Web/CSS/computed_value)を親要素から取得するよう指定します。 CSS の一括指定 {{cssxref("all")}} を含め、すべての CSS プロパティに適用することができます。

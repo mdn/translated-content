@@ -1,13 +1,8 @@
 ---
 title: Request.credentials
 slug: Web/API/Request/credentials
-tags:
-  - API
-  - Propriété
-  - Reference
-  - request
-translation_of: Web/API/Request/credentials
 ---
+
 {{APIRef("Fetch")}}
 
 La propriété en lecture seule **`credentials`**, de l'interface {{domxref("Request")}}, indique si l'agent utilisateur doit envoyer des cookies de l'autre domaine dans le cas de requêtes CORS. Ceci est similaire au flag `withCredentials` de XHR, mais peut prendre trois valeurs possibles (contre deux pour XHR) :
@@ -31,19 +26,17 @@ Une valeur {{domxref("RequestCredentials")}} qui représente les informations d'
 Dans le morceau de code suivant, on crée une nouvelle requête en utilisant le constructeur {{domxref("Request.Request()")}} (pour un fichier image dans le même dossier que le script), puis on enregistre les identifiants de la requête dans une variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 var myCred = myRequest.credentials; // renvoie "same-origin" par défaut
 ```
 
 ## Spécifications
 
-| Spécification                                                                        | État                     | Commentaires         |
-| ------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName('Fetch','#dom-request-credentials','credentials')}} | {{Spec2('Fetch')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Request.credentials")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,12 +1,8 @@
 ---
 title: src
 slug: Web/CSS/@font-face/src
-tags:
-  - CSS
-  - Descripteur
-  - Reference
-translation_of: Web/CSS/@font-face/src
 ---
+
 {{CSSRef}}
 
 Le descripteur **`src`**, associé à la règle @ {{cssxref("@font-face")}}, permet de définir la ressource qui contient les données relatives à une police de caractères. Ce descripteur est obligatoire afin que la règle `@font-face` soit considérée comme valide.
@@ -19,23 +15,25 @@ Là aussi, les URL utilisées peuvent être relatives. Dans le cas où une URL r
 
 ## Syntaxe
 
-```css
+```css-nolint
 /* <url> */
 src: url(https://unsiteweb.com/chemin/vers/police.woff); /* URL absolue */
-src: url(chemin/vers/police.woff);                       /* URL relative */
-src: url(chemin/vers/police.woff) format("woff");        /* format explicite */
-src: url('chemin/vers/police.woff');                     /* URL entre quotes */
-src: url(chemin/vers/policesvg.svg#exemple);             /* fragment identifiant une police */
+src: url(chemin/vers/police.woff); /* URL relative */
+src: url(chemin/vers/police.woff) format("woff"); /* format explicite */
+src: url('chemin/vers/police.woff'); /* URL entre quotes */
+src: url(chemin/vers/policesvg.svg#exemple); /* fragment identifiant une police */
 
 /* Valeurs de type <font-face-name> */
-src: local(police);      /* nom sans double quote */
+src: local(police); /* nom sans double quote */
 src: local(une police); /* nom avec espace */
-src: local("police");    /* nom entre double quotes */
+src: local("police"); /* nom entre double quotes */
 
 /* Liste avec plusieurs éléments */
-src: local(police), url(chemin/vers/police.svg) format("svg"),
-    url(chemin/vers/police.woff) format("woff"),
-    url(chemin/vers/police.otf) format("opentype");
+src:
+  local(police),
+  url(chemin/vers/police.svg) format("svg"),
+  url(chemin/vers/police.woff) format("woff"),
+  url(chemin/vers/police.otf) format("opentype");
 ```
 
 ### Valeurs
@@ -54,17 +52,17 @@ src: local(police), url(chemin/vers/police.svg) format("svg"),
 ```css
 @font-face {
   font-family: policeexemple;
-  src: local(Police Exemple), url('policeexemple.woff') format("woff"),
-      url('policeexemple.otf') format("opentype");
+  src:
+    local(Police Exemple),
+    url("policeexemple.woff") format("woff"),
+    url("policeexemple.otf") format("opentype");
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                | État                             | Commentaires         |
-| ------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Fonts', '#src-desc', 'src')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.font-face.src")}}
+{{Compat}}

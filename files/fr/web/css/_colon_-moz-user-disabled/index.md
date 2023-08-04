@@ -1,13 +1,8 @@
 ---
-title: ':-moz-user-disabled'
+title: ":-moz-user-disabled"
 slug: Web/CSS/:-moz-user-disabled
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:-moz-user-disabled
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 La [pseudo-classe CSS](/fr/docs/Web/CSS/Pseudo-classes) `:-moz-user-disabled` correspond aux éléments représentant des images qui n'ont pas été chargées car elles ont été entièrement désactivées dans les préférences de l'utilisateur.
@@ -17,7 +12,8 @@ Ce sélecteur est destiné principalement à une utilisation par les développeu
 ## Syntaxe
 
 ```css
-:-moz-user-disabled
+:-moz-user-disabled {
+}
 ```
 
 ## Exemples

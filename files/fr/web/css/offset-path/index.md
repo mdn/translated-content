@@ -1,12 +1,8 @@
 ---
 title: offset-path
 slug: Web/CSS/offset-path
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/offset-path
 ---
+
 {{SeeCompatTable}}{{CSSRef}}
 
 La propriété **`offset-path`** définit le tracé d'un mouvement sur lequel un élément est positionné, relativement au conteneur parent ou au système de coordonnées SVG.
@@ -35,7 +31,7 @@ offset-path: url(#path);
 offset-path: circle(50% at 25% 25%);
 offset-path: inset(50% 50% 50% 50%);
 offset-path: polygon(30% 0%, 70% 0%, 100% 50%, 30% 100%, 0% 70%, 0% 30%);
-offset-path: path('M 0,200 Q 200,200 260,80 Q 290,20 400,0 Q 300,100 400,200');
+offset-path: path("M 0,200 Q 200,200 260,80 Q 290,20 400,0 Q 300,100 400,200");
 
 /* Boîtes géométriques */
 offset-path: margin-box;
@@ -57,7 +53,7 @@ offset-path: unset;
   - : Cette notation fonctionnelle permet de faire référence à l'identifiant d'une forme SVG : `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline` ou `rect` et d'utiliser la géométrie de la forme visée pour construire le chemin.
 - `<basic-shape>`
 
-  - : Cette valeur indique une [forme CSS](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) en utilisant les notations fonctionnelles `circle()`, `ellipse()`, `inset()`, `polygon()` ou `path()`.
+  - : Cette valeur indique une [forme CSS](/fr/docs/Web/CSS/CSS_Shapes/Basic_Shapes) en utilisant les notations fonctionnelles `circle()`, `ellipse()`, `inset()`, `polygon()` ou `path()`.
 
     - `path()`
       - : Une chaîne de caractères qui définit un chemin avec la syntaxe des coordonnées SVG. À l'heure actuelle (16 novembre 2018), c'est la seule valeur qui est prise en charge.
@@ -65,9 +61,13 @@ offset-path: unset;
 - `none`
   - : Aucun chemin de mouvement n'est indiqué.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -77,15 +77,17 @@ L'exemple qui suit est tiré de [cette démo présente sur CodePen](https://code
 
 ```css
 .scissorHalf {
-  offset-path: path('M900,190  L993,245 V201  A11,11 0 0,1 1004,190  H1075  A11,11 0 0,1 1086,201  V300  L1294,423 H1216  A11,11 0 0,0 1205,434  V789  A11,11 0 0,1 1194,800  H606  A11,11 0 0,1 595,789  V434  A11,11 0 0,0 584,423  H506 L900,190');
+  offset-path: path(
+    "M900,190  L993,245 V201  A11,11 0 0,1 1004,190  H1075  A11,11 0 0,1 1086,201  V300  L1294,423 H1216  A11,11 0 0,0 1205,434  V789  A11,11 0 0,1 1194,800  H606  A11,11 0 0,1 595,789  V434  A11,11 0 0,0 584,423  H506 L900,190"
+  );
   animation: followpath 4s linear infinite;
 }
 
 @keyframes followpath {
-   to {
-     motion-offset: 100%;
-     offset-distance: 100%;
-   }
+  to {
+    motion-offset: 100%;
+    offset-distance: 100%;
+  }
 }
 ```
 
@@ -94,44 +96,45 @@ L'exemple qui suit est tiré de [cette démo présente sur CodePen](https://code
 Les moitiés supérieure et inférieure des ciseaux apparaîtront dans le coin en haut à gauche du canevas si elles ne sont pas positionnés sur le point de départ avec `offset-path`.
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="700"
-     height="450"
-     viewBox="350 0 1400 900">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="700"
+  height="450"
+  viewBox="350 0 1400 900">
   <title>House and Scissors</title>
-  <rect x="595"
-        y="423"
-        width="610"
-        height="377"
-        fill="blue" />
-  <polygon points="506,423 900,190 1294,423"
-           fill="yellow" />
-  <polygon points="993,245 993,190 1086,190 1086,300"
-           fill="red" />
-  <path id="house" d="M900,190 L993,245 V201 A11,11 0 0,1 1004,190 H1075 A11,11 0 0,1 1086,201 V300 L1294,423 H1216 A11,11 0 0,0 1205,434 V789 A11,11 0 0,1 1194,800 H606 A11,11 0 0,1 595,789 V434 A11,11 0 0,0 584,423 H506 L900,190"
-        fill="none"
-        stroke="black"
-        stroke-width="13"
-        stroke-linejoin="round"
-        stroke-linecap="round" />
-  <path id="firstScissorHalf" class="scissorHalf"
-        d="M30,0 H-10 A10,10 0 0,0 -20,10 A20,20 0 1,1 -40,-10 H20 A10,10 0 0,1 30,0 M-40,20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,20 M0,0"
-        transform="translate(0,0)"
-        fill="green"
-        stroke="black"
-        stroke-width="5"
-        stroke-linejoin="round"
-        stroke-linecap="round"
-        fill-rule="evenodd" />
-  <path id="secondScissorHalf" class="scissorHalf"
-        d="M30,0 H-10 A10,10 0 0,1 -20,-10 A20,20 0 1,0 -40,10 H20 A10,10 0 0,0 30,0 M-40,-20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,-20 M0,0"
-        transform="translate(0,0)"
-        fill="forestgreen"
-        stroke="black"
-        stroke-width="5"
-        stroke-linejoin="round"
-        stroke-linecap="round"
-        fill-rule="evenodd" />
+  <rect x="595" y="423" width="610" height="377" fill="blue" />
+  <polygon points="506,423 900,190 1294,423" fill="yellow" />
+  <polygon points="993,245 993,190 1086,190 1086,300" fill="red" />
+  <path
+    id="house"
+    d="M900,190 L993,245 V201 A11,11 0 0,1 1004,190 H1075 A11,11 0 0,1 1086,201 V300 L1294,423 H1216 A11,11 0 0,0 1205,434 V789 A11,11 0 0,1 1194,800 H606 A11,11 0 0,1 595,789 V434 A11,11 0 0,0 584,423 H506 L900,190"
+    fill="none"
+    stroke="black"
+    stroke-width="13"
+    stroke-linejoin="round"
+    stroke-linecap="round" />
+  <path
+    id="firstScissorHalf"
+    class="scissorHalf"
+    d="M30,0 H-10 A10,10 0 0,0 -20,10 A20,20 0 1,1 -40,-10 H20 A10,10 0 0,1 30,0 M-40,20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,20 M0,0"
+    transform="translate(0,0)"
+    fill="green"
+    stroke="black"
+    stroke-width="5"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+    fill-rule="evenodd" />
+  <path
+    id="secondScissorHalf"
+    class="scissorHalf"
+    d="M30,0 H-10 A10,10 0 0,1 -20,-10 A20,20 0 1,0 -40,10 H20 A10,10 0 0,0 30,0 M-40,-20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,-20 M0,0"
+    transform="translate(0,0)"
+    fill="forestgreen"
+    stroke="black"
+    stroke-width="5"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+    fill-rule="evenodd" />
 </svg>
 ```
 
@@ -141,15 +144,11 @@ Les moitiés supérieure et inférieure des ciseaux apparaîtront dans le coin e
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Motion Path Level 1', '#offset-path-property', 'offset-path')}} | {{Spec2('Motion Path Level 1')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.offset-path")}}
+{{Compat}}
 
 ## Voir aussi
 

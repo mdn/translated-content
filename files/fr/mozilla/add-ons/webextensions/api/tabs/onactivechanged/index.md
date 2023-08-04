@@ -1,19 +1,8 @@
 ---
 title: tabs.onActiveChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActiveChanged
-tags:
-  - API
-  - Add-ons
-  - Deprecated
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onActiveChanged
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onActiveChanged
 ---
+
 {{AddonSidebar()}}
 
 > **Attention :** Cet événement est obsolète. Utilisez {{WebExtAPIRef("tabs.onActivated")}} à la place.
@@ -23,9 +12,9 @@ Se déclenche lorsque l'onglet sélectionné dans une fenêtre change. Notez que
 ## Syntaxe
 
 ```js
-browser.tabs.onActiveChanged.addListener(listener)
-browser.tabs.onActiveChanged.removeListener(listener)
-browser.tabs.onActiveChanged.hasListener(listener)
+browser.tabs.onActiveChanged.addListener(listener);
+browser.tabs.onActiveChanged.removeListener(listener);
+browser.tabs.onActiveChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -35,7 +24,7 @@ Les événements ont trois fonctions :
 - `removeListener(listener)`
   - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
 - `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie`true` s'il écoute, sinon `false`.
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
 <!---->
 
@@ -62,9 +51,9 @@ Les événements ont trois fonctions :
 - `windowId`
   - : `integer`. L'ID de la fenêtre contenant l'onglet sélectionné.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onActiveChanged")}}
+{{Compat}}
 
 > **Note :**
 >
@@ -72,7 +61,8 @@ Les événements ont trois fonctions :
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -99,4 +89,4 @@ Les événements ont trois fonctions :
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

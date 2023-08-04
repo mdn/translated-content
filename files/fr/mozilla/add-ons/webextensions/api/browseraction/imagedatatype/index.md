@@ -1,29 +1,19 @@
 ---
 title: browserAction.ImageDataType
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/ImageDataType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - ImageDataType
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - browserAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/ImageDataType
 ---
+
 {{AddonSidebar()}}
 
-Données en pixels pour une image. Doit être un objet [`ImageData`](/fr/docs/Web/API/ImageData)  (par exemple, un élément  {{htmlelement("canvas")}}).
+Données en pixels pour une image. Doit être un objet [`ImageData`](/fr/docs/Web/API/ImageData) (par exemple, un élément {{htmlelement("canvas")}}).
 
 ## Type
 
 Un objet [`ImageData`](/fr/docs/Web/API/ImageData).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserAction.ImageDataType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
@@ -33,7 +23,8 @@ Un objet [`ImageData`](/fr/docs/Web/API/ImageData).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -60,4 +51,4 @@ Un objet [`ImageData`](/fr/docs/Web/API/ImageData).
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

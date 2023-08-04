@@ -1,15 +1,8 @@
 ---
 title: arguments.callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
-tags:
-  - Deprecated
-  - 関数
-  - JavaScript
-  - プロパティ
-  - arguments
-browser-compat: javascript.functions.arguments.callee
-translation_of: Web/JavaScript/Reference/Functions/arguments/callee
 ---
+
 {{jsSidebar("Functions")}}
 
 **`arguments.callee`** プロパティは現在実行中の関数を示します。
@@ -18,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Functions/arguments/callee
 
 `callee` は `arguments` オブジェクトのプロパティです。これは、現在実行中の関数を、その関数本体の内部で参照するために使用することができます。これは、名前のない関数式（「無名関数」とも呼ばれる）の中など、関数名が不明な場合に便利です。
 
-> **Warning:** ECMAScript 第 5 版では、 `arguments.callee()` を[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で使用することを禁止しています。関数式に名前を付けるか、関数が自分自身を呼び出すような関数宣言を行うことで、 `arguments.callee()` の使用を避けることができます。
+> **警告:** ECMAScript 第 5 版では、 `arguments.callee()` を[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で使用することを禁止しています。関数式に名前を付けるか、関数が自分自身を呼び出すような関数宣言を行うことで、 `arguments.callee()` の使用を避けることができます。
 
 ### なぜ `arguments.callee` は ES5 厳格モードで削除されたのか
 

@@ -1,15 +1,11 @@
 ---
-title: ':invalid'
+title: ":invalid"
 slug: Web/CSS/:invalid
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:invalid
 ---
+
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:invalid`** cible tout élément {{HTMLElement("input")}} pour lequel [la validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation "en/HTML/HTML5/Constraint_validation") du contenu échoue par rapport au type de donnée attendu. Ceci permet de mettre en forme les champs non valides pour aider l'utilisateur à identifier et à corriger les erreurs.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:invalid`** cible tout élément {{HTMLElement("input")}} pour lequel [la validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) du contenu échoue par rapport au type de donnée attendu. Ceci permet de mettre en forme les champs non valides pour aider l'utilisateur à identifier et à corriger les erreurs.
 
 ```css
 /* Cible n'importe quel élément input  */
@@ -74,12 +70,12 @@ input:required:invalid {
 <form>
   <div class="field">
     <label for="url_input">Veuillez saisir une URL :</label>
-    <input type="url" id="url_input">
+    <input type="url" id="url_input" />
   </div>
 
   <div class="field">
     <label for="email_input">Veuillez saisir une adresse électronique :</label>
-    <input type="email" id="email_input" required>
+    <input type="email" id="email_input" required />
   </div>
 </form>
 ```
@@ -123,15 +119,11 @@ Ce halo peut être désactivé avec les règles suivantes :
 
 ## Spécifications
 
-| Spécification                                                                        | État                                 | Commentaire                                                                   |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-invalid', ':invalid')}}     | {{Spec2('HTML WHATWG')}}     | Aucune modification.                                                          |
-| {{SpecName('HTML5 W3C', '#selector-invalid', ':invalid')}}         | {{Spec2('HTML5 W3C')}}         | Définition de la sémantique relative à HTML et aux contraintes de validation. |
-| {{SpecName('CSS4 Selectors', '#validity-pseudos', ':invalid')}} | {{Spec2('CSS4 Selectors')}} | Définition initiale.                                                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.invalid")}}
+{{Compat}}
 
 ## Voir aussi
 

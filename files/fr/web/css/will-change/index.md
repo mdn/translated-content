@@ -1,26 +1,22 @@
 ---
 title: will-change
 slug: Web/CSS/will-change
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/will-change
 ---
+
 {{CSSRef}}
 
 La propriété **`will-change`** fournit une indication au navigateur sur la propension d'un élément à changer (afin que le navigateur puisse mettre en place les optimisations nécessaires avant que l'élément change vraiment). Ce type d'optimisation permet d'augmenter la réactivité de la page en effectuant des calculs (éventuellement coûteux) en prévision du changement.
 
-> **Attention :** `will-change` est conçu pour être utilisé en dernier recours afin d'aider à la résolutions de problèmes de performance existants. Il ne doit pas être utilisé partout de façon purement préventive.
+> **Attention :** `will-change` est conçu pour être utilisé en dernier recours afin d'aider à la résolution de problèmes de performance existants. Il ne doit pas être utilisé partout de façon purement préventive.
 
 ```css
 /* Avec un mot-clé */
 will-change: auto;
 will-change: scroll-position;
 will-change: contents;
-will-change: transform;        /* Exemple de <custom-ident> */
-will-change: opacity;          /* Exemple de <custom-ident> */
-will-change: left, top;        /* Exemple de deux <animateable-feature> */
+will-change: transform; /* Exemple de <custom-ident> */
+will-change: opacity; /* Exemple de <custom-ident> */
+will-change: left, top; /* Exemple de deux <animateable-feature> */
 
 /* Valeurs globales */
 will-change: inherit;
@@ -52,9 +48,13 @@ Un valeur de type `<animateable-feature>` peut être :
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
   - : Ce type permet d'indiquer que la propriété donnée va prochainement être modifiée ou animée. Si la propriété fournie est un raccourci, on s'attendra à ce que toutes les propriétés détaillées correspondantes soient animées ou changées. Une valeur de ce type ne peut pas être `unset`, `initial`, `inherit`, `will-change`, `auto`, `scroll-position`, ou `contents`. La spécification ne définit pas le comportement d'une valeur spécifique mais généralement, lorsqu'on utilise `transform`, cela indique que les couches qui composent la page vont évoluer. [Chrome prend deux mesures](https://github.com/operasoftware/devopera/pull/330) selon les propriétés utilisées ici : il établit une nouvelle composition des couches de rendu ou crée un nouveau contexte d'empilement.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -67,21 +67,21 @@ Un valeur de type `<animateable-feature>` peut être :
 Dans l'exemple précédent, on applique la propriété `will-change` à même la feuille de style. Dans ce cas, le navigateur conservera l'optimisation en mémoire beaucoup plus longtemps que nécessaire. Nous avons vu précédemment que cela devait être évité et voici donc un deuxième exemple qui illustre comment appliquer la propriété `will-change` grâce à JavaScript (et qui correspond donc à la méthode qui devrait être utilisée la plupart du temps) :
 
 ```js
-var el = document.getElementById('element');
+var el = document.getElementById("element");
 
 // On applique will-change quand la souris/curseur
 // pointeur/stylet passe au-dessus de l'élément
-el.addEventListener('mouseenter', hintBrowser);
-el.addEventListener('animationEnd', removeHint);
+el.addEventListener("mouseenter", hintBrowser);
+el.addEventListener("animationEnd", removeHint);
 
 function hintBrowser() {
   // On liste les propriétés sujettes au changement
   // lors de l'animation
-  this.style.willChange = 'transform, opacity';
+  this.style.willChange = "transform, opacity";
 }
 
 function removeHint() {
-  this.style.willChange = 'auto';
+  this.style.willChange = "auto";
 }
 ```
 
@@ -95,12 +95,8 @@ Cela peut toutefois être pertinent d'inclure `will-change` dans la feuille de s
 
 ## Spécifications
 
-| Spécification                                                                        | État                                 | Commentaires         |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('CSS Will Change', '#will-change', 'will-change')}} | {{Spec2('CSS Will Change')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.will-change")}}
+{{Compat}}

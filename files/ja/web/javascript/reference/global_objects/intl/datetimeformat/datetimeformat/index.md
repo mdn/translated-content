@@ -1,17 +1,8 @@
 ---
 title: Intl.DateTimeFormat() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
-tags:
-  - Constructor
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
 ---
+
 {{JSRef}}
 
 **`Intl.DateTimeFormat()`** コンストラクターは、言語に応じた日付と時刻の書式化を可能にする
@@ -51,7 +42,7 @@ new Intl.DateTimeFormat(locales, options)
         - "`medium`"
         - "`short`"
 
-        > **Note:** `dateStyle` は `timeStyle` と一緒に使用することができますが、他のオプション (`weekday`, `hour`, `month`, など) と一緒に使用することはできません。
+        > **メモ:** `dateStyle` は `timeStyle` と一緒に使用することができますが、他のオプション (`weekday`, `hour`, `month`, など) と一緒に使用することはできません。
 
     - `timeStyle`
       - : `format()` が呼び出された際に使用される時刻の書式化スタイルです。利用可能な値は以下のとおりです。
@@ -61,14 +52,14 @@ new Intl.DateTimeFormat(locales, options)
         - "`medium`"
         - "`short`"
 
-        > **Note:** `timeStyle` は `dateStyle` と一緒に使用することができますが、他のオプション (`weekday`, `hour`, `month`, など) と一緒に使用することはできません。
+        > **メモ:** `timeStyle` は `dateStyle` と一緒に使用することができますが、他のオプション (`weekday`, `hour`, `month`, など) と一緒に使用することはできません。
     - `calendar`
       - : 暦です。有効な値は、 "`buddhist`", "`chinese`", " `coptic`", "`ethiopia`", "`ethiopic`", "`gregory`", " `hebrew`", "`indian`", "`islamic`", "`iso8601`", " `japanese`", "`persian`", "`roc`" です。
     - `dayPeriod`
 
       - : 日単位の期間の表現の仕方です。有効な値は、 "`narrow`", "`short`", " `long`" です。
 
-        > **Note:**
+        > **メモ:**
         >
         > - このオプションは12時間制を使用したときのみ効果があります。
         > - 多くのロケールでは幅の指定を無視して同じ文字列を使用します。
@@ -161,7 +152,7 @@ new Intl.DateTimeFormat(locales, options)
         - "`shortGeneric`" 一般的な場所を指定しない短い形式 (例 `PT`, `Los Angeles Zeit`).
         - "`longGeneric`" 一般的な場所を指定しない長い形式 (例 `Pacific Time`, `Nordamerikanische Westküstenzeit`)
 
-        > **Note:** タイムゾーンの表示は、必要な文字列が利用できない場合、別の形式にフォールバックすることがあります。例えば、場所を指定しない形式では、 "Pacific Time" のように特定の国や都市の場所を指定せずにタイムゾーンを表示する必要がありますが、 "Los Angeles Time" のようなタイムゾーンにフォールバックする場合があります。
+        > **メモ:** タイムゾーンの表示は、必要な文字列が利用できない場合、別の形式にフォールバックすることがあります。例えば、場所を指定しない形式では、 "Pacific Time" のように特定の国や都市の場所を指定せずにタイムゾーンを表示する必要がありますが、 "Los Angeles Time" のようなタイムゾーンにフォールバックする場合があります。
 
     それぞれの日付や時刻の部分のプロパティの既定値は {{jsxref("undefined")}} ですが、すべての部分のプロパティが {{jsxref("undefined")}} であった場合、 `year`, `month`, `day` は "`numeric`" であると想定されます。
 

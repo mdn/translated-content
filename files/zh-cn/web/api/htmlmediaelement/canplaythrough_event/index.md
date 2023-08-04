@@ -1,10 +1,8 @@
 ---
-title: 'HTMLMediaElement: canplaythrough'
+title: "HTMLMediaElement: canplaythrough"
 slug: Web/API/HTMLMediaElement/canplaythrough_event
-tags:
-  - canplaythrough
-translation_of: Web/API/HTMLMediaElement/canplaythrough_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `canplaythrough` 事件在终端可以播放媒体文件时（估计已经加载了足够的数据来播放媒体直到其结束，而不必停止以进一步缓冲内容）被触发。
@@ -47,22 +45,26 @@ translation_of: Web/API/HTMLMediaElement/canplaythrough_event
 使用 `addEventListener()`：
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('canplaythrough', (event) => {
-  console.log('I think I can play through the entire ' +
-      'video without ever having to stop to buffer.');
+video.addEventListener("canplaythrough", (event) => {
+  console.log(
+    "I think I can play through the entire " +
+      "video without ever having to stop to buffer.",
+  );
 });
 ```
 
 使用 `oncanplaythrough` 事件处理器属性：
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.oncanplaythrough = (event) => {
-  console.log('I think I can play through the entire ' +
-      'video without ever having to stop to buffer.');
+  console.log(
+    "I think I can play through the entire " +
+      "video without ever having to stop to buffer.",
+  );
 };
 ```
 

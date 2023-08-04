@@ -1,20 +1,8 @@
 ---
 title: Understanding client-side web development tools
 slug: Learn/Tools_and_testing/Understanding_client-side_tools
-tags:
-  - Beginner
-  - CSS
-  - Deployment
-  - HTML
-  - JavaScript
-  - Learn
-  - Tools
-  - TopicStub
-  - Transformation
-  - client-side
-  - linting
-translation_of: Learn/Tools_and_testing/Understanding_client-side_tools
 ---
+
 {{LearnSidebar}}
 
 Les outils côté client peuvent être intimidants, mais cette série d'articles vise à illustrer le but de certains des types d'outils côté client les plus courants, à expliquer les outils que vous pouvez enchaîner, comment les installer à l'aide de gestionnaires de packages et les contrôler à l'aide de la ligne de commande. Nous terminons en fournissant un exemple complet de chaîne d'outils vous montrant comment devenir productif.

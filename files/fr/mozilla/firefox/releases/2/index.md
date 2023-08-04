@@ -1,15 +1,9 @@
 ---
 title: Firefox 2 pour les développeurs
 slug: Mozilla/Firefox/Releases/2
-tags:
-  - Firefox
-  - Firefox 2
-translation_of: Mozilla/Firefox/Releases/2
-original_slug: Mozilla/Firefox/Versions/2
 ---
-{{FirefoxSidebar}}
 
-''Une grande partie du contenu de cette page est juste là pour boucher les trous. Voyez la [version anglaise de cette page](/en/Firefox_2_for_developers) pour savoir comment la compléter.''
+{{FirefoxSidebar}}
 
 ## Nouvelles fonctionnalités pour les développeurs dans Firefox 2
 
@@ -119,9 +113,9 @@ Firefox 2 propose un grand nombre de nouvelles fonctionnalités et de nouvelles 
 
 - Améliorations de Textbox (à partir de Firefox 2.0.0.1 uniquement)
 
-  - : L'élément `<textbox>` dispose à présent d'une méthode `reset()` pour réinitialiser la valeur de la boîte de texte à sa valeur par défaut. La propriété `defaultValue` peut être utilisée pour récupérer et modifier cette valeur par défaut ({{ Bug(312867) }}).
+  - : L'élément `<textbox>` dispose à présent d'une méthode `reset()` pour réinitialiser la valeur de la boîte de texte à sa valeur par défaut. La propriété `defaultValue` peut être utilisée pour récupérer et modifier cette valeur par défaut ([bug Firefox 312867](https://bugzil.la/312867)).
 
-    Support d'une propriété `editor` permettant d'obtenir l'interface interne [nsIEditor](/fr/NsIEditor) pour le champ texte ({{ Bug(312867) }}).
+    Support d'une propriété `editor` permettant d'obtenir l'interface interne [nsIEditor](/fr/NsIEditor) pour le champ texte ([bug Firefox 312867](https://bugzil.la/312867)).
 
 ## Nouvelles fonctionnalités pour les utilisateurs
 

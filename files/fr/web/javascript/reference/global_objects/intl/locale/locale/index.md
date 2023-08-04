@@ -1,8 +1,8 @@
 ---
 title: Constructeur Intl.Locale()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
-browser-compat: javascript.builtins.Intl.Locale.Locale
 ---
+
 {{JSRef}}
 
 Le constructeur **`Intl.Locale`** est une propriété native de l'objet `Intl` qui permet de créer des objets qui représentent des locales Unicode.
@@ -12,8 +12,8 @@ Le constructeur **`Intl.Locale`** est une propriété native de l'objet `Intl` q
 ## Syntaxe
 
 ```js
-new Intl.Locale(tag)
-new Intl.Locale(tag, options)
+new Intl.Locale(tag);
+new Intl.Locale(tag, options);
 ```
 
 ### Paramètres
@@ -30,7 +30,7 @@ new Intl.Locale(tag, options)
 Sous sa forme la plus simple, le constructeur [`Intl.Locale`] prend comme argument une chaîne de caractères représentant un identifiant de locale&nbsp;:
 
 ```js
-let us = new Intl.Locale('en-US');
+let us = new Intl.Locale("en-US");
 ```
 
 ### Utiliser le constructeur Locale avec un objet options

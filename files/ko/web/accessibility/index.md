@@ -1,10 +1,6 @@
 ---
 title: 접근성
 slug: Web/Accessibility
-tags:
-  - Accessibility
-  - Landing
-translation_of: Web/Accessibility
 ---
 
 웹 개발에서의 **접근성**은 사람들의 능력이 어느 정도 제한되어 있더라도, 가능한 많은 사람이 웹사이트를 사용 할 수 있도록 하는 것 입니다.
@@ -21,7 +17,7 @@ MDN은(는) [접근성 학습 영역](/ko/docs/Learn/Accessibility) 접근성에
   - : 이 글은 접근성이 실제로 무엇인지 자세히 살펴보는 것으로 모듈을 시작하며 - 여기에는 우리가 고려해야 하는 그룹의 사람들과 그 이유, 웹과 상호작용하기 위해 다른 사람들이 사용하는 도구, 그리고 접근성을 웹 개발 워크플로우의 일부로 어떻게 만들 수 있는지가 포함됩니다.
 - [HTML: 접근성을 위한 좋은 기반](/ko/docs/Learn/Accessibility/HTML)
   - : 올바른 HTML 요소가 항상 올바른 목적으로 사용되는지 확인하는 것만으로도 웹 콘텐츠로 접근성을 만들 수 있습니다. 이 글에서 HTML이 최대 접근성을 보장하기 위해 어떻게 사용될 수 있는지 자세히 살펴봅니다.
-- [CSS 그리고 JavaScript 접근성 모범 사례](/ko/docs/Learn/Accessibility/CSS_and_JavaScript)
+- [CSS 그리고 JavaScript 접근성 모범 사례](/ko/docs/Learn/Accessibility/CSS_and_JavaScript)
   - : CSS와 JavaScript 또한 적절하게 사용될 경우 접근 가능한 웹 경험을 허용할 수 있는 잠재력을 가지고 있습니다 ... 혹은 잘못 사용하면 접근성을 크게 해칠 수 있습니다. 이 글에서는 복잡한 콘텐츠도 최대한 접근 할 수 있도록 하기 위해 고려해야 하는 몇 가지 CSS 및 JavaScript 모범 사례에 대해 윤곽을 잡습니다.
 - [WAI-ARIA 기초](/ko/docs/Learn/Accessibility/WAI-ARIA_basics)
   - : 이전 글에 따르면, 때때로 의미 없는 HTML과 동적 JavaScript 업데이트 콘텐츠를 포함하는 복잡한 UI 컨트롤을 만드는 것은 어려울 수 있습니다. WAI-ARIA은(는) 브라우저와 보조 기술이 인식하여 사용자에게 무슨 일이 일어나고 있는지 알리기 위해 사용할 수 있는 추가적인 의미를 추가함으로써 그러한 문제를 도와줄 수 있는 기술입니다. 여기서는 기본 수준에서 이 기능을 사용하여 접근성을 향상하는 방법을 보여 줍니다.
@@ -51,4 +47,3 @@ MDN은(는) [접근성 학습 영역](/ko/docs/Learn/Accessibility) 접근성에
 
 - [WAI Interest Group](https://www.w3.org/WAI/IG/)
 - [개발자 가이드](/ko/docs/Web/Guide)
-- [접근성 그리고 Mozilla](/ko/docs/Mozilla/Accessibility)

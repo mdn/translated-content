@@ -1,13 +1,8 @@
 ---
 title: columns
 slug: Web/CSS/columns
-tags:
-  - CSS
-  - Propriété
-  - Propriété raccourcie
-  - Reference
-translation_of: Web/CSS/columns
 ---
+
 {{CSSRef}}
 
 La propriété **`columns`** est une propriété raccourcie permettant de définir les deux propriétés {{cssxref('column-width')}} (qui définit la largeur des colonnes) et {{cssxref("column-count")}} (qui définit le nombre de colonnes) en même temps.
@@ -31,7 +26,6 @@ columns: 1 auto;
 columns: auto 12em;
 columns: auto auto;
 
-
 /* Valeurs globales */
 columns: inherit;
 columns: initial;
@@ -47,9 +41,13 @@ La propriété `columns` se définit avec un ou deux valeurs parmi celles décri
 - `<'column-count'>`
   - : Une quantité (type {{cssxref("&lt;integer&gt;")}}) strictement positive qui décrit le nombre idéal de colonnes parmi lesquelles disposer le contenu de l'élément. Si la valeur de {{cssxref("column-width")}} n'est pas une valeur automatique, cette valeur indique simplement le nombre maximal de colonnes.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -67,17 +65,13 @@ La propriété `columns` se définit avec un ou deux valeurs parmi celles décri
 ### HTML
 
 ```html
-<p class=exemple>
-  « Mais alors, » pensa Alice, « ne serai-je donc
-  jamais plus vieille que je ne le suis maintenant ?
-  D’un côté cela aura ses avantages, ne jamais être
-  une vieille femme. Mais alors avoir toujours des
-  leçons à apprendre ! Oh, je n’aimerais pas cela du
-  tout. »
-  « Oh ! Alice, petite folle, » se répondit-elle.
-  « Comment pourriez-vous apprendre des leçons ici ?
-  Il y a à peine de la place pour vous, et il n’y en
-  a pas du tout pour vos livres de leçons. »
+<p class="exemple">
+  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
+  le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être une
+  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
+  n’aimerais pas cela du tout. » « Oh ! Alice, petite folle, » se répondit-elle.
+  « Comment pourriez-vous apprendre des leçons ici ? Il y a à peine de la place
+  pour vous, et il n’y en a pas du tout pour vos livres de leçons. »
 </p>
 ```
 
@@ -87,12 +81,8 @@ La propriété `columns` se définit avec un ou deux valeurs parmi celles décri
 
 ## Spécifications
 
-| Spécification                                                        | État                                 | Commentaires         |
-| -------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Multicol', '#columns', 'columns')}} | {{Spec2('CSS3 Multicol')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.columns")}}
+{{Compat}}
