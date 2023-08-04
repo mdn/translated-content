@@ -9,8 +9,6 @@ slug: Web/HTML/Element/iframe
 
 {{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</div>
-
 삽입된 브라우징 맥락은 각자 자신만의 [세션 기록](/ko/docs/Web/API/History)과 [문서](/ko/docs/Web/API/Document)를 가집니다. 다른 브라우징 맥락을 포함하고 있는 맥락은 "부모 브라우징 맥락"이라고 부릅니다. 부모를 가지지 않는, 즉 최상위 브라우징 맥락은 대개 브라우저 창으로서, {{domxref("Window")}} 객체로 나타냅니다.
 
 > **경고:** 각각의 브라우징 맥락은 완전한 문서 환경이므로, 페이지에 `<iframe>`을 추가할 때마다 메모리 및 기타 컴퓨터 자원 사용량이 늘어납니다. 이론상으로는 원하는 만큼 `<iframe>`을 사용할 수 있지만, 성능 문제가 없는지 확인하세요.
