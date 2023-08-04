@@ -1,7 +1,6 @@
 ---
 title: Window.alert()
 slug: Web/API/Window/alert
-translation_of: Web/API/Window/alert
 ---
 
 {{APIRef}}

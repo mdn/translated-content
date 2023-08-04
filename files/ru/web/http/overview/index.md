@@ -1,12 +1,6 @@
 ---
 title: Обзор протокола HTTP
 slug: Web/HTTP/Overview
-tags:
-  - HTML
-  - HTTP
-  - Веб-механизмы
-  - Обзор
-translation_of: Web/HTTP/Overview
 ---
 
 {{HTTPSidebar}}

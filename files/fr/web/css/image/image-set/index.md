@@ -1,7 +1,6 @@
 ---
 title: image-set()
 slug: Web/CSS/image/image-set
-translation_of: Web/CSS/image/image-set
 ---
 
 {{CSSRef}}

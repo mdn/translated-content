@@ -1,7 +1,6 @@
 ---
 title: runtime.PlatformInfo
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformInfo
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformInfo
 ---
 
 {{AddonSidebar()}}

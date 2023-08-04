@@ -1,7 +1,6 @@
 ---
 title: clamp()
 slug: Web/CSS/clamp
-original_slug: Web/CSS/clamp()
 ---
 
 {{CSSRef}}

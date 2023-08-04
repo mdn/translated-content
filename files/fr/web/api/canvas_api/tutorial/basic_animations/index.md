@@ -1,7 +1,6 @@
 ---
 title: Animations basiques
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
-translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Tutoriel_canvas/Advanced_animations")}}

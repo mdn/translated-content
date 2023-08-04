@@ -1,7 +1,6 @@
 ---
 title: setTimeout()
 slug: Web/API/setTimeout
-translation_of: Web/API/WindowOrWorkerGlobalScope/setTimeout
 ---
 
 {{APIRef("HTML DOM")}}

@@ -1,7 +1,6 @@
 ---
 title: animateTransform
 slug: Web/SVG/Element/animateTransform
-translation_of: Web/SVG/Element/animateTransform
 ---
 
 {{SVGRef}}

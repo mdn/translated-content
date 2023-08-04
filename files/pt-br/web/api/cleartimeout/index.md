@@ -1,7 +1,6 @@
 ---
 title: WindowTimers.clearTimeout()
 slug: Web/API/clearTimeout
-original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 ---
 
 {{APIRef("HTML DOM")}}

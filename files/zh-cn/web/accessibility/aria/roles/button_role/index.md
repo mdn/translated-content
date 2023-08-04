@@ -3,13 +3,13 @@ title: ARIA：button 角色
 slug: Web/Accessibility/ARIA/Roles/button_role
 ---
 
-`button` 角色应该用于可单击的元素，当用户激活时触发响应。添加 `role="button"` 会告诉屏幕阅读器这个元素是个按钮，但是不提供按钮的功能。你应该使用 {{HTMLElement("button")}} 或者 {{HTMLElement("input")}} 以及 `type="button"`。
+`button` 角色用于可单击的元素，在用户激活时触发响应。添加 `role="button"` 会告诉屏幕阅读器这个元素是个按钮，但是不提供按钮的功能。你应该使用的 {{HTMLElement("button")}} 或者 `type="button"` 的 {{HTMLElement("input")}}。
 
 ## 描述
 
 button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按钮。按钮是用于执行操作的小部件，例如提交表单、打开对话框、退出活动或执行一个命令，例如插入新的记录或者显示信息。添加 `role="button"` 会告诉辅助技术，这是一个按钮，但是不提供按钮的功能。你应该使用 {{HTMLElement("button")}} 或者 {{HTMLElement("input")}} 以及 `type="button"`。
 
-`button` 角色可以和 [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) 特性一起使用，以[创建切换按钮](#切换按钮)。
+`button` 角色可以和 [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) 属性一起使用，以[创建切换按钮](#切换按钮)。
 
 ```html
 <div id="saveChanges" tabindex="0" role="button" aria-pressed="false">保存</div>
@@ -33,7 +33,7 @@ button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按�
 
 有些类型的用户界面元件，呈现在平台无障碍 API 中时，仅可包含文本。无障碍 API 没有呈现 `button` 中包含的语义元素的方式。要处理这个限制，浏览器会自动为任何 `button` 的后代元素应用角色 [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role)，因为按钮这种角色不支持带有语义的子元素。
 
-例如，请看这个 `button` 按钮，有如下内容：
+例如，考虑以下包含标题的 `button` 元素。
 
 ```html
 <div role="button"><h3>按钮的标题</h3></div>
@@ -45,7 +45,7 @@ button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按�
 <div role="button"><h3 role="presentation">按钮的标题</h3></div>
 ```
 
-从辅助技术的视角来看，这个标题不存在，因为前面的代码片段在 [辅助功能树](/zh-CN/docs/Glossary/Accessibility_tree) 中相当于以下内容：
+从辅助技术的视角来看，这个标题不存在，因为前面的代码片段在[无障碍树](/zh-CN/docs/Glossary/Accessibility_tree)中相当于以下内容：
 
 ```html
 <div role="button">按钮的标题</div>
@@ -54,9 +54,9 @@ button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按�
 ### 关联的 ARIA 角色、状态和属性
 
 - [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
-  - : `aria-pressed` 属性定义的按钮是否为切换按钮。此值描述了按钮的状态。值包括 `aria-pressed="false"`（按钮还没有被按下）、`aria-pressed="true"` （按钮当前已被按下）和 `aria-pressed="mixed"` （按钮被视为部分按下）。如果此属性被忽略，或者设置为默认值 `aria-pressed="undefined"`，那么元素不支持被按下。
+  - : `aria-pressed` 属性将按钮定义为切换按钮。此值描述了按钮的状态。值包括 `aria-pressed="false"`（按钮还没有被按下）、`aria-pressed="true"`（按钮当前已被按下）和 `aria-pressed="mixed"`（按钮被视为部分按下）。如果此属性被忽略，或者设置为默认值 `aria-pressed="undefined"`，那么元素不支持被按下。
 - [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
-  - : 如果按钮控制了其他元素的分组，`aria-expanded` 状态指示了被控制的分组当前是被展开还是折叠。如果按钮有设置了 `aria-expanded="false"`，那么分组当前没有开，如果被展开了，则按钮会有 `aria-expanded="undefined"`，如果属性被忽略，则是不可展开。
+  - : 如果按钮控制了其他元素的分组，`aria-expanded` 状态指示了被控制的分组当前是被展开还是折叠。如果按钮设置了 `aria-expanded="false"`，则分组当前未展开；如果按钮设置了 aria-expanded="true"，则分组当前已展开；如果按钮设置了 `aria-expanded="undefined"`，则其是不可展开的。
 
 ### 基本的按钮
 

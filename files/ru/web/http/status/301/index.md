@@ -1,11 +1,6 @@
 ---
 title: 301 Moved Permanently
 slug: Web/HTTP/Status/301
-tags:
-  - HTTP
-  - Код ответа
-  - Перенаправление
-translation_of: Web/HTTP/Status/301
 ---
 {{HTTPSidebar}}
 

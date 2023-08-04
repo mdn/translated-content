@@ -1,7 +1,6 @@
 ---
 title: Обрезка и маска
 slug: Web/SVG/Tutorial/Clipping_and_masking
-translation_of: Web/SVG/Tutorial/Clipping_and_masking
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}
 

@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext
 ---
 
 {{APIRef("WebGL")}}
@@ -11,8 +10,8 @@ translation_of: Web/API/WebGLRenderingContext
 Чтобы получить объект с помощью этого интерфейса вызовите метод {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} элемента \<canvas> , используя "webgl" в качестве аргумента.
 
 ```js
-var canvas = document.getElementById('myCanvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("myCanvas");
+var gl = canvas.getContext("webgl");
 ```
 
 После того, как вы получили WebGL контекст, вы можете его использовать для рендеринга.
@@ -297,9 +296,7 @@ These methods manage WebGL extensions:
 
 ## Specifications
 
-| Specification                                                            | Status                   | Comment            |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('WebGL', "#5.14", "WebGLRenderingContext")}} | {{Spec2('WebGL')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

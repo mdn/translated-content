@@ -1,7 +1,6 @@
 ---
 title: NON binaire (~)
 slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_NOT
 ---
 
 {{jsSidebar("Operators")}}

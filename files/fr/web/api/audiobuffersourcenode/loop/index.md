@@ -1,7 +1,6 @@
 ---
 title: AudioBufferSourceNode.loop
 slug: Web/API/AudioBufferSourceNode/loop
-translation_of: Web/API/AudioBufferSourceNode/loop
 ---
 
 {{ APIRef("Web Audio API") }}

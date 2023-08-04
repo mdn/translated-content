@@ -1,7 +1,6 @@
 ---
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/bind
 ---
 
 {{JSRef("Global_Objects", "Function")}}

@@ -1,13 +1,8 @@
 ---
 title: StyleSheet
 slug: Web/API/StyleSheet
-tags:
-  - Интерфейсы
-  - Объектная модель CSS
-  - Референсы
-  - Таблицы стилей
-translation_of: Web/API/StyleSheet
 ---
+
 {{APIRef("CSSOM")}} Объектная модель CSS
 
 Объект, реализующий интерфейс `StyleSheet`, представляет отдельную таблицу стилей. Таблица стилей CSS далее будет представлена более специализированным интерфейсом {{domxref("CSSStyleSheet")}}.
@@ -31,12 +26,9 @@ translation_of: Web/API/StyleSheet
 
 ## Спецификации
 
-| Спецификация                                                                                                     | Статус                           | Комментарий                                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
-| {{ SpecName('CSSOM', '#stylesheet', 'StyleSheet') }}                                             | {{ Spec2('CSSOM') }}     | Без изменений с {{ SpecName('DOM2 Style') }}. |
-| {{ SpecName('DOM2 Style', 'stylesheets.html#StyleSheets-StyleSheet', 'StyleSheet') }} | {{ Spec2('DOM2 Style') }} | Первоначальное определение.                           |
+{{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

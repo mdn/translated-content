@@ -1,7 +1,6 @@
 ---
 title: Trabajando con objetos
 slug: Web/JavaScript/Guide/Working_with_objects
-original_slug: Web/JavaScript/Guide/Trabajando_con_objectos
 ---
 
 {{jsSidebar("Guía de JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}

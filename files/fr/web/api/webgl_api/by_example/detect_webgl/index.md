@@ -1,7 +1,6 @@
 ---
 title: Détecter WebGL
 slug: Web/API/WebGL_API/By_example/Detect_WebGL
-translation_of: Web/API/WebGL_API/By_example/Detect_WebGL
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple","Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs")}}

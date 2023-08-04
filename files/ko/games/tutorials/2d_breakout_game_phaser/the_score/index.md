@@ -1,7 +1,6 @@
 ---
 title: 득점
 slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
-original_slug: Games/Tutorials/2D_breakout_game_Phaser/득점
 ---
 
 {{GamesSidebar}}

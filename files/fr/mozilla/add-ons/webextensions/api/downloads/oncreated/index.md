@@ -1,7 +1,6 @@
 ---
 title: downloads.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onCreated
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onCreated
 ---
 
 {{AddonSidebar()}}

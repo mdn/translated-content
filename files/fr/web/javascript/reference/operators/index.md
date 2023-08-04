@@ -1,7 +1,6 @@
 ---
 title: Expressions et opérateurs
 slug: Web/JavaScript/Reference/Operators
-translation_of: Web/JavaScript/Reference/Operators
 ---
 
 {{jsSidebar("Operators")}}

@@ -1,7 +1,6 @@
 ---
 title: "<tr>: El elemento Fila de la tabla"
 slug: Web/HTML/Element/tr
-original_slug: Web/HTML/Elemento/tr
 ---
 
 ## Resumen

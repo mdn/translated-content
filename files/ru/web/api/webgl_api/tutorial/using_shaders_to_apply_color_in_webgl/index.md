@@ -32,20 +32,20 @@ slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 Чтобы теперь использовать эти цвета, вершинному шейдеру необходимо обновиться, поместив соответствующий цвет из буфера цвета:
 
 ```html
-    <script id="shader-vs" type="x-shader/x-vertex">
-      attribute vec3 aVertexPosition;
-      attribute vec4 aVertexColor;
+<script id="shader-vs" type="x-shader/x-vertex">
+  attribute vec3 aVertexPosition;
+  attribute vec4 aVertexColor;
 
-      uniform mat4 uMVMatrix;
-      uniform mat4 uPMatrix;
+  uniform mat4 uMVMatrix;
+  uniform mat4 uPMatrix;
 
-      varying lowp vec4 vColor;
+  varying lowp vec4 vColor;
 
-      void main(void) {
-        gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
-        vColor = aVertexColor;
-      }
-    </script>
+  void main(void) {
+    gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+    vColor = aVertexColor;
+  }
+</script>
 ```
 
 Ключевым отличием здесь является то, что для каждой вершины, мы задаём цвет на соответствующее значение из массива цвета.
@@ -55,23 +55,23 @@ slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 Чтобы напомнить, как фрагментный шейдер выглядел ранее, ниже приведён его код:
 
 ```html
-    <script id="shader-fs" type="x-shader/x-fragment">
-      void main(void) {
-        gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
-      }
-    </script>
+<script id="shader-fs" type="x-shader/x-fragment">
+  void main(void) {
+    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+  }
+</script>
 ```
 
 Для того, чтобы подобрать интерполируемый цвет каждому пикселю, нам просто необходимо изменить его, получив значение из переменной `vColor`:
 
 ```html
-    <script id="shader-fs" type="x-shader/x-fragment">
-      varying lowp vec4 vColor;
+<script id="shader-fs" type="x-shader/x-fragment">
+  varying lowp vec4 vColor;
 
-      void main(void) {
-        gl_FragColor = vColor;
-      }
-    </script>
+  void main(void) {
+    gl_FragColor = vColor;
+  }
+</script>
 ```
 
 Это простое изменение, но с помощью него каждый фрагмент вместо фиксированного значения получает значение интерполируемого цвета на основе его расположения относительно вершин.
@@ -81,15 +81,15 @@ slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 Далее, необходимо добавить код в процедуру `initShaders()` для задания значений атрибута цвета для шейдерной программы:
 
 ```js
-  vertexColorAttribute = gl.getAttribLocation(shaderProgram, "aVertexColor");
-  gl.enableVertexAttribArray(vertexColorAttribute);
+vertexColorAttribute = gl.getAttribLocation(shaderProgram, "aVertexColor");
+gl.enableVertexAttribArray(vertexColorAttribute);
 ```
 
 Затем, drawScene() может быть исправлен на фактическое использование этих цветов при отрисовке квадрата:
 
 ```js
-  gl.bindBuffer(gl.ARRAY_BUFFER, squareVerticesColorBuffer);
-  gl.vertexAttribPointer(vertexColorAttribute, 4, gl.FLOAT, false, 0, 0);
+gl.bindBuffer(gl.ARRAY_BUFFER, squareVerticesColorBuffer);
+gl.vertexAttribPointer(vertexColorAttribute, 4, gl.FLOAT, false, 0, 0);
 ```
 
 На этом этапе, вы можете посмотреть [результат работы написанного кода](/samples/webgl/sample3/index.html), если используете браузер, поддерживающий WebGL. Вы увидите нечто похожее на следующий рисунок (расположенный по центру в большом чёрном поле):

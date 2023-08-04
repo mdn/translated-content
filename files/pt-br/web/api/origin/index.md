@@ -1,7 +1,6 @@
 ---
 title: Document.origin
 slug: Web/API/origin
-original_slug: Web/API/Document/origin
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}

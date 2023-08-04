@@ -1,7 +1,6 @@
 ---
 title: Document.fullscreenElement
 slug: Web/API/Document/fullscreenElement
-original_slug: Web/API/DocumentOrShadowRoot/fullscreenElement
 l10n:
   sourceCommit: 23aea0fbb04893c64890c89a634250283e2beb71
 ---

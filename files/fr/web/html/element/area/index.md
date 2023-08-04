@@ -1,7 +1,6 @@
 ---
 title: "<area> : l'élément de zone"
 slug: Web/HTML/Element/area
-translation_of: Web/HTML/Element/area
 ---
 
 {{HTMLSidebar}}

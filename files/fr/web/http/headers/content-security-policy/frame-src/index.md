@@ -1,7 +1,6 @@
 ---
 title: "CSP : frame-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/frame-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/frame-src
 ---
 
 {{HTTPSidebar}}

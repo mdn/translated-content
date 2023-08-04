@@ -50,24 +50,24 @@ console.log(alphaNumeric)  // Resultado: ['a', 'b', 'c', [1, 2, 3] ]
 Para objetos de array semelhantes, o padrão não é espalhado. `Symbol.isConcatSpreadable`precisa ser configurado para `true` para poder conseguir um a array alinhada:
 
 ```js
-let x = [1, 2, 3]
+let x = [1, 2, 3];
 
 let fakeArray = {
   [Symbol.isConcatSpreadable]: true,
   length: 2,
-  0: 'hello',
-  1: 'world'
-}
+  0: "hello",
+  1: "world",
+};
 
-x.concat(fakeArray)  // [1, 2, 3, "hello", "world"]
+x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
 ```
 
 > **Nota:** A propriedade `length` é usada para controlar o número de propriedade dos objetos para ser adicionado. No exemplo acima, `length:2` indica que duas propriedades tem de ser adicionado.
 
 ## Especificações
 
-| Especificação                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                                          |
+| -------------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-symbol.isconcatspreadable', 'Symbol.isconcatspreadable')}} |
 
 ## Compatibilidade com navegadores

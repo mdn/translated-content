@@ -1,7 +1,6 @@
 ---
 title: dx
 slug: Web/SVG/Attribute/dx
-translation_of: Web/SVG/Attribute/dx
 ---
 
 {{SVGRef}}

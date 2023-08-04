@@ -1,5 +1,5 @@
 ---
-title: ':last-child'
+title: ":last-child"
 slug: Web/CSS/:last-child
 ---
 
@@ -31,7 +31,7 @@ elemento:last-child { propriedades de estilo }
 
 ```css
 li:last-child {
-    background-color: lime;
+  background-color: lime;
 }
 ```
 
@@ -39,8 +39,8 @@ li:last-child {
 
 ## Especificações
 
-| Especificação                                                                        | Status                                   | Comentário         |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
+| Especificação                                                  | Status                        | Comentário         |
+| -------------------------------------------------------------- | ----------------------------- | ------------------ |
 | {{ SpecName('CSS4 Selectors', '#last-child', ':last-child') }} | {{ Spec2('CSS4 Selectors') }} | Sem mudança.       |
 | {{ SpecName('CSS3 Selectors', '#last-child', ':last-child') }} | {{ Spec2('CSS3 Selectors') }} | Definição inicial. |
 

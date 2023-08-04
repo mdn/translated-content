@@ -1,7 +1,6 @@
 ---
 title: KeyboardEvent.charCode
 slug: Web/API/KeyboardEvent/charCode
-translation_of: Web/API/KeyboardEvent/charCode
 ---
 
 {{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}

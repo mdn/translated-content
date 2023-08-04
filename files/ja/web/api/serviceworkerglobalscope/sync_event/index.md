@@ -1,5 +1,5 @@
 ---
-title: 'ServiceWorkerGlobalScope: sync イベント'
+title: "ServiceWorkerGlobalScope: sync イベント"
 slug: Web/API/ServiceWorkerGlobalScope/sync_event
 l10n:
   sourceCommit: ad50409e75b81d80e24c745cd033ee9f57fdb4ec

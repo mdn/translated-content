@@ -1,7 +1,6 @@
 ---
 title: Secure Contexts
 slug: Web/Security/Secure_Contexts
-translation_of: Web/Security/Secure_Contexts
 ---
 
 Un navigateur entre dans un **contexte sécurisé** quand il a satisfait les exigences minimale de sécurité. Un contexte sécurisé permet au navigateur de mettre à disposition des APIs qui nécessitent des transferts sécurisés avec l'utilisateur.

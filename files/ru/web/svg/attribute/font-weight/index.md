@@ -1,9 +1,6 @@
 ---
 title: font-weight
 slug: Web/SVG/Attribute/font-weight
-tags:
-  - SVG
-translation_of: Web/SVG/Attribute/font-weight
 ---
 
 « [SVG Attribute reference home](/en/SVG/Attribute)

@@ -1,7 +1,6 @@
 ---
 title: HTMLDivElement
 slug: Web/API/HTMLDivElement
-translation_of: Web/API/HTMLDivElement
 ---
 
 {{ APIRef("HTML DOM") }}

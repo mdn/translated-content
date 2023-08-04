@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.generateCertificate()
 slug: Web/API/RTCPeerConnection/generateCertificate_static
-original_slug: Web/API/RTCPeerConnection/generateCertificate
 ---
 
 {{APIRef("WebRTC")}}

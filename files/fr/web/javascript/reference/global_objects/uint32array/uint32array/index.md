@@ -1,7 +1,6 @@
 ---
 title: Constructeur Uint32Array()
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array
 ---
 
 {{JSRef}}

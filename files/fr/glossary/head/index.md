@@ -1,7 +1,6 @@
 ---
 title: En-tête
 slug: Glossary/Head
-translation_of: Glossary/Head
 ---
 
 L'**en-tête** est la partie d'un document {{glossary("HTML")}} qui contient les {{glossary("métadonnée","métadonnées")}} qui le concernent, comme son auteur, sa description et des liens vers des fichiers {{glossary("CSS")}} ou {{glossary("JavaScript")}} qui s'appliquent au HTML.

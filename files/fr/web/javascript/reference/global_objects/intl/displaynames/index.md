@@ -1,7 +1,6 @@
 ---
 title: Intl.DisplayNames
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 ---
 
 {{JSRef}}

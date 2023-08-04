@@ -1,7 +1,6 @@
 ---
 title: param
 slug: Web/HTML/Element/param
-original_slug: Web/HTML/Elemento/param
 ---
 
 ### Definición

@@ -1,7 +1,6 @@
 ---
 title: CSSValueList
 slug: Web/API/CSSValueList
-translation_of: Web/API/CSSValueList
 ---
 
 {{APIRef("DOM")}}

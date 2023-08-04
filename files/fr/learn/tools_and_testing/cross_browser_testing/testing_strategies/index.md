@@ -1,7 +1,6 @@
 ---
 title: Stratégies pour mener à bien vos tests
 slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}

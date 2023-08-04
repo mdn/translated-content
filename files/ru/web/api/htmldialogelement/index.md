@@ -1,13 +1,8 @@
 ---
 title: HTMLDialogElement
 slug: Web/API/HTMLDialogElement
-tags:
-  - API
-  - Dialog
-  - HTMLDialogElement
-  - Interface
-translation_of: Web/API/HTMLDialogElement
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 **`HTMLDialogElement`** - интерфейс взаимодействия, предоставляющий методы для управления {{HTMLElement("dialog")}} элементами. Он наследует свойства и методы от {{domxref("HTMLElement")}}.
@@ -39,58 +34,59 @@ _Наследует методы своего родителя, {{domxref("HTMLE
 Примеры ниже показывают простую кнопку, которая при нажатии открывает {{htmlelement("dialog")}}, содержащий элемент {{htmlelement("form")}}, используя метод {{domxref("HTMLDialogElement.showModal()")}}. Вы можете нажать кнопку _Отмены,_ чтобы закрыть диалоговое окно (используя функцию {{domxref("HTMLDialogElement.close()")}}), или принять форму, использую кнопку _Принятия_.
 
 ```html
-  <!-- Simple pop-up dialog box, containing a form -->
-  <dialog id="favDialog">
-    <form method="dialog">
-      <section>
-        <p><label for="favAnimal">Favorite animal:</label>
+<!-- Simple pop-up dialog box, containing a form -->
+<dialog id="favDialog">
+  <form method="dialog">
+    <section>
+      <p>
+        <label for="favAnimal">Favorite animal:</label>
         <select id="favAnimal" name="favAnimal">
           <option></option>
           <option>Brine shrimp</option>
           <option>Red panda</option>
           <option>Spider monkey</option>
-        </select></p>
-      </section>
-      <menu>
-        <button id="cancel" type="reset">Cancel</button>
-        <button type="submit">Confirm</button>
-      </menu>
-    </form>
-  </dialog>
+        </select>
+      </p>
+    </section>
+    <menu>
+      <button id="cancel" type="reset">Cancel</button>
+      <button type="submit">Confirm</button>
+    </menu>
+  </form>
+</dialog>
 
-  <menu>
-    <button id="updateDetails">Update details</button>
-  </menu>
+<menu>
+  <button id="updateDetails">Update details</button>
+</menu>
 
-  <script>
-    (function() {
-      var updateButton = document.getElementById('updateDetails');
-      var cancelButton = document.getElementById('cancel');
-      var dialog = document.getElementById('favDialog');
-      dialog.returnValue = 'favAnimal';
+<script>
+  (function () {
+    var updateButton = document.getElementById("updateDetails");
+    var cancelButton = document.getElementById("cancel");
+    var dialog = document.getElementById("favDialog");
+    dialog.returnValue = "favAnimal";
 
-      function openCheck(dialog) {
-        if(dialog.open) {
-          console.log('Dialog open');
-        } else {
-          console.log('Dialog closed');
-        }
+    function openCheck(dialog) {
+      if (dialog.open) {
+        console.log("Dialog open");
+      } else {
+        console.log("Dialog closed");
       }
+    }
 
-      // Update button opens a modal dialog
-      updateButton.addEventListener('click', function() {
-        dialog.showModal();
-        openCheck(dialog);
-      });
+    // Update button opens a modal dialog
+    updateButton.addEventListener("click", function () {
+      dialog.showModal();
+      openCheck(dialog);
+    });
 
-      // Form cancel button closes the dialog box
-      cancelButton.addEventListener('click', function() {
-        dialog.close('animalNotChosen');
-        openCheck(dialog);
-      });
-
-    })();
-  </script>
+    // Form cancel button closes the dialog box
+    cancelButton.addEventListener("click", function () {
+      dialog.close("animalNotChosen");
+      openCheck(dialog);
+    });
+  })();
+</script>
 ```
 
 > **Примечание:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
@@ -99,7 +95,7 @@ _Наследует методы своего родителя, {{domxref("HTMLE
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

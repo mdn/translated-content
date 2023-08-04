@@ -22,7 +22,7 @@ l10n:
 
 ```js
 function processData(d) {
-   // データを処理...
+  // データを処理...
 }
 
 dragTarget.addEventListener(

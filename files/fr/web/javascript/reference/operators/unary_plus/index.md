@@ -1,7 +1,6 @@
 ---
 title: Plus unaire (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
-translation_of: Web/JavaScript/Reference/Operators/Unary_plus
 ---
 
 {{jsSidebar("Operators")}}

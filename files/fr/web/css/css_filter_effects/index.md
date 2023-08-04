@@ -1,7 +1,6 @@
 ---
 title: Filter Effects
 slug: Web/CSS/CSS_filter_effects
-translation_of: Web/CSS/Filter_Effects
 ---
 
 {{CSSRef}}

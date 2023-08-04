@@ -1,7 +1,6 @@
 ---
 title: margin-bottom
 slug: Web/CSS/margin-bottom
-translation_of: Web/CSS/margin-bottom
 ---
 
 {{CSSRef}}

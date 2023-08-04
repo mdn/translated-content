@@ -1,7 +1,6 @@
 ---
 title: inline-size
 slug: Web/CSS/inline-size
-translation_of: Web/CSS/inline-size
 ---
 
 {{CSSRef}}

@@ -1,5 +1,5 @@
 ---
-title: ':empty'
+title: ":empty"
 slug: Web/CSS/:empty
 ---
 
@@ -26,7 +26,7 @@ div:empty {
 <div class="box"><!-- Eu serei verde. --></div>
 <div class="box">Eu serei rosa.</div>
 <div class="box">
-    <!-- Eu serei rosa por causa do espaço em branco em volta desse comantário -->
+  <!-- Eu serei rosa por causa do espaço em branco em volta desse comantário -->
 </div>
 ```
 
@@ -68,8 +68,8 @@ The text that provides the interactive control's accessible name can be hidden u
 
 ## Specifications
 
-| Specification                                                                    | Status                                   | Comment            |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
+| Specification                                               | Status                        | Comment            |
+| ----------------------------------------------------------- | ----------------------------- | ------------------ |
 | {{ SpecName('CSS4 Selectors', '#empty-pseudo', ':empty') }} | {{ Spec2('CSS4 Selectors') }} | No change          |
 | {{ SpecName('CSS3 Selectors', '#empty-pseudo', ':empty') }} | {{ Spec2('CSS3 Selectors') }} | Initial definition |
 

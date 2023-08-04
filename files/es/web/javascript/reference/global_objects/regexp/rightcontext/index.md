@@ -1,7 +1,6 @@
 ---
 title: RegExp.rightContext ($')
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/rightContext
-original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/rightContext
 ---
 
 {{JSRef}} {{non-standard_header}}

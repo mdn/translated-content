@@ -1,7 +1,6 @@
 ---
 title: element.attributes
 slug: Web/API/Element/attributes
-translation_of: Web/API/Element/attributes
 ---
 
 {{ APIRef("DOM") }}

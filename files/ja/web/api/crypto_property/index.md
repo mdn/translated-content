@@ -1,7 +1,6 @@
 ---
 title: self.crypto
 slug: Web/API/crypto_property
-original_slug: Web/API/Window/crypto
 ---
 
 {{APIRef}}

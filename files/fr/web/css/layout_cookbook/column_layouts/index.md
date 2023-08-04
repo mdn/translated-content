@@ -1,7 +1,6 @@
 ---
 title: Disposition en colonnes
 slug: Web/CSS/Layout_cookbook/Column_layouts
-translation_of: Web/CSS/Layout_cookbook/Column_layouts
 ---
 
 {{CSSRef}}

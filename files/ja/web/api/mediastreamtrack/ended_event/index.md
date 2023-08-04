@@ -1,7 +1,6 @@
 ---
-title: 'MediaStreamTrack: ended イベント'
+title: "MediaStreamTrack: ended イベント"
 slug: Web/API/MediaStreamTrack/ended_event
-original_slug: Web/API/MediaStreamTrack/onended
 ---
 
 {{DefaultAPISidebar("Media Capture and Streams")}}
