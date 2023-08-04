@@ -1,7 +1,6 @@
 ---
 title: privacy.services
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/services
-translation_of: Mozilla/Add-ons/WebExtensions/API/privacy/services
 ---
 
 {{AddonSidebar}}

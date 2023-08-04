@@ -1,7 +1,6 @@
 ---
 title: class expression
 slug: Web/JavaScript/Reference/Operators/class
-translation_of: Web/JavaScript/Reference/Operators/class
 ---
 
 {{jsSidebar("Operators")}}

@@ -1,12 +1,6 @@
 ---
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Оператор
-  - Экспериментальный
-translation_of: Web/JavaScript/Reference/Statements/for...of
 ---
 
 {{jsSidebar("Statements")}}

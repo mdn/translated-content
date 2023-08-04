@@ -1,7 +1,6 @@
 ---
 title: I18N
 slug: Glossary/I18N
-translation_of: Glossary/I18N
 ---
 
 i18n (issu de "internationalisation", un mot de 20 lettres) est l'ensemble des bonnes pratiques pour permettre à des produits ou des services d'être lisiblement adaptés à toute culture visée.

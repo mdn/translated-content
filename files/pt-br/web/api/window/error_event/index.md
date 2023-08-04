@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onerror
 slug: Web/API/Window/error_event
-original_slug: Web/API/GlobalEventHandlers/onerror
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -47,13 +46,13 @@ Quando um erro de sintaxe**(?)** ocorre em um script, carregado de uma [origem d
 
 ```js
 window.onerror = function (msg, url, lineNo, columnNo, error) {
-    var string = msg.toLowerCase();
-    var substring = "script error";
-    if (string.indexOf(substring) > -1){
-        alert('Script Error: See Browser Console for Detail');
-    } else {
-        alert(msg, url, lineNo, columnNo, error);
-    }
+  var string = msg.toLowerCase();
+  var substring = "script error";
+  if (string.indexOf(substring) > -1) {
+    alert("Script Error: See Browser Console for Detail");
+  } else {
+    alert(msg, url, lineNo, columnNo, error);
+  }
   return false;
 };
 ```
@@ -62,15 +61,11 @@ Quando usamos a marcação HTML inline (`<body onerror="alert('an error occurred
 
 ## Especificações
 
-| Especificação                                                                                    | Status                           | Comentário |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onerror','onerror')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-Antes do Firefox 14, quando um {{HTMLElement("script")}} falhava na inicialização, `window.onerror` era invocada com a mensagem **"Error loading script"(erro de leitura de script)**. Isto foi corrigido no [Erro do Firefox 737087](https://bugzil.la/737087), agora `scriptElement.onerror` é chamado ao invés disto.
-
-Desde o Firefox 31, os últimos 2 argumentos (`colno` and `error`) foram adicionados, o que significa que você tem acesso a pilha de rastreamento de um erro de script através do `window.onerror` por intermédio do `Error` object ([Erro do Firefox 355430](https://bugzil.la/355430).)
+{{Compat}}
 
 ## Veja também
 

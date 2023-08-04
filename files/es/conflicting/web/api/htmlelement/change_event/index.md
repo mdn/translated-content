@@ -1,8 +1,6 @@
 ---
 title: GlobalEventHandlers.onchange
 slug: conflicting/Web/API/HTMLElement/change_event
-original_slug: Web/API/GlobalEventHandlers/onchange
-browser-compat: api.HTMLElement.change_event
 ---
 
 {{ ApiRef("HTML DOM") }}

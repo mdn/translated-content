@@ -1,7 +1,6 @@
 ---
 title: cross-fade()
 slug: Web/CSS/cross-fade
-translation_of: Web/CSS/cross-fade()
 ---
 
 {{CSSRef}}

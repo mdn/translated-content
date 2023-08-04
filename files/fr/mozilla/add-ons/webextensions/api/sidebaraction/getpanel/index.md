@@ -1,7 +1,6 @@
 ---
 title: sidebarAction.getPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
-translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
 ---
 
 {{AddonSidebar()}}

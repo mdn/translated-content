@@ -1,7 +1,6 @@
 ---
 title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/toString
 ---
 
 {{JSRef}}

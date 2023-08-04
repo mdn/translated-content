@@ -1,7 +1,6 @@
 ---
 title: Le sélecteur :visited et la vie privée
 slug: Web/CSS/Privacy_and_the_:visited_selector
-translation_of: Web/CSS/Privacy_and_the_:visited_selector
 ---
 
 {{CSSRef}}

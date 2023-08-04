@@ -52,8 +52,8 @@ Accept-Patch: application/merge-patch+json
 
 ## Especificações
 
-| Specification                                        | Título     |
-| ---------------------------------------------------- | ---------- |
+| Specification                          | Título     |
+| -------------------------------------- | ---------- |
 | {{RFC("5789", "Accept-Patch", "3.1")}} | HTTP PATCH |
 
 ## Compatibilidade com navegadores

@@ -1,7 +1,6 @@
 ---
 title: await
 slug: Web/JavaScript/Reference/Operators/await
-translation_of: Web/JavaScript/Reference/Operators/await
 ---
 
 {{jsSidebar("Operators")}}

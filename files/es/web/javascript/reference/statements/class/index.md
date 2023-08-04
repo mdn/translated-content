@@ -1,7 +1,6 @@
 ---
 title: class
 slug: Web/JavaScript/Reference/Statements/class
-original_slug: Web/JavaScript/Referencia/Sentencias/class
 ---
 
 {{jsSidebar("Statements")}}

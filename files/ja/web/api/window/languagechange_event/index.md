@@ -1,5 +1,5 @@
 ---
-title: 'Window: languagechange イベント'
+title: "Window: languagechange イベント"
 slug: Web/API/Window/languagechange_event
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: SubtleCrypto
 slug: Web/API/SubtleCrypto
-translation_of: Web/API/SubtleCrypto
 ---
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}

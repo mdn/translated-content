@@ -1,7 +1,6 @@
 ---
 title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
-translation_of: Web/JavaScript/Reference/Statements/do...while
 ---
 
 {{jsSidebar("Statements")}}

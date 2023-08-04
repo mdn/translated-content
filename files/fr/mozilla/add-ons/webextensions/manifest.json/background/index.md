@@ -1,7 +1,6 @@
 ---
 title: background
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 ---
 
 {{AddonSidebar}}

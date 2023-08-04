@@ -1,7 +1,6 @@
 ---
 title: En-têtes HTTP
 slug: Web/HTTP/Headers
-translation_of: Web/HTTP/Headers
 ---
 
 {{HTTPSidebar}}

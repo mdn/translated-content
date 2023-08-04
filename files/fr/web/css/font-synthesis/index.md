@@ -1,7 +1,6 @@
 ---
 title: font-synthesis
 slug: Web/CSS/font-synthesis
-translation_of: Web/CSS/font-synthesis
 ---
 
 {{CSSRef}}

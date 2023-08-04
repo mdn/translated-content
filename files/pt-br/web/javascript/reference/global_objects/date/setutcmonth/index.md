@@ -43,8 +43,8 @@ theBigDay.setUTCMonth(11);
 
 ## Especificações
 
-| Especificação                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                                            |
+| ---------------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-date.prototype.setutcmonth', 'Date.prototype.setUTCMonth')}} |
 
 ## Compatibilidade com navegadores

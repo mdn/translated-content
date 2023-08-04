@@ -1,14 +1,11 @@
 ---
-title: Feature Policy
+title: Permissions Policy
 slug: Web/HTTP/Permissions_Policy
-original_slug: Web/HTTP/Feature_Policy
 ---
 
 {{HTTPSidebar}}
 
 機能ポリシーで、ウェブ開発者はブラウザーの特定の機能や API を有効化、無効化したり、動作を変更したりすることができます。これは{{Glossary("CSP", "コンテンツセキュリティポリシー")}}に似ていますが、セキュリティの動作ではなく機能の制御を行うものです。
-
-> **メモ:** `Feature-Policy` ヘッダーは仕様書で `Permissions-Policy` に改名されたので、この記事もそのうち、変更を反映するために更新されます。
 
 ## 概要
 
@@ -38,7 +35,7 @@ original_slug: Web/HTTP/Feature_Policy
 
 機能ポリシーでは、機能を制御するポリシーを指定する方法を 2 つ提供しています。
 
-- {{httpheader("Feature-Policy")}} HTTP ヘッダー
+- {{httpheader("Permissions-Policy")}} HTTP ヘッダー
 - iframe の {{HTMLElement("iframe","<code>allow</code>","#Attributes")}} 属性
 
 HTTP ヘッダーと allow 属性の主な違いは、 allow 属性が iframe 内の機能のみを制御することです。ヘッダーは、レスポンス内とそのページ内の埋め込みコンテンツの機能を制御します。
@@ -84,7 +81,7 @@ The features include:
 
 ウェブは、悪用された場合にプライバシーやセキュリティ上のリスクを伴う可能性のある機能や API を提供します。場合によっては、そのような機能がウェブサイト上でどのように使用されるかを厳密に制限することもできます。ウェブサイト内の特定の原点やフレームに対して機能を有効/無効にするポリシー制御の機能があります。利用可能な場合、機能は Permissions API、または機能が利用可能かどうかを確認する機能固有のメカニズムと統合されます。
 
-機能には以下のものが含まれます ([機能一覧](/ja/docs/Web/HTTP/Headers/Feature-Policy#Directives)を参照してください)。
+機能には以下のものが含まれます ([機能一覧](/ja/docs/Web/HTTP/Headers/Permissions-Policy#directives)を参照してください)。
 
 - Accelerometer
 - Ambient light sensor
@@ -113,12 +110,12 @@ The features include:
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Feature-Policy")}}
+{{Compat("http.headers.Permissions-Policy")}}
 
 ## 関連情報
 
 - [機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
-- HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダー
+- HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダー
 - iframe の {{HTMLElement("iframe","<code>allow</code>","#Attributes")}} 属性
 - [Introduction to Feature Policy](https://developers.google.com/web/updates/2018/06/feature-policy)
 - [Feature policies on www.chromestatus.com](https://www.chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)

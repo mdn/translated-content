@@ -15581,29 +15581,6 @@
       "Langdom"
     ]
   },
-  "Web/API/Window/DOMContentLoaded_event": {
-    "modified": "2020-10-15T21:21:31.073Z",
-    "contributors": [
-      "windybniw",
-      "shaw1121",
-      "knightyun",
-      "1v9",
-      "wbamberg",
-      "hhxxhg",
-      "274659281",
-      "fscholz",
-      "Niefee",
-      "xgqfrms-GitHub",
-      "BoatGina",
-      "broven",
-      "bambooom",
-      "ZivHe",
-      "ziyunfei",
-      "less",
-      "monjer",
-      "jtyjty99999"
-    ]
-  },
   "Web/API/Window/afterprint_event": {
     "modified": "2020-10-15T21:52:37.979Z",
     "contributors": ["weibangtuo", "fscholz", "xgqfrms-GitHub"]

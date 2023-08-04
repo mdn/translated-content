@@ -1,7 +1,6 @@
 ---
 title: 412 Precondition Failed
 slug: Web/HTTP/Status/412
-translation_of: Web/HTTP/Status/412
 ---
 {{HTTPSidebar}}
 

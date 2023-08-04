@@ -1,7 +1,6 @@
 ---
 title: Valor
 slug: Glossary/Value
-original_slug: Glossary/Valor
 ---
 
 {{jsSidebar}}

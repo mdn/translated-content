@@ -1,7 +1,6 @@
 ---
 title: Element.scrollTop
 slug: Web/API/Element/scrollTop
-translation_of: Web/API/Element/scrollTop
 ---
 
 {{APIRef("DOM")}}

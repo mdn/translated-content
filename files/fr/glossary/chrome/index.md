@@ -1,7 +1,6 @@
 ---
 title: Chrome
 slug: Glossary/Chrome
-translation_of: Glossary/Chrome
 ---
 
 ## Résumé

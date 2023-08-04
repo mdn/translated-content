@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.quadraticCurveTo()
 slug: Web/API/CanvasRenderingContext2D/quadraticCurveTo
-translation_of: Web/API/CanvasRenderingContext2D/quadraticCurveTo
 ---
 
 {{APIRef}}

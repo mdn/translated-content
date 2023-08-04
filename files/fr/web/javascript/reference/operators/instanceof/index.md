@@ -1,7 +1,6 @@
 ---
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
-translation_of: Web/JavaScript/Reference/Operators/instanceof
 ---
 
 {{jsSidebar("Operators")}}

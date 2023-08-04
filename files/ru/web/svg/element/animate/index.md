@@ -1,13 +1,6 @@
 ---
 title: <animate>
 slug: Web/SVG/Element/animate
-tags:
-  - NeedsUpdate
-  - SVG
-  - SVG Animation
-  - svg анимация
-translation_of: Web/SVG/Element/animate
-original_slug: Web/SVG/Элемент/animate
 ---
 
 {{SVGRef}}

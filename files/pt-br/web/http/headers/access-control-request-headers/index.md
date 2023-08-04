@@ -39,8 +39,8 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 ## Especificações
 
-| Specification                                                                                                                | Status                   | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| Specification                                                                                  | Status             | Comment            |
+| ---------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
 | {{SpecName('Fetch','#http-access-control-request-headers', 'Access-Control-Request-Headers')}} | {{Spec2("Fetch")}} | Definição inicial. |
 
 ## Compatibilidade com navegadores

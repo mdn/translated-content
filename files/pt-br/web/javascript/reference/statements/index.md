@@ -80,11 +80,11 @@ Para visualizar em ordem alfabética use a barra de rolagem à esquerda.
 
 ## Especificações
 
-| Specification                                                                                                                                                            | Status                   | Comment                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------- |
-| ECMAScript 1st Edition.                                                                                                                                                  | Standard                 | Initial definition.                          |
-| {{SpecName('ES5.1', '#sec-12', 'Statements')}}                                                                                                             | {{Spec2('ES5.1')}} |                                              |
-| {{SpecName('ES6', '#sec-ecmascript-language-statements-and-declarations', 'ECMAScript Language: Statements and Declarations')}} | {{Spec2('ES6')}}     | New: function\*, let, for...of, yield, class |
+| Specification                                                                                                                   | Status             | Comment                                      |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------- |
+| ECMAScript 1st Edition.                                                                                                         | Standard           | Initial definition.                          |
+| {{SpecName('ES5.1', '#sec-12', 'Statements')}}                                                                                  | {{Spec2('ES5.1')}} |                                              |
+| {{SpecName('ES6', '#sec-ecmascript-language-statements-and-declarations', 'ECMAScript Language: Statements and Declarations')}} | {{Spec2('ES6')}}   | New: function\*, let, for...of, yield, class |
 
 ## Veja também
 

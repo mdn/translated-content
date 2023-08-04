@@ -1,12 +1,6 @@
 ---
 title: Оператор группировки
 slug: Web/JavaScript/Reference/Operators/Grouping
-tags:
-  - JavaScript
-  - Оператор
-  - Основные выражения
-translation_of: Web/JavaScript/Reference/Operators/Grouping
-original_slug: Web/JavaScript/Reference/Operators/Группировка
 ---
 
 {{jsSidebar("Operators")}}

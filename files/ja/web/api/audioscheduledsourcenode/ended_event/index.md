@@ -1,7 +1,6 @@
 ---
 title: "AudioScheduledSourceNode: ended イベント"
 slug: Web/API/AudioScheduledSourceNode/ended_event
-original_slug: Web/API/AudioScheduledSourceNode/onended
 l10n:
   sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---

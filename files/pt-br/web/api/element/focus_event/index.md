@@ -1,7 +1,6 @@
 ---
 title: focus
 slug: Web/API/Element/focus_event
-original_slug: Web/Events/focus
 ---
 
 O evento `focus` é acionado assim que um elemento recebe um foco. O grande diferencial entre este evento e o evento [`focusin`](/pt-BR/docs/Mozilla_event_reference/focusin), é que esse segundo "borbulha".
@@ -25,12 +24,12 @@ O evento `focus` é acionado assim que um elemento recebe um foco. O grande dife
 
 ## Propriedades
 
-| Property                                 | Type                                               | Description                                |
-| ---------------------------------------- | -------------------------------------------------- | ------------------------------------------ |
+| Property                           | Type                                     | Description                                |
+| ---------------------------------- | ---------------------------------------- | ------------------------------------------ |
 | `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target (DOM element)                 |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                   | The type of event.                         |
-| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                       | Whether the event normally bubbles or not. |
-| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                       | Whether the event is cancellable or not.   |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | The type of event.                         |
+| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Whether the event normally bubbles or not. |
+| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Whether the event is cancellable or not.   |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | null                                       |
 
 ## Eventos Delegados
@@ -41,9 +40,13 @@ Existem 2 maneiras diferentes de implementações delegados a partir de um event
 
 (Exemplo de codigo do evento [blur (event)](/pt-BR/docs/Web/Events/blur))
 
+## Especificações
+
+{{Specifications}}
+
 ## Compatibilidade com navegadores
 
-{{Compat("api.Element.focus_event")}}
+{{Compat}}
 
 ## Eventos Relacionais
 

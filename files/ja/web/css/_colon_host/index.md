@@ -1,5 +1,5 @@
 ---
-title: ':host'
+title: ":host"
 slug: Web/CSS/:host
 ---
 

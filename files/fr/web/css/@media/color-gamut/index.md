@@ -1,7 +1,6 @@
 ---
 title: color-gamut
 slug: Web/CSS/@media/color-gamut
-translation_of: Web/CSS/@media/color-gamut
 ---
 
 {{CSSRef}}

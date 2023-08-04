@@ -1,7 +1,6 @@
 ---
 title: "Avaliação: solucionando problemas de acessibilidade"
 slug: Learn/Accessibility/Accessibility_troubleshooting
-original_slug: Learn/Accessibility/Acessibilidade_problemas
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}

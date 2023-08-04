@@ -1,7 +1,6 @@
 ---
 title: Premiers pas en JavaScript
 slug: Learn/JavaScript/First_steps
-translation_of: Learn/JavaScript/First_steps
 ---
 
 {{LearnSidebar}}

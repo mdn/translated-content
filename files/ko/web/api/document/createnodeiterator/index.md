@@ -1,7 +1,6 @@
 ---
 title: NodeFilter
 slug: Web/API/Document/createNodeIterator
-original_slug: Web/API/NodeFilter
 ---
 
 {{APIRef("DOM")}}

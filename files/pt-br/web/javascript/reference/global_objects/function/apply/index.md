@@ -51,8 +51,11 @@ Function.prototype.construct = function (aArgs) {
 > **Nota:** O método `Object.create()` usado acima é relativamente novo. Para um método alternativo utilizando closures, por favor considere a seguinte alternativa.
 >
 > ```js
-> Function.prototype.construct = function(aArgs) {
->   var fConstructor = this, fNewConstr = function() { fConstructor.apply(this, aArgs); };
+> Function.prototype.construct = function (aArgs) {
+>   var fConstructor = this,
+>     fNewConstr = function () {
+>       fConstructor.apply(this, aArgs);
+>     };
 >   fNewConstr.prototype = fConstructor.prototype;
 >   return new fNewConstr();
 > };
@@ -63,16 +66,16 @@ Exemplo de uso:
 ```js
 function MyConstructor() {
   for (var nProp = 0; nProp < arguments.length; nProp++) {
-    this['property' + nProp] = arguments[nProp];
+    this["property" + nProp] = arguments[nProp];
   }
 }
 
-var myArray = [4, 'Hello world!', false];
+var myArray = [4, "Hello world!", false];
 var myInstance = MyConstructor.construct(myArray);
 
-console.log(myInstance.property1);                // logs 'Hello world!'
+console.log(myInstance.property1); // logs 'Hello world!'
 console.log(myInstance instanceof MyConstructor); // logs 'true'
-console.log(myInstance.constructor);              // logs 'MyConstructor'
+console.log(myInstance.constructor); // logs 'MyConstructor'
 ```
 
 > **Nota:** Este método não nativo `Function.construct` não irá funcionar com alguns construtores nativos (como {{jsxref("Date")}}, por exemplo). Nestes casos você tem que usar o método {{jsxref("Function.prototype.bind")}} (por exemplo, imagine ter um array como o seguinte, para ser usado com o construtor {{jsxref("Global_Objects/Date", "Date")}}: `[2012, 11, 4]`; Neste caso você tem que escrever algom como: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` - de qualquer maneira essa não é a melhor forma de fazer as coisas e provavelmente não deve ser utilizado em qualquer ambiente de produção.
@@ -86,12 +89,15 @@ A forma inteligente com que `apply` é utilizado permite à você usar funções
 var numbers = [5, 6, 2, 3, 7];
 
 /* utilizando Math.min/Math.max apply */
-var max = Math.max.apply(null, numbers); /* Isso está prestes a ser igual a Math.max(numbers[0], ...)
+var max = Math.max.apply(
+  null,
+  numbers,
+); /* Isso está prestes a ser igual a Math.max(numbers[0], ...)
                                             ou Math.max(5, 6, ...) */
 var min = Math.min.apply(null, numbers);
 
 /* vs. algoritmo simples baseado em loop */
-max = -Infinity, min = +Infinity;
+(max = -Infinity), (min = +Infinity);
 
 for (var i = 0; i < numbers.length; i++) {
   if (numbers[i] > max) {
@@ -127,24 +133,24 @@ Apply pode ser a melhor forma de monkey-patch uma função nativa do Firefox, ou
 
 ```js
 var originalfoo = someobject.foo;
-someobject.foo = function() {
+someobject.foo = function () {
   // Faça coisas antes de chamar a função
   console.log(arguments);
   // Chama a função como se ela estivesse sido chamada normalmente:
   originalfoo.apply(this, arguments);
   // Rode as coisas que vem depois, aqui.
-}
+};
 ```
 
 Esse método é especialmente útil quando você quer fazer debug de eventos, ou interagir com algo que não tem nenhuma API como os diversos eventos `.on([event]...` events, por exemplo aqueles utilizáveis no [Devtools Inspector](/pt-BR/docs/Tools/Page_Inspector#Developer_API)).
 
 ## Especificações
 
-| Especificação                                                                                                | Status                   | Comentário                                         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------- |
-| ECMAScript 3º Edição.                                                                                        | Padrão                   | Definição inicial, implementado no JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.3.4.3', 'Function.prototype.apply')}}                     | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-function.prototype.apply', 'Function.prototype.apply')}} | {{Spec2('ES6')}}     |                                                    |
+| Especificação                                                                    | Status             | Comentário                                         |
+| -------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| ECMAScript 3º Edição.                                                            | Padrão             | Definição inicial, implementado no JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.3.4.3', 'Function.prototype.apply')}}               | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-function.prototype.apply', 'Function.prototype.apply')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade com navegadores
 

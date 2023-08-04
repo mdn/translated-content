@@ -1,7 +1,6 @@
 ---
 title: "-webkit-mask-position-y"
 slug: Web/CSS/-webkit-mask-position-y
-translation_of: Web/CSS/-webkit-mask-position-y
 ---
 
 {{CSSRef}}{{Non-standard_header}}

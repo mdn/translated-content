@@ -1,7 +1,6 @@
 ---
 title: Document.createCDATASection()
 slug: Web/API/Document/createCDATASection
-translation_of: Web/API/Document/createCDATASection
 ---
 
 {{APIRef("DOM")}}

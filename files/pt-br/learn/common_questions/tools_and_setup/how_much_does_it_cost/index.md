@@ -1,7 +1,6 @@
 ---
 title: Quanto custa fazer algo na Web?
 slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
-original_slug: Learn/Common_questions/How_much_does_it_cost
 ---
 
 Getting involved on the Web isn't as cheap as it looks. In this article we discuss how much you may have to spend, and why.

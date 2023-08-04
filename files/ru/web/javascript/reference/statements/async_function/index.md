@@ -1,7 +1,6 @@
 ---
 title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
-translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
 
 {{jsSidebar("Statements")}}

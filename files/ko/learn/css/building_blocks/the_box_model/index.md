@@ -1,7 +1,6 @@
 ---
 title: 박스 모델
 slug: Learn/CSS/Building_blocks/The_box_model
-original_slug: Learn/CSS/Building_blocks/박스_모델
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}

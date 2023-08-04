@@ -1,13 +1,6 @@
 ---
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Итератор
-  - Функция
-  - Экспериментальный
-translation_of: Web/JavaScript/Reference/Statements/function*
 ---
 
 {{jsSidebar("Statements")}}

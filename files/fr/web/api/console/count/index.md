@@ -1,7 +1,6 @@
 ---
 title: Console.count()
 slug: Web/API/console/count
-translation_of: Web/API/Console/count
 ---
 
 {{APIRef("Console API")}}

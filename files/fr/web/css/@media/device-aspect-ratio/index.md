@@ -1,7 +1,6 @@
 ---
 title: device-aspect-ratio
 slug: Web/CSS/@media/device-aspect-ratio
-translation_of: Web/CSS/@media/device-aspect-ratio
 ---
 
 {{CSSRef}}{{deprecated_header}}

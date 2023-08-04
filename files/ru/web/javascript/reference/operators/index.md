@@ -1,10 +1,6 @@
 ---
 title: Выражения и операторы
 slug: Web/JavaScript/Reference/Operators
-tags:
-  - JavaScript
-  - Operators
-translation_of: Web/JavaScript/Reference/Operators
 ---
 
 {{jsSidebar("Operators")}}

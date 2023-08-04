@@ -1,7 +1,6 @@
 ---
 title: browserAction.getBadgeTextColor()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeTextColor
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeTextColor
 ---
 
 {{AddonSidebar()}}

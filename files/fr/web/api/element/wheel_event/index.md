@@ -1,7 +1,6 @@
 ---
 title: Element.onwheel
 slug: Web/API/Element/wheel_event
-translation_of: Web/API/GlobalEventHandlers/onwheel
 ---
 
 {{ ApiRef("DOM") }}

@@ -1,7 +1,6 @@
 ---
 title: Property accessors
 slug: Web/JavaScript/Reference/Operators/Property_accessors
-translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
 ---
 
 {{jsSidebar("Operators")}}
