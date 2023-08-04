@@ -1,7 +1,6 @@
 ---
 title: NavigatorOnLine
 slug: orphaned/Web/API/NavigatorOnLine
-original_slug: Web/API/NavigatorOnLine
 ---
 
 {{APIRef("HTML DOM")}}

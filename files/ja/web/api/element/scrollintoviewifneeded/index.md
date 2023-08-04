@@ -2,7 +2,6 @@
 title: "Element: scrollIntoViewIfNeeded() メソッド"
 short-title: scrollIntoViewIfNeeded()
 slug: Web/API/Element/scrollIntoViewIfNeeded
-page-type: web-api-instance-method
 l10n:
   sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---

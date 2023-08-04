@@ -1,5 +1,5 @@
 ---
-title: '<nav>: 탐색 구획 요소'
+title: "<nav>: 탐색 구획 요소"
 slug: Web/HTML/Element/nav
 ---
 

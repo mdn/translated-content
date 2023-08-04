@@ -1,5 +1,5 @@
 ---
-title: ':active'
+title: ":active"
 slug: Web/CSS/:active
 ---
 
@@ -15,31 +15,44 @@ Esse estilo pode ser substituído por qualquer outra pseudo-classe relacionada a
 
 ```html
 <body>
-    <h1>:active CSS selector example</h1>
-    <p>The following link will turn lime during the time you click it and release the click: <a href="#">Mozilla Developer Network</a>.</p>
+  <h1>:active CSS selector example</h1>
+  <p>
+    The following link will turn lime during the time you click it and release
+    the click: <a href="#">Mozilla Developer Network</a>.
+  </p>
 </body>
 ```
 
 ### CSS
 
 ```css
-body { background-color: #ffffc9 }
-a:link { color: blue } /* links não visitados */
-a:visited { color: purple } /* links visitados */
-a:hover { font-weight: bold } /* user hovers */
-a:active { color: lime } /* links ativos */
+body {
+  background-color: #ffffc9;
+}
+a:link {
+  color: blue;
+} /* links não visitados */
+a:visited {
+  color: purple;
+} /* links visitados */
+a:hover {
+  font-weight: bold;
+} /* user hovers */
+a:active {
+  color: lime;
+} /* links ativos */
 ```
 
 {{EmbedLiveSample('example',600,140)}}
 
 ## Especificações
 
-| Especificação                                                                                    | Status                               | Comentário         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('CSS4 Selectors', '#active-pseudo', ':active')}}                 | {{Spec2('CSS4 Selectors')}} | Nenhuma mudança.   |
-| {{SpecName('CSS3 Selectors', '#useraction-pseudos', ':active')}}             | {{Spec2('CSS3 Selectors')}} | Nenhuma mudança.   |
-| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':active')}} | {{Spec2('CSS2.1')}}             | Nenhuma mudança.   |
-| {{SpecName('CSS1', '#anchor-pseudo-classes', ':active')}}                     | {{Spec2('CSS1')}}             | Definição inicial. |
+| Especificação                                                             | Status                      | Comentário         |
+| ------------------------------------------------------------------------- | --------------------------- | ------------------ |
+| {{SpecName('CSS4 Selectors', '#active-pseudo', ':active')}}               | {{Spec2('CSS4 Selectors')}} | Nenhuma mudança.   |
+| {{SpecName('CSS3 Selectors', '#useraction-pseudos', ':active')}}          | {{Spec2('CSS3 Selectors')}} | Nenhuma mudança.   |
+| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':active')}} | {{Spec2('CSS2.1')}}         | Nenhuma mudança.   |
+| {{SpecName('CSS1', '#anchor-pseudo-classes', ':active')}}                 | {{Spec2('CSS1')}}           | Definição inicial. |
 
 ## Compatibilidade com navegadores
 

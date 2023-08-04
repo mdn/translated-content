@@ -1,7 +1,6 @@
 ---
 title: ":read-only"
 slug: Web/CSS/:read-only
-translation_of: Web/CSS/:read-only
 ---
 
 {{CSSRef}}

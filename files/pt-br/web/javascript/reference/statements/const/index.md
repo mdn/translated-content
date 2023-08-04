@@ -101,9 +101,9 @@ MY_ARRAY = ['B'];
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                       | Comentário         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-let-and-const-declarations', 'Let and Const Declarations')}}     | {{Spec2('ES6')}}         | Nenhuma mudança.   |
+| Especificação                                                                            | Status               | Comentário         |
+| ---------------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-let-and-const-declarations', 'Let and Const Declarations')}}     | {{Spec2('ES6')}}     | Nenhuma mudança.   |
 | {{SpecName('ESDraft', '#sec-let-and-const-declarations', 'Let and Const Declarations')}} | {{Spec2('ESDraft')}} | Definição inicial. |
 
 ## Compatibilidade com navegadores

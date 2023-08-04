@@ -1,17 +1,6 @@
 ---
-title: '<dt>: Термин для определения'
+title: "<dt>: Термин для определения"
 slug: Web/HTML/Element/dt
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-  - dt
-  - Веб
-  - Список определений
-  - Элемент
-  - списки
-translation_of: Web/HTML/Element/dt
 ---
 
 {{HTMLSidebar}}

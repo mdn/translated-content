@@ -1,7 +1,6 @@
 ---
 title: Arrastar e soltar arquivos
 slug: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
-original_slug: DragDrop/Drag_and_Drop/Arrastar_e_soltar_arquivos
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}

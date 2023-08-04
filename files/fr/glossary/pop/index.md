@@ -1,7 +1,6 @@
 ---
 title: POP3
 slug: Glossary/POP
-translation_of: Glossary/POP
 ---
 
 **POP3** (Post Office Protocol) est un {{glossary("Protocol","protocole")}} très répandu pour récupérer les courriels depuis un serveur de messagerie via une connexion {{glossary("TCP")}}. POP3 ne supporte pas les dossiers, contrairement à l'{{Glossary("IMAP")}}4 qui est plus récent, mais qui est aussi plus difficile à implémenter en raison de sa structure plus complexe.

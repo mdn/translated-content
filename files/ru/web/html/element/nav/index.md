@@ -1,17 +1,6 @@
 ---
 title: <nav> - элемент навигации
 slug: Web/HTML/Element/nav
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Links
-  - Navigation
-  - Reference
-  - Sections
-  - Web
-  - nav
-translation_of: Web/HTML/Element/nav
 ---
 
 **HTML-элемент `<nav>`** определяет отдельную секцию документа, назначение которой обозначение ссылок навигации (как внутри текущего документа, так и ведущих на другую страницу). В качестве примера такой секции можно привести меню, якорные ссылки.

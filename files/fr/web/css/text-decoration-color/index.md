@@ -1,7 +1,6 @@
 ---
 title: text-decoration-color
 slug: Web/CSS/text-decoration-color
-translation_of: Web/CSS/text-decoration-color
 ---
 
 {{CSSRef}}

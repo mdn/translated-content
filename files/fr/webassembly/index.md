@@ -1,7 +1,6 @@
 ---
 title: WebAssembly
 slug: WebAssembly
-translation_of: WebAssembly
 ---
 
 {{WebAssemblySidebar}}{{SeeCompatTable}}

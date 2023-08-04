@@ -1,19 +1,6 @@
 ---
 title: CSS
 slug: Web/CSS
-tags:
-  - CSS
-  - Landing
-  - Layout
-  - Learning
-  - Reference
-  - Référence(2)
-  - Вёрстка
-  - Главная
-  - Дизайн
-  - Справка
-  - Стиль
-translation_of: Web/CSS
 ---
 
 {{CSSRef}}

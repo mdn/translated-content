@@ -1,7 +1,6 @@
 ---
 title: "Document: dragstart 이벤트"
 slug: Web/API/HTMLElement/dragstart_event
-original_slug: Web/API/Document/dragstart_event
 ---
 
 {{APIRef}}

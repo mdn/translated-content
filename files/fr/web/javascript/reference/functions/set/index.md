@@ -1,7 +1,6 @@
 ---
 title: L'opérateur set
 slug: Web/JavaScript/Reference/Functions/set
-translation_of: Web/JavaScript/Reference/Functions/set
 ---
 
 {{jsSidebar("Functions")}}

@@ -1,7 +1,6 @@
 ---
 title: initial
 slug: Web/CSS/initial
-translation_of: Web/CSS/initial
 ---
 
 {{CSSRef}}

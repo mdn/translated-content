@@ -32,7 +32,7 @@ slug: Web/API/Document/DOMContentLoaded_event
 
 JavaScript 的同步模式会导致 DOM 解析暂停。如果你想在用户请求页面时，首先尽可能先解析 DOM，此时你可以使用[JavaScript 异步模式](/zh-CN/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)，并且[优化样式表的加载](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery)。在通常模式的加载过程中，样式表的加载会与 DOM 解析并行，从而迟缓主要 HTML 文档的加载。
 
-## 例子
+## 示例
 
 ### 基本用法
 
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 ```
 
-#### 结果展示
+#### 结果
 
 {{ EmbedLiveSample('实例', '100%', '160px') }}
 
@@ -157,7 +157,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- 有关事件：[`load`](/zh-CN/docs/Web/API/Window/load_event), [`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event), [`beforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event), [`unload`](/zh-CN/docs/Web/API/Window/unload_event)
-- [`Window`](/zh-CN/docs/Web/API/Window) 对象中的此事件：[`DOMContentLoaded`](/zh-CN/docs/Web/API/Window/DOMContentLoaded_event)
+- 有关事件：[`load`](/zh-CN/docs/Web/API/Window/load_event)、[`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event)、[`beforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event)、[`unload`](/zh-CN/docs/Web/API/Window/unload_event)

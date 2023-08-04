@@ -1,7 +1,6 @@
 ---
 title: Référence CSS
 slug: Web/CSS/Reference
-translation_of: Web/CSS/Reference
 ---
 
 {{CSSRef}}

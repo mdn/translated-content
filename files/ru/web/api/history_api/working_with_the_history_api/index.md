@@ -1,7 +1,6 @@
 ---
 title: Работа с History API
 slug: Web/API/History_API/Working_with_the_History_API
-translation_of: Web/API/History_API/Working_with_the_History_API
 ---
 
 В HTML5 стали доступны методы {{DOMxRef("History.pushState","pushState()")}} и {{DOMxRef("History.replaceState","replaceState()")}} для добавления и изменения записей в истории. Эти методы работают в сочетании с событием {{domxref("Window.onpopstate","onpopstate")}}
@@ -16,10 +15,10 @@ translation_of: Web/API/History_API/Working_with_the_History_API
 
 ```js
 let stateObj = {
-    foo: "bar",
-}
+  foo: "bar",
+};
 
-history.pushState(stateObj, "page 2", "bar.html")
+history.pushState(stateObj, "page 2", "bar.html");
 ```
 
 В результате этого в URL-строке отобразится адрес `http://mozilla.org/bar.html`, но браузер не будет загружать страницу `bar.html` и даже не будет проверять, существует ли она..
@@ -79,8 +78,8 @@ history.pushState(stateObj, "page 2", "bar.html")
 Предположим, на странице `http://mozilla.org/foo.html` выполняется следующий JavaScript-код:
 
 ```js
-let stateObj = { foo: "bar" }
-history.pushState(stateObj, "page 2", "bar.html")
+let stateObj = { foo: "bar" };
+history.pushState(stateObj, "page 2", "bar.html");
 ```
 
 Объяснение этих двух строк можно найти в приведённом выше разделе _[пример метода pushState()](#Example_of_pushState_method)_.
@@ -88,7 +87,7 @@ history.pushState(stateObj, "page 2", "bar.html")
 Далее, предположим, на странице `http://mozilla.org/bar.html` выполняется JavaScript-код:
 
 ```js
-history.replaceState(stateObj, "page 3", "bar2.html")
+history.replaceState(stateObj, "page 3", "bar2.html");
 ```
 
 Это приведёт к тому, что в URL-строке отобразится адрес `http://mozilla.org/bar2.html`, но браузер не станет сразу загружать `bar2.html` и даже не станет проверять наличие этой страницы `bar2.html`.
@@ -108,7 +107,7 @@ history.replaceState(stateObj, "page 3", "bar2.html")
 С помощью свойства {{DOMxRef("History.state","history.state")}} можно прочитать состояние текущей записи в истории, не дожидаясь события `popstate`, например:
 
 ```js
-let currentState = history.state
+let currentState = history.state;
 ```
 
 ## Смотрите также

@@ -1,5 +1,5 @@
 ---
-title: 'HTML attribute: step'
+title: "HTML attribute: step"
 slug: Web/HTML/Attributes/step
 ---
 

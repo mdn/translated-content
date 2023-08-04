@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.getYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getYear
-tags:
-  - Date
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getYear
 ---
 
 {{JSRef("Global_Objects", "Date")}} {{deprecated_header("")}}

@@ -1,7 +1,6 @@
 ---
 title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 ---
 
 {{JSRef}}

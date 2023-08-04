@@ -28,8 +28,8 @@ Depois que a conexão é estabelecida, o _user-agent_ pode enviar a solicitaçã
 
 1. A primeira linha contém um método de requisição seguido por seus parâmetros:
 
-    - o caminho do documento, ou seja, uma URL absoluta sem o protocolo ou nome de domínio
-    - a versão do protocolo HTTP
+   - o caminho do documento, ou seja, uma URL absoluta sem o protocolo ou nome de domínio
+   - a versão do protocolo HTTP
 
 2. As linhas subsequentes representam um cabeçalho HTTP, fornecendo ao servidor informações sobre o tipo de dado apropriado (por exemplo, qual o idioma, quais os tipos MIME) ou outros dados que alteram seu comportamento (por exemplo, não enviando uma resposta se já estiver em cache). Esses cabeçalhos HTTP formam um bloco que termina com uma linha vazia.
 3. O bloco final é um bloco de dados opcional, que pode conter dados adicionais usados principalmente pelo método POST.

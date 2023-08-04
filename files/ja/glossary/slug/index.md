@@ -1,7 +1,6 @@
 ---
 title: Slug (スラグ)
 slug: Glossary/Slug
-original_slug: Glossary/スラグ
 ---
 
 スラグは、通常は URL の最後にある Web アドレスの固有の識別部分です。

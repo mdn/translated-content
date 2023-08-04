@@ -1,13 +1,6 @@
 ---
 title: ValidityState.typeMismatch
 slug: Web/API/ValidityState/typeMismatch
-tags:
-  - API
-  - Constraint Validation API
-  - DOM
-  - Свойство
-  - Справочник
-browser-compat: api.ValidityState.typeMismatch
 ---
 
 Доступное только для чтения свойство **`typeMismatch`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, соответствует ли изменённое пользователем значение {{HTMLElement("input")}} ограничениям атрибута [`type`](/ru/docs/Web/HTML/Element/input#input_types).
@@ -18,8 +11,8 @@ browser-compat: api.ValidityState.typeMismatch
 
 Тип {{HTMLElement("input/url", "url")}} допускает ввода одного или нескольких url-адресов, в зависимости от наличия атрибута [`multiple`](/ru/docs/Web/HTML/Attributes/multiple). Валидный URL-адрес включает протокол с IP-адресом или комбинацией поддоменом, домена и домен верхнего уровня. Если значение поля URL не ялвяется пустой строкой, одним или несколькими URL-адресами, разделёнными запятой (если присутствует атрибут [`multiple`](/ru/docs/Web/HTML/Attributes/multiple)), то это `typeMismatch`.
 
-| Тип input                                            | Значение           | Ожидаемое значение                                 |
-| ---------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| Тип input                               | Значение           | Ожидаемое значение                                 |
+| --------------------------------------- | ------------------ | -------------------------------------------------- |
 | {{HTMLElement("input/email", "email")}} | `x@y` или `x@y.z`  | Email-адрес с или без [TLD](/ru/docs/Glossary/TLD) |
 | {{HTMLElement("input/url", "url")}}     | `x:` или `x://y.z` | Протокол или полный URL с протоколом               |
 
@@ -29,15 +22,15 @@ browser-compat: api.ValidityState.typeMismatch
 
 ```html
 <p>
- <label>
+  <label>
     Enter an email address:
-    <input type="email" value="example.com"/>
- </label>
+    <input type="email" value="example.com" />
+  </label>
 </p>
 <p>
- <label>
-     Enter a URL:
-     <input type="url" value="example.com"/>
+  <label>
+    Enter a URL:
+    <input type="url" value="example.com" />
   </label>
 </p>
 ```

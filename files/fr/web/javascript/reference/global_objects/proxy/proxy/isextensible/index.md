@@ -1,7 +1,6 @@
 ---
 title: handler.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
 ---
 
 {{JSRef}}

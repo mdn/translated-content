@@ -1,13 +1,6 @@
 ---
 title: Error.prototype.fileName
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
-tags:
-  - Error
-  - JavaScript
-  - Non-standard
-  - Property
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/fileName
 ---
 
 {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}} {{non-standard_header}}

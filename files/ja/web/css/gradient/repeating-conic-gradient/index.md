@@ -1,7 +1,6 @@
 ---
 title: repeating-conic-gradient()
 slug: Web/CSS/gradient/repeating-conic-gradient
-original_slug: Web/CSS/gradient/repeating-conic-gradient()
 ---
 
 {{CSSRef}}

@@ -17,8 +17,8 @@ Veja o cabeçalho {{HTTPHeader("Expect")}} para mais detalhes.
 
 ## Especificações
 
-| Especificação                                                        | Título                                                        |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                                        | Título                                                        |
+| ---------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "417 Expectation Failed" , "6.5.14")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Ver também

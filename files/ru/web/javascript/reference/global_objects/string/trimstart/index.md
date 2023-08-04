@@ -1,15 +1,6 @@
 ---
 title: String.prototype.trimLeft()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
-tags:
-  - JavaScript
-  - Method
-  - Non-standard
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/trimStart
-original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimLeft
 ---
 {{JSRef("Global_Objects", "String")}} {{non-standard_header}}
 

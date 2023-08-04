@@ -1,9 +1,6 @@
 ---
-title: ':nth-last-child'
+title: ":nth-last-child"
 slug: Web/CSS/:nth-last-child
-tags:
-  - Псевдоклассы
-translation_of: Web/CSS/:nth-last-child
 ---
 
 {{CSSRef}}

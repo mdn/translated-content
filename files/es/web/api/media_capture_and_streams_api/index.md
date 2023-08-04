@@ -1,7 +1,6 @@
 ---
 title: API de MediaStream
 slug: Web/API/Media_Capture_and_Streams_API
-original_slug: Web/API/Media_Streams_API
 ---
 
 {{SeeCompatTable}}

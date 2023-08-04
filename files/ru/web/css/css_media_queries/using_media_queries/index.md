@@ -1,17 +1,6 @@
 ---
 title: Использование медиавыражений
 slug: Web/CSS/CSS_media_queries/Using_media_queries
-tags:
-  - Веб
-  - Медиа
-  - Медиа вёрстка
-  - Медиавыражения
-  - Отзывчивый дизайн
-  - Продвинутый
-  - Резиновая вёрстка
-  - Руководство
-translation_of: Web/CSS/Media_Queries/Using_media_queries
-original_slug: Web/CSS/Media_Queries/Using_media_queries
 ---
 
 {{cssref}}

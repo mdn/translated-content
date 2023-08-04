@@ -1,7 +1,6 @@
 ---
 title: animationend
 slug: Web/API/Element/animationend_event
-original_slug: Web/API/HTMLElement/animationend_event
 ---
 
 {{ APIRef }}

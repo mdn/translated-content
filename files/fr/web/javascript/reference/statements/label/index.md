@@ -1,7 +1,6 @@
 ---
 title: label
 slug: Web/JavaScript/Reference/Statements/label
-translation_of: Web/JavaScript/Reference/Statements/label
 ---
 
 {{jsSidebar("Statements")}}

@@ -1,7 +1,6 @@
 ---
 title: "::-moz-color-swatch"
 slug: Web/CSS/::-moz-color-swatch
-translation_of: Web/CSS/::-moz-color-swatch
 ---
 
 {{CSSRef}}{{Non-standard_header}}

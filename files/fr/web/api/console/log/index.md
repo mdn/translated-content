@@ -1,7 +1,6 @@
 ---
 title: console.log()
 slug: Web/API/console/log
-translation_of: Web/API/Console/log
 ---
 
 {{APIRef("Console API")}}

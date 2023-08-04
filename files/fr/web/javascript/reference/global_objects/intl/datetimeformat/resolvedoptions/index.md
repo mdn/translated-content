@@ -1,7 +1,6 @@
 ---
 title: Intl.DateTimeFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
 ---
 
 {{JSRef}}

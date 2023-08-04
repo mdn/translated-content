@@ -1,7 +1,6 @@
 ---
 title: dragover
 slug: Web/API/HTMLElement/dragover_event
-translation_of: Web/API/Document/dragover_event
 ---
 
 {{APIRef}}

@@ -1,7 +1,6 @@
 ---
 title: Condensé
 slug: Glossary/Digest
-translation_of: Glossary/Digest
 ---
 
 Un **condensé _(digest)_** est une petite valeur générée par une {{glossary("hash","fonction de hachage")}} à partir d'un message complet. Dans l'idéal, un condensé est rapide à calculer, non réversible et imprédictible, et par conséquent indique si quelqu'un a falsifié un message donné.

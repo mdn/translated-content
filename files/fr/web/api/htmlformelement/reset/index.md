@@ -1,7 +1,6 @@
 ---
 title: HTMLFormElement.reset()
 slug: Web/API/HTMLFormElement/reset
-translation_of: Web/API/HTMLFormElement/reset
 ---
 
 {{APIRef("HTML DOM")}}

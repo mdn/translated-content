@@ -1,7 +1,6 @@
 ---
 title: flex-wrap
 slug: Web/CSS/flex-wrap
-translation_of: Web/CSS/flex-wrap
 ---
 
 {{ CSSRef}}

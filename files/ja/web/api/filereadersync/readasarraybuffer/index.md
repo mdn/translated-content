@@ -1,6 +1,9 @@
 ---
-title: FileReaderSync.readAsArrayBuffer()
+title: "FileReaderSync: readAsArrayBuffer() メソッド"
+short-title: readAsArrayBuffer()
 slug: Web/API/FileReaderSync/readAsArrayBuffer
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("File API")}}
@@ -9,14 +12,14 @@ slug: Web/API/FileReaderSync/readAsArrayBuffer
 
 ## 構文
 
-```js
-ArrayBuffer readAsArrayBuffer(blob);
+```js-nolint
+readAsArrayBuffer(blob)
 ```
 
 ### 引数
 
 - `blob`
-  - : {{DOMxRef("File")}} または {{DOMxRef("Blob")}} で、 {{DOMxRef("File")}} または {{jsxref("ArrayBuffer")}} に読み込むためのものです。
+  - : {{DOMxRef("File")}} または {{DOMxRef("Blob")}} で、{{DOMxRef("File")}} または {{jsxref("ArrayBuffer")}} に読み込むためのものです。
 
 ### 返値
 
@@ -52,4 +55,4 @@ ArrayBuffer readAsArrayBuffer(blob);
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileReaderSync")}}
 - {{DOMxRef("FileReader")}}
-- {{DOMxRef("BlobBuilder")}}, {{ domxref("Blob") }}
+- {{ domxref("Blob") }}

@@ -1,7 +1,6 @@
 ---
 title: ShadowRoot.host
 slug: Web/API/ShadowRoot/host
-translation_of: Web/API/ShadowRoot/host
 ---
 
 {{APIRef("Shadow DOM")}}

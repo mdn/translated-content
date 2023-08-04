@@ -1,7 +1,6 @@
 ---
 title: Exemple de navigation en Ajax
 slug: Web/API/History_API/Example
-translation_of: Web/API/History_API/Example
 ---
 
 Voici un exemple de site web AJAX composé uniquement de trois pages (_page_un.php_, _page_deux.php_ et _page_trois.php_). Pour tester cet exemple, merci de créer les fichiers suivants :

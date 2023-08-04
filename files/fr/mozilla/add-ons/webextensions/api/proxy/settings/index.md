@@ -1,7 +1,6 @@
 ---
 title: browserSettings.proxyConfig
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/settings
-translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/settings
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: Window.event
 slug: Web/API/Window/event
-translation_of: Web/API/Window/event
 ---
 
 {{APIRef("DOM")}}

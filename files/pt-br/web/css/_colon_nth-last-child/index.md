@@ -1,5 +1,5 @@
 ---
-title: ':nth-last-child()'
+title: ":nth-last-child()"
 slug: Web/CSS/:nth-last-child
 ---
 
@@ -93,7 +93,7 @@ table {
 }
 
 /* Seleciona os últimos três elementos */
-tr:nth-last-child(-n+3) {
+tr:nth-last-child(-n + 3) {
   background-color: pink;
 }
 ```
@@ -104,8 +104,8 @@ tr:nth-last-child(-n+3) {
 
 ## Especificações
 
-| Especificação                                                                                        | Status                               | Comentário                                                  |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------- |
+| Especificação                                                               | Status                      | Comentário                                                  |
+| --------------------------------------------------------------------------- | --------------------------- | ----------------------------------------------------------- |
 | {{SpecName('CSS4 Selectors', '#nth-last-child-pseudo', ':nth-last-child')}} | {{Spec2('CSS4 Selectors')}} | Elementos correspondentes não precisam ter um elemento-pai. |
 | {{SpecName('CSS3 Selectors', '#nth-last-child-pseudo', ':nth-last-child')}} | {{Spec2('CSS3 Selectors')}} | Definição inicial.                                          |
 

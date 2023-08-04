@@ -1,7 +1,6 @@
 ---
 title: "Performance : Événement resourcetimingbufferfull"
 slug: Web/API/Performance/resourcetimingbufferfull_event
-translation_of: Web/API/Performance/resourcetimingbufferfull_event
 ---
 
 {{APIRef}}
