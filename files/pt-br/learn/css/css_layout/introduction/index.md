@@ -1,7 +1,6 @@
 ---
 title: Introdução ao leiaute com CSS
 slug: Learn/CSS/CSS_layout/Introduction
-original_slug: Learn/CSS/CSS_layout/Intro_leiaute_CSS
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}

@@ -1,14 +1,6 @@
 ---
 title: GlobalEventHandlers.onchange
 slug: Web/API/HTMLElement/change_event
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - onchange
-translation_of: Web/API/GlobalEventHandlers/onchange
-original_slug: Web/API/GlobalEventHandlers/onchange
 ---
 
 {{ ApiRef("HTML DOM") }}

@@ -1,5 +1,5 @@
 ---
-title: ':optional'
+title: ":optional"
 slug: Web/CSS/:optional
 ---
 
@@ -37,12 +37,12 @@ Entradas requeridas devem ser indicadas visualmente, utilizando um tratamento qu
 
 ## Especificações
 
-| Specification                                                                                | Status                                   | Comment                                                 |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', '#selector-optional', ':optional') }}         | {{ Spec2('HTML WHATWG') }}     | Sem mudança.                                            |
-| {{ SpecName('HTML5 W3C', '#selector-optional', ':optional') }}         | {{ Spec2('HTML5 W3C') }}         | Define a semântica da validação e da restrição do HTML. |
-| {{ SpecName('CSS4 Selectors', '#opt-pseudos', ':optional') }}             | {{ Spec2('CSS4 Selectors') }} | Sem mudança.                                            |
-| {{ SpecName('CSS3 Basic UI', '#pseudo-required-value', ':optional') }} | {{ Spec2('CSS3 Basic UI') }}     | Define a pseudo-classe, mas não a semântica associada.  |
+| Specification                                                          | Status                        | Comment                                                 |
+| ---------------------------------------------------------------------- | ----------------------------- | ------------------------------------------------------- |
+| {{ SpecName('HTML WHATWG', '#selector-optional', ':optional') }}       | {{ Spec2('HTML WHATWG') }}    | Sem mudança.                                            |
+| {{ SpecName('HTML5 W3C', '#selector-optional', ':optional') }}         | {{ Spec2('HTML5 W3C') }}      | Define a semântica da validação e da restrição do HTML. |
+| {{ SpecName('CSS4 Selectors', '#opt-pseudos', ':optional') }}          | {{ Spec2('CSS4 Selectors') }} | Sem mudança.                                            |
+| {{ SpecName('CSS3 Basic UI', '#pseudo-required-value', ':optional') }} | {{ Spec2('CSS3 Basic UI') }}  | Define a pseudo-classe, mas não a semântica associada.  |
 
 ## Compatibilidade com navegadores
 

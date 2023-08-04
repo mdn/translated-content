@@ -1,7 +1,6 @@
 ---
 title: Serveur proxy
 slug: Glossary/Proxy_server
-translation_of: Glossary/Proxy_server
 ---
 
 Un **serveur proxy** (ou "serveur mandataire" en français) est un programme intermédiaire, ou un ordinateur, utilisé lors de la navigation sur différents réseaux d'Internet. Il facilite l'accès au contenu sur le World Wide Web. Un mandataire reçoit les demandes et retourne les réponses ; il peut transmettre les requêtes ou non (par exemple dans le cas d'un cache), et il peut les modifier (par exemple changer les en-têtes à la frontière entre deux réseaux).

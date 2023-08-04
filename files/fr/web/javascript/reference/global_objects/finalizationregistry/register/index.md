@@ -1,7 +1,6 @@
 ---
 title: FinalizationRegistry.prototype.register()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
-translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
 ---
 
 {{JSRef}}

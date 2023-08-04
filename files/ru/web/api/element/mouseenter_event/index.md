@@ -1,7 +1,6 @@
 ---
 title: "Element: mouseenter event"
 slug: Web/API/Element/mouseenter_event
-translation_of: Web/API/Element/mouseenter_event
 ---
 
 {{APIRef}}

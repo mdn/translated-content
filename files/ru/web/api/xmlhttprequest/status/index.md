@@ -1,16 +1,6 @@
 ---
 title: XMLHttpRequest.status
 slug: Web/API/XMLHttpRequest/status
-tags:
-  - API
-  - Error
-  - Property
-  - Reference
-  - XMLHttpRequest
-  - XMLHttpRequest Status
-  - result
-  - status
-translation_of: Web/API/XMLHttpRequest/status
 ---
 
 {{APIRef('XMLHttpRequest')}}

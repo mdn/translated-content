@@ -1,7 +1,6 @@
 ---
 title: animationstart
 slug: Web/API/Element/animationstart_event
-translation_of: Web/API/HTMLElement/animationstart_event
 ---
 
 L'évènement **`animationstart`** est déclenché quand une animation CSS a commencé. Si `animation-delay` est défini alors le déclenchement se fera une fois le délai expiré. Un délai négatif causera un déclenchement de l'évènement avec un `elapsedTime` équivalent à la valeur absolue du délai.

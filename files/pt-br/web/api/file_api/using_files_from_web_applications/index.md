@@ -1,7 +1,6 @@
 ---
 title: Using files from web applications
 slug: Web/API/File_API/Using_files_from_web_applications
-original_slug: Web/API/File/Using_files_from_web_applications
 ---
 
 Usando a File API adicionada ao DOM em HTML5, agora é possível para conteúdo web solicitar ao usuário para selecionar arquivos locais, e então ler o conteúdo desses arquivos. Essa seleção pode ser feita usando um elemento HTML {{HTMLElement("input") }} ou por arrastar e soltar.
@@ -43,12 +42,16 @@ The code that handles the `click` event can look like this:
 var fileSelect = document.getElementById("fileSelect"),
   fileElem = document.getElementById("fileElem");
 
-fileSelect.addEventListener("click", function (e) {
-  if (fileElem) {
-    fileElem.click();
-  }
-  e.preventDefault(); // prevent navigation to "#"
-}, false);
+fileSelect.addEventListener(
+  "click",
+  function (e) {
+    if (fileElem) {
+      fileElem.click();
+    }
+    e.preventDefault(); // prevent navigation to "#"
+  },
+  false,
+);
 ```
 
 Obviously you can style the new button for opening the file picker as you wish.
@@ -166,37 +169,67 @@ There are three attributes provided by the {{ domxref("File") }} object that con
 The following example shows a possible use of the `size` property:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>File(s) size</title>
-<script>
-function updateSize() {
-  var nBytes = 0,
-      oFiles = document.getElementById("uploadInput").files,
-      nFiles = oFiles.length;
-  for (var nFileId = 0; nFileId < nFiles; nFileId++) {
-    nBytes += oFiles[nFileId].size;
-  }
-  var sOutput = nBytes + " bytes";
-  // optional code for multiples approximation
-  for (var aMultiples = ["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"], nMultiple = 0, nApprox = nBytes / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
-    sOutput = nApprox.toFixed(3) + " " + aMultiples[nMultiple] + " (" + nBytes + " bytes)";
-  }
-  // end of optional code
-  document.getElementById("fileNum").innerHTML = nFiles;
-  document.getElementById("fileSize").innerHTML = sOutput;
-}
-</script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>File(s) size</title>
+    <script>
+      function updateSize() {
+        var nBytes = 0,
+          oFiles = document.getElementById("uploadInput").files,
+          nFiles = oFiles.length;
+        for (var nFileId = 0; nFileId < nFiles; nFileId++) {
+          nBytes += oFiles[nFileId].size;
+        }
+        var sOutput = nBytes + " bytes";
+        // optional code for multiples approximation
+        for (
+          var aMultiples = [
+              "KiB",
+              "MiB",
+              "GiB",
+              "TiB",
+              "PiB",
+              "EiB",
+              "ZiB",
+              "YiB",
+            ],
+            nMultiple = 0,
+            nApprox = nBytes / 1024;
+          nApprox > 1;
+          nApprox /= 1024, nMultiple++
+        ) {
+          sOutput =
+            nApprox.toFixed(3) +
+            " " +
+            aMultiples[nMultiple] +
+            " (" +
+            nBytes +
+            " bytes)";
+        }
+        // end of optional code
+        document.getElementById("fileNum").innerHTML = nFiles;
+        document.getElementById("fileSize").innerHTML = sOutput;
+      }
+    </script>
+  </head>
 
-<body onload="updateSize();">
-<form name="uploadForm">
-<p><input id="uploadInput" type="file" name="myFiles" onchange="updateSize();" multiple> selected files: <span id="fileNum">0</span>; total size: <span id="fileSize">0</span></p>
-<p><input type="submit" value="Send file"></p>
-</form>
-</body>
+  <body onload="updateSize();">
+    <form name="uploadForm">
+      <p>
+        <input
+          id="uploadInput"
+          type="file"
+          name="myFiles"
+          onchange="updateSize();"
+          multiple />
+        selected files: <span id="fileNum">0</span>; total size:
+        <span id="fileSize">0</span>
+      </p>
+      <p><input type="submit" value="Send file" /></p>
+    </form>
+  </body>
 </html>
 ```
 
@@ -220,7 +253,11 @@ function handleFiles(files) {
     preview.appendChild(img);
 
     var reader = new FileReader();
-    reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+    reader.onload = (function (aImg) {
+      return function (e) {
+        aImg.src = e.target.result;
+      };
+    })(img);
     reader.readAsDataURL(file);
   }
 }
@@ -239,7 +276,13 @@ This example uses object URLs to display image thumbnails. In addition, it displ
 The HTML that presents the interface looks like this:
 
 ```html
-<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+<input
+  type="file"
+  id="fileElem"
+  multiple
+  accept="image/*"
+  style="display:none"
+  onchange="handleFiles(this.files)" />
 <a href="#" id="fileSelect">Select some files</a>
 <div id="fileList">
   <p>No files selected!</p>
@@ -254,15 +297,19 @@ The `handleFiles()` method follows:
 window.URL = window.URL || window.webkitURL;
 
 var fileSelect = document.getElementById("fileSelect"),
-    fileElem = document.getElementById("fileElem"),
-    fileList = document.getElementById("fileList");
+  fileElem = document.getElementById("fileElem"),
+  fileList = document.getElementById("fileList");
 
-fileSelect.addEventListener("click", function (e) {
-  if (fileElem) {
-    fileElem.click();
-  }
-  e.preventDefault(); // prevent navigation to "#"
-}, false);
+fileSelect.addEventListener(
+  "click",
+  function (e) {
+    if (fileElem) {
+      fileElem.click();
+    }
+    e.preventDefault(); // prevent navigation to "#"
+  },
+  false,
+);
 
 function handleFiles(files) {
   if (!files.length) {
@@ -276,9 +323,9 @@ function handleFiles(files) {
       var img = document.createElement("img");
       img.src = window.URL.createObjectURL(files[i]);
       img.height = 60;
-      img.onload = function(e) {
+      img.onload = function (e) {
         window.URL.revokeObjectURL(this.src);
-      }
+      };
       li.appendChild(img);
 
       var info = document.createElement("span");
@@ -298,12 +345,12 @@ If the {{ domxref("FileList") }} object passed to `handleFiles()` is `null`, we 
 2. The new list element is inserted into the {{ HTMLElement("div") }} block by calling its {{ domxref("element.appendChild()") }} method.
 3. For each {{ domxref("File") }} in the {{ domxref("FileList") }} represented by `files`:
 
-    1. Create a new list item ({{ HTMLElement("li") }}) element and insert it into the list.
-    2. Create a new image ({{ HTMLElement("img") }}) element.
-    3. Set the image's source to a new object URL representing the file, using {{ domxref("window.URL.createObjectURL()") }} to create the blob URL.
-    4. Set the image's height to 60 pixels.
-    5. Set up the image's load event handler to release the object URL, since it's no longer needed once the image has been loaded. This is done by calling the {{ domxref("window.URL.revokeObjectURL()") }} method, passing in the object URL string as specified by `img.src`.
-    6. Append the new list item to the list.
+   1. Create a new list item ({{ HTMLElement("li") }}) element and insert it into the list.
+   2. Create a new image ({{ HTMLElement("img") }}) element.
+   3. Set the image's source to a new object URL representing the file, using {{ domxref("window.URL.createObjectURL()") }} to create the blob URL.
+   4. Set the image's height to 60 pixels.
+   5. Set up the image's load event handler to release the object URL, since it's no longer needed once the image has been loaded. This is done by calling the {{ domxref("window.URL.revokeObjectURL()") }} method, passing in the object URL string as specified by `img.src`.
+   6. Append the new list item to the list.
 
 ## Example: Uploading a user-selected file
 
@@ -337,21 +384,32 @@ function FileUpload(img, file) {
   this.xhr = xhr;
 
   var self = this;
-  this.xhr.upload.addEventListener("progress", function(e) {
-        if (e.lengthComputable) {
-          var percentage = Math.round((e.loaded * 100) / e.total);
-          self.ctrl.update(percentage);
-        }
-      }, false);
+  this.xhr.upload.addEventListener(
+    "progress",
+    function (e) {
+      if (e.lengthComputable) {
+        var percentage = Math.round((e.loaded * 100) / e.total);
+        self.ctrl.update(percentage);
+      }
+    },
+    false,
+  );
 
-  xhr.upload.addEventListener("load", function(e){
-          self.ctrl.update(100);
-          var canvas = self.ctrl.ctx.canvas;
-          canvas.parentNode.removeChild(canvas);
-      }, false);
-  xhr.open("POST", "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php");
-  xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
-  reader.onload = function(evt) {
+  xhr.upload.addEventListener(
+    "load",
+    function (e) {
+      self.ctrl.update(100);
+      var canvas = self.ctrl.ctx.canvas;
+      canvas.parentNode.removeChild(canvas);
+    },
+    false,
+  );
+  xhr.open(
+    "POST",
+    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
+  );
+  xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
+  reader.onload = function (evt) {
     xhr.sendAsBinary(evt.target.result);
   };
   reader.readAsBinaryString(file);
@@ -371,59 +429,61 @@ Before actually transferring the data, several preparatory steps are taken:
 
 ### Handling the upload process for a file, asynchronously
 
-```js
+```php
 <?php
 if (isset($_FILES['myFile'])) {
     // Example:
     move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
     exit;
 }
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>dnd binary upload</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script type="text/javascript">
-        function sendFile(file) {
-            var uri = "/index.php";
-            var xhr = new XMLHttpRequest();
-            var fd = new FormData();
+      function sendFile(file) {
+        var uri = "/index.php";
+        var xhr = new XMLHttpRequest();
+        var fd = new FormData();
 
-            xhr.open("POST", uri, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    // Handle response.
-                    alert(xhr.responseText); // handle response.
-                }
-            };
-            fd.append('myFile', file);
-            // Initiate a multipart/form-data upload
-            xhr.send(fd);
+        xhr.open("POST", uri, true);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            // Handle response.
+            alert(xhr.responseText); // handle response.
+          }
+        };
+        fd.append('myFile', file);
+        // Initiate a multipart/form-data upload
+        xhr.send(fd);
+      }
+
+      window.onload = function() {
+        var dropzone = document.getElementById("dropzone");
+        dropzone.ondragover = dropzone.ondragenter = function(event) {
+          event.stopPropagation();
+          event.preventDefault();
         }
 
-        window.onload = function() {
-            var dropzone = document.getElementById("dropzone");
-            dropzone.ondragover = dropzone.ondragenter = function(event) {
-                event.stopPropagation();
-                event.preventDefault();
-            }
+        dropzone.ondrop = function(event) {
+          event.stopPropagation();
+          event.preventDefault();
 
-            dropzone.ondrop = function(event) {
-                event.stopPropagation();
-                event.preventDefault();
-
-                var filesArray = event.dataTransfer.files;
-                for (var i=0; i<filesArray.length; i++) {
-                    sendFile(filesArray[i]);
-                }
-            }
-    </script>
-</head>
-<body>
+          var filesArray = event.dataTransfer.files;
+          for (var i=0; i<filesArray.length; i++) {
+            sendFile(filesArray[i]);
+          }
+        }
+      }
+  </script>
+  </head>
+  <body>
     <div>
-        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Drag & drop your file here...</div>
+      <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Drag & drop your file here...</div>
     </div>
-</body>
+  </body>
 </html>
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: offset-path
 slug: Web/CSS/offset-path
-translation_of: Web/CSS/offset-path
 ---
 
 {{SeeCompatTable}}{{CSSRef}}

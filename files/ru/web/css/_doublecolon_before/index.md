@@ -1,13 +1,6 @@
 ---
-title: '::before (:before)'
+title: "::before (:before)"
 slug: Web/CSS/::before
-tags:
-  - CSS
-  - Layout
-  - Reference
-  - Web
-  - Псевдоэлементы
-translation_of: Web/CSS/::before
 ---
 
 {{CSSRef}}

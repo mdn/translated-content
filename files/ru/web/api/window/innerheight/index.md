@@ -1,12 +1,6 @@
 ---
 title: Window.innerHeight
 slug: Web/API/Window/innerHeight
-tags:
-  - API
-  - NeedsMarkupWork
-  - Property
-  - Reference
-translation_of: Web/API/Window/innerHeight
 ---
 
 Высота (в пикселях) области просмотра окна браузера, включая, если отображается, горизонтальную полосу прокрутки.

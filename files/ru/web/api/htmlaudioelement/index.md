@@ -1,7 +1,6 @@
 ---
 title: HTMLAudioElement
 slug: Web/API/HTMLAudioElement
-translation_of: Web/API/HTMLAudioElement
 ---
 
 {{APIRef("HTML DOM")}}

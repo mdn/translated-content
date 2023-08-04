@@ -1,7 +1,6 @@
 ---
 title: TouchEvent.altKey
 slug: Web/API/TouchEvent/altKey
-translation_of: Web/API/TouchEvent/altKey
 ---
 
 {{APIRef("Touch Events") }}

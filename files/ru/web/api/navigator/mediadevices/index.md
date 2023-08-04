@@ -1,7 +1,6 @@
 ---
 title: Navigator.mediaDevices
 slug: Web/API/Navigator/mediaDevices
-translation_of: Web/API/Navigator/mediaDevices
 ---
 
 {{APIRef("Media Capture and Streams")}}

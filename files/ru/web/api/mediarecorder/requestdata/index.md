@@ -1,7 +1,6 @@
 ---
 title: MediaRecorder.requestData()
 slug: Web/API/MediaRecorder/requestData
-translation_of: Web/API/MediaRecorder/requestData
 ---
 
 {{APIRef("MediaStream Recording")}}

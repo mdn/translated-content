@@ -1,7 +1,6 @@
 ---
 title: AudioNode.context
 slug: Web/API/AudioNode/context
-translation_of: Web/API/AudioNode/context
 ---
 
 {{ APIRef("Web Audio API") }}

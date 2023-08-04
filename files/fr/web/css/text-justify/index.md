@@ -1,7 +1,6 @@
 ---
 title: text-justify
 slug: Web/CSS/text-justify
-translation_of: Web/CSS/text-justify
 ---
 
 {{CSSRef}}

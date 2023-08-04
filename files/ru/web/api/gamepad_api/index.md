@@ -1,13 +1,6 @@
 ---
 title: Gamepad API
 slug: Web/API/Gamepad_API
-tags:
-  - API
-  - Gamepad API
-  - Игры
-  - Обзор
-  - Экспериментальный
-translation_of: Web/API/Gamepad_API
 ---
 
 {{DefaultAPISidebar("Gamepad API")}}

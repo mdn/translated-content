@@ -1,7 +1,6 @@
 ---
 title: "CSP : object-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/object-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/object-src
 ---
 
 {{HTTPSidebar}}

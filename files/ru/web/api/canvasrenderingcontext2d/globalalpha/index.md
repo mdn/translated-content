@@ -1,15 +1,6 @@
 ---
 title: CanvasRenderingContext2D.globalAlpha
 slug: Web/API/CanvasRenderingContext2D/globalAlpha
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
-  - Свойства
-  - Ссылки
-translation_of: Web/API/CanvasRenderingContext2D/globalAlpha
 ---
 
 {{APIRef}}

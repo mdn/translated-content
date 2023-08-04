@@ -1,9 +1,6 @@
 ---
 title: Document
 slug: Web/API/Document
-tags:
-  - DOM
-translation_of: Web/API/Document
 ---
 
 {{ ApiRef("DOM") }}

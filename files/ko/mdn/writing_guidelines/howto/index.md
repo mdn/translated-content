@@ -1,7 +1,6 @@
 ---
 title: 페이지에 올바르게 태그하는 방법
 slug: MDN/Writing_guidelines/Howto
-original_slug: MDN/Writing_guidelines/Howto/Tag
 ---
 
 {{MDNSidebar}}

@@ -1,12 +1,6 @@
 ---
 title: Window.navigator
 slug: Web/API/Window/navigator
-tags:
-  - API
-  - HTML DOM
-  - Navigator
-  - Window
-translation_of: Web/API/Window/navigator
 ---
 
 {{APIRef}}

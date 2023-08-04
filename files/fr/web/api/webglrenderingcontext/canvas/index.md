@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.canvas
 slug: Web/API/WebGLRenderingContext/canvas
-translation_of: Web/API/WebGLRenderingContext/canvas
 ---
 
 {{APIRef("WebGL")}}

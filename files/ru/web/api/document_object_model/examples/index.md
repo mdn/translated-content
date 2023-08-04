@@ -1,8 +1,6 @@
 ---
 title: Examples of web and XML development using the DOM
 slug: Web/API/Document_Object_Model/Examples
-translation_of: Web/API/Document_Object_Model/Examples
-original_slug: DOM/DOM_Reference/Examples
 ---
 
 В этой главе представлены более длинные примеры разработки веб-сайтов и XML с использованием DOM. По возможности, примеры используют общие API, трюки и шаблоны в JavaScript для управления объектом документа.

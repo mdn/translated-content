@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.getLineDash()
 slug: Web/API/CanvasRenderingContext2D/getLineDash
-translation_of: Web/API/CanvasRenderingContext2D/getLineDash
 ---
 
 {{APIRef}}

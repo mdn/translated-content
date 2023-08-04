@@ -1,11 +1,6 @@
 ---
 title: Grid Column
 slug: Glossary/Grid_Column
-tags:
-  - CSS
-  - grid
-translation_of: Glossary/Grid_Column
-original_slug: Глоссарий/Grid_Column
 ---
 
 Столбец сетки (**grid column)** — это вертикальный элемент в [CSS Grid Layout](/ru/docs/Web/CSS/CSS_Grid_Layout), а также пространство между двумя вертикальными линиями сетки. Он определяется свойством {{cssxref("grid-template-columns")}}, либо в сокращённом виде {{cssxref("grid")}} или {{cssxref("grid-template")}}.

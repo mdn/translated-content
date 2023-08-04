@@ -1,7 +1,6 @@
 ---
 title: ShadowRoot.innerHTML
 slug: Web/API/ShadowRoot/innerHTML
-translation_of: Web/API/ShadowRoot/innerHTML
 ---
 
 {{APIRef("Shadow DOM")}}

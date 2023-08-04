@@ -1,7 +1,6 @@
 ---
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray
 ---
 
 {{JSRef}}

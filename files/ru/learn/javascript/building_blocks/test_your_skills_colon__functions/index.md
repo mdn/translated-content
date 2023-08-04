@@ -1,12 +1,6 @@
 ---
 title: "Проверь свои навыки: Функции"
 slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Functions
-tags:
-  - JavaScript
-  - Изучение
-  - Новичок
-  - Функции
-translation_of: Learn/JavaScript/Building_blocks/Test_your_skills:_Functions
 ---
 
 {{learnsidebar}}

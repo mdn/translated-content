@@ -1,13 +1,6 @@
 ---
 title: Console.timeEnd
 slug: Web/API/console/timeEnd
-tags:
-  - API
-  - Method
-  - Веб-разработка
-  - Отладка
-  - консоль
-translation_of: Web/API/Console/timeEnd
 ---
 
 {{APIRef("Console API")}}

@@ -1,7 +1,6 @@
 ---
 title: gamepaddisconnected
 slug: Web/API/Window/gamepaddisconnected_event
-translation_of: Web/API/Window/gamepaddisconnected_event
 ---
 
 Событие `gampaddisconnected` вызывается, когда браузер обнаруживает, что геймпад был отключён.

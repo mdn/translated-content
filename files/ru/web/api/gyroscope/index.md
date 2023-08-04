@@ -1,7 +1,6 @@
 ---
 title: Gyroscope
 slug: Web/API/Gyroscope
-translation_of: Web/API/Gyroscope
 ---
 
 {{APIRef("Gyroscope")}}

@@ -1,7 +1,6 @@
 ---
 title: HTMLBodyElement
 slug: Web/API/HTMLBodyElement
-translation_of: Web/API/HTMLBodyElement
 ---
 
 {{APIRef("HTML DOM")}}

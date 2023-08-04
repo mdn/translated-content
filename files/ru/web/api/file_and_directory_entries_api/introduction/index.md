@@ -1,8 +1,6 @@
 ---
 title: Введение в API файлов и каталогов
 slug: Web/API/File_and_Directory_Entries_API/Introduction
-translation_of: Web/API/File_and_Directory_Entries_API/Introduction
-original_slug: Web/API/File_and_Directory_Entries_API/Введение
 ---
 
 {{DefaultAPISidebar("File System API")}}{{Non-standard_header}}

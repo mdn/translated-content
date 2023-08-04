@@ -1,7 +1,6 @@
 ---
 title: Math.LOG2E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/LOG2E
 ---
 
 {{JSRef("Objetos_globales", "Math")}}

@@ -1,7 +1,6 @@
 ---
 title: translate()
 slug: Web/CSS/transform-function/translate
-translation_of: Web/CSS/transform-function/translate()
 ---
 
 {{CSSRef}}

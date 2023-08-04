@@ -26,6 +26,7 @@ build/
 /files/fr/web/css/place-self/index.md
 /files/fr/web/javascript/reference/global_objects/array/includes/index.md
 /files/fr/web/javascript/reference/global_objects/intl/displaynames/of/index.md
+/files/ja/web/api/audiobuffer/audiobuffer/index.md
 /files/ja/web/svg/content_type/index.md
 /files/ko/web/css/css_flow_layout/block_and_inline_layout_in_normal_flow/index.md
 /files/pt-br/learn/server-side/django/forms/index.md
@@ -59,7 +60,6 @@ build/
 /files/pt-br/web/api/**/*.md
 /files/pt-br/web/css/**/*.md
 /files/pt-br/web/html/**/*.md
-/files/pt-br/web/http/**/*.md
 /files/pt-br/web/javascript/**/*.md
 /files/pt-br/web/svg/**/*.md
 

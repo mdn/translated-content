@@ -1,15 +1,6 @@
 ---
 title: MouseEvent.clientX
 slug: Web/API/MouseEvent/clientX
-tags:
-  - API
-  - CSSOM View
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-translation_of: Web/API/MouseEvent/clientX
 ---
 
 {{APIRef("DOM Events")}}

@@ -1,5 +1,5 @@
 ---
-title: 'USB: disconnect イベント'
+title: "USB: disconnect イベント"
 slug: Web/API/USB/disconnect_event
 l10n:
   sourceCommit: 6ccfd23bb58f9f973e8783934c69990df4e073fe

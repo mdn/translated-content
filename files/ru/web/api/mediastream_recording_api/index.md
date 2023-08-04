@@ -1,7 +1,6 @@
 ---
 title: MediaStream Recording API
 slug: Web/API/MediaStream_Recording_API
-translation_of: Web/API/MediaStream_Recording_API
 ---
 
 {{DefaultAPISidebar("MediaStream Recording")}}

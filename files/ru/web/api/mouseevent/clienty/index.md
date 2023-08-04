@@ -1,7 +1,6 @@
 ---
 title: MouseEvent.clientY
 slug: Web/API/MouseEvent/clientY
-translation_of: Web/API/MouseEvent/clientY
 ---
 
 {{APIRef("DOM Events")}}

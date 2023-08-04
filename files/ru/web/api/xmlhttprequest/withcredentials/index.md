@@ -1,13 +1,6 @@
 ---
 title: XMLHttpRequest.withCredentials
 slug: Web/API/XMLHttpRequest/withCredentials
-tags:
-  - AJAX
-  - API
-  - XMLHttpRequest
-  - Свойство
-  - Справка
-translation_of: Web/API/XMLHttpRequest/withCredentials
 ---
 
 {{APIRef('XMLHttpRequest')}}

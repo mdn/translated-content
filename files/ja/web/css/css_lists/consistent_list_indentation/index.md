@@ -1,7 +1,6 @@
 ---
 title: 一貫性のあるリストのインデント
 slug: Web/CSS/CSS_lists/Consistent_list_indentation
-original_slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 ---
 
 {{CSSRef}}

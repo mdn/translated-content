@@ -1,7 +1,6 @@
 ---
 title: CSS Overflow
 slug: Web/CSS/CSS_overflow
-translation_of: Web/CSS/CSS_Overflow
 ---
 
 {{CSSRef}}

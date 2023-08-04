@@ -1,7 +1,6 @@
 ---
 title: Element.matches()
 slug: Web/API/Element/matches
-translation_of: Web/API/Element/matches
 ---
 
 {{ APIRef("DOM") }}

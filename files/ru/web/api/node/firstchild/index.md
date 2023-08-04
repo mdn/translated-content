@@ -1,7 +1,6 @@
 ---
 title: Node.firstChild
 slug: Web/API/Node/firstChild
-translation_of: Web/API/Node/firstChild
 ---
 
 {{APIRef("DOM")}}

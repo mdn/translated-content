@@ -1,16 +1,6 @@
 ---
 title: <article>
 slug: Web/HTML/Element/article
-tags:
-  - Element
-  - HTML
-  - Web
-  - Веб
-  - Разделы
-  - Разделы HTML
-  - Справка
-  - Элемент
-translation_of: Web/HTML/Element/article
 ---
 
 {{HTMLSidebar}}

@@ -1,10 +1,6 @@
 ---
 title: AudioContext.decodeAudioData()
 slug: Web/API/BaseAudioContext/decodeAudioData
-tags:
-  - API
-translation_of: Web/API/BaseAudioContext/decodeAudioData
-original_slug: Web/API/AudioContext/decodeAudioData
 ---
 
 {{ APIRef("Web Audio API") }}

@@ -58,8 +58,13 @@ Observe que isso é o mesmo que [`seletor de atributo`](/pt-BR/docs/Web/CSS/Attr
 
 ```html
 <p class="vermelho">Este parágrafo tem o texto vermelho.</p>
-<p class="vermelho amarelo-bg">Este parágrafo possui texto em vermelho e fundo amarelo.</p>
-<p class="vermelho elegante">Este parágrafo possui texto em vermelho e uma propriedade de estilo "elegante".</p>
+<p class="vermelho amarelo-bg">
+  Este parágrafo possui texto em vermelho e fundo amarelo.
+</p>
+<p class="vermelho elegante">
+  Este parágrafo possui texto em vermelho e uma propriedade de estilo
+  "elegante".
+</p>
 <p>Este é um parágrafo comum.</p>
 ```
 
@@ -69,12 +74,12 @@ Observe que isso é o mesmo que [`seletor de atributo`](/pt-BR/docs/Web/CSS/Attr
 
 ## Especificações
 
-| Especificação                                                                                | Status                               | Comentário        |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
-| {{SpecName('CSS4 Selectors', '#class-html', 'class selectors')}}         | {{Spec2('CSS4 Selectors')}} | Sem mudança       |
-| {{SpecName('CSS3 Selectors', '#class-html', 'class selectors')}}         | {{Spec2('CSS3 Selectors')}} |                   |
-| {{SpecName('CSS2.1', 'selector.html#class-html', 'child selectors')}} | {{Spec2('CSS2.1')}}             |                   |
-| {{SpecName('CSS1', '#class-as-selector', 'child selectors')}}             | {{Spec2('CSS1')}}             | Definição inicial |
+| Especificação                                                         | Status                      | Comentário        |
+| --------------------------------------------------------------------- | --------------------------- | ----------------- |
+| {{SpecName('CSS4 Selectors', '#class-html', 'class selectors')}}      | {{Spec2('CSS4 Selectors')}} | Sem mudança       |
+| {{SpecName('CSS3 Selectors', '#class-html', 'class selectors')}}      | {{Spec2('CSS3 Selectors')}} |                   |
+| {{SpecName('CSS2.1', 'selector.html#class-html', 'child selectors')}} | {{Spec2('CSS2.1')}}         |                   |
+| {{SpecName('CSS1', '#class-as-selector', 'child selectors')}}         | {{Spec2('CSS1')}}           | Definição inicial |
 
 ## Compatibilidade com navegadores
 

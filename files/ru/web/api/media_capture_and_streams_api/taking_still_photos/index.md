@@ -1,10 +1,6 @@
 ---
 title: Захват кадров с WebRTC
 slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
-tags:
-  - Захват WebRTC
-translation_of: Web/API/WebRTC_API/Taking_still_photos
-original_slug: Web/API/Media_Streams_API/Taking_still_photos
 ---
 
 {{DefaultAPISidebar("Media Capture and Streams")}}
@@ -233,5 +229,5 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 - [Пробуем пример](https://mdn-samples.mozilla.org/s/webrtc-capturestill)
 - [Примеры на Github](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
 - {{domxref("Navigator.mediaDevices.getUserMedia()")}}
-- {{SectionOnPage("/ru/docs/Web/API/Canvas_API/Tutorial/Using_images","Использование изображений")}}
+- [Использование изображений](/ru/docs/Web/API/Canvas_API/Tutorial/Using_images)
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}

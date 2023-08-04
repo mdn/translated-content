@@ -1,10 +1,6 @@
 ---
 title: Reflect.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
-tags:
-  - ECMAScript6
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 ---
 
 {{JSRef}}

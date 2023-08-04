@@ -1,7 +1,6 @@
 ---
 title: SpeechRecognition
 slug: Web/API/SpeechRecognition
-translation_of: Web/API/SpeechRecognition
 ---
 
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}

@@ -1,7 +1,6 @@
 ---
 title: "::-webkit-search-results-button"
 slug: Web/CSS/::-webkit-search-results-button
-translation_of: Web/CSS/::-webkit-search-results-button
 ---
 
 {{CSSRef}}{{Non-standard_header}}

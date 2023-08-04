@@ -1,7 +1,6 @@
 ---
 title: ":focus-visible"
 slug: Web/CSS/:focus-visible
-translation_of: Web/CSS/:focus-visible
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

@@ -1,7 +1,6 @@
 ---
 title: Создание 3D объектов с помощью WebGL
 slug: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
-original_slug: Web/API/WebGL_API/Tutorial/Создание_3D_объектов_с_помощью_WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}

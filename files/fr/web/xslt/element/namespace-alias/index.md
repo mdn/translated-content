@@ -1,7 +1,6 @@
 ---
 title: namespace-alias
 slug: Web/XSLT/Element/namespace-alias
-translation_of: Web/XSLT/Element/namespace-alias
 ---
 
 {{ XsltRef() }}

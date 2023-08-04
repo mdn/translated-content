@@ -1,7 +1,6 @@
 ---
 title: Notification.maxActions
 slug: Web/API/Notification/maxActions_static
-translation_of: Web/API/Notification/maxActions
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

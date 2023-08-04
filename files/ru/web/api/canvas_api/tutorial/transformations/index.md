@@ -1,7 +1,6 @@
 ---
 title: Transformations
 slug: Web/API/Canvas_API/Tutorial/Transformations
-translation_of: Web/API/Canvas_API/Tutorial/Transformations
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

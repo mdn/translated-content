@@ -1,7 +1,6 @@
 ---
 title: abort
 slug: Web/API/AbortSignal/abort_event
-translation_of: Web/API/AbortSignal/abort_event
 ---
 
 {{SeeCompatTable}}

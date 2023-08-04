@@ -1,12 +1,6 @@
 ---
 title: DOMParser
 slug: Web/API/DOMParser
-tags:
-  - API
-  - DOM
-  - XML
-  - Экспериментальное
-translation_of: Web/API/DOMParser
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}

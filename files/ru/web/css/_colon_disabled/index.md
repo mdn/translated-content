@@ -1,9 +1,6 @@
 ---
-title: ':disabled'
+title: ":disabled"
 slug: Web/CSS/:disabled
-tags:
-  - Псевдо-класс
-translation_of: Web/CSS/:disabled
 ---
 
 {{CSSRef}}

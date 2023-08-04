@@ -1,13 +1,6 @@
 ---
 title: History.go()
 slug: Web/API/History/go
-tags:
-  - API
-  - History API
-  - История
-  - Определение
-  - метод
-translation_of: Web/API/History/go
 ---
 
 {{APIRef("History API")}}

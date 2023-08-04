@@ -1,7 +1,6 @@
 ---
 title: イベントの作成と起動
 slug: Web/Events/Creating_and_triggering_events
-original_slug: Web/Events/Creating_and_triggering_events
 ---
 
 この記事では、 DOM イベントを作成して処理する方法を説明します。このようなイベントは、一般に、ブラウザー自体によって起動されたイベントとは対照的に、**合成イベント**と呼ばれます。

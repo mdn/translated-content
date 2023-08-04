@@ -1,7 +1,6 @@
 ---
 title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/create
 ---
 
 {{JSRef}}

@@ -1,5 +1,5 @@
 ---
-title: '<track>: 埋め込みテキストトラック要素'
+title: "<track>: 埋め込みテキストトラック要素"
 slug: Web/HTML/Element/track
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Function.name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/name
 ---
 
 {{JSRef}}

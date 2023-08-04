@@ -1,7 +1,6 @@
 ---
 title: EventSource
 slug: Web/API/EventSource
-translation_of: Web/API/EventSource
 ---
 
 {{APIRef("Websockets API")}}

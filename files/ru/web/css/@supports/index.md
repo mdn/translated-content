@@ -1,7 +1,6 @@
 ---
-title: '@supports'
+title: "@supports"
 slug: Web/CSS/@supports
-translation_of: Web/CSS/@supports
 ---
 
 {{ CSSRef() }}

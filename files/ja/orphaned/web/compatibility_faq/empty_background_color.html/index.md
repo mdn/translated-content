@@ -1,7 +1,6 @@
 ---
 title: アイコン,バナーの色が抜けている
 slug: orphaned/Web/Compatibility_FAQ/Empty_Background_Color.html
-original_slug: Web/Compatibility_FAQ/Empty_Background_Color.html
 ---
 
 ## 概要

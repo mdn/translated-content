@@ -1,7 +1,6 @@
 ---
 title: Gerador de histórias bobas
 slug: Learn/JavaScript/First_steps/Silly_story_generator
-original_slug: Learn/JavaScript/First_steps/Gerador_de_historias_bobas
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}

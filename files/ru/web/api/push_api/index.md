@@ -1,14 +1,6 @@
 ---
 title: Push API
 slug: Web/API/Push_API
-tags:
-  - API
-  - Push
-  - Landing
-  - Сервис-воркеры
-  - Экспериментальная технология
-  - Уведомления
-  - Определение
 ---
 
 {{ApiRef("Push API")}}

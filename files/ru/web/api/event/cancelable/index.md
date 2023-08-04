@@ -1,7 +1,6 @@
 ---
 title: Event.cancelable
 slug: Web/API/Event/cancelable
-translation_of: Web/API/Event/cancelable
 ---
 
 {{ ApiRef("DOM") }}

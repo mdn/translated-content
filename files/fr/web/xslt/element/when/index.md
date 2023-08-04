@@ -1,7 +1,6 @@
 ---
 title: when
 slug: Web/XSLT/Element/when
-translation_of: Web/XSLT/Element/when
 ---
 
 {{ XsltRef() }}

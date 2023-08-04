@@ -1,14 +1,6 @@
 ---
 title: IndexedDB
 slug: Web/API/IndexedDB_API
-tags:
-  - API
-  - Database
-  - NeedsTranslation
-  - Reference
-  - Référence(2)
-  - TopicStub
-translation_of: Web/API/IndexedDB_API
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}

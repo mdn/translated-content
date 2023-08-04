@@ -1,7 +1,6 @@
 ---
 title: tabs.move()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/move
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/move
 ---
 
 {{AddonSidebar()}}

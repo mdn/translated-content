@@ -1,13 +1,6 @@
 ---
 title: ValidityState.stepMismatch
 slug: Web/API/ValidityState/stepMismatch
-tags:
-  - API
-  - Constraint Validation API
-  - DOM
-  - Свойство
-  - Справочник
-browser-compat: api.ValidityState.stepMismatch
 ---
 
 Доступное только для чтения свойство **`stepMismatch`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, соответствует ли значение {{HTMLElement("input")}} после изменения пользователем ограничениям, установленным атрибутом `step`.
