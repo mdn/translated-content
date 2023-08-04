@@ -1,13 +1,6 @@
 ---
 title: 웹 개발자 안내서
 slug: Web/Guide
-tags:
-  - Guide
-  - Landing
-  - NeedsTranslation
-  - TopicStub
-  - Web
-translation_of: Web/Guide
 ---
 
 MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 예시를 추가하거나 API 또는 기능을 사용하는 방법을 가르치는 것을 목표로 합니다. 이 페이지는 가장 인기 있는 자료로 연결됩니다.
@@ -30,7 +23,7 @@ MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 �
 
   - : 전체 CSS 자습서는 텍스트 스타일 지정, 레이아웃 만들기 등 첫걸음을 뗄 수 있도록 도와줄 것입니다.
 
-- [CSS 레이아웃 가이드](/en-US/docs/Web/Guide/CSS/CSS_Layout)
+- [CSS 레이아웃 가이드](/ko/docs/Web/Guide/CSS/CSS_Layout)
 
   - : MDN 전반에 걸쳐 CSS Layout에 대한 많은 가이드가 있으며, 이 페이지는
     그것들을 모두 모았습니다.
@@ -67,12 +60,12 @@ MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 �
     미디어의 다양한 전달 메커니즘과 인기 있는 브라우저와의 호환성을 탐색하기
     위한 출발점으로 작성되었습니다.
 
-- [오디오 및 비디오 조작](/en-US/docs/Web/Guide/Audio_and_video_manipulation)
+- [오디오 및 비디오 조작](/ko/docs/Web/Guide/Audio_and_video_manipulation)
   - : 웹의 장점은 기술을 결합하여 새로운 형태를 만들 수 있다는 것입니다.
     브라우저에 기본 오디오 및 비디오가 있다는 것은 이러한 데이터 스트림을
     사용하여 {{htmlelement("canvas")}} 와,
     [WebGL](/ko/docs/Web/API/WebGL_API)또는
-    [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) 와 같은
+    [Web Audio API](/ko/docs/Web/API/Web_Audio_API) 와 같은
     기술과 함께 오디오 및 비디오를 직접 수정할 수 있음을 의미합니다. 예시로
     오디오에 reverb/compression 효과 추가 또는 grayscale/sepia 필터를 비디오에
     사용하는 것이 있습니다. 이 문서에서는 수행해야 할 작업을 설명하는 참고서를
@@ -80,9 +73,9 @@ MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 �
 
 ## APIs
 
-- [FormData 객체 사용](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [FormData 객체 사용](/ko/docs/Web/API/FormData/Using_FormData_Objects)
 
-  - : 이 [`FormData`](/en-US/docs/Web/API/FormData) 객체를 사용하면
+  - : 이 [`FormData`](/ko/docs/Web/API/FormData) 객체를 사용하면
     key/value 값을 컴파일하여 `XMLHttpRequest` 로 보낼 수 있습니다. 주로 양식
     데이터를 보내기 위한 것이지만, 양식과 독립적으로 데이터를 전송하는 데
     사용할 수 있습니다. `submit()`은 양식의 인코딩 유형이 "multipart/form-data"
@@ -104,7 +97,7 @@ MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 �
 
 ## Performance
 
-- [최적화 및 성능](/en-US/docs/Web/Guide/Performance)
+- [최적화 및 성능](/ko/docs/Web/Guide/Performance)
 
   - : 최신 웹 앱과 사이트를 구축할 때, 콘텐츠를 빠르고 효율적으로 만드는 것이 중요합니다. 이를 통해 강력한 데스크탑 시스템과 약한 핸드헬드 장치 모두에서 효과적으로 수행할 수 있습니다.
 
@@ -116,16 +109,16 @@ MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 �
 
 ## Fonts
 
-- [Variable fonts guide](/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
+- [Variable fonts guide](/ko/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
 
   - : variable fonts를 설계 시 사용하는 방법을 알아보십시오.
 
-- [웹 오픈 글꼴 형식(WOFF)](/en-US/docs/Web/Guide/WOFF)
+- [웹 오픈 글꼴 형식(WOFF)](/ko/docs/Web/Guide/WOFF)
 
   - : WOFF(Web Open Font Format)는 웹에서 누구나 무료로 사용할 수 있는 글꼴 파일 형식입니다.
 
 ## User interface development
 
-- [User input and controls](/en-US/docs/Web/Guide/User_input_methods)
+- [User input and controls](/ko/docs/Web/Guide/User_input_methods)
 
   - : 모던 웹에서 사용자 입력은 단순히 마우스와 키보드로만 이뤄지는 것이 아닙니다. 예를 들어 터치스크린을 생각해 보십시오. 이 문서에서는 기본 기술에 대한 자세한 정보가 필요한 사람을 위해 FAQ, 실제 사례 및 추가 정보 링크와 함께 개방형 웹 앱에서 사용자 입력을 관리하고 제어를 구현하기 위한 권장 사항을 제공합니다.

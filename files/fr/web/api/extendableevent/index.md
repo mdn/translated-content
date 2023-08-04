@@ -1,19 +1,8 @@
 ---
 title: ExtendableEvent
 slug: Web/API/ExtendableEvent
-tags:
-  - API
-  - Experimental
-  - ExtendableEvent
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - Workers
-translation_of: Web/API/ExtendableEvent
-browser-compat: api.ExtendableEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 L'interface **`ExtendableEvent`** étend la durée de vie des événements [`install`](/fr/docs/Web/API/ServiceWorkerGlobalScope/install_event) et [`activate`](/fr/docs/Web/API/ServiceWorkerGlobalScope/activate_event) envoyés dans la portée globale dans le cycle de vie du service worker. Elle s'assure que les événements fonctionnels (comme [`FetchEvent`](/fr/docs/Web/API/FetchEvent)) ne soient pas distribués avant de mettre à jour les schémas de la base de données et de vider l'ancien cache.
@@ -53,28 +42,40 @@ Ce fragment de code montre aussi une bonne pratique pour construire des versions
 ```js
 var CACHE_VERSION = 1;
 var CURRENT_CACHES = {
-  prefetch: 'prefetch-cache-v' + CACHE_VERSION
+  prefetch: "prefetch-cache-v" + CACHE_VERSION,
 };
 
-self.addEventListener('install', function(event) {
+self.addEventListener("install", function (event) {
   var urlsToPrefetch = [
-    './static/pre_fetched.txt',
-    './static/pre_fetched.html',
-    'https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif'
+    "./static/pre_fetched.txt",
+    "./static/pre_fetched.html",
+    "https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif",
   ];
 
-  console.log('Installation en cours. Ressources à pré-charger :', urlsToPrefetch);
+  console.log(
+    "Installation en cours. Ressources à pré-charger :",
+    urlsToPrefetch,
+  );
 
   event.waitUntil(
-    caches.open(CURRENT_CACHES['prefetch']).then(function(cache) {
-      cache.addAll(urlsToPrefetch.map(function(urlToPrefetch) {
-        return new Request(urlToPrefetch, {mode: 'no-cors'});
-      })).then(function() {
-        console.log('Toutes les ressources ont été chargées et mises en cache.');
-      });
-    }).catch(function(error) {
-      console.error('Erreur de pré-chargement :', error);
-    })
+    caches
+      .open(CURRENT_CACHES["prefetch"])
+      .then(function (cache) {
+        cache
+          .addAll(
+            urlsToPrefetch.map(function (urlToPrefetch) {
+              return new Request(urlToPrefetch, { mode: "no-cors" });
+            }),
+          )
+          .then(function () {
+            console.log(
+              "Toutes les ressources ont été chargées et mises en cache.",
+            );
+          });
+      })
+      .catch(function (error) {
+        console.error("Erreur de pré-chargement :", error);
+      }),
   );
 });
 ```
@@ -83,9 +84,7 @@ self.addEventListener('install', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#extendable-event', 'ExtendableEvent')}} | {{Spec2('Service Workers')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

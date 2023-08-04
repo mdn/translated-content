@@ -1,17 +1,8 @@
 ---
 title: ResizeObserverEntry.contentBoxSize
 slug: Web/API/ResizeObserverEntry/contentBoxSize
-page-type: web-api-instance-property
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - リサイズオブザーバー API
-  - ResizeObserverEntry
-  - contentBoxSize
-browser-compat: api.ResizeObserverEntry.contentBoxSize
-translation_of: Web/API/ResizeObserverEntry/contentBoxSize
 ---
+
 {{APIRef("Resize Observer API")}}
 
 **`contentBoxSize`** は {{domxref("ResizeObserverEntry")}} インターフェイスの読み取り専用プロパティで、コールバック実行時に、監視された要素の新しいコンテンツボックスサイズを含む配列を返します。
@@ -25,7 +16,7 @@ translation_of: Web/API/ResizeObserverEntry/contentBoxSize
 - `inlineSize`
   - : 監視された要素のコンテンツボックスのインライン方向の長さ。書字方向 ({{cssxref("writing-mode")}}) が水平のボックスの場合、これは水平方向の寸法、すなわち幅であり、 writing-mode が垂直である場合は、これは垂直方向の寸法、すなわち高さです。
 
-> **Note:** 書字方向やブロック・インラインの寸法についての詳しい説明は、[テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)をご覧ください。
+> **メモ:** 書字方向やブロック・インラインの寸法についての詳しい説明は、[テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)をご覧ください。
 
 ## 例
 

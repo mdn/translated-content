@@ -1,17 +1,11 @@
 ---
 title: Storage.clear()
 slug: Web/API/Storage/clear
-tags:
-  - API
-  - Méthode
-  - Reference
-  - Stockage
-  - Stockage Web
-translation_of: Web/API/Storage/clear
 ---
+
 {{APIRef("Web Storage API")}}
 
-La méthode `clear()` de l'interface {{domxref("Storage")}},  lorsqu'elle est invoquée, vide toutes les clés stockées.
+La méthode `clear()` de l'interface {{domxref("Storage")}}, lorsqu'elle est invoquée, vide toutes les clés stockées.
 
 ## Syntaxe
 
@@ -29,9 +23,9 @@ La fonction suivante crée trois entrées de données dans le stockage local, pu
 
 ```js
 function peuplerLeStockage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'monChat.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "monChat.png");
 
   localStorage.clear();
 }
@@ -41,13 +35,11 @@ function peuplerLeStockage() {
 
 ## Spécifications
 
-| Specification                                                                                                | État                             | Commentaire |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-clear', 'Storage.clear')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Storage.clear")}}
+{{Compat}}
 
 ## Voir aussi
 

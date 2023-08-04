@@ -1,20 +1,8 @@
 ---
 title: env()
 slug: Web/CSS/env
-tags:
-  - CSS
-  - CSS 変数
-  - CSS 関数
-  - Draft
-  - 関数
-  - リファレンス
-  - 変数
-  - env
-  - env()
-translation_of: Web/CSS/env()
-original_slug: Web/CSS/env()
-browser-compat: css.properties.custom-property.env
 ---
+
 {{CSSRef}}
 
 **`env()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、ユーザーエージェントが定義した環境変数の値を、 {{cssxref("var()")}} 関数や[カスタムプロパティ](/ja/docs/Web/CSS/--*)と同じ方法で CSS に挿入するために使用することができます。異なる点は、ユーザーが定義しているのではなくユーザーエージェントが定義しているものであること、カスタムプロパティは宣言されている要素のスコープであるのに対し、環境変数は文書でグローバルなスコープであることです。
@@ -217,7 +205,6 @@ main {
 - [CSS カスタムプロパティと変数のカスケード](/ja/docs/Web/CSS/CSS_Variables)
 - [カスタムプロパティ (--\*)](/ja/docs/Web/CSS/--*)
 - [CSS カスタムプロパティ (変数) の使用](/ja/docs/Web/CSS/Using_CSS_custom_properties)
-- {{CSSxRef("@viewport", "viewport-fit (@viewport)")}}
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/window-controls-overlay/)
 - [Display content in the title bar](https://docs.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
 - [Breaking Out of the Box](https://alistapart.com/article/breaking-out-of-the-box/)

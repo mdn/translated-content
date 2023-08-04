@@ -1,16 +1,8 @@
 ---
 title: DOMRect()
 slug: Web/API/DOMRect/DOMRect
-tags:
-  - API
-  - コンストラクター
-  - DOM リファレンス
-  - DOMRect
-  - 位置
-  - リファレンス
-browser-compat: api.DOMRect.DOMRect
-translation_of: Web/API/DOMRect/DOMRect
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`DOMRect()`** コンストラクターは、新しい {{domxref("DOMRect")}} オブジェクトを作成します。

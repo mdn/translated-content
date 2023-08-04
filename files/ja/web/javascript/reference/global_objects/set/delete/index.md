@@ -1,16 +1,8 @@
 ---
 title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-  - set
-browser-compat: javascript.builtins.Set.delete
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
 ---
+
 {{JSRef}}
 
 **`delete()`** メソッドは、指定された値が設定されていれば、 `Set` オブジェクトから取り除きます。
@@ -46,7 +38,9 @@ mySet.delete('foo'); // 正常に要素を削除出来れば true を返す
 mySet.has('foo');    // 存在しない要素を確認すると false を返す
 ```
 
-Object を Set から削除する方法を以下で確認してみましょう。
+### Set からオブジェクトを削除する
+
+オブジェクト同士は参照で比較されるため、元のオブジェクトへの参照を保持していない場合は、個々のプロパティをチェックして削除する必要があります。
 
 ```js
 const setObj = new Set(); // 新しいセットを作成

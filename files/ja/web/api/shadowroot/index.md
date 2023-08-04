@@ -1,16 +1,8 @@
 ---
 title: ShadowRoot
 slug: Web/API/ShadowRoot
-tags:
-  - API
-  - Interface
-  - リファレンス
-  - ShadowRoot
-  - ウェブコンポーネント
-  - シャドウ DOM
-browser-compat: api.ShadowRoot
-translation_of: Web/API/ShadowRoot
 ---
+
 {{APIRef('Shadow DOM')}}
 
 **`ShadowRoot`** は Shadow DOM API のインターフェイスで、文書の DOM ツリーから分離してレンダリングされた部分ツリーのルートノードを指します。
@@ -19,10 +11,10 @@ translation_of: Web/API/ShadowRoot
 
 ## プロパティ
 
-- {{domxref("ShadowRoot.activeElement")}} {{readonlyInline}}
+- {{domxref("ShadowRoot.activeElement")}} {{readonlyInline}}
   - : フォーカスを持っているシャドウツリー内の {{domxref('Element')}} を返します。
 - {{domxref("ShadowRoot.delegatesFocus")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
-  - : シャドウが取り付けられたときに  `delegatesFocus` が設定されていたかどうかを示す論理値を返します ({{domxref("Element.attachShadow()")}} を参照)。
+  - : シャドウが取り付けられたときに `delegatesFocus` が設定されていたかどうかを示す論理値を返します ({{domxref("Element.attachShadow()")}} を参照)。
 - {{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}
   - : このシャドウツリーで現在全画面モードになっている要素です。
 - {{domxref("ShadowRoot.host")}} {{readonlyinline}}
@@ -33,16 +25,16 @@ translation_of: Web/API/ShadowRoot
   - : `ShadowRoot` のモードで `open` または `closed` の値を取ります。これはシャドウルートの内部の機能に JavaScript からアクセスできるかどうかを定義します。
 - {{DOMxRef("ShadowRoot.pictureInPictureElement")}} {{ReadOnlyInline}}
   - : シャドウツリー内で現在ピクチャインピクチャモードで表示されている {{DOMxRef('Element')}} を返します。
-- {{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}
+- {{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}
   - : ポインターがロックされている間、マウスイベントのターゲットとして設定されている {{DOMxRef('Element')}} を返します。
     ロックが保留中か、ポインターがロックされていないか、ターゲットがほかのツリーにある場合は `null` を返します。
-- {{domxref("ShadowRoot.styleSheets")}} {{readonlyInline}}
+- {{domxref("ShadowRoot.styleSheets")}} {{readonlyInline}}
   - : シャドウツリーに明示的にリンクされている、または埋め込まれている {{domxref('CSSStyleSheet')}} オブジェクトの {{domxref('StyleSheetList')}} を返します。
 
 ### イベントハンドラー
 
 - {{domxref("ShadowRoot.onslotchange")}}
-  - : [イベントハンドラー](/en-US/docs/Web/Events/Event_handlers)で、 {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} イベントが発行されたときに呼び出されるコードを表します。
+  - : [イベントハンドラー](/ja/docs/Web/Events/Event_handlers)で、 {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} イベントが発行されたときに呼び出されるコードを表します。
 
 ## メソッド
 

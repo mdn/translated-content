@@ -1,16 +1,6 @@
 ---
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Promise
-  - Reference
-  - promise.all
-  - Polyfill
-browser-compat: javascript.builtins.Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 ---
 {{JSRef}}
 
@@ -72,7 +62,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
   - : 주어진 사유로 거부하는 `Promise` 객체를 반환합니다.
 - {{jsxref("Promise.resolve()")}}
   - : 주어진 값으로 이행하는 `Promise` 객체를 반환합니다. 이때 지정한 값이 `then` 가능한(`then` 메서드를 가지는) 값인 경우, `Promise.resolve()`가 반환하는 프로미스는 `then` 메서드를 "따라가서" 자신의 최종 상태를 결정합니다. 그 외의 경우, 반환된 프로미스는 주어진 값으로 이행합니다.
-  
+
     어떤 값이 프로미스인지 아닌지 알 수 없는 경우, 보통 일일히 두 경우를 나눠서 처리하는 대신 `Promise.resolve()`로 값을 감싸서 항상 프로미스가 되도록 만든 후 작업하는 것이 좋습니다.
 
 ## 인스턴스 메서드

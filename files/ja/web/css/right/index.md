@@ -1,17 +1,8 @@
 ---
 title: right
 slug: Web/CSS/right
-tags:
-  - CSS
-  - CSS 位置指定レイアウト
-  - CSS プロパティ
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - recipe:css-property
-browser-compat: css.properties.right
-translation_of: Web/CSS/right
 ---
+
 {{CSSRef}}
 
 **`right`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/position)の水平位置の決定に関与します。位置指定されていない要素には効果はありません。
@@ -68,7 +59,7 @@ right: unset;
 - `position` が `sticky` に設定されている場合、 `right` プロパティは要素がビューポート内にある場合は `position` が `relative` であるかのように、外の場合は `position` が `fixed` の場合と同様に動作します。
 - `position` が `static` に設定されている場合、 `right` プロパティは*効果がありません*。
 
-{{cssxref("left")}} と `right` の両方が定義された場合、他のプロパティで制約されていなければ、要素は両方を満たすように引き伸ばされます。もし要素が両方を満たすように伸びることができない場合 -- 例えば `width` が宣言されている場合 -- 要素の位置は*過剰制約*になります。このような場合、コンテナーが左書きの場合は `left` の値が優先され、コンテナーが右書きの場合は `right` の値が優先されます。
+{{cssxref("left")}} と `right` の両方が定義された場合、他のプロパティで制約されていなければ、要素は両方を満たすように引き伸ばされます。もし要素が両方を満たすように伸びることができない場合 — 例えば `width` が宣言されている場合 — 要素の位置は*過剰制約*になります。このような場合、コンテナーが左書きの場合は `left` の値が優先され、コンテナーが右書きの場合は `right` の値が優先されます。
 
 ## 公式定義
 
@@ -132,26 +123,26 @@ right: unset;
 
 ```css
 div {
-  outline: 1px solid #CCCCCC;
+  outline: 1px solid #CCCCCC;
 }
 #parent {
-  width: 200px;
-  height: 200px;
-  background-color: #FFC7E4;
-  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #FFC7E4;
+  position: relative;
 }
 /* declare both a left and a right */
 #width,
 #noWidth {
-  background-color: #C2FFD7;
-  position: absolute;
-  left: 0;
-  right: 0;
+  background-color: #C2FFD7;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 /* declare a width */
 #width {
-  width: 100px;
-  top: 60px;
+  width: 100px;
+  top: 60px;
 }
 ```
 

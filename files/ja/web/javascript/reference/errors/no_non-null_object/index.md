@@ -1,13 +1,8 @@
 ---
 title: 'TypeError: "x" is not a non-null object'
 slug: Web/JavaScript/Reference/Errors/No_non-null_object
-tags:
-- Error
-- Errors
-- JavaScript
-- TypeError
-translation_of: Web/JavaScript/Reference/Errors/No_non-null_object
 ---
+
 {{JSSidebar("Errors")}}
 
 JavaScript の例外 "is not a non-null object" は、ある場所でオブジェクトが期待されているのに提供されなかった場合に発生します。 {{jsxref("null")}} はオブジェクトではなく、動作しません。

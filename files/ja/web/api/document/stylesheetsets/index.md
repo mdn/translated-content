@@ -1,18 +1,8 @@
 ---
 title: Document.styleSheetSets
 slug: Web/API/Document/styleSheetSets
-page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - DOM
-  - プロパティ
-  - リファレンス
-  - スタイルシート
-  - 非推奨
-browser-compat: api.Document.styleSheetSets
-translation_of: Web/API/Document/styleSheetSets
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 **`styleSheetSets`** プロパティは読み取り専用で、現在有効なすべてのスタイルシートセットの生きたリストを返します。
@@ -26,13 +16,13 @@ translation_of: Web/API/Document/styleSheetSets
 "sheetList" という ID を持つ {{HTMLElement("ul")}} （リスト）要素がある場合、次のようなコードで、利用可能なすべてのスタイルシートセットの名前を入力することができます。
 
 ```js
-const list = document.getElementById('sheetList');
+const list = document.getElementById("sheetList");
 const sheets = document.styleSheetSets;
 
-list.textContent = '';
+list.textContent = "";
 
 for (let i = 0; i < sheets.length; i++) {
-  const item = document.createElement('li');
+  const item = document.createElement("li");
 
   item.textContent = sheets[i];
   list.appendChild(item);

@@ -1,12 +1,10 @@
 ---
-title: CharacterData.before()
+title: "CharacterData: before() メソッド"
 slug: Web/API/CharacterData/before
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.CharacterData.before
-translation_of: Web/API/CharacterData/before
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
+
 {{APIRef("DOM")}}
 
 **`before()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、一連の {{domxref("Node")}} オブジェクトまたは文字列を、この `CharacterData` の親ノードの子リストの中、この `CharacterData` ノードの直前に挿入します。
@@ -15,8 +13,8 @@ translation_of: Web/API/CharacterData/before
 
 ## 構文
 
-```js
-before(... nodes)
+```js-nolint
+before(...nodes)
 ```
 
 ### 引数
@@ -38,10 +36,10 @@ before(... nodes)
 `before()` メソッドを使うと、現在のノードのデータを変更せずに、新しいノードをこの `CharacterData` ノードの前に挿入することができます。
 
 ```js
-const h1TextNode = document.getElementsByTagName('h1')[0].firstChild;
+const h1TextNode = document.querySelector("h1").firstChild;
 h1TextNode.before("h1# ");
 
-h1TextNode.parentElement.childNodes
+h1TextNode.parentElement.childNodes;
 // NodeList [#text "h1# ", #text "CharacterData.before()"]
 
 h1TextNode.data;

@@ -1,9 +1,8 @@
 ---
-title: 'Notification: evento close'
+title: "Notification: evento close"
 slug: Web/API/Notification/close_event
-page-type: web-api-event
-browser-compat: api.Notification.close_event
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 El evento **`close`** de la interfaz de {{domxref("Notification")}} se activa cuando se cierra una {{domxref("Notification")}}.
@@ -13,9 +12,9 @@ El evento **`close`** de la interfaz de {{domxref("Notification")}} se activa cu
 Use el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establezca una propiedad de manejador de eventos.
 
 ```js
-addEventListener('close', event => { });
+addEventListener("close", (event) => {});
 
-onclose = event => { };
+onclose = (event) => {};
 ```
 
 ## Tipo de evento

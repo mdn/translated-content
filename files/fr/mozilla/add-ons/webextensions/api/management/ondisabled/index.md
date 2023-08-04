@@ -1,16 +1,8 @@
 ---
 title: management.onDisabled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onDisabled
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Reference
-  - WebExtensions
-  - management
-  - onDisabled
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/onDisabled
 ---
+
 {{AddonSidebar()}}
 
 Action quand l'extension est désactivée.
@@ -20,9 +12,9 @@ L'API requière l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/pe
 ## Syntaxe
 
 ```js
-browser.management.onDisabled.addListener(listener)
-browser.management.onDisabled.removeListener(listener)
-browser.management.onDisabled.hasListener(listener)
+browser.management.onDisabled.addListener(listener);
+browser.management.onDisabled.removeListener(listener);
+browser.management.onDisabled.hasListener(listener);
 ```
 
 Les événement ont trois fonctions :
@@ -45,9 +37,9 @@ Les événement ont trois fonctions :
     - `info`
       - : [`ExtensionInfo`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo): informations de l'extension qui a été désactivé
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.onDisabled")}}
+{{Compat}}
 
 ## Exemples
 
@@ -67,7 +59,8 @@ browser.management.onDisabled.addListener((info) => {
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -94,4 +87,4 @@ browser.management.onDisabled.addListener((info) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

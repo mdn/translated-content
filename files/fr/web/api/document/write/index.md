@@ -1,14 +1,8 @@
 ---
 title: document.write
 slug: Web/API/Document/write
-tags:
-  - API
-  - DOM
-  - Document
-  - Méthodes
-  - Rérérence
-translation_of: Web/API/Document/write
 ---
+
 {{ ApiRef("DOM") }}
 
 Écrit une chaîne de texte dans un document ouvert par [document.open()](/fr/docs/Web/API/Document/open).
@@ -30,26 +24,24 @@ document.write(balisage);
 
 ```html
 <html>
+  <head>
+    <title>Exemple de document.write</title>
 
-<head>
-<title>Exemple de document.write</title>
+    <script type="text/javascript">
+      function nouveauContenu() {
+        alert("chargement du nouveau contenu");
+        document.open();
+        document.write(
+          "<h1>Assez de l'ancien contenu, passons au nouveau&nbsp;!</h1>",
+        );
+        document.close();
+      }
+    </script>
+  </head>
 
-<script type="text/javascript">
-
-function nouveauContenu()
-{
-alert("chargement du nouveau contenu");
-document.open();
-document.write("<h1>Assez de l'ancien contenu, passons au nouveau&nbsp;!</h1>");
-document.close();
-}
-
-</script>
-</head>
-
-<body onload="nouveauContenu();">
-<p>Ceci est le contenu original du document.</p>
-</body>
+  <body onload="nouveauContenu();">
+    <p>Ceci est le contenu original du document.</p>
+  </body>
 </html>
 ```
 
@@ -61,13 +53,13 @@ Si l'appel à `document.write()` est intégré directement dans le code HTML, il
 
 ```html
 <script>
-  document.write("<h1>Main title</h1>")
+  document.write("<h1>Main title</h1>");
 </script>
 ```
 
 > **Note :** `document.write` et [`document.writeln`](/fr/docs/Web/API/Document/writeln) ne fonctionnent pas dans les documents XHTML (vous obtiendrez une erreur «&nbsp;Operation is not supported \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`]&nbsp;» dans la console d'erreurs). Cela arrive lors de l'ouverture d'un fichier local avec l'extension de fichier `.xhtm` ou pour tout document servi avec une `application/xhtml+xml` de [type MIME](/fr/docs/Glossary/MIME_type). Plus d'informations disponibles dans la [foire aux questions W3C XHTML (en anglais)](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
 
-> **Note :** `document.write` dans les scripts [deferred (_différé_)](/en-US/docs/Web/HTML/Element/script#attr-defer) ou [asynchronous (_asynchrone_)](/en-US/docs/Web/HTML/Element/script#attr-async) sera ignoré et vous recevrez un message comme  "A call to `document.write()` from an asynchronously-loaded external script was ignored" dans la console d'erreurs.
+> **Note :** `document.write` dans les scripts [deferred (_différé_)](/fr/docs/Web/HTML/Element/script#attr-defer) ou [asynchronous (_asynchrone_)](/fr/docs/Web/HTML/Element/script#attr-async) sera ignoré et vous recevrez un message comme "A call to `document.write()` from an asynchronously-loaded external script was ignored" dans la console d'erreurs.
 
 > **Note :** Dans Edge seulement, appeler plusieurs fois `document.write` dans un "iframe" déclenche une erreur "SCRIPT70: Permission denied." _(autorisation refusée)_.
 

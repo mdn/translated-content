@@ -1,16 +1,8 @@
 ---
 title: management.get()
 slug: Mozilla/Add-ons/WebExtensions/API/management/get
-tags:
-  - API
-  - Add-ons
-  - Méthode
-  - Reference
-  - WebExtensions
-  - get
-  - management
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/get
 ---
+
 {{AddonSidebar()}}
 
 Récupère un objet {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} contenant des informations sur l'extension spécifiée.
@@ -23,8 +15,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var gettingInfo = browser.management.get(
-  id                  // string
-)
+  id, // string
+);
 ```
 
 ### Paramètres
@@ -34,11 +26,11 @@ var gettingInfo = browser.management.get(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet  {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} , contenant les informations sur l'extension. La promise sera rejetée si aucune extension avec l'ID donné n'est installée ou si l'appelant ne peut pas accéder à l'extension.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} , contenant les informations sur l'extension. La promise sera rejetée si aucune extension avec l'ID donné n'est installée ou si l'appelant ne peut pas accéder à l'extension.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.get")}}
+{{Compat}}
 
 ## Exemples
 
@@ -63,7 +55,8 @@ getting.then(got);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -90,4 +83,4 @@ getting.then(got);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,16 +1,8 @@
 ---
 title: <number>
 slug: Web/CSS/number
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - レイアウト
-  - リファレンス
-  - ウェブ
-browser-compat: css.types.number
-translation_of: Web/CSS/number
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`<number>`** [データ型](/ja/docs/Web/CSS/CSS_Types)は、整数または小数部分のある数値を表します。
@@ -28,7 +20,7 @@ translation_of: Web/CSS/number
 ### 有効な数値
 
 ```css example-good
-12          生の &lt;integer&gt; は &lt;number&gt; でもある
+12          生の <integer> は <number> でもある
 4.01        正の実数
 -456.8      負の実数
 0.0         ゼロ

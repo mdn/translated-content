@@ -1,12 +1,8 @@
 ---
 title: Fetch directive (フェッチディレクティブ)
 slug: Glossary/Fetch_directive
-tags:
-  - CSP
-  - HTTP
-  - セキュリティ
-translation_of: Glossary/Fetch_directive
 ---
+
 **{{Glossary("CSP")}} のフェッチディレクティブ**は {{HTTPHeader("Content-Security-Policy")}} ヘッダーで使用され、特定のリソース種別の読み込み先を制御します。たとえば、 {{CSP("script-src")}} では、開発者は信頼できるスクリプトのソースを許可してページ上で実行できるようし、 {{CSP("font-src")}} では、ウェブフォントのソースを制御できます。
 
 すべてのフェッチディレクティブは {{CSP("default-src")}} で代替することができます。つまり、フェッチディレクティブが CSP ヘッダーにない場合、ユーザーエージェントは `default-src` ディレクティブを探します。

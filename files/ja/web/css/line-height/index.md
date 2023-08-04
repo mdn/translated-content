@@ -1,20 +1,8 @@
 ---
 title: line-height
 slug: Web/CSS/line-height
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - レイアウト
-  - リファレンス
-  - テキスト
-  - Vertical
-  - height
-  - recipe:css-property
-  - size
-browser-compat: css.properties.line-height
-translation_of: Web/CSS/line-height
 ---
+
 {{CSSRef}}
 
 **`line-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、行ボックスの高さを設定します。これは主にテキストの行間を設定するために使用します。ブロックレベル要素では、要素に含まれる行ボックスの最小の高さを指定します。非[置換](/ja/docs/Web/CSS/Replaced_element)インライン要素では、行ボックスの高さの計算に使われる高さを指定します。

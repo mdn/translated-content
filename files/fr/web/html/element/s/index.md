@@ -1,14 +1,9 @@
 ---
 title: <s>
 slug: Web/HTML/Element/s
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/s
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<s>`** permet d'afficher du texte qui est barré car il n'est plus pertinent ou car il est obsolète. `<s>` ne doit pas être employé pour indiquer des éditions dans un document (on utilisera alors {{HTMLElement("del")}} et {{HTMLElement("ins")}}).
 
@@ -23,9 +18,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 ### HTML
 
 ```html
-<p>
-  <s>Le plat du jour : saumon à la hollandaise</s> <em>plus disponible</em>
-</p>
+<p><s>Le plat du jour : saumon à la hollandaise</s> <em>plus disponible</em></p>
 ```
 
 ### Résultat
@@ -116,14 +109,11 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG','semantics.html#the-s-element','s element')}}             | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C','text-level-semantics.html#the-s-element','s element')}} | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.s")}}
+{{Compat}}
 
 ## Voir aussi
 

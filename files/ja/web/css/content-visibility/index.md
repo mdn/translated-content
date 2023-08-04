@@ -1,19 +1,8 @@
 ---
 title: content-visibility
 slug: Web/CSS/content-visibility
-tags:
-  - CSS
-  - CSS 封じ込め
-  - CSS プロパティ
-  - レイアウト
-  - Paint
-  - リファレンス
-  - Style
-  - Visibility
-  - ウェブ
-browser-compat: css.properties.content-visibility
-translation_of: Web/CSS/content-visibility
 ---
+
 {{CSSRef}}
 
 **`content-visibility`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がその内容物をレンダリングするかどうかを制御するとともに、強力な封じ込めのセットを強制することで、必要になるまでユーザーエージェントが大量のレイアウトとレンダリングの作業を省略できるようにします。基本的に、ユーザーエージェントは、レイアウトやペイントなどの要素のレンダリング作業を必要になるまでスキップできるため、最初のページの読み込みがはるかに高速になります。
@@ -48,7 +37,7 @@ content-visibility: unset;
 
 ## アクセシビリティの考慮
 
-見出しやその他のコンテンツが画面外にあるとみなされた場合、 `content-visibility` によって抑制されます。これは、画面リーダーの利用者が、ページのアウトラインを完全に読み上げるという利点を失う可能性があることを意味します。
+見出しやその他のコンテンツが画面外にあるとみなされた場合、 `content-visibility` によって抑制されます。これは、スクリーンリーダーの利用者が、ページのアウトラインを完全に読み上げるという利点を失う可能性があることを意味します。
 
 詳しくは [Content-visibility and Accessible Semantics](https://marcysutton.com/content-visibility-accessible-semantics) をご覧ください。
 

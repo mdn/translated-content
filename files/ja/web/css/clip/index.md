@@ -1,16 +1,8 @@
 ---
 title: clip
 slug: Web/CSS/clip
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - 非推奨
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.clip
-translation_of: Web/CSS/clip
 ---
+
 {{CSSRef}}
 
 **`clip`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のどの部分が可視であるかを定義します。 `clip` プロパティは絶対配置された要素、つまり {{cssxref("position","position:absolute")}} または {{cssxref("position","position:fixed")}} を持つ要素だけに適用されます。
@@ -31,7 +23,7 @@ clip: unset;
 
 ## 構文
 
-> **Note:** 可能であれば、より新しい {{cssxref("clip-path")}} を使うことをお勧めします。
+> **メモ:** 可能であれば、より新しい {{cssxref("clip-path")}} を使うことをお勧めします。
 
 ### 値
 
@@ -93,10 +85,10 @@ clip: unset;
 
 ```html
 <p class="dotted-border">
-  <img src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Original graphic">
-  <img id="top-left" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to upper left">
-  <img id="middle" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped towards middle">
-  <img id="bottom-right" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to bottom right">
+  <img src="hut.jpg" title="Original graphic">
+  <img id="top-left" src="hut.jpg" title="Graphic clipped to upper left">
+  <img id="middle" src="hut.jpg" title="Graphic clipped towards middle">
+  <img id="bottom-right" src="hut.jpg" title="Graphic clipped to bottom right">
 </p>
 ```
 

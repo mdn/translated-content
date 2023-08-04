@@ -1,15 +1,8 @@
 ---
 title: background-image
 slug: Web/CSS/background-image
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.background-image
-translation_of: Web/CSS/background-image
 ---
+
 {{CSSRef}}
 
 **`background-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に 1 つ以上の背景画像を設定します。
@@ -22,7 +15,7 @@ translation_of: Web/CSS/background-image
 
 指定された画像を描画することができない (例えば、指定された URI が指し示すファイルをロードできない) 場合、ブラウザーはその指定を `none` 値であるかのように処理します。
 
-> **Note:** たとえ画像が不透明で通常は色が表示されないとしても、ウェブ開発者は常に {{cssxref("background-color")}} を指定すべきです。例えばネットワークが切断された場合など、もし画像が読み込めなかったときに、背景色がフォールバックとして使われます。
+> **メモ:** たとえ画像が不透明で通常は色が表示されないとしても、ウェブ開発者は常に {{cssxref("background-color")}} を指定すべきです。例えばネットワークが切断された場合など、もし画像が読み込めなかったときに、背景色がフォールバックとして使われます。
 
 ## 構文
 

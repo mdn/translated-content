@@ -1,15 +1,8 @@
 ---
 title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
-tags:
-  - Class
-  - DataView
-  - JavaScript
-  - TypedArrays
-  - Polyfill
-browser-compat: javascript.builtins.DataView
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 ---
+
 {{JSRef}}
 
 **`DataView`** ビューは {{jsxref("ArrayBuffer")}} の多様な数値型を、プラットフォームの[エンディアン](/ja/docs/Glossary/Endianness)に関係なく読み書きするための低水準インターフェイスを提供します。
@@ -32,7 +25,7 @@ console.log(littleEndian); // true または false
 
 ### 64 ビット整数値
 
-一部のブラウザーは {{jsxref("DataView.prototype.setBigInt64()")}} および {{jsxref("DataView.prototype.setBigUint64()")}} に対応していません。そのため、各ブラウザーで動作するコードで 64 ビット操作ができるようにするには、独自の `getUint64()` 関数を実装し、 {{jsxref("Number.MAX_SAFE_INTEGER")}} までの制度の値を受け取れるようにします。これで十分な場合もあるでしょう。
+一部のブラウザーは {{jsxref("DataView.prototype.setBigInt64()")}} および {{jsxref("DataView.prototype.setBigUint64()")}} に対応していません。そのため、各ブラウザーで動作するコードで 64 ビット操作ができるようにするには、独自の `getUint64()` 関数を実装し、 {{jsxref("Number.MAX_SAFE_INTEGER")}} までの精度の値を受け取れるようにします。これで十分な場合もあるでしょう。
 
 ```js
 function getUint64(dataview, byteOffset, littleEndian) {
@@ -66,7 +59,7 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 
 ## コンストラクター
 
-- [`DataView()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/DataView)
+- [`DataView()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/DataView/DataView)
   - : 新しい `DataView` オブジェクトを作成します。
 
 ## インスタンスプロパティ

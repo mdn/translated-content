@@ -1,21 +1,11 @@
 ---
 title: BaseAudioContext
 slug: Web/API/BaseAudioContext
-tags:
-  - API
-  - 音声
-  - BaseAudioContext
-  - コンテキスト
-  - インターフェイス
-  - リファレンス
-  - ウェブ音声 API
-  - sound
-browser-compat: api.BaseAudioContext
-translation_of: Web/API/BaseAudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
-`BaseAudioContext` は[ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API) のインターフェイスで、 {{domxref("AudioContext")}} と {{domxref("OfflineAudioContext")}} で表されるオンラインとオフラインのオーディオ処理グラフの基本定義として動作します。 `BaseAudioContext` を直接使用することはありません。これらの 2 つの継承されたインターフェースのいずれかを介して、その機能を使用することになります。
+`BaseAudioContext` は[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) のインターフェイスで、 {{domxref("AudioContext")}} と {{domxref("OfflineAudioContext")}} で表されるオンラインとオフラインのオーディオ処理グラフの基本定義として動作します。 `BaseAudioContext` を直接使用することはありません。これらの 2 つの継承されたインターフェースのいずれかを介して、その機能を使用することになります。
 
 `BaseAudioContext` はイベントのターゲットとなることができるので、 {{domxref("EventTarget")}} インターフェイスを実装しています。
 
@@ -46,9 +36,9 @@ translation_of: Web/API/BaseAudioContext
 _{{domxref("EventTarget")}} インターフェイスから継承しているメソッドもあります。_
 
 - {{domxref("BaseAudioContext.createAnalyser()")}}
-  - :  {{domxref("AnalyserNode")}} を作成します。これは音声の時間と周波数データを公開し、データの可視化などに利用できます。
+  - : {{domxref("AnalyserNode")}} を作成します。これは音声の時間と周波数データを公開し、データの可視化などに利用できます。
 - {{domxref("BaseAudioContext.createBiquadFilter()")}}
-  - :  {{domxref("BiquadFilterNode")}} を作成します。これはハイパス、ローパス、バンドパスなどの一般的なフィルター型として設定可能な 2 次フィルターを表します。
+  - : {{domxref("BiquadFilterNode")}} を作成します。これはハイパス、ローパス、バンドパスなどの一般的なフィルター型として設定可能な 2 次フィルターを表します。
 - {{domxref("BaseAudioContext.createBuffer()")}}
   - : 新しい空の {{ domxref("AudioBuffer") }} オブジェクトを作成します。これにデータを入力して {{ domxref("AudioBufferSourceNode") }} で再生できます。
 - {{domxref("BaseAudioContext.createBufferSource()")}}
@@ -62,11 +52,11 @@ _{{domxref("EventTarget")}} インターフェイスから継承しているメ�
 - {{domxref("BaseAudioContext.createConvolver()")}}
   - : {{domxref("ConvolverNode")}} を作成します。これはオーディオグラフにコンボリューション効果（残響効果など）を適用するために使用されます。
 - {{domxref("BaseAudioContext.createDelay()")}}
-  - : {{domxref("DelayNode")}} を作成します。これは入力される音声信号を一定時間遅延させるために使用します。このノードは、ウェブ音声 API グラフでフィードバックループを作成する際にも便利です。
+  - : {{domxref("DelayNode")}} を作成します。これは入力される音声信号を一定時間遅延させるために使用します。このノードは、ウェブオーディオ API グラフでフィードバックループを作成する際にも便利です。
 - {{domxref("BaseAudioContext.createDynamicsCompressor()")}}
   - : {{domxref("DynamicsCompressorNode")}} を作成します。これは音声信号に音響圧縮をかけるために使用します。
 - {{domxref("BaseAudioContext.createGain()")}}
-  - :  {{domxref("GainNode")}} を作成します。これはオーディオグラフの全体的な音量を制御するために使用することができます。
+  - : {{domxref("GainNode")}} を作成します。これはオーディオグラフの全体的な音量を制御するために使用することができます。
 - {{domxref("BaseAudioContext.createIIRFilter()")}}
   - : {{domxref("IIRFilterNode")}} を作成します。これは複数の異なる一般的なフィルター種別として設定可能な二次フィルタを表します。
 - {{domxref("BaseAudioContext.createOscillator()")}}
@@ -78,7 +68,7 @@ _{{domxref("EventTarget")}} インターフェイスから継承しているメ�
 - {{domxref("BaseAudioContext.createScriptProcessor()")}} {{deprecated_inline}}
   - : {{domxref("ScriptProcessorNode")}} を作成します。これは JavaScript で直接音声処理を行うために使用します。
 - {{domxref("BaseAudioContext.createStereoPanner()")}}
-  - :  {{domxref("StereoPannerNode")}} を作成します。これは音声ソースにステレオパニングを適用するために使用することができます。
+  - : {{domxref("StereoPannerNode")}} を作成します。これは音声ソースにステレオパニングを適用するために使用することができます。
 - {{domxref("BaseAudioContext.createWaveShaper()")}}
   - : 非線形歪み効果を実装するために使用される {{domxref("WaveShaperNode")}} を作成します。
 - {{domxref("BaseAudioContext.decodeAudioData()")}}
@@ -113,6 +103,6 @@ const finish = audioContext.destination;
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("AudioContext")}}
 - {{domxref("OfflineAudioContext")}}

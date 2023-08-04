@@ -1,14 +1,8 @@
 ---
 title: initial-letter-align
 slug: Web/CSS/initial-letter-align
-tags:
-  - Alignement
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/initial-letter-align
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`initial-letter-align`** définit l'alignement des premières lettres d'un paragraphe lorsque celles-ci sont mises en avant grâce à {{cssxref("initial-letter")}} pour former une lettrine.
@@ -47,9 +41,13 @@ La valeur de cette propriété peut être l'un des mots-clés parmi ceux défini
 - `ideographic`
   - : La première lettre est centrée par rapport à la N-ième ligne utilisée pour la lettrine.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -66,12 +64,11 @@ La valeur de cette propriété peut être l'un des mots-clés parmi ceux défini
 
 ```html
 <p class="exemple">
-  Tombe, tombe, tombe&nbsp;! «&nbsp;Cette chute n’en finira
-  donc pas&nbsp;! Je suis curieuse de savoir combien de
-  milles j’ai déjà faits,&nbsp;» dit-elle tout haut. «&nbsp;Je
-  dois être bien près du centre de la terre. Voyons
-  donc, cela serait à quatre mille milles de profondeur,
-  il me semble.&nbsp;» </p>
+  Tombe, tombe, tombe&nbsp;! «&nbsp;Cette chute n’en finira donc pas&nbsp;! Je
+  suis curieuse de savoir combien de milles j’ai déjà faits,&nbsp;» dit-elle
+  tout haut. «&nbsp;Je dois être bien près du centre de la terre. Voyons donc,
+  cela serait à quatre mille milles de profondeur, il me semble.&nbsp;»
+</p>
 ```
 
 ### Résultat
@@ -80,12 +77,8 @@ La valeur de cette propriété peut être l'un des mots-clés parmi ceux défini
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Inline', '#aligning-initial-letter', 'initial-letter-align')}} | {{Spec2('CSS3 Inline')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.initial-letter-align")}}
+{{Compat}}

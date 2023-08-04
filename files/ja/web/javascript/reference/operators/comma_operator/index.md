@@ -1,17 +1,8 @@
 ---
 title: カンマ演算子 (,)
-slug: Web/JavaScript/Reference/Operators/Comma_Operator
-tags:
-- カンマ
-- 合成
-- 式
-- JavaScript
-- 言語機能
-- 演算子
-- リファレンス
-browser-compat: javascript.operators.comma
-translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
+slug: Web/JavaScript/Reference/Operators/Comma_operator
 ---
+
 {{jsSidebar("Operators")}}
 
 <strong>カンマ演算子</strong> (<strong>`,`</strong>) は、それぞれの演算対象を（左から右に）評価し、最後のオペランドの値を返します。これにより、複数の式が評価される複合式を作成することができ、複合式の最終値はそのメンバー式の一番右端の値となります。これは、[`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) ループに複数の引数を提供する場合によく使用されます。
@@ -46,7 +37,7 @@ for (var i = 0, j = 9; i <= 9; i++, j--)
   console.log('a[' + i + '][' + j + '] = ' + a[i][j]);
 ```
 
-代入​​​を行う際​​​にカンマを使うと、カンマ演算子が通常どおりに働いていないかのように見える場合があります (カンマ演算子が式の中にないため)。以下の例では `a` には `b = 3` の値 (すなわち 3) が設定されますが、さらに `c = 4` が評価されて、その結果 (すなわち 4) がコンソールに返されます。これは[演算子の優先順位と結合性](/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)のためです。
+代入を行う際にカンマを使うと、カンマ演算子が通常どおりに働いていないかのように見える場合があります (カンマ演算子が式の中にないため)。以下の例では `a` には `b = 3` の値 (すなわち 3) が設定されますが、さらに `c = 4` が評価されて、その結果 (すなわち 4) がコンソールに返されます。これは[演算子の優先順位と結合性](/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)のためです。
 
 ```js
 var a, b, c;

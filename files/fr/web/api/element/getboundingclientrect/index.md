@@ -1,8 +1,8 @@
 ---
 title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
-translation_of: Web/API/Element/getBoundingClientRect
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Element.getBoundingClientRect()`** retourne un objet {{domxref("DOMRect")}} fournissant des informations sur la taille d'un élément et sa position relative par rapport à la [zone d'affichage](/fr/docs/Glossary/Viewport).
@@ -33,11 +33,17 @@ Les scripts qui doivent avoir une haute compatibilité pour l'ensemble des navig
 
 ```js
 // Pour scrollX
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.ScrollLeft == 'number' ? t : document.body).ScrollLeft
-// Pour scrollY
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.ScrollTop == 'number' ? t : document.body).ScrollTop
+(((t = document.documentElement) || (t = document.body.parentNode)) &&
+typeof t.ScrollLeft == "number"
+  ? t
+  : document.body
+).ScrollLeft(
+  // Pour scrollY
+  ((t = document.documentElement) || (t = document.body.parentNode)) &&
+    typeof t.ScrollTop == "number"
+    ? t
+    : document.body,
+).ScrollTop;
 ```
 
 ## Exemple
@@ -59,12 +65,12 @@ div {
 ```
 
 ```js
-let elem = document.querySelector('div');
+let elem = document.querySelector("div");
 let rect = elem.getBoundingClientRect();
 for (let key in rect) {
-  if(typeof rect[key] !== 'function') {
-    let para = document.createElement('p');
-    para.textContent  = `${ key } : ${ rect[key] }`;
+  if (typeof rect[key] !== "function") {
+    let para = document.createElement("p");
+    para.textContent = `${key} : ${rect[key]}`;
     document.body.appendChild(para);
   }
 }
@@ -80,31 +86,11 @@ Remarquez aussi que les valeurs de `x`/`left`,
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("CSSOM View", "#dom-element-getboundingclientrect", "Element.getBoundingClientRect()")}} | {{Spec2("CSSOM View")}} | Définition initiale. |
-
-### Notes
-
-L'objet `DOMRect` retourné peut être modifié dans les navigateurs modernes. Cela n'était pas le cas avec ceux plus anciens qui retournaient effectivement `DOMRectReadOnly`. Dans IE et Edge, ne pas pouvoir ajouter les propriétés manquantes à l'objet [`ClientRect`](https://docs.microsoft.com/fr-fr/previous-versions/hh826029(v=vs.85)) qu'ils retournent empêche d'ajouter le support de `x` et `y`.
-
-En raison de problèmes de compatibilité (voir ci-dessous), il est plus sûr de se limiter aux propriétés `top`, `left`, `right`, et `bottom`.
-
-Les propriétés dans l'objet `DOMRect` retourné ne sont pas possèdées pas ce dernier. Tandis que les opérateurs `in` et `for...in` vont trouver les propriétés retournées, les autres APIs comme Object.keys échoueront. De plus, et de façon inattendue, les fonctionnalités ES2015 et plus récentes telles que `Object.assign()` et les paramètres du reste / la décomposition d'un objet, ne réussiront pas à copier les propriétés retournées.
-
-```js
-rect = elt.getBoundingClientRect()
-// The result in emptyObj is {}
-emptyObj = Object.assign({}, rect)
-emptyObj = { ...rect }
-{ width, ...emptyObj } = rect
-```
-
-Les propriétés `top`, `left`, `right`, et `bottom` de `DOMRect` sont calculées en utilisant les valeurs des autres propriétés de l'objet.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.getBoundingClientRect")}}
+{{Compat}}
 
 ## Voir aussi
 

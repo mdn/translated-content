@@ -1,21 +1,15 @@
 ---
 title: ポインターイベント
 slug: Web/API/Pointer_events
-tags:
-  - API
-  - インターフェイス
-  - Landing
-  - 概要
-  - ポインターイベント
-  - ウェブ
-  - イベント
-translation_of: Web/API/Pointer_events
+l10n:
+  sourceCommit: 1d055933f471b0a8a7a48a8408c1fa4a5e2c1adf
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 今日のウェブコンテンツの多くは、ユーザーのポインティング機器がマウスであることを前提としています。しかし、多くの端末がペンやスタイラス、タッチ面のような他の種類のポインティング入力機器に対応しているので、既存のポインティング機器のイベントモデルへの拡張が必要であり、そして[ポインターイベント](#ポインターイベント)はその必要性に応じます。
 
-> **Note:** ポインターイベントは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)では*利用できません*。
+> **メモ:** ポインターイベントは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)では*利用できません*。
 
 ポインターイベントは、ポインティング機器に対して発生する DOM イベントです。 これらは、マウス、ペンやスタイラス、（1 本以上の指でなどの）タッチなどのポインティング入力機器を処理する単一の DOM イベントモデルを作成するように設計されています。
 
@@ -65,7 +59,7 @@ translation_of: Web/API/Pointer_events
 
 ### PointerEvent インターフェイス
 
-{{domxref("PointerEvent")}} インターフェイスは {{domxref("MouseEvent")}} インターフェイスを拡張したもので、以下のプロパティがあります。（以下のプロパティはすべて {{readonlyInline}} です。）
+{{domxref("PointerEvent")}} インターフェイスは {{domxref("MouseEvent")}} インターフェイスを拡張したもので、以下のプロパティがあります。（以下のプロパティはすべて {{ReadOnlyInline}} です。）
 
 - {{ domxref('PointerEvent.pointerId','pointerId')}}
   - : イベントの原因となっているポインターの一意の識別子。
@@ -90,103 +84,22 @@ translation_of: Web/API/Pointer_events
 
 ### イベント種別とグローバルイベントハンドラー
 
-ポインターイベントには 10​ ​のイベント種別があり、そのうち 7 つ（`down`、`up`、`move`、`over`、`out`、`enter`、`leave`）はマウスイベントと同等の意味を持ちます。
+ポインターイベントには 10 のイベント種別があり、そのうち 7 つ（`down`、`up`、`move`、`over`、`out`、`enter`、`leave`）はマウスイベントと同等の意味を持ちます。
 
-以下は、各イベント種別とそれに関連する{{domxref("GlobalEventHandlers","グローバルイベントハンドラー", "", 1)}}の簡単な説明です。
+以下は、各イベント種別の簡単な説明です。
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">イベント</th>
-      <th scope="col">On イベントハンドラー</th>
-      <th scope="col">説明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{domxref('HTMLElement/pointerover_event', 'pointerover')}}</td>
-      <td>
-        {{domxref('GlobalEventHandlers.onpointerover','onpointerover')}}
-      </td>
-      <td>
-        ポインターが要素の<a href="#ヒットテスト">ヒットテスト</a>境界内に移動したときに発生します。
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref('HTMLElement/pointerenter_event', 'pointerenter')}}</td>
-      <td>
-        {{domxref('GlobalEventHandlers.onpointerenter','onpointerenter')}}
-      </td>
-      <td>
-        ポインターが要素またはその子孫の 1 つの<a href="#ヒットテスト">ヒットテスト</a>境界内に移動したときに発生します。 これには、ホバーに対応していない機器からの <code>pointerdown</code> イベントの結果も含まれます（<code>pointerdown</code> を参照）。
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref('HTMLElement/pointerdown_event', 'pointerdown')}}</td>
-      <td>
-        {{domxref('GlobalEventHandlers.onpointerdown','onpointerdown')}}
-      </td>
-      <td>ポインターが<em>アクティブボタン状態</em>になったときに発生します。</td>
-    </tr>
-    <tr>
-      <td>{{domxref('HTMLElement/pointermove_event', 'pointermove')}}</td>
-      <td>
-        {{domxref('GlobalEventHandlers.onpointermove','onpointermove')}}
-      </td>
-      <td>
-        ポインターが座標を変更したときに発生します。 また、ポインターの状態の変化がこれ以外のイベントで報告できない場合もこのイベントが使われます。
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref('HTMLElement/pointerup_event', 'pointerup')}}</td>
-      <td>
-        {{domxref('GlobalEventHandlers.onpointerup','onpointerup')}}
-      </td>
-      <td>ポインターが<em>アクティブボタン状態</em>でなくなったときに発生します。</td>
-    </tr>
-    <tr>
-      <td>{{domxref('HTMLElement/pointercancel_event', 'pointercancel')}}</td>
-      <td>
-        {{domxref('GlobalEventHandlers.onpointercancel','onpointercancel')}}
-      </td>
-      <td>
-        ブラウザーは、ポインターがイベントを生成できなくなったと判断した場合（例えば、関連機器が無効になった場合）、このイベントを発行します。
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref('HTMLElement/pointerout_event', 'pointerout')}}</td>
-      <td>
-        {{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}
-      </td>
-      <td>
-        いくつかの理由で発生します。ポインターが要素の<a href="#ヒットテスト">ヒットテスト</a>境界外に移動した場合、ホバーに対応していない機器で pointerup イベントが発生した場合（pointerup を参照）、 <code>pointercancel</code> イベントの発生後（<code>pointercancel</code> を参照）、ペン/スタイラスがデジタイザーで検出可能なホバー範囲を離脱したときなどです。
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref('HTMLElement/pointerleave_event', 'pointerleave')}}</td>
-      <td>
-        {{domxref('GlobalEventHandlers.onpointerleave','onpointerleave')}}
-      </td>
-      <td>
-        ポインターが要素の<a href="#ヒットテスト">ヒットテスト</a>境界外に移動したときに発生します。ペン機器の場合、このイベントは、スタイラスがデジタイザーで検出可能なホバー範囲を離脱したときに発生します。
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref('HTMLElement/gotpointercapture_event', 'gotpointercapture')}}</td>
-      <td>
-        {{domxref('GlobalEventHandlers.ongotpointercapture','ongotpointercapture')}}
-      </td>
-      <td>要素がポインターキャプチャを受け取ったときに発生します。</td>
-    </tr>
-    <tr>
-      <td>{{domxref('HTMLElement/lostpointercapture_event', 'lostpointercapture')}}</td>
-      <td>
-        {{domxref('GlobalEventHandlers.onlostpointercapture','onlostpointercapture')}}
-      </td>
-      <td>ポインターに対するポインターキャプチャが解放された後に発生します。</td>
-    </tr>
-  </tbody>
-</table>
+| イベント                                                                 | 説明                                                                                                                                                                                                                                                                                                                               |
+| --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{domxref('Element/pointerover_event', 'pointerover')}}               | ポインターが要素の[ヒットテスト](#ヒットテスト)領域内に移動したときに発生します。                                                                                                                                                                                                                                                         |
+| {{domxref('Element/pointerenter_event', 'pointerenter')}}             | ポインターが要素またはその子孫の 1 つの[ヒットテスト](#ヒットテスト)領域内に移動したときに発生します。 これには、ホバーに対応していない機器からの `pointerdown` イベントの結果も含まれます（`pointerdown` を参照）。                                                                                                              |
+| {{domxref('Element/pointerdown_event', 'pointerdown')}}               | ポインターが*アクティブボタン状態*になったときに発生します。                                                                                                                                                                                                                                                                                      |
+| {{domxref('Element/pointermove_event', 'pointermove')}}               | ポインターが座標を変更したときに発生します。 また、ポインターの状態の変化がこれ以外のイベントで報告できない場合もこのイベントが使われます。                                                                                                                                                                                                     |
+| {{domxref('Element/pointerup_event', 'pointerup')}}                   | ポインターが*アクティブボタン状態*でなくなったときに発生します。                                                                                                                                                                                                                                                                                 |
+| {{domxref('Element/pointercancel_event', 'pointercancel')}}           | ブラウザーは、ポインターがイベントを生成できなくなったと判断した場合（例えば、関連機器が無効になった場合）、このイベントを発行します。                                                                                                                                                                                         |
+| {{domxref('Element/pointerout_event', 'pointerout')}}                 | いくつかの理由で発生します。ポインターが要素の[ヒットテスト](#ヒットテスト)領域外に移動した場合、ホバーに対応していない機器で pointerup イベントが発生した場合（pointerup を参照）、 `pointercancel` イベントの発生後（`pointercancel` を参照）、ペン/スタイラスがデジタイザーで検出可能なホバー範囲を離脱したときなどです。 |
+| {{domxref('Element/pointerleave_event', 'pointerleave')}}             | ポインターが要素の[ヒットテスト](#ヒットテスト)領域外に移動したときに発生します。ペン機器の場合、このイベントは、スタイラスがデジタイザーで検出可能なホバー範囲を離脱したときに発生します。                                                                                                                                         |
+| {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}   | 要素がポインターキャプチャを受け取ったときに発生します。                                                                                                                                                                                                                                                                                           |
+| {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}} | ポインターに対するポインターキャプチャが解放された後に発生します。                                                                                                                                                                                                                                                                                    |
 
 ### Element の拡張
 
@@ -210,21 +123,21 @@ translation_of: Web/API/Pointer_events
 この例では、特定の要素のすべてのイベント種別に対してハンドラーを登録します。
 
 ```html
-<html>
+<html lang="en">
   <script>
-    function over_handler(event) { }
-    function enter_handler(event) { }
-    function down_handler(event) { }
-    function move_handler(event) { }
-    function up_handler(event) { }
-    function cancel_handler(event) { }
-    function out_handler(event) { }
-    function leave_handler(event) { }
-    function gotcapture_handler(event) { }
-    function lostcapture_handler(event) { }
+    function over_handler(event) {}
+    function enter_handler(event) {}
+    function down_handler(event) {}
+    function move_handler(event) {}
+    function up_handler(event) {}
+    function cancel_handler(event) {}
+    function out_handler(event) {}
+    function leave_handler(event) {}
+    function gotcapture_handler(event) {}
+    function lostcapture_handler(event) {}
 
     function init() {
-      var el=document.getElementById("target");
+      const el = document.getElementById("target");
       // ポインターイベントハンドラーの登録
       el.onpointerover = over_handler;
       el.onpointerenter = enter_handler;
@@ -239,7 +152,7 @@ translation_of: Web/API/Pointer_events
     }
   </script>
   <body onload="init();">
-    <div id="target"> Touch me ... </div>
+    <div id="target">Touch me…</div>
   </body>
 </html>
 ```
@@ -249,9 +162,9 @@ translation_of: Web/API/Pointer_events
 この例では、ポインターイベントのすべてのプロパティにアクセスする方法を示します。
 
 ```html
-<html>
+<html lang="en">
   <script>
-    var id = -1;
+    const id = -1;
 
     function process_id(event) {
       // イベントの識別子に基づいて、このイベントを処理する
@@ -277,10 +190,10 @@ translation_of: Web/API/Pointer_events
 
     function down_handler(ev) {
       // タッチポイントの接触面積を計算する
-      var area = ev.width * ev.height;
+      const area = ev.width * ev.height;
 
       // キャッシュされた id とこのイベントの id を比較し、それに応じて処理する
-      if (id == ev.identifier) process_id(ev);
+      if (id === ev.identifier) process_id(ev);
 
       // 適切なポインタータイプのハンドラーを呼び出す
       switch (ev.pointerType) {
@@ -294,11 +207,11 @@ translation_of: Web/API/Pointer_events
           process_touch(ev);
           break;
         default:
-          console.log("pointerType " + ev.pointerType + " には対応していません");
+          console.log(`pointerType ${ev.pointerType} には対応していません`);
       }
 
       // 傾斜ハンドラーを呼び出す
-      if (ev.tiltX != 0 && ev.tiltY != 0) process_tilt(ev.tiltX, ev.tiltY);
+      if (ev.tiltX !== 0 && ev.tiltY !== 0) process_tilt(ev.tiltX, ev.tiltY);
 
       // 圧力ハンドラーを呼び出す
       process_pressure(ev.pressure);
@@ -308,13 +221,13 @@ translation_of: Web/API/Pointer_events
     }
 
     function init() {
-      var el=document.getElementById("target");
+      const el = document.getElementById("target");
       // pointerdown ハンドラーの登録
       el.onpointerdown = down_handler;
     }
   </script>
   <body onload="init();">
-    <div id="target"> Touch me ... </div>
+    <div id="target">Touch me…</div>
   </body>
 </html>
 ```
@@ -344,7 +257,7 @@ translation_of: Web/API/Pointer_events
 | マウスの X2 （進む）ボタン                                                                   | `4`    | `16`    |
 | ペンの消しゴムボタン                                                                    | `5`    | `32`    |
 
-> **Note:** `button` プロパティは、ボタンの状態の変化を示していることに注意してください。ただし、タッチの場合のように、 1 つのイベントに伴って複数のイベントが発生する場合は、それらはすべて同じ値になります。
+> **メモ:** `button` プロパティは、ボタンの状態の変化を示していることに注意してください。ただし、タッチの場合のように、 1 つのイベントに伴って複数のイベントが発生する場合は、それらはすべて同じ値になります。
 
 ## ポインターキャプチャ
 
@@ -353,29 +266,29 @@ translation_of: Web/API/Pointer_events
 次の例では、要素にポインターキャプチャを設定しています。
 
 ```html
-<html>
-<script>
-  function downHandler(ev) {
-    let el = document.getElementById("target");
-    // 要素 'target' はそれ以上のイベントを受信/キャプチャします
-    el.setPointerCapture(ev.pointerId);
-  }
+<html lang="en">
+  <script>
+    function downHandler(ev) {
+      let el = document.getElementById("target");
+      // 要素 'target' はそれ以上のイベントを受信/キャプチャします
+      el.setPointerCapture(ev.pointerId);
+    }
 
-  function init() {
-    let el = document.getElementById("target");
-    el.onpointerdown = downHandler;
-  }
-</script>
-<body onload="init();">
-  <div id="target"> Touch me ... </div>
-</body>
+    function init() {
+      let el = document.getElementById("target");
+      el.onpointerdown = downHandler;
+    }
+  </script>
+  <body onload="init();">
+    <div id="target">Touch me…</div>
+  </body>
 </html>
 ```
 
-次の例は、（{{domxref("HTMLElement/pointercancel_event", "pointercancel")}} イベントが発生したときに）ポインターキャプチャを解放しています。 {{domxref("HTMLElement/pointerup_event", "pointerup")}} イベントや {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} イベントが発生すると、ブラウザーはこれを自動的に行います。
+次の例は、（{{domxref("Element/pointercancel_event", "pointercancel")}} イベントが発生したときに）ポインターキャプチャを解放しています。 {{domxref("Element/pointerup_event", "pointerup")}} イベントや {{domxref("Element/pointercancel_event", "pointercancel")}} イベントが発生すると、ブラウザーはこれを自動的に行います。
 
 ```html
-<html>
+<html lang="en">
   <script>
     function downHandler(ev) {
       let el = document.getElementById("target");
@@ -397,7 +310,7 @@ translation_of: Web/API/Pointer_events
     }
   </script>
   <body onload="init();">
-    <div id="target"> Touch me ... </div>
+    <div id="target">Touch me…</div>
   </body>
 </html>
 ```
@@ -411,9 +324,9 @@ CSS の {{cssxref("touch-action")}} プロパティは、ブラウザーが既�
 次の例では、ブラウザーの既定のタッチの振る舞いは `div` 要素に対して無効になります。
 
 ```html
-<html>
+<html lang="en">
   <body>
-    <div style="touch-action:none;">Can't touch this ... </div>
+    <div style="touch-action:none;">Can't touch this…</div>
   </body>
 </html>
 ```
@@ -454,15 +367,13 @@ button#tiny {
 
 ## 仕様書
 
-| 仕様書                                          |
-| ------------------------------------------------------ |
-| [Pointer Events](https://w3c.github.io/pointerevents/) |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.PointerEvent")}}
+{{Compat}}
 
-{{cssxref("touch-action", "CSS touch-action")}} プロパティにいくつかの新しい値が {{SpecName('Pointer Events 3')}} 仕様の一部として定義されていますが、現在それらの新しい値は実装のサポートが限定されています。
+{{cssxref("touch-action", "CSS touch-action")}} プロパティに追加のいくつかの値が [Pointer Events](https://w3c.github.io/pointerevents/) 仕様書の一部として定義されていますが、現在それらの値は実装の対応が限定されています。
 
 ## デモと例
 

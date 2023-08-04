@@ -1,13 +1,8 @@
 ---
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
-tags:
-  - JavaScript
-  - Number
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number
 ---
+
 {{JSRef}}
 
 L'objet **`Number`** est une enveloppe objet (_wrapper_) autour du [type primitif numérique](/fr/docs/Web/JavaScript/Structures_de_données#Le_type_nombre). Autrement dit, il est utilisé pour manipuler les nombres comme des objets. Pour créer un objet `Number`, on utilise le constructeur `Number()`.
@@ -18,8 +13,8 @@ Le type JavaScript `Number` utilise [une représentation binaire à précision d
 
 ```js
 new Number(valeur);
-var a = new Number('123'); // a === 123 donnera false
-var b = Number('123'); // b === 123 donnera true
+var a = new Number("123"); // a === 123 donnera false
+var b = Number("123"); // b === 123 donnera true
 a instanceof Number; // donnera true
 b instanceof Number; // donnera false
 ```
@@ -123,7 +118,7 @@ Lorsqu'on analyse et convertit des données JSON, les valeurs en dehors de cet i
 Dans l'exemple suivant, on convertit un objet {{jsxref("Date")}} en une valeur numérique grâce à la fonction `Number` :
 
 ```js
-var d = new Date('December 17, 1995 03:24:00');
+var d = new Date("December 17, 1995 03:24:00");
 console.log(Number(d));
 ```
 
@@ -132,16 +127,16 @@ Ceci affichera "819167040000".
 ### Convertir une chaîne représentant une valeur numérique en un nombre
 
 ```js
-Number("123");       // 123
-Number("12.3");      // 12.3
-Number("12.00");     // 12
-Number("123e-1");    // 12.3
-Number("");          // 0
-Number("0x11");      // 17
-Number("0b11");      // 3
-Number("0o11");      // 9
-Number("toto");      // NaN
-Number("100a");      // NaN
+Number("123"); // 123
+Number("12.3"); // 12.3
+Number("12.00"); // 12
+Number("123e-1"); // 12.3
+Number(""); // 0
+Number("0x11"); // 17
+Number("0b11"); // 3
+Number("0o11"); // 9
+Number("toto"); // NaN
+Number("100a"); // NaN
 Number("-Infinity"); // -Infinity
 ```
 
@@ -149,16 +144,11 @@ Number("-Infinity"); // -Infinity
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                                                                                                                                                                                                                                                                                                                                                                                      |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1.                                                                                                                                                                                                                                                                                                                                             |
-| {{SpecName('ES5.1', '#sec-15.7', 'Number')}}                 | {{Spec2('ES5.1')}}     |                                                                                                                                                                                                                                                                                                                                                                                                   |
-| {{SpecName('ES6', '#sec-number-objects', 'Number')}}         | {{Spec2('ES6')}}         | Ajout des méthodes et propriétés suivantes : ({{jsxref("Number.EPSILON", "EPSILON")}}, {{jsxref("Number.isFinite", "isFinite")}}, {{jsxref("Number.isInteger", "isInteger")}}, {{jsxref("Number.isNaN", "isNaN")}}, {{jsxref("Number.parseFloat", "parseFloat")}}, {{jsxref("Number.parseInt", "parseInt")}}) |
-| {{SpecName('ESDraft', '#sec-number-objects', 'Number')}} | {{Spec2('ESDraft')}} |                                                                                                                                                                                                                                                                                                                                                                                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number")}}
+{{Compat}}
 
 ## Voir aussi
 

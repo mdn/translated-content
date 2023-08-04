@@ -1,16 +1,8 @@
 ---
 title: AudioWorkletProcessor.port
 slug: Web/API/AudioWorkletProcessor/port
-tags:
-  - API
-  - Audio
-  - AudioWorkletProcessor
-  - Experimental
-  - Property
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioWorkletProcessor.port
 ---
+
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}
 
 {{domxref("AudioWorkletProcessor")}} 인터페이스의 읽기 전용 **`port`** 속성은 연관된 {{domxref("MessagePort")}}를 반환합니다. 이것은 프로세서와 프로세서가 속한 {{domxref("AudioWorkletNode")}} 사이에서 소통하기 위해 사용될 수 있습니다.

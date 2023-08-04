@@ -1,12 +1,8 @@
 ---
 title: align-items
 slug: Web/CSS/align-items
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/align-items
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`align-items`** définit la valeur de {{cssxref("align-self")}} sur l'ensemble des éléments-fils directs.
@@ -29,10 +25,10 @@ align-items: stretch;
 /* Alignement géométrique */
 /* align-items ne gère pas les valeurs left et right */
 align-items: center; /* Les éléments sont regroupés au centre */
-align-items: start;  /* Les éléments sont regroupés au début */
-align-items: end;    /* Les éléments sont regroupés à la fin */
+align-items: start; /* Les éléments sont regroupés au début */
+align-items: end; /* Les éléments sont regroupés à la fin */
 align-items: flex-start; /* Les éléments flexibles sont regroupés au début */
-align-items: flex-end;   /* Les éléments flexibles sont regroupés à la fin */
+align-items: flex-end; /* Les éléments flexibles sont regroupés à la fin */
 align-items: self-start;
 align-items: self-end;
 
@@ -92,9 +88,13 @@ align-items: unset;
 - `unsafe`
   - : Ce mot-clé est utilisé avec un mot-clé d'alignement. Quelle que soit la taille relative et l'éventuel dépassement de l'élément par rapport au conteneur, la valeur indiquée pour l'alignement est respectée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -102,7 +102,7 @@ align-items: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-items: center; /* Cette valeur peut être modifiée dans l'exemple */
   background-color: #8c8c8c;
@@ -219,15 +219,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.alignItems = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```
@@ -238,22 +238,11 @@ display.addEventListener('change', function (evt) {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS3 Box Alignment", "#propdef-align-items", "align-items")}} | {{Spec2("CSS3 Box Alignment")}} |                      |
-| {{SpecName('CSS3 Flexbox', '#propdef-align-items', 'align-items')}}         | {{Spec2('CSS3 Flexbox')}}         | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Prise en charge pour les dispositions flexibles
-
-{{Compat("css.properties.align-items.flex_context")}}
-
-### Prise en charge pour les dispositions en grille
-
-{{Compat("css.properties.align-items.grid_context")}}
+{{Compat}}
 
 ## Voir aussi
 

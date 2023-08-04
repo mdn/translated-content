@@ -1,16 +1,11 @@
 ---
-title: HTMLSlotElement.assignedNodes()
+title: "HTMLSlotElement: assignedNodes() メソッド"
+short-title: assignedNodes()
 slug: Web/API/HTMLSlotElement/assignedNodes
-tags:
-  - API
-  - HTMLSlotElement
-  - メソッド
-  - リファレンス
-  - assignedNodes
-  - シャドウ DOM
-browser-compat: api.HTMLSlotElement.assignedNodes
-translation_of: Web/API/HTMLSlotElement/assignedNodes
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
+
 {{APIRef("Shadow DOM API")}}
 
 `assignedNodes()` は {{domxref("HTMLSlotElement")}} インターフェイスのプロパティで、このスロットに割り当てられた一連のノードを返します。
@@ -19,9 +14,9 @@ translation_of: Web/API/HTMLSlotElement/assignedNodes
 
 ## 構文
 
-```js
-HTMLSlotElement.assignedNodes()
-HTMLSlotElement.assignedNodes(options)
+```js-nolint
+assignedNodes()
+assignedNodes(options)
 ```
 
 ### 引数
@@ -40,13 +35,15 @@ HTMLSlotElement.assignedNodes(options)
 ## 例
 
 以下のスニペットは、 [slotchange
-の例](https://github.com/mdn/web-components-examples/tree/master/slotchange) ([ライブでも確認](https://mdn.github.io/web-components-examples/slotchange/)) からとりました。
+の例](https://github.com/mdn/web-components-examples/tree/main/slotchange) ([ライブでも確認](https://mdn.github.io/web-components-examples/slotchange/)) からとりました。
 
 ```js
-let slots = this.shadowRoot.querySelectorAll('slot');
-slots[1].addEventListener('slotchange', function(e) {
-  let nodes = slots[1].assignedNodes();
-  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
+let slots = this.shadowRoot.querySelectorAll("slot");
+slots[1].addEventListener("slotchange", (e) => {
+  let nodes = slots[1].assignedNodes();
+  console.log(
+    `Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`,
+  );
 });
 ```
 

@@ -1,16 +1,8 @@
 ---
 title: URLSearchParams.append()
 slug: Web/API/URLSearchParams/append
-page-type: web-api-instance-method
-tags:
-  - API
-  - Append
-  - Method
-  - URL API
-  - URLSearchParams
-browser-compat: api.URLSearchParams.append
-translation_of: Web/API/URLSearchParams/append
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URLSearchParams")}} 인터페이스의 **`append()`** 메서드는 지정한 키/값 쌍을 새로운 검색 매개변수로서 추가합니다.
@@ -22,7 +14,7 @@ translation_of: Web/API/URLSearchParams/append
 ## 구문
 
 ```js
-append(name, value)
+append(name, value);
 ```
 
 ### 매개변수
@@ -39,11 +31,11 @@ append(name, value)
 ## 예제
 
 ```js
-let url = new URL('https://example.com?foo=1&bar=2');
+let url = new URL("https://example.com?foo=1&bar=2");
 let params = new URLSearchParams(url.search);
 
 // 두 번째 foo 매개변수 추가
-params.append('foo', 4);
+params.append("foo", 4);
 // 이제 쿼리 문자열이 'foo=1&bar=2&foo=4'
 ```
 

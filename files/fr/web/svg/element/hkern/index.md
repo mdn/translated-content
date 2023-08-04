@@ -1,16 +1,11 @@
 ---
 title: <hkern>
 slug: Web/SVG/Element/hkern
-tags:
-  - Element
-  - Police SVG
-  - Reference
-  - SVG
-translation_of: Web/SVG/Element/hkern
 ---
+
 {{SVGRef}}
 
-La distance horizontale entre deux glyphes peut être ajustée minutieusement avec l'élément hkern. Ce proccessus est appelé [Crénage](https://fr.wikipedia.org/wiki/Cr%C3%A9nage).
+La distance horizontale entre deux glyphes peut être ajustée minutieusement avec l'élément hkern. Ce proccessus est appelé [Crénage](https://fr.wikipedia.org/wiki/Crénage).
 
 ## Contexte d'utilisation
 
@@ -34,9 +29,9 @@ La distance horizontale entre deux glyphes peut être ajustée minutieusement av
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGHKernElement`](/fr/docs/Web/API/SVGHKernElement "en/DOM/SVGHKernElement").
+Cet élément implémente l'interface [`SVGHKernElement`](/fr/docs/Web/API/SVGHKernElement).
 
-## Voir également
+## Voir aussi
 
 - {{ SVGElement("font") }}
 - {{ SVGElement("glyph") }}

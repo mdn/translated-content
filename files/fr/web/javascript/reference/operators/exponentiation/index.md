@@ -1,13 +1,8 @@
 ---
 title: Exponentiation (**)
 slug: Web/JavaScript/Reference/Operators/Exponentiation
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.exponentiation
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur d'exponentiation (`**`) fournit le résultat obtenu lorsqu'on élève le premier opérande à la puissance indiquée par le second. Il est équivalent `Math.pow` exception faite que cet opérateur permet également d'utiliser des valeurs BigInt comme opérandes.
@@ -17,7 +12,7 @@ L'opérateur d'exponentiation (`**`) fournit le résultat obtenu lorsqu'on élè
 ## Syntaxe
 
 ```js
-Opérateur : var1 ** var2
+Opérateur: var1 ** var2;
 ```
 
 ## Description
@@ -44,19 +39,19 @@ Attnetion, certains langages de programmation utilisent l'accent circonflexe <kb
 ### Exponentiation simple
 
 ```js
-2 ** 3   // 8
-3 ** 2   // 9
-3 ** 2.5 // 15.588457268119896
-10 ** -1 // 0.1
-NaN ** 2 // NaN
+2 ** 3; // 8
+3 ** 2; // 9
+3 ** 2.5; // 15.588457268119896
+10 ** -1; // 0.1
+NaN ** 2; // NaN
 ```
 
 ### Associativité
 
-```js
-2 ** 3 ** 2   // 512
-2 ** (3 ** 2) // 512
-(2 ** 3) ** 2 // 64
+```js-nolint
+2 ** 3 ** 2; // 512
+2 ** (3 ** 2); // 512
+(2 ** 3) ** 2; // 64
 ```
 
 ### Avec les opérateurs unaires
@@ -64,13 +59,13 @@ NaN ** 2 // NaN
 Pour prendre l'opposé du résultat :
 
 ```js
--(2 ** 2) // -4
+-(2 ** 2); // -4
 ```
 
 Pour forcer le signe de la base en négatif :
 
 ```js
-(-2) ** 2 // 4
+(-2) ** 2; // 4
 ```
 
 ## Spécifications

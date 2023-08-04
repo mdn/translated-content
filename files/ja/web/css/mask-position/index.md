@@ -1,16 +1,8 @@
 ---
 title: mask-position
 slug: Web/CSS/mask-position
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS マスク
-  - Experimental
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-position
-translation_of: Web/CSS/mask-position
 ---
+
 {{CSSRef}}
 
 **`mask-position`** は [CSS](/ja/docs/Web/CSS) プロパティで、定義されたマスク画像それぞれについて、 {{cssxref("mask-origin")}} で設定されたマスク位置レイヤーに対する初期位置を設定します。
@@ -23,7 +15,7 @@ mask-position: left;
 mask-position: right;
 mask-position: center;
 
-/* &lt;position&gt; 値 */
+/* <position> 値 */
 mask-position: 25% 75%;
 mask-position: 0px 0px;
 mask-position: 10% 8em;

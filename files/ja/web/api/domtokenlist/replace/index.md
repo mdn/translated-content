@@ -1,23 +1,19 @@
 ---
-title: DOMTokenList.replace()
+title: "DOMTokenList: replace() メソッド"
+short-title: replace()
 slug: Web/API/DOMTokenList/replace
-tags:
-- API
-- DOM
-- Document
-- メソッド
-- リファレンス
-browser-compat: api.DOMTokenList.replace
-translation_of: Web/API/DOMTokenList/replace
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
+
 {{APIRef("DOM")}}
 
 **`replace()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、既存のトークンを新しいトークンで置き換えます。最初のトークンが存在しない場合、 `replace()` はすぐに `false` を返し、トークンリストに新しいトークンを追加しません。
 
 ## 構文
 
-```js
-replace(oldToken, newToken);
+```js-nolint
+replace(oldToken, newToken)
 ```
 
 ## 引数
@@ -49,11 +45,7 @@ const classes = span.classList;
 
 const result = classes.replace("c", "z");
 
-if (result) {
-  span.textContent = classes;
-} else {
-  span.textContent = 'token not replaced successfully';
-}
+span.textContent = result ? classes : "token not replaced successfully";
 ```
 
 出力結果は以下のようになります。

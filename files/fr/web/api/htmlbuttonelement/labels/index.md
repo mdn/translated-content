@@ -1,8 +1,8 @@
 ---
 title: HTMLButtonElement.labels
 slug: Web/API/HTMLButtonElement/labels
-translation_of: Web/API/HTMLButtonElement/labels
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`HTMLButtonElement.labels`** renvoie une {{domxref("NodeList")}} (_liste de noeuds_) des éléments {{HTMLElement("label")}} (_étiquette_) associés avec l'élément {{HTMLElement("button")}} (_bouton_).
@@ -30,9 +30,9 @@ Une {{domxref("NodeList")}} contenant les éléments `<label>` associés avec l'
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", function () {
   const button = document.getElementById("test");
-  for(var i = 0; i < button.labels.length; i++) {
+  for (var i = 0; i < button.labels.length; i++) {
     console.log(button.labels[i].textContent); // "Label 1" et "Label 2"
   }
 });
@@ -42,10 +42,8 @@ window.addEventListener("DOMContentLoaded", function() {
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("HTML WHATWG", "forms.html#dom-lfe-labels", "labels")}} | {{Spec2("HTML WHATWG")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLButtonElement.labels")}}
+{{Compat}}

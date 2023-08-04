@@ -1,13 +1,6 @@
 ---
 title: CSS Generated Content
-slug: Web/CSS/CSS_Generated_Content
-tags:
-  - CSS
-  - CSS Generated Content
-  - 가이드
-  - 개요
-  - 참고서
-translation_of: Web/CSS/CSS_Generated_Content
+slug: Web/CSS/CSS_generated_content
 ---
 
 {{CSSRef}}

@@ -1,19 +1,11 @@
 ---
 title: Response
 slug: Web/API/Response
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - Interface
-  - Reference
-  - Response
-translation_of: Web/API/Response
 ---
+
 {{APIRef("Fetch API")}}
 
-L'interface **`Response`** de l'API de [fetch](/en-US/docs/Web/API/Fetch_API) représente la réponse d'une requête initialisée.
+L'interface **`Response`** de l'API de [fetch](/fr/docs/Web/API/Fetch_API) représente la réponse d'une requête initialisée.
 
 Vous pouvez créer un nouvel objet `Response` en utilisant le constructeur {{domxref("Response.Response()")}}. Cependant, vous rencontrerez plus fréquemment l'objet Response comme étant le résultat d'une opération de l'API, par exemple, un service worker {{domxref("Fetchevent.respondWith")}}, ou un simple {{domxref("GlobalFetch.fetch()")}}.
 
@@ -77,13 +69,15 @@ Dans notre [exemple basique d'utilisation de `fetch()`](https://github.com/mdn/f
 Vous remarquerez que puisque nous récupérons une image, nous avons besoin d'utiliser [`Response.blob`](/fr/docs/Web/API/Response/blob) pour attribuer le bon type MIME à la réponse.
 
 ```js
-var myImage = document.querySelector('.my-image');
-fetch('flowers.jpg').then(function(response) {
-  return response.blob();
-}).then(function(blob) {
-  var objectURL = URL.createObjectURL(blob);
-  myImage.src = objectURL;
-});
+var myImage = document.querySelector(".my-image");
+fetch("flowers.jpg")
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (blob) {
+    var objectURL = URL.createObjectURL(blob);
+    myImage.src = objectURL;
+  });
 ```
 
 Vous pouvez également utiliser le constructeur {{domxref("Response.Response()")}} pour créer votre propre objet `Response`:
@@ -94,16 +88,14 @@ var myResponse = new Response();
 
 ## Spécifications
 
-| Spécification                                                        | Statut                   | Commentaire         |
-| -------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#response-class','Response')}} | {{Spec2('Fetch')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Response")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/fr/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/fr/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/fr/docs/Web/HTTP)

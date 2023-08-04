@@ -1,11 +1,8 @@
 ---
 title: call-template
 slug: Web/XSLT/Element/call-template
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/call-template
-original_slug: Web/XSLT/call-template
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:call-template>` invoque un modèle nommé.

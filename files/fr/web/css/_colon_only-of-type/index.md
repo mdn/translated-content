@@ -1,12 +1,8 @@
 ---
-title: ':only-of-type'
+title: ":only-of-type"
 slug: Web/CSS/:only-of-type
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:only-of-type
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:only-of-type`** CSS permet de cibler un élément qui ne possède aucun nœud frère du même type pour un même élément parent (par exemple, sélectionner le seul élément {{HTMLElement("em")}} d'un {{HTMLElement("dd")}}).
@@ -31,7 +27,7 @@ p:only-of-type {
 
 ```css
 li li {
-  list-style-type : disc;
+  list-style-type: disc;
 }
 
 li:only-of-type {
@@ -45,18 +41,21 @@ li:only-of-type {
 
 ```html
 <ol>
-  <li>Premier
+  <li>
+    Premier
     <ul>
       <li>Ceci est l'unique li</li>
     </ul>
   </li>
-  <li>Deuxième
+  <li>
+    Deuxième
     <ul>
       <li>Cette liste a deux éléments</li>
       <li>Cette liste a deux éléments</li>
     </ul>
   </li>
-  <li>Troisième
+  <li>
+    Troisième
     <ul>
       <li>Cette liste a trois éléments</li>
       <li>Cette liste a trois éléments</li>
@@ -65,8 +64,10 @@ li:only-of-type {
   </li>
 </ol>
 <ol>
-  <li>Une seule liste imbriquée
-    <ul>Avec
+  <li>
+    Une seule liste imbriquée
+    <ul>
+      Avec
       <li>Un seul item</li>
     </ul>
   </li>
@@ -79,14 +80,11 @@ li:only-of-type {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires                                                        |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#only-of-type-pseudo', ':only-of-type')}} | {{Spec2('CSS4 Selectors')}} | L'élément ciblé ne doit pas nécessairement avoir un élément parent. |
-| {{SpecName('CSS3 Selectors', '#only-of-type-pseudo', ':only-of-type')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.only-of-type")}}
+{{Compat}}
 
 ## Voir aussi
 

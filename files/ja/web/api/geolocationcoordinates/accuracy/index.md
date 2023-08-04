@@ -1,28 +1,17 @@
 ---
-title: GeolocationCoordinates.accuracy
+title: "GeolocationCoordinates: accuracy プロパティ"
+short-title: accuracy
 slug: Web/API/GeolocationCoordinates/accuracy
-tags:
-  - API
-  - 位置情報 API
-  - GeolocationCoordinates
-  - プロパティ
-  - 安全なコンテキスト
-  - accuracy
-browser-compat: api.GeolocationCoordinates.accuracy
-translation_of: Web/API/GeolocationCoordinates/accuracy
+l10n:
+  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`GeolocationCoordinates.accuracy`** は読み取り専用プロパティで、厳密な正の `double` 値で、信頼度 95% の {{domxref("GeolocationCoordinates.latitude")}} および
 {{domxref("GeolocationCoordinates.longitude")}} の精度をメートル単位で表します。
 
-## 構文
-
-```js
-let acc = geolocationCoordinatesInstance.accuracy
-```
-
-### 値
+## 値
 
 正の `double` 値で、信頼度 95% の {{domxref("GeolocationCoordinates.latitude")}} および
 {{domxref("GeolocationCoordinates.longitude")}} の精度をメートル単位で表します。
