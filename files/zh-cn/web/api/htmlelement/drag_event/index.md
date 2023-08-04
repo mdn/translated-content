@@ -101,7 +101,7 @@ const target = document.getElementById("droptarget");
 target.addEventListener(
   "dragover",
   (event) => {
-    // prevent default to allow drop
+    // 阻止默认行为以允许放置
     event.preventDefault();
   },
   false,
