@@ -35,8 +35,7 @@ new WebAssembly.Global(descriptor, value)
 
 - `value`
   - : 変数が保持する値です。変数のデータ型に合う限り、どんな値でも取れます。
-    もしも何の値も渡されないと、`descriptor.value` の値が `i32`、`i64`、`f32`、`f64` のいずれかである場合は型付きの 0 が使用され、`descriptor.value` が `externref` または `anyfunc` であれば、`null` が使用されます（[`DefaultValue`
-    アルゴリズム](https://webassembly.github.io/spec/js-api/#defaultvalue)で定義されているとおりです）。
+    もしも何の値も渡されないと、`descriptor.value` の値が `i32`、`i64`、`f32`、`f64` のいずれかである場合は型付きの 0 が使用され、`descriptor.value` が `externref` または `anyfunc` であれば、`null` が使用されます（[`DefaultValue` アルゴリズム](https://webassembly.github.io/spec/js-api/#defaultvalue)で定義されているとおりです）。
 
 ## 例
 
