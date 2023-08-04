@@ -1,22 +1,11 @@
 ---
 title: Window.find()
 slug: Web/API/Window/find
-tags:
-  - API
-  - HTML DOM
-  - メソッド
-  - NeedsCompatTable
-  - NeedsContent
-  - 標準外
-  - リファレンス
-  - Window
-  - find
-browser-compat: api.Window.find
-translation_of: Web/API/Window/find
 ---
+
 {{ApiRef}}{{Non-standard_Header}}
 
-> **Note:** `Window.find()` の対応は、 Gecko の将来のバージョンで変更される可能性があります。 {{Bug("672395")}} を参照してください。
+> **メモ:** `Window.find()` の対応は、 Gecko の将来のバージョンで変更される可能性があります。 [Firefox バグ 672395](https://bugzil.la/672395) を参照してください。
 
 **`Window.find()`** メソッドは、ウィンドウ内の文字列を順次検索します。
 
@@ -37,7 +26,7 @@ find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFram
 - `aWrapAround`
   - : 論理値です。 `true` の場合、折り返し検索を行います。
 - `aWholeWord` {{Unimplemented_Inline}}
-  - : 論理値です。 `true` の場合、完全一致検索を行います。これは実装されていません。 {{bug("481513")}} を参照してください。
+  - : 論理値です。 `true` の場合、完全一致検索を行います。これは実装されていません。 [Firefox バグ 481513](https://bugzil.la/481513) を参照してください。
 - `aSearchInFrames`
   - : 論理値です。 `true` の場合、フレーム内の検索を行います。
 

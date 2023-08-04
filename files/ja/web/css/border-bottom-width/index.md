@@ -1,15 +1,8 @@
 ---
 title: border-bottom-width
 slug: Web/CSS/border-bottom-width
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-bottom-width
-translation_of: Web/CSS/border-bottom-width
 ---
+
 {{CSSRef}}
 
 **`border-bottom-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックスの下の境界の幅を設定します。
@@ -46,7 +39,7 @@ border-bottom-width: unset;
     - `medium`
     - `thick`
 
-> **Note:** 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、何れか一つを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
+> **メモ:** 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、何れか一つを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
 
 ## 公式定義
 

@@ -1,11 +1,8 @@
 ---
 title: Axes
 slug: Web/XPath/Axes
-tags:
-  - XPath
-  - XPath_Reference
-translation_of: Web/XPath/Axes
 ---
+
 {{ XsltRef() }} There are thirteen different axes in the [XPath](cn/XPath) specification. An axis represents a relationship to the context node, and is used to locate nodes relative to that node on the tree. The following is an extremely brief description of the thirteen available axes and the degree of support available in [Gecko](cn/Gecko).
 
 For further information on using XPath expressions, please see the [For Further Reading](cn/Transforming_XML_with_XSLT/For_Further_Reading) section at the end of [Transforming XML with XSLT](cn/Transforming_XML_with_XSLT) document.

@@ -1,21 +1,11 @@
 ---
 title: tabs.captureVisibleTab()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - captureVisibleTab
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
 ---
+
 {{AddonSidebar()}}
 
-Crée une URI de données codant une image de la zone visible de l'onglet actuellement actif dans la fenêtre spécifiée. Vous devez avoir la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `<all_urls>` pour utiliser cette méthode. (Alternativement, Chrome permet l'utilisation de cette méthode avec la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `activeTab` et un geste utilisateur qualifiant).
+Crée une URI de données codant une image de la zone visible de l'onglet actuellement actif dans la fenêtre spécifiée. Vous devez avoir la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `<all_urls>` pour utiliser cette méthode. (Alternativement, Chrome permet l'utilisation de cette méthode avec la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `activeTab` et un geste utilisateur qualifiant).
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -23,9 +13,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var capturing = browser.tabs.captureVisibleTab(
-  windowId,               // optional integer
-  options                 // optional extensionTypes.ImageDetails
-)
+  windowId, // optional integer
+  options, // optional extensionTypes.ImageDetails
+);
 ```
 
 ### Paramètres
@@ -52,7 +42,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var capturing = browser.tabs.captureVisibleTab();
   capturing.then(onCaptured, onError);
 });
@@ -60,9 +50,9 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.captureVisibleTab")}}
+{{Compat}}
 
 > **Note :**
 >
@@ -70,7 +60,8 @@ browser.browserAction.onClicked.addListener(function() {
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -97,4 +88,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

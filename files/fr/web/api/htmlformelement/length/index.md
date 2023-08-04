@@ -1,8 +1,8 @@
 ---
 title: HTMLFormElement.length
 slug: Web/API/HTMLFormElement/length
-translation_of: Web/API/HTMLFormElement/length
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété en lecture seule **`HTMLFormElement.length`** retourne le nombre de contrôles présents dans l'élément {{HTMLElement("Form")}}.
@@ -10,7 +10,7 @@ La propriété en lecture seule **`HTMLFormElement.length`** retourne le nombre 
 ## Syntaxe
 
 ```js
-integer = form.length
+integer = form.length;
 ```
 
 ## Exemple

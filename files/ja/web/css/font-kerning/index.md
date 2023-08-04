@@ -1,15 +1,8 @@
 ---
 title: font-kerning
 slug: Web/CSS/font-kerning
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-kerning
-translation_of: Web/CSS/font-kerning
 ---
+
 {{CSSRef}}
 
 **`font-kerning`** CSS プロパティはフォントに存在するカーニング情報の使用を制御します。

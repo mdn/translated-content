@@ -1,13 +1,8 @@
 ---
 title: 加载和运行 WebAssembly 代码
 slug: WebAssembly/Loading_and_running
-tags:
-  - Fetch
-  - WebAssembly
-  - XMLHttpRequest
-  - 字节码
-translation_of: WebAssembly/Loading_and_running
 ---
+
 {{WebAssemblySidebar}}
 
 为了在 JavaScript 中使用 WebAssembly，在编译/实例化之前，你首先需要把模块放入内存。比如，通过[XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)或[Fetch](/zh-CN/docs/Web/API/Fetch_API)，模块将会被初始化为带类型数组；不过，将来会开发更多的方式。本文提供了一篇关于获取 WebAssembly 字节码的不同机制以及如何编译/实例化并运行它的参考。
@@ -31,13 +26,12 @@ WebAssembly 还没有和\<script type='module'>或 ES6 的 import 语句集成�
 代码块看起来像这样：
 
 ```js
-fetch('module.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
-).then(results => {
-  // Do something with the compiled results!
-});
+fetch("module.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((results) => {
+    // Do something with the compiled results!
+  });
 ```
 
 ### 顺便说一下 instantiate() 重载
@@ -46,8 +40,8 @@ fetch('module.wasm').then(response =>
 
 ```js
 {
-  module : Module // 新编译的 WebAssembly.Module 对象，
-  instance : Instance // 新的模块对象实例
+  module: Module; // 新编译的 WebAssembly.Module 对象，
+  instance: Instance; // 新的模块对象实例
 }
 ```
 
@@ -61,13 +55,10 @@ fetch('module.wasm').then(response =>
 
 ```js
 function fetchAndInstantiate(url, importObject) {
-  return fetch(url).then(response =>
-    response.arrayBuffer()
-  ).then(bytes =>
-    WebAssembly.instantiate(bytes, importObject)
-  ).then(results =>
-    results.instance
-  );
+  return fetch(url)
+    .then((response) => response.arrayBuffer())
+    .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+    .then((results) => results.instance);
 }
 ```
 
@@ -86,7 +77,7 @@ fetchAndInstantiate('module.wasm', importObject).then(function(instance) {
 一旦在 JavaScript 中得到了可用的 WebAssembly 实例，你就可以开始使用那些通过 {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}} 属性导出的特性了。你的代码可能看起来像这样：
 
 ```js
-fetchAndInstantiate('myModule.wasm', importObject).then(function(instance) {
+fetchAndInstantiate("myModule.wasm", importObject).then(function (instance) {
   // 调用导出函数：
   instance.exports.exported_func();
 
@@ -96,7 +87,7 @@ fetchAndInstantiate('myModule.wasm', importObject).then(function(instance) {
   // 或者获取导出表格中的元素：
   var table = instance.exports.table;
   console.log(table.get(0)());
-})
+});
 ```
 
 > **备注：** 关于从 WebAssembly 模块导出是如何工作的更多信息，请阅读使[用 WebAssembly 的 JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)和[理解 WebAssembly 文本格式](/zh-CN/docs/WebAssembly/Understanding_the_text_format)。
@@ -105,22 +96,22 @@ fetchAndInstantiate('myModule.wasm', importObject).then(function(instance) {
 
 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)在一定程度上而言要比 Fetch 老旧一些，但是，仍然可以很好地被用来获取带类型数组。仍然假设我们的模块叫做 simple.wasm：
 
-1.  创建一个 {{domxref("XMLHttpRequest()")}} 实例，然后使用它的{{domxref("XMLHttpRequest.open","open()")}} 方法来开启一个请求——设置请求方法为 GET 并且声明我们想要获取的文件路径。
-2.  关键之处在于使用{{domxref("XMLHttpRequest.responseType","responseType")}}属性设置响应类型为'arraybuffer'。
-3.  接下来使用{{domxref("XMLHttpRequest.send()")}}发送请求。
-4.  当响应已经完成下载之后，我们使用{{domxref("XMLHttpRequest.onload", "onload")}}事件处理器来调用一个函数——在这个函数中，我们从{{domxref("XMLHttpRequest.response", "response")}}属性中得到数组缓存然后就像使用 Fetch 那样把它传递给{{jsxref("WebAssembly.instantiate()")}} 。
+1. 创建一个 {{domxref("XMLHttpRequest()")}} 实例，然后使用它的{{domxref("XMLHttpRequest.open","open()")}} 方法来开启一个请求——设置请求方法为 GET 并且声明我们想要获取的文件路径。
+2. 关键之处在于使用{{domxref("XMLHttpRequest.responseType","responseType")}}属性设置响应类型为'arraybuffer'。
+3. 接下来使用{{domxref("XMLHttpRequest.send()")}}发送请求。
+4. 当响应已经完成下载之后，我们使用{{domxref("XMLHttpRequest.onload", "onload")}}事件处理器来调用一个函数——在这个函数中，我们从{{domxref("XMLHttpRequest.response", "response")}}属性中得到数组缓存然后就像使用 Fetch 那样把它传递给{{jsxref("WebAssembly.instantiate()")}} 。
 
 最终代码看起来像这样：
 
 ```js
 request = new XMLHttpRequest();
-request.open('GET', 'simple.wasm');
-request.responseType = 'arraybuffer';
+request.open("GET", "simple.wasm");
+request.responseType = "arraybuffer";
 request.send();
 
-request.onload = function() {
+request.onload = function () {
   var bytes = request.response;
-  WebAssembly.instantiate(bytes, importObject).then(results => {
+  WebAssembly.instantiate(bytes, importObject).then((results) => {
     results.instance.exports.exported_func();
   });
 };

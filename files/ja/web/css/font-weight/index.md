@@ -1,15 +1,8 @@
 ---
 title: font-weight
 slug: Web/CSS/font-weight
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-weight
-translation_of: Web/CSS/font-weight
 ---
+
 {{CSSRef}}
 
 **`font-weight`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの太さ (あるいは重み) を指定します。実際に表示されるフォントの太さは、現在設定されている {{cssxref("font-family")}} に依存する場合があります。

@@ -1,11 +1,8 @@
 ---
 title: element.onkeyup
 slug: Web/API/Element/keyup_event
-tags:
-  - Référence_du_DOM_Gecko
-translation_of: Web/API/GlobalEventHandlers/onkeyup
-original_slug: Web/API/GlobalEventHandlers/onkeyup
 ---
+
 {{ ApiRef() }}
 
 ### Résumé
@@ -19,8 +16,12 @@ code de gestion de l'évènement = element.onkeyup
 ### Exemple
 
 ```html
- <input type="text" onKeyUp="cleRelachee(event)">
- <script>function cleRelachee(evt){ alert(evt.keyCode) }</script>
+<input type="text" onKeyUp="cleRelachee(event)" />
+<script>
+  function cleRelachee(evt) {
+    alert(evt.keyCode);
+  }
+</script>
 ```
 
 ### Notes

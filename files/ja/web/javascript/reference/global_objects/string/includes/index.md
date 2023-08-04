@@ -1,16 +1,10 @@
 ---
 title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
-browser-compat: javascript.builtins.String.includes
-translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
+l10n:
+  sourceCommit: ce2909126eb09e44c9f48d9f65d072acae827749
 ---
+
 {{JSRef}}
 
 **`includes()`** メソッドは、1 つの文字列を別の文字列の中に見出すことができるかどうかを判断し、必要に応じて `true` か `false` を返します。
@@ -19,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 
 ## 構文
 
-```js
+```js-nolint
 includes(searchString)
 includes(searchString, position)
 ```
@@ -27,13 +21,18 @@ includes(searchString, position)
 ## 引数
 
 - `searchString`
-  - : `str` 内で検索される文字列。
+  - : `str` 内で検索される文字列です。正規表現は使用できません。
 - `position` {{optional_inline}}
-  - : 文字列内で `searchString` を検索し始める位置です。 (既定値は 0 です。)
+  - : 文字列内で `searchString` を検索し始める位置です。（既定値は `0` です。）
 
 ### 返値
 
-文字列が検索値を含んでいれば、**`true`**。含んでいれば、**`false`**。
+指定された文字列のどこかに検索文字列が見つかれば、**`true`**。そうでなければ **`false`** です。
+
+### 例外
+
+- {{jsxref("TypeError")}}
+  - : `searchString` が[正規表現であった場合](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正規表現の特殊な扱い)。
 
 ## 解説
 
@@ -47,29 +46,15 @@ includes(searchString, position)
 'Blue Whale'.includes('blue')  // false を返す
 ```
 
-## ポリフィル
-
-このメソッドは ECMAScript 2015 で追加されました。まだ、すべての JavaScript の実装で利用できるとは限りません。
-
-しかしながら、このメソッドを簡単に代替できます。
+元の文字列と検索文字列の両方をすべて小文字に変換することで、この制約を回避することができます。
 
 ```js
-if (!String.prototype.includes) {
-  String.prototype.includes = function(search, start) {
-    'use strict';
-
-    if (search instanceof RegExp) {
-      throw TypeError('first argument must not be a RegExp');
-    }
-    if (start === undefined) { start = 0; }
-    return this.indexOf(search, start) !== -1;
-  };
-}
+'Blue Whale'.toLowerCase().includes('blue')  // true を返す
 ```
 
 ## 例
 
-### `includes()` の使用
+### includes() の使用
 
 ```js
 const str = 'To be, or not to be, that is the question.'
@@ -92,7 +77,7 @@ console.log(str.includes(''))             // true
 
 ## 関連情報
 
-- `String.prototype.includes` のポリフィルは [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp) で利用できます
+- [`String.prototype.includes` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("Array.prototype.includes()")}}
 - {{jsxref("TypedArray.prototype.includes()")}}
 - {{jsxref("String.prototype.indexOf()")}}

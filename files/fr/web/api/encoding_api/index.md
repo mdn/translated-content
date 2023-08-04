@@ -1,13 +1,8 @@
 ---
 title: Encoding API
 slug: Web/API/Encoding_API
-tags:
-  - API
-  - Encoding
-  - Overview
-  - Reference
-translation_of: Web/API/Encoding_API
 ---
+
 {{DefaultAPISidebar("Encoding API")}}{{SeeCompatTable}}
 
 L'`API Encoding` fournit un mecanisme de traitement de texte dans plusieurs {{Glossary("character encoding", "character encodings")}}, incluant les encodings non-{{Glossary("UTF-8")}}.
@@ -24,20 +19,12 @@ L'API fournit quatres interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEnc
 ## Tutoriels & Outils
 
 - Un [shim](http://code.google.com/p/stringencoding/) permettant d'utiliser cette interface dans les navigateurs ne le supportant pas.
-- [`StringView`](/en-US/Add-ons/Code_snippets/StringView) – une représentation de type C des chaînes basée sur des tableaux typés.
+- [`StringView`](/fr/Add-ons/Code_snippets/StringView) – une représentation de type C des chaînes basée sur des tableaux typés.
 
-## Caracteristiques
+## Spécifications
 
-| Caracteristiques                 | Statut                       | Commentaire          |
-| -------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("Encoding")}} | {{Spec2("Encoding")}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilité
+## Compatibilité des navigateurs
 
-### `TextDecoder`
-
-{{Compat("api.TextDecoder")}}
-
-### `TextEncoder`
-
-{{Compat("api.TextEncoder")}}
+{{Compat}}

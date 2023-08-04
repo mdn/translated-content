@@ -1,13 +1,8 @@
 ---
 title: 发布游戏
 slug: Games/Publishing_games
-tags:
-  - 发布
-  - 推广
-  - 游戏
-  - 获利
-translation_of: Games/Publishing_games
 ---
+
 {{GamesSidebar}}
 
 HTML5 游戏在发布和分发上具有极大的优势--你可以通过网络自由地发布，推广，获利，并且不受分发商的限制。你可以实现通过多种平台获利。这一系列的案例关注在当你想要发布，推广你的游戏，并当游戏变得有名时获取一些回报。

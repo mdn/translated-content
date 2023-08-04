@@ -1,8 +1,8 @@
 ---
 title: Blob.size
 slug: Web/API/Blob/size
-translation_of: Web/API/Blob/size
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("Blob")}} 接口的 **`size`** 属性返回 {{domxref("Blob")}} 或 {{domxref("File")}} 的字节数。
@@ -18,7 +18,7 @@ translation_of: Web/API/Blob/size
 ### HTML
 
 ```html
-<input type="file" id="input" multiple>
+<input type="file" id="input" multiple />
 <output id="output">Choose files…</output>
 ```
 
@@ -32,11 +32,11 @@ output {
 ### JavaScript
 
 ```js
-const input = document.getElementById('input');
-const output = document.getElementById('output');
+const input = document.getElementById("input");
+const output = document.getElementById("output");
 
-input.addEventListener('change', (event) => {
-  output.innerText = '';
+input.addEventListener("change", (event) => {
+  output.innerText = "";
 
   for (const file of event.target.files) {
     output.innerText += `${file.name} has a size of ${file.size} bytes.\n`;

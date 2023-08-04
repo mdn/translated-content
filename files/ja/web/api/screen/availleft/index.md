@@ -1,17 +1,8 @@
 ---
 title: Screen.availLeft
 slug: Web/API/Screen/availLeft
-page-type: web-api-instance-property
-tags:
-  - API
-  - API:Mozilla Extensions
-  - API:WebKit Extensions
-  - DOM
-  - Non-standard
-  - Property
-browser-compat: api.Screen.availLeft
-translation_of: Web/API/Screen/availLeft
 ---
+
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
 
 画面の左端から利用できる最初の有効ピクセルを返します。

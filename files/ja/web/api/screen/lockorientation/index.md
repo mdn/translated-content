@@ -1,25 +1,15 @@
 ---
 title: Screen.lockOrientation()
 slug: Web/API/Screen/lockOrientation
-page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Deprecated
-  - Method
-  - NeedsUpdate
-  - Screen Orientation
-  - screen
-browser-compat: api.Screen.lockOrientation
-translation_of: Web/API/Screen/lockOrientation
 ---
+
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
 **`lockOrientation()`** は {{DOMxRef("Screen")}} インターフェイスのメソッドで、画面を特定の方向にロックします。
 
-> **Warning:** この機能は非推奨であり、仕様をさけてください。代わりに {{DOMxRef("ScreenOrientation.lock()")}} メソッドを使用してください。
+> **警告:** この機能は非推奨であり、仕様をさけてください。代わりに {{DOMxRef("ScreenOrientation.lock()")}} メソッドを使用してください。
 
-> **Note:** このメソッドはインストールされたウェブアプリまたは[全画面モード](/ja/docs/Web/API/Fullscreen_API)のウェブページでのみ動作します。
+> **メモ:** このメソッドはインストールされたウェブアプリまたは[全画面モード](/ja/docs/Web/API/Fullscreen_API)のウェブページでのみ動作します。
 
 ## 構文
 
@@ -48,13 +38,13 @@ lockOrientation(orientation)
       - : 第二ランドスケープモードである画面の向きを表します。
         第二ランドスケープモードとは、端末を通常の向きが横向きでそこから 180° 回転させた場合と、端末の通常の位置が縦向きの場合に反時計回りに 90° 回転させた向きの場合です。どの向きが通常の向きであるかは、端末によって異なります。
     - `portrait`
-      - : `portrait-primary` と `portrait-secondary` の両方を表します。
+      - : `portrait-primary` と `portrait-secondary` の両方を表します。
     - `landscape`
-      - : `landscape-primary` と `landscape-secondary` の両方を表します。
+      - : `landscape-primary` と `landscape-secondary` の両方を表します。
     - `default`
       - : 端末に自然な向きによって `portrait-primary` または `landscape-primary` が選ばれます。たとえば、ディスプレイの解像度が 1280\*800 なら、 `default` は `landscape` になるでしょうし、800\*1280 なら、 `default` は `portrait` になるでしょう。
 
-> **Note:** 複数のロックが同時に指定されることがあります。そのため、 1 つの向きにのみロックがセットされた場合には、画面の向きはロックが解除されるまで決して変更されません。もしそうでなければ、端末がロックされた向きを含む複数の向きの間で、画面の向きが 1 つの向きから別の向きへと移り変わってしまうことになります。
+> **メモ:** 複数のロックが同時に指定されることがあります。そのため、 1 つの向きにのみロックがセットされた場合には、画面の向きはロックが解除されるまで決して変更されません。もしそうでなければ、端末がロックされた向きを含む複数の向きの間で、画面の向きが 1 つの向きから別の向きへと移り変わってしまうことになります。
 
 ### 返値
 

@@ -1,12 +1,8 @@
 ---
 title: left
 slug: Web/CSS/left
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/left
 ---
+
 {{CSSRef}}
 
 La propriété **`left`** permet de définir une partie de la position des éléments positionnés. Elle n'a aucun effet pour les éléments non-positionnés.
@@ -65,9 +61,13 @@ left: unset;
     - Pour les éléments positionnés de façon absolue : la position de l'élément selon la valeur de la propriété {{cssxref("right")}}, on considère `width: auto` comme une largeur basée sur le contenu.
     - Pour les éléments positionnés de façon relative : le décalage à gauche de l'élément par rapport à sa position initiale selon la valeur de la propriété {{cssxref("right")}}. SI `right` vaut également `auto`, il n'y a aucun décalage.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -77,7 +77,7 @@ left: unset;
 #wrap {
   width: 700px;
   margin: 0 auto;
-  background: #5C5C5C;
+  background: #5c5c5c;
 }
 
 pre {
@@ -93,7 +93,7 @@ pre {
   position: absolute;
   left: 20px;
   top: 20px;
-  background-color: #D8F5FF;
+  background-color: #d8f5ff;
 }
 
 #exemple_2 {
@@ -102,8 +102,7 @@ pre {
   position: relative;
   top: 0;
   right: 0;
-  background-color: #C1FFDB;
-
+  background-color: #c1ffdb;
 }
 #exemple_3 {
   width: 600px;
@@ -111,16 +110,16 @@ pre {
   position: relative;
   top: 20px;
   left: 20px;
-  background-color: #FFD7C2;
+  background-color: #ffd7c2;
 }
 
 #exemple_4 {
-  width:200px;
-  height:200px;
-  position:absolute;
-  bottom:10px;
-  right:20px;
-  background-color:#FFC7E4;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  background-color: #ffc7e4;
 }
 ```
 
@@ -134,7 +133,10 @@ pre {
       left: 20px;
       top: 20px;
     </pre>
-    <p>Le seul élément englobant pour ce div est la fenêtre principale. Elle se positionne par rapport à elle.</p>
+    <p>
+      Le seul élément englobant pour ce div est la fenêtre principale. Elle se
+      positionne par rapport à elle.
+    </p>
   </div>
 
   <div id="exemple_2">
@@ -153,7 +155,10 @@ pre {
       top: 20px;
       left: 20px;
     </pre>
-    <p>La position est relative par rapport au div voisin mais on le retire du flux.</p>
+    <p>
+      La position est relative par rapport au div voisin mais on le retire du
+      flux.
+    </p>
 
     <div id="exemple_4">
       <pre>
@@ -161,7 +166,10 @@ pre {
         bottom: 10px;
         right: 20px;
       </pre>
-      <p>La position est absolue à l'intérieur d'un parent positionné de façon relative.</p>
+      <p>
+        La position est absolue à l'intérieur d'un parent positionné de façon
+        relative.
+      </p>
     </div>
   </div>
 </div>
@@ -173,17 +181,11 @@ pre {
 
 ## Spécifications
 
-| Spécification                                                                    | État                                     | Commentaires                                                       |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------ |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'left')}} | {{Spec2('CSS3 Transitions')}} | `left` peut désormais être animée.                                 |
-| {{SpecName('CSS3 Positioning', '#propdef-left', 'left')}}     | {{Spec2('CSS3 Positioning')}} | Décrit le comportement pour le positionnement adhérent (_sticky_). |
-| {{SpecName('CSS2.1', 'visuren.html#propdef-left', 'left')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                               |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.left")}}
+{{Compat}}
 
 ## Voir aussi
 

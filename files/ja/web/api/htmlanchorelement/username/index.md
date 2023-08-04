@@ -1,16 +1,10 @@
 ---
-title: HTMLAnchorElement.username
+title: "HTMLAnchorElement: username プロパティ"
 slug: Web/API/HTMLAnchorElement/username
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAnchorElement.username
-translation_of: Web/API/HTMLAnchorElement/username
-original_slug: Web/API/HTMLHyperlinkElementUtils/username
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.username`** プロパティは、ドメイン名の前で指定されたユーザー名の入った文字列です。

@@ -1,15 +1,8 @@
 ---
 title: Set() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
-tags:
-  - コンストラクター
-  - JavaScript
-  - リファレンス
-  - set
-  - ポリフィル
-browser-compat: javascript.builtins.Set.Set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/Set
 ---
+
 {{JSRef}}
 
 **`Set` コンストラクター**は、あらゆる型の一意な[プリミティブ値](/ja/docs/Glossary/Primitive)やオブジェクト参照を格納する `Set` オブジェクトを生成します。

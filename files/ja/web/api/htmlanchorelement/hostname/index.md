@@ -1,16 +1,10 @@
 ---
-title: HTMLAnchorElement.hostname
+title: "HTMLAnchorElement: hostname プロパティ"
 slug: Web/API/HTMLAnchorElement/hostname
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAnchorElement.hostname
-translation_of: Web/API/HTMLAnchorElement/hostname
-original_slug: Web/API/HTMLHyperlinkElementUtils/hostname
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.hostname`** プロパティは、URL のドメインを含む文字列です。

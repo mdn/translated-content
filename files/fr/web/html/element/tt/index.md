@@ -1,15 +1,9 @@
 ---
-title: '<tt> : l''élément de texte de téléscripteur (obsolète)'
+title: "<tt> : l'élément de texte de téléscripteur (obsolète)"
 slug: Web/HTML/Element/tt
-tags:
-  - Element
-  - HTML
-  - Obsolete
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/tt
 ---
-{{deprecated_header}}{{HTMLRef}}
+
+{{deprecated_header}}{{HTMLSidebar}}
 
 L'élément HTML **`<tt>`** (pour _Teletype Text_) crée un élément en ligne, écrit dans la police à chasse fixe par défaut du navigateur. Cet élément a été conçu pour mettre en forme du texte comme s'il apparaissait sur un affichage à largeur fixe tel qu'un téléscripteur.
 
@@ -48,8 +42,7 @@ Il est possible de surcharger la police par défaut utilisée pour cet élément
 
 ```css
 tt {
-  font-family: "Lucida Console", "Menlo", "Monaco", "Courier",
-               monospace;
+  font-family: "Lucida Console", "Menlo", "Monaco", "Courier", monospace;
 }
 ```
 
@@ -132,15 +125,11 @@ Bien que cet élément n'ait pas été officiellement déprécié en HTML 4.01, 
 
 ## Spécifications
 
-| Spécification                                                                                    | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'obsolete.html#tt', '&lt;tt&gt;')}}                 | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'obsolete.html#elementdef-tt', '&lt;tt&gt;')}}     | {{Spec2('HTML5 W3C')}}     |              |
-| {{SpecName('HTML4.01', 'present/graphics.html#h-15.2.1', '&lt;tt&gt;')}} | {{Spec2('HTML4.01')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.tt")}}
+{{Compat}}
 
 ## Voir aussi
 

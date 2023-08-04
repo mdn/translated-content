@@ -1,8 +1,8 @@
 ---
 title: EvalError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/EvalError/EvalError
-browser-compat: javascript.builtins.EvalError.EvalError
 ---
+
 {{JSRef}}
 
 El constructor **`EvalError`** crea un nuevo error relacionado con la función global {{jsxref("Global_Objects/eval", "eval()")}}. Esta excepción ya no es lanzada por JavaScript, sin embargo el objeto `EvalError` permanece por compatibilidad.

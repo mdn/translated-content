@@ -1,9 +1,8 @@
 ---
 title: 401 Unauthorized
 slug: Web/HTTP/Status/401
-translation_of: Web/HTTP/Status/401
-browser-compat: http.status.401
 ---
+
 {{HTTPSidebar}}
 
 Le code de statut de réponse HTTP **`401 Unauthorized`** indique que la requête n'a pas été effectuée, car il manque des informations d'authentification valides pour la ressource visée.

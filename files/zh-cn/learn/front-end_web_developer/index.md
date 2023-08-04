@@ -1,15 +1,6 @@
 ---
 title: Web 前端开发者
 slug: Learn/Front-end_web_developer
-tags:
-  - CSS
-  - HTML
-  - Web 标准
-  - 初学者
-  - 前端
-  - 工具
-  - 教程
-translation_of: Learn/Front-end_web_developer
 ---
 
 {{LearnSidebar}}
@@ -61,7 +52,7 @@ translation_of: Learn/Front-end_web_developer
 
 #### 核心提示
 
-- [安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software) (15 分钟)  (15 分钟)
+- [安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software) (15 分钟) (15 分钟)
 - [Web 和 Web 标准的背景介绍](/zh-CN/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards) (45 分钟)
 - [学习和获得帮助](/zh-CN/docs/Learn/Learning_and_getting_help) (45 分钟)
 
@@ -132,7 +123,7 @@ translation_of: Learn/Front-end_web_developer
 
 #### 预备知识
 
-高效使用 Web 表单需要 HTML、CSS 和 JavaScript 知识。鉴于与表格打交道的复杂性，这一节被独立了出来。
+高效使用 Web 表单需要 HTML、CSS 和 JavaScript 知识。鉴于与表单打交道的复杂性，这一节被独立了出来。
 
 #### 我怎么知道自己是否可以继续往下学习了？
 
@@ -157,7 +148,7 @@ translation_of: Learn/Front-end_web_developer
 #### 核心模块
 
 - [跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing) (25–30 小时阅读/练习)
-- [可访问性（辅助功能）](/zh-CN/docs/learn/Accessibility) (20–25 小时阅读/练习)
+- [无障碍（辅助功能）](/zh-CN/docs/learn/Accessibility) (20–25 小时阅读/练习)
 
 ### 现代工具
 

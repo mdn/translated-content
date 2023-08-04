@@ -1,17 +1,8 @@
 ---
 title: Range.intersectsNode()
 slug: Web/API/Range/intersectsNode
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Experimental
-  - Method
-  - Range
-  - Reference
-browser-compat: api.Range.intersectsNode
-translation_of: Web/API/Range/intersectsNode
 ---
+
 {{ApiRef("DOM")}} {{SeeCompatTable}}
 
 **`Range.intersectsNode()`** メソッドは、指定された {{domxref("Node")}} が {{domxref("Range")}} と交差しているかどうかを示す論理値を返します。

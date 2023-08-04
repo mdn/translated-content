@@ -1,25 +1,13 @@
 ---
 title: VRFrameData.pose
 slug: Web/API/VRFrameData/pose
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRFrameData
-  - Virtual Reality
-  - WebVR
-  - pose
-browser-compat: api.VRFrameData.pose
-translation_of: Web/API/VRFrameData/pose
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`pose`** は {{domxref("VRFrameData")}} インターフェイスの読み取り専用プロパティで、現在の {{domxref("VRFrameData.timestamp")}} の時点での {{domxref("VRDisplay")}} の {{domxref("VRPose")}} を返します。
 
-> **Note:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ## 値
 

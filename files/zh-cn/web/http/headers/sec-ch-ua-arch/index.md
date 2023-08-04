@@ -1,16 +1,8 @@
 ---
 title: Sec-CH-UA-Arch
 slug: Web/HTTP/Headers/Sec-CH-UA-Arch
-translation_of: Web/HTTP/Headers/Sec-CH-UA-Arch
-tags:
-  - Sec-CH-UA-Arch
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  -  Experimental
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
 **`Sec-CH-UA-Arch`** [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#user-agent_client_hints)请求标头提供了用户代理的底层 CPU 架构，例如 ARM 或 x86。

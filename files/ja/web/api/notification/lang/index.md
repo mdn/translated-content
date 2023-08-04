@@ -1,17 +1,10 @@
 ---
 title: Notification.lang
 slug: Web/API/Notification/lang
-page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-browser-compat: api.Notification.lang
-translation_of: Web/API/Notification/lang
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 **`lang`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `lang` オプションで指定された通知の言語を示します。

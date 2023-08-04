@@ -1,17 +1,8 @@
 ---
 title: CanvasRenderingContext2D.globalCompositeOperation
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
-tags:
-  - API
-  - 混色
-  - Canvas
-  - CanvasRenderingContext2D
-  - Compositing
-  - プロパティ
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.globalCompositeOperation
-translation_of: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.globalCompositeOperation`** はキャンバス 2D API のプロパティで、新たな図形を描くときに適用する合成演算の種類を定めます。
@@ -77,7 +68,7 @@ ctx.fillRect(50, 50, 100, 100);
 
 ### Gecko 特有のメモ
 
-- 初期のキャンバス仕様の草案では、値として "darker" が定められていました。しかし、 Firefox はバージョン 4 で "darker" の対応をやめました ({{bug(571532)}})。[このブログ記事](https://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker)では、 `"difference"` を使用して `"darker"` に近い効果が得られることを示していますので参照してください。
+- 初期のキャンバス仕様の草案では、値として "darker" が定められていました。しかし、 Firefox はバージョン 4 で "darker" の対応をやめました ([Firefox バグ 571532](https://bugzil.la/571532))。[このブログ記事](https://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker)では、 `"difference"` を使用して `"darker"` に近い効果が得られることを示していますので参照してください。
 
 ## 関連情報
 

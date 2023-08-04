@@ -1,18 +1,8 @@
 ---
 title: windows.update()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Update
-  - WebExtensions
-  - Windows
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/update
 ---
+
 {{AddonSidebar()}}
 
 Mises à jour des propriétés d'une fenêtre. Utilisez ceci pour déplacer, redimensionner, et (un) se concentrer sur une fenêtre, etc.
@@ -23,9 +13,9 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var updating = browser.windows.update(
-  windowId,              // integer
-  updateInfo             // object
-)
+  windowId, // integer
+  updateInfo, // object
+);
 ```
 
 ### Paramètres
@@ -55,11 +45,11 @@ var updating = browser.windows.update(
 
 ### Valeur de retour
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}}  contenant les détails de la fenêtre mise à jour. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la fenêtre mise à jour. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.update")}}
+{{Compat}}
 
 ## Exemples
 
@@ -75,13 +65,11 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-
   var updating = browser.windows.update(tab.windowId, {
     left: 0,
-    top: 0
+    top: 0,
   });
   updating.then(onUpdated, onError);
-
 });
 ```
 
@@ -93,7 +81,8 @@ browser.browserAction.onClicked.addListener((tab) => {
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -120,4 +109,4 @@ browser.browserAction.onClicked.addListener((tab) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

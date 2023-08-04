@@ -1,17 +1,9 @@
 ---
 title: CloseEvent.initCloseEvent()
 slug: conflicting/Web/API/CloseEvent
-tags:
-  - API
-  - CloseEvent
-  - initCloseEvent
-  - メソッド
-  - リファレンス
-  - 非推奨
-translation_of: Web/API/CloseEvent/initCloseEvent
 original_slug: Web/API/CloseEvent/initCloseEvent
-browser-compat: api.CloseEvent.initCloseEvent
 ---
+
 {{APIRef("Websockets API")}}{{deprecated_header}}
 
 **`CloseEvent.initCloseEvent()`** メソッドは、一度作成された CloseEvent の値を初期化します（通常は {{domxref("Document.createEvent()") }} メソッドを使用します）。
@@ -20,7 +12,7 @@ browser-compat: api.CloseEvent.initCloseEvent
 {{ domxref("EventTarget.dispatchEvent()") }} を使用してイベントを配信する前に、イベントを設定するために呼び出す必要があります。
 配信されると、もう何もしません。
 
-> **Note:** このメソッドは非推奨であるため、今後は使用しないでください。
+> **メモ:** このメソッドは非推奨であるため、今後は使用しないでください。
 >
 > 代わりに特定のイベントのコンストラクター、例えば {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} を使用してください。
 > [イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)のページでは、これらの使用方法についてのより詳細な情報を提供しています。

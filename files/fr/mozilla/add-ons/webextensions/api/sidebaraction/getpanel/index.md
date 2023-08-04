@@ -1,17 +1,8 @@
 ---
 title: sidebarAction.getPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getPanel
-  - sidebarAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
 ---
+
 {{AddonSidebar()}}
 
 Obtient une URL vers le document HTML qui définit le contenu de la barre latérale.
@@ -22,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingPanel = browser.sidebarAction.getPanel(
-  details               // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -33,13 +24,13 @@ var gettingPanel = browser.sidebarAction.getPanel(
   - : `object`. Un objet avec les propriétés suivantes :
 
     - `tabId`{{optional_inline}}
-      - : `integer`.  Obtenir le panneau pour la barre latérale spécifique à l'onglet donné.
+      - : `integer`. Obtenir le panneau pour la barre latérale spécifique à l'onglet donné.
     - `windowId` {{optional_inline}}
       - : `integer`. Obtenir le panneau pour la barre latérale spécifique à la fenêtre donnée.
 
 <!---->
 
-- Si `windowId` et `tabId`  sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.
+- Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.
 - Si `windowId` et `tabId` sont tous les deux omis, le panneau global est renvoyé.
 
 ### Valeur retournée
@@ -49,10 +40,6 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 ```
 moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/sidebar.html
 ```
-
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.sidebarAction.getPanel",2)}}
 
 ## Exemples
 
@@ -67,6 +54,10 @@ var gettingPanel = browser.sidebarAction.getPanel({});
 gettingPanel.then(onGot);
 ```
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 {{WebExtExamples}}
 
 > **Note :**
@@ -75,7 +66,8 @@ gettingPanel.then(onGot);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -102,4 +94,4 @@ gettingPanel.then(onGot);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

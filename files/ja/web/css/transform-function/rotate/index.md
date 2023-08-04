@@ -1,16 +1,8 @@
 ---
 title: rotate()
 slug: Web/CSS/transform-function/rotate
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/transform-function/rotate()
-original_slug: Web/CSS/transform-function/rotate()
-browser-compat: css.types.transform-function.rotate
 ---
+
 {{CSSRef}}
 
 **`rotate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を二次元平面上の特定の点を中心に、形を崩さずに回転させる変形を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
@@ -29,7 +21,7 @@ rotate(a)
 
 - _a_
   - : {{ cssxref("&lt;angle&gt;") }} で、回転する角度を表します。回転方向は書字方向に依存します。
-      左書きの文脈では、正の角度は時計回りの回転を、負の角度は反時計回りの回転を表します。右書きの文脈では 正の角度は反時計回りの回転を、負の角度は時計回りの回転を表します。
+    左書きの文脈では、正の角度は時計回りの回転を、負の角度は反時計回りの回転を表します。右書きの文脈では 正の角度は反時計回りの回転を、負の角度は時計回りの回転を表します。
 
 <table class="standard-table">
   <thead>
@@ -285,4 +277,4 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`rotate3d()`](/ja/docs/Web/CSS/transform-function/rotate3d())
+- [`rotate3d()`](</ja/docs/Web/CSS/transform-function/rotate3d()>)

@@ -1,13 +1,8 @@
 ---
 title: Bouton de la barre d'adresse
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
-tags:
-  - AddresseBarButton
-  - Page Action
-  - User Interface
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 ---
+
 {{AddonSidebar}}
 
 Généralement appelée [action de page](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction), cette option d'interface utilisateur est un bouton ajouté à la barre d'adresse du navigateur. Les utilisateurs cliquent sur le bouton pour interagir avec votre extension.
@@ -90,7 +85,7 @@ Vous pouvez modifier l'une des propriétés d'action de la page de manière prog
 
 ## Icônes
 
-Pour plus de détails sur la création d'icônes à utiliser avec l'action de votre page, voir   [Iconography](https://design.firefox.com/photon/visuals/iconography.html) dans la documentation du [Photon Design System](https://design.firefox.com/photon/index.html).
+Pour plus de détails sur la création d'icônes à utiliser avec l'action de votre page, voir [Iconography](https://design.firefox.com/photon/visuals/iconography.html) dans la documentation du [Photon Design System](https://design.firefox.com/photon/index.html).
 
 ## Exemples
 

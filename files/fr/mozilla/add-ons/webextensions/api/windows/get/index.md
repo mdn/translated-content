@@ -1,18 +1,8 @@
 ---
 title: windows.get()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Référence(2)
-  - WebExtensions
-  - Windows
-  - get
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/get
 ---
+
 {{AddonSidebar()}}
 
 Obtient les détails sur une fenêtre, compte tenu de son identifiant. Les détails sont transmis à un rappel.
@@ -23,9 +13,9 @@ Il s'agit d'une fonction asynchrone qui renvoit une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var getting = browser.windows.get(
-  windowId,              // integer
-  getInfo                // optional object
-)
+  windowId, // integer
+  getInfo, // optional object
+);
 ```
 
 ### Paramètres
@@ -37,27 +27,23 @@ var getting = browser.windows.get(
   - : `object`. Contient des options pour filtrer le type de fenêtre.
 
     - `populate`{{optional_inline}}
-      - : `boolean`. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre. Les objets Tab ne contiennent que les propriétés `url`, `title` et `favIconUrl`  i le fichier manifeste de l'extension comprend la permission `"tabs"`.
+      - : `boolean`. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre. Les objets Tab ne contiennent que les propriétés `url`, `title` et `favIconUrl` i le fichier manifeste de l'extension comprend la permission `"tabs"`.
     - `windowTypes`{{optional_inline}}
       - : `Ensemble d'objets` {{WebExtAPIRef('windows.WindowType')}}. Si défini, le retour de {{WebExtAPIRef('windows.Window')}} sera filtré en fonction de son type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec des types de fenêtres `'panel'` qui sont limités aux propres fenêtres de l'extension.
 
 > **Note :**
 >
-> Si fourni, le composant `windowTypes` de `getInfo` est ignoré. L'utilisation de  `windowTypes` a été dépréciée à partir de Firefox 62.
+> Si fourni, le composant `windowTypes` de `getInfo` est ignoré. L'utilisation de `windowTypes` a été dépréciée à partir de Firefox 62.
 
 ### Valeur de retour
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la fenêtre. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.windows.get",2)}}
-
 ## Exemples
 
 Cet exemple obtient la fenêtre actuelle et enregistre les URL des onglets qu'il contient. Notez que vous aurez besoin des [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "onglets" pour accéder aux URL des onglets.
 
-> **Note :** Cet exemple est un peu irréaliste: dans cette situation, vous utiliserez probablement  {{WebExtAPIRef("windows.getCurrent()")}}.
+> **Note :** Cet exemple est un peu irréaliste: dans cette situation, vous utiliserez probablement {{WebExtAPIRef("windows.getCurrent()")}}.
 
 ```js
 function logTabs(windowInfo) {
@@ -71,10 +57,14 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  var getting = browser.windows.get(tab.windowId, {populate: true});
+  var getting = browser.windows.get(tab.windowId, { populate: true });
   getting.then(logTabs, onError);
 });
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 
@@ -84,7 +74,8 @@ browser.browserAction.onClicked.addListener((tab) => {
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -111,4 +102,4 @@ browser.browserAction.onClicked.addListener((tab) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

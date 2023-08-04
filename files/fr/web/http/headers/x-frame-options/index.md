@@ -1,9 +1,8 @@
 ---
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
-translation_of: Web/HTTP/Headers/X-Frame-Options
-browser-compat: http.headers.X-Frame-Options
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête de réponse [HTTP](/fr/docs/Web/HTTP) **`X-Frame-Options`** peut être utilisé afin d'indiquer si un navigateur devrait être autorisé à afficher une page au sein d'un élément [`<frame>`](/fr/docs/Web/HTML/Element/frame), [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), [`<embed>`](/fr/docs/Web/HTML/Element/embed) ou [`<object>`](/fr/docs/Web/HTML/Element/object). Les sites peuvent utiliser cet en-tête afin d'éviter les attaques de _[clickjacking](https://fr.wikipedia.org/wiki/Clickjacking)_ (ou «&nbsp;détournement de clic&nbsp;») pour s'assurer que leur contenu ne soit pas embarqué dans d'autres sites.
@@ -114,7 +113,7 @@ http-response set-header X-Frame-Options SAMEORIGIN
 Si on utilise Express, on pourra utiliser le module [helmet](https://helmetjs.github.io/) qui tire parti de [frameguard](https://helmetjs.github.io/docs/frameguard/) afin de régler l'en-tête `X-Frame-Options`. Ajoutez ceci à la configuration serveur&nbsp;:
 
 ```js
-const helmet = require('helmet');
+const helmet = require("helmet");
 const app = express();
 app.use(helmet.frameguard({ action: "SAMEORIGIN" }));
 ```
@@ -122,8 +121,8 @@ app.use(helmet.frameguard({ action: "SAMEORIGIN" }));
 On pourra également utiliser [frameguard](https://helmetjs.github.io/docs/frameguard/) directement&nbsp;:
 
 ```js
-const frameguard = require('frameguard')
-app.use(frameguard({ action: 'SAMEORIGIN' }))
+const frameguard = require("frameguard");
+app.use(frameguard({ action: "SAMEORIGIN" }));
 ```
 
 ## Spécifications

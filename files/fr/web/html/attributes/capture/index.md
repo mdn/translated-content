@@ -1,15 +1,8 @@
 ---
-title: 'Attribut HTML : capture'
+title: "Attribut HTML : capture"
 slug: Web/HTML/Attributes/capture
-tags:
-  - API
-  - Attribute
-  - Attributes
-  - Capture
-  - Constraint validation
-  - HTML
-translation_of: Web/HTML/Attributes/capture
 ---
+
 {{HTMLSidebar}}
 
 L'attribut **`capture`** spécifie que, facultativement, un nouveau fichier doit être capturé, et le périphérique qui devrait être utilisé pour capturer ce nouveau média d'un type défini par l'attribut [`accept`](accept). Les valeurs comprennent `user` et `environment`. L'attribut capture est pris en charge sur les champs de formulaire de type [`file`](/fr/docs/Web/HTML/Element/Input/file).
@@ -30,15 +23,15 @@ Lorsqu'ils sont définis sur un type d'entrée de fichier, les systèmes d'explo
 ```html
 <p>
   <label for="soundFile">Quel est le son de votre voix ?</label>
-  <input type="file" id="soundFile" capture="user" accept="audio/*">
+  <input type="file" id="soundFile" capture="user" accept="audio/*" />
 </p>
 <p>
   <label for="videoFile">Téléchargez une vidéo :</label>
-  <input type="file" id="videoFile" capture="environment" accept="video/*">
+  <input type="file" id="videoFile" capture="environment" accept="video/*" />
 </p>
 <p>
   <label for="imageFile">Téléchargez une photo de vous :</label>
-  <input type="file" id="imageFile" capture="user" accept="image/*">
+  <input type="file" id="imageFile" capture="user" accept="image/*" />
 </p>
 ```
 
@@ -48,13 +41,11 @@ Notez que ceux-ci fonctionnent mieux sur les appareils mobiles ; si votre appare
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                                   |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{SpecName('HTML Media Capture', '#the-capture-attribute','capture attribute')}} | {{Spec2('HTML Media Capture')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attribute.capture")}}
+{{Compat}}
 
 ## Voir aussi
 

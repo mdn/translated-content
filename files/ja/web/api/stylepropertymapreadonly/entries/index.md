@@ -1,18 +1,8 @@
 ---
 title: StylePropertyMapReadOnly.entries()
 slug: Web/API/StylePropertyMapReadOnly/entries
-tags:
-  - API
-  - CSS 型付きオブジェクトモデル API
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - StylePropertyMapReadOnly
-  - entries()
-browser-compat: api.StylePropertyMapReadOnly.entries
-translation_of: Web/API/StylePropertyMapReadOnly/entries
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 **`StylePropertyMapReadOnly.entries()`** メソッドは、このオブジェクトが持つ列挙可能なプロパティの `[key, value]` の組の配列を、 {{jsxref("Statements/for...in", "for...in")}} ループで提供されるのと同じ順序で返します（違いは for-in ループではプロトタイプチェーン内のプロパティも列挙する点です）。

@@ -1,17 +1,8 @@
 ---
 title: scroll-padding-block-end
 slug: Web/CSS/scroll-padding-block-end
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-padding-block
-  - scroll-padding-block-end
-browser-compat: css.properties.scroll-padding-block-end
-translation_of: Web/CSS/scroll-padding-block-end
 ---
+
 {{CSSRef}}
 
 `scroll-padding-block-end` プロパティは、スクロールポートの*最適表示領域*のブロック方向における末尾側のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。

@@ -1,11 +1,8 @@
 ---
 title: difference
 slug: Web/EXSLT/set/difference
-tags:
-  - EXSLT
-  - XSLT
-translation_of: Web/EXSLT/set/difference
 ---
+
 {{ XsltRef() }}
 `set:difference()` retourne la différence entre deux ensembles de nœuds. En d'autres termes, elle retourne un ensemble de nœuds qui sont dans un des ensembles mais par dans l'autre.
 

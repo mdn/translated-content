@@ -1,11 +1,8 @@
 ---
 title: WebAssembly
 slug: WebAssembly
-tags:
-  - WebAssembly
-  - wasm
-translation_of: WebAssembly
 ---
+
 {{WebAssemblySidebar}}
 
 WebAssembly 是一种新的编码方式，可以在现代的网络浏览器中运行 － 它是一种低级的类汇编语言，具有紧凑的二进制格式，可以接近原生的性能运行，并为诸如 C / C ++等语言提供一个编译目标，以便它们可以在 Web 上运行。它也被设计为可以与 JavaScript 共存，允许两者一起工作。
@@ -25,7 +22,7 @@ WebAssembly 被设计为可以和 JavaScript 一起协同工作——通过使�
 - [从 C/C++编译为 WebAssembly](/zh-CN/docs/WebAssembly/C_to_wasm)
   - : 当你使用 C/C++编写了代码后，你可以使用诸如 Emscripten 的工具把它编译为.wasm 文件。让我们看看这是如何工作的。
 - [加载运行 WebAssembly 代码](/zh-CN/docs/WebAssembly/Loading_and_running)
-  - : 本文介绍如何通过把[Fetch](/zh-CN/docs/Web/API/Fetch_API)或者[XHR](/zh-CN/docs/Web/API/XMLHttpRequest) API 与[WebAssembly JavaScript ](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly)API 结合在一起来获取、编译和实例化.wasm 文件。
+  - : 本文介绍如何通过把[Fetch](/zh-CN/docs/Web/API/Fetch_API)或者[XHR](/zh-CN/docs/Web/API/XMLHttpRequest) API 与[WebAssembly JavaScript](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) API 结合在一起来获取、编译和实例化.wasm 文件。
 - [缓存编译后的 WebAssembly 模块](/zh-CN/docs/WebAssembly/Caching_modules)
   - : 就提升应用启动速度而言，在客户端缓存大的 WebAssembly 模块是有用的。本文解释了如何使用[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)来实现这一点。
 - [使用 WebAssembly 的 JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)

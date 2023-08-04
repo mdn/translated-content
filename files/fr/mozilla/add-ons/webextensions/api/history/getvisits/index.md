@@ -1,18 +1,8 @@
 ---
 title: history.getVisits()
 slug: Mozilla/Add-ons/WebExtensions/API/history/getVisits
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getVisits
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/getVisits
 ---
+
 {{AddonSidebar()}}
 
 Récupère des informations sur toutes les visites de l'URL donnée.
@@ -23,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var getting = browser.history.getVisits(
-  details                // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -40,9 +30,9 @@ var getting = browser.history.getVisits(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie avec un tableau d'objets `{{WebExtAPIRef('history.VisitItem')}}` représentant chacun une visite à l'URL donnée. Les visites sont triées dans l'ordre chronologique inverse.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.getVisits")}}
+{{Compat}}
 
 ## Exemples
 
@@ -60,7 +50,7 @@ function listVisits(historyItems) {
   if (historyItems.length) {
     console.log("URL " + historyItems[0].url);
     var gettingVisits = browser.history.getVisits({
-      url: historyItems[0].url
+      url: historyItems[0].url,
     });
     gettingVisits.then(gotVisits);
   }
@@ -69,7 +59,7 @@ function listVisits(historyItems) {
 var searching = browser.history.search({
   text: "",
   startTime: 0,
-  maxResults: 1
+  maxResults: 1,
 });
 
 searching.then(listVisits);
@@ -83,7 +73,8 @@ searching.then(listVisits);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -110,4 +101,4 @@ searching.then(listVisits);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

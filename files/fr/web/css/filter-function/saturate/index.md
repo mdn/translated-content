@@ -1,10 +1,8 @@
 ---
 title: saturate()
 slug: Web/CSS/filter-function/saturate
-translation_of: Web/CSS/filter-function/saturate()
-original_slug: Web/CSS/filter-function/saturate()
-browser-compat: css.types.filter-function.saturate
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`saturate()`** permet d'accentuer ou de réduire la saturation d'une image. La valeur obtenue par cette fonction est une valeur de type [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
@@ -44,12 +42,12 @@ saturate(200%);  /* Saturation doublée */
 ## Voir aussi
 
 - [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur())
-  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness())
-  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast())
-  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow())
-  - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale())
-  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate())
-  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert())
-  - [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity())
-  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia())
+  - [`blur()`](</fr/docs/Web/CSS/filter-function/blur()>)
+  - [`brightness()`](</fr/docs/Web/CSS/filter-function/brightness()>)
+  - [`contrast()`](</fr/docs/Web/CSS/filter-function/contrast()>)
+  - [`drop-shadow()`](</fr/docs/Web/CSS/filter-function/drop-shadow()>)
+  - [`grayscale()`](</fr/docs/Web/CSS/filter-function/grayscale()>)
+  - [`hue-rotate()`](</fr/docs/Web/CSS/filter-function/hue-rotate()>)
+  - [`invert()`](</fr/docs/Web/CSS/filter-function/invert()>)
+  - [`opacity()`](</fr/docs/Web/CSS/filter-function/opacity()>)
+  - [`sepia()`](</fr/docs/Web/CSS/filter-function/sepia()>)

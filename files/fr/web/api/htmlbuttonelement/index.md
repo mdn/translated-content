@@ -1,10 +1,8 @@
 ---
 title: HTMLButtonElement
 slug: Web/API/HTMLButtonElement
-translation_of: Web/API/HTMLButtonElement
-page-type: web-api-interface
-browser-compat: api.HTMLButtonElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`HTMLButtonElement`** fournit des propriétés et méthodes (en plus de celles fournies par l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) dont elle hérite) qui permettent de manipuler les éléments [`<button>`](/fr/docs/Web/HTML/Element/Button).
@@ -67,11 +65,11 @@ _Hérite des propriétés de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLEl
 
 _Hérite des méthodes de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLElement)_
 
-| Nom                                     | Valeur de retour| Description                                                          |
-| --------------------------------------- | --------------- | -------------------------------------------------------------------- |
-| `checkValidity()`                       | Booléen         | Non prise en charge pour les éléments bouton ou de réinitialisation. |
-| `reportValidity()`                      | Booléen         | Non prise en charge pour les éléments bouton ou de réinitialisation. |
-| `setCustomValidity(in DOMString error)` | `void`          | Non prise en charge pour les éléments bouton ou de réinitialisation. |
+| Nom                                     | Valeur de retour | Description                                                          |
+| --------------------------------------- | ---------------- | -------------------------------------------------------------------- |
+| `checkValidity()`                       | Booléen          | Non prise en charge pour les éléments bouton ou de réinitialisation. |
+| `reportValidity()`                      | Booléen          | Non prise en charge pour les éléments bouton ou de réinitialisation. |
+| `setCustomValidity(in DOMString error)` | `void`           | Non prise en charge pour les éléments bouton ou de réinitialisation. |
 
 Pour les navigateurs utilisant Gecko, la pseudo-classe non standard [`:-moz-submit-invalid`](/fr/docs/Web/CSS/:-moz-submit-invalid) permet de mettre en forme les boutons d'envoi de formulaire selon la validation du formulaire.
 

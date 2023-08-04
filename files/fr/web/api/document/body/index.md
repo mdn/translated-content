@@ -1,11 +1,8 @@
 ---
 title: document.body
 slug: Web/API/Document/body
-tags:
-  - DOM
-  - Référence_du_DOM_Gecko
-translation_of: Web/API/Document/body
 ---
+
 {{ApiRef}}
 
 Retourne l'élément `<body>` ou `<frameset>` du document courant.
@@ -25,8 +22,8 @@ alert(document.body.id); // "ancienElementBody"
 
 var unNouvelElementBody = document.createElement("body");
 
-unNouvelElementBody .id = "nouvelElementBody";
-document.body = unNouvelElementBody ;
+unNouvelElementBody.id = "nouvelElementBody";
+document.body = unNouvelElementBody;
 alert(document.body.id); // "nouvelElementBody"
 ```
 

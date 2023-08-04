@@ -1,15 +1,8 @@
 ---
 title: Range.startOffset
 slug: Web/API/Range/startOffset
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Range
-browser-compat: api.Range.startOffset
-translation_of: Web/API/Range/startOffset
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.startOffset`** は読み取り専用プロパティで、 `startContainer` の `Range` の開始位置を表す数値を返します。

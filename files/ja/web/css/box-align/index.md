@@ -1,17 +1,13 @@
 ---
 title: box-align
 slug: Web/CSS/box-align
-tags:
-  - CSS
-  - CSS プロパティ
-  - NeedsUpdate
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.box-align
-translation_of: Web/CSS/box-align
+l10n:
+  sourceCommit: 88866ee128116bd07235f5d3531152d5686a1e6d
 ---
-{{CSSRef}}{{Non-standard_header}}{{warning("このプロパティは、当初の CSS Flexible Box Layout Module の草案段階のものでしたが、より新しい標準で置き換えられました。")}}
+
+{{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
+
+> **警告:** このプロパティは、当初の CSS Flexible Box Layout Module の草案段階のものでしたが、より新しい標準で置き換えられました。
 
 **`box-align`** は [CSS](/ja/docs/Web/CSS) のプロパティで、交差軸方向に子要素をどう整列させるかを定義します。ボックス内に余分な空間がある場合にかぎり、その効果を確認することができます。
 
@@ -67,7 +63,10 @@ start の反対側の端は _end_ となります。
 
 ## 形式文法
 
-{{csssyntax}}
+```plain
+box-align =
+  start | center | end | baseline | stretch
+```
 
 ## 例
 
@@ -75,52 +74,55 @@ start の反対側の端は _end_ となります。
 
 ```html
 <!DOCTYPE html>
-<html>
-<head>
-<title>CSS box-align example</title>
-<style>
-div.example {
-  display: box;                   /* 仕様書通り */
-  display: -moz-box;              /* Mozilla */
-  display: -webkit-box;           /* WebKit */
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS box-align example</title>
+    <style>
+      div.example {
+        display: box; /* 仕様書通り */
+        display: -moz-box; /* Mozilla */
+        display: -webkit-box; /* WebKit */
 
-  /* ボックスの高さを子要素より高くし、
-     box-pack のためのスペースを確保する */
-  height: 400px;
+        /* ボックスの高さを子要素より高くし、
+      box-pack のためのスペースを確保する */
+        height: 400px;
 
-  /* ボックスの幅を子要素より広くし、
-     box-align のためのスペースを確保する */
-  width: 300px;
+        /* ボックスの幅を子要素より広くし、
+      box-align のためのスペースを確保する */
+        width: 300px;
 
-  /* 子要素の向きは垂直方向にする */
-  box-orient: vertical;           /* 仕様書通り */
-  -moz-box-orient: vertical;      /* Mozilla */
-  -webkit-box-orient: vertical;   /* WebKit */
+        /* 子要素の向きは垂直方向にする */
+        box-orient: vertical; /* 仕様書通り */
+        -moz-box-orient: vertical; /* Mozilla */
+        -webkit-box-orient: vertical; /* WebKit */
 
-  /* 子要素をボックス内の水平方向に対して中央に整列させる */
-  box-align: center;              /* 仕様書通り */
-  -moz-box-align: center;         /* Mozilla */
-  -webkit-box-align: center;      /* WebKit */
+        /* 子要素をボックス内の水平方向に対して中央に整列させる */
+        box-align: center; /* 仕様書通り */
+        -moz-box-align: center; /* Mozilla */
+        -webkit-box-align: center; /* WebKit */
 
-  /* 子要素をボックス内の末尾に寄せる */
-  box-pack: end;                  /* 仕様書通り */
-  -moz-box-pack: end;             /* Mozilla */
-  -webkit-box-pack: end;          /* WebKit */
-}
+        /* 子要素をボックス内の末尾に寄せる */
+        box-pack: end; /* 仕様書通り */
+        -moz-box-pack: end; /* Mozilla */
+        -webkit-box-pack: end; /* WebKit */
+      }
 
-div.example > p {
-  /* 子要素を親要素の幅より狭くし、
-  box-align のためのスペースを確保する */
-  width: 200px;
-}
-</style>
-</head>
-<body>
-  <div class="example">
-    <p>I will be second from the bottom of div.example, centered horizontally.</p>
-    <p>I will be on the bottom of div.example, centered horizontally.</p>
-  </div>
-</body>
+      div.example > p {
+        /* 子要素を親要素の幅より狭くし、
+      box-align のためのスペースを確保する */
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="example">
+      <p>
+        I will be second from the bottom of div.example, centered horizontally.
+      </p>
+      <p>I will be on the bottom of div.example, centered horizontally.</p>
+    </div>
+  </body>
 </html>
 ```
 

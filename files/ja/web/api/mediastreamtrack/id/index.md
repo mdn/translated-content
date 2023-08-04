@@ -1,17 +1,8 @@
 ---
 title: MediaStreamTrack.id
 slug: Web/API/MediaStreamTrack/id
-page-type: web-api-instance-property
-tags:
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Property
-  - Read-only
-  - Reference
-  - WebRTC
-browser-compat: api.MediaStreamTrack.id
-translation_of: Web/API/MediaStreamTrack/id
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStreamTrack.id`** は読み取り専用のプロパティであり、このトラックのための固有識別子 (GUID)を含む文字列を返します。この値は{{glossary("user agent", "ユーザーエージェント")}}によって生成されます。

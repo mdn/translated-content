@@ -1,14 +1,8 @@
 ---
-title: 'SyntaxError: missing ; before statement'
+title: "SyntaxError: missing ; before statement"
 slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
-tags:
-  - Erreurs
-  - JavaScript
-  - Reference
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
-original_slug: Web/JavaScript/Reference/Erreurs/Missing_semicolon_before_statement
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
@@ -43,7 +37,7 @@ Pour éviter cela, on pourra utiliser des doubles quotes ou échapper l'apostrop
 
 ```js example-good
 var toto = "Ouvrir l'œil";
-var toto = 'Ouvrir l\'œil';
+var toto = "Ouvrir l'œil";
 ```
 
 ### Déclarer des propriétés avec `var`
@@ -81,9 +75,9 @@ def print(info){
 À la place de `def`, on utilisera le mot-clé `function` :
 
 ```js example-good
-function print(info){
+function print(info) {
   console.log(info);
-};
+}
 ```
 
 ## Voir aussi

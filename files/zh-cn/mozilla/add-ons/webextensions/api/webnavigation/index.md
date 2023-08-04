@@ -1,19 +1,8 @@
 ---
 title: webNavigation
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - NeedsTranslation
-  - Non-standard
-  - Reference
-  - TopicStub
-  - WebExtensions
-  - webNavigation
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation
 ---
+
 {{AddonSidebar}}
 
 Add event listeners for the various stages of a navigation. A navigation consists of a frame in the browser transitioning from one URL to another, usually (but not always) in response to a user action like clicking a link or entering a URL in the location bar.
@@ -38,13 +27,13 @@ Each event corresponds to a particular stage in the navigation. The sequence of 
   - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} is fired if the [fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) for a page is changed.
   - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} can be fired at any point.
 
-Each navigation is a URL transition in a particular browser frame. The browser frame is identified by a tab ID and a frame ID. The frame may be the top-level browsing context in the tab, or may be a nested browsing context implemented as an [iframe](/en-US/docs/Web/HTML/Element/iframe).
+Each navigation is a URL transition in a particular browser frame. The browser frame is identified by a tab ID and a frame ID. The frame may be the top-level browsing context in the tab, or may be a nested browsing context implemented as an [iframe](/zh-CN/docs/Web/HTML/Element/iframe).
 
 Each event's `addListener()` call accepts an optional filter parameter. The filter will specify one or more URL patterns, and the event will then only be fired for navigations in which the target URL matches one of the patterns.
 
 The `onCommitted` event listener is passed two additional properties: a {{WebExtAPIRef("webNavigation.TransitionType","TransitionType")}} indicating the cause of the navigation (for example, because the user clicked a link, or because the user selected a bookmark), and a {{WebExtAPIRef("webNavigation.TransitionQualifier","TransitionQualifier")}} providing further information about the navigation.
 
-To use this API you need to have the "webNavigation" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+To use this API you need to have the "webNavigation" [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
 ## Types
 
@@ -56,7 +45,7 @@ To use this API you need to have the "webNavigation" [permission](/en-US/docs/Mo
 ## Functions
 
 - {{WebExtAPIRef("webNavigation.getFrame()")}}
-  - : Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested [iframe](/en-US/docs/Web/HTML/Element/iframe), and is uniquely identified by a tab ID and a frame ID.
+  - : Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested [iframe](/zh-CN/docs/Web/HTML/Element/iframe), and is uniquely identified by a tab ID and a frame ID.
 - {{WebExtAPIRef("webNavigation.getAllFrames()")}}
   - : Given a tab ID, retrieves information about all the frames it contains.
 
@@ -67,9 +56,9 @@ To use this API you need to have the "webNavigation" [permission](/en-US/docs/Mo
 - {{WebExtAPIRef("webNavigation.onCommitted")}}
   - : Fired when a navigation is committed. At least part of the new document has been received from the server and the browser has decided to switch to the new document.
 - {{WebExtAPIRef("webNavigation.onDOMContentLoaded")}}
-  - : Fired when the [DOMContentLoaded](/en-US/docs/Web/Events/DOMContentLoaded) event is fired in the page.
+  - : Fired when the [DOMContentLoaded](/zh-CN/docs/Web/Events/DOMContentLoaded) event is fired in the page.
 - {{WebExtAPIRef("webNavigation.onCompleted")}}
-  - : Fired when a document, including the resources it refers to, is completely loaded and initialized. This is equivalent to the DOM [`load`](/en-US/docs/Web/Events/load) event.
+  - : Fired when a document, including the resources it refers to, is completely loaded and initialized. This is equivalent to the DOM [`load`](/zh-CN/docs/Web/Events/load) event.
 - {{WebExtAPIRef("webNavigation.onErrorOccurred")}}
   - : Fired when an error occurs and the navigation is aborted. This can happen if either a network error occurred, or the user aborted the navigation.
 - {{WebExtAPIRef("webNavigation.onCreatedNavigationTarget")}}
@@ -83,7 +72,7 @@ To use this API you need to have the "webNavigation" [permission](/en-US/docs/Mo
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.webNavigation")}}
+{{Compat}}
 
 ### Edge incompatibilities
 
@@ -95,7 +84,8 @@ Promises are not supported in Edge. Use callbacks instead.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -122,4 +112,4 @@ Promises are not supported in Edge. Use callbacks instead.
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

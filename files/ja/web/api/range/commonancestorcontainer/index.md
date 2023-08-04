@@ -1,15 +1,8 @@
 ---
 title: Range.commonAncestorContainer
 slug: Web/API/Range/commonAncestorContainer
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Range
-browser-compat: api.Range.commonAncestorContainer
-translation_of: Web/API/Range/commonAncestorContainer
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.commonAncestorContainer`** は読み取り専用のプロパティで、この {{domxref("Range")}} の両方の[境界点](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Position-h3)を含む、最も深い — または文書ツリー内で最も遠い — ノード ({{domxref("Node")}}) を返します。つまり、{{domxref("Range.startContainer")}} と {{domxref("Range.endContainer")}} 両方が同じノードを参照する場合は、このノードは**共通の祖先コンテナー**です。

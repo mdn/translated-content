@@ -1,10 +1,8 @@
 ---
 title: XSLT
 slug: Web/XSLT
-tags:
-  - XSLT
-translation_of: Web/XSLT
 ---
+
 **可扩展样式表语言转换 (XSLT)**是一种基于[XML](/zh-CN/docs/Web/XML/XML_introduction)的语言，和专门的处理软件一起使用，用于 XML 文档转换。虽然这个处理过程被称作“转换”，但并没有改变原始文档，而是在原文档内容的基础上创建了一个新的 XML 文档。然后，这个新文档会被处理器序列化（输出）为标准的 XML 语法或其他格式，如[HTML](/zh-CN/docs/Web/HTML)或纯文本。XSLT 最常用于不同 XML 模式间的数据转换，或用于将 XML 数据转换为网页或 PDF 文档。
 
 #### Documentation

@@ -1,17 +1,8 @@
 ---
 title: Screen.availHeight
 slug: Web/API/Screen/availHeight
-page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Reference
-  - Screen size
-  - availHeight
-browser-compat: api.Screen.availHeight
-translation_of: Web/API/Screen/availHeight
 ---
+
 {{APIRef("CSSOM")}}
 
 {{DOMxRef("Screen")}} インターフェイスの **`availHeight`** プロパティは読み取り専用で、画面のウェブコンテンツに利用することができる範囲の高さを、 CSS ピクセル単位で返します。 {{DOMxRef("Screen")}} は {{DOMxRef("Window")}} インターフェイスの {{DOMxRef("Window.screen", "window.screen")}} プロパティから得ることができますので、 `availHeight` は `window.screen.availHeight` を使用してアクセスすることができます。

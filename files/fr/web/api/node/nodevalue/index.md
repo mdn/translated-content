@@ -1,13 +1,8 @@
 ---
 title: element.nodeValue
 slug: Web/API/Node/nodeValue
-tags:
-  - API
-  - DOM
-  - Noeuds
-  - Propriétés
-translation_of: Web/API/Node/nodeValue
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **`Node.nodeValue`** renvoie ou définit la valeur du nœud courant.
@@ -87,4 +82,4 @@ Lorsque `nodeValue` est défini comme étant `null`, l'assignation n'a aucun eff
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.nodeValue")}}
+{{Compat}}

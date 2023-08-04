@@ -1,13 +1,13 @@
 ---
 title: alarms
 slug: Mozilla/Add-ons/WebExtensions/API/alarms
-translation_of: Mozilla/Add-ons/WebExtensions/API/alarms
 ---
+
 {{AddonSidebar}}
 
 在未来一个特定的时间运行的计划任务代码。这很像[`setTimeout()`](/zh-CN/docs/Web/API/WindowTimers/setTimeout)和[`setInterval()`](/zh-CN/docs/Web/API/WindowTimers/setInterval)，不过这些函数仅可以按需使用而不能在后台页面工作。
 
-想要使用这个 API，您需要获取"alarms"的[permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+想要使用这个 API，您需要获取"alarms"的[permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
 ## 类型
 
@@ -34,11 +34,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/alarms
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.alarms")}}
+{{Compat}}
 
-> **备注：** The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/en-US/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/en-US/docs/Template:WebExtChromeCompat) macro.
+> **备注：** The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat) macro.
 >
-> If you need to update this content, edit [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/en-US/Add-ons/WebExtensions/Chrome_incompatibilities), then shift-refresh this page to see your changes.
+> If you need to update this content, edit [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities), then shift-refresh this page to see your changes.
 
 {{WebExtExamples("h2")}}
 

@@ -1,15 +1,8 @@
 ---
 title: WakeLock
 slug: Web/API/WakeLock
-tags:
-  - インターフェイス
-  - リファレンス
-  - 画面起動ロック API
-  - 起動ロック
-  - 画面
-browser-compat: api.WakeLock
-translation_of: Web/API/WakeLock
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
 **`WakeLock`** は[画面起動ロック API](/ja/docs/Web/API/Screen_Wake_Lock_API) のインターフェイスで、アプリケーションが動作し続ける必要があるときに、端末の画面が暗くなったりロックされたりすることを防ぐためのものです。

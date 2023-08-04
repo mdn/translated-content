@@ -1,15 +1,8 @@
 ---
 title: BlobEvent.data
 slug: Web/API/BlobEvent/data
-tags:
-  - API
-  - Blob
-  - DOM
-  - Evènement
-  - Propriétés
-  - données
-translation_of: Web/API/BlobEvent/data
 ---
+
 {{ apiref("Media Capture and Streams") }}
 
 {{ SeeCompatTable() }}
@@ -19,18 +12,16 @@ La propriété en lecture seule **`BlobEvent.data`** représente un {{domxref("B
 ## Syntaxe
 
 ```js
-associatedBlob = BlobEvent.data
+associatedBlob = BlobEvent.data;
 ```
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                                       | Commentaire          |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('MediaStream Recording', '#widl-BlobEvent-data', 'BlobEvent.data')}} | {{Spec2('MediaStream Recording')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BlobEvent.data")}}
+{{Compat}}
 
 ## Voir aussi
 

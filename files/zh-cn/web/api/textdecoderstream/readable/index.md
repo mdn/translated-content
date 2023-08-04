@@ -1,15 +1,8 @@
 ---
 title: TextDecoderStream.readable
 slug: Web/API/TextDecoderStream/readable
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - readable
-  - TextDecoderStream
-translation_of: Web/API/TextDecoderStream/readable
 ---
+
 {{APIRef("Encoding API")}}
 
 {{domxref("TextDecoderStream")}} 接口的只读属性 **`readable`** 返回一个 {{domxref("ReadableStream")}}。

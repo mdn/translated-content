@@ -1,17 +1,8 @@
 ---
 title: types
 slug: Mozilla/Add-ons/WebExtensions/API/types
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Types
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/types
 ---
+
 {{AddonSidebar}}
 
 Defines the `BrowserSetting` type, which is used to represent a browser setting.
@@ -29,7 +20,8 @@ Defines the `BrowserSetting` type, which is used to represent a browser setting.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -56,4 +48,4 @@ Defines the `BrowserSetting` type, which is used to represent a browser setting.
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->
