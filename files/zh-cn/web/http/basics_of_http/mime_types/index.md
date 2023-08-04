@@ -7,9 +7,9 @@ slug: Web/HTTP/Basics_of_HTTP/MIME_types
 
 **媒体类型**（也通常称为**多用途互联网邮件扩展**或 **MIME** 类型）是一种标准，用来表示文档、文件或字节流的性质和格式。它在 IETF 的 {{RFC(6838)}} 中进行了定义和标准化。
 
-互联网数字分配机构（[IANA](https://www.iana.org/)）是负责跟踪所有官方 MIME 类型的官方机构，你可以在[媒体类型](https://www.iana.org/assignments/media-types/media-types.xhtml)页面中找到最新的完整列表。
+[互联网号码分配局（IANA）](https://www.iana.org/)负责跟踪所有官方 MIME 类型，你可以在[媒体类型](https://www.iana.org/assignments/media-types/media-types.xhtml)页面中找到最新的完整列表。
 
-> **警告：** 浏览器通常使用 MIME 类型*而不是文件扩展名*来决定如何处理 URL，因此 Web 服务器在 {{HTTPHeader("Content-Type")}} 响应标头中添加正确的 MIME 类型非常重要。如果配置不正确，浏览器可能会曲解文件内容，网站将无法正常工作，并且下载的文件也会被错误处理。
+> **警告：** 浏览器通常使用 MIME 类型*而不是文件扩展名*来决定如何处理 URL，因此 Web 服务器在 {{HTTPHeader("Content-Type")}} 响应标头中添加正确的 MIME 类型非常重要。如果配置不正确，浏览器可能会曲解文件内容，网站将无法正常工作，并且下载的文件也可能被错误处理。
 
 ## MIME 类型的结构
 
@@ -23,11 +23,7 @@ type/subtype
 
 **_子类型_**标识了 MIME 类型所代表的指定类型的确切数据类型。
 
-例如，对于 `text` MIME 类型，子类型可能是 `plain`（纯文本）、`html`（{{Glossary("HTML")}} 源代码）或 `calendar`（iCalendar/`.ics` 文件）。
-
-每种类型都有自己的一组可能的子类型。MIME 类型总是既有类型又有子类型，绝不会只有一种或另一种。
-
-可以通过添加可选的**参数**来提供额外信息：
+例如，对于 `text` MIME 类型，子类型可能是 `plain`（纯文本）、`html`（{{Glossary("HTML")}} 源代码）或 `calendar`（iCalendar/`.ics` 文件）。每种类型都有自己的一组可能的子类型。MIME 类型总是既有类型又有子类型，绝不会只有一种或另一种。可以通过添加可选的**参数**来提供额外信息：
 
 ```plain
 type/subtype;parameter=value
@@ -52,21 +48,21 @@ MIME 类型对大小写不敏感，但是传统写法都是小写。参数值可
 IANA 目前注册的离散类型如下：
 
 - `application`
-  - : 不明确属于其他类型的任何二进制数据；要么是将以某种方式执行或解释的数据，要么是需要特定应用程序或应用程序类别才能使用的二进制数据。通用二进制数据（或真实类型未知的二进制数据）是`application/octet-stream`。其他常用的示例包含 `application/pdf`、`application/pkcs8` 和 `application/zip`。[查看 IANA 上 application 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#application)
+  - : 不明确属于其他类型的任何二进制数据；要么是将以某种方式执行或解释的数据，要么是需要特定应用程序或应用程序类别才能使用的二进制数据。通用二进制数据（或真实类型未知的二进制数据）是 `application/octet-stream`。其他常用的示例包含 `application/pdf`、`application/pkcs8` 和 `application/zip`。（[查看 IANA 上 application 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#application)）
 - `audio`
-  - : 音频或音乐数据。常见的示例如 `audio/mpeg`、`audio/vorbis`。[查看 IANA 上 audio 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#audio)
+  - : 音频或音乐数据。常见的示例如 `audio/mpeg`、`audio/vorbis`。（[查看 IANA 上 audio 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#audio)）
 - `example`
   - : 保留在演示如何使用 MIME 类型的示例中作为占位符使用。不应用于除示例代码和文档以外的其他部分。`example` 也可以作为子类型。例如，在一个处理音频有关的示例中，MIME 类型 `audio/example` 可用来表示该类型是一个占位符，在现实世界中使用代码时应替换为适当的类型。
 - `font`
   - : 字体/字型数据。常见的示例如 `font/woff`、`font/ttf` 和 `font/otf`。[查看 IANA 上 font 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#font)
 - `image`
-  - : 图像或图形数据，包括位图和矢量静态图像，以及静态图像格式的动画版本，如 {{Glossary("GIF")}} 动画或 APNG。常见的例子有 `image/jpeg`、`image/png` 和 `image/svg+xml`。[查看 IANA 上 image 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#image)
+  - : 图像或图形数据，包括位图和矢量静态图像，以及静态图像格式的动画版本，如 {{Glossary("GIF")}} 动画或 APNG。常见的例子有 `image/jpeg`、`image/png` 和 `image/svg+xml`。（[查看 IANA 上 image 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#image)）
 - `model`
-  - : 三维物体或场景的模型数据。示例包含 `model/3mf` 和 `model/vrml`。[查看 IANA 上 model 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#model)
+  - : 三维物体或场景的模型数据。示例包含 `model/3mf` 和 `model/vrml`。（[查看 IANA 上 model 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#model)）
 - `text`
-  - : 纯文本数据，包括任何人类可读内容、源代码或文本数据（如逗号分隔值（CSV）格式的数据）。示例包含：`text/plain`、`text/csv` 和 `text/html`。[查看 IANA 上 text 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#text)
+  - : 纯文本数据，包括任何人类可读内容、源代码或文本数据（如逗号分隔值（CSV）格式的数据）。示例包含：`text/plain`、`text/csv` 和 `text/html`。（[查看 IANA 上 text 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#text)）
 - `video`
-  - : 视频数据或文件，例如 MP4 电影（`video/mp4`）[查看 IANA 上 video 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#video)
+  - : 视频数据或文件，例如 MP4 电影（`video/mp4`）。（[查看 IANA 上 video 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#video)）
 
 对于那些没有特定子类型的文本文档，应使用 `text/plain`。类似的，二进制文件没有特定或已知的子类型，应使用 `application/octet-stream`。
 
@@ -79,9 +75,9 @@ IANA 目前注册的离散类型如下：
 有两种多部分类型：
 
 - `message`
-  - : 封装其他信息的信息。例如，这可以用来表示将转发信息作为其数据一部分的电子邮件，或将超大信息分块发送，就像发送多条信息一样。例如，`message/rfc822`（用于转发或回复信息的引用）和 `message/partial`（允许将大段信息自动拆分成小段，由收件人重新组装）是两个常见的例子。[查看 IANA 上 message 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#message)
+  - : 封装其他信息的信息。例如，这可以用来表示将转发信息作为其数据一部分的电子邮件，或将超大信息分块发送，就像发送多条信息一样。例如，`message/rfc822`（用于转发或回复信息的引用）和 `message/partial`（允许将大段信息自动拆分成小段，由收件人重新组装）是两个常见的例子。（[查看 IANA 上 message 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#message)）
 - `multipart`
-  - : 由多个组件组成的数据，这些组件可能各自具有不同的 MIME 类型。例如，`multipart/form-data`（用于使用 {{domxref("FormData")}} API 生成的数据）和 `multipart/byteranges`（在 {{RFC(7233,"", "5.4.1")}} 中定义，并与 {{Glossary("HTTP")}} 的 {{HTTPStatus(206)}} 状态码一起使用）。当获取的数据仅为部分内容（如使用 {{HTTPHeader("Range")}} 标头传输的内容）时，将返回“部分内容（Partial Content）”响应。[查看 IANA 上 multipart 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#multipart)
+  - : 由多个组件组成的数据，这些组件可能各自具有不同的 MIME 类型。例如，`multipart/form-data`（用于使用 {{domxref("FormData")}} API 生成的数据）和 `multipart/byteranges`（在 {{RFC(7233,"", "5.4.1")}} 中定义，并与 {{Glossary("HTTP")}} 的 {{HTTPStatus(206)}} 状态码一起使用）。当获取的数据仅为部分内容（如使用 {{HTTPHeader("Range")}} 标头传输的内容）时，将返回“部分内容（Partial Content）”响应。（[查看 IANA 上 multipart 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#multipart)）
 
 ## 对 Web 开发者至关重要的 MIME 类型
 
@@ -97,17 +93,17 @@ IANA 目前注册的离散类型如下：
 
 ### text/css
 
-在网页中要被解析为 CSS 的任何 CSS 文件**必须**指定 MIME 为 `text/css`。通常，如果服务器不识别 CSS 文件的 `.css` 后缀，则可能将它们以 MIME 为 `text/plain` 或 `application/octet-stream` 来发送给浏览器：在这种情况下，大多数浏览器不识别其为 CSS 文件，直接忽略掉。
+在网页中要被解析为 CSS 的任何 CSS 文件**必须**指定 MIME 为 `text/css`。通常，如果服务器不识别 CSS 文件的 `.css` 后缀，则可能将它们以 MIME 为 `text/plain` 或 `application/octet-stream` 来发送给浏览器：在这种情况下，大多数浏览器不将其识别为 CSS 文件而直接忽略。
 
 ### text/html
 
 所有的 HTML 内容都应该使用这种类型。XHTML 的其他 MIME 类型（如 `application/xml+html`）现在基本不再使用。
 
-> **备注：** 如果需要 XML 的严格解析规则、[`<![CDATA[...]]>`](/zh-CN/docs/Web/API/CDATASection) 部分或 HTML/SVG/MathML 命名空间以外的元素，请使用 `application/xml` 或 `application/xhtml+xml` 。
+> **备注：** 如果需要 XML 的严格解析规则、[`<![CDATA[...]]>`](/zh-CN/docs/Web/API/CDATASection) 部分或 HTML/SVG/MathML 命名空间以外的元素，请使用 `application/xml` 或 `application/xhtml+xml`。
 
 ### text/javascript
 
-根据 [IANA 媒体类型注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#text)、[RFC 9239](https://www.rfc-editor.org/rfc/rfc9239.html)和 [HTML 规范](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages:text/javascript)，JavaScript 内容应始终使用 MIME 类型 `text/javascript` 提供。其他 MIME 类型对 JavaScript 无效，使用除 `text/javascript` 以外的任何 MIME 类型都可能导致脚本无法加载或运行。
+根据 [IANA 媒体类型注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#text)、[RFC 9239](https://www.rfc-editor.org/rfc/rfc9239.html) 和 [HTML 规范](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages:text/javascript)，JavaScript 内容应始终使用 MIME 类型 `text/javascript` 提供。其他 MIME 类型对 JavaScript 无效，使用除 `text/javascript` 以外的任何 MIME 类型都可能导致脚本无法加载或运行。
 
 你可能会发现某些 JavaScript 内容在 MIME 类型中错误地使用了 `charset` 参数，以指定脚本内容的字符集。对于 JavaScript 内容来说，`charset` 参数无效，在大多数情况下会导致脚本加载失败。
 
@@ -131,7 +127,7 @@ IANA 目前注册的离散类型如下：
 - `text/x-ecmascript` {{Non-standard_Inline}}
 - `text/x-javascript` {{Non-standard_Inline}}
 
-> **备注：** 即便任何给定的{{Glossary("用户代理")}}可能支持这些中的任意或所有，你只应该使用 `text/javascript`。它是唯一确保能在目前和以后正常工作的 MIME 类型。
+> **备注：** 即便任何给定的{{Glossary("user agent", "用户代理")}}可能支持这里的部分或所有类型，你也只应该使用 `text/javascript`。它是唯一确保能在目前和以后正常工作的 MIME 类型。
 
 ### 图片类型
 
@@ -157,7 +153,7 @@ MIME 类型为 `image` 的文件包含图像数据。子类型指定数据所代
 
 [音频编解码器](/zh-CN/docs/Web/Media/Formats/Audio_codecs)和[视频编解码器](/zh-CN/docs/Web/Media/Formats/Video_codecs)指南列出了 web 浏览器通常支持的各种编解码器，并提供了兼容性细节和技术信息，如它们支持多少音频通道、使用哪种压缩方式以及它们的比特率等。
 
-在此基础上，[WebRTC 使用的编解码器](/zh-CN/docs/Web/Media/Formats/WebRTC_codecs)指南专门介绍了主要 web 浏览器支持的编解码器，因此你可以选择最适合你所希望支持的浏览器范围的编解码器。可选的 [codecs 参数](/zh-CN/docs/Web/Media/Formats/codecs_parameter) 可添加到 MIME 类型中，以进一步指定要使用的编解码器和用于媒体编码的选项，如编解码器配置文件、级别或其他此类信息。
+在此基础上，[WebRTC 使用的编解码器](/zh-CN/docs/Web/Media/Formats/WebRTC_codecs)指南专门介绍了主要 web 浏览器支持的编解码器，因此你可以选择最适合你所希望支持的浏览器范围的编解码器。可选的 [codec 参数](/zh-CN/docs/Web/Media/Formats/codecs_parameter)可添加到 MIME 类型中，以进一步指定要使用的编解码器和用于媒体编码的选项，如编解码器配置文件、级别或其他此类信息。
 
 下面列出了网络内容最常用的 MIME 类型。不过，这并不是一份包含所有可用类型的完整列表。请参阅[媒体容器格式指南](/zh-CN/docs/Web/Media/Formats/Containers)以查看完整的列表。
 
