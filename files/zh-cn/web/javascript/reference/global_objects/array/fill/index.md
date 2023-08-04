@@ -113,5 +113,6 @@ console.log(Array.prototype.fill.call(arrayLike, 1));
 ## 参见
 
 - [`core-js` 中 `Array.prototype.fill` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("TypedArray.prototype.fill()")}}

@@ -1,14 +1,6 @@
 ---
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - RegExp
-  - Référence(2)
-  - регулярные выражения
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
 
 {{JSRef("Global_Objects", "RegExp")}}
@@ -718,13 +710,9 @@ var re = new RegExp('\\w+');
 - `RegExp.length`
   - : Значение `RegExp.length` равно 2.
 
-{{jsOverrides("Function", "Properties", "prototype")}}
-
 ## Методы
 
 Глобальный объект `RegExp` не имеет собственных методов, однако, он наследует некоторые методы через цепочку прототипов.
-
-{{jsOverrides("Function", "Methods", "prototype")}}
 
 ## Экземпляры регулярного выражения
 

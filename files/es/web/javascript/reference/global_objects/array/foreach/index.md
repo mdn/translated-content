@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/forEach
 ---
 
 {{JSRef}}
@@ -124,7 +123,7 @@ var o1 = {a:1, b:2};
 var o2 = copy(o1); // o2 ahora se parece a o1
 ```
 
-### Si el array se modifica durante la iteración, otros elementos pueden ser omitidos.
+### Si el array se modifica durante la iteración, otros elementos pueden ser omitidos
 
 El siguiente ejemplo muestra por consola "uno", "dos", "cuatro". Cuando se alcanza el registro que contiene el valor "dos", el primer registro del array se desplaza, lo que hace que los registros restantes se muevan una posición. Debido a que el elemento "cuatro" está ahora en una posición anterior en el array, "tres" se omitirá. `forEach()` no hace una copia del array antes de iterar.
 

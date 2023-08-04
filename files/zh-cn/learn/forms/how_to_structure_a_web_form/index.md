@@ -53,22 +53,22 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
   <fieldset>
     <legend>Fruit juice size</legend>
     <p>
-      <input type="radio" name="size" id="size_1" value="small">
+      <input type="radio" name="size" id="size_1" value="small" />
       <label for="size_1">Small</label>
     </p>
     <p>
-      <input type="radio" name="size" id="size_2" value="medium">
+      <input type="radio" name="size" id="size_2" value="medium" />
       <label for="size_2">Medium</label>
     </p>
     <p>
-      <input type="radio" name="size" id="size_3" value="large">
+      <input type="radio" name="size" id="size_3" value="large" />
       <label for="size_3">Large</label>
     </p>
   </fieldset>
 </form>
 ```
 
-> **备注：** 你可以在 [fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)) 看到该例。
+> **备注：** 你可以在 [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)) 看到该例。
 
 当阅读上述表格时，屏幕阅读器将会读第一个小部件“Fruit juice size small”，“Fruit juice size medium”为第二个，“Fruit juice size large”为第三个。
 
@@ -81,7 +81,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 正如我们在前一篇文章中看到的， {{HTMLElement("label")}} 元素是为 HTML 表单小部件定义标签的正式方法。如果你想构建可访问的表单，这是最重要的元素——当实现的恰当时，屏幕阅读器会连同有关的说明和表单元素的标签一起朗读。以我们在上一篇文章中看到的例子为例：
 
 ```html
-<label for="name">Name:</label> <input type="text" id="name" name="user_name">
+<label for="name">Name:</label> <input type="text" id="name" name="user_name" />
 ```
 
 `<label>` 标签与 `<input>` 通过他们各自的`for` 属性和 `id` 属性正确相关联（label 的 for 属性和它对应的小部件的 id 属性），这样，屏幕阅读器会读出诸如“Name, edit text”之类的东西。
@@ -92,7 +92,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 ```html
 <label for="name">
-  Name: <input type="text" id="name" name="user_name">
+  Name: <input type="text" id="name" name="user_name" />
 </label>
 ```
 
@@ -107,17 +107,17 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 ```html
 <form>
   <p>
-    <input type="checkbox" id="taste_1" name="taste_cherry" value="1">
+    <input type="checkbox" id="taste_1" name="taste_cherry" value="1" />
     <label for="taste_1">I like cherry</label>
   </p>
   <p>
-    <input type="checkbox" id="taste_2" name="taste_banana" value="2">
+    <input type="checkbox" id="taste_2" name="taste_banana" value="2" />
     <label for="taste_2">I like banana</label>
   </p>
 </form>
 ```
 
-> **备注：** 你可以在 [checkbox-label.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)) 看到该例。
+> **备注：** 你可以在 [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)) 看到该例。
 
 ### 多个标签
 
@@ -131,7 +131,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 <!--这样写：-->
 <div>
   <label for="username">Name:</label>
-  <input type="text" name="username">
+  <input type="text" name="username" />
   <label for="username"><abbr title="required">*</abbr></label>
 </div>
 
@@ -139,7 +139,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 <div>
   <label for="username">
     <span>Name:</span>
-    <input id="username" type="text" name="username">
+    <input id="username" type="text" name="username" />
     <abbr title="required">*</abbr>
   </label>
 </div>
@@ -147,7 +147,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 <!--但最好的可能是这样：-->
 <div>
   <label for="username">Name: <abbr title="required">*</abbr></label>
-  <input id="username" type="text" name="username">
+  <input id="username" type="text" name="username" />
 </div>
 ```
 
@@ -159,7 +159,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 > **备注：** 你可能会得到一些不同的结果，这取决于你的屏幕阅读器。这是在 VoiceOver 上测试的（NVDA 的行为也类似）。我们也乐于听听你的试验结果。
 
-> **备注：** 你可以在 GitHub 上看到 [required-labels.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html))。不要运行 2 个或 3 个未注释版本的示例—— 如果您有多个标签和多个输入相同的 ID，那么屏幕阅读器肯定会感到困惑！
+> **备注：** 你可以在 GitHub 上看到 [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html))。不要运行 2 个或 3 个未注释版本的示例—— 如果您有多个标签和多个输入相同的 ID，那么屏幕阅读器肯定会感到困惑！
 
 ## 用于表单的通用 HTML 结构
 
@@ -177,120 +177,122 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 让我们把这些想法付诸实践，建立一个稍微复杂一点的表单结构——一个支付表单。这个表单将包含许多您可能还不了解的小部件类型—现在不要担心这个；在下一篇文章（[原生表单小部件](/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets)）中，您将了解它们是如何工作的。现在，当您遵循下面的指令时，请仔细阅读这些描述，并开始理解我们使用的包装器元素是如何构造表单的，以及为什么这么做。
 
-1. 在开始之前，在计算机上的一个新目录中，创建一个[空白模板文件](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)和[我们的支付表单的 CSS 样式](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css)的本地副本。
+1. 在开始之前，在计算机上的一个新目录中，创建一个[空白模板文件](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)和[我们的支付表单的 CSS 样式](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.css)的本地副本。
 2. 首先，通过添加下面这行代码到你的 HTML{{htmlelement("head")}}使你的 HTML 应用 CSS。
 
-    ```html
-    <link href="payment-form.css" rel="stylesheet">
-    ```
+   ```html
+   <link href="payment-form.css" rel="stylesheet" />
+   ```
 
 3. 接下来，通过添加外部{{htmlelement("form")}}元素来开始一张表单：
 
-    ```html
-    <form>
-
-    </form>
-    ```
+   ```html
+   <form></form>
+   ```
 
 4. 在 `<form>` 标签内，以添加一个标题和段落开始，告诉用户必需的字段是如何标记的：
 
-    ```html
-    <h1>Payment form</h1>
-    <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
-    ```
+   ```html
+   <h1>Payment form</h1>
+   <p>
+     Required fields are followed by
+     <strong><abbr title="required">*</abbr></strong
+     >.
+   </p>
+   ```
 
 5. 接下来，我们将在表单中添加一个更大的代码段，在我们之前的代码下面。在这里，您将看到，我们正在将联系人信息字段包装在一个单独的{{htmlelement("section")}}元素中。此外，我们有一组两个单选按钮，每个单选按钮都放在自己的列表中 ({{htmlelement("li")}})) 元素。最后，我们有两个标准文本{{htmlelement("input")}}和它们相关的{{htmlelement("label")}}元素，每个元素包含在{{htmlelement("p")}}中，加上输入密码的密码输入。现在将这些代码添加到您的表单中：
 
-    ```html
-    <section>
-        <h2>Contact information</h2>
-        <fieldset>
-          <legend>Title</legend>
-          <ul>
-              <li>
-                <label for="title_1">
-                  <input type="radio" id="title_1" name="title" value="K" >
-                  King
-                </label>
-              </li>
-              <li>
-                <label for="title_2">
-                  <input type="radio" id="title_2" name="title" value="Q">
-                  Queen
-                </label>
-              </li>
-              <li>
-                <label for="title_3">
-                  <input type="radio" id="title_3" name="title" value="J">
-                  Joker
-                </label>
-              </li>
-          </ul>
-        </fieldset>
-        <p>
-          <label for="name">
-            <span>Name: </span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="text" id="name" name="username">
-        </p>
-        <p>
-          <label for="mail">
-            <span>E-mail: </span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="email" id="mail" name="usermail">
-        </p>
-        <p>
-          <label for="pwd">
-            <span>Password: </span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="password" id="pwd" name="password">
-        </p>
-    </section>
-    ```
+   ```html
+   <section>
+     <h2>Contact information</h2>
+     <fieldset>
+       <legend>Title</legend>
+       <ul>
+         <li>
+           <label for="title_1">
+             <input type="radio" id="title_1" name="title" value="K" />
+             King
+           </label>
+         </li>
+         <li>
+           <label for="title_2">
+             <input type="radio" id="title_2" name="title" value="Q" />
+             Queen
+           </label>
+         </li>
+         <li>
+           <label for="title_3">
+             <input type="radio" id="title_3" name="title" value="J" />
+             Joker
+           </label>
+         </li>
+       </ul>
+     </fieldset>
+     <p>
+       <label for="name">
+         <span>Name: </span>
+         <strong><abbr title="required">*</abbr></strong>
+       </label>
+       <input type="text" id="name" name="username" />
+     </p>
+     <p>
+       <label for="mail">
+         <span>E-mail: </span>
+         <strong><abbr title="required">*</abbr></strong>
+       </label>
+       <input type="email" id="mail" name="usermail" />
+     </p>
+     <p>
+       <label for="pwd">
+         <span>Password: </span>
+         <strong><abbr title="required">*</abbr></strong>
+       </label>
+       <input type="password" id="pwd" name="password" />
+     </p>
+   </section>
+   ```
 
 6. 现在，我们将转到表单的第二个`<section>`——支付信息。在这里，我们有三个不同的小部件以及它们的标签，每个都包含在一个`<p>`中。第一个是选择信用卡类型的下拉菜单 ({{htmlelement("select")}})。第二个是输入一个信用卡号的类型编号的 `<input>` 元素。最后一个是输入`date`类型的`<input>` 元素，用来输入卡片的过期日期（这将在支持的浏览器中出现一个日期选择器小部件，并在非支持的浏览器中回退到普通的文本输入）。同样，在之前的代码后面输入以下内容：
 
-    ```html
-    <section>
-        <h2>Payment information</h2>
-        <p>
-          <label for="card">
-            <span>Card type:</span>
-          </label>
-          <select id="card" name="usercard">
-            <option value="visa">Visa</option>
-            <option value="mc">Mastercard</option>
-            <option value="amex">American Express</option>
-          </select>
-        </p>
-        <p>
-          <label for="number">
-            <span>Card number:</span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-            <input type="number" id="number" name="cardnumber">
-        </p>
-        <p>
-          <label for="date">
-            <span>Expiration date:</span>
-            <strong><abbr title="required">*</abbr></strong>
-            <em>formatted as mm/yy</em>
-          </label>
-          <input type="date" id="date" name="expiration">
-        </p>
-    </section>
-    ```
+   ```html
+   <section>
+     <h2>Payment information</h2>
+     <p>
+       <label for="card">
+         <span>Card type:</span>
+       </label>
+       <select id="card" name="usercard">
+         <option value="visa">Visa</option>
+         <option value="mc">Mastercard</option>
+         <option value="amex">American Express</option>
+       </select>
+     </p>
+     <p>
+       <label for="number">
+         <span>Card number:</span>
+         <strong><abbr title="required">*</abbr></strong>
+       </label>
+       <input type="number" id="number" name="cardnumber" />
+     </p>
+     <p>
+       <label for="date">
+         <span>Expiration date:</span>
+         <strong><abbr title="required">*</abbr></strong>
+         <em>formatted as mm/yy</em>
+       </label>
+       <input type="date" id="date" name="expiration" />
+     </p>
+   </section>
+   ```
 
 7. 我们要添加的最后一个部分要简单得多，它只包含了一个`submit`类型的 {{htmlelement("button")}} ，用于提交表单数据。现在把这个添加到你的表单的底部：
 
-    ```html
-    <p> <button type="submit">Validate the payment</button> </p>
-    ```
+   ```html
+   <p><button type="submit">Validate the payment</button></p>
+   ```
 
-您可以在下面看到已完成的表单 (你可以在 Github 上看到[源码](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html)和[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)）：
+您可以在下面看到已完成的表单 (你可以在 Github 上看到[源码](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html)和[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)）：
 
 {{EmbedLiveSample("自主学习：构建一个表单结构","100%",620)}}
 

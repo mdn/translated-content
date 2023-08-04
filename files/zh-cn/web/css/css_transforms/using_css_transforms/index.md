@@ -1,6 +1,6 @@
 ---
 title: 使用 CSS 变换
-slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
+slug: Web/CSS/CSS_transforms/Using_CSS_transforms
 ---
 
 {{CSSRef}}
@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
 
 CSS 变换通过一系列 CSS 属性实现，通过使用这些属性，可以对 HTML 元素进行线性仿射变换（affine linear transformation）。可以进行的变换包括旋转、倾斜、缩放以及位移，这些变换同时适用于平面与三维空间。
 
-> **警告：** 只有使用[盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model)（Box Model）来定位的元素可以*被变换*（`transform`ed）。拥有 `display: block` 的元素是由盒模型定位的。
+> **警告：** 只有使用[盒模型](/zh-CN/docs/Web/CSS/CSS_box_model)（Box Model）来定位的元素可以*被变换*（`transform`ed）。拥有 `display: block` 的元素是由盒模型定位的。
 
 ## CSS 变换属性
 

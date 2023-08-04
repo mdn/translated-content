@@ -3,6 +3,8 @@ title: JSON
 slug: Glossary/JSON
 ---
 
+{{GlossarySidebar}}
+
 _JavaScript Object Notation_（**JSON**）是一種資料交換格式。JSON 的語法非常接近 {{Glossary("JavaScript")}}，但嚴格上來說 JSON 並不是 JavaScript 的一個子集。許多程式語言都支援 JSON，不過 JSON 在基於 JavaScript 的應用程式（包含網站和瀏覽器擴充功能）中特別有用。
 
 JSON 可以表示數字、布林值、字串、`null`、陣列（一些有順序的數值），以及由這些數值所組成的物件（字串和數值的對應表）。原生的 JSON 不能用來表示較複雜的資料，像是函式、正規表達式、日期等。（日期物件可以被序列化成為 ISO 格式的日期字串，不會完全遺失資料。）如果你需要 JSON 來表示這些額外的資料類型，請在他們序列或反序列化時轉換數值。

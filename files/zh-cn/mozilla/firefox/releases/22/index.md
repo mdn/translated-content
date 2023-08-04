@@ -29,29 +29,29 @@ slug: Mozilla/Firefox/Releases/22
 - {{domxref("XMLHttpRequest/FormData", "FormData")}}对象的`append`方法现在开始接受第三个参数`filename`([Firefox bug 690659](https://bugzil.la/690659)).
 - 移除了{{domxref("Node.isSupported")}}方法 ([Firefox bug 801562](https://bugzil.la/801562)).
 - {{domxref("Node.setUserData")}} and {{domxref("Node.getUserData")}} has been removed for web content and are deprecated for chrome content ([Firefox bug 842372](https://bugzil.la/842372)).
-- The {{domxref("Element.attributes")}} property has been moved there from {{domxref("Node")}} as required by the spec ({{bug("844134")}}).
+- The {{domxref("Element.attributes")}} property has been moved there from {{domxref("Node")}} as required by the spec ([Firefox bug 844134](https://bugzil.la/844134)).
 - 实现了 Mac OS X 中的{{domxref("DeviceLightEvent", "Ambient Light Events")}}后端。
-- Elements in the HTML namespace with local names {{HTMLElement("bgsound")}}, {{HTMLElement("multicol")}}, and {{HTMLElement("image")}} no longer implement the {{domxref("HTMLSpanElement")}} interface. {{HTMLElement("bgsound")}} and {{HTMLElement("bgsound")}} implement {{domxref("HTMLUnknownElement")}} and {{HTMLElement("image")}} implements {{domxref("HTMLElement")}}.
-- The {{ domxref("NodeIterator.detach") }} method has been changed to do nothing ({{bug("823549")}}).
-- The {{domxref("BlobEvent")}} interface has been implemented ({{bug("834165")}}).
-- The properties `HTMLMediaElement.crossorigin` and `HTMLInputElement.inputmode` has been removed to match the spec in {{domxref("HTMLMediaElement.crossOrigin")}} and `HTMLInputElement.inputMode`, respectively ({{bug("847370")}} and {{bug("850346")}}).
+- Elements in the HTML namespace with local names `<bgsound>`, {{HTMLElement("multicol")}}, and {{HTMLElement("image")}} no longer implement the {{domxref("HTMLSpanElement")}} interface. `<bgsound>` implements {{domxref("HTMLUnknownElement")}} and {{HTMLElement("image")}} implements {{domxref("HTMLElement")}}.
+- The {{ domxref("NodeIterator.detach") }} method has been changed to do nothing ([Firefox bug 823549](https://bugzil.la/823549)).
+- The {{domxref("BlobEvent")}} interface has been implemented ([Firefox bug 834165](https://bugzil.la/834165)).
+- The properties `HTMLMediaElement.crossorigin` and `HTMLInputElement.inputmode` has been removed to match the spec in {{domxref("HTMLMediaElement.crossOrigin")}} and `HTMLInputElement.inputMode`, respectively ([Firefox bug 847370](https://bugzil.la/847370) and [Firefox bug 850346](https://bugzil.la/850346)).
 - WebRTC: the Media Stream API and Peer Connection API are now supported by default.
-- Web Components: the {{domxref("Document.register")}} method has been implemented ({{bug("783129")}}).
-- The {{domxref("ProgressEvent.initProgressEvent()")}} constructor method has been removed. Uses the standard constructor, {{domxref("ProgressEvent.ProgressEvent", "ProgressEvent()")}} to construc and initialize {{domxref("ProgressEvent")}} ({{bug("843489")}}).
-- Manipulated data associated with a [`cut`](/zh-CN/docs/Web/API/Element/cut_event), [`copy`](/zh-CN/docs/Web/API/Element/copy_event), or [`paste`](/zh-CN/docs/Web/API/Element/paste_event) event can now be accessed via the {{domxref("ClipboardEvent.clipboardData")}} property ({{bug("407983")}}).
-- The {{domxref("HTMLTimeElement")}} interface has been implemented ({{bug("629801")}}).
-- When a {{domxref("Worker")}} constructor is passed an invalid URL, it now throws {{domxref("DOMException")}} of type `SECURITY_ERR` ({{bug("587251")}}).
+- Web Components: the {{domxref("Document.register")}} method has been implemented ([Firefox bug 783129](https://bugzil.la/783129)).
+- The {{domxref("ProgressEvent.initProgressEvent()")}} constructor method has been removed. Uses the standard constructor, {{domxref("ProgressEvent.ProgressEvent", "ProgressEvent()")}} to construc and initialize {{domxref("ProgressEvent")}} ([Firefox bug 843489](https://bugzil.la/843489)).
+- Manipulated data associated with a [`cut`](/zh-CN/docs/Web/API/Element/cut_event), [`copy`](/zh-CN/docs/Web/API/Element/copy_event), or [`paste`](/zh-CN/docs/Web/API/Element/paste_event) event can now be accessed via the {{domxref("ClipboardEvent.clipboardData")}} property ([Firefox bug 407983](https://bugzil.la/407983)).
+- The {{domxref("HTMLTimeElement")}} interface has been implemented ([Firefox bug 629801](https://bugzil.la/629801)).
+- When a {{domxref("Worker")}} constructor is passed an invalid URL, it now throws {{domxref("DOMException")}} of type `SECURITY_ERR` ([Firefox bug 587251](https://bugzil.la/587251)).
 
 ### CSS
 
-- Support for [CSS Flexbox layout](/zh-CN/docs/CSS/Tutorials/Using_CSS_flexible_boxes) has been enabled by default ({{bug("841876")}}).
-- Following a spec change, the initial value for {{cssxref("min-width")}} and {{cssxref("min-height")}} has been changed back to `0`, even on flex items ({{bug("848539")}}).
-- Support for CSS Conditionals ({{cssxref("@supports")}} and {{domxref("CSS.supports")}}) has been enabled by default ({{bug("855455")}}).
-- Support for {{cssxref("background-clip")}} and {{cssxref("background-origin")}} properties in the {{cssxref("background")}} shorthand has been implemented ({{bug("570896")}}).
+- Support for [CSS Flexbox layout](/zh-CN/docs/CSS/Tutorials/Using_CSS_flexible_boxes) has been enabled by default ([Firefox bug 841876](https://bugzil.la/841876)).
+- Following a spec change, the initial value for {{cssxref("min-width")}} and {{cssxref("min-height")}} has been changed back to `0`, even on flex items ([Firefox bug 848539](https://bugzil.la/848539)).
+- Support for CSS Conditionals ({{cssxref("@supports")}} and {{domxref("CSS.supports")}}) has been enabled by default ([Firefox bug 855455](https://bugzil.la/855455)).
+- Support for {{cssxref("background-clip")}} and {{cssxref("background-origin")}} properties in the {{cssxref("background")}} shorthand has been implemented ([Firefox bug 570896](https://bugzil.la/570896)).
 
 ## 附加组件和 Mozilla 开发者需要注意的变化
 
-- 移除了下面这些方法中的`properties`参数：`nsITreeView.getCellProperties()`, `nsITreeView.getColumnProperties()` and `nsITreeView.getRowProperties()` methods of `nsITreeView`. These methods should now return a string of space-separated property names. ({{bug('407956')}})
+- 移除了下面这些方法中的`properties`参数：`nsITreeView.getCellProperties()`, `nsITreeView.getColumnProperties()` and `nsITreeView.getRowProperties()` methods of `nsITreeView`. These methods should now return a string of space-separated property names. ([Firefox bug 407956](https://bugzil.la/407956))
 - The `inIDOMUtils.getCSSPropertyNames()` method has been implemented and will return all supported [CSS property](/zh-CN/docs/CSS/CSS_Reference) names.
 - See [here](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/) for more changes.
 

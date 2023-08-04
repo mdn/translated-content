@@ -1,7 +1,6 @@
 ---
 title: Les concepts de base de la Web Audio API
 slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
-translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 ---
 
 Cet article explique une partie de la théorie sur laquelle s'appuient les fonctionnalités de la Web Audio API. Il ne fera pas de vous un ingénieur du son, mais vous donnera les bases nécessaires pour comprendre pourquoi la Web Audio API fonctionne de cette manière, et vous permettre de mieux l'utiliser.
@@ -20,7 +19,7 @@ Les noeuds audio sont liés au niveau de leur entrée et leur sortie, formant un
 
 ![Diagramme simple composé de trois rectangles intitulés Sources, Effets et Sortie, reliés par des flèches, de gauche à droite, qui indiquent le sens du flux d'informations audio.](webaudioapi_en.svg)
 
-Chaque entrée ou sortie est composée de plusieurs **canaux,** chacun correspondant à une configuration audio spécifique. Tout type de canal discret est supporté, y compris *mono*, _stereo_, _quad_, _5.1_, etc.
+Chaque entrée ou sortie est composée de plusieurs **canaux,** chacun correspondant à une configuration audio spécifique. Tout type de canal discret est supporté, y compris _mono_, _stereo_, _quad_, _5.1_, etc.
 
 ![Diagramme qui montre comment les AudioNodes sont reliés par leurs entrées et sorties, et la configuration des canaux à l'intérieur de ces entrées/sorties.](audionodes.svg)
 
@@ -35,7 +34,7 @@ Les sources audio peuvent être de provenance variée&nbsp;:
 
 Lors du traitement d'un signal audio, **l'échantillonage** désigne la conversion d'un [signal continu](http://en.wikipedia.org/wiki/Continuous_signal) en [signal discret](http://en.wikipedia.org/wiki/Discrete_signal); formulé autrement, une onde de son continue, comme un groupe qui joue en live, est convertie en une séquence d'échantillons (un signal temporel discret) qui permet à l'ordinateur de traiter le son en blocs distincts.
 
-On peut trouver davantage de détails sur la page Wikipédia [Echantillonage (signal)](https://fr.wikipedia.org/wiki/%C3%89chantillonnage_(signal)).
+On peut trouver davantage de détails sur la page Wikipédia [Echantillonage (signal)](<https://fr.wikipedia.org/wiki/Échantillonnage_(signal)>).
 
 ## Mémoire tampon&nbsp;: trames, échantillons et canaux
 

@@ -70,7 +70,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ### pattern
 
-如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
+如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
 
 如果模式未指定或无效，则不应用任何正则表达式，并且将完全忽略此属性。
 
@@ -186,11 +186,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 ```html
 <form>
   <div>
-    <input
-      type="search"
-      id="mySearch"
-      name="q"
-      placeholder="站内搜索..." />
+    <input type="search" id="mySearch" name="q" placeholder="站内搜索..." />
     <button>搜索</button>
   </div>
 </form>
@@ -425,7 +421,7 @@ input:valid ~ span::after {
 
 ## 例子
 
-可以在我们的网站 [website-aria-roles](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles) 示例中看到一个在上下文中使用搜索表单的一个好例子（[试试在线运行它](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）。
+可以在我们的网站 [website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) 示例中看到一个在上下文中使用搜索表单的一个好例子（[试试在线运行它](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）。
 
 ## 规范
 

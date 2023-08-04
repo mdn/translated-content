@@ -1,7 +1,6 @@
 ---
 title: Обрезка и маска
 slug: Web/SVG/Tutorial/Clipping_and_masking
-translation_of: Web/SVG/Tutorial/Clipping_and_masking
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}
 
@@ -33,7 +32,7 @@ translation_of: Web/SVG/Tutorial/Clipping_and_masking
 
 {{ EmbedLiveSample('Кадрирование_изображений','240','240','/files/3224/clipdemo.png') }}
 
-Теперь мы получили полуокружность без необходимости использования элемента `path`. При “обрезке” каждый путь внутри `clipPath` проверяется и оценивается вместе с его свойствами `stroke` и `transform`. Другими словами, всё что не находится в залитой области `clipPath` не будет отображено. Цвет, непрозрачность и т. д. не влияют на результат.
+Теперь мы получили полуокружность без необходимости использования элемента `path`. При "обрезке" каждый путь внутри `clipPath` проверяется и оценивается вместе с его свойствами `stroke` и `transform`. Другими словами, всё что не находится в залитой области `clipPath` не будет отображено. Цвет, непрозрачность и т. д. не влияют на результат.
 
 ### Маска
 

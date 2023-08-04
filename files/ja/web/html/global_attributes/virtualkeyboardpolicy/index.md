@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`virtualkeyboardpolicy`** は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、列挙型の属性です。{{htmlattrxref("contenteditable")}} 属性を使用している要素に指定すると、タブレットや携帯電話など、ハードウェアキーボードが利用できないような端末での画面の仮想キーボードの動作を制御することができます。
+**`virtualkeyboardpolicy`** は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、列挙型の属性です。[`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) 属性を使用している要素に指定すると、タブレットや携帯電話など、ハードウェアキーボードが利用できないような端末での画面の仮想キーボードの動作を制御することができます。
 
 この属性は、以下の値のいずれかを取る必要があります。
 

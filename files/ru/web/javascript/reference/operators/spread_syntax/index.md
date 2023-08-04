@@ -1,7 +1,6 @@
 ---
 title: Spread syntax
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
-translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
 {{jsSidebar("Operators")}}**Spread syntax** позволяет расширить доступные для итерации элементы (например, массивы или строки) в местах
 
@@ -238,5 +237,5 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 ## See also
 
-- [Rest parameters](/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters) (also ‘`...`’)
-- [fn.apply](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) (also ‘`...`’)
+- [Rest parameters](/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters) (also '`...`')
+- [fn.apply](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) (also '`...`')

@@ -3,6 +3,8 @@ title: 分布式拒绝服务攻击
 slug: Glossary/Distributed_Denial_of_Service
 ---
 
+{{GlossarySidebar}}
+
 分布式拒绝服务（DDoS）是一种攻击，在这种攻击中，许多被破坏的系统被用来攻击一个目标，以淹没服务器资源并阻止合法用户。
 
 通常情况下，许多人使用机器人攻击高知名度的 Web {{glossary("server", "服务器")}}，如银行或信用卡支付网关。DDoS 涉及计算机网络和 CPU 资源管理。

@@ -1,18 +1,6 @@
 ---
 title: Referrer-Policy
 slug: Web/HTTP/Headers/Referrer-Policy
-tags:
-  - HTTP
-  - HTTP Header
-  - Privacy
-  - Reference
-  - Referrer-Policy
-  - Response
-  - Response Header
-  - Réponse
-  - en-tête
-  - referrer
-translation_of: Web/HTTP/Headers/Referrer-Policy
 ---
 
 {{HTTPSidebar}}
@@ -79,19 +67,19 @@ Referrer-Policy: unsafe-url
 Vous pouvez aussi définir des règles de référent au sein d'HTML. Par exemple, vous pouvez définir la règle de référent pour le document entier avec un élément {{HTMLElement("meta")}} dont le [name](/fr/docs/Web/HTML/Element/meta#attr-name) est `referrer` :
 
 ```html
-<meta name="referrer" content="origin">
+<meta name="referrer" content="origin" />
 ```
 
 Ou le définit pour des requêtes spécifiques avec l'attribut `referrerpolicy` sur les éléments {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, {{HTMLElement("script")}}, ou {{HTMLElement("link")}} :
 
 ```html
-<a href="http://example.com" referrerpolicy="origin">
+<a href="http://example.com" referrerpolicy="origin"></a>
 ```
 
 Autrement, une [relation de lien](/fr/docs/Web/HTML/Link_types) définie à `noreferrer` sur un élément `a`, `area`, ou `link` peut être défini :
 
 ```html
-<a href="http://example.com" rel="noreferrer">
+<a href="http://example.com" rel="noreferrer"></a>
 ```
 
 > **Attention :** Comme vu précédemment, la relation de lien `noreferrer` s'écrit sans trait d'union. Toutefois, quand la règle de référent est spécifiée pour le document entier avec un élément {{HTMLElement("meta")}}, il faut mettre le trait d'union : `<meta name="referrer" content="no-referrer">`.
@@ -225,7 +213,7 @@ Ici, `no-referrer` ne sera utilisée que si `strict-origin-when-cross-origin` n'
 
 ## Voir aussi
 
-- [Référent](https://fr.wikipedia.org/wiki/R%C3%A9f%C3%A9rent_(informatique)) sur Wikipédia
+- [Référent](<https://fr.wikipedia.org/wiki/Référent_(informatique)>) sur Wikipédia
 - En utilisant [Fetch](/fr/docs/Web/API/Fetch_API) : {{domxref("Request.referrerPolicy")}}
 - La directive obsolète {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} de l'en-tête {{HTTPHeader("Content-Security-Policy")}}.
 - [Same-origin policy](/fr/docs/Web/Security/Same-origin_policy)

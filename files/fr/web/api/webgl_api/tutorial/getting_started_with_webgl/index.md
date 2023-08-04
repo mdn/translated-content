@@ -1,11 +1,6 @@
 ---
 title: Commencer avec WebGL
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
-tags:
-  - Tutoriel
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
-original_slug: Web/API/WebGL_API/Tutorial/Commencer_avec_WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{Next("Web/API/WebGL_API/Tutorial/Ajouter_du_contenu_à_WebGL")}}[WebGL](http://www.khronos.org/webgl/) permet à un contenu web d'utiliser l'API basée sur [OpenGL ES](http://www.khronos.org/opengles/) 2.0 pour effectuer un rendu 2D et 3D dans un [canvas](/fr/HTML/Canvas) dans les navigateurs qui le supportent, sans utilisation d'un module complémentaire. Les programmes WebGL sont constitués de code de contrôle écrit en JavaScript, et le code d'ombrage (GLSL) est exécuté dans l'Unité de Traitement Graphique (GPU) de l'ordinateur. Les éléments WebGL peuvent être mélangés avec d'autres éléments HTML, et composés d'autres parties de la page ou de l'arrière-plan de la page.
@@ -41,14 +36,16 @@ function main() {
 
   // Continuer seulement si WebGL est disponible et fonctionnel
   if (!gl) {
-    alert("Impossible d'initialiser WebGL. Votre navigateur ou votre machine peut ne pas le supporter.");
+    alert(
+      "Impossible d'initialiser WebGL. Votre navigateur ou votre machine peut ne pas le supporter.",
+    );
     return;
   }
 
   // Définir la couleur d'effacement comme étant le noir, complètement opaque
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
   // Effacer le tampon de couleur avec la couleur d'effacement spécifiée
-  gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
+  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 }
 ```
 

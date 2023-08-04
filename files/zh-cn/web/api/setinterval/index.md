@@ -43,14 +43,13 @@ var intervalID = setInterval(code, [delay]);
 下面例子演示了 `setInterval()` 的基本语法。
 
 ```js
-var intervalID = setInterval(myCallback, 500, 'Parameter 1', 'Parameter 2');
+var intervalID = setInterval(myCallback, 500, "Parameter 1", "Parameter 2");
 
-function myCallback(a, b)
-{
- // Your code here
- // Parameters are purely optional.
- console.log(a);
- console.log(b);
+function myCallback(a, b) {
+  // Your code here
+  // Parameters are purely optional.
+  console.log(a);
+  console.log(b);
 }
 ```
 
@@ -104,7 +103,7 @@ function flashText() {
 function stopTextColor() {
   clearInterval(nIntervId);
   // release our intervalID from the variable
-  nIntervId = null; 
+  nIntervId = null;
 }
 
 document.getElementById("start").addEventListener("click", changeColor);
@@ -126,10 +125,10 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 被 `setInterval()` 调用的代码在与调用它的函数不同的上下文中运行。因此，被调用函数的 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 关键字被设置为了 `windows`（或 `global`）对象，而不是调用 `setTimeout` 时的 `this`。请看以下的示例（它使用 `setTimeout()` 代替了 `setInterval()`——但两种定时器都具有这一的问题）：
 
 ```js
-myArray = ['zero', 'one', 'two'];
+myArray = ["zero", "one", "two"];
 
 myArray.myMethod = function (sProperty) {
-    alert(arguments.length > 0 ? this[sProperty] : this);
+  alert(arguments.length > 0 ? this[sProperty] : this);
 };
 
 myArray.myMethod(); // prints "zero,one,two"
@@ -152,7 +151,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
 
 如果你需要支持 IE 浏览器，请使用 [`Function.prototype.bind()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 方法，它允许你指定调用给定函数时 `this` 的值。这可以让你避免因为上下文的不同而导致调用的函数的 `this` 不明确而出现的问题。
 
-## 使用备注
+## 使用说明
 
 `setInterval()` 函数通常用于为重复执行的函数设置一个时间间隔（例如：动画）。你可以使用 {{domxref("clearInterval()")}} 取消定时器。
 
@@ -171,11 +170,11 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
 在这些场景下，应首选递归调用 `setTimeout()` 的模式：
 
 ```js
-(function loop(){
-   setTimeout(function() {
-      // Your logic here
+(function loop() {
+  setTimeout(function () {
+    // Your logic here
 
-      loop();
+    loop();
   }, delay);
 })();
 ```

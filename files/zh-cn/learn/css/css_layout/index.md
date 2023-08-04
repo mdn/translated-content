@@ -26,7 +26,7 @@ slug: Learn/CSS/CSS_layout
 - [正常布局流](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)
   - : 这篇文章介绍正常的流布局，或者说，在你没有改变默认布局规则情况下的页面元素布局方式。
 - [弹性盒](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-  - : [弹性盒](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications) 是一种新技术，但在如今各个浏览器都广泛支持的情况下，它已经开始准备广泛应用了。弹性盒子提供了工具，允许快速创建曾经被证明用 CSS 很难实现的一些复杂，灵活的布局和功能。本文将解释所有的基本原理。
+  - : [弹性盒](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Using_flexbox_to_lay_out_web_applications) 是一种新技术，但在如今各个浏览器都广泛支持的情况下，它已经开始准备广泛应用了。弹性盒子提供了工具，允许快速创建曾经被证明用 CSS 很难实现的一些复杂，灵活的布局和功能。本文将解释所有的基本原理。
 - [网格](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
   - : 网格是一个成熟的设计工具，许多现代网站布局是基于规则网格。在本文中，我们将看看基于网格的设计，以及如何使用 CSS 来创建网格——两者都通过现在的工具，和刚刚开始在浏览器中可用的新技术。
 - [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)

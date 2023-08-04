@@ -1,11 +1,6 @@
 ---
-title: ':in-range'
+title: ":in-range"
 slug: Web/CSS/:in-range
-tags:
-  - CSS
-  - Псевдоклассы
-  - Руководство
-translation_of: Web/CSS/:in-range
 ---
 
 {{CSSRef}}

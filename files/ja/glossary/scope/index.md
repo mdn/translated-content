@@ -9,12 +9,12 @@ slug: Glossary/Scope
 
 ```js
 function exampleFunction() {
-    var x = "declared inside function";  // x can only be used in exampleFunction
-    console.log("Inside function");
-    console.log(x);
+  var x = "declared inside function"; // x can only be used in exampleFunction
+  console.log("Inside function");
+  console.log(x);
 }
 
-console.log(x);  // Causes error
+console.log(x); // Causes error
 ```
 
 ただし、次のコードでは変数が関数外で宣言されており、グローバルになるため、有効になります。
@@ -25,8 +25,8 @@ var x = "declared outside function";
 exampleFunction();
 
 function exampleFunction() {
-    console.log("Inside function");
-    console.log(x);
+  console.log("Inside function");
+  console.log(x);
 }
 
 console.log("Outside function");

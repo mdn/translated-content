@@ -119,7 +119,7 @@ console.log(int16.length); // 2
 console.log(int16.BYTES_PER_ELEMENT); // 2
 
 // From an array
-var arr = new Int16Array([21,31]);
+var arr = new Int16Array([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray

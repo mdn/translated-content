@@ -41,10 +41,7 @@ slug: Web/HTML/Element/rt
 ## 示例
 
 ```html
-<ruby>
-  汉 <rt>Hàn</rt>
-  字 <rt>Zì</rt>
-</ruby>
+<ruby> 汉 <rt>Hàn</rt> 字 <rt>Zì</rt> </ruby>
 ```
 
 ## 规范

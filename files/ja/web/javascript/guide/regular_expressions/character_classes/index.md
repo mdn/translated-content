@@ -1,6 +1,6 @@
 ---
 title: 文字クラス
-slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
+slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 l10n:
   sourceCommit: effd5de5e42bfe045c3bf44b2d7b14f4d6146785
 ---
@@ -133,7 +133,7 @@ l10n:
     </tr>
     <tr>
       <td><code>\t</code></td>
-      <td>水平タブにに一致します。</td>
+      <td>水平タブに一致します。</td>
     </tr>
     <tr>
       <td><code>\r</code></td>

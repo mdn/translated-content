@@ -1,7 +1,6 @@
 ---
 title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
-translation_of: Web/HTTP/Methods/CONNECT
 ---
 
 {{HTTPSidebar}}
@@ -38,7 +37,7 @@ translation_of: Web/HTTP/Methods/CONNECT
     </tr>
     <tr>
       <th scope="row">
-        Допускается в <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML формах</a>
+        Допускается в <a href="/ru/docs/Web/Guide/HTML/Forms">HTML формах</a>
       </th>
       <td>Нет</td>
     </tr>

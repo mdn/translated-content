@@ -3,7 +3,7 @@ title: canvas 的优化
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}
 
 {{HTMLElement("canvas")}}元素是众多广泛使用的网络 2D 图像渲染标准之一。它被广泛用于游戏及复杂的图像可视化中。然而，随着网站和应用将 canvas 画布推至极限，性能开始成为问题。此文目标是给使用 canvas 画布元素的优化带来建议，去保证你的网站或者应用表现卓越。
 
@@ -56,12 +56,20 @@ ctx.drawImage(myImage, 0.3, 0.5);
     width: 480px;
     height: 320px;
     position: relative;
-    border: 2px solid black
+    border: 2px solid black;
   }
-  canvas { position: absolute; }
-  #ui-layer { z-index: 3 }
-  #game-layer { z-index: 2 }
-  #background-layer { z-index: 1 }
+  canvas {
+    position: absolute;
+  }
+  #ui-layer {
+    z-index: 3;
+  }
+  #game-layer {
+    z-index: 2;
+  }
+  #background-layer {
+    z-index: 1;
+  }
 </style>
 ```
 
@@ -80,8 +88,8 @@ var scaleY = window.innerHeight / canvas.height;
 var scaleToFit = Math.min(scaleX, scaleY);
 var scaleToCover = Math.max(scaleX, scaleY);
 
-stage.style.transformOrigin = '0 0'; //scale from top left
-stage.style.transform = 'scale(' + scaleToFit + ')';
+stage.style.transformOrigin = "0 0"; //scale from top left
+stage.style.transform = "scale(" + scaleToFit + ")";
 ```
 
 ### 关闭透明度
@@ -89,7 +97,7 @@ stage.style.transform = 'scale(' + scaleToFit + ')';
 如果你的游戏使用画布而且不需要透明，当使用 [`HTMLCanvasElement.getContext()`](/zh-CN/docs/Web/API/HTMLCanvasElement/getContext) 创建一个绘图上下文时把 `alpha` 选项设置为 `false` 。这个选项可以帮助浏览器进行内部优化。
 
 ```js
-var ctx = canvas.getContext('2d', { alpha: false });
+var ctx = canvas.getContext("2d", { alpha: false });
 ```
 
 ### 更多的贴士
@@ -108,4 +116,4 @@ var ctx = canvas.getContext('2d', { alpha: false });
 - [Improving HTML5 Canvas Performance – HTML5 Rocks](http://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
 - [Optimizing your JavaScript game for Firefox OS – Mozilla Hacks](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)
 
-{{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}

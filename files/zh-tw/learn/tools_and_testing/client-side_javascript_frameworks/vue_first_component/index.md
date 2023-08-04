@@ -65,14 +65,14 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 1. 現在在元件 template 裡面新增一個空的 `<div>` 。
 2. 在這個 `<div>` 裡面，新增一個 checkbox 和一個相對應的 label。在 checkbox 加上一個 `id` 屬性，並在 label 加上 `for` 屬性，使 checkbox 對應到 label 。如下所示。
 
-    ```html
-    <template>
-      <div>
-        <input type="checkbox" id="todo-item" checked="false" />
-        <label for="todo-item">My Todo Item</label>
-      </div>
-    </template>
-    ```
+   ```html
+   <template>
+     <div>
+       <input type="checkbox" id="todo-item" checked="false" />
+       <label for="todo-item">My Todo Item</label>
+     </div>
+   </template>
+   ```
 
 ### 在我們的應用程式裡使用 TodoItem
 
@@ -81,22 +81,22 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 1. 再一次打開 `App.vue` 。
 2. 在 `<script>` 標籤的頂端，加上以下內容來匯入 `ToDoItem` 元件：
 
-    ```js
-    import ToDoItem from './components/ToDoItem.vue';
-    ```
+   ```js
+   import ToDoItem from "./components/ToDoItem.vue";
+   ```
 
 3. 在元件物件裡面添加 `components` 屬性，然後在它裡面添加 `ToDoItem` 元件來註冊它。
 
 現在你的 `<script>` 內容應該會像這樣：
 
 ```js
-import ToDoItem from './components/ToDoItem.vue';
+import ToDoItem from "./components/ToDoItem.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    ToDoItem
-  }
+    ToDoItem,
+  },
 };
 ```
 
@@ -146,13 +146,13 @@ export default {
 3. 在 `props` 物件中加入兩個屬性，分別是 `label` 和 `done`
 4. `label` 的值是一個物件帶有兩個屬性
 
-    1. 第一個屬性是 `required`，它的值為 `true`。這會告訴 Vue 我們預期元件必須要接收到一個名為 `label` 的 prop。如果元件沒有接受到的話，Vue 會發出警告通知我們。
-    2. 第二個屬性是 `type`，它的值為 `String`。這會告訴 Vue 我們預期 prop 的型別是一個字串。
+   1. 第一個屬性是 `required`，它的值為 `true`。這會告訴 Vue 我們預期元件必須要接收到一個名為 `label` 的 prop。如果元件沒有接受到的話，Vue 會發出警告通知我們。
+   2. 第二個屬性是 `type`，它的值為 `String`。這會告訴 Vue 我們預期 prop 的型別是一個字串。
 
 5. 接著是 `done` 這個 prop
 
-    1. 首先設定 `default` 屬性為 `false`，意思是當元件沒有接收到 `done` 的時候，`done` 的初始值為 false（要注意只有在 prop 不是必需的時候才會設定初始值）
-    2. 接著設定 `type` 這個屬性為 `Boolean`，這會告訴 Vue 我們預期 `done` 是一個布林值
+   1. 首先設定 `default` 屬性為 `false`，意思是當元件沒有接收到 `done` 的時候，`done` 的初始值為 false（要注意只有在 prop 不是必需的時候才會設定初始值）
+   2. 接著設定 `type` 這個屬性為 `Boolean`，這會告訴 Vue 我們預期 `done` 是一個布林值
 
 你的物件現在看起來應該要像是這樣：
 
@@ -240,13 +240,13 @@ Update the component object like so:
 export default {
   props: {
     label: { required: true, type: String },
-    done: { default: false, type: Boolean }
+    done: { default: false, type: Boolean },
   },
   data() {
     return {
-      isDone: this.done
+      isDone: this.done,
     };
-  }
+  },
 };
 ```
 
@@ -306,25 +306,25 @@ npm install --save lodash.uniqueid
 We can now import this package into our `ToDoItem` component. Add the following line at the top of `ToDoItem.vue`’s `<script>` element:
 
 ```js
-import uniqueId from 'lodash.uniqueid';
+import uniqueId from "lodash.uniqueid";
 ```
 
 Next, add an `id` field to our data property, so the component object ends up looking like so (`uniqueId()` returns the specified prefix — `todo-` — with a unique string appended to it):
 
 ```js
-import uniqueId from 'lodash.uniqueid';
+import uniqueId from "lodash.uniqueid";
 
 export default {
   props: {
     label: { required: true, type: String },
-    done: { default: false, type: Boolean }
+    done: { default: false, type: Boolean },
   },
   data() {
     return {
       isDone: this.done,
-      id: uniqueId('todo-')
+      id: uniqueId("todo-"),
     };
-  }
+  },
 };
 ```
 

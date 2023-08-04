@@ -250,9 +250,11 @@ This section lists the attributes available to all form `<input>` types. Non-glo
 - `pattern`
   - : A regular expression that the control's value is checked against. The pattern must match the entire value, not just some subset. Use the **title** attribute to describe the pattern to help the user. This attribute applies when the value of the **type** attribute is `text`, `search`, `tel`, `url`, `email`, or `password`, otherwise it is ignored. The regular expression language is the same as JavaScript {{jsxref("RegExp")}} algorithm, with the `'u'` parameter that makes it treat the pattern as a sequence of unicode code points. The pattern is not surrounded by forward slashes.
 - `placeholder`
+
   - : A hint to the user of what can be entered in the control . The placeholder text must not contain carriage returns or line-feeds.
 
     > **備註：** Do not use the `placeholder` attribute instead of a {{HTMLElement("label")}} element, their purposes are different. The {{HTMLElement("label")}} attribute describes the role of the form element (i.e. it indicates what kind of information is expected), and the `placeholder` attribute is a hint about the format that the content should take. There are cases in which the `placeholder` attribute is never displayed to the user, so the form must be understandable without it.
+
 - `readonly`
   - : This attribute indicates that the user cannot modify the value of the control. The value of the attribute is irrelevant. If you need read-write access to the input value, _do not_ add the "**readonly**" attribute. It is ignored if the value of the **type** attribute is `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, or a button type (such as `button` or `submit`).
 - `required`
@@ -323,10 +325,10 @@ You can find multiple examples of `<input>` element usage on the pages covering 
 1. Starting in Gecko 2.0, calling the `click()` method on an `<input>` element of type `file` opens the file picker and lets the user select files. See [Using files from web applications](/zh-TW/docs/Using_files_from_web_applications) for an example and more details.
 2. You cannot set the value of a file picker from a script — doing something like the following has no effect:
 
-    ```js
-    var e = getElementById("someFileInputElement");
-    e.value = "foo";
-    ```
+   ```js
+   var e = getElementById("someFileInputElement");
+   e.value = "foo";
+   ```
 
 3. When a file is chosen using an `<input type="file">`, the real path to the source file is not shown in the input's `value` attribute for obvious security reasons. Instead, the filename is shown, with `C:\fakepath\` appended to the beginning of it. There are some historical reasons for this quirk, but it is supported across all modern browsers, and in fact is [defined in the spec](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
 
@@ -335,8 +337,9 @@ You can find multiple examples of `<input>` element usage on the pages covering 
 If you want Firefox to present a custom error message when a field fails to validate, you can use the `x-moz-errormessage` attribute to do so:
 
 ```html
-<input type="email"
- x-moz-errormessage="Please specify a valid email address.">
+<input
+  type="email"
+  x-moz-errormessage="Please specify a valid email address." />
 ```
 
 Note, however, that this is not standard and will not have an effect on other browsers.
@@ -353,5 +356,5 @@ Firefox uses the following heuristics to determine the locale to validate the us
 
 ## 參見
 
-- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 - [Cross-browser HTML5 placeholder text](http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text)

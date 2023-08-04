@@ -39,7 +39,9 @@ element = baseElement.querySelector(selectors);
 在第一个例子中，会返回 HTML 文档里第一个没有 type 属性或者有值为“text/css”的 type 属性的{{HTMLElement("style")}}元素：
 
 ```js
-let el = document.body.querySelector("style[type='text/css'], style:not([type])");
+let el = document.body.querySelector(
+  "style[type='text/css'], style:not([type])",
+);
 ```
 
 ### 整个层次结构有效
@@ -68,7 +70,7 @@ let el = document.body.querySelector("style[type='text/css'], style:not([type])"
 ```js
 var baseElement = document.querySelector("p");
 document.getElementById("output").innerHTML =
-         (baseElement.querySelector("div span").innerHTML);
+  baseElement.querySelector("div span").innerHTML;
 ```
 
 #### 结果

@@ -3,6 +3,8 @@ title: HTTP
 slug: Glossary/HTTP
 ---
 
+{{GlossarySidebar}}
+
 HTTP (The HyperText Transfer Protocol，超文本传输协议) 是用于在 {{glossary("World Wide Web","Web")}} 上传输超媒体文件的底层 {{glossary("protocol", "协议")}} ，最典型场景的是在浏览器和服务器之间传递数据，以供人们浏览。现行的 HTTP 标准的版本是 {{glossary("HTTP_2", "HTTP/2")}}。
 
 `http://` 称为 `schema`，是 {{glossary("URI")}} 的组成部分，一般位于网络地址的开头。以 `https://developer.mozilla.org` 为例，该地址说明请求文档时使用 HTTP 协议；这里的 https 代指 HTTP 协议的安全版本，即 {{glossary("SSL")}} （或称 TLS）

@@ -1,6 +1,8 @@
 ---
-title: Node.getRootNode()
+title: "Node: getRootNode() メソッド"
 slug: Web/API/Node/getRootNode
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -9,9 +11,9 @@ slug: Web/API/Node/getRootNode
 
 ## 構文
 
-```js
-getRootNode();
-getRootNode(options);
+```js-nolint
+getRootNode()
+getRootNode(options)
 ```
 
 ### 引数
@@ -31,42 +33,54 @@ getRootNode(options);
 
 ## 例
 
+### 例 1
+
 最初に、 HTML/document ノードの参照を返す単純な例です。
 
 ```js
-rootNode = node.getRootNode();
+const rootNode = node.getRootNode();
 ```
 
-この例はもっと複雑で、通常のルートを返す場合と、シャドウルートを含むルートの違いを示します。 ([ソースコード全体](https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html)を見てください。)
+### 例 2
+
+この例はもっと複雑で、通常のルートを返す場合と、シャドウルートを含むルートの違いを示します。
 
 ```html
-<!-- source: https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html -->
-<div class="js-parent">
-  <div class="js-child"></div>
+<div class="parent">
+  <div class="child"></div>
 </div>
-<div class="js-shadowHost"></div>
-<script>
-  // Chrome 54 以降, Opera 41 以降で動作
-
-  const parent = document.querySelector('.js-parent'),
-      child = document.querySelector('.js-child'),
-      shadowHost = document.querySelector('.js-shadowHost');
-
-  console.log(parent.getRootNode().nodeName); // #document
-  console.log(child.getRootNode().nodeName); // #document
-
-  // ShadowRoot の生成
-  const shadowRoot = shadowHost.attachShadow({mode:'open'});
-  shadowRoot.innerHTML = '<style>div{background:#2bb8aa;}</style>'
-      + '<div class="js-shadowChild">content</div>';
-  const shadowChild = shadowRoot.querySelector('.js-shadowChild');
-
-  // 合成の既定値は false
-  console.log(shadowChild.getRootNode() === shadowRoot); // true
-  console.log(shadowChild.getRootNode({composed:false}) === shadowRoot); // true
-  console.log(shadowChild.getRootNode({composed:true}).nodeName); // #document
-</script>
+<div class="shadowHost">shadowHost</div>
+<pre id="output">Output: </pre>
 ```
+
+```js
+const parent = document.querySelector(".parent");
+const child = document.querySelector(".child");
+const shadowHost = document.querySelector(".shadowHost");
+const output = document.getElementById("output");
+
+output.textContent += `\nparent's root: ${parent.getRootNode().nodeName} \n`; // #document
+output.textContent += `child's  root: ${child.getRootNode().nodeName} \n\n`; // #document
+
+// ShadowRoot の生成
+const shadowRoot = shadowHost.attachShadow({ mode: "open" });
+shadowRoot.innerHTML =
+  '<style>div{background:#2bb8aa;}</style><div class="shadowChild">shadowChild</div>';
+const shadowChild = shadowRoot.querySelector(".shadowChild");
+
+// 合成の既定値は false
+output.textContent += `shadowChild.getRootNode() === shadowRoot : ${
+  shadowChild.getRootNode() === shadowRoot
+} \n`; // true
+output.textContent += `shadowChild.getRootNode({composed:false}) === shadowRoot : ${
+  shadowChild.getRootNode({ composed: false }) === shadowRoot
+} \n`; // true
+output.textContent += `shadowChild.getRootNode({composed:true}).nodeName : ${
+  shadowChild.getRootNode({ composed: true }).nodeName
+} \n`; // #document
+```
+
+{{ EmbedLiveSample('Example 2', '100%', '200px') }}
 
 ## 仕様書
 

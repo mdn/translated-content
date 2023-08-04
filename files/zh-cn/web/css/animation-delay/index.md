@@ -40,7 +40,7 @@ animation-delay: unset;
 
     负值会导致动画立即开始，但是从动画循环的某个时间点开始。例如，如果你将 `-1s` 作为动画延迟时间，则动画将立即开始，但是将在动画序列的第1秒开始。如果你为动画延迟指定负值，但起始值是隐含的，则起始值取自应用动画到元素的时刻。
 
-> **备注：** 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxref("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values)。
+> **备注：** 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxref("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)。
 
 ## 形式定义
 
@@ -94,7 +94,7 @@ animation-delay: unset;
 
 {{EmbedLiveSample("设置动画延迟","100%","250")}}
 
-参见 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)以获取示例。
+参见 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)以获取示例。
 
 ## 规范
 

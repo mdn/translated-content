@@ -1,6 +1,6 @@
 ---
 title: Aplicando cores a elementos HTML usando CSS
-slug: Web/CSS/CSS_Colors/Applying_color
+slug: Web/CSS/CSS_colors/Applying_color
 ---
 
 {{HTMLSidebar}}
@@ -11,7 +11,7 @@ Este artigo é uma cartilha que apresenta cada uma das maneiras pelas quais as c
 
 O uso da cor é uma forma fundamental de expressão humana. As crianças experimentam a cor antes mesmo de terem a destreza manual para desenhar. Talvez seja por isso que a cor é uma das primeiras coisas que as pessoas muitas vezes querem experimentar quando aprendem a desenvolver sites. Com [CSS](/pt-BR/docs/Web/CSS), há várias maneiras de adicionar cor aos seus [elementos](/pt-BR/docs/Web/HTML/Element) [HTML](/pt-BR/docs/Web/HTML) para criar exatamente a aparência desejada.
 
-Vamos abordar a maior parte do que você precisa saber ao usar cores, incluindo uma [lista do que você pode colorir e quais propriedades CSS estão envolvidas](#things_that_can_have_color), [como você descreve as cores](#how_to_describe_a_color ), e como realmente [usar cores em folhas de estilo e em scripts](#using_color). Também veremos como [deixar o usuário escolher uma cor](#letting_the_user_pick_a_color).
+Vamos abordar a maior parte do que você precisa saber ao usar cores, incluindo uma [lista do que você pode colorir e quais propriedades CSS estão envolvidas](#things_that_can_have_color), [como você descreve as cores](#how_to_describe_a_color), e como realmente [usar cores em folhas de estilo e em scripts](#using_color). Também veremos como [deixar o usuário escolher uma cor](#letting_the_user_pick_a_color).
 
 Em seguida, encerraremos as coisas com uma breve discussão sobre como [usar cores com sabedoria](#using_color_wisely): como selecionar cores apropriadas, tendo em mente as necessidades de pessoas com diferentes capacidades visuais.
 
@@ -30,13 +30,13 @@ Sempre que um elemento é renderizado, essas propriedades são usadas para deter
 - {{cssxref("background-color")}}
   - : A cor de fundo do texto.
 - {{cssxref("text-shadow")}}
-  - : Configura um efeito de sombra aplicado ao texto. Entre as opções para os aspectos da sombra, está a cor base da sombra (que será então desfocada e mesclada com o plano de fundo, com base nos outros parâmetros). Veja {{SectionOnPage("/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals", "Sombras projetadas em texto")}} para descobrir mais.
+  - : Configura um efeito de sombra aplicado ao texto. Entre as opções para os aspectos da sombra, está a cor base da sombra (que será então desfocada e mesclada com o plano de fundo, com base nos outros parâmetros). Veja [Sombras projetadas em texto](/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals#sombras_projetadas_em_texto) para descobrir mais.
 - {{cssxref("text-decoration-color")}}
   - : Por padrão, as decorações de texto (como sublinhados, tachados, etc.) usam a propriedade `color` como suas cores. No entanto, você pode substituir esse comportamento e usar uma cor diferente para eles com a propriedade `text-decoration-color`.
 - {{cssxref("text-emphasis-color")}}
   - : A cor a ser usada ao desenhar símbolos de ênfase adjacentes a cada caractere no texto. Isso é usado principalmente ao desenhar texto para idiomas do Leste Asiático.
 - {{cssxref("caret-color")}}
-  - : A cor a ser usada ao desenhar o {{Glossary("caret")}} (às vezes chamado de cursor de entrada de texto) dentro do elemento. Isso só é útil em elementos que são editáveis, como {{HTMLElement("input")}} e {{HTMLElement("textarea")}} ou elementos cujo atributo HTML {{htmlattrxref("contenteditable")}} está definido.
+  - : A cor a ser usada ao desenhar o {{Glossary("caret")}} (às vezes chamado de cursor de entrada de texto) dentro do elemento. Isso só é útil em elementos que são editáveis, como {{HTMLElement("input")}} e {{HTMLElement("textarea")}} ou elementos cujo atributo HTML [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes#contenteditable) está definido.
 
 ### Caixas
 
@@ -53,7 +53,7 @@ Cada elemento é uma caixa com algum tipo de conteúdo e tem um fundo e uma bord
 
 ### Bordas
 
-Qualquer elemento pode ter uma [borda](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) desenhada em torno dele. Uma borda de elemento básico é uma linha desenhada ao redor das bordas do conteúdo do elemento. Consulte {{SectionOnPage("/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Box_model", "Box properties")}} para saber mais sobre a relação entre elementos e suas bordas, e o artigo [Estilizando bordas usando CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) para saber mais sobre como aplicar estilos a bordas.
+Qualquer elemento pode ter uma [borda](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) desenhada em torno dele. Uma borda de elemento básico é uma linha desenhada ao redor das bordas do conteúdo do elemento. Consulte [Propriedades do Box](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Box_model#box_properties) para saber mais sobre a relação entre elementos e suas bordas, e o artigo [Estilizando bordas usando CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) para saber mais sobre como aplicar estilos a bordas.
 
 Você pode usar a propriedade abreviada {{cssxref("border")}}, que permite configurar tudo sobre o borda de uma só vez (incluindo recursos não coloridos de bordas, como sua [largura](/pt-BR/docs/Web/CSS/border-width), [estilo](/pt-BR/docs/Web/CSS/border-style) (sólido, tracejado, etc.), e assim por diante.
 
@@ -87,7 +87,7 @@ Para uma discussão mais detalhada de cada um dos tipos de valor de cor, veja a 
 
 Um conjunto de nomes de cores padrão foi definido, permitindo que você use essas palavras-chave em vez de representações numéricas de cores se você optar por fazer isso e houver uma palavra-chave representando a cor exata que você deseja usar. As palavras-chave de cores incluem as cores primárias e secundárias padrão (como `red`, `blue` ou `orange`), tons de cinza (de `black` a `white`, incluindo cores como `darkgray` e `lightgrey`), e uma variedade de outras cores misturadas, incluindo `lightseagreen`, `cornflowerblue` e `rebeccapurple`.
 
-Veja {{SectionOnPage("/pt-BR/docs/Web/CSS/color_value", "Palavras-chave de cor", "code")}} para uma lista de todas as palavras-chave de cores disponíveis.
+Veja [Palavras-chave de cores](/pt-BR/docs/Web/CSS/color_value#palavras-chave_de-cores) para uma lista de todas as palavras-chave de cores disponíveis.
 
 ### valores RGB
 
@@ -148,7 +148,11 @@ Aqui estão algumas cores de amostra em notação HSL:
 ```css hidden
 table {
   border: 1px solid black;
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border-spacing: 0;
   border-collapse: collapse;
 }
@@ -283,7 +287,10 @@ Nossas duas caixas coloridas compartilham várias propriedades em comum, então,
   height: 100px;
   margin: 0;
   padding: 4px 6px;
-  font: 28px "Marker Felt", "Zapfino", cursive;
+  font:
+    28px "Marker Felt",
+    "Zapfino",
+    cursive;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -329,7 +336,7 @@ Finalmente, a classe `.boxRight` descreve as propriedades únicas da caixa que �
 
 ## Deixando o usuário escolher uma cor
 
-Há muitas situações em que seu site pode precisar permitir que o usuário selecione uma cor. Talvez você tenha uma interface de usuário personalizável ou esteja implementando um aplicativo de desenho. Talvez você tenha texto editável e precise deixar o usuário escolher a cor do texto. Ou talvez seu aplicativo permita que o usuário atribua cores a pastas ou itens. Embora historicamente tenha sido necessário implementar seu próprio [seletor de cores](https://en.wikipedia.org/wiki/Color_picker), o HTML agora oferece suporte para navegadores fornecerem um para seu uso por meio do {{HTMLElement("input" )}}, usando `"color"` como o valor de seu atributo {{htmlattrxref("type", "input")}}.
+Há muitas situações em que seu site pode precisar permitir que o usuário selecione uma cor. Talvez você tenha uma interface de usuário personalizável ou esteja implementando um aplicativo de desenho. Talvez você tenha texto editável e precise deixar o usuário escolher a cor do texto. Ou talvez seu aplicativo permita que o usuário atribua cores a pastas ou itens. Embora historicamente tenha sido necessário implementar seu próprio [seletor de cores](https://en.wikipedia.org/wiki/Color_picker), o HTML agora oferece suporte para navegadores fornecerem um para seu uso por meio do {{HTMLElement("input" )}}, usando `"color"` como o valor de seu atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type).
 
 O elemento `<input>` representa uma cor apenas na [notação de string hexadecimal](#hexadecimal_string_notation) abordada acima.
 
@@ -363,7 +370,11 @@ O CSS estabelece um tamanho para a caixa e alguns estilos básicos para as apar�
   height: 200px;
   border: 2px solid rgb(245, 220, 225);
   padding: 4px 6px;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif";
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    "sans-serif";
 }
 ```
 
@@ -378,13 +389,21 @@ const output = document.getElementById("output");
 
 box.style.borderColor = colorPicker.value;
 
-colorPicker.addEventListener("input", (event) => {
-  box.style.borderColor = event.target.value;
-}, false);
+colorPicker.addEventListener(
+  "input",
+  (event) => {
+    box.style.borderColor = event.target.value;
+  },
+  false,
+);
 
-colorPicker.addEventListener("change", (event) => {
-  output.innerText = `Cor definida como ${colorPicker.value}.`;
-}, false);
+colorPicker.addEventListener(
+  "change",
+  (event) => {
+    output.innerText = `Cor definida como ${colorPicker.value}.`;
+  },
+  false,
+);
 ```
 
 O evento {{domxref("HTMLElement/input_event", "input")}} é enviado toda vez que o valor do elemento muda; ou seja, toda vez que o usuário ajusta a cor no seletor de cores. Cada vez que esse evento chega, definimos a cor da borda da caixa para corresponder ao valor atual do seletor de cores.

@@ -51,16 +51,14 @@ JavaScript 的物件即透過原型 (Prototype) 機制相互繼承功能，且�
 
 ```js
 function Person(first, last, age, gender, interests) {
-
   // property and method definitions
-
-};
+}
 ```
 
 接著建立如下的物件實例：
 
 ```js
-var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+var person1 = new Person("Bob", "Smith", 32, "male", ["music", "skiing"]);
 ```
 
 如果你在自己的 JavaScript 主控台中鍵入「`person1.」，應該會看到瀏覽器根據此物件可用的成員名稱開始自動補完：`
@@ -74,7 +72,7 @@ var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
 所以當你在 `person1 上呼叫了「實際上是定義於 Object 上的函式」，會發生什麼事呢？舉例來說：`
 
 ```js
-person1.valueOf()
+person1.valueOf();
 ```
 
 此函式僅回傳所呼叫的物件數值。此範例所將發生的是：
@@ -101,22 +99,22 @@ person1.valueOf()
 
 1. 你可自行檢查現有的原型屬性。回到我們之前的範例，試著於 JavaScript 主控台中輸入：
 
-    ```js
-    Person.prototype
-    ```
+   ```js
+   Person.prototype;
+   ```
 
 2. 輸出結果很平淡，畢竟我們並未在自定的建構子原型上定義任何東西。依預設值，建構子的 `prototype` 都是從空白開始。現在可嘗試下列：
 
-    ```js
-    Object.prototype
-    ```
+   ```js
+   Object.prototype;
+   ```
 
 這樣就會看到 `Object` 的 `prototype` 屬性中所定義的許多函式，而繼承自 `Object` 的物件也能找到這些函式。
 
 只要試著尋找如 [`String`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String)、[`Date`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date)、[`Number`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number)、[`Array`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array) 等全域物件的原型上定義的函式與屬性，就會看到 JavaScript 中的其他原型鍊繼承範例。這些物件都在其原型上定義了多個成員，因此可作為你建立字串時的範例：
 
 ```js
-var myString = 'This is my string.';
+var myString = "This is my string.";
 ```
 
 `myString` 上立刻就有多個有用的函式，如 [`split()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/split)、[`indexOf()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)、[`replace()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 等。
@@ -129,15 +127,15 @@ var myString = 'This is my string.';
 
 1. 舉例來說，你可先在前面的 JavaScript 主控台範例中試著輸入：
 
-    ```js
-    var person2 = Object.create(person1);
-    ```
+   ```js
+   var person2 = Object.create(person1);
+   ```
 
 2. `create()` 實際上是透過特定的原型物件，來建立新的物件。我們在這裡將 `person1` 作為原型物件，建立了 `person2`。你可於主控台輸入下列以測試之：
 
-    ```js
-    person2.__proto__
-    ```
+   ```js
+   person2.__proto__;
+   ```
 
 如此將回傳 `person1` 物件。
 
@@ -147,41 +145,44 @@ var myString = 'This is my string.';
 
 1. 舉例來說，若在主控台中輸入下列指令：
 
-    ```js
-    person1.constructor
-    person2.constructor
-    ```
+   ```js
+   person1.constructor;
+   person2.constructor;
+   ```
 
-    應該兩者都會回傳 `Person()` 建構子，因為此建構子包含這些實例的原始定義。
+   應該兩者都會回傳 `Person()` 建構子，因為此建構子包含這些實例的原始定義。
 
-    偷吃步的方法，是將圓括弧加到 `constructor` 屬性 (須包含任何必要參數) 末端，以從該建構子建立其他物件實例。畢竟建構子也是函式 (Function)，所以可透過圓括弧將之觸發。你只要納入 `new` 這個關鍵字，即可將此函式作為建構子。
+   偷吃步的方法，是將圓括弧加到 `constructor` 屬性 (須包含任何必要參數) 末端，以從該建構子建立其他物件實例。畢竟建構子也是函式 (Function)，所以可透過圓括弧將之觸發。你只要納入 `new` 這個關鍵字，即可將此函式作為建構子。
 
 2. 在主控台中輸入：
 
-    ```js
-    var person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);
-    ```
+   ```js
+   var person3 = new person1.constructor("Karen", "Stephenson", 26, "female", [
+     "playing drums",
+     "mountain climbing",
+   ]);
+   ```
 
 3. 現在可試著存取新物件的功能，例如：
 
-    ```js
-    person3.name.first
-    person3.age
-    person3.bio()
-    ```
+   ```js
+   person3.name.first;
+   person3.age;
+   person3.bio();
+   ```
 
 這樣運作得還不差。你不需常常用這方法，但當你要建立新的實例，又因為某些原因找不到原始建構子的參照，這就特別有用了。
 
 此外，[`constructor`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 屬性還有其他用處。舉例來說，如果你有個物件實例，並要回傳建構子 (本身就是實例) 的名稱，就透過：
 
 ```js
-instanceName.constructor.name
+instanceName.constructor.name;
 ```
 
 也可嘗試：
 
 ```js
-person1.constructor.name
+person1.constructor.name;
 ```
 
 ## 修改原型
@@ -190,17 +191,17 @@ person1.constructor.name
 
 1. 回到 [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 範例，先在本機儲存 1 份[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)的副本。在現成的 JavaScript 中加入下列程式碼，即是將新函式新增到建構子的 `prototype` 屬性：
 
-    ```js
-    Person.prototype.farewell = function() {
-      alert(this.name.first + ' has left the building. Bye for now!');
-    }
-    ```
+   ```js
+   Person.prototype.farewell = function () {
+     alert(this.name.first + " has left the building. Bye for now!");
+   };
+   ```
 
 2. 儲存程式碼並在瀏覽器中載入頁面，再輸入下列程式碼：
 
-    ```js
-    person1.farewell();
-    ```
+   ```js
+   person1.farewell();
+   ```
 
 這時應該會看到警示訊息且內含了建構子所定義的人名。這樣很有用，但如果能動態更新整個繼承鍊，且從建構子分割出來的所有物件實例都能使用此新的函式，就會更有用！
 
@@ -208,16 +209,18 @@ person1.constructor.name
 
 ```js
 function Person(first, last, age, gender, interests) {
-
   // property and method definitions
-
-};
-
-var person1 = new Person('Tammi', 'Smith', 32, 'neutral', ['music', 'skiing', 'kickboxing']);
-
-Person.prototype.farewell = function() {
-  alert(this.name.first + ' has left the building. Bye for now!');
 }
+
+var person1 = new Person("Tammi", "Smith", 32, "neutral", [
+  "music",
+  "skiing",
+  "kickboxing",
+]);
+
+Person.prototype.farewell = function () {
+  alert(this.name.first + " has left the building. Bye for now!");
+};
 ```
 
 但是 `farewell()` 函式仍可用於 `person1` 物件實例，其可用的功能已自動更新過。如此證明了我們之前對原型鍊的說明，也代表瀏覽器會沿著鍊往上找「尚未於物件實例上定義的函式」，而非「複製到實例中的函式」。如此可建構強大且靈活的系統。
@@ -227,13 +230,13 @@ Person.prototype.farewell = function() {
 你很少會看到在 `prototype` 屬性上定義的屬性，因為照此範例定義的屬性彈性較低，舉例來說，你可新增如下的屬性：
 
 ```js
-Person.prototype.fullName = 'Bob Smith';
+Person.prototype.fullName = "Bob Smith";
 ```
 
 但因為幾乎不會有人取這名字，所以就沒什麼彈性。最好可以在 `name.first` 與 `name.last 之外建立 fullName：`
 
 ```js
-Person.prototype.fullName = this.name.first + ' ' + this.name.last;
+Person.prototype.fullName = this.name.first + " " + this.name.last;
 ```
 
 但因為這樣會參照全域範圍，而非函式範圍，所以也不適用。若呼叫此屬性，則將回傳 `undefined undefined`。這種模式適合我們先前於原型中定義的函式，因為該函式就是在功能範圍之內，且可成功轉移至物件實例的的範圍。因此你可能會在原型中定義常數屬性 (也就是永遠不需更改的屬性)，但一般來說會比較適合在建構子中定義屬性。

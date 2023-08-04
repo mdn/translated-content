@@ -87,7 +87,7 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 - The ESC key no longer incorrectly results in the {{ domxref("window.oninput") }} handler incorrectly getting called.
 - The {{ domxref("NameList") }} interface is no longer implemented; it previously had an implementation with no way to actually get access to one.
 - The {{ domxref("document.createProcessingInstruction()") }} method now works on HTML documents as well as XML documents. {{ domxref("ProcessingInstruction") }} nodes are still only supported on XML documents, but since nodes can be moved among documents, it's helpful to be able to create them on HTML documents as well.
-- The {{ domxref("XMLHttpRequest") }} `responseType` "`moz-json`" [introduced in Firefox 9](/zh-TW/Firefox_9_for_developers#DOM) has been updated to the latest draft of the specification and has been unprefixed. See {{ bug("707142#c13") }}
+- The {{ domxref("XMLHttpRequest") }} `responseType` "`moz-json`" [introduced in Firefox 9](/zh-TW/Firefox_9_for_developers#DOM) has been updated to the latest draft of the specification and has been unprefixed. See [Firefox bug 707142](https://bugzil.la/707142#c13)
 
 ### CSS
 
@@ -120,7 +120,7 @@ For an overview of likely issues that may arise when updating your add-ons to su
 ### Manifests
 
 - Support for [`<em:strictCompatibility>`](/zh-TW/Install_Manifests#strictCompatibility) has been added to the install manifest. It allows add-ons authors to opt in to checking the maximum version of their extension. If set to `true` the add-on will be disabled if the application version is greater than `<em:maxVersion>`. Firefox 10 defaults to add-ons being compatible, regardless of their specified maximum version. This flag overrides that preference. You should set this if your add-on does things that are likely to be broken by Firefox updates, **but not** if your add-on has a binary component, since such add-ons always get strictly checked (remember that binary components must always be recompiled for each major Firefox release).
-- If you wish to revert to the old behavior -- that is, to strict compatibility checking for all add-ons, regardless of the value of the `strictCompatibility` flag in their manifests, you can set the `extensions.strictCompatibility` preference to `true`.
+- If you wish to revert to the old behavior — that is, to strict compatibility checking for all add-ons, regardless of the value of the `strictCompatibility` flag in their manifests, you can set the `extensions.strictCompatibility` preference to `true`.
 
 ### XUL
 

@@ -37,16 +37,16 @@ Because `abs()` is a static method of `Math`, you always use it as `Math.abs()`,
 Passing an empty object, an array with more than one member, a non-numeric string or {{jsxref("undefined")}}/empty variable returns {{jsxref("NaN")}}. Passing {{jsxref("null")}}, an empty string or an empty array returns 0.
 
 ```js
-Math.abs('-1');     // 1
-Math.abs(-2);       // 2
-Math.abs(null);     // 0
-Math.abs('');       // 0
-Math.abs([]);       // 0
-Math.abs([2]);      // 2
-Math.abs([1,2]);    // NaN
-Math.abs({});       // NaN
-Math.abs('string'); // NaN
-Math.abs();         // NaN
+Math.abs("-1"); // 1
+Math.abs(-2); // 2
+Math.abs(null); // 0
+Math.abs(""); // 0
+Math.abs([]); // 0
+Math.abs([2]); // 2
+Math.abs([1, 2]); // NaN
+Math.abs({}); // NaN
+Math.abs("string"); // NaN
+Math.abs(); // NaN
 ```
 
 ## 規範

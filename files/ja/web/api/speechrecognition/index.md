@@ -25,7 +25,7 @@ _`SpeechRecognition` は、親インターフェイスである {{domxref("Event
 - {{domxref("SpeechRecognition.grammars")}}
   - : {{domxref("SpeechGrammar")}} オブジェクトのコレクションを返却および設定します。これは、現在の `SpeechRecognition` により理解される文法を表します。
 - {{domxref("SpeechRecognition.lang")}}
-  - : 現在の `SpeechRecognition` の言語を返して設定します。指定されない場合、これは既定でで HTML の {{htmlattrxref("lang","html")}} 属性の値になります。どちらも設定されていない場合、ユーザーエージェントの言語設定が使用されます。
+  - : 現在の `SpeechRecognition` の言語を返して設定します。指定されない場合、これは既定でで HTML の [`lang`](/ja/docs/Web/HTML/Element/html#lang) 属性の値になります。どちらも設定されていない場合、ユーザーエージェントの言語設定が使用されます。
 - {{domxref("SpeechRecognition.continuous")}}
   - : 各認識の継続的な結果を返すか、単一の認識結果だけを返すかを制御します。既定値は単一 (`false`) です。
 - {{domxref("SpeechRecognition.interimResults")}}

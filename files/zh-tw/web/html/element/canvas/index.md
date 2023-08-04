@@ -43,8 +43,8 @@ canvas 的大小設置可透過樣式表（stylesheet）被改變。可經由樣
 
 ```html
 <canvas id="canvas" width="300" height="300">
-  抱歉，你的瀏覽器並不支援<canvas>元素
-</canvas>
+  抱歉，你的瀏覽器並不支援 canvas 元素</canvas
+>
 ```
 
 如果你的 canvas 沒有使用透明度，可在\<canvas>標籤設立`moz-opaque`屬性，提升它的繪圖效果。`moz-opaque` 尚未標準化，所以只適用在 Mozilla 的 效能引擎。

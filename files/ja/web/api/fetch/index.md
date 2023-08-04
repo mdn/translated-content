@@ -1,7 +1,6 @@
 ---
 title: fetch()
 slug: Web/API/fetch
-original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 l10n:
   sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
 ---
@@ -36,7 +35,7 @@ fetch(resource, options)
     - 文字列または{{Glossary("stringifier", "文字列化")}}できるその他のオブジェクト（{{domxref("URL")}} オブジェクトを含む）。取得したいリソースの直接の URL を含む文字列です。
     - {{domxref("Request")}} オブジェクト。
 
-- `init` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : リクエストに適用したいカスタム設定を含むオブジェクト。可能なオプションは以下の通りです。
 

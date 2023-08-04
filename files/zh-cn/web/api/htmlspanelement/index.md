@@ -25,6 +25,6 @@ _无特定方法；从其父元素{{domxref("HTMLElement")}}继承方法。_
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - The HTML element implementing this interface: {{HTMLElement("span")}}.

@@ -273,6 +273,7 @@ const greeting = "I'm a bad example";
 > ```js
 > const s = "I'm in a code block";
 > ```
+>
 > Like that.
 ````
 
@@ -320,16 +321,18 @@ const greeting = "I'm a bad example";
 
 ````md
 - term1
-    - : My description of term1
+
+  - : My description of term1
 
 - `term2`
-    - : My description of term2
 
-      It can have multiple paragraphs, and code blocks too:
+  - : My description of term2
 
-      ```js
-      const thing = 1;
-      ```
+    It can have multiple paragraphs, and code blocks too:
+
+    ```js
+    const thing = 1;
+    ```
 ````
 
 在 GFM/CommonMark 中，这将会产生以下 HTML：
@@ -384,7 +387,7 @@ const greeting = "I'm a bad example";
 
 ```md
 - `param1`, `param2`, `param3`
-    - : 对参数 1、2、3 的描述
+  - : 对参数 1、2、3 的描述
 ```
 
 这样设计语法的原因是：在使用 CommonMark（如 Prettier 或 Github 预览）工具的情况下，它相当容易编写和解析。
@@ -409,21 +412,20 @@ const greeting = "I'm a bad example";
 
 也就是说，必须使用以下风格：
 
-```md
+```md example-good
 | Heading 1 | Heading 2 | Heading 3 |
-|-----------|-----------|-----------|
+| --------- | --------- | --------- |
 | cell 1    | cell 2    | cell 3    |
 | cell 4    | cell 5    | cell 6    |
 ```
 
 而不是这种风格：
 
-```md
-Heading 1 | Heading 2 | Heading 3
- --- | --- | ---
-
-cell 1    | cell 2    | cell 3
-cell 4    | cell 5    | cell 6
+```md-nolint example-bad
+| Heading 1 | Heading 2 | Heading 3 |
+| --------- | --- |----------------------|
+| cell 1 | cell 2 | cell 3 |
+cell 4 | cell 5 | cell 6
 ```
 
 ### 何时使用 HTML 表格
@@ -449,32 +451,40 @@ GFM 表格语法的主要限制是：
 有时，即使可以使用 GFM 编写表格，也应该使用 HTML。因为 GFM 使用“ASCII art”来实现表格，当表格的一行变得过长时，将变得难以阅读。例如，考虑以下表格：
 
 ```html
-  <table>
-    <tr>
-      <th>A heading 1</th>
-      <th>A heading 2</th>
-      <th>A heading 3</th>
-      <th>A heading 4</th>
-      <th>A heading 5</th>
-      <th>A heading 6</th>
-    </tr>
-    <tr>
-      <td>Something shortish</td>
-      <td>Something much longer that really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format.</td>
-      <td>Something shortish</td>
-      <td>Another cell  with lots of text in it, that also really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format.</td>
-      <td>Something shortish</td>
-      <td>Something shortish</td>
-    </tr>
+<table>
+  <tr>
+    <th>A heading 1</th>
+    <th>A heading 2</th>
+    <th>A heading 3</th>
+    <th>A heading 4</th>
+    <th>A heading 5</th>
+    <th>A heading 6</th>
+  </tr>
+  <tr>
+    <td>Something shortish</td>
+    <td>
+      Something much longer that really goes into a lot of detail about
+      something, so much so that the table formatting starts to look bad in GFM
+      format.
+    </td>
+    <td>Something shortish</td>
+    <td>
+      Another cell with lots of text in it, that also really goes into a lot of
+      detail about something, so much so that the table formatting starts to
+      look bad in GFM format.
+    </td>
+    <td>Something shortish</td>
+    <td>Something shortish</td>
+  </tr>
 </table>
 ```
 
 在 GFM 中，它会是这样：
 
 ```md
-  | A heading 1        | A heading 2                                                                                                                                         | A heading 3        | A heading 4                                                                                                                                                              | A heading 5        | A heading 6        |
-  | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------ | ------------------ |
-  | Something shortish | Something much longer that really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format. | Something shortish | Another cell with lots of text in it, that also really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format. | Something shortish | Something shortish |
+| A heading 1        | A heading 2                                                                                                                                         | A heading 3        | A heading 4                                                                                                                                                              | A heading 5        | A heading 6        |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------ | ------------------ |
+| Something shortish | Something much longer that really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format. | Something shortish | Another cell with lots of text in it, that also really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format. | Something shortish | Something shortish |
 ```
 
 在这种情况下，最好使用 HTML。
@@ -515,7 +525,7 @@ GFM 表格语法的主要限制是：
 因为它们有一个标题列，GFM 无法表示这些页面。因此，应该使用 HTML。为了获得特殊的样式，还需要将 `"properties"` 类应用于表格：
 
 ```html
-<table class="properties">
+<table class="properties"></table>
 ```
 
 ### 讨论参考
@@ -549,7 +559,7 @@ GFM 表格语法的主要限制是：
 文本内容可以包括对 KumaScript 宏的调用：
 
 ```md
-The **`margin`** [CSS](/en-US/docs/Web/CSS) property
+The **`margin`** [CSS](/zh-CN/docs/Web/CSS) property
 sets the margin area on all four sides of an element. It is a shorthand for
 \{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}},
 and \{{cssxref("margin-left")}}.

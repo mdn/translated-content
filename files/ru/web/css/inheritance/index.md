@@ -1,8 +1,8 @@
 ---
 title: Наследование
-slug: Web/CSS/inheritance
-translation_of: Web/CSS/inheritance
+slug: Web/CSS/Inheritance
 ---
+
 ## Описание
 
 Описание каждого [CSS-свойства](/ru/docs/Web/CSS/Reference) говорит наследуется ли оно по умолчанию ("Наследуется: да/нет"). Наследование контролирует, что происходит, если значение свойства элемента не определено.

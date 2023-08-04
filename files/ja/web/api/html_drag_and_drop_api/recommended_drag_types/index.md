@@ -1,7 +1,6 @@
 ---
 title: 推奨されるドラッグのデータ型
 slug: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
-original_slug: DragDrop/Recommended_Drag_Types
 l10n:
   sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021
 ---

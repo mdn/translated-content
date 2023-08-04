@@ -5,32 +5,35 @@ slug: Web/JavaScript/Equality_comparisons_and_sameness
 
 {{jsSidebar("Intermediate")}}
 
-ES2015 中有四种相等算法：
+JavaScript 提供三种不同的值比较运算：
 
-- 抽象（非严格）相等比较 (`==`)
-- 严格相等比较 (`===`): 用于 `Array.prototype.indexOf`, `Array.prototype.lastIndexOf`, 和 `case`-matching
-- 同值零：用于 `%TypedArray%` 和 `ArrayBuffer` 构造函数、以及`Map`和`Set`操作，并将用于 ES2016/ES7 中的`String.prototype.includes`
-- 同值：用于所有其他地方
+- [`===`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)——严格相等（三个等号）
+- [`==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)——宽松相等（两个等号）
+- [`Object.is()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is)
 
-JavaScript 提供三种不同的值比较操作：
+选择哪个运算取决于你需要什么样的比较。简单来说：
 
-- 严格相等比较 (也被称作"strict equality", "identity", "triple equals")，使用 [===](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity) ,
-- 抽象相等比较 ("loose equality"，"double equals") ，使用 [==](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality)
-- 以及 [`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) （ECMAScript 2015/ ES6 新特性）
+- 在比较两个操作数时，双等号（`==`）将执行类型转换，并且会按照 IEEE 754 标准对 `NaN`、`-0` 和 `+0` 进行特殊处理（故 `NaN != NaN`，且 `-0 == +0`）；
+- 三等号（`===`）做的比较与双等号相同（包括对 `NaN`、`-0` 和 `+0` 的特殊处理）但不进行类型转换；如果类型不同，则返回 `false`；
+- `Object.is()` 既不进行类型转换，也不对 `NaN`、`-0` 和 `+0` 进行特殊处理（这使它和 `===` 在除了那些特殊数字值之外的情况具有相同的表现）。
 
-选择使用哪个操作取决于你需要什么样的比较。
+上述三个操作分别与 JavaScript 四个相等算法中的三个相对应：
 
-简而言之，在比较两件事情时，双等号将执行类型转换; 三等号将进行相同的比较，而不进行类型转换 (如果类型不同，只是总会返回 false ); 而 Object.is 的行为方式与三等号相同，但是对于 NaN 和 -0 和 +0 进行特殊处理，所以最后两个不相同，而 Object.is（NaN，NaN）将为 `true`。(通常使用双等号或三等号将 NaN 与 NaN 进行比较，结果为 false，因为 IEEE 754 如是说.) 请注意，所有这些之间的区别都与其处理原语有关; 这三个运算符的原语中，没有一个会比较两个变量是否结构上概念类似。对于任意两个不同的非原始对象，即便他们有相同的结构，以上三个运算符都会计算得到 false。
+- [IsLooselyEqual](https://tc39.es/ecma262/#sec-islooselyequal)：`==`
+- [IsStrictlyEqual](https://tc39.es/ecma262/#sec-isstrictlyequal)：`===`
+- [SameValue](https://tc39.es/ecma262/#sec-samevalue)：`Object.is()`
+- [SameValueZero](https://tc39.es/ecma262/#sec-samevaluezero)：被许多内置运算使用
 
-## 严格相等 `===`
+请注意，这些算法的区别都与它们对原始类型值的处理有关；它们都不会比较参数是否具有理论上相似的结构。对于任何具有相同的结构，但不是同一对象本身的非原始类型对象 `x` 和 `y` ，上述所有形式都将计算为 `false`。
 
-全等操作符比较两个值是否相等，两个被比较的值在比较前都不进行隐式转换。如果两个被比较的值具有不同的类型，这两个值是不全等的。否则，如果两个被比较的值类型相同，值也相同，并且都不是 number 类型时，两个值全等。最后，如果两个值都是 number 类型，当两个都不是 NaN，并且数值相同，或是两个值分别为 +0 和 -0 时，两个值被认为是全等的。
+## 使用 === 进行严格相等比较
+
+严格相等比较两个值是否相等。两个被比较的值在比较前都不进行隐式转换。如果两个被比较的值具有不同的类型，这两个值是不相等的。否则，如果两个被比较的值类型相同，值也相同，并且都不是 number 类型时，两个值相等。最后，如果两个值都是 number 类型，当两个都不是 `NaN`，并且数值相同，或是两个值分别为 `+0` 和 `-0` 时，两个值被认为是相等的。
 
 ```js
-var num = 0;
-var obj = new String("0");
-var str = "0";
-var b = false;
+const num = 0;
+const obj = new String("0");
+const str = "0";
 
 console.log(num === num); // true
 console.log(obj === obj); // true
@@ -44,206 +47,185 @@ console.log(obj === null); // false
 console.log(obj === undefined); // false
 ```
 
-在日常中使用全等操作符几乎总是正确的选择。对于除了数值之外的值，全等操作符使用明确的语义进行比较：一个值只与自身全等。对于数值，全等操作符使用略加修改的语义来处理两个特殊情况：第一个情况是，浮点数 0 是不分正负的。区分 +0 和 -0 在解决一些特定的数学问题时是必要的，但是大部分情况下我们并不用关心。全等操作符认为这两个值是全等的。第二个情况是，浮点数包含了 NaN 值，用来表示某些定义不明确的数学问题的解，例如：正无穷加负无穷。全等操作符认为 NaN 与其他任何值都不全等，包括它自己。（等式 `(x !== x)` 成立的唯一情况是 x 的值为 NaN）
+在日常中使用严格相等几乎总是正确的选择。对于除了数值之外的值，严格相等使用明确的语义进行比较：一个值只与自身严格相等。对于数值，严格相等使用略加修改的语义来处理两个特殊情况：第一个情况是，浮点数 0 是不分正负的。区分 `+0` 和 `-0` 在解决一些特定的数学问题时是必要的，但是大部分情况下我们并不用关心。严格相等认为这两个值是全等的。第二个情况是，浮点数包含了 `NaN` 值，用来表示某些定义不明确的数学问题的解，例如：正无穷加负无穷。严格相等认为 `NaN` 与其他任何值都不全等，包括它自己。（等式 `(x !== x)` 成立的唯一情况是 `x` 的值为 `NaN`）
 
-## 非严格相等 `==`
-
-相等操作符比较两个值是否相等，在比较前将两个被比较的值转换为相同类型。在转换后（等式的一边或两边都可能被转换），最终的比较方式等同于全等操作符 === 的比较方式。相等操作符满足交换律。
-
-相等操作符对于不同类型的值，进行的比较如下图所示：
-
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="row"></th>
-      <th colspan="7" scope="col">被比较值 B</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row"></th>
-      <td></td>
-      <td>Undefined</td>
-      <td>Null</td>
-      <td>Number</td>
-      <td>String</td>
-      <td>Boolean</td>
-      <td>Object</td>
-    </tr>
-    <tr>
-      <th colspan="1" rowspan="6" scope="row">被比较值 A</th>
-      <td>Undefined</td>
-      <td><code>true</code></td>
-      <td><code>true</code></td>
-      <td><code>false</code></td>
-      <td><code>false</code></td>
-      <td><code>false</code></td>
-      <td><code>IsFalsy(B)</code></td>
-    </tr>
-    <tr>
-      <td>Null</td>
-      <td><code>true</code></td>
-      <td><code>true</code></td>
-      <td><code>false</code></td>
-      <td><code>false</code></td>
-      <td><code>false</code></td>
-      <td><code>IsFalsy(B)</code></td>
-    </tr>
-    <tr>
-      <td>Number</td>
-      <td><code>false</code></td>
-      <td><code>false</code></td>
-      <td><code>A === B</code></td>
-      <td><code>A === ToNumber(B)</code></td>
-      <td><code>A=== ToNumber(B)</code></td>
-      <td><code>A== ToPrimitive(B)</code></td>
-    </tr>
-    <tr>
-      <td>String</td>
-      <td><code>false</code></td>
-      <td><code>false</code></td>
-      <td><code>ToNumber(A) === B</code></td>
-      <td><code>A === B</code></td>
-      <td><code>ToNumber(A) === ToNumber(B)</code></td>
-      <td><code>ToPrimitive(B) == A</code></td>
-    </tr>
-    <tr>
-      <td>Boolean</td>
-      <td><code>false</code></td>
-      <td><code>false</code></td>
-      <td><code>ToNumber(A) === B</code></td>
-      <td><code>ToNumber(A) === ToNumber(B)</code></td>
-      <td><code>A === B</code></td>
-      <td><code>ToNumber(A) == ToPrimitive(B)</code></td>
-    </tr>
-    <tr>
-      <td>Object</td>
-      <td><code>false</code></td>
-      <td><code>false</code></td>
-      <td><code>ToPrimitive(A) == B</code></td>
-      <td><code>ToPrimitive(A) == B</code></td>
-      <td><code>ToPrimitive(A) == ToNumber(B)</code></td>
-      <td>
-        <p><code>A === B</code></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-在上面的表格中，`ToNumber(A)` 尝试在比较前将参数 A 转换为数字，这与 +A（单目运算符 +）的效果相同。`ToPrimitive(A)`通过尝试调用 A 的`A.toString()` 和 `A.valueOf()` 方法，将参数 A 转换为原始值（Primitive）。
-
-一般而言，根据 ECMAScript 规范，所有的对象都与 `undefined` 和 `null` 不相等。但是大部分浏览器允许非常窄的一类对象（即，所有页面中的 `document.all` 对象），在某些情况下，充当效仿 `undefined` 的角色。相等操作符就是在这样的一个背景下。因此，`IsFalsy(A)` 方法的值为 `true`，当且仅当 `A` 效仿 `undefined`。在其他所有情况下，一个对象都不会等于 `undefined`或 `null`。
+除了 `===` 之外，数组索引查找方法也使用严格相等，包括 [`Array.prototype.indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)、[`Array.prototype.lastIndexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf)、[`TypedArray.prototype.index()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf)、[`TypedArray.prototype.lastIndexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf) 和 [`case`](/zh-CN/docs/Web/JavaScript/Reference/Statements/switch) 匹配。这意味着你不能使用 `indexOf(NaN)` 查找数组中 `NaN` 值的索引，也不能将 `NaN` 用作 `case` 值在 `switch` 语句中匹配任何内容。
 
 ```js
-var num = 0;
-var obj = new String("0");
-var str = "0";
-var b = false;
-
-console.log(num == num); // true
-console.log(obj == obj); // true
-console.log(str == str); // true
-
-console.log(num == obj); // true
-console.log(num == str); // true
-console.log(obj == str); // true
-console.log(null == undefined); // true
-
-// both false, except in rare cases
-console.log(obj == null);
-console.log(obj == undefined);
+console.log([NaN].indexOf(NaN)); // -1
+switch (NaN) {
+  case NaN:
+    console.log("Surprise"); // 没有任何输出
+}
 ```
 
-有些开发者认为，最好永远都不要使用相等操作符。全等操作符的结果更容易预测，并且因为没有隐式转换，全等比较的操作会更快。
+## 使用 == 进行宽松相等比较
 
-## 同值相等
+宽松相等是*对称的*：对于任何 `A` 和 `B` 的值，`A == B` 总是与 `B == A` 具有相同的语义（除了转换应用的顺序）。使用 `==` 执行宽松相等的行为如下：
 
-同值相等解决了最后一个用例：确定两个值是否在任何情况下功能上是相同的。（这个用例演示了[里氏替换原则](http://zh.wikipedia.org/zh-cn/%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99)的实例。）当试图对不可变（immutable）属性修改时发生出现的情况：
+1. 如果操作数具有相同的类型，则按以下方式进行比较：
+   - Object：仅当两个操作数引用相同的对象时，才返回 `true`。
+   - String：仅当两个操作数具有相同的字符并且顺序相同，才返回 `true`。
+   - Number：仅当两个操作数具有相同的值时，才返回 `true`。`+0` 和 `-0` 被视为相同的值。如果任一操作数为 `NaN`，则返回 `false`；因此 `NaN` 永远不等于 `NaN`。
+   - Boolean：仅当操作数都是 `true` 或 `false` 时，才返回 `true`。
+   - BigInt：仅当两个操作数具有相同的值时，才返回 `true`。
+   - Symbol：仅当两个操作数引用相同的 symbol 时，才返回 `true`。
+2. 如果操作数之一为 `null` 或 `undefined`，则另一个操作数必须为 `null` 或 `undefined` 才返回 `true`。否则返回 `false`。
+3. 如果操作数之一是对象，而另一个是原始值，[则将对象转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。
+4. 在这一步骤中，两个操作数都被转换为原始值（String、Number、Boolean、Symbol 和 BigInt 之一）。剩余的转换将分情况完成。
+   - 如果它们是相同类型的，则使用步骤 1 进行比较。
+   - 如果操作数中有一个是 Symbol，但另一个不是，则返回 `false`。
+   - 如果操作数之一是 Boolean，而另一个不是，[则将 Boolean 转换为 Number](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)：`true` 转换为 1，`false` 转换为 0。然后再次对两个操作数进行宽松比较。
+   - Number 转 String：[将 String 转换为 Number](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)。转换失败会得到 `NaN`，这将确保相等性为 `false`。
+   - Number 转 BigInt：按照其数值进行比较。如果 Number 是 `±Infinity` 或 `NaN`，返回 `false`。
+   - String 转 BigInt: 使用与 [`BigInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) 构造函数相同的算法将字符串转换为 BigInt。如果转换失败，则返回 `false`。
+
+一般而言，根据 ECMAScript 规范，所有原始类型和对象都不与 `undefined` 和 `null` 宽松相等。但是大部分浏览器允许非常有限的一类对象（即，所有页面中的 `document.all` 对象）在某些情况下表现出*模拟* `undefined` 值特性。宽松相等就是这些情况之一：当且仅当 A 是一个*模拟* `undefined` 的对象时，`null == A` 和 `undefined == A` 将会计算得到 `true`。在其他所有情况下，一个对象都不会与 `undefined` 或 `null` 宽松相等。
+
+在大多数情况下，不建议使用宽松相等。使用严格相等进行比较的结果更容易预测，并且由于缺少类型强制转换可以更快地执行。
+
+下面的例子演示了宽松比较，其中涉及 number 原始值 `0`、bigint 原始值 `0n`、string 原始值 `'0'` 和一个 `toString()` 值为 `'0'` 的对象。
+
+```js
+const num = 0;
+const big = 0n;
+const str = "0";
+const obj = new String("0");
+
+console.log(num == str); // true
+console.log(big == num); // true
+console.log(str == big); // true
+
+console.log(num == obj); // true
+console.log(big == obj); // true
+console.log(str == obj); // true
+```
+
+宽松相等仅由 `==` 运算符使用。
+
+## 使用 Object.is() 进行同值相等比较
+
+同值相等决定了两个值在所有上下文中是否在功能上相同。（这个用例演示了[里氏替换原则](https://zh.wikipedia.org/wiki/里氏替换原则)的一种情况。）这一情况会在尝试修改一个不可变属性时发生。
 
 ```js
 // 向 Nmuber 构造函数添加一个不可变的属性 NEGATIVE_ZERO
-Object.defineProperty(Number, "NEGATIVE_ZERO",
-                      { value: -0, writable: false, configurable: false, enumerable: false });
+Object.defineProperty(Number, "NEGATIVE_ZERO", {
+  value: -0,
+  writable: false,
+  configurable: false,
+  enumerable: false,
+});
 
-function attemptMutation(v)
-{
+function attemptMutation(v) {
   Object.defineProperty(Number, "NEGATIVE_ZERO", { value: v });
 }
 ```
 
-`Object.defineProperty` 在试图修改不可变属性时，如果这个属性确实被修改了则会抛出异常，反之什么都不会发生。例如如果 v 是 -0，那么没有发生任何变化，所以也不会抛出任何异常。但如果 v 是 +0，则会抛出异常。不可变属性和新设定的值使用 same-value 相等比较。
+当尝试更改不可变属性时，`Object.defineProperty` 会抛出异常，但如果没有请求实际更改，则不会执行任何操作。如果 `v` 是 `-0`，则没有请求更改，也不会抛出错误。在内部，重新定义不可变属性时，使用同值相等将新指定的值与当前值进行比较。
 
-同值相等由 [`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) 方法提供。
+同值相等由 [`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) 方法提供。语言内部期望一个值等于另一个时，几乎所有地方都使用同值相等。
 
 ## 零值相等
 
-与同值相等类似，不过会认为 +0 与 -0 相等。
+类似于同值相等，但 +0 和 -0 被视为相等。
 
-## 规范中的相等、严格相等以及同值相等
+零值相等不作为 JavaScript API 公开，但可以通过自定义代码实现：
 
-在 ES5 中， [`==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) 相等在 [Section 11.9.3, The Abstract Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.3)； [`===`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) 相等在 [11.9.6, The Strict Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.6)。（请参考这两个链接，他们很简洁易懂。提示：请先阅读严格相等的算法）ES5 也提供了 same-value 相等， [Section 9.12, The SameValue Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-9.12) ，用在 JS 引擎内部。除了 11.9.6.4 和 9.12.4 在处理数字上的不同外，它基本和严格相等算法相同。ES6 简单地通过 [`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) 暴露了这个算法。
+```js
+function sameValueZero(x, y) {
+  if (typeof x === "number" && typeof y === "number") {
+    // x 和 y 相等（可能是 -0 和 0）或它们都是 NaN
+    return x === y || (x !== x && y !== y);
+  }
+  return x === y;
+}
+```
 
-我们可以看到，使用双等或三等时，除了 11.9.6.1 类型检查，严格相等算法是相等算法的子集因为 11.9.6.2–7 对应 11.9.3.1.a–f。
+零值相等与严格相等的区别在于其将 `NaN` 视作是相等的，与同值相等的区别在于其将 `-0` 和 `0` 视作相等的。这使得它在搜索期间通常具有最实用的行为，特别是在与 `NaN` 一起使用时。它被用于 [`Array.prototype.includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)、[`TypedArray.prototype.includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes) 及 [`Map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 和 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 方法用来比较键的相等性。
 
-## 理解相等比较的模型
+## 相等性方法比较
 
-在 ES2015 以前，你可能会说双等和三等是“扩展”的关系。比如有人会说双等是三等的扩展版，因为他处理三等所做的，还做了类型转换。例如 6 == "6" 。反之另一些人可能会说三等是双等的扩展，因为他还要求两个参数的类型相同，所以增加了更多的限制。怎样理解取决于你怎样看待这个问题。
+在比较双等号和三等号时，人们通常说一个时另一个的“增强”版本。例如，双等号可以被称为三等号的扩展版本，因为前者可以执行后者的所有操作，但是会对其操作数进行类型转换——例如 `6 == "6"`。或者，也可以说双等号是基础，而三等号是增强版本，因为它要求两个操作数是相同的类型，因此增加了额外的约束。
 
-但是这种比较的方式没办法把 ES2015 的 [`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) 排列到其中。因为 [`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) 并不比双等更宽松，也并不比三等更严格，当然也不是在他们中间。从下表中可以看出，这是由于 [`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) 处理 [`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 的不同。注意假如 `Object.is(NaN, NaN)` 被计算成 `false` ，我们就可以说他比三等更为严格，因为他可以区分 `-0` 和 `+0` 。但是对 [`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 的处理表明，这是不对的。 [`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) 应该被认为是有其特殊的用途，而不应说他和其他的相等更宽松或严格。
+然而，这种思维方式意味着相等比较形成了一个一维的“光谱”，其中“完全严格”位于一端，“完全宽松”位于另一端。这个模型在 {{jsxref("Object.is")}} 方面存在缺陷，因为它既不比双等号“宽松”，也不比三等号“严格”，也不处于两者之间（可以说既比双等号严格，又比三等号宽松）。从下面的相同比较表中，我们可以看出这是由于 {{jsxref("Object.is")}} 处理 {{jsxref("NaN")}} 的方式。请注意，如果 `Object.is(NaN, NaN)` 求值得到 `false`，我们*可以*说它适合宽松/严格光谱，作为三等号的更严格形式，可以区分 `-0` 和 `+0` 。然而，{{jsxref("NaN")}} 的处理意味着这是不正确的。不幸的是，{{jsxref("Object.is")}} 必须根据其特定特征来考虑，而不是根据其相等运算符的宽松度或严格度来考虑。
 
-| x                   | y                   | `==`    | `===`   | `Object.is` |
-| ------------------- | ------------------- | ------- | ------- | ----------- |
-| `undefined`         | `undefined`         | `true`  | `true`  | `true`      |
-| `null`              | `null`              | `true`  | `true`  | `true`      |
-| `true`              | `true`              | `true`  | `true`  | `true`      |
-| `false`             | `false`             | `true`  | `true`  | `true`      |
-| `"foo"`             | `"foo"`             | `true`  | `true`  | `true`      |
-| `0`                 | `0`                 | `true`  | `true`  | `true`      |
-| `+0`                | `-0`                | `true`  | `true`  | `false`     |
-| `0`                 | `false`             | `true`  | `false` | `false`     |
-| `""`                | `false`             | `true`  | `false` | `false`     |
-| `""`                | `0`                 | `true`  | `false` | `false`     |
-| `"0"`               | `0`                 | `true`  | `false` | `false`     |
-| `"17"`              | `17`                | `true`  | `false` | `false`     |
-| `[1,2]`             | `"1,2"`             | `true`  | `false` | `false`     |
-| `new String("foo")` | `"foo"`             | `true`  | `false` | `false`     |
-| `null`              | `undefined`         | `true`  | `false` | `false`     |
-| `null`              | `false`             | `false` | `false` | `false`     |
-| `undefined`         | `false`             | `false` | `false` | `false`     |
-| `{ foo: "bar" }`    | `{ foo: "bar" }`    | `false` | `false` | `false`     |
-| `new String("foo")` | `new String("foo")` | `false` | `false` | `false`     |
-| `0`                 | `null`              | `false` | `false` | `false`     |
-| `0`                 | `NaN`               | `false` | `false` | `false`     |
-| `"foo"`             | `NaN`               | `false` | `false` | `false`     |
-| `NaN`               | `NaN`               | `false` | `false` | `true`      |
+| x                   | y                   | `==`       | `===`      | `Object.is` | `SameValueZero` |
+| ------------------- | ------------------- | ---------- | ---------- | ----------- | --------------- |
+| `undefined`         | `undefined`         | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `null`              | `null`              | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `true`              | `true`              | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `false`             | `false`             | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `'foo'`             | `'foo'`             | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `0`                 | `0`                 | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `+0`                | `-0`                | `✅ true`  | `✅ true`  | `❌ false`  | `✅ true`       |
+| `+0`                | `0`                 | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `-0`                | `0`                 | `✅ true`  | `✅ true`  | `❌ false`  | `✅ true`       |
+| `0n`                | `-0n`               | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `0`                 | `false`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `""`                | `false`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `""`                | `0`                 | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `'0'`               | `0`                 | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `'17'`              | `17`                | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `[1, 2]`            | `'1,2'`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `new String('foo')` | `'foo'`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `null`              | `undefined`         | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `null`              | `false`             | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `undefined`         | `false`             | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `{ foo: 'bar' }`    | `{ foo: 'bar' }`    | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `new String('foo')` | `new String('foo')` | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `0`                 | `null`              | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `0`                 | `NaN`               | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `'foo'`             | `NaN`               | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `NaN`               | `NaN`               | `❌ false` | `❌ false` | `✅ true`   | `✅ true`       |
 
-## 什么时候使用 [`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) 或是三等
+### 何时使用 Object.is() 而不是三等号
 
-总的来说，除了对待[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN)的方式，[`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is)唯一让人感兴趣的，是当你需要一些元编程方案时，它对待 0 的特殊方式，特别是关于属性描述器，即你的工作需要去镜像[`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)的一些特性时。如果你的工作不需要这些，那你应该避免使用[`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is)，使用[`===`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)来代替。即使你需要比较两个[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN)使其结果为`true`，总的来说编写使用[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 检查的特例函数 (用旧版本 ECMAScript 的[`isNaN 方法`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN)) 也会比想出一些计算方法让[`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is)不影响不同符号的 0 的比较更容易些。
+通常情况下，唯一需要关注 {{jsxref("Object.is")}} 对零的特殊行为的时机是在实施特定的元编程范式时，特别是涉及属性描述符时，当你的工作需要镜像 {{jsxref("Object.defineProperty")}} 的某些特性时。如果你的用例不需要这样做，建议避免使用 {{jsxref("Object.is")}}，而改用 [`===`](/zh-CN/docs/Web/JavaScript/Reference/Operators)。即使你的要求涉及将两个 {{jsxref("NaN")}} 值之间的比较计算为 `true`，通常特殊处理 {{jsxref("NaN")}} 检查（使用先前版本的 ECMAScript 中提供的 {{jsxref("isNaN")}} 方法）比解决相关计算如何影响零的符号更为简单。
 
-这里是一个会区别对待 -0 和 +0 的内置方法和操作符不完全列表：
+这是一个不全面的列表，其中包含可能导致你的代码中出现 `-0` 和 `+0` 之间差异的内置方法和运算符：
 
-- [`- (一元负)`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29)
-  - : 显而易见，对 `0` 一元负操作得到 `-0`。但表达式的抽象化可能在你没有意识到得情况下导致 `-0` 延续传播。例如当考虑下例时：`js let stoppingForce = obj.mass * -obj.velocity` 如果 `obj.velocity` 是 `0` (或计算结果为 `0`), 一个 `-0` 就在上处产生并被赋值为 `stoppingForce` 的值。
-- [`Math.atan2`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2),
-  [`Math.ceil`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil),
-  [`Math.pow`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/pow),
-  [`Math.round`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/round)
-  - : 即使传入的参数中没有 -0，这些方法的返回值都有可能是 -0。例如当用 [`Math.pow`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/pow)计算`-Infinity`的任何负奇指数的幂都会得到`-0`。详情请参见这些方法各自的文档。
-- [`Math.floor`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/floor),
-  [`Math.max`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/max),
-  [`Math.min`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/min),
-  [`Math.sin`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/sin),
-  [`Math.sqrt`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt),
-  [`Math.tan`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/tan)
-  - : 当传入参数中有 -0 时，这些方法也可能返回 -0。例如， `Math.min(-0, +0)` 得出 `-0`。详情请参见这些方法各自的文档。
-- [`~`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators),
-  [`<<`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators),
-  [`>>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
-  - : 这些操作符内部都使用了 ToInt32 算法。因为内部 32 位整数类型只有一个 0（没有符号区别），-0 的符号在反操作后并不会保留下来。例如 `Object.is(~~(-0), -0)` 和 `Object.is(-0 << 2 >> 2, -0)` 都会得到 `false`.
+- [`-`（一元减）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
 
-在未考虑 0 的符号的情况下依赖于 [`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) 是危险的。当然，如果本意就是区分 -0 和 +0 的话，[`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) 能按照期望完成工作。
+  - : 考虑以下例子：
 
-## 参考
+    ```js
+    const stoppingForce = obj.mass * -obj.velocity;
+    ```
 
-- [JS 比较表](http://dorey.github.io/JavaScript-Equality-Table/)
+    如果 `obj.velocity` 是 `0`（或计算为 `0`），则在该位置引入 `-0` 并向 `stoppingForce` 传播。
+
+- {{jsxref("Math.atan2")}}、{{jsxref("Math.ceil")}}、{{jsxref("Math.pow")}}、{{jsxref("Math.round")}}
+
+  - : 在某些情况下，即使没有 `-0` 作为参数之一，这些方法的返回值仍可能作为表达式中的 `-0` 被引入。例如，使用 `Math.pow` 将 {{jsxref("Infinity", "-Infinity")}} 的任何负奇数次幂求值为 `-0`。请参阅各个方法的文档。
+
+- {{jsxref("Math.floor")}}、{{jsxref("Math.max")}}、{{jsxref("Math.min")}}、{{jsxref("Math.sin")}}、{{jsxref("Math.sqrt")}}、{{jsxref("Math.tan")}}
+
+  - : 在某些情况下，当参数中存在 `-0` 时，这些方法可能会返回一个 `-0` 值。例如，`Math.min(-0, +0)` 的计算结果为 `-0`。请参考各个方法的文档。
+
+- [`~`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT)、[`<<`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Left_shift)、[`>>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Right_shift)
+
+  - : 这些运算符中的每一个都在内部使用 ToInt32 算法。由于在内部 32 位整数类型中只有一个表示 0 的表示形式，`-0` 在反向操作后将不会存在。例如，`Object.is(~~(-0), -0)` 和 `Object.is(-0 << 2 >> 2, -0)` 都会计算为 `false`。
+
+如果不考虑零的符号，依赖于 {{jsxref("Object.is")}} 可能会很危险。当意图区分 `-0` 和 `+0` 时，它当然会做到期望的效果。
+
+### 注意: Object.is() 和 NaN
+
+{{jsxref("Object.is")}} 规范将所有 {{jsxref("NaN")}} 的实例视为同一对象。然而，由于可以使用[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)，我们可以拥有 `NaN` 的不同浮点表示，这些表示在所有上下文中的行为不完全相同。例如：
+
+```js
+const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
+const b2f = (x) => new Float64Array(x.buffer)[0];
+// 得到 NaN 的字节表示
+const n = f2b(NaN);
+// 改变第一位，该位表示符号且与 NaN 无关
+n[0] = 1;
+const nan2 = b2f(n);
+console.log(nan2); // NaN
+console.log(Object.is(nan2, NaN)); // true
+console.log(f2b(NaN)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 127]
+console.log(f2b(nan2)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
+```
+
+## 参见
+
+- [JS 比较表](https://dorey.github.io/JavaScript-Equality-Table/)

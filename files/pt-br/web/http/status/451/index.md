@@ -15,7 +15,7 @@ O código de erro HTTP para o cliente **`451 Unavailable For Legal Reasons`** in
 
 ## Exemplo
 
-Este exemplo de resposta foi obtida da RFC do IETF (veja abaixo) e contém uma referência à {{interwiki("wikipedia", "Monty_Python's_Life_of_Brian", "Monty Python's Life of Brian")}}.
+Este exemplo de resposta foi obtida da RFC do IETF (veja abaixo) e contém uma referência à [Monty Python's Life of Brian](https://pt.wikipedia.org/wiki/A_Vida_de_Brian).
 
 **Nota:** o cabeçalho {{HTTPHeader("Link")}} também pode conter uma relação `rel="blocked-by"` identificando a entidade que solicitou o bloqueio, e não qualquer outra entidade.
 
@@ -42,8 +42,8 @@ Content-Type: text/html
 
 ## Especificações
 
-| Epecificação                                                         | Título                                        |
-| -------------------------------------------------------------------- | --------------------------------------------- |
+| Epecificação                                         | Título                                        |
+| ---------------------------------------------------- | --------------------------------------------- |
 | {{RFC("7725", "451 Unavailable For Legal Reasons")}} | An HTTP Status Code to Report Legal Obstacles |
 
 ## Compatibilidade com navegadores
@@ -54,5 +54,5 @@ A informação exibida acima está sendo servida do MDN's GitHub (<https://githu
 
 ## Veja também
 
-- {{interwiki("wikipedia", "HTTP_451", "Wikipedia: HTTP 451")}}
-- {{interwiki("wikipedia", "Fahrenheit_451", "Wikipedia: Fahrenheit 451")}} (which gave this status code its number)
+- [Wikipedia: HTTP 451](https://pt.wikipedia.org/wiki/HTTP_451)
+- [Wikipedia: Fahrenheit 451](https://pt.wikipedia.org/wiki/Fahrenheit_451) (which gave this status code its number)

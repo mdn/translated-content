@@ -20,11 +20,11 @@ URLSearchParams.toString()
 ## 实例
 
 ```js
-let url = new URL('https://example.com?foo=1&bar=2');
+let url = new URL("https://example.com?foo=1&bar=2");
 let params = new URLSearchParams(url.search.slice(1));
 
 //Add a second foo parameter.
-params.append('foo', 4);
+params.append("foo", 4);
 console.log(params.toString());
 //Prints 'foo=1&bar=2&foo=4'.
 ```
@@ -33,7 +33,7 @@ console.log(params.toString());
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

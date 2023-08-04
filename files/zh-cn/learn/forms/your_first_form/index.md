@@ -1,7 +1,6 @@
 ---
 title: 创建我的第一个表单
 slug: Learn/Forms/Your_first_form
-original_slug: Learn/HTML/Forms/Your_first_HTML_form
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
@@ -58,16 +57,14 @@ web 表单是由一个或多个**表单控件**（有时称为**小部件**）�
 
 好了，现在我们准备进入 HTML 代码并对表单进行编码。为了构建我们的联系人表单，我们将使用以下 HTML 元素：{{HTMLElement("form")}}、{{HTMLElement("label")}}、{{HTMLElement("input")}}、{{HTMLElement("textarea")}} 和 {{HTMLElement("button")}}。
 
-在进一步讨论之前，先创建一个[简单 HTML 模板](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)的本地副本——你将在这里输入表单的 HTML。
+在进一步讨论之前，先创建一个[简单 HTML 模板](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)的本地副本——你将在这里输入表单的 HTML。
 
 ### `<form>` 元素
 
 所有表单都以一个 {{HTMLElement("form")}} 元素开始：
 
 ```html
-<form action="/my-handling-form-page" method="post">
-
-</form>
+<form action="/my-handling-form-page" method="post"></form>
 ```
 
 这个元素正式定义了一个表单。就像 {{HTMLelement("section")}} 元素或 {{HTMLelement("footer")}} 元素，它是一个容器元素，但它也支持一些特定的属性来配置表单的行为方式。它的所有属性都是可选的，但实践中最好至少要设置 [`action`](/zh-CN/docs/Web/HTML/Element/form#attr-action) 属性和 [`method`](/zh-CN/docs/Web/HTML/Element/form#attr-method) 属性。
@@ -91,20 +88,20 @@ web 表单是由一个或多个**表单控件**（有时称为**小部件**）�
 
 ```html
 <form action="/my-handling-form-page" method="post">
- <ul>
-  <li>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="user_name">
-  </li>
-  <li>
-    <label for="mail">E-mail:</label>
-    <input type="email" id="mail" name="user_email">
-  </li>
-  <li>
-    <label for="msg">Message:</label>
-    <textarea id="msg" name="user_message"></textarea>
-  </li>
- </ul>
+  <ul>
+    <li>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="user_name" />
+    </li>
+    <li>
+      <label for="mail">E-mail:</label>
+      <input type="email" id="mail" name="user_email" />
+    </li>
+    <li>
+      <label for="msg">Message:</label>
+      <textarea id="msg" name="user_message"></textarea>
+    </li>
+  </ul>
 </form>
 ```
 
@@ -122,7 +119,7 @@ web 表单是由一个或多个**表单控件**（有时称为**小部件**）�
 最后但同样重要的是，要注意 `<input>` 和 `<textarea></textarea>` 的语法。这是 HTML 的一个奇怪之处。`<input>` 标签是一个空元素，这意味着它不需要关闭标签。相反，{{HTMLElement("textarea")}} 不是一个空元素，因此必须使用适当的结束标记来关闭它。这对 HTML 表单的特定特性有影响：定义默认值的方式。要定义 {{HTMLElement("input")}} 的默认值，你必须使用 [`value`](/zh-CN/docs/Web/HTML/Element/Input#value) 属性，如下所示：
 
 ```html
-<input type="text" value="by default this element is filled with this text">
+<input type="text" value="by default this element is filled with this text" />
 ```
 
 相反，如果你想定义 {{HTMLElement("textarea")}} 的默认值，你只需在 {{HTMLElement("textarea")}} 元素的开始和结束标记之间放置默认值，就像这样：
@@ -162,9 +159,7 @@ by default this element is filled with this text
 首先，在你的 HTML 头部中添加一个 {{htmlelement("style")}}元素。应该是这样的：
 
 ```html
-<style>
-
-</style>
+<style></style>
 ```
 
 在 `style` 标签中，添加如下的 CSS：
@@ -176,7 +171,7 @@ form {
   width: 400px;
   /* 显示表单的轮廓 */
   padding: 1em;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 1em;
 }
 
@@ -232,7 +227,7 @@ textarea {
 
 button {
   /* 这个外边距的大小与 label 和文本输入框之间的间距差不多 */
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 ```
 
@@ -250,21 +245,23 @@ button {
 
 ```html
 <form action="/my-handling-form-page" method="post">
- <ul>
-  <li>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="user_name" />
-  </li>
-  <li>
-    <label for="mail">E-mail:</label>
-    <input type="email" id="mail" name="user_email" />
-  </li>
-  <li>
-    <label for="msg">Message:</label>
-    <textarea id="msg" name="user_message"></textarea>
-  </li>
+  <ul>
+    <li>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="user_name" />
+    </li>
+    <li>
+      <label for="mail">E-mail:</label>
+      <input type="email" id="mail" name="user_email" />
+    </li>
+    <li>
+      <label for="msg">Message:</label>
+      <textarea id="msg" name="user_message"></textarea>
+    </li>
 
-…
+    …
+  </ul>
+</form>
 ```
 
 在我们的示例中，表单会发送三个已命名的数据块“`user_name`”、“`user_email`”和“`user_message`”。这些数据将用使用 [HTTP `POST`](/zh-CN/docs/Web/HTTP/Methods/POST) 方法，把信息发送到 URL 为“`/my-handling-form-page`”的目录下。
@@ -279,12 +276,12 @@ button {
 <form action="/my-handling-form-page" method="post">
   <div>
     <label for="name">Name:</label>
-    <input type="text" id="name" name="user_name">
+    <input type="text" id="name" name="user_name" />
   </div>
 
   <div>
     <label for="mail">E-mail:</label>
-    <input type="email" id="mail" name="user_email">
+    <input type="email" id="mail" name="user_email" />
   </div>
 
   <div>
@@ -306,7 +303,7 @@ form {
 
   /* To see the limits of the form */
   padding: 1em;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 1em;
 }
 
@@ -321,7 +318,8 @@ label {
   text-align: right;
 }
 
-input, textarea {
+input,
+textarea {
   /* To make sure that all text field have the same font settings
      By default, textarea are set with a monospace font */
   font: 1em sans-serif;
@@ -330,13 +328,14 @@ input, textarea {
   width: 300px;
 
   -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
 
   /* To harmonize the look & feel of text field border */
   border: 1px solid #999;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   /* To give a little highlight on active elements */
   border-color: #000;
 }
@@ -361,7 +360,7 @@ textarea {
 button {
   /* This extra margin represent the same space as the space between
      the labels and their text fields */
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 ```
 

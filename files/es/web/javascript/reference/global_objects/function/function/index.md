@@ -1,7 +1,6 @@
 ---
 title: Function() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/Función
 ---
 
 {{JSRef("Objetos_globales", "Function")}}

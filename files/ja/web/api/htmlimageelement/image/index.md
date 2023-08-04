@@ -20,9 +20,9 @@ new Image(width, height)
 ### 引数
 
 - `width` {{optional_inline}}
-  - : 画像の幅（つまり {{HTMLAttrxRef("width", "img")}} 属性に対応する値）です。
+  - : 画像の幅（つまり [`width`](/ja/docs/Web/HTML/Element/img#width) 属性に対応する値）です。
 - `height` {{optional_inline}}
-  - : 画像の高さ（つまり {{HTMLAttrxRef("height", "img")}} 属性に対応する値）です。
+  - : 画像の高さ（つまり [`height`](/ja/docs/Web/HTML/Element/img#height) 属性に対応する値）です。
 
 ## 使用上の注意
 

@@ -1,8 +1,6 @@
 ---
 title: image()
 slug: Web/CSS/image/image
-translation_of: Web/CSS/image/image
-browser-compat: css.types.image.image
 ---
 
 {{CSSRef}}
@@ -33,7 +31,7 @@ Le premier paramètre de la fonction `image()` est optionnel et indique la direc
 Une différence fondamentale entre `url()` et `image()` est la possibilité d'ajouter un identifiant de fragment d'image. Un identifiant de fragment est donné par&nbsp;: un point de départ défini par ses coordonnées x et y et par une largeur et une hauteur. Cela permet de ne sélectionner qu'une section de l'image source. La section ainsi définie devient une image à part entière aux yeux du moteur de rendu.
 
 ```css
-background-image: image('monimage.webp#xywh=0,20,40,60');
+background-image: image("monimage.webp#xywh=0,20,40,60");
 ```
 
 Avec l'exemple précédent, l'image d'arrière-plan utilisée sera une section de l'image `monimage.webp` commençant aux coordonnées (0px,20px), ayant une largeur de 40px et une hauteur de 60px.
@@ -64,7 +62,7 @@ La taille du rectangle de couleur appliqué peut être définie grâce à la pro
 
 Les outils d'assistance ne peuvent pas analyser les images d'arrière-plan, car les navigateurs n'extraient pas d'informations du contenu visuel des images. Si l'image contient des informations essentielles à la compréhension du document, il faudra décrire ces informations de façon sémantique dans le document afin, entre autres, que les outils d'assistance puissent transmettre les informations aux utilisateurs.
 
-- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
+- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Comprendre les critères de réussite 1.1.1 - Guide de compréhension WCAG 2.0 du W3C (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 Cette fonction peut aider à améliorer l'accessibilité en fournissant une couleur par défaut lorsque le chargement d'une image échoue. Bien qu'il faille toujours utiliser `background-color` comme défaut pour chaque image d'arrière-plan, la fonction CSS `image()` permet d'ajouter une couleur d'arrière-plan pour toute image dont le chargement échouerait (par exemple un fichier PNG/GIF/WebP avec de la transparence).
@@ -76,13 +74,15 @@ Cette fonction peut aider à améliorer l'accessibilité en fournissant une coul
 ```html
 <ul>
   <li dir="ltr">La puce est une flèche pointant à droite et située à gauche</li>
-  <li dir="rtl">La puce est la même flèche mais renversée pour pointer à gauche.</li>
+  <li dir="rtl">
+    La puce est la même flèche mais renversée pour pointer à gauche.
+  </li>
 </ul>
 ```
 
 ```css
 ul {
-  list-style-image: image(ltr 'rightarrow.png');
+  list-style-image: image(ltr "rightarrow.png");
 }
 ```
 
@@ -93,7 +93,9 @@ Pour les éléments de la liste allant de gauche à droite (ceux avec `dir="ltr"
 ### Afficher une section de l'image
 
 ```html
-<div class="box">Vous pouvez survoler cet élément pour voir un autre curseur</div>
+<div class="box">
+  Vous pouvez survoler cet élément pour voir un autre curseur
+</div>
 ```
 
 ```css
@@ -109,21 +111,25 @@ Lorsqu'on survole la boîte, le curseur changera pour afficher une section d'un 
 ### Placer une couleur sur une image en arrière-plan
 
 ```css hidden
-.quarterlogo {height: 200px; width: 200px; border: 1px solid;}
+.quarterlogo {
+  height: 200px;
+  width: 200px;
+  border: 1px solid;
+}
 ```
 
 ```css
 .quarterlogo {
-  background-image:
-    image(rgba(0, 0, 0, 0.25)),
-    url("firefox.png");
+  background-image: image(rgba(0, 0, 0, 0.25)), url("firefox.png");
   background-size: 25%;
   background-repeat: no-repeat;
 }
 ```
 
 ```html
-<div class="quarterlogo">Si pris en charge, un quart de ce div aura un logo assombri</div>
+<div class="quarterlogo">
+  Si pris en charge, un quart de ce div aura un logo assombri
+</div>
 ```
 
 Dans l'exemple précédent, on placera un masque noir semi-transparent sur le logo Firefox utilisé comme image d'arrière-plan. Si on avait utilisé la propriété `background-color` à la place, la couleur aurait été placée sous le logo et non sur lui. De plus, le conteneur entier aurait eu cette couleur en arrière-plan. Avec `image()` et [`background-size`](/fr/docs/Web/CSS/background-size) (tout en empêchant l'image de se répéter grâce à [`background-repeat`](/fr/docs/Web/CSS/background-repeat)), le voile noir ne couvrira qu'un quart du conteneur.

@@ -1,7 +1,6 @@
 ---
 title: 书本实例细节页面、与自我挑战
-slug: >-
-  Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
+slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
 ---
 
 ## 书本实例细节页面
@@ -14,21 +13,25 @@ slug: >-
 
 ```js
 // Display detail page for a specific BookInstance.
-exports.bookinstance_detail = function(req, res, next) {
-
-    BookInstance.findById(req.params.id)
-    .populate('book')
+exports.bookinstance_detail = function (req, res, next) {
+  BookInstance.findById(req.params.id)
+    .populate("book")
     .exec(function (err, bookinstance) {
-      if (err) { return next(err); }
-      if (bookinstance==null) { // No results.
-          var err = new Error('Book copy not found');
-          err.status = 404;
-          return next(err);
-        }
+      if (err) {
+        return next(err);
+      }
+      if (bookinstance == null) {
+        // No results.
+        var err = new Error("Book copy not found");
+        err.status = 404;
+        return next(err);
+      }
       // Successful, so render.
-      res.render('bookinstance_detail', { title: 'Book:', bookinstance:  bookinstance});
-    })
-
+      res.render("bookinstance_detail", {
+        title: "Book:",
+        bookinstance: bookinstance,
+      });
+    });
 };
 ```
 

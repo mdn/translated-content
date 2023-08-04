@@ -1,14 +1,6 @@
 ---
 title: IDBIndex.isAutoLocale
 slug: Web/API/IDBIndex/isAutoLocale
-tags:
-  - API
-  - Experimental
-  - IDBIndex
-  - IndexedDB
-  - Propriété
-  - Reference
-translation_of: Web/API/IDBIndex/isAutoLocale
 ---
 
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}
@@ -18,7 +10,7 @@ La propriété en lecture seule **`isAutoLocale`**, rattachée à l'interface {{
 ## Syntaxe
 
 ```js
-var monIndex = objectStore.index('index');
+var monIndex = objectStore.index("index");
 console.log(monIndex.isAutoLocale);
 ```
 
@@ -34,33 +26,50 @@ La valeur `isAutoLocale` est affichée dans la console.
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = '';
-  var transaction = db.transaction(['contactsList'], 'readonly');
-  var objectStore = transaction.objectStore('contactsList');
+  tableEntry.innerHTML = "";
+  var transaction = db.transaction(["contactsList"], "readonly");
+  var objectStore = transaction.objectStore("contactsList");
 
-  var myIndex = objectStore.index('lName');
+  var myIndex = objectStore.index("lName");
   console.log(myIndex.isAutoLocale);
 
-  myIndex.openCursor().onsuccess = function(event) {
+  myIndex.openCursor().onsuccess = function (event) {
     var cursor = event.target.result;
-    if(cursor) {
-      var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
-                           + '<td>' + cursor.value.lName + '</td>'
-                           + '<td>' + cursor.value.fName + '</td>'
-                           + '<td>' + cursor.value.jTitle + '</td>'
-                           + '<td>' + cursor.value.company + '</td>'
-                           + '<td>' + cursor.value.eMail + '</td>'
-                           + '<td>' + cursor.value.phone + '</td>'
-                           + '<td>' + cursor.value.age + '</td>';
+    if (cursor) {
+      var tableRow = document.createElement("tr");
+      tableRow.innerHTML =
+        "<td>" +
+        cursor.value.id +
+        "</td>" +
+        "<td>" +
+        cursor.value.lName +
+        "</td>" +
+        "<td>" +
+        cursor.value.fName +
+        "</td>" +
+        "<td>" +
+        cursor.value.jTitle +
+        "</td>" +
+        "<td>" +
+        cursor.value.company +
+        "</td>" +
+        "<td>" +
+        cursor.value.eMail +
+        "</td>" +
+        "<td>" +
+        cursor.value.phone +
+        "</td>" +
+        "<td>" +
+        cursor.value.age +
+        "</td>";
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
     } else {
-      console.log('Les éléments ont été affichés.');
+      console.log("Les éléments ont été affichés.");
     }
   };
-};
+}
 ```
 
 ## Spécifications

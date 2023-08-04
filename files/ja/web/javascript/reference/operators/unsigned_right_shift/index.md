@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift
 ## 構文
 
 ```js
-a >>> b
+a >>> b;
 ```
 
 ## 解説
@@ -40,7 +40,7 @@ a >>> b
 ### 符号なし右シフトの使用
 
 ```js
- 9 >>> 2; // 2
+9 >>> 2; // 2
 -9 >>> 2; // 1073741821
 ```
 

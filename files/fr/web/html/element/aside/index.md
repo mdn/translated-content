@@ -1,18 +1,6 @@
 ---
-title: '<aside> : l''élément aparté'
+title: "<aside> : l'élément aparté"
 slug: Web/HTML/Element/aside
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - HTML5
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Sectioning content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/aside
-browser-compat: html.elements.aside
 ---
 
 {{HTMLSidebar}}
@@ -109,24 +97,19 @@ Cet élément ne comprend que les [attributs universels](/fr/docs/Web/HTML/Globa
 
 On ne doit pas utiliser l'élément `<aside>` pour marquer du texte entre parenthèses, ce type de texte est considéré comme faisant partie du flux principal.
 
-## Exemple
+## Exemples
 
 Dans cet exemple, on utilise `<aside>` afin de baliser un paragraphe d'un article. Ici, le paragraphe n'est pas directement lié au contenu principal de l'article et c'est pour cela qu'on utilise cet élément.
 
 ```html
 <article>
   <p>
-    Le film Disney <cite>La petite Sirène</cite> est
-    sorti en salles en 1989.
+    Le film Disney <cite>La petite Sirène</cite> est sorti en salles en 1989.
   </p>
   <aside>
-    <p>
-      Le film a gagné 87 millions de dollars pendant sa sortie initiale.
-    </p>
+    <p>Le film a gagné 87 millions de dollars pendant sa sortie initiale.</p>
   </aside>
-  <p>
-    Plus d'informations sur le film…
-  </p>
+  <p>Plus d'informations sur le film…</p>
 </article>
 ```
 

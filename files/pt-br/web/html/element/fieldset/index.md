@@ -5,7 +5,7 @@ slug: Web/HTML/Element/fieldset
 
 {{HTMLSidebar}}
 
-O **elemento** **HTML `<fieldset>`** é usado para agrupar elementos, assim como labels ({{HTMLElement("label")}}), dentro de um formulário web.
+O **elemento HTML `<fieldset>`** é usado para agrupar elementos, assim como labels ({{HTMLElement("label")}}), dentro de um formulário web.
 
 <table class="properties">
   <tbody>
@@ -60,11 +60,11 @@ O **elemento** **HTML `<fieldset>`** é usado para agrupar elementos, assim como
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("disabled")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("disabled")}}
   - : Se este atributo Booleano está definido, os controles de formulario que são seus descendentes, exceto os descendentes de seu primeiro elemento opcional {{HTMLElement("legend")}}, estarão desativados, i.e., não editável. Eles não receberão qualquer evento de navegação, como clique do mouse ou relacionado com focus. Frequentemente os navegadores mostram tais controles em cinza.
-- {{htmlattrdef("form")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("form")}}
   - : Este atributo tem o valor do atributo **id** do elemento {{HTMLElement("form")}} com que se relaciona. Seu valor padrão é o **id** do elemento {{HTMLElement("form")}} mais próximo.
-- {{htmlattrdef("name")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("name")}}
 
   - : O nome associado com o grupo.
 
@@ -326,7 +326,7 @@ fieldset.elist:hover input[type="radio"]:checked ~ label {
 
 ## Erros
 
-- {{Bug(504622)}} - Fieldsets nunca diminui abaixo de sua largura min-intrinsic
+- [Erro do Firefox 504622](https://bugzil.la/504622) - Fieldsets nunca diminui abaixo de sua largura min-intrinsic
 - [WebKit bug 123507](https://bugs.webkit.org/show_bug.cgi?id=123507) - `min-width: {{cssxref("-webkit-min-content")}}` sobre fieldset
 - [StackOverflow discussão com soluções alternativas para os bugs acima](http://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content)
 

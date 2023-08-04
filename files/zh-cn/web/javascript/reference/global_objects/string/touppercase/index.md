@@ -33,7 +33,7 @@ str.toUpperCase()
 ### 基本用法
 
 ```js
-console.log('alphabet'.toUpperCase()); // 'ALPHABET'
+console.log("alphabet".toUpperCase()); // 'ALPHABET'
 ```
 
 ### 将非字符串类型的 `this` （上下文）转为字符串
@@ -43,8 +43,8 @@ console.log('alphabet'.toUpperCase()); // 'ALPHABET'
 ```js
 const a = String.prototype.toUpperCase.call({
   toString: function toString() {
-    return 'abcdef';
-  }
+    return "abcdef";
+  },
 });
 
 const b = String.prototype.toUpperCase.call(true);

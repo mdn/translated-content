@@ -2,6 +2,7 @@
 title: Event()
 slug: Web/API/Event/Event
 ---
+
 {{APIRef("DOM")}}
 
 **`Event()`** 생성자는 새로운 {{domxref("Event")}} 객체를 생성합니다. 생성자로 생성한 이벤트는 브라우저가 생성하는 이벤트와 구분해서 합성 이벤트(synthetic event)라고 부르며, [스크립트에서 발송할 수 있습니다](/ko/docs/Web/Events/Creating_and_triggering_events).
@@ -9,8 +10,8 @@ slug: Web/API/Event/Event
 ## 구문
 
 ```js
-new Event(type)
-new Event(type, options)
+new Event(type);
+new Event(type, options);
 ```
 
 ### 매개변수
@@ -35,7 +36,7 @@ new Event(type, options)
 ```js
 // 버블링 가능하고 취소 불가능한 look 이벤트 생성
 
-const evt = new Event("look", {"bubbles":true, "cancelable":false});
+const evt = new Event("look", { bubbles: true, cancelable: false });
 document.dispatchEvent(evt);
 
 // document 외의 다른 요소에서도 이벤트 발송 가능

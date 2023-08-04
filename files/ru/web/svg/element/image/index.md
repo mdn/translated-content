@@ -1,11 +1,6 @@
 ---
 title: <image>
 slug: Web/SVG/Element/image
-tags:
-  - NeedsUpdate
-  - SVG
-translation_of: Web/SVG/Element/image
-original_slug: Web/SVG/Элемент/image
 ---
 {{SVGRef}}
 
@@ -40,7 +35,7 @@ original_slug: Web/SVG/Элемент/image
 
 ## DOM Interface
 
-This element implements the [`SVGImageElement`](/en-US/docs/Web/API/SVGImageElement) interface.
+This element implements the [`SVGImageElement`](/ru/docs/Web/API/SVGImageElement) interface.
 
 ## Пример
 

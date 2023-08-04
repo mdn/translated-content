@@ -41,7 +41,7 @@ Gecko now uses the [HTML5](/zh-TW/HTML/HTML5) parser, which fixes bugs, improves
 - [CSS transitions](/zh-TW/CSS/CSS_transitions)
   - : New CSS transitions support is available in Firefox 4.
 - Computed values in CSS
-  - : Support for` calc() `to compute values in CSS is in progress. See [Firefox bug 363249](https://bugzil.la/363249).
+  - : Support for `calc()` to compute values in CSS is in progress. See [Firefox bug 363249](https://bugzil.la/363249).
 - Selector grouping
   - : Support for {{ cssxref(":-moz-any") }} to group selectors and factorize combinators.
 - Background image subrectangle support
@@ -57,7 +57,7 @@ Gecko now uses the [HTML5](/zh-TW/HTML/HTML5) parser, which fixes bugs, improves
 - The {{ cssxref(":-moz-window-inactive") }} pseudoclass has been implemented.
 - The {{ cssxref("-moz-tab-size") }} property lets you specify the width in space characters of a tab character (U+0009) when rendering text.
 - The CSS3 {{ cssxref("resize") }} property has been implemented.
-- The` -moz-background-size `property has been renamed to its final {{ cssxref("background-size") }} naming; `-moz-background-size` is no longer supported.
+- The `-moz-background-size` property has been renamed to its final {{ cssxref("background-size") }} naming; `-moz-background-size` is no longer supported.
 - The {{ cssxref("oveflow") }} property no longer applies to table-group elements ({{ HTMLElement("thead") }}, {{ HTMLElement("tbody") }}, and {{ HTMLElement("tfoot") }}).
 
 ### Graphics and video

@@ -1,14 +1,6 @@
 ---
 title: <display-listitem>
 slug: Web/CSS/display-listitem
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Display
-  - Reference
-  - list-item
-  - Справка
-translation_of: Web/CSS/display-listitem
 ---
 
 {{CSSRef}}

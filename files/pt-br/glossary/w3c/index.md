@@ -1,7 +1,6 @@
 ---
 title: W3C
 slug: Glossary/W3C
-original_slug: Glossario/W3C
 ---
 
 O Consórcio da Rede Mundial (tradução livre de _World Wide Web Consortium_), ou simplesmente W3C é uma sociedade internacional que mantém as regras e frameworks {{Glossary("World Wide Web", "relacionadas à Web")}}
@@ -15,4 +14,4 @@ Cada padrão passa por quatro estágios de maturidade: Rascunho em Desenvolvimen
 ### Conhecimentos Gerais
 
 - [Site Oficial da W3C](https://www.w3.org/)
-- {{Interwiki("wikipedia", "World Wide Web Consortium", "W3C")}} na Wikipedia
+- [W3C](https://pt.wikipedia.org/wiki/World_Wide_Web_Consortium) na Wikipedia

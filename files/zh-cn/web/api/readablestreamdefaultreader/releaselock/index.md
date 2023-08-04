@@ -13,7 +13,7 @@ reader 的锁在仍有待处理的读取请求时无法释放，即，如果 rea
 
 ## 语法
 
-```js
+```js-nolint
 releaseLock()
 ```
 
@@ -48,3 +48,8 @@ function fetchStream() {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}} 构造函数
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)

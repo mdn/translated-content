@@ -1,18 +1,6 @@
 ---
 title: PerformanceTiming.domainLookupStart
 slug: Web/API/PerformanceTiming/domainLookupStart
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Propriété
-  - Read-only
-  - legacy
-  - domainLookupStart
-translation_of: Web/API/PerformanceTiming/domainLookupStart
 ---
 
 {{APIRef("Navigation Timing")}}

@@ -23,21 +23,21 @@ slug: Web/API/AbortController/signal
 const controller = new AbortController();
 const signal = controller.signal;
 
-const url = 'video.mp4';
-const downloadBtn = document.querySelector('.download');
-const abortBtn = document.querySelector('.abort');
+const url = "video.mp4";
+const downloadBtn = document.querySelector(".download");
+const abortBtn = document.querySelector(".abort");
 
-downloadBtn.addEventListener('click', fetchVideo);
+downloadBtn.addEventListener("click", fetchVideo);
 
-abortBtn.addEventListener('click', () => {
+abortBtn.addEventListener("click", () => {
   controller.abort();
-  console.log('Download aborted');
+  console.log("Download aborted");
 });
 
 function fetchVideo() {
   fetch(url, { signal })
     .then((response) => {
-      console.log('Download complete', response);
+      console.log("Download complete", response);
     })
     .catch((err) => {
       console.error(`Download error: ${err.message}`);
@@ -47,7 +47,7 @@ function fetchVideo() {
 
 > **备注：** 当 `abort()` 被调用，`fetch()` promise 将会抛出一个 `AbortError`.
 
-你可以在 github 上找到[完整的可以运行的示例](https://github.com/mdn/dom-examples/tree/master/abort-api)；你还可以看它的[在线演示](https://mdn.github.io/dom-examples/abort-api/)。
+你可以在 GitHub 上找到[完整的可以运行的示例](https://github.com/mdn/dom-examples/tree/main/abort-api)；你还可以看它的[在线演示](https://mdn.github.io/dom-examples/abort-api/)。
 
 ## 规范
 

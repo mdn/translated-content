@@ -36,7 +36,7 @@ slug: Learn/Forms/HTML5_input_types
 将 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性设置为 `email` 就可以使用这种控件：
 
 ```html
-<input type="email" id="email" name="email">
+<input type="email" id="email" name="email" />
 ```
 
 当使用了这种 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 类型时，用户需要输入一个合法的电子邮件地址，任何其他输入都会使得浏览器在表单提交时显示错误信息。你可以在下面的截图中看到这个行为：
@@ -46,7 +46,7 @@ slug: Learn/Forms/HTML5_input_types
 你也可以搭配使用 [`multiple`](/zh-CN/docs/Web/HTML/Attributes/multiple) 属性，以允许在同一个 `email` 输入框中输入多个电子邮件地址，以英文逗号分隔：
 
 ```html
-<input type="email" id="email" name="email" multiple>
+<input type="email" id="email" name="email" multiple />
 ```
 
 在某些设备上——特别是像智能手机这样具有动态键盘的触摸设备——可能会出现一个包括 `@` 键的更适合于输入电子邮件地址的虚拟键盘。请看下面的 Firefox Android 版键盘截图，以示说明：
@@ -72,7 +72,7 @@ slug: Learn/Forms/HTML5_input_types
 查询字段（Search fields）旨在用于在页面和应用程序上创建搜索框。将 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性设置为 `search` 就可以使用这种控件：
 
 ```html
-<input type="search" id="search" name="search">
+<input type="search" id="search" name="search" />
 ```
 
 `text` 字段和 `search` 字段的主要区别是浏览器赋予它们的外观显示。通常情况下，`search` 字段拥有圆角边框，有时会显示“Ⓧ”标志，当点击它时会清除输入框。另外，在动态键盘设备上，键盘的回车键会显示“**search**”，或显示为放大镜图标。
@@ -88,7 +88,7 @@ slug: Learn/Forms/HTML5_input_types
 在 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性中使用 `tel` 值，即可创建一个专门用于输入电话号码的文本域：
 
 ```html
-<input type="tel" id="tel" name="tel">
+<input type="tel" id="tel" name="tel" />
 ```
 
 当使用带有动态键盘的移动设备访问带有 `type="tel"` 的表单时，大多数设备会显示数字键盘。这意味着只要数字键盘有用，这种类型就很有用，而且不只是用于电话号码。
@@ -106,7 +106,7 @@ slug: Learn/Forms/HTML5_input_types
 在 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性值中使用 `url`，即可创建一个用于输入网址的文本字段：
 
 ```html
-<input type="url" id="url" name="url">
+<input type="url" id="url" name="url" />
 ```
 
 它为字段添加了特殊的验证约束。浏览器会在没有协议（例如 `http:`）输入或网址格式不对的情况下报告错误。在具有动态键盘的设备上，键盘通常会显示部分或全部冒号、句号和正斜杠作为默认键。
@@ -132,13 +132,13 @@ slug: Learn/Forms/HTML5_input_types
 我们来看一些例子。第一个例子创建了可从 `1` 到 `10` 之间选择值的数字选择器，且单击一次按钮所增长或减少的值为 `2`。
 
 ```html
-<input type="number" name="age" id="age" min="1" max="10" step="2">
+<input type="number" name="age" id="age" min="1" max="10" step="2" />
 ```
 
 第二个例子创建了可从 `0` 到 `1` 之间选择值得数字选择器，且单击一次按钮所增长或减少的值为 `0.01`。
 
 ```html
-<input type="number" name="change" id="pennies" min="0" max="1" step="0.01">
+<input type="number" name="change" id="pennies" min="0" max="1" step="0.01" />
 ```
 
 当有效值的范围有限时，`number` 输入类型才有意义，例如一个人的年龄或身高。如果范围太大，渐进式增加没有意义（如范围为 `00001` 到 `99999` 的美国 ZIP 码）的话，使用 `tel` 类型可能会更好；它提供了数字键盘，而放弃了数字输入器的 spinner UI 功能。
@@ -159,7 +159,14 @@ slug: Learn/Forms/HTML5_input_types
 
 ```html
 <label for="price">Choose a maximum house price: </label>
-<input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000">
+<input
+  type="range"
+  name="price"
+  id="price"
+  min="50000"
+  max="500000"
+  step="100"
+  value="250000" />
 <output class="price-output" for="price"></output>
 ```
 
@@ -170,12 +177,12 @@ slug: Learn/Forms/HTML5_input_types
 要真正显示当前值，并在其变化时更新，你必须使用 JavaScript，这相对容易做到：
 
 ```js
-const price = document.querySelector('#price');
-const output = document.querySelector('.price-output');
+const price = document.querySelector("#price");
+const output = document.querySelector(".price-output");
 
 output.textContent = price.value;
 
-price.addEventListener('input', () => {
+price.addEventListener("input", () => {
   output.textContent = price.value;
 });
 ```
@@ -201,7 +208,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/Input/datetime-local) 创建了显示和选择一个没有特定时区信息的日期和时间的控件。
 
 ```html
-<input type="datetime-local" name="datetime" id="datetime">
+<input type="datetime-local" name="datetime" id="datetime" />
 ```
 
 ### `month`
@@ -209,7 +216,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 [`<input type="month">`](/zh-CN/docs/Web/HTML/Element/Input/month) 创建了显示和选择带有年份信息的某个月的控件。
 
 ```html
-<input type="month" name="month" id="month">
+<input type="month" name="month" id="month" />
 ```
 
 ### `time`
@@ -217,7 +224,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 [`<input type="time">`](/zh-CN/docs/Web/HTML/Element/Input/time) 创建了显示和选择时间的控件。时间可能会以 *12 小时制*显示，但一定会以 *24 小时制*形式返回。
 
 ```html
-<input type="time" name="time" id="time">
+<input type="time" name="time" id="time" />
 ```
 
 ### `week`
@@ -227,7 +234,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 一周以周一开始，一直运行到周日结束。另外，每年的第一周总会包含那一年首个星期四，其中可能不包括当年的第一天，也可能包括前一年的最后几天。
 
 ```html
-<input type="week" name="week" id="week">
+<input type="week" name="week" id="week" />
 ```
 
 ### 限制日期/时间值
@@ -236,7 +243,13 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 
 ```html
 <label for="myDate">When are you available this summer?</label>
-<input type="date" name="myDate" min="2013-06-01" max="2013-08-31" step="7" id="myDate">
+<input
+  type="date"
+  name="myDate"
+  min="2013-06-01"
+  max="2013-08-31"
+  step="7"
+  id="myDate" />
 ```
 
 ## 颜色选择器控件
@@ -246,7 +259,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 用于输入颜色的控件可以由 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 为 `color` 的 {{HTMLElement("input")}} 元素创建：
 
 ```html
-<input type="color" name="color" id="color">
+<input type="color" name="color" id="color" />
 ```
 
 在支持的情况下，点击一个颜色控件将倾向于显示操作系统的默认颜色选择功能，以便你真正做出选择。以下是在 macOS 上 Firefox 浏览器的屏幕截图，提供了一个例子：

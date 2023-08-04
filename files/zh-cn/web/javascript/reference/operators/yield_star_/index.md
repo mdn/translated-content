@@ -95,9 +95,9 @@ console.log(iterator.next()); // { value: 1, done: false }
 console.log(iterator.next()); // { value: 2, done: false }
 console.log(iterator.next()); // { value: 3, done: false }
 console.log(iterator.next()); // { value: undefined, done: true },
-                              // 此时 g4() 返回了 { value: "foo", done: true }
+// 此时 g4() 返回了 { value: "foo", done: true }
 
-console.log(result);          // "foo"
+console.log(result); // "foo"
 ```
 
 ## 规范

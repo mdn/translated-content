@@ -1,14 +1,6 @@
 ---
 title: RegExp.prototype[@@search]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
-tags:
-  - JavaScript
-  - Prototype
-  - Reference
-  - RegExp
-  - метод
-  - регулярные выражения
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 ---
 
 {{JSRef}}

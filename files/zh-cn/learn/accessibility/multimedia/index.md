@@ -1,7 +1,6 @@
 ---
 title: 多媒体无障碍
 slug: Learn/Accessibility/Multimedia
-original_slug: learn/Accessibility/多媒体
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
@@ -42,8 +41,9 @@ original_slug: learn/Accessibility/多媒体
 示例：
 
 ```html
-<img src="dinosaur.png"
-     alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+<img
+  src="dinosaur.png"
+  alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
 ```
 
 ## 可访问的音频和视频控件
@@ -56,17 +56,23 @@ HTML5 视频和音频实例甚至附带一组内置控件，允许您直接在�
 
 ```html
 <audio controls>
-  <source src="viper.mp3" type="audio/mp3">
-  <source src="viper.ogg" type="audio/ogg">
-  <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>
+    Your browser doesn't support HTML5 audio. Here is a
+    <a href="viper.mp3">link to the audio</a> instead.
+  </p>
 </audio>
 
-<br>
+<br />
 
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Your browser doesn't support HTML5 video. Here is a
+    <a href="rabbit320.mp4">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -91,7 +97,7 @@ HTML5 视频和音频共享 API — HTML Media Element — 允许您将自定义
 
 #### 基本设置
 
-首先，获取我们的[custom-controls-start.html](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls-start.html)、[custom-controls.css](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls.css)、 [rabbit320.mp4](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.mp4) 和 [rabbit320.webm](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.webm)文件的副本，并将它们保存在硬盘上的新目录中。
+首先，获取我们的[custom-controls-start.html](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/custom-controls-start.html)、[custom-controls.css](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/custom-controls.css)、 [rabbit320.mp4](https://raw.githubusercontent.com/mdn/learning-area/main/accessibility/multimedia/rabbit320.mp4) 和 [rabbit320.webm](https://raw.githubusercontent.com/mdn/learning-area/main/accessibility/multimedia/rabbit320.webm)文件的副本，并将它们保存在硬盘上的新目录中。
 
 创建一个名为 main.js 的新文件并将其保存在同一目录中。
 
@@ -100,9 +106,12 @@ HTML5 视频和音频共享 API — HTML Media Element — 允许您将自定义
 ```html
 <section class="player">
   <video controls>
-    <source src="rabbit320.mp4" type="video/mp4">
-    <source src="rabbit320.webm" type="video/webm">
-    <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+    <source src="rabbit320.mp4" type="video/mp4" />
+    <source src="rabbit320.webm" type="video/webm" />
+    <p>
+      Your browser doesn't support HTML5 video. Here is a
+      <a href="rabbit320.mp4">link to the video</a> instead.
+    </p>
   </video>
 
   <div class="controls">
@@ -218,7 +227,7 @@ player.ontimeupdate = () => {
 - [Video player styling basics](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics)
 - [Creating a cross-browser video player](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)
 
-我们还创建了一个高级示例，以演示如何创建面向对象的系统，该系统可查找页面上的每个视频和音频播放器 (无论有多少个视频和音频播放器),并将自定义控件添加到其中。请参阅[custom-controls-oojs](http://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/)([see the source code](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/custom-controls-OOJS))。
+我们还创建了一个高级示例，以演示如何创建面向对象的系统，该系统可查找页面上的每个视频和音频播放器 (无论有多少个视频和音频播放器),并将自定义控件添加到其中。请参阅 [custom-controls-oojs](http://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/)（[查看其源码](https://github.com/mdn/learning-area/tree/main/accessibility/multimedia/custom-controls-OOJS)）。
 
 ## 音频脚本
 
@@ -238,7 +247,7 @@ player.ontimeupdate = () => {
 
 如果使用自动服务，则可能需要使用该工具提供的用户界面。例如，查看[Audio Transcription Sample 1](https://www.youtube.com/watch?v=zFFBsj97Od8)并选择" _More > Transcript_"。
 
-如果要创建自己的用户界面来显示音频和相关脚本，您可以随心所欲地执行此操作，但将其包含在可显示/可隐藏面板中可能有意义;请参阅我们的[audio-transcript-ui](http://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/) 示例 (另请参阅[source code](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/audio-transcript-ui))。
+如果要创建自己的用户界面来显示音频和相关脚本，您可以随心所欲地执行此操作，但将其包含在可显示/可隐藏面板中可能有意义;请参阅我们的[audio-transcript-ui](http://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/) 示例（另请参阅[其源码](https://github.com/mdn/learning-area/tree/main/accessibility/multimedia/audio-transcript-ui)）。
 
 ### 音频描述
 
@@ -300,9 +309,9 @@ This is the second.
 
 ```html
 <video controls>
-    <source src="example.mp4" type="video/mp4">
-    <source src="example.webm" type="video/webm">
-    <track kind="subtitles" src="subtitles_en.vtt" srclang="en">
+  <source src="example.mp4" type="video/mp4" />
+  <source src="example.webm" type="video/webm" />
+  <track kind="subtitles" src="subtitles_en.vtt" srclang="en" />
 </video>
 ```
 

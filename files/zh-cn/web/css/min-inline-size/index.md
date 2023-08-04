@@ -5,18 +5,18 @@ slug: Web/CSS/min-inline-size
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`min-inline-size`** 根据元素的书写模式定义了元素块的水平或竖直最小尺寸。根据 {{CSSXref("writing-mode")}} 的值，此属性对应于 {{CSSXref("min-width")}} 或 {{CSSXref("min-height")}} 属性。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`min-inline-size`** 根据元素的书写模式定义了元素区块的横向或纵向最小尺寸。根据 {{CSSXref("writing-mode")}} 的值，此属性对应于 {{CSSXref("min-width")}} 或 {{CSSXref("min-height")}} 属性。
 
 {{EmbedInteractiveExample("pages/css/min-inline-size.html")}}
 
 ## 语法
 
 ```css
-/* 长度值 */
+/* <length> 值 */
 min-inline-size: 100px;
 min-inline-size: 5em;
 
-/* 百分比值 */
+/* <percentage> 值 */
 min-inline-size: 10%;
 
 /* 关键词值 */
@@ -32,7 +32,7 @@ min-inline-size: revert-layer;
 min-inline-size: unset;
 ```
 
-若书写模式为竖直朝向，则 `min-inline-size` 的值对应于元素的最小高度；否则对应于元素的最小宽度。与此相关的属性为 {{CSSXref("min-block-size")}}，此属性定义了元素另一方向的尺度。
+若为纵向书写模式，则 `min-inline-size` 的值对应于元素的最小高度；否则对应于元素的最小宽度。与此相关的属性为 {{CSSXref("min-block-size")}}，此属性定义了元素另一方向的尺度。
 
 ### 取值
 

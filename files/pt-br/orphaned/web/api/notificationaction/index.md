@@ -1,7 +1,6 @@
 ---
 title: NotificationAction
 slug: orphaned/Web/API/NotificationAction
-original_slug: Web/API/NotificationAction
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

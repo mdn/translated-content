@@ -1,11 +1,12 @@
 ---
-title: AnimationEvent()
+title: "AnimationEvent: AnimationEvent() コンストラクター"
+short-title: AnimationEvent()
 slug: Web/API/AnimationEvent/AnimationEvent
 l10n:
-  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("Web Animations API")}}
+{{APIRef("Web Animations")}}
 
 **`AnimationEvent()`** コンストラクターは、アニメーションに関するイベントを表す新しい {{domxref("AnimationEvent")}} オブジェクトを返します。
 
@@ -42,7 +43,7 @@ new AnimationEvent(type, options)
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - アニメーション関連の CSS プロパティとアットルール: {{cssxref("animation")}},
   {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}},
   {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}},

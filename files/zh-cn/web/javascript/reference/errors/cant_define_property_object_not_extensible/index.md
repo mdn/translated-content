@@ -25,34 +25,32 @@ TypeError: Cannot define property: "x", object is not extensible. (Chrome)
 在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，向已经标记为不可扩展的对象添加新属性会报 TypeError 错误。而在非严格模式下，添加属性“x”会被静默忽略。
 
 ```js example-bad
-'use strict';
+"use strict";
 
 var obj = {};
 Object.preventExtensions(obj);
 
-obj.x = 'foo';
+obj.x = "foo";
 // TypeError: can't define property "x": "obj" is not extensible
 ```
 
 在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)和非严格模式下两种模式下，调用{{jsxref("Object.defineProperty()")}} 向标记为不可扩展的对象添加新属性都会报 TypeError 错误。
 
 ```js example-bad
-var obj = { };
+var obj = {};
 Object.preventExtensions(obj);
 
-Object.defineProperty(obj,
-  'x', { value: "foo" }
-);
+Object.defineProperty(obj, "x", { value: "foo" });
 // TypeError: can't define property "x": "obj" is not extensible
 ```
 
 为了修复这个错误，你可以彻底移除 {{jsxref("Object.preventExtensions()")}} 语句，或者将其移动位置，使得属性在对象被标记为不可扩展之前添加。当然如果不需要试图添加的属性的话，你也可以将其移除。
 
 ```js example-good
-'use strict';
+"use strict";
 
 var obj = {};
-obj.x = 'foo'; // add property first and only then prevent extensions
+obj.x = "foo"; // add property first and only then prevent extensions
 
 Object.preventExtensions(obj);
 ```

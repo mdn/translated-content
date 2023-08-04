@@ -15,7 +15,7 @@ slug: Web/HTML/Viewport_meta_tag
 
 这是因为并非所有页面都针对移动设备进行了优化，并且在以较小的视口宽度渲染时会被截断（或至少看起来很糟糕）。虚拟视口则是一种使非移动设备优化页面在窄屏设备上看起来更好的一个方法。
 
-但是，此机制不太适用于使用[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)针对窄屏幕进行优化的页面。例如，如果虚拟视口为 980px，那么在 640px 或 480px 或更低时启动的媒体查询将不会被使用，从而限制了这些响应式设计方法的有效性。viewport meta 标签可缓解此类屏幕内部较窄的终端上的虚拟视口问题。
+但是，此机制不太适用于使用[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)针对窄屏幕进行优化的页面。例如，如果虚拟视口为 980px，那么在 640px 或 480px 或更低时启动的媒体查询将不会被使用，从而限制了这些响应式设计方法的有效性。viewport meta 标签可缓解此类屏幕内部较窄的终端上的虚拟视口问题。
 
 ## 视口基础知识
 
@@ -30,6 +30,7 @@ slug: Web/HTML/Viewport_meta_tag
 "viewport" `<meta>` 标签的基本属性如下所示：
 
 - `width`
+
   - : 控制视口的大小。这可以设置为特定像素数（如'width=600'），也可以设置为特殊值`device-width`，即 [100vw](/zh-CN/docs/Web/CSS/length#视口_viewport_比例的长度)，100% 的视口宽度。最小值为 `1`。最大值为 `10000`。负值会被忽略。
 
 - `height`
@@ -37,15 +38,19 @@ slug: Web/HTML/Viewport_meta_tag
   - : 控制视口的大小。 这可以设置为特定像素数（如 `width=600`），也可以设置为特殊值 `device-height`，即 [100vh](/zh-CN/docs/Web/CSS/length#视口_viewport_比例的长度)，100% 的视口高度。最小值为 `1`。最大值为 `10000`。负值会被忽略。
 
 - `initial-scale`
+
   - : 控制页面首次加载时显示的缩放倍数。最小值是 `0.1`。最大值是 `10`。默认值为 `1`。负值会被忽略。
 
 - `minimum-scale`
+
   - : 控制页面允许缩小的倍数。最小值是 `0.1`。最大值是 `10`。默认值为 `1`。负值会被忽略。
 
 - `maximum-scale`
+
   - : 控制页面允许放大的倍数。设置一个低于 `3` 的值将不具备无障碍访问性。最小值是 `0.1`。最大值是 `10`。默认值为 `1`。负值会被忽略。
 
 - `user-scalable`
+
   - : 控制是否允许页面上的放大和缩小操作。有效值为 `0`、`1`、`yes` 或 `no`。默认值为 `1`，与 `yes` 相同。将值设置为 `0`（即与 `no` 相同）将违反 Web 内容无障碍指南（WCAG）。
 
 - `interactive-widget`
@@ -80,9 +85,11 @@ slug: Web/HTML/Viewport_meta_tag
 允许的值为：
 
 - `resizes-visual`
+
   - : [虚拟视口](/zh-CN/docs/Glossary/Viewport)被交互式组件调整大小。
 
 - `resizes-content`
+
   - : [视口](/zh-CN/docs/Glossary/Viewport)被交互式组件调整大小。
 
 - `overlays-content`

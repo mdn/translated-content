@@ -35,11 +35,11 @@ Math.acosh(x)
 ### Math.acosh() の使用
 
 ```js
-Math.acosh(-1);  // NaN
-Math.acosh(0);   // NaN
+Math.acosh(-1); // NaN
+Math.acosh(0); // NaN
 Math.acosh(0.5); // NaN
-Math.acosh(1);   // 0
-Math.acosh(2);   // 1.3169578969248166
+Math.acosh(1); // 0
+Math.acosh(2); // 1.3169578969248166
 ```
 
 1 未満の値に対しては、 `Math.acosh()` は {{jsxref("NaN")}} を返します。
@@ -49,9 +49,11 @@ Math.acosh(2);   // 1.3169578969248166
 <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="TeX">x \geq 1</annotation></semantics></math>に対して、<math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {arcosh} (x) = \ln \left(x + \sqrt{x^{2} - 1} \right)</annotation></semantics></math> になり、次の関数でエミュレートできます。
 
 ```js
-Math.acosh = Math.acosh || function(x) {
-  return Math.log(x + Math.sqrt(x * x - 1));
-};
+Math.acosh =
+  Math.acosh ||
+  function (x) {
+    return Math.log(x + Math.sqrt(x * x - 1));
+  };
 ```
 
 ## 仕様書

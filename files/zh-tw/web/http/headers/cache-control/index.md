@@ -7,10 +7,10 @@ slug: Web/HTTP/Headers/Cache-Control
 
 **`Cache-Control`** 標頭中的*指令*用來控制 HTTP 請求、回應的[快取](/zh-TW/docs/Web/HTTP/Caching)行為。HTTP 請求跟回應可以擁有不同的快取控制指令。
 
-| Header type                                                      | {{Glossary("General header")}} |
-| ---------------------------------------------------------------- | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}}                 | no                                       |
-| {{Glossary("CORS-safelisted response header")}} | yes                                      |
+| Header type                                     | {{Glossary("General header")}} |
+| ----------------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}}           | no                             |
+| {{Glossary("CORS-safelisted response header")}} | yes                            |
 
 ## 語法
 
@@ -24,7 +24,7 @@ slug: Web/HTTP/Headers/Cache-Control
 
 可以在 HTTP 請求中使用的標準 `Cache-Control` 指令
 
-```html
+```http
 Cache-Control: max-age=<秒數>
 Cache-Control: max-stale[=<秒數>]
 Cache-Control: min-fresh=<秒數>
@@ -38,7 +38,7 @@ Cache-Control: only-if-cached
 
 可以在 HTTP 回應中使用的標準 `Cache-Control` 指令
 
-```html
+```http
 Cache-Control: must-revalidate
 Cache-Control: no-cache
 Cache-Control: no-store
@@ -54,7 +54,7 @@ Cache-Control: s-maxage=<秒數>
 
 這些擴充的 `Cache-Control` 指令不是 HTTP 快取的核心標準。使用前請檢查[相容性](#browser_compatibility)，客戶端會直接忽略不支援的指令。
 
-```html
+```http
 Cache-Control: immutable
 Cache-Control: stale-while-revalidate=<秒數>
 Cache-Control: stale-if-error=<秒數>
@@ -113,6 +113,7 @@ Cache-Control: stale-if-error=<秒數>
 想要禁止快取一個資源，你可以在回應中設定這個標頭：
 
 - Good
+
   - : `Cache-Control: no-store`
 
     > **這個:** `no-store` 指令使得回應再也不會被儲存，但它無法防止使用先前儲存、而且仍有效的快取。多設定 `max-age=0` 可以強制執行驗證（也就會清除既有快取）。

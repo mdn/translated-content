@@ -37,4 +37,4 @@ slug: Web/CSS/Layout_cookbook/Split_Navigation
 
 ## 参见
 
-- [CSS Flexible Box Layout](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [CSS Flexible Box Layout](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)

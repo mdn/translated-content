@@ -1,7 +1,6 @@
 ---
 title: Class static initialization blocks
 slug: Web/JavaScript/Reference/Classes/Static_initialization_blocks
-original_slug: Web/JavaScript/Reference/Classes/Class_static_initialization_blocks
 ---
 
 {{jsSidebar("Classes")}}

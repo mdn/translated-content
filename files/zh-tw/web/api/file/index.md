@@ -71,7 +71,7 @@ _`File` 介面沒有定義任何方法，但繼承了 {{domxref("Blob")}} 介面
   );
   ```
 
-- The following non-standard properties and methods were removed in Gecko 7: {{domxref("File.fileName")}}, {{domxref("File.fileSize")}}, {{domxref("File.getAsBinary()")}}, {{domxref("File.getAsDataURL()")}}, {{domxref("File.getAsText()","File.getAsText(string encoding)")}} ({{bug("661876")}}). Standard properties {{domxref("File.name")}}, {{domxref("Blob.size")}}, and methods on {{domxref("FileReader")}} should be used instead.
+- The following non-standard properties and methods were removed in Gecko 7: {{domxref("File.fileName")}}, {{domxref("File.fileSize")}}, {{domxref("File.getAsBinary()")}}, {{domxref("File.getAsDataURL()")}}, {{domxref("File.getAsText()","File.getAsText(string encoding)")}} ([Firefox bug 661876](https://bugzil.la/661876)). Standard properties {{domxref("File.name")}}, {{domxref("Blob.size")}}, and methods on {{domxref("FileReader")}} should be used instead.
 
 ## 參見
 

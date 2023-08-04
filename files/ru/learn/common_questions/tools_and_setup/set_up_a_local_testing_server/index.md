@@ -1,8 +1,6 @@
 ---
 title: Как настроить локальный сервер для тестирования?
 slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
-translation_of: Learn/Common_questions/set_up_a_local_testing_server
-original_slug: Learn/Common_questions/set_up_a_local_testing_server
 ---
 
 Эта статья объясняет как установить простой локальный тестовый сервер на вашем компьютере, а так же основы его использования.
@@ -32,36 +30,36 @@ original_slug: Learn/Common_questions/set_up_a_local_testing_server
 
 1. Установить Python. Если вы пользуетесь Linux или Mac OS X, всё уже готово в вашей системе. Если вы пользователь Windows, вы можете скачать установочный файл с домашней страницы Python:
 
-    - Зайдите на [python.org](https://www.python.org/)
-    - В секции загрузок, выберите линк для Python "3.xxx".
-    - Внизу страницы выберите _Windows x86 executable installer_ и скачайте его.
-    - После загрузки файла запустите его.
-    - На первой странице инсталлятора выберите чекбокс "Add Python 3.xxx to PATH".
-    - Нажмите _Install_, затем нажмите _Close_ когда установка закончится.
+   - Зайдите на [python.org](https://www.python.org/)
+   - В секции загрузок, выберите линк для Python "3.xxx".
+   - Внизу страницы выберите _Windows x86 executable installer_ и скачайте его.
+   - После загрузки файла запустите его.
+   - На первой странице инсталлятора выберите чекбокс "Add Python 3.xxx to PATH".
+   - Нажмите _Install_, затем нажмите _Close_ когда установка закончится.
 
 2. Откройте командную строку (Windows)/ (OS X/Linux). Для проверки установки Python введите следующую команду:
 
-    ```bash
-    python -V
-    ```
+   ```bash
+   python -V
+   ```
 
 3. Система вернёт вам номер версии установленной программы. В случае успешного выполнения команды `python -V` нужно перейти в директорию с вашим проектом, используя команду `cd`:
 
-    ```bash
-    # include the directory name to enter it, for example
-    cd Desktop
-    # use two dots to jump up one directory level if you need to
-    cd ..
-    ```
+   ```bash
+   # include the directory name to enter it, for example
+   cd Desktop
+   # use two dots to jump up one directory level if you need to
+   cd ..
+   ```
 
 4. Введите команду для запуска сервера в том каталоге:
 
-    ```bash
-    # If Python version returned above is 3.X
-    python -m http.server
-    # If Python version returned above is 2.X
-    python -m SimpleHTTPServer
-    ```
+   ```bash
+   # If Python version returned above is 3.X
+   python -m http.server
+   # If Python version returned above is 2.X
+   python -m SimpleHTTPServer
+   ```
 
 5. По умолчанию это приведёт к запуску содержимого каталога на локальном веб-сервере на порту 8000. Вы можете перейти на этот сервер, перейдя на URL-адрес `localhost: 8000` в своём веб-браузере. Здесь вы увидите содержимое указанного каталога - щёлкните файл HTML, который вы хотите запустить.
 

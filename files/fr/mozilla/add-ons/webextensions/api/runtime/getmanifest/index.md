@@ -1,17 +1,6 @@
 ---
 title: runtime.getManifest()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getManifest
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
 ---
 
 {{AddonSidebar()}}Obtenez le fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) complet, sérialisé à un objet JSON.
@@ -19,7 +8,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
 ## Syntaxe
 
 ```js
-browser.runtime.getManifest()
+browser.runtime.getManifest();
 ```
 
 ### Paramètres

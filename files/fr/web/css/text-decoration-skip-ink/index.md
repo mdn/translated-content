@@ -1,18 +1,11 @@
 ---
 title: text-decoration-skip-ink
 slug: Web/CSS/text-decoration-skip-ink
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-  - Web
-translation_of: Web/CSS/text-decoration-skip-ink
 ---
 
 {{CSSRef}}
 
-La propriété CSS **`text-decoration-skip-ink`** définit la façon dont la ligne décorative (en dessous ou au dessus du texte) est dessinée lorsqu'elle rencontre [le jambage](https://fr.wikipedia.org/wiki/Jambage) ou [la hampe](<https://fr.wikipedia.org/wiki/F%C3%BBt_(typographie)>) d'un caractère (ou glyphe).
+La propriété CSS **`text-decoration-skip-ink`** définit la façon dont la ligne décorative (en dessous ou au dessus du texte) est dessinée lorsqu'elle rencontre [le jambage](https://fr.wikipedia.org/wiki/Jambage) ou [la hampe](<https://fr.wikipedia.org/wiki/Fût_(typographie)>) d'un caractère (ou glyphe).
 
 ## Syntaxe
 

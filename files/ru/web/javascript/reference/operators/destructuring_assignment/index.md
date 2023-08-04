@@ -1,10 +1,6 @@
 ---
 title: Деструктурирующее присваивание
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-tags:
-  - JavaScript
-  - Оператор
-translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
 
 Синтаксис **деструктурирующего присваивания** в выражениях JavaScript позволяет извлекать данные из массивов или объектов при помощи синтаксиса, подобного объявлению массива или литералов в объекте.
@@ -117,7 +113,7 @@ console.log("A is " + a + " B is " + b);
 
 ### Получение значений из результата регулярного выражения
 
-Когда метод [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) регулярного выражения находит совпадение, он возвращает массив, содержащий первый совпадающий фрагмент строки и далее группы, определённые в регулярном выражении. Деструктурирующее присваивание упрощает получение данных из этих групп, игнорируя первый фрагмент:
+Когда метод [`exec()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) регулярного выражения находит совпадение, он возвращает массив, содержащий первый совпадающий фрагмент строки и далее группы, определённые в регулярном выражении. Деструктурирующее присваивание упрощает получение данных из этих групп, игнорируя первый фрагмент:
 
 ```js
 var url = "https://developer.mozilla.org/en-US/Web/JavaScript";
@@ -168,7 +164,7 @@ var metadata = {
         title: "JavaScript-Umgebung"
        }
     ],
-    url: "/en-US/docs/Tools/Scratchpad"
+    url: "/ru/docs/Tools/Scratchpad"
 };
 
 var { title: englishTitle, translations: [{ title: localeTitle }] } = metadata;

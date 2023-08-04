@@ -10,7 +10,7 @@ slug: Web/API/GeolocationCoordinates/latitude
 ## Sintaxis
 
 ```js
-lat = coordinates.latitude
+lat = coordinates.latitude;
 ```
 
 ## Especificaciones

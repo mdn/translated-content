@@ -1,14 +1,6 @@
 ---
 title: HTTP/2
 slug: Glossary/HTTP_2
-tags:
-  - Glossary
-  - HTTP
-  - Infrstructure
-  - Reference
-  - Web Performance
-translation_of: Glossary/HTTP_2
-original_slug: Глоссарий/HTTP_2
 ---
 
 **HTTP/2** это старшая версия сетевого протокола [HTTP](/ru/docs/Web/HTTP/Basics_of_HTTP). Основным назначением HTTP/2 является снижение {{glossary("latency","задержки")}} путём реализации полного мультиплексирования запросов и ответов, уменьшения перегруженности протокола при помощи эффективного сжатия заголовков HTTP, а также добавления поддержки приоритетов запроса и "server push"("серверное проталкивание" - сервер имея правила, может проявить инициативу, которые инициируют отправку контента до его запроса, зная о том, что может поступить запрос на их отправку).
@@ -17,9 +9,9 @@ HTTP/2 никоим образом не изменяет семантику пр
 
 1. Основные сведения
 
-    1. [HTTP на MDN](/ru/docs/Web/HTTP)
+   1. [HTTP на MDN](/ru/docs/Web/HTTP)
 
 2. [Справка](/ru/docs/Glossary)
 
-    1. {{glossary("HTTP")}}
-    2. {{glossary("Latency")}}
+   1. {{glossary("HTTP")}}
+   2. {{glossary("Latency")}}

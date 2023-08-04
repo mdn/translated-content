@@ -3,11 +3,11 @@ title: alignment-baseline
 slug: Web/SVG/Attribute/alignment-baseline
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-`alignment-baseline`属性指定了一个对象如何相对于它的父元素对齐。这个属性指定了该元素的基线对齐到相应的父元素的基线。举个例子，允许罗马文字中的字母表基线在字体大小发生变化时保持一致。它的默认值是 baseline，与该`alignment-baseline`属性的计算值同名。
+`alignment-baseline` 属性指定了一个对象如何相对于它的父元素对齐。这个属性指定了该元素的基线对齐到相应的父元素的基线。举个例子，允许罗马文字中的字母表基线在字体大小发生变化时保持一致。它的默认值是 baseline，与该 `alignment-baseline` 属性的计算值同名。
 
-作为一个外观属性，它还可以直接作为 CSS 样式表内部的属性使用。请阅读{{ cssxref("alignment-baseline","CSS alignment-baseline") }}以了解更多信息。
+作为一个外观属性，它还可以直接作为 CSS 样式表内部的属性使用。请阅读 {{ cssxref("alignment-baseline","CSS alignment-baseline") }} 以了解更多信息。
 
 ## 用法
 
@@ -56,11 +56,10 @@ text{
 
 ## 元素
 
-下列元素使用`alignment-baseline 属性：`
+下列元素使用 `alignment-baseline` 属性：
 
 - {{ SVGElement("tspan") }}
 - {{ SVGElement("tref") }}
-- {{ SVGElement("altGlyph") }}
 - {{ SVGElement("textPath") }}
 
 如果对象要在别的元素中对齐（比如在{{ SVGElement("text") }}元素中），请阅读{{ SVGAttr("dominant-baseline") }}。

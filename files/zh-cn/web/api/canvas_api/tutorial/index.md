@@ -27,7 +27,6 @@ slug: Web/API/Canvas_API/Tutorial
 - [基本动画](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_animations)
 - [高级动画](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
 - [像素处理](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
-- [点击区域和无障碍访问](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility)
 - [优化 canvas](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas)
 - [终曲](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Finale)
 

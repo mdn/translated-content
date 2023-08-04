@@ -1,9 +1,6 @@
 ---
 title: Document.caretRangeFromPoint()
 slug: Web/API/Document/caretRangeFromPoint
-page-type: web-api-instance-method
-translation_of: Web/API/Document/caretRangeFromPoint
-browser-compat: api.Document.caretRangeFromPoint
 ---
 
 {{APIRef("DOM")}}{{Non-standard_header}}
@@ -13,7 +10,7 @@ La méthode **`caretRangeFromPoint()`**, rattachée à l'interface [`Document`](
 ## Syntaxe
 
 ```js
-caretRangeFromPoint(x, y)
+caretRangeFromPoint(x, y);
 ```
 
 ### Paramètres
@@ -57,32 +54,35 @@ function insertBreakAtPoint(e) {
     textNode = range.offsetNode;
     offset = range.offset;
   } else {
-    document.body.textContent = '[Ce navigateur ne supporte ni'
-      + ' document.caretRangeFromPoint'
-      + ' ni document.caretPositionFromPoint.]';
+    document.body.textContent =
+      "[Ce navigateur ne supporte ni" +
+      " document.caretRangeFromPoint" +
+      " ni document.caretPositionFromPoint.]";
     return;
   }
   // On opère uniquement sur le texte
   if (textNode && textNode.nodeType == 3) {
     let replacement = textNode.splitText(offset);
-    let br = document.createElement('br');
+    let br = document.createElement("br");
     textNode.parentNode.insertBefore(br, replacement);
   }
 }
 
-let paragraphs = document.getElementsByTagName('p');
+let paragraphs = document.getElementsByTagName("p");
 for (let i = 0; i < paragraphs.length; i++) {
-  paragraphs[i].addEventListener('click', insertBreakAtPoint, false);
+  paragraphs[i].addEventListener("click", insertBreakAtPoint, false);
 }
 ```
 
 ### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</p>
 ```
 
 ## Compatibilité des navigateurs

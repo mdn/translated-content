@@ -1,8 +1,6 @@
 ---
 title: XMLHttpRequestEventTarget.onload
 slug: Web/API/XMLHttpRequest/load_event
-translation_of: Web/API/XMLHttpRequestEventTarget/onload
-original_slug: Web/API/XMLHttpRequestEventTarget/onload
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -17,14 +15,14 @@ XMLHttpRequest.onload = callback;
 
 ### Values
 
-- `callback` is the function to be executed when the request completes successfully. It receives a {{domxref("ProgressEvent")}} object as its first argument. The value of *this* (i.e. the context) is the same {{domxref("XMLHttpRequest")}} this callback is related to.
+- `callback` is the function to be executed when the request completes successfully. It receives a {{domxref("ProgressEvent")}} object as its first argument. The value of _this_ (i.e. the context) is the same {{domxref("XMLHttpRequest")}} this callback is related to.
 
 ## Example
 
 ```js
 var xmlhttp = new XMLHttpRequest(),
-  method = 'GET',
-  url = 'https://developer.mozilla.org/';
+  method = "GET",
+  url = "https://developer.mozilla.org/";
 
 xmlhttp.open(method, url, true);
 xmlhttp.onload = function () {

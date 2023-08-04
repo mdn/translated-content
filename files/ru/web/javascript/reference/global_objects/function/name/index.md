@@ -1,13 +1,6 @@
 ---
 title: Function.name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
-tags:
-  - ECMAScript6
-  - Function
-  - JavaScript
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
 ---
 {{JSRef}}
 
@@ -101,7 +94,7 @@ foo.bind({}).name; // "bound foo"
 
 ### Имена функций для getters и setters
 
-Когда используются [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) и [set](/ru/docs/Web/JavaScript/Reference/Functions/set), "get" и "set" появятся в имени функции.
+Когда используются [`get`](/ru/docs/Web/JavaScript/Reference/Functions/get) и [set](/ru/docs/Web/JavaScript/Reference/Functions/set), "get" и "set" появятся в имени функции.
 
 ```
 let o = {

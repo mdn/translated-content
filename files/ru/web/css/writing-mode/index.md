@@ -1,7 +1,6 @@
 ---
 title: writing-mode
 slug: Web/CSS/writing-mode
-translation_of: Web/CSS/writing-mode
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
@@ -79,6 +78,6 @@ writing-mode: unset;
 
 ## See also
 
-- SVG [`writing-mode`](/en-US/docs/Web/SVG/Attribute/writing-mode) attribute
+- SVG [`writing-mode`](/ru/docs/Web/SVG/Attribute/writing-mode) attribute
 - {{Cssxref("direction")}}
 - {{Cssxref("unicode-bidi")}}

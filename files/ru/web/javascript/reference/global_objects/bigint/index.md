@@ -1,12 +1,6 @@
 ---
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
-tags:
-  - BigInt
-  - JavaScript
-  - методы BigInt
-  - свойства BigInt
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 {{JSRef}}
 
@@ -188,7 +182,7 @@ Boolean(12n)
 
 ## Конструктор
 
-- [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
+- [`BigInt()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
   - : Создаёт объект {{jsxref("BigInt")}}.
 
 ## Статические методы

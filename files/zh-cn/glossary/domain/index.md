@@ -3,6 +3,8 @@ title: 域
 slug: Glossary/Domain
 ---
 
+{{GlossarySidebar}}
+
 域是互联网中控制其自身资源的“代表”（authority，有时被直译为“权威”）。它的“域名”是 {{Glossary("URL")}} 层次结构的一部分，是对“代表”的称呼。域名通常也是 URL 中最令人难忘的地方，例如品牌名称。
 
 一个全限定域名（FQDN）包含可以使用互联网的{{Glossary("DNS","域名系统")}}明确地按名称查询该机构的所有必要部分。

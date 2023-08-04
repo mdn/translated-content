@@ -1,12 +1,6 @@
 ---
 title: Выполняемые на сервере веб-фреймворки
 slug: Learn/Server-side/First_steps/Web_frameworks
-tags:
-  - '-фреймворк'
-  - Программирование серверной части
-  - Сервер
-  - начальный уровень
-translation_of: Learn/Server-side/First_steps/Web_frameworks
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
@@ -100,7 +94,7 @@ class Team(models.Model):
     TEAM_LEVELS = (
         ('U09', 'Under 09s'),
         ('U10', 'Under 10s'),
-        ('U11, 'Under 11s'),
+        ('U11', 'Under 11s'),
         ...  #list our other teams
     )
     team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
@@ -134,24 +128,22 @@ def youngest(request):
 
 Фрагмент кода ниже показывает, как это работает. Продолжая пример «самой молодой команды» из предыдущего раздела, HTML-шаблон передаёт представлению переменную списка `youngest_teams`. Внутри скелета HTML у нас есть выражение, которое сначала проверяет, существует ли переменная `youngest_teams`, а затем повторяет её в цикле `for`. На каждой итерации шаблон отображает значение `team_name` команды в элементе списка.
 
-```html
-#best/templates/best/index.html
+```django
+<!-- best/templates/best/index.html -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<body>
-
- {% if youngest_teams %}
-    <ul>
-    {% for team in youngest_teams %}
+  <body>
+    {% if youngest_teams %}
+      <ul>
+        {% for team in youngest_teams %}
         <li>\{\{ team.team_name \}\}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No teams are available.</p>
-{% endif %}
-
-</body>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No teams are available.</p>
+    {% endif %}
+  </body>
 </html>
 ```
 
@@ -182,15 +174,15 @@ def youngest(request):
 >
 > 1. Перейдите к основным сайтам (ссылки выше)
 >
->     - Нажмите на ссылки меню «Документация» (такие вещи, как «Документация, Руководство, Справочник по API, Начало работы»).
->     - Можете ли вы увидеть темы, показывающие, как настроить маршрутизацию URL, шаблоны и базы данных / модели?
->     - Понятны ли эти документы?
+>    - Нажмите на ссылки меню «Документация» (такие вещи, как «Документация, Руководство, Справочник по API, Начало работы»).
+>    - Можете ли вы увидеть темы, показывающие, как настроить маршрутизацию URL, шаблоны и базы данных / модели?
+>    - Понятны ли эти документы?
 >
 > 2. Перейдите к спискам рассылки для каждого сайта (доступно по ссылкам сообщества).
 >
->     - Сколько вопросов было опубликовано за последние несколько дней?
->     - У скольких есть ответы?
->     - Есть ли у них активное сообщество?
+>    - Сколько вопросов было опубликовано за последние несколько дней?
+>    - У скольких есть ответы?
+>    - Есть ли у них активное сообщество?
 
 ## Несколько хороших веб-фреймворков?
 

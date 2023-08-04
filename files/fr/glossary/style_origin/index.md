@@ -1,7 +1,6 @@
 ---
 title: Origine de style
 slug: Glossary/Style_origin
-translation_of: 'Glossary/Style_origin'
 ---
 
 En [CSS](/fr/docs/Glossary/CSS), il existe trois catégories de sources pour les changements de style. Ces catégories sont appelées **origines de style**. Il s'agit de l'**origine de l'agent utilisateur**, de l'**origine de l'utilisateur** et de l'**origine de l'auteur**.

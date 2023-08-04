@@ -1,6 +1,6 @@
 ---
 title: 可変フォントガイド
-slug: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
+slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 ---
 
 {{CSSRef}}

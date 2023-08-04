@@ -18,17 +18,17 @@ window.history.forward();
 ### HTML
 
 ```html
-<button id='go-forward'>Go Forward!</button>
+<button id="go-forward">Go Forward!</button>
 ```
 
 ### JavaScript
 
 ```js
-window.onload = function(e) {
-  document.getElementById('go-forward').addEventListener('click', e => {
+window.onload = function (e) {
+  document.getElementById("go-forward").addEventListener("click", (e) => {
     window.history.forward();
-  })
-}
+  });
+};
 ```
 
 ## 规范

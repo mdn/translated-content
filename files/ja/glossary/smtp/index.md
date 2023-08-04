@@ -9,11 +9,11 @@ slug: Glossary/SMTP
 
 1. [用語集](/ja/docs/Glossary)
 
-    1. {{glossary("NNTP")}}
-    2. {{glossary("POP3")}}
-    3. {{glossary("protocol")}}
-    4. {{Glossary("state machine")}}
+   1. {{glossary("NNTP")}}
+   2. {{glossary("POP3")}}
+   3. {{glossary("protocol")}}
+   4. {{Glossary("state machine")}}
 
 2. Wikipedia の記事
 
-    1. [SMTP](https://ja.wikipedia.org/wiki/SMTP)
+   1. [SMTP](https://ja.wikipedia.org/wiki/SMTP)

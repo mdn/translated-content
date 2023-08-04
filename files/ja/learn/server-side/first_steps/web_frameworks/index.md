@@ -129,24 +129,22 @@ def youngest(request):
 
 以下のコードスニペットはこれがどのように機能するかを示しています。前のセクションの「最年少チーム」の例を続けると、HTML テンプレートにはビューによって `youngest_teams` というリスト変数が渡されます。HTML スケルトンの内部には、最初に `youngest_teams` 変数が存在するかどうかを確認し、次に for ループ内でそれを繰り返す式があります。各イテレーションで、テンプレートはチームの `team_name` 値をリストアイテムに表示します。
 
-```html
-#best/templates/best/index.html
+```django
+<!-- best/templates/best/index.html -->
 
-<!DOCTYPE html>
-<html lang="en">
-<body>
-
- {% if youngest_teams %}
-    <ul>
-    {% for team in youngest_teams %}
-        <li>\{\{ team.team_name \}\}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>利用できるチームがありません。</p>
-{% endif %}
-
-</body>
+<!doctype html>
+<html lang="ja">
+  <body>
+    {% if youngest_teams %}
+      <ul>
+        {% for team in youngest_teams %}
+          <li>\{\{ team.team_name \}\}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>利用できるチームがありません。</p>
+    {% endif %}
+  </body>
 </html>
 ```
 
@@ -178,15 +176,15 @@ def youngest(request):
 >
 > 1. メインサイトに移動する (上記のリンク先)
 >
->     - Documentation メニューのリンク (Documentation、Guide、API Reference、Getting Started など) をクリックします。
->     - URL ルーティング、テンプレート、データベース/モデルの設定方法を説明したトピックはありますか？
->     - ドキュメントは明確ですか？
+>    - Documentation メニューのリンク (Documentation、Guide、API Reference、Getting Started など) をクリックします。
+>    - URL ルーティング、テンプレート、データベース/モデルの設定方法を説明したトピックはありますか？
+>    - ドキュメントは明確ですか？
 >
 > 2. 各サイトのメーリングリストに移動します (コミュニティリンクからアクセス可能)。
 >
->     - 過去数日間に投稿された質問の数
->     - 回答はいくつありますか？
->     - 彼らは活発なコミュニティを持っていますか？
+>    - 過去数日間に投稿された質問の数
+>    - 回答はいくつありますか？
+>    - 彼らは活発なコミュニティを持っていますか？
 
 ## いくつかの良いウェブフレームワークとは？
 

@@ -12,7 +12,7 @@ slug: Web/API/HTMLCollection/item
 ## Syntax
 
 ```js
-var element = HTMLCollection.item(index)
+var element = HTMLCollection.item(index);
 ```
 
 ### 파라미터
@@ -31,9 +31,9 @@ var element = HTMLCollection.item(index)
 ## Example
 
 ```js
-var c = document.images;  // HTMLCollection입니다
-var img0 = c.item(0);     // 이렇게 item() 메소드를 이용할 수 있지만
-var img1 = c[1];          // 이렇게 표기하는게 쉽고 더 보편적입니다
+var c = document.images; // HTMLCollection입니다
+var img0 = c.item(0); // 이렇게 item() 메소드를 이용할 수 있지만
+var img1 = c[1]; // 이렇게 표기하는게 쉽고 더 보편적입니다
 ```
 
 ## 브라우저 호환성

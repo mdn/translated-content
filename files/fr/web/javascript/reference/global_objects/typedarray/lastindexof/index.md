@@ -1,21 +1,11 @@
 ---
 title: TypedArray.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/lastIndexOf
 ---
 
 {{JSRef}}
 
-La méthode **`lastIndexOf()`** renvoie le dernier indice (le plus grand) pour lequel un élément donné est trouvé. Si l'élément cherché n'est pas trouvé, la valeur de retour sera -1. Le tableau typé est parcouru dans l'ordre des indices décroissants (de la fin vers le début) à partir de `indexDépart`. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.lastIndexOf()")}}. Dans le reste de l'article, *TypedArray* correspond à l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
+La méthode **`lastIndexOf()`** renvoie le dernier indice (le plus grand) pour lequel un élément donné est trouvé. Si l'élément cherché n'est pas trouvé, la valeur de retour sera -1. Le tableau typé est parcouru dans l'ordre des indices décroissants (de la fin vers le début) à partir de `indexDépart`. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.lastIndexOf()")}}. Dans le reste de l'article, _TypedArray_ correspond à l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
 
 {{EmbedInteractiveExample("pages/js/typedarray-lastindexof.html")}}
 
@@ -44,10 +34,10 @@ Le dernier indice du tableau typé pour lequel l'élément a été trouvé ou `-
 
 ```js
 var uint8 = new Uint8Array([2, 5, 9, 2]);
-uint8.lastIndexOf(2);     // 3
-uint8.lastIndexOf(7);     // -1
-uint8.lastIndexOf(2, 3);  // 3
-uint8.lastIndexOf(2, 2);  // 0
+uint8.lastIndexOf(2); // 3
+uint8.lastIndexOf(7); // -1
+uint8.lastIndexOf(2, 3); // 3
+uint8.lastIndexOf(2, 2); // 0
 uint8.lastIndexOf(2, -2); // 0
 uint8.lastIndexOf(2, -1); // 3
 ```

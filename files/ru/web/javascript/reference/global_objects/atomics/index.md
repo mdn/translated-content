@@ -1,7 +1,6 @@
 ---
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 ---
 
 {{JSRef}}Объект **`Atomics`** предоставляет атомарные операции как статические методы. Используется вместе с объектом {{jsxref("SharedArrayBuffer")}}.
@@ -79,4 +78,4 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 - [Web Workers](/ru/docs/Web/API/Web_Workers_API)
 - [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – a simple library providing synchronization and work distribution abstractions.
 - [Shared Memory – a brief tutorial](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
-- [A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)
+- [A Taste of JavaScript's New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

@@ -148,7 +148,7 @@ const greeting = "Sou um bom exemplo";
 ```
 
 ```js example-bad
-const greeting ="Eu sou um mau exemplo";
+const greeting = "Eu sou um mau exemplo";
 ```
 
 ### Referência de discussão

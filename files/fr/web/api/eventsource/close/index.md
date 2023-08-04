@@ -1,16 +1,6 @@
 ---
 title: EventSource.close()
 slug: Web/API/EventSource/close
-tags:
-  - API
-  - EventSource
-  - Evénement serveur
-  - Fonction
-  - Méthode
-  - Reference
-  - Server-sent events
-  - close
-translation_of: Web/API/EventSource/close
 ---
 
 {{APIRef('WebSockets API')}}
@@ -36,13 +26,13 @@ Nulle.
 ## Exemples
 
 ```js
-var bouton = document.querySelector('button');
-var evtSource = new EventSource('sse.php');
+var bouton = document.querySelector("button");
+var evtSource = new EventSource("sse.php");
 
-bouton.onclick = function() {
-  console.log('Connection fermée');
+bouton.onclick = function () {
+  console.log("Connection fermée");
   evtSource.close();
-}
+};
 ```
 
 > **Note :** Vous pouvez trouver un exemple complet sur GitHub — voir [Demo simple de SSE utilisant PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)

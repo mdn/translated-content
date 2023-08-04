@@ -41,7 +41,7 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 
 传统的解决方案能够解决许多这样的问题，前提是它能够正确的工作。幸运的是，几年之后 {{glossary("HTML5")}} 标准提出，其中有许多的新特性，包括 {{htmlelement("video")}} 和 {{htmlelement("audio")}} 标签，以及一些 {{Glossary("JavaScript")}} 和 {{Glossary("API","APIs")}} 用于对其进行控制。在这里，我们不讨论有关 JavaScript 的问题，仅仅讲解有关 HTML 的基础。
 
-我们不会教你如何制作音频和视频，因为那需要完全不同的技术。我们已经为你的试验提供了一些视频和音频的文件（ [sample audio and video files and example code](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) ），以防止你自己没有。
+我们不会教你如何制作音频和视频，因为那需要完全不同的技术。我们已经为你的试验提供了一些视频和音频的文件（[示例音频和视频文件以及示例代码的链接](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content)），以防止你自己没有。
 
 > **备注：** 在你开始之前，你应当了解一些 {{glossary("OVP","OVPs")}} (在线视频提供商) 例如 [YouTube](https://www.youtube.com/) 、[Dailymotion](http://www.dailymotion.com) 、[Vimeo](https://vimeo.com/)、[Bilibili](https://www.bilibili.com)等，以及在线音频提供商例如 [Soundcloud](https://soundcloud.com/)。这些公司提供方便、简单的方式来支持视频，所以你不必担心庞大的带宽消耗。OVPS 甚至提供现成的代码用于为你的 web 网页嵌入视频/音频。如果你使用这样的服务，你便可以避免在这篇文章中我们将讨论的一些难题。在下一篇文章中，我们将会再讨论这样的服务。
 
@@ -51,7 +51,9 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 
 ```html
 <video src="rabbit320.webm" controls>
-  <p>你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看</p>
+  <p>
+    你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看
+  </p>
 </video>
 ```
 
@@ -68,7 +70,7 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 
 ![A simple video player showing a video of a small white rabbit](simple-video.png)
 
-你可以点击[这里](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)查看网页，或者点击[这里](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)查看源代码。
+你可以点击[这里](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)查看网页，或者点击[这里](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)查看源代码。
 
 ### 使用多个播放源以提高兼容性
 
@@ -112,9 +114,11 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 
 ```html
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看
+  </p>
 </video>
 ```
 
@@ -129,12 +133,19 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 这里有许多你可以用在 HTML5 `<video>` 上的特性，请看我们的第三个例子：
 
 ```html
-<video controls width="400" height="400"
-       autoplay loop muted
-       poster="poster.png">
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看</p>
+<video
+  controls
+  width="400"
+  height="400"
+  autoplay
+  loop
+  muted
+  poster="poster.png">
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看
+  </p>
 </video>
 ```
 
@@ -170,8 +181,8 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 
 ```html
 <audio controls>
-  <source src="viper.mp3" type="audio/mp3">
-  <source src="viper.ogg" type="audio/ogg">
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
   <p>你的浏览器不支持 HTML5 音频，可点击<a href="viper.mp3">此链接</a>收听。</p>
 </audio>
 ```
@@ -204,9 +215,9 @@ mediaElem.load();
 
 ```js
 const mediaElem = document.querySelector("video");
-mediaElem.audioTracks.onaddtrack = function(event) {
+mediaElem.audioTracks.onaddtrack = function (event) {
   audioTrackAdded(event.track);
-}
+};
 ```
 
 你可以在我们的 {{domxref("TrackEvent")}} 文档中找到更多有用的信息。
@@ -257,9 +268,9 @@ WEBVTT
 
 ```html
 <video controls>
-    <source src="example.mp4" type="video/mp4">
-    <source src="example.webm" type="video/webm">
-    <track kind="subtitles" src="subtitles_en.vtt" srclang="en">
+  <source src="example.mp4" type="video/mp4" />
+  <source src="example.webm" type="video/webm" />
+  <track kind="subtitles" src="subtitles_en.vtt" srclang="en" />
 </video>
 ```
 
@@ -275,7 +286,7 @@ WEBVTT
 
 在这个实践学习当中，我们希望你能够走出去，并且记录一些你自己的视频或者音频 — 如今，大多数手机都能够非常方便的记录视频或者音频，并且你可以将他们上传到你的电脑上面，你可以使用这些功能来记录你的视频或音频。在这时候，你可能需要做一些格式转换，如果是视频的话，你需要将它们转化为 WebM 或者 MP4，如果是音频的话，你需要将它们转化为 MP3 或者 Ogg。不过你并不需要担心，有许多的程序都能够帮你解决这些问题，例如 [Miro Video Converter](http://www.mirovideoconverter.com/) 和 [Audacity](https://sourceforge.net/projects/audacity/)。我们非常希望你能够亲自动手实现它。
 
-如果你无法取得任意的音频或者视频，你可以使用我们已经为你提供的样本（[sample audio and video files](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content)）。同时你也可以使用我们的代码来作为参考。
+如果你无法取得任意的音频或者视频，你可以使用我们已经为你提供的样本（[示例音频和视频文件](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content)）。同时你也可以使用我们的代码来作为参考。
 
 我们希望你能够：
 

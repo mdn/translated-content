@@ -1,79 +1,108 @@
 ---
 title: AudioNode
 slug: Web/API/AudioNode
+l10n:
+  sourceCommit: 2dcdd384a37334e159391f5b0c1617fa2e35ed45
 ---
 
-{{APIRef()}}
+{{APIRef("Web Audio API")}}
 
-The AudioNode interface is a generic interface for representing an audio processing module like an audio source (e.g. an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element), audio destination, intermediate processing module (e.g. a filter like {{domxref("BiquadFilterNode")}} or {{domxref("ConvolverNode")}}), or volume control (like {{domxref("GainNode")}}).
+**`AudioNode`** インスタンスは、音声処理モジュールを表す一般的なインターフェイスです。
 
-AudioNode インターフェースは、オーディオソース（例：\<audio>、\<video>, OscillatorNode、音声出力、中間処理モジュール（BiquadFilterNode や ConvolverNode のようなフィルター）、GainNode のような音量コントロール）などの音声処理モジュールを表現するための、一般的なインターフェースです。
+たとえば以下のものを表します。
 
-![AudioNodes participating in an AudioContext create a audio routing graph.](WebAudioBasics.png)
+- 音源 (HTML の {{HTMLElement("audio")}} 要素や {{HTMLElement("video")}} 要素、{{domxref("OscillatorNode")}} など)
+- 音声の出力先
+- 中間処理モジュール (たとえば、{{domxref("BiquadFilterNode")}} や {{domxref("ConvolverNode")}} などのフィルター)
+- ボリューム制御 ({{domxref("GainNode")}} など)
 
-An `AudioNode` has inputs and outputs, each with a given amount of _channels_. An `AudioNode` with zero inputs and exactly one output is called a _source node_. The exactly processing done varies from one `AudioNode` to another but, in general, a node reads its inputs, does some audio-related processing, and generates new values for its outputs.
+{{InheritanceDiagram}}
 
-AudioNode は複数の入力、出力を持ち、それぞれがチャンネルを持ちます。入力が無く、一つの出力を持つ AudioNode は、ソースノードと呼ばれます。厳密な処理は AudioNode によって異なりますが,　基本的に、ノードは入力を読み込み、何らかの音声関連の処理を行ってから、出力のための新しい値を出力します。
+>**メモ:** `AudioNode` はイベントのターゲットになることがあり、そのため {{domxref("EventTarget")}} インターフェイスを実装しています。
 
-Different nodes can be linked together to build a _processing graph_. Such a graph is contained in an {{domxref("AudioContext")}}. Each `AudioNode` participates in exactly one such context. In general, processing nodes inherit the properties and methods of `AudioNode`, but also define their own functionality on top. See the individual node pages for more details, as listed on the [Web Audio API](/ja/docs/Web/API/Web_Audio_API) homepage.
+## インスタンスプロパティ
 
-ノードは音声処理のグラフを構築するため、互いに関連付けることができます。そのようなグラフは一つの{{domxref("AudioContext")}}に含まれます。それぞれの AudioNode は必ず一つの context に含まれます。一般に、ノードは AudioNode のプロパティやメソッドを継承し、独自の機能が定義されています。個々のノードについての詳細を知りたい場合は、「Web Audio API」ホームページを御覧ください。
-
-> **メモ:** An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
-
-## 属性
-
-- {{domxref("AudioNode.context")}} {{readonlyInline}}
-  - : ノードが含まれているプロセッシンググラフを表現するオブジェクト（{{domxref("AudioContext")}}）を返す。
-
-<!---->
-
-- {{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}
-  - : ノードに与えられた入力の数を返す。ソースノードは numberOfInputs プロパティが 0 のものとして定義されている。
-
-<!---->
-
-- {{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}
-  - : ノードの出力の数を返す。Destination ノード（{{ domxref("AudioDestinationNode") }}）はこの値として 0 を持つ。
-
-<!---->
-
+- {{domxref("AudioNode.context")}} {{ReadOnlyInline}}
+  - : 対応する {{domxref("BaseAudioContext")}} を返します。これはこのノードが参加している処理グラフを表すオブジェクトです。
+- {{domxref("AudioNode.numberOfInputs")}} {{ReadOnlyInline}}
+  - : このノードに供給される入力の数を返します。音源ノードは `numberOfInputs` プロパティの値が `0` であるノードという定義です。
+- {{domxref("AudioNode.numberOfOutputs")}} {{ReadOnlyInline}}
+  - : このノードからの出力の数を返します。{{ domxref("AudioDestinationNode") }} などの出力先ノードは、この属性の値が `0` です。
 - {{domxref("AudioNode.channelCount")}}
-  - : Represents an integer used to determine how many channels are used when [up-mixing and down-mixing](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing) connections to any inputs to the node. Its usage and precise definition depend on the value of {{domxref("AudioNode.channelCountMode")}}.
-
-<!---->
-
+  - : このノードへの入力について[アップミキシングとダウンミキシング](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#%E3%82%A2%E3%83%83%E3%83%97%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0%E3%81%A8%E3%83%80%E3%82%A6%E3%83%B3%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0)を行う際、何個のチャンネルを用いるかを決定するとき用いる整数です。どのように用いられるか、および正確な定義は、{{domxref("AudioNode.channelCountMode")}} の値によります。
 - {{domxref("AudioNode.channelCountMode")}}
-  - : Represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.
+  - : このノードの入力と出力の間でチャンネルを対応付ける方法を表す列挙値です。
 - {{domxref("AudioNode.channelInterpretation")}}
-  - : Represents an enumerated value describing the meaning of the channels. This interpretation will define how audio [up-mixing and down-mixing](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing) will happen.
-    The possible values are `"speakers"` or `"discrete"`.
+  - : チャンネルの意味を表す列挙値です。この意味は、音声の[アップミキシングとダウンミキシング](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#%E3%82%A2%E3%83%83%E3%83%97%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0%E3%81%A8%E3%83%80%E3%82%A6%E3%83%B3%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0)をどのように行うかを決定します。
+      取りうる値は `"speakers"` および `"discrete"` です。
 
-## メソッド
+## インスタンスメソッド
 
-_Also implements methods from the interface_ {{domxref("EventTarget")}}.
+_インターフェイス_ {{domxref("EventTarget")}} _由来のメソッドも実装しています。_
 
-- {{domxref("AudioNode.connect(AudioNode)")}}
-  - : Allows us to connect one output of this node to one input of another node.
-- {{domxref("AudioNode.connect(AudioParam)")}}
-  - : Allows us to connect one output of this node to one input of an audio parameter.
+- {{domxref("AudioNode.connect()")}}
+  - : このノードの出力を、音声データもしくは {{domxref("AudioParam")}} の値として、別のノードの入力に接続します。
 - {{domxref("AudioNode.disconnect()")}}
-  - : Allows us to disconnect the current node from another one it is already connected to.
+  - : このノードを接続済みの別のノードから切断します。
+
+## 説明
+
+### 音声ルーティンググラフ
+
+![AudioContext に参加している AudioNodes が音声ルーティンググラフを作成します。](webaudiobasics.png)
+
+それぞれの `AudioNode` に入力と出力があり、複数の音声ノードを接続することにより _処理グラフ_ が組み立てられます。このグラフは {{domxref("AudioContext")}} 内にあり、それぞれの音声ノードは 1 個の音声コンテキストにのみ所属できます。
+
+_音源ノード_ は入力を持たず、1 個もしくは複数の出力を持ち、音声を生成できます。一方、_出力先ノード_ は出力を持たず、かわりに、入力はすべてスピーカー (もしくは音声コンテキストが用いる何らかの音声出力デバイス) で直接再生されます。さらに、入力と出力を持つ _処理ノード_ があります。正確な処理内容はそれぞれの `AudioNode` によって違いますが、一般に、ノードは入力を読み取り、音声関係の何らかの処理を行い、出力となる新しい値を生成します。もしくは、(たとえば、処理結果には別でアクセスする {{domxref("AnalyserNode")}} で行われるように) 音声をそのまま通過させます。
+
+グラフ内のノードが多くなるほど、遅延も大きくなります。たとえば、グラフの遅延が 500ms の場合、音源ノードが音声を再生すると、その音声がスピーカーで聞こえるまでには 0.5 秒かかります。(もしくは、下層の音声デバイス内での遅延により、さらに長くなるかもしれません) そのため、対話型の音声を用意したい場合は、グラフをできるだけ小さくし、ユーザーが操作する音声ノードはグラフの最後に配置するべきです。たとえば、ボリューム制御 (`GainNode`) は、ボリュームの変更がすぐに反映されるよう、最後のノードにするべきです。
+
+それぞれの入力および出力には、決められた数の _チャンネル_ があります。たとえば、モノラルの音声にはチャンネルが 1 個あり、ステレオの音声にはチャンネルが 2 個あります。ウェブオーディオ API は、必要に応じてチャンネルの数をアップミキシングやダウンミキシングします。詳細は、ウェブオーディオの仕様を確認してください。
+
+全音声ノードの一覧は、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) のホームページを参照してください。
+
+### `AudioNode` の生成
+
+`AudioNode` を生成するには、2 種類の方法があります。_コンストラクター_ による方法と、_ファクトリーメソッド_ による方法です。
+
+```js
+// コンストラクター
+const analyserNode = new AnalyserNode(audioCtx, {
+  fftSize: 2048,
+  maxDecibels: -25,
+  minDecibels: -60,
+  smoothingTimeConstant: 0.5,
+});
+```
+
+```js
+// ファクトリーメソッド
+const analyserNode = audioCtx.createAnalyser();
+analyserNode.fftSize = 2048;
+analyserNode.maxDecibels = -25;
+analyserNode.minDecibels = -60;
+analyserNode.smoothingTimeConstant = 0.5;
+```
+
+コンストラクターを使うのも、ファクトリーメソッドを使うのも、両方を混ぜて使うのも自由です。ただし、コンストラクターを使うと以下の利点があります。
+
+- すべてのパラメーターを生成時に設定でき、個別に設定する必要がありません。
+- [音声ノードのサブクラスを作成](https://github.com/WebAudio/web-audio-api/issues/251)することができます。実際の処理はブラウザーの内部で行われ、変更できませんが、音声ノードのラッパーを書くことで独自のプロパティやメソッドを提供できます。
+- パフォーマンスが若干良いです。Chrome においても Firefox においても、ファクトリーメソッドは内部でコンストラクターを呼びます。
+
+_歴史の概要_: ウェブオーディオの仕様の最初のバージョンでは、ファクトリーメソッドのみを定義していました。[2013 年 10 月のデザインレビュー](https://github.com/WebAudio/web-audio-api/issues/250)の後、ファクトリーメソッドに比べて多くの利点があるため、コンストラクターを追加することになりました。コンストラクターは、2016 年 8 月〜 10 月に仕様に加えられました。ファクトリーメソッドは引き続き仕様に含まれ、非推奨にはなっていません。
 
 ## 例
 
-This simple snippet of code shows the creation of some audio nodes, and how the AudioNode properties and methods can be used. You can find examples of such usage on any of the examples linked to on the [Web Audio API](/ja/docs/Web/API/Web_Audio_API) landing page (for example [Violent Theremin](https://github.com/mdn/violent-theremin).)
+このシンプルなコード断片は、音声ノードをいくつか生成し、`AudioNode` のプロパティやメソッドの使い方を示しています。このような使用法の例は、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) のランディングページからリンクされている例 (たとえば [Violent Theremin](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin)) のどれでも見ることができます。
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioCtx = new AudioContext();
 
-var audioCtx = new AudioContext();
+const oscillator = new OscillatorNode(audioCtx);
+const gainNode = new GainNode(audioCtx);
 
-var oscillator = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
-
-oscillator.connect(gainNode);
-gainNode.connect(audioCtx.destination);
+oscillator.connect(gainNode).connect(audioCtx.destination);
 
 oscillator.context;
 oscillator.numberOfInputs;
@@ -81,14 +110,14 @@ oscillator.numberOfOutputs;
 oscillator.channelCount;
 ```
 
-## 使用
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
-{{Compat("api.AudioNode")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Web Audio API の利用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

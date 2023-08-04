@@ -1,7 +1,6 @@
 ---
 title: 반응형 디자인
 slug: Learn/CSS/CSS_layout/Responsive_Design
-original_slug: Learn/CSS/CSS_layout/반응형_디자인
 ---
 
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
@@ -17,7 +16,7 @@ original_slug: Learn/CSS/CSS_layout/반응형_디자인
           href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 입문서</a
         >를 공부하세요), 그리고 CSS의 작동 방식을 파악하기 위해 (<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/ko/docs/Learn/CSS/First_steps"
           >CSS 첫걸음</a
         >과
         <a href="/ko/docs/Learn/CSS/Building_blocks">CSS 구성 블록</a>를
@@ -191,7 +190,7 @@ img {
 
 이 접근법에는 명백한 단점이 있습니다. 해당 이미지는 고유 크기보다 훨씬 작게 표시될 수 있어 대역폭 낭비입니다. 다시말해 모바일 사용자는 브라우저 창에서 실제로 보는 것의 몇 배 크기의 이미지를 다운로드하게 되니 낭비입니다. 또한, 데스크톱과 같은 이미지 가로 세로 비율을 모바일에서 원하지 않을 수도 있습니다. 예를 들어, 모바일의 경우 정사각형 이미지가 좋을 수 있지만 데스크톱상에는 같은 이미지를 가로 보기처럼 장면을 보여줍니다. 또는 모바일 상의 이미지의 크기가 작다는 것을 이해하면서도 서로 다른 이미지를 모두 보여주고 싶을 경우가 있습니다. 말하자면 작은 화면 크기에서 더 쉽게 해석될 수 있는 이미지를 말합니다. 이런 것들은 단순히 이미지를 축소해서는 달성할 수 없습니다.
 
-반응형 이미지는 [`<picture>`](/en-US/docs/Web/HTML/Element/picture) 요소와 [`<img>`](/en-US/docs/Web/HTML/Element/img), `srcset`과 `sizes` 속성은 이러한 문제를 모두 해결합니다. 여러분은 "힌트"(이미지에 가장 적합한 화면 크기와 해상도를 설명하는 메타 데이터)와 함께 여러 크기를 제공할 수 있으며, 브라우저는 각 장치에 가장 적합한 이미지를 선택하며, 사용자가 사용하고 있는 장치에 적합한 이미지 크기를 다운로드할 수 있도록 담보합니다.
+반응형 이미지는 [`<picture>`](/ko/docs/Web/HTML/Element/picture) 요소와 [`<img>`](/ko/docs/Web/HTML/Element/img), `srcset`과 `sizes` 속성은 이러한 문제를 모두 해결합니다. 여러분은 "힌트"(이미지에 가장 적합한 화면 크기와 해상도를 설명하는 메타 데이터)와 함께 여러 크기를 제공할 수 있으며, 브라우저는 각 장치에 가장 적합한 이미지를 선택하며, 사용자가 사용하고 있는 장치에 적합한 이미지 크기를 다운로드할 수 있도록 담보합니다.
 
 또한 다른 화면 크기에서 사용되는 이미지를 *art direct*할 수 있으므로 서로 다른 화면 크기에 대해 서로 다른 자르기 또는 완전히 다른 이미지를 제공할 수 있습니다.
 
@@ -245,7 +244,7 @@ h1 {
 
 위의 작업 수행에서의 문제는 사용자가 vw 단위를 사용하여 텍스트 집합을 확대/축소하는 기능을 상실하는 데 있다. **따라서 여러분은 뷰포트 단위만으로 텍스트를 설정해서는 안 된다**.
 
-해결책이 하나 있다. [`calc()`](/en-US/docs/Web/CSS/calc)를 사용하는 것이다. 즉, `em`와 같은 고정된 크기를 사용하여 속성값 집합에 `vw` 단위를 추가하면 텍스트는 여전히 확대/축소할 수 있다. 본질적으로 `vw` 단위는 확대/축소 값에 더해 추가된다.
+해결책이 하나 있다. [`calc()`](/ko/docs/Web/CSS/calc)를 사용하는 것이다. 즉, `em`와 같은 고정된 크기를 사용하여 속성값 집합에 `vw` 단위를 추가하면 텍스트는 여전히 확대/축소할 수 있다. 본질적으로 `vw` 단위는 확대/축소 값에 더해 추가된다.
 
 ```css
 h1 {
@@ -262,7 +261,7 @@ h1 {
 응답형 페이지의 HTML 소스를 보면 일반적으로 문서의 `<head>`에서 다음과 같은 {{htmlelement("meta")}} 태그를 볼 수 있다.
 
 ```html
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
 이 메타 태그는 뷰포트의 너비를 장치의 너비로 설정하여 문서를 의도한 크기의 100%로 확장해야 한다고 모바일 브라우저에게 알려줍니다. 이로써 여러분이 의도한 대로 모바일에 최적화된 크기로 문서를 표시합니다.
@@ -284,8 +283,6 @@ h1 {
 - `user-scalable`: `no`값을 지정하게 되면 확대/축소를 방지합니다.
 
 여러분은 `minimum-scale`와 `maximum-scale` 사용을 피해야하며, 특히 `user-scalable`를 `no`로 설정하는 것도 피해야 합니다. 사용자는 필요한 만큼 확대하거나 축소할 수 있어야 합니다.이를 방지하면 접근성 문제가 발생합니다.
-
-> **참고:** 뷰포트 메타 태그를 대체하기 위해 고안된 CSS @ 규칙이 있습니다. [@viewport](/ko/docs/Web/CSS/@viewport) 그러나 브라우저 지원이 매우 형편없습니다. 그것은 인터넷 익스플로러와 에지에서 구현되었지만, 일단 크롬 기반 에지가 출시되면 더 이상 에지 브라우저의 일부가 되지 않게 됩니다.
 
 ## 요약정리
 

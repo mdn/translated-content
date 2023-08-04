@@ -34,8 +34,8 @@ CSS の色表現には他にも色名、関数表記、アルファ値つきの 
     <tr>
       <td><strong>対応する共通属性</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}} および
-        {{htmlattrxref("list", "input")}}
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a> および
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>
       </td>
     </tr>
     <tr>
@@ -57,7 +57,7 @@ CSS の色表現には他にも色名、関数表記、アルファ値つきの 
 
 ## 値
 
-type が `color` の {{HTMLElement("input")}} 要素の {{htmlattrxref("value", "input")}} は、常に 16 進表記で RGB カラーを特定する 7 文字の文字列になります。入力欄には色を大文字でも小文字でも入力することができ、大文字を指定した場合、小文字に変換して格納されます。これ以外の値や、空の値になることはありません。
+type が `color` の {{HTMLElement("input")}} 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) は、常に 16 進表記で RGB カラーを特定する 7 文字の文字列になります。入力欄には色を大文字でも小文字でも入力することができ、大文字を指定した場合、小文字に変換して格納されます。これ以外の値や、空の値になることはありません。
 
 > **メモ:** 有効な、不透明な *16 進表現*の RGB カラーではない値を設定した場合は、結果的に `#000000` に設定されます。特に、CSS で標準化されている色名や、CSS 関数を値の設定に使用することはできません。HTML と CSS は別な言語や仕様であることを考慮していただければお分かりでしょう。加えて、アルファチャネルのある色はサポートされていません。`#009900aa` のような 9 文字の 16 進表記で色を設定すると、結果的に `#000000` に設定されます。
 
@@ -79,7 +79,7 @@ type が `color` の入力欄は、対応する属性の数が限られている
 
 ### 色の変更の追跡
 
-ほかの {{HTMLElement("input")}} 型と同様に、{{domxref("HTMLElement/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} イベントで色の変化を検出することができます。`input` は `<input>` 要素で色が変更されるたびに実行されます。`change` イベントはユーザーがカラーピッカーを閉じたときに実行されます。どちらの場合も、新しい値は {{htmlattrxref("value", "input")}} で調べることができます。
+ほかの {{HTMLElement("input")}} 型と同様に、{{domxref("HTMLElement/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} イベントで色の変化を検出することができます。`input` は `<input>` 要素で色が変更されるたびに実行されます。`change` イベントはユーザーがカラーピッカーを閉じたときに実行されます。どちらの場合も、新しい値は [`value`](/ja/docs/Web/HTML/Element/input#value) で調べることができます。
 
 次の例は、色の変更をずっと監視します。
 
@@ -171,7 +171,7 @@ function updateFirst(event) {
 }
 ```
 
-カラーピッカーが閉じられると、（ユーザーがカラーピッカーを再び開かない限り）値が再び変化することはないことを示す `change` イベントが要素に送られます。そのイベントを `updateAll()` 関数で処理し、 {{htmlattrxref("value", "input", "Event.target.value")}} を使用して最終的に選択された色を取得します。
+カラーピッカーが閉じられると、（ユーザーがカラーピッカーを再び開かない限り）値が再び変化することはないことを示す `change` イベントが要素に送られます。そのイベントを `updateAll()` 関数で処理し、 [`Event.target.value`](/ja/docs/Web/HTML/Element/input#value) を使用して最終的に選択された色を取得します。
 
 ```js
 function updateAll(event) {

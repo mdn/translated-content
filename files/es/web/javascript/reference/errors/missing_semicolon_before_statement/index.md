@@ -1,7 +1,6 @@
 ---
-title: 'ErrordeSintaxis: Punto y coma ; faltante antes de la declaracion'
+title: "ErrordeSintaxis: Punto y coma ; faltante antes de la declaracion"
 slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
-original_slug: Web/JavaScript/Reference/Errors/Falta_puntoycoma_antes_de_declaracion
 ---
 
 {{jsSidebar("Errores")}}
@@ -64,7 +63,7 @@ var array = [];
 array[0] = 'mundo';
 ```
 
-## Ver también:
+## Ver también
 
 - [Automatic semicolon insertion (ASI)](/es/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)
 - [JavaScript statements](/es/docs/Web/JavaScript/Reference/Statements)

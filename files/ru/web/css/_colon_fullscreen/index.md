@@ -1,12 +1,6 @@
 ---
-title: ':fullscreen'
+title: ":fullscreen"
 slug: Web/CSS/:fullscreen
-tags:
-  - Вёрстка
-  - полноэкранный режим
-  - псевдокласс
-  - экран
-translation_of: Web/CSS/:fullscreen
 ---
 
 {{CSSRef}}
@@ -74,4 +68,4 @@ HTML выглядит так:
 - {{cssxref(":not")}}
 - {{cssxref("::backdrop")}}
 - DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreenElement") }}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}} attribute
+- [`allowfullscreen`](/ru/docs/Web/HTML/Element/iframe#allowfullscreen) attribute

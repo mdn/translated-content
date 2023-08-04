@@ -1,25 +1,27 @@
 ---
 title: JavaScript 첫걸음
 slug: Learn/JavaScript/First_steps
+l10n:
+  sourceCommit: 904cdf09c7e328b7a15a6a4db6bc6bd31f969cce
 ---
 
 {{LearnSidebar}}
 
-우리의 첫번째 JavaScript 모듈에서는 JavaScript를 써보는 첫번째 현실적인 경험을 하기에 앞서, "JavaScript란 무엇인가", "그것은 어떻게 생겼는가", "그것은 무엇을 할 수 있는가"와 같은 핵심적인 질문에 답을 할 것입니다. 그 이후에 우리는 예컨대 변수, 문자열, 숫자, 배열과 같은 핵심적인 단위를 상세히 논의해볼 것입니다.
+우리의 첫 번째 JavaScript 과정에서는, 현실적인 첫 JavaScript 예제 작성에 앞서 "JavaScript란 뭘까", "JavaScript는 어떻게 생겼을까", "JavaScript는 뭘 할 수 있을까"와 같은 핵심적인 질문에 답을 하겠습니다. 그다음으로는 변수, 문자열, 숫자, 배열처럼 핵심 개념을 자세히 논의해 보겠습니다.
 
 > **알림:**
 >
-> #### 프론트엔드 웹 개발자가 되기를 바라나요?
+> #### 프론트엔드 웹 개발자가 되고자 하시나요?
 >
-> 우리는 당신이 목적을 이루기 위해 필요한 핵심적인 개념을 모두 포함하는 강좌를 하나 만들었어요.
+> 목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.
 >
 > [**시작하기**](/ko/docs/Learn/Front-end_web_developer)
 
 ## 준비 과정
 
-이번 과정을 시작하기 전에 JavaScript에 대해 몰라도 되지만, HTML, CSS와는 어느 정도 친숙해야 합니다. JavaScript를 시작하기 이전에 우선 다음 과정부터 진행하시는게 좋습니다.
+JavaScript를 몰라도 이번 과정 시작에는 문제가 없지만, HTML과 CSS는 어느 정도 친숙해야 합니다. JavaScript를 시작하기 이전에 우선 다음 과정부터 진행하시는 게 좋습니다.
 
-- [Web으로 시작하기](/ko/docs/Learn/Getting_started_with_the_web) (아주 기본적인 [JavaScript 소개](/ko/docs/Learn/Getting_started_with_the_web/JavaScript_basics)도 포함)
+- [Web과 함께 시작하기](/ko/docs/Learn/Getting_started_with_the_web) (아주 기본적인 [JavaScript 소개](/ko/docs/Learn/Getting_started_with_the_web/JavaScript_basics)도 포함)
 - [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML)
 - [CSS 소개](/ko/docs/Learn/CSS/Introduction_to_CSS)
 
@@ -51,7 +53,7 @@ slug: Learn/JavaScript/First_steps
 - [바보같은 이야기 생성기](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)
   - : 각자 배운 내용을 돌이켜보면서, 바보같은 이야기를 무작위로 만들어내는 앱을 제작해야 합니다. 행운을 빌어요!
 
-## See also
+## 같이 보기
 
 - [Learn JavaScript](https://learnjavascript.online/)
-  - : 야망있는 웹 개발자를 위한 완벽한 자료입니다. JavaScript를 자동화된 평가에 의해 안내되는 짧은 강의와 인터렉티브한 테스트와 함께 상호작용하는 환경에서 배워보세요. 처음 40개의 레슨은 무료이며, 전체 코스는 적은 비용을 지불하면 가능합니다.
+  - : 성장하려는 웹 개발자에게 완벽한 자료입니다. 상호작용형 환경에서 자동화 평가의 안내를 받으며 짧은 강의들과 시험을 통해 JavaScript를 배워보세요. 처음 40개의 강의는 무료고, 전체 코스는 저렴한 1회 결제로 볼 수 있습니다.

@@ -1,12 +1,6 @@
 ---
 title: Tutoriel WebGL
 slug: Web/API/WebGL_API/Tutorial
-tags:
-  - API WebGL
-  - Tutoriel
-  - Vue d'ensemble
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial
 ---
 
 {{DefaultAPISidebar("WebGL")}}

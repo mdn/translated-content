@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap
 O objeto WeakMap é uma coleção de pares key/value na qual as chaves são fracamente referenciadas.
 As chaves **devem** ser objetos, e os valores podem ser de tipos arbitrários.
 
-Você pode descobrir mais sobre `WeakMap`s na seção {{SectionOnPage("/pt-BR/docs/Web/JavaScript/Guide/Keyed_collections", "WeakMap object")}}.
+Você pode descobrir mais sobre `WeakMap`s na seção [Objeto WeakMap](/pt-BR/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object).
 
 ## Sintaxe
 
@@ -53,11 +53,11 @@ Por conta das referências serem fracas, chaves de `WeakMap` não são enumeráv
 
 ```js
 var wm1 = new WeakMap(),
-    wm2 = new WeakMap(),
-    wm3 = new WeakMap();
+  wm2 = new WeakMap(),
+  wm3 = new WeakMap();
 var o1 = {},
-    o2 = function(){},
-    o3 = window;
+  o2 = function () {},
+  o3 = window;
 
 wm1.set(o1, 37);
 wm1.set(o2, "azerty");
@@ -78,16 +78,16 @@ wm3.get(o1); // 37
 wm3.clear();
 wm3.get(o1); // undefined, pois wm3 foi 'limpado' e não há mais valor para o1.
 
-wm1.has(o1);   // true
+wm1.has(o1); // true
 wm1.delete(o1);
-wm1.has(o1);   // false
+wm1.has(o1); // false
 ```
 
 ## Especificações
 
-| Especificações                                                               | Status                       | Comentário         |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-weakmap-objects', 'WeakMap')}} | {{Spec2('ES2015')}}     | Definição inicial. |
+| Especificações                                             | Status               | Comentário         |
+| ---------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-weakmap-objects', 'WeakMap')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-weakmap-objects', 'WeakMap')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

@@ -22,12 +22,9 @@ async function* createAsyncGenerator() {
   yield await Promise.resolve(3);
 }
 const asyncGen = createAsyncGenerator();
-asyncGen.next()
-  .then((res) => console.log(res.value)); // 1
-asyncGen.next()
-  .then((res) => console.log(res.value)); // 2
-asyncGen.next()
-  .then((res) => console.log(res.value)); // 3
+asyncGen.next().then((res) => console.log(res.value)); // 1
+asyncGen.next().then((res) => console.log(res.value)); // 2
+asyncGen.next().then((res) => console.log(res.value)); // 3
 ```
 
 ## 实例属性
@@ -74,17 +71,16 @@ async function* generate() {
   yield delayedValue(250, 4);
   yield delayedValue(125, 5);
   yield delayedValue(50, 6);
-  console.log('All done!');
+  console.log("All done!");
 }
 
 async function main() {
   for await (const value of generate()) {
-    console.log('value', value);
+    console.log("value", value);
   }
 }
 
-main()
-  .catch((e) => console.error(e));
+main().catch((e) => console.error(e));
 ```
 
 ## 规范
@@ -102,4 +98,4 @@ main()
 - [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("GeneratorFunction", "生成器函数", "", 1)}}
 - {{jsxref("AsyncGeneratorFunction", "异步生成器函数", "", 1)}}
-- [迭代器和生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [迭代器和生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)

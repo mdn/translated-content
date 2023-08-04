@@ -60,7 +60,7 @@ O **elemento HTML `<script>`** é usado para incluir ou referenciar um script ex
 
 Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("async")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("async")}}
 
   - : Um atributo booleano indicando que o navegador deve, se possível, executar o script assíncronamente.
 
@@ -95,7 +95,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
   - : Indicates the type of script represented. The value of this attribute will be in one of the following categories:
 
     - **Omitted or a JavaScript MIME type:** For HTML5-complient browsers this indicates the script is JavaScript. HTML5 spec urges authors to omit the attribute rather than provided a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the `src` attribute) code. JavaScript MIME types are [listed in the specification](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
-    - **`module`:** {{HTMLVersionInline(5)}} For HTML5-complient browsers the code is treated as a JavaScript module. Processing of the script contents are not affected by the `charset` and `defer` attributes. For information on using `module`, see [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/). {{experimental_inline}}
+    - **`module`:** For HTML5-complient browsers the code is treated as a JavaScript module. Processing of the script contents are not affected by the `charset` and `defer` attributes. For information on using `module`, see [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/). {{experimental_inline}}
     - **Any other value or MIME type:** Embedded content is treated as a data block which won't be processed by the browser. The `src` attribute will be ignored.
 
     Note that in Firefox you can use advanced features such as let statements and other features in later JS versions, by using `type=application/javascript;version=1.8` {{Non-standard_inline}}. Beware, however, that as this is a non-standard feature, this will most likely break support for other browsers, in particular Chromium-based browsers.
@@ -105,9 +105,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 ### Atributos obsoletos
 
 - {{htmlattrdef("charset")}} {{Deprecated_inline}}
-  - : If present, its value must be an ASCII case-insensitive match for "`utf-8`". Both it’s unnecessary to specify the `charset` attribute, because documents must use UTF-8, and the `script` element inherits its character encoding from the document.
+  - : If present, its value must be an ASCII case-insensitive match for "`utf-8`". Both it's unnecessary to specify the `charset` attribute, because documents must use UTF-8, and the `script` element inherits its character encoding from the document.
 - {{htmlattrdef("language")}} {{Deprecated_inline}}
-  - : Like the `type` attribute, this attribute identifies the scripting language in use. Unlike the `type` attribute, however, this attribute’s possible values were never standardized. The `type` attribute should be used instead.
+  - : Like the `type` attribute, this attribute identifies the scripting language in use. Unlike the `type` attribute, however, this attribute's possible values were never standardized. The `type` attribute should be used instead.
 
 ## Notas
 

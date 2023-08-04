@@ -59,28 +59,28 @@ svg|a:hover, svg|a:active {
 
 ## 属性
 
-- {{htmlattrxref("download", "a")}} {{experimental_inline}}
+- [`download`](/ja/docs/Web/HTML/Element/a#download) {{experimental_inline}}
   - : 移動するのではなく {{Glossary("URL")}} をダウンロードするようブラウザーに指示しますので、ユーザーにローカルファイルとして保存するよう促します。
     _値種別_: **\<string>** ; _既定値_: _none_; _アニメーション_: **no**
 - {{SVGAttr("href")}}
   - : ハイパーリンクが指す先の {{Glossary("URL")}} または URL フラグメントです。
     _値種別_: **[\<URL>](/ja/docs/Web/SVG/Content_type#URL)** ; _既定値_: _none_; _アニメーション_: **yes**
-- {{htmlattrxref("hreflang", "a")}}
+- [`hreflang`](/ja/docs/Web/HTML/Element/a#hreflang)
   - : ハイパーリンクが指す先の URL または URL フラグメントにおける人間の言語です。
     _値種別_: **\<string>** ; _既定値_: _none_; _アニメーション_: **yes**
-- {{htmlattrxref("ping", "a")}} {{experimental_inline}}
+- [`ping`](/ja/docs/Web/HTML/Element/a#ping) {{experimental_inline}}
   - : 空白区切りの URL のリストで、ハイパーリンクをたどるとき、 {{HTTPMethod("POST")}} リクエストで本文が `PING` であるものがブラウザーから (バックグラウンドで) 送信されます。通常はトラッキングのために使用されます。同じ用途でもっと広く対応されている機能として、 {{domxref("Navigator.sendBeacon()")}} を参照してください。
     _値種別_: **[\<list-of-URLs>](/ja/docs/Web/SVG/Content_type#List-of-Ts)** ; _既定値_: _none_; _アニメーション_: **no**
-- {{htmlattrxref("referrerpolicy", "a")}} {{experimental_inline}}
+- [`referrerpolicy`](/ja/docs/Web/HTML/Element/a#referrerpolicy) {{experimental_inline}}
   - : どの[リファラー](/ja/docs/Web/HTTP/Headers/Referer)をアクセス先の {{Glossary("URL")}} に送信するかです。
     _値種別_: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; _既定値_: _none_; _アニメーション_: **no**
-- {{htmlattrxref("rel", "a")}} {{experimental_inline}}
+- [`rel`](/ja/docs/Web/HTML/Element/a#rel) {{experimental_inline}}
   - : 対象のオブジェクトとリンクしているオブジェクトの関係です。
     _値種別_: **[\<list-of-Link-Types>](/ja/docs/Web/HTML/Link_types)** ; _既定値_: _none_; _アニメーション_: **yes**
 - {{SVGAttr("target")}}
   - : リンクされた {{Glossary("URL")}} の表示先です。
     _値種別_: `_self`|`_parent`|`_top`|`_blank`|**\<name>** ; _既定値_: `_self`; _アニメーション_: **yes**
-- {{htmlattrxref("type", "a")}}
+- [`type`](/ja/docs/Web/HTML/Element/a#type)
   - : リンク先の URL の {{Glossary("MIME type", "MIME タイプ")}}です。
     _値種別_: **\<string>** ; _既定値_: _none_; _アニメーション_: **yes**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}

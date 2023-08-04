@@ -48,13 +48,13 @@ Vue 是一个现代 JavaScript 框架提供了有用的设施渐进增强——�
 - 开发环境版本，包含了有帮助的命令行警告
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.45/index.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   ```
 
 - 生产环境版本，优化了尺寸和速度，建议你在站点上包含 Vue 时指定版本号，这样任何框架更新都不会影响你的网站。
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
   ```
 
 然而，这种方法有一些局限性。要构建更复杂的应用程序，你需要使用 [Vue NPM package](https://www.npmjs.com/package/vue)。这将允许你使用 Vue 的高级功能并利用 WebPack 等捆绑包。为了使使用 Vue 构建应用程序更容易，有一个 CLI 来简化开发过程。要使用 npm 软件包和 CLI，你需要：
@@ -139,14 +139,14 @@ yarn global add @vue/cli
 对于 `App.vue`，我们的默认导出将组件的名称设置为 `App` ，并通过将 `HelloWorld` 组件添加到 `components` 属性中来注册它。以这种方式注册组件时，就是在本地注册。本地注册的组件只能在注册它们的组件内部使用，因此你需要将其导入并注册到使用它们的每个组件文件中。这对于拆包/摇树优化（tree shaking）很有用，因为并不是应用程序中的每个页面都不一定需要每个组件。
 
 ```js
-import HelloWorld from './components/HelloWorld.vue';
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
   name: "App",
   components: {
     // 可以在这里本地注册组件。
     HelloWorld,
-  }
+  },
 };
 ```
 
@@ -206,7 +206,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 ```js
 components: {
-  HelloWorld
+  HelloWorld;
 }
 ```
 

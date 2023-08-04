@@ -1,7 +1,6 @@
 ---
 title: Miembros
-slug: Web/JavaScript/Reference/Operators/Property_Accessors
-original_slug: Web/JavaScript/Referencia/Operadores/Miembros
+slug: Web/JavaScript/Reference/Operators/Property_accessors
 ---
 
 {{jsSidebar("Operators")}}

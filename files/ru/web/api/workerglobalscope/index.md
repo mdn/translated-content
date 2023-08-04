@@ -1,15 +1,6 @@
 ---
 title: WorkerGlobalScope
 slug: Web/API/WorkerGlobalScope
-tags:
-  - API
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - WorkerGlobalScope
-  - Workers
-translation_of: Web/API/WorkerGlobalScope
 ---
 
 {{APIRef("Web Workers API")}}
@@ -60,7 +51,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 - `online`
   - : Fired when the browser has gained access to the network and the value of `navigator.onLine` switched to `true`.
     Also available via the {{domxref("WorkerGlobalScope.ononline")}} property.
-- [`languagechange`](/en-US/docs/Web/API/WorkerGlobalScope/languagechange_event)
+- [`languagechange`](/ru/docs/Web/API/WorkerGlobalScope/languagechange_event)
   - : Fired at the global/worker scope object when the user's preferred languages change.
     Also available via the {{domxref("WorkerGlobalScope.onlanguagechange")}} property.
 
@@ -119,7 +110,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 You won't access `WorkerGlobalScope` directly in your code; however, its properties and methods are inherited by more specific global scopes such as {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}}. For example, you could import another script into the worker and print out the contents of the worker scope's `navigator` object using the following two lines:
 
 ```js
-importScripts('foo.js');
+importScripts("foo.js");
 console.log(navigator);
 ```
 
@@ -127,9 +118,7 @@ console.log(navigator);
 
 ## Specifications
 
-| Specification                                                                                | Status                           | Comment |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#workerglobalscope', 'WorkerGlobalScope')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

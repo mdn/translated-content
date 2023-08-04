@@ -1,10 +1,6 @@
 ---
 title: Порядок выполнения и обработка ошибок
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - Guide
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
@@ -378,7 +374,7 @@ try {
 
 ### Загрузка изображения при помощи XHR
 
-Простой пример использования объектов `Promise` и [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) для загрузки изображения доступен в репозитории MDN [promise-test](https://github.com/mdn/js-examples/tree/master/promises-test) на GitHub. Вы также можете [посмотреть его в действии](https://mdn.github.io/js-examples/promises-test/). Каждый шаг прокомментирован, что позволяет вам разобраться в архитектуре `Promise` и XHR. Здесь приводится версия без комментариев:
+Простой пример использования объектов `Promise` и [`XMLHttpRequest`](/ru/docs/Web/API/XMLHttpRequest) для загрузки изображения доступен в репозитории MDN [promise-test](https://github.com/mdn/js-examples/tree/master/promises-test) на GitHub. Вы также можете [посмотреть его в действии](https://mdn.github.io/js-examples/promises-test/). Каждый шаг прокомментирован, что позволяет вам разобраться в архитектуре `Promise` и XHR. Здесь приводится версия без комментариев:
 
 ```js
 function imgLoad(url) {

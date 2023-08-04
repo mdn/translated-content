@@ -7,9 +7,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 **`findIndex()`** 方法返回数组中满足提供的测试函数的第一个元素的索引。若没有找到对应元素则返回 -1。
 
-{{EmbedInteractiveExample("pages/js/array-findindex.html","shorter")}}
-
 另请参阅 {{jsxref("Array/find", "find()")}} 方法，它返回满足测试函数的第一个元素（而不是它的索引）。
+
+{{EmbedInteractiveExample("pages/js/array-findindex.html","shorter")}}
 
 ## 语法
 
@@ -21,7 +21,7 @@ findIndex(callbackFn, thisArg)
 ### 参数
 
 - `callbackFn`
-  - : 为数组中的每个元素执行的函数。它应该返回一个[真值](/zh-CN/docs/Glossary/Truthy)值以指示已找到匹配元素，否则返回一个[假值](/zh-CN/docs/Glossary/Falsy)。该函数被调用时将传入以下参数：
+  - : 为数组中的每个元素执行的函数。它应该返回一个[真值](/zh-CN/docs/Glossary/Truthy)以指示已找到匹配元素，否则返回一个[假值](/zh-CN/docs/Glossary/Falsy)。该函数被调用时将传入以下参数：
     - `element`
       - : 数组中当前正在处理的元素。
     - `index`
@@ -39,9 +39,9 @@ findIndex(callbackFn, thisArg)
 
 `findIndex()` 是一种[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它按照索引升序依次遍历数组中的每个元素，并调用提供的 `callbackFn` 函数，直到 `callbackFn` 返回一个[真值](/zh-CN/docs/Glossary/Truthy)。然后 `findIndex()` 返回该元素的索引并停止遍历数组。如果 `callbackFn` 从未返回一个真值，则 `findIndex()` 返回 `-1`。
 
-`callbackFn` 被调用来处理数组的每一个索引，而不仅仅是那些有值的索引。在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中，未赋值的空槽与 `undefined` 表现相同。
+`callbackFn` 被调用来处理数组的*每一个*索引，而不仅仅是那些有值的索引。在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中，未赋值的空槽与 `undefined` 表现相同。
 
-`findIndex()` 不会改变被调用的数组，但是提供给 `callbackFn` 的函数可能会改变它。但需要注意的是，在第一次调用 `callbackFn` *之前*，数组的长度会被保存。因此：
+`findIndex()` 不会改变被调用的数组，但是提供给 `callbackFn` 的函数可能会改变它。但需要注意的是，在第一次调用 `callbackFn` _之前_，数组的长度会被保存。因此：
 
 - 当调用 `findIndex()` 时，`callbackFn` 不会访问超出数组初始长度的任何元素。
 - 对已经访问过的索引的更改不会导致再次在这些元素上调用 `callbackFn`。
@@ -55,7 +55,7 @@ findIndex(callbackFn, thisArg)
 
 ### 寻找数组中的首个素数的索引
 
-以下示例返回数组中第一个素数的索引，如果没有素数则返回 -1。
+以下示例返回数组中第一个素数的索引，如果没有素数则返回 `-1`。
 
 ```js
 function isPrime(element) {
@@ -109,6 +109,11 @@ console.log(
 ## 参见
 
 - [`core-js` 中 `Array.prototype.findIndex` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array.prototype.findLast()")}}
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.findLast()")}}
+- {{jsxref("Array.prototype.findLastIndex()")}}
 - {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.lastIndexOf()")}}
+- {{jsxref("TypedArray.prototype.findIndex()")}}

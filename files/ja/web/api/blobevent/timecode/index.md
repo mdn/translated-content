@@ -1,26 +1,25 @@
 ---
-title: BlobEvent.timecode
+title: "BlobEvent: timecode プロパティ"
+short-title: timecode
 slug: Web/API/BlobEvent/timecode
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{SeeCompatTable}}{{APIRef("Media Capture and Streams")}}
+{{APIRef("MediaStream Recording")}}
 
-{{domxref("BlobEvent")}} インタフェースの **`timecode`** 読み取り専用プロパティは、データ内の最初のチャンクのタイムスタンプと、このレコーダによって生成された最初の `BlobEvent` 内の最初のチャンクのタイムスタンプとの差を示す {{domxref("DOMHighResTimeStamp")}} です。 最初に生成された `BlobEvent` の `timecode` はゼロである必要はないことに注意してください。
+**`timecode`** は {{domxref("BlobEvent")}} インタフェースの読み取り専用プロパティで、データ内の最初のチャンクのタイムスタンプと、このレコーダによって生成された最初の `BlobEvent` 内の最初のチャンクのタイムスタンプとの差を示します。
 
-## 構文
-
-```
-var timecode = BlobEvent.timecode
-```
+なお、生成されたばかりの `BlobEvent` の `timecode` はゼロとは限らないことに注意してください。
 
 ### 値
 
-{{domxref("DOMHighResTimeStamp")}}。
+{{domxref("DOMHighResTimeStamp")}} です。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの実装状況
+## ブラウザーの互換性
 
-{{Compat("api.BlobEvent.timecode")}}
+{{Compat}}

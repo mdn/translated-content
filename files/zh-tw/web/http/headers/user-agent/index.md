@@ -9,9 +9,9 @@ User-Agent 請求標頭（request header）含有能令網路協議同級層（p
 
 > **備註：** 請讀讀[透過用戶代理偵測瀏覽器](/zh-TW/docs/Web/HTTP/Browser_detection_using_the_user_agent)以理解為什麼給不同的瀏覽器不同的頁面或服務是餿主意。
 
-| 標頭類型                                         | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | 否                                       |
+| 標頭類型                              | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | 否                             |
 
 ## 語法
 

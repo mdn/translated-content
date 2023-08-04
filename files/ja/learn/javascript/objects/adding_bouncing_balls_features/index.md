@@ -1,6 +1,8 @@
 ---
 title: バウンスボールのデモに機能を追加する
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
+l10n:
+  sourceCommit: 4def230f85756724b59660e3cd9de363db724ef8
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
@@ -16,7 +18,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">目標:</th>
       <td>
         JavaScript オブジェクトとオブジェクト指向のインスタンス生成を理解しているかテストする。
       </td>
@@ -45,7 +47,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 次のスクリーンショットでは、完成したプログラムがどのように見えるかのイメージを掴めるでしょう。
 
-![](bouncing-evil-circle.png)
+![バウンシングボールのデモページのスクリーンショット。色のついたボールの他に白抜きの円が見え、見出しの下に "Ball count:23" と表示されている。](bouncing-evil-circle.png)
 
 もっとアイディアを得たい場合は、[完成デモ](https://mdn.github.io/learning-area/javascript/oojs/assessment/)を見てみましょう。（ソースコードをチラ見しないように！）
 
@@ -106,18 +108,18 @@ collisionDetect() {
 最後に、コンストラクターは、ユーザーが画面上で悪の円を動かせるようにコードを設定する必要があります。
 
 ```js
-window.addEventListener('keydown', (e) => {
-  switch(e.key) {
-    case 'a':
+window.addEventListener("keydown", (e) => {
+  switch (e.key) {
+    case "a":
       this.x -= this.velX;
       break;
-    case 'd':
+    case "d":
       this.x += this.velX;
       break;
-    case 'w':
+    case "w":
       this.y -= this.velY;
       break;
-    case 's':
+    case "s":
       this.y += this.velY;
       break;
   }
@@ -134,7 +136,7 @@ window.addEventListener('keydown', (e) => {
 
 このメソッドは、`Ball()` の `draw()` メソッドと同じく、キャンバス上にオブジェクトインスタンスを描画するという目的を持ちます。とても良く似た動作をするので、`Ball` の `draw()` メソッドの定義をコピーすることから始めます。次に、以下の変更を行います。
 
-- 邪悪な円は塗りつぶしせず、枠線（ストローク）だけを持たせたいと思います。そのために、[`fillStyle`](/ja/docs/Web/API/CanvasRenderingContext2D/fillStyle) と [`fill()`](/ja/docs/Web/API/CanvasRenderingContext2D/fill) を [`strokeStyle`](/ja/docs/Web/API/CanvasRenderingContext2D/strokeStyle) と [`stroke()`](/ja/docs/Web/API/CanvasRenderingContext2D/stroke) に変更します。
+- 邪悪な円は塗りつぶしせず、枠線（ストローク）だけを持たせたいと思います。そのために、[`fillStyle`](/ja/docs/Web/API/CanvasRenderingContext2D/fillStyle) と [`fill()`](/ja/docs/Web/API/CanvasRenderingContext2D/fill) を [`strokeStyle`](/ja/docs/Web/API/CanvasRenderingContext2D/strokeStyle) と [`stroke()`](/ja/docs/Web/API/CanvasRenderingContext2D/stroke) にそれぞれ変更します。
 - また、線を少し太くすれば、邪悪な円が少し分かりやすくなります。これは、 [`lineWidth`](/ja/docs/Web/API/CanvasRenderingContext2D/lineWidth) の値（3 で十分でしょう）を [`beginPath()`](/ja/docs/Web/API/CanvasRenderingContext2D/beginPath) 呼び出しの後のどこかで設定することで実現できます 。
 
 #### checkBounds()
@@ -142,7 +144,7 @@ window.addEventListener('keydown', (e) => {
 このメソッドは、 `Ball` の `update()` メソッドの最初の部分と同じ機能、すなわち、邪悪な円が画面の端から出そうになったら出ないようにする機能を持ちます。先ほどと同様に、`Ball` の `update()` の定義をほぼコピーするだけでできますが、いくつか変更する必要があります。
 
 - 最後の 2 行を削除します。後で見られるように、別の方法で邪悪な円を動かすので、フレーム毎に邪悪な円の位置を自動的に更新する必要はありません。
-- `if()` 文の内部でそのテストが true を返す場合、`velX`/`velY` を更新したくありません。代わりに `x`/`y` の値を変更して、邪悪な円が画面内に少し跳ね返ってくるようにしたいのです。邪悪な円の `size` プロパティを（適切に）加えたり減じたりすることは理にかなっています。
+- `if ()` 文の内部でそのテストが true を返す場合、`velX`/`velY` を更新したくありません。代わりに `x`/`y` の値を変更して、邪悪な円が画面内に少し跳ね返ってくるようにしたいのです。邪悪な円の `size` プロパティを（適切に）加えたり減じたりすることは理にかなっています。
 
 #### collisionDetect()
 
@@ -157,31 +159,31 @@ window.addEventListener('keydown', (e) => {
 
 - まず、（必要な引数を指定して）新しい邪悪な円オブジェクトインスタンスを作成します。これは一度だけ実行すればよく、ループの繰り返し毎に行う必要はありません。
 - すべてのボールをループして、ボールが存在する場合にのみ、それぞれの `draw()`、`update()`、`collisionDetect()` が呼び出されるようにします。
-- ループの各繰り返しで、邪悪な円インスタンスの `draw()`、`checkBounds()`、および `collisionDetect()`メソッドを呼び出します。
+- ループの各繰り返しで、邪悪なボールのインスタンスの `draw()`、`checkBounds()`、および `collisionDetect()`メソッドを呼び出します。
 
 ### スコアカウンターの実装
 
 スコアカウンターを実装するには、次の手順に従います。
 
-1. HTML ファイルの {{HTMLElement("h1")}} 要素の直下に、"Ball count:" というテキストを含む {{HTMLElement( "p")}} 要素を追加します。
+1. HTML ファイルの {{HTMLElement("Heading_Elements", "h1")}} 要素の直下に、"Ball count:" というテキストを含む {{HTMLElement( "p")}} 要素を追加します。
 2. CSS ファイルに、次のスタイルを追加します。
 
-    ```css
-    p {
-      position: absolute;
-      margin: 0;
-      top: 35px;
-      right: 5px;
-      color: #aaa;
-    }
-    ```
+   ```css
+   p {
+     position: absolute;
+     margin: 0;
+     top: 35px;
+     right: 5px;
+     color: #aaa;
+   }
+   ```
 
 3. JavaScript では、次の更新を行います。
 
-    - 段落への参照を格納する変数を作成します。
-    - 何らかの方法で画面上のボールの数をカウントしてください。
-    - ボールをシーンに追加するたびにカウントを増加させ、更新されたボールの数を表示します。
-    - 邪悪な円がボールを食べる（存在を消す）たびにカウントを減らし、更新されたボールの数を表示します。
+   - 段落への参照を格納する変数を作成します。
+   - 何らかの方法で画面上のボールの数をカウントしてください。
+   - ボールをシーンに追加するたびにカウントを増加させ、更新されたボールの数を表示します。
+   - 邪悪な円がボールを食べる（存在を消す）たびにカウントを減らし、更新されたボールの数を表示します。
 
 ## 評価とさらなる支援
 
@@ -190,9 +192,9 @@ window.addEventListener('keydown', (e) => {
 1. 自分の作品を [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) や [Glitch](https://glitch.com/) などのオンラインで共有できるエディターに入れます。
 2. [MDN Discourse フォーラムの Learning カテゴリー](https://discourse.mozilla.org/c/mdn/learn/250)に、評価や支援を求める投稿を（英語で）書き込んでください。投稿には次のことを書いてください。
 
-    - "Assessment wanted for Adding bouncing balls features" のような、説明的なタイトル。
-    - すでに試したことの詳細と、私たちに何をしてほしいか（例: 行き詰まり、助けが必要な場合、または評価が必要な場合）。
-    - 評価やヘルプが必要なサンプルへのリンクを、オンライン共有可能なエディター（上記のステップ 1 で述べたとおり）にて提供します。コードを見ることができなければ、コーディングの問題で誰かを助けることは非常に困難です。
-    - 実際の課題または評価ページへのリンクにより、助けを求めている問題を見つけることができます。
+   - "Assessment wanted for Adding bouncing balls features" のような、説明的なタイトル。
+   - すでに試したことの詳細と、私たちに何をしてほしいか（例: 行き詰まり、助けが必要な場合、または評価が必要な場合）。
+   - 評価やヘルプが必要なサンプルへのリンクを、オンライン共有可能なエディター（上記のステップ 1 で述べたとおり）にて提供します。コードを見ることができなければ、コーディングの問題で誰かを助けることは非常に困難です。
+   - 実際の課題または評価ページへのリンクにより、助けを求めている問題を見つけることができます。
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}

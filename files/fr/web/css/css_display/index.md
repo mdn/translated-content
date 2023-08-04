@@ -1,12 +1,6 @@
 ---
 title: CSS Display
-slug: Web/CSS/CSS_Display
-tags:
-  - Aperçu
-  - CSS
-  - CSS Display
-  - Reference
-translation_of: Web/CSS/CSS_Display
+slug: Web/CSS/CSS_display
 ---
 
 {{CSSRef}}

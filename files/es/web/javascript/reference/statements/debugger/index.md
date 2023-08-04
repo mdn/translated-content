@@ -1,7 +1,6 @@
 ---
 title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
-original_slug: Web/JavaScript/Referencia/Sentencias/debugger
 ---
 
 {{jsSidebar("Statements")}}

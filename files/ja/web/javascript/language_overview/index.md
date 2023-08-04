@@ -1,7 +1,6 @@
 ---
 title: JavaScript 「再」入門
-slug: Web/JavaScript/Language_Overview
-original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
+slug: Web/JavaScript/Language_overview
 ---
 
 {{jsSidebar}}

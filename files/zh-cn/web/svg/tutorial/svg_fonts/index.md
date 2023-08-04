@@ -3,31 +3,43 @@ title: SVG 字体
 slug: Web/SVG/Tutorial/SVG_fonts
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Filter_effects", "Web/SVG/Tutorial/SVG_Image_Tag") }}
 
 当规定 SVG 时，在浏览器支持 web 字体并不流行。因为访问正确的字体文件对于正确呈现字体是有确定性的，SVG 中添加了一个字体描述技术，以提供这个能力。它并不是为了和别的格式比如说 PostScript 或 OTF 兼容，而是为了将字形信息嵌入 SVG 呈现的一个简单的方法。
 
 > **备注：** **SVG 字体当前只在 Safari 和 Android 浏览器中受支持。**
-> Internet Explorer [还没有考虑实现它](http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-modernized-fourth-ie9-platform-preview-available-for-developers.aspx)，Chrome 38（和 Opera25）[移除了这个功能](https://www.chromestatus.com/feature/5930075908210688)，Firefox 已经[无限期推迟实施它](https://bugzilla.mozilla.org/show_bug.cgi?id=119490)以专心实现[WOFF](/zh-CN/WOFF)。别的工具比如说[Adobe SVG Viewer](http://www.adobe.com/svg/viewer/install/)插件、Batik 和部分 Inkscape 支持 SVG 字体嵌入。
+> Chrome 38（和 Opera25）[移除了这个功能](https://www.chromestatus.com/feature/5930075908210688)，Firefox 已经[无限期推迟实施它](https://bugzilla.mozilla.org/show_bug.cgi?id=119490)以专心实现[WOFF](/zh-CN/docs/Web/Guide/WOFF)。别的工具，如 Batik 和部分 Inkscape 支持 SVG 字体嵌入。
 
-定义一个 SVG 字体的基础是{{ SVGElement("font") }}元素。
+定义一个 SVG 字体的基础是 {{ SVGElement("font") }} 元素。
 
 ## 定义一个字体
 
 在 SVG 中嵌入一个字体，有一些原料要求。让我们用一个示例演示它（来自[规范文档](http://www.w3.org/TR/SVG/fonts.html#FontElement)的示例），并详细解释。
 
-```plain
+```html
 <font id="Font1" horiz-adv-x="1000">
-  <font-face font-family="Super Sans" font-weight="bold" font-style="normal"
-      units-per-em="1000" cap-height="600" x-height="400"
-      ascent="700" descent="300"
-      alphabetic="0" mathematical="350" ideographic="400" hanging="500">
+  <font-face
+    font-family="Super Sans"
+    font-weight="bold"
+    font-style="normal"
+    units-per-em="1000"
+    cap-height="600"
+    x-height="400"
+    ascent="700"
+    descent="300"
+    alphabetic="0"
+    mathematical="350"
+    ideographic="400"
+    hanging="500">
     <font-face-src>
-      <font-face-name name="Super Sans Bold"/>
+      <font-face-name name="Super Sans Bold" />
     </font-face-src>
   </font-face>
-  <missing-glyph><path d="M0,0h200v200h-200z"/></missing-glyph>
-  <glyph unicode="!" horiz-adv-x="300"><!-- Outline of exclam. pt. glyph --></glyph>
+  <missing-glyph><path d="M0,0h200v200h-200z" /></missing-glyph>
+  <!-- Outline of exclamation point glyph -->
+  <glyph unicode="!" horiz-adv-x="300"></glyph>
   <glyph unicode="@"><!-- Outline of @ glyph --></glyph>
   <!-- more glyphs -->
 </font>
@@ -45,7 +57,7 @@ slug: Web/SVG/Tutorial/SVG_fonts
 
 有两个进一步的元素，可以定义在`font`元素里面：{{ SVGElement("hkern") }}元素和{{ SVGElement("vkern") }}元素。这两个元素每个引用到至少两个字符（属性 u1 和属性 u2）以及一个属性 k。属性 k 决定了那些字符之间的距离应该减少多少。下面的示例指示用户代理把“A”和“V”字符放得比标准的字符间距更靠近一些。
 
-```plain
+```html
 <hkern u1="A" u2="V" k="20" />
 ```
 
@@ -53,7 +65,7 @@ slug: Web/SVG/Tutorial/SVG_fonts
 
 如果你已经把你的字体声明如上放在一起，你可以使用一个单一的`font-family`属性以实现在 SVG 文本上应用字体：
 
-```plain
+```html
 <font>
   <font-face font-family="Super Sans" />
   <!-- and so on -->
@@ -68,16 +80,16 @@ slug: Web/SVG/Tutorial/SVG_fonts
 
 你可以使用`@font-face`以引用远程（或者非远程）字体：
 
-```plain
+```html
 <font id="Super_Sans">
   <!-- and so on -->
 </font>
 
-<style type="text/css">
-@font-face {
-  font-family: "Super Sans";
-  src: url(#Super_Sans);
-}
+<style>
+  @font-face {
+    font-family: "Super Sans";
+    src: url(#Super_Sans);
+  }
 </style>
 
 <text font-family="Super Sans">My text uses Super Sans</text>
@@ -85,9 +97,9 @@ slug: Web/SVG/Tutorial/SVG_fonts
 
 ### 选项：引用一个远程字体
 
-上面提到的 font-face-uri 元素允许你引用一个外来字体，因此可以有很大的可重用性：
+上面提到的 `font-face-uri` 元素允许你引用一个外来字体，因此可以有很大的可重用性：
 
-```plain
+```html
 <font>
   <font-face font-family="Super Sans">
     <font-face-src>

@@ -1,7 +1,6 @@
 ---
 title: 開始開發我們的 Angular 待辦事項應用程式
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -90,33 +89,33 @@ export interface Item {
 在 `app.component.ts` 中置換內容如下：
 
 ```js
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
-
 export class AppComponent {
-  title = 'todo';
+  title = "todo";
 
-  filter: 'all' | 'active' | 'done' = 'all';
+  filter: "all" | "active" | "done" = "all";
 
   allItems = [
-    { description: 'eat', done: true },
-    { description: 'sleep', done: false },
-    { description: 'play', done: false },
-    { description: 'laugh', done: false },
+    { description: "eat", done: true },
+    { description: "sleep", done: false },
+    { description: "play", done: false },
+    { description: "laugh", done: false },
   ];
 
   get items() {
-    if (this.filter === 'all') {
+    if (this.filter === "all") {
       return this.allItems;
     }
-    return this.allItems.filter(item => this.filter === 'done' ? item.done : !item.done);
+    return this.allItems.filter((item) =>
+      this.filter === "done" ? item.done : !item.done
+    );
   }
-
 }
 ```
 

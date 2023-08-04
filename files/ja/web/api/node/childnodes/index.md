@@ -1,6 +1,8 @@
 ---
-title: Node.childNodes
+title: "Node: childNodes プロパティ"
 slug: Web/API/Node/childNodes
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -27,13 +29,13 @@ slug: Web/API/Node/childNodes
 ### 単純な使用方法
 
 ```js
-// parg は <p> 要素へのオブジェクト参照です
+// parg は <p> 要素へのオブジェクト参照であることに注意
 
 // まず、要素に子ノードがあるかどうかをチェックします
 if (parg.hasChildNodes()) {
   let children = parg.childNodes;
 
-  for (let i = 0; i < children.length; i++) {
+  for (const node of children) {
     // それぞれの子を children[i] として処理します
     // 注: リストは生きています。子を追加したり取り除いたりすると、リストの `length` が変わります
   }
@@ -45,10 +47,9 @@ if (parg.hasChildNodes()) {
 ```js
 // これはあるノードからすべての子を取り除くための一つの方法です
 // box はある要素へのオブジェクト参照です
-
 while (box.firstChild) {
-    // リストは生きているので、呼び出されるたびにインデックスが変わります
-    box.removeChild(box.firstChild);
+  // リストは生きているので、呼び出されるたびにインデックスが変わります
+  box.removeChild(box.firstChild);
 }
 ```
 

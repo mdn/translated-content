@@ -59,7 +59,7 @@ slug: Mozilla/Firefox/Releases/46
 
 - 非推奨の {{domxref("Window.showModalDialog()")}} メソッドが、マルチプロセスモード (e10s) の Firefox で使用できなくなりました ([Firefox バグ 1234700](https://bugzil.la/1234700))。
 - {{domxref("Document.elementsFromPoint")}} に対応しました ([Firefox バグ 1164427](https://bugzil.la/1164427))。
-- {{HTMLElement("select")}} 要素に存在しない option をプログラムで選択したときに誤って何も変更しないままにしていましたが、{{htmlattrxref("selectedIndex", "select")}} の値を `-1` に、{{htmlattrxref("selectedOptions", "select")}} を空の {{domxref("HTMLCollection")}} に、そして {{htmlattrxref("value", "select")}} を空文字列に変更するようになりました ([Firefox バグ 1203668](https://bugzil.la/1203668))。
+- {{HTMLElement("select")}} 要素に存在しない option をプログラムで選択したときに誤って何も変更しないままにしていましたが、[`selectedIndex`](/ja/docs/Web/HTML/Element/select#selectedIndex) の値を `-1` に、[`selectedOptions`](/ja/docs/Web/HTML/Element/select#selectedOptions) を空の {{domxref("HTMLCollection")}} に、そして [`value`](/ja/docs/Web/HTML/Element/select#value) を空文字列に変更するようになりました ([Firefox バグ 1203668](https://bugzil.la/1203668))。
 
 <h4 id="Canvas" name="Canvas">Canvas</h4>
 

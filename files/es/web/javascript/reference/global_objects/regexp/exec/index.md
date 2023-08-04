@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype.exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
-original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/exec
 ---
 
 {{JSRef}}

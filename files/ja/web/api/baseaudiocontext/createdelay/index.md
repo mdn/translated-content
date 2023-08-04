@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createDelay()
 slug: Web/API/BaseAudioContext/createDelay
-original_slug: Web/API/AudioContext/createDelay
 ---
 
 {{ APIRef("Web Audio API") }}

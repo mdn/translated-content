@@ -189,6 +189,6 @@ th {
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}
 - {{Cssxref("text-combine-upright")}}
-- [CSS 逻辑属性](/zh-CN/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS 逻辑属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
 - [为竖排文本（中文、日语、韩语和蒙古语）赋予样式](https://www.w3.org/International/articles/vertical-text/)
 - 浏览器支持测试结果：<https://w3c.github.io/i18n-tests/results/writing-mode-vertical>

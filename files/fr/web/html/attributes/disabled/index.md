@@ -1,13 +1,6 @@
 ---
-title: 'Attribut HTML : disabled'
+title: "Attribut HTML : disabled"
 slug: Web/HTML/Attributes/disabled
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Forms
-  - required
-translation_of: Web/HTML/Attributes/disabled
 ---
 
 {{HTMLSidebar}}
@@ -51,26 +44,35 @@ Lorsque les contrôles de formulaire sont désactivés, de nombreux navigateurs 
 ```html
 <fieldset>
   <legend>Cases à cocher</legend>
-  <p><label>
-    <input type="checkbox" name="chbox" value="regular"> Régulier
-  </label></p>
-  <p><label>
-    <input type="checkbox" name="chbox" value="disabled" disabled> désactivé
-  </label></p>
+  <p>
+    <label>
+      <input type="checkbox" name="chbox" value="regular" /> Régulier
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" name="chbox" value="disabled" disabled /> désactivé
+    </label>
+  </p>
 </fieldset>
 
 <fieldset>
   <legend>Boutons radio</legend>
-  <p><label>
-    <input type="radio" name="radio" value="regular"> Régulier
-  </label></p>
-  <p><label>
-    <input type="radio" name="radio" value="disabled" disabled> désactivé
-  </label></p>
+  <p>
+    <label>
+      <input type="radio" name="radio" value="regular" /> Régulier
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="radio" name="radio" value="disabled" disabled /> désactivé
+    </label>
+  </p>
 </fieldset>
 
 <p>
-  <label>Sélectionnez une option :
+  <label
+    >Sélectionnez une option :
     <select>
       <optgroup label="Groupe 1">
         <option>Option 1.1</option>
@@ -92,10 +94,12 @@ Lorsque les contrôles de formulaire sont désactivés, de nombreux navigateurs 
 <fieldset disabled>
   <legend>Champ désactivé</legend>
   <p>
-    <label>Nom : <input type="name" name="radio" value="régulier"> Régulier</label>
+    <label
+      >Nom : <input type="name" name="radio" value="régulier" /> Régulier</label
+    >
   </p>
   <p>
-    <label>Nombre : <input type="number"></label>
+    <label>Nombre : <input type="number" /></label>
   </p>
 </fieldset>
 ```

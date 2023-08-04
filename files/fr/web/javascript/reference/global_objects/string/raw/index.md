@@ -1,14 +1,6 @@
 ---
 title: String.raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/raw
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/raw
 ---
 
 {{JSRef}}
@@ -20,9 +12,9 @@ La méthode statique **`String.raw()`** est une fonction d'étiquetage (_tag fun
 ## Syntaxe
 
 ```js
-String.raw(callSite, ...substitutions)
+String.raw(callSite, ...substitutions);
 
-String.raw`gabaritChaîne`
+String.raw`gabaritChaîne`;
 ```
 
 ### Paramètres
@@ -52,7 +44,7 @@ La méthode `String.raw()` est la seule méthode d'étiquetage native pour les c
 ## Exemples
 
 ```js
-String.raw`Hi\n${2+3}!`;
+String.raw`Hi\n${2 + 3}!`;
 // "Hi\n5!", le caractère après "Hi" n'est pas
 // le caractère de nouvelle ligne
 // "\" et "n" sont bien deux caractères distincts
@@ -73,7 +65,7 @@ String.raw`Hi\n${nom}!`;
 
 // Généralement, on n'appelle pas String.raw
 // comme une fonction, mais c'est possible :
-String.raw({raw: "test"}, 0, 1, 2);
+String.raw({ raw: "test" }, 0, 1, 2);
 // "t0e1s2t"
 ```
 

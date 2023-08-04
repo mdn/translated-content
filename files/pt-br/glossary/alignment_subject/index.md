@@ -1,7 +1,6 @@
 ---
 title: Tópico de Alinhamento
 slug: Glossary/Alignment_Subject
-original_slug: Glossario/topico_de_alinhamento
 ---
 
 No [Alinhamento de Box do CSS](/pt-BR/docs/Web/CSS/CSS_Box_Alignment), o **tópico (assunto) de alinhamento** é a coisa (ou coisas) que está sendo alinhada pelas propriedades.

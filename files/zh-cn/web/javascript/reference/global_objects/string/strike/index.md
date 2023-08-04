@@ -28,7 +28,7 @@ str.strike()
 下面的示例使用字符串方法来修改字符串的格式：
 
 ```js
-var worldString = 'Hello, world';
+var worldString = "Hello, world";
 
 console.log(worldString.blink()); // <blink>Hello, world</blink>
 console.log(worldString.bold()); // <b>Hello, world</b>

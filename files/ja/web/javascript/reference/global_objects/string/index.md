@@ -256,7 +256,7 @@ otherwise my code is unreadable."
 > 以下のメソッドは、それぞれ、特定の HTML タグでラップされた文字列のコピーを返します。
 
 - {{jsxref("String.prototype.anchor()")}}
-  - : {{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}} (ハイパーテキストのターゲット)
+  - : [`<a name="name">`](/ja/docs/Web/HTML/Element/a#name) (ハイパーテキストのターゲット)
 - {{jsxref("String.prototype.big()")}}
   - : {{HTMLElement("big")}}
 - {{jsxref("String.prototype.blink()")}}
@@ -266,13 +266,13 @@ otherwise my code is unreadable."
 - {{jsxref("String.prototype.fixed()")}}
   - : {{HTMLElement("tt")}}
 - {{jsxref("String.prototype.fontcolor()")}}
-  - : {{htmlattrxref("color", "font", "&lt;font color=\"color\"&gt;")}}
+  - : [`<font color="color">`](/ja/docs/Web/HTML/Element/font#color)
 - {{jsxref("String.prototype.fontsize()")}}
-  - : {{htmlattrxref("size", "font", "&lt;font size=\"size\"&gt;")}}
+  - : [`<font size="size">`](/ja/docs/Web/HTML/Element/font#size)
 - {{jsxref("String.prototype.italics()")}}
   - : {{HTMLElement("i")}}
 - {{jsxref("String.prototype.link()")}}
-  - : {{htmlattrxref("href", "a", "&lt;a href=\"url\"&gt;")}} (URL へのリンク)
+  - : [`<a href="url">`](/ja/docs/Web/HTML/Element/a#href) (URL へのリンク)
 - {{jsxref("String.prototype.small()")}}
   - : {{HTMLElement("small")}}
 - {{jsxref("String.prototype.strike()")}}

@@ -1,5 +1,5 @@
 ---
-title: '@property'
+title: "@property"
 slug: Web/CSS/@property
 ---
 

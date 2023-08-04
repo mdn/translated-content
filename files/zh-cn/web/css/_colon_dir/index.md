@@ -1,9 +1,9 @@
 ---
-title: ':dir()'
+title: ":dir()"
 slug: Web/CSS/:dir
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 {{ SeeCompatTable() }}
 
@@ -26,7 +26,8 @@ slug: Web/CSS/:dir
 ```html
 <div dir="rtl">
   <span>test1</span>
-  <div dir="ltr">test2
+  <div dir="ltr">
+    test2
     <div dir="auto">עִבְרִית</div>
   </div>
 </div>

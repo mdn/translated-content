@@ -1,15 +1,6 @@
 ---
 title: Worker.postMessage()
 slug: Web/API/Worker/postMessage
-tags:
-  - API
-  - JavaScript
-  - Web Workers
-  - Worker
-  - postMessage
-  - Ссылка
-  - метод
-translation_of: Web/API/Worker/postMessage
 ---
 
 {{APIRef("Web Workers API")}}
@@ -43,17 +34,17 @@ Void.
 В следующем фрагменте кода показано создание объекта {{domxref("Worker")}} с помощью конструктора {{domxref("Worker.Worker", "Worker()")}}. При изменении значений одного из двух полей формы (`first` и `second`) событием {{event("change")}} вызывается функция `postMessage()` для отправки значений полей текущему worker.
 
 ```js
-var myWorker = new Worker('worker.js');
+var myWorker = new Worker("worker.js");
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Сообщение отправлено работнику');
-}
+first.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Сообщение отправлено работнику");
+};
 
-second.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Сообщение отправлено работнику');
-}
+second.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Сообщение отправлено работнику");
+};
 ```
 
 Больше примеров можно найти здесь: [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
@@ -64,60 +55,66 @@ second.onchange = function() {
 
 В этом примере показано дополнение Firefox, которое передаёт `ArrayBuffer` из основного потока в `ChromeWorker`, а затем `ChromeWorker` передаёт его обратно в основной поток.
 
-#### Код основного потока:
+#### Код основного потока
 
 ```js
-var myWorker = new ChromeWorker(self.path + 'myWorker.js');
+var myWorker = new ChromeWorker(self.path + "myWorker.js");
 
 function handleMessageFromWorker(msg) {
-    console.log('входящее сообщение от работника:', msg);
-    switch (msg.data.aTopic) {
-        case 'do_sendMainArrBuff':
-            sendMainArrBuff(msg.data.aBuf)
-            break;
-        default:
-            throw 'свойство aTopic отсутствует в сообщении ChromeWorker';
-    }
+  console.log("входящее сообщение от работника:", msg);
+  switch (msg.data.aTopic) {
+    case "do_sendMainArrBuff":
+      sendMainArrBuff(msg.data.aBuf);
+      break;
+    default:
+      throw "свойство aTopic отсутствует в сообщении ChromeWorker";
+  }
 }
 
-myWorker.addEventListener('message', handleMessageFromWorker);
+myWorker.addEventListener("message", handleMessageFromWorker);
 
 // Создание и отправка буфера
 var arrBuf = new ArrayBuffer(8);
-console.info('arrBuf.byteLength, ДО передачи:', arrBuf.byteLength);
+console.info("arrBuf.byteLength, ДО передачи:", arrBuf.byteLength);
 
 myWorker.postMessage(
-    {
-        aTopic: 'do_sendWorkerArrBuff',
-        aBuf: arrBuf // буфер который передаётся 3 строками ниже
-    },
-    [
-        arrBuf // буфер созданный на строке 9
-    ]
+  {
+    aTopic: "do_sendWorkerArrBuff",
+    aBuf: arrBuf, // буфер который передаётся 3 строками ниже
+  },
+  [
+    arrBuf, // буфер созданный на строке 9
+  ],
 );
 
-console.info('arrBuf.byteLength, ПОСЛЕ передачи:', arrBuf.byteLength);
+console.info("arrBuf.byteLength, ПОСЛЕ передачи:", arrBuf.byteLength);
 ```
 
 #### Код Worker-а
 
 ```js
 self.onmessage = function (msg) {
-    switch (msg.data.aTopic) {
-        case 'do_sendWorkerArrBuff':
-                sendWorkerArrBuff(msg.data.aBuf)
-            break;
-        default:
-            throw 'свойство aTopic отсутствует в сообщении ChromeWorker';
-    }
-}
+  switch (msg.data.aTopic) {
+    case "do_sendWorkerArrBuff":
+      sendWorkerArrBuff(msg.data.aBuf);
+      break;
+    default:
+      throw "свойство aTopic отсутствует в сообщении ChromeWorker";
+  }
+};
 
 function sendWorkerArrBuff(aBuf) {
-    console.info('от рабочего, ДО отправки обратно, aBuf.byteLength:', aBuf.byteLength);
+  console.info(
+    "от рабочего, ДО отправки обратно, aBuf.byteLength:",
+    aBuf.byteLength,
+  );
 
-    self.postMessage({aTopic:'do_sendMainArrBuff', aBuf:aBuf}, [aBuf]);
+  self.postMessage({ aTopic: "do_sendMainArrBuff", aBuf: aBuf }, [aBuf]);
 
-    console.info('от рабочего, ПОСЛЕ отправки обратно, aBuf.byteLength:', aBuf.byteLength);
+  console.info(
+    "от рабочего, ПОСЛЕ отправки обратно, aBuf.byteLength:",
+    aBuf.byteLength,
+  );
 }
 ```
 

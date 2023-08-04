@@ -1,7 +1,6 @@
 ---
 title: 클로저
 slug: Web/JavaScript/Closures
-original_slug: Web/JavaScript/Guide/Closures
 ---
 
 {{jsSidebar("Intermediate")}}

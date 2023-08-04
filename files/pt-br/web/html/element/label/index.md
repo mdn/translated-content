@@ -17,7 +17,7 @@ Um **elemento** **HTML `<label>` **representa uma legenda para um item em uma in
 
 A tecla de atalho para acessar este elemento a partir do teclado.
 
-- {{htmlattrdef("accesskey")}} {{HTMLVersionInline("4")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("accesskey")}}
   - : A tecla de atalho para acessar este elemento a partir do teclado.
 - {{htmlattrdef("for")}}
 
@@ -25,7 +25,7 @@ A tecla de atalho para acessar este elemento a partir do teclado.
 
     > **Nota:** Um elemento etiqueta pode ter tanto um for o atributo e um elemento de controlo continham, enquanto os pontos de atributo para o elemento de controlo contido.
 
-- {{htmlattrdef("form")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("form")}}
   - : O elemento de forma que o elemento label está associado a (seu proprietário formulário). O valor do atributo deve ser uma identificação de um {{HTMLElement ("form")}} elemento no mesmo documento. Se este atributo não for especificado, este elemento \<label> deve ser um descendente de uma {{HTMLElement ("form")}} elemento. Este atributo permite que você coloque elementos do rótulo em qualquer lugar dentro de um documento, e não apenas como descendentes de seus elementos de formulário.
 
 ## Exemplo

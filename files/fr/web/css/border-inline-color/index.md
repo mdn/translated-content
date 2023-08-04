@@ -1,13 +1,6 @@
 ---
 title: border-inline-color
 slug: Web/CSS/border-inline-color
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/border-inline-color
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -16,7 +9,7 @@ La propriété **`border-inline-color`** définit la couleur de la bordure d'un 
 
 ```css
 border-inline-color: yellow;
-border-inline-color: #F5F6F7;
+border-inline-color: #f5f6f7;
 ```
 
 Pour définir la couleur de la bordure sur l'autre dimension, on pourra utiliser la propriété logique {{cssxref("border-block-color")}} qui définit {{cssxref("border-block-start-color")}} et {{cssxref("border-block-end-color")}}.
@@ -84,4 +77,4 @@ div {
   - {{cssxref("border-left-color")}}.
 
 - Les propriétés relatives aux propriétés logiques : {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
-- {{bug("1297097")}}
+- [bug Firefox 1297097](https://bugzil.la/1297097)

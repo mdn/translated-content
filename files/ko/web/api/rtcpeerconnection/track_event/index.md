@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.ontrack
 slug: Web/API/RTCPeerConnection/track_event
-original_slug: Web/API/RTCPeerConnection/ontrack
 ---
 
 {{APIRef("WebRTC")}}
@@ -25,7 +24,7 @@ RTCPeerConnection.ontrack = eventHandler;
 아래의 예시는 [Signaling and video calling](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling) 문서에 나온 코드의 일부입니다. 이 코드는 들어오는 트랙을 {{HTMLElement("video")}}에 연결해서 해당 비디오를 보여줄 수 있도록 합니다.
 
 ```js
-pc.ontrack = function(event) {
+pc.ontrack = function (event) {
   document.getElementById("received_video").srcObject = event.streams[0];
   document.getElementById("hangup-button").disabled = false;
 };

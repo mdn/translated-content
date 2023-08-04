@@ -78,54 +78,53 @@ function draw() {
 这里我们用 `requestAnimationFrame()` 来保持绘图持续更新：
 
 ```js
-      drawVisual = requestAnimationFrame(draw);
+drawVisual = requestAnimationFrame(draw);
 ```
 
 接下来我们获取时间域上的数据并将它复制到数组当中：
 
 ```js
-      analyser.getByteTimeDomainData(dataArray);
+analyser.getByteTimeDomainData(dataArray);
 ```
 
 接下来把 canvas 用纯色填满作为背景：
 
 ```js
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+canvasCtx.fillStyle = "rgb(200, 200, 200)";
+canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 ```
 
 为我们要画的波形设置好线宽和线的颜色，然后开始绘制路径：
 
 ```js
-      canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+canvasCtx.lineWidth = 2;
+canvasCtx.strokeStyle = "rgb(0, 0, 0)";
 
-      canvasCtx.beginPath();
+canvasCtx.beginPath();
 ```
 
 用 canvas 画布的总宽度除以数组的长度（与之前定义的 FrequencyBinCount 相等）来决定要花上的每段线条的宽度，之后设置横坐标 (x) 为 0，将画笔移动到起始位置：
 
 ```js
-      var sliceWidth = WIDTH * 1.0 / bufferLength;
-      var x = 0;
+var sliceWidth = (WIDTH * 1.0) / bufferLength;
+var x = 0;
 ```
 
 接下来我们进入循环，遍历数组，通过其中的数据来确定每段线条的高度，之后改变横坐标将画笔移动到下一段线条开始的地方：
 
 ```js
-      for(var i = 0; i < bufferLength; i++) {
+for (var i = 0; i < bufferLength; i++) {
+  var v = dataArray[i] / 128.0;
+  var y = (v * HEIGHT) / 2;
 
-        var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+  if (i === 0) {
+    canvasCtx.moveTo(x, y);
+  } else {
+    canvasCtx.lineTo(x, y);
+  }
 
-        if(i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
-        }
-
-        x += sliceWidth;
-      }
+  x += sliceWidth;
+}
 ```
 
 最后，我们把线连到右边的中央，然后画出来：
@@ -139,7 +138,7 @@ function draw() {
 在这块代码最后，我们调用 `draw()` 函数来开始整个过程：
 
 ```js
-    draw();
+draw();
 ```
 
 这个演示画出了一个每秒会刷新几次并且看起来还不错的波形图：
@@ -153,12 +152,12 @@ function draw() {
 首先，我们设置好解析器和空数组，之后用 [clearRect()](/zh-CN/docs/Web/API/CanvasRenderingContext2D/clearRect) 清空画布。与之前的唯一区别是我们这次大大减小了 FFT 的大小，这样做的原因是为了使得每个频率条足够宽，让它们看着像“条”而不是“细杆”。
 
 ```js
-    analyser.fftSize = 256;
-    var bufferLength = analyser.frequencyBinCount;
-    console.log(bufferLength);
-    var dataArray = new Uint8Array(bufferLength);
+analyser.fftSize = 256;
+var bufferLength = analyser.frequencyBinCount;
+console.log(bufferLength);
+var dataArray = new Uint8Array(bufferLength);
 
-    canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
+canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 ```
 
 接下来我们写好 `draw()` 函数，再一次用 `requestAnimationFrame()` 设置一个循环，这样显示的数据就可以保持刷新，并且每一帧都清空一次画布。
@@ -178,9 +177,9 @@ function draw() {
 我们还要设置一个条高度变量 `barHeight`，还有一个 `x` 变量来记录当前条形的位置。
 
 ```js
-      var barWidth = (WIDTH / bufferLength) * 2.5;
-      var barHeight;
-      var x = 0;
+var barWidth = (WIDTH / bufferLength) * 2.5;
+var barHeight;
+var x = 0;
 ```
 
 像之前一样，我们进入循环来遍历 `dataArray` 数组中的数据。在每一次循环过程中，我们让条形的高度 `barHeight` 等于数组的数值，之后根据高度设置条形的填充色（条形越高，填充色越亮），然后在横坐标 `x` 处按照设置的宽度和高度的一半把条形画出来（我们最后决定只画高度的一半因为这样条形看起来更美观）。
@@ -202,7 +201,7 @@ function draw() {
 和刚才一样，我们在最后调用 draw() 函数来开启整个可视化过程。
 
 ```js
-    draw();
+draw();
 ```
 
 这些代码会带来下面的效果：

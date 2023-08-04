@@ -5,7 +5,7 @@ slug: Glossary/Caret
 
 **キャレット** (テキストカーソルとも呼ばれる) は、テキスト入力が挿入される場所を示すために画面に表示されるインジケーターです。 ほとんどのユーザーインターフェイスは、細い縦線または点滅する文字サイズの四角形を使用してキャレットを表しますが、これはさまざまです。 テキスト内のこの位置は**挿入位置**と呼ばれます。「キャレット」という単語は、テキストの挿入位置をマウスカーソル (マウスポインター) と区別するためのものです。
 
-ウェブ上では、{{HTMLElement("input")}} 要素と {{HTMLElement("textarea")}} 要素と、{{htmlattrxref("contenteditable")}} 属性が設定されている要素の挿入位置を表すためにキャレットが使用され、要素の内容をユーザーが編集できるようにします。
+ウェブ上では、{{HTMLElement("input")}} 要素と {{HTMLElement("textarea")}} 要素と、[`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) 属性が設定されている要素の挿入位置を表すためにキャレットが使用され、要素の内容をユーザーが編集できるようにします。
 
 ## より詳しく知る
 
@@ -29,4 +29,4 @@ slug: Glossary/Caret
 - [`<input type="number">`](/ja/docs/Web/HTML/Element/input/number), [`<input type="range">`](/ja/docs/Web/HTML/Element/input/range)
 - [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email), [`<input type="tel">`](/ja/docs/Web/HTML/Element/input/tel), and [`<input type="url">`](/ja/docs/Web/HTML/Element/input/url)
 - {{HTMLElement("textarea")}}
-- {{htmlattrxref("contenteditable")}} 属性が設定された要素
+- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) 属性が設定された要素
