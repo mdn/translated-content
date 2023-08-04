@@ -1,15 +1,8 @@
 ---
 title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols
 ---
+
 {{JSRef}}
 
 La méthode **`Object.getOwnPropertySymbols()`** renvoie un tableau contenant tous les symboles des propriétés trouvées directement sur un objet donné.
@@ -18,7 +11,9 @@ La méthode **`Object.getOwnPropertySymbols()`** renvoie un tableau contenant to
 
 ## Syntaxe
 
-    Object.getOwnPropertySymbols(obj)
+```js
+Object.getOwnPropertySymbols(obj);
+```
 
 ### Paramètres
 
@@ -48,20 +43,17 @@ obj[b] = "symboleGlobal";
 var objectSymboles = Object.getOwnPropertySymbols(obj);
 
 console.log(objectSymboles.length); // 2
-console.log(objectSymboles)         // [Symbol(a), Symbol(b)]
-console.log(objectSymboles[0])      // Symbol(a)
+console.log(objectSymboles); // [Symbol(a), Symbol(b)]
+console.log(objectSymboles[0]); // Symbol(a)
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.getOwnPropertySymbols")}}
+{{Compat}}
 
 ## Voir aussi
 

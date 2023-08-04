@@ -1,15 +1,8 @@
 ---
 title: Reflect.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
-original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 La méthode statique **`Reflect.getOwnPropertyDescriptor()`** est similaire à {{jsxref("Object.getOwnPropertyDescriptor()")}}. Elle renvoie un descripteur de propriété pour la propriété visée si elle existe sur l'objet, sinon, elle renvoie {{jsxref("undefined")}}.
@@ -18,7 +11,9 @@ La méthode statique **`Reflect.getOwnPropertyDescriptor()`** est similaire à {
 
 ## Syntaxe
 
-    Reflect.getOwnPropertyDescriptor(cible, cléPropriété)
+```js
+Reflect.getOwnPropertyDescriptor(cible, cléPropriété);
+```
 
 ### Paramètres
 
@@ -44,10 +39,10 @@ La méthode `Reflect.getOwnPropertyDescriptor` renvoie un descripteur pour la pr
 ### Utiliser `Reflect.getOwnPropertyDescriptor()`
 
 ```js
-Reflect.getOwnPropertyDescriptor({x: "coucou"}, "x");
+Reflect.getOwnPropertyDescriptor({ x: "coucou" }, "x");
 // {value: "coucou", writable: true, enumerable: true, configurable: true}
 
-Reflect.getOwnPropertyDescriptor({x: "coucou"}, "y");
+Reflect.getOwnPropertyDescriptor({ x: "coucou" }, "y");
 // undefined
 
 Reflect.getOwnPropertyDescriptor([], "length");
@@ -68,14 +63,11 @@ Object.getOwnPropertyDescriptor("toto", 0);
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-reflect.getownpropertydescriptor', 'Reflect.getOwnPropertyDescriptor')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.getownpropertydescriptor', 'Reflect.getOwnPropertyDescriptor')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Reflect.getOwnPropertyDescriptor")}}
+{{Compat}}
 
 ## Voir aussi
 

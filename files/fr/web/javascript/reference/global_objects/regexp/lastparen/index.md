@@ -1,22 +1,18 @@
 ---
 title: RegExp.lastParen ($+)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastParen
-tags:
-  - JavaScript
-  - Propriété
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastParen
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/lastParen
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 La propriété **`lastParen`** est une propriété statique accessible en lecture seule qui contient la dernière correspondance enregistrée dans un groupe (entre parenthèse) si jamais elle existe. `RegExp.$+` est un alias pour cette propriété.
 
 ## Syntaxe
 
-    RegExp.lastParen
-    RegExp['$+']
+```js
+RegExp.lastParen;
+RegExp["$+"];
+```
 
 ## Description
 
@@ -34,7 +30,7 @@ Cet alias ne peut pas être utilisé avec la notation utilisant le point pour l'
 var re = /(coucou)/g;
 re.test("coucou toi !");
 RegExp.lastParen; // "coucou"
-RegExp['$+'];     // "coucou"
+RegExp["$+"]; // "coucou"
 ```
 
 ## Spécifications
@@ -43,7 +39,7 @@ Cette propriété n'est pas standard. Elle ne fait partie d'aucune spécificatio
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.lastParen")}}
+{{Compat}}
 
 ## Voir aussi
 

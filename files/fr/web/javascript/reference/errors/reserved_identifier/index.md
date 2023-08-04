@@ -1,20 +1,17 @@
 ---
 title: 'SyntaxError: "x" is a reserved identifier'
 slug: Web/JavaScript/Reference/Errors/Reserved_identifier
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Reserved_identifier
-original_slug: Web/JavaScript/Reference/Erreurs/Reserved_identifier
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    SyntaxError: The use of a future reserved word for an identifier is invalid (Edge)
-    SyntaxError: "x" is a reserved identifier (Firefox)
-    SyntaxError: Unexpected reserved word (Chrome)
+```
+SyntaxError: The use of a future reserved word for an identifier is invalid (Edge)
+SyntaxError: "x" is a reserved identifier (Firefox)
+SyntaxError: Unexpected reserved word (Chrome)
+```
 
 ## Type d'erreur
 

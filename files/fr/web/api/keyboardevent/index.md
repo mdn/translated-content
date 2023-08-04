@@ -1,15 +1,8 @@
 ---
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
-tags:
-  - API
-  - DOM
-  - Evènements IU
-  - Interface
-  - Reference
-  - évènements
-translation_of: Web/API/KeyboardEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 Les objets **`KeyboardEvent`** décrivent l'interaction d'un utilisateur avec le clavier. Chaque événement décrit une touche&nbsp;; le type d'événement (`keydown`, `keypress`, ou `keyup`) identifie quel type d'activité a été effectué.
@@ -152,9 +145,9 @@ _Cette interface hérite également des propriétés de ses parents, {{domxref("
 
 Les événements existants sont `keydown`, `keypress` et `keyup`. Pour la plupart des touches, Gecko génère une suite d'événements touche comme suit :
 
-1.  lorsque la touche est d'abord enfoncée, l'événement `keydown` est envoyé ;
-2.  si la touche n'est pas une touche de modification, l'événement `keypress` est envoyé ;
-3.  lorsque l'utilisateur relâche la touche, l'événement `keyup` est envoyé.
+1. lorsque la touche est d'abord enfoncée, l'événement `keydown` est envoyé ;
+2. si la touche n'est pas une touche de modification, l'événement `keypress` est envoyé ;
+3. lorsque l'utilisateur relâche la touche, l'événement `keyup` est envoyé.
 
 ### Cas particuliers
 
@@ -162,41 +155,39 @@ Certaines touches inversent l'état d'un voyant lumineux ; celles-ci comprennent
 
 > **Note :** Sous Linux, Firefox 12 et les versions antérieures ont également envoyé l'événement `keypress` pour ces touches.
 
-Cependant, une limitation du modèle d'événement Mac OS X fait que Caps Lock ne génère que l'événement `keydown`. Num Lock était supporté sur certains modèles d'ordinateurs portables plus anciens (modèles 2007 et plus anciens), mais depuis lors, Mac OS X n'a pas supporté Num Lock même sur les claviers externes. Sur les MacBooks plus anciens avec une touche Num Lock, cette touche ne génère aucun événement touche. Gecko supporte la touche Scroll Lock si un clavier externe ayant une touche F14 est connecté. Dans certaines anciennes versions de Firefox, cette touche générait un événement `keypress` ; ce comportement incohérent était le {{bug(602812)}}.
+Cependant, une limitation du modèle d'événement Mac OS X fait que Caps Lock ne génère que l'événement `keydown`. Num Lock était supporté sur certains modèles d'ordinateurs portables plus anciens (modèles 2007 et plus anciens), mais depuis lors, Mac OS X n'a pas supporté Num Lock même sur les claviers externes. Sur les MacBooks plus anciens avec une touche Num Lock, cette touche ne génère aucun événement touche. Gecko supporte la touche Scroll Lock si un clavier externe ayant une touche F14 est connecté. Dans certaines anciennes versions de Firefox, cette touche générait un événement `keypress` ; ce comportement incohérent était le [bug Firefox 602812](https://bugzil.la/602812).
 
 ### Gestion de l'auto-répétition
 
 Lorsqu'une touche est maintenue enfoncée, elle commence à se répéter automatiquement. Cela a pour résultat qu'une suite d'événements similaire à ce qui suit est générée :
 
-1.  `keydown`
-2.  `keypress`
-3.  `keydown`
-4.  `keypress`
-5.  << répétition jusqu'à ce que l'utilisateur relâche la touche >>
-6.  `keyup`
+1. `keydown`
+2. `keypress`
+3. `keydown`
+4. `keypress`
+5. << répétition jusqu'à ce que l'utilisateur relâche la touche >>
+6. `keyup`
 
 C'est ce que la spécification DOM Niveau 3 dit qu'il devrait se produire. Cependant, il y a quelques mises en garde, comme décrit ci-dessous.
-
-
 
 #### Auto-répétition sur certains environnements GTK tels que Ubuntu 9.4
 
 Dans certains environnements basés sur GTK, l'auto-répétition génère automatiquement un événement natif lors de la répétition automatique, et Gecko n'a aucun moyen de connaître la différence entre une suite répétée de touches et une répétition automatique. Sur ces plateformes, une touche auto-répétée génère donc la suite d'événements suivante :
 
-1.  `keydown`
-2.  `keypress`
-3.  `keyup`
-4.  `keydown`
-5.  `keypress`
-6.  `keyup`
-7.  << répétition jusqu'à ce que l'utilisateur relâche la touche >>
-8.  `keyup`
+1. `keydown`
+2. `keypress`
+3. `keyup`
+4. `keydown`
+5. `keypress`
+6. `keyup`
+7. << répétition jusqu'à ce que l'utilisateur relâche la touche >>
+8. `keyup`
 
 Dans ces environnements, malheureusement, il n'y a aucun moyen pour que le contenu Web puisse faire la différence entre les touches répétées automatiquement et les touches qui sont simplement pressées à plusieurs reprises.
 
 #### Gestion de l'auto-répétition avant Gecko 5.0
 
-Avant Gecko 5.0 {{geckoRelease('5.0')}}, la gestion du clavier était moins cohérente entre les plates-formes.
+Avant Gecko 5.0, la gestion du clavier était moins cohérente entre les plates-formes.
 
 - Windows
   - : Le comportement de la répétition automatique est le même que dans Gecko 4.0 et ultérieur.
@@ -210,58 +201,60 @@ Avant Gecko 5.0 {{geckoRelease('5.0')}}, la gestion du clavier était moins coh�
 ## Exemple
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<script>
-'use strict';
+  <head>
+    <script>
+      "use strict";
 
-document.addEventListener('keydown', (event) => {
-  const nomTouche = event.key;
+      document.addEventListener(
+        "keydown",
+        (event) => {
+          const nomTouche = event.key;
 
-  if (nomTouche === 'Control') {
-    // Pas d'alerte si seule la touche Control est pressée.
-    return;
-  }
+          if (nomTouche === "Control") {
+            // Pas d'alerte si seule la touche Control est pressée.
+            return;
+          }
 
-  if (event.ctrlKey) {
-    // Même si event.key n'est pas 'Control' (par ex., 'a' is pressed),
-    // event.ctrlKey peut être true si la touche Ctrl est pressée dans le même temps.
-    alert(`Combinaison de ctrlKey + ${nomTouche}`);
-     } else {
-    alert(`Touche pressée ${nomTouche}`);
-  }
-}, false);
+          if (event.ctrlKey) {
+            // Même si event.key n'est pas 'Control' (par ex., 'a' is pressed),
+            // event.ctrlKey peut être true si la touche Ctrl est pressée dans le même temps.
+            alert(`Combinaison de ctrlKey + ${nomTouche}`);
+          } else {
+            alert(`Touche pressée ${nomTouche}`);
+          }
+        },
+        false,
+      );
 
-document.addEventListener('keyup', (event) => {
-  const nomTouche = event.key;
+      document.addEventListener(
+        "keyup",
+        (event) => {
+          const nomTouche = event.key;
 
-  // Dès que l'utilisateur relâche la touche Ctrl, la touche n'est plus active.
-  // Aussi event.ctrlKey est false.
-  if (nomTouche === 'Control') {
-    alert('La touche Control a été relâchée');
-  }
-}, false);
+          // Dès que l'utilisateur relâche la touche Ctrl, la touche n'est plus active.
+          // Aussi event.ctrlKey est false.
+          if (nomTouche === "Control") {
+            alert("La touche Control a été relâchée");
+          }
+        },
+        false,
+      );
+    </script>
+  </head>
 
-</script>
-</head>
-
-<body>
-</body>
+  <body></body>
 </html>
 ```
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaire |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('UI Events', '#interface-keyboardevent', 'KeyboardEvent')}} | {{Spec2('UI Events')}} |             |
-
-La spécification d'interface `KeyboardEvent` est passée par de nombreuses versions préliminaires, d'abord sous DOM Events Level 2 où elle a été supprimée du fait qu'aucun consensus n'avait émergé, puis sous DOM Events Level 3. Cela conduit à l'implémentation de méthodes d'initialisation non standard, la version ancienne DOM Events Level 2, {{domxref("KeyboardEvent.initKeyEvent()")}} par les navigateurs Gecko et la version prémiminaire DOM Events Level 3, {{domxref("KeyboardEvent.initKeyboardEvent()")}} par d'autres navigateurs. Tous deux ont été remplacés par l'utilisation moderne d'un constructeur : {{domxref ("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.KeyboardEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

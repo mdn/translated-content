@@ -1,24 +1,17 @@
 ---
 title: Intl.NumberFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - NumberFormat
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/NumberFormat/formatToParts
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.Numberformat.prototype.formatToParts()`** permet de produire des fragments de chaînes à partir d'un nombre pour le mettre en forme avec des formateurs `NumberTimeFormat`.
 
 ## Syntaxe
 
-    Intl.NumberFormat.prototype.formatToParts(nombre)
+```js
+Intl.NumberFormat.prototype.formatToParts(nombre);
+```
 
 ### Paramètres
 
@@ -44,7 +37,7 @@ La méthode `formatToParts()` est peut être utilisée lorsqu'on met en forme de
 Les valeurs possibles pour l'attribut `type` sont :
 
 - `currency`
-  - : Le suffixe associé à la devise. Ce peut être le symbole "$", "€" ou bien le nom de la devise "Dollar", "Euro" selon la façon dont `currencyDisplay`  est indiquée.
+  - : Le suffixe associé à la devise. Ce peut être le symbole "$", "€" ou bien le nom de la devise "Dollar", "Euro" selon la façon dont `currencyDisplay` est indiquée.
 - `decimal`
   - : Le séparateur décimal utilisé (".").
 - `fraction`
@@ -73,9 +66,9 @@ Les valeurs possibles pour l'attribut `type` sont :
 ```js
 var number = 3500;
 
-var formatter = new Intl.NumberFormat('de-DE', {
-  style: 'currency',
-  currency: 'EUR'
+var formatter = new Intl.NumberFormat("de-DE", {
+  style: "currency",
+  currency: "EUR",
 });
 
 formatter.format(number);
@@ -102,12 +95,17 @@ formatter.formatToParts(number);
 Maintenant que la chaîne est décomposée, on peut la réassembler d'une façon spécifique. On peut, par exemple utiliser {{jsxref("Array.prototype.map()")}}, [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), une [instruction `switch`](/fr/docs/Web/JavaScript/Reference/Instructions/switch), [des littéraux de gabarits](/fr/docs/Web/JavaScript/Reference/Littéraux_gabarits) et {{jsxref("Array.prototype.reduce()")}}.
 
 ```js
-var numberString = formatter.formatToParts(number).map(({type, value}) => {
-  switch (type) {
-    case 'currency': return `<strong>${value}</strong>`;
-    default : return value;
-  }
-}).reduce((string, part) => string + part);
+var numberString = formatter
+  .formatToParts(number)
+  .map(({ type, value }) => {
+    switch (type) {
+      case "currency":
+        return `<strong>${value}</strong>`;
+      default:
+        return value;
+    }
+  })
+  .reduce((string, part) => string + part);
 ```
 
 Grâce à cette fonction, on pourra mettre en gras le suffixe associé à la devise :
@@ -123,13 +121,11 @@ Une prothèse pour cette fonctionnalité est disponible [dans le dépôt associ�
 
 ## Spécifications
 
-| Spécification                                                                                                                                                        | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('ES Int Draft', '#sec-Intl.NumberFormat.prototype.formatToParts', 'Intl.NumberFormat.prototype.formatToParts')}} | {{Spec2('ES Int Draft')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.NumberFormat.formatToParts")}}
+{{Compat}}
 
 ## Voir aussi
 

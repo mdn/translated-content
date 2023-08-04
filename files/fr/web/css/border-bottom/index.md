@@ -1,12 +1,8 @@
 ---
 title: border-bottom
 slug: Web/CSS/border-bottom
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-bottom
 ---
+
 {{CSSRef}}
 
 La propriété **`border-bottom`** est une propriété raccourcie qui définit la bordure du côté bas d'un élément.
@@ -24,15 +20,15 @@ Ces propriétés permettent de décrire la bordure du côté bas d'un élément.
 > **Note :** Comme pour les autres propriétés raccourcies, `border-bottom` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si celles-ci ne sont pas indiquées. Pour les valeurs qui ne sont pas indiquées, on prendra les valeurs par défaut. Ainsi :
 >
 > ```css
->   border-bottom-style: dotted;
->   border-bottom: thick green;
+> border-bottom-style: dotted;
+> border-bottom: thick green;
 > ```
 >
 > est équivalent à :
 >
 > ```css
->   border-bottom-style: dotted;
->   border-bottom: none thick green;
+> border-bottom-style: dotted;
+> border-bottom: none thick green;
 > ```
 >
 > et la valeur {{cssxref("border-bottom-style")}} fournie avant `border-bottom` est ignorée.
@@ -58,9 +54,13 @@ Les trois valeurs de la propriété raccourcie peuvent être définies dans n'im
 - `<color>`
   - : Voir {{cssxref("border-bottom-color")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -76,8 +76,7 @@ Les trois valeurs de la propriété raccourcie peuvent être définies dans n'im
 
 ```html
 <p class="exemple">
-  En passant elle prit sur un rayon un pot
-  de confiture portant cette étiquette,
+  En passant elle prit sur un rayon un pot de confiture portant cette étiquette,
   « MARMELADE D’ORANGES. »
 </p>
 ```
@@ -88,14 +87,8 @@ Les trois valeurs de la propriété raccourcie peuvent être définies dans n'im
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires                                                                                                                  |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#border-bottom', 'border-bottom')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification directe bien que la modification de valeurs pour {{cssxref("border-bottom-color")}} s'applique. |
-| {{SpecName('CSS2.1', 'box.html#propdef-border-bottom', 'border-bottom')}} | {{Spec2('CSS2.1')}}                 | Aucune modification significative.                                                                                            |
-| {{SpecName('CSS1', '#border-bottom', 'border-bottom')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                          |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-bottom")}}
+{{Compat}}

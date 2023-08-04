@@ -1,24 +1,21 @@
 ---
 title: FileList
 slug: Web/API/FileList
-tags:
-  - API
-  - File API
-  - ファイル
-browser-compat: api.FileList
-translation_of: Web/API/FileList
 ---
+
 {{APIRef("File API")}}
 
 この型のオブジェクトは、 HTML の {{HTMLElement("input")}} 要素の `files` プロパティで返されます。これにより、 `<input type="file">` 要素で選択されているファイルのリストにアクセスすることができます。また、ドラッグ＆ドロップ API を使用している場合は、ウェブコンテンツにドロップされたファイルのリストにも使用されます。使用方法の詳細は [`DataTransfer`](/ja/docs/Web/API/DataTransfer) オブジェクトを見てください。
 
-> **Note:** {{Gecko("1.9.2")}} より前は、input 要素は一度に 1 つのファイルだけ選択することができます。すなわち、 FileList に入るファイルは 1 つだけです。 {{Gecko("1.9.2")}} から、 input 要素の multiple 属性が true の場合、 FileList に複数のファイルが入ります。
+> **メモ:** Gecko 1.9.2 より前は、input 要素は一度に 1 つのファイルだけ選択することができます。すなわち、 FileList に入るファイルは 1 つだけです。 Gecko 1.9.2 から、 input 要素の multiple 属性が true の場合、 FileList に複数のファイルが入ります。
 
 ## ファイルリストの使用
 
 すべての `<input>` 要素のノードには `files` 属性があり、これが `FileList` 型なので、リスト中の項目にアクセスすることができます。例えば、HTML に以下のファイル入力があるとします。
 
-    <input id="fileItem" type="file">
+```html
+<input id="fileItem" type="file">
+```
 
 次のコードの行は、ノードのファイルリスト内の最初のファイルを [`File`](/ja/docs/Web/API/File) オブジェクトとして取得します。
 
@@ -61,9 +58,11 @@ var file = document.getElementById('fileItem').files[0];
 
 ファイルリスト内の指定された位置にあるファイルを表す [`File`](/ja/docs/Web/API/File) オブジェクトを返します。
 
-     File item(
-       index
-     );
+```
+File item(
+  index
+);
+```
 
 #### 引数
 
@@ -149,6 +148,6 @@ document.querySelector("#myfiles").onchange=pullfiles;
 
 ## 関連情報
 
-- [ウェブアプリケーションからのファイルを使用](/ja/docs/Web/API/File/Using_files_from_web_applications)
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
 - [`File`](/ja/docs/Web/API/File)
 - [`FileReader`](/ja/docs/Web/API/FileReader)

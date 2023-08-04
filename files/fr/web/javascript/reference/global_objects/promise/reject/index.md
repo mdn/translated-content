@@ -1,15 +1,8 @@
 ---
 title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Promise
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
-original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/reject
 ---
+
 {{JSRef}}
 
 La méthode **`Promise.reject(raison)`** renvoie un objet `Promise` qui est rejeté (la promesse n'est pas tenue) à cause d'une raison donnée.
@@ -18,7 +11,9 @@ La méthode **`Promise.reject(raison)`** renvoie un objet `Promise` qui est reje
 
 ## Syntaxe
 
-    Promise.reject(raison);
+```js
+Promise.reject(raison);
+```
 
 ### Paramètres
 
@@ -36,23 +31,23 @@ La fonction statique `Promise.reject` renvoie une `Promise` qui est rejetée. Po
 ## Exemples
 
 ```js
-Promise.reject(new Error("échec")).then(function() {
-  // n'est pas appelée
-}, function(erreur) {
-  console.log(erreur); // Analyse de la pile d'appels
-});
+Promise.reject(new Error("échec")).then(
+  function () {
+    // n'est pas appelée
+  },
+  function (erreur) {
+    console.log(erreur); // Analyse de la pile d'appels
+  },
+);
 ```
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                    |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------- |
-| {{SpecName('ES2015', '#sec-promise.reject', 'Promise.reject')}} | {{Spec2('ES2015')}}     | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.reject', 'Promise.reject')}} | {{Spec2('ESDraft')}} |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Promise.reject")}}
+{{Compat}}
 
 ## Voir aussi
 

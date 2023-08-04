@@ -1,21 +1,9 @@
 ---
 title: Appliquer des couleurs sur des éléments HTML grâce à CSS
-slug: Web/CSS/CSS_Colors/Applying_color
-tags:
-  - Beginner
-  - CSS
-  - CSS Colors
-  - Débutant
-  - Guide
-  - HTML
-  - HTML Colors
-  - HTML Styles
-  - Styling HTML
-  - color
-translation_of: Web/HTML/Applying_color
-original_slug: Web/HTML/Applying_color
+slug: Web/CSS/CSS_colors/Applying_color
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 La couleur fait partie intégrante des moyens d'expressions. Lorsqu'on écrit un site web, il est naturel d'y ajouter des couleurs dans la mise en forme. Avec [CSS](/fr/docs/Web/CSS), il existe de nombreuses façons d'ajouter de la couleur aux [éléments](/fr/docs/Web/HTML/Element) [HTML](/fr/docs/Web/HTML) afin d'obtenir le résultat souhaité. Cet article est une introduction détaillée aux différentes méthodes permettant d'appliquer des couleurs CSS en HTML.
 
@@ -95,7 +83,7 @@ Pour des informations plus détaillées sur chaque type de valeur, vous pouvez c
 
 ### Mots-clés
 
-Un ensemble standard de noms de couleurs a été défini et il est possible d'utiliser l'un de ces mots-clés plutôt qu'une représentation numérique s'il existe un mot-clé pour la valeur qu'on souhaite utiliser. Les mots-clés désignant les couleurs regroupent les couleurs primaires et secondaires (tels que`red` pour rouge, `blue` pour bleu, `orange`), les tons de gris (allant de `black` pour noir à `white` pour blanc et incluant des niveaux tels que `darkgray` (gris foncé) et `lightgrey` (gris clair)). D'autres couleurs sont également disponibles avec un mot-clé comme `lightseagreen`, `cornflowerblue` ou `rebeccapurple`.
+Un ensemble standard de noms de couleurs a été défini et il est possible d'utiliser l'un de ces mots-clés plutôt qu'une représentation numérique s'il existe un mot-clé pour la valeur qu'on souhaite utiliser. Les mots-clés désignant les couleurs regroupent les couleurs primaires et secondaires (tels que `red` pour rouge, `blue` pour bleu, `orange`), les tons de gris (allant de `black` pour noir à `white` pour blanc et incluant des niveaux tels que `darkgray` (gris foncé) et `lightgrey` (gris clair)). D'autres couleurs sont également disponibles avec un mot-clé comme `lightseagreen`, `cornflowerblue` ou `rebeccapurple`.
 
 Vous pouvez consulter [cette liste](/fr/docs/Web/CSS/color_value#color_keywords) pour connaître l'ensemble des mots-clés disponibles.
 
@@ -135,7 +123,7 @@ Par exemple, on pourra représenter un rouge pur à moitié opaque grâce à `rg
 
 ### La notation fonctionnelle HSL
 
-D'autres personnes préfèrent manipuler [la notation HSL ou aussi appelée « Teinte saturation luminosité »](https://fr.wikipedia.org/wiki/Teinte_saturation_luminosit%C3%A9) (NDT : HSL signifie _Hue Saturation Lightness_ en anglais). Sur le Web, les couleurs HSL sont représentées grâce à la notation fonctionnelle `hsl()` (qui fonctionne de façon analogue à la fonction `rgb()`).
+D'autres personnes préfèrent manipuler [la notation HSL ou aussi appelée « Teinte saturation luminosité »](https://fr.wikipedia.org/wiki/Teinte_saturation_luminosité) (NDT : HSL signifie _Hue Saturation Lightness_ en anglais). Sur le Web, les couleurs HSL sont représentées grâce à la notation fonctionnelle `hsl()` (qui fonctionne de façon analogue à la fonction `rgb()`).
 
 Le diagramme qui suit illustre un cylindre de couleur pour le modèle HSL : _Hue_ (la teinte) définit la couleur sur un axe radial qui parcourt les couleurs du spectre visible. La saturation est un pourcentage de la teinte entre un gris total et la couleur de la teinte vive. Enfin, la luminosité permet d'avoir des couleurs plus sombres (noir pour une luminosité nulle ou blanc pour une luminosité maximale). Cette image a été créée par [SharkD](http://commons.wikimedia.org/wiki/User:SharkD) sur [Wikipédia](https://www.wikipedia.org/) et est distribuée avec la licence [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0).
 
@@ -147,9 +135,9 @@ Ensuite, la saturation (**S**) indique la force de la teinte dans la couleur. En
 
 On peut faire une analogie avec la conception d'une couleur pour une peinture :
 
-1.  On commence avec une peinture de base qui possède l'intensité la plus forte pour une couleur donnée (par exemple, le bleu le plus intense qui puisse être affiché) : c'est la teinte (_hue_) (**H**). En CSS, c'est un angle qui détermine la couleur parmi une roue de couleurs.
-2.  Ensuite, on choisit une peinture avec un niveau de gris qui la force de la couleur. Est-ce qu'on veut qu'elle soit claire ou sombre, voire complètement noire ? C'est la luminosité (**L**). En CSS, c'est un pourcentage, 0% indiquant une couleur noire et 100% une couleur blanche.
-3.  Enfin, avec ces deux peintures, on décide de la proportion de chacune pour le mélange final : c'est la saturation (**S**). Plus cette valeur est élevée, plus on utilise la couleur de base, plus cette valeur est faible et plus on utilise la peinture grise.
+1. On commence avec une peinture de base qui possède l'intensité la plus forte pour une couleur donnée (par exemple, le bleu le plus intense qui puisse être affiché) : c'est la teinte (_hue_) (**H**). En CSS, c'est un angle qui détermine la couleur parmi une roue de couleurs.
+2. Ensuite, on choisit une peinture avec un niveau de gris qui la force de la couleur. Est-ce qu'on veut qu'elle soit claire ou sombre, voire complètement noire ? C'est la luminosité (**L**). En CSS, c'est un pourcentage, 0% indiquant une couleur noire et 100% une couleur blanche.
+3. Enfin, avec ces deux peintures, on décide de la proportion de chacune pour le mélange final : c'est la saturation (**S**). Plus cette valeur est élevée, plus on utilise la couleur de base, plus cette valeur est faible et plus on utilise la peinture grise.
 
 Il est également possible d'ajouter un canal alpha afin d'avoir une couleur partiellement (ou totalement) transparente.
 
@@ -160,14 +148,19 @@ Voici quelques exemples utilisant la notation HSL :
 ```css hidden
 table {
   border: 1px solid black;
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border-spacing: 0;
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
   text-align: left;
 }
 
@@ -236,14 +229,10 @@ Voici le fragment de code HTML utilisé pour cet exemple :
 ```html
 <div class="conteneur">
   <div class="boite boiteGauche">
-    <p>
-      Voici la première boîte.
-    </p>
+    <p>Voici la première boîte.</p>
   </div>
   <div class="boite boiteDroite">
-    <p>
-      Voici la seconde boîte.
-    </p>
+    <p>Voici la seconde boîte.</p>
   </div>
 </div>
 ```
@@ -278,7 +267,10 @@ Les deux boîtes colorées possèdent un certain nombre de propriétés communes
   height: 100px;
   margin: 0;
   padding: 4px 6px;
-  font: 28px "Marker Felt", "Zapfino", cursive;
+  font:
+    28px "Marker Felt",
+    "Zapfino",
+    cursive;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -341,7 +333,7 @@ Voici le fragment HTML qui permet de créer une boîte qui contient un sélecteu
 ```html
 <div id="box">
   <label for="colorPicker">Couleur de la bordure :</label>
-  <input type="color" value="#8888ff" id="colorPicker">
+  <input type="color" value="#8888ff" id="colorPicker" />
   <p id="output"></p>
 </div>
 ```
@@ -356,7 +348,11 @@ La feuille CSS détermine la taille de la boîte et une mise en forme simple. La
   height: 200px;
   border: 2px solid rgb(245, 220, 225);
   padding: 4px 6px;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif"
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    "sans-serif";
 }
 ```
 
@@ -371,13 +367,21 @@ let output = document.getElementById("output");
 
 box.style.borderColor = colorPicker.value;
 
-colorPicker.addEventListener("input", function(event) {
-  box.style.borderColor = event.target.value;
-}, false);
+colorPicker.addEventListener(
+  "input",
+  function (event) {
+    box.style.borderColor = event.target.value;
+  },
+  false,
+);
 
-colorPicker.addEventListener("change", function(event) {
-  output.innerText = "Couleur choisie : " + colorPicker.value;
-}, false);
+colorPicker.addEventListener(
+  "change",
+  function (event) {
+    output.innerText = "Couleur choisie : " + colorPicker.value;
+  },
+  false,
+);
 ```
 
 L'évènement [`input`](/fr/docs/Web/API/HTMLElement/input_event) est envoyé chaque fois que la valeur de l'élément change, c'est-à-dire chaque fois que l'utilisateur ajuste la couleur via le sélecteur. Pour chacun de ces évènements, on modifie la couleur de la bordure afin qu'elle corresponde à celle du sélecteur.

@@ -1,14 +1,8 @@
 ---
 title: performance.getEntriesByName()
 slug: Web/API/Performance/getEntriesByName
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - ウェブパフォーマンス
-browser-compat: api.Performance.getEntriesByName
-translation_of: Web/API/Performance/getEntriesByName
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`getEntriesByName()`** メソッドは、指定された*名前*と*種別*の {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。リストのメンバー（*エントリー*）は、明示的な時点でパフォーマンス*マーク*または*メジャー*を作成することで（たとえば {{domxref("Performance.mark","mark()")}} メソッドを呼び出すことで）作成できます。
@@ -27,7 +21,6 @@ entries = window.performance.getEntriesByName(name, type);
   - : 取得するエントリーの名前
 - type {{optional_inline}}
   - : "`mark`" など、取得するエントリーの種類。有効なエントリー種別の一覧は {{domxref("PerformanceEntry.entryType")}} にあります。
-</dl>
 
 ### 返値
 

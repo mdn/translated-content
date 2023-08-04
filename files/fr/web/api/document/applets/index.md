@@ -1,20 +1,24 @@
 ---
 title: Document.applets
 slug: Web/API/Document/applets
-translation_of: Web/API/Document/applets
 ---
+
 {{ ApiRef() }}
 
 `applets` retourne une liste ordonnée des applets contenus dans un document.
 
 ### Syntaxe
 
-    nodeList = document.applets
+```js
+nodeList = document.applets;
+```
 
 ### Exemple
 
-    // ( Si vous savez que le second applet est celui que vous voulez )
-    my_java_app = document.applets[1];
+```js
+// ( Si vous savez que le second applet est celui que vous voulez )
+my_java_app = document.applets[1];
+```
 
 ### Spécification
 

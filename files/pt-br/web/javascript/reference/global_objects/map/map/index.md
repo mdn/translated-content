@@ -1,17 +1,10 @@
 ---
 title: Map() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
-tags:
-  - Constructor
-  - JavaScript
-  - Map
-  - Reference
-  - Polyfill
-browser-compat: javascript.builtins.Map.Map
 ---
 {{JSRef}}
 
-O **construtor `Map()`** cria objetos {{jsxref("Map")}}.  
+O **construtor `Map()`** cria objetos {{jsxref("Map")}}.
 
 ## Sintaxe
 
@@ -24,7 +17,7 @@ new Map(iterable)
 
 - `iterable` {{optional_inline}}
   - : Um {{jsxref("Array")}} ou outro
-    objeto [iterável](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols) 
+    objeto [iterável](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)
     dos quais os elementos são pares chave-valor. (Por exemplo, arrays com dois elementos como `[[ 1, 'one' ],[ 2, 'two' ]]`.).
     Cada par chave-valor é adicionado ao novo `Map`.
 

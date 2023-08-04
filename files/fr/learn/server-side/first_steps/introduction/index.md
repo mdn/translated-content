@@ -1,16 +1,8 @@
 ---
 title: Présentation du côté serveur
 slug: Learn/Server-side/First_steps/Introduction
-tags:
-  - Apprendre
-  - Débutant
-  - Guide
-  - Intro
-  - Programmation côté serveur
-  - Serveur
-translation_of: Learn/Server-side/First_steps/Introduction
-original_slug: Learn/Server-side/Premiers_pas/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 
 Bienvenue au cours pour débutant de MDN sur la programmation côté serveur. Dans ce premier article, nous allons regarder la programmation côté serveur sans rentrer dans les détails techniques, en répondant aux questions telles que "qu'est-ce que c'est?", "quelle est la différence avec la programmation côté client?", et "pourquoi est-ce utile?". Après avoir lu cet article vous comprendrez commment la programmation côté serveur donne toute leur puissance aux sites web.
@@ -46,7 +38,7 @@ Dans le monde moderne du développement web, apprendre le développement côté 
 
 Les navigateurs web communiquent avec les [serveurs web](/fr/Apprendre/Qu_est-ce_qu_un_serveur_web) en utilisant le protocole {{glossary("HTTP")}} (**H**yper**T**ext **T**ransfer **P**rotocol). Quand vous cliquez sur un lien dans une page web, envoyez un formulaire, ou encore lancez une recherche, une **requête HTTP** est envoyée du navigateur au serveur cible.
 
-Une requête inclut _une URL_ pour identifier la ressource demandée, _une méthode_ pour définir l'action désirée (comme GET pour obtenir, DELETE pour supprimer ou POST pour publier) et peut également inclure des informations supplémentaires encodées dans _les paramètres_ de l'URL (des paires clés/valeurs envoyées via une chaîne de recherche — [query string](https://en.wikipedia.org/wiki/Query_string) en anglais), les données POST (données envoyées par la [méthode HTTP POST](/fr/docs/Web/HTTP/M%C3%A9thode/POST)), ou les {{glossary("Cookie", "cookies associés")}}.
+Une requête inclut _une URL_ pour identifier la ressource demandée, _une méthode_ pour définir l'action désirée (comme GET pour obtenir, DELETE pour supprimer ou POST pour publier) et peut également inclure des informations supplémentaires encodées dans _les paramètres_ de l'URL (des paires clés/valeurs envoyées via une chaîne de recherche — [query string](https://en.wikipedia.org/wiki/Query_string) en anglais), les données POST (données envoyées par la [méthode HTTP POST](/fr/docs/Web/HTTP/Méthode/POST)), ou les {{glossary("Cookie", "cookies associés")}}.
 
 Les serveurs web attendent des requêtes du client, les traitent quand elles arrivent, et répondent au navigateur web avec une **réponse HTTP**. La réponse contient _un statut_ qui indique si la requête a pu être traitée avec succès ou non (exemple "HTTP/1.1 200 OK" pour indiquer le succès).
 
@@ -56,7 +48,7 @@ Le corps de la réponse, si la requête réussit, contient alors la ressource de
 
 Le diagramme ci-dessous montre l'architecture d'un serveur web basique pour un _site statique_ (un site statique est un site qui renvoie du contenu codé en dur, c'est à dire le contenu d'un fichier, quand une ressource donnée est demandée). Quand un utilisateur veut naviguer sur une page, le navigateur envoie une requête HTTP "GET" spécifiant son URL.
 
-Le serveur récupère le document demandé du système de fichiers et retourne une réponse HTTP contenant le document et le [statut de la réponse](/fr/docs/Web/HTTP/Status#R%C3%A9ponses_de_succ%C3%A8s) (habituellement, 200 OK). Si le fichier ne peut pas être recupéré pour une raison x ou y, le statut d'erreur est retourné (voir [réponses d'erreur client](/fr/docs/Web/HTTP/Status#R%C3%A9ponses_d'erreur_c%C3%B4t%C3%A9_client) et [réponse d'erreur serveur](/fr/docs/Web/HTTP/Status#R%C3%A9ponses_d'erreur_c%C3%B4t%C3%A9_serveur)).
+Le serveur récupère le document demandé du système de fichiers et retourne une réponse HTTP contenant le document et le [statut de la réponse](/fr/docs/Web/HTTP/Status#Réponses_de_succès) (habituellement, 200 OK). Si le fichier ne peut pas être recupéré pour une raison x ou y, le statut d'erreur est retourné (voir [réponses d'erreur client](/fr/docs/Web/HTTP/Status#Réponses_d'erreur_côté_client) et [réponse d'erreur serveur](/fr/docs/Web/HTTP/Status#Réponses_d'erreur_côté_serveur)).
 
 ![A simplified diagram of a static web server.](Basic%20Static%20App%20Server.png)
 
@@ -88,7 +80,7 @@ Le code exécuté par le navigateur est connu sous le nom de **code côté clien
 
 Le code client est écrit en [HTML](/fr/Apprendre/HTML), [CSS](/fr/Apprendre/CSS), et [JavaScript](/fr/Apprendre/JavaScript) — il est exécuté dans un navigateur web et a peu ou pas accès au système d'exploitation de l'utilisateur (inclut un accès limité au système de fichiers).
 
-Les développeurs web ne peuvent pas contrôler quel navigateur est utilisé par l'utilisateur pour voir le site web  — or les navigateurs fournissent des niveaux de compatibilité inconsistants quant aux fonctionnalités du code côté client, et une partie du challenge de la programmation côté client consiste à gérer les différences de support des navigateurs.
+Les développeurs web ne peuvent pas contrôler quel navigateur est utilisé par l'utilisateur pour voir le site web — or les navigateurs fournissent des niveaux de compatibilité inconsistants quant aux fonctionnalités du code côté client, et une partie du challenge de la programmation côté client consiste à gérer les différences de support des navigateurs.
 
 Le code côté serveur peut être écrit dans nombre de langages de programmation — les langages les plus populaires pour la programmation web côté serveur sont en autres PHP, Python, Ruby, C#, et NodeJS(JavaScript). Le code côté serveur a plein accès au système d'exploitation du serveur et le développeur est libre de choisir le langage (et la version) qu'il veut utiliser.
 
@@ -106,7 +98,7 @@ La programmation côté serveur est très utile parce qu'elle nous permet de dé
 
 Des compagnies comme Amazon utilisent la programmation côté serveur pour construire la recherche de produits, faire des suggestions de produit ciblées sur les préférences du client et ses habitudes d'achat, simplifier les achats, etc.
 
-Les banques l'utilisent pour stocker les informations du compte ainsi que faire des transactions et n'autoriser à les consulter que les utilisateurs reconnus. D'autres services comme Facebook, Twitter, Instagram, et Wikipedia utilisent la programmation côté serveur pour mettre en avant, partager et contrôler l'accès au contenu.
+Les banques l'utilisent pour stocker les informations du compte ainsi que faire des transactions et n'autoriser à les consulter que les utilisateurs reconnus. D'autres services comme Facebook, Twitter, Instagram, et Wikipédia utilisent la programmation côté serveur pour mettre en avant, partager et contrôler l'accès au contenu.
 
 Les utilisations les plus courantes et les plus bénéfiques de la programmation côté serveur sont listées ci-dessous. Vous verrez qu'il y a quelques recoupements :
 
@@ -122,11 +114,11 @@ Comme les informations se trouvent dans une base de données, elles peuvent éga
 
 > **Note :** Votre imagination n'a pas à travailler dur pour voir les bénéfices du code côté serveur pour le stockage et distribution de l'information:
 >
-> 1.  Allez sur [Amazon](https://www.amazon.com) ou tout autre site e-commerce.
-> 2.  Cherchez un certain nombre de mot-clés et remarquez que la structure de la page de change pas, même si les résultats oui.
-> 3.  Ouvrez deux ou trois produits. Remarquez que la structure et la disposition de la page sont identiques, mais que le contenu pour les différents produits a été extrait de la base de données.
+> 1. Allez sur [Amazon](https://www.amazon.com) ou tout autre site e-commerce.
+> 2. Cherchez un certain nombre de mot-clés et remarquez que la structure de la page de change pas, même si les résultats oui.
+> 3. Ouvrez deux ou trois produits. Remarquez que la structure et la disposition de la page sont identiques, mais que le contenu pour les différents produits a été extrait de la base de données.
 >
-> Pour un terme de recherche courant  ("poisson", disons) vous pouvez voir littéralement des millions de valeurs retournées. Utiliser une base de données permet à ces données d'être stockées et partagées efficacement, et permet de contrôler la présentation de l'information à partir d'un seul endroit.
+> Pour un terme de recherche courant ("poisson", disons) vous pouvez voir littéralement des millions de valeurs retournées. Utiliser une base de données permet à ces données d'être stockées et partagées efficacement, et permet de contrôler la présentation de l'information à partir d'un seul endroit.
 
 ### Expérience utilisateur personnalisée
 
@@ -138,9 +130,9 @@ Une analyse plus approfondie des habitudes des utilisateurs peut être utilisée
 >
 > Les résultats de recherche Google sont optimisés en fonction des recherches précédentes.
 >
-> 1.  Allez sur [Google](https:\\google.com).
-> 2.  Recherchez "football".
-> 3.  Maintenant tapez "favoris" dans la barre de recherche et regardez les prédictions de recherche de l'autocomplete.
+> 1. Allez sur [Google](https://www.google.com).
+> 2. Recherchez "football".
+> 3. Maintenant tapez "favoris" dans la barre de recherche et regardez les prédictions de recherche de l'autocomplete.
 >
 > Coïncidence ? Nada!
 
@@ -150,7 +142,7 @@ La programmation côté serveur permet aux sites de restreindre l'accès aux uti
 
 Quelques exemples du monde réel incluent :
 
-- Les réseaux sociaux comme Facebook permettent aux utilisateurs de contrôler entièrement leurs propres données, mais permettent seulement à leurs amis de les voir ou des les commenter. L'utilisateur détermine qui peut voir ses données, et par extension, dans le flux de qui elles apparaissent —  l'autorisation est une partie centrale de l'expérience utilisateur !
+- Les réseaux sociaux comme Facebook permettent aux utilisateurs de contrôler entièrement leurs propres données, mais permettent seulement à leurs amis de les voir ou des les commenter. L'utilisateur détermine qui peut voir ses données, et par extension, dans le flux de qui elles apparaissent — l'autorisation est une partie centrale de l'expérience utilisateur !
 - Le site sur lequel vous êtes en ce moment même contrôle l'accès au contenu : les articles sont visibles à tout le monde, mais seuls les utilisateurs identifiés peuvent éditer le contenu. Essayez de cliquer sur le bouton **Modifier** en haut de cette page — si vous êtes identifié, vous verrez la vue d'édition ; sinon, vous serez redirigé vers la page d'inscription.
 
 > **Note :** Il existe de nombreux autres exemples où l'accès au contenu est contrôlé. Par exemple, que voyez-vous si vous allez sur le site en ligne de votre banque ? Connectez-vous à votre compte — quelles autres informations pouvez-vous voir et modifier ? Quelles informations pouvez-vous voir que seule la banque peut changer ?
@@ -195,13 +187,6 @@ Vous devez également comprendre que c'est utile pour créer des sites web qui d
 
 Finalement, vous devez comprendre que le code côté serveur peut être écrit dans de nombreux langages de programmation et que l'on peut utiliser des frameworks web pour rendre ce processus plus facile.
 
-Dans un futur article,  nous vous aiderons à choisir le framework le plus adapté pour la création d'un premier site. Ensuite, nous vous présenterons les principales interactions client-serveur plus en détails.
+Dans un futur article, nous vous aiderons à choisir le framework le plus adapté pour la création d'un premier site. Ensuite, nous vous présenterons les principales interactions client-serveur plus en détails.
 
 {{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
-
-## Dans ce module
-
-- [Introduction au côté serveur](/fr/docs/Learn/Server-side/First_steps/Introduction)
-- [Vue d'ensemble Client-Serveur](/fr/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Frameworks web côté serveur](/fr/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [La sécurité d'un site web](/fr/docs/Learn/Server-side/First_steps/Website_security)

@@ -1,15 +1,17 @@
 ---
 title: DOMTokenList.contains()
 slug: Web/API/DOMTokenList/contains
-translation_of: Web/API/DOMTokenList/contains
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`contains()`** de l'interface {{domxref("DOMTokenList")}} renvoie un {{domxref("Boolean")}} (_booléen_) — `true` (_vrai_) si la liste sous-jacente contient le symbole donné, sinon `false` (_faux_).
 
 ## Syntaxe
 
-    tokenList.contains(token);
+```js
+tokenList.contains(token);
+```
 
 ### Paramètres
 
@@ -36,10 +38,10 @@ Maintenant, le JavaScript :
 var span = document.querySelector("span");
 var classes = span.classList;
 var result = classes.contains("c");
-if(result) {
+if (result) {
   span.textContent = "The classList contains 'c'";
 } else {
-   span.textContent = "The classList does not contain 'c'";
+  span.textContent = "The classList does not contain 'c'";
 }
 ```
 
@@ -49,10 +51,8 @@ La sortie ressemble à ceci :
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#dom-domtokenlist-contains','contains()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.contains")}}
+{{Compat}}

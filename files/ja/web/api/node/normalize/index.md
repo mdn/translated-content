@@ -1,12 +1,10 @@
 ---
-title: Node.normalize()
+title: "Node: normalize() メソッド"
 slug: Web/API/Node/normalize
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.normalize
-translation_of: Web/API/Node/normalize
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
+
 {{APIRef("DOM")}}
 
 **`normalize()`** は {{domxref("Node")}} インターフェイスのメソッドで、指定されたノードとその下のツリーを*正規化された*形にします。
@@ -14,8 +12,8 @@ translation_of: Web/API/Node/normalize
 
 ## 構文
 
-```js
-normalize();
+```js-nolint
+normalize()
 ```
 
 ### 引数
@@ -33,15 +31,15 @@ normalize();
 ```
 
 ```js
-let wrapper = document.createElement("div");
+const wrapper = document.createElement("div");
 
-wrapper.appendChild( document.createTextNode("Part 1 ") );
-wrapper.appendChild( document.createTextNode("Part 2 ") );
+wrapper.appendChild(document.createTextNode("Part 1 "));
+wrapper.appendChild(document.createTextNode("Part 2 "));
 
 let node = wrapper.firstChild;
 let result = "正規化前:<br/>";
 while (node) {
-  result += " " + node.nodeName + ": " + node.nodeValue + "<br/>";
+  result += ` ${node.nodeName}: ${node.nodeValue}<br/>`;
   node = node.nextSibling;
 }
 
@@ -50,7 +48,7 @@ wrapper.normalize();
 node = wrapper.firstChild;
 result += "<br/><br/>正規化後:<br/>";
 while (node) {
-  result += " " + node.nodeName + ": " + node.nodeValue + "<br/>";
+  result += ` ${node.nodeName}: ${node.nodeValue}<br/>`;
   node = node.nextSibling;
 }
 

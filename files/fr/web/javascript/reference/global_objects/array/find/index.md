@@ -1,17 +1,8 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/find
 ---
+
 {{JSRef}}
 
 La méthode **`find()`** renvoie la **valeur** du **premier élément trouvé** dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur {{jsxref("undefined")}} est renvoyée.
@@ -22,7 +13,9 @@ Voir aussi la méthode {{jsxref("Array.findIndex", "findIndex()")}} qui renvoie 
 
 ## Syntaxe
 
-    arr.find(callback(element[, index[, tableau]])[, thisArg])
+```js
+arr.find(callback(element[, index[, tableau]])[, thisArg])
+```
 
 ### Paramètres
 
@@ -62,13 +55,13 @@ L'intervalle des éléments inspectés par `find` est défini avant la première
 
 ```js
 const inventaire = [
-  {nom: 'pommes', quantité: 2},
-  {nom: 'bananes', quantité: 0},
-  {nom: 'cerises', quantité: 5}
+  { nom: "pommes", quantité: 2 },
+  { nom: "bananes", quantité: 0 },
+  { nom: "cerises", quantité: 5 },
 ];
 
 function estCerises(fruit) {
-  return fruit.nom === 'cerises';
+  return fruit.nom === "cerises";
 }
 
 console.log(inventaire.find(estCerises));
@@ -79,12 +72,12 @@ console.log(inventaire.find(estCerises));
 
 ```js
 const inventaire = [
-                     {nom: 'pommes', quantité: 2},
-                     {nom: 'bananes', quantité: 0},
-                     {nom: 'cerises', quantité: 5}
-                   ];
+  { nom: "pommes", quantité: 2 },
+  { nom: "bananes", quantité: 0 },
+  { nom: "cerises", quantité: 5 },
+];
 
-const resultat = inventaire.find( fruit => fruit.nom === 'cerises');
+const resultat = inventaire.find((fruit) => fruit.nom === "cerises");
 console.log(resultat);
 // { nom: 'cerises', quantité: 5}
 ```
@@ -95,27 +88,24 @@ Dans l'exemple suivant, on cherche un nombre premier parmi les éléments d'un t
 
 ```js
 function estPremier(element, index, array) {
-    let début = 2;
-    while (début <= Math.sqrt(element)) {
-        if (element % début ++ < 1) return false;
-    }
-    return (element > 1);
+  let début = 2;
+  while (début <= Math.sqrt(element)) {
+    if (element % début++ < 1) return false;
+  }
+  return element > 1;
 }
 
-console.log( [4, 6, 8, 12].find(estPremier) ); // undefined, rien trouvé
-console.log( [4, 5, 8, 12].find(estPremier) ); // 5
+console.log([4, 6, 8, 12].find(estPremier)); // undefined, rien trouvé
+console.log([4, 5, 8, 12].find(estPremier)); // 5
 ```
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires        |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype.find', 'Array.prototype.find')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-array.prototype.find', 'Array.prototype.find')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.find")}}
+{{Compat}}
 
 ## Voir aussi
 

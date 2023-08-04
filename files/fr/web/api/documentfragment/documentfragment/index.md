@@ -1,22 +1,17 @@
 ---
 title: DocumentFragment()
 slug: Web/API/DocumentFragment/DocumentFragment
-tags:
-  - API
-  - Constructeur
-  - DOM
-  - Document
-  - Elements
-  - Fragments
-translation_of: Web/API/DocumentFragment/DocumentFragment
 ---
+
 {{ApiRef("DOM")}}{{seeCompatTable}}
 
-Le constructeur **`DocumentFragment()`** renvoie un nouvel objet  {{domxref("DocumentFragment")}} créé vide.
+Le constructeur **`DocumentFragment()`** renvoie un nouvel objet {{domxref("DocumentFragment")}} créé vide.
 
 ## Syntaxe
 
-    fragment = new DocumentFragment()
+```js
+fragment = new DocumentFragment();
+```
 
 ## Exemple
 
@@ -24,15 +19,13 @@ Le constructeur **`DocumentFragment()`** renvoie un nouvel objet  {{domxref("Doc
 fragment = new DocumentFragment();
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-documentfragment', 'DocumentFragment.DocumentFragment()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DocumentFragment.DocumentFragment")}}
+{{Compat}}
 
 ## Voir aussi
 

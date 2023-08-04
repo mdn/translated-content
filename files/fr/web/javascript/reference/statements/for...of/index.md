@@ -1,14 +1,8 @@
 ---
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
-tags:
-  - ECMAScript 2015
-  - Instruction
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Statements/for...of
-original_slug: Web/JavaScript/Reference/Instructions/for...of
 ---
+
 {{jsSidebar("Statements")}}
 
 L'**instruction `for...of`** permet de créer une boucle {{jsxref("Array")}} qui parcourt un {{jsxref("Les_protocoles_iteration","objet itérable","#Le_protocole_.C2.AB_it.C3.A9rable_.C2.BB",1)}} (ce qui inclut les objets {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, l'objet {{jsxref("Fonctions/arguments","arguments")}}, etc.) et qui permet d'exécuter une ou plusieurs instructions pour la valeur de chaque propriété.
@@ -17,8 +11,11 @@ L'**instruction `for...of`** permet de créer une boucle {{jsxref("Array")}} qui
 
 ## Syntaxe
 
-    for (variable of iterable)
-      instruction
+```js
+for (variable of iterable) {
+  instruction;
+}
+```
 
 - `variable`
   - : À chaque itération, la valeur d'une propriété différente est affectée à `variable` (cette variable peut être déclarée avec `const`, `let` ou `var`).
@@ -58,7 +55,7 @@ for (const valeur of tableauItérable) {
 ### Parcourir une chaîne de caractères avec `for...of`
 
 ```js
-let iterable = 'pixel';
+let iterable = "pixel";
 
 for (let valeur of iterable) {
   console.log(valeur);
@@ -85,7 +82,11 @@ for (let valeur of iterable) {
 ### Parcourir une {{jsxref("Map")}}
 
 ```js
-let iterable = new Map([['a', 1], ['b', 2], ['c', 3]]);
+let iterable = new Map([
+  ["a", 1],
+  ["b", 2],
+  ["c", 3],
+]);
 
 for (let element of iterable) {
   console.log(element);
@@ -112,14 +113,14 @@ arr.toto = "coucou";
 
 arr.forEach(function (element, index) {
   console.log(element); // affiche "3", "5", "7"
-  console.log(index);  // affiche "0", "1", "2"
+  console.log(index); // affiche "0", "1", "2"
 });
 
 // ou avec Object.keys()
 
 Object.keys(arr).forEach(function (element, index) {
   console.log(arr[element]); // affiche "3", "5", "7", "coucou"
-  console.log(arr[index]);  // affiche "3", "5", "7", undefined
+  console.log(arr[index]); // affiche "3", "5", "7", undefined
 });
 ```
 
@@ -128,8 +129,8 @@ Object.keys(arr).forEach(function (element, index) {
 Il est possible de parcourir l'objet {{jsxref("Fonctions/arguments", "arguments")}} afin d'examiner l'ensemble des paramètres passés à la fonction :
 
 ```js
-(function() {
-  for (let argument of arguments){
+(function () {
+  for (let argument of arguments) {
     console.log(argument);
   }
 })(1, 2, 3);
@@ -162,7 +163,7 @@ function* toto() {
   yield 1;
   yield 2;
   yield 3;
-};
+}
 
 for (let o of toto()) {
   console.log(o);
@@ -175,7 +176,8 @@ for (let o of toto()) {
 Grâce à cette instruction, on peut également itérer sur les {{jsxref("Instructions/function*","générateurs","",1)}} :
 
 ```js
-function* fibonacci() { // une fonction génératrice
+function* fibonacci() {
+  // une fonction génératrice
   let [prev, curr] = [0, 1];
   while (true) {
     [prev, curr] = [curr, prev + curr];
@@ -186,7 +188,7 @@ function* fibonacci() { // une fonction génératrice
 for (let n of fibonacci()) {
   console.log(n);
   // on arrête la séquence à 1000
-  if (n >= 1000){
+  if (n >= 1000) {
     break;
   }
 }
@@ -206,9 +208,9 @@ var iterable = {
           return { value: this.i++, done: false };
         }
         return { value: undefined, done: true };
-      }
+      },
     };
-  }
+  },
 };
 
 for (let value of iterable) {
@@ -231,15 +233,15 @@ L'instruction `for...of` permet quant à elle de parcourir les données contenue
 Dans l'exemple qui suit, on illustre la différence de comportement entre une boucle `for...of` et une boucle `for...in` utilisées sur un tableau ({{jsxref("Array")}}).
 
 ```js
-Object.prototype.objCustom = function() {};
-Array.prototype.arrCustom = function() {};
+Object.prototype.objCustom = function () {};
+Array.prototype.arrCustom = function () {};
 
 let iterable = [3, 5, 7];
-iterable.toto = 'coucou';
+iterable.toto = "coucou";
 
 for (let i in iterable) {
   console.log(i); // affiche 0, 1, 2, "toto",
-                  // "arrCustom", "objCustom"
+  // "arrCustom", "objCustom"
 }
 
 for (let i in iterable) {
@@ -258,7 +260,7 @@ Chaque objet héritera de la propriété `objCustom` et chaque objet qui est un 
 ```js
 for (let i in iterable) {
   console.log(i); // affiche 0, 1, 2, "toto",
-                  // "arrCustom" et "objCustom"
+  // "arrCustom" et "objCustom"
 }
 ```
 
@@ -284,10 +286,10 @@ Cette boucle parcourt les valeurs définies comme itérables par [l'objet itéra
 
 ### Attention à ne pas réutiliser les générateurs
 
-Les générateurs ne doivent pas être réutilisés, même lorsque la boucle `for...of` a été interrompue (par exemple lorsque {{jsxref("Instructions/break","break")}} est utilisé). Lorsqu'on quitte une boucle, le générateur est clôturé et si on l'utilise à nouveau, il ne fournira aucun résultat. Firefox n'a pas encore implémenté ce comportement standard (cf. {{bug("1147371")}}).
+Les générateurs ne doivent pas être réutilisés, même lorsque la boucle `for...of` a été interrompue (par exemple lorsque {{jsxref("Instructions/break","break")}} est utilisé). Lorsqu'on quitte une boucle, le générateur est clôturé et si on l'utilise à nouveau, il ne fournira aucun résultat. Firefox n'a pas encore implémenté ce comportement standard (cf. [bug Firefox 1147371](https://bugzil.la/1147371)).
 
 ```js
-var gen = (function *(){
+var gen = (function* () {
   yield 1;
   yield 2;
   yield 3;
@@ -298,21 +300,18 @@ for (let o of gen) {
 }
 
 // Le générateur ne doit pas être réutilisé !
-for (let o of gen){
+for (let o of gen) {
   console.log(o); // Ceci n'est jamais exécuté
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-for-in-and-for-of-statements', 'instruction for...of')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'instruction for...of')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.for_of")}}
+{{Compat}}
 
 ## Voir aussi
 

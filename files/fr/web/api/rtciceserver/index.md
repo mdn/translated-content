@@ -1,8 +1,8 @@
 ---
 title: RTCIceServer
 slug: Web/API/RTCIceServer
-translation_of: Web/API/RTCIceServer
 ---
+
 {{APIRef("WebRTC")}}
 
 RTCIceServer définit comment se connecter à un serveur ICE unique (comme un serveur {{Glossary("STUN")}} ou {{Glossary("TURN")}}). Il comprend à la fois l'URL et les éventuelle informations d'identification nécessaires pour se connecter au serveur.
@@ -13,7 +13,7 @@ RTCIceServer définit comment se connecter à un serveur ICE unique (comme un se
   - : Les informations d'identification à utiliser lors de la connexion au serveur. Celles‑ci sont utilisées uniquement si `RTCIceServer` est un serveur TURN.
 - {{domxref("RTCIceServer.credentialType", "credentialType")}} {{optional_inline}}
   - : Si `RTCIceServer` est un serveur TURN, cet attribut spécifie quel type d'information d'identification doit être utilisé lors de la connexion. Ce doit être l'une des valeurs définies par l'énumération {{domxref("RTCIceCredentialType")}}. La valeur par défaut est `password`.
-- {{domxref("RTCIceServer.url", "url")}} {{obsolete_inline}}
+- {{domxref("RTCIceServer.url", "url")}} {{deprecated_inline}}
   - : Cette propriété obsolète est une chaîne spécifiant l'URL d'un serveur ICE unique. **Ne pas utiliser cette propriété; utiliser plutôt {{domxref("RTCIceServer.urls")}}**. Étant donné que de nombreux livres et exemples anciens l'utilisent encore, nous l'incluons pour aider les développeurs à mettre à jour leur code ou donner un sens a des exemples plus anciens.
 - {{domxref("RTCIceServer.urls", "urls")}}
   - : Cette propriété est **obligatoire**, elle peut être soit une seule {{domxref("DOMString")}} ou un tableau de {{domxref("DOMString")}} , spécifiant chacun une URL qui peut être utilisée pour se connecter au serveur.
@@ -30,10 +30,10 @@ RTCIceServer définit comment se connecter à un serveur ICE unique (comme un se
 
 L'enumeration `RTCIceCredentialType` spécifie les valeurs qui peuvent être renvoyés par la propriété credentialType pour définir quel type d'authentification est fournie dans la propriété {{domxref("RTCIceServer.credential")}}. Cela peut être l'une des valeurs ci‑dessous.
 
-| Constante    | Description                                                                                     |
-| ------------ | ----------------------------------------------------------------------------------------------- |
+| Constante    | Description                                                                             |
+| ------------ | --------------------------------------------------------------------------------------- |
 | `"password"` | un mot de passe d'aithentification. Voir {{RFC (5389, "", 10.2)}} pour plus de détails. |
-| `"token"`    | La créance est un jeton d'accès à utiliser avec un système d'authentification tiers.            |
+| `"token"`    | La créance est un jeton d'accès à utiliser avec un système d'authentification tiers.    |
 
 ## Exemple
 
@@ -41,16 +41,16 @@ La configuration ci-dessous établit deux serveurs ICE. Le premier, `stun:stun.s
 
 ```js
 var configuration = {
-  iceServers: [{
-    urls: "stun:stun.services.mozilla.com",
-    username: "louis@mozilla.com",
-    credential: "webrtcdemo"
-  }, {
-    urls: [
-      "stun:stun.example.com",
-      "stun:stun-1.example.com"
-    ]
-   }]
+  iceServers: [
+    {
+      urls: "stun:stun.services.mozilla.com",
+      username: "louis@mozilla.com",
+      credential: "webrtcdemo",
+    },
+    {
+      urls: ["stun:stun.example.com", "stun:stun-1.example.com"],
+    },
+  ],
 };
 
 var pc = new RTCPeerConnection(configuration);
@@ -60,7 +60,7 @@ Une fois l'objet de configuration créé, il est passé dans le constructeur {{d
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.RTCIceServer")}}
+{{Compat}}
 
 ## Voir aussi
 

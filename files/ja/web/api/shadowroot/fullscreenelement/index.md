@@ -1,16 +1,8 @@
 ---
 title: ShadowRoot.fullscreenElement
 slug: Web/API/ShadowRoot/fullscreenElement
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - ShadowRoot
-  - ウェブコンポーネント
-  - シャドウ DOM
-browser-compat: api.ShadowRoot.fullscreenElement
-translation_of: Web/API/ShadowRoot/fullscreenElement
 ---
+
 {{APIRef("Shadow DOM")}}
 
 **`fullscreenElement`** は {{domxref("ShadowRoot")}} インターフェイスの読み取り専用プロパティで、現在全画面モードで表示されているシャドウツリー内の要素を返します。

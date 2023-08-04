@@ -1,18 +1,8 @@
 ---
 title: DataView.prototype.getBigUint64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
-tags:
-  - BigInt
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArrays
-  - getBigUint64
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
-browser-compat: javascript.builtins.DataView.getBigUint64
 ---
+
 {{JSRef}}
 
 **`getBigInt64()`** メソッドは、符号なし 64 ビット整数 (unsigned long long) を {{jsxref("DataView")}} の先頭からのバイト単位のオフセット位置から取得します。

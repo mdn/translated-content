@@ -1,14 +1,8 @@
 ---
 title: L'audio dans les jeux Web
 slug: Games/Techniques/Audio_for_Web_Games
-tags:
-  - API
-  - Audio
-  - Jeux
-  - Web Audio API
-  - audio sprites
-translation_of: Games/Techniques/Audio_for_Web_Games
 ---
+
 {{GamesSidebar}}
 
 L'audio représente une chose essentielle dans n'importe quel jeu vidéo; il apporte de l'information et contribue à l'atmosphère du jeu. La prise en charge de l'audio a évolué de manière rapide mais il reste encore beaucoup de différences de prise en charge entre les navigateurs. Nous avons souvent besoin de décider quelles parties de notre contenu audio est intéressant et laquelle ne l'est pas, et mettre en place une stratégie en conséquence. Cet article fournit un guide détaillé sur l'implémentation de l'audio dans les jeux HTML5, détaillant quels choix technologiques fonctionneront sur le plus grand nombre de navigateurs.
@@ -166,26 +160,34 @@ lt;audio id="myAudio" src="http://jPlayer.org/tmp/countdown.mp3"></audio>
 
 Maintenant, nous avons des boutons avec des heures de début et de fin en quelques secondes. Le fichier MP3 "countdown.mp3" se compose d'un numéro qui est prononcé toutes les 2 secondes, l'idée étant de lire ce numéro lorsque le bouton correspondant est pressé.
 
-Ajoutons du JavaScript pour que ça marche:
+Ajoutons du JavaScript pour que ça marche :
 
 ```js
-var myAudio = document.getElementById('myAudio');
-var buttons = document.getElementsByTagName('button');
+var myAudio = document.getElementById("myAudio");
+var buttons = document.getElementsByTagName("button");
 var stopTime = 0;
 
 for (var i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener('click', function() {
-    myAudio.currentTime = this.getAttribute("data-start");
-    stopTime = this.getAttribute("data-stop");
-    myAudio.play();
-  }, false);
+  buttons[i].addEventListener(
+    "click",
+    function () {
+      myAudio.currentTime = this.getAttribute("data-start");
+      stopTime = this.getAttribute("data-stop");
+      myAudio.play();
+    },
+    false,
+  );
 }
 
-myAudio.addEventListener('timeupdate', function() {
-  if (this.currentTime > stopTime) {
-    this.pause();
-  }
-}, false);
+myAudio.addEventListener(
+  "timeupdate",
+  function () {
+    if (this.currentTime > stopTime) {
+      this.pause();
+    }
+  },
+  false,
+);
 ```
 
 > **Note :** Vous pouvez [essayer notre lecteur de sprite audio](http://jsfiddle.net/59vwaame/) sur JSFiddle.
@@ -248,44 +250,46 @@ var context = new AudioContext();
 
 function playTrack(url) {
   var request = new XMLHttpRequest();
-  request.open('GET', url, true);
-  request.responseType = 'arraybuffer';
+  request.open("GET", url, true);
+  request.responseType = "arraybuffer";
 
   var audiobuffer;
 
   // Decode asynchronously
-  request.onload = function() {
-
+  request.onload = function () {
     if (request.status == 200) {
+      context.decodeAudioData(
+        request.response,
+        function (buffer) {
+          var source = context.createBufferSource();
+          source.buffer = buffer;
+          source.connect(context.destination);
+          console.log("context.currentTime " + context.currentTime);
 
-      context.decodeAudioData(request.response, function(buffer) {
-        var source = context.createBufferSource();
-        source.buffer = buffer;
-        source.connect(context.destination);
-        console.log('context.currentTime ' + context.currentTime);
-
-        if (offset == 0) {
-          source.start();
-          offset = context.currentTime;
-        } else {
-          source.start(0,context.currentTime - offset);
-        }
-
-      }, function(e) {
-        console.log('Error decoding audio data:' + e);
-      });
+          if (offset == 0) {
+            source.start();
+            offset = context.currentTime;
+          } else {
+            source.start(0, context.currentTime - offset);
+          }
+        },
+        function (e) {
+          console.log("Error decoding audio data:" + e);
+        },
+      );
     } else {
-      console.log('Audio didn\'t load successfully; error code:' + request.statusText);
+      console.log(
+        "Audio didn't load successfully; error code:" + request.statusText,
+      );
     }
-  }
+  };
   request.send();
 }
 
-var tracks = document.getElementsByClassName('track');
+var tracks = document.getElementsByClassName("track");
 
 for (var i = 0, len = tracks.length; i < len; i++) {
-  tracks[i].addEventListener('click', function(e){
-
+  tracks[i].addEventListener("click", function (e) {
     playTrack(this.href);
     e.preventDefault();
   });
@@ -298,9 +302,9 @@ Regardons maintenant le code. Nous créons d'abord un nouveau {{domxref ("AudioC
 
 `start()` (anciennement appelé `noteOn ())` commence à lire un élément audio. `start ()` demande trois paramètres (facultatifs) :
 
-1.  when _(quand)_ : le temps absolu pour commencer la lecture .
-2.  where (offset) _(où)_ : la partie de l'audio qui doit commencer à être jouée.
-3.  how long _(combien de temps)_ : la durée pendant laquelle elle doit être jouée.
+1. when _(quand)_ : le temps absolu pour commencer la lecture .
+2. where (offset) _(où)_ : la partie de l'audio qui doit commencer à être jouée.
+3. how long _(combien de temps)_ : la durée pendant laquelle elle doit être jouée.
 
 `stop()` prend un paramètre facultatif - when - qui est le délai avant l'arrêt.
 
@@ -314,7 +318,7 @@ Vous pouvez trouver que l'introduction d'une nouvelle piste sonne plus naturelle
 
 Pour ce faire, avant de jouer la piste que vous voulez synchroniser, vous devez calculer combien de temps cela va durer jusqu'au début de la prochaine unité musicale.
 
-Voici un peu de code qui donne un tempo (le temps en secondes de votre battement / mesure), calcule combien de temps attendre pour jouer la partie suivante  — vous alimentez la valeur initiale de la fonction `start ()` avec le premier paramètre qui prend le temps absolu de début de la lecture. Notez que le deuxième paramètre (où commencer à jouer à partir de la nouvelle piste) est relatif :
+Voici un peu de code qui donne un tempo (le temps en secondes de votre battement / mesure), calcule combien de temps attendre pour jouer la partie suivante — vous alimentez la valeur initiale de la fonction `start ()` avec le premier paramètre qui prend le temps absolu de début de la lecture. Notez que le deuxième paramètre (où commencer à jouer à partir de la nouvelle piste) est relatif :
 
 ```js
 if (offset == 0) {
@@ -324,8 +328,8 @@ if (offset == 0) {
   var relativeTime = context.currentTime - offset;
   var beats = relativeTime / tempo;
   var remainder = beats - Math.floor(beats);
-  var delay = tempo - (remainder*tempo);
-  source.start(context.currentTime+delay, relativeTime+delay);
+  var delay = tempo - remainder * tempo;
+  source.start(context.currentTime + delay, relativeTime + delay);
 }
 ```
 
@@ -349,7 +353,7 @@ Ceci est particulièrement utile dans un environnement tridimensionnel rendu en 
 
 > **Note :** Voir [Web Audio API Spatialization Basics](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) _(Bases de la spacialisation de l'API Web Audio)_ pour plus de détails.
 
-## See Also
+## Voir aussi
 
 - [Web Audio API sur MDN](/fr/docs/Web/API/Web_Audio_API)
 - [`<audio>` sur MDN](/fr/docs/Web/HTML/Element/audio)

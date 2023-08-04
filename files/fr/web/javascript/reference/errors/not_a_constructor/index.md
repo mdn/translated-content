@@ -1,27 +1,24 @@
 ---
 title: 'TypeError: "x" is not a constructor'
 slug: Web/JavaScript/Reference/Errors/Not_a_constructor
-tags:
-  - Erreurs
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Not_a_constructor
-original_slug: Web/JavaScript/Reference/Erreurs/Not_a_constructor
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    TypeError: Object doesn't support this action (Edge)
-    TypeError: "x" is not a constructor
+```
+TypeError: Object doesn't support this action (Edge)
+TypeError: "x" is not a constructor
 
-    TypeError: Math is not a constructor
-    TypeError: JSON is not a constructor
-    TypeError: Symbol is not a constructor
-    TypeError: Reflect is not a constructor
-    TypeError: Intl is not a constructor
-    TypeError: SIMD is not a constructor
-    TypeError: Atomics is not a constructor
+TypeError: Math is not a constructor
+TypeError: JSON is not a constructor
+TypeError: Symbol is not a constructor
+TypeError: Reflect is not a constructor
+TypeError: Intl is not a constructor
+TypeError: SIMD is not a constructor
+TypeError: Atomics is not a constructor
+```
 
 ## Type d'erreur
 
@@ -50,8 +47,8 @@ new Math();
 new Symbol();
 // TypeError: Symbol is not a constructor
 
-function* f() {};
-var obj = new f;
+function* f() {}
+var obj = new f();
 // TypeError: f is not a constructor
 ```
 
@@ -86,7 +83,9 @@ return new Promise.resolve(true);
 ```js
 // Cette formulation fonctionne mais
 // est inutilement longue
-return new Promise((resolve, reject) => { resolve(true); });
+return new Promise((resolve, reject) => {
+  resolve(true);
+});
 
 // On pourra autrement utiliser les
 // méthodes statiques

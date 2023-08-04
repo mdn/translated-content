@@ -1,15 +1,8 @@
 ---
 title: String.prototype.trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/trimEnd
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/trimEnd
 ---
+
 {{JSRef}}
 
 La méthode **`trimEnd()`** permet de retirer les blancs situés à la fin d'une chaîne de caractères. `trimRight()` est un synonyme pour cette méthode.
@@ -18,8 +11,10 @@ La méthode **`trimEnd()`** permet de retirer les blancs situés à la fin d'une
 
 ## Syntaxe
 
-    str.trimEnd();
-    str.trimRight();
+```js
+str.trimEnd();
+str.trimRight();
+```
 
 ### Valeur de retour
 
@@ -39,7 +34,7 @@ String.prototype.trimRight.name === "trimEnd";
 
 ## Exemples
 
-L'exemple qui suit illustre comment afficher la chaîne "   toto":
+L'exemple qui suit illustre comment afficher la chaîne " toto":
 
 ```js
 var str = "   toto  ";
@@ -48,18 +43,16 @@ console.log(str.length); // 9
 
 str = str.trimEnd();
 console.log(str.length); // 7
-console.log(str);        // "   toto"
+console.log(str); // "   toto"
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                                        | État                  | Commentaires        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ------------------- |
-| Proposition pour [`String.prototype.{trimStart,trimEnd}`](https://github.com/tc39/proposal-string-left-right-trim/#stringprototypetrimstart--stringprototypetrimend) | Brouillon de niveau 4 | Attendu pour ES2019 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.trimEnd")}}
+{{Compat}}
 
 ## Voir aussi
 

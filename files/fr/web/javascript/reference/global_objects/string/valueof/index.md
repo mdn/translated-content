@@ -1,15 +1,8 @@
 ---
 title: String.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/valueOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/valueOf
 ---
+
 {{JSRef}}
 
 La méthode **`valueOf()`** renvoie la valeur primitive de l'objet {{jsxref("String")}}.
@@ -18,7 +11,9 @@ La méthode **`valueOf()`** renvoie la valeur primitive de l'objet {{jsxref("Str
 
 ## Syntaxe
 
-    str.valueOf()
+```js
+str.valueOf();
+```
 
 ### Valeur de retour
 
@@ -39,16 +34,11 @@ console.log(x.valueOf()); // affiche "Coucou monde"
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.5.4.3', 'String.prototype.valueOf')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-string.prototype.valueof', 'String.prototype.valueOf')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-string.prototype.valueof', 'String.prototype.valueOf')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.valueOf")}}
+{{Compat}}
 
 ## Voir aussi
 

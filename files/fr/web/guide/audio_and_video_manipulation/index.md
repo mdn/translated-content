@@ -1,15 +1,8 @@
 ---
 title: Manipulation Audio et Vidéo
 slug: Web/Guide/Audio_and_video_manipulation
-tags:
-  - Audio
-  - Canvas
-  - HTML5
-  - Video
-  - Web Audio API
-  - WebGL
-translation_of: Web/Guide/Audio_and_video_manipulation
 ---
+
 La beauté du web est qu'on peut combiner différentes technologies pour en créer de nouvelles. Avoir de l'audio et vidéo nativement dans le navigateur nous donne la possibilité d'utiliser ces flux de données avec d'autres technologies comme {{htmlelement("canvas")}}, [WebGL](/fr/docs/Web/API/WebGL_API) ou [Web Audio API](/fr/docs/Web/API/Web_Audio_API) pour modifier le média — par exemple ajouter des effets de réverbération ou de compression à l'audio, ou encore des filtres noir & blanc/sépia aux vidéos. Cet article fournit une référence pour expliquer ce que vous pouvez faire.
 
 ## Manipulation Vidéo
@@ -22,17 +15,26 @@ La possibilité de lire les valeurs de pixels de chaque image d'une vidéo peut 
 
 La technique générale est comme suit:
 
-1.  Dessiner une image de l'élément {{htmlelement("video")}} sur un élément {{htmlelement("canvas")}} intermédiaire.
-2.  Lire les données de l'élément `<canvas>` et les manipuler.
-3.  Écrire les données manipulées dans le `<canvas>` que l'on veut afficher.
-4.  Marquer une pause et répéter.
+1. Dessiner une image de l'élément {{htmlelement("video")}} sur un élément {{htmlelement("canvas")}} intermédiaire.
+2. Lire les données de l'élément `<canvas>` et les manipuler.
+3. Écrire les données manipulées dans le `<canvas>` que l'on veut afficher.
+4. Marquer une pause et répéter.
 
 On peut configurer notre lecteur vidéo et l'élément `<canvas>` comme ceci:
 
 ```html
-<video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous">
-  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
-  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+<video
+  id="my-video"
+  controls="true"
+  width="480"
+  height="270"
+  crossorigin="anonymous">
+  <source
+    src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    type="video/webm" />
+  <source
+    src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    type="video/mp4" />
 </video>
 
 <canvas id="my-canvas" width="480" height="270"></canvas>
@@ -42,7 +44,7 @@ Et les manipuler comme ceci: (en l'occurence, on affiche une version en noir et 
 
 ```js
 var processor = {
-  timerCallback: function() {
+  timerCallback: function () {
     if (this.video.paused || this.video.ended) {
       return;
     }
@@ -53,26 +55,34 @@ var processor = {
     }, 16); // roughly 60 frames per second
   },
 
-  doLoad: function() {
+  doLoad: function () {
     this.video = document.getElementById("my-video");
     this.c1 = document.getElementById("my-canvas");
     this.ctx1 = this.c1.getContext("2d");
     var self = this;
 
-    this.video.addEventListener("play", function() {
-      self.width = self.video.width;
-      self.height = self.video.height;
-      self.timerCallback();
-    }, false);
+    this.video.addEventListener(
+      "play",
+      function () {
+        self.width = self.video.width;
+        self.height = self.video.height;
+        self.timerCallback();
+      },
+      false,
+    );
   },
 
-  computeFrame: function() {
+  computeFrame: function () {
     this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
     var frame = this.ctx1.getImageData(0, 0, this.width, this.height);
     var l = frame.data.length / 4;
 
     for (var i = 0; i < l; i++) {
-      var grey = (frame.data[i * 4 + 0] + frame.data[i * 4 + 1] + frame.data[i * 4 + 2]) / 3;
+      var grey =
+        (frame.data[i * 4 + 0] +
+          frame.data[i * 4 + 1] +
+          frame.data[i * 4 + 2]) /
+        3;
 
       frame.data[i * 4 + 0] = grey;
       frame.data[i * 4 + 1] = grey;
@@ -81,14 +91,14 @@ var processor = {
     this.ctx1.putImageData(frame, 0, 0);
 
     return;
-  }
+  },
 };
 ```
 
 Une fois que la page est chargée, on peut appeler
 
 ```js
-processor.doLoad()
+processor.doLoad();
 ```
 
 {{EmbedLiveSample("Vidéo_et_Canvas", '100%', 550)}}
@@ -99,7 +109,7 @@ processor.doLoad()
 
 ### Vidéo e WebGL
 
-[WebGL](/en-US/docs/Web/WebGL) est une API puissante qui utilise canvas pour (typiquement) afficher des scènes en trois dimensions. On peut combiner WebGL et l'élément {{htmlelement("video")}} pour créer des textures vidéo, ce qui veut dire que vous pouvez placer une vidéo dans des scènes 3D.
+[WebGL](/fr/docs/Web/WebGL) est une API puissante qui utilise canvas pour (typiquement) afficher des scènes en trois dimensions. On peut combiner WebGL et l'élément {{htmlelement("video")}} pour créer des textures vidéo, ce qui veut dire que vous pouvez placer une vidéo dans des scènes 3D.
 
 Exemple:
 
@@ -114,13 +124,16 @@ On peut ajuster la vitesse de lecture de l'audio et vidéo en utilisant l'attrib
 HTML:
 
 ```html
-<video id="my-video" controls src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"></video>
+<video
+  id="my-video"
+  controls
+  src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"></video>
 ```
 
 JavaScript:
 
 ```js
-var myVideo = document.getElementById('my-video');
+var myVideo = document.getElementById("my-video");
 myVideo.playbackRate = 2;
 ```
 
@@ -128,8 +141,12 @@ myVideo.playbackRate = 2;
 
 ```html hidden
 <video id="my-video" controls="true" width="480" height="270">
-  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
-  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+  <source
+    src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    type="video/webm" />
+  <source
+    src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    type="video/mp4" />
 </video>
 <div class="playable-buttons">
   <input id="edit" type="button" value="Edit" />
@@ -137,30 +154,31 @@ myVideo.playbackRate = 2;
 </div>
 <textarea id="code" class="playable-code">
 var myVideo = document.getElementById('my-video');
-myVideo.playbackRate = 2;</textarea>
+myVideo.playbackRate = 2;</textarea
+>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
 var code = textarea.value;
 
 function setPlaybackRate() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   setPlaybackRate();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', setPlaybackRate);
-window.addEventListener('load', setPlaybackRate);
+textarea.addEventListener("input", setPlaybackRate);
+window.addEventListener("load", setPlaybackRate);
 ```
 
 {{ EmbedLiveSample('Code jouable', 700, 425) }}
@@ -171,7 +189,7 @@ window.addEventListener('load', setPlaybackRate);
 
 ## Manipulation Audio
 
-Laissons `playbackRate` de côté. Pour manipuler l'audio, on utilise typiquement l'[API Web Audio](/en-US/docs/Web/API/Web_Audio_API).
+Laissons `playbackRate` de côté. Pour manipuler l'audio, on utilise typiquement l'[API Web Audio](/fr/docs/Web/API/Web_Audio_API).
 
 ### Sélectionner une source audio
 
@@ -195,9 +213,11 @@ HTML:
 JavaScript:
 
 ```js
-var context     = new AudioContext(),
-    audioSource = context.createMediaElementSource(document.getElementById("my-video")),
-    filter      = context.createBiquadFilter();
+var context = new AudioContext(),
+  audioSource = context.createMediaElementSource(
+    document.getElementById("my-video"),
+  ),
+  filter = context.createBiquadFilter();
 audioSource.connect(filter);
 filter.connect(context.destination);
 
@@ -210,9 +230,18 @@ filter.gain.value = 25;
 #### Code jouable 2
 
 ```html hidden
-<video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous">
-  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
-  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+<video
+  id="my-video"
+  controls="true"
+  width="480"
+  height="270"
+  crossorigin="anonymous">
+  <source
+    src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    type="video/webm" />
+  <source
+    src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    type="video/mp4" />
 </video>
 <div class="playable-buttons">
   <input id="edit" type="button" value="Edit" />
@@ -221,41 +250,44 @@ filter.gain.value = 25;
 <textarea id="code" class="playable-code">
 filter.type = "lowshelf";
 filter.frequency.value = 1000;
-filter.gain.value = 25;</textarea>
+filter.gain.value = 25;</textarea
+>
 ```
 
 ```js hidden
-var context     = new AudioContext(),
-    audioSource = context.createMediaElementSource(document.getElementById("my-video")),
-    filter      = context.createBiquadFilter();
+var context = new AudioContext(),
+  audioSource = context.createMediaElementSource(
+    document.getElementById("my-video"),
+  ),
+  filter = context.createBiquadFilter();
 audioSource.connect(filter);
 filter.connect(context.destination);
 
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
 var code = textarea.value;
 
 function setFilter() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   setFilter();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', setFilter);
-window.addEventListener('load', setFilter);
+textarea.addEventListener("input", setFilter);
+window.addEventListener("load", setFilter);
 ```
 
 {{ EmbedLiveSample('Code_jouable_2', 700, 425) }}
 
-> **Note :** À moins que [CORS](/en-US/docs/Web/HTTP/Access_control_CORS) ne soit activé, vous devrez pour éviter les problèmes de sécurité placer la vidéo sur le même domaine que votre code.
+> **Note :** À moins que [CORS](/fr/docs/Web/HTTP/Access_control_CORS) ne soit activé, vous devrez pour éviter les problèmes de sécurité placer la vidéo sur le même domaine que votre code.
 
 Les filtres pouvant être appliqués sont:
 
@@ -333,7 +365,7 @@ Des bibliothèques existent actuellement pour les formats suivants:
 - [HTML5 playbackRate expliqué](/fr/Apps/Build/Manipulating_media/HTML5_playbackRate_explained)
 - [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Les bases de la spatialisation audio Web](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-- [Utilisation des images vidéo comme texture WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animation_de_textures_en_WebGL#Utilisation_des_images_vid%C3%A9o_comme_texture) (Vous pouvez également utiliser la bilbiothèque WebGL [THREE.js](http://threejs.org) (ou autres) pour [obtenir cet effet](http://stemkoski.github.io/Three.js/Video.html))
+- [Utilisation des images vidéo comme texture WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animation_de_textures_en_WebGL#Utilisation_des_images_vidéo_comme_texture) (Vous pouvez également utiliser la bilbiothèque WebGL [THREE.js](http://threejs.org) (ou autres) pour [obtenir cet effet](http://stemkoski.github.io/Three.js/Video.html))
 - [Animation de Textures en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animation_de_textures_en_WebGL)
 - [Developing Game Audio with the Web Audio API (Room effects and filters)](http://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room)
 

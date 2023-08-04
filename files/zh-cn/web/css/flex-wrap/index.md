@@ -1,14 +1,8 @@
 ---
 title: flex-wrap
 slug: Web/CSS/flex-wrap
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/flex-wrap
 ---
+
 {{CSSRef}}
 
 ## 概述
@@ -17,7 +11,7 @@ translation_of: Web/CSS/flex-wrap
 
 {{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
 
-参考 [flex 布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) 查看更多的属性和信息。
+参考 [flex 布局的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) 查看更多的属性和信息。
 
 ## 语法
 
@@ -140,5 +134,5 @@ flex-wrap: unset;
 
 ## 参见
 
-- CSS 弹性盒子指南：[flex 布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
-- CSS 弹性盒子指南：[掌握弹性物件的包装](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
+- CSS 弹性盒子指南：[flex 布局的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- CSS 弹性盒子指南：[掌握弹性物件的包装](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)

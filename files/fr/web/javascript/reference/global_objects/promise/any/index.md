@@ -1,15 +1,8 @@
 ---
 title: Promise.any()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/any
-tags:
-  - JavaScript
-  - Method
-  - Méthode
-  - Promise
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
-original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/any
 ---
+
 {{JSRef}}
 
 La méthode **`Promise.any()`** prend comme argument un itérable contenant des objets {{JSxRef("Promise")}} et, dès qu'une des promesses de cet itérable est tenue, renvoie une unique promesse résolue avec la valeur de la promesse résolue. Si aucune promesse de l'itérable n'est tenue (c'est-à-dire si toutes les promesses sont rejetées), la promesse renvoyée est rompue avec un objet {{JSxRef("Objets_globaux/AggregateError", "AggregateError")}} (une nouvelle sous-classe de {{JSxRef("Error")}} qui regroupe un ensemble d'erreurs). Cette méthode fait essentiellement le _contraire_ de {{JSxRef("Promise.all()")}} (qui renvoie une promesse tenue uniquement si toutes les promesses de l'itérable passé en argument ont été tenues).
@@ -18,7 +11,9 @@ La méthode **`Promise.any()`** prend comme argument un itérable contenant des 
 
 ## Syntaxe
 
-    Promise.any(iterable);
+```js
+Promise.any(iterable);
+```
 
 ### Paramètres
 
@@ -86,7 +81,7 @@ const pErr = new Promise((resolve, reject) => {
 
 Promise.any([pErr]).catch((err) => {
   console.log(err);
-})
+});
 // résultat attendu : "AggregateError: No Promise in Promise.any was resolved"
 ```
 
@@ -96,44 +91,34 @@ Dans cet exemple, nous avons une fonction qui requête une image et retourne un 
 
 ```js
 function fetchAndDecode(url) {
-  return fetch(url).then(réponse => {
-    if (!réponse.ok)
-      throw new Error(`Erreur HTTP ! état : ${response.status}`);
-    else
-      return réponse.blob();
-  })
+  return fetch(url).then((réponse) => {
+    if (!réponse.ok) throw new Error(`Erreur HTTP ! état : ${response.status}`);
+    else return réponse.blob();
+  });
 }
 
-let café = fetchAndDecode('coffee.jpg');
-let thé = fetchAndDecode('tea.jpg');
+let café = fetchAndDecode("coffee.jpg");
+let thé = fetchAndDecode("tea.jpg");
 
-Promise.any([café, thé]).then(valeur => {
-  let URLobjet = URL.createObjectURL(valeur);
-  let image = document.createElement('img');
-  image.src = URLobjet;
-  document.body.appendChild(image);
-})
-.catch(e => {
-  console.log(e.message);
-});
+Promise.any([café, thé])
+  .then((valeur) => {
+    let URLobjet = URL.createObjectURL(valeur);
+    let image = document.createElement("img");
+    image.src = URLobjet;
+    document.body.appendChild(image);
+  })
+  .catch((e) => {
+    console.log(e.message);
+  });
 ```
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td><strong>Spécification</strong></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Promise.any')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Promise.any")}}
+{{Compat}}
 
 ## Voir aussi
 

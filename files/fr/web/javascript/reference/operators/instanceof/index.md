@@ -1,15 +1,8 @@
 ---
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
-tags:
-  - JavaScript
-  - Operator
-  - Prototype
-  - Reference
-  - instanceof
-translation_of: Web/JavaScript/Reference/Operators/instanceof
-original_slug: Web/JavaScript/Reference/Opérateurs/instanceof
 ---
+
 {{jsSidebar("Operators")}}
 
 L'**opérateur `instanceof`** permet de tester si un objet possède, dans sa chaîne de prototype, la propriété `prototype` d'un certain constructeur.
@@ -18,7 +11,9 @@ L'**opérateur `instanceof`** permet de tester si un objet possède, dans sa cha
 
 ## Syntaxe
 
-    objet instanceof constructeur
+```js
+objet instanceof constructeur;
+```
 
 ### Paramètres
 
@@ -32,8 +27,8 @@ L'**opérateur `instanceof`** permet de tester si un objet possède, dans sa cha
 L'opérateur `instanceof` teste la présence de `constructeur.prototype` dans la chaîne de prototypes d'`objet`.
 
 ```js
-function C(){} // Définition du constructeur
-function D(){} // Définition d'un autre constructeur
+function C() {} // Définition du constructeur
+function D() {} // Définition d'un autre constructeur
 
 var o = new C();
 
@@ -44,7 +39,7 @@ o instanceof C;
 o instanceof D;
 
 o instanceof Object; // true, car:
-C.prototype instanceof Object // true
+C.prototype instanceof Object; // true
 
 C.prototype = {};
 var o2 = new C();
@@ -114,7 +109,7 @@ function Voiture(fabricant, modele, annee) {
 }
 var mavoiture = new Voiture("Citroën", "C3", 2006);
 var a = mavoiture instanceof Voiture; // retourne true
-var b = mavoiture instanceof Object;  // retourne true
+var b = mavoiture instanceof Object; // retourne true
 ```
 
 ### Attention à la précédence des opérateurs
@@ -123,16 +118,11 @@ Pour tester qu'un objet n'est pas une instance d'un constructeur donné, on pour
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-relational-operators', 'Relational Operators')}} | {{Spec2('ESDraft')}} |                                                       |
-| {{SpecName('ES6', '#sec-relational-operators', 'Opérateurs relationnels')}} | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ES5.1', '#sec-11.8.6', 'Opérateur instanceof')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES3', '#sec-11.8.6', 'Opérateur instanceof')}}                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.4. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.instanceof")}}
+{{Compat}}
 
 ## Voir aussi
 

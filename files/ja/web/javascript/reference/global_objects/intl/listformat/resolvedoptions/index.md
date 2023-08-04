@@ -1,20 +1,13 @@
 ---
 title: Intl.ListFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Intl.ListFormat.resolvedOptions
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
 ---
+
 {{JSRef}}
 
 **`Intl.ListFormat.prototype.resolvedOptions()`** メソッドは、現在の {{jsxref("Intl.ListFormat")}} オブジェクトの構築時に計算されたロケールとスタイル整形オプションを反映したプロパティを持つ新しいオブジェクトを返します。
+
+{{EmbedInteractiveExample("pages/js/intl-listformat-prototype-resolvedoptions.html")}}
 
 ## 構文
 
@@ -61,11 +54,7 @@ console.log(usedOptions.type);   // "conjunction" (the default value)
 ## 関連情報
 
 - {{jsxref("Intl.ListFormat")}}
-- {{jsxref("Intl/NumberFormat/resolvedOptions",
-		"Intl.NumberFormat.prototype.resolvedOptions()")}}
-- {{jsxref("Intl/Collator/resolvedOptions",
-		"Intl.Collator.prototype.resolvedOptions()")}}
-- {{jsxref("Intl/DateTimeFormat/resolvedOptions",
-		"Intl.DateTimeFormat.prototype.resolvedOptions()")}}
-- {{jsxref("Intl/PluralRules/resolvedOptions",
-		"Intl.PluralRules.prototype.resolvedOptions()")}}
+- {{jsxref("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
+- {{jsxref("Intl/Collator/resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}
+- {{jsxref("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
+- {{jsxref("Intl/PluralRules/resolvedOptions", "Intl.PluralRules.prototype.resolvedOptions()")}}

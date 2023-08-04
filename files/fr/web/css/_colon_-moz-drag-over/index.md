@@ -1,20 +1,17 @@
 ---
-title: ':-moz-drag-over'
+title: ":-moz-drag-over"
 slug: Web/CSS/:-moz-drag-over
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:-moz-drag-over
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 La pseudo-classe **`:-moz-drag-over`** permet de mettre en forme un élément lorsqu'un événement `drag-over` est appelé dessus.
 
 ## Syntaxe
 
-    element:-moz-drag-over { propriétés de mise en forme }
+```
+element:-moz-drag-over { propriétés de mise en forme }
+```
 
 ## Exemples
 

@@ -1,18 +1,8 @@
 ---
 title: Gérer les problèmes courants en HTML et CSS
 slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
-tags:
-  - Apprentissage
-  - CSS
-  - Débutant
-  - HTML
-  - Sélecteurs
-  - linting
-  - navigateur croisé
-  - test
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 Maintenant que les bases sont posées, nous allons nous concentrer sur les problèmes courants en navigateur croisé que vous allez rencontrer en code HTML et CSS, et quels outils peuvent être utilisés pour prévenir l'arrivée de ces problèmes, ou résoudre les problèmes qui surviennent. Cela inclut le [linting code](https://stackoverflow.com/questions/8503559/what-is-linting), la gestion des préfixes CSS, l'utilisation des outils de dev des navigateurs pour localiser les problèmes, utiliser des [polyfills](/fr/docs/Glossaire/Polyfill) pour apporter du support dans les navigateurs, se confronter aux problèmes de responsive design et plus encore.
@@ -84,11 +74,11 @@ Néanmoins, ce n'est pas très pratique de devoir copier et coller votre code da
 
 La plupart des éditeurs de code ont leur plugins linter. Par exemple, l'éditeur de code [Atom](https://atom.io/) de Github possède un riche écosystème de plugins disponibles, avec beaucoup d'options de linting. Voici un exemple pour vous montrer comment un plugin marche généralement :
 
-1.  Installer Atom (si vous n'avez pas déjà une version à jour installée) — télécharger-le depuis la page Atom indiquée plus haut.
-2.  Aller dans la boîte de dialogue _Préférences..._ d'Atom (par ex. en sélectionnant _Atom_ > _Préférences..._ sur Mac, ou _Fichier_ > _Préférences..._ sur Windows/Linux) et choisissez l'option _Installer_ dans le menu gauche.
-3.  Dans le champs texte _Rechercher des packages_, taper "lint" et presser Entrer/Envoyer pour rechercher des packages liés au linting.
-4.  Vous devriez voir un package appelé **lint** dans le haut de la liste. Installez celui-ci en premier (en utilisant le bouton _Installer_), comme les autres linters lui font appel pour fonctionner. Ensuite, installer le plugin **linter-csslint** pour le linting CSS, et le plugin **linter-tidy** pour le linting HTML.
-5.  Une fois que les packages ont fini de s'installer, essayer de charger un fichier HTML et un fichier CSS : vous verrez plusieurs zones soulignées en vert (pour les avertissements) et des cercles rouges (pour les erreurs) à côté des numéros de ligne, et un panneau séparé en bas qui affiche les numéros de ligne, les messages d'erreur, et parfois qui vous suggère des valeur par défaut ou d'autres solutions.
+1. Installer Atom (si vous n'avez pas déjà une version à jour installée) — télécharger-le depuis la page Atom indiquée plus haut.
+2. Aller dans la boîte de dialogue _Préférences..._ d'Atom (par ex. en sélectionnant _Atom_ > _Préférences..._ sur Mac, ou _Fichier_ > _Préférences..._ sur Windows/Linux) et choisissez l'option _Installer_ dans le menu gauche.
+3. Dans le champs texte _Rechercher des packages_, taper "lint" et presser Entrer/Envoyer pour rechercher des packages liés au linting.
+4. Vous devriez voir un package appelé **lint** dans le haut de la liste. Installez celui-ci en premier (en utilisant le bouton _Installer_), comme les autres linters lui font appel pour fonctionner. Ensuite, installer le plugin **linter-csslint** pour le linting CSS, et le plugin **linter-tidy** pour le linting HTML.
+5. Une fois que les packages ont fini de s'installer, essayer de charger un fichier HTML et un fichier CSS : vous verrez plusieurs zones soulignées en vert (pour les avertissements) et des cercles rouges (pour les erreurs) à côté des numéros de ligne, et un panneau séparé en bas qui affiche les numéros de ligne, les messages d'erreur, et parfois qui vous suggère des valeur par défaut ou d'autres solutions.
 
 ![](atom-htmltidy.png)![](atom-csslint.png)
 
@@ -133,16 +123,31 @@ Par exemple :
 
 ```html
 <video id="video" controls preload="metadata" poster="img/poster.jpg">
-  <source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4">
-  <source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm">
-  <source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg">
+  <source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4" />
+  <source
+    src="video/tears-of-steel-battle-clip-medium.webm"
+    type="video/webm" />
+  <source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg" />
   <!-- Flash fallback -->
-  <object type="application/x-shockwave-flash" data="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" width="1024" height="576">
-     <param name="movie" value="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
-     <param name="allowfullscreen" value="true" />
-     <param name="wmode" value="transparent" />
-     <param name="flashvars" value="controlbar=over&amp;image=img/poster.jpg&amp;file=flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
-      <img alt="Tears of Steel poster image" src="img/poster.jpg" width="1024" height="428" title="No video playback possible, please download the video from the link below" />
+  <object
+    type="application/x-shockwave-flash"
+    data="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4"
+    width="1024"
+    height="576">
+    <param
+      name="movie"
+      value="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
+    <param name="allowfullscreen" value="true" />
+    <param name="wmode" value="transparent" />
+    <param
+      name="flashvars"
+      value="controlbar=over&amp;image=img/poster.jpg&amp;file=flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
+    <img
+      alt="Tears of Steel poster image"
+      src="img/poster.jpg"
+      width="1024"
+      height="428"
+      title="No video playback possible, please download the video from the link below" />
   </object>
   <!-- Offer download -->
   <a href="video/tears-of-steel-battle-clip-medium.mp4">Download MP4</a>
@@ -161,11 +166,11 @@ L'exemple suivant montre des inputs date et time :
 <form>
   <div>
     <label for="date">Enter a date:</label>
-    <input id="date" type="date">
+    <input id="date" type="date" />
   </div>
   <div>
     <label for="time">Enter a time:</label>
-    <input id="time" type="time">
+    <input id="time" type="time" />
   </div>
 </form>
 ```
@@ -176,42 +181,43 @@ Le résultat de ce code est le suivant :
 
 ```css hidden
 label {
-        float: left;
-        width: 30%;
-        text-align: right;
-      }
+  float: left;
+  width: 30%;
+  text-align: right;
+}
 
-      input {
-        float: right;
-        width: 65%;
-      }
+input {
+  float: right;
+  width: 65%;
+}
 
-      label, input {
-        margin-bottom: 20px;
-      }
+label,
+input {
+  margin-bottom: 20px;
+}
 
-      div {
-        clear: both;
-        margin: 10px;
-      }
+div {
+  clear: both;
+  margin: 10px;
+}
 
-      body {
-        width: 400px;
-        margin: 0 auto;
-      }
+body {
+  width: 400px;
+  margin: 0 auto;
+}
 ```
 
 ```html hidden
 <form>
-      <div>
-        <label for="date">Enter a date:</label>
-        <input id="date" type="date">
-      </div>
-      <div>
-        <label for="time">Enter a time:</label>
-        <input id="time" type="time">
-      </div>
-    </form>
+  <div>
+    <label for="date">Enter a date:</label>
+    <input id="date" type="date" />
+  </div>
+  <div>
+    <label for="time">Enter a time:</label>
+    <input id="time" type="time" />
+  </div>
+</form>
 ```
 
 {{ EmbedLiveSample('Résultat', '100%', 150) }}
@@ -269,7 +275,7 @@ Les commentaires conditionnels d'IE sont une propriété modifiée de la syntaxe
 ```html
 <!--[if lte IE 8]>
   <script src="ie-fix.js"></script>
-  <link href="ie-fix.css" rel="stylesheet" type="text/css">
+  <link href="ie-fix.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 ```
 
@@ -280,7 +286,13 @@ Ce block appliquera les CSS et Javascript spécifiques à IE uniquement si le na
 Comme vous pouvez le voir, c'est particulièrement utile pour appliquer des fixes aux vieilles versions d'IE. Le cas d'usage que nous avons mentionné plus tôt (rendre les éléments sémantiques modernes stylables sur les vieilles versions d'IE) peut être atteint facilement en utilisant des commentaires conditionnels, par exemple vous pouvez mettre quelque chose comme ça dans votre feuille de style IE :
 
 ```css
-aside, main, article, section, nav, figure, figcaption {
+aside,
+main,
+article,
+section,
+nav,
+figure,
+figcaption {
   display: block;
 }
 ```
@@ -310,18 +322,18 @@ form > #date
 
 (L'input `date` du formulaire n'est pas directement dans le `<form>` ; vous feriez mieux d'utiliser un sélecteur descendant général plutôt qu'un sélecteur d'enfant).
 
-Il y a néanmoins un autre problème qui apparaît sur les versions d'IE plus anciennes que la 9 c'est qu'il n'y a aucun nouveau sélecteur (principalement les pseudo-classes et les pseudo-éléments comme [`:nth-of-type`](/fr/docs/Web/CSS/:nth-of-type), [`:not`](/fr/docs/Web/CSS/:not), [`::selection`](/fr/docs/Web/CSS/::selection), etc.) qui marche. Si vous voulez les utiliser dans votre CSS et que vous devez supporter les anciennes versions d'IE, une bonne initiative et d'utiliser la librairie [Selectivizr](http://selectivizr.com/) de Keith Clark — c'est une petite librairie Javascript qui s'exécute au-dessus d'une librairie Javascript existante comme  [jQuery](http://jquery.com/) ou [MooTools](http://mootools.net/).
+Il y a néanmoins un autre problème qui apparaît sur les versions d'IE plus anciennes que la 9 c'est qu'il n'y a aucun nouveau sélecteur (principalement les pseudo-classes et les pseudo-éléments comme [`:nth-of-type`](/fr/docs/Web/CSS/:nth-of-type), [`:not`](/fr/docs/Web/CSS/:not), [`::selection`](/fr/docs/Web/CSS/::selection), etc.) qui marche. Si vous voulez les utiliser dans votre CSS et que vous devez supporter les anciennes versions d'IE, une bonne initiative et d'utiliser la librairie [Selectivizr](http://selectivizr.com/) de Keith Clark — c'est une petite librairie Javascript qui s'exécute au-dessus d'une librairie Javascript existante comme [jQuery](http://jquery.com/) ou [MooTools](http://mootools.net/).
 
-1.  Afin de tester cet exemple, faites une copie locale de [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html). Si vous le regarder s'exécuter en direct, vous verrez qu'il contient deux paragraphes, dont l'un est stylé. Nous avons sélectionné le paragraphe avec `p:first-child`, qui ne fonctionne pas sur les anciennes versions d'IE.
-2.  Maintenant télécharger [MooTools](http://mootools.net/) et [Selectivizr](http://selectivizr.com/), et placez-les dans le même répertoire que votre fichier HTML.
-3.  Placer le code suivant dans la têtière de votre document HTML, juste avant la balise ouvrante `<style>` :
+1. Afin de tester cet exemple, faites une copie locale de [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html). Si vous le regarder s'exécuter en direct, vous verrez qu'il contient deux paragraphes, dont l'un est stylé. Nous avons sélectionné le paragraphe avec `p:first-child`, qui ne fonctionne pas sur les anciennes versions d'IE.
+2. Maintenant télécharger [MooTools](http://mootools.net/) et [Selectivizr](http://selectivizr.com/), et placez-les dans le même répertoire que votre fichier HTML.
+3. Placer le code suivant dans la têtière de votre document HTML, juste avant la balise ouvrante `<style>` :
 
-    ```html
-    <script type="text/javascript" src="MooTools-Core-1.6.0.js"></script>
-        <!--[if (gte IE 6)&(lte IE 8)]>
-          <script type="text/javascript" src="selectivizr-min.js"></script>
-        <![endif]-->
-    ```
+   ```html
+   <script type="text/javascript" src="MooTools-Core-1.6.0.js"></script>
+   <!--[if (gte IE 6)&(lte IE 8)]>
+     <script type="text/javascript" src="selectivizr-min.js"></script>
+   <![endif]-->
+   ```
 
 Si vous essayer d'exécuter cette page sur une vieille version d'IE, cela devrait bien fonctionner.
 
@@ -340,18 +352,24 @@ Voici quelques exemples :
 ```css
 -webkit-transform: rotate(90deg);
 
-background-image: -moz-linear-gradient(left,green,yellow);
-background-image: -webkit-gradient(linear,left center,right center,from(green),to(yellow));
-background-image: linear-gradient(to right,green,yellow);
+background-image: -moz-linear-gradient(left, green, yellow);
+background-image: -webkit-gradient(
+  linear,
+  left center,
+  right center,
+  from(green),
+  to(yellow)
+);
+background-image: linear-gradient(to right, green, yellow);
 ```
 
 La première ligne déclare une propriété {{cssxref("transform")}} avec un préfixe `-webkit-` — c'était nécessaire pour que la transformation fonctionne sur Chrome, etc jusqu'à ce que la fonctionnalité soit finalisée et beaucoup de navigateurs ont ajouté une version de la propriété sans préfixes (au moment de la rédaction, Chrome supportait les deux versions).
 
 Les trois dernières images montrent trois versions différentes de la fonction [`linear-gradient()`](/fr/docs/Web/CSS/linear-gradient), qui est utilisée pour générer un dégradé linéaire dans la background d'un élément :
 
-1.  La première a un préfixe `-moz-`, et montre une version plutôt ancienne de la syntaxe (Firefox)
-2.  La seconde a un préfixe `-webkit-`, et montre encore une vieille version de la syntaxe de la propriété (également issue d'une vraiment vieille version du moteur Wekkit)
-3.  La troisième n'a pas de préfixe, et montre la version finale de la syntaxe (inclue dans  [CSS Image Values and Replaced Content Module Level 3 spec](https://drafts.csswg.org/css-images-3/#linear-gradients), qui définit cette fonctionnalité).
+1. La première a un préfixe `-moz-`, et montre une version plutôt ancienne de la syntaxe (Firefox)
+2. La seconde a un préfixe `-webkit-`, et montre encore une vieille version de la syntaxe de la propriété (également issue d'une vraiment vieille version du moteur Wekkit)
+3. La troisième n'a pas de préfixe, et montre la version finale de la syntaxe (inclue dans [CSS Image Values and Replaced Content Module Level 3 spec](https://drafts.csswg.org/css-images-3/#linear-gradients), qui définit cette fonctionnalité).
 
 Les fonctionnalités préfixées sont supposées ne jamais être utilisées dans des sites web en production — elles sont susceptibles de changer ou d'être supprimées sans avertissement, et causent des problèmes en navigateur croisé. C'est particulièrement un problème lorsque les développeurs décident de n'utiliser que la version `-webkit-` d'une propriété — ce qui veut dire que le site ne fonctionnera pas sur d'autres navigateurs. En fait, cela arrive tellement souvent que d'autres navigateurs ont commencé à implémenter les versions préfixées `-webkit-` de plusieurs propriétés CSS, ils marcheront donc avec un tel code. L'utilisation des préfixes fournit par chaque navigateur a récemment déclinée précisément à cause de ce type de problèmes, mais il en reste encore certain qui demandent de l'attention.
 
@@ -359,20 +377,21 @@ Si vous persistez a utiliser des fonctionnalités préfixées, assurez-vous d'ut
 
 Essayez cet exemple simple :
 
-1.  Ouvrez google.com, ou un autre site qui a un en-tête proéminent ou un niveau de bloc d'élément.
-2.  Clic droit sur l'élément en question et choisir Inspecter/Inspecter l'élément (ou qu'importe l'option de votre navigateur) — cela devrait ouvrir les outils de dev dans votre navigateur, avec l'élément mis en valeur dans l'inspecteur du DOM.
-3.  Chercher une fonctionnalité que vous pouvez utiliser pour sélectionner cet élément. Par exemple, au moment de la rédaction, le logo principal de Google a un ID `hplogo`.
-4.  Entreposer une référence à cet élément dans une variable, par exemple :
+1. Ouvrez google.com, ou un autre site qui a un en-tête proéminent ou un niveau de bloc d'élément.
+2. Clic droit sur l'élément en question et choisir Inspecter/Inspecter l'élément (ou qu'importe l'option de votre navigateur) — cela devrait ouvrir les outils de dev dans votre navigateur, avec l'élément mis en valeur dans l'inspecteur du DOM.
+3. Chercher une fonctionnalité que vous pouvez utiliser pour sélectionner cet élément. Par exemple, au moment de la rédaction, le logo principal de Google a un ID `hplogo`.
+4. Entreposer une référence à cet élément dans une variable, par exemple :
 
-    ```js
-    var test = document.getElementById('hplogo');
-    ```
+   ```js
+   var test = document.getElementById("hplogo");
+   ```
 
-5.  Maintenant essayez d'appliquer une nouvelle valeur pour la propriété CSS qui vous intéresse sur cet élément ; vous pouvez le faire en utilisant la propriété [style](/fr/docs/Web/API/HTMLElement/style) de l'élément, par exemple essayez de taper ça dans votre console Javascript :
-6.  ```js
-    test.style.transform = 'rotate(90deg)'
-    test.style.webkitTransform = 'rotate(90deg)'
-    ```
+5. Maintenant essayez d'appliquer une nouvelle valeur pour la propriété CSS qui vous intéresse sur cet élément ; vous pouvez le faire en utilisant la propriété [style](/fr/docs/Web/API/HTMLElement/style) de l'élément, par exemple essayez de taper ça dans votre console Javascript :
+
+   ```js
+   test.style.transform = "rotate(90deg)";
+   test.style.webkitTransform = "rotate(90deg)";
+   ```
 
 Quand vous commencez à taper la transcription du nom de la propriété après le deuxième point (notez qu'en Javascript, les noms des propriétés CSS sont écrites en lower camel case, sans trait d'union), la console Javascript devrait commencer à saisir automatiquement les noms des propriétés qui existent dans le navigateur et qui correspondent au mieux avec ce que vous écrivez. C'est utile pour trouver quelles versions de la propriété est implémentée dans ce navigateur.
 
@@ -394,15 +413,17 @@ La [prefix-free JavaScript library](http://leaverou.github.io/prefixfree/) peut 
 
 Une autre solution est d'ajouter automatiquement les préfixes pendant le développement, et cela (et d'autres choses à venir) peut être fait en utilisant des outils comme [Autoprefixer](https://github.com/postcss/autoprefixer) et [PostCSS](http://postcss.org/). Ces outils peuvent être utilisés de diverses manières, par exemple Autoprefixer a une [version en ligne](http://autoprefixer.github.io/) qui vous permet d'entrer votre CSS non préfixé sur la gauche, et vous donne une version avec préfixes ajoutés sur la droite. Vous pouvez sélectionner quels navigateurs vous voulez afin de vous assurer de bien supporter en utilisant la notation définie dans [Autoprefixer options](https://github.com/postcss/autoprefixer#options)&nbsp;; pour plus de détails, voir aussi [Browserslist queries](https://github.com/ai/browserslist#queries), qui est basé dessus. Comme exemple, la requête suivante sélectionnera les deux dernières versions de tous le navigateurs principaux et les versions d'IE supérieure à la 9.
 
-    last 2 versions, ie > 9
+```
+last 2 versions, ie > 9
+```
 
 Autoprefixer peut aussi être utilisé dans d'autres cas, plus pratiques — voir [Autoprefixer usage](https://github.com/postcss/autoprefixer#usage). Par exemple vous pouvez l'utiliser avec un exécuteur de tâche/outil de build comme [Gulp](http://gulpjs.com/) ou [Webpack](https://webpack.github.io/) pour ajouter automatiquement les préfixes une fois que le développement a été fait. (Expliquer comment cela fonctionne est plutôt au-delà de la portée de cet article).
 
 Vous pouvez également utiliser un plugin pour éditeur de texte comme Atom ou Sublime text. Par exemple, dans Atom :
 
-1.  Vous pouvez l'installer en allant dans _Préférences_ > _Installer_, chercher _Autoprefixer_, puis cliquer sur installer.
-2.  Vous pouvez configurer une requête navigateur en appuyant sur le bouton _Settings_ d'Autoprefixer et entrer la requête dans le champs texte de la section _Setting_ de la page.
-3.  Dans votre code, vous pouvez sélectionner des sections de CSS auxquelles vous voulez ajouter des préfixes, ouvrez la palette de commande (_Cmd_/_Ctrl_ + _Shift_ + _P_), puis tapez Autoprefixer dedans et sélectionnez le résultat Autoprefixer qui auto complète.
+1. Vous pouvez l'installer en allant dans _Préférences_ > _Installer_, chercher _Autoprefixer_, puis cliquer sur installer.
+2. Vous pouvez configurer une requête navigateur en appuyant sur le bouton _Settings_ d'Autoprefixer et entrer la requête dans le champs texte de la section _Setting_ de la page.
+3. Dans votre code, vous pouvez sélectionner des sections de CSS auxquelles vous voulez ajouter des préfixes, ouvrez la palette de commande (_Cmd_/_Ctrl_ + _Shift_ + _P_), puis tapez Autoprefixer dedans et sélectionnez le résultat Autoprefixer qui auto complète.
 
 En tant qu'exemple, nous avons entré le code suivant :
 
@@ -431,7 +452,7 @@ Un autre problème qui peut survenir est la différence de mise en page entre le
 
 > **Note :** Historiquement les développeurs web étaient habitués à utiliser des fichiers CSS appelés resets, qui supprimaient tous les styles par défaut des navigateurs qui s'appliquaient au HTML, et ensuite appliquaient leurs propres styles pour tout le reste — c'était fait pour rendre le style sur un projet plus cohérent, et réduire les possibles problèmes en navigateur croisé, spécialement pour les choses issues de la mise en page. Toutefois, cela a récemment été défini comme exagéré. Le meilleur équivalent que nous avons de nos jours c'est le [normalize.css](https://necolas.github.io/normalize.css/), un peu de CSS propre qui style discrètement par-dessus le style par défaut des navigateurs afin de rendre les éléments plus cohérents et fixe quelques problèmes de disposition. Nous vous recommandons d'appliquer normalize.css sur toutes vos pages HTML.
 
-> **Note :** Lorsque vous essayer de localiser un problème de disposition difficile, une bonne technique et d'ajouter une couleur éclatante {{cssxref("outline")}} sur l'élément dérangeant, ou sur tous les éléments à côté. Cela facilite la tâche pour voir où tous les éléments sont placés. Voir [Debug your CSS with outline visualizations](http://www.otsukare.info/2016/10/05/debugging-css "Permalink to Debug your CSS with outline visualizations.") pour plus de détails...
+> **Note :** Lorsque vous essayer de localiser un problème de disposition difficile, une bonne technique et d'ajouter une couleur éclatante {{cssxref("outline")}} sur l'élément dérangeant, ou sur tous les éléments à côté. Cela facilite la tâche pour voir où tous les éléments sont placés. Voir [Debug your CSS with outline visualizations](http://www.otsukare.info/2016/10/05/debugging-css) pour plus de détails...
 
 #### Support pour les nouvelles caractéristiques de disposition
 
@@ -479,14 +500,3 @@ Par ailleurs, essayez de chercher votre moteur de recherche favori pour trouver 
 Vous devriez maintenant être familier avec les problèmes principaux en navigateur croisé avec HTML et CSS que vous rencontrerez en développement web, et comment faire pour les résoudre.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## Dans ce module
-
-- [Introduction to cross browser testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

@@ -1,9 +1,8 @@
 ---
 title: row-gap (grid-row-gap)
 slug: Web/CSS/row-gap
-translation_of: Web/CSS/row-gap
-browser-compat: css.properties.row-gap
 ---
+
 {{CSSRef}}
 
 La propriété **`row-gap`** définit la taille des espaces ({{glossary("gutters", "gouttières")}}) entre les lignes d'un élément.
@@ -97,6 +96,7 @@ row-gap: unset;
 ```
 
 #### CSS
+
 ```css
 #grid {
   display: grid;

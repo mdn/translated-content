@@ -1,20 +1,8 @@
 ---
 title: Référence des attributs HTML
 slug: Web/HTML/Attributes
-tags:
-  - Attribute
-  - Attributes
-  - Beginner
-  - Configuring
-  - Element Attributes
-  - Elements
-  - HTML
-  - Reference
-  - Settings
-  - Web
-translation_of: Web/HTML/Attributes
-original_slug: Web/HTML/Attributs
 ---
+
 {{HTMLSidebar}}
 
 Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de différentes manières pour répondre aux critères souhaités par les utilisateurs.
@@ -341,9 +329,7 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a>
       </td>
       <td>
-        À partir de la spécification
-        {{SpecName('HTML Media Capture', '#the-capture-attribute', 'media capture')}},
-        spécifie qu'un nouveau fichier peut être capturé.
+        À partir de la spécification <i lang="en">HTML Media Capture</i>, spécifie qu'un nouveau fichier peut être capturé.
       </td>
     </tr>
     <tr>
@@ -1325,7 +1311,7 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Element/html#attr-manifest"
           ><code>manifest</code></a
         >
-        {{obsolete_inline}}
+        {{deprecated_inline}}
       </td>
       <td>
         <a href="/fr/docs/Web/HTML/Element/html"><code>&#x3C;html></code></a>
@@ -2172,9 +2158,13 @@ HTML5 définit des restrictions sur les valeurs autorisées des attributs boolé
 
 ```html
 <div itemscope>Ce fragment est du HTML valide mais du XML invalide.</div>
-<div itemscope=itemscope>Ce fragment est du HTML valide mais du XML invalide.</div>
+<div itemscope="itemscope">
+  Ce fragment est du HTML valide mais du XML invalide.
+</div>
 <div itemscope="">Ce fragment est du HTML valide et du XML valide.</div>
-<div itemscope="itemscope">Ce fragment est du HTML et du XML valide mais est plus verbeux.</div>
+<div itemscope="itemscope">
+  Ce fragment est du HTML et du XML valide mais est plus verbeux.
+</div>
 ```
 
 Pour être tout à fait explicite, les valeurs `"true"` et `"false"` ne sont pas autorisées pour les attributs booléens. Pour représenter une valeur fausse, il faudra ne pas écrire l'attribut du tout. Cette règle peut entraîner quelques incompréhensions : si on écrit `checked="false"` l'attribut `checked` sera présent et donc considéré comme _vrai_ (_true_).

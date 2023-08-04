@@ -1,10 +1,9 @@
 ---
 title: <input type="email">
 slug: Web/HTML/Element/input/email
-translation_of: Web/HTML/Element/input/email
-browser-compat: html.elements.input.input-email
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`email`** permettent à une utilisatrice ou un utilisateur de saisir et d'éditer une adresse mail ou, si l'attribut [`multiple`](/fr/docs/Web/HTML/Attributes/multiple) est indiqué, une liste d'adresses mail. La valeur saisie est automatiquement validée afin de vérifier que le champ est vide ou que l'adresse (ou la liste d'adresses) est correcte. Les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) sont appliquées automatiquement selon le cas.
 
@@ -120,7 +119,7 @@ On notera toutefois que le navigateur ne vérifie pas si l'adresse saisie existe
 À l'heure actuelle, l'ensemble des navigateurs qui implémentent cet élément le gèrent comme un champ texte standard auquel certaines fonctionnalités de validation sont ajoutées. La spécification laisse toutefois une marge de manœuvre pour cette validation (l'élément pourrait, par exemple, consulter le répertoire de l'appareil pour choisir une adresse parmi cette liste). Dans sa forme la plus simple, un champ `email` peut être écrit de cette façon&nbsp;:
 
 ```html
-<input id="emailAddress" type="email">
+<input id="emailAddress" type="email" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -132,7 +131,7 @@ Un tel champ est considéré comme valide lorsqu'il est vide ou lorsqu'une adres
 Grâce à l'attribut [`multiple`](/fr/docs/Web/HTML/Attributes/multiple), on peut configurer le champ afin de saisir plusieurs adresses mail.
 
 ```html
-<input id="emailAddress" type="email" multiple>
+<input id="emailAddress" type="email" multiple />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -161,7 +160,7 @@ Il est parfois utile de fournir une indication contextuelle quant à la valeur q
 Dans l'exemple qui suit, on utilise un élément `<input>` de type `email` avec le texte indicatif `sophie@example.com`. Vous pouvez manipuler l'exemple afin de voir comment ce texte disparaît/réapparaît lorsqu'on édite la valeur du champ.
 
 ```html
-<input type="email" placeholder="sophie@example.com">
+<input type="email" placeholder="sophie@example.com" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -175,7 +174,7 @@ Il est possible de contrôler la taille physique de la boîte de saisie et égal
 La taille physique de la boîte de saisie peut être paramétrée grâce à l'attribut [`size`](/fr/docs/Web/HTML/Element/Input#attr-size). Grâce à cet attribut, on peut indiquer le nombre de caractères que le champ peut afficher. Dans l'exemple qui suit, la boîte d'édition pourra contenir jusqu'à 15 caractères&nbsp;:
 
 ```html
-<input type="email" size="15">
+<input type="email" size="15" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -187,7 +186,7 @@ L'attribut `size` ne contraint pas la longueur de l'adresse qu'on pourra saisir.
 Dans l'exemple qui suit, on affiche une boîte de saisie qui mesure 32 caractères de large et dans laquelle on ne peut saisir des adresses qui ont au moins 3 caractères et au plus 64 caractères.
 
 ```html
-<input type="email" size="32" minlength="3" maxlength="64">
+<input type="email" size="32" minlength="3" maxlength="64" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -199,7 +198,7 @@ Dans l'exemple qui suit, on affiche une boîte de saisie qui mesure 32 caractèr
 On peut également fournir une valeur par défaut en remplissant l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value) de l'élément&nbsp;:
 
 ```html
-<input type="email" value="default@example.com">
+<input type="email" value="default@example.com" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -209,14 +208,14 @@ On peut également fournir une valeur par défaut en remplissant l'attribut [`va
 Pour améliorer encore l'ergonomie, on peut fournir une liste d'options par défaut parmi laquelle l'utilisatrice ou l'utilisateur peut choisir. Cela fonctionne en utilisant l'attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list) dont la valeur est un identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) qui contient différents éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) dont les valeurs des attributs `value` fournissent les adresses suggérées. L'utilisatrice ou l'utilisateur n'est pas contraint à saisir une valeur parmi celles-ci, elles sont uniquement fournies à titre indicatif.
 
 ```html
-<input type="email" size="40" list="defaultEmails">
+<input type="email" size="40" list="defaultEmails" />
 
 <datalist id="defaultEmails">
-  <option value="jbond007@mi6.defence.gov.uk">
-  <option value="jbourne@unknown.net">
-  <option value="nfury@shield.org">
-  <option value="tony@starkindustries.com">
-  <option value="hulk@grrrrrrrr.arg">
+  <option value="jbond007@mi6.defence.gov.uk"></option>
+  <option value="jbourne@unknown.net"></option>
+  <option value="nfury@shield.org"></option>
+  <option value="tony@starkindustries.com"></option>
+  <option value="hulk@grrrrrrrr.arg"></option>
 </datalist>
 ```
 
@@ -275,19 +274,29 @@ label::after {
 
 ```html
 <form>
- <div class="emailBox">
-   <label for="emailAddress">Votre adresse mail</label><br>
-   <input id="emailAddress" type="email" size="64" maxLength="64" required
-          placeholder="nomutilisateur@beststartupever.com" pattern=".+@beststartupever.com"
-          title="Merci de fournir uniquement une adresse Best Startup Ever">
- </div>
+  <div class="emailBox">
+    <label for="emailAddress">Votre adresse mail</label><br />
+    <input
+      id="emailAddress"
+      type="email"
+      size="64"
+      maxlength="64"
+      required
+      placeholder="nomutilisateur@beststartupever.com"
+      pattern=".+@beststartupever.com"
+      title="Merci de fournir uniquement une adresse Best Startup Ever" />
+  </div>
 
- <div class="messageBox">
-   <label for="message">Requête</label><br>
-   <textarea id="message" cols="80" rows="8" required
-             placeholder="Mes chaussures sont trop petites."></textarea>
- </div>
-  <input type="submit" value="Envoyer la requête">
+  <div class="messageBox">
+    <label for="message">Requête</label><br />
+    <textarea
+      id="message"
+      cols="80"
+      rows="8"
+      required
+      placeholder="Mes chaussures sont trop petites."></textarea>
+  </div>
+  <input type="submit" value="Envoyer la requête" />
 </form>
 ```
 
@@ -303,7 +312,7 @@ L'attribut [`placeholder`](/fr/docs/Web/HTML/Element/Input#attr-placeholder) ind
 
 Si on utilise uniquement les attributs qu'on vient de décrire, on restreint les valeurs saisissables aux adresses électroniques valides de 64 caractères. Or, on veut également valider le fait que l'adresse respecte le format `_nomutilisateur_@beststartupever.com`. C'est pourquoi on utilise l'attribut [`pattern`](/fr/docs/Web/HTML/Element/Input#attr-pattern) avec la valeur `".+@beststartupever.com"`. Cette valeur est une expression rationnelle qui permet de vérifier que la chaîne de caractère contient un ou plusieurs caractères quelconques, ensuite suivi d'une arobase (`@`) puis du nom de domaine `beststartupever.com`.
 
-On notera que cette expression rationnelle ne permet pas de vérifier que l'adresse électronique est valide (on pourra par exemple avoir ` @beststartupever.com` (avec une espace en début de chaîne) ou encore `@@beststartupever.com` qui ne sont pas valides). En fait, le navigateur vérifie que l'adresse respecte l'expression rationnelle fournie **et** que l'adresse est valide. Autrement dit, avec le type `email` et cette valeur pour l'attribut `pattern`, on s'assure que l'adresse est une adresse électronique valide et que c'est une bien une adresse avec le nom de domaine `beststartupever.com`.
+On notera que cette expression rationnelle ne permet pas de vérifier que l'adresse électronique est valide (on pourra par exemple avoir `@beststartupever.com` (avec une espace en début de chaîne) ou encore `@@beststartupever.com` qui ne sont pas valides). En fait, le navigateur vérifie que l'adresse respecte l'expression rationnelle fournie **et** que l'adresse est valide. Autrement dit, avec le type `email` et cette valeur pour l'attribut `pattern`, on s'assure que l'adresse est une adresse électronique valide et que c'est une bien une adresse avec le nom de domaine `beststartupever.com`.
 
 Lorsqu'on utilise l'attribut `pattern`. il est conseillé d'utiliser l'attribut [`title`](/fr/docs/Web/HTML/Global_attributes#attr-title) afin de décrire le motif de l'expression rationnelle. Autrement dit, dans ce cas, l'attribut `title` doit décrire le format souhaité plutôt que contenir une autre information. En effet, cet attribut sera affiché ou prononcé en cas d'erreur. Par exemple, le navigateur pourrait afficher le message «&nbsp;Le texte saisi ne correspond pas au motif requis.&nbsp;» suivi du texte indiqué dans la valeur de `title`. Par exemple si l'attribut `title` vaut «&nbsp;Adresse mail&nbsp;», le message affiché serait «&nbsp;Le texte saisi ne correspond pas au motif requis. Adresse mail&nbsp;» ce qui n'est pas correct.
 
@@ -315,21 +324,27 @@ C'est pour cela qu'on indique la chaîne de caractères «&nbsp;Merci de fournir
 
 ## Exemples
 
-Dans l'exemple qui suit, on peut saisir une adresse électronique qui contient au plus 256 caractères. La boîte de saisie affichera au plus 64 caractères et contiendra le texte  `"user@example.gov"` comme indication lorsque le champ est vide. On trouve également l'attribut [`multiple`](/fr/docs/Web/HTML/Attributes/multiple) qui permet de saisir zéro ou plusieurs adresses séparées par des virgules (cf. ci-avant). Enfin, l'attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list) utilisé indique un identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) dont les éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) déterminent les valeurs suggérées qui peuvent être sélectionnées par l'utilisatrice ou l'utilisateur.
+Dans l'exemple qui suit, on peut saisir une adresse électronique qui contient au plus 256 caractères. La boîte de saisie affichera au plus 64 caractères et contiendra le texte `"user@example.gov"` comme indication lorsque le champ est vide. On trouve également l'attribut [`multiple`](/fr/docs/Web/HTML/Attributes/multiple) qui permet de saisir zéro ou plusieurs adresses séparées par des virgules (cf. ci-avant). Enfin, l'attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list) utilisé indique un identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) dont les éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) déterminent les valeurs suggérées qui peuvent être sélectionnées par l'utilisatrice ou l'utilisateur.
 
 L'élément [`<label>`](/fr/docs/Web/HTML/Element/Label) qui précède l'élément `<input>` permettra d'afficher un libellé avant la boîte de saisie. Le lien entre les deux est fait grâce à l'attribut `for` qui contient `"emailAddress"` qui est l'identifiant de l'élément [`<input>`](/fr/docs/Web/HTML/Element/Input). Grâce à cette association, cliquer sur l'étiquette permettra de placer le focus sur le champ de saisie.
 
 ```html
-<label for="emailAddress">Adresse mail</label><br/>
-<input id="emailAddress" type="email" placeholder="user@example.gov"
-       list="defaultEmails" size="64" maxlength="256" multiple>
+<label for="emailAddress">Adresse mail</label><br />
+<input
+  id="emailAddress"
+  type="email"
+  placeholder="user@example.gov"
+  list="defaultEmails"
+  size="64"
+  maxlength="256"
+  multiple />
 
 <datalist id="defaultEmails">
-  <option value="jbond007@mi6.defence.gov.uk">
-  <option value="jbourne@unknown.net">
-  <option value="nfury@shield.org">
-  <option value="tony@starkindustries.com">
-  <option value="hulk@grrrrrrrr.arg">
+  <option value="jbond007@mi6.defence.gov.uk"></option>
+  <option value="jbourne@unknown.net"></option>
+  <option value="nfury@shield.org"></option>
+  <option value="tony@starkindustries.com"></option>
+  <option value="hulk@grrrrrrrr.arg"></option>
 </datalist>
 ```
 

@@ -1,17 +1,8 @@
 ---
 title: String.prototype.toLocaleUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
-tags:
-  - Internationalisation
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-  - i18n
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/toLocaleUpperCase
 ---
+
 {{JSRef}}
 
 La méthode **`toLocaleUpperCase()`** renvoie la chaîne de caractères qui appelle la méthode en caractères majuscules, selon les correspondances de caractères propres aux différentes locales.
@@ -20,9 +11,11 @@ La méthode **`toLocaleUpperCase()`** renvoie la chaîne de caractères qui appe
 
 ## Syntaxe
 
-    str.toLocaleUpperCase()
-    str.toLocaleUpperCase(locale)
-    str.toLocaleUpperCase([locale, locale, ...])
+```js
+str.toLocaleUpperCase()
+str.toLocaleUpperCase(locale)
+str.toLocaleUpperCase([locale, locale, ...])
+```
 
 ### Paramètres
 
@@ -49,24 +42,18 @@ On notera également que la conversion ne repose pas sur une correspondance un �
 ## Exemples
 
 ```js
-"alphabet".toLocaleUpperCase();       // "ALPHABET"
-'Gesäß'.toLocaleUpperCase();          // 'GESÄSS'
+"alphabet".toLocaleUpperCase(); // "ALPHABET"
+"Gesäß".toLocaleUpperCase(); // 'GESÄSS'
 "i\u0307".toLocaleUpperCase("lt-LT"); // "I"
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | État                             | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                                                         | {{Spec2('ES3')}}             | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.19', 'String.prototype.toLocaleUpperCase')}}                                         | {{Spec2('ES5.1')}}         |                                                       |
-| {{SpecName('ES6', '#sec-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}}             | {{Spec2('ES6')}}             |                                                       |
-| {{SpecName('ESDraft', '#sec-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}}     | {{Spec2('ESDraft')}}     |                                                       |
-| {{SpecName('ES Int Draft', '#sup-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}} | {{Spec2('ES Int Draft')}} | Ajout du paramètre `locale` dans ES Intl 2017.        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.toLocaleUpperCase")}}
+{{Compat}}
 
 ## Voir aussi
 

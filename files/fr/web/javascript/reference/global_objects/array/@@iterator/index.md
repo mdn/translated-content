@@ -1,24 +1,17 @@
 ---
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/@@iterator
 ---
+
 {{JSRef}}
 
 La valeur initiale de la propriété **`@@iterator`** correspond à la valeur initiale fournie par l'itérateur {{jsxref("Array.prototype.values()", "values")}}.
 
 ## Syntaxe
 
-    arr[Symbol.iterator]()
+```js
+arr[Symbol.iterator]();
+```
 
 ### Valeur de retour
 
@@ -29,8 +22,8 @@ La première valeur fournie par {{jsxref("Array.prototype.values()","values()")}
 ### Parcourir un tableau avec une boucle `for...of`
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
-var eArr  = arr[Symbol.iterator]();
+var arr = ["w", "y", "k", "o", "p"];
+var eArr = arr[Symbol.iterator]();
 // il est nécessaire que l'environnement supporte
 // les boucles for..of et les variables
 // utilisées avec let ou const ou var
@@ -42,7 +35,7 @@ for (let letter of eArr) {
 ### Parcourir un tableau avec `next`
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 var eArr = arr[Symbol.iterator]();
 console.log(eArr.next().value); // w
 console.log(eArr.next().value); // y
@@ -53,14 +46,11 @@ console.log(eArr.next().value); // p
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.@@iterator")}}
+{{Compat}}
 
 ## Voir aussi
 

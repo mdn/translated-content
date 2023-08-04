@@ -1,20 +1,8 @@
 ---
 title: Envoyer et extraire les données des formulaires
 slug: Learn/Forms/Sending_and_retrieving_form_data
-tags:
-  - Beginner
-  - CodingScripting
-  - Files
-  - Forms
-  - Guide
-  - HTML
-  - HTTP
-  - Headers
-  - Security
-  - Web
-translation_of: Learn/Forms/Sending_and_retrieving_form_data
-original_slug: Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
 
 Cet article examine ce qui arrive quand un utilisateur soumet un formulaire — où les données vont-elles et comment les gère-t-on une fois à destination ? Nous examinerons aussi quelques problèmes de sécurité associés à l'envoi des données d'un formulaire.
@@ -66,28 +54,28 @@ L'élément [`<form>`](/fr/docs/Web/HTML/Element/Form) définit la méthode d'en
 
 Cet attribut définit où les données sont envoyées. Sa valeur doit être une URL valide. S'il n'est pas fourni, les données seront envoyées à l'URL de la page contenant le formulaire.
 
-Dans cet exemple, les données sont envoyées à une URL précise — http\://foo.com :
+Dans cet exemple, les données sont envoyées à une URL précise — `http://foo.com` :
 
 ```html
-<form action="http://foo.com">
+<form action="http://foo.com"></form>
 ```
 
 Ici, nous utilisons une URL relative — les données sont envoyées à une URL différente sur le serveur&nbsp;:
 
 ```html
-<form action="/somewhere_else">
+<form action="/somewhere_else"></form>
 ```
 
 Sans attribut, comme ci-dessous, les données de [`<form>`](/fr/docs/Web/HTML/Element/Form) sont envoyées à la même page que celle du formulaire :
 
 ```html
-<form>
+<form></form>
 ```
 
 De nombreuses pages anciennes utilisent la notation suivante pour indiquer que les données doivent être envoyées à la page qui contient le formulaire. C'était nécessaire car jusqu'à HTML5, l'attribut [`action`](/fr/docs/Web/HTML/Element/Form#attr-action) était requis. Il n'y en a donc plus besoin.
 
 ```html
-<form action="#">
+<form action="#"></form>
 ```
 
 > **Note :** Il est possible de spécifier une URL qui utilise le protocole HTTPS (HTTP sécurisé). Quand vous faites ceci, les données sont chiffrées avec le reste de la requête, même si le formulaire lui-même est hébergé dans une page non sécurisée à laquelle on accède via HTTP. D'autre part, si le formulaire est hébergé sur une page sécurisée mais qu'on spécifie une URL non sécurisée avec l'attribut [`action`](/fr/docs/Web/HTML/Element/Form#attr-action), tous les navigateurs affichent une alerte de sécurité pour l'utilisateur chaque fois qu'il envoie des données car celles-ci ne sont pas chiffrées.
@@ -108,11 +96,11 @@ Considérons le formulaire suivant :
 <form action="http://foo.com" method="get">
   <div>
     <label for="say">Quelle salutation voulez-vous adresser&nbsp;?</label>
-    <input name="say" id="say" value="Salut">
+    <input name="say" id="say" value="Salut" />
   </div>
   <div>
     <label for="to">À qui voulez‑vous l'adresser ?</label>
-    <input name="to" value="Maman">
+    <input name="to" value="Maman" />
   </div>
   <div>
     <button>Envoyer mes salutations</button>
@@ -131,8 +119,10 @@ Les données sont ajoutées à l'URL sous forme d'une suite de paires nom/valeur
 
 La requête HTTP ressemble à quelque chose comme&nbsp;:
 
-    GET /?say=Hi&to=Mom HTTP/1.1
-    Host: foo.com
+```
+GET /?say=Hi&to=Mom HTTP/1.1
+Host: foo.com
+```
 
 > **Note :** Vous trouverez cet exemple sur GitHub — voyez [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
@@ -146,11 +136,11 @@ Voyons un exemple — c'est le même formulaire que celui que nous avons vu pour
 <form action="http://www.foo.com" method="POST">
   <div>
     <label for="say">Quelle salutation voulez-vous dire ?</label>
-    <input name="say" id="say" value="Salut">
+    <input name="say" id="say" value="Salut" />
   </div>
   <div>
     <label for="to">A qui voulez-vous le dire ?</label>
-    <input name="to" id="to" value="Maman">
+    <input name="to" id="to" value="Maman" />
   </div>
   <div>
     <button>Envoyer mes salutations</button>
@@ -160,12 +150,14 @@ Voyons un exemple — c'est le même formulaire que celui que nous avons vu pour
 
 Quand le formulaire est soumis avec la méthode `POST`, aucune donnée n'est ajoutée à l'URL et la requête HTTP ressemble à ceci, les données incorporées au corps de requête&nbsp;:
 
-    POST / HTTP/1.1
-    Host: foo.com
-    Content-Type: application/x-www-form-urlencoded
-    Content-Length: 13
+```
+POST / HTTP/1.1
+Host: foo.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 13
 
-    say=Hi&to=Mom
+say=Hi&to=Mom
+```
 
 L'en-tête `Content-Length` indique la taille du corps, et l'en-tête `Content-Type` indique le type de ressources envoyées au serveur. Nous discuterons de ces en-têtes dans un moment.
 
@@ -175,11 +167,11 @@ L'en-tête `Content-Length` indique la taille du corps, et l'en-tête `Content-T
 
 Les requêtes HTTP ne sont jamais montrées à l'utilisateur (si vous voulez les voir, vous devez utiliser des outils comme la [Console Web](/fr/docs/Tools/Web_Console) de Firefox ou les [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)). À titre d'exemple, les données de formulaire sont visibles comme suit dans l'onglet Chrome Network. Après avoir soumis le formulaire&nbsp;:
 
-1.  Pressez F12
-2.  Selectionnez «&nbsp;Réseau&nbsp;»
-3.  Selectionnez «&nbsp;Tout&nbsp;»
-4.  Selectionnez «&nbsp;foo.com&nbsp;» dans l'onglet «&nbsp;Nom&nbsp;»
-5.  Selectionnez «&nbsp;En‑tête&nbsp;»
+1. Pressez F12
+2. Selectionnez «&nbsp;Réseau&nbsp;»
+3. Selectionnez «&nbsp;Tout&nbsp;»
+4. Selectionnez «&nbsp;foo.com&nbsp;» dans l'onglet «&nbsp;Nom&nbsp;»
+5. Selectionnez «&nbsp;En‑tête&nbsp;»
 
 Vous obtiendrez les données du formulaire, comme l'image suivante le montre.
 
@@ -187,8 +179,8 @@ Vous obtiendrez les données du formulaire, comme l'image suivante le montre.
 
 La seule chose affichée à l'utilisateur est l'URL appelée. Comme mentionné ci‑dessus, avec une requête `GET` l'utilisateur verra les données dans la barre de l'URL, mais avec une requête `POST` il ne verra rien. Cela peut être important pour deux raisons&nbsp;:
 
-1.  Si vous avez besoin d'envoyer un mot de passe (ou toute autre donnée sensible), n'utilisez jamais la méthode GET ou vous risquez de l'afficher dans la barre d'URL, ce qui serait très peu sûr.
-2.  Si vous avez besoin d'envoyer une grande quantité de données, la méthode POST est préférable, car certains navigateurs limitent la taille des URLs. De plus, de nombreux serveurs limitent la longueur des URL qu'ils acceptent.
+1. Si vous avez besoin d'envoyer un mot de passe (ou toute autre donnée sensible), n'utilisez jamais la méthode GET ou vous risquez de l'afficher dans la barre d'URL, ce qui serait très peu sûr.
+2. Si vous avez besoin d'envoyer une grande quantité de données, la méthode POST est préférable, car certains navigateurs limitent la taille des URLs. De plus, de nombreux serveurs limitent la longueur des URL qu'ils acceptent.
 
 ## Côté serveur : récupérer les données
 
@@ -278,7 +270,7 @@ Par exemple :
 <form method="post" action="https://www.foo.com" enctype="multipart/form-data">
   <div>
     <label for="file">Choisir un fichier</label>
-    <input type="file" id="file" name="myFile">
+    <input type="file" id="file" name="myFile" />
   </div>
   <div>
     <button>Envoyer le fichier</button>
@@ -319,23 +311,3 @@ Si vous voulez en savoir plus par rapport aux applications web, vous pouvez cons
 - [Blog de Chris Shiflett à propos de la sécurité avec PHP](https://shiflett.org/)
 
 {{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
-
-## Dans ce module
-
-- [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Your_first_form)
-- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Basic_native_form_controls)
-- [Les types de saisie HTML5](/fr/docs/Learn/Forms/HTML5_input_types)
-- [Autres contrôles de formulaires](/fr/docs/Learn/Forms/Other_form_controls)
-- [Mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Styling_web_forms)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_form_styling)
-- [Pseudo-classes d'interface utilisateur](/fr/docs/Learn/Forms/UI_pseudo-classes)
-- [Envoi des données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
-- [Validation des données de formulaire](/fr/docs/Learn/Forms/Form_validation)
-- [Envoi de données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### Sujets avancés
-
-- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

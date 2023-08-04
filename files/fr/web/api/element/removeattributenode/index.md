@@ -1,27 +1,24 @@
 ---
 title: element.removeAttributeNode
 slug: Web/API/Element/removeAttributeNode
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthodes
-translation_of: Web/API/Element/removeAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
 `removeAttributeNode` enlève l'attribut spécifié de l'élément courant.
 
 ## Syntaxe
 
-    removedAttr =element.removeAttributeNode(attributeNode)
+```js
+removedAttr = element.removeAttributeNode(attributeNode);
+```
 
 - `attributeNode` est le nœud `Attr` à enlever.
 - `removedAttr` est le nœud `Attr` qui vient d'être enlevé.
 
 ## Exemple
 
-```html
+```js
 // <div id="top" align="center" />
 var d = document.getElementById("top");
 var d_align = d.getAttributeNode("align");
@@ -33,7 +30,7 @@ d.removeAttributeNode(d_align);
 
 Si l'attribut enlevé a une valeur par défaut, celle-ci remplace immédiatement l'ancienne. Lorsque c'est possible, l'attribut de remplacement conserve la même URI d'espace de noms et le même nom local, ainsi que le préfixe original.
 
-Il n'y a pas de `removeAttributeNodeNS` (contrairement à la paire `setAttributeNode` et `setAttributeNodeNS` pour lesquels il est nécessaire de savoir quel attribut remplacer (le cas échéant),  `removeAttributeNode` n'a pas cette exigence.  `removeAttributeNode` peut supprimer des attributs, qu'ils soient d'espace de noms ou pas.
+Il n'y a pas de `removeAttributeNodeNS` (contrairement à la paire `setAttributeNode` et `setAttributeNodeNS` pour lesquels il est nécessaire de savoir quel attribut remplacer (le cas échéant), `removeAttributeNode` n'a pas cette exigence. `removeAttributeNode` peut supprimer des attributs, qu'ils soient d'espace de noms ou pas.
 
 {{ DOMAttributeMethods() }}
 

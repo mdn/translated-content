@@ -1,34 +1,15 @@
 ---
 title: XMLHttpRequest.responseType
 slug: Web/API/XMLHttpRequest/responseType
-tags:
-  - AJAX
-  - API
-  - HTTP
-  - HTTP レスポンス
-  - HTTP レスポンス型
-  - プロパティ
-  - リファレンス
-  - レスポンス
-  - XHR
-  - XMLHttpRequest
-  - responseType
-browser-compat: api.XMLHttpRequest.responseType
-translation_of: Web/API/XMLHttpRequest/responseType
+l10n:
+  sourceCommit: abf155210d826c2584d23433eb2eac45a6669d23
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} (XHR) の **`responseType`** プロパティは列挙型の文字列値で、レスポンスに含まれているデータの型を示します。
 
 作者がレスポンスの型を変更することもできます。 `responseType` の値として空文字列が設定された場合は、既定値である `text` が使用されます。
-
-## 構文
-
-```js
-var type = XMLHttpRequest.responseType;
-
-XMLHttpRequest.responseType = type;
-```
 
 ### 値
 
@@ -45,17 +26,14 @@ XMLHttpRequest.responseType = type;
 - `"json"`
   - : `response` は {{Glossary("JSON")}} として受信したデータの内容を解釈して生成された JavaScript オブジェクトです。
 - `"text"`
-  - : `response` は {{domxref("DOMString")}} オブジェクトに入ったテキストです。
-- `"ms-stream"` {{non-standard_inline}}
-  - : `response` はストリーミングダウンロードの一部です。このレスポンス型はダウンロードリクエストでのみ利用可能で、 Internet Explorer のみが対応しています。
+  - : `response` は文字列に入ったテキストです。
 
-> **Note:** `responseType` を特定の値に設定する場合は、サーバーが実際にその形式と互換性のあるレスポンスを送信していることを確認してください。サーバーが `responseType` に設定された値と互換性のないデータを返した場合、 {{domxref("XMLHttpRequest.response", "response")}} の値は `null` になります。
-</div>
+> **メモ:** `responseType` を特定の値に設定する場合は、サーバーが実際にその形式と互換性のあるレスポンスを送信していることを確認してください。サーバーが `responseType` に設定された値と互換性のないデータを返した場合、{{domxref("XMLHttpRequest.response", "response")}} の値は `null` になります。
 
 ### 例外
 
-- `InvalidAccessError`
-  - : `responseType` の値の変更が同期モードの `XMLHttpRequest` 上で試みられたものの、ワーカー ({{domxref("Worker")}}) の中ではなかった場合。詳細については、下記の{{anch("同期 XHR の制限")}}を参照してください。
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : `responseType` の値の変更が同期モードの `XMLHttpRequest` 上で試みられたものの、ワーカー ({{domxref("Worker")}}) の中ではなかった場合。詳細については、下記の[同期 XHR の制限](#同期_xhr_の制限)を参照してください。
 
 ## 使用上の注意
 

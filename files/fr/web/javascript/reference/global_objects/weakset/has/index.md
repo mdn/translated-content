@@ -1,16 +1,8 @@
 ---
 title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - WeakSet
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/has
-original_slug: Web/JavaScript/Reference/Objets_globaux/WeakSet/has
 ---
+
 {{JSRef}}
 
 La méthode **`has()`** renvoie un booléen indiquant si un objet donné est contenu dans l'ensemble `WeakSet`.
@@ -19,7 +11,9 @@ La méthode **`has()`** renvoie un booléen indiquant si un objet donné est con
 
 ## Syntaxe
 
-    ws.has(valeur);
+```js
+ws.has(valeur);
+```
 
 ### Paramètres
 
@@ -38,20 +32,17 @@ var ws = new WeakSet();
 var obj = {};
 ws.add(window);
 
-mySet.has(window);  // renvoie true
-mySet.has(obj);     // renvoie false
+mySet.has(window); // renvoie true
+mySet.has(obj); // renvoie false
 ```
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-weakset.prototype.has', 'WeakSet.prototype.has')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-weakset.prototype.has', 'WeakSet.prototype.has')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WeakSet.has")}}
+{{Compat}}
 
 ## Voir aussi
 

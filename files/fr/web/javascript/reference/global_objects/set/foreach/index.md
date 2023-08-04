@@ -1,16 +1,8 @@
 ---
 title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/forEach
-original_slug: Web/JavaScript/Reference/Objets_globaux/Set/forEach
 ---
+
 {{JSRef}}
 
 La méthode **`forEach()`** permet d'exécuter une fonction donnée, une fois pour chaque valeur de l'ensemble `Set`. L'ordre appliqué est celui dans lequel les valeurs ont été ajoutées à l'ensemble.
@@ -19,7 +11,9 @@ La méthode **`forEach()`** permet d'exécuter une fonction donnée, une fois po
 
 ## Syntaxe
 
-    monSet.forEach(callback[, thisArg])
+```js
+monSet.forEach(callback[, thisArg])
+```
 
 ### Valeur de retour
 
@@ -63,7 +57,7 @@ Le code qui suit permet d'enregistrer une ligne pour chaque élément contenu da
 
 ```js
 function logSetElements(valeur1, valeur2, set) {
-    console.log("s[" + valeur1 + "] = " + valeur2);
+  console.log("s[" + valeur1 + "] = " + valeur2);
 }
 
 new Set(["toto", "truc", undefined]).forEach(logSetElements);
@@ -76,14 +70,11 @@ new Set(["toto", "truc", undefined]).forEach(logSetElements);
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-set.prototype.foreach', 'Set.prototype.forEach')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-set.prototype.foreach', 'Set.prototype.forEach')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Set.forEach")}}
+{{Compat}}
 
 ## Voir aussi
 

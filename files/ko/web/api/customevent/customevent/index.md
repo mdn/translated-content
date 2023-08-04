@@ -1,17 +1,11 @@
 ---
 title: CustomEvent()
 slug: Web/API/CustomEvent/CustomEvent
-tags:
-  - Constructor
-  - Reference
-browser-compat: api.CustomEvent.CustomEvent
-translation_of: Web/API/CustomEvent/CustomEvent
 ---
+
 {{APIRef("DOM")}}
 
 **`CustomEvent()`** 생성자는 새로운 {{domxref("CustomEvent")}}를 생성합니다.
-
-{{AvailableInWorkers}}
 
 ## 구문
 
@@ -33,19 +27,19 @@ CustomEvent(typeArg, options);
 
 ```js
 // CustomEvent 생성
-const catFound = new CustomEvent('animalfound', {
+const catFound = new CustomEvent("animalfound", {
   detail: {
-    name: 'cat'
-  }
+    name: "cat",
+  },
 });
-const dogFound = new CustomEvent('animalfound', {
+const dogFound = new CustomEvent("animalfound", {
   detail: {
-    name: 'dog'
-  }
+    name: "dog",
+  },
 });
 
 // 적합한 이벤트 수신기 부착
-obj.addEventListener('animalfound', (e) => console.log(e.detail.name));
+obj.addEventListener("animalfound", (e) => console.log(e.detail.name));
 
 // 이벤트 발송
 obj.dispatchEvent(catFound);
@@ -67,3 +61,4 @@ obj.dispatchEvent(dogFound);
 ## 함께 보기
 
 - {{domxref("CustomEvent")}}
+- [이벤트 생성 및 발동](/ko/docs/Web/Events/Creating_and_triggering_events)

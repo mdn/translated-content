@@ -1,16 +1,8 @@
 ---
 title: Math.log2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log2
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log2
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/log2
 ---
+
 {{JSRef}}
 
 La fonction **`Math.log2()`** renvoie le logarithme en base 2 d'un nombre :
@@ -21,7 +13,9 @@ La fonction **`Math.log2()`** renvoie le logarithme en base 2 d'un nombre :
 
 ## Syntaxe
 
-    Math.log2(x)
+```js
+Math.log2(x);
+```
 
 ### Paramètres
 
@@ -43,24 +37,21 @@ Si `x` est strictement inférieur à 0, la valeur renvoyée sera {{jsxref("NaN")
 ### Utiliser `Math.log2()`
 
 ```js
-Math.log2(3);    // 1.584962500721156
-Math.log2(2);    // 1
-Math.log2(1);    // 0
-Math.log2(0);    // -Infinity
-Math.log2(-2);   // NaN
+Math.log2(3); // 1.584962500721156
+Math.log2(2); // 1
+Math.log2(1); // 0
+Math.log2(0); // -Infinity
+Math.log2(-2); // NaN
 Math.log2(1024); // 10
 ```
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-math.log2', 'Math.log2')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.log2', 'Math.log2')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.log2")}}
+{{Compat}}
 
 ## Voir aussi
 

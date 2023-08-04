@@ -1,14 +1,8 @@
 ---
 title: element.hasAttributeNS
 slug: Web/API/Element/hasAttributeNS
-tags:
-  - API
-  - Attributs
-  - DOM
-  - Element
-  - Méthodes
-translation_of: Web/API/Element/hasAttributeNS
 ---
+
 {{ APIRef("DOM") }}
 
 ## Résumé
@@ -18,10 +12,7 @@ translation_of: Web/API/Element/hasAttributeNS
 ## Syntaxe
 
 ```js
-result =
-element.hasAttributeNS(
-namespace,
-localName)
+result = element.hasAttributeNS(namespace, localName);
 ```
 
 - `result`
@@ -33,14 +24,16 @@ localName)
 
 ## Exemple
 
-    // Vérifie que l'attribut existe
-    // avant de définir une valeur
-    var d = document.getElementById("div1");
-    if (d.hasAttributeNS(
-            "http://www.mozilla.org/ns/specialspace/",
-            "special-align")) {
-       d.setAttribute("align", "center");
-    }
+```js
+// Vérifie que l'attribut existe
+// avant de définir une valeur
+var d = document.getElementById("div1");
+if (
+  d.hasAttributeNS("http://www.mozilla.org/ns/specialspace/", "special-align")
+) {
+  d.setAttribute("align", "center");
+}
+```
 
 ## Notes
 

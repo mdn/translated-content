@@ -1,15 +1,8 @@
 ---
 title: Assignement (=)
 slug: Web/JavaScript/Reference/Operators/Assignment
-tags:
-  - Fonctionnalités du language
-  - JavaScript
-  - Opérateur
-  - Opérateur d'assignement
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Assignment
-original_slug: Web/JavaScript/Reference/Opérateurs/Assignement
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur d'assignement simple (`=`) est utilisé pour définir la valeur d'une variable. Il est possible d'ajouter une valeur à plusieurs variables en chaînant les variables.
@@ -18,7 +11,9 @@ L'opérateur d'assignement simple (`=`) est utilisé pour définir la valeur d'u
 
 ## Syntaxe
 
-    Opérateur : x = y
+```js
+x = y;
+```
 
 ## Exemples
 
@@ -37,16 +32,14 @@ x = y = z;
 // x, y et z sont égales à 25
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                        |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-assignment-operators', 'Assignment operators')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.assignment")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Assignment operators in the JS guide](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs)
+- [Assignment operators in the JS guide](/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs)

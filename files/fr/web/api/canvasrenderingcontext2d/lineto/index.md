@@ -1,15 +1,17 @@
 ---
 title: CanvasRenderingContext2D.lineTo()
 slug: Web/API/CanvasRenderingContext2D/lineTo
-translation_of: Web/API/CanvasRenderingContext2D/lineTo
 ---
+
 {{APIRef}}
 
 La méthode **`CanvasRenderingContext2D.lineTo()`** de l'API Canvas 2D connecte le dernier point du sous-chemin en cours aux coordonnées `x, y` spécifiées avec une ligne droite (sans tracer réellement le chemin).
 
 ## Syntaxe
 
-    void ctx.lineTo(x, y);
+```js
+void ctx.lineTo(x, y);
+```
 
 ### Paramètres
 
@@ -37,7 +39,7 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.moveTo(50,50);
+ctx.moveTo(50, 50);
 ctx.lineTo(100, 100);
 ctx.stroke();
 ```
@@ -56,7 +58,8 @@ ctx.stroke();
 ctx.beginPath();
 ctx.moveTo(50,50);
 ctx.lineTo(100, 100);
-ctx.stroke();</textarea>
+ctx.stroke();</textarea
+>
 ```
 
 ```js hidden
@@ -72,14 +75,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -89,13 +92,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-lineto", "CanvasRenderingContext2D.lineTo")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.lineTo")}}
+{{Compat}}
 
 ## Voir aussi
 

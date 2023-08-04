@@ -1,15 +1,8 @@
 ---
 title: Object.prototype.propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-tags:
-  - JavaScript
-  - Méthode
-  - Object
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/propertyIsEnumerable
 ---
+
 {{JSRef}}
 
 La méthode **`propertyIsEnumerable()`** renvoie un booléen qui indique si la propriété donnée est énumérable.
@@ -18,7 +11,9 @@ La méthode **`propertyIsEnumerable()`** renvoie un booléen qui indique si la p
 
 ## Syntaxe
 
-    obj.propertyIsEnumerable(prop)
+```js
+obj.propertyIsEnumerable(prop);
+```
 
 ### Paramètres
 
@@ -42,11 +37,11 @@ Dans l'exemple qui suit, on illustre comment utiliser `propertyIsEnumerable` sur
 ```js
 var o = {};
 var a = [];
-o.prop = 'est énumérable';
-a[0] = 'est énumérable';
+o.prop = "est énumérable";
+a[0] = "est énumérable";
 
-o.propertyIsEnumerable('prop');   // renvoie true
-a.propertyIsEnumerable(0);        // renvoie true
+o.propertyIsEnumerable("prop"); // renvoie true
+a.propertyIsEnumerable(0); // renvoie true
 ```
 
 ### Objets natifs et objets définis par l'utilisateur
@@ -54,64 +49,61 @@ a.propertyIsEnumerable(0);        // renvoie true
 Dans l'exemple ci-dessous, on illustre l'énumérabilité des propriétés des objets natifs et celle des objets tiers, définis dans les scripts :
 
 ```js
-var a = ['est énumérable'];
+var a = ["est énumérable"];
 
-a.propertyIsEnumerable(0);          // renvoie true
-a.propertyIsEnumerable('length');   // renvoie false
+a.propertyIsEnumerable(0); // renvoie true
+a.propertyIsEnumerable("length"); // renvoie false
 
-Math.propertyIsEnumerable('random');   // renvoie false
-this.propertyIsEnumerable('Math');     // renvoie false
+Math.propertyIsEnumerable("random"); // renvoie false
+this.propertyIsEnumerable("Math"); // renvoie false
 ```
 
 ### Propriétés héritées et propriétés propres
 
 ```js
 var a = [];
-a.propertyIsEnumerable('constructor');         // renvoie false
+a.propertyIsEnumerable("constructor"); // renvoie false
 
 function premierConstructeur() {
-  this.propriete = 'non énumérable';
+  this.propriete = "non énumérable";
 }
 
-premierConstructeur.prototype.premiereMethode = function() {};
+premierConstructeur.prototype.premiereMethode = function () {};
 
 function secondConstructeur() {
-  this.methode = function methode() { return 'énumérable'; };
+  this.methode = function methode() {
+    return "énumérable";
+  };
 }
 
-secondConstructeur.prototype = new premierConstructeur;
+secondConstructeur.prototype = new premierConstructeur();
 secondConstructeur.prototype.constructor = secondConstructeur;
 
 var o = new secondConstructeur();
-o.propArbitraire = 'is enumerable';
+o.propArbitraire = "is enumerable";
 
-o.propertyIsEnumerable('propArbitraire');   // renvoie true
-o.propertyIsEnumerable('méthode');          // renvoie true
-o.propertyIsEnumerable('propriété');        // renvoie false
+o.propertyIsEnumerable("propArbitraire"); // renvoie true
+o.propertyIsEnumerable("méthode"); // renvoie true
+o.propertyIsEnumerable("propriété"); // renvoie false
 
-o.propriete = 'énumérable';
+o.propriete = "énumérable";
 
-o.propertyIsEnumerable('propriété');        // renvoie true
+o.propertyIsEnumerable("propriété"); // renvoie true
 
 // Ces instructions renvoient false car propertyIsEnumerable
 // ne prend pas en compte la chaîne de prototypes
-o.propertyIsEnumerable('prototype');   // renvoie false
-o.propertyIsEnumerable('constructor'); // renvoie false
-o.propertyIsEnumerable('premièreMéthode'); // renvoie false
+o.propertyIsEnumerable("prototype"); // renvoie false
+o.propertyIsEnumerable("constructor"); // renvoie false
+o.propertyIsEnumerable("premièreMéthode"); // renvoie false
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES3')}}                                                                                                                             | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.2.4.7', 'Object.prototype.propertyIsEnumerable')}}                                             | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.propertyIsEnumerable")}}
+{{Compat}}
 
 ## Voir aussi
 

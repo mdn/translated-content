@@ -1,16 +1,6 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Statement
-  - Variable declaration
-  - Variables
-  - let
-browser-compat: javascript.statements.let
-translation_of: Web/JavaScript/Reference/Statements/let
 ---
 {{jsSidebar("Statements")}}
 
@@ -193,7 +183,7 @@ function do_something() {
 
 ```js
 {
-    // TDZ가 스코프 맨 위에서부터 시작
+    // TDZ가 스코프 맨 위에서부터 시작
     const func = () => console.log(letVar); // OK
 
     // TDZ 안에서 letVar에 접근하면 ReferenceError

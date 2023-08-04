@@ -1,18 +1,8 @@
 ---
 title: webNavigation.onCommitted
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCommitted
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCommitted
-  - webNavigations
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCommitted
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsqu'une navigation est validée. Au moins une partie du nouveau document a été reçue du serveur et le navigateur a décidé de passer au nouveau document.
@@ -21,11 +11,11 @@ Lancé lorsqu'une navigation est validée. Au moins une partie du nouveau docume
 
 ```js
 browser.webNavigation.onCommitted.addListener(
-  listener,                 // function
-  filter                    // optional object
-)
-browser.webNavigation.onCommitted.removeListener(listener)
-browser.webNavigation.onCommitted.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onCommitted.removeListener(listener);
+browser.webNavigation.onCommitted.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -53,7 +43,7 @@ Les événements ont trois fonctions :
 
 ## Objets supplémentaires
 
-### détails
+### Détails
 
 - `tabId`
   - : `integer`. L'ID de l'onglet dans lequel la navigation est sur le point de se produire.
@@ -72,9 +62,9 @@ Les événements ont trois fonctions :
 - `transitionQualifiers`
   - : `Array` de `{{WebExtAPIRef("webNavigation.transitionQualifier", "transitionQualifier")}}`. Informations supplémentaires sur la navigation : par exemple, s'il existait une redirection de serveur ou de client.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.onCommitted")}}
+{{Compat}}
 
 ## Exemples
 
@@ -82,12 +72,8 @@ Logs les URL cibles et les informations de transition supplémentaires pour `onC
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnCommitted(details) {
   console.log("target URL: " + details.url);
@@ -106,7 +92,8 @@ browser.webNavigation.onCommitted.addListener(logOnCommitted, filter);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -133,4 +120,4 @@ browser.webNavigation.onCommitted.addListener(logOnCommitted, filter);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

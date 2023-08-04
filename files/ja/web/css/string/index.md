@@ -1,15 +1,8 @@
 ---
 title: <string>
 slug: Web/CSS/string
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - レイアウト
-  - リファレンス
-  - ウェブ
-translation_of: Web/CSS/string
 ---
+
 {{CSSRef}}
 
 **`<string>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、一連の文字列を表します。文字列は {{CSSxRef("content")}}, {{CSSxRef("font-family")}}, {{CSSxRef("quotes")}} など、数々の CSS プロパティで使用されます。
@@ -26,30 +19,32 @@ translation_of: Web/CSS/string
 
 ただし、改行を行うためには、{{cssxref("white-space")}} プロパティに適切な値を設定する必要があります。
 
-> **Note:** [HTML エンティティ](/ja/docs/Glossary/Entity) (`&nbsp;` や `&#8212;` など) は、 CSS の `<string>` の中で使用することはできません。
+> **メモ:** [HTML エンティティ](/ja/docs/Glossary/Entity) (`&nbsp;` や `&#8212;` など) は、 CSS の `<string>` の中で使用することはできません。
 
 ## 例
 
 ### 有効な文字列の例
 
-    /* 単純な文字列 */
-    "This string is demarcated by double quotes."
-    'This string is demarcated by single quotes.'
+```js
+/* 単純な文字列 */
+"This string is demarcated by double quotes."
+'This string is demarcated by single quotes.'
 
-    /* 文字のエスケープ */
-    "This is a string with \" an escaped double quote."
-    "This string also has \22 an escaped double quote."
-    'This is a string with \' an escaped single quote.'
-    'This string also has \27 an escaped single quote.'
-    "This is a string with \\ an escaped backslash."
+/* 文字のエスケープ */
+"This is a string with \" an escaped double quote."
+"This string also has \22 an escaped double quote."
+'This is a string with \' an escaped single quote.'
+'This string also has \27 an escaped single quote.'
+"This is a string with \\ an escaped backslash."
 
-    /* 文字列内の改行 */
-    "This string has a \Aline break in it."
+/* 文字列内の改行 */
+"This string has a \Aline break in it."
 
-    /* 2 行にわたる文字列 (これら 2 つの文字列は同じ出力になります) */
-    "A really long \
-    awesome string"
-    "A really long awesome string"
+/* 2 行にわたる文字列 (これら 2 つの文字列は同じ出力になります) */
+"A really long \
+awesome string"
+"A really long awesome string"
+```
 
 ## 仕様書
 

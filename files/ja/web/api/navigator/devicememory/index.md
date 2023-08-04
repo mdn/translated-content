@@ -1,16 +1,8 @@
 ---
 title: Navigator.deviceMemory
 slug: Web/API/Navigator/deviceMemory
-tags:
-  - API
-  - 端末メモリー API
-  - Navigator
-  - プロパティ
-  - リファレンス
-  - deviceMemory
-  - メモリー
-translation_of: Web/API/Navigator/deviceMemory
 ---
+
 {{APIRef("Device Memory")}}{{securecontext_header}}{{SeeCompatTable}}
 
 **`deviceMemory`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、端末のおよそのメモリ量をギガバイト単位で返します。
@@ -25,7 +17,7 @@ memoryAmount = navigator.deviceMemory
 
 ### 値
 
-浮動小数点値で  `0.25`, `0.5`, `1`, `2`, `4`, `8` のうちのいずれかです。
+浮動小数点値で `0.25`, `0.5`, `1`, `2`, `4`, `8` のうちのいずれかです。
 
 ## 例
 

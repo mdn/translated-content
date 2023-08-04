@@ -1,14 +1,8 @@
 ---
 title: L'opérateur set
 slug: Web/JavaScript/Reference/Functions/set
-tags:
-  - ECMAScript 5
-  - Functions
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Functions/set
-original_slug: Web/JavaScript/Reference/Fonctions/set
 ---
+
 {{jsSidebar("Functions")}}
 
 La syntaxe **`set`** permet de lier une propriété d'un objet à une fonction qui sera appelée à chaque tentative de modification de cette propriété.
@@ -17,8 +11,10 @@ La syntaxe **`set`** permet de lier une propriété d'un objet à une fonction q
 
 ## Syntaxe
 
-    {set prop(val) { . . .}}
-    {set [expression](val) { . . .}}
+```js
+{set prop(val) { . . .}}
+{set [expression](val) { . . .}}
+```
 
 ### Paramètres
 
@@ -50,11 +46,11 @@ Dans l'exemple qui suit, on définit une pseudo-propriété `courant` pour un ob
 
 ```js
 var o = {
-  set courant (str) {
+  set courant(str) {
     this.log[this.log.length] = str;
   },
-  log: []
-}
+  log: [],
+};
 ```
 
 On notera que `courant` n'est pas défini. Toute tentative pour y accéder renverra `undefined`.
@@ -72,12 +68,16 @@ delete o.courant;
 On peut également ajouter un mutateur sur un objet d'ores et déjà créé. Pour cela, on utilisera la méthode {{jsxref("Object.defineProperty()")}}.
 
 ```js
-var o = { a:0 };
+var o = { a: 0 };
 
-Object.defineProperty(o, "b", { set: function (x) { this.a = x / 2; } });
+Object.defineProperty(o, "b", {
+  set: function (x) {
+    this.a = x / 2;
+  },
+});
 
 o.b = 10; // On utilise le setter, qui affecte 10 / 2 (5) à 'a'
-console.log(o.a) // 5
+console.log(o.a); // 5
 ```
 
 ### Utiliser un nom de propriété calculé
@@ -87,31 +87,29 @@ var expr = "toto";
 
 var obj = {
   bidule: "truc",
-  set [expr](v) { this.bidule = v; }
+  set [expr](v) {
+    this.bidule = v;
+  },
 };
 
 console.log(obj.bidule); // "truc"
-obj.toto = "bidule";      // le mutateur est utilisé
+obj.toto = "bidule"; // le mutateur est utilisé
 console.log(obj.bidule); // "bidule"
 ```
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires                          |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------- |
-| {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}                     | {{Spec2('ES5.1')}}     | Définition initiale                   |
-| {{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES6')}}         | Ajout des noms de propriétés calculés |
-| {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.functions.set")}}
+{{Compat}}
 
 ## Voir aussi
 
 - {{jsxref("Fonctions/get","get")}}
 - {{jsxref("Opérateurs/L_opérateur_delete","delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [Définir des accesseurs et des mutateurs](/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#D.C3.A9finir_des_getters_et_setters), dans le Guide JavaScript

@@ -1,13 +1,8 @@
 ---
 title: element
 slug: Web/CSS/element
-tags:
-  - CSS
-  - Fonction
-  - Reference
-translation_of: Web/CSS/element()
-original_slug: Web/CSS/element()
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La fonction **`element()`** définit une valeur {{cssxref("&lt;image&gt;")}} générée à partir d'un élément HTML arbitraire. L'image est calculée dynamiquement : si l'élément HTML change, les propriétés CSS utilisant la valeur seront automatiquement mis à jour.
@@ -18,12 +13,14 @@ Pour les navigateurs basés sur Gecko, on peut utiliser la méthode {{domxref("d
 
 ## Syntaxe
 
-    element(id)
+```
+element(id)
+```
 
 ### Paramètres
 
 - **`id`**
-  - : L'identifiant (correspondant à l'attribut {{htmlattrxref("id")}}) de l'élément HTML visé.
+  - : L'identifiant (correspondant à l'attribut [`id`](/fr/docs/Web/HTML/Global_attributes#id)) de l'élément HTML visé.
 
 ## Exemples
 
@@ -36,7 +33,6 @@ Pour les navigateurs basés sur Gecko, on peut utiliser la méthode {{domxref("d
   width: 400px;
   height: 400px;
   background: -moz-element(#monArrierePlan) no-repeat;
-
 }
 
 .paragraphe {
@@ -45,7 +41,7 @@ Pour les navigateurs basés sur Gecko, on peut utiliser la méthode {{domxref("d
   color: white;
 }
 
-#monArrierePlan{
+#monArrierePlan {
   width: 1024px;
   height: 1024px;
   background-image: linear-gradient(to right, red, orange, yellow, white);
@@ -60,21 +56,17 @@ Pour les navigateurs basés sur Gecko, on peut utiliser la méthode {{domxref("d
 
 ```html
 <div class="exemple">
-  <p>
-    Cet élément utilise l'élément
-    #monArrierePlan comme image
-    de fond !
-  </p>
+  <p>Cet élément utilise l'élément #monArrierePlan comme image de fond !</p>
 </div>
 
 <div class="cache">
   <div id="monArrierePlan">
-    <p class="paragraphe">
-      Et voici un texte inscrit sur
-      l'arrière-plan.
-    </p>
-  <div>
-<div>
+    <p class="paragraphe">Et voici un texte inscrit sur l'arrière-plan.</p>
+    <div>
+      <div></div>
+    </div>
+  </div>
+</div>
 ```
 
 #### Résultat
@@ -106,9 +98,7 @@ Pour les navigateurs qui prennent en charge `element`, on peut ici voir un arri�
 <div class="exemple"></div>
 
 <div class="cache">
-  <button id="monArrierePlan" type="button">
-    Méchant bouton
-  </button>
+  <button id="monArrierePlan" type="button">Méchant bouton</button>
 </div>
 ```
 
@@ -118,13 +108,11 @@ Pour les navigateurs qui prennent en charge `element`, on peut ici voir un arri�
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                             | Commentaires      |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
-| {{SpecName('CSS4 Images', '#element-notation', 'Using Elements as Images: the element() notation')}} | {{Spec2('CSS4 Images')}} | Reporté pour CSS4 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.image.element")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,14 +1,8 @@
 ---
 title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/min
 ---
+
 {{JSRef}}
 
 La fonction **`Math.min()`** renvoie le plus petit nombre d'une série de 0 ou plusieurs nombres ou bien {{jsxref("NaN")}} si au moins un des arguments fourni n'est pas un nombre ou ne peut pas être converti en nombre.
@@ -17,7 +11,9 @@ La fonction **`Math.min()`** renvoie le plus petit nombre d'une série de 0 ou p
 
 ## Syntaxe
 
-    Math.min([valeur1[,valeur2, ...]])
+```js
+Math.min([valeur1[,valeur2, ...]])
+```
 
 ### Paramètres
 
@@ -43,7 +39,8 @@ Si au moins un des arguments ne peut pas être converti en un nombre, le résult
 Dans cet exemple, on trouve le minimum de x et y et on affecte cette valeur à z :
 
 ```js
-var x = 10, y = -20;
+var x = 10,
+  y = -20;
 var z = Math.min(x, y);
 ```
 
@@ -69,16 +66,11 @@ var x = Math.min(f(toto), limite);
 
 ## Spécifications
 
-| Spécification                                                        | Statut                       | Commentaires                                          |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.12', 'Math.min')}} | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.min', 'Math.min')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.min', 'Math.min')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.min")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,9 +1,8 @@
 ---
 title: BatteryManager.chargingTime
 slug: Web/API/BatteryManager/chargingTime
-translation_of: Web/API/BatteryManager/chargingTime
-browser-compat: api.BatteryManager.chargingTime
 ---
+
 {{deprecated_header}}
 
 {{APIRef("Battery API")}}
@@ -33,7 +32,7 @@ Si la batería está descargándose el valor es [`Infinity`](/es/docs/Web/JavaSc
 ### Contenido JavaScript
 
 ```js
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then(function (battery) {
   var time = battery.chargingTime;
 
   document.querySelector("#chargingTime").textContent = battery.chargingTime;
@@ -56,4 +55,3 @@ navigator.getBattery().then(function(battery) {
 
 - {{domxref("BatteryManager")}}
 - {{domxref("Navigator.getBattery")}}
-

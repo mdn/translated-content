@@ -1,12 +1,8 @@
 ---
 title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/parseFloat
-tags:
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
-original_slug: Web/JavaScript/Reference/Objets_globaux/parseFloat
 ---
+
 {{jsSidebar("Objects")}}
 
 La fonction **`parseFloat()`** permet de transformer une chaîne de caractères en un nombre flottant après avoir analysée celle-ci (_parsing_).
@@ -15,7 +11,9 @@ La fonction **`parseFloat()`** permet de transformer une chaîne de caractères 
 
 ## Syntaxe
 
-    parseFloat(string)
+```js
+parseFloat(string);
+```
 
 ### Paramètres
 
@@ -57,13 +55,15 @@ parseFloat("0.0314E+2");
 parseFloat("3.14d'autres caractères non numériques");
 
 var titi = Object.create(null);
-titi.valueOf = function () { return "3.14"; };
+titi.valueOf = function () {
+  return "3.14";
+};
 parseFloat(titi);
 ```
 
 ### Utiliser `parseFloat()` pour renvoyer `NaN`
 
-Dans cet exemple, le résultat obtenu est {{jsxref("<code>NaN</code>")}} :
+Dans cet exemple, le résultat obtenu est {{jsxref("NaN")}} :
 
 ```js
 parseFloat("FF2");
@@ -82,36 +82,30 @@ Si on souhaite éviter de convertir des chaînes qui contiennent des caractères
 
 ```js
 var filterFloat = function (value) {
-    if (/^(\-|\+)?([0-9]+(\.[0-9]+)?|Infinity)$/
-      .test(value))
-      return Number(value);
+  if (/^(\-|\+)?([0-9]+(\.[0-9]+)?|Infinity)$/.test(value))
+    return Number(value);
   return NaN;
-}
+};
 
-console.log(filterFloat('421'));               // 421
-console.log(filterFloat('-421'));              // -421
-console.log(filterFloat('+421'));              // 421
-console.log(filterFloat('Infinity'));          // Infinity
-console.log(filterFloat('1.61803398875'));     // 1.61803398875
-console.log(filterFloat('421e+0'));            // NaN
-console.log(filterFloat('421hop'));            // NaN
-console.log(filterFloat('hop1.61803398875'));  // NaN
+console.log(filterFloat("421")); // 421
+console.log(filterFloat("-421")); // -421
+console.log(filterFloat("+421")); // 421
+console.log(filterFloat("Infinity")); // Infinity
+console.log(filterFloat("1.61803398875")); // 1.61803398875
+console.log(filterFloat("421e+0")); // NaN
+console.log(filterFloat("421hop")); // NaN
+console.log(filterFloat("hop1.61803398875")); // NaN
 ```
 
 Attention : ce code n'est qu'un exemple et renverra `NaN` pour des valeurs pourtant valides comme `1.` ou `.5`.
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES1')}}                                                             | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.1.2.3', 'parseFloat')}}                 | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-parsefloat-string', 'parseFloat')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-parsefloat-string', 'parseFloat')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.parseFloat")}}
+{{Compat}}
 
 ## Voir aussi
 

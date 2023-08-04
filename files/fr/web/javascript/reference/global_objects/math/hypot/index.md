@@ -1,16 +1,8 @@
 ---
 title: Math.hypot()
 slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/hypot
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/hypot
 ---
+
 {{JSRef}}
 
 La fonction **`Math.hypot()`** renvoie la racine carrée de la somme des carrés de ses arguments. On peut également la définir avec la formule suivante :
@@ -21,7 +13,9 @@ La fonction **`Math.hypot()`** renvoie la racine carrée de la somme des carrés
 
 ## Syntaxe
 
-    Math.hypot([valeur1[,valeur2, ...]])
+```js
+Math.hypot([valeur1[,valeur2, ...]])
+```
 
 ### Paramètres
 
@@ -34,7 +28,7 @@ La racine carrée de la somme des carrés des arguments. S'il existe un des argu
 
 ## Description
 
-`hypot()` étant une méthode statique de `Math`, il faut utiliser `Math.hypot()`et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`hypot()` étant une méthode statique de `Math`, il faut utiliser `Math.hypot()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
 
 Si aucun argument n'est donné, le résultat sera +0.Si, parmi les arguments, au moins un ne peut pas être converti en un nombre, le résultat sera {{jsxref("NaN")}}.Si cette fonction est utilisée avec un argument : `Math.hypot(x)` sera équivalente à `Math.abs(x)`.
 
@@ -45,13 +39,13 @@ Cette fonction permet entre autres de gérer certains cas où, pour les grands n
 ### Utiliser `Math.hypot()`
 
 ```js
-Math.hypot(3, 4)        // 5
-Math.hypot(3, 4, 5)     // 7.0710678118654755
-Math.hypot()            // 0
-Math.hypot(NaN)         // NaN
-Math.hypot(3, 4, "toto") // NaN, +"toto" => NaN
-Math.hypot(3, 4, "5")   // 7.0710678118654755, +"5" => 5
-Math.hypot(-3)          // 3, the same as Math.abs(-3)
+Math.hypot(3, 4); // 5
+Math.hypot(3, 4, 5); // 7.0710678118654755
+Math.hypot(); // 0
+Math.hypot(NaN); // NaN
+Math.hypot(3, 4, "toto"); // NaN, +"toto" => NaN
+Math.hypot(3, 4, "5"); // 7.0710678118654755, +"5" => 5
+Math.hypot(-3); // 3, the same as Math.abs(-3)
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -59,18 +53,20 @@ Math.hypot(-3)          // 3, the same as Math.abs(-3)
 Si elle n'est pas disponible, cette fonction peut être émulée de la façon suivante :
 
 ```js
-Math.hypot =  Math.hypot || function() {
+Math.hypot =
+  Math.hypot ||
+  function () {
     var y = 0;
     var length = arguments.length;
 
     for (var i = 0; i < length; i++) {
-      if(arguments[i] === Infinity || arguments[i] === -Infinity) {
+      if (arguments[i] === Infinity || arguments[i] === -Infinity) {
         return Infinity;
       }
       y += arguments[i] * arguments[i];
     }
     return Math.sqrt(y);
-};
+  };
 ```
 
 Voici une seconde version qui évite les dépassements :
@@ -94,14 +90,11 @@ Math.hypot = function (x, y) {
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires        |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-math.hypot', 'Math.hypot')}}     | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-math.hypot', 'Math.hypot')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.hypot")}}
+{{Compat}}
 
 ## Voir aussi
 

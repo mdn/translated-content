@@ -1,24 +1,20 @@
 ---
 title: Constructeur Array()
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
-tags:
-  - Array
-  - Constructeur
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/Array
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/Array
 ---
+
 {{JSRef}}
 
 Le constructeur **`Array()`** permet de créer des objets {{jsxref("Array")}}.
 
 ## Syntaxe
 
-    [element0, element1, ..., elementN]
+```js
+[element0, element1, ..., elementN]
 
-    new Array(element0, element1[, ...[, elementN]])
-    new Array(longueurTableau)
+new Array(element0, element1[, ...[, elementN]])
+new Array(longueurTableau)
+```
 
 ### Paramètres
 
@@ -31,13 +27,13 @@ Le constructeur **`Array()`** permet de créer des objets {{jsxref("Array")}}.
 
 ### Utilisation de la notation littérale
 
-Les tableaux peuvent être créés avec une notation [littérale](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Litt%C3%A9raux_de_tableaux) :
+Les tableaux peuvent être créés avec une notation [littérale](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Littéraux_de_tableaux) :
 
 ```js
-let fruits = ['Pomme', 'Banane'];
+let fruits = ["Pomme", "Banane"];
 
 console.log(fruits.length); // 2
-console.log(fruits[0]);     // "Pomme"
+console.log(fruits[0]); // "Pomme"
 ```
 
 ### Utilisation du constructeur avec un seul paramètre
@@ -48,7 +44,7 @@ On peut créer des tableaux grâce au constructeur avec un seul paramètre numé
 let fruits = new Array(2);
 
 console.log(fruits.length); // 2
-console.log(fruits[0]);     // undefined
+console.log(fruits[0]); // undefined
 ```
 
 ### Utilisation du constructeur avec plusieurs paramètres
@@ -56,21 +52,19 @@ console.log(fruits[0]);     // undefined
 Si on utilise plus d'un argument, un nouveau tableau ({{jsxref("Array")}}) sera construit avec les éléments passés en arguments.
 
 ```js
-let fruits = new Array('Pomme', 'Banane');
+let fruits = new Array("Pomme", "Banane");
 
 console.log(fruits.length); // 2
-console.log(fruits[0]);     // "Pomme"
+console.log(fruits[0]); // "Pomme"
 ```
 
 ## Spécifications
 
-| Spécification                                                                                |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array-constructor', 'Array constructor')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.Array")}}
+{{Compat}}
 
 ## Voir aussi
 

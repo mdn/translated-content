@@ -1,16 +1,8 @@
 ---
 title: Introduction
 slug: Web/API/Document_Object_Model/Introduction
-tags:
-  - Beginner
-  - DOM
-  - Document
-  - Guide
-  - HTML DOM
-  - Introduction
-  - Tutorial
-translation_of: Web/API/Document_Object_Model/Introduction
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 Le Modèle Objet de Document (**DOM: Document object Model**) est la representation objet des données qui composent la structure et le contenu d'un document sur le web. Dans ce guide, nous présenterons brièvement le DOM. Nous verrons comment le DOM représente un document {{Glossary("HTML")}} ou {{Glossary("XML")}} en mémoire et comment vous utilisez les API pour créer du contenu web et des applications.
@@ -63,7 +55,7 @@ Lorsque vous créez un script, qu'il figure au sein de la page dans un élément
 Le code JavaScript suivant affichera une alerte quand le document est chargé (et quand le DOM entier est disponible à l'utilisation).
 
 ```html
-<body onload="window.alert('Bienvenue sur ma page Web !');">
+<body onload="window.alert('Bienvenue sur ma page Web !');"></body>
 ```
 
 Un autre exemple. Cette fonction crée un nouvel élément H1, y ajoute du texte, et ajoute ensuite cet élément à l'arbre du document :
@@ -72,19 +64,17 @@ Un autre exemple. Cette fonction crée un nouvel élément H1, y ajoute du texte
 <html>
   <head>
     <script>
-       // run this function when the document is loaded
-       window.onload = function() {
-
-         // create a couple of elements in an otherwise empty HTML page
-         const heading = document.createElement("h1");
-         const heading_text = document.createTextNode("Gros titre !");
-         heading.appendChild(heading_text);
-         document.body.appendChild(heading);
-      }
+      // run this function when the document is loaded
+      window.onload = function () {
+        // create a couple of elements in an otherwise empty HTML page
+        const heading = document.createElement("h1");
+        const heading_text = document.createTextNode("Gros titre !");
+        heading.appendChild(heading_text);
+        document.body.appendChild(heading);
+      };
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -208,10 +198,9 @@ Lorsque vous obtiendrez une référence à un objet `table`, comme dans l'exempl
 ```js
 var table = document.getElementById("table");
 var tableAttrs = table.attributes; // Interface Node/Element
-for(var i = 0; i < tableAttrs.length; i++){
+for (var i = 0; i < tableAttrs.length; i++) {
   // Interface HTMLTableElement : attribut border
-  if(tableAttrs[i].nodeName.toLowerCase() == "border")
-    table.border = "1";
+  if (tableAttrs[i].nodeName.toLowerCase() == "border") table.border = "1";
 }
 // Interface HTMLTableElement : attribut summary
 table.summary = "note : bordure plus large";

@@ -1,14 +1,8 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
-tags:
-  - Function
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
-original_slug: Web/JavaScript/Reference/Objets_globaux/Function/apply
 ---
+
 {{JSRef}}
 
 La méthode **`apply()`** appelle une fonction en lui passant une valeur `this` et des `arguments` sous forme d'un tableau (ou d'un objet [semblable à un tableau](/fr/docs/Web/JavaScript/Guide/Objets_élémentaires_JavaScript#Manipuler_des_objets_semblables_aux_tableaux)).
@@ -21,7 +15,9 @@ La méthode **`apply()`** appelle une fonction en lui passant une valeur `this` 
 
 ## Syntaxe
 
-    fun.apply(thisArg, [argsArray])
+```js
+fun.apply(thisArg, [argsArray]);
+```
 
 ### Paramètres
 
@@ -63,10 +59,11 @@ Function.prototype.construct = function (aArgs) {
 > **Note :** La méthode {{jsxref("Object.create()")}} utilisée ci-avant est relativement nouvelle. Pour une autre méthode qui utilise les `closure`, on pourra utiliser :
 >
 > ```js
-> Function.prototype.construct = function(aArgs) {
->   var fConstructeur = this, fNouveauConstructeur = function() {
->     fConstructeur.apply(this, aArgs);
->   };
+> Function.prototype.construct = function (aArgs) {
+>   var fConstructeur = this,
+>     fNouveauConstructeur = function () {
+>       fConstructeur.apply(this, aArgs);
+>     };
 >   fNouveauConstructeur.prototype = fConstructeur.prototype;
 >   return new fNouveauConstructeur();
 > };
@@ -75,10 +72,10 @@ Function.prototype.construct = function (aArgs) {
 Exemple d'utilisation :
 
 ```js
-function MonConstructeur () {
-    for (var nProp = 0; nProp < arguments.length; nProp++) {
-        this["propriété" + nProp] = arguments[nProp];
-    }
+function MonConstructeur() {
+  for (var nProp = 0; nProp < arguments.length; nProp++) {
+    this["propriété" + nProp] = arguments[nProp];
+  }
 }
 
 var monTableau = [4, "Coucou monde !", false];
@@ -89,7 +86,7 @@ console.log(monInstance instanceof MonConstructeur); // "true"
 console.log(monInstance.constructor); // "MonConstructeur"
 ```
 
-> **Note :** On pourrait également utiliser {{jsxref("Object/__proto__", "Object.__proto__")}}
+> **Note :** On pourrait également utiliser [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 >
 > ```js
 > Function.prototype.construct = function (aArgs) {
@@ -130,13 +127,11 @@ var max = Math.max.apply(null, nombres);
 var min = Math.min.apply(null, nombres);
 
 /* vs. algorithme trivial avec une boucle */
-max = -Infinity, min = +Infinity;
+(max = -Infinity), (min = +Infinity);
 
 for (var i = 0; i < nombres.length; i++) {
-  if (nombres[i] > max)
-    max = nombres[i];
-  if (nombres[i] < min)
-    min = nombres[i];
+  if (nombres[i] > max) max = nombres[i];
+  if (nombres[i] < min) min = nombres[i];
 }
 ```
 
@@ -148,8 +143,10 @@ function minimumDuTableau(tab) {
   var QUANTUM = 32768;
 
   for (var i = 0, longueur = tab.length; i < len; i += QUANTUM) {
-    var submin = Math.min.apply(null,
-                                tab.slice(i, Math.min(i + QUANTUM, longueur)));
+    var submin = Math.min.apply(
+      null,
+      tab.slice(i, Math.min(i + QUANTUM, longueur)),
+    );
     min = Math.min(submin, min);
   }
 
@@ -161,16 +158,11 @@ var min = minimumDuTableau([5, 6, 2, 3, 7]);
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                         | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.3.4.3', 'Function.prototype.apply')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-function.prototype.apply', 'Function.prototype.apply')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-function.prototype.apply', 'Function.prototype.apply')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function.apply")}}
+{{Compat}}
 
 ## Voir aussi
 

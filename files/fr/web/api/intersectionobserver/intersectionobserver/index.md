@@ -1,23 +1,17 @@
 ---
 title: IntersectionObserver.IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
-tags:
-  - API
-  - Constructor
-  - Intersection Observer API
-  - IntersectionObserver
-  - Reference
-  - Visibility
-  - Visible
-translation_of: Web/API/IntersectionObserver/IntersectionObserver
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 Le constructeur **`IntersectionObserver()`** crée et retourne un nouvel objet [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver). Les marges appliquées à la zone racine (indiquée dans l'objet `options` via la propriété `rootMargin`, voir ci-après) sont vérifiées pour s'assurer de la validité de leur syntaxe. Il en va de même pour les seuils (propriété `thresholds` d'`options`) dont l'intervalle de validité (entre 0.0 et 1.0 inclus) et l'ordre (qui doit être croissant) sont vérifiés. Si la liste des seuils est vide, sa valeur par défaut est \[0.0].
 
 ## Syntaxe
 
-    let observer = new IntersectionObserver(callback[, options]);
+```js
+let observer = new IntersectionObserver(callback[, options]);
+```
 
 ### Paramètres
 
@@ -58,16 +52,14 @@ Cet exemple crée un nouvel observateur d'intersection qui appelle la fonction `
 
 ```js
 let observer = new IntersectionObserver(myObserverCallback, {
-  threshold: 0.1
+  threshold: 0.1,
 });
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver','#dom-intersectionobserver-intersectionobserver','IntersectionObserver constructor')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver.IntersectionObserver")}}
+{{Compat}}

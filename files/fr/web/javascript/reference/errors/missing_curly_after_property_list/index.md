@@ -1,19 +1,16 @@
 ---
-title: 'SyntaxError: missing } after property list'
+title: "SyntaxError: missing } after property list"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
-original_slug: Web/JavaScript/Reference/Erreurs/Missing_curly_after_property_list
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    SyntaxError: Expected '}' (Edge)
-    SyntaxError: missing } after property list (Firefox)
+```
+SyntaxError: Expected '}' (Edge)
+SyntaxError: missing } after property list (Firefox)
+```
 
 ## Type d'erreur
 
@@ -43,7 +40,7 @@ La version correcte correspondante est :
 var obj = {
   a: 1,
   b: { maProp: 2 },
-  c: 3
+  c: 3,
 };
 ```
 

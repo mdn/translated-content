@@ -1,16 +1,8 @@
 ---
 title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
-tags:
-  - Expressions rationnelles
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/match
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/match
 ---
+
 {{JSRef}}
 
 La méthode **`match()`** permet d'obtenir le tableau des correspondances entre la chaîne courante et une expression rationnelle.
@@ -19,7 +11,9 @@ La méthode **`match()`** permet d'obtenir le tableau des correspondances entre 
 
 ## Syntaxe
 
-    str.match(regexp)
+```js
+str.match(regexp);
+```
 
 ### Paramètres
 
@@ -58,7 +52,7 @@ Si l'expression n'utilise pas le drapeau (_flag_) `g`, le résultat obtenu sera 
 Dans l'exemple suivant, on utilise `match()` afin de trouver la chaîne `'Chapitre'` suivie par un ou plusieurs chiffres séparés par des points. L'expression utilisée active le drapeau `i` afin que la casse ne soit pas prise en compte.
 
 ```js
-var str = 'Pour plus d\'informations, voir le chapitre 3.4.5.1';
+var str = "Pour plus d'informations, voir le chapitre 3.4.5.1";
 var re = /(chapitre \d+(\.\d)*)/i;
 var trouvé = str.match(re);
 
@@ -77,7 +71,7 @@ console.log(trouvé);
 Dans cet exemple, on illustre comment utiliser des drapeaux avec l'expression rationnelle qui est un argument de `match()`. Chaque lettre de A à E et de a à e est renvoyée, chacune dans un élément du tableau de résultat.
 
 ```js
-var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 var regexp = /[A-E]/gi;
 var tableau_correspondances = str.match(regexp);
 
@@ -87,34 +81,24 @@ console.log(tableau_correspondances);
 
 ### Utiliser un paramètre qui n'est pas une `RegExp`
 
-Lorsque le paramètre passé à la fonction est une chaîne de caractères ou un nombre, il est converti de façon implicite en un objet  {{jsxref("RegExp")}} grâce à `new RegExp(obj)`. Si c'est un nombre positif avec le signe +, la méthode `RegExp()` ignorera ce signe.
+Lorsque le paramètre passé à la fonction est une chaîne de caractères ou un nombre, il est converti de façon implicite en un objet {{jsxref("RegExp")}} grâce à `new RegExp(obj)`. Si c'est un nombre positif avec le signe +, la méthode `RegExp()` ignorera ce signe.
 
 ```js
 var str1 = "NaN signifie : qui n'est pas un nombre.";
-var str2 = "Mon père a 65 ans."
-str1.match("nombre");   // "nombre" est une chaîne, renvoie ["nombre"]
-str1.match(NaN);        // NaN est de type number, renvoie ["NaN"]
-str2.match(65);         // Renvoie ["65"]
-str2.match(+65);        // Renvoie également ["65"]
+var str2 = "Mon père a 65 ans.";
+str1.match("nombre"); // "nombre" est une chaîne, renvoie ["nombre"]
+str1.match(NaN); // NaN est de type number, renvoie ["NaN"]
+str2.match(65); // Renvoie ["65"]
+str2.match(+65); // Renvoie également ["65"]
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.10', 'String.prototype.match')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-string.prototype.match', 'String.prototype.match')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-string.prototype.match', 'String.prototype.match')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.match")}}
-
-## Notes spécifiques à Firefox/Gecko
-
-- `flags` était un second argument non standard présent uniquement sur Gecko : _str_.match(_regexp, flags_) et a été retiré avec Firefox 49.
-- À partir de Firefox 27, cette méthode a été ajustée afin d'être conforme à ECMAScript. Lorsque `match()` est appelée sur une expression rationnelle globale, la propriété {{jsxref("RegExp.lastIndex")}} de l'objet sera redéfini à `0` ({{bug(501739)}}).
+{{Compat}}
 
 ## Voir aussi
 

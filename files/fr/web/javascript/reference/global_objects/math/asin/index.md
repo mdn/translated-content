@@ -1,14 +1,8 @@
 ---
 title: Math.asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/asin
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/asin
 ---
+
 {{JSRef}}
 
 La fonction **`Math.asin()`** renvoie l'arc sinus d'un nombre (en radians). Elle est définie par :
@@ -19,7 +13,9 @@ La fonction **`Math.asin()`** renvoie l'arc sinus d'un nombre (en radians). Elle
 
 ## Syntaxe
 
-    Math.asin(x)
+```js
+Math.asin(x);
+```
 
 ### Paramètres
 
@@ -41,28 +37,23 @@ La méthode `Math.asin()` renvoie une valeur numérique comprise entre <math><se
 ### Utiliser `Math.asin()`
 
 ```js
-Math.asin(-2);  // NaN
-Math.asin(-1);  // -1.570796326794897 (-pi/2)
-Math.asin(0);   // 0
+Math.asin(-2); // NaN
+Math.asin(-1); // -1.570796326794897 (-pi/2)
+Math.asin(0); // 0
 Math.asin(0.5); // 0.5235987755982989
-Math.asin(1);   // 1.570796326794897 (pi/2)
-Math.asin(2);   // NaN
+Math.asin(1); // 1.570796326794897 (pi/2)
+Math.asin(2); // NaN
 ```
 
 Pour les valeurs (strictement) inférieures à -1 ou supérieures à 1, `Math.asin()` renvoie {{jsxref("NaN")}}.
 
 ## Spécifications
 
-| Spécification                                                            | Statut                       | Commentaires                                          |
-| ------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.3', 'Math.asin')}}     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.asin', 'Math.asin')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.asin', 'Math.asin')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.asin")}}
+{{Compat}}
 
 ## Voir aussi
 

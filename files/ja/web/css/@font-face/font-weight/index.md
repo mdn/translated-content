@@ -1,16 +1,8 @@
 ---
 title: font-weight
 slug: Web/CSS/@font-face/font-weight
-tags:
-  - '@font-face'
-  - アットルール記述子
-  - CSS
-  - リファレンス
-  - 記述子
-  - font-weight
-browser-compat: css.at-rules.font-face.font-weight
-translation_of: Web/CSS/@font-face/font-weight
 ---
+
 {{CSSRef}}
 
 **`font-weight`** は CSS の記述子で、 {{cssxref("@font-face")}} ルールで指定されたフォントの太さを指定することができます。別に {{cssxref("font-weight")}} プロパティを使用して、テキストを表示する文字の太さや細さを設定することができます。
@@ -45,7 +37,7 @@ font-weight: 300 500;
 
 `font-weight` 仕様書の古いバージョンでは、このプロパティはキーワード値と数値 100, 200, 300, 400, 500, 600, 700, 800, 900 のみを受け付けていました。可変フォント以外では実際にはこれらのセット値しか利用できません。ただし、可変フォント以外では細かい値 (例えば 451) は、これらの値のいずれかに変換されます。
 
-CSS Fonts レベル 4 では、構文を拡張して 1 から 1000 までの任意の数値を受け付けるようになり、{{anch("Variable fonts", "可変フォント")}}が導入され、フォントの太さにもっと細かい範囲を使用することができるようになりました。
+CSS Fonts レベル 4 では、構文を拡張して 1 から 1000 までの任意の数値を受け付けるようになり、[可変フォント](#variable_fonts)が導入され、フォントの太さにもっと細かい範囲を使用することができるようになりました。
 
 ### 一般的な太さの名前との対応
 

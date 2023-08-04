@@ -1,20 +1,17 @@
 ---
 title: Event()
 slug: Web/API/Event/Event
-tags:
-  - API
-  - Constructeur
-  - DOM
-  - évènements
-translation_of: Web/API/Event/Event
 ---
+
 {{APIRef("DOM")}}
 
 Le constructeur **`Event()`** crée un nouvel {{domxref("Event")}} (_évènement_).
 
 ## Syntaxe
 
-     event = new Event(typeArg, eventInit);
+```js
+event = new Event(typeArg, eventInit);
+```
 
 ### Valeurs
 
@@ -32,7 +29,7 @@ Le constructeur **`Event()`** crée un nouvel {{domxref("Event")}} (_évènement
 
 ```js
 // crée un évènement "look" qui est diffusé et ne peut être annulé
-var evt = new Event("look", {"bubbles":true, "cancelable":false});
+var evt = new Event("look", { bubbles: true, cancelable: false });
 document.dispatchEvent(evt);
 
 // l'événement peut être envoyé à partir de n'importe quel élément, pas seulement le document
@@ -41,13 +38,11 @@ myDiv.dispatchEvent(evt);
 
 ## Spécifications
 
-| Spécification                                                            | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG','#interface-event','Event()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.Event")}}
+{{Compat}}
 
 ## Voir aussi
 

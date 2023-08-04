@@ -1,16 +1,8 @@
 ---
 title: mask-mode
 slug: Web/CSS/mask-mode
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - Experimental
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-mode
-translation_of: Web/CSS/mask-mode
 ---
+
 {{CSSRef}}
 
 **`mask-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("mask-image")}} で定義されたマスクを、輝度とアルファマスクのどちらで扱うかを設定します。

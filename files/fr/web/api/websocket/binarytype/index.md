@@ -1,8 +1,8 @@
 ---
 title: WebSocket.binaryType
 slug: Web/API/WebSocket/binaryType
-browser-compat: api.WebSocket.binaryType
 ---
+
 {{APIRef("Web Sockets API")}}
 
 La propriété **`WebSocket.binaryType`** contrôle le type de données binaires reçues via la connexion WebSocket.
@@ -32,7 +32,7 @@ socket.binaryType = "arraybuffer";
 
 // On écoute les différents messages
 socket.addEventListener("message", function (event) {
-  if(event.data instanceof ArrayBuffer) {
+  if (event.data instanceof ArrayBuffer) {
     // Frame de données binaires
     const view = new DataView(event.data);
     console.log(view.getInt32(0));

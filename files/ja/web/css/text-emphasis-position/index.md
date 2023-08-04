@@ -1,15 +1,8 @@
 ---
 title: text-emphasis-position
 slug: Web/CSS/text-emphasis-position
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト装飾
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.text-emphasis-position
-translation_of: Web/CSS/text-emphasis-position
 ---
+
 {{CSSRef}}
 
 **`text-emphasis-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点が描かれる位置を設定します。ルビのテキストと同様、圏点のために十分な空間がない場合は、行の高さが広げられます。
@@ -107,7 +100,7 @@ text-emphasis-position: unset;
   </tbody>
 </table>
 
-> **Note:** {{cssxref("text-emphasis")}} 一括指定プロパティを使用して、 `text-emphasis-position` を設定することはできず、また初期化されることもありません。
+> **メモ:** {{cssxref("text-emphasis")}} 一括指定プロパティを使用して、 `text-emphasis-position` を設定することはできず、また初期化されることもありません。
 
 ## 公式定義
 

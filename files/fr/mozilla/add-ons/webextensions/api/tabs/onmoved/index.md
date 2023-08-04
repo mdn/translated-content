@@ -1,30 +1,20 @@
 ---
 title: tabs.onMoved
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onMoved
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onMoved
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onMoved
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsqu'un onglet est déplacé dans une fenêtre
 
-Un seul événement de déplacement est déclenché, représentant l'onglet que l'utilisateur a déplacé directement. Les événements de déplacement ne sont pas déclenchés pour les autres onglets qui doivent se déplacer en réponse. Cet événement n'est pas déclenché lorsqu'un onglet est déplacé entre des fenêtres. Pour cela, voir  {{WebExtAPIRef('tabs.onDetached')}}.
+Un seul événement de déplacement est déclenché, représentant l'onglet que l'utilisateur a déplacé directement. Les événements de déplacement ne sont pas déclenchés pour les autres onglets qui doivent se déplacer en réponse. Cet événement n'est pas déclenché lorsqu'un onglet est déplacé entre des fenêtres. Pour cela, voir {{WebExtAPIRef('tabs.onDetached')}}.
 
 ## Syntaxe
 
 ```js
-browser.tabs.onMoved.addListener(listener)
-browser.tabs.onMoved.removeListener(listener)
-browser.tabs.onMoved.hasListener(listener)
+browser.tabs.onMoved.addListener(listener);
+browser.tabs.onMoved.removeListener(listener);
+browser.tabs.onMoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions:
@@ -34,7 +24,7 @@ Les événements ont trois fonctions:
 - `removeListener(listener)`
   - : Arrêtez d'écouter cet événement. L'argument `listener` st l'écouteur à supprimer.
 - `hasListener(listener)`
-  - : Vérifiez si le `listener`est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+  - : Vérifiez si le `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
 ## Syntaxe addListener
 
@@ -69,9 +59,14 @@ Les événements ont trois fonctions:
 
 ```js
 function handleMoved(tabId, moveInfo) {
-  console.log("Tab " + tabId +
-              " moved from " + moveInfo.fromIndex +
-              " to " + moveInfo.toIndex);
+  console.log(
+    "Tab " +
+      tabId +
+      " moved from " +
+      moveInfo.fromIndex +
+      " to " +
+      moveInfo.toIndex,
+  );
 }
 
 browser.tabs.onMoved.addListener(handleMoved);
@@ -79,9 +74,9 @@ browser.tabs.onMoved.addListener(handleMoved);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onMoved")}}
+{{Compat}}
 
 > **Note :**
 >
@@ -89,7 +84,8 @@ browser.tabs.onMoved.addListener(handleMoved);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -116,4 +112,4 @@ browser.tabs.onMoved.addListener(handleMoved);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

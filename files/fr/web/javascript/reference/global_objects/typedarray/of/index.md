@@ -1,36 +1,31 @@
 ---
 title: TypedArray.of()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/of
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/of
 ---
+
 {{JSRef}}
 
 La méthode **`TypedArray.of()`** crée un nouvel objet {{jsxref("TypedArray", "TypedArray", "#Les_objets_TypedArray")}} à partir d'un nombre variable d'arguments. Cette méthode est similaire à {{jsxref("Array.of()")}}.
 
 ## Syntaxe
 
-    TypedArray.of(élément0[, élément1[, ...[, élémentN]]])
+```js
+TypedArray.of(élément0[, élément1[, ...[, élémentN]]])
+```
 
-    où TypedArray est l'un de :
+où TypedArray est l'un de :
 
-    Int8Array
-    Uint8Array
-    Uint8ClampedArray
-    Int16Array
-    Uint16Array
-    Int32Array
-    Uint32Array
-    Float32Array
-    Float64Array
-    BigInt64Array
-    BigUint64Array
+- [`Int8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)
+- [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+- [`Uint8ClampedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
+- [`Int16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)
+- [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)
+- [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)
+- [`Uint32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)
+- [`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)
+- [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)
+- [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)
+- [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)
 
 ### Paramètres
 
@@ -51,22 +46,19 @@ Il existe de légères différences entre {{jsxref("Array.of()")}} et `TypedArra
 ## Exemples
 
 ```js
-Uint8Array.of(1);            // Uint8Array [ 1 ]
+Uint8Array.of(1); // Uint8Array [ 1 ]
 Int8Array.of("1", "2", "3"); // Int8Array [ 1, 2, 3 ]
-Float32Array.of(1, 2, 3);    // Float32Array [ 1, 2, 3 ]
-Int16Array.of(undefined);    // Int16Array [ 0 ]
+Float32Array.of(1, 2, 3); // Float32Array [ 1, 2, 3 ]
+Int16Array.of(undefined); // Int16Array [ 0 ]
 ```
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires                                    |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.of', '%TypedArray%.of')}} | {{Spec2('ES2015')}}     | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.of', '%TypedArray%.of')}} | {{Spec2('ESDraft')}} |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.of")}}
+{{Compat}}
 
 ## Voir aussi
 

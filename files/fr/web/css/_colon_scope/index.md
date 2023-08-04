@@ -1,13 +1,8 @@
 ---
-title: ':scope'
+title: ":scope"
 slug: Web/CSS/:scope
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:scope
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:scope`** correspond aux éléments qui sont un point de référence pour faire correspondre les sélecteurs.
@@ -43,9 +38,7 @@ if (paragraphe.matches(":scope")) {
 ### HTML
 
 ```html
-<p id="para">
-  Voici un paragraphe, pas vraiment intéressant mais bon.
-</p>
+<p id="para">Voici un paragraphe, pas vraiment intéressant mais bon.</p>
 <p id="output"></p>
 ```
 
@@ -55,13 +48,11 @@ if (paragraphe.matches(":scope")) {
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS4 Selectors', '#the-scope-pseudo', ':scope')}} | {{Spec2('CSS4 Selectors')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.scope")}}
+{{Compat}}
 
 ## Voir aussi
 

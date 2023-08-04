@@ -1,14 +1,8 @@
 ---
 title: デクリメント (--)
 slug: Web/JavaScript/Reference/Operators/Decrement
-tags:
-  - デクリメント
-  - JavaScript
-  - 言語機能
-  - 演算子
-browser-compat: javascript.operators.decrement
-translation_of: Web/JavaScript/Reference/Operators/Decrement
 ---
+
 {{jsSidebar("Operators")}}
 
 デクリメント演算子 (`--`) は、オペランドをデクリメント (1 を減算) して値を返します。
@@ -24,9 +18,9 @@ x--
 
 ## 解説
 
-オペランドに後置で演算子を付けると (例えば `x--`)、デクリメント演算子はデクリメントしますが、デクリメント前の値を返します。
+オペランドに後置で演算子を付けると (例えば `x--`)、デクリメント演算子はデクリメントしますが、デクリメント前の値を返します。
 
-オペランドに前置で演算子を付けると (例えば `--x`)、デクリメント演算子はデクリメントし、デクリメント後の値を返します。
+オペランドに前置で演算子を付けると (例えば `--x`)、デクリメント演算子はデクリメントし、デクリメント後の値を返します。
 
 ## 例
 

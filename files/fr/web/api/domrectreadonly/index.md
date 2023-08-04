@@ -1,18 +1,9 @@
 ---
 title: DOMRectReadOnly
 slug: Web/API/DOMRectReadOnly
-tags:
-  - API
-  - DOM Reference
-  - DOMRectReadOnly
-  - Experimental
-  - Geometry
-  - Rectangle
-  - Reference
-  - TopicStub
-translation_of: Web/API/DOMRectReadOnly
 ---
-{{draft}}{{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}
+
+{{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}
 
 L'interface **`DOMRectReadOnly`** spécifie les propriétés standard utilisées par {{domxref("DOMRect")}} pour définir un rectangle.
 
@@ -49,13 +40,11 @@ L'interface **`DOMRectReadOnly`** spécifie les propriétés standard utilisées
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Geometry Interfaces', '#DOMRect', 'DOMRectReadOnly')}} | {{Spec2('Geometry Interfaces')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMRectReadOnly")}}
+{{Compat}}
 
 ## Voir aussi
 

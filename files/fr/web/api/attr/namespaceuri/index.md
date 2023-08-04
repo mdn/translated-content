@@ -1,13 +1,8 @@
 ---
 title: Attr.namespaceURI
 slug: Web/API/Attr/namespaceURI
-tags:
-  - API
-  - DOM
-  - Reference
-  - namespaceURI
-translation_of: Web/API/Attr/namespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Attr.namespaceURI`** retourne l'URI d'espace de nom de l'attribut, ou `null` si l'élément n'est pas dans un espace de noms.
@@ -16,15 +11,20 @@ La propriété en lecture seule **`Attr.namespaceURI`** retourne l'URI d'espace 
 
 ## Syntaxe
 
-    namespace = attribute.namespaceURI
+```js
+namespace = attribute.namespaceURI;
+```
 
 ## Exemple
 
 Dans cet extrait de code, un attribut est examiné pour son {{domxref("localName")}} et son `namespaceURI`. Si le `namespaceURI` renvoie l'espace de noms XUL et le `localName` retourne "browser" (_navigateur_), alors le noeud est compris comme étant un `<browser/>` XUL.
 
 ```js
-if (attribute.localName == "value" &&
-    attribute.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
+if (
+  attribute.localName == "value" &&
+  attribute.namespaceURI ==
+    "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+) {
   // ceci est une valeur XUL
 }
 ```
@@ -43,13 +43,11 @@ Le DOM ne gère pas ou n'applique pas la validation de l'espace de noms en soi. 
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                   | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName("DOM4", "#dom-element-namespaceuri", "Element.namespaceuri")}} | {{Spec2("DOM4")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Attr.namespaceURI")}}
+{{Compat}}
 
 ## Voir aussi
 

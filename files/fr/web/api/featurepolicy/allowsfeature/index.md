@@ -1,24 +1,23 @@
 ---
 title: FeaturePolicy.allowsFeature()
 slug: Web/API/FeaturePolicy/allowsFeature
-tags:
-  - API
-  - Feature Policy
-  - Feature-Policy
-  - Reference
-translation_of: Web/API/FeaturePolicy/allowsFeature
 ---
+
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
 La méthode **`allowsFeature()`** de l'interface {{DOMxRef("FeaturePolicy")}} permet l'introspection de directives du Feature Policy sur lequel la méthode est appelée. Elle retourne un {{JSxRef("Boolean")}} valant `true` si et seulement si la fonctionnalité dont le nom de directive est fourni est permise dans le contexte spécifié (ou le contexte par défaut si aucun contexte n'est spécifié).
 
 ## Syntaxe
 
-    const listePermissions = FeaturePolicy.allowsFeature(<nomDirective>)
+```js
+const listePermissions = FeaturePolicy.allowsFeature(<nomDirective>)
+```
 
 ou
 
-    const listePermissions = FeaturePolicy.allowsFeature(<nomDirective>, <origine>)
+```js
+const listePermissions = FeaturePolicy.allowsFeature(<nomDirective>, <origine>)
+```
 
 ### Paramètres
 
@@ -40,24 +39,19 @@ Cet exemple demande au document s'il lui est permis par Feature Policy d'utilise
 
 ```js
 // D'abord, récupère le Feature Policy
-const featurePolicy = document.featurePolicy
+const featurePolicy = document.featurePolicy;
 
 // Demande si la fonctionnalité est disponible
-const estPermise = featurePolicy.allowsFeature("camera")
+const estPermise = featurePolicy.allowsFeature("camera");
 
-if (estPermise)
-  console.log("FP autorise l'appareil photo.")
-
-else
-  console.log("FP n'autorise pas l'appareil photo.")
+if (estPermise) console.log("FP autorise l'appareil photo.");
+else console.log("FP n'autorise pas l'appareil photo.");
 ```
 
 ## Spécifications
 
-| Spécification                                                    | Statut                               | Commentaire          |
-| ---------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("Feature Policy","","allowsFeature")}} | {{Spec2("Feature Policy")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FeaturePolicy.allowsFeature")}}
+{{Compat}}

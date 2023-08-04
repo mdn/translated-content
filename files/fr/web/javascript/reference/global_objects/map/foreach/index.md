@@ -1,16 +1,8 @@
 ---
 title: Map.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/forEach
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
 ---
+
 {{JSRef}}
 
 La méthode **`forEach()`** exécute une fonction donnée sur chaque élément clé-valeur de l'objet `Map` dans l'ordre d'insertion.
@@ -19,7 +11,9 @@ La méthode **`forEach()`** exécute une fonction donnée sur chaque élément c
 
 ## Syntaxe
 
-    maMap.forEach(callback[, thisArg])
+```js
+maMap.forEach(callback[, thisArg])
+```
 
 ### Paramètres
 
@@ -50,15 +44,18 @@ Chacune des valeurs sera traitée une fois sauf si celle-ci a été supprimée p
 
 ## Exemples
 
-Le fragment de code suivant enregistre une ligne pour chaque élément d'un objet` Map `:
+Le fragment de code suivant enregistre une ligne pour chaque élément d'un objet`Map`:
 
 ```js
 function logMapElements(valeur, clé, map) {
-    console.log(`map.get('${clé}') = ${value}`);
+  console.log(`map.get('${clé}') = ${value}`);
 }
 
-
-new Map([["toto", 3], ["truc", {}], ["bidule", undefined]]).forEach(logMapElements);
+new Map([
+  ["toto", 3],
+  ["truc", {}],
+  ["bidule", undefined],
+]).forEach(logMapElements);
 // affichera dans la console :
 // "map.get('toto') = 3"
 // "map.get('truc') = [object Object]"
@@ -67,14 +64,11 @@ new Map([["toto", 3], ["truc", {}], ["bidule", undefined]]).forEach(logMapElemen
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-map.prototype.foreach', 'Map.prototype.forEach')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype.foreach', 'Map.prototype.forEach')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Map.forEach")}}
+{{Compat}}
 
 ## Voir aussi
 

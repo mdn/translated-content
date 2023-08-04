@@ -1,24 +1,9 @@
 ---
-title: '<audio> : l''élément audio embarqué'
+title: "<audio> : l'élément audio embarqué"
 slug: Web/HTML/Element/audio
-tags:
-  - Audio
-  - Element
-  - HTML
-  - HTML embedded content
-  - HTML5
-  - HTML:Embedded content
-  - HTML:Flow content
-  - HTML:Phrasing content
-  - Media
-  - Multimedia
-  - Reference
-  - Web
-  - sound
-translation_of: Web/HTML/Element/audio
-browser-compat: html.elements.audio
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<audio>`** est utilisé afin d'intégrer un contenu sonore dans un document. Il peut contenir une ou plusieurs sources audio représentées avec l'attribut `src` ou l'élément [`<source>`](/fr/docs/Web/HTML/Element/Source) : le navigateur choisira celle qui convient le mieux. Il peut également être la destination de médias diffusés en continu, en utilisant un [`MediaStream`](/fr/docs/Web/API/MediaStream).
 
@@ -111,11 +96,12 @@ Les navigateurs ne prennent pas tous en charge les mêmes [types de fichiers](/f
 
 ```html
 <audio controls>
-  <source src="myAudio.mp3" type="audio/mpeg">
-  <source src="myAudio.ogg" type="audio/ogg">
-  <p>Votre navigateur ne prend pas en charge l'audio HTML5.
-  Voici un <a href="myAudio.mp3">lien vers le fichier audio</a>
-  à la place.</p>
+  <source src="myAudio.mp3" type="audio/mpeg" />
+  <source src="myAudio.ogg" type="audio/ogg" />
+  <p>
+    Votre navigateur ne prend pas en charge l'audio HTML5. Voici un
+    <a href="myAudio.mp3">lien vers le fichier audio</a> à la place.
+  </p>
 </audio>
 ```
 
@@ -160,11 +146,11 @@ Ainsi, on pourra utiliser un fragment de code analogue à celui qui suit pour d�
 ```js
 let elem = document.querySelector("audio");
 
-elem.audioTrackList.onaddtrack = function(event) {
+elem.audioTrackList.onaddtrack = function (event) {
   trackEditor.addTrack(event.track);
 };
 
-elem.audioTrackList.onremovetrack = function(event) {
+elem.audioTrackList.onremovetrack = function (event) {
   trackEditor.removeTrack(event.track);
 };
 ```
@@ -192,7 +178,7 @@ Cet exemple précise quelle piste audio intégrer en utilisant l'attribut `src` 
 
 ```html
 <audio controls="controls">
-  <source src="toto.wav" type="audio/wav">
+  <source src="toto.wav" type="audio/wav" />
   Votre navigateur ne prend pas en charge l'élément <code>audio</code>.
 </audio>
 ```
@@ -203,9 +189,9 @@ Dans l'exemple qui suit, le navigateur essaiera de jouer le premier fichier corr
 
 ```html
 <audio controls="">
-  <source src="toto.opus" type="audio/ogg; codecs=opus"/>
-  <source src="toto.ogg" type="audio/ogg; codecs=vorbis"/>
- <source src="toto.mp3" type="audio/mpeg"/>
+  <source src="toto.opus" type="audio/ogg; codecs=opus" />
+  <source src="toto.ogg" type="audio/ogg; codecs=vorbis" />
+  <source src="toto.mp3" type="audio/mpeg" />
 </audio>
 ```
 
@@ -219,27 +205,29 @@ L'élément `<audio>` ne prend pas directement en charge le WebVTT. Vous devrez 
 
 En plus des dialogues parlés, les sous-titres et les transcriptions doivent également identifier la musique et les effets sonores qui communiquent des informations importantes. Cela inclut l'émotion et le ton. Par exemple, dans le WebVTT ci-dessous, notez l'utilisation de crochets pour donner un ton et un aperçu émotionnel au spectateur ; cela peut aider à établir l'ambiance autrement fournie par la musique, les sons non verbaux et les effets sonores cruciaux, et ainsi de suite.
 
-    1
-    00:00:00 --> 00:00:45
-    [Musique avec des trompettes sonnantes]
+```
+1
+00:00:00 --> 00:00:45
+[Musique avec des trompettes sonnantes]
 
-    2
-    00:00:46 --> 00:00:51
-    Elle est où la poulette ?
+2
+00:00:46 --> 00:00:51
+Elle est où la poulette ?
 
-    16
-    00:00:52 --> 00:01:02
-    [sur un ton énervé] Vous rendez la poulette ou c'est plus vous qui donnez à manger aux lapins ?
+16
+00:00:52 --> 00:01:02
+[sur un ton énervé] Vous rendez la poulette ou c'est plus vous qui donnez à manger aux lapins ?
+```
 
 Une autre bonne pratique consiste à fournir du contenu comme un lien de téléchargement comme méthode alternative pour les personnes qui utilisent un navigateur qui ne prend pas en charge `<audio>`&nbsp;:
 
 ```html
 <audio controls>
-  <source src="monAudio.mp3" type="audio/mpeg">
-  <source src="monAudio.ogg" type="audio/ogg">
+  <source src="monAudio.mp3" type="audio/mpeg" />
+  <source src="monAudio.ogg" type="audio/ogg" />
   <p>
-    Votre navigateur ne prend pas charge l'audio HTML.
-    Voici <a href="monAudio.mp3">un lien de téléchargement</a> à la place.
+    Votre navigateur ne prend pas charge l'audio HTML. Voici
+    <a href="monAudio.mp3">un lien de téléchargement</a> à la place.
   </p>
 </audio>
 ```

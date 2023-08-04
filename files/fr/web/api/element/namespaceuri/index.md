@@ -1,15 +1,8 @@
 ---
 title: Element.namespaceURI
 slug: Web/API/Element/namespaceURI
-tags:
-  - API
-  - DOM
-  - Element
-  - Espace de noms
-  - Propriétés
-  - URI
-translation_of: Web/API/Element/namespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Element.namespaceURI`** renvoie l'URI d'espace de noms de l'élément ou `null` si l'élément n'est pas dans un espace de nom.
@@ -18,15 +11,20 @@ La propriété en lecture seule **`Element.namespaceURI`** renvoie l'URI d'espac
 
 ## Syntaxe
 
-    namespace = element.namespaceURI
+```js
+namespace = element.namespaceURI;
+```
 
 ## Exemple
 
 Dans cet extrait, un élément est examiné pour son {{domxref("localName")}} et son `namespaceURI`. Si le `namespaceURI` renvoie l'espace de noms XUL et le `localName` retourne "browser" (_navigateur_), alors le noeud est compris comme étant un `<browser/>` XUL.
 
 ```js
-if (element.localName == "browser" &&
-    element.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
+if (
+  element.localName == "browser" &&
+  element.namespaceURI ==
+    "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+) {
   // c'est un navigateur XUL
 }
 ```
@@ -41,15 +39,13 @@ Vous pouvez créer un élément avec l'`namespaceURI` spécifié en utilisant la
 
 Le DOM ne gère pas ou n'applique pas la validation de l'espace de noms en soi. Il appartient à l'application DOM de faire toute validation nécessaire. Notez également que le préfixe d'espace de noms, une fois associé à un élément particulier, ne peut pas être modifié.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                    | Statut                   | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName("DOM4", "#dom-element-namespaceuri", "Element.namespaceuri")}} | {{Spec2("DOM4")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.namespaceURI")}}
+{{Compat}}
 
 ## Voir aussi
 

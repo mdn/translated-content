@@ -1,15 +1,8 @@
 ---
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
-tags:
-  - ECMAScript2016
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/entries
 ---
+
 {{JSRef}}
 
 La méthode **`Object.entries()`** renvoie un tableau des propriétés propres énumérables d'un objet dont la clé est une chaîne de caractères, sous la forme de paires `[clé, valeur]`, dans le même ordre qu'une boucle {{jsxref("Instructions/for...in", "for...in")}} (la boucle `for-in` est différente car elle parcourt la chaîne des prototypes).
@@ -20,7 +13,9 @@ L'ordre du tableau renvoyé par cette méthode ne dépend pas de la façon dont 
 
 ## Syntaxe
 
-    Object.entries(obj)
+```js
+Object.entries(obj);
+```
 
 ### Paramètres
 
@@ -33,7 +28,7 @@ Un tableau qui contient les propriétés énumérables propres de l'objet sous l
 
 ## Description
 
-`Object.entries()` renvoie un tableau dont les éléments sont des paires (des tableaux à deux éléments)  `[clé, valeur]` qui correspondent aux propriétés énumérables qui sont directement présentes sur l'objet passé en argument. L'ordre du tableau est le même que celui utilisé lorsqu'on parcourt les valeurs manuellement.
+`Object.entries()` renvoie un tableau dont les éléments sont des paires (des tableaux à deux éléments) `[clé, valeur]` qui correspondent aux propriétés énumérables qui sont directement présentes sur l'objet passé en argument. L'ordre du tableau est le même que celui utilisé lorsqu'on parcourt les valeurs manuellement.
 
 ## Exemples
 
@@ -42,16 +37,25 @@ var obj = { toto: "truc", machin: 42 };
 console.log(Object.entries(obj)); // [ ['toto', 'truc'], ['machin', 42] ]
 
 // Un objet semblable à un tableau
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
+var obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.entries(obj)); // [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]
 
 // Un objet semblable à un tableau
 // dont les clés sont aléatoirement ordonnées
-var un_obj = { 100: 'a', 2: 'b', 7: 'c' };
+var un_obj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.entries(un_obj)); // [ ['2', 'b'], ['7', 'c'], ['100', 'a'] ]
 
 // getToto est une propriété non énumérable
-var mon_obj = Object.create({}, { getToto: { value: function() { return this.toto; } } });
+var mon_obj = Object.create(
+  {},
+  {
+    getToto: {
+      value: function () {
+        return this.toto;
+      },
+    },
+  },
+);
 mon_obj.toto = "truc";
 console.log(Object.entries(mon_obj)); // [ ['toto', 'truc'] ]
 
@@ -63,15 +67,15 @@ console.log(Object.entries("toto")); // [ ['0', 't'], ['1', 'o'], ['2', 't'],  [
 console.log(Object.entries(100)); // [ ]
 
 // parcourir les clés-valeurs
-var autreObjet = {a:5, b:7, c:9};
+var autreObjet = { a: 5, b: 7, c: 9 };
 
-for (var [cle, valeur] of Object.entries(autreObjet)){
-  console.log(cle + ' ' + valeur);
+for (var [cle, valeur] of Object.entries(autreObjet)) {
+  console.log(cle + " " + valeur);
 }
 
 // Ou encore, en utilisant les méthodes génériques
 Object.entries(autreObjet).forEach(([clé, valeur]) => {
-  console.log(clé + ' ' + valeur);
+  console.log(clé + " " + valeur);
 });
 ```
 
@@ -91,8 +95,8 @@ En utilisant [la décomposition des tableaux](/fr/docs/Web/JavaScript/Reference/
 
 ```js
 const obj = { toto: "truc", bidule: 42 };
-Object.entries(obj).forEach(
-  ([clé, valeur]) => console.log(`${clé}: ${valeur}`)
+Object.entries(obj).forEach(([clé, valeur]) =>
+  console.log(`${clé}: ${valeur}`),
 );
 // "toto: truc"
 // "bidule: 42"
@@ -106,12 +110,11 @@ Vous pouvez également utiliser la prothèse suivante (qui nécessitera la proth
 
 ```js
 if (!Object.entries) {
-  Object.entries = function( obj ){
-    var ownProps = Object.keys( obj ),
-        i = ownProps.length,
-        resArray = new Array(i);
-    while (i--)
-      resArray[i] = [ownProps[i], obj[ownProps[i]]];
+  Object.entries = function (obj) {
+    var ownProps = Object.keys(obj),
+      i = ownProps.length,
+      resArray = new Array(i);
+    while (i--) resArray[i] = [ownProps[i], obj[ownProps[i]]];
 
     return resArray;
   };
@@ -120,14 +123,11 @@ if (!Object.entries) {
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-object.entries', 'Object.entries')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES8', '#sec-object.entries', 'Object.entries')}}     | {{Spec2('ES8')}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.entries")}}
+{{Compat}}
 
 ## Voir aussi
 

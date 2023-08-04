@@ -1,14 +1,8 @@
 ---
 title: margin
 slug: Web/CSS/margin
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 基本ボックスモデル
-  - recipe:css-shorthand-property
-browser-compat: css.properties.margin
-translation_of: Web/CSS/margin
 ---
+
 {{CSSRef}}
 
 **`margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の全四辺の[マージン領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。
@@ -71,7 +65,7 @@ top および bottom のマージンは、 {{HTMLElement("span")}} または {{H
 
 ### 水平方向の中央揃え
 
-最近のブラウザーで何かを中央揃えしたい場合は、{{cssxref("display")}}`: flex; `{{cssxref("justify-content")}}`: center;` を使用することができます。
+最近のブラウザーで何かを中央揃えしたい場合は、{{cssxref("display")}}`: flex;` {{cssxref("justify-content")}}`: center;` を使用することができます。
 
 しかし、 IE8-9 のような古いブラウザーはフレックスボックスレイアウトに対応していないため、これは利用できません。親要素内で要素を中央揃えするのであれば、 `margin: 0 auto;` を使用してください。
 
@@ -103,15 +97,15 @@ top および bottom のマージンは、 {{HTMLElement("span")}} または {{H
 
 ```css
 .center {
-  margin: auto;
-  background: lime;
-  width: 66%;
+  margin: auto;
+  background: lime;
+  width: 66%;
 }
 
 .outside {
-  margin: 3rem 0 0 -3rem;
-  background: cyan;
-  width: 66%;
+  margin: 3rem 0 0 -3rem;
+  background: cyan;
+  width: 66%;
 }
 ```
 

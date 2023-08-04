@@ -1,17 +1,8 @@
 ---
 title: String.prototype.repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/repeat
 ---
+
 {{JSRef}}
 
 La méthode **`repeat()`** construit et renvoie une nouvelle chaine de caractères qui contient le nombre de copie demandée de la chaine de caractères sur laquelle la méthode a été appelée, concaténées les unes aux autres.
@@ -20,7 +11,9 @@ La méthode **`repeat()`** construit et renvoie une nouvelle chaine de caractèr
 
 ## Syntaxe
 
-    str.repeat(compte)
+```js
+str.repeat(compte);
+```
 
 ### Paramètres
 
@@ -44,24 +37,21 @@ Une nouvelle chaîne de caractères composée du nombre indiqué de copies de la
 ## Exemples
 
 ```js
-"abc".repeat(-1)     // RangeError
-"abc".repeat(0)      // ""
-"abc".repeat(1)      // "abc"
-"abc".repeat(2)      // "abcabc"
-"abc".repeat(3.5)    // "abcabcabc" (le compteur est converti en un nombre entier)
-"abc".repeat(1/0)    // RangeError
+"abc".repeat(-1); // RangeError
+"abc".repeat(0); // ""
+"abc".repeat(1); // "abc"
+"abc".repeat(2); // "abcabc"
+"abc".repeat(3.5); // "abcabcabc" (le compteur est converti en un nombre entier)
+"abc".repeat(1 / 0); // RangeError
 
-({toString : () => "abc", repeat : String.prototype.repeat}).repeat(2)
+({ toString: () => "abc", repeat: String.prototype.repeat }).repeat(2);
 // "abcabc" (repeat() est une méthode générique)
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-string.prototype.repeat', 'String.prototype.repeat')}} | {{Spec2('ES2015')}}     | Première définition. |
-| {{SpecName('ESDraft', '#sec-string.prototype.repeat', 'String.prototype.repeat')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.repeat")}}
+{{Compat}}

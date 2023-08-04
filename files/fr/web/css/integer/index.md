@@ -1,12 +1,8 @@
 ---
 title: <integer>
 slug: Web/CSS/integer
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/integer
 ---
+
 {{CSSRef}}
 
 Le type de donnée CSS **`<integer>`** permet de représenter des nombres entiers positifs ou négatifs. Aucune unité n'est liée à la valeur. Les entiers sont utilisés dans de nombreuses propriétés CSS comme {{cssxref("z-index")}}, {{cssxref("line-height")}}, {{cssxref("counter-increment")}}, {{cssxref("column-count")}}, {{cssxref("grid-row")}}, {{cssxref("repeat()")}}. Ce type est un sous-type de {{cssxref("number")}}.
@@ -21,7 +17,7 @@ Toutes les valeurs de type `<integer>` sont également des valeurs de type {{css
 
 ## Interpolation
 
-Les valeurs du type `<entier>` peuvent être interpolées de manière à rendre les animations possibles. Dans ce cas l'interpolation se fait par incrémentation discrète. Le calcul est réalisé comme si les valeurs étaient des nombres réels, en virgule flottante et la valeur discrète est obtenue en utilisant la fonction [partie entière](https://fr.wikipedia.org/wiki/Partie_enti%C3%A8re_et_partie_fractionnaire#Fonction_partie_enti.C3.A8re). La rapidité de l'interpolation est déterminée par la {{cssxref("easing-function","fonction de temporisation")}} associée à l'animation.
+Les valeurs du type `<entier>` peuvent être interpolées de manière à rendre les animations possibles. Dans ce cas l'interpolation se fait par incrémentation discrète. Le calcul est réalisé comme si les valeurs étaient des nombres réels, en virgule flottante et la valeur discrète est obtenue en utilisant la fonction [partie entière](https://fr.wikipedia.org/wiki/Partie_entière_et_partie_fractionnaire#Fonction_partie_enti.C3.A8re). La rapidité de l'interpolation est déterminée par la {{cssxref("easing-function","fonction de temporisation")}} associée à l'animation.
 
 ## Exemples
 
@@ -50,17 +46,12 @@ _5          Les caractères spéciaux ne sont pas acceptés
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires                                                                    |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Values', '#integers', '&lt;integer&gt;')}}         | {{Spec2('CSS4 Values')}} | Aucune modification significative.                                              |
-| {{SpecName('CSS3 Values', '#integers', '&lt;integer&gt;')}}         | {{Spec2('CSS3 Values')}} | Aucune modification depuis la spécification CSS de niveau 2 (première révision) |
-| {{SpecName('CSS2.1', 'syndata.html#numbers', '&lt;integer&gt;')}} | {{Spec2('CSS2.1')}}         | Définition implicite.                                                           |
-| {{SpecName('CSS1', '', '&lt;integer&gt;')}}                                 | {{Spec2('CSS1')}}         | Définition implicite.                                                           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.integer")}}
+{{Compat}}
 
-##  Voir aussi
+## Voir aussi
 
 - {{cssxref("&lt;number&gt;")}}

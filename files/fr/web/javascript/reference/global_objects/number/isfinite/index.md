@@ -1,16 +1,8 @@
 ---
 title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Méthode
-  - Number
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/isFinite
 ---
+
 {{JSRef}}
 
 La méthode **`Number.isFinite()`** permet de déterminer si la valeur fournie est un nombre fini.
@@ -19,7 +11,9 @@ La méthode **`Number.isFinite()`** permet de déterminer si la valeur fournie e
 
 ## Syntaxe
 
-    Number.isFinite(valeurÀTester);
+```js
+Number.isFinite(valeurÀTester);
+```
 
 ### Paramètres
 
@@ -37,18 +31,18 @@ Par rapport à la fonction de l'objet global {{jsxref("isFinite","isFinite()")}}
 ## Exemples
 
 ```js
-Number.isFinite(Infinity);  // false
-Number.isFinite(NaN);       // false
+Number.isFinite(Infinity); // false
+Number.isFinite(NaN); // false
 Number.isFinite(-Infinity); // false
 
-Number.isFinite(0);         // true
-Number.isFinite(2e64);      // true
+Number.isFinite(0); // true
+Number.isFinite(2e64); // true
 
-Number.isFinite("0");       // false, ce qui aurait
-                            // renvoyé true avec isFinite("0")
+Number.isFinite("0"); // false, ce qui aurait
+// renvoyé true avec isFinite("0")
 
-Number.isFinite(null);      // false, ce qui aurait
-                            // renvoyé true avc isFinite(null)
+Number.isFinite(null); // false, ce qui aurait
+// renvoyé true avc isFinite(null)
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -56,40 +50,38 @@ Number.isFinite(null);      // false, ce qui aurait
 ```js
 // Number.isFinite polyfill
 // http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isfinite
-if (typeof Number.isFinite !== 'function') {
-    Number.isFinite = function isFinite(value) {
-        // 1. Si Type(number) n'est pas Number, on renvoie false.
-        if (typeof value !== 'number') {
-            return false;
-        }
-        // 2. Si le nombre est NaN, +∞, ou −∞, on renvoie false.
-        if (value !== value || value === Infinity || value === -Infinity) {
-            return false;
-        }
-        // 3. Sinon on renvoie true.
-        return true;
-    };
+if (typeof Number.isFinite !== "function") {
+  Number.isFinite = function isFinite(value) {
+    // 1. Si Type(number) n'est pas Number, on renvoie false.
+    if (typeof value !== "number") {
+      return false;
+    }
+    // 2. Si le nombre est NaN, +∞, ou −∞, on renvoie false.
+    if (value !== value || value === Infinity || value === -Infinity) {
+      return false;
+    }
+    // 3. Sinon on renvoie true.
+    return true;
+  };
 }
 ```
 
 Deuxième version plus concise qui utilise la méthode globale `isFinite`
 
 ```js
-if (Number.isFinite === undefined) Number.isFinite = function(value) {
+if (Number.isFinite === undefined)
+  Number.isFinite = function (value) {
     return typeof value === "number" && isFinite(value);
-}
+  };
 ```
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-number.isfinite', 'Number.isInteger')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-number.isfinite', 'Number.isInteger')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.isFinite")}}
+{{Compat}}
 
 ## Voir aussi
 

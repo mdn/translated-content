@@ -1,16 +1,8 @@
 ---
 title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Méthode
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/preventExtensions
 ---
+
 {{JSRef}}
 
 La méthode **`Object.preventExtensions()`** permet d'empêcher l'ajout de nouvelles propriétés à un objet (i.e. d'étendre l'objet grâce à de nouvelles caractéristiques).
@@ -19,7 +11,9 @@ La méthode **`Object.preventExtensions()`** permet d'empêcher l'ajout de nouve
 
 ## Syntaxe
 
-    Object.preventExtensions(obj)
+```js
+Object.preventExtensions(obj);
+```
 
 ### Paramètres
 
@@ -95,15 +89,11 @@ Object.preventExtensions(1);
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires                                            |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.10', 'Object.preventExtensions')}}                         | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.preventextensions', 'Object.preventExtensions')}}     | {{Spec2('ES6')}}         |                                                         |
-| {{SpecName('ESDraft', '#sec-object.preventextensions', 'Object.preventExtensions')}} | {{Spec2('ESDraft')}} |                                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.preventExtensions")}}
+{{Compat}}
 
 ## Voir aussi
 

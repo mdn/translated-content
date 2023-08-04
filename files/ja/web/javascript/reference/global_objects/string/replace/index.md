@@ -1,17 +1,8 @@
 ---
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
-tags:
-  - Expressions
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-  - Regular
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
-browser-compat: javascript.builtins.String.replace
 ---
+
 {{JSRef}}
 
 **`replace()`** メソッドは、`pattern` に一致する文字列の一部またはすべてを `replacement` で置き換えた新しい文字列を返します。 `pattern` には文字列または正規表現 ({{jsxref("RegExp")}}) を指定することができ、 `replacement` には文字列または一致するごとに呼び出される関数を指定することができます。 `pattern` が文字列の場合、最初に一致した箇所のみを置き換えます。
@@ -66,7 +57,7 @@ replace(substr, replacerFunction)
 | `` $` ``  | 一致した部分文字列の直前の文字列の部分を挿入します。                                                                                                                                                                                                                                                        |
 | `$'`      | 一致した部分文字列の直後の文字列の部分を挿入します。                                                                                                                                                                                                                                                         |
 | `$n`      | `n` は 100 未満の正の整数です。第一引数が {{jsxref("RegExp")}} オブジェクトだった場合に `n` 番目の括弧でキャプチャされた文字列を挿入します。なお、 `1` から始まることに注意してください。 `n` 番目のグループが存在しない場合 (例えば、グループ 3 の場合)、リテラル (例えば `$3`) として置換されます。                     |
-| `$<Name>` | ここで、 `Name` はキャプチャするグループ名です。グループが一致に含まれていなかったり、正規表現に含まれていなかったり、正規表現ではなく文字列が `replace` の第一引数として渡された場合は、リテラル (例えば  `$<Name>`) に解決されます。名前付きキャプチャグループに対応しているブラウザーのバージョンでのみ利用可能です。 |
+| `$<Name>` | ここで、 `Name` はキャプチャするグループ名です。グループが一致に含まれていなかったり、正規表現に含まれていなかったり、正規表現ではなく文字列が `replace` の第一引数として渡された場合は、リテラル (例えば `$<Name>`) に解決されます。名前付きキャプチャグループに対応しているブラウザーのバージョンでのみ利用可能です。 |
 
 ### 引数としての関数の指定
 
@@ -111,7 +102,7 @@ console.log(newstr);  // Twas the night before Christmas...
 
 これは `'Twas the night before Christmas...'` と出力します。
 
-> **Note:** 正規表現についてのその他の例は[このガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)を参照してください。
+> **メモ:** 正規表現についてのその他の例は[このガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)を参照してください。
 
 ### 大文字小文字を区別しないフラグとグローバルフラグの使用
 

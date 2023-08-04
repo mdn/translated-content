@@ -1,12 +1,8 @@
 ---
 title: grid
 slug: Web/CSS/@media/grid
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/grid
 ---
+
 {{CSSRef}}
 
 **`grid`** est une caractéristique média CSS (cf {{cssxref("@media")}}) dont la valeur est un booléen qui indique si l'appareil d'affichage fonctionne grâce à une grille (ex. un terminal ou un appareil qui ne dispose que d'une police à chasse fixe) ou grâce à une matrice d'affichage (avec des pixels « classiques »).
@@ -22,7 +18,9 @@ La caractéristique `grid` est une valeur booléenne (`0` ou `1`) (type {{cssxre
 ### HTML
 
 ```html
-<p class="unknown">Impossible de savoir si l'affichage fonctionne sur une grille. :-(</p>
+<p class="unknown">
+  Impossible de savoir si l'affichage fonctionne sur une grille. :-(
+</p>
 <p class="bitmap">L'appareil dispose d'un affichage matriciel.</p>
 <p class="grid">L'appareil utilise une grille pour l'affichage !</p>
 ```
@@ -63,10 +61,8 @@ La caractéristique `grid` est une valeur booléenne (`0` ou `1`) (type {{cssxre
 
 ## Spécifications
 
-| Spécification                                                        | État                                     | Commentaires         |
-| -------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Media Queries', '#grid', 'grid')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.grid")}}
+{{Compat}}

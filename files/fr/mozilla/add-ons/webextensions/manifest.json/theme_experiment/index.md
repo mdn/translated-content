@@ -1,20 +1,8 @@
 ---
 title: theme expérimentation
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
-tags:
-  - Add-ons
-  - Browser
-  - Customisation
-  - Customise
-  - Design
-  - Look and Feel
-  - Themes
-  - colors
-  - navigatuer
-  - theme manifest
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
-original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experimentation
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -154,7 +142,7 @@ La feuille de style définit :
 }
 ```
 
-où `#reload-button` est le sélecteur CSS interne de Firefox pour le bouton reload et  `--reload-button-color` est un nom arbitraire..
+où `#reload-button` est le sélecteur CSS interne de Firefox pour le bouton reload et `--reload-button-color` est un nom arbitraire..
 
 Dans le fichier `manifest.json`, `--reload-button-color` est alors mappé au nom à utiliser dans la propriété `theme` `colors` :
 
@@ -181,8 +169,8 @@ Ceci a pour effet de rendre l'icône de recharge orange.
 
 ![](theme_experiment.png)
 
-Cette propriété peut également être utilisée dans `browser.theme.update()`. `images` et  `properties` travaillent de la même manière que `colors`.
+Cette propriété peut également être utilisée dans `browser.theme.update()`. `images` et `properties` travaillent de la même manière que `colors`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.theme_experiment")}}
+{{Compat}}

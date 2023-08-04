@@ -1,14 +1,9 @@
 ---
 title: text
 slug: Web/SVG/Element/text
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG contenu de texte
-translation_of: Web/SVG/Element/text
 ---
-{{SVGRef}}{{Draft("Cette version n'est pas à jour relativement à la version anglaise de référence, merci d'en tenir compte.")}}
+
+{{SVGRef}}
 
 L'élément SVG `text` définit un élément graphique contenant du texte. Notez qu'il est possible d'y appliquer un dégradé, un motif, un tracé spécifique (clipping path), un masque ou un filtre.
 
@@ -74,10 +69,10 @@ Le texte SVG peut également être stylisé avec du CSS contenant les propriét�
 
 ### Attributs globaux
 
-- [Conditional processing attributes](/fr/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing")&nbsp;»
-- [Core attributes](/fr/SVG/Attribute#Core "en/SVG/Attribute#Core")&nbsp;»
-- [Graphical event attributes](/fr/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent")&nbsp;»
-- [Presentation attributes](/fr/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation")&nbsp;»
+- [Conditional processing attributes](/fr/SVG/Attribute#ConditionalProccessing)&nbsp;»
+- [Core attributes](/fr/SVG/Attribute#Core)&nbsp;»
+- [Graphical event attributes](/fr/SVG/Attribute#GraphicalEvent)&nbsp;»
+- [Presentation attributes](/fr/SVG/Attribute#Presentation)&nbsp;»
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -96,11 +91,11 @@ Le texte SVG peut également être stylisé avec du CSS contenant les propriét�
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGTextElement`](/fr/DOM/SVGTextElement "en/DOM/SVGTextElement").
+Cet élément implémente l'interface [`SVGTextElement`](/fr/DOM/SVGTextElement).
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.text")}}
+{{Compat}}
 
 ## Articles liés
 

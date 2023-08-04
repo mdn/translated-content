@@ -1,16 +1,8 @@
 ---
 title: ShadowRoot.activeElement
 slug: Web/API/ShadowRoot/activeElement
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - ShadowRoot
-  - ウェブコンポーネント
-  - シャドウ DOM
-browser-compat: api.ShadowRoot.activeElement
-translation_of: Web/API/ShadowRoot/activeElement
 ---
+
 {{APIRef("Shadow DOM")}}
 
 **`activeElement`** は {{domxref("ShadowRoot")}} インターフェイスの読み取り専用プロパティで、シャドウツリー内でフォーカスを持っている要素を返します。

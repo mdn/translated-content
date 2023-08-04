@@ -1,22 +1,17 @@
 ---
 title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
-tags:
-  - Error
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Error/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une représentation de l'objet {{jsxref("Error")}} sous la forme d'une chaine de caractères.
 
 ## Syntaxe
 
-    e.toString()
+```js
+e.toString();
+```
 
 ### Valeur de retour
 
@@ -31,19 +26,16 @@ Error.prototype.toString = function () {
   "use strict";
 
   var obj = Object(this);
-  if (obj !== this)
-    throw new TypeError();
+  if (obj !== this) throw new TypeError();
 
   var name = this.name;
-  name = (name === undefined) ? "Error" : String(name);
+  name = name === undefined ? "Error" : String(name);
 
   var msg = this.message;
-  msg = (msg === undefined) ? "" : String(msg);
+  msg = msg === undefined ? "" : String(msg);
 
-  if (name === "")
-    return msg;
-  if (msg === "")
-    return name;
+  if (name === "") return msg;
+  if (msg === "") return name;
 
   return name + ": " + msg;
 };
@@ -70,16 +62,11 @@ console.log(e.toString()); // "salut"
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.11.4.4', 'Error.prototype.toString')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-error.prototype.tostring', 'Error.prototype.toString')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-error.prototype.tostring', 'Error.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Error.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

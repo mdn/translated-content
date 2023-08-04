@@ -1,12 +1,8 @@
 ---
 title: Firefox 11 pour les développeurs
 slug: Mozilla/Firefox/Releases/11
-tags:
-  - Firefox
-  - Firefox 11
-translation_of: Mozilla/Firefox/Releases/11
-original_slug: Mozilla/Firefox/Versions/11
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 11, basé sur Gecko 11.0, est sorti le 13 mars 2012. Cet article fournit des informations sur les nouvelles fonctionnalités et les principaux bugs corrigés, ainsi que des liens vers une documentation plus détaillée pour les développeurs web et d'extensions.
@@ -47,8 +43,8 @@ Firefox 11, basé sur Gecko 11.0, est sorti le 13 mars 2012. Cet article fournit
 
 ### WebSocket
 
-- L'API [WebSocket](/fr/docs/WebSockets) supporte désormais les messages binaires (voir {{bug("676439")}}).
-- Le protocole et l'API ont été mis à jour suivant la dernière version de la spécification et l'API n'a plus de préfixe (voir {{bug("666349")}} et {{bug("695635")}}).
+- L'API [WebSocket](/fr/docs/WebSockets) supporte désormais les messages binaires (voir [bug Firefox 676439](https://bugzil.la/676439)).
+- Le protocole et l'API ont été mis à jour suivant la dernière version de la spécification et l'API n'a plus de préfixe (voir [bug Firefox 666349](https://bugzil.la/666349) et [bug Firefox 695635](https://bugzil.la/695635)).
 - Auparavant, les messages envoyés et reçus à l'aide de WebSockets dans Firefox été limités à 16 Mo en taille, désormais ils peuvent aller jusqu'à 2 Go (bien que les limitations de capacité de mémoire peut les empêcher d'être plus grand, Firefox le supporte).
 
 ### IndexedDB
@@ -81,17 +77,17 @@ Firefox 11, basé sur Gecko 11.0, est sorti le 13 mars 2012. Cet article fournit
 
 ### Changements dans les interfaces
 
-- L'interface `mozIAsyncHistory` a une nouvelle méthode {{ifmethod("mozIAsyncHistory","isURIVisited")}} pour vérifier si une URI a été visitée.
-- Une nouvelle interface `mozIVisitStatusCallback` a été ajoutée pour fournir une fonctionnalité de traitement des rappels pour {{ifmethod("mozIAsyncHistory","isURIVisited")}}.
+- L'interface `mozIAsyncHistory` a une nouvelle méthode `mozIAsyncHistory.isURIVisited()` pour vérifier si une URI a été visitée.
+- Une nouvelle interface `mozIVisitStatusCallback` a été ajoutée pour fournir une fonctionnalité de traitement des rappels pour `mozIAsyncHistory.isURIVisited()`.
 - L'interface `nsIMacDockSupport` interface now supports adding a text badge to the application's icon in the Dock using its new `badgeText` attribute.
-- Dans l'interface `nsINavHistoryResultObserver`, vous devez à présent implémenter {{ifmethod("nsINavHistoryResultObserver", "containerStateChanged")}} au lieu des anciennes méthodes `containerOpened()` et `containerClosed()`.
+- Dans l'interface `nsINavHistoryResultObserver`, vous devez à présent implémenter `nsINavHistoryResultObserver.containerStateChanged()` au lieu des anciennes méthodes `containerOpened()` et `containerClosed()`.
 
 #### Interface supprimées
 
 Les interfaces suivantes ont été supprimées car elles n'étaient plus indispensables :
 
 - `nsICharsetResolver`
-- `nsIDOMNSElement`, voir {{bug("707576")}} ; utilisez `nsIDOMElement` à la place.
+- `nsIDOMNSElement`, voir [bug Firefox 707576](https://bugzil.la/707576) ; utilisez `nsIDOMElement` à la place.
 
 ### Changement lié au thème
 
@@ -99,7 +95,7 @@ Les interfaces suivantes ont été supprimées car elles n'étaient plus indispe
 
 ### Changement dans les préférences
 
-- {{Pref("ui.tooltipDelay")}}
+- `"ui.tooltipDelay"`
   - : Définit le délai, en millisecondes, entre le moment où le curseur de la souris s'arrête et l'affichage d'une info-bulle.
 
 ### Changement dans le système de compilation
@@ -110,6 +106,6 @@ Les interfaces suivantes ont été supprimées car elles n'étaient plus indispe
 
 - Les extensions qui n'ont pas été mises à jour depuis longtemps sont supposées ne plus être compatible par défaut, ce qui concerne actuellement les add-ons qui indiquent 4.0 pour `maxVersion`.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('10')}}

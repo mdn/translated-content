@@ -1,15 +1,8 @@
 ---
 title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
-tags:
-  - JavaScript
-  - Méthode
-  - Object
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/hasOwnProperty
 ---
+
 {{JSRef}}
 
 La méthode **`hasOwnProperty()`** retourne un booléen indiquant si l'objet possède la propriété spécifiée "en propre", sans que celle-ci provienne de la chaîne de prototypes de l'objet.
@@ -18,7 +11,9 @@ La méthode **`hasOwnProperty()`** retourne un booléen indiquant si l'objet pos
 
 ## Syntaxe
 
-    obj.hasOwnProperty(prop)
+```js
+obj.hasOwnProperty(prop);
+```
 
 ### Paramètres
 
@@ -41,9 +36,9 @@ L'exemple suivant détermine si l'objet `o` contient une propriété appelée `p
 
 ```js
 o = new Object();
-o.hasOwnProperty('prop'); // false
-o.prop = 'exists';
-o.hasOwnProperty('prop'); // true
+o.hasOwnProperty("prop"); // false
+o.prop = "exists";
+o.hasOwnProperty("prop"); // true
 ```
 
 ### Propriétés directes et propriétés héritées
@@ -52,38 +47,36 @@ L'exemple suivant illustre la différence entre les propriétés directes et les
 
 ```js
 o = new Object();
-o.prop = 'exists';
+o.prop = "exists";
 
-o.hasOwnProperty('prop');
+o.hasOwnProperty("prop");
 // retourne true
 
-o.hasOwnProperty('toString');
+o.hasOwnProperty("toString");
 // retourne false
 
-o.hasOwnProperty('hasOwnProperty');
+o.hasOwnProperty("hasOwnProperty");
 // retourne false
 ```
 
 ### Parcourir les propriétés d'un objet
 
-L'exemple suivant montre comment parcourir les propriétés d'un objet sans traiter les propriétés héritées. On notera que la boucle  {{jsxref("Instructions/for...in", "for...in")}} ne prend en compte que les éléments énumérables. Il ne faut donc pas déduire de l'absence de propriétés non-énumérables dans la boucle, que `hasOwnProperty()` est elle-même strictement restreinte aux éléments énumérables (comme c'est le cas pour {{jsxref("Object.getOwnPropertyNames()")}}) .
+L'exemple suivant montre comment parcourir les propriétés d'un objet sans traiter les propriétés héritées. On notera que la boucle {{jsxref("Instructions/for...in", "for...in")}} ne prend en compte que les éléments énumérables. Il ne faut donc pas déduire de l'absence de propriétés non-énumérables dans la boucle, que `hasOwnProperty()` est elle-même strictement restreinte aux éléments énumérables (comme c'est le cas pour {{jsxref("Object.getOwnPropertyNames()")}}) .
 
 ```js
 var bidule = {
-    truc: 'stack'
+  truc: "stack",
 };
 
 for (var nom in bidule) {
-    if (bidule.hasOwnProperty(nom)) {
-        console.log("C'est bien la propriété (" +
-                     nom +
-                     "), sa valeur : " + bidule[nom]
-                    );
-    }
-    else {
-        console.log(nom);
-        // toString ou autre
-    }
+  if (bidule.hasOwnProperty(nom)) {
+    console.log(
+      "C'est bien la propriété (" + nom + "), sa valeur : " + bidule[nom],
+    );
+  } else {
+    console.log(nom);
+    // toString ou autre
+  }
 }
 ```
 
@@ -93,36 +86,31 @@ JavaScript ne protège pas le nom de propriété `hasOwnProperty`, ainsi il est 
 
 ```js
 var toto = {
-  hasOwnProperty: function() {
+  hasOwnProperty: function () {
     return false;
   },
-  truc: 'Voici les dragons'
+  truc: "Voici les dragons",
 };
 
-toto.hasOwnProperty('truc'); // renvoie toujours false
+toto.hasOwnProperty("truc"); // renvoie toujours false
 
 // On utilise une méthode d'un autre objet
 // et on l'appelle avec this qui vaut toto
-({}).hasOwnProperty.call(toto, 'truc'); // true
+({}).hasOwnProperty.call(toto, "truc"); // true
 
 // On peut aussi utiliser la propriété hasOwnProperty de Object prototype
-Object.prototype.hasOwnProperty.call(toto, 'truc'); // true
+Object.prototype.hasOwnProperty.call(toto, "truc"); // true
 ```
 
 La dernière version utilisée permet de ne pas créer d'objet supplémentaire.
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                                             | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.5. |
-| {{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}                                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.hasOwnProperty")}}
+{{Compat}}
 
 ## Voir aussi
 

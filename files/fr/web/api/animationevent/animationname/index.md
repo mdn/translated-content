@@ -1,32 +1,25 @@
 ---
 title: AnimationEvent.animationName
 slug: Web/API/AnimationEvent/animationName
-tags:
-  - API
-  - AnimationEvent
-  - CSS Animations
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/API/AnimationEvent/animationName
 ---
+
 {{SeeCompatTable}}{{ apiref("AnimationEvent") }}
 
 La propriété en lecture seule **`AnimationEvent.animationName`** est une {{domxref("DOMString")}} contenant la valeur de la propriété CSS {{cssxref("animation-name")}} associée à la transition.
 
 ## Syntaxe
 
-    nom = AnimationEvent.animationName
+```js
+nom = AnimationEvent.animationName;
+```
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                               | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Animations', '#AnimationEvent-animationName', 'AnimationEvent.animationName')}} | {{Spec2('CSS3 Animations')}} | Première définition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.AnimationEvent.animationName")}}
+{{Compat}}
 
 ## Voir aussi
 

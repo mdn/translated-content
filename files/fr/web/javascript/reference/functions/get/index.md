@@ -1,15 +1,8 @@
 ---
 title: L'opérateur get
 slug: Web/JavaScript/Reference/Functions/get
-tags:
-  - ECMAScript 2015
-  - ECMAScript 5
-  - Functions
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Functions/get
-original_slug: Web/JavaScript/Reference/Fonctions/get
 ---
+
 {{jsSidebar("Functions")}}
 
 La syntaxe **`get`** permet de lier une propriété d'un objet à une fonction qui sera appelée lorsqu'on accédera à la propriété.
@@ -18,8 +11,10 @@ La syntaxe **`get`** permet de lier une propriété d'un objet à une fonction q
 
 ## Syntaxe
 
-    {get prop() { ... } }
-    {get [expression]() { ... } }
+```js
+{get prop() { ... } }
+{get [expression]() { ... } }
+```
 
 ### Paramètres
 
@@ -51,13 +46,12 @@ var o = {
   get dernier() {
     if (this.journal.length > 0) {
       return this.journal[this.journal.length - 1];
-    }
-    else {
+    } else {
       return null;
     }
   },
-  journal: ["toto","actu"]
-}
+  journal: ["toto", "actu"],
+};
 console.log(o.dernier); // "actu"
 ```
 
@@ -74,11 +68,15 @@ delete o.dernier;
 Afin d'ajouter un accesseur à un objet qui existe déjà, on peut utiliser la méthode {{jsxref("Object.defineProperty()")}}.
 
 ```js
-var o = { a:0 }
+var o = { a: 0 };
 
-Object.defineProperty(o, "b", { get: function () { return this.a + 1; } });
+Object.defineProperty(o, "b", {
+  get: function () {
+    return this.a + 1;
+  },
+});
 
-console.log(o.b) // Utilise l'accesseur qui génère a + 1 (qui correspond à 1)
+console.log(o.b); // Utilise l'accesseur qui génère a + 1 (qui correspond à 1)
 ```
 
 ### Utiliser un nom de propriété calculé
@@ -87,7 +85,9 @@ console.log(o.b) // Utilise l'accesseur qui génère a + 1 (qui correspond à 1)
 var expr = "toto";
 
 var obj = {
-  get [expr]() { return "truc"; }
+  get [expr]() {
+    return "truc";
+  },
 };
 
 console.log(obj.toto); // "truc"
@@ -97,7 +97,7 @@ console.log(obj.toto); // "truc"
 
 Les accesseurs permettent de définir des propriétés sur un objet mais ils ne calculent pas la valeur de la propriété tant qu'il n'y a pas d'accès envers celle-ci. Un accesseur délègue le coût de calcul jusqu'au moment où la valeur est vraiment nécessaire (si cette dernière n'est jamais utilisée, cela ne coûte alors rien).
 
-Une technique supplémentaire pour optimiser ou retarder le calcul d'une valeur d'une propriété et de la mettre en cache pour les accès ultérieurs consiste à utiliser **des accesseurs intelligents « [mémoïsés](https://fr.wikipedia.org/wiki/M%C3%A9mo%C3%AFsation) »**. La valeur est calculée lors du premier appel de l'accesseur puis est mise en cache afin que les appels ultérieurs renvoient la valeur en cache sans la recalculer. Cette méthode peut s'avérer utile dans plusieurs situations :
+Une technique supplémentaire pour optimiser ou retarder le calcul d'une valeur d'une propriété et de la mettre en cache pour les accès ultérieurs consiste à utiliser **des accesseurs intelligents « [mémoïsés](https://fr.wikipedia.org/wiki/Mémoïsation) »**. La valeur est calculée lors du premier appel de l'accesseur puis est mise en cache afin que les appels ultérieurs renvoient la valeur en cache sans la recalculer. Cette méthode peut s'avérer utile dans plusieurs situations :
 
 - Si le calcul de la valeur est coûteux (il consomme beaucoup de RAM ou de temps CPU, il crée de nouveaux _threads_, il utilise des fichiers distants, etc.).
 - Si la valeur est utilisée plus tard ou, dans certains cas, n'est pas utilisée du tout.
@@ -125,36 +125,34 @@ Lorsqu'on utilise `get`, la propriété sera définie sur le prototype de l'obje
 ```js
 class Exemple {
   get coucou() {
-    return 'monde';
+    return "monde";
   }
 }
 
 const obj = new Exemple();
 console.log(obj.coucou);
 // "monde"
-console.log(Object.getOwnPropertyDescriptor(obj, 'coucou'));
+console.log(Object.getOwnPropertyDescriptor(obj, "coucou"));
 // undefined
-console.log(Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), 'coucou'));
+console.log(
+  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), "coucou"),
+);
 // { configurable: true, enumerable: false, get: function get coucou() { return 'monde'; }, set: undefined }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires                           |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------- |
-| {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}                     | {{Spec2('ES5.1')}}     | Définition initiale                    |
-| {{SpecName('ES2015', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ES2015')}}     | Ajout des noms de propriétés calculés. |
-| {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.functions.get")}}
+{{Compat}}
 
 ## Voir aussi
 
 - [`set`](/fr/docs/Web/JavaScript/Reference/Fonctions/set)
 - {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [Définir des accesseurs et mutateurs](/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#D.C3.A9finir_des_getters_et_setters), un chapitre du Guide JavaScript

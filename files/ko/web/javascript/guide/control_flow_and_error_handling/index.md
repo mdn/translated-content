@@ -1,18 +1,6 @@
 ---
 title: 제어 흐름과 오류 처리
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - Beginner
-  - Decision making
-  - Error Handling
-  - Flow control
-  - Guide
-  - JavaScript
-  - Logic
-  - control
-  - l10n:priority
-  - statements
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -233,8 +221,8 @@ console.log('더 필요한게 있으신가요?');
 
 `throw` 문을 사용하면 예외를 던질 수 있고, 던진 예외는 `try...catch` 문으로 처리할 수 있습니다.
 
-- [`throw` 문](#throw_문)
-- [`try...catch` 문](#try...catch_문)
+- [`throw` 문](#throw_문)
+- [`try...catch` 문](#try...catch_문)
 
 ### 예외 유형
 
@@ -243,7 +231,7 @@ JavaScript에서는 모든 것을 `throw`로 던질 수 있습니다. 그래서 
 - [ECMAScript 예외](/ko/docs/Web/JavaScript/Reference/Global_Objects/Error#오류_유형)
 - [`DOMException`](/ko/docs/Web/API/DOMException), [`DOMError`](/ko/docs/Web/API/DOMError)
 
-### `throw` 문
+### `throw` 문
 
 예외를 던질 땐 `throw` 문을 사용하세요. `throw`에 던질 값을 지정하면 됩니다.
 

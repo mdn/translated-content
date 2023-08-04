@@ -1,16 +1,8 @@
 ---
 title: RegExp.prototype[@@split]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
-tags:
-  - Expressions rationnelles
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@split
 ---
+
 {{JSRef}}
 
 La méthode **`[@@split]()`** permet de découper une chaîne de caractères ({{jsxref("String")}}) en un tableau de sous-chaînes.
@@ -19,7 +11,9 @@ La méthode **`[@@split]()`** permet de découper une chaîne de caractères ({{
 
 ## Syntaxe
 
-    regexp[Symbol.split](str[, limite])
+```js
+regexp[Symbol.split](str[, limite])
+```
 
 ### Paramètres
 
@@ -37,9 +31,9 @@ Un tableau ({{jsxref("Array")}}) dont les éléments sont les sous-chaînes de c
 Cette méthode est appelée de façon interne par la méthode {{jsxref("String.prototype.split()")}} lorsque l'argument `str` est un objet {{jsxref("RegExp")}}. Ainsi, les deux exemples qui suivent sont équivalents et le second est la version interne du premier :
 
 ```js
-'a-b-c'.split(/-/);
+"a-b-c".split(/-/);
 
-/-/[Symbol.split]('a-b-c');
+/-/[Symbol.split]("a-b-c");
 ```
 
 Cette méthode existe afin de pouvoir adapter le fonctionnement de la découpe pour les sous-classes de `RegExp`.
@@ -50,43 +44,40 @@ Si le séparateur n'est pas un objet {{jsxref("RegExp")}}, la méthode {{jsxref(
 
 ### Appel direct
 
-Cette méthode peut être utilisée comme  {{jsxref("String.prototype.split()")}}, l'objet `this` est différent et l'ordre des arguments également.
+Cette méthode peut être utilisée comme {{jsxref("String.prototype.split()")}}, l'objet `this` est différent et l'ordre des arguments également.
 
 ```js
 var re = /-/g;
-var str = '2016-01-02';
+var str = "2016-01-02";
 var résultat = re[Symbol.split](str);
-console.log(résultat);  // ["2016", "01", "02"]
+console.log(résultat); // ["2016", "01", "02"]
 ```
 
 ### Utiliser `@@split` avec une sous-classe
 
-Les sous-classes de {{jsxref("RegExp")}} peuvent surcharger  `[@@split]()` afin de modifier le comportement de la découpe :
+Les sous-classes de {{jsxref("RegExp")}} peuvent surcharger `[@@split]()` afin de modifier le comportement de la découpe :
 
 ```js
 class MaRegExp extends RegExp {
   [Symbol.split](str, limit) {
     var résultat = RegExp.prototype[Symbol.split].call(this, str, limit);
-    return résultat.map(x => "(" + x + ")");
+    return résultat.map((x) => "(" + x + ")");
   }
 }
 
-var re = new MaRegExp('-');
-var str = '2016-01-02';
+var re = new MaRegExp("-");
+var str = "2016-01-02";
 var résultat = str.split(re); // String.prototype.split appelle re[@@split].
 console.log(résultat); // ["(2016)", "(01)", "(02)"]
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-regexp.prototype-@@split', 'RegExp.prototype[@@split]')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-regexp.prototype-@@split', 'RegExp.prototype[@@split]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.@@split")}}
+{{Compat}}
 
 ## Voir aussi
 

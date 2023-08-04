@@ -1,16 +1,8 @@
 ---
 title: 접근자
 slug: Web/JavaScript/Reference/Functions/get
-tags:
-  - ECMAScript 2015
-  - ECMAScript 5
-  - Functions
-  - JavaScript
-  - Language feature
-  - Reference
-browser-compat: javascript.functions.get
-translation_of: Web/JavaScript/Reference/Functions/get
 ---
+
 {{jsSidebar("Functions")}}
 
 **`get`** 구문은 객체의 속성 접근 시 호출할 함수를 바인딩합니다.
@@ -42,12 +34,15 @@ translation_of: Web/JavaScript/Reference/Functions/get
 - 접근자의 식별자는 숫자나 문자열일 수 있습니다.
 - 접근자 함수는 매개변수를 가질 수 없습니다.
 - 객체 리터럴에서, 같은 속성 키에 다수의 접근자를 바인딩할 수 없습니다.
+
   ```js example-bad
   {
     get x() { }, get x() { }
   }
   ```
+
 - 객체 리터럴에서, 접근자는 데이터 속성과 같은 키를 사용할 수 없습니다.
+
   ```js example-bad
   {
     x: ..., get x() { }
@@ -142,7 +137,7 @@ get notifier() {
 },
 ```
 
-### `get` Vs. `defineProperty`
+### `get` Vs. `defineProperty`
 
 `get` 키워드와 {{jsxref("Object.defineProperty()")}}는 비슷한 결과를 내지만, {{jsxref("classes", "클래스", "", 1)}}에 사용할 경우 미묘한 차이가 생깁니다.
 
@@ -172,7 +167,7 @@ console.log(
 
 ## 명세
 
-{{Specification}}
+{{Specifications}}
 
 ## 브라우저 호환성
 
@@ -183,6 +178,6 @@ console.log(
 - [설정자](/ko/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - JavaScript 안내서의 [접근자와 설정자 정의하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)

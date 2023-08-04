@@ -1,12 +1,8 @@
 ---
 title: overflow-anchor
 slug: Web/CSS/overflow-anchor
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/overflow-anchor
 ---
+
 {{CSSRef}}
 
 La propriété **`overflow-anchor`** permet d'éviter, lors du défilement, que le navigateur ajuste la position afin de minimiser le déplacement du contenu.
@@ -33,9 +29,13 @@ overflow-anchor: unset;
 - `none`
   - : L'élément ne sera pas sélectionné comme ancre.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -49,16 +49,12 @@ body {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS Scroll Anchoring', '#propdef-overflow-anchor', 'overflow-anchor')}} | {{Spec2('CSS Scroll Anchoring')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.overflow-anchor")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Guide sur l'ancrage du défilement (_scroll anchoring_)](/en-US/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring)
+- [Guide sur l'ancrage du défilement (_scroll anchoring_)](/fr/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring)

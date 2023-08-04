@@ -1,24 +1,18 @@
 ---
 title: RegExp.rightContext ($')
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/rightContext
-tags:
-  - JavaScript
-  - Non-standard
-  - Propriété
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/rightContext
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/rightContext
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 La propriété non-standard **`rightContext`** est une propriété statique, accessible uniquement en lecture, qui contient la sous-chaîne suivant la correspondance la plus récente. `RegExp.$'` est un alias pour cette propriété.
 
 ## Syntaxe
 
-    RegExp.rightContext
-    RegExp["$'"]
+```js
+RegExp.rightContext;
+RegExp["$'"];
+```
 
 ## Description
 
@@ -34,7 +28,7 @@ L'alias ne peut pas être utilisé avec la syntaxe utilisant le point (`RegExp.$
 var re = /coucou/g;
 re.test("coucou monde !");
 RegExp.rightContext; // " monde !"
-RegExp["$'"];       // " monde !"
+RegExp["$'"]; // " monde !"
 ```
 
 ## Spécifications
@@ -43,7 +37,7 @@ Cette propriété n'est pas standard, elle ne fait partie d'aucune spécificatio
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.rightContext")}}
+{{Compat}}
 
 ## Voir aussi
 

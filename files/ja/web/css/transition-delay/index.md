@@ -1,15 +1,8 @@
 ---
 title: transition-delay
 slug: Web/CSS/transition-delay
-tags:
-  - CSS
-  - CSS トランジション
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.transition-delay
-translation_of: Web/CSS/transition-delay
 ---
+
 {{CSSRef}}
 
 CSS の `transition-delay` プロパティは、値が変更されたときにプロパティの[トランジション効果](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)が始まるまでの待ち時間を指定します。
@@ -58,13 +51,13 @@ transition-delay: unset;
 #### HTML
 
 ```html
-  <div class="box delay-1">0.5 seconds</div>
+<div class="box delay-1">0.5 seconds</div>
 
-  <div class="box delay-2">2 seconds</div>
+<div class="box delay-2">2 seconds</div>
 
-  <div class="box delay-3">4 seconds</div>
+<div class="box delay-3">4 seconds</div>
 
-  <button id="change">Change</button>
+<button id="change">Change</button>
 ```
 
 #### CSS
