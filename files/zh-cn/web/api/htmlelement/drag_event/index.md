@@ -78,7 +78,7 @@ body {
 ```js
 let dragged;
 
-/* 以下代码处理的是可拖动的目标元素 */
+/* 在可拖动的目标上触发的事件 */
 const source = document.getElementById("draggable");
 source.addEventListener("drag", (event) => {
   console.log("dragging");
@@ -96,7 +96,7 @@ source.addEventListener("dragend", (event) => {
   event.target.classList.remove("dragging");
 });
 
-/* 以下代码处理的时拖拽的目标元素 */
+/* 在放置目标上触发的事件 */
 const target = document.getElementById("droptarget");
 target.addEventListener(
   "dragover",
@@ -108,21 +108,21 @@ target.addEventListener(
 );
 
 target.addEventListener("dragenter", (event) => {
-  // 高亮显示潜在的放置目标
+  // 在可拖动元素进入潜在的放置目标时高亮显示该目标
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.add("dragover");
   }
 });
 
 target.addEventListener("dragleave", (event) => {
-  // 拖动元素离开放置目标元素时重置放置目标背景
+  // 在可拖动元素离开潜在放置目标元素时重置该目标的背景
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.remove("dragover");
   }
 });
 
 target.addEventListener("drop", (event) => {
-  // 阻止默认行为（比如防止一些元素以链接形式打开）
+  // 阻止默认行为（会作为某些元素的链接打开）
   event.preventDefault();
   // 将被拖动元素移动到选定的目标元素中
   if (event.target.classList.contains("dropzone")) {

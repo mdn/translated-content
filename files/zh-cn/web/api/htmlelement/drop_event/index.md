@@ -5,7 +5,7 @@ slug: Web/API/HTMLElement/drop_event
 
 {{APIRef}}
 
-当元素或文本选择被放置到有效的放置目标上时，将触发**`drop`**事件。为确保**`drop`**事件始终按预期触发，应当在处理**`dragover`**事件的代码部分始终包含**`preventDefault()`**调用。
+**`drop`** 事件在元素或文本选择被放置到有效的放置目标上时触发。为确保 `drop` 事件始终按预期触发，应当在处理 `dragover` 事件的代码部分始终包含 `preventDefault()` 调用。
 
 ## 语法
 
@@ -93,7 +93,7 @@ target.addEventListener("dragover", (event) => {
 });
 
 target.addEventListener("drop", (event) => {
-  // 阻止默认行为(某些元素的默认行为是链接，确保放置时不会打开他们)
+  // 阻止默认行为（会作为某些元素的链接打开）
   event.preventDefault();
   // 将被拖动的元素移动到选定的放置目标
   if (event.target.className === "dropzone") {
