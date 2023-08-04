@@ -1,7 +1,6 @@
 ---
 title: Votre première WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
 
 {{AddonSidebar}}

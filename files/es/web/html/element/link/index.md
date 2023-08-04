@@ -1,7 +1,6 @@
 ---
 title: link
 slug: Web/HTML/Element/link
-original_slug: Web/HTML/Elemento/link
 ---
 
 {{HTMLSidebar}}

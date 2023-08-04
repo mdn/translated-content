@@ -1,7 +1,6 @@
 ---
 title: Firefox 3 のためのウェブアプリケーションの更新
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
-original_slug: Updating_web_applications_for_Firefox_3
 l10n:
   sourceCommit: a35e5b74ecbe13a768edf765a4666fb81a5153a1
 ---

@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
 ---
 
 {{JSRef}}Метод **`delete()`** удаляет уникальный элемент из объекта `Set`.{{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}

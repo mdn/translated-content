@@ -1,7 +1,6 @@
 ---
 title: Clients.openWindow()
 slug: Web/API/Clients/openWindow
-translation_of: Web/API/Clients/openWindow
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

@@ -1,7 +1,6 @@
 ---
 title: 段のスタイル付け
 slug: Web/CSS/CSS_multicol_layout/Styling_columns
-original_slug: Web/CSS/CSS_Columns/Styling_Columns
 ---
 
 {{CSSRef}}

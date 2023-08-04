@@ -1,12 +1,6 @@
 ---
 title: Web App Manifest
 slug: Web/Manifest
-tags:
-  - App
-  - Manifest
-  - Reference
-  - Web
-translation_of: Web/Manifest
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}{{SeeCompatTable}}

@@ -1,8 +1,8 @@
 ---
-title: ':has()'
+title: ":has()"
 slug: Web/CSS/:has
 l10n:
-  sourceCommit:　e1608631832f2608632569d0bd4061372adc5199
+  sourceCommit: e1608631832f2608632569d0bd4061372adc5199
 ---
 
 {{CSSRef}}

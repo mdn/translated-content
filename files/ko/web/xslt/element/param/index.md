@@ -1,7 +1,6 @@
 ---
 title: param
 slug: Web/XSLT/Element/param
-original_slug: Web/XSLT/param
 ---
 
 {{ XsltRef() }}

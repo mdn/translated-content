@@ -1,7 +1,6 @@
 ---
 title: runtime.onInstalled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled
 ---
 
 {{AddonSidebar()}}

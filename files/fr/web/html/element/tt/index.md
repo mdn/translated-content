@@ -1,7 +1,6 @@
 ---
 title: "<tt> : l'élément de texte de téléscripteur (obsolète)"
 slug: Web/HTML/Element/tt
-translation_of: Web/HTML/Element/tt
 ---
 
 {{deprecated_header}}{{HTMLSidebar}}

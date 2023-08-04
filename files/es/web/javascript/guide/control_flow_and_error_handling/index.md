@@ -1,7 +1,6 @@
 ---
 title: Control de flujo y manejo de errores
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-original_slug: Web/JavaScript/Guide/Control_de_flujo_y_manejo_de_errores
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}

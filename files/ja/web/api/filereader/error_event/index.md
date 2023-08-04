@@ -1,5 +1,5 @@
 ---
-title: 'FileReader: error イベント'
+title: "FileReader: error イベント"
 slug: Web/API/FileReader/error_event
 l10n:
   sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce

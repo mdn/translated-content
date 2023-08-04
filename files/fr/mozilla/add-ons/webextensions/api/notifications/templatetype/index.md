@@ -1,7 +1,6 @@
 ---
 title: notifications.TemplateType
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType
 ---
 
 {{AddonSidebar()}}

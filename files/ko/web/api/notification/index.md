@@ -125,7 +125,7 @@ function notifyMe() {
   }
 
   // Otherwise, we need to ask the user for permission
-  else if (Notification.permission !== 'denied') {
+  else if (Notification.permission !== "denied") {
     Notification.requestPermission(function (permission) {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
@@ -144,7 +144,7 @@ function notifyMe() {
 많은 경우에 이렇게 장황할 필요는 없습니다. 예를 들어 [Emogotchi 데모](http://mdn.github.io/emogotchi/)([소스코드](https://github.com/mdn/emogotchi))에서는 단순히 알림을 보내기 위해서 권한을 얻을 수 있는지와 상관없이 {{domxref("Notification.requestPermission")}}를 실행합니다(이 경우는 새로운 프로미스 기반 메서드 문법을 사용):
 
 ```js
-Notification.requestPermission().then(function(result) {
+Notification.requestPermission().then(function (result) {
   console.log(result);
 });
 ```
@@ -152,12 +152,12 @@ Notification.requestPermission().then(function(result) {
 그 다음에 알림이 필요한 때에 단순히 `spawnNotification()` 함수를 실행합니다. 본문과 아이콘, 제목을 인자로 넘기면 필요한 `options` 객체를 만들고 {{domxref("Notification.Notification","Notification()")}} 생성자를 사용해서 알림을 발생시킵니다.
 
 ```js
-function spawnNotification(theBody,theIcon,theTitle) {
+function spawnNotification(theBody, theIcon, theTitle) {
   var options = {
-      body: theBody,
-      icon: theIcon
-  }
-  var n = new Notification(theTitle,options);
+    body: theBody,
+    icon: theIcon,
+  };
+  var n = new Notification(theTitle, options);
 }
 ```
 

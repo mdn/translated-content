@@ -1,7 +1,6 @@
 ---
 title: Intl.DateTimeFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
 ---
 
 {{JSRef}}

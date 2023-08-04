@@ -1,10 +1,6 @@
 ---
-title: >-
-  SyntaxError: for-in loop head declarations may not have
-  initializers(SyntaxError: объявления for-in loop head могут не иметь
-  инициализаторов)
+title: "SyntaxError: for-in loop head declarations may not have initializers(SyntaxError: объявления for-in loop head могут не иметь инициализаторов)"
 slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
-translation_of: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 ---
 {{jsSidebar("Errors")}}
 

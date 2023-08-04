@@ -1,15 +1,6 @@
 ---
 title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
-tags:
-  - JavaScript
-  - Prototype
-  - Reference
-  - polyfill
-  - Массив
-  - inArray
-  - Метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
 ---
 {{JSRef}}
 

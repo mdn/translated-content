@@ -1,7 +1,6 @@
 ---
 title: XPath
 slug: Web/XPath
-translation_of: Web/XPath
 ---
 
 {{XSLTRef}}

@@ -1,7 +1,6 @@
 ---
 title: Fin de partie
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 ---
 
 {{GamesSidebar}}

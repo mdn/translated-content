@@ -1,7 +1,6 @@
 ---
 title: ライブコードサンプルの簡単なデモ
 slug: orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo
-original_slug: MDN/Structures/Live_samples/Simple_live_sample_demo
 ---
 
 {{MDNSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Module.imports()
 slug: WebAssembly/JavaScript_interface/Module/imports
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/imports
 ---
 
 {{WebAssemblySidebar}}

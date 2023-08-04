@@ -1,7 +1,6 @@
 ---
 title: バナーと注意
 slug: MDN/Writing_guidelines/Page_structures/Banners_and_notices
-original_slug: MDN/Structures/Banners_and_notices
 ---
 
 {{MDNSidebar}}

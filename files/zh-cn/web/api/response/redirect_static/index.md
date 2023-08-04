@@ -1,7 +1,6 @@
 ---
 title: Response.redirect()
 slug: Web/API/Response/redirect_static
-original_slug: Web/API/Response/redirect
 ---
 
 {{APIRef("Fetch")}}

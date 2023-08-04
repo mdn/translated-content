@@ -1,7 +1,6 @@
 ---
 title: Element.getElementsByTagName()
 slug: Web/API/Element/getElementsByTagName
-translation_of: Web/API/Element/getElementsByTagName
 ---
 
 {{ APIRef("DOM") }}
@@ -29,10 +28,10 @@ elements = element.getElementsByTagName(tagName)
 var table = document.getElementById("forecast-table");
 var cells = table.getElementsByTagName("td");
 for (var i = 0; i < cells.length; i++) {
-    var status = cells[i].getAttribute("data-status");
-    if ( status == "open" ) {
-        // grab the data
-    }
+  var status = cells[i].getAttribute("data-status");
+  if (status == "open") {
+    // grab the data
+  }
 }
 ```
 

@@ -72,8 +72,8 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Especificações
 
-| Especificação                                | Título                                                                    |
-| -------------------------------------------- | ------------------------------------------------------------------------- |
+| Especificação                      | Título                                                                    |
+| ---------------------------------- | ------------------------------------------------------------------------- |
 | {{RFC("7231", "DELETE", "4.3.5")}} | Protocolo de Transferência de Hipertexto (HTTP/1.1): Semântica e conteúdo |
 
 ## Compatibilidade com navegadores

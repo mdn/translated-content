@@ -1,7 +1,6 @@
 ---
 title: downloads.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
 ---
 
 {{AddonSidebar()}}

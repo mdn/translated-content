@@ -1,7 +1,6 @@
 ---
 title: slider ロールの使用
 slug: Web/Accessibility/ARIA/Roles/slider_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 ---
 
 このテクニックは、[`slider`](http://www.w3.org/TR/wai-aria/#slider) ロールの使い方を示し、ブラウザーと支援技術に及ぼす影響について説明します。

@@ -1,7 +1,6 @@
 ---
 title: Node.parentElement
 slug: Web/API/Node/parentElement
-original_slug: Web/API/Node/elementoPadre
 ---
 
 {{APIRef("DOM")}}

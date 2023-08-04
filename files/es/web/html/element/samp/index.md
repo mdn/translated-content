@@ -1,7 +1,6 @@
 ---
 title: samp
 slug: Web/HTML/Element/samp
-original_slug: Web/HTML/Elemento/samp
 ---
 
 {{HTMLSidebar}}

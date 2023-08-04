@@ -1,7 +1,6 @@
 ---
 title: Concepts relatifs au viewport
 slug: Web/CSS/Viewport_concepts
-translation_of: Web/CSS/Viewport_concepts
 ---
 
 {{CSSRef}}

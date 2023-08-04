@@ -15,8 +15,8 @@ slug: Web/API/console/table
 
 테이블의 첫 번째 칼럼은 `(index)`를 레이블로 사용합니다. `data`가 배열인 경우에는 배열의 인덱스가
 이 칼럼의 값으로 사용됩니다. `data`가 객체인 경우에는 속성 이름이 값으로 사용됩니다. (파이어폭스에서는)
- `console.table`이 1000줄 까지만 표현할 수 있는 제약이 있다는 점에 주의하세요
- (첫 번째 줄은 레이블 인덱스입니다).
+`console.table`이 1000줄 까지만 표현할 수 있는 제약이 있다는 점에 주의하세요
+(첫 번째 줄은 레이블 인덱스입니다).
 
 {{AvailableInWorkers}}
 
@@ -31,7 +31,7 @@ console.table(["apples", "oranges", "bananas"]);
 ```
 
 | (index) | Values    |
-|---------|-----------|
+| ------- | --------- |
 | 0       | 'apples'  |
 | 1       | 'oranges' |
 | 2       | 'bananas' |
@@ -50,7 +50,7 @@ console.table(me);
 ```
 
 | (index)   | Values   |
-|-----------|----------|
+| --------- | -------- |
 | firstName | 'Tyrone' |
 | lastName  | 'Jones'  |
 
@@ -70,7 +70,7 @@ console.table(people);
 ```
 
 | (index) | 0        | 1       |
-|---------|----------|---------|
+| ------- | -------- | ------- |
 | 0       | 'Tyrone' | 'Jones' |
 | 1       | 'Janet'  | 'Smith' |
 | 2       | 'Maria'  | 'Cruz'  |
@@ -93,7 +93,7 @@ console.table([tyrone, janet, maria]);
 배열이 객체를 포함하고 있다면 칼럼은 속성의 이름을 레이블로 사용한다는 점에 주의하세요.
 
 | (index) | firstName | lastName |
-|---------|-----------|----------|
+| ------- | --------- | -------- |
 | 0       | 'Tyrone'  | 'Jones'  |
 | 1       | 'Janet'   | 'Smith'  |
 | 2       | 'Maria'   | 'Cruz'   |
@@ -111,7 +111,7 @@ console.table(family);
 ```
 
 | (index)  | firstName | lastName |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | daughter | 'Maria'   | 'Jones'  |
 | father   | 'Tyrone'  | 'Jones'  |
 | mother   | 'Janet'   | 'Jones'  |
@@ -137,7 +137,7 @@ console.table([tyrone, janet, maria], ["firstName"]);
 ```
 
 | (index) | firstName |
-|---------|-----------|
+| ------- | --------- |
 | 0       | 'Tyrone'  |
 | 1       | 'Janet'   |
 | 2       | 'Maria'   |

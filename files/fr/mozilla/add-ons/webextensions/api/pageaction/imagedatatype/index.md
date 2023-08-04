@@ -1,7 +1,6 @@
 ---
 title: pageAction.ImageDataType
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/ImageDataType
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/ImageDataType
 ---
 
 {{AddonSidebar()}}

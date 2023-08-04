@@ -1,7 +1,6 @@
 ---
 title: Adición (+)
 slug: Web/JavaScript/Reference/Operators/Addition
-original_slug: Web/JavaScript/Referencia/Operadores/Adición
 ---
 
 {{jsSidebar("Operators")}}

@@ -1,7 +1,6 @@
 ---
 title: Navigator.appCodeName
 slug: Web/API/Navigator/appCodeName
-original_slug: Web/API/NavigatorID/appCodeName
 ---
 
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}

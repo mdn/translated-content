@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/delete
 ---
 
 {{JSRef}}

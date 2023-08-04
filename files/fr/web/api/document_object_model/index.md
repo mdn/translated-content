@@ -1,7 +1,6 @@
 ---
 title: Référence du DOM
 slug: Web/API/Document_Object_Model
-translation_of: Web/API/Document_Object_Model
 ---
 
 {{DefaultAPISidebar("DOM")}}

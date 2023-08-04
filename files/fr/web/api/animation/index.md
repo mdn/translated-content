@@ -1,7 +1,6 @@
 ---
 title: Animation
 slug: Web/API/Animation
-translation_of: Web/API/Animation
 ---
 
 {{ APIRef("Web Animations API") }}{{SeeCompatTable}}

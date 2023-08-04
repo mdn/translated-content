@@ -1,7 +1,6 @@
 ---
 title: 座標変換
 slug: Web/API/Canvas_API/Tutorial/Transformations
-original_slug: Web/Guide/HTML/Canvas_tutorial/Transformations
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

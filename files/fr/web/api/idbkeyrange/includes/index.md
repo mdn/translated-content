@@ -1,7 +1,6 @@
 ---
 title: IDBKeyRange.includes()
 slug: Web/API/IDBKeyRange/includes
-translation_of: Web/API/IDBKeyRange/includes
 ---
 
 {{APIRef("IndexedDB")}}

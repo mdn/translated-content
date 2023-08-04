@@ -1,7 +1,6 @@
 ---
 title: Introduction à l'utilisation de XPath avec JavaScript
 slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
-translation_of: Web/XPath/Introduction_to_using_XPath_in_JavaScript
 ---
 
 Ce document décrit l'interface pour utiliser [XPath](/fr/docs/Web/XPath) dans JavaScript, que ce soit en interne, dans les extensions et depuis les sites Web. Mozilla implémente une partie importante de [DOM 3 XPath (en)](https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/). Cela signifie que les expressions XPath peuvent être utilisées sur des documents HTML et XML.

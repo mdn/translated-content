@@ -1,7 +1,6 @@
 ---
 title: VRLayerInit.source
 slug: Web/API/VRLayerInit/source
-original_slug: Web/API/VRLayer/source
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

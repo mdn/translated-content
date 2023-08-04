@@ -1,7 +1,6 @@
 ---
 title: Monétisation du jeu
 slug: Games/Publishing_games/Game_monetization
-translation_of: Games/Publishing_games/Game_monetization
 ---
 
 {{GamesSidebar}}

@@ -1,5 +1,5 @@
 ---
-title: ':fullscreen'
+title: ":fullscreen"
 slug: Web/CSS/:fullscreen
 ---
 {{CSSRef}}
@@ -67,4 +67,4 @@ ID가 `"fs-toggle"`인 {{htmlelement("button")}}은 문서가 전체 화면이�
 - {{cssxref(":not")}}
 - {{cssxref("::backdrop")}}
 - DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreenElement") }}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}} 특성
+- [`allowfullscreen`](/ko/docs/Web/HTML/Element/iframe#allowfullscreen) 특성
