@@ -1,8 +1,10 @@
 ---
 title: Symbol.replace
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
-browser-compat: javascript.builtins.Symbol.replace
+l10n:
+  sourceCommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
 ---
+
 {{JSRef}}
 
 El símbolo conocido como **`Symbol.replace`** especifica el método que reemplaza las subcadenas coincidentes de una cadena. Esta función es llamada por el método {{jsxref("String.prototype.replace()")}}.
@@ -44,4 +46,3 @@ console.log('football'.replace(new CustomReplacer('foo')));
 - {{jsxref("Symbol.search")}}
 - {{jsxref("Symbol.split")}}
 - {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}
-

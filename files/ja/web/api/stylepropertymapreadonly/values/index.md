@@ -1,21 +1,11 @@
 ---
 title: StylePropertyMapReadOnly.values()
 slug: Web/API/StylePropertyMapReadOnly/values
-tags:
-  - API
-  - CSS Typed Object Model API
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - StylePropertyMapReadOnly
-  - values()
-browser-compat: api.StylePropertyMapReadOnly.values
-translation_of: Web/API/StylePropertyMapReadOnly/values
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-**`StylePropertyMapReadOnly.values()`** メソッドは、 `StylePropertyMapReadOnly` オブジェクトのそれぞれのインデックスに対応する値を含む新しい*配列反復子*を返します。
+**`StylePropertyMapReadOnly.values()`** メソッドは、 `StylePropertyMapReadOnly` オブジェクトのそれぞれのインデックスに対応する値を含む新しい*配列イテレーター*を返します。
 
 ## 構文
 

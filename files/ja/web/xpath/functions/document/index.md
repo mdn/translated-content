@@ -1,11 +1,8 @@
 ---
 title: document
 slug: Web/XPath/Functions/document
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/document
 ---
+
 {{ XsltRef() }}
 
 `document` は、外部の文書、または複数の外部の文書からノード集合を見つけ、結果のノード集合を返します。

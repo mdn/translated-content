@@ -1,13 +1,8 @@
 ---
 title: PerformanceElementTiming
 slug: Web/API/PerformanceElementTiming
-tags:
-  - API
-  - Interface
-  - Reference
-  - PerformanceElementTiming
-translation_of: Web/API/PerformanceElementTiming
 ---
+
 {{SeeCompatTable}}{{Non-Standard_Header}}{{APIRef("Element Timing API")}}
 
 L'interface **`PerformanceElementTiming`** de l'API [Element Timing API](/fr/docs/Web/API/Element_timing_API) rapporte les informations de timing sur un élément spécifique identifié par l'auteur de la page. Par exemple, elle peut fournir des informations sur l'image principale d'un article.
@@ -45,14 +40,14 @@ Dans cet exemple, nous avons deux éléments qui sont observés. Nous utilisons 
 Deux entrées seront affichées dans la console. La première contenant les détails de l'image, la seconde les détails du nœud texte.
 
 ```html
-<img src="image.jpg" elementtiming="big-image">
+<img src="image.jpg" elementtiming="big-image" />
 <p elementtiming="text" id="text-id">le texte ici</p>
 ```
 
 ```js
 const observer = new PerformanceObserver((list) => {
   let entries = list.getEntries().forEach(function (entry) {
-      console.log(entry);
+    console.log(entry);
   });
 });
 observer.observe({ entryTypes: ["element"] });
@@ -60,10 +55,8 @@ observer.observe({ entryTypes: ["element"] });
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                                   | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Element Timing API','#sec-performance-element-timing','PerformanceElementTiming')}} | {{Spec2('Element Timing API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceElementTiming")}}
+{{Compat}}

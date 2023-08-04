@@ -1,10 +1,8 @@
 ---
 title: GlobalEventHandlers.onblur
 slug: Web/API/Window/blur_event
-translation_of: Web/API/GlobalEventHandlers/onblur
-original_slug: Web/API/GlobalEventHandlers/onblur
-browser-compat: api.GlobalEventHandlers.onblur
 ---
+
 {{ApiRef("HTML DOM")}}
 
 La propriété **`onblur`**, rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [le gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`blur`](/fr/docs/Web/API/Element/blur_event). Elle est disponible sur les interfaces [`Element`](/fr/docs/Web/API/Element), [`Document`](/fr/docs/Web/API/Document), et [`Window`](/fr/docs/Web/API/Window).
@@ -30,23 +28,23 @@ Cet exemple utilise `onblur` et [`onfocus`](/fr/docs/Web/API/GlobalEventHandlers
 ### HTML
 
 ```html
-<input type="text" value="Cliquez ici">
+<input type="text" value="Cliquez ici" />
 ```
 
 ### JavaScript
 
 ```js
-let input = document.querySelector('input');
+let input = document.querySelector("input");
 
 input.onblur = inputBlur;
 input.onfocus = inputFocus;
 
 function inputBlur() {
-  input.value = 'Le focus a été perdu';
+  input.value = "Le focus a été perdu";
 }
 
 function inputFocus() {
-  input.value = 'Le focus est là';
+  input.value = "Le focus est là";
 }
 ```
 

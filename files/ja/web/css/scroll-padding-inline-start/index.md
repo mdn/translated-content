@@ -1,16 +1,8 @@
 ---
 title: scroll-padding-inline-start
 slug: Web/CSS/scroll-padding-inline-start
-tags:
-  - CSS
-  - CSS プロパティ
-  - Web
-  - recipe:css-property
-  - scroll-padding-inline
-  - scroll-padding-inline-start
-browser-compat: css.properties.scroll-padding-inline-start
-translation_of: Web/CSS/scroll-padding-inline-start
 ---
+
 {{CSSRef}}
 
 `scroll-padding-inline-start` プロパティは、スクロールポートの*最適表示領域*のインライン方向における先頭側のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。

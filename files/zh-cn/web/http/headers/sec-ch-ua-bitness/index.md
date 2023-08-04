@@ -1,16 +1,8 @@
 ---
 title: Sec-CH-UA-Bitness
 slug: Web/HTTP/Headers/Sec-CH-UA-Bitness
-translation_of: Web/HTTP/Headers/Sec-CH-UA-Bitness
-tags:
-  - Sec-CH-UA-Bitness
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  -  Experimental
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
 **`Sec-CH-UA-Bitness`** [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#user-agent_client_hints)请求标头提供用户代理底层 CPU 架构（architecture）的“位数”。这是一种以位为单位的指示内存地址大小的整数，通常为 64 位或 32 位。

@@ -1,25 +1,13 @@
 ---
 title: VRDisplay.exitPresent()
 slug: Web/API/VRDisplay/exitPresent
-page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - exitPresent()
-browser-compat: api.VRDisplay.exitPresent
-translation_of: Web/API/VRDisplay/exitPresent
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`exitPresent()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、この `VRDisplay` がシーンを表示するのを停止します。
 
-> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ## 構文
 
@@ -82,7 +70,7 @@ if(navigator.getVRDisplays) {
 }
 ```
 
-> **Note:** この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
+> **メモ:** この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
 
 ## 仕様書
 

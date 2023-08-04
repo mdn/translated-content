@@ -1,19 +1,21 @@
 ---
 title: 回呼函式
 slug: Glossary/Callback_function
-translation_of: Glossary/Callback_function
 ---
+
+{{GlossarySidebar}}
+
 回呼函式（callback function）是指能藉由參數（argument）通往另一個函式的函式。它會在外部函式內調用、以完成某些事情。
 
 以下是簡單的範例：
 
 ```js
 function greeting(name) {
-  alert('Hello ' + name);
+  alert("Hello " + name);
 }
 
 function processUserInput(callback) {
-  var name = prompt('輸入你的名字：');
+  var name = prompt("輸入你的名字：");
   callback(name);
 }
 
@@ -30,5 +32,5 @@ processUserInput(greeting);
 
 ### 一般常識
 
-- 維基百科的 {{interwiki("wikipedia", "回呼函式")}}
+- 維基百科的 [回呼函式](https://zh.wikipedia.org/wiki/回呼函式)
 - [Understand JavaScript Callback Functions and Use Them](http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/)

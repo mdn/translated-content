@@ -1,11 +1,8 @@
 ---
 title: comment
 slug: Web/XSLT/Element/comment
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/comment
-original_slug: Web/XSLT/comment
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:comment>` écrit un commentaire dans le document de sortie. Il ne doit contenir que du texte.

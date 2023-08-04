@@ -1,15 +1,8 @@
 ---
 title: File.type
 slug: Web/API/File/type
-tags:
-  - API
-  - File API
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.File.type
-translation_of: Web/API/File/type
 ---
+
 {{APIRef("File API")}}
 
 **`type`** 속성은 {{domxref("File")}} 객체가 나타내는 파일의 미디어 유형([MIME](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types))을 반환합니다.
@@ -37,15 +30,15 @@ output {
 ### JavaScript
 
 ```js
-const output = document.getElementById('output');
-const filepicker = document.getElementById('filepicker');
+const output = document.getElementById("output");
+const filepicker = document.getElementById("filepicker");
 
-filepicker.addEventListener('change', (event) => {
+filepicker.addEventListener("change", (event) => {
   const files = event.target.files;
-  output.textContent = '';
+  output.textContent = "";
 
   for (const file of files) {
-    output.textContent += `${file.name}: ${file.type || '알 수 없음'}\n`;
+    output.textContent += `${file.name}: ${file.type || "알 수 없음"}\n`;
   }
 });
 ```

@@ -1,18 +1,8 @@
 ---
 title: Graphismes sur le Web
 slug: Web/Guide/Graphics
-tags:
-  - 2D
-  - 3D
-  - Canvas
-  - Graphismes
-  - HTML
-  - SVG
-  - Web
-  - WebGL
-  - WebRTC
-translation_of: Web/Guide/Graphics
 ---
+
 Les applications et sites Web modernes ont souvent besoin de présenter des graphismes de qualité. Tandis qu'afficher de simples images statiques peut être aisément réalisé à l'aide de la balise [`<img>`](/fr/docs/Web/HTML/Element/img), ou en réglant l'arrière-plan des éléments HTML avec la propriété CSS : [background-image](/fr/docs/Web/CSS/background-image).
 
 Mais lorsque l'on veut réaliser des graphismes à la volée, ou manipuler des images après coup, ou encore utiliser de la 3D, les méthodes habituelles ne suffisent plus, cependant avec HTML5, il est possible de réaliser ce type de graphismes plus évolués.

@@ -1,15 +1,8 @@
 ---
 title: background-size
 slug: Web/CSS/background-size
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.background-size
-translation_of: Web/CSS/background-size
 ---
+
 {{CSSRef}}
 
 **`background-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景画像の寸法を設定します。画像は自然な寸法になったり、引き伸ばされたり、利用可能な領域に収まるように縮小されたりします。
@@ -81,7 +74,7 @@ background-size: unset;
 - CSS の {{cssxref("&lt;gradient&gt;")}} には固有の寸法も固有の比率もありません。
 - {{cssxref("element()")}} 関数によって作成された背景画像では、それを作成する要素の固有の寸法と比率を使用します。
 
-> **Note:**  Gecko では、 {{cssxref("element()")}} 関数を使用して作成された背景画像は要素の寸法、または要素が SVG の場合は背景配置領域の寸法を持つ画像として扱われ、適切な固有の比率を持ちます。これは非標準の振る舞いです。
+> **メモ:** Gecko では、 {{cssxref("element()")}} 関数を使用して作成された背景画像は要素の寸法、または要素が SVG の場合は背景配置領域の寸法を持つ画像として扱われ、適切な固有の比率を持ちます。これは非標準の振る舞いです。
 
 固有の寸法と比率に基づき、背景画像の描画寸法は以下のようにして計算されます。
 
@@ -95,14 +88,14 @@ background-size: unset;
   - 画像に一方だけ固有の寸法があり、固有の比率がある場合は、一方の寸法に合わせて描画されます。もう一方の寸法は指定された寸法と固有の比率を使用して計算されます。
   - 画像に一方だけ固有の寸法があり、固有の比率がない場合は、指定された寸法と、もう一方は背景配置領域の寸法を使用して描画されます。
 
-  > **Note:** SVG 画像には [`preserveAspectRatio`](/ja/docs/Web/SVG/Attribute/preserveAspectRatio) 属性があり、既定では `contain` と同等です。明示的に `background-size` が設定されると `preserveAspectRatio` が無視されます。
+  > **メモ:** SVG 画像には [`preserveAspectRatio`](/ja/docs/Web/SVG/Attribute/preserveAspectRatio) 属性があり、既定では `contain` と同等です。明示的に `background-size` が設定されると `preserveAspectRatio` が無視されます。
 
 - **`background-size` の一方が `auto` でもう一方が `auto` ではない場合:**
 
   - 画像に固有の比率がある場合は、指定された寸法まで拡大縮小されます。指定されていない方の寸法は指定された寸法と固有の比率を使用して計算されます。
   - 画像に固有の比率がない場合は、指定された寸法まで拡大縮小されます。指定されていない方の寸法は、画像の指定された寸法を使用して計算されます。そのような固有の寸法がない場合、背景配置領域の適切な寸法になります。
 
-  > **Note:** 固有の寸法や比率を持たないベクター画像の背景の拡大縮小は、まだすべてのブラウザーで完全に実装されているわけではありません。上記に記述した振る舞いに注意し、結果が適切であるかを複数のブラウザーで確認してください。
+  > **メモ:** 固有の寸法や比率を持たないベクター画像の背景の拡大縮小は、まだすべてのブラウザーで完全に実装されているわけではありません。上記に記述した振る舞いに注意し、結果が適切であるかを複数のブラウザーで確認してください。
 
 ### グラデーションでの動き
 

@@ -1,19 +1,9 @@
 ---
 title: WritableStreamDefaultWriter.ready
 slug: Web/API/WritableStreamDefaultWriter/ready
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Ready
-  - Reference
-  - Streams
-  - Streams API
-  - WritableStream
-  - WritableStreamDefaultWriter
-translation_of: Web/API/WritableStreamDefaultWriter/ready
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 {{domxref("WritableStreamDefaultWriter")}} 接口的只读属性 **`ready`** 返回一个 {{jsxref("Promise")}}，当流填充内部队列的所需大小从非正数变为正数时兑现，表明它不再应用背压。
 
@@ -30,31 +20,31 @@ function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
   var defaultWriter = writableStream.getWriter();
   var encoder = new TextEncoder();
-  var encoded = encoder.encode(message, {stream: true});
-  encoded.forEach(function(chunk) {
+  var encoded = encoder.encode(message, { stream: true });
+  encoded.forEach(function (chunk) {
     // Make sure the stream and its writer are able to
     //   receive data.
-    defaultWriter.ready
-    .then(function() {
-      defaultWriter.write(chunk)
-      .then(function() {
-        console.log("Chunk written to sink.");
-      })
-      .catch(function(err) {
-        console.log("Chunk error: " + err);
-      });
+    defaultWriter.ready.then(function () {
+      defaultWriter
+        .write(chunk)
+        .then(function () {
+          console.log("Chunk written to sink.");
+        })
+        .catch(function (err) {
+          console.log("Chunk error: " + err);
+        });
     });
     // Call ready again to ensure that all chunks are written
     //   before closing the writer.
-    defaultWriter.ready
-    .then(function() {
-      defaultWriter.close()
-      .then(function() {
-        console.log("All chunks written");
-      })
-      .catch(function(err) {
-        console.log("Stream error: " + err);
-      });
+    defaultWriter.ready.then(function () {
+      defaultWriter
+        .close()
+        .then(function () {
+          console.log("All chunks written");
+        })
+        .catch(function (err) {
+          console.log("Stream error: " + err);
+        });
     });
   });
 }

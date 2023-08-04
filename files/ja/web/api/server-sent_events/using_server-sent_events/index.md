@@ -1,19 +1,8 @@
 ---
 title: サーバー送信イベントの使用
 slug: Web/API/Server-sent_events/Using_server-sent_events
-page-type: guide
-tags:
-  - Advanced
-  - Communication
-  - DOM
-  - Guide
-  - SSE
-  - Server Sent Events
-  - Server-sent events
-  - messaging
-browser-compat: api.EventSource
-translation_of: Web/API/Server-sent_events/Using_server-sent_events
 ---
+
 {{DefaultAPISidebar("Server Sent Events")}}
 
 [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events) (Server-Sent Events) を使用するウェブアプリケーションの開発は簡単です。サーバー上でフロントエンドへイベントを流すために必要になるコードはわずかですが、クライアント側のコードは[ウェブソケット](/ja/docs/Web/API/WebSockets_API)で入ってくるイベントを扱う部分とほぼ同じ動作をします。これは単方向の接続ですので、クライアントからサーバーへイベントを送信することはできません。
@@ -60,7 +49,7 @@ evtSource.addEventListener("ping", function(event) {
 
 前のコードと似ていますが、`event` フィールドに "ping" が設定されたメッセージがサーバーから送られたときに、自動的に呼び出されることが異なります。こちらは `data` フィールドの JSON を解釈して、情報を出力します。
 
-> **Warning:** **HTTP/2 上で使用されていない**場合、 SSE は開くことができる接続の最大数に制限を受けます。この制限は*ブラウザー単位*で設定されており、非常に小さい数 (6) に設定されているため、複数のタブを開くと特に痛みを伴う場合があります。この問題は、 [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) と [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896) で「修正予定なし」と示されています。この制限はブラウザー + ドメインごとに設定されており、`www.example1.com` への SSE 接続をすべてのタブで 6 つ、 `www.example2.com` への SSE 接続をさらに 6 つ開くことができることを意味します（[Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159) によれば）。 HTTP/2 を使用する場合、同時に使用することができる *HTTP ストリーム*の最大数は、サーバーとクライアントの間で交渉が行われます（既定値は 100 です）。
+> **警告:** **HTTP/2 上で使用されていない**場合、 SSE は開くことができる接続の最大数に制限を受けます。この制限は*ブラウザー単位*で設定されており、非常に小さい数 (6) に設定されているため、複数のタブを開くと特に痛みを伴う場合があります。この問題は、 [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) と [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896) で「修正予定なし」と示されています。この制限はブラウザー + ドメインごとに設定されており、`www.example1.com` への SSE 接続をすべてのタブで 6 つ、 `www.example2.com` への SSE 接続をさらに 6 つ開くことができることを意味します（[Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159) によれば）。 HTTP/2 を使用する場合、同時に使用することができる *HTTP ストリーム*の最大数は、サーバーとクライアントの間で交渉が行われます（既定値は 100 です）。
 
 ## サーバからのイベントの送信
 
@@ -105,7 +94,7 @@ while (true) {
 上記のコードは、イベント種別が "ping" のイベントを毎秒生成します。それぞれのイベントのデータは、 JSON オブジェクトで、イベントが生成された時刻を ISO 8601 形式のタイムスタンプで表します。またランダムな間隔で、単純なメッセージ（イベント種別なし）を送信します。
 ループは接続状態にかかわらず実行し続けられますので、接続が閉じられたとき（例えばクライアントがページを閉じたとき）にループから脱出するためのチェックが含まれています。
 
-> **Note:** この記事にあるコードを使用した完全な例が GitHub にあります。 [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events) を参照してください。
+> **メモ:** この記事にあるコードを使用した完全な例が GitHub にあります。 [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events) を参照してください。
 
 ## エラー処理
 
@@ -129,7 +118,7 @@ evtSource.close();
 
 イベントストリームは単純なテキストデータのストリームで、 [UTF-8](/ja/docs/Glossary/UTF-8) でエンコードされていなければなりません。イベントストリームのメッセージは、 2 つの改行文字で区切られます。行の先頭の文字がコロンであった場合はコメントとみなされ、無視されます。
 
-> **Note:** コメント行を使用して、接続がタイムアウトになることを防ぐことができます。サーバーは接続を維持するために、定期的にコメントを送信することがあります。
+> **メモ:** コメント行を使用して、接続がタイムアウトになることを防ぐことができます。サーバーは接続を維持するために、定期的にコメントを送信することがあります。
 
 それぞれのメッセージは、そのメッセージのフィールドを列挙した 1 行以上のテキストで構成されています。各フィールドは、フィールド名、コロン、そのフィールドの値のテキストデータで表現されます。
 
@@ -148,7 +137,7 @@ evtSource.close();
 
 他のフィールド名は、すべて無視されます。
 
-> **Note:** 行にコロンが含まれない場合は行全体がフィールド名とし、値は空文字列として扱います。
+> **メモ:** 行にコロンが含まれない場合は行全体がフィールド名とし、値は空文字列として扱います。
 
 ### 例
 

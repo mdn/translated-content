@@ -1,18 +1,8 @@
 ---
 title: history.onVisited
 slug: Mozilla/Add-ons/WebExtensions/API/history/onVisited
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - History
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onVisited
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/onVisited
 ---
+
 {{AddonSidebar()}}
 
 Mise en place à chaque fois que l'utilisateur visite une page. Un objet {{WebExtAPIRef("history.HistoryItem")}} est transmis à l'écouteur. Cet événement se déclenche avant que la page ne soit chargée.
@@ -20,9 +10,9 @@ Mise en place à chaque fois que l'utilisateur visite une page. Un objet {{WebEx
 ## Syntaxe
 
 ```js
-browser.history.onVisited.addListener(listener)
-browser.history.onVisited.removeListener(listener)
-browser.history.onVisited.hasListener(listener)
+browser.history.onVisited.addListener(listener);
+browser.history.onVisited.removeListener(listener);
+browser.history.onVisited.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -46,11 +36,11 @@ Les événements ont trois fonctions :
 
       - : {{WebExtAPIRef('history.HistoryItem')}}. Un objet représentant l'élément dans l'historique du navigateur.
 
-        Au moment où cet événement est envoyé, le navigateur ne connaît pas encore le titre de la page. Si le navigateur a déjà visité cette page et s'est souvenu de son ancien titre, l'objet `HistoryItem.title` contiendra l'ancien titre de la page. Si le navigateur n'a pas d'enregistrement de l'ancien titre de la page, alors `HistoryItem.title` sera vide. Pour obtenir les titres des pages dès qu'ils sont connus, écoutez  {{WebExtAPIRef("history.onTitleChanged")}}.
+        Au moment où cet événement est envoyé, le navigateur ne connaît pas encore le titre de la page. Si le navigateur a déjà visité cette page et s'est souvenu de son ancien titre, l'objet `HistoryItem.title` contiendra l'ancien titre de la page. Si le navigateur n'a pas d'enregistrement de l'ancien titre de la page, alors `HistoryItem.title` sera vide. Pour obtenir les titres des pages dès qu'ils sont connus, écoutez {{WebExtAPIRef("history.onTitleChanged")}}.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.onVisited")}}
+{{Compat}}
 
 ## Exemples
 
@@ -73,7 +63,8 @@ browser.history.onVisited.addListener(onVisited);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -100,4 +91,4 @@ browser.history.onVisited.addListener(onVisited);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,15 +1,8 @@
 ---
 title: max-content
 slug: Web/CSS/max-content
-tags:
-  - CSS
-  - CSS グリッド
-  - リファレンス
-  - max-content
-  - 大きさ
-browser-compat: css.properties.width.max-content
-translation_of: Web/CSS/max-content
 ---
+
 `max-content` は大きさのキーワードで、コンテンツの内在的な最大幅や高さを表しています。テキストコンテンツの場合は、オーバーフローが発生しても、コンテンツはまったく折り返されないことを意味します。
 
 ## 構文
@@ -39,7 +32,7 @@ max-content: unset;
 
 ```html
 <div id="container">
-  <div class="item">Item</div>
+  <div class="item">Item</div>
   <div class="item">Item with more text in it which will overflow the fixed width box.</div>
 </div>
 ```
@@ -49,12 +42,12 @@ max-content: unset;
 ```css
 #container {
   background-color: #8cffa0;
-  padding: 10px;
-  width: 200px;
+  padding: 10px;
+  width: 200px;
 }
 
 .item {
-  width: max-content;
+  width: max-content;
   background-color: #8ca0ff;
   padding: 5px;
   margin-bottom: 1em;
@@ -115,4 +108,4 @@ max-content: unset;
 
 ## 関連情報
 
-- 関連する大きさのキーワード: {{cssxref("min-content")}}, {{cssxref("fit-content")}}
+- 関連する大きさのキーワード: {{cssxref("min-content")}}, {{cssxref("fit-content")}}

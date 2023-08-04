@@ -1,15 +1,8 @@
 ---
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
-tags:
-  - JavaScript
-  - Méthode
-  - Promises
-  - Reference
-  - finally
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
-original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/finally
 ---
+
 {{JSRef}}
 
 La méthode **`finally()`** renvoie un objet `Promise` et accepte en argument une fonction de _callback_ qui est appelée lorsque la promesse a été résolue (qu'elle ait été tenue ou rejetée). Cela permet d'exécuter du code une fois que la promesse a été traitée, quel que soit le résultat. On évite ainsi de dupliquer du code entre les gestionnaires {{jsxref("Promise.then", "then()")}} et {{jsxref("Promise.catch", "catch()")}}.
@@ -19,7 +12,7 @@ La méthode **`finally()`** renvoie un objet `Promise` et accepte en argument un
 ```js
 p.finally(onFinally);
 
-p.finally(function() {
+p.finally(function () {
   // appelée dans tous les
   // cas de terminaison
 });
@@ -53,30 +46,34 @@ La méthode `finally` est similaire à l'utilisation de la forme `.then(onFinall
 ```js
 let isLoading = true;
 
-fetch(myRequest).then(function(response) {
+fetch(myRequest)
+  .then(function (response) {
     var contentType = response.headers.get("content-type");
-    if(contentType && contentType.includes("application/json")) {
+    if (contentType && contentType.includes("application/json")) {
       return response.json();
     }
     throw new TypeError("Oups, ceci n'est pas du JSON !");
   })
-  .then(function(json) { /* traiter le JSON */ })
-  .catch(function(error) { console.log(error);
-       /* La ligne précédent peut aussi déclencher une
+  .then(function (json) {
+    /* traiter le JSON */
+  })
+  .catch(function (error) {
+    console.log(error);
+    /* La ligne précédent peut aussi déclencher une
           erreur (si console vaut {} par exemple) */
-   })
-  .finally(function() { isLoading = false; });
+  })
+  .finally(function () {
+    isLoading = false;
+  });
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('ESDraft', '#sec-promise.prototype.finally', 'Promise.prototype.finally')}} | {{Spec2('ESDraft')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Promise.finally")}}
+{{Compat}}
 
 ## Voir aussi
 

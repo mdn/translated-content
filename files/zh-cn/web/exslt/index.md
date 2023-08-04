@@ -1,14 +1,8 @@
 ---
 title: EXSLT
 slug: Web/EXSLT
-tags:
-  - EXSLT
-  - NeedsTranslation
-  - TopicStub
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/EXSLT
 ---
+
 {{ XsltRef() }}
 EXSLT is a set of extensions to [XSLT](en/XSLT). There are a number of modules; those that are supported by Firefox are listed below:
 

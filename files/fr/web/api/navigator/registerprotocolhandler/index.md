@@ -1,9 +1,8 @@
 ---
 title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
-translation_of: Web/API/Navigator/registerProtocolHandler
-browser-compat: api.Navigator.registerProtocolHandler
 ---
+
 {{APIRef("HTML DOM")}}{{securecontext_header}}
 
 La méthode **`registerProtocolHandler()`**, rattachée à l'interface **[`Navigator`](/fr/docs/Web/API/Navigator)**, permet aux sites de déclarer leur capacité à gérer certains schémas d'URL particuliers (autrement dit les protocoles).
@@ -13,8 +12,8 @@ Ainsi, cette API permettra aux sites de webmail d'ouvrir les URL `mailto:`, ou a
 ## Syntaxe
 
 ```js
-registerProtocolHandler(schema, url)
-registerProtocolHandler(schema, url, titre)
+registerProtocolHandler(schema, url);
+registerProtocolHandler(schema, url, titre);
 ```
 
 > **Note :** La version avec l'argument déprécié `titre` est recommandée pour des raisons de compatibilité. Voir les informations sur les paramètres ci-après.
@@ -44,6 +43,7 @@ registerProtocolHandler(schema, url, titre)
 ### Exceptions
 
 - [`SecurityError`](/fr/docs/Web/API/DOMException#noms_derreur)
+
   - : L'agent utilisateur a bloqué l'enregistrement. Cela peut se produire si&nbsp;:
 
     - Le schéma enregistré (le protocole) est invalide, par exemple parce qu'il est déjà géré par le navigateur (`https:`, `about:`, etc.)
@@ -100,11 +100,13 @@ Le schéma peut aussi être l'une des valeurs suivantes&nbsp;:
 Si votre site est `burgers.example.com`, vous pouvez enregistrer un gestionnaire de protocole afin qu'il puisse gérer les liens `web+burger:`, de cette façon&nbsp;:
 
 ```js
-navigator.registerProtocolHandler("web+burger",
-                                  "https://burgers.example.com/?burger=%s",
-                                  "Gestionnaire de burger");
-                                  // L'argument du titre est inclus
-                                  // pour des raisons de compatibilité
+navigator.registerProtocolHandler(
+  "web+burger",
+  "https://burgers.example.com/?burger=%s",
+  "Gestionnaire de burger",
+);
+// L'argument du titre est inclus
+// pour des raisons de compatibilité
 ```
 
 Cette instruction crée un gestionnaire qui permet que des liens `web+burger:` envoie les utilisatrices et utilisateurs vers votre site, en insérant l'URL du burger demandée dans l'emplacement indiqué par `%s`.

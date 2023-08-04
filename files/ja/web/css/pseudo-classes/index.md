@@ -1,15 +1,8 @@
 ---
 title: 擬似クラス
 slug: Web/CSS/Pseudo-classes
-tags:
-  - CSS
-  - ガイド
-  - 概要
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/Pseudo-classes
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の**擬似クラス** (_pseudo-classes_) は、セレクターに付加するキーワードであり、選択された要素に対して特定の状態を指定します。例えば {{CSSxRef(":hover")}} 擬似クラスで、ユーザーのポインターが当たったときにボタンの色を変更することができます。
@@ -23,7 +16,7 @@ button:hover {
 
 擬似クラスにより、文書ツリーのコンテンツに関するものだけでなく、閲覧履歴 (例えば {{CSSxRef(":visited")}})、内容物の状態 (例えばフォーム要素における {{CSSxRef(":checked")}})、マウスポインターの位置 (例えばマウスポインターが要素上にあるかを知ることができる {{CSSxRef(":hover")}}) といった外的要因との関係についてスタイルを適用することができるようになります。
 
-> **Note:** 擬似クラスとは対照的に、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は要素の*特定の部分*にスタイルを適用するために使います。
+> **メモ:** 擬似クラスとは対照的に、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は要素の*特定の部分*にスタイルを適用するために使います。
 
 ## 言語擬似クラス
 
@@ -178,18 +171,18 @@ A
 
 B
 
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{CSSxRef(":blank")}} {{Experimental_Inline}}
 
 C
 
 - {{CSSxRef(":checked")}}
-- {{CSSxRef(":current")}} {{Experimental_Inline}}
+- {{CSSxRef(":current")}} {{Experimental_Inline}}
 
 D
 
 - {{CSSxRef(":default")}}
 - {{CSSxRef(":defined")}}
-- {{CSSxRef(":dir", ":dir()")}} {{Experimental_Inline}}
+- {{CSSxRef(":dir", ":dir()")}} {{Experimental_Inline}}
 - {{CSSxRef(":disabled")}}
 
 E
@@ -203,17 +196,17 @@ F
 - {{CSSxRef(":first-child")}}
 - {{CSSxRef(":first-of-type")}}
 - {{CSSxRef(":fullscreen")}}
-- {{CSSxRef(":future")}} {{Experimental_Inline}}
+- {{CSSxRef(":future")}} {{Experimental_Inline}}
 - {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-visible")}}
 - {{CSSxRef(":focus-within")}}
 
 H
 
-- {{CSSxRef(":has", ":has()")}} {{Experimental_Inline}}
+- {{CSSxRef(":has", ":has()")}} {{Experimental_Inline}}
 - {{CSSxRef(":host")}}
 - {{CSSxRef(":host()")}}
-- {{CSSxRef(":host-context()")}} {{Experimental_Inline}}
+- {{CSSxRef(":host-context()")}} {{Experimental_Inline}}
 - {{CSSxRef(":hover")}}
 
 I
@@ -230,15 +223,15 @@ L
 - {{CSSxRef(":last-of-type")}}
 - {{CSSxRef(":left")}}
 - {{CSSxRef(":link")}}
-- {{CSSxRef(":local-link")}} {{Experimental_Inline}}
+- {{CSSxRef(":local-link")}} {{Experimental_Inline}}
 
 N
 
 - {{CSSxRef(":not", ":not()")}}
 - {{CSSxRef(":nth-child", ":nth-child()")}}
-- {{CSSxRef(":nth-col", ":nth-col()")}} {{Experimental_Inline}}
+- {{CSSxRef(":nth-col", ":nth-col()")}} {{Experimental_Inline}}
 - {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
-- {{CSSxRef(":nth-last-col", ":nth-last-col()")}} {{Experimental_Inline}}
+- {{CSSxRef(":nth-last-col", ":nth-last-col()")}} {{Experimental_Inline}}
 - {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
 - {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
 
@@ -251,7 +244,7 @@ O
 
 P
 
-- {{CSSxRef(":past")}} {{Experimental_Inline}}
+- {{CSSxRef(":past")}} {{Experimental_Inline}}
 - {{CSSxRef(":picture-in-picture")}}
 - {{CSSxRef(":placeholder-shown")}}
 - {{CSSxRef(":paused")}}
@@ -268,16 +261,16 @@ R
 S
 
 - {{CSSxRef(":scope")}}
-- {{CSSxRef(":state", ":state()")}} {{Experimental_Inline}}
+- {{CSSxRef(":state", ":state()")}} {{Experimental_Inline}}
 
 T
 
 - {{CSSxRef(":target")}}
-- {{CSSxRef(":target-within")}} {{Experimental_Inline}}
+- {{CSSxRef(":target-within")}} {{Experimental_Inline}}
 
 U
 
-- {{CSSxRef(":user-invalid")}} {{Experimental_Inline}}
+- {{CSSxRef(":user-invalid")}} {{Experimental_Inline}}
 
 V
 
@@ -290,16 +283,7 @@ W
 
 ## 仕様書
 
-| 仕様書                                         | 状態                        | 備考                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ---------------------------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("Fullscreen")}}                     | {{Spec2("Fullscreen")}}     | `:fullscreen` を定義。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| {{SpecName("HTML WHATWG", "#pseudo-classes")}} | {{Spec2("HTML WHATWG")}}    | 特定のセレクターがいつ HTML 要素に一致するのかを定義。                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| {{SpecName("CSS4 Selectors")}}                 | {{Spec2("CSS4 Selectors")}} | `:any-link`, `:blank`, `:local-link`, `:scope`, `:drop`, `:current`, `:past`, `:future`, `:placeholder-shown`, `:user-invalid`, `:nth-col()`, `:nth-last-col()`, `:is()`, `:where()` を定義。 `:empty` を {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}} のように動作するように変更。 {{SpecName("CSS3 Selectors")}} および {{SpecName("HTML5 W3C")}} で定義されたその他の擬似クラスには目立った変更なし（意味論的な意味は引き継いでいない）。 |
-| {{SpecName("HTML5 W3C")}}                      | {{Spec2("HTML5 W3C")}}      | 正規の (WHATWG) HTML 仕様書から関連する節を複写。                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| {{SpecName("CSS3 Basic UI")}}                  | {{Spec2("CSS3 Basic UI")}}  | `:default`, `:valid`, `:invalid`, `:in-range`, `:out-of-range`, `:required`, `:optional`, `:read-only`, `:read-write` を定義、ただし意味論的な意味には関連付けを行わず。                                                                                                                                                                                                                                                                                                                        |
-| {{SpecName("CSS3 Selectors")}}                 | {{Spec2("CSS3 Selectors")}} | `:target`, `:root`, `:nth-child()`, `:nth-last-of-child()`, `:nth-of-type()`, `:nth-last-of-type()`, `:last-child`, `:first-of-type`, `:last-of-type`, `:only-child`, `:only-of-type`, `:empty`, `:not()` を定義。 `:enabled`, `:disabled`, `:checked`, `:indeterminate` の構文を定義、ただし意味論定期な意味の定義は行わず。 {{SpecName('CSS2.1')}} で定義された擬似クラスについては、目立った変更なし。                                                                 |
-| {{SpecName("CSS2.1")}}                         | {{Spec2("CSS2.1")}}         | `:lang()`, `:first-child`, `:hover`, `:focus` を定義。 {{SpecName('CSS1')}} で定義された擬似クラスには目立った変更なし。                                                                                                                                                                                                                                                                                                                                                         |
-| {{SpecName("CSS1")}}                           | {{Spec2("CSS1")}}           | `:link`, `:visited`, `:active` を定義。ただし意味論的な意味は定義なし。                                                                                                                                                                                                                                                                                                                                                                                                             |
+{{Specifications}}
 
 ## 関連情報
 

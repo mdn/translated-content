@@ -1,20 +1,16 @@
 ---
 title: negative
 slug: Web/CSS/@counter-style/negative
-tags:
-  - CSS
-  - Descripteur
-  - Reference
-translation_of: Web/CSS/@counter-style/negative
 ---
+
 {{CSSRef}}
 
 Le descripteur **`negative`**, associé à la règle @ {{cssxref("@counter-style")}}, permet de définir la représentation du compteur lorsque la valeur est négative.
 
 ```css
 /* Valeurs représentant les symboles */
-negative: "-";       /* Préfixe '-' si la valeur est négative */
-negative: "(" ")";   /* Entoure la valeur avec '(' et ')' si elle est négative */
+negative: "-"; /* Préfixe '-' si la valeur est négative */
+negative: "(" ")"; /* Entoure la valeur avec '(' et ')' si elle est négative */
 ```
 
 Si la valeur du compteur est négative, le symbole fourni par le descripteur sera utilisé comme préfixe à la représentation du compteur. Un deuxième symbole peut être indiqué et est alors utilisé comme suffixe. Le descripteur `negative` n'a d'effet que si la valeur du descripteur `system` est `symbolic`, `alphabetic`, `numeric`, `additive` ou `extends` et si le compteur personnalisé utilise des indices négatifs. Dans les autres cas, si le descripteur `negative` est fourni, il est ignoré.
@@ -28,9 +24,13 @@ Si la valeur du compteur est négative, le symbole fourni par le descripteur ser
 - Deuxième symbole {{optional_inline}}
   - : Si cette valeur (type {{cssxref("&lt;symbol&gt;")}}) est présente, le symbole sera ajouté après la représentation du compteur lorsque sa valeur est négative.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -65,15 +65,11 @@ Si la valeur du compteur est négative, le symbole fourni par le descripteur ser
 
 ## Spécifications
 
-| Spécification                                                                                | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Counter Styles', '#counter-style-system', 'system')}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.counter-style.negative")}}
+{{Compat}}
 
 ## Voir aussi
 

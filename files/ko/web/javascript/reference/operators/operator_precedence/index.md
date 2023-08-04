@@ -1,14 +1,8 @@
 ---
 title: 연산자 우선순위
-slug: Web/JavaScript/Reference/Operators/Operator_Precedence
-tags:
-  - Guide
-  - JavaScript
-  - Operator
-  - 연산자
-  - 우선순위
-translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
+slug: Web/JavaScript/Reference/Operators/Operator_precedence
 ---
+
 {{jsSidebar("Operators")}}
 
 **연산자 우선순위**는 연산자를 실행하는 순서를 결정합니다. 우선순위가 높은 연산자가 먼저 실행됩니다.
@@ -167,7 +161,7 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
 
 위의 예제에서 나눗셈은 좌결합성이므로 `6 / 3 / 2`는 `(6 / 3) / 2`와 같습니다. 한편 거듭제곱은 우결합성이므로 `2 ** 3 ** 2`는 `2 ** (3 ** 2)`와 같습니다. 그러므로 `(2 ** 3) ** 2`는 괄호로 인해 실행 순서가 바뀌기 때문에 위 표와 같이 64로 평가됩니다.
 
-우선순위는 결합성보다 항상 우선하므로, 거듭제곱과 나눗셈을 같이 사용하면 나눗셈보다 거듭제곱이 먼저 계산됩니다. 예를 들어 `2 ** 3 / 3 ** 2`는 `(2 ** 3) / (3 ** 2)`와 같으므로 0.8888888888888888로 계산됩니다.
+우선순위는 결합성보다 항상 우선하므로, 거듭제곱과 나눗셈을 같이 사용하면 나눗셈보다 거듭제곱이 먼저 계산됩니다. 예를 들어 `2 ** 3 / 3 ** 2`는 `(2 ** 3) / (3 ** 2)`와 같으므로 0.8888888888888888로 계산됩니다.
 
 ## 예제
 
@@ -190,7 +184,7 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
 ```js
 a || (b * c);  // `a`를 먼저 평가하고, `a`가 "truthy"라면  `a`를 생성합니다.
 a && (b < c);  // `a`를 먼저 평가하고, `a`가 "falsy"라면  `a`를 생성합니다.
-a ?? (b || c); // `a`를 먼저 평가하고, `a`가 `null`과 `undefined`가 아니라면 `a`를 생성합니다. 
+a ?? (b || c); // `a`를 먼저 평가하고, `a`가 `null`과 `undefined`가 아니라면 `a`를 생성합니다.
 a?.b.c;        // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `undefined`를 생성합니다.
 ```
 

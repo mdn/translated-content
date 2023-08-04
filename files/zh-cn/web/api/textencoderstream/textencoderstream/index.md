@@ -1,21 +1,15 @@
 ---
 title: TextEncoderStream()
 slug: Web/API/TextEncoderStream/TextEncoderStream
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - TextEncoderStream
-translation_of: Web/API/TextEncoderStream/TextEncoderStream
 ---
+
 {{APIRef("Encoding API")}}
 
 **`TextEncoderStream()`** 构造函数创建一个新的 {{domxref("TextEncoderStream")}} 对象，该对象使用 UTF-8 编码将字符串流转换为字节。
 
 ## 语法
 
-```js
+```js-nolint
 new TextEncoderStream()
 ```
 
@@ -29,7 +23,11 @@ new TextEncoderStream()
 
 ```js
 const body = textStream.pipeThrough(new TextEncoderStream());
-fetch('/dest', { method: 'POST', body, headers: {'Content-Type': 'text/plain; charset=UTF-8'} });
+fetch("/dest", {
+  method: "POST",
+  body,
+  headers: { "Content-Type": "text/plain; charset=UTF-8" },
+});
 ```
 
 ## 规范

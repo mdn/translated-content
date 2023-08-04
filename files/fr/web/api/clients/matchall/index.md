@@ -1,21 +1,14 @@
 ---
 title: Clients.matchAll()
 slug: Web/API/Clients/matchAll
-tags:
-  - API
-  - Client
-  - Expérimental(2)
-  - Méthode
-  - Référence(2)
-  - Service Workers
-translation_of: Web/API/Clients/matchAll
 ---
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}La méthode **`matchAll()`** de l'interface {{domxref("Clients")}} retourne une [`Promesse`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) pour une liste de service worker clients. Inclure le paramètre `options` permet de retourner tous les services worker clients dont l'origine est la même que l'origine du service worker associé. Si `options` n'est pas inclus, la méthode retourne que le service worker client controllé par le service worker.
+
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}La méthode **`matchAll()`** de l'interface {{domxref("Clients")}} retourne une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) pour une liste de service worker clients. Inclure le paramètre `options` permet de retourner tous les services worker clients dont l'origine est la même que l'origine du service worker associé. Si `options` n'est pas inclus, la méthode retourne que le service worker client controllé par le service worker.
 
 ## Syntaxe
 
 ```js
-ServiceWorkerClients.matchAll(options).then(function(clients) {
+ServiceWorkerClients.matchAll(options).then(function (clients) {
   // faire quelque chose avec la list de clients
 });
 ```
@@ -31,14 +24,14 @@ ServiceWorkerClients.matchAll(options).then(function(clients) {
 
 ### Valeur de retour
 
-Une  [`Promesse`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout avec un tableau d'objets {{domxref("Client")}}.
+Une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout avec un tableau d'objets {{domxref("Client")}}.
 
 ## Exemples
 
 ```js
-clients.matchAll(options).then(function(clientList) {
-  for(var i = 0 ; i < clients.length ; i++) {
-    if(clientList[i].url === 'index.html') {
+clients.matchAll(options).then(function (clientList) {
+  for (var i = 0; i < clients.length; i++) {
+    if (clientList[i].url === "index.html") {
       clients.openWindow(clientList[i]);
       // ou faire quelque chose avec le client
     }
@@ -48,10 +41,8 @@ clients.matchAll(options).then(function(clientList) {
 
 ## Spécifications
 
-| Spécification                                                            | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#clients', 'Clients')}} | {{Spec2('Service Workers')}} | Définition initial. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Clients.matchAll")}}
+{{Compat}}

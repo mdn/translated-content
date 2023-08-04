@@ -1,14 +1,8 @@
 ---
 title: Atomics.load()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.load
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/load
 ---
+
 {{JSRef}}
 
 静的な **`Atomics.load()`** メソッドは、配列内の指定された位置の値を返します。

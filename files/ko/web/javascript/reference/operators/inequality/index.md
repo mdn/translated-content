@@ -1,13 +1,8 @@
 ---
 title: 부등 연산자(!=)
 slug: Web/JavaScript/Reference/Operators/Inequality
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.inequality
 ---
+
 {{jsSidebar("Operators")}}
 
 부등 연산자(!=)는 두 피연산자가 같지 않은지 확인하여 불리언 결과를 반환합니다. 엄격한 부등 연산자와는 달리 다른 유형의 피연산자를 암묵적으로 변환하고 비교합니다.
@@ -38,7 +33,7 @@ x != y
 3 != "3"; // false
 ```
 
-이를 방지하고 다른 유형이 다른 것으로 간주되게 하려면 [엄격한 불일치 연산자](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)를 사용해야 합니다.
+이를 방지하고 다른 유형이 다른 것으로 간주되게 하려면 [엄격한 불일치 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Strict_inequality)를 사용해야 합니다.
 
 ```js
 3 !== "3"; // true
@@ -95,8 +90,8 @@ object2 != object2 // false
 ## 관련 문서
 
 - [Equality
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
+  operator](/ko/docs/Web/JavaScript/Reference/Operators/Equality)
 - [Strict
-  equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+  equality operator](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)
 - [Strict
-  inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+  inequality operator](/ko/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

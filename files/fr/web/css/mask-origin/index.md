@@ -1,9 +1,8 @@
 ---
 title: mask-origin
 slug: Web/CSS/mask-origin
-translation_of: Web/CSS/mask-origin
-browser-compat: css.properties.mask-origin
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-origin`** permet de définir l'origine à partir de laquelle placer le masque.

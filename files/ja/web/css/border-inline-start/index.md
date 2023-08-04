@@ -1,21 +1,8 @@
 ---
 title: border-inline-start
 slug: Web/CSS/border-inline-start
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - border-inline
-  - border-inline-start
-  - border-inline-start-color
-  - border-inline-start-style
-  - border-inline-start-width
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-inline-start
-translation_of: Web/CSS/border-inline-start
 ---
+
 {{CSSRef}}
 
 **`border-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なインライン方向の先頭側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。

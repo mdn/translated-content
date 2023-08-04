@@ -1,11 +1,8 @@
 ---
 title: round
 slug: Web/XPath/Functions/round
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/round
-original_slug: Web/XPath/Fonctions/round
 ---
+
 {{ XsltRef() }}
 
 La fonction `round` retourne le nombre entier le plus proche d'un nombre donné.

@@ -1,15 +1,9 @@
 ---
 title: align-content
 slug: Web/CSS/align-content
-tags:
-  - CSS
-  - CSS Box Alignment
-  - CSS Property
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.align-content
 ---
-[CSS](/en-US/docs/Web/CSS) **`align-content`** 속성은 콘텐츠 사이와 콘텐츠 주위 빈 공간을 [플렉스 박스](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout)'의 교차축 또는 [그리드](/ko/docs/Web/CSS/CSS_Grid_Layout)의 블록 축을 따라 배치하는 방식을 결정합니다.
+
+[CSS](/ko/docs/Web/CSS) **`align-content`** 속성은 콘텐츠 사이와 콘텐츠 주위 빈 공간을 [플렉스 박스](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout)'의 교차축 또는 [그리드](/ko/docs/Web/CSS/CSS_Grid_Layout)의 블록 축을 따라 배치하는 방식을 결정합니다.
 
 아래의 대화형 예제는 그리드 레이아웃을 사용해 이 속성의 값을 시연합니다.
 
@@ -227,7 +221,7 @@ display.addEventListener('change', function (evt) {
 
 ## 명세
 
-{{Specifications("css.properties.align-content.grid_context")}}
+{{Specifications}}
 
 ## 브라우저 호환성
 
@@ -235,9 +229,9 @@ display.addEventListener('change', function (evt) {
 
 ## 같이 보기
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/ko/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- [CSS Box Alignment](/ko/docs/Web/CSS/CSS_Box_Alignment)
 
 {{CSSRef}}

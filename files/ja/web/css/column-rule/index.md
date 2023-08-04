@@ -1,15 +1,8 @@
 ---
 title: column-rule
 slug: Web/CSS/column-rule
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.column-rule
-translation_of: Web/CSS/column-rule
 ---
+
 {{CSSRef}}
 
 **`column-rule`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)を行う [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の太さ、スタイル、色を設定します。
@@ -18,7 +11,7 @@ translation_of: Web/CSS/column-rule
 
 これは[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)であり、一回の便利な宣言で個別の `column-rule-*` プロパティ ({{Cssxref("column-rule-width")}}, {{Cssxref("column-rule-style")}}, {{Cssxref("column-rule-color")}}) を設定できます。
 
-> **Note:** 他の一括指定プロパティと同様に、指定されなかった個別の値は初期値が設定されます (以前に個別指定プロパティを使用して設定された値を上書きする可能性があります)。
+> **メモ:** 他の一括指定プロパティと同様に、指定されなかった個別の値は初期値が設定されます (以前に個別指定プロパティを使用して設定された値を上書きする可能性があります)。
 
 ## 構文
 

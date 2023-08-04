@@ -1,13 +1,8 @@
 ---
-title: '-moz-force-broken-image-icon'
+title: "-moz-force-broken-image-icon"
 slug: Web/CSS/-moz-force-broken-image-icon
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/-moz-force-broken-image-icon
 ---
+
 {{Non-standard_header}}{{ CSSRef}}
 
 La propriété **`-moz-force-broken-image-icon`** est une propriété CSS non-standard. Lorsqu'elle vaut `1`, elle permet de forcer l'affichage d'une icône d'image brisée même si l'image possède un attribut {{HTMLElement("img","<code>alt</code>","#attr-alt")}}. Lorsqu'elle vaut `0`, l'image est utilisée de façon normale et n'affichera que l'attribut `alt`.
@@ -41,7 +36,7 @@ img {
 ### HTML
 
 ```html
-<img src='/lien/vers/image/cassée.png' alt='Un lien vers une image cassée'>
+<img src="/lien/vers/image/cassée.png" alt="Un lien vers une image cassée" />
 ```
 
 ### Résultat
@@ -63,4 +58,4 @@ Cette propriété est une propriété propriétaire liée à Mozilla/Gecko et ne
 
 ## Voir aussi
 
-- {{Bug(58646)}}
+- [bug Firefox 58646](https://bugzil.la/58646)

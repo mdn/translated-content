@@ -1,16 +1,11 @@
 ---
-title: HTMLTableElement.insertRow()
+title: "HTMLTableElement: insertRow() メソッド"
+short-title: insertRow()
 slug: Web/API/HTMLTableElement/insertRow
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - メソッド
-  - NeedsMobileBrowserCompatibility
-  - リファレンス
-browser-compat: api.HTMLTableElement.insertRow
-translation_of: Web/API/HTMLTableElement/insertRow
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.insertRow()`** メソッドは、新しい行を表す ({{HtmlElement("tr")}}) をこの {{HtmlElement("table")}} に挿入し、その新しい行への参照を返します。
@@ -19,15 +14,16 @@ translation_of: Web/API/HTMLTableElement/insertRow
 
 ```js
 let specific_tbody = document.getElementById(tbody_id);
-let row = specific_tbody.insertRow(index)
+let row = specific_tbody.insertRow(index);
 ```
 
-> **Note:** `insertRow()` は、表に直接行を挿入します。 {{domxref("Document.createElement()")}} を使用して新しい `<tr>` 要素を作成する場合のように、行を個別に追加する必要はありません。
+> **メモ:** `insertRow()` は、表に直接行を挿入します。 {{domxref("Document.createElement()")}} を使用して新しい `<tr>` 要素を作成する場合のように、行を個別に追加する必要はありません。
 
 ## 構文
 
-```js
-var newRow = HTMLTableElement.insertRow(index);
+```js-nolint
+insertRow()
+insertRow(index)
 ```
 
 {{domxref("HTMLTableElement")}} は HTML の {{HtmlElement("table")}} 要素への参照です。
@@ -57,9 +53,15 @@ var newRow = HTMLTableElement.insertRow(index);
 
 ```html
 <table id="my-table">
-  <tr><td>行 1</td></tr>
-  <tr><td>行 2</td></tr>
-  <tr><td>行 3</td></tr>
+  <tr>
+    <td>行 1</td>
+  </tr>
+  <tr>
+    <td>行 2</td>
+  </tr>
+  <tr>
+    <td>行 3</td>
+  </tr>
 </table>
 ```
 
@@ -77,17 +79,17 @@ function addRow(tableID) {
   let newCell = newRow.insertCell(0);
 
   // そのセルにテキストノードを追加
-  let newText = document.createTextNode('新しい最下行');
+  let newText = document.createTextNode("新しい最下行");
   newCell.appendChild(newText);
 }
 
 // addRow() を表の ID で呼び出す
-addRow('my-table');
+addRow("my-table");
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## 仕様書
 

@@ -1,30 +1,28 @@
 ---
-title: Node.isSameNode()
+title: "Node: isSameNode() メソッド"
 slug: Web/API/Node/isSameNode
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.isSameNode
-translation_of: Web/API/Node/isSameNode
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
+
 {{APIRef("DOM")}}
 
 **`isSameNode()`** は {{domxref("Node")}} インターフェイスのメソッドで、 [`===` 厳密等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)の古い別名です。
 すなわち、 2 つのノードが全く同じであるかどうか（言い換えれば、同じオブジェクトを指しているかどうか）を検査します。
 
-> **Note:** `isSameNode()` を使用する必要はありません。 `===` 厳密等価演算子を使用してください。
+> **メモ:** `isSameNode()` を使用する必要はありません。 `===` 厳密等価演算子を使用してください。
 
 ## 構文
 
-```js
-isSameNode(otherNode);
+```js-nolint
+isSameNode(otherNode)
 ```
 
 ### 引数
 
 - `otherNode`
   - : 検査対象となる {{domxref("Node")}} です。
-    > **Note:** この引数は省略可能ではありませんが、 `null` に設定することはできます。
+    > **メモ:** この引数は省略可能ではありませんが、 `null` に設定することはできます。
 
 ### 返値
 
@@ -59,11 +57,17 @@ isSameNode(otherNode);
 
 ```js
 let output = document.getElementById("output");
-let divList  = document.getElementsByTagName("div");
+let divList = document.getElementsByTagName("div");
 
-output.innerHTML += "div 0 と div 0 は同じか: " + divList[0].isSameNode(divList[0]) + "<br/>";
-output.innerHTML += "div 0 と div 1 は同じか: " + divList[0].isSameNode(divList[1]) + "<br/>";
-output.innerHTML += "div 0 と div 2 は同じか: " + divList[0].isSameNode(divList[2]) + "<br/>";
+output.innerHTML += `div 0 と div 0 は同じか: ${divList[0].isSameNode(
+  divList[0]
+)}<br/>`;
+output.innerHTML += `div 0 と div 1 は同じか: ${divList[0].isSameNode(
+  divList[1]
+)}<br/>`;
+output.innerHTML += `div 0 と div 2 は同じか: ${divList[0].isSameNode(
+  divList[2]
+)}<br/>`;
 ```
 
 ### 結果

@@ -1,12 +1,8 @@
 ---
 title: Contexte de formatage en ligne (inline/incise)
 slug: Web/CSS/Inline_formatting_context
-tags:
-  - CSS
-  - Guide
-translation_of: Web/CSS/Inline_formatting_context
-original_slug: Web/CSS/Contexte_de_formatage_en_ligne
 ---
+
 {{CSSRef}}
 
 Dans cet article, nous allons voir ce qu'est le contexte de formatage en ligne (_inline formatting context_).

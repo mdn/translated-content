@@ -1,17 +1,10 @@
 ---
 title: KeyboardEvent.isComposing
 slug: Web/API/KeyboardEvent/isComposing
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.KeyboardEvent.isComposing
-translation_of: Web/API/KeyboardEvent/isComposing
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent.isComposing`** は読み取り専用プロパティで、イベントが変換セッションの途中、すなわち {{domxref("Element/compositionstart_event", "compositionstart")}} の後かつ {{domxref("Element/compositionend_event", "compositionend")}} の前に発行されたことを示す論理値を返します。

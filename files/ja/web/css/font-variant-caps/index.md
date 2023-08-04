@@ -1,15 +1,8 @@
 ---
 title: font-variant-caps
 slug: Web/CSS/font-variant-caps
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-variant-caps
-translation_of: Web/CSS/font-variant-caps
 ---
+
 {{CSSRef}}
 
 **`font-variant-caps`** は [CSS](/ja/docs/Web/CSS) のプロパティで、大文字の代替字形の使用を制御します。
@@ -71,7 +64,7 @@ font-variant-caps: unset;
 長い区間のテキストに対して `font-variant` の値を `all-small-caps` や `all-petite-caps` を設定すると、失読症のような認知障害を抱えた人にとって読むのが難しくなることがあります。
 
 - [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation" rel="noopener)
+- [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## 公式定義
 

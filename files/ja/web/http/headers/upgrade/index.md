@@ -1,20 +1,13 @@
 ---
 title: Upgrade
 slug: Web/HTTP/Headers/Upgrade
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - リクエストヘッダー
-  - レスポンスヘッダー
-  - Upgrade
-browser-compat: http.headers.Upgrade
-translation_of: Web/HTTP/Headers/Upgrade
 ---
+
 {{HTTPSidebar}}
 
 HTTP 1.1 (専用) の `Upgrade` ヘッダーは、すでに確立されたクライアントとサーバー間のプロトコルを、異なるプロトコルに（同じ転送プロトコルを通じて）アップグレードするために使用することができます。例えば、クライアントが HTTP 1.1 から HTTP 2.0 へ、または HTTP や HTTPS のコネクションを WebSocket へアップグレードすることができます。
 
-> **Warning:** HTTP/2 は明確にこの仕組み／ヘッダーを使用することを禁止しています。これは HTTP/1.1 専用です。
+> **警告:** HTTP/2 は明確にこの仕組み／ヘッダーを使用することを禁止しています。これは HTTP/1.1 専用です。
 
 <table class="properties">
   <tbody>
@@ -45,7 +38,7 @@ Connection: upgrade
 Upgrade: example/1, foo/2
 ```
 
-> **Note:** `Connection: upgrade` は `Upgrade` を送る際に設定する必要があります。
+> **メモ:** `Connection: upgrade` は `Upgrade` を送る際に設定する必要があります。
 
 サーバーはどのような理由であろうと、無視することができます。その場合、サーバーは `Upgrade` ヘッダーが送信されていないかのように応答する必要があります（たとえば {{HTTPStatus(200, "200 OK")}}）。
 

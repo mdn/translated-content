@@ -1,17 +1,8 @@
 ---
 title: src
 slug: Web/CSS/@font-face/src
-tags:
-  - '@font-face'
-  - アットルール記述子
-  - CSS
-  - CSS 記述子
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-browser-compat: css.at-rules.font-face.src
-translation_of: Web/CSS/@font-face/src
 ---
+
 {{CSSRef}}
 
 **`src`** は CSS における {{cssxref("@font-face")}} ルールの記述子で、フォントデータを含むリソースを指定します。 `@font-face` ルールを有効にするためには必要です。

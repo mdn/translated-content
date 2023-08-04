@@ -1,8 +1,8 @@
 ---
 title: StorageArea.get()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 ---
+
 {{AddonSidebar()}}
 
 從儲存空間內檢查一個或多個單元（item）。
@@ -11,9 +11,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 
 ## 語法
 
-    let gettingItem = browser.storage.<storageType>.get(
-      keys    // null, string, object or array of strings
-    )
+```js
+let gettingItem = browser.storage.<storageType>.get(
+  keys    // null, string, object or array of strings
+)
+```
 
 `<storageType>` 會是以下可覆寫的儲存類型之一：{{WebExtAPIRef("storage.sync")}} 或 {{WebExtAPIRef("storage.local")}}。
 
@@ -30,7 +32,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 
 ## 瀏覽器相容性
 
-{{Compat("webextensions.api.storage.StorageArea.get")}}
+{{Compat}}
 
 ## 示例
 
@@ -39,8 +41,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 ```js
 // 兩個單元：「kitten」與「monster」
 browser.storage.local.set({
-  kitten:  {name:"Mog", eats:"mice"},
-  monster: {name:"Kraken", eats:"people"}
+  kitten: { name: "Mog", eats: "mice" },
+  monster: { name: "Kraken", eats: "people" },
 });
 ```
 
@@ -87,7 +89,11 @@ gettingItem.then(onGot, onError);
 With an array of object names, retrieve all matches:
 
 ```js
-let gettingItem = browser.storage.local.get(["kitten", "monster", "grapefruit"]);
+let gettingItem = browser.storage.local.get([
+  "kitten",
+  "monster",
+  "grapefruit",
+]);
 gettingItem.then(onGot, onError);
 
 // -> Object { kitten: Object, monster: Object }
@@ -101,8 +107,8 @@ let gettingItem = browser.storage.local.get({
   monster: "no monster",
   grapefruit: {
     name: "Grape Fruit",
-    eats: "Water"
-  }
+    eats: "Water",
+  },
 });
 
 // -> Object { kitten: Object, monster: Object, grapefruit: Object }
@@ -113,15 +119,15 @@ let gettingItem = browser.storage.local.get({
 ### Chrome 示例
 
 ```js
-chrome.storage.local.get("kitten", function(items){
-  console.log(items.kitten);  // -> {name:"Mog", eats:"mice"}
+chrome.storage.local.get("kitten", function (items) {
+  console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
 });
 ```
 
 Or with an arrow function
 
 ```js
-chrome.storage.local.get("kitten", items=>{
+chrome.storage.local.get("kitten", (items) => {
   console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
 });
 ```

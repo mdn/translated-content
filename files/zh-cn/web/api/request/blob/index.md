@@ -1,23 +1,15 @@
 ---
 title: Request.blob()
 slug: Web/API/Request/blob
-page-type: web-api-instance-method
-tags:
-  - API
-  - Blob
-  - Fetch
-  - Method
-  - Reference
-  - Request
-translation_of: Web/API/Request/blob
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Request")}} 接口的 **`blob()`** 方法读取请求体并将其作为 promise 返回，该 promise 将兑现一个 {{domxref("Blob")}}。
 
 ## 语法
 
-```js
+```js-nolint
 blob()
 ```
 
@@ -32,15 +24,17 @@ blob()
 ## 示例
 
 ```js
-const obj = {hello: 'world'};
-const myBlob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'});
+const obj = { hello: "world" };
+const myBlob = new Blob([JSON.stringify(obj, null, 2)], {
+  type: "application/json",
+});
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: myBlob
- });
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: myBlob,
+});
 
-request.blob().then(function(myBlob) {
+request.blob().then(function (myBlob) {
   // do something with the blob sent in the request
 });
 ```

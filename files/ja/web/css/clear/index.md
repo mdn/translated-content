@@ -1,15 +1,8 @@
 ---
 title: clear
 slug: Web/CSS/clear
-tags:
-  - CSS
-  - CSS 位置指定レイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.clear
-translation_of: Web/CSS/clear
 ---
+
 {{CSSRef}}
 
  **`clear`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素をその前にある[浮動](/ja/docs/Web/CSS/float)要素の下に移動 (clear) する必要があるかどうかを設定します。`clear` プロパティは、浮動要素と非浮動要素のどちらにも適用されます。
@@ -22,7 +15,7 @@ translation_of: Web/CSS/clear
 
 解除されることに関連する浮動要素は、その前の浮動要素と[同一のブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)内の先行する浮動要素です。
 
-> **Note:** 浮動要素しか包含しない要素は、高さがなくなります。このような要素を常にリサイズ可能にして浮動要素を包含するようにしたい場合は、その子要素自身に clear を設定しなければなりません。これは **clearfix** と呼ばれます。また、実現方法のひとつとして、置換 {{cssxref("::after")}} [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) に `clear` を使う方法があります。
+> **メモ:** 浮動要素しか包含しない要素は、高さがなくなります。このような要素を常にリサイズ可能にして浮動要素を包含するようにしたい場合は、その子要素自身に clear を設定しなければなりません。これは **clearfix** と呼ばれます。また、実現方法のひとつとして、置換 {{cssxref("::after")}} [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) に `clear` を使う方法があります。
 >
 > ```css
 > #container::after {

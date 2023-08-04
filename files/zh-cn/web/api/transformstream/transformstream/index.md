@@ -1,21 +1,15 @@
 ---
 title: TransformStream()
 slug: Web/API/TransformStream/TransformStream
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - TransformStream
-translation_of: Web/api/TransformStream/TransformStream
 ---
+
 {{APIRef("Streams")}}
 
 **`TransformStream()`** 构造函数创建一个新的 {{domxref("TransformStream")}} 对象，该对象表示一对流：一个 {{domxref("WritableStream")}} 表示可写端，和一个 {{domxref("ReadableStream")}} 表示可读端。
 
 ## 语法
 
-```js
+```js-nolint
 new TransformStream()
 new TransformStream(transformer)
 new TransformStream(transformer, writableStrategy)
@@ -39,7 +33,7 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
 
 - `writableStrategy`{{Optional_Inline}}
 
-  - : 一个定义了排队策略的可选对象。它需要两个参数：
+  - : 一个定义了队列策略的可选对象。它需要两个参数：
 
     - `highWaterMark`
       - : 一个非负整数。它定义了在应用背压之前内部队列包含的分块的总数。
@@ -48,7 +42,7 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
 
 - `readableStrategy`{{Optional_Inline}}
 
-  - : 一个定义了排队策略的可选对象。它需要两个参数:
+  - : 一个定义了队列策略的可选对象。它需要两个参数：
 
     - `highWaterMark`
       - : 一个非负整数。它定义了在应用背压之前内部队列包含的分块的总数。
@@ -76,15 +70,15 @@ function appendToDOMStream(el) {
   return new WritableStream({
     write(chunk) {
       el.append(chunk);
-    }
+    },
   });
 }
 
-fetch('./lorem-ipsum.txt').then((response) =>
+fetch("./lorem-ipsum.txt").then((response) =>
   response.body
     .pipeThrough(new TextDecoderStream())
     .pipeThrough(upperCaseStream())
-    .pipeTo(appendToDOMStream(document.body))
+    .pipeTo(appendToDOMStream(document.body)),
 );
 ```
 
@@ -93,7 +87,9 @@ fetch('./lorem-ipsum.txt').then((response) =>
 如果没有提供 `transformer` 参数，那么结果将是一个恒等流，它将所有写入可写端的分块转发到可读端，并且不做任何改变。在以下示例中，一个恒等转换流被用于向一个管道添加缓冲。
 
 ```js
-const writableStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1024 * 1024 });
+const writableStrategy = new ByteLengthQueuingStrategy({
+  highWaterMark: 1024 * 1024,
+});
 readableStream
   .pipeThrough(new TransformStream(undefined, writableStrategy))
   .pipeTo(writableStream);

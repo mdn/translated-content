@@ -1,9 +1,8 @@
 ---
 title: image-orientation
 slug: Web/CSS/image-orientation
-translation_of: Web/CSS/image-orientation
-browser-compat: css.properties.image-orientation
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`image-orientation`** décrit la façon d'obtenir l'orientation correcte d'une image quelle que soit la disposition du document.
@@ -61,7 +60,7 @@ L'image suivante a suivi une rotation de 180° et la propriété `image-orientat
 
 ```css hidden
 img {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 label {
@@ -70,23 +69,29 @@ label {
 ```
 
 ```html hidden
-<img id="image" src="oriole.jpg"
-    alt="Orientation obtenue à partir de l'image">
+<img
+  id="image"
+  src="oriole.jpg"
+  alt="Orientation obtenue à partir de l'image" />
 
 <div>
-  <input type="radio" id="from-image" name="orientation" value="from-image"
-         checked>
+  <input
+    type="radio"
+    id="from-image"
+    name="orientation"
+    value="from-image"
+    checked />
   <label for="from-image">from-image</label>
 </div>
 
 <div>
-  <input type="radio" id="none" name="orientation" value="none">
+  <input type="radio" id="none" name="orientation" value="none" />
   <label for="none">none</label>
 </div>
 ```
 
 ```js hidden
-document.addEventListener('change', evt => {
+document.addEventListener("change", (evt) => {
   document.getElementById("image").style.imageOrientation = evt.target.value;
 });
 ```

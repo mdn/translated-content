@@ -1,16 +1,8 @@
 ---
 title: matrix3d()
 slug: Web/CSS/transform-function/matrix3d
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/transform-function/matrix3d()
-original_slug: Web/CSS/transform-function/matrix3d()
-browser-compat: css.types.transform-function.matrix3d
 ---
+
 {{CSSRef}}
 
 **`matrix3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 4x4 の三次元同次変換行列を定義します。
@@ -84,12 +76,12 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 
 ```html
 <section id="example-element" tabindex="0">
-  <div class="face front">1</div>
-  <div class="face back">2</div>
-  <div class="face right">3</div>
-  <div class="face left">4</div>
-  <div class="face top">5</div>
-  <div class="face bottom">6</div>
+  <div class="face front">1</div>
+  <div class="face back">2</div>
+  <div class="face right">3</div>
+  <div class="face left">4</div>
+  <div class="face top">5</div>
+  <div class="face bottom">6</div>
 </section>
 ```
 
@@ -105,8 +97,26 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
   margin: 50px auto;
 }
 
-#example-element:hover, #example-element:focus {
-  transform: rotate3d(1, 1, 1, 30deg) matrix3d(1,0,0,0,0,1,6,0,0,0,1,0,50,100,0,1.1);
+#example-element:hover,
+#example-element:focus {
+  transform: rotate3d(1, 1, 1, 30deg) matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      6,
+      0,
+      0,
+      0,
+      1,
+      0,
+      50,
+      100,
+      0,
+      1.1
+    );
 }
 
 .face {
@@ -122,32 +132,32 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 }
 
 .front {
-    background: rgba(90,90,90,.7);
-    transform: translateZ(50px);
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
 }
 
 .back {
-    background: rgba(0,210,0,.7);
-    transform: rotateY(180deg) translateZ(50px);
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210,0,0,.7);
+  background: rgba(210, 0, 0, 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0,0,210,.7);
+  background: rgba(0, 0, 210, 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210,210,0,.7);
+  background: rgba(210, 210, 0, 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210,0,210,.7);
+  background: rgba(210, 0, 210, 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
@@ -164,9 +174,9 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 
 ```html
 <div class="foo">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-Quos quaerat sit soluta, quisquam exercitationem delectus qui unde in facere
-necessitatibus aut quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quaerat sit
+  soluta, quisquam exercitationem delectus qui unde in facere necessitatibus aut
+  quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
 </div>
 ```
 
@@ -174,65 +184,48 @@ necessitatibus aut quia porro dolorem nesciunt enim, at consequuntur aliquam ess
 
 ```css
 html {
-  width: 100%;
+  width: 100%;
 }
 body {
-  height: 100vh;
-  /* Centering content */
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: center;
-
+  height: 100vh;
+  /* Centering content */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
 }
 .foo {
-  width: 50%;
-  padding: 1em;
-  color: white;
-  background: #ff8c66;
-  border: 2px dashed black;
-  text-align: center;
-  font-family: system-ui, sans-serif;
-  font-size: 14px;
-   /* Setting up animation for better demonstration */
-  animation: MotionScale 2s alternate linear infinite;
+  width: 50%;
+  padding: 1em;
+  color: white;
+  background: #ff8c66;
+  border: 2px dashed black;
+  text-align: center;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  /* Setting up animation for better demonstration */
+  animation: MotionScale 2s alternate linear infinite;
 }
 
 @keyframes MotionScale {
-  from {
-    /*
-      Identity matrix is used as basis here.
-      The matrix below describes the
-      following transformations:
-        Translates every X point by -50px
-        Translates every Y point by -100px
-        Translates every Z point by 0
-        Scales down by 10%
-    */
-    transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      -50,-100,0,1.1
-    );
-
-  }
-  50% {
-    transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      0,0,0,0.9
-    );
-  }
-  to {
-     transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      50,100,0,1.1
-    )
-  }
+  from {
+    /*
+      Identity matrix is used as basis here.
+      The matrix below describes the
+      following transformations:
+        Translates every X point by -50px
+        Translates every Y point by -100px
+        Translates every Z point by 0
+        Scales down by 10%
+    */
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -50, -100, 0, 1.1);
+  }
+  50% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.9);
+  }
+  to {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);
+  }
 }
 ```
 
