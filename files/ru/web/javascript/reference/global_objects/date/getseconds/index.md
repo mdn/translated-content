@@ -30,7 +30,7 @@ dateObj.getSeconds()
 Вторая инструкция в примере ниже присваивает значение 30 переменной `seconds` из значения переменной `date` объекта {{jsxref("Global_Objects/Date", "Date")}}.
 
 ```js
-let date = new Date('December 25, 1995 23:15:30');
+let date = new Date("December 25, 1995 23:15:30");
 let seconds = date.getSeconds();
 
 console.log(seconds); // 30

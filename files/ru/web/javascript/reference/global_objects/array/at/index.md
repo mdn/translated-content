@@ -40,7 +40,7 @@ at(index)
 
 ```js
 // Массив со значениями
-const cart = ['apple', 'banana', 'pear'];
+const cart = ["apple", "banana", "pear"];
 
 // Функция, которая возвращает последний элемент переданного массива
 function returnLast(arr) {
@@ -52,7 +52,7 @@ const item1 = returnLast(cart);
 console.log(item1); // Выведет: 'pear'
 
 // Добавить элемент в наш массив 'cart'
-cart.push('orange');
+cart.push("orange");
 const item2 = returnLast(cart);
 console.log(item2); // Выведет: 'orange'
 ```
@@ -63,10 +63,10 @@ console.log(item2); // Выведет: 'orange'
 
 ```js
 // Наш массив с элементами
-const colors = ['red', 'green', 'blue'];
+const colors = ["red", "green", "blue"];
 
 // Использование свойства 'length'
-const lengthWay = colors[colors.length-2];
+const lengthWay = colors[colors.length - 2];
 console.log(lengthWay); // Выведет: 'green'
 
 // Использование метода slice(). Обратите внимание, что возвращается массив
