@@ -35,7 +35,7 @@ l10n:
 - 만약 당신의 앱의 명확한 "조각"을 나타낸다면, 아마도 컴포넌트일 것입니다.
 - 만약 자주 재사용된다면, 아마도 컴포넌트일 것입니다.
 
-특히 두번째 항목은 유용합니다: 자주 재사용되는 UI 요소를 컴포넌트로 만들면, 코드를 한 곳에서 변경하고 그 컴포넌트가 사용되는 모든 곳에서 변경 사항을 볼 수 있습니다. 모든 것을 컴포넌트로 분리할 필요는 없습니다. 두번째 항목을 영감으로 삼아, 가장 재사용되고 중요한 UI 조각인 todo list의 항목을 컴포넌트로 만들어 보겠습니다.
+특히 두번째 항목은 중요합니다. 자주 재사용되는 UI 요소를 컴포넌트로 만들면, 코드를 한 곳에서 변경하고 그 컴포넌트가 사용되는 모든 곳에서 변경 사항을 볼 수 있습니다. 모든 것을 컴포넌트로 분리할 필요는 없습니다. 두번째 항목을 영감으로 삼아, 가장 재사용되고 중요한 UI 조각인 todo list의 항목을 컴포넌트로 만들어 보겠습니다.
 
 ## `<Todo />` 만들기
 
@@ -91,7 +91,6 @@ export default function Todo() {
 
 > **참고:** 컴포넌트는 항상 무언가를 반환해야 합니다. 만약 앞으로 컴포넌트를 렌더링하려고 할 때, 아무것도 반환하지 않는 컴포넌트를 만든다면, React는 브라우저에 에러를 표시할 것입니다.
 
-<!-- Our `Todo` component is complete, at least for now; now we can use it. In `App.js`, add the following line near the top of the file to import `Todo`: -->
 우리가 만든 `Todo` 컴포넌트가 완성되어 사용할 수 있습니다. `App.js`에 다음과 같이 `Todo`를 가져오는 코드를 파일의 상단에 추가하세요.
 
 ```jsx
@@ -192,7 +191,6 @@ export default Todo;
 
 `<Todo />` 컴포넌트의 `completed` prop을 변경하면, 브라우저에서 렌더링된 체크박스가 그에 상응하는 체크 또는 체크 해제됩니다.
 
-<!-- ### Gimme some `id`, please -->
 ### `id`를 부여해주세요
 
 지금은 `<Todo />` 컴포넌트가 모든 할 일에 `id` 속성을 `todo-0`으로 부여합니다. 이것은 [`id` 속성](/ko/docs/Web/HTML/Global_attributes/id)은 고유해야 한다는 점에서 나쁜 HTML입니다. (CSS, JavaScript 등에서 문서 조각을 식별하는 데 사용됩니다.) 이것은 각 `Todo`에 대해 고유한 값을 취하는 `id` prop을 컴포넌트에 부여해야 한다는 것을 의미합니다.
@@ -272,13 +270,10 @@ const taskList = props.tasks?.map((task) => task.name);
 </ul>
 ```
 
-<!-- This gets us some of the way towards showing all the components again, but we've got more work to do: the browser currently renders each task's name as unstructured text. We're missing our HTML structure — the `<li>` and its checkboxes and buttons! -->
 이렇게 하면 컴포넌트를 다시 표시하는 데 일부 도움이 되지만, 더 많은 작업이 필요합니다. 브라우저는 현재 각 할 일의 이름을 구조화되지 않은 텍스트로 렌더링합니다. HTML 구조인 `<li>`와 해당 체크박스와 버튼이 누락되었습니다!
 
-<!-- ![Our todo list app with the todo item labels just shown bunched up on one line](todo-list-unstructured-names.png) -->
 ![할 일 목록 앱에서 할 일 항목 레이블이 한 줄에 뭉쳐져 표시됩니다.](todo-list-unstructured-names.png)
 
- <!-- To fix this, we need to return a `<Todo />` component from our `map()` function — remember that JSX allows us to mix up JavaScript and markup structures! Let's try the following instead of what we have already: -->
 이를 해결하려면 `map()` 함수에서 `<Todo />` 컴포넌트를 반환해야 합니다. JSX를 사용하면 JavaScript와 마크업 구조를 혼합할 수 있습니다! 이전에 작성한 코드 대신 다음을 시도해 보겠습니다.
 
 ```jsx
@@ -295,7 +290,6 @@ const taskList = props.tasks.map((task) => (
 
 이제 앱은 이전과 같이 보이며, 코드가 덜 반복됩니다.
 
-<!-- ## Unique keys -->
 ## 고유 키
 
 이제 React는 배열에서 할 일을 렌더링하므로, 올바르게 렌더링하려면 어떤 것이 어떤 것인지 추적해야 합니다. React는 추적을 위해 자체적으로 추측을 시도하지만, `<Todo />` 컴포넌트에 `key` prop을 전달하여 도움을 줄 수 있습니다. `key`는 React가 관리하는 특별한 prop입니다. 다른 용도로 `key`라는 단어를 사용할 수 없습니다.
@@ -328,10 +322,8 @@ const taskList = props.tasks.map((task) => (
 touch src/components/Form.js src/components/FilterButton.js
 ```
 
-<!-- ### The `<Form />` -->
 ### `<Form />`
 
-<!-- Open `components/Form.js` and do the following: -->
 `components/Form.js`를 열고 다음을 수행하세요.
 
 - `Todo.js`에서 수행한 것처럼 파일 맨 위에 `React`를 가져옵니다.
