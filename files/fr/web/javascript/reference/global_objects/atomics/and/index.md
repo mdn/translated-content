@@ -1,14 +1,6 @@
 ---
 title: Atomics.and()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/and
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/and
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode statique **`Atomics.and()`** calcule un ET binaire avec une valeur d
 ## Syntaxe
 
 ```js
-Atomics.and(typedArray, index, valeur)
+Atomics.and(typedArray, index, valeur);
 ```
 
 ### Paramètres
@@ -71,18 +63,16 @@ var ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.and(ta, 0, 1); // renvoie 0, l'ancienne valeur
-Atomics.load(ta, 0);   // 1
+Atomics.load(ta, 0); // 1
 ```
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                     |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-atomics.and', 'Atomics.and')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics.and")}}
+{{Compat}}
 
 ## Voir aussi
 

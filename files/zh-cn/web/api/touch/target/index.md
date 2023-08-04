@@ -24,18 +24,24 @@ var el = touchPoint.target;
 
 这个例子展示了如何访问 {{domxref("Touch")}} 对象的 {{domxref("Touch.target")}} 属性。{{domxref("Touch.target")}} 属性是最初接触平面的触摸点下的 {{domxref("Element")}} ({{domxref("EventTarget")}}) 。
 
-在下面的代码片段中，我们假设用户在 `source` 元素上开始接触，因此初始化了一个或多个触摸点。当这个元素上的 {{event("touchstart")}} 事件处理程序被调用时，每个触摸点的 {{domxref("Touch.target")}} 属性可经事件的 {{domxref("TouchEvent.targetTouches")}} 列表访问。
+在下面的代码片段中，我们假设用户在 `source` 元素上开始接触，因此初始化了一个或多个触摸点。当这个元素上的 [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event) 事件处理程序被调用时，每个触摸点的 {{domxref("Touch.target")}} 属性可经事件的 {{domxref("TouchEvent.targetTouches")}} 列表访问。
 
 ```js
 // 为'source'元素注册一个触摸监听器
 var src = document.getElementById("source");
 
-src.addEventListener('touchstart', function(e) {
-  // 在这个元素上激活的触点间循环
-  for (var i=0; i < e.targetTouches.length; i++) {
-    console.log("touchpoint[" + i + "].target = " + e.targetTouches[i].target);
-  }
-}, false);
+src.addEventListener(
+  "touchstart",
+  function (e) {
+    // 在这个元素上激活的触点间循环
+    for (var i = 0; i < e.targetTouches.length; i++) {
+      console.log(
+        "touchpoint[" + i + "].target = " + e.targetTouches[i].target,
+      );
+    }
+  },
+  false,
+);
 ```
 
 ## 规范

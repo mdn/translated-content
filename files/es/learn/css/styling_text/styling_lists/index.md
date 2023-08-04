@@ -1,11 +1,11 @@
 ---
 title: Aplicación de estilo a listas
 slug: Learn/CSS/Styling_text/Styling_lists
-translation_of: Learn/CSS/Styling_text/Styling_lists
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-Las [listas](/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) se comportan como cualquier otro texto en su mayor parte, pero hay algunas propiedades CSS específicas de las listas que debes conocer y algunas prácticas recomendadas a tener en cuenta. Este artículo te lo explica.
+Las [listas](/es/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) se comportan como cualquier otro texto en su mayor parte, pero hay algunas propiedades CSS específicas de las listas que debes conocer y algunas prácticas recomendadas a tener en cuenta. Este artículo te lo explica.
 
 <table>
   <tbody>
@@ -41,8 +41,10 @@ El HTML para nuestro ejemplo de lista se ve así:
 ```html
 <h2>Shopping (unordered) list</h2>
 
-<p>Paragraph for reference, paragraph for reference, paragraph for reference,
-paragraph for reference, paragraph for reference, paragraph for reference.</p>
+<p>
+  Paragraph for reference, paragraph for reference, paragraph for reference,
+  paragraph for reference, paragraph for reference, paragraph for reference.
+</p>
 
 <ul>
   <li>Humous</li>
@@ -53,28 +55,40 @@ paragraph for reference, paragraph for reference, paragraph for reference.</p>
 
 <h2>Recipe (ordered) list</h2>
 
-<p>Paragraph for reference, paragraph for reference, paragraph for reference,
-paragraph for reference, paragraph for reference, paragraph for reference.</p>
+<p>
+  Paragraph for reference, paragraph for reference, paragraph for reference,
+  paragraph for reference, paragraph for reference, paragraph for reference.
+</p>
 
 <ol>
   <li>Toast pitta, leave to cool, then slice down the edge.</li>
-  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li>Wash and chop the salad.</li>
   <li>Fill pitta with salad, humous, and fried halloumi.</li>
 </ol>
 
 <h2>Ingredient description list</h2>
 
-<p>Paragraph for reference, paragraph for reference, paragraph for reference,
-paragraph for reference, paragraph for reference, paragraph for reference.</p>
+<p>
+  Paragraph for reference, paragraph for reference, paragraph for reference,
+  paragraph for reference, paragraph for reference, paragraph for reference.
+</p>
 
 <dl>
   <dt>Humous</dt>
-  <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
+  <dd>
+    A thick dip/sauce generally made from chick peas blended with tahini, lemon
+    juice, salt, garlic, and other ingredients.
+  </dd>
   <dt>Pitta</dt>
   <dd>A soft, slightly leavened flatbread.</dd>
   <dt>Halloumi</dt>
-  <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
+  <dd>
+    A semi-hard, unripened, brined cheese with a higher-than-usual melting
+    point, usually made from goat/sheep milk.
+  </dd>
   <dt>Green salad</dt>
   <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
 </dl>
@@ -106,18 +120,22 @@ h2 {
   font-size: 2rem;
 }
 
-ul,ol,dl,p {
+ul,
+ol,
+dl,
+p {
   font-size: 1.5rem;
 }
 
-li, p {
+li,
+p {
   line-height: 1.5;
 }
 
 /* Estilos para las listas de descripciones */
 
-
-dd, dt {
+dd,
+dt {
   line-height: 1.5;
 }
 
@@ -155,7 +173,7 @@ ol {
 
 Esto nos da el aspecto siguiente:
 
-![Una lista ordenada con las viñetas establecidas para aparecer fuera del texto del elemento de lista.](https://mdn.mozillademos.org/files/12962/outer-bullets.png)
+![Una lista ordenada con las viñetas establecidas para aparecer fuera del texto del elemento de lista.](outer-bullets.png)
 
 Puedes encontrar muchas más opciones si echas un vistazo a la página de referencia de {{cssxref("list-style-type")}}.
 
@@ -172,7 +190,7 @@ ol {
 }
 ```
 
-![an ordered list with the bullet points set to appear inside the list item text.](https://mdn.mozillademos.org/files/12958/inner-bullets.png)
+![an ordered list with the bullet points set to appear inside the list item text.](inner-bullets.png)
 
 ### Uso de una imagen personalizada como viñeta
 
@@ -217,7 +235,7 @@ Aquí hemos hecho lo siguiente:
 
 Esto nos da el resultado siguiente:
 
-![an unordered list with the bullet points set as little star images](https://mdn.mozillademos.org/files/12956/image-bullets.png)
+![an unordered list with the bullet points set as little star images](list_formatting.png)
 
 ### Propiedad abreviada list-style
 
@@ -247,12 +265,14 @@ A veces puedes querer numerar las listas de manera diferente, por ejemplo, que e
 
 ### start
 
-El atributo {{htmlattrxref("start","ol")}} te permite empezar la numeración de la lista en un número diferente de 1. Observa el ejemplo siguiente:
+El atributo [`start`](/es/docs/Web/HTML/Element/ol#start) te permite empezar la numeración de la lista en un número diferente de 1. Observa el ejemplo siguiente:
 
 ```html
 <ol start="4">
   <li>Toast pitta, leave to cool, then slice down the edge.</li>
-  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li>Wash and chop the salad.</li>
   <li>Fill pitta with salad, humous, and fried halloumi.</li>
 </ol>
@@ -264,12 +284,14 @@ Este código da el resultado siguiente:
 
 ### reversed
 
-El atributo {{htmlattrxref("reversed","ol")}} empieza la lista contando hacia atrás, en lugar de hacia adelante. Observa el ejemplo siguiente:
+El atributo [`reversed`](/es/docs/Web/HTML/Element/ol#reversed) empieza la lista contando hacia atrás, en lugar de hacia adelante. Observa el ejemplo siguiente:
 
 ```html
 <ol start="4" reversed>
   <li>Toast pitta, leave to cool, then slice down the edge.</li>
-  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li>Wash and chop the salad.</li>
   <li>Fill pitta with salad, humous, and fried halloumi.</li>
 </ol>
@@ -283,12 +305,14 @@ Da el resultado siguiente:
 
 ### value
 
-El atributo {{htmlattrxref("value","ol")}} te permite establecer para tus elementos de lista unos valores numéricos específicos. Observa el ejemplo siguiente:
+El atributo [`value`](/es/docs/Web/HTML/Element/ol#value) te permite establecer para tus elementos de lista unos valores numéricos específicos. Observa el ejemplo siguiente:
 
 ```html
 <ol>
   <li value="2">Toast pitta, leave to cool, then slice down the edge.</li>
-  <li value="4">Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li value="4">
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li value="6">Wash and chop the salad.</li>
   <li value="8">Fill pitta with salad, humous, and fried halloumi.</li>
 </ol>
@@ -312,9 +336,15 @@ En esta sesión de aprendizaje activo, queremos que tomes lo que has aprendido a
 Si te equivocas, puedes volver a empezar con el botón _Reinicio_. Si te quedas encallado, pulsa el botón _Mostrar la solución_ para ver una posible solución.
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>HTML Input</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"><ul>
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+<ul>
   <li>First, light the candle.</li>
   <li>Next, open the box.</li>
   <li>Finally, place the three magic items in the box, in this exact order, to complete the spell:
@@ -324,17 +354,31 @@ Si te equivocas, puedes volver a empezar con el botón _Reinicio_. Si te quedas 
       <li>The goblin statue</li>
     </ol>
   </li>
-</ul></textarea>
+</ul></textarea
+  >
 
-<h2>CSS Input</h2>
-<textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></textarea>
+  <h2>CSS Input</h2>
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></textarea>
 
-<h2>Output</h2>
-<div class="output" style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
-<div class="controls">
-<input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
-<input id="solution" type="button" value="Show solution" style="margin: 10px 0 0 10px;">
-</div>
+  <h2>Output</h2>
+  <div
+    class="output"
+    style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
+  <div class="controls">
+    <input
+      id="reset"
+      type="button"
+      value="Reset"
+      style="margin: 10px 10px 0 0;" />
+    <input
+      id="solution"
+      type="button"
+      value="Show solution"
+      style="margin: 10px 0 0 10px;" />
+  </div>
 </div>
 ```
 
@@ -347,25 +391,26 @@ var cssCode = cssInput.value;
 var output = document.querySelector(".output");
 var solution = document.getElementById("solution");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+var styleElem = document.createElement("style");
+var headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
-output.innerHTML = htmlInput.value;
-styleElem.textContent = cssInput.value;
+  output.innerHTML = htmlInput.value;
+  styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
-htmlInput.value = htmlCode;
-cssInput.value = cssCode;
-drawOutput();
+reset.addEventListener("click", function () {
+  htmlInput.value = htmlCode;
+  cssInput.value = cssCode;
+  drawOutput();
 });
 
-solution.addEventListener("click", function() {
-htmlInput.value = htmlCode;
-cssInput.value = 'ul {\n list-style-type: square;\n}\n\nul li {\n line-height: 1.5;\n}\n\nol {\n list-style-type: lower-alpha\n}';
-drawOutput();
+solution.addEventListener("click", function () {
+  htmlInput.value = htmlCode;
+  cssInput.value =
+    "ul {\n list-style-type: square;\n}\n\nul li {\n line-height: 1.5;\n}\n\nol {\n list-style-type: lower-alpha\n}";
+  drawOutput();
 });
 
 htmlInput.addEventListener("input", drawOutput);
@@ -388,11 +433,3 @@ Los contadores CSS proporcionan herramientas avanzadas para la personalización 
 La aplicación de estilo a listas se domina con relativa facilidad una vez que conoces algunos principios básicos y propiedades específicas asociados. En el artículo siguiente vamos a continuar con las técnicas de aplicación de estilo a enlaces.
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
-
-## En este módulo
-
-- [Nociones de aplicación de estilo con CSS a textos y tipos de letra](/es/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Aplicar estilo a listas](/es/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Aplicar estilo a enlaces](/es/docs/Learn/CSS/Styling_text/Styling_links)
-- [Tipos de letra para web](/es/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Escribir una página de inicio para la comunidad escolar](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)

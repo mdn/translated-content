@@ -1,13 +1,8 @@
 ---
 title: z-index
 slug: Web/CSS/z-index
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/z-index
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`z-index`** 속성은 [위치 지정 요소](/ko/docs/Web/CSS/position)와, 그 자손 또는 하위 플렉스 아이템의 Z축 순서를 지정합니다. 더 큰 `z-index` 값을 가진 요소가 작은 값의 요소 위를 덮습니다.
@@ -55,7 +50,8 @@ z-index 속성은 [`auto`](#auto) 키워드 또는 [`<integer>`](#integer) 값�
 ### HTML
 
 ```html
-<div class="dashed-box">Dashed box
+<div class="dashed-box">
+  Dashed box
   <span class="gold-box">Gold box</span>
   <span class="green-box">Green box</span>
 </div>

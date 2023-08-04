@@ -64,9 +64,7 @@ g.return(1); // { value: 1, done: true }
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-generator.prototype.return', 'Generator.prototype.return')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

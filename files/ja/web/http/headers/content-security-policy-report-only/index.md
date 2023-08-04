@@ -123,10 +123,7 @@ As you can see, the report includes the full path to the violating resource in `
 
 ## 仕様書
 
-| 仕様書                           | 状態                         | 備考     |
-| -------------------------------- | ---------------------------- | -------- |
-| {{specName("CSP 3.0")}} | {{Spec2('CSP 3.0')}} | 変更なし |
-| {{specName("CSP 1.1")}} | {{Spec2('CSP 1.1')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

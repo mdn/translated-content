@@ -1,9 +1,8 @@
 ---
 title: XHTML
 slug: Glossary/XHTML
-translation_of: Glossary/XHTML
-original_slug: XHTML
 ---
+
 O [HTML](/pt-BR/docs/HTML) pode ser transferido através da internet para o navegador usando duas sintaxes: sintaxe HTML e sintaxe [XML](/pt-BR/docs/XML), também conhecido como XHTML.
 
 ## HTML5 e HTML/XHTML
@@ -15,28 +14,26 @@ O exemplo mostra um documento HTML e um XHTML incluindo os cabeçalhos relevante
 ### Documento HTML
 
 ```html
-HTTP/1.1 200 OK
-Content-Type: text/html
+<!-- Content-Type: text/html -->
 
-<!DOCTYPE html>
-<html lang=en>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset=utf-8>
+    <meta charset="utf-8" />
     <title>HTML</title>
   </head>
   <body>
-    <p>Eu sou um documento HTML
+    <p>Eu sou um documento HTML</p>
   </body>
 </html>
 ```
 
 ### Documento XHTML
 
-```
-HTTP/1.1 200 OK
-Content-Type: application/xhtml+xml
+```xml
+<!-- Content-Type: application/xhtml+xml -->
 
-<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html xml:lang="en" xmlns="https://www.w3.org/1999/xhtml">
   <head>
     <title>XHTML</title>
   </head>
@@ -48,7 +45,7 @@ Content-Type: application/xhtml+xml
 
 ## Tipo MIME contra DOCTYPE
 
-Antes do HTML5, as duas sintaxes eram definidas por duas especificações diferentes: [HTML 4.01](http://www.w3.org/TR/html4/) e [XHTML 1.0](http://www.w3.org/TR/xhtml1/). O padrão XHTML1 afirma que você poderia usar XHTML declarando um DOCTYPE especial. Porém, isso nunca foi implementado por nenhum navegador,e tem sido trocado pelo padrão HTML5. **Se sua página é enviada como `text/html` você não pode usar XHTML**.
+Antes do HTML5, as duas sintaxes eram definidas por duas especificações diferentes: [HTML 4.01](https://www.w3.org/TR/html4/) e [XHTML 1.0](https://www.w3.org/TR/xhtml1/). O padrão XHTML1 afirma que você poderia usar XHTML declarando um DOCTYPE especial. Porém, isso nunca foi implementado por nenhum navegador,e tem sido trocado pelo padrão HTML5. **Se sua página é enviada como `text/html` você não pode usar XHTML**.
 
 Observe que o tipo MIME deve ser declarado no `Content-Type` HTTP header. Se você apenas inseriu a meta tag no HTML como `<meta http-equiv=…>`, ele será ignorado e tratado como `text/html`.
 

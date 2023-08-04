@@ -15,13 +15,13 @@ slug: Web/API/DOMRectReadOnly
 ## プロパティ
 
 - {{domxref("DOMRectReadOnly.x")}} {{readonlyInline}}
-  - :  この `DOMRect` の原点の X 座標です。
+  - : この `DOMRect` の原点の X 座標です。
 - {{domxref("DOMRectReadOnly.y")}} {{readonlyInline}}
-  - :  この `DOMRect` の原点の Y 座標です。
+  - : この `DOMRect` の原点の Y 座標です。
 - {{domxref("DOMRectReadOnly.width")}} {{readonlyInline}}
-  - :  この `DOMRect` の幅です。
+  - : この `DOMRect` の幅です。
 - {{domxref("DOMRectReadOnly.height")}} {{readonlyInline}}
-  - :  この `DOMRect` の高さです。
+  - : この `DOMRect` の高さです。
 - {{domxref("DOMRectReadOnly.top")}} {{readonlyInline}}
   - : この `DOMRect` の上端の座標値を返します（ふつうは `y` と同じです）。
 - {{domxref("DOMRectReadOnly.right")}} {{readonlyInline}}

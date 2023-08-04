@@ -1,7 +1,6 @@
 ---
 title: <time>
 slug: Web/HTML/Element/time
-translation_of: Web/HTML/Element/time
 ---
 ## Resumo
 
@@ -33,7 +32,7 @@ Como todo outro elemento HTML, este elemento suporta os [atributos globais](/pt-
 
 ## DOM interface
 
-This element implements the [`HTMLTimeElement`](/en-US/docs/DOM/HTMLTimeElement) interface.
+This element implements the [`HTMLTimeElement`](/pt-BR/docs/DOM/HTMLTimeElement) interface.
 
 ## Exemplos
 

@@ -48,9 +48,7 @@ registry.register(target, {"useful": "info about target"});
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('WeakRefs', '#sec-finalization-registry.prototype.register', 'FinalizationRegistry.prototype.register')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,8 +1,8 @@
 ---
 title: outline
 slug: Web/CSS/outline
-translation_of: Web/CSS/outline
 ---
+
 {{CSSRef}}
 
 ## Sumário

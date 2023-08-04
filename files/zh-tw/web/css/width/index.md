@@ -5,7 +5,7 @@ slug: Web/CSS/width
 
 {{CSSRef}}
 
-The **`width`** CSS property specifies the width of an element. By default, the property defines the width of the [content area](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the width of the [border area](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area).
+The **`width`** CSS property specifies the width of an element. By default, the property defines the width of the [content area](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the width of the [border area](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border-area).
 
 ```css
 /* <length> values */
@@ -39,29 +39,62 @@ width: unset;
       &lt;length&gt; values
       <p class="w1">width: 150px</p>
       <p class="w2">width: 20em</p>
-      <p class="w3 warning" title="this feature is experimental and might not work in your browser">width: 20em content-box</p>
-      <p class="w4 warning" title="this feature is experimental and might not work in your browser">width: 20em border-box</p>
+      <p
+        class="w3 warning"
+        title="this feature is experimental and might not work in your browser">
+        width: 20em content-box
+      </p>
+      <p
+        class="w4 warning"
+        title="this feature is experimental and might not work in your browser">
+        width: 20em border-box
+      </p>
     </div>
     <div class="cell">
       &lt;percentage&gt; values
       <p class="w5">width: 75%</p>
-      <p class="w6 warning" title="this feature is experimental and might not work in your browser">width: 75% content-box</p>
-      <p class="w7 warning" title="this feature is experimental and might not work in your browser">width: 75% border-box</p>
+      <p
+        class="w6 warning"
+        title="this feature is experimental and might not work in your browser">
+        width: 75% content-box
+      </p>
+      <p
+        class="w7 warning"
+        title="this feature is experimental and might not work in your browser">
+        width: 75% border-box
+      </p>
     </div>
     <div class="cell">
       Keyword values
       <p>width: auto</p>
-      <p class="w8 warning" title="this feature is experimental and might not work in your browser">width: max-content</p>
-      <p class="w9 warning" title="this feature is experimental and might not work in your browser">width: min-content</p>
-      <p class="w10 warning" title="this feature is experimental and might not work in your browser">width: available</p>
-      <p class="w11 warning" title="this feature is experimental and might not work in your browser">width: fit-content</p>
+      <p
+        class="w8 warning"
+        title="this feature is experimental and might not work in your browser">
+        width: max-content
+      </p>
+      <p
+        class="w9 warning"
+        title="this feature is experimental and might not work in your browser">
+        width: min-content
+      </p>
+      <p
+        class="w10 warning"
+        title="this feature is experimental and might not work in your browser">
+        width: available
+      </p>
+      <p
+        class="w11 warning"
+        title="this feature is experimental and might not work in your browser">
+        width: fit-content
+      </p>
     </div>
   </div>
 </div>
 ```
 
 ```css hidden
-html,body {
+html,
+body {
   height: 100%;
   box-sizing: border-box;
 }
@@ -70,7 +103,7 @@ html,body {
   width: 100%;
   height: 100%;
   display: flex;
-  background: #EEE;
+  background: #eee;
   font: 1em monospace;
 }
 
@@ -81,9 +114,9 @@ html,body {
 }
 
 .cell {
-  margin: .5em;
-  padding: .5em;
-  background-color: #FFF;
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: #fff;
   overflow: hidden;
   text-align: left;
   font-style: italic;
@@ -92,13 +125,13 @@ html,body {
 p {
   font-size: 1rem;
   font-style: normal;
-  background: #E4F0F5;
-  padding: .5em;
-  margin: .5em;
+  background: #e4f0f5;
+  padding: 0.5em;
+  margin: 0.5em;
 }
 
 .warning {
-  background: #E4E4E4;
+  background: #e4e4e4;
 }
 
 .warning:before {
@@ -106,21 +139,43 @@ p {
 }
 
 /*  values */
-.w1 { width: 150px; }
-.w2 { width: 20em; }
-.w3 { width: 20em content-box; }
-.w4 { width: 20em border-box; }
+.w1 {
+  width: 150px;
+}
+.w2 {
+  width: 20em;
+}
+.w3 {
+  width: 20em content-box;
+}
+.w4 {
+  width: 20em border-box;
+}
 
 /*  value */
-.w5 { width: 75%; }
-.w6 { width: 75% content-box; }
-.w7 { width: 75% border-box; }
+.w5 {
+  width: 75%;
+}
+.w6 {
+  width: 75% content-box;
+}
+.w7 {
+  width: 75% border-box;
+}
 
 /* Keyword values (mostly experimental) */
-.w8 { width: max-content; }
-.w9 { width: min-content; }
-.w10 { width: available; }
-.w11 { width: fit-content; }
+.w8 {
+  width: max-content;
+}
+.w9 {
+  width: min-content;
+}
+.w10 {
+  width: available;
+}
+.w11 {
+  width: fit-content;
+}
 ```
 
 {{EmbedLiveSample("examples", "100%", 660)}}
@@ -178,7 +233,7 @@ p.goldie {
 <p class="goldie">The Mozilla community produces a lot of great software.</p>
 ```
 
-{{EmbedLiveSample('Default_width', '500px', '64px')}}
+{{EmbedLiveSample('預設寬度', '500px', '64px')}}
 
 ### 像素和相對大小
 
@@ -203,7 +258,7 @@ p.goldie {
 <div class="em_length">Width measured in em</div>
 ```
 
-{{EmbedLiveSample('Pixels_and_ems', '500px', '64px')}}
+{{EmbedLiveSample('像素和相對大小', '500px', '64px')}}
 
 ### 百分比
 
@@ -219,15 +274,15 @@ p.goldie {
 <div class="percent">Width in percentage</div>
 ```
 
-{{EmbedLiveSample('Percentage', '500px', '64px')}}
+{{EmbedLiveSample('百分比', '500px', '64px')}}
 
 ### 內容最大值
 
 ```css
 p.maxgreen {
   background: lightgreen;
-  width: intrinsic;           /* Safari/WebKit uses a non-standard name */
-  width: -moz-max-content;    /* Firefox/Gecko */
+  width: intrinsic; /* Safari/WebKit uses a non-standard name */
+  width: -moz-max-content; /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
 }
 ```
@@ -236,14 +291,14 @@ p.maxgreen {
 <p class="maxgreen">The Mozilla community produces a lot of great software.</p>
 ```
 
-{{EmbedLiveSample('max-content_2', '500px', '64px')}}
+{{EmbedLiveSample('內容最大值', '500px', '64px')}}
 
 ### 內容最小值
 
 ```css
 p.minblue {
   background: lightblue;
-  width: -moz-min-content;    /* Firefox */
+  width: -moz-min-content; /* Firefox */
   width: -webkit-min-content; /* Chrome */
 }
 ```
@@ -252,7 +307,7 @@ p.minblue {
 <p class="minblue">The Mozilla community produces a lot of great software.</p>
 ```
 
-{{EmbedLiveSample('min-content_2', '500px', '155px')}}
+{{EmbedLiveSample('內容最小值', '500px', '155px')}}
 
 ## 規範
 
@@ -264,4 +319,4 @@ p.minblue {
 
 ## 參考
 
-- [box model](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}
+- [box model](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}

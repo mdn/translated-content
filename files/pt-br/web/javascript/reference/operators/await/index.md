@@ -1,12 +1,8 @@
 ---
 title: await
 slug: Web/JavaScript/Reference/Operators/await
-tags:
-  - Experimental
-  - JavaScript
-  - Operador
-translation_of: Web/JavaScript/Reference/Operators/await
 ---
+
 {{jsSidebar("Operators")}}
 
 O operador `await` é utilizado para esperar por uma {{jsxref("Promise")}}. Ele pode ser usado apenas dentro de uma {{jsxref("Statements/async_function", "async function")}}.
@@ -34,7 +30,7 @@ Se uma `Promise` é passada para uma expressão `await`, ele espera pela sefinal
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
@@ -64,7 +60,7 @@ Se a `Promise` for rejeitada, o valor rejeitado é invocado em uma Exception.
 async function f3() {
   try {
     var z = await Promise.reject(30);
-  } catch(e) {
+  } catch (e) {
     console.log(e); // 30
   }
 }
@@ -73,8 +69,8 @@ f3();
 
 ## Especificações
 
-| Especificação                                                                                            | Status                       | Comentário                   |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------- |
+| Especificação                                                                 | Status               | Comentário                   |
+| ----------------------------------------------------------------------------- | -------------------- | ---------------------------- |
 | {{SpecName('ESDraft', '#sec-async-function-definitions', 'async functions')}} | {{Spec2('ESDraft')}} | Definição inicial no ES2017. |
 
 ## Compatibilidade com navegadores

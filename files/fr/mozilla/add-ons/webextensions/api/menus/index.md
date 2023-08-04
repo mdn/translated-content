@@ -1,17 +1,6 @@
 ---
 title: menus
 slug: Mozilla/Add-ons/WebExtensions/API/menus
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - contextMenus
-  - menus
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus
 ---
 
 {{AddonSidebar}}
@@ -22,7 +11,7 @@ Cette API est modélisée dans l'API ["contextMenus"](https://developer.chrome.c
 
 Avant Firefox 55, cette API s'appelait à l'origine `contextMenus`, et ce nom a été retenu comme alias. Vous pouvez donc utiliser `contextMenus` pour écrire du code qui fonctionne dans Firefox et dans d'autres navigateurs.
 
-Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) des  `menus.` vous pouvez également utiliser l'alias `contextMenus` à la place des `menus`, mais si vous le faites, vous devez accéder aux API sous le nom `browser.contextMenus` à la place.
+Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) des `menus.` vous pouvez également utiliser l'alias `contextMenus` à la place des `menus`, mais si vous le faites, vous devez accéder aux API sous le nom `browser.contextMenus` à la place.
 
 Excepté que [`menus.getTargetElement()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement), cette API ne peut pas être utilisée à partir de scripts de contenu.
 
@@ -30,7 +19,7 @@ Excepté que [`menus.getTargetElement()`](/fr/docs/Mozilla/Add-ons/WebExtensions
 
 Pour créer un élément de menu, appelez la méthode {{WebExtAPIRef("menus.create()")}}. Vous transmettez à cette méthode un objet contenant des options pour l'élément, y compris l'ID d'élément, le type d'élément et les contextes dans lesquels il doit être affiché.
 
-Écoutez les clics sur votre élément de menu en ajoutant un écouteur à l'événement {{WebExtAPIRef("menus.onClicked")}}. Cet écouteur recevra un objet  {{WebExtAPIRef("menus.OnClickData")}} contenant les détails de l'événement.
+Écoutez les clics sur votre élément de menu en ajoutant un écouteur à l'événement {{WebExtAPIRef("menus.onClicked")}}. Cet écouteur recevra un objet {{WebExtAPIRef("menus.OnClickData")}} contenant les détails de l'événement.
 
 Vous pouvez créer quatre types différents d'élément de menu, en fonction de la valeur de la propriété `type` que vous fournissez dans les options de `create()`:
 
@@ -60,57 +49,75 @@ Voici un menu contextuel contenant 4 éléments: un élément normal, deux élé
 ![](menus-4.png)Vous pouvez créer un sous-menu comme celui-ci en utilisant du code comme :
 
 ```js
-browser.menus.create({
-  id: "remove-me",
-  title: browser.i18n.getMessage("menuItemRemoveMe"),
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "remove-me",
+    title: browser.i18n.getMessage("menuItemRemoveMe"),
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "separator-1",
-  type: "separator",
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "separator-1",
+    type: "separator",
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "greenify",
-  type: "radio",
-  title: browser.i18n.getMessage("menuItemGreenify"),
-  contexts: ["all"],
-  checked: true,
-  icons: {
-    "16": "icons/paint-green-16.png",
-    "32": "icons/paint-green-32.png"
-  }
-}, onCreated);
+browser.menus.create(
+  {
+    id: "greenify",
+    type: "radio",
+    title: browser.i18n.getMessage("menuItemGreenify"),
+    contexts: ["all"],
+    checked: true,
+    icons: {
+      16: "icons/paint-green-16.png",
+      32: "icons/paint-green-32.png",
+    },
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "bluify",
-  type: "radio",
-  title: browser.i18n.getMessage("menuItemBluify"),
-  contexts: ["all"],
-  checked: false,
-  icons: {
-    "16": "icons/paint-blue-16.png",
-    "32": "icons/paint-blue-32.png"
-  }
-}, onCreated);
+browser.menus.create(
+  {
+    id: "bluify",
+    type: "radio",
+    title: browser.i18n.getMessage("menuItemBluify"),
+    contexts: ["all"],
+    checked: false,
+    icons: {
+      16: "icons/paint-blue-16.png",
+      32: "icons/paint-blue-32.png",
+    },
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "separator-2",
-  type: "separator",
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "separator-2",
+    type: "separator",
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
 var checkedState = true;
 
-browser.menus.create({
-  id: "check-uncheck",
-  type: "checkbox",
-  title: browser.i18n.getMessage("menuItemUncheckMe"),
-  contexts: ["all"],
-  checked: checkedState
-}, onCreated);
+browser.menus.create(
+  {
+    id: "check-uncheck",
+    type: "checkbox",
+    title: browser.i18n.getMessage("menuItemUncheckMe"),
+    contexts: ["all"],
+    checked: checkedState,
+  },
+  onCreated,
+);
 ```
 
 ## Types
@@ -153,9 +160,9 @@ browser.menus.create({
 - {{WebExtAPIRef("menus.onShown")}}
   - : Lancé lorsque le navigateur affiche un menu.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{ Compat("webextensions.api.menus", 1, "true") }}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

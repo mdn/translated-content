@@ -30,8 +30,8 @@ for (variable of iterable) {
 let iterable = [10, 20, 30];
 
 for (let value of iterable) {
-    value += 1;
-    console.log(value);
+  value += 1;
+  console.log(value);
 }
 // 11
 // 21
@@ -79,7 +79,11 @@ for (let value of iterable) {
 ### 迭代{{jsxref("Map")}}
 
 ```js
-let iterable = new Map([["a", 1], ["b", 2], ["c", 3]]);
+let iterable = new Map([
+  ["a", 1],
+  ["b", 2],
+  ["c", 3],
+]);
 
 for (let entry of iterable) {
   console.log(entry);
@@ -112,7 +116,7 @@ for (let value of iterable) {
 ### 迭代 {{jsxref("arguments")}} 对象
 
 ```js
-(function() {
+(function () {
   for (let argument of arguments) {
     console.log(argument);
   }
@@ -141,11 +145,11 @@ for (let paragraph of articleParagraphs) {
 对于`for...of`的循环，可以由 `break`, `throw` 或 `return` 终止。在这些情况下，迭代器关闭。
 
 ```js
-function* foo(){
+function* foo() {
   yield 1;
   yield 2;
   yield 3;
-};
+}
 
 for (let o of foo()) {
   console.log(o);
@@ -158,19 +162,20 @@ for (let o of foo()) {
 你还可以迭代一个[生成器](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)：
 
 ```js
-function* fibonacci() { // 一个生成器函数
-    let [prev, curr] = [0, 1];
-    for (;;) { // while (true) {
-        [prev, curr] = [curr, prev + curr];
-        yield curr;
-    }
+function* fibonacci() {
+  // 一个生成器函数
+  let [prev, curr] = [0, 1];
+  for (;;) {
+    // while (true) {
+    [prev, curr] = [curr, prev + curr];
+    yield curr;
+  }
 }
 
 for (let n of fibonacci()) {
-     console.log(n);
-    // 当 n 大于 1000 时跳出循环
-    if (n >= 1000)
-        break;
+  console.log(n);
+  // 当 n 大于 1000 时跳出循环
+  if (n >= 1000) break;
 }
 ```
 
@@ -179,19 +184,19 @@ for (let n of fibonacci()) {
 生成器不应该重用，即使`for...of`循环的提前终止，例如通过{{jsxref("Statements/break", "break")}}关键字。在退出循环后，生成器关闭，并尝试再次迭代，不会产生任何进一步的结果。
 
 ```js
-var gen = (function *(){
-    yield 1;
-    yield 2;
-    yield 3;
+var gen = (function* () {
+  yield 1;
+  yield 2;
+  yield 3;
 })();
 for (let o of gen) {
-    console.log(o);
-    break;//关闭生成器
+  console.log(o);
+  break; //关闭生成器
 }
 
 //生成器不应该重用，以下没有意义！
 for (let o of gen) {
-    console.log(o);
+  console.log(o);
 }
 ```
 
@@ -209,9 +214,9 @@ var iterable = {
           return { value: this.i++, done: false };
         }
         return { value: undefined, done: true };
-      }
+      },
     };
-  }
+  },
 };
 
 for (var value of iterable) {
@@ -228,16 +233,16 @@ for (var value of iterable) {
 
 {{jsxref("Statements/for...in", "for...in")}} 语句以任意顺序迭代对象的[可枚举属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
 
-`for...of` 语句遍历[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables)定义要迭代的数据。
+`for...of` 语句遍历[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#可迭代对象)定义要迭代的数据。
 
 以下示例显示了与{{jsxref("Array")}}一起使用时，`for...of`循环和`for...in`循环之间的区别。
 
 ```js
-Object.prototype.objCustom = function() {};
-Array.prototype.arrCustom = function() {};
+Object.prototype.objCustom = function () {};
+Array.prototype.arrCustom = function () {};
 
 let iterable = [3, 5, 7];
-iterable.foo = 'hello';
+iterable.foo = "hello";
 
 for (let i in iterable) {
   console.log(i); // logs 0, 1, 2, "foo", "arrCustom", "objCustom"
@@ -255,11 +260,11 @@ for (let i of iterable) {
 ```
 
 ```js
-Object.prototype.objCustom = function() {};
-Array.prototype.arrCustom = function() {};
+Object.prototype.objCustom = function () {};
+Array.prototype.arrCustom = function () {};
 
 let iterable = [3, 5, 7];
-iterable.foo = 'hello';
+iterable.foo = "hello";
 ```
 
 每个对象将继承`objCustom`属性，并且作为{{jsxref("Array")}}的每个对象将继承`arrCustom`属性，因为将这些属性添加到{{jsxref("Object.prototype")}}和{{jsxref("Array.prototype")}}。由于[继承和原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)，对象`iterable`继承属性`objCustom`和`arrCustom`。
@@ -288,7 +293,7 @@ for (let i of iterable) {
 }
 ```
 
-该循环迭代并记录`iterable`作为[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables)定义的迭代值，这些是数组元素 `3`, `5`, `7`，而不是任何对象的**属性**。
+该循环迭代并记录`iterable`作为[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#可迭代对象)定义的迭代值，这些是数组元素 `3`, `5`, `7`，而不是任何对象的**属性**。
 
 ## 规范
 

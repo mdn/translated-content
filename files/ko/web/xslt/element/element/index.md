@@ -1,10 +1,8 @@
 ---
 title: element
 slug: Web/XSLT/Element/element
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/element
 ---
+
 {{ XsltRef() }}
 
 `<xsl:element>` 요소는 출력 문서에 요소를 만듭니다.
@@ -13,7 +11,7 @@ translation_of: Web/XSLT/Element/element
 
 ```
 <xsl:element name=NAME namespace=URI use-attribute-sets=LIST-OF-NAMES >
-	TEMPLATE
+  TEMPLATE
 </xsl:template>
 ```
 

@@ -11,7 +11,7 @@ slug: Learn/JavaScript/Building_blocks
 
 開始這個模組之前，你應該已經熟悉 [HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML) 和 [CSS](/zh-TW/docs/Learn/CSS/Introduction_to_CSS) 的基礎知識了，你也應該閱讀完前一個模組 - [JavaScript 入門](/zh-TW/docs/Learn/JavaScript/First_steps) - 的內容了。
 
-> **備註：** 假如你正使用平板、電腦或任何無法讓你可以建立檔案的裝置時，你可以試著透過線上程式碼工具 (像是 [JSBin](http://jsbin.com/) 或 [Thimble](https://thimble.mozilla.org/)) 測試文章的測試碼。
+> **備註：** 假如你正使用平板、電腦或任何無法讓你可以建立檔案的裝置時，你可以試著透過線上程式碼工具（像是 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/)）測試文章的測試碼。
 
 ## 指南
 

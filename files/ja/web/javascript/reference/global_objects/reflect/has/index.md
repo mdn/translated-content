@@ -65,9 +65,7 @@ Reflect.has(c, 'foo') // true
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-reflect.has', 'Reflect.has')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

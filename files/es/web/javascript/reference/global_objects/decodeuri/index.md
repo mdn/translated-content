@@ -1,12 +1,8 @@
 ---
 title: decodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURI
-tags:
-  - JavaScript
-  - URI
-translation_of: Web/JavaScript/Reference/Global_Objects/decodeURI
-original_slug: Web/JavaScript/Referencia/Objetos_globales/decodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 ## Sumario

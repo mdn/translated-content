@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.stroke()
 slug: Web/API/CanvasRenderingContext2D/stroke
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Referencia
-  - metodo
-translation_of: Web/API/CanvasRenderingContext2D/stroke
 ---
+
 {{APIRef}}
 
 O método **`CanvasRenderingContext2D.stroke()`** da API Canvas 2D contorna um dado _path_ ou o _path_ atual com o estilo atual de traçado usando uma regra de controle diferente de zero.
@@ -40,8 +34,8 @@ Isto é só um simples trecho de código que usa o método `stroke` para contorn
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 ctx.rect(10, 10, 100, 100);
 ctx.stroke();
 ```
@@ -56,7 +50,8 @@ Edite o código abaixo e veja as alterações instantâneas no canvas:
 </div>
 <textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.stroke();</textarea>
+ctx.stroke();</textarea
+>
 ```
 
 ```js hidden
@@ -72,14 +67,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -89,13 +84,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Especificações
 
-| Especificação                                                                                                                            | Estado                           | Comentário |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-stroke", "CanvasRenderingContext2D.stroke")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CanvasRenderingContext2D.stroke")}}
+{{Compat}}
 
 ## Veja também
 

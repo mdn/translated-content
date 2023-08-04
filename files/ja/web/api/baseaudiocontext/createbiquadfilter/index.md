@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createBiquadFilter()
 slug: Web/API/BaseAudioContext/createBiquadFilter
-original_slug: Web/API/AudioContext/createBiquadFilter
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -65,4 +64,4 @@ biquadFilter.gain.setValueAtTime(25, audioCtx.currentTime);
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

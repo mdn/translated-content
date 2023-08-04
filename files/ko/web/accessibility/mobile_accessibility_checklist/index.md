@@ -1,8 +1,8 @@
 ---
 title: 모바일 접근성 점검항목
 slug: Web/Accessibility/Mobile_accessibility_checklist
-translation_of: Web/Accessibility/Mobile_accessibility_checklist
 ---
+
 이 문서는 모바일 앱 개발자를 위한 접근성 요구 사항에 대한 간결한 체크리스트를 제공한다. 더 많은 패턴이 발생할수록 지속적으로 진화하려는 의도다.
 
 ## 색
@@ -58,9 +58,9 @@ translation_of: Web/Accessibility/Mobile_accessibility_checklist
 
   ```html
   <h1>Top level heading</h1>
-    <h2>Secondary heading</h2>
-    <h2>Another secondary heading</h2>
-      <h3>Low level heading</h3>
+  <h2>Secondary heading</h2>
+  <h2>Another secondary heading</h2>
+  <h3>Low level heading</h3>
   ```
 
 - [ARIA Landmark Roles](http://www.w3.org/TR/wai-aria/roles#landmark_roles_header) **SHOULD** be used to describe an app or document structure, such as `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.

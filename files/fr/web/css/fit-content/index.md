@@ -1,18 +1,11 @@
 ---
 title: fit-content()
 slug: Web/CSS/fit-content
-tags:
-  - CSS
-  - Experimental
-  - Fonction
-  - Reference
-  - Web
-translation_of: Web/CSS/fit-content
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La fonction CSS **`fit-content()`** permet d'obtenir une dimension restreinte à un intervalle donnée (en utilisant la formule  `min(taille maximale, max(taille minimale, argument))`.
+La fonction CSS **`fit-content()`** permet d'obtenir une dimension restreinte à un intervalle donnée (en utilisant la formule `min(taille maximale, max(taille minimale, argument))`.
 
 ```css
 /* Valeurs de type <length> */
@@ -70,8 +63,8 @@ Elle peut également être utilisée pour définir la taille d'une boîte avec {
 <div id="container">
   <div>Item as wide as the content.</div>
   <div>
-    Item with more text in it. Because the contents of it are
-    wider than the maximum width, it is clamped at 300 pixels.
+    Item with more text in it. Because the contents of it are wider than the
+    maximum width, it is clamped at 300 pixels.
   </div>
   <div>Flexible item</div>
 </div>

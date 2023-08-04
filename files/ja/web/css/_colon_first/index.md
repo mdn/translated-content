@@ -1,5 +1,5 @@
 ---
-title: ':first'
+title: ":first"
 slug: Web/CSS/:first
 ---
 
@@ -19,7 +19,9 @@ slug: Web/CSS/:first
 
 ## 構文
 
-{{csssyntax}}
+```
+:first
+```
 
 <h2 id="Examples">例</h2>
 

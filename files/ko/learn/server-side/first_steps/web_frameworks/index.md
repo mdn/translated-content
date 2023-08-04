@@ -2,6 +2,7 @@
 title: Server-side web frameworks
 slug: Learn/Server-side/First_steps/Web_frameworks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
 
 이전 기사에서는 웹 클라이언트와 서버 간의 통신 모습, HTTP 요청 및 응답의 성격, 서버 측 웹 애플리케이션이 웹 브라우저의 요청에 응답하기 위해 수행해야하는 작업에 대해 설명했습니다. 이러한 지식을 바탕으로, 지금 시간에는 웹 프레임 워크가 어떻게 그러한 작업을 간단히 만드는지 탐색하고, 당신의 첫 서버측 애플리케이션을 위한 프레임 워크를 어떻게 선택하는지 의견을 드리겠습니다.
@@ -120,7 +121,7 @@ class Team(models.Model):
 
 Django 모델은 데이터베이스 검색을 위한 간단한 쿼리를 제공 합니다. 다른 기준을 사용하여 한 번에 여러 필드와 일치시킬 수 있습니다. (예 : 대소 문자를 구분하지 않음,보다 큼, 등), 그리고 복잡한 명령문을 지원 할 수 있습니다 (예를 들어 당신이 "Fr"로 시작하거나 "al"로 끝나는 특별한 U11팀을 찾을 수 있습니다).
 
-두번째 코드 스니펫은 U09의 모든 팀을 보여주는 view function(요청 핸들러)을 보겠습니다. 이 경우 우리는 `team_level` 필드의 텍스트가 정확히 'U09'인 모든 레코드를 필터링하도록 지정합니다. ( 이 기준이 필드 이름과 일치 유형이 두 개의 밑줄로 구분 된 인수로 `filter()` 함수에 전달되는 방법을 아래에 기록하십시오. team_level\_\_exact ).
+두번째 코드 스니펫은 U09의 모든 팀을 보여주는 view function(요청 핸들러)을 보겠습니다. 이 경우 우리는 **`team_level`** 필드의 텍스트가 정확히 'U09'인 모든 레코드를 필터링하도록 지정합니다. ( 이 기준이 필드 이름과 일치 유형이 두 개의 밑줄로 구분 된 인수로 `filter()` 함수에 전달되는 방법을 아래에 기록하십시오. **`team_level__exact`** ).
 
 ```python
 #best/views.py
@@ -146,24 +147,22 @@ def youngest(request):
 
 아래의 코드 스니펫은 그것이 어떻게 작동 하는지 보여줍니다. 이전 섹션에 사용한 "youngest team" 예제를 다시 보겠습니다, HTML 템플릿은 뷰에서 `youngest_teams`이라고 불리는 목록 변수를 전달 받습니다. HTML 골격 내에는 `youngest_teams`이 있는지 체크하는 표현식이 있고, 있다면 `for` 루프를 통해 반복문을 만드는 것을 볼 수 있습니다. 각 반복당 템플릿은 팀리스트에 있는 `team_name`을 출력해줍니다.
 
-```html
-#best/templates/best/index.html
+```django
+<!-- best/templates/best/index.html -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<body>
-
- {% if youngest_teams %}
-    <ul>
-    {% for team in youngest_teams %}
-        <li>\{\{ team.team_name \}\}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No teams are available.</p>
-{% endif %}
-
-</body>
+  <body>
+    {% if youngest_teams %}
+      <ul>
+        {% for team in youngest_teams %}
+          <li>\{\{ team.team_name \}\}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No teams are available.</p>
+    {% endif %}
+  </body>
 </html>
 ```
 
@@ -195,15 +194,15 @@ def youngest(request):
 >
 > 1. (위 링크들의) 메인 사이트를 둘러보기
 >
->     - Documentation 메뉴에 링크들(Documentation, Guide, API Reference, Getting Started등)을 클릭해보십시오.
->     - URL routing, templates, and databases/models등을 설정하는 주제들이 보이십니까?
->     - 해당 문서들은 명료하게 작성이 되어있습니까?
+>    - Documentation 메뉴에 링크들(Documentation, Guide, API Reference, Getting Started등)을 클릭해보십시오.
+>    - URL routing, templates, and databases/models등을 설정하는 주제들이 보이십니까?
+>    - 해당 문서들은 명료하게 작성이 되어있습니까?
 >
 > 2. 각각의 사이트에서 mailing lists(해당 커뮤니티의 링크들을 통해서 접근할 수 있습니다)를 둘러보기
 >
->     - 지난 며칠동안 얼마나 많은 질문들이 올라왔습니까?
->     - 얼마나 많은 답변이 있습니까?
->     - 왕성한 활동을 보이는 커뮤니티를 갖고 있습니까?
+>    - 지난 며칠동안 얼마나 많은 질문들이 올라왔습니까?
+>    - 얼마나 많은 답변이 있습니까?
+>    - 왕성한 활동을 보이는 커뮤니티를 갖고 있습니까?
 
 ## A few good web frameworks?
 
@@ -215,7 +214,7 @@ def youngest(request):
 
 ### Django (Python)
 
-[Django](https://www.djangoproject.com/) is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
+[Django](https://www.djangoproject.com/) is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It's free and open source.
 
 Django follows the "Batteries included" philosophy and provides almost everything most developers might want to do "out of the box". Because everything is included, it all works together, follows consistent design principles, and has extensive and up-to-date documentation. It is also fast, secure, and very scalable. Being based on Python, Django code is easy to read and to maintain.
 
@@ -249,7 +248,7 @@ Rails follows a very similar design philosophy to Django. Like Django it provide
 
 There are of course many differences due to specific design decisions and the nature of the languages.
 
-Rails has been used for high profile sites, including:\*\* \*\*[Basecamp](https://basecamp.com/), [GitHub](https://github.com/), [Shopify](https://shopify.com/), [Airbnb](https://airbnb.com/), [Twitch](https://twitch.tv/), [SoundCloud](https://soundcloud.com/), [Hulu](https://hulu.com/), [Zendesk](https://zendesk.com/), [Square](https://square.com/), [Highrise](https://highrisehq.com/).
+Rails has been used for high profile sites, including: [Basecamp](https://basecamp.com/), [GitHub](https://github.com/), [Shopify](https://shopify.com/), [Airbnb](https://airbnb.com/), [Twitch](https://twitch.tv/), [SoundCloud](https://soundcloud.com/), [Hulu](https://hulu.com/), [Zendesk](https://zendesk.com/), [Square](https://square.com/), [Highrise](https://highrisehq.com/).
 
 ### Laravel (PHP)
 
@@ -296,10 +295,3 @@ This article has shown that web frameworks can make it easier to develop and mai
 For the next article in this module we'll change direction slightly and consider web security.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
-
-## In this module
-
-- [Introduction to the server side](/ko/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/ko/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/ko/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/ko/docs/Learn/Server-side/First_steps/Website_security)

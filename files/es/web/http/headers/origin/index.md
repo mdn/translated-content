@@ -1,21 +1,15 @@
 ---
 title: Origin
 slug: Web/HTTP/Headers/Origin
-tags:
-  - Cabecera
-  - HTTP
-  - Petición del encabezado
-  - Referencia
-  - origin
-translation_of: Web/HTTP/Headers/Origin
 ---
+
 {{HTTPSidebar}}
 
 La cabecera de petición **`Origin`** indica de dónde se origina una búsqueda. No incluye ninguna información de ruta, sino sólo el nombre del servidor. Es enviado con las peticiones {{Glossary("CORS")}}, tanto como con las peticiones {{HTTPMethod("POST")}}. Es similar a la cabecera {{HTTPHeader("Referer")}}, pero, a diferencia de ésta, no revela la ruta completa.
 
-| Tipo de encabezado                                                                               | {{Glossary("Request header", "Petición del encabezado")}} |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name", "Nombe prohibido del encabezado")}} | Sí                                                                           |
+| Tipo de encabezado                                                      | {{Glossary("Request header", "Petición del encabezado")}} |
+| ----------------------------------------------------------------------- | --------------------------------------------------------- |
+| {{Glossary("Forbidden header name", "Nombe prohibido del encabezado")}} | Sí                                                        |
 
 ## Sintaxis
 
@@ -43,14 +37,11 @@ Origin: https://developer.mozilla.org
 
 ## Especificaciones
 
-| Especificación                                                           | Comentario                                               |
-| ------------------------------------------------------------------------ | -------------------------------------------------------- |
-| {{RFC("6454", "Origin", "7")}}                                 | El Concepto de Origen Web                                |
-| {{SpecName('Fetch','#origin-header','Origin header')}} | Suplanta la cabecera `Origin` como se define en RFC6454. |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Origin")}}
+{{Compat}}
 
 ## Ver también
 

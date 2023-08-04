@@ -1,13 +1,8 @@
 ---
 title: flex
 slug: Web/CSS/flex
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/flex
 ---
+
 {{CSSRef}}
 
 **`flex`** [CSS](/ko/docs/CSS) 속성은 하나의 플렉스 아이템이 자신의 컨테이너가 차지하는 공간에 맞추기 위해 크기를 키우거나 줄이는 방법을 설정하는 속성입니다. `flex`는 {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}}, {{cssxref("flex-basis")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다.

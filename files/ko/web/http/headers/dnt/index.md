@@ -1,8 +1,8 @@
 ---
 title: DNT
 slug: Web/HTTP/Headers/DNT
-translation_of: Web/HTTP/Headers/DNT
 ---
+
 {{HTTPSidebar}}
 
 **`DNT`** (**D**o **N**ot **T**rack) 요청 헤더는 사용자의 트래킹 선호 설정을 가르킵니다. 이는 개인화 컨텐츠가 아닌 사생활 정보를 더 It lets users indicate whether would prefer privacy rather than personalized content.

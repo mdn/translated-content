@@ -1,14 +1,8 @@
 ---
 title: ARIA
 slug: Web/Accessibility/ARIA
-tags:
-  - ARIA
-  - Accessibility
-  - HTML
-  - 웹 접근성
-  - 접근성
-translation_of: Web/Accessibility/ARIA
 ---
+
 **접근가능한 리치 인터넷 어플리케이션**(Accessible Rich Internet Applications, **ARIA**)은 장애를 가진 사용자가 웹 콘텐츠와 웹 어플리케이션(특히 JavaScript를 사용하여 개발한 경우)에 더 쉽게 접근할 수 있는 방법을 정의하는 여러 특성을 말합니다.
 
 ARIA는 HTML을 보충해, 일반적으로 보조 기술이 알 수 없는 상호작용 및 흔히 쓰이는 어플리케이션 위젯에 필요한 정보를 제공합니다. 예를 들어 ARIA는 HTML4에서의 탐색 랜드마크, JavaScript 위젯, 폼 힌트 및 오류 메시지, 실시간 콘텐츠 업데이트 등을 접근 가능한 형태로 제공합니다.
@@ -18,19 +12,22 @@ ARIA는 HTML을 보충해, 일반적으로 보조 기술이 알 수 없는 상�
 다음은 진행 표시줄 위젯의 마크업입니다.
 
 ```html
-<div id="percent-loaded" role="progressbar" aria-valuenow="75"
-     aria-valuemin="0" aria-valuemax="100">
-</div>
+<div
+  id="percent-loaded"
+  role="progressbar"
+  aria-valuenow="75"
+  aria-valuemin="0"
+  aria-valuemax="100"></div>
 ```
 
 This progress bar is built using a `<div>`, which has no meaning. Unfortunately, there isn't a more semantic tag available to developers in HTML 4, so we need to include ARIA roles and properties. These are specified by adding attributes to the element. In this example, the `role="progressbar"` attribute informs the browser that this element is actually a JavaScript-powered progress bar widget. The `aria-valuemin` and `aria-valuemax` attributes specify the minimum and maximum values for the progress bar, and the `aria-valuenow` describes the current state of it and therefore must be kept updated with JavaScript. Along with placing them directly in the markup, ARIA attributes can be added to the element and updated dynamically using JavaScript code like this:
 
 ```js
-`// Find the progress bar <div> in the DOM.
- var progressBar = document.getElementById("percent-loaded");`
+// Find the progress bar <div> in the DOM.
+var progressBar = document.getElementById("percent-loaded");
 
-`// Set its ARIA roles and states,
-// so that assistive technologies know what kind of widget it is.`
+// Set its ARIA roles and states,
+// so that assistive technologies know what kind of widget it is.`;
 progressBar.setAttribute("role", "progressbar");
 progressBar.setAttribute("aria-valuemin", 0);
 progressBar.setAttribute("aria-valuemax", 100);
@@ -38,7 +35,7 @@ progressBar.setAttribute("aria-valuemax", 100);
 // Create a function that can be called at any time to update
 // the value of the progress bar.
 function updateProgress(percentComplete) {
-progressBar.setAttribute("aria-valuenow", percentComplete);
+  progressBar.setAttribute("aria-valuenow", percentComplete);
 }
 ```
 

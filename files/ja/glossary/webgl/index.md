@@ -15,7 +15,7 @@ slug: Glossary/WebGL
 
 ### 一般情報
 
-- Wikipedia の {{Interwiki("wikipedia", "WebGL")}}
+- Wikipedia の [WebGL](https://ja.wikipedia.org/wiki/WebGL)
 - [Check for WebGL support](http://get.webgl.org/)
 
 ### 技術記事

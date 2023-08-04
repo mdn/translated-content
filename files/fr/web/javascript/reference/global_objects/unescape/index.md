@@ -1,11 +1,6 @@
 ---
 title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
-tags:
-  - Déprécié
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/unescape
-original_slug: Web/JavaScript/Reference/Objets_globaux/unescape
 ---
 
 {{jsSidebar("Objects")}}
@@ -22,7 +17,7 @@ La fonction dépréciée **`unescape()`** calcule une nouvelle chaîne de caract
 ## Syntaxe
 
 ```js
-unescape(str)
+unescape(str);
 ```
 
 ### Paramètres
@@ -41,23 +36,18 @@ La fonction `unescape` est une propriété de l'_objet global_.
 ## Exemples
 
 ```js
-unescape("abc123");     // "abc123"
-unescape("%E4%F6%FC");  // "äöü"
-unescape("%u0107");     // "ć"
+unescape("abc123"); // "abc123"
+unescape("%E4%F6%FC"); // "äöü"
+unescape("%u0107"); // "ć"
 ```
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires                                                                                                       |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-unescape-string', 'unescape')}} | {{Spec2('ESDraft')}} | Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles d'ECMAScript pour les navigateurs Web. |
-| {{SpecName('ES6', '#sec-unescape-string', 'unescape')}}         | {{Spec2('ES6')}}         | Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles d'ECMAScript pour les navigateurs Web. |
-| {{SpecName('ES5.1', '#sec-B.2.2', 'unescape')}}                 | {{Spec2('ES5.1')}}     | Définie dans l'annexe B (informative) sur la compatibilité.                                                        |
-| {{SpecName('ES1', '#sec-15.1.2.5', 'unescape')}}                 | {{Spec2('ES1')}}         | Définition initiale                                                                                                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.unescape")}}
+{{Compat}}
 
 ## Voir aussi
 

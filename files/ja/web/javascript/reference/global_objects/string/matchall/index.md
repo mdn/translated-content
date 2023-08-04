@@ -114,9 +114,7 @@ array[1];
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.matchall', 'String.prototype.matchAll')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

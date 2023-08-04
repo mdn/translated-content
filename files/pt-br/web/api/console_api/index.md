@@ -1,8 +1,8 @@
 ---
 title: Console API
 slug: Web/API/Console_API
-translation_of: Web/API/Console_API
 ---
+
 {{DefaultAPISidebar("Console API")}}
 
 O Console API traz funcionalidades que permitem desenvolvedores realizar tarefas de debug, como registrar mensagens or os valores das variáveis em sertoes pontos do código, or cronometrar quanto tempo uma operação leva para concluir.
@@ -26,23 +26,21 @@ De longe o método mais comum usado é o {{domxref("console.log")}}, que é usad
 ## Examples
 
 ```js
-let myString = 'Hello world';
+let myString = "Hello world";
 
 // Output "Hello world" to the console
-console.log(myString)
+console.log(myString);
 ```
 
 See the [Console reference page](/pt-BR/docs/Web/API/Console#Usage) for more examples.
 
 ## Specifications
 
-| Specification                        | Status                           | Comment             |
-| ------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('Console API')}} | {{Spec2('Console API')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Console")}}
+{{Compat}}
 
 ## See also
 

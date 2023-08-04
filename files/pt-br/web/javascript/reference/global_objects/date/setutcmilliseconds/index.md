@@ -1,17 +1,8 @@
 ---
 title: Date.prototype.setUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototipo
-  - Prototype
-  - Referencia
-  - data
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
 ---
+
 {{JSRef}}
 
 O método **`setUTCMilliseconds()`** atribui os milissegundos para a data especificada de acordo com o horário universal.
@@ -48,8 +39,8 @@ theBigDay.setUTCMilliseconds(500);
 
 ## Especificações
 
-| Especificação                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                                                          |
+| ------------------------------------------------------------------------------------------------------ |
 | {{SpecName('ESDraft', '#sec-date.prototype.setutcmilliseconds', 'Date.prototype.setUTCMilliseconds')}} |
 
 ## Compatibilidade com navegadores

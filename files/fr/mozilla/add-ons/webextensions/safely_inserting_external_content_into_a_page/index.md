@@ -1,17 +1,6 @@
 ---
 title: Insérer en toute sécurité du contenu externe dans une page
 slug: Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
-tags:
-  - Add-ons
-  - Comment
-  - Débutant
-  - Extensions
-  - How-to
-  - Sécurité
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
-original_slug: >-
-  Mozilla/Add-ons/WebExtensions/inserer_en_toute_securite_du_contenu_externe_dans_une_page
 ---
 
 {{AddonSidebar}}
@@ -46,9 +35,13 @@ Cependant, attention, vous pouvez utiliser des méthodes natives qui ne sont pas
 
 ```js example-bad
 var data = JSON.parse(responseText);
-addonElement.innerHTML = "<div class='" + data.className + "'>" +
-                         "Your favorite color is now " + data.color +
-                         "</div>";
+addonElement.innerHTML =
+  "<div class='" +
+  data.className +
+  "'>" +
+  "Your favorite color is now " +
+  data.color +
+  "</div>";
 ```
 
 Ici, le contenu de `data.className` ou de `data.color` peut contenir du HTML qui peut fermer le tag plus tôt, insérer du contenu HTML arbitraire, puis ouvrir une autre balise.
@@ -90,7 +83,7 @@ var cleanHTML = DOMPurify.sanitize(externalHTML);
 elem.innerHTML = cleanHTML;
 ```
 
-Vous pouvez utiliser n'importe quelle méthode pour ajouter le HTML aseptisé à votre DOM, par exemple la fonction `.html()` de jQuery’s. Souvenez-vous cependant que le drapeau `SAFE_FOR_JQUERY` doit être utilisé dans ce cas :
+Vous pouvez utiliser n'importe quelle méthode pour ajouter le HTML aseptisé à votre DOM, par exemple la fonction `.html()` de jQuery's. Souvenez-vous cependant que le drapeau `SAFE_FOR_JQUERY` doit être utilisé dans ce cas :
 
 ```js
 var elem = $("<div/>");
@@ -102,7 +95,7 @@ elem.html(cleanHTML);
 
 Un autre modèle courant consiste à créer un modèle HTML local pour une page et à utiliser des valeurs distantes pour remplir les blancs. Bien que cette approche soit généralement acceptable, il faut éviter d'utiliser des constructions qui permettraient l'insertion de code exécutable. Cela peut se produire lorsque le moteur de création de modèles utilise des constructions qui insèrent du code HTML brut dans le document. Si la variable utilisée pour insérer le code HTML brut est une source distante, elle est soumise au même risque de sécurité mentionné dans l'introduction.
 
-Par exemple, lorsque vous utilisez des [modèles moustache](https://mustache.github.io/), vous devez utiliser la double moustache, `\{{variable}}`, qui échappe à tout code HTML. L'utilisation de la triple moustache, `\{\{{variable}}}`, doit être évitée car cela injecte une chaîne HTML brute et pourrait ajouter du code exécutable à votre modèle. [Handlebars](http://handlebarsjs.com/) fonctionne d'une manière similaire, avec des variables dans le double guidon, `\{{variable}}`, étant échappé. Considérant que, les variables dans le guidon triple sont laissées crues et doivent être évitées. De même, si vous créez une aide Handlebars à l'aide de  `Handlebars.SafeString` utilisez `Handlebars.escapeExpression()` pour échapper tous les paramètres dynamiques transmis à l'assistant. C'est une exigence car la variable résultante de `Handlebars.SafeString` est considérée comme sûre et elle n'est pas échappée lorsqu'elle est insérée avec des guidons doubles.
+Par exemple, lorsque vous utilisez des [modèles moustache](https://mustache.github.io/), vous devez utiliser la double moustache, `\{{variable}}`, qui échappe à tout code HTML. L'utilisation de la triple moustache, `\{\{{variable}}}`, doit être évitée car cela injecte une chaîne HTML brute et pourrait ajouter du code exécutable à votre modèle. [Handlebars](http://handlebarsjs.com/) fonctionne d'une manière similaire, avec des variables dans le double guidon, `\{{variable}}`, étant échappé. Considérant que, les variables dans le guidon triple sont laissées crues et doivent être évitées. De même, si vous créez une aide Handlebars à l'aide de `Handlebars.SafeString` utilisez `Handlebars.escapeExpression()` pour échapper tous les paramètres dynamiques transmis à l'assistant. C'est une exigence car la variable résultante de `Handlebars.SafeString` est considérée comme sûre et elle n'est pas échappée lorsqu'elle est insérée avec des guidons doubles.
 
 Il existe des concepts similaires dans d'autres systèmes de modélisation qui doivent être abordés avec le même niveau de soin.
 

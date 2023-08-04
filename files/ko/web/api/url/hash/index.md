@@ -1,14 +1,8 @@
 ---
 title: URL.hash
 slug: Web/API/URL/hash
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/hash
 ---
+
 {{ APIRef("URL API") }}
 
 {{domxref("URL")}} 인터페이스의 **`hash`** 속성은 맨 앞의 `'#'`과 함께 URL의 프래그먼트 식별자를 담고 있는 {{domxref("USVString")}}입니다.
@@ -20,8 +14,8 @@ translation_of: Web/API/URL/hash
 ## 구문
 
 ```js
-const string = url.hash
-url.hash = newHash
+const string = url.hash;
+url.hash = newHash;
 ```
 
 ### 값
@@ -31,7 +25,9 @@ url.hash = newHash
 ## 예제
 
 ```js
-const url = new URL('https://developer.mozilla.org/ko/docs/Web/API/URL/href#예제');
+const url = new URL(
+  "https://developer.mozilla.org/ko/docs/Web/API/URL/href#예제",
+);
 console.log(url.hash); // Logs: '#예제'
 ```
 

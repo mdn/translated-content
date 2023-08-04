@@ -1,32 +1,27 @@
 ---
 title: <object>
 slug: Web/HTML/Element/object
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/object
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<object>` 요소**는 이미지나, 중첩된 브라우저 컨텍스트, 플러그인에 의해 다뤄질수 있는 리소스와 같은 외부 리소스를 나타냅니다.
 
 {{EmbedInteractiveExample("pages/tabbed/object.html", "tabbed-standard")}}
 
 - `[컨텐츠 범주](/ko/docs/HTML/Content_categories)` [플로우 컨텐츠](/ko/docs/HTML/Content_categories#Flow_content); [구문 컨텐츠](/ko/docs/HTML/Content_categories#Phrasing_content); [포함된 컨텐츠](/ko/docs/HTML/Content_categories#Embedded_content), palpable 컨텐츠; 만약 요소가 **usemap ** 속성을 가지고 있다면, [대화형 컨텐츠](/ko/docs/HTML/Content_categories#Interactive_content); [listed](/ko/docs/HTML/Content_categories#Form_listed), [submittable](/ko/docs/HTML/Content_categories#Form_submittable) [form-associated](/ko/docs/HTML/Content_categories#Form-associated_content) element.
-- `허용된 컨텐츠`  0개 이상의 {{HTMLElement("param")}} elements, then [Transparent content](/ko/docs/HTML/Content_categories#Transparent_content_models).
-- `태그 생략`  {{no_tag_omission}}
+- `허용된 컨텐츠` 0개 이상의 {{HTMLElement("param")}} elements, then [Transparent content](/ko/docs/HTML/Content_categories#Transparent_content_models).
+- `태그 생략` {{no_tag_omission}}
 - `허용된 부모 요소` [포함된 컨텐츠](/ko/docs/HTML/Content_categories#Embedded_content)를 허용하는 모든 요소
-- `DOM 인터페이스`  {{domxref("HTMLObjectElement")}}
+- `DOM 인터페이스` {{domxref("HTMLObjectElement")}}
 
 ## 속성
 
-이 속성은 [전역 속성](/ko/docs/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 속성은 [전역 속성](/ko/docs/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("archive")}} {{deprecated_inline}}
   - : A space-separated list of URIs for archives of resources for the object.
-- {{htmlattrdef("border")}} {{deprecatedGeneric('inline','HTML4.01')}}; {{deprecated_inline}}
+- {{htmlattrdef("border")}} {{deprecated_inline}}
   - : The width of a border around the control, in pixels.
 - {{htmlattrdef("classid")}} {{deprecated_inline}}
   - : The URI of the object's implementation. It can be used together with, or in place of, the **data** attribute.
@@ -67,7 +62,7 @@ translation_of: Web/HTML/Element/object
 
 <!-- Embed a flash movie with parameters -->
 <object data="move.swf" type="application/x-shockwave-flash">
-  <param name="foo" value="bar">
+  <param name="foo" value="bar" />
 </object>
 ```
 
@@ -77,7 +72,7 @@ translation_of: Web/HTML/Element/object
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.object")}}
+{{Compat}}
 
 ## 같이 보기
 

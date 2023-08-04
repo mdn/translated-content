@@ -1,7 +1,9 @@
 ---
 title: 字符集
-slug: Glossary/character_set
+slug: Glossary/Character_set
 ---
+
+{{GlossarySidebar}}
 
 **字符集**是能讓電腦知道如何解讀{{Glossary("character", "字符")}}的編碼系統。解讀範圍包括字母、數字、標點符號、還有空白等。
 

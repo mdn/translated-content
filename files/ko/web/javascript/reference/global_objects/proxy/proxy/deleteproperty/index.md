@@ -1,14 +1,8 @@
 ---
 title: handler.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.deleteProperty
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 ---
+
 {{JSRef}}
 
 **`handler.deleteProperty()`** 메서드는 {{jsxref("Operators/delete", "delete")}} 연산자에 대한 트랩입니다.

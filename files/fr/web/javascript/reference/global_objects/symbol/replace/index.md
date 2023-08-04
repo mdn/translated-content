@@ -1,14 +1,6 @@
 ---
 title: Symbol.replace
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/replace
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/replace
 ---
 
 {{JSRef}}
@@ -21,14 +13,11 @@ Pour plus d'informations, se référer aux pages sur {{jsxref("RegExp.@@replace"
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.replace', 'Symbol.replace')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.replace', 'Symbol.replace')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.replace")}}
+{{Compat}}
 
 ## Voir aussi
 

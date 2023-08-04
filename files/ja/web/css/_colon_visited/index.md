@@ -1,5 +1,5 @@
 ---
-title: ':visited'
+title: ":visited"
 slug: Web/CSS/:visited
 ---
 
@@ -30,7 +30,9 @@ a:visited {
 
 ## 構文
 
-{{csssyntax}}
+```
+visited
+```
 
 ## 例
 

@@ -58,7 +58,7 @@ referenceStr.localeCompare(compareString, locales, options)
 'a'.localeCompare('c'); // -2 や -1 （あるいはまた別の負の数）
 
 // 単語 "check" はアルファベット順に "against" より後ろなので正の数になります
-'check'.localeCompare('against'); // 2 や -1 （あるいはまた別の正の数）
+'check'.localeCompare('against'); // 2 や 1 （あるいはまた別の正の数）
 
 // "a" と"a" は等しいので自然数 0 になります
 'a'.localeCompare('a'); // 0

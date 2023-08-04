@@ -9,4 +9,4 @@ slug: Glossary/Media
 
 ## 関連情報
 
-- Wikipedia 上の{{interwiki("wikipedia", "メディア")}}
+- Wikipedia 上の[メディア](https://ja.wikipedia.org/wiki/メディア)

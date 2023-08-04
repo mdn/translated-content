@@ -1,18 +1,8 @@
 ---
-title: 'Tutorial Django Parte 2: Creación del esqueleto del sitio web'
+title: "Tutorial Django Parte 2: Creación del esqueleto del sitio web"
 slug: Learn/Server-side/Django/skeleton_website
-tags:
-  - Aprendizaje
-  - Artículo
-  - Codificación de scripts
-  - Guía
-  - Principiante
-  - Tutorial
-  - django
-  - introducción
-  - lado servidor
-translation_of: Learn/Server-side/Django/skeleton_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
 Este segundo artículo de nuestro [Tutorial Django](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website) muestra cómo puedes crear un proyecto de "esqueleto" de sitio web como base, que puedes continuar luego llenado de configuraciones específicas del sitio, urls, modelos, vistas y plantillas.
@@ -27,7 +17,7 @@ Este segundo artículo de nuestro [Tutorial Django](/es/docs/Learn/Server-side/D
           >Poner en marcha un entorno de desarrollo Django</a
         >. Repasar el
         <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website"
+          href="/es/docs/Learn/Server-side/Django/Tutorial_local_library_website"
           >Tutorial Django</a
         >.
       </td>
@@ -53,7 +43,7 @@ El proceso es sencillo:
 1. Usar la herramienta `django-admin` para crear la carpeta del proyecto, los ficheros de plantillas básicos y el script de gestión del proyecto (**manage.py**).
 2. Usar **manage.py** para crear una o más _aplicaciones_.
 
-    > **Nota:** Un sitio web puede consistir de una o más secciones, ej. sitio principal, blog, wiki, area de descargas, etc. Django te recomienda encarecidamente que desarrolles estos componentes como _aplicaciones_ separadas que podrían ser reutilizadas, si se desea, en otros proyectos.
+   > **Nota:** Un sitio web puede consistir de una o más secciones, ej. sitio principal, blog, wiki, area de descargas, etc. Django te recomienda encarecidamente que desarrolles estos componentes como _aplicaciones_ separadas que podrían ser reutilizadas, si se desea, en otros proyectos.
 
 3. Registrar las nuevas aplicaciones para incluirlas en el proyecto.
 4. Conectar el mapeador url de cada aplicación.
@@ -225,7 +215,7 @@ Los mapeos URL se gestionan a través de la variable `urlpatterns`, que es una _
 
 > **Nota:** La ruta en `path()` es una cadena que define un patrón URL para emparejar. Esta cadena podría incluir una variable nombrada (entre paréntesis angulares), ej. `'catalog/<id>/'`. Este patrón emparejará con una URL como **/catalog/**_any_chars_**/** y pasará a la vista _any_chars_ como cadena asociada al parámetro de nombre `id`). Trataremos de los métodos de caminos y rutas de patrones más adelante en los últimos temas.
 
-Añade las lineas de abajo al final del fichero para añadir un nuevo elemento a la lista `urlpatterns`. Este nuevo elemento incluye un `path()` que redirige las peticiones con el patrón `catalog/` al módulo`catalog.urls` (el fichero con el URL relativo **/catalog/urls.py**).
+Añade las lineas de abajo al final del fichero para añadir un nuevo elemento a la lista `urlpatterns`. Este nuevo elemento incluye un `path()` que redirige las peticiones con el patrón `catalog/` al módulo `catalog.urls` (el fichero con el URL relativo **/catalog/urls.py**).
 
 ```python
 # Use include() to add paths from the catalog application
@@ -343,7 +333,7 @@ python3 manage.py runserver
 
 Una vez que el servidor está funcionando puedes ver el sitio navegando a `http://127.0.0.1:8000/` en tu explorador local. Deberías ver una página de error del sitio que tiene el siguiente aspecto:
 
-![Django Debug page for Django 2.0](https://mdn.mozillademos.org/files/15729/django_404_debug_page.png)
+![Django Debug page for Django 2.0](django_404_debug_page.png)
 
 ¡No te preocupes! Esta página de error es lo esperado porque no tenemos ninguna página/url definidas en el módulo `catalogs.urls` (que es al que nos redirigimos cuando obtenemos la URL a la raíz del sitio).
 
@@ -371,21 +361,3 @@ Ahora que el esqueleto del [sitio web de la BibliotecaLocal](/es/docs/Learn/Serv
 - [Aplicaciones](https://docs.djangoproject.com/en/2.0/ref/applications/#configuring-applications) (Django Docs). Contiene información sobre cómo configurar aplicaciones.
 
 {{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
-
-## En este módulo
-
-- [Introducción a Django](/es/docs/Learn/Server-side/Django/Introducción)
-- [Configurando un entorno de desarrollo Django](/es/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial de Django: El sito web de la Biblioteca Local](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial de Django Parte 2: Creando el esqueleto de un sitio web](/es/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial de Django Parte 3: Usando modelos](/es/docs/Learn/Server-side/Django/Models)
-- [Tutorial de Django Parte 4: Sitio de administración de Django](/es/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial de Django Parte 5: Creando nuestra página de inicio](/es/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial de Django Parte 6: Listas genéricas y vistas de detalle](/es/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial de Django Parte 7: Framework de sesiones](/es/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial de Django Parte 8: Autenticación de usuarios y permisos](/es/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial de Django Parte 9: Trabajando con formularios](/es/docs/Learn/Server-side/Django/Forms)
-- [Tutorial de Django Parte 10: Probando una aplicación web de Django](/es/docs/Learn/Server-side/Django/Testing)
-- [Tutorial de Django Parte 11: Poniendo Django en producción](/es/docs/Learn/Server-side/Django/Deployment)
-- [Seguridad en aplicaciones web Django](/es/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/es/docs/Learn/Server-side/Django/django_assessment_blog)

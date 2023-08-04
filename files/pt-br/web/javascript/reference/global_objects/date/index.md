@@ -1,11 +1,8 @@
 ---
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
-tags:
-  - Date
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/Date
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 ## Resumo
@@ -21,51 +18,43 @@ new Date(dataString);
 new Date(ano, mês, dia, hora, minuto, segundo, milissegundo);
 ```
 
-{{ note('Note que objetos JavaScript <code>Date</code> só podem ser instanciados chamando JavaScript <code>Date</code> como um construtor: chamá-lo como uma função regular (ou seja, sem o operador <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a>) irá retornar uma string ao invés de um objeto <code>Date</code>; ao contrário de outros tipos de objetos JavaScript, objetos JavaScript <code>Date</code> não têm sintaxe literal.') }}
+> **Nota:** Note que objetos JavaScript `Date` só podem ser instanciados chamando JavaScript `Date` como um construtor: chamá-lo como uma função regular (ou seja, sem o operador [new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)) irá retornar uma string ao invés de um objeto `Date`; ao contrário de outros tipos de objetos JavaScript, objetos JavaScript `Date` não têm sintaxe literal.
 
 ### Parâmetros para o constructor Date
 
 Nota: Quando Date for chamado como um construtor com mais de um argumento, se os valores forem maiores do que seu limite lógico (e.g. se 13 for fornecido como um valor para mês ou 70 for o valor para minuto), o valor adjacente será ajustado. E.g. new Date(2013, 13, 1) é equivalente a new Date(2014, 1, 1), ambos criam uma data para 2014-02-01 (note que o mês começa em 0). Similarmente para outros valores: new Date(2013, 2, 1, 0, 70) é equivalente a new Date(2013, 2, 1, 1, 10), pois ambos criam uma data para 2013-03-01T01:10:00.
 
 - _`value`_
+
   - : Um valor inteiro representando o número de milisegundos desde 1 de Janeiro de 1970 00:00:00 UTC (Era Unix ou Marco Zero).
 
-<!---->
-
 - _`dataString`_
+
   - : Um valor do tipo String que representa uma data. A string deverá estar uma formato reconhecido pelo método {{jsxref("Date.parse()")}} ([IETF-compliant RFC 2822 timestamps](http://tools.ietf.org/html/rfc2822#page-14) e também uma [versão da ISO8601](http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)).
 
-<!---->
-
 - _`year`_
+
   - : Um valor inteiro que representa o ano. Valores de 0 a 99 correspondem aos anos de 1900 a 1999. Veja o [exemplo abaixo](<#Two digit years>).
 
-<!---->
-
 - _`month`_
+
   - : Um valor inteiro que representa o mês, começando com 0 para Janeiro até 11 para Dezembro.
 
-<!---->
-
 - _`day`_
+
   - : Um valor inteiro que representa o dia do mês.
 
-<!---->
-
 - _`hour`_
+
   - : Um valor inteiro que representa a hora do dia.
 
-<!---->
-
 - _`minute`_
+
   - : Um valor inteiro que representa o segmento de um minuto de tempo.
 
-<!---->
-
 - _`second`_
-  - : Um valor inteiro que representa o segmento de segundo do tempo.
 
-<!---->
+  - : Um valor inteiro que representa o segmento de segundo do tempo.
 
 - _`millisecond`_
   - : Um valor inteiro que representa o segmento de milisegundo do tempo.
@@ -86,8 +75,6 @@ Nota: Quando Date for chamado como um construtor com mais de um argumento, se os
 - Date.length
   - : O valor de `Date.length` é 7. Esse é o número de argumentos manipulados pelo construtor.
 
-{{ jsOverrides("Function", "properties", "prototype") }}
-
 ## Métodos
 
 - {{jsxref("Date.now()")}}
@@ -97,15 +84,13 @@ Nota: Quando Date for chamado como um construtor com mais de um argumento, se os
 - {{jsxref("Date.UTC()")}}
   - : Aceita os mesmos parâmetros como a forma mais longa do construtor (i.e. 2 até 7) e retorna o número de milisegundos desde 1 de Janeiro, 1970, 00:00:00 UTC.
 
-{{ jsOverrides("Function", "Methods", "now", "parse", "UTC") }}
-
 ## Instâncias JavaScript de `Date`
 
 Todas as instâncias `Date` são herdadas de {{jsxref("Date.prototype")}}. O objeto protótipo do construtor `Date` pode ser modificado para afetar todas as instâncias de `Date`.
 
 ### Métodos
 
-{{ page("/en-US/docs/JavaScript/Reference/Global_Objects/Date/prototype", "Methods") }}
+{{ page("/pt-BR/docs/JavaScript/Reference/Global_Objects/Date/prototype", "Methods") }}
 
 ## Exemplos
 
@@ -119,8 +104,8 @@ Os seguintes exemplos mostram várias formas de se criar datas em JavaScript:
 var today = new Date();
 var birthday = new Date("December 17, 1995 03:24:00");
 var birthday = new Date("1995-12-17T03:24:00");
-var birthday = new Date(1995,11,17);
-var birthday = new Date(1995,11,17,3,24,0);
+var birthday = new Date(1995, 11, 17);
+var birthday = new Date(1995, 11, 17, 3, 24, 0);
 ```
 
 ### Anos com dois dígitos mapeados para 1900 - 1999
@@ -131,9 +116,9 @@ Para criar e obter datas entre os anos 0 e 99 os métodos {{jsxref("Date.prototy
 var data = new Date(98, 1); // Dom Fev 01 1998 00:00:00 GMT+0000 (GMT)
 
 // Métodos em desuso, 98 mapeia para 1998 aqui também
-data.setYear(98);           // Dom Fev 01 1998 00:00:00 GMT+0000 (GMT)
+data.setYear(98); // Dom Fev 01 1998 00:00:00 GMT+0000 (GMT)
 
-data.setFullYear(98);       // Sab Fev 01 0098 00:00:00 GMT+0000 (BST)
+data.setFullYear(98); // Sab Fev 01 0098 00:00:00 GMT+0000 (BST)
 ```
 
 ### Calculando o tempo decorrido
@@ -166,10 +151,12 @@ var decorrido = fim.getTime() - inicio.getTime(); // tempo decorrido em milisegu
 // para testar uma função e obter o seu retorno
 function imprimirTempoDecorrido(fTeste) {
   var nHoraInicial = Date.now(),
-      vRetorno = fTeste(),
-      nHoraFinal = Date.now();
+    vRetorno = fTeste(),
+    nHoraFinal = Date.now();
 
-  alert("Tempo decorrido: " + String(nHoraFinal - nHoraInicial) + " milisegundos");
+  alert(
+    "Tempo decorrido: " + String(nHoraFinal - nHoraInicial) + " milisegundos",
+  );
   return vRetorno;
 }
 
@@ -180,12 +167,12 @@ retornoDaSuaFuncao = imprimirTempoDecorrido(suaFuncao);
 
 ## Especificações
 
-| Especificação                                                        | Estado                       | Comentário                                         |
-| -------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| Especificação                                        | Estado               | Comentário                                         |
+| ---------------------------------------------------- | -------------------- | -------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-date-objects', 'Date')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-date-objects', 'Date')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ES5.1', '#sec-15.9', 'Date')}}             | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.1. |
+| {{SpecName('ES6', '#sec-date-objects', 'Date')}}     | {{Spec2('ES6')}}     |                                                    |
+| {{SpecName('ES5.1', '#sec-15.9', 'Date')}}           | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES1')}}                                  | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.1. |
 
 ## Compatibilidade com navegadores
 

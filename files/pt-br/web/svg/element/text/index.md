@@ -1,13 +1,8 @@
 ---
 title: text
 slug: Web/SVG/Element/text
-tags:
-  - Conteúdo Textual
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/text
 ---
+
 {{SVGRef}}
 
 O elemento SVG **`<text>`** desenha um elemento gráfico que consiste em texto. É possível aplicar um gradiente, pattern, clipping path, máscara ou filtro ao `<text>`, como qualquer outro elemento gráfico SVG.
@@ -19,7 +14,7 @@ html,body,svg { height:100% }
 ```
 
 ```html
-<svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 240 80" xmlns="https://www.w3.org/2000/svg">
   <style>
     .small { font: italic 13px sans-serif; }
     .heavy { font: bold 30px sans-serif; }

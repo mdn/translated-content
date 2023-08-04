@@ -1,15 +1,8 @@
 ---
 title: Usar promesas
 slug: Web/JavaScript/Guide/Using_promises
-tags:
-  - Asíncrono
-  - Guía
-  - Intermedio
-  - Promesa
-  - Promesas
-translation_of: Web/JavaScript/Guide/Using_promises
-original_slug: Web/JavaScript/Guide/Usar_promesas
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Una {{jsxref("Promise")}} (promesa en castellano) es un objeto que representa la terminación o el fracaso de una operación asíncrona. Dado que la mayoría de las personas consumen `promises` ya creadas, esta guía explicará primero cómo consumirlas, y luego cómo crearlas.
@@ -91,28 +84,29 @@ hazAlgo(function(resultado) {
 Con las funciones modernas, adjuntamos nuestras functiones callback a las promesas devueltas, formando una cadena de promesa:
 
 ```js
-hazAlgo().then(function(resultado) {
-  return hazAlgoMas(resultado);
-})
-.then(function(nuevoResultado) {
-  return hazLaTerceraCosa(nuevoResultado);
-})
-.then(function(resultadoFinal) {
-  console.log('Obtenido el resultado final: ' + resultadoFinal);
-})
-.catch(falloCallback);
+hazAlgo()
+  .then(function (resultado) {
+    return hazAlgoMas(resultado);
+  })
+  .then(function (nuevoResultado) {
+    return hazLaTerceraCosa(nuevoResultado);
+  })
+  .then(function (resultadoFinal) {
+    console.log("Obtenido el resultado final: " + resultadoFinal);
+  })
+  .catch(falloCallback);
 ```
 
 Los argumentos a `then` son opcionales, y `catch(falloCallBack)` es un atajo para `then(null, falloCallBack)`. Es posible que veas esto expresado con [funciones de flecha](/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions) :
 
 ```js
 hazAlgo()
-.then(resultado => hazAlgoMas(resultado))
-.then(nuevoResultado => hazLaTerceraCosa(nuevoResultado))
-.then(resultadoFinal => {
-  console.log(`Obtenido el resultado final: ${resultadoFinal}`);
-})
-.catch(falloCallback);
+  .then((resultado) => hazAlgoMas(resultado))
+  .then((nuevoResultado) => hazLaTerceraCosa(nuevoResultado))
+  .then((resultadoFinal) => {
+    console.log(`Obtenido el resultado final: ${resultadoFinal}`);
+  })
+  .catch(falloCallback);
 ```
 
 **Importante**: Devuelve siempre resultados, de otra forma las funciones callback no se encadenarán, y los errores no serán capturados.
@@ -123,21 +117,21 @@ Es posible encadenar después de un fallo - por ejemplo: un `catch`- lo que es �
 
 ```js
 new Promise((resolver, rechazar) => {
-    console.log('Inicial');
+  console.log("Inicial");
 
-    resolver();
+  resolver();
 })
-.then(() => {
-    throw new Error('Algo falló');
+  .then(() => {
+    throw new Error("Algo falló");
 
-    console.log('Haz esto');
-})
-.catch(() => {
-    console.log('Haz aquello');
-})
-.then(() => {
-    console.log('Haz esto sin que importe lo que sucedió antes');
-});
+    console.log("Haz esto");
+  })
+  .catch(() => {
+    console.log("Haz aquello");
+  })
+  .then(() => {
+    console.log("Haz esto sin que importe lo que sucedió antes");
+  });
 ```
 
 Esto devolverá el siguiente texto:
@@ -156,10 +150,12 @@ Tal vez recuerdes haber visto `falloCallback` tres veces en la pirámide en un e
 
 ```js
 hazAlgo()
-.then(resultado => hazAlgoMas(valor))
-.then(nuevoResultado => hazLaTerceraCosa(nuevoResultado))
-.then(resultadoFinal => console.log(`Obtenido el resultado final: ${resultadoFinal}`))
-.catch(falloCallback);
+  .then((resultado) => hazAlgoMas(valor))
+  .then((nuevoResultado) => hazLaTerceraCosa(nuevoResultado))
+  .then((resultadoFinal) =>
+    console.log(`Obtenido el resultado final: ${resultadoFinal}`),
+  )
+  .catch(falloCallback);
 ```
 
 Básicamente, una cadena de promesas se detiene si hay una excepción, y recorre la cadena buscando manejadores de captura. Lo siguiente está mucho más adaptado a la forma de trabajo del código síncrono:
@@ -170,7 +166,7 @@ try {
   let nuevoResultado = syncHazAlgoMas(resultado);
   let resultadoFinal = syncHazLaTerceraCosa(nuevoResultado);
   console.log(`Obtenido el resultado final: ${resultadoFinal}`);
-} catch(error) {
+} catch (error) {
   falloCallback(error);
 }
 ```
@@ -184,13 +180,13 @@ async function foo() {
     let nuevoResultado = await hazAlgoMas(resultado);
     let resultadoFinal = await hazLaTerceraCosa(nuevoResultado);
     console.log(`Obtenido el resultado final: ${resultadoFinal}`);
-  } catch(error) {
+  } catch (error) {
     falloCallback(error);
   }
 }
 ```
 
-Se construye sobre `promesas`, por ejemplo, `hazAlgo()` es la misma función que antes. Puedes leer más sobre la sintaxis [aquí](https://developers.google.com/web/fundamentals/getting-started/primers/async-functions).
+Se construye sobre `promesas`, por ejemplo, `hazAlgo()` es la misma función que antes. Puedes leer más sobre la sintaxis [aquí](https://web.dev/async-functions/).
 
 Las `promesas` resuelven un fallo fundamental de la pirámide de funciones callback, capturando todos los errores, incluso excepciones lanzadas y errores de programación. Esto es esencial para la composición funcional de operaciones asíncronas.
 
@@ -213,13 +209,17 @@ Esto hace posible ofrecer el manejo de errores de promesas, y también ayuda a d
 **Un caso de especial utilidad**: al escribir código para {{Glossary("Node.js")}}, es común que los módulos que incluyas en tu proyecto no cuenten con un controlador de evento para promesas rechazadas. Estos se registran en la consola en tiempo de ejecución de Node. Puedes capturarlos para analizarlos y manejarlos en tu código - o solo evitar que abarroten tu salida - agregando un controlador para el evento {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}, como se muestra a continuación:
 
 ```js
-window.addEventListener("unhandledrejection", event => {
-  /* Podrías comenzar agregando código para examinar
+window.addEventListener(
+  "unhandledrejection",
+  (event) => {
+    /* Podrías comenzar agregando código para examinar
       la promesa específica analizando event.promise
       y la razón del rechazo, accediendo a event.reason */
 
-  event.preventDefault();
-}, false);
+    event.preventDefault();
+  },
+  false,
+);
 ```
 
 Llamando al método {{domxref("Event.preventDefault", "preventDefault()")}} del evento, le dices a Javascript en tiempo de ejecución que no realice su acción predeterminada cuando las promesas rechazadas no cuenten con manejadores. En el caso de Node, esa acción predeterminada usualmente registra el error en la consola.
@@ -241,9 +241,11 @@ Combinar callbacks del viejo estilo con promesas es problemático. Si `diAlgo` f
 Afortunadamente podemos envolverlas en una promesa. La mejor práctica es envolver las funciones problemáticas en el nivel más bajo posible, y después nunca llamarlas de nuevo directamente:
 
 ```js
-const espera = ms => new Promise(resuelve => setTimeout(resuelve, ms));
+const espera = (ms) => new Promise((resuelve) => setTimeout(resuelve, ms));
 
-espera(10000).then(() => diAlgo("10 segundos")).catch(falloCallback);
+espera(10000)
+  .then(() => diAlgo("10 segundos"))
+  .catch(falloCallback);
 ```
 
 Básicamente, el constructor de la promesa toma una función ejecutora que nos permite resolver o rechazar manualmente una promesa. Dado que `setTimeout` no falla realmente, descartamos el rechazo en este caso.
@@ -257,15 +259,21 @@ Básicamente, el constructor de la promesa toma una función ejecutora que nos p
 Podemos comenzar operaciones en paralelo y esperar que finalicen todas ellas de la siguiente manera:
 
 ```js
-Promise.all([func1(), func2(), func3()])
-.then(([resultado1, resultado2, resultado3]) => { /* usa resultado1, resultado2 y resultado3 */ });
+Promise.all([func1(), func2(), func3()]).then(
+  ([resultado1, resultado2, resultado3]) => {
+    /* usa resultado1, resultado2 y resultado3 */
+  },
+);
 ```
 
 La composición secuencial es posible usando Javascript inteligente:
 
 ```js
-[func1, func2, func3].reduce((p, f) => p.then(f), Promise.resolve())
-.then(result3 => { /* use result3 */ });
+[func1, func2, func3]
+  .reduce((p, f) => p.then(f), Promise.resolve())
+  .then((result3) => {
+    /* use result3 */
+  });
 ```
 
 Básicamente, reducimos un conjunto de funciones asíncronas a una cadena de promesas equivalente a: `Promise.resolve().then(func1).then(func2).then(func3);`
@@ -273,8 +281,11 @@ Básicamente, reducimos un conjunto de funciones asíncronas a una cadena de pro
 Esto se puede convertir en una función de composición reutilizable, que es común en la programación funcional:
 
 ```js
-const aplicarAsync = (acc,val) => acc.then(val);
-const componerAsync = (...funcs) => x => funcs.reduce(aplicarAsync, Promise.resolve(x));
+const aplicarAsync = (acc, val) => acc.then(val);
+const componerAsync =
+  (...funcs) =>
+  (x) =>
+    funcs.reduce(aplicarAsync, Promise.resolve(x));
 ```
 
 La función `componerAsync()` aceptará cualquier número de funciones como argumentos, y devolverá una nueva función que acepta un valor inicial que es pasado a través del conducto de composición. Esto es beneficioso porque cualquiera o todas las funciones pueden ser o asíncronas o síncronas y se garantiza que serán ejecutadas en el orden correcto:
@@ -305,26 +316,30 @@ console.log(1); // 1, 2
 En lugar de ejecutarse inmediatamente, la función pasada es colocada en una cola de microtareas, lo que significa que se ejecuta más tarde cuando la cola es vaciada al final del actual ciclo de eventos de JavaScript:
 
 ```js
-const espera = ms => new Promise(resuelve => setTimeout(resuelve, ms));
+const espera = (ms) => new Promise((resuelve) => setTimeout(resuelve, ms));
 
 espera().then(() => console.log(4));
-Promise.resuelve().then(() => console.log(2)).then(() => console.log(3));
+Promise.resuelve()
+  .then(() => console.log(2))
+  .then(() => console.log(3));
 console.log(1); // 1, 2, 3, 4
 ```
 
 ## Anidamiento
 
-Las cadenas de promesas simples se mantienen planas sin anidar, ya que el anidamiento puede ser el resultado de una composición descuidada. Vea [errores comunes](/es/docs/Web/JavaScript/Guide/Usar_promesas$edit#Common_mistakes).
+Las cadenas de promesas simples se mantienen planas sin anidar, ya que el anidamiento puede ser el resultado de una composición descuidada. Vea [errores comunes](/es/docs/Web/JavaScript/Guide/Usar_promesas#Common_mistakes).
 
 El anidamiento es una estructura de control para limitar el alcance de las sentencias `catch`. Específicamente, un `catch` anidado sólo captura fallos dentro de su contexto y por debajo, no captura errores que están más arriba en la cadena fuera del alcance del anidamiento. Cuando se usa correctamente, da mayor precisión en la recuperación de errores:
 
 ```js
 hacerAlgoCritico()
-.then(resultado => hacerAlgoOpcional()
-  .then(resultadoOpcional => hacerAlgoSuper(resultadoOpcional))
-  .catch(e => {})) // Ignorar si hacerAlgoOpcional falla.
-.then(() => masAsuntosCriticos())
-.catch(e => console.log("Acción crítica fallida: " + e.message));
+  .then((resultado) =>
+    hacerAlgoOpcional()
+      .then((resultadoOpcional) => hacerAlgoSuper(resultadoOpcional))
+      .catch((e) => {}),
+  ) // Ignorar si hacerAlgoOpcional falla.
+  .then(() => masAsuntosCriticos())
+  .catch((e) => console.log("Acción crítica fallida: " + e.message));
 ```
 
 Nota que aquí los pasos opcionales están anidados, por la precaria colocación de lo externo (y) alrededor de ellos.
@@ -337,10 +352,12 @@ Aquí hay algunos errores comunes que deben tenerse en cuenta al componer cadena
 
 ```js
 // ¡Mal ejemplo!
-hacerlAlgo().then(function(resultado) {
-  hacerOtraCosa(resultado) // Olvida devolver una promesa desde el interior de la cadena + anidamiento innecesario
-  .then(nuevoResultado => hacerUnaTerceraCosa(nuevoResultado));
-}).then(() => hacerUnaCuartaCosa());
+hacerlAlgo()
+  .then(function (resultado) {
+    hacerOtraCosa(resultado) // Olvida devolver una promesa desde el interior de la cadena + anidamiento innecesario
+      .then((nuevoResultado) => hacerUnaTerceraCosa(nuevoResultado));
+  })
+  .then(() => hacerUnaCuartaCosa());
 // Olvida terminar la cadena con un catch!
 ```
 
@@ -354,19 +371,19 @@ Una buena regla es devolver o terminar siempre las cadenas de promesas, y tan pr
 
 ```js
 hacerAlgo()
-.then(function(resultado) {
-  return hacerOtraCosa(resultado);
-})
-.then(nuevoResultado => hacerUnaTerceraCosa(nuevoResultado))
-.then(() => hacerUnaCuartaCosa())
-.catch(error => console.log(error));
+  .then(function (resultado) {
+    return hacerOtraCosa(resultado);
+  })
+  .then((nuevoResultado) => hacerUnaTerceraCosa(nuevoResultado))
+  .then(() => hacerUnaCuartaCosa())
+  .catch((error) => console.log(error));
 ```
 
 Nota que `() => x` es un atajo para `() => { return x; }`.
 
 Ahora tenemos una cadena determinística simple con un manejador de error adecuado.
 
-El uso de [async / await](/es/docs/Web/JavaScript/Reference/Statements/async_function) aborda la mayoría, si no todos estos problemas, la desventaja es que el error más común con esa sintaxis es olvidar la palabra clave [await](/en-US/docs/Web/JavaScript/Reference/Statements/async_function).
+El uso de [async / await](/es/docs/Web/JavaScript/Reference/Statements/async_function) aborda la mayoría, si no todos estos problemas, la desventaja es que el error más común con esa sintaxis es olvidar la palabra clave [await](/es/docs/Web/JavaScript/Reference/Statements/async_function).
 
 ## Vea también
 

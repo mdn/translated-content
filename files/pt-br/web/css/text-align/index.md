@@ -1,13 +1,8 @@
 ---
 title: text-align
 slug: Web/CSS/text-align
-tags:
-  - CSS
-  - Propriedade CSS
-  - Referencia
-  - Texto CSS
-translation_of: Web/CSS/text-align
 ---
+
 {{CSSRef}}
 
 ## Sumário
@@ -140,7 +135,7 @@ text-align: unset;
 
 #### Resultado
 
-{{EmbedLiveSample("Justify","100%","100%")}}
+{{EmbedLiveSample("Justificado","100%","100%")}}
 
 ### Notas
 

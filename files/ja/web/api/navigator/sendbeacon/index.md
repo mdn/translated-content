@@ -67,9 +67,7 @@ window.addEventListener("unload", function logData() {
 
 ## 仕様書
 
-| 仕様書                                                                           | 状態                     | 備考     |
-| -------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('Beacon', '#sendbeacon-method', 'sendBeacon()')}} | {{Spec2('Beacon')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

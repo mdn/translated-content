@@ -1,13 +1,8 @@
 ---
 title: Window.pageYOffset
 slug: Web/API/Window/pageYOffset
-tags:
-  - API
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/pageYOffset
 ---
+
 {{ APIRef("CSSOM View") }}
 
 {{domxref("Window")}} 인터페이스의 **`pageYOffset`** 읽기 전용 속성은 {{domxref("Window.scrollY", "scrollY")}}의 다른 이름으로, 문서가 수직으로 얼마나 스크롤됐는지 픽셀 단위로 반환합니다.
@@ -75,8 +70,7 @@ condimentum sapien non felis cursus blandit. Integer
 euismod lectus a ipsum pellentesque lacinia.</p>
 `;
 
-document.getElementById("frame").contentDocument
-        .body.innerHTML = contentHTML;
+document.getElementById("frame").contentDocument.body.innerHTML = contentHTML;
 ```
 
 In this example, an {{HTMLElement("iframe")}} is created and filled with content, then a specific element within the document is scrolled into view in the frame. Once that's done, the vertical scroll position is checked by looking at the value of `pageYOffset` in the frame's {{domxref("HTMLIFrameElement.contentWindow", "contentWindow")}}.
@@ -86,11 +80,9 @@ In this example, an {{HTMLElement("iframe")}} is created and filled with content
 HTML은 단 두 개의 요소를 가진 짧은 코드입니다. 하나는 스크롤할 문서를 담은 {{HTMLElement("iframe")}}이고, 다른 하나는 스크롤을 끝냈을 때 `pageYOffset`의 값을 기록할 {{HTMLElement("div")}}입니다.
 
 ```html
-<iframe id="frame">
-</iframe>
+<iframe id="frame"> </iframe>
 
-<div id="info">
-</div>
+<div id="info"></div>
 ```
 
 ### JavaScript
@@ -103,8 +95,8 @@ var info = document.getElementById("info");
 var target = frameDoc.getElementById("overview");
 frameDoc.scrollingElement.scrollTop = target.offsetTop;
 
-info.innerText = "스크롤 후 Y축 차이: " +
-                 frame.contentWindow.pageYOffset + " 픽셀";
+info.innerText =
+  "스크롤 후 Y축 차이: " + frame.contentWindow.pageYOffset + " 픽셀";
 ```
 
 The JavaScript code begins by getting into `frame` and `info` the `<iframe>` element that contains our content as well as the `<div>` element into which we'll output the result of our scroll position check. It then gets a reference to the element we want to scroll into view calling {{domxref("Document.getElementById", "getElementById()")}} on the frame's {{domxref("HTMLIFrameElement.contentDocument")}}.
@@ -122,7 +114,10 @@ iframe {
 
 #info {
   margin-top: 20px;
-  font: 16px "Open Sans", "Helvetica", "Arial";
+  font:
+    16px "Open Sans",
+    "Helvetica",
+    "Arial";
 }
 ```
 

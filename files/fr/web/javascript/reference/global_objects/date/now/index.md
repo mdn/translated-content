@@ -1,14 +1,6 @@
 ---
 title: Date.now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/now
 ---
 
 {{JSRef}}
@@ -57,7 +49,6 @@ new Date().getTime();
 // 1519211811670
 // ...
 
-
 // précision temporelle avec `privacy.resistFingerprinting` activé
 new Date().getTime();
 // 1519129853500
@@ -70,15 +61,11 @@ Pour Firefox, il est également possible d'activer `privacy.resistFingerprinting
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires                                          |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.9.4.4', 'Date.now')}} | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.5. |
-| {{SpecName('ES6', '#sec-date.now', 'Date.now')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.now', 'Date.now')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.now")}}
+{{Compat}}
 
 ## Voir aussi
 

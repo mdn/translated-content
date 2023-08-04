@@ -1,7 +1,6 @@
 ---
 title: アイコンの中身が外側にはみ出すなどして形が壊れている
 slug: orphaned/Web/Compatibility_FAQ/Misaligned_Text_Inside_Icon.html
-original_slug: Web/Compatibility_FAQ/Misaligned_Text_Inside_Icon.html
 ---
 
 ## 概要
@@ -10,7 +9,7 @@ original_slug: Web/Compatibility_FAQ/Misaligned_Text_Inside_Icon.html
 
 表示画面
 
-![](https://mdn.mozillademos.org/files/9979/0103.jpg)
+![](0103.jpg)
 
 ## 要因
 

@@ -1,15 +1,6 @@
 ---
 title: Map.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/set
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/set
 ---
 
 {{JSRef}}
@@ -57,21 +48,16 @@ La méthode `set()` renvoie le même objet `Map` et on peut donc la « chaîner 
 ```js
 // On ajoute de nouveaux éléments
 // en enchaînant les appels à set()
-maMap.set('truc', 'toto')
-     .set(1, 'tototruc')
-     .set(2, 'bidule');
+maMap.set("truc", "toto").set(1, "tototruc").set(2, "bidule");
 ```
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-map.prototype.set', 'Map.prototype.set')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype.set', 'Map.prototype.set')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Map.set")}}
+{{Compat}}
 
 ## Voir aussi
 

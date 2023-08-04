@@ -15,13 +15,13 @@ substring-before(haystack ,needle )
 
 ### 引数
 
-- _`haystack`_
+- `haystack`
   - : 評価される文字列。この文字列の一部が返される。
 
 <!---->
 
-- _`needle`_
-  - : 検索する文字列。_`haystack`_ 内で最初に見つかった *`needle`* よりも前にあるすべての文字が返される。
+- `needle`
+  - : 検索する文字列。`haystack` 内で最初に見つかった `needle` よりも前にあるすべての文字が返される。
 
 ### 返値
 

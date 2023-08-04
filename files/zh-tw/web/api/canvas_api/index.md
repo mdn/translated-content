@@ -3,7 +3,7 @@ title: Canvas API
 slug: Web/API/Canvas_API
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 **{{HTMLElement("canvas")}}** 是 [HTML5](/zh-TW/docs/HTML) 的新元素，可透過 Script（通常是 [JavaScript](/zh-TW/docs/JavaScript)）繪製圖形。例如，可以用來繪圖、合成圖照片、建立動畫、甚至處理即時的影片播放。
 
@@ -41,7 +41,8 @@ Edit the code below and see your changes update live in the canvas:
 </div>
 <textarea id="code" class="playable-code">
 ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);</textarea>
+ctx.fillRect(10, 10, 100, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -57,20 +58,20 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ EmbedLiveSample('範例', 700, 360) }}
 
 ## 參考
 
@@ -124,7 +125,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 規範
 
-{{Specifications("html.elements.canvas")}}
+{{Specifications}}
 
 ## 參見
 

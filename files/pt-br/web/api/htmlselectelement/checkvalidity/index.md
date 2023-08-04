@@ -1,8 +1,8 @@
 ---
 title: HTMLSelectElement.checkValidity()
 slug: Web/API/HTMLSelectElement/checkValidity
-translation_of: Web/API/HTMLSelectElement/checkValidity
 ---
+
 {{ APIRef("HTML DOM") }}
 
 O **`HTMLSelectElement.checkValidity()`** método verifica se o elemento possui restrições e se as satisfaz. Se o elemento falhar suas restrições, o navegador dispara um evento {{event("invalid")}} no elemento e, em seguida, retorna `false`.

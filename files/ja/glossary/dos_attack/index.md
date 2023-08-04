@@ -23,6 +23,6 @@ Dos 攻撃は、特定の種類の手法を指すというよりもカテゴリ�
 
 ## 詳細情報
 
-- Wikipedia 上の {{interwiki("wikipedia", "DoS攻撃")}} のページ
+- Wikipedia 上の [DoS攻撃](https://ja.wikipedia.org/wiki/DoS攻撃) のページ
 - [OWASP Denial-of-service](https://www.owasp.org/index.php/Denial_of_Service) のページ
 - {{Glossary("Distributed Denial of Service","DDoS 攻撃")}}

@@ -1,18 +1,11 @@
 ---
 title: element.attributes
 slug: Web/API/Element/attributes
-tags:
-  - API
-  - DOM
-  - Element
-  - Propriété
-  - Reference
-translation_of: Web/API/Element/attributes
 ---
 
 {{ APIRef("DOM") }}
 
-La propriété **`Element.attributes`** renvoie une collection des noeuds d'attribut enregistrés dans le noeud spécifié. Il est une {{domxref("NamedNodeMap")}}, pas un tableau (_Array_), aussi il n'a pas de méthodes  {{jsxref("Array")}} et l'index de noeud {{domxref("Attr")}} peuvent différer entre les navigateurs. Pour être plus précis, les `attributs` sont une paire clé / valeur de chaînes représentant toutes les informations concernant cet attribut.
+La propriété **`Element.attributes`** renvoie une collection des noeuds d'attribut enregistrés dans le noeud spécifié. Il est une {{domxref("NamedNodeMap")}}, pas un tableau (_Array_), aussi il n'a pas de méthodes {{jsxref("Array")}} et l'index de noeud {{domxref("Attr")}} peuvent différer entre les navigateurs. Pour être plus précis, les `attributs` sont une paire clé / valeur de chaînes représentant toutes les informations concernant cet attribut.
 
 ## Syntaxe
 
@@ -36,42 +29,43 @@ L'indexation numérique est utile pour parcourir tous les attributs d'un éléme
 L'exemple suivant parcourt les nœuds d'attribut de l'élément du document avec l'ID "paragraph" et imprime la valeur de chaque attribut.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
+  <head>
+    <title>Exemple d'attributs</title>
+    <script type="text/javascript">
+      function listAttributes() {
+        var paragraph = document.getElementById("paragraph");
+        var result = document.getElementById("result");
 
- <head>
-  <title>Exemple d'attributs</title>
-  <script type="text/javascript">
-   function listAttributes() {
-     var paragraph = document.getElementById("paragraph");
-     var result = document.getElementById("result");
+        // D'abord, vérifier que le "paragraph" a quelques attributs
+        if (paragraph.hasAttributes()) {
+          var attrs = paragraph.attributes;
+          var output = "";
+          for (var i = attrs.length - 1; i >= 0; i--) {
+            output += attrs[i].name + "->" + attrs[i].value;
+          }
+          result.value = output;
+        } else {
+          result.value = "No attributes to show";
+        }
+      }
+    </script>
+  </head>
 
-     // D'abord, vérifier que le "paragraph" a quelques attributs
-     if (paragraph.hasAttributes()) {
-       var attrs = paragraph.attributes;
-       var output = "";
-       for(var i = attrs.length - 1; i >= 0; i--) {
-         output += attrs[i].name + "->" + attrs[i].value;
-       }
-       result.value = output;
-     } else {
-       result.value = "No attributes to show";
-     }
-   }
-  </script>
- </head>
-
-<body>
- <p id="paragraph" >Sample Paragraph</p>
- <form action="">
-  <p>
-    <input type="button" value="Show first attribute name and value"
-      onclick="listAttributes();">
-    <input id="result" type="text" value="">
-  </p>
- </form>
-</body>
+  <body>
+    <p id="paragraph">Sample Paragraph</p>
+    <form action="">
+      <p>
+        <input
+          type="button"
+          value="Show first attribute name and value"
+          onclick="listAttributes();" />
+        <input id="result" type="text" value="" />
+      </p>
+    </form>
+  </body>
 </html>
 ```
 

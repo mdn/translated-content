@@ -9,7 +9,7 @@ slug: Glossary/Codec
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "コーデック")}}
+- Wikipedia 上の [コーデック](https://ja.wikipedia.org/wiki/コーデック)
 
 ### 技術文書
 

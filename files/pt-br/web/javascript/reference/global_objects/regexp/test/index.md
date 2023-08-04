@@ -1,15 +1,8 @@
 ---
 title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
-tags:
-  - Expressão Regular
-  - JavaScript
-  - Prototype
-  - Referencia
-  - RegExp
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 ---
+
 {{JSRef}}O método **test()** executa uma busca por uma correspondência entre uma expressão regular e uma string. Retorna `true` ou `false`.
 
 ## Sintaxe
@@ -21,7 +14,7 @@ regexObj.test(str)
 ### Parâmetros
 
 - `str`
-  - : A string que confrontará a expressão regular.
+  - : A string que confrontará a expressão regular. Todos os valores são convertidos em strings, portanto, omiti-lo ou passar undefined faz com que test() procure a string "undefined".
 
 ### Retorno
 
@@ -76,7 +69,7 @@ function testinput(re, str){
 
 ## Gecko-specific notes
 
-A priori no Grecko 8.0 {{geckoRelease("8.0")}}, `test()` foi implementado incorretamente; quando chamado sem parâmetros, ele encontrária uma correspondência com o valor de entrada anterior (`RegExp.input` property) no lugar de uma correspondência com `"undefined"`. Isso está conrrigido; agora `/undefined/.test()` resultará em `true`, no lugar de um erro.
+A priori no Grecko 8.0, `test()` foi implementado incorretamente; quando chamado sem parâmetros, ele encontrária uma correspondência com o valor de entrada anterior (`RegExp.input` property) no lugar de uma correspondência com `"undefined"`. Isso está conrrigido; agora `/undefined/.test()` resultará em `true`, no lugar de um erro.
 
 ## See also
 

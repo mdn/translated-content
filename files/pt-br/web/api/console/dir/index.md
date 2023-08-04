@@ -1,11 +1,8 @@
 ---
 title: Console.dir()
-slug: Web/API/Console/dir
-tags:
-  - API
-  - console
-translation_of: Web/API/Console/dir
+slug: Web/API/console/dir
 ---
+
 {{ APIRef("Console API") }}{{Non-standard_header}}
 
 ## Resumo

@@ -1,13 +1,6 @@
 ---
 title: class
 slug: Web/JavaScript/Reference/Operators/class
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Opérateur
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/class
-original_slug: Web/JavaScript/Reference/Opérateurs/class
 ---
 
 {{JSSidebar("Operators")}}
@@ -60,26 +53,21 @@ var Toto = class TotoNommé {
   quiEstLa() {
     return TotoNommé.name;
   }
-}
+};
 
-var truc = new Toto;
+var truc = new Toto();
 truc.quiEstLa(); // "TotoNommmé"
-TotoNommé.name;  // ReferenceError
-Toto.name;       // "TotoNommé"
+TotoNommé.name; // ReferenceError
+Toto.name; // "TotoNommé"
 ```
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires        |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ES2016', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2016')}}     |                     |
-| {{SpecName('ES2017', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2017')}}     |                     |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.class")}}
+{{Compat}}
 
 ## Voir aussi
 

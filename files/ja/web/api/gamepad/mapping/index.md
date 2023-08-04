@@ -1,41 +1,35 @@
 ---
-title: Gamepad.mapping
+title: "Gamepad: mapping プロパティ"
+short-title: mapping
 slug: Web/API/Gamepad/mapping
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("Gamepad API")}}
 
-{{domxref("Gamepad")}} インターフェイスの **`Gamepad.mapping`** プロパティは、ブラウザーがデバイスのコントロールを既知のレイアウトに再マップしたかどうかを示す文字列を返します。
+**`Gamepad.mapping`** は {{domxref("Gamepad")}} インターフェイスのプロパティで、ブラウザーが機器のコントロールを既知のレイアウトに再マップしたかどうかを示す文字列を返します。
 
-現在、サポートされている既知のレイアウトは 1 つだけです – [標準のゲームパッド](https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#remapping)。ブラウザーがデバイス上のコントロールをそのレイアウトにマッピングできる場合、 `mapping` プロパティは文字列 `standard` に設定されます。
+現在、サポートされている既知のレイアウトは次の通りです。
 
-## 構文
-
-```
-readonly    attribute DOMString           mapping;
-```
+- "standard": [標準のゲームパッド](https://w3c.github.io/gamepad/#remapping)
+- "xr-standard": [標準 XR ゲームパッド](https://immersive-web.github.io/webxr-gamepads-module/#xr-standard-heading)。 {{domxref("XRInputSource.gamepad")}} も参照してください。
 
 ## 例
 
 ```js
-var gp = navigator.getGamepads()[0];
+let gp = navigator.getGamepads()[0];
 console.log(gp.mapping);
 ```
 
-## 値
-
-{{domxref("string")}} 。
-
 ## 仕様書
 
-| 仕様                                                                                     | ステータス                   | 備考               |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("Gamepad", "#dom-gamepad-mapping", "Gamepad.mapping")}} | {{Spec2("Gamepad")}} | Initial definition |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Gamepad.mapping")}}
+{{Compat}}
 
 ## 関連情報
 
-[Using the Gamepad API](/ja/docs/Web/Guide/API/Gamepad)
+[ゲームパッド API の使用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

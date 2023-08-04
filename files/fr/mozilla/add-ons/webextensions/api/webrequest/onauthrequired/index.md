@@ -1,17 +1,6 @@
 ---
 title: webRequest.onAuthRequired
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired
-tags:
-  - API
-  - Addons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onAuthRequired
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired
 ---
 
 {{AddonSidebar()}}
@@ -25,7 +14,7 @@ L'auditeur peut répondre de l'une des quatre façons suivantes :
 **Annuler la demande** : l'auditeur peut annuler la demande. S'ils le font, l'authentification échouera et l'utilisateur ne sera pas invité à se connecter. Les prolongations peuvent annuler les demandes comme suit :
 
 - dans addListener, passez `"blocking"` dans le paramètre `extraInfoSpec`
-- dans l'écouteur lui-même, retourne un objet avec une propriété `cancel` définie à  `true`
+- dans l'écouteur lui-même, retourne un objet avec une propriété `cancel` définie à `true`
 
 **Fournir des informations d'identification de manière synchrone** : si les informations d'identification sont disponibles de manière synchrone, l'extension peut les fournir de manière synchrone. Si l'extension fait cela, le navigateur tentera de se connecter avec les informations d'identification données.
 L'auditeur peut fournir des informations d'identification de manière synchrone comme suit :
@@ -48,18 +37,18 @@ Si votre poste fournit de mauvaises informations d'identification, l'auditeur se
 
 En général, Firefox ne déclenche pas d'événements `webRequest` pour les requêtes système, telles que les mises à jour de navigateur ou d'extension, ou les requêtes des moteurs de recherche. Pour permettre à l'autorisation de proxy de fonctionner sans problème pour les requêtes système, à partir de la version 57 Firefox implémente une exception à cette règle.
 
-Si une extension a les permissions "webRequest", "webRequestBlocking", "proxy", et "\<all_urls>", alors elle pourra utiliser `onAuthRequired` pour fournir des informations d'identification pour l'autorisation de proxy (mais pas pour l'autorisation web normale).  L'auditeur ne sera pas en mesure d'annuler les demandes du système ou d'apporter d'autres modifications aux demandes du système.
+Si une extension a les permissions "webRequest", "webRequestBlocking", "proxy", et "\<all_urls>", alors elle pourra utiliser `onAuthRequired` pour fournir des informations d'identification pour l'autorisation de proxy (mais pas pour l'autorisation web normale). L'auditeur ne sera pas en mesure d'annuler les demandes du système ou d'apporter d'autres modifications aux demandes du système.
 
 ## Syntaxe
 
 ```js
 browser.webRequest.onAuthRequired.addListener(
-  listener,                    // function
-  filter,                      //  object
-  extraInfoSpec                //  optional array of strings
-)
-browser.webRequest.onAuthRequired.removeListener(listener)
-browser.webRequest.onAuthRequired.hasListener(listener)
+  listener, // function
+  filter, //  object
+  extraInfoSpec, //  optional array of strings
+);
+browser.webRequest.onAuthRequired.removeListener(listener);
+browser.webRequest.onAuthRequired.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -85,7 +74,7 @@ Les événements ont trois fonctions :
     Retourne : {{WebExtAPIRef('webRequest.BlockingResponse')}} ou une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
     - Pour traiter la requête de manière synchrone, inclure`"blocking"` dans le paramètre `extraInfoSpec` et retourner un objet `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
-    - Pour traiter la requête de manière asynchrone, inclure `"blocking"` dans le paramètre `extraInfoSpec` et retourner une `Promise` qui est résolue avec un objet  `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
+    - Pour traiter la requête de manière asynchrone, inclure `"blocking"` dans le paramètre `extraInfoSpec` et retourner une `Promise` qui est résolue avec un objet `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un filtre qui restreint les événements qui seront envoyés à cet auditeur.
@@ -94,7 +83,7 @@ Les événements ont trois fonctions :
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :
 
     - `"blocking"`: faire le blocage de la demande, afin que vous puissiez annuler la demande ou fournir des informations d'authentification.
-    - ` "``responseHeaders``" `: inclure `responseHeaders` dans l'objet `details` transmis à l'auditeur
+    - `"responseHeaders"`: inclure `responseHeaders` dans l'objet `details` transmis à l'auditeur
 
 ## Objets supplémentaires
 
@@ -165,9 +154,9 @@ Les événements ont trois fonctions :
 - `url`
   - : `string`. Cible de la demande.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.onAuthRequired", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -180,10 +169,7 @@ function observe(requestDetails) {
   console.log("observing: " + requestDetails.requestId);
 }
 
-browser.webRequest.onAuthRequired.addListener(
-  observe,
-  {urls: [target]}
-);
+browser.webRequest.onAuthRequired.addListener(observe, { urls: [target] });
 ```
 
 Ce code annule les demandes d'authentification pour l'URL cible :
@@ -193,14 +179,12 @@ var target = "https://intranet.company.com/";
 
 function cancel(requestDetails) {
   console.log("canceling: " + requestDetails.requestId);
-  return {cancel: true};
+  return { cancel: true };
 }
 
-browser.webRequest.onAuthRequired.addListener(
-  cancel,
-  {urls: [target]},
-  ["blocking"]
-);
+browser.webRequest.onAuthRequired.addListener(cancel, { urls: [target] }, [
+  "blocking",
+]);
 ```
 
 Ce code fournit les informations d'identification de manière synchrone. Il doit garder une trace des demandes en suspens, pour s'assurer qu'il n'essaie pas à plusieurs reprises de soumettre de mauvaises références :
@@ -210,8 +194,8 @@ var target = "https://intranet.company.com/";
 
 var myCredentials = {
   username: "me@company.com",
-  password: "zDR$ERHGDFy"
-}
+  password: "zDR$ERHGDFy",
+};
 
 var pendingRequests = [];
 
@@ -230,28 +214,22 @@ function provideCredentialsSync(requestDetails) {
   // assume our credentials were bad, and give up.
   if (pendingRequests.indexOf(requestDetails.requestId) != -1) {
     console.log("bad credentials for: " + requestDetails.requestId);
-    return {cancel:true};
+    return { cancel: true };
   }
   pendingRequests.push(requestDetails.requestId);
   console.log("providing credentials for: " + requestDetails.requestId);
-  return {authCredentials: myCredentials};
+  return { authCredentials: myCredentials };
 }
 
 browser.webRequest.onAuthRequired.addListener(
-    provideCredentialsSync,
-    {urls: [target]},
-    ["blocking"]
-  );
-
-browser.webRequest.onCompleted.addListener(
-  completed,
-  {urls: [target]}
+  provideCredentialsSync,
+  { urls: [target] },
+  ["blocking"],
 );
 
-browser.webRequest.onErrorOccurred.addListener(
-  completed,
-  {urls: [target]}
-);
+browser.webRequest.onCompleted.addListener(completed, { urls: [target] });
+
+browser.webRequest.onErrorOccurred.addListener(completed, { urls: [target] });
 ```
 
 Ce code fournit les informations d'identification de manière asynchrone, en les récupérant à partir du stockage. Il doit également assurer le suivi des demandes en suspens, afin de s'assurer qu'il n'essaie pas à plusieurs reprises de soumettre de mauvaises références :
@@ -278,8 +256,7 @@ function provideCredentialsAsync(requestDetails) {
   // and give up.
   if (pendingRequests.indexOf(requestDetails.requestId) != -1) {
     console.log("bad credentials for: " + requestDetails.requestId);
-    return {cancel: true};
-
+    return { cancel: true };
   } else {
     pendingRequests.push(requestDetails.requestId);
     console.log("providing credentials for: " + requestDetails.requestId);
@@ -290,20 +267,14 @@ function provideCredentialsAsync(requestDetails) {
 }
 
 browser.webRequest.onAuthRequired.addListener(
-    provideCredentialsAsync,
-    {urls: [target]},
-    ["blocking"]
-  );
-
-browser.webRequest.onCompleted.addListener(
-  completed,
-  {urls: [target]}
+  provideCredentialsAsync,
+  { urls: [target] },
+  ["blocking"],
 );
 
-browser.webRequest.onErrorOccurred.addListener(
-  completed,
-  {urls: [target]}
-);
+browser.webRequest.onCompleted.addListener(completed, { urls: [target] });
+
+browser.webRequest.onErrorOccurred.addListener(completed, { urls: [target] });
 ```
 
 {{WebExtExamples}}

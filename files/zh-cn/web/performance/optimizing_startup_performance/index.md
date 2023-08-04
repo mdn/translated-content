@@ -13,7 +13,7 @@ slug: Web/Performance/Optimizing_startup_performance
 
 为什么异步性很重要？除了上面提出的原因，还考虑了无响应页面或用户界面的影响。如果用户错误地启动了应用，将不能取消。如果应用正在浏览器中运行，用户可能会收到一个“应用无响应”或“加载缓慢”的提醒。你应该显示几种界面，比如进度条，这样用户可以在应用启动时知道他们需要等待多长时间。
 
-## 如果有这样的打算...
+## 如果有这样的打算
 
 如果你从头开始你的项目，通常很容易把所有的东西都写成“正确的方式”，使得代码片段具有合适的异步性。所有纯粹在启动时的计算应该在后台线程中执行，同时使主线程事件的运行时间尽可能缩短。应包含进度指示器，以便用户知道发生了什么以及他们将要等待多久。从理论上来说，无论如何，设计新的应用程序并能很好地启动应该很容易。
 
@@ -27,18 +27,19 @@ slug: Web/Performance/Optimizing_startup_performance
 
 关于如何构建你的启动过程，使得其尽可能异步执行，这里有些建议。（不论是新应用还是移植的）：
 
-- 启动时，在需要异步执行的脚本标签上使用 {{ htmlattrxref("defer") }} 或 {{ htmlattrxref("async") }} 属性。这会允许 HTML 解析器更高效地处理文档。 [Async scripts for asm.js](/zh-CN/docs/Games/Techniques/Async_scripts) 中有更多关于这方面的信息。
+- 启动时，在需要异步执行的脚本标签上使用 [`defer`](/zh-CN/docs/Web/HTML/Global_attributes#defer) 或 [`async`](/zh-CN/docs/Web/HTML/Global_attributes#async) 属性。这会允许 HTML 解析器更高效地处理文档。 [Async scripts for asm.js](/zh-CN/docs/Games/Techniques/Async_scripts) 中有更多关于这方面的信息。
 - 如果你需要解码资源文件（比如，解码 JPEG 文件并将其转换为原始纹理数据，以便随后在 WebGL 中使用），最好在 workers 里做这件事。
 - 当处理浏览器支持的数据格式时（例如，解析图像数据），使用设备或浏览器内置的解码器而不是运行你自己的或者使用 or using one from the original codebase。预先提供的那个基本上一定会快得多，并且能够减小你的应用的启动体积。另外，浏览器可以自动并行化这些解码器的工作。
 - 所有能并行的数据处理都应该并行化。不要一团接一团地处理数据，如果可能的话，同时处理它们！
 - 在你启动的 HTML 文件中，不要包含不会在关键路径下出现的脚本或样式表。只在需要时加载他们。
 - 不要强迫 Web 引擎构建不需要的 DOM，一种简单的“hack”的方式是把你的 HTML 留在文档里，但是在外层包裹注释。
 
-  <!-- markdownlint-disable MD031 MD032 -->
   ```html
-  <div id="foo"><!--
-    <div> ...
-  --></div>
+  <div id="foo">
+    <!--
+      <div> ...
+    -->
+  </div>
   ```
 
 - 当文档的一部分需要被渲染时，加载被注释的 HTML

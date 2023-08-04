@@ -1,12 +1,8 @@
 ---
 title: lang
 slug: Web/HTML/Global_attributes/lang
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/lang
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`lang`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소 내의 수정 불가한 텍스트의 언어와, 수정 가능한 텍스트가 사용해야 하는 언어를 정의합니다. 특성의 값은 [Tags for Identifying Languages (BCP47)](https://www.ietf.org/rfc/bcp/bcp47.txt)에 정의된 형식의 "언어 태그" 한 개입니다.
@@ -34,7 +30,7 @@ CSS {{cssxref(":lang")}} 의사 클래스에서는 유효하지 않은 언어의
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.lang")}}
+{{Compat}}
 
 ## 같이 보기
 

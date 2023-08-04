@@ -1,9 +1,11 @@
 ---
 title: MouseEvent.pageX
 slug: Web/API/MouseEvent/pageX
+l10n:
+  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
 ---
 
-{{APIRef("CSSOM View")}}
+{{APIRef("UI Events")}}
 
 **`pageX`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、マウスがクリックされた位置の X（水平）座標を、文書全体の左端からの相対座標で返します。
 これには文書の現在見えていない範囲にあるものも含みます。
@@ -36,15 +38,9 @@ JavaScript では数値型はどちらも `Number` 型で表現されますが�
 
 ```html
 <div class="box">
-  <p>
-    このボックス内でマウスを動かして、座標の変化を確認してください。
-  </p>
-  <p>
-    <code>pageX</code>: <span id="x">n/a</span>
-  </p>
-  <p>
-    <code>pageY</code>: <span id="y">n/a</span>
-  </p>
+  <p>このボックス内でマウスを動かして、座標の変化を確認してください。</p>
+  <p><code>pageX</code>: <span id="x">n/a</span></p>
+  <p><code>pageY</code>: <span id="y">n/a</span></p>
 </div>
 ```
 
@@ -70,9 +66,9 @@ HTML は単純です。マウスイベントを監視するボックスには `"
 #### JavaScript
 
 ```js
-var box = document.querySelector(".box");
-var pageX = document.getElementById("x");
-var pageY = document.getElementById("y");
+const box = document.querySelector(".box");
+const pageX = document.getElementById("x");
+const pageY = document.getElementById("y");
 
 function updateDisplay(event) {
   pageX.innerText = event.pageX;

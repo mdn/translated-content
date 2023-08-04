@@ -1,25 +1,9 @@
 ---
-title: '<abbr> : l''élément d''abréviation'
+title: "<abbr> : l'élément d'abréviation"
 slug: Web/HTML/Element/abbr
-tags:
-  - Acronym
-  - Definitions
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-  - abbr
-  - abbreviation
-  - semantics
-translation_of: Web/HTML/Element/abbr
-browser-compat: html.elements.abbr
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<abbr>`** (**abréviation** en français) représente une abréviation ou un acronyme ; l'attribut facultatif [`title`](/fr/docs/Web/HTML/Global_attributes#attr-title) peut fournir une explication ou une description de l'abréviation. S'il est présent, `title` doit contenir cette description complète et rien d'autre.
 
@@ -125,8 +109,7 @@ On peut baliser une abréviation sans fournir de description ou de définition, 
 
 ```html
 <p>
-  Nous allons voir le <abbr>HTML</abbr> qui sert à construire
-  des pages web.
+  Nous allons voir le <abbr>HTML</abbr> qui sert à construire des pages web.
 </p>
 ```
 
@@ -177,14 +160,17 @@ Il est possible d'utiliser l'élément `<abbr>` avec [`<dfn>`](/fr/docs/Web/HTML
 #### HTML
 
 ```html
-<p><dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr>
-</dfn> est un langage de balise qui permet de créer la structure
-et d'organiser la sémantique d'une page web.</p>
+<p>
+  <dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr> </dfn> est
+  un langage de balise qui permet de créer la structure et d'organiser la
+  sémantique d'une page web.
+</p>
 
-<p>Une <dfn id="spec">spécification</dfn>
-(<abbr title="spécification">spec</abbr>) est un document qui décrit,
-de façon détaillée comme une technologie ou une API fonctionne et comment
-l'utiliser.</p>
+<p>
+  Une <dfn id="spec">spécification</dfn> (<abbr title="spécification">spec</abbr
+  >) est un document qui décrit, de façon détaillée comme une technologie ou une
+  API fonctionne et comment l'utiliser.
+</p>
 ```
 
 #### Résultat
@@ -195,12 +181,18 @@ l'utiliser.</p>
 
 C'est une bonne pratique que d'épeler l'acronyme ou l'abréviation lorsqu'elle est utilisée pour la première fois. Cela permet au lecteur de mieux comprendre le terme, notamment si celui-ci est technique ou appartient à un jargon spécifique.
 
-#### Exemple
+#### Exemples
 
 ```html
-<p>JavaScript Object Notation (<abbr>JSON</abbr>) est un format léger
-  d'échange de données.</p>
+<p>
+  JavaScript Object Notation (<abbr>JSON</abbr>) est un format léger d'échange
+  de données.
+</p>
 ```
+
+##### Résultat
+
+{{EmbedliveSample('')}}
 
 Cela peut servir aux personnes qui découvrent ces concepts pour la première fois ou pour les personnes souffrant de troubles cognitifs.
 

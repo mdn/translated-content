@@ -1,15 +1,8 @@
 ---
 title: MediaStreamTrack.clone()
 slug: Web/API/MediaStreamTrack/clone
-tags:
-  - API
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStreamTrack
-  - Method
-  - Reference
-translation_of: Web/API/MediaStreamTrack/clone
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 {{domxref("MediaStreamTrack")}} 인터페이스의 **`clone()`** 메서드는 `MediaStreamTrack` 객체의 사본을 반환합니다. 사본은 새로운 {{domxref("MediaStreamTrack.id", "id")}}를 제외하면 모든 값이 원본과 동일합니다.
@@ -17,7 +10,7 @@ translation_of: Web/API/MediaStreamTrack/clone
 ## 구문
 
 ```js
-const newTrack = track.clone()
+const newTrack = track.clone();
 ```
 
 ### 반환 값

@@ -1,14 +1,6 @@
 ---
 title: Number.parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Number
-  - Polyfill
-browser-compat: javascript.builtins.Number.parseFloat
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 ---
 {{JSRef}}
 

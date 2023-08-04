@@ -1,22 +1,9 @@
 ---
-title: '<cite> : l''élément de citation'
+title: "<cite> : l'élément de citation"
 slug: Web/HTML/Element/cite
-tags:
-  - Attribution
-  - Citation
-  - Citing References
-  - Citing Works
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Quotations
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/cite
-browser-compat: html.elements.cite
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément **`<cite>`** contient le titre d'une œuvre telle qu'un livre, une chanson, un film, une sculpture… Cet élément doit inclure le titre de l'œuvre. Cette référence peut-être abrégée en accord avec les conventions d'usages pour l'ajout des métadonnées de citations.
 
@@ -132,17 +119,15 @@ Pour inclure une référence à la source du matériel cité qui est contenu dan
 
 En général, les navigateurs donnent un style au contenu d'un élément `<cite>` en italique par défaut. Pour éviter cela, appliquez la propriété CSS [`font-style`](/fr/docs/Web/CSS/font-style) à l'élément `<cite>`.
 
-## Exemple
+## Exemples
 
 ```html
-<p>
-  Plus d'informations sont disponibles dans <cite>[ISO-0000].</cite>
-</p>
+<p>Plus d'informations sont disponibles dans <cite>[ISO-0000].</cite></p>
 ```
 
-Le HTML ci-dessus produit le résultat suivant :
+### Résultat
 
-{{EmbedLiveSample('Exemple', '', 80)}}
+{{EmbedLiveSample('', '', 80)}}
 
 ## Spécifications
 

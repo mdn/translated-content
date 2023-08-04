@@ -1,16 +1,6 @@
 ---
 title: TypedArray.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/findIndex
 ---
 
 {{JSRef}}
@@ -83,14 +73,11 @@ console.log(uint16.findIndex(estPremier)); // 2
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.findindex', '%TypedArray%.prototype.findIndex')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.findindex', '%TypedArray%.prototype.findIndex')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.findIndex")}}
+{{Compat}}
 
 ## Voir aussi
 

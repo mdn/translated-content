@@ -37,9 +37,7 @@ alert(x.toString()) // 'Hello world' を表示します
 
 ## 仕様
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.tostring', 'String.prototype.toString')}} |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

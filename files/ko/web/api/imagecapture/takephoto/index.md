@@ -1,23 +1,16 @@
 ---
 title: ImageCapture.takePhoto()
 slug: Web/API/ImageCapture/takePhoto
-tags:
-  - API
-  - Experimental
-  - ImageCapture
-  - MediaStream Image Capture
-  - Method
-  - Reference
-translation_of: Web/API/ImageCapture/takePhoto
 ---
+
 {{APIRef("MediaStream Image")}}
 
-{{domxref("ImageCapture")}} 인터페이스의** `takePhoto()`** 메서드는 {{domxref("MediaStreamTrack")}}을 제공하는 비디오 캡처 장치를 사용해 단일 노출 촬영을 하고, 그 데이터를 담은 {{domxref("Blob")}}으로 이행하는 {{jsxref("Promise")}}를 반환합니다.
+{{domxref("ImageCapture")}} 인터페이스의 **`takePhoto()`** 메서드는 {{domxref("MediaStreamTrack")}}을 제공하는 비디오 캡처 장치를 사용해 단일 노출 촬영을 하고, 그 데이터를 담은 {{domxref("Blob")}}으로 이행하는 {{jsxref("Promise")}}를 반환합니다.
 
 ## 구문
 
 ```js
-const blobPromise = imageCaptureObj.takePhoto([photoSettings])
+const blobPromise = imageCaptureObj.takePhoto([photoSettings]);
 ```
 
 ### 매개변수
@@ -37,19 +30,22 @@ const blobPromise = imageCaptureObj.takePhoto([photoSettings])
 다음 코드는 [Simple Image Capture 데모](https://simpl.info/imagecapture/)에서 가져온 것으로, `takePhoto()`가 반환한 {{jsxref("Promise")}}의 {{domxref("Blob")}}을 사용해 {{htmlelement("img")}} 요소에 할당하는 방법을 보입니다. 코드를 짧게 유지하기 위해 {{domxref("ImageCapture")}} 객체의 초기화 과정은 생략했습니다.
 
 ```js
-var takePhotoButton = document.querySelector('button#takePhoto');
-var canvas = document.querySelector('canvas');
+var takePhotoButton = document.querySelector("button#takePhoto");
+var canvas = document.querySelector("canvas");
 
 takePhotoButton.onclick = takePhoto;
 
 function takePhoto() {
-  imageCapture.takePhoto().then(function(blob) {
-    console.log('Took photo:', blob);
-    img.classList.remove('hidden');
-    img.src = URL.createObjectURL(blob);
-  }).catch(function(error) {
-    console.log('takePhoto() error: ', error);
-  });
+  imageCapture
+    .takePhoto()
+    .then(function (blob) {
+      console.log("Took photo:", blob);
+      img.classList.remove("hidden");
+      img.src = URL.createObjectURL(blob);
+    })
+    .catch(function (error) {
+      console.log("takePhoto() error: ", error);
+    });
 }
 ```
 

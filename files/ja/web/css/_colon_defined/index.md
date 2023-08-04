@@ -1,5 +1,5 @@
 ---
-title: ':defined'
+title: ":defined"
 slug: Web/CSS/:defined
 ---
 
@@ -21,7 +21,9 @@ simple-custom:defined {
 
 ## 構文
 
-{{csssyntax}}
+```
+:defined
+```
 
 ## 例
 

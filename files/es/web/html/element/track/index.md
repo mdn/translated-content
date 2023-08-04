@@ -1,11 +1,9 @@
 ---
-title: '<track>: El elemento pista de texto incrustado'
+title: "<track>: El elemento pista de texto incrustado"
 slug: Web/HTML/Element/track
-translation_of: Web/HTML/Element/track
-original_slug: Web/HTML/Element/track
-browser-compat: html.elements.track
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El elemento [HTML](/es/docs/Web/HTML) **`<track>`** se utiliza como elemento hijo de los elementos multimedia, {{HTMLElement("audio")}} y {{HTMLElement("video")}}. Le permite especificar pistas de texto cronometradas (o datos basados en el tiempo), por ejemplo, para manejar subtítulos automáticamente. Las pistas están formateadas en [formato WebVTT](/es/docs/Web/API/WebVTT_API) (archivos `.vtt`): _Web Video Text Tracks_ (pistas de texto de video web).
 
@@ -64,9 +62,9 @@ El elemento [HTML](/es/docs/Web/HTML) **`<track>`** se utiliza como elemento hij
 
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("default")}}
+- `default`
   - : Este atributo indica que la pista debe habilitarse a menos que las preferencias del usuario indiquen que otra pista es más apropiada. Esto solo se puede usar en un elemento `track` por elemento multimedia.
-- {{htmlattrdef("kind")}}
+- `kind`
 
   - : Cómo debe usarse la pista de texto. Si se omite, el tipo predeterminado es `subtitles`. Si el atributo contiene un valor no válido, utilizará `metadata` (las versiones de Chrome anteriores a la 52 trataron un valor no válido como `subtitles`). Se permiten las siguientes palabras clave:
 
@@ -94,11 +92,11 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
       - Pistas utilizadas por los _scripts_. No visible para el usuario.
 
-- {{htmlattrdef("label")}}
+- `label`
   - : Un título legible por el usuario de la pista de texto que utiliza el navegador cuando enumera las pistas de texto disponibles.
-- {{htmlattrdef("src")}}
+- `src`
   - : Dirección de la pista (archivo `.vtt`). Debe ser una URL válida. Este atributo debe especificarse y su valor de URL debe tener el mismo origen que el documento, a menos que el elemento principal {{HTMLElement("audio")}} o {{HTMLElement("video")}} del elemento `track` tenga un atributo de [origen cruzado](/es/docs/Web/HTML/Attributes/crossorigin).
-- {{htmlattrdef("srclang")}}
+- `srclang`
   - : Idioma del texto de la pista. Debe ser una etiqueta de idioma [BCP 47](https://r12a.github.io/app-subtags/) válida. Si el atributo `kind` se establece en `subtitles`, se debe definir `srclang`.
 
 ## Notas de uso
@@ -118,7 +116,7 @@ Si la pista _está_ asociada con un elemento de medios, usando el elemento {{HTM
 ```js
 let textTrackElem = document.getElementById("texttrack");
 
-textTrackElem.addEventListener("cuechange", event => {
+textTrackElem.addEventListener("cuechange", (event) => {
   let cues = event.target.track.activeCues;
 });
 ```
@@ -127,24 +125,20 @@ textTrackElem.addEventListener("cuechange", event => {
 
 ```html
 <video controls poster="/images/sample.gif">
-   <source src="sample.mp4" type="video/mp4">
-   <source src="sample.ogv" type="video/ogv">
-   <track kind="captions" src="sampleCaptions.vtt" srclang="en">
-   <track kind="descriptions"
-     src="sampleDescriptions.vtt" srclang="en">
-   <track kind="chapters" src="sampleChapters.vtt" srclang="en">
-   <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de">
-   <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en">
-   <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja">
-   <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz">
-   <track kind="metadata" src="keyStage1.vtt" srclang="en"
-     label="Key Stage 1">
-   <track kind="metadata" src="keyStage2.vtt" srclang="en"
-     label="Key Stage 2">
-   <track kind="metadata" src="keyStage3.vtt" srclang="en"
-     label="Key Stage 3">
-   <!-- Fallback -->
-   ...
+  <source src="sample.mp4" type="video/mp4" />
+  <source src="sample.ogv" type="video/ogv" />
+  <track kind="captions" src="sampleCaptions.vtt" srclang="en" />
+  <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en" />
+  <track kind="chapters" src="sampleChapters.vtt" srclang="en" />
+  <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de" />
+  <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en" />
+  <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja" />
+  <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz" />
+  <track kind="metadata" src="keyStage1.vtt" srclang="en" label="Key Stage 1" />
+  <track kind="metadata" src="keyStage2.vtt" srclang="en" label="Key Stage 2" />
+  <track kind="metadata" src="keyStage3.vtt" srclang="en" label="Key Stage 3" />
+  <!-- Fallback -->
+  ...
 </video>
 ```
 

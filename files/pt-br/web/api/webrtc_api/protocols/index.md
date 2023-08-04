@@ -1,24 +1,9 @@
 ---
 title: Introdução aos protocolos WebRTC
 slug: Web/API/WebRTC_API/Protocols
-tags:
-  - API
-  - Audio
-  - Guía
-  - ICE
-  - Iniciante
-  - Media
-  - NAT
-  - Projeto
-  - SDP
-  - STUN
-  - TURN
-  - Video
-  - WebRTC
-  - WebRTC API
-translation_of: Web/API/WebRTC_API/Protocols
 ---
-{{WebRTCSidebar}}
+
+{{DefaultAPISidebar("WebRTC")}}
 
 Este artigo apresenta os protocolos sobre os quais a API WebRTC é construída.
 
@@ -32,7 +17,7 @@ Este artigo apresenta os protocolos sobre os quais a API WebRTC é construída.
 
 O cliente enviará uma solicitação a um servidor STUN na Internet que responderá com o endereço público do cliente e se o cliente está ou não acessível por meio do NAT do roteador.
 
-![An interaction between two users of a WebRTC application involving a STUN server.](https://mdn.mozillademos.org/files/6115/webrtc-stun.png)
+![An interaction between two users of a WebRTC application involving a STUN server.](webrtc-stun.png)
 
 ## NAT
 
@@ -42,11 +27,11 @@ Alguns roteadores terão restrições sobre quem pode se conectar a dispositivos
 
 ## TURN
 
-Alguns roteadores que usam NAT empregam uma restrição chamada ‘Symmetric NAT’ (_NAT simétrico_). Isso significa que o roteador só aceitará conexões de pares aos quais você já se conectou.
+Alguns roteadores que usam NAT empregam uma restrição chamada 'Symmetric NAT' (_NAT simétrico_). Isso significa que o roteador só aceitará conexões de pares aos quais você já se conectou.
 
 [Traversal Using Relays around NAT (TURN)](http://en.wikipedia.org/wiki/TURN) destina-se a contornar a restrição de NAT simétrico abrindo uma conexão com um servidor TURN para que ele re-transmita toda informação. Você criaria uma conexão com um servidor TURN e avisaria a todos os pares (_peers_) para enviar pacotes para este servidor, que lhe encaminharia. Isso obviamente vem com alguma sobrecarga, então só é usado se não houver outras alternativas.
 
-![An interaction between two users of a WebRTC application involving STUN and TURN servers.](https://mdn.mozillademos.org/files/6117/webrtc-turn.png)
+![An interaction between two users of a WebRTC application involving STUN and TURN servers.](webrtc-turn.png)
 
 ## SDP
 

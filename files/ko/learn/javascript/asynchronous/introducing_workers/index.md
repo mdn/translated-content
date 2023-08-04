@@ -2,9 +2,10 @@
 title: Introducing workers
 slug: Learn/JavaScript/Asynchronous/Introducing_workers
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
-"비동기 JavaScript" 학습 과정의 마지막 글에서는 별도의 {{Glossary("Thread", "Thread")}} 실행 시 일부 작업을 실행할 수 있는 __workers__ 를 소개합니다.
+"비동기 JavaScript" 학습 과정의 마지막 글에서는 별도의 {{Glossary("Thread", "Thread")}} 실행 시 일부 작업을 실행할 수 있는 **workers** 를 소개합니다.
 
 <table>
   <tbody>
@@ -47,12 +48,11 @@ slug: Learn/JavaScript/Asynchronous/Introducing_workers
 
 ```js
 function generatePrimes(quota) {
-
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }
@@ -70,14 +70,17 @@ function generatePrimes(quota) {
   return primes;
 }
 
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector('#output').textContent = `Finished generating ${quota} primes!`;
+  document.querySelector(
+    "#output",
+  ).textContent = `Finished generating ${quota} primes!`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = 'Try typing in here immediately after pressing "Generate primes"';
+document.querySelector("#reload").addEventListener("click", () => {
+  document.querySelector("#user-input").value =
+    'Try typing in here immediately after pressing "Generate primes"';
   document.location.reload();
 });
 ```
@@ -96,30 +99,28 @@ document.querySelector('#reload').addEventListener('click', () => {
 "index.html" 파일과 "style.css" 파일은 이미 완성되어있습니다.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <script type="text/javascript" src="main.js" defer></script>
-    <link href="style.css"rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
   </head>
 
   <body>
-
     <label for="quota">Number of primes:</label>
-    <input type="text" id="quota" name="quota" value="1000000">
+    <input type="text" id="quota" name="quota" value="1000000" />
 
     <button id="generate">Generate primes</button>
     <button id="reload">Reload</button>
 
-    <textarea id="user-input" rows="5" cols="62">Try typing in here immediately after pressing "Generate primes"</textarea>
+    <textarea id="user-input" rows="5" cols="62">
+Try typing in here immediately after pressing "Generate primes"</textarea
+    >
 
     <div id="output"></div>
-
   </body>
-
 </html>
-
 ```
 
 ```css
@@ -137,28 +138,31 @@ textarea {
 
 ```js
 // Create a new worker, giving it the code in "generate.js"
-const worker = new Worker('./generate.js');
+const worker = new Worker("./generate.js");
 
 // When the user clicks "Generate primes", send a message to the worker.
 // The message command is "generate", and the message also contains "quota",
 // which is the number of primes to generate.
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   worker.postMessage({
-    command: 'generate',
-    quota: quota
+    command: "generate",
+    quota: quota,
   });
 });
 
 // When the worker sends a message back to the main thread,
 // update the output box with a message for the user, including the number of
 // primes that were generated, taken from the message data.
-worker.addEventListener('message', message => {
-  document.querySelector('#output').textContent = `Finished generating ${message.data} primes!`;
+worker.addEventListener("message", (message) => {
+  document.querySelector(
+    "#output",
+  ).textContent = `Finished generating ${message.data} primes!`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = 'Try typing in here immediately after pressing "Generate primes"';
+document.querySelector("#reload").addEventListener("click", () => {
+  document.querySelector("#user-input").value =
+    'Try typing in here immediately after pressing "Generate primes"';
   document.location.reload();
 });
 ```
@@ -179,20 +183,19 @@ document.querySelector('#reload').addEventListener('click', () => {
 ```js
 // Listen for messages from the main thread.
 // If the message command is "generate", call `generatePrimes()`
-addEventListener("message", message => {
-  if (message.data.command === 'generate') {
+addEventListener("message", (message) => {
+  if (message.data.command === "generate") {
     generatePrimes(message.data.quota);
   }
 });
 
 // Generate primes (very inefficiently)
 function generatePrimes(quota) {
-
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }
@@ -225,12 +228,12 @@ function generatePrimes(quota) {
 
 ## 다른 종류의 워커
 
-우리가 방금 만든 워커가 __dedicated worker__ 입니다. 단일 스크립트 인스턴스에서 사용됩니다.
+우리가 방금 만든 워커가 _dedicated worker_ 입니다. 단일 스크립트 인스턴스에서 사용됩니다.
 
 다른 유형의 워커도 있습니다.
 
 - [_Shared workers_](/ko/docs/Web/API/SharedWorker)는 서로 다른 창에서 실행되는 여러 스크립트에서 공유될 수 있습니다.
-- [_Service workers_](/ko/docs/Web/API/Service_Worker_API)는 사용자가 오프라인 상태일 때 웹  애플리케이션이 작동할 수 있도록 리소스를 캐싱하는, 마치 프록시 서버처럼 작동합니다. [Progressive Web Apps](/ko/docs/Web/Progressive_web_apps)의 핵심 구성 요소입니다.
+- [_Service workers_](/ko/docs/Web/API/Service_Worker_API)는 사용자가 오프라인 상태일 때 웹 애플리케이션이 작동할 수 있도록 리소스를 캐싱하는, 마치 프록시 서버처럼 작동합니다. [Progressive Web Apps](/ko/docs/Web/Progressive_web_apps)의 핵심 구성 요소입니다.
 
 ## 결론
 
@@ -245,11 +248,3 @@ function generatePrimes(quota) {
 - [Web workers API](/ko/docs/Web/API/Web_Workers_API)
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
-
-## 이번 과정
-
-- [Introducing asynchronous JavaScript](/ko/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [How to use promises](/ko/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Implementing a promise-based API](/ko/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- **Introducing workers**
-- [Assessment: sequencing animations](/ko/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

@@ -1,17 +1,11 @@
 ---
 title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Method
-  - events
-translation_of: Web/API/EventTarget/dispatchEvent
 ---
+
 {{APIRef("DOM Events")}}
 
-Dispara um {{domxref("Event")}} para o {{domxref("EventTarget")}} especificado, invocando os {{domxref("EventListener")}}s especificados, em uma ordem apropriada. O processamento normal das regras (including the capturing and optional bubbling phase) aplica-se a eventos disparados manualmente com `dispatchEvent()`.
+Dispara um {{domxref("Event")}} para o {{domxref("EventTarget")}} especificado, invocando os {{domxref("EventListener")}}s especificados, em uma ordem apropriada. O processamento normal das regras (incluindo a captura e a fase opcional de [bubbling](https://javascript.info/bubbling-and-capturing)) aplica-se a eventos disparados manualmente com `dispatchEvent()`.
 
 ## Sintaxe
 
@@ -37,4 +31,4 @@ Veja [Creating and triggering events](/pt-BR/docs/Web/Guide/DOM/Events/Creating_
 
 ## Especificações
 
-- [DOM Level 2 Events: dispatchEvent](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-dispatchEvent)
+- [DOM Level 2 Events: dispatchEvent](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-dispatchEvent)

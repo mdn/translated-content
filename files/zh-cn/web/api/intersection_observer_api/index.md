@@ -41,10 +41,10 @@ Intersection Observer API 允许你配置一个回调函数，当以下情况发
 
 ```js
 let options = {
-  root: document.querySelector('#scrollArea'),
-  rootMargin: '0px',
-  threshold: 1.0
-}
+  root: document.querySelector("#scrollArea"),
+  rootMargin: "0px",
+  threshold: 1.0,
+};
 
 let observer = new IntersectionObserver(callback, options);
 ```
@@ -58,7 +58,7 @@ let observer = new IntersectionObserver(callback, options);
 - `root`
   - : 指定根 (**root**) 元素，用于检查目标的可见性。必须是目标元素的父级元素。如果未指定或者为`null`，则默认为浏览器视窗。
 - `rootMargin`
-  - : 根 (**root**) 元素的外边距。类似于 CSS 中的 {{cssxref("margin")}} 属性，比如 "`10px 20px 30px 40px"` (top, right, bottom, left)。如果有指定 root 参数，则 rootMargin 也可以使用百分比来取值。该属性值是用作 root 元素和 target 发生交集时候的计算交集的区域范围，使用该属性可以控制 root 元素每一边的收缩或者扩张。默认值为 0。
+  - : 根 (**root**) 元素的外边距。类似于 CSS 中的 {{cssxref("margin")}} 属性，比如 "`10px 20px 30px 40px"` (top、right、bottom、left)。如果有指定 root 参数，则 rootMargin 也可以使用百分比来取值。该属性值是用作 root 元素和 target 发生交集时候的计算交集的区域范围，使用该属性可以控制 root 元素每一边的收缩或者扩张。默认值为四个边距全是 0。
 - `threshold`
   - : 可以是单一的 number 也可以是 number 数组，target 元素和 root 元素相交程度达到该值的时候 IntersectionObserver 注册的回调函数将会被执行。如果你只是想要探测当 target 元素的在 root 元素中的可见性超过 50% 的时候，你可以指定该属性值为 0.5。如果你想要 target 元素在 root 元素的可见程度每多 25% 就执行一次回调，那么你可以指定一个数组 `[0, 0.25, 0.5, 0.75, 1]`。默认值是 0 (意味着只要有一个 target 像素出现在 root 元素中，回调函数将会被执行)。该值为 1.0 含义是当 target 完全出现在 root 元素中时候 回调才会被执行。
 
@@ -67,7 +67,7 @@ let observer = new IntersectionObserver(callback, options);
 创建一个 observer 后需要给定一个目标元素进行观察。
 
 ```js
-let target = document.querySelector('#listItem');
+let target = document.querySelector("#listItem");
 observer.observe(target);
 ```
 
@@ -76,8 +76,8 @@ observer.observe(target);
 只要目标满足为 IntersectionObserver 指定的阈值，就会调用回调。回调接收 {{domxref("IntersectionObserverEntry")}} 对象和观察者的列表：
 
 ```js
-let callback =(entries, observer) => {
-  entries.forEach(entry => {
+let callback = (entries, observer) => {
+  entries.forEach((entry) => {
     // Each entry describes an intersection change for one observed target element:
     // entry.boundingClientRect
     // entry.intersectionRatio
@@ -92,7 +92,7 @@ let callback =(entries, observer) => {
 
 请留意，你注册的回调函数将会在主线程中被执行。所以该函数执行速度要尽可能的快。如果有一些耗时的操作需要执行，建议使用 {{domxref("Window.requestIdleCallback()")}} 方法。
 
-### How intersection is calculated -- 交集的计算
+### 交集的计算
 
 所有区域均被 Intersection Observer API 当做一个矩形看待。如果元素是不规则的图形也将会被看成一个包含元素所有区域的最小矩形，相似的，如果元素发生的交集部分不是一个矩形，那么也会被看作是一个包含他所有交集区域的最小矩形。
 
@@ -137,8 +137,7 @@ Note that it's possible to have a non-zero intersection rectangle, which can hap
 
 <main>
   <div class="contents">
-    <div class="wrapper">
-    </div>
+    <div class="wrapper"></div>
   </div>
 </main>
 ```
@@ -182,7 +181,10 @@ Note that it's possible to have a non-zero intersection rectangle, which can hap
 }
 
 .label {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
   position: absolute;
   margin: 0;
   background-color: rgba(255, 255, 255, 0.7);
@@ -225,7 +227,7 @@ startup = () => {
   let observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: []
+    threshold: [],
   };
 
   // An array of threshold sets for each of the boxes. The
@@ -237,50 +239,56 @@ startup = () => {
     [],
     [0.5],
     [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-    [0, 0.25, 0.5, 0.75, 1.0]
+    [0, 0.25, 0.5, 0.75, 1.0],
   ];
 
-  for (let i=0; i<=1.0; i+= 0.01) {
+  for (let i = 0; i <= 1.0; i += 0.01) {
     thresholdSets[0].push(i);
   }
 
   // Add each box, creating a new observer for each
 
-  for (let i=0; i<4; i++) {
-    let template = document.querySelector("#boxTemplate").content.cloneNode(true);
-    let boxID = "box" + (i+1);
+  for (let i = 0; i < 4; i++) {
+    let template = document
+      .querySelector("#boxTemplate")
+      .content.cloneNode(true);
+    let boxID = "box" + (i + 1);
     template.querySelector(".sampleBox").id = boxID;
     wrapper.appendChild(document.importNode(template, true));
 
     // Set up the observer for this box
 
     observerOptions.threshold = thresholdSets[i];
-    observers[i] = new IntersectionObserver(intersectionCallback, observerOptions);
+    observers[i] = new IntersectionObserver(
+      intersectionCallback,
+      observerOptions,
+    );
     observers[i].observe(document.querySelector("#" + boxID));
   }
 
   // Scroll to the starting position
 
-  document.scrollingElement.scrollTop = wrapper.firstElementChild.getBoundingClientRect().top + window.scrollY;
+  document.scrollingElement.scrollTop =
+    wrapper.firstElementChild.getBoundingClientRect().top + window.scrollY;
   document.scrollingElement.scrollLeft = 750;
-}
+};
 
 intersectionCallback = (entries) => {
   entries.forEach((entry) => {
     let box = entry.target;
-    let visiblePct = (Math.floor(entry.intersectionRatio * 100)) + "%";
+    let visiblePct = Math.floor(entry.intersectionRatio * 100) + "%";
 
     box.querySelector(".topLeft").innerHTML = visiblePct;
     box.querySelector(".topRight").innerHTML = visiblePct;
     box.querySelector(".bottomLeft").innerHTML = visiblePct;
     box.querySelector(".bottomRight").innerHTML = visiblePct;
   });
-}
+};
 
 startup();
 ```
 
-{{EmbedLiveSample("Threshold_example", 500, 500)}}
+{{EmbedLiveSample("Thresholds", 500, 500)}}
 
 #### Clipping and the intersection rectangle
 
@@ -332,21 +340,21 @@ The HTML for this example is very short, with a primary element which is the box
 
 ```html
 <div id="box">
-  <div class="vertical">
-    Welcome to <strong>The Box!</strong>
-  </div>
+  <div class="vertical">Welcome to <strong>The Box!</strong></div>
 </div>
 ```
 
 ### CSS
 
-The CSS isn't terribly important for the purposes of this example; it lays out the element and establishes that the {{cssxref("background-color")}} and {{cssxref("border")}} attributes can participate in [CSS transitions](/zh-CN/docs/Web/CSS/CSS_Transitions), which we'll use to affect the changes to the element as it becomes more or less obscured.
+The CSS isn't terribly important for the purposes of this example; it lays out the element and establishes that the {{cssxref("background-color")}} and {{cssxref("border")}} attributes can participate in [CSS transitions](/zh-CN/docs/Web/CSS/CSS_transitions), which we'll use to affect the changes to the element as it becomes more or less obscured.
 
 ```css
 #box {
   background-color: rgba(40, 40, 190, 255);
   border: 4px solid rgb(20, 20, 120);
-  transition: background-color 1s, border 1s;
+  transition:
+    background-color 1s,
+    border 1s;
   width: 350px;
   height: 350px;
   display: flex;
@@ -387,11 +395,15 @@ let increasingColor = "rgba(40, 40, 190, ratio)";
 let decreasingColor = "rgba(190, 40, 40, ratio)";
 
 // Set things up
-window.addEventListener("load", (event) => {
-  boxElement = document.querySelector("#box");
+window.addEventListener(
+  "load",
+  (event) => {
+    boxElement = document.querySelector("#box");
 
-  createObserver();
-}, false);
+    createObserver();
+  },
+  false,
+);
 ```
 
 The constants and variables we set up here are:
@@ -405,7 +417,7 @@ The constants and variables we set up here are:
 - `decreasingColor`
   - : Similarly, this is a string defining a color we'll apply when the visibility ratio is decreasing.
 
-We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{event("load")}} event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
+We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the [`load`](/zh-CN/docs/Web/API/Window/load_event) event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
 
 #### Creating the intersection observer
 
@@ -418,7 +430,7 @@ function createObserver() {
   let options = {
     root: null,
     rootMargin: "0px",
-    threshold: buildThresholdList()
+    threshold: buildThresholdList(),
   };
 
   observer = new IntersectionObserver(handleIntersect, options);
@@ -443,8 +455,8 @@ function buildThresholdList() {
   let thresholds = [];
   let numSteps = 20;
 
-  for (let i=1.0; i<=numSteps; i++) {
-    let ratio = i/numSteps;
+  for (let i = 1.0; i <= numSteps; i++) {
+    let ratio = i / numSteps;
     thresholds.push(ratio);
   }
 
@@ -478,9 +490,15 @@ When the browser detects that the target element (in our case, the one with the 
 function handleIntersect(entries, observer) {
   entries.forEach((entry) => {
     if (entry.intersectionRatio > prevRatio) {
-      entry.target.style.backgroundColor = increasingColor.replace("ratio", entry.intersectionRatio);
+      entry.target.style.backgroundColor = increasingColor.replace(
+        "ratio",
+        entry.intersectionRatio,
+      );
     } else {
-      entry.target.style.backgroundColor = decreasingColor.replace("ratio", entry.intersectionRatio);
+      entry.target.style.backgroundColor = decreasingColor.replace(
+        "ratio",
+        entry.intersectionRatio,
+      );
     }
 
     prevRatio = entry.intersectionRatio;

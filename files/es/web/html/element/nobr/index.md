@@ -1,17 +1,8 @@
 ---
 title: <nobr>
 slug: Web/HTML/Element/nobr
-tags:
-  - Elemento
-  - HTML
-  - No-estándar
-  - Obsoleto
-  - Referencia
-  - Web
-  - nobr
-translation_of: Web/HTML/Element/nobr
-original_slug: Web/HTML/Elemento/nobr
 ---
+
 {{non-standard_header}}
 
 ## Resumen
@@ -27,4 +18,4 @@ El elemento HTML `<nobr>` previene que una línea de texto se divida en una nuev
 - {{Cssxref("white-space")}}
 - {{Cssxref("overflow")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

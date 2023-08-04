@@ -22,10 +22,11 @@ slug: Web/API/KeyboardEvent/code
 #### HTML
 
 ```html
-<p>Press keys on the keyboard to see what the KeyboardEvent's key and code
-   values are for each one.</p>
-<div id="output">
-</div>
+<p>
+  Press keys on the keyboard to see what the KeyboardEvent's key and code values
+  are for each one.
+</p>
+<div id="output"></div>
 ```
 
 #### CSS
@@ -40,34 +41,40 @@ slug: Web/API/KeyboardEvent/code
 #### JavaScript
 
 ```js
-window.addEventListener("keydown", function(event) {
-  let str = "KeyboardEvent: key='" + event.key + "' | code='" +
-            event.code + "'";
-  let el = document.createElement("span");
-  el.innerHTML = str + "<br/>";
+window.addEventListener(
+  "keydown",
+  function (event) {
+    let str =
+      "KeyboardEvent: key='" + event.key + "' | code='" + event.code + "'";
+    let el = document.createElement("span");
+    el.innerHTML = str + "<br/>";
 
-  document.getElementById("output").appendChild(el);
-}, true);
+    document.getElementById("output").appendChild(el);
+  },
+  true,
+);
 ```
 
 #### Try it out
 
 To ensure that keystrokes go to the sample, click in the output box below before pressing keys.
 
-{{ EmbedLiveSample('Exercising_KeyboardEvent', 600, 300) }}
+{{ EmbedLiveSample('练习 KeyboardEvent', 600, 300) }}
 
 ### Handle keyboard events in a game
 
-This example establishes an event listener for {{event("keydown")}} events which handles keyboard input for a game which uses the typical "WASD" keyboard layout for steering forward, left, backward, and right. This will use the same four keys physically regardless of what the actual corresponding characters are, such as if the user is using an AZERTY keyboard.
+This example establishes an event listener for [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) events which handles keyboard input for a game which uses the typical "WASD" keyboard layout for steering forward, left, backward, and right. This will use the same four keys physically regardless of what the actual corresponding characters are, such as if the user is using an AZERTY keyboard.
 
 #### HTML
 
 ```html
 <p>Use the WASD (ZQSD on AZERTY) keys to move and steer.</p>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="world">
-  <polygon id="spaceship" points="15,0 0,30 30,30"/>
+  <polygon id="spaceship" points="15,0 0,30 30,30" />
 </svg>
-<script>refresh();</script>
+<script>
+  refresh();
+</script>
 ```
 
 #### CSS
@@ -95,12 +102,12 @@ The first section of the JavaScript code establishes some variables we'll be usi
 ```js
 let shipSize = {
   width: 30,
-  height: 30
+  height: 30,
 };
 
 let position = {
   x: 200,
-  y: 200
+  y: 200,
 };
 
 let moveRate = 9;
@@ -115,9 +122,9 @@ Next comes the function `updatePosition()`. This function takes as input the dis
 
 ```js
 function updatePosition(offset) {
-  let rad = angle * (Math.PI/180);
-  position.x += (Math.sin(rad) * offset);
-  position.y -= (Math.cos(rad) * offset);
+  let rad = angle * (Math.PI / 180);
+  position.x += Math.sin(rad) * offset;
+  position.y -= Math.cos(rad) * offset;
 
   if (position.x < 0) {
     position.x = 399;
@@ -137,50 +144,54 @@ The `refresh()` function handles applying the rotation and position by using an 
 
 ```js
 function refresh() {
-  let x = position.x - (shipSize.width/2);
-  let y = position.y - (shipSize.height/2);
+  let x = position.x - shipSize.width / 2;
+  let y = position.y - shipSize.height / 2;
   let transform = "translate(" + x + " " + y + ") rotate(" + angle + " 15 15) ";
 
   spaceship.setAttribute("transform", transform);
 }
 ```
 
-Finally, the `addEventListener()` method is used to start listening for {{event("keydown")}} events, acting on each key by updating the ship position and rotation angle, then calling `refresh()` to draw the ship at its new position and angle.
+Finally, the `addEventListener()` method is used to start listening for [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) events, acting on each key by updating the ship position and rotation angle, then calling `refresh()` to draw the ship at its new position and angle.
 
 ```js
-window.addEventListener("keydown", function(event) {
-  if (event.preventDefaulted) {
-    return; // Do nothing if event already handled
-  }
+window.addEventListener(
+  "keydown",
+  function (event) {
+    if (event.preventDefaulted) {
+      return; // Do nothing if event already handled
+    }
 
-  switch(event.code) {
-    case "KeyS":
-    case "ArrowDown":
-      // Handle "back"
-      updatePosition(-moveRate);
-      break;
-    case "KeyW":
-    case "ArrowUp":
-      // Handle "forward"
-      updatePosition(moveRate);
-      break;
-    case "KeyA":
-    case "ArrowLeft":
-      // Handle "turn left"
-      angle -= turnRate;
-      break;
-    case "KeyD":
-    case "ArrowRight":
-      // Handle "turn right"
-      angle += turnRate;
-      break;
-  }
+    switch (event.code) {
+      case "KeyS":
+      case "ArrowDown":
+        // Handle "back"
+        updatePosition(-moveRate);
+        break;
+      case "KeyW":
+      case "ArrowUp":
+        // Handle "forward"
+        updatePosition(moveRate);
+        break;
+      case "KeyA":
+      case "ArrowLeft":
+        // Handle "turn left"
+        angle -= turnRate;
+        break;
+      case "KeyD":
+      case "ArrowRight":
+        // Handle "turn right"
+        angle += turnRate;
+        break;
+    }
 
-  refresh();
+    refresh();
 
-  // Consume the event so it doesn't get handled twice
-  event.preventDefault();
-}, true);
+    // Consume the event so it doesn't get handled twice
+    event.preventDefault();
+  },
+  true,
+);
 ```
 
 #### Try it out
@@ -189,7 +200,7 @@ To ensure that keystrokes go to the sample code, click inside the black game pla
 
 {{EmbedLiveSample("Handle_keyboard_events_in_a_game", 420, 460)}}
 
-There are several ways this code can be made better. Most real games would watch for {{event("keydown")}} events, start motion when that happens, and stop the motion when the corresponding {{event("keyup")}} occurs, instead of relying on key repeats. That would allow both smoother and faster movement, but would also allow the player to be moving and steering at the same time. Transitions or animations could be used to make the ship's movement smoother, too.
+There are several ways this code can be made better. Most real games would watch for [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) events, start motion when that happens, and stop the motion when the corresponding [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) occurs, instead of relying on key repeats. That would allow both smoother and faster movement, but would also allow the player to be moving and steering at the same time. Transitions or animations could be used to make the ship's movement smoother, too.
 
 ## Specification
 

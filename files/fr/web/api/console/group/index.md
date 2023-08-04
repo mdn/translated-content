@@ -1,15 +1,6 @@
 ---
 title: Console.group()
-slug: Web/API/Console/group
-tags:
-  - API
-  - DOM
-  - Développement
-  - Méthodes
-  - Web
-  - console
-  - débogage
-translation_of: Web/API/Console/group
+slug: Web/API/console/group
 ---
 
 {{APIRef("Console API")}}
@@ -27,7 +18,7 @@ console.group();
 ## Paramètres
 
 - `label`
-  - : donne une étiquette au groupe. Facultatif. (Chrome 59 testé). Ne fonctionne pas avec` ``console.groupEnd()`.
+  - : donne une étiquette au groupe. Facultatif. (Chrome 59 testé). Ne fonctionne pas avec `console.groupEnd()`.
 
 ## Exemples
 

@@ -21,12 +21,13 @@ slug: Web/API/DataTransfer
 - {{domxref("DataTransfer.dropEffect")}}
   - : 現在選択されているドラッグ&amp;ドロップ操作の種類を取得したり、新しい操作の種類をセットしたりします。値は `none`, `copy`, `link`, `move` のいずれかです。
 - {{domxref("DataTransfer.effectAllowed")}}
+
   - : とりうるすべての操作の種類を与えます。`none`, `copy`, `copyLink`, `copyMove`, `link`, `linkMove`, `move`, `all`, `uninitialized` のいずれかです。
 
 - {{domxref("DataTransfer.files")}}
   - : データトランスファーが保持していて利用可能なすべてのローカルファイルのリストを保持します。ドラッグ操作がファイルのドラッグによるものではない場合、このプロパティは空のリストになります。
 - {{domxref("DataTransfer.items")}} {{readonlyInline}}
-  - :  全てのドラッグデータのリストである {{domxref("DataTransferItemList")}} オブジェクトを返します。
+  - : 全てのドラッグデータのリストである {{domxref("DataTransferItemList")}} オブジェクトを返します。
 - {{domxref("DataTransfer.types")}} {{readonlyInline}}
   - : 文字列の配列で、 {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントで設定されたフォーマットを示します。
 

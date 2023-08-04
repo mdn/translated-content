@@ -1,17 +1,6 @@
 ---
 title: history.search()
 slug: Mozilla/Add-ons/WebExtensions/API/history/search
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Method
-  - Non-standard
-  - Reference
-  - Search
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/search
 ---
 
 {{AddonSidebar()}}
@@ -24,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var searching = browser.history.search(
-  query                  // object
-)
+  query, // object
+);
 ```
 
 ### Paramètres
@@ -55,7 +44,7 @@ var searching = browser.history.search(
         Spécifiez une chaîne vide (`""`) pour récupérer tous les objets {{WebExtAPIRef("history.HistoryItem")}} qui répondent à tous les autres critères.
 
     - `startTime` {{optional_inline}}
-      - : `number` ou `string` ou `object`. Une valeur indiquant une date et une heure. Cela peut être représenté par :  un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de millisecondes depuis l'époque. Si elle est fournie, cette option exclut les résultats dont `lastVisitTime` est antérieure à cette heure. Si elle est omise, la recherche est limitée aux dernières 24 heures.
+      - : `number` ou `string` ou `object`. Une valeur indiquant une date et une heure. Cela peut être représenté par : un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de millisecondes depuis l'époque. Si elle est fournie, cette option exclut les résultats dont `lastVisitTime` est antérieure à cette heure. Si elle est omise, la recherche est limitée aux dernières 24 heures.
     - `endTime` {{optional_inline}}
       - : `number` ou `string` ou `object`. Une valeur indiquant une date et une heure. Cela peut être représenté par : un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de millisecondes depuis l'époque. Si elle est fournie, cette option exclut les résultats dont `lastVisitTime` est postérieur à cette fois. Si elle est omise, toutes les entrées sont prises en compte à partir de l'heure de début.
     - `maxResults` {{optional_inline}}
@@ -77,7 +66,7 @@ function onGot(historyItems) {
   }
 }
 
-var searching = browser.history.search({text: ""});
+var searching = browser.history.search({ text: "" });
 
 searching.then(onGot);
 ```
@@ -93,8 +82,8 @@ function onGot(historyItems) {
 }
 
 var searching = browser.history.search({
-   text: "",
-   startTime: 0
+  text: "",
+  startTime: 0,
 });
 
 searching.then(onGot);
@@ -111,9 +100,9 @@ function onGot(historyItems) {
 }
 
 var searching = browser.history.search({
- text: "mozilla",
- startTime: 0,
- maxResults: 1
+  text: "mozilla",
+  startTime: 0,
+  maxResults: 1,
 });
 
 searching.then(onGot);
@@ -121,9 +110,9 @@ searching.then(onGot);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.search")}}
+{{Compat}}
 
 > **Note :**
 >

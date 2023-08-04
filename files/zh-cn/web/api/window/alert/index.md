@@ -1,49 +1,48 @@
 ---
-title: window.alert
+title: Window：alert() 方法
 slug: Web/API/Window/alert
 ---
 
-{{ ApiRef() }}
+{{ ApiRef }}
 
-### 概述
+`window.alert()` 令浏览器显示一个带有可选的信息的对话框，并等待用户离开该对话框。
 
-显示一个警告对话框，上面显示有指定的文本内容以及一个"确定"按钮。
+在某些情况下（例如，当用户切换标签时）浏览器可能不会实际显示一个对话框，或者不等待用户离开对话框。
 
-### 语法
+## 语法
 
+```js-nolint
+alert()
+alert(message)
 ```
-window.alert(message);
-```
 
-> **备注：**
->
-> ```js
-> alert(uid = `${uid}`);
->
-> // alert(`desc ${key}`) !== console.log(`desc`, key);
-> ```
+### 参数
 
-- `message` 是要显示在对话框中的文本字符串，如果传入其他类型的值，会转换成字符串。
+- `message` {{optional_inline}}
+  - : 是要显示在警告对话框中的字符串，如果传入其他类型的值，会转换成字符串。
 
-### 示例
+### 返回值
+
+无（{{jsxref("undefined")}}）。
+
+## 示例
 
 ```js
 window.alert("Hello world!");
+alert("Hello world!");
 ```
 
-显示如下 (不同的浏览器下显示不同):
+都会显示如下：
 
-![Image:AlertHelloWorld.png](/@api/deki/files/30/=AlertHelloWorld.png)
+![黑色警报对话框。在左上方的小圆圈图标后面有白色的开括号和闭括号，包含 JavaScript Application 白色文本。在左下方，有一个“Hello world!”白色的文字。右下方有一个蓝色的小按钮。这个按钮的文字是黑色的 OK](alerthelloworld.png)
 
-### 附注
+## 注意事项
 
-警告对话框使用在无需用户确认的情况下，否则应该使用其他类型的对话框，比如[confirm](/zh-CN/DOM/window.confirm), [prompt](/zh-CN/DOM/window.prompt).
+警告对话框应该用于不需要用户做出任何反应的信息，除了对信息的确认之外。
 
-The following text is shared between this article, DOM:window\.prompt and DOM:window\.confirm 这里显示的对话框是一个模态窗口，它能阻止用户对浏览器窗口界面的其他部位进行操作，你不应该过多的使用这种模态窗口。
+对话框是模态窗口——它们阻止用户访问程序界面的其他部分，直到对话框被关闭。出于这个原因，你不应该过度使用任何创建对话框（或模态窗口）的函数。
 
-扩展开发者有时候需要使用[nsIPromptService](/zh-CN/nsIPromptService)接口来代替`该 alert`方法。
-
-从 Firefox 4 开始，在网页中弹出的对话框都换成了标签页范围内的模态窗口，即不会影响其他的标签页，同时还能阻止过多次数的弹窗。
+另外，{{HTMLElement("dialog")}} 元素也可用于显示警告。
 
 ## 规范
 
@@ -53,8 +52,8 @@ The following text is shared between this article, DOM:window\.prompt and DOM:wi
 
 {{Compat}}
 
-### 参见
+## 参见
 
-[confirm](/zh-CN/docs/Web/API/Window/confirm), [prompt](/zh-CN/docs/Web/API/Window/prompt)
-
-扩展开发者应该查看[alert()](/zh-CN/nsIPromptService#alert)和[alertCheck()](/zh-CN/nsIPromptService#alert)
+- {{HTMLElement("dialog")}} 元素
+- {{domxref("window.confirm","confirm")}}
+- {{domxref("window.prompt","prompt")}}

@@ -1,18 +1,8 @@
 ---
 title: Window.document
 slug: Web/API/Window/document
-tags:
-  - API
-  - DOM HTML
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Propriedade
-  - Referencia
-  - Window
-translation_of: Web/API/Window/document
 ---
+
 {{APIRef}}
 
 ## Resumo

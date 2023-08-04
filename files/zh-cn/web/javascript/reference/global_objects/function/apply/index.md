@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 ## 语法
 
-```js
+```js-nolint
 apply(thisArg)
 apply(thisArg, argsArray)
 ```
@@ -24,7 +24,7 @@ apply(thisArg, argsArray)
 
 - `argsArray` {{optional_inline}}
 
-  - : 一个数组或者类数组对象，其中的数组元素将作为单独的参数传给 `func` 函数。如果该参数的值为 {{jsxref("null")}} 或  {{jsxref("undefined")}}，则表示不需要传入任何参数。从 ECMAScript 5 开始可以使用类数组对象。[浏览器兼容性](#浏览器兼容性)请参阅本文底部内容。
+  - : 一个数组或者类数组对象，其中的数组元素将作为单独的参数传给 `func` 函数。如果该参数的值为 {{jsxref("null")}} 或 {{jsxref("undefined")}}，则表示不需要传入任何参数。从 ECMAScript 5 开始可以使用类数组对象。[浏览器兼容性](#浏览器兼容性)请参阅本文底部内容。
 
 ### 返回值
 
@@ -34,7 +34,7 @@ apply(thisArg, argsArray)
 
 > **备注：** 虽然这个函数的语法与 {{jsxref("Function.call", "call()")}} 几乎相同，但根本区别在于，`call()` 接受一个**参数列表**，而 `apply()` 接受一个**参数的单数组**。
 
-> **备注：** 当第一个参数为 {{jsxref("null")}} 或  {{jsxref("undefined")}} 时，可以使用数组[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)实现类似的结果。
+> **备注：** 当第一个参数为 {{jsxref("null")}} 或 {{jsxref("undefined")}} 时，可以使用数组[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)实现类似的结果。
 
 在调用一个存在的函数时，你可以为其指定一个 `this` 对象。`this` 指当前对象，也就是正在调用这个函数的对象。使用 `apply`，你可以只写一次这个方法然后在另一个对象中继承它，而不用在新对象中重复写该方法。
 
@@ -57,7 +57,7 @@ apply(thisArg, argsArray)
 `apply` 正派上用场！
 
 ```js
-const array = ['a', 'b'];
+const array = ["a", "b"];
 const elements = [0, 1, 2];
 array.push.apply(array, elements);
 console.info(array); // ["a", "b", 0, 1, 2]
@@ -78,13 +78,11 @@ let max = Math.max.apply(null, numbers); // 基本等同于 Math.max(numbers[0],
 let min = Math.min.apply(null, numbers);
 
 // 对比：简单循环算法
-max = -Infinity, min = +Infinity;
+(max = -Infinity), (min = +Infinity);
 
 for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] > max)
-    max = numbers[i];
-  if (numbers[i] < min)
-    min = numbers[i];
+  if (numbers[i] > max) max = numbers[i];
+  if (numbers[i] < min) min = numbers[i];
 }
 ```
 
@@ -100,7 +98,10 @@ function minOfArray(arr) {
   let QUANTUM = 32768;
 
   for (let i = 0, len = arr.length; i < len; i += QUANTUM) {
-    const submin = Math.min.apply(null, arr.slice(i, Math.min(i + QUANTUM, len)));
+    const submin = Math.min.apply(
+      null,
+      arr.slice(i, Math.min(i + QUANTUM, len)),
+    );
     min = Math.min(submin, min);
   }
 
@@ -127,16 +128,16 @@ Function.prototype.construct = function (aArgs) {
 ```js
 function MyConstructor() {
   for (let nProp = 0; nProp < arguments.length; nProp++) {
-    this['property' + nProp] = arguments[nProp];
+    this["property" + nProp] = arguments[nProp];
   }
 }
 
-let myArray = [4, 'Hello world!', false];
+let myArray = [4, "Hello world!", false];
 let myInstance = MyConstructor.construct(myArray);
 
-console.log(myInstance.property1);                // logs 'Hello world!'
+console.log(myInstance.property1); // logs 'Hello world!'
 console.log(myInstance instanceof MyConstructor); // logs 'true'
-console.log(myInstance.constructor);              // logs 'MyConstructor'
+console.log(myInstance.constructor); // logs 'MyConstructor'
 ```
 
 > **备注：** 这个非原生的 `Function.construct` 方法无法和一些原生构造器（例如 {{jsxref("Global_Objects/Date", "Date")}}）一起使用。在这种情况下你必须使用 {{jsxref("Function.prototype.bind")}} 方法。例如，想象有如下一个数组要用在 Date 构造器中：`[2012, 11, 4]`；这时你需要这样写：`new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` ——无论如何这不是最好的实现方式并且也许不该用在任何生产环境中。

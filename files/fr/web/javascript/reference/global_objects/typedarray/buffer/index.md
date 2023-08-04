@@ -1,14 +1,6 @@
 ---
 title: TypedArray.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
-tags:
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/buffer
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La propriété **`buffer`** est un accesseur représentant l'{{jsxref("ArrayBuff
 ## Syntaxe
 
 ```js
-typedArray.buffer
+typedArray.buffer;
 ```
 
 ## Description
@@ -37,14 +29,11 @@ uint16.buffer; // ArrayBuffer { byteLength: 8 }
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                       | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-get-%typedarray%.prototype.buffer', 'TypedArray.prototype.buffer')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.buffer', 'TypedArray.prototype.buffer')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.buffer")}}
+{{Compat}}
 
 ## Voir aussi
 

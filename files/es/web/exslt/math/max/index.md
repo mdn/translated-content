@@ -1,12 +1,8 @@
 ---
 title: max
 slug: Web/EXSLT/math/max
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/math/max
 ---
+
 {{XsltRef}}
 `math:max()` devuelve el valor máximo de un conjunto de nodos (node-set).
 

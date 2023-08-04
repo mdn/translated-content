@@ -17,7 +17,7 @@ slug: Glossary/User_agent
 
 ### 一般知識
 
-- Wikipedia の{{Interwiki("wikipedia", "ユーザーエージェント")}}
+- Wikipedia の[ユーザーエージェント](https://ja.wikipedia.org/wiki/ユーザーエージェント)
 
 ### 技術リファレンス
 
@@ -27,8 +27,8 @@ slug: Glossary/User_agent
 
 1. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Browser", "ブラウザー")}}
+   1. {{Glossary("Browser", "ブラウザー")}}
 
 2. HTTP ヘッダー
 
-    1. {{HTTPHeader("User-agent")}}
+   1. {{HTTPHeader("User-agent")}}

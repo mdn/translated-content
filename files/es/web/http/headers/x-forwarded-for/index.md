@@ -1,8 +1,8 @@
 ---
 title: X-Forwarded-For
 slug: Web/HTTP/Headers/X-Forwarded-For
-translation_of: Web/HTTP/Headers/X-Forwarded-For
 ---
+
 {{HTTPSidebar}}
 
 La cabecera **`X-Forwarded-For`** (XFF) es un estándar de facto para identificar el origen de la dirección IP de un cliente conectado a un servidor web a través de un proxy HTTP o un balanceador de carga. Cuando se intercepta el tráfico entre cliente y servidores, los registros de los servidores de acceso contienen sólo la dirección IP del proxy o del balanceador de carga. Para ver la dirección IP original del cliente, se utiliza la cabecera `X-Forwarded-For`.
@@ -13,9 +13,9 @@ Una versión estandarizada de esta cabecera es la cabecera HTTP {{HTTPHeader("Fo
 
 `X-Forwarded-For` es también una cabecera de correo electrónico que indica que el mismo fue reenviado desde otra cuenta.
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | no                             |
 
 ## Sintaxis
 
@@ -50,10 +50,6 @@ X-ProxyUser-Ip: 203.0.113.19
 ## Especificaciones
 
 No es parte de especificación actual alguna. La versión estandarizada de este cabezal es {{HTTPHeader("Forwarded")}}.
-
-## Browser compatibility
-
-{{Compat("http.headers.X-Forwarded-For")}}
 
 ## See also
 

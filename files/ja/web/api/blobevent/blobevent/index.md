@@ -1,37 +1,45 @@
 ---
-title: BlobEvent()
+title: "BlobEvent: BlobEvent() コンストラクター"
+short-title: BlobEvent()
 slug: Web/API/BlobEvent/BlobEvent
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Media Capture and Streams")}}{{seeCompatTable}}
+{{APIRef("MediaStream Recording")}}
 
 **`BlobEvent()`** コンストラクターは、新たに生成され {{domxref("Blob")}} に関連付けられた {{domxref("BlobEvent")}} オブジェクトを返します。
 
 ## 構文
 
-```
-blobEvent = new BlobEvent({data: aSpecificBlob}[, timecode]);
+```js-nolint
+new BlobEvent(type, options)
 ```
 
 ### 引数
 
-_`BlobEvent()` コンストラクターは、{{domxref("Event.Event", "Event()")}} からの引数も継承します。_
+- `type`
+  - : 文字列で、このイベントの名前です。
+    大文字小文字の区別があり、ブラウザーは常に `dataavailable` と設定します。
+- `options`
+  - : オブジェクトで、_{{domxref("Event/Event", "Event()")}} で定義されたプロパティに加え_、以下のプロパティを持つことができます。
+    - `data`
+      - : イベントに関連付けられた {{domxref("Blob")}} です。
+    - `timecode`
+      - : blob イベントの初期化に使用される {{domxref("DOMHighResTimeStamp")}} です。
 
-- `data`
-  - : イベントに関連付けられた {{domxref("Blob")}}。
-- `timecode` {{optional_inline}}
-  - : blob イベントの初期化に使用される {{domxref("DOMHighResTimeStamp")}}。
+### 返値
 
-## 仕様
+新しい {{domxref("BlobEvent")}} オブジェクトです。
 
-| 仕様書                                                                                                                   | 策定状況                                     | 備考       |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------- |
-| {{SpecName('MediaStream Recording', '#dom-blobevent-blobevent', 'BlobEvent: BlobEvent')}} | {{Spec2('MediaStream Recording')}} | 初期定義。 |
+## 仕様書
 
-## ブラウザーの実装状況
+{{Specifications}}
 
-{{Compat("api.BlobEvent.BlobEvent")}}
+## ブラウザーの互換性
 
-## 関連項目
+{{Compat}}
+
+## 関連情報
 
 - このメソッドが属する {{domxref("BlobEvent")}} インターフェイス。

@@ -1,23 +1,8 @@
 ---
 title: ¿Qué ha salido mal? Corrigiendo JavaScript
 slug: Learn/JavaScript/First_steps/What_went_wrong
-tags:
-  - Aprender
-  - Artículo
-  - CodingScripting
-  - Debugging
-  - Depurando
-  - Error
-  - Herramientas de Desarrollador
-  - JavaScript
-  - Novato
-  - Principiante
-  - Tutorial
-  - console.log
-  - depurar
-  - l10n:priority
-translation_of: Learn/JavaScript/First_steps/What_went_wrong
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 
 Cuando construiste el juego "Adivina el número" en el artículo anterior, es posible que hayas descubierto que no funcionó. Tranquilo — este artículo tiene como objetivo evitar que te rasques la cabeza por este tipo de problemas brindándote algunos consejos sobre cómo encontrar y corregir errores en programas JavaScript.
@@ -50,20 +35,20 @@ En este punto, consultemos la consola del desarrollador para ver si podemos ver 
 
 Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript simples en la [consola JavaScript de las herramientas para desarrolladores](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) (si no recuerdas cómo abrirla en tu navegador, sigue el enlace anterior para descubrirlo). Lo más útil es que la consola te brinda mensajes de error cada vez que ocurre algún error de sintaxis dentro del JavaScript que alimenta al motor JavaScript del navegador. Ahora vayamos a cazar.
 
-1. Ve a la pestaña dónde tienes abierto `number-game-errors.html` y abre tu consola JavaScript. Deberías ver un mensaje de error con las siguientes líneas: ![](https://mdn.mozillademos.org/files/13496/not-a-function.png)
+1. Ve a la pestaña dónde tienes abierto `number-game-errors.html` y abre tu consola JavaScript. Deberías ver un mensaje de error con las siguientes líneas: ![](not-a-function.png)
 2. Este es un error bastante fácil de rastrear, y el navegador le brinda varios bits de información útil para ayudarte (la captura de pantalla anterior es de Firefox, pero otros navegadores proporcionan información similar). De izquierda a derecha, tenemos:
 
-    - Una "x" roja para indicar que se trata de un error.
-    - Un mensaje de error para indicar qué salió mal: "TypeError: guessSubmit.addeventListener no es una función"
-    - Un enlace a "Más información" que te lleva a una página de MDN dónde explica detalladamente qué significa este error.
-    - El nombre del archivo JavaScript, que enlaza con la pestaña "Depurador" de las herramientas para desarrolladores. Si sigues este enlace, verás la línea exacta donde se resalta el error.
-    - El número de línea donde está el error y el número de carácter en esa línea donde se detectó el error por primera vez. En este caso, tenemos la línea 86, carácter número 3.
+   - Una "x" roja para indicar que se trata de un error.
+   - Un mensaje de error para indicar qué salió mal: "TypeError: guessSubmit.addeventListener no es una función"
+   - Un enlace a "Más información" que te lleva a una página de MDN dónde explica detalladamente qué significa este error.
+   - El nombre del archivo JavaScript, que enlaza con la pestaña "Depurador" de las herramientas para desarrolladores. Si sigues este enlace, verás la línea exacta donde se resalta el error.
+   - El número de línea donde está el error y el número de carácter en esa línea donde se detectó el error por primera vez. En este caso, tenemos la línea 86, carácter número 3.
 
 3. Si miramos la línea 86 en nuestro editor de código, encontraremos esta línea:
 
-    ```js
-    guessSubmit.addeventListener('click', checkGuess);
-    ```
+   ```js
+   guessSubmit.addeventListener("click", checkGuess);
+   ```
 
 4. El mensaje de error dice "`guessSubmit.addeventListener no es una función`", lo cual significa que el intérprete de JavaScript no reconoce la función que estamos llamando. A menudo, este mensaje de error en realidad significa que hemos escrito algo mal. Si no estás seguro de la ortografía correcta de una parte de la sintaxis, a menudo es bueno buscar la función en MDN. La mejor manera de hacer esto es, en tu navegador favorito, buscar "mdn _nombre-de-característica_". Aquí hay un atajo para ahorrarte algo de tiempo en esta instancia: [`addEventListener()`](/es/docs/Web/API/EventTarget/addEventListener).
 5. Entonces, al mirar esta página, ¡el error parece ser que hemos escrito mal el nombre de la función!. Recuerda que JavaScript distingue entre mayúsculas y minúsculas, por lo que cualquier pequeña diferencia en la ortografía o en mayúsculas provocará un error. Cambiar `addeventListener` a `addEventListener` debería solucionar este problema. Hazlo ahora.
@@ -73,39 +58,39 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
 ### Errores sintácticos, segunda ronda
 
 1. Guarda tu página y refréscala, ahora deberías ver que el error ha desaparecido.
-2. Ahora, si intentas ingresar un número y presionas el botón "Enviar respuesta", verás... ¡otro error! ![](https://mdn.mozillademos.org/files/13498/variable-is-null.png)
+2. Ahora, si intentas ingresar un número y presionas el botón "Enviar respuesta", verás... ¡otro error! ![](variable-is-null.png)
 3. Esta vez, el error que se informa es "`TypeError: lowOrHi es nulo`", en la línea 78.
 
-    > **Nota:** [`Null`](/es/docs/Glossary/Null) es un valor especial que significa "nada" o "sin valor". Por lo tanto, `lowOrHi` ha sido declarado e iniciado, pero no con algún valor significativo — no tiene tipo ni valor.
+   > **Nota:** [`Null`](/es/docs/Glossary/Null) es un valor especial que significa "nada" o "sin valor". Por lo tanto, `lowOrHi` ha sido declarado e iniciado, pero no con algún valor significativo — no tiene tipo ni valor.
 
-    > **Nota:** Este error no apareció tan pronto como se cargó la página porque este error ocurrió dentro de una función (dentro del bloque `checkGuess() {...}`). Como pronto aprenderás con más detalle en nuestro [artículo de funciones](/es/docs/Learn/JavaScript/Building_blocks/Functions), el código dentro de las funciones se ejecuta en un ámbito separado que el código fuera de las funciones. En este caso, el código no se ejecutó y el error no se lanzó hasta que la función `checkGuess()` se ejecutó en la línea 86.
+   > **Nota:** Este error no apareció tan pronto como se cargó la página porque este error ocurrió dentro de una función (dentro del bloque `checkGuess() {...}`). Como pronto aprenderás con más detalle en nuestro [artículo de funciones](/es/docs/Learn/JavaScript/Building_blocks/Functions), el código dentro de las funciones se ejecuta en un ámbito separado que el código fuera de las funciones. En este caso, el código no se ejecutó y el error no se lanzó hasta que la función `checkGuess()` se ejecutó en la línea 86.
 
 4. Échale un vistazo a la línea 78 y verás el siguiente código:
 
-    ```js
-    lowOrHi.textContent = '¡El número es muy grande!';
-    ```
+   ```js
+   lowOrHi.textContent = "¡El número es muy grande!";
+   ```
 
 5. Esta línea está intentando establecer la propiedad `textContent` de la constante `lowOrHi` en una cadena de texto, pero no funciona porque `lowOrHi` no contiene lo que es supone. Veamos por qué es así — intenta buscar otras instancias de `lowOrHi` en el código. La primera instancia que encontrarás en JavaScript está en la línea 48:
 
-    ```js
-    const lowOrHi = document.querySelector('lowOrHi');
-    ```
+   ```js
+   const lowOrHi = document.querySelector("lowOrHi");
+   ```
 
 6. En este punto, estamos intentando hacer que la variable contenga una referencia a un elemento en el HTML del documento. Comprobemos si el valor es `null` después de ejecutar esta línea. Agrega el siguiente código en la línea 49:
 
-    ```js
-    console.log(lowOrHi);
-    ```
+   ```js
+   console.log(lowOrHi);
+   ```
 
-    > **Nota:** [`console.log()`](/es/docs/Web/API/Console/log) es una función de depuración realmente útil que imprime un valor en la consola. Por lo tanto, imprimirá el valor de `lowOrHi` en la consola tan pronto como intentemos configurarlo en la línea 48.
+   > **Nota:** [`console.log()`](/es/docs/Web/API/Console/log) es una función de depuración realmente útil que imprime un valor en la consola. Por lo tanto, imprimirá el valor de `lowOrHi` en la consola tan pronto como intentemos configurarlo en la línea 48.
 
-7. Guarda y refresca, y ahora deberías ver el resultado de `console.log()` en tu consola. ![](https://mdn.mozillademos.org/files/13494/console-log-output.png)Efectivamente, el valor de `lowOrHi`es `null` en este punto, así que definitivamente hay un problema con la línea 48.
+7. Guarda y refresca, y ahora deberías ver el resultado de `console.log()` en tu consola. ![](console-log-output.png)Efectivamente, el valor de `lowOrHi` es `null` en este punto, así que definitivamente hay un problema con la línea 48.
 8. Pensemos en cuál podría ser el problema. La línea 48 está utilizando un método [`document.querySelector()`](/es/docs/Web/API/Document/querySelector) para obtener una referencia a un elemento seleccionándolo con un selector CSS. Buscando más adelante en nuestro archivo, podemos encontrar el párrafo en cuestión:
 
-    ```js
-    <p class="lowOrHi"></p>
-    ```
+   ```js
+   <p class="lowOrHi"></p>
+   ```
 
 9. Entonces necesitamos un selector de clase aquí, que comienza con un punto (`.`), pero el selector que se pasa al método `querySelector()` en la línea 48 no tiene punto. ¡Este podría ser el problema! Intenta cambiar `lowOrHi` a `.lowOrHi` en la línea 48.
 10. Ahora guarda y refresca nuevamente, y tu declaración `console.log()` debería devolver el elemento `<p>` que queremos. ¡Uf! ¡Otro error solucionado! Ahora puedes eliminar tu línea `console.log()`, o mantenerla como referencia más adelante — tu elección.
@@ -126,30 +111,30 @@ Obviamente hay un problema en la lógica del juego en alguna parte — el juego 
 
 1. Busca la variable `randomNumber` y las líneas donde se establece primero el número aleatorio. La instancia que almacena el número aleatorio que queremos adivinar al comienzo del juego debe estar alrededor de la línea número 44:
 
-    ```js
-    let randomNumber = Math.floor(Math.random()) + 1;
-    ```
+   ```js
+   let randomNumber = Math.floor(Math.random()) + 1;
+   ```
 
-    Y la que genera el número aleatorio antes de cada juego subsiguiente está alrededor de la línea 113:
+   Y la que genera el número aleatorio antes de cada juego subsiguiente está alrededor de la línea 113:
 
-2. ```js
-    randomNumber = Math.floor(Math.random()) + 1;
-    ```
+   ```js
+   randomNumber = Math.floor(Math.random()) + 1;
+   ```
 
-3. Para comprobar si estas líneas son realmente el problema, volvamos a echar mano de nuestra amiga `console.log()` — inserta la siguiente línea directamente debajo de cada una de las dos líneas anteriores:
+2. Para comprobar si estas líneas son realmente el problema, volvamos a echar mano de nuestra amiga `console.log()` — inserta la siguiente línea directamente debajo de cada una de las dos líneas anteriores:
 
-    ```js
-    console.log(randomNumber);
-    ```
+   ```js
+   console.log(randomNumber);
+   ```
 
-4. Guarda y refresca, luego juega un par de veces — verás que `randomNumber` es igual a 1 en cada punto en el que se registra en la consola.
+3. Guarda y refresca, luego juega un par de veces — verás que `randomNumber` es igual a 1 en cada punto en el que se registra en la consola.
 
 ### Desentrañando la lógica
 
 Para solucionar esto, consideremos cómo está funcionando esta línea. Primero, invocamos a [`Math.random()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/random), que genera un número decimal aleatorio entre 0 y 1, p. ej. 0.5675493843.
 
 ```js
-Math.random()
+Math.random();
 ```
 
 A continuación, pasamos el resultado de invocar a `Math.random()` a [`Math.floor()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/floor), que redondea el número pasado al número entero más cercano. Luego agregamos 1 a ese resultado:
@@ -161,13 +146,13 @@ Math.floor(Math.random()) + 1
 Redondear un número decimal aleatorio entre 0 y 1 siempre devolverá 0, por lo que agregarle 1 siempre devolverá 1. Necesitamos multiplicar el número aleatorio por 100 antes de redondearlo hacia abajo. Lo siguiente nos daría un número aleatorio entre 0 y 99:
 
 ```js
-Math.floor(Math.random()*100);
+Math.floor(Math.random() * 100);
 ```
 
 De ahí que queramos sumar 1, para darnos un número aleatorio entre 1 y 100:
 
 ```js
-Math.floor(Math.random()*100) + 1;
+Math.floor(Math.random() * 100) + 1;
 ```
 
 Intenta actualizar ambas líneas de esta manera, luego guarda y refresca — ¡el juego ahora debería trabajar como pretendemos!
@@ -254,15 +239,3 @@ Ahí lo tienes, los conceptos básicos para descubrir errores en programas senci
 - Si encuentras algún error en tu código que no estás seguro de cómo solucionarlo después de leer este artículo, ¡puedes obtener ayuda! Solicita ayuda en la [categoría de aprendizaje del foro de discusión de MDN](https://discourse.mozilla.org/c/mdn/learn), o en la [sala de MDN Web Docs](https://chat.mozilla.org/#/room/#mdn:mozilla.org) en [Matrix](https://wiki.mozilla.org/Matrix). Dinos cuál es tu error e intentaremos ayudarte. Una copia de tu código también sería útil.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
-
-## En este modulo
-
-- [¿Qué es JavaScript?](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Primer contacto con JavaScript](/es/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [¿Qué salió mal? Solución de problemas de JavaScript](/es/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Almacenamiento de la información que necesita — Variables](/es/docs/Learn/JavaScript/First_steps/Variables)
-- [Matemáticas básicas en JavaScript — números y operadores](/es/docs/Learn/JavaScript/First_steps/Math)
-- [Manejo de texto — cadenas en JavaScript](/es/docs/Learn/JavaScript/First_steps/Strings)
-- [Métodos de cadena útiles](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arreglos](/es/docs/Learn/JavaScript/First_steps/Arrays)
-- [Evaluación: Generador de historias absurdas](/es/docs/Learn/JavaScript/First_steps/Silly_story_generator)

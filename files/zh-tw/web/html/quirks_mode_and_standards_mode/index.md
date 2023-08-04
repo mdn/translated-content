@@ -3,6 +3,8 @@ title: 怪異模式與標準模式
 slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 ---
 
+{{HTMLSidebar}}
+
 很久以前，網頁通常有兩種版本：針對網景（Netscape）的 Navigator 的版本，以及針對微軟（Microsoft）的 Internet Explorer 的版本。在 W3C 創立網路標準後，為了不破壞當時既有的網站，瀏覽器不能直接起用這些標準。因此，瀏覽器導入了能分辨符合新規範、或屬於老舊網站的兩種模式。
 
 目前瀏覽器的排版引擎有三種模式：怪異模式（Quirks mode）、接近標準模式（Almost standards mode）、以及標準模式（Standards mode）。在**怪異模式**，排版會模擬 Navigator 4 與 Internet Explorer 5 的非標準行為。為了支持在網路標準被廣泛採用前，就已經建置好的網站，這麼做是必要的。在**標準模式**，行為（期待）由 HTML 與 CSS 的規範描述起來。在**接近標準模式**，有少數的怪異行為被實行。
@@ -12,14 +14,13 @@ slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 對 [HTML](/zh-TW/docs/Web/HTML) 文件來說，瀏覽器使用文件開頭的 DOCTYPE 來決定用怪異模式處理或標準模式處理。為了確保頁面使用標準模式，請確認你的頁面，如同本範例一樣擁有 DOCTYPE：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset=UTF-8>
+    <meta charset="UTF-8" />
     <title>Hello World!</title>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 

@@ -1,11 +1,6 @@
 ---
 title: grid-row-end
 slug: Web/CSS/grid-row-end
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/grid-row-end
 ---
 
 {{CSSRef}}
@@ -50,7 +45,7 @@ grid-row-end: unset;
 
     Si aucune zone ne correspond, la valeur est traitée comme la combinaison de l'entier 1 et de `<custom-ident>` (cf. définition suivante).
 
-    ` <custom-ident``> ` ne peut pas prendre la valeur `span`.
+    `<custom-ident>` ne peut pas prendre la valeur `span`.
 
 - `<integer> && <custom-ident>?`
 
@@ -108,7 +103,9 @@ grid-row-end: unset;
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;

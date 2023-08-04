@@ -41,11 +41,11 @@ slug: Web/SVG/Attribute/alignment-baseline
 - `auto` {{deprecated_inline}}
   - : この値はその文字が所属する書法のドミナントベースラインです。すなわち、親のドミナントベースラインを使用します。
 - `baseline`
-  - : Uses the {{Glossary("dominant baseline")}} choice of the parent. Matches the box’s corresponding {{Glossary("baseline")}} to that of its parent.
+  - : Uses the {{Glossary("dominant baseline")}} choice of the parent. Matches the box's corresponding {{Glossary("baseline")}} to that of its parent.
 - `before-edge` {{deprecated_inline}}
   - : The alignment-point of the object being aligned is aligned with the "before-edge" baseline of the parent text content element.
 - `text-bottom`
-  - : Matches the bottom of the box to the top of the parent’s content area.
+  - : Matches the bottom of the box to the top of the parent's content area.
 - `text-before-edge`
 
   - : The alignment-point of the object being aligned is aligned with the "text-before-edge" baseline of the parent text content element.
@@ -55,11 +55,11 @@ slug: Web/SVG/Attribute/alignment-baseline
 - `middle`
   - : Aligns the vertical midpoint of the box with the baseline of the parent box plus half the x-height of the parent.
 - `central`
-  - : Matches the box’s central baseline to the central baseline of its parent.
+  - : Matches the box's central baseline to the central baseline of its parent.
 - `after-edge` {{deprecated_inline}}
   - : The alignment-point of the object being aligned is aligned with the "after-edge" baseline of the parent text content element.
 - `text-top`
-  - : Matches the top of the box to the top of the parent’s content area.
+  - : Matches the top of the box to the top of the parent's content area.
 - `text-after-edge`
 
   - : The alignment-point of the object being aligned is aligned with the "text-after-edge" baseline of the parent text content element.
@@ -67,13 +67,13 @@ slug: Web/SVG/Attribute/alignment-baseline
     > **メモ:** This keyword may be mapped to `text-bottom`.
 
 - `ideographic`
-  - : Matches the box’s ideographic character face under-side baseline to that of its parent.
+  - : Matches the box's ideographic character face under-side baseline to that of its parent.
 - `alphabetic`
-  - : Matches the box’s alphabetic baseline to that of its parent.
+  - : Matches the box's alphabetic baseline to that of its parent.
 - `hanging`
   - : The alignment-point of the object being aligned is aligned with the "hanging" baseline of the parent text content element.
 - `mathematical`
-  - : Matches the box’s mathematical baseline to that of its parent.
+  - : Matches the box's mathematical baseline to that of its parent.
 - `top`
   - : Aligns the top of the aligned subtree with the top of the line box.
 - `center`
@@ -125,11 +125,7 @@ text{
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                                                                                                                     |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName("CSS3 Inline", "#propdef-alignment-baseline", "alignment-baseline")}}     | {{Spec2("CSS3 Inline")}} | 変更なし                                                                                                                 |
-| {{SpecName("SVG2", "text.html#AlignmentBaselineProperty", "alignment-baseline")}}     | {{Spec2("SVG2")}}         | CSS Inline Layout および注釈を参照し、 `auto`, `before-edge`, `after-edge`, `text-before-edge`, `text-after-edge` へ変更 |
-| {{SpecName("SVG1.1", "text.html#AlignmentBaselineProperty", "alignment-baseline")}} | {{Spec2("SVG1.1")}}         | 初回定義                                                                                                                 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,16 +1,9 @@
 ---
-title: '<canvas>: 그래픽 캔버스 요소'
+title: "<canvas>: 그래픽 캔버스 요소"
 slug: Web/HTML/Element/canvas
-tags:
-  - Canvas
-  - Element
-  - HTML
-  - HTML scripting
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/canvas
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<canvas>` 요소**는 [캔버스 스크립팅 API](/ko/docs/Web/HTML/Canvas) 또는 [WebGL API](/ko/docs/Web/API/WebGL_API)와 함께 사용해 그래픽과 애니메이션을 그릴 수 있습니다.
 
@@ -128,9 +121,9 @@ translation_of: Web/HTML/Element/canvas
 그 다음, JavaScript 코드 내에서 {{domxref("HTMLCanvasElement.getContext()")}}를 호출해 그리기 맥락을 얻어서 캔버스 위에 그립니다.
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 ```
 
@@ -156,7 +149,7 @@ ctx.fillRect(10, 10, 100, 100);
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.canvas")}}
+{{Compat}}
 
 ## 같이 보기
 

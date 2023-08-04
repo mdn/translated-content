@@ -1,16 +1,8 @@
 ---
 title: <html>
 slug: Web/HTML/Element/html
-tags:
-  - Elemento
-  - Elemento raiz HTML
-  - HTML
-  - Internet
-  - Rede
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/html
 ---
+
 ## Sumário
 
 O elemento **HTML \<html> **(ou _HTML root element_) representa a raiz de um HTML ou XHTML documento. Todos os outros elementos devem ser descendentes desse elemento.
@@ -26,9 +18,9 @@ O elemento **HTML \<html> **(ou _HTML root element_) representa a raiz de um HTM
 
 Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("manifest")}} {{HTMLVersionInline(5)}} {{Gecko_minversion_inline(1.9)}}
+- {{htmlattrdef("manifest")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Especifica a URI de um recurso manifest indicando os recursos que devem ser carregados na memória local. Veja [Recursos offline em Firefox](/pt-BR/docs/HTML/Using_the_application_cache) para detalhes.
-- {{htmlattrdef("version")}} {{deprecatedGeneric('inline','HTML4.01')}} {{obsoleteGeneric('inline','HTML5')}}
+- {{htmlattrdef("version")}} {{deprecated_inline}}
   - : Especifica a versão da definição de tipo de documento HTML que governa o documento atual. Esse atributo não é necessário, porque é redundante com a informação de versão na declaração de tipo de documento.
 
 ## Exemplo
@@ -64,4 +56,4 @@ Desde que o elemento `<html>` seja o primeiro em documento outro que comenta, es
 - Elemento de alto nível MathML: {{MathMLElement("math")}}
 - Elemento de alto nível SVG: {{SVGElement("svg")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -1,15 +1,8 @@
 ---
 title: Document.execCommand()
 slug: Web/API/Document/execCommand
-tags:
-  - API
-  - DOM
-  - Método(2)
-  - NecesitaEjemplo
-  - Referencia
-  - editor
-translation_of: Web/API/Document/execCommand
 ---
+
 {{ApiRef("DOM")}}{{ Deprecated_header() }}
 
 ## Resumen
@@ -19,7 +12,7 @@ Cuando un documento HTML se ha cambiado a `designMode`, el objeto de documento e
 ## Sintaxis
 
 ```js
-execCommand(aCommandName, aShowDefaultUI, aValueArgument)
+execCommand(aCommandName, aShowDefaultUI, aValueArgument);
 ```
 
 ### Parámetros

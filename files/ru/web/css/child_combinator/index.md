@@ -1,7 +1,6 @@
 ---
 title: Селектор дочерних элементов
 slug: Web/CSS/Child_combinator
-translation_of: Web/CSS/Child_combinator
 ---
 {{CSSRef("Selectors")}}
 
@@ -11,7 +10,9 @@ translation_of: Web/CSS/Child_combinator
 
 ## Синтаксис
 
-    selector1 > selector2 { style properties }
+```
+selector1 > selector2 { style properties }
+```
 
 ## Пример
 

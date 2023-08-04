@@ -1,13 +1,8 @@
 ---
 title: Window.scroll()
 slug: Web/API/Window/scroll
-tags:
-  - API
-  - CSSOM View
-  - Referencia
-  - metodo
-translation_of: Web/API/Window/scroll
 ---
+
 {{APIRef}}
 
 El método **`Window.scroll()`** desplaza la ventana a un lugar particular en el documento.
@@ -15,8 +10,8 @@ El método **`Window.scroll()`** desplaza la ventana a un lugar particular en el
 ## Sintaxis
 
 ```js
-window.scroll(x-coord, y-coord)
-window.scroll(options)
+window.scroll(x_coord, y_coord);
+window.scroll(options);
 ```
 
 ### Parámetros
@@ -33,7 +28,9 @@ window.scroll(options)
 ```html
 <!-- poner el pixel 100º verticalmente en el tope superior de la ventana -->
 
-<button onClick="scroll(0, 100);">Clic para desplazarse hacia abajo 100 pixeles</button>
+<button onClick="scroll(0, 100);">
+  Clic para desplazarse hacia abajo 100 pixeles
+</button>
 ```
 
 Utilizando `options`:
@@ -42,7 +39,7 @@ Utilizando `options`:
 window.scroll({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 
@@ -52,15 +49,13 @@ window.scroll({
 
 Para desplazarse sobre elementos, mira {{domxref("Element.scrollTop")}} y {{domxref("Element.scrollLeft")}}.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario          |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }} | {{ Spec2('CSSOM View') }} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.scroll")}}
+{{Compat}}
 
 ## Ver también
 

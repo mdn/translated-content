@@ -1,8 +1,8 @@
 ---
 title: Console.time()
-slug: Web/API/Console/time
-translation_of: Web/API/Console/time
+slug: Web/API/console/time
 ---
+
 {{ APIRef("Console API") }}{{Non-standard_header}}
 
 ## Sumário

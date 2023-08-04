@@ -1,13 +1,13 @@
 ---
 title: progress
 slug: Web/HTML/Element/progress
-translation_of: Web/HTML/Element/progress
 ---
+
 o elemento HTML progress (\<progress>) é usado para visualizar o progresso de uma tarefa. Embora as especifidades de como é mostrado ficam a cargo do desenvolvedor, tipicamente, é mostrado como uma barra de progresso.
 
 ## Contexto de uso
 
-| Conteúdo permitido     | [Conteúdo de texto](/en/HTML/Content_categories#Phrasing_content)                  |
+| Conteúdo permitido     | [Conteúdo de texto](/pt-BR/HTML/Content_categories#Phrasing_content)                  |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | Omissão de Tag         | Nenhum, ambas as tags (abertura e encerramento) são obrigatórias                                                                 |
 | Elemento pai permitido | Conteúdo fraseado (phrasing content), mas não deve haver descendentes do elemento progress                                       |

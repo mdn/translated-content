@@ -70,9 +70,7 @@ slug: Web/CSS/display-inside
 
 ## 仕様書
 
-| 仕様書                                                                                    | 状態                           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-inside', 'display-inside')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

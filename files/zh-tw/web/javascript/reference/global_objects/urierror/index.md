@@ -39,11 +39,20 @@ new URIError([message[, fileName[, lineNumber]]])
 
 ### 屬性
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', 'Properties')}}
-
-### 方法
-
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', 'Methods')}}
+- {{jsxref("Error.prototype.message", "URIError.prototype.message")}}
+  - : Error message. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.name", "URIError.prototype.name")}}
+  - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.cause", "URIError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.fileName", "URIError.prototype.fileName")}} {{non-standard_inline}}
+  - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.lineNumber", "URIError.prototype.lineNumber")}} {{non-standard_inline}}
+  - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.columnNumber", "URIError.prototype.columnNumber")}} {{non-standard_inline}}
+  - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.stack", "URIError.prototype.stack")}} {{non-standard_inline}}
+  - : Stack trace. Inherited from {{jsxref("Error")}}.
 
 ## 範例
 
@@ -51,15 +60,15 @@ new URIError([message[, fileName[, lineNumber]]])
 
 ```js
 try {
-  decodeURIComponent('%');
+  decodeURIComponent("%");
 } catch (e) {
   console.log(e instanceof URIError); // true
-  console.log(e.message);             // "malformed URI sequence"
-  console.log(e.name);                // "URIError"
-  console.log(e.fileName);            // "Scratchpad/1"
-  console.log(e.lineNumber);          // 2
-  console.log(e.columnNumber);        // 2
-  console.log(e.stack);               // "@Scratchpad/2:2:3\n"
+  console.log(e.message); // "malformed URI sequence"
+  console.log(e.name); // "URIError"
+  console.log(e.fileName); // "Scratchpad/1"
+  console.log(e.lineNumber); // 2
+  console.log(e.columnNumber); // 2
+  console.log(e.stack); // "@Scratchpad/2:2:3\n"
 }
 ```
 
@@ -67,15 +76,15 @@ try {
 
 ```js
 try {
-  throw new URIError('Hello', 'someFile.js', 10);
+  throw new URIError("Hello", "someFile.js", 10);
 } catch (e) {
   console.log(e instanceof URIError); // true
-  console.log(e.message);             // "Hello"
-  console.log(e.name);                // "URIError"
-  console.log(e.fileName);            // "someFile.js"
-  console.log(e.lineNumber);          // 10
-  console.log(e.columnNumber);        // 0
-  console.log(e.stack);               // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "URIError"
+  console.log(e.fileName); // "someFile.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 
@@ -87,7 +96,7 @@ try {
 
 {{Compat}}
 
-## 另見
+## 參見
 
 - {{jsxref("Error")}}
 - {{jsxref("URIError.prototype")}}

@@ -1,6 +1,6 @@
 ---
 title: CSS 封じ込め
-slug: Web/CSS/CSS_Containment
+slug: Web/CSS/CSS_containment
 ---
 
 {{CSSRef}}
@@ -124,9 +124,7 @@ contain: strict style;
 
 ## 仕様書
 
-| 仕様書                                                                            | 状態                                   | 備考               |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------- |
-| {{SpecName('CSS Containment 2', '#contain-property', 'contain')}} | {{Spec2('CSS Containment 2')}} | `style` キーワードを追加 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

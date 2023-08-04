@@ -1,18 +1,11 @@
 ---
 title: Vary
 slug: Web/HTTP/Headers/Vary
-tags:
-  - En-tête de réponse
-  - HTTP
-  - Reference
-  - Réponse
-  - en-tête
-translation_of: Web/HTTP/Headers/Vary
 ---
 
 {{HTTPSidebar}}
 
-L'en-tête HTTP  **`Vary`** détermine comment les en-têtes de requêtes futures sont associés pour décider si une réponse en cache peut être réutilisée plutôt que de solliciter à nouveau le serveur d'origine. Il est utilisé par le serveur pour indiquer quels en-têtes sont utilisés pour représenter une resource dans un algorithme de [négociation de contenu](/fr/docs/Web/HTTP/Content_negotiation).
+L'en-tête HTTP **`Vary`** détermine comment les en-têtes de requêtes futures sont associés pour décider si une réponse en cache peut être réutilisée plutôt que de solliciter à nouveau le serveur d'origine. Il est utilisé par le serveur pour indiquer quels en-têtes sont utilisés pour représenter une resource dans un algorithme de [négociation de contenu](/fr/docs/Web/HTTP/Content_negotiation).
 
 L'en-tête `Vary` doit être renseigné de manière identique sur une réponse {{HTTPStatus("304")}} `Not Modified` à ce qu'elle aurait été sur la réponse {{HTTPStatus("200")}} `OK` correspondante.
 
@@ -55,17 +48,11 @@ Vary: User-Agent
 
 ## Spécifications
 
-| Spécification                                | Titre                                                         |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Vary", "7.1.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Vary")}}
-
-## Notes de compatibilité
-
-- [Vary with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
+{{Compat}}
 
 ## Voir aussi
 

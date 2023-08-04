@@ -1,18 +1,8 @@
 ---
 title: Request.credentials
 slug: Web/API/Request/credentials
-tags:
-  - API
-  - Cookies
-  - Fetch
-  - Networking
-  - Property
-  - Reference
-  - Security
-  - credentials
-  - request
-translation_of: Web/API/Request/credentials
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Request")}} 인터페이스의 **`credentials`** 읽기 전용 속성은 cross-origin 요청의 경우, user agent가 다른 도메인으로부터 cookie 들을 전달해야만 하는가 아닌가를 나타낸다. 이것은 XHR 의 withCredentials flag 과 비슷하지만, (2개가 아니라) 3가지 값이 사용 가능하다 :
@@ -36,15 +26,15 @@ var myCred = request.credentials;
 다음의 snippet 에서, 우리는 {{domxref("Request.Request()")}} constructor 를 사용하여 (스크립트와 동일한 디렉토리의 이미지 파일을 위한) 새로운 요청(request)를 생성하고, 변수에 요청(request) credentials 을 저장한다.
 
 ```js
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 var myCred = myRequest.credentials; // returns "same-origin" by default
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

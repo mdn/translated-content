@@ -1,22 +1,32 @@
 ---
-title: Window.confirm()
+title: "Window: Método confirm() "
 slug: Web/API/Window/confirm
-translation_of: Web/API/Window/confirm
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
+
 {{ApiRef("Window")}}
 
-El método **`Window.confirm()`** muestra una ventana de diálogo con un mensaje opcional y dos botones, Aceptar y Cancelar.
+`window.confirm()` le indica al navegador que muestre una ventana de diálogo con un mensaje opcional, y que espere hasta que el usuario acepte o cancele la ventana de confirmación.
+
+Bajo algunas condiciones por ejemplo, cuando el usuario cambia de pestaña es posible que el navegador no muestre un cuadro de diálogo, ó que no espere a que el usuario confirme o cancele el cuadro de diálogo.
 
 ## Sintaxis
 
 ```js
-result = window.confirm(message);
+confirm(message);
 ```
 
-- `message` es la cadena que se muestra opcionalmente en el diálogo.
-- `result` es un valor booleano indicando si se ha pulsado Aceptar o Cancelar (Aceptar devuelve true).
+### Parámetros
 
-## Ejemplo
+- `message`
+  - : Una cadena de texto que se va a mostrar en la ventana de diálogo de confirmación.
+
+### Valor devuelto
+
+Un valor booleano que indica si seleccionó OK (`true`) o Cancel (`false`). Si un navegador esta ignorando cuadros de diálogo, entonces el valor devuelto siempre será `false`.
+
+## Ejemplos
 
 ```js
 if (window.confirm("Do you really want to leave?")) {
@@ -24,27 +34,26 @@ if (window.confirm("Do you really want to leave?")) {
 }
 ```
 
-Da como resultado:
+Produce:
 
-![firefox confirm](https://mdn.mozillademos.org/files/7163/firefoxcomfirmdialog_zpsf00ec381.png)
+![Firefox confirm](firefox_confirm_dialog.png)
 
 ## Notas
 
-The following text is shared between this article, DOM:window\.prompt and DOM:window\.alert Las cajas de diálogo son ventanas modales - ello impide al usuario continuar accediendo al resto del interfaz del programa hasta que la ventana modal haya sido cerrada. Por esta razón no se debería usar en exceso funciones que creen cajas de diálogo (o ventanas modales). No obstante, hay muy buenas razones para [evitar el uso de cajas de diálogo para confirmaciones](http://alistapart.com/article/neveruseawarning).
+Los cuadros de diálogo son ventanas modales, ellos impiden al usuario acceder al resto de la interfaz del programa hasta que no se cierre. Por esta razón, no debería abusar de ninguna función que cree un cuadro de diálogo (o ventana modal). No obstante, hay buenas razones para [evitar el uso de cuadros de diálogo para confirmaciones](https://alistapart.com/article/neveruseawarning/).
 
-Los usuarios de [Mozilla Chrome](/en-US/Chrome) users (e.g. Firefox extensions) deberían usar métodos de `nsIPromptService` en vez de cajas de diálogo.
+Como alternativa, puede usar el elemento {{HTMLElement("dialog")}}.
 
-A partir de la versión {{CompatChrome(46.0)}} de Chrome este método es bloqueado dentro de un {{htmlelement("iframe")}} a no ser que el atributo sandbox tenga el valor `allow-modal`.
+## Especificaciones
 
-{{gecko_minversion_inline("23.0")}} El argumento es opcional y no requerido por la especificación.
+{{Specifications}}
 
-## Especificación
+## Compatibilidad con navegadores
 
-| Especificación                                                                           | Estado                                       | Comentarios         |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('HTML5 Web application', '#dom-confirm', 'confirm()')}} | {{Spec2('HTML5 Web application')}} | Definición inicial. |
+{{Compat}}
 
-## Ver también
+## Véase también
 
-- {{domxref("window.alert","alert")}}
-- {{domxref("window.prompt","prompt")}}
+- Elemento {{HTMLElement("dialog")}}
+- {{domxref("window.alert()")}}
+- {{domxref("window.prompt()")}}

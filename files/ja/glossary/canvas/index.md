@@ -9,7 +9,7 @@ slug: Glossary/Canvas
 
 ### 基本知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "Canvas要素")}} のページ
+- Wikipedia 上の [Canvas要素](https://ja.wikipedia.org/wiki/Canvas要素) のページ
 
 ### Canvas について詳しく学ぶ
 

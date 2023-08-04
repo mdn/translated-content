@@ -32,9 +32,7 @@ const registry = new FinalizationRegistry(heldValue => {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('WeakRefs', '#sec-finalization-registry-constructor', 'FinalizationRegistry constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

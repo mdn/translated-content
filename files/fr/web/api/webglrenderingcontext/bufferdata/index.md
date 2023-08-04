@@ -1,13 +1,6 @@
 ---
 title: WebGLRenderingContext.bufferData()
 slug: Web/API/WebGLRenderingContext/bufferData
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/bufferData
 ---
 
 {{APIRef("WebGL")}}
@@ -75,16 +68,16 @@ Aucune.
 ### Exceptions
 
 - Une erreur `gl.OUT_OF_MEMORY` est déclenchée si le contexte ne peut pas créer un magasin de données de la `taille` indiquée.
-- Une erreur`gl.INVALID_VALUE` est déclenchée si `taille` est négative.
-- Une erreur `gl.INVALID_ENUM` est déclenchée si `cible` ou`utilisation` ne sont pas l'un des enums autorisés.
+- Une erreur `gl.INVALID_VALUE` est déclenchée si `taille` est négative.
+- Une erreur `gl.INVALID_ENUM` est déclenchée si `cible` ou `utilisation` ne sont pas l'un des enums autorisés.
 
 ## Exemples
 
 ### Utilisation de `bufferData`
 
 ```js
-var canevas = document.getElementById('canevas');
-var gl = canevas.getContext('webgl');
+var canevas = document.getElementById("canevas");
+var gl = canevas.getContext("webgl");
 var tampon = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, tampon);
 gl.bufferData(gl.ARRAY_BUFFER, 1024, gl.STATIC_DRAW);

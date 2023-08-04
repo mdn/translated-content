@@ -1,9 +1,8 @@
 ---
 title: Date.prototype.setMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMonth
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/setMonth
 ---
+
 {{JSRef}}El método **`setMonth()`** establece el mes para una fecha específica de acuerdo con el año establecido actualmente.{{EmbedInteractiveExample("pages/js/date-setmonth.html")}}
 
 ## Sintaxis
@@ -53,13 +52,11 @@ console.log(endOfMonth); //Wed Mar 02 2016 00:00:00
 
 ## Especificaciones
 
-| Especificación                                                                                               |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.setmonth', 'Date.prototype.setMonth')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.setMonth")}}
+{{Compat}}
 
 ## Ver también
 

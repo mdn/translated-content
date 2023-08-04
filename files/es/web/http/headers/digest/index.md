@@ -1,21 +1,13 @@
 ---
 title: SubtleCrypto.digest()
 slug: Web/HTTP/Headers/Digest
-tags:
-  - API
-  - Encriptación
-  - Referencia
-  - SubtleCrypto
-  - Web Crypto API
-  - encrypt
-translation_of: Web/HTTP/Headers/Digest
-original_slug: Web/API/SubtleCrypto/encrypt
 ---
+
 {{APIRef("Web Crypto API")}}
 
 El método **`digest()`** de la interfaz {{domxref("SubtleCrypto")}} genera un digest de los datos proveidos. Un {{domxref("digest")}} es un valor corto de longitud fija derivado de alguna entrada de longitud variable. Los digest criptográficos deben mostrar resistencia a colisiones, lo que significa que es difícil encontrar dos entradas diferentes que tengan el mismo valor de digest.
 
-Toma como argumento un identificador para el algoritmo digest a utilizar y los datos a codificar. Devuelve un [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.") que se completará con el digest.
+Toma como argumento un identificador para el algoritmo digest a utilizar y los datos a codificar. Devuelve un [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise) que se completará con el digest.
 
 ## Sintaxis
 
@@ -36,7 +28,7 @@ const digest = crypto.subtle.digest(algorithm, data);
 
 ### Valor de retorno
 
-- `digest` es un [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.") que se completa con un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) conteniendo el digest.
+- `digest` es un [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise) que se completa con un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) conteniendo el digest.
 
 ## Algoritmos soportados
 
@@ -69,12 +61,13 @@ Este algoritmo se especifica en [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/F
 Este ejemplo codifica un mensaje, luego calcula su digest SHA-256 y muestra la longitud del mismo:
 
 ```js
-const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
+const text =
+  "An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.";
 
 async function digestMessage(message) {
   const encoder = new TextEncoder();
   const data = encoder.encode(message);
-  const hash = await crypto.subtle.digest('SHA-256', data);
+  const hash = await crypto.subtle.digest("SHA-256", data);
   return hash;
 }
 
@@ -87,13 +80,16 @@ console.log(digestBuffer.byteLength);
 El resumen se devuelve como un `ArrayBuffer`, pero para la comparación y visualización los digests se representan a menudo como cadenas hexadecimales. Este ejemplo calcula un digest, y luego convierte el `ArrayBuffer` a un string hexadecimal:
 
 ```js
-const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
+const text =
+  "An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.";
 
 async function digestMessage(message) {
-  const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
-  const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // hash the message
-  const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convert buffer to byte array
-  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
+  const msgUint8 = new TextEncoder().encode(message); // encode as (utf-8) Uint8Array
+  const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8); // hash the message
+  const hashArray = Array.from(new Uint8Array(hashBuffer)); // convert buffer to byte array
+  const hashHex = hashArray
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join(""); // convert bytes to hex string
   return hashHex;
 }
 
@@ -103,13 +99,11 @@ console.log(digestHex);
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                               | Comentario          |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-digest', 'SubtleCrypto.digest()')}} | {{Spec2('Web Crypto API')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 
-{{Compat("api.SubtleCrypto.digest")}}
+{{Compat}}
 
 > **Nota:** En Chrome 60, se añadió una característica que deshabilita crypto.subtle para conexiones no TLS.
 

@@ -9,4 +9,4 @@ slug: Glossary/Ciphertext
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "暗号文")}}
+- Wikipedia 上の [暗号文](https://ja.wikipedia.org/wiki/暗号文)

@@ -74,22 +74,22 @@ _Example 1: A simple image-based checkbox widget using tabindex to allow keyboar
 ```html
 <!-- 没有 tabindex 属性的话，这些 <span> 元素不会被键盘 focus 中 -->
 <div>
-    <span role="checkbox" aria-checked="true" tabindex="0">
-        <img src="checked.gif" role="presentation" alt="" />
-        Include decorative fruit basket
-    </span>
+  <span role="checkbox" aria-checked="true" tabindex="0">
+    <img src="checked.gif" role="presentation" alt="" />
+    Include decorative fruit basket
+  </span>
 </div>
 <div>
-    <span role="checkbox" aria-checked="true" tabindex="0">
-        <img src="checked.gif" role="presentation" alt="" />
-        Include singing telegram
-    </span>
+  <span role="checkbox" aria-checked="true" tabindex="0">
+    <img src="checked.gif" role="presentation" alt="" />
+    Include singing telegram
+  </span>
 </div>
 <div>
-    <span role="checkbox" aria-checked="false" tabindex="0">
-        <img src="unchecked.gif" role="presentation" alt="" />
-        Require payment before delivery
-    </span>
+  <span role="checkbox" aria-checked="false" tabindex="0">
+    <img src="unchecked.gif" role="presentation" alt="" />
+    Require payment before delivery
+  </span>
 </div>
 ```
 
@@ -103,7 +103,8 @@ _范例 2: 一个使用 tabindex 控制键盘 access 的菜单控件_
 
 ```html
 <ul id="mb1" tabindex="0">
-  <li id="mb1_menu1" tabindex="-1"> Font
+  <li id="mb1_menu1" tabindex="-1">
+    Font
     <ul id="fontMenu" title="Font" tabindex="-1">
       <li id="sans-serif" tabindex="-1">Sans-serif</li>
       <li id="serif" tabindex="-1">Serif</li>
@@ -111,14 +112,16 @@ _范例 2: 一个使用 tabindex 控制键盘 access 的菜单控件_
       <li id="fantasy" tabindex="-1">Fantasy</li>
     </ul>
   </li>
-  <li id="mb1_menu2" tabindex="-1"> Style
+  <li id="mb1_menu2" tabindex="-1">
+    Style
     <ul id="styleMenu" title="Style" tabindex="-1">
       <li id="italic" tabindex="-1">Italics</li>
       <li id="bold" tabindex="-1">Bold</li>
       <li id="underline" tabindex="-1">Underlined</li>
     </ul>
   </li>
-  <li id="mb1_menu3" tabindex="-1"> Justification
+  <li id="mb1_menu3" tabindex="-1">
+    Justification
     <ul id="justificationMenu" title="Justication" tabindex="-1">
       <li id="left" tabindex="-1">Left</li>
       <li id="center" tabindex="-1">Centered</li>
@@ -137,7 +140,7 @@ _范例 2: 一个使用 tabindex 控制键盘 access 的菜单控件_
 
 当用户从一个组件 tab 离开之后 focus 回来，焦点应该回到离开之时正被 focus 中的元素上，比如某个树节点或者网格单元。有两种办法完成这一点：
 
-1. `流动 tabindex`: 通过编程移动 focus
+1. 流动 `tabindex`: 通过编程移动 focus
 2. `aria-activedescendent`: 管理一个“虚拟”focus
 
 #### 方法 1: 流动 tabindex
@@ -166,7 +169,7 @@ _范例 2: 一个使用 tabindex 控制键盘 access 的菜单控件_
 
 #### 方法 2: aria-activedescendant
 
-这个办法包含绑定一个单独的事件句柄到容器窗口组件上，运用 `aria-activedescendent 属性`来追踪一个 "虚拟" 焦点。（关于 ARIA 更多的信息，查看 [overview of accessible web applications and widgets](../../../../An_Overview_of_Accessible_Web_Applications_and_Widgets).）
+这个办法包含绑定一个单独的事件句柄到容器窗口组件上，运用 `aria-activedescendent` 属性来追踪一个 "虚拟" 焦点。（关于 ARIA 更多的信息，查看[可访问的 Web 应用程序和组件概述](/zh-CN/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)。）
 
 `aria-activedescendant` 属性用来标识拥有虚拟焦点的后代元素的 ID。在窗口容器的事件句柄里面在键盘和鼠标事件响应更新 aria-activedescendant 值并且确保当前 The event handler on the container must respond to key and mouse events by updating the value of `aria-activedescendant` and ensuring that the current item is styled appropriately (for example, with a border or background color).
 
@@ -201,7 +204,7 @@ IE 7 及更早版本不支持 `:focus` 伪选择器，不要用它来设置焦�
 
 #### 始终用程序为 tabindex="-1" 的项和元素设置焦点样式
 
-IE 不会自动为` tabindex="-1" `的元素绘制聚焦框。可以选择一种方法解决，比如通过 `this.style.backgroundColor="gray"` 改变选中项目的背景颜色，或通过 `this.style.border="1px dotted invert"` 添加虚线边框。如果使用虚线边框的，需要确保这些元素有隐含的一象素边框，这样，当聚焦的边框样式应用上去的时候，元素的大小才不会改变（边框会占用空间，而 IE 没有实现 CSS outline）。
+IE 不会自动为`tabindex="-1"`的元素绘制聚焦框。可以选择一种方法解决，比如通过 `this.style.backgroundColor="gray"` 改变选中项目的背景颜色，或通过 `this.style.border="1px dotted invert"` 添加虚线边框。如果使用虚线边框的，需要确保这些元素有隐含的一象素边框，这样，当聚焦的边框样式应用上去的时候，元素的大小才不会改变（边框会占用空间，而 IE 没有实现 CSS outline）。
 
 #### 阻止浏览器的按键事件处理
 
@@ -210,11 +213,11 @@ IE 不会自动为` tabindex="-1" `的元素绘制聚焦框。可以选择一种
 例如：
 
 ```html
-<span tabindex="-1" onkeydown="return handleKeyDown();">
+<span tabindex="-1" onkeydown="return handleKeyDown();"></span>
 ```
 
 如果 `handleKeyDown()` 返回 `false`，将会结束事件处理，阻止浏览器继续处理按键行为。
 
 #### 不要认为按键连发（repeat）有一致性
 
-非常不幸，`onkeydown 连发或不连发`取决于代码执行的浏览器和操作系统。
+非常不幸，`onkeydown` 连发或不连发取决于代码执行的浏览器和操作系统。

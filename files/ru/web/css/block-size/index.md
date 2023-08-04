@@ -1,19 +1,10 @@
 ---
 title: block-size
 slug: Web/CSS/block-size
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Experimental
-  - Reference
-  - Справка
-  - Экспериментальный
-translation_of: Web/CSS/block-size
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-Свойство **`block-size`** [CSS](/ru/docs/Web/CSS "CSS") задаёт горизонтальный и вертикальный размер блока элемента, в зависимости от режима его записи (writing mode). Оно соответствует свойствам {{cssxref("width")}} и {{cssxref("height")}} и зависит от значения свойства {{cssxref("writing-mode")}}.
+Свойство **`block-size`** [CSS](/ru/docs/Web/CSS) задаёт горизонтальный и вертикальный размер блока элемента, в зависимости от режима его записи (writing mode). Оно соответствует свойствам {{cssxref("width")}} и {{cssxref("height")}} и зависит от значения свойства {{cssxref("writing-mode")}}.
 
 ```css
 /* <length> values */

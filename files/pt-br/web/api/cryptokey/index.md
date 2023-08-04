@@ -1,14 +1,8 @@
 ---
 title: CryptoKey
 slug: Web/API/CryptoKey
-tags:
-  - API
-  - Chaves Criptografadas
-  - Interface
-  - Referencia
-  - Web Crypto API
-translation_of: Web/API/CryptoKey
 ---
+
 {{APIRef("Web Crypto API")}}
 
 A interface **`CryptoKey`** representa uma {{glossary("key")}} criptografada derivada de uma key de algoritmo definido.
@@ -34,18 +28,16 @@ _Esta interface não herda, nem implementa nenhum método._
 
 ## Especificações
 
-| Especificação                                                                        | Status                                   | Comentário         |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{ SpecName('Web Crypto API', '#dfn-CryptoKey', 'CryptoKey') }} | {{ Spec2('Web Crypto API') }} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CryptoKey")}}
+{{Compat}}
 
 ## Veja também
 
 - {{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.
 
-### Dicionário:
+### Dicionário
 
 "Key" = "Chave"

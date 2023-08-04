@@ -1,15 +1,9 @@
 ---
 title: <textarea>
 slug: Web/HTML/Element/textarea
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Web
-translation_of: Web/HTML/Element/textarea
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<textarea>` 요소**는 멀티라인 일반 텍스트 편집 컨트롤을 나타냅니다.
 
@@ -27,7 +21,7 @@ translation_of: Web/HTML/Element/textarea
 
 ## 속성
 
-이 요소는 [전역 속성](/ko/docs/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 속성](/ko/docs/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
 
@@ -66,7 +60,7 @@ translation_of: Web/HTML/Element/textarea
 - {{ htmlattrdef("placeholder") }}
   - : A hint to the user of what can be entered in the control. The placeholder text must not contain carriage returns or line-feeds.
 - {{ htmlattrdef("readonly") }}
-  - : 이 불리언 속성은 사용자가 컨트롤의 값을 수정할수 없다는것을 가리킵니다. `disabled` 속성과는 다르게, `readonly` 속성은 사용자가 컨트롤을 클릭하거나 선택하는것을 막지 않습니다.` readonly` 컨트롤의 값은 여전히 폼과 함께 제출 됩니다..
+  - : 이 불리언 속성은 사용자가 컨트롤의 값을 수정할수 없다는것을 가리킵니다. `disabled` 속성과는 다르게, `readonly` 속성은 사용자가 컨트롤을 클릭하거나 선택하는것을 막지 않습니다. `readonly` 컨트롤의 값은 여전히 폼과 함께 제출 됩니다..
 - {{ htmlattrdef("required") }}
   - : 이 속성은 사용자가 폼을 제출하기 전에 반드시 채워야 한다는 것을 가리킵니다.
 - {{ htmlattrdef("rows") }}
@@ -90,7 +84,7 @@ translation_of: Web/HTML/Element/textarea
 
 ## DOM 인터페이스
 
-이 요소는 [`HTMLTextAreaElement`](/en/DOM/HTMLTextAreaElement "en/DOM/textarea") 인터페이스를 구현합니다.
+이 요소는 [`HTMLTextAreaElement`](/en/DOM/HTMLTextAreaElement) 인터페이스를 구현합니다.
 
 Gecko 2.0 introduced support for resizable textareas. This is controlled by the [resize (ko)](/ko/docs/Web/CSS/resize) CSS property. Resizing of textareas is enabled by default, but you can explicitly disable it by including the following CSS:
 
@@ -102,7 +96,7 @@ textarea {
 
 ## CSS와 상호작용 하기
 
-In regards to CSS, an `<textarea>` is a [replaced element](/ko/docs/CSS/Replaced_element "/ko/docs/CSS/Replaced_element"). The HTML specification doesn't define where the baseline of a `<textarea>` is. So different browsers set it to different positions. For Gecko, the `<textarea>` baseline is set on the baseline of the first line of the textarea's first line, on another browser it may be set on the bottom of the `<textarea>` box. Don't use {{cssxref("vertical-align")}}`: baseline` on it, as the behavior will be unpredictable.
+In regards to CSS, an `<textarea>` is a [replaced element](/ko/docs/CSS/Replaced_element). The HTML specification doesn't define where the baseline of a `<textarea>` is. So different browsers set it to different positions. For Gecko, the `<textarea>` baseline is set on the baseline of the first line of the textarea's first line, on another browser it may be set on the bottom of the `<textarea>` box. Don't use {{cssxref("vertical-align")}}`: baseline` on it, as the behavior will be unpredictable.
 
 _Textarea_ 는 래스터 이미지 처럼 고유한 넓이를 가지고 있습니다.
 
@@ -122,7 +116,7 @@ _Textarea_ 는 래스터 이미지 처럼 고유한 넓이를 가지고 있습�
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.textarea")}}
+{{Compat}}
 
 ## 같이 보기
 

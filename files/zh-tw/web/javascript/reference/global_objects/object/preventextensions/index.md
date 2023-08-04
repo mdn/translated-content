@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 
 ## 語法
 
-```plain
+```js-nolint
 Object.preventExtensions(obj)
 ```
 
@@ -22,7 +22,7 @@ Object.preventExtensions(obj)
 
 物件如果可以被增加新的屬性，我們稱它可以被擴充(extensible)。`Object.preventExtensions()` 標註物件使它無法被擴充，所以在它被標註為無法擴充當下，它將無法再增加新的屬性。不過注意一點，在一般狀況下，被標註為無法擴充的物件，其屬性仍可被刪除(_deleted_)。嘗試去增加屬性將會導致失敗，可能會沒有結果產生，或是傳回一個 {{jsxref("TypeError")}} (最常見，但並不是一定，當在{{jsxref("Functions_and_function_scope/Strict_mode", "strict mode", "", 1)}})。
 
-`Object.preventExtensions()` 只有避免物件被增加屬性，屬性仍可以被增加至 `object prototype`。不過，呼叫 `Object.preventExtensions()` 使用在物件上，就可以使其 {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}} 屬性無法被擴充。
+`Object.preventExtensions()` 只有避免物件被增加屬性，屬性仍可以被增加至 `object prototype`。不過，呼叫 `Object.preventExtensions()` 使用在物件上，就可以使其 [`Object.prototype.__proto__`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{deprecated_inline}} 屬性無法被擴充。
 
 如果能把可擴充物件，轉成無法擴充物件，在 ECMAScript 5 規範中，它並沒有任何方法轉回來。
 
@@ -45,12 +45,12 @@ Object.isExtensible(empty); // === false
 // Object.defineProperty throws 當為無法擴充的物件增加屬性
 var nonExtensible = { removable: true };
 Object.preventExtensions(nonExtensible);
-Object.defineProperty(nonExtensible, 'new', { value: 8675309 }); // throws a TypeError
+Object.defineProperty(nonExtensible, "new", { value: 8675309 }); // throws a TypeError
 
 // 在 strict mode 中，嘗試去新增屬性給無法擴充物件，將 throws 出一個 TypeError。
 function fail() {
-  'use strict';
-  nonExtensible.newProperty = 'FAIL'; // throws a TypeError
+  "use strict";
+  nonExtensible.newProperty = "FAIL"; // throws a TypeError
 }
 fail();
 
@@ -58,7 +58,7 @@ fail();
 // (which is deprecated. Use Object.getPrototypeOf instead)):
 // A non-extensible object's prototype is immutable.
 var fixed = Object.preventExtensions({});
-fixed.__proto__ = { oh: 'hai' }; // throws a TypeError
+fixed.__proto__ = { oh: "hai" }; // throws a TypeError
 ```
 
 ## 筆記
@@ -81,7 +81,7 @@ Object.preventExtensions(1);
 
 {{Compat}}
 
-## 閱讀更多
+## 參見
 
 - {{jsxref("Object.isExtensible()")}}
 - {{jsxref("Object.seal()")}}

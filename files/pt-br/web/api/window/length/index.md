@@ -1,18 +1,8 @@
 ---
 title: Window.length
 slug: Web/API/Window/length
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Propriedade
-  - Referencia
-  - Referência do DOM
-  - Referência do DOM do Gecko
-  - WebAPI
-  - Window
-translation_of: Web/API/Window/length
 ---
+
 {{ ApiRef() }}
 
 ## Resumo
@@ -37,6 +27,8 @@ if (window.length) {
 
 ## Especificações
 
-| Especificação                                                                                | Status                           | Comentário |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','browsers.html#dom-length','Window.length')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

@@ -34,27 +34,25 @@ Rendering in your browser: <math><mover accent="true"><mrow><mi>x </mi><mo>+ </m
 
 ```html
 <math>
-
-<mover accent="true">
-  <mrow>
-    <mi> x </mi>
-    <mo> + </mo>
-    <mi> y </mi>
-    <mo> + </mo>
-    <mi> z </mi>
-  </mrow>
-  <mo> &#x23DE; <!--TOP CURLY BRACKET--> </mo>
-</mover>
-
+  <mover accent="true">
+    <mrow>
+      <mi> x </mi>
+      <mo> + </mo>
+      <mi> y </mi>
+      <mo> + </mo>
+      <mi> z </mi>
+    </mrow>
+    <mo>
+      &#x23DE;
+      <!--TOP CURLY BRACKET-->
+    </mo>
+  </mover>
 </math>
 ```
 
 ## 仕様書
 
-| Specification                                                                        | Status                       | Comment               |
-| ------------------------------------------------------------------------------------ | ---------------------------- | --------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mover', 'mover') }} | {{ Spec2('MathML3') }} | Current specification |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mover', 'mover') }} | {{ Spec2('MathML2') }} | Initial specification |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

@@ -1,8 +1,8 @@
 ---
 title: transform-style
 slug: Web/CSS/transform-style
-translation_of: Web/CSS/transform-style
 ---
+
 A propriedade **`transform-style`** [CSS](/pt-BR/docs/Web/CSS) define se os elemento filhos são posicionados em um espaco 3D ou serão achatados ( flattened ) no plano do elemento
 
 {{EmbedInteractiveExample("pages/css/transform-style.html")}}

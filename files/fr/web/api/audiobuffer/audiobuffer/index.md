@@ -1,7 +1,6 @@
 ---
 title: AudioBuffer()
 slug: Web/API/AudioBuffer/AudioBuffer
-translation_of: Web/API/AudioBuffer/AudioBuffer
 ---
 
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}
@@ -21,7 +20,7 @@ var audioBuffer = new AudioBuffer(context[, options]);
 
   - : Les options sont les suivantes:
 
-    - `length`:  Longueur de l'échantillonnage du tampon.
+    - `length`: Longueur de l'échantillonnage du tampon.
     - `numberOfChannels`: Nombre de cannaux du buffer. La valeur par défaut est 1.
     - `sampleRate`: Taux d'échantillonnage du buffer en Hz. La valeur par défaut est le taux d'échantillonnage du `context` utilisé dans la construction de cet objet
 

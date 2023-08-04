@@ -1,15 +1,9 @@
 ---
 title: <abbr>
 slug: Web/HTML/Element/abbr
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/abbr
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<abbr>` 요소**는 준말 또는 머리글자를 나타냅니다. 선택 속성인 {{htmlattrxref("title")}}을 사용하면 준말의 전체 뜻이나 설명을 제공할 수 있습니다. `title` 속성은 전체 설명만을 가져야 하며 다른건 포함할 수 없습니다.
 
@@ -151,8 +145,7 @@ abbr {
 #### HTML
 
 ```html
-<p>Ashok's joke made me <abbr title="Laugh Out Loud">LOL</abbr> big
-time.</p>
+<p>Ashok's joke made me <abbr title="Laugh Out Loud">LOL</abbr> big time.</p>
 ```
 
 #### 결과
@@ -166,14 +159,16 @@ time.</p>
 #### HTML
 
 ```html
-<p><dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr>
-</dfn> is a markup language used to create the semantics and structure
-of a web page.</p>
+<p>
+  <dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr> </dfn> is a
+  markup language used to create the semantics and structure of a web page.
+</p>
 
-<p>A <dfn id="spec">Specification</dfn>
-(<abbr title="Specification">spec</abbr>) is a document that outlines
-in detail how a technology or API is intended to function and how it is
-accessed.</p>
+<p>
+  A <dfn id="spec">Specification</dfn> (<abbr title="Specification">spec</abbr>)
+  is a document that outlines in detail how a technology or API is intended to
+  function and how it is accessed.
+</p>
 ```
 
 #### 결과
@@ -187,7 +182,9 @@ accessed.</p>
 #### 예제
 
 ```html
-<p>JavaScript Object Notation(<abbr>JSON</abbr>)은 경량의 데이터 교환 형식입니다.</p>
+<p>
+  JavaScript Object Notation(<abbr>JSON</abbr>)은 경량의 데이터 교환 형식입니다.
+</p>
 ```
 
 무엇보다 용어나 개념에 익숙하지 않은 사람, 언어를 새로 접한 사람, 그리고 인지력 문제를 겪고 있는 사용자에게 큰 도움이 됩니다.
@@ -198,4 +195,4 @@ accessed.</p>
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.abbr")}}
+{{Compat}}

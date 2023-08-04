@@ -1,13 +1,6 @@
 ---
 title: DOMRect
 slug: Web/API/DOMRect
-tags:
-  - API
-  - DOM
-  - Géométrie
-  - Objets
-  - Rectangle
-translation_of: Web/API/DOMRect
 ---
 
 {{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}
@@ -40,9 +33,9 @@ _`DOMRect` hérite des propriétés de son parent {{domxref("DOMRectReadOnly")}}
 - {{domxref("DOMRectReadOnly.top")}}
   - : Renvoie la valeur de la coordonnée supérieure de `DOMRect` (a la même valeur que `y`, ou `y + height` _(y + hauteur)_ si `height` est négative).
 - {{domxref("DOMRectReadOnly.right")}}
-  - : Renvoie la valeur de la coordonnée droite du `DOMRect` (a la même valeur que  `x + width` _(x + largeur)_, ou `x` si `width` est négative).
+  - : Renvoie la valeur de la coordonnée droite du `DOMRect` (a la même valeur que `x + width` _(x + largeur)_, ou `x` si `width` est négative).
 - {{domxref("DOMRectReadOnly.bottom")}}
-  - : Renvoie la valeur de la coordonnée du bas du `DOMRect` (a la même valeur que  `y + height` _(y + hauteur)_, ou `y` si `height` est négative).
+  - : Renvoie la valeur de la coordonnée du bas du `DOMRect` (a la même valeur que `y + height` _(y + hauteur)_, ou `y` si `height` est négative).
 - {{domxref("DOMRectReadOnly.left")}}
   - : Renvoie la valeur de la coordonnée de gauche du `DOMRect` (a la même valeur que `x`, ou `x + width` _(x + largeur)_ si `width` est négative).
 

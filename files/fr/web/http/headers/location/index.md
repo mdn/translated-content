@@ -1,7 +1,6 @@
 ---
 title: Location
 slug: Web/HTTP/Headers/Location
-translation_of: Web/HTTP/Headers/Location
 ---
 
 {{HTTPSidebar}}
@@ -51,13 +50,11 @@ Location: /index.html
 
 ## Spécifications
 
-| Specification                                    | Title                                                         |
-| ------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "Location", "7.1.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("http.headers.Location")}}
+{{Compat}}
 
 ## Voir aussi
 

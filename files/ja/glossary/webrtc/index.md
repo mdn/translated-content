@@ -16,6 +16,6 @@ WebRTC は主に以下の要素で構成されています:
 
 ## 詳細情報
 
-- Wikipedia 上の記事「{{Interwiki("wikipedia", "WebRTC")}}」
+- Wikipedia 上の記事「[WebRTC](https://ja.wikipedia.org/wiki/WebRTC)」
 - [MDN 上の WebRTC の解説](/ja/docs/Web/API/WebRTC_API)
 - [WebRTC のブラウザーサポート状況](http://caniuse.com/#feat=rtcpeerconnection)

@@ -1,8 +1,8 @@
 ---
 title: Node.removeChild
 slug: Web/API/Node/removeChild
-translation_of: Web/API/Node/removeChild
 ---
+
 {{ApiRef("DOM")}}
 
 ## Sumário
@@ -59,9 +59,9 @@ while (elemento.firstChild) {
 
 ## Especificação
 
-- [DOM Level 1 Core: removeChild](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild)
-- [DOM Level 2 Core: removeChild](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066)
-- [DOM Level 3 Core: removeChild](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066)
+- [DOM Level 1 Core: removeChild](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild)
+- [DOM Level 2 Core: removeChild](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066)
+- [DOM Level 3 Core: removeChild](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066)
 
 ## Veja também
 

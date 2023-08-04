@@ -1,27 +1,8 @@
 ---
 title: Usando a Web Animations API
 slug: Web/API/Web_Animations_API/Using_the_Web_Animations_API
-tags:
-  - Alice
-  - Animação
-  - CSS
-  - Guía
-  - Iniciante
-  - JavaScript
-  - Timing
-  - Tutorial
-  - animar
-  - duration
-  - keyframes
-  - pausar
-  - pause
-  - play
-  - quadro-chave
-  - reverse
-  - web animations api
-translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
-original_slug: Web/API/Web_Animations_API/Usando_a_Web_Animations_API
 ---
+
 {{DefaultAPISidebar("Web Animations")}}
 
 A Web Animations API nos possibilita criar animações e controlar sua reprodução pelo JavaScript. Esse artigo vai te demonstrar esses conceitos com demonstrações e tutoriais com o temática de Alice no País das Maravilhas.
@@ -44,7 +25,7 @@ Uma das maneiras mais familiares de abordar a Web Animations API é começar com
 
 Aqui temos uma animação escrita com CSS mostrando Alice caindo no buraco de coelho que leva ao País das Maravilhas (veja o [código completo no Codepen](http://codepen.io/rachelnabors/pen/QyOqqW)):
 
-[![Alice Tumbling down the rabbit's hole.](https://mdn.mozillademos.org/files/13843/tumbling-alice_optimized.gif)](http://codepen.io/rachelnabors/pen/rxpmJL)
+[![Alice Tumbling down the rabbit's hole.](tumbling-alice_optimized.gif)](http://codepen.io/rachelnabors/pen/rxpmJL)
 
 Perceba que o fundo se mexe, a Alice gira e sua cor muda em sincronia com o giro. Nós vamos focar somente na Alice para este tutorial. Segue a versão simplificada do CSS que controla a animação da Alice:
 
@@ -80,9 +61,9 @@ A primeira coisa que precisamos fazer é criar um [Objeto Keyframe](/pt-BR/docs/
 
 ```js
 var aliceTumbling = [
-  { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
-  { color: '#431236', offset: 0.3},
-  { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
+  { transform: "rotate(0) translate3D(-50%, -50%, 0)", color: "#000" },
+  { color: "#431236", offset: 0.3 },
+  { transform: "rotate(360deg) translate3D(-50%, -50%, 0)", color: "#000" },
 ];
 ```
 
@@ -101,8 +82,8 @@ Nós precisamos criar também um objeto de propriedades temporais (um objeto {{d
 ```js
 var aliceTiming = {
   duration: 3000,
-  iterations: Infinity
-}
+  iterations: Infinity,
+};
 ```
 
 Você pode notar algumas diferenças aqui comparando com os valores equivalentes representados no CSS:
@@ -117,10 +98,7 @@ Você pode notar algumas diferenças aqui comparando com os valores equivalentes
 Agora vamos juntar o que já fizemos com o método {{domxref("Element.animate()")}}:
 
 ```js
-document.getElementById("alice").animate(
-  aliceTumbling,
-  aliceTiming
-)
+document.getElementById("alice").animate(aliceTumbling, aliceTiming);
 ```
 
 E pronto: a animação começa a tocar (veja a [versão final no Codepen](http://codepen.io/rachelnabors/pen/rxpmJL)).
@@ -130,13 +108,14 @@ O método `animate()` pode ser chamado em qualquer elemento do DOM que pode ser 
 ```js
 document.getElementById("alice").animate(
   [
-    { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
-    { color: '#431236', offset: 0.3},
-    { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
-  ], {
+    { transform: "rotate(0) translate3D(-50%, -50%, 0)", color: "#000" },
+    { color: "#431236", offset: 0.3 },
+    { transform: "rotate(360deg) translate3D(-50%, -50%, 0)", color: "#000" },
+  ],
+  {
     duration: 3000,
-    iterations: Infinity
-  }
+    iterations: Infinity,
+  },
 );
 ```
 
@@ -145,17 +124,19 @@ E se nós precisarmos somente especificar a duração da animação e não suas 
 ```js
 document.getElementById("alice").animate(
   [
-    { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
-    { color: '#431236', offset: 0.3},
-    { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
-  ], 3000);
+    { transform: "rotate(0) translate3D(-50%, -50%, 0)", color: "#000" },
+    { color: "#431236", offset: 0.3 },
+    { transform: "rotate(360deg) translate3D(-50%, -50%, 0)", color: "#000" },
+  ],
+  3000,
+);
 ```
 
 ## Controlando a reprodução com play(), pause(), reverse() e updatePlaybackRate()
 
 Por mais que possamos escrever Animações CSS utilizando a Web Animations API, a API realmente mostra seu potencial quando precisamos manipular a reprodução da animação. A Web Animations API fornece vários métodos úteis para controlar a reprodução. Vamos dar uma olhada em como pausar e tocar animações no jogo da Alice Crescendo/Encolhendo (confira o [código completo no Codepen](http://codepen.io/rachelnabors/pen/PNYGZQ)):
 
-[![Playing the growing and shrinking game with Alice.](https://mdn.mozillademos.org/files/13845/growing-shrinking_article_optimized.gif)](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)
+[![Playing the growing and shrinking game with Alice.](growing-shrinking_article_optimized.gif)](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)
 
 Nesse jogo, Alice tem uma animação que a encolhe ou aumenta seu tamanho, que controlamos por uma garrafa e um cupcake. Cada um tem sua própria animação.
 
@@ -164,15 +145,16 @@ Nesse jogo, Alice tem uma animação que a encolhe ou aumenta seu tamanho, que c
 Vamos falar sobre a animação da Alice depois, mas por enquanto, vamos dissecar esta animação do cupcake.
 
 ```js
-var nommingCake = document.getElementById('eat-me_sprite').animate(
-[
-  { transform: 'translateY(0)' },
-  { transform: 'translateY(-80%)' }
-], {
-  fill: 'forwards',
-  easing: 'steps(4, end)',
-  duration: aliceChange.effect.timing.duration / 2
-});
+var nommingCake = document
+  .getElementById("eat-me_sprite")
+  .animate(
+    [{ transform: "translateY(0)" }, { transform: "translateY(-80%)" }],
+    {
+      fill: "forwards",
+      easing: "steps(4, end)",
+      duration: aliceChange.effect.timing.duration / 2,
+    },
+  );
 ```
 
 O método {{domxref("Element.animate()")}} vai rodar imediatamente depois de ser chamado. Para evitar que o bolinho se coma sozinho antes da interação do usuário, chamamos o {{domxref("Animation.pause()")}} imediatamente depois de criar a animação:
@@ -190,15 +172,13 @@ nommingCake.play();
 Especificamente, nós queremos linka-lo à animação da Alice, para ela crescer assim que o cupcake é mordido. Podemos fazer isso com a seguinte função:
 
 ```js
-var growAlice = function() {
-
+var growAlice = function () {
   // Play Alice's animation.
   aliceChange.play();
 
   // Play the cake's animation.
   nommingCake.play();
-
-}
+};
 ```
 
 Quando o usuário clicar ou pressionar seu dedo no bolinho em uma tela de toque, podemos chamar a função `growAlice` para fazer todas as animações tocarem:
@@ -217,10 +197,10 @@ cake.addEventListener("touchstart", growAlice, false);
 Vamos dar uma olhada primeiro no método `playbackRate` — um valor negativo vai fazer a animação tocar ao contrário. Quando Alice bebe da garrafa, ela encolhe. Isso porque a garrafa muda o `playbackRate` da animação de 1 para -1:
 
 ```js
-var shrinkAlice = function() {
+var shrinkAlice = function () {
   aliceChange.playbackRate = -1;
   aliceChange.play();
-}
+};
 
 bottle.addEventListener("mousedown", shrinkAlice, false);
 bottle.addEventListener("touchstart", shrinkAlice, false);
@@ -228,27 +208,25 @@ bottle.addEventListener("touchstart", shrinkAlice, false);
 
 Em [Alice Através do Espelho](https://en.wikipedia.org/wiki/Through_the_Looking-Glass), Alice viaja para um mundo onde ela deve correr para se manter no lugar — e correr com o dobro de velocidade para avançar! No exemplo da Corrida da Rainha Vermelha, Alice e a Rainha Vermelha estão correndo para se manter no lugar (veja o [código completo no Codepen](http://codepen.io/rachelnabors/pen/PNGGaV)):
 
-[![Alice and the Red Queen race to get to the next square in this game.](https://mdn.mozillademos.org/files/13847/red-queen-race_optimized.gif)](http://codepen.io/rachelnabors/pen/PNGGaV)
+[![Alice and the Red Queen race to get to the next square in this game.](red-queen-race_optimized.gif)](http://codepen.io/rachelnabors/pen/PNGGaV)
 
 Já que crianças pequenas se cansam facilmente, diferente de peças de xadrez autônomas, Alice está constantemente desacelerando. Nós podemos fazer isso definindo uma queda no `playbackRate` da animação dela. Usamos o `updatePlaybackRate()` no lugar de definir manualmente o playbackRate, já que isso produz uma atualização mais suave:
 
 ```js
-setInterval( function() {
-
+setInterval(function () {
   // Make sure the playback rate never falls below .4
-  if (redQueen_alice.playbackRate > .4) {
-    redQueen_alice.updatePlaybackRate(redQueen_alice.playbackRate * .9);
+  if (redQueen_alice.playbackRate > 0.4) {
+    redQueen_alice.updatePlaybackRate(redQueen_alice.playbackRate * 0.9);
   }
-
 }, 3000);
 ```
 
 Mas impulsioná-las clicando ou tocando na tela aumenta a velocidade delas por multiplicar o playbackRate:
 
 ```js
-var goFaster = function() {
+var goFaster = function () {
   redQueen_alice.updatePlaybackRate(redQueen_alice.playbackRate * 1.1);
-}
+};
 
 document.addEventListener("click", goFaster);
 document.addEventListener("touchstart", goFaster);
@@ -261,11 +239,9 @@ Os elementos do fundo também tem `playbackRate`s que também são afetados pelo
 Imagine outras maneiras de utilizar o playbackRate, como melhorar a acessibilidade para usuários com disfunções vestibulares permitindo que eles desacelerem as animações do site todo. Isso é impossível de fazer via CSS sem recalcular todas as regras, mas com a Web Animations API, podemos utilizar o método {{domxref("document.getAnimations()")}} para iterar todas animações de uma página e dividir pela metade seu `playbackRate`, como por exemplo:
 
 ```js
-document.getAnimations().forEach(
-  function (animation) {
-    animation.updatePlaybackRate(animation.playbackRate * .5);
-  }
-);
+document.getAnimations().forEach(function (animation) {
+  animation.updatePlaybackRate(animation.playbackRate * 0.5);
+});
 ```
 
 Com a Web Animations API, você só precisa mudar uma simples propriedade!
@@ -273,21 +249,25 @@ Com a Web Animations API, você só precisa mudar uma simples propriedade!
 Outra coisa que é difícil de fazer somente com Animações CSS é criar dependências de valores fornecidos por outras animações. Por exemplo, no logo Aumentando e Encolhendo Alice, você pode ter notado algo estranho sobre a duração do bolinho:
 
 ```js
-duration: aliceChange.effect.getComputedTiming().duration / 2
+duration: aliceChange.effect.getComputedTiming().duration / 2;
 ```
 
 Para entender o que está acontecendo, vamos dar uma olhada na animação da Alice:
 
 ```js
-var aliceChange = document.getElementById('alice').animate(
-  [
-    { transform: 'translate(-50%, -50%) scale(.5)' },
-    { transform: 'translate(-50%, -50%) scale(2)' }
-  ], {
-    duration: 8000,
-    easing: 'ease-in-out',
-    fill: 'both'
-  });
+var aliceChange = document
+  .getElementById("alice")
+  .animate(
+    [
+      { transform: "translate(-50%, -50%) scale(.5)" },
+      { transform: "translate(-50%, -50%) scale(2)" },
+    ],
+    {
+      duration: 8000,
+      easing: "ease-in-out",
+      fill: "both",
+    },
+  );
 ```
 
 A animação da Alice a fazia ir de metade de seu tamanho para o dobro em 8 segundos. Então nós a pausamos:
@@ -313,14 +293,12 @@ O `effect` nos permite acessar os keyframes e propriedades temporais da animaç�
 E nós podemos fazer a mesma coisa quando definimos as durações da garrafa e do bolinho:
 
 ```js
-var drinking = document.getElementById('liquid').animate(
-[
-  { height: '100%' },
-  { height: '0' }
-], {
-  fill: 'forwards',
-  duration: aliceChange.effect.getComputedTiming().duration / 2
-});
+var drinking = document
+  .getElementById("liquid")
+  .animate([{ height: "100%" }, { height: "0" }], {
+    fill: "forwards",
+    duration: aliceChange.effect.getComputedTiming().duration / 2,
+  });
 drinking.pause();
 ```
 
@@ -363,8 +341,8 @@ var endGame = function() {
 
 Animações e Transições CSS tem seus event listeners próprios, que também são possíveis com a Web Animations API:
 
-- [`onfinish`](/en-US/docs/Web/API/Animation/onfinish) é o manipulador de eventos para o evento `finish` e pode ser disparado manualmente com [`finish()`](/en-US/docs/Web/API/Animation/finish).
-- [`oncancel`](/en-US/docs/Web/API/Animation/oncancel) é o manipulador de eventos para o evento `cancel` e pode ser disparado manualmente com [`cancel()`](/en-US/docs/Web/API/Animation/cancel).
+- [`onfinish`](/pt-BR/docs/Web/API/Animation/onfinish) é o manipulador de eventos para o evento `finish` e pode ser disparado manualmente com [`finish()`](/pt-BR/docs/Web/API/Animation/finish).
+- [`oncancel`](/pt-BR/docs/Web/API/Animation/oncancel) é o manipulador de eventos para o evento `cancel` e pode ser disparado manualmente com [`cancel()`](/pt-BR/docs/Web/API/Animation/cancel).
 
 Aqui nós definimos os callbacks para o bolinho, a garrafa e para Alice para disparar a função `endGame`:
 
@@ -377,7 +355,7 @@ drinking.onfinish = endGame;
 aliceChange.onfinish = endGame;
 ```
 
-Ainda melhor, a Web Animations API também fornece uma promise [`finished`](/en-US/docs/Web/API/Animation/finished) que será resolvida quando a animação é completada, e rejeitada se for cancelada.
+Ainda melhor, a Web Animations API também fornece uma promise [`finished`](/pt-BR/docs/Web/API/Animation/finished) que será resolvida quando a animação é completada, e rejeitada se for cancelada.
 
 ## Conclusão
 
@@ -386,5 +364,5 @@ Essas são as funcionalidades básicas da Web Animations API, a maioria delas j�
 ## Veja também
 
 - A [coleção completa de demos de Alice no País das Maravilhas](http://codepen.io/collection/bpEza/) no CodePen para você brincar, compartilhar e editar
-- [Animating like you just don’t care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) (em inglês) — Um ótimo artigo para se ler que explica mais sobre a Web Animations API por baixo dos panos, e por que ela tem uma performance melhor do que os outros métodos de animação web
+- [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) (em inglês) — Um ótimo artigo para se ler que explica mais sobre a Web Animations API por baixo dos panos, e por que ela tem uma performance melhor do que os outros métodos de animação web
 - [web-animations-js](https://github.com/web-animations/web-animations-js) — O polyfill da Web Animations API

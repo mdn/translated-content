@@ -3,7 +3,7 @@ title: 服务端编程介绍
 slug: Learn/Server-side/First_steps/Introduction
 ---
 
-{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
+{{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 
 欢迎来到 MDN 为初学者准备的服务器端编程课程！在第一篇文章里面我们将会从一个较高的角度来看待服务器端编程，通过解答下面这些问题来实现这一点，比如：服务器端编程是什么？服务器端编程和客户端编程有何不同？还有，为什么服务器端编程这么有用？当你读完这篇文章后，你会理解通过服务器端编程实现的网站所能提供的额外的功能。
 
@@ -184,10 +184,3 @@ web 开发者无法控制用户可能会使用哪一种浏览器来浏览网站�
 在接下来的文章中我们会帮助你选择一个对于你的第一个网站来说最好的 web 框架；但是，再接下来我们稍微详细一点地带你过一遍主要的客户端 - 服务器交互行为。
 
 {{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
-
-## 在这个模块中
-
-- [Introduction to the server side](/zh-CN/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/zh-CN/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)

@@ -1,14 +1,6 @@
 ---
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Number
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseInt
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/parseInt
 ---
 
 {{JSRef}}
@@ -47,21 +39,18 @@ Number.parseInt === parseInt; // true
 Si on souhaite bénéficier de cette fonction dans un environnement qui n'en dispose pas, on pourra donc l'émuler de la façon suivante :
 
 ```js
-if(Number.parseInt === undefined) {
+if (Number.parseInt === undefined) {
   Number.parseInt = parseInt;
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-number.parseint', 'Number.parseInt')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-number.parseint', 'Number.parseInt')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.parseInt")}}
+{{Compat}}
 
 ## Voir aussi
 

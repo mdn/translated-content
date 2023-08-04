@@ -1,14 +1,8 @@
 ---
 title: Date.prototype.getMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
-tags:
-  - Fecha
-  - Milisegundos
-  - Prototipo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getMilliseconds
-browser-compat: javascript.builtins.Date.getMilliseconds
 ---
+
 {{JSRef}}
 
 El método **`getMilliseconds()`** devuelve la cantidad de milisegundos en el objeto fecha especificado de acuerdo a la hora local.
@@ -36,20 +30,7 @@ var milisegundos = ahora.getMilliseconds();
 
 ## Especificaciones
 
-| Especificación                                                                                                                   | Estado                       | Comentario                                          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                         | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.24', 'Date.prototype.getMilliseconds')}}                                 | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-date.prototype.getmilliseconds', 'Date.prototype.getMilliseconds')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-date.prototype.getmilliseconds', 'Date.prototype.getMilliseconds')}} | {{Spec2('ESDraft')}} |                                                     |
-
-## Especificaciones
-
 {{Specifications}}
-
-## Compatibilidad en Navegadores
-
-{{Compat}}
 
 ## Vea también
 

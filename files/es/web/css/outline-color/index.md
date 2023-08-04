@@ -1,10 +1,8 @@
 ---
 title: outline-color
 slug: Web/CSS/outline-color
-translation_of: Web/CSS/outline-color
-original_slug: Web/CSS/outline-color
-browser-compat: css.properties.outline-color
 ---
+
 {{CSSRef}}
 
 La propiedad CSS **`outline-color`** establece el color del contorno de un elemento.
@@ -16,7 +14,7 @@ La propiedad CSS **`outline-color`** establece el color del contorno de un eleme
 ```css
 /* Valores de <color> */
 outline-color: #f92525;
-outline-color: rgb(30,222,121);
+outline-color: rgb(30, 222, 121);
 outline-color: blue;
 
 /* Valor de palabra clave */
@@ -77,8 +75,8 @@ La relación de contraste de color se determina comparando la luminosidad del te
 
 ```css
 p {
-  outline: 2px solid;      /* Establecer el ancho y el estilo del contorno */
-  outline-color: #0000FF;  /* Hacer el contorno azul */
+  outline: 2px solid; /* Establecer el ancho y el estilo del contorno */
+  outline-color: #0000ff; /* Hacer el contorno azul */
   margin: 5px;
 }
 ```

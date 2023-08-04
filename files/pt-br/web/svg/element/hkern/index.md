@@ -1,13 +1,8 @@
 ---
 title: hkern
 slug: Web/SVG/Element/hkern
-tags:
-  - Elemento
-  - Fonte SVG
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/hkern
 ---
+
 {{SVGRef}}
 
 A distância horizontal entre dois glifos podem ser bem ajustados com um elemento `hkern`. Este processo é conhecido como [Kerning](http://en.wikipedia.org/wiki/Kerning).
@@ -20,7 +15,7 @@ A distância horizontal entre dois glifos podem ser bem ajustados com um element
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
 
 ### Atributos específicos
 
@@ -32,11 +27,11 @@ A distância horizontal entre dois glifos podem ser bem ajustados com um element
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGHKernElement`](/pt-BR/DOM/SVGHKernElement "en/DOM/SVGHKernElement").
+Este elemento implementa a interface do [`SVGHKernElement`](/pt-BR/DOM/SVGHKernElement).
 
 ## Relacionado
 
 - {{ SVGElement("font") }}
 - {{ SVGElement("glyph") }}
 - {{ SVGElement("vkern") }}
-- [Tutorial SVG: SVG fonts](/pt-BR/SVG/Tutorial/SVG_fonts "en/SVG/Tutorial/SVG_Fonts")
+- [Tutorial SVG: SVG fonts](/pt-BR/SVG/Tutorial/SVG_fonts)

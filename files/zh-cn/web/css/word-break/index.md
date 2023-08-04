@@ -41,7 +41,7 @@ word-break: unset;
 
 {{CSSInfo}}
 
-## 正式语法
+## 形式语法
 
 {{csssyntax}}
 
@@ -51,29 +51,37 @@ word-break: unset;
 
 ```html
 <p>1. <code>word-break: normal</code></p>
-<p class="normal narrow">This is a long and
- Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
+<p class="normal narrow">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+</p>
 
 <p>2. <code>word-break: break-all</code></p>
-<p class="breakAll narrow">This is a long and
- Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
+<p class="breakAll narrow">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+</p>
 
 <p>3. <code>word-break: keep-all</code></p>
-<p class="keepAll narrow">This is a long and
- Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
+<p class="keepAll narrow">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+</p>
 
 <p>4. <code>word-break: break-word</code></p>
-<p class="breakWord narrow">This is a long and
-  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
+<p class="breakWord narrow">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+</p>
 ```
 
 ### CSS
 
-```
+```css
 .narrow {
   padding: 10px;
   border: 1px solid;
@@ -101,7 +109,7 @@ word-break: unset;
 }
 ```
 
-{{EmbedLiveSample('Examples', '100%', 600)}}
+{{EmbedLiveSample('示例', '100%', 600)}}
 
 ## 规范
 
@@ -111,6 +119,6 @@ word-break: unset;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{cssxref("overflow-wrap")}}

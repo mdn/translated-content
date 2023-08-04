@@ -1,9 +1,9 @@
 ---
-title: '-webkit-device-pixel-ratio'
+title: "-webkit-device-pixel-ratio"
 slug: Web/CSS/@media/-webkit-device-pixel-ratio
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 {{ Non-standard_header() }}
 

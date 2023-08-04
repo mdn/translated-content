@@ -28,27 +28,24 @@ var itemKind = DataTransferItem.kind;
 
 ```js
 function drop_handler(ev) {
- console.log("Drop");
- ev.preventDefault();
- var data = event.dataTransfer.items;
- for (var i = 0; i < data.length; i += 1) {
-   if ((data[i].kind == 'string') &&
-       (data[i].type.match('^text/plain'))) {
-     // This item is the target node
-     data[i].getAsString(function (s){
-       ev.target.appendChild(document.getElementById(s));
-     });
-   } else if ((data[i].kind == 'string') &&
-              (data[i].type.match('^text/html'))) {
-     // Drag data item is HTML
-     console.log("... Drop: HTML");
-   } else if ((data[i].kind == 'file') &&
-              (data[i].type.match('^image/'))) {
-     // Drag data item is an image file
-     var f = data[i].getAsFile();
-     console.log("... Drop: File ");
-   }
- }
+  console.log("Drop");
+  ev.preventDefault();
+  var data = event.dataTransfer.items;
+  for (var i = 0; i < data.length; i += 1) {
+    if (data[i].kind == "string" && data[i].type.match("^text/plain")) {
+      // This item is the target node
+      data[i].getAsString(function (s) {
+        ev.target.appendChild(document.getElementById(s));
+      });
+    } else if (data[i].kind == "string" && data[i].type.match("^text/html")) {
+      // Drag data item is HTML
+      console.log("... Drop: HTML");
+    } else if (data[i].kind == "file" && data[i].type.match("^image/")) {
+      // Drag data item is an image file
+      var f = data[i].getAsFile();
+      console.log("... Drop: File ");
+    }
+  }
 }
 ```
 
@@ -65,5 +62,4 @@ function drop_handler(ev) {
 - [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
 - [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [推荐的拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [拖拽和放置多个项目](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer 测试——粘贴或拖拽](https://codepen.io/tech_query/pen/MqGgap)

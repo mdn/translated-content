@@ -1,12 +1,6 @@
 ---
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
-tags:
-  - JavaScript
-  - Operator
-  - Reference
-  - Relational Operators
-translation_of: Web/JavaScript/Reference/Operators/instanceof
 ---
 {{jsSidebar("Operators")}}
 

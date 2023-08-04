@@ -73,7 +73,7 @@ _親インターフェイスである {{domxref("AudioScheduledSourceNode")}} �
 以下の例は、 {{domxref("AudioContext")}} を使用して発振器ノードを作成し、その上で音の再生を開始する基本的な使用方法を示しています。応用例としては、 [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) をご覧ください（関連するコードは [app.js](https://github.com/mdn/webaudio-examples/blob/master/violent-theremin/scripts/app.js) を参照してください）。
 
 ```js
-// ウェブ音声 API コンテキストの作成
+// ウェブオーディオ API コンテキストの作成
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // Oscillator　ノードを作成します。
@@ -95,4 +95,4 @@ oscillator.start();
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

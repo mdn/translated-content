@@ -1,7 +1,6 @@
 ---
 title: DNT
 slug: Web/HTTP/Headers/DNT
-translation_of: Web/HTTP/Headers/DNT
 ---
 
 {{HTTPSidebar}}
@@ -47,13 +46,11 @@ navigator.doNotTrack; // "0" ou "1"
 
 ## Spécifications
 
-| Spécification                                                                                                | Status                       | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('Tracking','#dnt-header-field', 'DNT Header Field for HTTP Requests')}} | {{Spec2("Tracking")}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("http.headers.DNT")}}
+{{Compat}}
 
 ## Voyez aussi
 

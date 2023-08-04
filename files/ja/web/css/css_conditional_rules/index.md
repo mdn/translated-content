@@ -1,6 +1,6 @@
 ---
 title: CSS 条件付き規則
-slug: Web/CSS/CSS_Conditional_Rules
+slug: Web/CSS/CSS_conditional_rules
 ---
 
 {{CSSRef}}
@@ -18,9 +18,7 @@ slug: Web/CSS/CSS_Conditional_Rules
 
 ## 仕様書
 
-| 仕様書                           | 状態                          | 備考     |
-| -------------------------------- | ----------------------------- | -------- |
-| {{SpecName('CSS3 Conditional')}} | {{Spec2('CSS3 Conditional')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

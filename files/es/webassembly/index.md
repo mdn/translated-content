@@ -1,12 +1,8 @@
 ---
 title: WebAssembly
 slug: WebAssembly
-tags:
-  - Aterrizaje
-  - WebAssembly
-  - wasm
-translation_of: WebAssembly
 ---
+
 {{WebAssemblySidebar}}
 
 WebAssembly es un nuevo tipo de código que puede ser ejecutado en navegadores modernos — es un lenguaje de bajo nivel, similar al lenguaje ensamblador, con un formato binario compacto que se ejecuta con rendimiento casi nativo y provee un objetivo de compilación para lenguajes como C/C++ y Rust que les permite correr en la web. También está diseñado para correr a la par de JavaScript, permitiendo que ambos trabajen juntos.
@@ -70,13 +66,11 @@ Y lo mejor es que está siendo desarrollado como un estándar web a través del 
 
 ## Especificaciones
 
-| Especificación                           | Estado                               | Comentarios                                                |
-| ---------------------------------------- | ------------------------------------ | ---------------------------------------------------------- |
-| {{SpecName('WebAssembly JS')}} | {{Spec2('WebAssembly JS')}} | Borrador inicial de la definición de la API de JavaScript. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.WebAssembly")}}
+{{Compat}}
 
 ## Ver también
 

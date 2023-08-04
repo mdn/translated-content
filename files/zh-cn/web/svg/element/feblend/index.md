@@ -11,8 +11,6 @@ slug: Web/SVG/Element/feBlend
 
 {{svginfo}}
 
-## 示例
-
 ## 属性
 
 ### 全局属性
@@ -37,26 +35,39 @@ slug: Web/SVG/Element/feBlend
 
 ### SVG
 
-```plain
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+```html
+<svg
+  width="200"
+  height="200"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <filter id="spotlight">
-      <feFlood result="floodFill" x="0" y="0" width="100%" height="100%"
-          flood-color="green" flood-opacity="1"/>
-      <feBlend in="SourceGraphic" in2="floodFill" mode="multiply"/>
+      <feFlood
+        result="floodFill"
+        x="0"
+        y="0"
+        width="100%"
+        height="100%"
+        flood-color="green"
+        flood-opacity="1" />
+      <feBlend in="SourceGraphic" in2="floodFill" mode="multiply" />
     </filter>
   </defs>
 
-  <image xlink:href="/files/6457/mdn_logo_only_color.png"
-      x="10%" y="10%" width="80%" height="80%"
-      style="filter:url(#spotlight);"/>
+  <image
+    xlink:href="/files/6457/mdn_logo_only_color.png"
+    x="10%"
+    y="10%"
+    width="80%"
+    height="80%"
+    style="filter:url(#spotlight);" />
 </svg>
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Example", 200, 200)}}
+{{EmbedLiveSample("示例", 200, 200)}}
 
 ## 参见
 

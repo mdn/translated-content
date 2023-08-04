@@ -1,16 +1,6 @@
 ---
 title: TypedArray.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/find
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/find
 ---
 
 {{JSRef}}
@@ -82,14 +72,11 @@ console.log(uint8.find(estPremier)); // 5
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.find', '%TypedArray%.prototype.find')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.find', '%TypedArray%.prototype.find')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.find")}}
+{{Compat}}
 
 ## Voir aussi
 

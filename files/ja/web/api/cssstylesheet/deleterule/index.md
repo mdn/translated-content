@@ -1,45 +1,48 @@
 ---
-title: CSSStyleSheet.deleteRule()
+title: "CSSStyleSheet: deleteRule() メソッド"
 slug: Web/API/CSSStyleSheet/deleteRule
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
 {{APIRef("CSSOM")}}
 
-**`CSSStyleSheet.deleteRule()`** メソッドは、スタイル規則を現在のスタイルシートオブジェクトから削除します。
+**`CSSStyleSheet.deleteRule()`** メソッドは、スタイルルールを現在のスタイルシートオブジェクトから削除します。
 
 ## 構文
 
-```
-stylesheet.deleteRule(index)
+```js-nolint
+deleteRule(index)
 ```
 
 ### 引数
 
-- `index` は、規則の位置を表す倍精度整数値。
+- `index`
+  - : このスタイルシートの {{domxref("CSSRuleList")}} で、削除するルールの位置を示します。
 
-### 戻り値
+### 返値
 
-_無効。_
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
+この例では、スタイルシート `myStyles` から最初のルールを削除します。
+
 ```js
- myStyles.deleteRule(0);
+myStyles.deleteRule(0);
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                                                                           | 策定状況                         | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("CSSOM", "#dom-cssstylesheet-deleterule", 'CSSStyleSheet.deleteRule()')}}                 | {{Spec2("CSSOM")}}         |          |
-| {{SpecName("DOM2 Style", "css.html#CSS-CSSStyleSheet-deleteRule", "CSSStyleSheet.deleteRule()")}} | {{Spec2("DOM2 Style")}} | 初期定義 |
+{{Specifications}}
 
-## ブラウザーの実装状況
+## ブラウザーの互換性
 
-{{Compat("api.CSSStyleSheet.deleteRule")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{domxref("CSSStyleSheet.insertRule")}}
-- [Cross-Browser CSS-rules ordering (CSS1)](http://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)
-- [Quirksmode - CSS](http://www.quirksmode.org/dom/w3c_css.html)
+- [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)
+- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
+- [動的スタイル情報の利用](/ja/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- {{domxref("CSSStyleSheet.insertRule", "insertRule()")}}

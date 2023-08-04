@@ -1,7 +1,6 @@
 ---
 title: アイコンが表示されない
 slug: orphaned/Web/Compatibility_FAQ/No_Icon_Shown.html
-original_slug: Web/Compatibility_FAQ/No_Icon_Shown.html
 ---
 
 ## 概要
@@ -9,7 +8,7 @@ original_slug: Web/Compatibility_FAQ/No_Icon_Shown.html
 一部のアイコンやバナーが表示されません。
 メニューのボタンや、検索実行ボタン、バナーなどが Firefox のみで非表示となってしまいます。
 
-![](https://mdn.mozillademos.org/files/9989/0301.jpg)
+![](0301.jpg)
 
 ## 要因
 

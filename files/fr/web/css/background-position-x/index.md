@@ -1,12 +1,6 @@
 ---
 title: background-position-x
 slug: Web/CSS/background-position-x
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/background-position-x
 ---
 
 {{CSSRef}}
@@ -17,7 +11,7 @@ Pour plus d'informations, se référer à la documentation de la propriété {{c
 
 {{EmbedInteractiveExample("pages/css/background-position-x.html")}}
 
-> **Note :** La valeur de cette propriété sera surchargée par n'importe quelle déclaration avec  {{cssxref("background")}} ou {{cssxref("background-position")}} située après la déclaration de `background-position-x`.
+> **Note :** La valeur de cette propriété sera surchargée par n'importe quelle déclaration avec {{cssxref("background")}} ou {{cssxref("background-position")}} située après la déclaration de `background-position-x`.
 
 ## Syntaxe
 

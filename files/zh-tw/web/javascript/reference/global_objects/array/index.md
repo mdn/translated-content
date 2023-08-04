@@ -10,7 +10,7 @@ JavaScript 中的 **`Array`** 全域物件被用於建構陣列；陣列為高�
 **建立陣列**
 
 ```js
-var fruits = ['Apple', 'Banana'];
+var fruits = ["Apple", "Banana"];
 
 console.log(fruits.length);
 // 2
@@ -29,7 +29,7 @@ var last = fruits[fruits.length - 1];
 **迭代陣列**
 
 ```js
-fruits.forEach(function(item, index, array) {
+fruits.forEach(function (item, index, array) {
   console.log(item, index);
 });
 // Apple 0
@@ -39,7 +39,7 @@ fruits.forEach(function(item, index, array) {
 **加入項目至陣列末端**
 
 ```js
-var newLength = fruits.push('Orange');
+var newLength = fruits.push("Orange");
 // ["Apple", "Banana", "Orange"]
 ```
 
@@ -60,17 +60,17 @@ var first = fruits.shift(); // 移除 (最前端的) Apple
 **加入項目至陣列前端**
 
 ```js
-var newLength = fruits.unshift('Strawberry') // 加到陣列前端
+var newLength = fruits.unshift("Strawberry"); // 加到陣列前端
 // ["Strawberry", "Banana"];
 ```
 
 **在陣列中尋找項目的索引**
 
 ```js
-fruits.push('Mango');
+fruits.push("Mango");
 // ["Strawberry", "Banana", "Mango"]
 
-var pos = fruits.indexOf('Banana');
+var pos = fruits.indexOf("Banana");
 // 1
 ```
 
@@ -85,11 +85,12 @@ var removedItem = fruits.splice(pos, 1); // 移除 pos 起的 1 個項目
 **移除指定索引位置起的多個項目**
 
 ```js
-var vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot'];
+var vegetables = ["Cabbage", "Turnip", "Radish", "Carrot"];
 console.log(vegetables);
 // ["Cabbage", "Turnip", "Radish", "Carrot"]
 
-var pos = 1, n = 2;
+var pos = 1,
+  n = 2;
 
 var removedItems = vegetables.splice(pos, n);
 // 這就是移除項目的方式，
@@ -135,9 +136,9 @@ Array（「陣列」）是類似列表（list）的物件（Object），它們�
 JavaScript 陣列是 zero-indexed：陣列元素的索引值編排從 0 開始，而最後一個元素的索引值等同於陣列的 {{jsxref("Array.length", "length")}} 屬性減 1。
 
 ```js
-var arr = ['this is the first element', 'this is the second element'];
-console.log(arr[0]);              // 紀錄出 'this is the first element'
-console.log(arr[1]);              // 記錄出 'this is the second element'
+var arr = ["this is the first element", "this is the second element"];
+console.log(arr[0]); // 紀錄出 'this is the first element'
+console.log(arr[1]); // 記錄出 'this is the second element'
 console.log(arr[arr.length - 1]); // 記錄出 'this is the second element'
 ```
 
@@ -165,18 +166,18 @@ renderer['3d'].setTexture(model, 'character.png');  // 程式正常
 注意：以這個 `'3d'` 例子來說，必須用引號將 `3d` 包起來。您也可以將 JavaScript 陣列的索引用引號包起來（例如使用 `years['2']` 而不用 `years[2]`），但這不是必要的。JavaScript 會透過隱含的 `toString`，將 `years[2]` 當中的 2 強制轉換為字串。由於這個原因，`'2'` 與 `'02'` 會參照到 `years` 物件中的不同項目，下列程式範例結果可能回傳 `true`：
 
 ```js
-console.log(years['2'] != years['02']);
+console.log(years["2"] != years["02"]);
 ```
 
 另一種類似的情況是，物件屬性剛好與保留字（！）相同的情況。這種情況下僅能透過括號表示方式當中的字串常值來存取：
 
 ```js
 var promise = {
-  'var'  : 'text',
-  'array': [1, 2, 3, 4]
+  var: "text",
+  array: [1, 2, 3, 4],
 };
 
-console.log(promise['var']);
+console.log(promise["var"]);
 ```
 
 ### `length` 與數值屬性的關係
@@ -185,7 +186,7 @@ JavaScript 陣列的 {{jsxref("Array.length", "length")}} 屬性和其數值屬�
 
 ```js
 var fruits = [];
-fruits.push('banana', 'apple', 'peach');
+fruits.push("banana", "apple", "peach");
 
 console.log(fruits.length); // 3
 ```
@@ -193,9 +194,9 @@ console.log(fruits.length); // 3
 如果給陣列設定一個數值屬性，其值為有效但超過當下範圍的陣列 index，JavaScript 引擎會依照此數值更新陣列的 {{jsxref("Array.length", "length")}} 屬性：
 
 ```js
-fruits[5] = 'mango';
+fruits[5] = "mango";
 console.log(fruits[5]); // 'mango'
-console.log(Object.keys(fruits));  // ['0', '1', '2', '5']
+console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
 console.log(fruits.length); // 6
 ```
 
@@ -227,7 +228,7 @@ console.log(fruits.length); // 2
 // 忽略大小寫
 
 var myRe = /d(b+)(d)/i;
-var myArray = myRe.exec('cdbBdbsbz');
+var myArray = myRe.exec("cdbBdbsbz");
 ```
 
 這項比對結果的屬性與元素參考如下：
@@ -263,55 +264,87 @@ var myArray = myRe.exec('cdbBdbsbz');
 
 ### 屬性
 
-{{page('/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype', 'Properties')}}
+- {{jsxref("Array.prototype.length")}}
+  - : Reflects the number of elements in an array.
+- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+  - : Contains property names that were not included in the ECMAScript standard prior to the ES2015 version and that are ignored for [`with`](/zh-TW/docs/Web/JavaScript/Reference/Statements/with) statement-binding purposes.
 
 ### 方法
 
-#### Mutator methods
-
-{{page('zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype', 'Mutator_methods')}}
-
-#### Accessor methods
-
-{{page('zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype', 'Accessor_methods')}}
-
-#### Iteration methods
-
-{{page('zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype', 'Iteration_methods')}}
-
-## `Array` 泛型方法
-
-> **警告：** 泛型陣列並非標準且已被棄用，將會在不久之後被去除。
-
-有時你想將陣列方法用於字串或其他類陣列物件（像是函數 {{jsxref("Functions/arguments", "arguments", "", 1)}}）。藉此操作，你將此字串視為由字元組成的陣列（反之為將其他非陣列視為物件）。如範例，若要確認字串中的每個字元是不是字母，你可能會這樣寫：
-
-```js
-function isLetter(character) {
-  return character >= 'a' && character <= 'z';
-}
-
-if (Array.prototype.every.call(str, isLetter)) {
-  console.log("The string '" + str + "' contains only letters!");
-}
-```
-
-這種表示法相當浪費，JavaScript 1.6 導入了一個通用方法：
-
-```js
-if (Array.every(str, isLetter)) {
-  console.log("The string '" + str + "' contains only letters!");
-}
-```
-
-{{jsxref("Global_Objects/String", "Generics", "#String_generic_methods", 1)}} 也同樣可用於 {{jsxref("String")}}.
-
-這**並非** ECMAScript 的標準，且不被非 Gecko 引擎的瀏覽器支援。你應該將你的物件用 {{jsxref("Array.from()")}} 轉為陣列，以標準替代原有的方法；雖然此方法可能不被舊的瀏覽器所支援：
-
-```js
-if (Array.from(str).every(isLetter)) {
-  console.log("The string '" + str + "' contains only letters!");
-}
-```
+- {{jsxref("Array.prototype.at()")}}
+  - : Returns the array item at the given index. Accepts negative integers, which count back from the last item.
+- {{jsxref("Array.prototype.concat()")}}
+  - : Returns a new array that is the calling array joined with other array(s) and/or value(s).
+- {{jsxref("Array.prototype.copyWithin()")}}
+  - : Copies a sequence of array elements within an array.
+- {{jsxref("Array.prototype.entries()")}}
+  - : Returns a new [_array iterator_](/zh-TW/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that contains the key/value pairs for each index in an array.
+- {{jsxref("Array.prototype.every()")}}
+  - : Returns `true` if every element in the calling array satisfies the testing function.
+- {{jsxref("Array.prototype.fill()")}}
+  - : Fills all the elements of an array from a start index to an end index with a static value.
+- {{jsxref("Array.prototype.filter()")}}
+  - : Returns a new array containing all elements of the calling array for which the provided filtering function returns `true`.
+- {{jsxref("Array.prototype.find()")}}
+  - : Returns the value of the first element in the array that satisfies the provided testing function, or `undefined` if no appropriate element is found.
+- {{jsxref("Array.prototype.findIndex()")}}
+  - : Returns the index of the first element in the array that satisfies the provided testing function, or `-1` if no appropriate element was found.
+- {{jsxref("Array.prototype.findLast()")}}
+  - : Returns the value of the last element in the array that satisfies the provided testing function, or `undefined` if no appropriate element is found.
+- {{jsxref("Array.prototype.findLastIndex()")}}
+  - : Returns the index of the last element in the array that satisfies the provided testing function, or `-1` if no appropriate element was found.
+- {{jsxref("Array.prototype.flat()")}}
+  - : Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+- {{jsxref("Array.prototype.flatMap()")}}
+  - : Returns a new array formed by applying a given callback function to each element of the calling array, and then flattening the result by one level.
+- {{jsxref("Array.prototype.forEach()")}}
+  - : Calls a function for each element in the calling array.
+- {{jsxref("Array.prototype.group()")}} {{Experimental_Inline}}
+  - : Groups the elements of an array into an object according to the strings returned by a test function.
+- {{jsxref("Array.prototype.groupToMap()")}} {{Experimental_Inline}}
+  - : Groups the elements of an array into a {{jsxref("Map")}} according to values returned by a test function.
+- {{jsxref("Array.prototype.includes()")}}
+  - : Determines whether the calling array contains a value, returning `true` or `false` as appropriate.
+- {{jsxref("Array.prototype.indexOf()")}}
+  - : Returns the first (least) index at which a given element can be found in the calling array.
+- {{jsxref("Array.prototype.join()")}}
+  - : Joins all elements of an array into a string.
+- {{jsxref("Array.prototype.keys()")}}
+  - : Returns a new [_array iterator_](/zh-TW/docs/Web/JavaScript/Guide/Iterators_and_Generators) that contains the keys for each index in the calling array.
+- {{jsxref("Array.prototype.lastIndexOf()")}}
+  - : Returns the last (greatest) index at which a given element can be found in the calling array, or `-1` if none is found.
+- {{jsxref("Array.prototype.map()")}}
+  - : Returns a new array containing the results of invoking a function on every element in the calling array.
+- {{jsxref("Array.prototype.pop()")}}
+  - : Removes the last element from an array and returns that element.
+- {{jsxref("Array.prototype.push()")}}
+  - : Adds one or more elements to the end of an array, and returns the new `length` of the array.
+- {{jsxref("Array.prototype.reduce()")}}
+  - : Executes a user-supplied "reducer" callback function on each element of the array (from left to right), to reduce it to a single value.
+- {{jsxref("Array.prototype.reduceRight()")}}
+  - : Executes a user-supplied "reducer" callback function on each element of the array (from right to left), to reduce it to a single value.
+- {{jsxref("Array.prototype.reverse()")}}
+  - : Reverses the order of the elements of an array _in place_. (First becomes the last, last becomes first.)
+- {{jsxref("Array.prototype.shift()")}}
+  - : Removes the first element from an array and returns that element.
+- {{jsxref("Array.prototype.slice()")}}
+  - : Extracts a section of the calling array and returns a new array.
+- {{jsxref("Array.prototype.some()")}}
+  - : Returns `true` if at least one element in the calling array satisfies the provided testing function.
+- {{jsxref("Array.prototype.sort()")}}
+  - : Sorts the elements of an array in place and returns the array.
+- {{jsxref("Array.prototype.splice()")}}
+  - : Adds and/or removes elements from an array.
+- {{jsxref("Array.prototype.toLocaleString()")}}
+  - : Returns a localized string representing the calling array and its elements. Overrides the {{jsxref("Object.prototype.toLocaleString()")}} method.
+- {{jsxref("Array.prototype.toString()")}}
+  - : Returns a string representing the calling array and its elements. Overrides the {{jsxref("Object.prototype.toString()")}} method.
+- {{jsxref("Array.prototype.unshift()")}}
+  - : Adds one or more elements to the front of an array, and returns the new `length` of the array.
+- {{jsxref("Array.prototype.values()")}}
+  - : Returns a new [_array iterator_](/zh-TW/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that contains the values for each index in the array.
+- [`Array.prototype[@@iterator]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+  - : An alias for the [`values()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/values) method by default.
 
 ## 範例
 
@@ -321,11 +354,11 @@ if (Array.from(str).every(isLetter)) {
 
 ```js
 var msgArray = [];
-msgArray[0] = 'Hello';
-msgArray[99] = 'world';
+msgArray[0] = "Hello";
+msgArray[99] = "world";
 
 if (msgArray.length === 100) {
-  console.log('The length is 100.');
+  console.log("The length is 100.");
 }
 ```
 
@@ -335,21 +368,22 @@ if (msgArray.length === 100) {
 
 ```js
 var board = [
-  ['R','N','B','Q','K','B','N','R'],
-  ['P','P','P','P','P','P','P','P'],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  ['p','p','p','p','p','p','p','p'],
-  ['r','n','b','q','k','b','n','r'] ];
+  ["R", "N", "B", "Q", "K", "B", "N", "R"],
+  ["P", "P", "P", "P", "P", "P", "P", "P"],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  ["p", "p", "p", "p", "p", "p", "p", "p"],
+  ["r", "n", "b", "q", "k", "b", "n", "r"],
+];
 
-console.log(board.join('\n') + '\n\n');
+console.log(board.join("\n") + "\n\n");
 
 // 將士兵往前移兩步
 board[4][4] = board[6][4];
-board[6][4] = ' ';
-console.log(board.join('\n'));
+board[6][4] = " ";
+console.log(board.join("\n"));
 ```
 
 以下是輸出結果：
@@ -378,13 +412,10 @@ r,n,b,q,k,b,n,r
 
 ```js
 values = [];
-for (var x = 0; x < 10; x++){
- values.push([
-  2 ** x,
-  2 * x ** 2
- ])
-};
-console.table(values)
+for (var x = 0; x < 10; x++) {
+  values.push([2 ** x, 2 * x ** 2]);
+}
+console.table(values);
 ```
 
 結果會是
@@ -414,8 +445,8 @@ console.table(values)
 
 ## 參見
 
-- [JavaScript Guide: “Indexing object properties”](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Indexing_object_properties)
-- [JavaScript Guide: “Predefined Core Objects: `Array` Object”](/zh-TW/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_Object)
+- [JavaScript Guide: 「Indexing object properties」](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Indexing_object_properties)
+- [JavaScript Guide: 「Predefined Core Objects: `Array` Object」](/zh-TW/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_Object)
 - [Array comprehensions](/zh-TW/docs/Web/JavaScript/Reference/Operators/Array_comprehensions)
 - [Polyfill for JavaScript 1.8.5 Array Generics and ECMAScript 5 Array Extras](https://github.com/plusdude/array-generics)
 - [Typed Arrays](/zh-TW/docs/JavaScript_typed_arrays)

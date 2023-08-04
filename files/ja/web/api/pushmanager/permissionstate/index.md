@@ -5,17 +5,17 @@ slug: Web/API/PushManager/permissionState
 
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
-{{domxref("PushManager")}} インターフェースの **`permissionState()`** メソッドは、プッシュマネージャーの許可状態を示す {{domxref("DOMString")}} で解決される {{jsxref("Promise")}} を返します。許可状態は、`'prompt'` か `'denied'`、`'granted'` です。
+{{domxref("PushManager")}} インターフェイスの **`permissionState()`** メソッドは、プッシュマネージャーの許可状態を示す {{domxref("DOMString")}} で解決される {{jsxref("Promise")}} を返します。許可状態は、`'prompt'` か `'denied'`、`'granted'` です。
 
 > **メモ:** Firefox 44 では、[Notifications](/ja/docs/Web/API/Notifications_API) と [Push](/ja/docs/Web/API/Push_API) の許可は統合されています。notifications が許可された場合、 push も使用できます。
 
 ## 構文
 
-```
+```js-nolint
 PushManager.permissionState(options).then(function(PushMessagingState) { ... });
 ```
 
-### パラメーター
+### 引数
 
 - `options` {{optional_inline}}
 
@@ -23,17 +23,15 @@ PushManager.permissionState(options).then(function(PushMessagingState) { ... });
 
     - `userVisibleOnly`: 返されたプッシュサブスクリプションの効果がユーザーに表示するメッセージにだけ使われるかを示す boolean 値。
 
-### 戻り値
+### 返値
 
 `'prompt'` か `'denied'`、`'granted'` を持つ {{domxref("DOMString")}} で解決される {{jsxref("Promise")}} 。
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                                                                                         | 状態                         | コメント   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('Push API','#widl-PushManager-permissionState-Promise-PushPermissionState--PushSubscriptionOptions-options','permissionState()')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.PushManager.permissionState")}}
 

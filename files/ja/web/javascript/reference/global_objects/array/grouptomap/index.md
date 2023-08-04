@@ -104,7 +104,7 @@ groupToMap(function(element, index, array) { /* … */ }, thisArg)
 - 配列の既存の、まだ呼び出されていない要素が `callbackFn` によって変更された場合、 `callbackFn` に渡される値は、 `groupToMap()` がその要素の添字を処理した時点での値になります。
 - [削除](/ja/docs/Web/JavaScript/Reference/Operators/delete#deleting_array_elements)された要素に対しても呼び出されます。
 
-> **警告:** 前項で説明したような同時進行の変更は、理解しにくいコードになることが多いので、（特殊な場合を除き）一般に避けるべきです。
+> **警告:** 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
 
 ## 例
 

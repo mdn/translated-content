@@ -1,13 +1,8 @@
 ---
 title: CSS Text Decoration
-slug: Web/CSS/CSS_Text_Decoration
-tags:
-  - CSS
-  - CSS Text Decoration
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Text_Decoration
+slug: Web/CSS/CSS_text_decoration
 ---
+
 {{CSSRef}}
 
 **CSS Text Decoration**은 밑줄, 텍스트 그림자 및 강조 표시 등 텍스트 장식에 관련된 기능을 정의하는 CSS 모듈입니다.
@@ -33,10 +28,6 @@ translation_of: Web/CSS/CSS_Text_Decoration
 - {{cssxref("white-space")}}
 - {{cssxref("word-spacing")}}
 
-## 명세
+## 명세서
 
-| 명세                                             | 상태                                         | 설명      |
-| ------------------------------------------------ | -------------------------------------------- | --------- |
-| {{SpecName('CSS3 Text Decoration')}} | {{Spec2('CSS3 Text Decoration')}} |           |
-| {{SpecName('CSS2.1', 'text.html')}} | {{Spec2('CSS2.1')}}                     |           |
-| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}                     | 초기 정의 |
+{{Specifications}}

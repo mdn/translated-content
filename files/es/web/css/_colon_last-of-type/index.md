@@ -1,14 +1,8 @@
 ---
-title: ':last-of-type'
+title: ":last-of-type"
 slug: Web/CSS/:last-of-type
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:last-of-type
 ---
+
 {{CSSRef}}
 
 La [pseudo-class](/es/docs/Web/CSS/Pseudo-classes) **`:last-of-type`** de [CSS](/es/docs/Web/CSS) representa el último elemento de su tipo entre un grupo de elementos hermanos.
@@ -62,7 +56,10 @@ Este ejemplo muestra cómo los elementos anidados también pueden utilizarse. Te
 <article>
   <div>Este `div` es primero.</div>
   <div>¡Este <span>'span' anidado es el último</span>!</div>
-  <div>¡Este <em>`em` anidado es el primero</em>, pero este <em>`em` anidado es el último</em>!</div>
+  <div>
+    ¡Este <em>`em` anidado es el primero</em>, pero este
+    <em>`em` anidado es el último</em>!
+  </div>
   <b>¡Este `b` califica!</b>
   <div>¡Este es el 'div' final!</div>
 </article>
@@ -82,14 +79,11 @@ article :last-of-type {
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                               | Comentarios                                             |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#last-of-type-pseudo', ':last-of-type')}} | {{Spec2('CSS4 Selectors')}} | Los elementos coincidentes no requieren tener un padre. |
-| {{SpecName('CSS3 Selectors', '#last-of-type-pseudo', ':last-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.last-of-type")}}
+{{Compat}}
 
 ## Ver también
 

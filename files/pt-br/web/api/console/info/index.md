@@ -1,8 +1,8 @@
 ---
 title: Console.info()
-slug: Web/API/Console/info
-translation_of: Web/API/Console/info
+slug: Web/API/console/info
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 Apresenta uma mensagem de saída no console do navegador . No Firefox e Chrome , um pequeno ícone "i" e apresentado próximo aos items do log do console .
@@ -29,13 +29,11 @@ Veja [Outputting text to the console](/pt-BR/docs/Web/API/console#Outputting_tex
 
 ## Especificações
 
-| Especificações                                                                                       | Status                           | Comentários       |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName("Console API", "#consoleinfoobject--object-", "console.info()")}} | {{Spec2("Console API")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.console.info")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,5 +1,5 @@
 ---
-title: ':focus'
+title: ":focus"
 slug: Web/CSS/:focus
 ---
 
@@ -18,7 +18,9 @@ input:focus {
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:focus
+```
 
 <h2 id="Examples">例</h2>
 

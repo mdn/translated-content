@@ -1,15 +1,9 @@
 ---
-title: '<small>: 덧붙임 글 요소'
+title: "<small>: 덧붙임 글 요소"
 slug: Web/HTML/Element/small
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/small
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<small>`** **요소**는 덧붙이는 글이나, 저작권과 법률 표기 등의 작은 텍스트를 나타냅니다. 기본 상태에서 `<small>`은 자신의 콘텐츠를 한 사이즈 작은 글꼴(`small`에서 `x-small` 등)로 표시하지만, 스타일을 적용한 후에도 글씨 크기가 작을 필요는 없습니다.
 
@@ -75,8 +69,9 @@ translation_of: Web/HTML/Element/small
 ### 기본 사용법
 
 ```html
-<p>This is the first sentence.
- <small>This whole sentence is in small letters.</small>
+<p>
+  This is the first sentence.
+  <small>This whole sentence is in small letters.</small>
 </p>
 ```
 
@@ -85,9 +80,9 @@ translation_of: Web/HTML/Element/small
 ### CSS 예제
 
 ```html
-<p>This is the first sentence.
-  <span style="font-size:0.8em">This whole sentence is in small
-  letters.</span>
+<p>
+  This is the first sentence.
+  <span style="font-size:0.8em">This whole sentence is in small letters.</span>
 </p>
 ```
 
@@ -103,7 +98,7 @@ translation_of: Web/HTML/Element/small
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.small")}}
+{{Compat}}
 
 ## 같이 보기
 

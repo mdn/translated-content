@@ -23,7 +23,7 @@ node.removeChild(child);
 
 而第二種語法形式，因為沒有保留 `oldChild` 引用，因此假設你並沒有在其他地方保留節點引用，則它會立即無法使用且不可挽回，而且通常會在短時間內從[內存管理](/zh-TW/docs/Web/JavaScript/Memory_Management)中被自動刪除。
 
-如果 `child` 並非某 `element` 節點的子元素，則此方法會拋出異常。而如果調用此方法時，`child` 雖是某 `element` 的子元素，但在嘗試刪除它的過程中已被其他事件處理程序刪除，也會拋出異常（例如 {{Event("blur")}}）。
+如果 `child` 並非某 `element` 節點的子元素，則此方法會拋出異常。而如果調用此方法時，`child` 雖是某 `element` 的子元素，但在嘗試刪除它的過程中已被其他事件處理程序刪除，也會拋出異常（例如 [`blur`](/zh-TW/docs/Web/API/Element/blur_event)）。
 
 ### 會丟出的錯誤
 
@@ -31,11 +31,11 @@ node.removeChild(child);
 
 1. 如果 `child` 確實是 `element` 的子元素且確實存在於 DOM，但已被刪除，則會丟出以下異常：
 
-    `Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node`.
+   `Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node`.
 
 2. 如果 `child` 不存在於頁面的 DOM，則會拋出下列的異常：
 
-    `Uncaught TypeError: Failed to execute 'removeChild' on 'Node': parameter 1 is not of type 'Node'.`
+   `Uncaught TypeError: Failed to execute 'removeChild' on 'Node': parameter 1 is not of type 'Node'.`
 
 ## 例子
 
@@ -79,7 +79,7 @@ while (element.firstChild) {
 
 ```html
 <!--Sample HTML code-->
-<div id="top"> </div>
+<div id="top"></div>
 
 <script type="text/javascript">
   let top = document.getElementById("top");

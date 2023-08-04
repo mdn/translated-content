@@ -1,14 +1,8 @@
 ---
-title: ':default'
+title: ":default"
 slug: Web/CSS/:default
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:default
 ---
+
 {{ CSSRef() }}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:default`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento de formulario que sea el predeterminado entre un grupo de elementos relacionados.
@@ -33,16 +27,16 @@ Los elementos agrupados que permiten selecciones múltiples también pueden tene
 ### HTML
 
 ```html
-<input type="radio" name="season" id="spring">
+<input type="radio" name="season" id="spring" />
 <label for="spring">Spring</label>
 
-<input type="radio" name="season" id="summer" checked>
+<input type="radio" name="season" id="summer" checked />
 <label for="summer">Summer</label>
 
-<input type="radio" name="season" id="fall">
+<input type="radio" name="season" id="fall" />
 <label for="fall">Fall</label>
 
-<input type="radio" name="season" id="winter">
+<input type="radio" name="season" id="winter" />
 <label for="winter">Winter</label>
 ```
 
@@ -64,13 +58,8 @@ input:default + label {
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                               | Comentarios                                                         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-default', ':default')}} | {{Spec2('HTML WHATWG')}}     | Ningún cambio.                                                      |
-| {{SpecName('HTML5 W3C', '#selector-default', ':default')}}     | {{Spec2('HTML5 W3C')}}         | Define la semántica HTML asociada y la validación de restricciones. |
-| {{SpecName('CSS4 Selectors', '#default-pseudo', ':default')}} | {{Spec2('CSS4 Selectors')}} | Ningún cambio.                                                      |
-| {{SpecName('CSS3 Basic UI', '#pseudo-default', ':default')}} | {{Spec2('CSS3 Basic UI')}} | Definición inicial, pero sin la semántica asociada.                 |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.default")}}
+{{Compat}}

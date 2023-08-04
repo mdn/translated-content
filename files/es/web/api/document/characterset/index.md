@@ -1,8 +1,8 @@
 ---
 title: document.characterSet
 slug: Web/API/Document/characterSet
-translation_of: Web/API/Document/characterSet
 ---
+
 {{ ApiRef("DOM") }}
 
 ### Resumen
@@ -12,16 +12,17 @@ Devuelve la codificación de caracteres (conjunto de caracteres) usado en el doc
 ### Sintaxis
 
 ```js
-string = document.characterSet
+string = document.characterSet;
 ```
 
 ### Ejemplo
 
 ```html
 <button onclick="alert(document.characterSet);">
-    Mostrar conjunto de caracteres
+  Mostrar conjunto de caracteres
 </button>
-// devuelve el conjunto de caracteres del documento, por ejemplo "ISO-8859-1 o UTF-8"
+
+<!-- devuelve el conjunto de caracteres del documento, por ejemplo "ISO-8859-1 o UTF-8" -->
 ```
 
 ### Notas

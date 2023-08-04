@@ -54,9 +54,7 @@ var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documen
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{ SpecName('CSSOM View', '#dom-window-scrolly', 'window.scrollY') }} | {{ Spec2('CSSOM View') }} |      |
+{{Specifications}}
 
 ## ブラウザーの対応
 

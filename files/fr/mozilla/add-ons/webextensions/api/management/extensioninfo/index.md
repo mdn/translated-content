@@ -1,16 +1,6 @@
 ---
 title: ExtensionInfo
 slug: Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo
-tags:
-  - API
-  - Add-ons
-  - ExtensionInfo
-  - Extensions
-  - Reference
-  - Type
-  - WebExtensions
-  - management
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo
 ---
 
 {{AddonSidebar()}}
@@ -28,7 +18,7 @@ Il s'agit d'un objet avec les propriétés suivantes :
 - `enabled`
   - : `boolean`. Que l'extension soit activée ou pas.
 - `homepageUrl`
-  - : `string`. L'URL de la page d'accueil de l'extension, prise en compte de la clé  [homepage_url](/fr/Add-ons/WebExtensions/manifest.json/homepage_url) du fichier manifest.json.
+  - : `string`. L'URL de la page d'accueil de l'extension, prise en compte de la clé [homepage_url](/fr/Add-ons/WebExtensions/manifest.json/homepage_url) du fichier manifest.json.
 - `hostPermissions`
   - : `ensemble` de `chaîne`. Les [permissions d'hôtes](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) de l'extension.
 - `icons`
@@ -61,7 +51,7 @@ Il s'agit d'un objet avec les propriétés suivantes :
 - `permissions`
   - : `array` of `string`. les [permissions de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) de l'extension.
 - `shortName`
-  - : `string`. Une courte version du nom de l'extension, prise à partir de la clé  [short_name](/fr/Add-ons/WebExtensions/manifest.json/short_name) du manifest.json.
+  - : `string`. Une courte version du nom de l'extension, prise à partir de la clé [short_name](/fr/Add-ons/WebExtensions/manifest.json/short_name) du manifest.json.
 - `type`
 
   - : `string`. Chaîne décrivant le type d'extension. Ceci permet de distinguer les extensions des applications et des thèmes. Il peut prendre l'une des valeurs suivantes :
@@ -77,11 +67,11 @@ Il s'agit d'un objet avec les propriétés suivantes :
 - `version`
   - : `string`. La version de l'extension, tiré de la clé [version](/fr/Add-ons/WebExtensions/manifest.json/version) du manifest.json
 - `versionName`
-  - : `string`. Le nom descriptif pour la version de l'extension, tiré de la clé  [version_name](/fr/Add-ons/WebExtensions/manifest.json/version_name) du manifest.json.
+  - : `string`. Le nom descriptif pour la version de l'extension, tiré de la clé [version_name](/fr/Add-ons/WebExtensions/manifest.json/version_name) du manifest.json.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.ExtensionInfo")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

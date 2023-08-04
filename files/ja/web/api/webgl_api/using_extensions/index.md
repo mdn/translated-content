@@ -3,7 +3,7 @@ title: WebGL 拡張機能の使用
 slug: Web/API/WebGL_API/Using_Extensions
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 WebGL は姉妹 API (OpenGL や OpenGL ES) と同様に、拡張機能に対応しています。拡張機能の完全な一覧は [Khronos WebGL Extension レジストリー](http://www.khronos.org/registry/webgl/extensions/)で確認できます。
 

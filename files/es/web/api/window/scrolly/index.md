@@ -1,13 +1,8 @@
 ---
 title: Window.scrollY
 slug: Web/API/Window/scrollY
-tags:
-  - API
-  - Propiedad
-  - Rerencia
-  - Scroll Vertical
-translation_of: Web/API/Window/scrollY
 ---
+
 {{APIRef}}
 
 ## Sumario
@@ -27,7 +22,7 @@ var y = window.scrollY;
 ```js
 // Asegurate de bajar a la segunda página
 if (window.scrollY) {
-  window.scroll(0, 0);  // Restablece la posición de desplazamiento en la parte superior izquierda del documento
+  window.scroll(0, 0); // Restablece la posición de desplazamiento en la parte superior izquierda del documento
 }
 
 window.scrollByPages(1);
@@ -47,10 +42,18 @@ Para compatibilidad entre navegadores, es recomendable usar window\.pageYOffset 
 
 ```js
 var supportPageOffset = window.pageXOffset !== undefined;
-var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
 
-var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
-var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+var x = supportPageOffset
+  ? window.pageXOffset
+  : isCSS1Compat
+  ? document.documentElement.scrollLeft
+  : document.body.scrollLeft;
+var y = supportPageOffset
+  ? window.pageYOffset
+  : isCSS1Compat
+  ? document.documentElement.scrollTop
+  : document.body.scrollTop;
 ```
 
 ## Especificación

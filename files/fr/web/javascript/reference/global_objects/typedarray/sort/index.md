@@ -1,16 +1,6 @@
 ---
 title: TypedArray.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/sort
 ---
 
 {{JSRef}}
@@ -22,7 +12,7 @@ La méthode **`sort()`** permet de trier numériquement les éléments d'un tabl
 ## Syntaxe
 
 ```js
-typedarray.sort([fonctionComparaison])
+typedarray.sort([fonctionComparaison]);
 ```
 
 ### Paramètres
@@ -60,14 +50,11 @@ nombres.sort(comparaisonNombres);
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.sort")}}
+{{Compat}}
 
 ## Voir aussi
 

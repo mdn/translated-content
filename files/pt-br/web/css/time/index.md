@@ -1,24 +1,17 @@
 ---
 title: <time>
 slug: Web/CSS/time
-tags:
-  - Layout
-  - Referencia
-  - Time
-  - Time Refência
-  - Tipo de Dados CSS
-  - Web
-translation_of: Web/CSS/time
 ---
+
 {{CSSRef}}
 
 O tipo de dado CSS **`<time>`** representa um valor de tempo expresso em segundo ou milissegundos. É usado em animações( {{cssxref("animation")}} ), transições( {{cssxref("transition")}} ) e propriedades relacionadas.
 
 ## Sintaxe
 
-O tipo dado `<time>` consiste de um elemento ​​​​​​{{cssxref("&lt;number&gt;")}} seguido por uma das unidades listadas abaixo. Opcionalmente, pode ser precedido por um sinal de `+` ou `-`. Como em todas as dimensões, não há espaço entre uma unidade literal e o número.
+O tipo dado `<time>` consiste de um elemento {{cssxref("&lt;number&gt;")}} seguido por uma das unidades listadas abaixo. Opcionalmente, pode ser precedido por um sinal de `+` ou `-`. Como em todas as dimensões, não há espaço entre uma unidade literal e o número.
 
-> **Note:** **Nota:** Embora o número `0` seja sempre o mesmo, independente da unidade, essa última não pode ser omitida. Em outras palavras, `0` é invalido e não representa `0s` ou `0ms`.
+> **Nota:** Embora o número `0` seja sempre o mesmo, independente da unidade, essa última não pode ser omitida. Em outras palavras, `0` é invalido e não representa `0s` ou `0ms`.
 
 ### Unidades
 
@@ -27,7 +20,7 @@ O tipo dado `<time>` consiste de um elemento ​​​​​​{{cssxref("&lt;nu
 - **`ms`**
   - : Representa um tempo em milissegundos. Exemplos: `0ms`, `150.25ms`, `-60000ms`.
 
-> **Note:** **Nota:** A conversão entre `s` e `ms` segue a proporção `1s = 1000ms`.
+> **Nota:** A conversão entre `s` e `ms` segue a proporção `1s = 1000ms`.
 
 ## Exemplos
 

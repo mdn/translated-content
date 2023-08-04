@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.clearRect()
 slug: Web/API/CanvasRenderingContext2D/clearRect
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Referencia
-  - metodo
-translation_of: Web/API/CanvasRenderingContext2D/clearRect
 ---
+
 {{APIRef}}
 
 O método **`CanvasRenderingContext2D.clearRect()`** da API Canvas 2D limpa todos os pixels de um retângulo definido na posição _(x, y)_ e tamanho (_width_ (largura), _height_ (altura)) para uma cor preta transparente, apagando algum conteúdo anterior.
@@ -49,8 +43,8 @@ Isto é só um simples trecho de código que usa o método `clearRect`.
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.moveTo(20, 20);
@@ -81,7 +75,8 @@ ctx.lineTo(120,120);
 ctx.closePath(); // draws last line of the triangle
 ctx.stroke();
 
-ctx.clearRect(10, 10, 100, 100);</textarea>
+ctx.clearRect(10, 10, 100, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -97,14 +92,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -114,13 +109,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Especificações
 
-| Especificação                                                                                                                                    | Estado                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-clearrect", "CanvasRenderingContext2D.clearRect")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CanvasRenderingContext2D.clearRect")}}
+{{Compat}}
 
 ## Veja também
 

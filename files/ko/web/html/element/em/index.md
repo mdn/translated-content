@@ -1,15 +1,9 @@
 ---
-title: '<em>: 강세 요소'
+title: "<em>: 강세 요소"
 slug: Web/HTML/Element/em
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/em
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<em>` 요소**는 텍스트의 강세를 나타냅니다. `<em>` 요소를 중첩하면 더 큰 강세를 뜻하게 됩니다.
 
@@ -89,9 +83,8 @@ translation_of: Web/HTML/Element/em
 
 ```html
 <p>
-  과거에 <em>block-level</em>이라 불렸던
-  콘텐츠는 HTML 5부터 <em>flow</em> 콘텐츠라고
-  말합니다.
+  과거에 <em>block-level</em>이라 불렸던 콘텐츠는 HTML 5부터
+  <em>flow</em> 콘텐츠라고 말합니다.
 </p>
 ```
 
@@ -105,7 +98,7 @@ translation_of: Web/HTML/Element/em
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.em")}}
+{{Compat}}
 
 ## 같이 보기
 

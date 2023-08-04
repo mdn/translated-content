@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.stageParameters
 slug: Web/API/VRDisplay/stageParameters
-original_slug: Web/API/VRDevice/stageParameters
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
@@ -12,7 +11,7 @@ original_slug: Web/API/VRDevice/stageParameters
 
 ### 値
 
-`VRDisplay` のルームスケールパラメーターを持つ {{domxref("VRStageParameters")}} オブジェクトです。 `VRDisplay` がルームスケール体験をサポートしていない場合は  `null` です。
+`VRDisplay` のルームスケールパラメーターを持つ {{domxref("VRStageParameters")}} オブジェクトです。 `VRDisplay` がルームスケール体験をサポートしていない場合は `null` です。
 
 ## 例
 

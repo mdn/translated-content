@@ -11,5 +11,5 @@ UTF-8 の最初の 128 文字は、ASCII の 128 文字 (0 ～ 127) に正確に
 
 ### 一般知識
 
-- ウィキペディアの {{Interwiki("wikipedia", "UTF-8")}}
+- ウィキペディアの [UTF-8](https://ja.wikipedia.org/wiki/UTF-8)
 - [FAQ about UTF-8 on Unicode website](https://www.unicode.org/faq/utf_bom.html#UTF8)

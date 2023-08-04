@@ -1,28 +1,27 @@
 ---
 title: MediaStream
 slug: Web/API/MediaStream
-translation_of: Web/API/MediaStream
 ---
 
 {{APIRef("Media Capture and Streams")}} {{SeeCompatTable}}
 
-L'interface `MediaStream` représente le contenu d'un flux de média. Un flux est composé de plusieurs *pistes*, tel que des pistes vidéos ou audio.
+L'interface `MediaStream` représente le contenu d'un flux de média. Un flux est composé de plusieurs _pistes_, tel que des pistes vidéos ou audio.
 
 ## Attributs
 
 - {{domxref("MediaStream.id")}} {{readonlyInline}}
   - : {{domxref("DOMString")}} contenant 36 carractères correspondant à l'identifiant unique (GUID) de l'objet.
 - {{domxref("MediaStream.ended")}} {{readonlyInline}}
-  - : Booléen dont la valeur est `true` si l'évènement {{event("ended (MediaStream)", "ended")}} à été déclenché sur l'objet, signifiant que le flux à été complètement lu, ou `false` si la fin du flux n'à pas été atteinte.
+  - : Booléen dont la valeur est `true` si l'évènement [`ended`](/fr/docs/Web/API/MediaStreamTrack/ended_event) à été déclenché sur l'objet, signifiant que le flux à été complètement lu, ou `false` si la fin du flux n'à pas été atteinte.
 
 ### Gestionnaire d'évènements
 
 - {{domxref("MediaStream.onaddtrack")}}
-  - : Est un {{event("Event_handlers", "event handler")}} contenant l'action à exécuter lorsqu'un évènement {{event("addtrack")}} est déclenché sur l'objet, ce qui arrive lorsqu'un nouvel objet {{domxref("MediaStreamTrack")}} est ajouté.
+  - : Est un gestionnaire d'évènement contenant l'action à exécuter lorsqu'un évènement [`addtrack`](/fr/docs/Web/API/MediaStream/addtrack_event) est déclenché sur l'objet, ce qui arrive lorsqu'un nouvel objet {{domxref("MediaStreamTrack")}} est ajouté.
 - {{domxref("MediaStream.onended")}}
-  - : Est un  {{event("Event_handlers", "event handler")}} contenant l'action à exécuter lorsqu'un évènement {{event("ended (MediaStream)","ended")}} est déclenché sur l'objet, ce qui arrive lorsque la diffusion est terminée.
+  - : Est un gestionnaire d'évènement contenant l'action à exécuter lorsqu'un évènement [`ended`](/fr/docs/Web/API/MediaStreamTrack/ended_event) est déclenché sur l'objet, ce qui arrive lorsque la diffusion est terminée.
 - {{domxref("MediaStream.onremovetrack")}}
-  - : Est un {{event("Event_handlers", "event handler")}} contenant l'action à exécuter lorsqu'un évènement {{event("removetrack")}} est délenché sur l'objet, ce qui arrive quand un objet  {{domxref("MediaStreamTrack")}} est retiré.
+  - : Est un gestionnaire d'évènement contenant l'action à exécuter lorsqu'un évènement [`removetrack`](/fr/docs/Web/API/MediaStream/removetrack_event) est délenché sur l'objet, ce qui arrive quand un objet {{domxref("MediaStreamTrack")}} est retiré.
 
 ## Méthodes
 

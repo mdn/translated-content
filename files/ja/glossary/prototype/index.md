@@ -11,4 +11,4 @@ slug: Glossary/Prototype
 
 ### 基礎知識
 
-- ウィキペディアの {{Interwiki("wikipedia", "ソフトウェアプロトタイピング")}} の記事
+- ウィキペディアの [ソフトウェアプロトタイピング](https://ja.wikipedia.org/wiki/ソフトウェアプロトタイピング) の記事

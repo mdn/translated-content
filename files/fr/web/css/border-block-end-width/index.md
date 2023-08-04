@@ -1,17 +1,11 @@
 ---
 title: border-block-end-width
 slug: Web/CSS/border-block-end-width
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-block-end-width
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété **`border-block-end-width`** définit la largeur de la bordure pour le côté de bloc de la fin « logique » de l'élément. Cette propriété logique correspond à l'une des propriétés physiques équivalentes en fonction du mode d'écriture, de la directionnalité et de l'orientation du texte. Autrement dit, elle correspondra à  {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}} ou a {{cssxref("border-left-width")}} selon les valeurs des propriétés pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+La propriété **`border-block-end-width`** définit la largeur de la bordure pour le côté de bloc de la fin « logique » de l'élément. Cette propriété logique correspond à l'une des propriétés physiques équivalentes en fonction du mode d'écriture, de la directionnalité et de l'orientation du texte. Autrement dit, elle correspondra à {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}} ou a {{cssxref("border-left-width")}} selon les valeurs des propriétés pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
 {{EmbedInteractiveExample("pages/css/border-block-end-width.html")}}
 

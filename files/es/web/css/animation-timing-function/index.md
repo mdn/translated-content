@@ -1,8 +1,8 @@
 ---
 title: animation-timing-function
 slug: Web/CSS/animation-timing-function
-translation_of: Web/CSS/animation-timing-function
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Resumen
@@ -30,11 +30,11 @@ animation-timing-function: step-start;
 animation-timing-function: step-end;
 
 /* Function values */
-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
 animation-timing-function: steps(4, end);
 
 /* Multiple animations */
-animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* Global values */
 animation-timing-function: inherited;
@@ -57,13 +57,11 @@ Visita [animaciones CSS](/es/CSS/Usando_animaciones_CSS) para ver algunos ejempl
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                               | Comentario        |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------- |
-| {{SpecName('CSS3 Animations', '#animation-timing-function', 'animation-timing-function')}} | {{Spec2('CSS3 Animations')}} | Definición incial |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.animation-timing-function")}}
+{{Compat}}
 
 ## Consulte también
 

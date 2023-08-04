@@ -24,15 +24,14 @@ promise = PromiseRejectionEvent.promise
 {{domxref("event.preventDefault()")}} 用来表明该 promise 已被处理
 
 ```js
-window.onunhandledrejection = function(event) {
+window.onunhandledrejection = function (event) {
   if (event.reason.code && event.reason.code == "Module not ready") {
-    window.requestIdleCallback(function(deadline) {
-      loadModule(event.reason.moduleName)
-        .then(performStartup);
+    window.requestIdleCallback(function (deadline) {
+      loadModule(event.reason.moduleName).then(performStartup);
     });
     event.preventDefault();
   }
-}
+};
 ```
 
 ## Specifications
@@ -43,9 +42,9 @@ window.onunhandledrejection = function(event) {
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{jsxref("Promise")}}
 - {{domxref("PromiseRejectionEvent")}}
-- {{event("rejectionhandled")}}
-- {{event("unhandledrejection")}}
+- {{domxref("Window/rejectionhandled_event", "rejectionhandled")}}
+- {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}

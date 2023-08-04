@@ -3,7 +3,7 @@ title: WebGL でのテクスチャの使用
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 現在、サンプルプログラムは回転する 3D キューブを描画します。今回はキューブの表面を単色で塗りつぶすのではなく、テクスチャをマッピングしてみましょう。
 
@@ -197,12 +197,12 @@ WebGL のテクスチャの読み込みは、クロスドメインアクセス�
 
 CORS で許可された画像を WebGL のテクスチャとして使用する方法の説明を [こちらの hacks.mozilla.org の記事](http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) に掲載していますので、[サンプル](http://people.mozilla.org/~bjacob/webgltexture-cors-js.html) と合わせてご覧ください。
 
-> **メモ:** WebGL テクスチャ向けの CORS サポートと、画像要素の `crossOrigin` 属性は {{Gecko("8.0")}} で実装されました。
+> **メモ:** WebGL テクスチャ向けの CORS サポートと、画像要素の `crossOrigin` 属性は Gecko 8.0 で実装されました。
 
 汚染された (書き込みのみ) 2D canvas を WebGL のテクスチャとして使用することはできません。2D {{HTMLElement("canvas")}} が汚染されたとは例えば、クロスドメインの画像が canvas 上に描画された状態を指します。
 
-> **メモ:** Canvas 2D `drawImage` 向けの CORS サポートを {{Gecko("9.0")}} で実装しました。これは、CORS で許可されたクロスドメインの画像が 2D canvas を汚染しないので、2D canvas を WebGL のテクスチャ素材として引き続き使用できることを意味します。
+> **メモ:** Canvas 2D `drawImage` 向けの CORS サポートを Gecko 9.0 で実装しました。これは、CORS で許可されたクロスドメインの画像が 2D canvas を汚染しないので、2D canvas を WebGL のテクスチャ素材として引き続き使用できることを意味します。
 
-> **メモ:** クロスドメインの動画に対する CORS サポートと、{{HTMLElement("video")}} 要素の`crossorigin` 属性は {{Gecko("12.0")}} で実装されました。
+> **メモ:** クロスドメインの動画に対する CORS サポートと、{{HTMLElement("video")}} 要素の`crossorigin` 属性は Gecko 12.0 で実装されました。
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

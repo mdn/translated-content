@@ -1,17 +1,8 @@
 ---
 title: console.timeEnd()
 slug: Web/API/console/timeEnd
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - console
-  - web console
-browser-compat: api.console.timeEnd
-translation_of: Web/API/Console/timeEnd
 ---
+
 {{APIRef("Console API")}}
 
 **`console.timeEnd()`** 는 이전에 {{domxref("console.time()")}}를 호출하여 시작된 타이머를 중지합니다.

@@ -1,12 +1,9 @@
 ---
 title: Rebota en las paredes
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls
 ---
-{{GamesSidebar}}
 
-{{IncludeSubnav("/es/docs/Games")}}
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado")}}
 
@@ -27,7 +24,7 @@ var ballRadius = 10;
 Ahora actualice la línea que dibuja la bola dentro de la funcion drawBall() a esto:
 
 ```js
-ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
 ```
 
 ### Rebotando arriba y abajo
@@ -35,8 +32,8 @@ ctx.arc(x, y, ballRadius, 0, Math.PI*2);
 Hay cuatro paredes para rebotar la pelota - vamos a centrarnos en la de arriba en primer lugar. Tendremos que comprobar, en cada fotograma, si la pelota está tocando el borde superior del Canvas - si es así, invertiremos el movimiento de la bola para que empiece a moverse en la dirección opuesta y se mantenga dentro de los límites visibles. Recordando que el sistema de coordenadas comienza desde la parte superior izquierda, podemos llegar a algo como esto:
 
 ```js
-if(y + dy < 0) {
-    dy = -dy;
+if (y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -45,8 +42,8 @@ Si el valor de y de la posición de la bola es menor que cero, cambie la direcci
 El código anterior se ocuparía de que la pelota rebote desde el borde superior, así que ahora vamos a pensar en el borde inferior:
 
 ```js
-if(y + dy > canvas.height) {
-    dy = -dy;
+if (y + dy > canvas.height) {
+  dy = -dy;
 }
 ```
 
@@ -55,8 +52,8 @@ Si la posición y de la pelota es mayor que la altura del canvas (recuerde que c
 Podríamos fusionar esas dos sentencias en una para ahorrar código:
 
 ```js
-if(y + dy > canvas.height || y + dy < 0) {
-    dy = -dy;
+if (y + dy > canvas.height || y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -67,12 +64,12 @@ Si cualquiera de las dos afirmaciones es verdadera, invierte el movimiento de la
 Tenemos el borde superior e inferior cubiertos, así que pensemos en los de izquierda y derecha. Es muy similar en realidad, todo lo que tienes que hacer es repetir las declaraciones de x en lugar de y:
 
 ```js
-if(x + dx > canvas.width || x + dx < 0) {
-    dx = -dx;
+if (x + dx > canvas.width || x + dx < 0) {
+  dx = -dx;
 }
 
-if(y + dy > canvas.height || y + dy < 0) {
-    dy = -dy;
+if (y + dy > canvas.height || y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -82,16 +79,16 @@ En este punto, debe insertar el bloque de código anterior en la función draw()
 
 Prueba tu código en este punto, y te quedarás impresionado - ¡ahora tenemos una pelota que rebotó en los cuatro bordes del canvas! Pero tenemos otro problema sin embargo - cuando la bola golpea cada pared se hunde en ella levemente antes de cambiar la dirección:
 
-![](https://mdn.mozillademos.org/files/10432/ball-in-wall.png)
+![](ball-in-wall.png)
 
 Esto es porque estamos calculando el punto de colisión de la pared y el centro de la bola, mientras que deberíamos hacerlo por su circunferencia. La bola debe rebotar justo después de que toca la pared, no cuando ya está a medio camino en la pared, así que vamos a ajustar nuestras declaraciones un poco para incluir eso. Actualice el último código que agregó, a esto:
 
 ```js
-if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-    dx = -dx;
+if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+  dx = -dx;
 }
-if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-    dy = -dy;
+if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+  dy = -dy;
 }
 ```
 

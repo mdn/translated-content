@@ -1,12 +1,8 @@
 ---
 title: title
 slug: Web/HTML/Global_attributes/title
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/title
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`title`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소와 관련된 추가 정보를 제공하는 텍스트를 나타냅니다.
@@ -30,9 +26,14 @@ translation_of: Web/HTML/Global_attributes/title
 ### HTML
 
 ```html
-<p><code>title</code> 안에서 줄을 바꿀 땐 조심해야 합니다.
-이 <abbr title="This is a
-multiline title">예제</abbr>처럼요.</p>
+<p>
+  <code>title</code> 안에서 줄을 바꿀 땐 조심해야 합니다. 이
+  <abbr
+    title="This is a
+multiline title"
+    >예제</abbr
+  >처럼요.
+</p>
 ```
 
 ### 결과
@@ -81,7 +82,7 @@ multiline title">예제</abbr>처럼요.</p>
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.title")}}
+{{Compat}}
 
 ## 같이 보기
 

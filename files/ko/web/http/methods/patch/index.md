@@ -1,8 +1,8 @@
 ---
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
-translation_of: Web/HTTP/Methods/PATCH
 ---
+
 {{HTTPSidebar}}
 
 **HTTP PATCH** 메소드는 리소스의 부분적인 수정을 할 때에 사용됩니다.
@@ -39,7 +39,7 @@ PATCH가 허용되는지 확인할 수 있는 또 다른 (암묵적인)지표로
     </tr>
     <tr>
       <th scope="row">
-        Allowed in <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms</a>
+        Allowed in <a href="/ko/docs/Web/Guide/HTML/Forms">HTML forms</a>
       </th>
       <td>No</td>
     </tr>
@@ -56,7 +56,7 @@ PATCH /file.txt HTTP/1.1
 
 ### Request
 
-```html
+```http
 PATCH /file.txt HTTP/1.1
 Host: www.example.com
 Content-Type: application/example
@@ -76,7 +76,7 @@ Content-Length: 100
 Content-Location: /file.txt
 ETag: "e0023aa4f"</pre>
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

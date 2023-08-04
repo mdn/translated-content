@@ -3,6 +3,8 @@ title: SVG
 slug: Web/SVG
 ---
 
+{{SVGRef}}
+
 **[由此開始](/zh_tw/SVG/教學)**
 本教程將輔助你開始使用 SVG。
 

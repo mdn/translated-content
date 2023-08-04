@@ -19,9 +19,7 @@ var containerId = TaskAttributionTiming.containerId;
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                             | コメント |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('Long Tasks','#dom-taskattributiontiming-containerid','containerId')}} | {{Spec2('Long Tasks')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

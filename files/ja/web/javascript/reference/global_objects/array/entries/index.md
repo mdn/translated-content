@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`entries()`** メソッドは、配列内の各要素に対するキー/値のペアを含む新しい **Array 反復子**オブジェクトを返します。
+**`entries()`** メソッドは、配列内の各要素に対するキー/値のペアを含む新しい **Array イテレーター**オブジェクトを返します。
 
 {{EmbedInteractiveExample("pages/js/array-entries.html")}}
 
@@ -19,7 +19,7 @@ entries();
 
 ### 返値
 
-新しい {{jsxref("Array")}} 反復子オブジェクトを返します。
+新しい {{jsxref("Array")}} イテレーターオブジェクトを返します。
 
 ## 例
 

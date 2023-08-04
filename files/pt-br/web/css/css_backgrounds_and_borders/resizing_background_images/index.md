@@ -1,17 +1,15 @@
 ---
 title: Alterando a escala das imagens de background
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
-translation_of_original: Web/CSS/CSS_Background_and_Borders/Scaling_background_images
-original_slug: Web/Guide/CSS/Scaling_background_images
+slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 ---
+
 A propriedade CSS {{ cssxref("background-size") }} possibilita o ajuste das imagens do background, ao invés do comportamento padrão do navegador de mostrar a imagem no seu tamanho real. Você pode tanto aumentar como diminuir a imagem.
 
 ## Duplicando uma imagem grande
 
 Vamos considerar uma imagem grande, a image da logo do Firefox com 2982x2808 . Nós queremos (por alguma razão, envolvendo um site com um design ruim) quatro cópia desta imagem em um quadrado de 300x300 pixel, resultando nesse visual:
 
-![](https://mdn.mozillademos.org/files/8965/ss1.png)
+![](ss1.png)
 
 Isto pode ser conseguido usando o seguinte CSS:
 
@@ -39,13 +37,13 @@ background-size: 300px 150px;
 
 O resultado fica assim:
 
-![](https://mdn.mozillademos.org/files/8967/ss2.png)
+![](ss2.png)
 
 ## Aumentando escala de uma imagem
 
 Na outra extremidade do espectro, é possível dimensionar-se uma imagem no fundo. Aqui nós aumentamos a escala de um favicon de pixel 32x32 para 300x300 pixels:
 
-![](https://mdn.mozillademos.org/files/8969/ss3.png)
+![](ss3.png)
 
 ```css
 .square2 {
@@ -80,10 +78,11 @@ O valor contain especifica que, independentemente do tamanho da caixa que conté
 ```css
 .bgSizeContain {
   height: 200px;
-  background-image: url(https://mdn.mozillademos.org/files/8971/firefox_logo.png);
+  background-image: url(firefox_logo.png);
   background-size: contain;
   border: 2px solid darkgray;
-  color: #000; text-shadow: 1px 1px 0 #fff;
+  color: #000;
+  text-shadow: 1px 1px 0 #fff;
 }
 ```
 
@@ -104,7 +103,7 @@ Os exemplos à seguir usam HTML & CSS:
 ```css
 .bgSizeCover {
   height: 200px;
-  background-image: url('https://mdn.mozillademos.org/files/8971/firefox_logo.png');
+  background-image: url('firefox_logo.png');
   background-size: cover;
   border: 2px solid darkgray;
   color: #000; text-shadow: 1px 1px 0 #fff;

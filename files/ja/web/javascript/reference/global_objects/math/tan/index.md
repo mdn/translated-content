@@ -42,16 +42,14 @@ Math.tan(1); // 1.5574077246549023
 
 ```js
 function getTanDeg(deg) {
-  var rad = deg * Math.PI/180;
+  var rad = (deg * Math.PI) / 180;
   return Math.tan(rad);
 }
 ```
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.tan', 'Math.tan')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

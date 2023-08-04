@@ -13,4 +13,4 @@ Firefox OS の場合、アプリケーションはすべてウェブアプリケ
 
 ### 一般知識
 
-- Wikipedia 上の記事： {{interwiki("wikipedia", "Gecko")}}
+- Wikipedia 上の記事： [Gecko](https://ja.wikipedia.org/wiki/Gecko)

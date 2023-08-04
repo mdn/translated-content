@@ -12,4 +12,4 @@ slug: Glossary/Global_scope
 ### これについて学習する
 
 - [JavaScript の変数スコープ入門](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#Variable_scope)
-- Wikipedia の {{interwiki("wikipedia", "スコープ")}}
+- Wikipedia の [スコープ](https://ja.wikipedia.org/wiki/スコープ)

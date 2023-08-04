@@ -39,7 +39,7 @@ slug: Learn/CSS/CSS_layout/Floats
 
 ## 简单的例子
 
-让我们来探讨如何使用浮动。我们将从一个非常简单的例子开始，包括在图像周围浮动一个文本块。你可以在电脑上创建新的 `index.html` 文件，并以 [简单的 HTML 模板](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) 填充，在适当的地方插入以下代码。稍后你可以看到示例代码应该能呈现出的效果。
+让我们来探讨如何使用浮动。我们将从一个非常简单的例子开始，包括在图像周围浮动一个文本块。你可以在电脑上创建新的 `index.html` 文件，并以 [简单的 HTML 模板](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) 填充，在适当的地方插入以下代码。稍后你可以看到示例代码应该能呈现出的效果。
 
 首先，我们写一些简单的 HTML——添加以下内容到 HTML 的{{htmlelement("body")}}内，删除之前{{htmlelement("body")}}里面的东西：
 
@@ -48,29 +48,52 @@ slug: Learn/CSS/CSS_layout/Floats
 
 <div class="box">Float</div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. </p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet.
+</p>
 
-<p>Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
+  orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare
+  ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse
+  ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+  ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et
+  a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 现在将以下 CSS 应用到您的 HTML 中（使用 {{htmlelement("style")}} 元素或 {{htmlelement("link")}} 到单独的 `.css` 文件——由你选择）：
 
 ```css
 body {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
-    font: .9em/1.2 Arial, Helvetica, sans-serif;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .box {
-    width: 150px;
-    height: 100px;
-    border-radius: 5px;
-    background-color: rgb(207,232,220);
-    padding: 1em;
+  width: 150px;
+  height: 100px;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
 }
 ```
 
@@ -85,28 +108,48 @@ body {
 
 <div class="box">Float</div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. </p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet.
+</p>
 
-<p>Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
+  orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare
+  ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse
+  ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+  ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et
+  a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css
 .box {
-    float: left;
-    margin-right: 15px;
-    width: 150px;
-    height: 100px;
-    border-radius: 5px;
-    background-color: rgb(207,232,220);
-    padding: 1em;
+  float: left;
+  margin-right: 15px;
+  width: 150px;
+  height: 100px;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
 }
 ```
 
 现在，如果您保存和刷新，你会看到类似下面的东西：
 
-{{EmbedLiveSample('Floating_the_box', '100%', 500)}}
+{{EmbedLiveSample('使盒子浮动起来', '100%', 500)}}
 
 让我们考虑一下浮动是如何工作的——浮动元素 (这个例子中的 {{htmlelement("div")}} 元素) 会脱离正常的文档布局流，并吸附到其父容器的左边（这个例子中的 {{htmlelement("body")}} 元素）。在正常布局中位于该浮动元素之下的内容，此时会围绕着浮动元素，填满其右侧的空间。
 
@@ -120,7 +163,7 @@ body {
 
 ```css
 .special {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
 }
@@ -133,11 +176,31 @@ body {
 
 <div class="box">Float</div>
 
-<p class="special">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+<p class="special">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate.
+</p>
 
-<p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
@@ -145,7 +208,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .box {
@@ -154,18 +220,18 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 
 .special {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
 }
 ```
 
-{{EmbedLiveSample('Visualizing_the_float', '100%', 500)}}
+{{EmbedLiveSample('让浮动效果可视化', '100%', 500)}}
 
 目标元素的[行内盒子](/zh-CN/docs/Web/CSS/Visual_formatting_model#line_boxes)已被缩短，故文字会排布在浮动元素周围，但是浮动元素从正常文档流移出，故段落的盒子仍然保持全部宽度。
 
@@ -186,11 +252,31 @@ body {
 
 <div class="box">Float</div>
 
-<p class="special">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+<p class="special">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate.
+</p>
 
-<p class="cleared">Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p class="cleared">
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
@@ -198,7 +284,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .box {
@@ -207,12 +296,12 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 
 .special {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
 }
@@ -222,7 +311,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample('Clearing_floats', '100%', 600)}}
+{{EmbedLiveSample('清除浮动', '100%', 600)}}
 
 应该看到，第二个段落已经停止了浮动，不会再跟随浮动元素排布了。`clear` 属性接受下列值：
 
@@ -232,7 +321,7 @@ body {
 
 ## 清除浮动元素周围的盒子
 
-现在你知道了如何停止浮动元素其后元素的浮动行为。我们来看个例子，如果存在一个盒子 *同时* 包含了很高的浮动元素和一个很短的段落，会发生什么。
+现在你知道了如何停止浮动元素其后元素的浮动行为。我们来看个例子，如果存在一个盒子 _同时_ 包含了很高的浮动元素和一个很短的段落，会发生什么。
 
 ### 问题所在
 
@@ -242,7 +331,10 @@ body {
 <div class="wrapper">
   <div class="box">Float</div>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate.
+  </p>
 </div>
 ```
 
@@ -250,7 +342,7 @@ body {
 
 ```css
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
 }
@@ -267,9 +359,26 @@ body {
 你会看到，就像示例代码一样，如果将背景色属性置于段落上，那么这个背景色将处于浮动元素之下。
 
 ```html hidden
-<p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
@@ -277,11 +386,14 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
 }
@@ -292,12 +404,12 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
 
-{{EmbedLiveSample('The_problem', '100%', 600)}}
+{{EmbedLiveSample('问题所在', '100%', 600)}}
 
 再一次强调，这是因为浮动元素处于正常文档流之外，停止紧随其后元素的浮动并不像之前那样奏效。如果你想让盒子联合包住浮动的项目以及第一段文字，同时让紧随其后的内容从盒子中清除浮动，这就是一个问题。
 
@@ -324,11 +436,31 @@ body {
 <div class="wrapper">
   <div class="box">Float</div>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate.
+  </p>
 </div>
-<p class="cleared">Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p class="cleared">
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
@@ -336,11 +468,14 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
 }
@@ -351,7 +486,7 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 
@@ -362,7 +497,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample('The_clearfix_hack', '100%', 600)}}
+{{EmbedLiveSample('clearfix 小技巧', '100%', 600)}}
 
 ### 使用 overflow
 
@@ -372,7 +507,7 @@ body {
 
 ```css
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
   overflow: auto;
@@ -384,11 +519,31 @@ body {
 <div class="wrapper">
   <div class="box">Float</div>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate.
+  </p>
 </div>
-<p class="cleared">Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p class="cleared">
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
@@ -396,11 +551,14 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
   overflow: auto;
@@ -412,12 +570,12 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
 
-{{EmbedLiveSample('Using_overflow', '100%', 600)}}
+{{EmbedLiveSample('使用 overflow', '100%', 600)}}
 
 这个例子之所以能够生效，是因为创建了所谓的 **块格式化上下文（BFC）**。可以把它看作页面内部包含所需元素的一小块布局区域。如此设置可以让浮动元素包含在 BFC 及其背景之内。大部分情况下这种小技巧都可以奏效，但是可能会出现莫名其妙的滚动条或裁剪阴影，这是使用 overflow 带来的一些副作用。
 
@@ -429,7 +587,7 @@ body {
 
 ```css
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
   display: flow-root;
@@ -441,11 +599,31 @@ body {
 <div class="wrapper">
   <div class="box">Float</div>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate.
+  </p>
 </div>
-<p class="cleared">Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p class="cleared">
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
@@ -453,11 +631,14 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
   display: flow-root;
@@ -469,7 +650,7 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
@@ -485,18 +666,3 @@ body {
 现在你应该了解现代网页开发中浮动布局开发的知识了，请参阅 [传统的布局方法](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods) 以查看它们的用法，没准可以对你老旧的项目有所帮助。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
-
-## 在本模块中
-
-- [介绍 CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
-- [正常文档流](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-- [网格](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
-- [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
-- [定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-- [多列布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [媒体查询入门指南](/zh-CN/docs/Learn/CSS/CSS_layout/Media_queries)
-- [传统的布局方法](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [支持旧浏览器](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [布局理解测试](/zh-CN/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

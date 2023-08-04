@@ -1,7 +1,6 @@
 ---
 title: Symbol (シンボル)
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
-original_slug: Glossary/Symbol
 ---
 
 {{Glossary("JavaScript")}} では、シンボルは{{Glossary("Primitive", "プリミティブ値")}}です。
@@ -31,7 +30,7 @@ _Symbol_ 型は ECMAScript 2015 の新機能であり、 ECMAScript 5 にはシ�
 
 ### シンボルは文字列に「自動変換」されない
 
-JavaScript の大部分の値は文字列への暗黙的な返還に対応しています。例えば `alert` はほぼすべての値で表示することができ、動作します。シンボルは特殊です。自動変換は行われません。
+JavaScript の大部分の値は文字列への暗黙的な変換に対応しています。例えば `alert` はほぼすべての値で表示することができ、動作します。シンボルは特殊です。自動変換は行われません。
 
 例を示します。
 

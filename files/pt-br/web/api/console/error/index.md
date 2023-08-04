@@ -1,8 +1,8 @@
 ---
 title: Console.error()
-slug: Web/API/Console/error
-translation_of: Web/API/Console/error
+slug: Web/API/console/error
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 '_Escreve_' uma mensagem de erro no Web Console.
@@ -33,13 +33,11 @@ Veja [Outputting text to the console](/pt-BR/docs/Web/API/console#Outputting_tex
 
 ## Especificações
 
-| Especificação                                                                                            | Status                           | Comentário         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#consoleerrorobject--object-", "console.error()")}} | {{Spec2("Console API")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.console.error")}}
+{{Compat}}
 
 ## Ver também
 

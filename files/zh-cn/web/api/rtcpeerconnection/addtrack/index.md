@@ -7,7 +7,7 @@ slug: Web/API/RTCPeerConnection/addTrack
 
 {{domxref("RTCPeerConnection")}} 对象的 **`addTrack()`** 方法将一个新的媒体音轨添加到一组音轨中，这些音轨将被传输给另一个对等点。
 
-> **备注：** 通过触发一个{{event("negotiationneeded")}}事件，向连接添加一个跟踪将触发重新协商。详情请参见{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Starting negotiation")}}。
+> **备注：** 通过触发一个 {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} 事件，向连接添加一个跟踪将触发重新协商。详情请参见[开始协商](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling#开始协商)。
 
 ## 语法
 
@@ -59,12 +59,12 @@ async openCall(pc) {
 }
 ```
 
-结果是一组没有流关联的跟踪被发送到远程对等点。远程对等点上的{{event("track")}}事件的处理程序将负责决定将每个跟踪添加到哪个流中，即使这意味着只是将它们全部添加到同一个流中。{{domxref("RTCPeerConnection.ontrack", "ontrack")}}方法如下：
+结果是一组没有流关联的跟踪被发送到远程对等点。远程对等点上的 {{DOMxRef("RTCPeerConnection/track_event", "track")}} 事件的处理程序将负责决定将每个跟踪添加到哪个流中，即使这意味着只是将它们全部添加到同一个流中。{{domxref("RTCPeerConnection.ontrack", "ontrack")}} 方法如下：
 
 ```js
 let inboundStream = null;
 
-pc.ontrack = ev => {
+pc.ontrack = (ev) => {
   if (ev.streams && ev.streams[0]) {
     videoElem.srcObject = ev.streams[0];
   } else {
@@ -74,7 +74,7 @@ pc.ontrack = ev => {
     }
     inboundStream.addTrack(ev.track);
   }
-}
+};
 ```
 
 在这里，如果指定了流，则 **`track`** 事件处理程序将跟踪添加到事件指定的第一个流。否则，在第一次调用 **`ontrack`** 时，将创建一个新流并附加到视频元素，然后将音轨添加到新流中。从那时起，新的堆**track**被添加到这个流中。
@@ -82,14 +82,14 @@ pc.ontrack = ev => {
 你也可以为每个接收到的**track**创建一个新的流：
 
 ```js
-pc.ontrack = ev => {
+pc.ontrack = (ev) => {
   if (ev.streams && ev.streams[0]) {
     videoElem.srcObject = ev.streams[0];
   } else {
     let inboundStream = new MediaStream(ev.track);
     videoElem.srcObject = inboundStream;
   }
-}
+};
 ```
 
 #### 将**track**与特定的 stream 相关联
@@ -108,10 +108,10 @@ async openCall(pc) {
 }
 ```
 
-远程对等点然后可以使用一个看起来像这样的{{event("track")}}事件处理程序：
+远程对等点然后可以使用一个看起来像这样的 {{DOMxRef("RTCPeerConnection/track_event", "track")}} 事件处理程序：
 
 ```js
-pc.ontrack = ({streams: [stream]} => videoElem.srcObject = stream;
+pc.ontrack = ({streams: [stream]} => videoElem.srcObject = stream);
 ```
 
 这将把视频元素的当前流设置为包含已添加到连接中的音轨的流。
@@ -147,23 +147,24 @@ pc.ontrack = ({streams: [stream]} => videoElem.srcObject = stream;
 
 ```js
 var mediaConstraints = {
-  audio: true,            // We want an audio track
-  video: true             // ...and we want a video track
+  audio: true, // We want an audio track
+  video: true, // ...and we want a video track
 };
 
 var desc = new RTCSessionDescription(sdp);
 
-pc.setRemoteDescription(desc).then(function () {
-  return navigator.mediaDevices.getUserMedia(mediaConstraints);
-})
-.then(function(stream) {
-  previewElement.srcObject = stream;
+pc.setRemoteDescription(desc)
+  .then(function () {
+    return navigator.mediaDevices.getUserMedia(mediaConstraints);
+  })
+  .then(function (stream) {
+    previewElement.srcObject = stream;
 
-  stream.getTracks().forEach(track => pc.addTrack(track, stream));
-})
+    stream.getTracks().forEach((track) => pc.addTrack(track, stream));
+  });
 ```
 
-这段代码获取从远程对等方接收到的 SDP，并构造一个新的{{domxref("RTCSessionDescription")}}传递到{{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}。成功之后，它使用{{domxref(" mediadevic. getusermedia()")}}获得对本地摄像头和麦克风的访问。
+这段代码获取从远程对等方接收到的 SDP，并构造一个新的 {{domxref("RTCSessionDescription")}} 传递到 {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}。成功之后，它使用 {{domxref("MediaDevices.getUserMedia")}} 获得对本地摄像头和麦克风的访问。
 
 如果成功，结果流将被分配为变量 **`previewElement`** 引用的{{HTMLElement("video")}}元素的源。
 
@@ -173,13 +174,12 @@ pc.setRemoteDescription(desc).then(function () {
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 参考
+## 参见
 
-- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)
-- [Introduction to the Real-time Transport Protocol (RTP)](/zh-CN/docs/Web/API/WebRTC_API/Intro_to_RTP)
-- {{domxref("RTCPeerConnection.ontrack")}}
-- {{event("track")}}
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)
+- [实时传输协议（RTP）简介](/zh-CN/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- {{DOMxRef("RTCPeerConnection/track_event", "track")}}

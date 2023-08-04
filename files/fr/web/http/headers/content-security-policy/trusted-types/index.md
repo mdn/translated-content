@@ -1,16 +1,6 @@
 ---
-title: 'CSP: trusted-types'
+title: "CSP: trusted-types"
 slug: Web/HTTP/Headers/Content-Security-Policy/trusted-types
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Security
-  - Sécurité
-  - source
-  - trusted-types
-translation_of: Web/HTTP/Headers/Content-Security-Policy/trusted-types
 ---
 
 {{HTTPSidebar}}
@@ -29,7 +19,7 @@ Content-Security-Policy: trusted-types <policyName> <policyName> 'allow-duplicat
 ```
 
 - \<nomRègle>
-  - : Un nom de règle est composé de caractères alphanumériques ou d'un ou plusieurs "`-#=_/@.%`".  Une astérisque (`*`) comme nom de règle informe l'agent utilisateur d'autoriser tout nom de règle unique (quoique la valeur `'allow-duplicates'` pourrait permettre d'être plus laxiste à l'avenir).
+  - : Un nom de règle est composé de caractères alphanumériques ou d'un ou plusieurs "`-#=_/@.%`". Une astérisque (`*`) comme nom de règle informe l'agent utilisateur d'autoriser tout nom de règle unique (quoique la valeur `'allow-duplicates'` pourrait permettre d'être plus laxiste à l'avenir).
 - `'none'`
   - : Interdit la création de toute règle de Trusted Type (identique au fait de ne renseigner aucun nom de règle).
 - `'allow-duplicates'`
@@ -46,10 +36,10 @@ Content-Security-Policy: trusted-types foo bar 'allow-duplicates';
 Ce code génèrera une erreur car une des règles créées a un nom non autorisé :
 
 ```js
-if (typeof trustedTypes !== 'undefined') {
-  const policyFoo = trustedTypes.createPolicy('foo', {});
-  const policyFoo2 = trustedTypes.createPolicy('foo', {});
-  const policyBaz = trustedTypes.createPolicy('baz', {}); // Throws and dispatches a SecurityPolicyViolationEvent.
+if (typeof trustedTypes !== "undefined") {
+  const policyFoo = trustedTypes.createPolicy("foo", {});
+  const policyFoo2 = trustedTypes.createPolicy("foo", {});
+  const policyBaz = trustedTypes.createPolicy("baz", {}); // Throws and dispatches a SecurityPolicyViolationEvent.
 }
 ```
 
@@ -59,13 +49,11 @@ Un [prothèse d'émulation pour les Trusted Types](https://github.com/w3c/webapp
 
 ## Spécifications
 
-| Spécification                                                             | Statut | Commentaire          |
-| ------------------------------------------------------------------------- | ------ | -------------------- |
-| [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) | Draft  | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.trusted-types")}}
+{{Compat}}
 
 ## Voir aussi
 

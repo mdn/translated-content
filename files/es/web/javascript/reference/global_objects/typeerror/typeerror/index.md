@@ -1,8 +1,8 @@
 ---
 title: TypeError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
-browser-compat: javascript.builtins.TypeError.TypeError
 ---
+
 {{JSRef}}
 
 El constructor **`TypeError()`** crea un nuevo error cuando una operación no puede ser realizada, típicamente (pero no exclusivamente) cuando un valor no es del tipo esperado.

@@ -1,7 +1,6 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
-translation_of: Web/JavaScript/Reference/Statements/try...catch
 ---
 {{jsSidebar("Statements")}}
 
@@ -46,7 +45,7 @@ try 선언의 구성은 하나 혹은 그 이상의 선언을 포함한 try 블�
 
 하나 이상의 `try` 문을 중첩 할 수 있습니다. 내부의 `try` 문에 `catch` 블록이 없으면, 둘러싼 `try` 문의 `catch` 블록이 입력됩니다.
 
-또한 `try` 문을 사용하여 예외처리를 합니다. 예외처리에 대해 더 알고 싶다면, [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide) 를 참고하세요.
+또한 `try` 문을 사용하여 예외처리를 합니다. 예외처리에 대해 더 알고 싶다면, [JavaScript Guide](/ko/docs/Web/JavaScript/Guide) 를 참고하세요.
 
 ### 무조건적 `catch` 문
 
@@ -234,11 +233,11 @@ If the `finally`-block returns a value, this value becomes the return value of t
 
 The outer "oops" is not thrown because of the return in the `finally`-block. The same would apply to any value returned from the `catch`-block.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -1,15 +1,8 @@
 ---
 title: PeriodicWave()
 slug: Web/API/PeriodicWave/PeriodicWave
-tags:
-  - API
-  - Audio
-  - Constructor
-  - PeriodicWave
-  - Reference
-  - Web Audio API
-browser-compat: api.PeriodicWave.PeriodicWave
 ---
+
 {{APIRef("Web Audio API")}}
 
 [Web Audio API](/ko/docs/Web/API/Web_Audio_API)의 **`PeriodicWave()`** 생성자는 새로운 {{domxref("PeriodicWave")}} 객체 인스턴스를 생성합니다.
@@ -48,10 +41,10 @@ real[1] = 1;
 imag[1] = 0;
 
 var options = {
-  real : real,
-  imag : imag,
-  disableNormalization : false
-}
+  real: real,
+  imag: imag,
+  disableNormalization: false,
+};
 
 var wave = new PeriodicWave(ac, options);
 ```

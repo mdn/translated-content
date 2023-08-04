@@ -1,15 +1,6 @@
 ---
 title: WeakMap.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/get
-original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap/get
 ---
 
 {{JSRef}}
@@ -40,19 +31,16 @@ var wm = new WeakMap();
 wm.set(window, "toto");
 
 wm.get(window); // Renvoie "toto"
-wm.get("machin");  // Renvoie undefined.
+wm.get("machin"); // Renvoie undefined.
 ```
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WeakMap.get")}}
+{{Compat}}
 
 ## Voir aussi
 

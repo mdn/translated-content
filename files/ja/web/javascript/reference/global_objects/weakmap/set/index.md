@@ -43,9 +43,7 @@ wm.set(obj, 'baz');
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

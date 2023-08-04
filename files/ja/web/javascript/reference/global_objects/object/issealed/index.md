@@ -44,14 +44,14 @@ Object.isSealed(empty); // === true
 
 // 空でないオブジェクトでは、そのプロパティをすべて設定変更不可にしない限り
 // 上記と同じにはなりません
-var hasProp = { fee: 'fie foe fum' };
+var hasProp = { fee: "fie foe fum" };
 Object.preventExtensions(hasProp);
 Object.isSealed(hasProp); // === false
 
 // そこですべてのプロパティを設定変更不可にすると、
 // オブジェクトは封印状態になります
-Object.defineProperty(hasProp, 'fee', {
-  configurable: false
+Object.defineProperty(hasProp, "fee", {
+  configurable: false,
 });
 Object.isSealed(hasProp); // === true
 
@@ -73,7 +73,11 @@ var s2 = Object.seal({ p: 3 });
 Object.isFrozen(s2); // === false
 // "p" は依然書き込み可能です
 
-var s3 = Object.seal({ get p() { return 0; } });
+var s3 = Object.seal({
+  get p() {
+    return 0;
+  },
+});
 Object.isFrozen(s3); // === true
 // アクセサプロパティでは設定変更が可能かという事柄だけになります
 ```
@@ -92,9 +96,7 @@ Object.isSealed(1);
 
 ## 仕様書
 
-| 仕様書                                                                                   |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.issealed', 'Object.isSealed')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

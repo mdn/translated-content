@@ -1,15 +1,8 @@
 ---
 title: itemid
 slug: Web/HTML/Global_attributes/itemid
-tags:
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
-  - 마이크로데이터
-translation_of: Web/HTML/Global_attributes/itemid
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`itemid`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 아이템의 고유한 전역 식별자의 형태로 마이크로데이터를 제공합니다. `itemid` 특성은 {{htmlattrxref("itemscope")}}, {{htmlattrxref("itemtype")}} 특성 모두 가진 요소에만 지정할 수 있습니다. 또한 `itemscope` 특성에 대응하는 `itemtype`이 전역 식별자 어휘를 참조하거나 정의해야 합니다.
@@ -23,13 +16,17 @@ translation_of: Web/HTML/Global_attributes/itemid
 ### HTML
 
 ```html
-<dl itemscope
-    itemtype="http://vocab.example.net/book"
-    itemid="urn:isbn:0-330-34032-8">
-<dt>Title <dd itemprop="title">The Reality Dysfunction
-<dt>Author <dd itemprop="author">Peter F. Hamilton
-<dt>Publication date
-<dd><time itemprop="pubdate" datetime="1996-01-26">26 January 1996</time> </dl>
+<dl
+  itemscope
+  itemtype="http://vocab.example.net/book"
+  itemid="urn:isbn:0-330-34032-8">
+  <dt>Title</dt>
+  <dd itemprop="title">The Reality Dysfunction</dd>
+  <dt>Author</dt>
+  <dd itemprop="author">Peter F. Hamilton</dd>
+  <dt>Publication date</dt>
+  <dd><time itemprop="pubdate" datetime="1996-01-26">26 January 1996</time></dd>
+</dl>
 ```
 
 ### 구조화된 데이터
@@ -73,7 +70,7 @@ translation_of: Web/HTML/Global_attributes/itemid
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.itemid")}}
+{{compat}}
 
 ## 같이 보기
 

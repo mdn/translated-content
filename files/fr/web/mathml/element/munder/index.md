@@ -1,7 +1,6 @@
 ---
 title: <munder>
 slug: Web/MathML/Element/munder
-translation_of: Web/MathML/Element/munder
 ---
 
 {{MathMLRef()}}
@@ -32,31 +31,29 @@ Rendu dans votre navigateur: <math><munder accentunder="true"><mrow><mi>x </mi><
 
 ```html
 <math>
-
-<munder accentunder="true">
-  <mrow>
-    <mi> x </mi>
-    <mo> + </mo>
-    <mi> y </mi>
-    <mo> + </mo>
-    <mi> z </mi>
-  </mrow>
-  <mo> &#x23DF; <!--BOTTOM CURLY BRACKET--> </mo>
-</munder>
-
+  <munder accentunder="true">
+    <mrow>
+      <mi> x </mi>
+      <mo> + </mo>
+      <mi> y </mi>
+      <mo> + </mo>
+      <mi> z </mi>
+    </mrow>
+    <mo>
+      &#x23DF;
+      <!--BOTTOM CURLY BRACKET-->
+    </mo>
+  </munder>
 </math>
 ```
 
 ## Spécifications
 
-| Specification                                                                            | Status                       | Comment               |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | --------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.munder', 'munder') }} | {{ Spec2('MathML3') }} | Current specification |
-| {{ SpecName('MathML2', 'chapter3.html#presm.munder', 'munder') }} | {{ Spec2('MathML2') }} | Initial specification |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("mathml.elements.munder")}}
+{{Compat}}
 
 ## Voir aussi
 

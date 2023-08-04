@@ -1,13 +1,8 @@
 ---
 title: Web App Manifest
 slug: Web/Manifest
-tags:
-  - App
-  - Manifest
-  - Reference
-  - Web
-translation_of: Web/Manifest
 ---
+
 O manifesto do aplicativo web fornece informações sobre uma aplicação (como nome, autor, icone, e descrição) em um arquivo de texto. O propósito do manifesto é instalar aplicações web na tela inicial de um aparelho, propiciando aos usuários um acesso mais rápido e uma experiência enriquecida.
 
 Os manifestos dos aplicativos web fazem parte de um acervo de tecnologias de rede chamadas [aplicativos web progressivos](/pt-BR/docs/Web/Progressive_web_apps), sendo estes aplicativos web que podem ser instalados na tela inicial de um aparelho sem obrigar um usuário a passar por uma loja de aplicativos, dispondo também de outros superpoderes como estar disponíveis offline e apresentando aos usuários notificações push quando houverem mudanças de conteúdo do aplicativo.
@@ -17,7 +12,7 @@ Os manifestos dos aplicativos web fazem parte de um acervo de tecnologias de red
 Manifesto de aplicativos web são implementados em suas páginas HTML usando uma etiqueta de link no cabeçalho do documento:
 
 ```html
-<link rel="manifest" href="/manifest.webmanifest">
+<link rel="manifest" href="/manifest.webmanifest" />
 ```
 
 > **Nota:** A extensão `.webmanifest` está especificada na sessão de [Media type registration](https://w3c.github.io/manifest/#media-type-registration) da especificação, mas no geral os navegadores suportam manifestos em outras extensões apropriadas como `.json`
@@ -34,37 +29,47 @@ Manifesto de aplicativos web são implementados em suas páginas HTML usando uma
   "display": "standalone",
   "background_color": "#fff",
   "description": "A simply readable Hacker News app.",
-  "icons": [{
-    "src": "images/touch/homescreen48.png",
-    "sizes": "48x48",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen72.png",
-    "sizes": "72x72",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen96.png",
-    "sizes": "96x96",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen144.png",
-    "sizes": "144x144",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen168.png",
-    "sizes": "168x168",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen192.png",
-    "sizes": "192x192",
-    "type": "image/png"
-  }],
-  "related_applications": [{
-    "platform": "web"
-  }, {
-    "platform": "play",
-    "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
-  }]
+  "icons": [
+    {
+      "src": "images/touch/homescreen48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen168.png",
+      "sizes": "168x168",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web"
+    },
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
+    }
+  ]
 }
 ```
 
@@ -72,7 +77,7 @@ Manifesto de aplicativos web são implementados em suas páginas HTML usando uma
 
 Manifest can contain the following keys:
 
-{{ListSubpages("/en-US/docs/Web/Manifest")}}
+{{ListSubpages("/pt-BR/docs/Web/Manifest")}}
 
 ### background_color
 
@@ -243,7 +248,7 @@ Provides a human-readable name for the application as it is intended to be displ
 Defines the default orientation for all the web application's top level {{Glossary("Browsing context", "browsing contexts")}}.
 
 ```json
-​​"orientation": "portrait-primary"
+"orientation": "portrait-primary"
 ```
 
 Orientation pode ser um dos seguintes valores:
@@ -333,8 +338,8 @@ Manifests should be served using the `application/manifest+json` MIME type. Howe
 
 ## Especificação
 
-| Especificação                    | Status                       | Comentário         |
-| -------------------------------- | ---------------------------- | ------------------ |
+| Especificação            | Status                | Comentário         |
+| ------------------------ | --------------------- | ------------------ |
 | {{SpecName('Manifest')}} | {{Spec2('Manifest')}} | Definição inicial. |
 
 ## Compatibilidade com navegadores

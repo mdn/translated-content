@@ -2,6 +2,7 @@
 title: Microsoft Internet Explorer
 slug: Glossary/Microsoft_Internet_Explorer
 ---
+
 Internet Explorer (또는 IE)는 Microsoft에서 레거시 엔터프라이즈 사용을 위해 유지 관리하는 무료 그래픽 {{glossary ( "browser")}}이다. {{glossary ( "Microsoft Edge")}}는 현재 기본 Windows 브라우저이다.
 
 Microsoft는 1995 년 "Microsoft Plus!"라는 패키지의 일부로 IE를 Windows와 함께 번들로 제공했습니다. 2002 년 무렵, Internet Explorer는 전 세계에서 가장 많이 사용되는 브라우저가되었지만 이후 Chrome, Firefox, Edge 및 Safari에 의해 기반을 잃었습니다.

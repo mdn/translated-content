@@ -2,6 +2,7 @@
 title: Client-Server overview
 slug: Learn/Server-side/First_steps/Client-Server_overview
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
 이제 서버 측 프로그래밍의 목적과 잠재적 이점을 알았으니 서버가 브라우저에서 "동적 요청"을받을 때 어떤 일이 발생하는지 자세히 살펴 보겠습니다. 대부분의 웹 사이트 서버 측 코드는 요청 및 응답을 비슷한 방식으로 처리하므로 대부분의 코드를 작성할 때 수행해야 할 작업을 이해하는 데 도움이됩니다
@@ -114,7 +115,7 @@ HTTP requests는 본문을 가질수 있지만 이번 케이스에서는 비어 
 
 메시지의 마지막에는 요청에 의해 반환된 실제 HTML을 포함하는 **본문** 콘텐츠를 볼 수 있습니다.
 
-```html
+```http
 HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
@@ -127,8 +128,6 @@ X-Frame-Options: DENY
 Allow: GET
 X-Cache-Info: caching
 Content-Length: 41823
-
-
 
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
@@ -149,7 +148,7 @@ HTTP `POST`는 당신이 정보를 포함한 폼을 작성하여 서버에 저�
 
 아래의 텍스트는 사용자가 새로운 프로필 정보를 사이트에 전송할때 만들어지는 HTTP request를 보여줍니다. 이 요청의 대한 포맷은 이전 `GET` request의 예시와 거의 비슷해 보입니다, 그렇지만 첫번째 줄은 이것이 `POST` 요청임을 보여주고 있습니다.
 
-```html
+```http
 POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
@@ -175,7 +174,7 @@ csrfmiddlewaretoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT&user-username=hamishwillee&
 
 요청에서 온 응답은 아래와 같이 보여집니다. "`302 Found`"의 상태 코드는 브라우저에게 post가 성공했고, `Location` 필드가 지정된 페이지를 로드하기 위해 두번째 HTTP request를 실행해야 하는 것을 알려줍니다. 그렇지 않은 경우 정보는 `GET` request에 대한 응답정보와 유사합니다.
 
-```html
+```http
 HTTP/1.1 302 FOUND
 Server: Apache
 X-Backend-Server: developer3.webapp.scl3.mozilla.com
@@ -201,7 +200,7 @@ Content-Length: 0
 
 어떻게 작동하는지 다시 살펴보겠습니다, 마지막 기사에서 살펴본 정적 사이트의 아키텍쳐는다이어그램을 다시 살펴보면
 
-![A simplified diagram of a static web server.](https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png)
+![A simplified diagram of a static web server.](basic_static_app_server.png)
 
 유저가 페이지를 탐색하기를 원할 때, 브라우저는 지정된 HTML 페이지의 URL에 HTTP `GET` request를 보냅니다. 서버는 요청한 문서를 파일 시스템에서 탐색하고 문서와[HTTP Response status code](/ko/docs/Web/HTTP/Status) "`200 OK`" (성공을 알려주는)를 포함하는 HTTP응답을 반환합니다. 만약 서버가 다른 상태 코드를 반환한다면, 예를들면 "`404 Not Found`"는 파일이 서버에 없는 경우이고 "`301 Moved Permanently`"는 파일은 존재하지만 다른 위치로 리다이렉트된 경우입니다 .
 
@@ -223,7 +222,7 @@ HTML 템플릿을 통해 HTML 구조를 매우 쉽게 바꿀 수 있도록 만�
 
 아래 다이어그램은 "팀 코치"웹 사이트의 주요 요소와 코치가 "최고의 팀"목록에 액세스 할 때 일련의 작업 순서에 대한 번호가 매겨진 레이블을 보여줍니다. _사이트를 동적으로 만드는 부분들은_ 웹 애플리케이션(이것은 HTTP 요청을 처리하고 HTTP 응답을 반환하는 서버 측 코드를 참조하는 방법입니다), 선수의 정보나 팀 코치의 정보를 포함한 데이터베이스 그리고 _HTML 템플릿입니다_.
 
-![This is a diagram of a simple web server with step numbers for each of step of the client-server interaction.](https://mdn.mozillademos.org/files/13829/Web%20Application%20with%20HTML%20and%20Steps.png)
+![This is a diagram of a simple web server with step numbers for each of step of the client-server interaction.](web_application_with_html_and_steps.png)
 
 코치가 팀 이름과 플레이어의 수를 포함한 폼을 전송하면 작업 시퀀스는 다음과 같습니다:
 

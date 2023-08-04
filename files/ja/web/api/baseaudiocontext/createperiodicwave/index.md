@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createPeriodicWave()
 slug: Web/API/BaseAudioContext/createPeriodicWave
-original_slug: Web/API/AudioContext/createPeriodicWave
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -110,4 +109,4 @@ osc.stop(2);
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

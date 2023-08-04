@@ -1,8 +1,6 @@
 ---
 title: API fichier système
 slug: Web/API/File_and_Directory_Entries_API
-translation_of: Web/API/File_and_Directory_Entries_API
-original_slug: Web/API/API_fichier_systeme
 ---
 
 {{DefaultAPISidebar("File System API")}}{{Non-standard_header()}}
@@ -15,25 +13,11 @@ Deux API très simulaires existent en fonction du comportement asynchrone ou syn
 
 L'API asynchrone a les interfaces suivantes :
 
-- [LocalFileSystem](/en/DOM/File_API/File_System_API/LocalFileSystem) a deux méthodes globales qui vous permet d'avoir accès à un espace virtuel : requestFileSystem() et resolveLocalFileSystemURL().  Les méthodes sont implémentées par l'objet [window](/fr/docs/window) et le worker global scope.
-- [FileSystem](/en/DOM/File_API/File_System_API/FileSystem) représente un fichier système. L'objet est la passerelle à votre API toute entière.
-- [Entry](/en/DOM/File_API/File_System_API/Entry) représente une entrée dans un fichier système. L'entrée peut être un fichier ou un dossier.
-- [DirectoryEntry](/en/DOM/File_API/File_System_API/DirectoryEntry) représente un dossier dans un fichier système.
-- [DirectoryReader](/en/DOM/File_API/File_System_API/DirectoryReader) vous permet la lecture de fichiers et dossiers à partir d'un dossier.
-- [FileEntry](/en/DOM/File_API/File_System_API/FileEntry) représente un fichier dans un fichier système.
-- [FileError](/en/DOM/File_API/File_System_API/FileError) est une erreur que vous pourriez rencontrer pendant l'utilisation des méthodes asynchrones.
-
-## API synchrone
-
-L'API synchrone est utile avec les [WebWorkers](/En/Using_web_workers). Contrairement à l'API asynchrone, l'API synchrone n'utilise pas les callbacks parce que les méthodes de l'API retournent des valeurs.
-
-- [LocalFileSystemSync](/en/DOM/File_API/File_System_API/LocalFileSystemSync) a deux méthodes globales qui vous permet d'avoir accès à un espace virtuel : requestFileSystemSync() et resolveLocalFileSystemSyncURL(). Les méthodes sont implémentées par l'objet worker.
-- [FileSystemSync](/en/DOM/File_API/File_System_API/FileSystemSync) représente un fichier système.
-- [EntrySync](/en/DOM/File_API/File_System_API/EntrySync) représente une entrée dans un fichier système. L'entrée peut être un fichier ou un dossier.
-- [DirectoryEntrySync](/en/DOM/File_API/File_System_API/DirectoryEntrySync) représente un dossier dans un fichier système.
-- [DirectoryReaderSync](/en/DOM/File_API/File_System_API/DirectoryReaderSync)  vous permet la lecture de fichiers et dossiers à partir d'un dossier.
-- [FileEntrySync](/en/DOM/File_API/File_System_API/FileEntrySync) représente un fichier dans un fichier système.
-- [FileException](/en/DOM/File_API/File_System_API/FileException) est une erreur que vous pourriez rencontrer pendant l'utilisation des méthodes synchrones.
+- [FileSystem](/fr/docs/Web/API/FileSystem) représente un fichier système. L'objet est la passerelle à votre API toute entière.
+- [Entry](/fr/docs/Web/API/FileSystemEntry) représente une entrée dans un fichier système. L'entrée peut être un fichier ou un dossier.
+- [DirectoryEntry](/fr/docs/Web/API/FileSystemDirectoryEntry) représente un dossier dans un fichier système.
+- [DirectoryReader](/fr/docs/Web/API/FileSystemDirectoryReader) vous permet la lecture de fichiers et dossiers à partir d'un dossier.
+- [FileEntry](/fr/docs/Web/API/FileSystemFileEntry) représente un fichier dans un fichier système.
 
 ## Spécifications
 

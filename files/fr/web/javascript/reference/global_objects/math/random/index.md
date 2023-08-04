@@ -1,13 +1,6 @@
 ---
 title: Math.random()
 slug: Web/JavaScript/Reference/Global_Objects/Math/random
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/random
 ---
 
 {{JSRef}}
@@ -21,7 +14,7 @@ La fonction **`Math.random()`** renvoie un nombre flottant pseudo-aléatoire com
 ## Syntaxe
 
 ```js
-Math.random()
+Math.random();
 ```
 
 ### Valeur de retour
@@ -77,19 +70,14 @@ function getRandomInt(min, max) {
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min +1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                                                                             |
-| ---------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0 (UNIX) et 1.1 (toutes plateformes). |
-| {{SpecName('ES5.1', '#sec-15.8.2.14', 'Math.random')}}     | {{Spec2('ES5.1')}}     |                                                                                          |
-| {{SpecName('ES6', '#sec-math.random', 'Math.random')}}     | {{Spec2('ES6')}}         |                                                                                          |
-| {{SpecName('ESDraft', '#sec-math.random', 'Math.random')}} | {{Spec2('ESDraft')}} |                                                                                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.random")}}
+{{Compat}}

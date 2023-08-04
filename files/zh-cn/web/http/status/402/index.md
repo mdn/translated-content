@@ -3,7 +3,7 @@ title: 402 Payment Required
 slug: Web/HTTP/Status/402
 ---
 
-{{SeeCompatTable}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 **`402 Payment Required`** 是一个被保留使用的非标准客户端错误状态响应码。
 
@@ -11,27 +11,25 @@ slug: Web/HTTP/Status/402
 
 ## 状态
 
-```plain
+```http
 402 Payment Required
 ```
 
 ## 响应样例
 
-```plain
+```http
 HTTP/1.1 402 Payment Required
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 
 ## 规范
 
-| 规范                                                             | 标题                            |
-| ---------------------------------------------------------------- | ------------------------------- |
-| {{RFC("7231", "402 Payment Required" , "6.5.2")}} | HTTP/1.1: Semantics and Content |
+{{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+这个状态代码是*保留*的，但没有定义。实际上没有浏览器支持它，错误将被显示为一个通用的 `4xx` 状态代码。
 
-## 相关内容
+## 参见
 
-- [HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication)
+- [HTTP 认证](/zh-CN/docs/Web/HTTP/Authentication)

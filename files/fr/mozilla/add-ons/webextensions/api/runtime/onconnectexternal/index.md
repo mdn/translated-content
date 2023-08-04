@@ -1,17 +1,6 @@
 ---
 title: runtime.onConnectExternal
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal
-tags:
-  - API
-  - Add-ons
-  - Evènement
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onConnectExternal
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal
 ---
 
 {{AddonSidebar()}}
@@ -20,14 +9,14 @@ Lancé lorsqu'une extension reçoit une demande de connexion d'une extension dif
 
 Pour envoyer un message qui sera reçu par le programme d'écoute `onConnectExternal`, utilisez {{WebExtAPIRef("runtime.connect()")}}, en transmettant l'ID du destinataire dans le paramètre `extensionId`.
 
-L'écouteur reçoit un objet {{WebExtAPIRef('runtime.Port')}} qu'il peut ensuite utiliser pour envoyer et recevoir des messages. L'objet `Port` contient également une propriété`sender`, qui est un objet {{WebExtAPIRef("runtime.MessageSender")}},  et que le destinataire peut utiliser pour vérifier l'ID de l'expéditeur.
+L'écouteur reçoit un objet {{WebExtAPIRef('runtime.Port')}} qu'il peut ensuite utiliser pour envoyer et recevoir des messages. L'objet `Port` contient également une propriété`sender`, qui est un objet {{WebExtAPIRef("runtime.MessageSender")}}, et que le destinataire peut utiliser pour vérifier l'ID de l'expéditeur.
 
 ## Syntaxe
 
 ```js
-browser.runtime.onConnectExternal.addListener(listener)
-browser.runtime.onConnectExternal.removeListener(listener)
-browser.runtime.onConnectExternal.hasListener(listener)
+browser.runtime.onConnectExternal.addListener(listener);
+browser.runtime.onConnectExternal.removeListener(listener);
+browser.runtime.onConnectExternal.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -37,7 +26,7 @@ Les événements ont trois fonctions :
 - `removeListener(listener)`
   - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
 - `hasListener(listener)`
-  - : Vérifie si un  `listener` est enregistré pour cet événement. Retourne `true` s'il écoute,  `false` sinon.
+  - : Vérifie si un `listener` est enregistré pour cet événement. Retourne `true` s'il écoute, `false` sinon.
 
 ## Syntaxe addListener
 
@@ -50,9 +39,9 @@ Les événements ont trois fonctions :
     - `port`
       - : Un objet {{WebExtAPIRef('runtime.Port')}} connectant le script en cours à l'autre extension à laquelle il se connecte.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onConnectExternal")}}
+{{Compat}}
 
 ## Exemples
 
@@ -60,16 +49,14 @@ Dans cet exemple, l'extension Hansel se connecte à l'extension Gretel :
 
 ```js
 console.log("connecting to Gretel");
-var myPort = browser.runtime.connect(
-  "gretel@mozilla.org"
-);
+var myPort = browser.runtime.connect("gretel@mozilla.org");
 
 myPort.onMessage.addListener((message) => {
   console.log(`From Gretel: ${message.content}`);
 });
 
 browser.browserAction.onClicked.addListener(() => {
-  myPort.postMessage({content: "Hello from Hansel"});
+  myPort.postMessage({ content: "Hello from Hansel" });
 });
 ```
 
@@ -90,7 +77,7 @@ browser.runtime.onConnectExternal.addListener((port) => {
 });
 
 browser.browserAction.onClicked.addListener(() => {
-   portFromHansel.postMessage({content: "Message from Gretel"});
+  portFromHansel.postMessage({ content: "Message from Gretel" });
 });
 ```
 

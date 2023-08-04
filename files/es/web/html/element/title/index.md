@@ -1,12 +1,9 @@
 ---
-title: '<title>: El elemento Título del documento'
+title: "<title>: El elemento Título del documento"
 slug: Web/HTML/Element/title
-translation_of: Web/HTML/Element/title
-original_slug: Web/HTML/Elemento/title
-browser-compat: html.elements.title
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 El elemento **`<title>`** [HTML](/es/docs/Web/HTML) define el título del documento que se muestra en un {{glossary("Browser", "browser")}} la barra de título o la pestaña de una página. Solo contiene texto; las etiquetas dentro del elemento se ignoran.
 
@@ -104,7 +101,9 @@ Una técnica de navegación común para los usuarios de tecnología de asistenci
 ### Ejemplo
 
 ```html
-<title>Menú - Comida china Blue House - FoodYum: ¡Comida a domicilio en línea hoy!</title>
+<title>
+  Menú - Comida china Blue House - FoodYum: ¡Comida a domicilio en línea hoy!
+</title>
 ```
 
 Si el envío de un formulario contiene errores y el envío vuelve a representar la página actual, el título se puede usar para ayudar a que los usuarios se den cuenta de cualquier error en su envío. Por ejemplo, actualice el valor de `title` de la página para reflejar cambios significativos en el estado de la página (como problemas de validación de formularios).
@@ -112,7 +111,10 @@ Si el envío de un formulario contiene errores y el envío vuelve a representar 
 ### Ejemplo
 
 ```html
-<title>2 errores - Tu orden - Comida china Blue House - FoodYum: ¡Comida a domicilio en línea hoy!</title>
+<title>
+  2 errores - Tu orden - Comida china Blue House - FoodYum: ¡Comida a domicilio
+  en línea hoy!
+</title>
 ```
 
 > **Nota:** Actualmente, los lectores de pantalla no anunciarán automáticamente la actualización dinámica del título de una página. Si va a actualizar el título de la página para reflejar cambios significativos en el estado de una página, entonces también puede ser necesario el uso de [regiones en vivo de ARIA](/es/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).

@@ -1,7 +1,6 @@
 ---
 title: コードサンプル
 slug: MDN/Writing_guidelines/Page_structures/Code_examples
-original_slug: MDN/Writing_guidelines/Page_structures/Code_examples
 ---
 
 {{MDNSidebar}}
@@ -17,7 +16,7 @@ MDN には 4 種類のコードサンプルがあります。
 - 静的サンプル — プレーンなコードブロックで、そのようなコードを実行した場合の結果を静的に示すスクリーンショットが付いている場合があります。
 - インタラクティブサンプル - [ライブでインタラクティブサンプル](https://github.com/mdn/interactive-examples)を生成するためのシステムで、コードをライブで表示するだけでなく、その場でコードを変更して効果を確認したり、結果を簡単にコピーしたりすることができます。
 - MDN の従来型「ライブサンプル」 - 単体のコードブロックを {{htmlelement("iframe")}} 要素内の文書に動的に配置し、ページに埋め込んでコードの実行をライブで表示するマクロです。
-- GitHub の「ライブサンプル」 —  [mdn 組織](https://github.com/mdn/)内の GitHub リポジトリーにある文書を取り込んで {{htmlelement("iframe")}} 要素の中に入れ、それをページに埋め込んでコードをライブで表示するマクロです。
+- GitHub の「ライブサンプル」 — [mdn 組織](https://github.com/mdn/)内の GitHub リポジトリーにある文書を取り込んで {{htmlelement("iframe")}} 要素の中に入れ、それをページに埋め込んでコードをライブで表示するマクロです。
 
 それぞれの機能については後のセクションで説明します。
 
@@ -85,9 +84,9 @@ console.log(test);
 - CSS
 - JavaScript
 - Result
-上記のそれぞれのサブセクションにコードブロックを書きます。
-**結果**サブセクションに、 [`EmbedLiveSample` マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples#live_sample_macros)への呼び出しを追加してください。できれば、このサブセクションに、結果を記述するための文章をもう少し入れてください。
-もし、特定の言語型を使用しない場合（例えば、 JavaScript を使用しない場合）、または非表示にしている場合は、対応する見出しを省略する必要があります。
+  上記のそれぞれのサブセクションにコードブロックを書きます。
+  **結果**サブセクションに、 [`EmbedLiveSample` マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples#live_sample_macros)への呼び出しを追加してください。できれば、このサブセクションに、結果を記述するための文章をもう少し入れてください。
+  もし、特定の言語型を使用しない場合（例えば、 JavaScript を使用しない場合）、または非表示にしている場合は、対応する見出しを省略する必要があります。
 
 例
 

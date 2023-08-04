@@ -1,20 +1,15 @@
 ---
 title: flex-wrap
 slug: Web/CSS/flex-wrap
-tags:
-  - CSS
-  - CSS Flex Box
-  - Propriedades CSS
-  - Referencia
-translation_of: Web/CSS/flex-wrap
 ---
+
 {{ CSSRef}}
 
 A propriedade [CSS](/pt-BR/docs/CSS) **`flex-wrap`** define se os itens flexíveis são forçados a ficarem na mesma linha ou se podem ser quebradas em varias linhas. Se o argumento for valido, ele define a direção em que as linhas são empilhadas.
 
 {{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
 
-Veja [Using CSS flexible boxes](/en/CSS/Using_CSS_flexible_boxes) para mais propriedades e informação.
+Veja [Using CSS flexible boxes](/pt-BR/CSS/Using_CSS_flexible_boxes) para mais propriedades e informação.
 
 ## Syntax
 

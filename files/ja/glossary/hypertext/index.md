@@ -11,7 +11,7 @@ slug: Glossary/Hypertext
 
 ### 一般知識
 
-- ウィキペディアの{{interwiki("wikipedia", "ハイパーテキスト")}}の記事
+- ウィキペディアの[ハイパーテキスト](https://ja.wikipedia.org/wiki/ハイパーテキスト)の記事
 
 ### 技術リファレンス
 

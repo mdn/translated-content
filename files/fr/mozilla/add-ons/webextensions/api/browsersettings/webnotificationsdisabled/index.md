@@ -1,16 +1,6 @@
 ---
 title: browserSettings.webNotificationsDisabled
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/webNotificationsDisabled
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - webNotificationsDisabled
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/webNotificationsDisabled
 ---
 
 {{AddonSidebar()}}
@@ -27,9 +17,9 @@ Si vous définissez `browserSettings.webNotificationsDisabled` à `false` la val
 
 Notez que ce paramètre n'a aucun effet sur les notifications créées par des extensions à l'aide de l'API de [`notifications`](/fr/Add-ons/WebExtensions/API/notifications).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.webNotificationsDisabled")}}
+{{Compat}}
 
 ## Exemples
 
@@ -39,7 +29,9 @@ Basculer le paramètre :
 async function toggleWebNotifications() {
   let current = await browser.browserSettings.webNotificationsDisabled.get({});
   console.log(`Current value: ${current.value}`);
-  browser.browserSettings.webNotificationsDisabled.set({value: !current.value});
+  browser.browserSettings.webNotificationsDisabled.set({
+    value: !current.value,
+  });
 }
 
 browser.browserAction.onClicked.addListener(() => {

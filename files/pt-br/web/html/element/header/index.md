@@ -1,11 +1,13 @@
 ---
 title: header (cabeçalho)
 slug: Web/HTML/Element/header
-translation_of: Web/HTML/Element/header
 ---
+
 ## Sumário
 
-O **elemento HTML** **`<header>` **representa um grupo de suporte introdutório ou navegacional. Pode conter alguns elementos de cabeçalho mas também outros elementos como um logo, seções de cabeçalho, formulário de pesquisa, e outros.
+O **elemento HTML** **`<header>`** representa um grupo de suporte introdutório ou navegacional. Pode conter alguns elementos de cabeçalho mas também outros elementos como um logo, seções de cabeçalho, formulário de pesquisa, e outros.
+
+{{EmbedInteractiveExample("pages/tabbed/header.html", "tabbed-standard")}}
 
 > **Note:** **Notas de utilização:**
 >
@@ -47,4 +49,4 @@ Este elemento não possui outros atributos além dos [atributos globais](/pt-BR/
 - Outros elementos relacionados a seção: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};
 - [Seções e outlines de um documento HTML5](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document).
 
-{{HTMLRef}}
+{{HTMLSidebar}}

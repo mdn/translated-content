@@ -1,18 +1,8 @@
 ---
 title: FileReader.readAsArrayBuffer()
 slug: Web/API/FileReader/readAsArrayBuffer
-tags:
-  - API
-  - DOM
-  - File API
-  - FileReader
-  - Files
-  - Method
-  - Reference
-  - readAsArrayBuffer
-browser-compat: api.FileReader.readAsArrayBuffer
-translation_of: Web/API/FileReader/readAsArrayBuffer
 ---
+
 {{APIRef("File API")}}
 
 El método **`readAsArrayBuffer()`** de la interfaz {{domxref("FileReader")}}

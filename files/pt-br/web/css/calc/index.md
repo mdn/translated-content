@@ -1,17 +1,8 @@
 ---
 title: calc()
 slug: Web/CSS/calc
-tags:
-  - CSS
-  - Calculate
-  - Função
-  - Função CSS
-  - Layout
-  - Web
-  - calc
-translation_of: Web/CSS/calc()
-original_slug: Web/CSS/calc()
 ---
+
 {{CSSRef}}
 
 A função **`calc()`** [CSS](/pt-BR/docs/Web/CSS) permite você executar cálculos quando especificar os valores de propriedades no CSS. Pode ser utilizada em qualquer lugar , como {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, e {{cssxref("&lt;integer&gt;")}} é permitido.
@@ -99,8 +90,8 @@ Aqui, o próprio formulário é estabelecido para utilizar 1/6 da largura da jan
 ```html
 <form>
   <div id="formbox">
-  <label>Type something:</label>
-  <input type="text">
+    <label>Type something:</label>
+    <input type="text" />
   </div>
 </form>
 ```
@@ -139,8 +130,8 @@ Isso garante que o tamanho do texto será redimensionado se a página for amplia
 
 ## Especificações
 
-| Especificação                                                            | Status                           | Comentário        |
-| ------------------------------------------------------------------------ | -------------------------------- | ----------------- |
+| Especificação                                           | Status                   | Comentário        |
+| ------------------------------------------------------- | ------------------------ | ----------------- |
 | {{SpecName('CSS3 Values', '#calc-notation', 'calc()')}} | {{Spec2('CSS3 Values')}} | Definição inicial |
 
 ## Compatibilidade com navegadores

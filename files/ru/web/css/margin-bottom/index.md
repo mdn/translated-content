@@ -1,18 +1,15 @@
 ---
 title: margin-bottom
 slug: Web/CSS/margin-bottom
-tags:
-  - CSS
-  - CSS-свойство
-translation_of: Web/CSS/margin-bottom
 ---
+
 {{CSSRef}}
 
-Свойство [CSS](/ru/docs/CSS "CSS") **`margin-bottom`** устанавливает внешний отступ внизу элемента. Положительное значение увеличивает расстояние между соседними элементами, тогда как отрицательное - сокращает.
+Свойство [CSS](/ru/docs/CSS) **`margin-bottom`** устанавливает внешний отступ внизу элемента. Положительное значение увеличивает расстояние между соседними элементами, тогда как отрицательное - сокращает.
 
 {{EmbedInteractiveExample("pages/css/margin-bottom.html")}}
 
-![Влияние CSS-свойства margin-bottom на блок элемента](https://mdn.mozillademos.org/files/16471/margin-bottomru.png)
+![Влияние CSS-свойства margin-bottom на блок элемента](margin-bottomru.png)
 
 Это свойство не имеет воздействия на незамещаемые элементы, такие как {{HTMLElement("span")}} или {{HTMLElement("code")}}.
 

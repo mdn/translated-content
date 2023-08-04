@@ -1,14 +1,8 @@
 ---
 title: flex-grow
 slug: Web/CSS/flex-grow
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - NeedsContent
-  - Reference
-translation_of: Web/CSS/flex-grow
 ---
+
 {{CSSRef}}
 
 **`flex-grow`** [CSS](/ko/docs/Web/CSS) property 는 `flex-item` 요소가, `flex-container` 요소 내부에서 할당 가능한 공간의 정도를 선언합니다. 만약 **형제 요소**로 렌더링 된 모든 `flex-item` 요소들이 동일한 `flex-grow` 값을 갖는다면, `flex-container` 내부에서 동일한 공간을 할당받습니다. 하지만 `flex-grow` 값으로 다른 소수값을 지정한다면, 그에 따라 다른 공간값을 나누어 할당받게 됩니다.
@@ -84,13 +78,13 @@ flex-grow: unset;
 
 {{EmbedLiveSample('Example', '700px', '300px', '', 'Web/CSS/flex-grow')}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
 {{cssinfo}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

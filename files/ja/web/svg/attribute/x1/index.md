@@ -93,9 +93,4 @@ html,body,svg { height:100% }
 
 ## 仕様
 
-| 仕様                                                                                                     | 状態                     | 備考                                      |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------- |
-| {{SpecName("SVG2", "shapes.html#LineElementX1Attribute", "x1")}}                     | {{Spec2("SVG2")}} | Definition for `<line>`                   |
-| {{SpecName("SVG2", "pservers.html#LinearGradientElementX1Attribute", "x1")}}     | {{Spec2("SVG2")}} | Definition for `<linearGradient>`         |
-| {{SpecName("SVG1.1", "shapes.html#LineElementX1Attribute", "x1")}}                 | {{Spec2("SVG1.1")}} | Initial definition for `<line>`           |
-| {{SpecName("SVG1.1", "pservers.html#LinearGradientElementX1Attribute", "x1")}} | {{Spec2("SVG1.1")}} | Initial definition for `<linearGradient>` |
+{{Specifications}}

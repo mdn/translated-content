@@ -1,17 +1,9 @@
 ---
 title: <slot>
 slug: Web/HTML/Element/slot
-tags:
-  - Composant web
-  - Element
-  - HTML
-  - Reference
-  - Web
-  - shadow dom
-translation_of: Web/HTML/Element/slot
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<slot>`** représente un emplacement d'un composant web qu'on peut remplir avec son propre balisage. On peut ainsi obtenir un document construit avec différents arbres DOM. Cet élément fait partie des outils relatifs [aux composants web (Web Components)](/fr/docs/Web/Web_Components).
 
@@ -19,7 +11,7 @@ L'élément HTML **`<slot>`** représente un emplacement d'un composant web qu'o
 
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("name")}}
+- `name`
 
   - : Le nom de l'emplacement créé.
 
@@ -30,8 +22,14 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 ```html
 <template id="element-details-template">
   <style>
-    details {font-family: "Open Sans Light", Helvetica, Arial, sans-serif }
-    .name {font-weight: bold; color: #217ac0; font-size: 120% }
+    details {
+      font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+    }
+    .name {
+      font-weight: bold;
+      color: #217ac0;
+      font-size: 120%;
+    }
     h4 {
       margin: 10px 0 -8px 0;
       background: #217ac0;
@@ -40,20 +38,30 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
       border: 1px solid #cee9f9;
       border-radius: 4px;
     }
-    .attributes { margin-left: 22px; font-size: 90% }
-    .attributes p { margin-left: 16px; font-style: italic }
+    .attributes {
+      margin-left: 22px;
+      font-size: 90%;
+    }
+    .attributes p {
+      margin-left: 16px;
+      font-style: italic;
+    }
   </style>
   <details>
     <summary>
-      <code class="name">&lt;<slot name="element-name">Remplacer ce nom</slot>&gt;</code>
-      <i class="desc"><slot name="description">Remplacer cette description</slot></i>
+      <code class="name"
+        >&lt;<slot name="element-name">Remplacer ce nom</slot>&gt;</code
+      >
+      <i class="desc"
+        ><slot name="description">Remplacer cette description</slot></i
+      >
     </summary>
     <div class="attributes">
       <h4>Attributs</h4>
       <slot name="attributes"><p>Aucun</p></slot>
     </div>
   </details>
-  <hr>
+  <hr />
 </template>
 ```
 
@@ -89,7 +97,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
     </tr>
     <tr>
       <th scope="row">Évènements</th>
-      <td>{{event("slotchange")}}</td>
+      <td><a href="/fr/docs/Web/API/HTMLSlotElement/slotchange_event"><code>slotchange</code></a></td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>

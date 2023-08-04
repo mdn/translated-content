@@ -1,7 +1,9 @@
 ---
 title: undefined
-slug: Glossary/undefined
+slug: Glossary/Undefined
 ---
+
+{{GlossarySidebar}}
 
 一个声明未定义的变量的初始值，或没有实际参数的形式参数。
 
@@ -10,7 +12,7 @@ slug: Glossary/undefined
 ```js
 var x; //创建一个变量，但并没有赋值
 
-console.log("X 的值是", x)  //返回 X 的值是 undefined
+console.log("X 的值是", x); //返回 X 的值是 undefined
 ```
 
 ## 更多

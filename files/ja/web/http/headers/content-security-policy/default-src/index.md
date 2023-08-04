@@ -1,11 +1,13 @@
 ---
-title: 'CSP: default-src'
+title: "CSP: default-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/default-src
+l10n:
+  sourceCommit: de2a90fe1c1cd578faaee3c7e2ff7c96bae9a545
 ---
 
 {{HTTPSidebar}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) **`default-src`** ディレクティブは、他の CSP {{Glossary("fetch directive", "フェッチディレクティブ")}}の代替として提供します。以下のディレクティブがいずれかが存在しないと、ユーザーエージェントは `default-src` ディレクティブを探して、この値を使用します。
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`default-src`** ディレクティブは、他の CSP の{{Glossary("fetch directive", "フェッチディレクティブ")}}の代替として提供します。以下のディレクティブがいずれかが存在しないと、ユーザーエージェントは `default-src` ディレクティブを探して、この値を使用します。
 
 - {{CSP("child-src")}}
 - {{CSP("connect-src")}}
@@ -41,7 +43,7 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) **`default-src`** デ�
 
 `default-src` ポリシーには、１つまたは複数のソースが許可されています。
 
-```
+```http
 Content-Security-Policy: default-src <source>;
 Content-Security-Policy: default-src <source> <source>;
 ```
@@ -56,15 +58,15 @@ Content-Security-Policy: default-src <source> <source>;
 
 ### default-src で継承されない場合
 
-他のディレクティブが指定されている場合、`default-src` は影響しません。
+他のディレクティブが指定されている場合、`default-src` は影響しません。以下のヘッダー、
 
-```
+```http
 Content-Security-Policy: default-src 'self'; script-src https://example.com
 ```
 
 は、下記のものと同じです。
 
-```
+```http
 Content-Security-Policy: connect-src 'self';
                          font-src 'self';
                          frame-src 'self';
@@ -96,4 +98,3 @@ Content-Security-Policy: connect-src 'self';
   - {{Glossary("Reporting directive", "報告ディレクティブ")}}
   - [`upgrade-insecure-requests`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
   - [`block-all-mixed-content`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
-  - [`require-sri-for`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for) {{experimental_inline}}

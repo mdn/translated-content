@@ -5,17 +5,24 @@ slug: Web/CSS/General_sibling_combinator
 
 {{CSSRef}}
 
-## 概述
+**通用兄弟选择器**（`~`）将两个选择器分开，并匹配第二个选择器的*所有迭代元素*，位置无须紧邻于第一个元素，只须有相同的父级{{Glossary("element", "元素")}}。
 
-兄弟选择符，位置无须紧邻，只须同层级，`A~B` 选择`A`元素之后所有同层级`B`元素。
+```css
+/* 在任意图像后的兄弟段落 */
+img ~ p {
+  color: red;
+}
+```
 
 ## 语法
 
-```
+```css
 former_element ~ target_element { style properties }
 ```
 
 ## 示例
+
+### CSS
 
 ```css
 p ~ span {
@@ -23,22 +30,24 @@ p ~ span {
 }
 ```
 
-上面的 CSS 作用于下面的 HTML 中：
+### HTML
 
 ```html
 <span>This is not red.</span>
 <p>Here is a paragraph.</p>
 <code>Here is some code.</code>
-<span>And here is a span.</span>
+<span>And here is a red span!</span>
+<span>And this is a red span!</span>
+<code>More code…</code>
+<div>How are you?</div>
+<p>Whatever it may be, keep smiling.</p>
+<h1>Dream big</h1>
+<span>And yet again this is a red span!</span>
 ```
 
-则会产生下面的效果：
+### 结果
 
-This is not red.
-
-Here is a paragraph.
-
-`Here is some code.`And here is a span.
+{{EmbedLiveSample("示例", "auto", 300)}}
 
 ## 规范
 
@@ -48,6 +57,6 @@ Here is a paragraph.
 
 {{Compat}}
 
-## 相关
+## 参见
 
-- {{Cssxref("Adjacent_sibling_selectors", "Adjacent sibling selectors")}}
+- [相邻兄弟选择器](/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator)

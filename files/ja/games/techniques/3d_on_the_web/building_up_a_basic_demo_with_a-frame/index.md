@@ -5,13 +5,13 @@ slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame
 
 {{GamesSidebar}}
 
-[WebVR](/ja/docs/Games/Techniques/3D_on_the_web/WebVR) API と [WebGL](/ja/docs/Web/API/WebGL_API) API によって、ウェブブラウザー内で仮想現実 (VR) 体験を作成し始めることが可能になっていますが、コミュニティはもっと簡単に作れるツールやライブラリーが現れるのを待っています。 Mozilla の [A-Frame](https://aframe.io/) フレームワークは、ウェブ開発者が慣れ親しんでいるシステムを用いて 3D VR 空間を構築するマークアップ言語を提供しています。このシステムはゲーム開発のコーディング原則に従っています。これはプロトタイプやデモを、大量の JavaScript や GLSL を書かずに、迅速にうまく構築するのに役立ちます。この記事では A-Frame をどうやって起動するか、そしてそれをつかって簡単なデモを構築する方法を説明します。
+[WebVR](/ja/docs/Games/Techniques/3D_on_the_web/WebVR) API と [WebGL](/ja/docs/Web/API/WebGL_API) API によって、ウェブブラウザー内で仮想現実 (VR) 体験を作成し始めることが可能になっていますが、コミュニティはもっと簡単に作れるツールやライブラリーが現れるのを待っています。Mozilla の [A-Frame](https://aframe.io/) フレームワークは、ウェブ開発者が慣れ親しんでいるシステムを用いて 3D VR 空間を構築するマークアップ言語を提供しています。このシステムはゲーム開発のコーディング原則に従っています。これはプロトタイプやデモを、大量の JavaScript や GLSL を書かずに、迅速にうまく構築するのに役立ちます。この記事では A-Frame をどうやって起動するか、そしてそれをつかって簡単なデモを構築する方法を説明します。
 
 ## 高水準の概要
 
-A-Frame の現在のバージョンは 0.3.2 で、まだまだ実験的な段階ですが、既に動作しており、すぐにブラウザーで試すことができます。デスクトップやモバイル (iOS や Android) の Oculus Rift、GearVR、HTC Vive で動作します。
+A-Frame の現在のバージョンは 0.3.2 で、まだまだ実験的な段階ですが、既に動作しており、すぐにブラウザーで試すことができます。デスクトップやモバイル (iOS や Android) の Oculus Rift、GearVR、HTC Vive で動作します。
 
-A-Frame は [WebGL](/ja/docs/Web/API/WebGL_API) 上に構築されていて、アプリケーション内で使える構築済みコンポーネント (モデル、ビデオプレイヤー、スカイボックス、ジオメトリー、コントロール、カーソルなど）を持っています。A-Frame は、ゲーム開発業界でよく知られている[エンティティ-コンポーネントシステム](https://ja.wikipedia.org/wiki/エンティティ・コンポーネント・システム)に基づいていますが、マークアップ構造に慣れたウェブ開発者を対象としていて、 JavaScript による操作が可能です。最終的には、既定で VR に対応した 3D ウェブ体験が可能になります。
+A-Frame は [WebGL](/ja/docs/Web/API/WebGL_API) 上に構築されていて、アプリケーション内で使える構築済みコンポーネント (モデル、ビデオプレイヤー、スカイボックス、ジオメトリー、コントロール、カーソルなど）を持っています。A-Frame は、ゲーム開発業界でよく知られている[エンティティ-コンポーネントシステム](https://ja.wikipedia.org/wiki/エンティティ・コンポーネント・システム)に基づいていますが、マークアップ構造に慣れたウェブ開発者を対象としていて、 JavaScript による操作が可能です。最終的には、既定で VR に対応した 3D ウェブ体験が可能になります。
 
 ## 環境設定
 
@@ -30,14 +30,14 @@ A-Frame で何かを作るために環境設定を始めましょう。デモを
 ```html
 <!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>MDN Games: A-Frame demo</title>
-  <script src="aframe.min.js"></script>
-</head>
-<body>
-  <!-- HTML goes here -->
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>MDN Games: A-Frame demo</title>
+    <script src="aframe.min.js"></script>
+  </head>
+  <body>
+    <!-- HTML goes here -->
+  </body>
 </html>
 ```
 
@@ -52,8 +52,7 @@ A-Frame で何かを作るために環境設定を始めましょう。デモを
 `<body>` 要素の中に `<a-scene>` 要素を追加して、シーンを作成しましょう。
 
 ```html
-<a-scene>
-</a-scene>
+<a-scene> </a-scene>
 ```
 
 ### 立方体の追加
@@ -61,11 +60,7 @@ A-Frame で何かを作るために環境設定を始めましょう。デモを
 立方体をシーンに追加するには、 `<a-scene>` 要素の中に単純な [`<a-box>`](https://aframe.io/docs/primitives/a-box.html) 要素を追加します。今すぐ追加してみましょう。
 
 ```html
-<a-box
-  color="#0095DD"
-  position="0 1 0"
-  rotation="20 40 0">
-</a-box>
+<a-box color="#0095DD" position="0 1 0" rotation="20 40 0"> </a-box>
 ```
 
 いくつかの定義済み引数、 `color`、`position`、`rotation` が含まれています。かなり分かりやすいと思いますが、立方体の色や 3D シーン内の位置、そして立方体の回転状態を定義しています。
@@ -117,16 +112,9 @@ A-Frame は必要となるものをすべてセットアップしてくれます
 A-Frame の基本的な光源タイプは directional と ambient です。最初のタイプはシーン内のどこかに配置された平行光源で、2つ目のタイプは最初のタイプから反射しますのでより自然に見えます; このライトはグローバルにセットできます。新しいコードを既存コードの下に追加します — ここでは標準的な `<a-light>` 要素を使います。
 
 ```html
-<a-light
-  type="directional"
-  color="#FFF"
-  intensity="0.5"
-  position="-1 1 2">
+<a-light type="directional" color="#FFF" intensity="0.5" position="-1 1 2">
 </a-light>
-<a-light
-  type="ambient"
-  color="#FFF">
-</a-light>
+<a-light type="ambient" color="#FFF"> </a-light>
 ```
 
 directional ライトは白色で、強度を `0.5` にセットし、位置 `-1 1 2` に配置しています。ambient ライトは色のみ指定することができ、これも白にしています。
@@ -176,12 +164,12 @@ directional ライトは白色で、強度を `0.5` にセットし、位置 `-1
 JavaScript で作成したエンティティをシーンへ追加することもできますので、その機能を使って 3 つ目の図形として円柱を追加してみましょう。 `<body>` 要素の最後、つまり `<a-scene>` の直後に、新たに {{htmlelement("script")}} 要素を追加し、その内側に次の JaveScript コードを記述します。
 
 ```js
-var scene = document.querySelector('a-scene');
-var cylinder = document.createElement('a-cylinder');
-cylinder.setAttribute('color', '#FF9500');
-cylinder.setAttribute('height', '2');
-cylinder.setAttribute('radius', '0.75');
-cylinder.setAttribute('position', '3 1 0');
+var scene = document.querySelector("a-scene");
+var cylinder = document.createElement("a-cylinder");
+cylinder.setAttribute("color", "#FF9500");
+cylinder.setAttribute("height", "2");
+cylinder.setAttribute("radius", "0.75");
+cylinder.setAttribute("position", "3 1 0");
 scene.appendChild(cylinder);
 ```
 
@@ -200,10 +188,7 @@ scene.appendChild(cylinder);
 特別な [`<a-animation>`](https://aframe.io/docs/core/animation.html) というエンティティがあり、要素のアニメーションを手助けしてくれます。下記の `<a-animation>` 要素を `<a-box>` 要素の子要素として追加してください。
 
 ```html
-<a-box
-  color="#0095DD"
-  rotation="20 40 0"
-  position="0 1 0">
+<a-box color="#0095DD" rotation="20 40 0" position="0 1 0">
   <a-animation
     attribute="rotation"
     from="20 0 0"
@@ -257,7 +242,7 @@ var t = 0;
 function render() {
   t += 0.01;
   requestAnimationFrame(render);
-  cylinder.setAttribute('position', '3 '+(Math.sin(t*2)+1)+' 0');
+  cylinder.setAttribute("position", "3 " + (Math.sin(t * 2) + 1) + " 0");
 }
 render();
 ```

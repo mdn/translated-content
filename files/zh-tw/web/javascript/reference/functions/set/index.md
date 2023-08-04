@@ -48,13 +48,13 @@ var language = {
   set current(name) {
     this.log.push(name);
   },
-  log: []
-}
+  log: [],
+};
 
-language.current = 'EN';
+language.current = "EN";
 console.log(language.log); // ['EN']
 
-language.current = 'FA';
+language.current = "FA";
 console.log(language.log); // ['EN', 'FA']
 ```
 
@@ -73,26 +73,32 @@ delete o.current;
 To append a setter to an existing object later at any time, use {{jsxref("Object.defineProperty()")}}.
 
 ```js
-var o = {a: 0};
+var o = { a: 0 };
 
-Object.defineProperty(o, 'b', { set: function(x) { this.a = x / 2; } });
+Object.defineProperty(o, "b", {
+  set: function (x) {
+    this.a = x / 2;
+  },
+});
 
 o.b = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
-console.log(o.a) // 5
+console.log(o.a); // 5
 ```
 
 ### 使用計算屬性名
 
 ```js
-var expr = 'foo';
+var expr = "foo";
 
 var obj = {
-  baz: 'bar',
-  set [expr](v) { this.baz = v; }
+  baz: "bar",
+  set [expr](v) {
+    this.baz = v;
+  },
 };
 
 console.log(obj.baz); // "bar"
-obj.foo = 'baz';      // 跑 setter
+obj.foo = "baz"; // 跑 setter
 console.log(obj.baz); // "baz"
 ```
 
@@ -109,6 +115,6 @@ console.log(obj.baz); // "baz"
 - [getter](/zh-TW/docs/Web/JavaScript/Reference/Functions/get)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - JavaScript 教學的[定義 Getters 與 Setters](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)

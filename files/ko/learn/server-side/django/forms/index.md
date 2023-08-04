@@ -1,7 +1,8 @@
 ---
-title: 'Django 튜토리얼 파트 9: 폼(form)으로 작업하기'
+title: "Django 튜토리얼 파트 9: 폼(form)으로 작업하기"
 slug: Learn/Server-side/Django/Forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
 이 튜토리얼에서 우리는 Django에서 HTML Form 작업 방법을 보여주고 특히 model Instance를 생성,수정,제거 하는 Form을 작성하는 가장 쉬운 방법을 보여줄 것이다. 이 예제의 일부분으로 우리는 도서관직원이 (admin 앱을 이용하기 보다) 우리가 만든 form을 이용하여 책 대여기간을 연장하거나 작가 정보를 생성,수정,제거할 수 있도록 [LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) 웹사이트를 확장할 것이다.
@@ -13,7 +14,7 @@ slug: Learn/Server-side/Django/Forms
       <td>
         아래 파트를 포함하여 앞선 모든 튜토리얼 파트의 학습을 완료할것
         <a
-          href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions"
+          href="/ko/docs/Learn/Server-side/Django/authentication_and_sessions"
           >Django 튜토리얼 파트 8: 사용자 인증과 이용권한</a
         >.
       </td>
@@ -35,7 +36,7 @@ slug: Learn/Server-side/Django/Forms
 
 지금까지 이 튜토리얼에서 우리가 직접 폼을 생성한 적은 없지만, Django 관리 사이트에서 이미 경험해 보았다. 예를 들면, 아래 스크린 샷에서 [Book](/ko/docs/Learn/Server-side/Django/Models) 모델중 하나를 편집하는 폼을 보여주고 있는데, 몇개의 선택 목록과 텍스트 에디터를 볼 수 있다.
 
-![Admin Site - Book Add](https://mdn.mozillademos.org/files/13979/admin_book_add.png)
+![Admin Site - Book Add](admin_book_add.png)
 
 폼을 개발하는 것은 복잡한 작업이 될수도 있다! 개발자는 일단, 폼을 위한 HTML을 작성해야 하며, 서버로 입력된 (아마도 브라우저로도 입력된) 데이타의 유효성을 검증하고 적절하게 수정하도록 하고, 유효하지 않은 입력에 대해서 사용자가 알 수 있도록 폼을 에러 메시지와 함께 다시 표시해야하며,성공적으로 제출된 데이타를 적절히 처리하고, 마지막으로 성공했을 경우 사용자가 알수 있게 응답하도록 개발 해야 한다. _Django 폼은 다음과 같은 기능의 프레임워크를 제공하여 이 모든 단계중 많은 부분을 덜어내 준다. 이 프레임워크는 폼과 그에 연관된 필드를 프로그램적으로 정의하여 객체를 만들고, 폼 HTML 코드를 작성하는 작업과 데이타 유효성 검증과 사용자 상호작용에 이 객체들을 사용한다._
 
@@ -45,15 +46,19 @@ slug: Learn/Server-side/Django/Forms
 
 첫번째로 [HTML 폼(Form](/ko/docs/Learn/HTML/Forms))에 대한 간단한 개요이다. 어떤 "team"의 이름을 입력하는 단일 텍스트 필드와 관련 라벨을 가진 간단한 HTML 폼을 생각해보자:
 
-![Simple name field example in HTML form](https://mdn.mozillademos.org/files/14117/form_example_name_field.png)
+![Simple name field example in HTML form](form_example_name_field.png)
 
 폼은 HTML에서 적어도 한 개 이상의 `type="submit"`인 `input` 요소를 포함하는 `<form>...</form>` 태그 사이의 요소들의 집합으로 정의된다.
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
+  <label for="team_name">Enter name: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
@@ -77,23 +82,23 @@ Django의 폼 처리 과정은 (모델에 대한 정보를 보여주는데 있�
 
 아래에 Django가 어떻게 요청읕 처리하는지 보여주는 플로우 차트가 있다. 폼을 포함하는 페이지에 대한 요청 (초록색으로 표시함) 으로 시작하고 있다.
 
-![Updated form handling process doc.](https://mdn.mozillademos.org/files/14205/Form%20Handling%20-%20Standard.png)
+![Updated form handling process doc.](form_handling_-_standard.png)
 
 위의 다이어그램에 기반하여, Django 폼이 주요하게 다루는 것은 다음과 같다. :
 
 1. 사용자가 처음으로 폼을 요청할 때 기본 폼을 보여준다.
 
-    - 폼은 비어있는 필드가 있을 수 있다 (예를 들면, 새로운 책을 등록할 경우) 아니면 초기값으로 채워진 필드가 있을 수도 있다. ( 예를 들면, 기존의 책을 수정하거나, 흔히 사용하는 초기값이 있을경우)
-    - 이 시점의 폼은 (초기값이 있긴해도) 유저가 입력한 값에 연관되지 않았기에 unbound 상태라고 불린다.
+   - 폼은 비어있는 필드가 있을 수 있다 (예를 들면, 새로운 책을 등록할 경우) 아니면 초기값으로 채워진 필드가 있을 수도 있다. ( 예를 들면, 기존의 책을 수정하거나, 흔히 사용하는 초기값이 있을경우)
+   - 이 시점의 폼은 (초기값이 있긴해도) 유저가 입력한 값에 연관되지 않았기에 unbound 상태라고 불린다.
 
 2. 제출 요청으로 부터 데이타를 수집하고 그것을 폼에 결합한다.
 
-    - 데이타를 폼에 결합(binding) 한다는 것은 사용자 입력 데이타와 유효성을 위반한 경우의 에러메시지가 폼을 재표시할 필요가 있을 때 준비되었다는 의미이다.
+   - 데이타를 폼에 결합(binding) 한다는 것은 사용자 입력 데이타와 유효성을 위반한 경우의 에러메시지가 폼을 재표시할 필요가 있을 때 준비되었다는 의미이다.
 
 3. 데이타를 다듬어서 유효성을 검증한다.
 
-    - 데이타를 다듬는다는 것은 사용자 입력을 정화(sanitisation) 하고 (예를 들면, 잠재적으로 악의적인 콘덴츠를 서버로 보낼수도 있는 유효하지 않은 문자를 제거하는 것) python에서 사용하는 타입의 데이타로 변환하는 것이다.
-    - 유효성검증은 입력된 값이 해당 필드에 적절한 값인지 검사한다. (예를 들면, 데이타가 허용된 범위에 있는 값인지, 너무 짧거나 길지 않은지 등등)
+   - 데이타를 다듬는다는 것은 사용자 입력을 정화(sanitisation) 하고 (예를 들면, 잠재적으로 악의적인 콘덴츠를 서버로 보낼수도 있는 유효하지 않은 문자를 제거하는 것) python에서 사용하는 타입의 데이타로 변환하는 것이다.
+   - 유효성검증은 입력된 값이 해당 필드에 적절한 값인지 검사한다. (예를 들면, 데이타가 허용된 범위에 있는 값인지, 너무 짧거나 길지 않은지 등등)
 
 4. 입력된 어떤 데이타가 유효하지 않다면, 폼을 다시 표시하는데 이번에는 초기값이 아니라 유저가 입력한 데이타와 문제가 있는 필드의 에러 메시지와 함께 표시한다.
 5. 입력된 모든 데이타가 유효하다면, 요청된 동작을 수행한다. (예를 들면, 데이타를 저장하거나, 이메일을 보내거나, 검색결과를 반환하거나, 파일을 업로딩하는 작업 등등)
@@ -360,19 +365,19 @@ def renew_book_librarian(request, pk):
 
 뷰 에서 참조되는 템플릿 (**/catalog/templates/catalog/book_renew_librarian.html**)을 생성하고 아래 코드를 복사해넣어라 :
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-    <h1>Renew: {{ book_instance.book.title }}</h1>
-    <p>Borrower: {{ book_instance.borrower }}</p>
-    <p> if book_instance.is_overdue %} class="text-danger"{% endif %}>Due date: {{book_instance.due_back}}</p>
+  <h1>Renew: {{ book_instance.book.title }}</h1>
+  <p>Borrower: {{ book_instance.borrower }}</p>
+  <p> if book_instance.is_overdue %} class="text-danger"{% endif %}>Due date: {{book_instance.due_back}}</p>
 
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_table }}
-        <input type="submit" value="Submit">
-    </form>
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <input type="submit" value="Submit">
+  </form>
 {% endblock %}
 ```
 
@@ -388,9 +393,16 @@ def renew_book_librarian(request, pk):
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
   <td>
-    <input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required />
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2016-11-08"
+      required />
     <br />
-    <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
+    <span class="helptext"
+      >Enter date between now and 4 weeks (default 3 weeks).</span
+    >
   </td>
 </tr>
 ```
@@ -402,14 +414,21 @@ def renew_book_librarian(request, pk):
 ```html
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
-   <td>
-      <ul class="errorlist">
-        <li>Invalid date - renewal in past</li>
-      </ul>
-      <input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required />
-      <br />
-      <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
-    </td>
+  <td>
+    <ul class="errorlist">
+      <li>Invalid date - renewal in past</li>
+    </ul>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2015-11-08"
+      required />
+    <br />
+    <span class="helptext"
+      >Enter date between now and 4 weeks (default 3 weeks).</span
+    >
+  </td>
 </tr>
 ```
 
@@ -430,27 +449,29 @@ def renew_book_librarian(request, pk):
 
 If you accepted the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/ko/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself) you'll have a list of all books on loan in the library, which is only visible to library staff. We can add a link to our renew page next to each item using the template code below.
 
-```html
-{% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>  {% endif %}
+```django
+{% if perms.catalog.can_mark_returned %}-
+  <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>
+{% endif %}
 ```
 
 > **참고:** Remember that your test login will need to have the permission "`catalog.can_mark_returned`" in order to access the renew book page (perhaps use your superuser account).
 
-You can alternatively manually construct a test URL like this — [http://127.0.0.1:8000/catalog/book/_\<bookinstance_id>_/renew/](<http://127.0.0.1:8000/catalog/book/\<bookinstance id\>/renew/>) (a valid bookinstance id can be obtained by navigating to a book detail page in your library, and copying the `id` field).
+You can alternatively manually construct a test URL like this — `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/` (a valid bookinstance id can be obtained by navigating to a book detail page in your library, and copying the `id` field).
 
 ### What does it look like?
 
 If you are successful, the default form will look like this:
 
-![](https://mdn.mozillademos.org/files/14209/forms_example_renew_default.png)
+![](forms_example_renew_default.png)
 
 The form with an invalid value entered, will look like this:
 
-![](https://mdn.mozillademos.org/files/14211/forms_example_renew_invalid.png)
+![](forms_example_renew_invalid.png)
 
 The list of all books with renew links will look like this:
 
-![](https://mdn.mozillademos.org/files/14207/forms_example_renew_allbooks.png)
+![](forms_example_renew_allbooks.png)
 
 ## ModelForms
 
@@ -555,40 +576,36 @@ The "create" and "update" views use the same template by default, which will be 
 
 Create the template file **locallibrary/catalog/templates/catalog/author_form.html** and copy in the text below.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-
-<form action="" method="post">
+  <form action="" method="post">
     {% csrf_token %}
     <table>
-    {{ form.as_table }}
+      {{ form.as_table }}
     </table>
     <input type="submit" value="Submit" />
-
-</form>
+  </form>
 {% endblock %}
 ```
 
 This is similar to our previous forms, and renders the fields using a table. Note also how again we declare the `{% csrf_token %}` to ensure that our forms are resistant to CSRF attacks.
 
-The "delete" view expects to find a template named with the format _model_name_**\_confirm_delete.html** (again, you can change the suffix using `template_name_suffix` in your view). Create the template file **locallibrary/catalog/templates/catalog/author_confirm_delete\*\***.html\*\* and copy in the text below.
+The "delete" view expects to find a template named with the format _model_name_**\_confirm_delete.html** (again, you can change the suffix using `template_name_suffix` in your view). Create the template file **locallibrary/catalog/templates/catalog/author_confirm_delete.html** and copy in the text below.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
+  <h1>Delete Author</h1>
 
-<h1>Delete Author</h1>
+  <p>Are you sure you want to delete the author: \{{ author }}?</p>
 
-<p>Are you sure you want to delete the author: \{{ author }}?</p>
-
-<form action="" method="POST">
-  {% csrf_token %}
-  <input type="submit" action="" value="Yes, delete." />
-</form>
-
+  <form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" action="" value="Yes, delete." />
+  </form>
 {% endblock %}
 ```
 
@@ -616,7 +633,7 @@ First login to the site with an account that has whatever permissions you decide
 
 Then navigate to the author create page: <http://127.0.0.1:8000/catalog/author/create/>, which should look like the screenshot below.
 
-![Form Example: Create Author](https://mdn.mozillademos.org/files/14223/forms_example_create_author.png)
+![Form Example: Create Author](forms_example_create_author.png)
 
 Enter values for the fields and then press **Submit** to save the author record. You should now be taken to a detail view for your new author, with a URL of something like `http://127.0.0.1:8000/catalog/author/10`.
 
@@ -624,13 +641,13 @@ You can test editing records by appending _/update/_ to the end of the detail vi
 
 Last of all we can delete the page, by appending delete to the end of the author detail-view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/delete/`). Django should display the delete page shown below. Press **Yes, delete.** to remove the record and be taken to the list of all authors.
 
-![](https://mdn.mozillademos.org/files/14221/forms_example_delete_author.png)
+![](forms_example_delete_author.png)
 
 ## Challenge yourself
 
 Create some forms to create, edit and delete `Book` records. You can use exactly the same structure as for `Authors`. If your **book_form.html** template is just a copy-renamed version of the **author_form.html** template, then the new "create book" page will look like the screenshot below:
 
-![](https://mdn.mozillademos.org/files/14225/forms_example_create_book.png)
+![](forms_example_create_book.png)
 
 ## Summary
 
@@ -650,21 +667,3 @@ There is a lot more that can be done with forms (check out our See also list bel
 - [Generic editing views](https://docs.djangoproject.com/en/2.0/ref/class-based-views/generic-editing/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/ko/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/ko/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/ko/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/ko/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/ko/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/ko/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/ko/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/ko/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/ko/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/ko/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/ko/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/ko/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/ko/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/ko/docs/Learn/Server-side/Django/django_assessment_blog)

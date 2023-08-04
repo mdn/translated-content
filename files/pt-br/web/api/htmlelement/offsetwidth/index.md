@@ -1,8 +1,8 @@
 ---
 title: HTMLElement.offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
-translation_of: Web/API/HTMLElement/offsetWidth
 ---
+
 {{ APIRef("HTML DOM") }}
 
 `A propriedade HTMLElement.offsetWidth` é de somente leitura e retorna a largura de um elemento no layout. Normalmente, o `offsetWidth` é uma medida que inclui as bordas do elemento, seu padding horizontal e o vertical scrollbar (se presente e renderizado) e também a largura CSS do elemento.

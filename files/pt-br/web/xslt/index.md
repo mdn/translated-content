@@ -1,12 +1,8 @@
 ---
 title: XSLT
 slug: Web/XSLT
-tags:
-  - NeedsTranslation
-  - TopicStub
-  - XSLT
-translation_of: Web/XSLT
 ---
+
 {{XSLTRef}}
 
 **Extensible Stylesheet Language Transformations (XSLT)** is an [XML](/pt-BR/docs/Web/XML/XML_introduction)-based language used, in conjunction with specialized processing software, for the transformation of XML documents.

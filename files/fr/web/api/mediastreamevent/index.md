@@ -1,20 +1,11 @@
 ---
 title: MediaStreamEvent
 slug: Web/API/MediaStreamEvent
-tags:
-  - API
-  - Expérimentale
-  - Expérimentale(2)
-  - Interface
-  - Reference
-  - Référence(2)
-  - WebRTC
-translation_of: Web/API/MediaStreamEvent
 ---
 
 {{APIRef("WebRTC")}}{{deprecated_header}}
 
-L'interface **`MediaStreamEvent`** représente les événements qui se produisent en relation avec un {{domxref("MediaStream")}}. Deux événements de ce type peuvent être lancés: {{event("addstream")}} et {{event("removestream")}}.
+L'interface **`MediaStreamEvent`** représente les événements qui se produisent en relation avec un {{domxref("MediaStream")}}. Deux événements de ce type peuvent être lancés: [`addstream`](/fr/docs/Web/API/RTCPeerConnection/addstream_event) et [`removestream`](/fr/docs/Web/API/RTCPeerConnection/removestream_event).
 
 ## Propriétés
 
@@ -35,14 +26,16 @@ Un **`MediaStreamEvent`** étant un [`Event`](/fr/docs/Web/API/Event), cet évè
 ## Exemples
 
 ```js
-pc.onaddstream = function( ev ) {
-  alert("Un stream (id: '" + ev.stream.id + "') a été ajouté à cette connexion.");
+pc.onaddstream = function (ev) {
+  alert(
+    "Un stream (id: '" + ev.stream.id + "') a été ajouté à cette connexion.",
+  );
 };
 ```
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MediaStreamEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

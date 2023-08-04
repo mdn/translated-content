@@ -12,5 +12,5 @@ slug: Glossary/Middleware
 ### 一般知識
 
 - Wikipedia 上の [ミドルウェア（分散アプリケーション）](<https://en.wikipedia.org/wiki/Middleware_(distributed_applications)>)（英語）
-- Wikipedia 上の {{Interwiki("wikipedia", "メッセージ指向ミドルウェア")}}
-- Wikipedia 上の {{Interwiki("wikipedia", "ミドルウェア")}}
+- Wikipedia 上の [メッセージ指向ミドルウェア](https://ja.wikipedia.org/wiki/メッセージ指向ミドルウェア)
+- Wikipedia 上の [ミドルウェア](https://ja.wikipedia.org/wiki/ミドルウェア)

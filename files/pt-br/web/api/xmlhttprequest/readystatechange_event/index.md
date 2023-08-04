@@ -1,16 +1,8 @@
 ---
 title: XMLHttpRequest.onreadystatechange
 slug: Web/API/XMLHttpRequest/readystatechange_event
-tags:
-  - AJAX
-  - API
-  - Evento
-  - Manipulador de eventos
-  - XHR
-  - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/onreadystatechange
-original_slug: Web/API/XMLHttpRequest/onreadystatechange
 ---
+
 {{APIRef}}
 
 Um [`EventHandler`](/pt-BR/docs/Web/API/EventHandler) é chamado sempre que o atributo `readyState` é modificado. O callback é chamado a partir da interface do usuário. A propriedade **`XMLHttpRequest.onreadystatechange`** contém o manipulador de eventos que é chamado quando o evento [readystatechange](/pt-BR/docs/Web/Events/readystatechange) é disparado, ou seja, toda vez que a propriedade {{domxref("XMLHttpRequest.readyState", "readyState")}} do {{domxref("XMLHttpRequest")}} é modificada.
@@ -35,24 +27,22 @@ XMLHttpRequest.onreadystatechange = callback;
 
 ```js
 var xhr = new XMLHttpRequest(),
-    method = "GET",
-    url = "https://developer.mozilla.org/";
+  method = "GET",
+  url = "https://developer.mozilla.org/";
 
 xhr.open(method, url, true);
 xhr.onreadystatechange = function () {
-        if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            console.log(xhr.responseText);
-        }
-    };
+  if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+    console.log(xhr.responseText);
+  }
+};
 xhr.send();
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                            | Status                               | Comentário             |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#handler-xhr-onreadystatechange')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.XMLHttpRequest.readystatechange_event")}}
+{{Compat}}

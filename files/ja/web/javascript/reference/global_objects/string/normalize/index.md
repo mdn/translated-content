@@ -189,9 +189,7 @@ str.normalize('NFKD'); // '\u0073\u0323\u0307'
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.normalize', 'String.prototype.normalize')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

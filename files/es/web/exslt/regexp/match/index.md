@@ -1,12 +1,8 @@
 ---
 title: match
 slug: Web/EXSLT/regexp/match
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/regexp/match
 ---
+
 {{XsltRef}}
 
 `regexp:match()` realiza la búsqueda de coincidencias de una expresión regular en una cadena, devolviendo las subcoincidencias halladas como resultado.

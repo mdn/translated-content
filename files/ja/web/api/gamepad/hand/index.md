@@ -1,25 +1,22 @@
 ---
-title: Gamepad.hand
+title: "Gamepad: hand プロパティ"
+short-title: hand
 slug: Web/API/Gamepad/hand
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 
-{{domxref("Gamepad")}} インターフェイスの **`hand`** 読み取り専用プロパティは、コントローラが握られている手または、握られている可能性が最も高い手を定義する列挙型を返します。
+**`hand`** は {{domxref("Gamepad")}} インターフェイスの読み取り専用プロパティで、コントローラーが握られている手または、握られている可能性が最も高い手を定義する列挙型を返します。
 
-## 構文
+## 値
 
-```js
-var myHand = gamepadInstance.hand;
-```
-
-### 値
-
-[`GamepadHand`](https://w3c.github.io/gamepad/extensions.html#gamepadhand-enum) 列挙型; 可能な値は次の通りです:
+[`GamepadHand`](https://w3c.github.io/gamepad/extensions.html#gamepadhand-enum) 列挙型で、可能な値は次の通りです。
 
 - `left` — 左手。
 - `right` — 右手。
-- 空文字 ("") — この値は、他の値が適用できない場合に返されます。コントローラは両手で持っているか、またはどちらでも結構です。
+- `""` （空文字列） — この値は、他の値が適用できない場合に返されます。コントローラーは両手で持っているか、またはどちらかの可能性があります。
 
 ## 例
 
@@ -27,14 +24,12 @@ TBC
 
 ## 仕様書
 
-| 仕様                                                                                 | ステータス                               | 備考     |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('GamepadExtensions', '#dom-gamepad-hand', 'hand')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Gamepad.hand")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Gamepad API](/ja/docs/Web/API/Gamepad_API)
+- [ゲームパッド API](/ja/docs/Web/API/Gamepad_API)

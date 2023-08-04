@@ -1,22 +1,16 @@
 ---
 title: <time>
 slug: Web/HTML/Element/time
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/time
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<time>`** permet de représenter une période donnée. Cet élément permet d'utiliser l'attribut `datetime` afin de traduire la date ou l'instant dans un format informatique (permettant aux moteurs de recherche d'exploiter ces données ou de créer des rappels).
 
 Cet élément permet de représenter :
 
 - une heure
-- une date du [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_gr%C3%A9gorien) (en précisant éventuellement l'heure et les informations de fuseau horaire).
+- une date du [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_grégorien) (en précisant éventuellement l'heure et les informations de fuseau horaire).
 - [une durée valide](https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string).
 
 {{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}
@@ -25,7 +19,7 @@ Cet élément permet de représenter :
 
 Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : Cet attribut indique l'heure et la date associées à l'élément. La valeur de cet attribut doit être une chaîne de caractères décrivant [une date valide avec un fragment optionnel pour décrire l'heure](https://www.w3.org/TR/html51/infrastructure.html#dates-and-times) (cf. ci-après). Si la valeur ne peut pas être analysée comme une date/heure, le contenu de l'élément n'aura pas d'indication temporelle associée.
 
 ## Notes d'utilisation
@@ -76,8 +70,7 @@ La valeur exploitable informatiquement est la valeur de l'attribut `datetime` de
 #### HTML
 
 ```html
-<p>Le concert a lieu <time
-  datetime="2001-05-15T19:00">le 15 mai</time>.</p>
+<p>Le concert a lieu <time datetime="2001-05-15T19:00">le 15 mai</time>.</p>
 ```
 
 #### Résultat

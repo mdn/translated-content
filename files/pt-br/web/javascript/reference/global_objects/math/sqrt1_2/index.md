@@ -1,15 +1,8 @@
 ---
 title: Math.SQRT1_2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Propriedade
-  - Reference
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
 ---
+
 {{JSRef}}
 
 A propriedade `Math.SQRT1_2` representa a raiz quadrada de <math><semantics><mfrac><mn>1</mn><mn>2</mn></mfrac><annotation encoding="TeX">\frac{1}{2}</annotation></semantics></math>, que é aproximadamente 0.707:

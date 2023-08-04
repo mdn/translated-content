@@ -1,7 +1,6 @@
 ---
 title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
-original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
 
 {{JSSidebar("Statements")}}
@@ -71,14 +70,11 @@ new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
 
 ## 仕様
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| [`import.meta`](https://tc39.es/proposal-import-meta/#prod-ImportMeta) proposal                                          |
-| {{SpecName("HTML WHATWG", "webappapis.html#hostgetimportmetaproperties", "import.meta")}} |
+{{Specifications}}
 
 ## ブラウザー実装状況
 
-{{Compat("javascript.statements.import_meta")}}
+{{Compat}}
 
 ## 関連情報
 

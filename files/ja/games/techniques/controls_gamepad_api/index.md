@@ -1,6 +1,8 @@
 ---
 title: ゲームパッド API を使用したコントロールの実装
 slug: Games/Techniques/Controls_Gamepad_API
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{GamesSidebar}}
@@ -9,7 +11,7 @@ slug: Games/Techniques/Controls_Gamepad_API
 
 ## ウェブゲームのコントロール
 
-歴史的には、テレビに接続されたゲーム機でゲームをすることと、 PC 上でのゲームとはまったく異なる体験でした。最終的にはドライバーとプラグインにより、ゲーム機のゲームパッドをデスクトップゲーム――ネイティブかブラウザーで実行されるゲーム――で使用できるようになりました。 HTML5 の時代になり、[ゲームパッド API](/ja/docs/Web/API/Gamepad_API) が完成し、プラグインなしでゲームパッドコントローラを使用してブラウザーベースのゲームをプレイできるようになりました。ゲームパッド API は、入力を処理するために JavaScript コード内で使用できるボタンの押下と軸の変更を公開するインターフェイスを提供することで、これを実現します。 これらは、ブラウザーゲームにとって良いことです。
+歴史的には、テレビに接続されたゲーム機でゲームをすることと、 PC 上でのゲームとはまったく異なる体験でした。最終的にはドライバーとプラグインにより、ゲーム機のゲームパッドをデスクトップゲーム――ネイティブかブラウザーで実行されるゲーム――で使用できるようになりました。[ゲームパッド API](/ja/docs/Web/API/Gamepad_API) が登場し、プラグインなしでゲームパッドコントローラを使用してブラウザーベースのゲームをプレイできるようになりました。ゲームパッド API は、入力を処理するために JavaScript コード内で使用できるボタンの押下と軸の変更を公開するインターフェイスを提供することで、これを実現します。 これらは、ブラウザーゲームにとって良いことです。
 
 ## API ステータスとブラウザーサポート
 
@@ -52,7 +54,7 @@ const gamepadAPI = {
   buttons: [],
   buttonsCache: [],
   buttonsStatus: [],
-  axesStatus: []
+  axesStatus: [],
 };
 ```
 
@@ -118,15 +120,15 @@ disconnect(evt) {
 update() {
   // Clear the buttons cache
   gamepadAPI.buttonsCache = [];
-  
+
   // Move the buttons status from the previous frame to the cache
   for (let k = 0; k < gamepadAPI.buttonsStatus.length; k++) {
     gamepadAPI.buttonsCache[k] = gamepadAPI.buttonsStatus[k];
   }
-  
+
   // Clear the buttons status
   gamepadAPI.buttonsStatus = [];
-  
+
   // Get the gamepad object
   const c = gamepadAPI.controller || {};
 
@@ -139,7 +141,7 @@ update() {
       }
     }
   }
-  
+
   // Loop through axes and push their values to the array
   const axes = [];
   if (c.axes) {
@@ -147,11 +149,11 @@ update() {
       axes.push(c.axes[a].toFixed(2));
     }
   }
-  
+
   // Assign received values
   gamepadAPI.axesStatus = axes;
   gamepadAPI.buttonsStatus = pressed;
-  
+
   // Return buttons for debugging purposes
   return pressed;
 },
@@ -161,19 +163,19 @@ update() {
 
 ### ボタンプレスの検出
 
-`buttonPressed()`  メソッドはメインのゲームループに配置され、ボタンの押下を待機します。 2 つの引数、つまり待ち受けするボタンと、ボタンを押したままにすることをゲームに伝える（オプション）方法があります。 それがなければ、ボタンを放してもう一度押して、希望する効果を持たなければなりません。
+`buttonPressed()` メソッドはメインのゲームループに配置され、ボタンの押下を待機します。 2 つの引数、つまり待ち受けするボタンと、ボタンを押したままにすることをゲームに伝える（オプション）方法があります。 それがなければ、ボタンを放してもう一度押して、希望する効果を持たなければなりません。
 
 ```js
 buttonPressed(button, hold) {
   let newPress = false;
-  
+
   // Loop through pressed buttons
   for (let i = 0; i < gamepadAPI.buttonsStatus.length; i++) {
     // If we found the button we're looking for
     if (gamepadAPI.buttonsStatus[i] === button) {
       // Set the boolean variable to true
       newPress = true;
-      
+
       // If we want to check the single press
       if (!hold) {
         // Loop through the cached states from the previous frame
@@ -192,10 +194,10 @@ buttonPressed(button, hold) {
 
 ```js
 if (gamepadAPI.turbo) {
-  if (gamepadAPI.buttonPressed('A', 'hold')) {
+  if (gamepadAPI.buttonPressed("A", "hold")) {
     this.turbo_fire();
   }
-  if (gamepadAPI.buttonPressed('B')) {
+  if (gamepadAPI.buttonPressed("B")) {
     this.managePause();
   }
 }
@@ -205,9 +207,9 @@ if (gamepadAPI.turbo) {
 
 ### 軸のしきい値
 
-ボタンには `0` または `1` の二つの状態しかありませんが、アナログスティックは `X` 軸と `Y` 軸の両方に沿って `-1` と `1` の間の浮動小数点範囲を持っています。
+ボタンには `0` または `1` の 2 つの状態しかありませんが、アナログスティックは `X` 軸と `Y` 軸の両方に沿って `-1` と `1` の間の浮動小数点範囲を持っています。
 
-ゲームパッドは使用しないまま放置しておくと、ホコリで汚れてしまうことがあり、-1や1の値を正確にチェックすることが難しくなります。このため、軸の値が有効になるための閾値を設定するとよいでしょう。例えば、 Fridge のタンクは、 `X` の値が `0.5` より大きいときだけ右に曲がります。
+ゲームパッドは使用しないまま放置しておくと、ホコリで汚れてしまうことがあり、-1 や 1 の値を正確にチェックすることが難しくなります。このため、軸の値が有効になるための閾値を設定するとよいでしょう。例えば、Fridge のタンクは、 `X` の値が `0.5` より大きいときだけ右に曲がります。
 
 ```js
 if (gamepadAPI.axesStatus[0].x > 0.5) {
@@ -230,11 +232,11 @@ if (gamepadAPI.axesStatus[0].x > 0.5) {
 
 マッピング型は、文字列ではなく列挙型のオブジェクトになりました。
 
-```js
+```ts
 enum GamepadMappingType {
-    "",
-    "standard"
-};
+  "",
+  "standard",
+}
 ```
 
 この列挙型は、ゲームパッドの既知のマッピングのセットを定義します。 今のところ `standard` のレイアウトしかありませんが、将来は新しいレイアウトが登場する可能性があります。 レイアウトが不明な場合は、空の文字列に設定されます。

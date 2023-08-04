@@ -1,18 +1,8 @@
 ---
 title: Frameworks Web de lado servidor
 slug: Learn/Server-side/First_steps/Web_frameworks
-tags:
-  - Aprendizaje
-  - Codificación de scripts
-  - Frameworks web
-  - Guía
-  - Principiante
-  - Programación lado servidor
-  - Servidor
-  - introducción
-translation_of: Learn/Server-side/First_steps/Web_frameworks
-original_slug: Learn/Server-side/Primeros_pasos/Web_frameworks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
 
 El artículo anterior te mostró que pinta tiene la comunicación entre los clientes web y los servidores, la naturaleza de las peticiones y respuestas HTTP, y lo que necesita hacer una aplicación web de lado servidor para responder a las peticiones de un explorador web. Con este conocimiento en nuestra mochila, es hora de explorar cómo los frameworks web pueden simplificar estas tareas, y darte una idea de cómo escogerías un framework para tu primera aplicación web de lado servidor.
@@ -138,7 +128,7 @@ class Team(models.Model):
 
 El modelo de Django proporciona una API de consulta simple para buscar en la base de datos. Ésta puede comprobar coincidencias contra un gran número de campos al mismo tiempo usando diferentes criterios (ej. exacto, insensible a las mayúsculas, mayor que, etc.), y puede soportar sentencias complejas (por ejemplo, puedes especificar una búsqueda de equipos U11 que tengan un nombre de equipo que empiece por "Fr" or finalice con "al").
 
-El segundo fragmento de código muestra una función de visualización (manejador de recurso) para mostrar en pantalla todos nuestros equipos U09. En este caso especificamos que queremos filtrar todos los registros donde el campo `team_level` tenga exactamente el texto 'U09' (fíjate debajo cómo este criterio se pasa como argumento a la función `filter()` con el nombre de campo y tipo de coincidencia separados por guiones bajos dobles: **team_level\_\_exact**).
+El segundo fragmento de código muestra una función de visualización (manejador de recurso) para mostrar en pantalla todos nuestros equipos U09. En este caso especificamos que queremos filtrar todos los registros donde el campo `team_level` tenga exactamente el texto 'U09' (fíjate debajo cómo este criterio se pasa como argumento a la función `filter()` con el nombre de campo y tipo de coincidencia separados por guiones bajos dobles: **`team_level__exact`**).
 
 ```python
 #best/views.py
@@ -158,14 +148,14 @@ Los frameworks web proporcionan con frecuencia sistemas de plantillas. Éstas te
 
 Los frameworks web proporcionan con frecuencia un mecanismo para facilitar la generación de otros formatos a partir de los datos almacenados, incluyendo {{glossary("JSON")}} y {{glossary("XML")}}.
 
-Por ejemplo, el sistema de plantillas de Django te permite especificar variables usando una sintaxis de "llaves dobles" (ej. ` { { variable_name }} `), que serán reemplazadas por valores pasados desde la función de visualización cuando la página sea renderizada. El sistema de plantillas también proporciona soporte para expresiones (con la sintaxis: `{% expression %}`), que permite a las plantillas realizar operaciones simples como iterar sobre la lista de valores pasados a la misma.
+Por ejemplo, el sistema de plantillas de Django te permite especificar variables usando una sintaxis de "llaves dobles" (ej. `\{{ variable_name }}`), que serán reemplazadas por valores pasados desde la función de visualización cuando la página sea renderizada. El sistema de plantillas también proporciona soporte para expresiones (con la sintaxis: `{% expression %}`), que permite a las plantillas realizar operaciones simples como iterar sobre la lista de valores pasados a la misma.
 
 > **Nota:** Muchos otros sistemas de plantillas usan una sintaxis similar, ej.: Jinja2 (Python), Handlebars (JavaScript), Moustache (JavaScript), etc.
 
 El fragmento de código de abajo muestra como hacer este trabajo. Continuando el ejemplo del "equipo más joven" de la sección anterior, la "view" pasa a la plantilla HTML una variable tipo lista llamada `youngest_teams`. Dentro del esqueleto HTML tenemos una expresión que primero comprueba que la variable `youngest_teams` existe, y luego itera sobre ella en un bucle `for`. En cada iteración la plantilla presenta en pantalla el valor del `team_name` del equipo de uno de los elementos de la lista.
 
-```html
-#best/templates/best/index.html
+```django
+<!-- best/templates/best/index.html -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -211,13 +201,13 @@ Si eres un completo principiante en la programación probablemente escogerás tu
 > **Nota:** Vayamos a los sitios principales de [Django](https://www.djangoproject.com/) (Python) y [Express](http://expressjs.com/) (Node/JavaScript) y comprobemos su documentación y su comunidad.
 >
 > 1. Navega a los sitios principales (enlazados abajo)
->     - Pincha en los enlaces de los menus de Documentación (cosas que se llaman como "Documentación, Guía, Referencia API, Primeros Pasos".
->     - ¿Puedes ver temas que te muestran como configurar enrutado URL, plantillas y bases de datos/modelos?
->     - ¿Son los documentos suficientemente claros?
+>    - Pincha en los enlaces de los menus de Documentación (cosas que se llaman como "Documentación, Guía, Referencia API, Primeros Pasos".
+>    - ¿Puedes ver temas que te muestran como configurar enrutado URL, plantillas y bases de datos/modelos?
+>    - ¿Son los documentos suficientemente claros?
 > 2. Navega a las listas de correo de cada sitio (accesible desde los enlaces de Comunidad).
->     - ¿Cuántas preguntas se han realizado en unos pocos días recientes?
->     - ¿Cuántas tienen respuestas?
->     - ¿Tienen una comunidad activa?
+>    - ¿Cuántas preguntas se han realizado en unos pocos días recientes?
+>    - ¿Cuántas tienen respuestas?
+>    - ¿Tienen una comunidad activa?
 
 ## ¿Unos pocos frameworks web buenos?
 
@@ -288,10 +278,3 @@ Este artículo ha mostrado que los frameworks web pueden hacer fácil el desarro
 Para el próximo artículo de este módulo cambiaremos de dirección ligeramente y consideraremos la seguridad web.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
-
-## En este modulo
-
-- [Introducción al lado servidor](/es/docs/Learn/Server-side/Primeros_pasos/Introducci%C3%B3n)
-- [Visión general Cliente-Servidor](/es/docs/Learn/Server-side/Primeros_pasos/Vision_General_Cliente_Servidor)
-- [Frameworks web de lado servidor](/es/docs/Learn/Server-side/Primeros_pasos/Web_frameworks)
-- [Seguridad de sitios Web](/es/docs/Learn/Server-side/Primeros_pasos/seguridad_sitios_web)

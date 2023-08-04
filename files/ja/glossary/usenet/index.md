@@ -9,4 +9,4 @@ Usenet は、各投稿が多数のサーバーで複製されるインターネ�
 
 ### 基礎知識
 
-- Wikipedia 上の記事「{{Interwiki("wikipedia", "Usenet")}}」
+- Wikipedia 上の記事「[Usenet](https://ja.wikipedia.org/wiki/Usenet)」

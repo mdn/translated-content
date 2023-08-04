@@ -1,17 +1,11 @@
 ---
 title: const
 slug: Web/JavaScript/Reference/Statements/const
-tags:
-  - ECMAScript6
-  - ES6
-  - JavaScript
-  - Referencia
-  - constantes
-translation_of: Web/JavaScript/Reference/Statements/const
 ---
+
 {{jsSidebar("Statements")}}
 
-Constantes possuem escopo de bloco, semelhantes às variáveis declaradas usando o palavra-chave [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let). O valor de uma constante não pode ser alterado por uma atribuição, e ela não pod ser redeclarada.
+Constantes possuem escopo de bloco, semelhantes às variáveis declaradas usando o palavra-chave [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let). O valor de uma constante não pode ser alterado por uma atribuição, e ela não pod ser redeclarada.
 
 {{EmbedInteractiveExample("pages/js/statement-const.html")}}
 
@@ -38,7 +32,7 @@ Toda constante requer um inicializador, ou seja, é preciso especificar um valor
 
 A declaração **`const`** cria uma referência somente leitura a um valor. Isso **não** significa que esse valor é imutável, apenas que o identificador da variável constante não pode ser alterado. Se o conteúdo do identificador for um objeto, isso significa que o conteúdo do objeto (ex. seus parâmetros) podem ser alterados.
 
-Todas as considerações de ["temporal dead zone"](/pt-BR/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let) se aplicam tanto a **[`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)** quanto a **`const`**.
+Todas as considerações de ["temporal dead zone"](/pt-BR/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let) se aplicam tanto a **[`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let)** quanto a **`const`**.
 
 Uma constante não pode ter o mesmo nome que uma função ou variável que esteja no mesmo escopo.
 
@@ -107,9 +101,9 @@ MY_ARRAY = ['B'];
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                       | Comentário         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-let-and-const-declarations', 'Let and Const Declarations')}}     | {{Spec2('ES6')}}         | Nenhuma mudança.   |
+| Especificação                                                                            | Status               | Comentário         |
+| ---------------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-let-and-const-declarations', 'Let and Const Declarations')}}     | {{Spec2('ES6')}}     | Nenhuma mudança.   |
 | {{SpecName('ESDraft', '#sec-let-and-const-declarations', 'Let and Const Declarations')}} | {{Spec2('ESDraft')}} | Definição inicial. |
 
 ## Compatibilidade com navegadores
@@ -122,9 +116,9 @@ Em versões anteriores do Firefox & Chrome e a partir de Safari 5.1.7 e Opera 12
 
 ### Observações específicas para Firefox
 
-A declaração `const` foi implementada no Firefox muito antes de `const` aparecer na especificação ECMAScript 6. For `const` ES6 compliance see {{bug(950547)}} and {{bug(611388)}}.
+A declaração `const` foi implementada no Firefox muito antes de `const` aparecer na especificação ECMAScript 6. For `const` ES6 compliance see [Erro do Firefox 950547](https://bugzil.la/950547) and [Erro do Firefox 611388](https://bugzil.la/611388).
 
-- Iniciando com o Gecko 36 {{geckoRelease("36")}}:
+- Iniciando com o Gecko 36:
 
   - `{const a=1};a` passa a retornar [`ReferenceError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError) e não retorna `1` devido block-scoping.
   - `const a;` passa a retornar [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) ("missing = in const declaration`"`): É necessário incializar a constante.

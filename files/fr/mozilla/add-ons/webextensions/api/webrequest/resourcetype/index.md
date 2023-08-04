@@ -1,17 +1,6 @@
 ---
 title: webRequest.ResourceType
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - ResourceType
-  - Type
-  - WebExtensions
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
 ---
 
 {{AddonSidebar()}}
@@ -31,16 +20,16 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `font`
   - : Polices Web chargées pour un {{cssxref("@font-face")}} règle CSS.
 - `image`
-  - : Les ressources chargées pour être rendues sous forme d'image, à l'exception de  `imageset` sur les navigateurs qui prennent en charge ce type (voir la compatibilité des navigateurs ci-dessous).
+  - : Les ressources chargées pour être rendues sous forme d'image, à l'exception de `imageset` sur les navigateurs qui prennent en charge ce type (voir la compatibilité des navigateurs ci-dessous).
 - `imageset`
-  - : Images chargées par un élément {{HTMLElement("picture")}} ou données dans un attribut {{htmlattrxref("srcset", "img")}} d'un élement `<img>`.
+  - : Images chargées par un élément {{HTMLElement("picture")}} ou données dans un attribut [`srcset`](/fr/docs/Web/HTML/Element/img#srcset) d'un élement `<img>`.
 
 <!---->
 
 - `main_frame`
   - : Documents de niveau chargés dans un objet.
 - `media`
-  - : Ressources chargées par un élément  {{HTMLElement("video")}} ou  {{HTMLElement("audio")}}.
+  - : Ressources chargées par un élément {{HTMLElement("video")}} ou {{HTMLElement("audio")}}.
 - `object`
 
   - : Ressources chargées par un élément {{HTMLElement("object")}} ou {{HTMLElement("embed")}}.
@@ -51,7 +40,7 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
   - : Requêtes envoyées par plugins.
 - `ping`
 
-  - : Demandes envoyées à l'URL donnée dans l'attribut {{htmlattrxref("ping", "a")}} d'un hyperlien, lorsque l'hyperlien est suivi.
+  - : Demandes envoyées à l'URL donnée dans l'attribut [`ping`](/fr/docs/Web/HTML/Element/a#ping) d'un hyperlien, lorsque l'hyperlien est suivi.
 
     Les navigateurs qui n'ont pas de type de `balise` dédié (voir la compatibilité des navigateurs ci-dessous), étiquettent également les requêtes envoyées par l'API Beacon en tant que `ping`.
 
@@ -78,9 +67,9 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `other`
   - : Ressources qui ne sont couvertes par aucun autre type disponible.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.ResourceType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

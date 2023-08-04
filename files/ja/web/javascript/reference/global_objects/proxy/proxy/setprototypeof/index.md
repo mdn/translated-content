@@ -1,19 +1,21 @@
 ---
 title: handler.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
+l10n:
+  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
 {{JSRef}}
 
-**`handler.setPrototypeOf()`** メソッドは、 {{jsxref("Object.setPrototypeOf()")}} に対するトラップです。
+**`handler.setPrototypeOf()`** メソッドは、オブジェクトの `[[SetPrototypeOf]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Object.setPrototypeOf()")}} などの操作で使用されます。
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-setprototypeof.html", "taller", "taller")}}
+{{EmbedInteractiveExample("pages/js/proxyhandler-setprototypeof.html", "taller")}}
 
 ## 構文
 
-```
-const p = new Proxy(target, {
-  setPrototypeOf: function(target, prototype) {
+```js-nolint
+new Proxy(target, {
+  setPrototypeOf(target, prototype) {
   }
 });
 ```
@@ -33,8 +35,6 @@ const p = new Proxy(target, {
 
 ## 解説
 
-**`handler.setPrototypeOf()`** メソッドは {{jsxref("Object.setPrototypeOf()")}} に対するトラップです。
-
 ### 介入
 
 このトラップは下記の操作に介入できます。
@@ -42,9 +42,11 @@ const p = new Proxy(target, {
 - {{jsxref("Object.setPrototypeOf()")}}
 - {{jsxref("Reflect.setPrototypeOf()")}}
 
+他にも、`[[SetPrototypeOf]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
+
 ### 不変条件
 
-以下の不変条件に違反している場合、プロキシは {{jsxref("TypeError")}} を発生します。
+以下の不変条件に違反している場合、プロキシーは {{jsxref("TypeError")}} を発生します。
 
 - `target` が拡張可能でない場合、引数の `prototype` は `Object.getPrototypeOf(target)` と同じ値でなければなりません。
 
@@ -60,12 +62,13 @@ const p = new Proxy(target, {
 
 ```js
 const handlerReturnsFalse = {
-    setPrototypeOf(target, newProto) {
-        return false;
-    }
+  setPrototypeOf(target, newProto) {
+    return false;
+  },
 };
 
-const newProto = {}, target = {};
+const newProto = {},
+  target = {};
 
 const p1 = new Proxy(target, handlerReturnsFalse);
 Object.setPrototypeOf(p1, newProto); // throws a TypeError
@@ -78,31 +81,30 @@ Reflect.setPrototypeOf(p1, newProto); // returns false
 
 ```js
 const handlerThrows = {
-    setPrototypeOf(target, newProto) {
-        throw new Error('custom error');
-    }
+  setPrototypeOf(target, newProto) {
+    throw new Error("custom error");
+  },
 };
 
-const newProto = {}, target = {};
+const newProto = {},
+  target = {};
 
 const p2 = new Proxy(target, handlerThrows);
-Object.setPrototypeOf(p2, newProto);  // throws new Error("custom error")
+Object.setPrototypeOf(p2, newProto); // throws new Error("custom error")
 Reflect.setPrototypeOf(p2, newProto); // throws new Error("custom error")
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-setprototypeof-v', '[[SetPrototypeOf]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Proxy.handler.setPrototypeOf")}}
+{{Compat}}
 
 ## 関連情報
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Object.setPrototypeOf()")}}
 - {{jsxref("Reflect.setPrototypeOf()")}}

@@ -1,7 +1,6 @@
 ---
 title: Document.getAnimations()
 slug: Web/API/Document/getAnimations
-original_slug: Web/API/DocumentOrShadowRoot/getAnimations
 ---
 
 {{ SeeCompatTable() }}{{APIRef("Web Animations")}}
@@ -27,18 +26,14 @@ var allAnimations = Document.getAnimations();
 次のコードスニペットは、ページ上のすべてのアニメーションの {{domxref("Animation.playbackRate")}} を半分にすることで速度をゆっくりにします。
 
 ```js
-document.getAnimations().forEach(
-  function (animation) {
-    animation.playbackRate *= .5;
-  }
-);
+document.getAnimations().forEach(function (animation) {
+  animation.playbackRate *= 0.5;
+});
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   | 状態                                 | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---- |
-| {{SpecName('Web Animations', '#dom-documentorshadowroot-getanimations', 'document.getAnimations()' )}} | {{Spec2('Web Animations')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

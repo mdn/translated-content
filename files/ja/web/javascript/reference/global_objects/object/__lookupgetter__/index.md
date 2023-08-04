@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 ## 構文
 
 ```js
-__lookupGetter__(sprop)
+__lookupGetter__(sprop);
 ```
 
 ### 引数
@@ -35,12 +35,12 @@ __lookupGetter__(sprop)
 ```js
 var obj = {
   get foo() {
-    return Math.random() > 0.5 ? 'foo' : 'bar';
-  }
+    return Math.random() > 0.5 ? "foo" : "bar";
+  },
 };
 
 // 標準外かつ非推奨の方法
-obj.__lookupGetter__('foo');
+obj.__lookupGetter__("foo");
 // (function() { return Math.random() > 0.5 ? 'foo' : 'bar'; })
 
 // 標準準拠の方法
@@ -59,10 +59,10 @@ Object.getOwnPropertyDescriptor(obj, "foo").get;
 ## 関連情報
 
 - `Object.prototype.__lookupGetter__` のポリフィルは [`core-js`](https://github.com/zloirock/core-js#ecmascript-object) で利用できます
-- {{jsxref("Object.prototype.__lookupSetter__()")}}
+- [`Object.prototype.__lookupSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
 - {{jsxref("Functions/get", "get")}} 演算子
 - {{jsxref("Object.getOwnPropertyDescriptor()")}} と
   {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.prototype.__defineGetter__()")}}
-- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [JavaScript ガイド: ゲッターとセッターの定義](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)

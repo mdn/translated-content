@@ -1,17 +1,8 @@
 ---
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Reference
-  - polyfill
-  - 자바스크립트
-  - 폴리필
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
 ---
+
 {{JSRef}}
 
 **`Array.isArray()`** 메서드는 인자가 {{jsxref("Array")}}인지 판별합니다.
@@ -42,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
 
 객체가 {{jsxref("Array")}}라면 `true`를 반환하고, 아니라면 `false`를 반환합니다.
 
-자세한 정보는 [“Determining with absolute accuracy whether or not a JavaScript object is an array”](http://web.mit.edu/jwalden/www/isArray.html)(자바스크립트 객체가 배열인지 정확히 판별하는 방법) 문서를 참조하세요.
+자세한 정보는 ["Determining with absolute accuracy whether or not a JavaScript object is an array"](http://web.mit.edu/jwalden/www/isArray.html)(자바스크립트 객체가 배열인지 정확히 판별하는 방법) 문서를 참조하세요.
 
 ## 예제
 

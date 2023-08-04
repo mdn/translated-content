@@ -39,9 +39,7 @@ console.log(str2);  // Output: examplefoo
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.global', 'RegExp.prototype.global')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

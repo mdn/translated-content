@@ -1,9 +1,11 @@
 ---
 title: HTMLMediaElement.fastSeek()
 slug: Web/API/HTMLMediaElement/fastSeek
+l10n:
+  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
 
-{{APIRef("HTML DOM")}} {{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.fastSeek()`** メソッドは、精度と引き換えにで新しい時間へのメディアを迅速にシークします。
 
@@ -11,7 +13,7 @@ slug: Web/API/HTMLMediaElement/fastSeek
 
 ## 構文
 
-```js
+```js-nolint
 fastSeek(time)
 ```
 

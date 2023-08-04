@@ -1,29 +1,9 @@
 ---
-title: '<bdo> : l''élément de remplacement bidirectionnelle'
+title: "<bdo> : l'élément de remplacement bidirectionnelle"
 slug: Web/HTML/Element/bdo
-tags:
-  - BiDi
-  - Bidirectional Text
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Left to Right
-  - Reference
-  - Right to Left
-  - Text
-  - Text Direction
-  - Text Rendering
-  - Web
-  - ltr
-  - rtl
-translation_of: Web/HTML/Element/bdo
-browser-compat: html.elements.bdo
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<bdo>`** (pour élément de remplacement du texte bidirectionnel) est utilisé afin d'outrepasser la direction du texte. Cela permet d'imposer une direction donnée à un texte. L'orientation du texte est inversée mais pas celle des caractères.
 
@@ -123,7 +103,7 @@ Comme pour tous les éléments, on peut appliquer [les attributs universels](/fr
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","100%",120)}}
+{{EmbedLiveSample("","100%")}}
 
 ## Notes
 

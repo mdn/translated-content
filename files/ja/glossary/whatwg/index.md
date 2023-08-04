@@ -9,5 +9,5 @@ WHATWG (_Web Hypertext Application Technology Working Group_) は[ウェブ標�
 
 ### 一般知識
 
-- Wikipedia の記事 {{Interwiki("wikipedia", "Web_Hypertext_Application_Technology_Working_Group", "WHATWG")}}
+- Wikipedia の記事 [WHATWG](https://ja.wikipedia.org/wiki/Web_Hypertext_Application_Technology_Working_Group)
 - [WHATWG ウェブサイト](https://whatwg.org/)

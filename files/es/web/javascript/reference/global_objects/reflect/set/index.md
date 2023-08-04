@@ -1,8 +1,8 @@
 ---
 title: Reflect.set()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/set
 ---
+
 {{JSRef}}
 
 El método estático **`Reflect.set()`** funciona igual que asignar una propiedad en un objeto.
@@ -64,14 +64,11 @@ Reflect.getOwnPropertyDescriptor(obj, 'undefined');
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                       | Comentarios         |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-reflect.set', 'Reflect.set')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-reflect.set', 'Reflect.set')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Reflect.set")}}
+{{Compat}}
 
 ## Ver también
 

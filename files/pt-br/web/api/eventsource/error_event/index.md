@@ -1,9 +1,8 @@
 ---
 title: EventSource.onerror
 slug: Web/API/EventSource/error_event
-translation_of: Web/API/EventSource/onerror
-original_slug: Web/API/EventSource/onerror
 ---
+
 {{APIRef('WebSockets API')}}
 
 A propriedade **`onerror`** da interface {{domxref("EventSource")}} é um {{event("Event_handlers", "event handler")}} chamado quando um erro ocorre e um evento {{event("error")}} é despachado para o objeto `EventSource`.
@@ -17,7 +16,7 @@ eventSource.onerror = function
 ## Exemplos
 
 ```js
-evtSource.onerror = function() {
+evtSource.onerror = function () {
   console.log("EventSource failed.");
 };
 ```
@@ -26,13 +25,11 @@ evtSource.onerror = function() {
 
 ## Especificações
 
-| Especificação                                                                                                | Status                           | Comentário        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
-| {{SpecName('HTML WHATWG', "comms.html#handler-eventsource-onerror", "onerror")}} | {{Spec2('HTML WHATWG')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.EventSource.error_event")}}
+{{Compat}}
 
 ## Veja também
 

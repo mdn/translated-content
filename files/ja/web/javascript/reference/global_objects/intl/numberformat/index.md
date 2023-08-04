@@ -109,9 +109,7 @@ console.log((16).toLocaleString('en-GB', {
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES Int Draft', '#numberformat-objects', 'Intl.NumberFormat')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

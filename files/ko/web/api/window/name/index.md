@@ -1,11 +1,8 @@
 ---
 title: Window.name
 slug: Web/API/Window/name
-tags:
-  - 참고
-  - 창
-translation_of: Web/API/Window/name
 ---
+
 {{APIRef}}
 
 ## 요약

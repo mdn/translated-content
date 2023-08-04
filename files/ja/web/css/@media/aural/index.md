@@ -1,7 +1,6 @@
 ---
 title: aural
 slug: Web/CSS/@media/aural
-original_slug: Web/CSS/aural
 ---
 
 {{CSSRef}} {{deprecated_header}}
@@ -34,9 +33,7 @@ CSS の `aural` メディア種別は — [`speech`](/ja/docs/Web/CSS/@media#spe
 
 ## 仕様書
 
-| 仕様書                                    | 状態     | 備考             |
-| ------------------------------------------------ | ---------- | ------------------- |
-| {{SpecName('CSS2.2', '', 'aural')}} | 非推奨 | 初回定義 |
+{{Specifications}}
 
 ## 関連情報
 

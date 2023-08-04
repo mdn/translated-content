@@ -60,7 +60,7 @@ function getMaxOfArray(numArray) {
 }
 ```
 
-[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)是编写 `apply` 解决方案的一种更简短的方法，可以最大限度地利用数组:
+[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)是编写 `apply` 解决方案的一种更简短的方法，可以最大限度地利用数组：
 
 ```js
 const arr = [1, 2, 3];

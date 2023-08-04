@@ -1,6 +1,6 @@
 ---
-title: ':user-valid (:-moz-ui-valid)'
-slug: web/css/:user-valid
+title: ":user-valid (:-moz-ui-valid)"
+slug: Web/CSS/:user-valid
 ---
 
 {{CSSRef}}
@@ -20,7 +20,9 @@ slug: web/css/:user-valid
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:user-invalid
+```
 
 ## 例
 

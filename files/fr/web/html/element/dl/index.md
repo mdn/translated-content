@@ -1,21 +1,9 @@
 ---
-title: '<dl> : l''élément de liste de descriptions'
+title: "<dl> : l'élément de liste de descriptions"
 slug: Web/HTML/Element/dl
-tags:
-  - Definition List
-  - Description list
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/dl
-browser-compat: html.elements.dl
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<dl>`** représente une liste de descriptions sous la forme d'une liste de paires associant des termes (fournis par des éléments [`<dt>`](/fr/docs/Web/HTML/Element/dt)) et leurs descriptions ou définitions (fournies par des éléments [`<dd>`](/fr/docs/Web/HTML/Element/dd)). On utilisera par exemple cet élément pour implémenter un glossaire.
 
@@ -130,15 +118,16 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 <dl>
   <dt>Firefox</dt>
   <dd>
-    Un navigateur Web libre, open-source, multi-plateforme
-    dévelopé par la Mozilla Corporation et des centaines de
-    volontaires.
+    Un navigateur Web libre, open-source, multi-plateforme dévelopé par la
+    Mozilla Corporation et des centaines de volontaires.
   </dd>
   <!-- D'autres termes et leurs descriptions -->
 </dl>
 ```
 
-{{EmbedLiveSample("Un_seul_terme_et_une_seule_définition", "", 120)}}
+#### Résultat
+
+{{EmbedLiveSample("", "",'160')}}
 
 ### Plusieurs termes avec une même définition
 
@@ -148,15 +137,16 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
   <dt>Mozilla Firefox</dt>
   <dt>Fx</dt>
   <dd>
-    Un navigateur Web libre, open-source, multi-plateforme
-    dévelopé par la Mozilla Corporation et des centaines de
-    volontaires.
+    Un navigateur Web libre, open-source, multi-plateforme dévelopé par la
+    Mozilla Corporation et des centaines de volontaires.
   </dd>
   <!-- D'autres termes et leurs définitions -->
 </dl>
 ```
 
-{{EmbedLiveSample("Plusieurs_termes_avec_une_même_définition", "", 180)}}
+#### Résultat
+
+{{EmbedLiveSample("", "", 210)}}
 
 ### Un seul terme avec plusieurs définitions
 
@@ -164,20 +154,21 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 <dl>
   <dt>Firefox</dt>
   <dd>
-    Un navigateur Web libre, open-source, multi-plateforme
-    dévelopé par la Mozilla Corporation et des centaines de
-    volontaires.
+    Un navigateur Web libre, open-source, multi-plateforme dévelopé par la
+    Mozilla Corporation et des centaines de volontaires.
   </dd>
   <dd>
-    Le petit panda, panda roux, panda fuligineux ou panda
-    éclatant (Ailurus fulgens), est un mammifère originaire
-    de l'Himalaya et de la Chine méridionale.
+    Le petit panda, panda roux, panda fuligineux ou panda éclatant (Ailurus
+    fulgens), est un mammifère originaire de l'Himalaya et de la Chine
+    méridionale.
   </dd>
   <!-- D'autres termes et leurs définitions -->
 </dl>
 ```
 
-{{EmbedLiveSample("Un_seul_terme_avec_plusieurs_définitions", "", 180)}}
+#### Résultat
+
+{{EmbedLiveSample('', '', '280')}}
 
 ### Termes et descriptions multiples
 
@@ -208,7 +199,11 @@ dt::after {
 }
 ```
 
-### Intégration de groupes nom-valeur dans les éléments `<div>`.
+#### Résultat
+
+{{EmbedLiveSample('','',240)}}
+
+### Intégration de groupes nom-valeur dans les éléments `<div>`
 
 [WHATWG](/fr/docs/Glossary/WHATWG) HTML permet d'envelopper chaque groupe nom-valeur d'un élément [`<dl>`](/fr/docs/Web/HTML/Element/dl) dans un élément [`<div>`](/fr/docs/Web/HTML/Element/div). Cela peut être utile lors de l'utilisation de [microdonnées](/fr/docs/Web/HTML/Microdata), ou lorsque les [attributs universels](/fr/docs/Web/HTML/Global_attributes) s'appliquent à un groupe entier, ou encore à des fins de style.
 
@@ -232,6 +227,10 @@ dt::after {
   </div>
 </dl>
 ```
+
+#### Résultat
+
+{{EmbedLiveSample('','','240')}}
 
 ## Notes
 

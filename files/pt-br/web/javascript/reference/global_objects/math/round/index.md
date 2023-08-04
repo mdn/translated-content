@@ -1,12 +1,8 @@
 ---
 title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
-tags:
-  - JavaScript
-  - Math
-  - Method
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Resumo
@@ -57,7 +53,7 @@ x = Math.round(-20.51);
 x = Math.round(1.005*100)/100;
 ```
 
-### Exemplo: Arredondamento decimal.
+### Exemplo: Arredondamento decimal
 
 ```js
 // Closure

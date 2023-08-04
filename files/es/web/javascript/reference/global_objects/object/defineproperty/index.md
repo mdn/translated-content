@@ -1,15 +1,8 @@
 ---
 title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Método(2)
-  - Objeto
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/defineProperty
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 ## Resumen
@@ -70,7 +63,7 @@ Un descriptor de acceso además tiene las siguientes claves opcionales:
   - : Una función que recibe como único argumento el nuevo valor que se desea asignar a la propiedad y que devuelve el valor que se almacenará finalmente en el objeto.
     **Defaults to {{jsxref("Objetos_Globales/undefined", "undefined")}}.**
 
-Hay que tener en cuenta que estas opciones también pueden heredarse; es decir, las opciones de la propiedad se han podido establecer en el prototipo de una clase de la que hereda el objeto. De modo que si queremos asegurarnos unos valores por defecto tenemos tres opciones: fijar el {{jsxref("Object.prototype")}} con {{jsxref("Object.freeze")}}, definir todas las opciones explicitamente, o establecer a {{jsxref("Objetos_Globales/null", "null")}} la propiedad {{jsxref("Object.prototype.__proto__", "__proto__")}}.
+Hay que tener en cuenta que estas opciones también pueden heredarse; es decir, las opciones de la propiedad se han podido establecer en el prototipo de una clase de la que hereda el objeto. De modo que si queremos asegurarnos unos valores por defecto tenemos tres opciones: fijar el {{jsxref("Object.prototype")}} con {{jsxref("Object.freeze")}}, definir todas las opciones explicitamente, o establecer a {{jsxref("Objetos_Globales/null", "null")}} la propiedad [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto).
 
 ```js
 // Usando __proto__
@@ -118,7 +111,7 @@ Si quiere ver algunos ejemplos de utilización del método `Object.definePropert
 
 ### Ejemplo: Creando una propiedad
 
-Cuando la propiedad especificada no existe en el objeto`, Object.defineProperty()` crea una nueva. En el descriptor pueden omitirse campos, a los cuales se les asignará el valor por defecto. A todos los que sean de tipo Booleano se les asignará el valor falso. Los campos `value`, `get` y `set` se establecerán por defecto a {{jsxref("Objetos_Globales/undefined", "undefined")}}. Una propiedad definida sin indicar `get`/`set`/`value`/`writable` es denominada “genérica” y “tipificada” como un descriptor de datos.
+Cuando la propiedad especificada no existe en el objeto, `Object.defineProperty()` crea una nueva. En el descriptor pueden omitirse campos, a los cuales se les asignará el valor por defecto. A todos los que sean de tipo Booleano se les asignará el valor falso. Los campos `value`, `get` y `set` se establecerán por defecto a {{jsxref("Objetos_Globales/undefined", "undefined")}}. Una propiedad definida sin indicar `get`/`set`/`value`/`writable` es denominada "genérica" y "tipificada" como un descriptor de datos.
 
 ```js
 var o = {}; // Creates a new object
@@ -311,14 +304,11 @@ console.log(instance.myname); // this is my name string
 
 ## Especificaciones
 
-| Specification                                                                                        | Status                   | Comment                                              |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.6', 'Object.defineProperty')}}                 | {{Spec2('ES5.1')}} | Initial definition. Implemented in JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.defineproperty', 'Object.defineProperty')}} | {{Spec2('ES6')}}     |                                                      |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.defineProperty")}}
+{{Compat}}
 
 ## See also
 

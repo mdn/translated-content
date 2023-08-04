@@ -1,17 +1,6 @@
 ---
 title: cookies.get()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/get
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - get
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/get
 ---
 
 {{AddonSidebar()}}
@@ -26,8 +15,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var getting = browser.cookies.get(
-  details                // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -41,17 +30,17 @@ var getting = browser.cookies.get(
     - `name`
       - : Une `chaîne` représentant le nom du cookie à récupérer.
     - `storeId`{{optional_inline}}
-      - : Une `chaîne` représentant l'ID du {{WebExtAPIRef("cookies.CookieStore", "cookie store")}} dans lequel rechercher le cookie (tel que renvoyé par  {{WebExtAPIRef("cookies.getAllCookieStores()")}}). Par défault, le cookie store du contexte d'exécution actuel sera utilisé.
+      - : Une `chaîne` représentant l'ID du {{WebExtAPIRef("cookies.CookieStore", "cookie store")}} dans lequel rechercher le cookie (tel que renvoyé par {{WebExtAPIRef("cookies.getAllCookieStores()")}}). Par défault, le cookie store du contexte d'exécution actuel sera utilisé.
     - `url`
       - : Une `chaîne` représentant l'URL avec laquelle le cookie à récupérer est associé. Cet argument peut être une URL complète, auquel cas toute donnée suivant le chemin d'URL (par exemple la chaîne de requête) est simplement ignorée. Si les [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions) pour cette URL ne sont pas spécifiées dans le [fichier manifeste](/fr/Add-ons/WebExtensions/manifest.json) de l'extension, l'appel de l'API échouera.
 
 ### Valeur retournée
 
-Une [`Promise`](fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('cookies.Cookie', 'Cookie')}} contenant des détails sur le cookie, ou `null` si le cookie n'a pas été trouvé.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('cookies.Cookie', 'Cookie')}} contenant des détails sur le cookie, ou `null` si le cookie n'a pas été trouvé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.cookies.get")}}
+{{Compat}}
 
 ## Exemples
 
@@ -67,14 +56,14 @@ function logCookie(cookie) {
 function getCookie(tabs) {
   var getting = browser.cookies.get({
     url: tabs[0].url,
-    name: "favourite-colour"
+    name: "favourite-colour",
   });
   getting.then(logCookie);
 }
 
 var getActive = browser.tabs.query({
   active: true,
-  currentWindow: true
+  currentWindow: true,
 });
 getActive.then(getCookie);
 ```

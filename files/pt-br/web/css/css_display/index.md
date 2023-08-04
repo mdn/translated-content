@@ -1,8 +1,8 @@
 ---
 title: CSS Display
-slug: Web/CSS/CSS_Display
-translation_of: Web/CSS/CSS_Display
+slug: Web/CSS/CSS_display
 ---
+
 {{CSSRef}}
 
 **CSS Display** É um módulo de CSS que define como a árvore da caixa de formatação CSS é gerada a partir da árvore de elementos do documento e define as propriedades que a controlam.
@@ -60,11 +60,11 @@ translation_of: Web/CSS/CSS_Display
 
 ## Especificações
 
-| Specification                                                                            | Status                           | Comment                                                                                  |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------- |
+| Specification                                                      | Status                    | Comment                                                                                  |
+| ------------------------------------------------------------------ | ------------------------- | ---------------------------------------------------------------------------------------- |
 | {{SpecName("CSS3 Display", "#the-display-properties", "display")}} | {{Spec2("CSS3 Display")}} | Adicionado `run-in`, `flow`, `flow-root`, `contents` e valores de várias palavras-chave. |
-| {{SpecName("CSS2.1", "visuren.html#display-prop", "display")}}     | {{Spec2("CSS2.1")}}         | Adicionados os valores do modelo de tabela e `inline-block`.                             |
-| {{SpecName("CSS1", "#display", "display")}}                                 | {{Spec2("CSS1")}}         | Definição inicial. Valores básicos: `none`, `block`, `inline` e `list-item`.             |
+| {{SpecName("CSS2.1", "visuren.html#display-prop", "display")}}     | {{Spec2("CSS2.1")}}       | Adicionados os valores do modelo de tabela e `inline-block`.                             |
+| {{SpecName("CSS1", "#display", "display")}}                        | {{Spec2("CSS1")}}         | Definição inicial. Valores básicos: `none`, `block`, `inline` e `list-item`.             |
 
 Além do nível de especificação de exibição CSS 3, outras especificações definem o comportamento de vários valores da exibição.
 

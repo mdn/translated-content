@@ -1,15 +1,9 @@
 ---
 title: <colgroup>
 slug: Web/HTML/Element/colgroup
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/colgroup
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<colgroup>` 요소**는 표의 열을 묶는 그룹을 정의합니다.
 
@@ -66,7 +60,7 @@ translation_of: Web/HTML/Element/colgroup
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
 
@@ -101,7 +95,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
-  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
+  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/ko/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/ko/docs/Web/CSS/color_value#color_keywords) can also be used.
 
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 
@@ -134,4 +128,4 @@ The following attributes are deprecated and should not be used. They are documen
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.colgroup")}}
+{{Compat}}

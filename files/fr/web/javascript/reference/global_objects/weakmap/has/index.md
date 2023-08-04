@@ -1,15 +1,6 @@
 ---
 title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/has
-original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap/has
 ---
 
 {{JSRef}}
@@ -40,19 +31,16 @@ var wm = new WeakMap();
 wm.set(window, "toto");
 
 wm.has(window); // renvoie true
-wm.has("machin");  // renvoie false
+wm.has("machin"); // renvoie false
 ```
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-weakmap.prototype.has', 'WeakMap.prototype.has')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.has', 'WeakMap.prototype.has')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WeakMap.has")}}
+{{Compat}}
 
 ## Voir aussi
 

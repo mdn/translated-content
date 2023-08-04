@@ -31,9 +31,7 @@ console.log('foobar'.search(new caseInsensitiveSearch('BaR')));
 
 ## 仕様書
 
-| 仕様書                                                                               |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.search', 'Symbol.search')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

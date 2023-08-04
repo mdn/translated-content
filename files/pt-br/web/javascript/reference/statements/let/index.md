@@ -1,13 +1,8 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Variable declaration
-  - Variables
-translation_of: Web/JavaScript/Reference/Statements/let
 ---
+
 {{jsSidebar("Statements")}}
 
 Declara uma variável local no escopo do bloco atual, opcionalmente iniciando-a com um valor.
@@ -34,12 +29,12 @@ let (var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]]) statement;
 
 ### Parâmetros
 
-| Parameter                       | Description                                                                                                                                               |
-| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `var1`, `var2`, …, `varN`       | Nome da variável. Pode ser qualquer identificador válido.                                                                                                 |
-| `value1`, `value2`, …, `valueN` | Valor inicial da variável. Pode ser qualquer expressão válida.                                                                                            |
+| Parameter                       | Description                                                                                      |
+| ------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `var1`, `var2`, …, `varN`       | Nome da variável. Pode ser qualquer identificador válido.                                        |
+| `value1`, `value2`, …, `valueN` | Valor inicial da variável. Pode ser qualquer expressão válida.                                   |
 | `expression`                    | Qualquer [expressão](/pt-BR/docs/JavaScript/Guide/Expressions_and_Operators#Expressions) válida. |
-| `statement`                     | Qualquer [instrução](/pt-BR/docs/JavaScript/Reference/Statements) válida.                                               |
+| `statement`                     | Qualquer [instrução](/pt-BR/docs/JavaScript/Reference/Statements) válida.                        |
 
 ## Descrição
 
@@ -51,7 +46,7 @@ let (var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]]) statement;
 
 Variáveis declaradas com `let` são "içadas" para começo do bloco em que elas são definidas (isso é conhecido também pelo termo, hoisting).
 
-Redeclaração de uma mesma variável num mesmo escopo de bloco causa um [`TypeError`](/en-US/docs/JavaScript/Reference/Global_Objects/TypeError).
+Redeclaração de uma mesma variável num mesmo escopo de bloco causa um [`TypeError`](/pt-BR/docs/JavaScript/Reference/Global_Objects/TypeError).
 
 ```js
 if (x) {
@@ -69,7 +64,7 @@ function do_something() {
 }
 ```
 
-> **Aviso:** **Atenção:** Os rascunhos do ECMAScript 6 (desde abril de 2012) tornam este comportamento ilegal. Isso significa, provavelmente, que as futuras versões do JavaScript levantarão um [`TypeError`](/en-US/docs/JavaScript/Reference/Global_Objects/TypeError). Então, se você faz isso, deveria evitar essa prática!
+> **Aviso:** **Atenção:** Os rascunhos do ECMAScript 6 (desde abril de 2012) tornam este comportamento ilegal. Isso significa, provavelmente, que as futuras versões do JavaScript levantarão um [`TypeError`](/pt-BR/docs/JavaScript/Reference/Global_Objects/TypeError). Então, se você faz isso, deveria evitar essa prática!
 
 Você pode encontrar erros em instruções [`switch`](/pt-BR/docs/JavaScript/Reference/Statements/switch) porque existe apenas um bloco subjacente.
 
@@ -105,18 +100,18 @@ if (a === 5) {
   let a = 4; // O escopo é dentro do bloco if
   var b = 1; // O escopo é dentro da função
 
-  console.log(a);  // 4
-  console.log(b);  // 1
+  console.log(a); // 4
+  console.log(b); // 1
 }
 
 console.log(a); // 5
 console.log(b); // 1
 ```
 
-É possível usar a keyword _let_ para vincular variáveis ​​localmente no escopo de loops em vez de usar uma variável global (definida usando _var_) para isso.
+É possível usar a keyword _let_ para vincular variáveis localmente no escopo de loops em vez de usar uma variável global (definida usando _var_) para isso.
 
 ```js
-for (let i = 0; i<10; i++) {
+for (let i = 0; i < 10; i++) {
   alert(i); // 1, 2, 3, 4 ... 9
 }
 

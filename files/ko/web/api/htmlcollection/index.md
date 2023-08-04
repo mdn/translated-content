@@ -1,15 +1,8 @@
 ---
 title: HTMLCollection
 slug: Web/API/HTMLCollection
-tags:
-  - API
-  - DOM
-  - HTML DOM
-  - HTMLCollection
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLCollection
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLCollection`** 인터페이스는 요소의 문서 내 순서대로 정렬된 일반 컬렉션({{jsxref("Functions/arguments", "arguments")}}처럼 배열과 유사한 객체)을 나타내며 리스트에서 선택할 때 필요한 메서드와 속성을 제공합니다.

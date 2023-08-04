@@ -1,15 +1,9 @@
 ---
 title: Document.readyState
 slug: Web/API/Document/readyState
-tags:
-  - API
-  - HTML DOM
-  - Propriedade
-  - Referencia
-  - eventos
-translation_of: Web/API/Document/readyState
 ---
-{{APIRef("DOM")}} {{ gecko_minversion_header("1.9.2") }}
+
+{{APIRef("DOM")}}
 
 ## Sumário
 

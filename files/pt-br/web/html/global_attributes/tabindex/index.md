@@ -1,12 +1,8 @@
 ---
 title: tabindex
 slug: Web/HTML/Global_attributes/tabindex
-tags:
-  - Atributos globais
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Global_attributes/tabindex
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **tabindex** indica se um elemento pode receber foco de entrada (se ele é _focável_), se e em qual posição ele deve fazer parte da navegação sequencial do teclado (geralmente com a tecla <kbd>Tab</kbd>, daí seu nome).
@@ -43,4 +39,4 @@ Se o atributo `tabindex` for definido em um elemento div {{htmlelement("div")}},
 
 - Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 - {{domxref("HTMLElement.tabIndex")}} que reflete este atributo.
-- Problemas de acessibilidade com tabindex: veja [Don’t Use Tabindex Greater than 0 | Adrian Roselli](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html) (em inglês).
+- Problemas de acessibilidade com tabindex: veja [Don't Use Tabindex Greater than 0 | Adrian Roselli](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html) (em inglês).

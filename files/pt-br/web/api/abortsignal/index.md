@@ -1,15 +1,8 @@
 ---
 title: AbortSignal
 slug: Web/API/AbortSignal
-tags:
-  - API
-  - AbortSignal
-  - DOM
-  - Experimental
-  - Interface
-  - Referencia
-translation_of: Web/API/AbortSignal
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 A interface **`AbortSignal`** representa o sinal de um objeto que permite a você se comunicar com uma Requisição de DOM (como Fetch) e aborta-la se necessário via um objeto {{domxref("AbortController")}}
@@ -68,13 +61,11 @@ Você pode encontrar um exemplo completo no GitHub — veja [abort-api](https://
 
 ## Especificações
 
-| Especificação                                                                            | Status                           | Comentário         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM WHATWG', '#interface-AbortSignal', 'AbortSignal')}} | {{Spec2('DOM WHATWG')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.AbortSignal")}}
+{{Compat}}
 
 ## Veja Também
 

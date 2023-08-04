@@ -1,12 +1,8 @@
 ---
-title: '-moz-user-input'
+title: "-moz-user-input"
 slug: Web/CSS/-moz-user-input
-tags:
-  - CSS
-  - No estandar
-  - Referencia CSS
-translation_of: Web/CSS/-moz-user-input
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 ## Resumen

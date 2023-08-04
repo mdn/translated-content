@@ -1,8 +1,8 @@
 ---
 title: Date
 slug: Web/HTTP/Headers/Date
-translation_of: Web/HTTP/Headers/Date
 ---
+
 {{HTTPSidebar}}
 
 **`Date`** 일반 HTTP 헤더는 메시지가 만들어진 날짜와 시간을 포함합니다.

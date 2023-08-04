@@ -1,7 +1,6 @@
 ---
-title: ':autofill'
+title: ":autofill"
 slug: Web/CSS/:autofill
-original_slug: Web/CSS/:-webkit-autofill
 ---
 
 {{CSSRef}}
@@ -20,7 +19,7 @@ original_slug: Web/CSS/:-webkit-autofill
 
 ## 構文
 
-```css
+```
 :autofill
 ```
 

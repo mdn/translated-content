@@ -1,13 +1,13 @@
 ---
 title: pointer
 slug: Web/CSS/@media/pointer
-translation_of: Web/CSS/@media/pointer
 ---
+
 {{cssref}}
 
 La [caracteristica](/es/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) **`pointer`** [CSS](/es/docs/CSS) comprueba si el usuario tiene un dispositivo de puntero (como el ratón), y si es así, cuán preciso es el dispositivo de puntero primario.
 
-> **Nota:** Si quieres comprobar la precisión de cualquier dispositivo apuntador, usa [`any-pointer`](/en-US/docs/Web/CSS/@media/any-pointer) en su lugar.
+> **Nota:** Si quieres comprobar la precisión de cualquier dispositivo apuntador, usa [`any-pointer`](/es/docs/Web/CSS/@media/any-pointer) en su lugar.
 
 ## Sintaxis
 
@@ -27,8 +27,7 @@ Este ejemplo crea una pequeño checkbox para los usuarios con punteros primarios
 ### HTML
 
 ```html
-<input id="test" type="checkbox" />
-<label for="test">Mírame!</label>
+<input id="test" type="checkbox" /> <label for="test">Mírame!</label>
 ```
 
 ### CSS
@@ -69,15 +68,13 @@ input[type="checkbox"]:checked {
 
 {{EmbedLiveSample("Example")}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                               | Status                                   | Comentario          |
-| ---------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS4 Media Queries', '#pointer', 'pointer')}} | {{Spec2('CSS4 Media Queries')}} | Initial definition. |
+{{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.media.pointer")}}
+{{Compat}}
 
 ## Ver también
 

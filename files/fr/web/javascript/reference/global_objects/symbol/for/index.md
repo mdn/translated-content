@@ -1,14 +1,6 @@
 ---
 title: Symbol.for()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/for
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/for
 ---
 
 {{JSRef}}
@@ -69,14 +61,11 @@ Symbol.for("mdn.machin");
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.for', 'Symbol.for')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.for', 'Symbol.for')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.for")}}
+{{Compat}}
 
 ## Voir aussi
 

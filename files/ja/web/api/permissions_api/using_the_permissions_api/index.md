@@ -7,7 +7,7 @@ slug: Web/API/Permissions_API/Using_the_Permissions_API
 
 この記事では、W3C の Permissions API を使用するための基本的なガイドを提供します。 これは、現在のコンテキストに起因する API のパーミッションの状態を照会するためのプログラムによる方法を提供します。
 
-## パーミッションを求めるのが面倒...
+## パーミッションを求めるのが面倒
 
 ウェブ上のパーミッションは必要悪であり、そしてそれらは開発者として対処するのはそれほど面白くありませんが、それに立ち向かいましょう。
 
@@ -27,7 +27,7 @@ slug: Web/API/Permissions_API/Using_the_Permissions_API
 
 この記事では、Location Finder という簡単なデモをまとめました。 Geolocation を使用してユーザーの現在地を照会し、それをグーグルマップに表示します。
 
-![英国 Greenfield の地図を表示したスクリーンショット。](https://mdn.mozillademos.org/files/11501/location-finder-with-permissions-api.png)
+![英国 Greenfield の地図を表示したスクリーンショット。](location-finder-with-permissions-api.png)
 
 [サンプルをライブで実行する](https://chrisdavidmills.github.io/location-finder-permissions-api/)か、[Github でソースコードを見る](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages)ことができます。 コードの大部分は単純で目立たないものです。 以下では Permissions API 関連のコードを見ていきますので、他の部分を調べたい場合はコードを自分で確認してください。
 

@@ -1,15 +1,8 @@
 ---
 title: Expresiones y operadores
 slug: Web/JavaScript/Reference/Operators
-tags:
-  - Descripción
-  - JavaScript
-  - Operadores
-  - Operators
-  - Referencia
-translation_of: Web/JavaScript/Reference/Operators
-original_slug: Web/JavaScript/Referencia/Operadores
 ---
+
 {{jsSidebar("Operators", "Operadores")}}
 
 Este capítulo documenta todos los operadores, expresiones y palabras clave del lenguaje JavaScript.
@@ -70,7 +63,7 @@ Operadores de incremento sufijo/prefijo y decremento sufijo/prefijo.
 - {{jsxref("Operators/Increment", "A++")}}
   - : Operador de incremento sufijo.
 - {{jsxref("Operators/Decrement", "A--")}}
-  - : Operador de incremento sufijo.
+  - : Operador de decremento sufijo.
 - {{jsxref("Operators/Increment", "++A")}}
   - : Operador de incremento prefijo.
 - {{jsxref("Operators/Decrement", "--A")}}
@@ -129,7 +122,7 @@ Un operador de comparación compara sus operandos y devuelve un valor `Boolean` 
 - {{jsxref("Operators/Greater_than_or_equal", "&gt;=")}}
   - : Operador mayor o igual a.
 
-> **Nota:** **Nota: =>** no es un operador, sino la notación para {{jsxref("Functions/Arrow_functions", "Funciones de flecha")}}.
+> **Nota:** `=>` no es un operador, sino la notación para {{jsxref("Functions/Arrow_functions", "Funciones de flecha")}}.
 
 ### Operadores de igualdad
 
@@ -225,13 +218,11 @@ Un operador de asignación asigna un valor a su operando izquierdo basándose en
 
 ## Especificaciones
 
-| Especificación                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-ecmascript-language-expressions', 'ECMAScript Language: Expressions')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators")}}
+{{Compat}}
 
 ## Ve también
 

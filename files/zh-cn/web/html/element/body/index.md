@@ -3,7 +3,7 @@ title: <body>：文档主体元素
 slug: Web/HTML/Element/body
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `body` 元素**表示文档的内容。{{domxref("document.body")}} 属性提供了可以轻松访问文档的 body 元素的脚本。
 
@@ -72,61 +72,61 @@ slug: Web/HTML/Element/body
 
 此元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 。
 
-- {{htmlattrdef("alink")}} {{Deprecated_Inline}}
+- `alink` {{Deprecated_Inline}}
   - : 超链接选中之后的文本颜色。_此方法不符合规范，请使用 CSS 的 {{cssxref("color")}} 属性和 {{cssxref(":active")}} 伪类替代。_
-- {{htmlattrdef("background")}} {{Deprecated_Inline}}
+- `background` {{Deprecated_Inline}}
   - : 将 URI 所指向的图片作为背景。此方法不符合规范，请*使用* _CSS 的 {{cssxref("background")}} 属性替代。_
-- {{htmlattrdef("bgcolor")}} {{Deprecated_Inline}}
+- `bgcolor` {{Deprecated_Inline}}
   - : 文档的背景颜色。此方法不符合规范，请使用 _CSS 的 {{cssxref("background-color")}} 属性替代。_
-- {{htmlattrdef("bottommargin")}} {{Deprecated_Inline}}
+- `bottommargin` {{Deprecated_Inline}}
   - : `body` 的底外边距。此方法不符合规范，请使用 _CSS 的 {{cssxref("margin-bottom")}} 属性替代。_
-- {{htmlattrdef("leftmargin")}} {{Deprecated_Inline}}
+- `leftmargin` {{Deprecated_Inline}}
   - : `body` 的左外边距。此方法不符合规范，请使用 _CSS 的 {{cssxref("margin-left")}} 属性替代。_
-- {{htmlattrdef("link")}} {{Deprecated_Inline}}
+- `link` {{Deprecated_Inline}}
   - : 未访问过的超链接文本颜色。此方法不符合规范，请使用 _CSS 的 {{cssxref("color")}} 属性和 {{cssxref(":link")}} 伪类替代。_
-- {{htmlattrdef("onafterprint")}}
+- `onafterprint`
   - : 用户完成文档打印之后调用的函数。
-- {{htmlattrdef("onbeforeprint")}}
+- `onbeforeprint`
   - : 用户要求打印文档之前调用的函数。
-- {{htmlattrdef("onbeforeunload")}}
+- `onbeforeunload`
   - : 文档即将被关闭之前调用的函数。
-- {{htmlattrdef("onblur")}}
+- `onblur`
   - : 文档失去焦点时调用的函数。
-- {{htmlattrdef("onerror")}}
+- `onerror`
   - : 文档加载失败时调用的函数。
-- {{htmlattrdef("onfocus")}}
+- `onfocus`
   - : 文档获得焦点时调用的函数。
-- {{htmlattrdef("onhashchange")}}
+- `onhashchange`
   - : 文档当前地址的片段标识部分（以 (`'#'`) 开始的部分）发生改变时调用的函数。
-- {{htmlattrdef("onlanguagechange")}} {{experimental_inline}}
+- `onlanguagechange` {{experimental_inline}}
   - : 用户选择的语言发生改变时调用的函数。
-- {{htmlattrdef("onload")}}
+- `onload`
   - : 文档完成加载时调用的函数。
-- {{htmlattrdef("onmessage")}}
+- `onmessage`
   - : 文档接收到消息时调用的函数。
-- {{htmlattrdef("onoffline")}}
+- `onoffline`
   - : 网络连接失败时调用的函数。
-- {{htmlattrdef("ononline")}}
+- `ononline`
   - : 网络连接恢复时调用的函数。
-- {{htmlattrdef("onpopstate")}}
+- `onpopstate`
   - : 用户回退历史记录时调用的函数。
-- {{htmlattrdef("onredo")}}
+- `onredo`
   - : 用户重做操作时调用的函数。
-- {{htmlattrdef("onresize")}}
+- `onresize`
   - : 文档尺寸发生改变时调用的函数。
-- {{htmlattrdef("onstorage")}}
+- `onstorage`
   - : 存储内容（`localStorage` / `sessionStorage`）发生改变时调用的函数。
-- {{htmlattrdef("onundo")}}
+- `onundo`
   - : 用户撤销操作时调用的函数。
-- {{htmlattrdef("onunload")}}
+- `onunload`
   - : 文档关闭时调用的函数。
-- {{htmlattrdef("rightmargin")}} {{Deprecated_Inline}}
+- `rightmargin` {{Deprecated_Inline}}
   - : `body` 的右外边距。此方法不符合规范，请使用 _CSS 的 {{cssxref("margin-right")}} 属性替代。_
-- {{htmlattrdef("text")}} {{Deprecated_Inline}}
+- `text` {{Deprecated_Inline}}
   - : 文本颜色。此方法不符合规范，请使用 _CSS 的 {{cssxref("color")}} 属性替代。_
-- {{htmlattrdef("topmargin")}} {{Deprecated_Inline}}
+- `topmargin` {{Deprecated_Inline}}
   - : `body` 的上外边距。此方法不符合规范，请使用 _CSS 的 {{cssxref("margin-top")}} 属性替代。_
-- {{htmlattrdef("vlink")}} {{Deprecated_Inline}}
+- `vlink` {{Deprecated_Inline}}
   - : 访问过的超链接的文本颜色。此方法不符合规范，请使用 _CSS {{cssxref("color")}} 属性和 {{cssxref(":visited")}} 伪类替代。_
 
 ## 例子

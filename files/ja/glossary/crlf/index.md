@@ -12,5 +12,5 @@ CR に直接 LF が続くと (CRLF, `\r\n`, or `0x0D0A`)、カーソルを下へ
 
 ## 関連情報
 
-- Wikipedia 上の {{interwiki( "wikipedia", "ja:改行コード")}}
-- Wikipedia 上の {{interwiki( "wikipedia", "ja:キャリッジ・リターン")}}
+- Wikipedia 上の [改行コード](https://ja.wikipedia.org/wiki/改行コード)
+- Wikipedia 上の [キャリッジ・リターン](https://ja.wikipedia.org/wiki/キャリッジ・リターン)

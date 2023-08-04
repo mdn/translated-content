@@ -1,14 +1,6 @@
 ---
 title: Symbol.match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/match
 ---
 
 {{JSRef}}
@@ -41,19 +33,16 @@ Cependant, si `Symbol.match` vaut `false`, cette vérification `isRegExp` indiqu
 var re = /toto/;
 re[Symbol.match] = false;
 "/toto/".startsWith(re); // true
-"/truc/".endsWith(re);   // false
+"/truc/".endsWith(re); // false
 ```
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.match', 'Symbol.match')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.match', 'Symbol.match')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.match")}}
+{{Compat}}
 
 ## Voir aussi
 

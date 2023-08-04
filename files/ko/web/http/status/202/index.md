@@ -1,12 +1,8 @@
 ---
 title: 202 Accepted
 slug: Web/HTTP/Status/202
-tags:
-  - HTTP
-  - Reference
-  - Status code
-translation_of: Web/HTTP/Status/202
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`202 Accepted`** 는 요청이 성공적으로 접수되었으나, 아직 해당 요청에 대해 처리 중이거나 처리 시작 전임을 의미합니다. 요청이 처리 중 실패할 수도 있기 때문에 요청은 실행될 수도 실행되지 않을수도 있습니다.

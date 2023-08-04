@@ -9,7 +9,7 @@ slug: Games/Techniques/Async_scripts
 
 ## 异步执行
 
-获取异步编译非常简单：编写 JavaScript 时，只需使用`async`属性即可：
+获取异步编译非常简单：编写 JavaScript 时，只需使用 `async` 属性即可：
 
 ```js
 <script async src="file.js"></script>
@@ -18,38 +18,38 @@ slug: Games/Techniques/Async_scripts
 或者，通过脚本来做同样的事情：
 
 ```js
-var script = document.createElement('script');
+const script = document.createElement("script");
 script.src = "file.js";
 document.body.appendChild(script);
 ```
 
-(从脚本中创建的脚本默认为异步。) 默认的 HTML shell Emscripten 生成后者。
+（从脚本中创建的脚本默认为异步。）默认的 HTML shell Emscripten 生成后者。
 
 ## 什么时候用 async 或者不用？
 
 两种常见的情况下是脚本是**非**异步的（由[HTML 规范](https://www.w3.org/TR/html5/scripting-1.html)定义）
 
 ```js
-<script async>code</script>
+<script async>code();</script>
 ```
 
 以及
 
 ```js
-var script = document.createElement('script');
-script.innerHTML = "code";
+const script = document.createElement("script");
+script.textContent = "code()";
 document.body.appendChild(script);
 ```
 
 两者都被视为“内联”脚本，阻塞其余所有任务，进行编译，编译完成后立即执行。
 
-如果你的代码是一个 JS 字符串呢？而不是使用 eval 或 innerHTML，这两者都会触发同步编译，您应该使用 Blob 和 URL 对象：
+如果你的代码是一个 JS 字符串呢？你应该使用带有对象 URL（object URL）的 Blob 对象，而不是使用 `eval` 或 `innerHTML`，这两者都会触发同步编译：
 
 ```js
-var blob = new Blob([codeString]);
-var script = document.createElement('script');
-var url = URL.createObjectURL(blob);
-script.onload = script.onerror = function() { URL.revokeObjectURL(url); };
+const blob = new Blob([codeString]);
+const script = document.createElement("script");
+const url = URL.createObjectURL(blob);
+script.onload = script.onerror = () => URL.revokeObjectURL(url);
 script.src = url;
 document.body.appendChild(script);
 ```

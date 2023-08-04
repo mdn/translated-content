@@ -7,4 +7,4 @@ slug: Glossary/Telnet
 
 ## さらに学ぶ
 
-- {{interwiki('wikipedia','Telnet')}} (Wikipedia)
+- [Telnet](https://ja.wikipedia.org/wiki/Telnet) (Wikipedia)

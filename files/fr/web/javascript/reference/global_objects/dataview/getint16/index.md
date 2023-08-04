@@ -1,15 +1,6 @@
 ---
 title: DataView.prototype.getInt16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
-tags:
-  - DataView
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getInt16
 ---
 
 {{JSRef}}
@@ -56,15 +47,11 @@ dataview.getInt16(1); // 0
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires                                    |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                                     | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
-| {{SpecName('ES2015', '#sec-dataview.prototype.getint16', 'DataView.prototype.getInt16')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getint16', 'DataView.prototype.getInt16')}} | {{Spec2('ESDraft')}}     |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.getInt16")}}
+{{Compat}}
 
 ## Voir aussi
 

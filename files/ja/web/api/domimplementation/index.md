@@ -1,11 +1,13 @@
 ---
 title: DOMImplementation
 slug: Web/API/DOMImplementation
+l10n:
+  sourceCommit: f45409ba2169ff05e433d21aa4ee0424079916b8
 ---
 
 {{ ApiRef("DOM") }}
 
-**`DOMImplementation`** インターフェイスは特定の文書に依存しないメソッドを提供するオブジェクトを表します。こうしたオブジェクトは{{domxref("Document.implementation")}} プロパティを返します。
+**`DOMImplementation`** インターフェイスは、特定の文書に依存しないメソッドを提供するオブジェクトを表します。こうしたオブジェクトは {{domxref("Document.implementation")}} プロパティで返されます。
 
 ## プロパティ
 
@@ -13,30 +15,25 @@ _このインターフェイスは特定のプロパティを持たず、継承�
 
 ## メソッド
 
-_継承するメソッドはありません。_
+_継承しているメソッドはありません。_
 
 - {{domxref("DOMImplementation.createDocument()")}}
-  - : {{domxref("XMLDocument")}}を作成して返します。
+  - : {{domxref("XMLDocument")}} を作成して返します。
 - {{domxref("DOMImplementation.createDocumentType()")}}
-  - : {{domxref("DocumentType")}}を作成して返します。
+  - : {{domxref("DocumentType")}} を作成して返します。
 - {{domxref("DOMImplementation.createHTMLDocument()")}}
-  - : HTML {{domxref("Document")}}を作成して返します。
-- {{domxref("DOMImplementation.hasFeature()")}}
-  - : 所与の機能がサポートされているかどうかを返す{{domxref("Boolean")}}。この関数は信頼できず、互換性の目的のためだけに残されていますが、例外は SVG 関連の問い合わせで、常に `true`を返します。古いブラウザーはこのふるまいは、とても不整合を起こします。
+  - : HTML {{domxref("Document")}} を作成して返します。
+- {{domxref("DOMImplementation.hasFeature()")}} {{Deprecated_Inline}}
+  - : 指定された機能に対応しているかどうかを示す論理値を返します。この関数は信頼性が低く、互換性のためだけに用意されています。SVG 関連のクエリーを除けば、常に `true` を返します。古いブラウザーはその動作にまったく一貫性がありません。
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                                                   | 策定状況                         | コメント                                                                                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#domimplementation', 'DOMImplementation')}}             | {{Spec2('DOM WHATWG')}} | `getFeature()` メソッドを削除。 `createHTMLDocument()` メソッドを追加。 `createDocument()` の返り値の型を {{domxref("Document")}} から {{domxref("XMLDocument")}} に変更。 |
-| {{SpecName('DOM3 Core', 'core.html#ID-102161490', 'DOMImplementation')}}         | {{Spec2('DOM3 Core')}}     | `getFeature()` メソッド追加 (ユーザーエージェントで実装されることはありません)。                                                                                                              |
-| {{SpecName('DOM2 Core', 'core.html#ID-102161490', 'DOMImplementation')}}         | {{Spec2('DOM2 Core')}}     | `createDocument()` および `createDocumentType()` メソッドが追加。                                                                                                                             |
-| {{SpecName('DOM1', 'level-one-core.html#ID-102161490', 'DOMImplementation')}} | {{Spec2('DOM1')}}         | 初期定義。                                                                                                                                                                                    |
+{{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.DOMImplementation")}}
+{{Compat}}
 
 ## 関連情報
 
-- [The DOM interfaces index.](/ja/docs/DOM/DOM_Reference '/ja/docs/DOM/DOM_Reference"')
+- [DOM インターフェイスの索引](/ja/docs/Web/API/Document_Object_Model)

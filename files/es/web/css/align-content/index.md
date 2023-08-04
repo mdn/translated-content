@@ -1,11 +1,8 @@
 ---
 title: align-content
 slug: Web/CSS/align-content
-tags:
-  - Cajas Flexibles CSS
-  - Propiedad CSS
-translation_of: Web/CSS/align-content
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -185,13 +182,11 @@ Su resultado es:
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                           | Comentarios        |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Flexbox', '#align-content', 'align-content')}} | {{Spec2('CSS3 Flexbox')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.align-content")}}
+{{Compat}}
 
 ## Véase también
 

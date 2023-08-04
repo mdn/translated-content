@@ -1,14 +1,8 @@
 ---
 title: Element.className
 slug: Web/API/Element/className
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Property
-  - Reference
-translation_of: Web/API/Element/className
 ---
+
 {{APIRef("DOM")}}
 
 ## Sumário
@@ -41,15 +35,11 @@ if (element.className === "fixed") {
 
 ## Especificações
 
-| Specification                                                                                    | Status                           | Comment           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
-| {{SpecName("DOM WHATWG", "#dom-element-classname", "element.className")}} | {{Spec2("DOM WHATWG")}} |                   |
-| {{SpecName("DOM4", "#dom-element-classname", "element.className")}}         | {{Spec2("DOM4")}}         |                   |
-| {{SpecName("DOM2 HTML", "html.html#ID-95362176", "element.className")}} | {{Spec2("DOM2 HTML")}}     | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Element.className")}}
+{{Compat}}
 
 ## Veja também
 

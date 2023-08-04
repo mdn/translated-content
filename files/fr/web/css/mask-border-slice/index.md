@@ -1,12 +1,6 @@
 ---
 title: mask-border-slice
 slug: Web/CSS/mask-border-slice
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/mask-border-slice
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -23,7 +17,7 @@ Le diagramme ci-avant illustre l'emplacement de chaque région.
 - Les zones 5 à 8 sont les zones de côtés. Ces zones peuvent être [répétées, redimensionnées, ou modifiées](/fr/docs/Web/CSS/mask-border-repeat) afin que le masque de bordule final aient les mêmes dimensions que l'élément.
 - La zone 9 est la zone centrale. Par défaut, elle n'est pas utilisée mais elle pourra être utilisée comme image d'arrière-plan si le mot-clé `fill` est utilisé.
 
-Les propriétés {{cssxref("mask-border-repeat")}}, {{cssxref("mask-border-width")}} et  {{cssxref("mask-border-outset")}} déterminent la façon dont ces régions sont utilisées pour construire le masque final.
+Les propriétés {{cssxref("mask-border-repeat")}}, {{cssxref("mask-border-width")}} et {{cssxref("mask-border-outset")}} déterminent la façon dont ces régions sont utilisées pour construire le masque final.
 
 ## Syntaxe
 
@@ -85,4 +79,4 @@ La valeur optionnelle `fill` peut être utilisée et placée à n'importe quel e
 
 ## Voir aussi
 
-- [Description illustrée de la syntaxe pouvant couvrir de 1 à 4 valeurs](/fr/docs/Web/CSS/Shorthand_properties#quelques_cas_aux_limites_%c3%a9pineux)
+- [Description illustrée de la syntaxe pouvant couvrir de 1 à 4 valeurs](/fr/docs/Web/CSS/Shorthand_properties#quelques_cas_aux_limites_épineux)

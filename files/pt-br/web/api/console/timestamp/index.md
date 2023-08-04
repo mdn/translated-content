@@ -1,8 +1,8 @@
 ---
 title: Console.timeStamp()
-slug: Web/API/Console/timeStamp
-translation_of: Web/API/Console/timeStamp
+slug: Web/API/console/timeStamp
 ---
+
 {{ APIRef("Console API") }}{{Non-standard_header}}
 
 ## Sumário

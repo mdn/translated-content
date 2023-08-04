@@ -5,11 +5,11 @@ slug: Web/API/TransformStreamDefaultController/error
 
 {{DefaultAPISidebar("Streams API")}}
 
-{{domxref("TransformStreamDefaultController")}} 接口的  **`error()`** 方法会使流的两端出错。与它的进一步交互都会失败并携带给定的错误信息，并且队列中的任何分块都将被丢弃。
+{{domxref("TransformStreamDefaultController")}} 接口的 **`error()`** 方法会使流的两端出错。与它的进一步交互都会失败并携带给定的错误信息，并且队列中的任何分块都将被丢弃。
 
 ## 语法
 
-```js
+```js-nolint
 error(reason)
 ```
 

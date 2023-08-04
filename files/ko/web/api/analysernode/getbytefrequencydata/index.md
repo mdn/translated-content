@@ -1,14 +1,8 @@
 ---
 title: AnalyserNode.getByteFrequencyData()
 slug: Web/API/AnalyserNode/getByteFrequencyData
-tags:
-  - API
-  - AnalyserNode
-  - Method
-  - Reference
-  - Web Audio API
-browser-compat: api.AnalyserNode.getByteFrequencyData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AnalyserNode") }} 인터페이스의 **`getByteFrequencyData()`** 메서드는 전달된 {{domxref("Uint8Array")}} (unsigned byte array) 내로 현재 주파수 데이터를 복사합니다.

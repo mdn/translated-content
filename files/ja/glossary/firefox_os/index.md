@@ -9,7 +9,7 @@ Firefox OS は、Linux と {{glossary("Mozilla Firefox","Firefox")}} の強力�
 
 ### 一般知識
 
-- Wikipedia 上の {{interwiki("wikipedia", "Firefox OS")}}
+- Wikipedia 上の [Firefox OS](https://ja.wikipedia.org/wiki/Firefox_OS)
 
 ### 技術リファレンス
 

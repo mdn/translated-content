@@ -1,12 +1,6 @@
 ---
-title: '-webkit-mask-box-image'
+title: "-webkit-mask-box-image"
 slug: Web/CSS/-webkit-mask-box-image
-tags:
-  - CSS
-  - Non-standard
-  - Reference
-  - Web
-translation_of: Web/CSS/-webkit-mask-box-image
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -54,17 +48,17 @@ Où :
 - `stretch`
   - : L'image de masque est étirée pour être contenue exactement dans la boîte de bordure.
 - `round`
-  - :  L'image de masque est étirée et répétée de telle façon à ce qu'il n'y ait pas de morceaux d'image vers la fin de la boîte de bordure.
+  - : L'image de masque est étirée et répétée de telle façon à ce qu'il n'y ait pas de morceaux d'image vers la fin de la boîte de bordure.
 
 ## Exemples
 
 ```css
 .exempleUn {
-  -webkit-mask-box-image: url('mask.png');
+  -webkit-mask-box-image: url("mask.png");
 }
 
 .exempleDeux {
-  -webkit-mask-box-image: url('logo.png') 100 100 0 0 round round;
+  -webkit-mask-box-image: url("logo.png") 100 100 0 0 round round;
 }
 ```
 
@@ -74,7 +68,7 @@ Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-mask-box-image")}}
+{{Compat}}
 
 ## Voir aussi
 

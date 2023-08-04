@@ -1,17 +1,9 @@
 ---
 title: WebAssembly.Module
 slug: WebAssembly/JavaScript_interface/Module
-tags:
-  - Class
-  - JavaScript
-  - Module
-  - Reference
-  - WebAssembly
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
-browser-compat: javascript.builtins.WebAssembly.Module
 ---
-{{JSRef}}
+
+{{WebAssemblySidebar}}
 
 **`WebAssembly.Module`** 객체는 브라우저에서 이미 컴파일 된 stateless WebAssembly 코드를 포함하며 효율적으로 [Workers와 공유](/ko/docs/Web/API/Worker/postMessage)하고 여러 번 인스턴스화 할 수 있습니다. 모듈을 인스턴스화하려면 [WebAssembly.instantiate() 2차 오버로드를 호출](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Secondary_overload_%E2%80%94_taking_a_module_object_instance)하세요.
 

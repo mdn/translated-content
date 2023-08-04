@@ -1,14 +1,8 @@
 ---
-title: '::before (:before)'
+title: "::before (:before)"
 slug: Web/CSS/::before
-tags:
-  - CSS
-  - Layout
-  - Reference
-  - Web
-  - Псевдоэлементы
-translation_of: Web/CSS/::before
 ---
+
 {{CSSRef}}
 
 В CSS, **`::before`** создаёт [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements),который является первым потомком выбранного элемента. Часто используется для добавления косметического содержимого в элемент с помощью свойства {{cssxref("content")}}. По умолчания является инлайновым.

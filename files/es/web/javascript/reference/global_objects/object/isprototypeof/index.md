@@ -1,9 +1,8 @@
 ---
 title: Object.prototype.isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isPrototypeOf
 ---
+
 {{JSRef}}
 
 El método **`isPrototypeOf()`** comprueba si un objeto se encuentra en la cadena de prototipado de otro.
@@ -65,20 +64,15 @@ Esto, junto con el operador {{jsxref("Operators/instanceof", "instanceof")}} res
 
 ## Especificaciones
 
-| Especificación                                                                                                                       | Estado                       | Observaciones       |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES3')}}                                                                                                             | {{Spec2('ES3')}}         | Definición inicial. |
-| {{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}                                     | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}         | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ESDraft', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.isPrototypeOf")}}
+{{Compat}}
 
 ## Ver también
 
 - {{jsxref("Operators/instanceof", "instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

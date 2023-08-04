@@ -1,13 +1,8 @@
 ---
 title: Document.createElementNS()
 slug: Web/API/Document/createElementNS
-tags:
-  - API
-  - DOM
-  - Referencia
-  - metodo
-translation_of: Web/API/Document/createElementNS
 ---
+
 {{ApiRef("DOM")}}
 
 Creates an element with the specified namespace URI and qualified name.
@@ -21,13 +16,13 @@ element = document.createElementNS(namespaceURI, qualifiedName);
 ```
 
 - `element` é o [element](/pt-BR/docs/DOM/element) criado.
-- `namespaceURI` é uma string que especifica o [namespace URI](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) para associar com o elemento. A propriedade [namespaceURI](/pt-BR/docs/DOM/element.namespaceURI) do elemento criado é inicializada com os valores de `namespaceURI`. (Consulte seção abaixo para "Namespace URI's válidos")
+- `namespaceURI` é uma string que especifica o [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) para associar com o elemento. A propriedade [namespaceURI](/pt-BR/docs/DOM/element.namespaceURI) do elemento criado é inicializada com os valores de `namespaceURI`. (Consulte seção abaixo para "Namespace URI's válidos")
 - `qualifiedName` é uma string que especifica o tipo de elemento a ser criado. A propriedade [nodeName](/pt-BR/docs/DOM/element.nodeName) do elemento criado é inicializada com o valor de `qualifiedName`
 
 ## Namespace URI's válidos
 
-- HTML - Use `http://www.w3.org/1999/xhtml`
-- SVG - Use `http://www.w3.org/2000/svg`
+- HTML - Use `https://www.w3.org/1999/xhtml`
+- SVG - Use `https://www.w3.org/2000/svg`
 - XBL - Use `http://www.mozilla.org/xbl`
 - XUL - Use `http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul`
 
@@ -38,7 +33,7 @@ Isso cria um novo elemento \<div> no namespace [XHTML](/pt-BR/docs/XHTML) e anex
 ```xml
 <?xml version="1.0"?>
 <page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
-      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:html="https://www.w3.org/1999/xhtml"
       title="||Working with elements||"
       onload="init()">
 
@@ -49,7 +44,7 @@ Isso cria um novo elemento \<div> no namespace [XHTML](/pt-BR/docs/XHTML) e anex
 
  function init(){
    container = document.getElementById("ContainerBox");
-   newdiv = document.createElementNS("http://www.w3.org/1999/xhtml","div");
+   newdiv = document.createElementNS("https://www.w3.org/1999/xhtml","div");
    txtnode = document.createTextNode("Este é o texto construído dinâmicamente com createElementNS e createTextNode então é inserido no documento usando appendChild.");
    newdiv.appendChild(txtnode);
    container.appendChild(newdiv);
@@ -74,11 +69,12 @@ Para criar um elemento sem especificar seu namespace URI, use o método [createE
 
 ## Especificação
 
-- [DOM 2 Core: createElementNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrElNS)
-- [Namespaces em XML](http://www.w3.org/TR/1999/REC-xml-names-19990114)
+- [DOM 2 Core: createElementNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrElNS)
+- [Namespaces em XML](https://www.w3.org/TR/1999/REC-xml-names-19990114)
 
 ## Veja também
 
-- [document.createElement](createElement)
-- [document.createTextNode](createTextNode)
-- [Node.namespaceURI](../Node/namespaceURI)
+- {{DOMxRef("document.createElement()")}}
+- {{DOMxRef("document.createTextNode()")}}
+- {{DOMxRef("Element.namespaceURI")}}
+- [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)

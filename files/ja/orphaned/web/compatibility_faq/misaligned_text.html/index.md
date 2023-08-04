@@ -1,7 +1,6 @@
 ---
 title: 文字列の表示位置がずれる
 slug: orphaned/Web/Compatibility_FAQ/Misaligned_Text.html
-original_slug: Web/Compatibility_FAQ/Misaligned_Text.html
 ---
 
 ## 概要
@@ -11,7 +10,7 @@ original_slug: Web/Compatibility_FAQ/Misaligned_Text.html
 
 表示画面
 
-![](https://mdn.mozillademos.org/files/9977/0109.jpg)
+![](0109.jpg)
 
 ## 要因
 

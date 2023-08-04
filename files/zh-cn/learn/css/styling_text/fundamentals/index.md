@@ -1,7 +1,6 @@
 ---
 title: 基本文本和字体样式
 slug: Learn/CSS/Styling_text/Fundamentals
-original_slug: Learn/CSS/为文本添加样式/Fundamentals
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
@@ -51,15 +50,16 @@ original_slug: Learn/CSS/为文本添加样式/Fundamentals
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
-你可以在这找到完成版本 [finished example on Github](http://mdn.github.io/learning-area/css/styling-text/fundamentals/) (也可以看源码 [the source code](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html).)
+你可以在这找到完成版本 [finished example on Github](http://mdn.github.io/learning-area/css/styling-text/fundamentals/) (也可以看源码 [the source code](https://github.com/mdn/learning-area/blob/main/css/styling-text/fundamentals/index.html).)
 
 ### 颜色
 
@@ -80,12 +80,13 @@ p {
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 {{ EmbedLiveSample('颜色', '100%', 230) }}
@@ -174,13 +175,90 @@ CSS 定义了 5 个常用的字体名称：`serif`, `sans-serif`, `monospace`, `
 
 五个名称定义如下：
 
-| 名称         | 定义                                                                     | 示例                |
-| ------------ | ------------------------------------------------------------------------ | ------------------- |
-| `serif`      | 有衬线的字体（衬线一词是指字体笔画尾端的小装饰，存在于某些印刷体字体中） | My big red elephant |
-| `sans-serif` | 没有衬线的字体。                                                         | My big red elephant |
-| `monospace`  | 每个字符具有相同宽度的字体，通常用于代码列表。                           | My big red elephant |
-| `cursive`    | 用于模拟笔迹的字体，具有流动的连接笔画。                                 | My big red elephant |
-| `fantasy`    | 用来装饰的字体                                                           | My big red elephant |
+<table class="standard-table no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">名称</th>
+      <th scope="col">定义</th>
+      <th scope="col">示例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>serif</code></td>
+      <td>
+        衬线字体，即有衬线的字体（衬线是指字体笔画尾端的小装饰，存在于某些印刷体字体中）。
+      </td>
+      <td id="serif-example">
+        <pre class="brush: html hidden">My big red elephant</pre>
+        <pre class="brush: css hidden">
+body {
+  font-family: serif;
+}</pre
+        >
+        {{EmbedLiveSample("serif-example", 100, 60)}}
+      </td>
+    </tr>
+    <tr>
+      <td><code>sans-serif</code></td>
+      <td>
+        无衬线字体。
+      </td>
+      <td id="sans-serif-example">
+        <pre class="brush: html hidden">My big red elephant</pre>
+        <pre class="brush: css hidden">
+body {
+  font-family: sans-serif;
+}</pre
+        >
+        {{EmbedLiveSample("sans-serif-example", 100, 60)}}
+      </td>
+    </tr>
+    <tr>
+      <td><code>monospace</code></td>
+      <td>
+        等宽字体，指包含的全部字符的宽度相同的字体，通常在编辑代码时使用。
+      </td>
+      <td id="monospace-example">
+        <pre class="brush: html hidden">My big red elephant</pre>
+        <pre class="brush: css hidden">
+body {
+  font-family: monospace;
+}</pre
+        >
+        {{EmbedLiveSample("monospace-example", 100, 60)}}
+      </td>
+    </tr>
+    <tr>
+      <td><code>cursive</code></td>
+      <td>
+        手写字体，对于英文字符而言通常具有顺滑的连接笔画以模拟手写效果。
+      </td>
+      <td id="cursive-example">
+        <pre class="brush: html hidden">My big red elephant</pre>
+        <pre class="brush: css hidden">
+body {
+  font-family: cursive;
+}</pre
+        >
+        {{EmbedLiveSample("cursive-example", 100, 60)}}
+      </td>
+    </tr>
+    <tr>
+      <td><code>fantasy</code></td>
+      <td>装饰字体。</td>
+      <td id="fantasy-example">
+        <pre class="brush: html hidden">My big red elephant</pre>
+        <pre class="brush: css hidden">
+body {
+  font-family: fantasy;
+}</pre
+        >
+        {{EmbedLiveSample("fantasy-example", 100, 60)}}
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 #### 字体栈
 
@@ -216,12 +294,13 @@ p {
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 {{ EmbedLiveSample('一个使用 font-family 的例子', '100%', 220) }}
@@ -238,8 +317,10 @@ occasion such as this that he did.</p>
 
 ```html
 <!-- document base font-size is 16px -->
-<article> <!-- If my font-size is 1.5em -->
-  <p>My paragraph</p> <!-- How do I compute to 20px font-size? -->
+<article>
+  <!-- If my font-size is 1.5em -->
+  <p>My paragraph</p>
+  <!-- How do I compute to 20px font-size? -->
 </article>
 ```
 
@@ -256,12 +337,13 @@ occasion such as this that he did.</p>
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css
@@ -323,12 +405,13 @@ CSS 提供了 4 种常用的属性来改变文本的样子：
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css
@@ -376,10 +459,11 @@ text-shadow: 4px 4px 5px red;
 您可以通过包含以逗号分隔的多个阴影值，将多个阴影应用于同一文本，例如：
 
 ```css
-text-shadow: -1px -1px 1px #aaa,
-             0px 4px 1px rgba(0,0,0,0.5),
-             4px 4px 5px rgba(0,0,0,0.7),
-             0px 0px 7px rgba(0,0,0,0.4);
+text-shadow:
+  -1px -1px 1px #aaa,
+  0px 4px 1px rgba(0, 0, 0, 0.5),
+  4px 4px 5px rgba(0, 0, 0, 0.7),
+  0px 0px 7px rgba(0, 0, 0, 0.4);
 ```
 
 如果我们把这个样式应用到我们 "Tommy the cat" 示例中的 {{htmlelement("h1")}} 元素，就像这样：
@@ -389,12 +473,13 @@ text-shadow: -1px -1px 1px #aaa,
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css hidden
@@ -405,10 +490,11 @@ html {
 h1 {
   font-size: 26px;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
 }
 
 h1 + p {
@@ -446,12 +532,13 @@ p {
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css hidden
@@ -462,10 +549,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -497,12 +585,13 @@ line-height: 1.5;
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css hidden
@@ -513,10 +602,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -554,12 +644,13 @@ p::first-line {
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css hidden
@@ -570,10 +661,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -641,7 +733,10 @@ Font 样式：
 一个完整的例子如下所示：
 
 ```css
-font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+font:
+  italic normal bold normal 3em/1.5 Helvetica,
+  Arial,
+  sans-serif;
 ```
 
 ## 动手练习：使用样式文本
@@ -651,20 +746,37 @@ font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
 如果你犯了错误，你可以使用 Reset 按钮来复原。
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>HTML Input</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-  <p>Some sample text for your delight</p></textarea>
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+  <p>Some sample text for your delight</p></textarea
+  >
 
   <h2>CSS Input</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">p {
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+p {
 
-  }</textarea>
+  }</textarea
+  >
 
   <h2>Output</h2>
-  <div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
+  <div
+    class="output"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
+    <input
+      id="reset"
+      type="button"
+      value="Reset"
+      style="margin: 10px 10px 0 0;" />
   </div>
 </div>
 ```
@@ -677,8 +789,8 @@ var htmlCode = htmlInput.value;
 var cssCode = cssInput.value;
 var output = document.querySelector(".output");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+var styleElem = document.createElement("style");
+var headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -686,7 +798,7 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();

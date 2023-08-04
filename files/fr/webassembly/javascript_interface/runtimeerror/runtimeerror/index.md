@@ -1,22 +1,19 @@
 ---
 title: Constructeur WebAssembly.RuntimeError()
 slug: WebAssembly/JavaScript_interface/RuntimeError/RuntimeError
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError/RuntimeError
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError/RuntimeError
-browser-compat: javascript.builtins.WebAssembly.RuntimeError.RuntimeError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 Le constructeur **`WebAssembly.RuntimeError()`** crée un nouvel objet `RuntimeError` WebAssembly, une erreur levée quand WebAssembly définit une [trappe](https://webassembly.org/docs/semantics/#traps).
 
 ## Syntaxe
 
 ```js
-new WebAssembly.RuntimeError()
-new WebAssembly.RuntimeError(message)
-new WebAssembly.RuntimeError(message, nomFichier)
-new WebAssembly.RuntimeError(message, nomFichier, numeroLigne)
+new WebAssembly.RuntimeError();
+new WebAssembly.RuntimeError(message);
+new WebAssembly.RuntimeError(message, nomFichier);
+new WebAssembly.RuntimeError(message, nomFichier, numeroLigne);
 ```
 
 ### Paramètres
@@ -36,15 +33,15 @@ Le fragment de code qui suit crée une nouvelle instance de `RuntimeError` puis 
 
 ```js
 try {
-  throw new WebAssembly.RuntimeError('Coucou', 'unFichier', 10);
+  throw new WebAssembly.RuntimeError("Coucou", "unFichier", 10);
 } catch (e) {
   console.log(e instanceof WebAssembly.RuntimeError); // true
-  console.log(e.message);                             // "Coucou"
-  console.log(e.name);                                // "RuntimeError"
-  console.log(e.fileName);                            // "unFichier"
-  console.log(e.lineNumber);                          // 10
-  console.log(e.columnNumber);                        // 0
-  console.log(e.stack);                               // renvoie l'emplacement du code exécuté
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "RuntimeError"
+  console.log(e.fileName); // "unFichier"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // renvoie l'emplacement du code exécuté
 }
 ```
 
@@ -58,6 +55,6 @@ try {
 
 ## Voir aussi
 
-- La page  [WebAssembly](/fr/docs/WebAssembly)
+- La page [WebAssembly](/fr/docs/WebAssembly)
 - [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
 - [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)

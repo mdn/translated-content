@@ -3,19 +3,11 @@ title: Crypto.subtle
 slug: Web/API/Crypto/subtle
 ---
 
-{{APIRef("Web Crypto API")}}
-
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-**`Crypto.subtle`** 是一个只读属性，返回一个 {{domxref("SubtleCrypto")}} 对象，可以用来做低级加密运算。
+**`Crypto.subtle`** 只读属性返回一个 {{domxref("SubtleCrypto")}} 对象，可以用来做低级加密运算。
 
-## 语法
-
-```plain
-var crypto = crypto.subtle;
-```
-
-### 值
+## 值
 
 一个可用于与 Web Crypto API 的低级加密功能交互的 {{domxref("SubtleCrypto")}} 对象。
 
@@ -23,11 +15,13 @@ var crypto = crypto.subtle;
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- {{domxref("Crypto")}}.
-- {{domxref("SubtleCrypto")}}.
+- {{domxref("Crypto")}}
+- {{domxref("SubtleCrypto")}}
+- [兼容性测试页面](https://vibornoff.github.io/webcrypto-examples/index.html)。
+- [用于 IE11 和 Safari 的垫片](https://github.com/vibornoff/webcrypto-shim)。

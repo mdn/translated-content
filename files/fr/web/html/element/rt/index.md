@@ -1,16 +1,9 @@
 ---
-title: '<rt> : l''élément de texte Ruby'
+title: "<rt> : l'élément de texte Ruby"
 slug: Web/HTML/Element/rt
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Ruby
-  - Web
-translation_of: Web/HTML/Element/rt
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<rt>`** indique la composante texte d'une annotation Ruby, il est notamment utilisé pour la prononciation, la traduction ou la translitération des caractères d'Asie orientale. Cet élément est toujours contenu dans un élément {{HTMLElement("ruby")}}.
 
@@ -27,10 +20,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 #### HTML
 
 ```html
-<ruby>
-  漢 <rt>Kan</rt>
-  字 <rt>ji</rt>
-</ruby>
+<ruby> 漢 <rt>Kan</rt> 字 <rt>ji</rt> </ruby>
 ```
 
 ```css hidden

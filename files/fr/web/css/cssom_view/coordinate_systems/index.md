@@ -1,13 +1,6 @@
 ---
 title: Systèmes de coordonnées
-slug: Web/CSS/CSSOM_View/Coordinate_systems
-tags:
-  - CSS
-  - CSSOM
-  - Coordonnées
-  - Guide
-translation_of: Web/CSS/CSSOM_View/Coordinate_systems
-original_slug: Web/CSS/CSSOM_View/Systèmes_de_coordonnées
+slug: Web/CSS/CSSOM_view/Coordinate_systems
 ---
 
 {{cssref}}
@@ -102,7 +95,7 @@ inner.addEventListener("mouseleave", update, false);
 
 Le gestionnaire d'évènement `update()` appelle `setCoords()` pour chacun des systèmes de coordonnées et lui repasse en argument l'évènement qui s'est produit.
 
-Les trois dernières lignes correspondent à l'enregistrement du gestionnaire d'évènements sur la boîte intérieure grâce aux appels de {{domxref("EventTarget.addEventListener", "addEventListener()")}} pour chaque type d'évènement : [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event), [`mousemove`](/fr/docs/Web/API/Element/mousemove_event) et {{event("mouseleave")}}.
+Les trois dernières lignes correspondent à l'enregistrement du gestionnaire d'évènements sur la boîte intérieure grâce aux appels de {{domxref("EventTarget.addEventListener", "addEventListener()")}} pour chaque type d'évènement : [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event), [`mousemove`](/fr/docs/Web/API/Element/mousemove_event) et [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event).
 
 ### HTML
 

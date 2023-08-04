@@ -1,5 +1,5 @@
 ---
-title: 'Document: readystatechange 事件'
+title: "Document: readystatechange 事件"
 slug: Web/API/Document/readystatechange_event
 ---
 
@@ -66,7 +66,8 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
@@ -78,26 +79,26 @@ label, button {
 #### JS
 
 ```js
-const log = document.querySelector('.event-log-contents');
-const reload = document.querySelector('#reload');
+const log = document.querySelector(".event-log-contents");
+const reload = document.querySelector("#reload");
 
-reload.addEventListener('click', () => {
-  log.textContent ='';
+reload.addEventListener("click", () => {
+  log.textContent = "";
   window.setTimeout(() => {
-      window.location.reload(true);
+    window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) => {
-    log.textContent = log.textContent + 'load\n';
+window.addEventListener("load", (event) => {
+  log.textContent = log.textContent + "load\n";
 });
 
-document.addEventListener('readystatechange', (event) => {
-    log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
+document.addEventListener("readystatechange", (event) => {
+  log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    log.textContent = log.textContent + `DOMContentLoaded\n`;
+document.addEventListener("DOMContentLoaded", (event) => {
+  log.textContent = log.textContent + `DOMContentLoaded\n`;
 });
 ```
 
@@ -117,7 +118,7 @@ IE 浏览器是一直支持 `readystatechange` 事件的，可作为 [DOMContent
 
 ## 参见
 
-- {{event("DOMContentLoaded")}}
-- {{event("load")}}
-- {{event("beforeunload")}}
-- {{event("unload")}}
+- [`DOMContentLoaded`](/zh-CN/docs/Web/API/Window/DOMContentLoaded_event)
+- [`load`](/zh-CN/docs/Web/API/Window/load_event)
+- [`beforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/zh-CN/docs/Web/API/Window/unload_event)

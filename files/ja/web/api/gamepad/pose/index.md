@@ -1,17 +1,14 @@
 ---
-title: Gamepad.pose
+title: "Gamepad: pose プロパティ"
+short-title: pose
 slug: Web/API/Gamepad/pose
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 
-{{domxref("Gamepad")}} インターフェイスの **`pose`** 読み取り専用プロパティは、 WebVR controller に関連付けられた pose 情報 ( 3D 空間での位置と方向など) を表す {{domxref("GamepadPose")}} オブジェクトを返します。
-
-## 構文
-
-```js
-var myGamepadPose = gamepadInstance.pose;
-```
+**`pose`** は {{domxref("Gamepad")}} インターフェイスの読み取り専用プロパティで、 WebVR コントローラーに関連付けられたポーズ情報（3D 空間での位置と方向など）を表す {{domxref("GamepadPose")}} オブジェクトを返します。
 
 ### 値
 
@@ -23,15 +20,13 @@ TBC
 
 ## 仕様書
 
-| 仕様                                                                                             | ステータス                               | 備考     |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('GamepadExtensions', '#partial-gamepad-interface', 'pose')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Gamepad.pose")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Gamepad API](/ja/docs/Web/API/Gamepad_API)
+- [ゲームパッド API](/ja/docs/Web/API/Gamepad_API)
 - [WebVR API](/ja/docs/Web/API/WebVR_API)

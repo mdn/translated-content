@@ -1,7 +1,6 @@
 ---
 title: SVGRectElement
 slug: Web/API/SVGRectElement
-translation_of: Web/API/SVGRectElement
 ---
 
 {{APIRef("SVG")}}
@@ -17,7 +16,7 @@ _Cette interface hérite aussi des propriétés de_ _{{domxref("SVGGeometryEleme
 - {{domxref("SVGRectElement.x")}} {{ReadOnlyInline}}
   - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("x")}} de l'élément {{SVGElement("rect")}} donné.
 - {{domxref("SVGRectElement.x")}} {{ReadOnlyInline}}
-  - : Retourne un {{domxref("SVGAnimatedLength")}}  correspondant à l'attribut {{SVGAttr("x")}} de l'élément {{SVGElement("rect")}} donné.
+  - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("x")}} de l'élément {{SVGElement("rect")}} donné.
 - {{domxref("SVGRectElement.y")}} {{ReadOnlyInline}}
   - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("y")}} de l'élément {{SVGElement("rect")}} donné.
 - {{domxref("SVGRectElement.width")}} {{ReadOnlyInline}}
@@ -31,7 +30,7 @@ _Cette interface hérite aussi des propriétés de_ _{{domxref("SVGGeometryEleme
 
 ## Méthode
 
-*Cette interface n'implémente pas de méthodes spécifiques mais elle hérite des méthodes parentes de [`SVGGeometryElement`](/fr/docs/Web/API/SVGGeometryElement).*
+_Cette interface n'implémente pas de méthodes spécifiques mais elle hérite des méthodes parentes de [`SVGGeometryElement`](/fr/docs/Web/API/SVGGeometryElement)._
 
 ## Spécifications
 

@@ -146,9 +146,7 @@ def index(request):
 
 > **备注：** 一点点 Python:
 >
-> - [Python 模块](https://docs.python.org/3/tutorial/modules.html) 是函数的“库”，存储在单独的文件中，我们可能想在我们的代码中使用它们。在这里我们只从 django.http 模块导入了 HttpResponse 对象，使我们可以在视图中使用它：
->   from django.http import HttpResponse。
->   还有其他方法可以从模块导入一些或所有对象。
+> - [Python 模块](https://docs.python.org/3/tutorial/modules.html) 是函数的“库”，存储在单独的文件中，我们可能想在我们的代码中使用它们。在这里我们只从 django.http 模块导入了 HttpResponse 对象，使我们可以在视图中使用它：`from django.http import HttpResponse` 还有其他方法可以从模块导入一些或所有对象。
 > - 如上所示，使用`def`关键字声明函数，在函数名称后面的括号中列出命名参数；整行以冒号结尾。注意下一行是否都进行了**缩进**。缩进很重要，因为它指定代码行在该特定块内 (强制缩进是 Python 的一个关键特征，也是 Python 代码很容易阅读的一个原因)。
 
 视图通常存储在一个名为 **views.py** 的文件中。
@@ -185,7 +183,7 @@ class Team(models.Model):
 
 Django 模型提供了一个用于搜索数据库的简单查询 API。这可以使用不同的标准（例如，精确，不区分大小写，大于等等）来匹配多个字段，并且可以支持复杂语句（例如，您可以在拥有一个团队的 **U11** 团队上指定搜索名称以“Fr”开头或以“al”结尾）。
 
-代码片段显示了一个视图函数（资源处理程序），用于显示我们所有的 **U09** 团队。粗体显示如何使用模型查询 API 过滤所有记录，其中该 **team_level** 字段具有正确的文本“**U09**”（请注意，该条件如何 filter() 作为参数传递给该函数，该字段名称和匹配类型由双下划线： **team_level\_\_exact**）
+代码片段显示了一个视图函数（资源处理程序），用于显示我们所有的 **U09** 团队。粗体显示如何使用模型查询 API 过滤所有记录，其中该 **team_level** 字段具有正确的文本“**U09**”（请注意，该条件如何 filter() 作为参数传递给该函数，该字段名称和匹配类型由双下划线： **`team_level__exact`**）。
 
 ```python
 ## filename: views.py

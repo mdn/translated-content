@@ -1,8 +1,8 @@
 ---
 title: Propriedades personalizadas (--*)
 slug: Web/CSS/--*
-translation_of: Web/CSS/--*
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Nomes de propriedades com o prefixo `--`, como `--example-name`, representam _Propriedade personalizadas_ que contém um valor que pode ser reutilizado por todo o documento usando a função ({{cssxref("var")}}).
@@ -31,10 +31,16 @@ Propriedades personalizadas participam na cascata: cada uma delas pode aparecer 
 ### HTML
 
 ```html
-<p id="firstParagraph">Este parágrafo deve ter um fundo azul e um texto amarelo.</p>
-<p id="secondParagraph">Este parágrafo deve ter um fundo amarelo e um texto azul.</p>
+<p id="firstParagraph">
+  Este parágrafo deve ter um fundo azul e um texto amarelo.
+</p>
+<p id="secondParagraph">
+  Este parágrafo deve ter um fundo amarelo e um texto azul.
+</p>
 <div id="container">
-  <p id="thirdParagraph">Este parágrafo deve ter um fundo verde e um texto amarelo.</p>
+  <p id="thirdParagraph">
+    Este parágrafo deve ter um fundo verde e um texto amarelo.
+  </p>
 </div>
 ```
 
@@ -72,8 +78,8 @@ Propriedades personalizadas participam na cascata: cada uma delas pode aparecer 
 
 ## Especificações
 
-| Specification                                                                    | Status                               | Comment            |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| Specification                                                | Status                      | Comment            |
+| ------------------------------------------------------------ | --------------------------- | ------------------ |
 | {{SpecName("CSS3 Variables", "#defining-variables", "--*")}} | {{Spec2("CSS3 Variables")}} | Initial definition |
 
 ## Compatibilidade com navegadores

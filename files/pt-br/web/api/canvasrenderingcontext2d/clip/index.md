@@ -1,8 +1,8 @@
 ---
 title: CanvasRenderingContext2D.clip()
 slug: Web/API/CanvasRenderingContext2D/clip
-translation_of: Web/API/CanvasRenderingContext2D/clip
 ---
+
 {{APIRef}}
 
 O método **`CanvasRenderingContext2D.clip()`** da API do Canvas 2D transforma o caminho atualmente construido em um caminho atual de recorte.
@@ -17,15 +17,17 @@ void ctx.clip(path, fillRule);
 
 ### Parâmetros
 
-![](https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png)
+![](canvas_clipping_path.png)
 
 - `fillRule`
 
   - : O algoritmo pelo qual determina se um ponto esta dentro de um caminho ou fora de um caminho.
     Valores Possíveis:
 
-    - **`"nonzero`**": A [regra contorno diferente de zero](http://en.wikipedia.org/wiki/Nonzero-rule), que é a regra padrão.
-    - **`"evenodd"`**: A [regra do contorno par ou ímpar](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+    - `nonzero`
+      - : A [regra contorno diferente de zero](http://en.wikipedia.org/wiki/Nonzero-rule), que é a regra padrão.
+    - `evenodd`
+      - : A [regra do contorno par ou ímpar](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 - `path`
   - : Um {{domxref("Path2D")}} caminho para recorte.
@@ -49,10 +51,10 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 // Cria uma região de recorte
-ctx.arc(100, 100, 75, 0, Math.PI*2, false);
+ctx.arc(100, 100, 75, 0, Math.PI * 2, false);
 ctx.clip();
 
-ctx.fillRect(0, 0, 100,100);
+ctx.fillRect(0, 0, 100, 100);
 ```
 
 Edite o código abaixo e veja suas mudanças atualizadas ao vivo no canvas:
@@ -66,7 +68,8 @@ Edite o código abaixo e veja suas mudanças atualizadas ao vivo no canvas:
 <textarea id="code" class="playable-code">
 ctx.arc(100, 100, 75, 0, Math.PI*2, false);
 ctx.clip();
-ctx.fillRect(0, 0, 100,100);</textarea>
+ctx.fillRect(0, 0, 100,100);</textarea
+>
 ```
 
 ```js hidden
@@ -82,14 +85,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -101,13 +104,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Especificações
 
-| Especificação                                                                                                                        | Estado                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-clip", "CanvasRenderingContext2D.clip")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CanvasRenderingContext2D.clip")}}
+{{Compat}}
 
 ## Ver também
 

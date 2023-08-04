@@ -1,16 +1,9 @@
 ---
 title: <datalist>
 slug: Web/HTML/Element/datalist
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - HTML5
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/datalist
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<datalist>` 요소**는 다른 컨트롤에서 고를 수 있는 가능한, 혹은 추천하는 선택지를 나타내는 {{htmlelement("option")}} 요소 여럿을 담습니다.
 
@@ -82,12 +75,12 @@ translation_of: Web/HTML/Element/datalist
 <label for="myBrowser">아래 목록에서 브라우저를 선택하세요:</label>
 <input list="browsers" id="myBrowser" name="myBrowser" />
 <datalist id="browsers">
-  <option value="Chrome">
-  <option value="Firefox">
-  <option value="Internet Explorer">
-  <option value="Opera">
-  <option value="Safari">
-  <option value="Microsoft Edge">
+  <option value="Chrome"></option>
+  <option value="Firefox"></option>
+  <option value="Internet Explorer"></option>
+  <option value="Opera"></option>
+  <option value="Safari"></option>
+  <option value="Microsoft Edge"></option>
 </datalist>
 ```
 
@@ -101,7 +94,7 @@ translation_of: Web/HTML/Element/datalist
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.datalist")}}
+{{Compat}}
 
 ## 폴리필
 

@@ -1,14 +1,8 @@
 ---
-title: ':nth-last-of-type()'
+title: ":nth-last-of-type()"
 slug: Web/CSS/:nth-last-of-type
-tags:
-  - CSS
-  - Layout
-  - Reference
-  - Web
-  - Псевдоклассы
-translation_of: Web/CSS/:nth-last-of-type
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) **`:nth-last-of-type()`** находит один или более элементов с заданным тегом, основываясь на их позиции среди группы соседних элементов, считая с конца.

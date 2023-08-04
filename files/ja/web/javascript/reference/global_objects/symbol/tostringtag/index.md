@@ -58,7 +58,7 @@ Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
 
 ### すべての DOM プロトタイプオブジェクトで利用可能な toStringTag
 
-[WebIDL の仕様変更](https://github.com/heycam/webidl/pull/357)が 2020 年半ばに行われた関係で、ブラウザーはすべての DOM プロトタイプオブジェクトに `Symbol.toStringTag` プロパティを追加するようになりました。例えば、{{domxref("HTMLButtonElement")}} の `Symbol.toStringTag` プロパティにアクセスするには次のようにします。
+[WebIDL の仕様変更](https://github.com/whatwg/webidl/pull/357)が 2020 年半ばに行われた関係で、ブラウザーはすべての DOM プロトタイプオブジェクトに `Symbol.toStringTag` プロパティを追加するようになりました。例えば、{{domxref("HTMLButtonElement")}} の `Symbol.toStringTag` プロパティにアクセスするには次のようにします。
 
 ```js
 let test = document.createElement('button');
@@ -68,9 +68,7 @@ test[Symbol.toStringTag];  // Returns HTMLButtonElement
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.tostringtag', 'Symbol.toStringTag')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

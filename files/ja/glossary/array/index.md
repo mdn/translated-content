@@ -1,6 +1,6 @@
 ---
 title: Array (配列)
-slug: Glossary/array
+slug: Glossary/Array
 ---
 
 *配列*は、データ（言語によって{{Glossary("primitive","プリミティブ")}}または{{Glossary("object","オブジェクト")}}のどちらか）が順序付けされて集まったものです。配列は 1 つの変数に複数の値を格納するために使用されます。これは 1 つしか値を格納できない変数とは対照的です。
@@ -19,7 +19,7 @@ var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 
 ### 一般知識
 
-- ウィキペディア上の「{{Interwiki("wikipedia", "配列")}}」の記事
+- ウィキペディア上の「[配列](https://ja.wikipedia.org/wiki/配列)」の記事
 
 ### 技術リファレンス
 

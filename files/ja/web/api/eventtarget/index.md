@@ -1,6 +1,8 @@
 ---
 title: EventTarget
 slug: Web/API/EventTarget
+l10n:
+  sourceCommit: 049632675ccb83fe2e257c43071d366d3f80ee2b
 ---
 
 {{ApiRef("DOM")}}
@@ -19,7 +21,7 @@ slug: Web/API/EventTarget
 - {{domxref("EventTarget.EventTarget()","EventTarget()")}}
   - : 新しい `EventTarget` オブジェクトのインスタンスを作成します。
 
-## メソッド
+## インスタンスメソッド
 
 - {{domxref("EventTarget.addEventListener()")}}
   - : 特定のイベント種別のイベントハンドラーを `EventTarget` に登録します。

@@ -1,13 +1,6 @@
 ---
 title: String.prototype.padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
-tags:
-  - JavaScript
-  - Méthode
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/padStart
 ---
 
 {{JSRef}}
@@ -36,23 +29,20 @@ Une chaîne de caractères ({{jsxref("String")}}) dont la longueur est celle ind
 ## Exemples
 
 ```js
-'abc'.padStart(10);         // "       abc"
-'abc'.padStart(10, "toto"); // "totototabc"
-'abc'.padStart(6,"123465"); // "123abc"
-'abc'.padStart(8, "0");     // "00000abc"
-'abc'.padStart(1);          // "abc"
+"abc".padStart(10); // "       abc"
+"abc".padStart(10, "toto"); // "totototabc"
+"abc".padStart(6, "123465"); // "123abc"
+"abc".padStart(8, "0"); // "00000abc"
+"abc".padStart(1); // "abc"
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.padstart', 'String.prototype.padStart')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES8', '#sec-string.prototype.padstart', 'String.prototype.padStart')}}         | {{Spec2('ES8')}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.padStart")}}
+{{Compat}}
 
 ## Voir aussi
 

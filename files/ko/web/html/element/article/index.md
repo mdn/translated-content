@@ -1,15 +1,9 @@
 ---
 title: <article>
 slug: Web/HTML/Element/article
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/article
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<article>` 요소**는 문서, 페이지, 애플리케이션, 또는 사이트 안에서 독립적으로 구분해 배포하거나 재사용할 수 있는 구획을 나타냅니다. 사용 예제로 게시판과 블로그 글, 매거진이나 뉴스 기사 등이 있습니다.
 
@@ -62,7 +56,7 @@ translation_of: Web/HTML/Element/article
     <tr>
       <th scope="row"><dfn>가능한 부모 요소</dfn></th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/ko/docs/Web/HTML/Content_categories#Flow_content"
           >플로우 콘텐츠</a
         >를 허용하는 모든 요소.<br /><code>&#x3C;article></code> 요소는
         {{HTMLElement("address")}}의 후손이 될 수 없음에 주의하세요.
@@ -70,15 +64,15 @@ translation_of: Web/HTML/Element/article
     </tr>
     <tr>
       <th scope="row">암시적 ARIA 역할</th>
-      <td>{{ariarole("article")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/article_role'><code>article</code></a></td>
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}},
-        {{ARIARole("feed")}}, {{ARIARole("main")}},
-        {{ARIARole("none")}}, {{ARIARole("presentation")}},
-        {{ARIARole("region")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/application_role'><code>application</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/document_role'><code>document</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/feed_role'><code>feed</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/main_role'><code>main</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/none_role'><code>none</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/region_role'><code>region</code></a>
       </td>
     </tr>
     <tr>
@@ -90,7 +84,7 @@ translation_of: Web/HTML/Element/article
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
 ## 사용 일람
 
@@ -121,16 +115,12 @@ translation_of: Web/HTML/Element/article
     <article class="user_review">
       <p>I agree, dinos are my favorite.</p>
       <footer>
-        <p>
-          Posted on <time datetime="2015-05-17 19:00">May 17</time> by Tom.
-        </p>
+        <p>Posted on <time datetime="2015-05-17 19:00">May 17</time> by Tom.</p>
       </footer>
     </article>
   </section>
   <footer>
-    <p>
-      Posted on <time datetime="2015-05-15 19:00">May 15</time> by Staff.
-    </p>
+    <p>Posted on <time datetime="2015-05-15 19:00">May 15</time> by Staff.</p>
   </footer>
 </article>
 ```
@@ -141,4 +131,4 @@ translation_of: Web/HTML/Element/article
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.article")}}
+{{Compat}}

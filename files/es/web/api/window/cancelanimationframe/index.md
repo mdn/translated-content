@@ -1,8 +1,8 @@
 ---
 title: window.cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
-translation_of: Web/API/Window/cancelAnimationFrame
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 ## Resumen
@@ -25,17 +25,22 @@ window.cancelAnimationFrame(requestID);
 ## Ejemplos
 
 ```js
-var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+var requestAnimationFrame =
+  window.requestAnimationFrame ||
+  window.mozRequestAnimationFrame ||
+  window.webkitRequestAnimationFrame ||
+  window.msRequestAnimationFrame;
 
-var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+var cancelAnimationFrame =
+  window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
-var start = window.mozAnimationStartTime;  // Only supported in FF. Other browsers can use something like Date.now().
+var start = window.mozAnimationStartTime; // Only supported in FF. Other browsers can use something like Date.now().
 
 var myReq;
 
 function step(timestamp) {
   var progress = timestamp - start;
-  d.style.left = Math.min(progress/10, 200) + "px";
+  d.style.left = Math.min(progress / 10, 200) + "px";
   if (progress < 2000) {
     myReq = requestAnimationFrame(step);
   }
@@ -45,13 +50,13 @@ myReq = requestAnimationFrame(step);
 window.cancelAnimationFrame(myReq);
 ```
 
-## Compatibilidad de navegadores
+## Especificaciones
 
-{{Compat("api.Window.cancelAnimationFrame")}}
+{{Specifications}}
 
-## Especificación
+## Compatibilidad con navegadores
 
-- {{spec("http://www.w3.org/TR/animation-timing/#cancelAnimationFrame", "Timing control for script-based animations: cancelAnimationFrame", "WD")}}
+{{Compat}}
 
 ## Ver también
 

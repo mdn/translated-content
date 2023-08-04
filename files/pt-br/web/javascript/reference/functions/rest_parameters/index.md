@@ -1,8 +1,8 @@
 ---
 title: Parâmetros Rest
 slug: Web/JavaScript/Reference/Functions/rest_parameters
-translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 A sintaxe de **rest parameter (parâmetros rest)** nos permite representar um número indefinido de argumentos como um array.

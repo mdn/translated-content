@@ -1,13 +1,8 @@
 ---
 title: Conceptos básicos de HTML
 slug: Learn/Getting_started_with_the_web/HTML_basics
-tags:
-  - Aprendizaje
-  - HTML
-  - Principiante
-  - Web
-translation_of: Learn/Getting_started_with_the_web/HTML_basics
 ---
+
 {{LearnSideBar}}
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics","Learn/Getting_started_with_the_web")}}
@@ -32,7 +27,7 @@ Si quieres especificar que se trata de un párrafo, podrías encerrar el texto c
 
 Explora este párrafo en mayor profundidad.
 
-![elementos de gato gruñon](https://mdn.mozillademos.org/files/11913/htmlexp.png)
+![elementos de gato gruñon](grumpy-cat-small.png)
 
 Las partes principales del elemento son:
 
@@ -43,7 +38,7 @@ Las partes principales del elemento son:
 
 Los elementos pueden también tener atributos, que se ven así:
 
-![atributo html](https://mdn.mozillademos.org/files/11915/htmlatributos.png)
+![atributo html](grumpy-cat-attribute-small.png)
 
 Los atributos contienen información adicional acerca del elemento, la cual no quieres que aparezca en el contenido real del elemento. Aquí `class` es el _nombre_ del atributo y `editor-note` el _valor_ del atributo. En este caso, el atributo `class` permite darle al elemento un nombre identificativo, que se puede utilizar luego para apuntarle al elemento información de estilo y demás cosas.
 
@@ -78,7 +73,7 @@ Los elementos deben abrirse y cerrarse ordenadamente, de forma tal que se encuen
 Algunos elementos no poseen contenido, y son llamados **elementos vacíos**. Toma, por ejemplo, el elemento {{htmlelement("img")}} de nuestro HTML:
 
 ```html
-<img src="images/firefox-icon.png" alt="Mi imagen de prueba">
+<img src="images/firefox-icon.png" alt="Mi imagen de prueba" />
 ```
 
 Posee dos atributos, pero no hay etiqueta de cierre `</img>` ni contenido encerrado. Esto es porque un elemento de imagen no encierra contenido al cual afectar. Su propósito es desplegar una imagen en la página HTML, en el lugar en que aparece.
@@ -88,14 +83,14 @@ Posee dos atributos, pero no hay etiqueta de cierre `</img>` ni contenido encerr
 Hasta ahora has visto lo básico de elementos HTML individuales, pero estos no son muy útiles por sí solos. Ahora verás cómo los elementos individuales son combinados para formar una página HTML entera. Vuelve a visitar el código de tu ejemplo en `index.html` (que viste por primera vez en el artículo [Manejo de archivos](/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos)):
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Mi pagina de prueba</title>
   </head>
   <body>
-    <img src="images/firefox-icon.png" alt="Mi imagen de prueba">
+    <img src="images/firefox-icon.png" alt="Mi imagen de prueba" />
   </body>
 </html>
 ```
@@ -114,7 +109,7 @@ Tienes:
 Presta atención nuevamente al elemento _imagen_ {{htmlelement("img")}}:
 
 ```html
-<img src="images/firefox-icon.png" alt="Mi imagen de prueba">
+<img src="images/firefox-icon.png" alt="Mi imagen de prueba" />
 ```
 
 Como ya se dijo antes, incrusta una imagen en la página, en la posición en que aparece. Lo logra a través del atributo `src` (source), el cual contiene el _path (ruta o ubicación)_ de tu archivo de imagen.
@@ -124,7 +119,7 @@ También se incluye un atributo `alt` (alternative) el cual contiene un texto qu
 1. Son ciegos o tienen deficiencias visuales. Los usuarios con impedimentos visuales usualmente utilizan herramientas llamadas _Lectores de pantalla (Screen Readers),_ los cuales les leen el texto contenido en el atributo alt.
 2. Se produjo algún error en el código que impide que la imagen sea cargada. Como ejemplo, modifica deliberadamente la ubicación dentro del atributo `src` para que este sea incorrecto. Si guardas y recargas la página, deberías ver algo así en lugar de la imagen:
 
-![atributo html](https://mdn.mozillademos.org/files/11917/image.png)
+![atributo html](alt-text-example.png)
 
 La frase clave acerca del texto alt de arriba es «texto que debería describir la imagen». El texto alt debe proporcionarle al lector la suficiente información como para que este tenga una buena idea de qué muestra la imagen. Por lo que tu texto actual «Mi imagen de prueba» no es para nada bueno. Un texto mucho mejor para el logo de Firefox sería: _«El logo de Firefox: un zorro en llamas rodeando la Tierra»_.
 
@@ -173,7 +168,10 @@ Cada elemento de la lista se coloca dentro de un elemento {{htmlelement("li")}} 
 Por ejemplo, si quieres transformar parte del siguiente párrafo en una lista:
 
 ```html
-<p>En Mozilla, somos una comunidad de tecnólogos, pensadores, y constructores que trabajan juntos... </p>
+<p>
+  En Mozilla, somos una comunidad de tecnólogos, pensadores, y constructores que
+  trabajan juntos...
+</p>
 ```
 
 Podrías hacer lo siguiente:
@@ -187,7 +185,7 @@ Podrías hacer lo siguiente:
   <li>constructores</li>
 </ul>
 
-<p>trabajando juntos... </p>
+<p>trabajando juntos...</p>
 ```
 
 Intenta agregar una lista ordenada o desordenada en tu página de ejemplo.
@@ -199,21 +197,23 @@ Los vínculos o enlaces son muy importantes —son los que hacen de la web, la w
 1. Elige algún texto. Nosotros elegimos «Manifesto Mozilla».
 2. Encierra el texto en un elemento \<a>, así:
 
-    ```html
-    <a>Manifesto Mozilla</a>
-    ```
+   ```html
+   <a>Manifesto Mozilla</a>
+   ```
 
 3. Proporciónale al elemento \<a> un atributo href, así:
 
-    ```html
-    <a href="">Manifesto Mozilla</a>
-    ```
+   ```html
+   <a href="">Manifesto Mozilla</a>
+   ```
 
 4. Completa el valor de este atributo con la dirección web con la que quieras conectar al vínculo:
 
-    ```html
-    <a href="https://www.mozilla.org/es-AR/about/manifesto/">Manifesto Mozilla</a>
-    ```
+   ```html
+   <a href="https://www.mozilla.org/es-AR/about/manifesto/"
+     >Manifesto Mozilla</a
+   >
+   ```
 
 Podrías obtener resultados inesperados si al comienzo de la dirección web omites la parte `https://` o `http://` llamada _protocolo_. Así que luego del marcado del vínculo, haz clic en él para asegurarte que te dirige a la dirección deseada.
 
@@ -225,7 +225,7 @@ Ahora agrega un vínculo a tu página, si es que aún no lo hiciste.
 
 Si lograste seguir todas las instrucciones de este artículo, deberías terminar con una página que se vea así (también puedes [verla aquí](http://mdn.github.io/beginner-html-site/)):
 
-![Una captura de pantalla de la página web que muestra el logo de Firefox, un encabezado que dice «mozilla es genial» y dos párrafos de texto de relleno.](https://mdn.mozillademos.org/files/9351/finished-test-page-small.png)
+![Una captura de pantalla de la página web que muestra el logo de Firefox, un encabezado que dice «mozilla es genial» y dos párrafos de texto de relleno.](finished-test-page-small.png)
 
 Si te estancas en algún paso, puedes comparar tu trabajo con el [código de ejemplo terminado](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html) en Github.
 

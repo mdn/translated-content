@@ -1,9 +1,9 @@
 ---
 title: Introdução ao desenvolvimento de jogos para a Web
 slug: Games/Introduction
-translation_of: Games/Introduction
 ---
-{{GamesSidebar}}{{IncludeSubnav("/pt-BR/docs/Games")}}
+
+{{GamesSidebar}}
 
 A web moderna rapidamente tem se tornado uma plataforma não só para criar jogos esplêndidos de alta qualidade, mas também para a distribuição desses mesmos jogos.
 
@@ -13,15 +13,15 @@ A gama de jogos que podem ser criados é compatível com as partes equivalentes 
 
 Você pode realmente pensar na Web como uma melhor plataforma de destino para o seu jogo. Como gostamos de dizer , "A Web é a plataforma". Vamos dar uma olhada no núcleo da plataforma da Web:
 
-| Função              | Tecnologia                                                                                                                                                                                                                                                                                                                                                                                  |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Audio**           | [Web Audio API](/pt-BR/docs/Web/API/API_Web_Audio)                                                                                                                                                                                                                                                                                                              |
-| **Gráficos**        | [WebGL](/pt-BR/docs/Web/API/WebGL_API) ([OpenGL ES](http://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                                                                                                              |
+| Função              | Tecnologia                                                                                                                                                                                                                                                                         |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Audio**           | [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API)                                                                                                                                                                                                                                 |
+| **Gráficos**        | [WebGL](/pt-BR/docs/Web/API/WebGL_API) ([OpenGL ES](https://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                        |
 | **Entrada (Input)** | [Touch events](/pt-BR/docs/Web/Guide/Events/Touch_events), [Gamepad API](/pt-BR/docs/API/Gamepad/Using_Gamepad_API), device sensors, [WebRTC](/pt-BR/docs/WebRTC), [Full Screen API](/pt-BR/docs/Web/API/Fullscreen_API), [Pointer Lock API](/pt-BR/docs/Web/API/Pointer_Lock_API) |
-| **Linguagem**       | [JavaScript](/pt-BR/docs/Web/JavaScript) (ou C/C++ usando [Emscripten](https://github.com/kripken/emscripten/wiki) para compilar para JavaScript)                                                                                                                                                                                                                  |
-| **Rede**            | [WebRTC](/pt-BR/docs/WebRTC) e/ou [WebSockets](/pt-BR/docs/WebSockets)                                                                                                                                                                                                                                                                                             |
-| **Armazenamento**   | [IndexedDB](/pt-BR/docs/IndexedDB) ou o "cloud"                                                                                                                                                                                                                                                                                                                     |
-| **Web**             | [HTML](/pt-BR/docs/Web/HTML), [CSS](/pt-BR/docs/Web/CSS), [SVG](/pt-BR/docs/Web/SVG), [Social API](/pt-BR/docs/api_social) (e muito mais!)                                                                                                                                                                  |
+| **Linguagem**       | [JavaScript](/pt-BR/docs/Web/JavaScript) (ou C/C++ usando [Emscripten](https://github.com/kripken/emscripten/wiki) para compilar para JavaScript)                                                                                                                                  |
+| **Rede**            | [WebRTC](/pt-BR/docs/WebRTC) e/ou [WebSockets](/pt-BR/docs/WebSockets)                                                                                                                                                                                                             |
+| **Armazenamento**   | [IndexedDB](/pt-BR/docs/IndexedDB) ou o "cloud"                                                                                                                                                                                                                                    |
+| **Web**             | [HTML](/pt-BR/docs/Web/HTML), [CSS](/pt-BR/docs/Web/CSS), [SVG](/pt-BR/docs/Web/SVG), [Social API](/pt-BR/docs/api_social) (e muito mais!)                                                                                                                                         |
 
 ## O caso de negócios
 
@@ -31,7 +31,7 @@ Como desenvolvedor de jogos, seja individual ou um grande estúdio de jogos, voc
 2. O marketing e a descoberta são melhorados. Você não está limitado a promover o seu aplicativo na loja de aplicativos de outra pessoa. Em vez disso, você pode anunciar e promover o seu jogo em toda a Web, bem como outros meios de comunicação, aproveitando a capacidade de compartilhamento inerente e compartilhamento da Web para alcançar novos clientes.
 3. Você tem controle onde isso importa: Pagamentos. Você não precisa entregar mais de 30% de suas receitas para outra pessoa apenas porque seu jogo está em seu ecossistema. Em vez disso, carregue o que deseja e use qualquer serviço de processamento de pagamento que você gosta.
 4. Novamente com mais controle, você pode atualizar seu jogo sempre que quiser. Não espera sem fôlego para aprovação, enquanto alguém escondido em outra empresa decide se a sua correção crítica de erros será ou não enviada hoje ou amanhã.
-5. Controle suas análises! Em vez de confiar em outra pessoa para tomar todas as decisões sobre o que você precisa, você pode coletar o seu próprio -- ou escolha o terceiro que você gosta do melhor -- para coletar informações sobre suas vendas e o alcance do seu jogo.
+5. Controle suas análises! Em vez de confiar em outra pessoa para tomar todas as decisões sobre o que você precisa, você pode coletar o seu próprio — ou escolha o terceiro que você gosta do melhor — para coletar informações sobre suas vendas e o alcance do seu jogo.
 6. Você consegue gerenciar seu relacionamento com o cliente de forma mais próxima, à sua maneira. Não há mais comentários do cliente filtrados através dos mecanismos limitados de uma loja de aplicativos. Participe com seus clientes da maneira que você quiser, sem intermediário.
 7. Seus jogadores podem jogar seu jogo em qualquer lugar, a qualquer hora. Como a Web é onipresente, seus clientes podem verificar o status do seu jogo em seus telefones, tablets, laptops domésticos, desktops de trabalho ou qualquer outra coisa.
 
@@ -50,7 +50,7 @@ Para as pessoas de tecnologia, vamos cavar as APIs que a Web traz à mesa que at
 - [IndexedDB](/pt-BR/docs/IndexedDB)
   - : Uma poderosa API de armazenamento de dados para manter os dados do usuário em seu próprio computador ou dispositivo. Uma ótima maneira de salvar o estado do jogo e outras informações localmente, portanto não precisa ser baixado sempre que for necessário. Também é útil para ajudar a tornar o seu jogo jogável mesmo quando o usuário não está conectado à Web (como quando estão presos em um avião por horas a fio).
 - [JavaScript](/pt-BR/docs/Web/JavaScript)
-  - : JavaScript, a linguagem de programação usada na Web, está sendo lançada rapidamente em navegadores modernos e cada vez mais rápido. Use seu poder para escrever o código do seu jogo, ou olhe para usar tecnologias como [Emscripten](https://github.com/kripken/emscripten/wiki) ou [Asm.js](http://asmjs.org/spec/latest/) para facilmente acessar seus jogos existentes.
+  - : JavaScript, a linguagem de programação usada na Web, está sendo lançada rapidamente em navegadores modernos e cada vez mais rápido. Use seu poder para escrever o código do seu jogo, ou olhe para usar tecnologias como [Emscripten](https://github.com/kripken/emscripten/wiki) ou [Asm.js](https://asmjs.org/spec/latest/) para facilmente acessar seus jogos existentes.
 - [Pointer Lock API](/pt-BR/docs/Web/API/Pointer_Lock_API)
   - : O Pointer Lock API permite bloquear o mouse ou outro dispositivo apontador na interface do seu jogo, de modo que, em vez do posicionamento absoluto do cursor, você receba deltas de coordenadas que lhe dê medidas mais precisas sobre o que o usuário está fazendo e evite que o usuário envie acidentalmente sua entrada para outro lugar. Falta de uma ação importante.
 - [SVG](/pt-BR/docs/Web/SVG) (Scalable Vector Graphics)

@@ -1,13 +1,8 @@
 ---
 title: symbol
 slug: Web/SVG/Element/symbol
-tags:
-  - Container SVG
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/symbol
 ---
+
 {{SVGRef}}
 
 O elemento `symbol` é usado para definir um template que pode ser inicializado por um elemento {{ SVGElement("use") }}. A utilização de elementos `symbol` para gráficos que são usados várias vezes no mesmo documento acrescenta estrutura e semântica. Documentos que são ricos em estrutura podem ser renderizados graficamente, através da fala, ou do braille, e assim promover a acessibilidade. Note que o elemento `symbol` em si não é renderizado. Somente instâncias de um elemento `symbol` (por exemplo, uma referência à um elemento `symbol` feita por um elemento {{ SVGElement("use") }}) são renderizadas.
@@ -42,9 +37,9 @@ O elemento `symbol` é usado para definir um template que pode ser inicializado 
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/SVG/Attribute#Core "pt-BR/SVG/Attribute#Core") »
-- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent "pt-BR/SVG/Attribute#GraphicalEvent") »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "pt-BR/SVG/Attribute#Presentation") »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
+- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent) »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -56,7 +51,7 @@ O elemento `symbol` é usado para definir um template que pode ser inicializado 
 
 ## Interface DOM
 
-Esse elemento implementa a interface do [`SVGSymbolElement`](/pt-BR/DOM/SVGSymbolElement "pt-BR/DOM/SVGSymbolElement").
+Esse elemento implementa a interface do [`SVGSymbolElement`](/pt-BR/DOM/SVGSymbolElement).
 
 ## Compatibilidade
 

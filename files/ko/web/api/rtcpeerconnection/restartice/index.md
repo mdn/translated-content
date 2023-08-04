@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection.restartIce()
 slug: Web/API/RTCPeerConnection/restartIce
-translation_of: Web/API/RTCPeerConnection/restartIce
 ---
+
 {{APIRef("WebRTC API")}}
 
 [WebRTC](/ko/docs/Web/API/WebRTC_API) API의 {{domxref("RTCPeerConnection")}} 인터페이스에서는 **`restartIce()`** 메소드를 제공해서 연결의 양쪽에서 {{Glossary("ICE")}} candidate의 재수집 요청을 간단하게 할 수 있게 만들어줍니다.
@@ -29,14 +29,14 @@ RTCPeerConnection.restartIce();
 
 {{domxref("RTCPeerConnection.createOffer", "createOffer()")}}를 사용해서 만들어진 다음 offer가 신호 메커니즘을 통해 원격 유저에게 전달이 되면, ICE 재시작을 시작하도록 만듭니다. ICE를 재시작하게되면 기본적으로 ICE가 초기화되고, 새로운 증명서를 사용해서 신규 candidate를 생성합니다. 기존에 존재하던 미디어 전송/수신은 이 과정동안에는 방해받지 않습니다.
 
-ICE 재시작의 작동원리를 좀 더 자세히 알고 싶다면, {{SectionOnPage("/ko/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}}와 {{RFC(5245, "ICE specification", "9.1.1.1")}}를 참고하십시오.
+ICE 재시작의 작동원리를 좀 더 자세히 알고 싶다면, [ICE restart](/ko/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart)와 {{RFC(5245, "ICE specification", "9.1.1.1")}}를 참고하십시오.
 
 ## 예시
 
 아래의 예제는 {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} 이벤트에 대한 핸들러입니다. 이 핸들러는 ICE를 재시작하여 `failed` 상태로의 전환을 관리합니다.
 
 ```js
-pc.addEventListener("iceconnectionstatechange", event => {
+pc.addEventListener("iceconnectionstatechange", (event) => {
   if (pc.iceConnectionState === "failed") {
     /* possibly reconfigure the connection in some way here */
     /* then request ICE restart */
@@ -47,11 +47,9 @@ pc.addEventListener("iceconnectionstatechange", event => {
 
 위의 코드를 사용하여 ICE 협상 중 `failed` 상태로 전환되면 코드가 정상적으로 재협상 되어야 하기 때문에 {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} 이벤트가 발생합니다. 그러나, `restartIce()`를 호출했기 때문에 `negotiationneeded`에 대한 핸들러에서 발생하는 {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} 호출은 일반적으로 수행되는 재협상이 아니라 ICE 재시작을 발생시킵니다.
 
-## 사양서
+## 명세서
 
-| 사양서                                                                                                                           | 상태                             | 코멘트              |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-restartice', 'RTCPeerConnection.restartIce()')}} | {{Spec2('WebRTC 1.0')}} | Initial definition. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

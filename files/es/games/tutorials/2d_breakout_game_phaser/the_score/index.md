@@ -1,18 +1,9 @@
 ---
 title: The score
 slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
-tags:
-  - 2D
-  - JavaScript
-  - Lienzo
-  - Phaser
-  - Principiantes
-  - Puntuación
-  - Tutorial
-  - juegos
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/The_score
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}
 
@@ -37,7 +28,10 @@ var score = 0;
 Ahora añade esta línea al final de la función `create()`:
 
 ```js
-scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095DD' });
+scoreText = game.add.text(5, 5, "Points: 0", {
+  font: "18px Arial",
+  fill: "#0095DD",
+});
 ```
 
 El método `text()` puede tomar cuatro parámetros:
@@ -54,9 +48,9 @@ Incrementaremos el número de puntos cada vez que la pelota golpee en un ladrill
 
 ```js
 function ballHitBrick(ball, brick) {
-    brick.kill();
-    score += 10;
-    scoreText.setText('Points: '+score);
+  brick.kill();
+  score += 10;
+  scoreText.setText("Points: " + score);
 }
 ```
 

@@ -1,10 +1,8 @@
 ---
 title: Селектор следующего элемента
 slug: Web/CSS/General_sibling_combinator
-tags:
-  - смежные селекторы CSS спецификация комбинатор
-translation_of: Web/CSS/General_sibling_combinator
 ---
+
 {{CSSRef("Selectors")}}
 
 ## Описание
@@ -13,7 +11,9 @@ translation_of: Web/CSS/General_sibling_combinator
 
 ## Синтаксис
 
-    element ~ element { style properties }
+```
+element ~ element { style properties }
+```
 
 ## Пример
 

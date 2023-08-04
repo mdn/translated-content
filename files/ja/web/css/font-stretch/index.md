@@ -1,6 +1,8 @@
 ---
 title: font-stretch
 slug: Web/CSS/font-stretch
+l10n:
+  sourceCommit: fb2af1f15456199685a9f4fbaf8c9d003a2bf91f
 ---
 
 {{CSSRef}}
@@ -32,6 +34,7 @@ font-stretch: 200%;
 font-stretch: inherit;
 font-stretch: initial;
 font-stretch: revert;
+font-stretch: revert-layer;
 font-stretch: unset;
 ```
 
@@ -48,12 +51,6 @@ font-stretch: unset;
 - `<percentage>`
 
   - : {{cssxref("&lt;percentage&gt;")}} 値です。このプロパティでは負の数は許可されていません。
-
-    > **メモ:** `font-stretch` の古いバージョンの仕様書では、このプロパティは 9 つのキーワード値のみを受け付けていました。
-    >
-    > **{{ SpecName('CSS4 Fonts', '#propdef-font-stretch') }} 仕様書**で、構文が `<percentage>` を受け付けるように拡張されました。これによって、文字幅がもっと連続的になるように提供することができます。 TrueType や OpenType のフォントでは、 "`wdth`" バリエーションが様々な幅を実装するために使用されます。
-    >
-    > 但し、`<percentage>` の構文はまた、すべてのブラウザーが対応しているわけではありません。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)をご覧ください。
 
 ### キーワードと数値の対応
 
@@ -77,12 +74,66 @@ font-stretch: unset;
 
 `font-stretch` を使うと、そのようなフォントで condensed や expanded フェイスを選択することができます。使用しているフォントが condensed や expanded フェイスを提供していない場合は、このプロパティは効果がありません。
 
-### フォントフェイスの選択
+#### フォントフェイスの選択
 
 `font-stretch` で与えられた値で選択されるフェイスは、フォントがそのフェイスに対応しているかによります。与えられた値に正確に一致するフェイスがフォントに存在しない場合、値が 100% よりも小さい場合はより狭いフェイスが割り当てられ、100% と等しいか大きい場合はより広いフェイスが割り当てられます。
 
 以下の表は 2 つの異なるフォントにおいて、 `font-stretch` に様々なパーセント値を提供した場合の効果を示しています。
 
+```css hidden
+@font-face {
+  font-family: "Inconsolata";
+  src: url("https://fonts.gstatic.com/s/inconsolata/v31/QlddNThLqRwH-OJ1UHjlKENVzlm-WkL3GZQmAwPyya15.woff2") format("woff2");
+  font-stretch: 50% 200%;
+}
+
+@font-face {
+  font-family: "Anek Malayalam";
+  src: url("https://fonts.gstatic.com/s/anekmalayalam/v4/6qLUKZActRTs_mZAJUZWWkhke0nYa-f6__Azq3-gP1W7db9_.woff2") format("woff2");
+  font-stretch: 75% 125%;
+}
+
+td {
+  border: solid;
+  border-width: 1px;
+}
+
+#inconsolata td {
+  font: 90px Inconsolata, sans-serif;
+}
+#anek-malayalam td {
+  font: 90px 'Anek Malayalam';
+}
+#inconsolata td:nth-child(2), #anek-malayalam td:nth-child(2) {
+  font-stretch: 50%;
+}
+#inconsolata td:nth-child(3), #anek-malayalam td:nth-child(3) {
+  font-stretch: 62.5%;
+}
+#inconsolata td:nth-child(4), #anek-malayalam td:nth-child(4) {
+  font-stretch: 75%;
+}
+#inconsolata td:nth-child(5), #anek-malayalam td:nth-child(5) {
+  font-stretch: 87.5%;
+}
+#inconsolata td:nth-child(6), #anek-malayalam td:nth-child(6) {
+  font-stretch: 100%;
+}
+#inconsolata td:nth-child(7), #anek-malayalam td:nth-child(7) {
+  font-stretch: 112.5%;
+}
+#inconsolata td:nth-child(8), #anek-malayalam td:nth-child(8) {
+  font-stretch: 125%;
+}
+#inconsolata td:nth-child(9), #anek-malayalam td:nth-child(9) {
+  font-stretch: 150%;
+}
+#inconsolata td:nth-child(10), #anek-malayalam td:nth-child(10) {
+  font-stretch: 200%;
+}
+```
+
+```html hidden
 <table class="standard-table">
   <thead>
     <tr>
@@ -99,35 +150,38 @@ font-stretch: unset;
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Helvetica Neue</th>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
+    <tr id="inconsolata">
+      <th scope="row">Inconsolata</th>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
     </tr>
-    <tr>
-      <th scope="row">League Mono Variable</th>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page2.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page3.png" /></td>
-      <td><img alt="" src="l-100.png" /></td>
-      <td><img alt="" src="l-112.5.png" /></td>
-      <td><img alt="" src="l-125.png" /></td>
-      <td><img alt="" src="l-150.png" /></td>
-      <td><img alt="" src="l-200.png" /></td>
+    <tr id="anek-malayalam">
+      <th scope="row">Anek Malayalam</th>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
     </tr>
   </tbody>
 </table>
+```
 
-- **Helvetica Neue** は、既定で macOS にインストールされているもので、普通のフェイスに加えて一つの condensed のフェイスを持ちます。 `font-stretch` の100%より小さいすべての値は condensed のフェイスを選択し、それ以外の値は normal のフェイスを選択します。
-- **[League Mono Variable](https://tylerfinck.com/leaguemonovariable/)** は、 `font-stretch` のさまざまなパーセント値に対して、幅の連続的な範囲のようなものを提供する可変フォントです。
+{{EmbedLiveSample('Font_face_selection', "100%", "300px")}}
+
+- [Anek Malayalam](https://fonts.google.com/specimen/Anek+Malayalam) は 75% から 125% の幅に対応している可変の Google フォントです。この範囲を下回る値と上回る値では、最も一致するフォントが選択されます。
+- [Inconsolata](https://fonts.google.com/specimen/Inconsolata) は、 50% から 200% まで連続的に幅を変化させることができる可変フォントです。 <!-- Note, dynamically obtained woff2 from Google fonts using query: https://fonts.googleapis.com/css2?family=Inconsolata:wdth@50..200 -->
 
 ## 公式定義
 
@@ -140,8 +194,6 @@ font-stretch: unset;
 ## 例
 
 ### フォントの引き伸ばしパーセント値の設定
-
-> **メモ:** この例は、`<percentage>` 値に対応しているブラウザーでのみ動作します。
 
 {{EmbedGHLiveSample("css-examples/variable-fonts/font-stretch.html", '100%', 950)}}
 

@@ -1,15 +1,8 @@
 ---
 title: Number.MIN_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Number
-  - Número
-  - Property
-  - Propriedade
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 ---
+
 {{JSRef}}
 
 A constante **`Number.MIN_SAFE_INTEGER`** representa o menor inteiro seguro no JavaScript (`-(253 - 1)`).

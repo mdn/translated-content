@@ -62,10 +62,12 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 在下面的示例中，我们已经浮动了三个`<div>`，所以它们显示在了一行中。任何使用不支持[CSS 网格布局](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)的浏览器的人将会看到以浮动布局实现的一列盒子。一个成为了网格物件的浮动物件失去了浮动的动作，就是说通过把 wrapper 变成网格容器，浮动物件变成了网格物件。如果浏览器器支持网格布局，它会显示网格视图，否则它会忽略`display: grid`相关的属性，使用浮动布局。
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -75,7 +77,7 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
@@ -112,10 +114,12 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 在浮动布局中，百分数是依照容器计算的——33.333% 是容器宽度的三分之一。但在网格中，这 33.333% 是根据物件所在的网格区域计算的，所以只要网格布局引入进来，物件的大小实际上变成了我们想要的大小的三分之一。
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -125,7 +129,7 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
@@ -150,10 +154,12 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 如果我们向上面的示例中加入了一条特征查询，要是我们知道网格受到支持的话，我们可以用它把我们的物件宽度设定回`auto`。
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -163,14 +169,14 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
 
 @supports (display: grid) {
   .item {
-      width: auto;
+    width: auto;
   }
 }
 ```
@@ -197,7 +203,7 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 
 CSS 网格规范最初成形于 IE10，也就是说尽管 IE10 和 IE11 不支持*现代的*网格，虽然这种网格和本站记载的现代布局不同，它们还是有一个很堪用的网格布局版本。IE10 和 IE11 的实现是以`-ms-`为前缀的，也就是说你可以给这两个浏览器用，而在非微软浏览器上，这种属性会被忽略。不过 Edge 仍然能理解旧语法，所以小心点，让每个东西都安全地在你的现代网格 CSS 中覆写。
 
-[网格布局渐进增强](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)指导能帮你理解 IE 版的网格，我们在这节课的末尾加入了一些额外的有用的链接。不过，除非你有很多使用旧版 IE 的访客，你可能发现专注于建立一个由所有不支持的浏览器共用的回滚版本是一个更好的选择。
+[网格布局渐进增强](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)指导能帮你理解 IE 版的网格，我们在这节课的末尾加入了一些额外的有用的链接。不过，除非你有很多使用旧版 IE 的访客，你可能发现专注于建立一个由所有不支持的浏览器共用的回滚版本是一个更好的选择。
 
 ## 测试旧浏览器
 
@@ -209,11 +215,11 @@ CSS 网格规范最初成形于 IE10，也就是说尽管 IE10 和 IE11 不支�
 
 你现在有了自信地使用例如网格和弹性盒技术、建立面向旧浏览器的回滚以及利用任何可能会在未来出现的 新技术所需的知识。
 
-## 另见
+## 参见
 
 - [在 CSS 中使用媒体查询](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
-- [弹性盒的后向兼容性](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
-- [CSS 网格布局和渐进优化](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+- [弹性盒的后向兼容性](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
+- [CSS 网格布局和渐进优化](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [使用 CSS 网格：支持没有网格的浏览器](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/)
 - [使用 IE10 和 IE11 版网格的教程](https://24ways.org/2012/css3-grid-layout/)
 - [我应该尽力使用 IE10 的网格布局实现吗？](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)
@@ -221,18 +227,3 @@ CSS 网格规范最初成形于 IE10，也就是说尽管 IE10 和 IE11 不支�
 - [使用特性查询（视频）](https://gridbyexample.com/learn/2016/12/24/learning-grid-day24/)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
-
-## 模块目录
-
-- [CSS 布局介绍](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
-- [正常布局流](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [弹性盒](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-- [网格](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
-- [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
-- [定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-- [多列布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [媒体查询入门指南](/zh-CN/docs/Learn/CSS/CSS_layout/Media_queries)
-- [传统布局方式](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [支持旧浏览器](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基本布局掌握测验](/zh-CN/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

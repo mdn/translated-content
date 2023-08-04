@@ -1,14 +1,8 @@
 ---
 title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Referencia
-  - metodo
-translation_of: Web/API/Document/adoptNode
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.adoptNode()`** transfiere un {{Glossary("node/dom", "node")}} desde otro {{domxref("Document", "document", "", "1")}} al documento del método. El nodo adoptado y sus subnodos se eliminan del documento original (si lo hubiera), encuentra y su {{domxref("Node.ownerDocument", "ownerDocument")}} se cambia por el documento actual. El nodo puede entoces ser insertado en el documento actual.
@@ -27,11 +21,11 @@ node = document.adoptNode(externalNode);
 ## Ejemplo
 
 ```js
-var iframe = document.querySelector('iframe');
-var iframeImages = iframe.contentDocument.querySelectorAll('img');
-var newParent = document.getElementById('images');
+var iframe = document.querySelector("iframe");
+var iframeImages = iframe.contentDocument.querySelectorAll("img");
+var newParent = document.getElementById("images");
 
-iframeImages.forEach(function(imgEl) {
+iframeImages.forEach(function (imgEl) {
   newParent.appendChild(document.adoptNode(imgEl));
 });
 ```

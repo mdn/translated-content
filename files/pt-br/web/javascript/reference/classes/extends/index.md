@@ -1,15 +1,8 @@
 ---
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
-tags:
-  - Classes
-  - ECMAScript6
-  - Experimental
-  - Herança
-  - JavaScript
-  - extends
-translation_of: Web/JavaScript/Reference/Classes/extends
 ---
+
 {{jsSidebar("Classes")}}
 
 A palavra chave **`extends`** é usada em uma [class declarations](/pt-BR/docs/Web/JavaScript/Reference/Statements/class) ou [class expressions](/pt-BR/docs/Web/JavaScript/Reference/Operators/class) para criar uma classe filha de outra classe.
@@ -38,7 +31,7 @@ class Square extends Polygon {
     // Here, it calls the parent class' constructor with lengths
     // provided for the Polygon's width and height
     super(length, length);
-    // Note: In derived classes, super() must be called before you
+    // Nota: In derived classes, super() must be called before you
     // can use 'this'. Leaving this out will cause a reference error.
     this.name = 'Square';
   }

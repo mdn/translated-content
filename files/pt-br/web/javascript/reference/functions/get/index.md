@@ -1,8 +1,8 @@
 ---
 title: getter
 slug: Web/JavaScript/Reference/Functions/get
-translation_of: Web/JavaScript/Reference/Functions/get
 ---
+
 {{jsSidebar("Functions")}}A sintaxe de **get** associa uma propriedade de um objeto a uma função que será chamada quando tal propriedade é acessada.
 
 ## Sintaxe
@@ -67,7 +67,7 @@ var o = { a:0 }
 
 Object.defineProperty(o, "b", { get: function () { return this.a + 1; } });
 
-console.log(o.b) // Executa o getter, que retornará a + 1 (which is 1)
+console.log(o.b) // Executa o getter, que retornará a + 1 (que é 1)
 ```
 
 ### Usando uma propriedade com nome computado
@@ -124,6 +124,6 @@ Para o Firefox, veja também o código do módulo XPCOMUtils.jsm, que define a f
 - [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [Defining Getters and Setters](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) in JavaScript Guide

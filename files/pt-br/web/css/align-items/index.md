@@ -1,13 +1,8 @@
 ---
 title: align-items
 slug: Web/CSS/align-items
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Propriedade
-  - Referencia
-translation_of: Web/CSS/align-items
 ---
+
 A propriedade [CSS](/pt-BR/docs/Web/CSS) **`align-items`** estabelece o valor {{cssxref("align-self")}} em todos filhos diretos como um grupo. A propriedade align-self estabelece o alinhamento de um certo item dentro do bloco que o contém. Em Flexbox ele controla o alinhamento dos itens em {{glossary("Cross Axis")}}, enquanto que no Grid Layout, controla o alinhamento dos itens no Eixo de Bloco dentro de sua [grid area](/pt-BR/docs/Glossary/Grid_Areas).
 
 O exemplo interativo abaixo demonstra alguns dos valores para `align-items` usando grid layout.
@@ -95,7 +90,7 @@ align-items: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-items: center; /* Pode ser mudado na amostra ao vivo */
   background-color: #8c8c8c;
@@ -215,15 +210,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.alignItems = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```
@@ -234,10 +229,10 @@ display.addEventListener('change', function (evt) {
 
 ## Especificações
 
-| Especificação                                                                                    | Status                                   | Comentário                                      |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------- |
+| Especificação                                                             | Status                          | Comentário                                      |
+| ------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------- |
 | {{SpecName("CSS3 Box Alignment", "#propdef-align-items", "align-items")}} | {{Spec2("CSS3 Box Alignment")}} | Atualização para últimas definições de sintaxe. |
-| {{SpecName('CSS3 Flexbox', '#propdef-align-items', 'align-items')}}         | {{Spec2('CSS3 Flexbox')}}         | Definição inicial                               |
+| {{SpecName('CSS3 Flexbox', '#propdef-align-items', 'align-items')}}       | {{Spec2('CSS3 Flexbox')}}       | Definição inicial                               |
 
 {{cssinfo}}
 
@@ -245,11 +240,7 @@ display.addEventListener('change', function (evt) {
 
 ### Support in Flex layout
 
-{{Compat("css.properties.align-items.flex_context")}}
-
-### Support in Grid layout
-
-{{Compat("css.properties.align-items.grid_context")}}
+{{Compat}}
 
 ## Veja também
 

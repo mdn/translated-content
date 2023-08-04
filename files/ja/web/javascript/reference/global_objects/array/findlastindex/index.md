@@ -62,7 +62,7 @@ findLastIndex(function(element, index, array) { /* … */ }, thisArg)
 ## 解説
 
 `findLastIndex()` メソッドは、配列のそれぞれの要素に対して、添字の降順に一度ずつ `callbackFn` 関数を実行し、 `callbackFn` が[真値](/ja/docs/Glossary/Truthy)を返すまで続けます。
-そして、 `findLastIndex()` がその要素の添字を返し、配列の反復子を停止します。
+そして、 `findLastIndex()` がその要素の添字を返し、配列のイテレーターを停止します。
 もし `callbackFn` が真値を返さなかった場合、 `findLastIndex()` は `-1` を返します。
 
 `callbackFn` は値が割り当てられている要素だけではなく、配列の「すべての」添字に対して呼び出されます。
@@ -81,7 +81,7 @@ findLastIndex(function(element, index, array) { /* … */ }, thisArg)
 - 既存の、まだ呼び出されていない配列の要素が `callbackFn` によって変更された場合、 `callbackFn` に渡される値は、 `findLastIndex()` がその要素の添字を呼び出したときの値になります。
 - {{jsxref("Operators/delete", "削除", "", 1)}}された要素に対しても呼び出されます。
 
-> **警告:** 前項で説明したような同時進行の変更は、理解しにくいコードになることが多いので、（特殊な場合を除き）一般的には避けるべきです。
+> **警告:** 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
 
 ## 例
 

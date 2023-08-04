@@ -1,5 +1,5 @@
 ---
-title: ':blank'
+title: ":blank"
 slug: Web/CSS/:blank
 ---
 
@@ -13,7 +13,9 @@ slug: Web/CSS/:blank
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:blank
+```
 
 ## 例
 

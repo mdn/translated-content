@@ -1,46 +1,49 @@
 ---
-title: CompositionEvent.initCompositionEvent()
+title: "CompositionEvent: initCompositionEvent() メソッド"
+short-title: initCompositionEvent()
 slug: Web/API/CompositionEvent/initCompositionEvent
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{deprecated_header}}{{APIRef("DOM Events")}}
+{{deprecated_header}}{{APIRef("UI Events")}}
 
-{{domxref("CompositionEvent")}} インターフェイスの **`initCompositionEvent()`** メソッドは、`CompositionEvent` オブジェクトインスタンスの属性を初期化します。
+**`initCompositionEvent()`** は {{domxref("CompositionEvent")}} インターフェイスのメソッドで、 `CompositionEvent` オブジェクトインスタンスの属性を初期化します。
+
+> **メモ:** {{domxref("CompositionEvent")}} を生成する正しい方法は、 {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent()")}} コンストラクターを使用する方法です。
 
 ## 構文
 
-```
- compositionEventInstance.initCompositionEvent(typeArg, canBubbleArg, cancelableArg, viewArg, dataArg, localeArg)
+```js-nolint
+initCompositionEvent(type, canBubble, cancelable, view, data, locale)
 ```
 
 ### 引数
 
-- `typeArg`
-  - : composition イベントの種類を表す {{domxref("DOMString")}}。これは、`compositionstart`, `compositionupdate`, `compositionend` のいずれかになります。
-- `canBubbleArg`
-  - : イベントがバブリング可能するかどうかを指定する {{domxref("Boolean")}}。
+- `type`
+  - : composition イベントの種類を表す文字列です。これは、 `compositionstart`, `compositionupdate`, `compositionend` のいずれかになります。
+- `canBubble`
+  - : 論理値で、イベントがバブリング可能するかどうかを指定します。
 - `cancelableArg`
-  - : イベントがキャンセル可能かどうかを表す {{domxref("Boolean")}}。
-- `viewArg`
+  - : 論理値で、イベントがキャンセル可能かどうかを表します。
+- `view`
   - : イベント生成元の {{domxref("Window")}} オブジェクト。
-- `dataArg`
-  - : `data` 属性の値を表す {{domxref("DOMString")}}。
+- `data`
+  - : 文字列で、`data` 属性の値を表します。
 - `localeArg`
-  - : `locale` 属性の値を表す {{domxref("DOMString")}}。
+  - : 文字列で、`locale` 属性の値を表します。
 
-### 戻り値
+### 返値
 
-Void.
+なし ({{jsxref("undefined")}})。
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                                                                               | 策定状況                         | 備考       |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('DOM3 Events','#idl-interface-CompositionEvent-initializers','initCompositionEvent()')}} | {{Spec2('DOM3 Events')}} | 初期定義。 |
+このメソッドは標準化の予定がなくなりました。これは互換性のために残されています。 {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent()")}} コンストラクターを使用してください。
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.CompositionEvent.initCompositionEvent")}}
+{{Compat}}
 
 ## 関連情報
 

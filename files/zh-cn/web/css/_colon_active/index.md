@@ -1,5 +1,5 @@
 ---
-title: ':active'
+title: ":active"
 slug: Web/CSS/:active
 ---
 
@@ -22,7 +22,9 @@ a:active {
 
 ## 语法
 
-{{csssyntax}}
+```
+:active
+```
 
 ## 示例
 
@@ -31,7 +33,8 @@ a:active {
 #### HTML
 
 ```html
-<p>This paragraph contains a link:
+<p>
+  This paragraph contains a link:
   <a href="#">This link will turn red while you click on it.</a>
   The paragraph will get a gray background while you click on it or the link.
 </p>
@@ -40,17 +43,32 @@ a:active {
 #### CSS
 
 ```css
-a:link { color: blue; }          /* 未访问链接 */
-a:visited { color: purple; }     /* 已访问链接 */
-a:hover { background: yellow; }  /* 用户鼠标悬停 */
-a:active { color: red; }         /* 激活链接 */
+a:link {
+  /* 未访问链接 */
+  color: blue;
+}
+a:visited {
+  /* 已访问链接 */
+  color: purple;
+}
+a:hover {
+  /* 用户鼠标悬停 */
+  background: yellow;
+}
+a:active {
+  /* 激活链接 */
+  color: red;
+}
 
-p:active { background: #eee; }   /* 激活段落 */
+p:active {
+  /* 激活段落 */
+  background: #eee;
+}
 ```
 
 #### 结果
 
-{{EmbedLiveSample('Active_links')}}
+{{EmbedLiveSample('激活链接')}}
 
 ### 激活表单元素
 
@@ -77,7 +95,7 @@ form button {
 
 #### 结果
 
-{{EmbedLiveSample('Active_form_elements')}}
+{{EmbedLiveSample('激活表单元素')}}
 
 ## 规范
 

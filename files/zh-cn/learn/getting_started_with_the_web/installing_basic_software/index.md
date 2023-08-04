@@ -25,7 +25,7 @@ slug: Learn/Getting_started_with_the_web/Installing_basic_software
 
 ### 安装文本编辑器
 
-你的电脑上可能已经有一个基本的文本编辑器。默认情况下，Windows 是 [Notepad](https://zh.wikipedia.org/wiki/记事本) ，macOS 则有 [TextEdit](https://zh.wikipedia.org/wiki/文字編輯_(應用程式) )。Linux 发行版有所不同；Ubuntu 下是 [gedit](https://zh.wikipedia.org/wiki/Gedit) 。
+你的电脑上可能已经有一个基本的文本编辑器。默认情况下，Windows 是 [Notepad](https://zh.wikipedia.org/wiki/记事本) ，macOS 则有 [TextEdit](<https://zh.wikipedia.org/wiki/文字編輯_(應用程式)>)。Linux 发行版有所不同；Ubuntu 下是 [gedit](https://zh.wikipedia.org/wiki/Gedit) 。
 
 对于 Web 开发，你可能可以做得比记事本或 TextEdit 更好。我们建议从 [Visual Studio Code](https://code.visualstudio.com/) 开始，它是一个免费的编辑器，提供实时预览和代码提示。
 
@@ -46,14 +46,3 @@ slug: Learn/Getting_started_with_the_web/Installing_basic_software
 有些例子需要通过 Web 服务器才能成功运行。你可以在这找到该怎么做[如何设置本地测试服务器？](/zh-CN/docs/Learn/Common_questions/set_up_a_local_testing_server)
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
-
-## 本章目录
-
-- [安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [你的网站会是什么样子？](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [文件处理](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 基础知识](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 基础知识](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 基础知识](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [发布你的网站](/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [万维网是如何工作的](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

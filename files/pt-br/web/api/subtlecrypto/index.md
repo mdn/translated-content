@@ -1,15 +1,8 @@
 ---
 title: SubtleCrypto
 slug: Web/API/SubtleCrypto
-tags:
-  - API
-  - Interface
-  - NeedsTranslation
-  - Referencia
-  - TopicStub
-  - Web Crypto API
-translation_of: Web/API/SubtleCrypto
 ---
+
 {{APIRef("Web Crypto API")}}
 
 A interface **`SubtleCrypto`** representa um conjunto de criptografias primitivas. E está disponível via propriedades {{domxref("Crypto.subtle")}} disponíveis em uma janela de contexto (via {{domxref("Window.crypto")}}).
@@ -51,13 +44,11 @@ Esta interface não herda nenhum método
 
 ## Especificações
 
-| Especificação                                                                                        | Status                                   | Comentário         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{ SpecName('Web Crypto API', '#subtlecrypto-interface', 'SubtleCrypto') }} | {{ Spec2('Web Crypto API') }} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.SubtleCrypto")}}
+{{Compat}}
 
 ## Veja também
 

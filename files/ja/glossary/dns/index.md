@@ -12,4 +12,4 @@ DNS の最も顕著な機能は、人間に優しいドメイン名 (mozilla.org
 ### 一般知識
 
 - [ドメイン名を理解する](/ja/Learn/Understanding_domain_names)
-- Wikipedia の {{Interwiki("wikipedia", "Domain_Name_System", "Domain Name System")}}
+- Wikipedia の [Domain Name System](https://ja.wikipedia.org/wiki/Domain_Name_System)

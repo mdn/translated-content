@@ -10,12 +10,12 @@ slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 注意 `AsyncFunction` 不是一個全域物件。 它可以以下程式碼獲得。
 
 ```js
-Object.getPrototypeOf(async function(){}).constructor
+const AsyncFunction = async function () {}.constructor;
 ```
 
 ## 語法
 
-```plain
+```js-nolint
 new AsyncFunction([arg1[, arg2[, ...argN]],] functionBody)
 ```
 
@@ -43,36 +43,28 @@ All arguments passed to the function are treated as the names of the identifiers
 - {{jsxref("AsyncFunction.prototype")}}
   - : 可加入屬性至所有陣列物件。
 
-## `AsyncFunction` 原型物件
-
-### 屬性
-
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', 'Properties')}}
-
-## `AsyncFunction` 實例
-
-`AsyncFunction` 實例繼承 {{jsxref("AsyncFunction.prototype")}} 的屬性和方法. 和所有的建構子一樣，變更該建構子 (constructor) 的原型物件 (prototype object)將會影響所有的 `AsyncFunction` 實例。
-
 ## 範例
 
 ### `AsyncFunction` 建構子建立一個非同步函數
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
 }
 
-var AsyncFunction = Object.getPrototypeOf(async function(){}).constructor
+var AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
 
-var a = new AsyncFunction('a',
-                          'b',
-                          'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);');
+var a = new AsyncFunction(
+  "a",
+  "b",
+  "return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);",
+);
 
-a(10, 20).then(v => {
+a(10, 20).then((v) => {
   console.log(v); // prints 30 after 4 seconds
 });
 ```

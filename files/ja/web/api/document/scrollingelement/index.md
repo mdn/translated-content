@@ -20,9 +20,7 @@ scrollElm.scrollTop = 0;
 
 ## 仕様
 
-| 仕様書                                                                                                   | 策定状況                         | コメント           |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSSOM View','#dom-document-scrollingelement','scrollingElement')}} | {{Spec2('CSSOM View')}} | Initial definition |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

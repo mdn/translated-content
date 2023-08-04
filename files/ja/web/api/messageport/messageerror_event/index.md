@@ -1,7 +1,6 @@
 ---
 title: MessagePort.onmessageerror
 slug: Web/API/MessagePort/messageerror_event
-original_slug: Web/API/MessagePort/onmessageerror
 ---
 
 {{APIRef("HTML DOM")}}
@@ -18,13 +17,11 @@ port.onmessageerror = function() { ... };
 
 ## 仕様
 
-| 仕様                                                                                                                                     | ステータス                       | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'web-messaging.html#handler-messageport-onmessageerror', 'onmessageerror')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザー実装状況
 
-{{Compat("api.MessagePort.onmessageerror")}}
+{{Compat}}
 
 ## 関連項目
 

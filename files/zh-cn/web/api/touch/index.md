@@ -5,7 +5,7 @@ slug: Web/API/Touch
 
 {{ ApiRef("Touch Events") }}
 
-**`Touch` **对象表示在触控设备上的触摸点。通常是指手指或者触控笔在触屏设备或者触摸板上的操作。
+**`Touch`** 对象表示在触控设备上的触摸点。通常是指手指或者触控笔在触屏设备或者触摸板上的操作。
 
 对象属性 {{ domxref("Touch.radiusX") }}, {{ domxref("Touch.radiusY") }}, 和 {{ domxref("Touch.rotationAngle") }} 表示用户触摸操作所作用的区域，即*触摸区域*。这些属性对于处理类似于手指触摸之类的不精确操作很有帮助。这些属性可以表示出一个尽可能匹配触控区域的椭圆形（例如用户的指尖触控）。 {{experimental_inline}}
 

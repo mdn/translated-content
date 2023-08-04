@@ -41,10 +41,7 @@ window.scrollbars.visible = !window.scrollbars.visible;
 
 ## 仕様
 
-| 仕様                                                                                                                 | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-scrollbars', 'Window.scrollbars')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-scrollbars', 'Window.scrollbars')}}     | {{Spec2('HTML5 W3C')}}     |          |
+{{Specifications}}
 
 ## 関連情報
 

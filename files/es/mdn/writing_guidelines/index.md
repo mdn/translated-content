@@ -1,18 +1,9 @@
 ---
 title: Acerca de MDN
 slug: MDN/Writing_guidelines
-tags:
-  - Colaboración
-  - Comunidad
-  - Derechos de Autor
-  - Documentación
-  - Guía
-  - Licencias
-  - MDN Meta
-translation_of: MDN/About
-original_slug: MDN/About
 ---
-{{MDNSidebar}}{{IncludeSubNav("/es/docs/MDN")}}
+
+{{MDNSidebar}}
 
 MDN Web Docs es una plataforma de aprendizaje para las tecnologías Web y el software con el que funciona la Web, incluyendo:
 
@@ -80,7 +71,7 @@ Algunos contenidos antiguos se pusieron a disposición bajo una licencia distint
 
 Si tienes alguna pregunta o inquietud sobre algo expuesto aquí, por favor contacta con [Eric Shepherd](mailto:eshepherd@mozilla.com).
 
--------------
+---
 
 Los derechos sobre las marcas comerciales, logotipos, marcas al servicio de la Fundación Mozilla, así como la apariencia de este sitio Web, no se encuentran bajo la licencia Creative Commons, están exentos. Se reconoce que son obras de autoría (como logotipos y diseños gráficos), y no están incluidos en el trabajo que se autoriza bajo esos términos. Si utilizas el texto de los documentos, y deseas también usar cualquiera de estos derechos, o si tienes cualquier otra pregunta sobre el cumplimiento de nuestros términos de licencia para esta colección, contacta con la Fundación Mozilla por este medio: [licensing@mozilla.org](mailto:licensing@mozilla.org).
 

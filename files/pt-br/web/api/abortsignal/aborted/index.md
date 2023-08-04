@@ -1,13 +1,8 @@
 ---
 title: AbortSignal.aborted
 slug: Web/API/AbortSignal/aborted
-tags:
-  - API
-  - AbortSignal
-  - Propriedade
-  - aborted
-translation_of: Web/API/AbortSignal/aborted
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 A propriedade **`aborted`** é apenas para leitura e fornece um valor {{domxref("Boolean")}} indicando se as solicitações ao objeto sinal de comunicação DOM forão abortadas (`true`) ou não (`false`).
@@ -32,18 +27,18 @@ var signal = controller.signal;
 
 // ...
 
-signal.aborted ? console.log('Pedido foi abortado') : console.log('Pedido nao foi abortado');
+signal.aborted
+  ? console.log("Pedido foi abortado")
+  : console.log("Pedido nao foi abortado");
 ```
 
 ## Especificações
 
-| Especificação                                                                            | Estado                           | Comentário        |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName('DOM WHATWG', '#dom-abortsignal-onabort', 'onabort')}} | {{Spec2('DOM WHATWG')}} | Definição Inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.AbortSignal.aborted")}}
+{{Compat}}
 
 ## Veja Também
 

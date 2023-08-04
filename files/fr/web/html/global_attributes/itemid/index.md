@@ -1,20 +1,11 @@
 ---
 title: itemid
 slug: Web/HTML/Global_attributes/itemid
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Micro-données
-  - Reference
-  - itemid
-translation_of: Web/HTML/Global_attributes/itemid
-original_slug: Web/HTML/Attributs_universels/itemid
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`itemid`** permet d'identifier un objet, au sens des microdonnées, de façon unique et globale. L'attribut `itemid` peut uniquement être défini sur les éléments qui ont un attribut {{htmlattrxref("itemscope")}} et un attribut {{htmlattrxref("itemtype")}}. De plus, un `itemid` ne peut pas être défini sur des éléments dont l'attribut `itemscope` possède un attribut `itemtype` qui définit un vocabulaire qui ne prend pas en charge les identifiants globaux tels que défini dans la spécification du vocabulaire.
+L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`itemid`** permet d'identifier un objet, au sens des microdonnées, de façon unique et globale. L'attribut `itemid` peut uniquement être défini sur les éléments qui ont un attribut [`itemscope`](/fr/docs/Web/HTML/Global_attributes#itemscope) et un attribut [`itemtype`](/fr/docs/Web/HTML/Global_attributes#itemtype). De plus, un `itemid` ne peut pas être défini sur des éléments dont l'attribut `itemscope` possède un attribut `itemtype` qui définit un vocabulaire qui ne prend pas en charge les identifiants globaux tels que défini dans la spécification du vocabulaire.
 
 La signification exacte d'un identifiant global est déterminée par la spécification du vocabulaire. C'est le rôle de cette spécification d'autoriser ou non la présence de plusieurs éléments avec le même identifiant (sur une ou plusieurs pages) et de définir les règles de gestion associées.
 
@@ -35,13 +26,17 @@ itemid="URN"
 Un élément qui décrit un livre :
 
 ```html
-<dl itemscope
-    itemtype="http://vocab.example.net/book"
-    itemid="urn:isbn:0-330-34032-8">
- <dt>Title <dd itemprop="title">The Reality Dysfunction
- <dt>Author <dd itemprop="author">Peter F. Hamilton
- <dt>Publication date
- <dd><time itemprop="pubdate" datetime="1996-01-26">26 January 1996</time> </dl>
+<dl
+  itemscope
+  itemtype="http://vocab.example.net/book"
+  itemid="urn:isbn:0-330-34032-8">
+  <dt>Title</dt>
+  <dd itemprop="title">The Reality Dysfunction</dd>
+  <dt>Author</dt>
+  <dd itemprop="author">Peter F. Hamilton</dd>
+  <dt>Publication date</dt>
+  <dd><time itemprop="pubdate" datetime="1996-01-26">26 January 1996</time></dd>
+</dl>
 ```
 
 ### Données structurées correspondantes
@@ -86,8 +81,8 @@ Un élément qui décrit un livre :
 - [Les différents attributs universels](/fr/docs/Web/HTML/Attributs_universels)
 - Les autres attributs universels relatifs aux microdonnées :
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/fr/docs/Web/HTML/Global_attributes#itemid)
+  - [`itemprop`](/fr/docs/Web/HTML/Global_attributes#itemprop)
+  - [`itemref`](/fr/docs/Web/HTML/Global_attributes#itemref)
+  - [`itemscope`](/fr/docs/Web/HTML/Global_attributes#itemscope)
+  - [`itemtype`](/fr/docs/Web/HTML/Global_attributes#itemtype)

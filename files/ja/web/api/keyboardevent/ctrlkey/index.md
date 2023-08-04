@@ -1,6 +1,8 @@
 ---
 title: KeyboardEvent.ctrlKey
 slug: Web/API/KeyboardEvent/ctrlKey
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef("UI Events")}}
@@ -14,26 +16,21 @@ slug: Web/API/KeyboardEvent/ctrlKey
 ## 例
 
 ```js
-<html>
-<head>
-<title>ctrlKey の例</title>
-
-<script type="text/javascript">
-
-function showChar(e){
-  alert(
-    "Key Pressed: " + e.key + "\n"
-    + "CTRL key pressed: " + e.ctrlKey + "\n"
-  );
-}
-
-</script>
-</head>
-
-<body onkeypress="showChar(event);">
-<p>CTRL キーを押したまま、または押さずに、任意の文字キーを押してください。<br />
-また、 SHIFT キーと CTRL キーを同時に使用することもできます。</p>
-</body>
+<html lang="ja">
+  <head>
+    <title>ctrlKey の例</title>
+    <script>
+      function showChar(e) {
+        alert(`Key Pressed: ${e.key}\nCTRL key pressed: ${e.ctrlKey}\n`);
+      }
+    </script>
+  </head>
+  <body onkeypress="showChar(event);">
+    <p>
+      CTRL キーを押したまま、または押さずに、任意の文字キーを押してください。<br />
+      また、 SHIFT キーと CTRL キーを同時に使用することもできます。
+    </p>
+  </body>
 </html>
 ```
 

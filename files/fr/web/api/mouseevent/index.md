@@ -1,12 +1,11 @@
 ---
 title: MouseEvent
 slug: Web/API/MouseEvent
-translation_of: Web/API/MouseEvent
 ---
 
 {{APIRef("DOM Events")}}
 
-L'interface **`MouseEvent`** représente les événements qui se produisent lors d'une interaction de l'utilisateur avec un appareil de pointage (tel qu'une souris). Les événements communs utilisant cette interface incluent {{event("click")}}, {{event("dblclick")}}, [`mouseup`](/fr/docs/Web/API/Element/mouseup_event) et [`mousedown`](/fr/docs/Web/API/Element/mousedown_event).
+L'interface **`MouseEvent`** représente les événements qui se produisent lors d'une interaction de l'utilisateur avec un appareil de pointage (tel qu'une souris). Les événements communs utilisant cette interface incluent [`click`](/fr/docs/Web/API/Element/click_event), [`dblclick`](/fr/docs/Web/API/Element/dblclick_event), [`mouseup`](/fr/docs/Web/API/Element/mouseup_event) et [`mousedown`](/fr/docs/Web/API/Element/mousedown_event).
 
 `MouseEvent` dérive de {{domxref("UIEvent")}}, qui lui-même est issu d'{{domxref("Event")}}. Bien que la méthode {{domxref ("MouseEvent.initMouseEvent()")}} soit conservée à des fins de compatibilité descendante, la création d'un objet `MouseEvent` doit être effectuée à l'aide du constructeur {{domxref ("MouseEvent.MouseEvent","MouseEvent()")}}.
 
@@ -119,11 +118,11 @@ function simulateClick() {
   var evt = new MouseEvent("click", {
     bubbles: true,
     cancelable: true,
-    view: window
+    view: window,
   });
   var cb = document.getElementById("checkbox"); //élément pour cliquer
   var canceled = !cb.dispatchEvent(evt);
-  if(canceled) {
+  if (canceled) {
     // Un gestionnaire appelé preventDefault
     alert("canceled");
   } else {
@@ -131,12 +130,14 @@ function simulateClick() {
     alert("not canceled");
   }
 }
-document.getElementById("button").addEventListener('click', simulateClick);
+document.getElementById("button").addEventListener("click", simulateClick);
 ```
 
 ```html
-<p><label><input type="checkbox" id="checkbox"> Checked</label>
-<p><button id="button">Click me</button>
+<p>
+  <label><input type="checkbox" id="checkbox" /> Checked</label>
+</p>
+<p><button id="button">Click me</button></p>
 ```
 
 Cliquez sur le bouton pour voir comment l'exemple fonctionne :

@@ -33,11 +33,11 @@ rabbitDownAnimation.effect.id = "rabbitGo";
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 相关文档
+## 参见
 
 - [KeyframeEffect Interface](/zh-CN/docs/Web/API/KeyframeEffect)
 - [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)

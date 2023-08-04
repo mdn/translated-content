@@ -1,8 +1,8 @@
 ---
 title: Screen.lockOrientation
 slug: Web/API/Screen/lockOrientation
-translation_of: Web/API/Screen/lockOrientation
 ---
+
 {{APIRef("CSSOM View")}}{{Deprecated_header}}
 
 `lockOrientation` 함수는 지정된 방향으로 화면을 고정시킨다.
@@ -51,11 +51,11 @@ if (window.screen.mozLockOrientation("landscape-primary")) {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -1,17 +1,8 @@
 ---
 title: Parâmetros Predefinidos
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-tags:
-  - ECMA2015
-  - ECMAScript6
-  - Function
-  - Functions
-  - Função
-  - Funções
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Functions/Default_parameters
-original_slug: Web/JavaScript/Reference/Functions/Parametros_Predefinidos
 ---
+
 {{jsSidebar("Functions")}}
 
 **Os parâmetros predefinidos de uma função** permitem que parâmetros regulares sejam inicializados com com valores iniciais caso `undefined` ou nenhum valor seja passado.
@@ -162,7 +153,7 @@ withoutDefaults.call({value:"=^_^="});
 
 ### Funções definidadas dentro do corpo da função
 
-Introduzido no Gecko 33 {{geckoRelease(33)}}. Funções declaradas no corpo da função não podem ser referenciada dentro de parâmetos padrão e lançará um {{jsxref("ReferenceError")}} (atualmente um {{jsxref("TypeError")}} no SpiderMonkey, veja {{bug(1022967)}}). Parâmetros padrão são sempre executados primeiro, declarações de funções dentro do corpo de outra função são avaliadas depois.
+Introduzido no Gecko 33. Funções declaradas no corpo da função não podem ser referenciada dentro de parâmetos padrão e lançará um {{jsxref("ReferenceError")}} (atualmente um {{jsxref("TypeError")}} no SpiderMonkey, veja [Erro do Firefox 1022967](https://bugzil.la/1022967)). Parâmetros padrão são sempre executados primeiro, declarações de funções dentro do corpo de outra função são avaliadas depois.
 
 ```js
 // Não funciona! Throws ReferenceError.
@@ -173,7 +164,7 @@ function f(a = go()) {
 
 ### Parâmetros sem valor padrão depois de parâmetros com valores padrão
 
-Antes do Gecko 26 {{geckoRelease(26)}}, o seguinte código resultaria em um {{jsxref("SyntaxError")}}. Isto foi corrigido no {{bug(777060)}} e funciona como esperado em versões posteriores:
+Antes do Gecko 26, o seguinte código resultaria em um {{jsxref("SyntaxError")}}. Isto foi corrigido no [Erro do Firefox 777060](https://bugzil.la/777060) e funciona como esperado em versões posteriores:
 
 ```js
 function f(x=1, y) {

@@ -1,23 +1,15 @@
 ---
 title: <embed>
 slug: Web/HTML/Element/embed
-tags:
-  - HTML
-  - HTML 포함된 컨텐츠
-  - HTML5
-  - 레퍼런스
-  - 요소
-  - 웹
-translation_of: Web/HTML/Element/embed
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<embed>` 요소**는 외부 어플리케이션이나 대화형 컨텐츠와의 통합점을 나타냅니다.
 
 {{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
 
 The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) and send us a pull request.
-
 
 - **[컨텐츠 범주](/ko/docs/HTML/Content_categories)** [플로우 컨텐츠](/ko/docs/HTML/Content_categories#Flow_content), [구문 컨텐츠](/ko/docs/HTML/Content_categories#Phrasing_content), 포함된 컨텐츠, 대화형 컨텐츠, palpable 컨텐츠.
 - **허용된 컨텐츠** 없음. 이것은 {{Glossary("empty element")}}.
@@ -27,7 +19,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 ## 속성
 
-이 요소는 [전역 속성](/ko/docs/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 속성](/ko/docs/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("height")}}
   - : 리소스의 표시될 높이 길이를 CSS 픽셀로 지정
@@ -41,7 +33,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 ## 예제
 
 ```html
-<embed type="video/quicktime" src="movie.mov" width="640" height="480">
+<embed type="video/quicktime" src="movie.mov" width="640" height="480" />
 ```
 
 ## 명세
@@ -50,7 +42,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.embed")}}
+{{Compat}}
 
 ## 같이 보기
 

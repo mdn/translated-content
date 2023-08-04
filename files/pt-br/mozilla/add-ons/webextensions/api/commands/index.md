@@ -1,16 +1,16 @@
 ---
 title: commands
 slug: Mozilla/Add-ons/WebExtensions/API/commands
-translation_of: Mozilla/Add-ons/WebExtensions/API/commands
 ---
+
 {{AddonSidebar}}
 
-Escuta por usuário executando comandos que você registrou usando o [`commands` manifest.json key](/en-US/Add-ons/WebExtensions/manifest.json/commands).
+Escuta por usuário executando comandos que você registrou usando o [`commands` manifest.json key](/pt-BR/Add-ons/WebExtensions/manifest.json/commands).
 
 ## Tipos
 
 - {{WebExtAPIRef("commands.Command")}}
-  - : Objeto representando um comando. Contém a informação especificada no comando [`commands` manifest.json key](/en-US/Add-ons/WebExtensions/manifest.json/commands).
+  - : Objeto representando um comando. Contém a informação especificada no comando [`commands` manifest.json key](/pt-BR/Add-ons/WebExtensions/manifest.json/commands).
 
 ## Funções
 

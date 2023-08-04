@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.fillRect()
 slug: Web/API/CanvasRenderingContext2D/fillRect
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Referencia
-  - metodo
-translation_of: Web/API/CanvasRenderingContext2D/fillRect
 ---
+
 {{APIRef}}
 
 O método **`CanvasRenderingContext2D.fillRect()`** da API Canvas 2D desenha um retângulo preenchido na posição _(x, y)_, no qual o tamanho é determinado pela _width_ (largura) e pela _height_ (altura), e cujo o estilo é determinado pelo atributo `fillStyle`.
@@ -45,9 +39,9 @@ Isto é só um simples trecho de código que usa o método `fillRect`.
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 
 // preenche todo o canvas
@@ -64,7 +58,8 @@ Edite o código abaixo e veja as alterações instantâneas no canvas:
 </div>
 <textarea id="code" class="playable-code">
 ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);</textarea>
+ctx.fillRect(10, 10, 100, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -80,14 +75,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -97,13 +92,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Especificações
 
-| Especificação                                                                                                                                | Estado                           | Comentário |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fillrect", "CanvasRenderingContext2D.fillRect")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CanvasRenderingContext2D.fillRect")}}
+{{Compat}}
 
 ## Veja também
 

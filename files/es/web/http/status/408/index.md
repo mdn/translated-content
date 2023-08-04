@@ -1,8 +1,8 @@
 ---
 title: 408 Request Timeout
 slug: Web/HTTP/Status/408
-translation_of: Web/HTTP/Status/408
 ---
+
 {{HTTPSidebar}}
 
 El código de estado de la respuesta **`408 Request Timeout`** del Protocolo de Transferencia de Hipertexto (HTTP) significa que el servidor desea cerrar esta conexión no usada. Se envía a una conexión inactiva por algunos servidores, incluso sin solicitud previa por parte del cliente.
@@ -21,8 +21,8 @@ Esta respuesta es usada mucho más desde que algunos navegadores, como Chrome, F
 
 ## Especificaciones
 
-| Especificación                                                   | Título                                                                      |
-| ---------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Especificación                                   | Título                                                                      |
+| ------------------------------------------------ | --------------------------------------------------------------------------- |
 | {{RFC("7231", "408 Request Timeout" , "6.5.7")}} | Protocolo de Transferencia de HiperTexto (HTTP/1.1): Semánticas y Contenido |
 
 ## Ver también

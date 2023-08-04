@@ -1,11 +1,8 @@
 ---
 title: template
 slug: Web/XSLT/Element/template
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/template
-original_slug: Web/XSLT/template
 ---
+
 {{ XsltRef() }}
 
 `<xsl:template>` 요소는 출력 생성 템플릿을 정의합니다. 이 요소는 match 속성이나 name 속성 집합이 있어야 합니다.
@@ -14,12 +11,12 @@ original_slug: Web/XSLT/template
 
 ```
 <xsl:template
-	match=PATTERN
-	name=NAME
-	mode=NAME
-	priority=NUMBER>
-	<xsl:param> [optional]
-	TEMPLATE
+  match=PATTERN
+  name=NAME
+  mode=NAME
+  priority=NUMBER>
+  <xsl:param> [optional]
+  TEMPLATE
 </xsl:template>
 ```
 

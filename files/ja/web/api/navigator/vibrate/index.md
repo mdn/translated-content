@@ -29,9 +29,7 @@ window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,3
 
 ## 仕様書
 
-| 仕様書                                   | 状態                                 | 備考                                                               |
-| ---------------------------------------- | ------------------------------------ | ------------------------------------------------------------------ |
-| {{SpecName('Vibration API')}} | {{Spec2('Vibration API')}} | Linked to spec is the latest editor's draft; W3C version is a REC. |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

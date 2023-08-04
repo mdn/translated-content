@@ -1,17 +1,8 @@
 ---
 title: Date.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototipo
-  - Prototype
-  - Referencia
-  - data
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/valueOf
 ---
+
 {{JSRef}}
 
 O método **`valueOf()`** retorna o valor primitivo do objeto {{jsxref("Date")}}.
@@ -42,13 +33,13 @@ Este método é geralmente chamado internamente pelo JavaScript e não explícit
 
 ```js
 var x = new Date(56, 6, 17);
-var myVar = x.valueOf();      // atribui -424713600000 to myVar
+var myVar = x.valueOf(); // atribui -424713600000 to myVar
 ```
 
 ## Especificações
 
-| Especificação                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ |
+| Especificação                                                                    |
+| -------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-date.prototype.valueof', 'Date.prototype.valueOf')}} |
 
 ## Compatibilidade com navegadores

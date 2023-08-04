@@ -1,5 +1,5 @@
 ---
-title: ':active'
+title: ":active"
 slug: Web/CSS/:active
 ---
 
@@ -22,7 +22,9 @@ a:active {
 
 ## 構文
 
-{{csssyntax}}
+```
+:active
+```
 
 ## 例
 

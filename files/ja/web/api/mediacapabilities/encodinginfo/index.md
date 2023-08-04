@@ -1,7 +1,6 @@
 ---
 title: MediaCapabilitiesInfo
 slug: Web/API/MediaCapabilities/encodingInfo
-original_slug: Web/API/MediaCapabilitiesInfo
 ---
 
 {{APIRef("Media Capabilities API")}}
@@ -43,13 +42,11 @@ navigator.mediaCapabilities.decodingInfo(mediaConfig).then(result => { // result
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                                     | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('Media Capabilities','#media-capabilities-info','MediaCapabilitiesInfo')}} | {{Spec2('Media Capabilities')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaCapabilitiesInfo")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,17 +1,17 @@
 ---
 title: Vary
 slug: Web/HTTP/Headers/Vary
-translation_of: Web/HTTP/Headers/Vary
 ---
+
 {{HTTPSidebar}}
 
 El encabezado de respuesta **`Vary`** HTTP determina como hacer coincidir los encabezados de las solicitudes futuras para decidir si se puede utilizar una respuesta almacenada en caché en lugar de solicitar una nueva desde el servidor de origen. Esto es usado por el servidor para indicar cuales encabezados usa cuando selecciona una representación de recursos en un algoritmo [content negotiation](/es/docs/Web/HTTP/Content_negotiation) .
 
 El encabezado `Vary` se debe establecer en una respuesta {{HTTPStatus("304")}} `Not Modified` exactamente igual que habría sido fijado en una respuesta equivalente {{HTTPStatus("200")}} `OK`.
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## Sintaxis
 
@@ -39,13 +39,11 @@ Vary: User-Agent
 
 ## Especificaciones
 
-| Specification                                | Title                                                         |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Vary", "7.1.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Vary")}}
+{{Compat}}
 
 ## Notas de Compatibilidad
 

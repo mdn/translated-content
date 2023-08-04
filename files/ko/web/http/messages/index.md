@@ -1,15 +1,8 @@
 ---
 title: HTTP 메시지
 slug: Web/HTTP/Messages
-tags:
-  - Guide
-  - HTTP
-  - HTTP/1.1
-  - HTTP/2
-  - Response
-  - request
-translation_of: Web/HTTP/Messages
 ---
+
 {{HTTPSidebar}}
 
 HTTP 메시지는 서버와 클라이언트 간에 데이터가 교환되는 방식입니다. 메시지 타입은 두 가지가 있습니다. 요청(_request)은_ 클라이언트가 서버로 전달해서 서버의 액션이 일어나게끔 하는 메시지고, 응답(*response)은 요청*에 대한 서버의 답변입니다.
@@ -18,20 +11,20 @@ HTTP 메시지는 ASCII로 인코딩된 텍스트 정보이며 여러 줄로 되
 
 웹 개발자, 또는 웹 마스터가 손수 HTTP 메시지를 텍스트로 작성하는 경우는 드뭅니다. 대신에 소프트웨어, 브라우저, 프록시, 또는 웹 서버가 그 일을 합니다. HTTP 메시지는 설정 파일(프록시 혹은 서버의 경우), API(브라우저의 경우), 혹은 다른 인터페이스를 통해 제공됩니다.
 
-![From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent.](https://mdn.mozillademos.org/files/13825/HTTPMsg2.png)
+![사용자, 스크립트 또는 서버가 생성한 이벤트에서 HTTP/1.x msg가 생성되며, HTTP/2가 사용 중인 경우 HTTP/2 스트림으로 이진 프레임된 다음 전송됩니다.](httpmsg2.png)
 
 HTTP/2의 이진 프레이밍 메커니즘(binary framing mechanism)은 사용 중인 API나 설정 파일 등을 변경하지 않아도 되도록 설계 되었기 때문에, 사용자가 보고 이해하기 쉽습니다.
 
 HTTP 요청과 응답의 구조는 서로 닮았으며, 그 구조는 다음과 같습니다.
 
-1.  시작 줄(start-line)에는 실행되어야 할 요청, 또은 요청 수행에 대한 성공 또는 실패가 기록되어 있습니다. 이 줄은 항상 한 줄로 끝납니다.
-2.  옵션으로 HTTP 헤더 세트가 들어갑니다. 여기에는 요청에 대한 설명, 혹은 메시지 본문에 대한 설명이 들어갑니다.
-3.  요청에 대한 모든 메타 정보가 전송되었음을 알리는 빈 줄(blank line)이 삽입됩니다.
-4.  요청과 관련된 내용(HTML 폼 콘텐츠 등)이 옵션으로 들어가거나, 응답과 관련된 문서(document)가 들어갑니다. 본문의 존재 유무 및 크기는 첫 줄과 HTTP 헤더에 명시됩니다.
+1. 시작 줄(start-line)에는 실행되어야 할 요청, 또은 요청 수행에 대한 성공 또는 실패가 기록되어 있습니다. 이 줄은 항상 한 줄로 끝납니다.
+2. 옵션으로 HTTP 헤더 세트가 들어갑니다. 여기에는 요청에 대한 설명, 혹은 메시지 본문에 대한 설명이 들어갑니다.
+3. 요청에 대한 모든 메타 정보가 전송되었음을 알리는 빈 줄(blank line)이 삽입됩니다.
+4. 요청과 관련된 내용(HTML 폼 콘텐츠 등)이 옵션으로 들어가거나, 응답과 관련된 문서(document)가 들어갑니다. 본문의 존재 유무 및 크기는 첫 줄과 HTTP 헤더에 명시됩니다.
 
-HTTP 메시지의 시작 줄과 HTTP 헤더를 묶어서 요청 _헤드(head)라고 부르며_, 이와 반대로 HTTP 메시지의 페이로드는 *본문(body)*이라고 합니다.
+HTTP 메시지의 시작 줄과 HTTP 헤더를 묶어서 **요청 헤드(head)** 라고 부르며, 이와 반대로 HTTP 메시지의 페이로드는 *본문(body)*이라고 합니다.
 
-![Requests and responses share a common structure in HTTP](https://mdn.mozillademos.org/files/13827/HTTPMsgStructure2.png)
+![요청과 응답은 HTTP에서 공통 구조를 공유합니다](httpmsgstructure2.png)
 
 ## HTTP 요청
 
@@ -39,19 +32,18 @@ HTTP 메시지의 시작 줄과 HTTP 헤더를 묶어서 요청 _헤드(head)라
 
 HTTP 요청은 서버가 특정 동작을 취하게끔 만들기 위해 클라이언트에서 전송하는 메시지입니다. 시작 줄은 다음과 같이 세 가지 요소로 이루어져 있습니다.
 
-1.  첫번째는 _[HTTP 메서드](/ko/docs/Web/HTTP/Methods)로_, 영어 동사({{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}},{{HTTPMethod("POST")}}) 혹은 명사({{HTTPMethod("HEAD")}}, {{HTTPMethod("OPTIONS")}})를 사용해 서버가 수행해야 할 동작을 나타냅니다. 예를 들어, `GET`은 리소스를 클라이언트로 가져다 달라는 것을 뜻하며, `POST`는 데이터가 서버로 들어가야 함을 의미(리소스를 새로 만들거나 수정하기 위해, 또는 클라이언트로 돌려 보낼 임시 문서를 생성하기 위해)합니다.
-2.  두번째로 오는 요청 타겟은 주로 {{glossary("URL")}}, 또는 프로토콜, 포트, 도메인의 절대 경로로 나타낼 수도 있으며 이들은 요청 컨텍스트에 의해 특정지어 집니다. 요청 타겟 포맷은 HTTP 메소드에 따라 달라집니다. 포맷에는 다음과 같은 것들이 있습니다.
+1. 첫번째는 _[HTTP 메서드](/ko/docs/Web/HTTP/Methods)로_, 영어 동사({{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}},{{HTTPMethod("POST")}}) 혹은 명사({{HTTPMethod("HEAD")}}, {{HTTPMethod("OPTIONS")}})를 사용해 서버가 수행해야 할 동작을 나타냅니다. 예를 들어, `GET`은 리소스를 클라이언트로 가져다 달라는 것을 뜻하며, `POST`는 데이터가 서버로 들어가야 함을 의미(리소스를 새로 만들거나 수정하기 위해, 또는 클라이언트로 돌려 보낼 임시 문서를 생성하기 위해)합니다.
+2. 두번째로 오는 요청 타겟은 주로 {{glossary("URL")}}, 또는 프로토콜, 포트, 도메인의 절대 경로로 나타낼 수도 있으며 이들은 요청 컨텍스트에 의해 특정지어 집니다. 요청 타겟 포맷은 HTTP 메소드에 따라 달라집니다. 포맷에는 다음과 같은 것들이 있습니다.
 
-    - origin 형식: 끝에 `'?'`와 쿼리 문자열이 붙는 절대 경로입니다. 이는 가장 일반적인 형식이며, `GET`, `POST`, `HEAD`, `OPTIONS` 메서드와 함께 사용합니다.
-      `POST / HTTP 1.1 GET /background.png HTTP/1.0 HEAD /test.html?query=alibaba HTTP/1.1 OPTIONS /anypage.html HTTP/1.0`
-    - _absolute 형식: 완전한 URL 형식입니다._ 프록시에 연결하는 경우 대부분 `GET`과 함께 사용됩니다.
-      `GET http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1`
-    - _authority 형식:_ 도메인 이름 및 옵션 포트(`':'`가 앞에 붙습니다)로 이루어진 URL의 authority component 입니다.​​​​ HTTP 터널을 구축하는 경우에만 `CONNECT`와 함께 사용할 수 있습니다.
-      `CONNECT developer.mozilla.org:80 HTTP/1.1`
-    - _asterisk 형식:_ `OPTIONS`와 함께 별표(`'*'`) 하나로 간단하게 서버 전체를 나타냅니다. ​​​​​
-      `OPTIONS * HTTP/1.1`
+   - origin 형식: 끝에 `'?'`와 쿼리 문자열이 붙는 절대 경로입니다. 이는 가장 일반적인 형식이며, `GET`, `POST`, `HEAD`, `OPTIONS` 메서드와 함께 사용합니다.
+     `POST / HTTP 1.1 GET /background.png HTTP/1.0 HEAD /test.html?query=alibaba HTTP/1.1 OPTIONS /anypage.html HTTP/1.0`
+   - _absolute 형식: 완전한 URL 형식입니다._ 프록시에 연결하는 경우 대부분 `GET`과 함께 사용됩니다.
+     `GET http://developer.mozilla.org/ko/docs/Web/HTTP/Messages HTTP/1.1`
+   - _authority 형식:_ 도메인 이름 및 옵션 포트(`':'`가 앞에 붙습니다)로 이루어진 URL의 authority component 입니다. HTTP 터널을 구축하는 경우에만 `CONNECT`와 함께 사용할 수 있습니다.
+     `CONNECT developer.mozilla.org:80 HTTP/1.1`
+   - _asterisk 형식:_ `OPTIONS`와 함께 별표(`'*'`) 하나로 간단하게 서버 전체를 나타냅니다. `OPTIONS * HTTP/1.1`
 
-3.  마지막으로 ​​​​*HTTP 버전이 들어갑니다. 메시지의 남은* 구조를 결정하기 때문에, 응답 메시지에서 써야 할 HTTP 버전을 알려주는 역할을 합니다.
+3. 마지막으로 HTTP 버전이 들어갑니다. 메시지의 남은 구조를 결정하기 때문에, 응답 메시지에서 써야 할 HTTP 버전을 알려주는 역할을 합니다.
 
 ### 헤더
 
@@ -63,7 +55,7 @@ HTTP 요청은 서버가 특정 동작을 취하게끔 만들기 위해 클라�
 - Request 헤더: {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Accept-Type")}}와 같은 헤더는 요청의 내용을 좀 더 구체화 시키고({{HTTPHeader("Accept-Language")}}), 컨텍스를 제공하기도 하며({{HTTPHeader("Referer")}}), 조건에 따른 제약 사항을 가하기도 하면서({{HTTPHeader("If-None")}}) 요청 내용을 수정합니다.
 - Entity 헤더: {{HTTPHeader("Content-Length")}}와 같은 헤더는 요청 본문에 적용됩니다. 당연히 요청 내에 본문이 없는 경우 entity 헤더는 전송되지 않습니다.
 
-![Example of headers in an HTTP request](https://mdn.mozillademos.org/files/13821/HTTP_Request_Headers2.png)
+![HTTP 요청의 헤더 예시](http_request_headers3.png)
 
 ### 본문
 
@@ -78,11 +70,11 @@ HTTP 요청은 서버가 특정 동작을 취하게끔 만들기 위해 클라�
 
 ### 상태 줄
 
-HTTP 응답의 시작 줄은 *상태 줄(status line)*이라고 불리며, 다음과 같은 정보를 가지고 있습니다.
+HTTP 응답의 시작 줄은 _상태 줄(status line)_ 이라고 불리며, 다음과 같은 정보를 가지고 있습니다.
 
-1.  _프로토콜 버전:_ 보통 `HTTP/1.1`입니다.
-2.  상태 코드: 요청의 성공 여부를 나타냅니다. {{HTTPStatus("200")}}, {{HTTPStatus("404")}} 혹은 {{HTTPStatus("302")}}입니다.
-3.  상태 텍스트: 짧고 간결하게 상태 코드에 대한 설명을 글로 나타내어 사람들이 HTTP 메시지를 이해할 때 도움이 됩니다.
+1. 프로토콜 버전: 보통 `HTTP/1.1`입니다.
+2. 상태 코드: 요청의 성공 여부를 나타냅니다. {{HTTPStatus("200")}}, {{HTTPStatus("404")}} 혹은 {{HTTPStatus("302")}}입니다.
+3. 상태 텍스트: 짧고 간결하게 상태 코드에 대한 설명을 글로 나타내어 사람들이 HTTP 메시지를 이해할 때 도움이 됩니다.
 
 상태 줄은 일반적으로 `HTTP/1.1 404 Not Found.` 같이 생겼습니다.
 
@@ -96,7 +88,7 @@ HTTP 응답의 시작 줄은 *상태 줄(status line)*이라고 불리며, 다�
 - Response 헤더: {{HTTPHeader("Vary")}}와 {{HTTPHeader("Accept-Ranges")}}와 같은 헤더는 상태 줄에 미처 들어가지 못했던 서버에 대한 추가 정보를 제공합니다.
 - Entity 헤더: {{HTTPHeader("Content-Length")}}와 같은 헤더는 요청 본문에 적용됩니다. 당연히 요청 내에 본문이 없는 경우 entity 헤더는 전송되지 않습니다.
 
-![Example of headers in an HTTP response](https://mdn.mozillademos.org/files/13823/HTTP_Response_Headers2.png)
+![HTTP 응답의 헤더 예제](http_response_headers3.png)
 
 ### 본문
 
@@ -118,7 +110,7 @@ HTTP/1.x 메시지는 성능상의 결함을 몇가지 내포하고 있습니다
 
 HTTP/2에서는 추가적인 단계가 도입되었습니다. HTTP/1.x 메시지를 프레임으로 나누어 스트림에 끼워 넣는 것입니다. 데이터와 헤더 프레임이 분리 되었기 때문에 헤더를 압축할 수 있습니다. 스트림 여러개를 하나로 묶을 수 있어서(이러한 과정을 멀티플렉싱이라 합니다), 기저에서 수행되는 TCP 연결이 좀 더 효율적이게 이루어집니다.
 
-![HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization.](https://mdn.mozillademos.org/files/13819/Binary_framing2.png)
+![HTTP/2는 HTTP 메시지를 프레임(단일 스트림의 일부)으로 분할하도록 수정하면 더 많은 최적화를 할 수 있습니다.](binary_framing2.png)
 
 이제 웹 개발자 입장에서는 HTTP 프레임을 매우 쉽게 살펴볼 수 있게 되었습니다. HTTP 프레임은 HTTP/2에서 추가된 단계이며, HTTP/1.1 메시지와 그 기저를 이루는 전송 프로토콜 사이를 메워주는 존재입니다. 그렇다고 해서 HTTP 프레임 때문에 개발자들이 API를 바꿔야 할 필요는 없습니다. 브라우저와 서버 둘 다 모두 HTTP 프레임을 받아 들일 수 있다면, HTTP/2가 활성화 된 후에 사용될 것입니다.
 

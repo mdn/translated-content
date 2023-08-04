@@ -1,8 +1,8 @@
 ---
 title: Document.write()
 slug: Web/API/Document/write
-translation_of: Web/API/Document/write
 ---
+
 {{ ApiRef("DOM") }}
 
 {{domxref("document.open()")}}에 의해 열린 문서 스팀에 텍스트 스트링을 적는다.
@@ -24,24 +24,22 @@ document.write(markup);
 
 ```html
 <html>
+  <head>
+    <title>write example</title>
 
-<head>
-  <title>write example</title>
+    <script>
+      function newContent() {
+        alert("load new content");
+        document.open();
+        document.write("<h1>Out with the old - in with the new!</h1>");
+        document.close();
+      }
+    </script>
+  </head>
 
-  <script>
-    function newContent() {
-      alert("load new content");
-      document.open();
-      document.write("<h1>Out with the old - in with the new!</h1>");
-      document.close();
-    }
-  </script>
-</head>
-
-<body onload="newContent();">
-  <p>Some original document content.</p>
-</body>
-
+  <body onload="newContent();">
+    <p>Some original document content.</p>
+  </body>
 </html>
 ```
 
@@ -53,7 +51,7 @@ If the `document.write()` call is embedded within an inlined HTML `<script>` tag
 
 ```html
 <script>
-  document.write("<h1>Main title</h1>")
+  document.write("<h1>Main title</h1>");
 </script>
 ```
 
@@ -65,12 +63,9 @@ If the `document.write()` call is embedded within an inlined HTML `<script>` tag
 
 > **참고:** Starting in 55, Chrome will not execute `<script>` elements injected via `document.write()` in case of an HTTP cache miss for users on a 2G connection.
 
-## 사양
+## 명세서
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName("HTML WHATWG", "#dom-document-write", "document.write(...)")}} | {{Spec2("HTML WHATWG")}} |         |
-| {{SpecName("DOM2 HTML", "html.html#ID-75233634", "document.write(...)")}} | {{Spec2("DOM2 HTML")}}     |         |
+{{Specifications}}
 
 ## 브라우저 호환성
 

@@ -1,15 +1,9 @@
 ---
-title: '<p> : l''élément paragraphe'
+title: "<p> : l'élément paragraphe"
 slug: Web/HTML/Element/p
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/p
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<p>`** représente un paragraphe de texte. Les paragraphes sont généralement représentés comme des blocs et séparés par un espace vertical, leur première ligne est également parfois indentée. Les paragraphes sont [des éléments blocs](/fr/docs/Web/HTML/Éléments_en_bloc).
 
@@ -31,15 +25,12 @@ Cet élément, comme les autres éléments HTML, inclut [les attributs universel
 
 ```html
 <p>
-  Premier paragraphe du texte.
-  J'aime les licornes beaucoup
-  beaucoup beaucoup.
+  Premier paragraphe du texte. J'aime les licornes beaucoup beaucoup beaucoup.
 </p>
 
 <p>
-  Deuxième paragraphe du texte.
-  Et si j'en avais une apprivoisée
-  je serais très contente.
+  Deuxième paragraphe du texte. Et si j'en avais une apprivoisée je serais très
+  contente.
 </p>
 ```
 
@@ -93,7 +84,7 @@ p {
       <td>
         La balise de début est obligatoire. La balise de fin peut être absente
         si l'élément {{HTMLElement("p")}} est immédiatement suivi d'un
-        élément  {{HTMLElement("address")}},
+        élément {{HTMLElement("address")}},
         {{HTMLElement("article")}}, {{HTMLElement("aside")}},
         {{HTMLElement("blockquote")}}, {{HTMLElement("div")}},
         {{HTMLElement("dl")}}, {{HTMLElement("fieldset")}},

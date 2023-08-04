@@ -1,7 +1,6 @@
 ---
 title: translate3d()
 slug: Web/CSS/transform-function/translate3d
-original_slug: Web/CSS/transform-function/translate3d()
 ---
 
 {{CSSRef}}
@@ -98,7 +97,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Using_a_single_axis_translation", 250, 250)}}
+{{EmbedLiveSample("使用單軸平移", 250, 250)}}
 
 ### Combining z-axis and x-axis translation
 

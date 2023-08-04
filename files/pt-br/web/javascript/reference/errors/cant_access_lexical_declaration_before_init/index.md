@@ -1,12 +1,8 @@
 ---
-title: 'ReferenceError: can''t access lexical declaration`X'' before initialization'
+title: "ReferenceError: can't access lexical declaration`X' before initialization"
 slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
-tags:
-  - Erros
-  - JavaScript
-  - ReferenceError
-translation_of: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensagem
@@ -21,7 +17,7 @@ ReferenceError: 'x' is not defined (Chrome)
 
 {{jsxref("ReferenceError")}}
 
-## O que está errado:
+## O que está errado
 
 Uma variável léxica foi acessada antes de ser inicializada. Isso acontece dentro de qualquer declaração de bloco, quando as declarações `let` ou `const` são acessadas antes de serem definidas.
 

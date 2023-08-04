@@ -1,8 +1,8 @@
 ---
 title: document.body
 slug: Web/API/Document/body
-translation_of: Web/API/Document/body
 ---
+
 {{APIRef("DOM")}}
 
 ### Resumen
@@ -12,8 +12,8 @@ Devuelve el nodo del `<body>` o el nodo del `<frameset>` del documento.
 ### Sintaxis
 
 ```js
-objRef = document.body
-document.body = objRef
+objRef = document.body;
+document.body = objRef;
 ```
 
 ### Ejemplo

@@ -1,9 +1,8 @@
 ---
 title: RTCPeerConnection.ontrack
 slug: Web/API/RTCPeerConnection/track_event
-translation_of: Web/API/RTCPeerConnection/ontrack
-original_slug: Web/API/RTCPeerConnection/ontrack
 ---
+
 {{APIRef("WebRTC")}}
 
 {{domxref("RTCPeerConnection")}} 속성인 **`ontrack`**은 {{domxref("RTCPeerConnection")}}에 트랙이 등록됨을 알려주는 {{event("track")}}가 발생하면 호출되는 함수를 지정하는 {{event("Event_handlers", "event handler")}}입니다.
@@ -25,7 +24,7 @@ RTCPeerConnection.ontrack = eventHandler;
 아래의 예시는 [Signaling and video calling](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling) 문서에 나온 코드의 일부입니다. 이 코드는 들어오는 트랙을 {{HTMLElement("video")}}에 연결해서 해당 비디오를 보여줄 수 있도록 합니다.
 
 ```js
-pc.ontrack = function(event) {
+pc.ontrack = function (event) {
   document.getElementById("received_video").srcObject = event.streams[0];
   document.getElementById("hangup-button").disabled = false;
 };
@@ -33,11 +32,9 @@ pc.ontrack = function(event) {
 
 첫 줄에 나온 `ontrack` 이벤트 핸들러는 들어오는 트랙의 첫 스트림을 가져다가 {{htmlattrxref("srcObject", "video")}} 속성에 지정합니다. 이렇게 함으로써 비디오의 스트림을 해당 요소에 연결하고, 유저에게 보여 줄 수 있게됩니다. 두 번째줄에서는 "통화 종료" 버튼을 활성화하여 유저가 통화를 종료 할 수 있도록 해줍니다.
 
-## 사양서
+## 명세서
 
-| 사양서                                                                                                                   | 상태                             | 코멘트                 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------- |
-| {{SpecName('WebRTC 1.0', '#widl-RTCPeerConnection-ontrack', 'RTCPeerConnection.ontrack')}} | {{Spec2('WebRTC 1.0')}} | Initial specification. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

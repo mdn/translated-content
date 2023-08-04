@@ -5,7 +5,7 @@ slug: Web/API/TransformStream/readable
 
 {{APIRef("Streams")}}
 
-{{domxref("TransformStream")}} 接口的只读属性 **`readable`**  返回由这个 `TransformStream` 控制的 {{domxref("ReadableStream")}} 实例。
+{{domxref("TransformStream")}} 接口的只读属性 **`readable`** 返回由这个 `TransformStream` 控制的 {{domxref("ReadableStream")}} 实例。
 
 ## 值
 
@@ -17,7 +17,7 @@ slug: Web/API/TransformStream/readable
 
 ```js
 const textEncoderStream = new TransformStream();
-console.log(textEncoderStream.readable) // a ReadableStream
+console.log(textEncoderStream.readable); // a ReadableStream
 ```
 
 ## 规范

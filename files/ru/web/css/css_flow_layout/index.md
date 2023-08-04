@@ -1,14 +1,8 @@
 ---
 title: Поточная раскладка CSS
-slug: Web/CSS/CSS_Flow_Layout
-tags:
-  - CSS
-  - Раскладка
-  - Руководство
-  - поток
-  - поточная раскладка
-translation_of: Web/CSS/CSS_Flow_Layout
+slug: Web/CSS/CSS_flow_layout
 ---
+
 {{CSSRef}}
 
 _Нормальный поток (normal flow)_ или поточная раскладка (flow layout), это способ отображения блочных (block) и строчных (inline) элементов на странице. Сначала раскладка этих элементов происходит согласно правилам потока, после чего в неё могут быть внесены изменения, например, относительное позиционирование.
@@ -41,5 +35,5 @@ _Нормальный поток (normal flow)_ или поточная раск
 
 - {{Glossary("Block/CSS", "Block (CSS)")}}
 
-1.  [**CSS**](/ru/docs/Web/CSS)
-2.  [**CSS Reference**](/ru/docs/Web/CSS/Reference)
+1. [CSS](/ru/docs/Web/CSS)
+2. [CSS Reference](/ru/docs/Web/CSS/Reference)

@@ -1,17 +1,10 @@
 ---
-title: '::selection'
+title: "::selection"
 slug: Web/CSS/::selection
-tags:
-  - CSS
-  - Experimental
-  - Layoout
-  - Reference
-  - Псевдоэлементы
-translation_of: Web/CSS/::selection
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-[Псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::selection` **позволяет применить стили к части документа, который был выделен пользователем (например, с помощью мыши).
+[Псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::selection`** позволяет применить стили к части документа, который был выделен пользователем (например, с помощью мыши).
 
 ```css
 ::selection {
@@ -36,10 +29,12 @@ translation_of: Web/CSS/::selection
 
 ## Синтаксис
 
-    /* синтаксис Firefox */
-    ::-moz-selection
+```css
+/* синтаксис Firefox */
+::-moz-selection
+```
 
-    {{csssyntax}}
+{{csssyntax}}
 
 ## Пример
 

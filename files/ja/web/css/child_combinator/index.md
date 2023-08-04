@@ -53,11 +53,7 @@ div > span {
 
 ## 仕様書
 
-| 仕様書                                                                                        | 状態                               | 備考             |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS4 Selectors", "#child-combinators", "child combinator")}}     | {{Spec2("CSS4 Selectors")}} |                     |
-| {{SpecName("CSS3 Selectors", "#child-combinators", "child combinators")}}     | {{Spec2("CSS3 Selectors")}} | 変更なし          |
-| {{SpecName("CSS2.1", "selector.html#child-selectors", "child selectors")}} | {{Spec2("CSS2.1")}}             | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,16 +1,9 @@
 ---
 title: <map>
 slug: Web/HTML/Element/map
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Multimedia
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/map
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<map>` 요소**는 {{htmlelement("area")}} 요소와 함께 이미지 맵(클릭 가능한 링크 영역)을 정의할 때 사용합니다.
 
@@ -68,7 +61,7 @@ translation_of: Web/HTML/Element/map
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("name")}}
   - : 맵을 참조할 때 사용할 수 있는 이름. 반드시 존재해야 하고, 값이 비면 안되며, 값에 공백 문자가 포함되어도 안됩니다. `name` 특성은 문서 내의 모든 `<map>`에서 유일해야 합니다. {{htmlattrxref("id")}} 특성이 존재하는 경우 `name`과 값이 동일해야 합니다.
@@ -77,10 +70,10 @@ translation_of: Web/HTML/Element/map
 
 ```html
 <map name="primary">
-  <area shape="circle" coords="75,75,75" href="left.html">
-  <area shape="circle" coords="275,75,75" href="right.html">
+  <area shape="circle" coords="75,75,75" href="left.html" />
+  <area shape="circle" coords="275,75,75" href="right.html" />
 </map>
-<img usemap="#primary" src="https://placehold.it/350x150" alt="350 x 150 pic">
+<img usemap="#primary" src="https://placehold.it/350x150" alt="350 x 150 pic" />
 ```
 
 ### 결과
@@ -92,10 +85,10 @@ translation_of: Web/HTML/Element/map
 키보드의 탭을 눌렀을 때, 위의 예제는 아래 사진처럼 나와야 합니다.
 
 `left.html` 링크:
-![](https://mdn.mozillademos.org/files/14595/Screen%20Shot%202017-02-02%20at%2010.48.40%20PM.png)
+![](screen_shot_2017-02-02_at_10.48.40_pm.png)
 
 `right:html` 링크:
-![](https://mdn.mozillademos.org/files/14597/Screen%20Shot%202017-02-02%20at%2010.49.04%20PM.png)
+![](screen_shot_2017-02-02_at_10.49.04_pm.png)
 
 ## 명세
 
@@ -103,7 +96,7 @@ translation_of: Web/HTML/Element/map
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.map")}}
+{{Compat}}
 
 ## 같이 보기
 

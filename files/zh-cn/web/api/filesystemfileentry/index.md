@@ -29,34 +29,36 @@ slug: Web/API/FileSystemFileEntry
 
 ### 示例
 
-下面的代码创建了一个空文件，叫做 "`log.txt"` （如果不存在的话），并使用文本 "Meow" 来填充。在成功的回调中，设置了事件处理器，来处理 {{event("error")}} `error` 和 {{event("writeend")}} 事件。通过创建 blob，向其追加文本，以及将 blob 传递给 {{domxref("FileWriter.write()")}}，文本数据写入了文件。
+下面的代码创建了一个空文件，叫做 `log.txt`（如果不存在的话），并使用文本 "Meow" 来填充。在成功的回调中，设置了事件处理器，来处理 [`error`](/zh-CN/docs/Web/API/Element/error_event) `error` 和 `writeend` 事件。通过创建 blob，向其追加文本，以及将 blob 传递给 {{domxref("FileWriter.write()")}}，文本数据写入了文件。
 
 ```js
 function onInitFs(fs) {
-  fs.root.getFile('log.txt', {create: true}, function(fileEntry) {
+  fs.root.getFile(
+    "log.txt",
+    { create: true },
+    function (fileEntry) {
+      // Create a FileWriter object for our FileSystemFileEntry (log.txt).
+      fileEntry.createWriter(function (fileWriter) {
+        fileWriter.onwriteend = function (e) {
+          console.log("Write completed.");
+        };
 
-    // Create a FileWriter object for our FileSystemFileEntry (log.txt).
-    fileEntry.createWriter(function(fileWriter) {
-      fileWriter.onwriteend = function(e) {
-        console.log('Write completed.');
-      };
+        fileWriter.onerror = function (e) {
+          console.log("Write failed: " + e.toString());
+        };
 
-      fileWriter.onerror = function(e) {
-        console.log('Write failed: ' + e.toString());
-      };
+        // Create a new Blob and write it to log.txt.
+        var bb = new BlobBuilder();
+        bb.append("Meow");
 
-      // Create a new Blob and write it to log.txt.
-      var bb = new BlobBuilder();
-      bb.append('Meow');
-
-      fileWriter.write(bb.getBlob('text/plain'));
-    }, errorHandler);
-
-  }, errorHandler);
-
+        fileWriter.write(bb.getBlob("text/plain"));
+      }, errorHandler);
+    },
+    errorHandler,
+  );
 }
 
-window.requestFileSystem(window.TEMPORARY, 1024*1024, onInitFs, errorHandler);
+window.requestFileSystem(window.TEMPORARY, 1024 * 1024, onInitFs, errorHandler);
 ```
 
 ## 规范
@@ -69,7 +71,7 @@ window.requestFileSystem(window.TEMPORARY, 1024*1024, onInitFs, errorHandler);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [文件和驱动器条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
 - [文件系统 API 简介](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)

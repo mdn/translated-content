@@ -1,8 +1,8 @@
 ---
-title: 'HTML attribute: crossorigin'
+title: "HTML attribute: crossorigin"
 slug: Web/HTML/Attributes/crossorigin
-translation_of: Web/HTML/Attributes/crossorigin
 ---
+
 {{ HTMLElement("audio") }}, {{ HTMLElement("img") }}, {{ HTMLElement("link") }}, {{ HTMLElement("script") }}, {{ HTMLElement("video") }}에 있는 crossOrigin 속성은 element가 CORS 요청을 처리하는 방식을 명시하여 element가 fetch한 데이터를 [CORS](/ko/docs/Web/HTTP/CORS) 가능하게 합니다. 특정 element에서는 CORS 세팅 속성이 될 수도 있습니다.
 
 Media element의 `crossorigin` 속성은 CORS 세팅입니다.
@@ -24,7 +24,9 @@ Media element의 `crossorigin` 속성은 CORS 세팅입니다.
 아래의 {{HTMLElement("script")}} element를 통해 브라우저로 하여금 `https://example.com/example-framework.js` 스크립트를 user-credential 없이 요청하도록 명시할 수 있습니다.
 
 ```html
-<script src="https://example.com/example-framework.js" crossorigin="anonymous"></script>
+<script
+  src="https://example.com/example-framework.js"
+  crossorigin="anonymous"></script>
 ```
 
 ### 예시: credential 포함한 Webmanifest
@@ -32,29 +34,20 @@ Media element의 `crossorigin` 속성은 CORS 세팅입니다.
 [Manifest](/ko/docs/Web/Manifest) 요청 시 credential이 필요하다면 same-origin의 리소스라 하여도 `use-credentials` 값을 사용해야 합니다.
 
 ```html
-<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
+<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />
 ```
 
-## 사양
+## 명세서
 
-| 사양                                                                                                                                     | 상태                             | 설명 |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'infrastructure.html#cors-settings-attributes', 'CORS settings attributes')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#attr-img-crossorigin', 'crossorigin')}}                     | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## 브라우저 호환성
 
-### \<script crossorigin>
-
-{{Compat("html.elements.script.crossorigin")}}
-
-### \<video crossorigin>
-
-{{Compat("html.elements.video.crossorigin")}}
+{{Compat}}
 
 ## 더 보기
 
 - [Cross-Origin Resource Sharing (CORS)](/ko/docs/Web/HTTP/CORS)
 - [HTML attribute: `rel`](/ko/docs/Web/HTML/Attributes/rel)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}
+{{QuickLinksWithSubpages("/ko/docs/Web/HTML/")}}

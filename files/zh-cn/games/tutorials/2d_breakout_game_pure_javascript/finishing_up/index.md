@@ -1,7 +1,6 @@
 ---
 title: 收尾工作
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/收尾工作
 ---
 
 {{GamesSidebar}}
@@ -14,7 +13,7 @@ original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/收尾工作
 
 ## 加入生命机制
 
-在游戏中实现生命机制的思路很直接。让我们先新增一个变量，用来存储其生命值。把下面这行代码和我们声明其它变量的代码放在一起：
+在游戏中实现生命机制的思路很直接。让我们先新增一个变量，用来存储其生命值。把下面这行代码和我们声明其他变量的代码放在一起：
 
 ```js
 var lives = 3;
@@ -24,9 +23,9 @@ var lives = 3;
 
 ```js
 function drawLives() {
-    ctx.font = "16px Arial";
-    ctx.fillStyle = "#0095DD";
-    ctx.fillText("Lives: "+lives, canvas.width-65, 20);
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.fillText("Lives: " + lives, canvas.width - 65, 20);
 }
 ```
 
@@ -42,17 +41,16 @@ clearInterval(interval); // Needed for Chrome to end game
 
 ```js
 lives--;
-if(!lives) {
-    alert("GAME OVER");
-    document.location.reload();
-    clearInterval(interval); // Needed for Chrome to end game
-}
-else {
-    x = canvas.width/2;
-    y = canvas.height-30;
-    dx = 2;
-    dy = -2;
-    paddleX = (canvas.width-paddleWidth)/2;
+if (!lives) {
+  alert("GAME OVER");
+  document.location.reload();
+  clearInterval(interval); // Needed for Chrome to end game
+} else {
+  x = canvas.width / 2;
+  y = canvas.height - 30;
+  dx = 2;
+  dy = -2;
+  paddleX = (canvas.width - paddleWidth) / 2;
 }
 ```
 

@@ -1,8 +1,8 @@
 ---
 title: Gamepad API
 slug: Web/API/Gamepad_API
-translation_of: Web/API/Gamepad_API
 ---
+
 {{DefaultAPISidebar("Gamepad API")}}
 
 A **Gamepad API** é uma maneira dos desenvolvedores acessarem e responderem à sinais oriundos de gamepads e outros controladores de games de forma simples e consistente. A API contém três interfaces, dois eventos e uma função especialista, para responder aos gamepads sendo conectados e desconectados, e acessar outras informações sobre o próprio gamepad, e quais botões e outros controles estão sendo de fato passados.
@@ -46,14 +46,11 @@ Veja também as [extensões para a interface de Gamepad](/pt-BR/docs/Web/API/Gam
 
 ## Especificações
 
-| Especificações                                                                   | Estatus                                  | Comentários                                                                      |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName("GamepadExtensions")}}                                     | {{Spec2("GamepadExtensions")}} | Defines the [Experimental Gamepad extensions](#experimental_gamepad_extensions). |
-| {{SpecName("Gamepad", "", "The Gamepad API specification")}} | {{Spec2("Gamepad")}}             | Initial definition                                                               |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Gamepad")}}
+{{Compat}}
 
 ## Veja também
 

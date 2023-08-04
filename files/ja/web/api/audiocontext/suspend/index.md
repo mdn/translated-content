@@ -40,9 +40,7 @@ susresBtn.onclick = function() {
 
 ## 仕様
 
-| Specification                                                                                                    | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#widl-AudioContext-suspend-Promise-void', 'close()')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## ブラウザ互換性
 

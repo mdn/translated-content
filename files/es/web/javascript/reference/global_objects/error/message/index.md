@@ -1,20 +1,25 @@
 ---
-title: Error.prototype.message
+title: "Error: message"
 slug: Web/JavaScript/Reference/Global_Objects/Error/message
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/message
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/message
 ---
+
 {{JSRef}}
 
-La propiedad **`message`** es una descripción legible del error.
+Los datos de la propiedad **`message`** de una instancia de {{jsxref("Error")}} es una descripción legible del error.
+
+## Valor
+
+Una cadena de texto correspondiente al valor pasado como primer parámetro del constructor [`Error()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Error/Error).
+
+{{js_property_attributes(1, 0, 1)}}
 
 ## Descripción
 
-Esta propiedad contiene una breve descripción del error, si está disponible o ha sido fijado. [SpiderMonkey](/es/docs/Mozilla/Projects/SpiderMonkey) hace un amplio uso de esta propiedad para las excepciones. Esta porpiedad combinada con la propiedad {{jsxref("Error.prototype.name", "name")}} es usada por el método {{jsxref("Error.prototype.toString()")}} para crear una cadena de texto del objeto Error.
+Esta propiedad contiene una breve descripción del error, si está disponible o ha sido establecido. Esta porpiedad combinada con la propiedad {{jsxref("Error.prototype.name", "name")}} es usada por el método {{jsxref("Error.prototype.toString()")}} para crear una cadena de texto del objeto Error.
 
-Por defecto, la propiedad `message` es una cadena vacía, pero se puede especificar un mensaje a través del primer parámetro del {{jsxref("Error", "constructor Error")}}.
+Por defecto, la propiedad `message` es una cadena vacía, pero se puede especificar un mensaje a través del primer parámetro del constructor {{jsxref("Error/Error", "Error")}}.
 
-## Ejemplo
+## Ejemplos
 
 ### Lanzar un error personalizado
 
@@ -26,18 +31,13 @@ throw e;
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Definición inicial. |
-| {{SpecName('ES5.1', '#sec-15.11.4.3', 'Error.prototype.message')}}                     | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES6', '#sec-error.prototype.message', 'Error.prototype.message')}}     | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ESDraft', '#sec-error.prototype.message', 'Error.prototype.message')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Error.message")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - {{jsxref("Error.prototype.name")}}
 - {{jsxref("Error.prototype.toString()")}}

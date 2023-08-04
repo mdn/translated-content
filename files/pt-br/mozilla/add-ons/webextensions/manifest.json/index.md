@@ -1,14 +1,8 @@
 ---
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
-tags:
-  - Add-ons
-  - Extensions
-  - NeedsTranslation
-  - TopicStub
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
+
 {{AddonSidebar}}
 
 The manifest.json file is a [JSON](/pt-BR/docs/Glossary/JSON)-formatted file, and is the only file that every WebExtension must contain.
@@ -17,7 +11,7 @@ Using manifest.json, you specify basic metadata about your extension such as the
 
 manifest.json keys are listed below:
 
-{{ ListSubpages ("/en-US/Add-ons/WebExtensions/manifest.json") }}
+{{ ListSubpages ("/pt-BR/Add-ons/WebExtensions/manifest.json") }}
 
 `"manifest_version"`, `"version"`, and `"name"` are the only mandatory keys. `"default_locale"` must be present if the "\_locales" directory is present and must be absent otherwise. `"applications"` is not supported in Google Chrome, and is mandatory in Firefox before Firefox 48 and Firefox for Android.
 

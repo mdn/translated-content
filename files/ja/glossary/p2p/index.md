@@ -9,6 +9,6 @@ P2P (ピア・ツー・ピア)はすべての参加しているノード（_ピ�
 
 ### 一般知識
 
-- Wikipedia 上の記事「{{Interwiki("wikipedia", "Peer_to_Peer", "P2P")}}」
+- Wikipedia 上の記事「[P2P](https://ja.wikipedia.org/wiki/Peer_to_Peer)」
 
 {{QuickLinksWithSubpages("/ja/docs/Glossary")}}

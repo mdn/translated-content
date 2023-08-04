@@ -29,11 +29,11 @@ const importedNode = document.adoptNode(externalNode);
 ## 例
 
 ```js
-const iframe = document.querySelector('iframe');
-const iframeImages = iframe.contentDocument.querySelectorAll('img');
-const newParent = document.getElementById('images');
+const iframe = document.querySelector("iframe");
+const iframeImages = iframe.contentDocument.querySelectorAll("img");
+const newParent = document.getElementById("images");
 
-iframeImages.forEach(function(imgEl) {
+iframeImages.forEach(function (imgEl) {
   newParent.appendChild(document.adoptNode(imgEl));
 });
 ```
@@ -51,9 +51,7 @@ iframeImages.forEach(function(imgEl) {
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#dom-document-adoptnode', 'document.adoptNode')}} | {{Spec2('DOM WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

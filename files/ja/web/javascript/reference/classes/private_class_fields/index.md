@@ -229,7 +229,7 @@ console.log(Derived.publicStaticMethod2());
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## 関連情報
 

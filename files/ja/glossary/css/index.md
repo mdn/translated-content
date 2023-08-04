@@ -16,7 +16,7 @@ p {
   color: yellow;
 
   /* "background-color" プロパティは背景の色を定義するもので、ここでは黒色に設定しています。*/
-  background-color: black
+  background-color: black;
 }
 ```
 
@@ -27,7 +27,7 @@ p {
 ### 一般知識
 
 - [CSS を学ぶ](/ja/Learn/CSS)
-- Wikipedia の {{interwiki("wikipedia", "CSS")}} 記事
+- Wikipedia の [CSS](https://ja.wikipedia.org/wiki/CSS) 記事
 
 ### 技術的な文書
 

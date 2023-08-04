@@ -1,9 +1,8 @@
 ---
 title: GlobalEventHandlers.onerror
 slug: Web/API/Window/error_event
-translation_of: Web/API/GlobalEventHandlers/onerror
-original_slug: Web/API/GlobalEventHandlers/onerror
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 Un manejador de eventos para errores en scripts en tiempo de ejecución.
@@ -23,8 +22,8 @@ window.onerror = funcRef;
   - Mensaje de error (string)
   - Url en la que el error fue lanzado (string)
   - Número de línea en la que el error fue lanzado (number)
-  - Dentro de la línea en la que el error ocurrió, número de columna correspondiente (number) {{gecko_minversion_inline("31.0")}}
-  - [Error Object](/es/docs/Web/JavaScript/Reference/Global_Objects/Error) (object) {{gecko_minversion_inline("31.0")}}
+  - Dentro de la línea en la que el error ocurrió, número de columna correspondiente (number)
+  - [Error Object](/es/docs/Web/JavaScript/Reference/Global_Objects/Error) (object)
 
 ## Ejemplos
 
@@ -47,14 +46,14 @@ window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
 
   // Just let default handler run.
   return false;
-}
+};
 ```
 
 ## Notas
 
 El evento de error es lanzado cuando ocurre un error en el script.
 
-Cuando se use el marcado html en línea (\<body onerror="alert('an error occurred')>...), los argumentos son anónimos. Pueden ser referenciados usando desde `arguments{{ mediawiki.external(0) }}` hasta `arguments{{ mediawiki.external(2) }}`.
+Cuando se use el marcado html en línea (\<body onerror="alert('an error occurred')>...), los argumentos son anónimos. Pueden ser referenciados usando desde `arguments[0]` hasta `arguments[2]`.
 
 No hay llamante `Components.stack.caller` que recuperar. (Vea [**bug 355430**](https://bugzilla.mozilla.org/show_bug.cgi?id=355430).)
 

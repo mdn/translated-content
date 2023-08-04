@@ -1,15 +1,8 @@
 ---
 title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - NeedsTranslation
-  - Overview
-  - Reflect
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
+
 {{JSRef}}
 
 **Reflect** es un objecto incorporado que proporciona metodos para interceptar operaciones de javascript. Los métodos son los mismos que los de [proxy handlers](/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler). `Reflect` no es un objeto de funciones y por lo tanto no puede ser construido.
@@ -51,14 +44,11 @@ El objeto `Reflect` proporciona las siguientes funciones estáticas con los mism
 
 ## Especificaciones
 
-| Specification                                                                | Status                       | Comment                             |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------------- |
-| {{SpecName('ES2015', '#sec-reflect-object', 'Reflect')}} | {{Spec2('ES2015')}}     | Initial definition.                 |
-| {{SpecName('ESDraft', '#sec-reflect-object', 'Reflect')}} | {{Spec2('ESDraft')}} | Reflect.enumerate has been removed. |
+{{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Reflect")}}
+{{Compat}}
 
 ## También ver
 

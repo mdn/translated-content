@@ -1,14 +1,6 @@
 ---
 title: Reflect.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
-original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/preventExtensions
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode statique **`Reflect.preventExtensions()`** permet d'empêcher d'ajou
 ## Syntaxe
 
 ```js
-Reflect.preventExtensions(cible)
+Reflect.preventExtensions(cible);
 ```
 
 ### Paramètres
@@ -70,14 +62,11 @@ Object.preventExtensions(1);
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-reflect.preventextensions', 'Reflect.preventExtensions')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.preventextensions', 'Reflect.preventExtensions')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Reflect.preventExtensions")}}
+{{Compat}}
 
 ## Voir aussi
 

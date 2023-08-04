@@ -1,10 +1,8 @@
 ---
 title: normalize-space
 slug: Web/XPath/Functions/normalize-space
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/normalize-space
 ---
+
 {{ XsltRef() }}
 
 `normalize-space` 함수는 문자열에서 앞뒤 공백을 빼고(strip) 결과 문자열을 반환합니다.

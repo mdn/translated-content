@@ -1,14 +1,8 @@
 ---
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
-tags:
-  - Atributos
-  - Atributos globais
-  - HTML
-  - Referências
-  - itemprop
-translation_of: Web/HTML/Global_attributes/itemprop
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 O atributo global **`itemprop`** é usado para adicionar propriedades para um item. Todo elemento HTML pode ter um atributo `itemprop` especificado, e um `itemprop` consiste em um par de nome e valor. Cada par de nome e valor é chamado de **propriedade,** e um grupo de uma ou mais propriedades forma um **item**. Os valores das propriedades são ou um texto ou uma URL e pode ser associada a uma grande variedade de elementos incluindo {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}}, and {{HTMLElement("video")}}.
@@ -68,7 +62,7 @@ The example below shows the source for a set of elements marked up with `itempro
 
 ## Properties
 
-Properties have values that are either a string or a URL. When a string value is a URL, it is expressed using the {{HTMLElement("a")}} element and its {{htmlattrxref("href", "a")}} attribute, the {{HTMLElement("img")}} element and its {{htmlattrxref("src", "img")}} attribute, or other elements that link to or embed external resources.
+Properties have values that are either a string or a URL. When a string value is a URL, it is expressed using the {{HTMLElement("a")}} element and its [`href`](/pt-BR/docs/Web/HTML/Element/a#href) attribute, the {{HTMLElement("img")}} element and its [`src`](/pt-BR/docs/Web/HTML/Element/img#src) attribute, or other elements that link to or embed external resources.
 
 ### Three properties with values that are strings
 
@@ -456,8 +450,7 @@ Names are unordered relative to each other, but if a particular name has multipl
 - [Other different global attributes](/pt-BR/docs/Web/HTML/Global_attributes)
 - Other, microdata related, global attributes:
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/pt-BR/docs/Web/HTML/Global_attributes#itemid)
+  - [`itemref`](/pt-BR/docs/Web/HTML/Global_attributes#itemref)
+  - [`itemscope`](/pt-BR/docs/Web/HTML/Global_attributes#itemscope)
+  - [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes#itemtype)

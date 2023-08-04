@@ -1,15 +1,6 @@
 ---
 title: TypedArray.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/reduce
 ---
 
 {{JSRef}}
@@ -57,7 +48,7 @@ Si le tableau typé est vide et que le paramètre `valeurInitiale` n'a pas été
 ## Exemples
 
 ```js
-var total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
+var total = new Uint8Array([0, 1, 2, 3]).reduce(function (a, b) {
   return a + b;
 });
 // total == 6
@@ -65,14 +56,11 @@ var total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-%typedarray%.prototype.reduce', '%TypedArray%.prototype.reduce')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.reduce', '%TypedArray%.prototype.reduce')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.reduce")}}
+{{Compat}}
 
 ## Voir aussi
 

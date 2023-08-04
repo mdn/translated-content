@@ -45,7 +45,7 @@ cat FILENAME.js | openssl dgst -sha384 -binary | openssl base64 -A
 shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
 ```
 
-> **Note:**
+> **メモ:**
 >
 > - パイプで `xxd` を通る過程で、 `shasum` からの出力を取り、バイナリへ変換します。
 > - パイプで `awk` を通る過程は、 `shasum` がハッシュ化されたファイル名を `xxd` へ渡すために必要です。ファイル名が有効な 16 進数の文字を持っている場合に有害な影響を与える可能性があるからです。 `xxd` はそれを復号して、 `base64` に渡す可能性があるからです。
@@ -69,9 +69,10 @@ Access-Control-Allow-Origin: *
 次の {{HTMLElement("script")}} 要素により、ブラウザーが `https://example.com/example-framework.js` を実行する前に、まず想定されるハッシュ値とスクリプトのハッシュ値が一致することをブラウザーに確認させることができます。
 
 ```html
-<script src="https://example.com/example-framework.js"
-        integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
-        crossorigin="anonymous"></script>
+<script
+  src="https://example.com/example-framework.js"
+  integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+  crossorigin="anonymous"></script>
 ```
 
 > **メモ:** **crossorigin** 属性については [CORS 設定属性](/ja/docs/Web/HTML/CORS_settings_attributes)を参照してください。
@@ -87,20 +88,11 @@ Access-Control-Allow-Origin: *
 
 ## 仕様
 
-| 仕様書                                           | 状態                                         | 備考 |
-| ------------------------------------------------ | -------------------------------------------- | ---- |
-| {{SpecName('Subresource Integrity')}} | {{Spec2('Subresource Integrity')}} |      |
-| {{SpecName('Fetch')}}                     | {{Spec2('Fetch')}}                     |      |
+{{Specifications}}
 
 ## ブラウザの互換性
 
-### \<script integrity>
-
-{{Compat("html.elements.script.integrity")}}
-
-### CSP: require-sri-for
-
-{{Compat("http.headers.csp.require-sri-for")}}
+{{Compat}}
 
 ## 関連情報
 

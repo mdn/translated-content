@@ -9,8 +9,17 @@ slug: Web/SVG/Element/animateMotion
 
 > **备注：** 为了复用一个已经定义的路径，就有必要使用一个 {{SVGElement("mpath")}} 元素嵌入到 `<animateMotion>` 中，而不是使用 {{SVGAttr("path")}}。
 
+## 示例
+
 ```css
-html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
+html,
+body,
+svg {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
 ```
 
 ```xml
@@ -25,7 +34,7 @@ html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 150, '100%')}}
+{{EmbedLiveSample('示例', 150, '100%')}}
 
 ## 用法
 

@@ -1,19 +1,8 @@
 ---
-title: '::backdrop'
+title: "::backdrop"
 slug: Web/CSS/::backdrop
-tags:
-  - API
-  - CSS
-  - Dialog
-  - Fullscreen API
-  - HTML DOM
-  - Полный экран
-  - Псевдо-элемент
-  - Разметка
-  - диалоговое окно
-  - полноэкранный режим
-translation_of: Web/CSS/::backdrop
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) [псевдо-элемент](/ru/docs/Web/CSS/Pseudo-elements) **`::backdrop`** это прямоугольник с размерами {{Glossary("viewport", "окна")}}, который отрисовывается сразу же после отрисовки любого элемента в полноэкранном режиме. Это включает элементы, установленные в полноэкранный режим с помощью [Fullscreen API](/ru/docs/DOM/Using_fullscreen_mode) и элементы {{HTMLElement("dialog")}}.
@@ -47,7 +36,7 @@ video::backdrop {
 
 В результате окно выглядит так:
 
-![](https://mdn.mozillademos.org/files/16287/bbb-backdrop.png)
+![](bbb-backdrop.png)
 
 Обратите внимание на эффект серо-голубых полей сверху и снизу, где подложка видна. Обычно эта область чёрная, но её цвет изменён с помощью CSS кода выше.
 

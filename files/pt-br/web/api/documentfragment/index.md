@@ -1,8 +1,8 @@
 ---
 title: DocumentFragment
 slug: Web/API/DocumentFragment
-translation_of: Web/API/DocumentFragment
 ---
+
 {{ ApiRef("DOM") }}
 
 A interface do **DocumentFragment** representa um objeto de documento mínimo que não possui pai. Ela é utilizada como uma versão leve de {{domxref("Document")}} para armazenar fragmentos bem formados ou fragments potencialmente mal formados de XML.
@@ -43,26 +43,16 @@ _This interface inherits the methods of its parent, {{domxref("Node")}}_, and im
   - : Returns the first {{domxref("Element")}} node within the `DocumentFragment`, in document order, that matches the specified selectors.
 - {{domxref("DocumentFragment.querySelectorAll()")}}
   - : Returns a {{domxref("NodeList")}} of all the {{domxref("Element")}} nodes within the `DocumentFragment` that match the specified selectors.
-
-<!---->
-
 - {{domxref("DocumentFragment.getElementById()")}}
   - : Returns the first {{domxref("Element")}} node within the `DocumentFragment`, in document order, that matches the specified ID.
 
 ## Especificações
 
-| Specification                                                                                        | Status                                       | Comment                                                                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#documentfragment', 'DocumentFragment')}}             | {{Spec2('DOM WHATWG')}}             | Added the constructor and the implementation of {{domxref("ParentNode")}}. |
-| {{SpecName('Selectors API Level 2', '#the-apis', 'DocumentFragment')}}         | {{Spec2('Selectors API Level 2')}} | Added the `find()` and `findAll()` methods.                                       |
-| {{SpecName('Selectors API Level 1', '#the-apis', 'DocumentFragment')}}         | {{Spec2('Selectors API Level 1')}} | Added the `querySelector()` and `querySelectorAll()` methods.                     |
-| {{SpecName('DOM3 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}         | {{Spec2('DOM3 Core')}}                 | No change from {{SpecName('DOM2 Core')}}                                   |
-| {{SpecName('DOM2 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}         | {{Spec2('DOM2 Core')}}                 | No change from {{SpecName('DOM1')}}                                       |
-| {{SpecName('DOM1', 'level-one-core.html#ID-B63ED1A3', 'DocumentFragment')}} | {{Spec2('DOM1')}}                     | Initial definition                                                                |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.DocumentFragment")}}
+{{Compat}}
 
 ## Veja também
 

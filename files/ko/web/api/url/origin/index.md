@@ -1,15 +1,8 @@
 ---
 title: URL.origin
 slug: Web/API/URL/origin
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/origin
 ---
+
 {{APIRef("URL API")}}
 
 {{domxref("URL")}} 인터페이스의 **`origin`** 읽기 전용 속성은 표현 중인 URL의 출처를 유니코드로 직렬화한 {{domxref("USVString")}}을 반환합니다. 정확한 구조는 URL의 유형에 따라 다릅니다.
@@ -23,7 +16,7 @@ translation_of: Web/API/URL/origin
 ## 구문
 
 ```js
-const originString = url.origin
+const originString = url.origin;
 ```
 
 ### 값
@@ -33,7 +26,7 @@ A {{domxref("USVString")}}.
 ## 예제
 
 ```js
-const url = new URL("blob:https://mozilla.org:443/")
+const url = new URL("blob:https://mozilla.org:443/");
 console.log(url.origin); // Logs 'https://mozilla.org'
 ```
 

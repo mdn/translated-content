@@ -1,55 +1,49 @@
 ---
-title: Modo Quirks y Modo Estándar
+title: Modo quirks y modo estándar
 slug: Web/HTML/Quirks_Mode_and_Standards_Mode
-tags:
-  - Desarrollo web
-  - Estándar Web
-  - Gecko
-  - Guía
-  - HTML
-  - XHTML
-translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
-En los viejos días de la web, las páginas eran comúnmente escritas de dos formas: Una para navegador Netscape y otra para Microsoft Internet Explorer. Cuando los estándares de la web fueron creador por W3C, los navegadores no sólo empezaron a utilizarlos, tan pronto lo hicieron romperían los más existentes sitios en la Web. Sin embargo los navegadores introdujeron dos modos para tratar los nuevos estándares que cumplan que los sitios diferentemente de los viejos legados de sitios.
 
-Ahora hay tres modos usados por los motores de diseño en los navegadores web: modo quirks (_caprichoso_), modo casi estándar, y modo estándar completo. En el modo quirks, el diseño emula el comportamiento no estandar de Navigator 4 e Internet Explorer 5 para Windows que es lo requerido para no romper contenido ya existente en la Web. En modo estándar completo, el comportamiento es (o debería ser) el descrito en las especificaciones HTML y CSS. En modo casi estándar, hay implementados sólo algunos ajustes (quirks) pero no todos.
+{{HTMLSidebar}}
+
+En los viejos tiempos de la web, las páginas normalmente se escribían en dos versiones: una para Netscape Navigator y otra para Microsoft Internet Explorer. Cuando se crearon los estándares web en el W3C, los navegadores no podían simplemente comenzar a usarlos, ya que hacerlo dañaría la mayoría de los sitios existentes en la web. Por lo tanto, los navegadores introdujeron dos modos para tratar los sitios que cumplen con los nuevos estándares de manera diferente a los sitios antiguos.
+
+Ahora hay tres modos utilizados por los motores de diseño en los navegadores web: _quirks mode_ (modo de peculiaridades), _limited-quirks mode_ (modo de peculiaridades limitadas) y _no-quirks mode_ (modo sin peculiaridades). En **quirks mode**, el diseño emula el comportamiento de Navigator 4 e Internet Explorer 5. Esto es esencial para admitir sitios web creados antes de la adopción generalizada de estándares web. En **no-quirks mode**, el comportamiento es (con suerte) el comportamiento deseado descrito por las especificaciones modernas de HTML y CSS. En **limited-quirks mode**, solo se implementa una cantidad muy pequeña de peculiaridades.
+
+Los modos _limited-quirks_ y _no-quirks_ solían llamarse modo "casi estándar" y modo "estándar completo", respectivamente. Estos nombres se han cambiado ya que el comportamiento ahora está estandarizado.
 
 ## ¿Cómo determinan los navegadores qué modo usar?
 
-Para documentos [HTML](/es/docs/HTML), los navegadores usan un DOCTYPE al principio del documento para decidir cómo manejarlo y si deben hacerl en modo quirks o estándar. Para asegurarse de que las página usa el modo estándar completo, debes poner el DOCTYPE como en este ejemplo:
+Para documentos [HTML](/es/docs/Web/HTML), los navegadores usan un DOCTYPE al principio del documento para decidir si manejarlo en _quirks mode_ o en modo estándar. Para asegurarse de que su página utilice el modo estándar completo, asegúrese de que su página tenga un DOCTYPE como en este ejemplo:
 
 ```html
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="es">
   <head>
-    <meta charset=UTF-8>
-    <title>Hello World!</title>
+    <meta charset="UTF-8" />
+    <title>¡Hola mundo!</title>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
-El DOCTYPE mostrado en el ejemplo, `<!DOCTYPE html>`, es el más simple posible y el recomendado para usar en documentos HTML5. Las versiones anteriores del estándar HTML recomendaban otras variantes, pero todos los navegadores modernos usan ese DOCTYPE para el modo estándar completo, incluso las versiones antiguas de Internet Explorer (a partir de la 6). No hay motivos reales para usar un DOCTYPE más complicado, te arriesgas a elegir uno incorrecto o cometer un fallo y pasar al modo quirks en lugar del estándar.
+El DOCTYPE que se muestra en el ejemplo, `<!DOCTYPE html>`, es el más simple posible y el recomendado por los estándares HTML actuales. Las versiones anteriores del estándar HTML recomendaban otras variantes, pero todos los navegadores existentes en la actualidad utilizarán el modo de estándares completos para este DOCTYPE, incluso el antiguo Internet Explorer 6. No hay razones válidas para utilizar un DOCTYPE más complicado. Si usa otro DOCTYPE, puede arriesgarse a elegir uno que active el modo casi estándar o _quirks mode_.
 
-Asegúrate de poner el DOCTYPE justo al principio del documento HTML. Si pones cualquier cosa antes del DOCTYPE, como un comentario o una declaración XML, hará que versiones antiguas de Internet Explorer (9 y anteriores) interpreten la página en modo quirks.
+Asegúrese de colocar el DOCTYPE justo al comienzo de su documento HTML. Cualquier cosa antes del DOCTYPE, como un comentario o una declaración XML, activará _quirks mode_ en Internet Explorer 9 y versiones anteriores.
 
-En HTML5, el único objetico del DOCTYPE es activar el modo estándar completo. Las versiones anteriores del estándar HTML daban información adicional en el DOCTYPE, pero ningún navegador usaba dicha información y sólo la usaba para cambiar entre el modo quirks o el estándar.
+El único propósito de `<!DOCTYPE html>` es activar _no-quirks mode_. Las versiones anteriores de los DOCTYPE estándar de HTML proporcionaban un significado adicional, pero ningún navegador usó nunca el DOCTYPE para otra cosa que no fuera cambiar entre los modos de representación.
 
-Más información y detalles en [cuándo eligen los navegadores entre los diferentes modos](http://hsivonen.iki.fi/doctype/).
+Consulte también una descripción detallada de [cuando diferentes navegadores eligen varios modos](https://hsivonen.fi/doctype/).
 
 ### XHTML
 
-Si sirves la página como [XHTML](/es/docs/XHTML) usando el MIME `application/xhtml+xml` en el `Content-Type` de la cabecera HTTP, no necesitas especificar un DOCTYPE para habilitar el modo estándar, porque esos documentos siempre usan el modo estándar completo. Aunque hay que aclarar que servir páginas como `application/xhtml+xml` hará que Internet Explorer 8 [muestre el diálogo de descarga](/es/docs/XHTML#Support) para contenido desconocido en lugar de mostrar la página, porque la primera versión de Internet Explorer que soporta XHTML es IE9.
+Si sirve su página como [XHTML](/es/docs/Glossary/XHTML) usando el tipo MIME `application/xhtml+xml` en el encabezado HTTP `Content-Type`, no necesita un DOCTYPE para habilitar el modo estándar, ya que tales documentos siempre utilizan el 'modo de estándares completos'. Tenga en cuenta, sin embargo, que servir sus páginas como `application/xhtml+xml` hará que Internet Explorer 8 muestre un cuadro de diálogo de descarga para un formato desconocido en lugar de mostrar su página, ya que la primera versión de Internet Explorer compatible con XHTML es Internet Explorer 9. .
 
-Si sirves contenido XHTML usando el MIME `text/html`, los navegadores lo leeran como HTML, y necesitarás poner un DOCTYPE para que usen el modo estándar.
+Si ofrece contenido similar a XHTML usando el tipo MIME `text/html`, los navegadores lo leerán como HTML y necesitará el DOCTYPE para usar el modo estándar.
 
-## ¿Cómo puedo ver qué modo está siendo usado?
+## ¿Cómo puedo ver qué modo se utiliza?
 
-En Firefox, selecciona _Ver Información de Página_ en el menú contextual, y selecciona la opción _Modo de Renderizado_ (Render Mode).
+Si la página se muestra en _quirks_ o _limited-quirks mode_, Firefox registrará una advertencia en la pestaña de la consola en las herramientas para desarrolladores. Si no se muestra esta advertencia, Firefox está usando _no-quirks mode_.
 
-En Internet Explorer, pulsa _F12_, y buscar _Modo de Documento_ (Document Mode)
-
-## ¿Cuáles son las diferencias entre los modos?
-
-Lee la [lista de quirks](/es/docs/Mozilla_Quirks_Mode_Behavior) y [modo casi estándar](/es/docs/Gecko's_"Almost_Standards"_Mode) para ver las diferencias entre los modos.
+El valor de `document.compatMode` en JavaScript mostrará si el documento está en _quirks mode_ o no. Si su valor es `"BackCompat"`, el documento está en _quirks mode_. Si no es así, tendrá el valor `"CSS1Compat"`.

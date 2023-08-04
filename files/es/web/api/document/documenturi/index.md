@@ -1,16 +1,8 @@
 ---
 title: Document.documentURI
 slug: Web/API/Document/documentURI
-tags:
-  - API
-  - ContenidoNecesario
-  - DOM
-  - EjemploNecesario
-  - Propiedad
-  - Referencia
-  - UbicaciónDocumento
-translation_of: Web/API/Document/documentURI
 ---
+
 {{ApiRef("DOM")}}
 
 La propiedad **`documentURI`** de la interfaz del documento ({{domxref("Document")}}) devuelve la ubicación del documento como un _string_.

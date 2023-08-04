@@ -2,6 +2,7 @@
 title: Document and website structure
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 당신의 페이지의 (단락 또는 이미지 같은) 개개의 파트를 정의할 뿐 아니라, {{glossary("HTML")}}은 웹 사이트의 구역을 정의하는 ("헤더", "네비게이션 메뉴", "메인 컨텐츠 칼럼"과 같은) 수많은 블록 수준 요소들로 웹 사이트를 자랑합니다. 이번 글은 어떻게 기본 웹 구조를 설계하고, 어떻게 그 구조를 나타내는 HTML을 작성하는지 살펴봅니다.
@@ -11,15 +12,15 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
     <tr>
       <th scope="row">선행 조건:</th>
       <td>
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Getting started with HTML</a
         >의 HTML의 기본.
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
           >HTML text fundamentals</a
         >의 HTML 텍스트 형식.
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
           >Creating hyperlinks</a
         >의 하이퍼링크의 동작 방식.
       </td>
@@ -51,7 +52,7 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 
 "전형적인 웹사이트"는 다음과 같이 구성될 수 있습니다:
 
-![a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer.](https://mdn.mozillademos.org/files/12417/sample-website.png)
+![a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer.](sample-website.png)
 
 ## 컨텐츠 구조화를 위한 HTML
 
@@ -73,17 +74,20 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
 
 ### 능동적 학습: 예제 코드 탐색
 
-위에서 본 예제는 다음 코드로 표시됩니다([Github 리포지토리에서 예제를 찾아보세요](<https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html >)). 위의 예를 살펴본 다음 아래 목록을 살펴보고 어떤 부분이 시각적 개체의 어떤 섹션을 구성하는지 확인하시기 바랍니다.
+위에서 본 예제는 다음 코드로 표시됩니다([Github 리포지토리에서 예제를 찾아보세요](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html)). 위의 예를 살펴본 다음 아래 목록을 살펴보고 어떤 부분이 시각적 개체의 어떤 섹션을 구성하는지 확인하시기 바랍니다.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
     <title>My page title</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
+      rel="stylesheet"
+      type="text/css" />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
     <!--[if lt IE 9]>
@@ -106,34 +110,57 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
         <li><a href="#">Contact</a></li>
       </ul>
 
-       <!-- A Search form is another commmon non-linear way to navigate through a website. -->
+      <!-- A Search form is another commmon non-linear way to navigate through a website. -->
 
-       <form>
-         <input type="search" name="q" placeholder="Search query">
-         <input type="submit" value="Go!">
-       </form>
-     </nav>
+      <form>
+        <input type="search" name="q" placeholder="Search query" />
+        <input type="submit" value="Go!" />
+      </form>
+    </nav>
 
     <!-- Here is our page's main content -->
     <main>
-
       <!-- It contains an article -->
       <article>
         <h2>Article heading</h2>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
+          lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam
+          viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent
+          et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt
+          congue enim, ut porta lorem lacinia consectetur.
+        </p>
 
         <h3>subsection</h3>
 
-        <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
+        <p>
+          Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem.
+          Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
+        </p>
 
-        <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
+        <p>
+          Pelientesque auctor nisi id magna consequat sagittis. Curabitur
+          dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet.
+          Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.
+        </p>
 
         <h3>Another subsection</h3>
 
-        <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+        <p>
+          Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
+          soclis natoque penatibus et manis dis parturient montes, nascetur
+          ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem
+          facilisis semper ac in est.
+        </p>
 
-        <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
+        <p>
+          Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
+          tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
+          ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi
+          diam iaculis velit, is fringille sem nunc vet mi.
+        </p>
       </article>
 
       <!-- the aside content can also be nested within the main content -->
@@ -148,7 +175,6 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
           <li><a href="#">Oh well...</a></li>
         </ul>
       </aside>
-
     </main>
 
     <!-- And here is our main footer that is used across all the pages of our website -->
@@ -156,7 +182,6 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
     <footer>
       <p>©Copyright 2050 by nobody. All rights reversed.</p>
     </footer>
-
   </body>
 </html>
 ```
@@ -182,9 +207,14 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
 {{HTMLElement("span")}} 엘리먼트는 내용을 감싸는 더 나은 의미 체계 텍스트 요소가 생각나지 않거나 특정 의미를 추가하고 싶지 않은 경우에만 사용해야 하는 인라인 비의미적 요소입니다. For example:
 
 ```html
-<p>The King walked drunkenly back to his room at 01:00, the beer doing nothing to aid
-him as he staggered through the door <span class="editor-note">[Editor's note: At this point in the
-play, the lights should be down low]</span>.</p>
+<p>
+  The King walked drunkenly back to his room at 01:00, the beer doing nothing to
+  aid him as he staggered through the door
+  <span class="editor-note"
+    >[Editor's note: At this point in the play, the lights should be down
+    low]</span
+  >.
+</p>
 ```
 
 In this case, the editor's note is supposed to merely provide extra direction for the director of the play; it is not supposed to have extra semantic meaning. For sighted users, CSS would perhaps be used to distance the note slightly from the main text.
@@ -196,12 +226,13 @@ In this case, the editor's note is supposed to merely provide extra direction fo
   <h2>Shopping cart</h2>
   <ul>
     <li>
-      <p><a href=""><strong>Silver earrings</strong></a>: $99.95.</p>
-      <img src="../products/3333-0985/thumb.png" alt="Silver earrings">
+      <p>
+        <a href=""><strong>Silver earrings</strong></a
+        >: $99.95.
+      </p>
+      <img src="../products/3333-0985/thumb.png" alt="Silver earrings" />
     </li>
-    <li>
-      ...
-    </li>
+    <li>...</li>
   </ul>
   <p>Total cost: $237.89</p>
 </div>
@@ -220,10 +251,12 @@ In this case, the editor's note is supposed to merely provide extra direction fo
 `<br>` 단락에 줄 바꿈을 만듭니다. 우편 주소나 시와 같이 일련의 고정된 짧은 줄을 원하는 상황에서 단단한 구조를 강제하는 유일한 방법입니다. For example:
 
 ```html
-<p>There once was a girl called Nell<br>
-Who loved to write HTML<br>
-But her structure was bad, her semantics were sad<br>
-and her markup didn't read very well.</p>
+<p>
+  There once was a girl called Nell<br />
+  Who loved to write HTML<br />
+  But her structure was bad, her semantics were sad<br />
+  and her markup didn't read very well.
+</p>
 ```
 
 `<br>` elements, the paragraph would just be rendered in one long line (as we said earlier in the course, [HTML ignores most whitespace](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Whitespace_in_HTML)); with them in the code, the markup renders like this:
@@ -253,11 +286,11 @@ Meanwhile, Harry was sitting at home, staring at his royalty statement and ponde
 
 간단한 웹페이지의 콘텐츠를 계획했다면 다음 논리적 단계는 최고의 사용자 경험을 위해 전체 웹사이트에 어떤 콘텐츠를 넣고 싶은지, 어떤 페이지가 필요한지, 어떻게 정렬하고 서로 연결해야 하는지 알아내는 것입니다. 이를 {{glossary("Information architecture")}}라고 합니다. 크고 복잡한 웹 사이트에서는 이 프로세스에 많은 계획이 포함될 수 있지만 몇 페이지로 된 간단한 웹 사이트에서는 상당히 간단하고 재미있을 수 있습니다!
 
-1. 몇 요소들은 대부분의 페이지에 공통적으로 적용될 것이란 걸 명심하세요 — 네비게이션 메뉴나 footer 컨텐츠처럼. 예를 들어 비즈니스를 위한 페이지라면, 당신의 연락처를 각각의 페이지의 footer에 보이도록 하는 것은 좋은 생각입니다. 모든 페이지에 공통적으로 포함하고 싶은 것을 적어보세요.![the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy](https://mdn.mozillademos.org/files/12423/common-features.png)
-2. 다음으로, 각 페이지의 구조를 간단한 스케치로 그리세요.아마 위의 우리의 간단한 웹사이트 같을 것입니다). 각 블럭의 기능을 적으세요.![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](https://mdn.mozillademos.org/files/12429/site-structure.png)
-3. 이제 웹사이트에 포함시키길 원하는 (각 페이지에 공통적이지 않은) 다른 모든 컨텐츠를 brainstorm하세요 - 리스트에 모두 적어 내려가세요. ![A long list of all the features that we could put on our travel site, from searching, to special offers and country-specific info](https://mdn.mozillademos.org/files/12425/feature-list.png)
-4. 다음으로, 이 모든 컨텐츠들을 그룹화 해 다른 페이지에서 어떤 부분들이 함께할 수 있을지 생각할 수 있습니다. 이것은 {{glossary("Card sorting")}}이라는 기술과 매우 유사합니다.![The items that should appear on a holiday site sorted into 5 categories: Search, Specials, Country-specific info, Search results, and Buy things](https://mdn.mozillademos.org/files/12421/card-sorting.png)
-5. 이제 대략적인 사이트맵을 그려보세요 - 사이트의 각 페이지를 동그라미로 지정하고, 각 페이지 간 동작 흐름을 보여주기 위해 선을 그으세요. 홈페이지는 아마 가운데에 있고, 모두는 아니어도 대부분에 연결될 것 입니다; 작은 사이트 안의 대부분의 페이지는, 비록 예외는 있겠지만, 메인 네비게이션에서 사용할 수 있어야 합니다. 당신은 아마 이것들이 어떻게 보여져야 할지에 대한 설명도 적고 싶을 것입니다. ![A map of the site showing the homepage, country page, search results, specials page, checkout, and buy page](https://mdn.mozillademos.org/files/12427/site-map.png)
+1. 몇 요소들은 대부분의 페이지에 공통적으로 적용될 것이란 걸 명심하세요 — 네비게이션 메뉴나 footer 컨텐츠처럼. 예를 들어 비즈니스를 위한 페이지라면, 당신의 연락처를 각각의 페이지의 footer에 보이도록 하는 것은 좋은 생각입니다. 모든 페이지에 공통적으로 포함하고 싶은 것을 적어보세요.![the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy](common-features.png)
+2. 다음으로, 각 페이지의 구조를 간단한 스케치로 그리세요.아마 위의 우리의 간단한 웹사이트 같을 것입니다). 각 블럭의 기능을 적으세요.![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](site-structure.png)
+3. 이제 웹사이트에 포함시키길 원하는 (각 페이지에 공통적이지 않은) 다른 모든 컨텐츠를 brainstorm하세요 - 리스트에 모두 적어 내려가세요. ![A long list of all the features that we could put on our travel site, from searching, to special offers and country-specific info](feature-list.png)
+4. 다음으로, 이 모든 컨텐츠들을 그룹화 해 다른 페이지에서 어떤 부분들이 함께할 수 있을지 생각할 수 있습니다. 이것은 {{glossary("Card sorting")}}이라는 기술과 매우 유사합니다.![The items that should appear on a holiday site sorted into 5 categories: Search, Specials, Country-specific info, Search results, and Buy things](card-sorting.png)
+5. 이제 대략적인 사이트맵을 그려보세요 - 사이트의 각 페이지를 동그라미로 지정하고, 각 페이지 간 동작 흐름을 보여주기 위해 선을 그으세요. 홈페이지는 아마 가운데에 있고, 모두는 아니어도 대부분에 연결될 것 입니다; 작은 사이트 안의 대부분의 페이지는, 비록 예외는 있겠지만, 메인 네비게이션에서 사용할 수 있어야 합니다. 당신은 아마 이것들이 어떻게 보여져야 할지에 대한 설명도 적고 싶을 것입니다. ![A map of the site showing the homepage, country page, search results, specials page, checkout, and buy page](site-map.png)
 
 ### 능동적인 학습: 나만의 사이트맵 만들기
 

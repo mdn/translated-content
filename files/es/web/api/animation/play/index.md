@@ -1,18 +1,8 @@
 ---
 title: Animation.play()
 slug: Web/API/Animation/play
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Interface
-  - Reference
-  - metodo
-  - play
-  - waapi
-translation_of: Web/API/Animation/play
 ---
+
 {{ APIRef("Web Animations") }}
 
 El método `play()` de la interfaz {{ domxref("Animation") }} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) inicia o reanuda la reproducción de una animación. Si la animación ha finalizado, llamando a `play()` reinicia la animación y la reproduce desde el principio.
@@ -37,29 +27,28 @@ En el ejemplo [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen
 
 ```js
 // El pastel tiene su propia animación:
-var nommingCake = document.getElementById('eat-me_sprite').animate(
-[
-  { transform: 'translateY(0)' },
-  { transform: 'translateY(-80%)' }
-], {
-  fill: 'forwards',
-  easing: 'steps(4, end)',
-  duration: aliceChange.effect.timing.duration / 2
-});
+var nommingCake = document
+  .getElementById("eat-me_sprite")
+  .animate(
+    [{ transform: "translateY(0)" }, { transform: "translateY(-80%)" }],
+    {
+      fill: "forwards",
+      easing: "steps(4, end)",
+      duration: aliceChange.effect.timing.duration / 2,
+    },
+  );
 
 // Pausa la animación del pastel para que no se reproduzca inmediatamente.
 nommingCake.pause();
 
 // Esta función se reproducirá cuando el usuario haga click o toque
-var growAlice = function() {
-
+var growAlice = function () {
   // Reproduce la animación de Alicia.
   aliceChange.play();
 
   // Reproduce la animación del pastel.
   nommingCake.play();
-
-}
+};
 
 // Cuando el usuario hace click o toca, llama a growAlice, para reproducir todas las animaciones.
 cake.addEventListener("mousedown", growAlice, false);

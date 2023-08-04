@@ -1,13 +1,8 @@
 ---
 title: Port
 slug: Glossary/Port
-tags:
-  - porta
-  - porta segura
-  - portas de comunicação
-translation_of: Glossary/Port
-original_slug: Glossario/Port
 ---
+
 Porta
 
 Para um computador se conectar à rede mundial de computadores com um endereço de IP(Protocolo de internet - Internet Protocol),
@@ -23,4 +18,4 @@ SMTP(25), POP3(110), IMAP(143), IRC(194) e assim em diante.
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "Port (computer networking)" , "Port")}} no Wikipedia
+- [Port](<https://pt.wikipedia.org/wiki/Porta_(redes_de_computadores)>) no Wikipedia

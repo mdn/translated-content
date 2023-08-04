@@ -1,6 +1,6 @@
 ---
 title: 複数の背景画像の利用
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
+slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 ---
 
 {{CSSRef}}

@@ -1,19 +1,8 @@
 ---
 title: Seguridad de Sitios Web
 slug: Learn/Server-side/First_steps/Website_security
-tags:
-  - Aprendizaje
-  - Codificación de scripts
-  - Guía
-  - Principiante
-  - Programación de lado servidor
-  - Seguridad
-  - Seguridad Web
-  - Seguridad de sitios Web
-  - introducción
-translation_of: Learn/Server-side/First_steps/Website_security
-original_slug: Learn/Server-side/Primeros_pasos/seguridad_sitios_web
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
 La Seguridad web require vigilancia en todos los aspectos del diseño y uso de un sitio web. Este artículo introductorio no te hará un gurú de la seguridad en sitios web, pero te ayudará a entender de donde vienen las amenazas y qué puedes hacer para fortalecer tu aplicación web contra los ataques más comunes.
@@ -131,7 +120,7 @@ Hay muchas más. Para un lisado completo ver [Category:Web security exploits](ht
 
 Casi todos los exploits de las secciones anteriores tienen éxito cuando la aplicación web confía en los datos que vienen del explorador. Sea lo que sea que hagas para mejorar la seguridad de tu sitio web, deberías desinfectar todos los datos originados por el usuario antes de ser mostrados en el explorador, usados en queries SQL o pasados en una llamada al sistema operativo o fichero de sistema.
 
-> **Advertencia:** La lección más importante que debes aprender acerca de la seguridad de sitios web es **nunca confíes en los datos del explorador web**. Esto incluye los datos en parámetros URL de las peticiones`GET`, datos `POST`, cabeceras HTTP y cookies, ficheros subidos por los usuarios, etc. Comprueba siempre y desinfecta todos los datos entrantes. Siempre asume lo peor.
+> **Advertencia:** La lección más importante que debes aprender acerca de la seguridad de sitios web es **nunca confíes en los datos del explorador web**. Esto incluye los datos en parámetros URL de las peticiones `GET`, datos `POST`, cabeceras HTTP y cookies, ficheros subidos por los usuarios, etc. Comprueba siempre y desinfecta todos los datos entrantes. Siempre asume lo peor.
 
 Otras cuantas medidas concretas que puedes tomar son:
 
@@ -150,10 +139,3 @@ Este artículo ha explicado el concepto de seguridad en sitios web y algunas de 
 Hemos llegado al final de [este módulo](/es/docs/Learn/Server-side/Primeros_pasos), tratando tus primeros pasos en la programación de lado servidor de un sitio web. Esperamos que hayas disfrutado del aprendizaje de los conceptos fundamentales y estés listo para seleccionar un framework web y empezar a programar.
 
 {{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## En este módulo
-
-- [Introducción al lado servidor](/es/docs/Learn/Server-side/Primeros_pasos/Introducci%C3%B3n)
-- [Visión general Cliente-Servidor](/es/docs/Learn/Server-side/Primeros_pasos/Vision_General_Cliente_Servidor)
-- [Frameworks web de lado servidor](/es/docs/Learn/Server-side/Primeros_pasos/Web_frameworks)
-- [Seguridad de sitios web](/es/docs/Learn/Server-side/Primeros_pasos/seguridad_sitios_web)

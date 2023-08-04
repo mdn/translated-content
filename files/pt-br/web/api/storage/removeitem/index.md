@@ -1,8 +1,8 @@
 ---
 title: Storage.removeItem()
 slug: Web/API/Storage/removeItem
-translation_of: Web/API/Storage/removeItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 O método `removeItem()` da interface {{domxref("Storage")}}, quando passado um nome de chave, irá remover essa chave do armazenamento.
@@ -28,11 +28,11 @@ A função a seguir cria três itens de dados no armazenamento local, em seguida
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'myCat.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "myCat.png");
 
-  localStorage.removeItem('image');
+  localStorage.removeItem("image");
 }
 ```
 
@@ -40,13 +40,11 @@ function populateStorage() {
 
 ## Especificações
 
-| Especificação                                                                                | Status                           | Comentários |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('Web Storage', '#dom-storage-removeitem', 'removeItem()')}} | {{Spec2('Web Storage')}} |             |
+{{Specifications}}
 
-## Compatibilidade
+## Compatibilidade com navegadores
 
-{{Compat("api.Storage.removeItem")}}
+{{Compat}}
 
 ## Veja também
 

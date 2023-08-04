@@ -19,7 +19,7 @@ var offsetWidth =element.offsetWidth;
 
 ## 示例
 
-![Image:Dimensions-offset.png](/@api/deki/files/186/=Dimensions-offset.png)
+![Image:Dimensions-offset.png](dimensions-offset.png)
 
 ## 规范
 

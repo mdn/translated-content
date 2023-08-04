@@ -1,16 +1,9 @@
 ---
 title: Canvas API
 slug: Web/API/Canvas_API
-tags:
-  - API
-  - Canvas
-  - JavaScript
-  - 개요
-  - 레퍼런스
-translation_of: Web/API/Canvas_API
-original_slug: Web/HTML/Canvas
 ---
-{{CanvasSidebar}}
+
+{{DefaultAPISidebar("Canvas API")}}
 
 **Canvas API**는 [JavaScript](/ko/docs/Web/JavaScript)와 [HTML](/ko/docs/Web/HTML) {{HtmlElement("canvas")}} 엘리먼트를 통해 그래픽을 그리기위한 수단을 제공합니다. 무엇보다도 애니메이션, 게임 그래픽, 데이터 시각화, 사진 조작 및 실시간 비디오 처리를 위해 사용됩니다.
 
@@ -33,10 +26,10 @@ canvas에 초록색 사각형을 그리는 간단한 예시입니다.
 실제 그리기는 {{domxref("CanvasRenderingContext2D")}} 인터페이스를 사용해 수행됩니다. {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 프로퍼티는 사각형을 초록색으로 만듭니다. {{domxref("CanvasRenderingContext2D.fillRect()", "fillRect()")}} 메소드는 좌측 상단 코너를 (10, 10) 위치에 놓으며, 너비를 150, 높이를 100으로 지정합니다.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 150, 100);
 ```
 

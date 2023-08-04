@@ -1,9 +1,8 @@
 ---
 title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
-translation_of: Web/JavaScript/Reference/Global_Objects/URIError
-browser-compat: javascript.builtins.URIError
 ---
+
 {{JSRef}}
 
 El objeto **`URIError`** representa un error cuando una función de manejo de URI

@@ -1,21 +1,9 @@
 ---
-title: '<template>: 콘텐츠 템플릿 요소'
+title: "<template>: 콘텐츠 템플릿 요소"
 slug: Web/HTML/Element/template
-tags:
-  - Element
-  - HTML
-  - HTML Web Components
-  - HTML:Flow content
-  - HTML:Metadata content
-  - HTML:Phrasing content
-  - HTML:Script-supporting element
-  - Reference
-  - Web
-  - Web Components
-  - 웹 컴포넌트
-translation_of: Web/HTML/Element/template
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<template>` 요소**는 페이지를 불러온 순간 즉시 그려지지는 않지만, 이후 JavaScript를 사용해 인스턴스를 생성할 수 있는 {{glossary("HTML")}} 코드를 담을 방법을 제공합니다.
 
@@ -107,28 +95,26 @@ translation_of: Web/HTML/Element/template
 ```js
 // 템플릿 엘리먼트의 컨텐츠 존재 유무를 통해
 // 브라우저가 HTML 템플릿 엘리먼트를 지원하는지 확인합니다
-if ('content' in document.createElement('template')) {
+if ("content" in document.createElement("template")) {
+  // 기존 HTML tbody 와 템플릿 열로 테이블을 인스턴스화합니다
+  var t = document.querySelector("#productrow");
 
-    // 기존 HTML tbody 와 템플릿 열로 테이블을 인스턴스화합니다
-    var t = document.querySelector('#productrow');
+  // 새로운 열을 복제하고 테이블에 삽입합니다
+  var tb = document.querySelector("tbody");
+  var clone = document.importNode(t.content, true);
+  td = clone.querySelectorAll("td");
+  td[0].textContent = "1235646565";
+  td[1].textContent = "Stuff";
 
-    // 새로운 열을 복제하고 테이블에 삽입합니다
-    var tb = document.querySelector("tbody");
-    var clone = document.importNode(t.content, true);
-    td = clone.querySelectorAll("td");
-    td[0].textContent = "1235646565";
-    td[1].textContent = "Stuff";
+  tb.appendChild(clone);
 
-    tb.appendChild(clone);
+  // 새로운 열을 복제하고 테이블에 삽입합니다
+  var clone2 = document.importNode(t.content, true);
+  td = clone2.querySelectorAll("td");
+  td[0].textContent = "0384928528";
+  td[1].textContent = "Acme Kidney Beans 2";
 
-    // 새로운 열을 복제하고 테이블에 삽입합니다
-    var clone2 = document.importNode(t.content, true);
-    td = clone2.querySelectorAll("td");
-    td[0].textContent = "0384928528";
-    td[1].textContent = "Acme Kidney Beans 2";
-
-    tb.appendChild(clone2);
-
+  tb.appendChild(clone2);
 } else {
   // HTML 템플릿 엘리먼트를 지원하지 않으므로
   // 테이블에 열을 추가하는 다른 방법을 찾습니다.
@@ -154,7 +140,7 @@ table td {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.template")}}
+{{Compat}}
 
 ## 같이 보기
 

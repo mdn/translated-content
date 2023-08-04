@@ -1,15 +1,9 @@
 ---
-title: '<tbody>: 표 본문 요소'
+title: "<tbody>: 표 본문 요소"
 slug: Web/HTML/Element/tbody
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/tbody
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML** **`<tbody>`** 요소는 표의 여러 행({{htmlelement("tr")}})을 묶어서 표 본문을 구성합니다.
 
@@ -65,13 +59,13 @@ translation_of: Web/HTML/Element/tbody
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
-<div class="hidden"><h3 id="Deprecated_attributes">Deprecated attributes</h3><dl><dt>{{ htmlattrdef("align") }} {{deprecated_inline}}</dt><dd>This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:<ul><li><code>left</code>, aligning the content to the left of the cell</li><li><code>center</code>, centering the content in the cell</li><li><code>right</code>, aligning the content to the right of the cell</li><li><code>justify</code>, inserting spaces into the textual content so that the content is justified in the cell</li><li><code>char</code>, aligning the textual content on a special character with a minimal offset, defined by the {{ htmlattrxref("char", "tbody") }} and {{ htmlattrxref("charoff", "tbody") }} attributes.</li></ul><p>If this attribute is not set, the <code>left</code> value is assumed.</p><p>As this attribute is deprecated, use the CSS {{cssxref("text-align")}} property instead.</p><div class="note"><strong>Note: </strong>The equivalent <code>text-align</code> property for the <code>align="char"</code> is not implemented in any browsers yet. See the <a href="/en-US/docs/Web/CSS/text-align#Browser_compatibility"><code>text-align</code>'s browser compatibility section</a> for the <code>&#x3C;string></code> value.</div></dd><dt>{{htmlattrdef("bgcolor")}} {{Deprecated_inline}}</dt><dd><p>The background color of the table. It is a <a href="/en-US/docs/Web/CSS/color_value#RGB_colors">6-digit hexadecimal RGB code</a>, prefixed by a '<code>#</code>'. One of the predefined <a href="/en-US/docs/Web/CSS/color_value#Color_keywords">color kewords</a> can also be used.</p><p>As this attribute is deprecated, use the CSS {{cssxref("background-color")}} property instead.</p></dd><dt>{{ htmlattrdef("char") }} {{deprecated_inline}}</dt><dd><p>This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (<code>.</code>) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tbody")}} is not set to <code>char</code>, this attribute is ignored.</p></dd><dt>{{ htmlattrdef("charoff") }} {{deprecated_inline}}</dt><dd>This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the <code>char</code> attribute.</dd><dt>{{ htmlattrdef("valign") }} {{deprecated_inline}}</dt><dd>This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:<ul><li><code>baseline</code>, which will put the text as close to the bottom of the cell as it is possible, but align it on the <a class="external" href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">baseline</a> of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as <code>bottom</code>.</li><li><code>bottom</code>, which will put the text as close to the bottom of the cell as it is possible;</li><li><code>middle</code>, which will center the text in the cell;</li><li>and <code>top</code>, which will put the text as close to the top of the cell as it is possible.</li></ul><p>As this attribute is deprecated, use the CSS {{cssxref("vertical-align")}} property instead.</p></dd></dl></div>
+<div class="hidden"><h3 id="Deprecated_attributes">Deprecated attributes</h3><dl><dt>{{ htmlattrdef("align") }} {{deprecated_inline}}</dt><dd>This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:<ul><li><code>left</code>, aligning the content to the left of the cell</li><li><code>center</code>, centering the content in the cell</li><li><code>right</code>, aligning the content to the right of the cell</li><li><code>justify</code>, inserting spaces into the textual content so that the content is justified in the cell</li><li><code>char</code>, aligning the textual content on a special character with a minimal offset, defined by the {{ htmlattrxref("char", "tbody") }} and {{ htmlattrxref("charoff", "tbody") }} attributes.</li></ul><p>If this attribute is not set, the <code>left</code> value is assumed.</p><p>As this attribute is deprecated, use the CSS {{cssxref("text-align")}} property instead.</p><div class="note"><strong>Note: </strong>The equivalent <code>text-align</code> property for the <code>align="char"</code> is not implemented in any browsers yet. See the <a href="/ko/docs/Web/CSS/text-align#Browser_compatibility"><code>text-align</code>'s browser compatibility section</a> for the <code>&#x3C;string></code> value.</div></dd><dt>{{htmlattrdef("bgcolor")}} {{Deprecated_inline}}</dt><dd><p>The background color of the table. It is a <a href="/ko/docs/Web/CSS/color_value#RGB_colors">6-digit hexadecimal RGB code</a>, prefixed by a '<code>#</code>'. One of the predefined <a href="/ko/docs/Web/CSS/color_value#Color_keywords">color kewords</a> can also be used.</p><p>As this attribute is deprecated, use the CSS {{cssxref("background-color")}} property instead.</p></dd><dt>{{ htmlattrdef("char") }} {{deprecated_inline}}</dt><dd><p>This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (<code>.</code>) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tbody")}} is not set to <code>char</code>, this attribute is ignored.</p></dd><dt>{{ htmlattrdef("charoff") }} {{deprecated_inline}}</dt><dd>This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the <code>char</code> attribute.</dd><dt>{{ htmlattrdef("valign") }} {{deprecated_inline}}</dt><dd>This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:<ul><li><code>baseline</code>, which will put the text as close to the bottom of the cell as it is possible, but align it on the <a class="external" href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">baseline</a> of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as <code>bottom</code>.</li><li><code>bottom</code>, which will put the text as close to the bottom of the cell as it is possible;</li><li><code>middle</code>, which will center the text in the cell;</li><li>and <code>top</code>, which will put the text as close to the top of the cell as it is possible.</li></ul><p>As this attribute is deprecated, use the CSS {{cssxref("vertical-align")}} property instead.</p></dd></dl></div>
 
 ## 사용 일람
 
 - 표의 헤더 행을 나타내기 위해 {{HTMLElement("thead")}} 요소를 사용한 경우, `<tbody>` 요소는 반드시 그 뒤에 위치해야 합니다.
 - `<tbody>`를 사용할 경우, {{HTMLElement("table")}}의 바로 밑 자식이면서 `<tbody>`에 속하지 않는 {{htmlelement("tr")}} 요소는 사용할 수 없습니다. 모든 비 헤더, 비 푸터 행은 반드시 `<tbody>`의 자식으로 존재해야 합니다.
-- 문서 출력 시, `<thead>`와 {{htmlelement("tfoor")}} 요소는 모든 페이지에서 같거나 거의 같은 정보를 나타내고, `<tbody>` 요소는 서로 다른 정보를 나타냅니다.
+- 문서 출력 시, `<thead>`와 {{htmlelement("tfoot")}} 요소는 모든 페이지에서 같거나 거의 같은 정보를 나타내고, `<tbody>` 요소는 서로 다른 정보를 나타냅니다.
 - 표를 화면 맥락(브라우저 창 등)에서 표시할 때, 화면이 표 전체를 보여주기에 충분히 크지 않은 경우 {{Glossary("user agent", "사용자 에이전트")}}는 같은 부모의 `<thead>`, `<tbody>`, `<tfoot>`, {{HTMLElement("caption")}} 요소를 서로 따로 스크롤 가능토록 설정할 수 있습니다.
 - 하나의 표에 다수의 `<tbody>`를 연속적으로 사용할 수 있으며, 이를 통해 커다란 표의 행을 구획으로 나눌 수 있습니다. 필요한 경우 각 구획에 서로 다른 서식을 적용할 수도 있습니다.
 
@@ -124,14 +118,19 @@ translation_of: Web/HTML/Element/tbody
 table {
   border: 2px solid #555;
   border-collapse: collapse;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 ```
 
 우선 표의 전반적인 스타일을 설정합니다.외부 테두리의 굵기, 스타일, 색을 설정하고, {{cssxref("border-collapse")}}를 이용해 각 칸의 테두리가 서로 분리되지 않고 공유하도록 지정합니다. {{cssxref("font")}}를 사용해 표의 기본 글씨체도 설정합니다.
 
 ```css
-th, td {
+th,
+td {
   border: 1px solid #bbb;
   padding: 2px 8px 0;
   text-align: left;
@@ -232,10 +231,15 @@ Then each remaining row in each major's `<tbody>` consists of two cells: the fir
 table {
   border: 2px solid #555;
   border-collapse: collapse;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #bbb;
   padding: 2px 8px 0;
   text-align: left;
@@ -264,7 +268,7 @@ tbody > tr > th {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.tbody")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -1,13 +1,6 @@
 ---
 title: constructor
 slug: Web/JavaScript/Reference/Classes/constructor
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-browser-compat: javascript.classes.constructor
-translation_of: Web/JavaScript/Reference/Classes/constructor
 ---
 {{jsSidebar("Classes")}}
 

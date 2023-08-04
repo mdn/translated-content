@@ -1,15 +1,8 @@
 ---
 title: String.prototype.substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-  - substring()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Resumo
@@ -145,7 +138,7 @@ function replaceString(oldS, newS, fullS) {
 replaceString("World", "Web", "Brave New World");
 ```
 
-Note que isto pode resultar em um loop infinito se `oldS` for um substring de `newS` -- por exemplo, se você tentou substituir "`World`" com "`OtherWorld`". O melhor método para substituir strings é o seguinte:
+Note que isto pode resultar em um loop infinito se `oldS` for um substring de `newS` — por exemplo, se você tentou substituir "`World`" com "`OtherWorld`". O melhor método para substituir strings é o seguinte:
 
 ```js
 function replaceString(oldS, newS,fullS){

@@ -7,7 +7,7 @@ slug: Glossary/POP
 
 メールクライアントは通常、サーバーからすべてのメッセージを受信し、すべてのメッセージを削除します。 しかし、POP3 はサーバーにメッセージのコピーを残すことができます。現在、ほぼすべてのメールサーバーとクライアントは POP3 に対応しています。
 
-- ウィキペディア上の {{Interwiki("wikipedia", "Post Office Protocol", "POP")}}
+- ウィキペディア上の [POP](https://ja.wikipedia.org/wiki/Post_Office_Protocol)
 - [RFC 1734](https://tools.ietf.org/html/rfc1734) (POP3 認証機構の仕様)
 - [RFC 1939](https://tools.ietf.org/html/rfc1939) (POP3 の仕様)
 - [RFC 2449](https://tools.ietf.org/html/rfc2449) (POP3 拡張機構の仕様)

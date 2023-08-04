@@ -1,16 +1,8 @@
 ---
 title: Справка по HTML
 slug: Web/HTML/Reference
-tags:
-  - HTML
-  - Landing
-  - Web
-  - Веб
-  - Справка
-  - лендинг
-translation_of: Web/HTML/Reference
-original_slug: Web/HTML/Ссылки
 ---
+
 {{HTMLSidebar}}
 
 Эта справка описывает все **элементы** и **атрибуты** [HTML](/ru/docs/Web/HTML), включая **глобальные атрибуты**, которые применяются ко всем элементам.

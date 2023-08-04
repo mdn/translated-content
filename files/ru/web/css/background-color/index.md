@@ -1,18 +1,10 @@
 ---
 title: background-color
 slug: Web/CSS/background-color
-tags:
-  - CSS
-  - CSS-свойства
-  - CSS фоны
-  - Графика
-  - Определение
-  - Раскладка
-translation_of: Web/CSS/background-color
 ---
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS)-свойство **`background-color`** [CSS](/ru/docs/Web/CSS "CSS") устанавливает цвет фона элемента.
+[CSS](/ru/docs/Web/CSS)-свойство **`background-color`** [CSS](/ru/docs/Web/CSS) устанавливает цвет фона элемента.
 
 {{EmbedInteractiveExample("pages/css/background-color.html")}}
 
@@ -50,7 +42,7 @@ background-color: initial;
 background-color: unset;
 ```
 
-Свойство `background-color` определяется единственным значением [`<color>`](#<color>).
+Свойство `background-color` определяется единственным значением [`<color>`](#color).
 
 ### Значения
 

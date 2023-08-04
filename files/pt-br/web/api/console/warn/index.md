@@ -1,15 +1,15 @@
 ---
 title: Console.warn()
-slug: Web/API/Console/warn
-translation_of: Web/API/Console/warn
+slug: Web/API/console/warn
 ---
+
 {{APIRef("Console API")}}{{non-standard_header}}
 
 Escreve uma mensagem de alerta no Console Web.
 
 {{AvailableInWorkers}}
 
-{{Note("No Firefox, <em>warnings</em> têm um pequeno icone de ponto de exclamação perto deles no log do Console Web.")}}
+> **Nota:** No Firefox, warnings têm um pequeno icone de ponto de exclamação perto deles no log do Console Web.
 
 ## Sintaxe
 
@@ -31,13 +31,11 @@ Ver [Outputting text to the console](/pt-BR/docs/Web/API/console#Outputting_text
 
 ## Especificações
 
-| Especificação                                                                                        | Status                           | Comentário        |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName("Console API", "#consolewarnobject--object-", "console.warn()")}} | {{Spec2("Console API")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.console.warn")}}
+{{Compat}}
 
 ## Ver também
 

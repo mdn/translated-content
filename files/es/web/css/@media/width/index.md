@@ -1,8 +1,8 @@
 ---
 title: width
 slug: Web/CSS/@media/width
-translation_of: Web/CSS/@media/width
 ---
+
 {{cssref}}
 
 El **`width`** [CSS](/es/docs/CSS) {{cssxref("@media")}} media caracteristica puede ser usada para aplicar estilos basados en el ancho de el {{glossary("viewport")}} (o la caja de la pagina, para [paged media](/es/docs/Web/CSS/Paged_media)).
@@ -48,13 +48,10 @@ La característica `width` es especificada como {{cssxref("&lt;length&gt;")}} va
 
 {{EmbedLiveSample('Example','90%')}}
 
-## Specificaciones
+## Especificaciones
 
-| Specification                                                            | Status                                   | Comment                                                            |
-| ------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------ |
-| {{SpecName('CSS4 Media Queries', '#width', 'width')}} | {{Spec2('CSS4 Media Queries')}} | The value can now be negative, in which case it computes to false. |
-| {{SpecName('CSS3 Media Queries', '#width', 'width')}} | {{Spec2('CSS3 Media Queries')}} | Initial definition. The value must be nonnegative.                 |
+{{Specifications}}
 
-## Navegadores Compatibles
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.media.width")}}
+{{Compat}}

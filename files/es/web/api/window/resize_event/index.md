@@ -1,16 +1,11 @@
 ---
 title: GlobalEventHandlers.onresize
 slug: Web/API/Window/resize_event
-tags:
-  - API
-  - DOM
-  - Propiedad
-translation_of: Web/API/GlobalEventHandlers/onresize
-original_slug: Web/API/GlobalEventHandlers/onresize
 ---
+
 {{ ApiRef() }}
 
-La propiedad **GlobalEventHandlers.onresize** contiene un {{event("Event_handlers", "event handler")}} desencadenado cuando un evento {{event("resize")}} es recibido.
+La propiedad **GlobalEventHandlers.onresize** contiene un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) desencadenado cuando un evento [`resize`](/es/docs/Web/Reference/Events/resize) es recibido.
 
 ## Sintaxis
 
@@ -30,24 +25,21 @@ window.onresize = doFunc;
 
 ```html
 <html>
-<head>
+  <head>
+    <title>onresize test</title>
 
-<title>onresize test</title>
+    <script type="text/javascript">
+      window.onresize = resize;
 
-<script type="text/javascript">
+      function resize() {
+        alert("resize event detected!");
+      }
+    </script>
+  </head>
 
-window.onresize = resize;
-
-function resize()
-{
- alert("resize event detected!");
-}
-</script>
-</head>
-
-<body>
-<p>Resize the browser window to fire the resize event.</p>
-</body>
+  <body>
+    <p>Resize the browser window to fire the resize event.</p>
+  </body>
 </html>
 ```
 
@@ -55,8 +47,6 @@ function resize()
 
 El evento **resize** es activado después de que la ventana ha sido redimensionada.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                   | Status                           | Comentario |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onresize','onresize')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}

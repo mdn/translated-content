@@ -92,9 +92,7 @@ regex.test('foobar')  //false
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.test', 'RegExp.test')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

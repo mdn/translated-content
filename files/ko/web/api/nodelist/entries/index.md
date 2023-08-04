@@ -1,8 +1,8 @@
 ---
 title: NodeList.entries()
 slug: Web/API/NodeList/entries
-translation_of: Web/API/NodeList/entries
 ---
+
 {{APIRef("DOM")}}
 
 **`NodeList.entries()`** 메서드는 이 객체에 포함된 모든 key/value 쌍을 통과하는 {{jsxref("Iteration_protocols",'iterator')}} 를 반환합니다. 이 값(value)은 {{domxref("Node")}} 객체입니다.
@@ -31,7 +31,7 @@ node.appendChild(kid3);
 var list = node.childNodes;
 
 // Using for..of
-for(var entry of list.entries()) {
+for (var entry of list.entries()) {
   console.log(entry);
 }
 ```
@@ -44,11 +44,11 @@ Array [ 1, #text "hey" ]
 Array [ 2, <span> ]
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

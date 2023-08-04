@@ -108,7 +108,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('範例')}}
 
 ## 規格
 

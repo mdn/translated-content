@@ -1,13 +1,8 @@
 ---
 title: Number.POSITIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 ---
+
 {{JSRef}}
 
 **`Number.POSITIVE_INFINITY`** 속성은 양의 무한대를 나타냅니다.

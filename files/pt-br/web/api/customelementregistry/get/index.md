@@ -1,17 +1,8 @@
 ---
 title: CustomElementRegistry.get()
 slug: Web/API/CustomElementRegistry/get
-tags:
-  - API
-  - CustomElementRegistry
-  - Experimental
-  - Method
-  - Reference
-  - Web Components
-  - custom elements
-  - get
-browser-compat: api.CustomElementRegistry.get
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 O **`get()`** é um método de {{domxref("CustomElementRegistry")}} a interface retorna um construtor para um elemento personalizado previamente definido.
@@ -34,18 +25,20 @@ O construtor do elemento personalizado nomeado, ou `undefined`se não há defini
 ## Examples
 
 ```js
-customElements.define('my-paragraph',
+customElements.define(
+  "my-paragraph",
   class extends HTMLElement {
     constructor() {
-      let templateContent = document.getElementById('my-paragraph').content;
+      let templateContent = document.getElementById("my-paragraph").content;
       super() // returns element this scope
-        .attachShadow({mode: 'open'}) // sets AND returns this.shadowRoot
+        .attachShadow({ mode: "open" }) // sets AND returns this.shadowRoot
         .append(templateContent.cloneNode(true));
-  }
-})
+    }
+  },
+);
 
 // Retorne uma referência ao construtor my-paragraph
-let ctor = customElements.get('my-paragraph');
+let ctor = customElements.get("my-paragraph");
 ```
 
 ## Especificações

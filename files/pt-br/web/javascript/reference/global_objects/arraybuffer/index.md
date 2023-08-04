@@ -1,16 +1,11 @@
 ---
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-tags:
-  - ArrayBuffer
-  - Constructor
-  - JavaScript
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
+
 {{JSRef}}
 
-O objeto **`ArrayBuffer`** é um tipo de dado usado para representar um genérico, buffer de dados binários de tamanho fixo. Você não pode manipular diretamente os conteúdos de um `ArrayBuffer`; em vez disso, você cria um objeto [`ArrayBufferView`](/en/JavaScript_typed_arrays/ArrayBufferView) que representa o buffer em um formato específico, e usa para ler e escrever os conteúdos do buffer.
+O objeto **`ArrayBuffer`** é um tipo de dado usado para representar um genérico, buffer de dados binários de tamanho fixo. Você não pode manipular diretamente os conteúdos de um `ArrayBuffer`; em vez disso, você cria um objeto [`ArrayBufferView`](/pt-BR/JavaScript_typed_arrays/ArrayBufferView) que representa o buffer em um formato específico, e usa para ler e escrever os conteúdos do buffer.
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html")}}
 
@@ -84,10 +79,10 @@ var view   = new Int32Array(buffer);
 
 ## Especificações
 
-| Especificação                                                                                | Status                           | Comentário                                                            |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                         | {{Spec2('Typed Array')}} | Substituído pelo ECMAScript 6                                         |
-| {{SpecName('ES6', '#sec-arraybuffer-constructor', 'ArrayBuffer')}}     | {{Spec2('ES6')}}             | Definição inicial no ECMA standard. Specified that `new` is required. |
+| Especificação                                                          | Status                   | Comentário                                                            |
+| ---------------------------------------------------------------------- | ------------------------ | --------------------------------------------------------------------- |
+| {{SpecName('Typed Array')}}                                            | {{Spec2('Typed Array')}} | Substituído pelo ECMAScript 6                                         |
+| {{SpecName('ES6', '#sec-arraybuffer-constructor', 'ArrayBuffer')}}     | {{Spec2('ES6')}}         | Definição inicial no ECMA standard. Specified that `new` is required. |
 | {{SpecName('ESDraft', '#sec-arraybuffer-constructor', 'ArrayBuffer')}} | {{Spec2('ESDraft')}}     |                                                                       |
 
 ## Compatibilidade com navegadores

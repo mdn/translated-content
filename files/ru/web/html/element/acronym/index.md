@@ -1,11 +1,7 @@
 ---
 title: <acronym>
 slug: Web/HTML/Element/acronym
-tags:
-  - Obsolete
-translation_of: Web/HTML/Element/acronym
 ---
-{{obsolete_header}}
 
 ## Аннотация
 
@@ -15,7 +11,7 @@ translation_of: Web/HTML/Element/acronym
 
 ## Атрибуты
 
-Этот элемент поддерживает _только_ [глобальные атрибуты](/ru/docs/HTML/global_attributes "HTML/global attributes").
+Этот элемент поддерживает _только_ [глобальные атрибуты](/ru/docs/HTML/global_attributes).
 
 ## Интерфейс DOM
 
@@ -49,8 +45,8 @@ translation_of: Web/HTML/Element/acronym
 
 {{Compat}}
 
-## Смотрите также:
+## Смотрите также
 
 - {{HTMLElement("abbr")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

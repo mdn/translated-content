@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.setMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setMinutes
 ---
 
 {{JSRef}}
@@ -26,7 +18,7 @@ dateObj.setMinutes(valeurMinutes[, valeurSecondes[, valeurMs]])
 ### Versions antérieures à JavaScript 1.3
 
 ```js
-dateObj.setMinutes(valeurMinutes)
+dateObj.setMinutes(valeurMinutes);
 ```
 
 ### Paramètres
@@ -59,16 +51,11 @@ leGrandJour.setMinutes(45);
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.32', 'Date.prototype.setMinutes')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.setminutes', 'Date.prototype.setMinutes')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.setminutes', 'Date.prototype.setMinutes')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.setMinutes")}}
+{{Compat}}
 
 ## Voir aussi
 

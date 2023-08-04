@@ -15,8 +15,8 @@ MVC のソフトウェア設計パターンの 3 つの部分は、次のよう�
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "Model View Controller","MVC")}}
-- Wikipedia 上の {{Interwiki("wikipedia", "関心の分離")}}
+- Wikipedia 上の [MVC](https://ja.wikipedia.org/wiki/Model_View_Controller)
+- Wikipedia 上の [関心の分離](https://ja.wikipedia.org/wiki/関心の分離)
 
 ### MVC アーキテクチャ
 

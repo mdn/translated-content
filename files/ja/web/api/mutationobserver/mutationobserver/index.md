@@ -74,9 +74,7 @@ observer.observe(targetNode, observerOptions);
 
 ## 仕様書
 
-| Specification                                                                                                            | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('DOM WHATWG', '#dom-mutationobserver-mutationobserver', 'MutationObserver()')}} | {{ Spec2('DOM WHATWG') }} |         |
+{{Specifications}}
 
 ## 各ブラウザの対応状況
 

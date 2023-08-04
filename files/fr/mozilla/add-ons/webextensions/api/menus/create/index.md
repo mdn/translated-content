@@ -1,17 +1,6 @@
 ---
 title: menus.create()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/create
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - contextMenus
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/create
 ---
 
 {{AddonSidebar()}}
@@ -98,7 +87,7 @@ browser.menus.create(
         Si le titre contient une esperluette "&" le caractère suivant sera utilisé comme clé d'accès pour l'élément et l'esperluette ne sera pas affichée. Les exceptions à cette règle sont les suivantes :
 
         - Si le caractère suivant est également une esperluette : alors une esperluette simple sera affichée et aucune clé d'accès ne sera définie. En effet, "&&" est utilisé pour afficher une seule esperluette.
-        - Si les caractères suivants sont la directive d'interpolation "%s" :  alors l'esperluette ne sera pas affichée et aucune clé d'accès ne sera définie.
+        - Si les caractères suivants sont la directive d'interpolation "%s" : alors l'esperluette ne sera pas affichée et aucune clé d'accès ne sera définie.
         - Si l'esperluette est le dernier caractère du titre : alors l'esperluette ne sera pas affichée et aucune clé d'accès ne sera définie.
 
         Seule la première esperluette sera utilisée pour définir une clé d'accès : les esperluettes suivantes ne seront pas affichées mais ne définiront pas les clés. Ainsi "\&A et \&B" seront affichés comme "A et B" et "A" comme clé d'accès.
@@ -125,10 +114,10 @@ Cet exemple crée un élément de menu contextuel qui s'affiche lorsque l'utilis
 browser.menus.create({
   id: "log-selection",
   title: "Log '%s' to the console",
-  contexts: ["selection"]
+  contexts: ["selection"],
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "log-selection") {
     console.log(info.selectionText);
   }
@@ -146,33 +135,39 @@ function onCreated() {
   }
 }
 
-browser.menus.create({
-  id: "radio-green",
-  type: "radio",
-  title: "Make it green",
-  contexts: ["all"],
-  checked: false
-}, onCreated);
+browser.menus.create(
+  {
+    id: "radio-green",
+    type: "radio",
+    title: "Make it green",
+    contexts: ["all"],
+    checked: false,
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "radio-blue",
-  type: "radio",
-  title: "Make it blue",
-  contexts: ["all"],
-  checked: false
-}, onCreated);
+browser.menus.create(
+  {
+    id: "radio-blue",
+    type: "radio",
+    title: "Make it blue",
+    contexts: ["all"],
+    checked: false,
+  },
+  onCreated,
+);
 
 var makeItBlue = 'document.body.style.border = "5px solid blue"';
 var makeItGreen = 'document.body.style.border = "5px solid green"';
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "radio-blue") {
     browser.tabs.executeScript(tab.id, {
-      code: makeItBlue
+      code: makeItBlue,
     });
   } else if (info.menuItemId == "radio-green") {
     browser.tabs.executeScript(tab.id, {
-      code: makeItGreen
+      code: makeItGreen,
     });
   }
 });
@@ -180,9 +175,9 @@ browser.menus.onClicked.addListener(function(info, tab) {
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.create", 10)}}
+{{Compat}}
 
 > **Note :**
 >

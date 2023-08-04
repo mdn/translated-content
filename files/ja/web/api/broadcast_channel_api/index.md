@@ -1,74 +1,77 @@
 ---
-title: Broadcast Channel API
+title: ブロードキャストチャンネル API
 slug: Web/API/Broadcast_Channel_API
+l10n:
+  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
 
 {{DefaultAPISidebar("Broadcast Channel API")}}
 
-**Broadcast Channel API**（放送チャンネル API）を使用すると、{{glossary("browsing context", "閲覧コンテキスト")}}（つまり、_ウィンドウ_、_タブ_、_フレーム_、_iframe_）間で、同じ{{glossary("origin","オリジン")}}（通常は同じサイトのページ）を使用して簡単に通信できます。
+**ブロードキャストチャンネル API** (Broadcast Channel API) を使用すると、同じ{{glossary("origin","オリジン")}}の{{glossary("browsing context", "閲覧コンテキスト")}}（つまり、_ウィンドウ_、_タブ_、_フレーム_、_iframe_）やワーカー間で、基本的な通信を行うことができます。
 
 {{AvailableInWorkers}}
 
-放送チャンネルは、名前が付けられ、特定のオリジンに結びつけられています。
+{{domxref("BroadcastChannel")}} オブジェクトを作成することで、投稿されたメッセージを受け取ることができます。通信したいフレームやワーカーへの参照を保持する必要はありません。同じ名前の {{domxref("BroadcastChannel")}} を自分自身で構築することで特定のチャンネルに「加入 (subscribe)」し、それらすべての間で双方向の通信をすることができます。
 
-基になるチャンネルをリッスンしている {{domxref("BroadcastChannel")}} オブジェクトを作成することで、投稿されたメッセージを受信できます。 興味深い点は、通信したい iframe やワーカーへの参照を維持する必要がもうないということです。 それらは単に {{domxref("BroadcastChannel")}} を構築することによって特定のチャンネルを「購読する（subscribe）」ことができ、それらすべての間で全二重（双方向）通信を行うことができます。
+![ブロードキャストチャンネル API の原理](broadcastchannel.png)
 
-![Broadcast Channel API の原理](https://mdn.mozillademos.org/files/9945/BroadcastChannel.png)
-
-## 放送チャンネルのインターフェイス
+## ブロードキャストチャンネルのインターフェイス
 
 ### チャンネルの作成または参加
 
-`BroadcastChannel` インターフェイスは非常に単純です。 クライアントは {{domxref("BroadcastChannel")}} オブジェクトを作成することによって特定の放送チャンネルに参加します。 {{domxref("BroadcastChannel.BroadcastChannel","コンストラクタ")}}は、それを識別するために使用する単一のパラメーターである、チャネルの*名前*を取ります。 放送チャンネルに最初に接続した場合は、基になるリソースが作成されます。
+クライアントは {{domxref("BroadcastChannel")}} オブジェクトを作成することで、特定のブロードキャストチャンネルに参加します。[コンストラクター](/ja/docs/Web/API/BroadcastChannel/BroadcastChannel)は一つだけ引数として、チャンネルの*名前*を取ります。 ブロードキャストチャンネルに最初に接続した場合は、基になるリソースが作成されます。
 
 ```js
-// 放送チャンネルへの接続
-var bc = new BroadcastChannel('test_channel');
+// ブロードキャストチャンネルへの接続
+const bc = new BroadcastChannel("test_channel");
 ```
 
 ### メッセージの送信
 
-メッセージを投稿するのは簡単です。 `BroadcastChannel` オブジェクトの {{domxref("BroadcastChannel.postMessage", "postMessage()")}} メソッドを呼び出すだけで十分です。 このメソッドは任意のオブジェクトを引数として取ります。 非常に単純な例は、次のように {{domxref("DOMString")}} テキストメッセージです。
+作成した `BroadcastChannel` オブジェクトの {{domxref("BroadcastChannel.postMessage", "postMessage()")}} メソッドを呼び出すだけで十分です。 このメソッドは任意のオブジェクトを引数として取ります。文字列のメッセージの例を示します。
 
 ```js
 // 非常に単純なメッセージの送信例
-bc.postMessage('This is a test message.');
+bc.postMessage("This is a test message.");
 ```
 
-{{domxref("DOMString")}} だけでなく、あらゆる種類のオブジェクトを送信できます。 API は意味論をメッセージに関連付けないため、どのような種類のメッセージを想定し、それをどう処理するかを知るのは、チャネルの参加者次第です。
+チャンネルに送信されたデータは、[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を使用してシリアライズされます。つまり、多種多様なデータオブジェクトを自分でシリアライズすることなく、安全に送信することができるのです。
+
+API はメッセージに意味づけをしないので、どのようなメッセージを期待し、それをどう処理するかはコード次第です。
 
 ### メッセージの受信
 
-メッセージが投稿されると、このチャンネルに接続されている各 {{domxref("BroadcastChannel")}} オブジェクトに {{event("message")}} イベントが送出されます。 デフォルトでは何もしませんが、{{domxref("BroadcastChannel.onmessage", "onmessage")}} イベントハンドラを使用して新しい関数を実装できます。
+メッセージが投稿されると、 [`message`](/ja/docs/Web/API/BroadcastChannel/message_event) イベントがこのチャンネルに接続されているそれぞれの {{domxref("BroadcastChannel")}} オブジェクトに送出されます。このイベントに対して {{domxref("BroadcastChannel/message_event", "onmessage")}} イベントハンドラーを使用して関数を実行することができます。
 
 ```js
-// イベントをコンソールに記録するだけの
-// 単純なイベントハンドラの例
-bc.onmessage = function (ev) { console.log(ev); }
+// イベントをコンソールに出力するだけのハンドラー
+bc.onmessage = (event) => {
+  console.log(event);
+};
 ```
 
 ### チャンネルの切断
 
-チャネルを去るには、オブジェクトの {{domxref("BroadcastChannel.close", "close()")}} メソッドを呼び出す必要があります。 これにより、オブジェクトと基になるチャネル間のリンクを切断し、ガベージコレクションをすることができます。
+チャンネルを去るには、オブジェクトの {{domxref("BroadcastChannel.close", "close()")}} メソッドを呼び出す必要があります。 これにより、オブジェクトと基になるチャンネル間のリンクを切断し、ガベージコレクションをすることができます。
 
 ```js
 // チャンネルの切断
-bc.close()
+bc.close();
 ```
 
-## 結び
+## まとめ
 
-Broadcast Channel API は非常に単純な API であり、自己完結型のインターフェイスによってコンテキスト間通信が可能です。 ユーザーがアカウントにログインしたときなど、同じサイトオリジン環境内の他のタブでユーザーの操作を検出するために使用できます。 メッセージングプロトコルは定義されておらず、さまざまなコンテキストのさまざまなドキュメントがそれ自体を実装する必要があります。 ネゴシエーションも仕様からの要件もありません。
+ブロードキャストチャンネル API は、自己完結型のインターフェイスによってコンテキスト間通信が可能です。ユーザーがログインしたときやログアウトしたときなど、同じオリジン内の他のタブでのユーザーの操作を検出するために使用することができます。
 
-## 仕様
+メッセージングプロトコルは定義されておらず、様々な閲覧コンテキストがそれ自体を実装する必要があります。 ネゴシエーションも仕様からの要件もありません。
 
-| 仕様                                                                                                                                                 | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "comms.html#broadcasting-to-other-browsing-contexts", "The Broadcast Channel API")}} | {{Spec2('HTML WHATWG')}} | 初期定義 |
+## 仕様書
+
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.BroadcastChannel")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,18 +1,11 @@
 ---
-title: ':blank'
+title: ":blank"
 slug: Web/CSS/:blank
-tags:
-  - ':blank'
-  - CSS
-  - Experimental
-  - Necessita de Exemplos
-  - Pseudo-classe
-  - Seletores CSS
-translation_of: Web/CSS/:blank
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-> **Note:** The `:blank` selector is considered at risk, as the CSSWG keeps changing it.
+> **Nota:** The `:blank` selector is considered at risk, as the CSSWG keeps changing it.
 >
 > See [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967).
 
@@ -24,8 +17,8 @@ A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS)
 
 ## Especificações
 
-| Specification                                                                | Status                               | Comment            |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| Specification                                             | Status                      | Comment            |
+| --------------------------------------------------------- | --------------------------- | ------------------ |
 | {{SpecName("CSS4 Selectors", "#blank-pseudo", ":blank")}} | {{Spec2("CSS4 Selectors")}} | Definição inicial. |
 
 ## Compatibilidade com navegadores

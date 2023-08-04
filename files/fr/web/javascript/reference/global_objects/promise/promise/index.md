@@ -1,8 +1,6 @@
 ---
 title: Constructeur Promise()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/Promise
-browser-compat: javascript.builtins.Promise.Promise
 ---
 
 {{JSRef}}
@@ -14,7 +12,7 @@ Le constructeur **`Promise()`** est principalement utilisé afin d'envelopper de
 ## Syntaxe
 
 ```js
-new Promise(executeur)
+new Promise(executeur);
 ```
 
 ### Paramètres
@@ -47,7 +45,7 @@ new Promise(executeur)
     Ainsi, voici le mécanisme par lequel `executeur` produit un effet&nbsp;:
 
     - Au moment où le constructeur génère le nouvel objet `Promise`, il génère également une paire de fonctions correspondantes `fonctionResolution` et `fonctionRejet` qui sont «&nbsp;reliées&nbsp;» à l'objet `Promise`.
-    - Le code contenu dans `executeur` peut réaliser une opération et refléter le résultat de l'opération (si la valeur n'est pas un autre objet `Promise`) en  object) comme étant «&nbsp;résolue&nbsp;» ou «&nbsp;rejetée&nbsp;» en appelant respectivement `fonctionResolution` ou `fonctionRejet`.
+    - Le code contenu dans `executeur` peut réaliser une opération et refléter le résultat de l'opération (si la valeur n'est pas un autre objet `Promise`) en object) comme étant «&nbsp;résolue&nbsp;» ou «&nbsp;rejetée&nbsp;» en appelant respectivement `fonctionResolution` ou `fonctionRejet`.
     - Autrement dit, le code contenu dans `executeur` communique par l'effet de bord fourni avec `fonctionResolution` ou `fonctionRejet`. De cette façon, la promesse devient «&nbsp;résolue&nbsp;» ou «&nbsp;rejetée&nbsp;».
 
     Pour résumer, voici les étapes généralement suivies&nbsp;:
@@ -62,7 +60,7 @@ new Promise(executeur)
 
 ### Valeur de retour
 
-Lorsqu'il est appelé avec l'opérateur `new`, le constructeur `Promise()` renvoie un objet `Promise`. Cette promesse sera résolue lorsque l'une des fonctions `fonctionResolution` ou `fonctionRejet` sera appelée.  Si on passe une promesse comme argument à `fonctionResolution` ou `fonctionRejet`, on pourra dire que la promesse courante est résolue, mais pas que la chaîne de promesses est terminée.
+Lorsqu'il est appelé avec l'opérateur `new`, le constructeur `Promise()` renvoie un objet `Promise`. Cette promesse sera résolue lorsque l'une des fonctions `fonctionResolution` ou `fonctionRejet` sera appelée. Si on passe une promesse comme argument à `fonctionResolution` ou `fonctionRejet`, on pourra dire que la promesse courante est résolue, mais pas que la chaîne de promesses est terminée.
 
 ## Exemples
 

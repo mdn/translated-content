@@ -1,12 +1,8 @@
 ---
 title: contenteditable
 slug: Web/HTML/Global_attributes/contenteditable
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/contenteditable
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`contenteditable`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 사용자가 요소를 편집할 수 있는지 나타내는 열거형 특성입니다.
@@ -34,7 +30,7 @@ translation_of: Web/HTML/Global_attributes/contenteditable
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.contenteditable")}}
+{{Compat}}
 
 ## 같이 보기
 

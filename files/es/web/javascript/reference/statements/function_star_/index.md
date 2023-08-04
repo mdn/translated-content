@@ -1,15 +1,8 @@
 ---
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
-tags:
-  - Declaración
-  - Experimental
-  - Expérimental(2)
-  - Iterador
-  - función
-translation_of: Web/JavaScript/Reference/Statements/function*
-original_slug: Web/JavaScript/Referencia/Sentencias/function*
 ---
+
 {{jsSidebar("Statements")}}
 
 La declaración **`function*`** (la palabra clave `function` seguida de un asterisco) define una _función generadora_, que devuelve un objeto {{jsxref("Global_Objects/Generator","Generator")}}.
@@ -85,13 +78,11 @@ console.log(gen.next().value); // 20
 
 ## Especificaciones
 
-| Especificaciones                                     | Status                   | Comentarios         |
-| ---------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('ES2015', '#', 'function*')}} | {{Spec2('ES2015')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.generator_function")}}
+{{Compat}}
 
 ## Ver también
 
@@ -107,6 +98,6 @@ console.log(gen.next().value); // 20
 - Other web resources:
 
   - [Regenerator](http://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
+  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
   - [Hemanth.HM: The New gen of \*gen(){}](https://www.youtube.com/watch?v=ZrgEZykBHVo&list=PLuoyIZT5fPlG44bPq50Wgh0INxykdrYX7&index=1)
   - [Task.js](http://taskjs.org/)

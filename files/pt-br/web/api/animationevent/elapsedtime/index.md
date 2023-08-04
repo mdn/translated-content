@@ -1,16 +1,8 @@
 ---
 title: AnimationEvent.elapsedTime
 slug: Web/API/AnimationEvent/elapsedTime
-tags:
-  - AnimationEvent
-  - Animações Web
-  - Apps
-  - CSSOM
-  - Experimental
-  - Propriedade
-  - Referencia
-translation_of: Web/API/AnimationEvent/elapsedTime
 ---
+
 {{SeeCompatTable}}{{ apiref("Web Animations API") }}
 
 ## Sumário
@@ -25,13 +17,11 @@ time = AnimationEvent.elapsedTime
 
 ## Especificações
 
-| Specification                                                                                                                | Status                                   | Comment             |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Animations', '#AnimationEvent-elapsedTime', 'AnimationEvent.elapsedTime') }} | {{ Spec2('CSS3 Animations')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.AnimationEvent.elapsedTime")}}
+{{Compat}}
 
 ## Veja também
 

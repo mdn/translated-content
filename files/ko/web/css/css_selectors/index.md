@@ -1,15 +1,8 @@
 ---
 title: CSS 선택자
-slug: Web/CSS/CSS_Selectors
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Reference
-  - Selectors
-  - 선택자
-translation_of: Web/CSS/CSS_Selectors
+slug: Web/CSS/CSS_selectors
 ---
+
 {{CSSRef("Selectors")}}
 
 **CSS 선택자**는 CSS 규칙을 적용할 요소를 정의합니다.

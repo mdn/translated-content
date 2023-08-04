@@ -1,49 +1,48 @@
 ---
 title: ErrorEvent
 slug: Web/API/ErrorEvent
+l10n:
+  sourceCommit: d3cdafcdb4d22e5c55771501e7c80451a96aa032
 ---
 
 {{APIRef("HTML DOM")}}
 
 **`ErrorEvent`** インターフェイスは、スクリプトまたはファイルのエラーに関連する情報を提供するイベントを表します。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
-_また、親である {{domxref("Event")}}_ からプロパティを継承します。
+_親である {{domxref("Event")}} から継承したプロパティもあります。_
 
-- {{domxref("ErrorEvent.message")}} {{readonlyInline}}
-  - : 関数を説明するヒューマンリーダブルなエラーメッセージを含む {{domxref("DOMString")}} です。
-- {{domxref("ErrorEvent.filename")}} {{readonlyInline}}
-  - : エラーが発生したスクリプトファイルの名前を含む {{domxref("DOMString")}} です。
-- {{domxref("ErrorEvent.lineno")}} {{readonlyInline}}
+- {{domxref("ErrorEvent.message")}} {{ReadOnlyInline}}
+  - : 文字列で、関数を説明する人間が読むのに適したエラーメッセージが入ります。[`crossorigin`](/ja/docs/Web/HTML/Global_attributes#crossorigin) の設定がないと、エラーの記録が縮小されます。
+- {{domxref("ErrorEvent.filename")}} {{ReadOnlyInline}}
+  - : 文字列で、エラーが発生したスクリプトファイルの名前が入ります。
+- {{domxref("ErrorEvent.lineno")}} {{ReadOnlyInline}}
   - : エラーが発生したスクリプトファイルの行番号を含む `integer` です。
-- {{domxref("ErrorEvent.colno")}} {{readonlyInline}}
+- {{domxref("ErrorEvent.colno")}} {{ReadOnlyInline}}
   - : エラーが発生したスクリプトファイルの列番号を含む `integer` です。
-- {{domxref("ErrorEvent.error")}} {{readonlyInline}} {{experimental_inline}}
-  - : イベントに関係する JavaScript `Object` です。
+- {{domxref("ErrorEvent.error")}} {{ReadOnlyInline}}
+  - : イベントに関係する JavaScript の `Object` です。
 
-## コンストラクタ
+## コンストラクター
 
 - {{domxref("ErrorEvent.ErrorEvent", "ErrorEvent()")}}
-  - : 指定されたパラメータで `ErrorEvent` イベントを作成します。
+  - : 指定された引数で `ErrorEvent` イベントを作成します。
 
-## 関数
+## インスタンスメソッド
 
-_親である {{domxref("Event")}}_ から関数を継承します。
+_親である {{domxref("Event")}} から継承したメソッドがあります。_
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                 | ステータス                           | 備考                                                            |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', 'webappapis.html#the-errorevent-interface', 'ErrorEvent') }} | {{ Spec2('HTML WHATWG') }} | `error` プロパティと 5 番目のパラメータをコンストラクタに追加。 |
-| {{ SpecName('HTML5 W3C', 'webappapis.html#the-errorevent-interface', 'ErrorEvent') }}     | {{ Spec2('HTML5 W3C') }}     | 初回定義。                                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ErrorEvent")}}
+{{Compat}}
 
-## 関連項目
+## 関連情報
 
-- [web worker を使用して](/ja/docs/Web/Guide/Performance/Using_web_workers)、 その様なイベントを発生させる可能性が最も高いオブジェクト
+- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)、このようなイベントを発生させる可能性が最も高いオブジェクト

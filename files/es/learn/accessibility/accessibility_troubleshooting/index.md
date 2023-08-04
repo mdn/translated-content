@@ -1,17 +1,8 @@
 ---
-title: 'Evaluación: Solución de problemas de accesibilidad'
+title: "Evaluación: Solución de problemas de accesibilidad"
 slug: Learn/Accessibility/Accessibility_troubleshooting
-tags:
-  - Accesibilidad
-  - Aprender
-  - CSS
-  - Evaluación
-  - HTML
-  - JavaScript
-  - Principiante
-  - WAI-ARIA
-translation_of: Learn/Accessibility/Accessibility_troubleshooting
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
 En la evaluación de este módulo, le presentamos un sitio simple con una serie de problemas de accesibilidad que necesita diagnosticar y corregir.
@@ -42,7 +33,7 @@ Alternativamente, podría usar un sitio como [JSBin](http://jsbin.com/) o [Glitc
 
 El sitio de evaluación terminado debe tener este aspecto:
 
-![](https://mdn.mozillademos.org/files/14555/assessment-site-finished.png)
+![](assessment-site-finished.png)
 
 Verá algunas diferencias/problemas con la visualización del estado inicial de la evaluación — esto se debe principalmente a las diferencias en el marcado, que a su vez causan algunos problemas de estilo, ya que el CSS no se aplica correctamente. No se preocupe, ¡estará solucionando estos problemas en las próximas secciones!
 
@@ -96,18 +87,8 @@ Si desea que se evalúe su trabajo, o si está atorado y desea pedir ayuda:
 
 1. Ponga su trabajo en un editor compartible en línea como [CodePen,](https://codepen.io/) [jsFiddle](https://jsfiddle.net/)o [Glitch](https://glitch.com/).
 2. Escribe una publicación pidiendo evaluación y/o ayuda en la categoría Aprendizaje del [foro de discurso mdn](https://discourse.mozilla.org/c/mdn/learn). Su publicación debe incluir:Un título descriptivo como "Evaluación deseada para la solución de problemas de accesibilidad".
-    - Detalles de lo que ya ha intentado, y lo que le gustaría que hagamos, por ejemplo, si está atascado y necesita ayuda, o quiere una evaluación.
-    - Un enlace al ejemplo con el que desea evaluar o necesita ayuda, en un editor de compartición en línea (como se mencionó en el paso 1 anterior). Esta es una buena práctica a adquirir - es muy difícil ayudar a alguien con un problema de codificación si no se puede ver su código.
-    - Un enlace a la tarea actual o página de evaluación, para que podamos encontrar la pregunta con la que desea ayuda.
+   - Detalles de lo que ya ha intentado, y lo que le gustaría que hagamos, por ejemplo, si está atascado y necesita ayuda, o quiere una evaluación.
+   - Un enlace al ejemplo con el que desea evaluar o necesita ayuda, en un editor de compartición en línea (como se mencionó en el paso 1 anterior). Esta es una buena práctica a adquirir - es muy difícil ayudar a alguien con un problema de codificación si no se puede ver su código.
+   - Un enlace a la tarea actual o página de evaluación, para que podamos encontrar la pregunta con la que desea ayuda.
 
 {{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
-
-## En este módulo
-
-- [¿Qué es la accesibilidad?](/es/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: Una buena base para la accesibilidad](/es/docs/Learn/Accessibility/HTML)
-- [Prácticas recomendadas de accesibilidad CSS y JavaScript](/es/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [Conceptos básicos de WAI-ARIA](/es/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accesibilidad móvil](/es/docs/Learn/Accessibility/Mobile)
-- [Mobile accessibility](/es/docs/Learn/Accessibility/Mobile)
-- [Solución de problemas de accesibilidad](/es/docs/Learn/Accessibility/Accessibility_troubleshooting)

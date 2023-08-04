@@ -1,17 +1,9 @@
 ---
 title: <address>
 slug: Web/HTML/Element/address
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/address
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<address>` 요소**는 가까운 HTML 요소의 사람, 단체, 조직 등에 대한 연락처 정보를 나타냅니다.
 
@@ -98,14 +90,14 @@ translation_of: Web/HTML/Element/address
 
 ```html
 <address>
-  You can contact author at <a href="http://www.somedomain.com/contact">
-  www.somedomain.com</a>.<br>
-  If you see any bugs, please <a href="mailto:webmaster@somedomain.com">
-  contact webmaster</a>.<br>
-  You may also want to visit us:<br>
-  Mozilla Foundation<br>
-  331 E Evelyn Ave<br>
-  Mountain View, CA 94041<br>
+  You can contact author at
+  <a href="http://www.somedomain.com/contact"> www.somedomain.com</a>.<br />
+  If you see any bugs, please
+  <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.<br />
+  You may also want to visit us:<br />
+  Mozilla Foundation<br />
+  331 E Evelyn Ave<br />
+  Mountain View, CA 94041<br />
   USA
 </address>
 ```
@@ -122,4 +114,4 @@ translation_of: Web/HTML/Element/address
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.address")}}
+{{Compat}}

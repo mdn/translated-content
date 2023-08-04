@@ -1,5 +1,5 @@
 ---
-title: ':picture-in-picture'
+title: ":picture-in-picture"
 slug: Web/CSS/:picture-in-picture
 ---
 
@@ -9,7 +9,9 @@ slug: Web/CSS/:picture-in-picture
 
 ## 構文
 
-{{csssyntax}}
+```
+:picture-in-picture
+```
 
 ## 使用上のメモ
 

@@ -1,14 +1,8 @@
 ---
 title: handler.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.ownKeys
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 ---
+
 {{JSRef}}
 
 **`handler.ownKeys()`** 메서드는 {{jsxref("Reflect.ownKeys()")}}에 대한 트랩입니다.

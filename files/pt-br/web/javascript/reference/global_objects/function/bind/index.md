@@ -1,8 +1,8 @@
 ---
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 ---
+
 {{JSRef}}
 
 O método **`bind()`** cria uma nova função que, quando chamada, tem sua palavra-chave `this` definida com o valor fornecido, com uma sequência determinada de argumentos precedendo quaisquer outros que sejam fornecidos quando a nova função é chamada.
@@ -51,7 +51,9 @@ O uso mais simples de `bind()` é fazer com que uma função que, independenteme
 this.x = 9; //this aqui se refere ao objeto global "window" do navegador
 var module = {
   x: 81,
-  getX: function() { return this.x; }
+  getX: function () {
+    return this.x;
+  },
 };
 
 module.getX(); // 81
@@ -98,13 +100,12 @@ function LateBloomer() {
 }
 
 // Declarar bloom depois de um intervalo de 1 segundo
-LateBloomer.prototype.bloom = function() {
+LateBloomer.prototype.bloom = function () {
   window.setTimeout(this.declare.bind(this), 1000);
 };
 
-LateBloomer.prototype.declare = function() {
-  console.log('I am a beautiful flower with ' +
-    this.petalCount + ' petals!');
+LateBloomer.prototype.declare = function () {
+  console.log("I am a beautiful flower with " + this.petalCount + " petals!");
 };
 
 var flower = new LateBloomer();
@@ -124,8 +125,8 @@ function Point(x, y) {
   this.y = y;
 }
 
-Point.prototype.toString = function() {
-  return this.x + ',' + this.y;
+Point.prototype.toString = function () {
+  return this.x + "," + this.y;
 };
 
 var p = new Point(1, 2);
@@ -134,10 +135,10 @@ p.toString(); // '1,2'
 // não suportado no polyfill abaixo,
 // funciona bem com o bind nativo:
 
-var YAxisPoint = Point.bind(null, 0/*x*/);
+var YAxisPoint = Point.bind(null, 0 /*x*/);
 
 var emptyObj = {};
-var YAxisPoint = Point.bind(emptyObj, 0/*x*/);
+var YAxisPoint = Point.bind(emptyObj, 0 /*x*/);
 
 var axisPoint = new YAxisPoint(5);
 axisPoint.toString(); // '0,5'
@@ -157,7 +158,7 @@ Note que você não precisa fazer nada de especial para criar uma função vincu
 // (apesar de que isso geralmente não é desejado)
 YAxisPoint(13);
 
-emptyObj.x + ',' + emptyObj.y;
+emptyObj.x + "," + emptyObj.y;
 // >  '0,13'
 ```
 
@@ -195,22 +196,24 @@ A função `bind` é uma adição à ECMA-262, 5ª. edição; como tal, pode nã
 
 ```js
 if (!Function.prototype.bind) {
-  Function.prototype.bind = function(oThis) {
-    if (typeof this !== 'function') {
+  Function.prototype.bind = function (oThis) {
+    if (typeof this !== "function") {
       // mais próximo possível da função interna
       // IsCallable da ECMAScript 5
-      throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
+      throw new TypeError(
+        "Function.prototype.bind - what is trying to be bound is not callable",
+      );
     }
 
-    var aArgs   = Array.prototype.slice.call(arguments, 1),
-        fToBind = this,
-        fNOP    = function() {},
-        fBound  = function() {
-          return fToBind.apply(this instanceof fNOP
-                 ? this
-                 : oThis,
-                 aArgs.concat(Array.prototype.slice.call(arguments)));
-        };
+    var aArgs = Array.prototype.slice.call(arguments, 1),
+      fToBind = this,
+      fNOP = function () {},
+      fBound = function () {
+        return fToBind.apply(
+          this instanceof fNOP ? this : oThis,
+          aArgs.concat(Array.prototype.slice.call(arguments)),
+        );
+      };
 
     fNOP.prototype = this.prototype;
     fBound.prototype = new fNOP();
@@ -223,7 +226,7 @@ if (!Function.prototype.bind) {
 Algumas das muitas diferenças (é bem possível que haja outras, já que esta lista não pretende seriamente ser completa) entre este algoritmo e o algoritmo especificado são:
 
 - Esta implementação parcial depende dos métodos internos {{jsxref("Array.prototype.slice()")}}, {{jsxref("Array.prototype.concat()")}}, {{jsxref("Function.prototype.call()")}} e {{jsxref("Function.prototype.apply()")}} possuírem seus valores originais.
-- Esta implementação parcial cria funções que não tem um {{jsxref("Function.caller", "caller")}} imutável como "mecanismo de defesa" e propriedades `arguments` que lançam um {{jsxref("Global_Objects/TypeError", "TypeError")}} ao usar _get_, _set_, ou ao deletar. (Isto pode ser adicionado se a implementação suporta {{jsxref("Object.defineProperty")}}, ou parcialmente implementado sem um comportamento _throw-on-delete_ se a implementação suporta as extensões {{jsxref("Object.defineGetter", "__defineGetter__")}} e {{jsxref("Object.defineSetter", "__defineSetter__")}})
+- Esta implementação parcial cria funções que não tem um {{jsxref("Function.caller", "caller")}} imutável como "mecanismo de defesa" e propriedades `arguments` que lançam um {{jsxref("Global_Objects/TypeError", "TypeError")}} ao usar _get_, _set_, ou ao deletar. (Isto pode ser adicionado se a implementação suporta {{jsxref("Object.defineProperty")}}, ou parcialmente implementado sem um comportamento _throw-on-delete_ se a implementação suporta as extensões [`Object.prototype.__defineGetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) e [`Object.prototype.__defineSetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__))
 - Esta implementação parcial cria funções que tem uma propriedade `prototype`. (Funções vinculadas apropriadas não a tem.)
 - Esta implementação parcial cria funções vinculadas cuja propriedade {{jsxref("Function.length", "length")}} não cumpre com a regra da ECMA-262: cria funções com comprimento zero, quando uma implementação completa, dependendo do comprimento da função alvo e do número de argumentos pre-especificados, pode retornar um comprimento não-nulo.
 
@@ -231,10 +234,10 @@ Se você escolher utilizar esta implementação parcial, **você não deve confi
 
 ## Especificações
 
-| Especificação                                                                                            | Status                   | Comentário                                           |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.3.4.5', 'Function.prototype.bind')}}                 | {{Spec2('ES5.1')}} | Definição inicial. Implementada no JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-function.prototype.bind', 'Function.prototype.bind')}} | {{Spec2('ES6')}}     |                                                      |
+| Especificação                                                                  | Status             | Comentário                                           |
+| ------------------------------------------------------------------------------ | ------------------ | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.3.4.5', 'Function.prototype.bind')}}              | {{Spec2('ES5.1')}} | Definição inicial. Implementada no JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-function.prototype.bind', 'Function.prototype.bind')}} | {{Spec2('ES6')}}   |                                                      |
 
 ## Compatibilidade com navegadores
 

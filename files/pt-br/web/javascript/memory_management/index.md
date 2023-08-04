@@ -1,11 +1,8 @@
 ---
 title: Gerenciamento de Memória
-slug: Web/JavaScript/Memory_Management
-tags:
-  - coletor
-  - memória(2)
-translation_of: Web/JavaScript/Memory_Management
+slug: Web/JavaScript/Memory_management
 ---
+
 {{JsSidebar("Advanced")}}
 
 ## Introdução

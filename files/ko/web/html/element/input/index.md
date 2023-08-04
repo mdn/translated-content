@@ -1,17 +1,9 @@
 ---
-title: '<input>: 입력 요소'
-slug: Web/HTML/Element/Input
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input tag
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/input
+title: "<input>: 입력 요소"
+slug: Web/HTML/Element/input
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<input>` 요소**는 웹 기반 양식에서 사용자의 데이터를 받을 수 있는 대화형 컨트롤을 생성합니다. {{glossary("user agent", "사용자 에이전트")}}에 따라서 다양한 종류의 입력 데이터 유형과 컨트롤 위젯이 존재합니다. 입력 유형과 특성의 다양한 조합 가능성으로 인해, `<input>` 요소는 HTML에서 제일 강력하고 복잡한 요소 중 하나입니다.
 
@@ -45,7 +37,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="examplebutton">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="button" name="button" /></pre
+&#x3C;input type="button" name="button" /></pre
         >
         {{EmbedLiveSample("examplebutton",200,55,"","", "nobutton")}}
       </td>
@@ -55,7 +47,7 @@ translation_of: Web/HTML/Element/input
       <td>단일 값을 선택하거나 선택 해제할 수 있는 체크박스.</td>
       <td id="examplecheckbox">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="checkbox" name="checkbox"/></pre
+&#x3C;input type="checkbox" name="checkbox"/></pre
         >
         {{EmbedLiveSample("examplecheckbox",200,55,"","", "nobutton")}}
       </td>
@@ -68,7 +60,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="examplecolor">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="color" name="color"/></pre
+&#x3C;input type="color" name="color"/></pre
         >
         {{EmbedLiveSample("examplecolor",200,55,"","", "nobutton")}}
       </td>
@@ -81,7 +73,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="exampledate">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="date" name="date"/></pre
+&#x3C;input type="date" name="date"/></pre
         >
         {{EmbedLiveSample("exampledate",200,55,"","", "nobutton")}}
       </td>
@@ -97,7 +89,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="exampledtl">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="datetime-local" name="datetime-local"/></pre
+&#x3C;input type="datetime-local" name="datetime-local"/></pre
         >
         {{EmbedLiveSample("exampledtl",200,55,"","", "nobutton")}}
       </td>
@@ -172,7 +164,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="examplenumber">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="number" name="number"/></pre
+&#x3C;input type="number" name="number"/></pre
         >
         {{EmbedLiveSample("examplenumber",200,55,"","", "nobutton")}}
       </td>
@@ -187,7 +179,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="examplepassword">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="password" name="password"/></pre
+&#x3C;input type="password" name="password"/></pre
         >
         {{EmbedLiveSample("examplepassword",200,55,"","", "nobutton")}}
       </td>
@@ -231,7 +223,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="examplereset">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="reset" name="reset"/></pre
+&#x3C;input type="reset" name="reset"/></pre
         >
         {{EmbedLiveSample("examplereset",200,55,"","", "nobutton")}}
       </td>
@@ -248,7 +240,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="examplesearch">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="search" name="search"/></pre
+&#x3C;input type="search" name="search"/></pre
         >
         {{EmbedLiveSample("examplesearch",200,55,"","", "nobutton")}}
       </td>
@@ -271,7 +263,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="exampletel">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="tel" name="tel"/></pre
+&#x3C;input type="tel" name="tel"/></pre
         >
         {{EmbedLiveSample("exampletel",200,55,"","", "nobutton")}}
       </td>
@@ -296,7 +288,7 @@ translation_of: Web/HTML/Element/input
       <td>시간대가 없는 시간값을 입력하는 콘트롤</td>
       <td id="exampletime">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="time" name="time"/></pre
+&#x3C;input type="time" name="time"/></pre
         >
         {{EmbedLiveSample("exampletime",200,55,"","", "nobutton")}}
       </td>
@@ -381,7 +373,7 @@ A few additional non-standard attributes are listed following the descriptions o
   - : Valid for the `image` button only, the alt attribute provides alternative text for the image, displaying the value of the attribute if the image [src](#src) is missing or otherwise fails to load. See the {{HTMLElement("input/image", "image")}} input type.
 - {{htmlattrdef("autocomplete")}}
 
-  - : **Not** a Boolean attribute, the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute takes as its value a space separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete simply recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete email addresses in an email input field. See {{SectionOnPage("/en-US/docs/Web/HTML/Attributes/autocomplete", "Values")}} for permitted values.
+  - : **Not** a Boolean attribute, the [`autocomplete`](/ko/docs/Web/HTML/Attributes/autocomplete) attribute takes as its value a space separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete simply recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete email addresses in an email input field. See [Values](/ko/docs/Web/HTML/Attributes/autocomplete#값) for permitted values.
 
     The `autocomplete` attribute is valid on `hidden`, `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, `color` and `password`. This attribute has no effect on input types that do not return numeric or text data, being valid for all input types except `checkbox`, `radio`, `file`, or any of the button types. See [The HTML autocomplete attribute](/ko/docs/Web/HTML/Attributes/autocomplete) for additional information, including information on password security and how `autocomplete` is slightly different for `hidden` than for other input types.
 
@@ -401,7 +393,7 @@ A few additional non-standard attributes are listed following the descriptions o
   - : Introduced in the HTML Media Capture specification and valid for the `file` input type only, the `capture` attribute defines which media - microphone, video, or camera - should be used to capture a new file for upload with `file` upload control in supporting scenarios. See the {{HTMLElement("input/file", "file")}} input type.
 - {{htmlattrdef("checked")}}
 
-  - : Valid for both `radio` and `checkbox` types, `checked` is a Boolean attribute. If present on a radio type, it indicates that that radio button is the currently selected one in the group of same-named radio buttons. If present on a `checkbox` type, it indicates that the checkbox is checked by default (when the page loads). It does _not_ indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the [`HTMLInputElement`’s `checked` IDL attribute](/ko/docs/Web/API/HTMLInputElement) is updated.)
+  - : Valid for both `radio` and `checkbox` types, `checked` is a Boolean attribute. If present on a radio type, it indicates that that radio button is the currently selected one in the group of same-named radio buttons. If present on a `checkbox` type, it indicates that the checkbox is checked by default (when the page loads). It does _not_ indicate whether this checkbox is currently checked: if the checkbox's state is changed, this content attribute does not reflect the change. (Only the [`HTMLInputElement`'s `checked` IDL attribute](/ko/docs/Web/API/HTMLInputElement) is updated.)
 
     > **참고:** Unlike other input controls, a checkboxes and radio buttons value are only included in the submitted data if they are currently `checked`. If they are, the name and the value(s) of the checked controls are submitted.
     >
@@ -425,7 +417,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : A Boolean attribute which, if present, indicates that the user should not be able to interact with the input. Disabled inputs are typically rendered with a dimmer color or using some other form of indication that the field is not available for use.
 
-    Specifically, disabled inputs do not receive the {{event("click")}} event, and disabled inputs are not submitted with the form.
+    Specifically, disabled inputs do not receive the [`click`](/ko/docs/Web/API/Element/click_event) event, and disabled inputs are not submitted with the form.
 
     > **참고:** Although not required by the specification, Firefox will by default [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
 
@@ -490,11 +482,25 @@ A few additional non-standard attributes are listed following the descriptions o
       <option>https://www.youtube.com/user/firefoxchannel</option>
     </datalist>
 
-    <p><label for="textx">Text</label> <input type="text" list="fruitsxx" id="textx"/></p>
-    <p><label for="colorx">Color</label> <input type="color" list="colorsxx" id="colorx"/></p>
-    <p><label for="rangex">Range</label> <input type="range" min="0" max="64" list="numbersxx" id="rangex"/></p>
-    <p><label for="numberx">Number</label> <input type="number" min="0" max="64" list="numbersxx" id="numberx"/></p>
-    <p><label for="urlx">URL</label> <input type="url" list="urlsxx" id="urlx"/></p>
+    <p>
+      <label for="textx">Text</label>
+      <input type="text" list="fruitsxx" id="textx" />
+    </p>
+    <p>
+      <label for="colorx">Color</label>
+      <input type="color" list="colorsxx" id="colorx" />
+    </p>
+    <p>
+      <label for="rangex">Range</label>
+      <input type="range" min="0" max="64" list="numbersxx" id="rangex" />
+    </p>
+    <p>
+      <label for="numberx">Number</label>
+      <input type="number" min="0" max="64" list="numbersxx" id="numberx" />
+    </p>
+    <p>
+      <label for="urlx">URL</label> <input type="url" list="urlsxx" id="urlx" />
+    </p>
     ```
 
     {{EmbedLiveSample("datalist",400,275,"","", "nobutton")}}
@@ -531,39 +537,39 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : A string specifying a name for the input control. This name is submitted along with the control's value when the form data is submitted.
 
-    ##### What's in a name
+##### What's in a name
 
-    Consider the `name` a required attribute (even though it's not). If an input has no `name` specified, or `name` is empty, the input's value is not submitted with the form. (Disabled controls, unchecked radio buttons, unchecked checkboxes, and reset buttons are also not sent.)
+Consider the `name` a required attribute (even though it's not). If an input has no `name` specified, or `name` is empty, the input's value is not submitted with the form. (Disabled controls, unchecked radio buttons, unchecked checkboxes, and reset buttons are also not sent.)
 
-    There are two special cases:
+There are two special cases:
 
-    1.  `_charset_` : If used as the name of an `<input>` element of type [`hidden`](/en-US/docs/Web/HTML/Element/input/hidden), the input's `value` is automatically set by the [user agent](/ko/docs/Glossary/user_agent "user agent: A user agent is a computer program representing a person, for example, a browser in a Web context.") to the character encoding being used to submit the form.
-    2.  `isindex`: For historical reasons, the name [`isindex`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name) is not allowed.
+1. `_charset_` : If used as the name of an `<input>` element of type [`hidden`](/ko/docs/Web/HTML/Element/input/hidden), the input's `value` is automatically set by the [user agent](/ko/docs/Glossary/user_agent) to the character encoding being used to submit the form.
+2. `isindex`: For historical reasons, the name [`isindex`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name) is not allowed.
 
-    ##### `name` and radio buttons
+##### `name` and radio buttons
 
-    The [name](#name) attribute creates a unique behavior for radio buttons.
+The [name](#name) attribute creates a unique behavior for radio buttons.
 
-    Only one radio button in a same-named group of radio buttons can be checked at a time. Selecting any radio button in that group automatically deselects any currently-selected radio button in the same group. The value of that one checked radio button is sent along with the name if the form is submitted,
+Only one radio button in a same-named group of radio buttons can be checked at a time. Selecting any radio button in that group automatically deselects any currently-selected radio button in the same group. The value of that one checked radio button is sent along with the name if the form is submitted,
 
-    When tabbing into a series of same-named group of radio buttons, if one is checked, that one will receive focus. If they aren't grouped together in source order, if one of the group is checked, tabbing into the group starts when the first one in the group is encountered, skipping all those that aren't checked. In other words, if one is checked, tabbing skips the unchecked radio buttons in the group. If none are checked, the radio button group receives focus when the first button in the same name group is reached.
+When tabbing into a series of same-named group of radio buttons, if one is checked, that one will receive focus. If they aren't grouped together in source order, if one of the group is checked, tabbing into the group starts when the first one in the group is encountered, skipping all those that aren't checked. In other words, if one is checked, tabbing skips the unchecked radio buttons in the group. If none are checked, the radio button group receives focus when the first button in the same name group is reached.
 
-    Once one of the radio buttons in a group has focus, using the arrow keys will navigate thru all the radio buttons of the same name, even if the radio buttons are not grouped together in the source order.
+Once one of the radio buttons in a group has focus, using the arrow keys will navigate thru all the radio buttons of the same name, even if the radio buttons are not grouped together in the source order.
 
-    ##### {{domxref("HTMLFormElement.elements")}}
+##### {{domxref("HTMLFormElement.elements")}}
 
-    When an input element is given a `name`, that name becomes a property of the owning form element's {{domxref("HTMLFormElement.elements")}} property. If you have an input whose `name` is set to `guest` and another whose `name` is `hat-size`, the following code can be used:
+When an input element is given a `name`, that name becomes a property of the owning form element's {{domxref("HTMLFormElement.elements")}} property. If you have an input whose `name` is set to `guest` and another whose `name` is `hat-size`, the following code can be used:
 
-    ```js
-    let form = document.querySelector("form");
+```js
+let form = document.querySelector("form");
 
-    let guestName = form.elements.guest;
-    let hatSize = form.elements["hat-size"];
-    ```
+let guestName = form.elements.guest;
+let hatSize = form.elements["hat-size"];
+```
 
-    When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} for the `guest` field, and `hatSize` the object for the `hat-size` field.
+When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} for the `guest` field, and `hatSize` the object for the `hat-size` field.
 
-    > **경고:** You should avoid giving form elements a `name` that corresponds to a built-in property of the form, since you would then override the predefined property or method with this reference to the corresponding input.
+> **경고:** You should avoid giving form elements a `name` that corresponds to a built-in property of the form, since you would then override the predefined property or method with this reference to the corresponding input.
 
 - {{htmlattrdef("pattern")}}
 
@@ -579,7 +585,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text _must not_ include carriage returns or line feeds.
 
-    > **참고:** The `placeholder` attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.
+    > **참고:** The `placeholder` attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [Labels and placeholders](/ko/docs/Web/HTML/Element/input#labels) for more information.
 
 - {{htmlattrdef("readonly")}}
 
@@ -599,9 +605,9 @@ A few additional non-standard attributes are listed following the descriptions o
   - : Valid for the `image` input button only, the `src` is string specifying the URL of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.
 - {{htmlattrdef("step")}}
 
-  - : Valid for the numeric input types, including `number`, date/time input types, and `range`, the [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute is a number that specifies the granularity that the value must adhere to.
+  - : Valid for the numeric input types, including `number`, date/time input types, and `range`, the [`step`](/ko/docs/Web/HTML/Attributes/step) attribute is a number that specifies the granularity that the value must adhere to.
 
-    If not explicitly included, `step` defaults to 1 for `number` and `range`, and 1 unit type (second, week, month, day) for the date/time input types. The value can must be a positive number - integer or float -- or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
+    If not explicitly included, `step` defaults to 1 for `number` and `range`, and 1 unit type (second, week, month, day) for the date/time input types. The value can must be a positive number - integer or float — or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
     If `any` is not explicity set, valid values for the `number`, date/time input types, and `range` input types are equal to the basis for stepping - the [`min`](#min) value and increments of the step value, up to the [`max`](#max) value, if specified. For example, if we have `<input type="number" min="10" step="2">` any even integer, 10 or great, is valid. If omitted, `<input type="number">`, any integer is valid, but floats, like 4.2, are not valid, as `step` defaults to 1. For 4.2 to be valid, `step` would have had to be set to `any`, 0.1, 0.2, or any the min value would have had to be a number ending in .2, such as `<input type="number" min="-5.2">`
 
@@ -619,7 +625,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : A string specifying the type of control to render. For example, to create a checkbox, a value of `checkbox` is used. If omitted (or an unknown value is specified), the input type `text` is used, creating a plaintext input field.
 
-    Permitted values are listed in [\<input> types](#<input>_types) above.
+    Permitted values are listed in [\<input> types](#input_types) above.
 
 - {{htmlattrdef("value")}}
   - : The input control's value. When specified in the HTML, this is the initial value, and from then on it can be altered or retrieved at any time using JavaScript to access the respective {{domxref("HTMLInputElement")}} object's `value` property. The `value` attribute is always optional, though should be considered mandatory for `checkbox`, `radio`, and `hidden`.
@@ -632,20 +638,18 @@ A few additional non-standard attributes are listed following the descriptions o
 
 ```html
 <!-- A basic input -->
-<input type="text" name="input" value="Type here">
+<input type="text" name="input" value="Type here" />
 ```
-
-<input>
 
 ### A common use-case scenario
 
 ```html
 <!-- A common form that includes input tags -->
 <form action="getform.php" method="get">
-    <label>First name: <input type="text" name="first_name" /></label><br />
-    <label>Last name: <input type="text" name="last_name" /></label><br />
-    <label>E-mail: <input type="email" name="user_email" /></label><br />
-    <input type="submit" value="Submit" />
+  <label>First name: <input type="text" name="first_name" /></label><br />
+  <label>Last name: <input type="text" name="last_name" /></label><br />
+  <label>E-mail: <input type="email" name="user_email" /></label><br />
+  <input type="submit" value="Submit" />
 </form>
 ```
 
@@ -655,4 +659,4 @@ A few additional non-standard attributes are listed following the descriptions o
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.input")}}
+{{Compat}}

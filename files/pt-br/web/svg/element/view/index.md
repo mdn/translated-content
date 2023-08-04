@@ -1,12 +1,8 @@
 ---
 title: view
 slug: Web/SVG/Element/view
-tags:
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/view
 ---
+
 {{SVGRef}}
 
 Uma **`view`** é uma maneira definida de visualizar a imagem, como um nível de zoom ou uma visualização de detalhes.
@@ -19,9 +15,9 @@ Uma **`view`** é uma maneira definida de visualizar a imagem, como um nível de
 
 ### Global attributes
 
-- [Aria attributes](/pt-BR/docs/Web/SVG/Attribute#Aria_attributes "en/SVG/Attribute#Core") »
-- [Core attributes](/pt-BR/docs/Web/SVG/Attribute#Core_attributes "en/SVG/Attribute#Core") »
-- [Global event attributes](/pt-BR/docs/Web/SVG/Attribute#Global_event_attributes "en/SVG/Attribute#Core") »
+- [Aria attributes](/pt-BR/docs/Web/SVG/Attribute#Aria_attributes) »
+- [Core attributes](/pt-BR/docs/Web/SVG/Attribute#Core_attributes) »
+- [Global event attributes](/pt-BR/docs/Web/SVG/Attribute#Global_event_attributes) »
 - {{SVGAttr("externalResourcesRequired")}}
 
 ### Specific attributes
@@ -37,8 +33,8 @@ Uma **`view`** é uma maneira definida de visualizar a imagem, como um nível de
 
 ```html
 <svg width="600" height="200" viewBox="0 0 600 200"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+    xmlns="https://www.w3.org/2000/svg"
+    xmlns:xlink="https://www.w3.org/1999/xlink">
   <defs>
     <radialGradient id="gradient">
       <stop offset="0%" stop-color="#8cffa0" />

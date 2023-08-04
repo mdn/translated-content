@@ -1,43 +1,41 @@
 ---
-title: Clients.get()
+title: "Clients: get() メソッド"
 slug: Web/API/Clients/get
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{APIRef("Service Workers API")}}
 
-{{domxref("Clients")}} インターフェースの **`get()`** メソッドは、所与の `id` と一致するサービスワーカークライアントを取得し、{{jsxref("Promise")}} で返します。
+**`get()`** は{{domxref("Clients")}} インターフェイスのメソッドは、指定された `id` と一致するサービスワーカークライアントを取得し、{{jsxref("Promise")}} で返します。
 
 ## 構文
 
-```
-self.clients.get(id).then(function(client) {
-  // 返されたクライアントで何かをします
-});
+```js-nolint
+get(id)
 ```
 
-### パラメーター
+### 引数
 
 - `id`
-  - : 取得するクライアントの id を表す {{domxref("DOMString")}}。
+  - : 取得するクライアントの id を表す文字列です。
 
-### 戻り値
+### 返値
 
 {{domxref("Client")}} オブジェクトまたは `undefined` に解決される {{jsxref("Promise")}}。
 
 ## 例
 
 ```js
-self.clients.get(id).then(function(client) {
+self.clients.get(id).then((client) => {
   self.clients.openWindow(client.url);
 });
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                             | 状態                                 | コメント |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-clients-get', 'get()')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Clients.get")}}
+{{Compat}}

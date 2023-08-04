@@ -1,15 +1,9 @@
 ---
 title: <del>
 slug: Web/HTML/Element/del
-tags:
-  - Element
-  - HTML
-  - HTML edits
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/del
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<del>` 요소**는 문서에서 제거된 텍스트의 범위를 나타냅니다. 문서나 소스 코드의 변경점 추적 등에 사용할 수 있습니다. {{htmlelement("ins")}} 요소를 추가된 텍스트의 범위를 나타낼 수 있습니다.
 
@@ -65,7 +59,7 @@ translation_of: Web/HTML/Element/del
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("cite")}}
   - : 회의록, 이슈 추적 시스템의 티켓 번호 등 변경점을 설명하는 리소스의 {{glossary("URI")}}.
@@ -75,8 +69,7 @@ translation_of: Web/HTML/Element/del
 ## 예제
 
 ```html
-<p><del>This text has been deleted</del>,
-here is the rest of the paragraph.</p>
+<p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
 <del><p>This paragraph has been deleted.</p></del>
 ```
 
@@ -120,7 +113,7 @@ del::after {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.del")}}
+{{Compat}}
 
 ## 같이 보기
 

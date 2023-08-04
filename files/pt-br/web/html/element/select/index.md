@@ -1,8 +1,8 @@
 ---
 title: <select>
 slug: Web/HTML/Element/select
-translation_of: Web/HTML/Element/select
 ---
+
 ## Sumário
 
 O elemento HTML _select_ (\<select>) representa um controle que apresenta um menu de opções. As opções dentro do menu são representadas pelo elemento {{HTMLElement("option")}}, que podem ser agrupados por elementos `{{HTMLElement("optgroup")}}`. As opções podem ser pré-selecionadas para o usuário.
@@ -19,17 +19,17 @@ O elemento HTML _select_ (\<select>) representa um controle que apresenta um men
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Atributos_globais).
 
-- {{htmlattrdef("autofocus")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("autofocus")}}
   - : Este atributo permite especificar que um controle de formulário deve ter foco de entrada quando a página é carregada, a não ser que o usuário o substitua, por exemplo digitando em um controle diferente. Somente um elemento de formulário em um documento pode ter o atributo `autofocus`, que é booleano.
 - {{htmlattrdef("disabled")}}
   - : Este atributo booleano indica que o usuário não pode interagir com o controle. Caso esse atributo não seja especificado, o controle herda a configuração do elemento que o contém, por exemplo o elemento `fieldset`; se não há nenhum elemento que o contém com o atributo `disabled`, então o controle está habilitado.
-- {{htmlattrdef("form")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("form")}}
   - : O elemento form ao qual o elemento select é associado (algo como "formulário dono" do select). Se este atributo for especificado, seu valor deve ser o ID de um elemento form no mesmo documento. Isso permite que você coloque elementos select em qualquer lugar dentro do documento, e não apenas como descendentes de elementos form.
 - {{htmlattrdef("multiple")}}
   - : Este atributo booleano indica que várias opções podem ser selecionadas na lista. Se não for especificado, apenas uma opção poderá ser selecionada de cada vez.
 - {{htmlattrdef("name")}}
   - : O nome do controle
-- {{htmlattrdef("required")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("required")}}
   - : Um atributo booleano que indica que uma opção com um valor de string que não esteja vazia deve ser selecionada.
 - {{htmlattrdef("size")}}
   - : Se o controle é apresentado como uma list box com scroll, este atributo representa o número de linhas na list box que devem estar visíveis num determinado momento. Os navegadores não são obrigados a apresentar elementos select com uma list box scroll. O valor padrão é 0.
@@ -75,4 +75,4 @@ A seguir um exemplo de como simular uma lista de seleção com opções editáve
 
 - Outros elementos relacionados a formulários: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

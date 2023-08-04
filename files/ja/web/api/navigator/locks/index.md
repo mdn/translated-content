@@ -19,9 +19,7 @@ var lockManager = Navigator.locks
 
 ## 仕様
 
-| 仕様                                                                     | ステータス                   | 備考       |
-| ------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{SpecName('Web Locks','#navigator-mixins','locks')}} | {{Spec2('Web Locks')}} | 初回定義。 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

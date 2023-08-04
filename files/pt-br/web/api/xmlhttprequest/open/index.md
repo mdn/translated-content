@@ -1,11 +1,8 @@
 ---
 title: XMLHttpRequest.open()
 slug: Web/API/XMLHttpRequest/open
-tags:
-  - Referencia
-  - metodo
-translation_of: Web/API/XMLHttpRequest/open
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 O {{domxref("XMLHttpRequest")}} método**`open()`** inicializa uma nova requisição, ou reinicializa uma requisição já existente.
@@ -40,13 +37,11 @@ XMLHttpRequest.open(method, url, async, user, password)
 
 ## Especificações
 
-| Especificação                                                                        | Status                               | Comentário    |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
-| {{SpecName('XMLHttpRequest', '#the-open()-method', 'open()')}} | {{Spec2('XMLHttpRequest')}} | Padrão WHATWG |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.XMLHttpRequest.open")}}
+{{Compat}}
 
 ## Veja também
 

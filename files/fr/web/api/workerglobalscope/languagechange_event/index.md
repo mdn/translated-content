@@ -1,13 +1,11 @@
 ---
 title: WorkerGlobalScope.onlanguagechange
 slug: Web/API/WorkerGlobalScope/languagechange_event
-translation_of: Web/API/WorkerGlobalScope/onlanguagechange
-original_slug: Web/API/WorkerGlobalScope/onlanguagechange
 ---
 
 {{APIRef("Web Workers API")}}
 
-La propriété **`onlanguagechange`** de l'interface {{domxref("WorkerGlobalScope")}} représente un {{event("Event_handlers", "event handler")}} à appeler lorsque l'événement {{event("languagechange")}} survient et se propage à travers le {{domxref("Worker")}}.
+La propriété **`onlanguagechange`** de l'interface {{domxref("WorkerGlobalScope")}} représente un gestionnaire d'évènement à appeler lorsque l'événement `languagechange` survient et se propage à travers le {{domxref("Worker")}}.
 
 ## Syntaxe
 
@@ -20,9 +18,9 @@ self.onlanguagechange = function() { ... };
 L'extrait de code suivant montre un gestionnaire `onlanguagechange` placé au sein d'un worker :
 
 ```js
-self.onlanguagechange = function() {
-  console.log('Your preferred language settings have been changed');
-}
+self.onlanguagechange = function () {
+  console.log("Your preferred language settings have been changed");
+};
 ```
 
 ## Spécifications

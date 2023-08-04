@@ -1,16 +1,8 @@
 ---
 title: Media Capture and Streams API (미디어 스트림)
 slug: Web/API/Media_Capture_and_Streams_API
-tags:
-  - API
-  - Media
-  - Media Capture and Streams
-  - Media Capture and Streams API
-  - Media Streams API
-  - Overview
-translation_of: Web/API/Media_Streams_API
-original_slug: Web/API/Media_Streams_API
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 **Media Streams API**, 짧게는 **MediaStream API**라고 불리는 **Media Capture and Streams API**는 오디오와 비디오 데이터 스트리밍을 지원하는 [WebRTC](/ko/docs/Web/API/WebRTC_API) 관련 API 입니다. 이 API는 미디어 스트림과 스트림을 구성하는 트랙, 데이터 형식과 관련된 제한인자, 데이터를 비동기적으로 사용할 때의 성공과 오류 콜백, 그리고 이 과정에서 발생하는 이벤트에 대한 인터페이스 및 메서드를 제공합니다.

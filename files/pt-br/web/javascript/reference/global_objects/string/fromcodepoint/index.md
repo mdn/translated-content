@@ -1,15 +1,8 @@
 ---
 title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
-tags:
-  - JavaScript
-  - Referencia
-  - String
-  - UTF-16
-  - Unicode
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 ---
+
 {{JSRef}}
 
 O método estático **String.fromCodePoint()** retorna uma seqüência de caracteres criado usando a seqüência especificada de pontos de código.

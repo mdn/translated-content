@@ -1,28 +1,22 @@
 ---
 title: VideoTrackList.selectedIndex
 slug: Web/API/VideoTrackList/selectedIndex
+l10n:
+  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
 {{APIRef("HTML DOM")}}
 
-読み取り専用の **{{domxref("VideoTrackList")}}** の **`selectedIndex`** プロパティは、現在選択されているトラックがある場合はそのインデックスを返し、それ以外の場合は `-1` を返します。
+読み取り専用の **{{domxref("VideoTrackList")}}** の **`selectedIndex`** プロパティは、現在選択されているトラックがある場合はその位置を返し、それ以外の場合は `-1` を返します。
 
-## 構文
+## 値
 
-```
-var index = VideoTrackList.selectedIndex;
-```
+現在選択されているトラックがある場合はその位置を示す数値、それ以外の場合は `-1`。
 
-### 値
+## 仕様書
 
-現在選択されているトラックがある場合はそのインデックスを示す数値、それ以外の場合は `-1`。
-
-## 仕様
-
-| 仕様                                                                                                                             | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#dom-videotracklist-selectedindex', 'VideoTrackList: selectedIndex')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.VideoTrackList.selectedIndex")}}
+{{Compat}}

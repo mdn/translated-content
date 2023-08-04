@@ -27,7 +27,7 @@ WebSocket.close();
 - `SYNTAX_ERR`
   - : `reason` 字符串太长（超过 123 字节）
 
-> **备注：** 在 Gecko 8.0 {{geckoRelease("8.0")}}之前版本的 Gecko 里，这个方法不支持传参数。
+> **备注：** 在 Gecko 8.0 之前版本的 Gecko 里，这个方法不支持传参数。
 
 ## Specifications
 

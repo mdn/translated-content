@@ -1,12 +1,8 @@
 ---
 title: lowest
 slug: Web/EXSLT/math/lowest
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/math/lowest
 ---
+
 {{XsltRef}}
 `math:lowest()` devuelve el nodo del conjunto de nodos (node-set) especificado con el valor más bajo (donde el valor más bajo se calcula usando [`math:min()`](/es/docs/Web/EXSLT/math/min).
 

@@ -1,5 +1,5 @@
 ---
-title: 'Document: cut イベント'
+title: "Document: cut イベント"
 slug: Web/API/Document/cut_event
 ---
 
@@ -33,16 +33,14 @@ slug: Web/API/Document/cut_event
 ## 例
 
 ```js
-document.addEventListener('cut', (event) => {
-    console.log('cut action initiated')
+document.addEventListener("cut", (event) => {
+  console.log("cut action initiated");
 });
 ```
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                                 |
-| ------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Clipboard API', '#clipboard-event-cut')}} | {{Spec2('Clipboard API')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

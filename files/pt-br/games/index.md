@@ -1,15 +1,8 @@
 ---
 title: Desenvolvimento de jogos
 slug: Games
-tags:
-  - Aplicativos
-  - Desenvolvimento de Jogos
-  - Gamedev
-  - Jogos Web
-  - Jogos em HTML5
-  - Jogos em JavaScript
-translation_of: Games
 ---
+
 {{GamesSidebar}}
 
 Jogar é uma das atividades mais populares em computadores. Novas tecnologias aparecem, constantemente, para tornar possível o desenvolvimento de jogos melhores e mais poderosos, que podem ser executados em qualquer navegador compatível com os padrões web.
@@ -36,7 +29,7 @@ Para começar, veja:
 
 Para uma lista de exemplos de jogos web, veja a nossa [página de exemplos](/pt-BR/docs/Games/Examples). Também dê uma olhada em [openwebgames.com](http://www.openwebgames.com/) para mais exemplos e recursos úteis!
 
-[![](https://mdn.mozillademos.org/files/12790/owg-logo-dark.svg)](http://www.openwebgames.com)
+[![](owg-logo-dark.svg)](http://www.openwebgames.com)
 
 ## Veja também
 
@@ -53,6 +46,7 @@ Para uma lista de exemplos de jogos web, veja a nossa [página de exemplos](/pt-
 - [Gamedev.js Weekly](http://gamedevjsweekly.com/)
   - : Boletim de notícias semanal sobre desenvolvimento de jogos HTML5, lançado toda Sexta-Feira. Contém os últimos artigos, tutoriais, ferramentas e recursos.
 - [HTML5 Game Devs Forum](http://www.html5gamedevs.com/)
+
   - : Fóruns para desenvolvedores, criadores de framework e publicadores. Faça perguntas, obtenha retorno, ajude outras pessoas.
 
 - [HTML5 Game Engine](http://html5gameengine.com/)

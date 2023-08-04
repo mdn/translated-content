@@ -1,15 +1,8 @@
 ---
 title: JavaScript error reference
 slug: Web/JavaScript/Reference/Errors
-tags:
-  - Depuración
-  - Error
-  - Excepciones
-  - Excepción
-  - JavaScript
-  - errores
-translation_of: Web/JavaScript/Reference/Errors
 ---
+
 {{jsSidebar("Errors")}}
 
 Abajo encontraras una lista de los errores que son generados por JavaScript. Estos errores pueden ser una ayuda útil al depurar, aunque el problema reportado no siempre es precisamente claro. Las paginas de abajo proporcionan detalles adicionales sobre estos errores. Cada error es un objeto basado en el objeto {{jsxref("Error")}} , y tiene un `nombre` y un `mensaje`.
@@ -20,7 +13,7 @@ Los errores mostrados en la consola web pueden incluir un link a la pagina debaj
 
 En esta lista, cada pagina esta ordenada por nombre (el tipo de error) y el mensaje (un mensaje de error mas detallado y legible). Juntos,estas dos propiedades proveen un punto de partida hacia el entendimiento y la resolución del problema. Para mas información, ¡Sigue los links abajo!
 
-{{ListSubPages("/en-US/docs/Web/JavaScript/Reference/Errors")}}
+{{ListSubPages("/es/docs/Web/JavaScript/Reference/Errors")}}
 
 ## Ve también
 

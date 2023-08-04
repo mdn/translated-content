@@ -1,103 +1,72 @@
 ---
 title: DataTransfer
 slug: Web/API/DataTransfer
-tags:
-  - API
-  - DataTransfer
-  - HTML Drag and Drop API
-  - Interface
-  - Reference
-  - Web Development
-  - drag and drop
-translation_of: Web/API/DataTransfer
+l10n:
+  sourceCommit: f45409ba2169ff05e433d21aa4ee0424079916b8
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
-The **`DataTransfer`** object is used to hold the data that is being dragged during a drag and drop operation. It may hold one or more data items, each of one or more data types. For more information about drag and drop, see [HTML Drag and Drop API](/ko/docs/Web/API/HTML_Drag_and_Drop_API).
+**`DateTransfer`** 객체는 드래그 앤 드롭 작업 중에 드래그되고 있는 데이터를 보관하기 위해 사용됩니다. 각각의 데이터 타입들에 해당하는 하나 이상의 데이터 항목을 포함할 수 있습니다. 드래그 앤 드롭에 대한 자세한 정보는 [HTML Drag and Drop API](/ko/docs/Web/API/HTML_Drag_and_Drop_API)을 확인하시길 바랍니다.
 
-This object is available from the {{domxref("DragEvent.dataTransfer","dataTransfer")}} property of all {{domxref("DragEvent","drag events")}}.
+이 객체는 모든 {{domxref("DragEvent","drag events")}}의 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 속성에서 사용할 수 있습니다.
 
-## Constructor
+## 생성자
 
 - {{domxref("DataTransfer.DataTransfer","DataTransfer()")}}
-  - : Creates and returns a new `DataTransfer` object.
+  - : 새로운 `DataTransfer` 객체를 생성하고 반환합니다.
 
-## Properties
+## 인스턴스 속성
 
-### Standard properties
+### 표준 속성
 
 - {{domxref("DataTransfer.dropEffect")}}
-  - : Gets the type of drag-and-drop operation currently selected or sets the operation to a new type. The value must be `none`, `copy`, `link` or `move`.
+  - : 현재 선택된 드래그 앤 드롭 작업의 타입을 가져오거나 작업을 새로운 타입으로 설정합니다. 값은 `none`, `copy`, `link` 또는 `move`이어야 합니다.
 - {{domxref("DataTransfer.effectAllowed")}}
-  - : Provides all of the types of operations that are possible. Must be one of `none`, `copy`, `copyLink`, `copyMove`, `link`, `linkMove`, `move`, `all` or `uninitialized`.
+  - : 가능한 작업의 모든 타입을 제공합니다. `none`, `copy`, `copyLink`, `copyMove`, `link`, `linkMove`, `move`, `all` 또는 `uninitialized` 중 하나이어야 합니다.
 - {{domxref("DataTransfer.files")}}
-  - : Contains a list of all the local files available on the data transfer. If the drag operation doesn't involve dragging files, this property is an empty list.
-- {{domxref("DataTransfer.items")}} {{readonlyInline}}
-  - : Gives a {{domxref("DataTransferItemList")}} object which is a list of all of the drag data.
-- {{domxref("DataTransfer.types")}} {{readonlyInline}}
-  - : An array of {{domxref("DOMString","strings")}} giving the formats that were set in the {{event("dragstart")}} event.
+  - : 데이터 전송에서 사용할 수 있는 모든 로컬 파일의 목록을 포함합니다. 드래그 작업에 드래그하고 있는 파일이 포함되지 않으면 이 속성은 빈 목록입니다.
+- {{domxref("DataTransfer.items")}} {{ReadOnlyInline}}
+  - : 모든 드래그 데이터의 목록인 {{domxref("DataTransferItemList")}} 객체를 받습니다.
+- {{domxref("DataTransfer.types")}} {{ReadOnlyInline}}
+  - : {{domxref("HTMLElement/dragstart_event", "dragstart")}} 이벤트에 설정된 형식을 제공하는 문자열 배열입니다.
 
-### Gecko properties
+### Gecko 속성
 
 {{SeeCompatTable}}
 
-> **참고:** All of the properties in this section are Gecko-specific.
+## 인스턴스 메서드
 
-- {{domxref("DataTransfer.mozCursor")}}
-  - : Gives the drag cursor's state. This is primarily used to control the cursor during tab drags.
-- {{domxref("DataTransfer.mozItemCount")}} {{readonlyInline}}
-  - : Gives the number of items in the drag operation.
-- {{domxref("DataTransfer.mozSourceNode")}} {{readonlyInline}}
-  - : The {{ domxref("Node") }} over which the mouse cursor was located when the button was pressed to initiate the drag operation. This value is `null` for external drags or if the caller can't access the node.
-- {{domxref("DataTransfer.mozUserCancelled")}} {{readonlyInline}}
-  - : This property applies only to the `dragend` event, and is `true` if the user canceled the drag operation by pressing escape. It will be `false` in all other cases, including if the drag failed for any other reason, for instance due to a drop over an invalid location.
-
-## Methods
-
-### Standard methods
+### 표준 메서드
 
 - {{domxref("DataTransfer.clearData()")}}
-  - : Remove the data associated with a given type. The type argument is optional. If the type is empty or not specified, the data associated with all types is removed. If data for the specified type does not exist, or the data transfer contains no data, this method will have no effect.
+  - : 지정된 타입과 연결된 데이터를 제거합니다. 타입 전달인자는 선택 사항입니다. 타입이 비어있거나 지정되지 않은 경우 모든 타입과 연결된 데이터가 제거됩니다. 지정된 타입의 데이터가 없거나 데이터 전송에 데이터가 포함되어 있지 않으면 이 메서드는 아무런 효과가 없습니다.
 - {{domxref("DataTransfer.getData()")}}
-  - : Retrieves the data for a given type, or an empty string if data for that type does not exist or the data transfer contains no data.
+  - : 지정된 타입의 데이터를 검색합니다. 혹은 해당 타입의 데이터가 없거나 데이터 전송에 데이터가 없는 경우에는 빈 문자열을 검색합니다.
 - {{domxref("DataTransfer.setData()")}}
-  - : Set the data for a given type. If data for the type does not exist, it is added at the end, such that the last item in the types list will be the new format. If data for the type already exists, the existing data is replaced in the same position.
+  - : 지정된 타입의 데이터를 설정합니다. 타입의 데이터가 없으면 타입 목록의 마지막 항목이 새로운 형식이 되도록 타입이 마지막에 추가됩니다. 타입의 데이터가 이미 존재하면 기존 데이터가 동일한 위치에서 교체됩니다.
 - {{domxref("DataTransfer.setDragImage()")}}
-  - : Set the image to be used for dragging if a custom one is desired.
+  - : 사용자 지정 이미지를 원하는 경우 드래그에 사용될 이미지를 설정합니다.
 
-### Gecko methods
+### Gecko 메서드
 
-{{Non-standard_header()}}
+{{Non-standard_Header}}
 
-> **참고:** All of the methods in this section are Gecko-specific.
+## 예제
 
-- {{domxref("DataTransfer.addElement()")}}
-  - : Sets the drag source to the given element.
-- {{domxref("DataTransfer.mozClearDataAt()")}}
-  - : Removes the data associated with the given format for an item at the specified index. The index is in the range from zero to the number of items minus one.
-- {{domxref("DataTransfer.mozGetDataAt()")}}
-  - : Retrieves the data associated with the given format for an item at the specified index, or null if it does not exist. The index should be in the range from zero to the number of items minus one.
-- {{domxref("DataTransfer.mozSetDataAt()")}}
-  - : A data transfer may store multiple items, each at a given zero-based index. `mozSetDataAt()` may only be called with an index argument less than `mozItemCount` in which case an existing item is modified, or equal to `mozItemCount` in which case a new item is added, and the `mozItemCount` is incremented by one.
-- {{domxref("DataTransfer.mozTypesAt()")}}
-  - : Holds a list of the format types of the data that is stored for an item at the specified index. If the index is not in the range from 0 to the number of items minus one, an empty string list is returned.
+문서에 나열된 모든 메서드와 속성은 고유한 참조 페이지가 있으며 각 참조 페이지에는 인터페이스의 예제가 직접 포함되어 있거나 예제에 대한 링크가 있습니다.
 
-## Example
-
-Every method and property listed in this document has its own reference page and each reference page either directly includes an example of the interface or has a link to an example.
-
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
-- [Drag and drop](/ko/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Drag Operations](/ko/docs/Web/Guide/HTML/Drag_operations)
-- [Recommended Drag Types](/ko/docs/Web/Guide/HTML/Recommended_Drag_Types)
-- [Dragging and Dropping Multiple Items](/ko/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
+- [HTML 드래그 앤 드롭 API](/ko/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Recommended Drag Types](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

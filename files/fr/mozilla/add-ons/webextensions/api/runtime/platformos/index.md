@@ -1,17 +1,6 @@
 ---
 title: runtime.PlatformOs
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - PlatformOs
-  - Reference
-  - Type
-  - WebExtensions
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
 ---
 
 {{AddonSidebar()}}
@@ -35,9 +24,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont:
 - `"openbsd"`
   - : Le système d'exploitation est sous Open/FreeBSD.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.PlatformOs")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

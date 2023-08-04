@@ -54,27 +54,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics
 const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 
-ta[0];
-// 0
+ta[0]; // 0
+ta[0] = 5; // 5
 
-ta[0] = 5;
-// 5
+Atomics.add(ta, 0, 12); // 5
+Atomics.load(ta, 0); // 17
 
-Atomics.add(ta, 0, 12);
-// 5
-Atomics.load(ta, 0);
-// 17 ✅
-// 12 ❌
+Atomics.and(ta, 0, 1); // 17
+Atomics.load(ta, 0); // 1
 
-Atomics.and(ta, 0, 1);
-// 17
-Atomics.load(ta, 0);
-// 1
+Atomics.compareExchange(ta, 0, 5, 12); // 1
+Atomics.load(ta, 0); // 1
 
-Atomics.compareExchange(ta, 0, 5, 12);
-Atomics.load(ta, 0); // 12
-
-Atomics.exchange(ta, 0, 12);
+Atomics.exchange(ta, 0, 12); // 1
 Atomics.load(ta, 0); // 12
 
 Atomics.isLockFree(1); // true
@@ -82,16 +74,16 @@ Atomics.isLockFree(2); // true
 Atomics.isLockFree(3); // false
 Atomics.isLockFree(4); // true
 
-Atomics.or(ta, 0, 1);
-Atomics.load(ta, 0);  // 5
+Atomics.or(ta, 0, 1); // 12
+Atomics.load(ta, 0); // 13
 
 Atomics.store(ta, 0, 12); // 12
 
-Atomics.sub(ta, 0, 2);
-Atomics.load(ta, 0); // 3
+Atomics.sub(ta, 0, 2); // 12
+Atomics.load(ta, 0); // 10
 
-Atomics.xor(ta, 0, 1);
-Atomics.load(ta, 0); // 4
+Atomics.xor(ta, 0, 1); // 10
+Atomics.load(ta, 0); // 11
 ```
 
 ### Waiting 和 notifiying
@@ -126,11 +118,11 @@ Atomics.notify(int32, 0, 1);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("ArrayBuffer")}}
-- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
-- [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API)
 - [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – a simple library providing synchronization and work distribution abstractions.
 - [Shared Memory – a brief tutorial](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
-- [A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)
+- [A Taste of JavaScript's New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

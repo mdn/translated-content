@@ -1,15 +1,8 @@
 ---
 title: MediaStreamTrack.kind
 slug: Web/API/MediaStreamTrack/kind
-tags:
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Property
-  - Read-only
-  - Reference
-  - WebRTC
-translation_of: Web/API/MediaStreamTrack/kind
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStreamTrack.kind`** 읽기 전용 속성은 트랙이 오디오인 경우 `"audio"`, 비디오인 경우 `"video"`인 {{domxref("DOMString")}}을 반환합니다. 트랙이 소스에서 분리된 경우엔 바뀌지 않습니다.
@@ -17,7 +10,7 @@ translation_of: Web/API/MediaStreamTrack/kind
 ## 구문
 
 ```js
-const type = track.kind
+const type = track.kind;
 ```
 
 ### 값

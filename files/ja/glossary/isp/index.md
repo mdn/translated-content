@@ -10,4 +10,4 @@ ISP (Internet Service Provider, インターネットサービスプロバイダ
 ### 一般的な知識
 
 - [どのようにしてインターネットが動いているのか](/ja/Learn/How_the_Internet_works) (初心者のための説明)
-- Wikipedia の {{interwiki("wikipedia", "Internet_Service_Provider", "Internet service provider")}}
+- Wikipedia の [Internet service provider](https://ja.wikipedia.org/wiki/Internet_Service_Provider)

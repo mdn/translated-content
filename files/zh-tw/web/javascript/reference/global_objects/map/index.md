@@ -1,7 +1,6 @@
 ---
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
-original_slug: Web/JavaScript/Reference/Global_Objects/Map
 ---
 
 {{JSRef}}
@@ -10,7 +9,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map
 
 ## 語法
 
-```js
+```js-nolint
 new Map([iterable])
 ```
 
@@ -53,11 +52,35 @@ new Map([iterable])
 
 ### 屬性
 
-{{page('zh-TW/Web/JavaScript/Reference/Global_Objects/Map/prototype','Properties')}}
+- `Map.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Map"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- {{jsxref("Map.prototype.size")}}
+  - : Returns the number of key/value pairs in the `Map` object.
 
 ### 方法
 
-{{page('zh-TW/Web/JavaScript/Reference/Global_Objects/Map/prototype','Methods')}}
+- {{jsxref("Map.prototype.clear()")}}
+  - : Removes all key-value pairs from the `Map` object.
+- {{jsxref("Map.prototype.delete()")}}
+  - : Returns `true` if an element in the `Map` object existed and has been
+    removed, or `false` if the element does not exist. `map.has(key)`
+    will return `false` afterwards.
+- {{jsxref("Map.prototype.get()")}}
+  - : Returns the value associated to the passed key, or `undefined` if there is none.
+- {{jsxref("Map.prototype.has()")}}
+  - : Returns a boolean indicating whether a value has been associated with the passed key in the `Map` object or not.
+- {{jsxref("Map.prototype.set()")}}
+  - : Sets the value for the passed key in the `Map` object. Returns the `Map` object.
+- {{jsxref("Map/@@iterator", "Map.prototype[@@iterator]()")}}
+  - : Returns a new Iterator object that contains a two-member array of `[key, value]` for each element in the `Map` object in insertion order.
+- {{jsxref("Map.prototype.keys()")}}
+  - : Returns a new Iterator object that contains the keys for each element in the `Map` object in insertion order.
+- {{jsxref("Map.prototype.values()")}}
+  - : Returns a new Iterator object that contains the values for each element in the `Map` object in insertion order.
+- {{jsxref("Map.prototype.entries()")}}
+  - : Returns a new Iterator object that contains a two-member array of `[key, value]` for each element in the `Map` object in insertion order.
+- {{jsxref("Map.prototype.forEach()")}}
+  - : Calls `callbackFn` once for each key-value pair present in the `Map` object, in insertion order. If a `thisArg` parameter is provided to `forEach`, it will be used as the `this` value for each callback.
 
 ## 範例
 
@@ -66,26 +89,26 @@ new Map([iterable])
 ```js
 var myMap = new Map();
 
-var keyString = 'a string',
-    keyObj = {},
-    keyFunc = function() {};
+var keyString = "a string",
+  keyObj = {},
+  keyFunc = function () {};
 
 // setting the values
 myMap.set(keyString, "value associated with 'a string'");
-myMap.set(keyObj, 'value associated with keyObj');
-myMap.set(keyFunc, 'value associated with keyFunc');
+myMap.set(keyObj, "value associated with keyObj");
+myMap.set(keyFunc, "value associated with keyFunc");
 
 myMap.size; // 3
 
 // getting the values
-myMap.get(keyString);    // "value associated with 'a string'"
-myMap.get(keyObj);       // "value associated with keyObj"
-myMap.get(keyFunc);      // "value associated with keyFunc"
+myMap.get(keyString); // "value associated with 'a string'"
+myMap.get(keyObj); // "value associated with keyObj"
+myMap.get(keyFunc); // "value associated with keyFunc"
 
-myMap.get('a string');   // "value associated with 'a string'"
-                         // because keyString === 'a string'
-myMap.get({});           // undefined, because keyObj !== {}
-myMap.get(function() {}) // undefined, because keyFunc !== function () {}
+myMap.get("a string"); // "value associated with 'a string'"
+// because keyString === 'a string'
+myMap.get({}); // undefined, because keyObj !== {}
+myMap.get(function () {}); // undefined, because keyFunc !== function () {}
 ```
 
 ### 使用 `NaN` 作為 `Map` 的鍵
@@ -94,11 +117,11 @@ myMap.get(function() {}) // undefined, because keyFunc !== function () {}
 
 ```js
 var myMap = new Map();
-myMap.set(NaN, 'not a number');
+myMap.set(NaN, "not a number");
 
 myMap.get(NaN); // "not a number"
 
-var otherNaN = Number('foo');
+var otherNaN = Number("foo");
 myMap.get(otherNaN); // "not a number"
 ```
 
@@ -108,10 +131,10 @@ Map 可以使用 `for..of` 迴圈進行迭代：
 
 ```js
 var myMap = new Map();
-myMap.set(0, 'zero');
-myMap.set(1, 'one');
+myMap.set(0, "zero");
+myMap.set(1, "one");
 for (var [key, value] of myMap) {
-  console.log(key + ' = ' + value);
+  console.log(key + " = " + value);
 }
 // 0 = zero
 // 1 = one
@@ -129,7 +152,7 @@ for (var value of myMap.values()) {
 // one
 
 for (var [key, value] of myMap.entries()) {
-  console.log(key + ' = ' + value);
+  console.log(key + " = " + value);
 }
 // 0 = zero
 // 1 = one
@@ -140,8 +163,8 @@ for (var [key, value] of myMap.entries()) {
 `Map` 可以使用 `forEach()` 方法進行迭代：
 
 ```js
-myMap.forEach(function(value, key) {
-  console.log(key + ' = ' + value);
+myMap.forEach(function (value, key) {
+  console.log(key + " = " + value);
 });
 // Will show 2 logs; first with "0 = zero" and second with "1 = one"
 ```
@@ -149,12 +172,15 @@ myMap.forEach(function(value, key) {
 ### 與 `Array` 物件關聯
 
 ```js
-var kvArray = [['key1', 'value1'], ['key2', 'value2']];
+var kvArray = [
+  ["key1", "value1"],
+  ["key2", "value2"],
+];
 
 // Use the regular Map constructor to transform a 2D key-value Array into a map
 var myMap = new Map(kvArray);
 
-myMap.get('key1'); // returns "value1"
+myMap.get("key1"); // returns "value1"
 
 // Use the Array.from function to transform a map into a 2D key-value Array
 console.log(Array.from(myMap)); // Will show you exactly the same Array as kvArray
@@ -168,9 +194,7 @@ console.log(Array.from(myMap.keys())); // Will show ["key1", "key2"]
 就像 `Array` 一樣，`Map` 可以被複製:
 
 ```js
-var original = new Map([
-  [1, 'one']
-]);
+var original = new Map([[1, "one"]]);
 
 var clone = new Map(original);
 
@@ -184,14 +208,14 @@ console.log(original === clone); // false. Useful for shallow comparison
 
 ```js
 var first = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
 ]);
 
 var second = new Map([
-  [1, 'uno'],
-  [2, 'dos']
+  [1, "uno"],
+  [2, "dos"],
 ]);
 
 // Merge two maps. The last repeated key wins.
@@ -207,18 +231,18 @@ console.log(merged.get(3)); // three
 
 ```js
 var first = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
 ]);
 
 var second = new Map([
-  [1, 'uno'],
-  [2, 'dos']
+  [1, "uno"],
+  [2, "dos"],
 ]);
 
 // Merge maps with an array. The last repeated key wins.
-var merged = new Map([...first, ...second, [1, 'eins']]);
+var merged = new Map([...first, ...second, [1, "eins"]]);
 
 console.log(merged.get(1)); // eins
 console.log(merged.get(2)); // dos

@@ -1,15 +1,6 @@
 ---
 title: history.onTitleChanged
 slug: Mozilla/Add-ons/WebExtensions/API/history/onTitleChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - History
-  - Reference
-  - WebExtensions
-  - onTitleChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/onTitleChanged
 ---
 
 {{AddonSidebar()}}Lancé lorsque le titre d'une page visitée par l'utilisateur est enregistré.Pour écouter les visites d'une page, vous pouvez utiliser {{WebExtAPIRef("history.onVisited")}}. Cependant, le {{WebExtAPIRef("history.HistoryItem")}} que cet événement passe à son écouteur n'inclut pas le titre de la page, car le titre de la page n'est généralement pas connu au moment où `history.onVisited` est envoyé.Au lieu de cela, {{WebExtAPIRef("history.HistoryItem")}} stocké est mis à jour avec le titre de la page après le chargement de la page, une fois le titre connu. L'événement history.onTitleChanged est déclenché à ce moment-là. Donc, si vous avez besoin de connaître les titres des pages telles qu'elles sont visitées, écoutez `history.onTitleChanged`.
@@ -17,9 +8,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history/onTitleChanged
 ## Syntaxe
 
 ```js
-browser.history.onTitleChanged.addListener(listener)
-browser.history.onTitleChanged.removeListener(listener)
-browser.history.onTitleChanged.hasListener(listener)
+browser.history.onTitleChanged.addListener(listener);
+browser.history.onTitleChanged.removeListener(listener);
+browser.history.onTitleChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -44,9 +35,9 @@ Les événements ont trois fonctions :
     - `title`
       - : `String`. Title of the page visited.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.onTitleChanged")}}
+{{Compat}}
 
 ## Exemples
 

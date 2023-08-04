@@ -1,7 +1,6 @@
 ---
-title: ':host()'
+title: ":host()"
 slug: Web/CSS/:host_function
-original_slug: Web/CSS/:host()
 ---
 
 {{CSSRef}}
@@ -22,7 +21,9 @@ original_slug: Web/CSS/:host()
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:host( <compound-selector> )
+```
 
 ## 例
 

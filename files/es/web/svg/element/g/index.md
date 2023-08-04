@@ -1,14 +1,8 @@
 ---
 title: g
 slug: Web/SVG/Element/g
-tags:
-  - Contenedor
-  - Contenedor SVG
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/g
 ---
+
 {{SVGRef}}El elemento `g` es un contenedor usado para agrupar objetos. Las transformaciones aplicadas al elemento `g` son realizadas sobre todos los elementos hijos del mismo. Los atributos aplicados son heredados por los elementos hijos. Además, puede ser usado para definir objetos complejos que pueden luego ser referenciados con el elemento {{SVGElement("use")}}.
 
 ## Contexto de uso
@@ -18,8 +12,11 @@ translation_of: Web/SVG/Element/g
 ## Ejemplo
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 95 50"
-     xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 95 50"
+  xmlns="http://www.w3.org/2000/svg">
   <g stroke="green" fill="white" stroke-width="5">
     <circle cx="25" cy="25" r="15" />
     <circle cx="40" cy="25" r="15" />
@@ -50,8 +47,12 @@ _No hay atributos específicos_
 
 ## Interfaz DOM
 
-Este elemento implementa la interfaz [`SVGGElement`](/en-US/docs/DOM/SVGGElement).
+Este elemento implementa la interfaz [`SVGGElement`](/es/docs/DOM/SVGGElement).
+
+## Especificaciones
+
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("svg.elements.g")}}
+{{Compat}}

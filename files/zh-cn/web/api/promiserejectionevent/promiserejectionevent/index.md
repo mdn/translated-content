@@ -21,7 +21,7 @@ new PromiseRejectionEvent(type, {
 _`PromiseRejectionEvent()` 构造函数继承了 {{domxref("Event.Event", "Event()")}}的参数。_
 
 - `type`
-  - : 一个代表 PromiseRejectionEvent 的类型名称的字符串。这是区分大小写的同时必须是{{event("rejectionhandled", '"rejectionhandled"')}} 或者 {{event("unhandledrejection", '"unhandledrejection"')}} 其中之一。
+  - : 一个代表 PromiseRejectionEvent 的类型名称的字符串。这是区分大小写的同时必须是 `rejectionhandled` 或者 `unhandledrejection` 其中之一。
 - `promise`
   - : 代表被 rejected 的{{jsxref("Promise")}}。
 - `reason`
@@ -30,9 +30,9 @@ _`PromiseRejectionEvent()` 构造函数继承了 {{domxref("Event.Event", "Event
 ## 例子
 
 ```js
-var myRejectionEvent = new PromiseRejectionEvent('unhandledrejection', {
-  promise : myPromise,
-  reason : 'My house is on fire'
+var myRejectionEvent = new PromiseRejectionEvent("unhandledrejection", {
+  promise: myPromise,
+  reason: "My house is on fire",
 });
 ```
 
@@ -44,7 +44,7 @@ var myRejectionEvent = new PromiseRejectionEvent('unhandledrejection', {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{jsxref("Promise")}}
 - {{domxref("PromiseRejectionEvent")}}

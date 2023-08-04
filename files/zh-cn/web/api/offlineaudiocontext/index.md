@@ -22,7 +22,7 @@ _从父级 {{domxref("AudioContext")}} 获取属性。_
 ### 事件处理程序
 
 - {{domxref("OfflineAudioContext.oncomplete")}}
-  - : 当进程完成时，基于事件版本的{{domxref("OfflineAudioContext.startRendering()")}} 被使用之后，{{event("Event_handlers", "event handler")}} 将会被调用，{{event("complete")}} 事件类型为 {{domxref("OfflineAudioCompletionEvent")}}）被触发。
+  - : 当进程完成时，基于事件版本的{{domxref("OfflineAudioContext.startRendering()")}} 被使用之后，事件处理器将会被调用，[`complete`](/zh-CN/docs/Web/API/OfflineAudioContext/complete_event) 事件类型为 {{domxref("OfflineAudioCompletionEvent")}}）被触发。
 
 ## 方法
 
@@ -35,7 +35,7 @@ _从父级 {{domxref("AudioContext")}} 和 {{domxref("EventTarget")}} 获取方�
 - {{domxref("OfflineAudioContext.startRendering()")}}
   - : 开始渲染音频，考虑当前连接和当前计划的修改。这个页面涵盖基于事件的和基于 Promise 的版本。
 
-## 例子
+## 示例
 
 这个简单的例子中，我们声明了 {{domxref("AudioContext")}} 和 `OfflineAudioContext` 对象。我们使用 `AudioContext` 去加载一个 XHR（{{domxref("AudioContext.decodeAudioData")}}）获取的音轨，然后使用 `OfflineAudioContext` 去渲染音频并得到一个 into an {{domxref("AudioBufferSourceNode")}}，并播放这个音轨。在离线音频处理图建立后，你需要去使用 {{domxref("OfflineAudioContext.startRendering")}} 来渲染它成为 {{domxref("AudioBuffer")}}。
 
@@ -49,7 +49,7 @@ _从父级 {{domxref("AudioContext")}} 和 {{domxref("EventTarget")}} 获取方�
 // 定义一个在线或者离线的音频上下文
 
 var audioCtx = new AudioContext();
-var offlineCtx = new OfflineAudioContext(2,44100*40,44100);
+var offlineCtx = new OfflineAudioContext(2, 44100 * 40, 44100);
 
 source = offlineCtx.createBufferSource();
 
@@ -60,36 +60,40 @@ source = offlineCtx.createBufferSource();
 function getData() {
   request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
-  request.onload = function() {
+  request.onload = function () {
     var audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(audioData, function (buffer) {
       myBuffer = buffer;
       source.buffer = myBuffer;
       source.connect(offlineCtx.destination);
       source.start();
       //source.loop = true;
-      offlineCtx.startRendering().then(function(renderedBuffer) {
-        console.log('渲染完全成功');
-        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        var song = audioCtx.createBufferSource();
-        song.buffer = renderedBuffer;
+      offlineCtx
+        .startRendering()
+        .then(function (renderedBuffer) {
+          console.log("渲染完全成功");
+          var audioCtx = new (window.AudioContext ||
+            window.webkitAudioContext)();
+          var song = audioCtx.createBufferSource();
+          song.buffer = renderedBuffer;
 
-        song.connect(audioCtx.destination);
+          song.connect(audioCtx.destination);
 
-        play.onclick = function() {
-          song.start();
-        }
-      }).catch(function(err) {
-          console.log('渲染失败：' + err);
+          play.onclick = function () {
+            song.start();
+          };
+        })
+        .catch(function (err) {
+          console.log("渲染失败：" + err);
           // 注意：当 OfflineAudioContext 上 startRendering 被立刻调用，Promise 应该被 reject
-      });
+        });
     });
-  }
+  };
 
   request.send();
 }

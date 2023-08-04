@@ -3,13 +3,13 @@ title: WebGL best practices
 slug: Web/API/WebGL_API/WebGL_best_practices
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 WebGL 是一个复杂的 API，通常我们不能明显的知道它的推荐使用方式。该页面涵盖了各种专业知识的建议，不仅仅是列举出什么该做，什么不该做，还有详细的解释为什么要这样做。你可以将本文档作为指导你选择的方法，确保你无论在何种浏览器以及硬件上都使用了正确的技巧。
 
 ## 需要避免的事情
 
-- 确保应用程序运行时不会产生任何 WebGL 错误（如 getError() 返回的）. In Firefox, every WebGL error (until a certain limit), and some other WebGL issues, are reported as a JavaScript warning with a descriptive message. 在 Firefox 中，所有 WebGL 错误（直至超出数量限制）以及其它一些 WebGL 问题，都会以一段提供描述的 JavaScript 警告报告出来。你不想自己的应用在用户的控制台打印出一堆东西对吧？你当然不想了。
+- 确保应用程序运行时不会产生任何 WebGL 错误（如 getError() 返回的）. In Firefox, every WebGL error (until a certain limit), and some other WebGL issues, are reported as a JavaScript warning with a descriptive message. 在 Firefox 中，所有 WebGL 错误（直至超出数量限制）以及其他一些 WebGL 问题，都会以一段提供描述的 JavaScript 警告报告出来。你不想自己的应用在用户的控制台打印出一堆东西对吧？你当然不想了。
 - 你应该永远不去触碰 WebGL shader 里的 `#ifdef GL_ES`；虽然前边的一些例子使用了这个，这并无必要，因为这个条件判断在 WebGL shader 中始终为 true。
 - 在 fragment shader 中使用 `highp` 精度将阻碍你的内容在某些旧的移动设备上正确运行。这里，你可以使用 `mediump`；但是，你需要知道，由于在大多移动设备上的精度丢失，这经常导致渲染失败，这在典型的 PC 机型上没有问题。通常来说，在 vertex 和 fragment shader 中仅使用 `highp` ，除非 shaders 通过了各大平台的测试。从 Firefox 11 开始，WebGL 的 `getShaderPrecisionFormat()` 函数的实现，允许你判断 `highp` 是否得到支持，进而允许你可以查询到实际的精度。
 

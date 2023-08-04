@@ -1,5 +1,5 @@
 ---
-title: ':link'
+title: ":link"
 slug: Web/CSS/:link
 ---
 
@@ -20,7 +20,9 @@ a:link {
 
 ## 構文
 
-{{csssyntax}}
+```
+:link
+```
 
 ## 例
 

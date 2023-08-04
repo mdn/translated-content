@@ -1,16 +1,8 @@
 ---
 title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
-tags:
-  - Desenvolvimento Web
-  - Erro
-  - EvalError
-  - JS
-  - JavaScript
-  - Referencia
-  - Web
-translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
 ---
+
 {{JSRef}}
 
 O Objeto **`EvalError`** indica um erro em relação a função global {{jsxref("Global_Objects/eval", "eval()")}}. Esta exceção não é mais lançada pelo JavaScript, no entanto, o objeto `EvalError` ainda permanece compatível.
@@ -43,11 +35,11 @@ O global `EvalError` não contém métodos próprios, no entando, ele irá herda
 
 ### Propriedades
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Properties')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Properties')}}
 
 ### Métodos
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Methods')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Methods')}}
 
 ## Exemplos
 
@@ -57,25 +49,25 @@ O global `EvalError` não contém métodos próprios, no entando, ele irá herda
 
 ```js
 try {
-  throw new EvalError('Hello', 'someFile.js', 10);
+  throw new EvalError("Hello", "someFile.js", 10);
 } catch (e) {
   console.log(e instanceof EvalError); // true
-  console.log(e.message);              // "Hello"
-  console.log(e.name);                 // "EvalError"
-  console.log(e.fileName);             // "someFile.js"
-  console.log(e.lineNumber);           // 10
-  console.log(e.columnNumber);         // 0
-  console.log(e.stack);                // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "EvalError"
+  console.log(e.fileName); // "someFile.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 
 ## Especificações
 
-| Especificação                                                                                                                    | Status                       | Comentário                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                                         | {{Spec2('ES3')}}         | Definição inicial.                                                                |
-| {{SpecName('ES5.1', '#sec-15.11.6.1', 'EvalError')}}                                                             | {{Spec2('ES5.1')}}     | Não utilizada na especificação. Presente para compatibilidade com outras versões. |
-| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}}         | {{Spec2('ES6')}}         | Não utilizada na especificação. Presente para compatibilidade com outras versões. |
+| Especificação                                                                                   | Status               | Comentário                                                                        |
+| ----------------------------------------------------------------------------------------------- | -------------------- | --------------------------------------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                             | {{Spec2('ES3')}}     | Definição inicial.                                                                |
+| {{SpecName('ES5.1', '#sec-15.11.6.1', 'EvalError')}}                                            | {{Spec2('ES5.1')}}   | Não utilizada na especificação. Presente para compatibilidade com outras versões. |
+| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}}     | {{Spec2('ES6')}}     | Não utilizada na especificação. Presente para compatibilidade com outras versões. |
 | {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}} | {{Spec2('ESDraft')}} |                                                                                   |
 
 ## Compatibilidade com navegadores

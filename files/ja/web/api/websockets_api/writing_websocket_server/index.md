@@ -70,17 +70,17 @@ class Server {
 
 メソッド:
 
-- ```cs
-  Write(Byte[] buffer, int offset, int size)
-  ```
+```cs
+Write(Byte[] buffer, int offset, int size)
+```
 
-  buffer からバイトを書き込み、offset と size はメッセージの長さを決定します。
+buffer からバイトを書き込み、offset と size はメッセージの長さを決定します。
 
-- ```cs
-  Read(Byte[] buffer, int offset, int size)
-  ```
+```cs
+Read(Byte[] buffer, int offset, int size)
+```
 
-  buffer を読み込みます。offset と size はメッセージの長さを決定します。
+buffer を読み込みます。offset と size はメッセージの長さを決定します。
 
 例を拡張してみましょう。
 

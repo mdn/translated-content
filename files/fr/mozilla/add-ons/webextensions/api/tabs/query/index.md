@@ -1,17 +1,6 @@
 ---
 title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - query
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/query
 ---
 
 {{AddonSidebar()}}
@@ -24,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var querying = browser.tabs.query(
-  queryInfo             // object
-)
+  queryInfo, // object
+);
 ```
 
 ### Paramètres
@@ -41,7 +30,7 @@ var querying = browser.tabs.query(
     - `autoDiscardable`{{optional_inline}}
       - : `boolean`. Si les onglets peuvent être supprimés automatiquement par le navigateur lorsque les ressources sont faibles.
     - `cookieStoreId` {{optional_inline}}
-      - : `string`. Utilisez cette option pour renvoyer uniquement les onglets dont l'ID est `cookieStoreId`. Cette option n'est disponible que si l'extension à la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"cookies"`
+      - : `string`. Utilisez cette option pour renvoyer uniquement les onglets dont l'ID est `cookieStoreId`. Cette option n'est disponible que si l'extension à la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"cookies"`
     - `currentWindow`{{optional_inline}}
       - : `boolean`. Si les onglets sont dans la fenêtre actuelle.
     - `discarded`{{optional_inline}}
@@ -67,7 +56,7 @@ var querying = browser.tabs.query(
     - `url`{{optional_inline}}
       - : `string` ou `array de string`. Faites correspondre les onglets avec un ou plusieurs [modèle de correspondance](/fr/Add-ons/WebExtensions/Match_patterns). Notez que les identificateurs de fragment ne sont pas appariés.
     - `windowId`{{optional_inline}}
-      - : `integer`. L'ID de la fenêtre parente, ou  {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} pour la fenêtre en cours.
+      - : `integer`. L'ID de la fenêtre parente, ou {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} pour la fenêtre en cours.
     - `windowType`{{optional_inline}}
       - : {{WebExtAPIRef('tabs.WindowType')}}. Le type de fenêtre dans lequel les onglets y sont.
 
@@ -109,7 +98,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({currentWindow: true});
+var querying = browser.tabs.query({ currentWindow: true });
 querying.then(logTabs, onError);
 ```
 
@@ -127,7 +116,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({currentWindow: true, active: true});
+var querying = browser.tabs.query({ currentWindow: true, active: true });
 querying.then(logTabs, onError);
 ```
 
@@ -145,15 +134,15 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({url: "*://*.mozilla.org/*"});
+var querying = browser.tabs.query({ url: "*://*.mozilla.org/*" });
 querying.then(logTabs, onError);
 ```
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.query")}}
+{{Compat}}
 
 > **Note :**
 >

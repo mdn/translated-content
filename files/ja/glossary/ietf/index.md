@@ -10,6 +10,6 @@ Internet Engineering Task Force (IETF) は、{{glossary("Internet","インター
 ### 一般知識
 
 - [IETF の公式ウェブサイト](https://www.ietf.org/)
-- Wikipedia 上の {{Interwiki("wikipedia", "Internet Engineering Task Force","IETF")}}
+- Wikipedia 上の [IETF](https://ja.wikipedia.org/wiki/Internet_Engineering_Task_Force)
 - [インターネットソサエティ の公式ウェブサイト](https://www.internetsociety.org/)
-- Wikipedia 上の {{Interwiki("wikipedia", "インターネットソサエティ")}}
+- Wikipedia 上の [インターネットソサエティ](https://ja.wikipedia.org/wiki/インターネットソサエティ)

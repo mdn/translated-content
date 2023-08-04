@@ -1,10 +1,6 @@
 ---
 title: unparsed-entity-url
 slug: Web/XPath/Functions/unparsed-entity-url
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/unparsed-entity-url
-original_slug: Web/XPath/Fonctions/unparsed-entity-url
 ---
 
 {{ XsltRef() }}
@@ -20,7 +16,7 @@ string unparsed-entity-url(chaîne)
 ### Arguments
 
 - `chaîne`
-  - : Le nom de l'entité non analysée. Si l'argument n'est pas une chaîne, il est converti suivant les règles de la fonction [`string()`](fr/XPath/Fonctions/string). Le nom doit être un nom XML.
+  - : Le nom de l'entité non analysée. Si l'argument n'est pas une chaîne, il est converti suivant les règles de la fonction [`string()`](/fr/XPath/Fonctions/string). Le nom doit être un nom XML.
 
 ### Retour
 

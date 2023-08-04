@@ -1,18 +1,8 @@
 ---
 title: Object.prototype.__lookupSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
-tags:
-  - Deprecated
-  - Depreciado
-  - JavaScript
-  - Method
-  - Object
-  - Objeto
-  - Prototipo
-  - Prototype
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 O método **`__lookupSetter__`** retorna a função vinculada como _setter_ para a propriedade especificada.
@@ -70,9 +60,9 @@ Object.getOwnPropertyDescriptor(obj, 'foo').set;
 
 ## Veja também
 
-- {{jsxref("Object.prototype.__lookupGetter__()")}}
+- [`Object.prototype.__lookupGetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
 - Operador {{jsxref("Functions/set", "set")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}} e {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.prototype.__defineGetter__()")}}
-- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineGetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [JS Guide: Defining Getters and Setters](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)

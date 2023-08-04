@@ -1,12 +1,8 @@
 ---
-title: ':lang'
+title: ":lang"
 slug: Web/CSS/:lang
-tags:
-  - CSS
-  - Pseudo-clase
-  - Web
-translation_of: Web/CSS/:lang
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:lang()`** de [CSS](/es/docs/Web/CSS) es utilizada para modificar elementos en función del idioma en el que se determina que están.
@@ -14,11 +10,11 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:lang()`** de [CSS](/es/do
 ```css
 /* Selecciona cualquier <p> en inglés (en) */
 p:lang(en) {
-  quotes: '\201C' '\201D' '\2018' '\2019';
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 ```
 
-> **Nota:** En HTML, el lenguaje está determinado por una combinación del atributo {{htmlattrxref("lang")}}, el elemento {{HTMLElement("meta")}} y posiblemente por la información del protocolo (como los encabezados HTTP). Para otros tipos de documentos, puede haber otros métodos de documentos para determinar el idioma.
+> **Nota:** En HTML, el lenguaje está determinado por una combinación del atributo [`lang`](/es/docs/Web/HTML/Global_attributes#lang), el elemento {{HTMLElement("meta")}} y posiblemente por la información del protocolo (como los encabezados HTTP). Para otros tipos de documentos, puede haber otros métodos de documentos para determinar el idioma.
 
 ## Sintaxis
 
@@ -38,17 +34,29 @@ En este ejemplo, la pseudo-clase `:lang()` se usa para hacer coincidir los eleme
 ### HTML
 
 ```html
-<div lang="en"><q>Esta cita en inglés tiene una cita <q>anidada</q> adentro.</q></div>
-<div lang="fr"><q>Esta cita en francés tiene una cita <q>anidada</q> adentro.</q></div>
-<div lang="de"><q>Esta cita en aleman tiene una cita <q>anidada</q> adentro.</q></div>
+<div lang="en">
+  <q>Esta cita en inglés tiene una cita <q>anidada</q> adentro.</q>
+</div>
+<div lang="fr">
+  <q>Esta cita en francés tiene una cita <q>anidada</q> adentro.</q>
+</div>
+<div lang="de">
+  <q>Esta cita en aleman tiene una cita <q>anidada</q> adentro.</q>
+</div>
 ```
 
 ### CSS
 
 ```css
-:lang(en) > q { quotes: '\201C' '\201D' '\2018' '\2019'; }
-:lang(fr) > q { quotes: '« ' ' »'; }
-:lang(de) > q { quotes: '»' '«' '\2039' '\203A'; }
+:lang(en) > q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+:lang(fr) > q {
+  quotes: "« " " »";
+}
+:lang(de) > q {
+  quotes: "»" "«" "\2039" "\203A";
+}
 ```
 
 ### Resultado
@@ -57,18 +65,14 @@ En este ejemplo, la pseudo-clase `:lang()` se usa para hacer coincidir los eleme
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                               | Comentarios                  |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------------------------- |
-| {{SpecName('CSS4 Selectors', '#lang-pseudo', ':lang()')}} | {{Spec2('CSS4 Selectors')}} | Ningún cambio.               |
-| {{SpecName('CSS3 Selectors', '#lang-pseudo', ':lang()')}} | {{Spec2('CSS3 Selectors')}} | Ningún cambio significativo. |
-| {{SpecName('CSS2.1', 'selector.html#lang', ':lang()')}}     | {{Spec2('CSS2.1')}}             | Definición Inicial.          |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.lang")}}
+{{Compat}}
 
 ## Ver también
 
 - Pseudo-clases relacionadas con el lenguaje: {{cssxref(":lang")}}, {{cssxref(":dir")}}
-- Atributo HTML {{htmlattrxref("lang")}}
+- Atributo HTML [`lang`](/es/docs/Web/HTML/Global_attributes#lang)
 - [BCP 47 - Etiquetas para identificar idiomas](https://tools.ietf.org/html/bcp47)

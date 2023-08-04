@@ -1,16 +1,8 @@
 ---
 title: Bucles e iteración
 slug: Web/JavaScript/Guide/Loops_and_iteration
-tags:
-  - Bucle
-  - Guia(2)
-  - Guía
-  - Iteración
-  - JavaScript
-  - Sintaxis
-translation_of: Web/JavaScript/Guide/Loops_and_iteration
-original_slug: Web/JavaScript/Guide/Bucles_e_iteración
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 Los bucles ofrecen una forma rápida y sencilla de hacer algo repetidamente. Este capítulo de la {{JSxRef("Guide", "Guía de JavaScript")}} presenta las diferentes declaraciones de iteración disponibles para JavaScript.
@@ -20,7 +12,7 @@ Puedes pensar en un bucle como una versión computarizada del juego en la que le
 ```js
 for (let step = 0; step < 5; step++) {
   // Se ejecuta 5 veces, con valores del paso 0 al 4.
-  console.log('Camina un paso hacia el este');
+  console.log("Camina un paso hacia el este");
 }
 ```
 
@@ -65,7 +57,10 @@ En el siguiente ejemplo, la función contiene una instrucción `for` que cuenta 
 ```html
 <form name="selectForm">
   <p>
-    <label for="musicTypes">Elija algunos tipos de música, luego haga clic en el botón de abajo:</label>
+    <label for="musicTypes"
+      >Elija algunos tipos de música, luego haga clic en el botón de
+      abajo:</label
+    >
     <select id="musicTypes" name="musicTypes" multiple="multiple">
       <option selected="selected">R&B</option>
       <option>Jazz</option>
@@ -79,20 +74,23 @@ En el siguiente ejemplo, la función contiene una instrucción `for` que cuenta 
 </form>
 
 <script>
-function howMany(selectObject) {
-  let numberSelected = 0;
-  for (let i = 0; i < selectObject.options.length; i++) {
-    if (selectObject.options[i].selected) {
-      numberSelected++;
+  function howMany(selectObject) {
+    let numberSelected = 0;
+    for (let i = 0; i < selectObject.options.length; i++) {
+      if (selectObject.options[i].selected) {
+        numberSelected++;
+      }
     }
+    return numberSelected;
   }
-  return numberSelected;
-}
 
-let btn = document.getElementById('btn');
-btn.addEventListener('click', function() {
-  alert('Número de opciones seleccionadas: ' + howMany(document.selectForm.musicTypes));
-});
+  let btn = document.getElementById("btn");
+  btn.addEventListener("click", function () {
+    alert(
+      "Número de opciones seleccionadas: " +
+        howMany(document.selectForm.musicTypes),
+    );
+  });
 </script>
 ```
 
@@ -108,7 +106,7 @@ do
 while (condición);
 ```
 
-_`exposición`_ siempre se ejecuta una vez antes de que se verifique la condición. (Para ejecutar varias instrucciones, usa una declaración de bloque (`{ ... }`) para agrupar esas declaraciones).
+`exposición` siempre se ejecuta una vez antes de que se verifique la condición. (Para ejecutar varias instrucciones, usa una declaración de bloque (`{ ... }`) para agrupar esas declaraciones).
 
 Si `condición` es `true`, la declaración se ejecuta de nuevo. Al final de cada ejecución, se comprueba la condición. Cuando la condición es `false`, la ejecución se detiene y el control pasa a la declaración que sigue a `do...while`.
 
@@ -127,15 +125,15 @@ while (condición)
   expresión
 ```
 
-Si la _`condición`_ se vuelve `false`, la `instrucción` dentro del bucle se deja de ejecutar y el control pasa a la instrucción que sigue al bucle.
+Si la `condición` se vuelve `false`, la `instrucción` dentro del bucle se deja de ejecutar y el control pasa a la instrucción que sigue al bucle.
 
-La prueba de condición ocurre _antes_ de que se ejecute la `expresión` en el bucle. Si la condición devuelve `true`, se ejecuta la `expresión` y la _`condición`_ se prueba de nuevo. Si la condición devuelve `false`, la ejecución se detiene y el control se pasa a la instrucción que sigue a `while`.
+La prueba de condición ocurre _antes_ de que se ejecute la `expresión` en el bucle. Si la condición devuelve `true`, se ejecuta la `expresión` y la `condición` se prueba de nuevo. Si la condición devuelve `false`, la ejecución se detiene y el control se pasa a la instrucción que sigue a `while`.
 
 Para ejecutar varias instrucciones, usa una declaración de bloque (`{ ... }`) para agrupar esas declaraciones.
 
 ### Ejemplo 1
 
-El siguiente ciclo del `while` se repite siempre que _`n`_ sea menor que `3`:
+El siguiente ciclo del `while` se repite siempre que `n` sea menor que `3`:
 
 ```js
 let n = 0;
@@ -159,7 +157,7 @@ Evita los bucles infinitos. Asegúrate de que la condición en un bucle eventual
 ```js example-bad
 // ¡Los bucles infinitos son malos!
 while (true) {
-  console.log('¡Hola, mundo!');
+  console.log("¡Hola, mundo!");
 }
 ```
 
@@ -210,11 +208,11 @@ for (let i = 0; i < a.length; i++) {
 let x = 0;
 let z = 0;
 labelCancelLoops: while (true) {
-  console.log('Bucles externos: ' + x);
+  console.log("Bucles externos: " + x);
   x += 1;
   z = 1;
   while (true) {
-    console.log('Bucles internos: ' + z);
+    console.log("Bucles internos: " + z);
     z += 1;
     if (z === 10 && x === 10) {
       break labelCancelLoops;
@@ -255,13 +253,12 @@ while (i < 5) {
 }
 //1,3,7,12
 
-
 let i = 0;
 let n = 0;
 while (i < 5) {
   i++;
   if (i === 3) {
-     // continue;
+    // continue;
   }
   n += i;
   console.log(n);
@@ -271,9 +268,9 @@ while (i < 5) {
 
 ### Ejemplo 2
 
-Una declaración etiquetada _`checkiandj`_ contiene una declaración etiquetada _`checkj`_. Si se encuentra `continue`, el programa termina la iteración actual de _`checkj`_ y comienza la siguiente iteración. Cada vez que se encuentra `continue`, _`checkj`_ reitera hasta que su condición devuelve `false`. Cuando se devuelve `false`, el resto de la instrucción _`checkiandj`_ se completa y _`checkiandj`_ reitera hasta que su condición devuelve `false`. Cuando se devuelve `false`, el programa continúa en la declaración que sigue a _`checkiandj`_.
+Una declaración etiquetada `checkiandj` contiene una declaración etiquetada `checkj`. Si se encuentra `continue`, el programa termina la iteración actual de `checkj` y comienza la siguiente iteración. Cada vez que se encuentra `continue`, `checkj` reitera hasta que su condición devuelve `false`. Cuando se devuelve `false`, el resto de la instrucción `checkiandj` se completa y `checkiandj` reitera hasta que su condición devuelve `false`. Cuando se devuelve `false`, el programa continúa en la declaración que sigue a `checkiandj`.
 
-Si `continue` tuviera una etiqueta de _`checkiandj`_, el programa continuaría en la parte superior de la declaración _`checkiandj`_.
+Si `continue` tuviera una etiqueta de `checkiandj`, el programa continuaría en la parte superior de la declaración `checkiandj`.
 
 let i = 0; let j = 10; checkiandj: while (i < 4) { console.log(i); i += 1; checkj: while (j > 4) { console.log(j); j -= 1; if ((j % 2) === 0) { continue checkj; } console.log(j + 'es impar.'); } console.log('i = ' + i); console.log('j = ' + j); }
 
@@ -292,11 +289,11 @@ La siguiente función toma como argumento un objeto y el nombre del objeto. Lueg
 
 ```js
 function dump_props(obj, obj_name) {
-  let result = '';
+  let result = "";
   for (let i in obj) {
-    result += obj_name + '.' + i + ' = ' + obj[i] + '<br>';
+    result += obj_name + "." + i + " = " + obj[i] + "<br>";
   }
-  result += '<hr>';
+  result += "<hr>";
   return result;
 }
 ```
@@ -304,8 +301,8 @@ function dump_props(obj, obj_name) {
 Para un objeto `car` con propiedades `make` y `model`, `result` sería:
 
 ```js
-car.make = Ford
-car.model = Mustang
+car.make = Ford;
+car.model = Mustang;
 ```
 
 ### Arrays
@@ -327,14 +324,14 @@ El siguiente ejemplo muestra la diferencia entre un bucle `for...of` y un bucle 
 
 ```js
 const arr = [3, 5, 7];
-arr.foo = 'hola';
+arr.foo = "hola";
 
 for (let i in arr) {
-   console.log(i); // logs "0", "1", "2", "foo"
+  console.log(i); // logs "0", "1", "2", "foo"
 }
 
 for (let i of arr) {
-   console.log(i); // logs 3, 5, 7
+  console.log(i); // logs 3, 5, 7
 }
 ```
 

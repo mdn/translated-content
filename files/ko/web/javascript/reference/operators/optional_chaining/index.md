@@ -1,8 +1,8 @@
 ---
 title: Optional chaining
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
-translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 ---
+
 {{JSSidebar("Operators")}}
 
 **optional chaining** 연산자 (**`?.`**) 는 체인의 각 참조가 유효한지 명시적으로 검증하지 않고, 연결된 객체 체인 내에 깊숙이 위치한 속성 값을 읽을 수 있다.
@@ -67,7 +67,7 @@ let result = someInterface.customMethod?.();
 
 #### optional callbacks과 event handlers 다루기
 
-만약 객체에서 [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring)로 callbacks 또는 fetch 메서드를 사용한다면, 그 존재 여부를 테스트하지 않으면 함수로 호출할 수 없는 존재 하지 않는 값을 가질 수 있다. `?.`을 사용하면, 다음 추가 테스트를 피할 수 있다:
+만약 객체에서 [destructuring assignment](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring)로 callbacks 또는 fetch 메서드를 사용한다면, 그 존재 여부를 테스트하지 않으면 함수로 호출할 수 없는 존재 하지 않는 값을 가질 수 있다. `?.`을 사용하면, 다음 추가 테스트를 피할 수 있다:
 
 ```js
 // Written as of ES2019
@@ -97,13 +97,13 @@ function doSomething(onContent, onError) {
 
 ### 표현식에서 Optional chaining
 
-optional chaining 연산자를 속성에 표현식으로 접근할 때 대괄호 표기법([the bracket notation of the property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation))을 사용할 수 있다:
+optional chaining 연산자를 속성에 표현식으로 접근할 때 대괄호 표기법([the bracket notation of the property accessor](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation))을 사용할 수 있다:
 
 ```js
 let nestedProp = obj?.['prop' + 'Name'];
 ```
 
-### Optional chaining은 할당자 왼쪽에서 유효하지 않습니다.
+### Optional chaining은 할당자 왼쪽에서 유효하지 않습니다
 
 ```js
 let object = {};

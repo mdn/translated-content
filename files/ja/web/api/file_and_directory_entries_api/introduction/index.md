@@ -1,191 +1,173 @@
 ---
-title: ファイルとディレクトリエントリ API の紹介
+title: ファイルとディレクトリー項目 API の紹介
 slug: Web/API/File_and_Directory_Entries_API/Introduction
+l10n:
+  sourceCommit: a92d0c0dde556dad5143598c8bed4f71bb5afa94
 ---
 
-{{DefaultAPISidebar("File System API")}}{{Non-standard_header}}
+{{DefaultAPISidebar("File and Directory Entries API")}}
 
-[ファイルとディレクトリエントリ API](/ja/docs/Web/API/File_and_Directory_Entries_API) は、ウェブアプリケーションがナビゲートできるローカルファイルシステムをシミュレートします。サンドボックス化された仮想ファイルシステムでファイルやディレクトリの読み取り、書き込み、作成ができるアプリを開発できます。
+[ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API) は、ウェブアプリケーションがナビゲートできるローカルファイルシステムをシミュレートします。サンドボックス化された仮想ファイルシステムでファイルやディレクトリの読み取り、書き込み、作成ができるアプリを開発できます。
 
-ファイルおよびディレクトリエントリ API は、他の関連 API と相互作用します。 これは File Writer API 上に構築され、 File API 上に構築されています。 各 API は異なる機能を追加します。 これらの API は、大量のデータをキャッシュして処理することができるウェブアプリケーションの巨大な進歩的な飛躍です。
+ファイルとディレクトリー項目 API は、他にも関連する API と対話します。このAPIはファイルライター API をベースに構築されており、さらにファイル API をベースに構築されています。それぞれの API は異なる機能を追加しています。これらの API はウェブアプリケーションにとって大きな進化を遂げ、これで大量のデータをキャッシュして処理できるようになりました。
 
-## About this document
+## この文書について
 
-This introduction discusses essential concepts and terminology in the File and Directory Entries API. It gives you the big picture and orients you to [key concepts](#concepts). It also describes [restrictions](#restrictions) that raise security errors if you ignore them. To learn more about terminology used in this API, see the [Definitions](#definitions) section.
+この入門ページでは、ファイルとディレクトリー項目 API における重要な概念と用語について解説しています。全体像を把握し、[重要な概念](#主要概念)の方向性を示すものです。また、無視するとセキュリティエラーが発生する[制限](#制限)についても記述しています。この API で使用される用語については、[用語集](#用語集)の節を参照してください。
 
-For the reference documentation on the File and Directory Entries API, see the [reference](/ja/DOM/File_API/File_System_API/FileSystem) landing page and its subpages.
+ファイルとディレクトリー項目 API のリファレンス文書については、[リファレンス](/ja/docs/Web/API/FileSystem)のランディングページとそのサブページを見てください。
 
-The specification is still being defined and is subject to change.
+仕様は現在も定義されており、変更される可能性があります。
 
-## Overview
+## 概要
 
-The File and Directory Entries API includes both [asynchronous](/ja/DOM/File_API/File_System_API#Asynchronous_APIs) and [synchronous](/ja/DOM/File_API/File_System_API#Synchronous_APIs) versions of the interfaces. The asynchronous API can be used in cases where you don't want an outstanding operation to block the UI. The synchronous API, on the other hand, allows for simpler programming model, but it must be used with [WebWorkers](/ja/Using_web_workers).
+ファイルとディレクトリー項目APIには、[非同期](#asynchronous_apis)と[同期](#synchronous_apis)の両方のバージョンのインターフェイスが含まれています。非同期APIは、未解決の操作によってUIがブロックされるのを避けたい場合に使用できます。一方、同期APIは、よりシンプルなプログラミングモデルで使用できますが、[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API/Using_web_workers) と共に使用しなければなりません。
 
-### Usefulness of the API
+### API の有用性
 
-The File and Directory Entries API is an important API for the following reasons:
+ファイルとディレクトリー項目APIは、以下の理由から重要なAPIです。
 
-- It lets apps have offline and storage features that involve large binary blobs.
-- It can improve performance by letting an app pre-fetch assets in the background and cache locally.
-- It lets users of your web app directly edit a binary file that's in their local file directory.
-- It provides a storage API that is already familiar to your users, who are used to working with file systems.
+- アプリにオフライン機能や大きなバイナリー blob を伴うストレージ機能を持たせることができる。
+- アプリがバックグラウンドで資産を先読みし、ローカルにキャッシュすることで、パフォーマンスを向上させることができます。
+- ウェブアプリケーションのユーザーが、ローカルのファイルディレクトリーにあるバイナリーファイルを直接編集できるようになります。
+- ファイルシステムを使用することに慣れているユーザーにとって、すでに慣れ親しんだストレージAPIを提供することができます。
 
-For examples of features you can create with this app, see the [Sample use cases](/#samples) section.
+このアプリで作成する機能の例については、[サンプルの使用例](#サンプルの使用例)の節を参照してください。
 
-### The File and Directory Entries API and other storage APIs
+### ファイルとディレクトリー項目 API と、その他のストレージ API
 
-The File and Directory Entries API is an alternative to other storage APIs like [IndexedDB](/ja/IndexedDB/Basic_Concepts_Behind_IndexedDB), WebSQL (which has been deprecated since November18, 2010), and AppCache. The API is a better choice for apps that deal with blobs for the following reasons:
+ファイルとディレクトリー項目 API は、[IndexedDB](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology) などの他のストレージ API に代わるものです。この API は、以下の理由から、blob を扱うアプリに適した選択肢です。
 
-- The File and Directory Entries API offers client-side storage for use cases that are not addressed by databases. If you want to have large mutable chunks of data, the File and Directory Entries API is a much more efficient storage solution than a database.
-- While Firefox supports blob storage for IndexedDB, Chrome currently does not (Chrome is still implementing support for blob storage in IndexedDB). If you are targeting Chrome for your app and you want to store blobs, the File and Directory Entries API and App Cache are your only choices. However, AppCache storage isn't locally mutable, and doesn't allow for fine-grained client-side management.
-- In Chrome, you can use the File and Directory Entries API with the [Quota Management API](http://code.google.com/chrome/whitepapers/storage.html), which lets you ask for more storage and manage your storage quota.
+- ファイルとディレクトリー項目 API は、データベースでは対応できない用途のために、クライアント側のストレージを提供します。変更可能な大きなデータの塊を扱いたい場合、ファイルとディレクトリー項目 API は、データベースよりもはるかに効率的なストレージソリューションです。
+- Firefox は IndexedDB の blob ストレージに対応していますが、Chrome は現在対応していません（Chrome は IndexedDB の blob ストレージに対応するために実装している最中です）。アプリで Chrome を対象とし、Blob を格納するためには、ファイルとディレクトリー項目 API と App Cache だけが選択肢となります。しかし、AppCache ストレージはローカルで変更可能なものではなく、クライアント側できめ細かく管理することができません。
+- Chrome では、ファイルとディレクトリー項目 API と[クォータ管理 API](https://developer.chrome.com/docs/apps/offline_storage/)を使用して、より多くのストレージを要求したり、ストレージのクォータを開発したりすることができます。
 
-### Sample use cases
+### サンプルの使用例
 
-The following are just a few examples of how you can use the File and Directory Entries API:
+ファイルとディレクトリー項目 API を使用する例として、以下のようなものがあります。
 
-- Apps with persistent uploader
+- 持続的アップローダーを使用するアプリ
 
-  - When a file or directory is selected for upload, you can copy the file into a local sandbox and upload a chunk at a time.
-  - The app can restart uploads after an interruption, such as the browser being closed or crashing, connectivity getting interrupted, or the computer getting shut down.
+- アップロードするファイルや ディレクトリーを選択すると、そのファイルをローカルのサンドボックスにコピーして、一度に塊をアップロードすることができます。
+  - ブラウザーが閉じられたり、クラッシュしたり、接続が中断されたり、コンピューターがシャットダウンされるなど、中断した後にアプリがアップロードを再開することができます。
 
-- Video game or other apps with lots of media assets
+- 動画ゲームなど、メディア資産を大量に扱うアプリ
 
-  - The app downloads one or several large tarballs and expands them locally into a directory structure.
-  - The app pre-fetches assets in the background, so the user can go to the next task or game level without waiting for a download.
+- このアプリは、1 つまたは複数の大きな tarball をダウンロードし、ローカルでディレクトリー構造に展開します。
+- アプリはバックグラウンドで資産を先読みするので、ユーザーはダウンロードを待つことなく、次のタスクやゲームレベルに進むことができます。
 
-- Audio or photo editor with offline access or local cache (great for performance and speed)
+- オフラインアクセスまたはローカルキャッシュを備えた音声エディターや写真エディター（パフォーマンスとスピードに優れています）。
 
-  - The app can write to files in place (for example, overwriting just the ID3/EXIF tags and not the entire file).
+- アプリは、ファイルに対して配置することができます（例えば、ファイル全体ではなく、 ID3/EXIF タグだけを上書きすることができます）。
 
-- Offline video viewer
+- オフライン動画ビューアー
 
-  - The app can download large files (>1GB) for later viewing.
-  - The app can access partially downloaded files (so that you can watch the first chapter of your DVD, even if the app is still downloading the rest of the content or if the app didn't complete the download because you had to run to catch a train).
+  - アプリは、後で見るために大きなファイル（1GB 以上）をダウンロードすることができます。
+  - アプリは、部分的にダウンロードされたファイルにアクセスすることができます（アプリが残りのコンテンツをまだダウンロードしている場合や、電車に乗るために実行したためにアプリがダウンロードを完了しなかった場合でも、DVD の最初の章を見ることができます）。
 
-- Offline web mail client
+- オフラインのウェブメールクライアント
 
-  - The client downloads attachments and stores them locally.
-  - The client caches attachments for later upload.
+  - クライアントは、添付ファイルをダウンロードし、格納するために、添付ファイルを保存します。
+  - クライアントは、後でアップロードするために添付ファイルをキャッシュします。
 
-## Big concepts
+## 主要概念
 
-Before you start using the File and Directory Entries API, you need to understand a few concepts:
+ファイルとディレクトリー項目 API を使用し始める前に、いくつかの概念を理解する必要があります。
 
-- [The File and Directory Entries API is a virtual representation of a file system](#virtual)
-- [The File and Directory Entries API can use different storage types](#storage)
-- [Browsers impose storage quota](#quota)
-- [The File and Directory Entries API has asynchronous and synchronous versions](#versions)
-- [When using the asynchronous API, always use the error callbacks](#errorcallbacks)
-- [The File and Directory Entries API interacts with other APIs](#interfaces)
-- [The File and Directory Entries API is case-sensitive](#case)
+### ファイルシステムは仮想的
 
-### The File and Directory Entries API is a virtual representation of a file system
+この API はローカルのファイルシステムへのアクセル権を与えるものではなく、またサンドボックスも実際のファイルシステムの一部ではありません。実際には、サンドボックスは仮想化されたファイルシステムであり、ウェブアプリケーションからは本格的なファイルシステムのように見えます。ブラウザー外部のローカルファイルシステムとは必ずしも関係がありません。
 
-The API doesn't give you access to the local file system, nor is the sandbox really a section of the file system. Instead, it is a virtualized file system that looks like a full-fledged file system to the web app. It does not necessarily have a relationship to the local file system outside the browser.
+すなわち、ウェブアプリケーションとデスクトップアプリが同時に同じファイルを共有することができないということです。この API は、ウェブアプリケーションがブラウザー外の、デスクトップアプリケーションも作業することができるファイルにアクセスすることを許可するものではありません。しかし、ウェブアプリケーションからデスクトップアプリにファイルをエクスポートすることは可能です。例えば、ファイル API を使用して blob を作成し、iframe を blob にリダイレクトして、ダウンロードマネージャーを呼び出すことができます。
 
-What this means is that a web app and a desktop app cannot share the same file at the same time. The API does not let your web app reach outside the browser to files that desktop apps can also work on. You can, however, export a file from a web app to a desktop app. For example, you can use the File API, create a blob, redirect an iframe to the blob, and invoke the download manager.
+### 複数の種類のストレージ
 
-### The File and Directory Entries API can use different storage types
+アプリケーションは、一時的または持続的なストレージをリクエストすることができます。一時的なストレージは、ブラウザーから与えられるだけなので取得しやすいですが、制限があり、空間がなくなるとブラウザーが削除することができます。一方、持続的なストレージは、ユーザーによってのみ削除可能な大きな空間を提供するかもしれませんが、そのためにはユーザーから許可を得る必要があります。
 
-An application can request temporary or persistent storage. Temporary storage is easier to get, because the browser just gives it to you, but it is limited and can be deleted by the browser when it runs out of space. Persistent storage, on the other hand, might offer you larger space that can only be deleted by the user, but it requires the user to grant you permission.
+キャッシュには一時的なストレージを使用し、ユーザーが作成したデータや固有のデータなど、アプリに保持させたいデータには永続的なストレージを使用します。
 
-Use temporary storage for caching and persistent storage for data that you want your app to keep—such as user-generated or unique data.
+### ストレージのクォータ
 
-### Browsers impose storage quotas
+ウェブアプリケーションがディスクを使い切ってしまうのを防ぐために、ブラウザーはアプリごとにクォータを課し、ウェブアプリケーション間でストレージを割り当てることがあります。
 
-To prevent a web app from using up the entire disk, browsers might impose a quota for each app and allocate storage among web apps.
+ストレージ空間の付与や割り当て方法、ストレージを管理する方法は、ブラウザーによって異なるため、各ブラウザーのドキュメントを調べる必要があります。例えば Google Chrome では、仕様で定められている 5MB を超える一時的なストレージを許可し、クォータ管理 API に対応しています。Chrome 固有の実装については、[Managing HTML Offline Storage](https://developer.chrome.com/docs/apps/offline_storage/) を参照してください。
 
-How storage space is granted or allocated and how you can manage storage are idiosyncratic to the browser, so you need to check the respective documentation of the browser. Google Chrome, for example, allows temporary storage beyond the 5 MB required in the specifications and supports the Quota Management API. To learn more about the Chrome-specific implementation, see [Managing HTML5 Offline Storage](http://code.google.com/chrome/whitepapers/storage.html).
+### 非同期バージョンと同期バージョン
 
-### The File and Directory Entries API has asynchronous and synchronous versions
+ファイルとディレクトリー項目 API には、非同期バージョンと同期バージョンがあります。どちらのバージョンの API も、同じ機能と性能を提供します。実際、いくつかの違いを除けば、ほとんど同じです。
 
-The File and Directory Entries API comes with asynchronous and synchronous versions. Both versions of the API offer the same capabilities and features. In fact, they are almost alike, except for a few differences.
+- ウェブワーカー
+  - : 非同期 API は文書と[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)のどちらのコンテキストでも使用できますが、同期 API はウェブワーカーのみで使用するためのものです。
+- コールバック
+  - : 非同期 API では値を返すことでデータを渡すのではなく、コールバック関数を渡す必要があります。処理を実行するためのリクエストを送信し、コールバックで通知を受け取ります。一方、同期 API は API メソッドが値を返すので、コールバックは使用しません。
+- 非同期APIと同期 API のグローバルメソッド
+  - : 非同期APIには、`requestFileSystem()` と `resolveLocalFileSystemURL()` というグローバルメソッドがあります。 これらのメソッドは Window オブジェクトとワーカーのグローバルスコープの両方のメンバーになります。一方、同期 API には、`requestFileSystemSync()` と `resolveLocalFileSystemSyncURL()` というメソッドが使用されます。 これらの同期メソッドは、ワーカーのグローバルスコープのみのメンバーであり、Window オブジェクトのメンバーではありません。
 
-- **WebWorkers.** The asynchronous API can be used in either the document or [WebWorkers](/ja/Using_web_workers) context, while the synchronous API is for use with WebWorkers only.
-- **Callbacks**. The asynchronous API doesn't give you data by returning values; instead, you have to pass a callback function. You send requests for operations to happen, and get notified by callbacks. In contrast, the synchronous API does not use callbacks because the API methods return values.
-- **Global methods of the asynchronous and synchronous APIs**. The asynchronous API has the following global methods: `requestFileSystem()` and `resolveLocalFileSystemURL()`. These methods are members of both the window object and the worker global scope. The synchronous API, on the other hand, uses the following methods: `requestFileSystemSync()` and `resolveLocalFileSystemSyncURL()`. These synchronous methods are members of the worker's global scope only, not the window object.
+同期 API は、いくつかのタスクではよりシンプルにすることができます。直接的で順序通りのプログラミングモデルなので、コードが読みやすくなります。同期 API の欠点は、多少の制約があるウェブワーカーのやり取りが必要であることです。
 
-The synchronous API can be simpler for some tasks. Its direct, in-order programming model can make code easier to read. The drawback of synchronous API has to do with its interactions with Web Workers, which has some limitations.
+### 非同期 API にはエラーコールバックを使用
 
-### When using the asynchronous API, always use the error callbacks
+非同期 API を使用する場合は、常にエラーコールバックを使用してください。メソッドのエラーコールバックはオプション引数ですが、健全性を保つためには、省略できないものです。なぜ呼び出しに失敗したのかを知りたいはずです。少なくとも、エラーメッセージを提供するようにエラーを処理し、何が起こっているのかが分かるようにしましょう。
 
-When using the asynchronous API, always use the error callbacks. Although the error callbacks for the methods are optional parameters, they are not optional for your sanity. You want to know why your calls failed. At minimum, handle the errors to provide error messages, so you'll have an idea of what's going on.
+### 他の API とのやりとり
 
-### The File and Directory Entries API interacts with other APIs
+ファイルとディレクトリー項目 API は、ウェブプラットフォーム上の他の API や要素と一緒に使用するように設計されています。例として、以下のいずれかを使用されることが多いようです。
 
-The File and Directory Entries API is designed to be used with other APIs and elements on the web platform. For example, you are likely to use one of the following:
+- XMLHttpRequest （ファイルやブロブオブジェクトの `send()` メソッドなど）。
+- ドラッグ & ドロップ API
+- ウェブワーカー（ファイルとディレクトリー項目 API の同期版のため）
+- input`要素（プログラムからファイルのリストを取得するためのもの）
 
-- XMLHttpRequest (such as the `send()` method for file and blob objects)
-- Drag and Drop API
-- Web Workers (for the synchronous version of the File and Directory Entries API)
-- The `input` element (to programmatically obtain a list of files from the element)
+### 大文字と小文字の区別
 
-### The File and Directory Entries API is case sensitive
+ファイルシステム API は、大文字と小文字を区別し、保持します。
 
-The filesystem API is case-sensitive, and case-preserving.
+## 制限
 
-## Restrictions
+セキュリティ上の理由から、ブラウザーはファイルへのアクセスに制限を課しています。これを無視すると、セキュリティエラーが発生します。
 
-For security reasons, browsers impose restrictions on file access. If you ignore them, you will get security errors.
+### 同一オリジンポリシーの遵守
 
-- [The File and Directory Entries API adheres to the same-origin policy](#origin)
-- [The File and Directory Entries API does not let you create and rename executable files](#execute)
-- [The file system is sandboxed](#sandbox)
-- [You cannot run your app from file://](#file)
+オリジンとは、スクリプトが実行される文書の URL のドメイン、アプリケーション層プロトコル、ポート番号のことです。それぞれのオリジンには、関連するファイルシステムの集合があります。
 
-### The File and Directory Entries API adheres to the same-origin policy
+ファイルシステムにはセキュリティ境界が設定されており、アプリケーションは異なるオリジンのデータにアクセスすることができません。これにより、アクセスや削除を防ぐことができ、プライベートなデータを保護することができます。例えば、`http://www.example.com/app/` のアプリやページは、`http://www.example.com/dir/` のファイルにアクセスできますが、これらは同じオリジンであるため、`http://www.example.com:8080/dir/`（異なるポート番号）や`https://www.example.com/dir/`（異なるプロトコル）のファイルを取得することはできません。
 
-An origin is the domain, application layer protocol, and port of a URL of the document where the script is being executed. Each origin has its own associated set of file systems.
+### 実行ファイルの作成や名前変更が不可
 
-The security boundary imposed on file system prevents applications from accessing data with a different origin. This protects private data by preventing access and deletion. For example, while an app or a page in <http://www.example.com/app/> can access files from <http://www.example.com/dir/>, because they have the same origin, it cannot retrieve files from <http://www.example.com:8080/dir/> (different port) or <https://www.example.com/dir/> (different protocol).
+悪意のあるアプリが不正な実行ファイルを実行するのを防ぐため、ファイルとディレクトリー項目 API のサンドボックス内では実行ファイルを作成することはできません。
 
-### The File and Directory Entries API does not let you create and rename executable files
+### ファイルシステムのサンドボックス化
 
-To prevent malicious apps from running hostile executables, you cannot create executable files within the sandbox of the File and Directory Entries API.
+ファイルシステムはサンドボックス化されているため、ウェブアプリケーションが他のアプリケーションのファイルにアクセスすることはできません。また、ユーザーのハードディスク上の任意のフォルダー内（例えば、マイピクチャやマイドキュメント）へのファイルの読み書きはできません。
 
-### The file system is sandboxed
+### アプリは file:// から実行できない
 
-Because the file system is sandboxed, a web app cannot access another app's files. You also cannot read or write files to an arbitrary folder (for example, My Pictures and My Documents) on the user's hard drive.
+`file://` からローカルにアプリを実行することはできません。実行すると、ブラウザーがエラーを発生するか、アプリが暗黙に失敗します。この制限は、Blob や FileReader を含む多くのファイル API にも適用されます。
 
-### You cannot run your app from file://
+テスト目的の場合、ブラウザーに `--allow-file-access-from-files` フラグを付けて起動することで、Chrome の制限を回避することができます。このフラグはこの目的のみに使用してください。
 
-You cannot run your app locally from `file://`. If you do so, the browser throws errors or your app fails silently. This restriction also applies to many of the file APIs, including BlobBuilder and FileReader.
+## 用語集
 
-For testing purposes, you can bypass the restriction on Chrome by starting the browser with the `--allow-file-access-from-files` flag. Use this flag only for this purpose.
-
-## Definitions
-
-This section defines and explains terms used in the File and Directory Entries API.
+この節では、ファイルとディレクトリー項目 API で使用される用語の定義と説明をします。
 
 - blob
-  - : Stands for binary large object. A blob is a set of binary data that is stored as a single object. It is a general-purpose way to reference binary data in web applications. A blob can be an image or an audio file.
+  - : バイナリーラージオブジェクトの略。ブロブとは、単一のオブジェクトとして格納されるバイナリーデータの集合のこと。ウェブアプリケーションでバイナリーデータを参照するための汎用的な方法である。ブロブには画像や音声ファイルなどがあります。
 - Blob
-  - : Blob—with a capital B—is a data structure that is immutable, which means that binary data referenced by a Blob cannot be modified directly. This makes Blobs act predictably when they are passed to asynchronous APIs.
-- persistent storage
-  - : Persistent storage is storage that stays in the browser unless the user expunges it or the app deletes it.
-- temporary storage
-  - : Transient storage is available to any web app. It is automatic and does not need to be requested, but the browser can delete the storage without warning.
+  - : Blob（大文字の B）とは、不変のデータ構造であり、Blob が参照するバイナリーデータを直接変更することができないことを意味しています。このため、Blob は非同期 API で渡されたときに予測可能な動作をします。
+- 持続的なストレージ
+  - : 持続的なストレージとは、ユーザーが消去したり、アプリが削除したりしない限り、ブラウザーに残るストレージのことです。
+- 一時的なストレージは
+  - : 一時的なストレージは、どのウェブアプリケーションでも利用できます。これは自動的なもので、リクエストされる必要はありませんが、ブラウザーは警告なしにストレージを削除することができます。
 
-## Specifications
+## 仕様書
 
-| Specification                            | Status                               | Comment               |
-| ---------------------------------------- | ------------------------------------ | --------------------- |
-| {{SpecName('File System API')}} | {{Spec2('File System API')}} | Draft of proposed API |
+{{Specifications}}
 
-This API has no official W3C or WHATWG specification.
+## ブラウザーの互換性
 
-## Browser compatibility
+{{Compat}}
 
-### `FileSystem`
+## 関連情報
 
-{{Compat("api.FileSystem", 0)}}
-
-### `FileSystemSync` property
-
-{{Compat("api.FileSystemSync", 0)}}
-
-## See also
-
-- [File and Directory Entries API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [Exploring the FileSystem APIs](http://www.html5rocks.com/en/tutorials/file/filesystem/) (HTML5 Rocks)
+- [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
+- [Read files in JavaScript](https://web.dev/read-files/) (web.dev)

@@ -1,11 +1,13 @@
 ---
 title: CompositionEvent
 slug: Web/API/CompositionEvent
+l10n:
+  sourceCommit: e811fc31b67e145c5882e8e3f128d1938c627a51
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
-DOM **`CompositionEvent`** は間接的なテキストの入力によって発生するイベントを表します。
+DOM の **`CompositionEvent`** は、ユーザーの間接的なテキストの入力（訳注: かな漢字変換の入力など）によって発生するイベントを表します。
 
 {{InheritanceDiagram}}
 
@@ -16,35 +18,32 @@ DOM **`CompositionEvent`** は間接的なテキストの入力によって発�
 
 ## プロパティ
 
-_このインターフェイスは、親である {{domxref("UIEvent")}} および祖先である {{domxref("Event")}} からもプロパティを継承します。_
+_このインターフェイスは、親である {{domxref("UIEvent")}} および祖先である {{domxref("Event")}} から継承したプロパティもあります。_
 
-- {{domxref("CompositionEvent.data")}} {{readonlyinline}}
+- {{domxref("CompositionEvent.data")}} {{ReadOnlyInline}}
   - : イベントを発生させた入力システムによって生成された文字を返します。これは、`CompositionEvent` オブジェクトを生成したイベントの型に応じて変わります。
-- {{domxref("CompositionEvent.locale")}} {{readonlyinline}} {{deprecated_inline}}
+- {{domxref("CompositionEvent.locale")}} {{ReadOnlyInline}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : 現在の入力システムのロケールです (例えば、入力システムが IME であればそれに関連したキーボードレイアウトのロケールになります)。
 
 ## メソッド
 
-_このインターフェイスは、親である {{domxref("UIEvent")}} および祖先である {{domxref("Event")}} からもメソッドを継承します。_
+_このインターフェイスは、親である {{domxref("UIEvent")}} および祖先である {{domxref("Event")}} から継承したメソッドもあります。_
 
 - {{domxref("CompositionEvent.initCompositionEvent()")}} {{deprecated_inline}}
   - : `CompositionEvent` オブジェクトの属性を初期化します。
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                                               | 策定状況                         | コメント |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('UI Events', '#interface-compositionevent', 'CompositionEvent')}} | {{Spec2('UI Events')}}     |          |
-| {{SpecName('DOM3 Events', '#idl-compositionevent', 'CompositionEvent')}}     | {{Spec2('DOM3 Events')}} |          |
+{{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.CompositionEvent")}}
+{{Compat}}
 
 ## 関連情報
 
 - [compositionstart](/ja/docs/Web/API/Element/compositionstart_event)
-- [compositionend](/ja/docs/Web/Reference/Events/compositionend)
+- [compositionend](/ja/docs/Web/API/Element/compositionend_event)
 - [compositionupdate](/ja/docs/Web/API/Element/compositionupdate_event)
-- [UIEvent](/ja/docs/DOM/Event/UIEvent)
-- [Event](/ja/docs/DOM/event)
+- [UIEvent](/ja/docs/Web/API/UIEvent)
+- [Event](/ja/docs/Web/API/Event)

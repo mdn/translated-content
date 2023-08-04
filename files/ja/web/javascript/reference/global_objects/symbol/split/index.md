@@ -29,9 +29,7 @@ console.log('Another one bites the dust'.split(new ReverseSplit()));
 
 ## 仕様書
 
-| 仕様書                                                                           |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.split', 'Symbol.split')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

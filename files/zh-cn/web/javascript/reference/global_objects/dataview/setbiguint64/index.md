@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64
 
 {{JSRef}}
 
-**`setBigUint64()` **方法在距 DataView 的起始位置的指定字节偏移处存储一个无符号的 64 位整数（unsigned long long 类型）值。
+**`setBigUint64()`** 方法在距 DataView 的起始位置的指定字节偏移处存储一个无符号的 64 位整数（unsigned long long 类型）值。
 
 {{EmbedInteractiveExample("pages/js/dataview-setbiguint64.html")}}
 
@@ -33,7 +33,7 @@ dataview.setBigUint64(byteOffset, value [, littleEndian])
 - {{jsxref("RangeError")}}
   - : 如果 byteOffset 设置导致存储该数值时超出了视图的末尾位置，将会抛出错误。
 
-## 例子
+## 示例
 
 ### 使用 `setBigUint64` 方法
 

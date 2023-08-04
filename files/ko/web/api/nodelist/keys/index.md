@@ -1,8 +1,8 @@
 ---
 title: NodeList.keys()
 slug: Web/API/NodeList/keys
-translation_of: Web/API/NodeList/keys
 ---
+
 {{APIRef("DOM")}}
 
 **`NodeList.keys()`** 메서드는 이 객체에 포함된 모든 키를 통과할 수 있는 {{jsxref("Iteration_protocols",'iterator')}} 를 반환합니다. 이 키는 부호없는 정수형(`unsigned integer`) 입니다.
@@ -32,8 +32,8 @@ node.appendChild(kid3);
 var list = node.childNodes;
 
 // Using for..of
-for(var key of list.keys()) {
-   console.log(key);
+for (var key of list.keys()) {
+  console.log(key);
 }
 ```
 
@@ -45,11 +45,11 @@ for(var key of list.keys()) {
 2
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

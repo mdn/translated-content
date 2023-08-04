@@ -34,8 +34,7 @@ let storedTransform = ctx.getTransform();
 #### HTML
 
 ```html
-<canvas width="240"></canvas>
-<canvas width="240"></canvas>
+<canvas width="240"></canvas> <canvas width="240"></canvas>
 ```
 
 #### CSS
@@ -49,11 +48,11 @@ canvas {
 #### JavaScript
 
 ```js
-const canvases = document.querySelectorAll('canvas');
-const ctx1 = canvases[0].getContext('2d');
-const ctx2 = canvases[1].getContext('2d');
+const canvases = document.querySelectorAll("canvas");
+const ctx1 = canvases[0].getContext("2d");
+const ctx2 = canvases[1].getContext("2d");
 
-ctx1.setTransform(1, .2, .8, 1, 0, 0);
+ctx1.setTransform(1, 0.2, 0.8, 1, 0, 0);
 ctx1.fillRect(25, 25, 50, 50);
 
 let storedTransform = ctx1.getTransform();
@@ -67,7 +66,7 @@ ctx2.fill();
 
 #### 结果
 
-{{ EmbedLiveSample('Examples', "100%", 180) }}
+{{ EmbedLiveSample('示例', "100%", 180) }}
 
 ## 规范
 

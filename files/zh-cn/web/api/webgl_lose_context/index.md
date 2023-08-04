@@ -20,17 +20,21 @@ WebGL 扩展可以通过 {{domxref("WebGLRenderingContext.getExtension()")}} 方
 
 ## 示例
 
-使用这个扩展，你可以模拟 {{Event("webglcontextlost")}} 和 {{Event("webglcontextrestored")}} 事件：
+使用这个扩展，你可以模拟 [`webglcontextlost`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextlost_event) 和 [`webglcontextrestored`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event) 事件：
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 
-canvas.addEventListener('webglcontextlost', function(e) {
-  console.log(e);
-}, false);
+canvas.addEventListener(
+  "webglcontextlost",
+  function (e) {
+    console.log(e);
+  },
+  false,
+);
 
-gl.getExtension('WEBGL_lose_context').loseContext();
+gl.getExtension("WEBGL_lose_context").loseContext();
 
 // 打印了 "webglcontextlost" 类型的 WebGLContextEvent 事件。
 ```
@@ -43,7 +47,7 @@ gl.getExtension('WEBGL_lose_context').loseContext();
 
 {{Compat}}
 
-## 参阅
+## 参见
 
 - {{domxref("WebGLRenderingContext.isContextLost()")}}
-- 事件：{{Event("webglcontextlost")}}, {{Event("webglcontextrestored")}}, {{Event("webglcontextcreationerror")}}
+- 事件：[`webglcontextlost`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)、[`webglcontextrestored`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)、[`webglcontextcreationerror`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)

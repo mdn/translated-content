@@ -1,7 +1,6 @@
 ---
 title: Secure Contexts
 slug: Web/Security/Secure_Contexts
-translation_of: Web/Security/Secure_Contexts
 ---
 
 Un navigateur entre dans un **contexte sécurisé** quand il a satisfait les exigences minimale de sécurité. Un contexte sécurisé permet au navigateur de mettre à disposition des APIs qui nécessitent des transferts sécurisés avec l'utilisateur.
@@ -20,7 +19,7 @@ Un contexte sera considéré comme sécurisé s'il est servi locallement, ou dep
 
 Les fichiers servis locallement avec des chemins comme `http://localhost` et `file://` sont considérés sécurisés.
 
-Les contextes qui ne sont pas servis locallement doivent être servis avec *https\://* ou *wss\://* et les protocoles utilisés ne doivent pas être considérés obsolètes.
+Les contextes qui ne sont pas servis locallement doivent être servis avec _https\://_ ou _wss\://_ et les protocoles utilisés ne doivent pas être considérés obsolètes.
 
 ## Détection des fonctionnalités
 
@@ -37,9 +36,9 @@ if (window.isSecureContext) {
 
 ## Quelles APIs requièrent un contexte sécurisé ?
 
-- {{SpecName('Service Workers')}}
-- {{SpecName('Web Bluetooth')}}
-- {{SpecName('EME')}}
+- <i lang="en">Service Workers</i>
+- <i lang="en">Web Bluetooth</i>
+- <i lang="en">EME</i>
 
 ### Prositions de brouillons
 
@@ -122,7 +121,7 @@ Certains navigateurs peuvent décider de demander à certaines APIs d'être dans
       <td></td>
     </tr>
     <tr>
-      <td><em>{{SpecName('Web Crypto API')}}</em></td>
+      <td><i lang="en">Web Crypto API</i></td>
       <td>
         <em
           >est réservé à HTTPS même is la vérification du Secure Context est
@@ -141,20 +140,7 @@ _Note: Safari et Chrome ne supportent pas complètement la spécification des Se
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td>Spécification</td>
-      <td>État</td>
-      <td>Commentaire</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Secure Contexts')}}</td>
-      <td>{{Spec2('Secure Contexts')}}</td>
-      <td>Brouillon</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Voir aussi
 

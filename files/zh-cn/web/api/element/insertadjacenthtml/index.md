@@ -37,14 +37,14 @@ element.insertAdjacentHTML(position, text);
 <!-- afterend -->
 ```
 
-> **备注：**  beforebegin 和 afterend 位置，仅在节点在树中且节点具有一个 parent 元素时工作。
+> **备注：** beforebegin 和 afterend 位置，仅在节点在树中且节点具有一个 parent 元素时工作。
 
 ## 示例
 
 ```js
 // 原为 <div id="one">one</div>
-var d1 = document.getElementById('one');
-d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
+var d1 = document.getElementById("one");
+d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
 
 // 此时，新结构变成：
 // <div id="one">one</div><div id="two">two</div>

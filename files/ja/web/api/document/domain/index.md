@@ -57,9 +57,7 @@ if (document.domain === badDomain) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG','origin.html#relaxing-the-same-origin-restriction','Document.domain')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

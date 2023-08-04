@@ -1,12 +1,8 @@
 ---
 title: Document.documentElement
 slug: Web/API/Document/documentElement
-tags:
-  - Propriedade
-  - Referencia
-  - raiz
-translation_of: Web/API/Document/documentElement
 ---
+
 {{ ApiRef("DOM") }}
 
 O **document.documentElement** retorna o [`Elemento`](/pt-BR/docs/Web/API/Element) que é o elemento raiz do [`documento`](/pt-BR/docs/Web/API/Document) (por exemplo, o elemento `<html>` para documentos HTML).
@@ -25,9 +21,8 @@ var primeiroNivel = rootElement.childNodes;
 
 // primeiroNivel é a NodeList do filho direto do elemento raíz
 for (var i = 0; i < primeiroNivel.length; i++) {
-   // faça algo com cada filho direto do elemento raiz
-   // como primeiroNivel[i]
-
+  // faça algo com cada filho direto do elemento raiz
+  // como primeiroNivel[i]
 }
 ```
 
@@ -41,4 +36,8 @@ Documentos HTML tipicamente contém somente um único nó filho, `<html>`, talve
 
 ## Especificações
 
-- [Núcleo DOM Nível 2: document.documentElement](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-87CD092)
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

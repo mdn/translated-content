@@ -1,6 +1,8 @@
 ---
 title: Notification.close()
 slug: Web/API/Notification/close
+l10n:
+  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -11,7 +13,7 @@ slug: Web/API/Notification/close
 
 ## 構文
 
-```js
+```js-nolint
 close()
 ```
 
@@ -35,7 +37,7 @@ function spawnNotification(theBody, theIcon, theTitle) {
   };
 
   const n = new Notification(theTitle, options);
-  document.addEventListener('visibilitychange', function() {
+  document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') {
       // The tab has become visible so clear the now-stale Notification.
       n.close();

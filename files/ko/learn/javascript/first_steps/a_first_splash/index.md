@@ -2,6 +2,7 @@
 title: JavaScript에 발 담그기
 slug: Learn/JavaScript/First_steps/A_first_splash
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 
 JavaScript에 관한 약간의 이론과, JavaScript가 할 수 있는 일을 알아봤으니 이제 간단한 JavaScript 프로그램을 만들어보면서 개발 과정이 어떤 느낌인지 알아보겠습니다. "숫자 알아맞히기" 게임을 차근차근 따라 만들어봅시다.
@@ -25,7 +26,9 @@ JavaScript에 관한 약간의 이론과, JavaScript가 할 수 있는 일을 �
 
 시작하기 전에, 우리의 기대 목표를 먼저 확실하게 짚고 넘어가겠습니다. 이 글을 끝낸 뒤에도, 함께 따라서 작성한 코드를 이해하지 못할 수 있습니다. 그래도 괜찮습니다. 이 시간은 JavaScript의 기능들이 함께 어떻게 동작하는지, JavaScript 코드를 작성하는 게 어떤 느낌인지 알려드리기 위한 시간일 뿐입니다. 여기에서 사용한 기능들은 이후의 다른 여러 글에서 자세하게 짚어볼 테니, 지금 당장은 굳이 모두 이해하려고 애쓰지 마세요.
 
-> **참고:** 함수와 반복문처럼 JavaScript의 많은 코드 기능은 다른 프로그래밍 언어에도 존재합니다. 코드 구문은 다르더라도, 그 개념은 많은 부분 동일합니다.
+> **참고:**
+>
+> 함수와 반복문처럼 JavaScript의 많은 코드 기능은 다른 프로그래밍 언어에도 존재합니다. 코드 구문은 다르더라도, 그 개념은 많은 부분 동일합니다.
 
 ## 프로그래머처럼 사고하기
 
@@ -56,21 +59,21 @@ JavaScript에 관한 약간의 이론과, JavaScript가 할 수 있는 일을 �
 5. 그 후, 제출한 수가 정답인지 확인.
 6. 만약 정답이라면...
 
-    1. 축하 메시지 보여주기.
-    2. 이후에 플레이어가 다른 숫자를 제출하면 게임이 망가질 수 있으므로 제출을 막기.
-    3. 게임을 다시 시작할 수 있는 컨트롤 보여주기.
+   1. 축하 메시지 보여주기.
+   2. 이후에 플레이어가 다른 숫자를 제출하면 게임이 망가질 수 있으므로 제출을 막기.
+   3. 게임을 다시 시작할 수 있는 컨트롤 보여주기.
 
 7. 만약 오답이고 아직 플레이어 턴이 남아있다면...
 
-    1. 오답임을 알려주고 제출한 숫자가 너무 높았는지 아니면 너무 낮았는지 보여주기.
-    2. 다른 숫자의 제출을 허용하기.
-    3. 턴 숫자를 1 늘리기.
+   1. 오답임을 알려주고 제출한 숫자가 너무 높았는지 아니면 너무 낮았는지 보여주기.
+   2. 다른 숫자의 제출을 허용하기.
+   3. 턴 숫자를 1 늘리기.
 
 8. 만약 오답인데 플레이어 턴이 남아있지 않다면...
 
-    1. 플레이어에게 게임이 끝났음을 알려주기.
-    2. 이후에 플레이어가 다른 숫자를 제출하면 게임이 망가질 수 있으므로 제출을 막기.
-    3. 게임을 다시 시작할 수 있는 컨트롤 보여주기.
+   1. 플레이어에게 게임이 끝났음을 알려주기.
+   2. 이후에 플레이어가 다른 숫자를 제출하면 게임이 망가질 수 있으므로 제출을 막기.
+   3. 게임을 다시 시작할 수 있는 컨트롤 보여주기.
 
 9. 게임을 다시 시작하면 게임 로직과 UI를 완전히 초기화하고 1번으로 돌아가기.
 
@@ -84,9 +87,7 @@ JavaScript에 관한 약간의 이론과, JavaScript가 할 수 있는 일을 �
 
 ```html
 <script>
-
   // Your JavaScript goes here
-
 </script>
 ```
 
@@ -97,12 +98,12 @@ JavaScript에 관한 약간의 이론과, JavaScript가 할 수 있는 일을 �
 ```js
 let randomNumber = Math.floor(Math.random() * 100) + 1;
 
-const guesses = document.querySelector('.guesses');
-const lastResult = document.querySelector('.lastResult');
-const lowOrHi = document.querySelector('.lowOrHi');
+const guesses = document.querySelector(".guesses");
+const lastResult = document.querySelector(".lastResult");
+const lowOrHi = document.querySelector(".lowOrHi");
 
-const guessSubmit = document.querySelector('.guessSubmit');
-const guessField = document.querySelector('.guessField');
+const guessSubmit = document.querySelector(".guessSubmit");
+const guessField = document.querySelector(".guessField");
 
 let guessCount = 1;
 let resetButton;
@@ -132,13 +133,16 @@ let resetButton;
 - 다음 두 상수는 추측한 숫자를 제출할 때 사용할 양식 텍스트 입력 칸과 제출 버튼의 참조를 저장합니다.
 
   ```html
-  <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
-  <input type="submit" value="Submit guess" class="guessSubmit">
+  <label for="guessField">Enter a guess: </label
+  ><input type="text" id="guessField" class="guessField" />
+  <input type="submit" value="Submit guess" class="guessSubmit" />
   ```
 
 - 마지막 두 변수는 플레이어가 사용한 턴 수인 1과, 지금은 없지만 이 글의 뒤에서 추가할 초기화 버튼의 참조를 저장하기 위해 사용합니다.
 
-> **참고**: [바로 다음 글](/ko/docs/Learn/JavaScript/First_steps/Variables)을 시작으로, 이후 과정에서 변수와 상수에 대해 많이 배울 수 있습니다.
+> **참고:**
+>
+> [바로 다음 글](/ko/docs/Learn/JavaScript/First_steps/Variables)을 시작으로, 이후 과정에서 변수와 상수에 대해 많이 배울 수 있습니다.
 
 ### 함수
 
@@ -146,7 +150,7 @@ let resetButton;
 
 ```js
 function checkGuess() {
-  alert('I am a placeholder');
+  alert("I am a placeholder");
 }
 ```
 
@@ -162,7 +166,9 @@ checkGuess();
 
 키보드의 <kbd>Return</kbd>(<kbd>Enter</kbd>) 키를 누르면 `I am a placeholder`라는 경고 창이 나타날 겁니다. 이로써, 우리 코드 안에 호출할 때마다 경고 창을 띄우는 함수를 정의했습니다.
 
-> **참고**: [이후 과정](/ko/docs/Learn/JavaScript/Building_blocks/Functions)에서 함수에 대해 많이 배울 수 있습니다.
+> **참고:**
+>
+> [이후 과정](/ko/docs/Learn/JavaScript/Building_blocks/Functions)에서 함수에 대해 많이 배울 수 있습니다.
 
 ### 연산자
 
@@ -172,19 +178,19 @@ JavaScript에서는 연산자로 참/거짓 판별, 수학 계산, 문자열 연
 
 먼저 산술 연산자입니다.
 
-| 연산자 | 이름              | 예제      |
-| ------ | ----------------- | --------- |
-| `+`    | 더하기            | `6 + 9`   |
-| `-`    | 빼기              | `20 - 15` |
-| `*`    | 곱하기            | `3 * 7`   |
-| `/`    | 나누기            | `10 / 5`  |
+| 연산자 | 이름   | 예제      |
+| ------ | ------ | --------- |
+| `+`    | 더하기 | `6 + 9`   |
+| `-`    | 빼기   | `20 - 15` |
+| `*`    | 곱하기 | `3 * 7`   |
+| `/`    | 나누기 | `10 / 5`  |
 
 `+` 연산자는 텍스트 문자열을 합칠 때(프로그래밍에서는 문자열 연결, 결합 등으로 부릅니다)도 사용할 수 있습니다. 아래 코드를 한 줄씩 콘솔에 입력해 보세요.
 
 ```js
-const name = 'Bingo';
+const name = "Bingo";
 name;
-const hello = ' says hello!';
+const hello = " says hello!";
 hello;
 const greeting = name + hello;
 greeting;
@@ -193,15 +199,15 @@ greeting;
 복합 [할당 연산자](/ko/docs/Web/JavaScript/Reference/Operators#할당_연산자)라고 부르기도 하는 단축 연산자도 있습니다. 예를 들어, 새로운 텍스트 문자열을 기존 문자열에 연결하고 그 결과를 반환하려면 아래처럼 `+=` 연산자를 사용할 수 있습니다.
 
 ```js
-let name1 = 'Bingo';
-name1 += ' says hello!';
+let name1 = "Bingo";
+name1 += " says hello!";
 ```
 
 위 코드의 결과는 아래와 동일합니다.
 
 ```js
-let name2 = 'Bingo';
-name2 = name2 + ' says hello!';
+let name2 = "Bingo";
+name2 = name2 + " says hello!";
 ```
 
 [조건](#조건)으로 사용하기 위한 참/거짓 판별에는 [비교 연산자](/ko/docs/Web/JavaScript/Reference/Operators#비교_연산자)를 사용합니다.
@@ -255,7 +261,7 @@ name2 = name2 + ' says hello!';
       <td>
         <pre class="brush: js">
 6 > 10 // false
-20 > 10  // true</pre
+20 > 10 // true</pre
         >
       </td>
     </tr>
@@ -272,31 +278,31 @@ name2 = name2 + ' says hello!';
 function checkGuess() {
   const userGuess = Number(guessField.value);
   if (guessCount === 1) {
-    guesses.textContent = 'Previous guesses: ';
+    guesses.textContent = "Previous guesses: ";
   }
-  guesses.textContent += userGuess + ' ';
+  guesses.textContent += userGuess + " ";
 
   if (userGuess === randomNumber) {
-    lastResult.textContent = 'Congratulations! You got it right!';
-    lastResult.style.backgroundColor = 'green';
-    lowOrHi.textContent = '';
+    lastResult.textContent = "Congratulations! You got it right!";
+    lastResult.style.backgroundColor = "green";
+    lowOrHi.textContent = "";
     setGameOver();
   } else if (guessCount === 10) {
-    lastResult.textContent = '!!!GAME OVER!!!';
-    lowOrHi.textContent = '';
+    lastResult.textContent = "!!!GAME OVER!!!";
+    lowOrHi.textContent = "";
     setGameOver();
   } else {
-    lastResult.textContent = 'Wrong!';
-    lastResult.style.backgroundColor = 'red';
-    if(userGuess < randomNumber) {
-      lowOrHi.textContent = 'Last guess was too low!';
-    } else if(userGuess > randomNumber) {
-      lowOrHi.textContent = 'Last guess was too high!';
+    lastResult.textContent = "Wrong!";
+    lastResult.style.backgroundColor = "red";
+    if (userGuess < randomNumber) {
+      lowOrHi.textContent = "Last guess was too low!";
+    } else if (userGuess > randomNumber) {
+      lowOrHi.textContent = "Last guess was too high!";
     }
   }
 
   guessCount++;
-  guessField.value = '';
+  guessField.value = "";
   guessField.focus();
 }
 ```
@@ -307,7 +313,7 @@ function checkGuess() {
 - 그 아래에는 우리의 첫 번째 조건 코드 블록이 위치합니다. 조건 코드 블록을 활용하면 특정 조건이 참이거나 거짓일 때만 선택적으로 코드를 실행할 수 있습니다. 얼핏 보면 함수처럼 보이기도 하지만 조건 코드 블록은 함수가 아닙니다. 가장 간단한 형태의 조건 코드 블록은 `if` 키워드, 소괄호, 그리고 중괄호로 구성됩니다. 소괄호에는 조건 테스트가 들어가며, 이 테스트가 `true`를 반환하면 중괄호 안의 코드를 실행합니다. 테스트가 `false`를 반환하면 중괄호 안의 코드를 실행하지 않고, 조건 블록 아래 코드로 실행을 넘깁니다. 첫 번째 조건 코드 블록에서는 `guessCount` 변수가 `1`과 일치하는지, 즉 플레이어의 첫 턴인지를 테스트하고 있습니다.
 
   ```js
-  guessCount === 1
+  guessCount === 1;
   ```
 
   이 조건이 참이라면 `guesses` 문단의 텍스트 내용을 `Previous guesses:`로 설정하고, 그렇지 않으면 아무것도 하지 않습니다.
@@ -328,7 +334,7 @@ function checkGuess() {
 다음 코드 한 줄을 `checkGuess()` 함수 아래에 추가하세요.
 
 ```js
-guessSubmit.addEventListener('click', checkGuess);
+guessSubmit.addEventListener("click", checkGuess);
 ```
 
 위 코드는 `guessSubmit` 버튼에 이벤트 수신기를 추가합니다. {{domxref("EventTarget.addEventListener", "addEventListener()")}}는 두 개의 입력 값('인자'라고 부릅니다)을 받는 메서드로, 각각 수신할 이벤트 유형(`click`)을 가리키는 문자열과, 이벤트가 발생하면 실행할 코드(`checkGuess()` 함수)입니다. 참고로 `addEventListener()`에 함수를 제공할 때 괄호를 붙이지 않았습니다.
@@ -343,10 +349,10 @@ guessSubmit.addEventListener('click', checkGuess);
 function setGameOver() {
   guessField.disabled = true;
   guessSubmit.disabled = true;
-  resetButton = document.createElement('button');
-  resetButton.textContent = 'Start new game';
+  resetButton = document.createElement("button");
+  resetButton.textContent = "Start new game";
   document.body.append(resetButton);
-  resetButton.addEventListener('click', resetGame);
+  resetButton.addEventListener("click", resetGame);
 }
 ```
 
@@ -360,19 +366,19 @@ function setGameOver() {
 function resetGame() {
   guessCount = 1;
 
-  const resetParas = document.querySelectorAll('.resultParas p');
+  const resetParas = document.querySelectorAll(".resultParas p");
   for (const resetPara of resetParas) {
-    resetPara.textContent = '';
+    resetPara.textContent = "";
   }
 
   resetButton.parentNode.removeChild(resetButton);
 
   guessField.disabled = false;
   guessSubmit.disabled = false;
-  guessField.value = '';
+  guessField.value = "";
   guessField.focus();
 
-  lastResult.style.backgroundColor = 'white';
+  lastResult.style.backgroundColor = "white";
 
   randomNumber = Math.floor(Math.random() * 100) + 1;
 }
@@ -398,7 +404,7 @@ function resetGame() {
 직접 반복을 시험해보려면 [브라우저 개발자 도구의 JavaScript 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)을 다시 열고, 다음 코드를 입력하세요.
 
 ```js
-const fruits = ['apples', 'bananas', 'cherries'];
+const fruits = ["apples", "bananas", "cherries"];
 for (const fruit of fruits) {
   console.log(fruit);
 }
@@ -419,9 +425,9 @@ for (const fruit of fruits) {
 이제 우리의 숫자 알아맞히기 게임 코드에 포함된 반복을 살펴봅시다. `resetGame()` 함수의 아래 부분에 주목하세요.
 
 ```js
-const resetParas = document.querySelectorAll('.resultParas p');
+const resetParas = document.querySelectorAll(".resultParas p");
 for (const resetPara of resetParas) {
-  resetPara.textContent = '';
+  resetPara.textContent = "";
 }
 ```
 
@@ -444,7 +450,7 @@ guessField.focus();
 우리 코드에서, `guessField` 상수는 HTML의 텍스트 입력 칸을 가리키는 참조를 저장하고 있습니다. 위쪽의 다른 변수 및 상수 선언과 함께 있죠.
 
 ```js
-const guessField = document.querySelector('.guessField');
+const guessField = document.querySelector(".guessField");
 ```
 
 이 참조를 가져오기 위해 {{domxref("document")}} 객체의 {{domxref("document.querySelector", "querySelector()")}} 메서드를 사용하는 모습입니다. `querySelector()`는 하나의 정보 — 참조를 가져오고자 하는 요소를 선택할 수 있는 [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)를 요구합니다.
@@ -466,52 +472,40 @@ guessField.focus();
 3. 콘솔에 `guessField`를 입력하면 변수에 {{htmlelement("input")}} 요소가 저장되어 있는 것을 확인할 수 있습니다. 그리고 콘솔이 여러분의 실행 환경에 존재하는 객체와 변수 이름들을 자동으로 완성해준다는 것도요.
 4. 이제 콘솔에 아래 코드를 입력하세요.
 
-    ```js
-    guessField.value = 'Hello';
-    ```
+   ```js
+   guessField.value = "Hello";
+   ```
 
-    `value` 속성은 입력 칸에 현재 입력된 값을 나타내는 속성입니다. 위의 명령을 실행하면, 입력 칸에 입력된 텍스트가 바뀌게 되죠!
+   `value` 속성은 입력 칸에 현재 입력된 값을 나타내는 속성입니다. 위의 명령을 실행하면, 입력 칸에 입력된 텍스트가 바뀌게 되죠!
 
 5. 콘솔에 `gueesses`를 입력하고 엔터 키로 제출하세요. 콘솔이 변수에 {{htmlelement("p")}}가 저장됐다고 알려줄 겁니다.
 6. 아래 코드를 입력하세요.
 
-    ```js
-    guesses.value
-    ```
+   ```js
+   guesses.value;
+   ```
 
-    브라우저가 `undefined`를 보여줄 겁니다. 문단에는 `value` 속성이 없기 때문입니다.
+   브라우저가 `undefined`를 보여줄 겁니다. 문단에는 `value` 속성이 없기 때문입니다.
 
 7. 문단의 텍스트를 바꾸려면 {{domxref("Node.textContent", "textContent")}} 속성을 사용해야 합니다. 이렇게 해보세요.
 
-    ```js
-    guesses.textContent = 'Where is my paragraph?';
-    ```
+   ```js
+   guesses.textContent = "Where is my paragraph?";
+   ```
 
 8. 더 재밌는 일도 할 수 있습니다. 아래 코드를 한 줄씩 입력해보세요.
 
-    ```js
-    guesses.style.backgroundColor = 'yellow';
-    guesses.style.fontSize = '200%';
-    guesses.style.padding = '10px';
-    guesses.style.boxShadow = '3px 3px 6px black';
-    ```
+   ```js
+   guesses.style.backgroundColor = "yellow";
+   guesses.style.fontSize = "200%";
+   guesses.style.padding = "10px";
+   guesses.style.boxShadow = "3px 3px 6px black";
+   ```
 
-    페이지의 모든 요소에는 `style` 속성이 존재합니다. 이 속성은 해당 요소에 지정한 인라인 CSS 스타일을 모두 담고 있는 객체죠. 이걸 활용하면 JavaScript에서 요소의 CSS 스타일을 동적으로 제어할 수 있습니다.
+   페이지의 모든 요소에는 `style` 속성이 존재합니다. 이 속성은 해당 요소에 지정한 인라인 CSS 스타일을 모두 담고 있는 객체죠. 이걸 활용하면 JavaScript에서 요소의 CSS 스타일을 동적으로 제어할 수 있습니다.
 
 ## 지금은 끝!
 
 예제 따라 해보기가 끝났습니다. 마지막까지 오셨군요. 축하합니다! 최종 코드를 직접 실행해 보거나, MDN에서 준비한 [최종판을 시험해 보세요](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). 여러분의 예제 코드가 잘 돌아가지 않으면 완성본의 [소스 코드](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)와 비교해 보세요.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
-
-## 이 과정은
-
-- [JavaScript가 뭔가요?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript에 발 담그기](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [뭐가 잘못됐을까요? JavaScript 문제 해결](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [필요한 정보를 저장하기 — 변수](/ko/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript 기초 수학 — 숫자와 연산자](/ko/docs/Learn/JavaScript/First_steps/Math)
-- [텍스트 다루기 — JavaScript의 문자열](/ko/docs/Learn/JavaScript/First_steps/Strings)
-- [유용한 문자열 메서드](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [배열](/ko/docs/Learn/JavaScript/First_steps/Arrays)
-- [평가: 바보같은 이야기 생성기](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)

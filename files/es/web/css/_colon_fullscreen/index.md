@@ -1,14 +1,8 @@
 ---
-title: ':fullscreen'
+title: ":fullscreen"
 slug: Web/CSS/:fullscreen
-tags:
-  - CSS
-  - Experimental
-  - Pantalla completa
-  - Pseudo-clase
-  - Referencia
-translation_of: Web/CSS/:fullscreen
 ---
+
 {{CSSRef}} {{SeeCompatTable}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:fullscreen`** de [CSS](/es/docs/Web/CSS) representa un elemento que se muestra cuando el navegador está en modo de [pantalla completa](/es/docs/Web/API/Fullscreen_API).
@@ -43,29 +37,34 @@ div:fullscreen {
 ```html
 <div id="fullscreen">
   <h1>Demostración :fullscreen</h1>
-  <p>Este texto se pondrá grande y rojo cuando el navegador esté en modo de pantalla completa.</p>
+  <p>
+    Este texto se pondrá grande y rojo cuando el navegador esté en modo de
+    pantalla completa.
+  </p>
   <button id="fullscreen-button">Entrar en pantalla completa</button>
 </div>
 ```
 
 ```js hidden
 var fullscreenButton = document.getElementById("fullscreen-button");
-var fullscreenDiv    = document.getElementById("fullscreen");
-var fullscreenFunc   = fullscreenDiv.requestFullscreen;
+var fullscreenDiv = document.getElementById("fullscreen");
+var fullscreenFunc = fullscreenDiv.requestFullscreen;
 
 if (!fullscreenFunc) {
-  ['mozRequestFullScreen',
-   'msRequestFullscreen',
-   'webkitRequestFullScreen'].forEach(function (req) {
-     fullscreenFunc = fullscreenFunc || fullscreenDiv[req];
-   });
+  [
+    "mozRequestFullScreen",
+    "msRequestFullscreen",
+    "webkitRequestFullScreen",
+  ].forEach(function (req) {
+    fullscreenFunc = fullscreenFunc || fullscreenDiv[req];
+  });
 }
 
 function enterFullscreen() {
   fullscreenFunc.call(fullscreenDiv);
 }
 
-fullscreenButton.addEventListener('click', enterFullscreen);
+fullscreenButton.addEventListener("click", enterFullscreen);
 ```
 
 ```css hidden
@@ -110,7 +109,7 @@ fullscreenButton.addEventListener('click', enterFullscreen);
 #fullscreen:fullscreen {
   padding: 42px;
   background-color: pink;
-  border:2px solid #f00;
+  border: 2px solid #f00;
   font-size: 200%;
 }
 
@@ -133,17 +132,15 @@ fullscreenButton.addEventListener('click', enterFullscreen);
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentarios         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('Fullscreen', '#:fullscreen-pseudo-class', ':fullscreen')}} | {{Spec2('Fullscreen')}} | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.fullscreen")}}
+{{Compat}}
 
 ## Ver también
 
 - [Usando el modo de pantalla completa](/es/docs/Web/API/Fullscreen_API)
 - {{cssxref("::backdrop")}}
 - DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreen") }}, {{ domxref("Document.fullscreenElement") }}
-- Atributo {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+- Atributo [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen)

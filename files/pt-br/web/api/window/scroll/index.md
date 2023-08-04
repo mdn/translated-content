@@ -1,44 +1,81 @@
 ---
-title: Window.scroll()
+title: "Window: método scroll()"
 slug: Web/API/Window/scroll
-tags:
-  - API
-  - CSSOM View
-  - Referencia
-  - metodo
-translation_of: Web/API/Window/scroll
 ---
+
 {{APIRef}}
 
-## Resumo
-
-Rola a janela para uma posição específica no documento.
+O método **`Window.scroll()`** rola a janela para um local específico no documento.
 
 ## Sintaxe
 
-```
-window.scroll(x-coord, y-coord)
+```js-nolint
+scroll(x-coord, y-coord)
+scroll(options)
 ```
 
 ### Parâmetros
 
-- `x-coord` é o pixel que você deseja exibir ao longo do eixo horizontal do documento em relação à sua extremidade superior esquerda.
-- `y-coord` é o pixel que você deseja exibir ao longo do eixo vertical do documento em relação à sua extremidade superior esquerda.
+- `x-coord` é o pixel ao longo do eixo horizontal do documento que você
+  deseja exibido no canto superior esquerdo.
+- `y-coord` é o pixel ao longo do eixo vertical do documento que você
+  deseja exibido no canto superior esquerdo.
 
-## Exemplo
+\- ou -
+
+- `options`
+  - : Um dicionário contendo os seguintes parâmetros:
+    - `top`
+      - : Especifica o número de pixels ao longo do eixo Y para rolar a janela ou elemento.
+    - `left`
+      - : Especifica o número de pixels ao longo do eixo X para rolar a janela ou elemento.
+    - `behavior`
+      - : Determina se a rolagem é instantânea ou animada suavemente. Esta opção é uma string que deve assumir um dos seguintes valores:
+        - `smooth`: a rolagem deve ser animada suavemente
+        - `instant`: a rolagem deve acontecer instantaneamente em um único salto
+        - `auto`: o comportamento de rolagem é determinado pelo valor calculado de {{cssxref("scroll-behavior")}}
+
+### Valor de retorno
+
+Nenhum ({{jsxref("undefined")}}).
+
+## Exemplos
 
 ```html
-<!-- disponha o centésimo pixel vertical no topo da janela -->
+<!-- coloque o centésimo pixel vertical no topo da janela -->
 
-<button onClick="scroll(0, 100);">clique para rolar 100 pixels para baixo</button>
+<button onclick="scroll(0, 100);">clique para rolar até o 100º pixel</button>
+```
+
+Usando `options`:
+
+```js
+window.scroll({
+  top: 100,
+  left: 100,
+  behavior: "smooth",
+});
 ```
 
 ## Notas
 
-[window.scrollTo](/pt-BR/docs/DOM/window.scrollTo) é essencialmente equivalente a este método. Para rolar uma distância específica repetidamente, utilize o método [window.scrollBy](/pt-BR/docs/Window.scrollBy). Veja também [window.scrollByLines](/pt-BR/docs/Window.scrollByLines), [window.scrollByPages](/pt-BR/docs/Window.scrollByPages).
+{{domxref("Window.scrollTo()")}} é efetivamente o mesmo que este método. Para parente
+rolagem, veja {{domxref("Window.scrollBy()")}}, {{domxref("Window.scrollByLines()")}},
+e {{domxref("Window.scrollByPages()")}}.
 
-## Especificação
+Para elementos de rolagem, consulte {{domxref("Element.scrollTop")}} e
+{{domxref("Element.scrollLeft")}}.
 
-| Especificação                                                                                | Status                           | Comentário         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }} | {{ Spec2('CSSOM View') }} | Definição inicial. |
+## Especificações
+
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
+
+## Veja também
+
+- {{domxref("Window.scrollByLines()")}}
+- {{domxref("Window.scrollByPages()")}}
+- {{domxref("Element.scrollIntoView()")}}

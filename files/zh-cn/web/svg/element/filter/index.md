@@ -37,26 +37,25 @@ slug: Web/SVG/Element/filter
 
 该元素实现了 `SVGFilterElement` 接口。
 
-## 示例：
+## 示例
 
 #### SVG
 
-```plain
+```html
 <svg width="230" height="120" xmlns="http://www.w3.org/2000/svg">
- <filter id="blurMe">
-   <feGaussianBlur stdDeviation="5"/>
- </filter>
+  <filter id="blurMe">
+    <feGaussianBlur stdDeviation="5" />
+  </filter>
 
- <circle cx="60" cy="60" r="50" fill="green" />
+  <circle cx="60" cy="60" r="50" fill="green" />
 
- <circle cx="170" cy="60" r="50" fill="green"
-          filter="url(#blurMe)" />
+  <circle cx="170" cy="60" r="50" fill="green" filter="url(#blurMe)" />
 </svg>
 ```
 
 #### 结果
 
-{{EmbedLiveSample("Example",232,124,"/files/4227/feGaussianBlur.png")}}
+{{EmbedLiveSample("示例",232,124)}}
 
 ## 规范
 

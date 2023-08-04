@@ -1,7 +1,9 @@
 ---
-title: <i>
+title: <i>：术语文本元素
 slug: Web/HTML/Element/i
 ---
+
+{{HTMLSidebar}}
 
 ## 概述
 
@@ -20,8 +22,10 @@ slug: Web/HTML/Element/i
 ## 示例
 
 ```html
-<p>The Latin phrase <i class="latin">Veni, vidi, vici</i> is often
-mentioned in music, art, and literature</p>
+<p>
+  The Latin phrase <i class="latin">Veni, vidi, vici</i> is often mentioned in
+  music, art, and literature
+</p>
 ```
 
 ### 效果

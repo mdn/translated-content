@@ -28,10 +28,7 @@ _このインタフェースは、親から、すなわち_ _{{domxref("SVGGeome
 
 ## 仕様
 
-| 仕様                                                                                                     | ステータス                                   | 備考                                      |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------- |
-| {{SpecName("Geometry Interfaces", "#DOMRect", "DOMRect")}}                             | {{Spec2("Geometry Interfaces")}} | SVGRect を DOMRect の古い別名として変更。 |
-| {{SpecName("SVG1.1", "shapes.html#InterfaceSVGRectElement", "SVGRectElement")}} | {{Spec2("SVG1.1")}}                     | 初回定義                                  |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

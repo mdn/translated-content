@@ -1,12 +1,8 @@
 ---
 title: Access-Control-Expose-Headers
 slug: Web/HTTP/Headers/Access-Control-Expose-Headers
-tags:
-  - CORS
-  - Cabecera
-  - HTTP
-translation_of: Web/HTTP/Headers/Access-Control-Expose-Headers
 ---
+
 {{HTTPSidebar}}
 
 La cabecera de respuesta **`Access-Control-Expose-Headers`** indica qué cabeceras pueden ser expuestas como parte de la respuesta listando sus nombres.
@@ -23,9 +19,9 @@ Por defecto, solo se exponen las 7 cabeceras HTTP seguras ({{Glossary("CORS-safe
 
 Si quieres que los clientes puedan acceder a otra cabeceras, tienes que listarlas usando la cabecera `Access-Control-Expose-Headers`
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## Sintaxis
 
@@ -71,21 +67,11 @@ Access-Control-Expose-Headers: *, Authorization
 
 ## Especificaciones
 
-| Especificación                                                                                                               | Estado                   | Comentario |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('Fetch','#http-access-control-expose-headers', 'Access-Control-Expose-Headers')}} | {{Spec2("Fetch")}} |            |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Access-Control-Expose-Headers")}}
-
-## Notas de compatibilidad
-
-- El valor asterisco (\*) indica que no es implementado en navegadores:
-
-  - Chromium: [Issue 615313](https://bugs.chromium.org/p/chromium/issues/detail?id=615313)
-  - Firefox: {{bug(1309358)}}
-  - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
+{{Compat}}
 
 ## Ver también
 

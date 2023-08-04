@@ -1,13 +1,6 @@
 ---
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Reference
-  - 국제화
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 ---
 {{JSRef}}
 

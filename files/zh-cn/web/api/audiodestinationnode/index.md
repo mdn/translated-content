@@ -45,7 +45,7 @@ _从{{domxref("AudioNode")}}继承的属性_.
 
 ## 方法
 
-*继承 {{domxref("AudioNode")}} 的方法。*
+_继承 {{domxref("AudioNode")}} 的方法。_
 
 ## 例子
 
@@ -64,10 +64,10 @@ gainNode.connect(audioCtx.destination);
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 其他
+## 参见
 
 - [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

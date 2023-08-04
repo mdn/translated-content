@@ -18,7 +18,7 @@ TypeError: Cannot redefine property: "x" (Chrome)
 
 ## 哪里出错了？
 
-这种错误的起因在于试图给对象重新定义一个属性，但是该属性是[不可配置的](/zh-CN/docs/Web/JavaScript/Data_structures#Properties)。 `configurable` 特性控制着该属性是否可以从对象中删除，以及它的各个特性（除 writable 之外）是否可以修改。通常使用[对象初始化语句](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)定义的对象属性是可配置的。而使用 {{jsxref("Object.defineProperty()")}} 定义的属性则默认不可配置。
+这种错误的起因在于试图给对象重新定义一个属性，但是该属性是[不可配置的](/zh-CN/docs/Web/JavaScript/Data_structures#属性)。 `configurable` 特性控制着该属性是否可以从对象中删除，以及它的各个特性（除 writable 之外）是否可以修改。通常使用[对象初始化语句](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)定义的对象属性是可配置的。而使用 {{jsxref("Object.defineProperty()")}} 定义的属性则默认不可配置。
 
 ## 示例
 
@@ -28,9 +28,9 @@ TypeError: Cannot redefine property: "x" (Chrome)
 
 ```js example-bad
 var obj = Object.create({});
-Object.defineProperty(obj, "foo", {value: "bar"});
+Object.defineProperty(obj, "foo", { value: "bar" });
 
-Object.defineProperty(obj, "foo", {value: "baz"});
+Object.defineProperty(obj, "foo", { value: "baz" });
 // TypeError: can't redefine non-configurable property "foo"
 ```
 
@@ -38,8 +38,8 @@ Object.defineProperty(obj, "foo", {value: "baz"});
 
 ```js example-good
 var obj = Object.create({});
-Object.defineProperty(obj, "foo", {value: "bar", configurable: true});
-Object.defineProperty(obj, "foo", {value: "baz", configurable: true});
+Object.defineProperty(obj, "foo", { value: "bar", configurable: true });
+Object.defineProperty(obj, "foo", { value: "baz", configurable: true });
 ```
 
 ## 参见

@@ -83,10 +83,7 @@ function check_PerformanceEntry(obj) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | ステータス                                               | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceentry-duration', 'duration')}} | {{Spec2('Performance Timeline Level 2')}} |          |
-| {{SpecName('Performance Timeline', '#dom-performanceentry-duration', 'duration')}}             | {{Spec2('Performance Timeline')}}             | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

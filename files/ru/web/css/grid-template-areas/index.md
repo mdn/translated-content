@@ -1,14 +1,8 @@
 ---
 title: grid-template-areas
 slug: Web/CSS/grid-template-areas
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.grid-template-areas
 ---
+
 {{CSSRef}}
 
 CSS-свойство **`grid-template-areas`** создаёт {{glossary("grid areas", "грид-области")}} путём размещения именованных ячеек в грид-раскладке.

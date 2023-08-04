@@ -1,32 +1,29 @@
 ---
 title: decimal-format
 slug: Web/XSLT/Element/decimal-format
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/decimal-format
-original_slug: Web/XSLT/decimal-format
 ---
+
 {{ XsltRef() }}
 
 `<xsl:decimal-format>` 요소는
-_`format-number( )`_
+`format-number( )`
 함수를 써서 숫자를 문자열로 바꿀 때 쓰는 기호와 문자를 정의합니다.
 
 ### 문법
 
 ```
 <xsl:decimal-format
-	name=NAME
-	decimal-separator=CHARACTER
-	grouping-separator=CHARACTER
-	infinity=STRING
-	minus-sign=CHARACTER
-	NaN=STRING
-	percent=CHARACTER
-	per-mille=CHARATER
-	zero-digit=CHARACTER
-	digit=CHARACTER
-	pattern-separator=CHARACTER />
+  name=NAME
+  decimal-separator=CHARACTER
+  grouping-separator=CHARACTER
+  infinity=STRING
+  minus-sign=CHARACTER
+  NaN=STRING
+  percent=CHARACTER
+  per-mille=CHARATER
+  zero-digit=CHARACTER
+  digit=CHARACTER
+  pattern-separator=CHARACTER />
 ```
 
 ### 필수 속성

@@ -1,7 +1,6 @@
 ---
 title: <style>
 slug: Web/HTML/Element/style
-translation_of: Web/HTML/Element/style
 ---
 ## Resumo
 
@@ -72,8 +71,8 @@ body {
 
 {{Compat("html.elements.style")}}
 
-## Veja também:
+## Veja também
 
 - O elemento {{HTMLElement("link")}} que permite usar folhas de estilo externas.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

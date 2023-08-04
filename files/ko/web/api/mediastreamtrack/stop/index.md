@@ -1,17 +1,8 @@
 ---
 title: MediaStreamTrack.stop()
 slug: Web/API/MediaStreamTrack/stop
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStreamTrack
-  - Method
-  - Reference
-  - WebRTC
-translation_of: Web/API/MediaStreamTrack/stop
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStreamTrack.stop()`** 메서드는 트랙을 정지합니다.
@@ -19,7 +10,7 @@ translation_of: Web/API/MediaStreamTrack/stop
 ## 구문
 
 ```js
-track.stop()
+track.stop();
 ```
 
 ## 설명
@@ -39,7 +30,7 @@ function stopStreamedVideo(videoElem) {
   const stream = videoElem.srcObject;
   const tracks = stream.getTracks();
 
-  tracks.forEach(function(track) {
+  tracks.forEach(function (track) {
     track.stop();
   });
 

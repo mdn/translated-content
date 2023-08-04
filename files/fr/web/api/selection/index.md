@@ -1,7 +1,6 @@
 ---
 title: selection
 slug: Web/API/Selection
-translation_of: Web/API/Selection
 ---
 
 {{ ApiRef() }}
@@ -45,7 +44,7 @@ Autres mots clés utilisés dans cette section.
 - [focusNode](/fr/docs/Web/API/Selection/focusNode)
   - : Renvoie le nœud où la sélection se termine.
 - [focusOffset](/fr/docs/Web/API/Selection/focusOffset)
-  - : Renvoie un nombre correspondant au décalage du « focus&nbsp;» de la sélection au sein du focus`Node`. Si le focus`Node` est un noeud texte, il s'agit du nombre de caractères précédants le « focus » au sein du focus`Node`. Si le focusNode est un élément, il s'agit du nombre de noeuds enfants du focus`Node` précédant le « focus ».
+  - : Renvoie un nombre correspondant au décalage du « focus&nbsp;» de la sélection au sein du `focusNode`. Si le `focusNode` est un noeud texte, il s'agit du nombre de caractères précédants le « focus » au sein du `focusNode`. Si le focusNode est un élément, il s'agit du nombre de noeuds enfants du `focusNode` précédant le « focus ».
 - [isCollapsed](/fr/docs/Web/API/Selection/isCollapsed)
   - : Renvoie un booléen indiquant si le point de départ et d'arrivée sont à la même position.
 - [rangeCount](/fr/docs/Web/API/Selection/rangeCount)
@@ -82,7 +81,7 @@ Autres mots clés utilisés dans cette section.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Selection")}}
+{{Compat}}
 
 ### Voir aussi
 

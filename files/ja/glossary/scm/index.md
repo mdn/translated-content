@@ -11,4 +11,4 @@ SCM (Source Control Management) は、ソースコードを管理するための
 
 ### 一般知識
 
-- Wikipedia 上の記事「{{interwiki("wikipedia", "バージョン管理システム")}}」
+- Wikipedia 上の記事「[バージョン管理システム](https://ja.wikipedia.org/wiki/バージョン管理システム)」

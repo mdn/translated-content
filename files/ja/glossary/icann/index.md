@@ -10,4 +10,4 @@ slug: Glossary/ICANN
 ### 一般知識
 
 - [Official website](https://www.icann.org/)
-- Wikipedia の {{interwiki("wikipedia", "ICANN", "ICANN")}}
+- Wikipedia の [ICANN](https://ja.wikipedia.org/wiki/ICANN)

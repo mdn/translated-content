@@ -1,14 +1,8 @@
 ---
 title: document.URL
 slug: Web/API/Document/URL
-tags:
-  - API
-  - Documento
-  - HTML DOM
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Document/URL
 ---
+
 {{APIRef("DOM")}}
 
 La propiedad de sólo lectura **`URL`** de la interfaz {{domxref("Document")}} devuelve la ubicación del documento como una cadena de texto.
@@ -16,7 +10,7 @@ La propiedad de sólo lectura **`URL`** de la interfaz {{domxref("Document")}} d
 ## Sintaxis
 
 ```js
-var string = document.URL
+var string = document.URL;
 ```
 
 ## Ejemplo
@@ -31,7 +25,7 @@ document.getElementById("url").textContent = document.URL;
 
 ```html
 <p id="urlText">
-  URL:<br/>
+  URL:<br />
   <span id="url">La URL va aquí</span>
 </p>
 ```

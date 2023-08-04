@@ -26,7 +26,8 @@ slug: Web/HTML/Element/em
 
 ```html
 <p>
-  In HTML 5, what was previously called <em>block-level</em> content is now called <em>flow</em> content.
+  In HTML 5, what was previously called <em>block-level</em> content is now
+  called <em>flow</em> content.
 </p>
 ```
 
@@ -58,4 +59,4 @@ In HTML 5, what was previously called _block-level_ content is now called _flow_
 
 - {{HTMLElement("i")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -22,7 +22,7 @@ let fontFaceSet = document.fonts;
 ### すべてのフォントが読み込まれた後の操作の実行
 
 ```js
-document.fonts.ready.then(function() {
+document.fonts.ready.then(function () {
   // すべてのフォントが読み込まれた後にのみ実行する必要がある操作を
   // ここに記述します。
 });
@@ -30,9 +30,7 @@ document.fonts.ready.then(function() {
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                                     | 備考     |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('CSS3 Font Loading','#FontFaceSet-interface','FontFaceSet')}} | {{Spec2('CSS3 Font Loading')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

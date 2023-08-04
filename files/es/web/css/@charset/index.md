@@ -1,10 +1,8 @@
 ---
-title: '@charset'
+title: "@charset"
 slug: Web/CSS/@charset
-tags:
-  - Regla-at
-translation_of: Web/CSS/@charset
 ---
+
 {{ CSSRef }}
 
 ## Resumen
@@ -41,18 +39,16 @@ Habiendo diferentes maneras de definir la codificación de caracteres en una hoj
 ## Ejemplos
 
 ```css
-@charset "UTF-8";       /* Establece la codificación de la hoja de estilos a Unicode UTF-8 */
+@charset "UTF-8"; /* Establece la codificación de la hoja de estilos a Unicode UTF-8 */
 @charset 'iso-8859-15'; /* Establece la codificación de la hoja de estilos a Latin-9 (idiomas de Europa Occidental, con símbolo de euro) */
- @charset "UTF-8";      /* Inválido, hay un caracter (espacio) antes de la regla-at */
-@charset UTF-8;         /* Inválido, sin comillas simples o dobles, el valor no es una cadena {{cssxref("&lt;string&gt;")}} de CSS */
+@charset "UTF-8"; /* Inválido, hay un caracter (espacio) antes de la regla-at */
+@charset UTF-8; /* Inválido, sin comillas simples o dobles, el valor no es una cadena {{cssxref("&lt;string&gt;")}} de CSS */
 ```
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                       | Comentarios        |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{ SpecName('CSS2.1', 'syndata.html#x57', '@charset') }} | {{ Spec2('CSS2.1') }} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.charset")}}
+{{Compat}}

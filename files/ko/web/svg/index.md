@@ -1,26 +1,13 @@
 ---
-title: 'SVG: Scalable Vector Graphics'
+title: "SVG: Scalable Vector Graphics"
 slug: Web/SVG
-tags:
-  - 2D Graphics
-  - Graphics
-  - Icons
-  - Images
-  - Reference
-  - Responsive Design
-  - SVG
-  - Scalable Graphics
-  - Scalable Images
-  - Vector Graphics
-  - Web
-  - l10n:priority
-translation_of: Web/SVG
 ---
+
 {{SVGRef}}
 
 ## SVG 시작하기
 
-**SVG(Scalable Vector Graphics)**는 2차원 [벡터 그래픽](https://w.wiki/3cVf)을 서술하는
+**SVG**(**Scalable Vector Graphics**)는 2차원 [벡터 그래픽](https://w.wiki/3cVf)을 서술하는
 [XML](/ko/docs/Web/XML) 기반의 마크업 언어입니다.
 SVG는 텍스트 기반의 열린 웹 표준 중 하나로, 모든 사이즈에서 깔끔하게 렌더링 되는 이미지를 서술하며
 [CSS](/ko/docs/Web/CSS), [DOM](/ko/docs/Web/API/Document_Object_Model),

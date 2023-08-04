@@ -1,5 +1,5 @@
 ---
-title: ':playing'
+title: ":playing"
 slug: Web/CSS/:playing
 ---
 
@@ -17,7 +17,9 @@ slug: Web/CSS/:playing
 
 ## 構文
 
-{{csssyntax}}
+```
+:playing
+```
 
 ## 例
 

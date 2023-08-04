@@ -1,23 +1,15 @@
 ---
 title: Introduction to using XPath in JavaScript
 slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
-tags:
-  - Add-ons
-  - DOM
-  - Extensions
-  - Transforming_XML_with_XSLT
-  - Web Development
-  - XPath
-translation_of: Web/XPath/Introduction_to_using_XPath_in_JavaScript
-original_slug: Introduction_to_using_XPath_in_JavaScript
 ---
-이 문서는 JavaScript 안, 확장기능, 웹사이트에서 [XPath](ko/XPath)를 사용하기 위한 인터페이스를 설명합니다. Mozilla는 [DOM 3 XPath](http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html)를 상당량 구현합니다. 이것은 XPath 식이 HTML과 XML 문서 모두에서 잘 돌아간다는 것을 뜻합니다.
 
-XPath를 사용하는 주 인터페이스는 [document](ko/DOM/document) 개체의 [evaluate](ko/DOM/document.evaluate) 함수입니다.
+이 문서는 JavaScript 안, 확장기능, 웹사이트에서 [XPath](/ko/XPath)를 사용하기 위한 인터페이스를 설명합니다. Mozilla는 [DOM 3 XPath](http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html)를 상당량 구현합니다. 이것은 XPath 식이 HTML과 XML 문서 모두에서 잘 돌아간다는 것을 뜻합니다.
+
+XPath를 사용하는 주 인터페이스는 [document](/ko/DOM/document) 개체의 [evaluate](/ko/DOM/document.evaluate) 함수입니다.
 
 ## document.evaluate
 
-이 메소드는 [XML](ko/XML)에 기반을 둔 문서(HTML 문서 포함)에 대해 [XPath](ko/XPath) 식을 평가하고 단일 노드나 노드 집합일 수 있는 `XPathResult` 개체를 반환합니다. 이 메소드를 다루는 기존 문서는 [여기](ko/DOM/document.evaluate)에 있지만 당장 우리 필요에 좀 부족하여, 더 이해가 빠른 설명을 아래에 제공합니다.
+이 메소드는 [XML](/ko/XML)에 기반을 둔 문서(HTML 문서 포함)에 대해 [XPath](/ko/XPath) 식을 평가하고 단일 노드나 노드 집합일 수 있는 `XPathResult` 개체를 반환합니다. 이 메소드를 다루는 기존 문서는 [여기](/ko/DOM/document.evaluate)에 있지만 당장 우리 필요에 좀 부족하여, 더 이해가 빠른 설명을 아래에 제공합니다.
 
 ```
 var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceResolver, resultType, result );
@@ -25,21 +17,22 @@ var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceReso
 
 ### 매개변수
 
-[evaluate](ko/DOM/document.evaluate) 함수는 매개변수를 총 5개 취합니다.
+[evaluate](/ko/DOM/document.evaluate) 함수는 매개변수를 총 5개 취합니다.
 
 - `xpathExpression`: 평가할 XPath 식을 포함하는 문자열
 
 <!---->
 
-- `contextNode`: `xpathExpression`이 평가될 모든 자식 노드를 포함하는 문서의 노드. [document](ko/DOM/document) 노드가 가장 흔히 쓰입니다.
+- `contextNode`: `xpathExpression`이 평가될 모든 자식 노드를 포함하는 문서의 노드. [document](/ko/DOM/document) 노드가 가장 흔히 쓰입니다.
 
 <!---->
 
 - `namespaceResolver`: 그 접두사와 관련된 namespace URI를 나타내는 문자열을 반환하는 `xpathExpression` 내에 포함되는 모든 namespace 접두사를 넘겨주는 함수. 이는 XPath 식에 쓰(이)는 접두사와 문서에 쓰(이)는 아마도 다른 접두사 사이에 변환을 가능하게 합니다. 함수는 어느 한쪽일 수 있습니다.
 
-  - [`XPathEvaluator`](http://www.xulplanet.com/references/objref/XPathEvaluator.html) 개체의 [`createNSResolver`](ko/DOM/document.createNSResolver) 메소드를 써서 [만듭니다](#Implementing_a_Default_Namespace_Resolver). 항상 가상으로 이를 쓰면 좋습니다.
+  - [`XPathEvaluator`](http://www.xulplanet.com/references/objref/XPathEvaluator.html) 개체의 [`createNSResolver`](/ko/DOM/document.createNSResolver) 메소드를 써서 [만듭니다](#Implementing_a_Default_Namespace_Resolver). 항상 가상으로 이를 쓰면 좋습니다.
   - HTML 문서를 위해서나 namespace 접두사가 없을 때 쓸 수 있는 `null`. 만약 `xpathExpression`가 namespace 접두사를 포함하면 이는 `NAMESPACE_ERR` 코드를 내는 `DOMException`을 가져옴을 유의하세요.
   - 사용자 정의 맞춤(custom) 함수. 세부 내용은 부록의 [사용자 정의 Namespace Resolver 쓰기](#Implementing_a_User_Defined_Namespace_Resolver) 절을 보세요.
+
 - `resultType`: 평가 결과로 반환되기 바랐던 결과 형을 지정하는 [상수](#XPathResult_Defined_Constants). 가장 흔히 넘겨주는 상수는 가장 자연스러운 형으로 XPath 식의 결과를 반환하는 `XPathResult.ANY_TYPE`입니다. 부록에 [쓸 수 있는 상수](#XPathResult_Defined_Constants) 목록 전체를 포함하는 절이 있습니다. 아래 [반환형 지정](#Specifying_the_Return_Type) 절에서 설명합니다.
 - `result`: 결과를 반환하는 데 재사용하는 기존 `XPathResult` 개체나 새 `XPathResult` 개체를 만드는 데 쓸 수 있는 `null` 가운데 하나.
 
@@ -49,7 +42,7 @@ var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceReso
 
 ### Default Namespace Resolver 구현
 
-우리는 [document](ko/DOM/document) 개체의 `createNSResolver` 메소드를 써서 namespace resolver를 만듭니다.
+우리는 [document](/ko/DOM/document) 개체의 `createNSResolver` 메소드를 써서 namespace resolver를 만듭니다.
 
 ```
 var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
@@ -58,10 +51,12 @@ var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? 
 Or alternatively by using the `createNSResolver` method of a `XPathEvaluator` object.
 
 ```js
-var xpEvaluator = new XPathEvaluator(); 
-var nsResolver = xpEvaluator.createNSResolver( 
-  contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement 
-  ); 
+var xpEvaluator = new XPathEvaluator();
+var nsResolver = xpEvaluator.createNSResolver(
+  contextNode.ownerDocument == null
+    ? contextNode.documentElement
+    : contextNode.ownerDocument.documentElement,
+);
 ```
 
 그리고 나서 `document.evaluate` 함수에 `namespaceResolver` 매개변수로 `nsResolver` 변수를 넘겨줍니다.
@@ -88,7 +83,7 @@ XPath는 null namespace의 단 하나 뿐인 요소와 일치하는 접두사 �
 
 ##### 예
 
-다음은 HTML 문서의 `<p>` 요소수를 얻기 위해 XPath 식 [`count(//p)`](ko/XPath/Functions/count)을 씁니다.
+다음은 HTML 문서의 `<p>` 요소수를 얻기 위해 XPath 식 [`count(//p)`](/ko/XPath/Functions/count)을 씁니다.
 
 ```
 var paragraphCount = document.evaluate( 'count(//p)', document, null, XPathResult.ANY_TYPE, null );
@@ -130,18 +125,23 @@ alert( 'This document contains ' + paragraphCount.stringValue + ' paragraph elem
 ###### 반복자 예
 
 ```js
-var iterator = document.evaluate('//phoneNumber', documentNode, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null );
+var iterator = document.evaluate(
+  "//phoneNumber",
+  documentNode,
+  null,
+  XPathResult.UNORDERED_NODE_ITERATOR_TYPE,
+  null,
+);
 
 try {
   var thisNode = iterator.iterateNext();
 
   while (thisNode) {
-    alert( thisNode.textContent );
+    alert(thisNode.textContent);
     thisNode = iterator.iterateNext();
   }
-}
-catch (e) {
-  dump( 'Error: Document tree modified during iteraton ' + e );
+} catch (e) {
+  dump("Error: Document tree modified during iteraton " + e);
 }
 ```
 
@@ -159,11 +159,16 @@ Snapshot은 변환 문서로 바꾸지 않습니다. 그래서 반복자와는 �
 ###### Snapshot 예
 
 ```js
-var nodesSnapshot = document.evaluate('//phoneNumber', documentNode, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+var nodesSnapshot = document.evaluate(
+  "//phoneNumber",
+  documentNode,
+  null,
+  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+  null,
+);
 
-for ( var i=0 ; i < nodesSnapshot.snapshotLength; i++ )
-{
-  dump( nodesSnapshot.snapshotItem(i).textContent );
+for (var i = 0; i < nodesSnapshot.snapshotLength; i++) {
+  dump(nodesSnapshot.snapshotItem(i).textContent);
 }
 ```
 
@@ -181,9 +186,18 @@ for ( var i=0 ; i < nodesSnapshot.snapshotLength; i++ )
 ###### First Node 예
 
 ```js
-var firstPhoneNumber = document.evaluate('//phoneNumber', documentNode, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null );
+var firstPhoneNumber = document.evaluate(
+  "//phoneNumber",
+  documentNode,
+  null,
+  XPathResult.FIRST_ORDERED_NODE_TYPE,
+  null,
+);
 
-dump( 'The first phone number found is ' + firstPhoneNumber.singleNodeValue.textContent );
+dump(
+  "The first phone number found is " +
+    firstPhoneNumber.singleNodeValue.textContent,
+);
 ```
 
 #### ANY_TYPE 상수
@@ -210,22 +224,22 @@ var headings = document.evaluate('//h2', document, null, XPathResult.ANY_TYPE, n
 
 HTML이 namespace가 없기 때문에, 우리는 `namespaceResolver` 매개변수에 `null`을 넘겨줌을 유의하세요.
 
-우리가 문서 전체에서 heading을 찾기를 바라기 때문에, 우리는 `contextNode`로 [document](ko/DOM/document) 개체 자신을 씁니다.
+우리가 문서 전체에서 heading을 찾기를 바라기 때문에, 우리는 `contextNode`로 [document](/ko/DOM/document) 개체 자신을 씁니다.
 
 이 식의 결과는 `XPathResult` 개체입니다. 우리가 반환되는 결과형을 알고 싶다면, 우리는 반환되는 개체의 `resultType` 속성을 평가할지도 모릅니다. 이 경우에는 그것은 값이 `4`인 `UNORDERED_NODE_ITERATOR_TYPE`로 평가합니다. 이는 XPath 식의 결과가 node-set일 때 기본 반환형입니다. 동시에 단일 노드로 접근을 제공하고 특정 순서로 노드를 반환할지도 모릅니다. 반환되는 개체에 접근하기 위해, 우리는 반환되는 개체의 `iterateNext()` 메소드를 씁니다.
 
 ```js
 var thisHeading = headings.iterateNext();
 
-var alertText = 'Level 2 headings in this document are:\n'
+var alertText = "Level 2 headings in this document are:\n";
 
 while (thisHeading) {
-  alertText += thisHeading.textContent + '\n';
+  alertText += thisHeading.textContent + "\n";
   thisHeading = headings.iterateNext();
 }
 ```
 
-우리가 한 노드를 반복하기만 하면, 우리는 그 노드의 모든 표준 [DOM interfaces](ko/DOM_interfaces)에 접근할 수 있습니다. 우리 식에서 반환된 모든 `h2` 요소를 반복한 뒤에, 더 이상의 `iterateNext()` 호출은 `null`을 반환합니다.
+우리가 한 노드를 반복하기만 하면, 우리는 그 노드의 모든 표준 [DOM interfaces](/ko/DOM_interfaces)에 접근할 수 있습니다. 우리 식에서 반환된 모든 `h2` 요소를 반복한 뒤에, 더 이상의 `iterateNext()` 호출은 `null`을 반환합니다.
 
 ### 확장기능 안에서 XML 문서 평가
 
@@ -247,7 +261,7 @@ while (thisHeading) {
 </people>
 ```
 
-확장기능 안에서 XML 문서의 컨텐트를 쓸 수 있게, 우리는 문서를 로드하는 동시에 변수 `xmlDoc`를 우리가 `evaluate` 메소드를 쓸 수 있는 [`XMLDocument`](ko/XMLDocument) 개체로 문서에 포함하는 [`XMLHttpRequest`](ko/XMLHttpRequest) 개체를 만듭니다,
+확장기능 안에서 XML 문서의 컨텐트를 쓸 수 있게, 우리는 문서를 로드하는 동시에 변수 `xmlDoc`를 우리가 `evaluate` 메소드를 쓸 수 있는 [`XMLDocument`](/ko/XMLDocument) 개체로 문서에 포함하는 [`XMLHttpRequest`](/ko/XMLHttpRequest) 개체를 만듭니다,
 
 JavaScript는 확장기능 xul/js 문서에 씁니다.
 
@@ -259,9 +273,19 @@ req.send(null);
 
 var xmlDoc = req.responseXML;
 
-var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
+var nsResolver = xmlDoc.createNSResolver(
+  xmlDoc.ownerDocument == null
+    ? xmlDoc.documentElement
+    : xmlDoc.ownerDocument.documentElement,
+);
 
-var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult.ANY_TYPE, null );
+var personIterator = xmlDoc.evaluate(
+  "//person",
+  xmlDoc,
+  nsResolver,
+  XPathResult.ANY_TYPE,
+  null,
+);
 ```
 
 ## 부록
@@ -274,15 +298,15 @@ var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult
 '//xhtml:td/mathml:math'
 ```
 
-(X)HTML 표 데이터 셀 요소의 자식인 모든 [MathML](ko/MathML) 식을 선택합니다.
+(X)HTML 표 데이터 셀 요소의 자식인 모든 [MathML](/ko/MathML) 식을 선택합니다.
 
 `mathml:` 접두사를 namespace URI '[`http://www.w3.org/1998/Math/MathML`](http://www.w3.org/1998/Math/MathML)'와 `html:`을 URI [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml)와 관련시키기 위해 우리는 함수 하나를 제공합니다.
 
 ```js
 function nsResolver(prefix) {
   var ns = {
-    'xhtml' : 'http://www.w3.org/1999/xhtml',
-    'mathml': 'http://www.w3.org/1998/Math/MathML'
+    xhtml: "http://www.w3.org/1999/xhtml",
+    mathml: "http://www.w3.org/1998/Math/MathML",
   };
   return ns[prefix] || null;
 }
@@ -291,7 +315,13 @@ function nsResolver(prefix) {
 그러면 `document.evaluate` 호출은 다음과 같습니다.
 
 ```js
-document.evaluate( '//xhtml:td/mathml:math', document, nsResolver, XPathResult.ANY_TYPE, null );
+document.evaluate(
+  "//xhtml:td/mathml:math",
+  document,
+  nsResolver,
+  XPathResult.ANY_TYPE,
+  null,
+);
 ```
 
 #### XPathResult 정의 상수

@@ -129,7 +129,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
         これは `SameSite` 属性が指定されていない場合の既定の動作です。
 
     - `None`
-      - :  ブラウザーがクロスサイトと同一サイトの両方のリクエストでクッキーを送信することを意味します。
+      - : ブラウザーがクロスサイトと同一サイトの両方のリクエストでクッキーを送信することを意味します。
         この値を設定する際には、 `Secure` 属性も設定する必要があります。 `SameSite=None; Secure` のようにします。
 
     > **メモ:** [SameSite クッキー](/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite)に関する標準は、最近次のように改訂されました。

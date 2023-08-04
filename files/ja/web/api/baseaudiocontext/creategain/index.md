@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createGain()
 slug: Web/API/BaseAudioContext/createGain
-original_slug: Web/API/AudioContext/createGain
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -96,4 +95,4 @@ function voiceMute() {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

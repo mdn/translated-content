@@ -1,10 +1,8 @@
 ---
 title: ceiling
 slug: Web/XPath/Functions/ceiling
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/ceiling
 ---
+
 {{ XsltRef() }}
 
 `ceiling` 함수는 10진수를 평가하고 10진수보다 작지 않은 가장 작은 정수를 반환합니다.

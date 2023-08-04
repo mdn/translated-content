@@ -1,11 +1,13 @@
 ---
-title: 'CSP: worker-src'
+title: "CSP: worker-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/worker-src
+l10n:
+  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
 {{HTTPSidebar}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) **`worker-src`** ディレクティブは、 {{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}} スクリプトの有効なソースを指定します。
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`worker-src`** ディレクティブは、 {{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}} スクリプトの有効なソースを指定します。
 
 <table class="properties">
   <tbody>
@@ -57,9 +59,9 @@ Content-Security-Policy: worker-src https://example.com/
 
 ```html
 <script>
-  const blockedWorker = new Worker("data:application/javascript,…");
+  let blockedWorker = new Worker("data:application/javascript,…");
   blockedWorker = new SharedWorker("https://not-example.com/");
-  navigator.serviceWorker.register('https://not-example.com/sw.js');
+  navigator.serviceWorker.register("https://not-example.com/sw.js");
 </script>
 ```
 

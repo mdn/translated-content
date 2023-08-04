@@ -1,10 +1,6 @@
 ---
 title: font-style
 slug: Web/CSS/font-style
-tags:
-  - Ссылка
-  - шрифт
-translation_of: Web/CSS/font-style
 ---
 {{CSSRef}}
 
@@ -68,7 +64,7 @@ font-style: unset;
 
 {{ EmbedLiveSample('Font_styles') }}
 
-## Specific​ations
+## Specifications
 
 | Specification                                                                                | Status                           | Comment            |
 | -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |

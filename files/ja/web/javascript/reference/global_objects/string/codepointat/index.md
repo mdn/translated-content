@@ -111,9 +111,7 @@ if (!String.prototype.codePointAt) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.codepointat', 'String.prototype.codePointAt')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

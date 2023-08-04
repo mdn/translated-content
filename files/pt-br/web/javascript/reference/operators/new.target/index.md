@@ -1,13 +1,8 @@
 ---
 title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
-tags:
-  - Classes
-  - ECMAScript6
-  - JavaScript
-  - Referencia
-translation_of: Web/JavaScript/Reference/Operators/new.target
 ---
+
 {{JSSidebar("Operators")}}
 
 A propriedade `new.target` permite que você detecte quando uma função ou construtor foi chamado utilizando o operador new. Em construtores e funções instaciadas com o operador [new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new) , `new.target` retorna a referência ao construtor ou função. Em chamadas normais de funções , `new.target` é {{jsxref("undefined")}}.
@@ -32,8 +27,8 @@ Em chamadas normais de função (diferente de chamadas a funções do tipo const
 
 ```js
 function Foo() {
-  if (!new.target) throw 'Foo() must be called with new';
-  console.log('Foo instanciado com new');
+  if (!new.target) throw "Foo() must be called with new";
+  console.log("Foo instanciado com new");
 }
 
 Foo(); // throws "Foo() must be called with new"
@@ -51,13 +46,25 @@ class A {
   }
 }
 
-class B extends A { constructor() { super(); } }
+class B extends A {
+  constructor() {
+    super();
+  }
+}
 
 var a = new A(); // logs "A"
 var b = new B(); // logs "B"
 
-class C { constructor() { console.log(new.target); } }
-class D extends C { constructor() { super(); } }
+class C {
+  constructor() {
+    console.log(new.target);
+  }
+}
+class D extends C {
+  constructor() {
+    super();
+  }
+}
 
 var c = new C(); // logs class C{constructor(){console.log(new.target);}}
 var d = new D(); // logs class D extends C{constructor(){super();}}
@@ -67,9 +74,9 @@ A partir do exemplo acima das classes C e D, mostra que new\.target aponta para 
 
 ## Especificações
 
-| Specification                                                                                                        | Status                       | Comment            |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-built-in-function-objects', 'Built-in Function Objects')}}     | {{Spec2('ES2015')}}     | Definição inicial. |
+| Specification                                                                          | Status               | Comment            |
+| -------------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-built-in-function-objects', 'Built-in Function Objects')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-built-in-function-objects', 'Built-in Function Objects')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores
@@ -80,5 +87,5 @@ A partir do exemplo acima das classes C e D, mostra que new\.target aponta para 
 
 - [funções](/pt-BR/docs/Web/JavaScript/Reference/Functions)
 - [Classes](/pt-BR/docs/Web/JavaScript/Reference/Classes)
-- [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)
-- [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
+- [`new`](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)
+- [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this)

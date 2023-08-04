@@ -1,18 +1,8 @@
 ---
 title: Usando el rol alertdialog
 slug: Web/Accessibility/ARIA/Roles/alertdialog_role
-tags:
-  - ARIA
-  - Accesibilidad
-  - Alertas
-  - Desarrollo web
-  - HTML
-  - agente
-  - alertdialog
-  - modal
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
 ---
+
 ### Descripción
 
 Esta técnica demuestra como usar el rol [`alertdialog`](http://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#alertdialog).
@@ -49,7 +39,10 @@ Cuando el díalogo de alerta es etiquetado correctamente y el foco es movido de 
 El fragmento de código siguiente muestra como marcar un díalogo de alerta que solo provee un mensaje y un botón de OK.
 
 ```html
-<div role="alertdialog" aria-labelledby="tituloDialogo1" aria-describedby="descrDialogo1">
+<div
+  role="alertdialog"
+  aria-labelledby="tituloDialogo1"
+  aria-describedby="descrDialogo1">
   <div role="document" tabindex="0">
     <h2 id="tituloDialogo1">Tu sesión esta apunto de expirar</h2>
     <p id="descrDialogo1">Para extender tu sesión de clic en el botón OK</p>
@@ -58,7 +51,7 @@ El fragmento de código siguiente muestra como marcar un díalogo de alerta que 
 </div>
 ```
 
-#### Ejemplos en funcionamiento:
+#### Ejemplos en funcionamiento
 
 Pendiente
 

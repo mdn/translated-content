@@ -1,14 +1,8 @@
 ---
 title: Gamepad API
 slug: Web/API/Gamepad_API
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - Games
-  - Overview
-translation_of: Web/API/Gamepad_API
 ---
+
 {{DefaultAPISidebar("Gamepad API")}}
 
 **게임패드 API**는 게임패드와 다른 게임 제어장치의 신호에 쉬운 일관된 방식으로 접근하고 응답하는 개발자들을 위한 수단이다. 게임패드 API는 세 가지 인터페이스와연결, 연결 해제되고 게임 패드 자체에 대한 다른 정보에 접근하고 어떤 버튼과 다른 조작 장치들이 현재 눌린 것에 응답하는 두 가지 이벤트 그리고 한 가지 특수 기능이 포함되어 있다.
@@ -50,12 +44,9 @@ translation_of: Web/API/Gamepad_API
 - [Using the Gamepad API](/ko/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
 - [Implementing controls using the Gamepad API](/ko/docs/Games/Techniques/Controls_Gamepad_API)
 
-## 사양
+## 명세서
 
-| Specification                                                                    | Status                                   | Comment                                                                          |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName("GamepadExtensions")}}                                     | {{Spec2("GamepadExtensions")}} | Defines the [Experimental Gamepad extensions](#experimental_gamepad_extensions). |
-| {{SpecName("Gamepad", "", "The Gamepad API specification")}} | {{Spec2("Gamepad")}}             | Initial definition                                                               |
+{{Specifications}}
 
 ## 브라우저 호환성
 

@@ -9,5 +9,5 @@ slug: Glossary/ECMA
 
 ## 詳細情報
 
-- Wikipedia 上の記事「{{interwiki("wikipedia", "Ecmaインターナショナル", "Ecmaインターナショナル")}}」
+- Wikipedia 上の記事「[Ecmaインターナショナル](https://ja.wikipedia.org/wiki/Ecmaインターナショナル)」
 - [Ecma International ウェブサイト](http://www.ecma-international.org/)

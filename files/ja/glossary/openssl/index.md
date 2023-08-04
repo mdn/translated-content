@@ -9,5 +9,5 @@ OpenSSL は、{{glossary("SSL")}} と {{glossary("TLS")}} のオープンソー�
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "OpenSSL")}}
+- Wikipedia 上の [OpenSSL](https://ja.wikipedia.org/wiki/OpenSSL)
 - [公式ウェブサイト](http://www.openssl.org/)

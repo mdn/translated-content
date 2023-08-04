@@ -1,8 +1,6 @@
 ---
 title: WeakRef.prototype.deref()
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
-browser-compat: javascript.builtins.WeakRef.deref
 ---
 
 {{JSRef}}
@@ -12,7 +10,7 @@ La méthode `deref` renvoie l'objet cible associé à l'objet [`WeakRef`](/fr/do
 ## Syntaxe
 
 ```js
-deref()
+deref();
 ```
 
 ### Valeur de retour
@@ -27,7 +25,7 @@ Voir [les notes sur la page `WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_
 
 ### Utiliser deref()
 
-Voir la section [Exemples](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#exemples) de la page  [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) pour un exemple complet.
+Voir la section [Exemples](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#exemples) de la page [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) pour un exemple complet.
 
 ```js
 const tick = () => {

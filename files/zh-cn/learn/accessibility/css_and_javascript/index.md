@@ -20,13 +20,13 @@ slug: Learn/Accessibility/CSS_and_JavaScript
     <tr>
       <th scope="row">目标：</th>
       <td>
-        熟悉在 Web 文档中适当地使用 CSS 和 JavaScript，以最大限度地提高无障碍，并且不损害访问性。
+        熟悉在 Web 文档中适当地使用 CSS 和 JavaScript，以最大限度地提高无障碍，并且不损害它。
       </td>
     </tr>
   </tbody>
 </table>
 
-## CSS 和 JavaScript 是可访问的吗？
+## CSS 和 JavaScript 也是无障碍的吗？
 
 CSS 和 JavaScript 对无障碍直接的重要性都不如 HTML，但是它们仍然能够帮助或破坏无障碍，这取决于它们是如何被使用的。换句话说，重要的是考虑一些最佳实践建议，以确保使用 CSS 和 JavaScript 不会破坏文档的无障碍。
 
@@ -64,7 +64,8 @@ h1 {
   font-size: 5rem;
 }
 
-p, li {
+p,
+li {
   line-height: 1.5;
   font-size: 1.6rem;
 }
@@ -85,13 +86,16 @@ p, li {
 ```html
 <p>The water is <em>very hot</em>.</p>
 
-<p>Water droplets collecting on surfaces is called <strong>condensation</strong>.</p>
+<p>
+  Water droplets collecting on surfaces is called <strong>condensation</strong>.
+</p>
 ```
 
 你可能希望向强调的文本添加一些简单的颜色：
 
 ```css
-strong, em {
+strong,
+em {
   color: #a60000;
 }
 ```
@@ -103,7 +107,10 @@ strong, em {
 允许缩写、首字母缩略词或初始化与其扩展关联的元素：
 
 ```html
-<p>Web content is marked up using <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
+<p>
+  Web content is marked up using
+  <abbr title="Hypertext Markup Language">HTML</abbr>.
+</p>
 ```
 
 同样，你可能希望以某种简单方式设置样式：
@@ -131,7 +138,9 @@ a {
   color: #ff0000;
 }
 
-a:hover, a:visited, a:focus {
+a:hover,
+a:visited,
+a:focus {
   color: #a60000;
   text-decoration: none;
 }
@@ -157,11 +166,11 @@ a:active {
 ```html
 <div>
   <label for="name">Enter your name</label>
-  <input type="text" id="name" name="name">
+  <input type="text" id="name" name="name" />
 </div>
 ```
 
-你可以在我们的 [form-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-css.html) 示例中看到一些很好的示例 CSS（[查看示例](http://mdn.github.io/learning-area/accessibility/css/form-css.html)）。
+你可以在我们的 [form-css.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-css.html) 示例中看到一些很好的示例 CSS（[查看示例](http://mdn.github.io/learning-area/accessibility/css/form-css.html)）。
 
 你将为表单编写的大多数 CSS 将用于调整元素大小、排列标签和输入，以及让它们看起来整洁。
 
@@ -171,7 +180,7 @@ a:active {
 
 用于显示表格数据的表。
 
-你可以在 [table-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/table-css.html) 示例中看到表 HTML 和 CSS 的一个很好的简单示例（[查看示例](http://mdn.github.io/learning-area/accessibility/css/table-css.html)）。
+你可以在 [table-css.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/table-css.html) 示例中看到表 HTML 和 CSS 的一个很好的简单示例（[查看示例](http://mdn.github.io/learning-area/accessibility/css/table-css.html)）。
 
 表的 CSS 通常使表更适合你的设计，看起来不那么难看。最好确保表标题醒目（通常使用粗体），并使用斑马条带化使不同的行更易于解析。
 
@@ -187,7 +196,7 @@ a:active {
 
 ### 隐藏的东西
 
-在很多情况下，可视化设计需要并非同时显示所有内容。例如，在我们的 [Tabbed info box 示例](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)（参见[源码](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)），我们有三个信息面板，但我们将它们放在彼此之上，并提供可以单击以显示每个选项卡的选项卡（也可以使用键盘——你也可以使用 Tab 和 Enter/Return 以选择它们）。
+在很多情况下，可视化设计需要并非同时显示所有内容。例如，在我们的 [Tabbed info box 示例](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)（参见[源码](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)），我们有三个信息面板，但我们将它们放在彼此之上，并提供可以单击以显示每个选项卡的选项卡（也可以使用键盘——你也可以使用 Tab 和 Enter/Return 以选择它们）。
 
 ![](tabbed-info-box.png)
 
@@ -212,7 +221,7 @@ a:active {
 
 JavaScript 还可能会中断无障碍，具体取决于其使用方式。
 
-现代 JavaScript 是一种功能强大的语言，如今我们可以使用它，从简单的内容和 UI 更新到成熟的 2D 和 3D 游戏。没有任何规则规定所有内容都必须对所有人 100% 可访问——你只需尽力而为，并使你的应用尽可能可访问。
+现代 JavaScript 是一种功能强大的语言，如今我们可以使用它，从简单的内容和 UI 更新到成熟的 2D 和 3D 游戏。没有任何规则规定所有内容都必须对所有人 100% 无障碍——你只需尽力而为，并使你的应用尽可能无障碍。
 
 简单的内容和功能可以说是很容易使访问——例如文本，图像，表格，窗体和按钮，激活功能。正如我们在 [HTML：辅助功能的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)一文中提到的，主要注意事项包括：
 
@@ -238,7 +247,7 @@ JavaScript 还可能会中断无障碍，具体取决于其使用方式。
 - 提供客户端表单验证，它快速提醒用户表单条目出现的问题，而无需等待服务器检查数据。如果表单不可用，则窗口仍然有效，但验证速度可能较慢。
 - 为 HTML5 `<video>` 提供自定义控件，这些控件仅供键盘用户访问，以及如果 JavaScript 不可用 (默认 `<video>` 浏览器控件在大多数浏览器中无法使用键盘访问)，就直接通过链接访问视频。
 
-例如，我们编写了一个快速而糟糕的客户端客户端表单验证示例——参见[form-validation.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html)（[查看在线演示](http://mdn.github.io/learning-area/accessibility/css/form-validation.html)）。在示例中，你会看到一个简单的表格；当你尝试提交一个或两个字段为空的表单时，提交将失败，并且会出现一个错误消息框，告诉你出了什么问题。
+例如，我们编写了一个快速而糟糕的客户端客户端表单验证示例——参见[form-validation.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-validation.html)（[查看在线演示](http://mdn.github.io/learning-area/accessibility/css/form-validation.html)）。在示例中，你会看到一个简单的表格；当你尝试提交一个或两个字段为空的表单时，提交将失败，并且会出现一个错误消息框，告诉你出了什么问题。
 
 这种表单验证并不引人注目——在 JavaScript 不可用的情况下，你仍然可以很好的使用表单，并且任何合理的表单实现都将激活服务器端验证，因为恶意用户很容易绕过客户端验证（例如，通过在浏览器中关闭 JavaScript）。客户端验证对于报告错误仍然非常有用——用户可以立即了解他们所犯的错误，而不必等待到服务器的往返和页面重新加载。这是一个明确的可用性优势。
 
@@ -248,7 +257,7 @@ JavaScript 还可能会中断无障碍，具体取决于其使用方式。
 
 ```html
 <label for="name">Enter your name:</label>
-<input type="text" name="name" id="name">
+<input type="text" name="name" id="name" />
 ```
 
 我们仅在提交表单时执行验证。这样，我们就不会过于频繁地更新 UI，反之则可能混淆屏幕阅读器（可能还有其他）用户：
@@ -257,16 +266,16 @@ JavaScript 还可能会中断无障碍，具体取决于其使用方式。
 form.onsubmit = validate;
 
 function validate(e) {
-  errorList.innerHTML = '';
-  for(var i = 0; i < formItems.length; i++) {
+  errorList.innerHTML = "";
+  for (var i = 0; i < formItems.length; i++) {
     var testItem = formItems[i];
-    if(testItem.input.value === '') {
-      errorField.style.left = '360px';
+    if (testItem.input.value === "") {
+      errorField.style.left = "360px";
       createLink(testItem);
     }
   }
 
-  if(errorList.innerHTML !== '') {
+  if (errorList.innerHTML !== "") {
     e.preventDefault();
   }
 }
@@ -282,11 +291,15 @@ function validate(e) {
 
 ```js
 function createLink(testItem) {
-  var listItem = document.createElement('li');
-  var anchor = document.createElement('a');
-  anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
-  anchor.href = '#' + testItem.input.name;
-  anchor.onclick = function() {
+  var listItem = document.createElement("li");
+  var anchor = document.createElement("a");
+  anchor.textContent =
+    testItem.input.name +
+    " field is empty: fill in your " +
+    testItem.input.name +
+    ".";
+  anchor.href = "#" + testItem.input.name;
+  anchor.onclick = function () {
     testItem.input.focus();
   };
   listItem.appendChild(anchor);
@@ -296,7 +309,7 @@ function createLink(testItem) {
 
 每个链接都有双重用途，即它不仅告诉你错误是什么，而且可以单击它或激活它直接跳转到有问题的输入元素，并且更正输入。
 
-> **备注：** 此示例的 `focus()` 部分有点棘手。Chrome 和 Edge（以及较新版本的 IE）将在单击链接时聚焦元素，而无需 `onclick`/`focus()` 代码块。Safari 只会突出显示表单元素，并自行显示链接，因此需要 `onclick/focus()` 代码块来实际聚焦它。Firefox 没有在上下文中正确的聚焦输入，因此 Firefox 用户目前无法利用这一点（尽管其他一切都正常）。Firefox 问题应该尽快会得到修复——现在的工作是使 Firefox 行为与其他浏览器的行为相同（参见 {{bug(277178)}}）。
+> **备注：** 此示例的 `focus()` 部分有点棘手。Chrome 和 Edge（以及较新版本的 IE）将在单击链接时聚焦元素，而无需 `onclick`/`focus()` 代码块。Safari 只会突出显示表单元素，并自行显示链接，因此需要 `onclick/focus()` 代码块来实际聚焦它。Firefox 没有在上下文中正确的聚焦输入，因此 Firefox 用户目前无法利用这一点（尽管其他一切都正常）。Firefox 问题应该尽快会得到修复——现在的工作是使 Firefox 行为与其他浏览器的行为相同（参见 [Firefox bug 277178](https://bugzil.la/277178)）。
 
 此外，`errorField` 被放置在源顺序的顶部（与 UI 中使用 CSS 时相比，位置不同），这意味着用户可以准确找出表单提交时的问题，并通过返回到页面的开头，来获悉有问题的输入元素。
 
@@ -304,8 +317,7 @@ function createLink(testItem) {
 
 ```html
 <div class="errors" role="alert" aria-relevant="all">
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 
@@ -313,7 +325,7 @@ function createLink(testItem) {
 
 > **备注：** 一些人可能会考虑这样一个事实，即 HTML5 表单有内置的验证机制，如 `required`、`min`/`minlength` 和 `max`/`maxlength` 属性（详细信息，请参阅 {{htmlelement("input")}}元素引用）。我们最终没有在演示中使用这些功能，因为不是所有的浏览器都支持（例如，仅 IE10 及以上版本支持，Safari 不支持）。
 
-> **备注：** WebAIM 的[可用且可访问的表单验证和错误恢复](http://webaim.org/techniques/formvalidation/)提供了一些有关可访问表单验证的更多的有用信息。
+> **备注：** WebAIM 的[可用且无障碍的表单验证和错误恢复](http://webaim.org/techniques/formvalidation/)提供了一些有关无障碍表单验证的更多的有用信息。
 
 ### 其他 JavaScript 无障碍问题
 
@@ -327,7 +339,7 @@ function createLink(testItem) {
 
 让我们看一个示例：突出显示了何时可能有用。我们想要实现一个缩略图：当鼠标悬停或聚焦在图像上，可以放大图像（正如电子商务产品目录所展示的）。
 
-我们做了一个非常简单的示例，你可以在 [mouse-and-keyboard-events.html](http://mdn.github.io/learning-area/accessibility/css/mouse-and-keyboard-events.html) 中找到（参见[源码](https://github.com/mdn/learning-area/blob/master/accessibility/css/mouse-and-keyboard-events.html)）。该代码具有显示和隐藏放大图像的两个函数。它由以下几行行实现，这些行将它们设置为事件处理程序：
+我们做了一个非常简单的示例，你可以在 [mouse-and-keyboard-events.html](http://mdn.github.io/learning-area/accessibility/css/mouse-and-keyboard-events.html) 中找到（参见[源码](https://github.com/mdn/learning-area/blob/main/accessibility/css/mouse-and-keyboard-events.html)）。该代码具有显示和隐藏放大图像的两个函数。它由以下几行行实现，这些行将它们设置为事件处理程序：
 
 ```js
 imgThumb.onmouseover = showImg;
@@ -348,13 +360,3 @@ imgThumb.onblur = hideImg;
 下一篇内容是，WAI-ARIA！
 
 {{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
-
-## 在本模块中
-
-- [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/zh-CN/docs/Learn/Accessibility/HTML)
-- [CSS 和 JavaScript 无障碍的最佳实践](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA 基础知识基础知识](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [无障碍的多媒体](/zh-CN/docs/Learn/Accessibility/Multimedia)
-- [移动端无障碍](/zh-CN/docs/Learn/Accessibility/Mobile)
-- [无障碍故障排除](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)

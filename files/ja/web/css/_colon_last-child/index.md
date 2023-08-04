@@ -1,5 +1,5 @@
 ---
-title: ':last-child'
+title: ":last-child"
 slug: Web/CSS/:last-child
 ---
 
@@ -19,7 +19,9 @@ p:last-child {
 
 ## 構文
 
-{{csssyntax}}
+```
+:last-child
+```
 
 ## 例
 

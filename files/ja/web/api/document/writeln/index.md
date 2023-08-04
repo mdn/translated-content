@@ -31,10 +31,7 @@ document.writeln("<p>パスワードを入力してください:</p>");
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName("HTML WHATWG", "#dom-document-writeln", "document.writeln()")}} | {{Spec2("HTML WHATWG")}} |      |
-| {{SpecName("DOM2 HTML", "html.html#ID-35318390", "document.writeln()")}}     | {{Spec2("DOM2 HTML")}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

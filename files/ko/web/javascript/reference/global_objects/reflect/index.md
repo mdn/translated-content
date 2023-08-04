@@ -1,16 +1,10 @@
 ---
 title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
 {{JSRef}}
 
-**`Reflect`**는 중간에서 가로챌 수 있는 JavaScript 작업에 대한 메서드를 제공하는 내장 객체입니다. 메서드의 종류는 [프록시 처리기](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)와 동일합니다. `Reflect`는 함수 객체가 아니므로 생성자로 사용할 수 없습니다.
+**`Reflect`** 는 중간에서 가로챌 수 있는 JavaScript 작업에 대한 메서드를 제공하는 내장 객체입니다. 메서드의 종류는 [프록시 처리기](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)와 동일합니다. `Reflect`는 함수 객체가 아니므로 생성자로 사용할 수 없습니다.
 
 ## 설명
 

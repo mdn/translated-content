@@ -1,8 +1,8 @@
 ---
-title: '::placeholder'
+title: "::placeholder"
 slug: Web/CSS/::placeholder
-translation_of: Web/CSS/::placeholder
 ---
+
 {{CSSRef}}
 
 The **`::placeholder`** [CSS](/ko/docs/Web/CSS) [pseudo-element](/ko/docs/Web/CSS/Pseudo-elements) represents the [placeholder text](/ko/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute) in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.
@@ -42,7 +42,7 @@ Color contrast ratio is determined by comparing the luminosity of the placeholde
 
 Placeholder text with sufficient color contrast may be interpreted as entered input. Placeholder text will also disappear when a person enters content into an {{htmlelement("input")}} element. Both of these circumstances can interfere with successful form completion, especially for people with cognitive concerns.
 
-An alternate approach to providing placeholder information is to include it outside of the input in close visual proximity, then use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) to programmatically associate the {{HTMLElement("input")}} with its hint.
+An alternate approach to providing placeholder information is to include it outside of the input in close visual proximity, then use [`aria-describedby`](/ko/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) to programmatically associate the {{HTMLElement("input")}} with its hint.
 
 With this implementation, the hint content is available even if information is entered into the input field, and the input appears free of preexisting input when the page is loaded. Most screen reading technology will use `aria-describedby` to read the hint after the input's label text is announced, and the person using the screen reader can mute it if they find the extra information unnecessary.
 
@@ -111,11 +111,11 @@ input::placeholder {
 
 {{EmbedLiveSample("Green_text", 200, 60)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

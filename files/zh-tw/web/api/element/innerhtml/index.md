@@ -7,7 +7,7 @@ slug: Web/API/Element/innerHTML
 
 [Element](/zh-TW/docs/Glossary/Element) 的「innerHTML」屬性獲取或設置元素中包含的 HTML 或 XML 標記。
 
-> **備註：** 如{{HTMLElement("div")}}, {{HTMLElement("span")}}, or {{HTMLElement("noembed")}} 節點有包含字符（＆），（<）或（>），innerHTML 分別地回傳這些字符成為 HTML 的 `“&”`，`“<”` 和 `“>”`。 使用 `Node.textContent` 得到的這些文本節點的內容的原始拷貝件。
+> **備註：** 如{{HTMLElement("div")}}, {{HTMLElement("span")}}, or {{HTMLElement("noembed")}} 節點有包含字符（＆），（<）或（>），innerHTML 分別地回傳這些字符成為 HTML 的 `「&」`，`「<」` 和 `「>」`。 使用 `Node.textContent` 得到的這些文本節點的內容的原始拷貝件。
 
 To insert the HTML into the document rather than replace the contents of an element, use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
 
@@ -61,9 +61,8 @@ document.body.innerHTML = "";
 This example fetches the document's current HTML markup and replaces the `"<"` characters with the HTML entity `"&lt;"`, thereby essentially converting the HTML into raw text. This is then wrapped in a {{HTMLElement("pre")}} element. Then the value of `innerHTML` is changed to this new string. As a result, the document contents are replaced with a display of the page's entire source code.
 
 ```js
-document.documentElement.innerHTML = "<pre>" +
-         document.documentElement.innerHTML.replace(/</g,"&lt;") +
-            "</pre>";
+document.documentElement.innerHTML =
+  "<pre>" + document.documentElement.innerHTML.replace(/</g, "&lt;") + "</pre>";
 ```
 
 #### Operational details
@@ -122,12 +121,18 @@ log("Logging mouse events inside this container...");
 
 The `log()` function creates the log output by getting the current time from a {{jsxref("Date")}} object using {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}, and building a string with the timestamp and the message text. Then the message is appended to the box with the class `"log"`.
 
-We add a second method that logs information about {{domxref("MouseEvent")}} based events (such as {{event("mousedown")}}, {{event("click")}}, and {{event("mouseenter")}}):
+We add a second method that logs information about {{domxref("MouseEvent")}} based events (such as [`mousedown`](/zh-TW/docs/Web/API/Element/mousedown_event), [`click`](/zh-TW/docs/Web/API/Element/click_event), and [`mouseenter`](/zh-TW/docs/Web/API/Element/mouseenter_event)):
 
 ```js
 function logEvent(event) {
-  var msg = "Event <strong>" + event.type + "</strong> at <em>" +
-            event.clientX + ", " + event.clientY + "</em>";
+  var msg =
+    "Event <strong>" +
+    event.type +
+    "</strong> at <em>" +
+    event.clientX +
+    ", " +
+    event.clientY +
+    "</em>";
   log(msg);
 }
 ```

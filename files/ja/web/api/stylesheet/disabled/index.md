@@ -1,31 +1,34 @@
 ---
 title: StyleSheet.disabled
 slug: Web/API/StyleSheet/disabled
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{ApiRef}}
+{{APIRef("CSSOM")}}
 
-## 概要
+**`disabled`** は {{domxref("StyleSheet")}} インターフェイスのプロパティで、
+このプロパティは、スタイルシートが文書内に適用されないようにするかどうかを決定します。
 
-このプロパティは、そのスタイルシートが無効になっているかどうかを示す真偽値を返します。
+スタイルシートは、手動でこのプロパティを `true` に設定するか、非アクティブな[代替スタイルシート](/ja/docs/Web/CSS/Alternative_style_sheets)に設定すると、無効になることがあります。なお、 `disabled === false` であることは、スタイルシートが適用されていることを保証するものではありません（例えば、文書内のスタイルシートが削除されている可能性もあります）。
 
-## 構文
+## 値
 
-```
-bool = stylesheet.disabled;
-```
+論理値です。
 
 ## 例
 
 ```js
-var myStyleSheet = document.styleSheets[0];
-
-if (myStyleSheet.disabled) {
- // スタイルシートが無効の場合の処理をここに記述
- // インラインスタイルの適用など…
+// スタイルシートが無効であれば
+if (stylesheet.disabled) {
+  // スタイルをインラインで適用
 }
 ```
 
 ## 仕様書
 
-- {{spec("http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-disabled", "DOM 2 Style - disabled", "REC")}}
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

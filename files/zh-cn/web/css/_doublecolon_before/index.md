@@ -1,5 +1,5 @@
 ---
-title: '::before (:before)'
+title: "::before (:before)"
 slug: Web/CSS/::before
 ---
 
@@ -14,7 +14,7 @@ a::before {
 }
 ```
 
-**注意：** 由`::before` 和`::after` 生成的伪元素 [包含在元素格式框内](https://www.w3.org/TR/CSS2/generate.html#before-after-content)，因此不能应用在*[替换元素上](/zh-CN/docs/Web/CSS/Replaced_element)，* 比如{{htmlelement("img")}}或{{htmlelement("br")}} 元素。
+> **备注：** 由 `::before` 和`::after` 生成的伪元素[包含在元素格式框内](https://www.w3.org/TR/CSS2/generate.html#before-after-content)，因此不能应用在[_替换元素上_](/zh-CN/docs/Web/CSS/Replaced_element)，比如 {{htmlelement("img")}} 或 {{htmlelement("br")}} 元素。
 
 ## 语法
 
@@ -37,13 +37,13 @@ CSS3 引入 `::before` 是为了将[伪类](/zh-CN/docs/CSS/Pseudo-classes)和[�
 
 使用 `::before` 伪元素的一个简单示例就是用于加入引号。此处同时使用了 `::before` 和 `{{Cssxref("::after")}}`来插入引用性文本。
 
-#### HTML 内容
+#### HTML
 
 ```html
 <q>一些引用</q>, 他说，<q>比没有好。</q>.
 ```
 
-#### CSS 内容
+#### CSS
 
 ```css
 q::before {
@@ -58,42 +58,42 @@ q::after {
 
 #### 结果
 
-{{ EmbedLiveSample('Adding_quotation_marks', '500', '50', '') }}
+{{ EmbedLiveSample('加入引用标记', '500', '50', '') }}
 
 ### 修饰实例
 
 我们可以用几乎任何方法定义 {{ cssxref("content") }} 中的文字和图片样式。
 
-#### HTML 内容
+#### HTML
 
 ```html
 <span class="ribbon">Notice where the orange box is.</span>
 ```
 
-#### CSS 内容
+#### CSS
 
 ```css
 .ribbon {
-   background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::before {
-   content:          "Look at this orange box.";
-   background-color: #FFBA10;
-   border-color:     black;
-   border-style:     dotted;
+  content: "Look at this orange box.";
+  background-color: #ffba10;
+  border-color: black;
+  border-style: dotted;
 }
 ```
 
-#### 最终结果
+#### 结果
 
-{{ EmbedLiveSample('Decorative_example', 450, 60) }}
+{{ EmbedLiveSample('修饰实例', 450, 60) }}
 
 ### 待办列表
 
 在本例中我们将使用伪元素来创建一个简单的待办列表。这个方法也可用于 UI 的小幅度更改和用户体验的提升。
 
-#### HTML 内容
+#### HTML
 
 ```html
 <ul>
@@ -106,7 +106,7 @@ q::after {
 </ul>
 ```
 
-#### CSS 内容
+#### CSS
 
 ```css
 li {
@@ -119,11 +119,11 @@ li {
 }
 
 li.done {
-  background: #CCFF99;
+  background: #ccff99;
 }
 
 li.done::before {
-  content: '';
+  content: "";
   position: absolute;
   border-color: #009933;
   border-style: solid;
@@ -137,57 +137,67 @@ li.done::before {
 }
 ```
 
-#### JavaScript 内容
+#### JavaScript
 
 ```js
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if( ev.target.tagName === 'LI') {
-     ev.target.classList.toggle('done');
-  }
-}, false);
+var list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  function (ev) {
+    if (ev.target.tagName === "LI") {
+      ev.target.classList.toggle("done");
+    }
+  },
+  false,
+);
 ```
 
-下面展示的是最终得到的结果。请注意我们没有使用任何图标，对勾标识实际上是使用 CSS 定义了样式的` ::before `伪元素。接下来建立几个待办事项来完成它们吧。
+下面展示的是最终得到的结果。请注意我们没有使用任何图标，对勾标识实际上是使用 CSS 定义了样式的`::before`伪元素。接下来建立几个待办事项来完成它们吧。
 
-#### 最终结果
+#### 结果
 
-{{ EmbedLiveSample('To-do_list', 400, 300) }}
+{{ EmbedLiveSample('待办列表', 400, 300) }}
 
 ## 注释
 
 在 Firefox3.5 中，fixed 绝对定位的布局不被允许在元素前生成一个独立的元素（按照 CSS 规范，:after :before 伪类元素与其他盒模型元素是可以相互影响的，就像他们是真正的元素一样，不过是被插入到相关元素中罢了），他们可以被用来对非表格布局进行改善（例：实现元素在中心位置），只要置于中心的内容包含在元素中，那么内容的前后列不能够被添加前置或后置的兄弟元素。（i.e., it is perhaps more semantically correct to add an additional span as below, than it would to add an empty \<div/> before and after）（记住，一定要给 float 元素添加 width 属性，否则它将不会浮动）
 
-#### HTML 内容
+#### HTML
 
 ```html
 <div class="example">
-<span id="floatme">"Floated Before" should be generated on the left of the
-viewport and not allow overflow in this line to flow under it. Likewise
-should "Floated After" appear on the right of the viewport and not allow this
-line to flow under it.</span>
+  <span id="floatme"
+    >"Floated Before" should be generated on the left of the viewport and not
+    allow overflow in this line to flow under it. Likewise should "Floated
+    After" appear on the right of the viewport and not allow this line to flow
+    under it.</span
+  >
 </div>
 ```
 
-#### CSS 内容
+#### CSS
 
 ```css
-#floatme { float: left; width: 50%; }
+#floatme {
+  float: left;
+  width: 50%;
+}
 
 /* To get an empty column, just indicate a hex code for a non-breaking space: \a0 as the content (use \0000a0 when following such a space with other characters) */
 .example::before {
   content: "Floated Before";
   float: left;
-  width: 25%
+  width: 25%;
 }
 .example::after {
   content: "Floated After";
   float: right;
-  width:25%
+  width: 25%;
 }
 
 /* For styling */
-.example::before, .example::after{
+.example::before,
+.example::after {
   background: yellow;
   color: red;
 }
@@ -195,7 +205,7 @@ line to flow under it.</span>
 
 #### 输出
 
-{{EmbedLiveSample("Notes")}}
+{{EmbedLiveSample("注释")}}
 
 ## 规范
 

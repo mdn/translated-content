@@ -5,17 +5,17 @@ slug: Web/HTML/Element/canvas
 
 `<canvas>` 元素可被用来通过 JavaScript（[Canvas](/zh-CN/docs/Web/API/Canvas_API) API 或 [WebGL](/zh-CN/docs/Web/API/WebGL_API) API）绘制图形及图形动画。
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 ## 属性
 
 本元素支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("height")}}
+- `height`
   - : 该元素占用空间的高度，以 CSS 像素（px）表示，默认为 150。
-- {{htmlattrdef("moz-opaque")}} {{non-standard_inline}} {{deprecated_inline}}
+- `moz-opaque` {{non-standard_inline}} {{deprecated_inline}}
   - : 通过设置这个属性，来控制 canvas 元素是否半透明。如果你不想 canvas 元素被设置为半透明，使用这个元素将可以优化浏览器绘图性能。
-- {{htmlattrdef("width")}}
+- `width`
   - : 该元素占用空间的宽度，以 CSS 像素（px）表示，默认为 300。
 
 ## 注意事项
@@ -48,7 +48,8 @@ slug: Web/HTML/Element/canvas
 ```html
 <canvas id="canvas" width="300" height="300">
   抱歉，您的浏览器不支持 canvas 元素
- （这些内容将会在不支持<canvas>元素的浏览器或是禁用了 JavaScript 的浏览器内渲染并展现）
+  （这些内容将会在不支持&lt;canvas%gt;元素的浏览器或是禁用了 JavaScript
+  的浏览器内渲染并展现）
 </canvas>
 ```
 
@@ -57,9 +58,9 @@ slug: Web/HTML/Element/canvas
 使用{{domxref("HTMLCanvasElement.getContext()")}}获得一个绘图上下文并开始绘制
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 ```
 

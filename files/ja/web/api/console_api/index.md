@@ -26,23 +26,21 @@ Console API は、一貫性のない方法ではありますが、さまざま�
 ## 例
 
 ```js
-let myString = 'Hello world';
+let myString = "Hello world";
 
 // "Hello world" をコンソールに出力
-console.log(myString)
+console.log(myString);
 ```
 
 その他の例については、[`console` のリファレンスページ](/ja/docs/Web/API/Console#Usage)を参照してください。
 
 ## 仕様
 
-| 仕様                                 | 状態                             | コメント |
-| ------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('Console API')}} | {{Spec2('Console API')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Console")}}
+{{Compat}}
 
 ## 関連情報
 

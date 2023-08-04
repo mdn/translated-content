@@ -1,7 +1,6 @@
 ---
 title: Exported WebAssembly functions
 slug: WebAssembly/Exported_functions
-translation_of: WebAssembly/Exported_functions
 ---
 
 {{WebAssemblySidebar}}
@@ -26,13 +25,12 @@ Regardons un exemple pour mettre les choses au clair (tu peux le trouver sur Git
 ```js
 var otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
 
-WebAssembly.instantiateStreaming(fetch('table.wasm'))
-.then(obj => {
+WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
   var tbl = obj.instance.exports.tbl;
-  console.log(tbl.get(0)());  // 13
-  console.log(tbl.get(1)());  // 42
-  otherTable.set(0,tbl.get(0));
-  otherTable.set(1,tbl.get(1));
+  console.log(tbl.get(0)()); // 13
+  console.log(tbl.get(1)()); // 42
+  otherTable.set(0, tbl.get(0));
+  otherTable.set(1, tbl.get(1));
   console.log(otherTable.get(0)());
   console.log(otherTable.get(1)());
 });
@@ -40,7 +38,7 @@ WebAssembly.instantiateStreaming(fetch('table.wasm'))
 
 Dans cet exemple, nous créons une table (`otherTable`) à partir de JavaScript en utilisant le constructeur {{jsxref("WebAssembly.Table")}}, puis nous chargeons table.wasm dans notre page en utilisant la méthode {{jsxref("WebAssembly.instantiateStreaming()")}}.
 
-Nous pouvons ensuite accéder aux fonctions exportées à partir du module, récupérer les références de chaque fonction via  [`tbl.get()`](/fr/docs/WebAssembly/API/Table/get) et logguer le résultat de chacune d'elles dans la console. Enfin, nous utilisons `set()` avec la table `otherTable` afin de lui fournir les references aux mêmes functions que la table `tbl`.
+Nous pouvons ensuite accéder aux fonctions exportées à partir du module, récupérer les références de chaque fonction via [`tbl.get()`](/fr/docs/WebAssembly/API/Table/get) et logguer le résultat de chacune d'elles dans la console. Enfin, nous utilisons `set()` avec la table `otherTable` afin de lui fournir les references aux mêmes functions que la table `tbl`.
 
 Pour vérifier que cela à fonctionné correctement, nous récupérons les références de la table `otherTable` et imprimons également les résultats dans la console, et les résultats sont identiques aux précédents.
 

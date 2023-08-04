@@ -1,13 +1,8 @@
 ---
 title: id
 slug: Web/HTML/Global_attributes/id
-tags:
-  - Atributos globales
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Global_attributes/id
-original_slug: Web/HTML/Atributos_Globales/id
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 El [atributo global](/es/docs/Web/HTML/Global_attributes) **id** define un identificador único (ID) el cual no debe repetirse en todo el documento. Su propósito es identificar el elemento al vincularlo (usando un identificador de fragmento), en scripts u hojas de estilo (con CSS).
@@ -20,16 +15,11 @@ El valor de este atributo no debe contener espacios en blanco. Los navegadores t
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                           | Comentario                                                                                                                                                                                                                                                                                      |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#the-id-attribute", "id")}} | {{Spec2('HTML WHATWG')}} | Sin cambios desde el último snapshot, {{SpecName('HTML5.1')}}                                                                                                                                                                                                                          |
-| {{SpecName('HTML5.1', "dom.html#the-id-attribute", "id")}}         | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, sin cambios de {{SpecName('HTML5 W3C')}}                                                                                                                                                                                               |
-| {{SpecName('HTML5 W3C', "dom.html#the-id-attribute", "id")}}     | {{Spec2('HTML5 W3C')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, ahora acepta `'_'`, `'-'` and `'.'` si no se encuentra al principio del id. También es un atributo global verdadero.                                                                                                                          |
-| {{SpecName('HTML4.01', 'struct/global.html#adef-id', 'id')}}     | {{Spec2('HTML4.01')}}     | Soportado en todos los elementos a excepción de {{HTMLElement("base")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, y {{HTMLElement("title")}}. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.id")}}
+{{Compat}}
 
 ## Ver también
 

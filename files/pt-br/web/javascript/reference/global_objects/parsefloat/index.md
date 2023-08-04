@@ -1,13 +1,8 @@
 ---
 title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/parseFloat
-tags:
-  - JavaScript
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
-browser-compat: javascript.builtins.parseFloat
 ---
+
 {{jsSidebar("Objects")}}
 
 A função `parseFloat` analisa um argumento (convertendo-o para uma string primeiro caso necessário) e retorna um número de ponto flutuante (número decimal).
@@ -54,7 +49,7 @@ parseFloat("0.0314E+2");
 parseFloat("3.14more non-digit characters");
 ```
 
-### `parseFloat` retornando `NaN`:
+### `parseFloat` retornando `NaN`
 
 O exemplo a seguir retorna `NaN`
 

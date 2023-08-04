@@ -1,14 +1,8 @@
 ---
 title: GlobalEventHandlers.onsubmit
 slug: Web/API/HTMLFormElement/submit_event
-tags:
-  - API
-  - HTML DOM
-  - 레퍼런스
-  - 속성
-translation_of: Web/API/GlobalEventHandlers/onsubmit
-original_slug: Web/API/GlobalEventHandlers/onsubmit
 ---
+
 {{ApiRef("HTML DOM")}}
 
 현재 창에서 폼을 제출하는 이벤트를 다루는 이벤트 핸들러
@@ -27,23 +21,23 @@ window.onsubmit = funcRef;
 
 ```html
 <html>
-<script>
-function reg() {
-  window.captureEvents(Event.SUBMIT);
-  window.onsubmit = hit;
-}
+  <script>
+    function reg() {
+      window.captureEvents(Event.SUBMIT);
+      window.onsubmit = hit;
+    }
 
-function hit() {
-  console.log('hit');
-}
-</script>
+    function hit() {
+      console.log("hit");
+    }
+  </script>
 
-<body onload="reg();">
-<form>
-  <input type="submit" value="submit" />
-</form>
-<div id="d"> </div>
-</body>
+  <body onload="reg();">
+    <form>
+      <input type="submit" value="submit" />
+    </form>
+    <div id="d"></div>
+  </body>
 </html>
 ```
 

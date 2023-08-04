@@ -34,9 +34,7 @@ sym === sym[Symbol.toPrimitive](); // true
 
 ## 仕様書
 
-| 仕様書                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.prototype-@@toprimitive', 'Symbol.prototype.@@toPrimitive')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

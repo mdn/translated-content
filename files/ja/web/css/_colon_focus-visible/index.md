@@ -1,5 +1,5 @@
 ---
-title: ':focus-visible'
+title: ":focus-visible"
 slug: Web/CSS/:focus-visible
 ---
 
@@ -11,7 +11,9 @@ slug: Web/CSS/:focus-visible
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:focus-visible
+```
 
 ## 例
 

@@ -1,17 +1,6 @@
 ---
 title: CacheStorage.open()
 slug: Web/API/CacheStorage/open
-page-type: web-api-instance-method
-tags:
-  - API
-  - CacheStorage
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - open
-browser-compat: api.CacheStorage.open
 ---
 
 {{APIRef("Service Workers API")}}
@@ -42,7 +31,7 @@ Una {{jsxref("Promise")}} que se resuelve en el objeto {{domxref("Cache")}} soli
 
 ## Ejemplos
 
-Este ejemplo es de MDN [ejemplo de *service worker* simple](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (ve el [*service worker* simple ejecutándose en vivo](https://bncb2v.csb.app/)).
+Este ejemplo es de MDN [ejemplo de _service worker_ simple](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (ve el [_service worker_ simple ejecutándose en vivo](https://bncb2v.csb.app/)).
 Aquí esperamos a que se active un {{domxref("InstallEvent")}}, luego se ejecuta
 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} para gestionar el proceso de instalación de
 la aplicación. Esto consiste en llamar a `CacheStorage.open()` para crear una nueva
@@ -64,8 +53,8 @@ self.addEventListener("install", (event) => {
           "/gallery/bountyHunters.jpg",
           "/gallery/myLittleVader.jpg",
           "/gallery/snowTroopers.jpg",
-        ])
-      )
+        ]),
+      ),
   );
 });
 ```
@@ -80,6 +69,6 @@ self.addEventListener("install", (event) => {
 
 ## Véase también
 
-- [Usar *Service Workers*](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Usar _Service Workers_](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("caches")}}

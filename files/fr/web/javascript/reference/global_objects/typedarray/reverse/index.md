@@ -1,16 +1,6 @@
 ---
 title: TypedArray.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reverse
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reverse
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/reverse
 ---
 
 {{JSRef}}
@@ -40,14 +30,11 @@ console.log(uint8); // Uint8Array [3, 2, 1]
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.reverse', 'TypedArray.prototype.reverse')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.reverse', 'TypedArray.prototype.reverse')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.reverse")}}
+{{Compat}}
 
 ## Voir aussi
 

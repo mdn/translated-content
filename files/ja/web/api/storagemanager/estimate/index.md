@@ -59,9 +59,7 @@ navigator.storage.estimate().then(function(estimate) {
 
 ## 仕様書
 
-| 仕様書                                                                                   | 状態                         | 備考     |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Storage','#dom-storagemanager-estimate','estimate()')}} | {{Spec2('Storage')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

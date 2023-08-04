@@ -1,43 +1,46 @@
 ---
-title: Element.releasePointerCapture()
+title: "Element: releasePointerCapture() メソッド"
+short-title: releasePointerCapture()
 slug: Web/API/Element/releasePointerCapture
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
 
-{{domxref("Element")}} インターフェイスの **`releasePointerCapture()`** メソッドは、特定の（{{domxref("PointerEvent")}}）*ポインタ*に対して以前に設定された*ポインタキャプチャ*を解放（停止）します。
+**`releasePointerCapture()`** は {{domxref("Element")}} インターフェイスのメソッドで、特定の（{{domxref("PointerEvent")}} の）*ポインター*に対して以前に設定された*ポインターキャプチャ*を解放（停止）します。
 
-*ポインタキャプチャ*の説明と特定の要素に設定する方法については、{{domxref("Element.setPointerCapture","Element.setPointerCapture()")}} メソッドを参照してください。
+*ポインターキャプチャ*の説明と特定の要素に設定する方法については、{{domxref("Element.setPointerCapture","Element.setPointerCapture()")}} メソッドを参照してください。
 
 ## 構文
 
-```
-targetElement.releasePointerCapture(pointerId);
+```js-nolint
+releasePointerCapture(pointerId)
 ```
 
-### パラメーター
+### 引数
 
 - `pointerId`
   - : {{domxref("PointerEvent")}} オブジェクトの {{domxref("PointerEvent.pointerId", "pointerId")}}。
 
-### 戻り値
+### 返値
 
-このメソッドは `undefined` を返します。
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
 | 例外               | 説明                                                   |
 | ------------------ | ------------------------------------------------------ |
-| `InvalidPointerId` | pointerId は、どのアクティブポインタとも一致しません。 |
+| `InvalidPointerId` | pointerId がどのアクティブなポインターとも一致しない場合。 |
 
 ## 例
 
-この例では、{{HtmlElement("div")}} を押下するとポインタキャプチャが設定されます。 これにより、ポインタをその境界の外側に移動した場合でも、要素を水平方向にスライドさせることができます。
+この例では、{{HtmlElement("div")}} を押下するとポインターキャプチャが設定されます。 これにより、ポインターをその境界の外側に移動した場合でも、要素を水平方向にスライドさせることができます。
 
 ### HTML
 
 ```html
-<div id="slider">SLIDE ME</div>
+<div id="slider">スライドしてね</div>
 ```
 
 ### CSS
@@ -70,7 +73,7 @@ function slide(e) {
   slider.style.transform = `translate(${e.clientX - 70}px)`;
 }
 
-const slider = document.getElementById('slider');
+const slider = document.getElementById("slider");
 
 slider.onpointerdown = beginSliding;
 slider.onpointerup = stopSliding;
@@ -78,14 +81,11 @@ slider.onpointerup = stopSliding;
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                                             | 状態                                     | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('Pointer Events 2','#idl-def-element-releasepointercapture-pointerid', 'releasePointerCapture')}} | {{Spec2('Pointer Events 2')}} | 不安定版 |
-| {{SpecName('Pointer Events', '#idl-def-element-releasepointercapture-pointerid', 'releasePointerCapture')}} | {{Spec2('Pointer Events')}}     | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -94,4 +94,4 @@ slider.onpointerup = stopSliding;
 ## 関連情報
 
 - {{ domxref("Element.setPointerCapture","Element.setPointerCapture()") }}
-- {{ domxref("Pointer_events","Pointer Events") }}
+- {{domxref("Pointer_events","ポインターイベント", "", 1)}}

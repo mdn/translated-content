@@ -1,13 +1,8 @@
 ---
 title: ANGLE_instanced_arrays
 slug: Web/API/ANGLE_instanced_arrays
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
-translation_of: Web/API/ANGLE_instanced_arrays
 ---
+
 {{APIRef("WebGL")}}
 
 A extenção **`ANGLE_instanced_arrays`** é parte do [WebGL API](/pt-BR/docs/Web/API/WebGL_API) e permite desenhar o mesmo objeto, ou grupos de objectos semelhantes várias vezes, se eles compartilham os mesmos dados de vértice, contagem primitiva e tipo.
@@ -41,18 +36,16 @@ Essa extensão expõe três novos métodos.
 Habilitando a extenção:
 
 ```js
-var ext = gl.getExtension('ANGLE_instanced_arrays');
+var ext = gl.getExtension("ANGLE_instanced_arrays");
 ```
 
 ## Especificações
 
-| Especificação                                                                                | Status                                           | Comentário         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------ |
-| {{SpecName('ANGLE_instanced_arrays', '', 'ANGLE_instanced_arrays')}} | {{Spec2('ANGLE_instanced_arrays')}} | definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.ANGLE_instanced_arrays")}}
+{{Compat}}
 
 ## Ver também
 

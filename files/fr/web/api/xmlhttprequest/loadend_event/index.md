@@ -1,19 +1,11 @@
 ---
 title: GlobalEventHandlers.onloadend
 slug: Web/API/XMLHttpRequest/loadend_event
-tags:
-  - API
-  - DOM
-  - Gestionnaires d'évènements
-  - Propriétés
-  - évènements
-translation_of: Web/API/GlobalEventHandlers/onloadend
-original_slug: Web/API/GlobalEventHandlers/onloadend
 ---
 
 {{ApiRef}}
 
-La propriété **`onloadend`** du "mixin" {{domxref("GlobalEventHandlers")}} Un gestionnaire d'évènement représentant le code à appeler lorsque l'évènement {{event("loadend")}} est déclenché (quand la progression est arrêtée sur le chargement d'une ressource).
+La propriété **`onloadend`** du "mixin" {{domxref("GlobalEventHandlers")}} Un gestionnaire d'évènement représentant le code à appeler lorsque l'évènement `loadend` est déclenché (quand la progression est arrêtée sur le chargement d'une ressource).
 
 ## Syntaxe
 
@@ -30,7 +22,7 @@ img.onloadend = funcRef;
 ### Contenu HTML
 
 ```html
-<img src="myImage.jpg">
+<img src="myImage.jpg" />
 ```
 
 ### Contenu JavaScript
@@ -38,16 +30,16 @@ img.onloadend = funcRef;
 ```js
 // 'loadstart' est le premier lancé, puis 'load', puis 'loadend'
 
-image.addEventListener('load', function(e) {
-  console.log('Image loaded');
+image.addEventListener("load", function (e) {
+  console.log("Image loaded");
 });
 
-image.addEventListener('loadstart', function(e) {
-  console.log('Image load started');
+image.addEventListener("loadstart", function (e) {
+  console.log("Image load started");
 });
 
-image.addEventListener('loadend', function(e) {
-  console.log('Image load finished');
+image.addEventListener("loadend", function (e) {
+  console.log("Image load finished");
 });
 ```
 

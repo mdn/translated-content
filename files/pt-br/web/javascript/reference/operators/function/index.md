@@ -1,16 +1,8 @@
 ---
 title: Expressão de função (function expression)
 slug: Web/JavaScript/Reference/Operators/function
-tags:
-  - Expressões Primárias
-  - Função
-  - Internet
-  - JavaScript
-  - Operador
-  - Rede
-  - Web
-translation_of: Web/JavaScript/Reference/Operators/function
 ---
+
 {{jsSidebar("Operators")}}
 
 A palavra-chave **`function`** pode ser usada para definir uma função dentro de uma expressão.
@@ -41,33 +33,32 @@ Uma expressão de função (_function expression_) é muito similar e tem quase 
 O exemplo a seguir define uma função sem nome e a atribui a x. A função retorna o quadrado de seu argumento:
 
 ```js
-var x = function(y) {
-   return y * y;
+var x = function (y) {
+  return y * y;
 };
 ```
 
 ### Expressão de função nomeada
 
-Se você quer se referir à função atual dentro do corpo da função, você terá que criar uma expressão de função nomeada. Este nome será local apenas para o corpo (escopo) da função. Isto ainda evita o uso da propriedade não-padronizada [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee).
+Se você quer se referir à função atual dentro do corpo da função, você terá que criar uma expressão de função nomeada. Este nome será local apenas para o corpo (escopo) da função. Isto ainda evita o uso da propriedade não-padronizada [`arguments.callee`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments/callee).
 
 ```js
 var math = {
-  'factorial': function factorial(n) {
-    if (n <= 1)
-      return 1;
+  factorial: function factorial(n) {
+    if (n <= 1) return 1;
     return n * factorial(n - 1);
-  }
+  },
 };
 ```
 
 ## Especificações
 
-| Especificação                                                                                        | Status                       | Comentários                                        |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| Especificação                                                                | Status               | Comentários                                        |
+| ---------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ES5.1', '#sec-13', 'Function definition')}}                             | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES3', '#sec-13', 'Function definition')}}                             | {{Spec2('ES3')}}         | Initial definition. Implemented in JavaScript 1.5. |
+| {{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}     | {{Spec2('ES6')}}     |                                                    |
+| {{SpecName('ES5.1', '#sec-13', 'Function definition')}}                      | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES3', '#sec-13', 'Function definition')}}                        | {{Spec2('ES3')}}     | Initial definition. Implemented in JavaScript 1.5. |
 
 ## Compatibilidade com navegadores
 

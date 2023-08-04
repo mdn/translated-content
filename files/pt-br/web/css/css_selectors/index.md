@@ -1,14 +1,8 @@
 ---
 title: Seletores CSS
-slug: Web/CSS/CSS_Selectors
-tags:
-  - CSS
-  - Referência(2)
-  - Seletores
-  - Seletores CSS
-translation_of: Web/CSS/CSS_Selectors
-original_slug: Web/CSS/Seletores_CSS
+slug: Web/CSS/CSS_selectors
 ---
+
 {{CSSRef}}
 
 Os Seletores definem quais elementos um conjunto de regras CSS se aplica.

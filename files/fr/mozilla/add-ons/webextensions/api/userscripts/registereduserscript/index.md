@@ -1,14 +1,6 @@
 ---
 title: userScripts.RegisteredUserScript
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript
-tags:
-  - API
-  - Extensions
-  - Reference
-  - RegisteredUserScript
-  - Type
-  - userScripts
-translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript
 ---
 
 {{AddonSidebar()}}
@@ -24,6 +16,6 @@ L'objet définit une méthode unique, {{WebExtAPIRef("userScripts.RegisteredUser
 - {{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","unregister()")}}
   - : Désenregistre les scripts utilisateurs représentés par cet objet.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.userScripts.RegisteredUserScript", 10)}}
+{{Compat}}

@@ -11,7 +11,7 @@ HMAC は、完全性と認証の両方を保証するために使用されます
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "HMAC")}}
+- Wikipedia 上の [HMAC](https://ja.wikipedia.org/wiki/HMAC)
 
 ### 技術文書
 

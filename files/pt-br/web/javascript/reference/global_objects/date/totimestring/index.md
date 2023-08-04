@@ -1,17 +1,8 @@
 ---
 title: Date.prototype.toTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toTimeString
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototipo
-  - Prototype
-  - Referencia
-  - data
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toTimeString
 ---
+
 {{JSRef}}
 
 O método **`toTimeString()`** retorna uma porção de tempo de um objeto {{jsxref("Date")}} de forma legível para um ser humano em Inglês Americano.
@@ -41,14 +32,14 @@ O `toTimeString()` método é especialmente útil por que motores parecidos que 
 ```js
 var d = new Date(1993, 6, 28, 14, 39, 7);
 
-console.log(d.toString());     // Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
+console.log(d.toString()); // Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
 console.log(d.toTimeString()); // 14:39:07 GMT-0600 (PDT)
 ```
 
 ## Especificações
 
-| Especificação                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------ |
+| Especificação                                                                              |
+| ------------------------------------------------------------------------------------------ |
 | {{SpecName('ESDraft', '#sec-date.prototype.totimestring', 'Date.prototype.toTimeString')}} |
 
 ## Compatibilidade com navegadores

@@ -1,14 +1,6 @@
 ---
 title: WebGLRenderingContext.texParameter[fi]()
 slug: Web/API/WebGLRenderingContext/texParameter
-tags:
-  - API
-  - Méthode
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/texParameter
 ---
 
 {{APIRef("WebGL")}}
@@ -140,7 +132,7 @@ Le paramètre `nomp` est un {{domxref("Glenum")}} indiquant le paramètre de tex
     <tr>
       <td><code>gl.TEXTURE_WRAP_R</code></td>
       <td>
-        Fonction d'emballage pour la coordonnée de texture  <code>r</code>
+        Fonction d'emballage pour la coordonnée de texture <code>r</code>
       </td>
       <td>
         <code>gl.REPEAT</code> (valeur par défaut),
@@ -158,7 +150,11 @@ Aucune.
 
 ```js
 gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST);
+gl.texParameteri(
+  gl.TEXTURE_2D,
+  gl.TEXTURE_MIN_FILTER,
+  gl.LINEAR_MIPMAP_NEAREST,
+);
 ```
 
 ## Spécifications

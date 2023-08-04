@@ -1,11 +1,10 @@
 ---
 title: min-height
 slug: Web/CSS/min-height
-translation_of: Web/CSS/min-height
 ---
 {{CSSRef}}
 
-Свойство [CSS](ru/docs/Web/CSS)** `min-height`** устанавливает минимальную высоту элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("height") }} от становления меньше, чем значение, указанное для `min-height`.
+Свойство [CSS](/ru/docs/Web/CSS) **`min-height`** устанавливает минимальную высоту элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("height") }} от становления меньше, чем значение, указанное для `min-height`.
 
 {{EmbedInteractiveExample("pages/css/min-height.html")}}
 
@@ -80,4 +79,4 @@ form { min-height: 0; }
 ## Смотрите также
 
 - {{ Cssxref("height") }}, {{ Cssxref("max-height") }}
-- [Блочная модель](/ru/docs/CSS/box_model "en/CSS/box_model"), {{ Cssxref("box-sizing") }}
+- [Блочная модель](/ru/docs/CSS/box_model), {{ Cssxref("box-sizing") }}

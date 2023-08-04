@@ -59,9 +59,7 @@ typeof symObj // => "object"
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol-constructor', 'Symbol constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

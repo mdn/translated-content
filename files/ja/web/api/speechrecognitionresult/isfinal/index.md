@@ -39,9 +39,7 @@ recognition.onresult = function(event) {
 
 ## 仕様
 
-| 仕様                                                                         | 状態                                 | コメント |
-| ---------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Web Speech API', '#dfn-isFinal', 'isFinal')}} | {{Spec2('Web Speech API')}} |          |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

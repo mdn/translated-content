@@ -39,7 +39,8 @@ Math.min([value1[, value2[, ...]]])
 変数 `x` と `y` の小さい方を `z` に代入します。
 
 ```js
-var x = 10, y = -20;
+var x = 10,
+  y = -20;
 var z = Math.min(x, y);
 ```
 
@@ -65,9 +66,7 @@ var x = Math.min(f(foo), boundary);
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.min', 'Math.min')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

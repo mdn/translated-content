@@ -95,9 +95,7 @@ ws.has(bar);    // true, bar は残っている
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakset-objects', 'WeakSet')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -11,7 +11,7 @@ slug: Learn/HTML/Multimedia_and_embedding
 
 在此單元開始之前，我們假設你對 HTML 基礎知識 (如[HTML 介紹](/zh-TW/docs/Learn/HTML/Introduction_to_HTML)) 已經有一定的了解，如果還沒有，建議您先預習該部分再回來。
 
-> **備註：** 如果你所操作的電腦、平板或裝置環境不允許你建立自己的檔案，你可以在諸如 [JSBin](https://jsbin.com/) 或[Thimble](https://thimble.mozilla.org/) 這樣的網站上嘗試(多數的)範例程式碼。
+> **備註：** 如果你所操作的電腦、平板或裝置環境不允許你建立自己的檔案，你可以在諸如 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 這樣的網站上嘗試(多數的)範例程式碼。
 
 ## 導覽
 

@@ -1,11 +1,11 @@
 ---
-title: 'Document: DOMContentLoaded 事件'
+title: "Document: DOMContentLoaded 事件"
 slug: Web/API/Document/DOMContentLoaded_event
 ---
 
 {{APIRef}}
 
-当纯 HTML 被完全加载以及解析时，**`DOMContentLoaded` **事件会被触发，而不必等待样式表，图片或者子框架完成加载。
+当纯 HTML 被完全加载以及解析时，**`DOMContentLoaded`** 事件会被触发，而不必等待样式表，图片或者子框架完成加载。
 
 <table class="properties">
   <tbody>
@@ -37,8 +37,8 @@ JavaScript 的同步模式会导致 DOM 解析暂停。如果你想在用户请�
 ### 基本用法
 
 ```js
-document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed'); // 译者注："DOM 完全加载以及解析"
+document.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM fully loaded and parsed"); // 译者注："DOM 完全加载以及解析"
 });
 ```
 
@@ -46,13 +46,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ```html
 <script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
+  document.addEventListener("DOMContentLoaded", (event) => {
+    console.log("DOM fully loaded and parsed");
   });
 
-for( let i = 0; i < 1000000000; i++)
-{} // 这段同步脚本将会延迟 DOM 解析，
-   // 所以 DOMContentLoaded 事件将会延迟执行。
+  for (let i = 0; i < 1000000000; i++) {} // 这段同步脚本将会延迟 DOM 解析，
+  // 所以 DOMContentLoaded 事件将会延迟执行。
 </script>
 ```
 
@@ -62,12 +61,14 @@ for( let i = 0; i < 1000000000; i++)
 
 ```js
 function doSomething() {
-  console.info('DOM loaded');
+  console.info("DOM loaded");
 }
 
-if (document.readyState === 'loading') {  // 此时加载尚未完成
-  document.addEventListener('DOMContentLoaded', doSomething);
-} else {  // 此时`DOMContentLoaded` 已经被触发
+if (document.readyState === "loading") {
+  // 此时加载尚未完成
+  document.addEventListener("DOMContentLoaded", doSomething);
+} else {
+  // 此时`DOMContentLoaded` 已经被触发
   doSomething();
 }
 ```
@@ -108,7 +109,8 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
@@ -120,26 +122,26 @@ label, button {
 #### JS
 
 ```js
-const log = document.querySelector('.event-log-contents');
-const reload = document.querySelector('#reload');
+const log = document.querySelector(".event-log-contents");
+const reload = document.querySelector("#reload");
 
-reload.addEventListener('click', () => {
-  log.textContent ='';
+reload.addEventListener("click", () => {
+  log.textContent = "";
   window.setTimeout(() => {
-      window.location.reload(true);
+    window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) => {
-    log.textContent = log.textContent + 'load\n';
+window.addEventListener("load", (event) => {
+  log.textContent = log.textContent + "load\n";
 });
 
-document.addEventListener('readystatechange', (event) => {
-    log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
+document.addEventListener("readystatechange", (event) => {
+  log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    log.textContent = log.textContent + `DOMContentLoaded\n`;
+document.addEventListener("DOMContentLoaded", (event) => {
+  log.textContent = log.textContent + `DOMContentLoaded\n`;
 });
 ```
 

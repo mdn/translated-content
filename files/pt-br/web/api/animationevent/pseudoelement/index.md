@@ -1,15 +1,8 @@
 ---
 title: AnimationEvent.pseudoElement
 slug: Web/API/AnimationEvent/pseudoElement
-tags:
-  - AnimationEvent
-  - Animação Web
-  - Apps
-  - CSSOM
-  - Propriedade
-  - Referencia
-translation_of: Web/API/AnimationEvent/pseudoElement
 ---
+
 {{SeeCompatTable}}{{ apiref("Web Animations API") }}
 
 ## Sumário
@@ -24,13 +17,11 @@ name = AnimationEvent.pseudoElement
 
 ## Especificações
 
-| Especificação                                                                                                                        | Estado                                   | Comentário          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Animations', '#AnimationEvent-pseudoElement', 'AnimationEvent.pseudoElement') }} | {{ Spec2('CSS3 Animations')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.AnimationEvent.pseudoElement")}}
+{{Compat}}
 
 ## See also
 

@@ -1,16 +1,8 @@
 ---
 title: Window.scrollTo()
 slug: Web/API/Window/scrollTo
-tags:
-  - API
-  - CSSOM View
-  - NeedsCompatTable
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Referencia
-  - metodo
-translation_of: Web/API/Window/scrollTo
 ---
+
 {{ APIRef }}
 
 ## Resumo
@@ -31,7 +23,7 @@ window.scrollTo(x-coord, y-coord)
 ## Exemplo
 
 ```js
-window.scrollTo( 0, 1000 );
+window.scrollTo(0, 1000);
 ```
 
 ## Notas
@@ -40,6 +32,8 @@ Essa função é efetivamente a mesma que [window.scroll](/pt-BR/docs/DOM/Window
 
 ## Especificações
 
-| Especificação                                                                                | Status                           | Comentário         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }} | {{ Spec2('CSSOM View') }} | Definição inicial. |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

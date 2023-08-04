@@ -1,10 +1,9 @@
 ---
 title: <url>
 slug: Web/CSS/url
-original_slug: Web/CSS/url()
 ---
 
-{{ CssRef() }}
+{{CSSRef}}
 
 ## 概述
 
@@ -36,16 +35,20 @@ URL 可以使用单引号或双引号包含，也可以直接书写。可以在�
  <CSS 属性>:  url(http://mysite.example.com/mycursor.png)
 ```
 
-> **备注：** 从 Firefox 15 开始，不再允许在未用引号包含的 url() 中使用大于 0x7e 的控制字符。详情请查看 {{Bug(752230)}}。
+> **备注：** 从 Firefox 15 开始，不再允许在未用引号包含的 url() 中使用大于 0x7e 的控制字符。详情请查看 [Firefox bug 752230](https://bugzil.la/752230)。
 
 ## 示例
 
 ```css
-.topbanner { background: url("topbanner.png") #00D no-repeat fixed; }
+.topbanner {
+  background: url("topbanner.png") #00d no-repeat fixed;
+}
 ```
 
 ```css
-ul { list-style: square url(http://www.example.com/redball.png) }
+ul {
+  list-style: square url(http://www.example.com/redball.png);
+}
 ```
 
 ## 规范

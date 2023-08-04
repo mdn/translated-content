@@ -1,8 +1,8 @@
 ---
 title: <display-outside>
 slug: Web/CSS/display-outside
-translation_of: Web/CSS/display-outside
 ---
+
 {{CSSRef}}
 
 O `<display-outside>` as palavras-chave especificam a parte externa do elemento {{CSSxRef("display")}} type, que é essencialmente seu papel no layout de fluxo. Essas palavras-chave são usadas como valores do `display` e pode ser usada para fins legados como uma única palavra-chave ou conforme definido na especificação do Nível 3, juntamente com um valor do {{CSSxRef("&lt;display-inside&gt;")}} palavras-chave.
@@ -23,7 +23,7 @@ O `<display-outside>` O valor é definido usando uma palavra-chave da lista abai
 
     Os elementos de entrada funcionam como linhas ou blocos, dependendo dos elementos circundantes. Ou seja: Se a caixa de introdução contém uma caixa de bloco, o mesmo que bloco. Se uma caixa de bloco segue a caixa de introdução, a caixa de introdução torna-se a primeira caixa embutida da caixa de bloco. Se uma caixa embutida se seguir, a caixa de introdução se tornará uma caixa de bloco.
 
-> **Note:** **Nota: Navegadores que suportam a sintaxe de dois valores, encontrando apenas o valor externo, como quando**`display: block` ou `display: inline` especificado, definirá o valor interno como`flow`. Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento a ser bloco, seria de esperar que os filhos desse elemento participassem do layout de fluxo normal em bloco e em linha.
+> **Nota:**: Navegadores que suportam a sintaxe de dois valores, encontrando apenas o valor externo, como quando `display: block` ou `display: inline` especificado, definirá o valor interno como`flow`. Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento a ser bloco, seria de esperar que os filhos desse elemento participassem do layout de fluxo normal em bloco e em linha.
 
 ### Sintaxe formal
 

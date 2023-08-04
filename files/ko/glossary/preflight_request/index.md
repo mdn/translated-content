@@ -2,6 +2,7 @@
 title: 사전 요청
 slug: Glossary/Preflight_request
 ---
+
 교차 출처 리소스 공유 사전 요청은 본격적인 교차 출처 HTTP 요청 전에 서버 측에서 그 요청의 메서드와 헤더에 대해 인식하고 있는지를 체크하는 것입니다.
 
 이것은 HTTPHeader("Access-Control-Request-Method"), HTTPHeader("Access-Control-Request-Headers"), HTTPHeader("Origin") 총 3가지의 HTTP request headers를 사용하는 HTTPMethod("OPTIONS") 요청입니다.

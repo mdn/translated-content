@@ -128,9 +128,7 @@ function knownCharCodeAt(str, idx) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.charcodeat', 'String.prototype.charCodeAt')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

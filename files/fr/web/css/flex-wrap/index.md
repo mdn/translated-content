@@ -1,7 +1,6 @@
 ---
 title: flex-wrap
 slug: Web/CSS/flex-wrap
-translation_of: Web/CSS/flex-wrap
 ---
 
 {{CSSRef}}
@@ -33,7 +32,7 @@ La propriété `flex-wrap` peut être défini grâce à l'un des mots-clés suiv
 - `nowrap`
   - : Les éléments flexibles sont disposés sur une seule ligne. Cela peut entraîner un dépassement du conteneur. La ligne **cross-start** est équivalente à **start** ou à **before** selon la valeur de {{cssxref("flex-direction")}}. Cette valeur est la valeur par défaut.
 - `wrap`
-  - : Les éléments flexibles sont disposé sur plusieurs lignes. La ligne **cross-start** est équivalente à  **start** ou **before** en fonction de la valeur de `flex-direction` et la ligne **cross-end** est à l'opposée **cross-start**.
+  - : Les éléments flexibles sont disposé sur plusieurs lignes. La ligne **cross-start** est équivalente à **start** ou **before** en fonction de la valeur de `flex-direction` et la ligne **cross-end** est à l'opposée **cross-start**.
 - `wrap-reverse`
   - : Se comporte comme `wrap` mais **cross-start** et **cross-end** sont permutées.
 
@@ -50,21 +49,21 @@ La propriété `flex-wrap` peut être défini grâce à l'un des mots-clés suiv
 ### HTML
 
 ```html
-<h4>Un exemple de flex-wrap:wrap </h4>
+<h4>Un exemple de flex-wrap:wrap</h4>
 <div class="contenu">
   <div class="rouge">1</div>
   <div class="vert">2</div>
   <div class="bleu">3</div>
 </div>
 
-<h4>Un exemple de flex-wrap:nowrap </h4>
+<h4>Un exemple de flex-wrap:nowrap</h4>
 <div class="contenu1">
   <div class="rouge">1</div>
   <div class="vert">2</div>
   <div class="bleu">3</div>
 </div>
 
-<h4>Un exemple de flex-wrap:wrap-reverse </h4>
+<h4>Un exemple de flex-wrap:wrap-reverse</h4>
 <div class="contenu2">
   <div class="rouge">1</div>
   <div class="vert">2</div>

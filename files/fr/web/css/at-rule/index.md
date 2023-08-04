@@ -1,12 +1,6 @@
 ---
 title: Règles @
 slug: Web/CSS/At-rule
-tags:
-  - CSS
-  - Reference
-  - Règle @
-translation_of: Web/CSS/At-rule
-original_slug: Web/CSS/Règles_@
 ---
 
 {{cssref}}
@@ -15,7 +9,7 @@ Une **règle @** est une [expression CSS](/fr/Apprendre/CSS/Introduction_à_CSS/
 
 ```css
 /* Forme générique */
-@IDENTIFIANT (RÈGLE);
+@identifiant (RÈGLE);
 
 /* Exemple : indiquer au navigateur d'utiliser */
 /* UTF-8 comme jeu de caractères */
@@ -35,7 +29,6 @@ Il existe de nombreuses règles @, désignées par leurs identifiants, chacune a
   - {{cssxref("@page")}} : une règle qui décrit les modifications de disposition à appliquer lorsque le document doit être imprimé/paginé.
   - {{cssxref("@font-face")}} : une règle qui définit une police externe à télécharger.
   - {{cssxref("@keyframes")}} : une règle qui décrit les états des différentes étapes intermédiaires qui composent une animation CSS.
-  - {{cssxref("@viewport")}} {{experimental_inline}} : une règle de groupe conditionnelle qui applique son contenu selon des critères relatifs à la zone d'affichage (_viewport_) _(cette règle est au stade du brouillon de travail)._
   - {{cssxref("@counter-style")}} : une règle qui permet de définir des styles de compteur spécifiques qui ne font pas partie des styles prédéfinis (bien que la spécification ait atteint le niveau de _Candidate Recommendation_, cette fonctionnalité est uniquement implémentée dans Gecko au moment où nous écrivons ces lignes)
   - {{cssxref("@font-feature-values")}} (ainsi que `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` et `@character-variant`) : ces règles permettent de définir des noms d'usages pour la propriété {{cssxref("font-variant-alternates")}} qui permet d'activer différentes caractéristiques des polices OpenType (bien que la spécification ait atteint le niveau de _Candidate Recommendation_, cette fonctionnalité est uniquement implémentée dans Gecko au moment où nous écrivons ces lignes)
 

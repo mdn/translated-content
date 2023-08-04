@@ -41,9 +41,7 @@ _`WorkerLocation` インタフェースには、{{domxref("URLUtilsReadOnly")}} 
 
 ## 仕様
 
-| 仕様                                                                                 | 状態                             | コメント |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#workerlocation', 'WorkerLocation')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザ互換性
 

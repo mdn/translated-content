@@ -1,144 +1,40 @@
 ---
-title: HTTP Public Key Pinning (HPKP)
+title: 证书透明度
 slug: Web/Security/Certificate_Transparency
-original_slug: Web/HTTP/Public_Key_Pinning
 ---
 
-HTTP 公钥锁定（HPKP）是一种安全功能，它告诉 Web 客户端将特定加密公钥与某个 Web 服务器相关联，以降低使用伪造证书进行 MITM 攻击的风险。
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}
 
-为确保 TLS 会话中使用的服务器公钥的真实性，此公钥将包装到 X.509 证书中，该证书通常由证书颁发机构（CA）签名。诸如浏览器之类的 Web 客户端信任许多这些 CA，它们都可以为任意域名创建证书。如果攻击者能够攻击单个 CA，则他们可以对各种 TLS 连接执行 MITM 攻击。HPKP 可以通过告知客户端哪个公钥属于某个 Web 服务器来规避 HTTPS 协议的这种威胁。
+**证书透明度**（Certificate Transparency，CT）是一个开放的框架，旨在监测和防止证书的误发。它在 [RFC 9162](https://www.rfc-editor.org/rfc/rfc9162) 中定义。有了证书透明度机制，新颁发的证书会被“记录”到公开运行的、通常是独立的 *CT 日志*中——这些日志保持着仅允许添加、有密码学保证的已颁发 TLS 证书记录。
 
-HPKP 是首次使用信任（TOFU）技术。Web 服务器第一次通过特殊的 HTTP 标头告诉客户端哪些公钥属于它，客户端会在给定的时间段内存储此信息。当客户端再次访问服务器时，它希望证书链中至少有一个证书包含一个公钥，其指纹已通过 HPKP 已知。如果服务器提供未知的公钥，则客户端应向用户发出警告。
+这样一来，证书颁发机构（CA）就可以受到更多的公众审查和监督。潜在的恶意证书，如那些违反 CA/浏览器论坛*基线要求*的证书，可以更快地被发现和撤销。浏览器供应商和根存储维护者也被授权对它们可能决定不信任的有问题的 CA 做出更明智的决定。
 
-Firefox 和 Chrome 禁用固定主机的引脚验证，其验证的证书链终止于用户定义的信任锚（而不是内置信任锚）。这意味着对于导入自定义根证书的用户，将忽略所有固定违规。
+## 背景
 
-## 启用 HPKP
+CT 日志是建立在 *Merkle 树*数据结构的基础上的。节点被标记为其子节点的*加密哈希值*。叶子节点包含实际数据片段的哈希值。因此，根节点的标签取决于树中的所有其他节点。
 
-要为您的站点启用此功能，您需要在通过 HTTPS 访问站点时返回 Public-Key-Pins HTTP 标头：
+在证书透明的情况下，叶子节点散列的数据是由目前运行的各种不同的 CA 所颁发的证书。证书的包含性可以通过*审计证明*来验证，该证明可以在对数 O(log n) 时间内有效地生成和验证。
 
-```plain
-Public-Key-Pins: pin-sha256="base64=="; max-age=expireTime [; includeSubDomains][; report-uri="reportURI"]
-```
+证书透明度最初是在 2013 年出现的，背景是 CA 妥协（2011 年的 DigiNotar 漏洞）、有问题的决定（2012 年的 Trustwave 次级根事件）和技术发行问题（马来西亚的 Digicert Sdn Bhd 发行的 512 位弱证书）。
 
-- `pin-sha256`
-  - : 引用的字符串是 Base64 编码的主题公钥信息（SPKI）指纹。可以为不同的公钥指定多个引脚。某些浏览器将来可能允许使用其他哈希算法而不是 SHA-256。请参阅下文，了解如何从证书或密钥文件中提取此信息。
-- `max-age`
-  - : 浏览器应记住仅使用其中一个已定义的密钥访问此站点的时间（以秒为单位）。
-- `includeSubDomains` {{optional_inline}}
-  - : 如果指定了此可选参数，则此规则也适用于所有站点的子域。
-- `report-uri` {{optional_inline}}
-  - : 如果指定了此可选参数，则会将引脚验证失败报告给给定的 URL。
+## 实现
 
-> **备注：** 当前规范要求包含第二个用于备份密钥的引脚，该引脚尚未在生产中使用。这允许更改服务器的公钥，而不会破坏已经记下引脚的客户端的无障碍。例如，当前一个密钥被泄露时，这很重要。
+当证书被提交到 CT 日志时，一个*证书签署时间戳*（SCT）被生成并返回。这可作为证书已提交的证明，并将被添加到日志中。
 
-### 提取 Base64 编码的公钥信息
+该规范指出，符合要求的服务器*必须*在 TLS 客户端连接时向其提供一些这样的 SCT。这可以通过一些不同的机制来实现：
 
-> **备注：** 虽然下面的示例显示了如何在服务器证书上设置引脚，但建议将引脚放在颁发服务器证书的 CA 的中间证书上，以简化证书续订和轮换。
+- X.509v3 证书扩展，直接将签名的证书时间戳嵌入叶节点证书中
+- 握手过程中发送的 `signed_certificate_timestamp` 类型的 TLS 扩展
+- OCSP 装订（即 `status_request` TLS 扩展），并提供具有一个或多个 SCT 的 `SignedCertificateTimestampList`
 
-首先，您需要从证书或密钥文件中提取公钥信息，并使用 Base64 对其进行编码。
+通过 X.509 证书扩展，所包含的 SCT 由签发的 CA 决定。自 2021 年 6 月以来，大多数积极使用和有效的公开信任的证书都包含嵌入该扩展的透明度数据。这种方法应该不需要对 web 服务器进行修改。
 
-以下命令将帮助您从密钥文件，证书签名请求或证书中提取 Base64 编码信息。
+使用后一种方法，服务器将需要更新以发送所需的数据。其优点是，服务器运营商可以定制 CT 日志源，提供通过 TLS 扩展/装订 OCSP 响应发送的 SCT。
 
-```plain
-openssl rsa -in my-rsa-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
-```
+## 浏览器要求
 
-```plain
-openssl ec -in my-ecc-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
-```
+Google Chrome 要求对 notBefore 日期晚于 2018 年 4 月 30 日签发的证书进行 CT 日志收录。用户将被阻止访问使用不符合规定的 TLS 证书的网站。此前，Chrome 浏览器要求对*扩展验证*（EV）和 Symantec 签发的证书进行 CT 收录。
 
-```plain
-openssl req -in my-signing-request.csr -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
-```
+Apple [要求](https://support.apple.com/en-us/HT205280)多种数目的 SCT，以使 Safari 和其他服务器信任服务器证书。
 
-```plain
-openssl x509 -in my-certificate.crt -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
-```
-
-以下命令将提取网站的 Base64 编码信息。
-
-```plain
-openssl s_client -servername www.example.com -connect www.example.com:443 | openssl x509 -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
-```
-
-### HPKP 头示例
-
-```plain
-Public-Key-Pins:
-  pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
-  pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
-  max-age=5184000; includeSubDomains;
-  report-uri="https://www.example.org/hpkp-report"
-```
-
-在此示例中，`pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="` 固定服务器在生产中使用的公钥。第二个引脚声明引脚- `sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="` 也固定备份密钥。 `max-age=5184000` 告诉客户端将此信息存储两个月，根据 IETF RFC，这是一个合理的时间限制。此密钥固定也适用于所有子域，includeSubDomains 声明告知。最后，`report-uri="https://www.example.net/hpkp-report"` 解释了报告引脚验证失败的位置。
-
-### Report-Only header
-
-Instead of using a {{HTTPHeader("Public-Key-Pins")}} header you can also use a {{HTTPHeader("Public-Key-Pins-Report-Only")}} header. This header only sends reports to the `report-uri` specified in the header and does still allow browsers to connect to the webserver even if the pinning is violated.
-
-### Setting up your webserver to include the HPKP header
-
-The concrete steps necessary to deliver the HPKP header depend on the web server you use.
-
-> **备注：** These examples use a max-age of two months and include all subdomains. It is advised to verify that this setup will work for your server.
-
-> **警告：** HPKP has the potential to lock out users for a long time if used incorrectly! The use of backup certificates and/or pinning the CA certificate is recommended.
-
-#### Apache
-
-Adding a line similar to the following to your webserver's config will enable HPKP on your Apache. This requires `mod_headers` enabled.
-
-```plain
-Header always set Public-Key-Pins "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains"
-```
-
-#### Nginx
-
-Adding the following line and inserting the appropriate `pin-sha256="..."` values will enable HPKP on your nginx. This requires the `ngx_http_headers_module.`
-
-```plain
-add_header Public-Key-Pins 'pin-sha256="base64+primary=="; pin-sha256="base64+backup=="; max-age=5184000; includeSubDomains' always;
-```
-
-#### Lighttpd
-
-The following line with your relevant key information (pin-sha256="..." fields) will enable HPKP on lighttpd.
-
-```plain
-setenv.add-response-header  = ( "Public-Key-Pins" => "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains")
-```
-
-**Note:** This requires the `mod_setenv` server.module loaded which can be included by the following if not already loaded.
-
-```plain
-server.modules += ( "mod_setenv" )
-```
-
-#### IIS
-
-Add the following line to the Web.config file to send the `Public-Key-Pins` header:
-
-```xml
-<system.webServer>
-  ...
-
-  <httpProtocol>
-    <customHeaders>
-      <add name="Public-Key-Pins" value="pin-sha256=&quot;base64+primary==&quot;; pin-sha256=&quot;base64+backup==&quot;; max-age=5184000; includeSubDomains" />
-    </customHeaders>
-  </httpProtocol>
-
-  ...
-</system.webServer>
-```
-
-## Browser compatibility
-
-{{Compat}}
-
-## See also
-
-- {{HTTPHeader("Public-Key-Pins")}}
-- {{HTTPHeader("Public-Key-Pins-Report-Only")}}
-- Browser test site: [HSTS and HPKP test](https://projects.dm.id.lv/Public-Key-Pins_test)
+Firefox 目前[并不](https://bugzilla.mozilla.org/show_bug.cgi?id=1281469)检查用户访问的网站或要求使用 CT 日志。

@@ -1,18 +1,11 @@
 ---
 title: ImageData
 slug: Web/API/ImageData
-tags:
-  - API
-  - Canvas
-  - DOM
-  - Images
-  - JavaScript
-translation_of: Web/API/ImageData
 ---
 
 {{APIRef("Canvas API")}}
 
-L'interface **`ImageData`** représente les données des pixels au sein d'une certaine zone dans un élément {{HTMLElement("canvas")}}. Elle est définie par les méthodes des constructeurs ou créateurs d'objet {{domxref("ImageData.ImageData", "ImageData()")}}  sur l'objet {{domxref("CanvasRenderingContext2D")}} associé à canevas,  {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} et  {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}. Elle peut être également utilisée pour redéfinir une partie du canevas en utilisant {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}}.
+L'interface **`ImageData`** représente les données des pixels au sein d'une certaine zone dans un élément {{HTMLElement("canvas")}}. Elle est définie par les méthodes des constructeurs ou créateurs d'objet {{domxref("ImageData.ImageData", "ImageData()")}} sur l'objet {{domxref("CanvasRenderingContext2D")}} associé à canevas, {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} et {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}. Elle peut être également utilisée pour redéfinir une partie du canevas en utilisant {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}}.
 
 ## Constructeurs
 

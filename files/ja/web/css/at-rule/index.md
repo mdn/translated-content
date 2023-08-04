@@ -41,7 +41,6 @@ slug: Web/CSS/At-rule
 - {{cssxref("@page")}} — 文書印刷の際に適用されるレイアウト変更に関する指定を記述します。
 - {{cssxref("@font-face")}} — ダウンロードすべき外部フォントに関する指定を記述します。
 - {{cssxref("@keyframes")}} — CSS アニメーションシーケンスの中間段階に関する指定を記述します。
-- {{cssxref("@viewport")}} {{deprecated_inline}} — 小さな画面の端末用に、ビューポートに関する指定を記述します。 _(現在は草稿段階)_
 - {{cssxref("@counter-style")}} — 定義済みのスタイルにはない、独自のカウンタースタイルを定義します。_(勧告候補段階ですが、現時点で Gecko しか実装していません)_
 - {{cssxref("@font-feature-values")}} (および `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset`, `@character-variant`) — OpenType の各機能を有効化するために、 {{cssxref("font-variant-alternates")}} の一般名を定義します。_(勧告候補段階ですが、現時点で Gecko しか実装していません)_
 - {{cssxref("@property")}} {{experimental_inline}} — カスタムプロパティと変数に関して指定します。 _(現在は草稿段階)_
@@ -51,7 +50,7 @@ slug: Web/CSS/At-rule
 
 プロパティの値と同様に、アットルールはそれぞれ異なる構文を持っています。しかし、いくつかのアットルールは **条件付きグループルール**という特別なカテゴリーに分類されます。これらの文は構文が共通しており、どれも*内側の文*—*規則セット*または*内側のアットルール*を入れることができます。さらに言えば、それらはすべて共通の意味合いがあります。 — すべては常に**真**か**偽**かで判定される何らかの条件と結びついています。条件が**真**であれば、条件付きグループルール内の文全部が適用されます。
 
-条件付きグループルールは  [CSS Conditionals Level 3](https://drafts.csswg.org/css-conditional-3/) で定義されており、以下の規則があります。
+条件付きグループルールは [CSS Conditionals Level 3](https://drafts.csswg.org/css-conditional-3/) で定義されており、以下の規則があります。
 
 - {{cssxref("@media")}}
 - {{cssxref("@supports")}}
@@ -74,7 +73,6 @@ slug: Web/CSS/At-rule
 - {{cssxref("@page")}}
 - {{cssxref("@property")}} {{experimental_inline}}
 - {{cssxref("@supports")}}
-- {{cssxref("@viewport")}} {{deprecated_inline}}
 
 ## 仕様書
 

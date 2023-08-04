@@ -1,8 +1,8 @@
 ---
 title: document.bgColor
 slug: Web/API/Document/bgColor
-translation_of: Web/API/Document/bgColor
 ---
+
 {{APIRef("DOM")}}{{ Deprecated_header() }}
 
 `bgColor` da/define el color de fondo (bgColor) del documento actual.
@@ -10,9 +10,8 @@ translation_of: Web/API/Document/bgColor
 ### Sintaxis
 
 ```js
-color = document.bgColor
-document.bgColor =
-color
+color = document.bgColor;
+document.bgColor = color;
 ```
 
 ### Parámetros

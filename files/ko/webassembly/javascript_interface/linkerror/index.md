@@ -1,10 +1,9 @@
 ---
 title: WebAssembly.LinkError()
 slug: WebAssembly/JavaScript_interface/LinkError
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
 ---
-{{JSRef}}
+
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.LinkError()`** constructor creates a new WebAssembly `LinkError` object, which indicates an error during module instantiation (besides [traps](http://webassembly.org/docs/semantics/#traps) from the start function).
 
@@ -13,7 +12,7 @@ The **`WebAssembly.LinkError()`** constructor creates a new WebAssembly `LinkErr
 ## Syntax
 
 ```js
-new WebAssembly.LinkError(message, fileName, lineNumber)
+new WebAssembly.LinkError(message, fileName, lineNumber);
 ```
 
 ### Parameters
@@ -59,23 +58,23 @@ _`LinkError`_ 생성자에는 자체 메서드가 없지만 프로토 타입 체
 
 ```js
 try {
-  throw new WebAssembly.LinkError('Hello', 'someFile', 10);
+  throw new WebAssembly.LinkError("Hello", "someFile", 10);
 } catch (e) {
   console.log(e instanceof LinkError); // true
-  console.log(e.message);                 // "Hello"
-  console.log(e.name);                    // "LinkError"
-  console.log(e.fileName);                // "someFile"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // returns the location where the code was run
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "LinkError"
+  console.log(e.fileName); // "someFile"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // returns the location where the code was run
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

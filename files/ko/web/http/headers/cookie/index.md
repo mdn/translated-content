@@ -1,8 +1,8 @@
 ---
 title: Cookie
 slug: Web/HTTP/Headers/Cookie
-translation_of: Web/HTTP/Headers/Cookie
 ---
+
 {{HTTPSidebar}}
 
 **`Cookie`** HTTP 요청 헤더는 {{HTTPHeader("Set-Cookie")}} 헤더와 함께 서버에 의해 이전에 전송되어 저장된 [HTTP cookies](/ko/docs/Web/HTTP/Cookies)를 포함합니다.
@@ -45,7 +45,7 @@ Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1;
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Cookie")}}
+{{Compat}}
 
 ## 함께 참고할 내용들
 

@@ -1,8 +1,8 @@
 ---
 title: <rt>
 slug: Web/HTML/Element/rt
-translation_of: Web/HTML/Element/rt
 ---
+
 ## Summary
 
 The **HTML `<rt>` Element** embraces pronunciation of character presented in a ruby annotations, which are for showing pronunciation of East Asian characters and the `<rt>` element is used inside of {{ HTMLElement("ruby") }} element.
@@ -42,4 +42,4 @@ This element only includes the [global attributes](/pt-BR/docs/Web/HTML/Global_a
 - {{HTMLElement("ruby")}}
 - {{HTMLElement("rp")}}
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

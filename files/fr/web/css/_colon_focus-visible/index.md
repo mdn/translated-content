@@ -1,12 +1,6 @@
 ---
-title: ':focus-visible'
+title: ":focus-visible"
 slug: Web/CSS/:focus-visible
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-  - Web
-translation_of: Web/CSS/:focus-visible
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -15,12 +9,13 @@ La pseudo-classe **`:focus-visible`** s'applique lorsqu'un élément correspond 
 
 Ce sélecteur peut être utile afin de fournir un indicateur de focus différent selon le mode de navigation de l'utilisateur (souris ou clavier).
 
-On notera que Firefox prend en charge cette fonctionnalité via une ancienne pseudo-classe préfixée  `:-moz-focusring`. Voir la page {{cssxref(":-moz-focusring")}} pour plus d'informations.
+On notera que Firefox prend en charge cette fonctionnalité via une ancienne pseudo-classe préfixée `:-moz-focusring`. Voir la page {{cssxref(":-moz-focusring")}} pour plus d'informations.
 
 ## Syntaxe
 
 ```css
-:focus-visible
+:focus-visible {
+}
 ```
 
 ## Exemples
@@ -32,18 +27,19 @@ Dans cet exemple, le sélecteur `:focus-visible` utilise le comportement de l'ag
 #### HTML
 
 ```html
-<input value="Styles par défaut"><br>
-<button>Styles par défaut</button><br>
-<input class="focus-only" value=":focus only"><br>
-<button class="focus-only">:focus only</button><br>
-<input class="focus-visible-only" value=":focus-visible only"><br>
+<input value="Styles par défaut" /><br />
+<button>Styles par défaut</button><br />
+<input class="focus-only" value=":focus only" /><br />
+<button class="focus-only">:focus only</button><br />
+<input class="focus-visible-only" value=":focus-visible only" /><br />
 <button class="focus-visible-only">:focus-visible only</button>
 ```
 
 #### CSS
 
 ```css
-input, button {
+input,
+button {
   margin: 10px;
 }
 
@@ -58,7 +54,7 @@ input, button {
 
 {{EmbedLiveSample('Exemple_simple', '100%', '300')}}
 
-### Choisir d'afficher l’indicateur de focus
+### Choisir d'afficher l'indicateur de focus
 
 Un contrôle personnalisé (par exemple un bouton provenant d'un _[custom element](/fr/docs/Web/Web_Components/Using_custom_elements)_) peut utiliser `:focus-visible` afin d'appliquer ou non un indicateur de focus pour la navigation au clavier afin de calquer au comportement natif de {{htmlelement("button")}}.
 
@@ -98,7 +94,7 @@ custom-button:focus-visible {
 }
 ```
 
-{{EmbedLiveSample("Choisir_d'afficher_l’indicateur_de_focus", '100%', '300')}}
+{{EmbedLiveSample("Choisir_d'afficher_l'indicateur_de_focus", '100%', '300')}}
 
 ## Accessibilité
 

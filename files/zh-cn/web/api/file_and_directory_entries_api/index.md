@@ -11,8 +11,8 @@ slug: Web/API/File_and_Directory_Entries_API
 
 有两种方法可以访问当前规范草案中定义的文件系统：
 
-- 当处理用于拖放的 {{event("drop")}} 事件时，你可以调用 {{domxref("DataTransferItem.webkitGetAsEntry()")}} 来为被放置（dropped）的项获取 {{domxref("FileSystemEntry")}}。如果结果不是 `null`，那么它就是一个被放置的文件或目录，你可以使用文件系统调用来处理它。
-- {{domxref("HTMLInputElement.webkitEntries")}} 属性允许你访问当前选定文件的 {{domxref("FileSystemFileEntry")}} 对象，但前提是将它们拖放到文件选择器（{{bug(1326031)}}）。如果 {{domxref("HTMLInputElement.webkitdirectory")}} 为真，则 {{HTMLElement("input")}} 元素是一个目录选择器，你将得到表示每个选择的目录的 {{domxref("FileSystemDirectoryEntry")}} 对象。
+- 当处理用于拖放的 [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event) 事件时，你可以调用 {{domxref("DataTransferItem.webkitGetAsEntry()")}} 来为被放置（dropped）的项获取 {{domxref("FileSystemEntry")}}。如果结果不是 `null`，那么它就是一个被放置的文件或目录，你可以使用文件系统调用来处理它。
+- {{domxref("HTMLInputElement.webkitEntries")}} 属性允许你访问当前选定文件的 {{domxref("FileSystemFileEntry")}} 对象，但前提是将它们拖放到文件选择器（[Firefox bug 1326031](https://bugzil.la/1326031)）。如果 {{domxref("HTMLInputElement.webkitdirectory")}} 为真，则 {{HTMLElement("input")}} 元素是一个目录选择器，你将得到表示每个选择的目录的 {{domxref("FileSystemDirectoryEntry")}} 对象。
 
 ## 接口
 
@@ -21,7 +21,7 @@ slug: Web/API/File_and_Directory_Entries_API
 - {{domxref("FileSystem")}}
   - : 表示文件系统。
 - {{domxref("FileSystemEntry")}}
-  - : 表示文件系统中单个条目的基本接口。这是由表示文件或目录的其它接口实现的。
+  - : 表示文件系统中单个条目的基本接口。这是由表示文件或目录的其他接口实现的。
 - {{domxref("FileSystemFileEntry")}}
   - : 表示文件系统中的单个文件。
 - {{domxref("FileSystemDirectoryEntry")}}

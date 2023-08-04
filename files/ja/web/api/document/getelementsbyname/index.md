@@ -19,17 +19,17 @@ var elements = document.getElementsByName(name);
 ## 例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<title>document.getElementsByName の使用例</title>
+  <title>document.getElementsByName の使用例</title>
 
-<input type="hidden" name="up">
-<input type="hidden" name="down">
+  <input type="hidden" name="up" />
+  <input type="hidden" name="down" />
 
-<script>
-  var up_names = document.getElementsByName("up");
-  console.log(up_names[0].tagName); // "INPUT" と表示
-</script>
+  <script>
+    var up_names = document.getElementsByName("up");
+    console.log(up_names[0].tagName); // "INPUT" と表示
+  </script>
 </html>
 ```
 
@@ -47,10 +47,7 @@ var elements = document.getElementsByName(name);
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                                 | 備考     |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('HTML WHATWG', '#dom-document-getelementsbyname', "Document.getElementsByName()")}} | {{ Spec2('HTML WHATWG') }} |          |
-| {{SpecName("DOM2 HTML", "html.html#ID-71555259", "Document.getElementsByName()")}}                 | {{Spec2("DOM2 HTML")}}         | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,16 +1,8 @@
 ---
 title: String — Cadena de caracteres
 slug: Web/JavaScript/Reference/Global_Objects/String
-tags:
-  - Clase
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Referencia
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String
 ---
+
 {{JSRef}}
 
 El objeto **`String`** se utiliza para representar y manipular una secuencia de caracteres.
@@ -33,7 +25,7 @@ const string4 = new String("Un objeto String");
 
 Las `string`s primitivas y los objetos `string` se pueden usar indistintamente en la mayoría de las situaciones. Consulta "[Primitivas `String` y objetos `String`](#Primitivas_string_y_objetos_string)" a continuación.
 
-Los cadena literales se pueden especificar usando comillas simples o dobles, que se tratan de manera idéntica, o usando el carácter de comilla invertida <kbd>`</kbd>. Esta última forma especifica una [Plantilla literal](/es/docs/Web/JavaScript/Reference/Template_literals): con esta forma puedes interpolar expresiones.
+Los cadena literales se pueden especificar usando comillas simples o dobles, que se tratan de manera idéntica, o usando el carácter de comilla invertida <kbd>\`</kbd>. Esta última forma especifica una [Plantilla literal](/es/docs/Web/JavaScript/Reference/Template_literals): con esta forma puedes interpolar expresiones.
 
 ### Acceder a un caracter
 
@@ -252,7 +244,7 @@ Ambos métodos anteriores dan como resultado cadenas idénticas.
 > **Nota:** **Desaprobado. Evita estos métodos.** Son de uso limitado, ya que proporcionan solo un subconjunto de las etiquetas y atributos HTML disponibles.
 
 - {{jsxref("String.prototype.anchor()")}}
-  - : {{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}} (hipertexto destino)
+  - : [&lt;a name=\"name\"&gt;](/es/docs/Web/HTML/Element/a#name) (hipertexto destino)
 - {{jsxref("String.prototype.big()")}}
   - : {{HTMLElement("big")}}
 - {{jsxref("String.prototype.blink()")}}
@@ -262,13 +254,13 @@ Ambos métodos anteriores dan como resultado cadenas idénticas.
 - {{jsxref("String.prototype.fixed()")}}
   - : {{HTMLElement("tt")}}
 - {{jsxref("String.prototype.fontcolor()")}}
-  - : {{htmlattrxref("color", "font", "&lt;font color=\"color\"&gt;")}}
+  - : [&lt;font color=\"color\"&gt;](/es/docs/Web/HTML/Element/font#color)
 - {{jsxref("String.prototype.fontsize()")}}
-  - : {{htmlattrxref("size", "font", "&lt;font size=\"size\"&gt;")}}
+  - : [&lt;font size=\"size\"&gt;](/es/docs/Web/HTML/Element/font#size)
 - {{jsxref("String.prototype.italics()")}}
   - : {{HTMLElement("i")}}
 - {{jsxref("String.prototype.link()")}}
-  - : {{htmlattrxref("href", "a", "&lt;a href=\"url\"&gt;")}} (enlace a URL)
+  - : [&lt;a href=\"url\"&gt;](/es/docs/Web/HTML/Element/font#size) (enlace a URL)
 - {{jsxref("String.prototype.small()")}}
   - : {{HTMLElement("small")}}
 - {{jsxref("String.prototype.strike()")}}
@@ -293,13 +285,11 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 ## Especificaciones
 
-| Especificación                                                               |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string-objects', 'String')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String")}}
+{{Compat}}
 
 ## Ve también
 

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Assignment
 
 {{jsSidebar("Operators")}}
 
-简单赋值操作符（=）用于为变量赋值。赋值表达式本身的值为要赋值的值。为了给多个变量赋一个值，可以链式使用赋值操作符。
+简单赋值运算符（`=`）用于给变量赋值。赋值表达式本身的值为要赋值的值。为了将一个值赋给多个变量，可以链式使用赋值运算符。
 
 {{EmbedInteractiveExample("pages/js/expressions-assignment.html")}}
 
@@ -25,8 +25,8 @@ x = y
 //  y = 10
 //  z = 25
 
-x = y     // x 为 10
-x = y = z // x, y 都为 25
+x = y; // x 为 10
+x = y = z; // x, y 都为 25
 ```
 
 ## 规范
@@ -39,4 +39,4 @@ x = y = z // x, y 都为 25
 
 ## 参见
 
-- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#赋值运算符)
+- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#赋值运算符)

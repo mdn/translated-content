@@ -46,8 +46,7 @@ slug: Web/HTML/Element/rp
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>han</rt><rp>)</rp>
-  字 <rp>(</rp><rt>zi</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>han</rt><rp>)</rp> 字 <rp>(</rp><rt>zi</rt><rp>)</rp>
 </ruby>
 ```
 
@@ -66,4 +65,4 @@ slug: Web/HTML/Element/rp
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rtc")}}
 
-{{ HTMLRef }}
+{{HTMLSidebar}}

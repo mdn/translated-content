@@ -1,8 +1,8 @@
 ---
 title: FormData.append()
 slug: Web/API/FormData/append
-translation_of: Web/API/FormData/append
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 O método **`append()`** da Interface {{domxref("FormData")}} adiciona um novo valor dentro de uma chave existente dentro do objeto `FormData` ou adiciona a chave caso ainda não exista.
@@ -46,19 +46,17 @@ var formData = new FormData(); // Corrente vazio
 Podes adicionar chaves/valores pares para usar (domxref("FormData.append")}}:
 
 ```js
-formData.append('username', 'Chris');
-formData.append('userpic', myFileInput.files[0], 'chris.jpg');
+formData.append("username", "Chris");
+formData.append("userpic", myFileInput.files[0], "chris.jpg");
 ```
 
 ## Especificações
 
-| Especificações                                                                       | Estato                   | Comentario |
-| ------------------------------------------------------------------------------------ | ------------------------ | ---------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-append','append()')}} | {{Spec2('Fetch')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.FormData.append")}}
+{{Compat}}
 
 ## Veja Tambem
 

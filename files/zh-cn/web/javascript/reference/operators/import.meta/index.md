@@ -1,7 +1,6 @@
 ---
 title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
-original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
 
 {{JSSidebar("Statements")}}
@@ -71,11 +70,11 @@ new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - [import](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)
 - [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export)

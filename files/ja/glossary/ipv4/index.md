@@ -11,4 +11,4 @@ IPv4 は、{{glossary("Internet","インターネット")}}の基礎となる通
 
 ### 一般知識
 
-Wikipedia 上の {{interwiki("wikipedia", "IPv4")}}
+Wikipedia 上の [IPv4](https://ja.wikipedia.org/wiki/IPv4)

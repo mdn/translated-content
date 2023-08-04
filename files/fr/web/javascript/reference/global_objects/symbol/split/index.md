@@ -1,14 +1,6 @@
 ---
 title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/split
 ---
 
 {{JSRef}}
@@ -21,14 +13,11 @@ Pour plus d'informations, se référer aux pages sur {{jsxref("RegExp.@@split", 
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.split', 'Symbol.split')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.split', 'Symbol.split')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.split")}}
+{{Compat}}
 
 ## Voir aussi
 

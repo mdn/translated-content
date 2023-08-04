@@ -1,13 +1,6 @@
 ---
 title: Trucs et astuces
 slug: Mozilla/Add-ons/WebExtensions/Tips
-tags:
-  - Astuces
-  - ECMAScript
-  - Trucs
-  - Trucs et Astuces
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Tips
 ---
 
 {{AddonSidebar}}
@@ -16,7 +9,7 @@ Cette page contient divers conseils et astuces qui devraient être utiles à bea
 
 ## Utilisation des fonctionnalités JavaScript avancées d'ECMAScript 2015 et 2016
 
-Firefox prend [en charge de nombreuses fonctionnalités de ECMAScript 2015](/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) hors de la boite. Cependant, plusieurs nouvelles fonctionnalités expérimentales ne sont pas disponibles sur le Web ou WebExtensions par défaut. Si vous souhaitez utiliser ces fonctionnalités, il est préférable de transférer votre code à l'aide d'un outil tel que [Babel](https://babeljs.io/).
+Firefox prend [en charge de nombreuses fonctionnalités de ECMAScript 2015](/fr/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) hors de la boite. Cependant, plusieurs nouvelles fonctionnalités expérimentales ne sont pas disponibles sur le Web ou WebExtensions par défaut. Si vous souhaitez utiliser ces fonctionnalités, il est préférable de transférer votre code à l'aide d'un outil tel que [Babel](https://babeljs.io/).
 
 Attention, tout ce qui se trouve en dessous de cette ligne est obsolète et a été retiré de Babel 6.
 

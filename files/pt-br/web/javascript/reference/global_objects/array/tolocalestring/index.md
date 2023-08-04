@@ -1,8 +1,8 @@
 ---
 title: Array.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 ---
+
 {{JSRef}}O método **`toLocaleString()`** retorna uma representaçao de elementos de um array. Os elementos são convertidos para Strings utilizando seus respectivos métodos `toLocaleString` e essas cadeias são separadas por uma sequência específica de localidade (separados por virgula ",").
 
 ## Sintaxe
@@ -35,7 +35,7 @@ Os elementos de um array são convertidos para strings usando seus respectivos m
 ```js
 var numero = 1337;
 var data = new Date();
-var meuArray = [numero, data, 'foo'];
+var meuArray = [numero, data, "foo"];
 
 var resultado = meuArray.toLocaleString();
 
@@ -48,11 +48,11 @@ Para mais exemplos, veja as páginas {{jsxref("Intl")}}, {{jsxref("NumberFormat"
 
 ## Especificações
 
-| Especificação                                                                                                                | Status                   | Comentários        |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('ES3')}}                                                                                                     | {{Spec2('ES3')}}     | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.2.4.3', 'Array.prototype.toLocaleString')}}                             | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}} | {{Spec2('ES6')}}     |                    |
+| Especificação                                                                                | Status             | Comentários        |
+| -------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
+| {{SpecName('ES3')}}                                                                          | {{Spec2('ES3')}}   | Definição inicial. |
+| {{SpecName('ES5.1', '#sec-15.2.4.3', 'Array.prototype.toLocaleString')}}                     | {{Spec2('ES5.1')}} |                    |
+| {{SpecName('ES6', '#sec-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}} | {{Spec2('ES6')}}   |                    |
 
 ## Compatibilidade com navegadores
 

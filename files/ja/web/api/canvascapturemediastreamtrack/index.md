@@ -25,9 +25,7 @@ _This interface inherits the methods of its parent, {{domxref("MediaStreamTrack"
 
 ## Specifications
 
-| Specification                                                                                                                                            | Status                                               | Comment            |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------------------ |
-| {{SpecName('Media Capture DOM Elements', '#the-canvascapturemediastreamtrack', 'CanvasCaptureMediaStreamTrack')}} | {{Spec2('Media Capture DOM Elements')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

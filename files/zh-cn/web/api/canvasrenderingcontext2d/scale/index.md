@@ -41,19 +41,19 @@ The rectangle has a specified width of 8 and a height of 20. The transformation 
 Notice that its position on the canvas also changes. Since its specified corner is (10, 10), its rendered corner becomes (90, 30).
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Scaled rectangle
 ctx.scale(9, 3);
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.fillRect(10, 10, 8, 20);
 
 // Reset current transformation matrix to the identity matrix
 ctx.setTransform(1, 0, 0, 1, 0, 0);
 
 // Non-scaled rectangle
-ctx.fillStyle = 'gray';
+ctx.fillStyle = "gray";
 ctx.fillRect(10, 10, 8, 20);
 ```
 
@@ -61,7 +61,7 @@ ctx.fillRect(10, 10, 8, 20);
 
 The scaled rectangle is red, and the non-scaled rectangle is gray.
 
-{{ EmbedLiveSample('Scaling_a_shape', 700, 180) }}
+{{ EmbedLiveSample('使用 scale 方法', 700, 180) }}
 
 ### 使用 scale 水平或竖直翻转
 
@@ -78,20 +78,20 @@ Note that the call to {{domxref("CanvasRenderingContext2D.fillText()", "fillText
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.scale(-1, 1);
-ctx.font = '48px serif';
-ctx.fillText('Hello world!', -280, 90);
+ctx.font = "48px serif";
+ctx.fillText("Hello world!", -280, 90);
 ctx.setTransform(1, 0, 0, 1, 0, 0);
 ```
 
-#### Result
+#### 结果
 
-{{ EmbedLiveSample('Flipping_things_horizontally_or_vertically', 700, 180) }}
+{{ EmbedLiveSample('使用 scale 水平或竖直翻转', 700, 180) }}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 

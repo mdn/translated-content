@@ -20,48 +20,45 @@ event.type
 ## 示例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
     <title>Event.type Example</title>
 
     <script>
-        var currEvent = null;
-        function getEvtType(evt) {
-            console.log("//Start------------getEvtType(evt)------------ ");
+      var currEvent = null;
+      function getEvtType(evt) {
+        console.log("//Start------------getEvtType(evt)------------ ");
 
-            currEvent = evt.type;
-            console.log(currEvent);
+        currEvent = evt.type;
+        console.log(currEvent);
 
-            //document.getElementById("Etype").firstChild.nodeValue = currEvent;
-            document.getElementById("Etype").innerHTML = currEvent;
+        //document.getElementById("Etype").firstChild.nodeValue = currEvent;
+        document.getElementById("Etype").innerHTML = currEvent;
 
-            console.log("//End--------------getEvtType(evt)------------ ");
-        }
+        console.log("//End--------------getEvtType(evt)------------ ");
+      }
 
-        //Keyboard events
-        document.addEventListener("keypress", getEvtType, false); //[second]
+      //Keyboard events
+      document.addEventListener("keypress", getEvtType, false); //[second]
 
-        document.addEventListener("keydown", getEvtType, false); //first
-        document.addEventListener("keyup", getEvtType, false); //third
+      document.addEventListener("keydown", getEvtType, false); //first
+      document.addEventListener("keyup", getEvtType, false); //third
 
-        //Mouse events
-        document.addEventListener("click", getEvtType, false); // third
+      //Mouse events
+      document.addEventListener("click", getEvtType, false); // third
 
-        document.addEventListener("mousedown", getEvtType, false); //first
-        document.addEventListener("mouseup", getEvtType, false); //second
-
+      document.addEventListener("mousedown", getEvtType, false); //first
+      document.addEventListener("mouseup", getEvtType, false); //second
     </script>
-</head>
+  </head>
 
-<body>
-
-<p>Press any key or click the mouse to get the event type.</p>
-<p>Event type: <span id="Etype" style="color:red">-</span></p>
-
-</body>
+  <body>
+    <p>Press any key or click the mouse to get the event type.</p>
+    <p>Event type: <span id="Etype" style="color:red">-</span></p>
+  </body>
 </html>
 ```
 

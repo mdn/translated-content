@@ -1,10 +1,8 @@
 ---
 title: translate
 slug: Web/XPath/Functions/translate
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/translate
 ---
+
 {{ XsltRef() }}
 
 `translate` 함수는 문자열과 번역할 문자 집합을 평가하고 번역된 문자열을 반환합니다.
@@ -17,17 +15,17 @@ translate(string ,abc ,XYZ )
 
 ### 인수
 
-- _`string`_
+- `string`
   - : 평가할 문자열.
-- _`abc`_
+- `abc`
   - : 바꿀 문자열.
-- _`XYZ`_
+- `XYZ`
   - : 교체에 쓰는 문자열.
-    _`XYZ`_
+    `XYZ`
     에서 첫 문자는
-    _`string`_
+    `string`
     에서 나타나는
-    _`abc`_
+    `abc`
     의 첫 문자가 나타날 때마다 교체합니다.
 
 ### 반환
@@ -53,13 +51,13 @@ THE QUICK BROWN FOX.
 ```
 
 - 만약
-  _`abc`_
+  `abc`
   가
-  _`XYZ`_
+  `XYZ`
   보다 길면,
-  _`XYZ`_
+  `XYZ`
   에서 대응하는 문자가 없는
-  _`abc`_
+  `abc`
   의 문자는 출현 때마다 제거됩니다.
 
 예
@@ -75,9 +73,9 @@ The quick red fdx.
 ```
 
 - 만약
-  _`XYZ`_
+  `XYZ`
   가
-  _`abc`_
+  `abc`
   보다 더 많은 문자를 포함하면, 여분 문자는 무시됩니다.
 
 ### 정의

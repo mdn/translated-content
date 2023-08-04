@@ -1,13 +1,15 @@
 ---
 title: 基本的な例
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
+l10n:
+  sourceCommit: e14e4830bcd43de164623aaf787fbd695be31d91
 ---
 
 ## 基本的な例
 
-基本的な例では、XML ファイルを読み込んで XSL 変換を適用します。これらは、[Netscape Gecko の XSLT](/ja/docs/Web/API/XSLTProcessor)の[HTML 生成](/ja/docs/XSLT_in_Gecko/Generating_HTML)例で使用されているのと同じファイルです。XML ファイルはアーティクルを記述し、XSL ファイルは情報を表示用にフォーマットします。
+この基本的な例では、XML ファイルを読み込んで XSL 変換を適用します。これらは、[Netscape Gecko の XSLT](/ja/docs/Web/API/XSLTProcessor)の記事にある [HTML 生成](/ja/docs/Web/API/XSLTProcessor/Generating_HTML)の例で使用されているのと同じファイルです。XML ファイルは記事を記述し、XSL ファイルは情報を表示用に整形します。
 
-**サンプル 4 : XML ファイル**
+### XML ファイル
 
 ```xml
 <?xml version="1.0"?>
@@ -23,7 +25,7 @@ slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
 </myNS:Article>
 ```
 
-**サンプル 5 : XSLT スタイルシート**
+### XSLT スタイルシート
 
 ```xml
 <?xml version="1.0"?>
@@ -42,7 +44,7 @@ slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
           <xsl:value-of select="/myNS:Article/myNS:Title"/>
         </title>
 
-        <style type="text/css">
+        <style>
           .myBox {margin:10px 155px 0 50px; border: 1px dotted #639ACE; padding:0 5px 0 5px;}
         </style>
 
@@ -91,40 +93,36 @@ slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
 </xsl:stylesheet>
 ```
 
-この例では、.xsl (`xslStylesheet`) と .xml (`xmlDoc`) の両方のファイルを同期{{domxref("XMLHTTPRequest")}}のメモリに読み込みます。 次に、.xsl ファイルがインポートされ(`xsltProcessor.importStylesheet(xslStylesheet)`)、変換が実行されます(`xsltProcessor.transformToFragment(xmlDoc, document)`)。 これにより、新しいページのロードを開始することなく、ページがロードされた後のデータのフェッチが可能になります。
+この例では、同期 {{domxref("XMLHTTPRequest")}} を使用して、.xsl (`xslStylesheet`) と .xml (`xmlDoc`) の両方のファイルをのメモリーに読み込みます。 次に、.xsl ファイルがインポートされ(`xsltProcessor.importStylesheet(xslStylesheet)`)、変換が実行されます(`xsltProcessor.transformToFragment(xmlDoc, document)`)。 これにより、新しいページの読み込みを行うことなく、ページが読み込まれた後にデータのフェッチが可能になります。
 
-**サンプル 6 : 例**
+### 例
 
 ```js
-var xslStylesheet;
-var xsltProcessor = new XSLTProcessor();
-var myDOM;
+let xslStylesheet;
+const xsltProcessor = new XSLTProcessor();
+let myDOM;
 
-var xmlDoc;
+let xmlDoc;
 
-function Init(){
-
-  // load the xslt file, example1.xsl
-  var myXMLHTTPRequest = new XMLHttpRequest();
+function Init() {
+  // Load the xslt file, example1.xsl
+  let myXMLHTTPRequest = new XMLHttpRequest();
   myXMLHTTPRequest.open("GET", "example1.xsl", false);
   myXMLHTTPRequest.send(null);
 
   xslStylesheet = myXMLHTTPRequest.responseXML;
   xsltProcessor.importStylesheet(xslStylesheet);
 
-
-  // load the xml file, example1.xml
+  // Load the XML file, example1.xml
   myXMLHTTPRequest = new XMLHttpRequest();
   myXMLHTTPRequest.open("GET", "example1.xml", false);
   myXMLHTTPRequest.send(null);
 
   xmlDoc = myXMLHTTPRequest.responseXML;
 
-  var fragment = xsltProcessor.transformToFragment(xmlDoc, document);
-
-  document.getElementById("example").innerHTML = "";
-
+  const fragment = xsltProcessor.transformToFragment(xmlDoc, document);
   myDOM = fragment;
+  document.getElementById("example").textContent = "";
   document.getElementById("example").appendChild(fragment);
 }
 ```

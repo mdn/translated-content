@@ -1,8 +1,8 @@
 ---
 title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 ---
+
 {{JSRef}}
 
 O método **`entries()`** retorna um novo objeto **`Array Iterator`** que contém os pares chave/valor para cada índice no array.

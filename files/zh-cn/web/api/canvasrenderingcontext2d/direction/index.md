@@ -28,7 +28,7 @@ ctx.direction = "ltr" || "rtl" || "inherit";
 
 ## 示例
 
-### 使用`direction` 属性
+### 使用 `direction` 属性
 
 这是一段简单的代码片段，对文本设置不同的 direction 数值。
 
@@ -41,13 +41,13 @@ ctx.direction = "ltr" || "rtl" || "inherit";
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-ctx.font = '48px serif';
-ctx.fillText('Hi!', 150, 50);
-ctx.direction = 'rtl';
-ctx.fillText('Hi!', 150, 130);
+ctx.font = "48px serif";
+ctx.fillText("Hi!", 150, 50);
+ctx.direction = "rtl";
+ctx.fillText("Hi!", 150, 130);
 ```
 
 ```html hidden
@@ -55,20 +55,20 @@ ctx.fillText('Hi!', 150, 130);
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-ctx.font = '48px serif';
-ctx.fillText('Hi!', 150, 50);
-ctx.direction = 'rtl';
-ctx.fillText('Hi!', 150, 130);
+ctx.font = "48px serif";
+ctx.fillText("Hi!", 150, 50);
+ctx.direction = "rtl";
+ctx.fillText("Hi!", 150, 130);
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('Playable_code', 700, 180) }}
+{{ EmbedLiveSample('使用 direction 属性', 700, 180) }}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 

@@ -1,12 +1,6 @@
 ---
 title: min-block-size
 slug: Web/CSS/min-block-size
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/min-block-size
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -15,7 +9,7 @@ La propriété **`min-block-size`** définit la taille minimale horizontale ou v
 
 {{EmbedInteractiveExample("pages/css/min-block-size.html")}}
 
-Si le mode d'écriture est orienté verticalement, `min-block-size` fait référence à la hauteur minimale de l'élément. Sinon, elle fait référence à la largeur minimale de l'élément.  to the minimal height of the element, otherwise it relates to the minimal width of the element. La propriété {{cssxref("min-inline-size")}} peut être utilisée pour les éléments en ligne.
+Si le mode d'écriture est orienté verticalement, `min-block-size` fait référence à la hauteur minimale de l'élément. Sinon, elle fait référence à la largeur minimale de l'élément. to the minimal height of the element, otherwise it relates to the minimal width of the element. La propriété {{cssxref("min-inline-size")}} peut être utilisée pour les éléments en ligne.
 
 ## Syntaxe
 

@@ -1,9 +1,11 @@
 ---
 title: MouseEvent.altKey
 slug: Web/API/MouseEvent/altKey
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`MouseEvent.altKey`** は読み取り専用のプロパティでありマウスイベントが発行されたときに <kbd>alt</kbd> キーが押されていたかどうかを論理値で示します。
 
@@ -18,7 +20,7 @@ slug: Web/API/MouseEvent/altKey
 
 ## 例
 
-この例は、 {{Event("click")}} イベントが発行されたときに `altKey` プロパティを記録します。
+この例は、 {{domxref("Element/click_event", "click")}} イベントが発行されたときに `altKey` プロパティを記録します。
 
 ### HTML
 
@@ -40,7 +42,7 @@ function logKey(e) {
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## 仕様書
 

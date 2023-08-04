@@ -17,7 +17,7 @@ slug: Web/API/Notifications_API/Using_the_Notifications_API
 
 ウェブ通知の最も顕著な用途の一つが、ウェブベースのメールや IRC アプリケーションにおいて、新しいメッセージを受信したときに、ユーザーがほかのアプリケーションで何かをしていても通知をする必要がある場合です。これには数多くの事例が存在し、例えば [Slack](https://slack.com/) などがあります。
 
-ウェブ通知がどのように利用できるのかの考えを深めるために、実世界の例を — To-do リストアプリ — を書いてみました。これは [IndexedDB](/ja/docs/Web/API/IndexedDB_API) を使用してローカルにデータを格納し、タスクの期限が来たときにシステム通知を使用してユーザーに通知します。 [To-do リストのコードをダウンロード](https://github.com/mdn/to-do-notifications/tree/gh-pages)するか、[ライブで実行するアプリを見る](https://mdn.github.io/to-do-notifications/)かしてみましょう。
+ウェブ通知がどのように利用できるのかの考えを深めるために、実世界の例を — To-do リストアプリ — を書いてみました。これは [IndexedDB](/ja/docs/Web/API/IndexedDB_API) を使用してローカルにデータを格納し、タスクの期限が来たときにシステム通知を使用してユーザーに通知します。 [To-do リストのコードをダウンロード](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)するか、[ライブで実行するアプリを見る](https://mdn.github.io/dom-examples/to-do-notifications/)かしてみましょう。
 
 ## 許可の要求
 

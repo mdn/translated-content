@@ -1,6 +1,6 @@
 ---
 title: グリッドレイアウトでのボックス配置
-slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
+slug: Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout
 ---
 
 {{CSSRef}}

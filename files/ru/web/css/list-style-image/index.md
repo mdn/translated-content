@@ -1,14 +1,10 @@
 ---
 title: list-style-image
 slug: Web/CSS/list-style-image
-tags:
-  - маркер списка
-  - список
-translation_of: Web/CSS/list-style-image
 ---
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS)-свойство **`list-style-image `**устанавливает изображение, используемое в качестве маркера списка.
+[CSS](/ru/docs/Web/CSS)-свойство **`list-style-image`** устанавливает изображение, используемое в качестве маркера списка.
 
 Чаще, удобнее использовать общее свойство {{ cssxref("list-style") }}.
 
@@ -57,7 +53,7 @@ list-style-image: unset;
 
 ```css
 ul {
-  list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif");
+  list-style-image: url("starsolid.gif");
 }
 ```
 

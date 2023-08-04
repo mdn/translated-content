@@ -1,12 +1,11 @@
 ---
 title: repeating-radial-gradient()
 slug: Web/CSS/gradient/repeating-radial-gradient
-original_slug: Web/CSS/gradient/repeating-radial-gradient()
 ---
 
 {{CSSRef}}
 
-CSS 函数**`repeating-radial-gradient()`** 创建一个从原点辐射的重复渐变组成的{{cssxref("&lt;image&gt;")}} 。它类似于{{cssxref("radial-gradient")}} 并且采用相同的参数，但是它会在所有方向上重复颜色，以覆盖其整个容器。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，是一种特殊的{{cssxref("&lt;image&gt;")}}类型。
+CSS 函数 **`repeating-radial-gradient()`** 创建一个从原点辐射的重复渐变组成的{{cssxref("&lt;image&gt;")}} 。它类似于{{cssxref("radial-gradient")}} 并且采用相同的参数，但是它会在所有方向上重复颜色，以覆盖其整个容器。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，是一种特殊的{{cssxref("&lt;image&gt;")}}类型。
 
 ```css
 /* 一个从容器中心点开始的重复渐变，
@@ -76,19 +75,44 @@ div {
   padding: 10px;
 }
 #grad1 {
-  background: -webkit-repeating-radial-gradient(black, black 5px, white 5px, white 10px);
-  background: -moz-repeating-radial-gradient(black, black 5px, white 5px, white 10px);
-  background: -ms-repeating-radial-gradient(black, black 5px, white 5px, white 10px);
-  background: -o-repeating-radial-gradient(black, black 5px, white 5px, white 10px);
-  background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
+  background: -webkit-repeating-radial-gradient(
+    black,
+    black 5px,
+    white 5px,
+    white 10px
+  );
+  background: -moz-repeating-radial-gradient(
+    black,
+    black 5px,
+    white 5px,
+    white 10px
+  );
+  background: -ms-repeating-radial-gradient(
+    black,
+    black 5px,
+    white 5px,
+    white 10px
+  );
+  background: -o-repeating-radial-gradient(
+    black,
+    black 5px,
+    white 5px,
+    white 10px
+  );
+  background: repeating-radial-gradient(
+    black,
+    black 5px,
+    white 5px,
+    white 10px
+  );
   text-shadow: 1px 1px 0pt black;
   color: white;
   border: 1px solid black;
-  height:5.5em;
+  height: 5.5em;
 }
 ```
 
-{{EmbedLiveSample('Black_and_white_gradient', '300px', '120px', '')}}
+{{EmbedLiveSample('黑白相间的渐变', '300px', '120px', '')}}
 
 ```css
 background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
@@ -106,22 +130,58 @@ div {
   padding: 10px;
 }
 #grad1 {
-  background: -webkit-repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
-  background: -moz-repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
-  background: -ms-repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
-  background: -o-repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
-  background: repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
+  background: -webkit-repeating-radial-gradient(
+    ellipse farthest-corner,
+    red,
+    black 5%,
+    blue 5%,
+    green 10%
+  );
+  background: -moz-repeating-radial-gradient(
+    ellipse farthest-corner,
+    red,
+    black 5%,
+    blue 5%,
+    green 10%
+  );
+  background: -ms-repeating-radial-gradient(
+    ellipse farthest-corner,
+    red,
+    black 5%,
+    blue 5%,
+    green 10%
+  );
+  background: -o-repeating-radial-gradient(
+    ellipse farthest-corner,
+    red,
+    black 5%,
+    blue 5%,
+    green 10%
+  );
+  background: repeating-radial-gradient(
+    ellipse farthest-corner,
+    red,
+    black 5%,
+    blue 5%,
+    green 10%
+  );
   text-shadow: 1px 1px 0pt blue;
   color: white;
   border: 1px solid black;
-  height:5.5em;
+  height: 5.5em;
 }
 ```
 
-{{EmbedLiveSample('Farthest-corner', '300px', '120px', '')}}
+{{EmbedLiveSample('Farthest-corner 渐变', '300px', '120px', '')}}
 
 ```css
-background: repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
+background: repeating-radial-gradient(
+  ellipse farthest-corner,
+  red,
+  black 5%,
+  blue 5%,
+  green 10%
+);
 ```
 
 ## 规范
@@ -132,7 +192,7 @@ background: repeating-radial-gradient(ellipse farthest-corner, red, black 5%, bl
 
 {{Compat}}
 
-## 参阅：
+## 参见
 
 - [使用渐变](/zh-CN/docs/Web/Guide/CSS/Using_CSS_gradients)
 - 其他渐变方法：{{cssxref("radial-gradient")}}, {{cssxref("linear-gradient")}}, {{cssxref("repeating-linear-gradient")}}

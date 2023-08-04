@@ -1,18 +1,8 @@
 ---
 title: Document.fullscreen
 slug: Web/API/Document/fullscreen
-tags:
-  - API
-  - Documento
-  - Javascript tela cheia
-  - Propriedade
-  - Referencia
-  - Somente Leitura
-  - Tela
-  - Tela Cheia
-  - display
-translation_of: Web/API/Document/fullscreen
 ---
+
 {{APIRef("Fullscreen API")}}{{Deprecated_Header}}
 
 A propriedade de somente leitura da interface **`fullscreen`** retorna se o documento correspondente está mostrando conteúdo em modo de tela cheia (full-screen).
@@ -51,15 +41,13 @@ function isDocumentInFullScreenMode() {
 
 Se `fullscreenElement` não é `null`, retorna `true`, indicando se modo full-screen está sendo usado.
 
-## Específicações
+## Especificações
 
-| Specification                                                                                            | Status                           | Comment                                          |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------ |
-| {{SpecName("Fullscreen", "#dom-document-fullscreen", "Document.fullscreen")}} | {{Spec2("Fullscreen")}} | Definição inicial (como uma proprieda obsoleta). |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.fullscreen")}}
+{{Compat}}
 
 ## Veja também
 

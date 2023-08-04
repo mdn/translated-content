@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/slice
 ---
 
 {{JSRef}}
@@ -20,9 +12,9 @@ La méthode **`slice()`** renvoie un objet tableau, contenant une copie superfic
 ## Syntaxe
 
 ```js
-arr.slice()
-arr.slice(début)
-arr.slice(début, fin)
+arr.slice();
+arr.slice(début);
+arr.slice(début, fin);
 ```
 
 ### Paramètres
@@ -112,7 +104,7 @@ function list() {
 var list1 = list(1, 2, 3); // [1, 2, 3]
 ```
 
-Il est possible de lier avec la fonction .`call` de {{jsxref("Function.prototype")}} et on peut effectuer la réduction avec `[].slice.call(arguments)` plutôt qu'avec `Array.prototype.slice.call`. Voici comment on peut simplifier avec {{jsxref("Function.prototype.bind", "bind")}} :
+Il est possible de lier avec la fonction `call` de {{jsxref("Function.prototype")}} et on peut effectuer la réduction avec `[].slice.call(arguments)` plutôt qu'avec `Array.prototype.slice.call`. Voici comment on peut simplifier avec {{jsxref("Function.prototype.bind", "bind")}} :
 
 ```js
 var unboundSlice = Array.prototype.slice;
@@ -127,16 +119,11 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                 | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.10', 'Array.prototype.slice')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-array.prototype.slice', 'Array.prototype.slice')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.slice', 'Array.prototype.slice')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.slice")}}
+{{Compat}}
 
 ## Voir aussi
 

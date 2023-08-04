@@ -1,8 +1,8 @@
 ---
 title: Blob
 slug: Web/API/Blob
-translation_of: Web/API/Blob
 ---
+
 {{ APIRef("File API") }}
 
 ## Sumário
@@ -11,7 +11,7 @@ Um objeto `Blob` representa um objeto do tipo arquivo, com dados brutos imutáve
 
 Para construir um `Blob` a partir de outro objeto ou dado não-blob , utilize o construtor {{domxref("Blob.Blob","Blob()")}}. Para criar um blob que contém um subconjunto de dados de outro blob, use o método {{domxref("Blob.slice()", "slice()")}}. Para obter um objeto Blob de um arquivo no sistema de arquivos do usuário, veja a documentação {{domxref("File")}}.
 
-The APIs accepting `Blob` objects are also listed on the {{domxref("File")}} documentation.
+As APIs que aceitam objetos `Blob` também são listados na documentação {{domxref("File")}}.
 
 > **Nota:** O método `slice()` usava inicialmente `length` como segundo argumento para indicar o numero de bytes a copiar no novo `Blob`. Se você especificou valores de maneira que `start + length` excederam o tamanho do `Blob` de origem, o `Blob` retornado contém dados a partir do início do índice até o final do `Blob` de origem.
 
@@ -42,7 +42,7 @@ O código a seguir:
 
 ```js
 var aFileParts = ['<a id="a"><b id="b">hey!</b></a>'];
-var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // o blob
+var oMyBlob = new Blob(aFileParts, { type: "text/html" }); // o blob
 ```
 
 equivale a:
@@ -51,7 +51,7 @@ equivale a:
 var oBuilder = new BlobBuilder();
 var aFileParts = ['<a id="a"><b id="b">hey!</b></a>'];
 oBuilder.append(aFileParts[0]);
-var oMyBlob = oBuilder.getBlob('text/xml'); // o blob
+var oMyBlob = oBuilder.getBlob("text/xml"); // o blob
 ```
 
 > **Aviso:** O {{ domxref("BlobBuilder") }} oferece outra maneira para criar Blobs, mas é depreciado e não deveria mais ser usado.
@@ -62,7 +62,7 @@ O código a seguir:
 
 ```js
 var typedArray = GetTheTypedArraySomehow();
-var blob = new Blob([typedArray], {type: 'application/octet-binary'}); // passe um MIME-type útil aqui
+var blob = new Blob([typedArray], { type: "application/octet-binary" }); // passe um MIME-type útil aqui
 var url = URL.createObjectURL(blob);
 // url será algo do tipo: blob:d3958f5c-0777-0845-9dcf-2cb28783acaf
 // agora você pode usar a URL em qualquer contexto em que URLs regulares podem ser usadas, por exemplo: img.src, etc.
@@ -74,8 +74,8 @@ O único jeito de ler o conteúdo de um Blob é usando {{domxref("FileReader")}}
 
 ```js
 var reader = new FileReader();
-reader.addEventListener("loadend", function() {
-   // reader.result contém o conteúdo do blob como uma array tipada
+reader.addEventListener("loadend", function () {
+  // reader.result contém o conteúdo do blob como uma array tipada
 });
 reader.readAsArrayBuffer(blob);
 ```
@@ -84,27 +84,11 @@ Ao usar outros métodos de {{domxref("FileReader")}}, é possível ler o conteú
 
 ## Especificações
 
-| Especificações                                       | Status                       | Comentário         |
-| ---------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('File API','#blob','Blob')}} | {{Spec2('File API')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Blob")}}
-
-### Notas para Gecko
-
-Anterior ao Gecko 12.0 {{ geckoRelease("12.0") }}, havia um bug que afetava o comportamento do [slice](#slice); que não funcionava para as posições `start` e `end` fora do intervalo de valores assinados como 64-bit; este bug foi corrigido para dar suporte a valores assinados como 64-bit.
-
-## Chrome Code - Disponibilidade de Escopo
-
-No escopo JSM, `Blob` é disponivel sem a necessidade de nada especial.
-
-No escopo Bootstrap, ele deve ser importado como tal:
-
-```js
-const {Blob, Services} = Cu.import('resource://gre/modules/Services.jsm', {});
-```
+{{Compat}}
 
 ## Veja Também
 

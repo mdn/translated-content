@@ -1,8 +1,8 @@
 ---
 title: document.applets
 slug: Web/API/Document/applets
-translation_of: Web/API/Document/applets
 ---
+
 {{APIRef("DOM")}}{{ Deprecated_header() }}
 
 ### Resumen
@@ -14,7 +14,7 @@ del documento.
 ### Sintaxis
 
 ```js
-nodeList = document.applets
+nodeList = document.applets;
 ```
 
 ### Ejemplo

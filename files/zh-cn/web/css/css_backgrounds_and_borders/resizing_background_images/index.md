@@ -1,29 +1,27 @@
 ---
-title: Scaling background images
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
-original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images
+title: 调整背景图片的大小
+slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 ---
 
-{{cssref}}
+{{CSSRef}}
 
-CSS 属性{{ cssxref("background-size") }} 可以用于调整背景图片的宽和高，因背景图片布局的默认行为是根据其原尺寸平铺，所以{{ cssxref("background-size") }}可修改其默认行为。你可以根据需要放大或缩小图片。
+CSS 属性 **{{cssxref("background-size")}}** 可以用于调整元素的背景图片大小，通过指定图像的宽度和/或高度，覆盖默认的以全尺寸平铺图像的行为。通过这样做，你可以根据需要放大或缩小图像。
 
-## Tiling a large image
+## 铺开大图像
 
-Let's consider a large image, a 2982x2808 Firefox logo image. We want (for some reason likely involving horrifyingly bad site design) to tile four copies of this image into a 300x300-pixel element. To do this, we can use a fixed `background-size` value of 150 pixels.
+让我们考虑一张大图片，一张 2982x2808 的 Firefox 标志图片。我们想（由于某种原因，可能涉及到可怕的糟糕的网站设计）将这个图片的四个副本平铺到一个 300x300 像素的元素中。要做到这一点，我们可以使用一个固定的 150 像素的 `background-size` 值。
 
 ### HTML
 
 ```html
-<div class="tiledBackground">
-</div>
+<div class="tiledBackground"></div>
 ```
 
 ### CSS
 
 ```css
 .tiledBackground {
-  background-image: url(https://mdn.mozillademos.org/files/8971/firefox_logo.png);
+  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
   background-size: 150px;
   width: 300px;
   height: 300px;
@@ -32,27 +30,27 @@ Let's consider a large image, a 2982x2808 Firefox logo image. We want (for some 
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Tiling_a_large_image", 340, 340)}}
+{{EmbedLiveSample("铺开大图像", 340, 340)}}
 
-## Stretching an image
+## 伸缩图像
 
-You can also specify both the horizontal and vertical sizes of the image, like this:
+你也可以像这样同时指定图像的水平和垂直尺寸：
 
 ```css
 background-size: 300px 150px;
 ```
 
-The result looks like this:
+结果看起来像这样：
 
-![](https://mdn.mozillademos.org/files/8967/ss2.png)
+![现在 Firefox 图标被伸展开了](stretched_firefox_logo.png)
 
-## Scaling an image up
+## 放大图像
 
-On the other end of the spectrum, you can scale an image up in the background. Here we scale a 32x32 pixel favicon to 300x300 pixels:
+你可以在背景中放大图像。在这里，我们将 32x32 像素大小的 favicon 放大到了 300x300 像素：
 
-![](https://mdn.mozillademos.org/files/8969/ss3.png)
+![放大的 MDN 徽标](scaled_mdn_logo.png)
 
 ```css
 .square2 {
@@ -66,21 +64,21 @@ On the other end of the spectrum, you can scale an image up in the background. H
 }
 ```
 
-As you can see, the CSS is actually essentially identical, save the name of the image file.
+正如你所看到的，CSS 实际上基本上是相同的，除了图像文件的名称。
 
-## Special values: "contain" and "cover"
+## 特殊值：“contain”和“cover”
 
-Besides {{cssxref("&lt;length&gt;")}} values, the {{ cssxref("background-size") }} CSS property offers two special size values, `contain` and `cover`. Let's take a look at these.
+除了 {{cssxref("&lt;length&gt;")}} 值，CSS 属性 {{ cssxref("background-size") }} 提供了两个特殊的尺寸值：`contain` 和 `cover`。让我们来看看这些。
 
-### `contain`
+### contain
 
-The `contain` value specifies that, regardless of the size of the containing box, the background image should be scaled so that each side is as large as possible while not exceeding the length of the corresponding side of the container. Try resizing the example below to see this in action.
+`contain` 值指定，无论包含的盒子大小如何，背景图像都应该被缩放，使每一面都尽可能大，同时不超过容器相应一面的长度。试着调整下面这个例子的大小，观察 contain 值的效果。
 
 #### HTML
 
 ```html
 <div class="bgSizeContain">
-  <p>Try resizing this element!</p>
+  <p>试着缩放这个元素！</p>
 </div>
 ```
 
@@ -88,7 +86,7 @@ The `contain` value specifies that, regardless of the size of the containing box
 
 ```css
 .bgSizeContain {
-  background-image: url(https://mdn.mozillademos.org/files/8971/firefox_logo.png);
+  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
   background-size: contain;
   width: 160px;
   height: 160px;
@@ -99,19 +97,19 @@ The `contain` value specifies that, regardless of the size of the containing box
 }
 ```
 
-#### Result
+#### 结果
 
 {{ EmbedLiveSample('contain', 250, 250) }}
 
-### `cover`
+### cover
 
-The `cover` value specifies that the background image should be sized so that it is as small as possible while ensuring that both dimensions are greater than or equal to the corresponding size of the container. Try resizing the example below to see this in action.
+`cover` 值指定背景图片的大小，使其尽可能的小，同时确保两个尺寸都大于或等于容器的相应尺寸。试着调整下面这个例子的大小，观察 cover 值的效果。
 
 #### HTML
 
 ```html
 <div class="bgSizeCover">
-  <p>Try resizing this element!</p>
+  <p>试着缩放这个元素！</p>
 </div>
 ```
 
@@ -119,7 +117,7 @@ The `cover` value specifies that the background image should be sized so that it
 
 ```css
 .bgSizeCover {
-  background-image: url(https://mdn.mozillademos.org/files/8971/firefox_logo.png);
+  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
   background-size: cover;
   width: 160px;
   height: 160px;
@@ -130,12 +128,12 @@ The `cover` value specifies that the background image should be sized so that it
 }
 ```
 
-#### Result
+#### 结果
 
 {{ EmbedLiveSample('cover', 250, 250) }}
 
-## See also
+## 参见
 
 - {{ cssxref("background-size") }}
 - {{ cssxref("background") }}
-- [Scaling of SVG backgrounds](/zh-CN/docs/Web/CSS/Scaling_of_SVG_backgrounds)
+- [缩放 SVG 背景](/zh-CN/docs/Web/CSS/Scaling_of_SVG_backgrounds)

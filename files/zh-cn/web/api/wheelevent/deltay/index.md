@@ -16,7 +16,10 @@ var dY = event.deltaY;
 ## 例子
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaY": 4, "deltaMode": 0});
+var syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaY: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaY);
 ```
@@ -31,5 +34,5 @@ console.log(syntheticEvent.deltaY);
 
 ## 另见
 
-- {{ event("wheel") }}
+- [`wheel`](/zh-CN/docs/Web/API/Element/wheel_event)
 - {{domxref("WheelEvent")}}

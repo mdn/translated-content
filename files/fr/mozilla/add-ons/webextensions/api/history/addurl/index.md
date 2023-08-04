@@ -1,17 +1,6 @@
 ---
 title: history.addUrl()
 slug: Mozilla/Add-ons/WebExtensions/API/history/addUrl
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - addUrl
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/addUrl
 ---
 
 {{AddonSidebar()}}
@@ -24,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var addingUrl = browser.history.addUrl(
-  details         // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -41,15 +30,15 @@ var addingUrl = browser.history.addUrl(
     - `transition`{{optional_inline}}
       - : {{WebExtAPIRef("history.TransitionType")}}. Décrit comment le navigateur a navigué vers la page à cette occasion. Si ce n'est pas fourni, un type de transition de "lien" sera enregistré.
     - `visitTime`{{optional_inline}}
-      - : `number` ou `string` ou `object`. Cela peut être représenté par: un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une  [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de millisecondes depuis l'époque. Définit le temps de visite à cette valeur. Si ce n'est pas fourni, l'heure actuelle sera enregistrée.
+      - : `number` ou `string` ou `object`. Cela peut être représenté par: un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de millisecondes depuis l'époque. Définit le temps de visite à cette valeur. Si ce n'est pas fourni, l'heure actuelle sera enregistrée.
 
 ### Valeur retournée
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera rempli sans paramètres lorsque l'élément a été ajouté.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.addUrl")}}
+{{Compat}}
 
 ## Exemples
 
@@ -67,19 +56,19 @@ function onAdded() {
   var searching = browser.history.search({
     text: "https://example.org/",
     startTime: 0,
-    maxResults: 1
+    maxResults: 1,
   });
   searching.then(onGot);
 }
 
-var addingUrl = browser.history.addUrl({url: "https://example.org/"});
+var addingUrl = browser.history.addUrl({ url: "https://example.org/" });
 addingUrl.then(onAdded);
 ```
 
-Ajouter un enregistrement d'une visite à "https\://example.org", mais lui donner une `visitTime` de 24 heures dans le passé, et une `transition`  "typed":
+Ajouter un enregistrement d'une visite à "https\://example.org", mais lui donner une `visitTime` de 24 heures dans le passé, et une `transition` "typed":
 
 ```js
-const DAY = 24 * 60* 60 * 1000;
+const DAY = 24 * 60 * 60 * 1000;
 
 function oneDayAgo() {
   return Date.now() - DAY;
@@ -94,7 +83,7 @@ function onGot(visits) {
 
 function onAdded() {
   var gettingVisits = browser.history.getVisits({
-    url: "https://example.org/"
+    url: "https://example.org/",
   });
 
   gettingVisits.then(onGot);
@@ -103,7 +92,7 @@ function onAdded() {
 var addingUrl = browser.history.addUrl({
   url: "https://example.org/",
   visitTime: oneDayAgo(),
-  transition: "typed"
+  transition: "typed",
 });
 
 addingUrl.then(onAdded);

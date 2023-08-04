@@ -1,25 +1,16 @@
 ---
 title: WebAssembly.LinkError()
 slug: WebAssembly/JavaScript_interface/LinkError
-tags:
-  - API
-  - Constructeur
-  - JavaScript
-  - LinkError
-  - Reference
-  - WebAssembly
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 Le constructeur **`WebAssembly.LinkError()`** permet de créer un nouvel objet WebAssembly `LinkError` qui indique qu'une erreur s'est produite lors de l'instanciation du module (en plus [des trappes](http://webassembly.org/docs/semantics/#traps) provenant de la fonction initiale).
 
 ## Syntaxe
 
 ```js
-new WebAssembly.LinkError(message, nomFichier, numeroLigne)
+new WebAssembly.LinkError(message, nomFichier, numeroLigne);
 ```
 
 ### Paramètres
@@ -65,29 +56,26 @@ Dans le fragment de code qui suit, on crée un nouvelle instance de `LinkError` 
 
 ```js
 try {
-  throw new WebAssembly.LinkError('Coucou', 'unFichier', 10);
+  throw new WebAssembly.LinkError("Coucou", "unFichier", 10);
 } catch (e) {
   console.log(e instanceof LinkError); // true
-  console.log(e.message);                 // "Coucou"
-  console.log(e.name);                    // "LinkError"
-  console.log(e.fileName);                // "unFichier"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // renvoie la pile d'appels
-                                          // à l'origine de l'erreur
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "LinkError"
+  console.log(e.fileName); // "unFichier"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // renvoie la pile d'appels
+  // à l'origine de l'erreur
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | État                                 | Commentaires                                       |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#constructor-properties-of-the-webassembly-object', 'WebAssembly constructors')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initiale pour WebAssembly. |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard', 'NativeError')}}                                 | {{Spec2('ESDraft')}}         | Définition des types standards `NativeError`.      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.LinkError")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,7 +1,6 @@
 ---
 title: プロキシー自動設定ファイル
 slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
-original_slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file
 ---
 
 {{HTTPSidebar}}
@@ -84,7 +83,7 @@ application/x-ns-proxy-autoconfig
 
 次に、 .pac 拡張子をこの MIME タイプに結び付けるようサーバーを設定してください。
 
-> **Note:**
+> **メモ:**
 >
 > - JavaScript 関数は常に単体のファイルで保存し、 HTML ファイルやその他のファイルに埋め込まないでください。
 > - この文書の最後にある例は完全なものです。ファイルを保存して使用するのに追加する必要がある構文はありません。 (もちろん、 JavaScript を編集して自分のサイトのドメイン名やサブネットマスクに合わせる必要があります。)

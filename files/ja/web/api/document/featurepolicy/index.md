@@ -19,9 +19,7 @@ var policy = iframeElement.featurePolicy
 
 ## 仕様書
 
-| 仕様書                                   | 状態                                 | 備考     |
-| ---------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName("Feature Policy")}} | {{Spec2("Feature Policy")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

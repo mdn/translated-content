@@ -1,13 +1,8 @@
 ---
-title: '::placeholder'
+title: "::placeholder"
 slug: Web/CSS/::placeholder
-tags:
-  - '::placeholder'
-  - CSS
-  - Pseudo-elemento
-  - Referencia
-translation_of: Web/CSS/::placeholder
 ---
+
 {{CSSRef}}
 
 El [pseudo-elemento CSS](/es/docs/Web/CSS/Pseudo-elements) **`::placeholder`** representa el [texto provisional](/es/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute) en un elemento {{HTMLElement("input")}} o un elemento {{HTMLElement("textarea")}}.
@@ -34,7 +29,7 @@ Solo el subconjuto de las propiedades CSS que aplican al pseudo-elemento {{cssxr
 #### HTML
 
 ```html
-<input placeholder="Type something here!">
+<input placeholder="Type something here!" />
 ```
 
 #### CSS
@@ -56,7 +51,7 @@ input::placeholder {
 #### HTML
 
 ```html
-<input placeholder="Type something here...">
+<input placeholder="Type something here..." />
 ```
 
 #### CSS
@@ -91,14 +86,18 @@ El radio del color de contraste es determinado al comparar la luminosidad entre 
 
 Un texto temporal con suficiente contraste puede ser interpretado como una entrada. El texto provisional podría desaparecer cuando una persona ingresa contenido en un elemento {{htmlelement("input")}}. Ámbas circunstancias pueden interferir con el correcto llenado de un formulario, especialmente para personas con dificultades cogniticas.
 
-Un acercamiento alternativo para proveer información provisional es incluirla afuera del campo de entrada en proximidad visual, entonces usar [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) para programáticamente asociar la entrada {{HTMLElement("input")}} con su sugerencia.
+Un acercamiento alternativo para proveer información provisional es incluirla afuera del campo de entrada en proximidad visual, entonces usar [`aria-describedby`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) para programáticamente asociar la entrada {{HTMLElement("input")}} con su sugerencia.
 
 Con esta implementación, el contenido de la sugerencia, esta disponible incluso cuando información es ingresada en el campo de entrada, y la entrada aparece libre de una _entrada_ preexistente cuando la página ha cargado. Muchas de las tecnologías de lectores de pantalla usan `aria-describedby` para leer la sugerencia después de que la etiqueta de la entrada de texto hay sido anunciada, y la persona utilizando el lector de pantalla puede silenciarla si encuentra la información adicional innecesaria..
 
 ```html
 <label for="user-email">Your email address</label>
 <span id="user-email-hint" class="input-hint">Example: jane@sample.com</span>
-<input id="user-email" aria-describedby="user-email-hint" name="email" type="email">
+<input
+  id="user-email"
+  aria-describedby="user-email-hint"
+  name="email"
+  type="email" />
 ```
 
 - [Los textos provisionales en los campos del formulario son dañinos (Placeholders in Form Fields Are Harmful) — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
@@ -111,20 +110,18 @@ El campo temporal puede aparecer con el mismo estilo como el texto ingresado por
 
 ### Etiquetas
 
-El texto provisional no es un reemplazo para el elemento {{htmlelement("label")}}. Sin una etiqueta que ha sido programaticamente asociada con la entrada usando una combinación de los atributos {{htmlattrxref("for", "label")}} y {{htmlattrxref("id")}}, tecnología asistiva como los lectores de pantalla no pueden leer los elementos {{htmlelement("input")}}.
+El texto provisional no es un reemplazo para el elemento {{htmlelement("label")}}. Sin una etiqueta que ha sido programaticamente asociada con la entrada usando una combinación de los atributos [`for`](/es/docs/Web/HTML/Element/label#for) y [`id`](/es/docs/Web/HTML/Global_attributes#id), tecnología asistiva como los lectores de pantalla no pueden leer los elementos {{htmlelement("input")}}.
 
 - [Sugerencias básicas de formularios (MDN Basic form hints)](/es/docs/Web/Accessibility/ARIA/forms/Basic_form_hints)
 - [Los textos provisionales en los campos del formulario son dañinos (Placeholders in Form Fields Are Harmful) — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                                       | Comentarios        |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
-| {{SpecName('CSS4 Pseudo-Elements', '#placeholder-pseudo', '::placeholder')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.placeholder")}}
+{{Compat}}
 
 ## Ver también
 

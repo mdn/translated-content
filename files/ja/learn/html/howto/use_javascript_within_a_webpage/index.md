@@ -2,6 +2,7 @@
 title: ウェブページで JavaScript を使う方法
 slug: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
 ---
+
 Take your webpages to the next level by harnessing JavaScript. Learn in this article how to trigger JavaScript right from your HTML documents.
 
 | 前提条件: | [基本的な HTML 文書の作成](/ja//Learn/HTML/Write_a_simple_page_in_HTML)方法を習熟している必要があります。 |
@@ -38,9 +39,9 @@ You may also add JavaScript code between `<script>` tags rather than providing a
 
 ```html
 <script>
-window.addEventListener('load', function () {
-  console.log('This function is executed once the page is fully loaded');
-});
+  window.addEventListener("load", function () {
+    console.log("This function is executed once the page is fully loaded");
+  });
 </script>
 ```
 

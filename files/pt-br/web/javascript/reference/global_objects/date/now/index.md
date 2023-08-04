@@ -1,15 +1,8 @@
 ---
 title: Date.now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
-tags:
-  - JavaScript
-  - Reference
-  - Referencia
-  - data
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 ## Resumo
@@ -46,10 +39,10 @@ if (!Date.now) {
 
 ## Especificações
 
-| Especificação                                                        | Status                   | Comentário                                        |
-| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------- |
+| Especificação                                      | Status             | Comentário                                        |
+| -------------------------------------------------- | ------------------ | ------------------------------------------------- |
 | {{SpecName('ES5.1', '#sec-15.9.4.4', 'Date.now')}} | {{Spec2('ES5.1')}} | Definição inicial. Implementado no JavaScript 1.5 |
-| {{SpecName('ES6', '#sec-date.now', 'Date.now')}}     | {{Spec2('ES6')}}     |                                                   |
+| {{SpecName('ES6', '#sec-date.now', 'Date.now')}}   | {{Spec2('ES6')}}   |                                                   |
 
 ## Compatibilidade com navegadores
 

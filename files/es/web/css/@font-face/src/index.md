@@ -1,12 +1,8 @@
 ---
 title: src
 slug: Web/CSS/@font-face/src
-tags:
-  - Descriptor CSS
-  - Fuentes CSS
-  - Referencia
-translation_of: Web/CSS/@font-face/src
 ---
+
 {{CSSRef}}
 
 El descriptor CSS **`src`** de la regla {{cssxref("@font-face")}} especifica el recurso que contiene a la fuente. Es requerido para que la regla `@font-face` sea válida.
@@ -22,20 +18,22 @@ Al igual que con otras URLs en CSS, la URL puede ser relativa, en cuyo caso se r
 ```css
 /* <url> values */
 src: url(https://somewebsite.com/path/to/font.woff); /* absolute URL */
-src: url(path/to/font.woff);                         /* relative URL */
-src: url(path/to/font.woff) format("woff");          /* explicit format */
-src: url('path/to/font.woff');                       /* quoted URL */
-src: url(path/to/svgfont.svg#example);               /* fragment identifying font */
+src: url(path/to/font.woff); /* relative URL */
+src: url(path/to/font.woff) format("woff"); /* explicit format */
+src: url("path/to/font.woff"); /* quoted URL */
+src: url(path/to/svgfont.svg#example); /* fragment identifying font */
 
 /* <font-face-name> values */
-src: local(font);      /* unquoted name */
+src: local(font); /* unquoted name */
 src: local(some font); /* name containing space */
-src: local("font");    /* quoted name */
+src: local("font"); /* quoted name */
 
 /* Multiple items */
-src: local(font), url(path/to/font.svg) format("svg"),
-    url(path/to/font.woff) format("woff"),
-    url(path/to/font.ttf) format("opentype");
+src:
+  local(font),
+  url(path/to/font.svg) format("svg"),
+  url(path/to/font.woff) format("woff"),
+  url(path/to/font.ttf) format("opentype");
 ```
 
 ### Valores
@@ -54,17 +52,17 @@ src: local(font), url(path/to/font.svg) format("svg"),
 ```css
 @font-face {
   font-family: examplefont;
-  src: local(Example Font), url('examplefont.woff') format("woff"),
-      url('examplefont.woff') format("opentype");
+  src:
+    local(Example Font),
+    url("examplefont.woff") format("woff"),
+    url("examplefont.woff") format("opentype");
 }
 ```
 
 ## Especificaciones
 
-| Especificación                                               | Estatus                          | Comentarios        |
-| ------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts', '#src-desc', 'src')}} | {{Spec2('CSS3 Fonts')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.font-face.src")}}
+{{Compat}}

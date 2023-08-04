@@ -1,5 +1,5 @@
 ---
-title: 'Window: DOMContentLoaded イベント'
+title: "Window: DOMContentLoaded イベント"
 slug: Web/API/Window/DOMContentLoaded_event
 ---
 
@@ -44,9 +44,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 ## 仕様書
 
-| 仕様書                                                                                   | 状態                             |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'indices.html#event-domcontentloaded')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

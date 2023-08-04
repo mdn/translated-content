@@ -1,15 +1,6 @@
 ---
 title: Int8Array
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array
-tags:
-  - Constructor
-  - Int8Array
-  - JavaScript
-  - Reference
-  - TypedArray
-  - TypedArrrays
-translation_of: Web/JavaScript/Reference/Global_Objects/Int8Array
-original_slug: Web/JavaScript/Reference/Objets_globaux/Int8Array
 ---
 
 {{JSRef}}
@@ -133,7 +124,7 @@ console.log(int8.length); // 2
 console.log(int8.BYTES_PER_ELEMENT); // 1
 
 // Construction à partir d'un tableau
-var arr = new Int8Array([21,31]);
+var arr = new Int8Array([21, 31]);
 console.log(arr[1]); // 31
 
 // Construction à partir d'un autre TypedArray
@@ -146,36 +137,20 @@ var buffer = new ArrayBuffer(8);
 var z = new Int8Array(buffer, 1, 4);
 
 // Construction à partir d'un itérable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var int8 = new Int8Array(iterable);
 // Int8Array[1, 2, 3]
 ```
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires                                                                                                                          |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                                                                                                       |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. `new` est obligatoire.                                                                |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 a modifié le constructeur afin d'utiliser l'opération interne `ToIndex` et permettre de l'utiliser sans constructeur. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Int8Array")}}
-
-## Notes de compatibilité
-
-À partir d'ECMAScript 2015 (ES6), `Int8Array` doit être utilisé avec {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Appeler un constructeur `Int8Array` comme une fonction, sans `new`, provoquera une exception {{jsxref("TypeError")}}.
-
-```js example-bad
-var dv = Int8Array([1, 2, 3]);
-// TypeError: calling a builtin Int8Array constructor
-// without new is forbidden
-```
-
-```js example-good
-var dv = new Int8Array([1, 2, 3]);
-```
+{{Compat}}
 
 ## Voir aussi
 

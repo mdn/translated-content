@@ -1,7 +1,6 @@
 ---
 title: 画面外に不要な空白が発生する
 slug: orphaned/Web/Compatibility_FAQ/No_Wrap.html
-original_slug: Web/Compatibility_FAQ/No_Wrap.html
 ---
 
 ## 概要
@@ -11,7 +10,7 @@ original_slug: Web/Compatibility_FAQ/No_Wrap.html
 
 表示画面
 
-![](https://mdn.mozillademos.org/files/9991/0101.jpg)
+![](0101.jpg)
 
 ## 要因
 

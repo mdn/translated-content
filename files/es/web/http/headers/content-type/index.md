@@ -1,20 +1,20 @@
 ---
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
-translation_of: Web/HTTP/Headers/Content-Type
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Type`** es la propiedad de cabecera (header) usada para indicar el {{Glossary("MIME type","media type")}} del recurso.
 
-`Content-Type` dice al cliente que tipo de contenido será retornado. Browsers will do MIME sniffing in some cases and will not necessarily follow the value of this header; to prevent this behavior, the header {{HTTPHeader("X-Content-Type-Options")}} can be set to `nosniff`.
+`Content-Type` dice al cliente que tipo de contenido será retornado. Los navegadores rastrearán `MIME` en algunos casos y no seguirán necesariamente el valor de este encabezado; para evitar este comportamiento, el encabezado {{HTTPHeader("X-Content-Type-Options")}} se puede establecer en `nosniff`.
 
 En solicitudes (tales como {{HTTPMethod("POST")}} o {{HTTPMethod("PUT")}}), el cliente indica al servidor que tipo de dato es enviado actualmente.
 
-| Header type                                                                                      | {{Glossary("Entity header")}} |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}}                                                 | no                                       |
-| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | si                                       |
+| Header type                                                               | {{Glossary("Entity header")}} |
+| ------------------------------------------------------------------------- | ----------------------------- |
+| {{Glossary("Forbidden header name")}}                                     | no                            |
+| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | si                            |
 
 ## Sintaxis
 
@@ -40,8 +40,8 @@ En una solicitud {{HTTPMethod("POST")}} , que resulta del envio de un formulario
 
 ```html
 <form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="some text">
-  <input type="file" name="myFile">
+  <input type="text" name="description" value="some text" />
+  <input type="file" name="myFile" />
   <button type="submit">Submit</button>
 </form>
 ```
@@ -67,14 +67,11 @@ Content-Type: text/plain
 
 ## Especificaciones
 
-| Specification                                                        | Title                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7233", "Content-Type in multipart", "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests        |
-| {{RFC("7231", "Content-Type", "3.1.1.5")}}             | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Content-Type")}}
+{{Compat}}
 
 ## Más sobre
 

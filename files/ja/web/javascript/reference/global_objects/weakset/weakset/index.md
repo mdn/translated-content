@@ -42,9 +42,7 @@ ws.has(bar);    // true, bar は残っている
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakset-constructor', 'WeakSet constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

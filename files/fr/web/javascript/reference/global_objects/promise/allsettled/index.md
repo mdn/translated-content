@@ -1,13 +1,6 @@
 ---
 title: Promise.allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
-tags:
-  - JavaScript
-  - Méthode
-  - Promise
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
-original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/allSettled
 ---
 
 {{JSRef}}
@@ -35,13 +28,11 @@ Pour chaque objet contenu dans ce tableau, il y aura une propriété `status` qu
 
 ## Spécifications
 
-| Spécification                                                                                       | État                         | Commentaires |
-| --------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| [`Promise.allSettled()` (Brouillon TC39 au niveau 4)](https://tc39.es/proposal-promise-allSettled/) | {{Spec2('ESDraft')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Promise.allSettled")}}
+{{Compat}}
 
 ## Voir aussi
 

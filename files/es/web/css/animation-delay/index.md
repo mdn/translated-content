@@ -1,14 +1,8 @@
 ---
 title: animation-delay
 slug: Web/CSS/animation-delay
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Experimental
-  - Reference
-translation_of: Web/CSS/animation-delay
 ---
+
 {{ CSSRef() }}
 
 {{ SeeCompatTable() }}
@@ -47,13 +41,11 @@ Visitar [animaciones CSS](/es/CSS/Usando_animaciones_CSS) para ver algunos ejemp
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                                   | Comentario |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Animations', '#animation-delay', 'animation-delay') }} | {{ Spec2('CSS3 Animations') }} |            |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.animation-delay")}}
+{{Compat}}
 
 ## Consulte también
 

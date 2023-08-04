@@ -5,8 +5,6 @@ slug: Web/JavaScript/Reference/Statements/for...in
 
 {{jsSidebar("Statements")}}
 
-## Summary
-
 迭代物件的可列舉屬性。對每個相異屬性，執行陳述式。
 
 <table>
@@ -56,7 +54,7 @@ A `for...in` loop iterates over the properties of an object in an arbitrary orde
 The following function takes as its arguments an object and the object's name. It then iterates over all the object's enumerable properties and returns a string of the property names and their values.
 
 ```js
-var o = {a:1, b:2, c:3};
+var o = { a: 1, b: 2, c: 3 };
 
 function show_props(obj, objName) {
   var result = "";
@@ -68,13 +66,15 @@ function show_props(obj, objName) {
   return result;
 }
 
-alert(show_props(o, "o")); /* alerts (in different lines): o.a = 1 o.b = 2 o.c = 3 */
+alert(
+  show_props(o, "o"),
+); /* alerts (in different lines): o.a = 1 o.b = 2 o.c = 3 */
 ```
 
 The following function illustrates the use of hasOwnProperty: the inherited properties are not displayed.
 
 ```js
-var triangle = {a:1, b:2, c:3};
+var triangle = { a: 1, b: 2, c: 3 };
 
 function ColoredTriangle() {
   this.color = "red";
@@ -86,7 +86,7 @@ function show_own_props(obj, objName) {
   var result = "";
 
   for (var prop in obj) {
-    if( obj.hasOwnProperty( prop ) ) {
+    if (obj.hasOwnProperty(prop)) {
       result += objName + "." + prop + " = " + obj[prop] + "\n";
     }
   }

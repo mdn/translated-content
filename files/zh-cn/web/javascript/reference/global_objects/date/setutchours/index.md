@@ -36,7 +36,7 @@ If you do not specify the `minutesValue`, `secondsValue`, and `msValue` paramete
 
 If a parameter you specify is outside of the expected range, `setUTCHours()` attempts to update the date information in the {{jsxref("Date")}} object accordingly. For example, if you use 100 for `secondsValue`, the minutes will be incremented by 1 (`minutesValue + 1`), and 40 will be used for seconds.
 
-## 例子
+## 示例
 
 ### 使用 `setUTCHours()`
 

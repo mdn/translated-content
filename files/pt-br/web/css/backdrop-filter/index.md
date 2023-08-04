@@ -1,14 +1,8 @@
 ---
 title: backdrop-filter
 slug: Web/CSS/backdrop-filter
-tags:
-  - Filtros
-  - efeitos
-  - iOS
-  - plano de fundo
-translation_of: Web/CSS/backdrop-filter
-browser-compat: css.properties.backdrop-filter
 ---
+
 {{CSSRef}}
 
 A propriedade [CSS](/pt-BR/docs/Web/CSS) **`backdrop-filter`** permite que você aplique efeitos gráficos, como desfoque ou mudança de cores, na área ao fundo de um elemento. Como ela se aplica a tudo que fica _atrás_ do elemento, é preciso deixá-lo (ou o seu plando de fundo) ao menos parcialmente transparente para poder ver o efeito em ação.
@@ -69,7 +63,7 @@ backdrop-filter: unset;
   font-family: sans-serif;
   text-align: center;
   line-height: 1;
- -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   max-width: 50%;
   max-height: 50%;

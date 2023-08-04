@@ -1,18 +1,15 @@
 ---
 title: WebAssembly
 slug: WebAssembly
-tags:
-  - WebAssembly
-  - wasm
-translation_of: WebAssembly
 ---
+
 {{WebAssemblySidebar}}{{SeeCompatTable}}
 
 O WebAssembly é um novo tipo de código que pode ser executado em browsers modernos — se trata de uma linguagem de baixo nível como assembly, com um formato binário compacto que executa com performance quase nativa e que fornece um novo alvo de compilação para linguagens como C/C++, para que possam ser executadas na web. Também foi projetado para executar em conjunto com o JavaScript, permitindo que ambos trabalhem juntos.
 
 ## Em poucas palavras
 
-O WebAssembly tem enormes implicações para a plataforma web — ele irá fornecer uma maneira de executar na web código escrito em diversas linguagens em velocidade quase nativa, com apps que não conseguiriam fazer isso antes.
+O WebAssembly tem enormes aplicações para a plataforma web — ele irá fornecer uma maneira de executar na web código escrito em diversas linguagens em velocidade quase nativa, com apps que não conseguiriam fazer isso antes.
 
 O WebAssembly foi projetado para complementar e executar lado a lado com JavaScript — usando as APIs JavaScript do WebAssembly, você pode carregar módulos WebAssembly em um aplicativo JavaScript e compartilhar funcionalidade entre ambos. Isso permite que você aproveite o desempenho e poder da WebAssembly e a expressividade e flexibilidade do JavaScript nos mesmos aplicativos, mesmo que você não saiba como escrever código de WebAssembly.
 
@@ -65,8 +62,8 @@ E o que é ainda melhor é que ele está sendo desenvolvido como um padrão web 
 
 ## Especificações
 
-| Especificações                           | Status                               | Comentários                                        |
-| ---------------------------------------- | ------------------------------------ | -------------------------------------------------- |
+| Especificações                 | Status                      | Comentários                                        |
+| ------------------------------ | --------------------------- | -------------------------------------------------- |
 | {{SpecName('WebAssembly JS')}} | {{Spec2('WebAssembly JS')}} | Definição inicial do projeto da API do JavaScript. |
 
 ## Compatibilidade do navegador

@@ -1,19 +1,9 @@
 ---
 title: Collision detection
 slug: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
-tags:
-  - 2D
-  - Deteccion de colision
-  - JavaScript
-  - Lienzo
-  - Phaser
-  - Principiante
-  - Tutorial
-  - juegos
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
 ---
+
 {{GamesSidebar}}
-{{IncludeSubnav("/en-US/docs/Games")}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_Phaser/The_score")}}
 
@@ -27,9 +17,9 @@ El motor de físicas hace que todo sea mucho más fácil - solo necesitamos agre
 
 ```js
 function update() {
-    game.physics.arcade.collide(ball, paddle);
-    game.physics.arcade.collide(ball, bricks, ballHitBrick);
-    paddle.x = game.input.x || game.world.width*0.5;
+  game.physics.arcade.collide(ball, paddle);
+  game.physics.arcade.collide(ball, bricks, ballHitBrick);
+  paddle.x = game.input.x || game.world.width * 0.5;
 }
 ```
 
@@ -37,15 +27,15 @@ La posición de la bola se calcula contra las posiciones de todos los ladrillos 
 
 ```js
 function ballHitBrick(ball, brick) {
-    brick.kill();
+  brick.kill();
 }
 ```
 
 ¡Y ya está! Vuelve a cargar el código, y verás que la nueva detección de colisión funciona correctamente.
 
-Gracias a Phaser, se pasan dos parámetros a la función: el primero es la bola, que definimos explícitamente en el método de colisión, y el segundo es el único bloque del grupo de ladrillos con el que la bola está colisionando. Dentro de la función, eliminamos el bloque en cuestión de la pantalla ejecutando el método`kill()` en él.
+Gracias a Phaser, se pasan dos parámetros a la función: el primero es la bola, que definimos explícitamente en el método de colisión, y el segundo es el único bloque del grupo de ladrillos con el que la bola está colisionando. Dentro de la función, eliminamos el bloque en cuestión de la pantalla ejecutando el método `kill()` en él.
 
-Seguro que esperarabas tener que escribir muchos más cálculos para implementar la detección de colisiones cuando se utiliza [JavaScript](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection) puro. Esa es la belleza de usar el marco: puedes dejar un montón de código aburrido a Phaser, y enfocarte en las partes más divertidas e interesantes de hacer un juego.
+Seguro que esperarabas tener que escribir muchos más cálculos para implementar la detección de colisiones cuando se utiliza [JavaScript](/es/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection) puro. Esa es la belleza de usar el marco: puedes dejar un montón de código aburrido a Phaser, y enfocarte en las partes más divertidas e interesantes de hacer un juego.
 
 ## Compara tu código
 

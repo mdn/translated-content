@@ -1,7 +1,6 @@
 ---
 title: 510 Not Extended
 slug: Web/HTTP/Status/510
-translation_of: Web/HTTP/Status/510
 ---
 
 {{HTTPSidebar}}
@@ -18,6 +17,8 @@ Dans cette spécification, un client peut envoyer une demande qui contient une d
 
 ## Spécifications
 
-| Spécification                                            | Titre                                                          |
-| -------------------------------------------------------- | -------------------------------------------------------------- |
-| [RFC 2774, section 7: 510 Not Extended](https://datatracker.ietf.org/doc/html/rfc2774#section-7) | Cadre pour les extensions HTTP (<i lang="en">An HTTP Extension Framework</i>) |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

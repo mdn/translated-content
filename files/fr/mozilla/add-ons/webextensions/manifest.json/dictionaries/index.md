@@ -1,12 +1,6 @@
 ---
 title: dictionaries
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-  - manifest.json
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries
 ---
 
 {{AddonSidebar}}
@@ -34,7 +28,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries
   </tbody>
 </table>
 
-Les clés des `dictionaries` specifie le `locale_code` pour lequel votre extension fournit un dictionnaire. Bien que le dictionnaire se compose de deux fichiers, l'un avec une extension  `.dic` et l'autre avec une extension `.aff`, seul celui avec l'extension `.dic` est référencé dans le fichier manifest.json.
+Les clés des `dictionaries` specifie le `locale_code` pour lequel votre extension fournit un dictionnaire. Bien que le dictionnaire se compose de deux fichiers, l'un avec une extension `.dic` et l'autre avec une extension `.aff`, seul celui avec l'extension `.dic` est référencé dans le fichier manifest.json.
 
 ## Exemple
 
@@ -46,4 +40,4 @@ Les clés des `dictionaries` specifie le `locale_code` pour lequel votre extensi
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.dictionaries")}}
+{{Compat}}

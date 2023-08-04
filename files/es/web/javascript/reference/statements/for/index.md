@@ -1,12 +1,8 @@
 ---
 title: for
 slug: Web/JavaScript/Reference/Statements/for
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/for
-original_slug: Web/JavaScript/Referencia/Sentencias/for
 ---
+
 {{jsSidebar("Statements")}}
 
 ## Resumen

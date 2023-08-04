@@ -1,6 +1,8 @@
 ---
 title: HTMLMediaElement.play()
 slug: Web/API/HTMLMediaElement/play
+l10n:
+  sourceCommit: af967bb052695baa631c004b9b149c6f91920776
 ---
 
 {{APIRef("HTML DOM")}}
@@ -12,7 +14,7 @@ slug: Web/API/HTMLMediaElement/play
 
 ## 構文
 
-```js
+```js-nolint
 play()
 ```
 
@@ -28,10 +30,11 @@ play()
 
 ### 例外
 
-プロミスの**拒否ハンドラー**は，唯一の引数として渡された例外名で呼び出されます（従来の例外が投げられるのとは対照的です）。想定されるエラーは以下の通りです。
+プロミスの**拒否ハンドラー**は、 {{domxref("DOMException")}} オブジェクトと唯一の引数として渡された例外名で呼び出されます（従来の例外が投げられるのとは対照的です）。想定されるエラーは以下の通りです。
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : ユーザーエージェント（ブラウザー）またはオペレーティングシステムが、現在のコンテキストまたは状況においてメディアの再生を許可しない場合に提供さ れます。これは、例えば、ユーザーが「再生」ボタンをクリックして明示的にメディアの再生を開始することを要求している場合に発生する可能性があります。
+  - : ユーザーエージェント（ブラウザー）またはオペレーティングシステムが、現在のコンテキストまたは状況においてメディアの再生を許可しない場合に提供されます。
+  ブラウザーは、例えば[許可ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) のため、ユーザーが明示的に "play" ボタンをクリックしてメディア再生を始めるように要求することがあります。
 - `NotSupportedError` {{domxref("DOMException")}}
   - : メディアソース（例えば {{domxref("MediaStream")}}, {{domxref("MediaSource")}}, {{domxref("Blob")}}, または {{domxref("File")}} として指定可能）が、対応しているメディア形式を表していない場合に提供されます。
 
@@ -62,7 +65,7 @@ async function playVideo() {
   try {
     await videoElem.play();
     playButton.classList.add("playing");
-  } catch(err) {
+  } catch (err) {
     playButton.classList.remove("playing");
   }
 }
@@ -95,5 +98,5 @@ function handlePlayButton() {
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
 - 学習: [動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [メディアおよびウェブ音声 API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)
-- [ウェブ音声 API の利用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)
+- [ウェブオーディオ API の利用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

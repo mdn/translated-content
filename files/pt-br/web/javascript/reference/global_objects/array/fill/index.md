@@ -1,8 +1,8 @@
 ---
 title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 ---
+
 {{JSRef}}
 
 O método **`fill()`** preenche todos os valores do array a partir do índice inicial a um índice final com um valor estático.
@@ -104,7 +104,7 @@ if (!Array.prototype.fill) {
 
 {{Compat("javascript.builtins.Array.fill")}}
 
-\[1] Começando com Chrome 36, isto era disponível com uma mudança nas preferencias. Em chrome://flags, ativar a entrada “Enable Experimental JavaScript”.
+\[1] Começando com Chrome 36, isto era disponível com uma mudança nas preferencias. Em chrome://flags, ativar a entrada "Enable Experimental JavaScript".
 
 ## Ver também
 

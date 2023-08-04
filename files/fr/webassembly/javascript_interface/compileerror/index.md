@@ -1,27 +1,16 @@
 ---
 title: WebAssembly.CompileError()
 slug: WebAssembly/JavaScript_interface/CompileError
-tags:
-  - API
-  - CompileError
-  - Constructeur
-  - Error
-  - JavaScript
-  - NativeError
-  - Reference
-  - WebAssembly
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 Le constructeur **`WebAssembly.CompileError()`** permet de créer une nouvelle instance de `CompileError` qui indique qu'une erreur s'est produite lors du décodage du code WebAssembly ou lors de sa validation.
 
 ## Syntaxe
 
 ```js
-new WebAssembly.CompileError(message, nomFichier, numeroLigne)
+new WebAssembly.CompileError(message, nomFichier, numeroLigne);
 ```
 
 ### Paramètres
@@ -67,28 +56,25 @@ Le fragment de code qui suit crée une instance de `CompileError` puis imprime s
 
 ```js
 try {
-  throw new WebAssembly.CompileError('Coucou', 'unFichier', 10);
+  throw new WebAssembly.CompileError("Coucou", "unFichier", 10);
 } catch (e) {
   console.log(e instanceof CompileError); // true
-  console.log(e.message);                 // "Coucou"
-  console.log(e.name);                    // "CompileError"
-  console.log(e.fileName);                // "unFichier"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // la pile d'appel pour le code
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "CompileError"
+  console.log(e.fileName); // "unFichier"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // la pile d'appel pour le code
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | État                                 | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#constructor-properties-of-the-webassembly-object', 'WebAssembly constructors')}} | {{Spec2('WebAssembly JS')}} | Brouillon pour la définition Initiale de WebAssembly. |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard', 'NativeError')}}                                 | {{Spec2('ESDraft')}}         | Définition des types standards pour `NativeError`.    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.CompileError")}}
+{{Compat}}
 
 ## Voir aussi
 

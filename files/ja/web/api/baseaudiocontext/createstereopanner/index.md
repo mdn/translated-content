@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createStereoPanner()
 slug: Web/API/BaseAudioContext/createStereoPanner
-original_slug: Web/API/AudioContext/createStereoPanner
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -72,4 +71,4 @@ panNode.connect(audioCtx.destination);
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

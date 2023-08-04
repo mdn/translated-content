@@ -1,8 +1,8 @@
 ---
 title: Request()
 slug: Web/API/Request/Request
-translation_of: Web/API/Request/Request
 ---
+
 {{APIRef("Fetch")}}
 
 O construtor **`Request()`** cria um novo objeto {{domxref("Request")}}.

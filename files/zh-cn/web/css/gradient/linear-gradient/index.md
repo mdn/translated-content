@@ -1,7 +1,6 @@
 ---
 title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
-original_slug: Web/CSS/gradient/linear-gradient()
 ---
 
 {{CSSRef}}
@@ -142,9 +141,9 @@ linear-gradient([ [ [ {{cssxref("&lt;angle&gt;")}} | to [top | bottom] || [left 
 
 在带前缀的变体和不带前缀的提案之间仍然存在一项语义的分歧。最终 Apple 的提案显示，带前缀的语法都使用极坐标定义 {{ cssxref("&lt;angle&gt;") }} 参数，导致了`0deg` 指向东方。为了与 CSS 的其他部分保持一致，标准将 0deg 指向北方。为了防止使用前缀版本属性的站点不至于崩溃，它们保持原始的角度定义（0deg 指向东方）。在使用不带前缀版本的时候将会切换到正确的规格。在这种不兼容的情况下，Gecko 给所有语法都加上前缀，不带前缀且没有 to 关键词的语法会被丢弃。
 
-## 范例
+## 示例
 
-### 例 45 度渐变
+### 45 度渐变
 
 可以为渐变轴某个位置指定某个颜色，这些位置可被称为“颜色中间点（color-stops）”。颜色会从一个颜色中间点平滑过渡到下一个。在渐变范围内，每个颜色都表现为一条垂直于渐变轴的直线。在下图中，渐变轴从左上角出发并且呈 45 度。渐变轴上定义了红色和蓝色两个颜色中间点。
 
@@ -160,7 +159,7 @@ div {
 
 {{EmbedLiveSample("45 度渐变",120,120)}}
 
-### 从 60％的梯度线开始的渐变
+### 从 60% 的梯度线开始的渐变
 
 有时候我们不希望一开始就出现渐变，可以从中间某个地方开始最好。为了实现这个效果，可以在你希望渐变梯度开始的地方，加上一个同样色值的颜色中间点。
 
@@ -174,9 +173,9 @@ div {
 }
 ```
 
-#### Result:
+#### 结果
 
-{{EmbedLiveSample("从 60％的梯度线开始的渐变")}}
+{{EmbedLiveSample("从 60% 的梯度线开始的渐变")}}
 
 ### 具有多个颜色停止的渐变
 
@@ -190,11 +189,20 @@ div {
 
 ```css
 div {
-  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
 }
 ```
 
-#### Result:
+#### 结果
 
 {{EmbedLiveSample("具有多个颜色停止的渐变")}}
 
@@ -207,7 +215,16 @@ div {
 使用渐变制作彩虹
 
 ```css
-background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+background: linear-gradient(
+  to right,
+  red,
+  orange,
+  yellow,
+  green,
+  blue,
+  indigo,
+  violet
+);
 ```
 
 ### 线性重复渐变
@@ -222,11 +239,11 @@ background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, 
 
 ```css
 div {
-  background: linear-gradient(to bottom right, red, rgba(0,0,0,0));
+  background: linear-gradient(to bottom right, red, rgba(0, 0, 0, 0));
 }
 ```
 
-#### Result:
+#### 结果
 
 {{EmbedLiveSample("使用透明度")}}
 
@@ -238,17 +255,33 @@ div {
 
 ```css
 .grad {
-  background-color: #F07575; /* 不支持渐变的浏览器回退方案 */
-  background-image: -webkit-linear-gradient(top, hsl(0, 80%, 70%), #bada55); /* 支持 Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
-  background-image:    -moz-linear-gradient(top, hsl(0, 80%, 70%), #bada55); /* 支持 Firefox (3.6 to 15) */
-  background-image:      -o-linear-gradient(top, hsl(0, 80%, 70%), #bada55); /* 支持旧 Opera (11.1 to 12.0) */
-  background-image:         linear-gradient(to bottom, hsl(0, 80%, 70%), #bada55); /* 标准语法; 需要最新版本 */
+  background-color: #f07575; /* 不支持渐变的浏览器回退方案 */
+  background-image: -webkit-linear-gradient(
+    top,
+    hsl(0, 80%, 70%),
+    #bada55
+  ); /* 支持 Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+  background-image: -moz-linear-gradient(
+    top,
+    hsl(0, 80%, 70%),
+    #bada55
+  ); /* 支持 Firefox (3.6 to 15) */
+  background-image: -o-linear-gradient(
+    top,
+    hsl(0, 80%, 70%),
+    #bada55
+  ); /* 支持旧 Opera (11.1 to 12.0) */
+  background-image: linear-gradient(
+    to bottom,
+    hsl(0, 80%, 70%),
+    #bada55
+  ); /* 标准语法; 需要最新版本 */
 }
 ```
 
 \-moz-前缀的规则用于兼容 Fx 3.6 to Fx 15 的火狐浏览器。 -webkit-前缀的规则用于兼容在 Android 4.3 以前版本、iOS 6.1 以前版本、Safari 6。当使用带前缀的规则时，不要加“to”关键字。
 
-> **备注：** Notes：如果将\<body>标签的 background-image 属性设置为线性渐变`linear-gradient`，除非您还设置文档根标签（例如\<html>标签）的[min-height](/zh-CN/docs/Web/CSS/min-height)属性，否则渐变不会填充浏览器屏幕到 100％。
+> **备注：** 如果将\<body>标签的 background-image 属性设置为线性渐变`linear-gradient`，除非您还设置文档根标签（例如\<html>标签）的[min-height](/zh-CN/docs/Web/CSS/min-height)属性，否则渐变不会填充浏览器屏幕到 100％。
 
 ## 规范
 
@@ -258,9 +291,9 @@ div {
 
 {{Compat}}
 
-## 了解更多
+## 参见
 
-- [Using CSS gradients](/zh-CN/docs/Web/CSS/CSS_Images/Using_CSS_gradients), {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}};
+- [Using CSS gradients](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients), {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}};
 - Some properties where it can be used: {{cssxref("background-image")}}, {{cssxref("background")}};
 - [CSS Gradients Patterns Gallery, by Lea Verou](http://lea.verou.me/css3patterns/)
 - [CSS3 Gradients Library, by Estelle Weyl](http://standardista.com/cssgradients).

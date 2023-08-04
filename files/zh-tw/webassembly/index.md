@@ -28,7 +28,7 @@ WebAssembly 被設計來與 JavaScript 協同工作 —— 藉由 WebAssembly �
 - [載入並運行 WebAssembly 程式碼](/zh-TW/docs/WebAssembly/Loading_and_running)
   - : 本文介紹如何透過把 [Fetch](/zh-TW/docs/Web/API/Fetch_API) 或 [XHR](/zh-TW/docs/Web/API/XMLHttpRequest) API 與 [WebAssembly JavaScript](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) API 結合起來、編譯及實例化 .wasm 文件。
 - [使用 WebAssembly 的 JavaScript API](/zh-TW/docs/WebAssembly/Using_the_JavaScript_API)
-  - : 當你載入一個 .wasm 模組後，你就用到它。在本文中將向你展示如何透過 WebAssembly 的 JavaScript API 來使用  WebAssembly。
+  - : 當你載入一個 .wasm 模組後，你就用到它。在本文中將向你展示如何透過 WebAssembly 的 JavaScript API 來使用 WebAssembly。
 - [導出 WebAssembly 函數](/zh-TW/docs/WebAssembly/Exported_functions)
   - : 被導出的 WebAssembly 函數是用 JavaScript 來表示 WebAssembly 函數的封裝，並允許從 JavaScript 調用 WebAssembly 原始碼。本文將描述他們。
 - [了解 WebAssembly 的文件格式](/zh-TW/docs/WebAssembly/Understanding_the_text_format)
@@ -47,7 +47,7 @@ WebAssembly 被設計來與 JavaScript 協同工作 —— 藉由 WebAssembly �
 - {{jsxref("Global_objects/WebAssembly/Module", "WebAssembly.Module()")}}
   - : A `WebAssembly.Module` object contains stateless WebAssembly code that has already been compiled by the browser and can be efficiently [shared with Workers](/zh-TW/docs/Web/API/Worker/postMessage), and instantiated multiple times.
 - {{jsxref("Global_objects/WebAssembly/Instance", "WebAssembly.Instance()")}}
-  - : A `WebAssembly.Instance` object is a stateful, executable instance of a `Module`.  `Instance` objects contain all the [Exported WebAssembly functions](/zh-TW/docs/WebAssembly/Exported_functions) that allow calling into WebAssembly code from JavaScript.
+  - : A `WebAssembly.Instance` object is a stateful, executable instance of a `Module`. `Instance` objects contain all the [Exported WebAssembly functions](/zh-TW/docs/WebAssembly/Exported_functions) that allow calling into WebAssembly code from JavaScript.
 - {{jsxref("Global_objects/WebAssembly/instantiateStreaming", "WebAssembly.instantiateStreaming()")}}
   - : The `WebAssembly.instantiateStreaming()` function is the primary API for compiling and instantiating WebAssembly code, returning both a `Module` and its first `Instance`.
 - {{jsxref("Global_objects/WebAssembly/Memory", "WebAssembly.Memory()")}}

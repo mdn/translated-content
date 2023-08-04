@@ -1,13 +1,8 @@
 ---
 title: Node.parentNode
 slug: Web/API/Node/parentNode
-tags:
-  - API
-  - DOM
-  - Node
-  - ParentNode
-translation_of: Web/API/Node/parentNode
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.parentNode`** é uma propriedade DOM somente leitura que retorna o nó (node) parente de um Node referenciado na árvore DOM. É extremamente aconselhável que você conheça a estrutura DOM para um melhor estudo e aprendizado.
@@ -52,8 +47,8 @@ if (node.parentNode) {
 
 ## Specificações
 
-- [DOM nível 2 Core: Node.parentNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317)
-- [DOM nível 3 Core: Node.parentNode](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1060184317)
+- [DOM nível 2 Core: Node.parentNode](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317)
+- [DOM nível 3 Core: Node.parentNode](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1060184317)
 
 ## Veja também
 

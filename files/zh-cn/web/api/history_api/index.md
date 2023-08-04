@@ -48,7 +48,7 @@ window.history.go(1);
 您可以通过查看长度属性的值来确定的历史堆栈中页面的数量：
 
 ```js
- let numberOfEntries = window.history.length;
+let numberOfEntries = window.history.length;
 ```
 
 > **备注：** IE 支持传递 URLs 作为参数给 go()；这在 Gecko 是不标准且不支持的。
@@ -64,12 +64,12 @@ HTML5 引入了 [history.pushState()](/zh-CN/docs/Web/API/History/pushState) 和
 假设在 `http://mozilla.org/foo.html` 页面的 console 中执行了以下 JavaScript 代码：
 
 ```js
-window.onpopstate = function(e) {
-   alert(2);
-}
+window.onpopstate = function (e) {
+  alert(2);
+};
 
 let stateObj = {
-    foo: "bar",
+  foo: "bar",
 };
 
 history.pushState(stateObj, "page 2", "bar.html");
@@ -96,7 +96,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 - **标题** — Firefox 目前忽略这个参数，但未来可能会用到。在此处传一个空字符串应该可以安全的防范未来这个方法的更改。或者，你可以为跳转的 state 传递一个短标题。
 - **URL** — 该参数定义了新的历史 URL 记录。注意，调用 `pushState()` 后浏览器并不会立即加载这个 URL，但可能会在稍后某些情况下加载这个 URL，比如在用户重新打开浏览器时。新 URL 不必须为绝对路径。如果新 URL 是相对路径，那么它将被作为相对于当前 URL 处理。新 URL 必须与当前 URL 同源，否则 `pushState()` 会抛出一个异常。该参数是可选的，缺省为当前 URL。
 
-> **备注：** 从 Gecko 2.0 {{ geckoRelease("2.0") }} 到 Gecko 5.0 {{ geckoRelease("5.0") }}，传递的对象是使用 JSON 进行序列化的。从 Gecko 6.0 {{ geckoRelease("6.0") }}开始，该对象的序列化将使用[结构化克隆算法](/zh-CN/DOM/The_structured_clone_algorithm)。这将会使更多对象可以被安全的传递。
+> **备注：** 从 Gecko 2.0 到 Gecko 5.0，传递的对象是使用 JSON 进行序列化的。从 Gecko 6.0 开始，该对象的序列化将使用[结构化克隆算法](/zh-CN/DOM/The_structured_clone_algorithm)。这将会使更多对象可以被安全的传递。
 
 在某种意义上，调用 `pushState()` 与 设置 `window.location = "#foo"` 类似，二者都会在当前页面创建并激活新的历史记录。但 `pushState()` 具有如下几条优点：
 
@@ -109,7 +109,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 在 [XUL](/zh-CN/docs/Mozilla/Tech/XUL) 文档中，它创建指定的 XUL 元素。
 
-在其它文档中，它创建一个命名空间 URI 为`null`的元素。
+在其他文档中，它创建一个命名空间 URI 为`null`的元素。
 
 ### replaceState() 方法
 
@@ -117,7 +117,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 `replaceState()` 的使用场景在于为了响应用户操作，你想要更新状态对象 state 或者当前历史记录的 URL。
 
-> **备注：** 从 Gecko 2.0 {{ geckoRelease("2.0") }} 到 Gecko 5.0 {{ geckoRelease("5.0") }}，传递的对象是使用 JSON 进行序列化的。从 Gecko 6.0 {{ geckoRelease("6.0") }} 开始，该对象的序列化将使用[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)。这将会使更多对象可以被安全的传递。
+> **备注：** 从 Gecko 2.0 到 Gecko 5.0，传递的对象是使用 JSON 进行序列化的。从 Gecko 6.0 开始，该对象的序列化将使用[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)。这将会使更多对象可以被安全的传递。
 
 ### replaceState() 方法示例
 
@@ -125,7 +125,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 ```js
 let stateObj = {
-    foo: "bar",
+  foo: "bar",
 };
 
 history.pushState(stateObj, "page 2", "bar.html");
@@ -154,11 +154,11 @@ history.replaceState(stateObj, "page 3", "bar2.html");
 你可以读取当前历史记录项的状态对象 state，而不必等待`popstate` 事件，只需要这样使用`history.state` 属性：
 
 ```js
-  // 尝试通过 pushState 创建历史条目，然后再刷新页面查看 state 状态对象变化;
-  window.addEventListener('load',() => {
-    let currentState = history.state;
-    console.log('currentState',currentState);
-  })
+// 尝试通过 pushState 创建历史条目，然后再刷新页面查看 state 状态对象变化;
+window.addEventListener("load", () => {
+  let currentState = history.state;
+  console.log("currentState", currentState);
+});
 ```
 
 ## 例子

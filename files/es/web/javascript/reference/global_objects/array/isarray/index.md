@@ -1,16 +1,8 @@
 ---
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
-tags:
-  - Array
-  - ECMAScript5
-  - JavaScript
-  - Referencia
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/isArray
 ---
+
 {{JSRef}}
 
 El método **`Array.isArray()`** determina si el valor pasado es un {{jsxref("Array")}}.
@@ -41,7 +33,7 @@ Array.isArray(obj)
 
 Si el objeto es un {{jsxref("Array")}}, devuelve `true`; `false`, en cualquier otro caso.
 
-Vea el artículo [“Determining with absolute accuracy whether or not a JavaScript object is an array”](http://web.mit.edu/jwalden/www/isArray.html) para más detalles.
+Vea el artículo ["Determining with absolute accuracy whether or not a JavaScript object is an array"](http://web.mit.edu/jwalden/www/isArray.html) para más detalles.
 
 ## Ejemplos
 
@@ -97,15 +89,11 @@ if (!Array.isArray) {
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                       | Comentario                                            |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.3.2', 'Array.isArray')}}             | {{Spec2('ES5.1')}}     | Definición inicial. Implementado en JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-array.isarray', 'Array.isArray')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.isarray', 'Array.isArray')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.isArray")}}
+{{Compat}}
 
 ## Vea también
 

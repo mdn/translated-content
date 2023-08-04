@@ -1,13 +1,6 @@
 ---
 title: const
 slug: Web/JavaScript/Reference/Statements/const
-tags:
-  - ECMAScript 2015
-  - Instruction
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Statements/const
-original_slug: Web/JavaScript/Reference/Instructions/const
 ---
 
 {{jsSidebar("Statements")}}
@@ -106,14 +99,11 @@ mon_tableau = ["B"]; // lève une exception
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-let-and-const-declarations', 'Déclarations let et const')}} | {{Spec2('ESDraft')}} | Aucune modification. |
-| {{SpecName('ES2015', '#sec-let-and-const-declarations', 'Déclarations let et const')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.const")}}
+{{Compat}}
 
 ## Voir aussi
 

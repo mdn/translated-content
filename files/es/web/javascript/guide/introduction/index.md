@@ -1,16 +1,8 @@
 ---
 title: Introducción
 slug: Web/JavaScript/Guide/Introduction
-tags:
-  - Guía
-  - Introducion
-  - JavaScript
-  - Novato
-  - Principiante
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Introduction
-original_slug: Web/JavaScript/Guide/Introducción
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
 Este capítulo presenta JavaScript y analiza algunos de sus conceptos fundamentales.
@@ -27,11 +19,11 @@ Esta guía presume que tienes los siguientes antecedentes básicos:
 
 La documentación de JavaScript en MDN incluye lo siguiente:
 
-- {{web.link("/es/docs/Learn", "Aprende desarrollo web")}} proporciona información para principiantes e introduce conceptos básicos de programación e Internet.
-- La {{JSxRef("Guide", "Guía de JavaScript")}} (esta guía) proporciona una descripción general sobre el lenguaje JavaScript y sus objetos.
-- La {{JSxRef("Reference", "Referencia de JavaScript")}} proporciona material de referencia detallado para JavaScript.
+- [Aprende desarrollo web](/es/docs/Learn) proporciona información para principiantes e introduce conceptos básicos de programación e Internet.
+- La [Guía de JavaScript](/es/docs/Web/JavaScript/Guide) (esta guía) proporciona una descripción general sobre el lenguaje JavaScript y sus objetos.
+- La [Referencia de JavaScript](/es/docs/Web/JavaScript/Reference) proporciona material de referencia detallado para JavaScript.
 
-Si eres nuevo en JavaScript, comienza con los artículos en el {{web.link("/es/docs/Learn", "área de aprendizaje")}} y la {{JSxRef("Guide", "Guía de JavaScript")}}. Una vez que tengas una firme comprensión de los fundamentos, puedes usar la {{JSxRef("Referencia", "Referencia de JavaScript")}} para obtener más detalles sobre objetos y declaraciones individuales.
+Si eres nuevo en JavaScript, comienza con los artículos en el [área de aprendizaje](/es/docs/Learn) y la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide). Una vez que tengas una firme comprensión de los fundamentos, puedes usar la [Referencia de JavaScript](/es/docs/Web/JavaScript/Reference) para obtener más detalles sobre objetos y declaraciones individuales.
 
 ## ¿Qué es JavaScript?
 
@@ -62,13 +54,11 @@ Por el contrario, JavaScript desciende en espíritu de una línea de lenguajes m
 | Los tipos de datos de las variables no se declaran (tipado dinámico, tipado flexible).                                                                                                                         | Los tipos de datos de las variables se deben declarar (tipado estático, fuertemente tipado).                                                                                                                        |
 | No se puede escribir automáticamente en el disco duro.                                                                                                                                                         | Puede escribir automáticamente en el disco duro.                                                                                                                                                                    |
 
-Para obtener más información sobre las diferencias entre JavaScript y Java, consulta el capítulo {{JSxRef("Guide/Details_of_the_Object_Model", "Detalles del modelo de objetos")}}.
-
 ## JavaScript y la especificación ECMAScript
 
-JavaScript está estandarizado en [Ecma International](https://www.ecma-international.org/), la asociación europea para estandarizar los sistemas de información y comunicación (ECMA antes era un acrónimo para la Asociación Europea de Fabricantes de Computadoras) para ofrecer un lenguaje de programación internacional estandarizado basado en JavaScript. Esta versión estandarizada de JavaScript, denominada ECMAScript, se comporta de la misma manera en todas las aplicaciones que admiten el estándar. Las empresas pueden utilizar el lenguaje estándar abierto para desarrollar su implementación de JavaScript. El estándar ECMAScript está documentado en la especificación ECMA-262. Consulta {{JSxRef("Novedades_en_JavaScript", "Novedades en JavaScript")}} para obtener más información sobre las diferentes versiones de JavaScript y las ediciones de especificación ECMAScript.
+JavaScript está estandarizado en [Ecma International](https://www.ecma-international.org/), la asociación europea para estandarizar los sistemas de información y comunicación (ECMA antes era un acrónimo para la Asociación Europea de Fabricantes de Computadoras) para ofrecer un lenguaje de programación internacional estandarizado basado en JavaScript. Esta versión estandarizada de JavaScript, denominada ECMAScript, se comporta de la misma manera en todas las aplicaciones que admiten el estándar. Las empresas pueden utilizar el lenguaje estándar abierto para desarrollar su implementación de JavaScript. El estándar ECMAScript está documentado en la especificación ECMA-262.
 
-El estándar ECMA-262 también está aprobado por [ISO](https://www.iso.org/home.html) (Organización Internacional de Normalización) como ISO-16262. También puedes encontrar la especificación en [el sitio web de Ecma International](https://www.ecma-international.org/publications/standards/Ecma-262.htm). La especificación ECMAScript no describe el modelo de objetos de documento (DOM), que está estandarizado por el [World Wide Web Consortium (W3C)](https://www.w3.org/) y/o [WHATWG (Grupo de trabajo de tecnología de aplicaciones de hipertexto web)](https://whatwg.org). El DOM define la forma en que los objetos de documentos HTML se exponen a tu «script». Para tener una mejor idea de las diferentes tecnologías que se utilizan al programar con JavaScript, consulta el artículo {{JSxRef("Descripción_de_las_tecnologías_JavaScript", "descripción de las tecnologías JavaScript")}}.
+El estándar ECMA-262 también está aprobado por [ISO](https://www.iso.org/home.html) (Organización Internacional de Normalización) como ISO-16262. También puedes encontrar la especificación en [el sitio web de Ecma International](https://www.ecma-international.org/publications/standards/Ecma-262.htm). La especificación ECMAScript no describe el modelo de objetos de documento (DOM), que está estandarizado por el [World Wide Web Consortium (W3C)](https://www.w3.org/) y/o [WHATWG (Grupo de trabajo de tecnología de aplicaciones de hipertexto web)](https://whatwg.org). El DOM define la forma en que los objetos de documentos HTML se exponen a tu «script». Para tener una mejor idea de las diferentes tecnologías que se utilizan al programar con JavaScript, consulta el artículo [Descripción de las Tecnologías JavaScript](/es/docs/Web/JavaScript/JavaScript_technologies_overview).
 
 ### Documentación de JavaScript versus especificación de ECMAScript
 
@@ -88,21 +78,21 @@ La herramienta _Consola web_ integrada en Firefox es útil para experimentar con
 
 ### Entrada unilínea en la consola web
 
-La {{web.link("/es/docs/Tools/Web_Console", "Consola web")}} te muestra información sobre la página web cargada actualmente, y también incluye un intérprete de JavaScript que puedes usar para ejecutar expresiones de JavaScript en la página actual.
+La [Consola web](/es/docs/Tools/Web_Console) te muestra información sobre la página web cargada actualmente, y también incluye un intérprete de JavaScript que puedes usar para ejecutar expresiones de JavaScript en la página actual.
 
 Para abrir la Consola web (<kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>I</kbd> en Windows y Linux o <kbd>Cmd</kbd>-<kbd>Opción</kbd>-<kbd>K</kbd> en Mac), abre el menú **Herramientas** en Firefox y selecciona "**Desarrollador ▶ Consola web**".
 
 La consola web aparece en la parte inferior de la ventana del navegador. En la parte inferior de la consola hay una línea de entrada que puedes usar para ingresar JavaScript, y la salida aparece en el panel de arriba:
 
-![Consola web](https://mdn.mozillademos.org/files/16569/2019-04-04_00-15-29.png)
+![Consola web](2019-04-04_00-15-29.png)
 
 La consola funciona exactamente de la misma manera que `eval`: devuelve la última expresión ingresada. En aras de la simplicidad, te puedes imaginar que cada vez que ingresas algo en la consola, en realidad estás rodeado por `console.log` alrededor de `eval`, así:
 
 ```js
 function greetMe(tuNombre) {
-  alert("Hola " + tuNombre)
+  alert("Hola " + tuNombre);
 }
-console.log(eval('3 + 5'))
+console.log(eval("3 + 5"));
 ```
 
 ### Entrada multilínea en la consola web
@@ -114,14 +104,14 @@ El modo de entrada unilínea de la consola web es ideal para realizar pruebas r�
 Para comenzar a escribir JavaScript, abre la Consola web en modo multilínea y escribe tu primer código "Hola mundo" en JavaScript:
 
 ```js
-(function(){
+(function () {
   "use strict";
   /* Inicio de tu código */
   function greetMe(tuNombre) {
-    alert('Hola ' + tuNombre);
+    alert("Hola " + tuNombre);
   }
 
-  greetMe('Mundo');
+  greetMe("Mundo");
   /* Fin de tu código */
 })();
 ```

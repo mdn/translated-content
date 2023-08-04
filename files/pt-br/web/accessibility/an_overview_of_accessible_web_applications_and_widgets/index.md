@@ -1,26 +1,13 @@
 ---
 title: Visão geral da acessibilidade nas aplicações web e widgets
 slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
-tags:
-  - ARIA
-  - Accessibility
-  - Acessibilidade
-  - Aplicativos Web
-  - CSS
-  - DHTML
-  - Guía
-  - HTML+ARIA
-  - Navegação+Teclado
-  - WAI-ARA
-  - Widgets
-translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
-original_slug: Web/Acessibilidade/An_overview_of_accessible_web_applications_and_widgets
 ---
+
 A Rede Mundial está mudando. Estatísticamente, os sítios baseados em páginas estão, cada vez mais, sendo repostos por aplicações dinâmicas, em estilo Ambiente, que fazem uso intenso de JavaScript e AJAX. Estilistas estão criando novos _widgets_ e controles inteiramente com a combinação de JavaScript, HTML e CSS. Este salto tem o potencial de aperfeiçoar, dramaticamente, a capacidade de resposta e a usabilidade da Rede, mas milhares de utilizadores estão sob o risco de exclusão, devido a algumas lacunas na acessibilidade. A JavaScript tem, tradicionalmente, tido a reputação de ser inviável para quem usa tecnologias assistivas, como leitores de tela mas, agora, existem maneiras de criar interfaces de utilização dinâmicas acessíveis a uma ampla variedade de pessoas.
 
 ## O problema
 
-A maior parte do conjunto de ferramentas JavaScript oferece uma biblioteca de utilização de _widgets_ que imita o comportamento de interfaces de Ambiente familiares. Deslizantes, barras de menus, visão de arquivos em lista e muito mais pode ser construído com uma combinação de JavaScript, CSS e HTML. Uma vez que a especificação da HTML 4 não fornece etiquetas integradas (_built-in tags_) que descrevam estes tipos de _widgets_ semanticamente, os desenvolvedores recorrem ao uso de elementos genéricos, tais como \<div> e \<span>. Embora isto resulte em um _widget_ que se pareça com seu duplo de ambiente, geralmente não existe informação semântica suficiente, na marcação, para torná-lo utilizável por uma tecnologia assistiva. Teor dinâmico em uma página da Rede Mundial pode ser particularmente problemático para quem, por alguma razão, não pode ver a tela. Cotações de ações, alimentação instantânea de atualizações do twitter, indicadores de progresso e conteúdos similares alteram o DOM, enquanto uma tecnologia assistiva (TA/AT) pode não ser alertada disso. Aqui é onde o conjunto [ARIA](/en/ARIA) entra.
+A maior parte do conjunto de ferramentas JavaScript oferece uma biblioteca de utilização de _widgets_ que imita o comportamento de interfaces de Ambiente familiares. Deslizantes, barras de menus, visão de arquivos em lista e muito mais pode ser construído com uma combinação de JavaScript, CSS e HTML. Uma vez que a especificação da HTML 4 não fornece etiquetas integradas (_built-in tags_) que descrevam estes tipos de _widgets_ semanticamente, os desenvolvedores recorrem ao uso de elementos genéricos, tais como \<div> e \<span>. Embora isto resulte em um _widget_ que se pareça com seu duplo de ambiente, geralmente não existe informação semântica suficiente, na marcação, para torná-lo utilizável por uma tecnologia assistiva. Teor dinâmico em uma página da Rede Mundial pode ser particularmente problemático para quem, por alguma razão, não pode ver a tela. Cotações de ações, alimentação instantânea de atualizações do twitter, indicadores de progresso e conteúdos similares alteram o DOM, enquanto uma tecnologia assistiva (TA/AT) pode não ser alertada disso. Aqui é onde o conjunto [ARIA](/pt-BR/ARIA) entra.
 
 _Exemplo 1: Marcação para um widget de abas construído sem as indicações ARIA. Não existem informações semânticas, na marcação, que descrevam a sua forma, nem a sua função._
 
@@ -50,7 +37,7 @@ _Exemplo 2: Como o widget de abas pode ser visto. Seus utilizadores podem reconh
 
 ## ARIA
 
-As definições para [WAI-ARIA](http://www.w3.org/WAI/intro/aria.php) **Accessible Rich Internet Applications** (Aplicações Ricas para uma Internete Acessível), da W3C - [Web Accessibility Initiative](http://www.w3.org/WAI/) (Iniciativa pela Acessibilidade na Rede Mundial/World Wide Web Consortium-W3C) - oferecem uma via para a adição das necessidades semânticas perdidas pelas tecnologias assistivas, como os leitores de tela. O conjunto ARIA possibilita que desenvolvedores possam descrever seus _widgets_ de forma mais detalhada com a inclusão de atributos especiais à marcação. Projetado para preencher a lacuna entre o padrão de rotulagem HTML e os controles com estilo ambiente encontrados em aplicações dinâmicas pela _web_, o conjunto ARIA fornece funções (roles) e estados (states) que descrevem o comportamento da maioria das interfaces de utilização dos _widgets_ conhecidas.
+As definições para [WAI-ARIA](https://www.w3.org/WAI/intro/aria.php) **Accessible Rich Internet Applications** (Aplicações Ricas para uma Internete Acessível), da W3C - [Web Accessibility Initiative](https://www.w3.org/WAI/) (Iniciativa pela Acessibilidade na Rede Mundial/World Wide Web Consortium-W3C) - oferecem uma via para a adição das necessidades semânticas perdidas pelas tecnologias assistivas, como os leitores de tela. O conjunto ARIA possibilita que desenvolvedores possam descrever seus _widgets_ de forma mais detalhada com a inclusão de atributos especiais à marcação. Projetado para preencher a lacuna entre o padrão de rotulagem HTML e os controles com estilo ambiente encontrados em aplicações dinâmicas pela _web_, o conjunto ARIA fornece funções (roles) e estados (states) que descrevem o comportamento da maioria das interfaces de utilização dos _widgets_ conhecidas.
 
 A especificação ARIA está dividida em três tipos diferentes de atributos: funções (roles), estados (states) e propriedades (properties). As funções (roles) descrevem os _widgets_ que não estão disponíveis de outra forma em HTML 4, como deslizantes, barras de menu, abas e diálogos. As propriedades (properties) descrevem as características desses _widgets_ - se podem ser arrastados (_draggable_), se existe algum elemento obrigatório, ou se trazem uma janela de explosão (popup) associada. Os estados (states) descrevem a interação atual de um elemento, informando à tecnlogia assistiva se este se encontra ativo, desativado, selecionado, ou oculto.
 
@@ -75,9 +62,15 @@ _Exemplo 3: Marcação para um widget de abas com os atributos ARIA adicionados:
 
 <div>
   <!-- Notice the role and aria-labelledby attributes we've added to describe these panels. -->
-  <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">Chapter 1 content goes here</div>
-  <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab">Chapter 2 content goes here</div>
-  <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab">Quiz content goes here</div>
+  <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">
+    Chapter 1 content goes here
+  </div>
+  <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab">
+    Chapter 2 content goes here
+  </div>
+  <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab">
+    Quiz content goes here
+  </div>
 </div>
 ```
 
@@ -98,7 +91,7 @@ O conjunto ARIA provê atributos para declarar o estado atual da interface de ut
 - `aria-grabbed` (arrastado)
   - : indica o estado "arrastado" para um objeto, em uma operação de "arrastar e soltar".
 
-(Para uma lista completa de estados ARIA, consulte a [ARIA list of states and properties](http://www.w3.org/TR/wai-aria/states_and_properties) (lista de estados e propriedades ARIA).
+(Para uma lista completa de estados ARIA, consulte a [ARIA list of states and properties](https://www.w3.org/TR/wai-aria/states_and_properties) (lista de estados e propriedades ARIA).
 
 Os desenvolvedores devem dar preferência ao uso dos estados ARIA para indicar a situação atual dos elemento*s widgets* na interface de utilização (UI) e os seletores de atributos CSS para alterar a sua aparência, com base nas mudanças desses estados (em vez de usar um roteiro (_script_) para mudar um nome de classe de um elemento).
 
@@ -110,19 +103,26 @@ _Exemplo 1a: HTML para um menu selecionável._
 
 ```html
 <ul id="fontMenu" class="menu" role="menu" aria-hidden="true">
-  <li id="sans-serif"
-      class="menu-item"
-      role="menuitemradio"
-      tabindex="-1"
-      aria-controls="st1"
-      aria-checked="true">Sans-serif</li>
-  <li id="serif"
-      class="menu-item"
-      role="menuitemradio"
-      tabindex="-1"
-      aria-controls="st1"
-      aria-checked="false">Serif</li>
+  <li
+    id="sans-serif"
+    class="menu-item"
+    role="menuitemradio"
+    tabindex="-1"
+    aria-controls="st1"
+    aria-checked="true">
+    Sans-serif
+  </li>
+  <li
+    id="serif"
+    class="menu-item"
+    role="menuitemradio"
+    tabindex="-1"
+    aria-controls="st1"
+    aria-checked="false">
+    Serif
+  </li>
   ...
+</ul>
 ```
 
 A CSS usada para alterar a aparência do item selecionado é mostrada no Exemplo 1b. Perceba que não existe um nome de classe (_classname_) de personalização, apenas o estado do atributo **`aria-checked`**, na linha 1.
@@ -132,7 +132,7 @@ _Exemplo 1b: Seletor baseado em atributo para indicar um estado._
 ```css
 li[aria-checked="true"] {
   font-weight: bold;
-  background-image: url('images/dot.png');
+  background-image: url("images/dot.png");
   background-repeat: no-repeat;
   background-position: 5px 10px;
 }
@@ -143,14 +143,14 @@ O JavaScript para atualizar a propriedade **`aria-checked`** tem a forma exibida
 _Exemplo 1c: A JavaScript atualiza o atributo aria-checked_.
 
 ```js
-var processMenuChoice = function(item) {
+var processMenuChoice = function (item) {
   // 'check' the selected item
-  item.setAttribute('aria-checked', 'true');
+  item.setAttribute("aria-checked", "true");
   // 'un-check' the other menu items
   var sib = item.parentNode.firstChild;
-  for (; sib; sib = sib.nextSibling ) {
-    if ( sib.nodeType === 1 && sib !== item ) {
-      sib.setAttribute('aria-checked', 'false');
+  for (; sib; sib = sib.nextSibling) {
+    if (sib.nodeType === 1 && sib !== item) {
+      sib.setAttribute("aria-checked", "false");
     }
   }
 };
@@ -168,14 +168,18 @@ _Exemplo 2a: HTML para dicas de tela._
 
 ```html
 <div class="text">
-    <label id="tp1-label" for="first">First Name:</label>
-    <input type="text" id="first" name="first" size="20"
-           aria-labelledby="tp1-label"
-           aria-describedby="tp1"
-           aria-required="false" />
-    <div id="tp1" class="tooltip"
-         role="tooltip"
-         aria-hidden="true">Your first name is optional</div>
+  <label id="tp1-label" for="first">First Name:</label>
+  <input
+    type="text"
+    id="first"
+    name="first"
+    size="20"
+    aria-labelledby="tp1-label"
+    aria-describedby="tp1"
+    aria-required="false" />
+  <div id="tp1" class="tooltip" role="tooltip" aria-hidden="true">
+    Your first name is optional
+  </div>
 </div>
 ```
 
@@ -186,7 +190,7 @@ _Exemplo 2b: Seletor basedo em atributo para indicar um estado._
 ```css
 div.tooltip[aria-hidden="true"] {
   display: none;
-  }
+}
 ```
 
 O JavaScript que atualiza a propriedade **`aria-hidden`** tem a forma exposta no Exemplo 2c. Observe que o roteiro apenas atualiza o atributo **`aria-hidden`** (linha 2); não é necessário adicionar, nem remover, uma _classname_ customizada.
@@ -194,9 +198,9 @@ O JavaScript que atualiza a propriedade **`aria-hidden`** tem a forma exposta no
 _Exemplo 2c: JavaScript para atualização do atributo aria-checked._
 
 ```js
-var showTip = function(el) {
-  el.setAttribute('aria-hidden', 'false');
-}
+var showTip = function (el) {
+  el.setAttribute("aria-hidden", "false");
+};
 ```
 
 ### Mudança de Atributo (_Role_)
@@ -213,7 +217,7 @@ Não faça isso. Em substituição, implemente o modo "_visualizar_" usando um e
 
 ### Mudanças assíncronas de conteúdo
 
-> **Nota:** Em construção. Veja, também, [Regiões Dinâmicas](/en/ARIA/Live_Regions)
+> **Nota:** Em construção. Veja, também, [Regiões Dinâmicas](/pt-BR/ARIA/Live_Regions)
 
 ## Navegação pelo Teclado
 
@@ -229,14 +233,14 @@ Aqui está um resumo sobre como a navegação pelo teclado deve funcionar, com a
 - Dentro de um formulário, a tecla "barra de spaço" deve selecionar, ou ativar um controle, enquanto a tecla "Entra" deve submeter sua ação padrão.
 - Se houver dúvidas, copie o comportamento das ações padronizadas para ambiente nos controles que você estiver criando.
 
-Assim, para o exemplo de _widget_ de abas acima, a pessoa que estiver navegando deve ser capaz de entrar e sair da caixa que o contém usando as teclas "_Tab_" e "_Shift+Tab_" ( a \<ol> na nossa marcação). Uma vez que o foco, pelo teclado, estiver dentro do contêiner, as teclas de setas devem permitir a navegação entre as suas diferentes guias (os elementos \<li> ). A partir daqui as convenções variam de plataforma para plataforma. No Windows, a próxima aba deve ser ativada, automaticamente, quando as teclas de setas forem pressionadas. Em Mac OS X, seus utilizadores ativam a próxima aba pressionando a tecla "_Entra_", ou a "_barra de espaço_". Um tutorial abrangente, para a criação de _widgets_, com navegação pelo teclado, descreve como implementar esse comportamento utilizando JavaScript [Keyboard-navigable JavaScript widgets (_JavaScript para_ _widgets navegáveis pelo teclado_)](/en/Accessibility/Keyboard-navigable_JavaScript_widgets).
+Assim, para o exemplo de _widget_ de abas acima, a pessoa que estiver navegando deve ser capaz de entrar e sair da caixa que o contém usando as teclas "_Tab_" e "_Shift+Tab_" ( a \<ol> na nossa marcação). Uma vez que o foco, pelo teclado, estiver dentro do contêiner, as teclas de setas devem permitir a navegação entre as suas diferentes guias (os elementos \<li> ). A partir daqui as convenções variam de plataforma para plataforma. No Windows, a próxima aba deve ser ativada, automaticamente, quando as teclas de setas forem pressionadas. Em Mac OS X, seus utilizadores ativam a próxima aba pressionando a tecla "_Entra_", ou a "_barra de espaço_". Um tutorial abrangente, para a criação de _widgets_, com navegação pelo teclado, descreve como implementar esse comportamento utilizando JavaScript [Keyboard-navigable JavaScript widgets (_JavaScript para_ _widgets navegáveis pelo teclado_)](/pt-BR/Accessibility/Keyboard-navigable_JavaScript_widgets).
 
-Para mais detalhes sobre as convenções da navegação pelo teclado em modelo ambiente, um guia completo (em inglês) [DHTML style guide (_guia de estilos da HTML Dinâmica_)](http://access.aol.com/dhtml-style-guide-working-group/) está disponível. Este guia oferece uma visão global de como a navegação pelo teclado deve funcionar em cada tipo de _widget_ suportado pelo conjunto ARIA. A W3C também oferece um documento que ajuda muito, [ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html), incluindo a navegação pelo teclado e as convenções de atalhos para uma variedade de _widgets_.
+Para mais detalhes sobre as convenções da navegação pelo teclado em modelo ambiente, um guia completo (em inglês) [DHTML style guide (_guia de estilos da HTML Dinâmica_)](http://access.aol.com/dhtml-style-guide-working-group/) está disponível. Este guia oferece uma visão global de como a navegação pelo teclado deve funcionar em cada tipo de _widget_ suportado pelo conjunto ARIA. A W3C também oferece um documento que ajuda muito, [ARIA Best Practices](https://www.w3.org/WAI/PF/aria-practices/Overview.html), incluindo a navegação pelo teclado e as convenções de atalhos para uma variedade de _widgets_.
 
 ## Veja, também
 
-- [ARIA](/en/ARIA)
-- [Web applications and ARIA FAQ](/en/Accessibility/Web_applications_and_ARIA_FAQ)
-- [WAI-ARIA Specification](http://www.w3.org/TR/wai-aria/)
-- [WAI-ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html)
+- [ARIA](/pt-BR/ARIA)
+- [Web applications and ARIA FAQ](/pt-BR/Accessibility/Web_applications_and_ARIA_FAQ)
+- [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria/)
+- [WAI-ARIA Best Practices](https://www.w3.org/WAI/PF/aria-practices/Overview.html)
 - [DHTML Style Guide](http://access.aol.com/dhtml-style-guide-working-group/)

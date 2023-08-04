@@ -1,6 +1,6 @@
 ---
 title: JPEG
-slug: Glossary/jpeg
+slug: Glossary/JPEG
 ---
 
 **JPEG** (_Joint Photographic Experts Group_) とは、一般的に使われている、デジタル画像用の非可逆圧縮の方法です。
@@ -11,4 +11,4 @@ JPEG 圧縮は、連続したレイヤーで適用される色度サブサンプ
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "JPEG")}}
+- Wikipedia 上の [JPEG](https://ja.wikipedia.org/wiki/JPEG)

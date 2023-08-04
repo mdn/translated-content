@@ -1,11 +1,11 @@
 ---
-title: ':nth-of-type()'
+title: ":nth-of-type()"
 slug: Web/CSS/:nth-of-type
-translation_of: Web/CSS/:nth-of-type
 ---
+
 {{CSSRef}}
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:nth-of-type()` **corresponde a um ou mais elementos de um dado tipo, baseado em sua posição entre um grupo de irmãos.
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:nth-of-type()`** corresponde a um ou mais elementos de um dado tipo, baseado em sua posição entre um grupo de irmãos.
 
 ```css
 /* Seleciona cada quarto elemento <p>
@@ -46,7 +46,7 @@ Veja {{Cssxref(":nth-child")}} para uma explicação mais detalhada de sua sinta
 
 ```css
 /* Parágrafos ímpares */
-p:nth-of-type(2n+1) {
+p:nth-of-type(2n + 1) {
   color: red;
 }
 
@@ -67,8 +67,8 @@ p:nth-of-type(1) {
 
 ## Especificações
 
-| Especificação                                                                                | Sitação                              | Comentário                                                       |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------------------- |
+| Especificação                                                         | Sitação                     | Comentário                                                       |
+| --------------------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------- |
 | {{SpecName('CSS4 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}} | {{Spec2('CSS4 Selectors')}} | Não é necessário que os elementos correspondentes tenham um pai. |
 | {{SpecName('CSS3 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definição inicial.                                               |
 

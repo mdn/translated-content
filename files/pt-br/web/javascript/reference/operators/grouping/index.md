@@ -1,12 +1,8 @@
 ---
 title: Operador de Agrupamento
 slug: Web/JavaScript/Reference/Operators/Grouping
-tags:
-  - Expressões Primárias
-  - JavaScript
-  - Operadores
-translation_of: Web/JavaScript/Reference/Operators/Grouping
 ---
+
 {{jsSidebar("Operators")}}
 
 ## Sumário
@@ -33,25 +29,25 @@ var b = 2;
 var c = 3;
 
 // default precedence
-a + b * c     // 7
+a + b * c; // 7
 // evaluated by default like this
-a + (b * c)   // 7
+a + (b * c); // 7
 
 // now overriding precedence
 // addition before multiplication
-(a + b) * c   // 9
+(a + b) * c; // 9
 
 // which is equivalent to
-a * c + b * c // 9
+a * c + b * c; // 9
 ```
 
 ## Especificações
 
-| Specification                                                                                | Status                   | Comment                                            |
-| -------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                                                                      | Standard                 | Primeira definição. Implementado no JavaScript 1.0 |
-| {{SpecName('ES5.1', '#sec-11.1.6', 'The Grouping Operator')}}             | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-grouping-operator', 'The Grouping Operator')}} | {{Spec2('ES6')}}     |                                                    |
+| Specification                                                          | Status             | Comment                                            |
+| ---------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| ECMAScript 1st Edition.                                                | Standard           | Primeira definição. Implementado no JavaScript 1.0 |
+| {{SpecName('ES5.1', '#sec-11.1.6', 'The Grouping Operator')}}          | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-grouping-operator', 'The Grouping Operator')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade
 

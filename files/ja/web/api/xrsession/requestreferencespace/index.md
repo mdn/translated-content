@@ -1,7 +1,6 @@
 ---
 title: XRReferenceSpaceType
 slug: Web/API/XRSession/requestReferenceSpace
-original_slug: Web/API/XRReferenceSpaceType
 ---
 
 {{APIRef("WebXR Device API")}}
@@ -26,10 +25,8 @@ original_slug: Web/API/XRReferenceSpaceType
 
 ## 仕様
 
-| 仕様                                                                                                 | 状態                     | コメント |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('WebXR','#enumdef-xrreferencespacetype','XRReferenceSpaceType')}} | {{Spec2('WebXR')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRReferenceSpaceType")}}
+{{Compat}}

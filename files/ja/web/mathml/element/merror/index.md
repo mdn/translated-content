@@ -22,26 +22,21 @@ MathML `<merror>` 要素は、エラーメッセージとしてコンテンツ�
 
 ```html
 <math>
-
-<merror>
-  <mrow>
-    <mtext> Division by zero: </mtext>
-    <mfrac>
-      <mn> 1 </mn>
-      <mn> 0 </mn>
-    </mfrac>
-  </mrow>
-</merror>
-
+  <merror>
+    <mrow>
+      <mtext> Division by zero: </mtext>
+      <mfrac>
+        <mn> 1 </mn>
+        <mn> 0 </mn>
+      </mfrac>
+    </mrow>
+  </merror>
 </math>
 ```
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                         | コメント   |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.merror', 'merror') }} | {{ Spec2('MathML3') }} | 現在の仕様 |
-| {{ SpecName('MathML2', 'chapter3.html#presm.merror', 'merror') }} | {{ Spec2('MathML2') }} | 初期の仕様 |
+{{Specifications}}
 
 ## ブラウザー互換性
 

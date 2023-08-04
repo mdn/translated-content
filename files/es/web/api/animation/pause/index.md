@@ -1,17 +1,8 @@
 ---
 title: Animation.pause()
 slug: Web/API/Animation/pause
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Referencia
-  - pausar
-  - pause
-  - waapi
-translation_of: Web/API/Animation/pause
 ---
+
 {{ APIRef("Web Animations") }}
 
 El método `pause()` de la interfaz {{domxref("Animation")}} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API), suspende la reproducción de la animación.
@@ -43,15 +34,16 @@ Lanza un `InvalidStateError` si el {{domxref("Animation.currentTime", "currentTi
 
 ```js
 // animación de la magdalena que lentamente se está comiendo
-var nommingCake = document.getElementById('eat-me_sprite').animate(
-[
-  { transform: 'translateY(0)' },
-  { transform: 'translateY(-80%)' }
-], {
-  fill: 'forwards',
-  easing: 'steps(4, end)',
-  duration: aliceChange.effect.timing.duration / 2
-});
+var nommingCake = document
+  .getElementById("eat-me_sprite")
+  .animate(
+    [{ transform: "translateY(0)" }, { transform: "translateY(-80%)" }],
+    {
+      fill: "forwards",
+      easing: "steps(4, end)",
+      duration: aliceChange.effect.timing.duration / 2,
+    },
+  );
 
 // realmente solo debe funcionar al hacer click, así que se pausa inicialmente:
 nommingCake.pause();
@@ -61,7 +53,7 @@ Adicionalmente, al restablecer:
 
 ```js
 // Una función multiusos para pausar las animaciones de Alicia, el pastelito y la botella que dice "drink me."
-var stopPlayingAlice = function() {
+var stopPlayingAlice = function () {
   aliceChange.pause();
   nommingCake.pause();
   drinking.pause();

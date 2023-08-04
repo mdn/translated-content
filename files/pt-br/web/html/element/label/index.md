@@ -1,8 +1,8 @@
 ---
 title: <label>
 slug: Web/HTML/Element/label
-translation_of: Web/HTML/Element/label
 ---
+
 ## Resumo
 
 Um **elemento** **HTML `<label>` **representa uma legenda para um item em uma interface de usuário. Ele pode estar associado com um elemento de controle, colocando este dentro do elemento `label`, ou usando o atributo `for`. Tal controle é chamado o _controle etiquetado_ do elemento etiqueta. Um input pode ser associado a diversas etiquetas (\<label>s).
@@ -17,15 +17,15 @@ Um **elemento** **HTML `<label>` **representa uma legenda para um item em uma in
 
 A tecla de atalho para acessar este elemento a partir do teclado.
 
-- {{htmlattrdef("accesskey")}} {{HTMLVersionInline("4")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("accesskey")}}
   - : A tecla de atalho para acessar este elemento a partir do teclado.
 - {{htmlattrdef("for")}}
 
   - : O ID de um elemento de formulário relacionados com labelable no mesmo documento como o elemento label. O primeiro elemento tal no documento com uma ID correspondente ao valor do atributo é o controle marcado for este elemento etiqueta.
 
-    > **Note:** **Nota:** Um elemento etiqueta pode ter tanto um for o atributo e um elemento de controlo continham, enquanto os pontos de atributo para o elemento de controlo contido.
+    > **Nota:** Um elemento etiqueta pode ter tanto um for o atributo e um elemento de controlo continham, enquanto os pontos de atributo para o elemento de controlo contido.
 
-- {{htmlattrdef("form")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("form")}}
   - : O elemento de forma que o elemento label está associado a (seu proprietário formulário). O valor do atributo deve ser uma identificação de um {{HTMLElement ("form")}} elemento no mesmo documento. Se este atributo não for especificado, este elemento \<label> deve ser um descendente de uma {{HTMLElement ("form")}} elemento. Este atributo permite que você coloque elementos do rótulo em qualquer lugar dentro de um documento, e não apenas como descendentes de seus elementos de formulário.
 
 ## Exemplo
@@ -63,4 +63,4 @@ A tecla de atalho para acessar este elemento a partir do teclado.
 
 - Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

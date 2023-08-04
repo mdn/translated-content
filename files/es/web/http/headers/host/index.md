@@ -1,12 +1,8 @@
 ---
 title: Host
 slug: Web/HTTP/Headers/Host
-tags:
-  - Cabecera
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Headers/Host
 ---
+
 {{HTTPSidebar}}
 
 El encabezado de solicitud **`Host`** especifica el nombre de dominio del servidor (para hosting virtual), y (opcionalmente) el número de puerto TCP en el que el servidor esta escuchando.
@@ -15,8 +11,8 @@ Si no se provee un puerto, se usará el puerto por defecto para el servicio soli
 
 El encabezado `Host` debe enviarse obligatoriamente en todas las solicitudes HTTP/1.1. Un código de error {{HTTPStatus("400")}} (Petición mala) debería enviarse a cualquier solicitud HTTP/1.1 que no contiene o contiene más de un encabezado `Host`.
 
-| Header type                                      | Encabezado de solicitud |
-| ------------------------------------------------ | ----------------------- |
+| Header type                           | Encabezado de solicitud |
+| ------------------------------------- | ----------------------- |
 | {{Glossary("Forbidden header name")}} | sí                      |
 
 ## Sintaxis
@@ -40,13 +36,11 @@ Host: developer.mozilla.org
 
 ## Especificaciones
 
-| Specification                            | Title                                                              |
-| ---------------------------------------- | ------------------------------------------------------------------ |
-| {{RFC("7230", "Host", "5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Host")}}
+{{Compat}}
 
 ## Véase también
 

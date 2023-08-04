@@ -1,13 +1,6 @@
 ---
 title: NotificationEvent
 slug: Web/API/NotificationEvent
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - ServiceWorker
-translation_of: Web/API/NotificationEvent
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
@@ -35,28 +28,30 @@ _Cet objet hérite de propriétés grâce à son ancêtre : {{domxref("Event")}}
 _Cet objet hérite de méthodes grâce à son parent_ _{{domxref("ExtendableEvent")}}_.
 
 - {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
-  - : Cette méthode allonge la durée de vie de l'évènement. Elle est conçue pour être appelée dans le gestionnaire d'évènement {{event("install")}} lors de l'installation (cf. {{domxref("ServiceWorkerRegistration.installing")}}) du _worker_ et dans le gestionnaire d'évènement {{event("active")}} pour le _worker_ actif (cf. {{domxref("ServiceWorkerRegistration.active")}}).
+  - : Cette méthode allonge la durée de vie de l'évènement et indique qu'une tâche est toujours en cours.
 
 ## Exemples
 
 ```js
-self.addEventListener('notificationclick', function(event) {
-  console.log('Au clic sur la notification : ', event.notification.tag);
+self.addEventListener("notificationclick", function (event) {
+  console.log("Au clic sur la notification : ", event.notification.tag);
   event.notification.close();
 
   // On regarde ici si elle est déjà ouverte
   // et si le focus est dessus
-  event.waitUntil(clients.matchAll({
-    type: "window"
-  }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
-      var client = clientList[i];
-      if (client.url == '/' && 'focus' in client)
-        return client.focus();
-    }
-    if (clients.openWindow)
-      return clients.openWindow('/');
-  }));
+  event.waitUntil(
+    clients
+      .matchAll({
+        type: "window",
+      })
+      .then(function (clientList) {
+        for (var i = 0; i < clientList.length; i++) {
+          var client = clientList[i];
+          if (client.url == "/" && "focus" in client) return client.focus();
+        }
+        if (clients.openWindow) return clients.openWindow("/");
+      }),
+  );
 });
 ```
 

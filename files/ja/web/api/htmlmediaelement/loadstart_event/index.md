@@ -1,34 +1,27 @@
 ---
-title: 'HTMLMediaElement: loadstart イベント'
+title: "HTMLMediaElement: loadstart イベント"
 slug: Web/API/HTMLMediaElement/loadstart_event
+l10n:
+  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
 ---
 
 {{APIRef}}
 
 **`loadstart`** イベントは、ブラウザーがリソースの読み込みを開始したときに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onloadstart", "onloadstart")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## 構文
+
+このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('loadstart', (event) => {});
+
+onloadstart = (event) => { };
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
@@ -38,15 +31,13 @@ slug: Web/API/HTMLMediaElement/loadstart_event
 
 ```html
 <div class="example">
+  <button type="button">Load video</button>
+  <video controls width="250"></video>
 
-    <button type="button">Load video</button>
-    <video controls width="250"></video>
-
-    <div class="event-log">
-        <label>Event log:</label>
-        <textarea readonly class="event-log-contents"></textarea>
-    </div>
-
+  <div class="event-log">
+    <label for="eventLog">Event log:</label>
+    <textarea readonly class="event-log-contents" id="eventLog"></textarea>
+  </div>
 </div>
 ```
 
@@ -55,21 +46,21 @@ slug: Web/API/HTMLMediaElement/loadstart_event
   width: 18rem;
   height: 5rem;
   border: 1px solid black;
-  margin: .2rem;
-  padding: .2rem;
+  margin: 0.2rem;
+  padding: 0.2rem;
 }
 
 .example {
   display: grid;
   grid-template-areas:
-              "button log"
-              "video  log";
+    "button log"
+    "video  log";
 }
 
 button {
   grid-area: button;
   width: 10rem;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 video {
@@ -80,12 +71,12 @@ video {
   grid-area: log;
 }
 
-.event-log>label {
+.event-log > label {
   display: block;
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const loadVideo = document.querySelector('button');
@@ -94,7 +85,7 @@ const eventLog = document.querySelector('.event-log-contents');
 let source = null;
 
 function handleEvent(event) {
-    eventLog.textContent = eventLog.textContent + `${event.type}\n`;
+    eventLog.textContent += `${event.type}\n`;
 }
 
 video.addEventListener('loadstart', handleEvent);

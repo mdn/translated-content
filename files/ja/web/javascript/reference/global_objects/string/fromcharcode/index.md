@@ -62,9 +62,7 @@ String.fromCharCode(0xD834, 0xDF06, 0x61, 0xD834, 0xDF07); // "\uD834\uDF06a\uD8
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.fromcharcode', 'String.fromCharCode')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

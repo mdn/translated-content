@@ -3,7 +3,7 @@ title: border-top-style
 slug: Web/CSS/border-top-style
 ---
 
-{{ CSSRef}}
+{{CSSRef}}
 
 **`border-top-style`** [CSS](/zh-CN/CSS) 设置元素上边框的 {{cssxref("border")}}.
 
@@ -34,7 +34,7 @@ border-top-style: unset;
 
 选取以上可用关键字之一作为 {{cssxref("border-style")}} 的 **border-top-style** 属性的值。
 
-### 形式化语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -69,28 +69,49 @@ border-top-style: unset;
 /* Define look of the table */
 table {
   border-width: 2px;
-  background-color: #52E385;
+  background-color: #52e385;
 }
-tr, td {
+tr,
+td {
   padding: 3px;
 }
 
 /* border-top-style example classes */
-.b1 {border-top-style: none;}
-.b2 {border-top-style: hidden;}
-.b3 {border-top-style: dotted;}
-.b4 {border-top-style: dashed;}
-.b5 {border-top-style: solid;}
-.b6 {border-top-style: double;}
-.b7 {border-top-style: groove;}
-.b8 {border-top-style: ridge;}
-.b9 {border-top-style: inset;}
-.b10 {border-top-style: outset;}
+.b1 {
+  border-top-style: none;
+}
+.b2 {
+  border-top-style: hidden;
+}
+.b3 {
+  border-top-style: dotted;
+}
+.b4 {
+  border-top-style: dashed;
+}
+.b5 {
+  border-top-style: solid;
+}
+.b6 {
+  border-top-style: double;
+}
+.b7 {
+  border-top-style: groove;
+}
+.b8 {
+  border-top-style: ridge;
+}
+.b9 {
+  border-top-style: inset;
+}
+.b10 {
+  border-top-style: outset;
+}
 ```
 
 #### 输出结果
 
-{{ EmbedLiveSample('Examples', 300, 200) }}
+{{ EmbedLiveSample('示例', 300, 200) }}
 
 ## 规范
 
@@ -102,7 +123,7 @@ tr, td {
 
 {{Compat}}
 
-## 相关词条
+## 参见
 
 - The other style-related border properties: {{ Cssxref("border-left-style") }}, {{ Cssxref("border-right-style") }}, {{ Cssxref("border-bottom-style") }}, and {{ Cssxref("border-style") }}.
 - The other top-border-related properties: {{ Cssxref("border-top") }}, {{ Cssxref("border-top-color") }}, and {{ Cssxref("border-top-width") }}.

@@ -1,6 +1,8 @@
 ---
 title: SharedArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
+l10n:
+  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
 ---
 
 {{JSRef}}
@@ -11,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
 
 ## 構文
 
-```js
+```js-nolint
 slice()
 slice(begin)
 slice(begin, end)
@@ -32,9 +34,9 @@ slice(begin, end)
 
   - : 0 から始まるインデックスで、取り出す範囲の末尾の*前*を示します。 `slice` はここまでを取り出しますが、 `end` は含めません。
 
-    例えば、 `slice(1,4)` は2番目から4番目までの要素を取り出します (添字が 1, 2, 3 の要素)。
+    例えば、 `slice(1,4)` は2番目から4番目までの要素を取り出します（インデックスが 1, 2, 3 の要素）。
 
-    負のインデックスを使用して、配列の末尾からのオフセットを示すことが可能です。 `slice(2,-1)` は3番目から、並びの最後から2番目までの要素を取り出します。
+    負のインデックスを使用して、配列の末尾からのオフセットを示すことが可能です。 `slice(2,-1)` は 3 番目から、並びの最後から 2 番目までの要素を取り出します。
 
     `end` が省略されると、 `slice` は並びの最後 (`sab.byteLength`) までの範囲を取り出します。
 
@@ -47,10 +49,10 @@ slice(begin, end)
 ### slice() の使用
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-sab.slice();    // SharedArrayBuffer { byteLength: 1024 }
-sab.slice(2);   // SharedArrayBuffer { byteLength: 1022 }
-sab.slice(-2);  // SharedArrayBuffer { byteLength: 2 }
+const sab = new SharedArrayBuffer(1024);
+sab.slice(); // SharedArrayBuffer { byteLength: 1024 }
+sab.slice(2); // SharedArrayBuffer { byteLength: 1022 }
+sab.slice(-2); // SharedArrayBuffer { byteLength: 2 }
 sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }
 ```
 

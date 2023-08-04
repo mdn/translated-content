@@ -51,33 +51,7 @@ slug: Web/SVG/Attribute/stop-color
 
 ## 仕様書
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#StopColorProperty", "stop-color")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        SVG では <code>transparent</code> キーワードが CSS とは異なる扱いになるというメモを追加。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "pservers.html#StopColorProperty", "stop-color")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>初回定義</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## ブラウザーの互換性
 

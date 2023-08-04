@@ -1,38 +1,34 @@
 ---
-title: Encoding API
+title: エンコーディング API
 slug: Web/API/Encoding_API
+l10n:
+  sourceCommit: 049632675ccb83fe2e257c43071d366d3f80ee2b
 ---
 
-{{DefaultAPISidebar("Encoding API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Encoding API")}}
 
-**Encoding API** はレガシーな非{{Glossary("UTF-8")}}エンコーディングを含む様々な{{Glossary("character encoding", "文字エンコーディング")}}のテキストを扱うメカニズムを提供します。
+**エンコーディング API** は、様々な{{Glossary("character encoding", "文字エンコーディング")}}のテキストを扱うメカニズムを提供します。レガシーな {{Glossary("UTF-8")}} 以外のエンコーディングも含みます。
 
-この API は 4 つのインターフェースを提供します。それは、 {{domxref("TextDecoder")}}、 {{domxref("TextEncoder")}}、 {{domxref("TextDecoderStream")}} そして {{domxref("TextEncoderStream")}} です。
+この API は、{{domxref("TextDecoder")}}、{{domxref("TextEncoder")}}、{{domxref("TextDecoderStream")}}、{{domxref("TextEncoderStream")}} の 4 つのインターフェイスを提供します。
 
-## インターフェース
+{{AvailableInWorkers}}
+
+## インターフェイス
 
 - {{DOMxRef("TextDecoder")}}
 - {{DOMxRef("TextEncoder")}}
 - {{DOMxRef("TextDecoderStream")}}
 - {{DOMxRef("TextEncoderStream")}}
 
-## チュートリアルとツール
-
-- [shim](http://code.google.com/p/stringencoding/)はこのインターフェースをサポートしていないブラウザでもこのインターフェスを使えるようにします。
-- [`StringView`](/ja/Add-ons/Code_snippets/StringView) は C 言語の文字列配列型のような表現を提供します。
-
 ## 仕様書
 
-| 仕様書                           | 状態                         | 備考     |
-| -------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Encoding")}} | {{Spec2("Encoding")}} | 初回定義 |
+{{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-### `TextDecoder`
+{{Compat}}
 
-{{Compat("api.TextDecoder")}}
+## 関連情報
 
-### `TextEncoder`
-
-{{Compat("api.TextEncoder")}}
+- [エンコーディング API のエンコーディング](/ja/docs/Web/API/Encoding_API/Encodings) - テキストをデコードする際に対応していなければならないエンコーディング。
+- 対応していないブラウザーでこのインターフェイスを使用することができる[ポリフィル](https://github.com/inexorabletash/text-encoding)。

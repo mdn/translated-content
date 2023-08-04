@@ -1,14 +1,6 @@
 ---
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
-tags:
-  - Espace de noms
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl
 ---
 
 {{JSRef}}
@@ -86,9 +78,11 @@ Vous pouvez utiliser Intl pour formater des dates et nombres dans un format qui 
 const compte = 26254.39;
 const date = new Date("2012-05-24");
 
-function afficher (langue) {
+function afficher(langue) {
   console.log(
-    `${new Intl.DateTimeFormat(langue).format(date)} ${new Intl.NumberFormat(langue).format(compte)}`
+    `${new Intl.DateTimeFormat(langue).format(date)} ${new Intl.NumberFormat(
+      langue,
+    ).format(compte)}`,
   );
 }
 
@@ -101,15 +95,11 @@ afficher("de-DE");
 
 ## Spécifications
 
-| Spécification                                                        | État                             | Commentaires                                            |
-| -------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------- |
-| {{SpecName('ES Int 1.0', '#sec-8', 'Intl')}}         | {{Spec2('ES Int 1.0')}} | Définition initiale.                                    |
-| {{SpecName('ES Int 2.0', '#sec-8', 'Intl')}}         | {{Spec2('ES Int 2.0')}} |                                                         |
-| {{SpecName('ES Int Draft', '#intl-object', 'Intl')}} | {{Spec2('ES Int Draft')}} | Ajout de `Intl.getCanonicalLocales` dans la 4e édition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl")}}
+{{Compat}}
 
 ## Voir aussi
 

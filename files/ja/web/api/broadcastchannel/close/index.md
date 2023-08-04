@@ -1,25 +1,27 @@
 ---
 title: BroadcastChannel.close()
 slug: Web/API/BroadcastChannel/close
+l10n:
+  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
 
 {{APIRef("BroadCastChannel API")}}
 
-**`BroadcastChannel.close()`** は、基礎となるチャネルへの接続を終了し、オブジェクトをガベージコレクションできるようにします。 このチャンネルがもう必要ないことをブラウザーが知る他の方法はないので、これは実行するのに必要なステップです。
+**`BroadcastChannel.close()`** は、基礎となるチャンネルへの接続を終了し、オブジェクトをガベージコレクションできるようにします。 このチャンネルがもう必要ないことをブラウザーが知る他の方法はないので、これは実行するのに必要なステップです。
 
 {{AvailableInWorkers}}
 
 ## 構文
 
-```
-var str = channel.close();
+```js-nolint
+channel.close()
 ```
 
 ## 例
 
 ```js
 // チャンネルに接続
-var bc = new BroadcastChannel('test_channel');
+const bc = new BroadcastChannel("test_channel");
 
 // その他の操作（postMessage など）
 
@@ -27,16 +29,14 @@ var bc = new BroadcastChannel('test_channel');
 bc.close();
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                             | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "comms.html#dom-broadcastchannel-close", "BroadcastChannel.close()")}} | {{Spec2('HTML WHATWG')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.BroadcastChannel.close")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{domxref("BroadcastChannel")}}: これが属するインターフェース。
+- {{domxref("BroadcastChannel")}}: 所属するインターフェイス。

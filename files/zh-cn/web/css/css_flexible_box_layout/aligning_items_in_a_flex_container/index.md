@@ -1,6 +1,6 @@
 ---
 title: 对齐弹性容器中的弹性项目
-slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
+slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 ---
 
 {{CSSRef}}
@@ -170,7 +170,7 @@ flex items 的高度全都变成一样的原因是 `align-items` 属性的初始
 
 我们想要处理个别弹性项目在主轴上的对齐，但是没有 `justify-items` 属性或者 `justify-self` 属性可用，因为弹性项目会被当成一个组来对齐。然而，我们可以使用自动的外边距来处理一些个别弹性项目或者一组弹性项目想和其他弹性项目分离开的对齐情况。
 
-一个常见的案例是导航栏，一些重要项目右对齐，而一组其它主要项目左对齐。你可能会想，这个时候就需要一个 `justify-self` 属性。但是下面的情况，如图所示，有 3 个项目在左边，2 个在右边。假设可以在项目 d 上设置 `justify-self` 的话，那么跟在后面的项目 e 的对齐方式也会发生改变。可能这正是我们想要的效果，但某些时候并不是。
+一个常见的案例是导航栏，一些重要项目右对齐，而一组其他主要项目左对齐。你可能会想，这个时候就需要一个 `justify-self` 属性。但是下面的情况，如图所示，有 3 个项目在左边，2 个在右边。假设可以在项目 d 上设置 `justify-self` 的话，那么跟在后面的项目 e 的对齐方式也会发生改变。可能这正是我们想要的效果，但某些时候并不是。
 
 ![Five items, in two groups. Three on the left and two on the right.](align7.png)
 
@@ -184,12 +184,12 @@ flex items 的高度全都变成一样的原因是 `align-items` 属性的初始
 
 在本文的开头，我解释了 Level1 flexbox 规范中当前包含的对齐相关属性也被包含在了 Box Alignment Level3 规范中，这意味着将来会很好地扩展这些属性和值。我们已经看到了这种情况的发生，比如：为 `align-content` 和`justify-content` 属性引入`space-evenly`值。
 
-Box Alignment 模块还包含其他创建子项之间间隙的方法，比如在 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 中包含的 `column-gap` 和`row-gap` 特性。这些属性包含在 Box Alignment 规范中意味着在将来我们也应该能够在 flex 布局中使用`column-gap`和`row-gap`，在 Firefox 63 中，您将在 flex 布局中找到第一个浏览器对 gap 属性的实现。
+Box Alignment 模块还包含其他创建子项之间间隙的方法，比如在 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout) 中包含的 `column-gap` 和`row-gap` 特性。这些属性包含在 Box Alignment 规范中意味着在将来我们也应该能够在 flex 布局中使用`column-gap`和`row-gap`，在 Firefox 63 中，您将在 flex 布局中找到第一个浏览器对 gap 属性的实现。
 
-在深入研究 flexbox 对齐时，我的建议是同时查看 Grid Layout 中的对齐方式。两种规范都使用 Box Alignment 规范中详细说明的对齐属性。您可以在 MDN 文章《[Box Alignment in Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)》中查看使用网格时这些属性的行为，并且我还在《 [Box Alignment Cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment)》中比较了这些规范中对齐的工作方式。
+在深入研究 flexbox 对齐时，我的建议是同时查看 Grid Layout 中的对齐方式。两种规范都使用 Box Alignment 规范中详细说明的对齐属性。您可以在 MDN 文章《[Box Alignment in Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)》中查看使用网格时这些属性的行为，并且我还在《 [Box Alignment Cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment)》中比较了这些规范中对齐的工作方式。
 
 ## 更多
 
-- [Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)
-- [Box Alignment in Flexbox](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
-- [Box Alignment in Grid Layout](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)
+- [Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment)
+- [Box Alignment in Flexbox](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [Box Alignment in Grid Layout](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Grid_Layout)

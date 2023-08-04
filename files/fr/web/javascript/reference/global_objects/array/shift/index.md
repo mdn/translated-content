@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/shift
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/shift
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`shift()`** permet de retirer le **premier** élément d'un tablea
 ## Syntaxe
 
 ```js
-arr.shift()
+arr.shift();
 ```
 
 ### Valeur de retour
@@ -64,7 +56,7 @@ La méthode `shift()` peut être utilisée dans une boucle [`while`](/fr/docs/We
 
 ```js
 var noms = ["André", "Édouard", "Paul", "Christophe", "Jean"];
-while ( (i = noms.shift()) !== undefined ) {
+while ((i = noms.shift()) !== undefined) {
   console.log(i);
 }
 // André, Édouard, Paul, Christophe, Jean
@@ -72,16 +64,11 @@ while ( (i = noms.shift()) !== undefined ) {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                 | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.9', 'Array.prototype.shift')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-array.prototype.shift', 'Array.prototype.shift')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.shift', 'Array.prototype.shift')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.shift")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,14 +1,6 @@
 ---
 title: Object.hasOwn()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
-page-type: web-api-static-method
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - hasOwn
-  - Polyfill
-browser-compat: javascript.builtins.Object.hasOwn
 ---
 
 {{JSRef}}

@@ -1,10 +1,8 @@
 ---
 title: name
 slug: Web/XPath/Functions/name
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/name
 ---
+
 {{ XsltRef() }}
 
 `name` 함수는 인수로 준 노드 집합 안 첫 노드의 QName을 나타내는 문자열을 반환합니다.

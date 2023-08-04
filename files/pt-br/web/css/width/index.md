@@ -1,23 +1,13 @@
 ---
 title: width
 slug: Web/CSS/width
-tags:
-  - CSS
-  - CSS Property
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - PrecisaDeCompatibilidadeDeNavegador
-  - PrecisadeCompatibilidadeMobile
-  - Propriedade CSS
-  - Reference
-  - Referencia
-translation_of: Web/CSS/width
 ---
+
 {{CSSRef}}
 
 ## Resumo
 
-A propriedade [CSS](pt-BR/docs/Web/CSS) **width** determina a largura da área de conteúdo de um elemento. A [área de conteúdo](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area) fica dentro do preenchimento, da borda, e da margem de um elemento.
+A propriedade [CSS](/pt-BR/docs/Web/CSS) **width** determina a largura da área de conteúdo de um elemento. A [área de conteúdo](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area) fica dentro do preenchimento, da borda, e da margem de um elemento.
 
 As propriedades {{cssxref("min-width")}} e {{cssxref("max-width")}} sobrescrevem o {{cssxref("width")}}.
 
@@ -136,7 +126,7 @@ p.douradinho {
 
 {{EmbedLiveSample('Porcentagem', '500px', '64px')}}
 
-### max-content
+### Exemplo utilizando "max-content"
 
 ```css
 p.maxgreen {
@@ -151,9 +141,9 @@ p.maxgreen {
 <p class="maxgreen">A comunidade Mozilla produz diversos softwares incríveis.</p>
 ```
 
-{{EmbedLiveSample('max-content', '500px', '64px')}}
+{{EmbedLiveSample('Exemplo utilizando "max-content"', '500px', '64px')}}
 
-### min-content
+### Exemplo utilizando "min-content"
 
 ```css
 p.minblue {
@@ -167,7 +157,7 @@ p.minblue {
 <p class="minblue">A comunidade Mozilla produz diversos softwares incríveis.</p>
 ```
 
-{{EmbedLiveSample('min-content', '500px', '155px')}}
+{{EmbedLiveSample('Exemplo utilizando "min-content"', '500px', '155px')}}
 
 ## Especificações
 

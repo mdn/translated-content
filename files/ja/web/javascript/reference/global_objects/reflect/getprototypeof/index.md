@@ -63,9 +63,7 @@ Reflect.getPrototypeOf(Object('foo'))  // String.prototype
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-reflect.getprototypeof', 'Reflect.getPrototypeOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

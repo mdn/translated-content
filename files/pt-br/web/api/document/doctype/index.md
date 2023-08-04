@@ -1,8 +1,8 @@
 ---
 title: Document.doctype
 slug: Web/API/Document/doctype
-translation_of: Web/API/Document/doctype
 ---
+
 {{ApiRef("DOM")}}
 
 Retorna a declaração do tipo de documento(Document Type Declaration (DTD)) associado ao documento atual. O objeto retornado implementa a interface {{domxref("DocumentType")}}. Use {{domxref("DOMImplementation.createDocumentType()")}} para criar um `DocumentType`.
@@ -21,10 +21,17 @@ doctype = document.doctype;
 var doctypeObj = document.doctype;
 
 console.log(
-  "doctypeObj.name: "           + doctypeObj.name            + "\n" +
-  "doctypeObj.internalSubset: " + doctypeObj.internalSubset  + "\n" +
-  "doctypeObj.publicId: "       + doctypeObj.publicId        + "\n" +
-  "doctypeObj.systemId: "       + doctypeObj.systemId
+  "doctypeObj.name: " +
+    doctypeObj.name +
+    "\n" +
+    "doctypeObj.internalSubset: " +
+    doctypeObj.internalSubset +
+    "\n" +
+    "doctypeObj.publicId: " +
+    doctypeObj.publicId +
+    "\n" +
+    "doctypeObj.systemId: " +
+    doctypeObj.systemId,
 );
 ```
 
@@ -36,10 +43,8 @@ O nível 2 do DOM não suporta a edição da declaração do tipo de documento.
 
 ## Especificações
 
-| Especificação                                                                                    | Status                           | Comentário |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('DOM WHATWG', '#dom-document-doctype', 'Document: doctype')}} | {{Spec2('DOM WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.doctype")}}
+{{Compat}}

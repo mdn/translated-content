@@ -1,13 +1,13 @@
 ---
 title: 애니메이션 잘라내기
 slug: Web/API/WebGL_API/By_example/Scissor_animation
-translation_of: Web/API/WebGL_API/By_example/Scissor_animation
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}
 
 활동을 청소하고 잘라내는 어떤 애니메이션 장난
 
-{{EmbedLiveSample("scissor-animation-source",660,425)}}
+{{EmbedLiveSample("애니메이션_잘라내기",660,425)}}
 
 ### 애니메이션 잘라내기
 
@@ -16,37 +16,39 @@ translation_of: Web/API/WebGL_API/By_example/Scissor_animation
 반대로, 사각형의 색 ({{domxref("WebGLRenderingContext.clearColor()","clearColor")}}으로 설정되는)은 오직 새로운 사각형이 생성될 때만 업데이트 됩니다. 이것은 상태 머신으로써 {{Glossary("WebGL")}} 을 보여줄 좋은 데모입니다. 각 사각형에 대하여 우리는 그것의 색을 결정하고, 매 프레임마다 위치를 결정합니다. WebGl의 깨끗한 색 상태는 새로운 사각형이 생성되어 우리가 그것을 다시 바꿀 때까지 설정 값으로 남아있습니다.
 
 ```html hidden
-<p>WebGL animation by clearing the drawing buffer with solid
-color and applying scissor test.</p>
+<p>
+  WebGL animation by clearing the drawing buffer with solid color and applying
+  scissor test.
+</p>
 <button id="animation-onoff">
   Press here to
-<strong>[verb goes here]</strong>
-  the animation</button>
+  <strong>[verb goes here]</strong>
+  the animation
+</button>
 ```
 
 ```html hidden
-<canvas>Your browser does not seem to support
-    HTML5 canvas.</canvas>
+<canvas>Your browser does not seem to support HTML5 canvas.</canvas>
 ```
 
 ```css hidden
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : block;
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: block;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 button {
-  display : block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 
@@ -129,16 +131,16 @@ function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
-  var gl = canvas.getContext("webgl")
-    || canvas.getContext("experimental-webgl");
+  var gl =
+    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
   if (!gl) {
     var paragraph = document.querySelector("p");
-    paragraph.innerHTML = "Failed to get WebGL context."
-      + "Your browser or device may not support WebGL.";
+    paragraph.innerHTML =
+      "Failed to get WebGL context." +
+      "Your browser or device may not support WebGL.";
     return null;
   }
-  gl.viewport(0, 0,
-    gl.drawingBufferWidth, gl.drawingBufferHeight);
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;
@@ -149,6 +151,6 @@ function getRenderingContext() {
 })();
 ```
 
-The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/scissor-animation).
+이 예시 코드는 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/scissor-animation)에서도 확인 가능합니다.
 
 {{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}

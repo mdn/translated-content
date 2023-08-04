@@ -25,27 +25,23 @@ var animationsPromise = animation.finished;
 
 ```js
 Promise.all(
-  elem.getAnimations().map(
-    function(animation) {
-      return animation.finished
-    }
-  )
-).then(
-  function() {
-    return elem.remove();
-  }
-);
+  elem.getAnimations().map(function (animation) {
+    return animation.finished;
+  }),
+).then(function () {
+  return elem.remove();
+});
 ```
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - [KeyframeEffect Interface](/zh-CN/docs/Web/API/KeyframeEffect)
 - [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)

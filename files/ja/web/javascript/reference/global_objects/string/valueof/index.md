@@ -36,9 +36,7 @@ console.log(x.valueOf()); // "Hello world" を表示します
 
 ## 仕様
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.valueof', 'String.prototype.valueOf')}} |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

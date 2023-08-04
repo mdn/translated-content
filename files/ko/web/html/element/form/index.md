@@ -1,16 +1,9 @@
 ---
 title: <form>
 slug: Web/HTML/Element/form
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-  - 양식
-translation_of: Web/HTML/Element/form
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<form>` 요소**는 정보를 제출하기 위한 대화형 컨트롤을 포함하는 문서 구획을 나타냅니다.
 
@@ -56,7 +49,7 @@ translation_of: Web/HTML/Element/form
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -68,7 +61,7 @@ translation_of: Web/HTML/Element/form
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("accept")}} {{deprecated_inline}}
 
@@ -108,7 +101,7 @@ translation_of: Web/HTML/Element/form
 
 - {{htmlattrdef("method")}}
 
-  - : 양식을 제출할 때 사용할 [HTTP](/ko/docs/Web/HTTP "http://www.w3.org/Protocols/rfc2616/rfc2616.html") 메서드.
+  - : 양식을 제출할 때 사용할 [HTTP](/ko/docs/Web/HTTP) 메서드.
 
     - `post`: [POST 메서드](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5). 양식 데이터를 [요청 본문](/ko/docs/Web/API/Body)으로 전송합니다.
     - `get`: [GET 메서드](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3). 양식 데이터를 `action` URL과 `?` 구분자 뒤에 이어 붙여서 전송합니다.
@@ -136,16 +129,18 @@ translation_of: Web/HTML/Element/form
 ```html
 <!-- Form which will send a GET request to the current URL -->
 <form>
-  <label>Name:
-    <input name="submitted-name" autocomplete="name">
+  <label
+    >Name:
+    <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Save</button>
 </form>
 
 <!-- Form which will send a POST request to the current URL -->
 <form method="post">
-  <label>Name:
-    <input name="submitted-name" autocomplete="name">
+  <label
+    >Name:
+    <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Save</button>
 </form>
@@ -154,7 +149,7 @@ translation_of: Web/HTML/Element/form
 <form method="post">
   <fieldset>
     <legend>Title</legend>
-    <label><input type="radio" name="radio"> Select me</label>
+    <label><input type="radio" name="radio" /> Select me</label>
   </fieldset>
 </form>
 ```
@@ -167,8 +162,8 @@ translation_of: Web/HTML/Element/form
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.form")}}
+{{Compat}}
 
 ## 같이 보기
 
-- <label><a href="/ko/docs/Web/Guide/HTML/Forms" title="/en-US/docs/Web/Guide/HTML/Forms">HTML 양식 안내서</a></label>
+- [HTML 양식 안내서](/ko/docs/Web/Guide/HTML/Forms)

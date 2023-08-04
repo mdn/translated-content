@@ -1,16 +1,6 @@
 ---
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/values
-original_slug: Web/JavaScript/Reference/Objets_globaux/Set/values
 ---
 
 {{JSRef}}
@@ -48,14 +38,11 @@ console.log(setIter.next().value); // "machin"
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires        |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-set.prototype.values', 'Set.prototype.values')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-set.prototype.values', 'Set.prototype.values')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Set.values")}}
+{{Compat}}
 
 ## Voir aussi
 

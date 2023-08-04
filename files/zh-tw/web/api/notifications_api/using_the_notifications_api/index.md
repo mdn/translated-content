@@ -28,7 +28,7 @@ Web Notifications API 可將通知傳送至頁面以外的系統層級並顯示�
 以下為啟動 Apps 時要求權限的常用範例：
 
 ```js
-window.addEventListener('load', function () {
+window.addEventListener("load", function () {
   Notification.requestPermission(function (status) {
     // This allows to use Notification.permission with Chrome/Safari
     if (Notification.permission !== status) {
@@ -71,7 +71,7 @@ permissions: {
 > var n = new Notification("Hi!");
 > n.onshow = function () {
 >   setTimeout(n.close, 5000);
-> }
+> };
 > ```
 
 ### 簡易範例
@@ -85,7 +85,7 @@ permissions: {
 則能以這種方法處理通知：
 
 ```js
-window.addEventListener('load', function () {
+window.addEventListener("load", function () {
   // At first, let's check if we have permission for notification
   // If not, let's ask for it
   if (Notification && Notification.permission !== "granted") {
@@ -95,8 +95,8 @@ window.addEventListener('load', function () {
       }
     });
   }
-  var button = document.getElementsByTagName('button')[0];
-  button.addEventListener('click', function () {
+  var button = document.getElementsByTagName("button")[0];
+  button.addEventListener("click", function () {
     // If the user agreed to get notified
     if (Notification && Notification.permission === "granted") {
       var n = new Notification("Hi!");
@@ -132,7 +132,7 @@ window.addEventListener('load', function () {
 
 若無法顯示，可至本文右上角「Language」切換回英文原文觀看。
 
-{{ EmbedLiveSample('Simple_example', '100%', 30) }}
+{{ EmbedLiveSample('簡易範例', '100%', 30) }}
 
 ## 處理多筆通知
 
@@ -201,11 +201,11 @@ window.addEventListener('load', function () {
 });
 ```
 
-### 現場測試結果
+#### 現場測試結果
 
 若無法顯示，可至本文右上角「Language」切換回英文原文觀看。
 
-{{ EmbedLiveSample('Tag_example', '100%', 30) }}
+{{ EmbedLiveSample('標籤範例', '100%', 30) }}
 
 ## 規格
 

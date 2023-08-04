@@ -11,10 +11,10 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
 
 ## HTML
 
-| 功能                                                                                                                                                                                   | Firefox Nightly                                      | Firefox 开发者版                 | Firefox 测试版                   | Firefox 发行版 | Preference                   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------------------- | -------------------------------- | -------------- | ---------------------------- |
+| 功能                                                                                                                                                                           | Firefox Nightly                                      | Firefox 开发者版                 | Firefox 测试版                   | Firefox 发行版 | Preference                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | -------------------------------- | -------------------------------- | -------------- | ---------------------------- |
 | **日期和时间输入**{{HTMLElement("input")}}为 [日期](/zh-CN/docs/Web/HTML/Element/input/date) 和 [时间](/zh-CN/docs/Web/HTML/Element/input/time) 相关的输入类型提供的新用户界面 | 开启 <sub>(从 51 开始支持，从 55 开始默认开启)</sub> | 开启 <sub>(从 51 开始支持)</sub> | 关闭 <sub>(从 51 开始支持)</sub> | ---            | `dom.forms.datetime`         |
-| **{{HTMLElement("dialog")}}** 包含与之交互的 DOM 元素的对话框元素。Implementation of modal dialogs and accessibility still missing.                                             | 关闭 <sub>(从 53 开始支持)</sub>                     | 关闭 <sub>(从 53 开始支持)</sub> | ---                              | ---            | `dom.dialog_element.enabled` |
+| **{{HTMLElement("dialog")}}** 包含与之交互的 DOM 元素的对话框元素。Implementation of modal dialogs and accessibility still missing.                                            | 关闭 <sub>(从 53 开始支持)</sub>                     | 关闭 <sub>(从 53 开始支持)</sub> | ---                              | ---            | `dom.dialog_element.enabled` |
 
 ## CSS
 
@@ -147,10 +147,10 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
         </p>
         <p>
           Firefox currently implements the <code>&#x3C;shape-box></code> values
-          ({{bug(1309467)}}) as well as the
-          <code>circle()</code> ({{bug(1311244)}}),
-          <code>ellipse()</code> ({{bug(1326406)}}), and
-          <code>polygon()</code> ({{bug(1326409)}}) functions.
+          (<a href="https://bugzil.la/1309467">Firefox bug 1309467</a>) as well as the
+          <code>circle()</code> (<a href="https://bugzil.la/1311244">Firefox bug 1311244</a>),
+          <code>ellipse()</code> (<a href="https://bugzil.la/1326406">Firefox bug 1326406</a>), and
+          <code>polygon()</code> (<a href="https://bugzil.la/1326409">Firefox bug 1326409</a>) functions.
         </p>
       </td>
       <td>关闭<br /><sub>(available since 53)</sub></td>
@@ -184,8 +184,8 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
           to specify how many columns an element spans across.
         </p>
         <p>
-          Firefox currently only parses the property ({{bug(1339298)}}),
-          it's not actually implemented yet ({{bug(616436)}}).
+          Firefox currently only parses the property (<a href="https://bugzil.la/1339298">Firefox bug 1339298</a>),
+          it's not actually implemented yet (<a href="https://bugzil.la/616436">Firefox bug 616436</a>).
         </p>
       </td>
       <td>
@@ -220,7 +220,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
 
 | Feature                                                                                                                                                                                                                                                                                                                                                                   | Firefox Nightly | Firefox Developer Edition | Firefox Beta | Firefox Release | Preference                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | ------------------------- | ------------ | --------------- | --------------------------- |
-| **Additions to the `ArrayBuffer` object** Adds the {{jsxref("ArrayBuffer.transfer()")}} that returns a new `ArrayBuffer` whose contents have been taken from the `oldBuffer`'s data ([spec](https://gist.github.com/lukewagner/2735af7eea411e18cf20)).                                                                                                        | 36              | Disabled                  | Disabled     | Disabled        | None                        |
+| **Additions to the `ArrayBuffer` object** Adds the {{jsxref("ArrayBuffer.transfer()")}} that returns a new `ArrayBuffer` whose contents have been taken from the `oldBuffer`'s data ([spec](https://gist.github.com/lukewagner/2735af7eea411e18cf20)).                                                                                                                    | 36              | Disabled                  | Disabled     | Disabled        | None                        |
 | **TypedObject objects** ([spec](https://github.com/dslomov-chromium/typed-objects-es7))                                                                                                                                                                                                                                                                                   | Enabled         | Disabled                  | Disabled     | Disabled        | None                        |
 | [SIMD](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SIMD) ([specification and polyfill](https://github.com/johnmccutchan/ecmascript_simd))                                                                                                                                                                                                                         | Enabled         | Disabled                  | Disabled     | Disabled        | None                        |
 | **ECMAScript modules** Allows you to use native ECMAScript modules, for example defining modules with `<script type="module">`, defining fallback scripts with `<script nomodule>`, and [importing](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) code features that have been [exported](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) from modules. | Disabled        | Disabled                  | Disabled     | Disabled        | `dom.moduleScripts.enabled` |
@@ -231,8 +231,8 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
 
 | Feature                                                                                                                                                                                                                                                                                                                                                        | Firefox Nightly                          | Firefox Developer Edition                | Firefox Beta                                                    | Firefox Release                                                 | Preference                         |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | ---------------------------------- |
-| **`WEBGL_debug_renderer_info` extension** The {{domxref("WEBGL_debug_renderer_info")}} extension allows you to transmit information useful to help debugging problems to the server.                                                                                                                                                               | 42                                       | 42                                       | [Disabled](https://bugzilla.mozilla.org/show_bug.cgi?id=742798) | [Disabled](https://bugzilla.mozilla.org/show_bug.cgi?id=742798) | `webgl.enable-debug-renderer-info` |
-| **OffscreenCanvas** The {{domxref("OffscreenCanvas")}} interface provides a canvas that can be rendered off screen. It is available in both the window and [worker](/zh-CN/docs/Web/API/Web_Workers_API) contexts.                                                                                                                                   | Disabled <sub>(available since 44)</sub> | Disabled <sub>(available since 44)</sub> | Disabled <sub>(available since 44)</sub>                        | Disabled <sub>(available since 44)</sub>                        | `gfx.offscreencanvas.enabled`      |
+| **`WEBGL_debug_renderer_info` extension** The {{domxref("WEBGL_debug_renderer_info")}} extension allows you to transmit information useful to help debugging problems to the server.                                                                                                                                                                           | 42                                       | 42                                       | [Disabled](https://bugzilla.mozilla.org/show_bug.cgi?id=742798) | [Disabled](https://bugzilla.mozilla.org/show_bug.cgi?id=742798) | `webgl.enable-debug-renderer-info` |
+| **OffscreenCanvas** The {{domxref("OffscreenCanvas")}} interface provides a canvas that can be rendered off screen. It is available in both the window and [worker](/zh-CN/docs/Web/API/Web_Workers_API) contexts.                                                                                                                                             | Disabled <sub>(available since 44)</sub> | Disabled <sub>(available since 44)</sub> | Disabled <sub>(available since 44)</sub>                        | Disabled <sub>(available since 44)</sub>                        | `gfx.offscreencanvas.enabled`      |
 | **[Hit regions](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility)** Whether the mouse coordinates are within a particular area on the canvas is a common problem to solve. The hit region API allows you define an area of your canvas and provides another possibility to expose interactive content on a canvas to accessibility tools. | Disabled <sub>(available since 30)</sub> | Disabled <sub>(available since 30)</sub> | Disabled <sub>(available since 30)</sub>                        | Disabled <sub>(available since 30)</sub>                        | `canvas.hitregions.enabled`        |
 
 ### DOM
@@ -331,7 +331,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
     <tr>
       <td>
         <strong><code>GeometryUtils.getBoxQuads()</code></strong>
-        ({{bug(917755)}})
+        (<a href="https://bugzil.la/917755">Firefox bug 917755</a>)
       </td>
       <td>31</td>
       <td>31</td>
@@ -353,7 +353,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
         >,<br /><strong><code>GeometryUtils.RectFromNode()</code></strong
         >, and<br /><code
           ><strong>GeometryUtils.convertQuadFromNode()</strong></code
-        ><br />({{bug(918189)}})
+        ><br />(<a href="https://bugzil.la/918189">Firefox bug 918189</a>)
       </td>
       <td>31</td>
       <td>31</td>
@@ -516,7 +516,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
         constructors can be used to clone existing
         {{domxref("KeyframeEffectReadOnly")}} object instances by
         being given the object to clone as their only parameter (see
-        {{bug(1273784)}}.)
+        <a href="https://bugzil.la/1273784">Firefox bug 1273784</a>.)
       </td>
       <td>52</td>
       <td>52</td>
@@ -631,7 +631,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
       <td>
         <strong>Layout side panel</strong><br />The Layout side panel allows to
         inspect and manage different CSS layout types like
-        <a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>.
+        <a href="/zh-CN/docs/Web/CSS/CSS_grid_layout">CSS Grid Layout</a>.
       </td>
       <td>Disabled<br /><sub>(available since 52)</sub></td>
       <td>Disabled<br /><sub>(available since 52)</sub></td>

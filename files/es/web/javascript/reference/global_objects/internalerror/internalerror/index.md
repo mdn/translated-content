@@ -1,14 +1,8 @@
 ---
 title: Constructor InternalError()
 slug: Web/JavaScript/Reference/Global_Objects/InternalError/InternalError
-tags:
-  - Constructor
-  - JavaScript
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/InternalError/InternalError
-original_slug: >-
-  Web/JavaScript/Referencia/Objetos_globales/InternalError/Constructor_InternalError
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 El constructor **`InternalError()`** crea un error que indica un error que ocurrió internamente en el motor de JavaScript. Por ejemplo: **"InternalError**: demasiada recursividad".
@@ -40,9 +34,9 @@ new InternalError("Fallo del motor");
 
 No forma parte de ningún estándar.
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.InternalError.InternalError")}}
+{{Compat}}
 
 ## Ve también
 

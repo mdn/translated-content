@@ -26,10 +26,7 @@ var y = touchItem.screenY;
 
 ## 仕様
 
-| 仕様                                                                 | ステータス                           | 備考                 |
-| -------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Touch Events 2','#dom-touch-screeny')}} | {{Spec2('Touch Events 2')}} | 前の版から変更なし。 |
-| {{SpecName('Touch Events', '#widl-Touch-screenY')}} | {{Spec2('Touch Events')}}     | 初回定義。           |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

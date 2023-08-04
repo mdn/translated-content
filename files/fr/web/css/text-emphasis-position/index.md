@@ -1,11 +1,6 @@
 ---
 title: text-emphasis-position
 slug: Web/CSS/text-emphasis-position
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-emphasis-position
 ---
 
 {{CSSRef}}
@@ -21,7 +16,6 @@ text-emphasis-position: over left;
 text-emphasis-position: under right;
 text-emphasis-position: under left;
 
-
 text-emphasis-position: left over;
 text-emphasis-position: right under;
 text-emphasis-position: left under;
@@ -34,7 +28,7 @@ text-emphasis-position: unset;
 
 ## Position privilégiée
 
-La position des marques d'emphase varie en fonction du langage. Par exemple, en japonais, on préfère les placer au dessus à droite. En revanche, pour le chinois, on préfèrera en bas à droite. Le tableau qui suit illustre les différences, notamment entre le chinois, le mongolien et le japonais  :
+La position des marques d'emphase varie en fonction du langage. Par exemple, en japonais, on préfère les placer au dessus à droite. En revanche, pour le chinois, on préfèrera en bas à droite. Le tableau qui suit illustre les différences, notamment entre le chinois, le mongolien et le japonais :
 
 <table>
   <caption>
@@ -128,12 +122,12 @@ D'autres préfèrent masquer le contenu ruby et privilégier les marques d'empha
 
 ```css
 em {
- /* On utilise text-emphasis pour les <em> */
+  /* On utilise text-emphasis pour les <em> */
   text-emphasis: dot;
 }
 
 em rt {
- /* On masque le ruby dans les éléments <em> */
+  /* On masque le ruby dans les éléments <em> */
   display: none;
 }
 ```

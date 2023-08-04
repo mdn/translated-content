@@ -50,7 +50,7 @@ Une expression `async function*` est très proche et possède quasiment la même
 
 ## Exemples
 
-### Utiliser `async function*`
+### Utiliser async function\*
 
 L'exemple qui suit définit une fonction génératrice asynchrone anonyme et l'affecte à `x`. Cette fonction génère le carré de son argument&nbsp;:
 
@@ -58,7 +58,9 @@ L'exemple qui suit définit une fonction génératrice asynchrone anonyme et l'a
 const x = async function* (y) {
   yield Promise.resolve(y * y);
 };
-x(6).next().then((res) => console.log(res.value)); // affiche 36
+x(6)
+  .next()
+  .then((res) => console.log(res.value)); // affiche 36
 ```
 
 ## Spécifications

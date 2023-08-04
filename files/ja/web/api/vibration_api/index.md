@@ -1,7 +1,6 @@
 ---
 title: Vibration API
 slug: Web/API/Vibration_API
-original_slug: Web/Guide/API/Vibration
 ---
 
 {{DefaultAPISidebar("Vibration API")}}
@@ -71,9 +70,7 @@ function startPersistentVibrate(duration, interval) {
 
 ## 仕様書
 
-| 仕様書                                   | 状態                                 | 備考                                                        |
-| ---------------------------------------- | ------------------------------------ | ----------------------------------------------------------- |
-| {{SpecName("Vibration API")}} | {{Spec2("Vibration API")}} | リンク先は最新の編集者草稿です。 W3C 版は勧告になりました。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

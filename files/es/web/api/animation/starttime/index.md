@@ -1,16 +1,8 @@
 ---
 title: Animation.startTime
 slug: Web/API/Animation/startTime
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Interface
-  - Reference
-  - startTime
-translation_of: Web/API/Animation/startTime
 ---
+
 {{ APIRef("Web Animations") }}
 
 La propiedad `Animation.startTime` de la interfaz {{domxref ("Animación")}} es un valor de punto flotante de doble precisión que indica el tiempo programado en el que debe comenzar la reproducción de una animación.
@@ -34,10 +26,12 @@ Un número de punto flotante que representa el tiempo actual en milisegundos, o 
 En el ejemplo [Running on Web Animations API example](https://codepen.io/rachelnabors/pen/zxYexJ?editors=0010), podemos sincronizar todos los nuevos gatos animados dándoles el mismo tiempo de inicio `startTime` que el gato original:
 
 ```js
-var catRunning = document.getElementById ("withWAAPI").animate(keyframes, timing);
+var catRunning = document
+  .getElementById("withWAAPI")
+  .animate(keyframes, timing);
 
 /* Una función que crea nuevos gatos. */
-function addCat(){
+function addCat() {
   var newCat = document.createElement("div");
   newCat.classList.add("cat");
   return newCat;

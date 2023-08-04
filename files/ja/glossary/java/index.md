@@ -13,6 +13,6 @@ Java は静的型付けで、 C の構文に近い特性を持ちます。直ち
 
 ### 一般知識
 
-- Wikipedia 上の {{interwiki("wikipedia", "Java")}}
+- Wikipedia 上の [Java](https://ja.wikipedia.org/wiki/Java)
 
 {{QuickLinksWithSubpages("/ja/docs/Glossary")}}

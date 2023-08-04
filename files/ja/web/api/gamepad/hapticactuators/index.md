@@ -1,17 +1,14 @@
 ---
-title: Gamepad.hapticActuators
+title: "Gamepad: hapticActuators プロパティ"
+short-title: hapticActuators
 slug: Web/API/Gamepad/hapticActuators
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 
-{{domxref("Gamepad")}} インターフェイスの **`hapticActuators`** 読み取り専用プロパティは、 {{domxref("GamepadHapticActuator")}} オブジェクトを含む配列を返します。各オブジェクトは、コントローラーで利用可能な触覚フィードバックハードウェアを表します。
-
-## 構文
-
-```js
-var myHapticActuators = gamepadInstance.hapticActuators;
-```
+**`hapticActuators`** は {{domxref("Gamepad")}} インターフェイスの読み取り専用プロパティで、 {{domxref("GamepadHapticActuator")}} オブジェクトを含む配列を返します。各オブジェクトは、コントローラーで利用可能な触覚フィードバックハードウェアを表します。
 
 ### 値
 
@@ -19,18 +16,20 @@ var myHapticActuators = gamepadInstance.hapticActuators;
 
 ## 例
 
-TBC
+```js
+const gamepad = navigator.getGamepads()[0];
+
+gamepad.hapticActuators[0].pulse(1.0, 200);
+```
 
 ## 仕様書
 
-| 仕様                                                                                                         | ステータス                               | 備考     |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('GamepadExtensions', '#partial-gamepad-interface', 'hapticActuators')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Gamepad.hapticActuators")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Gamepad API](/ja/docs/Web/API/Gamepad_API)
+- [ゲームパッド API](/ja/docs/Web/API/Gamepad_API)

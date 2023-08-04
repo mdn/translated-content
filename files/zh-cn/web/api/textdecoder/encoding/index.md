@@ -3,13 +3,17 @@ title: TextDecoder.encoding
 slug: Web/API/TextDecoder/encoding
 ---
 
-{{APIRef("Encoding API")}}{{SeeCompatTable}}
+{{APIRef("Encoding API")}}
 
-只读属性 **`TextDecoder.encoding`** 返回一个字符串，其中包含了指定的 decoder 解码算法的名称。
+只读属性 **`TextDecoder.encoding`** 返回一个字符串，其中包含了指定的解码器的解码算法的名称。
 
-它可以是以下值之一：
+编码由[构造函数](/zh-CN/docs/Web/API/TextDecoder/TextDecoder)的 `label` 参数设置，并且默认是 `utf-8`。
 
-- Web 推荐的编码： `'utf-8'`。
+## 值
+
+小写的 ASCII 字符，可以是以下值之一：
+
+- Web 推荐的编码：`'utf-8'`。
 - 传统的单字节编码：
   [`'ibm866'`](https://zh.wikipedia.org/wiki/Code_page_866)、
   [`'iso-8859-2'`](https://zh.wikipedia.org/wiki/ISO/IEC_8859-2)、
@@ -42,7 +46,7 @@ slug: Web/API/TextDecoder/encoding
 - 传统的多字节中文（简体）编码：
   [`'gbk'`](https://zh.wikipedia.org/wiki/GBK)、
   [`'gb18030'`](https://zh.wikipedia.org/wiki/GB_18030) 和
-  [`'hz-gb-2312'`](https://zh.wikipedia.org/wiki/HZ_(character_encoding))。
+  [`'hz-gb-2312'`](<https://zh.wikipedia.org/wiki/HZ_(character_encoding)>)。
 - 传统的多字节中文（繁体）编码：
   [`'big5'`](https://zh.wikipedia.org/wiki/Big5)。
 - 传统的多字节日语编码：
@@ -57,10 +61,6 @@ slug: Web/API/TextDecoder/encoding
   [`'utf-16le'`](https://zh.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes)
   和 `'x-user-defined'`。
 - 一种特殊的编码，`'replacement'`，它只会发出一个错误和一个 `EOF` 代码点。它用于阻止客户端和服务端之间编码不匹配的攻击。`ISO-2022-CN` 和 `ISO-2022-CN-ext` 可能发生这种情况。
-
-## 值
-
-一个字符串。
 
 ## 规范
 

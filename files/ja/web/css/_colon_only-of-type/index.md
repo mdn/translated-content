@@ -1,5 +1,5 @@
 ---
-title: ':only-of-type'
+title: ":only-of-type"
 slug: Web/CSS/:only-of-type
 ---
 
@@ -18,7 +18,9 @@ p:only-of-type {
 
 ## 構文
 
-{{csssyntax}}
+```
+:only-of-type
+```
 
 ## 例
 

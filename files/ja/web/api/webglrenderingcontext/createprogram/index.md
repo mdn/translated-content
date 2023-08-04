@@ -44,10 +44,7 @@ if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
 
 ## 仕様策定状況
 
-| 仕様                                                                                             | 策定状況                             | コメント                                 |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------------------------- |
-| {{SpecName('WebGL', "#5.14.9", "createProgram")}}                                 | {{Spec2('WebGL')}}             | 初回定義。                               |
-| {{SpecName('OpenGL ES 2.0', "glCreateProgram.xml", "glCreateProgram")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API (と同様の) マニュアルページ。 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

@@ -1,17 +1,8 @@
 ---
 title: Document.elementFromPoint()
 slug: Web/API/Document/elementFromPoint
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - NeedsMarkupWork
-  - NeedsMobileBrowserCompatibility
-  - Reference
-translation_of: Web/API/DocumentOrShadowRoot/elementFromPoint
-translation_of_original: Web/API/Document/elementFromPoint
-original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint
 ---
+
 {{APIRef("DOM")}}
 
 O método **`elementFromPoint()`** da interface {{domxref("Document")}} retorna o elemento de maior nível nas coordenadas especificadas.
@@ -22,7 +13,7 @@ Se o ponto especificado estiver fora dos limites visíveis do documento ou tiver
 
 Se você precisa encontrar uma posição específica dentro do elemento, use {{domxref("Document.caretPositionFromPoint()")}}.
 
-{{Note("Chamados por documentos XUL devem esperar até o evento <code>onload</code> ser acionado antes de chamar este método.")}}
+> **Nota:** Chamados por documentos XUL devem esperar até o evento `onload` ser acionado antes de chamar este método.
 
 ## Sintaxe
 
@@ -44,33 +35,31 @@ O objeto de nível mais alto {{domxref("Element")}} dentro das coordenadas decla
 ## Exemplo
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<title>exemplo de elementFromPoint</title>
+  <head>
+    <title>exemplo de elementFromPoint</title>
 
-<script>
-function changeColor(newColor) {
-  elem = document.elementFromPoint(2, 2);
-  elem.style.color = newColor;
-}
-</script>
-</head>
+    <script>
+      function changeColor(newColor) {
+        elem = document.elementFromPoint(2, 2);
+        elem.style.color = newColor;
+      }
+    </script>
+  </head>
 
-<body>
-<p id="para1">Algum texto aqui</p>
-<button onclick="changeColor('blue');">azul</button>
-<button onclick="changeColor('red');">vermelho</button>
-</body>
+  <body>
+    <p id="para1">Algum texto aqui</p>
+    <button onclick="changeColor('blue');">azul</button>
+    <button onclick="changeColor('red');">vermelho</button>
+  </body>
 </html>
 ```
 
 ## Especificações
 
-| Especificação                                                                                                | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSSOM View', '#dom-document-elementfrompoint', 'elementFromPoint')}} | {{Spec2('CSSOM View')}} | Definição Inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.elementFromPoint")}}
+{{Compat}}

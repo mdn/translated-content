@@ -1,13 +1,9 @@
 ---
 title: WebGL에서 텍스쳐 사용하기
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
-tags:
-  - Texture
-  - WebGL
-  - 텍스쳐
-translation_of: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 ---
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 앞 단원의 예제에서 회전하는 3차원 정육면체를 만들어봤습니다. 이번에는 정육면체의 각 면에 단색으로 색을 칠하는 대신에 텍스쳐를 입혀 보겠습니다.
 
@@ -23,7 +19,9 @@ translation_of: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 function initTextures() {
   cubeTexture = gl.createTexture();
   cubeImage = new Image();
-  cubeImage.onload = function() { handleTextureLoaded(cubeImage, cubeTexture); }
+  cubeImage.onload = function () {
+    handleTextureLoaded(cubeImage, cubeTexture);
+  };
   cubeImage.src = "cubetexture.png";
 }
 
@@ -31,7 +29,11 @@ function handleTextureLoaded(image, texture) {
   gl.bindTexture(gl.TEXTURE_2D, texture);
   gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST);
+  gl.texParameteri(
+    gl.TEXTURE_2D,
+    gl.TEXTURE_MIN_FILTER,
+    gl.LINEAR_MIPMAP_NEAREST,
+  );
   gl.generateMipmap(gl.TEXTURE_2D);
   gl.bindTexture(gl.TEXTURE_2D, null);
 }
@@ -75,39 +77,24 @@ gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesTextureCoordBuffer);
 
 var textureCoordinates = [
   // 앞
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
   // 뒤
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
   // 위
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
   // 아래
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
   // 오른쪽
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
   // 왼쪽
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0
+  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
 ];
 
-gl.bufferData(gl.ARRAY_BUFFER, new WebGLFloatArray(textureCoordinates),
-              gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ARRAY_BUFFER,
+  new WebGLFloatArray(textureCoordinates),
+  gl.STATIC_DRAW,
+);
 ```
 
 먼저 각 면의 텍스쳐 좌표를 저장할 GL 버퍼를 생성하고, 텍스쳐 좌표 배열에 바인딩 합니다.
@@ -170,7 +157,7 @@ gl.enableVertexAttribArray(textureCoordAttribute);
 </script>
 ```
 
-이렇게 하면 프래그먼트의 색상을 정하기 위해 직접 프래그먼트에 색상값을 할당하지 않고, 샘플러(sampler)가 판단하기에 프래그먼트의 위치에 가장 잘 맞아 떨어진다고 여겨지는 **텍셀(texel, 텍스쳐 내부에 있는 픽셀)**값에 따라서 프래그먼트의 색상값을 계산해냅니다.
+이렇게 하면 프래그먼트의 색상을 정하기 위해 직접 프래그먼트에 색상값을 할당하지 않고, 샘플러(sampler)가 판단하기에 프래그먼트의 위치에 가장 잘 맞아 떨어진다고 여겨지는 **텍셀**(**texel, 텍스쳐 내부에 있는 픽셀**)값에 따라서 프래그먼트의 색상값을 계산해냅니다.
 
 ## 텍스쳐를 입힌 정육면체 그리기
 

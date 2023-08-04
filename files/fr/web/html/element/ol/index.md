@@ -1,16 +1,9 @@
 ---
-title: '<ol> : l''élément de liste ordonnée'
+title: "<ol> : l'élément de liste ordonnée"
 slug: Web/HTML/Element/ol
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Reference
-translation_of: Web/HTML/Element/ol
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<ol>`** représente une liste ordonnée. Les éléments d'une telle liste sont généralement affichés avec un indicateur ordinal pouvant prendre la forme de nombres, de lettres, de chiffres romains ou de points. La mise en forme de la numérotation n'est pas utilisée dans la description HTML mais dans la feuille de style CSS associée grâce à la propriété [`list-style-type`](/fr/docs/Web/CSS/list-style-type).
 
@@ -158,9 +151,9 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 </ol>
 ```
 
-Le HTML ci-dessus affichera :
+#### Résultat
 
-{{EmbedLiveSample("Exemple_simple", 400, 150)}}
+{{EmbedLiveSample("", 400, 140)}}
 
 ### Utilisation des chiffres romains
 
@@ -172,14 +165,17 @@ Le HTML ci-dessus affichera :
 </ol>
 ```
 
-Le HTML ci-dessus affichera :
+#### Résultat
 
-{{EmbedLiveSample("Utilisation_des_chiffres_romains", 400, 150)}}
+{{EmbedLiveSample("", 400, 120)}}
 
 ### Utilisation de l'attribut start
 
 ```html
-<p>Les places d'arrivée des concurrents qui ne sont pas dans le cercle des gagnants :</p>
+<p>
+  Les places d'arrivée des concurrents qui ne sont pas dans le cercle des
+  gagnants :
+</p>
 
 <ol start="4">
   <li>Speedwalk Stu</li>
@@ -188,49 +184,55 @@ Le HTML ci-dessus affichera :
 </ol>
 ```
 
-Le HTML ci-dessus affichera :
+#### Résultat
 
-{{EmbedLiveSample("Utilisation_de_l'attribut_start", 400, 160)}}
+{{EmbedLiveSample("", 400, 210)}}
 
 ### Listes imbriquées
 
 ```html
 <ol>
   <li>Premier élément</li>
-  <li>Deuxième élément  <!-- La fermeture </li> n'est pas encore placée ! -->
+  <li>
+    Deuxième élément
+    <!-- La fermeture </li> n'est pas encore placée ! -->
     <ol>
       <li>Premier élément de la liste imbriquée</li>
       <li>Deuxième élément de la liste imbriquée</li>
       <li>Troisième élément de la liste imbriquée</li>
     </ol>
-  </li>                 <!-- Voici la fermeture </li> ! -->
+  </li>
+  <!-- Voici la fermeture </li> ! -->
   <li>Troisième élément</li>
 </ol>
 ```
 
-Le HTML ci-dessus affichera :
+#### Résultat
 
-{{EmbedLiveSample("Listes_imbriquées", 400, 200)}}
+{{EmbedLiveSample("", 400, 200)}}
 
 ### Liste non ordonnée dans une liste ordonnée
 
 ```html
 <ol>
   <li>Premier élément</li>
-  <li>Deuxième élément  <!-- La fermeture </li> n'est pas placée ici ! -->
+  <li>
+    Deuxième élément
+    <!-- La fermeture </li> n'est pas placée ici ! -->
     <ul>
       <li>Premier élément de la liste non-ordonnée imbriquée</li>
       <li>Deuxième élément de la liste non-ordonnée imbriquée</li>
       <li>Troisième élément de la liste non-ordonnée imbriquée</li>
     </ul>
-  </li>                 <!-- La fermeture </li> est ici. -->
+  </li>
+  <!-- La fermeture </li> est ici. -->
   <li>Troisième élément</li>
 </ol>
 ```
 
-Le HTML ci-dessus affichera :
+#### Résultat
 
-{{EmbedLiveSample("Liste_non_ordonnée_dans_une_liste_ordonnée", 400, 200)}}
+{{EmbedLiveSample("", 400, 210)}}
 
 ## Spécifications
 

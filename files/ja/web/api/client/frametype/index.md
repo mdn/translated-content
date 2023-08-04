@@ -1,30 +1,22 @@
 ---
-title: Client.frameType
+title: "Client: frameType プロパティ"
 slug: Web/API/Client/frameType
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}
 
-{{domxref("Client")}} インターフェイスの **`frameType`** 読み取り専用プロパティは、現在の {{domxref("Client")}} の閲覧コンテキストの種類を示します。 この値は、`"auxiliary"`、`"top-level"`、`"nested"`、`"none"` のいずれかです。
+**`frameType`** は {{domxref("Client")}} インターフェイスの読み取り専用プロパティで、現在の {{domxref("Client")}} の閲覧コンテキストの種類を示します。この値は、`"auxiliary"`、`"top-level"`、`"nested"`、`"none"` の何れかです。
 
-## 構文
+## 値
 
-```js
-var myFrameType = client.frameType;
-```
+4 つの文字列、`"auxiliary"`、`"top-level"`、`"nested"`、`"none"` の何れかになります。
 
-## 例
+## 仕様書
 
-```js
-未定
-```
-
-## 仕様
-
-| 仕様                                                                                     | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#client-frametype', 'frameType')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Client.frameType")}}
+{{Compat}}

@@ -1,13 +1,8 @@
 ---
 title: <use>
 slug: Web/SVG/Element/use
-tags:
-  - Elementos
-  - Gráficos SVG
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/use
 ---
+
 {{SVGRef}}
 
 El elemento `use` toma los nodos que están dentro del documento SVG y duplica el contenido donde éste esté siendo utilizado. El efecto es el mismo, como si éstos nodos hubiesen sido profundamente clonados en un elemento DOM no expuesto, y luego pegados donde se encuentra el elemento `use`, al igual que los [elementos plantilla](/es/docs/Web/HTML/Element/template) son clonados en HTML5. Desde que los elementos clonados no sean expuestos como DOM, su cuidado debe tomarse en cuenta durante el uso de [CSS](/en/CSS) para estilizar un elemento `use` y sus descendientes ocultos. Los atributos CSS no ofrecen la garantía de heredarse en los elementos DOM clonados y escondidos, a no ser que lo realice utilizando [herencia CSS](/en/CSS/inheritance).
@@ -66,6 +61,10 @@ Por razones de seguridad, algunos navegadores podrían aplicar una política del
 
 Este elemento implementa la interface [`SVGUseElement`](/en/DOM/SVGUseElement).
 
-## Compatibilidad entre navegadores
+## Especificaciones
 
-{{Compat("svg.elements.use")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

@@ -1,48 +1,37 @@
 ---
-title: Location.reload()
+title: "location: reload() method"
+short-title: reload()
 slug: Web/API/Location/reload
-tags:
-  - API
-  - HTML-DOM
-  - Localização
-  - Referencia
-  - metodo
-translation_of: Web/API/Location/reload
 ---
+
 {{ APIRef("HTML DOM") }}
 
-O método **`Location.reload()`** recarrega a URL atual. Seu unico parâmetro opcional é um {{domxref("Boolean")}}, que, quando `true`, faz com que a página sempre seja recarregada do servidor. Se ele é `false` ou não estiver especificado, o navegador pode carregar ela do cache.
+O método **`location.reload()`** recarrega a URL atual, como o botão Atualizar.
 
-Caso não seja possível recarregar por questões de violação de segurança, uma {{domxref("DOMException")}} do tipo `SECURITY_ERROR` é jogada. Isso acontece se a origem do script que chama o método é diferente da origem da página originalmente descrita pelo objeto {{domxref("Location")}}, usualmente quando o script é hosteado em um domínio diferente.
+O recarregamento pode ser bloqueado e um `SECURITY_ERROR` {{domxref("DOMException")}} lançado. Isso acontece se a {{Glossary("origin")}} do chamado do script `location.reload()` diferir da origem da página que possui o objeto {{domxref("Location")}}. Veja [Política de mesma origem](/pt-BR/docs/Web/Security/Same-origin_policy) para mais informações.
 
 ## Sintaxe
 
+```js-nolint
+reload()
 ```
-object.reload(forcedReload);
-```
 
-### Parametros
+### Parâmetros
 
-- _forcedReload_ {{optional_inline}}
-  - : É uma flag {{domxref("Boolean")}}, que quando `true`, faz com que a página sempre seja recarregada do servidor, se é `false` ou não for definido, o navegador pode recarregar a página do cache.
+- `forceGet` {{non-standard_inline}}
+  - : Passe `true` para forçar um recarregamento ignorando o cache. O padrão é `false`. Suportado apenas no Firefox.
 
-## Exemplos
+### Valor de retorno
 
-```js
-// Recarrega a página atual sem usar o cache
-document.location.reload(true);
-```
+Nenhum ({{jsxref("undefined")}}).
 
 ## Especificações
 
-| Specification                                                                                                    | Status                           | Comment                                              |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "history.html#dom-location-reload", "Location.reload()")}} | {{Spec2('HTML WHATWG')}} | Nenhuma mudança do {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#dom-location-reload", "Location.reload()")}} | {{Spec2('HTML5 W3C')}}     | Definição inicial.                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Location.reload")}}
+{{Compat}}
 
 ## Veja também
 

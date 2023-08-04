@@ -1,16 +1,8 @@
 ---
 title: Crypto.getRandomValues()
 slug: Web/API/Crypto/getRandomValues
-tags:
-  - API
-  - Crypto
-  - Encryption
-  - Method
-  - Reference
-  - Web Crypto API
-browser-compat: api.Crypto.getRandomValues
-translation_of: Web/API/Crypto/getRandomValues
 ---
+
 {{APIRef("Web Crypto API")}}
 
 **`Crypto.getRandomValues()`** 메서드는 암호학적으로 강력한 난수를 생성할 수 있습니다. 매개변수로 제공한 배열을 무작위 (암호학에서의 '무작위') 숫자로 채웁니다.
@@ -22,7 +14,7 @@ translation_of: Web/API/Crypto/getRandomValues
 ## 구문
 
 ```js
-getRandomValues(typedArray)
+getRandomValues(typedArray);
 ```
 
 ### 매개변수

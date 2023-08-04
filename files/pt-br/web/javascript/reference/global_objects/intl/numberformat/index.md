@@ -1,12 +1,8 @@
 ---
 title: Intl.NumberFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
-tags:
-  - Internacionalização
-  - JavaScript
-  - NumberFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 ---
+
 ##### {{JSRef}}
 
 O objeto **`Intl.NumberFormat`** é um construtor para objetos que habilita formatação de número sensível a linguagem.

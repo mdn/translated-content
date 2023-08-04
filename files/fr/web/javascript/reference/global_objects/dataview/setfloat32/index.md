@@ -1,15 +1,6 @@
 ---
 title: DataView.prototype.setFloat32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat32
-tags:
-  - DataView
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setFloat32
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setFloat32
 ---
 
 {{JSRef}}
@@ -55,15 +46,11 @@ dataview.getFloat32(1); // 3
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                             | Commentaires                                    |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                                         | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
-| {{SpecName('ES2015', '#sec-dataview.prototype.setfloat32', 'DataView.prototype.setFloat32')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.setfloat32', 'DataView.prototype.setFloat32')}} | {{Spec2('ESDraft')}}     |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.setFloat32")}}
+{{Compat}}
 
 ## Voir aussi
 

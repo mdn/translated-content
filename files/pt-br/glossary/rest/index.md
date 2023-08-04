@@ -1,15 +1,8 @@
 ---
 title: REST
 slug: Glossary/REST
-tags:
-  - Arquitetura
-  - Glossário
-  - HTTP
-  - Iniciante
-  - Rest
-translation_of: Glossary/REST
-original_slug: Glossario/REST
 ---
+
 **REST** (Representational State Transfer) refere-se a um grupo de restrições de design dentro da arquitetura de software que geram sistemas distribuídos eficientes, confiáveis e escaláveis. Um sistema é denominado RESTful quando adere a todas essas restrições.
 
 A ideia básica do REST é que um recurso, por exemplo um documento, seja transferido com seu estado bem definido, padronização de operações e formatos, ou serviços que se autodenominem RESTful, quando modificam diretamente o tipo de documento, ao invés de desencadear ações em algum lugar.
@@ -23,5 +16,5 @@ Como o HTTP, protocolo padrão por trás da "World Wide Web", a "Web" também tr
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "Representational_state_transfer", "REST")}} na Wikipédia
+- [REST](https://pt.wikipedia.org/wiki/REST) na Wikipédia
 - [REST Architecture](https://www.service-architecture.com/articles/web-services/representational_state_transfer_rest.html)

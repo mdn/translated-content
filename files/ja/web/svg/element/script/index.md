@@ -63,10 +63,7 @@ SVG `script` 要素は、HTML の [`script`](/ja/HTML/Element/Script) 要素と�
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                     | コメント   |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('SVG2', 'interact.html#ScriptElement', '&lt;script&gt;')}} | {{Spec2('SVG2')}} |            |
-| {{SpecName('SVG1.1', 'script.html#ScriptElement', '&lt;script&gt;')}} | {{Spec2('SVG1.1')}} | 初期の定義 |
+{{Specifications}}
 
 ## ブラウザー互換性
 

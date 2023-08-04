@@ -1,11 +1,6 @@
 ---
 title: Understanding the Web Content Accessibility Guidelines
 slug: Web/Accessibility/Understanding_WCAG
-tags:
-  - TopicStub
-  - WCAG
-  - Web Content Accessibility Guidelines
-translation_of: Web/Accessibility/Understanding_WCAG
 ---
 
 Cet ensemble d'articles fournit des explications rapides pour vous aider à comprendre les étapes à suivre pour vous conformer aux recommandations décrites dans les Directives d'accessibilité du contenu Web 2.0 ou 2.1 du W3C (ou simplement WCAG, aux fins de cet article).
@@ -42,8 +37,8 @@ WCAG 2.1 comprend:
 
 - En savoir plus sur WCAG 2.1:
 
-  - Deque: [WCAG 2.1:  Quelle est la suite des directives d'accessibilité](https://www.deque.com/blog/wcag-2-1-what-is-next-for-accessibility-guidelines/)
-  - TPG:  [Directives pour l'Accessibilité des Contenus Web (WCAG) 2.1](https://developer.paciellogroup.com/blog/2018/06/web-content-accessibility-guidelines-wcag-2-1/)
+  - Deque: [WCAG 2.1: Quelle est la suite des directives d'accessibilité](https://www.deque.com/blog/wcag-2-1-what-is-next-for-accessibility-guidelines/)
+  - TPG: [Directives pour l'Accessibilité des Contenus Web (WCAG) 2.1](https://developer.paciellogroup.com/blog/2018/06/web-content-accessibility-guidelines-wcag-2-1/)
 
 ## Statut juridique
 

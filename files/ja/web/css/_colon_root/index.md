@@ -1,5 +1,5 @@
 ---
-title: ':root'
+title: ":root"
 slug: Web/CSS/:root
 ---
 
@@ -16,7 +16,9 @@ slug: Web/CSS/:root
 
 ## 構文
 
-{{csssyntax}}
+```
+:root
+```
 
 ## 例
 

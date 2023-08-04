@@ -1,8 +1,8 @@
 ---
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/values
 ---
+
 {{JSRef}}
 
 O método **`values()`** retorna um novo objeto `Iterator` que contem os valores para cada elemento dentro do objeto `Set` por ordem de inserção.

@@ -1,17 +1,11 @@
 ---
-title: '::cue-region'
+title: "::cue-region"
 slug: Web/CSS/::cue-region
-tags:
-  - CSS
-  - Media
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::cue-region
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-Le pseudo-élément CSS **`::cue-region`** correspond à une piste {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} de l'élément ciblé. Il peut être utilisé afin de [mettre en forme des sous-titres et autres indications textuelles](/docs/Web/API/WebVTT_API#Styling_WebTT_cues) de pistes VTT.
+Le pseudo-élément CSS **`::cue-region`** correspond à une piste {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} de l'élément ciblé. Il peut être utilisé afin de [mettre en forme des sous-titres et autres indications textuelles](/fr/docs/Web/API/WebVTT_API#Styling_WebTT_cues) de pistes VTT.
 
 ```css
 ::cue-region {

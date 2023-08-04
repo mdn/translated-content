@@ -1,8 +1,8 @@
 ---
 title: letter-spacing
 slug: Web/CSS/letter-spacing
-translation_of: Web/CSS/letter-spacing
 ---
+
 {{CSSRef}}
 
 Свойство **`letter-spacing`** определяет межбуквенное расстояние в тексте.

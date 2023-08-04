@@ -1,16 +1,9 @@
 ---
 title: <legend>
-slug: Web/HTML/Element/Legend
-tags:
-  - Element
-  - Formulaires
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/legend
+slug: Web/HTML/Element/legend
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **\<legend>** représente une légende pour le contenu de son élément parent {{HTMLElement("fieldset")}}.
 
@@ -28,7 +21,7 @@ Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/A
 <form action="" method="post">
   <fieldset>
     <legend>Un champ pour le choix de la radio</legend>
-    <input type="radio" name="radio" id="radio">
+    <input type="radio" name="radio" id="radio" />
     <label for="radio">Cliquez ici</label>
   </fieldset>
 </form>
@@ -58,7 +51,7 @@ Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/A
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >Contenu phrasé</a
         >.
       </td>

@@ -13,7 +13,7 @@ A worker is an object created using `a` constructor (e.g. {{domxref("Worker.Work
 
 You can run whatever code you like inside the worker thread, with some exceptions. For example, you can't directly manipulate the DOM from inside a worker, or use some default methods and properties of the {{domxref("window")}} object. But you can use a large number of items available under `window`, including [WebSockets](/zh-TW/docs/WebSockets), and data storage mechanisms like [IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API) and the Firefox OS-only [Data Store API](/zh-TW/docs/Web/API/Data_Store_API). See [Functions and classes available to workers](/zh-TW/docs/Web/API/Worker/Functions_and_classes_available_to_workers) for more details.
 
-Data is sent between workers and the main thread via a system of messages — both sides send their messages using the `postMessage()` method, and respond to messages via the `onmessage` event handler (the message is contained within the {{event("Message")}} event's data attribute.) The data is copied rather than shared.
+Data is sent between workers and the main thread via a system of messages — both sides send their messages using the `postMessage()` method, and respond to messages via the `onmessage` event handler (the message is contained within the {{domxref("Worker/message_event", "message")}} event's data attribute.) The data is copied rather than shared.
 
 Workers may in turn spawn new workers, as long as those workers are hosted within the same origin as the parent page. In addition, workers may use [`XMLHttpRequest`](/zh-TW/docs/Web/API/XMLHttpRequest) for network I/O, with the exception that the `responseXML` and `channel` attributes on `XMLHttpRequest` always return `null`.
 
@@ -24,7 +24,7 @@ In addition to dedicated workers, there are other types of worker:
 - Chrome Workers are a Firefox-only type of worker that you can use if you are developing add-ons and want to use workers in extensions and have access to [js-ctypes](/zh-TW/js-ctypes) in your worker. See {{domxref("ChromeWorker")}} for more details.
 - [Audio Workers](/zh-TW/docs/Web/API/Web_Audio_API#Audio_Workers) provide the ability for direct scripted audio processing to be done inside a web worker context.
 
-> **備註：** As per the [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), worker error events should not bubble (see {{bug(1188141)}}. This has been implemented in Firefox 42.
+> **備註：** As per the [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), worker error events should not bubble (see [Firefox bug 1188141](https://bugzil.la/1188141). This has been implemented in Firefox 42.
 
 ## Web Worker interfaces
 

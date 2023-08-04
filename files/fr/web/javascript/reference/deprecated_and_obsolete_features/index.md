@@ -1,13 +1,6 @@
 ---
 title: Fonctionnalités dépréciées
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
-tags:
-  - Deprecated
-  - JavaScript
-  - Obsolete
-  - Reference
-translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
-original_slug: JavaScript/Reference/Annexes/Fonctionnalités_dépréciées
 ---
 
 {{JsSidebar("More")}}
@@ -94,13 +87,13 @@ Les propriétés suivantes sont dépréciées. Cela n'affecte pas le comportemen
 
 Les propriétés qui suivent sont désormais des propriétés des instances de `RegExp` et ne sont plus des propriétés de l'objet `RegExp` :
 
-| Propriété                                                    | Description                                                                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("RegExp.global", "global")}}             | Permet d'utiliser une expression rationnelle pour relever l'ensemble des correspondances ou uniquement la première. |
+| Propriété                                     | Description                                                                                                         |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("RegExp.global", "global")}}         | Permet d'utiliser une expression rationnelle pour relever l'ensemble des correspondances ou uniquement la première. |
 | {{jsxref("RegExp.ignoreCase", "ignoreCase")}} | Définit si la casse doit être ignorée ou non lors de la recherche d'une correspondance.                             |
-| {{jsxref("RegExp.lastIndex", "lastIndex")}}     | L'index à partir duquel chercher la prochaine correspondance.                                                       |
-| {{jsxref("RegExp.multiline", "multiline")}}     | Définit si la recherche doit s'effectuer sur une seule ligne ou plusieurs.                                          |
-| {{jsxref("RegExp.source", "source")}}             | Le texte du motif.                                                                                                  |
+| {{jsxref("RegExp.lastIndex", "lastIndex")}}   | L'index à partir duquel chercher la prochaine correspondance.                                                       |
+| {{jsxref("RegExp.multiline", "multiline")}}   | Définit si la recherche doit s'effectuer sur une seule ligne ou plusieurs.                                          |
+| {{jsxref("RegExp.source", "source")}}         | Le texte du motif.                                                                                                  |
 
 ### Méthodes de `RegExp`
 
@@ -125,7 +118,7 @@ Les propriétés qui suivent sont désormais des propriétés des instances de `
 
 - {{jsxref("Object.watch", "watch")}} et {{jsxref("Object.unwatch", "unwatch")}} sont dépréciés. L'objet {{jsxref("Proxy")}} doit être utilisé à la place.
 - `__iterator__` est déprécié.
-- {{jsxref("Object.noSuchMethod", "__noSuchMethod__")}} est déprécié. {{jsxref("Proxy")}} doit être utilisé à la place.
+- `Object.prototype.__noSuchMethod__` est déprécié. {{jsxref("Proxy")}} doit être utilisé à la place.
 
 ### Méthodes de `Date`
 
@@ -142,10 +135,10 @@ Les propriétés qui suivent sont désormais des propriétés des instances de `
 - [Proxy.create](/fr/docs/Archive/Web/Old_Proxy_API) et [Proxy.createFunction](/fr/docs/Archive/Web/Old_Proxy_API) sont dépréciées. L'API {{jsxref("Objets_globaux/Proxy", "Proxy")}} doit être utilisée à la place.
 - Les trappes de captures suivantes sont obsolètes :
 
-  - `hasOwn` ({{bug(980565)}}, Firefox 33).
-  - `getEnumerablePropertyKeys` ({{bug(783829)}}, Firefox 37)
-  - `getOwnPropertyNames` ({{bug(1007334)}}, Firefox 33)
-  - `keys` ({{bug(1007334)}}, Firefox 33)
+  - `hasOwn` ([bug Firefox 980565](https://bugzil.la/980565), Firefox 33).
+  - `getEnumerablePropertyKeys` ([bug Firefox 783829](https://bugzil.la/783829), Firefox 37)
+  - `getOwnPropertyNames` ([bug Firefox 1007334](https://bugzil.la/1007334), Firefox 33)
+  - `keys` ([bug Firefox 1007334](https://bugzil.la/1007334), Firefox 33)
 
 ### Séquences d'échappement
 
@@ -165,26 +158,20 @@ Ces fonctionnalités sont obsolètes et ont intégralement été retirées de Ja
 
 ### Object
 
-| Propriété                                                                                | Description                                                                                    |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| {{jsxref("Objets_globaux/Object/count", "__count__")}}                 | Renvoie le nombre de propriétés énumérables d'un objet défini par l'utillisateur.              |
-| {{jsxref("Objets_globaux/Object/Parent", "__parent__")}}             | Pointe vers le contexte d'un objet.                                                            |
-| {{jsxref("Global_Objects/Object/eval", "Object.prototype.eval()")}} | Évalue une chaine de caractères étant du code JavaScript, dans le contexte de l'objet indiqué. |
-| {{jsxref("Object.observe()")}}                                                 | Observe les modifications apportées à un objet de façon asynchrone.                            |
-| {{jsxref("Object.unobserve()")}}                                             | Retire les observateurs ajoutés à un objet.                                                    |
-| {{jsxref("Object.getNotifier()")}}                                             | Crée un objet qui permet de déclencher un changement de façon synthétique.                     |
+- The [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors are deprecated. Use [`Object.getPrototypeOf`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf) and [`Object.setPrototypeOf`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) instead. This does not apply to the `__proto__` literal key in object literals.
+- The [`Object.prototype.__defineGetter__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), [`Object.prototype.__defineSetter__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__), [`Object.prototype.__lookupGetter__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__), and [`Object.prototype.__lookupSetter__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) methods are deprecated. Use [`Object.getOwnPropertyDescriptor`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) and [`Object.defineProperty`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) instead.
 
 ### `Function`
 
-| Propriété                                                            | Description                                    |
-| -------------------------------------------------------------------- | ---------------------------------------------- |
+| Propriété                                            | Description                                    |
+| ---------------------------------------------------- | ---------------------------------------------- |
 | {{jsxref("Objets_globaux/Function/arity", "arity")}} | Nombre d'arguments déclarés pour une fonction. |
 
 ### `Array`
 
-| Propriété                                | Description                                                           |
-| ---------------------------------------- | --------------------------------------------------------------------- |
-| {{jsxref("Array.observe()")}} | Observe les modifications apportées à un tableau de façon asynchrone. |
+| Propriété                       | Description                                                           |
+| ------------------------------- | --------------------------------------------------------------------- |
+| {{jsxref("Array.observe()")}}   | Observe les modifications apportées à un tableau de façon asynchrone. |
 | {{jsxref("Array.unobserve()")}} | Retire les observateurs ajoutés à un tableau.                         |
 
 ### `Number`

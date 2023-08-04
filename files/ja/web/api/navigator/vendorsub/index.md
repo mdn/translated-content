@@ -31,9 +31,7 @@ window.navigator.vendorSub
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#dom-navigator-vendorsub', 'NavigatorID: vendorSub')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

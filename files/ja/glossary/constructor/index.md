@@ -21,8 +21,7 @@ function Overloaded(arg1, arg2, ...,argN){
 JavaScript でクラスのコンストラクターを呼び出すには、`new` 演算子を使用して新しい{{glossary("object reference","オブジェクトへの参照")}}を{{glossary("variable","変数")}}に割り当てます。
 
 ```js
-function Default() {
-}
+function Default() {}
 
 // Default オブジェクトの新しい参照が、ローカル変数の
 // defaultReference に割り当てられます
@@ -33,7 +32,7 @@ var defaultReference = new Default();
 
 ### 一般知識
 
-- ウィキペディアの{{Interwiki("wikipedia", "コンストラクタ")}}の記事
+- ウィキペディアの[コンストラクタ](https://ja.wikipedia.org/wiki/コンストラクタ)の記事
 
 ### 技術リファレンス
 

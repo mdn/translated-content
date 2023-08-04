@@ -1,17 +1,6 @@
 ---
 title: runtime.sendNativeMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - runtime
-  - sendNativeMessage
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 ---
 
 {{AddonSidebar()}}
@@ -22,7 +11,7 @@ Cela prend deux paramètres obligatoires : le nom de l'application native et un 
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). The first message sent by the native application is treated as a response to the `sendNativeMessage()` call, and the promise will be fulfilled with this message as a parameter. Note that you can't use {{WebExtAPIRef("runtime.onMessage")}} to get responses from the application: you must use the callback function instead.
 
-Une nouvelle instance de l'application est lancée pour appel à  `runtime.sendNativeMessage()`. Le navigateur terminera l'application native après avoir reçu une réponse. Pour mettre fin à une application native, le navigateur ferme le canal, donne au processus quelques secondes pour quitter normalement, puis le tue s'il ne s'est pas arrêté.
+Une nouvelle instance de l'application est lancée pour appel à `runtime.sendNativeMessage()`. Le navigateur terminera l'application native après avoir reçu une réponse. Pour mettre fin à une application native, le navigateur ferme le canal, donne au processus quelques secondes pour quitter normalement, puis le tue s'il ne s'est pas arrêté.
 
 Pour plus d'informations, voir [Native messaging](/fr/Add-ons/WebExtensions/Native_messaging).
 
@@ -30,9 +19,9 @@ Pour plus d'informations, voir [Native messaging](/fr/Add-ons/WebExtensions/Nati
 
 ```js
 var sending = browser.runtime.sendNativeMessage(
-  application,             // string
-  message                  // object
-)
+  application, // string
+  message, // object
+);
 ```
 
 ### Paramètres
@@ -46,9 +35,9 @@ var sending = browser.runtime.sendNativeMessage(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si l'expéditeur a envoyé une réponse, celle-ci sera remplie avec la réponse en tant qu'objet JSON. Sinon, il sera rempli sans arguments. Si une erreur survient lors de la connexion à l'application native, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.sendNativeMessage")}}
+{{Compat}}
 
 ## Exemples
 

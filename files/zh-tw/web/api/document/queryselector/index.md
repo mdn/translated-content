@@ -45,10 +45,10 @@ var el = document.querySelector(".myclass");
 <div id="foo:bar"></div>
 
 <script>
-document.querySelector('#foo\bar')    // 甚麼都沒選到
-document.querySelector('#foo\\\\bar') // 選到第一個 div
-document.querySelector('#foo:bar')     // 甚麼都沒選到
-document.querySelector('#foo\\:bar')   // 選到第二個 div
+  document.querySelector("#foo\bar"); // 甚麼都沒選到
+  document.querySelector("#foo\\\\bar"); // 選到第一個 div
+  document.querySelector("#foo:bar"); // 甚麼都沒選到
+  document.querySelector("#foo\\:bar"); // 選到第二個 div
 </script>
 ```
 

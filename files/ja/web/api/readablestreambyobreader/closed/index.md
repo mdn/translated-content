@@ -23,9 +23,7 @@ var closed = readableStreamBYOBReader.closed;
 
 ## 仕様
 
-| 仕様                                                                     | 状態                         | コメント |
-| ------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("Streams","#byob-reader-closed","closed")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

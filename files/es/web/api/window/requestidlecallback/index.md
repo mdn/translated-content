@@ -1,8 +1,8 @@
 ---
 title: requestIdleCallback
 slug: Web/API/Window/requestIdleCallback
-translation_of: Web/API/Window/requestIdleCallback
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 El método **`window.requestIdleCallback()`** encola la función que será ejecutada en periodos de inactividad del navegador permitiendo a los desarrolladores ejecutar en segundo plano tareas de baja prioridad del bucle de eventos, sin perjudicar la latencia de eventos principales como animaciones o respuestas a entradas. La funciones son ejecutadas normalmente en orden FIFO (primero en entrar primero en salir) salvo que se alcance el timeout definido de la función antes de que el navegador la ejecute.
@@ -38,13 +38,11 @@ Ver [ejemplo](/es/docs/Web/API/Background_Tasks_API#Example) en el artículo [Pl
 
 ## Especificaciones
 
-| Especificación                               | Estado                                   | Comentarios         |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('Background Tasks')}} | {{Spec2('Background Tasks')}} | Definición Inicial. |
+{{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.requestIdleCallback")}}
+{{Compat}}
 
 ## Vease también
 

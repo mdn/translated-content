@@ -113,9 +113,7 @@ for await (let line of makeTextFileLineIterator(urlOfFile)) {
 
 ## 仕様
 
-| 仕様                                                                     | 状態                         | コメント |
-| ------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("Streams","#default-reader-read","read()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

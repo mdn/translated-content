@@ -1,5 +1,5 @@
 ---
-title: ':any-link'
+title: ":any-link"
 slug: Web/CSS/:any-link
 ---
 
@@ -16,7 +16,9 @@ slug: Web/CSS/:any-link
 
 ## 構文
 
-{{csssyntax}}
+```
+:any-link
+```
 
 ## 例
 
@@ -58,7 +60,7 @@ a:-webkit-any-link {
 ## 関連情報
 
 - [ハイパーリンクの作成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- 一致する HTML 要素: [`<a>`](/ja/docs/Web/HTML/Element/a) および [`<area>`](/ja/docs/Web/HTML/Element/area) に {{htmlattrxref("href", "a")}} 属性が付いたもの
+- 一致する HTML 要素: [`<a>`](/ja/docs/Web/HTML/Element/a) および [`<area>`](/ja/docs/Web/HTML/Element/area) に [`href`](/ja/docs/Web/HTML/Element/a#href) 属性が付いたもの
 - 関連する CSS セレクター:
 
   - [`:visited`](/ja/docs/Web/CSS/:visited)

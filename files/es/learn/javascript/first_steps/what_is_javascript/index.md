@@ -1,24 +1,8 @@
 ---
 title: ¿Qué es JavaScript?
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
-tags:
-  - APIs
-  - Aprender
-  - Artículo
-  - Añadir JavaScript
-  - Curso
-  - Dinámico
-  - En línea
-  - Gestores de JavaScript en linea
-  - JavaScript
-  - Navegador
-  - Núcleo
-  - Principiante
-  - comentários
-  - externo
-translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
-original_slug: Learn/JavaScript/First_steps/Qué_es_JavaScript
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
 ¡Bienvenido al curso de JavaScript para principiantes de MDN! En este artículo veremos JavaScript desde un alto nivel, respondiendo preguntas como "¿Qué es?" y "¿Qué puedes hacer con él?", y asegúrate de estar cómodo con el propósito de JavaScript.
@@ -31,7 +15,7 @@ original_slug: Learn/JavaScript/First_steps/Qué_es_JavaScript
 
 JavaScript es un lenguaje de programación o de secuencias de comandos que te permite implementar funciones complejas en páginas web, cada vez que una página web hace algo más que sentarse allí y mostrar información estática para que la veas, muestra oportunas actualizaciones de contenido, mapas interactivos, animación de Gráficos 2D/3D, desplazamiento de máquinas reproductoras de vídeo, etc., puedes apostar que probablemente JavaScript está involucrado. Es la tercera capa del pastel de las tecnologías web estándar, dos de las cuales ([HTML](/es/docs/Learn/HTML) y [CSS](/es/docs/Learn/CSS)) hemos cubierto con mucho más detalle en otras partes del Área de aprendizaje.
 
-![](https://mdn.mozillademos.org/files/13502/cake.png)
+![](cake.png)
 
 - {{Glossary("HTML")}} es el lenguaje de marcado que usamos para estructurar y dar significado a nuestro contenido web, por ejemplo, definiendo párrafos, encabezados y tablas de datos, o insertando imágenes y videos en la página.
 - {{Glossary("CSS")}} es un lenguaje de reglas de estilo que usamos para aplicar estilo a nuestro contenido HTML, por ejemplo, establecer colores de fondo y tipos de letra, y distribuir nuestro contenido en múltiples columnas.
@@ -43,20 +27,20 @@ Las tres capas se superponen muy bien. Tomemos una etiqueta de texto simple como
 <p>Player 1: Chris</p>
 ```
 
-![](https://mdn.mozillademos.org/files/13422/just-html.png)
+![](just-html.png)
 
 Luego, podemos agregar algo de CSS a la mezcla para que se vea bien:
 
 ```css
 p {
-  font-family: 'helvetica neue', helvetica, sans-serif;
+  font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  border: 2px solid rgba(0,0,200,0.6);
-  background: rgba(0,0,200,0.3);
-  color: rgba(0,0,200,0.6);
-  box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+  border: 2px solid rgba(0, 0, 200, 0.6);
+  background: rgba(0, 0, 200, 0.3);
+  color: rgba(0, 0, 200, 0.6);
+  box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
   border-radius: 10px;
   padding: 3px 10px;
   display: inline-block;
@@ -64,18 +48,18 @@ p {
 }
 ```
 
-![](https://mdn.mozillademos.org/files/13424/html-and-css.png)
+![](html-and-css.png)
 
 Y finalmente, podemos agregar algo de JavaScript para implementar un comportamiento dinámico:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('click', updateName);
+para.addEventListener("click", updateName);
 
 function updateName() {
-  let name = prompt('Enter a new name');
-  para.textContent = 'Player 1: ' + name;
+  let name = prompt("Enter a new name");
+  para.textContent = "Player 1: " + name;
 }
 ```
 
@@ -91,7 +75,7 @@ El núcleo del lenguaje JavaScript de lado del cliente consta de algunas caracte
 
 - Almacenar valores útiles dentro de variables. En el ejemplo anterior, por ejemplo, pedimos que ingreses un nuevo nombre y luego almacenamos ese nombre en una variable llamada `name`.
 - Operaciones sobre fragmentos de texto (conocidas como "cadenas" (`strings`) en programación). En el ejemplo anterior, tomamos la cadena "`Player1`:" y la unimos a la variable `name` para crear la etiqueta de texto completa, p. ej. ''`Player1: Chris`".
-- Y ejecuta código en respuesta a ciertos eventos que ocurren en una página web. Usamos un evento {{Event("click")}} en nuestro ejemplo anterior para detectar cuándo se hace clic en el botón y luego ejecutar el código que actualiza la etiqueta de texto.
+- Y ejecuta código en respuesta a ciertos eventos que ocurren en una página web. Usamos un evento [`click`](/es/docs/Web/Reference/Events/click) en nuestro ejemplo anterior para detectar cuándo se hace clic en el botón y luego ejecutar el código que actualiza la etiqueta de texto.
 - ¡Y mucho más!
 
 Sin embargo, lo que aún es más emocionante es la funcionalidad construida sobre el lenguaje JavaScript de lado del cliente. Las denominadas **interfaces de programación de aplicaciones** (**API**) te proporcionan superpoderes adicionales para utilizar en tu código JavaScript.
@@ -100,12 +84,12 @@ Las API son conjuntos de bloques de construcción de código listos para usar qu
 
 Generalmente se dividen en dos categorías.
 
-![](https://mdn.mozillademos.org/files/13508/browser.png)
+![](browser.png)
 
 Las **APIs del navegador** están integradas en tu navegador web y pueden exponer datos del entorno informático circundante o realizar tareas complejas y útiles. Por ejemplo:
 
 - La {{domxref("Document_Object_Model", " API del DOM (<code>Document Object Model</code>)")}} te permite manipular HTML y CSS, crear, eliminar y cambiar el HTML, aplicar dinámicamente nuevos estilos a tu página, etc. Cada vez que ves aparecer una ventana emergente en una página, o se muestra algún nuevo contenido (como vimos anteriormente en nuestra sencilla demostración), por ejemplo, ese es el DOM en acción.
-- La {{domxref("Geolocalization", "API de Geolocalización")}} recupera información geográfica. Así es como [Google Maps](https://www.google.com/maps) puede encontrar tu ubicación y trazarla en un mapa.
+- La {{domxref("Geolocation", "API de Geolocalización")}} recupera información geográfica. Así es como [Google Maps](https://www.google.com/maps) puede encontrar tu ubicación y trazarla en un mapa.
 - Las APIs {{domxref("Canvas_API", "Canvas")}} y {{domxref("WebGL_API", "WebGL")}} te permiten crear gráficos animados en 2D y 3D. Las personas están haciendo cosas increíbles con estas tecnologías web — consulta [Experimentos de Chrome](https://www.chromeexperiments.com) y [webglsamples](https://webglsamples.org/).
 - [APIs de audio y video](/es/Apps/Fundamentals/Audio_and_video_delivery) como {{domxref("HTMLMediaElement")}} y {{domxref("WebRTC API", "WebRTC")}} te permiten hacer cosas realmente interesantes con multimedia, como reproducir audio y video directamente en una página web, o tomar video de tu cámara web y mostrarlo en la computadora de otra persona (prueba nuestra sencilla [demostración instantánea](https://chrisdavidmills.github.io/snapshot/) para hacerte una idea).
 
@@ -126,7 +110,7 @@ Aquí, de hecho, comenzaremos a ver algo de código y, mientras lo hacemos, expl
 
 Recapitulemos brevemente sobre la historia de lo que sucede cuando cargas una página web en un navegador (de lo que hablamos por primera vez en nuestro artículo [Cómo funciona CSS](/es/Learn/CSS/Introduction_to_CSS/How_CSS_works#How_does_CSS_actually_work)). Cuando cargas una página web en tu navegador, estás ejecutando tu código (HTML, CSS y JavaScript) dentro de un entorno de ejecución (la pestaña del navegador). Esto es como una fábrica que toma materias primas (el código) y genera un producto (la página web).
 
-![](https://mdn.mozillademos.org/files/13504/execution.png)
+![](execution.png)
 
 Un uso muy común de JavaScript es modificar dinámicamente HTML y CSS para actualizar una interfaz de usuario, a través de la API del modelo de objetos del documento (como se mencionó anteriormente). Ten en cuenta que el código de tus documentos web generalmente se cargan y ejecutan en el orden en que aparece en la página. Si JavaScript se carga e intenta ejecutarse antes de que se hayan cargado el HTML y el CSS al que afecta, pueden producirse errores. Aprenderás formas de evitar esto más adelante en el artículo, en la sección [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies).
 
@@ -141,13 +125,13 @@ Cada pestaña del navegador tiene su propio depósito separado para ejecutar có
 Cuando el navegador encuentra un bloque de JavaScript, generalmente lo ejecuta en orden, de arriba a abajo. Esto significa que debes tener cuidado con el orden en el que colocas las cosas. Por ejemplo, volvamos al bloque de JavaScript que vimos en nuestro primer ejemplo:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('click', updateName);
+para.addEventListener("click", updateName);
 
 function updateName() {
-  let name = prompt('Enter a new name');
-  para.textContent = 'Player 1: ' + name;
+  let name = prompt("Enter a new name");
+  para.textContent = "Player 1: " + name;
 }
 ```
 
@@ -181,7 +165,7 @@ Una página web sin contenido que se actualiza dinámicamente se denomina **est�
 
 ## ¿Cómo agregas JavaScript a tu página?
 
-JavaScript se aplica a tu página HTML de manera similar a CSS. Mientras que CSS usa elementos {{htmlelement("link")}} para aplicar hojas de estilo externas y elementos {{htmlelement("style")}} para aplicar hojas de estilo internas a HTML, JavaScript solo necesita un amigo en el mundo de HTML: el elemento {htmlelement("script")}}. Aprendamos cómo funciona esto.
+JavaScript se aplica a tu página HTML de manera similar a CSS. Mientras que CSS usa elementos {{htmlelement("link")}} para aplicar hojas de estilo externas y elementos {{htmlelement("style")}} para aplicar hojas de estilo internas a HTML, JavaScript solo necesita un amigo en el mundo de HTML: el elemento {{htmlelement("script")}}. Aprendamos cómo funciona esto.
 
 ### JavaScript interno
 
@@ -189,31 +173,29 @@ JavaScript se aplica a tu página HTML de manera similar a CSS. Mientras que CSS
 2. Abre el archivo en tu navegador web y en tu editor de texto. Verás que el HTML crea una página web simple que contiene un botón en el que se puede hacer clic.
 3. A continuación, ve a tu editor de texto y agrega lo siguiente en tu `head`, justo antes de tu etiqueta de cierre `</head>`:
 
-    ```html
-    <script>
-
-      // JavaScript va aquí
-
-    </script>
-    ```
+   ```html
+   <script>
+     // JavaScript va aquí
+   </script>
+   ```
 
 4. Ahora agregaremos algo de JavaScript dentro de nuestro elemento {{htmlelement("script")}} para que la página haga algo más interesante — agrega el siguiente código justo debajo de la línea "// El código JavaScript va aquí":
 
-    ```js
-    document.addEventListener("DOMContentLoaded", function() {
-      function createParagraph() {
-        let para = document.createElement('p');
-        para.textContent = 'You clicked the button!';
-        document.body.appendChild(para);
-      }
+   ```js
+   document.addEventListener("DOMContentLoaded", function () {
+     function createParagraph() {
+       let para = document.createElement("p");
+       para.textContent = "You clicked the button!";
+       document.body.appendChild(para);
+     }
 
-      const buttons = document.querySelectorAll('button');
+     const buttons = document.querySelectorAll("button");
 
-      for(let i = 0; i < buttons.length ; i++) {
-        buttons[i].addEventListener('click', createParagraph);
-      }
-    });
-    ```
+     for (let i = 0; i < buttons.length; i++) {
+       buttons[i].addEventListener("click", createParagraph);
+     }
+   });
+   ```
 
 5. Guarda tu archivo y actualiza el navegador — ahora deberías ver que cuando haces clic en el botón, se genera un nuevo párrafo y se coloca debajo.
 
@@ -228,25 +210,25 @@ Esto funciona muy bien, pero ¿y si quisiéramos poner nuestro JavaScript en un 
 1. Primero, crea un nuevo archivo en el mismo directorio que tu archivo HTML del ejemplo. Como nombre ponle `script.js`; asegúrate de que el nombre tenga la extensión `.js`, ya que así es como se reconoce como JavaScript.
 2. Reemplaza tu elemento {{htmlelement("script")}} actual con lo siguiente:
 
-    ```html
-    <script src="script.js" defer></script>
-    ```
+   ```html
+   <script src="script.js" defer></script>
+   ```
 
 3. Dentro de `script.js`, agrega el siguiente script:
 
-    ```js
-    function createParagraph() {
-      let para = document.createElement('p');
-      para.textContent = 'You clicked the button!';
-      document.body.appendChild(para);
-    }
+   ```js
+   function createParagraph() {
+     let para = document.createElement("p");
+     para.textContent = "You clicked the button!";
+     document.body.appendChild(para);
+   }
 
-    const buttons = document.querySelectorAll('button');
+   const buttons = document.querySelectorAll("button");
 
-    for(let i = 0; i < buttons.length ; i++) {
-      buttons[i].addEventListener('click', createParagraph);
-    }
-    ```
+   for (let i = 0; i < buttons.length; i++) {
+     buttons[i].addEventListener("click", createParagraph);
+   }
+   ```
 
 4. Guarda y actualiza tu navegador, ¡y deberías ver lo mismo! Funciona igual, pero ahora tenemos nuestro JavaScript en un archivo externo. Por lo general, esto es bueno en términos de organización de tu código y para hacerlo reutilizable en varios archivos HTML. Además, el HTML es más fácil de leer sin grandes trozos de script en él.
 
@@ -258,8 +240,8 @@ Ten en cuenta que a veces te encontrarás con fragmentos de código JavaScript r
 
 ```js example-bad
 function createParagraph() {
-  let para = document.createElement('p');
-  para.textContent = 'You clicked the button!';
+  let para = document.createElement("p");
+  para.textContent = "You clicked the button!";
   document.body.appendChild(para);
 }
 ```
@@ -281,10 +263,10 @@ El uso de una construcción de JavaScript pura te permite seleccionar todos los 
 #### Ejemplo
 
 ```js
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll("button");
 
-for(let i = 0; i < buttons.length ; i++) {
-  buttons[i].addEventListener('click', createParagraph);
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", createParagraph);
 }
 ```
 
@@ -356,7 +338,7 @@ Para resumir:
 
 - `async` y `defer` indican al navegador que descargue los `script`s en un hilo separado, mientras que el resto de la página (el DOM, etc.) se descarga, por lo que los `script`s no bloquean la carga de la página.
 - Si tus `script`s se deben ejecutar inmediatamente y no tienen ninguna dependencia, utiliza `async`.
-- Si tus `script`s necesitan esperar a ser procesados y dependen de otros `script`s y/o del DOM en su lugar, cárgalos usando `defer`y coloca tus elementos `<script>` correspondientes en el orden que desees que el navegador los ejecute.
+- Si tus `script`s necesitan esperar a ser procesados y dependen de otros `script`s y/o del DOM en su lugar, cárgalos usando `defer` y coloca tus elementos `<script>` correspondientes en el orden que desees que el navegador los ejecute.
 
 ## Comentarios
 
@@ -383,8 +365,8 @@ Entonces, por ejemplo, podríamos anotar el JavaScript de nuestra última demost
 // Función: crea un nuevo párrafo y lo agrega al final del cuerpo HTML.
 
 function createParagraph() {
-  let para = document.createElement('p');
-  para.textContent = 'You clicked the button!';
+  let para = document.createElement("p");
+  para.textContent = "You clicked the button!";
   document.body.appendChild(para);
 }
 
@@ -395,10 +377,10 @@ function createParagraph() {
   Cuando se presione cualquier botón, se ejecutará la función createParagraph().
 */
 
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll("button");
 
-for (let i = 0; i < buttons.length ; i++) {
-  buttons[i].addEventListener('click', createParagraph);
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", createParagraph);
 }
 ```
 
@@ -411,15 +393,3 @@ Así que ahí tienes, tu primer paso en el mundo de JavaScript. Comenzamos solo 
 JavaScript puede parecer un poco abrumador en este momento, pero no te preocupes — en este curso, te guiaremos en pasos simples que tendrán sentido en el futuro. En el próximo artículo, [nos sumergiremos directamente en lo práctico](/es/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash), lo que te permitirá comenzar directamente y crear tus propios ejemplos de JavaScript.
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
-
-## En este modulo
-
-- [¿Qué es JavaScript?](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Primer contacto con JavaScript](/es/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [¿Qué salió mal? Solución de problemas de JavaScript](/es/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Almacenamiento de la información que necesita — Variables](/es/docs/Learn/JavaScript/First_steps/Variables)
-- [Matemáticas básicas en JavaScript — números y operadores](/es/docs/Learn/JavaScript/First_steps/Math)
-- [Manejo de texto — cadenas en JavaScript](/es/docs/Learn/JavaScript/First_steps/Strings)
-- [Métodos de cadena útiles](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arreglos](/es/docs/Learn/JavaScript/First_steps/Arrays)
-- [Evaluación: Generador de historias tontas](/es/docs/Learn/JavaScript/First_steps/Silly_story_generator)

@@ -1,15 +1,8 @@
 ---
 title: AnalyserNode.frequencyBinCount
 slug: Web/API/AnalyserNode/frequencyBinCount
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - frequencyBinCount
-browser-compat: api.AnalyserNode.frequencyBinCount
 ---
+
 {{APIRef("Web Audio API")}}
 
 {{domxref("AnalyserNode")}} 인터페이스의 **`frequencyBinCount`** 읽기 전용 속성은 {{domxref("AnalyserNode.fftSize")}} 값의 절반인 unsigned 정수입니다. 이것은 일반적으로 시각화를 위해 사용할 데이터 값의 수와 동일시됩니다.

@@ -33,20 +33,20 @@ newNode = textNode.splitText(offset)
 - NO_MODIFICATION_ALLOWED_ERR
   - : 如果，原文本节点只读，则抛出这个异常。
 
-## 例子
+## 示例
 
 下面的例子中，一个 `<p>` 元素所包含的文本节点将会被分割成两个文本节点，然后在这两个节点中间插入一个 `<span>` 元素。
 
 ### HTML
 
 ```html
-  <p id="p">foobar</p>
+<p id="p">foobar</p>
 ```
 
 ### JavaScript
 
 ```js
-const  p = document.getElementById('p');
+const p = document.getElementById("p");
 
 // 将 <p> 的内容读取为一个文本节点
 const foobar = p.firstChild;
@@ -55,8 +55,8 @@ const foobar = p.firstChild;
 const bar = foobar.splitText(3);
 
 // 创建一个包含了内容为 ' new content ' 的文本节点的 <u> 元素
-const u = document.createElement('u');
-u.appendChild(document.createTextNode(' new content '));
+const u = document.createElement("u");
+u.appendChild(document.createTextNode(" new content "));
 
 // 将 <u> 元素插入到后一个文本节点 'bar' 的前面
 p.insertBefore(u, bar);
@@ -66,7 +66,7 @@ p.insertBefore(u, bar);
 
 ### 结果
 
-{{EmbedLiveSample("Example", 700, 70)}}
+{{EmbedLiveSample("示例", 700, 70)}}
 
 ## 规范
 

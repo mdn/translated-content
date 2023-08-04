@@ -1,8 +1,8 @@
 ---
 title: Window.getSelection()
 slug: Web/API/Window/getSelection
-translation_of: Web/API/Window/getSelection
 ---
+
 {{ ApiRef() }}
 
 ## Resumo
@@ -21,10 +21,10 @@ selection = window.getSelection();
 
 ```js
 function foo() {
-    var selObj = window.getSelection();
-    alert(selObj);
-    var selRange = selObj.getRangeAt(0);
-    // do stuff with the range
+  var selObj = window.getSelection();
+  alert(selObj);
+  var selRange = selObj.getRangeAt(0);
+  // do stuff with the range
 }
 ```
 
@@ -34,7 +34,7 @@ function foo() {
 
 No JavaScript, quando um objeto é passado para uma função que espera uma string (como {{ Domxref("window.alert()") }} ou {{ Domxref("document.write()") }}), o método {{jsxref("Object.toString", "toString()")}} do objeto é chamado e o valor retornado é passado para a função. Isso pode fazer com que o objeto pareça ser uma string quando usado com outras funções quando na verdade é um objeto com propriedades e métodos.
 
-No exemplo acima, `selObj.toString()` é chamado automaticamente quando é passado para {{domxref("window.alert()")}}. Contudo, tentar usar propriedades ou métodos do objeto JavaScript [String](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String) como [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) ou `substr diretamente no objeto` {{domxref("Selection")}} resultará em erro se o objeto não possuir essa propriedade ou método e pode retornar valores inesperados mesmo se os tiver. Para usar um objecto `Selection` como uma string, faça a chamada do seu método `toString()` diretamente:
+No exemplo acima, `selObj.toString()` é chamado automaticamente quando é passado para {{domxref("window.alert()")}}. Contudo, tentar usar propriedades ou métodos do objeto JavaScript [String](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String) como [`length`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/length) ou `substr diretamente no objeto` {{domxref("Selection")}} resultará em erro se o objeto não possuir essa propriedade ou método e pode retornar valores inesperados mesmo se os tiver. Para usar um objecto `Selection` como uma string, faça a chamada do seu método `toString()` diretamente:
 
 ```js
 var selectedText = selObj.toString();
@@ -53,13 +53,11 @@ Note a diferença entre _selection_ e _focus_. {{domxref("Document.activeElement
 
 ## Especificações
 
-| Especificação                                                                                                | Status                           | Comentário        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
-| {{SpecName("HTML Editing", "#dom-window-getselection", "Window.getSelection()")}} | {{Spec2("HTML Editing")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Window.getSelection")}}
+{{Compat}}
 
 ## Veja também
 

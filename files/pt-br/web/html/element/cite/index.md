@@ -1,21 +1,21 @@
 ---
 title: <cite>
 slug: Web/HTML/Element/cite
-translation_of: Web/HTML/Element/cite
 ---
+
 O **elemento** **HTML \<cite>** representa uma referência a um trabalho artístico. Deve incluir o título do trabalho ou uma URL de referência, que pode ser em uma forma abreviada de acordo com as convenções usadas para a adição dos metadados de citação.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories">Content categories</a>
+        <a href="/pt-BR/docs/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -23,7 +23,7 @@ O **elemento** **HTML \<cite>** representa uma referência a um trabalho artíst
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -36,7 +36,7 @@ O **elemento** **HTML \<cite>** representa uma referência a um trabalho artíst
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -64,7 +64,7 @@ Este elemento inclui apenas [atributos globais](/pt-BR/docs/HTML/Global_attribut
 
 - Um trabalho criativo deve conter a citação de um livro,um documento,um ensaio,um poema,um filme,um programa de televisão,um video game,uma escultura,uma pintura,uma produção cinematográfica,um jogo,uma opera,um musical,uma exibição,um relatório de um caso legal,um programa de computador,um website,uma página da web,um post de um blog ou comentário,um post em um forum ou um comentário no mesmo,um tweet,uma obra ou discurso,etc.
 - O W3C específica alguns estados para referenciar um trabalho criativo que deve incluir o nome do autor,enquanto a WHATWG declarou que não deve ser incluso o nome do autor sob nenhuma circustância.
-- Use o atributo {{htmlattrxref("cite", "blockquote")}} em um elemento {{HTMLElement("blockquote")}} ou {{HTMLElement("q")}} para referenciar uma fonte online.
+- Use o atributo [`cite`](/pt-BR/docs/Web/HTML/Element/blockquote#cite) em um elemento {{HTMLElement("blockquote")}} ou {{HTMLElement("q")}} para referenciar uma fonte online.
 - Para evitar que o itálico padrão do estilo seja usado pelo elemento \<cite> use a propiedade {{cssxref("font-style")}} do CSS.
 
 ## Exemplo
@@ -94,4 +94,4 @@ Mais informações podem ser encontradas em \[ISO-0000].
 - O elemento {{HTMLElement("blockquote")}} é para citações longas.
 - O elemento {{HTMLElement("q")}} é para citações curtas ou na mesma linha.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

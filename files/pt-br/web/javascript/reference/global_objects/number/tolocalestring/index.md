@@ -1,15 +1,8 @@
 ---
 title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
-tags:
-  - Internacionalização
-  - JavaScript
-  - Método(2)
-  - Number
-  - Número
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 ---
+
 {{JSRef}}
 
 O método **`toLocaleString()`** retorna uma string com uma representação sensível a linguagem deste número.
@@ -26,7 +19,7 @@ numObj.toLocaleString([locales [, options]])
 
 Dê uma olhada na seção [Compatibilidade do Navegador](#Browser_compatibility) para verificar quais navegadores suportam os argumentos `locales` e `options`, e o Exemplo: Verificando o suporte dos argumentos `locales` e `options` para detecção desta característica.
 
-> **Nota:** ECMAScript Internationalization API, implementada com o Firefox 29, incluiu o argumento `locales` ao método `Number.toLocaleString()`. Se o argumento for {{jsxref("undefined")}}, este método retorna os dígitos de localização especificados pelo SO, enquanto que as versões anteriores doFirefox retornavam os dígitos [Árabe Ocidental](https://en.wikipedia.org/wiki/Arabic_numerals). Esta mudança foi relatada como uma regressão que afeta a retrocompatibilidade que será corrigida em breve. ({{bug(999003)}})
+> **Nota:** ECMAScript Internationalization API, implementada com o Firefox 29, incluiu o argumento `locales` ao método `Number.toLocaleString()`. Se o argumento for {{jsxref("undefined")}}, este método retorna os dígitos de localização especificados pelo SO, enquanto que as versões anteriores doFirefox retornavam os dígitos [Árabe Ocidental](https://en.wikipedia.org/wiki/Arabic_numerals). Esta mudança foi relatada como uma regressão que afeta a retrocompatibilidade que será corrigida em breve. ([Erro do Firefox 999003](https://bugzil.la/999003))
 
 {{page('pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat', 'Parâmetros')}}
 

@@ -1,15 +1,8 @@
 ---
 title: ImageCapture
 slug: Web/API/ImageCapture
-tags:
-  - API
-  - Experimental
-  - ImageCapture
-  - Interface
-  - MediaStream Image Capture API
-  - Reference
-translation_of: Web/API/ImageCapture
 ---
+
 {{APIRef("MediaStream Image")}}
 
 [MediaStream Image Capture API](/ko/docs/Web/API/MediaStream_Image_Capture_API)의 **`ImageCapture`** 인터페이스는 유효한 {{domxref("MediaStreamTrack")}}이 참조하는 카메라 또는 기타 촬영 장치를 통해 이미지나 사진을 촬영하기 위한 메서드를 제공합니다.
@@ -47,51 +40,65 @@ translation_of: Web/API/ImageCapture
 var imageCapture;
 
 function onGetUserMediaButtonClick() {
-  navigator.mediaDevices.getUserMedia({video: true})
-  .then(mediaStream => {
-    document.querySelector('video').srcObject = mediaStream;
+  navigator.mediaDevices
+    .getUserMedia({ video: true })
+    .then((mediaStream) => {
+      document.querySelector("video").srcObject = mediaStream;
 
-    const track = mediaStream.getVideoTracks()[0];
-    imageCapture = new ImageCapture(track);
-  })
-  .catch(error => console.log(error));
+      const track = mediaStream.getVideoTracks()[0];
+      imageCapture = new ImageCapture(track);
+    })
+    .catch((error) => console.log(error));
 }
 
 function onGrabFrameButtonClick() {
-  imageCapture.grabFrame()
-  .then(imageBitmap => {
-    const canvas = document.querySelector('#grabFrameCanvas');
-    drawCanvas(canvas, imageBitmap);
-  })
-  .catch(error => console.log(error));
+  imageCapture
+    .grabFrame()
+    .then((imageBitmap) => {
+      const canvas = document.querySelector("#grabFrameCanvas");
+      drawCanvas(canvas, imageBitmap);
+    })
+    .catch((error) => console.log(error));
 }
 
 function onTakePhotoButtonClick() {
-  imageCapture.takePhoto()
-  .then(blob => createImageBitmap(blob))
-  .then(imageBitmap => {
-    const canvas = document.querySelector('#takePhotoCanvas');
-    drawCanvas(canvas, imageBitmap);
-  })
-  .catch(error => console.log(error));
+  imageCapture
+    .takePhoto()
+    .then((blob) => createImageBitmap(blob))
+    .then((imageBitmap) => {
+      const canvas = document.querySelector("#takePhotoCanvas");
+      drawCanvas(canvas, imageBitmap);
+    })
+    .catch((error) => console.log(error));
 }
 
 /* Utils */
 
 function drawCanvas(canvas, img) {
-  canvas.width = getComputedStyle(canvas).width.split('px')[0];
-  canvas.height = getComputedStyle(canvas).height.split('px')[0];
-  let ratio  = Math.min(canvas.width / img.width, canvas.height / img.height);
+  canvas.width = getComputedStyle(canvas).width.split("px")[0];
+  canvas.height = getComputedStyle(canvas).height.split("px")[0];
+  let ratio = Math.min(canvas.width / img.width, canvas.height / img.height);
   let x = (canvas.width - img.width * ratio) / 2;
   let y = (canvas.height - img.height * ratio) / 2;
-  canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
-  canvas.getContext('2d').drawImage(img, 0, 0, img.width, img.height,
-      x, y, img.width * ratio, img.height * ratio);
+  canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+  canvas
+    .getContext("2d")
+    .drawImage(
+      img,
+      0,
+      0,
+      img.width,
+      img.height,
+      x,
+      y,
+      img.width * ratio,
+      img.height * ratio,
+    );
 }
 
-document.querySelector('video').addEventListener('play', function() {
-  document.querySelector('#grabFrameButton').disabled = false;
-  document.querySelector('#takePhotoButton').disabled = false;
+document.querySelector("video").addEventListener("play", function () {
+  document.querySelector("#grabFrameButton").disabled = false;
+  document.querySelector("#takePhotoButton").disabled = false;
 });
 ```
 

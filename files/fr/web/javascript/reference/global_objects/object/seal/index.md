@@ -1,15 +1,6 @@
 ---
 title: Object.seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Méthode
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/seal
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/seal
 ---
 
 {{JSRef}}
@@ -21,7 +12,7 @@ La méthode **`Object.seal()`** scelle un objet afin d'empêcher l'ajout de nouv
 ## Syntaxe
 
 ```js
-Object.seal(obj)
+Object.seal(obj);
 ```
 
 ### Paramètres
@@ -37,15 +28,15 @@ L'objet qui est scellé.
 
 Par défaut, les objets sont {{jsxref("Object.isExtensible()", "extensibles", "", 1)}} (ce qui signifie que de nouvelles propriétés peuvent leur être ajoutées). Sceller un objet empêche l'ajout de nouvelles propriétés et marque les propriétés existantes comme non-configurables. Ainsi, l'ensemble de propriétés de l'objet devient fixé et immuable. Le fait de rendre les propriétés non-configurables empêche également de transformer des propriétés de données en accesseurs et vice versa. Cela n'empêche pas de modifier la valeur des propriétés. Toute tentative de suppression ou d'ajout de propriétés à un objet qui est scellé, de conversion d'une propriété de données en accesseurs ou vice versa échouera, soit de manière silencieuse soit en lançant une exception {{jsxref("TypeError")}} (la plupart du temps en {{jsxref("Fonctions_et_portee_des_fonctions/Strict_mode","mode strict","",1)}}.
 
-La chaîne de prototypes reste la même. Cependant, la propriété {{jsxref("Object.proto", "__proto__")}} ( {{deprecated_inline}} ) est scellée également.
+La chaîne de prototypes reste la même. Cependant, la propriété [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) ( {{deprecated_inline}} ) est scellée également.
 
 ## Exemples
 
 ```js
 var obj = {
-    prop: function () {},
-    toto: "truc"
-  };
+  prop: function () {},
+  toto: "truc",
+};
 
 // On peut ajouter de nouvelles propriétés
 // Les propriétés existantes peuvent être
@@ -65,7 +56,11 @@ obj.toto = "moh";
 
 // Mais on ne peut pas convertir les données
 // en accesseurs (ou vice versa)
-Object.defineProperty(obj, "toto", { get: function() { return "g"; } });
+Object.defineProperty(obj, "toto", {
+  get: function () {
+    return "g";
+  },
+});
 // lancera une TypeError
 
 // Tout autre changement que celui d'une valeur
@@ -112,15 +107,11 @@ Lorsqu'on utilise la méthode {{jsxref("Object.freeze()")}}, les propriétés ex
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaire                                           |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.8', 'Object.seal')}}     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée par JavaScript 1.8.5 |
-| {{SpecName('ES6', '#sec-object.seal', 'Object.seal')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-object.seal', 'Object.seal')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.seal")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -5,7 +5,7 @@ slug: Web/CSS/letter-spacing
 
 {{CSSRef}}
 
-`CSS` 的 `letter-spacing` 属性用于设置文本字符的间距表现。
+`CSS` 的 `letter-spacing` 属性用于设置文本字符的间距表现。在渲染文本时添加到字符之间的自然间距中。`letter-spacing` 的正值会导致字符分布得更远，而 `letter-spacing` 的负值会使字符更接近。
 
 {{EmbedInteractiveExample("pages/css/letter-spacing.html")}}
 
@@ -18,7 +18,7 @@ letter-spacing: normal;
 /* <length> values */
 letter-spacing: 0.3em;
 letter-spacing: 3px;
-letter-spacing: .3px;
+letter-spacing: 0.3px;
 
 /* Global values */
 letter-spacing: inherit;
@@ -29,7 +29,7 @@ letter-spacing: unset;
 ### 值
 
 - `normal`
-  - : 此间距是按照当前字体的正常间距确定的。和 `0` 不同的是，{{glossary("user agent", "用户代理")}}根据此属性来确定文字的默认对齐方式。
+  - : 此间距是按照当前字体的正常间距确定的。和 `0` 不同的是，`normal` 会让{{glossary("user agent", "用户代理")}}调整文字之间空间来对齐文字。
 - {{cssxref("&lt;length&gt;")}}
   - : 指定文字间的间距以替代默认间距。可以是负值，但有可能会出现 implementation 限制。用户代理不会在此基础上进一步增加或缩减间距来对齐文字。
 
@@ -52,16 +52,26 @@ letter-spacing: unset;
 ### CSS
 
 ```css
-.normal   { letter-spacing: normal; }
-.em-wide  { letter-spacing: 0.4em; }
-.em-wider { letter-spacing: 1em; }
-.em-tight { letter-spacing: -0.05em; }
-.px-wide  { letter-spacing: 6px; }
+.normal {
+  letter-spacing: normal;
+}
+.em-wide {
+  letter-spacing: 0.4em;
+}
+.em-wider {
+  letter-spacing: 1em;
+}
+.em-tight {
+  letter-spacing: -0.05em;
+}
+.px-wide {
+  letter-spacing: 6px;
+}
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('Examples', 440, 185) }}
+{{ EmbedLiveSample('示例', 440, 185) }}
 
 ## 可解决的问题
 

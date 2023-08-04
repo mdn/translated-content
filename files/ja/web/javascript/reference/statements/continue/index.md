@@ -1,34 +1,37 @@
 ---
 title: continue
 slug: Web/JavaScript/Reference/Statements/continue
+l10n:
+  sourceCommit: 57ae0014c67f339b9af6252a451ddd40735ed243
 ---
 
 {{jsSidebar("Statements")}}
 
-**`continue` 文**は、現在のループまたはラベル付きループの現在反復処理中の文の実行を終了して、次の反復処理でループの実行を続けます。
+**`continue`** 文は、現在のループまたはラベル付きループの現在反復処理中の文の実行を終了し、次の反復処理としてループの実行を続けます。
 
 {{EmbedInteractiveExample("pages/js/statement-continue.html")}}
 
 ## 構文
 
-```
-continue [label];
+```js-nolint
+continue;
+continue label;
 ```
 
-- `label`
+- `label` {{optional_inline}}
   - : その文のラベルに関連付けられた識別子。
 
 ## 解説
 
 {{jsxref("Statements/break", "break")}} 文と対照的に、 `continue` はループの実行を完全には終了しません。代わりに、
 
-- {{jsxref("Statements/while", "while")}} ループでは、条件式にジャンプします。
-
-<!---->
-
-- {{jsxref("Statements/for", "for")}} ループでは、更新式までジャンプします。
+- {{jsxref("Statements/while", "while")}} または {{jsxref("Statements/do...while", "do...while")}} ループでは、条件式にジャンプします。
+- {{jsxref("Statements/for", "for")}} ループでは、更新式にジャンプします。
+- {{jsxref("Statements/for...in", "for...in")}}、{{jsxref("Statements/for...of", "for...of")}}、{{jsxref("Statements/for-await...of", "for await...of")}} ループでは、次の反復処理にジャンプします。
 
 `continue` 文には任意でラベルを含めることができ、現在のループの代わりにラベル付きループ文の次の反復処理へジャンプすることができます。この場合、`continue` 文は、ラベル付き文の中にある必要があります。
+
+`continue` 文は、その後にラベルがあるかどうかに関わらず、スクリプト、モジュール、関数の本体、[静的初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)のそれぞれ最上位で使用することはできません。その関数やクラスがさらにループの中に含まれていた場合でもです。
 
 ## 例
 
@@ -37,8 +40,8 @@ continue [label];
 次の例では、 {{jsxref("Statements/while", "while")}} ループで `i` の値が 3 であるときに実行される `continue` 文を持つものを示しています。よって、 `n` は 1、3、7、12 の値をとります。
 
 ```js
-var i = 0;
-var n = 0;
+let i = 0;
+let n = 0;
 
 while (i < 5) {
   i++;
@@ -53,36 +56,33 @@ while (i < 5) {
 
 ### ラベル付き continue の使用
 
-次の例では、`checkiandj` とラベル付けされた文が、`checkj` とラベル付けされた文を含んでいます。もし `continue` と遭遇したなら、プログラムは `checkj` 文の先頭から継続します。`continue` と遭遇するたびに、`checkj` の条件が false を返すまで、`checkj` は再度反復します。false が返されたら、`checkiandj` 文の残りが完遂されます。
+次の例では、`checkIAndJ` とラベル付けされた文が、`checkJ` とラベル付けされた文を含んでいます。もし `continue` と遭遇したなら、プログラムは `checkJ` 文の先頭から継続します。`continue` と遭遇するたびに、`checkJ` の条件が false を返すまで、`checkJ` は再度反復処理します。false が返されたら、`checkIAndJ` 文の残りが完遂されます。
 
-もし `continue` がラベル `checkiandj` を持っていたなら、プログラムは `checkiandj` 文の先頭から継続します。
-
-{{jsxref("Statements/label", "ラベル", "", 1)}}もご覧ください。
+もし `continue` がラベル `checkIAndJ` を持っていたなら、プログラムは `checkIAndJ` 文の先頭から継続します。
 
 ```js
-var i = 0;
-var j = 8;
+let i = 0;
+let j = 8;
 
-checkiandj: while (i < 4) {
-  console.log('i: ' + i);
+checkIAndJ: while (i < 4) {
+  console.log(`i: ${i}`);
   i += 1;
 
-  checkj: while (j > 4) {
-    console.log('j: ' + j);
+  checkJ: while (j > 4) {
+    console.log(`j: ${j}`);
     j -= 1;
 
-    if ((j % 2) == 0)
-      continue checkj;
-    console.log(j + ' is odd.');
+    if (j % 2 === 0) continue checkJ;
+    console.log(`${j} is odd.`);
   }
-  console.log('i = ' + i);
-  console.log('j = ' + j);
+  console.log(`i = ${i}`);
+  console.log(`j = ${j}`);
 }
 ```
 
 結果:
 
-```js
+```
 i: 0
 
 // start checkj
@@ -110,15 +110,47 @@ i = 4
 j = 4
 ```
 
+### 構文違反の continue 文
+
+`continue` は関数の境界をまたがるループ内で使用することはできません。
+
+```js
+for (let i = 0; i < 10; i++) {
+  (() => {
+    continue; // SyntaxError: Illegal continue statement: no surrounding iteration statement
+  })();
+}
+```
+
+ラベルを参照する場合は、ラベル付きの文がその `continue` 文を含んでいなければなりません。
+
+```js
+label: for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+for (let i = 0; i < 10; i++) {
+  continue label; // SyntaxError: Undefined label 'label'
+}
+```
+
+ラベル付きの文はループでなければなりません。
+
+```js
+label: {
+  for (let i = 0; i < 10; i++) {
+    continue label; // SyntaxError: Illegal continue statement: 'label' does not denote an iteration statement
+  }
+}
+```
+
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-continue-statement', 'Continue statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.statements.continue")}}
+{{Compat}}
 
 ## 関連情報
 

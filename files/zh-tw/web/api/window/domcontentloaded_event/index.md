@@ -1,8 +1,9 @@
 ---
 title: DOMContentLoaded
 slug: Web/API/Window/DOMContentLoaded_event
-original_slug: Web/Events/DOMContentLoaded
 ---
+
+{{APIRef}}
 
 `DOMContentLoaded事件是當document被完整的讀取跟解析後就會被觸發`,不會等待 stylesheets, 圖片和 subframes 完成讀取 (`load事件可以用來作為判斷頁面已經完整讀取的方法`).
 
@@ -29,12 +30,12 @@ If you want DOM to get parsed as fast as possible after the user had requested t
 
 ## 屬性
 
-| Property                              | Type                                 | Description                                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| Property                        | Type                       | Description                                            |
+| ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
 
 ## 規範
 
@@ -46,8 +47,8 @@ If you want DOM to get parsed as fast as possible after the user had requested t
 
 ## Related Events
 
-- {{event("DOMContentLoaded")}}
-- {{event("readystatechange")}}
-- {{event("load")}}
-- {{event("beforeunload")}}
-- {{event("unload")}}
+- [`DOMContentLoaded`](/zh-TW/docs/Web/API/Window/DOMContentLoaded_event)
+- [`readystatechange`](/zh-TW/docs/Web/API/Document/readystatechange_event)
+- [`load`](/zh-TW/docs/Web/API/Window/load_event)
+- [`beforeunload`](/zh-TW/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/zh-TW/docs/Web/API/Window/unload_event)

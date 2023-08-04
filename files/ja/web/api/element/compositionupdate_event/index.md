@@ -1,5 +1,5 @@
 ---
-title: 'Element: compositionupdate イベント'
+title: "Element: compositionupdate イベント"
 slug: Web/API/Element/compositionupdate_event
 ---
 
@@ -117,9 +117,7 @@ inputElement.addEventListener('compositionend', handleEvent);
 
 ## 仕様書
 
-| 仕様書                                                                       | 状態                         |
-| ---------------------------------------------------------------------------- | ---------------------------- |
-| {{SpecName('UI Events', '#event-type-compositionupdate')}} | {{Spec2('UI Events')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

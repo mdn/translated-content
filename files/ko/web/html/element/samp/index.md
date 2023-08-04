@@ -1,15 +1,9 @@
 ---
-title: '<samp>: 출력 예시 요소'
+title: "<samp>: 출력 예시 요소"
 slug: Web/HTML/Element/samp
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/samp
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<samp>` 요소**는 컴퓨터 프로그램 출력의 예시(혹은 인용문)를 나타냅니다. 보통 브라우저의 기본 고정폭 글씨체(보통 Courier, Lucida Console)를 사용해 렌더링합니다.
 
@@ -91,8 +85,11 @@ samp {
 다음 간단한 예제는 문단이 프로그램 출력 예시를 포함하고 있습니다.
 
 ```html
-<p>프로세스가 완료되면 유틸리티가 <samp>Scan complete. Found <em>N</em> results.</samp>
-를 출력합니다. 출력을 확인한 후 다음 단계로 진행하세요.</p>
+<p>
+  프로세스가 완료되면 유틸리티가
+  <samp>Scan complete. Found <em>N</em> results.</samp> 를 출력합니다. 출력을
+  확인한 후 다음 단계로 진행하세요.
+</p>
 ```
 
 결과는 다음과 같습니다.
@@ -145,7 +142,7 @@ samp > kbd {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.samp")}}
+{{Compat}}
 
 ## 같이 보기
 

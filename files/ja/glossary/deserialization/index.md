@@ -11,4 +11,4 @@ slug: Glossary/Deserialization
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "シリアライズ")}}
+- Wikipedia 上の [シリアライズ](https://ja.wikipedia.org/wiki/シリアライズ)

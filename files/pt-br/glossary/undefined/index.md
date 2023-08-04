@@ -1,16 +1,15 @@
 ---
 title: undefined
-slug: Glossary/undefined
-translation_of: Glossary/undefined
-original_slug: Glossario/undefined
+slug: Glossary/Undefined
 ---
+
 Um valor **{{Glossary("primitive")}}** automaticamente atribuido para **variaveis** que foram recentemente declaradas ou para **{{Glossary("Argument","arguments")}} formais** para qual não existem **argumentos atualmente**.
 
 ## Aprenda mais
 
 ### Conhecimentos gerais
 
-- {{Interwiki("wikipedia", "Undefined value")}} no Wikipedia
+- [Undefined value](https://pt.wikipedia.org/wiki/Valor_não_definido) no Wikipedia
 
 ### Referência Técnica
 

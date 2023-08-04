@@ -1,24 +1,6 @@
 ---
 title: URL
 slug: Web/API/URL
-page-type: web-api-interface
-tags:
-  - API
-  - Address
-  - Domain
-  - Interface
-  - Location
-  - Networking
-  - Reference
-  - URI
-  - URL
-  - URL API
-  - Web
-  - hostname
-  - href
-  - origin
-  - Polyfill
-browser-compat: api.URL
 ---
 
 {{APIRef("URL API")}}
@@ -116,7 +98,7 @@ O método {{domxref("URL.toString", "toString()")}} de `URL` apenas retorna o va
 
 ```js
 const response = await fetch(
-  new URL("http://www.example.com/démonstration.html")
+  new URL("http://www.example.com/démonstration.html"),
 );
 ```
 

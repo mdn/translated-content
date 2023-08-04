@@ -3,7 +3,7 @@ title: <nav>
 slug: Web/HTML/Element/nav
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<nav>`元素**表示页面的一部分，其目的是在当前文档或其他文档中提供导航链接。导航部分的常见示例是菜单，目录和索引。
 

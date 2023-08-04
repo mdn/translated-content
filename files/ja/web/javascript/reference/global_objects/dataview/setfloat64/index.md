@@ -46,9 +46,7 @@ dataview.getFloat64(0); // 3
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.setfloat64', 'DataView.prototype.setFloat64')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

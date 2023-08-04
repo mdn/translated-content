@@ -13,10 +13,10 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
 
 ```js
 browser.bookmarks.update(
-  id,      // 文字列
+  id, // 文字列
   changes, // オブジェクト
-  callback // 関数（省略可）
-)
+  callback, // 関数（省略可）
+);
 ```
 
 ### 引数
@@ -55,7 +55,7 @@ function updateFolders(items) {
     // only folders, so skip items with a `url`
     if (!item.url) {
       chrome.bookmarks.update(item.id, {
-        title: "Mozilla Developer Network (MDN)"
+        title: "Mozilla Developer Network (MDN)",
       });
     }
   }
@@ -68,7 +68,8 @@ chrome.bookmarks.search({ title: "MDN" }, updateFolders);
 
 > **メモ:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,4 +96,4 @@ chrome.bookmarks.search({ title: "MDN" }, updateFolders);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

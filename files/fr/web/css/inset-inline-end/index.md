@@ -1,18 +1,11 @@
 ---
 title: inset-inline-end
 slug: Web/CSS/inset-inline-end
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/inset-inline-end
-original_slug: inset-inline-end
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété **`inset-inline-end`** définit la fin du décalage logique en ligne (_inline_) d'un élément, selon le mode d'écriture, la directionnalité et l'orientation. Elle correspond à une des propriétés parmi {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} ou  {{cssxref("left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+La propriété **`inset-inline-end`** définit la fin du décalage logique en ligne (_inline_) d'un élément, selon le mode d'écriture, la directionnalité et l'orientation. Elle correspond à une des propriétés parmi {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} ou {{cssxref("left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
 > **Note :** Avant Firefox 63, cette propriété était implémentée avec le nom `offset-inline-end`. Firefox 63 a mis à jour son implémentation afin de suivre les modifications apportées à la spécification.
 

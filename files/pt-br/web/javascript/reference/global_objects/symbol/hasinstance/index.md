@@ -1,11 +1,8 @@
 ---
 title: Symbol.hasInstance
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
-tags:
-  - Propriedade
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 ---
+
 {{JSRef}}
 
 O symbol bem-conhecido **`Symbol.hasInstance`** é usado para determinar se um objeto construtor reconhece um objeto como de sua instância. O comportamento do operador {{jsxref("Operators/instanceof", "instanceof")}} pode ser customizado por este symbol.
@@ -19,26 +16,25 @@ Você pode implementar o comportamento customizado do seu `instanceof` deste jei
 ```js
 class MyArray {
   static [Symbol.hasInstance](instance) {
-    return this.prototype.isPrototypeOf(instance) ||
-           Array.isArray(instance);
+    return this.prototype.isPrototypeOf(instance) || Array.isArray(instance);
   }
 }
 
 console.log([] instanceof MyArray); // true
-console.log(new MyArray instanceof MyArray); // true
-console.log(new Image instanceof MyArray); // false
+console.log(new MyArray() instanceof MyArray); // true
+console.log(new Image() instanceof MyArray); // false
 
 class MySubArray extends MyArray {}
-console.log(new MySubArray instanceof MySubArray); // true
-console.log(new MySubArray instanceof MyArray); // true
-console.log(new MyArray instanceof MySubArray); // false
+console.log(new MySubArray() instanceof MySubArray); // true
+console.log(new MySubArray() instanceof MyArray); // true
+console.log(new MyArray() instanceof MySubArray); // false
 ```
 
 ## Especificações
 
-| Specification                                                                                    | Status                       | Comment             |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-symbol.hasinstance', 'Symbol.hasInstance')}}     | {{Spec2('ES6')}}         | Initial definition. |
+| Specification                                                            | Status               | Comment             |
+| ------------------------------------------------------------------------ | -------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-symbol.hasinstance', 'Symbol.hasInstance')}}     | {{Spec2('ES6')}}     | Initial definition. |
 | {{SpecName('ESDraft', '#sec-symbol.hasinstance', 'Symbol.hasInstance')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilidade com navegadores

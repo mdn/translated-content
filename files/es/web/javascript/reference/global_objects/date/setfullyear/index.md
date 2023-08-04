@@ -1,9 +1,8 @@
 ---
 title: Date.prototype.setFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/setFullYear
 ---
+
 {{JSRef}}
 
 El método **`setFullYear()`** fija el año completo para una fecha específica de acuerdo a la zona horaria local. Devuelve un nuevo valor de tipo timestamp.
@@ -44,16 +43,11 @@ theBigDay.setFullYear(1997);
 
 ## Especificaciones
 
-| Specification                                                                                                        | Status                       | Comment                                             |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.40', 'Date.prototype.setFullYear')}}                         | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-date.prototype.setfullyear', 'Date.prototype.setFullYear')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-date.prototype.setfullyear', 'Date.prototype.setFullYear')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.setFullYear")}}
+{{Compat}}
 
 ## Ver también
 

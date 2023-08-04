@@ -23,9 +23,9 @@ dateObj.getUTCMinutes()
 
 `getUTCMinutes()` 返回一个 0 到 59 的整数。
 
-## 例子
+## 示例
 
-### 例子：使用 `getUTCMinutes()` 方法
+### 示例：使用 `getUTCMinutes()` 方法
 
 下例将当前时间的分钟部分赋值给变量 `minutes`。
 

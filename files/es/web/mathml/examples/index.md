@@ -1,12 +1,8 @@
 ---
 title: Examples
 slug: Web/MathML/Examples
-tags:
-  - MathML
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/MathML/Examples
 ---
+
 Below you'll find some examples you can look at to help you to understand how to use MathML to display increasingly complex mathematical concepts in Web content.
 
 - [Pythagorean Theorem](/es/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem)

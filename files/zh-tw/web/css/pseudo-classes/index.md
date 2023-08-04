@@ -3,9 +3,9 @@ title: 虛擬類別
 slug: Web/CSS/Pseudo-classes
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
-CSS ****虛擬類別（pseudo-class）****的元素，在特殊狀態下被選取的話，會作為關鍵字被加到選擇器裡面。例如 {{ Cssxref(":hover") }} 會讓用戶的滑鼠停在某個元素的時候，套用指定選擇器的樣式。
+CSS **虛擬類別**（pseudo-class）的元素，在特殊狀態下被選取的話，會作為關鍵字被加到選擇器裡面。例如 {{ Cssxref(":hover") }} 會讓用戶的滑鼠停在某個元素的時候，套用指定選擇器的樣式。
 
 虛擬類別與 {{ Cssxref("pseudo-elements") }} 能讓你不只能給文件樹（document tree）本身的相關內容套用樣式，還能給諸如瀏覽歷史（{{ cssxref(":visited") }}）、內容的狀態（{{ cssxref(":checked") }}）、還有滑鼠的位置（像 {{ cssxref(":hover") }} 就能讓偵測滑鼠是否在元件上）之類的外部相關因素套用樣式。
 

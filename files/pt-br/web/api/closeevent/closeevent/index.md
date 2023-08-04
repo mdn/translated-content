@@ -1,13 +1,8 @@
 ---
 title: CloseEvent()
 slug: Web/API/CloseEvent/CloseEvent
-tags:
-  - API
-  - CloseEvent
-  - Construtor
-  - Referencia
-translation_of: Web/API/CloseEvent/CloseEvent
 ---
+
 {{APIRef("Websockets API")}}
 
 O construtor **`CloseEvent()`**cria uma nova instância {{domxref("CloseEvent")}}.
@@ -34,13 +29,11 @@ var event = new CloseEvent(typeArg, closeEventInit);
 
 ## Especificações
 
-| Specification                                                                            | Status                           | Comment           |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName('HTML WHATWG','comms.html#closeevent','CloseEvent()')}} | {{Spec2('HTML WHATWG')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CloseEvent.CloseEvent")}}
+{{Compat}}
 
 ## Veja também
 

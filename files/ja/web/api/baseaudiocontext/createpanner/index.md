@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createPanner()
 slug: Web/API/BaseAudioContext/createPanner
-original_slug: Web/API/AudioContext/createPanner
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -131,4 +130,4 @@ function positionPanner() {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

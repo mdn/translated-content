@@ -1,12 +1,8 @@
 ---
 title: Array
-slug: Glossary/array
-tags:
-  - Iniciante
-  - JavaScript
-translation_of: Glossary/array
-original_slug: Glossario/array
+slug: Glossary/Array
 ---
+
 Um _array (arranjo ou vetor)_ é um conjunto de dados (que pode assumir os mais diversos tipos, desde do tipo {{Glossary("primitivo")}}, a {{Glossary("objeto")}} dependendo da linguagem de programação). Arrays são utilizados para armazenar mais de um valor em uma única variável. Isso é comparável a uma variável que pode armazenar apenas um valor.
 
 Cada item do array tem um número ligado a ele, chamado de índice numérico, que permite acesso a cada "valor" armazenado na váriavel.
@@ -27,7 +23,7 @@ var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 
 ### Conhecimentos Gerais
 
-- {{Interwiki("wikipedia", "Arranjo (computação)", "Array")}} no Wikipedia
+- [Array](<https://pt.wikipedia.org/wiki/Arranjo_(computação)>) no Wikipedia
 
 ### Referência técnica
 

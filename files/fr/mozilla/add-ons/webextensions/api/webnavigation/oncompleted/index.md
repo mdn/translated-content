@@ -1,17 +1,6 @@
 ---
 title: webNavigation.onCompleted
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCompleted
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCompleted
-  - webNavigation
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCompleted
 ---
 
 {{AddonSidebar()}}
@@ -22,11 +11,11 @@ Lancé lorsqu'un document, y compris les ressources auxquelles il fait référen
 
 ```js
 browser.webNavigation.onCompleted.addListener(
-  listener,                   // function
-  filter                      // optional object
-)
-browser.webNavigation.onCompleted.removeListener(listener)
-browser.webNavigation.onCompleted.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onCompleted.removeListener(listener);
+browser.webNavigation.onCompleted.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -50,7 +39,7 @@ Les événements ont trois fonctions :
       - : [`object`](#details). Détails sur l'événement de navigation.
 
 - `filter`{{optional_inline}}
-  - : `object`. Un objet contenant une seule propriété `url`, qui est un  `Array` d'objets  {{WebExtAPIRef("events.UrlFilter")}}. Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un `UrlFilter` dans le tableau.Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.
+  - : `object`. Un objet contenant une seule propriété `url`, qui est un `Array` d'objets {{WebExtAPIRef("events.UrlFilter")}}. Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un `UrlFilter` dans le tableau.Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.
 
 ## Objets supplémentaires
 
@@ -63,13 +52,13 @@ Les événements ont trois fonctions :
 - `processId`
   - : `integer`. L'ID du processus dans lequel cet onglet est rendu.
 - `frameId`
-  - : `integer`.  Cadre dans lequel la navigation s'est produite. 0 indique que la navigation s'est déroulée dans le contexte de navigation de niveau supérieur de l'onglet, et non dans un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué. Une valeur positive indique que la navigation s'est déroulée dans un iframe imbriqué. Les ID de cadre sont uniques pour un onglet et un processus donnés.
+  - : `integer`. Cadre dans lequel la navigation s'est produite. 0 indique que la navigation s'est déroulée dans le contexte de navigation de niveau supérieur de l'onglet, et non dans un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué. Une valeur positive indique que la navigation s'est déroulée dans un iframe imbriqué. Les ID de cadre sont uniques pour un onglet et un processus donnés.
 - `timeStamp`
   - : `number`. L'heure à laquelle la page a terminé le chargement, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.onCompleted")}}
+{{Compat}}
 
 ## Exemples
 
@@ -77,12 +66,8 @@ Consigne les URL cibles de `onCompleted`, si le nom d'hôte de l'URL cible conti
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnCompleted(details) {
   console.log("onCompleted: " + details.url);

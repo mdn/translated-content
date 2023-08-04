@@ -1,6 +1,6 @@
 ---
 title: CSS トランジションの使用
-slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
+slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 ---
 
 {{CSSref}}
@@ -249,9 +249,7 @@ el.addEventListener("transitionstart", signalStart, true);
 
 ## 仕様書
 
-| 仕様書                                   | 状態                          | 備考     |
-| ---------------------------------------- | ----------------------------- | -------- |
-| {{SpecName('CSS3 Transitions', '', '')}} | {{Spec2('CSS3 Transitions')}} | 初回定義 |
+{{Specifications}}
 
 ## 関連情報
 

@@ -1,9 +1,8 @@
 ---
 title: Gestión de la conexión en  HTTP/1.x
 slug: Web/HTTP/Connection_management_in_HTTP_1.x
-translation_of: Web/HTTP/Connection_management_in_HTTP_1.x
-original_slug: Web/HTTP/Gestion_de_la_conexion_en_HTTP_1.x
 ---
+
 {{HTTPSidebar}}
 
 La gestión de las conexiones en un tema fundamental en HTTP: crear y mantener una conexión tiene una gran influencia en el rendimiento de las páginas Web y las aplicaciones Web. En la versión HTTP/1.x, hay modos de conexión: conexiones breves, conexiones persistentes, y '_pipelining_'.
@@ -14,7 +13,7 @@ Este sencillo modelo tenía una limitación intrínseca en su rendimiento: abrir
 
 Dos nuevos modelos se presentaron en HTTP/1.1. La conexión persistente, mantiene las conexiones abiertas, entre peticiones sucesivas, eliminando así el tiempo necesario para abrir nuevas conexiones. El modelo 'pipelining' va un paso más allá, y envía varias peticiones sucesivas, sin esperar por la respuesta, reduciendo significativamente la latencia en la red.
 
-![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](https://mdn.mozillademos.org/files/13727/HTTP1_x_Connections.png)
+![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](http1_x_connections.png)
 
 > **Nota:** HTTP/2 añade nuevos modelos para la gestión de la conexión.
 
@@ -50,7 +49,7 @@ En HTTP/1.1 las conexiones son persistentes por defecto, así que esa cabecera n
 >
 > - HTTP Pipelining es complicado de implementar correctamente: el tamaño del recurso pedido, el correcto [RTT](https://en.wikipedia.org/wiki/Round-trip_delay_time) que será utilizado, así como el ancho de banda efectivo, tienen un impacto directo en la en la mejora de rendimiento de este método. Sin conocer estos valores, puede que mensajes importantes, se vean retrasados, por mensajes que no lo son. El concepto de "importante" incluso cambia según se carga la maquetación (layout) de la página. De ahí que este método solamente presente una mejora marginal en la mayoría de los casos.
 > - HTTP Pipelining presenta un problema conocido como [HOL](https://en.wikipedia.org/wiki/Head-of-line_blocking)
-> Así, debido a estas razones este método ha sido relevado por un algoritmo mejor, la **multiplexación**, que es el que usa HTTP/2.
+>   Así, debido a estas razones este método ha sido relevado por un algoritmo mejor, la **multiplexación**, que es el que usa HTTP/2.
 
 Por defecto, las peticiones HTTP son realizadas de manera sequencial. La siguiente petición es realizada una vez que la respuesta a la petición actual ha sido recibida. Debido a que se ven afectadas por latencias en la red y limitaciones en el ancho de banda, ésto puede llevar a retardos significativos hasta que la siguiente petición es _vista_ por el servidor.
 
@@ -68,7 +67,7 @@ As an HTTP/1.x connection is serializing requests, even without any ordering, it
 
 If the server wishes a faster Web site or application response, it is possible for the server to force the opening of more connections. For example, Instead of having all resources on the same domain, say `www.example.com`, it could split over several domains, `www1.example.com`, `www2.example.com`, `www3.example.com`. Each of these domains resolve to the _same_ server, and the Web browser will open 6 connections to each (in our example, boosting the connections to 18). This technique is called _domain sharding_.
 
-![](https://mdn.mozillademos.org/files/13783/HTTPSharding.png)
+![](httpsharding.png)
 
 ## Conclusión
 

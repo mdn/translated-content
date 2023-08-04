@@ -1,26 +1,15 @@
 ---
 title: Eventos do Toque
 slug: Web/API/Touch_events
-tags:
-  - Avançado
-  - DOM
-  - Evento
-  - Guía
-  - Mobile
-  - Visualização
-translation_of: Web/API/Touch_events
-original_slug: Web/Guide/Events/Touch_events
 ---
+
 Com a finalidade de fornecer suporte de qualidade para interfaces baseadas em toque (touch), os eventos de touch oferecem a capacidade de interpretar a atividade em telas sensíveis ao toque ou trackpads.
 
 ## Definições
 
 - Surface
   - : A superfície sensível ao toque. Pode ser uma tela ou trackpad.
-
-<!---->
-
-- **T**ouch point
+- Touch point
   - : Um ponto de contato com a superfície. Pode ser um dedo (ou cotovelo, orelha, nariz, o que seja, mas provavelmente, um dedo) ou uma caneta.
 
 ## Interfaces
@@ -46,10 +35,11 @@ Este exemplo acompanha múltiplos pontos de contato de cada vez, permitindo o us
 <canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
   Seu browser não tem suporte ao elemento canvas.
 </canvas>
-<br>
+<br />
 <button onclick="startup()">Initialize</button>
-<br>
-Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
+<br />
+Log:
+<pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
 
 ### Configurado os eventos
@@ -75,7 +65,7 @@ Define simplesmento todos os ouvintes dos eventos do nosso elemento {{ HTMLEleme
 Vamos acompanhar os toques em seu progresso.
 
 ```js
-var ongoingTouches = new Array;
+var ongoingTouches = new Array();
 ```
 
 Quando ocorre um evento `touchstart`, indicando que um novo toque na superfície tenha ocorrido, a função abaixo `handleStart()` é chamada.
@@ -88,15 +78,15 @@ function handleStart(evt) {
   var ctx = el.getContext("2d");
   var touches = evt.changedTouches;
 
-  for (var i=0; i < touches.length; i++) {
-    log("touchstart:"+i+"...");
+  for (var i = 0; i < touches.length; i++) {
+    log("touchstart:" + i + "...");
     ongoingTouches.push(copyTouch(touches[i]));
     var color = colorForTouch(touches[i]);
     ctx.beginPath();
-    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0,2*Math.PI, false);  // a circle at the start
+    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false); // a circle at the start
     ctx.fillStyle = color;
     ctx.fill();
-    log("touchstart:"+i+".");
+    log("touchstart:" + i + ".");
   }
 }
 ```
@@ -116,22 +106,28 @@ function handleMove(evt) {
   var ctx = el.getContext("2d");
   var touches = evt.changedTouches;
 
-  for (var i=0; i < touches.length; i++) {
+  for (var i = 0; i < touches.length; i++) {
     var color = colorForTouch(touches[i]);
     var idx = ongoingTouchIndexById(touches[i].identifier);
 
-    if(idx >= 0) {
-      log("continuing touch "+idx);
+    if (idx >= 0) {
+      log("continuing touch " + idx);
       ctx.beginPath();
-      log("ctx.moveTo("+ongoingTouches[idx].pageX+", "+ongoingTouches[idx].pageY+");");
+      log(
+        "ctx.moveTo(" +
+          ongoingTouches[idx].pageX +
+          ", " +
+          ongoingTouches[idx].pageY +
+          ");",
+      );
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-      log("ctx.lineTo("+touches[i].pageX+", "+touches[i].pageY+");");
+      log("ctx.lineTo(" + touches[i].pageX + ", " + touches[i].pageY + ");");
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
       ctx.lineWidth = 4;
       ctx.strokeStyle = color;
       ctx.stroke();
 
-      ongoingTouches.splice(idx, 1, copyTouch(touches[i]));  // swap in the new touch record
+      ongoingTouches.splice(idx, 1, copyTouch(touches[i])); // swap in the new touch record
       log(".");
     } else {
       log("can't figure out which touch to continue");
@@ -144,7 +140,7 @@ Esta interação sobre os toques também muda, mas parece em cache as informaç�
 
 Isto permite obter as coordenadas da posição anterior de cada contato e usar os métodos de contexto apropriado para desenhar uma linha que une as duas posições.
 
-Depois de desenhar a linha, nós chamamos [`Array.splice()`](/en/JavaScript/Reference/Global_Objects/Array/splice) para substituir as informações previas sobre o ponto de toque com a informação atual no array `ongoingTouches`.
+Depois de desenhar a linha, nós chamamos [`Array.splice()`](/pt-BR/JavaScript/Reference/Global_Objects/Array/splice) para substituir as informações previas sobre o ponto de toque com a informação atual no array `ongoingTouches`.
 
 #### Gerenciando o final do evento de toque
 
@@ -158,18 +154,18 @@ function handleEnd(evt) {
   var ctx = el.getContext("2d");
   var touches = evt.changedTouches;
 
-  for (var i=0; i < touches.length; i++) {
+  for (var i = 0; i < touches.length; i++) {
     var color = colorForTouch(touches[i]);
     var idx = ongoingTouchIndexById(touches[i].identifier);
 
-    if(idx >= 0) {
+    if (idx >= 0) {
       ctx.lineWidth = 4;
       ctx.fillStyle = color;
       ctx.beginPath();
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
-      ctx.fillRect(touches[i].pageX-4, touches[i].pageY-4, 8, 8);  // and a square at the end
-      ongoingTouches.splice(idx, 1);  // remove it; we're done
+      ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8); // and a square at the end
+      ongoingTouches.splice(idx, 1); // remove it; we're done
     } else {
       log("can't figure out which touch to end");
     }
@@ -177,7 +173,7 @@ function handleEnd(evt) {
 }
 ```
 
-Isto é muito semelhante a função anterior, as únicas diferenças reais são o desenho de um pequeno quadrado para marcar o fim e quando chamamos [`Array.splice()`](/en/JavaScript/Reference/Global_Objects/Array/splice), nós simplesmente removemos a antiga entrada da lista de toque do ongoing, sem adição das informações atualizadas. O resultado é que paramos o tracking do ponto de contato.
+Isto é muito semelhante a função anterior, as únicas diferenças reais são o desenho de um pequeno quadrado para marcar o fim e quando chamamos [`Array.splice()`](/pt-BR/JavaScript/Reference/Global_Objects/Array/splice), nós simplesmente removemos a antiga entrada da lista de toque do ongoing, sem adição das informações atualizadas. O resultado é que paramos o tracking do ponto de contato.
 
 #### Tratando toques cancelados
 
@@ -189,8 +185,8 @@ function handleCancel(evt) {
   log("touchcancel.");
   var touches = evt.changedTouches;
 
-  for (var i=0; i < touches.length; i++) {
-    ongoingTouches.splice(i, 1);  // remove it; we're done
+  for (var i = 0; i < touches.length; i++) {
+    ongoingTouches.splice(i, 1); // remove it; we're done
   }
 }
 ```
@@ -227,7 +223,11 @@ Alguns browsers (mobile Safari, por exemplo) re-usa touch objects entre os event
 
 ```js
 function copyTouch(touch) {
-  return { identifier: touch.identifier, pageX: touch.pageX, pageY: touch.pageY };
+  return {
+    identifier: touch.identifier,
+    pageX: touch.pageX,
+    pageY: touch.pageY,
+  };
 }
 ```
 
@@ -237,14 +237,14 @@ A função `ongoingTouchIndexById()` abaixo verifica através do array `ongoingT
 
 ```js
 function ongoingTouchIndexById(idToFind) {
-  for (var i=0; i < ongoingTouches.length; i++) {
+  for (var i = 0; i < ongoingTouches.length; i++) {
     var id = ongoingTouches[i].identifier;
 
     if (id == idToFind) {
       return i;
     }
   }
-  return -1;    // não econtrado
+  return -1; // não econtrado
 }
 ```
 
@@ -252,7 +252,7 @@ function ongoingTouchIndexById(idToFind) {
 
 ```js
 function log(msg) {
-  var p = document.getElementById('log');
+  var p = document.getElementById("log");
   p.innerHTML = msg + "\n" + p.innerHTML;
 }
 ```
@@ -272,20 +272,46 @@ Since calling `preventDefault()` on a `touchstart` or the first `touchmove` even
 ```js
 function onTouch(evt) {
   evt.preventDefault();
-  if (evt.touches.length > 1 || (evt.type == "touchend" && evt.touches.length > 0))
+  if (
+    evt.touches.length > 1 ||
+    (evt.type == "touchend" && evt.touches.length > 0)
+  )
     return;
 
   var newEvt = document.createEvent("MouseEvents");
   var type = null;
   var touch = null;
   switch (evt.type) {
-    case "touchstart":    type = "mousedown";    touch = evt.changedTouches[0];break;
-    case "touchmove":        type = "mousemove";    touch = evt.changedTouches[0];break;
-    case "touchend":        type = "mouseup";    touch = evt.changedTouches[0];break;
+    case "touchstart":
+      type = "mousedown";
+      touch = evt.changedTouches[0];
+      break;
+    case "touchmove":
+      type = "mousemove";
+      touch = evt.changedTouches[0];
+      break;
+    case "touchend":
+      type = "mouseup";
+      touch = evt.changedTouches[0];
+      break;
   }
-  newEvt.initMouseEvent(type, true, true, evt.originalTarget.ownerDocument.defaultView, 0,
-    touch.screenX, touch.screenY, touch.clientX, touch.clientY,
-    evt.ctrlKey, evt.altKey, evt.shirtKey, evt.metaKey, 0, null);
+  newEvt.initMouseEvent(
+    type,
+    true,
+    true,
+    evt.originalTarget.ownerDocument.defaultView,
+    0,
+    touch.screenX,
+    touch.screenY,
+    touch.clientX,
+    touch.clientY,
+    evt.ctrlKey,
+    evt.altKey,
+    evt.shirtKey,
+    evt.metaKey,
+    0,
+    null,
+  );
   evt.originalTarget.dispatchEvent(newEvt);
 }
 ```
@@ -294,6 +320,10 @@ function onTouch(evt) {
 
 One technique for preventing things like `pinchZoom` on a page is to call `preventDefault()` on the second touch in a series. This behavior is not well defined in the touch events spec, and results in different behavior for different browsers (i.e., iOS will prevent zooming but still allow panning with both fingers; Android will allow zooming but not panning; Opera and Firefox currently prevent all panning and zooming.) Currently, it's not recommended to depend on any particular behavior in this case, but rather to depend on meta viewport to prevent zooming.
 
+## Especificações
+
+{{Specifications}}
+
 ## Compatibilidade com navegadores
 
-{{Compat("api.Touch")}}
+{{Compat}}

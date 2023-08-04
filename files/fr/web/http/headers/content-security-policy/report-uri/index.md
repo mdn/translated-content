@@ -1,15 +1,6 @@
 ---
-title: 'CSP: report-uri'
+title: "CSP: report-uri"
 slug: Web/HTTP/Headers/Content-Security-Policy/report-uri
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - Sécurité
-translation_of: Web/HTTP/Headers/Content-Security-Policy/report-uri
 ---
 
 {{HTTPSidebar}}{{deprecated_header}}
@@ -105,14 +96,11 @@ if ($json_data = json_decode($json_data)) {
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaire          |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{specName("CSP 3.0", "#directive-report-uri", "report-uri")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
-| {{specName("CSP 1.1", "#directive-report-uri", "report-uri")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.report-uri")}}
+{{Compat}}
 
 ## Voir aussi
 

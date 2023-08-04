@@ -1,8 +1,8 @@
 ---
 title: accessKeyLabel
 slug: Web/API/HTMLElement/accessKeyLabel
-translation_of: Web/API/HTMLElement/accessKeyLabel
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.accessKeyLabel`** 읽기 전용 속성은 엘리먼트의 할당된 접근키를 나타내는 {{jsxref("String")}} 를 반환합니다. 존재하지 않는 경우 빈 문자열을 반환합니다.
@@ -10,7 +10,7 @@ translation_of: Web/API/HTMLElement/accessKeyLabel
 ## 구문
 
 ```js
-label = element.accessKeyLabel
+label = element.accessKeyLabel;
 ```
 
 ## 예시
@@ -18,16 +18,16 @@ label = element.accessKeyLabel
 ### JavaScript
 
 ```js
-var node = document.getElementById('btn1');
+var node = document.getElementById("btn1");
 if (node.accessKeyLabel) {
-  node.title += ' [' + node.accessKeyLabel + ']';
+  node.title += " [" + node.accessKeyLabel + "]";
 } else {
-  node.title += ' [' + node.accessKey + ']';
+  node.title += " [" + node.accessKey + "]";
 }
 
 node.onclick = function () {
-  var p = document.createElement('p');
-  p.textContent = 'Clicked!';
+  var p = document.createElement("p");
+  p.textContent = "Clicked!";
   node.parentNode.appendChild(p);
 };
 ```

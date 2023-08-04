@@ -28,8 +28,8 @@ slug: Web/API/DeviceMotionEvent
 ## 示例
 
 ```js
-window.addEventListener('devicemotion', function(event) {
-  console.log(event.acceleration.x + ' m/s2');
+window.addEventListener("devicemotion", function (event) {
+  console.log(event.acceleration.x + " m/s2");
 });
 ```
 
@@ -43,8 +43,8 @@ window.addEventListener('devicemotion', function(event) {
 
 ## 参见
 
-- {{Event("deviceorientation")}}
+- [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)
 - {{DOMxRef("DeviceOrientationEvent")}}
-- {{Event("devicemotion")}}
+- [`devicemotion`](/zh-CN/docs/Web/API/Window/devicemotion_event)
 - [Detecting device orientation](/zh-CN/docs/WebAPI/Detecting_device_orientation)
 - [Orientation and motion data explained](/zh-CN/DOM/Orientation_and_motion_data_explained)

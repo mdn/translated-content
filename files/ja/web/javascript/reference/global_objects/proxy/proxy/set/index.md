@@ -1,19 +1,21 @@
 ---
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
+l10n:
+  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
 {{JSRef}}
 
-**`handler.set()`** はプロパティの値を設定することに対するトラップです。
+**`handler.set()`** は、オブジェクトの `[[Set]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。プロパティの値を設定することに対するトラップです。
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-set.html", "taller")}}
 
 ## 構文
 
-```
-const p = new Proxy(target, {
-  set: function(target, property, value, receiver) {
+```js-nolint
+new Proxy(target, {
+  set(target, property, value, receiver) {
   }
 });
 ```
@@ -30,36 +32,35 @@ const p = new Proxy(target, {
   - : 設定するプロパティの新しい値です。
 - `receiver`
 
-  - : 割り当てがもともと行われていたオブジェクトです。これは通常、プロキシそのものです。しかし、 `set()` ハンドラーは内部的にプロトタイプチェーンや様々な他の方法経由で呼び出されます。
+  - : 割り当てがもともと行われていたオブジェクトです。これは通常、プロキシーそのものです。しかし、 `set()` ハンドラーは内部的にプロトタイプチェーンや様々な他の方法経由で呼び出されます。
 
-    > **メモ:** **例:** スクリプト上に `obj.name = "jen"` があり、`obj` はプロキシではなく、独自の `.name` プロパティを持っていません。しかし、プロトタイプチェーンでプロキシを持っています。その場合、そのプロキシの `set()` ハンドラが呼ばれて、 `obj` は receiver として渡されます。
+    例えば、スクリプト上に `obj.name = "jen"` があり、`obj` はプロキシーではなく、独自の `.name` プロパティを持っていません。しかし、プロトタイプチェーンでプロキシーを持っています。その場合、そのプロキシーの `set()` ハンドラーが呼ばれて、 `obj` はレシーバーとして渡されます。
 
 ### 返値
 
-`set()` メソッドは真偽値を返します。
+`set()` メソッドは論理値を返します。
 
 - `true` を返すと割り当てが成功したことを示します。
 - `set()` メソッドの返値が `false` で、厳格モードで割り当てが起こった場合、 {{jsxref("TypeError")}} が発生します。
 
 ## 解説
 
-**`handler.set`** メソッドはプロパティの値を設定することに対するトラップです。
-
 ### 介入
 
 このトラップは下記の操作に介入できます。
 
-- プロパティの割り当て: `proxy[foo] = bar` や `proxy.foo = bar`
-- 継承したプロパティの割り当て: `Object.create(proxy)[foo] = bar`
+- プロパティへの代入: `proxy[foo] = bar` や `proxy.foo = bar`
 - {{jsxref("Reflect.set()")}}
+
+他にも、`[[Set]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)を呼び出すあらゆる操作に介入できます。
 
 ### 不変条件
 
-以下の不変条件に違反している場合、プロキシは {{jsxref("TypeError")}} を発生します。
+以下の不変条件に違反している場合、プロキシーで {{jsxref("TypeError")}} が発生します。
 
 - 対応するターゲットオブジェクトのプロパティが書き込み不可かつ設定不可のデータプロパティの場合、プロパティの値と異なる値に変更することはできません。
 - 対応するターゲットオブジェクトのプロパティが `[[Set]]` 属性として `undefined` を持つ設定不可のアクセスプロパティの場合、プロパティの値を設定することはできません。
-- 厳格モードでは、 `set` ハンドラーから `false` を返す場合、 {{jsxref("TypeError")}} 例外をスローします。
+- 厳格モードでは、`set()` ハンドラーから `false` を返す場合、 {{jsxref("TypeError")}} 例外が発生します。
 
 ## 例
 
@@ -68,33 +69,34 @@ const p = new Proxy(target, {
 次のコードではプロパティの値の設定をトラップします。
 
 ```js
-const p = new Proxy({}, {
-  set: function(target, prop, value, receiver) {
-    target[prop] = value;
-    console.log('property set: ' + prop + ' = ' + value);
-    return true;
-  }
-})
+const p = new Proxy(
+  {},
+  {
+    set(target, prop, value, receiver) {
+      target[prop] = value;
+      console.log(`property set: ${prop} = ${value}`);
+      return true;
+    },
+  },
+);
 
-console.log('a' in p);  // false
+console.log("a" in p); // false
 
-p.a = 10;               // "property set: a = 10"
-console.log('a' in p);  // true
-console.log(p.a);       // 10
+p.a = 10; // "property set: a = 10"
+console.log("a" in p); // true
+console.log(p.a); // 10
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Proxy.handler.set")}}
+{{Compat}}
 
 ## 関連情報
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Reflect.set()")}}

@@ -1,15 +1,8 @@
 ---
 title: visibility
 slug: Web/CSS/visibility
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/visibility
 ---
+
 {{CSSRef}}
 
 **`visibility`** CSS 속성은 문서의 레이아웃을 변경하지 않고 요소를 보이거나 숨깁니다. `visibility`로 {{htmlelement("table")}}의 행이나 열을 숨길 수도 있습니다.
@@ -37,6 +30,7 @@ visibility: unset;
 - `visible`
   - : 요소가 보임.
 - `hidden`
+
   - : 요소가 숨겨짐(그려지지 않음). 레이아웃에는 숨겨지지 않았을 때와 동일한 영향을 줍니다. `visibility`를 `visible`로 설정한 자손은 화면에 보입니다. 숨겨진 요소는 포커스([탭 인덱스](/ko/docs/Web/HTML/Global_attributes/tabindex)로 탐색 등)를 받을 수 없습니다.
 
 - `collapse`
@@ -65,7 +59,9 @@ visibility: unset;
 ```html
 <p class="visible">첫 번째 문단은 보입니다.</p>
 <p class="not-visible">두 번째 문단은 보이지 않습니다.</p>
-<p class="visible">세 번째 문단은 보입니다. 두 번째 문단이 여전히 공간을 차지하고 있어요.</p>
+<p class="visible">
+  세 번째 문단은 보입니다. 두 번째 문단이 여전히 공간을 차지하고 있어요.
+</p>
 ```
 
 #### CSS

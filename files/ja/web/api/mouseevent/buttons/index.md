@@ -1,9 +1,11 @@
 ---
 title: MouseEvent.buttons
 slug: Web/API/MouseEvent/buttons
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`MouseEvent.buttons`** は読み取り専用のプロパティで、マウスイベントが発行されたときにマウス（またはその他の入力機器）のどのボタンが押されていたかを示します。
 
@@ -56,7 +58,7 @@ document.querySelector('#log').appendChild(log)
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## 仕様書
 

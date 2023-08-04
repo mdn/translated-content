@@ -28,8 +28,8 @@ Symbol([description])
 
 ```js
 var sym1 = Symbol();
-var sym2 = Symbol('foo');
-var sym3 = Symbol('foo');
+var sym2 = Symbol("foo");
+var sym3 = Symbol("foo");
 ```
 
 上面的代码创建了三个新的 symbol 类型。注意，`Symbol("foo")` 不会强制将字符串“foo”转换成 symbol 类型。它每次都会创建一个新的 symbol 类型：
@@ -50,9 +50,9 @@ var sym = new Symbol(); // TypeError
 
 ```js
 var sym = Symbol("foo");
-typeof sym;     // "symbol"
+typeof sym; // "symbol"
 var symObj = Object(sym);
-typeof symObj;  // "object"
+typeof symObj; // "object"
 ```
 
 ### 全局共享的 Symbol
@@ -70,7 +70,7 @@ typeof symObj;  // "object"
 - {{jsxref("Symbol.prototype")}}
   - : `symbol` 构造函数的原型。
 
-### 众所周知的 symbols
+### 内置通用（well-known）symbol
 
 除了自己创建的 symbol，JavaScript 还内建了一些在 ECMAScript 5 之前没有暴露给开发者的 symbol，它们代表了内部语言行为。它们可以使用以下属性访问：
 
@@ -133,9 +133,9 @@ typeof symObj;  // "object"
 {{jsxref("Operators/typeof", "typeof")}}运算符能帮助你识别 symbol 类型
 
 ```js
-typeof Symbol() === 'symbol'
-typeof Symbol('foo') === 'symbol'
-typeof Symbol.iterator === 'symbol'
+typeof Symbol() === "symbol";
+typeof Symbol("foo") === "symbol";
+typeof Symbol.iterator === "symbol";
 ```
 
 ### Symbol 类型转换
@@ -145,7 +145,7 @@ typeof Symbol.iterator === 'symbol'
 - 尝试将一个 symbol 值转换为一个 number 值时，会抛出一个 {{jsxref("TypeError")}} 错误 (e.g. `+sym` or `sym | 0`).
 - 使用宽松相等时，`Object(sym) == sym` returns `true.`
 - 这会阻止你从一个 symbol 值隐式地创建一个新的 string 类型的属性名。例如，`Symbol("foo") + "bar"` 将抛出一个 {{jsxref("TypeError")}} (can't convert symbol to string).
-- ["safer" `String(sym)` conversion](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion) 的作用会像 symbol 类型调用 {{jsxref("Symbol.prototype.toString()")}} 一样，但是注意 `new String(sym)` 将抛出异常。
+- ["safer" `String(sym)` conversion](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换) 的作用会像 symbol 类型调用 {{jsxref("Symbol.prototype.toString()")}} 一样，但是注意 `new String(sym)` 将抛出异常。
 
 ### Symbols 与 `for...in` 迭代
 
@@ -160,7 +160,7 @@ obj["c"] = "c";
 obj.d = "d";
 
 for (var i in obj) {
-   console.log(i); // logs "c" and "d"
+  console.log(i); // logs "c" and "d"
 }
 ```
 
@@ -169,7 +169,7 @@ for (var i in obj) {
 当使用 JSON.stringify() 时，以 symbol 值作为键的属性会被完全忽略：
 
 ```js
-JSON.stringify({[Symbol("foo")]: "foo"});
+JSON.stringify({ [Symbol("foo")]: "foo" });
 // '{}'
 ```
 
@@ -181,9 +181,9 @@ JSON.stringify({[Symbol("foo")]: "foo"});
 
 ```js
 var sym = Symbol("foo");
-var obj = {[sym]: 1};
-obj[sym];            // 1
-obj[Object(sym)];    // still 1
+var obj = { [sym]: 1 };
+obj[sym]; // 1
+obj[Object(sym)]; // still 1
 ```
 
 ## 规范

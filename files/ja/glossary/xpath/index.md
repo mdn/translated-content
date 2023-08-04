@@ -15,4 +15,4 @@ slug: Glossary/XPath
 ### 一般知識
 
 - [Official website](http://www.w3.org/standards/techs/xpath#w3c_all)
-- Wikipedia の {{interwiki("wikipedia", "XPath")}}
+- Wikipedia の [XPath](https://ja.wikipedia.org/wiki/XPath)

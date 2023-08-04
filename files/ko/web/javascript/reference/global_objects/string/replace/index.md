@@ -1,8 +1,6 @@
 ---
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
-browser-compat: javascript.builtins.String.replace
 ---
 {{JSRef}}
 

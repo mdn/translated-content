@@ -1,7 +1,6 @@
 ---
 title: 创建、绘制画布
-slug: >-
-  Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 ---
 
 {{GamesSidebar}}
@@ -17,25 +16,30 @@ slug: >-
 HTML 文档的结构是非常简单的，我们的游戏将完全呈现在这个 HTML 的 canvas 标签中。你可以选择一款你最喜欢的文本编辑器，创建一个 HTML 文件，保存到你理想的位置，名称为 index.html。并添加以下代码：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-     * { padding: 0; margin: 0; }
-     canvas { background: #eee; display: block; margin: 0 auto; }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      canvas {
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="480" height="320"></canvas>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
-
-<script>
- // JavaScript code goes here
-</script>
-
-</body>
+    <script>
+      // JavaScript code goes here
+    </script>
+  </body>
 </html>
 ```
 
@@ -68,7 +72,7 @@ ctx.closePath();
 
 ```js
 ctx.beginPath();
-ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
 ctx.fillStyle = "green";
 ctx.fill();
 ctx.closePath();
@@ -76,7 +80,7 @@ ctx.closePath();
 
 正如你所见，我们再一次使用了 ctx.beginPath() 方法 和 ctx.closePath() 方法；在这两个方法中间，最重要的部分是 ctx.arc() 方法。它需要六个参数：
 
-- `圆心的 x` 和 `y` 轴坐标
+- 圆心的 `x` 和 `y` 轴坐标
 - 半径
 - 起始角度，结束角度。以弧度计（弧的圆形的三点钟位置是 0 度）
 - 规定应该逆时针还是顺时针绘图。false = 顺时针，true = 逆时针。（可选）

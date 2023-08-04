@@ -9,7 +9,7 @@ slug: Glossary/Argument
 
 ### 一般知識
 
-- ウィキペディアの{{Interwiki("wikipedia", "引数", "仮引数と実引数の違い")}}の記事
+- ウィキペディアの[仮引数と実引数の違い](https://ja.wikipedia.org/wiki/引数)の記事
 
 ### 技術リファレンス
 

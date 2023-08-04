@@ -1,17 +1,6 @@
 ---
 title: Cache.match()
 slug: Web/API/Cache/match
-tags:
-  - API
-  - Cache
-  - Experimental
-  - Méthode
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - match
-translation_of: Web/API/Cache/match
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
@@ -21,7 +10,7 @@ La méthode **`match()`** de l'interface {{domxref("Cache")}} retourne une {{jsx
 ## Syntaxe
 
 ```js
-cache.match(request,{options}).then(function(response) {
+cache.match(request, { options }).then(function (response) {
   // faire quelque chose avec la réponse
 });
 ```
@@ -34,9 +23,9 @@ cache.match(request,{options}).then(function(response) {
 
   - : Un objet qui définit des options pour l'opération de `match`. Les options disponibles sont les suivantes :
 
-    - `ignoreSearch`: Un {{domxref("Boolean")}} qui spécifie si le matching doit ignorer ou non la query string dans l'url.  Si mis à `true`, la partie `?value=bar` de l'url `http://foo.com/?value=bar` sera ignorée lors du matching. Est à `false` par défaut.
-    - `ignoreMethod`: Un {{domxref("Boolean")}} qui, quand mis à `true`, empêche les opérations de matching de valider la méthode `HTTP` de la {{domxref("Request", "Requête")}} (en temps normal, seules `GET` et `HEAD` sont autorisées.) Est à  `false` par défaut.
-    - `ignoreVary`: Un {{domxref("Boolean")}} qui, quand mis à `true,` indique à l'opération de matching de ne pas effectuer le matching `VARY` des header.  En d'autres termes, si l'URL correspond, un match sera obtenu peu importe que la {{domxref("Response", "Réponse")}} ait un header `VARY` ou non. Est à `false` par défaut.
+    - `ignoreSearch`: Un {{domxref("Boolean")}} qui spécifie si le matching doit ignorer ou non la query string dans l'url. Si mis à `true`, la partie `?value=bar` de l'url `http://foo.com/?value=bar` sera ignorée lors du matching. Est à `false` par défaut.
+    - `ignoreMethod`: Un {{domxref("Boolean")}} qui, quand mis à `true`, empêche les opérations de matching de valider la méthode `HTTP` de la {{domxref("Request", "Requête")}} (en temps normal, seules `GET` et `HEAD` sont autorisées.) Est à `false` par défaut.
+    - `ignoreVary`: Un {{domxref("Boolean")}} qui, quand mis à `true,` indique à l'opération de matching de ne pas effectuer le matching `VARY` des header. En d'autres termes, si l'URL correspond, un match sera obtenu peu importe que la {{domxref("Response", "Réponse")}} ait un header `VARY` ou non. Est à `false` par défaut.
 
 ### Retour
 
@@ -53,18 +42,20 @@ L'exemple suivant se sert d'un cache pour fournir les données demandées même 
 Dans cet exemple, nous avons décidé que seul les documents HTML récupérés via le verbe HTTP GET seront mis en cache. Si notre condition `if()` est false, le gestionnaire fetch n'intercepte pas la requête. Si d'autres gestionnaires fetch sont enregistrés, ils ont une occasion d'appeler `event.respondWith()`. Si aucun gestionnaire fetch ne décide d'appeler `event.respondWith()`, la requête sera gérée par le navigateur comme si les service workers n'avaient pas existé. Si `fetch()` retourne une réponse HTTP valide avec un code réponse dans les 4xx ou 5xx, la clause `catch()` ne sera PAS appelée.
 
 ```js
-self.addEventListener('fetch', function(event) {
+self.addEventListener("fetch", function (event) {
   // We only want to call event.respondWith() if this is a GET request for an HTML document.
-  if (event.request.method === 'GET' &&
-      event.request.headers.get('accept').indexOf('text/html') !== -1) {
-    console.log('Handling fetch event for', event.request.url);
+  if (
+    event.request.method === "GET" &&
+    event.request.headers.get("accept").indexOf("text/html") !== -1
+  ) {
+    console.log("Handling fetch event for", event.request.url);
     event.respondWith(
-      fetch(event.request).catch(function(e) {
-        console.error('Fetch failed; returning offline page instead.', e);
-        return caches.open(OFFLINE_CACHE).then(function(cache) {
+      fetch(event.request).catch(function (e) {
+        console.error("Fetch failed; returning offline page instead.", e);
+        return caches.open(OFFLINE_CACHE).then(function (cache) {
           return cache.match(OFFLINE_URL);
         });
-      })
+      }),
     );
   }
 });

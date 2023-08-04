@@ -1,24 +1,13 @@
 ---
 title: pageAction.show()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/show
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - pageAction
-  - show
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/show
 ---
 
 {{AddonSidebar()}}
 
 Affiche l'action de la page pour un onglet donné. L'action de la page est affichée chaque fois que l'onglet donné est l'onglet actif.
 
-`show()` remplace la correspondance de motifs, de sorte que l'action page sera affichée dans l'onglet spécifié même si [`show_matches`](/Add-ons/WebExtensions/manifest.json/page_action) e correspond pas à l'URL ou si [`hide_matches`](/Add-ons/WebExtensions/manifest.json/page_action) ne correspond pas.
+`show()` remplace la correspondance de motifs, de sorte que l'action page sera affichée dans l'onglet spécifié même si [`show_matches`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) e correspond pas à l'URL ou si [`hide_matches`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) ne correspond pas.
 
 Notez que l'appel à `show()` n'a aucun effet sur un onglet sans contenu chargé.
 
@@ -26,8 +15,8 @@ Notez que l'appel à `show()` n'a aucun effet sur un onglet sans contenu chargé
 
 ```js
 browser.pageAction.show(
-  tabId // integer
-)
+  tabId, // integer
+);
 ```
 
 ### Paramètres
@@ -39,21 +28,21 @@ browser.pageAction.show(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec `undefined`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pageAction.show")}}
+{{Compat}}
 
 ## Exemples
 
-Cette exemple montre l'action de la page pour l'onglet actif lorsque l'utilisateur sélectionne un élément de menu contextuel. Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `contextMenus`  dans votre [manifest](/fr/Add-ons/WebExtensions/manifest.json) pour créer des éléments de menu contextuel.
+Cette exemple montre l'action de la page pour l'onglet actif lorsque l'utilisateur sélectionne un élément de menu contextuel. Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `contextMenus` dans votre [manifest](/fr/Add-ons/WebExtensions/manifest.json) pour créer des éléments de menu contextuel.
 
 ```js
 browser.contextMenus.create({
   id: "show",
-  title: "Show page action"
+  title: "Show page action",
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "show") {
     browser.pageAction.show(tab.id);
   }

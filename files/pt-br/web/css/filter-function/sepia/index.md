@@ -1,13 +1,8 @@
 ---
 title: sepia()
 slug: Web/CSS/filter-function/sepia
-tags:
-  - Efeitos de Filtro
-  - Função CSS
-  - Referencia
-translation_of: Web/CSS/filter-function/sepia()
-original_slug: Web/CSS/filter-function/sepia()
 ---
+
 {{cssref}}
 
 A função [CSS](/pt-BR/docs/Web/CSS) **`sepia()`** converte a imagem inputada em sépia, dando uma aparência mais amarelada/marrom e quente. Seu resultado é uma {{cssxref("&lt;filter-function&gt;")}}.

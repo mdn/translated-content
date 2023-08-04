@@ -3,7 +3,7 @@ title: <small>
 slug: Web/HTML/Element/small
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 HTML 中的\<small>元素將使文本的字体变小一号。(例如从大变成中等，从中等变成小，从小变成超小)。在 HTML5 中，除了它的样式含义，这个元素被重新定义为表示边注释和附属细则，包括版权和法律文本。
 
@@ -53,7 +53,10 @@ HTML 中的\<small>元素將使文本的字体变小一号。(例如从大变成
 ### 例子 1
 
 ```html
-<p>This is the first sentence.  <small>This whole sentence is in small letters.</small></p>
+<p>
+  This is the first sentence.
+  <small>This whole sentence is in small letters.</small>
+</p>
 ```
 
 #### 结果
@@ -63,7 +66,10 @@ This is the first sentence. This whole sentence is in small letters.
 ### 例子 2 (CSS 替代)
 
 ```html
-<p>This is the first sentence. <span style="font-size:0.8em">This whole sentence is in small letters.</span></p>
+<p>
+  This is the first sentence.
+  <span style="font-size:0.8em">This whole sentence is in small letters.</span>
+</p>
 ```
 
 #### 结果

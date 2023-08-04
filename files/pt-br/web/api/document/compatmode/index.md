@@ -1,8 +1,8 @@
 ---
 title: Document.compatMode
 slug: Web/API/Document/compatMode
-translation_of: Web/API/Document/compatMode
 ---
+
 {{ ApiRef("DOM") }}
 
 Indica se o documento está renderizado no [Quirks mode](/pt-BR/Quirks_Mode_and_Standards_Mode) ou no modo dos Padrões.

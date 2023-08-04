@@ -1,8 +1,8 @@
 ---
 title: flex
 slug: Web/CSS/flex
-translation_of: Web/CSS/flex
 ---
+
 {{CSSRef}}
 
 A propriedade flex do CSS, define como um ítem será posicionado para no espaço disponível dentro de seu container.
@@ -98,7 +98,7 @@ Esta propriedade é uma abreviação das seguintes propriedades CSS:
 }
 ```
 
-{{EmbedLiveSample("flex", 1200, 370, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("Propriedades", 1200, 370, "", "", "example-outcome-frame")}}
 
 By default flex items don't shrink below their minimum content size. To change this, set the item's {{cssxref("min-width")}} or {{cssxref("min-height")}}.
 

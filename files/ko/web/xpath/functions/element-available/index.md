@@ -1,10 +1,8 @@
 ---
 title: element-available
 slug: Web/XPath/Functions/element-available
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/element-available
 ---
+
 {{ XsltRef() }}
 
 `element-available` 함수는 요소가 이용 가능한 지를 결정하고 true나 false를 반환합니다.

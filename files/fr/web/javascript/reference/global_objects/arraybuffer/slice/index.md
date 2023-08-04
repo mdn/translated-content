@@ -1,14 +1,6 @@
 ---
 title: ArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
-original_slug: Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/slice
 ---
 
 {{JSRef}}
@@ -44,20 +36,16 @@ La méthode `slice` copie les octets contenus jusqu'au (au sens exclusif) param�
 
 ```js
 var buf1 = new ArrayBuffer(8);
-var buf2 = buf1.slice(0)
+var buf2 = buf1.slice(0);
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaires                                    |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                                     | {{Spec2('Typed Array')}} | Remplacée dans EMCAScript 6.                    |
-| {{SpecName('ES6', '#sec-arraybuffer.prototype.slice', 'ArrayBuffer.prototype.slice')}}     | {{Spec2('ES6')}}             | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-arraybuffer.prototype.slice', 'ArrayBuffer.prototype.slice')}} | {{Spec2('ESDraft')}}     |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.ArrayBuffer.slice")}}
+{{Compat}}
 
 ## Voir aussi
 

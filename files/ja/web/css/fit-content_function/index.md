@@ -1,7 +1,6 @@
 ---
 title: fit-content()
 slug: Web/CSS/fit-content_function
-original_slug: Web/CSS/fit-content()
 ---
 
 {{CSSRef}}
@@ -84,10 +83,7 @@ fit-content(40%)
 
 ## 仕様書
 
-| 仕様書                                                                                                            | 状態                           | 備考                                                                                                                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS3 Sizing", "#valdef-width-fit-content-length-percentage", "fit-content()")}} | {{Spec2("CSS3 Sizing")}} | {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}}, {{cssxref("max-height")}} のレイアウトボックスの寸法としての関数を定義。 |
-| {{SpecName("CSS Grid", "#valdef-grid-template-columns-fit-content", "fit-content()")}}     | {{Spec2("CSS Grid")}}     | トラックの寸法として使用される際の関数を定義。                                                                                                                                                                                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

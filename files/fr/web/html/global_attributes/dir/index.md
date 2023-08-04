@@ -1,13 +1,6 @@
 ---
 title: dir
 slug: Web/HTML/Global_attributes/dir
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/dir
-original_slug: Web/HTML/Attributs_universels/dir
 ---
 
 {{HTMLSidebar("Global_attributes")}}

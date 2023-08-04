@@ -1,7 +1,6 @@
 ---
 title: At-rules
 slug: Web/CSS/At-rule
-translation_of: Web/CSS/At-rule
 ---
 {{cssref}}
 
@@ -28,7 +27,6 @@ translation_of: Web/CSS/At-rule
   - {{cssxref("@page")}} — Описывает аспект изменений макета, который будет применён при печати документа.
   - {{cssxref("@font-face")}} — Описывает аспект внешнего шрифта для загрузки.
   - {{cssxref("@keyframes")}} — Описывает аспект промежуточных шагов в последовательности анимации CSS.
-  - {{cssxref("@viewport")}} {{experimental_inline}} — Описывает аспекты области просмотра для устройств с маленьким экраном. (в настоящее время на стадии разработки проекта)
   - {{cssxref("@counter-style")}} — Определяет конкретные counter-styles, которые не являются частью предопределённого набора стилей.
   - {{cssxref("@font-feature-values")}} (плюс `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` и `@character-variant`)
     — Определите общие имена в {{cssxref("font-option-alternates")}} для функции, которая по-разному активируется в OpenType _(at the Candidate Recommendation stage, but only implemented in Gecko as of writing)_
@@ -52,4 +50,21 @@ translation_of: Web/CSS/At-rule
 
 ## Читайте также
 
-- {{CSS_key_concepts}}
+- Ключевые концепции CSS
+  - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)
+  - [@-правила](/ru/docs/Web/CSS/At-rule)
+  - [комментарии](/ru/docs/Web/CSS/Comments)
+  - [специфичность](/ru/docs/Web/CSS/Specificity)
+  - [наследование](/ru/docs/Web/CSS/inheritance)
+  - [блочная модель](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
+  - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
+  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Значения
+    - [начальные](/ru/docs/Web/CSS/initial_value)
+    - [вычисленные](/ru/docs/Web/CSS/computed_value)
+    - [используемые](/ru/docs/Web/CSS/used_value)
+    - [действительные](/ru/docs/Web/CSS/actual_value)
+  - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
+  - [Сокращённые свойства](/ru/docs/Web/CSS/Shorthand_properties)
+  - [Замещаемые элементы](/ru/docs/Web/CSS/Replaced_element)

@@ -1,21 +1,11 @@
 ---
 title: Worker
 slug: Web/API/Worker
-tags:
-  - API
-  - DOM
-  - Interface
-  - JavaScript
-  - Reference
-  - Web Workers
-  - Worker
-  - 워커
-  - 웹 워커
-translation_of: Web/API/Worker
 ---
+
 {{APIRef("Web Workers API")}}
 
-[Web Workers API](/ko/docs/Web/API/Web_Workers_API)의** `Worker`** 인터페이스는 스크립트로 생성하고, 생성자와 메시지로 통신하는 백그라운드 작업을 나타냅니다. 워커의 생성은 `Worker("path/to/worker/script")` 생성자를 통해 할 수 있습니다.
+[Web Workers API](/ko/docs/Web/API/Web_Workers_API)의 **`Worker`** 인터페이스는 스크립트로 생성하고, 생성자와 메시지로 통신하는 백그라운드 작업을 나타냅니다. 워커의 생성은 `Worker("path/to/worker/script")` 생성자를 통해 할 수 있습니다.
 
 워커는 부모 페이지와 같은 {{glossary("origin", "출처")}}에 호스팅 된 다른 워커를 생성할 수 있습니다. (참고: [WebKit은 아직 중첩 워커를 구현하지 않았습니다.](https://bugs.webkit.org/show_bug.cgi?id=22723))
 
@@ -69,12 +59,12 @@ translation_of: Web/API/Worker
 
 ```js
 var myWorker = new Worker("worker.js");
-var first = document.querySelector('#number1');
+var first = document.querySelector("#number1");
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+first.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 ```
 
 전체 예제를 보시려면 저희의 [simple-web-worker 예제](https://github.com/mdn/simple-web-worker) ([라이브](http://mdn.github.io/simple-web-worker/))를 참고하세요.

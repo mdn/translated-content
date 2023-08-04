@@ -58,87 +58,89 @@ scroll-snap-type: unset;
 - `proximity`
   - : 如果它当前没有被滚动，这个滚动容器的可视视图将基于基于用户代理滚动的参数去到临时点上。如果内容被添加、移动、删除或者重置大小，滚动偏移将被调整为保持静止在临时点上。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### HTML 内容
+### HTML
 
-```plain
+```html
 <div class="holster">
-<div class="container x mandatory-scroll-snapping" dir="ltr">
-  <div>X Mand. LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container x mandatory-scroll-snapping" dir="ltr">
+    <div>X Mand. LTR</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container x proximity-scroll-snapping" dir="ltr">
-  <div>X Prox. LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container x proximity-scroll-snapping" dir="ltr">
+    <div>X Prox. LTR</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container y mandatory-scroll-snapping" dir="ltr">
-  <div>Y Mand. LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container y mandatory-scroll-snapping" dir="ltr">
+    <div>Y Mand. LTR</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container y proximity-scroll-snapping" dir="ltr">
-  <div>Y Prox. LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container y proximity-scroll-snapping" dir="ltr">
+    <div>Y Prox. LTR</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container x mandatory-scroll-snapping" dir="rtl">
-  <div>X Mand. RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container x mandatory-scroll-snapping" dir="rtl">
+    <div>X Mand. RTL</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container x proximity-scroll-snapping" dir="rtl">
-  <div>X Prox. RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container x proximity-scroll-snapping" dir="rtl">
+    <div>X Prox. RTL</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container y mandatory-scroll-snapping" dir="rtl">
-  <div>Y Mand. RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container y mandatory-scroll-snapping" dir="rtl">
+    <div>Y Mand. RTL</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 
-<div class="container y proximity-scroll-snapping" dir="rtl">
-  <div>Y Prox. RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+  <div class="container y proximity-scroll-snapping" dir="rtl">
+    <div>Y Prox. RTL</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
 </div>
 ```
 
-### CSS 内容
+### CSS
 
-```plain
+```css
 /* setup */
-html, body, .holster {
+html,
+body,
+.holster {
   height: 100%;
 }
 .holster {
@@ -210,15 +212,15 @@ html, body, .holster {
 }
 /* coloration */
 .container > div:nth-child(even) {
-  background-color: #87EA87;
+  background-color: #87ea87;
 }
 
 .container > div:nth-child(odd) {
-  background-color: #87CCEA;
+  background-color: #87ccea;
 }
 ```
 
-{{EmbedLiveSample("Example", "100%", "260")}}
+{{EmbedLiveSample("示例", "100%", "260")}}
 
 ## 规范
 

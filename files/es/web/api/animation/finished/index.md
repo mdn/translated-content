@@ -1,15 +1,8 @@
 ---
 title: Animation.finished
 slug: Web/API/Animation/finished
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Reference
-translation_of: Web/API/Animation/finished
-original_slug: Web/API/Animation/terminado
 ---
+
 {{ APIRef("Web Animations") }}
 
 La propiedad de solo-lectura de `Animation.finished` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve un {{jsxref("Promise")}} que se resuelve una vez que la animación a terminado de reproducirse.
@@ -32,16 +25,12 @@ El siguiente código espera a que todas las animaciones que se ejecutan en el el
 
 ```js
 Promise.all(
-  elem.getAnimations().map(
-    function(animation) {
-      return animation.finished
-    }
-  )
-).then(
-  function() {
-    return elem.remove();
-  }
-);
+  elem.getAnimations().map(function (animation) {
+    return animation.finished;
+  }),
+).then(function () {
+  return elem.remove();
+});
 ```
 
 ## Especificaciones

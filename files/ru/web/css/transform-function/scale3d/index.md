@@ -1,8 +1,6 @@
 ---
 title: scale3d()
 slug: Web/CSS/transform-function/scale3d
-translation_of: Web/CSS/transform-function/scale3d()
-original_slug: Web/CSS/transform-function/scale3d()
 ---
 {{CSSRef}}
 
@@ -14,7 +12,9 @@ original_slug: Web/CSS/transform-function/scale3d()
 
 ## Синтаксис
 
-    scale3d(sx, sy, sz)
+```
+scale3d(sx, sy, sz)
+```
 
 ## Значения
 

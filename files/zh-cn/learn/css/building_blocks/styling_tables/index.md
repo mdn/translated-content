@@ -34,7 +34,9 @@ slug: Learn/CSS/Building_blocks/Styling_tables
 
 ```html
 <table>
-  <caption>A summary of the UK's most famous punk bands</caption>
+  <caption>
+    A summary of the UK's most famous punk bands
+  </caption>
   <thead>
     <tr>
       <th scope="col">Band</th>
@@ -57,7 +59,7 @@ slug: Learn/CSS/Building_blocks/Styling_tables
       <td>London Calling</td>
     </tr>
 
-      ... some rows removed for brevity
+    ... some rows removed for brevity
 
     <tr>
       <th scope="row">The Stranglers</th>
@@ -75,7 +77,7 @@ slug: Learn/CSS/Building_blocks/Styling_tables
 </table>
 ```
 
-由于{{htmlattrxref("scope","th")}}、{{htmlelement("caption")}}、{{htmlelement("thead")}}、{{htmlelement("tbody")}}等特性，表格被很好地标记了，易于使用，并且易于访问，不幸的是，它在屏幕上呈现时看起来不太好（见它的预览版 [punk-bands-unstyled.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html)）：
+由于[`scope`](/zh-CN/docs/Web/HTML/Element/th#scope)、{{htmlelement("caption")}}、{{htmlelement("thead")}}、{{htmlelement("tbody")}}等特性，表格被很好地标记了，易于使用，并且易于访问，不幸的是，它在屏幕上呈现时看起来不太好（见它的预览版 [punk-bands-unstyled.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html)）：
 
 ![](table-unstyled.png)
 
@@ -85,12 +87,12 @@ slug: Learn/CSS/Building_blocks/Styling_tables
 
 在这个自主学习部分中，我们将一起来样式化我们的表格。
 
-1. 首先，复制[实例标记](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html)到本地，下载这两个图像 ([noise](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png)和 [leopardskin](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg))，然后将三个结果文件放在本地计算机的某个工作目录中。
+1. 首先，复制[实例标记](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-unstyled.html)到本地，下载这两个图像 ([noise](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/noise.png)和 [leopardskin](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/leopardskin.jpg))，然后将三个结果文件放在本地计算机的某个工作目录中。
 2. 接下来，创建一个名为`style.css`的新文件并将其保存在与其他文件相同的目录中。
 3. 将 CSS 链接到 HTML 中，将下面的 HTML 代码放到 HTML 的{{htmlelement("head")}}中：
 
 ```html
-<link href="style.css" rel="stylesheet" type="text/css">
+<link href="style.css" rel="stylesheet" type="text/css" />
 ```
 
 ### 间距和布局
@@ -123,7 +125,8 @@ thead th:nth-child(4) {
   width: 35%;
 }
 
-th, td {
+th,
+td {
   padding: 20px;
 }
 ```
@@ -151,7 +154,10 @@ th, td {
 首先，将下面的{{htmlelement("link")}}元素添加到您的 HTML 头部，就在您现有的 `<link>` 元素之上：
 
 ```html
-<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link
+  href="https://fonts.googleapis.com/css?family=Rock+Salt"
+  rel="stylesheet"
+  type="text/css" />
 ```
 
 现在将下面的 CSS 添加到您的`style.css`文件，在之前内容后面添加：
@@ -160,11 +166,12 @@ th, td {
 /* typography */
 
 html {
-  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
 }
 
-thead th, tfoot th {
-  font-family: 'Rock Salt', cursive;
+thead th,
+tfoot th {
+  font-family: "Rock Salt", cursive;
 }
 
 th {
@@ -258,7 +265,7 @@ table {
 
 ```css
 caption {
-  font-family: 'Rock Salt', cursive;
+  font-family: "Rock Salt", cursive;
   padding: 20px;
   font-style: italic;
   caption-side: bottom;
@@ -296,24 +303,3 @@ caption {
 现在，我们身后的表格样式令人炫目，令人兴奋，我们需要一些其他的东西来占据我们的时间。不要担心——下一章会介绍如何调试 CSS，如何解决诸如布局不能像所应该的那样进行呈现的问题，或者元素无法像你预料的那样生效的问题。那里包含了使用浏览器开发者工具寻找你的问题的解决方案的信息。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
-
-## 模块目录
-
-1. [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [标签，类，ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [处理不同文字方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [在 CSS 中调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)

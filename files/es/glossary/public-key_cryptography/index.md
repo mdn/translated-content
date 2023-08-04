@@ -1,8 +1,8 @@
 ---
 title: Criptografía de clave pública
 slug: Glossary/Public-key_cryptography
-translation_of: Glossary/Public-key_cryptography
 ---
+
 La criptografía de clave pública es un sistema criptográfico en el que las claves vienen en pares. La transformación realizada por una de las claves solo se puede deshacer con la otra clave. Una clave (la clave privada) se mantiene secreta mientras que la otra se hace pública.
 
 Cuando se usa para firmas digitales, la clave privada se usa para firmar y la clave pública para verificar. Esto significa que cualquier persona puede verificar una firma, pero solo el propietario de la clave privada correspondiente podría haberla generado.

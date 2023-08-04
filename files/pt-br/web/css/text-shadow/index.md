@@ -1,8 +1,8 @@
 ---
 title: text-shadow
 slug: Web/CSS/text-shadow
-translation_of: Web/CSS/text-shadow
 ---
+
 {{ Cssref }}
 
 ## Sumário
@@ -45,7 +45,10 @@ text-shadow: unset;
 ### Valores
 
 - \<cor>
-  - : Opcional. Pode ser especificado tanto antes quanto depois dos valores de deslocamento. Se a cor não é especificada, uma cor UA-chosen será usada. {{ note("Se voce quer garantir a consistência entre os navegadores, especifique explicitamente uma cor.") }}
+  - : Opcional. Pode ser especificado tanto antes quanto depois dos valores de deslocamento. Se a cor não é especificada, uma cor UA-chosen será usada.
+
+    > **Nota:** Se voce quer garantir a consistência entre os navegadores, especifique explicitamente uma cor.
+
 - \<offset-x> \<offset-y>
   - : Obrigatório. These `<length>` values specify the shadow's offset from the text. `<offset-x>` specifies the horizontal distance; a negative value places the shadow to the left of the text. `<offset-y>` specifies the vertical distance; a negative value places the shadow above the text. If both values are `0`, then the shadow is placed behind the text (and may generate a blur effect when `<blur-radius>` is set).
     To find out what units you can use, see {{ cssxref("&lt;length&gt;") }}.
@@ -114,7 +117,7 @@ text-shadow: unset;
 | Especificação                                                                                | Status                                           | Comentário                                                                                                                                                                                                                                                                                                                                                                            |
 | -------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{ SpecName('CSS3 Transitions', '#animatable-css', 'text-shadow') }} | {{ Spec2('CSS3 Transitions') }}         | Lists `text-shadow` as animatable.                                                                                                                                                                                                                                                                                                                                                    |
-| {{ SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow') }} | {{ Spec2('CSS3 Text Decoration') }} | The CSS property `text-shadow` was [improperly defined in CSS2](http://www.w3.org/TR/2008/REC-CSS2-20080411/text.html#text-shadow-props) and dropped in CSS2 (Level 1). The _CSS Text Module Level 3_ spec improved and precised the syntax. Later it was moved to new working draft _[CSS Text Decoration Module Level 3](http://www.w3.org/TR/2012/WD-css-text-decor-3-20121113/)_. |
+| {{ SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow') }} | {{ Spec2('CSS3 Text Decoration') }} | The CSS property `text-shadow` was [improperly defined in CSS2](https://www.w3.org/TR/2008/REC-CSS2-20080411/text.html#text-shadow-props) and dropped in CSS2 (Level 1). The _CSS Text Module Level 3_ spec improved and precised the syntax. Later it was moved to new working draft _[CSS Text Decoration Module Level 3](https://www.w3.org/TR/2012/WD-css-text-decor-3-20121113/)_. |
 
 ## Compatibilidade do navegador
 

@@ -7,7 +7,7 @@ slug: Web/API/MouseEvent/button
 
 **`MouseEvent.button`**是只读属性，它返回一个值，代表用户按下并触发了事件的鼠标按键。
 
-这个属性只能够表明在触发事件的单个或多个按键按下或释放过程中哪些按键被按下了。因此，它对判断{{event("mouseenter")}}, {{event("mouseleave")}}, {{event("mouseover")}}, {{event("mouseout")}} {{event("mousemove")}}这些事件并不可靠。
+这个属性只能够表明在触发事件的单个或多个按键按下或释放过程中哪些按键被按下了。因此，它对判断[`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event), [`mouseleave`](/zh-CN/docs/Web/API/Element/mouseleave_event), [`mouseover`](/zh-CN/docs/Web/API/Element/mouseover_event), [`mouseout`](/zh-CN/docs/Web/API/Element/mouseout_event) [`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event)这些事件并不可靠。
 
 用户可能会改变鼠标按键的配置，因此当一个事件的 **`MouseEvent.button`** 值为 0 时，它可能不是由物理上设备最左边的按键触发的。但是对于一个标准按键布局的鼠标来说就会是左键。
 
@@ -16,7 +16,7 @@ slug: Web/API/MouseEvent/button
 ## 语法
 
 ```js
-var buttonPressed = instanceOfMouseEvent.button
+var buttonPressed = instanceOfMouseEvent.button;
 ```
 
 ### 返回值
@@ -36,28 +36,30 @@ var buttonPressed = instanceOfMouseEvent.button
 ### HTML
 
 ```html
-<button id="button" oncontextmenu="event.preventDefault();">Click here with your mouse...</button>
+<button id="button" oncontextmenu="event.preventDefault();">
+  Click here with your mouse...
+</button>
 <p id="log"></p>
 ```
 
 ### JavaScript
 
 ```js
-let button = document.querySelector('#button');
-let log = document.querySelector('#log');
-button.addEventListener('mouseup', logMouseButton);
+let button = document.querySelector("#button");
+let log = document.querySelector("#log");
+button.addEventListener("mouseup", logMouseButton);
 
 function logMouseButton(e) {
-  if (typeof e === 'object') {
+  if (typeof e === "object") {
     switch (e.button) {
       case 0:
-        log.textContent = 'Left button clicked.';
+        log.textContent = "Left button clicked.";
         break;
       case 1:
-        log.textContent = 'Middle button clicked.';
+        log.textContent = "Middle button clicked.";
         break;
       case 2:
-        log.textContent = 'Right button clicked.';
+        log.textContent = "Right button clicked.";
         break;
       default:
         log.textContent = `Unknown button code: ${e.button}`;

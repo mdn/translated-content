@@ -1,6 +1,6 @@
 ---
 title: CSS 生成コンテンツ
-slug: Web/CSS/CSS_Generated_Content
+slug: Web/CSS/CSS_generated_content
 ---
 
 {{CSSRef}}
@@ -18,10 +18,7 @@ slug: Web/CSS/CSS_Generated_Content
 
 ## 仕様書
 
-| 仕様書                       | 状態                      | 備考     |
-| ---------------------------- | ------------------------- | -------- |
-| {{SpecName("CSS3 Content")}} | {{Spec2("CSS3 Content")}} |          |
-| {{SpecName('CSS2.1')}}       | {{Spec2('CSS2.1')}}       | 初回定義 |
+{{Specifications}}
 
 ## 関連情報
 

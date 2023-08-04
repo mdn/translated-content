@@ -1,8 +1,8 @@
 ---
 title: Console
-slug: Web/API/Console
-translation_of: Web/API/Console
+slug: Web/API/console
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 O objeto `console` fornece acesso ao console de debug do navegador (por exemplo, o [Web Console](/pt-BR/docs/Tools/Web_Console) do Firefox). O seu funcionamento específico varia de navegador para navegador, mas existe um conjunto de ferramentas que na prática são fornecidas normalmente.
@@ -15,7 +15,7 @@ Esta página documenta os [Métodos](#métodos) disponíveis no objeto `console`
   - : Emite uma mensagem e traça a sequência de operações até o primeiro argumento for falso.
 - {{domxref("console.count()", "console.count([label])")}}
   - : Mostra o número de vezes que esta linha foi chamada com a label fornecida.
-- {{domxref("console.log()", "console.debug(object[, object...])")}} {{deprecated_inline("5.0")}}
+- {{domxref("console.log()", "console.debug(object[, object...])")}} {{deprecated_inline}}
   - : Um atalho para `log()`; que foi adicionado para melhorar a compatibilidade de páginas já existentes que utilizavam `debug()`. Porém, ao invés destes comandos você deve utilizar {{domxref("console.log()")}}.
 - {{domxref("console.dir()", "console.dir(object)")}}
   - : Exibe uma listagem interativa das propriedades de um objeto JavaScript especificado. Esta listagem permite a você expandir o objeto para visualizar o conteúdo de objetos filhos.
@@ -26,7 +26,7 @@ Esta página documenta os [Métodos](#métodos) disponíveis no objeto `console`
 - {{domxref("console.group()", "console.group(object[, object...])")}}
   - : Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior. Para voltar um nível, utilize `groupEnd()`. Consulte [Uso de grupos no console](#uso_de_grupos_no_console).
 - {{domxref("console.groupCollapsed()", "console.groupCollapsed(object[, object...])")}}
-  - : Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior; ao contrário de `group()`, o grupo em linha começa recolhido. Para revelar seu conteúdo, basta clicar no botão de revelação para expandí-lo. Para recuar um nível, utilize `groupEnd().` Consulte [Uso de grupos no console](#uso_de_grupos_no_console).
+  - : Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior; ao contrário de `group()`, o grupo em linha começa recolhido. Para revelar seu conteúdo, basta clicar no botão de revelação para expandí-lo. Para recuar um nível, utilize `groupEnd()`. Consulte [Uso de grupos no console](#uso_de_grupos_no_console).
 - {{domxref("console.groupEnd()")}}
   - : Sai do grupo em linha atual. Veja [Uso de grupos no console](#uso_de_grupos_no_console).
 - {{domxref("console.info()", "console.info(object[, object...])")}}
@@ -81,8 +81,13 @@ Você também pode realizar o output de múltiplos objetos ao simplesmente list�
 
 ```js
 var carro = "Fusca";
-var algumObjeto = {str:"Algum texto", id:5};
-console.info("Meu primeiro carro era um ", carro, ". O objeto é: ", algumObjeto);
+var algumObjeto = { str: "Algum texto", id: 5 };
+console.info(
+  "Meu primeiro carro era um ",
+  carro,
+  ". O objeto é: ",
+  algumObjeto,
+);
 ```
 
 O output será algo assim:
@@ -93,7 +98,7 @@ O output será algo assim:
 
 #### Uso de substituição de string
 
-O Gecko 9.0 {{geckoRelease("9.0")}} introduziu o suporte à substituição de strings. Ao fornecer uma string para um dos métodos do console que aceitam uma string, você pode utilizar estas strings de substituição:
+O Gecko 9.0 introduziu o suporte à substituição de strings. Ao fornecer uma string para um dos métodos do console que aceitam uma string, você pode utilizar estas strings de substituição:
 
 | String de substituição | Descrição                                                                  |
 | ---------------------- | -------------------------------------------------------------------------- |
@@ -128,7 +133,7 @@ You can use the `"%c"` directive to apply a CSS style to console output:
 console.log("%cMy stylish message", "color: red; font-style: italic");
 ```
 
-![](https://mdn.mozillademos.org/files/7739/console-style.png)
+![](console-style.png)
 
 ### Usando grupos no console
 
@@ -194,12 +199,12 @@ function foo() {
 
 The output in the console looks something like this:
 
-![](https://mdn.mozillademos.org/files/7167/api-trace2.png)
+![](api-trace2.png)
 
 ## Notes
 
 - At least in Firefox, if a page defines a console object, that object overrides the one built into Firefox.
-- Prior to {{Gecko("12.0")}}, the console object's methods only work when the Web Console is open. Starting with {{Gecko("12.0")}}, output is cached until the Web Console is opened, then displayed at that time.
+- Prior to Gecko 12.0, the console object's methods only work when the Web Console is open. Starting with Gecko 12.0, output is cached until the Web Console is opened, then displayed at that time.
 - It's worth noting that the Firefox's built-in `console` object is compatible with the one provided by [Firebug](http://getfirebug.com/).
 
 ## See also
@@ -207,7 +212,7 @@ The output in the console looks something like this:
 - [Tools](/pt-BR/docs/Tools)
 - [Web Console](/pt-BR/docs/Tools/Web_Console) - how the Web Console in Firefox handles console API calls
 - [Remote debugging](/pt-BR/docs/Tools/Remote_Debugging) - how to see console output when the debugging target is a mobile device
-- [Debugging apps on Firefox OS](/en-US/Firefox_OS/Using_the_App_Manager) - using the App Manager to debug apps running on Firefox OS
+- [Debugging apps on Firefox OS](/pt-BR/Firefox_OS/Using_the_App_Manager) - using the App Manager to debug apps running on Firefox OS
 - [On-device console logging](/pt-BR/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging) - how to do logging on Firefox OS devices
 
 ### Other implementations

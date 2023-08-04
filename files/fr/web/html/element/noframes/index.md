@@ -1,16 +1,9 @@
 ---
-title: '<noframes> : l''élément alternatif aux frames (obsolete)'
+title: "<noframes> : l'élément alternatif aux frames (obsolete)"
 slug: Web/HTML/Element/noframes
-tags:
-  - Element
-  - HTML
-  - Obsolete
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/noframes
 ---
 
-{{HTMLRef}}{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 L'élément HTML obsolète **`<noframes>`** est utilisé par les navigateurs qui ne supportent pas les éléments {{HTMLElement("frame")}}, ou qui sont configurés afin de ne pas les supporter.
 
@@ -30,12 +23,13 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ```html
 <frameset cols="50%,50%">
-  <frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frameset"/>
-  <frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frame"/>
+  <frame
+    src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frameset" />
+  <frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frame" />
   <noframes>
     <p>
-      Il semblerait que votre navigateur ne supporte pas les frames,
-      ou qu'il est configuré pour ne pas les autoriser.
+      Il semblerait que votre navigateur ne supporte pas les frames, ou qu'il
+      est configuré pour ne pas les autoriser.
     </p>
   </noframes>
 </frameset>

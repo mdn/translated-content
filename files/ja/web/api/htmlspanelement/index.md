@@ -19,12 +19,7 @@ _このインターフェイスにはメソッドがありませんが、 {{DOMx
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "text-level-semantics.html#htmlspanelement", "HTMLSpanElement")}} | {{Spec2('HTML WHATWG')}} |                                                                                                                    |
-| {{SpecName('HTML5.2', "textlevel-semantics.html#htmlspanelement", "HTMLSpanElement")}}     | {{Spec2('HTML5.2')}}     |                                                                                                                    |
-| {{SpecName('HTML5.1', "textlevel-semantics.html#htmlspanelement", "HTMLSpanElement")}}     | {{Spec2('HTML5.1')}}     |                                                                                                                    |
-| {{SpecName('HTML5 W3C', "text-level-semantics.html#htmlspanelement", "HTMLSpanElement")}} | {{Spec2('HTML5 W3C')}}     | 初回定義。これ以前は {{HTMLElement("span")}} は {{domxref("HTMLElement")}} と直接紐付いていた。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: 목록 스타일링
 slug: Learn/CSS/Styling_text/Styling_lists
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
 [목록](/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) 은 대부분 다른 텍스트처럼 작동하지만, 알아야 할 목록과 관련된 몇 가지 CSS 속성과 고려해야 할 모범 사례가 있습니다. 이 기사는 모든 것을 설명합니다.
@@ -12,13 +13,13 @@ slug: Learn/CSS/Styling_text/Styling_lists
       <th scope="row">전제조건:</th>
       <td>
         Basic computer literacy, HTML basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), CSS basics (study
-        <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/ko/docs/Learn/CSS/Introduction_to_CSS"
           >Introduction to CSS</a
         >),
-        <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals"
+        <a href="/ko/docs/Learn/CSS/Styling_text/Fundamentals"
           >CSS text and font fundamentals</a
         >.
       </td>
@@ -39,8 +40,10 @@ slug: Learn/CSS/Styling_text/Styling_lists
 ```html
 <h2>Shopping (unordered) list</h2>
 
-<p>Paragraph for reference, paragraph for reference, paragraph for reference,
-paragraph for reference, paragraph for reference, paragraph for reference.</p>
+<p>
+  Paragraph for reference, paragraph for reference, paragraph for reference,
+  paragraph for reference, paragraph for reference, paragraph for reference.
+</p>
 
 <ul>
   <li>Hummus</li>
@@ -51,28 +54,40 @@ paragraph for reference, paragraph for reference, paragraph for reference.</p>
 
 <h2>Recipe (ordered) list</h2>
 
-<p>Paragraph for reference, paragraph for reference, paragraph for reference,
-paragraph for reference, paragraph for reference, paragraph for reference.</p>
+<p>
+  Paragraph for reference, paragraph for reference, paragraph for reference,
+  paragraph for reference, paragraph for reference, paragraph for reference.
+</p>
 
 <ol>
   <li>Toast pita, leave to cool, then slice down the edge.</li>
-  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li>Wash and chop the salad.</li>
   <li>Fill pita with salad, hummus, and fried halloumi.</li>
 </ol>
 
 <h2>Ingredient description list</h2>
 
-<p>Paragraph for reference, paragraph for reference, paragraph for reference,
-paragraph for reference, paragraph for reference, paragraph for reference.</p>
+<p>
+  Paragraph for reference, paragraph for reference, paragraph for reference,
+  paragraph for reference, paragraph for reference, paragraph for reference.
+</p>
 
 <dl>
   <dt>Hummus</dt>
-  <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
+  <dd>
+    A thick dip/sauce generally made from chick peas blended with tahini, lemon
+    juice, salt, garlic, and other ingredients.
+  </dd>
   <dt>Pita</dt>
   <dd>A soft, slightly leavened flatbread.</dd>
   <dt>Halloumi</dt>
-  <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
+  <dd>
+    A semi-hard, unripened, brined cheese with a higher-than-usual melting
+    point, usually made from goat/sheep milk.
+  </dd>
   <dt>Green salad</dt>
   <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
 </dl>
@@ -104,18 +119,22 @@ h2 {
   font-size: 2rem;
 }
 
-ul,ol,dl,p {
+ul,
+ol,
+dl,
+p {
   font-size: 1.5rem;
 }
 
-li, p {
+li,
+p {
   line-height: 1.5;
 }
 
 /* Description list styles */
 
-
-dd, dt {
+dd,
+dt {
   line-height: 1.5;
 }
 
@@ -153,7 +172,7 @@ ol {
 
 This gives us the following look:
 
-![an ordered list with the bullet points set to appear outside the list item text.](https://mdn.mozillademos.org/files/12962/outer-bullets.png)
+![an ordered list with the bullet points set to appear outside the list item text.](outer-bullets.png)
 
 You can find a lot more options by checking out the {{cssxref("list-style-type")}} reference page.
 
@@ -170,7 +189,7 @@ ol {
 }
 ```
 
-![an ordered list with the bullet points set to appear inside the list item text.](https://mdn.mozillademos.org/files/12958/inner-bullets.png)
+![an ordered list with the bullet points set to appear inside the list item text.](inner-bullets.png)
 
 ### Using a custom bullet image
 
@@ -214,7 +233,7 @@ Here we've done the following:
 
 This gives us the following result:
 
-![an unordered list with the bullet points set as little star images](https://mdn.mozillademos.org/files/16226/list_formatting.png)
+![an unordered list with the bullet points set as little star images](list_formatting.png)
 
 ### list-style shorthand
 
@@ -249,7 +268,9 @@ The {{htmlattrxref("start","ol")}} attribute allows you to start the list counti
 ```html
 <ol start="4">
   <li>Toast pita, leave to cool, then slice down the edge.</li>
-  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li>Wash and chop the salad.</li>
   <li>Fill pita with salad, hummus, and fried halloumi.</li>
 </ol>
@@ -266,7 +287,9 @@ The {{htmlattrxref("reversed","ol")}} attribute will start the list counting dow
 ```html
 <ol start="4" reversed>
   <li>Toast pita, leave to cool, then slice down the edge.</li>
-  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li>Wash and chop the salad.</li>
   <li>Fill pita with salad, hummus, and fried halloumi.</li>
 </ol>
@@ -285,7 +308,9 @@ The {{htmlattrxref("value","ol")}} attribute allows you to set your list items t
 ```html
 <ol>
   <li value="2">Toast pita, leave to cool, then slice down the edge.</li>
-  <li value="4">Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li value="4">
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li value="6">Wash and chop the salad.</li>
   <li value="8">Fill pita with salad, hummus, and fried halloumi.</li>
 </ol>
@@ -309,9 +334,15 @@ In this active learning session, we want you to take what you've learned above a
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see a potential answer.
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>HTML Input</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"><ul>
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+<ul>
   <li>First, light the candle.</li>
   <li>Next, open the box.</li>
   <li>Finally, place the three magic items in the box, in this exact order, to complete the spell:
@@ -321,16 +352,30 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
       <li>The goblin statue</li>
     </ol>
   </li>
-</ul></textarea>
+</ul></textarea
+  >
 
   <h2>CSS Input</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></textarea>
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></textarea>
 
   <h2>Output</h2>
-  <div class="output" style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
+  <div
+    class="output"
+    style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
-    <input id="solution" type="button" value="Show solution" style="margin: 10px 0 0 10px;">
+    <input
+      id="reset"
+      type="button"
+      value="Reset"
+      style="margin: 10px 10px 0 0;" />
+    <input
+      id="solution"
+      type="button"
+      value="Show solution"
+      style="margin: 10px 0 0 10px;" />
   </div>
 </div>
 ```
@@ -344,8 +389,8 @@ var cssCode = cssInput.value;
 var output = document.querySelector(".output");
 var solution = document.getElementById("solution");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+var styleElem = document.createElement("style");
+var headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -353,15 +398,16 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
+solution.addEventListener("click", function () {
   htmlInput.value = htmlCode;
-  cssInput.value = 'ul {\n  list-style-type: square;\n}\n\nul li, ol li {\n  line-height: 1.5;\n}\n\nol {\n  list-style-type: lower-alpha\n}';
+  cssInput.value =
+    "ul {\n  list-style-type: square;\n}\n\nul li, ol li {\n  line-height: 1.5;\n}\n\nol {\n  list-style-type: lower-alpha\n}";
   drawOutput();
 });
 
@@ -385,11 +431,3 @@ CSS counters provide advanced tools for customizing list counting and styling, b
 Lists are relatively easy to get the hang of styling once you know a few associated basic principles and specific properties. In the next article we'll get on to link styling techniques.
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
-
-## In this module
-
-- [Fundamental text and font styling](/ko/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Styling lists](/ko/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Styling links](/ko/docs/Learn/CSS/Styling_text/Styling_links)
-- [Web fonts](/ko/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Typesetting a community school homepage](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)

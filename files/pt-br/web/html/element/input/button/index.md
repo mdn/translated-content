@@ -1,27 +1,15 @@
 ---
 title: <input type="button">
-slug: Web/HTML/Element/Input/button
-tags:
-  - Documentação
-  - Element
-  - Elementos Input
-  - Formulários HTML
-  - HTML
-  - Input
-  - Referencia
-  - Tipos de Input
-  - botões
-  - button
-  - formulários
-translation_of: Web/HTML/Element/input/button
+slug: Web/HTML/Element/input/button
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como um simples botão, que podem ser programados para controlar funcionalidades customizadas em qualquer lugar de uma página web quando for atribuído um evento (tipicamente para um evento {{event("click")}}).
 
 {{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
 
-> **Note:** **Nota**: Enquanto elementos `<input>` do tipo `button` ainda são perfeitamente válidos, os novos elementos {{HTMLElement("button")}} são agora os favoráveis meios para criar botões. Uma etiqueta de texto (label) para um {{HTMLElement("button")}} pode ser inserida entre uma tag de abertura e outra de fechamento, podendo ser incluídas até imagens.
+> **Nota:** Enquanto elementos `<input>` do tipo `button` ainda são perfeitamente válidos, os novos elementos {{HTMLElement("button")}} são agora os favoráveis meios para criar botões. Uma etiqueta de texto (label) para um {{HTMLElement("button")}} pode ser inserida entre uma tag de abertura e outra de fechamento, podendo ser incluídas até imagens.
 
 <table class="properties">
   <tbody>
@@ -40,8 +28,8 @@ Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como u
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>
       <td>
-        {{htmlattrxref("type", "input")}}, e
-        {{htmlattrxref("value", "input")}}
+        <a href="/pt-BR/docs/Web/HTML/Element/input#type"><code>type</code></a>, e
+        <a href="/pt-BR/docs/Web/HTML/Element/input#value"><code>value</code></a>
       </td>
     </tr>
     <tr>
@@ -57,7 +45,7 @@ Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como u
 
 ## Value
 
-Seu atributo {{htmlattrxref("value", "input")}} de um elemento `<input type="button">` contém uma {{domxref("DOMString")}} que é usado como uma etiqueta (label) de um botão
+Seu atributo [`value`](/pt-BR/docs/Web/HTML/Element/input#value) de um elemento `<input type="button">` contém uma {{domxref("DOMString")}} que é usado como uma etiqueta (label) de um botão
 
 ```html
 <input type="button" value="Click Me">
@@ -75,7 +63,7 @@ Se você não especificar um `value`, você obtém um botão vazio:
 
 ## Usando buttons
 
-Elementos `<input type="button">` não possuem comportamento padrão (seu primos, `<input type="submit">` e [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset) são usados para submeter e resetar formulários). Para que botões possam fazer algo, você tem de escrever um código em JavaScript para fazê-lo trabalhar.
+Elementos `<input type="button">` não possuem comportamento padrão (seu primos, `<input type="submit">` e [`<input type="reset">`](/pt-BR/docs/Web/HTML/Element/input/reset) são usados para submeter e resetar formulários). Para que botões possam fazer algo, você tem de escrever um código em JavaScript para fazê-lo trabalhar.
 
 ### Um simples botão
 
@@ -111,7 +99,7 @@ O script recebe uma referência para o objeto {{domxref("HTMLInputElement")}} re
 
 ### Adicionando atalhos de teclados aos botões
 
-Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the {{htmlattrxref("accesskey")}} global attribute.
+Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the [`accesskey`](/pt-BR/docs/Web/HTML/Global_attributes#accesskey) global attribute.
 
 In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination; see [accesskey](/pt-BR/docs/Web/HTML/Global_attributes/accesskey) for a useful list of those).
 
@@ -145,7 +133,7 @@ function updateButton() {
 
 ### Desativando e ativando um botão
 
-To disable a button, simply specify the {{htmlattrxref("disabled")}} global attribute on it, like so:
+To disable a button, simply specify the [`disabled`](/pt-BR/docs/Web/HTML/Global_attributes#disabled) global attribute on it, like so:
 
 ```html
 <input type="button" value="Disable me" disabled>
@@ -203,7 +191,7 @@ function disableButton() {
 
 {{EmbedLiveSample("Hidden_code_2", 650, 60)}}
 
-> **Note:** Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.
+> **Note:** Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the [`autocomplete`](/pt-BR/docs/Web/HTML/Element/button#autocomplete) attribute to control this feature.
 
 ## Validação
 
@@ -329,7 +317,7 @@ draw();
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.input.input-button")}}
+{{Compat}}
 
 ## Veja também
 

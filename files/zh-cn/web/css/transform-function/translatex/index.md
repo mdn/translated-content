@@ -1,14 +1,13 @@
 ---
 title: translateX()
 slug: Web/CSS/transform-function/translateX
-original_slug: Web/CSS/transform-function/translateX()
 ---
 
 {{CSSRef}}
 
 translateX() 函数表示在二维平面上水平方向移动元素。其结果的数据类型是{{cssxref("&lt;transform-function&gt;")}}。
 
-![](https://mdn.mozillademos.org/files/3544/transform-functions-translateX_2.png)
+![](transform-functions-translatex_2.png)
 
 > **备注：** `translateX(tx)`等同于 [translate](/zh-CN/docs/Web/CSS/transform-function/translate)(tx, 0) 或者 [translate3d](/zh-CN/docs/Web/CSS/transform-function/translate3d)(tx, 0, 0)。
 
@@ -181,7 +180,7 @@ div {
 
 ### 结果
 
-{{EmbedLiveSample("Examples", 250, 250)}}
+{{EmbedLiveSample("示例", 250, 250)}}
 
 ## 规范
 
@@ -191,7 +190,7 @@ div {
 
 {{Compat}}
 
-## 参阅
+## 参见
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}

@@ -3,11 +3,9 @@ title: border-radius
 slug: Web/CSS/border-radius
 ---
 
-{{ CSSRef("CSS Borders") }}
+{{CSSRef("CSS Borders")}}
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-radius`** 允许你设置元素的外边框圆角。当使用一个半径时确定一个圆形，当使用两个半径时确定一个椭圆。这个（椭）圆与边框的交集形成圆角效果。
-
-![Images of CSS3 rounded corners: no rounding, rounding w/ an arc of circle, rounding w/ an arc of ellipse](/files/3638/border-radius-sh.png)
 
 {{EmbedInteractiveExample("pages/css/border-radius.html")}}
 
@@ -18,25 +16,25 @@ slug: Web/CSS/border-radius
 当 {{Cssxref("border-collapse")}} 的值为 `collapse` 时，`border-radius` 属性不会被应用到表格元素上。
 
 _radius_
-![all-corner.png](/@api/deki/files/6138/=all-corner.png)
+![all-corner.png](all-corner.png)
 可以是 {{ cssxref("&lt;length&gt;") }} 或者 {{cssxref("&lt;percentage&gt;")}}，表示边框四角的圆角半径。只在单值语法中使用。
 _top-left-and-bottom-right_
-![top-left-bottom-right.png](/@api/deki/files/6141/=top-left-bottom-right.png)
+![top-left-bottom-right.png](top-left-bottom-right.png)
 可以是 {{ cssxref("&lt;length&gt;") }} 或者 {{cssxref("&lt;percentage&gt;")}}，表示边框左上角和右下角的圆角半径。只在双值语法中使用。
 _top-right-and-bottom-left_
-![top-right-bottom-left.png](/@api/deki/files/6143/=top-right-bottom-left.png)
+![top-right-bottom-left.png](top-right-bottom-left.png)
 可以是 {{ cssxref("&lt;length&gt;") }} 或者 {{cssxref("&lt;percentage&gt;")}}，表示边框右上角和左下角的圆角半径。只在双值或三值语法中使用。
 _top-left_
-![top-left.png](/@api/deki/files/6142/=top-left.png)
+![top-left.png](top-left.png)
 可以是 {{ cssxref("&lt;length&gt;") }} 或者 {{cssxref("&lt;percentage&gt;")}}，表示边框左上角的圆角半径。只在三值或四值语法中使用。
 _top-right_
-![top-right.png](/@api/deki/files/6144/=top-right.png)
+![top-right.png](top-right.png)
 可以是 {{ cssxref("&lt;length&gt;") }} 或者 {{cssxref("&lt;percentage&gt;")}}，表示边框右上角的圆角半径。只在四值语法中使用。
 _bottom-right_
-![bottom-rigth.png](/@api/deki/files/6140/=bottom-rigth.png)
+![bottom-rigth.png](bottom-right.png)
 可以是 {{ cssxref("&lt;length&gt;") }} 或者 {{cssxref("&lt;percentage&gt;")}}，表示边框右下角的圆角半径。只在三值或四值语法中使用。
 _bottom-left_
-![bottom-left.png](/@api/deki/files/6139/=bottom-left.png)
+![bottom-left.png](bottom-left.png)
 可以是 {{ cssxref("&lt;length&gt;") }} 或者 {{cssxref("&lt;percentage&gt;")}}，表示边框左下角的圆角半径。只在四值语法中使用。
 `inherit`
 表示四个值都从父元素计算值继承。
@@ -53,10 +51,10 @@ border-radius: 1em/5em;
 
 /* 等价于： */
 
-border-top-left-radius:     1em 5em;
-border-top-right-radius:    1em 5em;
+border-top-left-radius: 1em 5em;
+border-top-right-radius: 1em 5em;
 border-bottom-right-radius: 1em 5em;
-border-bottom-left-radius:  1em 5em;
+border-bottom-left-radius: 1em 5em;
 ```
 
 ```css
@@ -64,10 +62,10 @@ border-radius: 4px 3px 6px / 2px 4px;
 
 /* 等价于： */
 
-border-top-left-radius:     4px 2px;
-border-top-right-radius:    3px 4px;
+border-top-left-radius: 4px 2px;
+border-top-right-radius: 3px 4px;
 border-bottom-right-radius: 6px 2px;
-border-bottom-left-radius:  3px 4px;
+border-bottom-left-radius: 3px 4px;
 ```
 
 ## 形式定义
@@ -81,39 +79,46 @@ border-bottom-left-radius:  3px 4px;
 ## 示例
 
 ```html hidden
-  <pre id="example-1">
+<pre id="example-1">
 border: solid 10px;
 border-radius: 10px 40px 40px 10px;
-  </pre>
-  <pre id="example-2">
+  </pre
+>
+<pre id="example-2">
 border: groove 1em red;
 border-radius: 2em;
-  </pre>
-  <pre id="example-3">
+  </pre
+>
+<pre id="example-3">
 background: gold;
 border: ridge gold;
 border-radius: 13em/3em;
-  </pre>
-  <pre id="example-4">
+  </pre
+>
+<pre id="example-4">
 border: none;
 border-radius: 40px 10px;
 background: gold;
-  </pre>
-  <pre id="example-5">
+  </pre
+>
+<pre id="example-5">
 border: none;
 border-radius: 50%;
 background: burlywood;
-  </pre>
-  <pre id="example-6">
+  </pre
+>
+<pre id="example-6">
 border: dotted;
 border-width: 10px 4px;
 border-radius: 10px 40px;
-  </pre>
-  <pre id="example-7">
+  </pre
+>
+<pre id="example-7">
 border: dashed;
 border-width: 2px 4px;
 border-radius: 40px;
-  </pre>
+  </pre
+>
 ```
 
 ```css hidden

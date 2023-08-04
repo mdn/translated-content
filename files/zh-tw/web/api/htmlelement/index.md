@@ -75,23 +75,19 @@ _Inherits properties from its parent, {{domxref("Element")}}, and implements tho
 Most events properties, of the form `onXYZ`, are defined on the {{domxref("GlobalEventHandlers")}} or {{domxref("TouchEventHandlers")}}, implemented by `HTMLElement`. A few more are specific to `HTMLElement`.
 
 - {{ domxref("HTMLElement.oncopy") }} {{ non-standard_inline() }}
-  - : Returns the event handling code for the `copy` event ({{bug("280959")}}).
+  - : Returns the event handling code for the `copy` event ([Firefox bug 280959](https://bugzil.la/280959)).
 - {{ domxref("HTMLElement.oncut") }} {{ non-standard_inline() }}
-  - : Returns the event handling code for the `cut` event ({{bug("280959")}}).
+  - : Returns the event handling code for the `cut` event ([Firefox bug 280959](https://bugzil.la/280959)).
 - {{ domxref("HTMLElement.onpaste") }} {{ non-standard_inline() }}
-  - : Returns the event handling code for the `paste` event ({{bug("280959")}}).
+  - : Returns the event handling code for the `paste` event ([Firefox bug 280959](https://bugzil.la/280959)).
 - {{domxref("TouchEventHandlers.ontouchstart")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchstart")}} event.
+  - : Returns the event handling code for the [`touchstart`](/zh-TW/docs/Web/API/Element/touchstart_event) event.
 - {{domxref("TouchEventHandlers.ontouchend")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchend")}} event.
+  - : Returns the event handling code for the [`touchend`](/zh-TW/docs/Web/API/Element/touchend_event) event.
 - {{domxref("TouchEventHandlers.ontouchmove")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchmove")}} event.
-- {{domxref("TouchEventHandlers.ontouchenter")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchenter")}} event.
-- {{domxref("TouchEventHandlers.ontouchleave")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchleave")}} event.
+  - : Returns the event handling code for the [`touchmove`](/zh-TW/docs/Web/API/Element/touchmove_event) event.
 - {{domxref("TouchEventHandlers.ontouchcancel")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchcancel")}} event.
+  - : Returns the event handling code for the [`touchcancel`](/zh-TW/docs/Web/API/Element/touchcancel_event) event.
 
 ## 方法
 

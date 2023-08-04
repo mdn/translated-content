@@ -35,9 +35,7 @@ var promise = readableStreamBYOBReader.cancel(reason);
 
 ## 仕様
 
-| 仕様                                                                         | 状態                         | コメント |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#byob-reader-cancel","cancel()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

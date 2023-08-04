@@ -1,6 +1,8 @@
 ---
-title: Text.splitText()
+title: "Text: splitText() メソッド"
 slug: Web/API/Text/splitText
+l10n:
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
 {{APIRef("DOM")}}
@@ -15,7 +17,7 @@ slug: Web/API/Text/splitText
 
 ## 構文
 
-```js
+```js-nolint
 newNode = textNode.splitText(offset)
 ```
 
@@ -44,7 +46,7 @@ newNode = textNode.splitText(offset)
 ```
 
 ```js
-const p = document.querySelector('p');
+const p = document.querySelector("p");
 
 // <p> の中身をテキストノードとして取得
 const foobar = p.firstChild;
@@ -54,8 +56,8 @@ const foobar = p.firstChild;
 const bar = foobar.splitText(3);
 
 // <u> 要素を作成して ' new content ' を含める
-const u = document.createElement('u');
-u.appendChild(document.createTextNode(' new content '));
+const u = document.createElement("u");
+u.appendChild(document.createTextNode(" new content "));
 
 // <u> を 'bar' の前に追加
 p.insertBefore(u, bar);

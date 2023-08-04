@@ -5,7 +5,7 @@ slug: Web/API/Window/beforeinstallprompt_event
 
 {{ ApiRef() }}
 
-**`Window.onbeforeinstallprompt`** 属性是一个事件处理程序，用于处理一个{{event("beforeinstallprompt")}}, 当一个 Web 清单存在时，它将在移动设备上发送，但是在提示用户将网站保存到主屏幕之前。
+**`Window.onbeforeinstallprompt`** 属性是一个事件处理程序，用于处理一个 `beforeinstallprompt`，当一个 Web 清单存在时，它将在移动设备上发送，但是在提示用户将网站保存到主屏幕之前。
 
 ## 句法
 
@@ -21,11 +21,11 @@ The following example uses the beforeinstallprompt function to verify that it is
 
 ```js
 let isTooSoon = true;
-window.addEventListener("beforeinstallprompt", function(e) {
+window.addEventListener("beforeinstallprompt", function (e) {
   if (isTooSoon) {
     e.preventDefault(); // Prevents prompt display
     // Prompt later instead:
-    setTimeout(function() {
+    setTimeout(function () {
       isTooSoon = false;
       e.prompt(); // Shows prompt
     }, 10000);
@@ -40,7 +40,7 @@ window.addEventListener("beforeinstallprompt", function(e) {
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - {{domxref("BeforeInstallPromptEvent.prompt")}}
 - {{domxref("BeforeInstallPromptEvent")}}

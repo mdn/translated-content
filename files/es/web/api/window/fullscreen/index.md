@@ -1,11 +1,8 @@
 ---
 title: window.fullScreen
 slug: Web/API/Window/fullScreen
-tags:
-  - Referencia_DOM_de_Gecko
-  - páginas_a_traducir
-translation_of: Web/API/Window/fullScreen
 ---
+
 {{APIRef}}
 
 ### Resumen
@@ -38,4 +35,4 @@ DOM nivel 0. `window.fullScreen` no forma parte de ninguna especificación W3C.
 
 ### Notas
 
-El funcionamiento de esta propiedad es fiable sólo en Mozilla 1.9 (Firefox 3) y posteriores. Mozilla 1.8 y versiones anteriores manejan esta propiedad pero el valor devuelto es siempre `false`, aún cuando la ventana está en modo pantalla completa ({{ Bug(127013) }}).
+El funcionamiento de esta propiedad es fiable sólo en Mozilla 1.9 (Firefox 3) y posteriores. Mozilla 1.8 y versiones anteriores manejan esta propiedad pero el valor devuelto es siempre `false`, aún cuando la ventana está en modo pantalla completa ([Error 127013 en Firefox](https://bugzil.la/127013)).

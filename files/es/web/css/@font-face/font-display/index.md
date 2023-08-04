@@ -1,17 +1,8 @@
 ---
 title: font-display
 slug: Web/CSS/@font-face/font-display
-tags:
-  - '@font-face'
-  - CSS
-  - Descriptor CSS
-  - Experimental
-  - Fuentes CSS
-  - Referencia
-  - font-display
-  - web fonts
-translation_of: Web/CSS/@font-face/font-display
 ---
+
 {{CSSRef}}
 
 El descriptor `font-display` determina cómo se muestra una fuente basándose en cuándo está descargada y lista para usarse.
@@ -62,8 +53,9 @@ font-display: optional;
 ```css
 @font-face {
   font-family: ExampleFont;
-  src: url(/path/to/fonts/examplefont.woff) format('woff'),
-       url(/path/to/fonts/examplefont.eot) format('eot');
+  src:
+    url(/path/to/fonts/examplefont.woff) format("woff"),
+    url(/path/to/fonts/examplefont.eot) format("eot");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
@@ -72,10 +64,8 @@ font-display: optional;
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                           | Comentario         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS4 Fonts', '#font-display-desc', 'font-display')}} | {{Spec2('CSS4 Fonts')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.font-face.font-display")}}
+{{Compat}}

@@ -24,7 +24,7 @@ return [[expression]];
 
 ```js
 function square(x) {
-   return x * x;
+  return x * x;
 }
 var demo = square(3);
 // demo will equal 9
@@ -47,7 +47,7 @@ return x + y / 3;
 `return` 宣告會受[自動插入分號](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)（automatic semicolon insertion，ASI）影響。No line terminator is allowed between the `return` keyword and the expression.
 
 ```js
-return
+return;
 a + b;
 ```
 
@@ -60,14 +60,12 @@ a + b;
 
 主控台會警告「unreachable code after return statement」（在 return 宣告後面有無法抵達的程式碼）。
 
-> **備註：** 從 Gecko 40 {{geckoRelease(40)}} 開始，如果主控台發現在 return 宣告後面有無法抵達的程式碼，就會顯示警告。
+> **備註：** 從 Gecko 40 開始，如果主控台發現在 return 宣告後面有無法抵達的程式碼，就會顯示警告。
 
 要避免 ASI 問題，可以添加括號：
 
 ```js
-return (
-  a + b
-);
+return a + b;
 ```
 
 ## 示例
@@ -78,14 +76,15 @@ return (
 
 ```js
 function counter() {
-  for (var count = 1; ; count++) {  // 無限迴圈
-    console.log(count + 'A'); // 直到 5
-      if (count === 5) {
-        return;
-      }
-      console.log(count + 'B');  // 直到 4
+  for (var count = 1; ; count++) {
+    // 無限迴圈
+    console.log(count + "A"); // 直到 5
+    if (count === 5) {
+      return;
     }
-  console.log(count + 'C');  // 永不顯示
+    console.log(count + "B"); // 直到 4
+  }
+  console.log(count + "C"); // 永不顯示
 }
 
 counter();
@@ -108,7 +107,9 @@ counter();
 
 ```js
 function magic(x) {
-  return function calc(x) { return x * 42; };
+  return function calc(x) {
+    return x * 42;
+  };
 }
 
 var answer = magic();

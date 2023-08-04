@@ -1,5 +1,5 @@
 ---
-title: ':right'
+title: ":right"
 slug: Web/CSS/:right
 ---
 
@@ -20,7 +20,9 @@ slug: Web/CSS/:right
 
 ## 構文
 
-{{csssyntax}}
+```
+:right
+```
 
 ## 例
 

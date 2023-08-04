@@ -1,5 +1,5 @@
 ---
-title: 'Window: orientationchange イベント'
+title: "Window: orientationchange イベント"
 slug: Web/API/Window/orientationchange_event
 ---
 
@@ -50,9 +50,7 @@ window.onorientationchange = function() {
 
 ## 仕様書
 
-| Specification                                                                                    | Status                   |
-| ------------------------------------------------------------------------------------------------ | ------------------------ |
-| {{SpecName('Compat', '#event-orientationchange', 'orientationchange')}} | {{Spec2('Compat')}} |
+{{Specifications}}
 
 ## ブラウザーの対応
 

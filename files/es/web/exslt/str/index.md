@@ -1,8 +1,8 @@
 ---
 title: Strings (str)
 slug: Web/EXSLT/str
-translation_of: Web/EXSLT/str
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}
 
 El paquete Strings de EXSLT proporciona funciones que permiten la manipulación

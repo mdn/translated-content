@@ -1,15 +1,8 @@
 ---
 title: Transfer-Encoding
 slug: Web/HTTP/Headers/Transfer-Encoding
-tags:
-  - Castellano Transfer encoding
-  - HTTP Header
-  - Métodos HTTP
-  - Referências
-  - header
-  - transfer encoding español
-translation_of: Web/HTTP/Headers/Transfer-Encoding
 ---
+
 El encabezado Transfer-Encoding especifica la forma de codificación utilizada para transferir de forma segura el {{Glossary("Payload body", "cuerpo del payload")}} al usuario.
 
 > **Nota:** [HTTP/2](https://wikipedia.org/wiki/HTTP/2) no admite el mecanismo de codificación de transferencia fragmentada de HTTP 1.1, ya que proporciona sus propios mecanismos, más eficientes, para la transmisión de datos.
@@ -18,9 +11,9 @@ El encabezado Transfer-Encoding especifica la forma de codificación utilizada p
 
 Cuando está presente en una respuesta a una solicitud {{HTTPMethod ("HEAD")}} que no tiene cuerpo, indica el valor que se habría aplicado al mensaje {{HTTPMethod ("GET")}} correspondiente.
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | yes                             |
 
 ## Sintaxis
 
@@ -72,15 +65,13 @@ Network\r\n
 
 ## Especificaciones
 
-| Especificación                                               | Título                                                             |
-| ------------------------------------------------------------ | ------------------------------------------------------------------ |
-| {{RFC("7230", "Transfer-Encoding", "3.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+{{Specifications}}
 
-## Compatibilidad con el Navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Transfer-Encoding")}}
+{{Compat}}
 
-## Ver además:
+## Ver además
 
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Content-Encoding")}}

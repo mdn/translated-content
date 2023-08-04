@@ -1,16 +1,8 @@
 ---
-title: '-webkit-mask-repeat-x'
+title: "-webkit-mask-repeat-x"
 slug: Web/CSS/-webkit-mask-repeat-x
-tags:
-  - CSS
-  - Máscara CSS
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - No estandar
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/-webkit-mask-repeat-x
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen
@@ -56,12 +48,12 @@ La propiedad CSS `-webkit-mask-repeat-x` especifica si una imagen de máscara se
 
 ```css
 .exampleone {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-x: repeat;
 }
 
 .exampletwo {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-x: no-repeat;
 }
 ```
@@ -72,16 +64,16 @@ Es posible especificar un `<repeat-style>` diferente para cada una de las imáge
 
 ```css
 .examplethree {
-  -webkit-mask-image: url('mask1.png'), url('mask2.png');
+  -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-repeat-x: repeat, space;
 }
 ```
 
 Cada imagen se asocia con el correspondiente estilo de repetición, desde la primera hasta la última y siguiendo el orden que se ha establecido.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-webkit-mask-repeat-x")}}
+{{Compat}}
 
 ## Ver además
 

@@ -1,16 +1,9 @@
 ---
-title: '<nobr> : l''élément de non-rupture de texte (obsolète)'
+title: "<nobr> : l'élément de non-rupture de texte (obsolète)"
 slug: Web/HTML/Element/nobr
-tags:
-  - Element
-  - HTML
-  - Non-standard
-  - Obsolete
-  - Web
-translation_of: Web/HTML/Element/nobr
 ---
 
-{{HTMLRef}}{{deprecated_header}}{{non-standard_header}}
+{{HTMLSidebar}}{{deprecated_header}}{{non-standard_header}}
 
 L'élément HTML **`<nobr>`** évite qu'un texte soit coupé par un retour à la ligne automatique ; il est donc affiché sur une seule ligne. Il peut être alors nécessaire d'utiliser les barres de défilement pour lire le texte en intégralité.
 

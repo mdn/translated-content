@@ -1,21 +1,8 @@
 ---
 title: <mark>
 slug: Web/HTML/Element/mark
-tags:
-  - Destaque
-  - Elemento HTML
-  - HTML
-  - HTML5
-  - HTML:Elemento
-  - Internet
-  - Marcação
-  - Rede
-  - Referencia
-  - Referência HTML
-  - Semántica HTML a nivel de texto
-  - Web
-translation_of: Web/HTML/Element/mark
 ---
+
 ## Sumário
 
 O **Elemento HMTL `<mark>` **representa um trecho de destaque em um texto, por exemplo, uma sequência de texto marcado como referência, devido à sua relevância em um contexto particular. Por Exemplo, pode ser utilizado em uma página que mostra os resultados de uma busca onde todas as instâncias da palavra pesquisadas receberam destaque.
@@ -58,4 +45,4 @@ Este elemento inclue apenas [atributos Globais](/pt-BR/docs/HTML/Global_attribut
 
 - Outros [text-level semantics elements](/pt-BR/docs/HTML/Text-level_semantics_elements): {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("abbr")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("i")}}, {{HTMLElement("b")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

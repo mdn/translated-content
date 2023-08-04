@@ -1,6 +1,6 @@
 ---
 title: CSS 雑題
-slug: Web/CSS/CSS_Miscellaneous
+slug: Web/CSS/CSS_miscellaneous
 ---
 
 {{CSSRef}}

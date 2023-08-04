@@ -1,18 +1,8 @@
 ---
 title: browsingData.removeCookies()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeCookies
-browser-compat: webextensions.api.browsingData.removeCookies
-translation-of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
 ---
+
 {{AddonSidebar()}}
 
 Limpa os cookies do navegador.
@@ -28,8 +18,8 @@ Esta é uma função assíncrona que retorna uma [`Promise`](/pt-BR/docs/Web/Jav
 
 ```js
 let removing = browser.browsingData.removeCookies(
-  removalOptions            // objeto RemovalOptions
-)
+  removalOptions, // objeto RemovalOptions
+);
 ```
 
 ### Parâmetros
@@ -58,11 +48,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removeCookies(
-  {since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removeCookies({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Remove todos os cookies:
@@ -80,8 +70,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeCookies({}).
-then(onRemoved, onError);
+browser.browsingData.removeCookies({}).then(onRemoved, onError);
 ```
 
 ## Compatibilidade com navegadores

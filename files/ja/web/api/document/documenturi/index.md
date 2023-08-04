@@ -10,7 +10,7 @@ slug: Web/API/Document/documentURI
 ## 構文
 
 ```js
-const uri = document.documentURI
+const uri = document.documentURI;
 ```
 
 ## 例
@@ -25,7 +25,7 @@ document.getElementById("url").textContent = document.documentURI;
 
 ```html
 <p id="urlText">
-  URL:<br/>
+  URL:<br />
   <span id="url">URL goes here</span>
 </p>
 ```
@@ -36,9 +36,7 @@ document.getElementById("url").textContent = document.documentURI;
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#dom-document-documenturi','documentURI')}} | {{Spec2('DOM WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

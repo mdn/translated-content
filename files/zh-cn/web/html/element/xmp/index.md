@@ -3,7 +3,7 @@ title: <xmp>
 slug: Web/HTML/Element/xmp
 ---
 
-{{HTMLRef}} {{deprecated_header}}
+{{HTMLSidebar}} {{deprecated_header}}
 
 ## 概述
 

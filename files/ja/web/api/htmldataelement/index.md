@@ -1,35 +1,34 @@
 ---
 title: HTMLDataElement
 slug: Web/API/HTMLDataElement
+l10n:
+  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLDataElement`** インターフェースは{{HTMLElement("data")}}要素を扱うための（継承される通常の{{domxref("HTMLElement")}}より高度な）固有の属性を提供します。
+**`HTMLDataElement`** インターフェイスは、（継承によって利用できる通常の {{domxref("HTMLElement")}} のものの他に）{{HTMLElement("data")}} 要素を操作するための特殊なプロパティを提供します。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## 属性
 
-_親である{{domxref("HTMLElement")}}から属性を継承しています。_
+_親である {{domxref("HTMLElement")}} から継承しているプロパティがあります。_
 
 - {{domxref("HTMLDataElement.value")}}
-  - : は{{domxref("DOMString")}}であり，{{htmlattrxref("value", "data")}} HTML 属性に含まれる機械可読な要素の値を示しています。
+  - : HTML の [`value`](/ja/docs/Web/HTML/Element/data#value) 属性を反映する、要素の機械可読な値が入った文字列です。
 
 ## メソッド
 
-_固有のメソッドなし。親である{{domxref("HTMLElement")}}からメソッドを継承しています。_
+_固有のメソッドはありません。親である {{domxref("HTMLElement")}} から継承しているメソッドがあります。_
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', "#htmldataelement", "HTMLDataElement")}}                                 | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-data-element', 'HTMLDataElement')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.HTMLDataElement")}}
+{{Compat}}
 
 ## 関連情報
 

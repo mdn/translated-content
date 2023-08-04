@@ -1,8 +1,8 @@
 ---
 title: Keep-Alive
 slug: Web/HTTP/Headers/Keep-Alive
-translation_of: Web/HTTP/Headers/Keep-Alive
 ---
+
 {{HTTPSidebar}}{{Non-standard_header}}
 
 **`Keep-Alive`** 일반 헤더는 송신자가 연결에 대한 타임아웃과 요청 최대 개수를 어떻게 정했는지에 대해 알려줍니다.

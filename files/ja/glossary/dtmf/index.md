@@ -11,5 +11,5 @@ slug: Glossary/DTMF
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "DTMF")}}
-- Wikipedia 上の {{Interwiki("wikipedia", "ダイヤルパルス")}}
+- Wikipedia 上の [DTMF](https://ja.wikipedia.org/wiki/DTMF)
+- Wikipedia 上の [ダイヤルパルス](https://ja.wikipedia.org/wiki/ダイヤルパルス)

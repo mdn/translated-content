@@ -1,14 +1,8 @@
 ---
 title: String.prototype.charAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charAt
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
 ---
+
 {{JSRef}}
 
 O método **`charAt()`** retorna o caractere especificado a partir de uma string.

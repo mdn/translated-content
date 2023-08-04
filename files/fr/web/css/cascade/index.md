@@ -1,8 +1,6 @@
 ---
 title: Introduction à la cascade CSS
 slug: Web/CSS/Cascade
-translation_of: Web/CSS/Cascade
-spec-urls: https://drafts.csswg.org/css-cascade/
 l10n:
   sourceCommit: 193543a2af9350e76864a93bb751270979305cd0
 ---
@@ -57,23 +55,23 @@ L'algorithme de la cascade détermine quelle valeur s'applique pour chaque propr
 
 2. **Origine et importance**&nbsp;: Ensuite, ces règles sont triées selon leur importance, c'est-à-dire si elles sont suivies ou non par `!important`, et selon leur origine. En ignorant les couches pour le moment, on obtient l'ordre suivant pour la cascade&nbsp;:
 
-    |   Ordre (du plus faible au plus élevé)  | Origine                        | Importance   |
-    | --------------------------------------- | ------------------------------ | ------------ |
-    | 1                                       | Agent utilisateur (navigateur) | normal       |
-    | 2                                       | Utilisatrice/utilisateur       | normal       |
-    | 3                                       | Site                           | normal       |
-    | 4                                       | Animations CSS @keyframe       |              |
-    | 5                                       | Site                           | `!important` |
-    | 6                                       | Utilisatrice/utilisateur       | `!important` |
-    | 7                                       | Agent utilisateur (navigateur) | `!important` |
-    | 8                                       | Transitions CSS                |              |
+   | Ordre (du plus faible au plus élevé) | Origine                        | Importance   |
+   | ------------------------------------ | ------------------------------ | ------------ |
+   | 1                                    | Agent utilisateur (navigateur) | normal       |
+   | 2                                    | Utilisatrice/utilisateur       | normal       |
+   | 3                                    | Site                           | normal       |
+   | 4                                    | Animations CSS @keyframe       |              |
+   | 5                                    | Site                           | `!important` |
+   | 6                                    | Utilisatrice/utilisateur       | `!important` |
+   | 7                                    | Agent utilisateur (navigateur) | `!important` |
+   | 8                                    | Transitions CSS                |              |
 
 3. **Spécificité**&nbsp;: En cas d'égalité pour une même origine, [la spécificité](/fr/docs/Web/CSS/Specificity) d'une règle est considérée pour déterminer laquelle choisir. La spécificité des sélecteurs est comparée, et c'est la déclaration avec la plus grande spécificité qui l'emporte.
 4. **Ordre d'apparence**&nbsp;: Si plusieurs valeurs pour une même propriété sont décrites dans des règles avec des sélecteurs de même spécificité, c'est la dernière déclaration, dans l'ordre des styles, qui est appliquée.
 
 La cascade progresse dans l'ordre croissant des précédences, les animations ont donc la précédence sur les valeurs normales, qu'elles soient déclarées par l'utilisatrice ou l'utilisateur, le site, ou l'agent utilisateur. Les valeurs importantes l'emportent sur les animations, et les transitions l'emportent sur les valeurs importantes.
 
-> **Note :**  **Transitions et animations**
+> **Note :** **Transitions et animations**
 >
 > Les valeurs de propriétés définies par une animation avec [`@keyframes`](/fr/docs/Web/CSS/@keyframes) sont plus importantes que celles de styles normaux (c'est-à-dire sans [`!important`](/fr/docs/Web/CSS/Specificity#lexception_!important)).
 >
@@ -137,8 +135,8 @@ li {
 
 ```html
 <ul>
-<li class="specific">1<sup>er</sup></li>
-<li>2<sup>e</sup></li>
+  <li class="specific">1<sup>er</sup></li>
+  <li>2<sup>e</sup></li>
 </ul>
 ```
 
@@ -146,14 +144,14 @@ Dans ce cas, les règles des déclarations pour `li` et `.specific` devraient s'
 
 Comme précédemment, on a quatre étapes dans l'algorithme de la cascade, dans cet ordre&nbsp;:
 
-  1. Pertinence
-  2. Origine et importance
-  3. Spécificité
-  4. Ordre d'apparence
+1. Pertinence
+2. Origine et importance
+3. Spécificité
+4. Ordre d'apparence
 
 La règle avec une marge de `1px` s'applique aux médias imprimés. Par manque de _pertinence_ du type de média, on la retire des règles à considérer.
 
-Aucune déclaration n'est marquée avec `!important`,  l'ordre porté par la précédence indique que les feuilles de style du site l'emportent sur celles de l'utilisatrice ou de l'utilisateur qui l'emportent sur celles de l'agent utilisateur. Selon _l'origine et l'importance_, la règle à `1em` de la feuille de style de l'utilisatrice ou de l'utilisateur, ainsi que la règle à `10px` qui provient de l'agent utilisateur sont retirées des règles à considérer.
+Aucune déclaration n'est marquée avec `!important`, l'ordre porté par la précédence indique que les feuilles de style du site l'emportent sur celles de l'utilisatrice ou de l'utilisateur qui l'emportent sur celles de l'agent utilisateur. Selon _l'origine et l'importance_, la règle à `1em` de la feuille de style de l'utilisatrice ou de l'utilisateur, ainsi que la règle à `10px` qui provient de l'agent utilisateur sont retirées des règles à considérer.
 
 On notera que, bien que la feuille de style de l'utilisatrice ou de l'utilisateur utilise un sélecteur `.specific` pour la règle avec la valeur `1em`, qui a une spécificité supérieure, il s'agit d'une déclaration normale pour cette origine. Ainsi, elle a une précédence inférieure à celles des styles du site et est donc éliminée lors de l'étape de l'algorithme pour l'origine et l'importance, avant même que la spécificité ait un rôle à jouer.
 
@@ -195,7 +193,7 @@ margin-left: 3px;
 
 ## Styles du site&nbsp;: styles en incise HTML, couches, et précédence
 
-[Le tableau de la section précédente](#ordre_de_la_cascade) nous fournit un aperçu sur l'ordre de précédence. On y trouvait deux lignes pour chaque origine, l'une pour les déclarations normales et la deuxième pour les déclarations importantes. En réalité, la précédence est plus nuancée pour chacune de ces origines. En effet, les styles peuvent être contenus au sein de couche. De plus, pour les styles provenant du site, se pose également la question de la place  dans l'ordre de la cascade pour les styles déclarés dans le document HTML.
+[Le tableau de la section précédente](#ordre_de_la_cascade) nous fournit un aperçu sur l'ordre de précédence. On y trouvait deux lignes pour chaque origine, l'une pour les déclarations normales et la deuxième pour les déclarations importantes. En réalité, la précédence est plus nuancée pour chacune de ces origines. En effet, les styles peuvent être contenus au sein de couche. De plus, pour les styles provenant du site, se pose également la question de la place dans l'ordre de la cascade pour les styles déclarés dans le document HTML.
 
 L'ordre de déclaration des couches a son importance pour la détermination de la précédence. Les styles normaux situés dans une couche l'emportent sur les styles déclarés dans les couches antérieures. Les styles normaux déclarés en dehors de toute couche l'emportent sur les styles normaux situés dans des couches, quelle que soit la spécificité.
 
@@ -223,20 +221,20 @@ Et dans le corps du document, on a des styles en incise (<i lang="en">inline sty
 
 Dans le bloc de code CSS précédent, on a trois couches de cascade qui sont créées et nommées dans cet ordre&nbsp;: A, B, et C. Trois feuilles de styles ont directement été importées dans des couches et deux ont été importées sans créer de couches ou sans y être affectées. Dans la liste qui suit, «&nbsp;Tous les styles sans couche&nbsp;» (au quatrième range) inclut les styles de ces deux feuilles de styles et les éventuels blocs CSS supplémentaires qui ne seraient pas rattachés à une couche. On a en plus deux styles en incise, une déclaration normale pour `line-height` et une déclaration importante pour `text-decoration`&nbsp;:
 
-|  Ordre (du plus faible au plus élevé)    | Style du site               | Importance   |
-| ---------------------------------------- | --------------------------- | ------------ |
-| 1                                        | A - première couche         | normal       |
-| 2                                        | B - deuxième couche         | normal       |
-| 3                                        | C - dernière couche         | normal       |
-| 4                                        | Tous les styles sans couche | normal       |
-| 5                                        | Styles en incise            | normal       |
-| 6                                        | Animations                  |              |
-| 7                                        | Tous les styles sans couche | `!important` |
-| 8                                        | C - dernière couche         | `!important` |
-| 9                                        | B - deuxième couche         | `!important` |
-| 10                                       | A - première couche         | `!important` |
-| 11                                       | Styles en incise            | `!important` |
-| 12                                       | Transitions                 |              |
+| Ordre (du plus faible au plus élevé) | Style du site               | Importance   |
+| ------------------------------------ | --------------------------- | ------------ |
+| 1                                    | A - première couche         | normal       |
+| 2                                    | B - deuxième couche         | normal       |
+| 3                                    | C - dernière couche         | normal       |
+| 4                                    | Tous les styles sans couche | normal       |
+| 5                                    | Styles en incise            | normal       |
+| 6                                    | Animations                  |              |
+| 7                                    | Tous les styles sans couche | `!important` |
+| 8                                    | C - dernière couche         | `!important` |
+| 9                                    | B - deuxième couche         | `!important` |
+| 10                                   | A - première couche         | `!important` |
+| 11                                   | Styles en incise            | `!important` |
+| 12                                   | Transitions                 |              |
 
 Pour tous les types d'origine, les styles normaux (sans importance particulière) contenus dans les couches ont la précédence la plus faible. Dans notre exemple, les styles normaux associés à la première couche déclarée (A) ont une précédence inférieure aux styles normaux déclarés dans la deuxième couche déclarée (B), qui ont une précédence inférieure aux styles normaux de la troisième couche déclarée (C). Tous ces styles présents dans des couches ont une précédence inférieure aux styles normaux qui ne sont pas dans des couches. Dans notre exemple, cela inclut les styles normaux de `stylesSansCouche.css`, `plusDeStylesSansCouche.css`, ainsi que la règle sur la propriété `color` de `p` écrite dans l'élément `<style>`.
 
@@ -417,20 +415,32 @@ p {
   animation: infinite 5s alternate nomRepete;
 }
 @keyframes nomRepete {
-  from {font-size: 1rem;}
-  to {font-size: 3rem;}
+  from {
+    font-size: 1rem;
+  }
+  to {
+    font-size: 3rem;
+  }
 }
 
 @layer A {
   @keyframes nomRepete {
-    from {background-color: yellow;}
-    to {background-color: orange;}
+    from {
+      background-color: yellow;
+    }
+    to {
+      background-color: orange;
+    }
   }
 }
 @layer B {
   @keyframes nomRepete {
-    from {color: white;}
-    to {color: black;}
+    from {
+      color: white;
+    }
+    to {
+      color: black;
+    }
   }
 }
 ```

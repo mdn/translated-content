@@ -1,8 +1,8 @@
 ---
 title: Symbol.replace
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 ---
+
 {{JSRef}}
 
 O símbolo **`Symbol.replace`** é conhecido por especificar o método que substitui as substrings conrrespondentes de uma string. Essa função é chamada pelo método {{jsxref("String.prototype.replace()")}}.
@@ -21,18 +21,18 @@ class CustomReplacer {
     this.value = value;
   }
   [Symbol.replace](string) {
-    return string.replace(this.value, '#!@?');
+    return string.replace(this.value, "#!@?");
   }
 }
 
-console.log('football'.replace(new CustomReplacer('foo')));
+console.log("football".replace(new CustomReplacer("foo")));
 // resultado esperado: "#!@?tball"
 ```
 
 ## Especificações
 
-| Especificação                                                                        |
-| ------------------------------------------------------------------------------------ |
+| Especificação                                                    |
+| ---------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-symbol.replace', 'Symbol.replace')}} |
 
 ## Compatibilidade com navegadores

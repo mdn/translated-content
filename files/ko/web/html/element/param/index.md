@@ -1,15 +1,9 @@
 ---
-title: '<param>: 객체 매개변수 요소'
+title: "<param>: 객체 매개변수 요소"
 slug: Web/HTML/Element/param
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/param
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<param>` 요소**는 {{HTMLElement("object")}} 요소의 매개변수를 정의합니다.
 
@@ -54,7 +48,7 @@ translation_of: Web/HTML/Element/param
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("name")}}
   - : 매개변수의 이름.
@@ -73,7 +67,7 @@ translation_of: Web/HTML/Element/param
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.param")}}
+{{Compat}}
 
 ## 같이 보기
 

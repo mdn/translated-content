@@ -60,10 +60,7 @@ html, body, svg {
 
 ## 仕様
 
-| 仕様書                                                                                                       | 策定状況                         | コメント  |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------- |
-| {{SpecName("Filters 1.0", "#element-attrdef-fedisplacementmap-scale", "scale")}} | {{Spec2("Filters 1.0")}} | No change |
-| {{SpecName("SVG1.1", "filters.html#feDisplacementMapScaleAttribute", "scale")}}     | {{Spec2("SVG1.1")}}         | 初期定義  |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

@@ -2,6 +2,7 @@
 title: get TypedArray[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 ---
+
 {{JSRef}}
 
 **`TypedArray[@@species]`** 접근자 속성은 [형식화 배열](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_객체)의 생성자를 반환합니다.

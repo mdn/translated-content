@@ -1,13 +1,9 @@
 ---
 title: <td>
 slug: Web/HTML/Element/td
-tags:
-  - Element
-  - HTML
-  - Reference
-translation_of: Web/HTML/Element/td
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 _Table cell_ [HTML](/ko/docs/Web/HTML) 요소 (**`<td>`**) 는 데이터를 포함하는 표의 셀을 정의합니다. 이것은 *표 모델*에 참여합니다.
 
@@ -18,8 +14,8 @@ _Table cell_ [HTML](/ko/docs/Web/HTML) 요소 (**`<td>`**) 는 데이터를 포�
 | [컨텐츠 범주](/ko/docs/Web/HTML/Content_categories) | 없음.                                                                                                                                                                                                          |
 | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 허용된 컨텐츠                                       | 플로우 컨텐츠                                                                                                                                                                                                  |
-| 태그 생략                                           | 시작 태그는 있어야 합니다. 종료 태그는 요소 바로 뒤에 {{HTMLElement("th")}}이나 {{HTMLElement("td")}} 요소가 뒤따르거나, 부모 요소에 더 이상 다른 데이터가 없을 경우 생략 가능합니다.            |
-| 허용된 부모 요소                                    | {{HTMLElement("tr")}} 요소                                                                                                                                                                              |
+| 태그 생략                                           | 시작 태그는 있어야 합니다. 종료 태그는 요소 바로 뒤에 {{HTMLElement("th")}}이나 {{HTMLElement("td")}} 요소가 뒤따르거나, 부모 요소에 더 이상 다른 데이터가 없을 경우 생략 가능합니다.                          |
+| 허용된 부모 요소                                    | {{HTMLElement("tr")}} 요소                                                                                                                                                                                     |
 | 표준 문서                                           | [HTML5, section 4.9.9](http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element) ([HTML4.01, section 11.2.6](http://www.w3.org/TR/REC-html40/struct/tables.html#h-11.2.6)) |
 
 ## 속성
@@ -86,10 +82,10 @@ Please see the {{HTMLElement("table")}} page for examples on `<td>`.
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.td")}}
+{{Compat}}
 
 ## 같이 보기
 
 - 다른 표 관련 요소들: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

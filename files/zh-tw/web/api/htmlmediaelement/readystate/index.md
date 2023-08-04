@@ -3,7 +3,9 @@ title: HTMLMediaElement.readyState
 slug: Web/API/HTMLMediaElement/readyState
 ---
 
-{{APIRef("HTML DOM")}}**`HTMLMediaElement.readyState` **屬性回傳目前媒體的就緒狀態。
+{{APIRef("HTML DOM")}}
+
+**`HTMLMediaElement.readyState`** 屬性回傳目前媒體的就緒狀態。
 
 ## 語法
 
@@ -29,19 +31,17 @@ var readyState = audioOrVideo.readyState;
 
 ```html
 <audio id="example" preload="auto">
- <source src="sound.ogg" type="audio/ogg" />
+  <source src="sound.ogg" type="audio/ogg" />
 </audio>
 ```
 
 ```js
-var obj = document.getElementById('example');
+var obj = document.getElementById("example");
 
-obj.addEventListener('loadeddata', function() {
-
-  if(obj.readyState >= 2) {
+obj.addEventListener("loadeddata", function () {
+  if (obj.readyState >= 2) {
     obj.play();
   }
-
 });
 ```
 

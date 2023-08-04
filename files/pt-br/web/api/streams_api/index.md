@@ -1,16 +1,8 @@
 ---
 title: Streams API
 slug: Web/API/Streams_API
-tags:
-  - API
-  - Experimental
-  - Landing
-  - NeedsTranslation
-  - Reference
-  - Streams
-  - TopicStub
-translation_of: Web/API/Streams_API
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}A API Streams permite que o JavaScript acesse programaticamente fluxos de dados recebidos pela rede e os processe conforme desejado pelo desenvolvedor.
 
 ## Conceitos e Uso
@@ -21,7 +13,7 @@ Mas isto nunca esteve disponível para JavaScript antes. Anteriormente, se quis�
 
 Com o Streams disponível para JavaScript, tudo isso muda - agora você pode começar a processar dados brutos com JavaScript bit a bit assim que estiverem disponíveis no lado do cliente, sem a necessidade de gerar um buffer, string ou blob.
 
-![](https://mdn.mozillademos.org/files/15817/Concept.png)
+![](concept.png)
 
 Também há mais vantagens - você pode detectar quando os fluxos começam ou terminam, encadeia os fluxos juntos, trata os erros e cancela os fluxos quando necessário e reage à velocidade em que o fluxo está sendo lido.
 
@@ -93,17 +85,13 @@ Examples from other developers:
 
 - [Progress Indicators with Streams, Service Workers, & Fetch](https://fetch-progress.anthum.com/).
 
-## Specifications
+## Especificações
 
-| Specification                    | Status                       | Comment             |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Streams')}} | {{Spec2('Streams')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-### WritableStream
-
-{{Compat("api.WritableStream")}}
+{{Compat}}
 
 ## See also
 

@@ -1,5 +1,5 @@
 ---
-title: ':only-child'
+title: ":only-child"
 slug: Web/CSS/:only-child
 ---
 
@@ -18,7 +18,9 @@ p:only-child {
 
 ## 構文
 
-{{csssyntax}}
+```
+:only-child
+```
 
 ## 例
 

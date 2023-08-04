@@ -30,13 +30,13 @@ document.domain = domainString;
     - 该文件没有参考上下文
     - 该文档的有效域为 null
     - 给定值不等于文档的有效域（或者它不是该域的可注册域后缀）
-    - The {{httpheader('Feature-Policy/document-domain','document-domain')}} {{HTTPHeader("Feature-Policy")}}一启用
+    - The {{httpheader('Permissions-Policy/document-domain','document-domain')}} {{HTTPHeader("Permissions-Policy")}}一启用
 
-## 例子
+## 示例
 
 ### 获取域名
 
-对于 URI `http://developer.mozilla.org/en-US/docs/Web`，此示例将 currentDomain 设置为字符串 `developer.mozilla.org`。
+对于 URI `http://developer.mozilla.org/zh-CN/docs/Web`，此示例将 currentDomain 设置为字符串 `developer.mozilla.org`。
 
 ```js
 var currentDomain = document.domain;
@@ -65,7 +65,7 @@ if (document.domain == badDomain) {
 
 ### Firefox 备注
 
-如果当前文档的域无法识别，那么 domain 属性会返回 null。但这个表现在 Firefox 62 时发生了更改——详见 {{bug(819475)}} 中的讨论。
+如果当前文档的域无法识别，那么 domain 属性会返回 null。但这个表现在 Firefox 62 时发生了更改——详见 [Firefox bug 819475](https://bugzil.la/819475) 中的讨论。
 
 在[根域名](/zh-CN/docs/XPCOM_Interface_Reference/nsIEffectiveTLDService#getBaseDomain.28.29)范围内，Mozilla 允许你把 domain 属性的值设置为它的上一级域。例如，在 developer.mozilla.org 域内，可以把 domain 设置为 "mozilla.org" 但不能设置为 "mozilla.com" 或者"org"。
 

@@ -1,15 +1,15 @@
 ---
 title: Content-Length
 slug: Web/HTTP/Headers/Content-Length
-translation_of: Web/HTTP/Headers/Content-Length
 ---
+
 {{HTTPSidebar}}
 
 El encabezado de entidad **`Content-Length`** indica el tamaño de la entidad-cuerpo, en bytes, enviado al destinatario.
 
-| Tipo de cabecera                                             | {{Glossary("Entity header")}} |
-| ------------------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Nombre de cabecera prohibido")}} | si                                       |
+| Tipo de cabecera                             | {{Glossary("Entity header")}} |
+| -------------------------------------------- | ----------------------------- |
+| {{Glossary("Nombre de cabecera prohibido")}} | si                            |
 
 ## Sintaxis
 
@@ -24,13 +24,11 @@ Content-Length: <longitud>
 
 ## Especificaciones
 
-| Especificación                                           | Título                                                                                   |
-| -------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| {{RFC("7230", "Content-Length", "3.3.2")}} | Protocolo de Transferencia de Hipertexto (HTTP/1.1): Sintaxis y enrutamiento de mensajes |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("http.headers.Content-Length")}}
+{{Compat}}
 
 ## Véase también
 

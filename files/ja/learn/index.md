@@ -65,25 +65,25 @@ MDN のこのエリアの目的は、あなたを「初心者」から「エキ�
 2. コンピューターで[コマンドプロンプト](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) またはターミナル ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)) を開きます。
 3. 学習エリアのリポジトリーを、コマンドプロンプト/ターミナルが指している現在位置の learning-area というフォルダーにコピーするには、下記のコマンドを使います。
 
-    ```bash
-    git clone https://github.com/mdn/learning-area
-    ```
+   ```bash
+   git clone https://github.com/mdn/learning-area
+   ```
 
-4. （Finder/エクスプローラーや [cd コマンド](https://en.wikipedia.org/wiki/Cd_(command))を使用して）そのディレクトリーに入ると、ファイルが見つかります。
+4. （Finder/エクスプローラーや [cd コマンド](<https://en.wikipedia.org/wiki/Cd_(command)>)を使用して）そのディレクトリーに入ると、ファイルが見つかります。
 
 `learning-area` リポジトリーを、GitHub の master バージョンになされたあらゆる変更で更新するには、以下の手順でできます。
 
 1. コマンドプロンプト/ターミナルで、 `cd` を使って `learning-area` ディレクトリーの中に移動します。例えば、上位のディレクトリーにいる場合は以下のようにします。
 
-    ```bash
-    cd learning-area
-    ```
+   ```bash
+   cd learning-area
+   ```
 
 2. 下記のコマンドでリポジトリーを更新します。
 
-    ```bash
-    git pull
-    ```
+   ```bash
+   git pull
+   ```
 
 ## 連絡方法
 
@@ -110,6 +110,6 @@ MDN のこのエリアの目的は、あなたを「初心者」から「エキ�
 - [freeCodeCamp.org](https://www.freecodecamp.org/)
   - : ウェブ開発を学習するチュートリアルやプロジェクトのあるインタラクティブなサイト。
 - [Web literacy map](https://learning.mozilla.org/web-literacy/)
-  - : 入門レベルのウェブリテラシーや  21 世紀のスキル向けのフレームワークで、カテゴリーごとにソートされた教科にもアクセスできます。
+  - : 入門レベルのウェブリテラシーや 21 世紀のスキル向けのフレームワークで、カテゴリーごとにソートされた教科にもアクセスできます。
 - [Edabit](https://edabit.com/challenges)
   - : 数千のインタラクティブな JavaScript チャレンジ。

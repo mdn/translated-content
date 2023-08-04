@@ -1,29 +1,32 @@
 ---
 title: Headers()
 slug: Web/API/Headers/Headers
+l10n:
+  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
 
 {{APIRef("Fetch")}}
 
-**`Headers()`** コンストラクターは新しい {{domxref("Headers")}} オブジェクトを生成します。
+**`Headers()`** コンストラクターは、新しい {{domxref("Headers")}} オブジェクトを生成します。
 
-## 文法
+## 構文
 
-```
-var myHeaders = new Headers(init);
+```js-nolint
+new Headers()
+new Headers(init)
 ```
 
 ### 引数
 
 - `init` {{optional_inline}}
-  - : `Headers` に前もって設定したい [HTTP headers](/ja/docs/Web/HTTP/Headers) を含むオブジェクト。これは {{domxref("ByteString")}} を持つ単純なオブジェクトリテラルか、既存の `Headers` オブジェクトのどちらかです。最後の例では、新しい `Headers` オブジェクトは既存の `Headers` オブジェクトからデータを継承します。
+  - : `Headers` オブジェクトに事前に入力したい、任意の [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)を含むオブジェクトです。これは文字列の値を持つ単純なオブジェクトリテラル、名前と値の組の配列（各組は 2 つの要素を持つ文字列の配列）、あるいは既存の `Headers` オブジェクトになります。最後の場合は、新しい `Headers` オブジェクトは既存の `Headers` オブジェクトからそのデータをコピーします。
 
 ## 例
 
 簡単に空の `Headers` オブジェクトを生成できます。
 
 ```js
-var myHeaders = new Headers(); // Currently empty
+const myHeaders = new Headers(); // Currently empty
 ```
 
 {{domxref("Headers.append")}} を使用してヘッダーを追加できます。
@@ -33,32 +36,40 @@ myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.get('Content-Type'); // Returns 'image/jpeg'
 ```
 
-または、`Headers` オブジェクトの生成時に必要なヘッダーを追加することもできます。次のスニペットでは、新しい {{domxref("Headers")}} を作成し、コンストラクターに init オブジェクトを引数として渡してヘッダーを追加しています。
+または、`Headers` オブジェクトの生成時に必要なヘッダーを追加することもできます。次のスニペットでは、新しい {{domxref("Headers")}} を作成し、コンストラクターに初期化オブジェクトを引数として渡してヘッダーを追加しています。
 
 ```js
-var httpHeaders = { 'Content-Type' : 'image/jpeg', 'Accept-Charset' : 'utf-8', 'X-My-Custom-Header' : 'Zeke are cool' };
-var myHeaders = new Headers(httpHeaders);
+const httpHeaders = { 'Content-Type' : 'image/jpeg', 'X-My-Custom-Header' : 'Zeke are cool' };
+const myHeaders = new Headers(httpHeaders);
 ```
 
-最初の `Headers` を init オブジェクトとして渡して、別の `Headers` オブジェクトを生成できます。
+最初の `Headers` を初期化オブジェクトとして渡して、別の `Headers` オブジェクトを生成できます。
 
 ```js
-var secondHeadersObj = new Headers(myHeaders);
+const secondHeadersObj = new Headers(myHeaders);
 secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inherits it from the first headers object
+```
+
+また、`Headers` オブジェクトを作成する際に、二次元の配列を使用して、同じ値を持つ複数のヘッダーを追加することができます。以下のスニペットでは、コンストラクターの引数に初期化配列を渡して、複数の `Set-Cookie` ヘッダーを持つ新しい {{domxref("Headers")}} オブジェクトを作成しています。
+
+```js
+const headers = [
+  ['Set-Cookie', 'greeting=hello'],
+  ['Set-Cookie', 'name=world']
+];
+const myHeaders = new Headers(headers);
 ```
 
 ## 仕様書
 
-| 仕様書                                                           | 状態                     | 備考 |
-| ---------------------------------------------------------------- | ------------------------ | ---- |
-| {{SpecName('Fetch','#dom-headers','Headers()')}} | {{Spec2('Fetch')}} |      |
+{{Specifications}}
 
-## ブラウザの対応
+## ブラウザーの互換性
 
-{{Compat("api.Headers.headers")}}
+{{Compat}}
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/ServiceWorker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

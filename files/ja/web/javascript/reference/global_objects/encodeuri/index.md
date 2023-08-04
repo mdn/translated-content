@@ -91,9 +91,7 @@ function fixedEncodeURI(str) {
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-encodeuri-uri', 'encodeURI')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

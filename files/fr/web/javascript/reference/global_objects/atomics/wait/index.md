@@ -1,14 +1,6 @@
 ---
 title: Atomics.wait()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/wait
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/wait
 ---
 
 {{JSRef}}
@@ -69,13 +61,11 @@ Atomics.notify(int32, 0, 1);
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires                     |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-atomics.wait', 'Atomics.wait')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics.wait")}}
+{{Compat}}
 
 ## Voir aussi
 

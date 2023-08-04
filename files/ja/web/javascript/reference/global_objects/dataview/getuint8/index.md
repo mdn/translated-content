@@ -45,9 +45,7 @@ dataview.getUint8(1); // 0
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getuint8', 'DataView.prototype.getUint8')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

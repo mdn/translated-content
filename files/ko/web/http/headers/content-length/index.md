@@ -1,44 +1,56 @@
 ---
 title: Content-Length
 slug: Web/HTTP/Headers/Content-Length
-translation_of: Web/HTTP/Headers/Content-Length
+l10n:
+  sourceCommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
 ---
+
 {{HTTPSidebar}}
 
-**`Content-Length`** 개체 헤더는 수신자에게 보내지는, 바이트 단위를 가지는 개체 본문의 크기를 나타냅니다.
+**`Content-Length`** 헤더는 수신자에게 전송되는 메시지 본문의 크기(바이트)를 나타냅니다.
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Entity header")}}</td>
+      <th scope="row">헤더 타입</th>
+      <td>
+        {{Glossary("Request header", "요청 헤더")}},
+        {{Glossary("Response header", "응답 헤더")}},
+        {{Glossary("Payload header")}}
+      </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <th scope="row">{{Glossary("Forbidden header name", "금지된 헤더 이름")}}</th>
+      <td>네</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("CORS-safelisted response header")}}
+      </th>
+      <td>네</td>
     </tr>
   </tbody>
 </table>
 
-## 문법
+## 구문
 
-```
+```http
 Content-Length: <length>
 ```
 
-## 디렉티브
+## 지시어
 
 - \<length>
-  - : octets에 대한 십진수 단위의 길이.
+  - : 8진수에 대한 십진수 단위의 길이.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Content-Length")}}
+{{Compat}}
 
-## 함께 참고할 내용
+## 같이 보기
 
 - {{HTTPHeader("Transfer-Encoding")}}

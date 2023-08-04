@@ -1,6 +1,8 @@
 ---
 title: ArrayBuffer.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
+l10n:
+  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
 ---
 
 {{JSRef}}
@@ -11,26 +13,24 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
 
 ## 解説
 
-`byteLength` プロパティはアクセサープロパティで、 set アクセサー関数が `undefined`、つまりこのプロパティは読み取り専用です。値は配列が構築されるときに設定され、変更することができません。この `ArrayBuffer` が取り外された場合、このプロパティは 0 を返します。
+`byteLength` プロパティはアクセサープロパティで、設定アクセサー関数が `undefined` であるため、このプロパティは読み取ることしかできません。値は配列が構築されるときに設定され、変更することができません。この `ArrayBuffer` が取り外された場合、このプロパティは 0 を返します。
 
 ## 例
 
 ### byteLength の使用
 
 ```js
-var buffer = new ArrayBuffer(8);
+const buffer = new ArrayBuffer(8);
 buffer.byteLength; // 8
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-arraybuffer.prototype.bytelength', 'ArrayBuffer.prototype.byteLength')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.ArrayBuffer.byteLength")}}
+{{Compat}}
 
 ## 関連情報
 

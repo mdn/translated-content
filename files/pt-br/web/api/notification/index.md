@@ -1,13 +1,8 @@
 ---
 title: Notificações
 slug: Web/API/Notification
-tags:
-  - API
-  - Interface
-  - Notificações
-translation_of: Web/API/Notification
-original_slug: Web/API/notificacoes
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 A interface da [API de Notificações](/pt-BR/docs/Web/API/Notifications_API) é usada para configurar e exibir notificações na área de trabalho do usuário. A aparência e algumas funcionalidades específicas das notificações variam entre as plataformas mas geralmente eles fornecem uma forma assíncrona de prover informações para o usuário.
@@ -89,7 +84,7 @@ Estes métodos estão disponíveis apenas no próprio objeto `Notification`.
 
 ### Métodos de instância
 
-Estas propriedades estão disponíveis apenas no objeto Notification ou através do seu [`prototype`](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). O objeto de notificação também herda a interface {{domxref("EventTarget")}}.
+Estas propriedades estão disponíveis apenas no objeto Notification ou através do seu [`prototype`](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). O objeto de notificação também herda a interface {{domxref("EventTarget")}}.
 
 - {{domxref("Notification.close()")}}
   - : Programaticamente fecha uma notificação.

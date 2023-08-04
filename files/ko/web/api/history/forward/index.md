@@ -1,15 +1,8 @@
 ---
 title: History.forward()
 slug: Web/API/History/forward
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Method
-  - Reference
-translation_of: Web/API/History/forward
 ---
+
 {{APIRef("DOM")}}
 
 **`History.forward()`** 메서드는 브라우저가 세션 기록의 바로 앞 페이지로 이동하도록 지시합니다. {{domxref("History.go", "history.go(1)")}}과 같습니다. 다음 페이지가 없는 경우 아무것도 하지 않습니다.
@@ -19,7 +12,7 @@ translation_of: Web/API/History/forward
 ## 구문
 
 ```js
-history.forward()
+history.forward();
 ```
 
 ## 예제
@@ -29,15 +22,15 @@ history.forward()
 ### HTML
 
 ```html
-<button id='go-forward'>앞으로 가기!</button>
+<button id="go-forward">앞으로 가기!</button>
 ```
 
 ### JavaScript
 
 ```js
-document.getElementById('go-forward').addEventListener('click', e => {
+document.getElementById("go-forward").addEventListener("click", (e) => {
   window.history.forward();
-})
+});
 ```
 
 ## 명세

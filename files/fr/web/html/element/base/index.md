@@ -1,17 +1,9 @@
 ---
-title: '<base> : l''élément pour l''URL de base du document'
+title: "<base> : l'élément pour l'URL de base du document"
 slug: Web/HTML/Element/base
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Reference
-translation_of: Web/HTML/Element/base
-browser-compat: html.elements.base
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément **`<base>`** définit l'URL de base à utiliser pour recomposer toutes les URL relatives contenues dans un document. Il ne peut y avoir qu'un seul élément `<base>` au sein d'un document.
 
@@ -110,15 +102,15 @@ Les ancres d'une page ([`<a>`](/fr/docs/Web/HTML/Element/a)), par exemple `<a hr
 Les balises [Open Graph](https://ogp.me/) ne tiennent pas de compte de l'élément `<base>`, et doivent toujours avoir des URL absolues complètes. Par exemple :
 
 ```html
-<meta property="og:image" content="https://example.com/thumbnail.jpg">
+<meta property="og:image" content="https://example.com/thumbnail.jpg" />
 ```
 
 ## Exemples
 
 ```html
-<base href="https://www.example.com/">
-<base target="_blank">
-<base target="_top" href="https://example.com/">
+<base href="https://www.example.com/" />
+<base target="_blank" />
+<base target="_top" href="https://example.com/" />
 ```
 
 ## Spécifications

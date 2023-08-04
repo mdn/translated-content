@@ -1,7 +1,6 @@
 ---
 title: Gamepad
 slug: Web/API/Gamepad
-translation_of: Web/API/Gamepad
 ---
 
 {{APIRef("Gamepad API")}}
@@ -10,7 +9,7 @@ L'interface **`Gamepad`** de l'[API Gamepad](/fr/docs/Web/API/Gamepad_API) défi
 
 Un objet `Gamepad` peut être retourné de deux manières :
 
-- Via la propriété `gamepad` des événements {{event("gamepadconnected")}} et {{event("gamepaddisconnected")}}.
+- Via la propriété `gamepad` des événements [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) et [`gamepadisdisconnected`](/fr/docs/Web/API/Window/gamepadisdisconnected_event).
 - Ou en prenant n'importe quelle position dans le tableau retourné par la méthode {{domxref("Navigator.getGamepads()")}}.
 
 ## Propriétés
@@ -46,10 +45,14 @@ Les interfaces suivantes sont définies dans la spécification `GamepadExtension
 ## Exemples
 
 ```js
-window.addEventListener("gamepadconnected", function(event) {
-  console.log("Contrôleur connecté à %d: %s. %d boutons, %d axes.",
-  event.gamepad.index, event.gamepad.id,
-  event.gamepad.buttons.length, event.gamepad.axes.length);
+window.addEventListener("gamepadconnected", function (event) {
+  console.log(
+    "Contrôleur connecté à %d: %s. %d boutons, %d axes.",
+    event.gamepad.index,
+    event.gamepad.id,
+    event.gamepad.buttons.length,
+    event.gamepad.axes.length,
+  );
 });
 ```
 

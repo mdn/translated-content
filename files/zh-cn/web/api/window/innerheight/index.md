@@ -56,7 +56,7 @@ var intOuterFramesetHeight = top.innerHeight;
 
 下面的示意图展示了 `outerHeight` 和 `innerHeight` 两者的区别。
 
-![innerHeight vs outerHeight illustration](/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png)
+![innerHeight vs outerHeight illustration](firefoxinnervsouterheight2.png)
 
 ## 浏览器兼容性
 

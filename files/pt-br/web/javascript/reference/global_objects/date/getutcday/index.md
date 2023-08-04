@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.getUTCDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
 ---
+
 {{JSRef}}
 
 O método **`getUTCDay()`** retorna o dia da semana na data especificada de acordo com o horário universal, onde 0 representa domingo.
@@ -34,11 +34,11 @@ var diaDaSemana = hoje.getUTCDay();
 
 ## Especificações
 
-| Especificação                                                                                                | Situação                 | Comentário                                         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.17', 'Date.prototype.getUTCDay')}}                     | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.getutcday', 'Date.prototype.getUTCDay')}} | {{Spec2('ES6')}}     |                                                    |
+| Especificação                                                                    | Situação           | Comentário                                         |
+| -------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                              | {{Spec2('ES1')}}   | Definição inicial. Implementado no JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.17', 'Date.prototype.getUTCDay')}}              | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-date.prototype.getutcday', 'Date.prototype.getUTCDay')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade com navegadores
 

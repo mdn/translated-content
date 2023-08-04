@@ -11,10 +11,10 @@ JavaScript のようなプログラミング言語において、ラッパー (w
 
 ### 一般知識
 
-Wikipedia の {{Interwiki("wikipedia", "Wrapper function")}}
+Wikipedia の [Wrapper function](https://en.wikipedia.org/wiki/Wrapper_function) (英語)
 
 1. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("API")}}
-    2. {{Glossary("Class")}}
-    3. {{Glossary("Function")}}
+   1. {{Glossary("API")}}
+   2. {{Glossary("Class")}}
+   3. {{Glossary("Function")}}

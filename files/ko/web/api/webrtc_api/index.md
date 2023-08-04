@@ -1,20 +1,8 @@
 ---
 title: WebRTC API
 slug: Web/API/WebRTC_API
-tags:
-  - API
-  - Audio
-  - Landing
-  - Media
-  - NeedsTranslation
-  - Networking
-  - TopicStub
-  - Video
-  - WebRTC
-  - WebRTC API
-  - streaming
-translation_of: Web/API/WebRTC_API
 ---
+
 {{APIRef("WebRTC")}}
 
 **WebRTC**(Web Real-Time Communication)은 웹 애플리케이션과 사이트가 중간자 없이 브라우저 간에 오디오나 영상 미디어를 포착하고 마음대로 스트림할 뿐 아니라, 임의의 데이터도 교환할 수 있도록 하는 기술입니다. WebRTC를 구성하는 일련의 표준들은 플러그인이나 제 3자 소프트웨어 설치 없이 종단 간 데이터 공유와 화상 회의를 가능하게 합니다.
@@ -72,7 +60,7 @@ WebRTC는 다양한 작업을 수행하기 위해 함께 동작하는 인터페�
 - {{domxref("RTCTrackEvent")}}
   - : 새롭게 수신된 {{domxref ( "MediaStreamTrack")}}이 생성되고 관련 {{domxref ( "RTCRtpReceiver")}} 개체가 {{domxref ( "RTCPeerConnection")}} 개체에 추가되었음을 나타냅니다.
 - {{DOMxRef("RTCSctpTransport")}}
-  - : 스트림 제어 전송 프로토콜(_Stream Control Transmission Protocol,_ **{{Glossary("SCTP")}}**) 전송을 설명하는 정보를 제공하고, 모든 [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection) 데이터 채널에 대한 SCTP 패킷이 송수신되는 기본 데이터그램 전송 보안 계층 프로토콜(Datagram Transport Layer Security, **{{Glossary("DTLS")}}**) 전송에 접근하기 위한 방법을 제공합니다.
+  - : 스트림 제어 전송 프로토콜(_Stream Control Transmission Protocol,_ **{{Glossary("SCTP")}}**) 전송을 설명하는 정보를 제공하고, 모든 [`RTCPeerConnection`](/ko/docs/Web/API/RTCPeerConnection) 데이터 채널에 대한 SCTP 패킷이 송수신되는 기본 데이터그램 전송 보안 계층 프로토콜(Datagram Transport Layer Security, **{{Glossary("DTLS")}}**) 전송에 접근하기 위한 방법을 제공합니다.
 
 #### Dictionaries
 
@@ -165,7 +153,7 @@ WebRTC API에는 보안 및 식별자를 관리하기위한 여러 인터페이�
 - [An Offer/Answer Model with Session Description Protocol (SDP)](https://tools.ietf.org/html/rfc3264)
 - [Session Traversal Utilities for NAT (STUN) Extension for Third Party Authorization](https://datatracker.ietf.org/doc/draft-ietf-tram-turn-third-party-authz/)
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

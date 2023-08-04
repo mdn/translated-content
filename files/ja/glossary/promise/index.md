@@ -13,7 +13,7 @@ slug: Glossary/Promise
 
 ### 一般知識
 
-- {{interwiki("wikipedia", "Future_パターン", "Future パターン")}}
+- [Future パターン](https://ja.wikipedia.org/wiki/Future_パターン)
 
 ### 技術的な参照情報
 

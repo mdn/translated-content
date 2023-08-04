@@ -1,13 +1,8 @@
 ---
-title: '-webkit-mask-box-image'
+title: "-webkit-mask-box-image"
 slug: Web/CSS/-webkit-mask-box-image
-tags:
-  - CSS
-  - Diseño
-  - Referencia
-  - Web
-translation_of: Web/CSS/-webkit-mask-box-image
 ---
+
 {{ CSSRef() }}
 
 {{ Non-standard_header() }}
@@ -44,6 +39,7 @@ Where:
 - \<gradient>
   - : La función -webkit-gradient que se usará como imagen de máscara.
 - none
+
   - : Para especificar que la caja del borde no va a tener imagen de máscara.
 
 - \<length>
@@ -61,17 +57,21 @@ Where:
 
 ```css
 .exampleone {
-    -webkit-mask-box-image: url('mask.png');
+  -webkit-mask-box-image: url("mask.png");
 }
 
 .exampletwo {
-    -webkit-mask-box-image: url('logo.png') 100 100 0 0 round round;
+  -webkit-mask-box-image: url("logo.png") 100 100 0 0 round round;
 }
 ```
 
-## Compatibilidad con los distintos navegadores
+## Especificaciones
 
-{{Compat("css.properties.-webkit-mask-box-image")}}
+No forma parte de ningún estándar.
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver además
 

@@ -39,9 +39,7 @@ if (RegExp.prototype.flags === undefined) {
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("ESDraft", "#sec-get-regexp.prototype.flags", "RegExp.prototype.flags")}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

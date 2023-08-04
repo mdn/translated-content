@@ -1,22 +1,19 @@
 ---
 title: Constructeur WebAssembly.CompileError()
 slug: WebAssembly/JavaScript_interface/CompileError/CompileError
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError/CompileError
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError/CompileError
-browser-compat: javascript.builtins.WebAssembly.CompileError.CompileError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 Le constructeur **`WebAssembly.CompileError()`** crée un nouvel objet `CompileError` WebAssembly qui représente une erreur qui se produit lors du décodage ou de la validation du code WebAssembly.
 
 ## Syntaxe
 
 ```js
-new WebAssembly.CompileError()
-new WebAssembly.CompileError(message)
-new WebAssembly.CompileError(message, nomFichier)
-new WebAssembly.CompileError(message, nomFichier, numeroLigne)
+new WebAssembly.CompileError();
+new WebAssembly.CompileError(message);
+new WebAssembly.CompileError(message, nomFichier);
+new WebAssembly.CompileError(message, nomFichier, numeroLigne);
 ```
 
 ### Paramètres
@@ -36,15 +33,15 @@ Le fragment de code qui suit crée une nouvelle instance de `CompileError` et af
 
 ```js
 try {
-  throw new WebAssembly.CompileError('Coucou', 'unFichier', 10);
+  throw new WebAssembly.CompileError("Coucou", "unFichier", 10);
 } catch (e) {
   console.log(e instanceof CompileError); // true
-  console.log(e.message);                 // "Coucou"
-  console.log(e.name);                    // "CompileError"
-  console.log(e.fileName);                // "unFichier"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // renvoie l'emplacement du code exécuté
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "CompileError"
+  console.log(e.fileName); // "unFichier"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // renvoie l'emplacement du code exécuté
 }
 ```
 
@@ -58,6 +55,6 @@ try {
 
 ## Voir aussi
 
-- La page  [WebAssembly](/fr/docs/WebAssembly)
+- La page [WebAssembly](/fr/docs/WebAssembly)
 - [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
 - [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)

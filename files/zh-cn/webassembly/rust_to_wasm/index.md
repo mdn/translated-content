@@ -1,6 +1,6 @@
 ---
 title: 编译 Rust 为 WebAssembly
-slug: WebAssembly/Rust_to_wasm
+slug: WebAssembly/Rust_to_Wasm
 ---
 
 {{WebAssemblySidebar}}
@@ -272,24 +272,24 @@ cd site
 接下来，我们需要配置 Webpack。创建 `webpack.config.js` 并输入：
 
 ```js
-const path = require('path');
+const path = require("path");
 module.exports = {
   entry: "./index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
   },
-  mode: "development"
+  mode: "development",
 };
 ```
 
 现在我们需要一个 HTML 文件。创建一个`index.html`并写入如下内容：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>hello-wasm example</title>
   </head>
   <body>
@@ -302,7 +302,7 @@ module.exports = {
 
 ```js
 const js = import("./node_modules/@yournpmusername/hello-wasm/hello_wasm.js");
-js.then(js => {
+js.then((js) => {
   js.greet("WebAssembly");
 });
 ```
@@ -318,7 +318,7 @@ npm install
 npm run serve
 ```
 
-这将启动一个 Web 服务器。访问 [http://localhost:8080](http://localhost:8080)，您应该会在屏幕上看到一个警告框，其中包含 `Hello, WebAssembly!` ！我们已经成功地从 JavaScript 调用了 Rust，并从 Rust 调用了 JavaScript。
+这将启动一个 Web 服务器。访问 `http://localhost:8080`，你应该会在屏幕上看到一个内容为 `Hello, WebAssembly!` 的警告框。我们已经成功地从 JavaScript 调用了 Rust，并从 Rust 调用了 JavaScript。
 
 ## 结论
 

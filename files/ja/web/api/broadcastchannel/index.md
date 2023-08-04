@@ -1,62 +1,57 @@
 ---
 title: BroadcastChannel
 slug: Web/API/BroadcastChannel
+l10n:
+  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
 {{APIRef("Broadcast Channel API")}}
 
-**`BroadcastChannel`** インターフェイスは、特定の{{glossary("origin","オリジン")}}の{{glossary("browsing context","閲覧コンテキスト")}}が購読できる名前付きチャネルを表します。 それは、同じオリジンの異なるドキュメント間（異なるウィンドウ、タブ、フレーム、iframe）の通信を可能にします。 メッセージは、チャンネルをリッスンしているすべての `BroadcastChannel` オブジェクトで発生する {{event("message")}} イベントを介して放送されます。
+**`BroadcastChannel`** インターフェイスは、特定の{{glossary("origin","オリジン")}}の{{glossary("browsing context","閲覧コンテキスト")}}が加入できる名前付きチャンネルを表します。これにより、同じオリジンの異なる文書間（異なるウィンドウ、タブ、フレーム、iframe）の通信を可能にします。 メッセージは、チャンネルに参加しているすべての `BroadcastChannel` オブジェクトで発生する {{domxref("BroadcastChannel/message_event", "message")}} イベントを介して配信されます。
 
 {{AvailableInWorkers}}
 
-## コンストラクタ
+{{InheritanceDiagram}}
+
+## コンストラクター
 
 - {{domxref("BroadcastChannel.BroadcastChannel", "BroadcastChannel()")}}
   - : 名前付きチャンネルにリンクするオブジェクトを作成します。
 
-## プロパティ
+## インスタンスプロパティ
 
 _このインターフェイスは、その親である {{domxref("EventTarget")}} からもプロパティを継承します。_
 
-- {{domxref("BroadcastChannel.name")}}
-  - : チャネルの名前である {{domxref("DOMString")}} を返します。
+- {{domxref("BroadcastChannel.name")}} {{ReadOnlyInline}}
+  - : 文字列で、チャンネルの名前であるを返します。
 
-### イベントハンドラ
-
-- {{domxref("BroadcastChannel.onmessage")}}
-  - : このオブジェクトで {{event("message")}} イベントが発生したときに実行する関数を指定する {{event("Event_handlers", "event handler")}} プロパティ。
-- {{domxref("BroadcastChannel.onmessageerror")}}
-  - : {{event("Event_handlers", "event handler")}} は、{{domxref("MessageError")}} 型の {{domxref("MessageEvent")}} が発生したとき、つまり逆シリアル化できないメッセージを受け取ったときに呼び出されます。
-
-## メソッド
+## インスタンスメソッド
 
 _このインターフェイスは、その親である {{domxref("EventTarget")}} からもメソッドを継承しています。_
 
 - {{domxref("BroadcastChannel.postMessage()")}}
-  - : 同じチャンネルをリッスンしている各 BroadcastChannel オブジェクトに、任意の種類のオブジェクトのメッセージを送信します。
+  - : 同じチャンネルに参加しているそれぞれの `BroadcastChannel` オブジェクトに、任意の種類のオブジェクトのメッセージを送信します。
 - {{domxref("BroadcastChannel.close()")}}
-  - : チャネルオブジェクトを閉じます。 これは、新しいメッセージを取得しないことを示し、最終的にガベージコレクションされることを許可します。
+  - : チャンネルオブジェクトを閉じます。 これは、新しいメッセージを取得しないことを示し、最終的にガベージコレクションされることを許可します。
 
 ## イベント
 
-- {{domxref("BroadcastChannel.message_event","message")}}
-  - : メッセージがチャネルに到着したときに発生します。
-    {{domxref("BroadcastChannel.onmessage","onmessage")}} プロパティからも利用できます。
-- {{domxref("BroadcastChannel.messageerror_event","messageerror")}}
+- [`message`](/en-US/docs/Web/API/BroadcastChannel/message_event)
+  - : メッセージがチャンネルに到着したときに発生します。
+    `onmessage` プロパティからも利用できます。
+- [`messageerror`](/en-US/docs/Web/API/BroadcastChannel/messageerror_event)
   - : 逆シリアル化できないメッセージが到着したときに発生します。
-    {{domxref("BroadcastChannel.onmessageerror","onmessageerror")}} プロパティからも利用できます。
+    `onmessageerror` プロパティからも利用できます。
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                     | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "comms.html#broadcastchannel", "BroadcastChannel")}} | {{Spec2('HTML WHATWG')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.BroadcastChannel")}}
+{{Compat}}
 
 ## 関連情報
 
-- ブラウザコンテキスト間でやり取りするもう 1 つの、よりヘビー級の方法: {{domxref("ServiceWorker")}}.
-- [Broadcast Channel API の概要](/ja/docs/Web/API/Broadcast_Channel_API)
+- 閲覧コンテキスト間で通信するための、もう一つの重量級の方法: {{domxref("ServiceWorker")}}.
+- [ブロードキャストチャンネル API の概要](/ja/docs/Web/API/Broadcast_Channel_API)

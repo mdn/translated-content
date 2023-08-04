@@ -1,14 +1,8 @@
 ---
 title: String.prototype.substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/substring
 ---
+
 {{JSRef("Objetos_globales", "String")}}
 
 ## Resumen

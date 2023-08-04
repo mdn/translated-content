@@ -1,7 +1,6 @@
 ---
-title: 'SyntaxError: Unexpected ''#'' used outside of class body'
+title: "SyntaxError: Unexpected '#' used outside of class body"
 slug: Web/JavaScript/Reference/Errors/Hash_outside_class
-translation_of: Web/JavaScript/Reference/Errors/Hash_outside_class
 ---
 
 {{jsSidebar("Errors")}}
@@ -20,7 +19,7 @@ SyntaxError: Unexpected '#' used outside of class body.
 
 ## Quel est le problème&nbsp;?
 
-Un caractère \`#\` a été trouvé dans un contexte inattendu. Cela peut être à du code déplacé qui ne fait plus partie d'une classe, à un commentaire d'interpréteur (<i lang="en">hashbang</i>) situé sur une autre ligne que la première ou à l'oubli de quotes/guillemets autour d'un identifiant du DOM.
+Un caractère `#` a été trouvé dans un contexte inattendu. Cela peut être à du code déplacé qui ne fait plus partie d'une classe, à un commentaire d'interpréteur (<i lang="en">hashbang</i>) situé sur une autre ligne que la première ou à l'oubli de quotes/guillemets autour d'un identifiant du DOM.
 
 ## Exemples
 
@@ -35,30 +34,29 @@ document.querySelector(#un-élément)
 Pourra être corrigé avec&nbsp;:
 
 ```js example-good
-document.querySelector("#un-élément")
+document.querySelector("#un-élément");
 ```
 
 ### En dehors d'une classe
 
 ```js example-bad
 class ClasseAvecChampPrivé {
-  #champPrivé
+  #champPrivé;
 
-  constructor() {
-  }
+  constructor() {}
 }
 
-this.#champPrivé = 42
+this.#champPrivé = 42;
 ```
 
 Cela pourra être corrigé en déplaçant le champ privé à l'intérieur de la classe&nbsp;:
 
 ```js example-good
 class ClasseAvecChampPrivé {
-  #champPrivé
+  #champPrivé;
 
   constructor() {
-    this.#champPrivé = 42
+    this.#champPrivé = 42;
   }
 }
 ```

@@ -1,15 +1,6 @@
 ---
 title: Response
 slug: Web/API/Response
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - Interface
-  - Reference
-  - Response
-translation_of: Web/API/Response
 ---
 
 {{APIRef("Fetch API")}}
@@ -78,13 +69,15 @@ Dans notre [exemple basique d'utilisation de `fetch()`](https://github.com/mdn/f
 Vous remarquerez que puisque nous récupérons une image, nous avons besoin d'utiliser [`Response.blob`](/fr/docs/Web/API/Response/blob) pour attribuer le bon type MIME à la réponse.
 
 ```js
-var myImage = document.querySelector('.my-image');
-fetch('flowers.jpg').then(function(response) {
-  return response.blob();
-}).then(function(blob) {
-  var objectURL = URL.createObjectURL(blob);
-  myImage.src = objectURL;
-});
+var myImage = document.querySelector(".my-image");
+fetch("flowers.jpg")
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (blob) {
+    var objectURL = URL.createObjectURL(blob);
+    myImage.src = objectURL;
+  });
 ```
 
 Vous pouvez également utiliser le constructeur {{domxref("Response.Response()")}} pour créer votre propre objet `Response`:

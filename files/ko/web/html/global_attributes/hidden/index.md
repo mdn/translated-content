@@ -1,12 +1,8 @@
 ---
 title: hidden
 slug: Web/HTML/Global_attributes/hidden
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/hidden
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`hidden`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 해당 요소가 아직, 또는 더 이상 관련이 없음을 나타내는 불리언 특성입니다. 브라우저는 `hidden` 속성을 설정한 요소를 렌더링 하지 않습니다.
@@ -21,7 +17,7 @@ translation_of: Web/HTML/Global_attributes/hidden
 
 예를 들어, `hidden` 특성을 적용한 구획으로 링크하는 `href` 특성은 유효하지 않습니다. 콘텐츠가 사용할 수 없거나 더는 관련이 없으면 연결할 이유도 없기 때문입니다.
 
-하지만, 숨겨진 설명문을 참조하기 위해 ARIA ` aria-``describedby ` 특성을 사용하는 것은 괜찮습니다. 숨겨진 설명문 자체로는 쓸모가 없음을 나타내지만 특정 문맥, 즉 자신이 설명하는 요소에서 참조하는 경우 쓸모가 생깁니다.
+하지만, 숨겨진 설명문을 참조하기 위해 ARIA `aria-describedby` 특성을 사용하는 것은 괜찮습니다. 숨겨진 설명문 자체로는 쓸모가 없음을 나타내지만 특정 문맥, 즉 자신이 설명하는 요소에서 참조하는 경우 쓸모가 생깁니다.
 
 위와 유사하게, `hidden` 특성을 적용한 {{htmlelement("canvas")}} 요소는 스크립트로 작성한 그래픽 엔진에 의해 화면 외 버퍼로 쓰일 수 있고, 숨겨진 양식 요소도 `form` 특성을 통해 양식 컨트롤에서 참조할 수 있습니다.
 
@@ -33,7 +29,7 @@ translation_of: Web/HTML/Global_attributes/hidden
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.hidden")}}
+{{Compat}}
 
 ## 같이 보기
 

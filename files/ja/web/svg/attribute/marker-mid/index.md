@@ -59,10 +59,7 @@ html, body, svg {
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                     | 備考           |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | -------------- |
-| {{SpecName("SVG2", "painting.html#MarkerEndProperty", "marker-mid")}}     | {{Spec2("SVG2")}} | 重要な変更なし |
-| {{SpecName("SVG1.1", "painting.html#MarkerEndProperty", "marker-mid")}} | {{Spec2("SVG1.1")}} | 初回定義       |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

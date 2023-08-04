@@ -1,10 +1,8 @@
 ---
 title: current
 slug: Web/XPath/Functions/current
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/current
 ---
+
 {{ XsltRef() }}
 
 `current` 함수는 XSLT 명령에서 문맥 노드를 얻는 데 쓸 수 있습니다.

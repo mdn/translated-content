@@ -1,11 +1,8 @@
 ---
 title: BatteryManager.level
 slug: Web/API/BatteryManager/level
-page-type: web-api-instance-property
-translation_of: Web/API/BatteryManager/level
-original_slug: Web/API/BatteryManager/level
-browser-compat: api.BatteryManager.level
 ---
+
 {{APIRef("Battery API")}}
 
 La propiedad **`BatteryManager.level`** indica el nivel de carga actual de la batería como un valor entre `0.0` y `1.0`.
@@ -32,19 +29,18 @@ Un número.
 #### JavaScript
 
 ```js
-const getLevel = document.querySelector('#get-level');
-const output = document.querySelector('#output');
+const getLevel = document.querySelector("#get-level");
+const output = document.querySelector("#output");
 
-getLevel.addEventListener('click', async () => {
+getLevel.addEventListener("click", async () => {
   if (!navigator.getBattery) {
-    output.textContent = 'El administrador de batería no es compatible';
+    output.textContent = "El administrador de batería no es compatible";
   } else {
     const manager = await navigator.getBattery();
     const level = manager.level;
     output.textContent = `Battery level: ${level}`;
   }
 });
-
 ```
 
 #### Resultado

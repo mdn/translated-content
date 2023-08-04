@@ -1,11 +1,8 @@
 ---
-title: ':lang()'
+title: ":lang()"
 slug: Web/CSS/:lang
-tags:
-  - CSS
-  - Псевдо-класс
-translation_of: Web/CSS/:lang
 ---
+
 {{CSSRef}}
 
 [Псевдо-класс](/ru/docs/Web/CSS/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:lang()`** выбирает элементы основываясь на языке, на котором они определены.
@@ -17,7 +14,7 @@ p:lang(en) {
 }
 ```
 
-> **Примечание:** В HTML язык определяется комбинацией атрибута {{htmlattrxref("lang")}}, элемента {{HTMLElement("meta")}} и иногда информацией из протокола (такой, как заголовки HTTP ). Для других типов документов могут быть другие методы определения языка.
+> **Примечание:** В HTML язык определяется комбинацией атрибута [`lang`](/ru/docs/Web/HTML/Global_attributes#lang), элемента {{HTMLElement("meta")}} и иногда информацией из протокола (такой, как заголовки HTTP ). Для других типов документов могут быть другие методы определения языка.
 
 ## Синтаксис
 
@@ -65,5 +62,5 @@ In this example, the `:lang()` pseudo-class is used to match the parents of quot
 ## Также смотрите
 
 - Language-related pseudo-classes: {{cssxref(":lang")}}, {{cssxref(":dir")}}
-- HTML {{htmlattrxref("lang")}} attribute
+- HTML [`lang`](/ru/docs/Web/HTML/Global_attributes#lang) attribute
 - [BCP 47 - Tags for Identifying Languages](https://tools.ietf.org/html/bcp47)

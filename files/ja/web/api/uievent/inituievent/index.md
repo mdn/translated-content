@@ -1,9 +1,11 @@
 ---
 title: UIEvent.initUIEvent()
 slug: Web/API/UIEvent/initUIEvent
+l10n:
+  sourceCommit: 3ca86db64959ed9dc6c8021dc3eb89e82a6628c7
 ---
 
-{{APIRef("DOM Events")}} {{deprecated_header}}
+{{APIRef("UI Events")}} {{deprecated_header}}
 
 **`UIEvent.initUIEvent()`** メソッドは、一度作成された UI イベントを初期化します。
 
@@ -15,27 +17,31 @@ slug: Web/API/UIEvent/initUIEvent
 
 ## 構文
 
-```js
-event.initUIEvent(type, canBubble, cancelable, view, detail)
+```js-nolint
+initUIEvent(type, canBubble, cancelable, view, detail)
 ```
 
 ### 引数
 
-- _`type`_
-  - : {{domxref("DOMString")}} で、イベントの種類を定義します。
-- _`canBubble`_
+- `type`
+  - : 文字列で、イベントの種類を定義します。
+- `canBubble`
   - : 論理値で、イベントがイベントチェーンを通じてバブリングするかどうかを決定します。設定すると、読み取り専用のプロパティ {{ domxref("Event.bubbles") }} がその値を提供します。
-- _`cancelable`_
+- `cancelable`
   - : 論理値で、イベントをキャンセルできるかどうかを定義します。設定すると、読み取り専用のプロパティ {{ domxref("Event.cancelable") }} がその値を提供します。
-- _`view`_
-  - : イベントに関連付けられた {{domxref("WindowProxy")}} です。
-- _`detail`_
+- `view`
+  - : イベントに関連付けられた {{glossary("WindowProxy")}} です。
+- `detail`
   - : `unsigned long` で、イベントの種類に応じて、イベントの詳細情報を示します。マウスイベントの場合、指定された画面の場所でマウスが何回クリックされたかを示します。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
 ```js
-var e = document.createEvent("UIEvent");
+const e = document.createEvent("UIEvent");
 // creates a click event that bubbles, can be cancelled,
 // and with its view and detail property initialized to window and 1,
 // respectively

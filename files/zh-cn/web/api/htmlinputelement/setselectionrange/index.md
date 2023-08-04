@@ -5,7 +5,7 @@ slug: Web/API/HTMLInputElement/setSelectionRange
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLInputElement.setSelectionRange` **方法用于设定{{HTMLElement("input")}} 或 {{HTMLElement("textarea")}} 元素中当前选中文本的起始和结束位置。
+**`HTMLInputElement.setSelectionRange`** 方法用于设定{{HTMLElement("input")}} 或 {{HTMLElement("textarea")}} 元素中当前选中文本的起始和结束位置。
 
 在较新的浏览器中，你可以通过一个可选的 selectionDirection 来指定文本选中的方向。比如通过点击和拖动从结束位置往起始位置选中一个字符串。
 
@@ -30,6 +30,7 @@ element.setSelectionRange(selectionStart, selectionEnd [, selectionDirection]);
 - `selectionEnd`
   - : 被选中的最后一个字符的 _下一个_ 位置索引。如果这个值比元素的 value 长度还大，则会被看作 value 最后一个位置的索引。
 - `selectionDirection` {{optional_inline}}
+
   - : 一个表示选择方向的字符串，可能的值有：
 
 - `"forward"`
@@ -59,7 +60,7 @@ function selectText() {
 
 ### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 

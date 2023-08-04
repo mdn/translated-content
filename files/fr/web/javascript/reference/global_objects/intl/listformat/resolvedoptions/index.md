@@ -1,26 +1,16 @@
 ---
 title: Intl.ListFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat/resolvedOptions
 ---
 
 {{JSRef}}
 
-La méthode  **`Intl.ListFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de locale et de style calculées à l'initialisation de l'objet {{jsxref("ListFormat")}}.
+La méthode **`Intl.ListFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de locale et de style calculées à l'initialisation de l'objet {{jsxref("ListFormat")}}.
 
 ## Syntaxe
 
 ```js
-listFormat.resolvedOptions()
+listFormat.resolvedOptions();
 ```
 
 ### Valeur de retour
@@ -45,19 +35,17 @@ const deListFormatter = new Intl.ListFormat("de-DE", { style: "short" });
 
 const usedOptions = de.resolvedOptions();
 console.log(usedOptions.locale); // "de-DE"
-console.log(usedOptions.style);  // "short"
-console.log(usedOptions.type);   // "conjunction" (la valeur par défaut)
+console.log(usedOptions.style); // "short"
+console.log(usedOptions.type); // "conjunction" (la valeur par défaut)
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                                     | État                    | Commentaires |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.ListFormat.prototype.resolvedOptions()`](https://tc39.github.io/proposal-intl-list-format/#sec-Intl.ListFormat.prototype.resolvedOptions) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.ListFormat.resolvedOptions")}}
+{{Compat}}
 
 ## Voir aussi
 

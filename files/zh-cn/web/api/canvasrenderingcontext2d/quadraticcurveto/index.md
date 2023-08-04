@@ -39,8 +39,8 @@ void ctx.quadraticCurveTo(cpx, cpy, x, y);
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Quadratic Bézier curve
 ctx.beginPath();
@@ -49,48 +49,22 @@ ctx.quadraticCurveTo(230, 30, 50, 100);
 ctx.stroke();
 
 // Start and end points
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.beginPath();
-ctx.arc(50, 20, 5, 0, 2 * Math.PI);   // Start point
-ctx.arc(50, 100, 5, 0, 2 * Math.PI);  // End point
+ctx.arc(50, 20, 5, 0, 2 * Math.PI); // Start point
+ctx.arc(50, 100, 5, 0, 2 * Math.PI); // End point
 ctx.fill();
 
 // Control point
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.beginPath();
 ctx.arc(230, 30, 5, 0, 2 * Math.PI);
 ctx.fill();
 ```
 
-```html hidden
-<canvas id="canvas"></canvas>
-```
+#### 结果
 
-```js hidden
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-
-// Quadratic Bézier curve
-ctx.beginPath();
-ctx.moveTo(50, 20);
-ctx.quadraticCurveTo(230, 30, 50, 100);
-ctx.stroke();
-
-// Start and end points
-ctx.fillStyle = 'blue';
-ctx.beginPath();
-ctx.arc(50, 20, 5, 0, 2 * Math.PI);   // Start point
-ctx.arc(50, 100, 5, 0, 2 * Math.PI);  // End point
-ctx.fill();
-
-// Control point
-ctx.fillStyle = 'red';
-ctx.beginPath();
-ctx.arc(230, 30, 5, 0, 2 * Math.PI);
-ctx.fill();
-```
-
-{{ EmbedLiveSample('Using_the_quadraticCurveTo_method', 315, 165) }}
+{{ EmbedLiveSample('quadraticCurveTo 如何工作', 315, 165) }}
 
 ### 简单的二次曲线
 
@@ -107,8 +81,8 @@ ctx.fill();
 曲线从`moveTo()`指定的点开始：(20, 110)。控制点位于 (230, 150)。曲线在 (250, 20) 处结束。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.moveTo(20, 110);
@@ -118,62 +92,9 @@ ctx.stroke();
 
 #### 结果
 
-```html hidden
-<canvas id="canvas"></canvas>
-```
+{{ EmbedLiveSample('简单的二次曲线', 700, 360) }}
 
-```js hidden
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-
-ctx.beginPath();
-ctx.moveTo(20, 110);
-ctx.quadraticCurveTo(230, 150, 250, 20);
-ctx.stroke();
-```
-
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.beginPath();
-ctx.moveTo(50,20);
-ctx.quadraticCurveTo(230, 30, 50, 100);
-ctx.stroke();</textarea>
-```
-
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Trying_the_quadraticCurveTo_parameters', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 

@@ -1,14 +1,8 @@
 ---
-title: ':defined'
+title: ":defined"
 slug: Web/CSS/:defined
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:defined
 ---
+
 {{ CSSRef }}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:defined`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento que se haya definido. Esto incluye cualquier elemento estándar integrado en el navegador y elementos personalizados que se hayan definido correctamente (es decir, con el método {{domxref("CustomElementRegistry.define()")}}).
@@ -36,24 +30,26 @@ Los siguientes fragmentos están tomados de nuestra demostración [Pseudo-clase-
 En esta demostración, definimos un elemento personalizado trivial muy simple:
 
 ```js
-customElements.define('simple-custom',
+customElements.define(
+  "simple-custom",
   class extends HTMLElement {
     constructor() {
       super();
 
-      let divElem = document.createElement('div');
-      divElem.textContent = this.getAttribute('text');
+      let divElem = document.createElement("div");
+      divElem.textContent = this.getAttribute("text");
 
-      let shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(divElem);
-  }
-})
+      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
+    }
+  },
+);
 ```
 
 Luego inserta una copia de este elemento en el documento, junto con un `<p>` estándar:
 
 ```html
-<simple-custom text="Texto de ejemplo del elemento personalizado"></simple-custom>
+<simple-custom
+  text="Texto de ejemplo del elemento personalizado"></simple-custom>
 
 <p>Texto de ejemplo de párrafo estándar</p>
 ```
@@ -92,13 +88,11 @@ Esto es útil si tiene un elemento personalizado complejo que demora un tiempo e
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                               | Comentario |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
-| {{ SpecName('HTML WHATWG', 'semantics-other.html#selector-defined', ':defined') }} | {{ Spec2('HTML WHATWG') }} |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.defined")}}
+{{Compat}}
 
 ## Ver también
 

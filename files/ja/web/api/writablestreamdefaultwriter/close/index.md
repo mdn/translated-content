@@ -1,32 +1,34 @@
 ---
 title: WritableStreamDefaultWriter.close()
 slug: Web/API/WritableStreamDefaultWriter/close
+l10n:
+  sourceCommit: 87a9f73c410c9b9e91300695c8aa4931367243fb
 ---
 
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-{{domxref("WritableStreamDefaultWriter")}} インターフェイスの **`close()`** メソッドは、関連する書き込み可能なストリームを閉じます。
+**`close()`** は {{domxref("WritableStreamDefaultWriter")}} インターフェイスのメソッドで、関連する書き込み可能なストリームを閉じます。
 
 基になるシンクは、閉じる振る舞いを呼び出す前に、以前に書き込まれたチャンクの処理を終了します。 この間、それ以上の書き込み試行は失敗します（ストリームにエラーは発生しません）。
 
 ## 構文
 
-```
-var promise = writableStreamDefaultWriter.close();
+```js-nolint
+close()
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### 戻り値
+### 返値
 
-{{jsxref("Promise")}}。 閉じる前に残りのチャンクがすべて正常に書き込まれた場合は `undefined` で満たされ、プロセス中に問題が発生した場合はエラーで拒否されます。
+{{jsxref("Promise")}} です。 閉じる前に残りのチャンクがすべて正常に書き込まれた場合は `undefined` で履行され、処理中に問題が発生した場合はエラーで拒否されます。
 
 ### 例外
 
-- TypeError
-  - : 閉じようとしているストリームは {{domxref("WritableStream")}} ではありません。
+- {{jsxref("TypeError")}}
+  - : 閉じようとしているストリームが {{domxref("WritableStream")}} ではない場合。
 
 ## 例
 
@@ -42,9 +44,7 @@ function sendMessage(message, writableStream) {
   const encoded = encoder.encode(message, { stream: true });
   encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() => {
-        return defaultWriter.write(chunk);
-      })
+      .then(() => defaultWriter.write(chunk))
       .then(() => {
         console.log("Chunk written to sink.");
       })
@@ -73,20 +73,20 @@ const writableStream = new WritableStream({
   // シンクの実装
   write(chunk) {
     return new Promise((resolve, reject) => {
-      var buffer = new ArrayBuffer(2);
-      var view = new Uint16Array(buffer);
+      const buffer = new ArrayBuffer(1);
+      const view = new Uint8Array(buffer);
       view[0] = chunk;
-      var decoded = decoder.decode(view, { stream: true });
-      var listItem = document.createElement('li');
-      listItem.textContent = "Chunk decoded: " + decoded;
+      const decoded = decoder.decode(view, { stream: true });
+      const listItem = document.createElement('li');
+      listItem.textContent = `Chunk decoded: ${decoded}`;
       list.appendChild(listItem);
       result += decoded;
       resolve();
     });
   },
   close() {
-    var listItem = document.createElement('li');
-    listItem.textContent = "[MESSAGE RECEIVED] " + result;
+    const listItem = document.createElement('li');
+    listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
     list.appendChild(listItem);
   },
   abort(err) {
@@ -99,12 +99,10 @@ sendMessage("Hello, world.", writableStream);
 
 完全なコードは、[単純なライターの例](https://mdn.github.io/dom-examples/streams/simple-writer/)にあります。
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                         | 状態                         | コメント |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#default-writer-close","close()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.WritableStreamDefaultWriter.close")}}
+{{Compat}}

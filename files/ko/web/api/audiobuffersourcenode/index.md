@@ -1,8 +1,8 @@
 ---
 title: AudioBufferSourceNode
 slug: Web/API/AudioBufferSourceNode
-translation_of: Web/API/AudioBufferSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`AudioBufferSourceNode`** 의 오디오 소스는 in-memory 의 {{domxref("AudioNode")}} 상에 저장된 데이터로 구성되어있다. 이는 오디오 소스 그 자체처럼 동작을 한다.
@@ -11,16 +11,16 @@ translation_of: Web/API/AudioBufferSourceNode
 
 여러번 실행을 하면 `AudioBufferSourceNode.stop()`을 통해 정지가 가능하다. 가장 최근의 실행된것이 이전의 것으로 대체가 되어 `AudioBufferSourceNode`버퍼의 마지막에 도착하지 않은 상태가 된다.
 
-![The AudioBufferSourceNode takes the content of an AudioBuffer and m](https://mdn.mozillademos.org/files/9717/WebAudioAudioBufferSourceNode.png)
+![The AudioBufferSourceNode takes the content of an AudioBuffer and m](webaudioaudiobuffersourcenode.png)
 
-| Number of inputs  | `0`                                                            |
-| ----------------- | -------------------------------------------------------------- |
-| Number of outputs | `1`                                                            |
+| Number of inputs  | `0`                                                  |
+| ----------------- | ---------------------------------------------------- |
+| Number of outputs | `1`                                                  |
 | Channel count     | defined by the associated {{domxref("AudioBuffer")}} |
 
 ## Properties
 
-_\_\_{{domxref("AudioNode")}}_ 를 부모로 가지는 프로퍼티.
+_{{domxref("AudioNode")}}_ 를 부모로 가지는 프로퍼티.
 
 - {{domxref("AudioBufferSourceNode.buffer")}}
   - : {{domxref("AudioBuffer")}} 의 음원이 재생이 되거나 값이 NULL 이라면 채널하나을 무음으로 정의한다.
@@ -36,7 +36,7 @@ _\_\_{{domxref("AudioNode")}}_ 를 부모로 가지는 프로퍼티.
 ### Event handlers
 
 - {{domxref("AudioBufferSourceNode.onended")}}
-  - : {{event("Event_handlers", "event handler")}}로 {{event("ended_(Web_Audio)", "ended")}}이벤트와 연관된 콜백함수를 가진다.
+  - : event handlers로 ended 이벤트와 연관된 콜백함수를 가진다.
 
 ## Methods
 
@@ -55,9 +55,9 @@ _{{domxref("AudioNode")}}_ 를 부모로 가지는 매서드.
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var button = document.querySelector('button');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+var button = document.querySelector("button");
+var pre = document.querySelector("pre");
+var myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
@@ -69,17 +69,17 @@ var frameCount = audioCtx.sampleRate * 2.0;
 
 var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
-button.onclick = function() {
+button.onclick = function () {
   // Fill the buffer with white noise;
   //just random values between -1.0 and 1.0
   for (var channel = 0; channel < channels; channel++) {
-   // This gives us the actual ArrayBuffer that contains the data
-   var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i < frameCount; i++) {
-     // Math.random() is in [0; 1.0]
-     // audio needs to be in [-1.0; 1.0]
-     nowBuffering[i] = Math.random() * 2 - 1;
-   }
+    // This gives us the actual ArrayBuffer that contains the data
+    var nowBuffering = myArrayBuffer.getChannelData(channel);
+    for (var i = 0; i < frameCount; i++) {
+      // Math.random() is in [0; 1.0]
+      // audio needs to be in [-1.0; 1.0]
+      nowBuffering[i] = Math.random() * 2 - 1;
+    }
   }
 
   // Get an AudioBufferSourceNode.
@@ -92,18 +92,16 @@ button.onclick = function() {
   source.connect(audioCtx.destination);
   // start the source playing
   source.start();
-}
+};
 ```
 
 > **참고:** For a `decodeAudioData` example, see the {{domxref("AudioContext.decodeAudioData")}} page.
 
-## Specification
+## 명세서
 
-| Specification                                                                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#the-audiobuffersourcenode-interface', 'AudioBufferSourceNode')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

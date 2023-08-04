@@ -3,7 +3,7 @@ title: <cite>
 slug: Web/HTML/Element/cite
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 _HTML 引用（Citation）标签_ (**\<cite>**) 表示一个作品的引用，且必须包含作品的标题。这个引用可能是一个根据适当的上下文约定关联引用的元数据的缩写。
 
@@ -80,7 +80,7 @@ _HTML 引用（Citation）标签_ (**\<cite>**) 表示一个作品的引用，�
 
 值得注意的是，W3C 标准允许在 `<cite>` 元素中包含引用内容的作者信息。然而 WHATWG 规范不允许在 `<cite>` 元素中出现人名。
 
-要标明{{HTMLElement("blockquote")}} 或 {{HTMLElement("q")}}之中内容的引用来源，可以使用元素的{{htmlattrxref("cite", "blockquote")}}属性。
+要标明{{HTMLElement("blockquote")}} 或 {{HTMLElement("q")}}之中内容的引用来源，可以使用元素的[`cite`](/zh-CN/docs/Web/HTML/Element/blockquote#cite)属性。
 
 通常，浏览器默认使用斜体来展示`<cite>`元素中的内容。可以通过指定`<cite>`元素的{{cssxref("font-style")}}样式来覆盖这种默认行为。
 
@@ -92,7 +92,7 @@ More information can be found in <cite>[ISO-0000]</cite>.
 
 该段代码的输出如下：
 
-{{EmbedLiveSample("Example", 640, 60)}}
+{{EmbedLiveSample("示例", 640, 60)}}
 
 ## 规范
 
@@ -102,7 +102,7 @@ More information can be found in <cite>[ISO-0000]</cite>.
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - 适用于长引用的 {{HTMLElement("blockquote")}} 元素。
 - 适用于行内引用的 {{HTMLElement("q")}} 元素。

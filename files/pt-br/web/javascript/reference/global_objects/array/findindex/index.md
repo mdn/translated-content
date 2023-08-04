@@ -1,8 +1,8 @@
 ---
 title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 ---
+
 {{JSRef}}
 
 O método **`findIndex()`** retorna o **índice** no array do primeiro elemento que satisfizer a função de teste provida. Caso contrário, retorna -1, indicando que nenhum elemento passou no teste.

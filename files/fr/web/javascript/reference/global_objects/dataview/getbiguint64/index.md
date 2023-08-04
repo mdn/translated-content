@@ -1,16 +1,6 @@
 ---
 title: DataView.prototype.getBigUint64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
-tags:
-  - BigInt
-  - DataView
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getBigUint64
 ---
 
 {{JSRef}}
@@ -57,13 +47,11 @@ dataview.getBigUint64(0); // 0n
 
 ## Spécifications
 
-| Spécification                                                                                                                | État | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---- | ------------ |
-| [Proposition pour `DataView.prototype.getBigUint64()`](https://tc39.es/proposal-bigint/#sec-dataview.prototype.getbiguint64) |      |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.getBigUint64")}}
+{{Compat}}
 
 ## Voir aussi
 

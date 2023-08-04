@@ -1,15 +1,8 @@
 ---
 title: SpeechSynthesisUtterance.voice
 slug: Web/API/SpeechSynthesisUtterance/voice
-tags:
-  - API
-  - Experimental
-  - Fala
-  - SpeechSynthesisUtterance
-  - Voz
-  - Web Speech API
-translation_of: Web/API/SpeechSynthesisUtterance/voice
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 A propriedade **`voice`** da interface {{domxref("SpeechSynthesisUtterance")}} retorna e configura a voz que será usada para a fala.
@@ -57,13 +50,11 @@ inputForm.onsubmit = function(event) {
 
 ## Especificações
 
-| Especificação                                                                        | Status                               | Comentário |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
-| {{SpecName('Web Speech API', '#dfn-utterancevoice', 'voice')}} | {{Spec2('Web Speech API')}} |            |
+{{Specifications}}
 
-## Compatiblidade dos navegadores
+## Compatibilidade com navegadores
 
-{{Compat("api.SpeechSynthesisUtterance.voice")}}
+{{Compat}}
 
 ## Veja também
 

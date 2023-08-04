@@ -33,7 +33,7 @@ Gecko 35 を搭載した Firefox 35 は、米国時間 2015 年 1 月 13 日に�
 
 ### JavaScript
 
-- [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) 宣言の "[temporal dead zone](/ja/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)" を実装しました。ES6 の `let` のセマンティクスに合わせて、以下の状況ではエラーが発生します。[ニュースグループでの発表](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds)や [バグ 1001090](https://bugzilla.mozilla.org/show_bug.cgi?id=1001090 'FIXED: Implement ES6 "temporal dead zone" for let') もご覧ください。
+- [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) 宣言の「[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz)」を実装しました。ES6 の `let` のセマンティクスに合わせて、以下の状況ではエラーが発生します。[ニュースグループでの発表](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds)や [バグ 1001090](https://bugzilla.mozilla.org/show_bug.cgi?id=1001090 'FIXED: Implement ES6 "temporal dead zone" for let') もご覧ください。
 
   - 関数ボディの同一スコープ内で、`let` を使用して既存の変数や引数を再度宣言すると構文エラーになります。
   - 関数ボディで `let` を使用して宣言した変数を、その宣言に到達して評価される前に使用すると、実行時エラーが発生します。

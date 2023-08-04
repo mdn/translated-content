@@ -1,17 +1,9 @@
 ---
 title: WebAssembly
 slug: WebAssembly/JavaScript_interface
-tags:
-  - API
-  - Experimental
-  - JavaScript
-  - Objeto
-  - Referencia
-  - WebAssembly
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
-{{JSRef}}
+
+{{WebAssemblySidebar}}
 
 El objeto **`WebAssembly`** de JavaScript actua como un namespace para todas las funcionalidades realcionados con [WebAssembly](/es/docs/WebAssembly).
 
@@ -57,37 +49,32 @@ Los usos primarios para el objeto `WebAssembly` son:
 
 ## Ejemplos
 
-Después de obtener algún bytecode de WebAssembly usando la sentencia fetch, nosotros compilamos e instanciamos el módulo usando la función {{jsxref("WebAssembly.instantiate()")}} , importando una función de JavaScript en el WebAssembly Module en el proceso. Esta premisa resuelve a un objeto (`result`) que contenga un objeto [`Module`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) compilado y un objeto [`Instance`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance) . Entonces tenemos una llamada a [Exported WebAssembly function](/es/docs/WebAssembly/Exported_functions) que es exportada por `Instance`.
+Después de obtener algún bytecode de WebAssembly usando la sentencia fetch, nosotros compilamos e instanciamos el módulo usando la función {{jsxref("WebAssembly.instantiate()")}} , importando una función de JavaScript en el WebAssembly Module en el proceso. Esta premisa resuelve a un objeto (`result`) que contenga un objeto [`Module`](/es/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) compilado y un objeto [`Instance`](/es/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance) . Entonces tenemos una llamada a [Exported WebAssembly function](/es/docs/WebAssembly/Exported_functions) que es exportada por `Instance`.
 
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
-).then(result =>
-  result.instance.exports.exported_func()
-);
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((result) => result.instance.exports.exported_func());
 ```
 
 > **Nota:** Ver [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) en GitHub ([view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/)) para un ejemplo que hace uso de la función [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1).
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                               | Comentario                       |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------------------- |
-| {{SpecName('WebAssembly JS', '#the-webassembly-object', 'WebAssembly')}} | {{Spec2('WebAssembly JS')}} | Definición inicial del borrador. |
+{{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.WebAssembly")}}
+{{Compat}}
 
 ## Ver también
 

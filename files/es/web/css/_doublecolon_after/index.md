@@ -1,14 +1,8 @@
 ---
-title: '::after (:after)'
+title: "::after (:after)"
 slug: Web/CSS/::after
-tags:
-  - CSS
-  - Presentación
-  - Pseudo-elemento CSS
-  - Referencia
-  - Web
-translation_of: Web/CSS/::after
 ---
+
 {{CSSRef}}
 
 En CSS, **`::after`** crea un [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) que es el último hijo del elemento seleccionado. Es comunmente usado para añadir contenido cosmético a un elemento con la propiedad {{CSSxRef("content")}}.Es en linea (inline) de forma predeterminada.
@@ -74,12 +68,12 @@ Podemos estilizar el texto o imágenes de la propiedad {{cssxref("content")}} de
 
 ```css
 .ribbon {
-  background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::after {
   content: "This is a fancy orange box.";
-  background-color: #FFBA10;
+  background-color: #ffba10;
   border-color: black;
   border-style: dotted;
 }
@@ -96,9 +90,15 @@ El siguiente ejemplo muestra el uso del [pseudo-elemento](/es/docs/Web/CSS/Pseud
 #### HTML
 
 ```html
-<p>Here we have some
-  <span tabindex="0" data-descr="collection of words and punctuation">text</span> with a few
-  <span tabindex="0" data-descr="small popups that appear when hovering">tooltips</span>.
+<p>
+  Here we have some
+  <span tabindex="0" data-descr="collection of words and punctuation"
+    >text</span
+  >
+  with a few
+  <span tabindex="0" data-descr="small popups that appear when hovering"
+    >tooltips</span
+  >.
 </p>
 ```
 
@@ -108,7 +108,7 @@ El siguiente ejemplo muestra el uso del [pseudo-elemento](/es/docs/Web/CSS/Pseud
 span[data-descr] {
   position: relative;
   text-decoration: underline;
-  color: #00F;
+  color: #00f;
   cursor: help;
 }
 
@@ -135,17 +135,11 @@ span[data-descr]:focus::after {
 
 ## Especificaciones
 
-| Especificación                                                                                                                           | Estatus                                      | Comentarios                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------------------------------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-after', '::after')}}                                             | {{Spec2('CSS4 Pseudo-Elements')}} | Sin cambios significativos desde la especificación previa.             |
-| {{Specname("CSS3 Transitions", "#animatable-properties", "transitions on pseudo-element properties")}} | {{Spec2("CSS3 Transitions")}}     | Permite transiciones en propiedades definidas en los pseudo-elementos. |
-| {{Specname("CSS3 Animations", "", "animations on pseudo-element properties")}}                                 | {{Spec2("CSS3 Animations")}}         | Permite animaciones en propiedades definidas en los pseudo-elementos.  |
-| {{SpecName('CSS3 Selectors', '#gen-content', '::after')}}                                                             | {{Spec2('CSS3 Selectors')}}         | Introduce la sintaxis de doble símbolo `:`                             |
-| {{SpecName('CSS2.1', 'generate.html#before-after-content', '::after')}}                                         | {{Spec2('CSS2.1')}}                     | Definición inicial, usando sintáxis de un solo símbolo `:`             |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.after")}}
+{{Compat}}
 
 ## Véase también
 

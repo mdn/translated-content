@@ -1,8 +1,8 @@
 ---
 title: Document.location
 slug: Web/API/Document/location
-translation_of: Web/API/Document/location
 ---
+
 {{APIRef("DOM")}}
 
 A propriedade, de apenas leitura, **`Document.location`** retorna um objeto {{domxref("Location")}}, que contém informações sobre a URL do documento e provém métodos para mudar a URL e carregar outra URL.
@@ -30,14 +30,11 @@ dump(document.location);
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                           | Comentário                                           |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "history.html#the-location-interface", "Document.location")}} | {{Spec2('HTML WHATWG')}} | Nenhuma mudança de {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#the-location-interface", "Document.location")}} | {{Spec2('HTML5 W3C')}}     | Definição inicial.                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.location")}}
+{{Compat}}
 
 ## Veja também
 

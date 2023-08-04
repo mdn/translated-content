@@ -1,8 +1,8 @@
 ---
 title: Content-Encoding
 slug: Web/HTTP/Headers/Content-Encoding
-translation_of: Web/HTTP/Headers/Content-Encoding
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Encoding`** 개체 헤더는 미디어 타입을 압축하기 위해 사용됩니다. 이 헤더가 존재하면, 그 값은 개체 본문에 어떤 추가적인 컨텐츠 인코딩이 적용될지를 나타냅니다. 그것은 `Content-Type` 헤더에 의해 참조되는 미디어 타입을 얻도록 디코드하는 방법을 클라이언트가 알게 해줍니다.

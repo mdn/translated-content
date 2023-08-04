@@ -7,7 +7,7 @@ slug: Web/API/RTCPeerConnection/createDataChannel
 
 {{domxref("RTCPeerConnection")}} 的 `createDataChannel()` 方法创建一个可以发送任意数据的数据通道 (data channel)。常用于后台传输内容，例如：图像，文件传输，聊天文字，游戏数据更新包，等等。
 
-基于某个连接创建第一个 data channel 时，会通过发送一个{{event("negotiationneeded")}} event 来开始重新谈判 (renegotiation)。
+基于某个连接创建第一个 data channel 时，会通过发送一个 {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} 事件来开始重新谈判（renegotiation）。
 
 ## 语法
 
@@ -65,34 +65,34 @@ A new {{domxref("RTCDataChannel")}} object with the specified `label`, configure
 
 ## Examples
 
-This example shows how to create a data channel and set up handlers for the {{event("open")}} and {{event("message")}} events to send and receive messages on it (For brievity, the example assumes onnegotiationneeded is set up).
+This example shows how to create a data channel and set up handlers for the {{DOMxRef("RTCDataChannel/open_event", "open")}} and [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) events to send and receive messages on it (For brievity, the example assumes onnegotiationneeded is set up).
 
 ```js
 // Offerer side
 
 var pc = new RTCPeerConnection(options);
 var channel = pc.createDataChannel("chat");
-channel.onopen = function(event) {
-  channel.send('Hi you!');
-}
-channel.onmessage = function(event) {
+channel.onopen = function (event) {
+  channel.send("Hi you!");
+};
+channel.onmessage = function (event) {
   console.log(event.data);
-}
+};
 ```
 
 ```js
 // Answerer side
 
 var pc = new RTCPeerConnection(options);
-pc.ondatachannel = function(event) {
+pc.ondatachannel = function (event) {
   var channel = event.channel;
-﻿  channel.onopen = function(event) {
-    channel.send('Hi back!');
-  }
-  channel.onmessage = function(event) {
+  channel.onopen = function (event) {
+    channel.send("Hi back!");
+  };
+  channel.onmessage = function (event) {
     console.log(event.data);
-  }
-}
+  };
+};
 ```
 
 Alternatively, more symmetrical out-of-band negotiation can be used, using an agreed-upon id (0 here):
@@ -101,13 +101,13 @@ Alternatively, more symmetrical out-of-band negotiation can be used, using an ag
 // Both sides
 
 var pc = new RTCPeerConnection(options);
-var channel = pc.createDataChannel("chat", {negotiated: true, id: 0});
-channel.onopen = function(event) {
-  channel.send('Hi!');
-}
-channel.onmessage = function(event) {
+var channel = pc.createDataChannel("chat", { negotiated: true, id: 0 });
+channel.onopen = function (event) {
+  channel.send("Hi!");
+};
+channel.onmessage = function (event) {
   console.log(event.data);
-}
+};
 ```
 
 For a more thorough example showing how the connection and channel are established, see [A simple RTCDataChannel sample](/zh-CN/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample).

@@ -32,9 +32,7 @@ new RegExp('\n').source === '\\n'; // ES5 から、true
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.source', 'RegExp.prototype.source')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

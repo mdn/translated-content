@@ -1,18 +1,11 @@
 ---
 title: element.setAttributeNode
 slug: Web/API/Element/setAttributeNode
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthode
-  - Reference
-translation_of: Web/API/Element/setAttributeNode
 ---
 
 {{ APIRef("DOM") }}
 
-` setAttributeNode``() ` ajoute un nouveau nœud `Attr` à l'élément courant.
+`setAttributeNode()` ajoute un nouveau nœud `Attr` à l'élément courant.
 
 ## Syntaxe
 
@@ -32,7 +25,7 @@ var d1 = document.getElementById("one");
 var d2 = document.getElementById("two");
 var a = d1.getAttributeNode("align");
 d2.setAttributeNode(a);
-alert(d2.attributes[1].value)
+alert(d2.attributes[1].value);
 // retourne: `left'
 ```
 
@@ -40,7 +33,7 @@ alert(d2.attributes[1].value)
 
 Si l'attribut nommé existe déjà sur l'élément, cet attribut est remplacé par le nouveau et le nœud remplacé est renvoyé.
 
-Cette méthode est peu utilisée. On lui préfère souvent  {{domxref("Element.setAttribute()")}} pour modifier la valeur d'un attribut d'élément.
+Cette méthode est peu utilisée. On lui préfère souvent {{domxref("Element.setAttribute()")}} pour modifier la valeur d'un attribut d'élément.
 
 {{DOMAttributeMethods()}}
 

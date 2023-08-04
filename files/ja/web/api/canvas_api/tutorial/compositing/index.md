@@ -3,7 +3,7 @@ title: 合成とクリッピング
 slug: Web/API/Canvas_API/Tutorial/Compositing
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
 [これまでの例](/ja/docs/Web/API/Canvas_API/Tutorial/Transformations)ではすべて、図形は、常に 1 つずつ重ねて描かれていました。これはほとんどの状況において十分すぎるほど適切ですが、複合図形の構築順序が制限されます。しかし、 `globalCompositeOperation` プロパティを設定することで、この動作を変更することができます。さらに、 `clip` プロパティによって、シェイプの不要な部分を隠すことができます。
 

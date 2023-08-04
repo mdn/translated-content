@@ -1,8 +1,8 @@
 ---
 title: Document.createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
-translation_of: Web/API/Document/createDocumentFragment
 ---
+
 {{ApiRef("DOM")}}
 
 새로운 빈 {{domxref("DocumentFragment")}} 를 생성합니다.
@@ -26,10 +26,9 @@ var docFragment = document.createDocumentFragment();
 ```js
 var ul = document.getElementsByTagName("ul")[0]; // assuming it exists
 var docfrag = document.createDocumentFragment();
-var browserList = ["Internet Explorer", "Firefox", "Safari",
-    "Chrome", "Opera"];
+var browserList = ["Internet Explorer", "Firefox", "Safari", "Chrome", "Opera"];
 
-browserList.forEach(function(e) {
+browserList.forEach(function (e) {
   var li = document.createElement("li");
   li.textContent = e;
   docfrag.appendChild(li);
@@ -39,11 +38,11 @@ ul.appendChild(docfrag);
 // a list with well-known web browsers
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

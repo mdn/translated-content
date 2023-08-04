@@ -1,15 +1,9 @@
 ---
-title: ':-moz-broken'
+title: ":-moz-broken"
 slug: Web/CSS/:-moz-broken
-tags:
-  - CSS
-  - NeedsCompatTable
-  - NeedsExample
-  - No estandar
-  - Referencia CSS
-translation_of: Web/CSS/:-moz-broken
 ---
-{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9")}}
+
+{{Non-standard_header}}{{CSSRef}}
 
 ## Resumen
 
@@ -19,5 +13,5 @@ Este selector está pensado sobre todo para desarrolladores de temas.
 
 ## Ver además
 
-- {{bug("11011")}}
+- [Error 11011 en Firefox](https://bugzil.la/11011)
 - {{cssxref("-moz-alt-content")}}

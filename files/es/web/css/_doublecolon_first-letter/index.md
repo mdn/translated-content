@@ -1,13 +1,8 @@
 ---
-title: '::first-letter (:first-letter)'
+title: "::first-letter (:first-letter)"
 slug: Web/CSS/::first-letter
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::first-letter
 ---
+
 {{CSSRef}}
 
 El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) **`::first-letter`** aplica estilos a la primera letra de la primera línea un [elemento de bloque](/es/docs/Web/HTML/Block-level_elements), sólo cuando no es precedido de otro contenido (como imágenes o tablas).
@@ -50,13 +45,21 @@ Hace que la primera letra de cada párrafo sea roja y grande.
 ### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-  ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-  dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
-<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-  aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
-  esse molestie consequat.</p>
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+  kasd gubergren, no sea takimata sanctus est.
+</p>
+<p>
+  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+  consequat.
+</p>
+<p>
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat.
+</p>
 <p>-El comienzo es un signo de puntuación especial.</p>
 <p>_El comienzo es un signo de puntuación especial.</p>
 <p>"El comienzo es un signo de puntuación especial.</p>
@@ -83,17 +86,11 @@ p::first-letter {
 
 ## Especificaciones
 
-| Specification                                                                                                        | Status                                       | Comment                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{ SpecName('CSS4 Pseudo-Elements', '#first-letter-pseudo', '::first-letter')}}             | {{ Spec2('CSS4 Pseudo-Elements')}} | Generaliza propiedades permitidas, {{ cssxref("opacity") }}, and {{ cssxref("box-shadow") }}.                                   |
-| {{ SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow with ::first-letter')}} | {{ Spec2('CSS3 Text Decoration')}} | Permite el uso de {{cssxref("text-shadow")}} con `::first-letter`.                                                                     |
-| {{ SpecName('CSS3 Selectors', '#first-letter', '::first-letter') }}                             | {{ Spec2('CSS3 Selectors') }}     | Introducción de la sintaxis de doble dos puntos. Definición de casos particulares, como con idiomas específicos (ej., el dígrafo holandés `IJ`). |
-| {{ SpecName('CSS2.1', 'selector.html#first-letter', '::first-letter') }}                     | {{ Spec2('CSS2.1') }}                 | Sin cambios.                                                                                                                                     |
-| {{ SpecName('CSS1', '#the-first-letter-pseudo-element', '::first-letter') }}                 | {{ Spec2('CSS1') }}                     | Definición inicial, uso de la sintaxis de doble dos puntos.                                                                                      |
+{{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.first-letter")}}
+{{Compat}}
 
 ## Ver También
 

@@ -1,5 +1,5 @@
 ---
-title: 'Django 教程 6: 通用列表和详细信息视图'
+title: "Django 教程 6: 通用列表和详细信息视图"
 slug: Learn/Server-side/Django/Generic_views
 ---
 
@@ -124,25 +124,23 @@ class BookListView(generic.ListView):
 
 通用视图的模板就像任何其他模板一样（当然，传递给模板的上下文/信息可能不同）。与我们的索引模板一样，我们在第一行扩展基本模板，然后替换名为`content`的区块。
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-    <h1>Book List</h1>
+  <h1>Book List</h1>
 
-    {% if book_list %}
+  {% if book_list %}
     <ul>
-
       {% for book in book_list %}
-      <li>
-        <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
-      </li>
+        <li>
+          <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
+        </li>
       {% endfor %}
-
     </ul>
-    {% else %}
-      <p>There are no books in the library.</p>
-    {% endif %}
+  {% else %}
+    <p>There are no books in the library.</p>
+  {% endif %}
 {% endblock %}
 ```
 
@@ -152,7 +150,7 @@ class BookListView(generic.ListView):
 
 我们使用 [`if`](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#if), `else` 和 `endif`模板标签，来检查 `book_list`是否已定义且不为空。如果 `book_list`为空，则 `else`子句显示文本，说明没有要列出的书本。如果 `book_list`不为空，那么我们遍历书本列表。
 
-```html
+```django
 {% if book_list %}
   <!-- code here to list the books -->
 {% else %}
@@ -166,9 +164,9 @@ class BookListView(generic.ListView):
 
 模板使用[for](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#for) 和 `endfor`模板标签，以循环遍历书本列表，如下所示。每次迭代都会使用当前列表项的信息，填充书本模板变量`book`。
 
-```html
+```django
 {% for book in book_list %}
-  <li> <!-- code here get information from each book item --> </li>
+  <li><!-- code here get information from each book item --></li>
 {% endfor %}
 ```
 
@@ -427,7 +425,7 @@ def book_detail_view(request,pk):
 
 创建 HTML 文件 **/locallibrary/catalog/templates/catalog/book_detail.html**，并为其提供以下内容。如上所述，这是基于类的通用详细信息视图，所期望的默认模板文件名（对于名为 `catalog` 的应用程序中名为 `Book` 的模型）。
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -605,8 +603,11 @@ URL 映射器和视图所需的代码，应与我们上面创建的`Book`列表�
 > - 为作者列表页面，创建 URL 映射器之后，还需要更新基本模板中的所有作者 **All authors** 链接。按照我们更新“所有图书”**All books** 链接时，所做的相同过程。
 > - 为作者详细信息页面，创建 URL 映射器之后，还应更新书本详细信息视图模板（**/locallibrary/catalog/templates/catalog/book_detail.html**），以便作者链接，指向新的作者详细信息页面（而不是一个空的 URL）。该行将更改为添加下面以粗体显示的模板标记。
 >
->   ```html
->   <p><strong>Author:</strong> <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a></p>
+>   ```django
+>   <p>
+>     <strong>Author:</strong>
+>     <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
+>   </p>
 >   ```
 
 完成后，您的页面应该类似于下面的屏幕截图。
@@ -632,21 +633,3 @@ URL 映射器和视图所需的代码，应与我们上面创建的`Book`列表�
 - [Pagination](https://docs.djangoproject.com/en/2.0/topics/pagination/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
-
-## 本教程
-
-- [Django 介绍](/zh-CN/docs/Learn/Server-side/Django/Introduction)
-- [架设 Django 开发环境](/zh-CN/docs/Learn/Server-side/Django/development_environment)
-- [Django 教程：本地图书馆网站](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django 教程 2: 创建骨架站点](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)
-- [Django 教程 3: 使用模型](/zh-CN/docs/Learn/Server-side/Django/Models)
-- [Django 教程 4: Django 管理站点](/zh-CN/docs/Learn/Server-side/Django/Admin_site)
-- [Django 教程 5: 创建主页](/zh-CN/docs/Learn/Server-side/Django/Home_page)
-- [Django 教程 6: 通用列表与详细信息视图](/zh-CN/docs/Learn/Server-side/Django/Generic_views)
-- [Django 教程 7: 会话框架](/zh-CN/docs/Learn/Server-side/Django/Sessions)
-- [Django 教程 8: 用户认证与许可](/zh-CN/docs/Learn/Server-side/Django/Authentication)
-- [Django 教程 9: 使用表单](/zh-CN/docs/Learn/Server-side/Django/Forms)
-- [Django 教程 10: 测试 Django 网页应用](/zh-CN/docs/Learn/Server-side/Django/Testing)
-- [Django 教程 11: 部署 Django 到生产环境](/zh-CN/docs/Learn/Server-side/Django/Deployment)
-- [Django 网页应用安全](/zh-CN/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django 微博客](/zh-CN/docs/Learn/Server-side/Django/django_assessment_blog)

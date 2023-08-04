@@ -1,19 +1,9 @@
 ---
-title: '<track>: 텍스트 트랙 삽입 요소'
+title: "<track>: 텍스트 트랙 삽입 요소"
 slug: Web/HTML/Element/track
-tags:
-  - Accessibility
-  - Element
-  - HTML
-  - HTML embedded content
-  - HTML5
-  - Multimedia
-  - Reference
-  - Web
-  - 자막
-translation_of: Web/HTML/Element/track
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<track>` 요소**는 미디어 요소({{HTMLElement("audio")}}, {{HTMLElement("video")}})의 자식으로서, 자막 등 시간별 텍스트 트랙(시간 기반 데이터)를 지정할 때 사용합니다. 트랙은 [WebVTT](/ko/docs/Web/API/WebVTT_API)(Web Video Text Tracks, `.vtt` 파일) 또는 [Timed Text Markup Language(TTML)](https://w3c.github.io/ttml2/index.html)형식을 사용해야 합니다.
 
@@ -62,7 +52,7 @@ translation_of: Web/HTML/Element/track
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("default")}}
   - : 사용자 설정이 다른 자막을 가리키지 않는다면 활성화할 기본 트랙을 나타냅니다. 하나의 미디어 요소 당 하나의 `<track>` 요소에만 사용할 수 있습니다.
@@ -118,7 +108,7 @@ If the track _is_ associated with a media element, using the {{HTMLElement("trac
 ```js
 let textTrackElem = document.getElementById("texttrack");
 
-textTrackElem.addEventListener("cuechange", event => {
+textTrackElem.addEventListener("cuechange", (event) => {
   let cues = event.target.track.activeCues;
 });
 ```
@@ -127,24 +117,20 @@ textTrackElem.addEventListener("cuechange", event => {
 
 ```html
 <video controls poster="/images/sample.gif">
-   <source src="sample.mp4" type="video/mp4">
-   <source src="sample.ogv" type="video/ogv">
-   <track kind="captions" src="sampleCaptions.vtt" srclang="en">
-   <track kind="descriptions"
-     src="sampleDescriptions.vtt" srclang="en">
-   <track kind="chapters" src="sampleChapters.vtt" srclang="en">
-   <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de">
-   <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en">
-   <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja">
-   <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz">
-   <track kind="metadata" src="keyStage1.vtt" srclang="en"
-     label="Key Stage 1">
-   <track kind="metadata" src="keyStage2.vtt" srclang="en"
-     label="Key Stage 2">
-   <track kind="metadata" src="keyStage3.vtt" srclang="en"
-     label="Key Stage 3">
-   <!-- Fallback -->
-   ...
+  <source src="sample.mp4" type="video/mp4" />
+  <source src="sample.ogv" type="video/ogv" />
+  <track kind="captions" src="sampleCaptions.vtt" srclang="en" />
+  <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en" />
+  <track kind="chapters" src="sampleChapters.vtt" srclang="en" />
+  <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de" />
+  <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en" />
+  <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja" />
+  <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz" />
+  <track kind="metadata" src="keyStage1.vtt" srclang="en" label="Key Stage 1" />
+  <track kind="metadata" src="keyStage2.vtt" srclang="en" label="Key Stage 2" />
+  <track kind="metadata" src="keyStage3.vtt" srclang="en" label="Key Stage 3" />
+  <!-- Fallback -->
+  ...
 </video>
 ```
 
@@ -154,7 +140,7 @@ textTrackElem.addEventListener("cuechange", event => {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.track")}}
+{{Compat}}
 
 ## 같이 보기
 

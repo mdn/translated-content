@@ -1,15 +1,9 @@
 ---
 title: <p>
 slug: Web/HTML/Element/p
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/p
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<p>` 요소**는 하나의 문단을 나타냅니다. 시각적인 매체에서, 문단은 보통 인접 블록과의 여백과 첫 줄의 들여쓰기로 구분하지만, HTML에서 문단은 이미지나 입력 폼 등 서로 관련있는 콘텐츠 무엇이나 될 수 있습니다.
 
@@ -90,7 +84,7 @@ translation_of: Web/HTML/Element/p
 
 ### HTML
 
-```html
+```html-nolint
 <p>첫 번째 문단입니다.
   첫 번째 문단입니다.
   첫 번째 문단입니다.
@@ -112,17 +106,24 @@ translation_of: Web/HTML/Element/p
 ### HTML
 
 ```html
-<p>독자 입장에선 문단 사이를 여백으로 구분하는게 제일 읽기 쉽지만,
-첫 줄 들여쓰기로도 구분할 수 있습니다. 들여쓰기는 보통 인쇄매체에서
-공간과 종이를 아끼기 위해 사용합니다.</p>
+<p>
+  독자 입장에선 문단 사이를 여백으로 구분하는게 제일 읽기 쉽지만, 첫 줄
+  들여쓰기로도 구분할 수 있습니다. 들여쓰기는 보통 인쇄매체에서 공간과 종이를
+  아끼기 위해 사용합니다.
+</p>
 
-<p>학교 과제나 초안 등 나중에 편집할 글은 여백과 들여쓰기 둘 다 사용합니다.
-그러나 완성한 글에 둘 다 사용하는건 불필요하고 초보적으로 여겨집니다.</p>
+<p>
+  학교 과제나 초안 등 나중에 편집할 글은 여백과 들여쓰기 둘 다 사용합니다.
+  그러나 완성한 글에 둘 다 사용하는건 불필요하고 초보적으로 여겨집니다.
+</p>
 
-<p>아주 오래된 글에서는 문단을 특수기호 ¶, <i>필크로</i>(단락 기호)로
-구분했습니다. 그러나 답답하고 읽기 힘들어 지금은 사용하지 않습니다.</p>
+<p>
+  아주 오래된 글에서는 문단을 특수기호 ¶, <i>필크로</i>(단락 기호)로
+  구분했습니다. 그러나 답답하고 읽기 힘들어 지금은 사용하지 않습니다.
+</p>
 
-<p>얼마나 읽기 힘들까요? 직접 알아보세요.
+<p>
+  얼마나 읽기 힘들까요? 직접 알아보세요.
   <button data-toggle-text="안돼! 다시 돌려놔요!">단락 기호 써보기</button>
 </p>
 ```
@@ -136,8 +137,8 @@ p {
 }
 
 p.pilcrow {
-   text-indent: 0;
-   display: inline;
+  text-indent: 0;
+  display: inline;
 }
 p.pilcrow + p.pilcrow::before {
   content: " ¶ ";
@@ -147,9 +148,9 @@ p.pilcrow + p.pilcrow::before {
 ### JavaScript
 
 ```js
-document.querySelector('button').addEventListener('click', function (event) {
-  document.querySelectorAll('p').forEach(function (paragraph) {
-    paragraph.classList.toggle('pilcrow');
+document.querySelector("button").addEventListener("click", function (event) {
+  document.querySelectorAll("p").forEach(function (paragraph) {
+    paragraph.classList.toggle("pilcrow");
   });
   var newButtonText = event.target.dataset.toggleText;
   var oldText = event.target.innerText;
@@ -170,9 +171,9 @@ document.querySelector('button').addEventListener('click', function (event) {
 
 여분의 공간이 필요하다면 {{cssxref("margin")}} 등 {{glossary("CSS")}} 속성을 통해 적용하세요.
 
-```html
+```css
 p {
-  margin-bottom: 2em; // 문단 다음 여백을 늘림
+  margin-bottom: 2em; /* 문단 다음 여백을 늘림 */
 }
 ```
 
@@ -182,7 +183,7 @@ p {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.p")}}
+{{Compat}}
 
 ## 같이 보기
 

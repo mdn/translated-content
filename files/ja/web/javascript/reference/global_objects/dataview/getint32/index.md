@@ -47,9 +47,7 @@ dataview.getInt32(1); // 0
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getint32', 'DataView.prototype.getInt32')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

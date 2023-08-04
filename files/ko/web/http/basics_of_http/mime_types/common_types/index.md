@@ -1,8 +1,8 @@
 ---
 title: MIME 타입의 전체 목록
 slug: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 ---
+
 {{HTTPSidebar}}
 
 다음은 일반적인 확장자로 정렬된, 문서 타입과 관련된 MIME 타입의 포괄적인 목록입니다.

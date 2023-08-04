@@ -1,8 +1,8 @@
 ---
 title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
-translation_of: Web/API/Geolocation/watchPosition
 ---
+
 {{ APIref("Geolocation API") }}
 
 O método **`Geolocation.watchPosition()`** é usado para registrar uma função manipuladora (handler function) que irá ser chamada automáticamente cada vez que a posição no dispositivo mudar. Você pode, opcionalemnte, especificar uma função de retorno que manipulará qualquer erro.
@@ -11,8 +11,10 @@ Este método retorna um valor para o _watch ID_ que pode ser usado para desregis
 
 ## Síntaxe
 
-```
-id = navigator.geolocation.watchPosition(success, error, options)
+```js-nolint
+watchPosition(success)
+watchPosition(success, error)
+watchPosition(success, error, options)
 ```
 
 ### Parâmetros
@@ -33,24 +35,24 @@ function success(pos) {
   var crd = pos.coords;
 
   if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log('Parabéns, você alcançou o destino');
+    console.log("Parabéns, você alcançou o destino");
     navigator.geolocation.clearWatch(id);
   }
 }
 
 function error(err) {
-  console.warn('ERRO(' + err.code + '): ' + err.message);
+  console.warn("ERRO(" + err.code + "): " + err.message);
 }
 
 target = {
-  latitude : 0,
-  longitude: 0
+  latitude: 0,
+  longitude: 0,
 };
 
 options = {
   enableHighAccuracy: false,
   timeout: 5000,
-  maximumAge: 0
+  maximumAge: 0,
 };
 
 id = navigator.geolocation.watchPosition(success, error, options);
@@ -58,13 +60,11 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 ## Especificações
 
-| Especificação                                                                                            | Estado                           | Comentário             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------- |
-| {{SpecName('Geolocation', '#watch-position', 'Geolocation.watchPosition()')}} | {{Spec2('Geolocation')}} | Especificação Inicial. |
+{{Specifications}}
 
-## Compatibillidade de Navegadores
+## Compatibilidade com navegadores
 
-{{Compat("api.Geolocation.watchPosition")}}
+{{Compat}}
 
 ## Veja também
 

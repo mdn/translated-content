@@ -36,7 +36,7 @@ text-shadow: unset;
 
 当阴影大于一个时要用逗号区别开阴影之间的参数。
 
-每个阴影都有两到三个 `<length>` 参数，以及一个与阴影颜色相关的 `<color>` 参数。前两个 `<length>` 参数，是以“文字中心”为原点的坐标轴，分别为 x 轴  `<offset-x>` 和 y 轴 `<offset-y>` 的值；如果有第三个 `<length>` 参数，则第三个数值为形成阴影效果的半径的数值 `<blur-radius>`。
+每个阴影都有两到三个 `<length>` 参数，以及一个与阴影颜色相关的 `<color>` 参数。前两个 `<length>` 参数，是以“文字中心”为原点的坐标轴，分别为 x 轴 `<offset-x>` 和 y 轴 `<offset-y>` 的值；如果有第三个 `<length>` 参数，则第三个数值为形成阴影效果的半径的数值 `<blur-radius>`。
 
 当所给的阴影大于一个时，阴影应用的顺序为从前到后，第一个指定的阴影在顶部。
 
@@ -65,14 +65,15 @@ text-shadow: unset;
 
 ```css
 .red-text-shadow {
-   text-shadow: red 0 -2px;
+  text-shadow: red 0 -2px;
 }
 ```
 
 ```html
 <p class="red-text-shadow">
-   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-   inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 </p>
 ```
 
@@ -82,16 +83,25 @@ text-shadow: unset;
 
 ```css
 .white-with-blue-shadow {
-   text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
-   color: white;
-   font: 1.5em Georgia, "Bitstream Charter", "URW Bookman L", "Century Schoolbook L", serif;
+  text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
+  color: white;
+  font:
+    1.5em Georgia,
+    "Bitstream Charter",
+    "URW Bookman L",
+    "Century Schoolbook L",
+    serif;
 }
 ```
 
 ```html
 <p class="white-with-blue-shadow">
-   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-   veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 </p>
 ```
 
@@ -109,4 +119,4 @@ text-shadow: unset;
 
 - {{cssxref("box-shadow")}}
 - The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color)
-- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_Colors/Applying_color)
+- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)

@@ -47,12 +47,12 @@ Object.getPrototypeOf("foo");
 
 ## Opera 註
 
-雖然舊版的 Opera 並不支援 `Object.getPrototypeOf()`，但是 Opera 從 Opera 10.50 支援非標準的 {{jsxref("Object.proto", "__proto__")}} 屬性。
+雖然舊版的 Opera 並不支援 `Object.getPrototypeOf()`，但是 Opera 從 Opera 10.50 支援非標準的 [`Object.prototype.__proto__`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 屬性。
 
 ## 參見
 
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}} {{experimental_inline}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - John Resig 的文章－－《 [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/) 》
 - {{jsxref("Reflect.getPrototypeOf()")}}

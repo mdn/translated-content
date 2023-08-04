@@ -1,11 +1,6 @@
 ---
 title: Compartimentation CSS (CSS Containment)
-slug: Web/CSS/CSS_Containment
-tags:
-  - CSS
-  - CSS Containment
-translation_of: Web/CSS/CSS_Containment
-original_slug: Web/CSS/Compartimentation_CSS
+slug: Web/CSS/CSS_containment
 ---
 
 {{CSSRef}}
@@ -59,7 +54,7 @@ La disposition porte normalement sur l'intégralité d'un document et si on dép
 
 De plus :
 
-- Les dispositions flottantes (avec ` display:``float `) seront traitées indépendamment.
+- Les dispositions flottantes (avec `display: float`) seront traitées indépendamment.
 - Les marges ne fusionneront pas en dehors des limites du bloc englobant ainsi compartimenté
 - Le conteneur de la disposition sera un bloc englobant pour les éléments descendants avec des positions `absolute`/`fixed`.
 - La boîte englobante crée un contexte d'empilement et on peut donc utiliser {{cssxref("z-index")}}.

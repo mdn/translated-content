@@ -1,9 +1,8 @@
 ---
 title: Set.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/add
 ---
+
 {{JSRef}}
 
 El método **`add()`** añade un nuevo elemento con un valor específico al final del objeto `Set`.
@@ -37,22 +36,15 @@ console.log(mySet);
 // Set [1, 5, "some text"]
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-set.prototype.add', 'Set.prototype.add')}}     | {{Spec2('ES6')}}         | Initial definition. |
-| {{SpecName('ESDraft', '#sec-set.prototype.add', 'Set.prototype.add')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Set.add")}}
+{{Compat}}
 
-## Firefox-specific notes
-
-- Prior to Firefox 33 {{geckoRelease("33")}}, `Set.prototype.add` returned `undefined` and was not chainable. This has been fixed ({{bug(1031632)}}). The behavior can be found in Chrome/v8 as well ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
-
-## See also
+## Ver también
 
 - {{jsxref("Set")}}
 - {{jsxref("Set.prototype.delete()")}}

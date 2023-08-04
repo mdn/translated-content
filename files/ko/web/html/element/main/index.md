@@ -1,15 +1,9 @@
 ---
 title: <main>
 slug: Web/HTML/Element/main
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML sections
-  - Reference
-translation_of: Web/HTML/Element/main
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<main>` 요소**는 문서 {{HTMLElement("body")}}의 주요 콘텐츠를 나타냅니다. 주요 콘텐츠 영역은 문서의 핵심 주제나 앱의 핵심 기능에 직접적으로 연결됐거나 확장하는 콘텐츠로 이루어집니다.
 
@@ -63,7 +57,7 @@ translation_of: Web/HTML/Element/main
       <th scope="row">가능한 ARIA 역할</th>
       <td>
         기본적으로 <code>main</code> 역할 포함,
-        {{ARIARole("presentation")}} 가능.
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a> 가능.
       </td>
     </tr>
     <tr>
@@ -75,7 +69,7 @@ translation_of: Web/HTML/Element/main
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
 ## 사용 일람
 
@@ -94,20 +88,19 @@ translation_of: Web/HTML/Element/main
 
   <article>
     <h2>Red Delicious</h2>
-    <p>These bright red apples are the most common found in many
-    supermarkets.</p>
-    <p>... </p>
-    <p>... </p>
+    <p>
+      These bright red apples are the most common found in many supermarkets.
+    </p>
+    <p>...</p>
+    <p>...</p>
   </article>
 
   <article>
     <h2>Granny Smith</h2>
-    <p>These juicy, green apples make a great filling for
-    apple pies.</p>
-    <p>... </p>
-    <p>... </p>
+    <p>These juicy, green apples make a great filling for apple pies.</p>
+    <p>...</p>
+    <p>...</p>
   </article>
-
 </main>
 
 <!-- other content -->
@@ -154,12 +147,10 @@ translation_of: Web/HTML/Element/main
 대부분의 브라우저에서 `<main>` 요소를 지원합니다. 그러나 Internet Explorer 11 이하를 지원할 땐 `<main>` 요소에 `"main"` {{glossary("ARIA")}} 역할을 명시해 접근성을 확보하는 것이 좋습니다.
 
 ```html
-<main role="main">
-  ...
-</main>
+<main role="main">...</main>
 ```
 
-{{Compat("html.elements.main")}}
+{{Compat}}
 
 ## 같이 보기
 

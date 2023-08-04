@@ -1,15 +1,6 @@
 ---
 title: Map.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Map/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/has
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/has
 ---
 
 {{JSRef}}
@@ -39,20 +30,17 @@ Cette méthode renvoie un booléen : `true` si un élément avec cette clé exis
 var maMap = new Map();
 maMap.set("truc", "toto");
 
-maMap.has("truc");  // renvoie true
-maMap.has("machin");// renvoie false
+maMap.has("truc"); // renvoie true
+maMap.has("machin"); // renvoie false
 ```
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-map.prototype.has', 'Map.prototype.has')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype.has', 'Map.prototype.has')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Map.has")}}
+{{Compat}}
 
 ## Voir aussi
 

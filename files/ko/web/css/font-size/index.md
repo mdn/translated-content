@@ -1,7 +1,6 @@
 ---
 title: font-size
 slug: Web/CSS/font-size
-translation_of: Web/CSS/font-size
 ---
 {{CSSRef}}
 
@@ -40,7 +39,7 @@ font-size: unset;
 
 The `font-size` property is specified in one of the following ways:
 
-- As one of the [absolute-size](/ko/docs/Web/CSS/font-size$edit#absolute-size) or [relative-size](/ko/docs/Web/CSS/font-size$edit#relative-size) keywords
+- As one of the [absolute-size](#absolute-size) or [relative-size](#relative-size) keywords
 - As a `<length>` or a `<percentage>`, relative to the parent element's font size
 
 ### 값

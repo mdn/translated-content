@@ -1,17 +1,15 @@
 ---
 title: 206 Partial Content
 slug: Web/HTTP/Status/206
-translation_of: Web/HTTP/Status/206
-browser-compat: http.status.206
 ---
 
 {{HTTPSidebar}}
 
 Le code de statut de réponse succès HTTP **`206 Partial Content`** indique que la requête a bien abouti et que le corps de la réponse contient les plages de données demandées, tel que décrit dans l'en-tête [`Range`](/fr/docs/Web/HTTP/Headers/Range) de la requête.
 
-S'il n'y a qu'une seule plage, l'entête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) de la réponse correspondra au type du document et l'en-tête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Range) sera fourni.
+S'il n'y a qu'une seule plage, l'entête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) de la réponse correspondra au type du document et l'en-tête [`Content-Range`](/fr/docs/Web/HTTP/Headers/Content-Range) sera fourni.
 
-Si plusieurs plages sont renvoyées, l'en-tête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) vaudra `multipart/byteranges` et chaque fragment couvrira une plage, décrite par les en-têtes [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Range) et [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type).
+Si plusieurs plages sont renvoyées, l'en-tête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) vaudra `multipart/byteranges` et chaque fragment couvrira une plage, décrite par les en-têtes [`Content-Range`](/fr/docs/Web/HTTP/Headers/Content-Range) et [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type).
 
 ## Statut
 

@@ -1,17 +1,11 @@
 ---
-title: ':required'
+title: ":required"
 slug: Web/CSS/:required
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:required
 ---
+
 {{ CSSRef }}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:required`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, o {{HTMLElement("textarea")}} que tenga el atributo {{ htmlattrxref("required", "input") }} establecido en él.
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:required`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, o {{HTMLElement("textarea")}} que tenga el atributo [`required`](/es/docs/Web/HTML/Element/input#required) establecido en él.
 
 ```css
 /* Selecciona cualquier <input> requerido */
@@ -34,7 +28,7 @@ Ver {{cssxref(":invalid")}} para un ejemplo.
 
 ## Problemas de accesibilidad
 
-Obligatoriamente los {{htmlelement("input")}} deben tener el atributo {{ htmlattrxref("required", "input") }} aplicado a ellos. Esto asegurará que las personas que navegan con la ayuda de tecnología de asistencia, como un lector de pantalla, puedan comprender qué entradas necesitan contenido válido para garantizar un envío exitoso.
+Obligatoriamente los {{htmlelement("input")}} deben tener el atributo [`required`](/es/docs/Web/HTML/Element/input#required) aplicado a ellos. Esto asegurará que las personas que navegan con la ayuda de tecnología de asistencia, como un lector de pantalla, puedan comprender qué entradas necesitan contenido válido para garantizar un envío exitoso.
 
 Si el formulario también contiene entradas opcionales, las entradas requeridas deben indicarse visualmente utilizando un tratamiento que no dependa únicamente del color para transmitir el significado. Normalmente, se utilizan texto descriptivo y / o un icono.
 
@@ -43,16 +37,11 @@ Si el formulario también contiene entradas opcionales, las entradas requeridas 
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                                   | Comentarios                                                   |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', '#selector-required', ':required') }}         | {{ Spec2('HTML WHATWG') }}     | Ningún cambio.                                                |
-| {{ SpecName('HTML5 W3C', '#selector-required', ':required') }}         | {{ Spec2('HTML5 W3C') }}         | Define la semántica de HTML y la validación de restricciones. |
-| {{ SpecName('CSS4 Selectors', '#opt-pseudos', ':required') }}             | {{ Spec2('CSS4 Selectors') }} | Ningún cambio.                                                |
-| {{ SpecName('CSS3 Basic UI', '#pseudo-required-value', ':required') }} | {{ Spec2('CSS3 Basic UI') }}     | Define la pseudo-clase, pero no la semántica asociada.        |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.required")}}
+{{Compat}}
 
 ## Ver también
 

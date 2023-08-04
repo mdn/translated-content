@@ -1,14 +1,8 @@
 ---
 title: HTMLElement.click()
 slug: Web/API/HTMLElement/click
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - 레퍼런스
-  - 메소드
-translation_of: Web/API/HTMLElement/click
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.click()`** 메소는 엘리먼트에 마우스 클릭을 시뮬레이션합니다.
@@ -18,7 +12,7 @@ translation_of: Web/API/HTMLElement/click
 ## 구문
 
 ```js
-element.click()
+element.click();
 ```
 
 ## 명세

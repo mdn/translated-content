@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions
 
 擴充功能（extension）可以擴展和修改瀏覽器的功能。Firefox 的擴充功能是使用 WebExtension API 建立而成，這是一個開發跨瀏覽器擴充功能的系統。這個系統的大部分相容於 Google Chrome 和 Opera 的 [擴充功能 API](https://developer.chrome.com/extensions) 與 [W3C Draft Community Group](https://browserext.github.io/browserext/)。這些瀏覽器的擴充功能在大多數的情況下，只需要[一點改變](/zh-TW/Add-ons/WebExtensions/Porting_from_Google_Chrome)就可以在 Firefox 或 [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) 中執行。這個 API 也和[多處理程序的 Firefox](/zh-TW/Firefox/Multiprocess_Firefox) 完全相容。
 
-如果你有任何新點子、問題，或是需要使用 WebExtension API 來移植舊的擴充功能，你可以在 [dev-addons 郵件群組](https://mail.mozilla.org/listinfo/dev-addons)或 [IRC](https://wiki.mozilla.org/IRC) 上的 [#extdev](irc://irc.mozilla.org/extdev) 找到我們。
+如果你有任何新點子、問題，或是需要使用 WebExtension API 來移植舊的擴充功能，你可以在 [Add-ons Discourse](https://discourse.mozilla.org/c/add-ons/35)、[IRC](https://wiki.mozilla.org/IRC) 上的 [#extdev](irc://irc.mozilla.org/extdev) 或 Telegram [MozTW dev/add-on](https://t.me/moztw_dev) 找到我們。
 
 ## 開始入門
 

@@ -1,14 +1,8 @@
 ---
 title: with
 slug: Web/JavaScript/Reference/Statements/with
-tags:
-  - Declaração
-  - Deprecado
-  - Deprecated
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/with
 ---
+
 > **Aviso:** O uso da declaração `with` não é recomendado, isso porque ele pode ser a fonte de bugs confusos e problemas de compatibilidade. Veja o parágrafo "Contra de ambiguidade" na seção "Descrição" para mais detalhes.
 
 {{jsSidebar("Statements")}}
@@ -51,7 +45,7 @@ function f(x, o) {
 }
 ```
 
-Apenas quando `f` é chamado é `x` ou encontrado ou não, e se for encontrado, ou em `o` ou (se nenhuma propriedade existir) no objeto de ativação de `f`, onde o nome de `x` é o primeiro argumento formal. Se você esquecer de definir `x` no objeto que você passou como segundo argumento, ou se há algum bug similar ou confusão, você não vai receber um erro -- apenas resultados inesperados.
+Apenas quando `f` é chamado é `x` ou encontrado ou não, e se for encontrado, ou em `o` ou (se nenhuma propriedade existir) no objeto de ativação de `f`, onde o nome de `x` é o primeiro argumento formal. Se você esquecer de definir `x` no objeto que você passou como segundo argumento, ou se há algum bug similar ou confusão, você não vai receber um erro — apenas resultados inesperados.
 
 **Contra:** Código utilizando `with` talvez não seja compatível posteriormente, especialmente quando usado com algo que não seja um objeto simples. Considere esse exemplo:
 
@@ -63,7 +57,7 @@ function f(foo, values) {
 }
 ```
 
-Se você chamar `f([1,2,3], obj)` em um ambiente ECMAScript 5, então a referência de `values` dentro da declaração `with` irá ser `obj`. No entando, ECMAScript 6 introduz uma propriedade `values` no [`Array.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype) (então isso estará disponível em todas as arrays). Então, em um ambiente JavaScript que suporta ECMAScript 6, a referência de `values` dentro da declaração `with` irá ser `[1,2,3].values`.
+Se você chamar `f([1,2,3], obj)` em um ambiente ECMAScript 5, então a referência de `values` dentro da declaração `with` irá ser `obj`. No entando, ECMAScript 6 introduz uma propriedade `values` no [`Array.prototype`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype) (então isso estará disponível em todas as arrays). Então, em um ambiente JavaScript que suporta ECMAScript 6, a referência de `values` dentro da declaração `with` irá ser `[1,2,3].values`.
 
 ## Exemplos
 
@@ -84,13 +78,13 @@ with (Math) {
 
 ## Especificações
 
-| Especificação                                                                        | Situação                     | Comentário                      |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------- |
+| Especificação                                                    | Situação             | Comentário                      |
+| ---------------------------------------------------------------- | -------------------- | ------------------------------- |
 | {{SpecName('ESDraft', '#sec-with-statement', 'with statement')}} | {{Spec2('ESDraft')}} |                                 |
-| {{SpecName('ES6', '#sec-with-statement', 'with statement')}}     | {{Spec2('ES6')}}         |                                 |
-| {{SpecName('ES5.1', '#sec-12.10', 'with statement')}}             | {{Spec2('ES5.1')}}     | Agora proibido no modo estrito. |
-| {{SpecName('ES3', '#sec-12.10', 'with statement')}}                 | {{Spec2('ES3')}}         |                                 |
-| {{SpecName('ES1', '#sec-12.10', 'with statement')}}                 | {{Spec2('ES1')}}         | Definição inicial               |
+| {{SpecName('ES6', '#sec-with-statement', 'with statement')}}     | {{Spec2('ES6')}}     |                                 |
+| {{SpecName('ES5.1', '#sec-12.10', 'with statement')}}            | {{Spec2('ES5.1')}}   | Agora proibido no modo estrito. |
+| {{SpecName('ES3', '#sec-12.10', 'with statement')}}              | {{Spec2('ES3')}}     |                                 |
+| {{SpecName('ES1', '#sec-12.10', 'with statement')}}              | {{Spec2('ES1')}}     | Definição inicial               |
 
 ## Compatibilidade com navegadores
 

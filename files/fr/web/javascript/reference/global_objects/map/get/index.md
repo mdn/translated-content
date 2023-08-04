@@ -1,15 +1,6 @@
 ---
 title: Map.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/Map/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/get
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/get
 ---
 
 {{JSRef}}
@@ -21,7 +12,7 @@ La méthode **`get()`** renvoie un élément précisé d'un objet `Map`. Si la v
 ## Syntaxe
 
 ```js
-maMap.get(clé)
+maMap.get(clé);
 ```
 
 ### Paramètres
@@ -39,20 +30,17 @@ L'élément associée à la clé donnée ou {{jsxref("undefined")}} si la clé n
 var maMap = new Map();
 maMap.set("truc", "toto");
 
-maMap.get("truc");     // Renvoie "toto".
-maMap.get("machin");   // Renvoie undefined.
+maMap.get("truc"); // Renvoie "toto".
+maMap.get("machin"); // Renvoie undefined.
 ```
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-map.prototype.get', 'Map.prototype.get')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype.get', 'Map.prototype.get')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Map.get")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -44,9 +44,7 @@ for (let view of pose.view) {
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                     | コメント |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName("WebXR","#dom-xrrigidtransform-inverse","XRRigidTransform.inverse")}} | {{Spec2("WebXR")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

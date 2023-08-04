@@ -1,15 +1,9 @@
 ---
-title: '<u> : l''élément d''annotation non textuelle'
+title: "<u> : l'élément d'annotation non textuelle"
 slug: Web/HTML/Element/u
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/u
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<u>`** permet d'afficher un fragment de texte qui est annoté avec des éléments non textuels. Par défaut, le contenu de l'élément est souligné. Cela pourra par exemple être le cas pour marquer un texte comme étant un nom propre chinois, ou pour marquer un texte qui a été mal orthographié.
 
@@ -83,13 +77,13 @@ La plupart du temps, ce n'est pas l'élément `<u>` qu'il faut utiliser. Voici q
 
 #### Souligner pour la simple mise en forme
 
-Pour souligner du texte sans que cela ait une quelconque portée sémantique, on utilisera un élément {{HTMLElement("span")}} qu'on mettra en forme avec la propriété CSS  {{cssxref("text-decoration")}} et la valeur `"underline"` :
+Pour souligner du texte sans que cela ait une quelconque portée sémantique, on utilisera un élément {{HTMLElement("span")}} qu'on mettra en forme avec la propriété CSS {{cssxref("text-decoration")}} et la valeur `"underline"` :
 
 ##### HTML
 
 ```html
 <span class="underline">Le plat du jour</span>
-<br>
+<br />
 Soupe de potiron avec un soupçon de noix de muscade
 ```
 

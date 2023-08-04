@@ -1,11 +1,11 @@
 ---
-title: ':focus-visible'
+title: ":focus-visible"
 slug: Web/CSS/:focus-visible
 ---
 
 {{CSSRef}}
 
-当元素匹配{{cssxref(":focus")}}伪类并且客户端 (UA) 的启发式引擎决定焦点应当可见 (在这种情况下很多浏览器默认显示“焦点框”。) 时，**`:focus-visible` **伪类将生效。
+当元素匹配{{cssxref(":focus")}}伪类并且客户端 (UA) 的启发式引擎决定焦点应当可见 (在这种情况下很多浏览器默认显示“焦点框”。) 时，**`:focus-visible`** 伪类将生效。
 
 这个选择器可以有效地根据用户的输入方式 (鼠标 vs 键盘) 展示不同形式的焦点。
 
@@ -13,7 +13,11 @@ slug: Web/CSS/:focus-visible
 
 ## 语法
 
-{{csssyntax}}
+```css
+:focus-visible {
+  /* ... */
+}
+```
 
 ## 示例
 
@@ -22,16 +26,17 @@ slug: Web/CSS/:focus-visible
 在这个例子中，`:focus-visible` 选择器利用客户端 (UA) 的行为决定是否匹配。比较一下，当你用鼠标点击控件和用键盘 tab 切换控件有何不同。请注意元素的表现与具有 `:focus` 样式的元素的区别。
 
 ```html
-<input value="Default styles"><br>
-<button>Default styles</button><br>
-<input class="focus-only" value=":focus only"><br>
-<button class="focus-only">:focus only</button><br>
-<input class="focus-visible-only" value=":focus-visible only"><br>
+<input value="Default styles" /><br />
+<button>Default styles</button><br />
+<input class="focus-only" value=":focus only" /><br />
+<button class="focus-only">:focus only</button><br />
+<input class="focus-visible-only" value=":focus-visible only" /><br />
 <button class="focus-visible-only">:focus-visible only</button>
 ```
 
 ```css
-input, button {
+input,
+button {
   margin: 10px;
 }
 
@@ -44,7 +49,7 @@ input, button {
 }
 ```
 
-{{EmbedLiveSample('Basic_example', '100%', '300')}}
+{{EmbedLiveSample('基本示例', '100%', '300')}}
 
 ### 选择性地显示焦点
 
@@ -82,7 +87,7 @@ custom-button:focus-visible {
 }
 ```
 
-{{EmbedLiveSample('Selectively_showing_the_focus_indicator', '100%', '300')}}
+{{EmbedLiveSample('选择性地显示焦点', '100%', '300')}}
 
 ## Polyfill
 

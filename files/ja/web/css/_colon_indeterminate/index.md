@@ -1,5 +1,5 @@
 ---
-title: ':indeterminate'
+title: ":indeterminate"
 slug: Web/CSS/:indeterminate
 ---
 
@@ -22,7 +22,9 @@ input:indeterminate {
 
 ## 構文
 
-{{csssyntax}}
+```
+:indeterminate
+```
 
 ## 例
 

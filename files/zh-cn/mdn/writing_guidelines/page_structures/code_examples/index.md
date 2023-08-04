@@ -86,7 +86,7 @@ console.log(test);
 - CSS
 - JavaScript
 - 结果
-  
+
 在上面列出的各个小节中编写代码块。在**结果**小节中，添加对 [`EmbedLiveSample` 宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples#运行实例宏)的调用，最好在这个小节中再加入一些文字来描述结果。
 如果不使用某个特定的语言类型（例如，如果你不使用 JavaScript），或者隐藏了它，那么就应该省略相应的标题。
 
@@ -184,5 +184,5 @@ p.fancy {
 
 ### GitHub 在线实例指引
 
-- 显然，你需要先把一个合适的代码示例放置到 [MDN GitHub 组织](https://github.com/mdn/)上，这需要使用 Git 来完成。如果你不熟悉 Git，请查看[如何使用 GitHub Pages？](/zh-CN/docs/Learn/Common_questions/Using_Github_pages)文章，以及[准备添加数据](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#为添加数据做好准备)以了解更进一步的用途。
+- 显然，你需要先把一个合适的代码示例放置到 [MDN GitHub 组织](https://github.com/mdn/)上，这需要使用 Git 来完成。如果你不熟悉 Git，请查看[如何使用 GitHub Pages？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)文章，以及[准备添加数据](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#为添加数据做好准备)以了解更进一步的用途。
 - 你的代码样本需要适合展示你所要展示的内容——它应该包含一个简单的例子，能很好地完成一件事，里面不应该有攻击性的内容，并且应该遵循 MDN [代码示例指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)。

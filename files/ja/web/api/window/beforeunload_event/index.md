@@ -1,5 +1,5 @@
 ---
-title: 'Window: beforeunload イベント'
+title: "Window: beforeunload イベント"
 slug: Web/API/Window/beforeunload_event
 ---
 
@@ -62,10 +62,7 @@ window.addEventListener('beforeunload', (event) => {
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("HTML WHATWG", "indices.html#event-beforeunload", "beforeunload")}} | {{Spec2("HTML WHATWG")}} |          |
-| {{SpecName("HTML5 W3C", "browsers.html#unloading-documents", "beforeunload")}} | {{Spec2("HTML5 W3C")}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

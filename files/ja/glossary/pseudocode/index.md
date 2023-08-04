@@ -9,4 +9,4 @@ slug: Glossary/Pseudocode
 
 ### 基礎知識
 
-- Wikipedia の {{interwiki("wikipedia", "擬似コード", "擬似コード")}}。
+- Wikipedia の [擬似コード](https://ja.wikipedia.org/wiki/擬似コード)。

@@ -7,9 +7,9 @@ slug: Web/API/DataTransfer/effectAllowed
 
 **`DataTransfer.effectAllowed`** 属性指定拖放操作所允许的一个效果。_copy_ 操作用于指示被拖动的数据将从当前位置复制到放置位置。_move_ 操作用于指定被拖动的数据将被移动。_link_ 操作用于指示将在源和放置位置之间创建某种形式的关系或连接。
 
-应该在{{event("dragstart")}}事件中设置此属性，以便为拖动源设置所需的拖动效果。在 {{event("dragenter")}} 和{{event("dragover")}} 事件处理程序中，该属性将设置为在{{event("dragstart")}} 事件期间分配的任何值，因此，可以使用`effectAllowed`来确定允许哪个效果。
+应该在[`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event)事件中设置此属性，以便为拖动源设置所需的拖动效果。在 [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event) 和[`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) 事件处理程序中，该属性将设置为在[`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件期间分配的任何值，因此，可以使用`effectAllowed`来确定允许哪个效果。
 
-给`effectAllowed`赋一个值，以使其在除{{event("dragstart")}} 之外的事件中无效。
+给`effectAllowed`赋一个值，以使其在除[`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 之外的事件中无效。
 
 ## 语法
 
@@ -114,5 +114,4 @@ function dragover_handler(ev) {
 - [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
 - [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [推荐的拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [拖拽和放置多个项目](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer 测试——粘贴或拖拽](https://codepen.io/tech_query/pen/MqGgap)

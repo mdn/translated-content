@@ -1,14 +1,6 @@
 ---
 title: Int16Array
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/Int16Array
-original_slug: Web/JavaScript/Reference/Objets_globaux/Int16Array
 ---
 
 {{JSRef}}
@@ -132,7 +124,7 @@ console.log(int16.length); // 2
 console.log(int16.BYTES_PER_ELEMENT); // 2
 
 // Construction à partir d'un tableau
-var arr = new Int16Array([21,31]);
+var arr = new Int16Array([21, 31]);
 console.log(arr[1]); // 31
 
 // Construction à partir d'un autre TypedArray
@@ -145,22 +137,20 @@ var buffer = new ArrayBuffer(8);
 var z = new Int16Array(buffer, 0, 4);
 
 // Construction à partir d'un itérable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var int16 = new Int16Array(iterable);
 // Int16Array[1, 2, 3]
 ```
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires                                                                                                                                     |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                                                                                                                  |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. `new` est obligatoire.                                                                           |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 a modifié le constructeur `Int16Array` afin d'utiliser l'opération interne `ToIndex` pour permettre de l'utiliser sans argument. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Int16Array")}}
+{{Compat}}
 
 ## Notes de compatibilité
 

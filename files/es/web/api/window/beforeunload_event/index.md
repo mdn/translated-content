@@ -1,9 +1,8 @@
 ---
 title: beforeunload
 slug: Web/API/Window/beforeunload_event
-translation_of: Web/API/Window/beforeunload_event
-original_slug: Web/Events/beforeunload
 ---
+
 {{APIRef}}
 
 El evento **beforeunload** es disparado cuando la ventana, el documento y sus recursos estan a punto de ser descargados. El documento todavia es visible y el evento todavia es cancelable en este punto.
@@ -35,19 +34,19 @@ Si es asignado un string a la propiedad del objeto Evento returnValue, una caja 
 
 ## Propiedades
 
-| Propiedad                             | Tipo                                 | Descripcion                                                                        |
-| ------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------- |
+| Propiedad                       | Tipo                       | Descripcion                                                                        |
+| ------------------------------- | -------------------------- | ---------------------------------------------------------------------------------- |
 | `target` {{readOnlyInline}}     | {{domxref("EventTarget")}} | El evento objetivo(el objetivo superior en el arbol del DOM).                      |
-| `type` {{readOnlyInline}}       | {{domxref("DOMString")}}     | El tipo de evento.                                                                 |
-| `bubbles` {{readOnlyInline}}    | {{jsxref("Boolean")}}         | El evento normalmente burbujea?                                                    |
-| `cancelable` {{readOnlyInline}} | {{jsxref("Boolean")}}         | Es posible cancelar el evento?                                                     |
-| `returnValue`                         | {{domxref("DOMString")}}     | El valor actual devuelto por el evento (el mensaje que se le mostrara al usuario). |
+| `type` {{readOnlyInline}}       | {{domxref("DOMString")}}   | El tipo de evento.                                                                 |
+| `bubbles` {{readOnlyInline}}    | {{jsxref("Boolean")}}      | El evento normalmente burbujea?                                                    |
+| `cancelable` {{readOnlyInline}} | {{jsxref("Boolean")}}      | Es posible cancelar el evento?                                                     |
+| `returnValue`                   | {{domxref("DOMString")}}   | El valor actual devuelto por el evento (el mensaje que se le mostrara al usuario). |
 
 ## Ejemplos
 
 ```js
 window.addEventListener("beforeunload", function (event) {
-  event.returnValue = "\o/";
+  event.returnValue = "\\o/";
 });
 
 // es equivalente a
@@ -60,10 +59,10 @@ Navegadores basados en WebKit no siguen las especificaciones para la caja de dia
 
 ```js
 window.addEventListener("beforeunload", function (e) {
-  var confirmationMessage = "\o/";
+  var confirmationMessage = "\\o/";
 
-  e.returnValue = confirmationMessage;     // Gecko, Trident, Chrome 34+
-  return confirmationMessage;              // Gecko, WebKit, Chrome <34
+  e.returnValue = confirmationMessage; // Gecko, Trident, Chrome 34+
+  return confirmationMessage; // Gecko, WebKit, Chrome <34
 });
 ```
 
@@ -77,20 +76,17 @@ Usando este manejador de evento tu pagina previene que Firefox cambie el cache d
 
 ## Especificaciones
 
-| Especificacion                                                                                           | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("HTML WHATWG", "indices.html#event-beforeunload", "beforeunload")}} | {{Spec2("HTML WHATWG")}} |                    |
-| {{SpecName("HTML5 W3C", "browsers.html#unloading-documents", "beforeunload")}} | {{Spec2("HTML5 W3C")}}     | Definicion inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Window.beforeunload_event")}}
+{{Compat}}
 
 ## Mire tambien
 
-- {{Event("DOMContentLoaded")}}
-- {{Event("readystatechange")}}
-- {{Event("load")}}
-- {{Event("unload")}}
+- [`DOMContentLoaded`](/es/docs/Web/Reference/Events/DOMContentLoaded)
+- [`readystatechange`](/es/docs/Web/Reference/Events/readystatechange)
+- [`load`](/es/docs/Web/Reference/Events/load)
+- [`unload`](/es/docs/Web/Reference/Events/unload)
 - [Unloading Documents — Confirmacion para descargar un documento](http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)
 - [Remover mensajes personalizados en dialogos onbeforeload despues de Chrome 51](https://developers.google.com/web/updates/2016/04/chrome-51-deprecations?hl=en#remove_custom_messages_in_onbeforeload_dialogs)

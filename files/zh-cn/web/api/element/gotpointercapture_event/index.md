@@ -1,11 +1,11 @@
 ---
-title: GlobalEventHandlers.ongotpointercapture
+title: Element：gotpointercapture 事件
 slug: Web/API/Element/gotpointercapture_event
 ---
 
 {{ApiRef("HTML DOM")}}
 
-**`ongotpointercapture`** 事件是 GlobalEventHandlers 的属性，这个事件返回 gotpointercapture 类型的事件操作。
+**`gotpointercapture`** 事件是 GlobalEventHandlers 的属性，这个事件返回 gotpointercapture 类型的事件操作。
 
 ## 语法
 
@@ -13,7 +13,7 @@ slug: Web/API/Element/gotpointercapture_event
 window.ongotpointercapture = functionReference
 ```
 
-## 例子
+## 示例
 
 ```js
 <html>
@@ -33,14 +33,24 @@ function init() {
 </html>
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- {{ event("gotpointercapture") }}
+- 相关事件
+
+  - [`lostpointercapture`](/zh-CN/docs/Web/API/Element/lostpointercapture_event)
+  - [`pointerover`](/zh-CN/docs/Web/API/Element/pointerover_event)
+  - [`pointerenter`](/zh-CN/docs/Web/API/Element/pointerenter_event)
+  - [`pointerdown`](/zh-CN/docs/Web/API/Element/pointerdown_event)
+  - [`pointermove`](/zh-CN/docs/Web/API/Element/pointermove_event)
+  - [`pointerup`](/zh-CN/docs/Web/API/Element/pointerup_event)
+  - [`pointercancel`](/zh-CN/docs/Web/API/Element/pointercancel_event)
+  - [`pointerout`](/zh-CN/docs/Web/API/Element/pointerout_event)
+  - [`pointerleave`](/zh-CN/docs/Web/API/Element/pointerleave_event)

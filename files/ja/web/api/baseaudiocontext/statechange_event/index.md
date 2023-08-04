@@ -1,7 +1,6 @@
 ---
-title: 'BaseAudioContext: statechange イベント'
+title: "BaseAudioContext: statechange イベント"
 slug: Web/API/BaseAudioContext/statechange_event
-original_slug: Web/API/BaseAudioContext/onstatechange
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -42,4 +41,4 @@ audioCtx.onstatechange = function() {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

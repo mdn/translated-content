@@ -1,70 +1,69 @@
 ---
-title: IDBFactory.cmp
+title: IDBFactory.cmp()
 slug: Web/API/IDBFactory/cmp
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-{{ APIRef("IDBFactory") }}
+{{ APIRef("IndexedDB") }}
 
-{{domxref("IDBFactory")}}インターフェイスの`cmp()`メソッドは、2 つのキーが等価か決定するために比較し、そして、IndexedDB で保存や統合のような操作を命令します。
+**`cmp()`** は {{domxref("IDBFactory")}} インターフェイスのメソッドで、格納や反復処理などの IndexedDB 処理において、2 つの値をキーとして比較し、等しさや順序を決定します。
 
-> **メモ:** Do not use this method for comparing arbitrary JavaScript values, because many JavaScript values are either not valid IndexedDB keys (booleans and objects, for example) or are treated as equivalent IndexedDB keys (for example, since IndexedDB ignores arrays with non-numeric properties and treats them as empty arrays, so any non-numeric arrays are treated as equivalent). This throws an exception if either of the values is not a valid key.
+{{AvailableInWorkers}}
+
+> **メモ:** このメソッドを任意の JavaScript における値の比較に使用してはいけません。なぜなら、JavaScript の値の多くは IndexedDB の有効なキーではない（例えば、boolean や object）か、IndexedDB で等価なキーとして扱われるためです（例えば、IndexedDB は数値以外のプロパティを持つ配列を無視して空の配列として扱うため、数値でない配列は全て等価として扱われます）。このメソッドは、値のうちいずれかが有効なキーでないとき、例外を投げます。
 
 ## 構文
 
-```js
-var result = window.indexedDB.cmp(a, b);
+```js-nolint
+cmp(first, second)
 ```
 
-### 戻り値
+## 引数
 
-比較結果を示す整数値。 次のテーブルに可能性のある値とその意味を載せます。:
+- `first`
+  - : 比較する 1 つ目のキー。
+- `second`
+  - : 比較する 2 つ目のキー。
 
-| 戻り値 | 説明                                  |
-| ------ | ------------------------------------- |
-| -1     | 1 つ目のキーが 2 つ目のキーより小さい |
-| 0      | 1 つ目のキーと 2 つ目のキーが等しい   |
-| 1      | 1 つ目のキーが 2 つ目のキーより大きい |
+### 返値
+
+比較結果を示す整数値です。下記のテーブルでは、取りうる値とその意味を示しています。
+
+| 返値 | 説明                                  |
+| ---- | ------------------------------------- |
+| -1   | 1 つ目のキーが 2 つ目のキーより小さい |
+| 0    | 1 つ目のキーと 2 つ目のキーが等しい   |
+| 1    | 1 つ目のキーが 2 つ目のキーより大きい |
 
 ### 例外
 
-このメソッドでは、次の型のような{{domxref("DOMError")}} を持つ {{domxref("DOMException")}}が発生するかもしれません。
-
-| 属性                                 | 説明                           |
-| ------------------------------------ | ------------------------------ |
-| [`DataError`](/ja/docs/DOM/DOMError) | 渡されたキーが不正な値である。 |
+- `DataError` {{domxref("DOMException")}}
+  - : 指定されたキーの何れかが有効なキーではなかった場合。
 
 ## 例
 
 ```js
-var a = 1;
-var b = 2;
-var result = window.indexedDB.cmp(a, b);
-console.log( "Comparison results: " + result );
+const a = 1;
+const b = 2;
+const result = window.indexedDB.cmp(a, b);
+console.log(`比較結果: ${result}`);
 ```
 
-## パラメーター
+## 仕様書
 
-- first
-  - : 比較する 1 つ目のキー。
-- second
-  - : 比較する 2 つ目のキー。
+{{Specifications}}
 
-## 仕様
+## ブラウザーの互換性
 
-| Specification                                                                                                    | Status                       | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('IndexedDB', '#widl-IDBFactory-cmp-short-any-first-any-second', 'cmp')}} | {{Spec2('IndexedDB')}} |         |
-
-## ブラウザ実装状況
-
-{{Compat("api.IDBFactory.cmp")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Using IndexedDB](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Starting transactions: {{domxref("IDBDatabase")}}
-- Using transactions: {{domxref("IDBTransaction")}}
-- Setting a range of keys: {{domxref("IDBKeyRange")}}
-- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
-- Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- トランザクションの開始: {{domxref("IDBDatabase")}}
+- トランザクションの使用: {{domxref("IDBTransaction")}}
+- キーの範囲の設定: {{domxref("IDBKeyRange")}}
+- データの取得と変更: {{domxref("IDBObjectStore")}}
+- カーソルの使用: {{domxref("IDBCursor")}}
+- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))

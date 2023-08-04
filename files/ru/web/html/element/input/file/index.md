@@ -1,9 +1,9 @@
 ---
 title: <input type="file">
-slug: Web/HTML/Element/Input/file
-translation_of: Web/HTML/Element/input/file
+slug: Web/HTML/Element/input/file
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} элемент с атрибутом **`type="file"`** позволяет пользователю выбрать один файл или более из файлового хранилища своего устройства. После выбора эти файлы могут быть загружены на сервер при помощи [формы](/ru/docs/Learn/HTML/Forms), или обработаны JavaScript и [File API](/ru/docs/Using_files_from_web_applications).
 
@@ -16,13 +16,13 @@ translation_of: Web/HTML/Element/input/file
 | **[Value](#value)**         | {{domxref("DOMString")}} представляет собой путь до выбранного файла.                                                                        |
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Действия**                | {{event("change")}} и{{event("input")}}                                                                                                   |
-| **Поддерживаемые атрибуты** | {{htmlattrxref("accept", "input")}}, {{htmlattrxref("multiple", "input")}}, {{htmlattrxref("required", "input")}} |
+| **Поддерживаемые атрибуты** | [`accept`](/ru/docs/Web/HTML/Element/input#accept), [`multiple`](/ru/docs/Web/HTML/Element/input#multiple), [`required`](/ru/docs/Web/HTML/Element/input#required) |
 | **IDL атрибуты**            | `files` and `value`                                                                                                                                  |
 | **Методы**                  | {{domxref("HTMLInputElement.select", "select()")}}                                                                                 |
 
 ## Value
 
-Атрибут {{htmlattrxref("value", "input")}} элемента input содержит {{domxref("DOMString")}}, который представляет путь к выбранным файлам. Если пользователь выбрал несколько файлов, `value` представляет первый файл из списка. Остальные файлы можно определить используя {{domxref("HTMLInputElement.files")}} свойство элемента input.
+Атрибут [`value`](/ru/docs/Web/HTML/Element/input#value) элемента input содержит {{domxref("DOMString")}}, который представляет путь к выбранным файлам. Если пользователь выбрал несколько файлов, `value` представляет первый файл из списка. Остальные файлы можно определить используя {{domxref("HTMLInputElement.files")}} свойство элемента input.
 
 > **Примечание:**1. Если выбрано несколько файлов, строка представляет собой первый выбранный файл. JavaScript предоставляет доступ к остальным файлам через свойство [`FileList`](</ru/docs/Using_files_from_web_applications#Getting_information_about_selected_file(s)>). 2. Если не выбрано ни одного файла, .строка равна `""` (пустая). 3. Строка [начинается с `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly), для предотвращения определения файловой структуры пользователя вредоносным ПО.
 
@@ -31,7 +31,7 @@ translation_of: Web/HTML/Element/input/file
 In addition to the common attributes shared by all {{HTMLElement("input")}} elements, inputs of type `file` also support:
 
 - `files`
-  - : A {{domxref("FileList")}} object that lists every selected file. This list has no more than one member unless the {{htmlattrxref("multiple", "input")}} attribute is specified.
+  - : A {{domxref("FileList")}} object that lists every selected file. This list has no more than one member unless the [`multiple`](/ru/docs/Web/HTML/Element/input#multiple) attribute is specified.
 
 ## Using file inputs
 
@@ -63,7 +63,7 @@ This produces the following output:
 
 Regardless of the user's device or operating system, the file input provides a button that opens up a file picker dialog that allows the user to choose a file.
 
-Including the {{htmlattrxref("multiple", "input")}} attribute, as shown above, specifies that multiple files can be chosen at once. The user can choose multiple files from the file picker in any way that their chosen platform allows (e.g. by holding down <kbd>Shift</kbd> or <kbd>Control</kbd>, and then clicking). If you only want the user to choose a single file per `<input>`, omit the `multiple` attribute.
+Including the [`multiple`](/ru/docs/Web/HTML/Element/input#multiple) attribute, as shown above, specifies that multiple files can be chosen at once. The user can choose multiple files from the file picker in any way that their chosen platform allows (e.g. by holding down <kbd>Shift</kbd> or <kbd>Control</kbd>, and then clicking). If you only want the user to choose a single file per `<input>`, omit the `multiple` attribute.
 
 When the form is submitted, each selected file's name will be added to URL parameters in the following fashion: `?file=file1.txt&file=file2.txt`
 
@@ -84,7 +84,7 @@ Each `File` object contains the following information:
 - `type`
   - : The file's [MIME type](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
 - webkitRelativePath {{non-standard_inline}}
-  - : A string specifying the file's path relative to the base directory selected in a directory picker (that is, a `file` picker in which the {{htmlattrxref("webkitdirectory", "input")}} attribute is set). _This is non-standard and should be used with caution._
+  - : A string specifying the file's path relative to the base directory selected in a directory picker (that is, a `file` picker in which the [`webkitdirectory`](/ru/docs/Web/HTML/Element/input#webkitdirectory) attribute is set). _This is non-standard and should be used with caution._
 
 > **Примечание:** You can set as well as get the value of `HTMLInputElement.files` in all modern browsers; this was most recently added to Firefox, in version 57 (see {{bug(1384030)}}).
 
@@ -92,7 +92,7 @@ Each `File` object contains the following information:
 
 Often you won't want the user to be able to pick any arbitrary type of file; instead, you often want them to select files of a specific type or types. For example, if your file input lets users upload a profile picture, you probably want them to select web-compatible image formats, such as [JPEG](/ru/docs/Glossary/jpeg) or [PNG](/ru/docs/Glossary/PNG).
 
-Acceptable file types can be specified with the {{htmlattrxref("accept","input")}} attribute, which takes a comma-separated list of allowed file extensions or MIME types. Some examples:
+Acceptable file types can be specified with the [`accept`](/ru/docs/Web/HTML/Element/input#accept) attribute, which takes a comma-separated list of allowed file extensions or MIME types. Some examples:
 
 - `accept="image/png"` or `accept=".png"` — Accepts PNG files.
 - `accept="image/png, image/jpeg"` or `accept=".png, .jpg, .jpeg"` — Accept PNG or JPEG files.
@@ -128,7 +128,7 @@ This produces a similar-looking output to the previous example:
 
 It may look similar, but if you try selecting a file with this input, you'll see that the file picker only lets you select the file types specified in the `accept` value (the exact nature differs across browsers and operating systems).
 
-![Screenshot of a macOS file picker dialog. Files other than JPEG are grayed-out and unselectable.](https://mdn.mozillademos.org/files/15183/file-chooser.png)
+![Screenshot of a macOS file picker dialog. Files other than JPEG are grayed-out and unselectable.](file-chooser.png)
 
 The `accept` attribute doesn't validate the types of the selected files; it simply provides hints for browsers to guide users towards selecting the correct file types. It is still possible (in most cases) for users to toggle an option in the file chooser that makes it possible to override this and select any file they wish, and then choose incorrect file types.
 
@@ -236,9 +236,9 @@ input.addEventListener('change', updateImageDisplay);
 
 Whenever the `updateImageDisplay()` function is invoked, we:
 
-- Use a [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop to empty the previous contents of the preview `<div>`.
+- Use a [`while`](/ru/docs/Web/JavaScript/Reference/Statements/while) loop to empty the previous contents of the preview `<div>`.
 - Grab the {{domxref("FileList")}} object that contains the information on all the selected files, and store it in a variable called `curFiles`.
-- Check to see if no files were selected, by checking if`curFiles.length` is equal to 0. If so, print a message into the preview `<div>` stating that no files have been selected.
+- Check to see if no files were selected, by checking if `curFiles.length` is equal to 0. If so, print a message into the preview `<div>` stating that no files have been selected.
 - If files _have_ been selected, we loop through each one, printing information about it into the preview `<div>`. Things to note here:
 - We use the custom `validFileType()` function to check whether the file is of the correct type (e.g. the image types specified in the `accept` attribute).
 - If it is, we:

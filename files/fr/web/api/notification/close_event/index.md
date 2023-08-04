@@ -1,16 +1,6 @@
 ---
 title: Notification.onclose
 slug: Web/API/Notification/close_event
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - onclose
-translation_of: Web/API/Notification/onclose
-original_slug: Web/API/notification/onclose
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -26,7 +16,7 @@ Notification.onclose = (event) => { ... }
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.onclose")}}
+{{Compat}}
 
 ## Voir aussi
 

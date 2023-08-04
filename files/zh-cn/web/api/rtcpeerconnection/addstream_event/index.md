@@ -5,7 +5,7 @@ slug: Web/API/RTCPeerConnection/addstream_event
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-**`当类型为`**{{domxref("MediaStreamEvent")}}的{{event("addstream")}} 事件发生时，通过{{domxref("RTCPeerConnection")}}触发**`RTCPeerConnection.onaddstream`** 事件处理函数。当远程媒体流{{domxref("MediaStream")}} 添加到连接后发送事件。当{{domxref("RTCPeerConnection.setRemoteDescription()")}} 后此事件立即被调用而不需要等待 SDP 交换完成。
+当类型为 {{domxref("MediaStreamEvent")}} 的 **`addstream`** 事件发生时，通过{{domxref("RTCPeerConnection")}} 触发 **`RTCPeerConnection.onaddstream`** 事件处理函数。当远程媒体流{{domxref("MediaStream")}} 添加到连接后发送事件。当{{domxref("RTCPeerConnection.setRemoteDescription()")}} 后此事件立即被调用而不需要等待 SDP 交换完成。
 
 ## 语法
 
@@ -20,13 +20,17 @@ peerconnection.onaddstream = function;
 ## 示例
 
 ```js
-pc.onaddstream = function(ev) { alert("onaddstream event detected!"); };
+pc.onaddstream = function (ev) {
+  alert("onaddstream event detected!");
+};
 ```
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 扩展阅读
+## 参见
 
-- The {{event("addstream")}} event and its type, {{domxref("MediaStreamEvent")}}.
+- [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
+- {{domxref("RTCPeerConnection.addStream()")}}
+- {{domxref("MediaStreamEvent")}}

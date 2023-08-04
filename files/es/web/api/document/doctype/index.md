@@ -1,15 +1,8 @@
 ---
 title: Document.doctype
 slug: Web/API/Document/doctype
-tags:
-  - API
-  - DOCTYPE
-  - DOM
-  - Document
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Document/doctype
 ---
+
 {{ApiRef("DOM")}}
 
 Devuelve la Declaración de tipo de documento (Document Type Declaration (DTD)), asociada al documento actual. El objeto devuelto implementa la interfaz {{domxref("DocumentType")}}. Utilice {{domxref("DOMImplementation.createDocumentType()")}} para crear un `DocumentType`.
@@ -28,10 +21,17 @@ doctype = document.doctype;
 var doctypeObj = document.doctype;
 
 console.log(
-  "doctypeObj.name: "           + doctypeObj.name            + "\n" +
-  "doctypeObj.internalSubset: " + doctypeObj.internalSubset  + "\n" +
-  "doctypeObj.publicId: "       + doctypeObj.publicId        + "\n" +
-  "doctypeObj.systemId: "       + doctypeObj.systemId
+  "doctypeObj.name: " +
+    doctypeObj.name +
+    "\n" +
+    "doctypeObj.internalSubset: " +
+    doctypeObj.internalSubset +
+    "\n" +
+    "doctypeObj.publicId: " +
+    doctypeObj.publicId +
+    "\n" +
+    "doctypeObj.systemId: " +
+    doctypeObj.systemId,
 );
 ```
 

@@ -9,10 +9,10 @@ Web Storage API 提供了存储机制，通过该机制，浏览器可以安全�
 
 存储对象是简单的键值存储，类似于对象，但是它们在页面加载时保持完整。键和值始终是字符串（请注意，与对象一样，整数键将自动转换为字符串）。您可以像访问对象一样访问这些值，或者使用 {{domxref("Storage.getItem()")}} 和 {{domxref("Storage.setItem()")}} 方法。这三行都设置了（相同的）colorSetting 条目：
 
-```
-localStorage.colorSetting = '#a4509b';
-localStorage['colorSetting'] = '#a4509b';
-localStorage.setItem('colorSetting', '#a4509b');
+```js
+localStorage.colorSetting = "#a4509b";
+localStorage["colorSetting"] = "#a4509b";
+localStorage.setItem("colorSetting", "#a4509b");
 ```
 
 Web Storage 包含如下两种机制：
@@ -36,40 +36,41 @@ Web Storage 包含如下两种机制：
 
 这是一个检测 localStorage 是否同时受支持和可用的函数：
 
-```
+```js
 function storageAvailable(type) {
-    var storage;
-    try {
-        storage = window[type];
-        var x = '__storage_test__';
-        storage.setItem(x, x);
-        storage.removeItem(x);
-        return true;
-    }
-    catch(e) {
-        return e instanceof DOMException && (
-            // everything except Firefox
-            e.code === 22 ||
-            // Firefox
-            e.code === 1014 ||
-            // test name field too, because code might not be present
-            // everything except Firefox
-            e.name === 'QuotaExceededError' ||
-            // Firefox
-            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-            // acknowledge QuotaExceededError only if there's something already stored
-            (storage && storage.length !== 0);
-    }
+  var storage;
+  try {
+    storage = window[type];
+    var x = "__storage_test__";
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return (
+      e instanceof DOMException &&
+      // everything except Firefox
+      (e.code === 22 ||
+        // Firefox
+        e.code === 1014 ||
+        // test name field too, because code might not be present
+        // everything except Firefox
+        e.name === "QuotaExceededError" ||
+        // Firefox
+        e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+      // acknowledge QuotaExceededError only if there's something already stored
+      storage &&
+      storage.length !== 0
+    );
+  }
 }
 ```
 
 这是您将如何使用它：
 
-```
-if (storageAvailable('localStorage')) {
+```js
+if (storageAvailable("localStorage")) {
   // Yippee! We can use localStorage awesomeness
-}
-else {
+} else {
   // Too bad, no localStorage for us
 }
 ```
@@ -78,13 +79,13 @@ else {
 
 请参阅此处，[brief history of feature-detecting localStorage](https://gist.github.com/paulirish/5558557).。
 
-## 一个简单的示例
+## 示例
 
 为了展示 Web Storage 的用法，我们创建了一个简单的示例，假设称为 **Web Storage Demo**。[示例页面](https://mdn.github.io/dom-examples/web-storage/)提供了控制表单，用于自定义颜色、字体和装饰图片：
 
 ![](landing.png)当你选择不同的选项后，页面会立即更新；除此之外，你的选择会被存到 `localStorage` 里，这样，当你关闭页面之后重新加载时，你的选择会被记住。
 
-我们还提供了一个[存储事件结果页面](https://mdn.github.io/dom-examples/web-storage/event.html) — 如果你在另一个标签页加载该页面，然后改变之前示例页面的选项，则随着 {{event("StorageEvent")}} 事件的触发，更新的存储信息会显示出来。
+我们还提供了一个[存储事件结果页面](https://mdn.github.io/dom-examples/web-storage/event.html) — 如果你在另一个标签页加载该页面，然后改变之前示例页面的选项，则随着 {{domxref("StorageEvent")}} 事件的触发，更新的存储信息会显示出来。
 
 ![](event-output.png)
 
@@ -95,7 +96,7 @@ else {
 在 [main.js](https://github.com/mdn/dom-examples/blob/master/web-storage/main.js) 开头，我们先测试本地存储是否已被填充（即，页面之前被访问过）：
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem("bgcolor")) {
   populateStorage();
 } else {
   setStyles();
@@ -112,17 +113,17 @@ if(!localStorage.getItem('bgcolor')) {
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  var currentColor = localStorage.getItem("bgcolor");
+  var currentFont = localStorage.getItem("font");
+  var currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = "#" + currentColor;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 
@@ -134,9 +135,9 @@ function setStyles() {
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-  localStorage.setItem('font', document.getElementById('font').value);
-  localStorage.setItem('image', document.getElementById('image').value);
+  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
+  localStorage.setItem("font", document.getElementById("font").value);
+  localStorage.setItem("image", document.getElementById("image").value);
 
   setStyles();
 }
@@ -154,17 +155,17 @@ imageForm.onchange = populateStorage;
 
 ### 通过 StorageEvent 响应存储的变化
 
-无论何时，{{domxref("Storage")}} 对象发生变化时（即创建/更新/删除数据项时，重复设置相同的键值不会触发该事件，{{domxref("Storage.clear()")}} 方法至多触发一次该事件），{{event("StorageEvent")}} 事件会触发。在同一个页面内发生的改变不会起作用——在相同域名下的其他页面（如一个新标签或 iframe）发生的改变才会起作用。在其他域名下的页面不能访问相同的 Storage 对象。
+无论何时，{{domxref("Storage")}} 对象发生变化时（即创建/更新/删除数据项时，重复设置相同的键值不会触发该事件，{{domxref("Storage.clear()")}} 方法至多触发一次该事件），{{domxref("StorageEvent")}} 事件会触发。在同一个页面内发生的改变不会起作用——在相同域名下的其他页面（如一个新标签或 iframe）发生的改变才会起作用。在其他域名下的页面不能访问相同的 Storage 对象。
 
 在事件结果页面中的 JavaScript 如下所示（可见 [events.js](https://github.com/mdn/dom-examples/blob/master/web-storage/event.js)）：
 
 ```js
-window.addEventListener('storage', function(e) {
-  document.querySelector('.my-key').textContent = e.key;
-  document.querySelector('.my-old').textContent = e.oldValue;
-  document.querySelector('.my-new').textContent = e.newValue;
-  document.querySelector('.my-url').textContent = e.url;
-  document.querySelector('.my-storage').textContent = e.storageArea;
+window.addEventListener("storage", function (e) {
+  document.querySelector(".my-key").textContent = e.key;
+  document.querySelector(".my-old").textContent = e.oldValue;
+  document.querySelector(".my-new").textContent = e.newValue;
+  document.querySelector(".my-url").textContent = e.url;
+  document.querySelector(".my-storage").textContent = e.storageArea;
 });
 ```
 

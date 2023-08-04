@@ -2,6 +2,7 @@
 title: 本の詳細ページ
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 ---
+
 The _Book detail page_ needs to display the information for a specific `Book`, identified using its (automatically generated) `_id` field value, along with information about each associated copy in the libary (`BookInstance`). Wherever we display an author, genre, or book instance, these should be linked to the associated detail page for that item.
 
 ## Controller
@@ -10,32 +11,37 @@ Open **/controllers/bookController.js**. Find the exported `book_detail()` contr
 
 ```js
 // Display detail page for a specific book.
-exports.book_detail = function(req, res, next) {
-
-    async.parallel({
-        book: function(callback) {
-
-            Book.findById(req.params.id)
-              .populate('author')
-              .populate('genre')
-              .exec(callback);
-        },
-        book_instance: function(callback) {
-
-          BookInstance.find({ 'book': req.params.id })
+exports.book_detail = function (req, res, next) {
+  async.parallel(
+    {
+      book: function (callback) {
+        Book.findById(req.params.id)
+          .populate("author")
+          .populate("genre")
           .exec(callback);
-        },
-    }, function(err, results) {
-        if (err) { return next(err); }
-        if (results.book==null) { // No results.
-            var err = new Error('Book not found');
-            err.status = 404;
-            return next(err);
-        }
-        // Successful, so render.
-        res.render('book_detail', { title: 'Title', book: results.book, book_instances: results.book_instance } );
-    });
-
+      },
+      book_instance: function (callback) {
+        BookInstance.find({ book: req.params.id }).exec(callback);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      }
+      if (results.book == null) {
+        // No results.
+        var err = new Error("Book not found");
+        err.status = 404;
+        return next(err);
+      }
+      // Successful, so render.
+      res.render("book_detail", {
+        title: "Title",
+        book: results.book,
+        book_instances: results.book_instance,
+      });
+    },
+  );
 };
 ```
 

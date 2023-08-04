@@ -1,27 +1,21 @@
 ---
 title: <q>
 slug: Web/HTML/Element/q
-tags:
-  - Elemento
-  - HTML
-  - Referência(2)
-  - Semântica(2)
-  - Web
-translation_of: Web/HTML/Element/q
 ---
-{{HTMLRef}}O elemento HTML \<q> indica que o texto dentro da tag é uma pequena citação. Este elemento destina-se a citações curtas que não requerem marcações de parágrafo; para citações maiores use o elemento {{HTMLElement("blockquote")}}.
+
+{{HTMLSidebar}}O elemento HTML \<q> indica que o texto dentro da tag é uma pequena citação. Este elemento destina-se a citações curtas que não requerem marcações de parágrafo; para citações maiores use o elemento {{HTMLElement("blockquote")}}.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories">Categorias de conteúdo</a>
+        <a href="/pt-BR/docs/HTML/Content_categories">Categorias de conteúdo</a>
       </th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >Fluxo de conteúdo</a
         >,
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >conteúdo textual</a
         >, conteúdo palpável.
       </td>
@@ -29,7 +23,7 @@ translation_of: Web/HTML/Element/q
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >Conteúdo textual</a
         >.
       </td>
@@ -42,7 +36,7 @@ translation_of: Web/HTML/Element/q
       <th scope="row">Parents permitidos</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >conteúdo textual</a
         >.
       </td>
@@ -58,7 +52,7 @@ translation_of: Web/HTML/Element/q
   </tbody>
 </table>
 
-> **Note:** **Nota:** A maioria dos browsers modernos adicionará automaticamente marcas de citação em volta do texto dentro de um elemento `<q>`. Talvez seja necessário criar uma regra de estilo para adicionar marcas de citação em browsers antigos.
+> **Nota:** A maioria dos browsers modernos adicionará automaticamente marcas de citação em volta do texto dentro de um elemento `<q>`. Talvez seja necessário criar uma regra de estilo para adicionar marcas de citação em browsers antigos.
 
 ## Atributos
 
@@ -74,7 +68,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 ```html
 <p>According to Mozilla's website,
   <q
-  cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0
+  cite="https://www.mozilla.org/pt-BR/about/history/details/">Firefox 1.0
   was released in 2004 and became a big success.</q></p>
 ```
 

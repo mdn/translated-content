@@ -1,6 +1,6 @@
 ---
 title: CSS スクロールスナップ
-slug: Web/CSS/CSS_Scroll_Snap
+slug: Web/CSS/CSS_scroll_snap
 ---
 
 {{CSSRef}}
@@ -47,9 +47,7 @@ slug: Web/CSS/CSS_Scroll_Snap
 
 ## 仕様書
 
-| 仕様書                                 | 状態                                | 備考     |
-| -------------------------------------- | ----------------------------------- | -------- |
-| {{SpecName("CSS Scroll Snap Points")}} | {{Spec2("CSS Scroll Snap Points")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

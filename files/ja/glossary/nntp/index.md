@@ -9,7 +9,7 @@ slug: Glossary/NNTP
 
 ### 一般知識
 
-- Wikipedia の{{Interwiki("wikipedia", "Network_News_Transfer_Protocol", "NNTP")}}
+- Wikipedia の[NNTP](https://ja.wikipedia.org/wiki/Network_News_Transfer_Protocol)
 
 ### 技術リファレンス
 

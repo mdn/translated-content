@@ -1,23 +1,13 @@
 ---
 title: <acronym>
 slug: Web/HTML/Element/acronym
-tags:
-  - Elemento
-  - HTML
-  - Internet
-  - Obsoleto
-  - Rede
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/acronym
 ---
-{{obsolete_header}}
 
 ## Resumo
 
 O Elemento HTML Acrônimo (`<acronym>)` permite à autores claramente indicar que uma seqüência de caracteres compõe um acrônimo ou uma abreviação de uma palavra.
 
-> **Note:** **Nota de uso:** Este elemento foi removido no HTML5 e não deve ser usado mais. Ao invés dele, desenvolvedores devem usar o elemento {{HTMLElement("abbr")}}.
+> **Note:** Este elemento foi removido no HTML5 e não deve ser usado mais. Ao invés dele, desenvolvedores devem usar o elemento {{HTMLElement("abbr")}}.
 
 ## Atributos
 
@@ -53,4 +43,4 @@ Embo is purely for the convenira o propósito desta tag seja meramente a conveni
 
 - O elemento HTML {{HTMLElement("abbr")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -1,17 +1,9 @@
 ---
-title: '<blockquote>: 인용 블록 요소'
+title: "<blockquote>: 인용 블록 요소"
 slug: Web/HTML/Element/blockquote
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Reference
-  - Web
-  - 인용
-translation_of: Web/HTML/Element/blockquote
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<blockquote>` 요소**는 안쪽의 텍스트가 긴 인용문임을 나타냅니다. 주로 들여쓰기를 한 것으로 그려집니다. (외형을 바꾸는 법은 [사용 일람](#사용_일람)을 참고하세요) 인용문의 출처 URL은 {{htmlattrxref("cite", "blockquote")}} 특성으로, 출처 텍스트는 {{htmlelement("cite")}} 요소로 제공할 수 있습니다.
 
@@ -75,7 +67,7 @@ translation_of: Web/HTML/Element/blockquote
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("cite")}}
   - : 인용문의 출처 문서나 메시지를 가리키는 URL. 인용문의 맥락 혹은 출처 정보를 가리킬 용도입니다.
@@ -92,17 +84,15 @@ translation_of: Web/HTML/Element/blockquote
 
 ```html
 <blockquote cite="https://tools.ietf.org/html/rfc1149">
-  <p>Avian carriers can provide high delay, low
-  throughput, and low altitude service.  The
-  connection topology is limited to a single
-  point-to-point path for each carrier, used with
-  standard carriers, but many carriers can be used
-  without significant interference with each other,
-  outside of early spring.  This is because of the 3D
-  ether space available to the carriers, in contrast
-  to the 1D ether used by IEEE802.3.  The carriers
-  have an intrinsic collision avoidance system, which
-  increases availability.</p>
+  <p>
+    Avian carriers can provide high delay, low throughput, and low altitude
+    service. The connection topology is limited to a single point-to-point path
+    for each carrier, used with standard carriers, but many carriers can be used
+    without significant interference with each other, outside of early spring.
+    This is because of the 3D ether space available to the carriers, in contrast
+    to the 1D ether used by IEEE802.3. The carriers have an intrinsic collision
+    avoidance system, which increases availability.
+  </p>
 </blockquote>
 ```
 
@@ -114,7 +104,7 @@ translation_of: Web/HTML/Element/blockquote
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.blockquote")}}
+{{Compat}}
 
 ## 같이 보기
 

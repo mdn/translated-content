@@ -11,4 +11,4 @@ VoIP は、コンピューターから特定の VoIP 電話機や、特定のア
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "VoIP")}}
+- Wikipedia の [VoIP](https://ja.wikipedia.org/wiki/VoIP)

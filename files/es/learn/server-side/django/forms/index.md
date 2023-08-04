@@ -1,11 +1,11 @@
 ---
-title: 'Tutorial de Django Parte 9: Trabajo con formularios'
+title: "Tutorial de Django Parte 9: Trabajo con formularios"
 slug: Learn/Server-side/Django/Forms
-translation_of: Learn/Server-side/Django/Forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
-En este tutorial te mostraremos cómo trabajar con Formularios HTML en Django, y en particular, la forma más fácil de escribir formularios para crear, actualizar y borrar instancias de modelo. Como parte de esta demostración extenderemos el sitio web [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) de manera que los bibliotecarios puedan renovar libros, y crear, actualizar y borrar autores utilizando nuestros propios formularios (en vez de utilizar la aplicación de administración).
+En este tutorial te mostraremos cómo trabajar con Formularios HTML en Django, y en particular, la forma más fácil de escribir formularios para crear, actualizar y borrar instancias de modelo. Como parte de esta demostración extenderemos el sitio web [LocalLibrary](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website) de manera que los bibliotecarios puedan renovar libros, y crear, actualizar y borrar autores utilizando nuestros propios formularios (en vez de utilizar la aplicación de administración).
 
 <table>
   <tbody>
@@ -14,7 +14,7 @@ En este tutorial te mostraremos cómo trabajar con Formularios HTML en Django, y
       <td>
         Completar todos los temas de tutoriales anteriores, incluyendo
         <a
-          href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions"
+          href="/es/docs/Learn/Server-side/Django/authentication_and_sessions"
           >Tutorial Django Parte 8: Autenticación y permisos de usuarios</a
         >.
       </td>
@@ -37,7 +37,7 @@ Un [Formulario HTML](/es/docs/Web/Guide/HTML/Forms) es un conjunto de uno o más
 
 Si bien nosotros aún no hemos creado ningún formulario en este tutorial todavia, ya lo hemos encontrado en el sitio de administración de Django; por ejemplo, la captura de pantalla de abajo muestra un formulario para editar uno de nuestros modelos de [Libro](/es/docs/Learn/Server-side/Django/Models), compuesto de un número de listas de selección y editores de texto.
 
-![Admin Site - Book Add](https://mdn.mozillademos.org/files/13979/admin_book_add.png)
+![Admin Site - Book Add](admin_book_add.png)
 
 Trabajar con formularios puede ser complicado! Los desarrolladores deben de escribir código HTML para el formulario, validar y adecuadamente limpiar los datos ingresados en el servidor (y posiblemente también en el browser o navegador), volver a publicar el formulario con mensajes de error para informar a los usuarios de cualquier campo invalido, manejar los datos cuando hayan sido enviados exitosamente y finalmente, responder al usuario de alguna manera, para indicar el éxito de la operación. Django Forms elimina mucho del trabajo de todos estos pasos, al proporcionar un marco de trabajo que le permite definir formularios y sus campos a travéz de programación y luego, utilizar estos objetos para generar el código HTML del formulario y manejar gran parte de la validación y la interacción del usuario.
 
@@ -47,15 +47,19 @@ En este tutorial vamos a mostrarle algunas de las formas de crear y trabajar con
 
 Primero, una breve revisión de [Formularios HTML](/es/docs/Learn/HTML/Forms). Considere un simple formulario HTML, con un solo campo de texto para entrar el nombre de algun "equipo" y su etiqueta asociada:
 
-![Simple name field example in HTML form](https://mdn.mozillademos.org/files/14117/form_example_name_field.png)
+![Simple name field example in HTML form](form_example_name_field.png)
 
 El formulario es definido en HTML como una colección de elementos dentro de las etiquetas `<form>...</form>`, conteniendo por lo menos un elemento de entrada - `input` de tipo enviar - `type="submit"`.
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
+  <label for="team_name">Enter name: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
@@ -79,23 +83,23 @@ El manejo de formularios de Django utiliza las mismas técnicas que aprendimos e
 
 A continuación se muestra un diagram de flujo del proceso de cómo Django maneja las solicitudes de formulario, comenzando con una solicitud de una página que contiene un formulario (mostrado en verde).
 
-![Updated form handling process doc.](https://mdn.mozillademos.org/files/14205/Form%20Handling%20-%20Standard.png)
+![Updated form handling process doc.](form_handling_-_standard.png)
 
 Basado en el diagrama de anterior, las principales pasos que hace el proceso del manejo de formularios de Django son:
 
 1. Mostrar el formulario predeterminado la primera vez que es solicitado por el usuario.
 
-    - El formulario puede contener campos en blanco (por ejemplo, si está creando un registro nuevo), o puede estar rellenado previamente con valores iniciales (por ejemplo, si está modificando un registro o si tiene valores iniciales predeterminados útiles).
-    - El formulario se conoce como no vinculado en este punto porque no esta asociado con ningún dato ingresado por el usuario (aunque pueda tener valores iniciales).
+   - El formulario puede contener campos en blanco (por ejemplo, si está creando un registro nuevo), o puede estar rellenado previamente con valores iniciales (por ejemplo, si está modificando un registro o si tiene valores iniciales predeterminados útiles).
+   - El formulario se conoce como no vinculado en este punto porque no esta asociado con ningún dato ingresado por el usuario (aunque pueda tener valores iniciales).
 
 2. Recibir datos de una solicitud de envío y vincularlo al formulario.
 
-    - La vinculacion de datos al formulario significa que los datos ingresados por el usuario y cualquier error están disponibles cuando necesitamos volver a desplegar el formulario.
+   - La vinculacion de datos al formulario significa que los datos ingresados por el usuario y cualquier error están disponibles cuando necesitamos volver a desplegar el formulario.
 
 3. Limpiar y validar los datos. Clean and validate the data.
 
-    - La limpieza de los datos realiza una sanitización de la entrada (por ejemplo, remover caracteres no válidos que podrían ser usados para enviar contenido malicioso al servidor) y convertirlos en tipos consistente de Python.
-    - La validación verifica que los valores sean apropiados para el campo (por ejemplo, que esten en el rango correcto de fechas, no sean demasiado cortos ni demasiado largos, etc.)
+   - La limpieza de los datos realiza una sanitización de la entrada (por ejemplo, remover caracteres no válidos que podrían ser usados para enviar contenido malicioso al servidor) y convertirlos en tipos consistente de Python.
+   - La validación verifica que los valores sean apropiados para el campo (por ejemplo, que esten en el rango correcto de fechas, no sean demasiado cortos ni demasiado largos, etc.)
 
 4. Si algún dato es no válido, volver a mostrar el formulario, esta vez con cualquier valor rellenado por el usuario y los mensajes de error para los campos con problemas.
 5. Si todos los datos son válidos, realizar las acciones requeridas (por ejemplo, guardar los datos, enviar un correo electrónico, devolver el resultado de una búsqueda, cargar un archivo, etc)
@@ -119,7 +123,7 @@ La clase Form es el corazón del sistema de manejo de formularios de Django. Esp
 
 La sintaxis de declaración para un formulario es muy similar a la de declarar un modelo, y comparte los mismos tipos de campo (y algunos parámetros similares). Esto tiene sentido porque en ambos casos debemos asegurarnos de que cada campo maneja los tipos correctos de datos, está restringido a datos válidos y tiene una descripción para la visualización / documentación.
 
-Para crear un formulario (`Form`) es necesario importar la libreria f`orms`, derivada de la clase `Form`, y tambien declarar los campos del formulario. A continuación se muestra una clase de formulario muy básica para nuestro formulario de renovación de libros de la biblioteca:
+Para crear un formulario (`Form`) es necesario importar la libreria `forms`, derivada de la clase `Form`, y tambien declarar los campos del formulario. A continuación se muestra una clase de formulario muy básica para nuestro formulario de renovación de libros de la biblioteca:
 
 ```python
 from django import forms
@@ -194,7 +198,7 @@ Antes de crear nuestra vista, agreguemos una configuración de URL para la pági
 
 ```python
 urlpatterns += [
-    url(r'^book/(?P<pk>[-\w]+)/renew/$', views.renew_book_librarian, name='renew-book-librarian'),
+    path('book/<uuid:pk>/renew/', views.renew_book_librarian, name='renew-book-librarian'),
 ]
 ```
 
@@ -345,7 +349,7 @@ def renew_book_librarian(request, pk):
 
 Crea la plantilla html referenciada en la vista dentro del directorio (**/catalog/templates/catalog/book_renew_librarian.html**) y copia el codigo a continuacion dentro del archivo que creaste:
 
-```html
+```django
 {% extends "base_generic.html" %}
 {% block content %}
 
@@ -364,9 +368,9 @@ Crea la plantilla html referenciada en la vista dentro del directorio (**/catalo
 {% endblock %}
 ```
 
-La mayor parte de esto será completamente familiar de los tutoriales anteriores. Extendemos la plantilla base y luego redefinimos el bloque de contenido. Podemos hacer referencia`\{{bookinst}}` (y sus variables) porque se pasó al objeto de contexto en la funci'on `render()`,y los usamos para colocar el título del libro, el prestatario y la fecha de vencimiento original.
+La mayor parte de esto será completamente familiar de los tutoriales anteriores. Extendemos la plantilla base y luego redefinimos el bloque de contenido. Podemos hacer referencia `\{{bookinst}}` (y sus variables) porque se pasó al objeto de contexto en la funci'on `render()`,y los usamos para colocar el título del libro, el prestatario y la fecha de vencimiento original.
 
-El código del formulario es relativamente simple. Primero declaramos las etiquetas del `form`,especificando dónde se debe enviar el formulario (`action`) y el `metodo` para enviar los datos (en este caso, una "POST HTTP"), si recuerda el [HTML Forms](#HTML_forms) resumen en la parte superior de la página, un espacio vacío `action`como se muestra, significa que los datos del formulario se volverán a publicar en la URL actual de la página (¡que es lo que queremos!). Dentro de las etiquetas definimos la enntrada (input) `submit`, que un usuario puede presionar para enviar los datos. Esto `{% csrf_token %}` es agregado justo dentro de las etiquetas de formulario es parte de la protección de falsificación entre sitios de Django.
+El código del formulario es relativamente simple. Primero declaramos las etiquetas del `form`,especificando dónde se debe enviar el formulario (`action`) y el `metodo` para enviar los datos (en este caso, una "POST HTTP"), si recuerda el [HTML Forms](#HTML_forms) resumen en la parte superior de la página, un espacio vacío `action` como se muestra, significa que los datos del formulario se volverán a publicar en la URL actual de la página (¡que es lo que queremos!). Dentro de las etiquetas definimos la enntrada (input) `submit`, que un usuario puede presionar para enviar los datos. Esto `{% csrf_token %}` es agregado justo dentro de las etiquetas de formulario es parte de la protección de falsificación entre sitios de Django.
 
 > **Nota:** Agregue el {% csrf_token%} a cada plantilla de Django que cree que use POST para enviar datos. Esto reducirá la posibilidad de que usuarios malintencionados secuestran formularios.
 
@@ -376,9 +380,16 @@ Todo lo que queda es la variable de la plantilla `\{{form}}`, que pasamos a la p
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
   <td>
-    <input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required />
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2016-11-08"
+      required />
     <br />
-    <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
+    <span class="helptext">
+      Enter date between now and 4 weeks (default 3 weeks).
+    </span>
   </td>
 </tr>
 ```
@@ -390,14 +401,21 @@ Si tuviera que ingresar una fecha no válida, también obtendría una lista de l
 ```html
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
-   <td>
-      <ul class="errorlist">
-        <li>Invalid date - renewal in past</li>
-      </ul>
-      <input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required />
-      <br />
-      <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
-    </td>
+  <td>
+    <ul class="errorlist">
+      <li>Invalid date - renewal in past</li>
+    </ul>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2015-11-08"
+      required />
+    <br />
+    <span class="helptext">
+      Enter date between now and 4 weeks (default 3 weeks).
+    </span>
+  </td>
 </tr>
 ```
 
@@ -419,27 +437,27 @@ Para obtener más ejemplos de cómo reproducir manualmente los formularios en pl
 
 Si aceptó el "desafío" en [Django Tutorial Part 8: User authentication and permissions](/es/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself) tendrá una lista de todos los libros prestados en la biblioteca, que solo es visible para el personal de la biblioteca. Podemos agregar un enlace a nuestra página de renovación al lado de cada artículo usando el código de plantilla a continuación.
 
-```html
+```django
 {% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>  {% endif %}
 ```
 
 > **Nota:** Recuerde que su inicio de sesión de prueba deberá tener el permiso "`catalog.can_mark_returned`" para acceder a la página de renovar el libro (quizás use su cuenta de superusuario).
 
-Alternativamente, puede construir manualmente una URL de prueba como esta — `http://127.0.0.1:8000/catalog/book/_\<bookinstance_id>_/renew/` (se puede obtener un ID de instancia de libro válido navegando a la página de detalles de un libro en su biblioteca y copiando el campo `id`).
+Alternativamente, puede construir manualmente una URL de prueba como esta — `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/` (se puede obtener un ID de instancia de libro válido navegando a la página de detalles de un libro en su biblioteca y copiando el campo `id`).
 
 ### Como se ve?
 
 Si tiene éxito, el formulario predeterminado se verá así:
 
-![](https://mdn.mozillademos.org/files/14209/forms_example_renew_default.png)
+![](forms_example_renew_default.png)
 
 El formulario con un valor no válido ingresado se verá así:
 
-![](https://mdn.mozillademos.org/files/14211/forms_example_renew_invalid.png)
+![](forms_example_renew_invalid.png)
 
 La lista de todos los libros con enlaces renovados se verá así:
 
-![](https://mdn.mozillademos.org/files/14207/forms_example_renew_allbooks.png)
+![](forms_example_renew_allbooks.png)
 
 ## ModelForms
 
@@ -447,7 +465,7 @@ Crear una clase `Form` utilizando el enfoque descrito anteriormente es muy flexi
 
 Sin embargo, si solo necesita un formulario para asignar los campos de un solo modelo, entonces su modelo ya definirá la mayor parte de la información que necesita en su formulario: campos, etiquetas, texto de ayuda, etc. En lugar de recrear las definiciones de modelo en su formulario , es más fácil usar una clase auxiliar [ModelForm](https://docs.djangoproject.com/en/1.10/topics/forms/modelforms/) para crear el formulario a partir de su modelo. El `ModelForm` puede usarse dentro de sus vistas exactamente de la misma manera que un ordinario `Form`.
 
-Un `ModelForm` que contiene el mismo campo que nuestro original `RenewBookForm`se muestra a continuación. Todo lo que necesita hacer para crear el formulario es agregar `class Meta` with the associated `model` (`BookInstance`) y una lista de los campos del modelo `fields`para incluir en el formulario (puede incluir todos los campos usando `fields = '__all__'`, o puedes usar `exclude` (en vez de `fields`) para especificar los campos que no se incluirán del modelo).
+Un `ModelForm` que contiene el mismo campo que nuestro original `RenewBookForm`se muestra a continuación. Todo lo que necesita hacer para crear el formulario es agregar `class Meta` with the associated `model` (`BookInstance`) y una lista de los campos del modelo `fields` para incluir en el formulario (puede incluir todos los campos usando `fields = '__all__'`, o puedes usar `exclude` (en vez de `fields`) para especificar los campos que no se incluirán del modelo).
 
 ```python
 from django.forms import ModelForm
@@ -459,7 +477,7 @@ class RenewBookModelForm(ModelForm):
         fields = ['due_back',]
 ```
 
-> **Nota:** Esto podría no parece mucho más simple que simplemente usar un `Form`(y no es en este caso, porque solo tenemos un campo). Sin embargo, si tiene muchos campos, puede reducir la cantidad de código de manera bastante significativa.
+> **Nota:** Esto podría no parece mucho más simple que simplemente usar un `Form` (y no es en este caso, porque solo tenemos un campo). Sin embargo, si tiene muchos campos, puede reducir la cantidad de código de manera bastante significativa.
 
 El resto de la información proviene de las definiciones de campo del modelo (por ejemplo, etiquetas, widgets, texto de ayuda, mensajes de error). Si estos no son del todo correctos, entonces podemos anularlos en nuestro `class Meta`, especificando un diccionario que contiene el campo a cambiar y su nuevo valor. Por ejemplo, en este formulario podríamos querer una etiqueta para nuestro campo de "Fecha de renovación" (en lugar del valor predeterminado basado en el nombre del campo: Fecha de vencimiento), y también queremos que nuestro texto de ayuda sea específico para este caso de uso. El `Meta` a continuación le muestra cómo anular estos campos, y puede configurar de manera similar `widgets` y `error_messages` si los valores predeterminados no son suficientes.
 
@@ -540,11 +558,11 @@ La clase `AuthorDelete` no necesita mostrar ninguno de los campos, por lo que no
 
 ### Templates - Plantillas
 
-Las vistas "create" y "update" utilizan la misma plantilla de forma predeterminada, que se nombrará después de su model: _model_name_**\_form.html** (puedes cambiar el sufijo a algo diferente a **\_form** usando el campo `template_name_suffix`en tu vista, ejemplo: `template_name_suffix = '_other_suffix'`)
+Las vistas "create" y "update" utilizan la misma plantilla de forma predeterminada, que se nombrará después de su model: _model_name_**\_form.html** (puedes cambiar el sufijo a algo diferente a **\_form** usando el campo `template_name_suffix` en tu vista, ejemplo: `template_name_suffix = '_other_suffix'`)
 
 Crea la siguiente plantilla **locallibrary/catalog/templates/catalog/author_form.html** y copia el siguiente texto:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -564,7 +582,7 @@ Esto es similar a nuestros formularios anteriores y representa los campos usando
 
 La vista "delete" espera encontrar una plantilla con el formato _model_name_**\_confirm_delete.html** (de nuevo, puedes cambiar el sufijo usando `template_name_suffix` en tu vista). Crea la siguiente plantilla **locallibrary/catalog/templates/catalog/author_confirm_delete.html** y copia en el texto a continuación.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -587,9 +605,9 @@ Abra el archivo de configuración de URL (**locallibrary/catalog/urls.py**) y ag
 
 ```python
 urlpatterns += [
-    url(r'^author/create/$', views.AuthorCreate.as_view(), name='author_create'),
-    url(r'^author/(?P<pk>\d+)/update/$', views.AuthorUpdate.as_view(), name='author_update'),
-    url(r'^author/(?P<pk>\d+)/delete/$', views.AuthorDelete.as_view(), name='author_delete'),
+    path('author/create/', views.AuthorCreate.as_view(), name='author-create'),
+    path('author/<int:pk>/update/', views.AuthorUpdate.as_view(), name='author-update'),
+    path('author/<int:pk>/delete/', views.AuthorDelete.as_view(), name='author-delete'),
 ]
 ```
 
@@ -603,9 +621,9 @@ Las páginas de crear, actualiza y eliminar autor ahora estan listas para probar
 
 Primero inicie sesión en el sitio con una cuenta que tenga los permisos que haya decidido que se necesitan para acceder a las páginas de edición del autor.
 
-Luego navegue a la página de creación del autor: <http://127.0.0.1:8000/catalog/author/create/>, que debería verse como la captura de pantalla a continuación.
+Luego navegue a la página de creación del autor: `http://127.0.0.1:8000/catalog/author/create/`, que debería verse como la captura de pantalla a continuación.
 
-![Form Example: Create Author](https://mdn.mozillademos.org/files/14223/forms_example_create_author.png)
+![Form Example: Create Author](forms_example_create_author.png)
 
 Ingrese los valores para los campos y luego presione **Submit** para guardar el registro del autor. Ahora debería ser llevado a una vista detallada para su nuevo autor, con una URL de algo como `http://127.0.0.1:8000/catalog/author/10`.
 
@@ -613,13 +631,13 @@ Puede probar la edición de registros agregando _/update/_ hasta el final de la 
 
 Por último, podemos eliminar el autor, agregando eliminar (delete) al final de la vista detallada del autor URL (ejemplo. `http://127.0.0.1:8000/catalog/author/10/delete/`). Django debería mostrar la página de eliminación que se muestra a continuación. pulse **Yes, delete.** para eliminar el registro y ser llevado a la lista de todos los autores.
 
-![](https://mdn.mozillademos.org/files/14221/forms_example_delete_author.png)
+![](forms_example_delete_author.png)
 
 ## Retarte a ti mismo
 
 Crea algunos formularios para crear, editar y eliminar registros de `Book`.Puede usar exactamente la misma estructura de `Authors`. Si tu plantilla **book_form.html** es solo una versión renombrada de la copia de la plantilla **author_form.html**, entonces la nueva página "crear libro" se verá como la captura de pantalla a continuación:
 
-![](https://mdn.mozillademos.org/files/14225/forms_example_create_book.png)
+![](forms_example_create_book.png)
 
 ## Resumen
 
@@ -639,21 +657,3 @@ Hay mucho más que se puede hacer con los formularios (consulte nuestra lista Ve
 - [Generic editing views](https://docs.djangoproject.com/en/1.10/ref/class-based-views/generic-editing/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/authentication", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
-
-## En este módulo
-
-- [Introducción a Django](/es/docs/Learn/Server-side/Django/Introducción)
-- [Configurando un entorno de desarrollo Django](/es/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial de Django: El sito web de la Biblioteca Local](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial de Django Parte 2: Creando el esqueleto de un sitio web](/es/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial de Django Parte 3: Usando modelos](/es/docs/Learn/Server-side/Django/Models)
-- [Tutorial de Django Parte 4: Sitio de administración de Django](/es/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial de Django Parte 5: Creando nuestra página de inicio](/es/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial de Django Parte 6: Listas genéricas y vistas de detalle](/es/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial de Django Parte 7: Framework de sesiones](/es/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial de Django Parte 8: Autenticación de usuarios y permisos](/es/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial de Django Parte 9: Trabajando con formularios](/es/docs/Learn/Server-side/Django/Forms)
-- [Tutorial de Django Parte 10: Probando una aplicación web de Django](/es/docs/Learn/Server-side/Django/Testing)
-- [Tutorial de Django Parte 11: Poniendo Django en producción](/es/docs/Learn/Server-side/Django/Deployment)
-- [Seguridad en aplicaciones web Django](/es/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/es/docs/Learn/Server-side/Django/django_assessment_blog)

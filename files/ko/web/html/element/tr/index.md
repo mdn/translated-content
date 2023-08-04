@@ -1,26 +1,26 @@
 ---
 title: <tr>
 slug: Web/HTML/Element/tr
-translation_of: Web/HTML/Element/tr
 ---
+
 ## 개요
 
 The _HTML Table Row Element_ (`<tr>`) defines a row of cells in a table. Those can be a mix of {{HTMLElement("td")}} and {{HTMLElement("th")}} elements.
 
 ## 사용 문맥
 
-| [콘텐츠 범주](/ko/docs/HTML/Content_categories "HTML/Content categories") | None.                                                                                                                                                                                                                                                                                                                                              |
-| ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 허용되는 콘텐츠                                                           | Zero or more {{HTMLElement("td")}} or {{HTMLElement("th")}} elements, or a mix of them                                                                                                                                                                                                                                               |
-| 태그 생략                                                                 | The start tag is mandatory. The end tag may be omitted if the {{HTMLElement("tr")}} element is immediately followed by a {{HTMLElement("tr")}} element, or if the parent table group ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}} or {{HTMLElement("tfoot")}}) element doesn't have any more content. |
-| 허용되는 부모 요소                                                        | A {{HTMLElement("table")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} or {{HTMLElement("tfoot")}} element.                                                                                                                                                                                                |
-| Normative document                                                        | [HTML, "The `tr` element"](http://www.whatwg.org/html/#the-tr-element)                                                                                                                                                                                                                                                                             |
+| [콘텐츠 범주](/ko/docs/HTML/Content_categories) | None.                                                                                                                                                                                                                                                                                                        |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 허용되는 콘텐츠                                 | Zero or more {{HTMLElement("td")}} or {{HTMLElement("th")}} elements, or a mix of them                                                                                                                                                                                                                       |
+| 태그 생략                                       | The start tag is mandatory. The end tag may be omitted if the {{HTMLElement("tr")}} element is immediately followed by a {{HTMLElement("tr")}} element, or if the parent table group ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}} or {{HTMLElement("tfoot")}}) element doesn't have any more content. |
+| 허용되는 부모 요소                              | A {{HTMLElement("table")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} or {{HTMLElement("tfoot")}} element.                                                                                                                                                                                          |
+| Normative document                              | [HTML, "The `tr` element"](http://www.whatwg.org/html/#the-tr-element)                                                                                                                                                                                                                                       |
 
 ## 속성
 
-This element includes the [global attributes](/ko/docs/HTML/Global_attributes "HTML/Global attributes").
+This element includes the [global attributes](/ko/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("align")}} {{deprecatedGeneric("inline","html4.01")}}, {{deprecated_inline}}
+- {{htmlattrdef("align")}} {{deprecated_inline}}
 
   - : This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
 
@@ -38,15 +38,15 @@ This element includes the [global attributes](/ko/docs/HTML/Global_attributes "H
 
 <!---->
 
-- {{htmlattrdef("bgcolor")}} {{deprecatedGeneric("inline","html4.01")}}, {{deprecated_inline}}
+- {{htmlattrdef("bgcolor")}} {{deprecated_inline}}
 
-  - : This attribute defines the background color of each cell of the row. It can be either an [#RRGGBB code](/ko/docs/CSS/color_value#HTML.2fSVG.2fX11.c2.a0_Color_Keywords "CSS/color value#HTML.2fSVG.2fX11.c2.a0 Color Keywords") or an [SVG color keyword](/#HTML.2fSVG.2fX11.c2.a0_Color_Keywords "#HTML.2fSVG.2fX11.c2.a0 Color Keywords").
+  - : This attribute defines the background color of each cell of the row. It can be either an [#RRGGBB code](/ko/docs/CSS/color_value#HTML.2fSVG.2fX11.c2.a0_Color_Keywords) or an [SVG color keyword](/#HTML.2fSVG.2fX11.c2.a0_Color_Keywords).
 
-    > **참고:** **Usage note:** the {{HTMLElement("tr")}} element should be styled using [CSS](/ko/docs/CSS "CSS"). To give a similar effect to the **bgcolor** attribute, use the [CSS](/ko/docs/CSS "CSS") property {{cssxref("background-color")}}.
+    > **참고:** **Usage note:** the {{HTMLElement("tr")}} element should be styled using [CSS](/ko/docs/CSS). To give a similar effect to the **bgcolor** attribute, use the [CSS](/ko/docs/CSS) property {{cssxref("background-color")}}.
 
 <!---->
 
-- {{htmlattrdef("char")}} {{deprecatedGeneric("inline","html4.01")}}, {{deprecated_inline}}
+- {{htmlattrdef("char")}} {{deprecated_inline}}
 
   - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tr")}} is not set to `char`, this attribute is ignored.
 
@@ -54,7 +54,7 @@ This element includes the [global attributes](/ko/docs/HTML/Global_attributes "H
 
 <!---->
 
-- {{htmlattrdef("charoff")}} {{deprecatedGeneric("inline","html4.01")}}, {{deprecated_inline}}
+- {{htmlattrdef("charoff")}} {{deprecated_inline}}
 
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the **char** attribute.
 
@@ -62,7 +62,7 @@ This element includes the [global attributes](/ko/docs/HTML/Global_attributes "H
 
 <!---->
 
-- {{htmlattrdef("valign")}} {{deprecatedGeneric("inline","html4.01")}}, {{deprecated_inline}}
+- {{htmlattrdef("valign")}} {{deprecated_inline}}
 
   - : This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
 
@@ -83,7 +83,7 @@ See {{HTMLElement("table")}} for examples on `<tr>`.
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.tr")}}
+{{Compat}}
 
 ## 같이 보기
 
@@ -93,4 +93,4 @@ See {{HTMLElement("table")}} for examples on `<tr>`.
   - the {{cssxref(":nth-child")}} pseudo-class to set the alignment on the cells of the column;
   - the {{cssxref("text-align")}} property to align all cells content on the same character, like '.'.<
 
-{{HTMLRef}}
+{{HTMLSidebar}}

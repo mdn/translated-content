@@ -1,14 +1,6 @@
 ---
 title: URL.href
 slug: Web/API/URL/href
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-browser-compat: api.URL.href
 ---
 
 {{ApiRef("URL API")}}
@@ -25,7 +17,7 @@ Uma {{domxref("USVString")}}.
 
 ```js
 const url = new URL(
-  "https://developer.mozilla.org/pt-BR/docs/Web/API/URL/href"
+  "https://developer.mozilla.org/pt-BR/docs/Web/API/URL/href",
 );
 console.log(url.href); // Logs: 'https://developer.mozilla.org/pt-BR/docs/Web/API/URL/href'
 ```

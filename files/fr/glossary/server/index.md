@@ -1,14 +1,6 @@
 ---
 title: Serveur
 slug: Glossary/Server
-tags:
-  - Glossaire
-  - Infrastructure
-  - Réseau
-  - Serveur
-  - protocole
-translation_of: Glossary/Server
-original_slug: Glossaire/Serveur
 ---
 
 Un serveur matériel est un ordinateur partagé sur un réseau qui fournit des services à des clients. Un serveur logiciel est un programme qui fournit des services à des programmes clients.
@@ -17,7 +9,7 @@ Les services sont généralement fournis sur des réseaux locaux ou sur des rés
 
 Les serveurs les plus courants sur les réseaux locaux sont les serveurs de fichiers, de noms, de courrier électronique, d'impression et de fax. Un serveur Web connecté à Internet est un autre exemple de serveur classique. Les mini-ordinateurs, les mainframes et les super-ordinateurs des datacenters sont aussi des serveurs.
 
-## **Pour approfondir**
+## Pour approfondir
 
 ### Culture générale
 

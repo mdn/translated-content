@@ -1,14 +1,8 @@
 ---
 title: Document.hasFocus()
 slug: Web/API/Document/hasFocus
-tags:
-  - API
-  - DOM
-  - Focus
-  - Method
-  - Reference
-translation_of: Web/API/Document/hasFocus
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.hasFocus()`** 메소드는 문서 또는 문서 내의 요소(element) 중 어느 하나라도 포커스(focus)를 갖고 있으면 `true`, 그렇지 않으면 `false` 인 {{jsxref("Boolean")}} 값을 반환한다. 이 메소드를 사용하여 문서내 활성화된(active) 요소가 포커스를 갖고 있는지 판단할 수 있다.
@@ -28,48 +22,48 @@ focused = document.hasFocus();
 ## 예제
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>TEST</title>
-<style>
-#message { font-weight: bold; }
-</style>
+  <head>
+    <meta charset="UTF-8" />
+    <title>TEST</title>
+    <style>
+      #message {
+        font-weight: bold;
+      }
+    </style>
 
-<script>
+    <script>
+      setInterval(CheckPageFocus, 200);
 
-setInterval( CheckPageFocus, 200 );
+      function CheckPageFocus() {
+        var info = document.getElementById("message");
 
-function CheckPageFocus() {
-  var info = document.getElementById("message");
+        if (document.hasFocus()) {
+          info.innerHTML = "The document has the focus.";
+        } else {
+          info.innerHTML = "The document doesn't have the focus.";
+        }
+      }
 
-  if ( document.hasFocus() ) {
-    info.innerHTML = "The document has the focus.";
-  } else {
-    info.innerHTML = "The document doesn't have the focus.";
-  }
-}
+      function OpenWindow() {
+        window.open(
+          "http://developer.mozilla.org/",
+          "mozdev",
+          (width = 640),
+          (height = 300),
+          (left = 150),
+          (top = 260),
+        );
+      }
+    </script>
+  </head>
 
-function OpenWindow() {
-  window.open (
-    "http://developer.mozilla.org/",
-    "mozdev",
-    width=640,
-    height=300,
-    left=150,
-    top=260
-  );
-}
-
-</script>
-</head>
-
-<body>
-  <h1>JavaScript hasFocus example</h1>
-  <div id="message">Waiting for user action</div>
-  <div><button onclick="OpenWindow()">Open a new window</button></div>
-</body>
+  <body>
+    <h1>JavaScript hasFocus example</h1>
+    <div id="message">Waiting for user action</div>
+    <div><button onclick="OpenWindow()">Open a new window</button></div>
+  </body>
 </html>
 ```
 

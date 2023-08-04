@@ -3,7 +3,7 @@ title: <s>
 slug: Web/HTML/Element/s
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<s>` 元素** 使用删除线来渲染文本。使用 `<s>` 元素来表示不再相关，或者不再准确的事情。但是当表示文档编辑时，不提倡使用 `<s>` ；为此，提倡使用 {{ HTMLElement("del") }} 和 {{ HTMLElement("ins") }} 元素。
 

@@ -1,8 +1,9 @@
 ---
 title: 本地化
 slug: Glossary/Localization
-original_slug: Localization
 ---
+
+{{GlossarySidebar}}
 
 **本地化**（l10n）是使软件用户界面适应特定文化环境的过程。
 

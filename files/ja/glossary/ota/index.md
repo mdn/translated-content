@@ -9,5 +9,5 @@ _Over The Air_ (**OTA**) とは、無線接続されたデバイス上のソフ�
 
 ### 基礎知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "Over-the-air programming")}}
+- Wikipedia 上の [Over-the-air programming](https://ja.wikipedia.org/wiki/Over-the-air_programming)
 - [Creating and applying Firefox OS update packages](/ja/Firefox_OS/Building_and_installing_Firefox_OS/Firefox_OS_update_packages)

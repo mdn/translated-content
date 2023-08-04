@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/decodeURI
 
 {{jsSidebar("Objects")}}
 
-**`decodeURI()`** 函数能解码由{{jsxref("encodeURI")}} 创建或其它流程得到的统一资源标识符（URI）。
+**`decodeURI()`** 函数能解码由{{jsxref("encodeURI")}} 创建或其他流程得到的统一资源标识符（URI）。
 
 {{EmbedInteractiveExample("pages/js/globalprops-decodeuri.html")}}
 
@@ -37,7 +37,9 @@ decodeURI(encodedURI)
 ### 解码一个西里尔字母（Cyrillic）URL
 
 ```js
-decodeURI("https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
+decodeURI(
+  "https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B",
+);
 // "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
 ```
 

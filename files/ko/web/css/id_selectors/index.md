@@ -1,12 +1,6 @@
 ---
 title: ID 선택자
 slug: Web/CSS/ID_selectors
-tags:
-  - CSS
-  - Reference
-  - Selectors
-  - 선택자
-translation_of: Web/CSS/ID_selectors
 ---
 {{CSSRef}}
 

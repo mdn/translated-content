@@ -1,19 +1,9 @@
 ---
 title: <input type="hidden">
 slug: Web/HTML/Element/input/hidden
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML Form
-  - Input
-  - Tipos de Input
-  - formulários
-  - hidden
-translation_of: Web/HTML/Element/input/hidden
-original_slug: Web/HTML/Elemento/input/hidden
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`"hidden"`** let web developers include data that cannot be seen or modified by users when a form is submitted. For example, the ID of the content that is currently being ordered or edited, or a unique security token. Hidden inputs are completely invisible in the rendered page, and there is no way to make it visible in the page's content.
 
@@ -22,21 +12,21 @@ original_slug: Web/HTML/Elemento/input/hidden
 ## Ejemplo
 
 ```html
-<input id="prodId" name="prodId" type="hidden" value="xm234jq">
+<input id="prodId" name="prodId" type="hidden" value="xm234jq" />
 ```
 
 {{ EmbedLiveSample('Basic_example', 600, 40) }}
 
 | **[Value](#value)**             | {{domxref("DOMString")}} representando el valor de un campo oculto que se espetra pasar al servidor. |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| **Events**                      | Ninguno.                                                                                                     |
-| **Supported Common Attributes** | {{htmlattrxref("autocomplete", "input")}}                                                     |
-| **IDL attributes**              | `value`                                                                                                      |
-| **Methods**                     | Ninguno.                                                                                                     |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Events**                      | Ninguno.                                                                                             |
+| **Supported Common Attributes** | [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete)                                       |
+| **IDL attributes**              | `value`                                                                                              |
+| **Methods**                     | Ninguno.                                                                                             |
 
 ## Valor (Value)
 
-El atributo {{htmlattrxref("value", "input")}} del elemento {{HTMLElement("input")}} tiene un {{domxref("DOMString")}} que contiene la información oculta que se desea incluir en el formulario cuando sea remitido al servidor. Específicamente no puede ser editado por el usuario o mostrado a éste por medio la interfaz de usuario, aunque puede ser editado por medio de las herramientas para desarrolladores del navegador.
+El atributo [`value`](/es/docs/Web/HTML/Element/input#value) del elemento {{HTMLElement("input")}} tiene un {{domxref("DOMString")}} que contiene la información oculta que se desea incluir en el formulario cuando sea remitido al servidor. Específicamente no puede ser editado por el usuario o mostrado a éste por medio la interfaz de usuario, aunque puede ser editado por medio de las herramientas para desarrolladores del navegador.
 
 > **Advertencia:** Mientras que el valor no es desplegado al usuario en el contenido de la página, si es visible —y puede ser modificado—usando las herramientas para desarrolladores de cualquier navegador o la funcionalidad "Ver código fuente" (View Source). No confíe en `hidden` inputs como una forma de seguridad.
 
@@ -78,7 +68,11 @@ El formulario HTML puede verse un como como este:
 <form>
   <div>
     <label for="title">Título del artículo:</label>
-    <input type="text" id="titulo" name="titulo" value="Mi excelente artículo del blog">
+    <input
+      type="text"
+      id="titulo"
+      name="titulo"
+      value="Mi excelente artículo del blog" />
   </div>
   <div>
     <label for="content">Contenido del artículo:</label>
@@ -89,7 +83,7 @@ Este es el contenido de mi excelente actículo del blog. ¡Espero lo disfrutes!
   <div>
     <button type="submit">Actualizar artículo</button>
   </div>
-  <input type="hidden" id="acticuloId" name="articuloId" value="34657">
+  <input type="hidden" id="acticuloId" name="articuloId" value="34657" />
 </form>
 ```
 
@@ -116,7 +110,8 @@ label {
   padding-right: 20px;
 }
 
-input, textarea {
+input,
+textarea {
   flex: 7;
   font-family: sans-serif;
   font-size: 1.1rem;
@@ -144,14 +139,11 @@ A pesar de que los hiden input no se pueden ver en absoluto, sus datos se siguen
 
 ## Especificaciones
 
-| Specification                                                                                                                        | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#hidden-state-(type=hidden)', '&lt;input type="hidden"&gt;')}} | {{Spec2('HTML WHATWG')}} | Definición inicial |
-| {{SpecName('HTML5.1', 'forms.html#hidden-state-(type=hidden)', '&lt;input type="hidden"&gt;')}}     | {{Spec2('HTML5.1')}}     | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con el navegador
 
-{{Compat("html.elements.input.input-hidden")}}
+{{Compat}}
 
 ## Ver también
 

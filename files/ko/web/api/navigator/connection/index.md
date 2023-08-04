@@ -1,9 +1,8 @@
 ---
 title: window.navigator.connection
 slug: Web/API/Navigator/connection
-translation_of: Web/API/Navigator/connection
-original_slug: Web/API/NetworkInformation/connection
 ---
+
 {{ Apiref() }}
 
 {{ SeeCompatTable() }}

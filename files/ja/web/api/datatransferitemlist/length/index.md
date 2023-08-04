@@ -1,17 +1,15 @@
 ---
 title: DataTransferItemList.length
 slug: Web/API/DataTransferItemList/length
+l10n:
+  sourceCommit: 77b8cdb3a05999ade4a269d0ef2443618bb7cd66
 ---
 
-{{domxref("DataTransferItemList")}} インターフェイスの **`length`** プロパティは読み取り専用で、ドラッグアイテムリストの中に現在入っているアイテムの数を返します。
+{{APIRef("HTML Drag and Drop API")}}
 
-## 構文
+**`length`** は {{domxref("DataTransferItemList")}} インターフェイスの読み取り専用プロパティで、ドラッグアイテムリストの中に現在入っているアイテムの数を返します。
 
-```
-length = DataTransferItemList.length;
-```
-
-### 返値
+## 値
 
 リスト中のドラッグデータアイテムの数で、もしリストが空か無効であれば 0 です。アイテムリストの {{domxref("DataTransfer")}} オブジェクトがドラッグデータストアに関連付けられていない場合は、ドラッグアイテムリストは無効とみなされます。
 
@@ -26,33 +24,36 @@ function dragstart_handler(ev) {
   console.log("dragStart");
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
-  var dataList = ev.dataTransfer.items;
+  const dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
   // Add some other items to the drag payload
-  dataList.add("<p>... paragraph ...</p>", "text/html");
-  dataList.add("http://www.example.org","text/uri-list");
+  dataList.add("<p>Paragraph…</p>", "text/html");
+  dataList.add("http://www.example.org", "text/uri-list");
 }
 
 function drop_handler(ev) {
   console.log("Drop");
   ev.preventDefault();
-  var data = ev.dataTransfer.items;
+  const data = ev.dataTransfer.items;
   // Loop through the dropped items and log their data
-  for (var i = 0; i < data.length; i++) {
-    if ((data[i].kind == 'string') && (data[i].type.match('^text/plain'))) {
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].kind === "string" && data[i].type.match("^text/plain")) {
       // This item is the target node
-      data[i].getAsString(function (s){
+      data[i].getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/html'))) {
+    } else if (data[i].kind === "string" && data[i].type.match("^text/html")) {
       // Drag data item is HTML
-      data[i].getAsString(function (s){
-        console.log("... Drop: HTML = " + s);
+      data[i].getAsString((s) => {
+        console.log(`… Drop: HTML = ${s}`);
       });
-    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/uri-list'))) {
+    } else if (
+      data[i].kind === "string" &&
+      data[i].type.match("^text/uri-list")
+    ) {
       // Drag data item is URI
-      data[i].getAsString(function (s){
-        console.log("... Drop: URI = " + s);
+      data[i].getAsString((s) => {
+        console.log(`… Drop: URI = ${s}`);
       });
     }
   }
@@ -62,12 +63,12 @@ function dragover_handler(ev) {
   console.log("dragOver");
   ev.preventDefault();
   // Set the dropEffect to move
-  ev.dataTransfer.dropEffect = "move"
+  ev.dataTransfer.dropEffect = "move";
 }
 
 function dragend_handler(ev) {
   console.log("dragEnd");
-  var dataList = ev.dataTransfer.items;
+  const dataList = ev.dataTransfer.items;
   // Clear any remaining drag data
   dataList.clear();
 }
@@ -77,10 +78,21 @@ function dragend_handler(ev) {
 
 ```html
 <div>
-  <p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+  <p
+    id="source"
+    ondragstart="dragstart_handler(event);"
+    ondragend="dragend_handler(event);"
+    draggable="true">
+    Select this element, drag it to the Drop Zone and then release the selection
+    to move the element.
+  </p>
 </div>
-<div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+<div
+  id="target"
+  ondrop="drop_handler(event);"
+  ondragover="dragover_handler(event);">
+  Drop Zone
+</div>
 ```
 
 ### CSS
@@ -103,20 +115,12 @@ div {
 
 ### 結果
 
-{{EmbedLiveSample('Example_Drag_and_Drop')}}
-
-{{LiveSampleLink('Example_Drag_and_Drop', 'Drag and Drop demo link')}}
+{{EmbedLiveSample('Examples', 100, 250)}}
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考                                                      |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'interaction.html#dom-datatransferitemlist-length','length')}} | {{Spec2('HTML WHATWG')}} |                                                           |
-| {{SpecName('HTML5.1', 'editing.html#dom-datatransferitemlist-length','length')}}         | {{Spec2('HTML5.1')}}     | W3C HTML5 {{Spec2('HTML5 W3C')}} には含まれていない |
-|                                                                                                                      |                                  |                                                           |
+{{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat("api.DataTransferItemList.length")}}
-
-{{APIRef("HTML Drag and Drop API")}}
+{{Compat}}

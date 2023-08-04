@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.getUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 ---
+
 {{JSRef}}
 
 O método **`getUTCFullYear()`** retorna o ano na data indicada de acordo com o horário universal.
@@ -36,11 +36,11 @@ var year = today.getUTCFullYear();
 
 ## Especificações
 
-| Especificação                                                                                                                | Status                       | Comentário                                         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.11', 'Date.prototype.getUTCFullYear')}}                             | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.getutcfullyear', 'Date.prototype.getUTCFullYear')}}     | {{Spec2('ES6')}}         |                                                    |
+| Especificação                                                                                  | Status               | Comentário                                         |
+| ---------------------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                            | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.11', 'Date.prototype.getUTCFullYear')}}                       | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-date.prototype.getutcfullyear', 'Date.prototype.getUTCFullYear')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-date.prototype.getutcfullyear', 'Date.prototype.getUTCFullYear')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Compatibilidade com navegadores

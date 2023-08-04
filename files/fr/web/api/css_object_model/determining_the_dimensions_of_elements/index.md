@@ -1,7 +1,6 @@
 ---
 title: Déterminer les dimensions des éléments
 slug: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
-translation_of: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 ---
 
 {{APIRef("CSSOM View")}}
@@ -24,7 +23,7 @@ A titre d'exemple, si l'élément a `width: 100px;` et `transform: scale(0.5);` 
 
 ## Quelle est la taille du contenu affiché ?
 
-Si vous avez besoin de savoir combien prend d'espace le contenu réel affiché, y compris le rembourrage mais sans les frontières, les marges, ou les barres de défilement, vous pouvez utiliser les propriétés [`clientWidth`](/fr/DOM/element.clientWidth) et  [`clientHeight`](/fr/DOM/element.clientHeight) :
+Si vous avez besoin de savoir combien prend d'espace le contenu réel affiché, y compris le rembourrage mais sans les frontières, les marges, ou les barres de défilement, vous pouvez utiliser les propriétés [`clientWidth`](/fr/DOM/element.clientWidth) et [`clientHeight`](/fr/DOM/element.clientHeight) :
 
 ![](dimensions-client.png)
 

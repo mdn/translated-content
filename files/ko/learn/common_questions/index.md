@@ -2,6 +2,7 @@
 title: Common questions
 slug: Learn/Common_questions
 ---
+
 This section of the Learning Area is designed to provide answers to common questions that may come up, which are not necessarily part of the structured core learning pathways (e.g. the [HTML](/ko/docs/Learn/HTML) or [CSS](/ko/docs/Learn/CSS) learning articles.) These articles are designed to work on their own.
 
 ## HTML and CSS questions

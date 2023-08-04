@@ -1,8 +1,8 @@
 ---
 title: ServiceWorkerContainer.register()
 slug: Web/API/ServiceWorkerContainer/register
-translation_of: Web/API/ServiceWorkerContainer/register
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 O método **`register()`**da interface {{domxref("ServiceWorkerContainer")}} cria ou atualiza um {{domxref("ServiceWorkerRegistration")}} passado em `scriptURL`.
@@ -22,7 +22,7 @@ ServiceWorkerContainer.register(scriptURL, options)
 
 - `scriptURL`
   - : A URL do script service worker.
-- `options` `{{optional_inline}}`
+- `options` {{optional_inline}}
 
   - : Um objeto contendo as opções do registro. Atualmente as opções disponíveis são:
 

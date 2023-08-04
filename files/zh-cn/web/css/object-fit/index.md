@@ -52,36 +52,36 @@ object-fit 属性由下列的值中的单独一个关键字来指定。
 
 ## 示例
 
-### 为图像设置 object-fill
+### 为图像设置 object-fit
 
 #### HTML
 
 ```html
 <section>
   <h2>object-fit: fill</h2>
-  <img class="fill" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="fill" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="fill narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="fill narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
   <h2>object-fit: contain</h2>
-  <img class="contain" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="contain" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="contain narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="contain narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
   <h2>object-fit: cover</h2>
-  <img class="cover" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="cover" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="cover narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="cover narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
   <h2>object-fit: none</h2>
-  <img class="none" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="none" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="none narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="none narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
   <h2>object-fit: scale-down</h2>
-  <img class="scale-down" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="scale-down" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="scale-down narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="scale-down narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 </section>
 ```
 
@@ -89,7 +89,9 @@ object-fit 属性由下列的值中的单独一个关键字来指定。
 
 ```css
 h2 {
-  font-family: Courier New, monospace;
+  font-family:
+    Courier New,
+    monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
 }
@@ -141,5 +143,5 @@ img {
 
 ## 参见
 
-- 其它与图像相关的 CSS 属性：{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}}、{{cssxref("image-resolution")}}。
+- 其他与图像相关的 CSS 属性：{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}}、{{cssxref("image-resolution")}}。
 - {{cssxref("background-size")}}

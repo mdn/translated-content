@@ -1,8 +1,8 @@
 ---
 title: Window.moveBy()
 slug: Web/API/Window/moveBy
-translation_of: Web/API/Window/moveBy
 ---
+
 {{APIRef}}
 
 ## Resumen
@@ -12,7 +12,7 @@ Mueve la actual ventana a consecuencia de una cantidad especificada.
 ## Sintaxis
 
 ```js
-window.moveBy(deltaX, deltaY)
+window.moveBy(deltaX, deltaY);
 ```
 
 ### Parametros
@@ -37,15 +37,13 @@ Desde Firefox 7, no es posible para un sitio web mover una ventana en el navegad
 1. No puedes mover una ventana o pestaña que no haya sido creada por window\.open.
 2. No puedes mover una ventana o pestaña cuando esta en una ventana con más de una sola pestaña.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{ SpecName('CSSOM View', '#dom-window-moveby', 'window.moveBy()') }} | {{ Spec2('CSSOM View') }} |            |
+{{Specifications}}
 
-## Compatilidad de Navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.moveBy")}}
+{{Compat}}
 
 ## Ver también
 

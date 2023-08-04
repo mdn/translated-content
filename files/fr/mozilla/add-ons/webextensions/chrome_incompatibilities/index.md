@@ -1,12 +1,6 @@
 ---
 title: Incompatibilités avec Chrome
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-tags:
-  - Guide
-  - WebExtensions
-  - google chrome
-translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-original_slug: Mozilla/Add-ons/WebExtensions/Incompatibilités_Chrome
 ---
 
 {{AddonSidebar}}
@@ -29,13 +23,13 @@ La suite de cette page détaille ces problèmes ainsi que d'autres points d'inco
 Dans Chrome, les extensions peuvent accéder aux API JavaScript privilégiées à l'aide de l'espace de noms `chrome` :
 
 ```js
-chrome.browserAction.setIcon({path: "path/to/icon.png"});
+chrome.browserAction.setIcon({ path: "path/to/icon.png" });
 ```
 
 Les WebExtensions accèdent aux API équivalentes à l'aide de l'espace de noms `browser` :
 
 ```js
-browser.browserAction.setIcon({path: "path/to/icon.png"});
+browser.browserAction.setIcon({ path: "path/to/icon.png" });
 ```
 
 Beaucoup d'API sont asynchrones. Dans Chrome, les API asynchrones utilisent des fonctions de rappel (_callback_) pour renvoyer des valeurs et {{WebExtAPIRef("runtime.lastError")}} pour communiquer les erreurs :
@@ -49,10 +43,7 @@ function logCookie(c) {
   }
 }
 
-chrome.cookies.set(
-  {url: "https://developer.mozilla.org/"},
-  logCookie
-);
+chrome.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
 ```
 
 Les API WebExtensions équivalentes utilisent plutôt [les promesses](/fr/docs/Web/JavaScript/Guide/Utiliser_les_promesses) :
@@ -66,9 +57,7 @@ function logError(e) {
   console.error(e);
 }
 
-var setCookie = browser.cookies.set(
-  {url: "https://developer.mozilla.org/"}
-);
+var setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
 setCookie.then(logCookie, logError);
 ```
 
@@ -82,7 +71,7 @@ Si vous écrivez votre extension en utilisant `browser` et les promesses, l'équ
 
 La page sur la [compatibilité des navigateurs pour les API JavaScript WebExtension](/fr/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) inclut l'ensemble des tableaux de compatibilité. Lorsqu'il existe des réserves autour du support d'un élément d'API donné, ceci est indiqué dans ces tableaux avec un astérisque "\*". Ces réserves sont détaillées la page de documentation respective de l'API.
 
-Ces tableaux sont générés à partir des données de compatibilité stockées en tant que  [fichiers JSON dans GitHub](https://github.com/mdn/browser-compat-data).
+Ces tableaux sont générés à partir des données de compatibilité stockées en tant que [fichiers JSON dans GitHub](https://github.com/mdn/browser-compat-data).
 
 Le reste de cette section décrit les problèmes de compatibilité qui ne sont pas encore pris en compte dans ces tableaux.
 

@@ -1,5 +1,5 @@
 ---
-title: ':first-of-type'
+title: ":first-of-type"
 slug: Web/CSS/:first-of-type
 ---
 
@@ -18,7 +18,9 @@ p:first-of-type {
 
 ## 構文
 
-{{csssyntax}}
+```
+:first-of-type
+```
 
 ## 例
 

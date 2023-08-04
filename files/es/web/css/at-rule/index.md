@@ -1,8 +1,8 @@
 ---
 title: Regla-At
 slug: Web/CSS/At-rule
-translation_of: Web/CSS/At-rule
 ---
+
 {{cssref}}
 
 Una **regla-at** es una [declaración CSS](/es/docs/Web/CSS/Syntax#CSS_statements) que comienza con el símbolo arroba, '@' (U+0040 COMMERCIAL AT), seguido por un identificador, e incluye todo el contenido hasta el siguiente punto y coma, ';' (U+003B SEMICOLON), o el siguiente [bloque CSS](/es/docs/Web/CSS/Syntax#CSS_declarations_blocks), lo que sea primero.
@@ -20,7 +20,6 @@ Hay varias reglas-at, designadas por sus identificadores, cada una con sintaxis 
   - {{cssxref("@page")}} — Describe los cambios en la disposición de la página que serán aplicados al imprimir el documento.
   - {{cssxref("@font-face")}} — Describe la configuración de fuentes externas que se descargarán.
   - {{cssxref("@keyframes")}} {{experimental_inline}} — Describe la configuración de pasos intermedios en una secuencia de animación CSS.
-  - {{cssxref("@viewport")}} {{experimental_inline}} — Describe los aspectos del viewport para dispositivos de pantalla pequeña. _(actualmente en Borrador)_
   - {{cssxref("@counter-style")}} — Define estilos de contador específicos que no son parte de los conjuntos de estilos predeterminados. _(en estado de Recomendación Candidata, pero sólo implementada en Gekko al momento de esta publicación)_
   - {{cssxref("@font-feature-values")}} (junto con `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` y `@character-variant`)
     — Define nombres comunes para la propiedad {{cssxref("font-variant-alternates")}}. _(en estado de Recomendación Candidata, pero sólo implementada en Gekko al momento de esta publicación)_
@@ -39,12 +38,9 @@ Como cada grupo de condición puede incluir también declaraciones anidadas, pue
 
 ## Especificaciones
 
-| Especificatión                                                           | Estado                                   | Comentarios                         |
-| ------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------- |
-| {{SpecName('CSS3 Conditional')}}                             | {{Spec2('CSS3 Conditional')}} | Definición inicial                  |
-| {{SpecName('Compat', '#css-at-rules', 'CSS At-rules')}} | {{Spec2('Compat')}}                 | `@-webkit-keyframes estandarizado`. |
+{{Specifications}}
 
 ## Véase también
 
 - [CSS Reference](/es/docs/Web/CSS/Reference)
-- {{CSS_key_concepts}}
+- CSS Key Concepts: [CSS syntax](/es/docs/Web/CSS/Syntax), [at-rule](/es/docs/Web/CSS/At-rule), [comments](/es/docs/Web/CSS/Comments), [specificity](/es/docs/Web/CSS/Specificity) and [inheritance](/es/docs/Web/CSS/inheritance), the [box](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), [layout modes](/es/docs/Web/CSS/Layout_mode) and [visual formatting models](/es/docs/Web/CSS/Visual_formatting_model), and [margin collapsing](/es/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing), or the [initial](/es/docs/Web/CSS/initial_value), [computed](/es/docs/Web/CSS/computed_value), [resolved](/es/docs/Web/CSS/resolved_value), [specified](/es/docs/Web/CSS/specified_value), [used](/es/docs/Web/CSS/used_value), and [actual](/es/docs/Web/CSS/actual_value) values. Definitions of [value syntax](/es/docs/Web/CSS/Value_definition_syntax), [shorthand properties](/es/docs/Web/CSS/Shorthand_properties) and [replaced elements](/es/docs/Web/CSS/Replaced_element).

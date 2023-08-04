@@ -1,8 +1,8 @@
 ---
 title: Estilizando tablas
 slug: Learn/CSS/Building_blocks/Styling_tables
-translation_of: Learn/CSS/Building_blocks/Styling_tables
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
 
 Aplicar estilos a una tabla HTML no es el trabajo más interesante del mundo, pero a veces hay que hacerlo. Este artículo proporciona una guía para hacer que las tablas HTML presenten un aspecto agradable, para ello usaremos algunas de las características específicas para tablas que hemos destacado en artículos anteriores.
@@ -33,7 +33,9 @@ Comencemos por echar un vistazo a una tabla HTML típica. Bueno, decimos típica
 
 ```html
 <table summary="Los grupos de música punk más famosos del Reino Unido">
-  <caption>Un resumen de los grupos de música punk más famosos del Reino Unido</caption>
+  <caption>
+    Un resumen de los grupos de música punk más famosos del Reino Unido
+  </caption>
   <thead>
     <tr>
       <th scope="col">Grupo</th>
@@ -56,7 +58,7 @@ Comencemos por echar un vistazo a una tabla HTML típica. Bueno, decimos típica
       <td>London Calling</td>
     </tr>
 
-      ... se han eliminado algunas filas por abreviar
+    ... se han eliminado algunas filas por abreviar
 
     <tr>
       <th scope="row">The Stranglers</th>
@@ -74,9 +76,9 @@ Comencemos por echar un vistazo a una tabla HTML típica. Bueno, decimos típica
 </table>
 ```
 
-La tabla está bien creada, puede aplicársele estilo fácilmente y presenta características de accesibilidad gracias a propiedades como {{htmlattrxref("scope","th")}}, {{htmlelement("caption")}}, {{htmlattrxref("summary","table")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}}, etc. Por desgracia, no presenta un aspecto agradable cuando se muestra en pantalla (puedes ver el ejemplo en [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html)):
+La tabla está bien creada, puede aplicársele estilo fácilmente y presenta características de accesibilidad gracias a propiedades como [`scope`](/es/docs/Web/HTML/Element/th#scope), {{htmlelement("caption")}}, [`summary`](/es/docs/Web/HTML/Element/table#summary), {{htmlelement("thead")}}, {{htmlelement("tbody")}}, etc. Por desgracia, no presenta un aspecto agradable cuando se muestra en pantalla (puedes ver el ejemplo en [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html)):
 
-![](https://mdn.mozillademos.org/files/13064/table-unstyled.png)
+![](table-unstyled.png)
 
 Tal y como está, es aburrida y difícil de leer. Necesitamos usar algo de CSS para arreglar esto.
 
@@ -88,9 +90,9 @@ En esta sección de aprendizaje activo vamos a aplica estilo a nuestra tabla jun
 2. Ahora crea un archivo nuevo llamado `style.css` y guárdalo con el resto de archivos, en la misma carpeta.
 3. Enlaza el CSS al HTML copiando la línea siguiente en {{htmlelement("head")}}:
 
-    ```html
-    <link href="style.css" rel="stylesheet" type="text/css">
-    ```
+   ```html
+   <link href="style.css" rel="stylesheet" type="text/css" />
+   ```
 
 ### Espaciado y distribución
 
@@ -122,7 +124,8 @@ thead th:nth-child(4) {
   width: 35%;
 }
 
-th, td {
+th,
+td {
   padding: 20px;
 }
 ```
@@ -133,13 +136,13 @@ Las partes más importantes que destacamos son:
 
   Hemos emparejado esto con un {{cssxref("width")}} del 100%, que significa que la tabla llenará cualquier contenedor en la que se ubique, y presentará unas buenas características adaptativas (aunque podría requerir algo más de trabajo para que se vea bien en pantallas de anchuras estrechas).
 
-- Un valor {{cssxref("border-collapse")}} de `collapse` es una buena práctica estándar para cualquier tarea de aplicación de estilo a tablas. Por defecto, cuando estableces los bordes de los elementos de la tabla, quedará un espacio entre ellos, como se muestra en la imagen siguiente. ![](https://mdn.mozillademos.org/files/13068/no-border-collapse.png) Esto no presenta un aspecto agradable (aunque puede ser el aspecto que buscas, ¡quién sabe!). Si estableces `border-collapse: collapse;`, los bordes se reducen a uno, y así presenta un aspecto mucho más agradable: ![](https://mdn.mozillademos.org/files/13066/border-collapse.png)
+- Un valor {{cssxref("border-collapse")}} de `collapse` es una buena práctica estándar para cualquier tarea de aplicación de estilo a tablas. Por defecto, cuando estableces los bordes de los elementos de la tabla, quedará un espacio entre ellos, como se muestra en la imagen siguiente. ![](no-border-collapse.png) Esto no presenta un aspecto agradable (aunque puede ser el aspecto que buscas, ¡quién sabe!). Si estableces `border-collapse: collapse;`, los bordes se reducen a uno, y así presenta un aspecto mucho más agradable: ![](border-collapse.png)
 - Hemos puesto un borde ({{cssxref("border")}}) alrededor de la tabla, que es necesario, porque vamos a poner bordes en la cabecera de la tabla y después en el pie; queda raro e inconexo si no pones ningún borde a la tabla que la delimite del resto de los elementos del exterior y quedan huecos.
 - Hemos puesto área de relleno ({{cssxref("padding")}}) en los elementos {{htmlelement("th")}} y {{htmlelement("td")}}; esto da a los datos espacio para que respiren y mejora la legibilidad de la tabla.
 
 En este punto, nuestra tabla ya presenta un aspecto mucho más agradable:
 
-![](https://mdn.mozillademos.org/files/13070/table-with-spacing.png)
+![](table-with-spacing.png)
 
 ### Un poco de tipografía
 
@@ -150,7 +153,10 @@ En primer lugar, hemos ido a [Google Fonts](https://www.google.com/fonts) y hemo
 Primero, añade el elemento {{htmlelement ("link")}} siguiente a tu encabezado HTML, justo encima del elemento `<link>`:
 
 ```html
-<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link
+  href="https://fonts.googleapis.com/css?family=Rock+Salt"
+  rel="stylesheet"
+  type="text/css" />
 ```
 
 Ahora añade el CSS siguiente a tu archivo `style.css`, debajo de la línea añadida anterior:
@@ -159,11 +165,12 @@ Ahora añade el CSS siguiente a tu archivo `style.css`, debajo de la línea aña
 /* typography */
 
 html {
-  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
 }
 
-thead th, tfoot th {
-  font-family: 'Rock Salt', cursive;
+thead th,
+tfoot th {
+  font-family: "Rock Salt", cursive;
 }
 
 th {
@@ -192,7 +199,7 @@ En realidad aquí no hay nada que sea específico para las tablas. En general, m
 
 El resultado se ve un poco más limpio:
 
-![](https://mdn.mozillademos.org/files/13072/table-with-typography.png)
+![](table-with-typography.png)
 
 ### Gráficos y colores
 
@@ -201,14 +208,21 @@ Ahora, ¡a por los gráficos y los colores! Puesto que la tabla rezuma contenido
 Empieza añadiendo el CSS siguiente a tu archivo `style.css`, de nuevo al final:
 
 ```css
-thead, tfoot {
+thead,
+tfoot {
   background: url(leopardskin.jpg);
   color: white;
   text-shadow: 1px 1px 1px black;
 }
 
-thead th, tfoot th, tfoot td {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+thead th,
+tfoot th,
+tfoot td {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  );
   border: 3px solid purple;
 }
 ```
@@ -247,7 +261,7 @@ table {
 
 Esta explosión de colores da como resultado el aspecto siguiente:
 
-![](https://mdn.mozillademos.org/files/13074/table-with-color.png)
+![](table-with-color.png)
 
 Esto puede quedar un poco exagerado y no ser de tu agrado, pero el punto que tratamos de explicar es que las tablas no tienen por qué ser aburridas ni académicas.
 
@@ -257,7 +271,7 @@ Hay una última cosa que hacer con nuestra tabla: aplicar estilo al título. Par
 
 ```css
 caption {
-  font-family: 'Rock Salt', cursive;
+  font-family: "Rock Salt", cursive;
   padding: 20px;
   font-style: italic;
   caption-side: bottom;
@@ -269,7 +283,7 @@ caption {
 
 Aquí no hay nada notable, excepto la propiedad {{cssxref ("caption-side")}}, a la que se le ha dado un valor `bottom`. Esto coloca el título en la parte inferior de la tabla, lo que junto con el resto de declaraciones nos proporciona este aspecto final (puedes verlo vivo en [punk-bands-complete.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html)):
 
-![](https://mdn.mozillademos.org/files/13076/table-with-caption.png)
+![](table-with-caption.png)
 
 ## Aprendizaje activo: Aplica estilo a tu tabla
 

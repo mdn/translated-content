@@ -15,10 +15,10 @@ Syntax
 
 ```js
 var sending = browser.runtime.sendMessage(
-  extensionId,             // optional string
-  message,                 // any
-  options                  // optional object
-)
+  extensionId, // optional string
+  message, // any
+  options, // optional object
+);
 ```
 
 ### 参数
@@ -45,7 +45,7 @@ var sending = browser.runtime.sendMessage(
     2. null
     3. undefined
 
-  - 否则，将会被当做 `(extensionId, message)。`消息将会给发送给 `extensionId` 指定 ID 的扩展
+  - 否则，将会被当做 `(extensionId, message)`。消息将会给发送给 `extensionId` 指定 ID 的扩展
 
 - **有 3 个参数**：将会被当做 `(extensionId, message, options)`. 消息将会给发送给 `extensionId` 指定 ID 的扩展
 
@@ -77,7 +77,7 @@ function handleError(error) {
 
 function notifyBackgroundPage(e) {
   var sending = browser.runtime.sendMessage({
-    greeting: "Greeting from the content script"
+    greeting: "Greeting from the content script",
   });
   sending.then(handleResponse, handleError);
 }
@@ -91,9 +91,8 @@ The corresponding background script looks like this:
 // background-script.js
 
 function handleMessage(request, sender, sendResponse) {
-  console.log("Message from the content script: " +
-    request.greeting);
-  sendResponse({response: "Response from background script"});
+  console.log("Message from the content script: " + request.greeting);
+  sendResponse({ response: "Response from background script" });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);

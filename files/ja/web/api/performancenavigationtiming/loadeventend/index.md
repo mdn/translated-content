@@ -47,9 +47,7 @@ function print_nav_timing_data() {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           | ステータス                                           | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | -------- |
-| {{SpecName('Navigation Timing Level 2', '#widl-PerformanceNavigationTiming-loadEventEnd', 'loadEventEnd')}} | {{Spec2('Navigation Timing Level 2')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

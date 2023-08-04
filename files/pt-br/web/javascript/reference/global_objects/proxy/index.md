@@ -1,8 +1,8 @@
 ---
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
+
 {{JSRef}}
 
 O objeto **Proxy** é usado para definir comportamentos customizados para operações fundamentais (por exemplo, pesquisa de propriedade, atribuição, enumeração, invocação de função, etc.).
@@ -38,7 +38,7 @@ var p = new Proxy(target, handler);
 
 O objeto manipulado é um objeto reservado que contém traps para `Proxy.`
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler', 'Methods') }}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler', 'Methods') }}
 
 ## Exemplos
 
@@ -304,7 +304,7 @@ Agora, para criar uma lista completa de amostra de `traps`, para fins didáticos
 ```js
 /*
   var docCookies = ... get the "docCookies" object here:
-  https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
+  https://developer.mozilla.org/pt-BR/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
 */
 
 var docCookies = new Proxy(docCookies, {
@@ -365,9 +365,9 @@ console.log(docCookies.my_cookie1);
 
 ## Notas Especificas Gecko
 
-- No momento, `Object.getPrototypeOf(proxy)` retorna incondicionalmente um `Object.getPrototypeOf(target)`, porque a trap ES2015 getPrototypeOf não foi implementada ({{bug(795904)}}, {{bug(888969)}}).
-- `Array.isArray(proxy)` retorna incondicionalmente um `Array.isArray(target)` ({{bug(1096753)}}, {{bug(1111785)}}).
-- `Object.prototype.toString.call(proxy)` retorna incondicionalmente `Object.prototype.toString.call(target)`, porque ES2015 Symbol.toStringTag não foi implementado ({{bug(1114580)}}).
+- No momento, `Object.getPrototypeOf(proxy)` retorna incondicionalmente um `Object.getPrototypeOf(target)`, porque a trap ES2015 getPrototypeOf não foi implementada ([Erro do Firefox 795904](https://bugzil.la/795904), [Erro do Firefox 888969](https://bugzil.la/888969)).
+- `Array.isArray(proxy)` retorna incondicionalmente um `Array.isArray(target)` ([Erro do Firefox 1096753](https://bugzil.la/1096753), [Erro do Firefox 1111785](https://bugzil.la/1111785)).
+- `Object.prototype.toString.call(proxy)` retorna incondicionalmente `Object.prototype.toString.call(target)`, porque ES2015 Symbol.toStringTag não foi implementado ([Erro do Firefox 1114580](https://bugzil.la/1114580)).
 
 ## Veja também
 

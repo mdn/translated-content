@@ -1,17 +1,9 @@
 ---
 title: <cite>
 slug: Web/HTML/Element/cite
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - 인용
-  - 출처
-translation_of: Web/HTML/Element/cite
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<cite>` 요소**는 저작물의 출처를 표기할 때 사용하며, 제목을 반드시 포함해야 합니다. 적절한 맥락 아래에서는 출처를 축약해서 표기할 수 있습니다.
 
@@ -126,7 +118,7 @@ W3C 명세는 `<cite>` 요소로 저작물의 출처를 표기할 때 저작자�
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.cite")}}
+{{Compat}}
 
 ## 같이 보기
 

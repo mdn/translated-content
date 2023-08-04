@@ -21,9 +21,7 @@ var videoTrackLanguage = VideoTrack.language;
 
 ## 仕様
 
-| 仕様                                                                                                     | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#dom-videotrack-language', 'VideoTrack: language')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

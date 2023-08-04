@@ -1,15 +1,9 @@
 ---
 title: <label>
 slug: Web/HTML/Element/label
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/label
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<label>` 요소**는 사용자 인터페이스 항목의 설명을 나타냅니다.
 
@@ -27,8 +21,9 @@ translation_of: Web/HTML/Element/label
 또는, `<label>` 안에 `<input>` 을 중첩시킬 수 있습니다. 이 경우 연관이 암시적이므로 `for` 및 `id`속성이 필요없습니다.
 
 ```html
-<label>Do you like peas?
-  <input type="checkbox" name="peas">
+<label
+  >Do you like peas?
+  <input type="checkbox" name="peas" />
 </label>
 ```
 
@@ -59,7 +54,7 @@ translation_of: Web/HTML/Element/label
 ### 간단한 label 예제
 
 ```html
-<label>Click me <input type="text"></label>
+<label>Click me <input type="text" /></label>
 ```
 
 {{EmbedLiveSample('간단한_label_예제', '200', '50', '')}}
@@ -67,8 +62,7 @@ translation_of: Web/HTML/Element/label
 ### "for" 속성 예제
 
 ```html
-<label for="username">Click me</label>
-<input type="text" id="username">
+<label for="username">Click me</label> <input type="text" id="username" />
 ```
 
 {{EmbedLiveSample('for_속성_예제', '200', '50', '')}}
@@ -85,7 +79,7 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
 
 ```html example-bad
 <label for="tac">
-  <input id="tac" type="checkbox" name="terms-and-conditions">
+  <input id="tac" type="checkbox" name="terms-and-conditions" />
   I agree to the <a href="terms-and-conditions.html">Terms and Conditions</a>
 </label>
 ```
@@ -94,7 +88,7 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
 
 ```html example-good
 <label for="tac">
-  <input id="tac" type="checkbox" name="terms-and-conditions">
+  <input id="tac" type="checkbox" name="terms-and-conditions" />
   I agree to the Terms and Conditions
 </label>
 <p>
@@ -113,7 +107,7 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
 ```html example-bad
 <label for="your-name">
   <h3>Your name</h3>
-  <input id="your-name" name="your-name" type="text">
+  <input id="your-name" name="your-name" type="text" />
 </label>
 ```
 
@@ -122,7 +116,7 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
 ```html example-good
 <label class="large-label" for="your-name">
   Your name
-  <input id="your-name" name="your-name" type="text">
+  <input id="your-name" name="your-name" type="text" />
 </label>
 ```
 
@@ -195,4 +189,4 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.label")}}
+{{Compat}}

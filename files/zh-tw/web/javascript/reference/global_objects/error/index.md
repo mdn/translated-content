@@ -58,15 +58,31 @@ The global `Error` object contains no methods of its own, however, it does inher
 
 ## `Error` 實體
 
-{{page('en-US/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Description')}}
+Runtime errors result in new `Error` objects being created and thrown.
+
+`Error` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/zh-TW/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
 
 ### 屬性
 
-{{page('en-US/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Properties')}}
+- {{jsxref("Error.prototype.message")}}
+  - : Error message. For user-created `Error` objects, this is the string provided as the constructor's first argument.
+- {{jsxref("Error.prototype.name")}}
+  - : Error name. This is determined by the constructor function.
+- {{jsxref("Error.prototype.cause")}}
+  - : Error cause indicating the reason why the current error is thrown — usually another caught error. For user-created `Error` objects, this is the value provided as the `cause` property of the constructor's second argument.
+- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+  - : A non-standard Mozilla property for the path to the file that raised this error.
+- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
+  - : A non-standard Mozilla property for the line number in the file that raised this error.
+- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
+  - : A non-standard Mozilla property for the column number in the line that raised this error.
+- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
+  - : A non-standard property for a stack trace.
 
 ### 方法
 
-{{page('en-US/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Methods')}}
+- {{jsxref("Error.prototype.toString()")}}
+  - : Returns a string representing the specified object. Overrides the {{jsxref("Object.prototype.toString()")}} method.
 
 ## 範例
 
@@ -76,9 +92,9 @@ Usually you create an `Error` object with the intention of raising it using the 
 
 ```js
 try {
-  throw new Error('Whoops!');
+  throw new Error("Whoops!");
 } catch (e) {
-  console.log(e.name + ': ' + e.message);
+  console.log(e.name + ": " + e.message);
 }
 ```
 
@@ -91,9 +107,9 @@ try {
   foo.bar();
 } catch (e) {
   if (e instanceof EvalError) {
-    console.log(e.name + ': ' + e.message);
+    console.log(e.name + ": " + e.message);
   } else if (e instanceof RangeError) {
-    console.log(e.name + ': ' + e.message);
+    console.log(e.name + ": " + e.message);
   }
   // ... etc
 }
@@ -110,9 +126,9 @@ See also the ["What's a good way to extend Error in JavaScript?" discussion on S
 ```js
 // Create a new object, that prototypically inherits from the Error constructor
 function MyError(message) {
-  this.name = 'MyError';
-  this.message = message || 'Default Message';
-  this.stack = (new Error()).stack;
+  this.name = "MyError";
+  this.message = message || "Default Message";
+  this.stack = new Error().stack;
 }
 MyError.prototype = Object.create(Error.prototype);
 MyError.prototype.constructor = MyError;
@@ -120,15 +136,15 @@ MyError.prototype.constructor = MyError;
 try {
   throw new MyError();
 } catch (e) {
-  console.log(e.name);     // 'MyError'
-  console.log(e.message);  // 'Default Message'
+  console.log(e.name); // 'MyError'
+  console.log(e.message); // 'Default Message'
 }
 
 try {
-  throw new MyError('custom message');
+  throw new MyError("custom message");
 } catch (e) {
-  console.log(e.name);     // 'MyError'
-  console.log(e.message);  // 'custom message'
+  console.log(e.name); // 'MyError'
+  console.log(e.message); // 'custom message'
 }
 ```
 

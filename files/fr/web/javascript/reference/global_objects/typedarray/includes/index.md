@@ -1,16 +1,6 @@
 ---
 title: TypedArray.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
-tags:
-  - ECMAScript 2016
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/includes
 ---
 
 {{JSRef}}
@@ -39,10 +29,10 @@ Un booléen indiquant la présence de l'élément (`true` s'il y est, `false` si
 ## Exemples
 
 ```js
-var uint8 = new Uint8Array([1,2,3]);
-uint8.includes(2);     // true
-uint8.includes(4);     // false
-uint8.includes(3, 3);  // false
+var uint8 = new Uint8Array([1, 2, 3]);
+uint8.includes(2); // true
+uint8.includes(4); // false
+uint8.includes(3, 3); // false
 
 // Gestion de NaN (vrai uniquement pour Float32 et Float64)
 new Uint8Array([NaN]).includes(NaN); // false car NaN est converti en 0 par le constructeur
@@ -52,14 +42,11 @@ new Float64Array([NaN]).includes(NaN); // true;
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES7', '#sec-%typedarray%.prototype.includes', 'TypedArray.prototype.includes')}}     | {{Spec2('ES7')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.includes', 'TypedArray.prototype.includes')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.includes")}}
+{{Compat}}
 
 ## Voir aussi
 

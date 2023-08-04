@@ -1,16 +1,6 @@
 ---
 title: MessageEvent
 slug: Web/API/MessageEvent
-tags:
-  - API
-  - Channels
-  - Interface
-  - Reference
-  - WebSockets
-  - Window
-  - Workers
-  - messaging
-translation_of: Web/API/MessageEvent
 ---
 
 {{APIRef("HTML DOM")}}
@@ -27,7 +17,7 @@ Il est utilisé pour représenter les messages en :
 - [Canaux de diffusion](/fr/docs/Web/API/Broadcast_Channel_API) (voir {{domxref("Broadcastchannel.postMessage()")}}) et {{domxref("BroadcastChannel.onmessage")}}).
 - Les canaux de données WebRTC (voir {{domxref("RTCDataChannel.onmessage")}}).
 
-L'action déclenchée par cet événement est définie dans une fonction définie comme gestionnaire d'événement pour l'événement {{event("message")}} correspondant (par exemple, en utilisant un gestionnaire `onmessage` comme indiqué ci-dessus).
+L'action déclenchée par cet événement est définie dans une fonction définie comme gestionnaire d'événement pour l'événement `message` correspondant (par exemple, en utilisant un gestionnaire `onmessage` comme indiqué ci-dessus).
 
 {{AvailableInWorkers}}
 
@@ -67,7 +57,7 @@ Dans notre exemple de [travailleur partagé basique](https://github.com/mdn/simp
 L'extrait de code suivant montre la création d'un objet {{domxref("SharedWorker")}} à l'aide du constructeur {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}. Les deux scripts contiennent ceci :
 
 ```js
-var myWorker = new SharedWorker('worker.js');
+var myWorker = new SharedWorker("worker.js");
 ```
 
 Les deux scripts accèdent ensuite au worker par le biais d'un objet {{domxref("MessagePort")}} créé à l'aide de la propriété {{domxref("SharedWorker.port")}}. Si l'événement onmessage est attaché à l'aide de addEventListener, le port est démarré manuellement à l'aide de sa méthode `start()` :
@@ -79,35 +69,35 @@ myWorker.port.start();
 Lorsque le port est démarré, les deux scripts postent des messages au worker et traitent les messages envoyés par celui-ci en utilisant respectivement `port.postMessage()` et `port.onmessage` :
 
 ```js
-first.onchange = function() {
-  myWorker.port.postMessage([first.value,second.value]);
-  console.log('Message posté au worker');
-}
+first.onchange = function () {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Message posté au worker");
+};
 
-second.onchange = function() {
-  myWorker.port.postMessage([first.value,second.value]);
-  console.log('Message posté au worker');
-}
+second.onchange = function () {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Message posté au worker");
+};
 
-myWorker.port.onmessage = function(e) {
+myWorker.port.onmessage = function (e) {
   result1.textContent = e.data;
-  console.log('Message reçu du worker');
-}
+  console.log("Message reçu du worker");
+};
 ```
 
-À l'intérieur du worker, nous utilisons le gestionnaire {{domxref("SharedWorkerGlobalScope.onconnect")}} pour nous connecter au même port que celui mentionné ci-dessus. Les ports associés à ce worker sont accessibles dans la propriété `ports` de l'événement {{event("connect")}} - nous utilisons ensuite {{domxref("MessagePort")}} La méthode `start()` pour démarrer le port, et le handler `onmessage` pour gérer les messages envoyés par les processus principaux.
+À l'intérieur du worker, nous utilisons le gestionnaire {{domxref("SharedWorkerGlobalScope.onconnect")}} pour nous connecter au même port que celui mentionné ci-dessus. Les ports associés à ce worker sont accessibles dans la propriété `ports` de l'événement [`connect`](/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event) - nous utilisons ensuite {{domxref("MessagePort")}} La méthode `start()` pour démarrer le port, et le handler `onmessage` pour gérer les messages envoyés par les processus principaux.
 
 ```js
-onconnect = function(e) {
+onconnect = function (e) {
   var port = e.ports[0];
 
-  port.addEventListener('message', function(e) {
-    var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  port.addEventListener("message", function (e) {
+    var workerResult = "Result: " + e.data[0] * e.data[1];
     port.postMessage(workerResult);
   });
 
   port.start(); // Requis si vous utilisez addEventListener. Sinon, il est appelé implicitement par le paramètre onmessage.
-}
+};
 ```
 
 ## Spécifications

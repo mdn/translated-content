@@ -1,13 +1,8 @@
 ---
 title: marcação
-slug: Glossary/markup
-tags:
-  - Glossário
-  - Intro
-  - Marcação
-translation_of: Glossary/markup
-original_slug: Glossario/marcação
+slug: Glossary/Markup
 ---
+
 Uma linguagem de marcação é aquela projetada para definir e apresentar textos.
 [HTML](/pt-BR/docs/Glossario/HTML) (Linguagem de Marcação de Hipertexto), é um exemplo de linguagem
 de marcação.

@@ -3,7 +3,7 @@ title: キャンバス API
 slug: Web/API/Canvas_API
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 **キャンバス API** (Canvas API) は [JavaScript](/ja/docs/Web/JavaScript) と [HTML](/ja/docs/Web/HTML) の {{HtmlElement("canvas")}} 要素によってグラフィックを描く方法を提供します。他にも、アニメーション、ゲームのグラフィック、データの可視化、写真加工、リアルタイム動画処理などに使用することができます。
 

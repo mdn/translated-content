@@ -1,41 +1,42 @@
 ---
 title: TextTrackCue
 slug: Web/API/TextTrackCue
+l10n:
+  sourceCommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
 ---
 
 {{APIRef("WebVTT")}}
 
-**`TextTrackCues`** は、{{domxref("TextTrack")}} に一定期間表示されるテキストの文字列を表します。 これには、キューが表示される開始時間と終了時間が含まれます。 **`TextTrackCue`** を直接使用することはできません。 その代わりに、派生型の 1 つ（例えば {{domxref("VTTCue")}}）を使用する必要があります。
+**`TextTrackCue`** は抽象クラスで、 {{domxref("VTTCue")}} などの派生キュー型の基礎として使用されます。代わりに、これらの派生型を使用して作業することになります。これらのキューは、 {{domxref("TextTrack")}} の再生中にある時間だけ表示される文字列を表します。キューには、開始時刻（テキストが表示される時刻）と終了時刻（テキストが表示されなくなる時刻）、およびその他の情報を記載します。
+
+{{InheritanceDiagram}}
 
 ## プロパティ
 
 _このインターフェイスは {{domxref("EventTarget")}} からもプロパティを継承しています。_
 
-- {{domxref("TextTrackCue.track")}} {{readOnlyInline}}
+- {{domxref("TextTrackCue.track")}} {{ReadOnlyInline}}
   - : このキューが属する {{domxref("TextTrack")}}。 いずれにも属さない場合は `null`。
 - {{domxref("TextTrackCue.id")}}
-  - : キューを識別する {{domxref("DOMString")}}。
+  - : 文字列で、キューを識別します。
 - {{domxref("TextTrackCue.startTime")}}
-  - : キューが表示され始める動画時間を表す `double` 型。
+  - : `double` で、キューが表示を開始する動画時刻を、秒単位で指定します。
 - {{domxref("TextTrackCue.endTime")}}
-  - : キューが表示されなくなるまでの動画時間を表す `double` 型。
+  - : `double` で、キューの表示を停止する動画時刻を、秒単位で指定します。
 - {{domxref("TextTrackCue.pauseOnExit")}}
-  - : このキューが表示されなくなったときに動画を一時停止するかどうか `boolean` 型。
+  - : このキューが表示されなくなったときに動画を一時停止するかどうかを示す論理型です。
 
-### イベントハンドラ
+### イベント
 
-- {{domxref("TextTrackCue.onenter")}}
-  - : {{event("enter")}} イベントのイベントハンドラ。
-- {{domxref("TextTrackCue.onexit")}}
-  - : {{event("exit")}} イベントのイベントハンドラ。
+- {{domxref("TextTrackCue.enter_event", "enter")}}
+  - : キューがアクティブになったときに発行されます。
+- {{domxref("TextTrackCue.exit_event", "exit")}}
+  - : キューがアクティブではなくなったときに発行されます。
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                         | 状態                             | コメント |
-| ---------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG','#texttrackcue','TextTrackCue')}} | {{Spec2("HTML WHATWG")}} |          |
-| {{SpecName('HTML5 W3C','#texttrackcue','TextTrackCue')}} | {{Spec2("HTML5 W3C")}}     | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-未定
+{{Compat}}

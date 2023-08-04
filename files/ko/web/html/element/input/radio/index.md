@@ -1,21 +1,9 @@
 ---
 title: <input type="radio">
-slug: Web/HTML/Element/Input/radio
-tags:
-  - Element
-  - HTML
-  - HTML Input Types
-  - HTML forms
-  - HTML input
-  - Input
-  - Input Types
-  - Reference
-  - 라디오
-  - 라디오 그룹
-  - 라디오 버튼
-translation_of: Web/HTML/Element/input/radio
+slug: Web/HTML/Element/input/radio
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **`radio`** 유형의 {{htmlelement("input")}} 요소는 보통 서로 관련된 옵션을 나타내는 라디오 버튼 콜렉션, **라디오 그룹**에 사용합니다. 임의의 그룹 내에서는 동시에 하나의 라디오 버튼만 선택할 수 있습니다. 라디오 버튼은 흔히 원형으로 그려지며, 선택한 경우 속을 채우거나 강조 표시를 합니다.
 
@@ -23,7 +11,7 @@ translation_of: Web/HTML/Element/input/radio
 
 오래된 라디오의 버튼과 비슷한 형태와 동작 방식을 가졌기에 라디오 버튼이라고 부릅니다.
 
-![Shows what radio buttons looked like in the olden days.](https://mdn.mozillademos.org/files/15610/old-radio.jpg "Photo of an old-time radio")
+![Shows what radio buttons looked like in the olden days.](old-radio.jpg)
 
 > **참고:** [체크박스](/ko/docs/Web/HTML/Element/input/checkbox)도 라디오 버튼과 비슷하지만 중요한 차이점이 하나 있습니다. 라디오 버튼은 여러 값에서 단 하나만 선택할 때 사용하지만, 체크박스는 각각의 값을 켜고 끌 수 있다는 점입니다. 다수의 컨트롤이 존재할 때 라디오 버튼은 전체에서 하나를 허용하고, 체크박스는 여러 개 선택을 허용합니다.
 
@@ -77,16 +65,13 @@ The resulting HTML looks like this:
 <form>
   <p>Please select your preferred contact method:</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email">
+    <input type="radio" id="contactChoice1" name="contact" value="email" />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="phone">
+    <input type="radio" id="contactChoice2" name="contact" value="phone" />
     <label for="contactChoice2">Phone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="mail">
+    <input type="radio" id="contactChoice3" name="contact" value="mail" />
     <label for="contactChoice3">Mail</label>
   </div>
   <div>
@@ -117,22 +102,18 @@ Let's add a little bit of code to our example so we can examine the data generat
 <form>
   <p>Please select your preferred contact method:</p>
   <div>
-    <input type="radio" id="contactChoice1"
-           name="contact" value="email">
+    <input type="radio" id="contactChoice1" name="contact" value="email" />
     <label for="contactChoice1">Email</label>
-    <input type="radio" id="contactChoice2"
-           name="contact" value="phone">
+    <input type="radio" id="contactChoice2" name="contact" value="phone" />
     <label for="contactChoice2">Phone</label>
-    <input type="radio" id="contactChoice3"
-           name="contact" value="mail">
+    <input type="radio" id="contactChoice3" name="contact" value="mail" />
     <label for="contactChoice3">Mail</label>
   </div>
   <div>
     <button type="submit">Submit</button>
   </div>
 </form>
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 Then we add some [JavaScript](/ko/docs/Web/JavaScript) to set up an event listener on the {{domxref("HTMLFormElement/submit_event", "submit")}} event, which is sent when the user clicks the "Submit" button:
@@ -141,15 +122,19 @@ Then we add some [JavaScript](/ko/docs/Web/JavaScript) to set up an event listen
 var form = document.querySelector("form");
 var log = document.querySelector("#log");
 
-form.addEventListener("submit", function(event) {
-  var data = new FormData(form);
-  var output = "";
-  for (const entry of data) {
-    output = output + entry[0] + "=" + entry[1] + "\r";
-  };
-  log.innerText = output;
-  event.preventDefault();
-}, false);
+form.addEventListener(
+  "submit",
+  function (event) {
+    var data = new FormData(form);
+    var output = "";
+    for (const entry of data) {
+      output = output + entry[0] + "=" + entry[1] + "\r";
+    }
+    log.innerText = output;
+    event.preventDefault();
+  },
+  false,
+);
 ```
 
 Try this example out and see how there's never more than one result for the `contact` group.
@@ -187,16 +172,18 @@ To make a radio button selected by default, you simply include `checked` attribu
 <form>
   <p>Please select your preferred contact method:</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email" checked>
+    <input
+      type="radio"
+      id="contactChoice1"
+      name="contact"
+      value="email"
+      checked />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="phone">
+    <input type="radio" id="contactChoice2" name="contact" value="phone" />
     <label for="contactChoice2">Phone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="mail">
+    <input type="radio" id="contactChoice3" name="contact" value="mail" />
     <label for="contactChoice3">Mail</label>
   </div>
   <div>
@@ -230,16 +217,18 @@ The following example shows a slightly more thorough version of the example we'v
   <fieldset>
     <legend>Please select your preferred contact method:</legend>
     <div>
-      <input type="radio" id="contactChoice1"
-       name="contact" value="email" checked>
+      <input
+        type="radio"
+        id="contactChoice1"
+        name="contact"
+        value="email"
+        checked />
       <label for="contactChoice1">Email</label>
 
-      <input type="radio" id="contactChoice2"
-       name="contact" value="phone">
+      <input type="radio" id="contactChoice2" name="contact" value="phone" />
       <label for="contactChoice2">Phone</label>
 
-      <input type="radio" id="contactChoice3"
-       name="contact" value="mail">
+      <input type="radio" id="contactChoice3" name="contact" value="mail" />
       <label for="contactChoice3">Mail</label>
     </div>
     <div>
@@ -320,13 +309,13 @@ Most notable here is the use of the {{cssxref("-moz-appearance")}} property (wit
 
 Notice that when clicking on a radio button, there's a nice, smooth fade out/in effect as the two buttons change state. In addition, the style and coloring of the legend and submit button are customized to have strong contrast. This might not be a look you'd want in a real web application, but it definitely shows off the possibilities.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.input.input-radio")}}
+{{Compat}}
 
 ## 같이 보기
 

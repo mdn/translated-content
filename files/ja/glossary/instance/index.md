@@ -9,4 +9,4 @@ slug: Glossary/Instance
 
 ### 一般知識
 
-- ウィキペディア上の記事{{interwiki("wikipedia", "インスタンス", "インスタンス")}}
+- ウィキペディア上の記事[インスタンス](https://ja.wikipedia.org/wiki/インスタンス)

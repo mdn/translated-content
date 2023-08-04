@@ -1,15 +1,8 @@
 ---
 title: 422 Unprocessable Entity
 slug: Web/HTTP/Status/422
-tags:
-  - Client error
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Status code
-  - WebDAV
-translation_of: Web/HTTP/Status/422
 ---
+
 {{HTTPSidebar}}
 
 이 응답은 서버가 요청을 이해하고 요청 문법도 올바르지만 요청된 지시를 따를 수 없음을 나타냅니다.

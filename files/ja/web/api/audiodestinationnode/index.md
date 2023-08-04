@@ -45,7 +45,7 @@ _親の{{domxref("AudioNode")}}のプロパティを継承しています。_
 
 ## メソッド
 
-*固有のメソッドはありません。親の\_\_{{domxref("AudioNode")}}*のメソッドを継承しています。
+_固有のメソッドはありません。親の {{domxref("AudioNode")}} のメソッドを継承しています。_
 
 ## 例
 
@@ -62,9 +62,7 @@ gainNode.connect(audioCtx.destination);
 
 ## 仕様
 
-| Specification                                                                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#the-audiodestinationnode-interface', 'AudioDestinationNode')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## ブラウザ互換性
 

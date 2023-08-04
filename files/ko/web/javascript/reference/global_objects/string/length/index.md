@@ -1,14 +1,8 @@
 ---
 title: String.length
 slug: Web/JavaScript/Reference/Global_Objects/String/length
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/length
 ---
+
 {{JSRef}}
 
 **`length`** 속성은 UTF-16 코드 유닛을 기준으로 문자열의 길이를 나타냅니다.

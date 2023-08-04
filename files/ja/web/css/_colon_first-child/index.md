@@ -1,5 +1,5 @@
 ---
-title: ':first-child'
+title: ":first-child"
 slug: Web/CSS/:first-child
 ---
 
@@ -19,7 +19,9 @@ p:first-child {
 
 ## 構文
 
-{{csssyntax}}
+```
+:first-child
+```
 
 ## 例
 

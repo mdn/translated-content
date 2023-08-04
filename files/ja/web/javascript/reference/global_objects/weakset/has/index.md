@@ -40,9 +40,7 @@ mySet.has(obj);     // returns false
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakset.prototype.has', 'WeakSet.prototype.has')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

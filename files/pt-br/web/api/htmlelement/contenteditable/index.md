@@ -1,8 +1,8 @@
 ---
 title: HTMLElement.contentEditable
 slug: Web/API/HTMLElement/contentEditable
-translation_of: Web/API/HTMLElement/contentEditable
 ---
+
 {{APIRef("HTML DOM")}}
 
 A propriedade **`HTMLElement.contentEditable`** é usada para indicar se o elemento é editável ou não. Esse atributo enumerado pode ter os seguintes valores:

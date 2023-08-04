@@ -1,6 +1,9 @@
 ---
-title: Element.scrollBy()
+title: "Element: scrollBy() メソッド"
+short-title: scrollBy()
 slug: Web/API/Element/scrollBy
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef}}
@@ -9,9 +12,9 @@ slug: Web/API/Element/scrollBy
 
 ## 構文
 
-```
-element.scrollBy(x-coord, y-coord);
-element.scrollBy(options)
+```js-nolint
+scrollBy(x-coord, y-coord)
+scrollBy(options)
 ```
 
 ### 引数
@@ -21,7 +24,18 @@ element.scrollBy(options)
 
 \- または -
 
-- `options` は {{domxref("ScrollToOptions")}} 辞書です。
+- `options`
+  - : 以下の引数を持つ辞書です。
+    - `top`
+      - : ウィンドウや要素をスクロールする Y 軸方向のピクセル数を指定します。
+    - `left`
+      - : ウィンドウや要素をスクロールする X 軸方向のピクセル数を指定します。
+    - `behavior`
+      - : スクロールを滑らかにアニメーションさせるか (`smooth`)、瞬時にジャンプさせるか (`instant`)、ブラウザーに選択させるか (`auto`, 既定値) を指定します。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -36,15 +50,13 @@ element.scrollBy(300, 300);
 element.scrollBy({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{ SpecName('CSSOM View', '#dom-element-scrollby-options-options', 'element.scrollBy()') }} | {{ Spec2('CSSOM View') }} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

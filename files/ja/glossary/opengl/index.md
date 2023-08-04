@@ -9,4 +9,4 @@ slug: Glossary/OpenGL
 
 ### 一般知識
 
-- Wikipedia での{{Interwiki("wikipedia", "OpenGL")}}
+- Wikipedia での[OpenGL](https://ja.wikipedia.org/wiki/OpenGL)

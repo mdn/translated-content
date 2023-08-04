@@ -27,17 +27,17 @@ _没有特定的方法; 从它的父级 {{domxref("Event")}}继承方法。_
 
 ## 事件
 
-- {{Event("unhandledrejection")}}
-  - : 在一个 JavaScript {{jsxref("Promise")}} 被 reject(拒绝) 但是没有 reject 处理函数来处理时触发。
-- {{Event("rejectionhandled")}}
+- {{domxref("Window/rejectionhandled_event", "rejectionhandled")}}
   - : 在一个 JavaScript {{jsxref("Promise")}} 被 reject 时触发，在 reject 后由 promise 的 reject 处理函数处理。
+- {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}
+  - : 在一个 JavaScript {{jsxref("Promise")}} 被 reject（拒绝）但是没有 reject 处理函数来处理时触发。
 
-## 例子
+## 示例
 
 ```js
-window.onunhandledrejection = function(e) {
+window.onunhandledrejection = function (e) {
   console.log(e.reason);
-}
+};
 ```
 
 ## 规范

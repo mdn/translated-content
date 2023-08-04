@@ -9,23 +9,21 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
 
 ## 语法
 
-```plain
-typedarray.every(callback[, thisArg])
+```js-nolint
+every(callbackFn)
+every(callbackFn, thisArg)
 ```
 
 ### 参数
 
 - `callback`
-
   - : 用于测试每个元素的函数，接受三个参数：
-
     - `currentValue`
       - : 要处理的类型化数组的当前元素。
     - `index`
       - : 要处理的当前元素在类型化数组中的下标
     - `array`
       - : every 在其上调用的类型化数组
-
 - `thisArg`
   - : 可选，执行 `callback` 时的 `this` 值。
 
@@ -53,7 +51,7 @@ typedarray.every(callback[, thisArg])
 function isBigEnough(element, index, array) {
   return element >= 10;
 }
-new Uint8Array([12, 5, 8, 130, 44]).every(isBigEnough);   // false
+new Uint8Array([12, 5, 8, 130, 44]).every(isBigEnough); // false
 new Uint8Array([12, 54, 18, 130, 44]).every(isBigEnough); // true
 ```
 
@@ -62,8 +60,8 @@ new Uint8Array([12, 54, 18, 130, 44]).every(isBigEnough); // true
 [箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)为相同测试提供了更短的语法。
 
 ```js
-new Uint8Array([12, 5, 8, 130, 44]).every(elem => elem >= 10); // false
-new Uint8Array([12, 54, 18, 130, 44]).every(elem => elem >= 10); // true
+new Uint8Array([12, 5, 8, 130, 44]).every((elem) => elem >= 10); // false
+new Uint8Array([12, 54, 18, 130, 44]).every((elem) => elem >= 10); // true
 ```
 
 ## 规范

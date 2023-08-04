@@ -33,35 +33,34 @@ The callback return value is `undefined`.
 
 ## Example
 
-This example shows the use of the `getAsString()` method as an _inline function_ in a {{event("drop")}} event handler.
+This example shows the use of the `getAsString()` method as an _inline function_ in a [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event) event handler.
 
 ```js
 function drop_handler(ev) {
- console.log("Drop");
- ev.preventDefault();
- var data = ev.dataTransfer.items;
- for (var i = 0; i < data.length; i += 1) {
-   if ((data[i].kind == 'string') &&
-       (data[i].type.match('^text/plain'))) {
-     // This item is the target node
-     data[i].getAsString(function (s){
-       ev.target.appendChild(document.getElementById(s));
-     });
-   } else if ((data[i].kind == 'string') &&
-              (data[i].type.match('^text/html'))) {
-     // Drag data item is HTML
-     console.log("... Drop: HTML");
-   } else if ((data[i].kind == 'string') &&
-              (data[i].type.match('^text/uri-list'))) {
-     // Drag data item is URI
-     console.log("... Drop: URI");
-   } else if ((data[i].kind == 'file') &&
-              (data[i].type.match('^image/'))) {
-     // Drag data item is an image file
-     var f = data[i].getAsFile();
-     console.log("... Drop: File ");
-   }
- }
+  console.log("Drop");
+  ev.preventDefault();
+  var data = ev.dataTransfer.items;
+  for (var i = 0; i < data.length; i += 1) {
+    if (data[i].kind == "string" && data[i].type.match("^text/plain")) {
+      // This item is the target node
+      data[i].getAsString(function (s) {
+        ev.target.appendChild(document.getElementById(s));
+      });
+    } else if (data[i].kind == "string" && data[i].type.match("^text/html")) {
+      // Drag data item is HTML
+      console.log("... Drop: HTML");
+    } else if (
+      data[i].kind == "string" &&
+      data[i].type.match("^text/uri-list")
+    ) {
+      // Drag data item is URI
+      console.log("... Drop: URI");
+    } else if (data[i].kind == "file" && data[i].type.match("^image/")) {
+      // Drag data item is an image file
+      var f = data[i].getAsFile();
+      console.log("... Drop: File ");
+    }
+  }
 }
 ```
 

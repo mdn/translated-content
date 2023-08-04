@@ -11,7 +11,7 @@ slug: Web/CSS/box-shadow
 
 你几乎可以在任何元素上使用`box-shadow`来添加阴影效果。如果元素同时设置了 {{ cssxref("border-radius") }}属性，那么阴影也会有圆角效果。多个阴影在 z 轴上的顺序和多个 [text shadows](/zh-CN/CSS/text-shadow) 规则相同 (第一个阴影在最上面)。
 
-[Box-shadow generator](/zh-CN/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator) 是一个允许你生成 `box-shadow` 的交互式工具。
+[Box-shadow generator](/zh-CN/docs/Web/CSS/CSS_box_model/Box-shadow_generator) 是一个允许你生成 `box-shadow` 的交互式工具。
 
 ## 语法
 
@@ -29,7 +29,9 @@ box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 box-shadow: inset 5em 1em gold;
 
 /* 任意数量的阴影，以逗号分隔 */
-box-shadow: 3px 3px red, -1em 0 0.4em olive;
+box-shadow:
+  3px 3px red,
+  -1em 0 0.4em olive;
 
 /* 全局关键字 */
 box-shadow: inherit;
@@ -87,11 +89,14 @@ box-shadow: unset;
 #### HTML
 
 ```html
-<blockquote><q>You may shoot me with your words,<br/>
-You may cut me with your eyes,<br/>
-You may kill me with your hatefulness,<br/>
-But still, like air, I'll rise.</q>
-<p>&mdash; Maya Angelou</p>
+<blockquote>
+  <q
+    >You may shoot me with your words,<br />
+    You may cut me with your eyes,<br />
+    You may kill me with your hatefulness,<br />
+    But still, like air, I'll rise.</q
+  >
+  <p>&mdash; Maya Angelou</p>
 </blockquote>
 ```
 
@@ -101,9 +106,9 @@ But still, like air, I'll rise.</q>
 blockquote {
   padding: 20px;
   box-shadow:
-       inset 0 -3em 3em rgba(0,0,0,0.1),
-             0 0  0 2px rgb(255,255,255),
-             0.3em 0.3em 1em rgba(0,0,0,0.3);
+    inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 ```
 
@@ -121,10 +126,11 @@ blockquote {
 
 ```css
 p {
-  box-shadow: 0 0 0 2em #F4AAB9,
-              0 0 0 4em #66CCFF;
+  box-shadow:
+    0 0 0 2em #f4aab9,
+    0 0 0 4em #66ccff;
   margin: 4em;
-  padding:1em;
+  padding: 1em;
 }
 ```
 

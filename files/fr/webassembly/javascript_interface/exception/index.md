@@ -1,12 +1,9 @@
 ---
 title: WebAssembly.Exception
 slug: WebAssembly/JavaScript_interface/Exception
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception
-browser-compat: javascript.builtins.WebAssembly.Exception
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 Un objet **`WebAssembly.Exception`** représente une exception d'exécution levée depuis WebAssembly vers JavaScript ou levée depuis JavaScript vers un gestionnaire d'exception WebAssembly.
 
@@ -30,6 +27,7 @@ Afin que l'émission des exceptions soit plus rapide, les exceptions levées dep
 ## Méthodes des instansces
 
 - [`Exception.prototype.is()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/is)
+
   - : Teste si une exception correspond à une balise donnée.
 
 - [`Exception.prototype.getArg()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/getArg)
@@ -69,7 +67,7 @@ Prenons le code WebAssembly suivant et supposons qu'il soit compilé dans un fic
 )
 ```
 
-Le fragment de code qui suit appelle [`WebAssembly.instantiateStreaming`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming) pour importer le fichier **exemple.wasm**, en lui passant un «&nbsp;objet d'import&nbsp;» (`importObject`) qui inclue une nouvelle balise ([`WebAssembly.Tag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag)) intitulée `tag_to_import`. L'objet d'import définit un objet dont les propriétés correspondent à l'instruction  `import` du code WebAssembly.
+Le fragment de code qui suit appelle [`WebAssembly.instantiateStreaming`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming) pour importer le fichier **exemple.wasm**, en lui passant un «&nbsp;objet d'import&nbsp;» (`importObject`) qui inclue une nouvelle balise ([`WebAssembly.Tag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag)) intitulée `tag_to_import`. L'objet d'import définit un objet dont les propriétés correspondent à l'instruction `import` du code WebAssembly.
 
 Une fois le fichier instancié, le code appelle la méthode WebAssembly exportée `run1()`, qui lèvera immédiatement une exception.
 

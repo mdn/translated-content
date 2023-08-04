@@ -1,16 +1,8 @@
 ---
 title: <transform-function>
 slug: Web/CSS/transform-function
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Transforms
-  - Layout
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/CSS/transform-function
 ---
+
 {{CSSRef}}
 
 The **`<transform-function>`** [CSS](/pt-BR/docs/Web/CSS) [data type](/pt-BR/docs/Web/CSS/CSS_Types) represents a transformation that affects an element's appearance. Transformation functions can rotate, resize, distort, or move an element in 2D or 3D space. It is used in the {{cssxref("transform")}} property.
@@ -43,7 +35,7 @@ With this notation, it is possible to describe, and therefore compose, most comm
 
 However, one major transformation is not linear, and therefore must be special-cased when using this notation: translation. The translation vector `(tx, ty)` must be expressed separately, as two additional parameters.
 
-> **Note:** Though trickier than Cartesian coordinates, [homogeneous coordinates](https://en.wikipedia.org/wiki/Homogeneous_coordinates) in [projective geometry](https://en.wikipedia.org/wiki/Projective_geometry) lead to 3x3 transformation matrices, and can simply express translations as linear functions.
+> **Nota:** Though trickier than Cartesian coordinates, [homogeneous coordinates](https://en.wikipedia.org/wiki/Homogeneous_coordinates) in [projective geometry](https://en.wikipedia.org/wiki/Projective_geometry) lead to 3x3 transformation matrices, and can simply express translations as linear functions.
 
 ## Syntax
 

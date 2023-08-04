@@ -1,6 +1,8 @@
 ---
 title: KeyboardEvent.repeat
 slug: Web/API/KeyboardEvent/repeat
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef("UI Events")}}

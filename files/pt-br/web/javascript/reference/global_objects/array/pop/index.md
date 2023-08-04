@@ -1,12 +1,8 @@
 ---
 title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
-tags:
-  - Array
-  - JavaScript
-  - Pop
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/pop
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Resumo

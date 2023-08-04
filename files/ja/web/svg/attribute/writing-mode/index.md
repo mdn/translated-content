@@ -42,11 +42,7 @@ slug: Web/SVG/Attribute/writing-mode
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                                     | 備考                                                                                               |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS3 Writing Modes", "#block-flow", "writing-mode")}}         | {{Spec2("CSS3 Writing Modes")}} | CSS Writing Modes 3 の中で定義                                                                     |
-| {{SpecName("SVG2", "text.html#WritingModeProperty", "writing-mode")}}     | {{Spec2("SVG2")}}                 | 主に CSS Writing Modes 3 の定義を参照し、非推奨の SVG 1.1 の値と新しい値との対応付けを定義します。 |
-| {{SpecName("SVG1.1", "text.html#WritingModeProperty", "writing-mode")}} | {{Spec2("SVG1.1")}}                 | 初回定義                                                                                           |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

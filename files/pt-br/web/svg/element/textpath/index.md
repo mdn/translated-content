@@ -1,13 +1,8 @@
 ---
 title: textPath
 slug: Web/SVG/Element/textPath
-tags:
-  - Conteúdo Textual
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/textPath
 ---
+
 {{SVGRef}}
 
 Assim como o texto escrito em uma linha reta, o SVG também inclui a capacidade de colocar um texto ao longo de uma forma de um elemento {{ SVGElement("path") }}. Para especificar que um bloco de texto é renderizado ao longo da forma de um {{ SVGElement("path") }}, inclua o texto em um elemento `textPath` o qual inclui um atributo `xlink:href` com uma referência a um elemento {{ SVGElement("path") }}.
@@ -20,8 +15,8 @@ Assim como o texto escrito em uma linha reta, o SVG também inclui a capacidade 
 
 ```html
 <svg width="100%" height="100%" viewBox="0 0 1000 300"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+     xmlns="https://www.w3.org/2000/svg"
+     xmlns:xlink="https://www.w3.org/1999/xlink">
   <defs>
     <path id="MyPath"
           d="M 100 200
@@ -52,11 +47,11 @@ Resultado:
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
-- [Atributos XLink](/pt-BR/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing) »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
+- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent) »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
+- [Atributos XLink](/pt-BR/SVG/Attribute#XLink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -70,4 +65,4 @@ Resultado:
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGTextPathElement`](/pt-BR/DOM/SVGTextPathElement "en/DOM/SVGTextPathElement").
+Este elemento implementa a interface do [`SVGTextPathElement`](/pt-BR/DOM/SVGTextPathElement).

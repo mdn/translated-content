@@ -27,9 +27,7 @@ console.log(regex.unicode); // true
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.unicode', 'RegExp.prototype.unicode')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

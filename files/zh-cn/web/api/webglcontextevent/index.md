@@ -26,17 +26,21 @@ _此接口本身并没有定义任何方法，而是从它的父接口 {{domxref
 
 ## 示例
 
-使用 {{domxref("WEBGL_lose_context")}} 插件，你可以模拟 {{Event("webglcontextlost")}} 和 {{Event("webglcontextrestored")}} 事件：
+使用 {{domxref("WEBGL_lose_context")}} 插件，你可以模拟 {{domxref("HTMLCanvasElement/webglcontextlost_event", "webglcontextlost")}} 和 {{domxref("HTMLCanvasElement/webglcontextrestored_event", "webglcontextrestored")}} 事件：
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 
-canvas.addEventListener('webglcontextlost', function(e) {
-  console.log(e);
-}, false);
+canvas.addEventListener(
+  "webglcontextlost",
+  function (e) {
+    console.log(e);
+  },
+  false,
+);
 
-gl.getExtension('WEBGL_lose_context').loseContext();
+gl.getExtension("WEBGL_lose_context").loseContext();
 
 // 记录了 "webglcontextlost" 类型的 WebGLContextEvent 事件
 ```

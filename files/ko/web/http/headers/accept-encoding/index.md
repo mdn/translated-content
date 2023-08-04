@@ -1,8 +1,8 @@
 ---
 title: Accept-Encoding
 slug: Web/HTTP/Headers/Accept-Encoding
-translation_of: Web/HTTP/Headers/Accept-Encoding
 ---
+
 {{HTTPSidebar}}
 
 **`Accept-Encoding`** 요청 HTTP 헤더는, 보통 압축 알고리즘인, 클라이언트가 이해 가능한 컨텐츠 인코딩이 무엇인지를 알려줍니다. [컨텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation)을 사용하여, 서버는 제안된 내용 중 하나를 선택하고 사용하며 {{HTTPHeader("Content-Encoding")}} 응답 헤더를 이용해 선택된 것을 클라이언트에게 알려줍니다.

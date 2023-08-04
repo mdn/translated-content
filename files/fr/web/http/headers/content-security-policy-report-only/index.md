@@ -1,16 +1,6 @@
 ---
 title: Content-Security-Policy-Report-Only
 slug: Web/HTTP/Headers/Content-Security-Policy-Report-Only
-tags:
-  - CSP
-  - Content-Security-Policy
-  - HTTP
-  - HTTPS
-  - Reference
-  - Security
-  - Sécurité
-  - header
-translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 ---
 
 {{HTTPSidebar}}
@@ -98,11 +88,11 @@ Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.c
 La page HTML correspondant à l'adresse `signup.html` ressemble à :
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Sign Up</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     ... Content ...
@@ -129,14 +119,11 @@ Comme vous le voyez, la rapport inclut le chemin complet de la ressource à l'or
 
 ## Spécifications
 
-| Spécification                    | Statut                       | Commentaire          |
-| -------------------------------- | ---------------------------- | -------------------- |
-| {{specName("CSP 3.0")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
-| {{specName("CSP 1.1")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Content-Security-Policy-Report-Only")}}
+{{Compat}}
 
 ## Voir aussi
 

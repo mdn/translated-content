@@ -1,20 +1,13 @@
 ---
 title: border-left
 slug: Web/CSS/border-left
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-left
-translation_of: Web/CSS/border-left
 ---
+
 {{CSSRef}}
 
 ## Resumo
 
-A **`border-left`** é uma [propriedade shorthand](/pt-BR/docs/Web/CSS/Shorthand_properties) em [CSS](/pt-BR/docs/Web/CSS) que define todas as propriedades da {{cssxref("border")}} esquerda de um elemento.
+A **`border-left`** é uma [propriedade shorthand](/pt-BR/docs/Web/CSS/Shorthand_properties) em [CSS](/pt-BR/docs/Web/CSS) que define todas as propriedades da {{cssxref("border")}} esquerda de um elemento.
 
 {{EmbedInteractiveExample("pages/css/border-left.html")}}
 
@@ -32,7 +25,7 @@ border-left-style: dotted;
 border-left: none thick green;
 ```
 
-O valor de {{cssxref("border-left-style")}} dado antes de `border-left` é ignorado. Uma vez que o valor padrão de {{cssxref("border-left-style")}} é `none`, não especificar a parte `border-style` resulta em nenhuma borda.
+O valor de {{cssxref("border-left-style")}} dado antes de `border-left` é ignorado. Uma vez que o valor padrão de {{cssxref("border-left-style")}} é `none`, não especificar a parte `border-style` resulta em nenhuma borda.
 
 ## Propriedades constituintes
 
@@ -83,9 +76,7 @@ Os três valores da propriedade abreviada podem ser especificados em qualquer or
 #### HTML
 
 ```html
-<div>
-  Essa caixa tem uma borda no seu lado esquerdo.
-</div>
+<div>Essa caixa tem uma borda no seu lado esquerdo.</div>
 ```
 
 #### CSS

@@ -1,14 +1,8 @@
 ---
 title: Selectores de atributo
 slug: Web/CSS/Attribute_selectors
-tags:
-  - Atributos
-  - CSS
-  - Selectores
-  - Selectores de Atributo
-translation_of: Web/CSS/Attribute_selectors
-original_slug: Web/CSS/Selectores_atributo
 ---
+
 {{CSSRef}}
 
 El **selector de atributos** CSS coincide con los elementos en función de la presencia o el valor de un atributo determinado.
@@ -20,7 +14,8 @@ a[title] {
 }
 
 /* Elementos <a> con un href que coincida con "https://example.org" */
-a[href="https://example.org"] {
+a[href="https://example.org"]
+{
   color: green;
 }
 
@@ -165,7 +160,7 @@ div[data-lang="zh-TW"] {
 
 {{SeeCompatTable}}
 
-La especificación HTML requiere que el atributo {{htmlattrxref("type", "input")}} distinga entre mayúsculas y minúsculas debido a que se usa principalmente en el elemento {{HTMLElement("input")}}, tratando de usar selectores de atributos con el atributo {{htmlattrxref("type", "ol")}} de una {{HTMLElement("ol", "lista ordenada")}} no funciona sin el modificador de mayúsculas y minúsculas.
+La especificación HTML requiere que el atributo [`type`](/es/docs/Web/HTML/Element/input#type) distinga entre mayúsculas y minúsculas debido a que se usa principalmente en el elemento {{HTMLElement("input")}}, tratando de usar selectores de atributos con el atributo [`type`](/es/docs/Web/HTML/Element/ol#type) de una {{HTMLElement("ol", "lista ordenada")}} no funciona sin el modificador de mayúsculas y minúsculas.
 
 #### CSS
 
@@ -206,15 +201,11 @@ ol[type="A" s] {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                               | Comentarios                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS4 Selectors', '#attribute-selectors', 'attribute selectors')}}     | {{Spec2('CSS4 Selectors')}} | Agrega un modificador para la selección de valores de atributos insensibles a mayúsculas / minúsculas ASCII. |
-| {{SpecName('CSS3 Selectors', '#attribute-selectors', 'attribute selectors')}}     | {{Spec2('CSS3 Selectors')}} |                                                                                                              |
-| {{SpecName('CSS2.1', 'selector.html#attribute-selectors', 'attribute selectors')}} | {{Spec2('CSS2.1')}}             | Definición Inicial.                                                                                          |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.attribute")}}
+{{Compat}}
 
 ## Ver también
 

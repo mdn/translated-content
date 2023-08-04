@@ -58,9 +58,7 @@ try {
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-nativeerror-constructors', 'NativeError constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

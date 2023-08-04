@@ -1,9 +1,8 @@
 ---
 title: GlobalEventHandlers.onfocus
 slug: Web/API/Window/focus_event
-translation_of: Web/API/GlobalEventHandlers/onfocus
-original_slug: Web/API/GlobalEventHandlers/onfocus
 ---
+
 {{ApiRef("HTML DOM")}}
 
 A propriedade **onfocus** retorna o código de manipulador de eventos _onFocus_ no elemento atual.
@@ -22,6 +21,8 @@ Oposta à MSIE, em que quase todos os tipos de elementos recebem o evento _focus
 
 ## Especificações
 
-| especificaçãos                                                                                   | Status                           | Comentario |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onfocus','onfocus')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

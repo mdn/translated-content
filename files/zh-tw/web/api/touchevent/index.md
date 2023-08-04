@@ -37,52 +37,50 @@ _此介面也繼承了其父介面 {{domxref("UIEvent")}} 與 {{domxref("Event")
 
 觸控事件有多個種類可以代表觸碰狀態發生了改變。可以藉由 {{ domxref("event.type", "TouchEvent.type") }} 屬性來確認是哪一個種類的觸控事件。
 
-### {{event("touchstart")}}
+- [`touchstart`](/zh-TW/docs/Web/API/Element/touchstart_event)
+  - : Sent when the user places a touch point on the touch surface. The event's target will be the {{ domxref("element") }} in which the touch occurred.
+- [`touchend`](/zh-TW/docs/Web/API/Element/touchend_event)
 
-Sent when the user places a touch point on the touch surface. The event's target will be the {{ domxref("element") }} in which the touch occurred.
+  - : Sent when the user removes a touch point from the surface (that is, when they lift a finger or stylus from the surface). This is also sent if the touch point moves off the edge of the surface; for example, if the user's finger slides off the edge of the screen.
 
-### {{event("touchend")}}
+    The event's target is the same {{ domxref("element") }} that received the `touchstart` event corresponding to the touch point, even if the touch point has moved outside that element.
 
-Sent when the user removes a touch point from the surface (that is, when they lift a finger or stylus from the surface). This is also sent if the touch point moves off the edge of the surface; for example, if the user's finger slides off the edge of the screen.
+    The touch point (or points) that were removed from the surface can be found in the {{ domxref("TouchList") }} specified by the `changedTouches` attribute.
 
-The event's target is the same {{ domxref("element") }} that received the `touchstart` event corresponding to the touch point, even if the touch point has moved outside that element.
+- [`touchmove`](/zh-TW/docs/Web/API/Element/touchmove_event)
 
-The touch point (or points) that were removed from the surface can be found in the {{ domxref("TouchList") }} specified by the `changedTouches` attribute.
+  - : Sent when the user moves a touch point along the surface. The event's target is the same {{ domxref("element") }} that received the `touchstart` event corresponding to the touch point, even if the touch point has moved outside that element.
 
-### {{event("touchmove")}}
+    This event is also sent if the values of the radius, rotation angle, or force attributes of a touch point change.
 
-Sent when the user moves a touch point along the surface. The event's target is the same {{ domxref("element") }} that received the `touchstart` event corresponding to the touch point, even if the touch point has moved outside that element.
+    > **備註：** The rate at which `touchmove` events is sent is browser-specific, and may also vary depending on the capability of the user's hardware. You must not rely on a specific granularity of these events.
 
-This event is also sent if the values of the radius, rotation angle, or force attributes of a touch point change.
+- [`touchcancel`](/zh-TW/docs/Web/API/Element/touchcancel_event)
 
-> **備註：** The rate at which `touchmove` events is sent is browser-specific, and may also vary depending on the capability of the user's hardware. You must not rely on a specific granularity of these events.
+  - : Sent when a touch point has been disrupted in some way. There are several possible reasons why this might happen (and the exact reasons will vary from device to device, as well as browser to browser):
 
-### {{event("touchcancel")}}
-
-Sent when a touch point has been disrupted in some way. There are several possible reasons why this might happen (and the exact reasons will vary from device to device, as well as browser to browser):
-
-- An event of some kind occurred that canceled the touch; this might happen if a modal alert pops up during the interaction.
-- The touch point has left the document window and moved into the browser's UI area, a plug-in, or other external content.
-- The user has placed more touch points on the screen than can be supported, in which case the earliest {{ domxref("Touch") }} in the {{ domxref("TouchList") }} gets canceled.
+    - An event of some kind occurred that canceled the touch; this might happen if a modal alert pops up during the interaction.
+    - The touch point has left the document window and moved into the browser's UI area, a plug-in, or other external content.
+    - The user has placed more touch points on the screen than can be supported, in which case the earliest {{ domxref("Touch") }} in the {{ domxref("TouchList") }} gets canceled.
 
 ### Using with addEventListener() and preventDefault()
 
 It's important to note that in many cases, both touch and mouse events get sent (in order to let non-touch-specific code still interact with the user). If you use touch events, you should call {{domxref("Event.preventDefault","preventDefault()")}} to keep the mouse event from being sent as well.
 
-The exception to this is Chrome, starting with version 56 (desktop, Chrome for android, and android webview), where the default value for {{event("touchstart")}} and {{event("touchmove")}} is `true` and calls to {{domxref("Event.preventDefault","preventDefault()")}} are not needed. To override this behavior, you simply set the `passive` option to `false` as shown in the example below. This change prevents the listener from blocking page rendering while a user is scrolling. A demo is available on the [Google Developer](https://developers.google.com/web/updates/2016/06/passive-event-listeners) site.
+The exception to this is Chrome, starting with version 56 (desktop, Chrome for android, and android webview), where the default value for [`touchstart`](/zh-TW/docs/Web/API/Element/touchstart_event) and [`touchmove`](/zh-TW/docs/Web/API/Element/touchmove_event) is `true` and calls to {{domxref("Event.preventDefault","preventDefault()")}} are not needed. To override this behavior, you simply set the `passive` option to `false` as shown in the example below. This change prevents the listener from blocking page rendering while a user is scrolling. A demo is available on the [Google Developer](https://developers.google.com/web/updates/2016/06/passive-event-listeners) site.
 
 ## GlobalEventHandlers
 
 {{SeeCompatTable}}
 
 - {{ domxref("GlobalEventHandlers.ontouchstart") }} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchstart")}} event.
+  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchstart`](/zh-TW/docs/Web/API/Element/touchstart_event) event.
 - {{ domxref("GlobalEventHandlers.ontouchend") }} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchend")}} event.
+  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchend`](/zh-TW/docs/Web/API/Element/touchend_event) event.
 - {{ domxref("GlobalEventHandlers.ontouchmove") }} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchmove")}} event.
+  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchmove`](/zh-TW/docs/Web/API/Element/touchmove_event) event.
 - {{ domxref("GlobalEventHandlers.ontouchcancel") }} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchcancel")}} event.
+  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchcancel`](/zh-TW/docs/Web/API/Element/touchcancel_event) event.
 
 ## 範例
 

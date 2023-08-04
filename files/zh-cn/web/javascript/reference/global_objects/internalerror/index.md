@@ -3,54 +3,69 @@ title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{JSRef}}{{Non-standard_Header}}
 
-**`InternalError` 对象**表示出现在 JavaScript 引擎内部的错误。例如： **"InternalError**: too much recursion"（内部错误：递归过深）。
+**`InternalError` 对象**表示出现在 JavaScript 引擎内部的错误。通常描述某种数量过多的情况，例如：
 
-## 语法
-
-```plain
-new InternalError([message[, fileName[, lineNumber]]])
-```
-
-### 参数
-
-- `message`
-  - : 可选。人类可读的错误描述信息。
-- `fileName` {{non-standard_inline}}
-  - : 可选。触发该错误的代码所在文件的文件名。
-- `lineNumber` {{non-standard_inline}}
-  - : 可选。触发该错误的代码所在的代码行号。
-
-## 描述
-
-当 JavaScript 引擎出现内部错误时将会抛出 `InternalError`。
-
-示例场景通常为某些成分过大，例如：
-
-- "too many switch cases"（过多`case`子句）；
+- "too many switch cases"（过多 `case` 子句）；
 - "too many parentheses in regular expression"（正则表达式中括号过多）；
 - "array initializer too large"（数组初始化器过大）；
 - "too much recursion"（递归过深）。
 
-## 属性
+## 构造函数
 
-- {{jsxref("InternalError.prototype")}}
-  - : 允许向`InternalError`对象添加属性。
+- {{jsxref("InternalError/InternalError", "InternalError()")}} {{Non-standard_Inline}}
+  - : 创建一个新的 `InternalError` 对象。
 
-## 方法
+## 实例属性
 
-全局 `InternalError` 对象自身不包含任何方法，但从原型链中继承了一些方法。
+- {{jsxref("Error.prototype.message")}}
+  - : 错误消息。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.name")}}
+  - : 错误名称。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.cause")}}
+  - : 表示导致当前错误被抛出的原因。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+  - : 引发此错误的文件的路径。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
+  - : 引发此错误的代码所在的文件的行号。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
+  - : 引发此错误的代码在文件中所在行的列号。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
+  - : 堆栈跟踪。继承自 {{jsxref("Error")}}。
 
-## `InternalError` 实例
+## 示例
 
-### 属性
+### 递归过深
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError/prototype', '属性')}}
+根据退出条件所述，以下递归函数运行 10 次。
 
-### 方法
+```js
+function loop(x) {
+  // "x >= 10" 是退出条件
+  if (x >= 10) return;
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError/prototype', '方法')}}
+  // 做一些事情
+  loop(x + 1); // 递归调用
+}
+loop(0);
+```
+
+如果这个条件值太高，可能不会奏效：
+
+```js example-bad
+function loop(x) {
+  if (x >= 1000000000000) return;
+
+  // 做一些事情
+  loop(x + 1);
+}
+loop(0);
+
+// InternalError: too much recursion
+```
+
+要获取更多信息，请参阅 [InternalError: too much recursion](/zh-CN/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)。
 
 ## 规范
 
@@ -60,7 +75,7 @@ new InternalError([message[, fileName[, lineNumber]]])
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Error","错误")}}
-- {{jsxref("InternalError.prototype")}}
+- {{jsxref("Error")}}
+- [InternalError: too much recursion](/zh-CN/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)

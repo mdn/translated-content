@@ -1,11 +1,6 @@
 ---
 title: Content-Length
 slug: Web/HTTP/Headers/Content-Length
-tags:
-  - HTTP
-  - en-tête
-  - header
-translation_of: Web/HTTP/Headers/Content-Length
 ---
 
 {{HTTPSidebar}}
@@ -38,13 +33,11 @@ Content-Length: <longueur>
 
 ## Spécifications
 
-| Spécification                                            | Titre                                                              |
-| -------------------------------------------------------- | ------------------------------------------------------------------ |
-| {{RFC("7230", "Content-Length", "3.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/headers/content-length")}}
+{{Compat}}
 
 ## Voir aussi
 

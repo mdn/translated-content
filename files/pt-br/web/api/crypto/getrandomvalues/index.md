@@ -1,9 +1,8 @@
 ---
 title: RandomSource.getRandomValues()
 slug: Web/API/Crypto/getRandomValues
-translation_of: Web/API/Crypto/getRandomValues
-original_slug: Web/API/RandomSource/getRandomValues
 ---
+
 {{APIRef("Web Crypto API")}}
 
 O método **`RandomSource.getRandomValues()`** permite que você obtenha valores criptográficos randômicos. O array passado como parametro é preenchido com números randômicos (randômicos no sentido criptográfico).
@@ -35,19 +34,17 @@ window.crypto.getRandomValues(array);
 
 console.log("Seus números da sorte são:");
 for (var i = 0; i < array.length; i++) {
-    console.log(array[i]);
+  console.log(array[i]);
 }
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                | Estado                               | Comentário        |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
-| {{SpecName('Web Crypto API', '#RandomSource-method-getRandomValues')}} | {{Spec2('Web Crypto API')}} | Definição inicial |
+{{Specifications}}
 
-## Navegadores compatíveis
+## Compatibilidade com navegadores
 
-{{Compat("api.Crypto.getRandomValues")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,19 +1,8 @@
 ---
 title: XMLHttpRequest.send()
 slug: Web/API/XMLHttpRequest/send
-tags:
-  - AJAX
-  - API
-  - Método HTTP
-  - NeedsExample
-  - Referencia
-  - Requisição HTTP
-  - Requisição XHR
-  - XHR
-  - XMLHttpRequest
-  - send
-translation_of: Web/API/XMLHttpRequest/send
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 O método **`send()`**, do {{domxref("XMLHttpRequest")}}, envia uma requisição para o servidor.Se a solicitação for assíncrona (que é o padrão), esse método retornará assim que a solicitação for enviada e o resultado for entregue usando eventos. Se a solicitação for síncrona, esse método não retornará até que a resposta chegue.
@@ -47,9 +36,9 @@ A melhor maneira de enviar conteúdo binário (por exemplo, em uploads de arquiv
 
 ### Exceções
 
-| Exceção             | Descrição                                                                             |
-| ------------------- | ------------------------------------------------------------------------------------- |
-| `InvalidStateError` | `send()` já foi invocado para a requisição, e/ou a requisição está completa.          |
+| Exceção             | Descrição                                                                        |
+| ------------------- | -------------------------------------------------------------------------------- |
+| `InvalidStateError` | `send()` já foi invocado para a requisição, e/ou a requisição está completa.     |
 | `NetworkError`      | O tipo de recurso a ser buscada é um {{domxref("Blob")}} e o método não é `GET`. |
 
 ## Exemplo: GET
@@ -90,13 +79,11 @@ xhr.send("foo=bar&lorem=ipsum");
 
 ## Especificações
 
-| Especificação                                                                        | Status                               | Comentário             |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-send()-method', 'send()')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.XMLHttpRequest.send")}}
+{{Compat}}
 
 ## Veja também
 

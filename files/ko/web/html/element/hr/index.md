@@ -1,14 +1,9 @@
 ---
 title: <hr>
 slug: Web/HTML/Element/hr
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-translation_of: Web/HTML/Element/hr
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<hr>` 요소**는 이야기 장면 전환, 구획 내 주제 변경 등, 문단 레벨 요소에서 주제의 분리를 나타냅니다.
 
@@ -51,7 +46,7 @@ translation_of: Web/HTML/Element/hr
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
-      <td>{{ARIARole("presentation")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 인터페이스</th>
@@ -62,7 +57,7 @@ translation_of: Web/HTML/Element/hr
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("align")}} {{deprecated_inline}}
   - : 줄의 정렬을 지정합니다. 기본값은 `left`입니다.
@@ -79,7 +74,7 @@ translation_of: Web/HTML/Element/hr
 
 ### HTML
 
-```html
+```html-nolint
 <p>
 This is the first paragraph of text.
 This is the first paragraph of text.
@@ -107,7 +102,7 @@ This is second paragraph of text.
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.hr")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -1,16 +1,8 @@
 ---
 title: OffscreenCanvas()
 slug: Web/API/OffscreenCanvas/OffscreenCanvas
-tags:
-  - API
-  - Canvas
-  - Constructor
-  - Experimental
-  - OffscreenCanvas
-  - Reference
-  - WebGL
-translation_of: Web/API/OffscreenCanvas/OffscreenCanvas
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 **`OffscreenCanvas()`** 생성자는 새롭게 초기화된 {{domxref("OffscreenCanvas")}} 객체를 반환합니다.
@@ -34,14 +26,12 @@ new OffscreenCanvas(width, height);
 
 ```js
 let offscreen = new OffscreenCanvas(256, 256);
-let gl = offscreen.getContext('webgl');
+let gl = offscreen.getContext("webgl");
 ```
 
-## 상세
+## 명세서
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "#dom-offscreencanvas", "OffscreenCanvas()")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## 브라우저 호환성
 

@@ -1,14 +1,8 @@
 ---
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
-tags:
-  - ECMAScript 2015
-  - ECMAScript6
-  - JavaScript
-  - Referência(2)
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/for...of
 ---
+
 {{jsSidebar("Statements")}}
 
 O loop **`for...of`** percorre [objetos iterativos](/pt-BR/docs/Web/JavaScript/Guide/iterable) (incluindo {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, o objeto [arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) e assim por diante), chamando uma função personalizada com instruções a serem executadas para o valor de cada objeto distinto.
@@ -164,7 +158,7 @@ for (let n of fibonacci()) {
 
 #### Não reuse generators
 
-Generators não devem ser re-usados, mesmo se o loop `for...of` for terminado precocemente, por exemplo através da palavra-chave {{jsxref("Statements/break", "break")}}. Enquanto em um loop ativo, o generator é fechado e tentar iterar novamente sobre ele não produz (yield) nenhum resultado adicional. O Firefox ainda não implementou este comportamento (o generator pode ser reutilizado, violando o padrão do ES2015 ([13.7.5.13, step 5m](https://www.ecma-international.org/ecma-262/6.0/#sec-13.7.5.13)), mas isso irá mudar uma vez que o {{Bug(1147371)}} for resolvido.
+Generators não devem ser re-usados, mesmo se o loop `for...of` for terminado precocemente, por exemplo através da palavra-chave {{jsxref("Statements/break", "break")}}. Enquanto em um loop ativo, o generator é fechado e tentar iterar novamente sobre ele não produz (yield) nenhum resultado adicional. O Firefox ainda não implementou este comportamento (o generator pode ser reutilizado, violando o padrão do ES2015 ([13.7.5.13, step 5m](https://www.ecma-international.org/ecma-262/6.0/#sec-13.7.5.13)), mas isso irá mudar uma vez que o [Erro do Firefox 1147371](https://bugzil.la/1147371) for resolvido.
 
 ```
 var gen = (function *(){
@@ -213,7 +207,7 @@ for (var value of iterable) {
 
 ### Diferença entre `for...of` e `for...in`
 
-O loop [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) irá iterar sobre todas as propriedades enumeráveis de um objeto.
+O loop [`for...in`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in) irá iterar sobre todas as propriedades enumeráveis de um objeto.
 
 A sintaxe do `for...of` é específica para **coleções**, ao invés de todos os objetos. Ela irá iterar desta maneira sobre os elementos de qualquer coleção que tiver uma propriedade `[Symbol.iterator]`.
 
@@ -237,9 +231,9 @@ for (let i of iterable) {
 
 ### Especificações
 
-| Especificação                                                                                                | Status                       | Comentário          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-for-in-and-for-of-statements', 'for...of statement')}}     | {{Spec2('ES6')}}         | Definition Inicial. |
+| Especificação                                                                      | Status               | Comentário          |
+| ---------------------------------------------------------------------------------- | -------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-for-in-and-for-of-statements', 'for...of statement')}}     | {{Spec2('ES6')}}     | Definition Inicial. |
 | {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...of statement')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilidade com navegadores

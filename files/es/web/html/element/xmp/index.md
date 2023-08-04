@@ -1,16 +1,9 @@
 ---
 title: <xmp>
 slug: Web/HTML/Element/xmp
-tags:
-  - Elemento
-  - HTML
-  - Obsoleto
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/xmp
-original_slug: Web/HTML/Elemento/xmp
 ---
-{{Obsolete_header}}
+
+{{Deprecated_Header}}
 
 ## Resumen
 
@@ -20,7 +13,7 @@ El elemento HTML example element \<xmp> dibuja texto entre las etiquetas de inic
 >
 > - Ha sido declarado obsoleto desde HTML3.2 y no fue implementado en una manera consistente . Fue completamente removido del lenguaje en HTML5 .
 > - Usar el elemento {{HTMLElement("pre")}} , o si es semánticamente adecuado , el elemento {{HTMLElement("code")}} en su lugar . Notar que necesitarás escapar los caracteres '<' como '\&lt' para asegurarse que no se interprete como marcado .
-> - Una letra monoespaciada también puede ser obtenida en algún elemento , aplicando el estilo [CSS](/es/docs/Web/CSS) adecuado usando `monospace`como el valor genérico de la fuente para la propiedad {{cssxref("font-family")}}
+> - Una letra monoespaciada también puede ser obtenida en algún elemento , aplicando el estilo [CSS](/es/docs/Web/CSS) adecuado usando `monospace` como el valor genérico de la fuente para la propiedad {{cssxref("font-family")}}
 
 ## Atributos
 
@@ -30,11 +23,11 @@ Este elemento no tiene otros atributos que los [atributos globales](/es/docs/Web
 
 Este elemento implementa la interface {{domxref('HTMLElement')}} .
 
-> **Nota:** **Nota de implementación:** hasta Gecko 1.9.2 inclusivamente , Firefox implemente la interface {{domxref('HTMLSpanElement')}} para este elemento .
+> **Nota:** hasta Gecko 1.9.2 inclusivamente , Firefox implemente la interface {{domxref('HTMLSpanElement')}} para este elemento .
 
 ## Ver también
 
 - Los elementos {{HTMLElement("pre")}} y {{HTMLElement("code")}} que se usan en su lugar .
 - Los elementos {{HTMLElement("plaintext")}} y {{HTMLElement("listing")}} , similares a {{HTMLElement("xmp")}} pero también obsoletos .
 
-{{HTMLRef}}
+{{HTMLSidebar}}

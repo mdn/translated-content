@@ -1,18 +1,11 @@
 ---
 title: Document.querySelectorAll()
 slug: Web/API/Document/querySelectorAll
-tags:
-  - API
-  - DOM
-  - Document
-  - Méthodes
-  - Sélecteurs
-translation_of: Web/API/Document/querySelectorAll
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`querySelectorAll()`**  de {{domxref("Element")}} renvoie une {{domxref("NodeList")}} statique représentant une liste des éléments du document qui correspondent au groupe de sélecteurs spécifiés.
+La méthode **`querySelectorAll()`** de {{domxref("Element")}} renvoie une {{domxref("NodeList")}} statique représentant une liste des éléments du document qui correspondent au groupe de sélecteurs spécifiés.
 
 > **Note :** Cette méthode est implémentée à partir de {{domxref("ParentNode")}}, méthode du mixin {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} .
 
@@ -25,7 +18,7 @@ elementList = parentNode.querySelectorAll(selectors);
 ### Paramètres
 
 - `selecteurs`
-  - : une {{domxref("DOMString")}} (_chaîne de caractères_) qui contient un ou plusieurs [sélecteurs CSS](/fr/docs/Web/CSS/CSS_Selectors) ; s'il n'y en a pas, une exception  `SyntaxError` est lancée. Voir [localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) pour plus d'informations sur l'utilisation des sélecteurs en vue d'identifier les éléments. Plusieurs sélecteurs peuvent être spécifiés, séparés par une virgule.
+  - : une {{domxref("DOMString")}} (_chaîne de caractères_) qui contient un ou plusieurs [sélecteurs CSS](/fr/docs/Web/CSS/CSS_Selectors) ; s'il n'y en a pas, une exception `SyntaxError` est lancée. Voir [localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) pour plus d'informations sur l'utilisation des sélecteurs en vue d'identifier les éléments. Plusieurs sélecteurs peuvent être spécifiés, séparés par une virgule.
 
 > **Note :** Les caractères qui ne font pas partie de la syntaxe CSS standard doivent être échappés à l'aide d'une barre oblique inverse. Puisque JavaScript utilise également l'échappement en retour arrière, un soin particulier doit être pris lors de l'écriture de littéraux de chaîne utilisant ces caractères. Voir [Échapper des caractères spéciaux](/fr/docs/Web/API/Document/querySelector#échapper_des_caractères_spéciaux) pour plus d'informations.
 
@@ -42,7 +35,7 @@ Une {{domxref("NodeList")}} statique contenant un objet {{domxref("Element")}} p
 
 ## Exemples
 
-Pour obtenir une {{domxref("NodeList")}} (_liste de noeuds_) de tous les éléments {{HTMLElement("p")}}  dans le document :
+Pour obtenir une {{domxref("NodeList")}} (_liste de noeuds_) de tous les éléments {{HTMLElement("p")}} dans le document :
 
 ```js
 const matches = document.querySelectorAll("p");
@@ -61,7 +54,7 @@ const container = document.querySelector("#test");
 const matches = container.querySelectorAll("div.highlighted > p");
 ```
 
-Cet exemple utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/S%C3%A9lecteurs_d_attribut) pour renvoyer une liste d'éléments {{domxref("iframe")}} dans le document qui contient un attribut nommé `"data-src"` :
+Cet exemple utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/Sélecteurs_d_attribut) pour renvoyer une liste d'éléments {{domxref("iframe")}} dans le document qui contient un attribut nommé `"data-src"` :
 
 ```js
 const matches = document.querySelectorAll("iframe[data-src]");
@@ -83,7 +76,7 @@ Sinon, vous pouvez simplement utiliser la notation de tableau standard pour acc�
 ```js
 const highlightedItems = userList.querySelectorAll(".highlighted");
 
-highlightedItems.forEach(function(userItem) {
+highlightedItems.forEach(function (userItem) {
   deleteUser(userItem);
 });
 ```
@@ -99,8 +92,7 @@ Considérez ce HTML, avec ses trois blocs {{HTMLElement("div")}} imbriqués.
 ```html
 <div class="outer">
   <div class="select">
-    <div class="inner">
-    </div>
+    <div class="inner"></div>
   </div>
 </div>
 ```
@@ -108,8 +100,8 @@ Considérez ce HTML, avec ses trois blocs {{HTMLElement("div")}} imbriqués.
 ### JavaScript
 
 ```js
-const select = document.querySelector('.select');
-const inner = select.querySelectorAll('.outer .inner');
+const select = document.querySelector(".select");
+const inner = select.querySelectorAll(".outer .inner");
 inner.length; // 1, not 0!
 ```
 
@@ -118,8 +110,8 @@ Dans cet exemple, lors de la sélection de `".outer .inner"` dans le contexte, l
 La pseudo-classe {{cssxref (":scope")}} restaure le comportement attendu, ne faisant correspondre les sélecteurs que sur les descendants de l'élément de base :
 
 ```js
-const select = document.querySelector('.select');
-const inner = select.querySelectorAll(':scope .outer .inner');
+const select = document.querySelector(".select");
+const inner = select.querySelectorAll(":scope .outer .inner");
 inner.length; // 0
 ```
 

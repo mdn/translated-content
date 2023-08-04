@@ -66,9 +66,7 @@ Reflect.getOwnPropertyDescriptor(obj, 'undefined')
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-reflect.set', 'Reflect.set')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

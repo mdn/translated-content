@@ -1,24 +1,6 @@
 ---
-title: 'Attribut HTML : autocomplete'
+title: "Attribut HTML : autocomplete"
 slug: Web/HTML/Attributes/autocomplete
-tags:
-  - Addresses
-  - Attribute
-  - Email addresses
-  - Forms
-  - HTML
-  - Input
-  - Phone Numbers
-  - Reference
-  - Select
-  - Text
-  - Usernames
-  - autocomplete
-  - form
-  - passwords
-  - textarea
-translation_of: Web/HTML/Attributes/autocomplete
-original_slug: Web/HTML/Attributs/autocomplete
 ---
 
 {{HTMLSidebar}}
@@ -121,7 +103,7 @@ Pour plus d'informations, voir la documentation de l'attribut [`autocomplete`](/
 - `transaction-amount`
   - : Le montant de la transaction, pour un formulaire de paiement, exprimé dans la devise fournie par `transaction-currency`.
 - `language`
-  - : La langue préférée, indiquée sous la forme [d'une balise de langue valide selon BCP 47](https://fr.wikipedia.org/wiki/%C3%89tiquette_d%27identification_de_langues_IETF).
+  - : La langue préférée, indiquée sous la forme [d'une balise de langue valide selon BCP 47](https://fr.wikipedia.org/wiki/Étiquette_d%27identification_de_langues_IETF).
 - `bday`
   - : Une date de naissance complète.
 - `bday-day`
@@ -163,7 +145,7 @@ Voir [la spécification WHATWG](https://html.spec.whatwg.org/multipage/forms.htm
 ```html
 <div>
   <label for="cc-number">Entrez votre numéro de carte de crédit</label>
-  <input name="cc-number" id="cc-number" autocomplete="off">
+  <input name="cc-number" id="cc-number" autocomplete="off" />
 </div>
 ```
 
@@ -229,7 +211,7 @@ Une adresse au Japon est généralement **écrite sur une ligne**, dans un ordre
 
 « 〒 » et les sept chiffres suivants indiquent le code postal.
 
-`address-level1` est utilisé pour les préfectures ou la métropole de Tokyo ; « 長野県 » (préfecture de Nagano) dans ce cas. `address-level2` est généralement utilisé pour les villes, les comtés, les communes et les villages ; « 長野市 » (ville de Nagano) dans ce cas. « 某町 123 » est`address-line1` qui se compose d'un nom de zone et d'un numéro de colis.
+`address-level1` est utilisé pour les préfectures ou la métropole de Tokyo ; « 長野県 » (préfecture de Nagano) dans ce cas. `address-level2` est généralement utilisé pour les villes, les comtés, les communes et les villages ; « 長野市 » (ville de Nagano) dans ce cas. « 某町 123 » est `address-line1` qui se compose d'un nom de zone et d'un numéro de colis.
 
 ## Spécifications
 

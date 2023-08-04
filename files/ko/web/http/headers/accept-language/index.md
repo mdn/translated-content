@@ -1,8 +1,8 @@
 ---
 title: Accept-Language
 slug: Web/HTTP/Headers/Accept-Language
-translation_of: Web/HTTP/Headers/Accept-Language
 ---
+
 {{HTTPSidebar}}
 
 **`Accept-Language`** 요청 HTTP 헤더는 어떤 언어를 클라이언트가 이해할 수 있는지, 그리고 지역 설정 중 어떤 것이 더 선호되는지를 알려줍니다. (여기서 언어란 프로그래밍 언어가 아니라 영어같은 자연 언어를 의미합니다.) [컨텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation)을 사용하여, 서버는 제안 중 하나를 선택한 뒤, 그것을 사용하고 {{HTTPHeader("Content-Language")}} 응답 헤더와 함께 선택된 내용을 클라이언트에게 알려줍니다. 브라우저는 사용자 인터페이스 언어에 따라 해당 헤더에 적절한 값을 설정하며 사용자가 사용자 인터페이스 언어를 변경한 경우조차도, 헤더의 값이 변경되는 일은 거의 없습니다(그리고 그런 일이 일어나게 되면 흔적이 남으므로 눈살을 찌프리게 됩니다).

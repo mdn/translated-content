@@ -23,7 +23,7 @@ slug: Web/API/XMLHttpRequest
 _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("EventTarget")}} 的屬性。_
 
 - {{domxref("XMLHttpRequest.onreadystatechange")}}
-  - : 一個 {{event("Event_handlers", "event handler")}}（事件處理器）函式，會於 `readyState` 屬性之狀態改變時被呼叫。
+  - : 一個事件處理器函式，會於 `readyState` 屬性之狀態改變時被呼叫。
 - {{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}
   - : 回傳一個無符號短整數（`unsigned short`）代表請求之狀態。
 - {{domxref("XMLHttpRequest.response")}} {{readonlyinline}}
@@ -46,7 +46,7 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 - {{domxref("XMLHttpRequest.timeout")}}
   - : 為一無符號長整數（`unsigned long`），代表一個請求在逾時而被自動中止前的可等待時間（毫秒）。
 - {{domxref("XMLHttpRequestEventTarget.ontimeout")}}
-  - : 為一 {{event("Event_handlers", "event handler")}} 物件，會於請求逾時時被呼叫。
+  - : 為一 event handler 物件，會於請求逾時時被呼叫。
 - {{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}
   - : 為一 {{domxref("XMLHttpRequestUpload")}} 物件，代表上傳的進度。
 - {{domxref("XMLHttpRequest.withCredentials")}}
@@ -95,6 +95,7 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 ### 非標準方法
 
 - {{domxref("XMLHttpRequest.init()")}}
+
   - : 使用 C++ 程式時，用來初始化這個物件。
 
     > **警告：** 請勿在 JavaScript 中呼叫這個方法。
@@ -116,7 +117,7 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 
 - MDN 上涵蓋 XMLHttpRequest 的相關教學：
 
-  - [Ajax — Getting Started](/zh-TW/docs/AJAX/Getting_Started)
+  - [Ajax](/zh-TW/docs/Web/Guide/AJAX)
   - [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
   - [HTML in XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
   - [`FormData`](/zh-TW/docs/Web/API/FormData)

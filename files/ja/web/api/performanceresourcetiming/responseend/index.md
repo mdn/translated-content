@@ -1,65 +1,61 @@
 ---
 title: PerformanceResourceTiming.responseEnd
 slug: Web/API/PerformanceResourceTiming/responseEnd
+l10n:
+  sourceCommit: b3477f90eb235d08fe196373466a725050f43862
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
-**`responseEnd`** 読み取り専用プロパティは、ブラウザーがリソースの最後のバイトを受信した直後、または転送接続が閉じられる直前のどちらか早い方で {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
+**`responseEnd`** は読み取り専用プロパティで、ブラウザーがリソースの最後のバイトを受信した直後、または転送接続が閉じられる直前のどちらか早い方の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
 
-{{AvailableInWorkers}}
+他の多くの `PerformanceResourceTiming` プロパティとは異なり、 `responseEnd` プロパティは {{HTTPHeader("Timing-Allow-Origin")}} がなくてもオリジン間リクエストで利用することができます。
 
-## 構文
+## 値
 
-```
-resource.responseEnd;
-```
-
-### 返値
-
-ブラウザーがリソースの最後のバイトを受信した直後、またはトランスポート接続が閉じられる直前のいずれか早いほうの {{domxref("DOMHighResTimeStamp")}}。
+ブラウザーがリソースの最後のバイトを受け取った直後、またはトランスポート接続が閉じられる直前のいずれか最初の {{domxref("DOMHighResTimeStamp")}} です。
 
 ## 例
 
-次の例では、すべての "`resource`" {{domxref("PerformanceEntry.entryType","type")}} イベントの `*Start` プロパティと `*End` プロパティの値が記録されます。
+### フェッチする時間の計測（リダイレクトなし）
+
+`responseEnd` と {{domxref("PerformanceResourceTiming.fetchStart", "fetchStart")}} プロパティを使用すると、（リダイレクトなしで）最終リソースを取得するのにかかった全体の時間を計測することができます。リダイレクトを含めるために、フェッチにかかった全体の時間は {{domxref("PerformanceEntry.duration", "duration")}} プロパティで提供されます。
 
 ```js
-function print_PerformanceEntries() {
-  // Use getEntriesByType() to just get the "resource" events
-  var p = performance.getEntriesByType("resource");
-  for (var i=0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
-  }
-}
-function print_start_and_end_properties(perfEntry) {
-  // Print timestamps of the PerformanceEntry *start and *end properties
-  properties = ["connectStart", "connectEnd",
-                "domainLookupStart", "domainLookupEnd",
-                "fetchStart",
-                "redirectStart", "redirectEnd",
-                "requestStart",
-                "responseStart", "responseEnd",
-                "secureConnectionStart"];
+const timeToFetch = entry.responseEnd - entry.fetchStart;
+```
 
-  for (var i=0; i < properties.length; i++) {
-    // check each property
-    var supported = properties[i] in perfEntry;
-    if (supported) {
-      var value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " = NOT supported");
+{{domxref("PerformanceObserver")}} を使用した例です。このオブジェクトは、新しい `resource` パフォーマンス項目がブラウザーのパフォーマンスタイムラインに記録されると、それを通知します。オブザーバーが作成される前の項目にアクセスするために `buffered` オプションを使用します。
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const timeToFetch = entry.responseEnd - entry.fetchStart;
+    if (timeToFetch > 0) {
+      console.log(`${entry.name}: Time to fetch: ${timeToFetch}ms`);
     }
+  });
+});
+
+observer.observe({ type: "resource", buffered: true });
+```
+
+{{domxref("Performance.getEntriesByType()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `resource` パフォーマンス項目のみを表示します。
+
+```js
+const resources = performance.getEntriesByType("resource");
+resources.forEach((entry) => {
+  const timeToFetch = entry.responseEnd - entry.fetchStart;
+  if (timeToFetch > 0) {
+    console.log(`${entry.name}: Time to fetch: ${timeToFetch}ms`);
   }
-}
+});
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | ステータス                           | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-responseEnd', 'responseEnd')}} | {{Spec2('Resource Timing')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceResourceTiming.responseEnd")}}
+{{Compat}}

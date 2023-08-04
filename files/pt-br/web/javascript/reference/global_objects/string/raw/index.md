@@ -1,14 +1,8 @@
 ---
 title: String.raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Referencia
-  - String
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/raw
 ---
+
 {{JSRef}}
 
 O método estático `String.raw()` é uma função tag de [modelos literais](/pt-BR/docs/Web/JavaScript/Reference/template_strings), similar ao prefixo `r` no Python ou o prefixo `@` no C# para string literais (Mas não é _idêntico_, existe uma diferença, veja explicações nessa [discussão](https://bugs.chromium.org/p/v8/issues/detail?id=5016)). Ele é usado para pegar as strings no formato "cru" de modelos literais, isto é, substituições (ex: `${foo}`) são processados, mas "escapes" (ex:. `\n`) não são.

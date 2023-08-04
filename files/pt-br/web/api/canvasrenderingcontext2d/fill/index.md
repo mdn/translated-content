@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.fill()
 slug: Web/API/CanvasRenderingContext2D/fill
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Referencia
-  - metodo
-translation_of: Web/API/CanvasRenderingContext2D/fill
 ---
+
 {{APIRef}}
 
 O método **`CanvasRenderingContext2D.fill()`** da API Canvas 2D preenche um dado _path_ ou o _path_ atual com o estilo atual de preenchimento usando uma regra de controle diferente de zero, ou uma regra par-ímpar.
@@ -28,8 +22,10 @@ void ctx.fill(path, fillRule);
   - : O algoritmo que determina se um ponto está do lado de dentro do path ou do lado fora do path.
     Possíveis valores:
 
-    - **`"nonzero`**": A [regra de controle não-zero](http://en.wikipedia.org/wiki/Nonzero-rule), que é a regra padrão.
-    - **`"evenodd"`**: A [regra de controle par-ímpar](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+    - `nonzero`
+      - : A [regra de controle não-zero](http://en.wikipedia.org/wiki/Nonzero-rule), que é a regra padrão.
+    - `evenodd`
+      - : A [regra de controle par-ímpar](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 - `path`
   - : Um _path_ de [`Path2D`](/pt-BR/docs/Web/API/Path2D) para preenchimento.
@@ -49,8 +45,8 @@ Isto é só um simples trecho de código que usa o métod `fill` para contornar 
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
 ```
@@ -65,7 +61,8 @@ Edite o código abaixo e veja as alterações instantâneas no canvas:
 </div>
 <textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.fill();</textarea>
+ctx.fill();</textarea
+>
 ```
 
 ```js hidden
@@ -81,14 +78,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -98,13 +95,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Especificações
 
-| Especificação                                                                                                                        | Estado                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fill", "CanvasRenderingContext2D.fill")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CanvasRenderingContext2D.fill")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,14 +1,8 @@
 ---
 title: animation-iteration-count
 slug: Web/CSS/animation-iteration-count
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Experimental
-  - Reference
-translation_of: Web/CSS/animation-iteration-count
 ---
+
 {{ CSSRef() }}{{ SeeCompatTable() }}
 
 ## Resumen
@@ -44,13 +38,11 @@ Ver ejemplos [CSS animations](/es/docs/CSS/Using_CSS_animations).
 
 ## Especificaciones
 
-| Especificaciones                                                                                                             | Estado                                   | Comentario |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Animations', '#animation-iteration-count', 'animation-iteration-count') }} | {{ Spec2('CSS3 Animations') }} |            |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.animation-iteration-count")}}
+{{Compat}}
 
 ## Ver también
 

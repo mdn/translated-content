@@ -1,14 +1,8 @@
 ---
-title: '::before (:before)'
+title: "::before (:before)"
 slug: Web/CSS/::before
-tags:
-  - CSS
-  - Presentación
-  - Pseudo-elemento CSS
-  - Referencia
-  - Web
-translation_of: Web/CSS/::before
 ---
+
 {{CSSRef}}
 
 En CSS, `::before` crea un [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) que es el primer hijo del elemento seleccionado. Es usado normalmente para añadir contenido estético a un elemento, usando la propiedad {{cssxref("content")}}. Este elemento se muestra en línea con el texto de forma predeterminada.
@@ -71,12 +65,12 @@ Podemos estilizar el texto o imágenes en la propiedad {{cssxref("content")}} de
 
 ```css
 .ribbon {
-  background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::before {
   content: "Look at this orange box.";
-  background-color: #FFBA10;
+  background-color: #ffba10;
   border-color: black;
   border-style: dotted;
 }
@@ -116,11 +110,11 @@ li {
 }
 
 li.done {
-  background: #CCFF99;
+  background: #ccff99;
 }
 
 li.done::before {
-  content: '';
+  content: "";
   position: absolute;
   border-color: #009933;
   border-style: solid;
@@ -137,12 +131,16 @@ li.done::before {
 #### JavaScript
 
 ```js
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if( ev.target.tagName === 'LI') {
-     ev.target.classList.toggle('done');
-  }
-}, false);
+var list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  function (ev) {
+    if (ev.target.tagName === "LI") {
+      ev.target.classList.toggle("done");
+    }
+  },
+  false,
+);
 ```
 
 Aquí se está ejecutando el ejemplo de arriba. Nótese que no se están usando íconos, y la marca de selección en realidad es el pseudoelemento `::before` que ha sido estilizado en CSS. Puedes interactuar con el ejemplo para ver los cambios.
@@ -162,7 +160,7 @@ Como esto es CSS y no HTML, **no** se pueden usar entidades de marcado en los va
   <li>Crack Eggs into bowl</li>
   <li>Add Milk</li>
   <li>Add Flour</li>
-  <li aria-current='step'>Mix thoroughly into a smooth batter</li>
+  <li aria-current="step">Mix thoroughly into a smooth batter</li>
   <li>Pour a ladleful of batter onto a hot, greased, flat frying pan</li>
   <li>Fry until the top of the pancake loses its gloss</li>
   <li>Flip it over and fry for a couple more minutes</li>
@@ -173,16 +171,15 @@ Como esto es CSS y no HTML, **no** se pueden usar entidades de marcado en los va
 #### CSS
 
 ```css
-
 li {
-  padding:0.5em;
+  padding: 0.5em;
 }
 
-li[aria-current='step'] {
-  font-weight:bold;
+li[aria-current="step"] {
+  font-weight: bold;
 }
 
-li[aria-current='step']::after {
+li[aria-current="step"]::after {
   content: " \21E6"; /* Hexadecimal for Unicode Leftwards white arrow*/
   display: inline;
 }
@@ -190,17 +187,11 @@ li[aria-current='step']::after {
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estatus                                      | Comentarios                                                           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-before', '::before')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Sin cambios significativos desde la especificación previa.            |
-| {{Specname("CSS3 Transitions", "#animatable-properties", "")}}             | {{Spec2("CSS3 Transitions")}}     | Permite transiciones en propiedades definidas a los pseudo-elementos. |
-| {{Specname("CSS3 Animations", "", "")}}                                             | {{Spec2("CSS3 Animations")}}         | Permite animaciones en propiedades definidas a los pseudo-elementos.  |
-| {{SpecName('CSS3 Selectors', '#gen-content', '::before')}}                     | {{Spec2('CSS3 Selectors')}}         | Introduce la sintaxis de doble símbolo `:`                            |
-| {{SpecName('CSS2.1', 'generate.html#before-after-content', '::before')}} | {{Spec2('CSS2.1')}}                     | Definición inicial, usando la sintaxis de un símbolo `:`              |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.before")}}
+{{Compat}}
 
 ## Véase también
 

@@ -1,12 +1,8 @@
 ---
 title: HTTP 요청 메서드
 slug: Web/HTTP/Methods
-tags:
-  - HTTP
-  - Methods
-  - Reference
-translation_of: Web/HTTP/Methods
 ---
+
 {{HTTPSidebar}}
 
 HTTP는 **요청 메서드**를 정의하여, 주어진 리소스에 수행하길 원하는 행동을 나타냅니다. 간혹 요청 메서드를 "HTTP 동사"라고 부르기도 합니다. 각각의 메서드는 서로 다른 의미를 구현하지만, 일부 기능은 메서드 집합 간에 서로 공유하기도 합니다. 이를테면 응답 메서드는 {{glossary("safe", "안전")}}하거나, {{glossary("cacheable", "캐시 가능")}}하거나, {{glossary("idempotent", "멱등성")}}을 가질 수 있습니다.

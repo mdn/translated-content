@@ -20,7 +20,7 @@ let style = window.getComputedStyle(element, [pseudoElt]);
 - pseudoElt {{optional_inline}}
   - : 指定一个要匹配的伪元素的字符串。必须对普通元素省略（或`null`）。
 
-> **备注：** 在 Gecko2.0 {{geckoRelease("2.0")}}之前版本，参数 pseudoElt 是必要的。如果为 null，则不指定其他主要浏览器必须指定此参数。Gecko 已经更改为匹配其他浏览器的行为。。
+> **备注：** 在 Gecko 2.0 之前版本，参数 pseudoElt 是必要的。如果为 null，则不指定其他主要浏览器必须指定此参数。Gecko 已经更改为匹配其他浏览器的行为。。
 
 返回的`style`是一个实时的 {{domxref("CSSStyleDeclaration")}} 对象，当元素的样式更改时，它会自动更新本身。
 
@@ -58,20 +58,17 @@ let style = window.getComputedStyle(elem1, null);
 ```
 
 ```js
-function dumpComputedStyles(elem,prop) {
-
-  let cs = window.getComputedStyle(elem,null);
+function dumpComputedStyles(elem, prop) {
+  let cs = window.getComputedStyle(elem, null);
   if (prop) {
-    dump("    "+prop+" : "+cs.getPropertyValue(prop)+"\n");
+    dump("    " + prop + " : " + cs.getPropertyValue(prop) + "\n");
     return;
   }
   let len = cs.length;
-  for (var i=0;i<len;i++) {
-
+  for (var i = 0; i < len; i++) {
     let style = cs[i];
-    dump("    "+style+" : "+cs.getPropertyValue(style)+"\n");
+    dump("    " + style + " : " + cs.getPropertyValue(style) + "\n");
   }
-
 }
 ```
 
@@ -79,7 +76,7 @@ function dumpComputedStyles(elem,prop) {
 
 返回的对象与从元素的 {{domxref("HTMLElement.style", "style")}} 属性返回的对象具有相同的类型;然而，两个对象具有不同的目的。从`getComputedStyle`返回的对象是只读的，可以用于检查元素的样式（包括由一个`<style>`元素或一个外部样式表设置的那些样式）。`elt.style`对象应用于在特定元素上设置样式。
 
-第一个参数必须是 Element 对象 (传递一个非节点元素，如 一个#text 节点，将会抛出一个错误). 从 Gecko 1.9.2 {{geckoRelease("1.9.2")}} 开始，现在返回的一个在 URL 周围有引号的 URL 值，像这样： `url("http://foo.com/bar.jpg")`.
+第一个参数必须是 Element 对象 (传递一个非节点元素，如 一个#text 节点，将会抛出一个错误). 从 Gecko 1.9.2 开始，现在返回的一个在 URL 周围有引号的 URL 值，像这样：`url("http://foo.com/bar.jpg")`。
 
 ## `defaultView`
 
@@ -91,19 +88,19 @@ getComputedStyle 可以从**伪元素**拉取样式信息 (比如，`::after`, `
 
 ```html
 <style>
-    h3::after {
-        content: "rocks!";
-    }
+  h3::after {
+    content: "rocks!";
+  }
 </style>
 
 <h3>generated content</h3>
 
 <script>
-    let h3 = document.querySelector('h3'),
-    result = getComputedStyle(h3, '::after').content;
-    alert(`the generated content is: ${result}`);
-    console.log(`the generated content is: ${result}`);
-    // the generated content is: "rocks!"
+  let h3 = document.querySelector("h3"),
+    result = getComputedStyle(h3, "::after").content;
+  alert(`the generated content is: ${result}`);
+  console.log(`the generated content is: ${result}`);
+  // the generated content is: "rocks!"
 </script>
 ```
 
@@ -123,7 +120,7 @@ CSS 属性值可以使用`getPropertyValue(propName)`API 或直接索引到对�
 
 在 Firefox 中，属性值为`auto`的会直接返回使用值，而不是`auto`。比如，你在设定了一个元素的 css 为`height:30px; top: auto; bottom:0;`它的父元素`height:100px;`，在请求`top`的计算样式时，Firefox 会返回`'70px' = 100px - 30px;`。
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

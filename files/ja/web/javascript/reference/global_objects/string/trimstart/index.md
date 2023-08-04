@@ -88,9 +88,7 @@ ES6:
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.trimstart', ' String.prototype.trimStart')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

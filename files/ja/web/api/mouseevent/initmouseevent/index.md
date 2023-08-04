@@ -1,9 +1,11 @@
 ---
 title: MouseEvent.initMouseEvent()
 slug: Web/API/MouseEvent/initMouseEvent
+l10n:
+  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
 ---
 
-{{APIRef("DOM Events")}}{{deprecated_header}}
+{{APIRef("UI Events")}}{{deprecated_header}}
 
 **`MouseEvent.initMouseEvent()`** メソッドは、いったん（通常は {{domxref("Document.createEvent()")}} メソッドで）生成されたマウスイベントの値を初期化します。
 
@@ -17,11 +19,11 @@ slug: Web/API/MouseEvent/initMouseEvent
 
 ## 構文
 
-```js
-event.initMouseEvent(type, canBubble, cancelable, view,
+```js-nolint
+initMouseEvent(type, canBubble, cancelable, view,
                      detail, screenX, screenY, clientX, clientY,
                      ctrlKey, altKey, shiftKey, metaKey,
-                     button, relatedTarget);
+                     button, relatedTarget)
 ```
 
 ### 引数
@@ -80,6 +82,10 @@ event.initMouseEvent(type, canBubble, cancelable, view,
     一部のイベント種別 (例えば `mouseover` や `mouseout`) でのみ使用されます。
     それ以外の場合は `null` を渡してください。
 
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
 ## 例
 
 ### HTML
@@ -87,23 +93,22 @@ event.initMouseEvent(type, canBubble, cancelable, view,
 ```html
 <div style="background:red; width:180px; padding:10px;">
   <div id="out"></div>
-  <input type="text">
+  <input type="text" />
 </div>
 ```
 
 ### JavaScript
 
 ```js
-document.body.onclick = function(){
-  e = arguments[0];
-  var dt = e.target,stag = dt.tagName.toLowerCase();
-  document.getElementById("out").innerHTML = stag;
+document.body.onclick = (event) => {
+  const elementTag = event.target.tagName.toLowerCase();
+  document.getElementById("out").innerHTML = elementTag;
 };
 
-var simulateClick = function(){
-  var evt = document.createEvent("MouseEvents");
-  evt.initMouseEvent("click", true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
-  document.body.dispatchEvent(evt);
+const simulateClick = () => {
+  const event = document.createEvent("MouseEvents");
+  event.initMouseEvent("click", true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
+  document.body.dispatchEvent(event);
 }
 
 simulateClick();
@@ -111,7 +116,7 @@ simulateClick();
 
 ### 結果
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## 仕様書
 

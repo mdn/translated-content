@@ -1,7 +1,6 @@
 ---
 title: backdrop-filter
 slug: Web/CSS/backdrop-filter
-translation_of: Web/CSS/backdrop-filter
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
@@ -75,7 +74,7 @@ body {
 }
 
 body {
-  background-image: url('https://lorempixel.com/400/200/');
+  background-image: url('./anemones.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -86,7 +85,8 @@ body {
   display: flex;
   justify-content: center;
   height: 100%;
-  width: 10}
+  width: 100%;
+}
 ```
 
 ### HTML

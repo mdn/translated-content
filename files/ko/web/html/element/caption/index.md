@@ -1,15 +1,9 @@
 ---
-title: '<caption>: 표 설명 요소'
+title: "<caption>: 표 설명 요소"
 slug: Web/HTML/Element/caption
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/caption
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<caption>` 요소**는 표의 설명 또는 제목을 나타냅니다.
 
@@ -73,7 +67,7 @@ The following attributes are deprecated and should not be used. They are documen
     - `bottom`
       - : The caption is displayed below the table.
 
-    > **Warning:** Do not use this attribute, as it has been deprecated. The {{HTMLElement("caption")}} element should be styled using the [CSS](/en-US/docs/Web/CSS) properties {{cssxref("caption-side")}} and {{cssxref("text-align")}}.
+    > **Warning:** Do not use this attribute, as it has been deprecated. The {{HTMLElement("caption")}} element should be styled using the [CSS](/ko/docs/Web/CSS) properties {{cssxref("caption-side")}} and {{cssxref("text-align")}}.
 
 ## 사용 일람
 
@@ -87,7 +81,9 @@ The following attributes are deprecated and should not be used. They are documen
 
 ```html
 <table>
-  <caption>Example Caption</caption>
+  <caption>
+    Example Caption
+  </caption>
   <tr>
     <th>Login</th>
     <th>Email</th>
@@ -112,7 +108,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0px;
 }
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
 }
 ```
@@ -125,4 +123,4 @@ table, th, td {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.caption")}}
+{{Compat}}

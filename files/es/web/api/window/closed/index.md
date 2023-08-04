@@ -1,14 +1,8 @@
 ---
 title: Window.closed
 slug: Web/API/Window/closed
-tags:
-  - API
-  - HTML DOM
-  - Propiedad
-  - Referencia
-  - Ventana
-translation_of: Web/API/Window/closed
 ---
+
 {{APIRef}}
 
 ## Resumen
@@ -56,7 +50,7 @@ function refreshPopupWindow() {
     popupWindow.location.reload(true);
   } else {
     // Abre una nueva ventana emergente
-    popupWindow = window.open("popup.html","dataWindow");
+    popupWindow = window.open("popup.html", "dataWindow");
   }
 }
 ```

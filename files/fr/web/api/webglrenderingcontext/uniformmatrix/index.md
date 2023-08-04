@@ -1,20 +1,6 @@
 ---
 title: WebGLRenderingContext.uniformMatrix[234]fv()
 slug: Web/API/WebGLRenderingContext/uniformMatrix
-tags:
-  - API
-  - Matrice
-  - Reference
-  - Uniforms
-  - Variables Uniform
-  - WebGL
-  - WebGLAPI
-  - WebGLRenderingContext
-  - matrices
-  - uniformMatrix2fv
-  - uniformMatrix3fv
-  - uniformMatrix4fv
-translation_of: Web/API/WebGLRenderingContext/uniformMatrix
 ---
 
 {{APIRef("WebGL")}}

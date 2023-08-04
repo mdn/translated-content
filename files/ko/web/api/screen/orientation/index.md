@@ -1,8 +1,8 @@
 ---
 title: Screen.orientation
 slug: Web/API/Screen/orientation
-translation_of: Web/API/Screen/orientation
 ---
+
 {{APIRef("CSSOM View")}} {{SeeCompatTable}}
 
 ## Summary
@@ -30,16 +30,19 @@ if (orientation === "landscape-primary") {
   console.log("That looks good.");
 } else if (orientation === "landscape-secondary") {
   console.log("Mmmh... the screen is upside down!");
-} else if (orientation === "portrait-secondary" || orientation === "portrait-secondary") {
+} else if (
+  orientation === "portrait-secondary" ||
+  orientation === "portrait-secondary"
+) {
   console.log("Mmmh... you should rotate your device");
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -1,13 +1,8 @@
 ---
 title: tref
 slug: Web/SVG/Element/tref
-tags:
-  - Conteúdo Textual
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/tref
 ---
+
 {{SVGRef}}
 
 O conteúdo textual para o {{ SVGElement("text") }} podem ser dados de caracteres diretamente embedados com o elemento {{ SVGElement("text") }} ou o conteúdo de dados de caracteres de um elemento referenciado, onde a referência é especificada com um elemento `tref`.
@@ -20,8 +15,8 @@ O conteúdo textual para o {{ SVGElement("text") }} podem ser dados de caractere
 
 ```xml
 <svg width="100%" height="100%" viewBox="0 0 1000 300"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+     xmlns="https://www.w3.org/2000/svg"
+     xmlns:xlink="https://www.w3.org/1999/xlink">
   <defs>
     <text id="ReferencedText">
       Referenced character data
@@ -46,11 +41,11 @@ O conteúdo textual para o {{ SVGElement("text") }} podem ser dados de caractere
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
-- [Atributos XLink](/pt-BR/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing) »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
+- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent) »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
+- [Atributos XLink](/pt-BR/SVG/Attribute#XLink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -61,7 +56,7 @@ O conteúdo textual para o {{ SVGElement("text") }} podem ser dados de caractere
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGTRefElement`](/pt-BR/DOM/SVGTRefElement "en/DOM/SVGTRefElement").
+Este elemento implementa a interface do [`SVGTRefElement`](/pt-BR/DOM/SVGTRefElement).
 
 ## Compatibilidade com navegadores
 

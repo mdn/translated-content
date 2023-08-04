@@ -1,16 +1,6 @@
 ---
 title: browsingData.RemovalOptions
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - RemovalOptions
-  - Type
-  - WebExtensions
-  - browsingData
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions
 ---
 
 {{AddonSidebar()}}
@@ -25,7 +15,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 
   - : `Array` of `string`. Cette propriété s'applique uniquement aux cookies et aux éléments de stockage locaux. Ne supprimez que les cookies et les éléments de stockage locaux associés à ces noms d'hôte.
 
-    Vous devez indiquer ici un nom d'hôte, sans protocole (par exemple : `google.com` et non `https://google.com`). Vous pouvez utiliser l'interface  [`URL`](/fr/docs/Web/API/URL) pour analyser une URL brute et récupérer uniquement le nom d'hôte. Les sous-domaines d'un nom d'hôte donné ne seront pas supprimés: vous devez explicitement lister les sous-domaines.
+    Vous devez indiquer ici un nom d'hôte, sans protocole (par exemple : `google.com` et non `https://google.com`). Vous pouvez utiliser l'interface [`URL`](/fr/docs/Web/API/URL) pour analyser une URL brute et récupérer uniquement le nom d'hôte. Les sous-domaines d'un nom d'hôte donné ne seront pas supprimés: vous devez explicitement lister les sous-domaines.
 
 - `originTypes` {{optional_inline}}
 
@@ -43,9 +33,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `since` {{optional_inline}}
   - : `number`. Jusqu'à quand remontent les données, données en [millisecondes depuis l'époque UNIX](https://en.wikipedia.org/wiki/Unix_time). Notez que lorsque vous supprimez le cache du navigateur, le cache entier est toujours supprimé et cette option est ignorée. Si la propriété `since` est omise, la valeur par défaut est 0, ce qui signifie "pour toujours".
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.RemovalOptions", 2)}}
+{{Compat}}
 
 > **Note :**
 >

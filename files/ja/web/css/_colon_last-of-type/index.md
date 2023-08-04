@@ -1,5 +1,5 @@
 ---
-title: ':last-of-type'
+title: ":last-of-type"
 slug: Web/CSS/:last-of-type
 ---
 
@@ -18,7 +18,9 @@ p:last-of-type {
 
 ## 構文
 
-{{csssyntax}}
+```
+:last-of-type
+```
 
 ## 例
 

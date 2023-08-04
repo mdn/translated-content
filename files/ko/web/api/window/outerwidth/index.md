@@ -1,8 +1,8 @@
 ---
 title: Window.outerWidth
 slug: Web/API/Window/outerWidth
-translation_of: Web/API/Window/outerWidth
 ---
+
 {{APIRef}}
 
 ## 요약
@@ -25,17 +25,15 @@ outWindowWidth = window.outerWidth;
 
 윈도우의 안쪽 폭 즉, 현재 표시되고있는 창의 폭을 얻으려면 {{domxref("window.innerWidth")}}를 참조하세요.
 
+## 명세서
+
+{{Specifications}}
+
 ## 브라우저 호환성
 
-{{Compat("api.Window.outerWidth")}}
+{{Compat}}
 
-## Specification
-
-| Specification                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{ SpecName('CSSOM View', '#dom-window-outerwidth', 'Window.outerWidth') }} | {{ Spec2('CSSOM View') }} |         |
-
-## See also
+## 같이 보기
 
 - {{domxref("window.outerHeight")}}, {{domxref("window.innerHeight")}}, {{domxref("window.innerWidth")}}
 - {{domxref("window.resizeBy()")}}, {{domxref("window.resizeTo()")}}

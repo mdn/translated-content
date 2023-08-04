@@ -1,13 +1,8 @@
 ---
 title: Page Visibility API
 slug: Web/API/Page_Visibility_API
-tags:
-  - DOM
-  - Intermediário
-  - Tutoriais
-  - Visibilidade
-translation_of: Web/API/Page_Visibility_API
 ---
+
 {{DefaultAPISidebar("Page Visibility API")}}
 
 A **API de visibilidade de página** deixa você saber quando uma página da web está visível ou em foco. Com a navegação em abas, existem razões para que quaisquer páginas da web que estejam sendo executadas em segundo plano e não visíveis para o usuário. Quando o usuário minimiza a página ou muda para outra aba, a API envia um evento {{event("visibilitychange")}} informando o estado de visibilidade da página. Você pode detectar o evento e realizar algumas ações ou modificar o seu comportamento. Por exemplo, se a sua aplicação web estiver reproduzindo um video, ela pode pausar durante o momento que o usuário estiver olhando para outra aba, e reproduz novamente quando o usuário retorna para a aba. O usuário não perde nenhuma parte do video e pode continuar assistindo.

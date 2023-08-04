@@ -1,7 +1,6 @@
 ---
 title: Router (ルーター)
-slug: Glossary/routers
-original_slug: Glossary/ルーター
+slug: Glossary/Routers
 ---
 
 ウェブでは**ルーター**には 3 つの定義があります。
@@ -14,7 +13,7 @@ original_slug: Glossary/ルーター
 
 ネットワーク層の文脈:
 
-- {{Interwiki("wikipedia", "ルーター")}} (ウィキペディア)
+- [ルーター](https://ja.wikipedia.org/wiki/ルーター) (ウィキペディア)
 
 アプリケーション層の SPA の文脈 (主要な SPA フレームワークのライブラリー):
 

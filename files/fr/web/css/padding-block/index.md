@@ -1,26 +1,19 @@
 ---
 title: padding-block
 slug: Web/CSS/padding-block
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/padding-block
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété **`padding-block`** définit l'espace de remplissage (_padding_) pour le début et la fin de l'axe de bloc de l'élément. Cette propriété logique peut correspondre à différentes propriétés physiques selon le mode d'écriture de l'élément, sa direction et l'orientation du texte. Autrement dit, cette propriété peut correspondre aux propriétés {{cssxref("padding-top")}} et  {{cssxref("padding-bottom")}} ou à {{cssxref("padding-right")}} et {{cssxref("padding-left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+La propriété **`padding-block`** définit l'espace de remplissage (_padding_) pour le début et la fin de l'axe de bloc de l'élément. Cette propriété logique peut correspondre à différentes propriétés physiques selon le mode d'écriture de l'élément, sa direction et l'orientation du texte. Autrement dit, cette propriété peut correspondre aux propriétés {{cssxref("padding-top")}} et {{cssxref("padding-bottom")}} ou à {{cssxref("padding-right")}} et {{cssxref("padding-left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
 ```css
 /* Valeurs de longueur */
 /* Type <length> */
-padding-block: 10px 20px;  /* Des longueurs absolues */
-padding-block: 1em 2em;    /* Des longueurs relatives à la taille du texte */
-padding-block: 5% 2%;      /* Des longueurs relatives à la taille du bloc englobant */
-padding-block: 10px;       /* Une seule valeur définit le remplissage des deux côtés */
+padding-block: 10px 20px; /* Des longueurs absolues */
+padding-block: 1em 2em; /* Des longueurs relatives à la taille du texte */
+padding-block: 5% 2%; /* Des longueurs relatives à la taille du bloc englobant */
+padding-block: 10px; /* Une seule valeur définit le remplissage des deux côtés */
 
 /* Valeurs avec un mot-clé */
 padding-block: auto;

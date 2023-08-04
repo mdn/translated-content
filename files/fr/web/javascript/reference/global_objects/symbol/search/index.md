@@ -1,14 +1,6 @@
 ---
 title: Symbol.search
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/search
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/search
 ---
 
 {{JSRef}}
@@ -21,14 +13,11 @@ Pour plus d'informations, se référer aux pages sur {{jsxref("RegExp.@@search",
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.search', 'Symbol.search')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.search', 'Symbol.search')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.search")}}
+{{Compat}}
 
 ## Voir aussi
 

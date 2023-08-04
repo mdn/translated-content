@@ -1,25 +1,13 @@
 ---
 title: bookmarks.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - remove
-  - supprimer
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 ---
 
 {{AddonSidebar()}}
 
 La méthode **`bookmarks.remove()`** supprime un seul signet ou un dossier de signets vide.
 
-> **Attention :** Si votre extension tente de supprimer un signet du nœud racine de l’arborescence de signets, l’appel déclenche une erreur avec le message suivant: "_La racine du signet ne peut pas être modifiée_" et le signet ne sera pas supprimé.
+> **Attention :** Si votre extension tente de supprimer un signet du nœud racine de l'arborescence de signets, l'appel déclenche une erreur avec le message suivant: "_La racine du signet ne peut pas être modifiée_" et le signet ne sera pas supprimé.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -27,8 +15,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removingBookmark = browser.bookmarks.remove(
-  id                 // string
-)
+  id, // string
+);
 ```
 
 ### Paramètres
@@ -59,13 +47,13 @@ removingBookmark.then(onRemoved, onRejected);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.remove")}}
+{{Compat}}
 
 > **Note :**
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

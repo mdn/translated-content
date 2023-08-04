@@ -1,12 +1,6 @@
 ---
 title: background-position-y
 slug: Web/CSS/background-position-y
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/background-position-y
 ---
 
 {{CSSRef}}
@@ -15,7 +9,7 @@ La propriété **`background-position-y`** définit la position verticale initia
 
 {{EmbedInteractiveExample("pages/css/background-position-y.html")}}
 
-> **Note :** La valeur de cette propriété sera surchargée par n'importe quelle déclaration avec  {{cssxref("background")}} ou {{cssxref("background-position")}} située après la déclaration.
+> **Note :** La valeur de cette propriété sera surchargée par n'importe quelle déclaration avec {{cssxref("background")}} ou {{cssxref("background-position")}} située après la déclaration.
 
 ## Syntaxe
 

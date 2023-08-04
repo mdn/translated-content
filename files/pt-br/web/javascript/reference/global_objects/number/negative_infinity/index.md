@@ -1,15 +1,8 @@
 ---
 title: Number.NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - Número
-  - Property
-  - Propriedade
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 ---
+
 {{JSRef}}
 
 A propriedade **`Number.NEGATIVE_INFINITY`** representa o valor Infinito negativo.

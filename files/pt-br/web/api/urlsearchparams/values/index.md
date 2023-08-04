@@ -1,8 +1,8 @@
 ---
 title: URLSearchParams.values()
 slug: Web/API/URLSearchParams/values
-translation_of: Web/API/URLSearchParams/values
 ---
+
 {{APIRef("URL API")}}
 
 O m*étodo* **`URLSearchParams.values()`**retorna um {{jsxref("Iteration_protocols",'iterator')}} que permite passar por todos os valores do objeto. Os valores são objetos {{domxref("USVString")}}.
@@ -26,7 +26,7 @@ Retorna um {{jsxref("Iteration_protocols","iterator")}}.
 var searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Mostra os pares de chave/valor
-for(var value of searchParams.values()) {
+for (var value of searchParams.values()) {
   console.log(value);
 }
 ```
@@ -40,13 +40,11 @@ value2
 
 ## Especificações
 
-| Specification                                                                                    | Status               | Comment            |
-| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
-| {{SpecName('URL', '#urlsearchparams','values() (as iterator&lt;&gt;)')}} | {{Spec2('URL')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.URLSearchParams.values")}}
+{{Compat}}
 
 ## Veja também
 

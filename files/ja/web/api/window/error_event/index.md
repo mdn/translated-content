@@ -1,5 +1,5 @@
 ---
-title: 'Window: error イベント'
+title: "Window: error イベント"
 slug: Web/API/Window/error_event
 ---
 
@@ -109,9 +109,7 @@ scriptError.addEventListener('click', () => {
 
 ## 仕様書
 
-| 仕様書                                                       | 状態                         |
-| ------------------------------------------------------------ | ---------------------------- |
-| {{SpecName('UI Events', '#event-type-error')}} | {{Spec2('UI Events')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

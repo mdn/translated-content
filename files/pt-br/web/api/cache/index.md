@@ -1,18 +1,8 @@
 ---
 title: Cache
 slug: Web/API/Cache
-tags:
-  - API
-  - Armazenamento
-  - Cache
-  - Experimental
-  - Interface
-  - Offline
-  - Rascunho
-  - Referencia
-  - Service Workers
-translation_of: Web/API/Cache
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 A interface de **Cache** provê um mecanismo de pares de objeto [Request](http://fetch.spec.whatwg.org/#request) / [Response](http://fetch.spec.whatwg.org/#response) que estão cacheados, por exemplo, como parte do ciclo de vida de um {{domxref("ServiceWorker")}}. Note que a interface do `Cache` é exposta a escopos de janela como também aos workers. Você não precisa utiliza-la em conjunto com os service workers em si, mesmo que ela esteja definida na especificação dos mesmos.
@@ -65,64 +55,63 @@ var CACHE_VERSION = 1;
 
 // Identificador menor para uma versão específica do cache
 var CURRENT_CACHES = {
-  font: 'font-cache-v' + CACHE_VERSION
+  font: "font-cache-v" + CACHE_VERSION,
 };
 
-self.addEventListener('activate', function(event) {
-  var expectedCacheNames = Object.keys(CURRENT_CACHES).map(function(key) {
+self.addEventListener("activate", function (event) {
+  var expectedCacheNames = Object.keys(CURRENT_CACHES).map(function (key) {
     return CURRENT_CACHES[key];
   });
 
   // O worker não vai ser tratado como ativo até que a Promise se resolva.
   event.waitUntil(
-    caches.keys().then(function(cacheNames) {
+    caches.keys().then(function (cacheNames) {
       return Promise.all(
-        cacheNames.map(function(cacheName) {
+        cacheNames.map(function (cacheName) {
           if (expectedCacheNames.indexOf(cacheName) == -1) {
-            console.log('Deletando cache expirado:', cacheName);
+            console.log("Deletando cache expirado:", cacheName);
 
             return caches.delete(cacheName);
           }
-        })
+        }),
       );
-    })
+    }),
   );
 });
 
-self.addEventListener('fetch', function(event) {
-  console.log('Obtendo evento fetch para', event.request.url);
+self.addEventListener("fetch", function (event) {
+  console.log("Obtendo evento fetch para", event.request.url);
 
   event.respondWith(
-
     // Abre o objeto de cache que inicia com 'font'
-    caches.open(CURRENT_CACHES['font']).then(function(cache) {
-      return cache.match(event.request).then(function(response) {
-        if (response) {
-          console.log(' Encontrou resposta em cache:', response);
+    caches.open(CURRENT_CACHES["font"]).then(function (cache) {
+      return cache
+        .match(event.request)
+        .then(function (response) {
+          if (response) {
+            console.log(" Encontrou resposta em cache:", response);
 
-          return response;
-        }
-      }).catch(function(error) {
+            return response;
+          }
+        })
+        .catch(function (error) {
+          // Trata exceções que vem de match() ou fetch().
+          console.error("  Erro na handler:", error);
 
-        // Trata exceções que vem de match() ou fetch().
-        console.error('  Erro na handler:', error);
-
-        throw error;
-      });
-    })
+          throw error;
+        });
+    }),
   );
 });
 ```
 
 ## Especificações
 
-| Especificação                                                        | Status                               | Comentário        |
-| -------------------------------------------------------------------- | ------------------------------------ | ----------------- |
-| {{SpecName('Service Workers', '#cache', 'Cache')}} | {{Spec2('Service Workers')}} | Definição inicial |
+{{Specifications}}
 
 ## Tabela de compatibilidade
 
-{{Compat("api.Cache")}}
+{{Compat}}
 
 ## Ver também
 

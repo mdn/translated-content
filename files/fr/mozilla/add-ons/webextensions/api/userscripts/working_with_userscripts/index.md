@@ -1,14 +1,6 @@
 ---
 title: Travailler avec userScripts
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts
-tags:
-  - API
-  - Extensions
-  - How-to
-  - Tutorial
-  - userScripts
-translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts
-original_slug: Mozilla/Add-ons/WebExtensions/API/userScripts/travailler_avec_userScripts
 ---
 
 {{AddonSidebar}}
@@ -37,7 +29,7 @@ La propriété "api_script" indique le chemin d'accès au fichier JavaScript qui
 
 ## Charge l'extension d'exemple
 
-Une fois que vous avez téléchargé l'exemple  :
+Une fois que vous avez téléchargé l'exemple :
 
 Naviguez jusqu'à about:debugging, cliquez sur **Charger temporairement une extension...** et double-cliquez sur le manifest des extensions.
 
@@ -51,7 +43,7 @@ Rien ne se passera tant que vous n'aurez pas cliqué sur le bouton **Enregistrer
 
 ## Register the userScript
 
-Avant qu'un userScript puisse être exécuté, il doit être enregistré en utilisant la méthode  `userScripts.register()`. Voici le code pour enregistrer l'extension d'exemple :
+Avant qu'un userScript puisse être exécuté, il doit être enregistré en utilisant la méthode `userScripts.register()`. Voici le code pour enregistrer l'extension d'exemple :
 
 ```js
 async function registerScript() {
@@ -64,7 +56,7 @@ async function registerScript() {
     runAt: runAtInput.value,
     matchAboutBlank: stringToBool(matchAboutBlankInput.value),
     allFrames: stringToBool(allFramesInput.value),
-    scriptMetadata: {name: scriptNameInput.value || null},
+    scriptMetadata: { name: scriptNameInput.value || null },
   };
 
   // Store the last submitted values to the extension storage
@@ -95,12 +87,12 @@ async function registerScript() {
     lastErrorEl.textContent = lastError;
 
     // Store the last error.
-    await browser.storage.local.set({lastError});
+    await browser.storage.local.set({ lastError });
   }
 }
 ```
 
-Ce code initialise d'abord l'objet params pour passer les valeurs à la méthode  [userScripts.register](/fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/register).
+Ce code initialise d'abord l'objet params pour passer les valeurs à la méthode [userScripts.register](/fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/register).
 
 ## Implementer les fonctions userScript
 

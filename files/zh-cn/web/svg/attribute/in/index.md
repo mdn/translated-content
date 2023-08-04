@@ -3,7 +3,7 @@ title: in
 slug: Web/SVG/Attribute/in
 ---
 
-« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 in 属性标识输入的原语。
 
@@ -15,10 +15,10 @@ in 属性标识输入的原语。
 
 ## Usage context
 
-| Categories | None                                                                                                                                       |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Categories | None                                                                                                                                        |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | Value      | `SourceGraphic` \| `SourceAlpha` \| `BackgroundImage` \| `BackgroundAlpha` \| `FillPaint` \| `StrokePaint` \| \<filter-primitive-reference> |
-| Animatable | Yes                                                                                                                                        |
+| Animatable | Yes                                                                                                                                         |
 
 - SourceGraphic
   - : 该关键词表示图形元素自身将作为{{SVGElement("filter")}}原语的原始输入。
@@ -35,39 +35,65 @@ in 属性标识输入的原语。
 
 ## BackgroundImage 的解决方案
 
-我们需要使用 < feimage >原语引入一个图像混合到过滤器本身内来替代使用"BackgroundImage".
+我们需要使用 `<feimage>` 原语引入一个图像混合到过滤器本身内来替代使用"BackgroundImage".
 
-### HTML Content
+### HTML
 
 ```html
 <div style="width: 420px; height: 220px;">
-<svg style="width:200px; height:200px; display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <filter id="backgroundMultiply">
-      <!-- This will not work. -->
-      <feBlend in="BackgroundImage" in2="SourceGraphic" mode="multiply"/>
-    </filter>
-  </defs>
-  <image xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10%" y="10%" width="80%" height="80%"/>
-  <circle cx="50%" cy="40%" r="40%" fill="#c00" style="filter:url(#backgroundMultiply);" />
-</svg>
+  <svg
+    style="width:200px; height:200px; display: inline;"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <filter id="backgroundMultiply">
+        <!-- This will not work. -->
+        <feBlend in="BackgroundImage" in2="SourceGraphic" mode="multiply" />
+      </filter>
+    </defs>
+    <image
+      xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png"
+      x="10%"
+      y="10%"
+      width="80%"
+      height="80%" />
+    <circle
+      cx="50%"
+      cy="40%"
+      r="40%"
+      fill="#c00"
+      style="filter:url(#backgroundMultiply);" />
+  </svg>
 
-<svg style="width:200px; height:200px; display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <filter id="imageMultiply">
-      <!-- This is a workaround. -->
-      <feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10%" y="10%" width="80%" height="80%"/>
-      <feBlend in2="SourceGraphic" mode="multiply"/>
-    </filter>
-  </defs>
-  <circle cx="50%" cy="40%" r="40%" fill="#c00" style="filter:url(#imageMultiply);"/>
-</svg>
+  <svg
+    style="width:200px; height:200px; display: inline;"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <filter id="imageMultiply">
+        <!-- This is a workaround. -->
+        <feImage
+          xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png"
+          x="10%"
+          y="10%"
+          width="80%"
+          height="80%" />
+        <feBlend in2="SourceGraphic" mode="multiply" />
+      </filter>
+    </defs>
+    <circle
+      cx="50%"
+      cy="40%"
+      r="40%"
+      fill="#c00"
+      style="filter:url(#imageMultiply);" />
+  </svg>
 </div>
 ```
 
 ### 效果
 
-{{ EmbedLiveSample('Workaround_for_backgroundImage') }}
+{{ EmbedLiveSample('BackgroundImage 的解决方案') }}
 
 ## 元素
 

@@ -1,14 +1,9 @@
 ---
 title: sub
 slug: Web/HTML/Element/sub
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/sub
-original_slug: Web/HTML/Elemento/sub
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El **elemento HTML** \<sub> define un fragmento de texto que se debe mostrar, por razones tipográficas, más bajo, y generalmente más pequeño, que el tramo principal del texto, es decir, en subíndice.
 
@@ -18,7 +13,7 @@ El **elemento HTML** \<sub> define un fragmento de texto que se debe mostrar, po
 | Omission de etiquetas                                       | Ninguna, tanto la etiqueta de apertura y cierre deben estar presentes                                                                                                                                                                               |
 | Elementos padres permitidos                                 | Cualquier elemento que acepte contenido estático o de texto                                                                                                                                                                                         |
 | Roles ARIA permitidos                                       | Cualquiera                                                                                                                                                                                                                                          |
-| Interfaz DOM                                                | {{domxref("HTMLElement")}}                                                                                                                                                                                                                |
+| Interfaz DOM                                                | {{domxref("HTMLElement")}}                                                                                                                                                                                                                          |
 
 ## Atributos
 
@@ -39,14 +34,11 @@ Este elemento sólo incluye los [atributos globales](/es/docs/HTML/Global_attrib
 
 ## Especificaciones
 
-| Especificaciones                                                                                                                                     | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-sub-and-sup-elements', '&lt;sub&gt; and &lt;sup&gt;')}}             | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-sub-and-sup-elements', '&lt;sub&gt; and &lt;sup&gt;;')}} | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
-## Compatibilidad navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.sub")}}
+{{Compat}}
 
 ## Ver también
 

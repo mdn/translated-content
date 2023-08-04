@@ -1,16 +1,8 @@
 ---
 title: String.prototype.trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - Remover espaços ao começo string
-  - String
-  - metodo
-  - trimStart()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/trimStart
 ---
+
 {{JSRef}}
 
 O método `trimStart()` remove espaços do começo de uma _string_. `trimLeft()` é um apelido para este método.
@@ -45,20 +37,21 @@ String.prototype.trimLeft.name === "trimStart";
 ```js
 //https://github.com/FabioVergani/js-Polyfill_String-trimStart
 
-(function(w){
-    var String=w.String, Proto=String.prototype;
+(function (w) {
+  var String = w.String,
+    Proto = String.prototype;
 
-    (function(o,p){
-        if(p in o?o[p]?false:true:true){
-            var r=/^\s+/;
-            o[p]=o.trimLeft||function(){
-                return this.replace(r,'')
-            }
-        }
-    })(Proto,'trimStart');
-
+  (function (o, p) {
+    if (p in o ? (o[p] ? false : true) : true) {
+      var r = /^\s+/;
+      o[p] =
+        o.trimLeft ||
+        function () {
+          return this.replace(r, "");
+        };
+    }
+  })(Proto, "trimStart");
 })(window);
-
 
 /*
 ES6:
@@ -85,19 +78,19 @@ ES6:
 O seguinte exemplo mostra uma _string_ em caixa baixa `'foo '`:
 
 ```js
-var str = '   foo  ';
+var str = "   foo  ";
 
 console.log(str.length); // retorna 8
 
 str = str.trimStart();
 console.log(str.length); // retorna 5
-console.log(str);        // retorna 'foo  '
+console.log(str); // retorna 'foo  '
 ```
 
 ## Especificações
 
-| Especificação                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------ |
+| Especificação                                                                             |
+| ----------------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-string.prototype.trimstart', ' String.prototype.trimStart')}} |
 
 ## Compatibilidade com navegadores

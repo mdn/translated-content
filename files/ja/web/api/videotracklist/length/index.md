@@ -1,43 +1,39 @@
 ---
 title: VideoTrackList.length
 slug: Web/API/VideoTrackList/length
+l10n:
+  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
 {{APIRef("HTML DOM")}}
 
-読み取り専用の **{{domxref("VideoTrackList")}}** の **`length`** プロパティは、`VideoTrackList` 内のエントリ数を返します。 各エントリは、メディア要素内の 1 つの動画トラックを表す {{domxref("VideoTrack")}} です。 値 0 は、メディアに動画トラックがないことを示します。
+読み取り専用の **{{domxref("VideoTrackList")}}** の **`length`** プロパティは、`VideoTrackList` 内の項目数を返します。 各項目は、メディア要素内の 1 つの映像トラックを表す {{domxref("VideoTrack")}} です。
 
-## 構文
+値 0 は、メディアに映像トラックがないことを示します。
 
-```
-var trackCount = VideoTrackList.length;
-```
+## 値
 
-### 値
-
-`VideoTrackList` に含まれる動画トラック数を示す数値。 `VideoTrackList` を {{domxref("VideoTrack")}} 型のオブジェクトの配列として扱うことで、各トラックにアクセスできます。
+`VideoTrackList` に含まれる映像トラック数を示す数値。 `VideoTrackList` を {{domxref("VideoTrack")}} 型のオブジェクトの配列として扱うことで、各トラックにアクセスできます。
 
 ## 例
 
-このスニペットは、{{domxref("Document.querySelector", "querySelector()")}} によって {{Glossary("DOM")}} 内で見つかった最初の {{HTMLElement("video")}} 要素内の動画トラックの数を取得します。
+このスニペットは、 {{Glossary("DOM")}} 内で見つかった最初の {{HTMLElement("video")}} 要素内の映像トラックの数を {{domxref("Document.querySelector", "querySelector()")}} によって取得します。
 
 ```js
-var videoElem = document.querySelector("video");
-var numVideoTracks = 0;
+const videoElem = document.querySelector("video");
+let numVideoTracks = 0;
 
 if (videoElem.videoTracks) {
   numVideoTracks = videoElem.videoTracks.length;
 }
 ```
 
-このサンプルは、{{domxref("VideoTrack")}} をサポートしていないブラウザーで失敗するのを避けるために、{{domxref("HTMLMediaElement.videoTracks")}} が定義されていることを確認していることに注意してください。
+この例は、{{domxref("VideoTrack")}} に対応していないブラウザーで落ちるのを避けるために、{{domxref("HTMLMediaElement.videoTracks")}} が定義されていることを確認していることに注意してください。
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                             | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#dom-videotracklist-length', 'VideoTrackList: length')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.VideoTrackList.length")}}
+{{Compat}}

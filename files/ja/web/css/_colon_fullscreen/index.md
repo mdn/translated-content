@@ -1,5 +1,5 @@
 ---
-title: ':fullscreen'
+title: ":fullscreen"
 slug: Web/CSS/:fullscreen
 ---
 
@@ -9,7 +9,9 @@ slug: Web/CSS/:fullscreen
 
 ## 構文
 
-{{csssyntax}}
+```
+:fullscreen
+```
 
 ## 使用上のメモ
 
@@ -68,4 +70,4 @@ slug: Web/CSS/:fullscreen
 - {{cssxref(":not")}}
 - {{cssxref("::backdrop")}}
 - DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreenElement") }}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}} 属性
+- [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性

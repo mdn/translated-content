@@ -9,7 +9,7 @@ slug: Web/API/SourceBuffer/appendBuffer
 
 ## 语法
 
-```js
+```js-nolint
 appendBuffer(source)
 ```
 

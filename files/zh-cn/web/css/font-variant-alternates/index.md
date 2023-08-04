@@ -80,7 +80,9 @@ font-variant-alternates: unset;
 
 ```css
 @font-feature-values "Leitura Display Swashes" {
-    @swash { fancy: 1 }
+  @swash {
+    fancy: 1;
+  }
 }
 
 p {
@@ -103,6 +105,6 @@ p {
 
 不属于任何标准。
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}

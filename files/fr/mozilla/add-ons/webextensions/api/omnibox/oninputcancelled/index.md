@@ -1,16 +1,6 @@
 ---
 title: omnibox.onInputCancelled
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputCancelled
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - omnibox
-  - onInputCancelled
-translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputCancelled
 ---
 
 {{AddonSidebar()}}
@@ -20,9 +10,9 @@ Lancé lorsque l'utilisateur a annulé son interaction avec votre poste (par exe
 ## Syntaxe
 
 ```js
-browser.omnibox.onInputCancelled.addListener(listener)
-browser.omnibox.onInputCancelled.removeListener(listener)
-browser.omnibox.onInputCancelled.hasListener(listener)
+browser.omnibox.onInputCancelled.addListener(listener);
+browser.omnibox.onInputCancelled.removeListener(listener);
+browser.omnibox.onInputCancelled.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -38,9 +28,9 @@ Les événements ont trois fonctions :
 
 La fonction d'écouteur n'a pas de paramètres.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.omnibox.onInputCancelled")}}
+{{Compat}}
 
 ## Exemples
 

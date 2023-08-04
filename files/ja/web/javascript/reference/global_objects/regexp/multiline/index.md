@@ -27,9 +27,7 @@ console.log(regex.multiline); // true
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.multiline', 'RegExp.prototype.multiline')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

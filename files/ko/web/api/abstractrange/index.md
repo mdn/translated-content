@@ -1,20 +1,8 @@
 ---
 title: AbstractRange
 slug: Web/API/AbstractRange
-tags:
-  - API
-  - Abstract
-  - Abstract Interface
-  - AbstractRange
-  - DOM
-  - DOM API
-  - Interface
-  - NeedsTranslation
-  - Range
-  - Reference
-  - TopicStub
-translation_of: Web/API/AbstractRange
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 The **`AbstractRange`** abstract interface is the base class upon which all {{Glossary("DOM")}} range types are defined. A **range** is an object that indicates the start and end points of a section of content within the document.
@@ -61,7 +49,7 @@ let endElem = startElem.querySelector("span");
 let range = document.createRange();
 
 range.setStart(startElem, 0);
-range.setEnd(endElem, endElem.childNodes[0].length/2);
+range.setEnd(endElem, endElem.childNodes[0].length / 2);
 let contents = range.cloneContents();
 
 document.body.appendChild(contents);
@@ -84,13 +72,15 @@ To illustrate this, consider the HTML below:
 ```html
 <div class="container">
   <div class="header">
-    <img src="" class="sitelogo">
+    <img src="" class="sitelogo" />
     <h1>The Ultimate Website</h1>
   </div>
   <article>
     <section class="entry" id="entry1">
       <h2>Section 1: An interesting thing...</h2>
-      <p>A <em>very</em> interesting thing happened on the way to the forum...</p>
+      <p>
+        A <em>very</em> interesting thing happened on the way to the forum...
+      </p>
       <aside class="callout">
         <h2>Aside</h2>
         <p>An interesting aside to share with you...</p>
@@ -103,7 +93,7 @@ To illustrate this, consider the HTML below:
 
 After loading the HTML and constructing the DOM representation of the document, the resulting DOM tree looks like this:
 
-[![Diagram of the DOM for a simple web page](https://mdn.mozillademos.org/files/16887/SimpleDOM.svg)](https://mdn.mozillademos.org/files/16886/SimpleDOM.svg)
+[![Diagram of the DOM for a simple web page](simpledom.svg)](simpledom.svg)
 
 In this diagram, the nodes representing HTML elements are shown in green. Eah row beneath them shows the next layer of depth into the DOM tree. Blue nodes are text nodes, containing the text that gets shown onscreen. Each element's contents are linked below it in the tree, potentially spawning a series of branches below as elements include other elements and text nodes.
 
@@ -141,7 +131,7 @@ The contents of the text nodes are then determined by the offsets into those tex
 
 The resulting document fragment looks like this:
 
-![A DocumentFragment representing the cloned content](https://mdn.mozillademos.org/files/16891/dom-fragment.svg)
+![A DocumentFragment representing the cloned content](dom-fragment.svg)
 
 Notice especially that the contents of this fragment are all _below_ the shared common parent of the topmost nodes within it. The parent `<section>` is not needed to replicate the cloned content, so it is isn't included.
 
@@ -161,7 +151,7 @@ let paraTextNode = paraNode.childNodes[1];
 
 let range = document.createRange();
 range.setStart(paraTextNode, 6);
-range.setEnd(paraTextNode, paraTextNode.length-1);
+range.setEnd(paraTextNode, paraTextNode.length - 1);
 
 let fragment = range.cloneContents();
 document.body.appendChild(fragment);
@@ -177,10 +167,10 @@ The result looks like this:
 
 {{EmbedLiveSample("Example", 600, 80)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

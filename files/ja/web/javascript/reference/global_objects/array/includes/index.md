@@ -40,7 +40,7 @@ includes(searchElement, fromIndex)
 
 ゼロの値は符号に関わらず、すべて等しいとみなされます（すなわち、`-0` は `0` とも `+0` とも等しいとみなされます）が、`false` は `0` と同じとはみなされ*ません*。 [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) は正しく検索することができます。
 
-> **メモ:** 技術的に言えば、`includes()` は [SameValueZero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_等価性) アルゴリズムを使用して、指定された要素が見つかったかどうかを確認しています。
+> **メモ:** 技術的に言えば、`includes()` は [SameValueZero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムを使用して、指定された要素が見つかったかどうかを確認しています。
 
 ## 例
 

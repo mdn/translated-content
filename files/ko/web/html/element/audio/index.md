@@ -1,20 +1,9 @@
 ---
 title: <audio>
 slug: Web/HTML/Element/audio
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - HTML5
-  - Media
-  - Multimedia
-  - Reference
-  - Web
-  - 소리
-  - 오디오
-translation_of: Web/HTML/Element/audio
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<audio>` 요소**는 문서에 소리 콘텐츠를 포함할 때 사용합니다. `src` 특성 또는 {{htmlelement("source")}} 요소를 사용해 한 개 이상의 오디오 소스를 지정할 수 있으며, 다수를 지정한 경우 가장 적절한 소스를 브라우저가 고릅니다. {{domxref("MediaStream")}}을 사용하면 미디어 스트림을 바라볼 수도 있습니다.
 
@@ -87,28 +76,28 @@ Time offsets are specified as float values indicating the number of seconds to o
 
 ## 이벤트
 
-| 이벤트 이름                                                                                  | 발생 조건                                                                                                                                                                                                                            |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{Event("audioprocess")}}                                                             | The input buffer of a {{DOMxRef("ScriptProcessorNode")}} is ready to be processed.                                                                                                                                         |
-| {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}                 | The browser can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.                                                          |
+| 이벤트 이름                                                            | 발생 조건                                                                                                                                                                                                                            |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{Event("audioprocess")}}                                              | The input buffer of a {{DOMxRef("ScriptProcessorNode")}} is ready to be processed.                                                                                                                                                   |
+| {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}               | The browser can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.                                                          |
 | {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} | The browser estimates it can play the media up to its end without stopping for content buffering.                                                                                                                                    |
-| {{Event("complete")}}                                                                 | The rendering of an {{DOMxRef("OfflineAudioContext")}} is terminated.                                                                                                                                                      |
+| {{Event("complete")}}                                                  | The rendering of an {{DOMxRef("OfflineAudioContext")}} is terminated.                                                                                                                                                                |
 | {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} | The `duration` attribute has been updated.                                                                                                                                                                                           |
-| {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}                 | The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the [`load()`](/ko/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement) method is called to reload it. |
-| {{domxref("HTMLMediaElement.ended_event", 'ended')}}                         | Playback has stopped because the end of the media was reached.                                                                                                                                                                       |
+| {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}               | The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the [`load()`](/ko/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement) method is called to reload it. |
+| {{domxref("HTMLMediaElement.ended_event", 'ended')}}                   | Playback has stopped because the end of the media was reached.                                                                                                                                                                       |
 | {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}         | The first frame of the media has finished loading.                                                                                                                                                                                   |
 | {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} | The metadata has been loaded.                                                                                                                                                                                                        |
-| {{domxref("HTMLMediaElement.pause_event", 'pause')}}                         | Playback has been paused.                                                                                                                                                                                                            |
-| {{domxref("HTMLMediaElement.play_event", 'play')}}                         | Playback has begun.                                                                                                                                                                                                                  |
-| {{domxref("HTMLMediaElement.playing_event", 'playing ')}}                 | Playback is ready to start after having been paused or delayed due to lack of data.                                                                                                                                                  |
+| {{domxref("HTMLMediaElement.pause_event", 'pause')}}                   | Playback has been paused.                                                                                                                                                                                                            |
+| {{domxref("HTMLMediaElement.play_event", 'play')}}                     | Playback has begun.                                                                                                                                                                                                                  |
+| {{domxref("HTMLMediaElement.playing_event", 'playing ')}}              | Playback is ready to start after having been paused or delayed due to lack of data.                                                                                                                                                  |
 | {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}         | The playback rate has changed.                                                                                                                                                                                                       |
-| {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}                     | A _seek_ operation completed.                                                                                                                                                                                                        |
-| {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}                 | A _seek_ operation began.                                                                                                                                                                                                            |
-| {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}                 | The user agent is trying to fetch media data, but data is unexpectedly not forthcoming.                                                                                                                                              |
-| {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}                 | Media data loading has been suspended.                                                                                                                                                                                               |
+| {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}                 | A _seek_ operation completed.                                                                                                                                                                                                        |
+| {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}               | A _seek_ operation began.                                                                                                                                                                                                            |
+| {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}               | The user agent is trying to fetch media data, but data is unexpectedly not forthcoming.                                                                                                                                              |
+| {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}               | Media data loading has been suspended.                                                                                                                                                                                               |
 | {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}         | The time indicated by the `currentTime` attribute has been updated.                                                                                                                                                                  |
 | {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}     | The volume has changed.                                                                                                                                                                                                              |
-| {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}                 | Playback has stopped because of a temporary lack of data                                                                                                                                                                             |
+| {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}               | Playback has stopped because of a temporary lack of data                                                                                                                                                                             |
 
 ## 사용 일람
 
@@ -116,10 +105,12 @@ Browsers don't all support the same [file types](/ko/docs/Web/Media/Formats/Cont
 
 ```html
 <audio controls>
-  <source src="myAudio.mp3" type="audio/mpeg">
-  <source src="myAudio.ogg" type="audio/ogg">
-  <p>Your browser doesn't support HTML5 audio. Here is
-     a <a href="myAudio.mp4">link to the audio</a> instead.</p>
+  <source src="myAudio.mp3" type="audio/mpeg" />
+  <source src="myAudio.ogg" type="audio/ogg" />
+  <p>
+    Your browser doesn't support HTML5 audio. Here is a
+    <a href="myAudio.mp4">link to the audio</a> instead.
+  </p>
 </audio>
 ```
 
@@ -164,11 +155,11 @@ For example, to detect when audio tracks are added to or removed from an `<audio
 ```js
 var elem = document.querySelector("audio");
 
-elem.audioTrackList.onaddtrack = function(event) {
+elem.audioTrackList.onaddtrack = function (event) {
   trackEditor.addTrack(event.track);
 };
 
-elem.audioTrackList.onremovetrack = function(event) {
+elem.audioTrackList.onremovetrack = function (event) {
   trackEditor.removeTrack(event.track);
 };
 ```
@@ -185,9 +176,7 @@ The following example shows simple usage of the `<audio>` element to play an OGG
 
 ```html
 <!-- Simple audio playback -->
-<audio
-  src="AudioTest.ogg"
-  autoplay>
+<audio src="AudioTest.ogg" autoplay>
   Your browser does not support the <code>audio</code> element.
 </audio>
 ```
@@ -200,7 +189,7 @@ This example specifies which audio track to embed using the `src` attribute on a
 
 ```html
 <audio controls>
-  <source src="foo.wav" type="audio/wav">
+  <source src="foo.wav" type="audio/wav" />
   Your browser does not support the <code>audio</code> element.
 </audio>
 ```
@@ -211,9 +200,9 @@ This example includes multiple `<source>` elements. The browser tries to load th
 
 ```html
 <audio controls>
- <source src="foo.opus" type="audio/ogg; codecs=opus"/>
- <source src="foo.ogg" type="audio/ogg; codecs=vorbis"/>
- <source src="foo.mp3" type="audio/mpeg"/>
+  <source src="foo.opus" type="audio/ogg; codecs=opus" />
+  <source src="foo.ogg" type="audio/ogg; codecs=vorbis" />
+  <source src="foo.mp3" type="audio/mpeg" />
 </audio>
 ```
 
@@ -245,11 +234,11 @@ Also it's a good practice to provide some content (such as the direct download l
 
 ```html
 <audio controls>
-  <source src="myAudio.mp3" type="audio/mpeg">
-  <source src="myAudio.ogg" type="audio/ogg">
+  <source src="myAudio.mp3" type="audio/mpeg" />
+  <source src="myAudio.ogg" type="audio/ogg" />
   <p>
-    Your browser doesn't support HTML5 audio.
-    Here is a <a href="myAudio.mp4">link to download the audio</a> instead.
+    Your browser doesn't support HTML5 audio. Here is a
+    <a href="myAudio.mp4">link to download the audio</a> instead.
   </p>
 </audio>
 ```
@@ -324,7 +313,7 @@ Also it's a good practice to provide some content (such as the direct download l
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
-      <td>{{ARIARole("application")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/application_role'><code>application</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 인터페이스</th>
@@ -339,7 +328,7 @@ Also it's a good practice to provide some content (such as the direct download l
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.audio")}}
+{{Compat}}
 
 ## 같이 보기
 

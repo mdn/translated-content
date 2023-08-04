@@ -11,7 +11,7 @@ UDP is suitable for purposes where error checking and correction are either not 
 
 ### 一般知識
 
-- Wikipedia の {{Interwiki("wikipedia", "User Datagram Protocol")}}
+- Wikipedia の [User Datagram Protocol](https://ja.wikipedia.org/wiki/User_Datagram_Protocol)
 
 ### 技術リファレンス
 

@@ -1,30 +1,30 @@
 ---
-title: 500 Error Interno del Servidor
+title: 500 Internal Server Error
 slug: Web/HTTP/Status/500
-tags:
-  - Codigo de Estado
-  - Error del servidor
-  - HTTP
-translation_of: Web/HTTP/Status/500
+l10n:
+  sourceCommit: e5c97c58a289fb4d3b200174bdcf597bf3c14df4
 ---
-El código de respuesta **`500 Error Interno del Servidor`** del Protocolo de Transferencia de Hipertexto (HTTP) indica que el servidor encontró una condición inesperada que le impide completar la petición.
 
-Este código es una respuesta genérica. Usualmente, esto indica que el servidor no puede encontrar un mejor código de respuesta del tipo 5xx. En ocasiones, los administradores del servidor registran respuestas como el código de estado 500 con más detalles sobre la petición en aras de evitar que el error vuelva a ocurrir en el futuro.
+{{HTTPSidebar}}
+
+El código de respuesta de error del servidor del Protocolo de transferencia de hipertexto (HTTP) **`500 Internal Server Error`** (Error interno de servidor 500) indica que el servidor encontró una condición inesperada que le impidió cumplir con la solicitud.
+
+Esta respuesta de error es una respuesta genérica "atrapa todo". Por lo general, esto indica que el servidor no puede encontrar un mejor código de error 5xx para responder. A veces, los administradores del servidor registran respuestas de error como el código de estado 500 con más detalles sobre la solicitud para evitar que el error vuelva a ocurrir en el futuro.
 
 ## Estado
 
-```
-500 Error Interno del Servidor
+```http
+500 Internal Server Error
 ```
 
 ## Especificaciones
 
-| Especificación                                                                   | Titulo                                                                     |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| {{RFC("7231", "500 Error Interno del Servidor" , "6.6.1")}} | Protocolo de Transferencia de Hipertexto (HTTP/1.1): Semántica y Contenido |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-La información que se muestra a continuación se ha extraído del MDN de GitHub. (<https://github.com/mdn/browser-compat-data>).
+{{Compat}}
 
-{{Compat("http.status.500")}}
+## Véase también
+
+- [Definiciones de código de estado HTTP](https://httpwg.org/specs/rfc9110.html#status.500)

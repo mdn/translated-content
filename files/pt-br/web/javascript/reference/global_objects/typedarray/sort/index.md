@@ -1,8 +1,8 @@
 ---
 title: TypedArray.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 ---
+
 {{JSRef}}
 
 O método **`sort()`** ordena os elementos de uma matriz tipada _no local_ e retorna a matriz ordenada. Esse método tem o mesmo algoritmo que {{jsxref("Array.prototype.sort()")}}_._ _TypedArray_ é uma das maneiras de [escrever matrizes](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
@@ -48,9 +48,9 @@ numbers.sort(compareNumbers);
 
 ## Especificações
 
-| Especificações                                                                                                       | Status                       | Comentários        |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}} | {{Spec2('ES2015')}}     | Definição inicial. |
+| Especificações                                                                           | Status               | Comentários        |
+| ---------------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

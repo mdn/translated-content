@@ -1,7 +1,6 @@
 ---
 title: Format Web Video Text Tracks (WebVTT)
 slug: Web/API/WebVTT_API
-translation_of: Web/API/WebVTT_API
 ---
 
 {{DefaultAPISidebar("WebVTT")}}
@@ -175,13 +174,13 @@ video::cue(b) {
 }
 ```
 
-Avec ce fragment CSS, tous les sous-titres des éléments vidéo utilisent un dégradé linéaire de gris comme arrière-plan et une couleur de premier plan `"papayawhip"`.  De plus, les textes mis en gras avec l'élément [`<b>`](/fr/docs/Web/HTML/Element/b) auront la couleur `"peachpuff"`.
+Avec ce fragment CSS, tous les sous-titres des éléments vidéo utilisent un dégradé linéaire de gris comme arrière-plan et une couleur de premier plan `"papayawhip"`. De plus, les textes mis en gras avec l'élément [`<b>`](/fr/docs/Web/HTML/Element/b) auront la couleur `"peachpuff"`.
 
 Le fragment de HTML suivant s'occupe quant à lui de gérer l'affichage du média.
 
 ```html
 <video controls autoplay src="video.webm">
- <track default src="track.vtt">
+  <track default src="track.vtt" />
 </video>
 ```
 
@@ -227,8 +226,12 @@ Transcrit par Célestes™
 ```
 
 ```css
-::cue(#\31) { color: lime; }
-::cue(#crédit\ de\ transcription) { color: red; }
+::cue(#\31) {
+  color: lime;
+}
+::cue(#crédit\ de\ transcription) {
+  color: red;
+}
 ```
 
 Le positionnement des pistes de texte est également pris en charge en incluant les informations de positionnement après l'horodatage, comme on peut le voir dans cet exemple (voir [les paramètres des répliques](#paramètres_des_répliques) pour plus d'informations)&nbsp;:
@@ -618,7 +621,7 @@ Il existe plusieurs balises, telles que `<bold>`, qui peuvent être utilisées. 
 
 - **Balise d'horodatage**
 
-  - L'horodatage porté par cette balise doit être supérieur à celui du début de la réplique, supérieur aux horodatages des balises précédentes pour cette réplique, et inférieur à l'horodatage de fin. Le *texte actif* correspond au texte situé entre l'horodatage et le prochain horodatage (ou l'horodatage de fin de la réplique s'il n'y en a plus d'autres). Tout texte situé avant le *texte actif* correspondra à du *texte précédent*. Tout texte situé après le *texte actif* correspondra à du *texte futur*. Cela permet de représenter des sous-titres comme ceux utilisés au karaoké.
+  - L'horodatage porté par cette balise doit être supérieur à celui du début de la réplique, supérieur aux horodatages des balises précédentes pour cette réplique, et inférieur à l'horodatage de fin. Le _texte actif_ correspond au texte situé entre l'horodatage et le prochain horodatage (ou l'horodatage de fin de la réplique s'il n'y en a plus d'autres). Tout texte situé avant le _texte actif_ correspondra à du _texte précédent_. Tout texte situé après le _texte actif_ correspondra à du _texte futur_. Cela permet de représenter des sous-titres comme ceux utilisés au karaoké.
 
   ```plain
   1
@@ -670,7 +673,7 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
 
 - **Balise ruby** (`<ruby></ruby>`)
 
-  - Utilisée avec les balises de texte ruby afin d'afficher les [annotations ruby](https://fr.wikipedia.org/wiki/Ruby_(linguistique)) (des caractères d'annotation situés au-dessus des autres caractères).
+  - Utilisée avec les balises de texte ruby afin d'afficher les [annotations ruby](<https://fr.wikipedia.org/wiki/Ruby_(linguistique)>) (des caractères d'annotation situés au-dessus des autres caractères).
 
   ```html
   <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
@@ -678,7 +681,7 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
 
 - **Balise de texte ruby** (`<rt></rt>`)
 
-  - Utilisée avec les balises ruby afin d'afficher les [annotations ruby](https://fr.wikipedia.org/wiki/Ruby_(linguistique)) (des caractères d'annotation situés au-dessus des autres caractères).
+  - Utilisée avec les balises ruby afin d'afficher les [annotations ruby](<https://fr.wikipedia.org/wiki/Ruby_(linguistique)>) (des caractères d'annotation situés au-dessus des autres caractères).
 
   ```html
   <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
@@ -721,15 +724,15 @@ En plusieurs étapes, il est possible d'écrire un fichier WebVTT simple. Pour c
 1. Ouvrir un éditeur de texte.
 2. La première ligne d'un fichier WebVTT est standardisée et on écrira donc ce qui suit sur la toute première ligne&nbsp;:
 
-    ```plain
-    WEBVTT
-    ```
+   ```plain
+   WEBVTT
+   ```
 
 3. La deuxième ligne est vide et à la troisième ligne, on indique le moment où la première réplique doit être affichée. Ainsi, si la première réplique doit s'afficher après 1 seconde et disparaître après 5 secondes de vidéo, on écrira&nbsp;:
 
-    ```plain
-    00:01.000 --> 00:05.000
-    ```
+   ```plain
+   00:01.000 --> 00:05.000
+   ```
 
 4. Su la ligne suivante, on écrit le texte correspondant (qui sera donc affiché entre la première et la cinquième seconde, incluses).
 5. En répétant les étapes 3 et 4, on pourra ainsi composer un fichier WebVTT complet pour un fichier audio ou vidéo.
@@ -763,24 +766,8 @@ Où `p` et `a` sont les balises utilisées en HTML pour représenter les paragra
 
 ## Spécifications
 
-| Spécification                                                                  |
-| ------------------------------------------------------------------------------ |
-| [WebVTT&nbsp;: le format Web Video Text Tracks](https://w3c.github.io/webvtt/) |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Interface `VTTCue`
-
-{{Compat("api.VTTCue", 0)}}
-
-### Interface `TextTrack`
-
-{{Compat("api.TextTrack", 0)}}
-
-### Notes
-
-Avant Firefox 50, l'énumération `AlignSetting` (correspondant aux valeurs possibles de [`VTTCue.align`](/fr/docs/Web/API/VTTCue/align)) incluait par erreur la valeur `"middle"` au lieu de `"center"`. Ceci a été corrigé.
-
-WebVTT a été implémenté par Firefox 24 derrière la préférence `media.webvtt.enabled`, qui était désactivée par défaut. Cette fonctionnalité pouvait être activée en passant la préférence à `true`. WebVTT est activé par défaut à partir de Firefox 31 et peut être désactivé en passant la valeur de la préférence à `false`.
-
-Avant Firefox 58, le mot-clé `REGION` créait des objets [`VTTRegion`](/fr/docs/Web/API/VTTRegion), mais qui n'étaient pas utilisés. Firefox 58 prend complètement en charge `VTTRegion` et son utilisation&nbsp;; toutefois cette fonctionnalité est désactivée par défaut derrière la préférence `media.webvtt.regions.enabled` qu'il faut passer à `true` pour l'activer avec Firefox 58. Les régions sont activées par défaut à partir de Firefox 59 (voir les bugs [1338030](https://bugzilla.mozilla.org/show_bug.cgi?id=1338030) et [1415805](https://bugzilla.mozilla.org/show_bug.cgi?id=1415805)).
+{{Compat}}

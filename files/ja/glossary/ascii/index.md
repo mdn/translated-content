@@ -9,4 +9,4 @@ slug: Glossary/ASCII
 
 ### 基礎知識
 
-- Wikipedia 上の記事 「{{Interwiki("wikipedia", "ASCII")}}」
+- Wikipedia 上の記事 「[ASCII](https://ja.wikipedia.org/wiki/ASCII)」

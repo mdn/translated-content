@@ -3,6 +3,8 @@ title: 同步
 slug: Glossary/Synchronous
 ---
 
+{{GlossarySidebar}}
+
 _同步_（Synchronous）是指各方在接收（必要的話還會執行與回覆）訊息時，立刻（或盡可能接近立刻）執行的即時通訊。
 
 以人類通訊來比喻就是電話：在電話通訊時，你通常會立刻回覆對方的訊息。

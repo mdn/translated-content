@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createBufferSource()
 slug: Web/API/BaseAudioContext/createBufferSource
-original_slug: Web/API/AudioContext/createBufferSource
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -82,4 +81,4 @@ button.onclick = function() {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

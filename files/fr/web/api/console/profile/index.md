@@ -1,13 +1,6 @@
 ---
 title: Console.profile()
-slug: Web/API/Console/profile
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Profils
-  - débogage
-translation_of: Web/API/Console/profile
+slug: Web/API/console/profile
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
@@ -33,7 +26,7 @@ console.profile(profileName);
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.profile")}}
+{{Compat}}
 
 ## Voir aussi
 

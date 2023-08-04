@@ -15,35 +15,42 @@ slug: Web/API/Media_Capture_and_Streams_API
 
 MediaStream 对象有着单一的输入和输出。由 [`getUserMedia()`](/zh-CN/docs/Web/API/MediaDevices/getUserMedia) 创建的 MediaStream 对象是在本地借助用户相机和麦克风的源输入。非本地的 `MediaStream` 代表了一个媒体元素，像是{{HTMLElement("video")}} 元素或是 {{HTMLElement("audio")}}元素，一般是源自网络的流，并通过 WebRTC [PeerConnection API](/zh-CN/docs/WebRTC/PeerConnection_API) 或使用 [Web Audio API](/zh-CN/docs/Web_Audio_API) 获得{{domxref("MediaStreamAudioSourceNode")}} 元素。`MediaStream` 对象的输出能链接到一个**用户。** 它可以是一个媒体元素，像是 `<audio>` 或者 `<video>`， the WebRTC [PeerConnection API](/zh-CN/docs/WebRTC/PeerConnection_API) 或是 [Web Audio API](/zh-CN/docs/Web_Audio_API) {{domxref("MediaStreamAudioDestinationNode")}}。
 
-## 参考
+## 接口
 
-在这些参考文章中，您将找到构成 Media Capture 和 Streams API 的每个接口和事件需要了解的基本信息。
+在这些参考文章中，您将找到构成 Media Capture 和 Streams API 的每个接口需要了解的基本信息。
 
-- {{event("addtrack")}} (event)
-- {{domxref("AudioStreamTrack")}}
-- {{domxref("BlobEvent")}}
-- {{event("ended (MediaStream)")}} (event)
-- {{event("ended (MediaStreamTrack)")}} (event)
+- {{domxref("CanvasCaptureMediaStreamTrack")}}
+- {{domxref("InputDeviceInfo")}}
+- {{domxref("MediaDeviceKind")}}
+- {{domxref("MediaDeviceInfo")}}
+- {{domxref("MediaDevices")}}
 - {{domxref("MediaStream")}}
-- {{domxref("MediaStreamConstraints")}}
+- {{domxref("MediaStreamEvent")}}
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStreamTrackEvent")}}
+- {{domxref("MediaTrackCapabilities")}}
 - {{domxref("MediaTrackConstraints")}}
-- {{event("muted")}} (event)
+- {{domxref("MediaTrackSettings")}}
+- {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("NavigatorUserMedia")}}
 - {{domxref("NavigatorUserMediaError")}}
-- {{event("overconstrained")}} (event)
-- {{event("removetrack")}} (event)
-- {{event("started")}} (event)
-- {{event("unmuted")}} (event)
+- {{domxref("OverconstrainedError")}}
 - {{domxref("URL")}}
-- {{domxref("VideoStreamTrack")}}
 
-## 浏览器支持
+## 事件
+
+- {{domxref("MediaStream/addtrack_event", "addtrack")}}
+- {{domxref("MediaStreamTrack/ended_event", "ended")}}
+- {{domxref("MediaStreamTrack/mute_event", "mute")}}
+- {{domxref("MediaStreamTrack.overconstrained_event", "overconstrained")}}
+- {{domxref("MediaStream/removetrack_event", "removetrack")}}
+- {{domxref("MediaStreamTrack/unmute_event", "unmute")}}
+
+## 浏览器兼容性
 
 {{Compat}}
 
-## See Also
+## 参见
 
 - [WebRTC](/zh-CN/docs/WebRTC) - API 介绍页
 - [getUserMedia()](/zh-CN/docs/Web/API/MediaDevices/getUserMedia)

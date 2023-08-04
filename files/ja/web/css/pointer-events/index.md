@@ -117,12 +117,7 @@ a[href="http://example.com"] {
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                     | 備考     |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('SVG2', 'interact.html#PointerEventsProperty', 'pointer-events')}} | {{Spec2('SVG2')}} |          |
-| {{SpecName('SVG1.1', 'interact.html#PointerEventsProperty', 'pointer-events')}} | {{Spec2('SVG1.1')}} | 初回定義 |
-
-このプロパティは HTML 要素に対する拡張であり、 CSS Basic User Interface Module Level 3 の草稿に記述がありますが、現在では同標準の [Level 4](http://wiki.csswg.org/spec/css4-ui#pointer-events) に組み込まれています。
+{{Specifications}}
 
 ## ブラウザーの互換性
 

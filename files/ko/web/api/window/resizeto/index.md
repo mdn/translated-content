@@ -1,14 +1,8 @@
 ---
 title: Window.resizeTo()
 slug: Web/API/Window/resizeTo
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Reference
-  - Window
-translation_of: Web/API/Window/resizeTo
 ---
+
 {{APIRef}}
 
 **`Window.resizeTo()`** 메서드는 동적으로 창의 크기를 변경합니다.
@@ -16,7 +10,7 @@ translation_of: Web/API/Window/resizeTo
 ## 구문
 
 ```js
-window.resizeTo(width, height)
+window.resizeTo(width, height);
 ```
 
 ### 매개변수
@@ -32,10 +26,7 @@ window.resizeTo(width, height)
 
 ```js
 function quarter() {
-  window.resizeTo(
-    window.screen.availWidth / 2,
-    window.screen.availHeight / 2
-  );
+  window.resizeTo(window.screen.availWidth / 2, window.screen.availHeight / 2);
 }
 ```
 

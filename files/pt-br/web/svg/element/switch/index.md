@@ -1,12 +1,8 @@
 ---
 title: switch
 slug: Web/SVG/Element/switch
-tags:
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/switch
 ---
+
 {{SVGRef}}
 
 O elemento `switch` avalia os atributos {{SVGAttr("requiredFeatures")}}, {{SVGAttr("requiredExtensions")}} e o {{SVGAttr("systemLanguage")}} diretamente nos seus elementos filhos em ordem e, em seguida, processa e renderiza o primeiro filho que possua este atributo definido como verdadeiro. Todos os outros serão ignorados e, portanto, não renderizados. Se o elemento filho é um elemento recipiente como o {{SVGElement("g")}}, então toda a subárvore será ou processada/renderizada ou ignorada/não renderizada.

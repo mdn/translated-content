@@ -1,11 +1,8 @@
 ---
-title: ':left'
+title: ":left"
 slug: Web/CSS/:left
-tags:
-  - Вёрстка
-  - Псевдоклассы
-translation_of: Web/CSS/:left
 ---
+
 {{ CSSRef() }}
 
 [Псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:left`** используется с [at-правилом](/ru/docs/Web/CSS/At-rule) {{cssxref("@page")}}, предоставляет все левые страницы печатного документа.

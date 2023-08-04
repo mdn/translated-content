@@ -1,14 +1,9 @@
 ---
 title: <figure>
 slug: Web/HTML/Element/figure
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-translation_of: Web/HTML/Element/figure
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<figure>` 요소**는 독립적인 콘텐츠를 표현합니다. {{htmlelement("figcaption")}} 요소를 사용해 설명을 붙일 수 있습니다. 피규어, 설명, 콘텐츠는 하나의 단위로 참조됩니다.
 
@@ -63,7 +58,7 @@ The source for this interactive example is stored in a GitHub repository. If you
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -91,15 +86,15 @@ The source for this interactive example is stored in a GitHub repository. If you
 <!-- Just an image -->
 <figure>
   <img
-  src="https://developer.mozilla.org/static/img/favicon144.png"
-  alt="A robotic monster over the letters MDN.">
+    src="https://developer.mozilla.org/static/img/favicon144.png"
+    alt="A robotic monster over the letters MDN." />
 </figure>
 
 <!-- Image with a caption -->
 <figure>
   <img
-  src="https://developer.mozilla.org/static/img/favicon144.png"
-  alt="A robotic monster over the letters MDN.">
+    src="https://developer.mozilla.org/static/img/favicon144.png"
+    alt="A robotic monster over the letters MDN." />
   <figcaption>MDN Logo</figcaption>
 </figure>
 ```
@@ -132,8 +127,10 @@ function NavigatorExample() {
 ```html
 <figure>
   <figcaption><cite>Edsger Dijkstra:</cite></figcaption>
-  <blockquote>If debugging is the process of removing software bugs,
-  then programming must be the process of putting them in.</blockquote>
+  <blockquote>
+    If debugging is the process of removing software bugs, then programming must
+    be the process of putting them in.
+  </blockquote>
 </figure>
 ```
 
@@ -144,14 +141,12 @@ function NavigatorExample() {
 ```html
 <figure>
   <p style="white-space:pre">
-Bid me discourse, I will enchant thine ear,
-  Or like a fairy trip upon the green,
-Or, like a nymph, with long dishevell'd hair,
-  Dance on the sands, and yet no footing seen:
-Love is a spirit all compact of fire,
-  Not gross to sink, but light, and will aspire.</p>
-  <figcaption><cite>Venus and Adonis</cite>,
-    by William Shakespeare</figcaption>
+    Bid me discourse, I will enchant thine ear, Or like a fairy trip upon the
+    green, Or, like a nymph, with long dishevell'd hair, Dance on the sands, and
+    yet no footing seen: Love is a spirit all compact of fire, Not gross to
+    sink, but light, and will aspire.
+  </p>
+  <figcaption><cite>Venus and Adonis</cite>, by William Shakespeare</figcaption>
 </figure>
 ```
 
@@ -163,7 +158,7 @@ Love is a spirit all compact of fire,
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.figure")}}
+{{Compat}}
 
 ## 같이 보기
 

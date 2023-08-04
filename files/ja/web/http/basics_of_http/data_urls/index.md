@@ -1,7 +1,6 @@
 ---
 title: データ URL
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
-original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
 
 {{HTTPSidebar}}
@@ -39,7 +38,7 @@ Base64 はバイナリからテキストへのエンコード方法の集まり�
 
 ### Javascript でのエンコード
 
-Web API には、 Base64 をエンコードまたはデコードするためのネイティブメソッド、 [Base64 encoding and decoding](/ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) があります。
+Web API には、 Base64 をエンコードまたはデコードするためのネイティブメソッド、 [Base64](/ja/docs/Glossary/Base64) があります。
 
 ### Unix システムでのエンコード
 
@@ -112,7 +111,7 @@ lots of text...<p><a name="bottom">bottom</a>?arg=val
 
 ## 関連情報
 
-- [Base64 のエンコードとデコード](/ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)
+- [Base64](/ja/docs/Glossary/Base64)
 - [パーセントエンコーディング](/ja/docs/Glossary/percent-encoding)
 - {{domxref("WindowBase64.atob","atob()")}}
 - {{domxref("WindowBase64.btoa","btoa()")}}

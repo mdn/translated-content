@@ -1,9 +1,8 @@
 ---
 title: Uso de atributos de datos
 slug: Learn/HTML/Howto/Use_data_attributes
-translation_of: Learn/HTML/Howto/Use_data_attributes
-original_slug: Learn/HTML/como/Usando_atributos_de_datos
 ---
+
 {{LearnSidebar}}
 
 [HTML5](/es/docs/Web/Guide/HTML/HTML5) está diseñado de forma tal que sea fácil extender los datos asociados a un elemento en particular sin necesidad de que tengan un significado definido. Los atributos [`data-*`](/es/docs/Web/HTML/Global_attributes#attr-dataset) permiten almacenar información adicional sobre un elemento HTML cualquiera sin tener que recurrir a artilugios tales como la utilización de atributos no estándar, propiedades adicionales en el DOM o {{domxref("Node.setUserData()")}}.
@@ -18,7 +17,7 @@ La sintáxis es simple. Un atributo cualquiera cuyo nombre comience con `data-`e
   data-columns="3"
   data-index-number="12314"
   data-parent="cars">
-...
+  ...
 </article>
 ```
 
@@ -29,11 +28,11 @@ Leer los valores de estos atributos en [JavaScript](/es/docs/Web/JavaScript) tam
 Para obtener un atributo `data` a través del `dataset` del objeto, obtenga la propiedad por la parte del nombre del atributo despues de `data-` (tenga en cuenta que los guiones son convertidos en camelCase).
 
 ```js
-var article = document.getElementById('electriccars');
+var article = document.getElementById("electriccars");
 
-article.dataset.columns // "3"
-article.dataset.indexNumber // "12314"
-article.dataset.parent // "cars"
+article.dataset.columns; // "3"
+article.dataset.indexNumber; // "12314"
+article.dataset.parent; // "cars"
 ```
 
 Cada propiedad es una cadena y se puede leer y escribir. En el caso anterior, establecer `article.dataset.columns = 5` cambiaría ese atributo a `"5"`.
@@ -51,10 +50,10 @@ article::before {
 También puede usar los [selectores de atributos](/es/docs/Web/CSS/Attribute_selectors) en CSS para cambiar los estilos de acuerdo a las priopiedades de datos:
 
 ```css
-article[data-columns='3'] {
+article[data-columns="3"] {
   width: 400px;
 }
-article[data-columns='4'] {
+article[data-columns="4"] {
   width: 600px;
 }
 ```

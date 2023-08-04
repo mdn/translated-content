@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.moveTo()
 slug: Web/API/CanvasRenderingContext2D/moveTo
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Referencia
-  - metodo
-translation_of: Web/API/CanvasRenderingContext2D/moveTo
 ---
+
 {{APIRef}}
 
 O método **`CanvasRenderingContext2D.moveTo()`** da API Canvas 2D move o ponto inicial de um novo sub-caminho (sub-path) para as coordenadas `(x, y)`.
@@ -41,8 +35,8 @@ Isto é só um simples trecho de código que usa o método `moveTo` para mover a
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.moveTo(50, 50);
@@ -62,7 +56,8 @@ Edite o código abaixo e veja as alterações instantâneas no canvas:
 ctx.beginPath();
 ctx.moveTo(50,50);
 ctx.lineTo(200, 50);
-ctx.stroke()</textarea>
+ctx.stroke()</textarea
+>
 ```
 
 ```js hidden
@@ -78,14 +73,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -95,13 +90,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Especificações
 
-| Especificação                                                                                                                            | Estado                           | Comentário |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-moveto", "CanvasRenderingContext2D.moveTo")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CanvasRenderingContext2D.moveTo")}}
+{{Compat}}
 
 ## Veja também
 

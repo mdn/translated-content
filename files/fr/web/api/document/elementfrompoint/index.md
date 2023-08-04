@@ -1,15 +1,11 @@
 ---
 title: Document.elementFromPoint()
 slug: Web/API/Document/elementFromPoint
-translation_of: Web/API/DocumentOrShadowRoot/elementFromPoint
-translation_of_original: Web/API/Document/elementFromPoint
-original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint
-browser-compat: api.Document.elementFromPoint
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`elementFromPoint()`**, rattachée à l'interface  [`Document`](/fr/docs/Web/API/Document), renvoie un objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément de plus haut niveau situé aux coordonnées indiquées en arguments (relativement à la zone d'affichage (<i lang="en">viewport</i>)).
+La méthode **`elementFromPoint()`**, rattachée à l'interface [`Document`](/fr/docs/Web/API/Document), renvoie un objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément de plus haut niveau situé aux coordonnées indiquées en arguments (relativement à la zone d'affichage (<i lang="en">viewport</i>)).
 
 Si l'élément placé au point indiqué appartient à un autre document (par exemple le document situé dans un élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)), c'est l'élément parent (par exemple l'élément `<iframe>` même) qui est renvoyé. Si l'élément situé au point indiqué est du contenu anonyme (par exemple les barres de défilement d'une boîte de texte), c'est le premier élément ancêtre non anonyme (par exemple la boîte de texte) qui est renvoyée.
 
@@ -24,7 +20,7 @@ Pour connaître la position précise à l'intérieur de l'élément, on utiliser
 ## Syntaxe
 
 ```js
-elementFromPoint(x, y)
+elementFromPoint(x, y);
 ```
 
 ### Paramètres

@@ -9,4 +9,4 @@ slug: Glossary/CRUD
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "CRUD")}}
+- Wikipedia の [CRUD](https://ja.wikipedia.org/wiki/CRUD)

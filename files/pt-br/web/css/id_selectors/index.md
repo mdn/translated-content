@@ -1,20 +1,11 @@
 ---
 title: Seletores de ID
 slug: Web/CSS/ID_selectors
-tags:
-  - Beginner
-  - CSS
-  - CSS Reference
-  - Iniciante
-  - Referencia
-  - Referencia CSS
-  - Selectors
-  - Seletores
-translation_of: Web/CSS/ID_selectors
 ---
+
 {{CSSRef("Selectors")}}
 
-Em um documento HTML, os seletores de ID do CSS selecionam um elemento baseado no conteúdo de seu atributo {{htmlattrxref("ID")}}, o qual deve ser exatamente igual ao valor dado ao seletor.
+Em um documento HTML, os seletores de ID do CSS selecionam um elemento baseado no conteúdo de seu atributo [`ID`](/pt-BR/docs/Web/HTML/Global_attributes#ID), o qual deve ser exatamente igual ao valor dado ao seletor.
 
 ## Sintaxe
 

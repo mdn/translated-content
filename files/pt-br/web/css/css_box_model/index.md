@@ -1,17 +1,8 @@
 ---
 title: CSS Box Model
-slug: Web/CSS/CSS_Box_Model
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Reference
-  - Modelo de Caixa CSS
-  - NeedsTranslation
-  - Overview
-  - Referencia CSS
-  - TopicStub
-translation_of: Web/CSS/CSS_Box_Model
+slug: Web/CSS/CSS_box_model
 ---
+
 {{CSSRef}}
 
 **CSS Box Model (Modelo de Caixa CSS)** é um módulo de CSS que define caixas retangulares, incluindo preenchimento (padding) e margem (margin), que são gerados por elementos e dispostos de acordo com o [modelo de formato visual](/pt-BR/docs/Web/CSS/Visual_formatting_model).
@@ -71,8 +62,8 @@ translation_of: Web/CSS/CSS_Box_Model
 
 ## Especificações
 
-| Especificação                                | Situação                     | Comentário         |
-| -------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("CSS3 Box")}}             | {{Spec2("CSS3 Box")}} |                    |
-| {{SpecName("CSS2.1", "box.html")}} | {{Spec2("CSS2.1")}}     |                    |
-| {{SpecName("CSS1")}}                 | {{Spec2("CSS1")}}     | Initial definition |
+| Especificação                      | Situação              | Comentário         |
+| ---------------------------------- | --------------------- | ------------------ |
+| {{SpecName("CSS3 Box")}}           | {{Spec2("CSS3 Box")}} |                    |
+| {{SpecName("CSS2.1", "box.html")}} | {{Spec2("CSS2.1")}}   |                    |
+| {{SpecName("CSS1")}}               | {{Spec2("CSS1")}}     | Initial definition |

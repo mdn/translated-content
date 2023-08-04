@@ -1,14 +1,6 @@
 ---
 title: Reflect.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/setPrototypeOf
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ la méthode statique **`Reflect.setPrototypeOf()`** est semblable à la méthode
 ## Syntaxe
 
 ```js
-Reflect.setPrototypeOf(cible, prototype)
+Reflect.setPrototypeOf(cible, prototype);
 ```
 
 ### Paramètres
@@ -66,14 +58,11 @@ Reflect.setPrototypeOf(target, proto); // false
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-reflect.setprototypeof', 'Reflect.setPrototypeOf')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.setprototypeof', 'Reflect.setPrototypeOf')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Reflect.setPrototypeOf")}}
+{{Compat}}
 
 ## Voir aussi
 

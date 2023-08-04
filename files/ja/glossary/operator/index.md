@@ -9,7 +9,7 @@ slug: Glossary/Operator
 
 ### 一般的な知識
 
-- Wikipedia の{{Interwiki("wikipedia", "ja:演算子")}}の記事
+- Wikipedia の[ja:演算子](https://ja.wikipedia.org/wiki/ja:演算子)の記事
 
 ### 技術リファレンス
 

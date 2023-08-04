@@ -5,7 +5,7 @@ slug: Web/API/Element/insertAdjacentElement
 
 {{APIRef("DOM")}}
 
-**`insertAdjacentElement()` **方法将一个给定的元素节点插入到相对于被调用的元素的给定的一个位置。
+**`insertAdjacentElement()`** 方法将一个给定的元素节点插入到相对于被调用的元素的给定的一个位置。
 
 ## 语法
 
@@ -43,9 +43,9 @@ element.insertAdjacentElement(position, element);
 ```html
 <!-- beforebegin -->
 <p>
-<!-- afterbegin -->
-foo
-<!-- beforeend -->
+  <!-- afterbegin -->
+  foo
+  <!-- beforeend -->
 </p>
 <!-- afterend -->
 ```
@@ -55,17 +55,17 @@ foo
 ## 例子
 
 ```js
-beforeBtn.addEventListener('click', function() {
-  var tempDiv = document.createElement('div');
+beforeBtn.addEventListener("click", function () {
+  var tempDiv = document.createElement("div");
   tempDiv.style.backgroundColor = randomColor();
-  activeElem.insertAdjacentElement('beforebegin',tempDiv);
+  activeElem.insertAdjacentElement("beforebegin", tempDiv);
   setListener(tempDiv);
 });
 
-afterBtn.addEventListener('click', function() {
-  var tempDiv = document.createElement('div');
+afterBtn.addEventListener("click", function () {
+  var tempDiv = document.createElement("div");
   tempDiv.style.backgroundColor = randomColor();
-  activeElem.insertAdjacentElement('afterend',tempDiv);
+  activeElem.insertAdjacentElement("afterend", tempDiv);
   setListener(tempDiv);
 });
 ```
@@ -76,7 +76,7 @@ afterBtn.addEventListener('click', function() {
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

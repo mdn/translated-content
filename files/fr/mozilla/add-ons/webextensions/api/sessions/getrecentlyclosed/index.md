@@ -1,17 +1,6 @@
 ---
 title: sessions.getRecentlyClosed()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getRecentlyClosed
-  - sessions
-translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed
 ---
 
 {{AddonSidebar()}}
@@ -24,8 +13,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var gettingSessions = browser.sessions.getRecentlyClosed(
-  filter             // optional object
-)
+  filter, // optional object
+);
 ```
 
 ### Paramètres
@@ -35,13 +24,13 @@ var gettingSessions = browser.sessions.getRecentlyClosed(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Cela sera rempli avec un ensemble d'objets {{WebExtAPIRef("sessions.Session", "Session")}}, un pour chacun des derniers onglets fermés ou des fenêtres dans la session de navigation actuelle, jusqu'à  {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}} ou le nombre inclus dans l'argument du filtre, le plus petit qui soit. Le tableau est donné à l'inverse de l'ordre dans lequel les onglets ou fenêtres ont été fermés, de sorte que le plus récemment fermé sera à l'index 0.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Cela sera rempli avec un ensemble d'objets {{WebExtAPIRef("sessions.Session", "Session")}}, un pour chacun des derniers onglets fermés ou des fenêtres dans la session de navigation actuelle, jusqu'à {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}} ou le nombre inclus dans l'argument du filtre, le plus petit qui soit. Le tableau est donné à l'inverse de l'ordre dans lequel les onglets ou fenêtres ont été fermés, de sorte que le plus récemment fermé sera à l'index 0.
 
 Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.getRecentlyClosed")}}
+{{Compat}}
 
 ## Exemples
 
@@ -50,7 +39,7 @@ Le code restaure la session la plus récemment fermée, qu'il s'agisse d'un ongl
 ```js
 function restoreMostRecent(sessionInfos) {
   if (!sessionInfos.length) {
-    console.log("No sessions found")
+    console.log("No sessions found");
     return;
   }
   let sessionInfo = sessionInfos[0];
@@ -65,9 +54,9 @@ function onError(error) {
   console.log(error);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var gettingSessions = browser.sessions.getRecentlyClosed({
-    maxResults: 1
+    maxResults: 1,
   });
   gettingSessions.then(restoreMostRecent, onError);
 });

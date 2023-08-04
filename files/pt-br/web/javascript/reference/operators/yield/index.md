@@ -1,15 +1,8 @@
 ---
 title: yield
 slug: Web/JavaScript/Reference/Operators/yield
-tags:
-  - ECMAScript 2015
-  - Generators
-  - Iterator
-  - JavaScript
-  - Operador
-  - Operator
-translation_of: Web/JavaScript/Reference/Operators/yield
 ---
+
 {{jsSidebar("Operators")}}
 
 A palavra-chave `yield` é usada para pausar e resumir uma generator function ({{jsxref("Statements/function*", "function*")}} or [generator function legada](/pt-BR/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)).
@@ -49,8 +42,7 @@ O código seguinte é a declaração de um exemplo de uma generator function.
 ```js
 function* foo() {
   var index = 0;
-  while (index <= 2)
-    yield index++;
+  while (index <= 2) yield index++;
 }
 ```
 
@@ -66,9 +58,9 @@ console.log(iterator.next()); // { value: undefined, done: true }
 
 ## Especificações
 
-| Especificação                                    | Situação                     | Comentário         |
-| ------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#', 'Yield')}} | {{Spec2('ES2015')}}     | Definição inicial. |
+| Especificação                         | Situação             | Comentário         |
+| ------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES2015', '#', 'Yield')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
 | {{SpecName('ESDraft', '#', 'Yield')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores
@@ -77,8 +69,8 @@ console.log(iterator.next()); // { value: undefined, done: true }
 
 ## Notas específicas do Firefox
 
-- A partir do Gecko 29 {{geckoRelease(29)}}, uma generator function completada não invoca mais um {{jsxref("TypeError")}} "generator has already finished". Ao invés, isso retorna um objeto `IteratorResult` como `{ value: undefined, done: true }` ({{bug(958951)}}).
-- A partir do Gecko 33 {{geckoRelease(33)}}, a análise (parsing) de uma expressão `yield` foi atualizada para se conformar com a especificação do ES2015 ({{bug(981599)}}):
+- A partir do Gecko 29, uma generator function completada não invoca mais um {{jsxref("TypeError")}} "generator has already finished". Ao invés, isso retorna um objeto `IteratorResult` como `{ value: undefined, done: true }` ([Erro do Firefox 958951](https://bugzil.la/958951)).
+- A partir do Gecko 33, a análise (parsing) de uma expressão `yield` foi atualizada para se conformar com a especificação do ES2015 ([Erro do Firefox 981599](https://bugzil.la/981599)):
 
   - A expressão após a palavra-chave `yield` é opcional e omitir isso não invoca mais um {{jsxref("SyntaxError")}}: `function* foo() { yield; }`
 

@@ -1,7 +1,10 @@
 ---
 title: Introducing asynchronous JavaScript
 slug: Learn/JavaScript/Asynchronous/Introducing
+l10n:
+  sourceCommit: 65b9418c7d0e3a331ac50249adf0024f44789923
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
 
 이 글에선 비동기 프로그래밍이 무엇인지, 왜 필요한지 설명하고 역사상 JavaScript에서 비동기 함수가 구현된 몇 가지 방법에 대해 간략하게 설명 할 것입니다.
@@ -40,7 +43,7 @@ slug: Learn/JavaScript/Asynchronous/Introducing
 아래 코드를 한번 보세요.
 
 ```js
-const name = 'Miriam';
+const name = "Miriam";
 const greeting = `Hello, my name is ${name}!`;
 console.log(greeting);
 // "Hello, my name is Miriam!"
@@ -61,7 +64,7 @@ function makeGreeting(name) {
   return `Hello, my name is ${name}!`;
 }
 
-const name = 'Miriam';
+const name = "Miriam";
 const greeting = makeGreeting(name);
 console.log(greeting);
 // "Hello, my name is Miriam!"
@@ -77,7 +80,7 @@ console.log(greeting);
 
 ```html
 <label for="quota">Number of primes:</label>
-<input type="text" id="quota" name="quota" value="1000000">
+<input type="text" id="quota" name="quota" value="1000000" />
 
 <button id="generate">Generate primes</button>
 <button id="reload">Reload</button>
@@ -87,12 +90,11 @@ console.log(greeting);
 
 ```js
 function generatePrimes(quota) {
-
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }
@@ -110,14 +112,16 @@ function generatePrimes(quota) {
   return primes;
 }
 
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector('#output').textContent = `Finished generating ${quota} primes!`;
+  document.querySelector(
+    "#output",
+  ).textContent = `Finished generating ${quota} primes!`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
-  document.location.reload()
+document.querySelector("#reload").addEventListener("click", () => {
+  document.location.reload();
 });
 ```
 
@@ -133,7 +137,7 @@ document.querySelector('#reload').addEventListener('click', () => {
 
 ```html hidden
 <label for="quota">Number of primes:</label>
-<input type="text" id="quota" name="quota" value="1000000">
+<input type="text" id="quota" name="quota" value="1000000" />
 
 <button id="generate">Generate primes</button>
 <button id="reload">Reload</button>
@@ -143,7 +147,6 @@ Try typing in here immediately after pressing "Generate primes"
 </textarea>
 
 <div id="output"></div>
-
 ```
 
 ```css hidden
@@ -155,12 +158,11 @@ textarea {
 
 ```js hidden
 function generatePrimes(quota) {
-
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }
@@ -178,14 +180,17 @@ function generatePrimes(quota) {
   return primes;
 }
 
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector('#output').textContent = `Finished generating ${quota} primes!`;
+  document.querySelector(
+    "#output",
+  ).textContent = `Finished generating ${quota} primes!`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = 'Try typing in here immediately after pressing "Generate primes"';
+document.querySelector("#reload").addEventListener("click", () => {
+  document.querySelector("#user-input").value =
+    'Try typing in here immediately after pressing "Generate primes"';
   document.location.reload();
 });
 ```
@@ -225,23 +230,27 @@ pre {
 ```
 
 ```js
-const log = document.querySelector('.event-log');
+const log = document.querySelector(".event-log");
 
-document.querySelector('#xhr').addEventListener('click', () => {
-  log.textContent = '';
+document.querySelector("#xhr").addEventListener("click", () => {
+  log.textContent = "";
 
   const xhr = new XMLHttpRequest();
 
-  xhr.addEventListener('loadend', () => {
+  xhr.addEventListener("loadend", () => {
     log.textContent = `${log.textContent}Finished with status: ${xhr.status}`;
   });
 
-  xhr.open('GET', 'https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json');
+  xhr.open(
+    "GET",
+    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
+  );
   xhr.send();
-  log.textContent = `${log.textContent}Started XHR request\n`;});
+  log.textContent = `${log.textContent}Started XHR request\n`;
+});
 
-document.querySelector('#reload').addEventListener('click', () => {
-  log.textContent = '';
+document.querySelector("#reload").addEventListener("click", () => {
+  log.textContent = "";
   document.location.reload();
 });
 ```
@@ -299,14 +308,13 @@ function doStep3(init, callback) {
 }
 
 function doOperation() {
-  doStep1(0, result1 => {
-    doStep2(result1, result2 => {
-      doStep3(result2, result3 => {
+  doStep1(0, (result1) => {
+    doStep2(result1, (result2) => {
+      doStep3(result2, (result3) => {
         console.log(`result: ${result3}`);
       });
     });
   });
-
 }
 
 doOperation();
@@ -319,11 +327,3 @@ doOperation();
 이러한 이유로 대부분의 최신 비동기 API는 콜백을 사용하지 않습니다. 대신 JavaScript에서 비동기 프로그래밍의 토대는 다음에 소개할 {{jsxref("Promise")}} 입니다.
 
 {{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
-
-## 이번 과정
-
-- **Introducing asynchronous JavaScript**
-- [How to use promises](/ko/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Implementing a promise-based API](/ko/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [Introducing workers](/ko/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [Assessment: sequencing animations](/ko/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

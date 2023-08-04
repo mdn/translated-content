@@ -1,13 +1,8 @@
 ---
 title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/NaN
-tags:
-  - JavaScript
-  - Propiedad
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/NaN
-original_slug: Web/JavaScript/Referencia/Objetos_globales/NaN
 ---
+
 {{jsSidebar("Objects")}}
 
 La propiedad global `NaN` es un valor que representa Not-A-Number.

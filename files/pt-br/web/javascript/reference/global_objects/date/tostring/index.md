@@ -1,17 +1,8 @@
 ---
 title: Date.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototipo
-  - Prototype
-  - Referencia
-  - data
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toString
 ---
+
 {{JSRef}}
 
 O método **`toString()`** retorna uma cadeia de caracteres (_string_) representando o objeto {{jsxref("Date")}} especificado.
@@ -78,13 +69,13 @@ O exemplo asseguir atribui o valor de `toString()` de um objeto {{jsxref("Date")
 ```js
 var x = new Date();
 var myVar = x.toString(); // atribui uma string em myVar no mesmo formato que este:
-                          // Mon Sep 08 1998 14:36:22 GMT-0700 (PDT)
+// Mon Sep 08 1998 14:36:22 GMT-0700 (PDT)
 ```
 
 ## Especificações
 
-| Especificação                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ |
+| Especificação                                                                      |
+| ---------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-date.prototype.tostring', 'Date.prototype.toString')}} |
 
 ## Compatibilidade com navegadores

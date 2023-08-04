@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.rect()
 slug: Web/API/CanvasRenderingContext2D/rect
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Referencia
-  - metodo
-translation_of: Web/API/CanvasRenderingContext2D/rect
 ---
+
 {{APIRef}}
 
 O método **`CanvasRenderingContext2D.rect()`** da Canvas 2D API cria um _path_ (trajeto) para um retângulo na posição _(x, y)_, cujo tamanho é determinado pelo _width_ (largura) e _height_ (altura). Esses quatro pontos estão conectados por linhas retas e o _sub-path_ (sub-trajeto) é marcado como fechado, para que você possa `fill (preencher)` ou `stroke (contornar)` o retângulo.
@@ -45,8 +39,8 @@ Isto é somente um simples fragmentode código que usa o método `rect` para cri
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
 ```
@@ -61,7 +55,8 @@ Edite o código abaixo e veja as alterações instantâneas no canvas:
 </div>
 <textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.fill();</textarea>
+ctx.fill();</textarea
+>
 ```
 
 ```js hidden
@@ -77,14 +72,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -94,13 +89,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Especificações
 
-| Especificação                                                                                                                        | Estado                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-rect", "CanvasRenderingContext2D.rect")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CanvasRenderingContext2D.rect")}}
+{{Compat}}
 
 ## Veja também
 

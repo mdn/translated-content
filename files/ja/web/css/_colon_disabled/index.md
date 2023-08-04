@@ -1,5 +1,5 @@
 ---
-title: ':disabled'
+title: ":disabled"
 slug: Web/CSS/:disabled
 ---
 
@@ -16,7 +16,9 @@ input:disabled {
 
 ## 構文
 
-{{csssyntax}}
+```
+:disabled
+```
 
 ## 例
 

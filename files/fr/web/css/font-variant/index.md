@@ -1,8 +1,6 @@
 ---
 title: font-variant
 slug: Web/CSS/font-variant
-translation_of: Web/CSS/font-variant
-browser-compat: css.properties.font-variant
 ---
 
 {{CSSRef}}
@@ -49,7 +47,7 @@ font-variant: unset;
 - `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`
   - : Définit les mots-clés et fonctions relatifs à la propriété détaillée [`font-variant-caps`](/fr/docs/Web/CSS/font-variant-caps).
 - `<numeric-figure-values>`, `<numeric-spacing-values>`, `<numeric-fraction-values>`, `ordinal`, `slashed-zero`
-  - : Définit les mots-clés relatifs à la propriété détaillée [`font-variant-numeric`](/fr/docs/Web/CSS/font-variant-numeric). Les valeurs possibles sont&nbsp;:  `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal` et `slashed-zero`.
+  - : Définit les mots-clés relatifs à la propriété détaillée [`font-variant-numeric`](/fr/docs/Web/CSS/font-variant-numeric). Les valeurs possibles sont&nbsp;: `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal` et `slashed-zero`.
 - `<east-asian-variant-values>`, `<east-asian-width-values>`, `ruby`
   - : Définit les mots-clés relatifs à la propriété détaillée [`font-variant-east-asian`](/fr/docs/Web/CSS/font-variant-east-asian). Les valeurs possibles sont&nbsp;: `jis78`, `jis83`, `jis90`, `jis04`, `simplified`, `traditional`, `full-width`, `proportional-width` et `ruby`.
 

@@ -1,14 +1,8 @@
 ---
 title: Location.assign()
 slug: Web/API/Location/assign
-tags:
-  - API
-  - HTML-DOM
-  - Location
-  - Referencia
-  - metodo
-translation_of: Web/API/Location/assign
 ---
+
 {{ APIRef("HTML DOM") }}
 
 O método **`Location.assign()`** faz com que o navegador carregue o documento na URL especificada e a exiba na janela atual.
@@ -32,7 +26,7 @@ location.assign(url);
 
 ```js
 // Navega para a página do artigo Location.reload
-document.location.assign('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');
+document.location.assign('https://developer.mozilla.org/pt-BR/docs/Web/API/Location.reload');
 ```
 
 ## Especificações

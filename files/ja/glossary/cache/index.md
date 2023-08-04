@@ -9,4 +9,4 @@ slug: Glossary/Cache
 
 ### 一般知識
 
-- Wikipedia 上の記事: {{interwiki("wikipedia", "キャッシュ")}}
+- Wikipedia 上の記事: [キャッシュ](https://ja.wikipedia.org/wiki/キャッシュ)

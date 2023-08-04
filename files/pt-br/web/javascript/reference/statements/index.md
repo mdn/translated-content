@@ -1,11 +1,8 @@
 ---
 title: Instruções e declarações
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Statements
 ---
+
 {{jsSidebar("Instruções")}}
 
 Aplicações em JavaScript são realizadas através de instruções com uma sintaxe apropriada. Uma única instrução pode abranger multiplas linhas. Multiplas instruções podem estar contidas em uma única linha se cada instrução estiver separada por ponto e vírgula ( ; ).
@@ -78,19 +75,16 @@ Para visualizar em ordem alfabética use a barra de rolagem à esquerda.
   - : Usado para importar funções exportadas de um módulo externo, outro script.
 - {{jsxref("Statements/label", "label")}}
   - : Fornece uma instrução com um identificador que pode ser referido usando `break` ou `continue` instruções.
-
-<!---->
-
 - {{deprecated_inline}} {{jsxref("Statements/with", "with")}}
   - : Extende o alcance de uma instrução.
 
 ## Especificações
 
-| Specification                                                                                                                                                            | Status                   | Comment                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------- |
-| ECMAScript 1st Edition.                                                                                                                                                  | Standard                 | Initial definition.                          |
-| {{SpecName('ES5.1', '#sec-12', 'Statements')}}                                                                                                             | {{Spec2('ES5.1')}} |                                              |
-| {{SpecName('ES6', '#sec-ecmascript-language-statements-and-declarations', 'ECMAScript Language: Statements and Declarations')}} | {{Spec2('ES6')}}     | New: function\*, let, for...of, yield, class |
+| Specification                                                                                                                   | Status             | Comment                                      |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------- |
+| ECMAScript 1st Edition.                                                                                                         | Standard           | Initial definition.                          |
+| {{SpecName('ES5.1', '#sec-12', 'Statements')}}                                                                                  | {{Spec2('ES5.1')}} |                                              |
+| {{SpecName('ES6', '#sec-ecmascript-language-statements-and-declarations', 'ECMAScript Language: Statements and Declarations')}} | {{Spec2('ES6')}}   | New: function\*, let, for...of, yield, class |
 
 ## Veja também
 

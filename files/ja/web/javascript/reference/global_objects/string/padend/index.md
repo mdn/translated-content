@@ -39,9 +39,7 @@ str.padEnd(targetLength [, padString])
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.padend', 'String.prototype.padEnd')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

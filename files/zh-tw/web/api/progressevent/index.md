@@ -35,19 +35,19 @@ _Also inherits methods_ from its parent {{domxref("Event")}}.
 The following example adds a `ProgressEvent` to a new {{domxref("XMLHTTPRequest")}} and uses it to display the status of the request.
 
 ```js
-  var progressBar = document.getElementById("p"),
-      client = new XMLHttpRequest()
-  client.open("GET", "magical-unicorns")
-  client.onprogress = function(pe) {
-    if(pe.lengthComputable) {
-      progressBar.max = pe.total
-      progressBar.value = pe.loaded
-    }
+var progressBar = document.getElementById("p"),
+  client = new XMLHttpRequest();
+client.open("GET", "magical-unicorns");
+client.onprogress = function (pe) {
+  if (pe.lengthComputable) {
+    progressBar.max = pe.total;
+    progressBar.value = pe.loaded;
   }
-  client.onloadend = function(pe) {
-    progressBar.value = pe.loaded
-  }
-  client.send()
+};
+client.onloadend = function (pe) {
+  progressBar.value = pe.loaded;
+};
+client.send();
 ```
 
 ## 規格

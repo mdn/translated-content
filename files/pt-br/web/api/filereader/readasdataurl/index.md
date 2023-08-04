@@ -1,14 +1,8 @@
 ---
 title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
-tags:
-  - API
-  - File API
-  - Files
-  - Image Preview
-  - Method
-translation_of: Web/API/FileReader/readAsDataURL
 ---
+
 {{APIRef("File API")}}
 
 O método `readAsDataURL` é usado para ler o conteúdo do tipo {{domxref("Blob")}} ou {{domxref("File")}}.

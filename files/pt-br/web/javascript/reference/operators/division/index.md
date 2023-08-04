@@ -1,8 +1,6 @@
 ---
 title: Divisão (/)
 slug: Web/JavaScript/Reference/Operators/Division
-browser-compat: javascript.operators.division
-translation_of: Web/JavaScript/Reference/Operators/Division
 ---
 
 {{jsSidebar("Operators")}}
@@ -22,21 +20,21 @@ x / y
 ### Divisão básica
 
 ```js
-1 / 2              // 0.5
+1 / 2; // 0.5
 
-Math.floor(3 / 2) // 1
+Math.floor(3 / 2); // 1
 
-1.0 / 2.0         // 0.5
+1.0 / 2.0; // 0.5
 ```
 
 ### Divisão por zero
 
 ```js
-2.0 / 0     // Infinito
+2.0 / 0; // Infinito
 
-2.0 / 0.0   // Infinito, porque 0.0 === 0
+2.0 / 0.0; // Infinito, porque 0.0 === 0
 
-2.0 / -0.0  // -Infinito
+2.0 / -0.0; // -Infinito
 ```
 
 ## Especificações
@@ -49,12 +47,12 @@ Math.floor(3 / 2) // 1
 
 ## Veja também
 
-- [ Operador de adição](/pt-BR/docs/Web/JavaScript/Reference/Operators/Addition)
-- [ Operador de subtração ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [ Operador de multiplicação ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [ Operador restante ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [ Operador de exponenciação ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [ Operador de incremento ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Increment)
-- [ Operador de decremento](/pt-BR/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [ Operador de negação unário ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [ Operador unário plus ](/pt-BR/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [Operador de adição](/pt-BR/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Operador de subtração](/pt-BR/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Operador de multiplicação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Operador restante](/pt-BR/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Operador de exponenciação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Operador de incremento](/pt-BR/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Operador de decremento](/pt-BR/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Operador de negação unário](/pt-BR/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Operador unário plus](/pt-BR/docs/Web/JavaScript/Reference/Operators/Unary_plus)

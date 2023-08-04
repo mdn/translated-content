@@ -9,5 +9,5 @@ slug: Glossary/UI
 
 ### 一般知識
 
-- ウィキペディアの{{interwiki("wikipedia", "ユーザインタフェース", "ユーザーインターフェイス")}}
+- ウィキペディアの[ユーザーインターフェイス](https://ja.wikipedia.org/wiki/ユーザインタフェース)
 - Wikipedia 英語版上の [Front end development](https://en.wikipedia.org/wiki/Front_end_development)

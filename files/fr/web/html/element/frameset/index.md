@@ -1,17 +1,9 @@
 ---
-title: '<frameset> : l''élément contenant des frames'
+title: "<frameset> : l'élément contenant des frames"
 slug: Web/HTML/Element/frameset
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/frameset
-browser-compat: html.elements.frameset
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 > **Attention :** Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la prendre en charge, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications web l'utilisant peuvent cesser de fonctionner à tout moment.
 
@@ -32,7 +24,8 @@ Comme tous les autres éléments HTML, cet élément prend en charge [les attrib
 
 ```html
 <frameset cols="50%,50%">
-  <frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frameset" />
+  <frame
+    src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frameset" />
   <frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frame" />
 </frameset>
 ```

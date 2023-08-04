@@ -1,15 +1,6 @@
 ---
 title: DataView.prototype.getFloat64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat64
-tags:
-  - DataView
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getFloat64
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getFloat64
 ---
 
 {{JSRef}}
@@ -56,15 +47,11 @@ dataview.getFloat64(0); // 0
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                             | Commentaires                                    |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                                         | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
-| {{SpecName('ES2015', '#sec-dataview.prototype.getfloat64', 'DataView.prototype.getFloat64')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getfloat64', 'DataView.prototype.getFloat64')}} | {{Spec2('ESDraft')}}     |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.getFloat64")}}
+{{Compat}}
 
 ## Voir aussi
 

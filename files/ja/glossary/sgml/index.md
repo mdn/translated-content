@@ -9,5 +9,5 @@ _Standard Generalized Markup Language_ (**SGML**) は、宣言型のマークア
 
 ## 関連情報
 
-- Wikipedia 上の {{Interwiki("wikipedia", "SGML")}}
+- Wikipedia 上の [SGML](https://ja.wikipedia.org/wiki/SGML)
 - [Introduction to SGML](http://www.isgmlug.org/)

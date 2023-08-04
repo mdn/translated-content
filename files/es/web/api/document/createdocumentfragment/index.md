@@ -1,11 +1,11 @@
 ---
 title: Document.createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
-translation_of: Web/API/Document/createDocumentFragment
 ---
+
 {{ ApiRef("DOM") }}
 
-Crea un nuevo [`DocumentFragment`](/en-US/docs/DOM/DocumentFragment) vacio, dentro del cual un nodo del DOM puede ser adicionado para construir un nuevo arbol DOM fuera de pantalla.
+Crea un nuevo [`DocumentFragment`](/es/docs/DOM/DocumentFragment) vacio, dentro del cual un nodo del DOM puede ser adicionado para construir un nuevo arbol DOM fuera de pantalla.
 
 ## Sintaxis
 
@@ -34,22 +34,20 @@ Este ejemplo crea una lista de los principales navegadores web en un _DocumentFr
 HTML
 
 ```html
-<ul id="ul">
-</ul>
+<ul id="ul"></ul>
 ```
 
 JavaScript
 
 ```js
-var element  = document.getElementById('ul'); // assuming ul exists
+var element = document.getElementById("ul"); // assuming ul exists
 var fragment = document.createDocumentFragment();
-var browsers = ['Firefox', 'Chrome', 'Opera',
-    'Safari', 'Internet Explorer'];
+var browsers = ["Firefox", "Chrome", "Opera", "Safari", "Internet Explorer"];
 
-browsers.forEach(function(browser) {
-    var li = document.createElement('li');
-    li.textContent = browser;
-    fragment.appendChild(li);
+browsers.forEach(function (browser) {
+  var li = document.createElement("li");
+  li.textContent = browser;
+  fragment.appendChild(li);
 });
 
 element.appendChild(fragment);

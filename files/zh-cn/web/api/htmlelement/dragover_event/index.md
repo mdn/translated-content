@@ -1,86 +1,135 @@
 ---
-title: dragover
+title: HTMLElement：dragover 事件
 slug: Web/API/HTMLElement/dragover_event
-original_slug: Web/API/Document/dragover_event
 ---
 
 {{APIRef}}
 
-当元素或者选择的文本被拖拽到一个有效的放置目标上时，触发 `dragover` 事件（每几百毫秒触发一次）。
+`dragover` 事件在可拖动的元素或者被选择的文本被拖进一个有效的放置目标时（每几百毫秒）触发。
 
-这个事件在可被放置元素的节点上触发。
+该事件在放置目标上触发。
 
-## 基本信息
+## 语法
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td>是否冒泡</td>
-      <td>是</td>
-    </tr>
-    <tr>
-      <td>是否可以取消</td>
-      <td>是</td>
-    </tr>
-    <tr>
-      <td>目标对象</td>
-      <td>{{domxref("Document")}}, {{domxref("Element")}}</td>
-    </tr>
-    <tr>
-      <td>接口</td>
-      <td>{{domxref("DragEvent")}}</td>
-    </tr>
-    <tr>
-      <td>默认行为</td>
-      <td>重置当前的拖拽动作为"none"</td>
-    </tr>
-  </tbody>
-</table>
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或者设置事件处理器属性。
 
-## 属性
+```js
+addEventListener("dragover", (event) => {});
 
-| Property                                 | Type                                             | Description                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ---------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}        | [`EventTarget`](/zh-CN/docs/Web/API/EventTarget) | The element that was underneath the element being dragged.                                                                                                                                                                                                                                                                                                                                                              |
-| `type` {{readonlyInline}}          | [`DOMString`](/zh-CN/docs/Web/API/DOMString)     | The type of event.                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `bubbles` {{readonlyInline}}       | [`Boolean`](/zh-CN/docs/Web/API/Boolean)         | Whether the event normally bubbles or not                                                                                                                                                                                                                                                                                                                                                                               |
-| `cancelable` {{readonlyInline}}    | [`Boolean`](/zh-CN/docs/Web/API/Boolean)         | Whether the event is cancellable or not?                                                                                                                                                                                                                                                                                                                                                                                |
-| `view` {{readonlyInline}}          | [`WindowProxy`](/zh-CN/docs/Web/API/WindowProxy) | [`document.defaultView`](/zh-CN/docs/Web/API/Document/defaultView) (`window` of the document)                                                                                                                                                                                                                                                                                                                           |
-| `detail` {{readonlyInline}}        | `long` (`float`)                                 | 0.                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `dataTransfer`                           | DataTransfer                                     | The data that underlies a drag-and-drop operation, known as the [drag data store](/zh-CN/docs/Web/API/DataTransfer). Protected mode.                                                                                                                                                                                                                                                                                    |
-| `currentTarget` {{readonlyInline}} | EventTarget                                      | The node that had the event listener attached.                                                                                                                                                                                                                                                                                                                                                                          |
-| `relatedTarget` {{readonlyInline}} | EventTarget                                      | For `mouseover`, `mouseout`, `mouseenter` and `mouseleave` events: the target of the complementary event (the `mouseleave` target in the case of a `mouseenter` event). `null` otherwise.                                                                                                                                                                                                                               |
-| `screenX` {{readonlyInline}}       | long                                             | The X coordinate of the mouse pointer in global (screen) coordinates.                                                                                                                                                                                                                                                                                                                                                   |
-| `screenY` {{readonlyInline}}       | long                                             | The Y coordinate of the mouse pointer in global (screen) coordinates.                                                                                                                                                                                                                                                                                                                                                   |
-| `clientX` {{readonlyInline}}       | long                                             | The X coordinate of the mouse pointer in local (DOM content) coordinates.                                                                                                                                                                                                                                                                                                                                               |
-| `clientY` {{readonlyInline}}       | long                                             | The Y coordinate of the mouse pointer in local (DOM content) coordinates.                                                                                                                                                                                                                                                                                                                                               |
-| `button` {{readonlyInline}}        | unsigned short                                   | The button number that was pressed when the mouse event was fired: Left button=0, middle button=1 (if present), right button=2. For mice configured for left handed use in which the button actions are reversed the values are instead read from right to left.                                                                                                                                                        |
-| `buttons` {{readonlyInline}}       | unsigned short                                   | The buttons being pressed when the mouse event was fired: Left button=1, Right button=2, Middle (wheel) button=4, 4th button (typically, "Browser Back" button)=8, 5th button (typically, "Browser Forward" button)=16. If two or more buttons are pressed, returns the logical sum of the values. E.g., if Left button and Right button are pressed, returns 3 (=1 \| 2). [More info](/zh-CN/docs/Web/API/MouseEvent). |
-| `mozPressure` {{readonlyInline}}   | float                                            | The amount of pressure applied to a touch or tabdevice when generating the event; this value ranges between 0.0 (minimum pressure) and 1.0 (maximum pressure).                                                                                                                                                                                                                                                          |
-| `ctrlKey` {{readonlyInline}}       | boolean                                          | `true` if the control key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                         |
-| `shiftKey` {{readonlyInline}}      | boolean                                          | `true` if the shift key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                           |
-| `altKey` {{readonlyInline}}        | boolean                                          | `true` if the alt key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                             |
-| `metaKey` {{readonlyInline}}       | boolean                                          | `true` if the meta key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                            |
+ondragover = (event) => {};
+```
 
-## 示例：dropzone
+## 事件类型
 
-{{page('/zh-CN/docs/Web/Events/dragstart', '示例：dropzone')}}
+一个 {{domxref("DragEvent")}}。继承自 {{domxref("Event")}}。
+
+{{InheritanceDiagram("DragEvent")}}
+
+## 事件属性
+
+_除了以下的属性，来自父接口 {{domxref("Event")}} 的属性也是可用的。_
+
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+  - : 在拖放交互期间转移的数据。
+
+## 示例
+
+### 一个小巧的拖放示例
+
+在该示例中，我们在容器中有一个可拖动的元素。尝试抓住元素，拖动它进入另一个容器，然后释放它。
+
+在这里，我们有三个事件处理程序：
+
+- 在 `dragstart` 事件处理程序中，我们得到了用户拖动元素的引用。
+- 在目标容器的 `dragover` 事件处理程序中，我们调用 `event.preventDefault()`，这使它能够接收 `drop` 事件。
+- 在放置区域的 `drop` 事件处理程序中，我们将可拖动的元素从原始区域移动到可放置区域。
+
+关于更完整的拖放示例，请参见 [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event) 事件。
+
+#### HTML
+
+```html
+<div class="dropzone">
+  <div id="draggable" draggable="true">This div is draggable</div>
+</div>
+<div class="dropzone" id="droptarget"></div>
+```
+
+#### CSS
+
+```css
+body {
+  /* Prevent the user selecting text in the example */
+  user-select: none;
+}
+
+#draggable {
+  text-align: center;
+  background: white;
+}
+
+.dropzone {
+  width: 200px;
+  height: 20px;
+  background: blueviolet;
+  margin: 10px;
+  padding: 10px;
+}
+```
+
+#### JavaScript
+
+```js
+let dragged = null;
+
+const source = document.getElementById("draggable");
+source.addEventListener("dragstart", (event) => {
+  // store a ref. on the dragged elem
+  dragged = event.target;
+});
+
+const target = document.getElementById("droptarget");
+target.addEventListener("dragover", (event) => {
+  // prevent default to allow drop
+  event.preventDefault();
+});
+
+target.addEventListener("drop", (event) => {
+  // prevent default action (open as link for some elements)
+  event.preventDefault();
+  // move dragged element to the selected drop target
+  if (event.target.className === "dropzone") {
+    dragged.parentNode.removeChild(dragged);
+    event.target.appendChild(dragged);
+  }
+});
+```
+
+#### 结果
+
+{{EmbedLiveSample('一个小巧的拖放示例')}}
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 相关
+## 参见
 
-- {{event("drag")}}
-- {{event("dragstart")}}
-- {{event("dragend")}}
-- {{event("dragover")}}
-- {{event("dragenter")}}
-- {{event("dragleave")}}
-- {{event("dragexit")}}
-- {{event("drop")}}
+- 其他拖放事件：
+
+  - {{domxref("HTMLElement/drag_event", "drag")}}
+  - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
+  - {{domxref("HTMLElement/dragend_event", "dragend")}}
+  - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
+  - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
+  - {{domxref("HTMLElement/drop_event", "drop")}}
+
+- 其他目标中的该事件：
+
+  - {{domxref("Window")}}：{{domxref("Window/dragover_event", "dragover")}} 事件
+  - {{domxref("Document")}}：{{domxref("Document/dragover_event", "dragover")}} 事件
+  - {{domxref("SVGElement")}}：{{domxref("SVGElement/dragover_event", "dragover")}} 事件

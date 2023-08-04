@@ -7,7 +7,7 @@ WebSocket 客户端应用程序使用 WebSocket API 通过 WebSocket 协议与 W
 
 {{AvailableInWorkers}}
 
-> **警告：** 本文中的示例代码片段来自我们的 WebSocket 聊天应用示例，[源代码在此处](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)，then [也可以在这里试一试](https://mdn-samples.mozilla.org/s/websocket-chat)。现在示例中有一个 bug，使用不安全的 WebSockets 连接需要更新使用安全的 WebSocket，我们将很快修复。
+> **警告：** 本文中的示例代码片段来自我们的 WebSocket 聊天应用示例，[源代码在此处](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)。
 
 ## 创建 WebSocket 对象
 
@@ -43,7 +43,10 @@ WebSocket WebSocket(
 本例创建了一个新的 WebSocket，连接到地址为 `ws://www.example.com/socketserver` 的服务器。请求中命名了一个自定义的协议 "protocolOne"，这一部分可以省略。
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
+var exampleSocket = new WebSocket(
+  "ws://www.example.com/socketserver",
+  "protocolOne",
+);
 ```
 
 返回后，`exampleSocket.readyState` 参数为 `CONNECTING`。一旦连接可以传送数据，`readyState` 就会变成 `OPEN` 。
@@ -51,7 +54,10 @@ var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocol
 如果你想建立一个支持协议可选的连接，你可以指定协议的列表：
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
+var exampleSocket = new WebSocket("ws://www.example.com/socketserver", [
+  "protocolOne",
+  "protocolTwo",
+]);
 ```
 
 一旦连接建立了（也就是说 `readyState` 是 `OPEN`） `exampleSocket.protocol` 就会告诉你服务器选择了哪个协议。
@@ -89,8 +95,8 @@ function sendText() {
   var msg = {
     type: "message",
     text: document.getElementById("text").value,
-    id:   clientID,
-    date: Date.now()
+    id: clientID,
+    date: Date.now(),
   };
 
   // 把 msg 对象作为 JSON 格式字符串发送
@@ -108,7 +114,7 @@ WebSockets 是一个基于事件的 API；收到消息的时候，一个 "messag
 ```js
 exampleSocket.onmessage = function (event) {
   console.log(event.data);
-}
+};
 ```
 
 ### 接受与解析 JSON 对象
@@ -165,7 +171,7 @@ exampleSocket.onmessage = function(event) {
 
 通过 WebSocket 连接收到的文本是 UTF-8 格式的。
 
-在 Gecko 9.0 {{ geckoRelease("9.0") }} 之前，一部分有效的 UTF-8 文本中的非字符将导致连接被中断。现在 Gecko 已经允许这些值。
+在 Gecko 9.0 之前，一部分有效的 UTF-8 文本中的非字符将导致连接被中断。现在 Gecko 已经允许这些值。
 
 ## 关闭连接
 

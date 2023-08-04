@@ -3,7 +3,7 @@ title: Canvas 教學文件
 slug: Web/API/Canvas_API/Tutorial
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 [**`<canvas>`**](/zh-TW/docs/HTML/Canvas) 是一個 [HTML](/zh-TW/docs/HTML) 元素，我們可以利用程式腳本在這個元素上繪圖（通常是用 [JavaScript](/zh-TW/docs/JavaScript)）。除了繪圖，我們還可以合成圖片或做一些簡單（或是[不那麼簡單](/zh-TW/docs/HTML/Canvas/A_Basic_RayCaster)）的動畫。右方的影像便是一些運用 \<canvas> 的例子，接下來我們將會在教學文件中一一說明。
 

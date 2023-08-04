@@ -1,16 +1,8 @@
 ---
 title: encodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURI
-tags:
-  - Codificação
-  - JavaScript
-  - Texto
-  - URI
-  - URL
-  - encodeURI
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/encodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 A função **`encodeURI()`** codifica a [URI](/pt-BR/docs/Glossary/URI) substituindo cada instância de certos caracteres por um, dois, três ou quatro sequências de escape representando a codificação [UTF-8](/pt-BR/docs/Glossary/UTF-8) do caracter (será somente quatro sequências de escape para caracteres compostos de dois caracteres substitutos).
@@ -58,7 +50,7 @@ Não escapado:
 
 ```js
 var set1 = ";,/?:@&=+$#"; // Caracteres reservados
-var set2 = "-_.!~*'()";   // Marcas não reservadas
+var set2 = "-_.!~*'()"; // Marcas não reservadas
 var set3 = "ABC abc 123"; // Caracteres alfanuméricos + Espaço
 
 console.log(encodeURI(set1)); // ;,/?:@&=+$#
@@ -78,13 +70,13 @@ Um {{jsxref("URIError")}} será jogado se uma tentativa de codificar um substitu
 
 ```js
 // par alto-baixo ok
-console.log(encodeURI('\uD800\uDFFF'));
+console.log(encodeURI("\uD800\uDFFF"));
 
 // substituto alto solitário joga "URIError: malformed URI sequence"
-console.log(encodeURI('\uD800'));
+console.log(encodeURI("\uD800"));
 
 // substituto baixo solitário joga "URIError: malformed URI sequence"
-console.log(encodeURI('\uDFFF'));
+console.log(encodeURI("\uDFFF"));
 ```
 
 ### Codificando para IPv6
@@ -93,14 +85,14 @@ Se você deseja seguir a [RFC3986](http://tools.ietf.org/html/rfc3986) mais rece
 
 ```js
 function fixedEncodeURI(str) {
-    return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
+  return encodeURI(str).replace(/%5B/g, "[").replace(/%5D/g, "]");
 }
 ```
 
 ## Especificações
 
-| Especificação                                                                |
-| ---------------------------------------------------------------------------- |
+| Especificação                                              |
+| ---------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-encodeuri-uri', 'encodeURI')}} |
 
 ## Compatibilidade com navegadores

@@ -1,19 +1,8 @@
 ---
 title: X-Forwarded-Host
 slug: Web/HTTP/Headers/X-Forwarded-Host
-tags:
-  - HTTP
-  - HTTP Header
-  - Non-standard
-  - Reference
-  - Request header
-  - header
-  - 레퍼런스
-  - 비표준
-  - 요청헤더
-  - 헤더
-translation_of: Web/HTTP/Headers/X-Forwarded-Host
 ---
+
 {{HTTPSidebar}}
 
 **`X-Forwarded-Host`** (XFH) 헤더는 HTTP 요청 헤더에서 클라이언트가 요청한 원래 {{HTTPHeader("Host")}} 헤더를 식별하는 사실상의 표준 헤더입니다.
@@ -60,7 +49,7 @@ X-Forwarded-Host: id42.example-cdn.com
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.X-Forwarded-Host")}}
+{{Compat}}
 
 ## 함께 참고할 내용
 

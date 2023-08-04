@@ -1,8 +1,8 @@
 ---
 title: menus.getTargetElement()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
-original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/getTargetElement
 ---
+
 {{AddonSidebar}}
 
 주어진 `targetElementId`에 해당하는 요소를 돌려준다.
@@ -32,7 +32,16 @@ let elem = browser.menus.getTargetElement(targetElementId);
 browser.menus.create({
   title: "Remove element",
   documentUrlPatterns: ["*://*/*"],
-  contexts: ["audio", "editable", "frame", "image", "link", "page", "password", "video"],
+  contexts: [
+    "audio",
+    "editable",
+    "frame",
+    "image",
+    "link",
+    "page",
+    "password",
+    "video",
+  ],
   onclick(info, tab) {
     browser.tabs.executeScript(tab.id, {
       frameId: info.frameId,
@@ -46,7 +55,7 @@ browser.menus.create({
 
 ## 브라우저 호환성
 
-{{Compat("webextensions.api.menus.getTargetElement")}}
+{{Compat}}
 
 ## 같이 보기
 

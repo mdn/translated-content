@@ -1,12 +1,8 @@
 ---
 title: Node.replaceChild()
 slug: Web/API/Node/replaceChild
-tags:
-  - 노드 교체
-  - 돔 조작
-  - 자바스크립트
-translation_of: Web/API/Node/replaceChild
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.replaceChild()`** 메소드는 특정 부모 노드의 한 자식 노드를 다른 노드로 교체합니다.

@@ -1,6 +1,8 @@
 ---
 title: KeyboardEvent.altKey
 slug: Web/API/KeyboardEvent/altKey
+l10n:
+  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
 ---
 
 {{APIRef("UI Events")}}
@@ -13,30 +15,37 @@ slug: Web/API/KeyboardEvent/altKey
 
 ## 例
 
-```js
-<html>
-<head>
-<title>altKey の例</title>
+```html
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>altKey の例</title>
 
-<script type="text/javascript">
+    <script>
+      function showChar(e) {
+        alert(
+          "Key KeyDown: " +
+            String.fromCharCode(e.charCode) +
+            "\n" +
+            "charCode: " +
+            e.charCode +
+            "\n" +
+            "ALT key KeyDown: " +
+            e.altKey +
+            "\n"
+        );
+      }
+    </script>
+  </head>
 
-function showChar(e){
-  alert(
-    "Key KeyDown: " + String.fromCharCode(e.charCode) + "\n"
-    + "charCode: " + e.charCode + "\n"
-    + "ALT key KeyDown: " + e.altKey + "\n"
-  );
-}
-
-</script>
-</head>
-
-<body onkeydown="showChar(event);">
-<p>
-ALT キーを押したまま、または押さずに、任意の文字キーを押してください。<br />
-また、 SHIFT キーと ALT キーを同時に使用することもできます。
-</p>
-</body>
+  <body onkeydown="showChar(event);">
+    <p>
+      ALT キーを押したまま、または押さずに、任意の文字キーを押してください。<br />
+      また、 SHIFT キーと ALT キーを同時に使用することもできます。
+    </p>
+  </body>
 </html>
 ```
 

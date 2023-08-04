@@ -1,13 +1,8 @@
 ---
 title: block
 slug: Web/JavaScript/Reference/Statements/block
-tags:
-  - Declaração
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/block
 ---
+
 {{jsSidebar("Statements")}}
 
 Uma **declaração em bloco** (ou **declaração composta (compound)** em outras linguagens) é usado para agrupar nenhum ou mais declarações. O bloco é delimitado por um par de chaves e pode opcionalmente ser {{jsxref("Statements/label", "nomeado")}}:
@@ -55,7 +50,7 @@ console.log(x); // imprime 2
 
 Isso loga 2 porque a declaração `var x` com o bloco está no mesmo escopo que a declaração `var x` antes do bloco. No C ou Java, o código equivalente iria imprimir 1.
 
-#### Com `let e` `const`
+#### Com `let` e `const`
 
 Por contraste, variáveis declaradas com {{jsxref("Statements/let", "let")}} e {{jsxref("Statements/const", "const")}} **tem** escopo bloqueado:
 
@@ -83,13 +78,13 @@ Note que o escope bloqueado de `const c = 2` _não invoca uma_ `SyntaxError: Ide
 
 ## Especificações
 
-| Especificação                                                                | Situação                     | Comentário                                         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| Especificação                                            | Situação             | Comentário                                         |
+| -------------------------------------------------------- | -------------------- | -------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-block', 'Block statement')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-block', 'Block statement')}}         | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ES5.1', '#sec-12.1', 'Block statement')}}     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES3', '#sec-12.1', 'Block statement')}}         | {{Spec2('ES3')}}         |                                                    |
-| {{SpecName('ES1', '#sec-12.1', 'Block statement')}}         | {{Spec2('ES1')}}         | Definição inicial. Implementada no JavaScript 1.0. |
+| {{SpecName('ES6', '#sec-block', 'Block statement')}}     | {{Spec2('ES6')}}     |                                                    |
+| {{SpecName('ES5.1', '#sec-12.1', 'Block statement')}}    | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES3', '#sec-12.1', 'Block statement')}}      | {{Spec2('ES3')}}     |                                                    |
+| {{SpecName('ES1', '#sec-12.1', 'Block statement')}}      | {{Spec2('ES1')}}     | Definição inicial. Implementada no JavaScript 1.0. |
 
 ## Compatibilidade com navegadores
 

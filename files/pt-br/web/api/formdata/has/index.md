@@ -1,16 +1,8 @@
 ---
 title: FormData.has()
 slug: Web/API/FormData/has
-tags:
-  - API
-  - FormData
-  - Referencia
-  - XHR
-  - XMLHttlRequest
-  - has
-  - metodo
-translation_of: Web/API/FormData/has
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 O método **`has()`** da interface {{domxref("FormData")}} retorna um booleano declarando se o objeto `FormData` contém uma certa chave.
@@ -43,20 +35,18 @@ var formData = new FormData();
 O trecho a seguir mostra os resultados de testar a existência de `username` no objeto `FormData`, antes e depois de acrescentar um valor de `username` no objeto usando {{domxref("FormData.append")}}:
 
 ```js
-formData.has('username'); // Retorna false
-formData.append('username', 'Chris');
-formData.has('username'); // Retorna true
+formData.has("username"); // Retorna false
+formData.append("username", "Chris");
+formData.has("username"); // Retorna true
 ```
 
 ## Especificações
 
-| Especificação                                                                | Status                               | Comentário |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-has','has()')}} | {{Spec2('XMLHttpRequest')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.FormData.has")}}
+{{Compat}}
 
 ## Veja também
 

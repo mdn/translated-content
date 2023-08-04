@@ -1,41 +1,36 @@
 ---
-title: Gamepad.connected
+title: "Gamepad: connected プロパティ"
+short-title: connected
 slug: Web/API/Gamepad/connected
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("Gamepad API")}}
 
-{{domxref("Gamepad") }} インターフェイスの **`Gamepad.connected`** プロパティはゲームパッドがシステムに接続しているかどうかを示す真偽値を返します。
+**`Gamepad.connected`** は {{domxref("Gamepad") }} インターフェイスのプロパティで、ゲームパッドがシステムに接続されているかどうかを示す論理値を返します。
 
-ゲームパッドが接続している場合の値は `true` 、繋がっていない場合は `false`となります。
+ゲームパッドが接続されている場合の値は `true`、そうでない場合は `false` となります。
 
-## 構文
+## 値
 
-```
- readonly    attribute boolean             connected;
-```
+論理値です。
 
 ## 例
 
 ```js
-var gp = navigator.getGamepads()[0];
+const gp = navigator.getGamepads()[0];
 console.log(gp.connected);
 ```
 
-## 値
-
-{{domxref("boolean")}} 。
-
 ## 仕様書
 
-| 仕様                                                                                             | ステータス                   | 備考     |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("Gamepad", "#widl-Gamepad-connected", "Gamepad.connected")}} | {{Spec2("Gamepad")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Gamepad.connected")}}
+{{Compat}}
 
 ## 関連情報
 
-[Gamepad API を利用する](/ja/docs/Web/Guide/API/Gamepad)
+[ゲームパッド API の使用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

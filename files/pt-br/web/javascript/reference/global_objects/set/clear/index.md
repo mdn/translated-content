@@ -1,8 +1,8 @@
 ---
 title: Set.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 ---
+
 {{JSRef}}
 
 O método **`clear()`** remove todos os elementos de um objeto `Set`.

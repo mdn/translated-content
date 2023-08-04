@@ -32,7 +32,7 @@ JavaScript 是一门跨平台、面向对象的脚本语言，它能使网页可
 JavaScript 内置了一些对象的标准库，比如数组（`Array`），日期（`Date`），数学（`Math`）和一套核心语句，包括运算符、流程控制符以及声明方式等。JavaScript 的核心部分可以通过添加对象来扩展语言以适应不同用途；例如：
 
 - 客户端的 JavaScript 通过提供对象，控制浏览器及其文档对象模型（DOM），来扩展语言核心。例如：客户端的拓展代码允许应用程序将元素放在某个 HTML 表单中，并且支持响应用户事件，比如鼠标点击、表单提交和页面导航。
-- \_\_服务端的 JavaScript 则通过提供有关在服务器上运行 JavaScript 的对象来可扩展语言核心。例如：服务端版本直接支持应用和数据库通信，提供应用不同调用间的信息连续性，或者在服务器上执行文件操作。
+- 服务端的 JavaScript 则通过提供有关在服务器上运行 JavaScript 的对象来可扩展语言核心。例如：服务端版本直接支持应用和数据库通信，提供应用不同调用间的信息连续性，或者在服务器上执行文件操作。
 
 这意味着，在浏览器中，JavaScript 可以改变网页（DOM）的外观与样式。同样地，在服务器上，Node.js 中的 JavaScript 可以对浏览器上编写的代码发出的客户端请求做出响应。
 
@@ -89,7 +89,7 @@ JavaScript 文档描述了适合 JavaScript 程序员的语言方面。
 控制台的工作方式与 eval 完全相同：返回最后输入的表达式。为了简单起见，可以想象每次输入到控制台的东西实际上都被 console.log 所包围。
 
 ```js
-console.log(eval('3 + 5'))
+console.log(eval("3 + 5"));
 ```
 
 ### 多行模式
@@ -101,15 +101,14 @@ Web 控制台的单行模式非常适合用来测试单个的 JavaScript 表达�
 让我们用 Web 控制台的多行模式来写一个“Hello World"程序吧！JavaScript code:
 
 ```js
-(function(){
+(function () {
   "use strict";
   function greetMe(yourName) {
-    alert('Hello ' + yourName);
+    alert("Hello " + yourName);
   }
 
-  greetMe('World');
+  greetMe("World");
 })();
-
 ```
 
 输入完成后，按下<kbd>Cmd</kbd>+<kbd>Enter</kbd>或者<kbd>Ctrl</kbd>+<kbd>Enter</kbd>(或者单击运行按钮) 就可以在浏览器中看到执行结果了！

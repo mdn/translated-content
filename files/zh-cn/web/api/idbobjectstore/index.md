@@ -13,27 +13,27 @@ slug: Web/API/IDBObjectStore
 
 ## 方法预览
 
-| `IDBRequest add (in any value, in optional any key) raises (DOMException);`                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `IDBRequest clear() raises (DOMException);`                                                                                                 |
-| `IDBRequest count (in optional any key) raises (DOMException);`                                                                           |
+| `IDBRequest add (in any value, in optional any key) raises (DOMException);`                                         |
+| ------------------------------------------------------------------------------------------------------------------- |
+| `IDBRequest clear() raises (DOMException);`                                                                         |
+| `IDBRequest count (in optional any key) raises (DOMException);`                                                     |
 | `IDBIndex createIndex (in DOMString name, in DOMString keyPath, in optional boolean unique) raises (DOMException);` |
-| ` IDBRequest delete (in any key) raises (DOMException); `                                                                                  |
-| `void deleteIndex (in any DOMString indexName) raises (DOMException);                                              |
-| `IDBRequest get (in any key) raises (DOMException);`                                                                                         |
+| `IDBRequest delete (in any key) raises (DOMException);`                                                             |
+| `void deleteIndex (in any DOMString indexName) raises (DOMException);                                               |
+| `IDBRequest get (in any key) raises (DOMException);`                                                                |
 | `IDBIndex index (in DOMString name) raises (DOMException);`                                                         |
-| `IDBRequest openCursor (in optional IDBKeyRange range, in optional unsigned short direction) raises(DOMException);`                          |
-| `IDBRequest put (in any value, in optional any key) raises (DOMException);`                                                                  |
+| `IDBRequest openCursor (in optional IDBKeyRange range, in optional unsigned short direction) raises(DOMException);` |
+| `IDBRequest put (in any value, in optional any key) raises (DOMException);`                                         |
 
 ## 属性
 
-| Attribute       | Type                                        | Description                                                                                                                  |
-| --------------- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Attribute       | Type                                        | Description                                                                                        |
+| --------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `indexNames`    | `readonly DOMStringList`                    | 表中对象的[索引](/zh-CN/IndexedDB#gloss_index)名列表。                                             |
 | `keyPath`       | `readonly` [`DOMString`](/En/DOM/DOMString) | 表中的[键路径](/zh-CN/IndexedDB#gloss_key_path)，如果该属性为 null，每次操作表时必须提供一个键名。 |
-| `name`          | `readonly` [`DOMString`](/En/DOM/DOMString) | 表名                                                                                                                         |
-| `transaction`   | `readonly IDBTransaction`                   | 事务的名称，该表属于此事务。                                                                                                 |
-| `autoIncrement` | `readonly boolean`                          | 表中自增字段的值                                                                                                             |
+| `name`          | `readonly` [`DOMString`](/En/DOM/DOMString) | 表名                                                                                               |
+| `transaction`   | `readonly IDBTransaction`                   | 事务的名称，该表属于此事务。                                                                       |
+| `autoIncrement` | `readonly boolean`                          | 表中自增字段的值                                                                                   |
 
 ## 方法
 
@@ -49,7 +49,7 @@ add 方法只能插入数据。如果以 key 参数作为某记录的关键字�
 IDBRequest add (in any value, in optional any key) raises (DOMException);
 ```
 
-##### 参数
+#### 参数
 
 - value
   - : 被存储的值。
@@ -129,7 +129,7 @@ IDBRequest add (in any value, in optional any key) raises (DOMException);
 IDBRequest clear () raises (DOMException);
 ```
 
-##### Returns
+#### Returns
 
 - [IDBRequest](/zh-CN/IndexedDB/IDBRequest)
   - : 返回一个 request 对象，在其上触发与操作相关的事件。
@@ -151,7 +151,7 @@ IDBRequest clear () raises (DOMException);
 IDBRequest count (in optional any key) raises(DOMException);
 ```
 
-##### 参数
+#### 参数
 
 - key
   - : 计算被该键或键范围（key range）所标识的记录数。
@@ -179,7 +179,7 @@ IDBRequest count (in optional any key) raises(DOMException);
 IDBIndex createIndex  (in DOMString name, in DOMString keyPath, in optional boolean unique) raises (DOMException);
 ```
 
-##### Parameters
+#### Parameters
 
 - name
   - : The name of the index to create.
@@ -216,7 +216,7 @@ Immediately returns an [`IDBRequest`](/zh-CN/IndexedDB/IDBRequest) object, and r
 IDBRequest delete (in any key) raises (DOMException);
 ```
 
-##### Parameters
+#### Parameters
 
 - key
   - : The key or key range that identifies the records.
@@ -239,7 +239,7 @@ This method may raise a [DOMException](/zh-CN/docs/DOM/DOMException) with a [DOM
 > **备注：** If the key that identifies the record is a Number, the key passed to the delete method must be a Number too, and not a String. So for example you might need to do the following:
 >
 > ```js
-> var key_val = '42';
+> var key_val = "42";
 > var key = Number(key_val);
 > objectstore.delete(key);
 > ```
@@ -252,7 +252,7 @@ Destroys the index with the specified name in the connected database. Note that 
 void deleteIndex (in any DOMString indexName) raises (DOMException);
 ```
 
-##### Parameters
+#### Parameters
 
 - indexName
   - : The name of the existing index to remove.
@@ -278,7 +278,7 @@ IDBRequest get (in any key) raises (DOMException);
 
 > **备注：**This function produces the same result if no record with the given key exists in the database as when a record exists, but with an `undefined` value. To tell these situations apart, call the openCursor() method with the same key. That method provides a cursor if the record exists, and no cursor if it does not.
 
-##### Parameters
+#### Parameters
 
 - key
   - : The key or key range identifying the record to retrieve. In the case of a key range, the record returned is the first record associated with the first key in the range.
@@ -306,7 +306,7 @@ Opens the named index in this object store.
 IDBIndex index (in DOMString name) raises (DOMException);
 ```
 
-##### Parameters
+#### Parameters
 
 - name
   - : The name of the index to open.
@@ -333,7 +333,7 @@ Immediately returns an [IDBRequest](/zh-CN/IndexedDB/IDBRequest) object, and cre
 IDBRequest openCursor (in optional IDBKeyRange range, in optional unsigned short direction) raises(DOMException);
 ```
 
-##### Parameters
+#### Parameters
 
 - range
   - : The key range to use as the cursor's range. If this parameter is unspecified or null, then the range includes all the records in the object store.
@@ -366,7 +366,7 @@ The put method is an _update or insert_ method. See also the [add()](#add) metho
 IDBRequest put (in any value, in optional any key) raises (DOMException);
 ```
 
-##### Parameters
+#### Parameters
 
 - value
   - : The value to be stored.
@@ -440,14 +440,14 @@ This method may raise a [DOMException](/zh-CN/docs/DOM/DOMException) with a [DOM
 
 ## Example
 
-This example shows a variety of different uses of object stores, from updating the data structure with {{domxref("IDBObjectStore.createIndex")}} inside an `onupgradeneeded`function, to adding a new item to our object store with {{domxref("IDBObjectStore.add")}}. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/).)
+This example shows a variety of different uses of object stores, from updating the data structure with {{domxref("IDBObjectStore.createIndex")}} inside an `onupgradeneeded`function, to adding a new item to our object store with {{domxref("IDBObjectStore.add")}}. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
 
 ```js
 // Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Database initialised.</li>";
 
   // store the result of opening the database in db.
   db = DBOpenRequest.result;
@@ -457,11 +457,11 @@ DBOpenRequest.onsuccess = function(event) {
 // the database needs to be created Either one has not
 // been created before, or a new version number has been
 // submitted via the window.indexedDB.open line above
-DBOpenRequest.onupgradeneeded = function(event) {
+DBOpenRequest.onupgradeneeded = function (event) {
   var db = event.target.result;
 
-  db.onerror = function(event) {
-    note.innerHTML += '<li>Error loading database.</li>';
+  db.onerror = function (event) {
+    note.innerHTML += "<li>Error loading database.</li>";
   };
 
   // Create an objectStore for this database
@@ -478,24 +478,33 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += '<li>Object store created.</li>';
+  note.innerHTML += "<li>Object store created.</li>";
 };
 
 // Create a new item to add in to the object store
 var newItem = [
-  { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: 'December', year: 2013, notified: "no" }
+  {
+    taskTitle: "Walk dog",
+    hours: 19,
+    minutes: 30,
+    day: 24,
+    month: "December",
+    year: 2013,
+    notified: "no",
+  },
 ];
 
 // open a read/write db transaction, ready for adding the data
 var transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of the transaction completing, when everything is done
-transaction.oncomplete = function(event) {
-  note.innerHTML += '<li>Transaction completed.</li>';
+transaction.oncomplete = function (event) {
+  note.innerHTML += "<li>Transaction completed.</li>";
 };
 
-transaction.onerror = function(event) {
-  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+transaction.onerror = function (event) {
+  note.innerHTML +=
+    "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
 };
 
 // create an object store on the transaction
@@ -503,9 +512,9 @@ var objectStore = transaction.objectStore("toDoList");
 // make a request to add our newItem object to the object store
 var objectStoreRequest = objectStore.add(newItem[0]);
 
-objectStoreRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Request successful .</li>';
-}
+objectStoreRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Request successful .</li>";
+};
 ```
 
 ## Specifications
@@ -526,4 +535,4 @@ The compatibility table on this page is generated from structured data. If you'd
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

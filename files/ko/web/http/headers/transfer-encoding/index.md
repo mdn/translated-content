@@ -1,8 +1,8 @@
 ---
 title: Transfer-Encoding
 slug: Web/HTTP/Headers/Transfer-Encoding
-translation_of: Web/HTTP/Headers/Transfer-Encoding
 ---
+
 {{HTTPSidebar}}
 
 **`Transfer-Encoding`** 헤더는 사용자에게 {{Glossary("Entity header","entity")}}를 안전하게 전송하기 위해 사용하는 인코딩 형식을 지정합니다.
@@ -78,7 +78,7 @@ Network\r\n
 
 ## 브라우저 호환성
 
-{{Compat("http/headers/transfer-encoding")}}
+{{Compat}}
 
 ## 함께 참고할 내용들
 

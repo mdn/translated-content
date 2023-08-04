@@ -1,9 +1,6 @@
 ---
 title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
-original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap
-browser-compat: javascript.builtins.WeakMap
 ---
 
 {{JSRef}}
@@ -18,7 +15,7 @@ Les clés des objets `WeakMap` sont nécessairement du type `Object`. {{Glossary
 
 Les clés d'une `WeakMap` sont référencées _faiblement_. Cela signifie que s'il n'existe aucune autre référence «&nbsp;forte&nbsp;» vers la clé, l'élément (la clé et la valeur) sera retiré de la `WeakMap` par le ramasse-miettes.
 
-### Pourquoi *Weak*Map ?
+### Pourquoi WeakMap ?
 
 Avec un certain recul, on peut voir que cette API aurait pu être implémentée en JavaScript grâce à deux tableaux (un tableau pour stocker les clés, l'autre pour les valeurs) associées à 4 méthodes.
 
@@ -54,11 +51,11 @@ Grâce aux objets natifs `WeakMap`, les références vers les clés sont faibles
 
 ```js
 var wm1 = new WeakMap(),
-    wm2 = new WeakMap(),
-    wm3 = new WeakMap();
+  wm2 = new WeakMap(),
+  wm3 = new WeakMap();
 var o1 = {},
-    o2 = function(){},
-    o3 = window;
+  o2 = function () {},
+  o3 = window;
 
 wm1.set(o1, 37);
 wm1.set(o2, "azerty");
@@ -77,9 +74,9 @@ wm2.has(o3); // true (même si la valeur est 'undefined')
 wm3.set(o1, 37);
 wm3.get(o1); // 37
 
-wm1.has(o1);   // true
+wm1.has(o1); // true
 wm1.delete(o1);
-wm1.has(o1);   // false
+wm1.has(o1); // false
 ```
 
 ### Implémenter une classe semblable à `WeakMap` avec une méthode .clear()
@@ -87,23 +84,23 @@ wm1.has(o1);   // false
 ```js
 class ClearableWeakMap {
   constructor(init) {
-    this._wm = new WeakMap(init)
+    this._wm = new WeakMap(init);
   }
   clear() {
-    this._wm = new WeakMap()
+    this._wm = new WeakMap();
   }
   delete(k) {
-    return this._wm.delete(k)
+    return this._wm.delete(k);
   }
   get(k) {
-    return this._wm.get(k)
+    return this._wm.get(k);
   }
   has(k) {
-    return this._wm.has(k)
+    return this._wm.has(k);
   }
   set(k, v) {
-    this._wm.set(k, v)
-    return this
+    this._wm.set(k, v);
+    return this;
   }
 }
 ```
@@ -118,7 +115,7 @@ class ClearableWeakMap {
 
 ## Voir aussi
 
-- Une prothèse (*polyfill*) de `WeakMap` est disponible dans [`core-js`](https://github.com/zloirock/core-js#weakmap)
+- Une prothèse (_polyfill_) de `WeakMap` est disponible dans [`core-js`](https://github.com/zloirock/core-js#weakmap)
 - [Le guide sur les collections à clé JavaScript](/fr/docs/Web/JavaScript/Guide/Keyed_collections)
 - [Masquer des détails d'implémentation avec les WeakMaps ECMAScript 2015](https://fitzgeraldnick.com/weblog/53/) (en anglais)
 - [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map)

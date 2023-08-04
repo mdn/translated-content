@@ -1,16 +1,8 @@
 ---
 title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
-tags:
-  - Expressões Regulares
-  - JavaScript
-  - Métodos
-  - Prototipo
-  - Referencia
-  - String
-  - match()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Resumo
@@ -69,9 +61,9 @@ Se a expressão regular não incluir o sinalizador `g`, `str.match()` retornará
 No exemplo a seguir, `match()` é usado para encontrar "Capítulo", seguido de um ou mais caracteres numéricos, seguido por um ponto decimal e caracteres numéricos 0 ou mais vezes. A expressão inclui a flag `i` para que diferenças de maiúscula/minúscula sejam ignoradas.
 
 ```js
-var str = "Para maiores informações, veja o Capítulo 3.4.5.1";
-var re = /(capítulo \d+(\.\d)*)/i;
-var found = str.match(re);
+const str = "Para maiores informações, veja o Capítulo 3.4.5.1";
+const re = /(capítulo \d+(\.\d)*)/i;
+const found = str.match(re);
 
 console.log(found);
 
@@ -93,9 +85,9 @@ console.log(found);
 O exemplo a seguir demonstra o uso das bandeiras (flags) global e ignore com `match()`. Todas as letras de `A` a `E` e `a` a `e` são retornadas, com cada letra sendo um elemento no array.
 
 ```js
-var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-var regexp = /[A-E]/gi;
-var matches_array = str.match(regexp);
+const str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+const regexp = /[A-E]/gi;
+const matches_array = str.match(regexp);
 
 console.log(matches_array);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
@@ -118,7 +110,7 @@ console.log(found.groups); // {animal: "fox"}
 ### Usando `match()` sem parâmetros
 
 ```js
-var str = "nada se perde, tudo se transforma";
+const str = "nada se perde, tudo se transforma";
 
 str.match();  // retorna [""]
 ```
@@ -130,9 +122,9 @@ Quando o parâmetro _`regexp`_ é uma string ou um número, ele é convertido im
 Se for um número positivo com um sinal positivo, `RegExp()` irá ignorar o sinal positivo.
 
 ```js
-var str1 = "NaN significa 'não é um número'. Infinity contem -Infinity e +Infinity em JavaScript.",
-    str2 = "Meu avô tem 65 anos e minha avô tem 63.",
-    str3 = "O contrato foi declarado null (nulo) e void (sem efeito)";
+const str1 = "NaN significa 'não é um número'. Infinity contem -Infinity e +Infinity em JavaScript.";
+const str2 = "Meu avô tem 65 anos e minha avô tem 63.";
+const str3 = "O contrato foi declarado null (nulo) e void (sem efeito)";
 str1.match("número");   // "número" é um string. retorna ["número"]
 str1.match(NaN);        // o tipo de NaN é um número. retorna ["NaN"]
 str1.match(Infinity);   // o tipo de Infinity é um número. retorna ["Infinity"]

@@ -2,6 +2,7 @@
 title: Advanced text formatting
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
 텍스트 서식에 있어서 [HTML text fundamentals](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) 에서 이야기 하지 않은 수많은 요소들이 있습니다. 이 글에서 설명하는 요소들은 비교적 많이 알려져 있지않지만 여전히 유용합니다. (그리고 이것은 완전한 목록이 아닙니다.). 이 글에서 여러분은 인용구, 서술문, 컴퓨터 코드 및 관력 텍스트, 첨자, 위첨자, 연락처 정보 등을 표시하는 방법에 대해 알아봅시다.
@@ -11,12 +12,12 @@ slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
     <tr>
       <th scope="row">요구 기술:</th>
       <td>
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Getting started with HTML</a
         >
         에 설명된 기본적인 HTML 숙련도.
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
           >HTML text fundamentals</a
         >
         에서 설명하는 텍스트 포맷팅에 대한 지식.
@@ -52,11 +53,22 @@ Description lists 는 다른 타입의 리스트와 다르게 {{htmlelement("dl"
 ```html
 <dl>
   <dt>soliloquy</dt>
-  <dd>In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)</dd>
+  <dd>
+    In drama, where a character speaks to themselves, representing their inner
+    thoughts or feelings and in the process relaying them to the audience (but
+    not to other characters.)
+  </dd>
   <dt>monologue</dt>
-  <dd>In drama, where a character speaks their thoughts out loud to share them with the audience and any other characters present.</dd>
+  <dd>
+    In drama, where a character speaks their thoughts out loud to share them
+    with the audience and any other characters present.
+  </dd>
   <dt>aside</dt>
-  <dd>In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information.</dd>
+  <dd>
+    In drama, where a character shares a comment only with the audience for
+    humorous or dramatic effect. This is usually a feeling, thought or piece of
+    additional background information.
+  </dd>
 </dl>
 ```
 
@@ -84,13 +96,15 @@ description list 를 직접 시도해볼 시간입니다. input 필드에 요소
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input">Bacon
+<textarea id="code" class="input">
+Bacon
 The glue that binds the world together.
 Eggs
 The glue that binds the cake together.
 Coffee
 The drink that gets the world running in the morning.
-A light brown color.</textarea>
+A light brown color.</textarea
+>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -101,10 +115,11 @@ A light brown color.</textarea>
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 10em;
   padding: 10px;
@@ -128,13 +143,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-textarea.value = '<dl>\n  <dt>Bacon</dt>\n  <dd>The glue that binds the world together.</dd>\n  <dt>Eggs</dt>\n  <dd>The glue that binds the cake together.</dd>\n  <dt>Coffee</dt>\n  <dd>The drink that gets the world running in the morning.</dd>\n  <dd>A light brown color.</dd>\n</dl>';
+solution.addEventListener("click", function () {
+  textarea.value =
+    "<dl>\n  <dt>Bacon</dt>\n  <dd>The glue that binds the world together.</dd>\n  <dt>Eggs</dt>\n  <dd>The glue that binds the cake together.</dd>\n  <dt>Coffee</dt>\n  <dd>The drink that gets the world running in the morning.</dd>\n  <dd>A light brown color.</dd>\n</dl>";
   drawOutput();
 });
 
@@ -153,16 +169,23 @@ HTML에는 인용구 표시에 사용할 수 있는 요소가 존재합니다. �
 블록 레벨 컨텐츠의 섹션(문단, 여러 단락, 리스트등)이 인용된 경우, 이를 나타내는 `<blockquote>`요소로 감싸야합니다. 그리고 `cite` 속성에 출처를 표기합니다. 아래의 예시는 MDN `<blockquote>` 요소 페이지를 인용한 것 입니다.
 
 ```html
-<p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
-Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+<p>
+  The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+  <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an
+  extended quotation.
+</p>
 ```
 
 이것을 block quote 로 변경하기 위해서 아래와 같이 할 수 있습니다.
 
 ```html
-<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
-  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
-  Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+<blockquote
+  cite="https://developer.mozilla.org/ko/docs/Web/HTML/Element/blockquote">
+  <p>
+    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
+    an extended quotation.
+  </p>
 </blockquote>
 ```
 
@@ -175,8 +198,12 @@ Quotation Element</em>) indicates that the enclosed text is an extended quotatio
 인라인 인용구는 `<q>` 요소를 사용한다는 점만 제외하면 블럭 인용구와 동일하게 동작합니다. 아래의 마크업 예시는 MDN `<q>` 페이지의 인용문을 포함합니다.
 
 ```html
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
-for short quotations that don't require paragraph breaks.</q></p>
+<p>
+  The quote element — <code>&lt;q&gt;</code> — is
+  <q cite="https://developer.mozilla.org/ko/docs/Web/HTML/Element/q"
+    >intended for short quotations that don't require paragraph breaks.</q
+  >
+</p>
 ```
 
 브라우저 기본 스타일은 인라인 인용구를 따옴표로 묶은 일반 텍스트로 표현합니다.
@@ -188,18 +215,32 @@ The quote element — `<q>` — is "intended for short quotations that don't req
 {{htmlattrxref("cite","blockquote")}}요소의 컨텐츠는 유용하게 보이지만 안타깝게도 브라우저, 스크린 리더 등은 이를 이용해서 할 수 있는 것이 많지 않습니다. 브라우저는 javascript나 CSS로 여러분이 직접 해결책을 제시하지 않는다면 `cite` 컨텐츠를 화면에 표시할 방법이 없습니다. 페이지에서 인용 출처를 화면에 나타나게 하고 싶다면 `<cite>` 요소를 사용하는 것이 더 좋습니다. 이는 이름 그대로 출처를 포함하기 위해서 사용됩니다. — `<cite>` 요소 안에 있는 출처에 대한 링크를 연결할 수 있습니다.
 
 ```html
-<p>According to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
-<cite>MDN blockquote page</cite></a>:
+<p>
+  According to the
+  <a href="https://developer.mozilla.org/ko/docs/Web/HTML/Element/blockquote">
+    <cite>MDN blockquote page</cite></a
+  >:
 </p>
 
-<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
-  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
-  Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+<blockquote
+  cite="https://developer.mozilla.org/ko/docs/Web/HTML/Element/blockquote">
+  <p>
+    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
+    an extended quotation.
+  </p>
 </blockquote>
 
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
-for short quotations that don't require paragraph breaks.</q> -- <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
-<cite>MDN q page</cite></a>.</p>
+<p>
+  The quote element — <code>&lt;q&gt;</code> — is
+  <q cite="https://developer.mozilla.org/ko/docs/Web/HTML/Element/q"
+    >intended for short quotations that don't require paragraph breaks.</q
+  >
+  --
+  <a href="https://developer.mozilla.org/ko/docs/Web/HTML/Element/q">
+    <cite>MDN q page</cite></a
+  >.
+</p>
 ```
 
 Citations are styled in italic font by default. You can see this code at work in our [quotations.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/quotations.html) example.
@@ -218,12 +259,14 @@ Citations are styled in italic font by default. You can see this code at work in
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input"><p>Hello and welcome to my motivation page. As Confucius once said:</p>
+<textarea id="code" class="input">
+<p>Hello and welcome to my motivation page. As Confucius once said:</p>
 
 <p>It does not matter how slowly you go as long as you do not stop.</p>
 
 <p>I also love the concept of positive thinking, and The Need To Eliminate Negative Self Talk
-(as mentioned in Affirmations for Positive Thinking.)</p></textarea>
+(as mentioned in Affirmations for Positive Thinking.)</p></textarea
+>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -234,10 +277,11 @@ Citations are styled in italic font by default. You can see this code at work in
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 10em;
   padding: 10px;
@@ -261,13 +305,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-textarea.value = '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> once said:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n  <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://www.affirmationsforpositivethinking.com/index.htm">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
+solution.addEventListener("click", function () {
+  textarea.value =
+    '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> once said:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n  <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://www.affirmationsforpositivethinking.com/index.htm">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
   drawOutput();
 });
 
@@ -301,7 +346,9 @@ I think Rev. Green did it in the kitchen with the chainsaw.
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input"><p>NASA sure does some exciting work.</p></textarea>
+<textarea id="code" class="input">
+<p>NASA sure does some exciting work.</p></textarea
+>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -312,10 +359,11 @@ I think Rev. Green did it in the kitchen with the chainsaw.
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 5em;
   padding: 10px;
@@ -339,13 +387,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-textarea.value = '<p><abbr title="National Aeronautics and Space Administration">NASA</abbr> sure does some exciting work.</p>';
+solution.addEventListener("click", function () {
+  textarea.value =
+    '<p><abbr title="National Aeronautics and Space Administration">NASA</abbr> sure does some exciting work.</p>';
   drawOutput();
 });
 
@@ -379,7 +428,10 @@ HTML 에서 `<address>` 태그를 이용해서 연락처 세부 정보를 표시
 
 ```html
 <p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
-<p>Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+<p>
+  Caffeine's chemical formula is
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.
+</p>
 <p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
 ```
 
@@ -410,10 +462,15 @@ para.onclick = function() {
   alert('Owww, stop poking me!');
 }</code></pre>
 
-<p>You shouldn't use presentational elements like <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>.</p>
+<p>
+  You shouldn't use presentational elements like <code>&lt;font&gt;</code> and
+  <code>&lt;center&gt;</code>.
+</p>
 
-<p>In the above JavaScript example, <var>para</var> represents a paragraph element.</p>
-
+<p>
+  In the above JavaScript example, <var>para</var> represents a paragraph
+  element.
+</p>
 
 <p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
 
@@ -464,7 +521,9 @@ HTML 은 기계가 읽을 수 있는 형식(machine-readable)으로 시간과 �
 <!-- Date and time -->
 <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
 <!-- Date and time with timezone offset-->
-<time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+<time datetime="2016-01-20T19:30+01:00"
+  >7.30pm, 20 January 2016 is 8.30pm in France</time
+>
 <!-- Calling out a specific week number-->
 <time datetime="2016-W04">The fourth week of 2016</time>
 ```
@@ -474,15 +533,3 @@ HTML 은 기계가 읽을 수 있는 형식(machine-readable)으로 시간과 �
 HTML 텍스트 시맨틱에 대한 스터디가 끝났습니다. 이 과정에서 학습한 내용이 HTML 텍스트 요소의 전부가 아님을 명심하십시오. 우리는 필수 요소를 위주로 다루고 싶었고, 여러분이 일반적인 상황에서 보거나 적어도 흥미롭게 다가올 수 있는 더 일반적인 것들 중 일부를 다루려고 했습니다. 더 많은 HTML 요소를 찾으려면 [HTML element reference](/ko/docs/Web/HTML/Element) 를 살펴보십시오.([Inline text semantics](/ko/docs/Web/HTML/Element#Inline_text_semantics) 섹션은 시작하기에 좋은 장소입니다.). 다음 문서에서는 HTML 문서의 다른 부분을 구성하는 데 사용할 HTML 요소를 살펴 보겠습니다.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
-
-## In this module
-
-- [Getting started with HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML text fundamentals](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creating hyperlinks](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Advanced text formatting](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Document and website structure](/ko/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/ko/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/ko/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

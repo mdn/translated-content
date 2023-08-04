@@ -16,5 +16,5 @@ slug: Glossary/Immutable
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "イミュータブル")}}
+- Wikipedia 上の [イミュータブル](https://ja.wikipedia.org/wiki/イミュータブル)
 - {{Glossary("Mutable","ミュータブル")}}

@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.beginPath()
 slug: Web/API/CanvasRenderingContext2D/beginPath
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Referencia
-  - metodo
-translation_of: Web/API/CanvasRenderingContext2D/beginPath
 ---
+
 {{APIRef}}
 
 O método **`CanvasRenderingContext2D.beginPath()`** da API Canvas 2D inicia um novo caminho (_path_), esvaziando a lista de sub-caminhos (_sub-paths_). Use esse método quando você quiser criar um novo _path_.
@@ -34,19 +28,19 @@ Isto é só um simples trecho de código que usa o método `fillRect`.
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 // Primeiro path
 ctx.beginPath();
-ctx.strokeStyle = 'blue';
+ctx.strokeStyle = "blue";
 ctx.moveTo(20, 20);
 ctx.lineTo(200, 20);
 ctx.stroke();
 
 // Segundo path
 ctx.beginPath();
-ctx.strokeStyle = 'green';
+ctx.strokeStyle = "green";
 ctx.moveTo(20, 20);
 ctx.lineTo(120, 120);
 ctx.stroke();
@@ -73,7 +67,8 @@ ctx.beginPath();
 ctx.strokeStyle = 'green';
 ctx.moveTo(20,20);
 ctx.lineTo(120, 120);
-ctx.stroke();</textarea>
+ctx.stroke();</textarea
+>
 ```
 
 ```js hidden
@@ -89,14 +84,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -106,13 +101,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Especificações
 
-| Especificação                                                                                                                                    | Estado                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-beginpath", "CanvasRenderingContext2D.beginPath")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CanvasRenderingContext2D.beginPath")}}
+{{Compat}}
 
 ## Veja também
 

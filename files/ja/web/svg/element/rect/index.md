@@ -51,10 +51,7 @@ slug: Web/SVG/Element/rect
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                     | コメント   |
-| ---------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('SVG2', 'shapes.html#RectElement', '&lt;rect&gt;')}}     | {{Spec2('SVG2')}} |            |
-| {{SpecName('SVG1.1', 'shapes.html#RectElement', '&lt;rect&gt;')}} | {{Spec2('SVG1.1')}} | 最初の定義 |
+{{Specifications}}
 
 ## ブラウザー互換性
 

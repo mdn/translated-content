@@ -3,6 +3,8 @@ title: Function（函数）
 slug: Glossary/Function
 ---
 
+{{GlossarySidebar}}
+
 **function**，**函数**，是一个可以被其他代码或其自身调用的代码片段，或者是一个指向该函数的{{Glossary("variable", "变量")}} 。当函数被调用时，{{Glossary("Argument", "参数")}}被作为输入传递给函数，并且函数可以返回输出。在 {{glossary("JavaScript")}} 中，函数也是一个{{glossary("object", "对象")}}。
 
 函数名是作为函数声明或函数表达式的一部分声明的{{Glossary("identifier", "标识符")}}。函数的{{Glossary("scope", "作用域")}}取决于函数名是一个声明还是表达式。
@@ -28,16 +30,16 @@ const foo = () => {};
 **内部函数**是另一个函数内的函数（下面例子中的 `square`）。外部函数是包含一个函数的函数（下面例子中的 `addSquares`）：
 
 ```js
-function addSquares(a,b) {
-   function square(x) {
-      return x * x;
-   }
-   return square(a) + square(b);
-};
+function addSquares(a, b) {
+  function square(x) {
+    return x * x;
+  }
+  return square(a) + square(b);
+}
 //Using ECMAScript 2015 arrow notation
-const addSquares = (a,b) => {
-   const square = x => x*x;
-   return square(a) + square(b);
+const addSquares = (a, b) => {
+  const square = (x) => x * x;
+  return square(a) + square(b);
 };
 ```
 
@@ -45,15 +47,13 @@ const addSquares = (a,b) => {
 
 ```js
 function loop(x) {
-   if (x >= 10)
-      return;
-   loop(x + 1);
-};
+  if (x >= 10) return;
+  loop(x + 1);
+}
 //Using ECMAScript 2015 arrow notation
-const loop = x => {
-   if (x >= 10)
-      return;
-   loop(x + 1);
+const loop = (x) => {
+  if (x >= 10) return;
+  loop(x + 1);
 };
 ```
 
@@ -62,17 +62,17 @@ const loop = x => {
 ```js
 // Error (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 /*
-​function foo() {
+function foo() {
     console.log('Hello Foo');
 }();
 */
 
 (function foo() {
-    console.log("Hello Foo");
-}());
+  console.log("Hello Foo");
+})();
 
 (function food() {
-    console.log("Hello Food");
+  console.log("Hello Food");
 })();
 ```
 

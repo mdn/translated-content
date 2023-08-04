@@ -1,18 +1,17 @@
 ---
 title: WebAssembly
 slug: WebAssembly/JavaScript_interface
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
-**`WebAssembly`**JavaScript 对象是所有 [WebAssembly](/zh-CN/docs/WebAssembly) 相关功能的命名空间。
+**`WebAssembly`** JavaScript 对象是所有 [WebAssembly](/zh-CN/docs/WebAssembly) 相关功能的命名空间。
 
 和大多数全局对象不一样，`WebAssembly`不是一个构造函数（它不是一个函数对象）。它类似于 {{jsxref("Math")}} 对象或者 {{jsxref("Intl")}} 对象，Math 对象也是一个命名空间对象，用于保存数学常量和函数；Intl 则是用于国际化和其他语言相关函数的命名空间对象。
 
 ## 描述
 
-`WebAssembly`对象主要用于：
+`WebAssembly` 对象主要用于：
 
 - 使用 {{jsxref("WebAssembly.instantiate()")}} 函数加载 WebAssembly 代码。
 - 通过 {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}} 构造函数创建新的内存和表实例。
@@ -55,10 +54,11 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 下面的示例（请参见 GitHub 上的[Instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html)演示，并查看[在线演示](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)）直接从流式底层源传输.wasm 模块，然后对其进行编译和实例化，并通过`ResultObject`实现 promise。由于`instantiateStreaming()`函数接受对 {{domxref("Response")}} 对象的 promise，因此您可以直接向其传递 {{domxref("fetch()")}} 调用，然后它将把返回的 response 传递给随后的函数。
 
 ```js
-var importObject = { imports: { imported_func: arg => console.log(arg) } };
+var importObject = { imports: { imported_func: (arg) => console.log(arg) } };
 
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func())
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func(),
+);
 ```
 
 返回的`ResultObject`实例的成员可以被随后访问到，可以调用实例中被导出的方法。
