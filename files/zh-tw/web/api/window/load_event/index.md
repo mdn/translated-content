@@ -47,10 +47,10 @@ slug: Web/API/Window/load_event
 
 {{Specifications}}
 
-## 相關事件
+## 參見
 
-- [`DOMContentLoaded`](/zh-TW/docs/Web/API/Window/DOMContentLoaded_event)
-- [`readystatechange`](/zh-TW/docs/Web/API/Document/readystatechange_event)
-- [`load`](/zh-TW/docs/Web/API/Window/load_event)
-- [`beforeunload`](/zh-TW/docs/Web/API/Window/beforeunload_event)
-- [`unload`](/zh-TW/docs/Web/API/Window/unload_event)
+- 相關事件：
+  - {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}
+  - {{domxref("Document/readystatechange_event", "readystatechange")}}
+  - {{domxref("Window/beforeunload_event", "beforeunload")}}
+  - {{domxref("Window/unload_event", "unload")}}
