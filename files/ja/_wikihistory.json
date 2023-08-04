@@ -30542,19 +30542,6 @@
     "modified": "2020-10-15T22:12:31.952Z",
     "contributors": ["mfuji09"]
   },
-  "conflicting/Web/API/Document/DOMContentLoaded_event": {
-    "modified": "2020-10-15T21:43:18.027Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "forl-developer",
-      "silverskyvicto",
-      "fscholz",
-      "toris-birds",
-      "hamasaki",
-      "gurezo"
-    ]
-  },
   "conflicting/Web/API/Element/clientHeight": {
     "modified": "2020-10-15T21:21:06.996Z",
     "contributors": ["mfuji09", "fscholz", "jsx", "ethertank"]
