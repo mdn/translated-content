@@ -51,8 +51,8 @@ theBigDay.setMinutes(45);
 
 ## Especificações
 
-| Especificação                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                                          |
+| -------------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-date.prototype.setminutes', 'Date.prototype.setMinutes')}} |
 
 ## Compatibilidade com navegadores

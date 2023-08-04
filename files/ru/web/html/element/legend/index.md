@@ -12,10 +12,10 @@ slug: Web/HTML/Element/legend
 | [Категории контента](/ru/docs/HTML/Content_categories) | Нет                                                                    |
 | ------------------------------------------------------ | ---------------------------------------------------------------------- |
 | Допустимый контент                                     | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content). |
-| Пропуск тегов                                          | {{no_tag_omission}}                                               |
-| Допустимые родители                                    | Является дочерним элементом тега {{HTMLElement("fieldset")}}  |
+| Пропуск тегов                                          | {{no_tag_omission}}                                                    |
+| Допустимые родители                                    | Является дочерним элементом тега {{HTMLElement("fieldset")}}           |
 | Допустимые ARIA-роли                                   | Нет                                                                    |
-| DOM-интерфейс                                          | {{domxref("HTMLLegendElement")}}                           |
+| DOM-интерфейс                                          | {{domxref("HTMLLegendElement")}}                                       |
 
 ## Атрибуты
 

@@ -24,18 +24,13 @@ _No inherited method._
 - {{domxref("DOMImplementation.hasFeature()")}}
   - : Returns a {{domxref("Boolean")}} indicating if a given feature is supported or not. This function is unreliable and kept for compatibility purpose alone: except for SVG-related queries, it always returns `true`. Old browsers are very inconsistent in their behavior.
 
-## Specifications
+## Especificações
 
-| Specification                                                                                            | Status                           | Comment                                                                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#domimplementation', 'DOMImplementation')}}             | {{Spec2('DOM WHATWG')}} | Removed the `getFeature()` method. Added the `createHTMLDocument()` method. Modified the return type of `createDocument()` from {{domxref("Document")}} to {{domxref("XMLDocument")}}. |
-| {{SpecName('DOM3 Core', 'core.html#ID-102161490', 'DOMImplementation')}}         | {{Spec2('DOM3 Core')}}     | Added the `getFeature()` method (never implemented by any user agent).                                                                                                                                    |
-| {{SpecName('DOM2 Core', 'core.html#ID-102161490', 'DOMImplementation')}}         | {{Spec2('DOM2 Core')}}     | Added the `createDocument()` and `createDocumentType()` methods.                                                                                                                                          |
-| {{SpecName('DOM1', 'level-one-core.html#ID-102161490', 'DOMImplementation')}} | {{Spec2('DOM1')}}         | Initial definition.                                                                                                                                                                                       |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.DOMImplementation")}}
+{{Compat}}
 
 ## See also
 

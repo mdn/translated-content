@@ -45,12 +45,12 @@ slug: Web/JavaScript/Reference/Functions/get
 
 ```js
 const obj = {
-  log: ['example','test'],
+  log: ["example", "test"],
   get latest() {
     if (this.log.length === 0) return undefined;
     return this.log[this.log.length - 1];
-  }
-}
+  },
+};
 console.log(obj.latest); // "test"
 ```
 
@@ -69,11 +69,15 @@ delete obj.latest;
 Для добавления геттера к существующему объекту в любое время используйте [Object.defineProperty()](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty).
 
 ```js
-const o = {a: 0};
+const o = { a: 0 };
 
-Object.defineProperty(o, 'b', { get: function() { return this.a + 1; } });
+Object.defineProperty(o, "b", {
+  get: function () {
+    return this.a + 1;
+  },
+});
 
-console.log(o.b) // Runs the getter, which yields a + 1 (which is 1)
+console.log(o.b); // Runs the getter, which yields a + 1 (which is 1)
 ```
 
 ### Использование вычисляемого именованного свойства
@@ -84,7 +88,9 @@ console.log(o.b) // Runs the getter, which yields a + 1 (which is 1)
 var expr = "foo";
 
 var obj = {
-  get [expr]() { return "bar"; }
+  get [expr]() {
+    return "bar";
+  },
 };
 
 console.log(obj.foo); // "bar"
@@ -122,16 +128,18 @@ get notifier() {
 ```js
 class Example {
   get hello() {
-    return 'world';
+    return "world";
   }
 }
 
 const obj = new Example();
 console.log(obj.hello);
 // "world"
-console.log(Object.getOwnPropertyDescriptor(obj, 'hello'));
+console.log(Object.getOwnPropertyDescriptor(obj, "hello"));
 // undefined
-console.log(Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), 'hello'));
+console.log(
+  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), "hello"),
+);
 // { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }
 ```
 

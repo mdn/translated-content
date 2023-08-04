@@ -58,22 +58,25 @@ slug: Web/HTML/Element/ul
 ```html
 <ul>
   <li>first item</li>
-  <li>second item
-  <!-- Закрывающий тег </li> пишем не здесь! -->
+  <li>
+    second item
+    <!-- Закрывающий тег </li> пишем не здесь! -->
     <ul>
       <li>second item first subitem</li>
-      <li>second item second subitem
-     <!-- То же самое для второго вложенного неупорядоченного списка! -->
+      <li>
+        second item second subitem
+        <!-- То же самое для второго вложенного неупорядоченного списка! -->
         <ul>
           <li>second item second subitem first sub-subitem</li>
           <li>second item second subitem second sub-subitem</li>
           <li>second item second subitem third sub-subitem</li>
         </ul>
-      </li> <!-- Закрывающий тег </li>, который
+      </li>
+      <!-- Закрывающий тег </li>, который
 закрывает третий неупорядоченный список -->
       <li>second item third subitem</li>
     </ul>
-  <!-- Вот закрывающий тег </li> -->
+    <!-- Вот закрывающий тег </li> -->
   </li>
   <li>third item</li>
 </ul>
@@ -88,14 +91,15 @@ slug: Web/HTML/Element/ul
 ```html
 <ul>
   <li>first item</li>
-  <li>second item
-  <!-- Закрывающий тег </li> пишем не здесь! -->
+  <li>
+    second item
+    <!-- Закрывающий тег </li> пишем не здесь! -->
     <ol>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ol>
-   <!-- Вот закрывающий тег </li> -->
+    <!-- Вот закрывающий тег </li> -->
   </li>
   <li>third item</li>
 </ul>
