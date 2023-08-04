@@ -1,12 +1,11 @@
 ---
 title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
-translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
-browser-compat: javascript.builtins.RangeError
 ---
+
 {{JSRef}}
 
-El objeto **`RangeError`** indica un error cuando un valor no se encuentra dentro de un rango de valores permitidos.
+El objeto **`RangeError`** indica un error cuando un valor no se encuentra dentro de un rango de valores permitidos.
 
 ## Descripción
 
@@ -16,9 +15,9 @@ que no permite un rango que incluye el valor.
 Esto puede ocurrir cuando:
 
 - pasas un valor que no es uno de los valores de cadena permitidos a {{jsxref("String.prototype.normalize()")}}, o
-- cuando intentas crear una matriz de una longitud inválida con el constructor {{jsxref("Array")}}, o
+- cuando intentas crear una matriz de una longitud inválida con el constructor {{jsxref("Array")}}, o
 - cuando pasas valores inválidos a los métodos numéricos {{jsxref("Number.prototype.toExponential()")}},
-  {{jsxref("Number.prototype.toFixed()")}} o {{jsxref("Number.prototype.toPrecision()")}}.
+  {{jsxref("Number.prototype.toFixed()")}} o {{jsxref("Number.prototype.toPrecision()")}}.
 
 ## Constructor
 

@@ -1,11 +1,8 @@
 ---
 title: Enumerability and ownership of properties
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
-tags:
-  - Guide
-  - JavaScript
-translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 ---
+
 {{JsSidebar("More")}}
 
 'Enumerable properties'(열거 가능한 속성)는 내부 열거 형 플래그가 true로 설정된 property로, 이는 간단한 할당 또는 property initializer ([Object.defineProperty](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)를 통해 정의 된 특성 및 이러한 기본 열거 형을 false로 정의한 특성)를 통해 작성된 property의 기본값입니다.
@@ -155,7 +152,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
             >getOwnPropertySymbols</a
           ></code
         >
-        – filtered to exclude enumerables using <code
+        – filtered to exclude enumerables using <code
           ><a
             href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
             >propertyIsEnumerable</a
@@ -258,7 +255,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
             >getOwnPropertySymbols</a
           ></code
         >
-        – filtered to exclude enumerables using <code
+        – filtered to exclude enumerables using <code
           ><a
             href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
             >propertyIsEnumerable</a
@@ -296,7 +293,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 
 ## Obtaining properties by enumerability/ownership
 
-아래는 모든 경우에 가장 효율적인 알고리즘은 아니지만 빠르게 코드를 작성하여 확인하기 좋습니다.
+아래는 모든 경우에 가장 효율적인 알고리즘은 아니지만 빠르게 코드를 작성하여 확인하기 좋습니다.
 
 - Detection can occur by `SimplePropertyRetriever.theGetMethodYouWant(obj).indexOf(prop) > -1`
 - Iteration can occur by `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});` (or use `filter()`, `map()`, etc.)
@@ -375,7 +372,7 @@ var SimplePropertyRetriever = {
       <th>Enumerable</th>
       <th>Nonenumerable</th>
       <th>Symbols keys</th>
-      <th>Inherited Enumerable</th>
+      <th>Inherited Enumerable</th>
       <th>Inherited Nonenumerable</th>
       <th>Inherited Symbols keys</th>
     </tr>

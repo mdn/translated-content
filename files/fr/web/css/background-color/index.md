@@ -1,12 +1,8 @@
 ---
 title: background-color
 slug: Web/CSS/background-color
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/background-color
 ---
+
 {{CSSRef}}
 
 La propriété **`background-color`** permet de définir la couleur utilisée pour l'arrière-plan d'un élément (celle-ci peut être une couleur transparente).
@@ -19,22 +15,21 @@ La propriété **`background-color`** permet de définir la couleur utilisée po
 /* Valeurs avec un mot-clé */
 background-color: red;
 
-
 /* Valeur hexadécimale */
-background-color: #bbff00;    /* Complètement opaque */
-background-color: #bf0;       /* Complètement opaque - notation raccourcie */
-background-color: #11ffee00;  /* Complètement transparent */
-background-color: #1fe0;      /* Complètement transparent - notation raccourcie */
-background-color: #11ffeeff;  /* Complètement opaque */
-background-color: #1fef;      /* Complètement opaque - notation raccourcie */
+background-color: #bbff00; /* Complètement opaque */
+background-color: #bf0; /* Complètement opaque - notation raccourcie */
+background-color: #11ffee00; /* Complètement transparent */
+background-color: #1fe0; /* Complètement transparent - notation raccourcie */
+background-color: #11ffeeff; /* Complètement opaque */
+background-color: #1fef; /* Complètement opaque - notation raccourcie */
 
 /* Valeur RGB */
 background-color: rgb(255, 255, 128);
 
 /* Valeur RGBA : une valeur RGB avec un canal alpha */
-background-color: rgba(117, 190, 218, 0.0); /* 0.0 - transparent */
+background-color: rgba(117, 190, 218, 0); /* 0.0 - transparent */
 background-color: rgba(117, 190, 218, 0.5); /* 0.5 - semi-transparent */
-background-color: rgba(117, 190, 218, 1.0); /* 1.0 - opaque */
+background-color: rgba(117, 190, 218, 1); /* 1.0 - opaque */
 
 /* Valeur HSLA */
 background-color: hsla(50, 33%, 25%, 0.75);
@@ -56,9 +51,13 @@ La propriété `background-color` se définit grâce à une valeur de type `<col
 - `<color>`
   - : Une valeur de type {{cssxref("&lt;color&gt;")}} qui indique la couleur uniforme de l'arrière-plan. Même si une ou plusieurs images sont définies grâce à {{cssxref("background-image")}}, la couleur peut avoir un impact en fonction de la transparence des images. De façon générale, c'est une bonne pratique que de définir une couleur malgré la présence d'image pour prévenir aux problèmes de chargement des images.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -71,30 +70,24 @@ La propriété `background-color` se définit grâce à une valeur de type `<col
 }
 
 .exemple_deux {
-  background-color: rgb(153,102,153);
-  color: rgb(255,255,204);
+  background-color: rgb(153, 102, 153);
+  color: rgb(255, 255, 204);
 }
 
 .exemple_trois {
   background-color: #777799;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 ```
 
 ### HTML
 
 ```html
-<div class="exemple_un">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exemple_un">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="exemple_deux">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exemple_deux">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="exemple_trois">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exemple_trois">Lorem ipsum dolor sit amet, consectetuer</div>
 ```
 
 ### Résultat
@@ -113,17 +106,11 @@ Le ratio de contraste entre les couleurs est déterminé en comparant la luminos
 
 ## Spécifications
 
-| Spécification                                                                                                | Commentaires                                                                                                                                                                    | Retours                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#background-color', 'background-color')}}             | Le mot-clé `transparent` a été retiré de la propriété pour être intégré au type de données {{cssxref("&lt;color&gt;")}} (dans la pratique, il n'y a aucune différence). | [_Issues_ GitHub pour la spécification Background de niveau 3 (en anglais)](https://github.com/w3c/csswg-drafts/labels/css-backgrounds-3) |
-| {{SpecName('CSS2.1', 'colors.html#propdef-background-color', 'background-color')}} | Aucune modification.                                                                                                                                                            |                                                                                                                                           |
-| {{SpecName('CSS1', '#background-color', 'background-color')}}                             | Définition initiale.                                                                                                                                                            |                                                                                                                                           |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.background-color")}}
+{{Compat}}
 
 ## Voir aussi
 

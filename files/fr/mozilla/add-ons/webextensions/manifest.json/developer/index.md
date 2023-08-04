@@ -1,12 +1,8 @@
 ---
 title: developer
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/developer
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/developer
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -48,6 +44,6 @@ Ceci est une [propriété localisable](/fr/Add-ons/WebExtensions/Internationaliz
 }
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.developer")}}
+{{Compat}}

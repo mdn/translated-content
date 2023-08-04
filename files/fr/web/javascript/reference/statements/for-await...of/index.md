@@ -1,13 +1,8 @@
 ---
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
-tags:
-  - Instruction
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Statements/for-await...of
-original_slug: Web/JavaScript/Reference/Instructions/for-await...of
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`for await…of`** permet de créer une boucle qui parcourt les objets itérables asynchrones de la même façon qu'on parcourt les itérables synchrones (tels que les chaînes de caractères ({{jsxref("String")}}), les tableaux {{jsxref("Array")}}, les objets semblables aux tableaux comme {{jsxref("Fonctions/arguments", "arguments")}} ou {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}. Cette instruction invoque un mécanisme d'itération spécifique et les instructions à exécuter pour chaque propriété de l'objet.
@@ -16,7 +11,7 @@ L'instruction **`for await…of`** permet de créer une boucle qui parcourt les 
 
 ```js
 for await (const variable of iterable) {
-  instruction
+  instruction;
 }
 ```
 
@@ -40,14 +35,14 @@ var asyncIterable = {
         }
 
         return Promise.resolve({ done: true });
-      }
+      },
     };
-  }
+  },
 };
 
-(async function() {
-   for await (let num of asyncIterable) {
-     console.log(num);
+(async function () {
+  for await (let num of asyncIterable) {
+    console.log(num);
   }
 })();
 // 0
@@ -67,7 +62,7 @@ async function* asyncGenerator() {
   }
 }
 
-(async function() {
+(async function () {
   for await (let num of asyncGenerator()) {
     console.log(num);
   }
@@ -110,18 +105,16 @@ async function getResponseSize(url) {
   console.log(`Taille de la réponse : ${responseSize} octets`);
   return responseSize;
 }
-getResponseSize('https://jsonplaceholder.typicode.com/photos');
+getResponseSize("https://jsonplaceholder.typicode.com/photos");
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                    | État                         | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'ECMAScript Language: The for-in, for-of, and for-await-of Statements')}} | {{Spec2('ESDraft')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.for_await_of")}}
+{{Compat}}
 
 ## Voir aussi
 

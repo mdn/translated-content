@@ -1,15 +1,8 @@
 ---
 title: TextDecoderStream.encoding
 slug: Web/API/TextDecoderStream/encoding
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - encoding
-  - TextDecoderStream
-translation_of: Web/api/TextDecoderStream/encoding
 ---
+
 {{APIRef("Encoding API")}}
 
 {{domxref("TextDecoderStream")}} 接口的只读属性 **`encoding`** 返回一个字符串，其中包含指定的 encoder 使用的编码算法的名称。

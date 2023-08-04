@@ -1,16 +1,8 @@
 ---
 title: transform-style
 slug: Web/CSS/transform-style
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 座標変換
-  - 実験的
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.transform-style
-translation_of: Web/CSS/transform-style
 ---
+
 {{CSSRef}}
 
 **`transform-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の子要素を 3D 空間に配置するのか、平面化して要素の平面に配置するのかを設定します。
@@ -72,7 +64,7 @@ transform-style: unset;
 
 <div class="checkbox">
   <label for="preserve"><code>preserve-3d</code></label>
-  <input type="checkbox" id="preserve" checked>
+  <input type="checkbox" id="preserve" checked />
 </div>
 ```
 
@@ -100,32 +92,32 @@ transform-style: unset;
 }
 
 .front {
-    background: rgba(90,90,90,.7);
-    transform: translateZ(50px);
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
 }
 
 .back {
-    background: rgba(0,210,0,.7);
-    transform: rotateY(180deg) translateZ(50px);
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210,0,0,.7);
+  background: rgba(210, 0, 0, 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0,0,210,.7);
+  background: rgba(0, 0, 210, 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210,210,0,.7);
+  background: rgba(210, 210, 0, 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210,0,210,.7);
+  background: rgba(210, 0, 210, 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
@@ -133,16 +125,16 @@ transform-style: unset;
 #### JavaScript
 
 ```js
-const cube = document.getElementById('example-element');
-const checkbox = document.getElementById('preserve');
+const cube = document.getElementById("example-element");
+const checkbox = document.getElementById("preserve");
 
-checkbox.addEventListener('change', () => {
-  if(checkbox.checked) {
-    cube.style.transformStyle = 'preserve-3d';
+checkbox.addEventListener("change", () => {
+  if (checkbox.checked) {
+    cube.style.transformStyle = "preserve-3d";
   } else {
-    cube.style.transformStyle = 'flat';
+    cube.style.transformStyle = "flat";
   }
-})
+});
 ```
 
 #### 結果

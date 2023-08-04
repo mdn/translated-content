@@ -1,18 +1,8 @@
 ---
 title: windows.WindowType
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - WindowType
-  - Windows
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
 ---
+
 {{AddonSidebar()}}
 
 Le type de la fenêtre du navigateur est comme çà.
@@ -26,9 +16,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - `"panel"`
 - `"devtools"`
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.WindowType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
@@ -38,7 +28,8 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -65,4 +56,4 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

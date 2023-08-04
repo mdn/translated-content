@@ -1,18 +1,8 @@
 ---
 title: runtime.onSuspend
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspend
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onSuspend
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspend
 ---
+
 {{AddonSidebar()}}
 
 Envoyé sur la page de l'événement juste avant son déchargement. Cela donne à l'extension l'opportunité de faire un peu de nettoyage. Notez que, comme la page est en cours de déchargement, les opérations asynchrones démarrées lors de la gestion de cet événement ne sont pas garanties.
@@ -22,9 +12,9 @@ Envoyé sur la page de l'événement juste avant son déchargement. Cela donne �
 ## Syntaxe
 
 ```js
-browser.runtime.onSuspend.addListener(listener)
-browser.runtime.onSuspend.removeListener(listener)
-browser.runtime.onSuspend.hasListener(listener)
+browser.runtime.onSuspend.addListener(listener);
+browser.runtime.onSuspend.removeListener(listener);
+browser.runtime.onSuspend.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -43,9 +33,9 @@ Les événements ont trois fonctions :
 - `callback`
   - : Fonction dui sera appelée lorsque cet événement se produit
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onSuspend")}}
+{{Compat}}
 
 ## Exemples
 
@@ -68,7 +58,8 @@ browser.runtime.onSuspend.addListener(handleSuspend);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,4 +86,4 @@ browser.runtime.onSuspend.addListener(handleSuspend);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

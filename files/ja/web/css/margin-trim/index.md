@@ -1,19 +1,8 @@
 ---
 title: margin-trim
 slug: Web/CSS/margin-trim
-tags:
-  - CSS
-  - CSS プロパティ
-  - Draft
-  - Experimental
-  - NeedsContent
-  - NeedsExample
-  - NeedsLiveSample
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.margin-trim
-translation_of: Web/CSS/margin-trim
 ---
+
 {{CSSRef}}
 
 `margin-trim` プロパティは、包含ブロックがその子のマージンを包含ブロックの縁に隣接する部分で切り取るすることを可能にします。

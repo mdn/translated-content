@@ -1,11 +1,8 @@
 ---
 title: output
 slug: Web/XSLT/Element/output
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/output
-original_slug: Web/XSLT/output
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:output>` contrôle les caractéristiques du document de sortie. Pour fonctionner correctement dans Netscape, cet élément doit être utilisé, avec l'attribut `method`. À partir de Netscape 7.0, `method="text"` fonctionne comme prévu.

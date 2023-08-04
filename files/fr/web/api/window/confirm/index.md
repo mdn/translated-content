@@ -1,9 +1,8 @@
 ---
 title: Window.confirm()
 slug: Web/API/Window/confirm
-translation_of: Web/API/Window/confirm
-browser-compat: api.Window.confirm
 ---
+
 {{ApiRef("Window")}}
 
 `window.confirm()` indique au navigateur d'afficher une boîte de dialogue avec un message optionnel et d'attendre que la personne confirme ou annule la boîte de dialogue.
@@ -13,7 +12,7 @@ Sous certaines conditions, par exemple au changement d'onglet, le navigateur pou
 ## Syntaxe
 
 ```js
-confirm(message)
+confirm(message);
 ```
 
 ### Paramètres

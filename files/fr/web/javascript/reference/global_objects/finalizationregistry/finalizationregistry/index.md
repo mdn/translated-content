@@ -1,9 +1,8 @@
 ---
 title: Constructeur FinalizationRegistry()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
-translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
-browser-compat: javascript.builtins.FinalizationRegistry.FinalizationRegistry
 ---
+
 {{JSRef}}
 
 Le constructeur **`FinalizationRegistry`** crée un objet [`FinalizationRegistry`](/fr/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) qui utilise la fonction de rappel passée en argument comme fonction de nettoyage pour les objets du registre.
@@ -33,7 +32,7 @@ new FinalizationRegistry(function(valeurTenue) { ... })
 On crée le registre en fournissant la fonction de rappel&nbsp;:
 
 ```js
-const registre = new FinalizationRegistry(valeurTenue => {
+const registre = new FinalizationRegistry((valeurTenue) => {
   // ....
 });
 ```

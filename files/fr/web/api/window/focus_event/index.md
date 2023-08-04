@@ -1,10 +1,8 @@
 ---
 title: GlobalEventHandlers.onfocus
 slug: Web/API/Window/focus_event
-translation_of: Web/API/GlobalEventHandlers/onfocus
-original_slug: Web/API/GlobalEventHandlers/onfocus
-browser-compat: api.GlobalEventHandlers.onfocus
 ---
+
 {{ApiRef("HTML DOM")}}
 
 La propriété **`onfocus`**, , rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [un gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`focus`](/fr/docs/Web/API/Element/focus_event).
@@ -32,23 +30,23 @@ Cet exemple utilise [`onblur`](/fr/docs/Web/API/GlobalEventHandlers/onblur) et `
 ### HTML
 
 ```html
-<input type="text" value="Cliquez ici">
+<input type="text" value="Cliquez ici" />
 ```
 
 ### JavaScript
 
 ```js
-let input = document.querySelector('input');
+let input = document.querySelector("input");
 
 input.onblur = inputBlur;
 input.onfocus = inputFocus;
 
 function inputBlur() {
-  input.value = 'Le focus a été perdu';
+  input.value = "Le focus a été perdu";
 }
 
 function inputFocus() {
-  input.value = 'Le focus est là';
+  input.value = "Le focus est là";
 }
 ```
 

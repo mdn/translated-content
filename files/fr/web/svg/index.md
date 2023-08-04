@@ -1,8 +1,8 @@
 ---
 title: SVG (Scalable Vector Graphics)
 slug: Web/SVG
-translation_of: Web/SVG
 ---
+
 {{SVGRef}}
 
 ## Démarrer avec SVG

@@ -1,16 +1,8 @@
 ---
 title: Expressions et opérateurs
 slug: Web/JavaScript/Reference/Operators
-tags:
-  - JavaScript
-  - Landing page
-  - Operators
-  - Overview
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators
-original_slug: Web/JavaScript/Reference/Opérateurs
-browser-compat: javascript.operators
 ---
+
 {{jsSidebar("Operators")}}
 
 Ce chapitre documente l'ensemble des opérateurs, expressions et mots-clés pour le langage JavaScript.

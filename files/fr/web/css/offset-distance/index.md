@@ -1,14 +1,8 @@
 ---
 title: offset-distance
 slug: Web/CSS/offset-distance
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - motion-offset
-  - offset-distance
-translation_of: Web/CSS/offset-distance
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`offset-distance`** définit une position le long d'un chemin {{CSSxRef("offset-path")}}.
@@ -49,7 +43,7 @@ La notion de mouvement contenue dans _CSS Motion Path_ vient principalement de l
 
 ```css
 #motion-demo {
-  offset-path: path('M20,20 C20,100 200,0 200,100');
+  offset-path: path("M20,20 C20,100 200,0 200,100");
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;
   height: 40px;
@@ -72,14 +66,8 @@ La notion de mouvement contenue dans _CSS Motion Path_ vient principalement de l
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Motion Path Level 1', '#offset-distance-property', 'offset-distance')}} | {{Spec2('Motion Path Level 1')}} | Définition initiale. |
-
-{{CSSInfo}}
-
-> **Note :** Dans les versions antérieures de la spécification, cette propriété était intitulée `motion-offset`.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.offset-distance")}}
+{{Compat}}

@@ -1,9 +1,8 @@
 ---
-title: '@layer'
+title: "@layer"
 slug: Web/CSS/@layer
-translation_of: Web/CSS/@layer
-browser-compat: css.at-rules.layer
 ---
+
 {{CSSRef}}
 
 La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@layer`** est utilisée pour déclarer une couche de cascade et peut également être utilisée afin de définir l'ordre de précédence lorsqu'il y a plusieurs couches de cascade.
@@ -35,16 +34,16 @@ La première façon consiste à créer une couche de cascade nommée et qui cont
 ```css
 @layer utilities {
   .padding-sm {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
   .padding-lg {
-    padding: .8rem;
+    padding: 0.8rem;
   }
 }
 ```
 
-La seconde méthode consiste à créer une couche de cascade nommée sans lui affecter de styles. Il peut s'agit d'une seule couche&nbsp;:
+La seconde méthode consiste à créer une couche de cascade nommée sans lui affecter de styles. Il peut s'agir d'une seule couche&nbsp;:
 
 ```css
 @layer utilities;
@@ -79,7 +78,7 @@ Une autre façon pour créer une couche de cascade consiste à utiliser [`@impor
 > **Attention :** La règle @ `@import` doit précéder tous les autres types de règles, à l'exception des règles `@charset`.
 
 ```css
-@import 'theme.css' layer(utilities);
+@import "theme.css" layer(utilities);
 ```
 
 ### Couches imbriquées
@@ -89,7 +88,6 @@ Les couches peuvent être imbriquées, on peut par exemple avoir&nbsp;:
 ```css
 @layer framework {
   @layer layout {
-
   }
 }
 ```
@@ -152,16 +150,17 @@ p {
 
 ### Affecter des règles à des couches existantes
 
-Dans l'exemple qui suit, on crée deux couches sans leur affecter de règle puis les règles CSS sont appliquées aux deux couches. La couche `base` définit  des valeurs pour les propriétés `color`, `border`, `font-size`, et `padding`. La couche `special` définit une couleur différente. `special` arrivant en dernier lors de la définition des couches, c'est la couleur qu'elle fournit qui est utilisée et le texte est affiché avec la couleur `rebeccapurple`. Toutes les autres règles de `base` continuent de s'appliquer.
+Dans l'exemple qui suit, on crée deux couches sans leur affecter de règle puis les règles CSS sont appliquées aux deux couches. La couche `base` définit des valeurs pour les propriétés `color`, `border`, `font-size`, et `padding`. La couche `special` définit une couleur différente. `special` arrivant en dernier lors de la définition des couches, c'est la couleur qu'elle fournit qui est utilisée et le texte est affiché avec la couleur `rebeccapurple`. Toutes les autres règles de `base` continuent de s'appliquer.
 
 #### HTML
 
 ```html
 <div class="item">
   Je m'affiche avec <code>color: rebeccapurple</code> car la couche
-  <code>special</code> arrive après <code>base</code> dans les déclarations.
-  Ma bordure verte, la taille du texte et le remplissage viennent de la
-  couche <code>base</code>.</div>
+  <code>special</code> arrive après <code>base</code> dans les déclarations. Ma
+  bordure verte, la taille du texte et le remplissage viennent de la couche
+  <code>base</code>.
+</div>
 ```
 
 #### CSS
@@ -180,7 +179,7 @@ Dans l'exemple qui suit, on crée deux couches sans leur affecter de règle puis
     color: green;
     border: 5px solid green;
     font-size: 1.3em;
-    padding: .5em;
+    padding: 0.5em;
   }
 }
 ```

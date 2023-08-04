@@ -1,14 +1,8 @@
 ---
 title: Utiliser les transitions CSS
-slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
-tags:
-  - Avancé
-  - CSS
-  - Guide
-  - Transitions
-translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
-original_slug: Web/CSS/CSS_Transitions/Utiliser_transitions_CSS
+slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 ---
+
 {{CSSref}}
 
 Les **transitions CSS** permettent de contrôler la vitesse d'animation lorsque les propriétés CSS sont modifiées. Plutôt que le changement soit immédiat, on peut l'étaler sur une certaine période. Ainsi, si on souhaite passer un élément de blanc à noir, on pourra utiliser les transitions CSS afin que cette modification soit effectuée progressivement, selon une courbe d'accélération donnée.
@@ -78,8 +72,12 @@ Avec cette feuille de style, on opère une transition CSS sur la taille de polic
 
 ```html hidden
 <body>
-    <p>La boîte ci-dessous utilise des transitions pour les propriétés : width, height, background-color, transform. Survolez la boîte pour voir les animations.</p>
-    <div class="box">Sample</div>
+  <p>
+    La boîte ci-dessous utilise des transitions pour les propriétés : width,
+    height, background-color, transform. Survolez la boîte pour voir les
+    animations.
+  </p>
+  <div class="box">Sample</div>
 </body>
 ```
 
@@ -87,20 +85,24 @@ Avec cette feuille de style, on opère une transition CSS sur la taille de polic
 
 ```css
 .box {
-    border-style: solid;
-    border-width: 1px;
-    display: block;
-    width: 100px;
-    height: 100px;
-    background-color: #0000FF;
-    transition: width 2s, height 2s, background-color 2s, transform 2s;
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #0000ff;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    transform 2s;
 }
 
 .box:hover {
-    background-color: #FFCCCC;
-    width: 200px;
-    height: 200px;
-    transform: rotate(180deg);
+  background-color: #ffcccc;
+  width: 200px;
+  height: 200px;
+  transform: rotate(180deg);
 }
 ```
 
@@ -117,12 +119,16 @@ Avec cette feuille de style, on opère une transition CSS sur la taille de polic
   display: block;
   width: 100px;
   height: 100px;
-  background-color: #0000FF;
-  transition: width 2s, height 2s, background-color 2s, transform 2s;
+  background-color: #0000ff;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    transform 2s;
 }
 
 .box:hover {
-  background-color: #FFCCCC;
+  background-color: #ffcccc;
   width: 200px;
   height: 200px;
   transform: rotate(180deg);
@@ -132,8 +138,10 @@ Avec cette feuille de style, on opère une transition CSS sur la taille de polic
 #### HTML
 
 ```html
-<p>Cette boîte utilisera des transitions pour width, height, background-color, transform.
-   Survolez cette boîte pour voir l'effet.</p>
+<p>
+  Cette boîte utilisera des transitions pour width, height, background-color,
+  transform. Survolez cette boîte pour voir l'effet.
+</p>
 <div class="box"></div>
 ```
 
@@ -165,8 +173,8 @@ De même, si la liste est trop longue par rapport à {{cssxref("transition-prope
 
 ```css
 div {
- transition-property: opacity, left;
- transition-duration: 3s, 5s, 2s, 1s;
+  transition-property: opacity, left;
+  transition-duration: 3s, 5s, 2s, 1s;
 }
 ```
 
@@ -257,11 +265,15 @@ Les transitions permettent de lisser les opérations effectuées avec JavaScript
 Avec JavaScript, on peut ajouter un effet de mouvement sur la balle :
 
 ```js
-var f = document.getElementById('foo');
-document.addEventListener('click', function(ev){
-    f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
-    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
-},false);
+var f = document.getElementById("foo");
+document.addEventListener(
+  "click",
+  function (ev) {
+    f.style.transform = "translateY(" + (ev.clientY - 25) + "px)";
+    f.style.transform += "translateX(" + (ev.clientX - 25) + "px)";
+  },
+  false,
+);
 ```
 
 Avec CSS, il suffit d'ajouter une transition à l'élément et chaque modification sera appliquée de façon régulière :
@@ -287,7 +299,7 @@ p {
 
 ### Détecter le début et la fin d'une transition
 
-L'évènement {{event("transitionend")}} est déclenché lorsqu'une transition est terminée. C'est un objet {{domxref("TransitionEvent")}} qui possède deux propriétés supplémentaires qu'un {{domxref("Event")}} :
+L'évènement [`transitionend`](/fr/docs/Web/API/Element/transitionend_event) est déclenché lorsqu'une transition est terminée. C'est un objet {{domxref("TransitionEvent")}} qui possède deux propriétés supplémentaires qu'un {{domxref("Event")}} :
 
 - `propertyName`
   - : Une chaîne de caractères qui indique le nom de la propriété CSS pour laquelle la transition est terminée.
@@ -300,7 +312,7 @@ Comme pour les différents évènements, on pourra utiliser {{domxref("eventtarg
 el.addEventListener("transitionend", updateTransition, true);
 ```
 
-Pour détecter le début d'une transition, on pourra utiliser l'évènement {{event("transitionrun")}} qui est déclenché avant tout retardement et l'évènement {{event("transitionstart")}} qui est déclenché après tout retardement :
+Pour détecter le début d'une transition, on pourra utiliser l'évènement [`transitionrun`](/fr/docs/Web/API/Element/transitionrun_event) qui est déclenché avant tout retardement et l'évènement [`transitionstart`](/fr/docs/Web/API/Element/transitionstart_event) qui est déclenché après tout retardement :
 
 ```js
 el.addEventListener("transitionrun", signalStart, true);
@@ -311,11 +323,9 @@ el.addEventListener("transitionstart", signalStart, true);
 
 ## Spécifications
 
-| Spécification                                        | État                                     | Commentaires         |
-| ---------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Transitions', '', '')}} | {{Spec2('CSS3 Transitions')}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 
-- L'interface {{domxref("TransitionEvent")}} et l'événement {{event("transitionend")}}
+- L'interface {{domxref("TransitionEvent")}} et l'événement [`transitionend`](/fr/docs/Web/API/Element/transitionend_event)
 - [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations)

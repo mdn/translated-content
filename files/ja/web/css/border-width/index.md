@@ -1,15 +1,8 @@
 ---
 title: border-width
 slug: Web/CSS/border-width
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-width
-translation_of: Web/CSS/border-width
 ---
+
 {{CSSRef}}
 
 **`border-width`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の幅を設定します。
@@ -70,7 +63,7 @@ border-width: unset;
     - `medium`
     - `thick`
 
- > **Note:** 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、何れか 1つを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
+ > **メモ:** 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、何れか 1つを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
 
 ## 公式定義
 
@@ -88,38 +81,38 @@ border-width: unset;
 
 ```html
 <p id="sval">
-    one value: 6px wide border on all 4 sides</p>
+    one value: 6px wide border on all 4 sides</p>
 <p id="bival">
-    two different values: 2px wide top and bottom border, 10px wide right and left border</p>
+    two different values: 2px wide top and bottom border, 10px wide right and left border</p>
 <p id="treval">
-    three different values: 0.3em top, 9px bottom, and zero width right and left</p>
+    three different values: 0.3em top, 9px bottom, and zero width right and left</p>
 <p id="fourval">
-    four different values: "thin" top, "medium" right, "thick" bottom, and 1em left</p>
+    four different values: "thin" top, "medium" right, "thick" bottom, and 1em left</p>
 ```
 
 #### CSS
 
 ```css
 #sval {
-  border: ridge #ccc;
-  border-width: 6px;
+  border: ridge #ccc;
+  border-width: 6px;
 }
 #bival {
-  border: solid red;
-  border-width: 2px 10px;
+  border: solid red;
+  border-width: 2px 10px;
 }
 #treval {
-  border: dotted orange;
-  border-width: 0.3em 0 9px;
+  border: dotted orange;
+  border-width: 0.3em 0 9px;
 }
 #fourval {
-  border: solid lightgreen;
-  border-width: thin medium thick 1em;
+  border: solid lightgreen;
+  border-width: thin medium thick 1em;
 }
 p {
-  width: auto;
-  margin: 0.25em;
-  padding: 0.25em;
+  width: auto;
+  margin: 0.25em;
+  padding: 0.25em;
 }
 ```
 

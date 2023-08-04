@@ -1,9 +1,8 @@
 ---
 title: Constructeur TypeError()
 slug: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
-translation_of: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
-browser-compat: javascript.builtins.TypeError.TypeError
 ---
+
 {{JSRef}}
 
 Le constructeur **`TypeError()`** permet de créer un objet représentant une erreur qui se produit lorsqu'une opération n'a pu être réalisée, généralement (mais pas toujours) parce qu'une valeur n'était pas du type attendu.
@@ -11,10 +10,10 @@ Le constructeur **`TypeError()`** permet de créer un objet représentant une er
 ## Syntaxe
 
 ```js
-new TypeError()
-new TypeError(message)
-new TypeError(message, nomFichier)
-new TypeError(message, nomFichier, numeroLigne)
+new TypeError();
+new TypeError(message);
+new TypeError(message, nomFichier);
+new TypeError(message, nomFichier, numeroLigne);
 ```
 
 ### Paramètres
@@ -34,13 +33,13 @@ new TypeError(message, nomFichier, numeroLigne)
 try {
   null.f();
 } catch (e) {
-  console.log(e instanceof TypeError);  // true
-  console.log(e.message);               // "null has no properties"
-  console.log(e.name);                  // "TypeError"
-  console.log(e.fileName);              // "Scratchpad/1"
-  console.log(e.lineNumber);            // 2
-  console.log(e.columnNumber);          // 2
-  console.log(e.stack);                 // "@Scratchpad/2:2:3\n"
+  console.log(e instanceof TypeError); // true
+  console.log(e.message); // "null has no properties"
+  console.log(e.name); // "TypeError"
+  console.log(e.fileName); // "Scratchpad/1"
+  console.log(e.lineNumber); // 2
+  console.log(e.columnNumber); // 2
+  console.log(e.stack); // "@Scratchpad/2:2:3\n"
 }
 ```
 
@@ -48,15 +47,15 @@ try {
 
 ```js
 try {
-  throw new TypeError('Coucou', 'unFichier.js', 10);
+  throw new TypeError("Coucou", "unFichier.js", 10);
 } catch (e) {
-  console.log(e instanceof TypeError);  // true
-  console.log(e.message);               // "Coucou"
-  console.log(e.name);                  // "TypeError"
-  console.log(e.fileName);              // "unFichier.js"
-  console.log(e.lineNumber);            // 10
-  console.log(e.columnNumber);          // 0
-  console.log(e.stack);                 // "@Scratchpad/2:2:9\n"
+  console.log(e instanceof TypeError); // true
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "TypeError"
+  console.log(e.fileName); // "unFichier.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 

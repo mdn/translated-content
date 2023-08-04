@@ -1,18 +1,15 @@
 ---
-title: Node.childNodes
+title: "Node: childNodes プロパティ"
 slug: Web/API/Node/childNodes
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.childNodes
-translation_of: Web/API/Node/childNodes
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
+
 {{APIRef("DOM")}}
 
 **`childNodes`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティであり、{{domxref("NodeList")}} で指定された要素の子{{domxref("Node", "ノード", "", 1)}}の生きたリストを返し、最初の子ノードは位置 `0` に割り当てられます。子ノードには要素、テキスト、コメントが含まれます。
 
-> **Note:** {{domxref("NodeList")}} が生きたリストであるというのは、新しい子が追加されたり取り除かれたりするたびに、内容が変化するという意味です。
+> **メモ:** {{domxref("NodeList")}} が生きたリストであるというのは、新しい子が追加されたり取り除かれたりするたびに、内容が変化するという意味です。
 
 ノードのコレクションの項目はオブジェクトであり、文字列ではありません。ノードオブジェクトからデータを取得するには、そのプロパティを使用してください。例えば、最初の子ノードの名前を取得するには、 `elementNodeReference.childNodes[0].nodeName` を使うことで実現できます。
 
@@ -25,35 +22,34 @@ translation_of: Web/API/Node/childNodes
 
 このノードの子を含む生きた {{domxref("NodeList")}} です。
 
-> **Note:** `childNodes` を複数回呼び出しても、*同じ* {{domxref("NodeList")}} が返されます。
+> **メモ:** `childNodes` を複数回呼び出しても、*同じ* {{domxref("NodeList")}} が返されます。
 
 ## 例
 
 ### 単純な使用方法
 
 ```js
-// parg は <p> 要素へのオブジェクト参照です
+// parg は <p> 要素へのオブジェクト参照であることに注意
 
 // まず、要素に子ノードがあるかどうかをチェックします
 if (parg.hasChildNodes()) {
   let children = parg.childNodes;
 
-  for (let i = 0; i < children.length; i++) {
+  for (const node of children) {
     // それぞれの子を children[i] として処理します
     // 注: リストは生きています。子を追加したり取り除いたりすると、リストの `length` が変わります
   }
 }
 ```
 
-### ノードからすべてての子を削除
+### ノードからすべての子を削除
 
 ```js
 // これはあるノードからすべての子を取り除くための一つの方法です
 // box はある要素へのオブジェクト参照です
-
 while (box.firstChild) {
-    // リストは生きているので、呼び出されるたびにインデックスが変わります
-    box.removeChild(box.firstChild);
+  // リストは生きているので、呼び出されるたびにインデックスが変わります
+  box.removeChild(box.firstChild);
 }
 ```
 

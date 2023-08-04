@@ -1,13 +1,13 @@
 ---
 title: 你的第一個 WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
+
 {{AddonSidebar}}
 
 我們會在這篇文章詳細講解 Firefox 的 WebExtension 的製作。這支附加元件會在 "mozilla.org" 網域底下的所有網頁，增加紅色外框。
 
-範例的原始碼也放在 GitHub 喔：<https://github.com/mdn/webextensions-examples/tree/master/borderify>。
+範例的原始碼也放在 GitHub 喔：<https://github.com/mdn/webextensions-examples/tree/main/borderify>。
 
 首先勒，你需要 Firefox 45.0 或以上的版本。
 
@@ -26,7 +26,6 @@ cd borderify
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Borderify",
   "version": "1.0",
@@ -43,7 +42,6 @@ cd borderify
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 
@@ -95,23 +93,23 @@ document.body.style.border = "5px solid red";
 
 一旦網址符合 manifest.json 中 content_scripts 所設定的模式，這段 script 就會載入，並且就像該頁自己讀入的程式碼一樣、能夠直接存取該頁上的東西。
 
-- [深入了解 content scripts.](/en-US/Add-ons/WebExtensions/Content_scripts)
+- [深入了解 content scripts.](/zh-TW/Add-ons/WebExtensions/Content_scripts)
 
 ## 測試看看
 
 首先，仔細檢查這些檔案是否在正確的位置：
 
-    borderify/
-        icons/
-            border-48.png
-        borderify.js
-        manifest.json
+```
+borderify/
+    icons/
+        border-48.png
+    borderify.js
+    manifest.json
+```
 
 ### 安裝
 
 在 Firefox 打開 about:debugging，點選 Load Temporary Add-on 然後選擇你的 manifest.json 檔案：
-
-{{EmbedYouTube("cer9EUKegG4")}}
 
 現在這個附加元件就要安裝起來，但它要在你重新啟動 Firefox 後才開始。
 
@@ -121,13 +119,11 @@ document.body.style.border = "5px solid red";
 
 現在去看一下 mozilla.org 還有它下面的所有網頁。你應該會看到有個紅色外框圍繞著網頁。
 
-{{EmbedYouTube("rxBQl2Z9IBQ")}}
+![Border displayed on mozilla.org](border_on_mozilla_org.png)
 
 > **備註：** 不過，別把這招用在 addons.mozilla.org 上，該網域目前會阻擋 content scripts。
 
 再做點小實驗吧。改一下腳本讓外框顏色改變，或是做其他更動。接著存檔，並按下 about:debugging 的 Reload 鍵重啟附加元件。現在你能看到更動了：
-
-{{EmbedYouTube("NuajE60jfGY")}}
 
 - [多了解一點附加元件的載入](/zh-TW/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
 

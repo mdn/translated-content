@@ -1,16 +1,8 @@
 ---
 title: white-space
 slug: Web/CSS/white-space
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト
-  - Reference
-  - recipe:css-property
-  - white-space
-browser-compat: css.properties.white-space
-translation_of: Web/CSS/white-space
 ---
+
 {{CSSRef}}
 
 **`white-space`** は CSS のプロパティで、要素内の{{Glossary("whitespace", "ホワイトスペース")}}をどのように扱うかを設定します。
@@ -22,7 +14,7 @@ translation_of: Web/CSS/white-space
 - ホワイトスペースを折り畳むかどうか、およびその方法。
 - 行を自動折り返しの場面で折り返すことができるかどうか。
 
-> **Note:** *要素の内部で*折り返しを行うには、代わりに {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}} を使用してください。
+> **メモ:** *要素の内部で*折り返しを行うには、代わりに {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}} を使用してください。
 
 ## 構文
 
@@ -129,7 +121,7 @@ white-space: unset;
   </tbody>
 </table>
 
-> **Note:** **空白**と**その他の空白区切り**には違いがあります。以下のように定義されています。
+> **メモ:** **空白**と**その他の空白区切り**には違いがあります。以下のように定義されています。
 >
 > - 空白
 >   - : 空白 (U+0020)、タブ (U+0009)、区切り文字 (改行など)。
@@ -178,16 +170,18 @@ pre {
     <option>pre-wrap</option>
     <option>pre-line</option>
     <option>break-spaces</option>
-  </select> }
+  </select>
+  }
 </div>
 <div id="results" class="box">
-  <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
 </div>
 ```
 
@@ -218,15 +212,22 @@ pre {
 ```
 
 ```js hidden
-var select  = document.querySelector("#css-code select");
+var select = document.querySelector("#css-code select");
 var results = document.querySelector("#results p");
-select.addEventListener("change", function(e) {
-  results.setAttribute("style", "white-space: "+e.target.value);
-})
+select.addEventListener("change", function (e) {
+  results.setAttribute("style", "white-space: " + e.target.value);
+});
 ```
 
 ```html
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+  in culpa qui officia deserunt mollit anim id est laborum.
+</p>
 ```
 
 #### 結果

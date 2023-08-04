@@ -1,16 +1,8 @@
 ---
 title: 置換要素
 slug: Web/CSS/Replaced_element
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - リファレンス
-  - CSS レイアウト
-  - レンダリング
-  - 置換要素
-translation_of: Web/CSS/Replaced_element
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) において、**置換要素**は CSS のスコープの外で表現される要素です。 CSS の整形モデルとは独立して表現される外部オブジェクトです。
@@ -48,7 +40,7 @@ CSS はマージンの計算時や一部の `auto` 値の時など場合によ�
 
 ### コンテンツボックス内のオブジェクト位置の制御
 
-置換要素内に含まれたオブジェクトが要素のボックスエリア内で、どのように配置されるかを指定するために、特定の CSS プロパティを使用することができます。これらは {{SpecName("CSS3 Images")}} および {{SpecName("CSS4 Images")}} 仕様書で定義されています。
+置換要素内に含まれたオブジェクトが要素のボックスエリア内で、どのように配置されるかを指定するために、特定の CSS プロパティを使用することができます。これらは [CSS Images](https://drafts.csswg.org/css-images/) 仕様書で定義されています。
 
 - {{cssxref("object-fit")}}
   - : 置換要素の中身のオブジェクトがどのように要素の内包ボックスに合わせられるかを指定します。
@@ -58,4 +50,20 @@ CSS はマージンの計算時や一部の `auto` 値の時など場合によ�
 ## 関連情報
 
 - [HTML 仕様書](https://html.spec.whatwg.org/multipage/rendering.html#replaced-elements)
-- {{CSS_key_concepts()}}
+- CSS の主要概念:
+  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
+  - [アットルール](/ja/docs/Web/CSS/At-rule)
+  - [コメント](/ja/docs/Web/CSS/Comments)
+  - [詳細度](/ja/docs/Web/CSS/Specificity)
+  - [継承](/ja/docs/Web/CSS/inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
+  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - 値
+    - [初期値](/ja/docs/Web/CSS/initial_value)
+    - [計算値](/ja/docs/Web/CSS/computed_value)
+    - [使用値](/ja/docs/Web/CSS/used_value)
+    - [実効値](/ja/docs/Web/CSS/actual_value)
+  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)

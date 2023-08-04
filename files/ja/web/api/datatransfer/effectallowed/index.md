@@ -1,16 +1,8 @@
 ---
 title: DataTransfer.effectAllowed
 slug: Web/API/DataTransfer/effectAllowed
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.effectAllowed
-translation_of: Web/API/DataTransfer/effectAllowed
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.effectAllowed`** プロパティは、ドラッグ操作で許可される効果を指定します。**コピー**操作は、ドラッグされるデータを現在の位置からドロップ位置にコピーすることを示すために使用されます。**移動**操作は、ドラッグされるデータを移動することを示すために使用され、**リンク**操作は、ソース位置とドロップ位置の間に何らかの形の関係または接続を作成することを示すために使用されます。
@@ -57,7 +49,8 @@ Internet Explorer では、値を小文字に変更します。従って、 `lin
 ```html
 <div>
   <p id="source" draggable="true">
-     この要素を選択し、ドロップゾーンにドラッグしてから放すと要素を移動します。</p>
+    この要素を選択し、ドロップゾーンにドラッグしてから放すと要素を移動します。
+  </p>
 </div>
 <div id="target">ドロップゾーン</div>
 <pre id="output"></pre>
@@ -103,9 +96,9 @@ function dropHandler(ev) {
   log(`drop: effectAllowed = ${ev.dataTransfer.effectAllowed}`);
 
   ev.preventDefault();
- // ターゲットの ID を取得し、移動した要素をターゲットの DOM に追加します。
- const data = ev.dataTransfer.getData("text");
- ev.target.appendChild(document.getElementById(data));
+  // ターゲットの ID を取得し、移動した要素をターゲットの DOM に追加します。
+  const data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
 }
 
 function dragoverHandler(ev) {
@@ -116,9 +109,9 @@ function dragoverHandler(ev) {
 const source = document.querySelector("#source");
 const target = document.querySelector("#target");
 
-source.addEventListener("dragstart", dragstartHandler)
-target.addEventListener("dragover", dragoverHandler)
-target.addEventListener("drop", dropHandler)
+source.addEventListener("dragstart", dragstartHandler);
+target.addEventListener("dragover", dragoverHandler);
+target.addEventListener("drop", dropHandler);
 
 function log(message) {
   const output = document.querySelector("#output");

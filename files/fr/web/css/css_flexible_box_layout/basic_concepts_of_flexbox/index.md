@@ -1,20 +1,13 @@
 ---
 title: Les concepts de base pour flexbox
-slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-tags:
-  - Beginner
-  - CSS
-  - Débutant
-  - Guide
-  - flexbox
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-original_slug: Web/CSS/CSS_Flexible_Box_Layout/Concepts_de_base_flexbox
+slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 ---
+
 {{CSSRef}}
 
 Le module des boîtes flexibles, aussi appelé « _flexbox_ », a été conçu comme un modèle de disposition unidimensionnel et comme une méthode permettant de distribuer l'espace entre des objets d'une interface ainsi que de les aligner. Dans cet article, nous verrons les fonctionnalités principales des _flexbox_ que nous approfondirons ensuite dans d'autres articles.
 
-Lorsqu'on décrit les boîtes flexibles comme une méthode de disposition unidimensionnelle, on indique en fait que les _flexbox_ gèrent une seule dimension à la fois : une ligne ou une colonne. Ce modèle est à comparer au modèle bidimensionnel de [la disposition en grille (CSS Grid)](/en-US/docs/Web/CSS/CSS_Grid_Layout) qui contrôle à la fois les colonnes et les lignes.
+Lorsqu'on décrit les boîtes flexibles comme une méthode de disposition unidimensionnelle, on indique en fait que les _flexbox_ gèrent une seule dimension à la fois : une ligne ou une colonne. Ce modèle est à comparer au modèle bidimensionnel de [la disposition en grille (CSS Grid)](/fr/docs/Web/CSS/CSS_Grid_Layout) qui contrôle à la fois les colonnes et les lignes.
 
 ## Les deux axes des boîtes flexibles
 
@@ -102,7 +95,7 @@ Pour obtenir ce « passage à la ligne », on ajoute la propriété {{cssxref("f
 
 {{EmbedGHLiveSample("css-examples/flexbox/basics/flex-wrap.html", '100%', 400)}}
 
-Pour approfondir ces notions, vous pouvez consulter l'article [Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Ma%C3%AEtriser_passage_%C3%A0_la_ligne_des_%C3%A9l%C3%A9ments_flexibles).
+Pour approfondir ces notions, vous pouvez consulter l'article [Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Maîtriser_passage_à_la_ligne_des_éléments_flexibles).
 
 ## La propriété raccourcie `flex-flow`
 
@@ -120,7 +113,7 @@ Pour mieux contrôler les éléments flexibles, on peut les cibler directement a
 - {{cssxref("flex-shrink")}}
 - {{cssxref("flex-basis")}}
 
-Nous verrons ici un rapide aperçu de ces propriétés que nous approfondirons dans l'article [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Contr%C3%B4ler_les_proportions_des_bo%C3%AEtes_flexibles_le_long_de_l_axe_principal).
+Nous verrons ici un rapide aperçu de ces propriétés que nous approfondirons dans l'article [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Contrôler_les_proportions_des_boîtes_flexibles_le_long_de_l_axe_principal).
 
 Avant de revenir à ces propriétés, il nous faut définir le concept d'**espace disponible**. Lorsque nous modifierons l'une de ces propriétés, cela modifiera la façon dont l'espace disponible est distribué parmi les éléments. Ce concept est également important lorsqu'on aligne les éléments.
 
@@ -140,7 +133,7 @@ Si les éléments n'ont pas de taille définie, c'est la taille du contenu qui e
 
 La propriété `flex-grow` est un entier positif qui, lorsqu'elle est définie, permet aux éléments flexibles de s'étendre à partir de la mesure de `flex-basis`. Ainsi, l'élément sera étiré et occupera l'espace disponible sur cet axe ou une part de cet espace si les autres éléments peuvent s'étendre également.
 
-Si on utilise`flex-grow: 1` pour les différents éléments de l'exemple précédent, l'espace disponible sera alors partagé de façon égale entre les éléments qui seront alors étirés pour occuper l'ensemble du conteneur le long de l'axe principal.
+Si on utilise `flex-grow: 1` pour les différents éléments de l'exemple précédent, l'espace disponible sera alors partagé de façon égale entre les éléments qui seront alors étirés pour occuper l'ensemble du conteneur le long de l'axe principal.
 
 La propriété `flex-grow` permet de répartir l'espace disponible en « parts ». Si, pour le premier élément, on indique `flex-grow` avec une valeur de 2 et, pour les autres éléments, `flex-grow` avec une valeur de 1, deux « parts » de l'espace disponible seront données au premier élément (il recevra donc 100 pixels parmi les 200 pixels restants) et une part sera fournie à chacun des autres éléments (soit 50 pixels chacun parmi les 200 pixels restants).
 
@@ -215,7 +208,7 @@ Vous pouvez essayer les valeurs suivantes dans l'exemple suivant :
 
 {{EmbedGHLiveSample("css-examples/flexbox/basics/justify-content.html", '100%', 380)}}
 
-Dans l'article [Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_%C3%A9l%C3%A9ments_dans_un_conteneur_flexible), nous verrons plus en détails comment ces propriétés fonctionnent. Ces premiers exemples permettent toutefois de comprendre comment utiliser ces propriétés sur une majorité de cas.
+Dans l'article [Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible), nous verrons plus en détails comment ces propriétés fonctionnent. Ces premiers exemples permettent toutefois de comprendre comment utiliser ces propriétés sur une majorité de cas.
 
 ## Prochaines étapes
 

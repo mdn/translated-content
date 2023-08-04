@@ -1,27 +1,15 @@
 ---
 title: contain
 slug: Web/CSS/contain
-tags:
-  - CSS
-  - CSS 封じ込め
-  - CSS プロパティ
-  - レイアウト
-  - NeedsExample
-  - Paint
-  - リファレンス
-  - Style
-  - ウェブ
-  - recipe:css-property
-browser-compat: css.properties.contain
-translation_of: Web/CSS/contain
 ---
+
 {{CSSRef}}
 
 **`contain`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ある要素とその内容が、できる限り多く、文書ツリーの他の部分から*独立している*ことを示します。これによってブラウザーがレイアウト、スタイル、描画、寸法、およびその組み合わせの再計算を、ページ全体ではなく DOM の限られた領域に対して行うことで、性能上の明らかな利点をもたらします。
 
 このプロパティはページ上にそれぞれ独立したたくさんのウィジェットがあるときに有益であり、ウィジェットの内部を、ウィジェットの囲みボックスの外側の副作用から守るために使用することができます。
 
-> **Note:**  (`paint`, `strict`, `content` のいずれかの値で) 適用された場合、このプロパティは以下のものを生成します。
+> **メモ:** (`paint`, `strict`, `content` のいずれかの値で) 適用された場合、このプロパティは以下のものを生成します。
 >
 > 1. 新しい[包含ブロック](/ja/docs/Web/CSS/Containing_block) ({{cssxref("position")}} プロパティが `absolute` または `fixed` である子孫を対象とする)。
 > 2. 新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)。

@@ -1,18 +1,6 @@
 ---
 title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-  - at
-  - Experimental
-  - Polyfill
-browser-compat: javascript.builtins.Array.at
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/at
 ---
 {{JSRef}}
 

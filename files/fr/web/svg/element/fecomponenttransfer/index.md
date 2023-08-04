@@ -1,12 +1,8 @@
 ---
 title: <feComponentTransfer>
 slug: Web/SVG/Element/feComponentTransfer
-tags:
-  - Element
-  - SVG
-  - SVG Filter
-translation_of: Web/SVG/Element/feComponentTransfer
 ---
+
 {{SVGRef}}
 
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feComponentTransfer>`** permet d'effectuer un remappage des composantes de couleur (rouge, bleu, vert et alpha) de chaque pixel. Cela permet notamment de régler la luminosité, le constraste, la balance des couleurs ou encore le seuillage.
@@ -42,7 +38,13 @@ Cet élément implémente l'interface {{domxref("SVGFEComponentTransferElement")
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
   <defs>
-    <linearGradient id="rainbow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100%" y2="0">
+    <linearGradient
+      id="rainbow"
+      gradientUnits="userSpaceOnUse"
+      x1="0"
+      y1="0"
+      x2="100%"
+      y2="0">
       <stop offset="0" stop-color="#ff0000"></stop>
       <stop offset="0.2" stop-color="#ffff00"></stop>
       <stop offset="0.4" stop-color="#00ff00"></stop>
@@ -85,13 +87,33 @@ Cet élément implémente l'interface {{domxref("SVGFEComponentTransferElement")
     <text x="0" y="5%">Default</text>
     <rect x="0" y="8%" width="100%" height="20"></rect>
     <text x="0" y="26%">Identity</text>
-    <rect x="0" y="29%" width="100%" height="20" style="filter:url(#identity)"></rect>
+    <rect
+      x="0"
+      y="29%"
+      width="100%"
+      height="20"
+      style="filter:url(#identity)"></rect>
     <text x="0" y="47%">Table lookup</text>
-    <rect x="0" y="50%" width="100%" height="20" style="filter:url(#table)"></rect>
+    <rect
+      x="0"
+      y="50%"
+      width="100%"
+      height="20"
+      style="filter:url(#table)"></rect>
     <text x="0" y="68%">Linear function</text>
-    <rect x="0" y="71%" width="100%" height="20" style="filter:url(#linear)"></rect>
+    <rect
+      x="0"
+      y="71%"
+      width="100%"
+      height="20"
+      style="filter:url(#linear)"></rect>
     <text x="0" y="89%">Gamma function</text>
-    <rect x="0" y="92%" width="100%" height="20" style="filter:url(#gamma)"></rect>
+    <rect
+      x="0"
+      y="92%"
+      width="100%"
+      height="20"
+      style="filter:url(#gamma)"></rect>
   </g>
 </svg>
 ```
@@ -110,14 +132,11 @@ rect {
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                           | Commentaire                                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('Filters 1.0', '#feComponentTransferElement', '&lt;feComponentTransfer&gt;')}}         | {{Spec2('Filters 1.0')}} | Spécifie que les fonctions de transfert non définies sont traitées comme si elles avaient été définies avec pour  {{SVGAttr("type")}} `identity`. |
-| {{SpecName('SVG1.1', 'filters.html#feComponentTransferElement', '&lt;feComponentTransfer&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale                                                                                                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.feComponentTransfer")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -141,4 +160,4 @@ rect {
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres "en/SVG/Tutorial/Filter_effects")
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres)

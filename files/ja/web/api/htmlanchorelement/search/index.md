@@ -1,17 +1,11 @@
 ---
-title: HTMLAnchorElement.search
+title: "HTMLAnchorElement: search プロパティ"
 slug: Web/API/HTMLAnchorElement/search
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAnchorElement.search
-translation_of: Web/API/HTMLAnchorElement/search
-original_slug: Web/API/HTMLHyperlinkElementUtils/search
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
-{{ApiRef("URL API")}}
+
+{{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.search`** プロパティは、*クエリー文字列*とも呼ばれる検索文字列、つまり `'?'` とその後に続く URL の引数の入った文字列です。
 

@@ -1,12 +1,8 @@
 ---
 title: Expect-CT
 slug: Web/HTTP/Headers/Expect-CT
-tags:
-  - HTTP
-  - 响应头
-  - 证书透明度
-translation_of: Web/HTTP/Headers/Expect-CT
 ---
+
 {{HTTPSidebar}}
 
 `Expect-CT` 标头允许站点选择性地报告和/或执行[证书透明度（Certificate Transparency）](/zh-CN/docs/Web/Security/Certificate_Transparency)要求，来防止错误签发的网站证书的使用不被察觉。
@@ -47,14 +43,19 @@ Expect-CT: report-uri="<uri>",
 ## 指令
 
 - `max-age`
+
   - : 该指令指定接收到 `Expect-CT` 标头后的秒数，在此期间用户代理应将收到消息的主机视为已知的 `Expect-CT` 主机。
 
     如果缓存接收到的值大于它可以表示的值，或者如果其随后的计算溢出，则缓存将认为该值为 2147483648（2 的 31 次幂）或其可以表示的最大正整数。
+
 - `report-uri="<uri>"` {{optional_inline}}
+
   - : 该指令指定用户代理报告 `Expect-CT` 错误的 URI。
 
     当和 `enforce` 指令共同存在时，这种配置被称为“强制执行和报告”配置，示意用户代理既应该强制遵守证书透明度政策，也应当报告违规行为。
+
 - `enforce` {{optional_inline}}
+
   - : 该指令示意用户代理应强制遵守证书透明度政策（而不是只报告合规性），并且用户代理应拒绝违反证书透明度政策的之后连接。
 
     当 `enforce` 指令和 `report-uri` 指令共同存在时，这种配置被称为“强制执行和报告”配置，示意用户代理既应该强制遵守证书透明度政策，也应当报告违规行为。

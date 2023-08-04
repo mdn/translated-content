@@ -1,15 +1,8 @@
 ---
 title: get Array[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@species
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/@@species
 ---
+
 {{JSRef}}
 
 La propriété d'accesseur **`Array[@@species]`** renvoie le constructeur `Array`.
@@ -17,7 +10,7 @@ La propriété d'accesseur **`Array[@@species]`** renvoie le constructeur `Array
 ## Syntaxe
 
 ```js
-Array[Symbol.species]
+Array[Symbol.species];
 ```
 
 ### Valeur de retour
@@ -42,20 +35,19 @@ Pour un objet dérivé, la valeur de `species` pour une classe `MonArray` sera l
 class MonArray extends Array {
   // On surcharge le symbole species
   // pour renvoyer le constructeur Array parent
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-get-array-@@species', 'get Array [ @@species ]')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-array-@@species', 'get Array [ @@species ]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.@@species")}}
+{{Compat}}
 
 ## Voir aussi
 

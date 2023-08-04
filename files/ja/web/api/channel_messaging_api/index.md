@@ -1,14 +1,8 @@
 ---
 title: チャンネルメッセージング API
 slug: Web/API/Channel_Messaging_API
-tags:
-  - API
-  - チャンネルメッセージング
-  - HTML API
-  - 概要
-  - リファレンス
-translation_of: Web/API/Channel_Messaging_API
 ---
+
 {{DefaultAPISidebar("Channel Messaging API")}}
 
 **チャンネルメッセージング API** (Channel Messaging API) を使用すると、同じ文書に添付された異なる閲覧コンテキストで実行される 2 つの別々のスクリプト（2 つの IFrame、メイン文書と IFrame、{{domxref("SharedWorker")}} を介した 2 つの文書、 2 つのワーカーなど）で直接通信し、両端にポートを持つ双方向チャンネル（またはパイプ）を介して相互にメッセージをやり取りできます。
@@ -19,7 +13,7 @@ translation_of: Web/API/Channel_Messaging_API
 
 メッセージチャンネルは {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} コンストラクターを使用して作成します。 作成すると、チャンネルの 2 つのポートは {{domxref("MessageChannel.port1")}} プロパティおよび {{domxref("MessageChannel.port2")}} プロパティを介してアクセスできます（どちらのプロパティも {{domxref("MessagePort")}} オブジェクトを返します）。 チャンネルを作成したアプリは `port1` を使用し、ポートの反対側のアプリは `port2` を使用します — `port2` にメッセージを送信し、{{domxref("window.postMessage")}} を使用して 2 つの引数（送信するメッセージと所有権を移管するオブジェクト、この場合はポート自体）でポートを他の閲覧コンテキストに移管します。
 
-これらの転送可能オブジェクトが転送されると、それまで属していたコンテキストでは使えなくなります。ポートは、送信された後、元のコンテキストでは使用することができなくなります。
+これらの移譲可能オブジェクトが転送されると、それまで属していたコンテキストでは使えなくなります。ポートは、送信された後、元のコンテキストでは使用することができなくなります。
 
 もう一方の閲覧コンテキストは、 {{domxref("MessagePort.message_event", "onmessage")}} を使用してメッセージを待ち受けし、イベントの `data` 属性を使用してメッセージの内容を取得することができます。 {{domxref("MessagePort.postMessage")}} を使用して元の文書にメッセージを送り返すことで応答できます。
 

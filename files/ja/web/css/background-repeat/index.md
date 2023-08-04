@@ -1,15 +1,8 @@
 ---
 title: background-repeat
 slug: Web/CSS/background-repeat
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.background-repeat
-translation_of: Web/CSS/background-repeat
 ---
+
 {{CSSRef}}
 
 **`background-repeat`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景画像をどのように繰り返すかを設定します。背景画像は水平軸方向と垂直軸方向に繰り返したり、まったく繰り返さないようにしたりすることができます。
@@ -140,14 +133,14 @@ background-repeat: unset;
     <div class="four"></div>
   </li>
   <li>space
-    <div class="five"></div>
-  </li>
+    <div class="five"></div>
+  </li>
   <li>round
-    <div class="six"></div>
-  </li>
+    <div class="six"></div>
+  </li>
   <li>repeat-x, repeat-y (multiple images)
-    <div class="seven"></div>
-  </li>
+    <div class="seven"></div>
+  </li>
 </ol>
 ```
 

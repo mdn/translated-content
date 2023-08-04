@@ -1,11 +1,8 @@
 ---
 title: stroke-linecap
 slug: Web/SVG/Attribute/stroke-linecap
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/stroke-linecap
 ---
+
 {{SVGRef}}
 
 L'attribut **`stroke-linecap`** définit la forme de la fin des lignes SVG.
@@ -17,23 +14,23 @@ Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura 
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-
   <!-- Effet de la valeur "butt" (valeur par défaut) -->
-  <line x1="1" y1="1" x2="5" y2="1" stroke="black"
-        stroke-linecap="butt" />
+  <line x1="1" y1="1" x2="5" y2="1" stroke="black" stroke-linecap="butt" />
 
   <!-- Effet de la valeur "round" -->
-  <line x1="1" y1="3" x2="5" y2="3" stroke="black"
-        stroke-linecap="round" />
+  <line x1="1" y1="3" x2="5" y2="3" stroke="black" stroke-linecap="round" />
 
   <!-- Effet de la valeur "square" -->
-  <line x1="1" y1="5" x2="5" y2="5" stroke="black"
-        stroke-linecap="square" />
+  <line x1="1" y1="5" x2="5" y2="5" stroke="black" stroke-linecap="square" />
 
   <!--
   Les lignes roses indiquent la position
@@ -71,20 +68,20 @@ La valeur `butt` indique que le trait de chaque chemin ne s'étend pas au-delà 
 #### Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
-
   <!-- Effet de la valeur "butt" -->
-  <path d="M1,1 h4" stroke="black"
-        stroke-linecap="butt" />
+  <path d="M1,1 h4" stroke="black" stroke-linecap="butt" />
 
   <!-- Effet de la valeur "butt" sur un chemin de longueur zéro -->
-  <path d="M3,3 h0" stroke="black"
-        stroke-linecap="butt" />
-
+  <path d="M3,3 h0" stroke="black" stroke-linecap="butt" />
 
   <!--
   Lignes roses pour indiquer la position
@@ -106,20 +103,20 @@ La valeur `round` indique que la fin de chaque trait sera prolongé d'un demi-ce
 #### Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
-
   <!-- Effet de la valeur "round" -->
-  <path d="M1,1 h4" stroke="black"
-        stroke-linecap="round" />
+  <path d="M1,1 h4" stroke="black" stroke-linecap="round" />
 
   <!-- Effet de la valeur "round" sur un chemin de longueur zéro -->
-  <path d="M3,3 h0" stroke="black"
-        stroke-linecap="round" />
-
+  <path d="M3,3 h0" stroke="black" stroke-linecap="round" />
 
   <!--
   Lignes roses pour indiquer la position
@@ -141,19 +138,20 @@ La valeur `square` indique que la fin de chaque trait sera prolongé par un rect
 #### Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
-
   <!-- Effet de la valeur "square" -->
-  <path d="M1,1 h4" stroke="black"
-        stroke-linecap="square" />
+  <path d="M1,1 h4" stroke="black" stroke-linecap="square" />
 
   <!-- Effet de la valeur "square" sur un chemin de longueur zéro -->
-  <path d="M3,3 h0" stroke="black"
-        stroke-linecap="square" />
+  <path d="M3,3 h0" stroke="black" stroke-linecap="square" />
 
   <!--
   Les lignes roses indiquent la position
@@ -168,13 +166,10 @@ html,body,svg { height:100% }
 
 {{EmbedLiveSample('square', '100%', 200)}}
 
+## Spécifications
+
+{{Specifications}}
+
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.presentation.stroke-linecap")}}
-
-## Spécification
-
-| Spécification                                                                                            | Statut                   | Commentaire                                     |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------- |
-| {{SpecName("SVG2", "painting.html#StrokeLinecapProperty", "stroke-linecap")}} | {{Spec2("SVG2")}} | Définition pour les formes et le texte          |
-| {{SpecName("SVG1.1", "painting.html#StrokeLinecapProperty", "stroke-linecap")}} | {{Spec2("SVG1.1")}} | Définition initiale pour les formes et le texte |
+{{Compat}}

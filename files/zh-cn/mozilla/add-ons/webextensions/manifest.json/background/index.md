@@ -1,11 +1,8 @@
 ---
 title: 后台 - background
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
-tags:
-  - 后台
-  - 附加组件
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -35,9 +32,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 
 后台脚本放置的是需要长期保持状态，或者需要执行长期的操作，并且与任意特定网页或者浏览器窗口的生命周期无关的代码。
 
-后台脚本会在扩展程序被加载后立即被加载，并且一直保持被加载状态，只有在扩展程序被禁止或者卸载的时候才停止运行。只要您获得了必要的许可[permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)，您可以在该脚本中使用任意的扩展程序 API。
+后台脚本会在扩展程序被加载后立即被加载，并且一直保持被加载状态，只有在扩展程序被禁止或者卸载的时候才停止运行。只要您获得了必要的许可[permissions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)，您可以在该脚本中使用任意的扩展程序 API。
 
-浏览[Anatomy of a WebExtension](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages)中的 Background pages 部分以获取更多的细节。
+浏览[Anatomy of a WebExtension](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages)中的 Background pages 部分以获取更多的细节。
 
 background 键最多只能拥有以下的两个属性，两个属性都是可选属性：
 
@@ -100,4 +97,4 @@ background 键最多只能拥有以下的两个属性，两个属性都是可选
 
 ## Browser compatibility
 
-{{Compat("webextensions.manifest.background", 10)}}
+{{Compat}}

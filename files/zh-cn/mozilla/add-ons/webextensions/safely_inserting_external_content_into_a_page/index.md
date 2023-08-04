@@ -1,8 +1,8 @@
 ---
 title: Safely inserting external content into a page
 slug: Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
-translation_of: Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
 ---
+
 {{AddonSidebar}}
 
 很多时候你需要从外部资源引入内容到你的插件。但是，源可能被嵌入了恶意的源代码，这些恶意的源代码可能由源的开发者或者恶意的第三方所编写。
@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_
 
 ### DOM 节点创建方法/函数
 
-一个轻量级的方法来插入字符串到页面是使用原生的 DOM 操纵方法/函数: [`document.createElement`](/en-US/docs/Web/API/Document/createElement), [`Element.setAttribute`](/en-US/docs/Web/API/Element/setAttribute), 以及[`Node.textContent`](/en-US/docs/Web/API/Node/textContent). 安全的方法是分别创建节点并使用 textContent 属性赋值：
+一个轻量级的方法来插入字符串到页面是使用原生的 DOM 操纵方法/函数: [`document.createElement`](/zh-CN/docs/Web/API/Document/createElement), [`Element.setAttribute`](/zh-CN/docs/Web/API/Element/setAttribute), 以及[`Node.textContent`](/zh-CN/docs/Web/API/Node/textContent). 安全的方法是分别创建节点并使用 textContent 属性赋值：
 
 ```js example-good
 var data = JSON.parse(responseText);
@@ -35,9 +35,13 @@ addonElement.appendChild(div);
 
 ```js example-bad
 var data = JSON.parse(responseText);
-addonElement.innerHTML = "<div class='" + data.className + "'>" +
-                         "Your favorite color is now " + data.color +
-                         "</div>";
+addonElement.innerHTML =
+  "<div class='" +
+  data.className +
+  "'>" +
+  "Your favorite color is now " +
+  data.color +
+  "</div>";
 ```
 
 在其中，Here, the contents of `data.className` 或 `data.color` 的内容可能包含 HTML 代码使得标签提早关闭，并插入更多的 HTML 内容，之后关闭另一个标签。

@@ -1,22 +1,15 @@
 ---
 title: border-bottom-style
 slug: Web/CSS/border-bottom-style
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-bottom-style
-translation_of: Web/CSS/border-bottom-style
 ---
+
 {{CSSRef}}
 
 **`border-bottom-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の境界 ({{cssxref("border")}}) における線の形状を設定します。
 
 {{EmbedInteractiveExample("pages/css/border-bottom-style.html")}}
 
-> **Note:** 仕様書では、異なる形状の境界線を角でどの様に接続するかを定義していません。
+> **メモ:** 仕様書では、異なる形状の境界線を角でどの様に接続するかを定義していません。
 
 ## 構文
 

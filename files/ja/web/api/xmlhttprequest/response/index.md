@@ -1,32 +1,15 @@
 ---
 title: XMLHttpRequest.response
 slug: Web/API/XMLHttpRequest/response
-tags:
-  - AJAX
-  - API
-  - コンテンツの読み取り
-  - データの読み取り
-  - データの読み込み
-  - プロパティ
-  - 読み取り専用
-  - Reading Data
-  - リファレンス
-  - Response
-  - サーバー
-  - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/response
+l10n:
+  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
-{{domxref("XMLHttpRequest")}} の **`response`** プロパティは、そのリクエストの本文の内容を、 {{jsxref("ArrayBuffer")}}, {{domxref("Blob")}}, {{domxref("Document")}}, JavaScript の {{jsxref("Object")}}, {{domxref("DOMString")}} など、リクエストの {{domxref("XMLHttpRequest.responseType", "responseType")}} プロパティの値に応じた形で返します。
+{{domxref("XMLHttpRequest")}} の **`response`** プロパティは、そのリクエストの本体の内容を、 {{jsxref("ArrayBuffer")}}、{{domxref("Blob")}}、{{domxref("Document")}}、JavaScript の {{jsxref("Object")}}、文字列など、リクエストの {{domxref("XMLHttpRequest.responseType", "responseType")}} プロパティの値に応じた形で返します。
 
-## 構文
-
-```js
-var body = XMLHttpRequest.response;
-```
-
-### 値
+## 値
 
 {{domxref("XMLHttpRequest.responseType", "responseType")}} の値に基づく適切なオブジェクト。 {{domxref("XMLHttpRequest.open", "open()")}} を呼び出してリクエストを初期化した後や、 {{domxref("XMLHttpRequest.send", "send()")}} を呼び出してリクエストをサーバーに送信する前に、 `responseType` の値を設定することで、特定の形式でデータを提供するようにリクエストができます。
 
@@ -40,19 +23,19 @@ var body = XMLHttpRequest.response;
 {{domxref("XMLHttpRequest.responseType", "responseType")}} を上書きするものがないため）。
 
 ```js
-var url = 'somePage.html'; //A local page
+const url = 'somePage.html'; //A local page
 
 function load(url, callback) {
-  var xhr = new XMLHttpRequest();
+  const xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-      callback(xhr.response);
-    }
-  }
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState === 4) {
+      callback(xhr.response);
+    }
+  }
 
   xhr.open('GET', url, true);
-  xhr.send('');
+  xhr.send('');
 }
 ```
 

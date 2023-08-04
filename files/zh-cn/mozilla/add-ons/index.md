@@ -1,16 +1,8 @@
 ---
 title: 附加组件
 slug: Mozilla/Add-ons
-tags:
-  - Add-ons
-  - Extension
-  - Extensions
-  - Landing
-  - Mozilla
-  - 扩展
-  - 附加组件
-translation_of: Mozilla/Add-ons
 ---
+
 {{AddonSidebar}}
 
 附加组件允许开发者们去扩展和修改 Firefox 的功能。开发者们能使用标准的 Web 技术「JavaScript，HTML 以及 CSS」再加上一些专用的 JavaScript APIs 来开发附加组件。

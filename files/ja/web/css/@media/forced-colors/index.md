@@ -1,15 +1,8 @@
 ---
 title: forced-colors
 slug: Web/CSS/@media/forced-colors
-tags:
-  - CSS
-  - リファレンス
-  - 色
-  - forced-colors
-  - メディア特性
-browser-compat: css.at-rules.media.forced-colors
-translation_of: Web/CSS/@media/forced-colors
 ---
+
 {{CSSRef}}
 
 **`forced-colors`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#media_features)で、{{Glossary("user agent", "ユーザーエージェント")}}が強制カラーモードを有効にしているかどうかを検出するために使用されます。強制カラーモードの例としては、 Windows のハイコントラストモードがあります。
@@ -54,7 +47,7 @@ translation_of: Web/CSS/@media/forced-colors
 
 The system colors that are forced for the above properties depend on the context of the element. For example the {{cssxref("color")}} property on button element will be forced to `ButtonText`. On normal text it will be forced to `CanvasText`. See the [list of system colors](/ja/docs/Web/CSS/color_value#system_colors) for additional details of when each might be appropriate in various UI contexts.
 
-> **Note:** ユーザーエージェントは、追加された ARIA ロールではなく、本来の要素の意味に基づいてシステム色を選択します。
+> **メモ:** ユーザーエージェントは、追加された ARIA ロールではなく、本来の要素の意味に基づいてシステム色を選択します。
 > 例えば、`div` に `role="button"` を追加しても、要素の色が `ButtonText` に強制されることは**ありません**。
 
 これらの調整に加えて、ブラウザーはテキストの後ろに「バックプレート」を描くことで、テキストの読みやすさを確保します。これは、テキストが画像の上に配置されている場合にコントラストを保つために特に重要です。
@@ -79,7 +72,7 @@ The system colors that are forced for the above properties depend on the context
 
 ## 例
 
-> **Note:** 以下の例は、このメディア特性に対応したブラウザーを使用し、 OS のハイコントラストモードなどの環境設定を有効にしている場合にのみ動作します。
+> **メモ:** 以下の例は、このメディア特性に対応したブラウザーを使用し、 OS のハイコントラストモードなどの環境設定を有効にしている場合にのみ動作します。
 
 この例は、通常 {{cssxref("box-shadow")}} によってコントラストを得るボタンです。強制カラーモードでは、 box-shadow は強制的に none になります。そのため、この例では強制カラーメディア機能を使用して、適切な色（この場合は ButtonText）の境界線を確保しています。
 

@@ -1,19 +1,8 @@
 ---
 title: Window.defaultStatus
 slug: Web/API/Window/defaultStatus
-tags:
-  - API
-  - HTML DOM
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Obsolete
-  - Propriété
-  - Reference
-  - Window
-translation_of: Web/API/Window/defaultStatus
 ---
+
 {{ APIRef() }}{{deprecated_header}}
 
 Obtient / définit le texte de la barre d'état pour la fenêtre donnée.

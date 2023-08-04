@@ -1,15 +1,8 @@
 ---
 title: Date.prototype.toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toDateString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toDateString
 ---
+
 {{JSRef}}
 
 La méthode **`toDateString()`** renvoie la date contenue dans un objet {{jsxref("Date")}} sous la forme d'une chaîne de caractères lisible par un humain, en anglais américain et au format suivant :
@@ -24,7 +17,7 @@ La méthode **`toDateString()`** renvoie la date contenue dans un objet {{jsxref
 ## Syntaxe
 
 ```js
-dateObj.toDateString()
+dateObj.toDateString();
 ```
 
 ### Valeur de retour
@@ -44,22 +37,17 @@ La méthode `toDateString()` est particulièrement utile car, pour les moteurs i
 ```js
 var d = new Date(1993, 6, 28, 14, 39, 7);
 
-console.log(d.toString());     // écrit Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
+console.log(d.toString()); // écrit Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
 console.log(d.toDateString()); // écrit Wed Jul 28 1993
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES3')}}                                                                                                 | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.9.5.3', 'Date.prototype.toDateString')}}                             | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-date.prototype.todatestring', 'Date.prototype.toDateString')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-date.prototype.todatestring', 'Date.prototype.toDateString')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.toDateString")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,14 +1,9 @@
 ---
 title: <noscript>
 slug: Web/HTML/Element/noscript
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/noscript
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<noscript>`** définit un fragment HTML qui doit être affiché si les fonctionnalités de script ne sont pas prises en charge ou si elles sont désactivées.
 
@@ -22,15 +17,21 @@ On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
 
 ```html
 <noscript>
-  <!-- Un lien vers un site externe -->
-  <a href="http://www.mozilla.com/">Un autre site</a>
+  <!-- élément d'ancre qui mène à un fichier externe  -->
+  <a href="https://www.mozilla.org/">Lien externe</a>
 </noscript>
-<p>Elle est où la poulette ?</p>
+<p>Elle est où, la poulette ?</p>
 ```
 
-### Résultat
+### Résultat avec JavaScript activé
 
-{{EmbedLiveSample("Exemples","300","200")}}
+Elle est où, la poulette&nbsp;?
+
+### Résultat avec JavaScript désactivé
+
+[Lien externe](https://www.mozilla.org/)
+
+Elle est où, la poulette&nbsp;?
 
 ## Résumé technique
 
@@ -44,14 +45,14 @@ On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
       </th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_m%C3%A9ta-donn%C3%A9es"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_méta-données"
           >Contenu de métadonnées</a
         >,
-        <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
           >contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>
@@ -72,7 +73,7 @@ On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
         mais sans élément <code>&#x3C;noscript></code> parmi les descendants.<br />Sinon
         : du contenu de flux ou du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>
@@ -87,7 +88,7 @@ On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
         <p>
           Tout élément qui accepte du
           <a
-            href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+            href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
             >contenu phrasé</a
           >
           et qui n'a pas d'ancêtre qui soit un élément
@@ -110,12 +111,8 @@ On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'scripting.html#the-noscript-element', '&lt;noscript&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'scripting-1.html#the-noscript-element', '&lt;noscript&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
-| {{SpecName('HTML4.01', 'interact/scripts.html#h-18.3.1', '&lt;noscript&gt;')}}             | {{Spec2('HTML4.01')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.noscript")}}
+{{Compat}}

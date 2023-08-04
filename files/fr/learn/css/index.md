@@ -1,27 +1,15 @@
 ---
 title: Composer le HTML avec les CSS
 slug: Learn/CSS
-tags:
-  - Article
-  - CSS
-  - Codage
-  - Débutant
-  - Longueur
-  - Nécessite du contenu
-  - Renvois
-  - Style
-  - débogage
-  - particularités
-translation_of: Learn/CSS
-original_slug: Apprendre/CSS
 ---
+
 {{LearnSidebar}}
 
 > Les Cascading StyleSheets — ou {{glossary("CSS")}} — (Feuilles de style en cascade) sont la première technique à apprendre après le {{glossary("HTML")}}. Alors que {{glossary("HTML")}} s'utilise pour définir la structure et la sémantique du contenu, les {{Glossary('CSS')}} sont employées pour composer et déterminer l'apparence de ce contenu. Ainsi par exemple, vous utiliserez les CSS pour modifier les polices, la couleur, la taille et l'espacement de votre contenu, pour le répartir sur plusieurs colonnes ou bien pour ajouter des animations et autres fonctionnalités décoratives.
 
 ## Parcours d'apprentissage
 
-Vous devriez vraiment apprendre les bases du HTML avant d'essayer n'importe quelles CSS. Nous vous recommandons de travailler d'abord notre module [Introduction au HTML —](/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML) vous pourrez ensuite en apprendre davantage au sujet&nbsp;:
+Vous devriez vraiment apprendre les bases du HTML avant d'essayer n'importe quelles CSS. Nous vous recommandons de travailler d'abord notre module [Introduction au HTML —](/fr/docs/Apprendre/HTML/Introduction_à_HTML) vous pourrez ensuite en apprendre davantage au sujet&nbsp;:
 
 - des CSS, en commençant avec le module [Introduction aux CSS](/fr/docs/Learn/CSS/First_steps)
 - des [Modules HTML](/fr/Learn/HTML#Modules) plus avancés

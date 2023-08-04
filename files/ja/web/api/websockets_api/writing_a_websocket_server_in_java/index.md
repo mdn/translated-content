@@ -1,14 +1,8 @@
 ---
 title: Java で WebSocket サーバーを記述する
 slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
-tags:
-  - HTML5
-  - ハンドシェイク
-  - NeedsMarkupWork
-  - チュートリアル
-  - WebSocket
-translation_of: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 ---
+
 ## はじめに
 
 この例では、Oracle Java を使用して WebSocket API サーバーを作成する方法を示します。
@@ -70,7 +64,7 @@ public class WebSocket {
 write(byte[] b, int off, int len)
 ```
 
-指定された byte 配列からオフセット _`off`_ で始まる _`len`_ バイトをこの出力ストリームに書き込みます。
+指定された byte 配列からオフセット `off` で始まる `len` バイトをこの出力ストリームに書き込みます。
 
 ### InputStream
 
@@ -145,7 +139,7 @@ Opcode _0x1_ はテキストであることを意味します。 [Opcode の完�
 
 2 番目のバイトから 128 を引いた値が 0 〜 125 の場合、これはメッセージの長さです。 126 の場合は、次の 2 バイト (16 ビット符号なし整数)、127 の場合、次の 8 バイト (64 ビット符号なし整数、最上位ビットは 0 でなければならない) が長さです。
 
-> **Note:** 最初のビットは常に 1 なので、 128 を取ることができます。
+> **メモ:** 最初のビットは常に 1 なので、 128 を取ることができます。
 
 - 167、225、225、および 210 はデコードするキーのバイトです。それは毎回変わります。
 

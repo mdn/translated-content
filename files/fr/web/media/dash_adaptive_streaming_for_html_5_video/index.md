@@ -1,14 +1,8 @@
 ---
 title: Utiliser DASH avec les vidéos en HTML
 slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-tags:
-  - Avancé
-  - DASH
-  - Guide
-  - HTML
-translation_of: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-original_slug: Web/HTML/Utiliser_DASH_avec_les_vidéos_en_HTML
 ---
+
 {{HTMLSidebar}}
 
 **_Dynamic Adaptive Streaming over HTTP_ (DASH)** est un protocole de _streaming_ adaptatif : il permet de changer le débit de la vidéo en fonction des performances réseau afin que la vidéo ne soit pas interrompue lors de la lecture.
@@ -100,8 +94,8 @@ Il faut modifier la page web pour que celle-ci pointe d'abord vers le manifeste,
 
 ```html
 <video>
-  <source src="movie.mpd">
-  <source src="movie.webm">
+  <source src="movie.mpd" />
+  <source src="movie.webm" />
   Votre navigateur ne prend pas en charge les vidéos HTML.
 </video>
 ```
