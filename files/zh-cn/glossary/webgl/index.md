@@ -3,6 +3,8 @@ title: WebGL
 slug: Glossary/WebGL
 ---
 
+{{GlossarySidebar}}
+
 **WebGL** (_Web 图形库_) 是一个用于绘制交互式 2D/3D 图形的 {{Glossary("JavaScript")}} {{Glossary("API")}} ，基于 {{Glossary("OpenGL")}} ES 2.0。
 
 [Khronos Group](https://www.khronos.org/) 负责 WebGL 的维护。

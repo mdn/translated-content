@@ -57,7 +57,7 @@ div.classList.remove("foo", "bar");
 
 | Especificações                                                                                       | Status                           | Comentário                                                                                      |
 | ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "dom.html#dom-classlist", "Element.classList")}} | {{Spec2("HTML WHATWG")}} | Observe dentro da especificação HTML relacionada ao {{htmlattrxref("class")}} attribute. |
+| {{SpecName("HTML WHATWG", "dom.html#dom-classlist", "Element.classList")}} | {{Spec2("HTML WHATWG")}} | Observe dentro da especificação HTML relacionada ao [`class`](/pt-BR/docs/Web/HTML/Global_attributes#class) attribute. |
 | {{SpecName("DOM WHATWG", "#dom-element-classlist", "Element.classList")}}     | {{Spec2("DOM WHATWG")}} | Definição inicial                                                                               |
 | {{SpecName("DOM4", "#dom-element-classlist", "Element.classList")}}             | {{Spec2("DOM4")}}         |                                                                                                 |
 

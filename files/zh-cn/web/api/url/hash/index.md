@@ -25,8 +25,10 @@ object.hash = string;
 ## 示例
 
 ```js
-var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href#Examples');
-url.hash // Returns '#Examples'
+var url = new URL(
+  "https://developer.mozilla.org/zh-CN/docs/Web/API/URL/href#Examples",
+);
+url.hash; // Returns '#Examples'
 ```
 
 ## 规范

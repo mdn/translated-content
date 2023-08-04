@@ -1,7 +1,6 @@
 ---
 title: scaleY()
 slug: Web/CSS/transform-function/scaleY
-original_slug: Web/CSS/transform-function/scaleY()
 ---
 
 {{CSSRef}}
@@ -14,7 +13,7 @@ original_slug: Web/CSS/transform-function/scaleY()
 
 > **メモ:** `scaleY(sy)` は `scale(1, sy)` または `scale3d(1, sy, 1)` と等価です。
 >
-> `transform: rotateX(180deg);`  === `transform: scaleY(-1);`
+> `transform: rotateX(180deg);` === `transform: scaleY(-1);`
 
 ## 構文
 

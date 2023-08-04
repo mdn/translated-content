@@ -1,9 +1,8 @@
 ---
 title: Common CSS questions
 slug: Learn/CSS/Howto/CSS_FAQ
-translation_of: Learn/CSS/Howto/CSS_FAQ
-original_slug: Web/CSS/Common_CSS_Questions
 ---
+
 ## Why doesn't my CSS, which is valid, render correctly?
 
 Браузер использует декларацию `DOCTYPE` чтобы выбрать, как именно отображать документ - в форме, более совместимой с современными стандартами или в форме, которую будут поддерживать старые браузеры. Правильное использование декларации `DOCTYPE` в начале вашего HTML кода повлияет на совместимость с современными стандартами веб браузеров.
@@ -18,7 +17,7 @@ Gecko-based browsers, have a third _[Almost Standards Mode](/ru/docs/Mozilla/Gec
 The standard `DOCTYPE` declaration that will trigger standards mode is:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 ```
 
 When at all possible, you should just use the above doctype. There are other valid legacy doctypes that will trigger Standards or Almost Standards mode:

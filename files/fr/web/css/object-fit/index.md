@@ -1,8 +1,6 @@
 ---
 title: object-fit
 slug: Web/CSS/object-fit
-translation_of: Web/CSS/object-fit
-browser-compat: css.properties.object-fit
 ---
 
 {{CSSRef}}
@@ -64,29 +62,29 @@ La propriété `object-fit` peut être définie grâce à l'un des mots-clés su
 ```html
 <section>
   <h2>object-fit: fill</h2>
-  <img class="fill" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="fill" src="mdn_logo_only_color.png" alt="Logo MDN" />
 
-  <img class="fill narrow" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="fill narrow" src="mdn_logo_only_color.png" alt="Logo MDN" />
 
   <h2>object-fit: contain</h2>
-  <img class="contain" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="contain" src="mdn_logo_only_color.png" alt="Logo MDN" />
 
-  <img class="contain narrow" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="contain narrow" src="mdn_logo_only_color.png" alt="Logo MDN" />
 
   <h2>object-fit: cover</h2>
-  <img class="cover" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="cover" src="mdn_logo_only_color.png" alt="Logo MDN" />
 
-  <img class="cover narrow" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="cover narrow" src="mdn_logo_only_color.png" alt="Logo MDN" />
 
   <h2>object-fit: none</h2>
-  <img class="none" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="none" src="mdn_logo_only_color.png" alt="Logo MDN" />
 
-  <img class="none narrow" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="none narrow" src="mdn_logo_only_color.png" alt="Logo MDN" />
 
   <h2>object-fit: scale-down</h2>
-  <img class="scale-down" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="scale-down" src="mdn_logo_only_color.png" alt="Logo MDN" />
 
-  <img class="scale-down narrow" src="mdn_logo_only_color.png" alt="Logo MDN">
+  <img class="scale-down narrow" src="mdn_logo_only_color.png" alt="Logo MDN" />
 </section>
 ```
 
@@ -94,7 +92,9 @@ La propriété `object-fit` peut être définie grâce à l'un des mots-clés su
 
 ```css
 h2 {
-  font-family: Courier New, monospace;
+  font-family:
+    Courier New,
+    monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
 }

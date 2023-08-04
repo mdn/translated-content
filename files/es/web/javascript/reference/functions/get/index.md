@@ -1,7 +1,6 @@
 ---
 title: get
 slug: Web/JavaScript/Reference/Functions/get
-original_slug: Web/JavaScript/Referencia/Funciones/get
 ---
 
 {{jsSidebar("Funciones")}}

@@ -1,6 +1,9 @@
 ---
-title: HTMLImageElement.border
+title: "HTMLImageElement: border プロパティ"
+short-title: border
 slug: Web/API/HTMLImageElement/border
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
@@ -15,28 +18,28 @@ slug: Web/API/HTMLImageElement/border
 
 ## 値
 
-画像を囲む境界線の太さを CSS ピクセル単位で指定した整数値が入った文字列です。 `0` または空の文字列は、境界線を描画しないことを意味します。`border` の既定の値は `0` です。
+画像を囲む境界線の太さを CSS ピクセル単位で指定した整数値が入った文字列です。`0` または空文字列は、境界線を描画しないことを意味します。`border` の既定の値は `0` です。
 
 ## 使用上の注意
 
-`border` は使わないでください。これは時代遅れです。代わりに、 CSS の {{cssxref("border")}} プロパティとその個別指定プロパティを使用して、画像の周りに境界線をを設定してください。
+`border` は使わないでください。これは時代遅れです。代わりに、CSS の {{cssxref("border")}} プロパティとその個別指定プロパティを使用して、画像の周りに境界線をを設定してください。
 
 例えば、以下のような HTML があった場合です。
 
 ```html
-<img src="image.png" border="2">
+<img src="image.png" border="2" />
 ```
 
-以下は、この廃止されたプロパティの代わりに、 CSS を使用して同じ外観を提供するものです。
+以下は、この廃止されたプロパティの代わりに、CSS を使用して同じ外観を提供するものです。
 
 ```html
-<img src="image.png" style="border: 2px;">
+<img src="image.png" style="border: 2px;" />
 ```
 
 さらに追加情報を入力することで、境界線の色などを変更することができます。
 
 ```html
-<img src="image.png" style="border: dashed 2px #333388;">
+<img src="image.png" style="border: dashed 2px #333388;" />
 ```
 
 ## 仕様書

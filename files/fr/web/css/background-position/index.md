@@ -1,8 +1,6 @@
 ---
 title: background-position
 slug: Web/CSS/background-position
-browser-compat: css.properties.background-position
-translation_of: Web/CSS/background-position
 ---
 
 {{CSSRef}}
@@ -32,7 +30,9 @@ background-position: 1cm 2cm;
 background-position: 10ch 8em;
 
 /* Plusieurs valeurs pour plusieurs arrières-plans */
-background-position: 0 0, center;
+background-position:
+  0 0,
+  center;
 
 /* Valeurs exprimant un décalage relatif aux côtés */
 background-position: bottom 10px right 20px;
@@ -142,7 +142,7 @@ Dans cet exemple, on a trois éléments jaunes qui ont chacun une étoile situé
 
 ```css
 div {
-  background-color: #FFEE99;
+  background-color: #ffee99;
   background-repeat: no-repeat;
   width: 300px;
   height: 80px;
@@ -151,10 +151,10 @@ div {
 
 /* On utilise la propriété raccourcie background */
 .exemple_un {
-  background: url("startransparent.gif") #FFEE99 2.5cm bottom no-repeat;
+  background: url("startransparent.gif") #ffee99 2.5cm bottom no-repeat;
 }
 .exemple_deux {
-  background: url("startransparent.gif") #FFEE99 3em 50% no-repeat;
+  background: url("startransparent.gif") #ffee99 3em 50% no-repeat;
 }
 
 /*
@@ -164,7 +164,9 @@ L'ordre est le même entre background-image et -position.
 */
 .exemple_trois {
   background-image: url("startransparent.gif"), url("catfront.png");
-  background-position: 0px 0px, center;
+  background-position:
+    0px 0px,
+    center;
 }
 ```
 

@@ -1,9 +1,6 @@
 ---
 title: Démarrer avec React
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
-translation_of: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -86,9 +83,11 @@ const header = (
 > **Note :** Les parenthèses dans l'extrait de code précédent ne sont pas propres à JSX et n'ont aucun effet sur votre application. Elles sont un signal pour vous (et votre ordinateur) que plusieurs lignes de code à l'intérieur font partie de la même expression. Vous pourriez tout aussi bien écrire l'expression d'en-tête comme ceci&nbsp;:
 >
 > ```js
-> const header = <header>
+> const header = (
+>   <header>
 >     <h1>Mozilla Developer Network</h1>
-> </header>
+>   </header>
+> );
 > ```
 >
 > Cependant, cela semble un peu gênant, car la balise [`<header>`](/fr/docs/Web/HTML/Element/header) qui commence l'expression n'est pas indentée à la même position que sa balise de fermeture correspondante.
@@ -96,8 +95,10 @@ const header = (
 Bien sûr, votre navigateur ne peut pas lire JSX de manière native. Une fois compilée (à l'aide d'un outil comme [Babel](https://babeljs.io/) ou [Parcel](https://parceljs.org/)), notre expression d'en-tête ressemblerait à ceci&nbsp;:
 
 ```js
-const header = React.createElement("header", null,
-  React.createElement("h1", null, "Mozilla Developer Network")
+const header = React.createElement(
+  "header",
+  null,
+  React.createElement("h1", null, "Mozilla Developer Network"),
 );
 ```
 
@@ -111,7 +112,7 @@ Pour en savoir plus sur JSX, consultez l'article [JSX dans le détail](https://f
 
 Il existe de nombreuses manières d'utiliser React, mais nous allons ici utiliser l'outil en ligne de commande create-react-app, mentionné précédemment et qui accélère le processus de développement d'une application React en installant certains packages et en créant certains fichiers automatiquement (c'est l'outillage dont nous parlions avant).
 
-Il est possible d'[ajouter React à un site Web sans create-react-app](https://fr.reactjs.org/docs/add-react-to-a-website.html), en copiant certains [`<script>`]( /fr/docs/Web/HTML/Element/script) dans un fichier HTML, mais l'outil create-react-app est généralement utilisé pour initialiser des applications React. Son utilisation vous permettra de passer plus de temps à créer votre application et moins de temps à vous occuper de la configuration.
+Il est possible d'[ajouter React à un site Web sans create-react-app](https://fr.reactjs.org/docs/add-react-to-a-website.html), en copiant certains [`<script>`](/fr/docs/Web/HTML/Element/script) dans un fichier HTML, mais l'outil create-react-app est généralement utilisé pour initialiser des applications React. Son utilisation vous permettra de passer plus de temps à créer votre application et moins de temps à vous occuper de la configuration.
 
 ### Préparation
 
@@ -152,7 +153,7 @@ Cela crée un répertoire `moz-todo-react`, et réalise plusieurs choses à l'in
 
 create-react-app va afficher un certain nombre de messages dans votre terminal pendant son fonctionnement&nbsp;; c'est normal&nbsp;! Cela peut prendre quelques minutes, alors c'est peut-être le bon moment pour aller préparer une tasse de thé.
 
-Lorsque le processus est terminé, naviguez dans le répertoire `moz-todo-react` puis exécutez la commande `npm start`. Les scripts installés par create-react-app commenceront à être servis sur un serveur local à l'adresse *localhost:3000* et ouvriront l'application dans un nouvel onglet du navigateur. Celui-ci affichera quelque chose comme ceci&nbsp;:
+Lorsque le processus est terminé, naviguez dans le répertoire `moz-todo-react` puis exécutez la commande `npm start`. Les scripts installés par create-react-app commenceront à être servis sur un serveur local à l'adresse _localhost:3000_ et ouvriront l'application dans un nouvel onglet du navigateur. Celui-ci affichera quelque chose comme ceci&nbsp;:
 
 ![Capture d'écran de Firefox pour macOS, ouvert à l'adresse localhost:3000, montrant l'application par défaut créée avec create-react-app](default-create-react-app.png)
 
@@ -200,9 +201,9 @@ Dans React, un **composant** est un module réutilisable qui affiche une partie 
 Ouvrons `src/App.js`, puisque notre navigateur nous invite à le modifier. Ce fichier contient notre premier composant, `App`, et quelques autres lignes de code&nbsp;:
 
 ```js
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -216,8 +217,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -234,9 +234,9 @@ Le fichier `App.js` se compose de trois parties&nbsp;: des instructions [`import
 Les instructions `import` en haut du fichier permettent à `App.js` d'utiliser du code qui a été défini ailleurs. Examinons ces déclarations de plus près.
 
 ```js
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 ```
 
 La première instruction importe la bibliothèque React elle-même. Comme React transforme l'instruction JSX que nous écrivons en `React.createElement()`, tous les composants React doivent importer le module `React`. Si vous ignorez cette étape, votre application produira une erreur.
@@ -266,8 +266,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -290,9 +289,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, World!
-        </p>
+        <p>Hello, World!</p>
       </header>
     </div>
   );
@@ -308,17 +305,17 @@ Tout en bas du fichier `App.js`, l'instruction `export default App` rend notre c
 Ouvrons `src/index.js`, car c'est ici que le composant `App` est utilisé. Ce fichier est le point d'entrée de notre application, et il ressemble initialement à ceci&nbsp;:
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root"),
 );
 
 // If you want your app to work offline and load faster, you can change
@@ -343,17 +340,17 @@ Les [<i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API/Using
 Votre fichier `index.js` final devrait ressembler à ceci&nbsp;:
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 ## Variables et props
 
-Ensuite, nous utiliserons nos compétences en JavaScript pour nous familiariser un peu plus avec l'édition de composants et la manipulation des données avec React. Nous parlerons de la façon dont les variables sont utilisées en JSX et introduirons les *props* qui permettent de transmettre des données à un composant (accessibles ensuite à l'aide de variables) (le terme *props* est fait partie du jargon React et vient de «&nbsp;propriétés&nbsp;»).
+Ensuite, nous utiliserons nos compétences en JavaScript pour nous familiariser un peu plus avec l'édition de composants et la manipulation des données avec React. Nous parlerons de la façon dont les variables sont utilisées en JSX et introduirons les _props_ qui permettent de transmettre des données à un composant (accessibles ensuite à l'aide de variables) (le terme _props_ est fait partie du jargon React et vient de «&nbsp;propriétés&nbsp;»).
 
 ### Les variables en JSX
 
@@ -374,9 +371,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, World!
-        </p>
+        <p>Hello, World!</p>
       </header>
     </div>
   );
@@ -392,9 +387,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, {subject}!
-        </p>
+        <p>Hello, {subject}!</p>
       </header>
     </div>
   );
@@ -414,7 +407,7 @@ Ouvrons `index.js` et donnons à notre appel `<App/>` sa première prop.
 Ajoutez une prop `subject` à l'appel du composant `<App/>`, avec une valeur de `Clarice`. Lorsque vous avez terminé, votre code devrait ressembler à ceci&nbsp;:
 
 ```js
-ReactDOM.render(<App subject="Clarice" />, document.getElementById('root'));
+ReactDOM.render(<App subject="Clarice" />, document.getElementById("root"));
 ```
 
 De retour dans `App.js`, revoyons la fonction App elle-même, qui se lit comme ceci (l'instruction `return` est raccourcie ici pour plus de concision)&nbsp;:

@@ -1,70 +1,61 @@
 ---
-title: Notification.permission
+title: Notification：permission 静态属性
 slug: Web/API/Notification/permission_static
-original_slug: Web/API/Notification/permission
 ---
 
-{{APIRef("Web Notifications")}}
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-`Notification` 的只读属性 permission 用来表明用户是否允许当前域显示 Web Notification。
+{{domxref("Notification")}} 接口的只读属性 `permission` 表明当前用户是否授予当前来源（origin）显示 web 通知的权限。
 
-{{AvailableInWorkers}}
+## 值
 
-## Syntax
+一个表示当前权限的字符串。其值可以是：
 
-```plain
-var permission = Notification.permission;
-```
+- `granted`
+  - : 用户已经明确地授予了当前来源显示系统通知的权限。
+- `denied`
+  - : 用户已经明确地拒绝了当前来源显示系统通知的权限。
+- `default`
+  - : 用户是否授予当前来源显示系统通知的权限的决定是未知的；在这种情况下，应用的行为与该值为 `denied` 的情况相同。
 
-### Value
+## 示例
 
-permission 的类型为 {{domxref("DOMString")}} . 该属性的可能值为：
-
-- `granted`: 用户已经明确的授予了显示通知的权限。.
-- `denied`: 用户已经明确的拒绝了显示通知的权限。
-- `default`: 用户还未被询问是否授权; 这种情况下权限将视为 `denied`.
-
-## Examples
-
-下面的代码片段详细的说明了，当你首次检查浏览器是否支持 Notification，然后检查当前域是否被授予了发送 Notification 的权限，并且在发送一个通知前进行请求的用法．
+如果你想首先检查是否支持通知，然后检查是否已授予当前来源发送通知的权限，然后在发送通知之前请求权限（如果需要），则可以使用以下代码段。
 
 ```js
 function notifyMe() {
-  // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
-    console.log("This browser does not support desktop notification");
-  }
-
-  // Let's check whether notification permissions have alredy been granted
-  else if (Notification.permission === "granted") {
-    // If it's okay let's create a notification
-    var notification = new Notification("Hi there!");
-  }
-
-  // Otherwise, we need to ask the user for permission
-  else if (Notification.permission !== 'denied' || Notification.permission === "default") {
-    Notification.requestPermission(function (permission) {
-      // If the user accepts, let's create a notification
+    // 检查浏览器是否支持桌面通知
+    alert("此浏览器不支持桌面通知");
+  } else if (Notification.permission === "granted") {
+    // 检查通知权限是否已经被授予；如果是的话，创建一条通知
+    const notification = new Notification("你好呀！");
+    // …
+  } else if (Notification.permission !== "denied") {
+    // 我们需要请求用户的许可
+    Notification.requestPermission().then((permission) => {
+      // 如果用户同意，让我们创建一个通知
       if (permission === "granted") {
-        var notification = new Notification("Hi there!");
+        const notification = new Notification("你好呀！");
+        // …
       }
     });
   }
-
-  // At last, if the user has denied notifications, and you
-  // want to be respectful there is no need to bother them any more.
+  // 最后，如果用户拒绝了通知，而你想要尊重他们，就没有必要再打扰他们了
 }
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-- {{domxref("Permissions_API","Permissions API")}}
+- [Notification API](/zh-CN/docs/Web/API/Notifications_API)
+- [使用 Notification API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Permission API](/zh-CN/docs/Web/API/Permissions_API)
+- [使用 Permission API](/zh-CN/docs/Web/API/Permissions_API/Using_the_Permissions_API)

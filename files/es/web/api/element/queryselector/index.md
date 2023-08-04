@@ -38,7 +38,9 @@ Vamos a ver unos cuantos ejemplos.
 En este primer ejemplo, obtendremos el primer elemento {{HTMLElement("style")}} del body del documento HTML que no tenga atributo "type" o cuyo atributo "type" sea igual a "text/css":
 
 ```js
-var el = document.body.querySelector("style[type='text/css'], style:not([type])");
+var el = document.body.querySelector(
+  "style[type='text/css'], style:not([type])",
+);
 ```
 
 ### Toda la jerarquía cuenta
@@ -67,7 +69,7 @@ El ejemplo que mostramos a continuación, demuestra que la jerarquía de todo el
 ```js
 var baseElement = document.querySelector("p");
 document.getElementById("output").innerHTML =
-         (baseElement.querySelector("div span").innerHTML);
+  baseElement.querySelector("div span").innerHTML;
 ```
 
 #### Resultado

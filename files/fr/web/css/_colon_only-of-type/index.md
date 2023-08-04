@@ -1,11 +1,6 @@
 ---
-title: ':only-of-type'
+title: ":only-of-type"
 slug: Web/CSS/:only-of-type
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:only-of-type
 ---
 
 {{CSSRef}}
@@ -32,7 +27,7 @@ p:only-of-type {
 
 ```css
 li li {
-  list-style-type : disc;
+  list-style-type: disc;
 }
 
 li:only-of-type {
@@ -46,18 +41,21 @@ li:only-of-type {
 
 ```html
 <ol>
-  <li>Premier
+  <li>
+    Premier
     <ul>
       <li>Ceci est l'unique li</li>
     </ul>
   </li>
-  <li>Deuxième
+  <li>
+    Deuxième
     <ul>
       <li>Cette liste a deux éléments</li>
       <li>Cette liste a deux éléments</li>
     </ul>
   </li>
-  <li>Troisième
+  <li>
+    Troisième
     <ul>
       <li>Cette liste a trois éléments</li>
       <li>Cette liste a trois éléments</li>
@@ -66,8 +64,10 @@ li:only-of-type {
   </li>
 </ol>
 <ol>
-  <li>Une seule liste imbriquée
-    <ul>Avec
+  <li>
+    Une seule liste imbriquée
+    <ul>
+      Avec
       <li>Un seul item</li>
     </ul>
   </li>

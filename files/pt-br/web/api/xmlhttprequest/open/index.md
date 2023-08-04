@@ -37,13 +37,11 @@ XMLHttpRequest.open(method, url, async, user, password)
 
 ## Especificações
 
-| Especificação                                                                        | Status                               | Comentário    |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
-| {{SpecName('XMLHttpRequest', '#the-open()-method', 'open()')}} | {{Spec2('XMLHttpRequest')}} | Padrão WHATWG |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.XMLHttpRequest.open")}}
+{{Compat}}
 
 ## Veja também
 

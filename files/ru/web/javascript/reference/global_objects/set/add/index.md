@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
 ---
 {{JSRef}}
 

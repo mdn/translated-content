@@ -1,7 +1,6 @@
 ---
 title: repeating-radial-gradient()
 slug: Web/CSS/gradient/repeating-radial-gradient
-original_slug: Web/CSS/gradient/repeating-radial-gradient()
 ---
 
 {{CSSRef}}
@@ -76,15 +75,40 @@ div {
   padding: 10px;
 }
 #grad1 {
-  background: -webkit-repeating-radial-gradient(black, black 5px, white 5px, white 10px);
-  background: -moz-repeating-radial-gradient(black, black 5px, white 5px, white 10px);
-  background: -ms-repeating-radial-gradient(black, black 5px, white 5px, white 10px);
-  background: -o-repeating-radial-gradient(black, black 5px, white 5px, white 10px);
-  background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
+  background: -webkit-repeating-radial-gradient(
+    black,
+    black 5px,
+    white 5px,
+    white 10px
+  );
+  background: -moz-repeating-radial-gradient(
+    black,
+    black 5px,
+    white 5px,
+    white 10px
+  );
+  background: -ms-repeating-radial-gradient(
+    black,
+    black 5px,
+    white 5px,
+    white 10px
+  );
+  background: -o-repeating-radial-gradient(
+    black,
+    black 5px,
+    white 5px,
+    white 10px
+  );
+  background: repeating-radial-gradient(
+    black,
+    black 5px,
+    white 5px,
+    white 10px
+  );
   text-shadow: 1px 1px 0pt black;
   color: white;
   border: 1px solid black;
-  height:5.5em;
+  height: 5.5em;
 }
 ```
 
@@ -106,22 +130,58 @@ div {
   padding: 10px;
 }
 #grad1 {
-  background: -webkit-repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
-  background: -moz-repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
-  background: -ms-repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
-  background: -o-repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
-  background: repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
+  background: -webkit-repeating-radial-gradient(
+    ellipse farthest-corner,
+    red,
+    black 5%,
+    blue 5%,
+    green 10%
+  );
+  background: -moz-repeating-radial-gradient(
+    ellipse farthest-corner,
+    red,
+    black 5%,
+    blue 5%,
+    green 10%
+  );
+  background: -ms-repeating-radial-gradient(
+    ellipse farthest-corner,
+    red,
+    black 5%,
+    blue 5%,
+    green 10%
+  );
+  background: -o-repeating-radial-gradient(
+    ellipse farthest-corner,
+    red,
+    black 5%,
+    blue 5%,
+    green 10%
+  );
+  background: repeating-radial-gradient(
+    ellipse farthest-corner,
+    red,
+    black 5%,
+    blue 5%,
+    green 10%
+  );
   text-shadow: 1px 1px 0pt blue;
   color: white;
   border: 1px solid black;
-  height:5.5em;
+  height: 5.5em;
 }
 ```
 
 {{EmbedLiveSample('Farthest-corner 渐变', '300px', '120px', '')}}
 
 ```css
-background: repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
+background: repeating-radial-gradient(
+  ellipse farthest-corner,
+  red,
+  black 5%,
+  blue 5%,
+  green 10%
+);
 ```
 
 ## 规范

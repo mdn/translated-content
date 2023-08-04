@@ -1,6 +1,6 @@
 ---
 title: グリッドレイアウトの基本概念
-slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 ---
 
 {{CSSRef}}
@@ -380,7 +380,7 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
   <div>One</div>
   <div>Two
     より多くの内容物があります。
-    <p>これによって、高さが 100 ピクセルよりも高くになります。</div>
+    <p>これによって、高さが 100 ピクセルよりも高くなります。</div>
   <div>Three</div>
   <div>Four</div>
   <div>Five</div>

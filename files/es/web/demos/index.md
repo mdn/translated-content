@@ -1,7 +1,6 @@
 ---
 title: Demostraciones de tecnologías de Web Abierta
 slug: Web/Demos
-original_slug: Web/Demos_of_open_web_technologies
 ---
 
 Mozilla soporta una amplia variedad de emocionantes tecnologías web abiertas, y alentamos su utilización. Esta página ofrece enlaces a interesantes demostraciones de estas tecnologías, incluyendo algunas que fueron populares en la Demo Studio, la cual [ha sido retirada desde entonces](https://blog.mozilla.org/community/2015/12/18/saying-goodbye-to-demo-studio/). Si conoces una buena demostración o aplicación de tecnología web abierta, por favor agrega el enlace a la sección apropiada aquí.

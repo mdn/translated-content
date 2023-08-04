@@ -9,7 +9,7 @@ Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました�
 
 ### HTML
 
-- テーブルの {{ htmlattrxref("cellspacing", "table") }} 属性は、Quirks モード以外でも Quirks モードと同様に解析するようになりました。これは値をパーセント値で指定した場合に、仕様書で実際はパーセント値が認められていないため代わりにピクセル数として扱うものです。
+- テーブルの [`cellspacing`](/ja/docs/Web/HTML/Element/table#cellspacing) 属性は、Quirks モード以外でも Quirks モードと同様に解析するようになりました。これは値をパーセント値で指定した場合に、仕様書で実際はパーセント値が認められていないため代わりにピクセル数として扱うものです。
 - {{ htmlelement("wbr") }} 要素の双方向テキストに関する動作を修正しました。Unicode の `U+200B ZERO-WIDTH SPACE` 文字と同様の動作になり、従って親要素の双方向性に影響を与えません。
 - {{ Cssxref(":invalid") }} 疑似クラスを {{ htmlelement("form") }} 要素へ適用できるようになりました。
 

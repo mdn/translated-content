@@ -1,7 +1,6 @@
 ---
 title: lengthAdjust
 slug: Web/SVG/Attribute/lengthAdjust
-translation_of: Web/SVG/Attribute/lengthAdjust
 ---
 
 Когда SVG элемент `<text>` **или** `<tspan>` имеет конкретную длину, установленную с помощью атрибута `textLengt`, атрибут `lengthAdjust` контролирует как текст помещается в эту длину (растягивается или сжимается).

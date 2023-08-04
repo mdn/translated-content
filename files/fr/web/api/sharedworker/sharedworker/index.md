@@ -1,9 +1,6 @@
 ---
 title: SharedWorker()
 slug: Web/API/SharedWorker/SharedWorker
-page-type: web-api-constructor
-translation_of: Web/API/SharedWorker/SharedWorker
-browser-compat: api.SharedWorker.SharedWorker
 l10n:
   sourceCommit: abaa8b38ddf68a2b468e2b46e56b277db25f16cf
 ---
@@ -17,9 +14,9 @@ Le constructeur **`SharedWorker()`** crée un objet [`SharedWorker`](/fr/docs/We
 ## Syntaxe
 
 ```js
-new SharedWorker(uneURL)
-new SharedWorker(uneURL, nom)
-new SharedWorker(uneURL, options)
+new SharedWorker(uneURL);
+new SharedWorker(uneURL, nom);
+new SharedWorker(uneURL, options);
 ```
 
 ### Paramètres
@@ -52,24 +49,24 @@ new SharedWorker(uneURL, options)
 L'extrait de code suivant montre la création d'un objet [`SharedWorker`](/fr/docs/Web/API/SharedWorker) en utilisant le constructeur `SharedWorker()` et l'usage qui en est fait.
 
 ```js
-const monWorker = new SharedWorker('worker.js');
+const monWorker = new SharedWorker("worker.js");
 
 monWorker.port.start();
 
-premier.onchange = function() {
-  monWorker.port.postMessage([premier.value,second.value]);
-  console.log('Message envoyé depuis le worker');
-}
+premier.onchange = function () {
+  monWorker.port.postMessage([premier.value, second.value]);
+  console.log("Message envoyé depuis le worker");
+};
 
-second.onchange = function() {
-  monWorker.port.postMessage([premier.value,second.value]);
-  console.log('Message envoyé depuis le worker');
-}
+second.onchange = function () {
+  monWorker.port.postMessage([premier.value, second.value]);
+  console.log("Message envoyé depuis le worker");
+};
 
-monWorker.port.onmessage = function(e) {
+monWorker.port.onmessage = function (e) {
   result1.textContent = e.data;
-  console.log('Message reçu du worker');
-}
+  console.log("Message reçu du worker");
+};
 ```
 
 Pour un exemple complet, voir [un exemple simple de <i lang="en">worker</i> partagé](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([exécuter le <i lang="en">worker</i> correspondant](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)).

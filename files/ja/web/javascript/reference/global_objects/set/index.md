@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 
 ### 値の等価性
 
-値の等値性は、[Same-value-zero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) アルゴリズムに基づいています。(以前は [Same-value](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality) を使用しており、0 と -0 は異なるものとして扱われていました。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)の "Key equality for -0 and 0" を参照してください。) つまり、 `NaN` は `NaN` と同じとみなされ (例え `NaN !== NaN` であっても)、それ以外の値は `===` 演算子の挙動に従って等しいとみなされます。
+値の等値性は、[Same-value-zero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムに基づいています。(以前は [Same-value](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#object.is_を使用した同値等価性) を使用しており、0 と -0 は異なるものとして扱われていました。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)の "Key equality for -0 and 0" を参照してください。) つまり、 `NaN` は `NaN` と同じとみなされ (例え `NaN !== NaN` であっても)、それ以外の値は `===` 演算子の挙動に従って等しいとみなされます。
 
 ### 性能
 
@@ -49,14 +49,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 - {{jsxref("Set.has", "Set.prototype.has(<var>value</var>)")}}
   - : `Set` オブジェクト内に引数で与えられた値をもつ要素が存在するかどうかを示す論理値を返します。
 - {{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}
-  - : `Set` オブジェクト内の各要素の**値**を挿入順に返す、新しい反復子オブジェクトを返します。
+  - : `Set` オブジェクト内の各要素の**値**を挿入順に返す、新しいイテレーターオブジェクトを返します。
 - {{jsxref("Set.prototype.values()")}}
-  - : `Set` オブジェクト内の各要素の**値**を挿入順に返す、新しい反復子オブジェクトを返します。
+  - : `Set` オブジェクト内の各要素の**値**を挿入順に返す、新しいイテレーターオブジェクトを返します。
 - {{jsxref("Set.prototype.keys()")}}
   - : {{jsxref("Set.prototype.values()")}} の別名です。
 - {{jsxref("Set.prototype.entries()")}}
 
-  - : `Set` オブジェクト内の各要素を **`[value, value]` の配列**の形で挿入順で返す、新しい反復子オブジェクトを返します。
+  - : `Set` オブジェクト内の各要素を **`[value, value]` の配列**の形で挿入順で返す、新しいイテレーターオブジェクトを返します。
 
     これは {{jsxref("Map")}} オブジェクトと似ていますが、それぞれの項目の _key_ が `set` では _value_ と同じになります。
 

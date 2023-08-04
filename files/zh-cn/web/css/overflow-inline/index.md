@@ -118,5 +118,5 @@ overflow-inline: unset;
 ## 参见
 
 - 相关 CSS 属性：{{CSSXref("text-overflow")}}、{{CSSXref("white-space")}}、{{CSSXref("overflow")}}、{{CSSXref("overflow-block")}}、{{CSSXref("overflow-x")}}、{{CSSXref("overflow-y")}}、{{CSSXref("clip")}}、{{CSSXref("display")}}
-- [CSS 逻辑属性](/zh-CN/docs/Web/CSS/CSS_Logical_Properties)
-- [书写模式](/zh-CN/docs/Web/CSS/CSS_Writing_Modes)
+- [CSS 逻辑属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
+- [书写模式](/zh-CN/docs/Web/CSS/CSS_writing_modes)

@@ -1,7 +1,6 @@
 ---
 title: Числа и даты
 slug: Web/JavaScript/Guide/Numbers_and_dates
-translation_of: Web/JavaScript/Guide/Numbers_and_dates
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
@@ -30,7 +29,7 @@ translation_of: Web/JavaScript/Guide/Numbers_and_dates
 
 ### Двоичные числа
 
-Синтаксис двоичных чисел использует ведущий 0 за которым следует латинская буква "B" в верхнем или нижнем регистре (`0b` or `0B`). Если цифры после `0b` не являются 0 или 1, то будет сгенерированно [`SyntaxError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) с сообщением: "Missing binary digits after 0b".
+Синтаксис двоичных чисел использует ведущий 0 за которым следует латинская буква "B" в верхнем или нижнем регистре (`0b` or `0B`). Если цифры после `0b` не являются 0 или 1, то будет сгенерированно [`SyntaxError`](/ru/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) с сообщением: "Missing binary digits after 0b".
 
 ```js
 var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
@@ -49,7 +48,7 @@ var m = 0644; // 420
 
 ### Шестнадцатеричные числа
 
-Синтаксис шестнадцатеричных чисел использует ведущий 0 за которым следует латинская буква "X" в верхнем или нижнем регистре (`0x` or `0X`). Если цифры после 0x не входят в диапазон (0123456789ABCDEF), то будет сгенерированно [`SyntaxError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) с сообщением: "Identifier starts immediately after numeric literal".
+Синтаксис шестнадцатеричных чисел использует ведущий 0 за которым следует латинская буква "X" в верхнем или нижнем регистре (`0x` or `0X`). Если цифры после 0x не входят в диапазон (0123456789ABCDEF), то будет сгенерированно [`SyntaxError`](/ru/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) с сообщением: "Identifier starts immediately after numeric literal".
 
 ```js
 0xFFFFFFFFFFFFFFFFF // 295147905179352830000

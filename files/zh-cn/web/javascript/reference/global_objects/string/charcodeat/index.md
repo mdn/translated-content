@@ -45,13 +45,13 @@ Unicode 码点（code points）的范围从 `0` 到 `1114111` `(0x10FFFF）`。�
 下例介绍了不同索引情况下返回的 Unicode 值：
 
 ```js
-"ABC".charCodeAt(0) // returns 65:"A"
+"ABC".charCodeAt(0); // returns 65:"A"
 
-"ABC".charCodeAt(1) // returns 66:"B"
+"ABC".charCodeAt(1); // returns 66:"B"
 
-"ABC".charCodeAt(2) // returns 67:"C"
+"ABC".charCodeAt(2); // returns 67:"C"
 
-"ABC".charCodeAt(3) // returns NaN
+"ABC".charCodeAt(3); // returns NaN
 ```
 
 ### 使用 `charCodeAt()` 修复字符串中出现的未知的非基本多语言范围（非 BMP，non-Basic-Multilingual-Plane）字符
@@ -59,68 +59,68 @@ Unicode 码点（code points）的范围从 `0` 到 `1114111` `(0x10FFFF）`。�
 这段代码可以被用在 for 循环和其他类似语句中，当在指定引索之前不确定是否有非 BMP 字符存在时。
 
 ```js
-function fixedCharCodeAt (str, idx) {
-    // ex. fixedCharCodeAt ('\uD800\uDC00', 0); // 65536
-    // ex. fixedCharCodeAt ('\uD800\uDC00', 1); // false
-    idx = idx || 0;
-    var code = str.charCodeAt(idx);
-    var hi, low;
+function fixedCharCodeAt(str, idx) {
+  // ex. fixedCharCodeAt ('\uD800\uDC00', 0); // 65536
+  // ex. fixedCharCodeAt ('\uD800\uDC00', 1); // false
+  idx = idx || 0;
+  var code = str.charCodeAt(idx);
+  var hi, low;
 
-    // High surrogate (could change last hex to 0xDB7F to treat high
-    // private surrogates as single characters)
-    if (0xD800 <= code && code <= 0xDBFF) {
-        hi = code;
-        low = str.charCodeAt(idx+1);
-        if (isNaN(low)) {
-            throw 'High surrogate not followed by low surrogate in fixedCharCodeAt()';
-        }
-        return ((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;
+  // High surrogate (could change last hex to 0xDB7F to treat high
+  // private surrogates as single characters)
+  if (0xd800 <= code && code <= 0xdbff) {
+    hi = code;
+    low = str.charCodeAt(idx + 1);
+    if (isNaN(low)) {
+      throw "High surrogate not followed by low surrogate in fixedCharCodeAt()";
     }
-    if (0xDC00 <= code && code <= 0xDFFF) { // Low surrogate
-        // We return false to allow loops to skip this iteration since should have
-        // already handled high surrogate above in the previous iteration
-        return false;
-        /*hi = str.charCodeAt(idx-1);
+    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
+  }
+  if (0xdc00 <= code && code <= 0xdfff) {
+    // Low surrogate
+    // We return false to allow loops to skip this iteration since should have
+    // already handled high surrogate above in the previous iteration
+    return false;
+    /*hi = str.charCodeAt(idx-1);
         low = code;
         return ((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;*/
-    }
-    return code;
+  }
+  return code;
 }
 ```
 
 ### 使用 `charCodeAt()` 修复字符串中出现的已知的非 BMP 字符
 
 ```js
-function knownCharCodeAt (str, idx) {
-    str += '';
-    var code,
-        end = str.length;
+function knownCharCodeAt(str, idx) {
+  str += "";
+  var code,
+    end = str.length;
 
-    var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-    while ((surrogatePairs.exec(str)) != null) {
-        var li = surrogatePairs.lastIndex;
-        if (li - 2 < idx) {
-            idx++;
-        }
-        else {
-            break;
-        }
+  var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
+  while (surrogatePairs.exec(str) != null) {
+    var li = surrogatePairs.lastIndex;
+    if (li - 2 < idx) {
+      idx++;
+    } else {
+      break;
     }
+  }
 
-    if (idx >= end || idx < 0) {
-        return NaN;
-    }
+  if (idx >= end || idx < 0) {
+    return NaN;
+  }
 
-    code = str.charCodeAt(idx);
+  code = str.charCodeAt(idx);
 
-    var hi, low;
-    if (0xD800 <= code && code <= 0xDBFF) {
-        hi = code;
-        low = str.charCodeAt(idx+1);
-        // Go one further, since one of the "characters" is part of a surrogate pair
-        return ((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;
-    }
-    return code;
+  var hi, low;
+  if (0xd800 <= code && code <= 0xdbff) {
+    hi = code;
+    low = str.charCodeAt(idx + 1);
+    // Go one further, since one of the "characters" is part of a surrogate pair
+    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
+  }
+  return code;
 }
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
-original_slug: Web/JavaScript/Referencia/Sentencias/try...catch
 ---
 
 {{jsSidebar("Statements")}}

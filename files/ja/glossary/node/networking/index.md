@@ -9,4 +9,4 @@ slug: Glossary/Node/networking
 
 ### 基礎知識
 
-- Wikipedia 上の記事「[Node](https://en.wikipedia.org/wiki/Node_(networking))」
+- Wikipedia 上の記事「[Node](<https://en.wikipedia.org/wiki/Node_(networking)>)」

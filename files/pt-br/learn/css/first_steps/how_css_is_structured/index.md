@@ -1,7 +1,6 @@
 ---
 title: Como CSS é estruturado
 slug: Learn/CSS/First_steps/How_CSS_is_structured
-original_slug: Learn/CSS/First_steps/Como_CSS_e_estruturado
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
@@ -22,10 +21,10 @@ Agora que você tem uma ideia sobre o que é o CSS e seu uso basico, é hora de 
           href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
           >operação com arquivos</a
         >, básico de HTML (veja
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
           >Introdução ao HTML</a
         >), e uma ideia de
-        <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works"
+        <a href="/pt-BR/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works"
           >Como funciona o CSS</a
         >.
       </td>
@@ -48,12 +47,12 @@ Em [Começando com o CSS](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_
 `Uma folha de estilos externa é quando você tem seu CSS escrito em um arquivo separado com uma extensão .css`, e você o refere dentro de um elemento `<link>` do HTML:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiment</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1>Hello World!</h1>
@@ -82,13 +81,13 @@ No exemplo abaixo, o arquivo CSS está na mesma pasta que o documento HTML, mas 
 
 ```html
 <!-- Inside a subdirectory called styles inside the current directory -->
-<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/style.css" />
 
 <!-- Inside a subdirectory called general, which is in a subdirectory called styles, inside the current directory -->
-<link rel="stylesheet" href="styles/general/style.css">
+<link rel="stylesheet" href="styles/general/style.css" />
 
 <!-- Go up one directory level, then inside a subdirectory called styles -->
-<link rel="stylesheet" href="../styles/style.css">
+<link rel="stylesheet" href="../styles/style.css" />
 ```
 
 ### Folha de estilos interna
@@ -98,10 +97,10 @@ Uma folha de estilos interna é usada quando você não tem um arquivo CSS exter
 Deste modo, seu HTML se parecerá assim:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiment</title>
     <style>
       h1 {
@@ -129,14 +128,16 @@ Isso pode ser útil em algumas circunstâncias (talvez você esteja trabalhando 
 Estilos inline são declarações CSS que afetam apenas um determinado elemento, inserido em um atributo `style`:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiment</title>
   </head>
   <body>
-    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">Hello World!</h1>
+    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">
+      Hello World!
+    </h1>
     <p style="color:red;">This is my first CSS example</p>
   </body>
 </html>
@@ -153,17 +154,15 @@ Há muito CSS para brincar neste artigo. Para fazê-lo, recomendamos criar um no
 index.html:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiments</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-
     <p>Create your test HTML here</p>
-
   </body>
 </html>
 ```
@@ -249,7 +248,7 @@ As regras de especificidade e cascata podem parecer um pouco complicadas no iní
 
 Em seu nível mais básico, CSS consiste em dois blocos de construção:
 
-- **Properties**: Identificadores legíveis para humanos que indicam quais características estilísticas (por exemplo, [`font-size`](/en-US/docs/Web/CSS/font-size), [`width`](/en-US/docs/Web/CSS/width), [`background-color`](/en-US/docs/Web/CSS/background-color)) que você deseja alterar.
+- **Properties**: Identificadores legíveis para humanos que indicam quais características estilísticas (por exemplo, [`font-size`](/pt-BR/docs/Web/CSS/font-size), [`width`](/pt-BR/docs/Web/CSS/width), [`background-color`](/pt-BR/docs/Web/CSS/background-color)) que você deseja alterar.
 - **Valores**: Cada propriedade especificada recebe um valor, que indica como você deseja alterar essas características estilísticas (por exemplo, o que deseja mudar a fonte, a largura ou a cor de fundo para).
 
 A imagem abaixo destaca uma única propriedade e valor. O nome da propriedade é `color` e o valor é `blue`.
@@ -319,7 +318,7 @@ Outro exemplo seriam os vários valores para {{cssxref("transform")}}, como `rot
   width: 100px;
   height: 100px;
   background-color: rebeccapurple;
-  transform: rotate(0.8turn)
+  transform: rotate(0.8turn);
 }
 ```
 
@@ -335,10 +334,10 @@ A saída do código acima se parece com isso:
 
 ## @rules
 
-Até agora, não encontramos as regras, em inglês [`@rules`](/en-US/docs/Web/CSS/At-rule) (pronuncia-se "at-rules") do CSS. Estas são regras especiais que dão ao CSS algumas instruções sobre como se comportar. Algumas `@rules` são simples, com o nome da regra e um valor. Por exemplo, para importar uma folha de estilo adicional na sua folha de estilo CSS principal, você pode usar `@import`:
+Até agora, não encontramos as regras, em inglês [`@rules`](/pt-BR/docs/Web/CSS/At-rule) (pronuncia-se "at-rules") do CSS. Estas são regras especiais que dão ao CSS algumas instruções sobre como se comportar. Algumas `@rules` são simples, com o nome da regra e um valor. Por exemplo, para importar uma folha de estilo adicional na sua folha de estilo CSS principal, você pode usar `@import`:
 
 ```css
-@import 'styles2.css';
+@import "styles2.css";
 ```
 
 Uma das `@rules` mais comuns que você encontrará é a `@media`, que permite usar [media queries](/pt-BR/docs/Web/CSS/Media_Queries) para aplicar CSS somente quando certas condições são verdadeiras (por exemplo, quando a resolução da tela está acima de um certo valor ou a tela é mais larga que uma largura específica).
@@ -416,7 +415,10 @@ Comentários em CSS começam com `/*` e terminam com `*/`. No bloco de código a
 /* Handle basic element styling */
 /* -------------------------------------------------------------------------------------------- */
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;
@@ -430,16 +432,19 @@ body {
   }
 }
 
-h1 {font-size: 1.5em;}
+h1 {
+  font-size: 1.5em;
+}
 
 /* Handle specific elements nested in the DOM  */
 /* -------------------------------------------------------------------------------------------- */
-div p, #id:first-line {
+div p,
+#id:first-line {
   background-color: red;
-  background-style: none
+  background-style: none;
 }
 
-div p{
+div p {
   margin: 0;
   padding: 1em;
 }
@@ -471,7 +476,10 @@ No exemplo abaixo, temos cada declaração (e início/fim de regra) em sua próp
 
 ```css
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;
@@ -490,7 +498,7 @@ h1 {
 div p,
 #id:first-line {
   background-color: red;
-  background-style: none
+  background-style: none;
 }
 
 div p {
@@ -506,14 +514,37 @@ div p + p {
 Você poderia escrever exatamente o mesmo CSS como abaixo, com grande parte do espaçamento removido - isto é, funcionalmente idêntico ao primeiro exemplo, mas é mais difícil de ler:
 
 ```css
-body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
-@media (min-width: 70em) { body {font-size: 130%;} }
+body {
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
+  padding: 1em;
+  margin: 0 auto;
+  max-width: 33em;
+}
+@media (min-width: 70em) {
+  body {
+    font-size: 130%;
+  }
+}
 
-h1 {font-size: 1.5em;}
+h1 {
+  font-size: 1.5em;
+}
 
-div p, #id:first-line {background-color: red; background-style: none}
-div p {margin: 0; padding: 1em;}
-div p + p {padding-top: 0;}
+div p,
+#id:first-line {
+  background-color: red;
+  background-style: none;
+}
+div p {
+  margin: 0;
+  padding: 1em;
+}
+div p + p {
+  padding-top: 0;
+}
 ```
 
 O layout de código que você escolher geralmente é uma preferência pessoal, embora quando você começar a trabalhar em equipes, pode descobrir que a equipe existente tem seu próprio guia de estilo que especifica uma convenção acordada a seguir.

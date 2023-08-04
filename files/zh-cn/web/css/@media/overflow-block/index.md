@@ -61,5 +61,5 @@ slug: Web/CSS/@media/overflow-block
 
 ## 参见
 
-- [使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/zh-CN/docs/Web/CSS/@media)

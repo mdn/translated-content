@@ -1,11 +1,6 @@
 ---
 title: <feFuncR>
 slug: Web/SVG/Element/feFuncR
-tags:
-  - Element
-  - SVG
-  - SVG Filter
-translation_of: Web/SVG/Element/feFuncR
 ---
 
 {{SVGRef}}

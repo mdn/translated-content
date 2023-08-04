@@ -1,7 +1,6 @@
 ---
-title: 'SyntaxError: illegal character'
+title: "SyntaxError: illegal character"
 slug: Web/JavaScript/Reference/Errors/Illegal_character
-translation_of: Web/JavaScript/Reference/Errors/Illegal_character
 ---
 
 {{jsSidebar("Errors")}}

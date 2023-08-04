@@ -58,7 +58,7 @@ DNS リクエストは帯域で見ればとても小さいものですが、遅�
 
 ### 先読みの有効化と無効化
 
-次のように、サーバー側から `X-DNS-Prefetch-Control` ヘッダーを送信するか、個別の文書で {{ htmlattrxref("http-equiv", "meta") }} 属性を {{ HTMLElement("meta") }} 要素に設定します。
+次のように、サーバー側から `X-DNS-Prefetch-Control` ヘッダーを送信するか、個別の文書で [`http-equiv`](/ja/docs/Web/HTML/Element/meta#http-equiv) 属性を {{ HTMLElement("meta") }} 要素に設定します。
 
 ```html
 <meta http-equiv="x-dns-prefetch-control" content="off">
@@ -68,7 +68,7 @@ DNS リクエストは帯域で見ればとても小さいものですが、遅�
 
 ### 特定のホスト名の参照の強制
 
-[リンク種別](/ja/docs/Web/HTML/Link_types)を `dns-prefetch` にした {{ HTMLElement("link") }} 要素に {{ htmlattrxref("rel","link") }} 属性を使用することで、そのホスト名を使用した特定のアンカーを提供せずに、特定のホスト名を強制的に検索することができます。
+[リンク種別](/ja/docs/Web/HTML/Link_types)を `dns-prefetch` にした {{ HTMLElement("link") }} 要素に [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性を使用することで、そのホスト名を使用した特定のアンカーを提供せずに、特定のホスト名を強制的に検索することができます。
 
 ```html
 <link rel="dns-prefetch" href="https://www.mozilla.org/contribute/">

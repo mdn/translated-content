@@ -63,15 +63,17 @@ text-underline-position: unset;
 2 つの段落の例を見てみましょう。
 
 ```html
-<p class="horizontal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Nullam consectetur ac turpis vel laoreet. Nullam volutpat pharetra lorem, sit
-amet feugiat tortor volutpat quis. Nam eget sodales quam. Aliquam accumsan
-tellus ac erat posuere.</p>
+<p class="horizontal">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur ac
+  turpis vel laoreet. Nullam volutpat pharetra lorem, sit amet feugiat tortor
+  volutpat quis. Nam eget sodales quam. Aliquam accumsan tellus ac erat posuere.
+</p>
 
-<p class="vertical">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Nullam consectetur ac turpis vel laoreet. Nullam volutpat pharetra lorem, sit
-amet feugiat tortor volutpat quis. Nam eget sodales quam. Aliquam accumsan
-tellus ac erat posuere.</p>
+<p class="vertical">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur ac
+  turpis vel laoreet. Nullam volutpat pharetra lorem, sit amet feugiat tortor
+  volutpat quis. Nam eget sodales quam. Aliquam accumsan tellus ac erat posuere.
+</p>
 ```
 
 CSS はこのようになります。

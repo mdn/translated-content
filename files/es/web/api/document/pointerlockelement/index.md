@@ -1,7 +1,6 @@
 ---
 title: Document.pointerLockElement
 slug: Web/API/Document/pointerLockElement
-original_slug: Web/API/DocumentOrShadowRoot/pointerLockElement
 ---
 
 {{APIRef("DOM")}}
@@ -26,7 +25,7 @@ Un {{domxref("Element")}} o `null`.
 
 {{Compat}}
 
-## Véase también:
+## Véase también
 
 - {{ domxref("Document.exitPointerLock()") }}
 - {{ domxref("Element.requestPointerLock()") }}

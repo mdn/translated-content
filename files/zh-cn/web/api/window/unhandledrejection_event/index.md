@@ -52,7 +52,7 @@ slug: Web/API/Window/unhandledrejection_event
 此示例只是将有关未处理的 Promise rejection 信息打印到控制台。
 
 ```js
-window.addEventListener("unhandledrejection", event => {
+window.addEventListener("unhandledrejection", (event) => {
   console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
 });
 ```
@@ -60,7 +60,7 @@ window.addEventListener("unhandledrejection", event => {
 您还可以使用 {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} 事件处理程序属性来设置事件侦听器：
 
 ```js
-window.onunhandledrejection = event => {
+window.onunhandledrejection = (event) => {
   console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
 };
 ```
@@ -70,7 +70,7 @@ window.onunhandledrejection = event => {
 许多环境 (例如 {{Glossary("Node.js")}} ) 默认情况下会向控制台打印未处理的 Promise rejections。你可以通过为 `unhandledrejection` 事件添加一个处理程序来避免这种情况的发生，该处理程序除了执行你希望执行的任何其他任务之外，还可以调用 {{domxref("Event.preventDefault()", "preventDefault()")}} 来取消该事件，从而阻止该事件冒泡并由运行时的日志代码处理。这种方法之所以有效，是因为 `unhandledrejection` 事件是可以取消的。
 
 ```js
-window.addEventListener('unhandledrejection', function (event) {
+window.addEventListener("unhandledrejection", function (event) {
   // ...您的代码可以处理未处理的 rejection...
 
   // 阻止默认处理（例如将错误输出到控制台）

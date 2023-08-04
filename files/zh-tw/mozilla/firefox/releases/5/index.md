@@ -55,7 +55,7 @@ Firefox 5，基於 Gecko 5.0，在 2011 年六月 21 日發行。本文將提供
 - The [`Function.prototype.isGenerator()`](/zh-TW/JavaScript/Reference/Global_Objects/Function/isGenerator) method is now supported; this lets you determine if a function is a [generator](/zh-TW/JavaScript/Guide/Iterators_and_Generators#Generators.3a_a_better_way_to_build_Iterators).
 - The following [reserved words](/zh-TW/JavaScript/Reference/Reserved_Words) were previously only treated as reserved when in strict mode; now they're always treated as reserved: `class`, `enum`, `export`, `extends`, `import`, and `super`.
 - DOM documents created in chrome code may no longer be exposed to sandboxed scripts.
-- The JSON parser has been re-written for improved speed and compliance. This includes a fix for {{ bug("572279") }}.
+- The JSON parser has been re-written for improved speed and compliance. This includes a fix for [Firefox bug 572279](https://bugzil.la/572279).
 
 ### SVG
 
@@ -109,10 +109,10 @@ For a guide to updating your add-on for Firefox 5, please see [Updating add-ons 
 
 The following interfaces were implementation details that are no longer needed:
 
-- `nsICiter` (see {{ bug("633066") }})
-- `nsIDOM3Document` (see {{ bug("639849") }})
+- `nsICiter` (see [Firefox bug 633066](https://bugzil.la/633066))
+- `nsIDOM3Document` (see [Firefox bug 639849](https://bugzil.la/639849))
 - `nsIFIXptrEvaluator`
-- `nsISelectElement` (see {{ bug("619996") }})
+- `nsISelectElement` (see [Firefox bug 619996](https://bugzil.la/619996))
 
 ### Debugging aids
 

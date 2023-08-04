@@ -50,7 +50,7 @@ O objeto global `Function` não tem métodos ou propriedades próprias, no entan
 
 `Function` instances inherit methods and properties from {{jsxref("Function.prototype")}}. As with all constructors, you can change the constructor's prototype object to make changes to all `Function` instances.
 
-## Exemplos:
+## Exemplos
 
 ### Exemplos: Especificando argumentos com o construtor `Function`
 

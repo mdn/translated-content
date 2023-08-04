@@ -54,12 +54,12 @@ var obj = {prop: [element0, element1, ...., elementN]};
 If you wish to initialize an array with a single element, and the element happens to be a `Number`, you must use the bracket syntax. When a single `Number` value is passed to the Array() constructor or function, it is interpreted as an `arrayLength`, not as a single element.
 
 ```js
-var arr = [42];      // Creates an array with only one element:
-                     // the number 42.
+var arr = [42]; // Creates an array with only one element:
+// the number 42.
 
 var arr = Array(42); // Creates an array with no elements
-                     // and arr.length set to 42; this is
-                     // equivalent to:
+// and arr.length set to 42; this is
+// equivalent to:
 var arr = [];
 arr.length = 42;
 ```
@@ -67,7 +67,7 @@ arr.length = 42;
 Calling `Array(N)` results in a `RangeError`, if `N` is a non-whole number whose fractional portion is non-zero. The following example illustrates this behavior.
 
 ```js
-var arr = Array(9.3);  // RangeError: Invalid array length
+var arr = Array(9.3); // RangeError: Invalid array length
 ```
 
 If your code needs to create arrays with single elements of an arbitrary data type, it is safer to use array literals. Or, create an empty array first before adding the single element to it.
@@ -78,25 +78,25 @@ You can populate an array by assigning values to its elements. For example,
 
 ```js
 var emp = [];
-emp[0] = 'Casey Jones';
-emp[1] = 'Phil Lesh';
-emp[2] = 'August West';
+emp[0] = "Casey Jones";
+emp[1] = "Phil Lesh";
+emp[2] = "August West";
 ```
 
 > **備註：** if you supply a non-integer value to the array operator in the code above, a property will be created in the object representing the array, instead of an array element.
 
 ```js
 var arr = [];
-arr[3.4] = 'Oranges';
-console.log(arr.length);                // 0
-console.log(arr.hasOwnProperty(3.4));   // true
+arr[3.4] = "Oranges";
+console.log(arr.length); // 0
+console.log(arr.hasOwnProperty(3.4)); // true
 ```
 
 You can also populate an array when you create it:
 
 ```js
-var myArray = new Array('Hello', myVar, 3.14159);
-var myArray = ['Mango', 'Apple', 'Orange'];
+var myArray = new Array("Hello", myVar, 3.14159);
+var myArray = ["Mango", "Apple", "Orange"];
 ```
 
 ### Referring to array elements
@@ -104,7 +104,7 @@ var myArray = ['Mango', 'Apple', 'Orange'];
 You refer to an array's elements by using the element's ordinal number. For example, suppose you define the following array:
 
 ```js
-var myArray = ['Wind', 'Rain', 'Fire'];
+var myArray = ["Wind", "Rain", "Fire"];
 ```
 
 You then refer to the first element of the array as `myArray[0]` and the second element of the array as `myArray[1]`. The index of the elements begins with zero.
@@ -112,9 +112,9 @@ You then refer to the first element of the array as `myArray[0]` and the second 
 > **備註：** the array operator (square brackets) is also used for accessing the array's properties (arrays are also objects in JavaScript). For example,
 
 ```js
-var arr = ['one', 'two', 'three'];
-arr[2];  // three
-arr['length'];  // 3
+var arr = ["one", "two", "three"];
+arr[2]; // three
+arr["length"]; // 3
 ```
 
 ### Understanding length
@@ -123,14 +123,14 @@ At the implementation level, JavaScript's arrays actually store their elements a
 
 ```js
 var cats = [];
-cats[30] = ['Dusty'];
+cats[30] = ["Dusty"];
 console.log(cats.length); // 31
 ```
 
 You can also assign to the `length` property. Writing a value that is shorter than the number of stored items truncates the array; writing 0 empties it entirely:
 
 ```js
-var cats = ['Dusty', 'Misty', 'Twiggy'];
+var cats = ["Dusty", "Misty", "Twiggy"];
 console.log(cats.length); // 3
 
 cats.length = 2;
@@ -148,7 +148,7 @@ console.log(cats); // [undefined, undefined, undefined]
 A common operation is to iterate over the values of an array, processing each one in some way. The simplest way to do this is as follows:
 
 ```js
-var colors = ['red', 'green', 'blue'];
+var colors = ["red", "green", "blue"];
 for (var i = 0; i < colors.length; i++) {
   console.log(colors[i]);
 }
@@ -157,8 +157,8 @@ for (var i = 0; i < colors.length; i++) {
 If you know that none of the elements in your array evaluate to `false` in a boolean context — if your array consists only of [DOM](/zh-TW/docs/DOM) nodes, for example, you can use a more efficient idiom:
 
 ```js
-var divs = document.getElementsByTagName('div');
-for (var i = 0, div; div = divs[i]; i++) {
+var divs = document.getElementsByTagName("div");
+for (var i = 0, div; (div = divs[i]); i++) {
   /* Process div in some way */
 }
 ```
@@ -168,8 +168,8 @@ This avoids the overhead of checking the length of the array, and ensures that t
 The {{jsxref("Array.forEach", "forEach()")}} method provides another way of iterating over an array:
 
 ```js
-var colors = ['red', 'green', 'blue'];
-colors.forEach(function(color) {
+var colors = ["red", "green", "blue"];
+colors.forEach(function (color) {
   console.log(color);
 });
 // red
@@ -180,8 +180,8 @@ colors.forEach(function(color) {
 Alternatively, You can shorten the code for the forEach parameter with ES6 Arrow Functions:
 
 ```js
-var colors = ['red', 'green', 'blue'];
-colors.forEach(color => console.log(color));
+var colors = ["red", "green", "blue"];
+colors.forEach((color) => console.log(color));
 // red
 // green
 // blue
@@ -192,9 +192,9 @@ The function passed to `forEach` is executed once for every item in the array, w
 Note that the elements of array that are omitted when the array is defined are not listed when iterating by `forEach`, but are listed when `undefined` has been manually assigned to the element:
 
 ```js
-var array = ['first', 'second', , 'fourth'];
+var array = ["first", "second", , "fourth"];
 
-array.forEach(function(element) {
+array.forEach(function (element) {
   console.log(element);
 });
 // first
@@ -202,12 +202,12 @@ array.forEach(function(element) {
 // fourth
 
 if (array[2] === undefined) {
-  console.log('array[2] is undefined'); // true
+  console.log("array[2] is undefined"); // true
 }
 
-array = ['first', 'second', undefined, 'fourth'];
+array = ["first", "second", undefined, "fourth"];
 
-array.forEach(function(element) {
+array.forEach(function (element) {
   console.log(element);
 });
 // first
@@ -225,29 +225,29 @@ The {{jsxref("Array")}} object has the following methods:
 {{jsxref("Array.concat", "concat()")}} joins two arrays and returns a new array.
 
 ```js
-var myArray = new Array('1', '2', '3');
-myArray = myArray.concat('a', 'b', 'c');
+var myArray = new Array("1", "2", "3");
+myArray = myArray.concat("a", "b", "c");
 // myArray is now ["1", "2", "3", "a", "b", "c"]
 ```
 
 {{jsxref("Array.join", "join(deliminator = ',')")}} joins all elements of an array into a string.
 
 ```js
-var myArray = new Array('Wind', 'Rain', 'Fire');
-var list = myArray.join(' - '); // list is "Wind - Rain - Fire"
+var myArray = new Array("Wind", "Rain", "Fire");
+var list = myArray.join(" - "); // list is "Wind - Rain - Fire"
 ```
 
 {{jsxref("Array.push", "push()")}} adds one or more elements to the end of an array and returns the resulting length of the array.
 
 ```js
-var myArray = new Array('1', '2');
-myArray.push('3'); // myArray is now ["1", "2", "3"]
+var myArray = new Array("1", "2");
+myArray.push("3"); // myArray is now ["1", "2", "3"]
 ```
 
 {{jsxref("Array.pop", "pop()")}} removes the last element from an array and returns that element.
 
 ```js
-var myArray = new Array('1', '2', '3');
+var myArray = new Array("1", "2", "3");
 var last = myArray.pop();
 // myArray is now ["1", "2"], last = "3"
 ```
@@ -255,7 +255,7 @@ var last = myArray.pop();
 {{jsxref("Array.shift", "shift()")}} removes the first element from an array and returns that element.
 
 ```js
-var myArray = new Array('1', '2', '3');
+var myArray = new Array("1", "2", "3");
 var first = myArray.shift();
 // myArray is now ["2", "3"], first is "1"
 ```
@@ -263,24 +263,24 @@ var first = myArray.shift();
 {{jsxref("Array.unshift", "unshift()")}} adds one or more elements to the front of an array and returns the new length of the array.
 
 ```js
-var myArray = new Array('1', '2', '3');
-myArray.unshift('4', '5');
+var myArray = new Array("1", "2", "3");
+myArray.unshift("4", "5");
 // myArray becomes ["4", "5", "1", "2", "3"]
 ```
 
 {{jsxref("Array.slice", "slice(start_index, upto_index)")}} extracts a section of an array and returns a new array.
 
 ```js
-var myArray = new Array('a', 'b', 'c', 'd', 'e');
+var myArray = new Array("a", "b", "c", "d", "e");
 myArray = myArray.slice(1, 4); // starts at index 1 and extracts all elements
-                               // until index 3, returning [ "b", "c", "d"]
+// until index 3, returning [ "b", "c", "d"]
 ```
 
 {{jsxref("Array.splice", "splice(index, count_to_remove, addElement1, addElement2, ...)")}} removes elements from an array and (optionally) replaces them. It returns the items which were removed from the array.
 
 ```js
-var myArray = new Array('1', '2', '3', '4', '5');
-myArray.splice(1, 3, 'a', 'b', 'c', 'd');
+var myArray = new Array("1", "2", "3", "4", "5");
+myArray.splice(1, 3, "a", "b", "c", "d");
 // myArray is now ["1", "a", "b", "c", "d", "5"]
 // This code started at index one (or where the "2" was),
 // removed 3 elements there, and then inserted all consecutive
@@ -290,7 +290,7 @@ myArray.splice(1, 3, 'a', 'b', 'c', 'd');
 {{jsxref("Array.reverse", "reverse()")}} transposes the elements of an array, in place: the first array element becomes the last and the last becomes the first. It returns a reference to the array.
 
 ```js
-var myArray = new Array('1', '2', '3');
+var myArray = new Array("1", "2", "3");
 myArray.reverse();
 // transposes the array so that myArray = ["3", "2", "1"]
 ```
@@ -298,7 +298,7 @@ myArray.reverse();
 {{jsxref("Array.sort", "sort()")}} sorts the elements of an array in place, and returns a reference to the array.
 
 ```js
-var myArray = new Array('Wind', 'Rain', 'Fire');
+var myArray = new Array("Wind", "Rain", "Fire");
 myArray.sort();
 // sorts the array so that myArray = ["Fire", "Rain", "Wind"]
 ```
@@ -314,11 +314,11 @@ The function below compares two values and returns one of three values:
 For instance, the following will sort by the last letter of a string:
 
 ```js
-var sortFn = function(a, b) {
+var sortFn = function (a, b) {
   if (a[a.length - 1] < b[b.length - 1]) return -1;
   if (a[a.length - 1] > b[b.length - 1]) return 1;
   if (a[a.length - 1] == b[b.length - 1]) return 0;
-}
+};
 myArray.sort(sortFn);
 // sorts the array so that myArray = ["Wind","Fire","Rain"]
 ```
@@ -330,44 +330,50 @@ myArray.sort(sortFn);
 {{jsxref("Array.indexOf", "indexOf(searchElement[, fromIndex])")}} searches the array for `searchElement` and returns the index of the first match.
 
 ```js
-var a = ['a', 'b', 'a', 'b', 'a'];
-console.log(a.indexOf('b')); // logs 1
+var a = ["a", "b", "a", "b", "a"];
+console.log(a.indexOf("b")); // logs 1
 // Now try again, starting from after the last match
-console.log(a.indexOf('b', 2)); // logs 3
-console.log(a.indexOf('z')); // logs -1, because 'z' was not found
+console.log(a.indexOf("b", 2)); // logs 3
+console.log(a.indexOf("z")); // logs -1, because 'z' was not found
 ```
 
 {{jsxref("Array.lastIndexOf", "lastIndexOf(searchElement[, fromIndex])")}} works like `indexOf`, but starts at the end and searches backwards.
 
 ```js
-var a = ['a', 'b', 'c', 'd', 'a', 'b'];
-console.log(a.lastIndexOf('b')); // logs 5
+var a = ["a", "b", "c", "d", "a", "b"];
+console.log(a.lastIndexOf("b")); // logs 5
 // Now try again, starting from before the last match
-console.log(a.lastIndexOf('b', 4)); // logs 1
-console.log(a.lastIndexOf('z')); // logs -1
+console.log(a.lastIndexOf("b", 4)); // logs 1
+console.log(a.lastIndexOf("z")); // logs -1
 ```
 
 {{jsxref("Array.forEach", "forEach(callback[, thisObject])")}} executes `callback` on every array item and returns undefined.
 
 ```js
-var a = ['a', 'b', 'c'];
-a.forEach(function(element) { console.log(element); });
+var a = ["a", "b", "c"];
+a.forEach(function (element) {
+  console.log(element);
+});
 // logs each item in turn
 ```
 
 {{jsxref("Array.map", "map(callback[, thisObject])")}} returns a new array of the return value from executing `callback` on every array item.
 
 ```js
-var a1 = ['a', 'b', 'c'];
-var a2 = a1.map(function(item) { return item.toUpperCase(); });
+var a1 = ["a", "b", "c"];
+var a2 = a1.map(function (item) {
+  return item.toUpperCase();
+});
 console.log(a2); // logs ['A', 'B', 'C']
 ```
 
 {{jsxref("Array.filter", "filter(callback[, thisObject])")}} returns a new array containing the items for which callback returned true.
 
 ```js
-var a1 = ['a', 10, 'b', 20, 'c', 30];
-var a2 = a1.filter(function(item) { return typeof item === 'number'; });
+var a1 = ["a", 10, "b", 20, "c", 30];
+var a2 = a1.filter(function (item) {
+  return typeof item === "number";
+});
 console.log(a2); // logs [10, 20, 30]
 ```
 
@@ -375,11 +381,11 @@ console.log(a2); // logs [10, 20, 30]
 
 ```js
 function isNumber(value) {
-  return typeof value === 'number';
+  return typeof value === "number";
 }
 var a1 = [1, 2, 3];
 console.log(a1.every(isNumber)); // logs true
-var a2 = [1, '2', 3];
+var a2 = [1, "2", 3];
 console.log(a2.every(isNumber)); // logs false
 ```
 
@@ -387,13 +393,13 @@ console.log(a2.every(isNumber)); // logs false
 
 ```js
 function isNumber(value) {
-  return typeof value === 'number';
+  return typeof value === "number";
 }
 var a1 = [1, 2, 3];
 console.log(a1.some(isNumber)); // logs true
-var a2 = [1, '2', 3];
+var a2 = [1, "2", 3];
 console.log(a2.some(isNumber)); // logs true
-var a3 = ['1', '2', '3'];
+var a3 = ["1", "2", "3"];
 console.log(a3.some(isNumber)); // logs false
 ```
 
@@ -401,8 +407,10 @@ console.log(a3.some(isNumber)); // logs false
 
 ```js
 var a = [10, 20, 30];
-var total = a.reduce(function(first, second) { return first + second; }, 0);
-console.log(total) // Prints 60
+var total = a.reduce(function (first, second) {
+  return first + second;
+}, 0);
+console.log(total); // Prints 60
 ```
 
 {{jsxref("Array.reduceRight", "reduceRight(callback[, initialValue])")}} works like `reduce()`, but starts with the last element.
@@ -420,7 +428,7 @@ var a = new Array(4);
 for (i = 0; i < 4; i++) {
   a[i] = new Array(4);
   for (j = 0; j < 4; j++) {
-    a[i][j] = '[' + i + ', ' + j + ']';
+    a[i][j] = "[" + i + ", " + j + "]";
   }
 }
 ```
@@ -446,7 +454,7 @@ Array prototype methods can be called against other array-like objects. for exam
 
 ```js
 function printArguments() {
-  Array.prototype.forEach.call(arguments, function(item) {
+  Array.prototype.forEach.call(arguments, function (item) {
     console.log(item);
   });
 }
@@ -455,7 +463,7 @@ function printArguments() {
 Array prototype methods can be used on strings as well, since they provide sequential access to their characters in a similar way to arrays:
 
 ```js
-Array.prototype.forEach.call('a string', function(chr) {
+Array.prototype.forEach.call("a string", function (chr) {
   console.log(chr);
 });
 ```

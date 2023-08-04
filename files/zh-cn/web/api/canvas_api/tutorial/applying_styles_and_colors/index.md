@@ -34,12 +34,16 @@ ctx.fillStyle = "rgba(255,165,0,1)";
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i=0;i<6;i++){
-    for (var j=0;j<6;j++){
-      ctx.fillStyle = 'rgb(' + Math.floor(255-42.5*i) + ',' +
-                       Math.floor(255-42.5*j) + ',0)';
-      ctx.fillRect(j*25,i*25,25,25);
+  var ctx = document.getElementById("canvas").getContext("2d");
+  for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 6; j++) {
+      ctx.fillStyle =
+        "rgb(" +
+        Math.floor(255 - 42.5 * i) +
+        "," +
+        Math.floor(255 - 42.5 * j) +
+        ",0)";
+      ctx.fillRect(j * 25, i * 25, 25, 25);
     }
   }
 }
@@ -62,18 +66,22 @@ draw();
 这个示例与上面的有点类似，但这次用到的是 `strokeStyle` 属性，画的不是方格，而是用 `arc` 方法来画圆。
 
 ```js
-  function draw() {
-    var ctx = document.getElementById('canvas').getContext('2d');
-    for (var i=0;i<6;i++){
-      for (var j=0;j<6;j++){
-        ctx.strokeStyle = 'rgb(0,' + Math.floor(255-42.5*i) + ',' +
-                         Math.floor(255-42.5*j) + ')';
-        ctx.beginPath();
-        ctx.arc(12.5+j*25,12.5+i*25,10,0,Math.PI*2,true);
-        ctx.stroke();
-      }
+function draw() {
+  var ctx = document.getElementById("canvas").getContext("2d");
+  for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 6; j++) {
+      ctx.strokeStyle =
+        "rgb(0," +
+        Math.floor(255 - 42.5 * i) +
+        "," +
+        Math.floor(255 - 42.5 * j) +
+        ")";
+      ctx.beginPath();
+      ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
+      ctx.stroke();
     }
   }
+}
 ```
 
 ```html hidden
@@ -113,26 +121,26 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   // 画背景
-  ctx.fillStyle = '#FD0';
-  ctx.fillRect(0,0,75,75);
-  ctx.fillStyle = '#6C0';
-  ctx.fillRect(75,0,75,75);
-  ctx.fillStyle = '#09F';
-  ctx.fillRect(0,75,75,75);
-  ctx.fillStyle = '#F30';
-  ctx.fillRect(75,75,75,75);
-  ctx.fillStyle = '#FFF';
+  ctx.fillStyle = "#FD0";
+  ctx.fillRect(0, 0, 75, 75);
+  ctx.fillStyle = "#6C0";
+  ctx.fillRect(75, 0, 75, 75);
+  ctx.fillStyle = "#09F";
+  ctx.fillRect(0, 75, 75, 75);
+  ctx.fillStyle = "#F30";
+  ctx.fillRect(75, 75, 75, 75);
+  ctx.fillStyle = "#FFF";
 
   // 设置透明度值
   ctx.globalAlpha = 0.2;
 
   // 画半透明圆
-  for (var i=0;i<7;i++){
-      ctx.beginPath();
-      ctx.arc(75,75,10+10*i,0,Math.PI*2,true);
-      ctx.fill();
+  for (var i = 0; i < 7; i++) {
+    ctx.beginPath();
+    ctx.arc(75, 75, 10 + 10 * i, 0, Math.PI * 2, true);
+    ctx.fill();
   }
 }
 ```
@@ -153,23 +161,23 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 画背景
-  ctx.fillStyle = 'rgb(255,221,0)';
-  ctx.fillRect(0,0,150,37.5);
-  ctx.fillStyle = 'rgb(102,204,0)';
-  ctx.fillRect(0,37.5,150,37.5);
-  ctx.fillStyle = 'rgb(0,153,255)';
-  ctx.fillRect(0,75,150,37.5);
-  ctx.fillStyle = 'rgb(255,51,0)';
-  ctx.fillRect(0,112.5,150,37.5);
+  ctx.fillStyle = "rgb(255,221,0)";
+  ctx.fillRect(0, 0, 150, 37.5);
+  ctx.fillStyle = "rgb(102,204,0)";
+  ctx.fillRect(0, 37.5, 150, 37.5);
+  ctx.fillStyle = "rgb(0,153,255)";
+  ctx.fillRect(0, 75, 150, 37.5);
+  ctx.fillStyle = "rgb(255,51,0)";
+  ctx.fillRect(0, 112.5, 150, 37.5);
 
   // 画半透明矩形
-  for (var i=0;i<10;i++){
-    ctx.fillStyle = 'rgba(255,255,255,'+(i+1)/10+')';
-    for (var j=0;j<4;j++){
-      ctx.fillRect(5+i*14,5+j*37.5,14,27.5)
+  for (var i = 0; i < 10; i++) {
+    ctx.fillStyle = "rgba(255,255,255," + (i + 1) / 10 + ")";
+    for (var j = 0; j < 4; j++) {
+      ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
     }
   }
 }
@@ -216,12 +224,12 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i < 10; i++){
-    ctx.lineWidth = 1+i;
+  var ctx = document.getElementById("canvas").getContext("2d");
+  for (var i = 0; i < 10; i++) {
+    ctx.lineWidth = 1 + i;
     ctx.beginPath();
-    ctx.moveTo(5+i*14,5);
-    ctx.lineTo(5+i*14,140);
+    ctx.moveTo(5 + i * 14, 5);
+    ctx.lineTo(5 + i * 14, 140);
     ctx.stroke();
   }
 }
@@ -263,26 +271,26 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var lineCap = ['butt','round','square'];
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var lineCap = ["butt", "round", "square"];
 
   // 创建路径
-  ctx.strokeStyle = '#09f';
+  ctx.strokeStyle = "#09f";
   ctx.beginPath();
-  ctx.moveTo(10,10);
-  ctx.lineTo(140,10);
-  ctx.moveTo(10,140);
-  ctx.lineTo(140,140);
+  ctx.moveTo(10, 10);
+  ctx.lineTo(140, 10);
+  ctx.moveTo(10, 140);
+  ctx.lineTo(140, 140);
   ctx.stroke();
 
   // 画线条
-  ctx.strokeStyle = 'black';
-  for (var i=0;i<lineCap.length;i++){
+  ctx.strokeStyle = "black";
+  for (var i = 0; i < lineCap.length; i++) {
     ctx.lineWidth = 15;
     ctx.lineCap = lineCap[i];
     ctx.beginPath();
-    ctx.moveTo(25+i*50,10);
-    ctx.lineTo(25+i*50,140);
+    ctx.moveTo(25 + i * 50, 10);
+    ctx.lineTo(25 + i * 50, 140);
     ctx.stroke();
   }
 }
@@ -306,8 +314,8 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var lineJoin = ['round', 'bevel', 'miter'];
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var lineJoin = ["round", "bevel", "miter"];
   ctx.lineWidth = 10;
   for (var i = 0; i < lineJoin.length; i++) {
     ctx.lineJoin = lineJoin[i];
@@ -352,31 +360,31 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 清空画布
   ctx.clearRect(0, 0, 150, 150);
 
   // 绘制参考线
-  ctx.strokeStyle = '#09f';
-  ctx.lineWidth   = 2;
+  ctx.strokeStyle = "#09f";
+  ctx.lineWidth = 2;
   ctx.strokeRect(-5, 50, 160, 50);
 
   // 设置线条样式
-  ctx.strokeStyle = '#000';
+  ctx.strokeStyle = "#000";
   ctx.lineWidth = 10;
 
   // 检查输入
-  if (document.getElementById('miterLimit').value.match(/\d+(\.\d+)?/)) {
-    ctx.miterLimit = parseFloat(document.getElementById('miterLimit').value);
+  if (document.getElementById("miterLimit").value.match(/\d+(\.\d+)?/)) {
+    ctx.miterLimit = parseFloat(document.getElementById("miterLimit").value);
   } else {
-    alert('Value must be a positive number');
+    alert("Value must be a positive number");
   }
 
   // 绘制线条
   ctx.beginPath();
   ctx.moveTo(0, 100);
-  for (i = 0; i < 24 ; i++) {
+  for (i = 0; i < 24; i++) {
     var dy = i % 2 == 0 ? 25 : -25;
     ctx.lineTo(Math.pow(i, 1.5) * 2, 75 + dy);
   }
@@ -389,11 +397,12 @@ function draw() {
 <table>
   <tr>
     <td><canvas id="canvas" width="150" height="150"></canvas></td>
-    <td>在输入框中输入<code>miterLimit</code>的值，并点击重绘按钮查看效果。<br><br>
+    <td>
+      在输入框中输入<code>miterLimit</code>的值，并点击重绘按钮查看效果。<br /><br />
       <form onsubmit="return draw();">
         <label>Miter limit</label>
-        <input type="number" size="3" id="miterLimit"/>
-        <input type="submit" value="重绘"/>
+        <input type="number" size="3" id="miterLimit" />
+        <input type="submit" value="重绘" />
       </form>
     </td>
   </tr>
@@ -401,7 +410,9 @@ function draw() {
 ```
 
 ```js hidden
-document.getElementById('miterLimit').value = document.getElementById('canvas').getContext('2d').miterLimit;
+document.getElementById("miterLimit").value = document
+  .getElementById("canvas")
+  .getContext("2d").miterLimit;
 draw();
 ```
 
@@ -418,14 +429,14 @@ draw();
 ```
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
+var ctx = document.getElementById("canvas").getContext("2d");
 var offset = 0;
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.setLineDash([4, 2]);
   ctx.lineDashOffset = -offset;
-  ctx.strokeRect(10,10, 100, 100);
+  ctx.strokeRect(10, 10, 100, 100);
 }
 
 function march() {
@@ -452,8 +463,8 @@ march();
   - : createRadialGradient 方法接受 6 个参数，前三个定义一个以 (x1,y1) 为原点，半径为 r1 的圆，后三个参数则定义另一个以 (x2,y2) 为原点，半径为 r2 的圆。
 
 ```js
-var lineargradient = ctx.createLinearGradient(0,0,150,150);
-var radialgradient = ctx.createRadialGradient(75,75,0,75,75,100);
+var lineargradient = ctx.createLinearGradient(0, 0, 150, 150);
+var radialgradient = ctx.createRadialGradient(75, 75, 0, 75, 75, 100);
 ```
 
 创建出 `canvasGradient` 对象后，我们就可以用 `addColorStop` 方法给它上色了。
@@ -464,9 +475,9 @@ var radialgradient = ctx.createRadialGradient(75,75,0,75,75,100);
 你可以根据需要添加任意多个色标（color stops）。下面是最简单的线性黑白渐变的例子。
 
 ```js
-var lineargradient = ctx.createLinearGradient(0,0,150,150);
-lineargradient.addColorStop(0,'white');
-lineargradient.addColorStop(1,'black');
+var lineargradient = ctx.createLinearGradient(0, 0, 150, 150);
+lineargradient.addColorStop(0, "white");
+lineargradient.addColorStop(1, "black");
 ```
 
 #### `createLinearGradient` 的例子
@@ -481,27 +492,26 @@ lineargradient.addColorStop(1,'black');
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // Create gradients
-  var lingrad = ctx.createLinearGradient(0,0,0,150);
-  lingrad.addColorStop(0, '#00ABEB');
-  lingrad.addColorStop(0.5, '#fff');
-  lingrad.addColorStop(0.5, '#26C000');
-  lingrad.addColorStop(1, '#fff');
+  var lingrad = ctx.createLinearGradient(0, 0, 0, 150);
+  lingrad.addColorStop(0, "#00ABEB");
+  lingrad.addColorStop(0.5, "#fff");
+  lingrad.addColorStop(0.5, "#26C000");
+  lingrad.addColorStop(1, "#fff");
 
-  var lingrad2 = ctx.createLinearGradient(0,50,0,95);
-  lingrad2.addColorStop(0.5, '#000');
-  lingrad2.addColorStop(1, 'rgba(0,0,0,0)');
+  var lingrad2 = ctx.createLinearGradient(0, 50, 0, 95);
+  lingrad2.addColorStop(0.5, "#000");
+  lingrad2.addColorStop(1, "rgba(0,0,0,0)");
 
   // assign gradients to fill and stroke styles
   ctx.fillStyle = lingrad;
   ctx.strokeStyle = lingrad2;
 
   // draw shapes
-  ctx.fillRect(10,10,130,130);
-  ctx.strokeRect(50,50,50,50);
-
+  ctx.fillRect(10, 10, 130, 130);
+  ctx.strokeRect(50, 50, 50, 50);
 }
 ```
 
@@ -521,38 +531,38 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 创建渐变
-  var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
-  radgrad.addColorStop(0, '#A7D30C');
-  radgrad.addColorStop(0.9, '#019F62');
-  radgrad.addColorStop(1, 'rgba(1,159,98,0)');
+  var radgrad = ctx.createRadialGradient(45, 45, 10, 52, 50, 30);
+  radgrad.addColorStop(0, "#A7D30C");
+  radgrad.addColorStop(0.9, "#019F62");
+  radgrad.addColorStop(1, "rgba(1,159,98,0)");
 
-  var radgrad2 = ctx.createRadialGradient(105,105,20,112,120,50);
-  radgrad2.addColorStop(0, '#FF5F98');
-  radgrad2.addColorStop(0.75, '#FF0188');
-  radgrad2.addColorStop(1, 'rgba(255,1,136,0)');
+  var radgrad2 = ctx.createRadialGradient(105, 105, 20, 112, 120, 50);
+  radgrad2.addColorStop(0, "#FF5F98");
+  radgrad2.addColorStop(0.75, "#FF0188");
+  radgrad2.addColorStop(1, "rgba(255,1,136,0)");
 
-  var radgrad3 = ctx.createRadialGradient(95,15,15,102,20,40);
-  radgrad3.addColorStop(0, '#00C9FF');
-  radgrad3.addColorStop(0.8, '#00B5E2');
-  radgrad3.addColorStop(1, 'rgba(0,201,255,0)');
+  var radgrad3 = ctx.createRadialGradient(95, 15, 15, 102, 20, 40);
+  radgrad3.addColorStop(0, "#00C9FF");
+  radgrad3.addColorStop(0.8, "#00B5E2");
+  radgrad3.addColorStop(1, "rgba(0,201,255,0)");
 
-  var radgrad4 = ctx.createRadialGradient(0,150,50,0,140,90);
-  radgrad4.addColorStop(0, '#F4F201');
-  radgrad4.addColorStop(0.8, '#E4C700');
-  radgrad4.addColorStop(1, 'rgba(228,199,0,0)');
+  var radgrad4 = ctx.createRadialGradient(0, 150, 50, 0, 140, 90);
+  radgrad4.addColorStop(0, "#F4F201");
+  radgrad4.addColorStop(0.8, "#E4C700");
+  radgrad4.addColorStop(1, "rgba(228,199,0,0)");
 
   // 画图形
   ctx.fillStyle = radgrad4;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
   ctx.fillStyle = radgrad3;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
   ctx.fillStyle = radgrad2;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
   ctx.fillStyle = radgrad;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
 }
 ```
 
@@ -583,8 +593,8 @@ draw();
 
 ```js
 var img = new Image();
-img.src = 'someimage.png';
-var ptrn = ctx.createPattern(img,'repeat');
+img.src = "someimage.png";
+var ptrn = ctx.createPattern(img, "repeat");
 ```
 
 > **备注：** 与 drawImage 有点不同，你需要确认 image 对象已经装载完毕，否则图案可能效果不对的。
@@ -595,19 +605,17 @@ var ptrn = ctx.createPattern(img,'repeat');
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 创建新 image 对象，用作图案
   var img = new Image();
-  img.src = 'canvas_createpattern.png';
-  img.onload = function() {
-
+  img.src = "canvas_createpattern.png";
+  img.onload = function () {
     // 创建图案
-    var ptrn = ctx.createPattern(img, 'repeat');
+    var ptrn = ctx.createPattern(img, "repeat");
     ctx.fillStyle = ptrn;
     ctx.fillRect(0, 0, 150, 150);
-
-  }
+  };
 }
 ```
 
@@ -640,7 +648,7 @@ The result looks like this:
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   ctx.shadowOffsetX = 2;
   ctx.shadowOffsetY = 2;
@@ -680,10 +688,10 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.beginPath();
-  ctx.arc(50, 50, 30, 0, Math.PI*2, true);
-  ctx.arc(50, 50, 15, 0, Math.PI*2, true);
+  ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
+  ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
   ctx.fill("evenodd");
 }
 ```

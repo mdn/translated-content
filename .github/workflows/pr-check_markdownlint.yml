@@ -38,9 +38,17 @@ jobs:
       - name: Install all yarn packages
         run: |
           yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Lint markdown files
         run: |
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
           files_to_lint="${{ env.DIFF_DOCUMENTS }}"
           yarn markdownlint-cli2 ${files_to_lint}
+
+      - name: Prettier markdown files
+        run: |
+          files_to_lint="${{ env.DIFF_DOCUMENTS }}"
+          yarn prettier -c ${files_to_lint}

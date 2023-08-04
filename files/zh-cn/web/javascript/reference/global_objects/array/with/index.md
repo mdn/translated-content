@@ -20,7 +20,7 @@ array.with(index, value)
     - 负数索引会从数组末尾开始计数——即当 `index < 0` 时，会使用 `index + array.length`。
     - 如果规范化后的索引超出数组边界，会抛出 {{jsxref("RangeError")}}。
 - `value`
-  - : 赋给 index 的任何值。
+  - : 要分配给指定索引的任何值。
 
 ### 返回值
 
@@ -37,7 +37,7 @@ array.with(index, value)
 
 `with()` 方法永远不会产生[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)。如果原数组是稀疏的，新数组对应的空白索引位置会替换为 `undefined`。
 
-`with()` 方法是[通用的](zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
+`with()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
 ## 示例
 

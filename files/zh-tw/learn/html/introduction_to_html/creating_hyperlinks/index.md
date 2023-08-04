@@ -46,8 +46,9 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 一個基本的連結由 {{htmlelement("a")}} 元素包裹一段文字而成(當然也不一定要是文字，見下方的[區塊級連結](#區塊級連結block-level_links))，同時，你需要將網路位址填入 [`href`](/zh-TW/docs/Web/HTML/Element/a#href) 屬性中，這個屬性有時也被叫做**超文字參考(Hypertext Reference)**或**目標(target)**。
 
 ```html
-<p>I'm creating a link to
-<a href="https://www.mozilla.org/en-US/">the Mozilla homepage</a>.
+<p>
+  I'm creating a link to
+  <a href="https://www.mozilla.org/en-US/">the Mozilla homepage</a>.
 </p>
 ```
 
@@ -60,10 +61,14 @@ I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 另外一個你可能會想在連結中附加的屬性是 `title`，它的目的是攜帶一個補充訊息到連結上，好比說目標網頁有什麼樣的資訊，或者是一些警告訊息，範例如下：
 
 ```html
-<p>I'm creating a link to
-<a href="https://www.mozilla.org/en-US/"
-   title="The best place to find more information about Mozilla's
-          mission and how to contribute">the Mozilla homepage</a>.
+<p>
+  I'm creating a link to
+  <a
+    href="https://www.mozilla.org/en-US/"
+    title="The best place to find more information about Mozilla's
+          mission and how to contribute"
+    >the Mozilla homepage</a
+  >.
 </p>
 ```
 
@@ -87,7 +92,9 @@ I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 
 ```html
 <a href="https://www.mozilla.org/en-US/">
-  <img src="mozilla-image.png" alt="mozilla logo that links to the mozilla homepage">
+  <img
+    src="mozilla-image.png"
+    alt="mozilla logo that links to the mozilla homepage" />
 </a>
 ```
 
@@ -110,8 +117,10 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 - **在相同目錄裡：**如果你要連結的兩個檔案處在同一個的目錄下，你只需要寫指向的檔案名稱就行了。比方說，如果你想在 `index.html` (最上層的那個) 中加入一個通往 `contacts.html` 的超連結，你要用的 URL 就是 `contacts.html`：
 
   ```html
-  <p>Want to contact a specific staff member?
-  Find details on our <a href="contacts.html">contacts page</a>.</p>
+  <p>
+    Want to contact a specific staff member? Find details on our
+    <a href="contacts.html">contacts page</a>.
+  </p>
   ```
 
 - **往下到子目錄中**：如果你想要在 `index.html` (還是最上層的那個) 中加入一個指向 `projects/index.html` 的超連結，在指出你要的檔案之前，你需要先往下進到 `projects` 目錄裡。要做到這件事，你可以先指出目錄名稱，然後加上一個 /，最後再加上檔案名稱。因此你要寫的 URL 會是 `projects/index.html`：
@@ -139,13 +148,19 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 要連到特定的 `id`，你得在你的 URL 的後面加上一個 # 號，像這樣：
 
 ```html
-<p>Want to write us a letter? Use our <a href="contacts.html#Mailing_address">mailing address</a>.</p>
+<p>
+  Want to write us a letter? Use our
+  <a href="contacts.html#Mailing_address">mailing address</a>.
+</p>
 ```
 
 你甚至可以利用文件片段來連到*同個文件的其他部分*：
 
 ```html
-<p>The <a href="#Mailing_address">company mailing address</a> can be found at the bottom of this page.</p>
+<p>
+  The <a href="#Mailing_address">company mailing address</a> can be found at the
+  bottom of this page.
+</p>
 ```
 
 ### 絕對 URL vs. 相對 URL
@@ -179,18 +194,13 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 **好的**連結文字：[下載 Firefox](https://firefox.com)
 
 ```html
-<p><a href="https://firefox.com/">
-  下載 Firefox
-</a></p>
+<p><a href="https://firefox.com/">下載 Firefox</a></p>
 ```
 
 **不好的**連結文字：[點這裡](https://firefox.com/)來下載 Firefox
 
 ```html
-<p><a href="https://firefox.com/">
-  點這裡
-</a>
-來下載 Firefox</p>
+<p><a href="https://firefox.com/">點這裡</a>來下載 Firefox</p>
 ```
 
 其它小訣竅：
@@ -217,17 +227,19 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 讓我們來看一些可以改善這些情況的方法：
 
 ```html
-<p><a href="http://www.example.com/large-report.pdf">
-  下載銷售報告(PDF, 10MB)
-</a></p>
+<p>
+  <a href="http://www.example.com/large-report.pdf">
+    下載銷售報告(PDF, 10MB)
+  </a>
+</p>
 
-<p><a href="http://www.example.com/video-stream/" target="_blank">
-  觀看影片(將在新分頁開啟串流，HD 畫質)
-</a></p>
+<p>
+  <a href="http://www.example.com/video-stream/" target="_blank">
+    觀看影片(將在新分頁開啟串流，HD 畫質)
+  </a>
+</p>
 
-<p><a href="http://www.example.com/car-game">
-  遊玩賽車遊戲(需要 Flash)
-</a></p>
+<p><a href="http://www.example.com/car-game">遊玩賽車遊戲(需要 Flash) </a></p>
 ```
 
 ### 當連結會觸發下載時，使用下載屬性
@@ -235,8 +247,9 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 當你連結一個需要下載的資源時，你可以使用 `download` 屬性來提供一個預設的儲存檔名。以下範例是最新版的 Windows 版 Firefox 的下載連結：
 
 ```html
-<a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
-   download="firefox-latest-64bit-installer.exe">
+<a
+  href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
+  download="firefox-latest-64bit-installer.exe">
   下載Windows上的最新版Firefox (64-bit) (English, US)
 </a>
 ```
@@ -286,7 +299,8 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 下面是一個包含 cc、bcc(密件副本)、subject 和 body 的範例：
 
 ```html
-<a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
+<a
+  href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
   Send mail with cc, bcc, subject and body
 </a>
 ```

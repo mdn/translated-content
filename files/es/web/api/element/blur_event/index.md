@@ -1,7 +1,6 @@
 ---
 title: blur (evento)
 slug: Web/API/Element/blur_event
-original_slug: Web/Events/blur
 ---
 
 {{ APIRef }}
@@ -27,12 +26,12 @@ El evento `blur` es disparado cuando un elemento ha perdido su foco. La diferenc
 
 ## Propiedades
 
-| Propiedad                                | Tipo                                               | Descripción                                 |
-| ---------------------------------------- | -------------------------------------------------- | ------------------------------------------- |
+| Propiedad                          | Tipo                                     | Descripción                                 |
+| ---------------------------------- | ---------------------------------------- | ------------------------------------------- |
 | `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Objetivo del evento (elemento DOM)          |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                   | El tipo de evento.                          |
-| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                       | Si el elemento normalmente se propaga o no. |
-| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                       | Si el evento es cancelable o no.            |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | El tipo de evento.                          |
+| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Si el elemento normalmente se propaga o no. |
+| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Si el evento es cancelable o no.            |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | null                                        |
 
 ## Delegación de eventos
@@ -43,8 +42,8 @@ Hay dos maneras de implementar la delegación de eventos para este evento: usand
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <input type="text" placeholder="text input" />
+  <input type="password" placeholder="password" />
 </form>
 ```
 
@@ -52,12 +51,20 @@ Hay dos maneras de implementar la delegación de eventos para este evento: usand
 
 ```js
 var form = document.getElementById("form");
-form.addEventListener("focus", function( event ) {
-  event.target.style.background = "pink";
-}, true);
-form.addEventListener("blur", function( event ) {
-  event.target.style.background = "";
-}, true);
+form.addEventListener(
+  "focus",
+  function (event) {
+    event.target.style.background = "pink";
+  },
+  true,
+);
+form.addEventListener(
+  "blur",
+  function (event) {
+    event.target.style.background = "";
+  },
+  true,
+);
 ```
 
 {{EmbedLiveSample('Delegación_de_eventos')}}

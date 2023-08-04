@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Memory()
 slug: WebAssembly/JavaScript_interface/Memory
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
 ---
 
 {{WebAssemblySidebar}}
@@ -52,14 +51,15 @@ var myMemory = new WebAssembly.Memory(memoryDescriptor);
 `WebAssembly.Memory` 객체를 가져 오는 두 가지 방법이 있습니다. 첫 번째 방법은 JavaScript에서 생성하는 것입니다. 다음 예제에서는 초기 크기가 10 페이지 (640KiB)이고 최대 크기가 100 페이지 (6.4MiB) 인 새 WebAssembly 메모리 인스턴스를 만듭니다.
 
 ```js
-var memory = new WebAssembly.Memory({initial:10, maximum:100});
+var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
 ```
 
 `WebAssembly.Memory` 객체를 가져 오는 두 번째 방법은 WebAssembly 모듈에서 내보냅니다. 다음 예제는 (GitHub의 [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html)을 보세요. [라이브로 보기](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) 생성된 메모리를 가져 오는 동안 {{jsxref("WebAssembly.instantiateStreaming()")}} 메소드를 사용하여로드 된 memory.wasm 바이트 코드를 가져 와서 인스턴스화합니다. 위의 줄에. 그런 다음 메모리에 일부 값을 저장 한 다음 함수를 내 보낸 다음 일부 값의 합계에 사용합니다.
 
 ```js
-WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
-.then(obj => {
+WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
+  js: { mem: memory },
+}).then((obj) => {
   var i32 = new Uint32Array(memory.buffer);
   for (var i = 0; i < 10; i++) {
     i32[i] = i;

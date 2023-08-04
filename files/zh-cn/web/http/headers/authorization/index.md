@@ -78,7 +78,7 @@ Authorization: Digest username=<username>,
 - `username*`
   - : 使用 RFC5987 中定义的扩展符号格式化的用户名。只有当名称无法在 `username` 中编码并且 `userhash` 设置为 `"false"` 时，才应使用此字段。
 - `uri`
-  - : *有效的请求 URI*。有关更多信息，请参阅规范。
+  - : _有效的请求 URI_。有关更多信息，请参阅规范。
 - `realm`
   - : 请求的用户名/密码的 realm（同样，应该与所请求资源中对应的 {{HTTPHeader("WWW-Authenticate")}} 响应中的值相匹配）。
 - `opaque`

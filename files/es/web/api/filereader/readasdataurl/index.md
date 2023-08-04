@@ -26,22 +26,26 @@ instanceOfFileReader.readAsDataURL(blob);
 ### HTML
 
 ```html
-<input type="file" onchange="previewFile()"><br>
-<img src="" height="200" alt="Image preview...">
+<input type="file" onchange="previewFile()" /><br />
+<img src="" height="200" alt="Image preview..." />
 ```
 
 ### JavaScript
 
 ```js
 function previewFile() {
-  const preview = document.querySelector('img');
-  const file = document.querySelector('input[type=file]').files[0];
+  const preview = document.querySelector("img");
+  const file = document.querySelector("input[type=file]").files[0];
   const reader = new FileReader();
 
-  reader.addEventListener("load", function () {
-    // convierte la imagen a una cadena en base64
-    preview.src = reader.result;
-  }, false);
+  reader.addEventListener(
+    "load",
+    function () {
+      // convierte la imagen a una cadena en base64
+      preview.src = reader.result;
+    },
+    false,
+  );
 
   if (file) {
     reader.readAsDataURL(file);
@@ -58,7 +62,7 @@ function previewFile() {
 ### HTML
 
 ```html
-<input id="browse" type="file" onchange="previewFiles()" multiple>
+<input id="browse" type="file" onchange="previewFiles()" multiple />
 <div id="preview"></div>
 ```
 
@@ -66,33 +70,33 @@ function previewFile() {
 
 ```js
 function previewFiles() {
-
-  var preview = document.querySelector('#preview');
-  var files   = document.querySelector('input[type=file]').files;
+  var preview = document.querySelector("#preview");
+  var files = document.querySelector("input[type=file]").files;
 
   function readAndPreview(file) {
-
     // Asegurate que `file.name` coincida con el criterio de extensiones
-    if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
+    if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
       var reader = new FileReader();
 
-      reader.addEventListener("load", function () {
-        var image = new Image();
-        image.height = 100;
-        image.title = file.name;
-        image.src = this.result;
-        preview.appendChild(image);
-      }, false);
+      reader.addEventListener(
+        "load",
+        function () {
+          var image = new Image();
+          image.height = 100;
+          image.title = file.name;
+          image.src = this.result;
+          preview.appendChild(image);
+        },
+        false,
+      );
 
       reader.readAsDataURL(file);
     }
-
   }
 
   if (files) {
     [].forEach.call(files, readAndPreview);
   }
-
 }
 ```
 

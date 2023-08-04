@@ -10,20 +10,20 @@ slug: Web/HTTP/Headers/Date
 > **警告：** `Date` 被列在 fetch spec 的 [forbidden header names](https://fetch.spec.whatwg.org/#forbidden-header-name) 清單中 ── 也就是說這段程式不會送出 `Date` 標頭：
 >
 > ```js
-> fetch('https://httpbin.org/get', {
->   'headers': {
->     'Date': (new Date()).toUTCString()
->   }
-> })
+> fetch("https://httpbin.org/get", {
+>   headers: {
+>     Date: new Date().toUTCString(),
+>   },
+> });
 > ```
 
-| Header type                                      | {{Glossary("General header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| Header type                           | {{Glossary("General header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | yes                            |
 
 ## 語法
 
-```html
+```http
 Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 ```
 
@@ -53,7 +53,7 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 
 ```js
-new Date().toUTCString()
+new Date().toUTCString();
 // "Mon, 09 Mar 2020 08:13:24 GMT"
 ```
 

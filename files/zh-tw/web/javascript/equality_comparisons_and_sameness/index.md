@@ -158,11 +158,14 @@ console.log(obj == undefined);
 
 ```js
 // 新增一個不可變 NEGATIVE_ZERO 屬性到 Number 原型。
-Object.defineProperty(Number, "NEGATIVE_ZERO",
-                      { value: -0, writable: false, configurable: false, enumerable: false });
+Object.defineProperty(Number, "NEGATIVE_ZERO", {
+  value: -0,
+  writable: false,
+  configurable: false,
+  enumerable: false,
+});
 
-function attemptMutation(v)
-{
+function attemptMutation(v) {
   Object.defineProperty(Number, "NEGATIVE_ZERO", { value: v });
 }
 ```

@@ -1,16 +1,6 @@
 ---
 title: Console
 slug: Web/API/console
-tags:
-  - API
-  - DOM
-  - NeedsCompatTable
-  - Reference
-  - Référence(2)
-  - Веб-консоль
-  - Отладка
-  - Справочник по DOM Gecko
-translation_of: Web/API/Console
 ---
 
 {{APIRef("Console API")}}
@@ -20,7 +10,7 @@ translation_of: Web/API/Console
 Доступ к **Console** можно получить через свойство глобального объекта, то есть: {{domxref("Window")}} в браузере (в JavaScript), {{domxref("WorkerGlobalScope")}} — в `workers` это специальный способ доступа через свойство `console`. Он известен как {{domxref("Window.console")}}, и на него ссылаются для простоты так: "`console`".
 
 ```js
-console.log("Failed to open the specified link")
+console.log("Failed to open the specified link");
 ```
 
 Ниже описаны [методы](#Methods), доступные в объекте Console и приведены несколько примеров их [использования](#Usage).
@@ -109,7 +99,7 @@ console.log(someObject);
 
 ```js
 var car = "Dodge Charger";
-var someObject = {str:"Some text", id:5};
+var someObject = { str: "Some text", id: 5 };
 console.info("My first car was a", car, ". The object is: ", someObject);
 ```
 
@@ -153,7 +143,10 @@ for (var i=0; i<5; i++) {
 Можно использовать директиву `"%c"` для применения стилей CSS при выводе в консоль. Часть текста до директивы не затрагивается стилем, а часть после - будет стилизована:
 
 ```js
-console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue; padding: 2px;");
+console.log(
+  "This is %cMy stylish message",
+  "color: yellow; font-style: italic; background-color: blue; padding: 2px;",
+);
 ```
 
 ![](css-styling.png)

@@ -1,7 +1,6 @@
 ---
 title: object-position
 slug: Web/CSS/object-position
-translation_of: Web/CSS/object-position
 ---
 {{CSSRef}}
 
@@ -45,7 +44,7 @@ object-position: unset;
 
 #### HTML
 
-Здесь мы видим HTML, содержаний два {{HTMLElement("img")}}-элемента, отображающие логотипы MDN.
+Здесь мы видим HTML, содержащий два {{HTMLElement("img")}}-элемента, отображающие логотипы MDN.
 
 ```html
 <img id="object-position-1" src="mdn.svg" alt="MDN Logo"/>

@@ -1,14 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.pathname
 slug: Web/API/HTMLAnchorElement/pathname
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/pathname
-original_slug: Web/API/HTMLHyperlinkElementUtils/pathname
 ---
 
 {{ApiRef("URL API")}}
@@ -25,9 +17,9 @@ object.pathname = string;
 ## Примеры
 
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.pathname">
+// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/ru/docs/HTMLHyperlinkElementUtils.pathname">
 var anchor = document.getElementById("myAnchor");
-var result = anchor.pathname; // Вернёт: '/en-US/docs/HTMLHyperlinkElementUtils.pathname'
+var result = anchor.pathname; // Вернёт: '/ru/docs/HTMLHyperlinkElementUtils.pathname'
 ```
 
 ## Спецификации

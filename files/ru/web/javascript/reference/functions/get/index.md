@@ -1,9 +1,6 @@
 ---
 title: getter
 slug: Web/JavaScript/Reference/Functions/get
-tags:
-  - геттер
-translation_of: Web/JavaScript/Reference/Functions/get
 ---
 
 {{jsSidebar("Functions")}}
@@ -38,7 +35,7 @@ translation_of: Web/JavaScript/Reference/Functions/get
 - Он должен иметь ровно 0 параметров (смотрите [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) для доп. информации);
 - Он не должен появляться в объектном литерале вместе с другим get или через ввод данных для того же свойства (`{ get x() { }, get x() { } }` и `{ x: ..., get x() { } }` запрещены).
 
-Геттер можно удалить при помощи оператора [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
+Геттер можно удалить при помощи оператора [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete).
 
 ## Примеры
 
@@ -114,7 +111,7 @@ get notifier() {
 },
 ```
 
-Для Firefox смотрите также модуль XPCOMUtils.jsm , который определяет функцию [`defineLazyGetter()`](</en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>).
+Для Firefox смотрите также модуль XPCOMUtils.jsm , который определяет функцию [`defineLazyGetter()`](</ru/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>).
 
 ### `get` и `defineProperty`
 

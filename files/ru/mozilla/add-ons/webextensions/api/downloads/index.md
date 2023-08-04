@@ -1,8 +1,8 @@
 ---
 title: downloads
 slug: Mozilla/Add-ons/WebExtensions/API/downloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads
 ---
+
 {{AddonSidebar}}
 
 Позволяет расширениям взаимодействовать с менеджером загрузки браузера. Этот модуль API можно использовать для загрузки, отмены, приостановки, возобновления загрузки файлов и отображения загруженных файлов в файловом менеджере.

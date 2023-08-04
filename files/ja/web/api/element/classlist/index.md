@@ -1,6 +1,9 @@
 ---
-title: Element.classList
+title: "Element: classList プロパティ"
+short-title: classList
 slug: Web/API/Element/classList
+l10n:
+  sourceCommit: 1b22d649b27f7b9359388cb57fc0075559e32584
 ---
 
 {{APIRef("DOM")}}
@@ -9,23 +12,19 @@ slug: Web/API/Element/classList
 
 `classList` を使用することは、 {{domxref("element.className")}} から取得した空白区切りの文字列として要素のクラスのリストにアクセスすることの便利な代替手段になります。
 
-## 構文
-
-```js
-const elementClasses = elementNodeReference.classList;
-```
-
-### 返値
+## 値
 
 {{domxref("DOMTokenList")}} で、その要素の `class` 属性を返します。 `class` 属性が設定されていない場合や空の場合は、空の `DOMTokenList` を返します。すなわち、 `DOMTokenList` の `length` プロパティが `0` になります。
 
 `DOMTokenList` 自体は読み取り専用ですが、 {{domxref("DOMTokenList/add", "add()")}}, {{domxref("DOMTokenList/remove", "remove()")}}, {{domxref("DOMTokenList/replace", "replace()")}}, {{domxref("DOMTokenList/toggle", "toggle()")}} の各メソッドを用いてオブジェクトを変更することはできます。
 
+要素が指定されたクラスを含むかどうかは、{{domxref("DOMTokenList/contains", "classList.contains()")}} メソッドを用いて検査することができます。
+
 ## 例
 
 ```js
-const div = document.createElement('div');
-div.className = 'foo';
+const div = document.createElement("div");
+div.className = "foo";
 
 // 最初の状態: <div class="foo"></div>
 console.log(div.outerHTML);
@@ -41,8 +40,9 @@ console.log(div.outerHTML);
 div.classList.toggle("visible");
 
 // i が 10 未満であるかどうかの条件によって visible を追加または除去
-div.classList.toggle("visible", i < 10 );
+div.classList.toggle("visible", i < 10);
 
+// false
 console.log(div.classList.contains("foo"));
 
 // 複数のクラスを追加または除去
@@ -57,8 +57,6 @@ div.classList.remove(...cls);
 // "foo" クラスを "bar" クラスで置き換え
 div.classList.replace("foo", "bar");
 ```
-
-> **メモ:** Firefox 26 以前のバージョンでは、 add/remove/toggle メソッドでいくつかの引数の使用を実装していません。詳しくは <https://bugzilla.mozilla.org/show_bug.cgi?id=814014> を参照してください。
 
 ## 仕様書
 

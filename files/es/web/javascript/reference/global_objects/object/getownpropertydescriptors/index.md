@@ -1,7 +1,6 @@
 ---
 title: Object.getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertyDescriptors
 ---
 
 {{JSRef}}
@@ -83,7 +82,7 @@ subclass.prototype = Object.create(
 
 {{Compat}}
 
-## Ver también:
+## Ver también
 
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Object.defineProperty()")}}

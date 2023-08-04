@@ -37,7 +37,7 @@ Por lo tanto el método removeChild(child) lanza una excepción de 2 casos difer
 
 ```html
 <!--Ejemplo 1 HTML-->
-<div id="top" align="center"> </div>
+<div id="top" align="center"></div>
 ```
 
 ```js
@@ -51,7 +51,7 @@ var garbage = top.removeChild(nested);
 ```html
 <!--Ejemplo 2 HTML-->
 <div id="top">
-   <div id="anidados"></div>
+  <div id="anidados"></div>
 </div>
 ```
 
@@ -81,7 +81,7 @@ while (element.firstChild) {
 }
 ```
 
-## Notas:
+## Notas
 
 **`removeChild()`** se debe invocar sobre el nodo padre del nodo que se va a eliminar.
 

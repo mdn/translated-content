@@ -1,17 +1,6 @@
 ---
 title: Window.back()
 slug: Web/API/Window/back
-tags:
-  - API
-  - Firefox
-  - Gecko
-  - HTML DOM
-  - Méthode
-  - Non-standard
-  - Obsolete
-  - Window
-  - back
-translation_of: Web/API/Window/back
 ---
 
 {{APIRef}}{{ Non-standard_header() }}{{deprecated_header}}

@@ -1,15 +1,6 @@
 ---
 title: Notification.onclick
 slug: Web/API/Notification/click_event
-tags:
-  - API
-  - DOM
-  - Notifications
-  - Propriété
-  - Reference
-  - onclick
-translation_of: Web/API/Notification/onclick
-original_slug: Web/API/notification/onclick
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -29,10 +20,10 @@ Le comportement par défaut consiste à déplacer le focus sur la zone d'afficha
 Dans l'exemple qui suit, on utilise le gestionnaire d'évènement `onclick` pour ouvrir une page dans un nouvel onglet (avec le paramètre `'_blank'`) lorsqu'on clique sur la notification :
 
 ```js
-notification.onclick = function(event) {
+notification.onclick = function (event) {
   event.preventDefault(); // empêcher le navigateur de passer le focus sur l'onglet de la navigation
-  window.open('http://www.mozilla.org', '_blank');
-}
+  window.open("http://www.mozilla.org", "_blank");
+};
 ```
 
 ## Spécifications

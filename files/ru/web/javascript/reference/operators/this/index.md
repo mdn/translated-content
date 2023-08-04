@@ -1,13 +1,6 @@
 ---
 title: this
 slug: Web/JavaScript/Reference/Operators/this
-tags:
-  - JavaScript
-  - Operator
-  - Reference
-  - this
-  - свойства языка
-translation_of: Web/JavaScript/Reference/Operators/this
 ---
 {{jsSidebar("Operators")}}
 
@@ -288,7 +281,7 @@ console.log(o.phase, o.modulus); // logs -0.78 1.4142
 
 ### В конструкторе
 
-Когда функция используется как конструктор (с ключевым словом [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) ), `this` связано с создаваемым новым объектом.
+Когда функция используется как конструктор (с ключевым словом [`new`](/ru/docs/Web/JavaScript/Reference/Operators/new) ), `this` связано с создаваемым новым объектом.
 
 Примечание: по умолчанию конструктор возвращает объект, на который ссылается `this`, но он может вернуть и другой объект (если возвращаемое значение не является объектом, тогда будет возвращён объект с `this`).
 
@@ -333,7 +326,7 @@ console.log(o.a); // logs 38
 
 ### `call` и `apply`
 
-Когда в теле функции используется ключевое слово `this`, его значение может быть привязано к конкретному объекту в вызове при помощи методов [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) или [`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), которые наследуются всеми функциями от `Function.prototype`.
+Когда в теле функции используется ключевое слово `this`, его значение может быть привязано к конкретному объекту в вызове при помощи методов [`call`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call) или [`apply`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), которые наследуются всеми функциями от `Function.prototype`.
 
 ```js
 function add(c, d) {

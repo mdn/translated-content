@@ -1,7 +1,6 @@
 ---
 title: 공을 벽에 튕기기
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Bounce_off_the_walls
 ---
 
 {{GamesSidebar}}
@@ -25,7 +24,7 @@ var ballRadius = 10;
 이제`drawBall()` func기능 안에 볼을 그리는 코드를 아래와 같이 수정하세요:
 
 ```js
-ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
 ```
 
 ### 위 아래 방향으로 튕기기
@@ -33,8 +32,8 @@ ctx.arc(x, y, ballRadius, 0, Math.PI*2);
 캔버스에는 총 4개의 모서리 즉, 4개의 벽이 있습니다. 일단 상단의 벽에 집중해 보겠습니다. 공을 그리는 매 프레임마다 우리는 볼이 상단 모서리에 닿았는지 확인해야합니다 — 닿았다면 볼이 움직이는 방향을 반대로 바꾸어 캔버스 안에 여전히 공이 보이도록 만들어주어야 합니다. 캔버스 내 위치 구조는 좌상단으로 부터 시작하는 것을 잊지마세요:
 
 ```js
-if(y + dy < 0) {
-    dy = -dy;
+if (y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -43,8 +42,8 @@ if(y + dy < 0) {
 위 코드는 상단 모서리를 튕기도록 해주기 때문에 이번엔 하단 모서리를 튕기도록 해보겠습니다:
 
 ```js
-if(y + dy > canvas.height) {
-    dy = -dy;
+if (y + dy > canvas.height) {
+  dy = -dy;
 }
 ```
 
@@ -53,8 +52,8 @@ if(y + dy > canvas.height) {
 위의 두가지 코드를 하나로 합칠 수 있습니다:
 
 ```js
-if(y + dy > canvas.height || y + dy < 0) {
-    dy = -dy;
+if (y + dy > canvas.height || y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -65,12 +64,12 @@ if(y + dy > canvas.height || y + dy < 0) {
 우리는 방금 상, 하단 모서리를 인식했으므로 이번엔 좌우 모서리를 생각해봅시다. 거의 같은 문제이므로 우리는 y 대신 x값을 대입하여 그대로 반복해주기만 하면 됩니다:
 
 ```js
-if(x + dx > canvas.width || x + dx < 0) {
-    dx = -dx;
+if (x + dx > canvas.width || x + dx < 0) {
+  dx = -dx;
 }
 
-if(y + dy > canvas.height || y + dy < 0) {
-    dy = -dy;
+if (y + dy > canvas.height || y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -85,11 +84,11 @@ if(y + dy > canvas.height || y + dy < 0) {
 이 문제는 우리가 충돌을 감지할 때 그 기준을 공의 원점에 두고 계산했지만, 원의 둘레를 기준으로 계산을 해야 하기 때문입니다. 벽에 공이 절반쯤 지난 뒤가 아니라 닿자마자 튕겨나와야 합니다. 이에 맞게 코드를 조금 수정해봅시다. 여러분이 삽입한 코드를 아래와 같이 수정해보세요:
 
 ```js
-if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-    dx = -dx;
+if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+  dx = -dx;
 }
-if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-    dy = -dy;
+if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+  dy = -dy;
 }
 ```
 

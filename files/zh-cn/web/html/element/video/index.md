@@ -1,5 +1,5 @@
 ---
-title: '<video>: 视频嵌入元素'
+title: "<video>: 视频嵌入元素"
 slug: Web/HTML/Element/video
 ---
 
@@ -18,13 +18,21 @@ slug: Web/HTML/Element/video
 类似于所有其他 HTML 元素，video 元素也支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `autoplay`
+
   - : 布尔属性；声明该属性后，视频会尽快自动开始播放，不会停下来等待数据全部加载完成。
 
     > **备注：** 自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如何正确使用自动播放，可参见我们的 [自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)。如果使用 `autoplay="false"` 来关闭视频的自动播放功能，会不起作用；只要 `<video>` 标签中有 autoplay 属性，视频就会自动播放。要移除自动播放，需要完全删除该属性。在某些浏览器（例如 Chrome 70.0）中，如果没有设置 `muted` 属性，autoplay 将不会生效。
+
 - `controls`
   - : 加上这个属性，浏览器会在视频底部提供一个控制面板，允许用户控制视频的播放，包括音量，跨帧，暂停/恢复播放。
-- `controlslist` {{experimental_inline}}
-  - : 当浏览器显示视频底部的播放控制面板（例如，指定了 `controls` 属性）时，[`controlslist`](https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist) 属性会帮助浏览器选择在控制面板上显示哪些控件。允许接受的值有 `nodownload`, `nofullscreen` 和 `noremoteplayback`。如果要禁用画中画模式（和控件），请使用 [disablePictureInPicture](#attr-disablepictureinpicture) 属性。
+- `controlslist` {{experimental_inline}}{{non-standard_inline}}
+
+  - : 当浏览器显示视频底部的播放控制面板（例如，指定了 `controls` 属性）时，[`controlslist`](https://wicg.github.io/controls-list/explainer.html) 属性会帮助浏览器选择在控制面板上显示哪些控件。
+
+    允许的值有 `nodownload`、`nofullscreen` 和 `noremoteplayback`。
+
+    如果要禁用画中画模式（和控件），请使用 [disablePictureInPicture](#disablepictureinpicture) 属性。
+
 - `crossorigin`
   - : 该枚举属性指明是否使用 CORS（跨域资源共享）来获取相关视频。[允许 CORS 的资源](/zh-CN/docs/Web/HTML/CORS_enabled_image) 可在 {{HTMLElement("canvas")}} 元素中被重用，而不会被*污染*。允许的值如下：
     - anonymous
@@ -46,6 +54,7 @@ slug: Web/HTML/Element/video
 - `poster`
   - : 海报帧图片 URL，用于在视频处于下载中的状态时显示。如果未指定该属性，则在视频第一帧可用之前不会显示任何内容，然后将视频的第一帧会作为海报（poster）帧来显示。
 - `preload`
+
   - : 该枚举属性旨在提示浏览器，作者认为在播放视频之前，加载哪些内容会达到最佳的用户体验。可能是下列值之一：
 
     - `none`: 表示不应该预加载视频。
@@ -54,6 +63,7 @@ slug: Web/HTML/Element/video
     - _空字符串_: 和值为 `auto` 一致。每个浏览器的默认值都不相同，即使规范建议设置为 `metadata`。
 
     > **备注：** `autoplay` 属性的优先级比 `preload` 高。如果制定了 `autopaly`属性，浏览器显然需要开始下载视频以便回放。规范没有强制浏览器去遵循该属性的值，这仅仅只是个提示。
+
 - `src`
   - : 要嵌到页面的视频的 URL。可选；你也可以使用 video 块内的 {{HTMLElement("source")}} 元素来指定需要嵌到页面的视频。
 - `width`
@@ -61,29 +71,29 @@ slug: Web/HTML/Element/video
 
 ## 事件
 
-| 事件名                                                                                                                   | 触发时机                                                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}}{{Deprecated_Inline}} | The input buffer of a {{DOMxRef("ScriptProcessorNode")}} is ready to be processed.                                                                     |
-| {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}                                             | 浏览器可以播放媒体文件了，但估计没有足够的数据来支撑播放到结束，不必停下来进一步缓冲内容。                                                                       |
-| {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}                             | 浏览器估计它可以在不停止内容缓冲的情况下播放媒体直到结束。                                                                                                       |
-| {{domxref("OfflineAudioContext.complete_event", "complete")}}                                         | {{DOMxRef("OfflineAudioContext")}} 渲染完成。                                                                                                          |
-| {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}                             | `duration` 属性的值改变时触发。                                                                                                                                  |
-| {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}                                             | 媒体内容变为空；例如，当这个 media 已经加载完成（或者部分加载完成），则发送此事件，并调用 [`load()`](/zh-CN/docs/Web/API/HTMLMediaElement/load) 方法重新加载它。 |
-| {{domxref("HTMLMediaElement.ended_event", 'ended')}}                                                     | 视频停止播放，因为 media 已经到达结束点。                                                                                                                        |
-| {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}                                     | media 中的首帧已经完成加载。                                                                                                                                     |
-| {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}                             | 已加载元数据。                                                                                                                                                   |
-| {{domxref("HTMLMediaElement.pause_event", 'pause')}}                                                     | 播放已暂停。                                                                                                                                                     |
-| {{domxref("HTMLMediaElement.play_event", 'play')}}                                                     | 播放已开始。                                                                                                                                                     |
-| {{domxref("HTMLMediaElement.playing_event", 'playing ')}}                                             | 由于缺乏数据而暂停或延迟后，播放准备开始。                                                                                                                       |
-| {{domxref("HTMLMediaElement.progress_event", 'progress')}}                                             | 在浏览器加载资源时周期性触发。                                                                                                                                   |
-| {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}                                     | 播放速率发生变化。                                                                                                                                               |
-| {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}                                                 | _跳帧_（seek）操作完成。                                                                                                                                         |
-| {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}                                             | _跳帧_（seek）操作开始。                                                                                                                                         |
-| {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}                                             | 用户代理（user agent）正在尝试获取媒体数据，但数据意外未出现。                                                                                                   |
-| {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}                                             | 媒体数据加载已暂停。                                                                                                                                             |
-| {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}                                     | `currentTime` 属性指定的时间发生变化。                                                                                                                           |
-| {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}                                 | 音量发生变化。                                                                                                                                                   |
-| {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}                                             | 由于暂时缺少数据，播放已停止。                                                                                                                                   |
+| 事件名                                                                                    | 触发时机                                                                                                                                                         |
+| ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}}{{Deprecated_Inline}} | The input buffer of a {{DOMxRef("ScriptProcessorNode")}} is ready to be processed.                                                                               |
+| {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}                                  | 浏览器可以播放媒体文件了，但估计没有足够的数据来支撑播放到结束，不必停下来进一步缓冲内容。                                                                       |
+| {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}                    | 浏览器估计它可以在不停止内容缓冲的情况下播放媒体直到结束。                                                                                                       |
+| {{domxref("OfflineAudioContext.complete_event", "complete")}}                             | {{DOMxRef("OfflineAudioContext")}} 渲染完成。                                                                                                                    |
+| {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}                    | `duration` 属性的值改变时触发。                                                                                                                                  |
+| {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}                                  | 媒体内容变为空；例如，当这个 media 已经加载完成（或者部分加载完成），则发送此事件，并调用 [`load()`](/zh-CN/docs/Web/API/HTMLMediaElement/load) 方法重新加载它。 |
+| {{domxref("HTMLMediaElement.ended_event", 'ended')}}                                      | 视频停止播放，因为 media 已经到达结束点。                                                                                                                        |
+| {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}                            | media 中的首帧已经完成加载。                                                                                                                                     |
+| {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}                    | 已加载元数据。                                                                                                                                                   |
+| {{domxref("HTMLMediaElement.pause_event", 'pause')}}                                      | 播放已暂停。                                                                                                                                                     |
+| {{domxref("HTMLMediaElement.play_event", 'play')}}                                        | 播放已开始。                                                                                                                                                     |
+| {{domxref("HTMLMediaElement.playing_event", 'playing ')}}                                 | 由于缺乏数据而暂停或延迟后，播放准备开始。                                                                                                                       |
+| {{domxref("HTMLMediaElement.progress_event", 'progress')}}                                | 在浏览器加载资源时周期性触发。                                                                                                                                   |
+| {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}                            | 播放速率发生变化。                                                                                                                                               |
+| {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}                                    | _跳帧_（seek）操作完成。                                                                                                                                         |
+| {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}                                  | _跳帧_（seek）操作开始。                                                                                                                                         |
+| {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}                                  | 用户代理（user agent）正在尝试获取媒体数据，但数据意外未出现。                                                                                                   |
+| {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}                                  | 媒体数据加载已暂停。                                                                                                                                             |
+| {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}                            | `currentTime` 属性指定的时间发生变化。                                                                                                                           |
+| {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}                        | 音量发生变化。                                                                                                                                                   |
+| {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}                                  | 由于暂时缺少数据，播放已停止。                                                                                                                                   |
 
 ## 使用说明
 
@@ -91,10 +101,12 @@ slug: Web/HTML/Element/video
 
 ```html
 <video controls>
-  <source src="myVideo.mp4" type="video/mp4">
-  <source src="myVideo.webm" type="video/webm">
-  <p>Your browser doesn't support HTML5 video. Here is
-     a <a href="myVideo.mp4">link to the video</a> instead.</p>
+  <source src="myVideo.mp4" type="video/mp4" />
+  <source src="myVideo.webm" type="video/webm" />
+  <p>
+    Your browser doesn't support HTML5 video. Here is a
+    <a href="myVideo.mp4">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -112,14 +124,15 @@ slug: Web/HTML/Element/video
 ```html
 <!-- Simple video example -->
 <video src="videofile.ogg" autoplay poster="posterimage.jpg">
-  抱歉，您的浏览器不支持内嵌视频，不过不用担心，你可以 <a href="videofile.ogg">下载</a>
+  抱歉，您的浏览器不支持内嵌视频，不过不用担心，你可以
+  <a href="videofile.ogg">下载</a>
   并用你喜欢的播放器观看！
 </video>
 
 <!-- Video with subtitles -->
 <video src="foo.ogg">
-  <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English">
-  <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska">
+  <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English" />
+  <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska" />
 </video>
 ```
 

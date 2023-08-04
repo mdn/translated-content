@@ -28,7 +28,7 @@ element.scrollIntoView(scrollIntoViewOptions); // argumento Objeto
 
   - : Um booleano ou um objeto com as seguintes opções:
 
-    ```idl
+    ```webidl
     {
       behavior: "auto"  | "instant" | "smooth",
       block:    "start" | "center" | "end" | "nearest",

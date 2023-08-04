@@ -1,7 +1,6 @@
 ---
 title: Регулярные выражения
 slug: Web/JavaScript/Guide/Regular_expressions
-translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
@@ -20,7 +19,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
   Литералы регулярных выражений вызывают предварительную компиляцию регулярного выражения при анализе скрипта. Если ваше регулярное выражение постоянно, то пользуйтесь им, чтобы увеличить производительность.
 
-- Вызывая функцию конструктор объекта [`RegExp`](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp), например:
+- Вызывая функцию конструктор объекта [`RegExp`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp), например:
 
   ```js
   var re = new RegExp("ab+c");
@@ -762,12 +761,12 @@ function escapeRegExp(string){
 
 | Метод                                                                       | Описание                                                                                                                                             |
 | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`exec`](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/exec)       | Метод `RegExp,` который выполняет поиск совпадения в строке. Он возвращает массив данных.                                                            |
-| [`test`](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/test)       | Метод `RegExp`, который тестирует совпадение в строке. Возвращает либо истину либо ложь.                                                             |
-| [`match`](/en-US/docs/JavaScript/Reference/Global_Objects/String/match)     | Метод `String`, который выполняет поиск совпадения в строке. Он возвращает массив данных либо null если совпадения отсутствуют.                      |
-| [`search`](/en-US/docs/JavaScript/Reference/Global_Objects/String/search)   | Метод `String,` который тестирует на совпадение в строке. Он возвращает индекс совпадения, или -1 если совпадений не будет найдено.                  |
-| [`replace`](/en-US/docs/JavaScript/Reference/Global_Objects/String/replace) | Метод `String`, который выполняет поиск совпадения в строке, и заменяет совпавшую подстроку другой подстрокой, переданной как аргумент в этот метод. |
-| [`split`](/en-US/docs/JavaScript/Reference/Global_Objects/String/split)     | Метод `String,` который использует регулярное выражение или фиксированную строку чтобы разбить строку на массив подстрок.                            |
+| [`exec`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp/exec)       | Метод `RegExp,` который выполняет поиск совпадения в строке. Он возвращает массив данных.                                                            |
+| [`test`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp/test)       | Метод `RegExp`, который тестирует совпадение в строке. Возвращает либо истину либо ложь.                                                             |
+| [`match`](/ru/docs/JavaScript/Reference/Global_Objects/String/match)     | Метод `String`, который выполняет поиск совпадения в строке. Он возвращает массив данных либо null если совпадения отсутствуют.                      |
+| [`search`](/ru/docs/JavaScript/Reference/Global_Objects/String/search)   | Метод `String,` который тестирует на совпадение в строке. Он возвращает индекс совпадения, или -1 если совпадений не будет найдено.                  |
+| [`replace`](/ru/docs/JavaScript/Reference/Global_Objects/String/replace) | Метод `String`, который выполняет поиск совпадения в строке, и заменяет совпавшую подстроку другой подстрокой, переданной как аргумент в этот метод. |
+| [`split`](/ru/docs/JavaScript/Reference/Global_Objects/String/split)     | Метод `String,` который использует регулярное выражение или фиксированную строку чтобы разбить строку на массив подстрок.                            |
 
 Чтобы просто узнать есть ли в строке что либо соответствующее шаблону, воспользуйтесь методами `test` или `search`; а чтобы получить больше информации пользуйтесь методами `exec` или `match` (хотя эти методы работают медленнее). Если вы пользуетесь `exec` или `match` и если совпадения есть, эти методы вернут массив и обновлённые свойства объекта ассоциированного регулярного выражения а также предопределённого объекта `RegExp` регулярного выражения. Если совпадений нет, метод `exec` вернёт `null` (который сконвертируется в `false`).
 

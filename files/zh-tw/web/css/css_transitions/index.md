@@ -1,6 +1,6 @@
 ---
 title: CSS Transitions
-slug: Web/CSS/CSS_Transitions
+slug: Web/CSS/CSS_transitions
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -28,4 +28,4 @@ slug: Web/CSS/CSS_Transitions
 
 ## 參見
 
-- Related to CSS Transitions, [CSS Animations](/zh-TW/docs/Web/CSS/CSS_Animations) can trigger animations independently of value changes.
+- Related to CSS Transitions, [CSS Animations](/zh-TW/docs/Web/CSS/CSS_animations) can trigger animations independently of value changes.

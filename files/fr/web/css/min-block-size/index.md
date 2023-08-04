@@ -1,12 +1,6 @@
 ---
 title: min-block-size
 slug: Web/CSS/min-block-size
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/min-block-size
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

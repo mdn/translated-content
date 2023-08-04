@@ -3,6 +3,8 @@ title: 建構子
 slug: Glossary/Constructor
 ---
 
+{{GlossarySidebar}}
+
 建構子（**constructor**）屬於實做（instantiated）的指定 class {{glossary("object")}}。建構子概念可應用到大多數的{{glossary("OOP","物件導向")}}程式語言。基本上，{{glossary("JavaScript")}} 建構子用於在 {{glossary("class")}} 的實做（instance）聲明。
 
 ## 語法

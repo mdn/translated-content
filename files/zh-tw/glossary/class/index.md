@@ -3,6 +3,8 @@ title: Class（類）
 slug: Glossary/Class
 ---
 
+{{GlossarySidebar}}
+
 在物件導向編程（{{glossary("OOP","object-oriented programming")}}）中，一個類（Class）定義了一個 {{glossary("object","object")}} 的性質。類是一個定義了對象的屬性 ({{glossary("property","properties")}}) 和方法 ({{glossary("method","methods")}}) 的模板，繪製其他更多具體實例對象的「藍圖」。
 
 ## 了解更多

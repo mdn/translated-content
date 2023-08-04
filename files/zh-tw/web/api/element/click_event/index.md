@@ -36,7 +36,7 @@ slug: Web/API/Element/click_event
 
 ## 使用說明
 
-傳遞給`click`事件處理函式的{{domxref("MouseEvent")}}物件將其{{domxref("UIEvent/detail", "detail")}}屬性設置為點擊目標的次數。換句話說，`detail`在雙擊時為2，在三次點擊時為3，依此類推。該計數器在沒有任何點擊的情況下會在很短的時間間隔後重置；間隔時間的長短可能因瀏覽器和平台而異。間隔時間也很可能受到用戶偏好的影響；例如，無障礙選項可能會延長此間隔，以便更輕鬆地使用自適應介面執行多次點擊。
+傳遞給`click`事件處理函式的 {{domxref("MouseEvent")}} 物件將其 {{domxref("UIEvent/detail", "detail")}} 屬性設置為點擊目標的次數。換句話說，`detail` 在雙擊時為 2，在三次點擊時為 3，依此類推。該計數器在沒有任何點擊的情況下會在很短的時間間隔後重置；間隔時間的長短可能因瀏覽器和平台而異。間隔時間也很可能受到用戶偏好的影響；例如，無障礙選項可能會延長此間隔，以便更輕鬆地使用自適應介面執行多次點擊。
 
 ### Internet Explorer
 
@@ -86,9 +86,9 @@ Safari Mobile considers the following elements to be typically interactive (and 
 ### JavaScript
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', event => {
+button.addEventListener("click", (event) => {
   button.textContent = `Click count: ${event.detail}`;
 });
 ```

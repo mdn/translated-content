@@ -1,7 +1,6 @@
 ---
 title: Web Audio API
 slug: Web/API/Web_Audio_API
-translation_of: Web/API/Web_Audio_API
 ---
 
 La Web Audio API propose un système puissant et flexible pour contrôler les données audio sur internet. Elle permet notamment de sélectionner des sources audio (microphone, flux media), d'y ajouter des effets, de créer des visualisations, d'appliquer des effets de spatialisation (comme la balance), etc.
@@ -41,7 +40,7 @@ Conteneurs et définitions qui donnent sa forme au graphe audio
 - {{domxref("AudioContext")}}
   - : Un objet **`AudioContext`** désigne un graphe de traitement audio construit à partir de modules reliés entre eux, chacun représenté par un noeud audio ({{domxref("AudioNode")}}). Le contexte audio contrôle la création des noeuds qu'il contient, ainsi que l'exécution du traitement audio, et du décodage. Il est nécessaire de créer un `AudioContext` avant de faire quoi que ce soit d'autre, puisque tout se passe dans un contexte.
 - {{domxref("AudioNode")}}
-  - : Un objet **`AudioNode`** est un module de traitement audio, tel qu'une *source audio* (c'est-à-dire un élément HTML {{HTMLElement("audio")}} ou {{HTMLElement("video")}}), une *destination audio*, un module de traitement intermédiaire (par exemple un filtre {{domxref("BiquadFilterNode")}}), ou un contrôle du volume {{domxref("GainNode")}}).
+  - : Un objet **`AudioNode`** est un module de traitement audio, tel qu'une _source audio_ (c'est-à-dire un élément HTML {{HTMLElement("audio")}} ou {{HTMLElement("video")}}), une _destination audio_, un module de traitement intermédiaire (par exemple un filtre {{domxref("BiquadFilterNode")}}), ou un contrôle du volume {{domxref("GainNode")}}).
 - {{domxref("AudioParam")}}
   - : Un objet **`AudioParam`** est un paramètre audio, qui est lié à un {{domxref("AudioNode")}}. On peut lui assigner une valeur ou un changement de valeur, que l'on peut programmer à un moment spécifique et/ou selon un motif particulier.
 - [`ended`](/fr/docs/Web/API/AudioScheduledSourceNode/ended_event) (event)
@@ -71,7 +70,7 @@ Conteneurs et définitions qui donnent sa forme au graphe audio
 - {{domxref("DynamicsCompressorNode")}}
   - : Un objet **`DynamicsCompressorNode`** permet un effet de compression, qui réduit le volume des parties les plus fortes du signal de façon à éviter les effets de clipping et la distortion qui peuvent se produire lorsque des sons multiples sont diffusés simultanément.
 - {{domxref("GainNode")}}
-  - : Un objet **`GainNode`** représente une modification du volume sonore. C'est un module de traitement audio qui provoque l'application d'un *gain* aux données récupérées en entrée avant leur propagation vers la sortie.
+  - : Un objet **`GainNode`** représente une modification du volume sonore. C'est un module de traitement audio qui provoque l'application d'un _gain_ aux données récupérées en entrée avant leur propagation vers la sortie.
 - {{domxref("WaveShaperNode")}}
   - : Un objet **`WaveShaperNode`** représente une distortion non linéaire. C'est un {{domxref("AudioNode")}} qui utilise une courbe pour appliquer au signal une distortion de mise en forme des ondes. En dehors de l'effet de distortion évident, il est souvent utilisé pour donner un caractère plus chaleureux au son.
 - {{domxref("PeriodicWave")}}
@@ -94,7 +93,7 @@ Une fois que le signal audio a été traité, ces interfaces définissent sa des
 ### Division et fusion des pistes audio
 
 - {{domxref("ChannelSplitterNode")}}
-  - : Un noeud **`ChannelSplitterNode`** prend en entrée une source audio et sépare ses différentes pistes en une série de sorties *mono*.
+  - : Un noeud **`ChannelSplitterNode`** prend en entrée une source audio et sépare ses différentes pistes en une série de sorties _mono_.
 - {{domxref("ChannelMergerNode")}}
   - : Un noeud **`ChannelMergerNode`** réunit différentes entrées mono en une seule sortie. Chaque entrée devient une des pistes de la sortie unique.
 
@@ -121,7 +120,7 @@ Une fois que le signal audio a été traité, ces interfaces définissent sa des
 Il est possible de traiter et exporter un graphe audio très rapidement en tâche de fond — en l'exportant dans un {{domxref("AudioBuffer")}} plutôt que sur les enceintes du matériel — grâce aux objets suivants.
 
 - {{domxref("OfflineAudioContext")}}
-  - : Un objet **`OfflineAudioContext`** est une interface [`AudioContext`](/fr/docs/Web/API/AudioContext) qui représente un graphe de traitement audio construit à partir de nœuds audio. À la différence d'une interface `AudioContext` standard, une interface `OfflineAudioContext` n'exporte pas vraiment le son, mais le génère *aussi vite que possible* dans un buffer.
+  - : Un objet **`OfflineAudioContext`** est une interface [`AudioContext`](/fr/docs/Web/API/AudioContext) qui représente un graphe de traitement audio construit à partir de nœuds audio. À la différence d'une interface `AudioContext` standard, une interface `OfflineAudioContext` n'exporte pas vraiment le son, mais le génère _aussi vite que possible_ dans un buffer.
 - [`complete`](/fr/docs/Web/API/OfflineAudioContext/complete_event) (event)
   - : Un évènement `complete` est émis lorsque le rendu d'un {{domxref("OfflineAudioContext")}} est terminé.
 - {{domxref("OfflineAudioCompletionEvent")}}

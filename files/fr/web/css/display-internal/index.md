@@ -1,11 +1,6 @@
 ---
 title: <display-internal>
 slug: Web/CSS/display-internal
-tags:
-  - CSS
-  - Reference
-  - Type de donnée
-translation_of: Web/CSS/display-internal
 ---
 
 {{CSSRef}}

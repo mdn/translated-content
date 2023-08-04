@@ -1,7 +1,6 @@
 ---
 title: height
 slug: Web/CSS/height
-translation_of: Web/CSS/height
 ---
 
 {{CSSRef}}
@@ -60,7 +59,7 @@ height: unset;
 
 {{csssyntax}}
 
-## Пример:
+## Пример
 
 ### HTML
 

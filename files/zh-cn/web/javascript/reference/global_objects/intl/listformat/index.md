@@ -49,15 +49,25 @@ new Intl.ListFormat([locales[, options]])
 下面的例子展示了用英语语言怎么去创建一个列表格式化器。
 
 ```js
-const list = ['Motorcycle', 'Bus', 'Car'];
+const list = ["Motorcycle", "Bus", "Car"];
 
- console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "long", type: "conjunction" }).format(
+    list,
+  ),
+);
 // > Motorcycle, Bus and Car
 
- console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'disjunction' }).format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "short", type: "disjunction" }).format(
+    list,
+  ),
+);
 // > Motorcycle, Bus or Car
 
- console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'unit' }).format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "narrow", type: "unit" }).format(list),
+);
 // > Motorcycle Bus Car
 ```
 
@@ -66,8 +76,13 @@ const list = ['Motorcycle', 'Bus', 'Car'];
 下面的例子展示了如何创建一个返回被格式化部分的列表格式化器。
 
 ```js
-const list = ['Motorcycle', 'Bus', 'Car'];
-console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).formatToParts(list));
+const list = ["Motorcycle", "Bus", "Car"];
+console.log(
+  new Intl.ListFormat("en-GB", {
+    style: "long",
+    type: "conjunction",
+  }).formatToParts(list),
+);
 
 // > [ { "type": "element", "value": "Motorcycle" }, { "type": "literal", "value": ", " }, { "type": "element", "value": "Bus" }, { "type": "literal", "value": ", and " }, { "type": "element", "value": "Car" } ];
 ```

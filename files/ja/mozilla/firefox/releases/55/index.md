@@ -18,7 +18,7 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 ### HTML
 
-- {{htmlattrxref("contenteditable")}} を `true` に設定した要素で、テキストの別の行を分けるために {{htmlelement("div")}} 要素を使用するようになりました。これは、他の現行ブラウザーに Firefox を合わせるためです ([Firefox バグ 1297414](https://bugzil.la/1297414))。詳しくは[マークアップ生成の違い](/ja/docs/Web/Guide/HTML/Editable_content#マークアップ生成の違い) をご覧ください。
+- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) を `true` に設定した要素で、テキストの別の行を分けるために {{htmlelement("div")}} 要素を使用するようになりました。これは、他の現行ブラウザーに Firefox を合わせるためです ([Firefox バグ 1297414](https://bugzil.la/1297414))。詳しくは[マークアップ生成の違い](/ja/docs/Web/Guide/HTML/Editable_content#マークアップ生成の違い) をご覧ください。
 - Nightly で、`dom.forms.datetime` をデフォルトで有効にしました ([Firefox バグ 1366188](https://bugzil.la/1366188))。
 
 ### CSS
@@ -39,7 +39,7 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 ### JavaScript
 
-- {{jsxref("SharedArrayBuffer")}} および {{jsxref("Atomics")}} オブジェクトをデフォルトで有効化しました。JavaScript の Shared Memory と Atomics の入門として、[A Taste of JavaScript’s New Parallel Primitives](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/) をご覧ください。
+- {{jsxref("SharedArrayBuffer")}} および {{jsxref("Atomics")}} オブジェクトをデフォルトで有効化しました。JavaScript の Shared Memory と Atomics の入門として、[A Taste of JavaScript's New Parallel Primitives](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/) をご覧ください。
 - [object destructuring](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) で rest operator (`...`) をサポートしました。また、spread operator (`...`) が [オブジェクトリテラル](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax#オブジェクトリテラルでのスプレッド構文) で動作するようになりました (Stage 3 ECMAScript proposal: [Object Rest/Spread Properties](https://github.com/tc39/proposal-object-rest-spread)。 [Firefox バグ 1339395](https://bugzil.la/1339395))。
 - [非同期ジェネレーターメソッド](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions#非同期ジェネレーターメソッド) をサポートしました ([Firefox バグ 1353693](https://bugzil.la/1353693))。
 - {{jsxref("String.prototype.toLocaleLowerCase()")}} および {{jsxref("String.prototype.toLocaleUpperCase()")}} メソッドで、ロケール固有の大文字・小文字の対応を言語タグで指定するための、省略可能な引数 `locale` をサポートしました ([Firefox バグ 1318403](https://bugzil.la/1318403))。
@@ -137,9 +137,9 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 ### HTML
 
-- `xml:base` 属性を、{{htmlattrxref("style")}} 属性内に現れるパスのベース URL として使用できなくなりました。 例えば `<div xml:base="https://example.com/" style="background:url(picture.jpg)"></div>` のような使い方です ([Firefox バグ 1350521](https://bugzil.la/1350521))。style 属性向け xml:base が無効化されました。
-- 他のブラウザーがサポートしていないため、Firefox 55 から content ドキュメントでは {{htmlelement("style")}} 要素の {{htmlattrxref("scoped","style")}} 属性を設定 (`layout.css.scoped-style.enabled`) で無効化しました。
-- {{htmlelement("meta")}} 要素の {{htmlattrxref("http-equiv","meta")}} 属性で、不明瞭な値である `MSThemeCompatible` のサポートを Gecko から削除しました。他にサポートする現行ブラウザーがなく、また互換性の問題が発生していました ([Firefox バグ 966240](https://bugzil.la/966240))。
+- `xml:base` 属性を、[`style`](/ja/docs/Web/HTML/Global_attributes#style) 属性内に現れるパスのベース URL として使用できなくなりました。 例えば `<div xml:base="https://example.com/" style="background:url(picture.jpg)"></div>` のような使い方です ([Firefox バグ 1350521](https://bugzil.la/1350521))。style 属性向け xml:base が無効化されました。
+- 他のブラウザーがサポートしていないため、Firefox 55 から content ドキュメントでは {{htmlelement("style")}} 要素の [`scoped`](/ja/docs/Web/HTML/Element/style#scoped) 属性を設定 (`layout.css.scoped-style.enabled`) で無効化しました。
+- {{htmlelement("meta")}} 要素の [`http-equiv`](/ja/docs/Web/HTML/Element/meta#http-equiv) 属性で、不明瞭な値である `MSThemeCompatible` のサポートを Gecko から削除しました。他にサポートする現行ブラウザーがなく、また互換性の問題が発生していました ([Firefox バグ 966240](https://bugzil.la/966240))。
 
 ### CSS
 

@@ -55,21 +55,21 @@ slug: Learn/JavaScript/First_steps/A_first_splash
 5. 然后检查它是否正确。
 6. 如果正确：
 
-    1. 显示祝贺消息。
-    2. 阻止玩家继续猜测（这会使游戏混乱）。
-    3. 显示控件允许玩家重新开始游戏。
+   1. 显示祝贺消息。
+   2. 阻止玩家继续猜测（这会使游戏混乱）。
+   3. 显示控件允许玩家重新开始游戏。
 
 7. 如果出错，并且玩家有剩余轮次：
 
-    1. 告诉玩家他们错了。
-    2. 允许他们输入另一个猜测。
-    3. 轮数加 1。
+   1. 告诉玩家他们错了。
+   2. 允许他们输入另一个猜测。
+   3. 轮数加 1。
 
 8. 如果出错，并且玩家没有剩余轮次：
 
-    1. 告诉玩家游戏结束。
-    2. 阻止玩家继续猜测（这会使游戏混乱）。
-    3. 显示控件允许玩家重新开始游戏。
+   1. 告诉玩家游戏结束。
+   2. 阻止玩家继续猜测（这会使游戏混乱）。
+   3. 显示控件允许玩家重新开始游戏。
 
 9. 一旦游戏重启，确保游戏的逻辑和 UI 完全重置，然后返回步骤 1。
 
@@ -94,12 +94,12 @@ slug: Learn/JavaScript/First_steps/A_first_splash
 ```js
 let randomNumber = Math.floor(Math.random() * 100) + 1;
 
-const guesses = document.querySelector('.guesses');
-const lastResult = document.querySelector('.lastResult');
-const lowOrHi = document.querySelector('.lowOrHi');
+const guesses = document.querySelector(".guesses");
+const lastResult = document.querySelector(".lastResult");
+const lowOrHi = document.querySelector(".lowOrHi");
 
-const guessSubmit = document.querySelector('.guessSubmit');
-const guessField = document.querySelector('.guessField');
+const guessSubmit = document.querySelector(".guessSubmit");
+const guessField = document.querySelector(".guessField");
 
 let guessCount = 1;
 let resetButton;
@@ -144,7 +144,7 @@ let resetButton;
 
 ```js
 function checkGuess() {
-  alert('I am a placeholder');
+  alert("I am a placeholder");
 }
 ```
 
@@ -181,9 +181,9 @@ JavaScript 运算符允许我们执行比较、做数学运算、连接字符串
 你也可以使用 `+` 运算符将文本字符串连接在一起（术语“串联”（_concatenation_））。尝试依次输入以下几行：
 
 ```js
-const name = 'Bingo';
+const name = "Bingo";
 name;
-const hello = ' says hello!';
+const hello = " says hello!";
 hello;
 const greeting = name + hello;
 greeting;
@@ -192,15 +192,15 @@ greeting;
 还有一些快捷操作符可用，称为复合[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#赋值运算符)。例如，如果你只希望在现有字符串末尾添加一个新串，可以这样做：
 
 ```js
-let name1 = 'Bingo';
-name1 += ' says hello!';
+let name1 = "Bingo";
+name1 += " says hello!";
 ```
 
 这等价于：
 
 ```js
-let name2 = 'Bingo';
-name2 = name2 + ' says hello!';
+let name2 = "Bingo";
+name2 = name2 + " says hello!";
 ```
 
 在执行真/假比较时（例如在条件语句中，见[下表](#条件语句（conditional）)），我们使用[比较运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)，例如：
@@ -271,31 +271,31 @@ name2 = name2 + ' says hello!';
 function checkGuess() {
   const userGuess = Number(guessField.value);
   if (guessCount === 1) {
-    guesses.textContent = 'Previous guesses: ';
+    guesses.textContent = "Previous guesses: ";
   }
   guesses.textContent += `${userGuess} `;
 
   if (userGuess === randomNumber) {
-    lastResult.textContent = 'Congratulations! You got it right!';
-    lastResult.style.backgroundColor = 'green';
-    lowOrHi.textContent = '';
+    lastResult.textContent = "Congratulations! You got it right!";
+    lastResult.style.backgroundColor = "green";
+    lowOrHi.textContent = "";
     setGameOver();
   } else if (guessCount === 10) {
-    lastResult.textContent = '!!!GAME OVER!!!';
-    lowOrHi.textContent = '';
+    lastResult.textContent = "!!!GAME OVER!!!";
+    lowOrHi.textContent = "";
     setGameOver();
   } else {
-    lastResult.textContent = 'Wrong!';
-    lastResult.style.backgroundColor = 'red';
+    lastResult.textContent = "Wrong!";
+    lastResult.style.backgroundColor = "red";
     if (userGuess < randomNumber) {
-      lowOrHi.textContent = 'Last guess was too low!';
+      lowOrHi.textContent = "Last guess was too low!";
     } else if (userGuess > randomNumber) {
-      lowOrHi.textContent = 'Last guess was too high!';
+      lowOrHi.textContent = "Last guess was too high!";
     }
   }
 
   guessCount++;
-  guessField.value = '';
+  guessField.value = "";
   guessField.focus();
 }
 ```
@@ -306,7 +306,7 @@ function checkGuess() {
 - 接下来，我们遇到我们的第一个条件代码块。条件代码块让你能够根据某个条件的真假来选择性地运行代码。虽然看起来有点像一个函数，但它不是。条件块的最简单形式是从关键字 `if` 开始，然后是一些括号，然后是一些花括号。括号内包含一个比较。如果比较结果为 `true`，就会执行花括号内的代码。反之，花括号中的代码就会被跳过，从而执行下面的代码。本文的示例中，比较测试的是 `guessCount` 变量是否等于 `1`，即玩家是不是第一次猜数字：
 
   ```js
-  guessCount === 1
+  guessCount === 1;
   ```
 
   如果是，我们让 `guesses` 段落的文本内容等于 `Previous guesses:`。如果不是就不用了。
@@ -327,7 +327,7 @@ function checkGuess() {
 在 `checkGuess()` 函数后添加以下代码：
 
 ```js
-guessSubmit.addEventListener('click', checkGuess);
+guessSubmit.addEventListener("click", checkGuess);
 ```
 
 这里为 `guessSubmit` 按钮添加了一个事件监听器。`addEventListener()` 方法包含两个可输入值（称为“_参数_”（argument）），监听事件的类型（本例中为 `click`），和当事件发生时我们想要执行的代码（本例中为 `checkGuess()` 函数）。注意，`addEventListener()` 中作为参数的函数名不加括号。
@@ -342,10 +342,10 @@ guessSubmit.addEventListener('click', checkGuess);
 function setGameOver() {
   guessField.disabled = true;
   guessSubmit.disabled = true;
-  resetButton = document.createElement('button');
-  resetButton.textContent = 'Start new game';
+  resetButton = document.createElement("button");
+  resetButton.textContent = "Start new game";
   document.body.append(resetButton);
-  resetButton.addEventListener('click', resetGame);
+  resetButton.addEventListener("click", resetGame);
 }
 ```
 
@@ -359,19 +359,19 @@ function setGameOver() {
 function resetGame() {
   guessCount = 1;
 
-  const resetParas = document.querySelectorAll('.resultParas p');
+  const resetParas = document.querySelectorAll(".resultParas p");
   for (const resetPara of resetParas) {
-    resetPara.textContent = '';
+    resetPara.textContent = "";
   }
 
   resetButton.parentNode.removeChild(resetButton);
 
   guessField.disabled = false;
   guessSubmit.disabled = false;
-  guessField.value = '';
+  guessField.value = "";
   guessField.focus();
 
-  lastResult.style.backgroundColor = 'white';
+  lastResult.style.backgroundColor = "white";
 
   randomNumber = Math.floor(Math.random() * 100) + 1;
 }
@@ -397,7 +397,7 @@ function resetGame() {
 首先，请再次转到 [浏览器开发工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools) 然后输入以下内容：
 
 ```js
-const fruits = ['apples', 'bananas', 'cherries'];
+const fruits = ["apples", "bananas", "cherries"];
 for (const fruit of fruits) {
   console.log(fruit);
 }
@@ -416,9 +416,9 @@ for (const fruit of fruits) {
 现在让我们来看一下猜数字游戏中的循环——`resetGame()` 函数中可以找到以下内容：
 
 ```js
-const resetParas = document.querySelectorAll('.resultParas p');
+const resetParas = document.querySelectorAll(".resultParas p");
 for (const resetPara of resetParas) {
-  resetPara.textContent = '';
+  resetPara.textContent = "";
 }
 ```
 
@@ -441,7 +441,7 @@ guessField.focus();
 在本示例的特定情况下，我们首先创建一个 `guessField` 常量来存储对 HTML 中的文本输入表单域的引用，在文档顶部的声明区域中可以找到以下行：
 
 ```js
-const guessField = document.querySelector('.guessField');
+const guessField = document.querySelector(".guessField");
 ```
 
 使用 {{domxref("document")}} 对象的 {{domxref("document.querySelector", "querySelector()")}} 方法可以获得这个引用。`querySelector()` 需要一个信息——用一个 [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors) 可以选中需要引用的元素。
@@ -473,7 +473,7 @@ guessField.focus();
 6. 现在试试输入下面这一行：
 
    ```js
-   guesses.value
+   guesses.value;
    ```
 
    浏览器会返回 `undefined`，因为段落中并不存在 `value` 属性。
@@ -481,21 +481,21 @@ guessField.focus();
 7. 为了改变段落中的文本内容，你需要用 {{domxref("Node.textContent", "textContent")}} 属性来代替 `value`。试试这个：
 
    ```js
-   guesses.textContent = 'Where is my paragraph?';
+   guesses.textContent = "Where is my paragraph?";
    ```
 
 8. 下面是一些有趣的东西。尝试依次输入下面几行：
 
    ```js
-   guesses.style.backgroundColor = 'yellow';
-   guesses.style.fontSize = '200%';
-   guesses.style.padding = '10px';
-   guesses.style.boxShadow = '3px 3px 6px black';
+   guesses.style.backgroundColor = "yellow";
+   guesses.style.fontSize = "200%";
+   guesses.style.padding = "10px";
+   guesses.style.boxShadow = "3px 3px 6px black";
    ```
 
    页面上的每个元素都有一个 `style` 属性，它本身包含一个对象，其属性包含应用于该元素的所有内联 CSS 样式。让我们可以使用 JavaScript 在元素上动态设置新的 CSS 样式。
 
-## 大功告成...
+## 大功告成
 
 这个示例已经构建完毕，做得好！来尝试运行一下最终的代码，或者[看看我们的最终版本](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。如果你的版本无法正常工作，请对照[源代码](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)进行检查。
 

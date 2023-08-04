@@ -129,15 +129,15 @@ indeterminate 상태에 있는 체크박스는 대부분의 브라우저에서 �
 따라서 이 예제에서 `indeterminate` 상태는 재료를 선택하는 과정이 시작되었지만 조합이 완료되지는 않았다는 것을 표현하기 위해 사용됩니다.
 
 ```js
-const overall = document.querySelector('#enchantment');
-const ingredients = document.querySelectorAll('ul input');
+const overall = document.querySelector("#enchantment");
+const ingredients = document.querySelectorAll("ul input");
 
-overall.addEventListener('click', (e) => {
+overall.addEventListener("click", (e) => {
   e.preventDefault();
 });
 
 for (const ingredient of ingredients) {
-  ingredient.addEventListener('click', updateDisplay);
+  ingredient.addEventListener("click", updateDisplay);
 }
 
 function updateDisplay() {
@@ -242,16 +242,16 @@ legend {
 ### JavaScript
 
 ```js
-const otherCheckbox = document.querySelector('#other');
-const otherText = document.querySelector('#otherValue');
-otherText.style.visibility = 'hidden';
+const otherCheckbox = document.querySelector("#other");
+const otherText = document.querySelector("#otherValue");
+otherText.style.visibility = "hidden";
 
-otherCheckbox.addEventListener('change', () => {
+otherCheckbox.addEventListener("change", () => {
   if (otherCheckbox.checked) {
-    otherText.style.visibility = 'visible';
-    otherText.value = '';
+    otherText.style.visibility = "visible";
+    otherText.value = "";
   } else {
-    otherText.style.visibility = 'hidden';
+    otherText.style.visibility = "hidden";
   }
 });
 ```

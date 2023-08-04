@@ -43,18 +43,18 @@ slug: Web/HTML/Element/embed
 这个元素的属性包括 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
 - `height`
-  - : 资源显示的高度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
+  - : 资源显示的高度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 - `src`
   - : 被嵌套的资源的 URL。
 - `type`
   - : 用于选择插件实例化的 MIME 类型。
 - `width`
-  - : 资源显示的宽度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
+  - : 资源显示的宽度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 
 ## 例子
 
 ```html
-<embed type="video/quicktime" src="movie.mov" width="640" height="480">
+<embed type="video/quicktime" src="movie.mov" width="640" height="480" />
 ```
 
 ## 规范
@@ -63,7 +63,7 @@ slug: Web/HTML/Element/embed
 
 ## 浏览器兼容性
 
-> **备注：** 不同浏览器之间显示有差异。Blink 内核浏览器（Chrome，Opera）会显示 HTML 资源的内容，但 Firefox 会显示一条通知消息，指出内容需要一个插件（见 {{Bug("730768")}}）。建议使用 \<object> 或 \<iframe> 元素。
+> **备注：** 不同浏览器之间显示有差异。Blink 内核浏览器（Chrome，Opera）会显示 HTML 资源的内容，但 Firefox 会显示一条通知消息，指出内容需要一个插件（见 [Firefox bug 730768](https://bugzil.la/730768)）。建议使用 \<object> 或 \<iframe> 元素。
 
 {{Compat}}
 

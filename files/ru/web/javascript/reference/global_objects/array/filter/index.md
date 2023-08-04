@@ -1,15 +1,6 @@
 ---
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 ---
 
 {{JSRef}}
@@ -69,7 +60,7 @@ filter(function callbackFn(element, index, array) { ... }, thisArg)
 2. индекс элемента;
 3. массив, по которому осуществляется проход.
 
-Если в метод `filter()` был передан параметр `thisArg`, при вызове `callback` он будет использоваться в качестве значения `this`. В противном случае в качестве значения `this` будет использоваться значение `undefined`. В конечном итоге, значение `this`, наблюдаемое из функции `callback`, определяется согласно [обычным правилам определения `this`](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+Если в метод `filter()` был передан параметр `thisArg`, при вызове `callback` он будет использоваться в качестве значения `this`. В противном случае в качестве значения `this` будет использоваться значение `undefined`. В конечном итоге, значение `this`, наблюдаемое из функции `callback`, определяется согласно [обычным правилам определения `this`](/ru/docs/Web/JavaScript/Reference/Operators/this).
 
 Метод `filter()` не изменяет массив, для которого он был вызван.
 

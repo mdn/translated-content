@@ -21,7 +21,7 @@ audio.controls = true;
 ## 例子
 
 ```js
-var obj = document.createElement('video');
+var obj = document.createElement("video");
 obj.controls = true;
 ```
 

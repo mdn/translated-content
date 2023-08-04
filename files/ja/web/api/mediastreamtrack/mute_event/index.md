@@ -1,5 +1,5 @@
 ---
-title: 'MediaStreamTrack: mute イベント'
+title: "MediaStreamTrack: mute イベント"
 slug: Web/API/MediaStreamTrack/mute_event
 ---
 

@@ -23,7 +23,7 @@ toReversed()
 
 当用于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)时，`toReversed()` 方法迭代空槽，就像它们的值是 `undefined` 一样。
 
-`toReversed()` 方法是[通用的](zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
+`toReversed()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
 ## 示例
 

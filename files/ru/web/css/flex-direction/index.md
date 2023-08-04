@@ -1,7 +1,6 @@
 ---
 title: flex-direction
 slug: Web/CSS/flex-direction
-translation_of: Web/CSS/flex-direction
 ---
 {{ CSSRef("CSS Flexible Boxes") }}
 
@@ -69,6 +68,6 @@ element {
 
 {{Compat}}
 
-## Смотрите также:
+## Смотрите также
 
 - [Using CSS flexible boxes](/ru/docs/CSS/Using_CSS_flexible_boxes)

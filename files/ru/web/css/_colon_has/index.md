@@ -1,13 +1,6 @@
 ---
-title: ':has()'
+title: ":has()"
 slug: Web/CSS/:has
-tags:
-  - CSS
-  - Псевдоклассы
-  - Селекторы
-  - Справка
-  - Экспериментальная
-translation_of: Web/CSS/:has
 ---
 
 {{CSSRef}}

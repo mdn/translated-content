@@ -13,7 +13,9 @@ slug: Web/API/HTMLCanvasElement/toBlob
 
 ## 语法
 
-```js
+```js-nolint
+toBlob(callback)
+toBlob(callback, type)
 toBlob(callback, type, quality)
 ```
 
@@ -44,11 +46,11 @@ toBlob(callback, type, quality)
 ```js
 var canvas = document.getElementById("canvas");
 
-canvas.toBlob(function(blob) {
+canvas.toBlob(function (blob) {
   var newImg = document.createElement("img"),
-      url = URL.createObjectURL(blob);
+    url = URL.createObjectURL(blob);
 
-  newImg.onload = function() {
+  newImg.onload = function () {
     // no longer need to read the blob so it's revoked
     URL.revokeObjectURL(url);
   };
@@ -81,17 +83,20 @@ ctx.fillStyle = "yellow";
 ctx.fill();
 
 function blobCallback(iconName) {
-  return function(b) {
+  return function (b) {
     var a = document.createElement("a");
     a.textContent = "Download";
     document.body.appendChild(a);
     a.style.display = "block";
     a.download = iconName + ".ico";
     a.href = window.URL.createObjectURL(b);
-  }
+  };
 }
-canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
-              '-moz-parse-options:format=bmp;bpp=32');
+canvas.toBlob(
+  blobCallback("passThisString"),
+  "image/vnd.microsoft.icon",
+  "-moz-parse-options:format=bmp;bpp=32",
+);
 ```
 
 ### 使用 OS.File 保存图像到本地（chrome/add-on context only）
@@ -99,42 +104,48 @@ canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
 > **备注：** 此方法可将 toBlob 生成的图片保存到本地，但仅在 Firefox、Chrome 上下文或带有相关插件的情况下可用，因为 Web 并不存在 OS API。
 
 ```js
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById("canvas");
 const d = canvas.width;
-ctx = canvas.getContext('2d');
+ctx = canvas.getContext("2d");
 ctx.beginPath();
 ctx.moveTo(d / 2, 0);
 ctx.lineTo(d, d);
 ctx.lineTo(0, d);
 ctx.closePath();
-ctx.fillStyle = 'yellow';
+ctx.fillStyle = "yellow";
 ctx.fill();
 
 function blobCallback(iconName) {
-  return function(b) {
+  return function (b) {
     const r = new FileReader();
     r.onloadend = function () {
-    // r.result contains the ArrayBuffer.
-    Cu.import('resource://gre/modules/osfile.jsm');
-    const writePath = OS.Path.join(OS.Constants.Path.desktopDir,
-                                 iconName + '.ico');
-    const promise = OS.File.writeAtomic(writePath, new Uint8Array(r.result),
-                                      {tmpPath:writePath + '.tmp'});
-    promise.then(
-      function() {
-        console.log('successfully wrote file');
-      },
-      function() {
-        console.log('failure writing file')
-      }
-    );
+      // r.result contains the ArrayBuffer.
+      Cu.import("resource://gre/modules/osfile.jsm");
+      const writePath = OS.Path.join(
+        OS.Constants.Path.desktopDir,
+        iconName + ".ico",
+      );
+      const promise = OS.File.writeAtomic(writePath, new Uint8Array(r.result), {
+        tmpPath: writePath + ".tmp",
+      });
+      promise.then(
+        function () {
+          console.log("successfully wrote file");
+        },
+        function () {
+          console.log("failure writing file");
+        },
+      );
+    };
+    r.readAsArrayBuffer(b);
   };
-  r.readAsArrayBuffer(b);
-  }
 }
 
-canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
-              '-moz-parse-options:format=bmp;bpp=32');
+canvas.toBlob(
+  blobCallback("passThisString"),
+  "image/vnd.microsoft.icon",
+  "-moz-parse-options:format=bmp;bpp=32",
+);
 ```
 
 ## 规范

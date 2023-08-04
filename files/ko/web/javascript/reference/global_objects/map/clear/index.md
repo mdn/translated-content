@@ -1,6 +1,8 @@
 ---
 title: Map.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
+l10n:
+  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
 {{JSRef}}

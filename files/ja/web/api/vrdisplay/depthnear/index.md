@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.depthNear
 slug: Web/API/VRDisplay/depthNear
-original_slug: Web/API/VRDevice/depthNear
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

@@ -1,12 +1,6 @@
 ---
 title: XMLHttpRequest.timeout
 slug: Web/API/XMLHttpRequest/timeout
-tags:
-  - AJAX
-  - XMLHttpRequest
-  - Свойство
-  - Ссылка
-translation_of: Web/API/XMLHttpRequest/timeout
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -21,7 +15,7 @@ translation_of: Web/API/XMLHttpRequest/timeout
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 xhr.timeout = 2000; // time in milliseconds
 

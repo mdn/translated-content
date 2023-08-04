@@ -1,6 +1,8 @@
 ---
 title: Firefox 86 for developers
 slug: Mozilla/Firefox/Releases/86
+l10n:
+  sourceCommit: c6dbc4ff96451887b908b46c8e70bcfec1c2c48c
 ---
 
 {{FirefoxSidebar}}
@@ -13,8 +15,8 @@ slug: Mozilla/Firefox/Releases/86
 
 ### 開発者ツール
 
-- Firefox 74 で非推奨になった [ウェブコンソールのヘルパー関数](/ja/docs/Tools/Web_Console/Helpers) `cd()` を削除しました。[iframe での作業](/ja/docs/Tools/Working_with_iframes) で説明している `<iframe>` コンテキストピッカーが同じ機能を提供しており、よりよいものです! 詳しくは [Firefox バグ 1607741](https://bugzil.la/1607741) をご覧ください。
-- {{cssxref("margin")}} および {{cssxref("padding")}} のさまざまなショートハンドプロパティやロングハンドプロパティを、テーブル内部の要素で非活性としてマークするようになりました。これらのプロパティは効果がないためです ([Firefox バグ 1551569](https://bugzil.la/1551569))。
+- Firefox 74 で非推奨になった [ウェブコンソールのヘルパー関数](https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html) `cd()` を削除しました。[iframe での作業](https://firefox-source-docs.mozilla.org/devtools-user/working_with_iframes/index.html) で説明している `<iframe>` コンテキストピッカーが同じ機能を提供しており、よりよいものです! 詳しくは [Firefox バグ 1607741](https://bugzil.la/1607741) をご覧ください。
+- {{cssxref("margin")}} および {{cssxref("padding")}} のさまざまな一括指定プロパティや個別指定プロパティを、テーブル内部の要素で非活性としてマークするようになりました。これらのプロパティは効果がないためです ([Firefox バグ 1551569](https://bugzil.la/1551569))。
 - 以前はグリッドアイテムで、{{cssxref("order")}} プロパティが誤って非活性としてマークされていました。この不具合を [Firefox バグ 1579017](https://bugzil.la/1579017) で修正しました。
 
 ### HTML
@@ -36,10 +38,10 @@ _変更なし。_
 
   ```js
   // 英語の通貨コードの表示名を取得する
-  let currencyNames = new Intl.DisplayNames(['en'], {type: 'currency'});
+  let currencyNames = new Intl.DisplayNames(["en"], { type: "currency" });
   // 通貨名を取得する
-  currencyNames.of('USD'); // "US Dollar"
-  currencyNames.of('EUR'); // "Euro"
+  currencyNames.of("USD"); // "US Dollar"
+  currencyNames.of("EUR"); // "Euro"
   ```
 
   詳しくは [Firefox バグ 1654116](https://bugzil.la/1654116) をご覧ください。
@@ -53,7 +55,7 @@ _変更なし。_
 
 ### WebDriver conformance (Marionette)
 
-- 実際の `click` イベントの前に `mousemove` イベントを合成するように、`WebDriver:ElementClick` を更新しました ([Firefox バグ 1684002](https://bugzil.la/1684002))。
+- `WebDriver:ElementClick` を更新し、実際の `click` イベントの前に `mousemove` イベントを合成するようにしました ([Firefox バグ 1684002](https://bugzil.la/1684002))。
 
 #### 既知の不具合
 
@@ -68,6 +70,8 @@ _変更なし。_
 
 - [Host パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) が、[tabs API](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs) で特権が必要な部分へのアクセスを認められるようになりました ([Firefox バグ 1679688](https://bugzil.la/1679688))。
 - [`windows.create()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows/create) を呼び出す際のオプションに、`focused: false` を指定しても無視するようになりました ([Firefox バグ 1253129](https://bugzil.la/1253129))。
+- {{WebExtAPIRef("identity.getRedirectURL")}} がループバックアドレスに対応するようになりました。詳しくは [URL のリダイレクト](/ja/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url)を参照してください（[Firefox バグ 1614919](https://bugzil.la/1614919)）。
+- ページお ID が {{WebExtAPIRef("history.onTitleChanged")}} の一部として返されるようになりました（[Firefox バグ 1678611](https://bugzil.la/1678611)）。
 
 ## 過去のバージョン
 

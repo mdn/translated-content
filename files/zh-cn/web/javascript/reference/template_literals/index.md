@@ -57,7 +57,7 @@ tagFunction`string text ${expression} string text`
 使用普通字符串，可以通过下面的方式得到多行字符串：
 
 ```js
-console.log('string text line 1\n' + 'string text line 2');
+console.log("string text line 1\n" + "string text line 2");
 // "string text line 1
 // string text line 2"
 ```
@@ -283,7 +283,7 @@ console.log(identity`Hi\n${2 + 3}!`);
 ```js
 const html = (strings, ...values) => String.raw({ raw: strings }, ...values);
 // 一些格式化程序会将此字面量的内容格式化为 HTML
-const doc = html`<!DOCTYPE html>
+const doc = html`<!doctype html>
   <html lang="en-US">
     <head>
       <title>Hello</title>
@@ -294,7 +294,7 @@ const doc = html`<!DOCTYPE html>
   </html>`;
 ```
 
-### 带标签的模版字面量及转义序列
+### 带标签的模板字面量及转义序列
 
 在普通模板字面量中，字符串字面量中的转义序列都是允许的，任何其他格式不正确的转义序列都是语法错误，包括：
 
@@ -311,10 +311,10 @@ const doc = html`<!DOCTYPE html>
 
 ```js
 function latex(str) {
- return { "cooked": str[0], "raw": str.raw[0] }
+  return { cooked: str[0], raw: str.raw[0] };
 }
 
-latex`\unicode`
+latex`\unicode`;
 
 // { cooked: undefined, raw: "\\unicode" }
 ```

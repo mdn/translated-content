@@ -1,13 +1,6 @@
 ---
 title: Utiliser DASH avec les vidéos en HTML
 slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-tags:
-  - Avancé
-  - DASH
-  - Guide
-  - HTML
-translation_of: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-original_slug: Web/HTML/Utiliser_DASH_avec_les_vidéos_en_HTML
 ---
 
 {{HTMLSidebar}}
@@ -101,8 +94,8 @@ Il faut modifier la page web pour que celle-ci pointe d'abord vers le manifeste,
 
 ```html
 <video>
-  <source src="movie.mpd">
-  <source src="movie.webm">
+  <source src="movie.mpd" />
+  <source src="movie.webm" />
   Votre navigateur ne prend pas en charge les vidéos HTML.
 </video>
 ```

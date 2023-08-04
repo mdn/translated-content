@@ -140,7 +140,7 @@ WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
 
 このヘッダーを受け取ったユーザーエージェントは、まずユーザーにユーザー名とパスワードの入力を求め、それからリソースを再リクエストします。このとき、{{HTTPHeader("Authorization")}} ヘッダーに (エンコードされた) 認証情報を含めます。{{HTTPHeader("Authorization")}} ヘッダーは次のようになります。
 
-```https
+```http
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 

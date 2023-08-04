@@ -1,5 +1,5 @@
 ---
-title: 'HTMLElement: Evento change'
+title: "HTMLElement: Evento change"
 slug: Web/API/HTMLElement/change_event
 ---
 
@@ -25,7 +25,7 @@ El evento `change` se dispara para elementos {{HTMLElement("input")}}, {{HTMLEle
       <th scope="row">Propiedad del manejador del evento</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/API/GlobalEventHandlers/onchange"
+          ><a href="/es/docs/Web/API/GlobalEventHandlers/onchange"
             >onchange</a
           ></code
         >
@@ -49,13 +49,14 @@ La especificaciones HTML listan [los tipos de `<input>` que deberían disparar e
 #### HTML
 
 ```html
-<label>Elija un sabor de nieve:
-    <select class="nieve" name="nieve">
-        <option value="">Seleccione Uno …</option>
-        <option value="chocolate">Chocolate</option>
-        <option value="sardina">Sardina</option>
-        <option value="vainilla">Vainilla</option>
-    </select>
+<label
+  >Elija un sabor de nieve:
+  <select class="nieve" name="nieve">
+    <option value="">Seleccione Uno …</option>
+    <option value="chocolate">Chocolate</option>
+    <option value="sardina">Sardina</option>
+    <option value="vainilla">Vainilla</option>
+  </select>
 </label>
 
 <div class="resultado"></div>
@@ -79,11 +80,11 @@ select {
 #### JS
 
 ```js
-const selectElement = document.querySelector('.nieve');
+const selectElement = document.querySelector(".nieve");
 
-selectElement.addEventListener('change', (event) => {
-    const resultado = document.querySelector('.resultado');
-    resultado.textContent = `Te gusta el sabor ${event.target.value}`;
+selectElement.addEventListener("change", (event) => {
+  const resultado = document.querySelector(".resultado");
+  resultado.textContent = `Te gusta el sabor ${event.target.value}`;
 });
 ```
 
@@ -98,17 +99,17 @@ Para algunos elementos, incluyendo `<input type="text">`, el evento `change` no 
 #### HTML
 
 ```html
-<input placeholder="Enter some text" name="name"/>
+<input placeholder="Enter some text" name="name" />
 <p id="log"></p>
 ```
 
 #### JavaScript
 
 ```js
-const input = document.querySelector('input');
-const log = document.getElementById('log');
+const input = document.querySelector("input");
+const log = document.getElementById("log");
 
-input.addEventListener('change', updateValue);
+input.addEventListener("change", updateValue);
 
 function updateValue(e) {
   log.textContent = e.target.value;

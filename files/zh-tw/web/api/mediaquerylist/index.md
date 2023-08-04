@@ -17,10 +17,10 @@ MediaQueryList 物件讓我們不用一直定期去偵測，而是直接去觀�
 
 ## Properties
 
-| Property  | Type        | Description                                                                                                    |
-| --------- | ----------- | -------------------------------------------------------------------------------------------------------------- |
+| Property  | Type        | Description                                                                                             |
+| --------- | ----------- | ------------------------------------------------------------------------------------------------------- |
 | `matches` | `boolean`   | `true` 當 {{ domxref("document") }} 目前狀態符合 media query list 所維護的條件; 否則 false。 唯獨**。** |
-| `media`   | `DOMString` | 序列化 (serialized) 的 media query list.                                                                       |
+| `media`   | `DOMString` | 序列化 (serialized) 的 media query list.                                                                |
 
 ## Methods
 

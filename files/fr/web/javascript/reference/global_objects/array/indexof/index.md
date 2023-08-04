@@ -1,15 +1,6 @@
 ---
 title: Array.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/indexOf
 ---
 
 {{JSRef}}
@@ -23,8 +14,8 @@ La méthode **`indexOf()`** renvoie le premier indice pour lequel on trouve un �
 ## Syntaxe
 
 ```js
-arr.indexOf(élémentRecherché)
-arr.indexOf(élémentRecherché, indiceDébut)
+arr.indexOf(élémentRecherché);
+arr.indexOf(élémentRecherché, indiceDébut);
 ```
 
 ### Paramètres
@@ -50,9 +41,9 @@ Dans l'exemple qui suit, on peut utiliser `indexOf` afin de trouver l'emplacemen
 
 ```js
 var tableau = [2, 9, 9];
-tableau.indexOf(2);     // 0
-tableau.indexOf(7);     // -1
-tableau.indexOf(9, 2);  // 2
+tableau.indexOf(2); // 0
+tableau.indexOf(7); // -1
+tableau.indexOf(9, 2); // 2
 tableau.indexOf(2, -1); // -1
 tableau.indexOf(2, -3); // 0
 ```
@@ -63,8 +54,8 @@ Dans l'exemple qui suit, on utilise `indexOf()` afin de trouver tous les indices
 
 ```js
 var indices = [];
-var tableau = ['a', 'b', 'a', 'c', 'a', 'd'];
-var élément = 'a';
+var tableau = ["a", "b", "a", "c", "a", "d"];
+var élément = "a";
 var idx = tableau.indexOf(élément);
 while (idx != -1) {
   indices.push(idx);
@@ -78,19 +69,19 @@ console.log(indices);
 
 ```js
 function mettreAJourLegumes(tabLégumes, légume) {
-    if (tabLégumes.indexOf(légume) === -1) {
-        tabLégumes.push(légume);
-        console.log('Le nouveau tableau est : ' + tabLégumes);
-    } else if (tabLégumes.indexOf(légume) > -1) {
-        console.log(légume + ' existe déjà dans le tableau.');
-    }
+  if (tabLégumes.indexOf(légume) === -1) {
+    tabLégumes.push(légume);
+    console.log("Le nouveau tableau est : " + tabLégumes);
+  } else if (tabLégumes.indexOf(légume) > -1) {
+    console.log(légume + " existe déjà dans le tableau.");
+  }
 }
 
-var tabLégumes = ['pomme de terre', 'tomate', 'poivron'];
+var tabLégumes = ["pomme de terre", "tomate", "poivron"];
 
-mettreAJourLegumes(tabLégumes, 'épinard');
+mettreAJourLegumes(tabLégumes, "épinard");
 // Le nouveau tableau est : pomme de terre,tomate,poivron,épinard
-mettreAJourLegumes(tabLégumes, 'épinard');
+mettreAJourLegumes(tabLégumes, "épinard");
 // épinard existe déjà dans le tableau.
 ```
 
@@ -102,8 +93,7 @@ mettreAJourLegumes(tabLégumes, 'épinard');
 // Production steps of ECMA-262, Edition 5, 15.4.4.14
 // Référence : http://es5.github.io/#x15.4.4.14
 if (!Array.prototype.indexOf) {
-  Array.prototype.indexOf = function(searchElement, fromIndex) {
-
+  Array.prototype.indexOf = function (searchElement, fromIndex) {
     var k;
 
     // 1. Soit O le résultat de l'appel à ToObject avec

@@ -42,9 +42,11 @@ Math.expm1(Infinity); // Infinity
 因为我们已经有了 `Math.exp` 函数，所以很容易 polyfill。
 
 ```js
-Math.expm1 = Math.expm1 || function (x) {
-    return Math.exp(x) - 1
-}
+Math.expm1 =
+  Math.expm1 ||
+  function (x) {
+    return Math.exp(x) - 1;
+  };
 ```
 
 ## 规范

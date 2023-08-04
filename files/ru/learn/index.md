@@ -1,20 +1,8 @@
 ---
 title: Изучение веб-разработки
 slug: Learn
-tags:
-  - CSS
-  - HTML
-  - Index
-  - Landing
-  - Learn
-  - NeedsContent
-  - TopicStub
-  - Web
-  - Новичок
-  - Обучающий раздел
-  - Обучение
-translation_of: Learn
 ---
+
 {{LearnSidebar}}
 
 Добро пожаловать в обучающий раздел MDN. Эта серия статей направлена на то, чтобы предоставить начинающим с нуля в веб-программировании всё необходимое для того, чтобы начать разрабатывать сайты.
@@ -73,9 +61,9 @@ translation_of: Learn
 2. Откройте [командную строку](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) или терминал ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
 3. Чтобы скопировать репозиторий обучающего раздела в папку с именем learning-area в текущем местоположении, на которое указывает ваша командная строка / терминал, используйте следующую команду:
 
-    ```
-    git clone https://github.com/mdn/learning-area
-    ```
+   ```
+   git clone https://github.com/mdn/learning-area
+   ```
 
 4. Теперь вы можете войти в директорию и найти нужные вам файлы (с помощью Finder/проводника либо [команды cd](<https://ru.wikipedia.org/wiki/Cd_(%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0)>)).
 
@@ -83,15 +71,15 @@ translation_of: Learn
 
 1. В командной строке / терминале войдите в директорию `learning-area` командой `cd`. Например, если вы в родительском каталоге:
 
-    ```
-    cd learning-area
-    ```
+   ```
+   cd learning-area
+   ```
 
 2. Обновите репозиторий, выполнив следующую команду:
 
-    ```
-    git pull
-    ```
+   ```
+   git pull
+   ```
 
 ## Связаться с нами
 

@@ -1,16 +1,10 @@
 ---
 title: Используемые по умолчанию значения заголовка Accept
 slug: Web/HTTP/Content_negotiation/List_of_default_Accept_values
-tags:
-  - HTTP
-  - Reference
-  - Заголовок Accept
-  - Согласование контента
-translation_of: Web/HTTP/Content_negotiation/List_of_default_Accept_values
 ---
 {{HTTPSidebar}}
 
-В этой статье описывается, какие значения используются в HTTP-заголовке [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) по умолчанию в зависимости от конкретного запроса и версии браузера.
+В этой статье описывается, какие значения используются в HTTP-заголовке [`Accept`](/ru/docs/Web/HTTP/Headers/Accept) по умолчанию в зависимости от конкретного запроса и версии браузера.
 
 ## Значения по умолчанию
 

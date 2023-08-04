@@ -1,7 +1,6 @@
 ---
 title: HTML のセクションとアウトラインの使用
 slug: orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
-original_slug: Web/Guide/HTML/Using_HTML_sections_and_outlines
 ---
 
 {{HTMLSidebar}}

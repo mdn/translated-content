@@ -15,7 +15,7 @@ slug: Web/API/ReadableStream/tee
 
 ## 语法
 
-```js
+```js-nolint
 tee()
 ```
 
@@ -61,8 +61,9 @@ function fetchStream(stream, list) {
     // value for fetch streams is a Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
-    listItem.textContent = 'Read ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    let listItem = document.createElement("li");
+    listItem.textContent =
+      "Read " + charsReceived + " characters so far. Current chunk = " + chunk;
     list.appendChild(listItem);
 
     // Read some more, and call this function again
@@ -78,3 +79,8 @@ function fetchStream(stream, list) {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造函数
+- [拷贝流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams#拷贝流)

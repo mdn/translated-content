@@ -1,46 +1,45 @@
 ---
-title: HTMLSelectElement.options
+title: "HTMLSelectElement: options プロパティ"
+short-title: options
 slug: Web/API/HTMLSelectElement/options
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("DOM")}}
 
-**`HTMLSelectElement.options`** は読み取り専用のプロパティで、{{domxref("HTMLOptionsCollection")}} で {{HTMLElement("select")}} 要素に含まれる {{HTMLElement("option")}} 要素を返します。
+**`HTMLSelectElement.options`** は読み取り専用のプロパティで、この {{HTMLElement("select")}} 要素に含まれる {{HTMLElement("option")}} のリストを {{domxref("HTMLOptionsCollection")}} の形で返します。
 
-## 構文
+### 値
 
-```js
-var options = select.options;
-```
+{{domxref("HTMLOptionsCollection")}} 型で、この `<select>` 要素に含まれている `<options>` を返します。
 
-## 返値
-
-{{domxref("HTMLOptionsCollection")}} で、`<select>` 要素に含まれる `<option>` 要素を返します。
-
-<h2 id="Example">例</h2>
+## 例
 
 ### HTML
 
 ```html
 <label for="test">ラベル</label>
 <select id="test">
-  <option value="1">Option 1</option>
-  <option value="2">Option 2</option>
+  <option value="1">選択肢 1</option>
+  <option value="2">選択肢 2</option>
 </select>
 ```
 
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("test");
-  for(var i = 0; i < select.options.length; i++) {
-    console.log(select.options[i].label); // "Option 1" および "Option 2"
+  for (const option of select.options) {
+    console.log(option.label); // "Option 1" と "Option 2"
   }
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+### 結果
+
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## 仕様書
 

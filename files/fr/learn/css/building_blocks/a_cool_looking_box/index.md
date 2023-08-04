@@ -1,18 +1,6 @@
 ---
 title: Une boîte d'aspect rafraîchissant
 slug: Learn/CSS/Building_blocks/A_cool_looking_box
-tags:
-  - Apprentissage
-  - Arrière‑plans
-  - Boîte
-  - CSS
-  - Débutant
-  - Evaluation
-  - effets
-  - encadrement
-  - modèle de boîte
-translation_of: Learn/CSS/Building_blocks/A_cool_looking_box
-original_slug: Apprendre/CSS/styliser_boites/A_cool_looking_box
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}

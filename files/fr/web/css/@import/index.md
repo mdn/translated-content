@@ -1,11 +1,6 @@
 ---
-title: '@import'
+title: "@import"
 slug: Web/CSS/@import
-tags:
-  - CSS
-  - Reference
-  - Règle @
-translation_of: Web/CSS/@import
 ---
 
 {{CSSRef}}
@@ -15,10 +10,10 @@ La [règle @](/fr/docs/Web/CSS/Règles_@) **`@import`** est utilisée afin d'imp
 ```css
 @import url("fineprint.css") print;
 @import url("bluish.css") speech;
-@import 'custom.css';
+@import "custom.css";
 @import url("chrome://communicator/skin/");
 @import "common.css" screen;
-@import url('landscape.css') screen and (orientation:landscape);
+@import url("landscape.css") screen and (orientation: landscape);
 ```
 
 Afin que les agents utilisateurs évitent de récupérer des ressources pour des types de média qui ne sont pas pris en charge, les auteurs peuvent définir des règles `@import` spécifiques à chaque média. Ces imports conditionnels comportent une liste de [requête média](/fr/docs/Web/CSS/Media_queries) séparées par des virgules, situées après l'URL. Si aucune requête média n'est indiquée, l'import est inconditionnel. Cela aura le même effet que d'utiliser la requête média `all`.

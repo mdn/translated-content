@@ -50,12 +50,12 @@ document.addEventListener('DOMContentLoaded',function(){
 
 ## 属性
 
-| 属性                                  | 类型                                 | 描述                                         |
-| ------------------------------------- | ------------------------------------ | -------------------------------------------- |
+| 属性                            | 类型                       | 描述                                         |
+| ------------------------------- | -------------------------- | -------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | 产生该事件的对象 (DOM 树中最顶级的那个对象). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | 事件类型。                                   |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | 该事件是否冒泡。                             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | 该事件是否可取消默认行为。                   |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | 事件类型。                                   |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | 该事件是否冒泡。                             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | 该事件是否可取消默认行为。                   |
 
 ## 示例
 

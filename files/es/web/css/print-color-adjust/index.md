@@ -1,7 +1,6 @@
 ---
-title: '-webkit-print-color-adjust'
+title: "-webkit-print-color-adjust"
 slug: Web/CSS/print-color-adjust
-original_slug: Web/CSS/-webkit-print-color-adjust
 ---
 
 {{CSSRef}}{{Non-standard_header}}

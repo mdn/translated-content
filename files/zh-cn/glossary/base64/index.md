@@ -3,6 +3,8 @@ title: Base64
 slug: Glossary/Base64
 ---
 
+{{GlossarySidebar}}
+
 **Base64** 是一组相似的[二进制到文本](https://en.wikipedia.org/wiki/Binary-to-text_encoding)（binary-to-text）的编码规则，使得二进制数据在解释成 radix-64 的表现形式后能够用 ASCII 字符串的格式表示出来。_Base64_ 这个词出自一种特定的 [MIME 内容传输编码](https://zh.wikipedia.org/wiki/多用途互聯網郵件擴展#内容传输编码)。
 
 Base64 编码方案通常用于需要对二进制数据进行编码的情况，这些数据需要通过设计用于处理 ASCII 的媒体进行存储和传输。这样是为了保证数据的完整并且不用在传输过程中修改这些数据。Base64 也被一些应用（包括使用 [MIME](https://zh.wikipedia.org/wiki/多用途互聯網郵件擴展) 的电子邮件）和在 [XML](/zh-CN/docs/Web/XML) 中储存复杂数据时使用。
@@ -150,7 +152,7 @@ function base64EncArr(aBytes) {
         uint6ToB64((nUint24 >>> 18) & 63),
         uint6ToB64((nUint24 >>> 12) & 63),
         uint6ToB64((nUint24 >>> 6) & 63),
-        uint6ToB64(nUint24 & 63)
+        uint6ToB64(nUint24 & 63),
       );
       nUint24 = 0;
     }
@@ -200,7 +202,7 @@ function UTF8ArrToStr(aBytes) {
         : nPart > 191 && nPart < 224 && nIdx + 1 < nLen /* two bytes */
         ? ((nPart - 192) << 6) + aBytes[++nIdx] - 128
         : /* nPart < 127 ? */ /* one byte */
-          nPart
+          nPart,
     );
   }
   return sView;
@@ -312,12 +314,12 @@ alert(sMyOutput);
 ```js
 // "Base 64 \u2014 Mozilla Developer Network"
 const myArray = base64DecToArr(
-  "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw=="
+  "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==",
 );
 
 // "Base 64 \u2014 Mozilla Developer Network"
 const myBuffer = base64DecToArr(
-  "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw=="
+  "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==",
 ).buffer;
 
 alert(myBuffer.byteLength);

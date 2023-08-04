@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Instance() コンストラクター
 slug: WebAssembly/JavaScript_interface/Instance/Instance
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance
 ---
 
 {{WebAssemblySidebar}}
@@ -13,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Inst
 > **警告:** 巨大なモジュールのインスタンス化は高コストになる可能性があるので、開発者が同期的な `Instance()` コンストラクターを使用するのは、絶対に必要な場合のみにするべきです。それ以外の場合はすべて、{{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用してください。
 
 ```js
-new WebAssembly.Instance(module, importObject)
+new WebAssembly.Instance(module, importObject);
 ```
 
 ### 引数
@@ -32,19 +31,19 @@ new WebAssembly.Instance(module, importObject)
 ```js
 const importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes => {
-  let mod = new WebAssembly.Module(bytes);
-  let instance = new WebAssembly.Instance(mod, importObject);
-  instance.exports.exported_func();
-})
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => {
+    let mod = new WebAssembly.Module(bytes);
+    let instance = new WebAssembly.Instance(mod, importObject);
+    instance.exports.exported_func();
+  });
 ```
 
 ただし、`Instance` を取得する方法としては、次のように、非同期の {{jsxref("WebAssembly.instantiateStreaming()")}} 関数を使用することをお勧めします。
@@ -52,14 +51,15 @@ fetch('simple.wasm').then(response =>
 ```js
 const importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func());
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func(),
+);
 ```
 
 ## 仕様書

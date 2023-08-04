@@ -133,7 +133,7 @@ l10n:
     </tr>
     <tr>
       <td><code>\t</code></td>
-      <td>水平タブにに一致します。</td>
+      <td>水平タブに一致します。</td>
     </tr>
     <tr>
       <td><code>\r</code></td>

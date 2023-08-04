@@ -1,7 +1,6 @@
 ---
 title: Math.sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/sign
 ---
 
 {{JSRef}}
@@ -19,7 +18,7 @@ Math.sign(x)
 - `x`
   - : Un número.
 
-### Valor de retorno.
+### Valor de retorno
 
 Un número representando el signo del argumento dado. Si el argumento es un número positivo, negativo, cero positivo, o cero negativo, la función retornará `1`, `-1`, `0` or `-0` respectivamente. De lo contrario, retorna {{jsxref("NaN")}}.
 

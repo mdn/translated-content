@@ -5,7 +5,7 @@ slug: Web/HTTP/CSP
 
 {{HTTPSidebar}}
 
-**Política de Seguridad del Contenido** o ( {{Glossary("CSP")}} ) - del inglés ***Content Security Policy*** - es una capa de seguridad adicional que ayuda a prevenir y mitigar algunos tipos de ataque, incluyendo Cross Site Scripting ( {{Glossary("XSS")}} ) y ataques de inyección de datos. Estos ataques son usados con diversos propósitos, desde robar información hasta desfiguración de sitios o distribución de malware .
+**Política de Seguridad del Contenido** o ( {{Glossary("CSP")}} ) - del inglés **_Content Security Policy_** - es una capa de seguridad adicional que ayuda a prevenir y mitigar algunos tipos de ataque, incluyendo Cross Site Scripting ( {{Glossary("XSS")}} ) y ataques de inyección de datos. Estos ataques son usados con diversos propósitos, desde robar información hasta desfiguración de sitios o distribución de malware .
 
 CSP está diseñado para ser completamente retrocompatible (excepto la versión 2 de CSP, donde hay algunas menciones explícitas de inconsistencia en la retrocompatibilidad; más detalles [aquí](https://www.w3.org/TR/CSP2) sección 1.1). Los navegadores que no lo soportan siguen funcionando con los servidores que lo implementan y viceversa: los navegadores que no soportan CSP simplemente lo ignoran, funcionando como siempre y delegando a la política mismo-origen para contenido web. Si el sitio web no ofrece la cabecera CSP, los navegadores igualmente usan la política estándar [mismo-origen](/es/docs/Web/Security/Same-origin_policy).
 
@@ -158,11 +158,11 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-u
 El código HTML de `signup.html` es el siguiente:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Sign Up</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     ... Content ...

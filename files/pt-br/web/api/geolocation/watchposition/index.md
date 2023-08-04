@@ -11,8 +11,10 @@ Este método retorna um valor para o _watch ID_ que pode ser usado para desregis
 
 ## Síntaxe
 
-```
-id = navigator.geolocation.watchPosition(success, error, options)
+```js-nolint
+watchPosition(success)
+watchPosition(success, error)
+watchPosition(success, error, options)
 ```
 
 ### Parâmetros

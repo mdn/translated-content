@@ -1,7 +1,6 @@
 ---
 title: 坐标系
-slug: Web/CSS/CSSOM_View/Coordinate_systems
-original_slug: Web/CSS/CSSOM_View/坐标系
+slug: Web/CSS/CSSOM_view/Coordinate_systems
 ---
 
 {{CSSRef}}
@@ -50,7 +49,7 @@ The {{domxref("MouseEvent.screenX")}} and {{domxref("MouseEvent.screenY")}} prop
 
 ## Example
 
-Let's take a look at an example. This simple example creates a set of nested boxes. Whenever the mouse enters, moves around inside, or exits the inner box, the corresponding event is handled by updating a set of informational messages within the box, listing out the current mouse coordinates in each of the four available [coordinate systems](/zh-CN/docs/Web/CSS/CSSOM_View/Coordinate_systems).
+Let's take a look at an example. This simple example creates a set of nested boxes. Whenever the mouse enters, moves around inside, or exits the inner box, the corresponding event is handled by updating a set of informational messages within the box, listing out the current mouse coordinates in each of the four available [coordinate systems](/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems).
 
 ### JavaScript
 
@@ -168,7 +167,7 @@ Here you can see the results in action. As you mouse in and around the blue box,
 
 ## See also
 
-- [Using CSS transforms](/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms): how to alter a coordinate system
+- [Using CSS transforms](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms): how to alter a coordinate system
 - Coordinates of a mouse event:
 
   - {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}}

@@ -1,7 +1,6 @@
 ---
-title: 'null'
+title: "null"
 slug: Web/JavaScript/Reference/Operators/null
-original_slug: Web/JavaScript/Reference/Global_Objects/null
 ---
 
 {{jsSidebar("Objects")}}
@@ -31,10 +30,10 @@ The value `null` is written with a literal, `null` (it's not an identifier for a
 ### Difference between `null` and `undefined`
 
 ```js
-typeof null        // object (bug in ECMAScript, should be null)
-typeof undefined   // undefined
-null === undefined // false
-null  == undefined // true
+typeof null; // object (bug in ECMAScript, should be null)
+typeof undefined; // undefined
+null === undefined; // false
+null == undefined; // true
 ```
 
 ## 規範

@@ -25,7 +25,7 @@ _Mesmos métodos de {{domxref("EventTarget")}}._
 - {{ domxref("MediaDevices.enumerateDevices()") }}
   - : Obtém um array de informações sobre a entrada de midia e dispositivos de saída disponíveis no sistema.
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
-  - : Retorna um objeto consoante com {{domxref("MediaTrackSupportedConstraints")}} indicando quais propriedades restritivas são suportadas na interface {{domxref("MediaStreamTrack")}}. Veja {{SectionOnPage("/pt-BR/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}} para aprender mais sobre restrições e como usá-las.
+  - : Retorna um objeto consoante com {{domxref("MediaTrackSupportedConstraints")}} indicando quais propriedades restritivas são suportadas na interface {{domxref("MediaStreamTrack")}}. Veja [Capacidades e restrições](/pt-BR/docs/Web/API/Media_Streams_API#capabilities_and_constraints) para aprender mais sobre restrições e como usá-las.
 - {{ domxref("MediaDevices.getUserMedia()") }}
   - : Após a permissão do usuário (pedida através de um prompt), liga a câmera, microfone e/ou a tramissão de tela no sistema e fornece uma {{domxref("MediaStream")}} contendo uma faixa de vídeo e/ou áudio com a entrada.
 - {{ domxref("EventTarget.removeEventListener()") }}

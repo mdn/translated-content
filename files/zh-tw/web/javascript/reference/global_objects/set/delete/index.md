@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/delete
 
 ## 語法
 
-```plain
+```js
 mySet.delete(value);
 ```
 
@@ -30,12 +30,12 @@ mySet.delete(value);
 
 ```js
 var mySet = new Set();
-mySet.add('foo');
+mySet.add("foo");
 
-mySet.delete('bar'); // Returns false. No "bar" element found to be deleted.
-mySet.delete('foo'); // Returns true.  Successfully removed.
+mySet.delete("bar"); // Returns false. No "bar" element found to be deleted.
+mySet.delete("foo"); // Returns true.  Successfully removed.
 
-mySet.has('foo');    // Returns false. The "foo" element is no longer present.
+mySet.has("foo"); // Returns false. The "foo" element is no longer present.
 ```
 
 下方展示了如何從一個 Set 中移除物件。
@@ -43,16 +43,16 @@ mySet.has('foo');    // Returns false. The "foo" element is no longer present.
 ```js
 var setObj = new Set(); // Create a New Set.
 
-setObj.add({x: 10, y: 20}); // Add object in the set.
+setObj.add({ x: 10, y: 20 }); // Add object in the set.
 
-setObj.add({x: 20, y: 30}); // Add object in the set.
+setObj.add({ x: 20, y: 30 }); // Add object in the set.
 
 // Delete any point with `x > 10`.
-setObj.forEach(function(point){
-  if(point.x > 10){
-    setObj.delete(point)
+setObj.forEach(function (point) {
+  if (point.x > 10) {
+    setObj.delete(point);
   }
-})
+});
 ```
 
 ## 規範
@@ -63,7 +63,7 @@ setObj.forEach(function(point){
 
 {{Compat}}
 
-## 另見
+## 參見
 
 - {{jsxref("Set")}}
 - {{jsxref("Set.prototype.clear()")}}

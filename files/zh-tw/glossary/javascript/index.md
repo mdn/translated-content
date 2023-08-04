@@ -3,6 +3,8 @@ title: JavaScript
 slug: Glossary/JavaScript
 ---
 
+{{GlossarySidebar}}
+
 JavaScript（JS）是個程式語言。通常用於用戶端（client-side）的動態網頁腳本，不過也常藉由 [Node.js](http://nodejs.org/) 之類的軟體包，使用到{{Glossary("Server","伺服器")}}端（Server-side）。
 
 不要把 JavaScript 與 [Java](https://zh.wikipedia.org/wiki/Java) 這兩個程式語言混淆了。雖然「Java」與「JavaScript」都是甲骨文公司（Oracle）在美國和其他國家或地區註冊的商標，但這兩個程式語言在語法、語意、還有用處上，都有極大的不同。

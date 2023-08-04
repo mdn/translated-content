@@ -1,7 +1,6 @@
 ---
 title: CSS Colors
-slug: Web/CSS/CSS_Colors
-original_slug: Web/CSS/CSS_Color
+slug: Web/CSS/CSS_colors
 ---
 
 {{CSSRef}}
@@ -29,4 +28,4 @@ _None._
 
 ## See also
 
-- In CSS, gradients aren't colors but [images](/zh-TW/docs/Web/CSS/CSS_Images).
+- In CSS, gradients aren't colors but [images](/zh-TW/docs/Web/CSS/CSS_images).

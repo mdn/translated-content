@@ -31,19 +31,19 @@ myStorage = window.localStorage;
 下列的程式碼片段讀取了目前域名內的 local {{DOMxRef("Storage")}} 物件 ，並用{{DOMxRef("Storage.setItem()")}}，增加一個資料物件 item 到其中
 
 ```js
-localStorage.setItem('myCat', 'Tom');
+localStorage.setItem("myCat", "Tom");
 ```
 
 讀取 `localStorage` 內物件的語法如下：
 
 ```js
-var cat = localStorage.getItem('myCat');
+var cat = localStorage.getItem("myCat");
 ```
 
 移除 `localStorage` 內物件的語法如下：
 
 ```js
-localStorage.removeItem('myCat');
+localStorage.removeItem("myCat");
 ```
 
 刪除 `localStorage` 內所有物件的語法如下：

@@ -9,7 +9,7 @@ slug: Web/API/ReadableStream/getReader
 
 ## 语法
 
-```js
+```js-nolint
 getReader()
 getReader(mode)
 ```
@@ -56,8 +56,12 @@ function fetchStream() {
     // value for fetch streams is a Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
-    listItem.textContent = 'Received ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    let listItem = document.createElement("li");
+    listItem.textContent =
+      "Received " +
+      charsReceived +
+      " characters so far. Current chunk = " +
+      chunk;
     list2.appendChild(listItem);
 
     result += chunk;
@@ -75,3 +79,11 @@ function fetchStream() {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造函数
+- {{domxref("ReadableStreamDefaultReader")}}
+- {{domxref("ReadableStreamBYOBReader")}}
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)
+- [使用可读字节流](/zh-CN/docs/Web/API/Streams_API/Using_readable_byte_streams)

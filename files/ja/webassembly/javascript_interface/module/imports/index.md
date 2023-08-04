@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Module.imports()
 slug: WebAssembly/JavaScript_interface/Module/imports
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/imports
 ---
 
 {{WebAssemblySidebar}}
@@ -11,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/import
 ## 構文
 
 ```js
-WebAssembly.Module.imports(module)
+WebAssembly.Module.imports(module);
 ```
 
 ### 引数
@@ -34,8 +33,7 @@ module が {{jsxref("WebAssembly.Module")}} オブジェクトインスタンス
 次の例では ([imports.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/imports.html) と[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/imports.html)も参照)、読み込んだ simple.wasm モジュールをコンパイルします。このモジュールは imports から問い合わせされます。
 
 ```js
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(function(mod) {
+WebAssembly.compileStreaming(fetch("simple.wasm")).then(function (mod) {
   var imports = WebAssembly.Module.imports(mod);
   console.log(imports[0]);
 });

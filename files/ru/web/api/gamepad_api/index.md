@@ -1,14 +1,8 @@
 ---
 title: Gamepad API
 slug: Web/API/Gamepad_API
-tags:
-  - API
-  - Gamepad API
-  - Игры
-  - Обзор
-  - Экспериментальный
-translation_of: Web/API/Gamepad_API
 ---
+
 {{DefaultAPISidebar("Gamepad API")}}
 
 API Gamepad - это простой и последовательный способ для разработчиков получать доступ к сигналам с геймпадов и других игровых контроллеров и реагировать на них. Он содержит три интерфейса, два события и одну специализированную функцию, чтобы реагировать на подключение и отключение геймпадов, а также получать доступ к другой информации о самих геймпадах и о том, какие кнопки и другие элементы управления в настоящее время нажимаются.
@@ -52,16 +46,13 @@ API Gamepad - это простой и последовательный спос
 - [Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
 - [Implementing controls using the Gamepad API](/ru/docs/Games/Techniques/Controls_Gamepad_API)
 
-## Технические характеристики
+## Спецификации
 
-| Спецификация                                                                     | Статус                                   | Примечание                                                                      |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------- |
-| {{SpecName("GamepadExtensions")}}                                     | {{Spec2("GamepadExtensions")}} | Определяет [Experimental Gamepad extensions](#experimental_gamepad_extensions). |
-| {{SpecName("Gamepad", "", "The Gamepad API specification")}} | {{Spec2("Gamepad")}}             | Первоначальное определение                                                      |
+{{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
-{{Compat("api.Gamepad")}}
+{{Compat}}
 
 ## Прочтите также
 

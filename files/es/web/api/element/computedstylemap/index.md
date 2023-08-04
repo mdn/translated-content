@@ -10,7 +10,7 @@ El método `computedStyleMap()` de la interfaz {{domxref("Element")}} devuelve u
 ## Sintaxis
 
 ```js
-var stylePropertyMapReadOnly = Element.computedStyleMap()
+var stylePropertyMapReadOnly = Element.computedStyleMap();
 ```
 
 ### Parámetros
@@ -27,7 +27,7 @@ Comenzamos con algo de HTML simple: un párrafo con un enlace, y una lista de de
 
 ```html
 <p>
-   <a href="https://example.com">Link</a>
+  <a href="https://example.com">Link</a>
 </p>
 <dl id="regurgitation"></dl>
 ```
@@ -45,25 +45,25 @@ Añadimos Javascript para tomar nuestro enlace y devolvemos una lista de definic
 
 ```js
 // obtenemos el elemento
-const myElement = document.querySelector('a');
+const myElement = document.querySelector("a");
 
 // obtenemos la <dl> que llenaremos
-const stylesList = document.querySelector('#regurgitation');
+const stylesList = document.querySelector("#regurgitation");
 
 // recuperamos todos los estilos calculados con computedStyleMap()
 const allComputedStyles = myElement.computedStyleMap();
 
 // iteramos a través del mapa de todas las propiedades y valores, añadiendo un <dt> y <dd> para cada mapa
 for (const [prop, val] of allComputedStyles) {
- // propiedades
- const cssProperty = document.createElement('dt');
- cssProperty.appendChild(document.createTextNode(prop));
- stylesList.appendChild(cssProperty);
+  // propiedades
+  const cssProperty = document.createElement("dt");
+  cssProperty.appendChild(document.createTextNode(prop));
+  stylesList.appendChild(cssProperty);
 
- // valores
- const cssValue = document.createElement('dd');
- cssValue.appendChild(document.createTextNode(val));
- stylesList.appendChild(cssValue);
+  // valores
+  const cssValue = document.createElement("dd");
+  cssValue.appendChild(document.createTextNode(val));
+  stylesList.appendChild(cssValue);
 }
 ```
 

@@ -1,15 +1,6 @@
 ---
 title: String.prototype.sup()
 slug: Web/JavaScript/Reference/Global_Objects/String/sup
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Методы оборачивания в HTML
-translation_of: Web/JavaScript/Reference/Global_Objects/String/sup
 ---
 {{JSRef("Global_Objects", "String")}} {{deprecated_header}}
 

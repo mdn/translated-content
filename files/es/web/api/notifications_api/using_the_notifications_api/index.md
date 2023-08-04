@@ -1,7 +1,6 @@
 ---
 title: Usando la API de Notificaciones
 slug: Web/API/Notifications_API/Using_the_Notifications_API
-original_slug: Web/API/Notifications_API/Usando_la_API_de_Notificaciones
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -44,7 +43,7 @@ Puede verificar si ya tiene permiso comprobando el valor de la propiedad de solo
 Si aún no se ha otorgado el permiso para mostrar notificaciones, la aplicación debe usar el método {{domxref("Notification.requestPermission()")}} para solicitarlo al usuario. En su forma más simple, solo incluimos lo siguiente:
 
 ```js
-Notification.requestPermission().then(function(result) {
+Notification.requestPermission().then(function (result) {
   console.log(result);
 });
 ```
@@ -73,24 +72,26 @@ function askNotificationPermission() {
   function handlePermission(permission) {
     // configura el botón para que se muestre u oculte, dependiendo de lo que
     // responda el usuario
-    if(Notification.permission === 'denied' || Notification.permission === 'default') {
-      notificationBtn.style.display = 'block';
+    if (
+      Notification.permission === "denied" ||
+      Notification.permission === "default"
+    ) {
+      notificationBtn.style.display = "block";
     } else {
-      notificationBtn.style.display = 'none';
+      notificationBtn.style.display = "none";
     }
   }
 
   // Comprobemos si el navegador admite notificaciones.
-  if (!('Notification' in window)) {
+  if (!("Notification" in window)) {
     console.log("Este navegador no admite notificaciones.");
   } else {
-    if(checkNotificationPromise()) {
-      Notification.requestPermission()
-      .then((permission) => {
+    if (checkNotificationPromise()) {
+      Notification.requestPermission().then((permission) => {
         handlePermission(permission);
-      })
+      });
     } else {
-      Notification.requestPermission(function(permission) {
+      Notification.requestPermission(function (permission) {
         handlePermission(permission);
       });
     }
@@ -112,7 +113,7 @@ Arriba mencionamos que teníamos que verificar si el navegador es compatible con
 function checkNotificationPromise() {
   try {
     Notification.requestPermission().then();
-  } catch(e) {
+  } catch (e) {
     return false;
   }
 
@@ -129,9 +130,12 @@ Crear una notificación es fácil; solo usa el constructor {{domxref("Notificati
 Por ejemplo, en el ejemplo de la lista de tareas, usamos el siguiente fragmento para crear una notificación cuando sea necesario (que se encuentra dentro de la función `createNotification()`):
 
 ```js
-var img = '/to-do-notifications/img/icon-128.png';
+var img = "/to-do-notifications/img/icon-128.png";
 var text = '¡OYE! Tu tarea "' + title + '" ahora está vencida.';
-var notification = new Notification('Lista de tareas', { body: text, icon: img });
+var notification = new Notification("Lista de tareas", {
+  body: text,
+  icon: img,
+});
 ```
 
 ## Cerrando notificaciones
@@ -139,9 +143,9 @@ var notification = new Notification('Lista de tareas', { body: text, icon: img }
 {{domxref("Notification.close","close()")}} es utilizado para eliminar una notificación que ya no es relevante para el usuario (por ejemplo, el usuario ya leyó la notificación en la página web, en el caso de una aplicación de mensajería , o la siguiente canción ya se está reproduciendo en una aplicación de música para notificar los cambios de canción). La mayoría de los navegadores modernos descartan las notificaciones automáticamente después de unos momentos (alrededor de cuatro segundos), pero esto no es algo que generalmente deba preocuparte, ya que depende del usuario y del [agente de usuario](/es/docs/Web/HTTP/Headers/User-Agent). El cierre también puede ocurrir a nivel del sistema operativo y los usuarios deben mantener el control de esto. Las versiones anteriores de Chrome no eliminaban las notificaciones automáticamente, por lo que puedes hacerlo después de un {{domxref("setTimeout()")}} solo para esas versiones antiguas para no eliminar las notificaciones de las bandejas de notificaciones en otros navegadores.
 
 ```js
-var n = new Notification('Mi gran canción');
-document.addEventListener('visibilitychange', function() {
-  if (document.visibilityState === 'visible') {
+var n = new Notification("Mi gran canción");
+document.addEventListener("visibilitychange", function () {
+  if (document.visibilityState === "visible") {
     // La pestaña se ha vuelto visible, así que borre la Notificación ahora
     // obsoleta.
     n.close();
@@ -185,19 +189,20 @@ Supongamos el siguiente código HTML básico:
 Es posible manejar múltiples notificaciones de esta manera:
 
 ```js
-window.addEventListener('load', function () {
-  var button = document.getElementsByTagName('button')[0];
+window.addEventListener("load", function () {
+  var button = document.getElementsByTagName("button")[0];
 
   if (window.self !== window.top) {
-    // Asegúrese de que si su documento está en un marco, hagamos que el 
-    // usuario lo abra primero en su propia pestaña o ventana. De lo contrario, 
+    // Asegúrese de que si su documento está en un marco, hagamos que el
+    // usuario lo abra primero en su propia pestaña o ventana. De lo contrario,
     // no podrá solicitar permiso para enviar notificaciones.
-    button.textContent = "Ver el resultado en vivo del código de ejemplo anterior";
-    button.addEventListener('click', () => window.open(location.href));
+    button.textContent =
+      "Ver el resultado en vivo del código de ejemplo anterior";
+    button.addEventListener("click", () => window.open(location.href));
     return;
   }
 
-  button.addEventListener('click', function () {
+  button.addEventListener("click", function () {
     // Si el usuario acepta ser notificado.
     // Intentemos enviar diez notificaciones.
     if (window.Notification && Notification.permission === "granted") {
@@ -206,7 +211,7 @@ window.addEventListener('load', function () {
       // bloqueen las notificaciones si hay demasiadas en un tiempo determinado.
       var interval = window.setInterval(function () {
         // Gracias a la etiqueta, solo deberíamos ver la notificación "¡Hola! 9"
-        var n = new Notification("¡Hola! " + i, {tag: 'soManyNotification'});
+        var n = new Notification("¡Hola! " + i, { tag: "soManyNotification" });
         if (i++ == 9) {
           window.clearInterval(interval);
         }
@@ -227,7 +232,9 @@ window.addEventListener('load', function () {
           // determinado.
           var interval = window.setInterval(function () {
             // Gracias a la etiqueta, solo deberíamos ver la notificación "¡Hola! 9"
-            var n = new Notification("¡Hola! " + i, {tag: 'soManyNotification'});
+            var n = new Notification("¡Hola! " + i, {
+              tag: "soManyNotification",
+            });
             if (i++ == 9) {
               window.clearInterval(interval);
             }

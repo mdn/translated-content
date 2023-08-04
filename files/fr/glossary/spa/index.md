@@ -1,7 +1,6 @@
 ---
 title: Application monopage (SPA)
 slug: Glossary/SPA
-translation_of: Glossary/SPA
 ---
 
 Une application monopage ou SPA (« _Single-page application_ » en anglais) est une implémentation d'application web qui ne charge qu'un seul document web, puis met à jour le contenu du corps de ce document via des API JavaScript telles que [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) et [Fetch](/fr/docs/Web/API/Fetch_API) lorsqu'un contenu différent doit être affiché.

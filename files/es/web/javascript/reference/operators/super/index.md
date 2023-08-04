@@ -1,7 +1,6 @@
 ---
 title: super
 slug: Web/JavaScript/Reference/Operators/super
-original_slug: Web/JavaScript/Referencia/Operadores/super
 ---
 
 {{jsSidebar("Operators")}}
@@ -71,14 +70,14 @@ También puede llamar a super en métodos estáticos.
 class Rectangle {
   constructor() {}
   static logNbSides() {
-    return 'I have 4 sides';
+    return 'Tengo 4 lados';
   }
 }
 
 class Square extends Rectangle {
   constructor() {}
   static logDescription() {
-    return super.logNbSides() + ' which are all equal';
+    return super.logNbSides() + ' que son todos iguales';
   }
 }
 Square.logDescription(); // 'Tengo 4 lados que son todos iguales'

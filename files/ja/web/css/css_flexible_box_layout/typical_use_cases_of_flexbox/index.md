@@ -1,6 +1,6 @@
 ---
 title: フレックスボックスの典型的な用途
-slug: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
+slug: Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 ---
 
 {{CSSRef}}

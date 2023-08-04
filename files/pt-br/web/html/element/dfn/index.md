@@ -12,7 +12,7 @@ O elemento **HTML `<dfn>` **(ou _Elemento Definição_ _HTML_) representa uma in
 > - O valor exato do termo a ser definido é determinado pelas seguintes regras:
 >
 >   1. Se o elemento \<dfn> tiver um atributo title, então o termo é o valor deste atributo.
->   2. Senão, se contiver somente um elemento {{HTMLElement("abbr")}} com um atributo {{htmlattrxref("title", "abbr")}}, então o termo é o valor deste atributo.
+>   2. Senão, se contiver somente um elemento {{HTMLElement("abbr")}} com um atributo [`title`](/pt-BR/docs/Web/HTML/Element/abbr#title), então o termo é o valor deste atributo.
 >   3. Caso contrário, o conteúdo do texto do elemento `<dfn>` é o termo a ser definido.
 
 - _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), [Conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content), conetúdo palpável.

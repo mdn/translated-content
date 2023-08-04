@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/isNaN
 ## 構文
 
 ```js
-isNaN(value)
+isNaN(value);
 ```
 
 ### 引数
@@ -45,38 +45,38 @@ ECMAScript 2015 では {{jsxref("Number.isNaN()")}} 関数が存在します。`
 `isNaN` のポリフィルは以下のようになります (このポリフィルは `NaN` が自分自身と常に等しくならないという特徴を利用しています)。
 
 ```js
-const isNaN = function(value) {
-    const n = Number(value);
-    return n !== n;
+const isNaN = function (value) {
+  const n = Number(value);
+  return n !== n;
 };
 ```
 
 ## 例
 
 ```js
-isNaN(NaN);       // true
+isNaN(NaN); // true
 isNaN(undefined); // true
-isNaN({});        // true
+isNaN({}); // true
 
-isNaN(true);      // false
-isNaN(null);      // false
-isNaN(37);        // false
+isNaN(true); // false
+isNaN(null); // false
+isNaN(37); // false
 
 // strings
-isNaN('37');      // false: "37" は非数でない数値 37 に変換される
-isNaN('37.37');   // false: "37.37" は非数でない数値 37.37 に変換される
-isNaN("37,5");    // true
-isNaN('123ABC');  // true:  parseInt("123ABC") の結果は 123、しかし Number("123ABC") の結果は NaN
-isNaN('');        // false: 空文字列は非数でない 0 に変換される
-isNaN(' ');       // false: 半角スペースからなる文字列は非数でない 0 に変換される
+isNaN("37"); // false: "37" は非数でない数値 37 に変換される
+isNaN("37.37"); // false: "37.37" は非数でない数値 37.37 に変換される
+isNaN("37,5"); // true
+isNaN("123ABC"); // true:  parseInt("123ABC") の結果は 123、しかし Number("123ABC") の結果は NaN
+isNaN(""); // false: 空文字列は非数でない 0 に変換される
+isNaN(" "); // false: 半角スペースからなる文字列は非数でない 0 に変換される
 
 // dates
-isNaN(new Date());                // false
-isNaN(new Date().toString());     // true
+isNaN(new Date()); // false
+isNaN(new Date().toString()); // true
 
 // isNaN が信頼性に欠ける理由となる誤検出の例
-isNaN('blabla');   // true: "blabla" が数値に変換される。
-                   // 数値への変換が失敗し NaN が返される。
+isNaN("blabla"); // true: "blabla" が数値に変換される。
+// 数値への変換が失敗し NaN が返される。
 ```
 
 ### 特殊な場合における便利な動作
