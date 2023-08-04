@@ -1,7 +1,6 @@
 ---
 title: Document.activeElement
 slug: Web/API/Document/activeElement
-translation_of_original: Web/API/Document/activeElement
 ---
 
 {{APIRef("Shadow DOM")}}

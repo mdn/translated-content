@@ -1,7 +1,6 @@
 ---
 title: devtools.panels.ElementsPanel.createSidebarPane()
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane
 ---
 
 {{AddonSidebar()}}

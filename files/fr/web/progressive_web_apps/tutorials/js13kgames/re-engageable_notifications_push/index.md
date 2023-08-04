@@ -1,7 +1,5 @@
 ---
-title: >-
-  Comment faire pour que les PWAs relancent les utilisateurs en utilisant des
-  notifications et des messages poussés
+title: Comment faire pour que les PWAs relancent les utilisateurs en utilisant des notifications et des messages poussés
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
 ---
 

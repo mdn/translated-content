@@ -1,5 +1,5 @@
 ---
-title: "Structurer les données des planètes"
+title: Structurer les données des planètes
 slug: Learn/HTML/Tables/Structuring_planet_data
 ---
 

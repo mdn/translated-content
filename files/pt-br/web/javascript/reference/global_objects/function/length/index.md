@@ -26,19 +26,21 @@ A propriedade length do objeto prototype {{jsxref("Function")}} tem o valor de 0
 ```js
 console.log(Function.length); /* 1 */
 
-console.log((function()        {}).length); /* 0 */
-console.log((function(a)       {}).length); /* 1 */
-console.log((function(a, b)    {}).length); /* 2 etc. */
-console.log((function(...args) {}).length); /* 0, rest parameter is not counted */
+console.log(function () {}.length); /* 0 */
+console.log(function (a) {}.length); /* 1 */
+console.log(function (a, b) {}.length); /* 2 etc. */
+console.log(
+  function (...args) {}.length,
+); /* 0, rest parameter is not counted */
 ```
 
 ## Especificações
 
-| Specification                                                                                    | Status                   | Comment                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------------ |
-| {{SpecName('ES1')}}                                                                         | {{Spec2('ES1')}}     | Initial definition. Implemented in JavaScript 1.1.           |
-| {{SpecName('ES5.1', '#sec-15.3.5.1', 'Function.length')}}                     | {{Spec2('ES5.1')}} |                                                              |
-| {{SpecName('ES6', '#sec-function-instances-length', 'Function.length')}} | {{Spec2('ES6')}}     | The `configurable` attribute of this property is now `true`. |
+| Specification                                                            | Status             | Comment                                                      |
+| ------------------------------------------------------------------------ | ------------------ | ------------------------------------------------------------ |
+| {{SpecName('ES1')}}                                                      | {{Spec2('ES1')}}   | Initial definition. Implemented in JavaScript 1.1.           |
+| {{SpecName('ES5.1', '#sec-15.3.5.1', 'Function.length')}}                | {{Spec2('ES5.1')}} |                                                              |
+| {{SpecName('ES6', '#sec-function-instances-length', 'Function.length')}} | {{Spec2('ES6')}}   | The `configurable` attribute of this property is now `true`. |
 
 ## Compatibilidade com navegadores
 

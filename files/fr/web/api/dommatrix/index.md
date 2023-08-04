@@ -1,7 +1,6 @@
 ---
 title: CSSMatrix
 slug: Web/API/DOMMatrix
-translation_of_original: Web/API/CSSMatrix
 ---
 
 {{APIRef("CSSOM")}}{{Non-standard_header}}
