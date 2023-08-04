@@ -46,17 +46,17 @@ jobs:
           # Use the GitHub API to get the list of changed files
           # documenation: https://docs.github.com/rest/commits/commits#compare-two-commits
           DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }} \
-            --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
+          --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
           # filter out files that are not markdown
           DIFF_DOCUMENTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^(files|docs)/zh-cn/" | xargs)
           echo "DIFF_DOCUMENTS=${DIFF_DOCUMENTS}" >> $GITHUB_ENV
 
       - name: AutoCorrect Lint
         if: ${{ env.DIFF_DOCUMENTS }}
-        run: yarn autocorrect --lint --no-diff-bg-color ${{ env.DIFF_DOCUMENTS }}
+        run: echo ${{ env.DIFF_DOCUMENTS }} | xargs yarn autocorrect --lint --no-diff-bg-color
 
       - name: AutoCorrect Lint Reports
         if: failure()
         env:
-          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.REVIEWDOG_GITHUB_API_TOKEN }}
-        run: yarn -s autocorrect --format rdjson --lint ${{ env.DIFF_DOCUMENTS }} | reviewdog -f=rdjson -reporter=github-pr-review
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.REVIEWDOG_GITHUB_API_TOKEN || secrets.GITHUB_TOKEN }}
+        run: echo ${{ env.DIFF_DOCUMENTS }} | xargs yarn -s autocorrect --format rdjson --lint | reviewdog -f=rdjson -reporter=github-pr-review
