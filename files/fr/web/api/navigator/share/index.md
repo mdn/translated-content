@@ -1,15 +1,17 @@
 ---
 title: Navigator.share
 slug: Web/API/Navigator/share
-translation_of: Web/API/Navigator/share
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 La méthode **`Navigator.share()`** invoque le mécanisme de partage natif de l'appareil. Celle-ci appartient à l'API Web Share. Si l'API Web Share n'est pas supportée, alors la méthode sera `undefined`.
 
-## Syntax
+## Syntaxe
 
-    var sharePromise = window.navigator.share(data);
+```js
+var sharePromise = window.navigator.share(data);
+```
 
 ### Paramètres
 
@@ -35,17 +37,15 @@ Par exemple, sur Chrome pour Android, la `Promise` retournée sera résolue apr�
 ```js
 navigator.share({
   title: document.title,
-  text: 'Hello World',
-  url: 'https://developer.mozilla.org',
+  text: "Hello World",
+  url: "https://developer.mozilla.org",
 }); // partage l'URL de MDN
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                            | Status                               | Comment |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('Web Share API','#share-method','share()')}} | {{Spec2('Web Share API')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.share")}}
+{{Compat}}

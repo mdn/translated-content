@@ -1,15 +1,8 @@
 ---
-title: 'Attribut HTML : pattern'
+title: "Attribut HTML : pattern"
 slug: Web/HTML/Attributes/pattern
-tags:
-  - Attribute
-  - Attributes
-  - Constraint Validation API
-  - HTML
-  - Reference
-translation_of: Web/HTML/Attributes/pattern
-original_slug: Web/HTML/Attributs/pattern
 ---
+
 {{HTMLSidebar}}
 
 L'attribut **`pattern`** indique une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_Expressions) que doit respecter la valeur du contrôle du formulaire. Si une valeur non nulle (qui n'est pas `null`) ne respecte pas les contraintes portées par `pattern`, la propriété [`patternMismatch`](/fr/docs/Web/API/ValidityState/patternMismatch) en lecture seule, rattachée à l'objet [`ValidityState`](/fr/docs/Web/API/ValidityState), vaudra `true`.
@@ -41,11 +34,30 @@ Avec le fragment de code HTML suivant :
 
 ```html
 <p>
- <label>Veuillez saisir votre numéro de téléphone au format (123)456-7890
-  (<input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2"/>)-
-   <input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size="2"/> -
-   <input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="####" aria-label="4-digit number" size="3"/>
- </label>
+  <label
+    >Veuillez saisir votre numéro de téléphone au format (123)456-7890 (<input
+      name="tel1"
+      type="tel"
+      pattern="[0-9]{3}"
+      placeholder="###"
+      aria-label="3-digit area code"
+      size="2" />)-
+    <input
+      name="tel2"
+      type="tel"
+      pattern="[0-9]{3}"
+      placeholder="###"
+      aria-label="3-digit prefix"
+      size="2" />
+    -
+    <input
+      name="tel3"
+      type="tel"
+      pattern="[0-9]{4}"
+      placeholder="####"
+      aria-label="4-digit number"
+      size="3" />
+  </label>
 </p>
 ```
 
@@ -73,10 +85,19 @@ L'exemple qui suit permet de restreindre les valeurs saisies entre 4 et 8 caract
 <form>
   <div>
     <label for="uname">Veuillez choisir un nom d'utilisateur : </label>
-    <input type="text" id="uname" name="name" required size="45"
-           pattern="[a-z]{4,8}" title="4 à 8 lettres en minuscules">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      required
+      size="45"
+      pattern="[a-z]{4,8}"
+      title="4 à 8 lettres en minuscules" />
     <span class="validity"></span>
-    <p>Les noms d'utilisateurs doivent être en minuscules et contenir 4 à 8 caractères.</p>
+    <p>
+      Les noms d'utilisateurs doivent être en minuscules et contenir 4 à 8
+      caractères.
+    </p>
   </div>
   <div>
     <button>Envoyer</button>
@@ -99,15 +120,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -124,15 +145,11 @@ L'attribut `title` est utilisé par certains navigateurs pour écrire les messag
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#attr-input-pattern', 'l\'attribut pattern')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'forms.html#attr-input-pattern', 'l\'attribut pattern')}}         | {{Spec2('HTML5.1')}}     |
-| {{SpecName('HTML5 W3C', 'forms.html#attr-input-pattern', 'l\'attribut pattern')}}     | {{Spec2('HTML5 W3C')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attributes.pattern")}}
+{{Compat}}
 
 ## Voir aussi
 

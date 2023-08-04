@@ -1,27 +1,21 @@
 ---
 title: DOMImplementation.createHTMLDocument()
 slug: Web/API/DOMImplementation/createHTMLDocument
-tags:
-  - API
-  - DOM
-  - DOM Référence(2)
-  - DOM implémentation
-  - Expérimental(2)
-  - Méthode
-  - Référence(2)
-translation_of: Web/API/DOMImplementation/createHTMLDocument
 ---
+
 {{ApiRef("DOM")}}{{SeeCompatTable}}
 
-La méthode **`DOMImplementation.createHTMLDocument()`**  crée un nouveau {{domxref("Document")}} HTML.
+La méthode **`DOMImplementation.createHTMLDocument()`** crée un nouveau {{domxref("Document")}} HTML.
 
 ## Syntaxe
 
-    newDoc = document.implementation.createHTMLDocument(titre);
+```js
+newDoc = document.implementation.createHTMLDocument(titre);
+```
 
 ### Paramètres
 
-- *title*  {{optional_inline}}  (excepté dans IE)
+- _title_ {{optional_inline}} (excepté dans IE)
   - : C'est une {{domxref("DOMString")}} qui contient le titre à donner au nouveau document HTML.
 
 ## Exemple
@@ -32,7 +26,10 @@ Ci-dessous, le code HTML pour cet exemple:
 
 ```html
 <body>
-  <p>Cliquez <a href="javascript:makeDocument()">ici</a> pour créer un nouveau document et l'insérer au dessous.</p>
+  <p>
+    Cliquez <a href="javascript:makeDocument()">ici</a> pour créer un nouveau
+    document et l'insérer au dessous.
+  </p>
   <iframe id="laFrame" src="about:blank" />
 </body>
 ```
@@ -49,7 +46,7 @@ function makeDocument() {
 
   try {
     doc.body.appendChild(p);
-  } catch(e) {
+  } catch (e) {
     console.log(e);
   }
 
@@ -74,23 +71,20 @@ Le document retourné est préconstruit avec le code HTML suivant :
 ```html
 <!doctype html>
 <html>
-<head>
-<title>titre</title>
-</head>
-<body>
-</body>
+  <head>
+    <title>titre</title>
+  </head>
+  <body></body>
 </html>
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-domimplementation-createhtmldocument', 'DOMImplementation.createHTMLDocument')}} | {{Spec2('DOM WHATWG')}} | Première définition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMImplementation.createHTMLDocument")}}
+{{Compat}}
 
 ## Voir aussi
 

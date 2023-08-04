@@ -1,13 +1,8 @@
 ---
 title: Gestion de la mémoire
-slug: Web/JavaScript/Memory_Management
-tags:
-  - JavaScript
-  - Mémoire
-  - Performance
-translation_of: Web/JavaScript/Memory_Management
-original_slug: Web/JavaScript/Gestion_de_la_mémoire
+slug: Web/JavaScript/Memory_management
 ---
+
 {{JsSidebar("Advanced")}}
 
 Les langages de bas niveau, tels que C, possèdent des primitives permettant de gérer la mémoire : [`malloc()`](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) et [`free()`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions) par exemple. En revanche, lorsqu'on utilise JavaScript, la mémoire est allouée lors de la création des objets puis libérée « automatiquement » lorsque ceux-ci ne sont plus utilisés. Cette libération automatique est appelée _garbage collection_ en anglais ou ramasse-miettes. Le fait que ce processus soit automatique est souvent source de confusion et donne parfois l'impression que JavaScript (ou d'autres langages de haut niveau) ne permet pas de gérer la mémoire : nous allons voir que ce n'est pas le cas.
@@ -16,9 +11,9 @@ Les langages de bas niveau, tels que C, possèdent des primitives permettant de 
 
 Quel que soit le langage de programmation, le cycle de vie de la mémoire ressemblera à :
 
-1.  Allouer la mémoire dont on a besoin
-2.  Utiliser cette mémoire allouée (lecture, écriture)
-3.  Libérer la mémoire allouée lorsqu'on n'en a plus besoin
+1. Allouer la mémoire dont on a besoin
+2. Utiliser cette mémoire allouée (lecture, écriture)
+3. Libérer la mémoire allouée lorsqu'on n'en a plus besoin
 
 Le deuxième point est explicite, au niveau du code, pour tous les langages de programmation. Le premier et le troisième points sont explicites pour les langages de bas niveau mais souvent implicites pour les langages de haut niveau tels que JavaScript.
 
@@ -37,7 +32,7 @@ var s = "azerty";
 // alloue de la mémoire pour un objet et les valeurs qu'il contient
 var o = {
   a: 1,
-  b: null
+  b: null,
 };
 
 // alloue de la mémoire pour un tableau et les valeurs qu'il contient
@@ -50,9 +45,13 @@ function f(a) {
 }
 
 // les expressions de fonction allouent aussi de la mémoire
-unElement.addEventListener('click', function(){
-  unElement.style.backgroundColor = 'blue';
-}, false);
+unElement.addEventListener(
+  "click",
+  function () {
+    unElement.style.backgroundColor = "blue";
+  },
+  false,
+);
 ```
 
 #### Allocation par appels de fonctions
@@ -64,7 +63,7 @@ Certains appels de fonctions entraînent l'allocation mémoire d'un objet.
 var d = new Date();
 
 // Alloue de la mémoire pour un objet représentant un élément du DOM
-var e = document.createElement('div');
+var e = document.createElement("div");
 ```
 
 Certaines méthodes allouent de la mémoire pour des nouveaux objets ou de nouvelles valeurs.
@@ -91,7 +90,7 @@ Utiliser des variables revient à lire et écrire la mémoire allouée. Cela peu
 
 La plupart des problèmes concernant la gestion de la mémoire surviennent à cet endroit. Le plus difficile est de savoir « quand » la mémoire allouée n'est plus utilisée. Pour les langages « bas niveau », il faut donc que le développeur détermine quelle partie de la mémoire n'est plus utilisée à tel endroit du code et la libère.
 
-Les interpréteurs des langages de haut niveau intègrent un composant logiciel, appelé « ramasse-miettes » qui a pour but de surveiller l'utilisation de la mémoire afin de déterminer quand une partie de la mémoire allouée n'est plus utilisée afin de la libérer automatiquement. Ce procédé ne peut être qu'une approximation car savoir si tel ou tel fragment de mémoire est nécessaire est un problème [indécidable](https://fr.wikipedia.org/wiki/D%C3%A9cidabilit%C3%A9) (autrement dit, ce problème ne peut être résolu par un algorithme).
+Les interpréteurs des langages de haut niveau intègrent un composant logiciel, appelé « ramasse-miettes » qui a pour but de surveiller l'utilisation de la mémoire afin de déterminer quand une partie de la mémoire allouée n'est plus utilisée afin de la libérer automatiquement. Ce procédé ne peut être qu'une approximation car savoir si tel ou tel fragment de mémoire est nécessaire est un problème [indécidable](https://fr.wikipedia.org/wiki/Décidabilité) (autrement dit, ce problème ne peut être résolu par un algorithme).
 
 ## Le ramasse-miettes ou _garbage collection_
 
@@ -112,31 +111,30 @@ L'algorithme le plus simple consiste à faire l'équivalence entre « un objet n
 ```js
 var o = {
   a: {
-    b: 2
-  }
+    b: 2,
+  },
 };
 // 2 objets sont créés. L'un est référencé par l'autre en tant que propriété.
 // L'autre est référencé car assigné à la variable 'o'.
 // Aucun des deux ne peut être ramassé par le ramasse-miettes.
 
-
 var o2 = o; // la variable 'o2' est le deuxième élément qui
-            // référence l'objet o
-o = 1;      // désormais, l'objet qui était dans 'o' possède
-            // une seule référence de o2 vers lui
+// référence l'objet o
+o = 1; // désormais, l'objet qui était dans 'o' possède
+// une seule référence de o2 vers lui
 
 var oa = o2.a; // référence la propriété 'a' de l'objet
-               // cet objet a donc 2 références : une
-               // par une propriété, l'autre par la variable 'oa'
+// cet objet a donc 2 références : une
+// par une propriété, l'autre par la variable 'oa'
 
 o2 = "yo"; // L'objet 'o' ne possède plus de références vers lui
-           // Il peut être ramassé.
-           // Cependant sa propriété 'a' est toujours référencé.
-           // La mémoire ne peut donc pas être libérée.
+// Il peut être ramassé.
+// Cependant sa propriété 'a' est toujours référencé.
+// La mémoire ne peut donc pas être libérée.
 
 oa = null; // la propriété 'a' ne possède plus de références
-           // vers elle. L'objet peut être ramassé et la mémoire
-           // libérée.
+// vers elle. L'objet peut être ramassé et la mémoire
+// libérée.
 ```
 
 #### Une limitation : les cycles
@@ -162,7 +160,7 @@ Les navigateurs Internet Explorer 6 et 7 utilisent cet algorithme pour gérer le
 
 ```js
 var div;
-window.onload = function() {
+window.onload = function () {
   div = document.getElementById("monElementDiv");
   div.referenceCirculaire = div;
   div.desDonnees = new Array(10000).join("*");

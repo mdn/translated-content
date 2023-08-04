@@ -1,14 +1,8 @@
 ---
 title: Atomics.or()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/or
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.or
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/or
 ---
+
 {{JSRef}}
 
 静的な **`Atomics.or()`** メソッドは、配列内の指定した位置の値に指定した値でビット単位の OR を計算し、その位置にあった古い値を返します。これは不可分操作で、修正された値が書き戻されるまで、他の書き込みが起こらないことを保証します。

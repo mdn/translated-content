@@ -1,15 +1,8 @@
 ---
 title: grid-row-start
 slug: Web/CSS/grid-row-start
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.grid-row-start
-tra: Web/CSS/grid-row-start
 ---
+
 {{CSSRef}}
 
 **`grid-row-start`** は CSS のプロパティで、グリッドの配置に線または区間を使用したり、使用しなかったりして (自動)、グリッド行内のグリッドアイテムの先頭位置、すなわち{{Glossary("grid areas", "グリッド領域")}}のインラインの先頭側の端を指定します。
@@ -57,7 +50,7 @@ grid-row-start: unset;
 
   - : `<custom-ident>-start` という名前の付いた線がある場合、これはそのような線の先頭がグリッドアイテムの配置に関わります。
 
-    > **Note:** 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-row-start: foo;` と指定すると名前付きグリッド領域の先頭側の端を選択します (その前に `foo-start` という名前の線が明示的に存在しない限り)。
+    > **メモ:** 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-row-start: foo;` と指定すると名前付きグリッド領域の先頭側の端を選択します (その前に `foo-start` という名前の線が明示的に存在しない限り)。
 
  そうでなければ、これは `<custom-ident>` に沿って整数の `1` が指定されたものとして扱われます。
 

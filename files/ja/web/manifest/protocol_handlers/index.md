@@ -1,14 +1,9 @@
 ---
 title: protocol_handlers
 slug: Web/Manifest/protocol_handlers
-tags:
-  - protocol_handlers
-  - マニフェスト
-  - ウェブ
-  - 標準外
-translation_of: Web/Manifest/protocol_handlers
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{Non-standard_Header}}
+
+{{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}{{Non-standard_Header}}
 
 <table class="properties">
   <tbody>
@@ -70,7 +65,7 @@ URL スキームを処理するためのアプリケーションの登録は、�
     <tr>
       <td><code>url</code></td>
       <td>
-        プロトコルを処理するアプリケーションのスコープ (<a href="/en-US/docs/Web/Manifest/scope">scope</a>) 内の必要な HTTPS URL。 <code>%s</code> トークンは、プロトコルハンドラーのスキームで始まる URL に置換されます。 <code>url</code> が相対 URL であった場合、ベース URL はマニフェストの URL になります。
+        プロトコルを処理するアプリケーションのスコープ (<a href="/ja/docs/Web/Manifest/scope">scope</a>) 内の必要な HTTPS URL。 <code>%s</code> トークンは、プロトコルハンドラーのスキームで始まる URL に置換されます。 <code>url</code> が相対 URL であった場合、ベース URL はマニフェストの URL になります。
       </td>
     </tr>
   </tbody>

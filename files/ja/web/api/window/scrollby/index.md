@@ -1,14 +1,8 @@
 ---
 title: Window.scrollBy()
 slug: Web/API/Window/scrollBy
-tags:
-  - API
-  - CSSOM View
-  - メソッド
-  - リファレンス
-browser-compat: api.Window.scrollBy
-translation_of: Web/API/Window/scrollBy
 ---
+
 {{ APIRef() }}
 
 **`Window.scrollBy()`** メソッドは、ウィンドウ内の文書を指定された量だけスクロールさせます。

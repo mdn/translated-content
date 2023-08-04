@@ -1,17 +1,8 @@
 ---
 title: TypedArray.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/every
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/every
 ---
+
 {{JSRef}}
 
 La méthode **`every()`** teste si tous les éléments du tableau typé satisfont une condition implémentée par la fonction de test fournie. Cette méthode utilise le même algorithme {{jsxref("Array.prototype.every()")}}. Pour le reste de cet article, _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
@@ -20,7 +11,9 @@ La méthode **`every()`** teste si tous les éléments du tableau typé satisfon
 
 ## Syntaxe
 
-    typedarray.every(callback[, thisArg])>
+```js
+typedarray.every(callback[, thisArg])>
+```
 
 ### Paramètres
 
@@ -62,7 +55,7 @@ Dans l'exemple suivant, on teste si tous les éléments du tableau typé sont su
 function estGrand(element, index, array) {
   return element >= 10;
 }
-new Uint8Array([12, 5, 8, 130, 44]).every(estGrand);   // false
+new Uint8Array([12, 5, 8, 130, 44]).every(estGrand); // false
 new Uint8Array([12, 54, 18, 130, 44]).every(estGrand); // true
 ```
 
@@ -71,20 +64,17 @@ new Uint8Array([12, 54, 18, 130, 44]).every(estGrand); // true
 [Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) permettent d'utiliser une syntaxe plus concise pour parvenir au même résultat :
 
 ```js
-new Uint8Array([12, 5, 8, 130, 44]).every(elem => elem >= 10); // false
-new Uint8Array([12, 54, 18, 130, 44]).every(elem => elem >= 10); // true
+new Uint8Array([12, 5, 8, 130, 44]).every((elem) => elem >= 10); // false
+new Uint8Array([12, 54, 18, 130, 44]).every((elem) => elem >= 10); // true
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.every', 'TypedArray.prototype.every')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.every', 'TypedArray.prototype.every')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.every")}}
+{{Compat}}
 
 ## Voir aussi
 

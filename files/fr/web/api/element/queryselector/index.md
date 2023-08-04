@@ -1,15 +1,17 @@
 ---
 title: Element.querySelector()
 slug: Web/API/Element/querySelector
-translation_of: Web/API/Element/querySelector
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`querySelector()`** de l'interface [`Element`](/fr/docs/Web/API/Element) renvoie le premier élément descendant de l'élément sur lequel elle est invoquée qui correspond au groupe de sélecteurs spécifié.
 
 ## Syntaxe
 
-    element = baseElement.querySelector(selectors);
+```js
+element = baseElement.querySelector(selectors);
+```
 
 ### Paramètres
 
@@ -32,7 +34,9 @@ Si aucune correspondance n'est trouvée, la valeur retournée est `null`.
 Dans ce premier exemple, est retourné le premier élément [`<style>`](/fr/docs/Web/HTML/Element/style) dans le corps du document HTML qui, soit n'a pas de type, soit a le type `text/css`:
 
 ```js
-var el = document.body.querySelector("style[type='text/css'], style:not([type])");
+var el = document.body.querySelector(
+  "style[type='text/css'], style:not([type])",
+);
 ```
 
 ### La hiérarchie entière compte
@@ -60,7 +64,8 @@ Cet exemple montre que la hiérarchie du document entier est prise en compte lor
 
 ```js
 var baseElement = document.querySelector("p");
-document.getElementById("output").innerHTML = (baseElement.querySelector("div span").innerHTML);
+document.getElementById("output").innerHTML =
+  baseElement.querySelector("div span").innerHTML;
 ```
 
 #### Résultat
@@ -75,15 +80,11 @@ Voir [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) pour 
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                                       | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG','#dom-parentnode-queryselectorall','querySelector()')}} | {{Spec2('DOM WHATWG')}}             |             |
-| {{SpecName('Selectors API Level 2','#queryselectorall','querySelectorAll()')}} | {{Spec2('Selectors API Level 2')}} |             |
-| {{SpecName('Selectors API Level 1','#queryselectorall','querySelectorAll()')}} | {{Spec2('Selectors API Level 1')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.querySelector")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -94,5 +95,5 @@ Voir [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) pour 
 - [`document.querySelector()`](/fr/docs/Web/API/Document/querySelector) et [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll)
 - [`DocumentFragment.querySelector()`](/fr/docs/Web/API/DocumentFragment/querySelector) et [`DocumentFragment.querySelectorAll()`](/fr/docs/Web/API/DocumentFragment/querySelectorAll)
 - [`ParentNode.querySelector()`](/fr/docs/Web/API/ParentNode/querySelector) et [`ParentNode.querySelectorAll()`](/fr/docs/Web/API/ParentNode/querySelectorAll)
-- [Exemples de code pour querySelector](/en-US/docs/Archive/Add-ons/Code_snippets/QuerySelector) Archive en anglais
+- [Exemples de code pour querySelector](/fr/docs/Archive/Add-ons/Code_snippets/QuerySelector) Archive en anglais
 - Autres méthodes qui prennent des sélecteurs : [`element.closest()`](/fr/docs/Web/API/Element/closest) et [`element.matches()`](/fr/docs/Web/API/Element/matches).

@@ -1,16 +1,8 @@
 ---
 title: FormData.entries()
 slug: Web/API/FormData/entries
-tags:
-  - API
-  - Entries
-  - FormData
-  - Méthode
-  - Reference
-  - XHR
-  - XMLHttpRequest
-translation_of: Web/API/FormData/entries
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 La methode **FormData.entries()** retourne un {{jsxref("Les_protocoles_iteration",'iterateur')}} permettant d'accéder aux paires clefs/valeurs contenues dans cet objet.
@@ -20,7 +12,9 @@ La clef de chaque paire est une {{domxref("USVString")}}. De la même manière, 
 
 ## Syntaxe
 
-    formData.entries();
+```js
+formData.entries();
+```
 
 ### Valeur retournée
 
@@ -31,29 +25,29 @@ Retourne un {{jsxref("Les_protocoles_iteration","iterateur")}}.
 ```js
 // Creation d'un objet FormData
 var formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 // Affichage des paires clefs/valeurs
-for(var pair of formData.entries()) {
-   console.log(pair[0]+ ', '+ pair[1]);
+for (var pair of formData.entries()) {
+  console.log(pair[0] + ", " + pair[1]);
 }
 ```
 
 Le resultat est:
 
-    key1, value1
-    key2, value2
+```
+key1, value1
+key2, value2
+```
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata','entries() (as iterator&lt;&gt;)')}} | {{Spec2('XMLHttpRequest')}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.FormData.entries")}}
+{{Compat}}
 
 ## Voir aussi
 

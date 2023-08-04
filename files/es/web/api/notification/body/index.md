@@ -1,13 +1,8 @@
 ---
 title: Notification.body
-slug: Web/API/notification/body
-tags:
-  - API
-  - API Notificaciones
-  - Javascript Notificador
-  - Notificaciones
-translation_of: Web/API/Notification/body
+slug: Web/API/Notification/body
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propiedad **`body`** de solo lectura de la interfaz
@@ -50,4 +45,3 @@ function spawnNotification(theBody, theIcon, theTitle) {
 ## See also
 
 - [Usando la API de notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-

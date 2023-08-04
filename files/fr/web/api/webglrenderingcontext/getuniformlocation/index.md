@@ -1,19 +1,8 @@
 ---
 title: WebGLRenderingContext.getUniformLocation()
 slug: Web/API/WebGLRenderingContext/getUniformLocation
-tags:
-  - API
-  - Méthode
-  - Reference
-  - Uniform Variables
-  - Uniforms
-  - Variables
-  - Variables en WebGL
-  - WebGL
-  - WebGLRenderingContext
-  - getUniformLocation
-translation_of: Web/API/WebGLRenderingContext/getUniformLocation
 ---
+
 {{APIRef("WebGL")}}Faisant partie de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API), la méthode {{domxref("WebGLRenderingContext")}} **`getUniformLocation()`** retourne l'emplacement d'une variable **uniform** particulière appartenant au {{domxref ("WebGLProgram")}} indiqué. La variable uniform est retournée sous la forme d'un objet {{domxref("WebGLUniformLocation")}}, qui est un identificateur opaque utilisé pour indiquer où se trouve la variable uniform dans la mémoire de la GPU. Une fois que vous avez l'emplacement de l'uniform, vous pouvez accéder à l'uniform lui-même en utilisant l'une des autres méthodes d'accès uniform, en passant l'emplacement de l'uniform comme l'une des entrées :
 
 - {{domxref ("WebGLRenderingContext.getUniform", "getUniform()")}}
@@ -27,7 +16,9 @@ L'uniform lui-même est déclaré dans le programme shader en utilisant GLSL.
 
 ## Syntaxe
 
-    WebGLUniformLocation = WebGLRenderingContext.getUniformLocation(programme, nom);
+```js
+WebGLUniformLocation = WebGLRenderingContext.getUniformLocation(programme, nom);
+```
 
 ### Paramètres
 
@@ -60,12 +51,9 @@ Dans cet exemple, extrait de la méthode `animateScene()` dans l'article [Un exe
 ```js
 gl.useProgram(programmeShader);
 
-uScalingFactor =
-    gl.getUniformLocation(programmeShader, "uScalingFactor");
-uGlobalColor =
-    gl.getUniformLocation(programmeShader, "uGlobalColor");
-uRotationVector =
-    gl.getUniformLocation(programmeShader, "uRotationVector")
+uScalingFactor = gl.getUniformLocation(programmeShader, "uScalingFactor");
+uGlobalColor = gl.getUniformLocation(programmeShader, "uGlobalColor");
+uRotationVector = gl.getUniformLocation(programmeShader, "uRotationVector");
 
 gl.uniform2fv(uScalingFactor, currentScale);
 gl.uniform2fv(uRotationVector, currentRotation);
@@ -86,33 +74,11 @@ Cela fait, la prochaine fois que les fonctions d'ombrage seront appelées, leurs
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('WebGL', "#5.14.10", "getUniformLocation")}}
-      </td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td><p>Définition initiale.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 2.0', "glGetUniformLocation.xml", "glGetUniformLocation")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td>Page man de l’API OpenGL.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.getUniformLocation")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,14 +1,11 @@
 ---
 title: <filter>
 slug: Web/SVG/Element/filter
-tags:
-  - Element
-  - SVG
-translation_of: Web/SVG/Element/filter
 ---
+
 {{SVGRef}}
 
-L'élément [SVG](/fr/docs/Web/SVG) **`<filter>`** sert de conteneur pour définir des opérations de filtre. Il n'est jamais affiché par lui-même, il est référencé en utilisant l'attribut {{SVGAttr("filter")}} sur un élément SVG ou via la propriété  {{Glossary("CSS")}} {{cssxref("filter")}}.
+L'élément [SVG](/fr/docs/Web/SVG) **`<filter>`** sert de conteneur pour définir des opérations de filtre. Il n'est jamais affiché par lui-même, il est référencé en utilisant l'attribut {{SVGAttr("filter")}} sur un élément SVG ou via la propriété {{Glossary("CSS")}} {{cssxref("filter")}}.
 
 ## Contexte d'utilisation
 
@@ -45,18 +42,18 @@ Cet élément implémente l'interface {{domxref("SVGFilterElement")}}.
 #### SVG
 
 ```html
-<svg width="230" height="120"
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="230"
+  height="120"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <filter id="blurMe">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+  </filter>
 
- <filter id="blurMe">
-  <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
- </filter>
+  <circle cx="60" cy="60" r="50" fill="green" />
 
- <circle cx="60"  cy="60" r="50" fill="green" />
-
- <circle cx="170" cy="60" r="50" fill="green"
-          filter="url(#blurMe)" />
+  <circle cx="170" cy="60" r="50" fill="green" filter="url(#blurMe)" />
 </svg>
 ```
 
@@ -66,14 +63,11 @@ Cet élément implémente l'interface {{domxref("SVGFilterElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Filters 1.0", "#FilterElement", "&lt;filter&gt;")}}         | {{Spec2("Filters 1.0")}} |                     |
-| {{SpecName("SVG1.1", "filters.html#FilterElement", "&lt;filter&gt;")}} | {{Spec2("SVG1.1")}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.filter")}}
+{{Compat}}
 
 ## Voir aussi
 

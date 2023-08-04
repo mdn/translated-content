@@ -1,10 +1,8 @@
 ---
 title: rotate3d()
 slug: Web/CSS/transform-function/rotate3d
-translation_of: Web/CSS/transform-function/rotate3d()
-original_slug: Web/CSS/transform-function/rotate3d()
-browser-compat: css.types.transform-function.rotate3d
 ---
+
 {{CSSRef}}
 
 La fonction **`rotate3d()`** définit une transformation qui déplace un élément autour d'un axe sans le déformer. L'angle de la rotation est un argument de la fonction. Si l'angle indiqué est positif, le mouvement sera appliqué dans le sens horaire et sinon il sera appliqué dans le sens inverse des aiguilles d'une montre. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
@@ -17,7 +15,9 @@ Dans l'espace (en trois dimensions), les rotations ont trois degrés de liberté
 
 ## Syntaxe
 
-    rotate3d(x, y, z, a)
+```
+rotate3d(x, y, z, a)
+```
 
 ### Valeurs
 
@@ -118,8 +118,8 @@ p {
   margin: auto;
 }
 
-.transformation{
-  transform: rotate3d(0,1,0,60deg);
+.transformation {
+  transform: rotate3d(0, 1, 0, 60deg);
   background-color: blue;
 }
 ```

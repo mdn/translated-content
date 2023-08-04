@@ -1,15 +1,8 @@
 ---
 title: font-size-adjust
 slug: Web/CSS/font-size-adjust
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-size-adjust
-translation_of: Web/CSS/font-size-adjust
 ---
+
 **`font-size-adjust`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 (大文字の大きさを定義する) 現在のフォントサイズに相対的な小文字の大きさを設定します。
 
 ```css

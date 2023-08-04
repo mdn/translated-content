@@ -1,15 +1,8 @@
 ---
 title: AuthenticatorAssertionResponse
 slug: Web/API/AuthenticatorAssertionResponse
-tags:
-  - API
-  - AuthenticatorAssertionResponse
-  - Interface
-  - Reference
-  - Web Authentification API
-  - WebAuthn
-translation_of: Web/API/AuthenticatorAssertionResponse
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 L'interface **`AuthenticatorAssertionResponse`**, rattachée à l'[API Web Authentication](/fr/docs/Web/API/Web_Authentication_API), est renvoyée par un appel à {{domxref('CredentialsContainer.get()')}} lorsqu'on a passé un objet {{domxref('PublicKeyCredential')}} en argument. Cette interface fournit une preuve à un service que l'objet possède une paire de clé et que la requête d'authentification est valide et approvée.
@@ -45,10 +38,8 @@ TBD
 
 ## Spécifications
 
-| Spécification                    | État                         | Commentaires         |
-| -------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('WebAuthn')}} | {{Spec2('WebAuthn')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.AuthenticatorAssertionResponse")}}
+{{Compat}}

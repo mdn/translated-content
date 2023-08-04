@@ -1,15 +1,6 @@
 ---
 title: Web 前端开发者
 slug: Learn/Front-end_web_developer
-tags:
-  - CSS
-  - HTML
-  - Web 标准
-  - 初学者
-  - 前端
-  - 工具
-  - 教程
-translation_of: Learn/Front-end_web_developer
 ---
 
 {{LearnSidebar}}
@@ -20,7 +11,7 @@ translation_of: Learn/Front-end_web_developer
 
 ## 涵盖的主题
 
-该路线图涵盖的主题大致范围如下:
+该路线图涵盖的主题大致范围如下：
 
 - 基础准备以及如何学习
 - Web 标准和最佳实践 (例如辅助功能和跨浏览器兼容)
@@ -49,31 +40,31 @@ translation_of: Learn/Front-end_web_developer
 
 ### 起步
 
-学习用时: 1–2 小时
+学习用时：1–2 小时
 
 #### 预备知识
 
 仅需基础的计算机知识。
 
-#### 我怎么知道自己是否可以继续往下学习了?
+#### 我怎么知道自己是否可以继续往下学习了？
 
 本章节没有评估测试，但是请不要跳过它 — 这对于帮你准备好应对后面的练习和学习非常重要。
 
 #### 核心提示
 
-- [安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software) (15 分钟)  (15 分钟)
+- [安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software) (15 分钟) (15 分钟)
 - [Web 和 Web 标准的背景介绍](/zh-CN/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards) (45 分钟)
 - [学习和获得帮助](/zh-CN/docs/Learn/Learning_and_getting_help) (45 分钟)
 
 ### HTML 语义和结构
 
-学习用时: 35–50 小时
+学习用时：35–50 小时
 
 #### 预备知识
 
 基础的计算机知识和基本的 Web 开发环境。
 
-#### 我怎么知道自己是否可以继续往下学习了?
+#### 我怎么知道自己是否可以继续往下学习了？
 
 每个模块的评估练习都是针对测试你主题相关知识掌握能力设计的，完成了每个练习就表示你可以继续往后学习下一个模块了。
 
@@ -85,13 +76,13 @@ translation_of: Learn/Front-end_web_developer
 
 ### 使用 CSS 布局和美化
 
-学习用时: 90–120 小时
+学习用时：90–120 小时
 
 #### 预备知识
 
 学习 CSS 前需要有基础的 HTML 知识，请至少学习完 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)再开始。
 
-#### 我怎么知道自己是否可以继续往下学习了?
+#### 我怎么知道自己是否可以继续往下学习了？
 
 每个模块的评估练习都是针对测试你主题相关知识掌握能力设计的，完成了每个练习就表示你可以继续往后学习下一个模块了。
 
@@ -108,13 +99,13 @@ translation_of: Learn/Front-end_web_developer
 
 ### 使用 JavaScript 开发交互
 
-学习用时: 135–185 小时
+学习用时：135–185 小时
 
 #### 预备知识
 
 学习 JavaScript 前需要有基础的 HTML 知识，请至少学习完 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)再开始。
 
-#### 我怎么知道自己是否可以继续往下学习了?
+#### 我怎么知道自己是否可以继续往下学习了？
 
 每个模块的评估练习都是针对测试你主题相关知识掌握能力设计的，完成了每个练习就表示你可以继续往后学习下一个模块了。
 
@@ -128,13 +119,13 @@ translation_of: Learn/Front-end_web_developer
 
 ### Web 表单 — 处理用户数据
 
-学习用时: 40–50 小时
+学习用时：40–50 小时
 
 #### 预备知识
 
-高效使用 Web 表单需要 HTML、CSS 和 JavaScript 知识。鉴于与表格打交道的复杂性，这一节被独立了出来。
+高效使用 Web 表单需要 HTML、CSS 和 JavaScript 知识。鉴于与表单打交道的复杂性，这一节被独立了出来。
 
-#### 我怎么知道自己是否可以继续往下学习了?
+#### 我怎么知道自己是否可以继续往下学习了？
 
 每个模块的评估练习都是针对测试你主题相关知识掌握能力设计的，完成了每个练习就表示你可以继续往后学习下一个模块了。
 
@@ -144,30 +135,30 @@ translation_of: Learn/Front-end_web_developer
 
 ### 让所有人都能使用 Web
 
-学习用时: 45-55 小时
+学习用时：45-55 小时
 
 #### 预备知识
 
 学习本章前最好对 HTML、CSS 和 JavaScript 都有一定了解— 本章很多技术和最佳实践都需要用到它们。
 
-#### 我怎么知道自己是否可以继续往下学习了?
+#### 我怎么知道自己是否可以继续往下学习了？
 
 每个模块的评估练习都是针对测试你主题相关知识掌握能力设计的，完成了每个练习就表示你可以继续往后学习下一个模块了。
 
 #### 核心模块
 
 - [跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing) (25–30 小时阅读/练习)
-- [可访问性（辅助功能）](/zh-CN/docs/learn/Accessibility) (20–25 小时阅读/练习)
+- [无障碍（辅助功能）](/zh-CN/docs/learn/Accessibility) (20–25 小时阅读/练习)
 
 ### 现代工具
 
-学习用时: 55–90 小时
+学习用时：55–90 小时
 
 #### 预备知识
 
 学习本章前最好对 HTML、CSS 和 JavaScript 都有一定了解— 本章很多技术和最佳实践都需要用到它们。
 
-#### 我怎么知道自己是否可以继续往下学习了?
+#### 我怎么知道自己是否可以继续往下学习了？
 
 本章节各模块均没有评估测试，但是第 2 章和第 3 章的学习教程应该能够让你很好的掌握现代工具的要义。
 

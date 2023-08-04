@@ -1,23 +1,9 @@
 ---
-title: '<iframe> : l''élément de cadre intégré'
+title: "<iframe> : l'élément de cadre intégré"
 slug: Web/HTML/Element/iframe
-tags:
-  - Content
-  - Element
-  - Embedded content
-  - Embedding
-  - Frames
-  - HTML
-  - HTML embedded content
-  - Inline Frames
-  - Reference
-  - Web
-  - embedded
-  - iframe
-translation_of: Web/HTML/Element/iframe
-browser-compat: html.elements.iframe
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<iframe>`** représente un [contexte de navigation](/fr/docs/Glossary/Browsing_context) imbriqué qui permet en fait d'obtenir une page HTML intégrée dans la page courante.
 
@@ -211,7 +197,7 @@ En utilisant l'élément [`HTMLIFrameElement`](/fr/docs/Web/API/HTMLIFrameElemen
 
 Depuis l'_iframe_, un script peut obtenir une référence à la fenêtre parente via la propriété [`window.parent`](/fr/docs/Web/API/Window/parent).
 
-Les scripts qui tentent d'accéder au contenu de l'_iframe_ doivent respecter [les règles de même origine](/fr/docs/Web/Security/Same-origin_policy "Same origin policy for JavaScript") et ne peuvent pas accéder à la plupart des propriétés d'une autre fenêtre s'ils ont été chargés depuis un domaine différent. Cela s'applique également aux scripts d'un _iframe_ qui souhaitent accéder au contexte englobant. On peut toutefois communiquer entre différents domaines grâce à la méthode [`Window.postMessage()`](/fr/docs/Web/API/Window/postMessage).
+Les scripts qui tentent d'accéder au contenu de l'_iframe_ doivent respecter [les règles de même origine](/fr/docs/Web/Security/Same-origin_policy) et ne peuvent pas accéder à la plupart des propriétés d'une autre fenêtre s'ils ont été chargés depuis un domaine différent. Cela s'applique également aux scripts d'un _iframe_ qui souhaitent accéder au contexte englobant. On peut toutefois communiquer entre différents domaines grâce à la méthode [`Window.postMessage()`](/fr/docs/Web/API/Window/postMessage).
 
 ## Positionnement et redimensionnement
 
@@ -226,8 +212,11 @@ L'exemple qui suit utilise la page située à <https://example.org> pour l'inté
 #### HTML
 
 ```html
-<iframe src="https://example.org"
-        title="Exemple d'iframe" width="400" height="300">
+<iframe
+  src="https://example.org"
+  title="Exemple d'iframe"
+  width="400"
+  height="300">
 </iframe>
 ```
 

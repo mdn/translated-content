@@ -1,15 +1,8 @@
 ---
 title: べき乗代入 (**=)
 slug: Web/JavaScript/Reference/Operators/Exponentiation_assignment
-tags:
-  - 代入演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.exponentiation_assignment
-translation_of: Web/JavaScript/Reference/Operators/Exponentiation_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 べき乗代入演算子 (`**=`) は、変数の値を右オペランドでべき乗します。
@@ -44,5 +37,5 @@ bar **= 'foo' // NaN
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)
 - [べき乗演算子](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation)

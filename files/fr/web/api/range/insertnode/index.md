@@ -1,19 +1,21 @@
 ---
 title: Range.insertNode()
 slug: Web/API/Range/insertNode
-translation_of: Web/API/Range/insertNode
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode **`Range.insertNode()`** insère un nœud au début du {{domxref("Range")}}.
 
-Le nouveau nœud est inséré au point de départ du `Range`. Si le nouveau nœud est sur le point d’être ajouté à un {{domxref("Node")}} texte, ce `Node` est coupé en deux au point d’insertion, et l’insertion se fait entre les deux nœuds texte.
+Le nouveau nœud est inséré au point de départ du `Range`. Si le nouveau nœud est sur le point d'être ajouté à un {{domxref("Node")}} texte, ce `Node` est coupé en deux au point d'insertion, et l'insertion se fait entre les deux nœuds texte.
 
 Si le nouveau nœud est un fragment de document, les enfants du fragment sont insérés à la place.
 
 ## Syntaxe
 
-    range.insertNode(newNode);
+```js
+range.insertNode(newNode);
+```
 
 ### Paramètres
 
@@ -32,15 +34,12 @@ range.insertNode(newNode);
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                                       | Commentaire         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG', '#dom-range-insertnode', 'Range.insertNode()')}}                                             | {{Spec2('DOM WHATWG')}}             | Pas de changement   |
-| {{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-insertNode', 'Range.insertNode()')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Range.insertNode")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [L’index des interfaces DOM](/en-US/docs/Web/API/Document_Object_Model)
+- [L'index des interfaces DOM](/fr/docs/Web/API/Document_Object_Model)

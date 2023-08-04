@@ -1,18 +1,9 @@
 ---
 title: 座標変換
 slug: Web/API/Canvas_API/Tutorial/Transformations
-tags:
-  - キャンバス
-  - グラフィック
-  - ガイド
-  - HTML
-  - HTML5
-  - 中級者
-  - ウェブ
-translation_of: Web/API/Canvas_API/Tutorial/Transformations
-original_slug: Web/Guide/HTML/Canvas_tutorial/Transformations
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
 これまでのチュートリアルで、[キャンバスのグリッド](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)や**座標空間**について学びました。今までは既定のグリッドしか使用しておらず、また必要に応じてキャンバス全体のサイズを変更していました。座標変換 (transformations) には、原点を別の場所に移したり、回転したり、拡大縮小したりといった、より強力な手段があります。
 
@@ -133,7 +124,7 @@ draw();
 
 この例は、まずはキャンバスの原点で矩形を回転するために `rotate()` メソッドを使用して、次に矩形自身の中心で回転するために `translate()` の助けを借りています。
 
-> **Note:** 角度はラジアン (radians) で表しており、度数 (degrees) ではありません。これは `radians = (Math.PI/180)*degrees` のようにすると変換できます。
+> **メモ:** 角度はラジアン (radians) で表しており、度数 (degrees) ではありません。これは `radians = (Math.PI/180)*degrees` のようにすると変換できます。
 
 ```js
 function draw() {
@@ -251,7 +242,6 @@ draw();
   - : 現在の座標変換を単位行列にリセットして、同じ引数で `transform()` メソッドを呼び出します。これは基本的に、現在の座標変換をアンドゥしてから指定した座標変換を行う操作を一度に行うものです。
 - {{domxref("CanvasRenderingContext2D.resetTransform", "resetTransform()")}}
   - : 現在の座標変換を単位行列にリセットします。これは `ctx.setTransform(1, 0, 0, 1, 0, 0);` を呼び出すことと同じです。
-</dl>
 
 ### `transform` と `setTransform` の例
 

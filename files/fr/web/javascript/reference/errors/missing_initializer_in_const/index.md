@@ -1,20 +1,17 @@
 ---
-title: 'SyntaxError: missing = in const declaration'
+title: "SyntaxError: missing = in const declaration"
 slug: Web/JavaScript/Reference/Errors/Missing_initializer_in_const
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_initializer_in_const
-original_slug: Web/JavaScript/Reference/Erreurs/Missing_initializer_in_const
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    SyntaxError: Const must be initalized (Edge)
-    SyntaxError: missing = in const declaration (Firefox)
-    SyntaxError: Missing initializer in const declaration (Chrome)
+```
+SyntaxError: Const must be initalized (Edge)
+SyntaxError: missing = in const declaration (Firefox)
+SyntaxError: Missing initializer in const declaration (Chrome)
+```
 
 ## Type d'erreur
 

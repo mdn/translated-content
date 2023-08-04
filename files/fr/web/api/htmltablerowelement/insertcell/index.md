@@ -1,24 +1,26 @@
 ---
 title: HTMLTableRowElement.insertCell()
 slug: Web/API/HTMLTableRowElement/insertCell
-translation_of: Web/API/HTMLTableRowElement/insertCell
 ---
+
 {{APIRef("HTML DOM")}}
 
 La méthode **`HTMLTableRowElement.insertCell()`** insère une nouvelle cellule ({{HtmlElement("td")}}) dans une ligne de tableau ({{HtmlElement("tr")}}) et renvoie une référence sur cette cellule.
 
-> **Note :** `insertCell()` insère la cellule directement dans la ligne. La cellule n’a pas besoin d’être ajoutée séparément comme cela serait le cas si {{domxref("Document.createElement()")}} avait été utilisé pour créer le nouvel élément `<td>`.
+> **Note :** `insertCell()` insère la cellule directement dans la ligne. La cellule n'a pas besoin d'être ajoutée séparément comme cela serait le cas si {{domxref("Document.createElement()")}} avait été utilisé pour créer le nouvel élément `<td>`.
 
 ## Syntaxe
 
-    var newCell = HTMLTableRowElement.insertCell(index);
+```js
+var newCell = HTMLTableRowElement.insertCell(index);
+```
 
 {{domxref("HTMLTableRowElement")}} est une référence sur un élément HTML {{HtmlElement("tr")}}.
 
 ### Paramètres
 
 - `index` {{optional_inline}}
-  - : `index` est l’index de cellule de la nouvelle cellule. Si `index` est `-1` ou égal au nombre actuel de cellules, la nouvelle cellule est ajoutée à la fin la ligne. Si `index` est supérieur au nombre de cellules, une exception `IndexSizeError` sera levée. Si `index` est omis, la valeur sera `-1` par défaut.
+  - : `index` est l'index de cellule de la nouvelle cellule. Si `index` est `-1` ou égal au nombre actuel de cellules, la nouvelle cellule est ajoutée à la fin la ligne. Si `index` est supérieur au nombre de cellules, une exception `IndexSizeError` sera levée. Si `index` est omis, la valeur sera `-1` par défaut.
 
 ### Valeur de retour
 
@@ -34,9 +36,15 @@ Nous utilisons ensuite `insertCell(0)` pour insérer une nouvelle cellule dans l
 
 ```html
 <table id="my-table">
-  <tr><td>Row 1</td></tr>
-  <tr><td>Row 2</td></tr>
-  <tr><td>Row 3</td></tr>
+  <tr>
+    <td>Row 1</td>
+  </tr>
+  <tr>
+    <td>Row 2</td>
+  </tr>
+  <tr>
+    <td>Row 3</td>
+  </tr>
 </table>
 ```
 
@@ -54,12 +62,12 @@ function addRow(tableID) {
   let newCell = newRow.insertCell(0);
 
   // Ajoute un nœud texte à la cellule
-  let newText = document.createTextNode('New bottom row');
+  let newText = document.createTextNode("New bottom row");
   newCell.appendChild(newText);
 }
 
 // Appelle addRow() avec l’ID de la table
-addRow('my-table');
+addRow("my-table");
 ```
 
 ### Résultat
@@ -68,16 +76,13 @@ addRow('my-table');
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                           | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("HTML WHATWG", "tables.html#dom-tr-insertcell", "HTMLTableRowElement.insertCell()")}} | {{Spec2("HTML WHATWG")}} |                      |
-| {{SpecName("DOM2 HTML", "html.html#ID-68927016", "HTMLTableRowElement.insertCell()")}}             | {{Spec2("DOM2 HTML")}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLTableRowElement.insertCell")}}
+{{Compat}}
 
 ## Voir aussi
 
 - {{domxref("HTMLTableElement.insertRow()")}}
-- L’élément HTML représentant les cellules&nbsp;: {{domxref("HTMLTableCellElement")}}
+- L'élément HTML représentant les cellules&nbsp;: {{domxref("HTMLTableCellElement")}}

@@ -1,22 +1,17 @@
 ---
 title: Document.queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
-tags:
-  - API
-  - Commandes
-  - DOM
-  - Document
-  - Méthodes
-  - editeur
-translation_of: Web/API/Document/queryCommandSupported
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode **`Document.queryCommandSupported()`** indique si la commande d'éditeur spécifiée est prise en charge par le navigateur.
 
 ## Syntaxe
 
-    isSupported = document.queryCommandSupported(command);
+```js
+isSupported = document.queryCommandSupported(command);
+```
 
 ### Paramètres
 
@@ -36,20 +31,18 @@ La commande `'paste'` (_coller_) renvoie `false` (_faux_), pas seulement si la f
 ```js
 var flg = document.queryCommandSupported("SelectAll");
 
-if(flg) {
+if (flg) {
   // ...Faire quelque chose
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire          |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML Editing','#querycommandsupported()','querycommandsupported')}} | {{Spec2('HTML Editing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.queryCommandSupported")}}
+{{Compat}}
 
 ## Voir aussi
 

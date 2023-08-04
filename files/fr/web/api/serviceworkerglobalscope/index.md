@@ -1,20 +1,11 @@
 ---
 title: ServiceWorkerGlobalScope
 slug: Web/API/ServiceWorkerGlobalScope
-tags:
-  - API
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorkerGlobalScope
-  - TopicStub
-translation_of: Web/API/ServiceWorkerGlobalScope
 ---
+
 {{APIRef("Service Workers API")}}
 
-The **`ServiceWorkerGlobalScope`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) represents the global execution context of a service worker.
+The **`ServiceWorkerGlobalScope`** interface of the [Service Worker API](/fr/docs/Web/API/Service_Worker_API) represents the global execution context of a service worker.
 
 Developers should keep in mind that the ServiceWorker state is not persisted across the termination/restart cycle, so each event handler should assume it's being invoked with a bare, default global state.
 
@@ -73,7 +64,7 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
 - {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}}
   - : Allows the current service worker registration to progress from waiting to active state while service worker clients are using it.
 
-`ServiceWorkerGlobalScope` implements {{domxref("WorkerGlobalScope")}} — which implements {{domxref("WindowOrWorkerGlobalScope")}}. Therefore it also has the following property available to it:
+`ServiceWorkerGlobalScope` implements {{domxref("WorkerGlobalScope")}}. Therefore it also has the following property available to it:
 
 - {{domxref("GlobalFetch.fetch()")}}
   - : Starts the process of fetching a resource. This returns a promise that resolves to the {{domxref("Response")}} object representing the response to your request. This algorithm is the entry point for the fetch handling handed to the service worker context.
@@ -85,45 +76,46 @@ This code snippet is from the [service worker prefetch sample](https://github.co
 The code also handles exceptions thrown from the {{domxref("GlobalFetch.fetch", "fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.
 
 ```js
-self.addEventListener('fetch', function(event) {
-  console.log('Handling fetch event for', event.request.url);
+self.addEventListener("fetch", function (event) {
+  console.log("Handling fetch event for", event.request.url);
 
   event.respondWith(
-    caches.match(event.request).then(function(response) {
+    caches.match(event.request).then(function (response) {
       if (response) {
-        console.log('Found response in cache:', response);
+        console.log("Found response in cache:", response);
 
         return response;
       }
-      console.log('No response found in cache. About to fetch from network...');
+      console.log("No response found in cache. About to fetch from network...");
 
-      return fetch(event.request).then(function(response) {
-        console.log('Response from network is:', response);
+      return fetch(event.request).then(
+        function (response) {
+          console.log("Response from network is:", response);
 
-        return response;
-      }, function(error) {
-        console.error('Fetching failed:', error);
+          return response;
+        },
+        function (error) {
+          console.error("Fetching failed:", error);
 
-        throw error;
-      });
-    })
+          throw error;
+        },
+      );
+    }),
   );
 });
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                                                        | Status                               | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('Service Workers', '#serviceworkerglobalscope-interface', 'ServiceWorkerGlobalScope')}} | {{Spec2('Service Workers')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerGlobalScope")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
-- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}

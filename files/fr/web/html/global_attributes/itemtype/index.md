@@ -1,16 +1,8 @@
 ---
 title: itemtype
 slug: Web/HTML/Global_attributes/itemtype
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Micro-données
-  - Microdata
-  - Référence(2)
-translation_of: Web/HTML/Global_attributes/itemtype
-original_slug: Web/HTML/Attributs_universels/itemtype
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`itemtype`** définit l'URL du vocabulaire qui sera utilisé pour définir les propriétés des objets dans la structure de données. `itemscope` est utilisé afin de définir la portée, dans le document, où le vocabulaire défini sera actif.
@@ -29,7 +21,9 @@ Google et les autres moteurs de recherche participent au vocabulaire défini par
 
 ### Syntaxe formelle
 
-    itemtype = URL
+```
+itemtype = URL
+```
 
 ### Exemple simple
 
@@ -70,22 +64,18 @@ Google et les autres moteurs de recherche participent au vocabulaire défini par
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------ |
-| {{SpecName('HTML Microdata', "#dfn-itemtype", "itemtype")}}                 | {{Spec2('HTML Microdata')}} |              |
-| {{SpecName('HTML WHATWG', "microdata.html#attr-itemtype", "itemprop")}} | {{Spec2('HTML WHATWG')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.itemtype")}}
+{{Compat}}
 
 ## Voir aussi
 
 - [Les différents attributs universels](/fr/docs/Web/HTML/Attributs_universels)
 - Les autres attributs universels relatifs aux microdonnées :
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/fr/docs/Web/HTML/Global_attributes#itemid)
+  - [`itemprop`](/fr/docs/Web/HTML/Global_attributes#itemprop)
+  - [`itemref`](/fr/docs/Web/HTML/Global_attributes#itemref)
+  - [`itemscope`](/fr/docs/Web/HTML/Global_attributes#itemscope)

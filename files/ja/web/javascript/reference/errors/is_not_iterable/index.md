@@ -1,13 +1,8 @@
 ---
-title: 'TypeError: ''x'' is not iterable'
+title: "TypeError: 'x' is not iterable"
 slug: Web/JavaScript/Reference/Errors/is_not_iterable
-tags:
-  - Error
-  - JavaScript
-  - Reference
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/is_not_iterable
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "is not iterable" は、 [for…of](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) の右辺として与えられた値や、 {{jsxref("Promise.all")}} または {{jsxref("TypedArray.from")}} のような関数の引数として与えられた値が[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)ではなかった場合に発生します。
@@ -25,13 +20,13 @@ TypeError: 'x' is not a function or its return value is not iterable (Chrome)
 
 ## エラーの原因
 
-[for…of](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) の右辺、 {{jsxref("Promise.all")}} や {{jsxref("TypedArray.from")}} などの引数として指定された値が[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)ではありません。反復可能なものは、{{jsxref("Array")}}、{{jsxref("String")}}、{{jsxref("Map")}} 等のような組み込み反復可能型や、ジェネレーターの結果、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)を実装しているオブジェクトが成ることができます。</p>
+[for…of](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) の右辺、 {{jsxref("Promise.all")}} や {{jsxref("TypedArray.from")}} などの引数として指定された値が[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)ではありません。反復可能なものは、{{jsxref("Array")}}、{{jsxref("String")}}、{{jsxref("Map")}} 等のような組み込み反復可能型や、ジェネレーターの結果、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)を実装しているオブジェクトが成ることができます。</p>
 
 ## 例
 
 ### オブジェクトのプロパティの反復処理
 
-JavaScript では、 {{jsxref("Object")}} は[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)を実装していない限り反復処理できません。したがって、オブジェクトのプロパティを反復処理するために [for…of](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) を使用することはできません。</p>
+JavaScript では、 {{jsxref("Object")}} は[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)を実装していない限り反復処理できません。したがって、オブジェクトのプロパティを反復処理するために [for…of](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) を使用することはできません。</p>
 
 ```js example-bad
 var obj = { 'France': 'Paris', 'England': 'London' };
@@ -101,7 +96,7 @@ for (let x of generate(1,2))
 
 ### 独自の反復可能オブジェクトでの反復処理
 
-独自の反復可能オブジェクトは、 {{jsxref("Symbol.iterator")}} メソッドを実装することで作成することができます。 iterator メソッドはイテレーターであるオブジェクト、すなわち next メソッドを返す必要があります。
+独自の反復可能オブジェクトは、 {{jsxref("Symbol.iterator")}} メソッドを実装することで作成することができます。 iterator メソッドはイテレーターであるオブジェクト、すなわち next メソッドを返す必要があります。
 
 ```js example-bad
 const myEmptyIterable = {
@@ -127,10 +122,9 @@ Array.from(myEmptyIterable);  // []
 
 ## 関連情報
 
-- [反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)
+- [反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)
 - {{jsxref("Object.keys")}}
 - {{jsxref("Object.entries")}}
 - {{jsxref("Map")}}
 - [ジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators)
 - [for…of](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
-</ul>

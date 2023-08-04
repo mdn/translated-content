@@ -1,16 +1,8 @@
 ---
 title: CredentialsContainer.get()
 slug: Web/API/CredentialsContainer/get
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Méthode
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-translation_of: Web/API/CredentialsContainer/get
 ---
+
 {{APIRef("Credential Management")}}{{SeeCompatTable}}
 
 La méthode **`get()`**, rattachée à l'interface {{domxref("CredentialsContainer")}}, renvoie une promesse ({{jsxref("Promise")}}) qui est résolue en une instance de {{domxref("Credential")}} correspondant aux paramètres fournis. Si aucune correspondance n'est trouvée, la promesse sera résolue avec la valeur {{jsxref("null")}}.
@@ -23,7 +15,9 @@ Cette méthode récupère les informations d'authentification en appelant la mé
 
 ## Syntaxe
 
-    var promise = CredentialsContainer.get([options])
+```js
+var promise = CredentialsContainer.get([options]);
+```
 
 ### Paramètres
 
@@ -47,11 +41,8 @@ Une promesse ({{jsxref("Promise")}}) qui est résolue avec une instance {{domxre
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management','#dom-credentialscontainer-get','get()')}} | {{Spec2('Credential Management')}} | Définition initiale. |
-| {{SpecName('WebAuthn')}}                                                                         | {{Spec2('WebAuthn')}}                 | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CredentialsContainer.get")}}
+{{Compat}}

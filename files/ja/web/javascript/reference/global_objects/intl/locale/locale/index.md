@@ -1,22 +1,13 @@
 ---
 title: Intl.Locale() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
-tags:
-  - コンストラクター
-  - 国際化
-  - Intl
-  - JavaScript
-  - ロケール
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Locale.Locale
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
 ---
+
 {{JSRef}}
 
 **`Intl.Locale`** コンストラクターは、 Intl オブジェクトの標準組み込みプロパティで、 Unicode ロケール識別子を表します。
 
 {{EmbedInteractiveExample("pages/js/intl-locale.html")}}
-
 
 ## 構文
 
@@ -64,4 +55,3 @@ console.log(locale.hourCycle); // Prints "h12"
 - {{jsxref("Intl.Collator")}}
 - [Unicode ロケール識別子の仕様書](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)
 - [FormatJS における `Intl.Locale` のポリフィル](https://formatjs.io/docs/polyfills/intl-locale)
-

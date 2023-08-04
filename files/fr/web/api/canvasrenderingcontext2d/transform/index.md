@@ -1,8 +1,8 @@
 ---
 title: CanvasRenderingContext2D.transform()
 slug: Web/API/CanvasRenderingContext2D/transform
-translation_of: Web/API/CanvasRenderingContext2D/transform
 ---
+
 {{APIRef}}
 
 La méthode **CanvasRenderingContext2D.transform ()** de l'API Canvas 2D multiplie la matrice de transformation courante par la matrice décrite par les arguments de cette méthode. Vous pouvez mettre à l'échelle, faire pivoter, déplacer et incliner le contexte.
@@ -11,7 +11,9 @@ Voir aussi la méthode {{domxref ("CanvasRenderingContext2D.setTransform()", "se
 
 ## Syntaxe
 
-    void ctx.transform(a, b, c, d, e, f);
+```js
+void ctx.transform(a, b, c, d, e, f);
+```
 
 La matrice de transformation est décrite par : <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
 
@@ -45,8 +47,8 @@ Ceci est seulement un fragment de code simple utilisant la méthode `transform`.
 #### JavaScript
 
 ```js
-var canevas = document.getElementById('canevas');
-var ctx = canevas.getContext('2d');
+var canevas = document.getElementById("canevas");
+var ctx = canevas.getContext("2d");
 
 ctx.transform(1, 1, 0, 1, 0, 0);
 ctx.fillRect(0, 0, 100, 100);
@@ -64,7 +66,8 @@ Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct d
 </div>
 <textarea id="code" class="playable-code">
 ctx.transform(1,1,0,1,0,0);
-ctx.fillRect(0,0,100,100);</textarea>
+ctx.fillRect(0,0,100,100);</textarea
+>
 ```
 
 ```js hidden
@@ -82,15 +85,15 @@ function drawCanvas() {
   ctx.restore();
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -100,13 +103,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-transform", "CanvasRenderingContext2D.transform")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.transform")}}
+{{Compat}}
 
 ## Voir aussi
 

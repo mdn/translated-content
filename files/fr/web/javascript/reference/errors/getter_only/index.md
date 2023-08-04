@@ -1,25 +1,21 @@
 ---
-title: 'TypeError: setting a property that has only a getter'
+title: "TypeError: setting a property that has only a getter"
 slug: Web/JavaScript/Reference/Errors/Getter_only
-tags:
-  - Erreurs
-  - JavaScript
-  - Mode strict
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Getter_only
-original_slug: Web/JavaScript/Reference/Erreurs/Getter_only
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
-    TypeError: setting getter-only property "x" (Firefox)
-    TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chrome)
+```
+TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
+TypeError: setting getter-only property "x" (Firefox)
+TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chrome)
+```
 
 ## Type d'erreur
 
-{{jsxref("TypeError")}}, uniquement en [mode strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+{{jsxref("TypeError")}}, uniquement en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
 
 ## Quel est le problème ?
 
@@ -34,11 +30,11 @@ Dans l'exemple qui suit, on voit comment créer un accesseur sur une propriété
 
 function Archiver() {
   var temperature = null;
-  Object.defineProperty(this, 'temperature', {
-    get: function() {
-      console.log('get!');
+  Object.defineProperty(this, "temperature", {
+    get: function () {
+      console.log("get!");
       return temperature;
-    }
+    },
   });
 }
 
@@ -58,18 +54,20 @@ function Archiver() {
   var temperature = null;
   var archive = [];
 
-  Object.defineProperty(this, 'temperature', {
-    get: function() {
-      console.log('get!');
+  Object.defineProperty(this, "temperature", {
+    get: function () {
+      console.log("get!");
       return temperature;
     },
-    set: function(value) {
+    set: function (value) {
       temperature = value;
       archive.push({ val: temperature });
-    }
+    },
   });
 
-  this.getArchive = function() { return archive; };
+  this.getArchive = function () {
+    return archive;
+  };
 }
 
 var arc = new Archiver();

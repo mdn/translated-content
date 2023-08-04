@@ -1,18 +1,11 @@
 ---
 title: Map.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-browser-compat: javascript.builtins.Map.values
 ---
+
 {{JSRef}}
 
-O método **`values()`** retorna um novo objeto **[iterador](/pt-BR/docs/Web/JavaScript/Guide/Iterators_and_Generators)** que contém o valor 
+O método **`values()`** retorna um novo objeto **[iterador](/pt-BR/docs/Web/JavaScript/Guide/Iterators_and_Generators)** que contém o valor
 de cada elemento dentro do objeto `Map` na ordem em que foram inseridos.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-values.html")}}
@@ -25,7 +18,7 @@ values()
 
 ### Valor retornado
 
-Um novo objeto {{jsxref("Map")}} iterador. 
+Um novo objeto {{jsxref("Map")}} iterador.
 
 ## Exemplos
 

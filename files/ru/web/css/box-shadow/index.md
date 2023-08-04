@@ -1,19 +1,6 @@
 ---
 title: box-shadow
 slug: Web/CSS/box-shadow
-tags:
-  - CSS
-  - CSS Backgrounds and Borders
-  - CSS Property
-  - CSS Styles
-  - HTML Colors
-  - Reference
-  - Shadows
-  - Styles
-  - Styling HTML
-  - box-shadow
-  - recipe:css-property
-browser-compat: css.properties.box-shadow
 ---
 {{CSSRef}}
 
@@ -22,7 +9,6 @@ browser-compat: css.properties.box-shadow
 {{EmbedInteractiveExample("pages/css/box-shadow.html")}}
 
 Свойство `box-shadow` включает отбрасывание тени от границ практически любого элемента. Если для элемента с тенью задан {{cssxref("border-radius")}}, то отбрасываемая тень также будет с закруглёнными углами. Порядок наложения нескольких теней такой же, что и у [текстовых теней](/ru/docs/Web/CSS/text-shadow): первая указанная тень будет поверх остальных.
-
 
 [Генератор теней](/ru/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator) — интерактивный инструмент, позволяющий сгенерировать значение для `box-shadow`.
 

@@ -1,13 +1,8 @@
 ---
 title: name
 slug: Web/Manifest/name
-tags:
-  - マニフェスト
-  - ウェブ
-  - name
-browser-compat: html.manifest.name
-translation_of: Web/Manifest/name
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">
@@ -23,7 +18,7 @@ translation_of: Web/Manifest/name
   </tbody>
 </table>
 
-_`name`_ メンバーは文字列で、ウェブアプリケーションの名前を通常ユーザーに表示される形 (例えば、他のアプリケーションとのリストの中や、アイコンのラベルなど) で表します。 `name` は書字方向に対応しており、 [`dir`](/ja/docs/Web/Manifest/dir) および [`lang`](/ja/docs/Web/Manifest/lang) の各マニフェストメンバーの値に基づいて左書きで表示されたり右書きで表示されたりします。
+`name` メンバーは文字列で、ウェブアプリケーションの名前を通常ユーザーに表示される形 (例えば、他のアプリケーションとのリストの中や、アイコンのラベルなど) で表します。 `name` は書字方向に対応しており、 [`dir`](/ja/docs/Web/Manifest/dir) および [`lang`](/ja/docs/Web/Manifest/lang) の各マニフェストメンバーの値に基づいて左書きで表示されたり右書きで表示されたりします。
 
 ## 例
 

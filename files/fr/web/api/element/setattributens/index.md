@@ -1,13 +1,8 @@
 ---
 title: element.setAttributeNS
 slug: Web/API/Element/setAttributeNS
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthodes
-translation_of: Web/API/Element/setAttributeNS
 ---
+
 {{ APIRef("DOM") }}
 
 `setAttributeNS` ajoute un nouvel attribut ou modifie la valeur d'un attribut avec un espace de noms et un nom donnés.
@@ -15,10 +10,7 @@ translation_of: Web/API/Element/setAttributeNS
 ## Syntaxe
 
 ```js
-element.setAttributeNS(
-namespace,
-name,
-value)
+element.setAttributeNS(namespace, name, value);
 ```
 
 - `namespace` est une chaîne spécifiant l'espace de noms de l'attribut.
@@ -27,14 +19,16 @@ value)
 
 ## Exemple
 
-    var d = document.getElementById("d1");
-    d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
+```js
+var d = document.getElementById("d1");
+d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
+```
 
 ## Notes
 
 {{ DOMAttributeMethods() }}
 
-`setAttributeNS`  est la seule méthode pour les attributs d'espace nom qui attend le nom qualifié complet, c'est-à-dire `"namespace:localname"`.
+`setAttributeNS` est la seule méthode pour les attributs d'espace nom qui attend le nom qualifié complet, c'est-à-dire `"namespace:localname"`.
 
 ## Spécification
 

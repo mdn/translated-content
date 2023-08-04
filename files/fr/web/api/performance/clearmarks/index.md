@@ -1,14 +1,8 @@
 ---
 title: performance.clearMarks()
 slug: Web/API/Performance/clearMarks
-tags:
-  - API
-  - Method
-  - Méthode
-  - Reference
-  - Performance web
-translation_of: Web/API/Performance/clearMarks
 ---
+
 {{APIRef("User Timing API")}}
 
 La méthode **`clearMarks()`** supprime les _marqueurs nommés_ du tampon d'entrée des performances du navigateur. Si la méthode est appelée sans arguments, toutes les {{domxref("PerformanceEntry", "entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType", "entryType")}} de « `mark` » seront supprimées du tampon d'entrée de performance.
@@ -18,8 +12,8 @@ La méthode **`clearMarks()`** supprime les _marqueurs nommés_ du tampon d'entr
 ## Syntaxe
 
 ```js
-  performance.clearMarks();
-  performance.clearMarks(name);
+performance.clearMarks();
+performance.clearMarks(name);
 ```
 
 ### Arguments
@@ -39,7 +33,8 @@ L'exemple suivant montre les deux utilisations de la méthode `clearMarks()`.
 // Créé une petite aide pour montrer combien d'entrées PerformanceMark il y a.
 function logMarkCount() {
   console.log(
-    "J'ai trouvé autant d'entrées : " + performance.getEntriesByType("mark").length
+    "J'ai trouvé autant d'entrées : " +
+      performance.getEntriesByType("mark").length,
   );
 }
 
@@ -51,25 +46,21 @@ performance.mark("monkey");
 performance.mark("dog");
 performance.mark("dog");
 
-logMarkCount() // "J'ai trouvé autant d'entrées : 6"
+logMarkCount(); // "J'ai trouvé autant d'entrées : 6"
 
 // Supprime seulement les entrées "squirrel" de PerformanceMark.
-performance.clearMarks('squirrel');
-logMarkCount() // "J'ai trouvé autant d'entrées : 4"
+performance.clearMarks("squirrel");
+logMarkCount(); // "J'ai trouvé autant d'entrées : 4"
 
 // Supprime toutes les entrées de PerformanceMark.
 performance.clearMarks();
-logMarkCount() // "J'ai trouvé autant d'entrées : 0"
+logMarkCount(); // "J'ai trouvé autant d'entrées : 0"
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                       | Commentaire                      |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------------------- |
-| {{SpecName('User Timing Level 2', '#dom-performance-clearmarks',
-        'clearMarks()')}} | {{Spec2('User Timing Level 2')}} | Clarification de `clearMarks()`. |
-| {{SpecName('User Timing', '#dom-performance-clearmarks', 'clearMarks()')}}                     | {{Spec2('User Timing')}}             | Définition initiale.             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.clearMarks")}}
+{{Compat}}

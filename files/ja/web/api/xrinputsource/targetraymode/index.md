@@ -1,26 +1,8 @@
 ---
 title: XRInputSource.targetRayMode
 slug: Web/API/XRInputSource/targetRayMode
-tags:
-  - API
-  - AR
-  - Pointing
-  - Property
-  - Ray
-  - Read-only
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSource
-  - direction
-  - pointer
-  - target
-  - targetRayMode
-translation_of: Web/API/XRInputSource/targetRayMode
 ---
+
 {{APIRef("WebXR Device API")}}
 
 {{domxref("XRInputSource")}} の読み取り専用プロパティ **`targetRayMode`** は、入力ソースのターゲット光線を生成する方法と、それをユーザーに提示する方法を示します。
@@ -48,7 +30,7 @@ let rayMode = xrInputSource.targetRayMode;
 - `screen` (画面)
   - : ターゲット光線の方向は、タッチスクリーン、マウス、またはその他の触覚入力機器をタップして示します。
 - `tracked-pointer` (追跡ポインター)
-  - : ターゲティングは、ユーザーがターゲットの方向に向けるハンドヘルド機器またはハンドトラッキングシステムを使用して行われます。 ターゲット光線は、手 (または手の中のオブジェクト) からターゲット方向に伸びます。方向はプラットフォーム固有のルールを使用して決定されますが、そのようなルールが存在しない場合は、ユーザーが人差し指を手からまっすぐに向けていると仮定して方向が選択されます。 
+  - : ターゲティングは、ユーザーがターゲットの方向に向けるハンドヘルド機器またはハンドトラッキングシステムを使用して行われます。 ターゲット光線は、手 (または手の中のオブジェクト) からターゲット方向に伸びます。方向はプラットフォーム固有のルールを使用して決定されますが、そのようなルールが存在しない場合は、ユーザーが人差し指を手からまっすぐに向けていると仮定して方向が選択されます。
 
 ## 使用上の注意
 
@@ -64,16 +46,16 @@ let rayMode = xrInputSource.targetRayMode;
 
 ```js
 function updateInputSources(session, frame, refSpace) {
-  for (let source of session.getInputSources()) {
-    let targetRayPose = frame.getPose(inputSource.targetRaySpace, refSpace);
+  for (let source of session.getInputSources()) {
+    let targetRayPose = frame.getPose(inputSource.targetRaySpace, refSpace);
 
-    if (targetRayPose) {
-      if (source.targetRayMode == "tracked-pointer") {
-        myRenderTargetRayAsBeam(targetRayPose);
-      }
-    }
+    if (targetRayPose) {
+      if (source.targetRayMode == "tracked-pointer") {
+        myRenderTargetRayAsBeam(targetRayPose);
+      }
+    }
 
-    /* ... */
+    /* ... */
   }
 }
 ```

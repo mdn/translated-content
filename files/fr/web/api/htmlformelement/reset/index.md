@@ -1,14 +1,8 @@
 ---
 title: HTMLFormElement.reset()
 slug: Web/API/HTMLFormElement/reset
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - Méthode
-  - Reference
-translation_of: Web/API/HTMLFormElement/reset
 ---
+
 {{APIRef("HTML DOM")}}
 
 La méthode **`HTMLFormElement.reset()`** restaure les valeurs par défaut des éléments du formulaire. Cette méthode fait la même chose que lorsqu'on clique sur un bouton de type `reset`.
@@ -17,10 +11,14 @@ Si un élément du formulaire (comme un bouton reset par exemple) a un `name` ou
 
 ## Syntaxe
 
-    HTMLFormElement.reset()
+```js
+HTMLFormElement.reset();
+```
 
 ## Exemple
 
-    document.getElementById("myform").reset();
+```js
+document.getElementById("myform").reset();
+```
 
 ## Spécification

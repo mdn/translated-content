@@ -1,19 +1,8 @@
 ---
 title: CSS データ型
 slug: Web/CSS/CSS_Types
-tags:
-  - CSS
-  - CSS データ型
-  - ガイド
-  - Index
-  - 概要
-  - リファレンス
-  - 構文
-  - 型
-  - データ型
-  - list
-translation_of: Web/CSS/CSS_Types
 ---
+
 {{CSSRef}}
 
 **CSS データ型**は、 CSS のプロパティや関数で使用される具体的な値 (キーワードや単位を含む) を定義しています。これは[コンポーネント値型](https://www.w3.org/TR/css3-values/#component-types)の特殊な種類です。
@@ -127,10 +116,7 @@ CSS プロパティの中には、大きさとパーセント値のどちらか�
 
 ## 仕様書
 
-| 仕様書                        | 状態                       | 備考                |
-| ----------------------------- | -------------------------- | ------------------- |
-| {{ SpecName('CSS4 Values') }} | {{ Spec2('CSS4 Values') }} |                     |
-| {{ SpecName('CSS3 Values') }} | {{ Spec2('CSS3 Values') }} | 初回定義            |
+{{Specifications}}
 
 ## 関連情報
 

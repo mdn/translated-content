@@ -1,9 +1,8 @@
 ---
 title: background-origin
 slug: Web/CSS/background-origin
-browser-compat: css.properties.background-image
-translation_of: Web/CSS/background-origin
 ---
+
 {{CSSRef}}
 
 La propriété **`background-origin`** détermine l'origine de l'arrière-plan [`background-image`](/fr/docs/Web/CSS/background-image) à partir de la bordure, à l'intérieur de la bordure ou à l'intérieur de la zone de remplissage (<i lang="en">padding</i>).
@@ -54,7 +53,7 @@ background-origin: unset;
 .example {
   border: 10px double;
   padding: 10px;
-  background: url('image.jpg');
+  background: url("image.jpg");
   background-position: center left;
   background-origin: content-box;
 }
@@ -64,7 +63,7 @@ background-origin: unset;
 #example2 {
   border: 4px solid black;
   padding: 10px;
-  background: url('image.gif');
+  background: url("image.gif");
   background-repeat: no-repeat;
   background-origin: border-box;
 }
@@ -72,8 +71,10 @@ background-origin: unset;
 
 ```css
 div {
-  background-image: url('logo.jpg'), url('mainback.png'); /* Applique deux images en arrière-plan */
-  background-position: top right, 0px 0px;
+  background-image: url("logo.jpg"), url("mainback.png"); /* Applique deux images en arrière-plan */
+  background-position:
+    top right,
+    0px 0px;
   background-origin: content-box, padding-box;
 }
 ```
@@ -94,8 +95,12 @@ Dans cet exemple, la boîte possède une bordure épaisse en pointillés. Le pre
 .box {
   margin: 10px 0;
   color: #fff;
-  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,0.6) 60%, rgba(252,176,69,1) 100%),
-              radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 28%);
+  background: linear-gradient(
+      90deg,
+      rgba(131, 58, 180, 1) 0%,
+      rgba(253, 29, 29, 0.6) 60%,
+      rgba(252, 176, 69, 1) 100%
+    ), radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 28%);
   border: 20px dashed black;
   padding: 20px;
   width: 400px;

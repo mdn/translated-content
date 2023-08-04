@@ -1,14 +1,8 @@
 ---
 title: IDBObjectStore.openKeyCursor()
 slug: Web/API/IDBObjectStore/openKeyCursor
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Méthode
-  - Reference
-translation_of: Web/API/IDBObjectStore/openKeyCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`openKeyCursor()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet {{domxref("IDBRequest")}} dont le résultat sera un curseur ({{domxref("IDBCursor")}}) qui pourra être utilisé afin de parcourir les enregistrements correspondants. Cette méthode est utilisée afin de parcourir les clés d'un magasin d'objets grâce à un curseur.
@@ -17,7 +11,9 @@ Afin de déterminer si le curseur a bien été ajouté, on pourra écouter l'év
 
 ## Syntaxe
 
-    var requete = objectStore.openKeyCursor(optionalKeyRange, optionalDirection);
+```js
+var requete = objectStore.openKeyCursor(optionalKeyRange, optionalDirection);
+```
 
 ### Paramètres
 
@@ -34,11 +30,11 @@ Un objet {{domxref("IDBRequest")}} sur lequel seront déclenchés les différent
 
 Cette méthode peut déclencher une exception {{domxref("DOMException")}} ayant l'un des types suivants :
 
-| Exception                  | Description                                                                                                                 |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Exception                  | Description                                                                                             |
+| -------------------------- | ------------------------------------------------------------------------------------------------------- |
 | `InvalidStateError`        | Le magasin d'objets ({{domxref("IDBObjectStore")}} ou l'index ({{domxref("IDBIndex")}}) a été supprimé. |
-| `TransactionInactiveError` | La transaction associée au magasin d'objet ({{domxref("IDBObjectStore")}}) est inactive.                         |
-| `DataError`                | La clé ou l'intervalle de clés indiqué est invalide.                                                                        |
+| `TransactionInactiveError` | La transaction associée au magasin d'objet ({{domxref("IDBObjectStore")}}) est inactive.                |
+| `DataError`                | La clé ou l'intervalle de clés indiqué est invalide.                                                    |
 
 ## Exemples
 
@@ -48,9 +44,9 @@ Dans le fragment de code suivant, on crée une transaction, on l'utilise sur un 
 var transaction = db.transaction("name", "readonly");
 var objectStore = transaction.objectStore("name");
 var request = objectStore.openKeyCursor();
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   var cursor = event.target.result;
-  if(cursor) {
+  if (cursor) {
     // cursor.key contient la clé de l'enregistrement courant
     // à la différence de openCursor, il n'y a pas de cursor.value
     cursor.continue();
@@ -62,13 +58,11 @@ request.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB2', '#dom-idbobjectstore-openkeycursor', 'openKeyCursor')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.openKeyCursor")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -78,4 +72,4 @@ request.onsuccess = function(event) {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -1,20 +1,8 @@
 ---
 title: cursor
 slug: Web/CSS/cursor
-tags:
-  - Arrow
-  - CSS
-  - CSS プロパティ
-  - カーソル
-  - カスタムカーソル
-  - Reference
-  - UI
-  - マウス
-  - ポインター
-  - recipe:css-property
-browser-compat: css.properties.cursor
-translation_of: Web/CSS/cursor
 ---
+
 {{CSSRef}}
 
 **`cursor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、マウスポインターが要素の上にいるときに表示されるマウスカーソルの種類を設定します。
@@ -60,7 +48,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
   - : 任意で x 座標と y 座標を指定します。2 つの 32 未満の非負数で、単位なしです。
 - キーワード値
 
- - : _値の上にマウスを当てると、各項目の実際の表示を確認できます。_
+  - : _値の上にマウスを当てると、各項目の実際の表示を確認できます。_
 
     <table class="standard-table">
       <thead>
@@ -172,7 +160,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
             />
           </td>
           <td>
-            現在の位置にアイテムがドロップできないことを示します。<br />{{bug("275173")}}: Windows および Mac OS X では、<code>no-drop</code> は <code>not-allowed</code> と同じです。
+            現在の位置にアイテムがドロップできないことを示します。<br />[Firefox バグ 275173](https://bugzil.la/275173): Windows および Mac OS X では、<code>no-drop</code> は <code>not-allowed</code> と同じです。
           </td>
         </tr>
         <tr style="cursor: not-allowed">
@@ -197,7 +185,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td><code>all-scroll</code></td>
           <td><img alt="all-scroll.gif" src="all-scroll.gif" /></td>
           <td>
-            何かが任意の方向にスクロール (パン) 可能であることを示します。<br />{{bug("275174")}}: Windows では、 <code>all-scroll</code> は <code>move</code> 同じです。
+            何かが任意の方向にスクロール (パン) 可能であることを示します。<br />[Firefox バグ 275174](https://bugzil.la/275174): Windows では、 <code>all-scroll</code> は <code>move</code> 同じです。
           </td>
         </tr>
         <tr style="cursor: col-resize">

@@ -1,17 +1,8 @@
 ---
 title: TypedArray.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/map
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/map
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/map
 ---
+
 {{JSRef}}
 
 La méthode **`map()`** crée un nouveau tableau typé dont les éléments sont les images des éléments du tableau typé courant par une fonction donnée. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.map()")}}_._ _TypedArray_ est utilisé ici de façon générique pour représenter [l'un des types de tableaux typés possibles](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
@@ -20,7 +11,9 @@ La méthode **`map()`** crée un nouveau tableau typé dont les éléments sont 
 
 ## Syntaxe
 
-    typedarray.map(callback[, thisArg])
+```js
+typedarray.map(callback[, thisArg])
+```
 
 ### Paramètres
 
@@ -48,7 +41,7 @@ La méthode `map()` appelle la fonction `callback()` passée en argument une foi
 
 `callback()` est appelée avec trois arguments : la valeur de l'élément, l'indice de cet élément et enfin le tableau typé courant.
 
-Si un paramètre `thisArg` est fourni pour `map()`, il sera passé à `callback` pour les différents appels et servira de valeur `this`. Par défaut, la valeur {{jsxref("undefined")}} sera passée à la fonction pour la valeur `this`. Par ailleurs, la valeur de `this` accessible depuis la fonction `callback` est déterminée selon [les règles usuelles déterminant la valeur `this` au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
+Si un paramètre `thisArg` est fourni pour `map()`, il sera passé à `callback` pour les différents appels et servira de valeur `this`. Par défaut, la valeur {{jsxref("undefined")}} sera passée à la fonction pour la valeur `this`. Par ailleurs, la valeur de `this` accessible depuis la fonction `callback` est déterminée selon [les règles usuelles déterminant la valeur `this` au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this).
 
 `map()` ne modifie pas le tableau typé sur lequel elle a été appelée (indirectement, c'est la fonction `callback` qui pourra éventuellement modifier le tableau).
 
@@ -73,7 +66,7 @@ Ici, on illustre comment une fonction utilisant un argument peut être utilisée
 
 ```js
 var nombres = new Uint8Array([1, 4, 9]);
-var doubles = nombres.map(function(num) {
+var doubles = nombres.map(function (num) {
   return num * 2;
 });
 // doubles vaut désormais Uint8Array [2, 8, 18]
@@ -82,14 +75,11 @@ var doubles = nombres.map(function(num) {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.map', 'TypedArray.prototype.map')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.map', 'TypedArray.prototype.map')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.map")}}
+{{Compat}}
 
 ## Voir aussi
 

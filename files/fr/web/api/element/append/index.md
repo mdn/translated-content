@@ -1,14 +1,13 @@
 ---
 title: Element.append()
 slug: Web/API/Element/append
-translation_of: Web/API/Element/append
-browser-compat: api.Element.append
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Element.append()`** ajoute un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères après le dernier enfant d'`Element`. Les chaînes de caractères sont insérées comme des nœuds [`Text`](/fr/docs/Web/API/Text).
 
-Voici les différentres entre `Element.append()` et [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild)&nbsp;:
+Voici les différences entre `Element.append()` et [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild)&nbsp;:
 
 - `Element.append()` permet d'ajouter des chaînes de caractères tandis que `Node.appendChild()` accepte uniquement les objets [`Node`](/fr/docs/Web/API/Node).
 - `Element.append()` n'a pas de valeur de retour alors que `Node.appendChild()` renvoie l'objet [`Node`](/fr/docs/Web/API/Node) ajouté.
@@ -17,9 +16,9 @@ Voici les différentres entre `Element.append()` et [`Node.appendChild()`](/fr/d
 ## Syntaxe
 
 ```js
-append(param1)
-append(param1, param2)
-append(param1, param2, /* ... ,*/ paramN)
+append(param1);
+append(param1, param2);
+append(param1, param2, /* ... ,*/ paramN);
 ```
 
 ### Paramètres
@@ -60,7 +59,7 @@ let div = document.createElement("div");
 let p = document.createElement("p");
 div.append("Du texte", p);
 
-console.log(div.childNodes) // NodeList [ #text "Du texte", <p> ]
+console.log(div.childNodes); // NodeList [ #text "Du texte", <p> ]
 ```
 
 ### `append()` est hors de la portée créée par `with`
@@ -70,7 +69,7 @@ La méthode `append()` n'est pas disponible dans la portée créée par une inst
 ```js
 let div = document.createElement("div");
 
-with(div) {
+with (div) {
   append("toto");
 }
 // ReferenceError: append is not defined

@@ -1,13 +1,8 @@
 ---
 title: HTTP リクエストメソッド
 slug: Web/HTTP/Methods
-tags:
-  - HTTP
-  - メソッド
-  - リファレンス
-browser-compat: http.methods
-translation_of: Web/HTTP/Methods
 ---
+
 {{HTTPSidebar}}
 
 HTTP では、リソースに対して実行したいアクションを示す一連の**リクエストメソッド**を定義しています。リクエストメソッドは *HTTP 述語*と呼ばれることがありますが、名詞も存在します。それぞれのメソッドがさまざまな意味を持っていますが、いくつかの共通的な機能が、メソッドのグループで共有されています。例えば、リクエストメソッドは{{glossary("Safe/HTTP", "安全")}}、{{glossary("idempotent", "べき等")}}、{{glossary("cacheable", "キャッシュ可能")}}であることがあります。

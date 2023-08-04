@@ -1,15 +1,10 @@
 ---
-title: HTMLElement.click()
+title: "HTMLElement: click() メソッド"
 slug: Web/API/HTMLElement/click
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - メソッド
-  - リファレンス
-browser-compat: api.HTMLElement.click
-translation_of: Web/API/HTMLElement/click
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.click()`** メソッドは、要素のマウスクリックをシミュレートします。
@@ -18,9 +13,17 @@ translation_of: Web/API/HTMLElement/click
 
 ## 構文
 
-```js
-element.click()
+```js-nolint
+click()
 ```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -30,14 +33,18 @@ element.click()
 
 ```html
 <form>
-  <input type="checkbox" id="myCheck" onmouseover="myFunction()" onclick="alert('click event occurred')">
+  <input
+    type="checkbox"
+    id="myCheck"
+    onmouseover="myFunction()"
+    onclick="alert('click event occurred')" />
 </form>
 ```
 
 ### JavaScript
 
 ```js
-// マウスオーバーで、myFunction を実行します
+// マウスオーバーで、myFunction を実行する
 function myFunction() {
   document.getElementById("myCheck").click();
 }
@@ -55,6 +62,6 @@ function myFunction() {
 
 - 関連するイベントハンドラー
 
-  - {{domxref("GlobalEventHandlers.onclick")}}
-  - {{domxref("GlobalEventHandlers.ondblclick")}}
-  - {{domxref("GlobalEventHandlers.onauxclick")}}
+  - {{domxref("Element.click_event", "Element.onclick")}}
+  - {{domxref("Element.dblclick_event", "Element.ondblclick")}}
+  - {{domxref("Element.auxclick_event", "Element.onauxclick")}}

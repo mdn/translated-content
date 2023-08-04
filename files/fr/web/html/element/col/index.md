@@ -1,17 +1,9 @@
 ---
-title: '<col> : l''élément représentant une colonne'
+title: "<col> : l'élément représentant une colonne"
 slug: Web/HTML/Element/col
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
-translation_of: Web/HTML/Element/col
-browser-compat: html.elements.col
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<col>`** définit une colonne appartenant à un tableau et est utilisé afin de définir la sémantique commune à toutes ses cellules. On trouve généralement cet élément au sein d'un élément [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup).
 

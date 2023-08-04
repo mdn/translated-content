@@ -1,14 +1,8 @@
 ---
 title: Arbre d'accessibilité (MOA)
 slug: Glossary/Accessibility_tree
-tags:
-  - AOM
-  - Accessibilité
-  - DOM
-  - Glossaire
-  - Reference
-translation_of: Glossary/Accessibility_tree
 ---
+
 L'**arbre d'accessibilité**, ou **modèle d'objets d'accessibilité** (**MOA**), contient des informations concernant l'{{Glossary("accessibility")}} pour la plupart des éléments HTML.
 
 Les navigateurs convertissent le balisage en une représentation interne appelée [arbre DOM](/fr/docs/Comment_créer_un_arbre_DOM). Le DOM contient un objet pour chaque balise, attribut et noeud de texte. Les navigateurs créent ensuite un arbre d'accessibilité basé sur l'arbre DOM, celui-ci est utilisé par les technologies d'assistance telles que les lecteurs d'écran via des APIs spécifiques à une plateforme.
@@ -28,7 +22,7 @@ De plus, l'arbre d'accessibilité contient souvent des informations concernant c
 
 ## Voir aussi
 
-1.  [Glossaire](/fr/docs/Glossaire)
+1. [Glossaire](/fr/docs/Glossaire)
 
-    1.  {{Glossary("Accessibility")}}
-    2.  {{Glossary("ARIA")}}
+   1. {{Glossary("Accessibility")}}
+   2. {{Glossary("ARIA")}}

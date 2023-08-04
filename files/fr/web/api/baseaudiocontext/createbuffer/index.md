@@ -1,16 +1,8 @@
 ---
 title: BaseAudioContext.createBuffer()
 slug: Web/API/BaseAudioContext/createBuffer
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createBuffer
-translation_of: Web/API/BaseAudioContext/createBuffer
 ---
+
 {{APIRef("API Web Audio")}}
 
 La méthode `createBuffer()` de l'interface {{domxref("BaseAudioContext")}} est utilisée pour créer un nouvel objet {{domxref("AudioBuffer")}} vide, qui peut ensuite être rempli.
@@ -21,7 +13,13 @@ Pour plus de détails sur les tampons audio, consultez la page de référence {{
 
 ## Syntaxe
 
-    var tampon = baseAudioContext.createBuffer(nbDeCanaux, longueur, frequenceDEchantillonnage);
+```js
+var tampon = baseAudioContext.createBuffer(
+  nbDeCanaux,
+  longueur,
+  frequenceDEchantillonnage,
+);
+```
 
 ### Paramètres
 
@@ -64,7 +62,11 @@ Examinons maintenant un exemple de `createBuffer()` plus complexe, dans lequel n
 var ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
 
 // Création d'un tampon stéréo vide de trois secondes à la fréquence d'échantillonnage de l'AudioContext
-var monArrayBuffer = ctxAudio.createBuffer(2, ctxAudio.sampleRate * 3, ctxAudio.sampleRate);
+var monArrayBuffer = ctxAudio.createBuffer(
+  2,
+  ctxAudio.sampleRate * 3,
+  ctxAudio.sampleRate,
+);
 
 // Remplissage du tampon avec du bruit blanc ;
 // simplement des valeurs aléatoires entre -1,0 et 1,0
@@ -92,13 +94,11 @@ source.start();
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createbuffer', 'createBuffer()')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BaseAudioContext.createBuffer")}}
+{{Compat}}
 
 ## Voir aussi
 

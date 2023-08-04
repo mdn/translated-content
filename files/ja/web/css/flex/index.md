@@ -1,15 +1,8 @@
 ---
 title: flex
 slug: Web/CSS/flex
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.flex
-translation_of: Web/CSS/flex
 ---
+
 {{CSSRef}}
 
 **`flex`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、フレックス*アイテム*をフレックスコンテナーの領域に収めるために、どのように伸長・収縮させるかを指定します。
@@ -76,9 +69,9 @@ flex: unset;
 
 - **値 3 つの構文:** 値は以下の順序でなければなりません。
 
-  1.  {{cssxref("&lt;number&gt;")}} で `<flex-grow>` として解釈される。
-  2.  {{cssxref("&lt;number&gt;")}} で `<flex-shrink>` として解釈される。
-  3.  {{cssxref("width")}} として有効な値で、`<flex-basis>` として解釈される。
+  1. {{cssxref("&lt;number&gt;")}} で `<flex-grow>` として解釈される。
+  2. {{cssxref("&lt;number&gt;")}} で `<flex-shrink>` として解釈される。
+  3. {{cssxref("width")}} として有効な値で、`<flex-basis>` として解釈される。
 
 ### 値
 

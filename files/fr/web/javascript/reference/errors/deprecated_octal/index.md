@@ -1,22 +1,18 @@
 ---
 title: 'SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecated'
 slug: Web/JavaScript/Reference/Errors/Deprecated_octal
-tags:
-  - Erreurs
-  - JavaScript
-  - Mode strict
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Deprecated_octal
-original_slug: Web/JavaScript/Reference/Erreurs/Deprecated_octal
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    SyntaxError: Octal numeric literals and escape characters not allowed in strict mode (Edge)
-    SyntaxError:
-    "0"-prefixed octal literals and octal escape sequences are deprecated;
-    for octal literals use the "0o" prefix instead
+```
+SyntaxError: Octal numeric literals and escape characters not allowed in strict mode (Edge)
+SyntaxError:
+"0"-prefixed octal literals and octal escape sequences are deprecated;
+for octal literals use the "0o" prefix instead
+```
 
 ## Type d'erreur
 
@@ -61,7 +57,7 @@ Pour former un littéral en base octal, on pourra utiliser un zéro suivi de la 
 Pour former une séquence d'échappement en base octale, on écrira une séquence d'échappement en base hexadécimale :
 
 ```js example-good
-'\xA9';
+"\xA9";
 ```
 
 ## Voir aussi

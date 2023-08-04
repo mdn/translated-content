@@ -1,7 +1,6 @@
 ---
 title: ARIA
 slug: Web/Accessibility/ARIA
-translation_of: Web/Accessibility/ARIA
 ---
 
 Accessible Rich Internet Applications **(<abbr>ARIA</abbr>)** es una colección de atributos que definen como realizar contenido y aplicaciónes web (especialmente las desarrolladas con Javascript) más accesibles para las personas con discapacidades.
@@ -10,7 +9,7 @@ Complementa HTML para que las interacciones y los widgets que se usan comúnment
 
 > **Advertencia:** Muchos de estos widgets se incorporaron posteriormente a HTML5, y **los desarrolladores deberían preferir usar el elemento HTML semántico correcto en lugar de usar ARIA**, si tal elemento existe. Por ejemplo, los elementos nativos tienen incorporado [accesibilidad de teclado](/es/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets), roles y estados. Sin embargo, si elige usar ARIA, es responsable de imitar el comportamiento equivalente del navegador en la secuencia de comandos.
 
-[La primera regla de ARIA](https://www.w3.org/TR/using-aria/#rule1) es <q>"Si puede usar un elemento o atributo HTML nativo con la semántica y el comportamiento que necesita ya integrado, en lugar de reutilizar un elemento y agregar un rol, estado o propiedad de ARIA para hacerlo accesible, hágalo".</q>
+[La primera regla de ARIA](https://www.w3.org/TR/using-aria/#rule1) es "Si puede usar un elemento o atributo HTML nativo con la semántica y el comportamiento que necesita ya integrado, en lugar de reutilizar un elemento y agregar un rol, estado o propiedad de ARIA para hacerlo accesible, hágalo".
 
 > **Nota:** Hay un dicho "No utilizar ARIA es mejor que utilizar una mala ARIA". En [la encuesta de WebAim de más de un millón de páginas de inicio](https://webaim.org/projects/million#aria), encontraron que las páginas de inicio con ARIA presentes promediaron un 41 % más de errores detectados que aquellas sin ARIA. Si bien ARIA está diseñado para hacer que las páginas web sean más accesibles, si se usa incorrectamente, puede hacer más daño que bien.
 
@@ -22,8 +21,7 @@ Aquí está el marcado para una barra de progreso:
   role="progressbar"
   aria-valuenow="75"
   aria-valuemin="0"
-  aria-valuemax="100"
-></div>
+  aria-valuemax="100"></div>
 ```
 
 Esta barra de progreso se construye usando un {{HTMLElement("div")}}, que no tiene significado. Incluimos roles y propiedades de ARIA para agregar significado. En este ejemplo, el atributo [`role="progressbar"`](/es/docs/Web/Accessibility/ARIA/Roles/progressbar_role) informa al navegador que este elemento es en realidad un widget de barra de progreso impulsado por JavaScript. [`aria-valuemin`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) y [`aria-valuemax`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) especifican los valores mínimo y máximo para la barra de progreso, y [`aria-valuenow`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) describe el actual estado del mismo y por lo tanto debe mantenerse actualizado con JavaScript.
@@ -86,7 +84,7 @@ También es importante probar su ARIA creado con tecnología de asistencia real.
 ## ARIA para widgets con scripts
 
 - [Escribir widgets JavaScript navegables por teclado](/es/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
-  -: Elementos integrados como {{HTMLElement("input")}}, {{HTMLElement("button")}} etc. tienen accesibilidad de teclado integrado. Si 'falsifica' estos con {{HTMLElement("div")}}s y ARIA, debe asegurarse de que sus widgets sean accesibles desde el teclado.
+  - : Elementos integrados como {{HTMLElement("input")}}, {{HTMLElement("button")}} etc. tienen accesibilidad de teclado integrado. Si 'falsifica' estos con {{HTMLElement("div")}}s y ARIA, debe asegurarse de que sus widgets sean accesibles desde el teclado.
 - [Regiones en vivo](/es/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
   - : Las regiones activas brindan sugerencias a los lectores de pantalla sobre cómo manejar los cambios en el contenido de una página.
 - [Uso de regiones en vivo de ARIA para anunciar cambios de contenido](https://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)

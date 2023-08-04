@@ -1,13 +1,13 @@
 ---
 title: offset-position
 slug: Web/CSS/offset-position
-translation_of: Web/CSS/offset-position
 ---
+
 {{CSSRef}}{{seecompattable}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`offset-position`** définit la [position initiale](https://www.w3.org/TR/motion-1/#valdef-offsetpath-initial-position) de {{cssxref("offset-path")}}.
 
-## Syntax
+## Syntaxe
 
 ```css
 /* Valeurs de mots clefs */
@@ -63,7 +63,7 @@ offset-position: unset;
 
 ```css
 #motion-demo {
-  offset-path: path('M20,20 C20,100 200,0 200,100');
+  offset-path: path("M20,20 C20,100 200,0 200,100");
   offset-position: left top;
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;
@@ -83,10 +83,8 @@ offset-position: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                                       | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('Motion Path Level 1', '#offset-position-property', 'offset-position')}} | {{Spec2('Motion Path Level 1')}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité de navigateur
+## Compatibilité des navigateurs
 
-{{Compat("css.properties.offset-position")}}
+{{Compat}}

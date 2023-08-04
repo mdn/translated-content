@@ -1,18 +1,8 @@
 ---
-title: 'CSP: referrer'
+title: "CSP: referrer"
 slug: Web/HTTP/Headers/Content-Security-Policy/referrer
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Obsolete
-  - Reference
-  - Security
-  - Sécurité
-  - referrer
-translation_of: Web/HTTP/Headers/Content-Security-Policy/referrer
 ---
+
 {{HTTPSidebar}} {{deprecated_header}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`referrer`** spécifie des informations dans l'en-tête HTTP {{HTTPHeader("Referer")}} (avec un seul r) pour les liens externes d'une page. Cette API est dépréciée et supprimée des navigateurs.
@@ -23,7 +13,9 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`referrer`**
 
 Soit cet en-tête CSP :
 
-    Content-Security-Policy: referrer <referrer-policy>;
+```
+Content-Security-Policy: referrer <referrer-policy>;
+```
 
 Où `<referrer-policy>` peut être une valeur parmi :
 
@@ -41,7 +33,9 @@ Où `<referrer-policy>` peut être une valeur parmi :
 
 ## Exemples
 
-    Content-Security-Policy: referrer "none";
+```
+Content-Security-Policy: referrer "none";
+```
 
 ## Spécifications
 
@@ -49,7 +43,7 @@ Cette fonctionnalité ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.referrer")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,8 @@
 ---
 title: TypedArray.prototype.subarray()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/subarray
 ---
+
 {{JSRef}}
 
 La méthode `subarray()` permet de renvoyer un nouvel objet _TypedArray_ basé sur le même {{jsxref("ArrayBuffer")}} et dont les éléments sont du même type que l'objet _TypedArray_ courant. Le paramètre `début` est à considérer au sens large et le paramètre `end` est à considérer au sens strict. _TypedArray_ est l'un des types de [tableaux typés](/fr/docs/Web/JavaScript/Tableaux_typés#Les_objets_TypedArray).
@@ -18,7 +11,9 @@ La méthode `subarray()` permet de renvoyer un nouvel objet _TypedArray_ basé s
 
 ## Syntaxe
 
-    typedarray.subarray([début[,fin]])
+```js
+typedarray.subarray([début[,fin]])
+```
 
 ### Paramètres
 
@@ -42,26 +37,22 @@ On notera que cette méthode permet de créer un nouvelle vue sur le tampon (_bu
 ```js
 var buffer = new ArrayBuffer(8);
 var uint8 = new Uint8Array(buffer);
-uint8.set([1,2,3]);
+uint8.set([1, 2, 3]);
 
 console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
 
-var sub = uint8.subarray(0,4);
+var sub = uint8.subarray(0, 4);
 
-console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
+console.log(sub); // Uint8Array [ 1, 2, 3, 0 ]
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                             | Commentaires                                    |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                                             | {{Spec2('Typed Array')}} | Remplacée par ECMAScript 6.                     |
-| {{SpecName('ES6', '#sec-%typedarray%.prototype.subarray', 'TypedArray.prototype.subarray')}}     | {{Spec2('ES6')}}             | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.subarray', 'TypedArray.prototype.subarray')}} | {{Spec2('ESDraft')}}     |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.subarray")}}
+{{Compat}}
 
 ## Voir aussi
 

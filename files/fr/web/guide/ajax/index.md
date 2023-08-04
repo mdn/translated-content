@@ -1,8 +1,8 @@
 ---
 title: AJAX
 slug: Web/Guide/AJAX
-translation_of: Web/Guide/AJAX
 ---
+
 ## Démarrer avec AJAX
 
 **AJAX (<i lang="en">Asynchronous JavaScript + XML</i>)** n'est pas une technologie en soi, mais un terme désignant une «&nbsp;nouvelle&nbsp;» approche utilisant un ensemble de technologies existantes, dont&nbsp;: [HTML](/fr/docs/Web/HTML) ou [XHTML](/fr/docs/Glossary/XHTML), [CSS](/fr/docs/Web/CSS), [JavaScript](/fr/docs/Web/JavaScript), [DOM](/fr/docs/Web/API/Document_Object_Model), [XML](/fr/docs/Web/XML), [XSLT](/fr/docs/Web/XSLT), et surtout [l'objet `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest). Lorsque ces technologies sont combinées dans le modèle AJAX, les applications web sont capables de réaliser des mises à jour rapides et incrémentales de l'interface utilisateur sans devoir recharger la page entière dans le navigateur. Les applications fonctionnent plus rapidement et sont plus réactives aux actions de l'utilisatrice ou de l'utilisateur.
@@ -29,7 +29,7 @@ Bien que le X de AJAX signifie XML, c'est le format [`JSON`](/fr/docs/Glossary/J
 - [Exemple de navigation avec un site utilisant AJAX pur](/fr/docs/Web/API/History_API/Example)
   - : Cet article contient un exemple fonctionnel minimaliste d'un site web composé de trois pages et qui utilise AJAX.
 - [Envoyer et recevoir des données binaires](/fr/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data)
-  - : La propriété `responseType` de l'objet `XMLHttpRequest` peut être modifiée afin de changer le type de réponse attendu du serveur. Les valeurs possibles sont la chaîne vide (la valeur par défaut), `arraybuffer`, `blob`, `document`, `json`, et `text`. La propriété `response` contiendra le corps de l'entité selon la valeur de `responseType`, ce pourra donc être un objet `ArrayBuffer`, `Blob`, `Document`, `JSON`, ou une chaîne de caractères. Cet article aborde quelques techniques d'entrée/sortie AJAX. 
+  - : La propriété `responseType` de l'objet `XMLHttpRequest` peut être modifiée afin de changer le type de réponse attendu du serveur. Les valeurs possibles sont la chaîne vide (la valeur par défaut), `arraybuffer`, `blob`, `document`, `json`, et `text`. La propriété `response` contiendra le corps de l'entité selon la valeur de `responseType`, ce pourra donc être un objet `ArrayBuffer`, `Blob`, `Document`, `JSON`, ou une chaîne de caractères. Cet article aborde quelques techniques d'entrée/sortie AJAX.
 - [XML](/fr/docs/Web/XML)
   - : Le langage **XML (<i lang="en">Extensible Markup Language</i>)** est un langage balisé qui permet de créer des formats pour des données particulières. Il s'agit d'un sous-ensemble simplifié de SGML, capable de décrire différentes sortes de données. Son principal objectif est de faciliter le partage de données entre différents systèmes, notamment ceux connectés par Internet.
 - [Analyser et sérialiser du XML](/fr/docs/Web/Guide/Parsing_and_serializing_XML)

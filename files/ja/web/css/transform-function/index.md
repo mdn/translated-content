@@ -1,16 +1,8 @@
 ---
 title: <transform-function>
 slug: Web/CSS/transform-function
-tags:
-  - CSS
-  - CSS データ型
-  - CSS 座標変換
-  - データ型
-  - レイアウト
-  - リファレンス
-browser-compat: css.types.transform-function
-translation_of: Web/CSS/transform-function
 ---
+
 {{CSSRef}}
 
 **`<transform-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、要素の外見に影響する座標変換を表します。座標変換[関数](/ja/docs/Web/CSS/CSS_Functions)は、二次元または三次元空間で要素を回転、拡大縮小、歪曲、移動させることができます。これは {{cssxref("transform")}} プロパティの中で使用されます。
@@ -109,7 +101,7 @@ CSS (および多くのコンピューターグラフィック) では、原点 
 
 しかし、主要な座標変換のうち平行移動は線形ではなく、従ってこの記法を使用する場合は特例とする必要があります。平行移動のベクトル `(tx, ty)` は、二つの追加の引数で別に表現しなければなりません。
 
-> **Note:** 直交座標よりも難解ですが、[射影幾何学](https://ja.wikipedia.org/wiki/%E5%B0%84%E5%BD%B1%E5%B9%BE%E4%BD%95%E5%AD%A6)の[同次座標](https://en.wikipedia.org/wiki/Homogeneous_coordinates)は 3 × 3 の変換行列を使用するので、線形関数として平行移動をより簡単に表現できます。
+> **メモ:** 直交座標よりも難解ですが、[射影幾何学](https://ja.wikipedia.org/wiki/%E5%B0%84%E5%BD%B1%E5%B9%BE%E4%BD%95%E5%AD%A6)の[同次座標](https://en.wikipedia.org/wiki/Homogeneous_coordinates)は 3 × 3 の変換行列を使用するので、線形関数として平行移動をより簡単に表現できます。
 
 ## 例
 
@@ -124,12 +116,12 @@ CSS (および多くのコンピューターグラフィック) では、原点 
 ```html
 <main>
   <section id="example-element">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
   </section>
 
   <div class="select-form">
@@ -193,32 +185,32 @@ main {
 }
 
 .front {
-    background: rgba(90,90,90,.7);
-    transform: translateZ(50px);
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
 }
 
 .back {
-    background: rgba(0,210,0,.7);
-    transform: rotateY(180deg) translateZ(50px);
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210,0,0,.7);
+  background: rgba(210, 0, 0, 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0,0,210,.7);
+  background: rgba(0, 0, 210, 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210,210,0,.7);
+  background: rgba(210, 210, 0, 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210,0,210,.7);
+  background: rgba(210, 0, 210, 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 
@@ -230,19 +222,19 @@ main {
 #### JavaScript
 
 ```js
-const selectElem = document.querySelector('select');
-const example = document.querySelector('#example-element');
+const selectElem = document.querySelector("select");
+const example = document.querySelector("#example-element");
 
-selectElem.addEventListener('change', () => {
-  if(selectElem.value === 'Choose a function') {
+selectElem.addEventListener("change", () => {
+  if (selectElem.value === "Choose a function") {
     return;
   } else {
     example.style.transform = `rotate3d(1, 1, 1, 30deg) ${selectElem.value}`;
-    setTimeout(function() {
-      example.style.transform = 'rotate3d(1, 1, 1, 30deg)';
-    }, 2000)
+    setTimeout(function () {
+      example.style.transform = "rotate3d(1, 1, 1, 30deg)";
+    }, 2000);
   }
-})
+});
 ```
 
 #### 結果

@@ -1,25 +1,13 @@
 ---
 title: 学习 Web 开发
 slug: Learn
-tags:
-  - CSS
-  - HTML
-  - Web
-  - 交互式网站
-  - 初学者
-  - 前端
-  - 启程
-  - 学习
-  - 学习Web开发
-  - 索引
-  - 网站
-translation_of: Learn
 ---
+
 {{LearnSidebar}}
 
 欢迎来到 MDN 学习区。本系列文章旨在为零基础 Web 开发初学者提供指导和开始编写网站代码所需的所有内容。
 
-该教程并不是“从入门到精通”类型的教程，只能让你做到“从入门到适应”。在此之后，你应该能够以你自己的方式学习 [MDN 的其他内容](/zh-CN/)，并接触到其它中、高级资源。
+该教程并不是“从入门到精通”类型的教程，只能让你做到“从入门到适应”。在此之后，你应该能够以你自己的方式学习 [MDN 的其他内容](/zh-CN/)，并接触到其他中、高级资源。
 
 从零开始学习 Web 开发极具挑战性，该教程将为你提供详细的资料，手把手帮助你轻松愉快地学习。无论你是正在学习 Web 开发的学生（自学或参与课程）、寻找材料的老师、编程爱好者，亦或是仅仅想了解一点点 Web 技术，我们都希望你能感到宾至如归。
 
@@ -38,11 +26,11 @@ translation_of: Learn
 - 有一定基础
   - : 如果你已经具备了一定的开发知识，下一步就是深入学习 {{glossary("HTML")}} 和 {{glossary("CSS")}}。先学习 [HTML 入门](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)，再学习 [CSS 初步](/zh-CN/docs/Learn/CSS/First_steps)。
 - 学习脚本编写
-  - : 如果你已经完成了 HTML 和 CSS 入门课程，或是主要对编写代码感兴趣，可以继续学习 {{glossary("JavaScript")}} 或服务端开发。可通过[JavaScript 初步](/zh-CN/docs/Learn/JavaScript/First_steps)和[服务端编程的第一步](/zh-CN/docs/Learn/Server-side/First_steps)开始学习。
+  - : 如果你已经完成了 HTML 和 CSS 入门课程，或是主要对编写代码感兴趣，可以继续学习 {{glossary("JavaScript")}} 或服务端开发。可通过 [JavaScript 初步](/zh-CN/docs/Learn/JavaScript/First_steps)和[服务端编程的第一步](/zh-CN/docs/Learn/Server-side/First_steps)开始学习。
 - 框架与工具
   - : 在掌握了原生 HTML、CSS、JavaScript 的要领后，就可以继续学习[前端开发工具](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools)课程，并考虑开始研究 [JavaScript 前端框架](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)，以及[网站服务端编程](/zh-CN/docs/Learn/Server-side)了。
 
-> **备注：** 可在 [词汇表](/zh-CN/docs/Glossary) 中查询术语。此外，如果你对 Web 开发有具体问题，可以尝试在 [常见问题](/zh-CN/docs/Learn/Common_questions) 寻找答案。
+> **备注：** 可在[术语表](/zh-CN/docs/Glossary)中查询术语。此外，如果你对 Web 开发有具体问题，可以尝试在[常见问题](/zh-CN/docs/Learn/Common_questions)寻找答案。
 
 ## 涵盖的主题
 
@@ -58,8 +46,8 @@ translation_of: Learn
   - : JavaScript 是用于向网页添加动态功能的脚本语言。该专题涵盖有关编写和理解 JavaScript 代码所需的所有重点。
 - [Web 表单 - 操作用户数据](/zh-CN/docs/Learn/Forms)
   - : Web 表单是用于进行用户交互的强大工具 —— 其常用于收集用户数据和控制用户界面。该专题将对 Web 表单的结构、样式、交互要点进行介绍。
-- [可访问性 - 让每个人都能畅游网络](/zh-CN/docs/Learn/Accessibility)
-  - : “可访问性”（Accessibility）是开发人员对让更多的人能够不受残疾、设备、地区等因素的限制访问 Web 内容做出的努力。该专题包含一切所需了解的信息。
+- [无障碍 - 让每个人都能畅游网络](/zh-CN/docs/Learn/Accessibility)
+  - : “无障碍”（Accessibility）是开发人员对让更多的人能够不受残疾、设备、地区等因素的限制访问 Web 内容做出的努力。该专题包含一切所需了解的信息。
 - [Web 性能优化 - 让网站更快做出响应](/zh-CN/docs/Learn/Performance)
   - : Web 性能是确保网络应用的快速下载并对用户操作进行快速响应的艺术，而无论用户的带宽大小、屏幕尺寸、网络状态好坏或是设备性能高低。
 - [工具与测试](/zh-CN/docs/Learn/Tools_and_testing)
@@ -79,25 +67,25 @@ translation_of: Learn
 
 3. 在命令提示符 / 终端中输入以下命令，即可将 `roy-tian/learning-area` 仓库拷贝到本地的 `learning-area` 文件夹：
 
-    ```bash
-    git clone https://github.com/roy-tian/learning-area
-    ```
+   ```bash
+   git clone https://github.com/roy-tian/learning-area
+   ```
 
-4. 然后即可使用访达（macOS）、文件资源管理器（Windows/Linux）或 [`cd` 命令](https://zh.wikipedia.org/wiki/Cd_(命令))) 进入该目录，查找所需文件。
+4. 然后即可使用访达（macOS）、文件资源管理器（Windows/Linux）或 [`cd` 命令](<https://zh.wikipedia.org/wiki/Cd_(命令)>)) 进入该目录，查找所需文件。
 
 你可以随时对本地 `learning-area` 目录与 GitHub 仓库中的 master 分支进行同步，具体步骤如下：
 
 1. 在命令提示符 / 终端中使用 `cd` 指令进入 `learning-area` 文件夹。例如，当你在父目录时：
 
-    ```bash
-    cd learning-area
-    ```
+   ```bash
+   cd learning-area
+   ```
 
 2. 执行以下命令以更新仓库：
 
-    ```bash
-    git pull
-    ```
+   ```bash
+   git pull
+   ```
 
 ## 联系我们
 

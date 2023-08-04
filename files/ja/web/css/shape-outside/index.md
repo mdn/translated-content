@@ -1,22 +1,8 @@
 ---
 title: shape-outside
 slug: Web/CSS/shape-outside
-tags:
-  - 境界
-  - CSS
-  - CSS プロパティ
-  - CSS シェイプ
-  - 浮動領域
-  - プロパティ
-  - Reference
-  - シェイプ
-  - マージン
-  - recipe:css-property
-  - shape-outside
-  - wrapping
-browser-compat: css.properties.shape-outside
-translation_of: Web/CSS/shape-outside
 ---
+
 {{CSSRef}}
 
 **`shape-outside`** は [CSS](/ja/docs/Web/CSS) のプロパティで、隣接するインラインコンテンツが回り込むシェイプ (形状) を — 矩形でない場合もありますが — 定義します。既定では、インラインコンテンツはマージンボックスを回り込みます。`shape-outside` によって、この回り込みをカスタマイズし、テキストが単純なボックスではなく複雑なオブジェクトの周りを回り込めるようにします。
@@ -77,7 +63,7 @@ shape-outside: unset;
 - {{cssxref("&lt;image&gt;")}}
   - : 浮動領域は指定された {{cssxref("&lt;image&gt;")}} のアルファチャンネルに基づいて、 {{cssxref("shape-image-threshold")}} で定義されたように抽出され計算されます。
 
-> **Note:** {{glossary("User agent", "ユーザーエージェント")}}は、`shape-outside` の値に含まれるすべての URL に対して、HTML5 の仕様で定義されている CORS に対応している可能性のあるフェッチメソッドを使用する必要があります。読み取りの際、ユーザーエージェントは "Anonymous" モードを使用し、参照元をスタイルシートの URL に設定し、文書の URL を含むオリジンを設定しなければなりません。この結果、有効な代替画像がないなどのネットワークエラーが発生した場合は、**`none`** の値を指定したのと同様になります。
+> **メモ:** {{glossary("User agent", "ユーザーエージェント")}}は、`shape-outside` の値に含まれるすべての URL に対して、HTML5 の仕様で定義されている CORS に対応している可能性のあるフェッチメソッドを使用する必要があります。読み取りの際、ユーザーエージェントは "Anonymous" モードを使用し、参照元をスタイルシートの URL に設定し、文書の URL を含むオリジンを設定しなければなりません。この結果、有効な代替画像がないなどのネットワークエラーが発生した場合は、**`none`** の値を指定したのと同様になります。
 
 ## 補間
 

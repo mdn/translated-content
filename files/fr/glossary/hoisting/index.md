@@ -1,77 +1,52 @@
 ---
-title: Hoisting
+title: Hoisting (remontée)
 slug: Glossary/Hoisting
-tags:
-  - Encodage
-  - Glossaire
-  - JavaScript
-translation_of: Glossary/Hoisting
-original_slug: Glossaire/Hoisting
+l10n:
+  sourceCommit: 5272602a89c279c42e18a0ab3434396fd33808f8
 ---
-Le hoisting (_en français,_ _"hissage"_) est un terme que vous _ne_ trouverez dans aucune prose de spécification normative avant l'[ECMAScript® 2015](http://www.ecma-international.org/ecma-262/6.0/index.html).  Le hissage a été conçu comme une façon générale de penser à la manière dont les contextes d'exécution (précisément, les phases de création et d'exécution) fonctionnent en JavaScript. Toutefois, le concept peut être un peu déroutant à première vue.
 
-Conceptuellement, par exemple, une définition stricte du hissage suggère que les déclarations de variables et de fonctions sont déplacées physiquement en haut de votre code, mais ce n'est pas ce qui se passe en fait. A la place, les déclarations de variables et de fonctions sont mises en mémoire pendant la phase de _compilation_, mais restent exactement là où vous les avez tapées dans votre code.
+En JavaScript, l'anglicisme **<i lang="en">hoisting</i>**, qu'on peut traduire en «&nbsp;remontée&nbsp;» (voire plus littéralement en «&nbsp;hissage&nbsp;») correspond au déplacement de la _déclaration_ de fonctions, variables ou classes en haut de leur portée avant l'exécution du code.
 
-## En apprendre plus
+Le hissage/la remontée n'est pas un terme défini de façon normative dans la spécification ECMAScript. La spécification définit un groupe de déclarations comme [_HoistableDeclaration_](https://tc39.es/ecma262/#prod-HoistableDeclaration), mais cela inclut uniquement les déclarations [`function`](/fr/docs/Web/JavaScript/Reference/Statements/function), [`function*`](/fr/docs/Web/JavaScript/Reference/Statements/function*), [`async function`](/fr/docs/Web/JavaScript/Reference/Statements/async_function), et [`async function*`](/fr/docs/Web/JavaScript/Reference/Statements/async_function*). La remontée est souvent associée aux déclarations [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var) d'une façon légèrement différente. Généralement, on regroupe les différents comportements suivants sous ce terme&nbsp;:
 
-### Exemple technique
+1. Être capable d'utiliser la valeur d'une variable dans sa portée avant la ligne où elle est déclarée («&nbsp;remontée de variable&nbsp;»)
+2. Être capable de référence une variable dans sa portée avant la ligne où elle est déclarée, sans que cela déclenche une exception [`ReferenceError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError), mais où la valeur obtenue est [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) («&nbsp;remontée de déclaration&nbsp;»)
+3. La déclaration de la variable entraîne des changements de comportement dans la portée avant la ligne où elle est déclarée.
 
-L'un des avantages du fait que JavaScript met en mémoire les déclarations des fonctions avant d'exécuter un quelconque segment de code, est que cela vous permet d'utiliser une fonction avant que nous ne la déclariez dans votre code. Par exemple :
+Les déclarations sans mot-clé préalable sont remontées selon le premier comportement. Les déclarations avec `var` sont remontées selon le deuxième comportement. Enfin, les déclarations avec [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let), [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const), et [`class`](/fr/docs/Web/JavaScript/Reference/Statements/class) (parfois désignées comme _déclarations lexicales_) sont remontées selon le troisième comportement.
+
+On peut également considérer que `let`, `const`, et `class` ne déclenchent pas de remontée en raison de [la zone morte temporaire](/fr/docs/Web/JavaScript/Reference/Statements/let#zone_morte_temporaire_temporal_dead_zone_tdz_et_les_erreurs_liées_à_let) qui interdit toute utilisation de la variable avant sa déclaration. Cette différence d'interprétation est acceptable, car le terme n'est pas précisément normé dans la spécification. Toutefois, la zone morte temporaire peut entraîner d'autres modifications observables dans la portée, suggérant ainsi une certaine forme de remontée&nbsp;:
 
 ```js
-function nomChat(nom) {
-  console.log("Le nom de mon chat est " + nom);
+const x = 1;
+{
+  console.log(x); // ReferenceError
+  const x = 2;
 }
-
-nomChat("Tigrou");
-/*
-Le résultat du code ci-dessus est : "Le nom de mon chat est Tigrou"
-*/
 ```
 
-Le fragment de code ci-dessus est la façon dont vous vous attendez à écrire le code pour qu'il fonctionne. Voyons maintenant ce qui se passe quand nous appelons la fonction avant de la déclarer :
+Si la déclaration `const x = 2` n'était pas remontée du tout (autrement si le seul effet produit avait lieu lors de l'exécution), l'instruction `console.log(x)` devrait être capable de lire la valeur de `x` de la portée parente. Toutefois, la déclaration `const` touche quand même la portée dans laquelle elle est définie et l'instruction `console.log(x)` lit la valeur du `x` provenant de la déclaration `const x = 2`, qui n'est pas encore initialisé et déclenche donc une exception [`ReferenceError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError). Cela étant écrit, on peut considérer l'absence de remontée comme l'absence d'effet de bord utile.
+
+On notera que ce qui suit n'est pas une forme de remontée&nbsp;:
 
 ```js
-nomChat("Chloé");
-
-function nomChat(nom) {
-  console.log("Le nom de mon chat est " + nom);
+{
+  var x = 1;
 }
-/*
-Le résultat du code ci-dessus est : "Le nom de mon chat est Chloé"
-*/
+console.log(x); // 1
 ```
 
-Même si nous appelons d'abord la fonction dans notre code, avant que la fonction ne soit écrite, le code fonctionne néanmoins. Cela est dû à la façon dont l'exécution de contexte fonctionne en Javascript.
+Comme la portée des déclarations `var` n'est pas limitée aux blocs, il n'y a pas d'accès avant déclaration ici.
 
-Le hissage fonctionne tout aussi bien avec d'autres types de données et d'autres variables.  Les variables peuvent être initialisées et utilisées avant d'être déclarées. Mais elles ne peuvent pas être utilisées sans initialisation.
+Pour plus d'informations à ce sujet, voir&nbsp;:
 
-### Exemple technique
+- La remontée pour `var`/`let`/`const` dans [le guide sur la grammaire et les types en JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#remontée_de_variables_hoisting)
+- La remontée pour `function` dans [le guide sur les fonctions](/fr/docs/Web/JavaScript/Guide/Functions#remontée_des_fonctions)
+- La remontée pour `class` dans [le guide sur les classes](/fr/docs/Web/JavaScript/Guide/Using_Classes#remontée_des_déclarations_de_classe)
 
-```js
-num = 6;
-num + 7;
-var num;
-/* Ne donne aucune erreur tant que num est déclarée*/
-```
+## Voir aussi
 
-JavaScript hisse seulement les déclarations, pas les initialisations. Si vous utilisez une variable qui est déclarée et initialisée après l'avoir utilisée, sa valeur sera indéfinie. Les deux exemples ci-dessous montrent le même comportement.
-
-```js
-var x = 1; // Initialise x
-console.log(x + " " + y); // Affiche '1 undefined'
-var y = 2; // Initialise y
-
-
-// Le code suivant se comportera de la même façon que le code précédent:
-var x = 1; // Initialise x
-var y; // Déclare y
-console.log(x + " " + y); // Affiche '1 undefined'
-y = 2; // Initialise y
-```
-
-### Références techniques
-
-- [JavaScript: Understanding the Weird Parts](https://www.udemy.com/understand-javascript/) - Cours d'Udemy.com
-- [instruction var](/fr/docs/Web/JavaScript/Reference/Instructions/var) - MDN
-- [déclaration function](/fr/docs/Web/JavaScript/Reference/Instructions/function) - MDN
+- [L'instruction `var`](/fr/docs/Web/JavaScript/Reference/Statements/var)
+- [L'instruction `let`](/fr/docs/Web/JavaScript/Reference/Statements/let)
+- [L'instruction `const`](/fr/docs/Web/JavaScript/Reference/Statements/const)
+- [L'instruction `function`](/fr/docs/Web/JavaScript/Reference/Statements/function)

@@ -1,22 +1,13 @@
 ---
 title: justify-tracks
 slug: Web/CSS/justify-tracks
-tags:
-  - CSS
-  - 実験的
-  - プロパティ
-  - リファレンス
-  - grid
-  - justify-tracks
-  - masonry
-browser-compat: css.properties.justify-tracks
-translation_of: Web/CSS/justify-tracks
 ---
+
 {{CSSRef}}
 
 {{SeeCompatTable}}
 
-**`align-tracks`** は CSS のプロパティで、インライン軸が[組積](/ja/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout)であるグリッドコンテナーの組積軸の配置を設定します。
+**`align-tracks`** は CSS のプロパティで、インライン軸が[組積](/ja/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout)であるグリッドコンテナーの組積軸の配置を設定します。
 
 ## 構文
 

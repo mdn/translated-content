@@ -1,15 +1,8 @@
 ---
 title: border-top
 slug: Web/CSS/border-top
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-top
-translation_of: Web/CSS/border-top
 ---
+
 {{CSSRef}}
 
 **`border-top`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の[境界](/ja/docs/Web/CSS/border)のプロパティをすべて設定します。</span>

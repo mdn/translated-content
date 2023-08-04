@@ -1,15 +1,8 @@
 ---
 title: border-radius
 slug: Web/CSS/border-radius
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-radius
-translation_of: Web/CSS/border-radius
 ---
+
 {{CSSRef}}
 
 **`border-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の外側の角を丸めます。1 つの半径を設定すると円の角になり、2 つの半径を設定すると楕円の角になります。
@@ -20,7 +13,7 @@ translation_of: Web/CSS/border-radius
 
 `border-radius` プロパティは {{cssxref("border-collapse")}} が `collapse` の table 要素には適用されません。
 
-> **Note:** 他の一括指定プロパティと同様、個別のサブプロパティは `border-radius:0 0 inherit inherit` のように既存の定義を部分的に上書きして継承させることはできません。代わりに、それぞれの個別指定プロパティを使用する必要があります。
+> **メモ:** 他の一括指定プロパティと同様、個別のサブプロパティは `border-radius:0 0 inherit inherit` のように既存の定義を部分的に上書きして継承させることはできません。代わりに、それぞれの個別指定プロパティを使用する必要があります。
 
 ## 構成要素のプロパティ
 
@@ -69,8 +62,8 @@ border-radius: unset;
 
 `border-radius` プロパティは次のように指定することができます。
 
- - 1 ～ 4 つの {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} の値。これは角の半径を 1 つ設定するために使用します。
- - その後に任意で、 "/" と 1 ～ 4 つの `<length>` または `<percentage>` の値。これは追加の半径を設定し、楕円形の角にすることができます。
+- 1 ～ 4 つの {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} の値。これは角の半径を 1 つ設定するために使用します。
+- その後に任意で、 "/" と 1 ～ 4 つの `<length>` または `<percentage>` の値。これは追加の半径を設定し、楕円形の角にすることができます。
 
 ### 値
 
@@ -258,11 +251,11 @@ pre#example-7 {
 
 ### ライブサンプル
 
- - 例 1 : [http://jsfiddle.net/Tripad/qnGKj/2/](http://jsfiddle.net/Tripad/qnGKj/2/)
- - 例 2 : [http://jsfiddle.net/Tripad/qnGKj/3/](http://jsfiddle.net/Tripad/qnGKj/3/)
- - 例 3 : [http://jsfiddle.net/Tripad/qnGKj/4/](http://jsfiddle.net/Tripad/qnGKj/4/)
- - 例 4 : [http://jsfiddle.net/Tripad/qnGKj/5/](http://jsfiddle.net/Tripad/qnGKj/5/)
- - 例 5 : [http://jsfiddle.net/Tripad/qnGKj/6/](http://jsfiddle.net/Tripad/qnGKj/6/)
+- 例 1 : [http://jsfiddle.net/Tripad/qnGKj/2/](http://jsfiddle.net/Tripad/qnGKj/2/)
+- 例 2 : [http://jsfiddle.net/Tripad/qnGKj/3/](http://jsfiddle.net/Tripad/qnGKj/3/)
+- 例 3 : [http://jsfiddle.net/Tripad/qnGKj/4/](http://jsfiddle.net/Tripad/qnGKj/4/)
+- 例 4 : [http://jsfiddle.net/Tripad/qnGKj/5/](http://jsfiddle.net/Tripad/qnGKj/5/)
+- 例 5 : [http://jsfiddle.net/Tripad/qnGKj/6/](http://jsfiddle.net/Tripad/qnGKj/6/)
 
 ## 仕様書
 
@@ -274,4 +267,4 @@ pre#example-7 {
 
 ## 関連情報
 
- - border-radius に関する CSS プロパティ: {{cssxref("border-top-left-radius")}}, {{cssxref("border-top-right-radius")}}, {{cssxref("border-bottom-right-radius")}}, {{cssxref("border-bottom-left-radius")}}, {{cssxref("border-start-start-radius")}}, {{cssxref("border-start-end-radius")}}, {{cssxref("border-end-start-radius")}}, {{cssxref("border-end-end-radius")}}
+- border-radius に関する CSS プロパティ: {{cssxref("border-top-left-radius")}}, {{cssxref("border-top-right-radius")}}, {{cssxref("border-bottom-right-radius")}}, {{cssxref("border-bottom-left-radius")}}, {{cssxref("border-start-start-radius")}}, {{cssxref("border-start-end-radius")}}, {{cssxref("border-end-start-radius")}}, {{cssxref("border-end-end-radius")}}

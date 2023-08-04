@@ -1,14 +1,8 @@
 ---
 title: AudioBufferSourceNode
 slug: Web/API/AudioBufferSourceNode
-tags:
-  - API
-  - Buffer
-  - Experimental
-  - Reference
-  - Web Audio API
-translation_of: Web/API/AudioBufferSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 L'interface **AudioBufferSourceNode** est un {{domxref("AudioScheduledSourceNode")}} qui représente une source audio constituée de données audio en mémoire, stockées dans un {{domxref ("AudioBuffer")}}. Elle est particulièrement utile pour lire des sons qui requierrent des conditions de lecture particulières, comme la synchronisation sur un certain rythme, et peuvent être stockés en mémoire. Si ce type de son doit être lu depuis le disque ou le réseau, il conviendra d'utiliser un {{domxref("AudioWorkletNode")}}.
@@ -78,9 +72,9 @@ Cet exemple crée un tampon de deux secondes, le remplit avec du bruit blanc et 
 
 ```js
 var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
-var bouton = document.querySelector('button');
-var pre = document.querySelector('pre');
-var monScript = document.querySelector('script');
+var bouton = document.querySelector("button");
+var pre = document.querySelector("pre");
+var monScript = document.querySelector("script");
 
 pre.innerHTML = monScript.innerHTML;
 
@@ -91,19 +85,23 @@ var canaux = 2;
 // au taux d'échantillonnage du AudioContext
 var compteurTrames = contexteAudio.sampleRate * 2.0;
 
-var myArrayBuffer = contexteAudio.createBuffer(2, compteurTrames, contexteAudio.sampleRate);
+var myArrayBuffer = contexteAudio.createBuffer(
+  2,
+  compteurTrames,
+  contexteAudio.sampleRate,
+);
 
-bouton.onclick = function() {
+bouton.onclick = function () {
   // remplit le tampon avec du bruit blanc;
   // valeurs aléatoires entre -1.0 et 1.0
   for (var canal = 0; canal < canaux; canal++) {
-   // crée le ArrayBuffer qui contient les données
-   var nowBuffering = myArrayBuffer.getChannelData(canal);
-   for (var i = 0; i < compteurTrames; i++) {
-     // Math.random() est compris entre [0; 1.0]
-     // audio doit être compris entre [-1.0; 1.0]
-     nowBuffering[i] = Math.random() * 2 - 1;
-   }
+    // crée le ArrayBuffer qui contient les données
+    var nowBuffering = myArrayBuffer.getChannelData(canal);
+    for (var i = 0; i < compteurTrames; i++) {
+      // Math.random() est compris entre [0; 1.0]
+      // audio doit être compris entre [-1.0; 1.0]
+      nowBuffering[i] = Math.random() * 2 - 1;
+    }
   }
 
   // crée AudioBufferSourceNode.
@@ -116,20 +114,18 @@ bouton.onclick = function() {
   source.connect(contexteAudio.destination);
   // lance la lecture de la source
   source.start();
-}
+};
 ```
 
-> **Note :** Pour un exemple de `decodeAudioData`(), voir la page {{domxref("AudioContext.decodeAudioData")}}.
+> **Note :** Pour un exemple de `decodeAudioData()`, voir la page {{domxref("AudioContext.decodeAudioData")}}.
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#AudioBufferSourceNode-section', 'AudioBufferSourceNode')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBufferSourceNode")}}
+{{Compat}}
 
 ## Voir aussi
 

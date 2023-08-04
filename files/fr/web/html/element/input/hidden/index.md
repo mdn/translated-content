@@ -1,13 +1,9 @@
 ---
 title: <input type="hidden">
-slug: Web/HTML/Element/Input/hidden
-tags:
-  - Element
-  - Input
-  - Reference
-translation_of: Web/HTML/Element/input/hidden
+slug: Web/HTML/Element/input/hidden
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 Les éléments {{HTMLElement("input")}} de type **`"hidden"`** permettent aux développeurs web d'inclure des données qui ne peuvent pas être vues ou modifiées lorsque le formulaire est envoyé. Cela permet par exemple d'envoyer l'identifiant d'une commande ou un jeton de sécurité unique. Les champs de ce type sont invisibles sur la page.
 
@@ -16,7 +12,7 @@ Les éléments {{HTMLElement("input")}} de type **`"hidden"`** permettent aux d�
 ## Exemple simple
 
 ```html
-<input id="prodId" name="prodId" type="hidden" value="xm234jq">
+<input id="prodId" name="prodId" type="hidden" value="xm234jq" />
 ```
 
 {{EmbedLiveSample('Exemple_simple', 600, 40)}}
@@ -25,7 +21,7 @@ Les éléments {{HTMLElement("input")}} de type **`"hidden"`** permettent aux d�
 
 ## Valeur
 
-L'attribut {{htmlattrxref("value", "input")}} de l'élément contient une chaîne de caractères masquée qui est envoyée au serveur avec le formulaire. Cette valeur ne peut pas directement être éditée par l'utilisateur sur la page (mais elle est toujours accessible et modifiable via les outils de développement intégrés au navigateur).
+L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) de l'élément contient une chaîne de caractères masquée qui est envoyée au serveur avec le formulaire. Cette valeur ne peut pas directement être éditée par l'utilisateur sur la page (mais elle est toujours accessible et modifiable via les outils de développement intégrés au navigateur).
 
 > **Attention :** Bien que la valeur ne soit pas affichée sur la page, elle est visible et modifiable par l'utilisateur si ce dernier utilise les outils de développements intégrés aux navigateurs (par exemple "Afficher la source"). Le type `hidden` ne doit donc pas être utilisé comme mécanisme de sécurité.
 
@@ -33,11 +29,11 @@ L'attribut {{htmlattrxref("value", "input")}} de l'élément contient une chaîn
 
 En complément des attributs communs à l'ensemble des éléments `<input>`, les champs masqués peuvent utiliser les attributs suivants :
 
-| Attribut               | Description                                                                                                                                                                                                                                                       |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Attribut        | Description                                                                                                                                                                                                                                                       |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`name`](#name) | À l'instar de l'ensemble des champs de saisie, ce sera le nom auquel associer la donnée lors de l'envoi du formulaire. Si la valeur spéciale `"_charset_"` est utilisée pour cet attribut, la valeur du champ sera l'encodage utilisé pour l'envoi du formulaire. |
 
-### {{htmlattrdef("name")}}
+### `name`
 
 Cet attribut fait partie des attributs communs à l'ensemble des éléments `<input>` mais il possède un comportement particulier pour les champs masqués. En effet, si cet attribut utilise la valeur spéciale `"_charset_"`, la valeur du champ envoyée avec le formulaire sera l'encodage utilisé pour l'envoi du formulaire.
 
@@ -49,9 +45,9 @@ Comme évoqué ci-avant, les éléments `<input type="hidden"`> peuvent être ut
 
 Un usage fréquent de ces éléments est de garder un registre des données qui doivent être mises à jour dans une base de données lorsque le formulaire est envoyé. Le processus est généralement le suivant :
 
-1.  L'utilisateur édite du contenu (un billet de blog, une fiche d'un produit) en commençant par cliquer sur le bouton Éditer.
-2.  Le contenu à modifier est extrait de la base de données et est chargé dans le formulaire HTML afin que l'utilisateur puis appliquer les modifications voulues.
-3.  Après avoir éditer, l'utilisateur envoie le formulaire et les données mises à jour sont envoyées au serveur qui se charge d'appliquer cette mise à jour en base de données.
+1. L'utilisateur édite du contenu (un billet de blog, une fiche d'un produit) en commençant par cliquer sur le bouton Éditer.
+2. Le contenu à modifier est extrait de la base de données et est chargé dans le formulaire HTML afin que l'utilisateur puis appliquer les modifications voulues.
+3. Après avoir éditer, l'utilisateur envoie le formulaire et les données mises à jour sont envoyées au serveur qui se charge d'appliquer cette mise à jour en base de données.
 
 Ici, lors de la deuxième étape, on peut récupérer l'identifiant de l'enregistrement et le placer dans un champ caché du formulaire. Lorsque le formulaire est envoyé à l'étape 3, l'identifiant est automatiquement envoyé au serveur avec le contenu. L'identifiant permet alors au serveur de connaître l'enregistrement de la base de données qui doit être mis à jour.
 
@@ -81,7 +77,7 @@ Voici le fragment HTML pour le formulaire :
 <form>
   <div>
     <label for="title">Titre du billet :</label>
-    <input type="text" id="title" name="title" value="Mon meilleur billet">
+    <input type="text" id="title" name="title" value="Mon meilleur billet" />
   </div>
   <div>
     <label for="content">Contenu :</label>
@@ -92,7 +88,7 @@ Voici le contenu de mon meilleur billet, j'espère que ça vous plaît !
   <div>
     <button type="submit">Mettre à jour le billet</button>
   </div>
-  <input type="hidden" id="postId" name="postId" value="34657">
+  <input type="hidden" id="postId" name="postId" value="34657" />
 </form>
 ```
 
@@ -121,7 +117,8 @@ label {
   padding-right: 20px;
 }
 
-input, textarea {
+input,
+textarea {
   flex: 7;
   font-family: sans-serif;
   font-size: 1.1rem;
@@ -167,7 +164,7 @@ Bien que le champ masqué soit invisible sur la page, il fait toujours partie de
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
-      <td>{{htmlattrxref("autocomplete", "input")}}</td>
+      <td><a href="/fr/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a></td>
     </tr>
     <tr>
       <td><strong>Attributs IDL</strong></td>
@@ -182,14 +179,11 @@ Bien que le champ masqué soit invisible sur la page, il fait toujours partie de
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#hidden-state-(type=hidden)', '&lt;input type="hidden"&gt;')}} | {{Spec2('HTML WHATWG')}} | Définition initiale. |
-| {{SpecName('HTML5.2', 'sec-forms.html#hidden-state-typehidden', '&lt;input type="hidden"&gt;')}}     | {{Spec2('HTML5.2')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.input.input-hidden")}}
+{{Compat}}
 
 ## Voir aussi
 

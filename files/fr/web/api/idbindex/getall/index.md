@@ -1,14 +1,8 @@
 ---
 title: IDBIndex.getAll()
 slug: Web/API/IDBIndex/getAll
-tags:
-  - API
-  - IDBIndex
-  - IndexedDB
-  - Méthode
-  - Reference
-translation_of: Web/API/IDBIndex/getAll
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La méthode **`getAll()`** de l'interface {{domxref("IDBIndex")}} fait une requête ({{domxref("IDBRequest")}}) qui renvoie un tableau ordonné suivant les clés, des clones structurés des enregistrements de l'index relié ({{domxref("IDBIndex")}}). On peut limiter le nombre d'enregistrements en les filtrant suivant leurs clés ou en paramétrant le compteur.
@@ -17,9 +11,11 @@ On peut comparer cette méthode avec une recherche par curseur. Effectivement, i
 
 ## Syntaxe
 
-    var getAllKeysRequest = IDBIndex.getAll();
-    var getAllKeysRequest = IDBIndex.getAll(query);
-    var getAllKeysRequest = IDBIndex.getAll(query, count);
+```js
+var getAllKeysRequest = IDBIndex.getAll();
+var getAllKeysRequest = IDBIndex.getAll(query);
+var getAllKeysRequest = IDBIndex.getAll(query, count);
+```
 
 ### Paramètres
 
@@ -48,26 +44,24 @@ On peut comparer cette méthode avec une recherche par curseur. Effectivement, i
 
 ```js
 //on récupère l’accès à l'index
-var myIndex = objectStore.index('index');
+var myIndex = objectStore.index("index");
 //on fait une requête de recherche sur l'index
 var getAllKeyRequest = myIndex.getAllKeys();
 //si la requête réussi
-getAllKeysRequest.onsuccess = function() {
+getAllKeysRequest.onsuccess = function () {
   //on affiche le résultat sur la console
   //~= [{key:'a',value:un_clone_structuré},{key:'2',value:un_clone_structuré},...]
   console.log(getAllKeysRequest.result);
-}
+};
 ```
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('IndexedDB2', '#dom-idbindex-getall', 'getAll()')}} | {{Spec2('IndexedDB')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.getAll")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -77,4 +71,4 @@ getAllKeysRequest.onsuccess = function() {
 - {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
 - {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
 - {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

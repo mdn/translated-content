@@ -1,22 +1,15 @@
 ---
 title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
-tags:
-  - API
-  - CSSOM View
-  - NeedsDHTMLRemovalInExample
-  - Property
-  - Reference
-browser-compat: api.Element.scrollHeight
-translation_of: Web/API/Element/scrollHeight
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.scrollHeight`** 这个只读属性是一个元素内容高度的度量，包括由于溢出导致的视图中不可见内容。
 
 ![](scrollheight.png)
 
-`scrollHeight` 的值等于该元素在不使用滚动条的情况下为了适应视口中所用内容所需的最小高度。没有垂直滚动条的情况下，scrollHeight值与元素视图填充所有内容所需要的最小值{{domxref("Element.clientHeight", "clientHeight")}}相同。包括元素的padding，但不包括元素的border和margin。`scrollHeight` 也包括 {{cssxref("::before")}} 和 {{cssxref("::after")}}这样的伪元素。
+`scrollHeight` 的值等于该元素在不使用滚动条的情况下为了适应视口中所用内容所需的最小高度。没有垂直滚动条的情况下，scrollHeight 值与元素视图填充所有内容所需要的最小值{{domxref("Element.clientHeight", "clientHeight")}}相同。包括元素的 padding，但不包括元素的 border 和 margin。`scrollHeight` 也包括 {{cssxref("::before")}} 和 {{cssxref("::after")}}这样的伪元素。
 如果元素的内容不需要垂直滚动条就可以容纳，则其 `scrollHeight` 等于{{domref("Element.clientHeight", "clientHeight")}}
 
 > **备注：** 属性将会对值取整。如果需要小数值，使用
@@ -30,16 +23,16 @@ translation_of: Web/API/Element/scrollHeight
 
 ### 判断元素是否滚动到底
 
-`scrollTop`是一个非整数，而`scrollHeight`和`clientHeight`是四舍五入的，因此确定滚动区域是否滚动到底的唯一方法是查看滚动量是否足够接近某个阈值(在本例中为`1`)：
+`scrollTop`是一个非整数，而`scrollHeight`和`clientHeight`是四舍五入的，因此确定滚动区域是否滚动到底的唯一方法是查看滚动量是否足够接近某个阈值 (在本例中为`1`)：
 
 ```js
-Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1
+Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1;
 ```
 
 以下内容 _不_ 会一直有效，因为`scrollTop`可能包含小数：
 
 ```js
-element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight
+element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight;
 ```
 
 ### 判断元素是否能滚动
@@ -47,15 +40,15 @@ element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight
 当容器不滚动但有溢出的子容器时，这些检查可以确定容器能否滚动：
 
 ```js
-window.getComputedStyle(element).overflowY === 'visible'
-window.getComputedStyle(element).overflowY !== 'hidden'
+window.getComputedStyle(element).overflowY === "visible";
+window.getComputedStyle(element).overflowY !== "hidden";
 ```
 
 ## 示例
 
 ### 判定用户是否阅读过文本
 
-监听 {{domxref("GlobalEventHandlers/onscroll", "onscroll")}} 事件, 这个等价事件可以用来判定用户是否阅读过文本。 (参见 {{domxref("element.scrollTop")}} and {{domxref("element.clientHeight")}} 属性)。
+监听 {{domxref("GlobalEventHandlers/onscroll", "onscroll")}} 事件，这个等价事件可以用来判定用户是否阅读过文本。 (参见 {{domxref("element.scrollTop")}} and {{domxref("element.clientHeight")}} 属性)。
 
 下面演示中的复选框已禁用，文本区域的内容滚动倒底部时，复选框才能被选中表示同意。
 
@@ -64,7 +57,8 @@ window.getComputedStyle(element).overflowY !== 'hidden'
 ```html
 <form name="registration">
   <p>
-    <textarea id="rules">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
+    <textarea id="rules">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
 Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
 neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at
 velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus
@@ -105,14 +99,14 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
   border-radius: 5px;
   width: 600px;
   padding: 5px;
-  border: 2px #7FDF55 solid;
+  border: 2px #7fdf55 solid;
 }
 
 #rules {
   width: 600px;
   height: 130px;
   padding: 5px;
-  border: #2A9F00 solid 2px;
+  border: #2a9f00 solid 2px;
   border-radius: 5px;
 }
 ```
@@ -120,13 +114,18 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
 #### JavaScript
 
 ```js
-function checkReading () {
+function checkReading() {
   if (checkReading.read) {
     return;
   }
-  checkReading.read = this.scrollHeight - Math.round(this.scrollTop) === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
-  checkReading.noticeBox.textContent = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
+  checkReading.read =
+    this.scrollHeight - Math.round(this.scrollTop) === this.clientHeight;
+  document.registration.accept.disabled = document.getElementById(
+    "nextstep",
+  ).disabled = !checkReading.read;
+  checkReading.noticeBox.textContent = checkReading.read
+    ? "Thank you."
+    : "Please, scroll and read the following text.";
 }
 
 onload = function () {
@@ -138,7 +137,7 @@ onload = function () {
   oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
   oToBeRead.onscroll = checkReading;
   checkReading.call(oToBeRead);
-}
+};
 ```
 
 {{EmbedLiveSample('判定用户是否阅读过文本', '640', '400')}}

@@ -1,17 +1,8 @@
 ---
 title: Déplacer la balle
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
-tags:
-  - 2D
-  - Boucle
-  - Canevas
-  - Débutant
-  - JavaScript
-  - Mouvement
-  - Tutoriel
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
-original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/creer_element_canvas_et_afficher", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Faire_rebondir_la_balle_sur_les_murs")}}
@@ -37,7 +28,7 @@ Grâce à la nature infinie de `setInterval`, la fonction `draw()` sera appelée
 
 ```js
 ctx.beginPath();
-ctx.arc(50, 50, 10, 0, Math.PI*2);
+ctx.arc(50, 50, 10, 0, Math.PI * 2);
 ctx.fillStyle = "#0095DD";
 ctx.fill();
 ctx.closePath();
@@ -52,8 +43,8 @@ Pour le moment, vous ne voyez pas la balle "repeinte" car elle ne bouge pas. Am�
 Ajoutez d'abord les deux lignes suivantes au-dessus de votre fonction `draw()` pour définir `x` et `y` :
 
 ```js
-var x = canvas.width/2;
-var y = canvas.height-30;
+var x = canvas.width / 2;
+var y = canvas.height - 30;
 ```
 
 Ensuite, mettez à jour la fonction `draw()` afin d'utiliser les variables x et y dans la méthode {{domxref("CanvasRenderingContext2D.arc()","arc()")}} , comme indiqué dans la ligne mise en évidence ci-dessous :
@@ -61,7 +52,7 @@ Ensuite, mettez à jour la fonction `draw()` afin d'utiliser les variables x et 
 ```js
 function draw() {
   ctx.beginPath();
-  ctx.arc(x, y, 10, 0, Math.PI*2);
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
   ctx.fillStyle = "#0095DD";
   ctx.fill();
   ctx.closePath();
@@ -80,7 +71,7 @@ La dernière chose à faire est de mettre à jour `x` et `y` avec nos variables 
 ```js
 function draw() {
   ctx.beginPath();
-  ctx.arc(x, y, 10, 0, Math.PI*2);
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
   ctx.fillStyle = "#0095DD";
   ctx.fill();
   ctx.closePath();
@@ -103,7 +94,7 @@ Ajoutez la nouvelle ligne en surbrillance ci-dessous à la fonction `draw()` :
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.beginPath();
-  ctx.arc(x, y, 10, 0, Math.PI*2);
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
   ctx.fillStyle = "#0095DD";
   ctx.fill();
   ctx.closePath();
@@ -123,7 +114,7 @@ Remplacez la fonction `draw()` existante par les deux fonctions suivantes :
 ```js
 function drawBall() {
   ctx.beginPath();
-  ctx.arc(x, y, 10, 0, Math.PI*2);
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
   ctx.fillStyle = "#0095DD";
   ctx.fill();
   ctx.closePath();

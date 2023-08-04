@@ -1,14 +1,8 @@
 ---
 title: Affectation après exponentiation (**=)
 slug: Web/JavaScript/Reference/Operators/Exponentiation_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.exponentiation_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur d'exponentiation et d'affectation (`**=`) élève la valeur de la variable fournie par son opérande gauche à la puissance indiquée par son opérande droit puis affecte le résultat à la variable représentée par l'opérande gauche.
@@ -18,8 +12,8 @@ L'opérateur d'exponentiation et d'affectation (`**=`) élève la valeur de la v
 ## Syntaxe
 
 ```js
-Opérateur : x **= y
-Signification :  x  = x ** y
+Opérateur: x **= y;
+Signification: x = x ** y;
 ```
 
 ## Exemples
@@ -28,8 +22,8 @@ Signification :  x  = x ** y
 
 ```js
 let truc = 5;
-truc **= 2;      // 25
-truc **= 'toto'; // NaN
+truc **= 2; // 25
+truc **= "toto"; // NaN
 ```
 
 ## Spécifications

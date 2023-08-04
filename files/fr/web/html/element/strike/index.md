@@ -1,14 +1,9 @@
 ---
 title: <strike>
 slug: Web/HTML/Element/strike
-tags:
-  - Element
-  - HTML
-  - Obsolete
-  - Reference
-translation_of: Web/HTML/Element/strike
 ---
-{{deprecated_header}}{{HTMLRef}}
+
+{{deprecated_header}}{{HTMLSidebar}}
 
 L'élément HTML **`<strike>`** permet de représenter du texte barré ou avec une ligne le traversant.
 
@@ -27,10 +22,7 @@ Cet élément implémente l'interface {{domxref("HTMLElement")}}.
 ## Exemples
 
 ```html
-<strike>
-  Plat du jour : Saumon
-</strike>
-ÉPUISÉ
+<strike> Plat du jour : Saumon </strike> ÉPUISÉ
 ```
 
 ### Résultat
@@ -39,15 +31,11 @@ Cet élément implémente l'interface {{domxref("HTMLElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires                                                                                        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "obsolete.html#strike", "&lt;strike&gt;")}}                 | {{Spec2("HTML WHATWG")}} | Rendu obsolète et remplacé par {{HTMLElement("del")}} et {{HTMLElement("s")}}.        |
-| {{SpecName("HTML5 W3C", "obsolete.html#strike", "&lt;strike&gt;")}}                     | {{Spec2("HTML5 W3C")}}     | Rendu obsolète et remplacé par {{HTMLElement("del")}} et {{HTMLElement("s")}}.        |
-| {{SpecName("HTML4.01", "/present/graphics.html#edef-STRIKE", "&lt;strike&gt;")}} | {{Spec2("HTML4.01")}}     | Rendu déprécié pour être remplacé par {{HTMLElement("del")}} et {{HTMLElement("s")}}. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.strike")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,8 @@
 ---
 title: StorageEvent
 slug: Web/API/StorageEvent
-tags:
-  - API
-  - Interface
-  - Reference
-  - StorageEvent
-  - Web Storage API
-browser-compat: api.StorageEvent
-translation_of: Web/API/StorageEvent
 ---
+
 {{APIRef("Web Storage API")}}
 
 **`StorageEvent`** 인터페이스는 {{domxref("Window/storage_event", "storage")}} 이벤트가 구현합니다. `storage` 이벤트는 `window`에서 접근 가능한 저장소가 다른 문서에서 변경될 경우 발생합니다.
@@ -39,7 +32,7 @@ translation_of: Web/API/StorageEvent
 ## 메서드
 
 부모 인터페이스인 {{domxref("Event")}}의 메서드를 상속합니다.
-    
+
 ## 명세
 
 {{Specifications}}

@@ -1,20 +1,22 @@
 ---
 title: CanvasRenderingContext2D.strokeRect()
 slug: Web/API/CanvasRenderingContext2D/strokeRect
-translation_of: Web/API/CanvasRenderingContext2D/strokeRect
 ---
+
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D.strokeRect()`** de l'API 2D des Canvas dessine le contour d'un rectangle aux coordonnées de l'angle haut gauche _(x, y)_ et aux dimensions déterminées par *largeur* et *hauteur* dans la balise canvas, et en utilisant l'actuel `strokeStyle`.
+La méthode **`CanvasRenderingContext2D.strokeRect()`** de l'API 2D des Canvas dessine le contour d'un rectangle aux coordonnées de l'angle haut gauche _(x, y)_ et aux dimensions déterminées par _largeur_ et _hauteur_ dans la balise canvas, et en utilisant l'actuel `strokeStyle`.
 
 ## Syntaxe
 
-    void ctx.strokeRect(x, y, largeur, hauteur);
+```js
+void ctx.strokeRect(x, y, largeur, hauteur);
+```
 
 ### Paramètres
 
 - `x`
-  - : L'abcisse *x* des coordonnées du point de départ du rectangle.
+  - : L'abcisse _x_ des coordonnées du point de départ du rectangle.
 - `y`
   - : L'ordonnée _y_ des coordonnées du point de départ du rectangle.
 - largeur
@@ -56,7 +58,8 @@ ctx.strokeRect(10, 10, 100, 100);
 </div>
 <textarea id="code" class="playable-code">
 ctx.strokeStyle = "green";
-ctx.strokeRect(10, 10, 100, 100);</textarea>
+ctx.strokeRect(10, 10, 100, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -72,14 +75,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -89,13 +92,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-strokerect", "CanvasRenderingContext2D.strokeRect")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.strokeRect")}}
+{{Compat}}
 
 ## Voir aussi
 
