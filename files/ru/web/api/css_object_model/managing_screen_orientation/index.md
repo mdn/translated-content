@@ -1,12 +1,6 @@
 ---
 title: Разбираемся с ориентацией экрана
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
-tags:
-  - Ориентация экрана
-  - Положение экрана
-  - Руководство
-translation_of: Web/API/CSS_Object_Model/Managing_screen_orientation
-original_slug: Web/API/CSS_Object_Model/ориентация_экрана
 ---
 
 {{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}

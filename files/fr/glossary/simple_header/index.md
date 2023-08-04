@@ -1,7 +1,6 @@
 ---
 title: En-tête simple
 slug: Glossary/Simple_header
-translation_of: Glossary/Simple_header
 ---
 
 Un _en-tête simple_ (ou en-tête de requête sécurisé CORS) est l'un des [en-têtes HTTP](/fr/docs/HTTP/Headers) suivants :

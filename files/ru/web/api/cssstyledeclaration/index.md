@@ -1,16 +1,6 @@
 ---
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - NeedsCompatTable
-  - NeedsMarkupWork
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/CSSStyleDeclaration
 ---
 
 {{ APIRef("CSSOM") }}

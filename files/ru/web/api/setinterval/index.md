@@ -1,8 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.setInterval()
 slug: Web/API/setInterval
-translation_of: Web/API/WindowOrWorkerGlobalScope/setInterval
-original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
 
 {{APIRef("HTML DOM")}}
@@ -23,7 +21,7 @@ var intervalID = scope.setInterval(code, delay);
 - `code`
   - : Этот необязательный синтаксис позволяет вам включать строку вместо функции, которая компилируется и выполняется каждые `delay` миллисекунд. Однако такая форма не рекомендуется по тем же причинам, которые делают {{jsxref("eval", "eval()")}} угрозой безопасности.
 - `delay`
-  - : Время в миллисекундах (одна тысячная секунды), на которое таймер выполнит задержку между вызовом функции. Если задано значение меньше 10, то будет использовано число 10. На самом деле задержка может быть больше чем указано, дополнительное объяснение приведено здесь: {{SectionOnPage("/ru/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout", "Reasons for delays longer than specified")}}.
+  - : Время в миллисекундах (одна тысячная секунды), на которое таймер выполнит задержку между вызовом функции. Если задано значение меньше 10, то будет использовано число 10. На самом деле задержка может быть больше чем указано, дополнительное объяснение приведено здесь: [Reasons for delays longer than specified](/ru/docs/Web/API/setTimeout#объяснение).
 - `param1, ..., paramN` {{optional_inline}}
   - : Дополнительные параметры, передаваемые в функцию _func_.
 

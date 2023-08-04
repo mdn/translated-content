@@ -1,7 +1,6 @@
 ---
 title: Window.moveTo()
 slug: Web/API/Window/moveTo
-translation_of: Web/API/Window/moveTo
 ---
 
 {{APIRef}}Метод **`moveTo()`** интерфейса {{domxref("Window")}} перемещает текущее окно в указанные координаты.

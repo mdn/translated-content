@@ -1,7 +1,6 @@
 ---
 title: Gamepad.index
 slug: Web/API/Gamepad/index
-translation_of: Web/API/Gamepad/index
 ---
 
 {{APIRef("Gamepad API")}}

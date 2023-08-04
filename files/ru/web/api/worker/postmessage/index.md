@@ -1,15 +1,6 @@
 ---
 title: Worker.postMessage()
 slug: Web/API/Worker/postMessage
-tags:
-  - API
-  - JavaScript
-  - Web Workers
-  - Worker
-  - postMessage
-  - Ссылка
-  - метод
-translation_of: Web/API/Worker/postMessage
 ---
 
 {{APIRef("Web Workers API")}}

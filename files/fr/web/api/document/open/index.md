@@ -1,7 +1,6 @@
 ---
 title: document.open
 slug: Web/API/Document/open
-translation_of: Web/API/Document/open
 ---
 
 {{APIRef("DOM")}}

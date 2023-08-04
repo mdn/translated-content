@@ -1,19 +1,6 @@
 ---
 title: MediaDevices
 slug: Web/API/MediaDevices
-tags:
-  - API
-  - Devices
-  - Interface
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - WebRTC
-translation_of: Web/API/MediaDevices
 ---
 
 {{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
@@ -38,7 +25,7 @@ _Наследуемый метод родителя {{domxref("EventTarget")}}._
 - {{ domxref("MediaDevices.enumerateDevices()") }}
   - : Получает массив информации о медиа-устройстве ввода-вывода.
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
-  - : Возвращает объект, соответствующий {{domxref("MediaTrackSupportedConstraints")}}, указывающий, какие ограничительные свойства поддерживаются в интерфейсе {{domxref("MediaStreamTrack")}}. Смотри {{SectionOnPage("/ru/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}}, чтобы узнать больше об ограничениях и их использовании.
+  - : Возвращает объект, соответствующий {{domxref("MediaTrackSupportedConstraints")}}, указывающий, какие ограничительные свойства поддерживаются в интерфейсе {{domxref("MediaStreamTrack")}}. Смотри [Capabilities and constraints](/ru/docs/Web/API/Media_Capture_and_Streams_API/Constraints), чтобы узнать больше об ограничениях и их использовании.
 - {{ domxref("MediaDevices.getUserMedia()") }}
   - : С разрешения пользователя (у пользователя будет запрошено разрешение) включает камеру, микрофон или общий доступ к экрану и предоставляет {{domxref("MediaStream")}}, содержащий входящую видео- и/или звуковую дорожку.
 

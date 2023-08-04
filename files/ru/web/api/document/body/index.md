@@ -1,12 +1,6 @@
 ---
 title: Document.body
 slug: Web/API/Document/body
-tags:
-  - API
-  - BODY
-  - Document
-  - frameset
-translation_of: Web/API/Document/body
 ---
 
 {{APIRef("DOM")}}

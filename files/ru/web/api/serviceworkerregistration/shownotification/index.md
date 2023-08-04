@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerRegistration.showNotification()
 slug: Web/API/ServiceWorkerRegistration/showNotification
-translation_of: Web/API/ServiceWorkerRegistration/showNotification
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

@@ -1,16 +1,6 @@
 ---
 title: Console
 slug: Web/API/console
-tags:
-  - API
-  - DOM
-  - NeedsCompatTable
-  - Reference
-  - Référence(2)
-  - Веб-консоль
-  - Отладка
-  - Справочник по DOM Gecko
-translation_of: Web/API/Console
 ---
 
 {{APIRef("Console API")}}

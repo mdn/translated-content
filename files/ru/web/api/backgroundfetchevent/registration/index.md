@@ -1,15 +1,6 @@
 ---
 title: BackgroundFetchEvent.registration
 slug: Web/API/BackgroundFetchEvent/registration
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - registration
-  - BackgroundFetchEvent
-  - Experimental
-browser-compat: api.BackgroundFetchEvent.registration
 ---
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}

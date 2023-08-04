@@ -1,18 +1,6 @@
 ---
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
-tags:
-  - API
-  - DOM
-  - HTML
-  - HTMLMediaElement
-  - Media
-  - NeedsNewLayout
-  - NeedsTranslation
-  - TopicStub
-  - Интерфейс
-  - Ссылка
-translation_of: Web/API/HTMLMediaElement
 ---
 
 {{APIRef("HTML DOM")}}

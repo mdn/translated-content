@@ -45,9 +45,10 @@ The `border-left-color` property is specified as a single value.
 
 ```html
 <div class="mybox">
-  <p>This is a box with a border around it.
-     Note which side of the box is
-     <span class="redtext">red</span>.</p>
+  <p>
+    This is a box with a border around it. Note which side of the box is
+    <span class="redtext">red</span>.
+  </p>
 </div>
 ```
 
@@ -55,13 +56,13 @@ The `border-left-color` property is specified as a single value.
 
 ```css
 .mybox {
-    border: solid 0.3em gold;
-    border-left-color: red;
-    width: auto;
+  border: solid 0.3em gold;
+  border-left-color: red;
+  width: auto;
 }
 
 .redtext {
-    color: red;
+  color: red;
 }
 ```
 
@@ -71,10 +72,10 @@ The `border-left-color` property is specified as a single value.
 
 ## Specifications
 
-| Specification                                                                                                    | Status                                   | Comment                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Specification                                                                       | Status                        | Comment                                                                                                                                                    |
+| ----------------------------------------------------------------------------------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('CSS3 Backgrounds', '#propdef-border-left-color', 'border-left-color')}} | {{Spec2('CSS3 Backgrounds')}} | No significant changes, though the `transparent` keyword, now included in {{cssxref("&lt;color&gt;")}} which has been extended, has been formally removed. |
-| {{SpecName('CSS2.1', 'box.html#propdef-border-left-color', 'border-left-color')}}     | {{Spec2('CSS2.1')}}                 | Initial definition                                                                                                                                                 |
+| {{SpecName('CSS2.1', 'box.html#propdef-border-left-color', 'border-left-color')}}   | {{Spec2('CSS2.1')}}           | Initial definition                                                                                                                                         |
 
 {{cssinfo}}
 

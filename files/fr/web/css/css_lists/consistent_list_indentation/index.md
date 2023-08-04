@@ -1,7 +1,6 @@
 ---
 title: Indentation homogène des listes
 slug: Web/CSS/CSS_lists/Consistent_list_indentation
-translation_of: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 ---
 
 {{CSSRef}}

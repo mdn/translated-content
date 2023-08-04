@@ -1,10 +1,6 @@
 ---
 title: stroke
 slug: Web/SVG/Attribute/stroke
-tags:
-  - SVG
-  - SVG атрибуты
-translation_of: Web/SVG/Attribute/stroke
 ---
 
 « [SVG Attribute reference home](/en/SVG/Attribute)

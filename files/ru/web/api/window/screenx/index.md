@@ -1,14 +1,6 @@
 ---
 title: Window.screenX
 slug: Web/API/Window/screenX
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Window
-  - screenX
-translation_of: Web/API/Window/screenX
 ---
 
 {{APIRef}}

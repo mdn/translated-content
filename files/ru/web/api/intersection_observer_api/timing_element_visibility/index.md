@@ -1,14 +1,6 @@
 ---
 title: Синхронизация видимости элемента с Intersection Observer API
 slug: Web/API/Intersection_Observer_API/Timing_element_visibility
-tags:
-  - API
-  - Example
-  - Intermediate
-  - Intersection Observer
-  - Intersection Observer API
-  - Гайды
-translation_of: Web/API/Intersection_Observer_API/Timing_element_visibility
 ---
 
 {{DefaultAPISidebar("Intersection Observer API")}}

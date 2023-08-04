@@ -1,15 +1,6 @@
 ---
 title: "Document: событие scroll"
 slug: Web/API/Document/scroll_event
-tags:
-  - API
-  - DOM
-  - Document
-  - Event
-  - Scroll
-  - UIEvent
-  - Источник
-translation_of: Web/API/Document/scroll_event
 ---
 
 {{APIRef}}

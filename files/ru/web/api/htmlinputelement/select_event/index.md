@@ -1,8 +1,6 @@
 ---
 title: GlobalEventHandlers.onselect
 slug: Web/API/HTMLInputElement/select_event
-translation_of: Web/API/GlobalEventHandlers/onselect
-original_slug: Web/API/GlobalEventHandlers/onselect
 ---
 
 {{ ApiRef("HTML DOM") }}

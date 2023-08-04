@@ -1,7 +1,6 @@
 ---
 title: Gamepad.axes
 slug: Web/API/Gamepad/axes
-translation_of: Web/API/Gamepad/axes
 ---
 
 {{APIRef("Gamepad API")}}

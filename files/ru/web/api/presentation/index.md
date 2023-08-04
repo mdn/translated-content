@@ -1,14 +1,6 @@
 ---
 title: Presentation
 slug: Web/API/Presentation
-tags:
-  - API
-  - Интерфейс
-  - Презентация
-  - Презентация API
-  - Ссылка
-  - Экспериментальный
-translation_of: Web/API/Presentation
 ---
 
 {{APIRef("Presentation API")}}

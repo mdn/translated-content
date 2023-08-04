@@ -1,7 +1,6 @@
 ---
 title: Rattachement et caractère énumérable des propriétés
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
-translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 ---
 
 {{JsSidebar("More")}}

@@ -1,11 +1,6 @@
 ---
 title: Document.URL
 slug: Web/API/Document/URL
-tags:
-  - API
-  - Document
-  - Property
-translation_of: Web/API/Document/URL
 ---
 
 {{APIRef("DOM")}}

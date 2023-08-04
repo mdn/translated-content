@@ -1,7 +1,6 @@
 ---
 title: Document.activeElement
 slug: Web/API/Document/activeElement
-original_slug: Web/API/DocumentOrShadowRoot/activeElement
 ---
 
 {{APIRef("DOM")}}

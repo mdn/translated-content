@@ -1,11 +1,6 @@
 ---
 title: CanvasRenderingContext2D.closePath()
 slug: Web/API/CanvasRenderingContext2D/closePath
-tags:
-  - API
-  - Canvas
-  - Method
-translation_of: Web/API/CanvasRenderingContext2D/closePath
 ---
 
 {{APIRef}}

@@ -1,7 +1,6 @@
 ---
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/concat
 ---
 
 {{JSRef}}

@@ -1,13 +1,6 @@
 ---
 title: ValidityState.patternMismatch
 slug: Web/API/ValidityState/patternMismatch
-tags:
-  - API
-  - Constraint Validation API
-  - DOM
-  - Property
-  - Reference
-browser-compat: api.ValidityState.patternMismatch
 ---
 
 Доступное только для чтения свойство **`patternMismatch`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, соответствует ли значение {{HTMLElement("input")}} шаблону, указанному в атрибуте [`pattern`](/ru/docs/Web/HTML/Attributes/pattern).

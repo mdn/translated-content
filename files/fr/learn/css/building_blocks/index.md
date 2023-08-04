@@ -1,7 +1,6 @@
 ---
 title: Blocs de base en CSS
 slug: Learn/CSS/Building_blocks
-translation_of: Learn/CSS/Building_blocks
 ---
 
 {{LearnSidebar}}

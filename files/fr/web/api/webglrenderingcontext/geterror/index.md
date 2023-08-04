@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.getError()
 slug: Web/API/WebGLRenderingContext/getError
-translation_of: Web/API/WebGLRenderingContext/getError
 ---
 
 {{APIRef("WebGL")}}

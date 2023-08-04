@@ -1,12 +1,6 @@
 ---
 title: XMLHttpRequest.readyState
 slug: Web/API/XMLHttpRequest/readyState
-tags:
-  - AJAX
-  - XMLHttpRequest
-  - Свойство
-  - Ссылка
-translation_of: Web/API/XMLHttpRequest/readyState
 ---
 
 {{APIRef('XMLHttpRequest')}}

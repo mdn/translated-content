@@ -1,7 +1,6 @@
 ---
 title: PerformanceEntry.toJSON()
 slug: Web/API/PerformanceEntry/toJSON
-translation_of: Web/API/PerformanceEntry/toJSON
 ---
 
 {{APIRef("Performance Timeline API")}}

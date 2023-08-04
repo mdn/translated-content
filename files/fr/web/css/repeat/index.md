@@ -1,7 +1,6 @@
 ---
 title: repeat()
 slug: Web/CSS/repeat
-translation_of: Web/CSS/repeat()
 ---
 
 {{CSSRef}}

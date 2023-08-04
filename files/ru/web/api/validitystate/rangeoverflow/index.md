@@ -1,13 +1,6 @@
 ---
 title: ValidityState.rangeOverflow
 slug: Web/API/ValidityState/rangeOverflow
-tags:
-  - API
-  - Constraint Validation API
-  - DOM
-  - Свойство
-  - Справочник
-browser-compat: api.ValidityState.rangeOverflow
 ---
 
 Доступное только для чтения свойство **`rangeOverflow`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, что после редактирования пользователем поля {{HTMLElement("input")}}, значение не соответствует ограничениям, установленным атрибутом [`max`](/ru/docs/Web/HTML/Attributes/max).

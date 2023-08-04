@@ -1,7 +1,6 @@
 ---
 title: SVGAElement.target
 slug: Web/API/SVGAElement/target
-original_slug: Web/API/SVGAElement/SVGAlement.target
 ---
 
 {{APIRef("SVGAElement")}}

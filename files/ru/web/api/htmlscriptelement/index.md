@@ -1,7 +1,6 @@
 ---
 title: HTMLScriptElement
 slug: Web/API/HTMLScriptElement
-translation_of: Web/API/HTMLScriptElement
 ---
 
 {{APIRef("HTML DOM")}}

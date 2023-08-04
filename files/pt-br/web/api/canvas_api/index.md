@@ -1,7 +1,6 @@
 ---
 title: Canvas
 slug: Web/API/Canvas_API
-original_slug: Web/HTML/Canvas
 ---
 
 {{DefaultAPISidebar("Canvas API")}}

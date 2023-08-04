@@ -1,12 +1,6 @@
 ---
 title: Storage.length
 slug: Web/API/Storage/length
-tags:
-  - API
-  - Storage
-  - Web Storage
-  - Справка
-translation_of: Web/API/Storage/length
 ---
 
 {{APIRef("Web Storage API")}}

@@ -1,14 +1,6 @@
 ---
 title: MediaSource
 slug: Web/API/MediaSource
-tags:
-  - Видео
-  - Интерфейс
-  - Источник
-  - Потоковое медиа
-  - Расширение
-  - аудио
-translation_of: Web/API/MediaSource
 ---
 
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}

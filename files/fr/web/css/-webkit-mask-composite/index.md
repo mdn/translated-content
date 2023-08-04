@@ -1,7 +1,6 @@
 ---
 title: "-webkit-mask-composite"
 slug: Web/CSS/-webkit-mask-composite
-translation_of: Web/CSS/-webkit-mask-composite
 ---
 
 {{CSSRef}}{{Non-standard_header}}

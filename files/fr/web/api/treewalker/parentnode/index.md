@@ -1,7 +1,6 @@
 ---
 title: TreeWalker.parentNode()
 slug: Web/API/TreeWalker/parentNode
-translation_of: Web/API/TreeWalker/parentNode
 ---
 
 {{ APIRef("DOM") }}

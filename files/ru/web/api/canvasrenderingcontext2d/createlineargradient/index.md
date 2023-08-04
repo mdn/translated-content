@@ -1,12 +1,6 @@
 ---
 title: CanvasRenderingContext2D.createLinearGradient()
 slug: Web/API/CanvasRenderingContext2D/createLinearGradient
-tags:
-  - API
-  - Градиент
-  - Холст
-  - метод
-translation_of: Web/API/CanvasRenderingContext2D/createLinearGradient
 ---
 
 {{APIRef}}

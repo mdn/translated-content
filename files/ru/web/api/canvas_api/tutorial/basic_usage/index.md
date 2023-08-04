@@ -1,9 +1,6 @@
 ---
 title: Базовое использование Canvas
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
-tags:
-  - Canvas
-translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}

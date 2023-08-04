@@ -1,7 +1,6 @@
 ---
 title: PerformanceNavigationTiming.type
 slug: Web/API/PerformanceNavigationTiming/type
-translation_of: Web/API/PerformanceNavigationTiming/type
 ---
 
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}

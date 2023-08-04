@@ -1,7 +1,6 @@
 ---
 title: Компиляция Rust в WebAssembly
 slug: WebAssembly/Rust_to_Wasm
-translation_of: WebAssembly/Rust_to_wasm
 ---
 
 {{WebAssemblySidebar}}

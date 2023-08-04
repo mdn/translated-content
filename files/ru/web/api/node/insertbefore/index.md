@@ -1,13 +1,6 @@
 ---
 title: Node.insertBefore()
 slug: Web/API/Node/insertBefore
-tags:
-  - API
-  - DOM
-  - DOM Element Methods
-  - Method
-  - WebAPI
-translation_of: Web/API/Node/insertBefore
 ---
 
 {{APIRef("DOM")}}

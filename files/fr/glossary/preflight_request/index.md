@@ -1,7 +1,6 @@
 ---
 title: Requête de pré-vérification
 slug: Glossary/Preflight_request
-translation_of: Glossary/Preflight_request
 ---
 
 Une requête de pré-vérification cross-origin [CORS](/fr/docs/Glossaire/CORS) est une requête de vérification faite pour contrôler si le protocole {{Glossary("CORS")}} est autorisé.

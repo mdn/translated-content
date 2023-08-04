@@ -1,16 +1,6 @@
 ---
 title: Node.nextSibling
 slug: Web/API/Node/nextSibling
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Node
-  - Property
-  - Свойство
-  - Узел
-  - Узлы
-translation_of: Web/API/Node/nextSibling
 ---
 
 {{APIRef("DOM")}}

@@ -1,12 +1,6 @@
 ---
 title: Document.hasFocus()
 slug: Web/API/Document/hasFocus
-tags:
-  - API
-  - DOM
-  - Фокус
-  - метод
-translation_of: Web/API/Document/hasFocus
 ---
 
 {{APIRef}}Метод **`Document.hasFocus()`** возвращает значение {{jsxref("Boolean")}}, указывающее имеет ли документ или любой элемент внутри документа фокус. Этот метод может быть использован, чтобы определить, имеет ли активный элемент в документе фокус.

@@ -1,7 +1,6 @@
 ---
 title: setTimeout()
 slug: Web/API/setTimeout
-original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 l10n:
   sourceCommit: c09b8e9dd0022a33cf84355704ca281d6a5f29f5
 ---

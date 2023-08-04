@@ -30,7 +30,7 @@ O valor retornado por `getDay()` é um inteiro que corresponde com o dia da sema
 O segundo statement abaixo atribui o valor 1 à variável weekday (dia da semana), baseado no valor do objeto {{jsxref("Global_Objects/Date", "Date")}} `Xmas95`. A data 25 de Dezembro de 1995 é uma Segunda-Feira.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
+var Xmas95 = new Date("December 25, 1995 23:15:30");
 var weekday = Xmas95.getDay();
 
 console.log(weekday); // 1
@@ -38,11 +38,11 @@ console.log(weekday); // 1
 
 ## Especificações
 
-| **Especificação**                                                                                    | Status                   | **Comentário**                                     |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                                                                              | Standard                 | Definição inicial. Implementado em JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.16', 'Date.prototype.getDay')}}                 | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.getday', 'Date.prototype.getDay')}} | {{Spec2('ES6')}}     |                                                    |
+| **Especificação**                                                          | Status             | **Comentário**                                     |
+| -------------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| ECMAScript 1st Edition.                                                    | Standard           | Definição inicial. Implementado em JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.16', 'Date.prototype.getDay')}}           | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-date.prototype.getday', 'Date.prototype.getDay')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade com navegadores
 

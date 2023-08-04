@@ -1,7 +1,6 @@
 ---
 title: Mise en forme des tableaux
 slug: Learn/CSS/Building_blocks/Styling_tables
-translation_of: Learn/CSS/Building_blocks/Styling_tables
 l10n:
   sourceCommit: 916af5e72ce683c6f7795755830c11677ca0f529
 ---

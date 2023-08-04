@@ -1,13 +1,6 @@
 ---
 title: KeyboardEvent.key
 slug: Web/API/KeyboardEvent/key
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-translation_of: Web/API/KeyboardEvent/key
 ---
 
 {{APIRef("События DOM")}}

@@ -1,18 +1,6 @@
 ---
 title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
-tags:
-  - API
-  - DOM
-  - JavaScript
-  - getBoundingClientRect
-  - Позиция
-  - Прямоугольник
-  - Самый маленький
-  - Справка
-  - Элемент
-  - метод
-translation_of: Web/API/Element/getBoundingClientRect
 ---
 
 {{APIRef("DOM")}}

@@ -1,13 +1,6 @@
 ---
 title: Document.cookie
 slug: Web/API/Document/cookie
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - JS
-  - cookie
-translation_of: Web/API/Document/cookie
 ---
 
 {{APIRef("DOM")}}

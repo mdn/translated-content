@@ -1,7 +1,6 @@
 ---
 title: Элемент.scrollLeft
 slug: Web/API/Element/scrollLeft
-translation_of: Web/API/Element/scrollLeft
 ---
 
 {{ APIRef("DOM") }}

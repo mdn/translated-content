@@ -1,7 +1,6 @@
 ---
 title: border-bottom-width
 slug: Web/CSS/border-bottom-width
-translation_of: Web/CSS/border-bottom-width
 ---
 
 {{CSSRef}}

@@ -50,7 +50,8 @@ z-index 속성은 [`auto`](#auto) 키워드 또는 [`<integer>`](#integer) 값�
 ### HTML
 
 ```html
-<div class="dashed-box">Dashed box
+<div class="dashed-box">
+  Dashed box
   <span class="gold-box">Gold box</span>
   <span class="green-box">Green box</span>
 </div>

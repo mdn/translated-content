@@ -1,16 +1,6 @@
 ---
 title: Fetch API
 slug: Web/API/Fetch_API
-tags:
-  - API
-  - Fetch
-  - Response
-  - XMLHttpRequest
-  - request
-  - Главная
-  - Справка
-  - Экспериментальная
-translation_of: Web/API/Fetch_API
 ---
 
 {{DefaultAPISidebar("Fetch API")}}

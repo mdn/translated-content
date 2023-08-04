@@ -1,7 +1,6 @@
 ---
 title: DOMTokenList.add()
 slug: Web/API/DOMTokenList/add
-translation_of: Web/API/DOMTokenList/add
 ---
 
 {{APIRef("DOM")}}

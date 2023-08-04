@@ -1,14 +1,6 @@
 ---
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Reference
-  - генератор
-  - метод
-  - прототип
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/next
 ---
 {{JSRef}}
 

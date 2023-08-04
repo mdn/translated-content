@@ -1,7 +1,6 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Array
 ---
 
 {{JSRef}}

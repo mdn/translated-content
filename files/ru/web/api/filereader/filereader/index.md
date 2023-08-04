@@ -1,12 +1,6 @@
 ---
 title: FileReader()
 slug: Web/API/FileReader/FileReader
-tags:
-  - API
-  - FileReader
-  - Конструктор
-  - Ссылка
-translation_of: Web/API/FileReader/FileReader
 ---
 
 Конструктор **`FileReader()`** создаёт новый FileReader.

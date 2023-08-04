@@ -1,7 +1,6 @@
 ---
 title: performance.timeOrigin
 slug: Web/API/Performance/timeOrigin
-translation_of: Web/API/Performance/getEntriesByName
 ---
 
 {{SeeCompatTable}}{{APIRef("High Resolution Time")}}

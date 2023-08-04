@@ -1,7 +1,6 @@
 ---
 title: String.fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 ---
 
 {{JSRef}}

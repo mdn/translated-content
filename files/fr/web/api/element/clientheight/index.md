@@ -1,7 +1,6 @@
 ---
 title: Element.clientHeight
 slug: Web/API/Element/clientHeight
-translation_of: Web/API/Element/clientHeight
 ---
 
 {{APIRef("DOM")}}

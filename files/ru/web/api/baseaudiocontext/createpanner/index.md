@@ -1,8 +1,6 @@
 ---
 title: AudioContext.createPanner()
 slug: Web/API/BaseAudioContext/createPanner
-translation_of: Web/API/BaseAudioContext/createPanner
-original_slug: Web/API/AudioContext/createPanner
 ---
 
 {{ APIRef("Web Audio API") }}

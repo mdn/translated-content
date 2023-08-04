@@ -1,14 +1,6 @@
 ---
 title: MouseEvent
 slug: Web/API/MouseEvent
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Interface
-  - NeedsTranslation
-  - Reference
-translation_of: Web/API/MouseEvent
 ---
 
 {{APIRef("DOM Events")}}

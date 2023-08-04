@@ -1,7 +1,6 @@
 ---
 title: runtime.sendNativeMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 ---
 
 {{AddonSidebar()}}

@@ -1,8 +1,6 @@
 ---
 title: WindowTimers.setTimeout()
 slug: Web/API/setTimeout
-translation_of: Web/API/WindowOrWorkerGlobalScope/setTimeout
-original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 ---
 
 {{ APIRef() }}

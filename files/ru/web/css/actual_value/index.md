@@ -1,12 +1,6 @@
 ---
 title: Действительное значение
 slug: Web/CSS/actual_value
-tags:
-  - CSS
-  - Guide
-  - Web
-translation_of: Web/CSS/actual_value
-original_slug: Web/CSS/Действительное_значение
 ---
 
 {{CSSRef}}

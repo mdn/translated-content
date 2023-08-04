@@ -1,7 +1,6 @@
 ---
 title: IDBTransaction.objectStore()
 slug: Web/API/IDBTransaction/objectStore
-translation_of: Web/API/IDBTransaction/objectStore
 ---
 
 {{APIRef("IndexedDB")}}
