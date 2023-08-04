@@ -40,7 +40,9 @@ Promise.allSettled(iterable)
 
 ## 解説
 
-`Promise.allSettled()` メソッドは[プロミスの並列処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並列処理) メソッドの 1 つです。`Promise.allSettled()` は、通常、正常に完了するために互いに依存しない複数の非同期タスクがある場合、または各プロミスの結果を常に知りたい場合に使用されます。
+`Promise.allSettled()` メソッドは[プロミスの並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並行処理) メソッドの 1 つです。`Promise.allSettled()` は、通常、正常に完了するために互いに依存しない複数の非同期タスクがある場合、または各プロミスの結果を常に知りたい場合に使用されます。
+
+> **メモ:** 日本語の技術文書では、このメソッドが複数のプロミスを並列に処理すると説明されることがありますが、実際には複数のスレッドでプロミスが処理されるわけではないことに注意してください。詳細は[プロミスの並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並行処理)を参照してください。
 
 それに対して、 {{jsxref("Promise.all()")}} が返すプロミスは、タスクが他にも依存している場合や、どれかが拒否されたらすぐに拒否したい場合により適しているかもしれません。
 
