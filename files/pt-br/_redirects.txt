@@ -656,6 +656,7 @@
 /pt-BR/docs/Web/API/Window.alert	/pt-BR/docs/Web/API/Window/alert
 /pt-BR/docs/Web/API/Window.navigator	/pt-BR/docs/Web/API/Window/navigator
 /pt-BR/docs/Web/API/Window.openDialog	/pt-BR/docs/conflicting/Web/API/Window
+/pt-BR/docs/Web/API/Window/DOMContentLoaded_event	/pt-BR/docs/Web/API/Document/DOMContentLoaded_event
 /pt-BR/docs/Web/API/Window/Window.localStorage	/pt-BR/docs/Web/API/Window/localStorage
 /pt-BR/docs/Web/API/Window/applicationCache	/pt-BR/docs/orphaned/Web/API/Window/applicationCache
 /pt-BR/docs/Web/API/Window/crypto	/pt-BR/docs/Web/API/crypto_property
@@ -776,7 +777,7 @@
 /pt-BR/docs/Web/CSS/var()	/pt-BR/docs/Web/CSS/var
 /pt-BR/docs/Web/CSS/word-wrap	/pt-BR/docs/Web/CSS/overflow-wrap
 /pt-BR/docs/Web/Demos_of_open_web_technologies	/pt-BR/docs/Web/Demos
-/pt-BR/docs/Web/Events/DOMContentLoaded	/pt-BR/docs/Web/API/Window/DOMContentLoaded_event
+/pt-BR/docs/Web/Events/DOMContentLoaded	/pt-BR/docs/Web/API/Document/DOMContentLoaded_event
 /pt-BR/docs/Web/Events/abort	/pt-BR/docs/Web/API/HTMLMediaElement/abort_event
 /pt-BR/docs/Web/Events/beforeunload	/pt-BR/docs/Web/API/Window/beforeunload_event
 /pt-BR/docs/Web/Events/blur	/pt-BR/docs/Web/API/Element/blur_event
