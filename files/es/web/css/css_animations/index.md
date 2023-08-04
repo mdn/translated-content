@@ -1,6 +1,6 @@
 ---
 title: CSS Animations
-slug: Web/CSS/CSS_Animations
+slug: Web/CSS/CSS_animations
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -36,10 +36,6 @@ slug: Web/CSS/CSS_Animations
 ## Especificaciones
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat("css.properties.animation")}}
 
 ## See also
 

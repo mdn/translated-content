@@ -1,12 +1,6 @@
 ---
 title: get Array[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@species
 ---
 
 {{JSRef}}
@@ -53,7 +47,7 @@ class MyArray extends Array {
 
 {{Compat}}
 
-## Смотрите также:
+## Смотрите также
 
 - {{jsxref("Array")}}
 - {{jsxref("Symbol.species")}}

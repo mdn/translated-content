@@ -69,7 +69,8 @@ h1 {
   font-size: 5rem;
 }
 
-p, li {
+p,
+li {
   line-height: 1.5;
   font-size: 1.6rem;
 }
@@ -90,13 +91,17 @@ Marcado en línea que confiere un énfasis específico al texto que rodea:
 ```html
 <p>El agua está <em>muy caliente</em>.</p>
 
-<p>Las gotas de agua que se acumulan en las superficies se denominan <strong>condensación</strong>.</p>
+<p>
+  Las gotas de agua que se acumulan en las superficies se denominan
+  <strong>condensación</strong>.
+</p>
 ```
 
 Es posible que desees agregar algunos colores simples a su texto enfatizado:
 
 ```css
-strong, em {
+strong,
+em {
   color: #a60000;
 }
 ```
@@ -108,7 +113,10 @@ Sin embargo, rara vez necesitarás dar estilo a elementos de énfasis de manera 
 Un elemento que permite asociar una abreviatura, un acrónimo o una inicialización a su expansión:
 
 ```html
-<p>El contenido web se marca usando <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
+<p>
+  El contenido web se marca usando
+  <abbr title="Hypertext Markup Language">HTML</abbr>.
+</p>
 ```
 
 Nuevamente, es posible que desees darle estilo de una manera simple:
@@ -126,7 +134,9 @@ La convención de estilo reconocida para las abreviaturas es un subrayado puntea
 Hipervínculos: la forma de llegar a nuevos lugares en la web:
 
 ```html
-<p>Visita la <a href="https://www.mozilla.org">página de inicio de Mozilla</a>.</p>
+<p>
+  Visita la <a href="https://www.mozilla.org">página de inicio de Mozilla</a>.
+</p>
 ```
 
 A continuación se muestra un estilo de enlace muy simple:
@@ -136,7 +146,9 @@ a {
   color: #ff0000;
 }
 
-a:hover, a:visited, a:focus {
+a:hover,
+a:visited,
+a:focus {
   color: #a60000;
   text-decoration: none;
 }
@@ -162,7 +174,7 @@ Elementos que permiten a los usuarios introducir datos en sitios web:
 ```html
 <div>
   <label for="nombre">Entra tu nombre</label>
-  <input type="text" id="nombre" name="nombre">
+  <input type="text" id="nombre" name="nombre" />
 </div>
 ```
 
@@ -251,7 +263,7 @@ También hemos hecho que esta validación de formulario sea bastante accesible. 
 
 ```html
 <label for="name">Entra tu nombre:</label>
-<input type="text" name="name" id="name">
+<input type="text" name="name" id="name" />
 ```
 
 Solo realizamos la validación cuando se envía el formulario; esto es para no actualizar la IU con demasiada frecuencia y confundir potencialmente a los lectores de pantalla (y posiblemente a otros) usuarios:
@@ -260,16 +272,16 @@ Solo realizamos la validación cuando se envía el formulario; esto es para no a
 form.onsubmit = validate;
 
 function validate(e) {
-  errorList.innerHTML = '';
-  for(let i = 0; i < formItems.length; i++) {
+  errorList.innerHTML = "";
+  for (let i = 0; i < formItems.length; i++) {
     const testItem = formItems[i];
-    if(testItem.input.value === '') {
-      errorField.style.left = '360px';
+    if (testItem.input.value === "") {
+      errorField.style.left = "360px";
       createLink(testItem);
     }
   }
 
-  if(errorList.innerHTML !== '') {
+  if (errorList.innerHTML !== "") {
     e.preventDefault();
   }
 }
@@ -285,12 +297,17 @@ Para cada entrada sin un valor completado cuando se envía el formulario, creamo
 
 ```js
 function createLink(testItem) {
-  const listItem = document.createElement('li');
-  const anchor = document.createElement('a');
+  const listItem = document.createElement("li");
+  const anchor = document.createElement("a");
 
-  anchor.textContent = 'El campo ' + testItem.input.name + ' está vacío. Entra tu ' + testItem.input.name + '.';
-  anchor.href = '#' + testItem.input.name;
-  anchor.onclick = function() {
+  anchor.textContent =
+    "El campo " +
+    testItem.input.name +
+    " está vacío. Entra tu " +
+    testItem.input.name +
+    ".";
+  anchor.href = "#" + testItem.input.name;
+  anchor.onclick = function () {
     testItem.input.focus();
   };
   listItem.appendChild(anchor);
@@ -300,7 +317,7 @@ function createLink(testItem) {
 
 Cada enlace tiene un doble propósito: te dice cuál es el error, y además puedes hacer clic en él / activarlo para ir directamente al elemento de entrada en cuestión y corregir la entrada.
 
-> **Nota:** La parte `focus()` de este ejemplo es un poco complicada. Chrome y Edge darán foco al elemento al hacer clic en el enlace, sin necesidad del bloque `onclick` / `focus()`. Safari solo resaltará el elemento de formulario con el enlace por sí solo, por lo que necesita el bloque `onclick` / `focus()` para darle foco. Firefox no da foco a las entradas correctamente en este contexto, por lo que los usuarios de Firefox no pueden aprovechar esto en este momento (aunque todo lo demás funciona bien). El problema de Firefox debería solucionarse pronto; se está trabajando para que el comportamiento de Firefox sea igual al de otros navegadores (consulte {{bug (277178)}}).
+> **Nota:** La parte `focus()` de este ejemplo es un poco complicada. Chrome y Edge darán foco al elemento al hacer clic en el enlace, sin necesidad del bloque `onclick` / `focus()`. Safari solo resaltará el elemento de formulario con el enlace por sí solo, por lo que necesita el bloque `onclick` / `focus()` para darle foco. Firefox no da foco a las entradas correctamente en este contexto, por lo que los usuarios de Firefox no pueden aprovechar esto en este momento (aunque todo lo demás funciona bien). El problema de Firefox debería solucionarse pronto; se está trabajando para que el comportamiento de Firefox sea igual al de otros navegadores (consulte [Error 277178 en Firefox](https://bugzil.la/277178)).
 
 Además, el `errorField` se coloca en la parte superior del orden de código (aunque se coloca de manera diferente en la interfaz de usuario usando CSS), lo que significa que los usuarios pueden averiguar exactamente qué está mal con los envíos de sus formularios y acceder a los elementos de entrada en cuestión retrocediendo hasta el inicio de la página.
 
@@ -308,8 +325,7 @@ Como nota final, hemos utilizado algunos atributos WAI-ARIA en nuestra demostrac
 
 ```html
 <div class="errors" role="alert" aria-relevant="all">
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 
@@ -356,13 +372,3 @@ Esperamos que este artículo te haya brindado una buena cantidad de detalles y c
 ¡Siguiente parada, WAI-ARIA!
 
 {{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/es/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/es/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/es/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/es/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/es/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/es/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/es/docs/Learn/Accessibility/Accessibility_troubleshooting)

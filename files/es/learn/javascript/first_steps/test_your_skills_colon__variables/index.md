@@ -1,5 +1,5 @@
 ---
-title: '¡Pon a prueba tus habilidades!: Variables'
+title: "¡Pon a prueba tus habilidades!: Variables"
 slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
 ---
 
@@ -56,7 +56,7 @@ Si deseas que se evalúe tu trabajo o estás atascado y deseas pedir ayuda:
 1. Coloca tu trabajo en un editor que se pueda compartir en línea, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) o [Glitch](https://glitch.com/). Puedes escribir el código tú mismo o utilizar los archivos de punto de partida vinculados en las secciones anteriores.
 2. Escribe una publicación solicitando evaluación y/o ayuda en la [categoría de aprendizaje del foro de discusión de MDN](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debe incluir:
 
-    - Un título descriptivo como Evaluación deseada para la prueba de habilidad de Variables 1.
-    - Detalles de lo que ya has probado y lo que te gustaría que hiciéramos, p. ej. si estás atascado y necesitas ayuda, o quieres una evaluación.
-    - Un enlace al ejemplo que deseas evaluar o con el que necesitas ayuda, en un editor que se pueda compartir en línea (como se mencionó en el paso 1 anterior). Esta es una buena práctica para empezar — es muy difícil ayudar a alguien con un problema de codificación si no puedes ver su código.
-    - Un enlace a la página de la tarea o evaluación real, para que podamos encontrar la pregunta con la que deseas ayuda.
+   - Un título descriptivo como Evaluación deseada para la prueba de habilidad de Variables 1.
+   - Detalles de lo que ya has probado y lo que te gustaría que hiciéramos, p. ej. si estás atascado y necesitas ayuda, o quieres una evaluación.
+   - Un enlace al ejemplo que deseas evaluar o con el que necesitas ayuda, en un editor que se pueda compartir en línea (como se mencionó en el paso 1 anterior). Esta es una buena práctica para empezar — es muy difícil ayudar a alguien con un problema de codificación si no puedes ver su código.
+   - Un enlace a la página de la tarea o evaluación real, para que podamos encontrar la pregunta con la que deseas ayuda.

@@ -28,7 +28,7 @@ str.fontcolor(color)
 
 如果你表示的颜色为十六进制 RGB 三原色，则必须使用的格式`rrggbb`。例如，对于橙红色的十六进制 RGB 值是红色=FA，绿色=80，和蓝=72，所以橙红色的 RGB 三原色`"FA8072"`。
 
-## 例子
+## 示例
 
 ### 使用 `fontcolor()`
 
@@ -45,7 +45,7 @@ console.log（worldString.fontcolor('FF00') + ' is red in hexadecimal'
 和{{domxref("HTMLElement.style","element.style")}}对象一起，你可以访问元素的`style`属性，并且更随意的去操纵它，例如：
 
 ```js
-document.getElementById('yourElemId').style.color ='red';
+document.getElementById("yourElemId").style.color = "red";
 ```
 
 ## Specifications
@@ -56,6 +56,6 @@ document.getElementById('yourElemId').style.color ='red';
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - {{jsxref("String.prototype.fontsize()")}}

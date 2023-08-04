@@ -1,7 +1,6 @@
 ---
 title: Module CSS Styles de compteurs (Counter Styles)
 slug: Web/API/CSS_Counter_Styles
-translation_of: Web/API/CSS_Counter_Styles
 ---
 
 {{DefaultAPISidebar("CSS Counter Styles")}}{{SeeCompatTable}}
@@ -15,13 +14,11 @@ Le module CSS Styles de compteurs (<i lang="en">Counter Styles</i>) permet de d�
 
 ## Spécifications
 
-{{Specifications("api.CSSCounterStyleRule")}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Interface `CSSCounterStyleRule`
-
-{{Compat("api.CSSCounterStyleRule")}}
+{{Compat}}
 
 ## Voir aussi
 

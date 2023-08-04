@@ -1,39 +1,41 @@
 ---
 title: 等価性の比較と同一性
 slug: Web/JavaScript/Equality_comparisons_and_sameness
+l10n:
+  sourceCommit: 7b35a48ac0a10b67f9bd5270b082d40deff9c953
 ---
 
 {{jsSidebar("Intermediate")}}
 
-ES2015 には、4 種類の等価性アルゴリズムがあります。
+JavaScript には、異なる値の比較演算が 3 つあります。
 
-- 抽象的な等価性比較 (Abstract Equality Comparison) (`==`)
-- 厳格な等価性比較 (Strict Equality Comparison) (`===`): `Array.prototype.indexOf`, `Array.prototype.lastIndexOf`, `case` の一致で使用
-- ゼロの同値 (SameValueZero): `%TypedArray%` と `ArrayBuffer` コンストラクター、`Map` と `Set` の操作、ES2016 で追加された `String.prototype.includes` で使用されます
-- 同値 (SameValue): 上記以外のすべての状況で使用されます
-
-JavaScript には、3 種類の値比較演算子があります。
-
-- [===](/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity): 厳格な等価性比較 ("strict equality", "同一性 (identity)", "三重等号")
-- [==](/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality): 緩い等価性 ("loose equality", "二重等号")
-- {{jsxref("Object.is")}} (ECMAScript 2015 の新機能): 同値比較
+- [`===`](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality) — 厳密な等価性（三重等号）
+- [`==`](/ja/docs/Web/JavaScript/Reference/Operators/Equality) — 緩い等価性（二重等号）
+- [`Object.is()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/is)
 
 どの演算子を使用するかは、どのような比較を行いたいかに依存します。簡単に言えば、
 
-- 二重等号 (`==`) は二つのものを比較する前に型変換を実行し、`NaN`, `-0`, `+0` を IEEE 754 に準拠して特別扱いします (よって `NaN != NaN`, `-0 == +0` になります)。
-- 三重等号 (`===`) は二重等号と同じ比較を (`NaN`, `-0`, `+0` の特別扱いを含めて) しますが、型変換を行いません。もし型が異なれば、`false` が返されます。
-- `Object.is` は型変換を行わず、`NaN`, `-0`, `+0` の特別扱いもしません (これらの特殊な数値を除いて `===` と同じ動作をします)。
+- 二重等号 (`==`) は 2 つのものを比較する前に型変換を実行し、`NaN`, `-0`, `+0` を IEEE 754 に準拠して特別扱いします（よって `NaN != NaN`, `-0 == +0` になります）。
+- 三重等号 (`===`) は二重等号と同じ比較を（`NaN`, `-0`, `+0` の特別扱いを含めて）しますが、型変換を行いません。もし型が異なれば、`false` が返されます。
+- `Object.is()` は型変換を行わず、`NaN`, `-0`, `+0` の特別扱いもしません（これらの特殊な数値を除いて `===` と同じ動作をします）。
+
+これらは、JavaScript における 4 つの等価性アルゴリズムのうち、3 つに対応します。
+
+- [IsLooselyEqual](https://tc39.es/ecma262/#sec-islooselyequal): `==`
+- [IsStrictlyEqual](https://tc39.es/ecma262/#sec-isstrictlyequal): `===`
+- [SameValue](https://tc39.es/ecma262/#sec-samevalue): `Object.is()`
+- [SameValueZero](https://tc39.es/ecma262/#sec-samevaluezero): 多くの組み込み操作で使用される
 
 なお、これらの区別はプリミティブ値の扱いについてのことです。いずれの場合も引数が概念的に似た構造を持つかどうかを比較する訳ではありません。プリミティブ値ではない `x` および `y` オブジェクトが同一の構造を持っていてもオブジェクトが異なれば、上記のいずれの形でも `false` と評価されます。
 
-## `===` による厳格な等価性
+## === による厳密な等価性
 
-厳格な等価性は、2 つの値が等しいか比較します。比較対象の値はどちらも、比較する前に別の値へ暗黙のうちに変換されることはありません。値が異なる型の場合、それらの値は等しくないとみなします。値が同じ型で数値ではない場合、同じ値であれば等しいとみなします。最後に、どちらの値も数値である場合、どちらも `NaN` ではなく同じ値である、あるいは一方が `+0` かつもう一方が `-0` であるときに等しいとみなします。
+厳密な等価性は、2 つの値が等しいか比較します。比較対象の値はどちらも、比較する前に別の値へ暗黙のうちに変換されることはありません。値が異なる型の場合、それらの値は等しくないとみなします。値が同じ型で数値ではない場合、同じ値であれば等しいとみなします。最後に、どちらの値も数値である場合、どちらも `NaN` ではなく同じ値である、あるいは一方が `+0` かつもう一方が `-0` であるときに等しいとみなします。
 
 ```js
-var num = 0;
-var obj = new String('0');
-var str = '0';
+const num = 0;
+const obj = new String("0");
+const str = "0";
 
 console.log(num === num); // true
 console.log(obj === obj); // true
@@ -47,261 +49,180 @@ console.log(obj === null); // false
 console.log(obj === undefined); // false
 ```
 
-厳密な等価性は、たいていの使い方で正しい比較になります。数値以外のあらゆる値において、これは「値が自分自身と等しい」という明快な解釈を用います。数値においては、２つの極めて特殊なケースを扱えるようにわずかに異なる解釈を用います。１つ目は浮動小数点数の 0 には正と負の符号付きが存在することです。これは、ある種の数学的な解を表すために役立ちますが、ほとんどの場合は `+0` と `-0` の違いを意識せず、厳格な等価性ではこれらを同じ値として扱います。２つ目は浮動小数点数には非数 `NaN` の概念があることです、これは例えば正の無限大に負の無限大を加算するといった一定の数学的に明確ではない問題達の解を表します。厳格な等価性では `NaN` を他のどの値 (自分自身も含む) とも等しくないものとして扱います。(`(x !== x)` が `true` になる唯一の場合は `x` が `NaN` である場合です。)
+厳密な等価性は、たいていの使い方で正しい比較になります。数値以外のあらゆる値において、これは「値が自分自身と等しい」という明快な解釈を用います。数値においては、２つの極めて特殊なケースを扱えるようにわずかに異なる解釈を用います。１つ目は浮動小数点数の 0 には正と負の符号付きが存在することです。これは、ある種の数学的な解を表すために役立ちますが、ほとんどの場合は `+0` と `-0` の違いを意識せず、厳密な等価性ではこれらを同じ値として扱います。２つ目は浮動小数点数には非数 `NaN` の概念があることです、これは例えば正の無限大に負の無限大を加算するといった一定の数学的に明確ではない問題達の解を表します。厳密な等価性では `NaN` を他のどの値 (自分自身も含む) とも等しくないものとして扱います。（`(x !== x)` が `true` になる唯一の場合は `x` が `NaN` である場合です。）
 
-## `==` による緩い等価性
-
-緩い等価性は、両方の値を共通の型に変換した*後で*、2 つの値が等しいか比較します。(片方あるいは両方の変換が行われた) 変換処理後の、最終的な等価性の比較は `===` と全く同じ振る舞いです。緩い等価性は*対称的*であり、任意の値 `A` および `B` において、`A == B` と `B == A` の意味は常に同じです (変換処理を適用する順序を除く)。
-
-等価性比較でさまざまな型のオペランドに対して以下のように振る舞います。
-
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="row"></th>
-      <th colspan="7" scope="col" style="text-align: center">オペランド B</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row"></th>
-      <td></td>
-      <td style="text-align: center">Undefined</td>
-      <td style="text-align: center">Null</td>
-      <td style="text-align: center">Number</td>
-      <td style="text-align: center">String</td>
-      <td style="text-align: center">Boolean</td>
-      <td style="text-align: center">Object</td>
-    </tr>
-    <tr>
-      <th colspan="1" rowspan="6" scope="row">オペランド A</th>
-      <td>Undefined</td>
-      <td style="text-align: center"><code>true</code></td>
-      <td style="text-align: center"><code>true</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-    </tr>
-    <tr>
-      <td>Null</td>
-      <td style="text-align: center"><code>true</code></td>
-      <td style="text-align: center"><code>true</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-    </tr>
-    <tr>
-      <td>Number</td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>A === B</code></td>
-      <td style="text-align: center"><code>A === ToNumber(B)</code></td>
-      <td style="text-align: center"><code>A === ToNumber(B)</code></td>
-      <td style="text-align: center"><code>A == ToPrimitive(B)</code></td>
-    </tr>
-    <tr>
-      <td>String</td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>ToNumber(A) === B</code></td>
-      <td style="text-align: center"><code>A === B</code></td>
-      <td style="text-align: center">
-        <code>ToNumber(A) === ToNumber(B)</code>
-      </td>
-      <td style="text-align: center"><code>A == ToPrimitive(B)</code></td>
-    </tr>
-    <tr>
-      <td>Boolean</td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>ToNumber(A) === B</code></td>
-      <td style="text-align: center">
-        <code>ToNumber(A) === ToNumber(B)</code>
-      </td>
-      <td style="text-align: center"><code>A === B</code></td>
-      <td style="text-align: center">
-        <code>ToNumber(A) == ToPrimitive(B)</code>
-      </td>
-    </tr>
-    <tr>
-      <td>Object</td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>ToPrimitive(A) == B</code></td>
-      <td style="text-align: center"><code>ToPrimitive(A) == B</code></td>
-      <td style="text-align: center">
-        <code>ToPrimitive(A) == ToNumber(B)</code>
-      </td>
-      <td style="text-align: center"><code>A === B</code></td>
-    </tr>
-  </tbody>
-</table>
-
-上の表で、`ToNumber(A)` は、比較前に引数を数値に変換しようとします。この振る舞いは `+A` (正の単項演算子) と同じです。`ToPrimitive(A)` は、`A` の持つ `A.toString` メソッド、そして `A.valueOf` メソッドの変換シーケンスを実施することで、オブジェクトの引数をプリミティブ値へ変換しようとを試みます。
-
-伝統的にも、また ECMAScript によれば、すべてのオブジェクトは `undefined` や `null` に対して大雑把には等価でないとしています。しかし、ほとんどのブラウザーは、ごく一部のオブジェクト (特に、あらゆるページの `document.all` オブジェクト) が、いくつかの状況においては値 `undefined` のように振る舞う*こと*を認めています。緩い等価性もそのようなものの一つです、A が `undefined` に*相当する*オブジェクトである場合に限り、`null == A` および `undefined == A` は true になります。それ以外のどのオブジェクトも `undefined` および `null` と大雑把には等価とはなりません。
+また、`===` 以外にも厳密な等価性は配列のインデックスを探すメソッドで使用されます。[`Array.prototype.indexOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)、[`Array.prototype.lastIndexOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf)、[`TypedArray.prototype.indexOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf)、[`TypedArray.prototype.lastIndexOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf)、[`case`](/ja/docs/Web/JavaScript/Reference/Statements/switch) での比較です。つまり、`indexOf(NaN)` を使用して配列の `NaN` 値のインデックスを探したり、`NaN` を `switch` 文の `case` 値として使用して何かと一致させることはできません。
 
 ```js
-var num = 0;
-var obj = new String('0');
-var str = '0';
-
-console.log(num == num); // true
-console.log(obj == obj); // true
-console.log(str == str); // true
-
-console.log(num == obj); // true
-console.log(num == str); // true
-console.log(obj == str); // true
-console.log(null == undefined); // true
-
-// 特殊なケースを除き、どちらも false
-console.log(obj == null);
-console.log(obj == undefined);
-```
-
-緩い等価性を使用することは大体はよい考えでないと考える開発者もいます。厳格な等価性による比較の結果は予測が容易であり、評価が必要となる型強制がないためにより早くなります。
-
-## Same-value 等価性
-
-最後に示す用法は Same-value 等価性です。これは、すべての状況で 2 つの値が*機能的に同一か*を判断します(この用法は[リスコフの置換原則](http://ja.wikipedia.org/wiki/%E3%83%AA%E3%82%B9%E3%82%B3%E3%83%95%E3%81%AE%E7%BD%AE%E6%8F%9B%E5%8E%9F%E5%89%87)の実践例と言えます)。実例として、イミュータブルなプロパティを変化させようとした場合を見てみましょう:
-
-```js
-// Number コンストラクタに immutable な NEGATIVE_ZERO プロパティを追加
-Object.defineProperty(Number, 'NEGATIVE_ZERO',
-                      { value: -0, writable: false, configurable: false, enumerable: false });
-
-function attemptMutation(v) {
-  Object.defineProperty(Number, 'NEGATIVE_ZERO', { value: v });
+console.log([NaN].indexOf(NaN)); // -1
+switch (NaN) {
+  case NaN:
+    console.log("Surprise"); // 何も出力されない
 }
 ```
 
-イミュータブルなプロパティを変更しようとする操作が実際の変更を伴う場合、`Object.defineProperty` は例外を発生させます。しかし、実際の変更が伴わない場合は、`Object.defineProperty` は何もしません。`v` が `-0` であれば変更を要求されていないので、エラーは発生しません。しかし `v` が `+0` であれば、`Number.NEGATIVE_ZERO` のイミュータブルな値を変更しようとすることになります。内部的には、イミュータブルなプロパティが再定義された場合、新たに指定された値と現在の値が Same-value 等価性によって比較されます。
+## == による緩い等価性
 
-Same-value 等価性は {{jsxref("Object.is")}} メソッドによって提供されます。
+緩い等価性は対称的です。（変換の順序を除いて） `A` と `B` の値が何であっても、`A == B` は常に `B == A` と同じ意味づけになります。`==` を使用して緩い等価性を実行する場合の動作は以下の通りです。
 
-## Same-value-zero 等価性
+1. オペランドが同じ型である場合、以下のように比較されます。
+   - オブジェクト: 両方のオペランドが同じオブジェクトを参照している場合に限り `true` を返します。
+   - 文字列: 両方のオペランドに同じ文字が同じ順番で入っている場合のみ `true` を返します。
+   - 数値: 両方のオペランドが同じ値である場合のみ `true` を返します。`+0` と `-0` は同じ値として扱われます。どちらかのオペランドが `NaN` である場合は `false` を返します。従って、`NaN` は `NaN` とは等しくなりません。
+   - 論理値: 両方が `true` または両方が `false` の場合のみ `true` を返します。
+   - 長整数: 両方のオペランドが同じ値である場合のみ `true` を返します。
+   - シンボル: 両方のオペランドが同じシンボルを参照している場合のみ `true` を返します。
+2. オペランドの一方が `null` または `undefined` である場合、もう一方も `null` または `undefined` であれば `true` を返します。それ以外の場合は `false` を返す。
+3. オペランドの一方がオブジェクトで、もう一方がプリミティブである場合、[オブジェクトをプリミティブに変換します](/ja/docs/Web/JavaScript/Data_structures#プリミティブ変換)。
+4. この段階で、両方のオペランドはプリミティブ（文字列、数値、論理値、シンボル、長整数のいずれか）に変換されます。残りの変換は、ケースバイケースで行われます。
+   - 両方が同じ型であれば、手順 1 を使用して比較します。
+   - 一方のオペランドがシンボルで、もう一方がそうでない場合は、`false` を返します。
+   - 一方のオペランドが論理型で、もう一方がそうでない場合は、[論理値から数値への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)が行われます。`true` は 1 に変換され、`false` は 0 に変換されます。それから 2 つのオペランドを緩い等価性で比較します。
+   - 数値から文字列へ: [文字列から数値へ変換します](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)。変換に失敗すると `NaN` となり、等価性が `false` となることが保証されています。
+   - 数値から長整数へ: 数値で比較します。数値が ±Infinity または `NaN` であれば、`false` を返します。
+   - 文字列から長整数へ: 文字列を [`BigInt()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) コンストラクターと同じアルゴリズムを使用して長整数へと変換します。変換に失敗した場合は、 `false` を返します。
 
-Same-value 等価性に似ていますが、+0 と -0 は等しいとみなします。
+伝統的に、そして ECMAScript によれば、すべてのプリミティブとオブジェクトは `undefined` および `null` と緩い不等価であるとされています。しかし、ほとんどのブラウザーは、あるコンテキストにおいて、非常に狭いクラスのオブジェクト（具体的には、あらゆるページの `document.all` オブジェクト）が、あたかも `undefined` という値を持つかのように振る舞うことを許可しています。緩い等価性はそのようなコンテキストの 1 つです。`null == A` と `undefined == A` は、A が `undefined` をエミュレートするオブジェクトである場合にのみ真と評価されます。他に、オブジェクトが `undefined` や `null` と緩やかな等価性を持つことはありません。
 
-## 仕様書における抽象的な等価性、厳格な等価性、Same value
+ほとんどの場合、緩い等価性を使用することは推奨されません。厳密な等価性を用いた比較の結果は予測しやすく、型変換がないため、よりすばやく評価できる可能性があります。
 
-ES5 では、[`==`](/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) で実行する比較を [Section 11.9.3, The Abstract Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.3) で説明しています。また、[`===`](/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) の比較は [11.9.6, The Strict Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.6) で説明しています (リンク先をご覧ください。簡単かつ読みやすくなっています。ヒント: 厳格な等価性のアルゴリズムを始めにご覧ください)。また ES5 の [Section 9.12, The SameValue Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-9.12) では、JS エンジン内部で使用する SameValue について説明しています。大部分は厳格な等価性のアルゴリズムと同じですが、{{jsxref("Number")}} を扱う 11.9.6.4 および 9.12.4 が異なります。ES2015 では、このアルゴリズムを {{jsxref("Object.is")}} で公開するよう提案しています。
+次の例は、数値プリミティブ `0`、長整数プリミティブ `0n`、文字列プリミティブ `'0'`、`toString()` の値が `'0'` であるオブジェクトを含む緩い等価性の比較を示しています。
 
-二重等号と三重等号について、11.9.6.1 で最初に行う型の確認を除けば、厳格な等価性のアルゴリズムは緩い等価性のアルゴリズムのサブセットと考えることができます。これは、11.9.6.2 から 7 が 11.9.3.1.a から f に対応するためです。
+```js
+const num = 0;
+const big = 0n;
+const str = "0";
+const obj = new String("0");
 
-## 等価性の比較を理解するためのモデル?
+console.log(num == str); // true
+console.log(big == num); // true
+console.log(str == big); // true
 
-ES2015 より前は、二重等号と三重等号について、一方は他方を "拡張した" ものであると聞いていたかもしれません。例えば、二重等号は三重等号と同じことをすべて行うだけでなくオペランドの型変換も行うことから、三重等号を拡張したものであると聞いたことがあるかもしれません。例えば、`6 == "6"` です (あるいは二重等号が基本形であり、三重等号は 2 つのオペランドが同一の型であることを要求するという制約を加えていることから、三重等号が拡張形であると言われたかもしれません。どちらが理解に適したモデルであるかは、どのような見方を選ぶかによって変わります)。
+console.log(num == obj); // true
+console.log(big == obj); // true
+console.log(str == obj); // true
+```
 
-しかし内蔵の等価演算子に関するこの考え方は、その "連続体" に ES2015 の {{jsxref("Object.is")}} を含められるように広げることが可能なモデルではありません。{{jsxref("Object.is")}} は二重等号より単純に "緩い" のではなく、また三重等号より "厳格" でもなく、さらに両者の中間のどこにも置けません (すなわち二重等号より厳格でも、三重等号より緩くもありません)。同一性を比較した以下の表から、{{jsxref("Object.is")}} が {{jsxref("NaN")}} を扱う方法が原因であることがわかります。`Object.is(NaN, NaN)` が `false` に評価されるのであれば、`-0` と `+0` を区別することにより、三重等号より厳格であることから寛容/厳格の連続体に*含めることができる*ことに注目してください。しかし {{jsxref("NaN")}} の扱いは、これが虚偽であることを表します。残念ながら、{{jsxref("Object.is")}} は等価演算子に関する寛容さや厳格さではなく、単純に固有の特性の観点から考えなければなりません。
+緩い等価性は、 `==` 演算子でのみ使用されます。
 
-| x                   | y                   | `==`    | `===`   | `Object.is` | `SameValueZero` |
-| ------------------- | ------------------- | ------- | ------- | ----------- | --------------- |
-| `undefined`         | `undefined`         | `true`  | `true`  | `true`      | `true`          |
-| `null`              | `null`              | `true`  | `true`  | `true`      | `true`          |
-| `true`              | `true`              | `true`  | `true`  | `true`      | `true`          |
-| `false`             | `false`             | `true`  | `true`  | `true`      | `true`          |
-| `'foo'`             | `'foo'`             | `true`  | `true`  | `true`      | `true`          |
-| `0`                 | `0`                 | `true`  | `true`  | `true`      | `true`          |
-| `+0`                | `-0`                | `true`  | `true`  | `false`     | `true`          |
-| `+0`                | `0`                 | `true`  | `true`  | `true`      | `true`          |
-| `-0`                | `0`                 | `true`  | `true`  | `false`     | `true`          |
-| `0`                 | `false`             | `true`  | `false` | `false`     | `false`         |
-| `""`                | `false`             | `true`  | `false` | `false`     | `false`         |
-| `""`                | `0`                 | `true`  | `false` | `false`     | `false`         |
-| `'0'`               | `0`                 | `true`  | `false` | `false`     | `false`         |
-| `'17'`              | `17`                | `true`  | `false` | `false`     | `false`         |
-| `[1, 2]`            | `'1,2'`             | `true`  | `false` | `false`     | `false`         |
-| `new String('foo')` | `'foo'`             | `true`  | `false` | `false`     | `false`         |
-| `null`              | `undefined`         | `true`  | `false` | `false`     | `false`         |
-| `null`              | `false`             | `false` | `false` | `false`     | `false`         |
-| `undefined`         | `false`             | `false` | `false` | `false`     | `false`         |
-| `{ foo: 'bar' }`    | `{ foo: 'bar' }`    | `false` | `false` | `false`     | `false`         |
-| `new String('foo')` | `new String('foo')` | `false` | `false` | `false`     | `false`         |
-| `0`                 | `null`              | `false` | `false` | `false`     | `false`         |
-| `0`                 | `NaN`               | `false` | `false` | `false`     | `false`         |
-| `'foo'`             | `NaN`               | `false` | `false` | `false`     | `false`         |
-| `NaN`               | `NaN`               | `false` | `false` | `true`      | `true`          |
+## Object.is() を使用した同値等価性
 
-## {{jsxref("Object.is")}} と三重等号の使いどころ
+同値等価性は、すべての状況で 2 つの値が*機能的に同一か*を判断します（この用法は[リスコフの置換原則](https://ja.wikipedia.org/wiki/%E3%83%AA%E3%82%B9%E3%82%B3%E3%83%95%E3%81%AE%E7%BD%AE%E6%8F%9B%E5%8E%9F%E5%89%87)の実践例と言えます）。例として、変更不可のプロパティを変化させようとした場合を見てみましょう。
 
-一般的に、{{jsxref("Object.is")}} のゼロに対する特別な動作が関心の対象になりえると思われるのは、ある種のメタプログラミング方式に則る時、特にプロパティ記述子に関して {{jsxref("Object.defineProperty")}} の特徴の一部を再現したい時に限られます。このような要件が必要なければ、{{jsxref("Object.is")}} ではなく、代わりに [`===`](/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) を使用してはいかがでしょう。2 つの {{jsxref("NaN")}} 値を比較した結果が `true` になることが必要な場合であっても、通常は、{{jsxref("NaN")}} をチェックして特別扱いする方が (前バージョンの ECMAScript からは {{jsxref("isNaN")}} メソッドを使えます) 、比較処理中に現れた全てのゼロについてその符号が周囲の処理からどう影響されるのか悩むよりも簡単です。
+```js
+// Number コンストラクターに変更不可の NEGATIVE_ZERO プロパティを追加
+Object.defineProperty(Number, "NEGATIVE_ZERO", {
+  value: -0,
+  writable: false,
+  configurable: false,
+  enumerable: false,
+});
+
+function attemptMutation(v) {
+  Object.defineProperty(Number, "NEGATIVE_ZERO", { value: v });
+}
+```
+
+変更不可のプロパティを変更しようとしたとき、`Object.defineProperty` は例外を発生させますが、実際の変更が要求されなかった場合は何もしません。`v` が `-0` であれば、変更が要求されていないので、エラーは発生しません。内部的には、変更不可のプロパティが再定義された場合、新たに指定された値と現在の値が同値等価性によって比較されます。
+
+同値等価性は {{jsxref("Object.is")}} メソッドによって提供されます。等価な同一性を持つ値が期待される場合、言語上のほとんどの場所で使用されます。
+
+## 同値ゼロ等価性
+
+同値等価性に似ていますが、+0 と -0 は等しいとみなします。
+
+同値ゼロ等価性 (Same-value-zero equality) は JavaScript API として公開されていませんが、独自のコードで実装することができます。
+
+```js
+function sameValueZero(x, y) {
+  if (typeof x === "number" && typeof y === "number") {
+    // x と y は等しい（-0 と 0 の場合も含む)か、両方が NaN である
+    return x === y || (x !== x && y !== y);
+  }
+  return x === y;
+}
+```
+
+同値ゼロは `NaN` を等価に扱うという点で厳密な等価性と異なり、`-0` を `0` と等価に扱うことのみが同値等価性と異なります。これは特に `NaN` を扱う場合、検索時に最も賢明な動作をするようになります。[`Array.prototype.includes()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)、[`TypedArray.prototype.includes()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes)、またキーの等価性を比較するために [`Map`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map) や [`Set`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set) のメソッドで使用されます。
+
+## 等価性の方法の比較
+
+二重等号と三重等号を比較するとき、一方は他方を「拡張した」ものである言われがちです。例えば、二重等号は三重等号と同じことをすべて行うだけでなくオペランドの型変換も行うことから、三重等号を拡張したものであると聞いたことがあるかもしれません。例えば、`6 == "6"` となります。あるいは二重等号が基本形であり、三重等号は 2 つのオペランドが同一の型であることを要求するという制約を加えていることから、三重等号が拡張形であると言われたかもしれません。
+
+しかし、この考え方は、等価性の比較が一次元の「スペクトル」を形成し、「完全に厳密な」ものが一端にあり、「完全に緩い」ものが他にもあることを意味します。このモデルは{{jsxref("Object.is")}}では不十分で、二重等号よりも「緩い」、三重等号よりも「厳しい」ものではなく、その中間（つまり、二重等号よりも厳しく、三重等号よりも緩い）にも当てはまらないからです。同一性を比較した以下の表から、{{jsxref("Object.is")}} が {{jsxref("NaN")}} を扱う方法が原因であることがわかります。`Object.is(NaN, NaN)` が `false` に評価されるのであれば、`-0` と `+0` を区別することにより、三重等号より厳密であることから緩い/厳密のスペクトルに*含めることができる*ことに注目してください。しかし {{jsxref("NaN")}} の扱いは、これが正しくないことを表します。残念ながら、{{jsxref("Object.is")}} は等価演算子に関する緩さや厳密さではなく、単純に固有の特性の観点から考えなければなりません。
+
+| x                   | y                   | `==`       | `===`      | `Object.is` | 同値ゼロ |
+| ------------------- | ------------------- | ---------- | ---------- | ----------- | --------------- |
+| `undefined`         | `undefined`         | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `null`              | `null`              | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `true`              | `true`              | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `false`             | `false`             | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `'foo'`             | `'foo'`             | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `0`                 | `0`                 | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `+0`                | `-0`                | `✅ true`  | `✅ true`  | `❌ false`  | `✅ true`       |
+| `+0`                | `0`                 | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `-0`                | `0`                 | `✅ true`  | `✅ true`  | `❌ false`  | `✅ true`       |
+| `0n`                | `-0n`               | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `0`                 | `false`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `""`                | `false`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `""`                | `0`                 | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `'0'`               | `0`                 | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `'17'`              | `17`                | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `[1, 2]`            | `'1,2'`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `new String('foo')` | `'foo'`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `null`              | `undefined`         | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `null`              | `false`             | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `undefined`         | `false`             | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `{ foo: 'bar' }`    | `{ foo: 'bar' }`    | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `new String('foo')` | `new String('foo')` | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `0`                 | `null`              | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `0`                 | `NaN`               | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `'foo'`             | `NaN`               | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `NaN`               | `NaN`               | `❌ false` | `❌ false` | `✅ true`   | `✅ true`       |
+
+### Object.is() と三重等号の使いどころ
+
+一般的に、{{jsxref("Object.is")}} のゼロに対する特別な動作が関心の対象になりえると思われるのは、ある種のメタプログラミング方式に則る時、特にプロパティ記述子に関して {{jsxref("Object.defineProperty")}} の特徴の一部を再現したい時に限られます。このような要件が必要ないのであれば、{{jsxref("Object.is")}} ではなく [`===`](/ja/docs/Web/JavaScript/Reference/Operators) を使用してください。2 つの {{jsxref("NaN")}} 値を比較した結果が `true` になることが必要な場合であっても、通常は、{{jsxref("NaN")}} をチェックして特別扱いする方が (前バージョンの ECMAScript からは {{jsxref("isNaN")}} メソッドを使えます) 、比較処理中に現れた全てのゼロについてその符号が周囲の処理からどう影響されるのか悩むよりも簡単です。
 
 すべてを網羅してはいませんが、`-0` と `+0` の区別が発生する可能性がある内蔵メソッドや演算子を以下に示します。コード中ではこれらを考慮して下さい:
 
-- [`- (単項否定演算子)`](/ja/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29)
+- [`- (単項否定演算子)`](/ja/docs/Web/JavaScript/Reference/Operators/Unary_negation)
 
-  - : &#x20;
+  - : 以下例を考えてみてください。
 
     ```js
-    let stoppingForce = obj.mass * -obj.velocity;
+    const stoppingForce = obj.mass * -obj.velocity;
     ```
 
     `obj.velocity` が `0` である (あるいは計算結果が `0` になる) とき、そこで `-0` が生成されて `stoppingForce` に伝播します。
 
-<!---->
-
-- {{jsxref("Math.atan2")}}
-
-  {{jsxref("Math.ceil")}}
-
-  {{jsxref("Math.pow")}}
-
-  {{jsxref("Math.round")}}
-
+- {{jsxref("Math.atan2")}}, {{jsxref("Math.ceil")}}, {{jsxref("Math.pow")}}, {{jsxref("Math.round")}}
   - : 引数に `-0` が存在しなくても、場合によってはこれらのメソッドの戻り値として `-0` が式に取り込まれる可能性があります。例えば、負の値の累乗で {{jsxref("Infinity", "-Infinity")}} が発生するように {{jsxref("Math.pow")}} を使用したとき、奇数の指数は `-0` に評価されます。それぞれのメソッドのドキュメントを確認してください。
-
-<!---->
-
-- {{jsxref("Math.floor")}}
-
-  {{jsxref("Math.max")}}
-
-  {{jsxref("Math.min")}}
-
-  {{jsxref("Math.sin")}}
-
-  {{jsxref("Math.sqrt")}}
-
-  {{jsxref("Math.tan")}}
-
+- {{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}
   - : 引数のひとつが `-0` である場合に、これらのメソッドから `-0` を戻り値として得る可能性があります。例えば、`Math.min(-0, +0)` は `-0` になります。それぞれのメソッドのドキュメントを確認してください。
-
-<!---->
-
-- [`~`](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
-
-  [`<<`](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
-
-  [`>>`](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
-
+- [`~`](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT), [`<<`](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift), [`>>`](/ja/docs/Web/JavaScript/Reference/Operators/Right_shift)
   - : これらの演算子は、内部で ToInt32 アルゴリズムを使用します。内部の 32 ビット整数型は 0 の表現が 1 種類しかないため、逆の演算を行った後に `-0` は戻らないでしょう。例えば `Object.is(~~(-0), -0)` や `Object.is(-0 << 2 >> 2, -0)` は、`false` になります。
 
 ゼロの符号を考慮していない場合に、{{jsxref("Object.is")}} に頼ることは危険でしょう。もちろん `-0` と `+0` を区別する意図があれば、これはまさに望むことです。
 
-## 注意: {{jsxref("Object.is")}} と NaN
+### 注意: Object.is() と NaN
 
-{{jsxref("Object.is")}} の仕様書では、すべての {{jsxref("NaN")}} のインスタンスを同じオブジェクトとして扱っています。しかし、型付き配列が利用でき、インスタンスを区別することができるので、次の例のようにすべてのコンテキストで同じ動作をするとは限りません。
+{{jsxref("Object.is")}} の仕様書では、すべての {{jsxref("NaN")}} のインスタンスを同じオブジェクトとして扱っています。しかし、[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)が利用でき、インスタンスを区別することができるので、次の例のようにすべてのコンテキストで同じ動作をするとは限りません。
 
 ```js
-var f2b = x => new Uint8Array(new Float64Array([x]).buffer);
-var b2f = x => new Float64Array(x.buffer)[0];
-var n = f2b(NaN);
+const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
+const b2f = (x) => new Float64Array(x.buffer)[0];
+// NaN のバイト表現を取得
+const n = f2b(NaN);
+// 最初のビットを変更する。これは符号ビットであり、NaN には関係ない
 n[0] = 1;
-var nan2 = b2f(n);
-nan2;
-// > NaN
-Object.is(nan2, NaN);
-// > true
-f2b(NaN);
-// > Uint8Array(8) [0, 0, 0, 0, 0, 0, 248,127)
-f2b(nan2);
-// > Uint8Array(8) [1, 0, 0, 0, 0, 0, 248,127)
+const nan2 = b2f(n);
+console.log(nan2); // NaN
+console.log(Object.is(nan2, NaN)); // true
+console.log(f2b(NaN)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 127]
+console.log(f2b(nan2)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
 ```
 
 ## 関連情報
 
-- [JS Comparison Table](http://dorey.github.io/JavaScript-Equality-Table/)
+- [JS Comparison Table](https://dorey.github.io/JavaScript-Equality-Table/)

@@ -70,10 +70,10 @@ slug: Web/HTML/Element/map
 
 ```html
 <map name="primary">
-  <area shape="circle" coords="75,75,75" href="left.html">
-  <area shape="circle" coords="275,75,75" href="right.html">
+  <area shape="circle" coords="75,75,75" href="left.html" />
+  <area shape="circle" coords="275,75,75" href="right.html" />
 </map>
-<img usemap="#primary" src="https://placehold.it/350x150" alt="350 x 150 pic">
+<img usemap="#primary" src="https://placehold.it/350x150" alt="350 x 150 pic" />
 ```
 
 ### 결과
@@ -96,7 +96,7 @@ slug: Web/HTML/Element/map
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.map")}}
+{{Compat}}
 
 ## 같이 보기
 

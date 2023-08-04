@@ -1,7 +1,6 @@
 ---
 title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 ---
 {{JSRef}}
 
@@ -49,7 +48,7 @@ wm.set(obj, "baz");
 
 ## Firefox-specific notes
 
-- Prior to Firefox 33 {{geckoRelease("33")}}, `WeakMap.prototype.set` returned `undefined` and was not chainable. This has been fixed ({{bug(1031632)}}). The behavior can be found in Chrome/v8 as well ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
+- Prior to Firefox 33, `WeakMap.prototype.set` returned `undefined` and was not chainable. This has been fixed ({{bug(1031632)}}). The behavior can be found in Chrome/v8 as well ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
 
 ## Смотрите также
 

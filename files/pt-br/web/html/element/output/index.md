@@ -1,6 +1,6 @@
 ---
 title: Output
-slug: Web/HTML/Element/Output
+slug: Web/HTML/Element/output
 ---
 
 ## Sumário

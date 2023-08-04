@@ -1,19 +1,6 @@
 ---
 title: Outils et tests
 slug: Learn/Tools_and_testing
-tags:
-  - Accessibilité
-  - Apprendre
-  - Automatisation
-  - CSS
-  - Déboguage
-  - Débutant
-  - HTML
-  - JavaScript
-  - Outils
-  - tests
-translation_of: Learn/Tools_and_testing
-original_slug: Apprendre/Outils_et_tests
 ---
 
 {{LearnSidebar}}

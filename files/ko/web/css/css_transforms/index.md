@@ -1,6 +1,6 @@
 ---
 title: CSS Transforms
-slug: Web/CSS/CSS_Transforms
+slug: Web/CSS/CSS_transforms
 ---
 
 {{CSSRef}}
@@ -31,6 +31,6 @@ slug: Web/CSS/CSS_Transforms
 - [Using CSS transforms](/ko/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
   - : Step-by-step tutorial about how to transform elements styled with CSS.
 
-## Specifications
+## 명세서
 
 {{Specifications}}

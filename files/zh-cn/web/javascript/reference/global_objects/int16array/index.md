@@ -24,8 +24,6 @@ For more information about the constructor syntax and the parameters, see _[Type
   - : Returns a number value of the element size. `2` in the case of an `Int16Array`.
 - Int16Array.length
   - : Static length property whose value is 3. For the actual length (number of elements), see {{jsxref("TypedArray.prototype.length", "Int16Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Int16Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `Int16Array` type: "Int16Array".
 - {{jsxref("TypedArray.prototype", "Int16Array.prototype")}}
   - : Prototype for the _TypedArray_ objects.
 
@@ -121,7 +119,7 @@ console.log(int16.length); // 2
 console.log(int16.BYTES_PER_ELEMENT); // 2
 
 // From an array
-var arr = new Int16Array([21,31]);
+var arr = new Int16Array([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray

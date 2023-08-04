@@ -24,9 +24,9 @@ _No hay un método especifico; hereda los métodos del padre, {{domxref("HTMLEle
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLHeadElement")}}
+{{Compat}}
 
 ## Vea también
 

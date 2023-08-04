@@ -1,7 +1,6 @@
 ---
 title: flex-wrap
 slug: Web/CSS/flex-wrap
-translation_of: Web/CSS/flex-wrap
 ---
 
 {{ CSSRef}}
@@ -113,7 +112,7 @@ flex-wrap: unset;
 
 ### Results
 
-{{ EmbedLiveSample('Examples', '700px', '700px', '', 'Web/CSS/flex-wrap') }}
+{{ EmbedLiveSample('Examples', '100%', '700') }}
 
 ## Specifications
 

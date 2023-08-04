@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Set/entries
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/entries
 ---
 
 {{JSRef}}
@@ -43,9 +42,9 @@ console.log(setIter.next().value); // ["baz", "baz"]
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Set.entries")}}
+{{Compat}}
 
 ## Ver también
 

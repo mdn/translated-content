@@ -1,12 +1,6 @@
 ---
 title: PUT
 slug: Web/HTTP/Methods/PUT
-tags:
-  - HTTP
-  - HTTP методы
-  - Метод запроса
-  - Справка
-translation_of: Web/HTTP/Methods/PUT
 ---
 {{HTTPSidebar}}**Метод запроса HTTP PUT** создаёт новый ресурс или заменяет представление целевого ресурса, данными представленными в теле запроса.
 

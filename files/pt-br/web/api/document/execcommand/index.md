@@ -3,11 +3,11 @@ title: Document.execCommand()
 slug: Web/API/Document/execCommand
 ---
 
-{{ApiRef("DOM")}}{{Obsolete_header}}
+{{ApiRef("DOM")}}
 
 Quando um documento HTML está em [`designMode`](/pt-BR/docs/Web/API/Document/designMode), seu objeto `document` expõe um metodo **`execCommand`** para editar a região editável corrente, algo como elementos [form inputs](/pt-BR/docs/Web/HTML/Element/input) ou [`contentEditable`](/pt-BR/docs/Web/HTML/Global_attributes/contenteditable).
 
-A maioria dos comandos afetam apaenas uma área selecionada \[[seleção](/pt-BR/docs/Web/API/Selection)] (negrito, itálico, etc.), enquantos outros adicionam novos elementos (adicionar um link por exemplo), ou afetam uma linha toda (identação). Quando usando `contentEditable`, o metódo `execCommand()` afeta o elemento editável ativo.
+A maioria dos comandos afetam apenas uma área selecionada \[[seleção](/pt-BR/docs/Web/API/Selection)] (negrito, itálico, etc.), enquantos outros adicionam novos elementos (adicionar um link por exemplo), ou afetam uma linha toda (identação). Quando usando `contentEditable`, o metódo `execCommand()` afeta o elemento editável ativo.
 
 ## Síntaxe
 
@@ -53,11 +53,11 @@ Um {{jsxref('Boolean')}} que tem valor `false` se o comando não é válido ou e
 - `delete`
   - : Exclui o conteúdo da seleção atual.
 - `enableAbsolutePositionEditor`
-  - : Habilita ou desabilita a garra que permite mover elementos absolutamente posicionados. Está desabilitado por padrão no Firefox 63 Beta / Dev Edition ({{bug(1449564)}})
+  - : Habilita ou desabilita a garra que permite mover elementos absolutamente posicionados. Está desabilitado por padrão no Firefox 63 Beta / Dev Edition ([Erro do Firefox 1449564](https://bugzil.la/1449564))
 - `enableInlineTableEditing`
-  - : Ativa ou desativa os controles de inserção e exclusão de linhas / colunas da tabela. Está desabilitado por padrão no Firefox 63 Beta / Dev Edition ({{bug(1449564)}}).
+  - : Ativa ou desativa os controles de inserção e exclusão de linhas / colunas da tabela. Está desabilitado por padrão no Firefox 63 Beta / Dev Edition ([Erro do Firefox 1449564](https://bugzil.la/1449564)).
 - `enableObjectResizing`
-  - : Ativa ou desativa as alças de redimensionamento em imagens, tabelas e elementos absolutamente posicionados e outros objetos redimensionáveis. Está desabilitado por padrão no Firefox 63 Beta / Dev Edition ({{bug(1449564)}}).
+  - : Ativa ou desativa as alças de redimensionamento em imagens, tabelas e elementos absolutamente posicionados e outros objetos redimensionáveis. Está desabilitado por padrão no Firefox 63 Beta / Dev Edition ([Erro do Firefox 1449564](https://bugzil.la/1449564)).
 - `fontName`
   - : Altera o nome da fonte para a seleção ou no ponto de inserção. Isso requer uma string com o nome da fonte (como `"Arial"`) como argumento.
 - `fontSize`

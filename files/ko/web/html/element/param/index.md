@@ -1,5 +1,5 @@
 ---
-title: '<param>: 객체 매개변수 요소'
+title: "<param>: 객체 매개변수 요소"
 slug: Web/HTML/Element/param
 ---
 
@@ -67,7 +67,7 @@ slug: Web/HTML/Element/param
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.param")}}
+{{Compat}}
 
 ## 같이 보기
 

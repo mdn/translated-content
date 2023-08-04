@@ -51,7 +51,7 @@ Proxy-Authorization: <type> <credentials>
 
 - **Basic** ({{rfc(7617)}}를 보십시오. base64-encoded credentials. 더 많은 정보는 아래를 확인하십시오.),
 - **Bearer** ({{rfc(6750)}}를 보십시오. bearer tokens to access OAuth 2.0-protected resources),
-- **Digest** ({{rfc(7616)}}를 보십시오. Firefox에서는 md5 해싱만 지원합니다. SHA 암호화 지원을 위하여 {{bug(472823)}}을 확인하십시오.),
+- **Digest** ({{rfc(7616)}}를 보십시오. Firefox에서는 md5 해싱만 지원합니다. SHA 암호화 지원을 위하여 [Firefox bug 472823](https://bugzil.la/472823)을 확인하십시오.),
 - **HOBA** ({{rfc(7486)}} (draft)를 보십시오. **H**TTP **O**rigin-**B**ound **A**uthentication, digital-signature-based),
 - **Mutual** ([draft-ietf-httpauth-mutual](https://tools.ietf.org/html/draft-ietf-httpauth-mutual-11)를 참조하십시오),
 - **AWS4-HMAC-SHA256** ([AWS docs를 참조하십시오](http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)).
@@ -103,7 +103,7 @@ location /status {
 https://username:password@www.example.com/
 ```
 
-**이러한 방식의 URL은 더 이상 사용되지 않습니다**. Chrome에서, URL의 `username:password@` 부분은 보안 상의 이유로 [제거](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7)됩니다. Firefox에서는, 해당 사이트가 진짜로 인증이 필요한지를 체크하며, 그렇지 않으면 Firefox는 프롬프트로 "You are about to log in to the site “www\.example.com” with the username “username”, but the website does not require authentication. This may be an attempt to trick you."와 같이 경고합니다.
+**이러한 방식의 URL은 더 이상 사용되지 않습니다**. Chrome에서, URL의 `username:password@` 부분은 보안 상의 이유로 [제거](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7)됩니다. Firefox에서는, 해당 사이트가 진짜로 인증이 필요한지를 체크하며, 그렇지 않으면 Firefox는 프롬프트로 "You are about to log in to the site "www\.example.com" with the username "username", but the website does not require authentication. This may be an attempt to trick you."와 같이 경고합니다.
 
 ## 함께 보기
 

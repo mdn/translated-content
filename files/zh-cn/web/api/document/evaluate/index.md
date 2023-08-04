@@ -28,7 +28,13 @@ var xpathResult = document.evaluate(
 ## 示例
 
 ```js
-var headings = document.evaluate("/html/body//h2", document, null, XPathResult.ANY_TYPE, null);
+var headings = document.evaluate(
+  "/html/body//h2",
+  document,
+  null,
+  XPathResult.ANY_TYPE,
+  null,
+);
 /* 在 document 中查找所有的 h2 元素。
  * 结果可能是无序节点迭代器。 */
 var thisHeading = headings.iterateNext();

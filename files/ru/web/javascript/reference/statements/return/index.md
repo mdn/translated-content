@@ -1,10 +1,6 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
-tags:
-  - JavaScript
-  - Оператор
-translation_of: Web/JavaScript/Reference/Statements/return
 ---
 
 {{jsSidebar("Statements")}}
@@ -64,7 +60,7 @@ a + b;
 
 В консоли появится предупреждение "unreachable code after return statement".
 
-> **Примечание:** Начиная с Gecko 40 {{geckoRelease(40)}}, предупреждение в консоли появляется, если обнаружен недостижимый код после `return`.
+> **Примечание:** Начиная с Gecko 40, предупреждение в консоли появляется, если обнаружен недостижимый код после `return`.
 
 Для того, чтобы избежать данной проблемы (предотвратить ASI), можно использовать скобки:
 

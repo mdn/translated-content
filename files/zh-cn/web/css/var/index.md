@@ -9,7 +9,7 @@ slug: Web/CSS/var
 
 {{EmbedInteractiveExample("pages/css/var.html")}}
 
-`var()` 函数不能作为属性名、选择器或者其它除了属性值之外的值。（这样做通常会产生无效的语法或者一个没有关联到变量的值。）
+`var()` 函数不能作为属性名、选择器或者其他除了属性值之外的值。（这样做通常会产生无效的语法或者一个没有关联到变量的值。）
 
 ## 语法
 
@@ -48,10 +48,7 @@ body {
 /* 在 component 的样式中: */
 .component .header {
   /* header-color 没有被设置, 将使用回退值 blue */
-  color: var(
-    --header-color,
-    blue
-  );
+  color: var(--header-color, blue);
 }
 
 .component .text {

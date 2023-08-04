@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
-tags:
-  - Date
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 ---
 {{JSRef("Global_Objects", "Date")}}
 
@@ -54,7 +46,7 @@ function toLocaleStringSupportsLocales() {
   try {
     new Date().toLocaleString('i');
   } catch (e) {
-    return e​.name === 'RangeError';
+    return e.name === 'RangeError';
   }
   return false;
 }

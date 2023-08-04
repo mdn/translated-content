@@ -1,6 +1,6 @@
 ---
 title: CSS Flexible Box Layout
-slug: Web/CSS/CSS_Flexible_Box_Layout
+slug: Web/CSS/CSS_flexible_box_layout
 ---
 
 {{CSSRef}}
@@ -70,8 +70,8 @@ A propriedade `align-content`, `align-self`, `align-items` e `justify-content` a
 
 ## Especificações
 
-| Especificação                            | Status                               | Comentário             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
+| Especificação                  | Status                      | Comentário         |
+| ------------------------------ | --------------------------- | ------------------ |
 | {{ SpecName('CSS3 Flexbox') }} | {{ Spec2('CSS3 Flexbox') }} | Definição inicial. |
 
 ## Veja também

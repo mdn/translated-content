@@ -1,7 +1,6 @@
 ---
 title: background
 slug: Web/CSS/background
-translation_of: Web/CSS/background
 ---
 {{CSSRef("CSS Background")}}Сокращённое [CSS](/ru/docs/Web/CSS) свойство **`background`** устанавливает сразу все свойства стиля фона, такие как цвет, изображение, источник и размер, или метод повтора.{{EmbedInteractiveExample("pages/css/background.html")}}
 
@@ -27,7 +26,7 @@ background: border-box red;
 background: no-repeat center/80% url("../img/image.png");
 ```
 
-> **Примечание:** **Предупреждение:** {{cssxref("background-color")}} можно определить только на последнем фоне, поскольку для всего элемента существует только один цвет фона.
+> **Примечание:** {{cssxref("background-color")}} можно определить только на последнем фоне, поскольку для всего элемента существует только один цвет фона.
 
 ### Значения
 

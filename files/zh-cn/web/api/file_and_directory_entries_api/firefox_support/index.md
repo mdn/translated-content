@@ -31,7 +31,8 @@ slug: Web/API/File_and_Directory_Entries_API/Firefox_support
 为了确保你的代码可以在 Chrome 和其他浏览器上运行，你可以包括如下代码：
 
 ```js
-var FileSystemDirectoryEntry = window.FileSystemDirectoryEntry || window.DirectoryEntry;
+var FileSystemDirectoryEntry =
+  window.FileSystemDirectoryEntry || window.DirectoryEntry;
 var FileSystemEntry = window.FileSystemEntry || window.Entry;
 ```
 
@@ -50,7 +51,7 @@ var FileSystemEntry = window.FileSystemEntry || window.Entry;
 - Firefox 只支持从文件系统中的文件读取。你不能用他们写入。特别是，用来创建{{domxref("FileSystemFileEntry.createWriter()")}}来处理文件写入的{{domxref("FileWriter")}}方法没有实现，只会返回一个错误。
 - Firefox 不支持 `"filesystem:"` URL 方案。
 
-## 另请参阅
+## 参见
 
 - [文件和目录 API 条目](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
 - [介绍文件和目录 API 条目](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)

@@ -54,7 +54,7 @@ animation-fill-mode: both, forwards, none;
 - `both`
   - : The animation will follow the rules for both forwards and backwards, thus extending the animation properties in both directions.
 
-> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see [Setting multiple animation property values](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values).
+> **Nota:** When you specify multiple comma-separated values on an `animation-*` property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see [Setting multiple animation property values](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values).
 
 ### Formal syntax
 
@@ -69,7 +69,7 @@ You can see the effect of `animation-fill-mode` in the following example. It dem
 ```html
 <p>Move your mouse over the gray box!</p>
 <div class="demo">
- <div class="growsandstays">This grows and stays big.</div>
+  <div class="growsandstays">This grows and stays big.</div>
   <div class="grows">This just grows.</div>
 </div>
 ```
@@ -83,8 +83,12 @@ You can see the effect of `animation-fill-mode` in the following example. It dem
 }
 
 @keyframes grow {
-  0% { font-size: 0; }
-  100% { font-size: 40px; }
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 40px;
+  }
 }
 
 .demo:hover .grows {
@@ -105,8 +109,8 @@ See [CSS animations](/pt-BR/CSS/CSS_animations) for more examples.
 
 ## Specifications
 
-| Specification                                                                                            | Status                               | Comment             |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| Specification                                                                  | Status                       | Comment             |
+| ------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
 | {{SpecName('CSS3 Animations', '#animation-fill-mode', 'animation-fill-mode')}} | {{Spec2('CSS3 Animations')}} | Initial definition. |
 
 {{cssinfo}}

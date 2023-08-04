@@ -1,7 +1,6 @@
 ---
 title: 404 Not Found
 slug: Web/HTTP/Status/404
-translation_of: Web/HTTP/Status/404
 ---
 {{HTTPSidebar}}
 
@@ -40,4 +39,3 @@ ErrorDocument 404 /notfound.html
 ## Смотрите также
 
 - {{HTTPStatus(410)}}
-- {{interwiki("wikipedia", "HTTP_404", "Wikipedia: HTTP 404")}}

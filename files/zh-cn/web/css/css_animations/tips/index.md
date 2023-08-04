@@ -1,15 +1,15 @@
 ---
 title: CSS Animations tips and tricks
-slug: Web/CSS/CSS_Animations/Tips
+slug: Web/CSS/CSS_animations/Tips
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 CSS 动画使得您能够实现一些难以置信的效果点缀您的页面或者应用程序。然而，有些您想实现的东西表现的并不浅显易懂，或者没法使您立马想到一种聪明的解决办法。这篇文章集合一个一些温馨贴士和技巧，从而帮助您更轻松地工作，这其中包括了如何使一个已经停止的动画重新开始播放。
 
 ## 重新播放动画
 
-[CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations)的规范并没有提供使得动画重新激活的方法。在元素上调用`resetAnimation()` 并不生效，您也不能直接通过设置元素的 {{cssxref("animation-play-state")}}使得动画重新“跑起来”。事实上，你必须使用一些技巧使得已经停止的动画重新播放。
+[CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)的规范并没有提供使得动画重新激活的方法。在元素上调用`resetAnimation()` 并不生效，您也不能直接通过设置元素的 {{cssxref("animation-play-state")}}使得动画重新“跑起来”。事实上，你必须使用一些技巧使得已经停止的动画重新播放。
 
 这有一种我们认为足够稳定和可靠的方法推荐给您。
 
@@ -18,8 +18,7 @@ CSS 动画使得您能够实现一些难以置信的效果点缀您的页面或�
 首先，让我们定义一个我们想要添加动画的元素{{HTMLElement("div")}} 以及一个“播放”或“重播”动画的按钮。
 
 ```html
-<div class="box">
-</div>
+<div class="box"></div>
 
 <div class="runButton">Click me to run the animation</div>
 ```
@@ -40,14 +39,21 @@ CSS 动画使得您能够实现一些难以置信的效果点缀您的页面或�
   padding-bottom: 4px;
   color: white;
   background-color: darkgreen;
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 ```
 
 ```css
 @keyframes colorchange {
-  0% { background: yellow }
-  100% { background: blue }
+  0% {
+    background: yellow;
+  }
+  100% {
+    background: blue;
+  }
 }
 
 .box {
@@ -72,8 +78,8 @@ CSS 动画使得您能够实现一些难以置信的效果点缀您的页面或�
 ```js
 function play() {
   document.querySelector(".box").className = "box";
-  window.requestAnimationFrame(function(time) {
-    window.requestAnimationFrame(function(time) {
+  window.requestAnimationFrame(function (time) {
+    window.requestAnimationFrame(function (time) {
       document.querySelector(".box").className = "box changing";
     });
   });

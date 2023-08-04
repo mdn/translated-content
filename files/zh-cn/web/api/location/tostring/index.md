@@ -1,5 +1,5 @@
 ---
-title: 'Location: toString()'
+title: "Location: toString()"
 slug: Web/API/Location/toString
 ---
 
@@ -16,9 +16,9 @@ string = object.toString();
 ## 例子
 
 ```js
-// Let's imagine an <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/Location/toString"> element is in the document
+// Let's imagine an <a id="myAnchor" href="https://developer.mozilla.org/zh-CN/docs/Location/toString"> element is in the document
 var anchor = document.getElementById("myAnchor");
-var result = anchor.toString(); // Returns: 'https://developer.mozilla.org/en-US/docs/Location/toString'
+var result = anchor.toString(); // Returns: 'https://developer.mozilla.org/zh-CN/docs/Location/toString'
 ```
 
 ## 规范

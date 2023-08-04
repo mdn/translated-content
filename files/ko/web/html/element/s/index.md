@@ -67,7 +67,7 @@ slug: Web/HTML/Element/s
 ## 예제
 
 ```html
-<s>Today's Special: Salmon</s> SOLD OUT<br>
+<s>Today's Special: Salmon</s> SOLD OUT<br />
 ```
 
 {{EmbedLiveSample("예제")}}
@@ -108,7 +108,7 @@ s::after {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.s")}}
+{{Compat}}
 
 ## 같이 보기
 

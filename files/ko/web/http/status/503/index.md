@@ -2,6 +2,7 @@
 title: 503 Service Unavailable
 slug: Web/HTTP/Status/503
 ---
+
 {{HTTPSidebar}}
 
 하이퍼텍스트 전송 프로토콜(HTTP) **`503 Service Unavailable`** 서버 에러 응답 코드는 서버가 요청을 처리할 준비가 되지 않은 것을 의미합니다.
@@ -14,7 +15,7 @@ slug: Web/HTTP/Status/503
 
 ## 상태
 
-```
+```http
 503 Service Unavailable
 ```
 

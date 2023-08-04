@@ -91,9 +91,9 @@ _Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs
 - [`MouseEvent.webkitForce`](/pt-BR/docs/Web/API/MouseEvent/webkitForce) Read only
   - : A quantidade de pressão aplicada ao clicar
 - [MouseEvent.x](/pt-BR/docs/Web/API/MouseEvent/clientX)Read only
-  - : Alias ​​para [`MouseEvent.clientX`](/pt-BR/docs/Web/API/MouseEvent/clientX).
+  - : Alias para [`MouseEvent.clientX`](/pt-BR/docs/Web/API/MouseEvent/clientX).
 - [`MouseEvent.y`](/pt-BR/docs/Web/API/MouseEvent/clientY) Read only
-  - : Alias ​​para [MouseEvent.clientY](/pt-BR/docs/Web/API/MouseEvent/clientY)
+  - : Alias para [MouseEvent.clientY](/pt-BR/docs/Web/API/MouseEvent/clientY)
 
 ## Constantes
 

@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.reduce()
-slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/reduce
+slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 ---
 
 {{JSRef}}
@@ -179,7 +178,7 @@ var integrado = [[0,1], [2,3], [4,5]].reduce(function(a,b) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.reduce")}}
+{{Compat}}
 
 ## Ver también
 

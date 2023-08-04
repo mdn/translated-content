@@ -1,5 +1,5 @@
 ---
-title: ':hover'
+title: ":hover"
 slug: Web/CSS/:hover
 ---
 
@@ -37,7 +37,7 @@ Los estilos definidos por la pseudoclase `:active` serán anulados por cualquier
 ```css
 a {
   background-color: powderblue;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
 a:hover {
@@ -61,7 +61,7 @@ Puede usar la pseudoclase `:hover` para crear una galería de imágenes con imá
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.hover")}}
+{{Compat}}
 
 ## Ver también
 

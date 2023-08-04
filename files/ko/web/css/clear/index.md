@@ -192,14 +192,14 @@ p {
 
 {{ EmbedLiveSample('clear_both','100%','300') }}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
 ## See also
 
-- [CSS basic box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [CSS basic box model](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)

@@ -1,7 +1,6 @@
 ---
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/abs
 ---
 
 {{JSRef}}
@@ -52,9 +51,9 @@ Math.abs();         // NaN
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.abs")}}
+{{Compat}}
 
 ## Ver también
 

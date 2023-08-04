@@ -1,5 +1,5 @@
 ---
-title: '<nav>: 탐색 구획 요소'
+title: "<nav>: 탐색 구획 요소"
 slug: Web/HTML/Element/nav
 ---
 
@@ -88,4 +88,4 @@ slug: Web/HTML/Element/nav
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.nav")}}
+{{Compat}}

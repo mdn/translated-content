@@ -1,12 +1,11 @@
 ---
 title: 布局和包含块
 slug: Web/CSS/Containing_block
-original_slug: Web/CSS/All_About_The_Containing_Block
 ---
 
-{{cssref}}
+{{CSSRef}}
 
-一个元素的尺寸和位置经常受其**包含块 (containing block)**的影响。大多数情况下，包含块就是这个元素最近的祖先[块元素](/zh-CN/docs/Web/HTML/Block-level_elements)的[内容区](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)，但也不是总是这样。在本文中，我们来过一遍确定包含块的所有因素。
+一个元素的尺寸和位置经常受其**包含块**（containing block）的影响。大多数情况下，包含块就是这个元素最近的祖先[块元素](/zh-CN/docs/Glossary/Block-level_content)的[内容区域](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#内容区域)，但也不是总是这样。在本文中，我们来过一遍确定包含块的所有因素。
 
 当一个客户端代理（比如说浏览器）展示一个文档的时候，对于每一个元素，它都产生了一个盒子。每一个盒子都被划分为四个区域：
 
@@ -34,11 +33,11 @@ original_slug: Web/CSS/All_About_The_Containing_Block
 3. 如果 position 属性是 **`fixed`**，在连续媒体的情况下 (continuous media) 包含块是 {{glossary("viewport")}} ,在分页媒体 (paged media) 下的情况下包含块是分页区域 (page area)。
 4. 如果 position 属性是 **`absolute`** 或 **`fixed`**，包含块也可能是由满足以下条件的最近父级元素的内边距区的边缘组成的：
 
-    1. {{cssxref("transform")}} 或 {{cssxref("perspective")}} 的值不是 `none`
-    2. {{cssxref("will-change")}} 的值是 `transform` 或 `perspective`
-    3. {{cssxref("filter")}} 的值不是 `none` 或 `will-change` 的值是 `filter`（只在 Firefox 下生效）。
-    4. {{cssxref("contain")}} 的值是 `paint`（例如：`contain: paint;`）
-    5. {{cssxref("backdrop-filter")}} 的值不是 `none`（例如：`backdrop-filter: blur(10px);`）
+   1. {{cssxref("transform")}} 或 {{cssxref("perspective")}} 的值不是 `none`
+   2. {{cssxref("will-change")}} 的值是 `transform` 或 `perspective`
+   3. {{cssxref("filter")}} 的值不是 `none` 或 `will-change` 的值是 `filter`（只在 Firefox 下生效）。
+   4. {{cssxref("contain")}} 的值是 `paint`（例如：`contain: paint;`）
+   5. {{cssxref("backdrop-filter")}} 的值不是 `none`（例如：`backdrop-filter: blur(10px);`）
 
 > **备注：** 根元素 (\<html>) 所在的包含块是一个被称为**初始包含块**的矩形。他的尺寸是视口 viewport (for continuous media) 或分页媒体 page media (for paged media).
 
@@ -88,10 +87,10 @@ section {
 }
 
 p {
-  width: 50%;   /* == 400px * .5 = 200px */
-  height: 25%;  /* == 160px * .25 = 40px */
-  margin: 5%;   /* == 400px * .05 = 20px */
-  padding: 5%;  /* == 400px * .05 = 20px */
+  width: 50%; /* == 400px * .5 = 200px */
+  height: 25%; /* == 160px * .25 = 40px */
+  margin: 5%; /* == 400px * .05 = 20px */
+  padding: 5%; /* == 400px * .05 = 20px */
   background: cyan;
 }
 ```
@@ -100,7 +99,7 @@ p {
 
 ### Example 2
 
-在这个示例中，P 标签的包含块为 `<body>` **元素，**因为 `<section>` 不再是一个块容器，所以并没有形成一个格式上下文。
+在这个示例中，P 标签的包含块为 `<body>` 元素，因为 `<section>` 不再是一个块容器，所以并没有形成一个格式上下文。
 
 ```html hidden
 <body>
@@ -121,8 +120,8 @@ section {
 }
 
 p {
-  width: 50%;     /* == half the body's width */
-  height: 200px;  /* Note: a percentage would be 0 */
+  width: 50%; /* == half the body's width */
+  height: 200px; /* Note: a percentage would be 0 */
   background: cyan;
 }
 ```
@@ -158,10 +157,10 @@ section {
 
 p {
   position: absolute;
-  width: 50%;   /* == (400px + 20px + 20px) * .5 = 220px */
-  height: 25%;  /* == (160px + 30px + 30px) * .25 = 55px */
-  margin: 5%;   /* == (400px + 20px + 20px) * .05 = 22px */
-  padding: 5%;  /* == (400px + 20px + 20px) * .05 = 22px */
+  width: 50%; /* == (400px + 20px + 20px) * .5 = 220px */
+  height: 25%; /* == (160px + 30px + 30px) * .25 = 55px */
+  margin: 5%; /* == (400px + 20px + 20px) * .05 = 22px */
+  padding: 5%; /* == (400px + 20px + 20px) * .05 = 22px */
   background: cyan;
 }
 ```
@@ -195,10 +194,10 @@ section {
 
 p {
   position: fixed;
-  width: 50%;   /* == (50vw - (width of vertical scrollbar)) */
-  height: 50%;  /* == (50vh - (height of horizontal scrollbar)) */
-  margin: 5%;   /* == (5vw - (width of vertical scrollbar)) */
-  padding: 5%;  /* == (5vw - (width of vertical scrollbar)) */
+  width: 50%; /* == (50vw - (width of vertical scrollbar)) */
+  height: 50%; /* == (50vh - (height of horizontal scrollbar)) */
+  margin: 5%; /* == (5vw - (width of vertical scrollbar)) */
+  padding: 5%; /* == (5vw - (width of vertical scrollbar)) */
   background: cyan;
 }
 ```
@@ -233,10 +232,10 @@ p {
   position: absolute;
   left: 80px;
   top: 30px;
-  width: 50%;   /* == 200px */
-  height: 25%;  /* == 40px */
-  margin: 5%;   /* == 20px */
-  padding: 5%;  /* == 20px */
+  width: 50%; /* == 200px */
+  height: 25%; /* == 40px */
+  margin: 5%; /* == 20px */
+  padding: 5%; /* == 20px */
   background: cyan;
 }
 ```
@@ -252,10 +251,10 @@ p {
   - [注释](/zh-CN/docs/Web/CSS/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
-  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
     - [初始值](/zh-CN/docs/Web/CSS/initial_value)

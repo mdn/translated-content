@@ -35,7 +35,7 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ## 如何使用浏览器开发者工具
 
-[What are browser developer tools](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools) 解释了如何在不同的浏览器和平台上打开这些工具。你可能会选择大部分时间在某个浏览器上开发去熟悉里面的工具，不过你还是有必要了解如何在其它浏览器中打开同样的工具。要是你看到多个浏览器间不同的渲染结果，这就会很方便了。
+[What are browser developer tools](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools) 解释了如何在不同的浏览器和平台上打开这些工具。你可能会选择大部分时间在某个浏览器上开发去熟悉里面的工具，不过你还是有必要了解如何在其他浏览器中打开同样的工具。要是你看到多个浏览器间不同的渲染结果，这就会很方便了。
 
 你还会发现，不同的浏览器弹出开发者工具时会选择把重点放到不同的区域。例如，Firefox 有不错的工具用来可视化处理 CSS 布局，让你能够检查和编辑 [Grid Layouts](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)、[Flexbox](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts)、[Shapes](/zh-CN/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes)。不过，浏览器都有类似的基础工具用来检查作用于页面元素的 CSS 属性和值，并对它们进行更改。
 
@@ -153,7 +153,7 @@ em {
 
 您还可以查看 MDN 每个属性页底部的浏览器兼容性表。这些向您显示浏览器对该属性的支持，如果支持该属性的某些用法，而不支持其他用法，则经常会 break down。 [这里](/zh-CN/docs/)显示了 {{cssxref("shape-outside")}} 属性的兼容性数据。
 
-### 是否有其它东西覆盖了你的 CSS?
+### 是否有其他东西覆盖了你的 CSS?
 
 在这里，您所学到的关于特定性（specificity）的信息将非常有用。如果您有一些更特定的内容要覆盖你打算做的，将会比较麻烦。但是，如上所述，DevTools 将向您显示 CSS 是如何应用的，您可以弄清楚如何使新选择器足够具体，以覆盖旧的 CSS 样式。
 
@@ -179,24 +179,3 @@ em {
 随着对 CSS 的使用经验越来越丰富，您会发现发现问题的速度越来越快。但是，即使我们中最有经验的人有时也会发现自己想知道到底发生了什么。采取有条不紊的方法，简化测试用例，并向他人解释问题，通常会找到解决方法。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
-
-## 模块目录
-
-1. [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [标签，类，ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [处理不同文字方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [在 CSS 中调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)

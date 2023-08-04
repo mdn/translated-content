@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onchange
 slug: conflicting/Web/API/HTMLElement/change_event
-original_slug: Web/API/GlobalEventHandlers/onchange
 ---
 
 {{ ApiRef("HTML DOM") }}
@@ -27,6 +26,6 @@ Mira la documentación para el evento [`change`](/es/docs/Web/Reference/Events/c
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.GlobalEventHandlers.onchange")}}
+{{Compat}}

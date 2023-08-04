@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
-original_slug: Web/JavaScript/Reference/Global_Objects/Array/toSource
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -46,14 +45,6 @@ var alpha = new Array('a', 'b', 'c');
 alpha.toSource();
 //devuelve ['a', 'b', 'c']
 ```
-
-## Especificaciones
-
-No hace parte de ningún estándar. Implementado en JavaScript 1.3.
-
-## Compatibilidad con navegadores
-
-{{Compat("javascript.builtins.Array.toSource")}}
 
 ## Ver también
 

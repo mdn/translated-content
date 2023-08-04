@@ -52,7 +52,7 @@ slug: Web/API/Gamepad_API
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [The Gamepad API](https://hacks.mozilla.org/2013/12/the-gamepad-api/) by Ted Mielczarek and Robert Nyman
 - [简单的 API 演示页面](http://luser.github.io/gamepadtest/) ([源码](https://github.com/luser/gamepadtest))

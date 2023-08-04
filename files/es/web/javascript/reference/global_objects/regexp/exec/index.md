@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype.exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
-original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/exec
 ---
 
 {{JSRef}}
@@ -160,9 +159,9 @@ Esto logueará un mensaje que contiene 'hola mundo!'.
 
 {{Specifications}}
 
-## Compatiblidad con navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp.exec")}}
+{{Compat}}
 
 ## Ver también
 

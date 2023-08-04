@@ -1,7 +1,6 @@
 ---
 title: window.stop
 slug: Web/API/Window/stop
-original_slug: Web/API/window.stop
 ---
 
 {{ApiRef}}
@@ -23,7 +22,7 @@ window.stop()
 stop();
 </script>
 
-<p>このパラグラフは読み込まれないでしょう。</p>​
+<p>このパラグラフは読み込まれないでしょう。</p>
 ```
 
 ## 注記

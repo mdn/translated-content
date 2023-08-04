@@ -3,6 +3,8 @@ title: Canvas
 slug: Glossary/Canvas
 ---
 
+{{GlossarySidebar}}
+
 一個 {{Glossary("HTML")}} _{{HTMLElement("canvas")}}_ 元素提供一個空的圖區使特定的 {{Glossary("JavaScript")}} {{Glossary("API","APIs")}} 可以在上面繪圖(像是 Canvas 2D 或 {{Glossary("WebGL")}}).
 
 ## 了解更多

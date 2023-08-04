@@ -1,6 +1,6 @@
 ---
 title: Console.table()
-slug: Web/API/Console/table
+slug: Web/API/console/table
 ---
 
 {{APIRef("Console API")}}
@@ -49,7 +49,11 @@ console.table(me);
 ```js
 // 二元数组的打印
 
-var people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
+var people = [
+  ["John", "Smith"],
+  ["Jane", "Doe"],
+  ["Emily", "Jones"],
+];
 console.table(people);
 ```
 

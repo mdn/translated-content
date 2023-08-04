@@ -1,7 +1,6 @@
 ---
 title: Constructor RegExp()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
-original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/RegExp
 ---
 
 {{JSRef}}
@@ -78,9 +77,9 @@ El constructor del objeto de expresión regular, por ejemplo, `new RegExp('ab+c'
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp.RegExp")}}
+{{Compat}}
 
 ## Ve también
 

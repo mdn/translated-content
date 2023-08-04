@@ -589,4 +589,4 @@ W—Z
 
 ## Otros
 
-- {{Cssxref("-moz-alt-content")}} ({{Bug("11011")}})
+- {{Cssxref("-moz-alt-content")}} ([Error 11011 en Firefox](https://bugzil.la/11011))

@@ -1,6 +1,6 @@
 ---
 title: CSS Animations
-slug: Web/CSS/CSS_Animations
+slug: Web/CSS/CSS_animations
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -35,8 +35,8 @@ slug: Web/CSS/CSS_Animations
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
+| Specification                     | Status                         | Comment             |
+| --------------------------------- | ------------------------------ | ------------------- |
 | {{ SpecName('CSS3 Animations') }} | {{ Spec2('CSS3 Animations') }} | Initial definition. |
 
 ## Compatibilidade com navegadores

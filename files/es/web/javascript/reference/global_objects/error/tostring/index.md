@@ -1,7 +1,6 @@
 ---
 title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/toString
 ---
 
 {{JSRef}}
@@ -73,9 +72,9 @@ console.log(e.toString()); // 'hola'
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Error.toString")}}
+{{Compat}}
 
 ## Ve también
 

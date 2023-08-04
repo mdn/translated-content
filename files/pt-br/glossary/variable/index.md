@@ -9,7 +9,7 @@ Uma **variável (variable)** é um local nomeado para armazenar um {{Glossary("V
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "Variável (programação)")}} na Wikipédia
+- [Variável (programação)](<https://pt.wikipedia.org/wiki/Variável_(programação)>) na Wikipédia
 
 ### Referências técnicas
 

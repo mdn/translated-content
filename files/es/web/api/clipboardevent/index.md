@@ -27,9 +27,9 @@ _No specific methods; inherits methods from its parent {{domxref("Event")}}_.
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.ClipboardEvent")}}
+{{Compat}}
 
 ## See also
 

@@ -13,11 +13,11 @@ _A interface `History` não herda nenhuma propriedade._
 
 - {{domxref("History.length")}} {{readOnlyInline}}
   - : Returns an `Integer` representing the number of elements in the session history, including the currently loaded page. For example, for a page loaded in a new tab this property returns `1`.
-- {{domxref("History.current")}} {{readOnlyInline}} {{ non-standard_inline() }} {{ obsolete_inline(26) }}
+- {{domxref("History.current")}} {{readOnlyInline}} {{ non-standard_inline() }}
   - : Returns a {{domxref("DOMString")}} representing the URL of the active item of the session history. This property was never available to web content and is no more supported by any browser. Use {{domxref("Location.href")}} instead.
-- {{domxref("History.next")}} {{readOnlyInline}} {{ non-standard_inline() }} {{ obsolete_inline(26) }}
+- {{domxref("History.next")}} {{readOnlyInline}} {{ non-standard_inline() }}
   - : Returns a {{domxref("DOMString")}} representing the URL of the next item in the session history. This property was never available to web content and is not supported by other browsers.
-- {{domxref("History.previous")}} {{readOnlyInline}} {{ non-standard_inline() }} {{ obsolete_inline(26) }}
+- {{domxref("History.previous")}} {{readOnlyInline}} {{ non-standard_inline() }}
   - : Returns a {{domxref("DOMString")}} representing the URL of the previous item in the session history. This property was never available to web content and is not supported by other browsers.
 - {{domxref("History.scrollRestoration")}} {{experimental_inline}}
   - : Allows web applications to explicitly set default scroll restoration behavior on history navigation. This property can be either `auto` or `manual`.
@@ -47,17 +47,13 @@ _The `History`_ _interface doesn't inherit any methods._
 - {{domxref("History.replaceState()")}}
   - : Updates the most recent entry on the history stack to have the specified data, title, and, if provided, URL. The data is treated as opaque by the DOM; you may specify any JavaScript object that can be serialized. Note that Firefox currently ignores the title parameter; for more information, see [manipulating the browser history](/pt-BR/docs/Web/API/History_API).
 
-## Specifications
+## Especificações
 
-| Specification                                                                                            | Status                                               | Comment                                 |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------- |
-| {{SpecName('HTML WHATWG', "browsers.html#the-history-interface", "History")}} | {{Spec2('HTML WHATWG')}}                     | Adds the `scrollRestoration` attribute. |
-| {{SpecName('HTML5 W3C', "browsers.html#the-history-interface", "History")}}     | {{Spec2('HTML5 W3C')}}                         | Initial definition.                     |
-| {{SpecName('Custom Scroll Restoration', '#web-idl', "History")}}                     | {{Spec2('Custom Scroll Restoration')}} | Adds the `scrollRestoration` attribute. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.History")}}
+{{Compat}}
 
 ## See also
 

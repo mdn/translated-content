@@ -1,7 +1,6 @@
 ---
 title: 300 Multiple Choices
 slug: Web/HTTP/Status/300
-translation_of: Web/HTTP/Status/300
 ---
 
 {{HTTPSidebar}}
@@ -22,9 +21,11 @@ Consultez [cette page de w3.org à propos des réponses à choix multiples](http
 
 ## Spécifications
 
-| Spécification                                                    | Titre                                                         |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| [RFC 7231, section 6.4.1: 300 Multiple Choices](https://datatracker.ietf.org/doc/html/rfc7231#section-6.4.1) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

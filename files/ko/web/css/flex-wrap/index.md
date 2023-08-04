@@ -113,13 +113,13 @@ flex-wrap: unset;
 
 {{ EmbedLiveSample('Examples', '700px', '700px', '', 'Web/CSS/flex-wrap') }}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
 {{cssinfo}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

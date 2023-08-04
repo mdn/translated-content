@@ -62,7 +62,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 
 - `filename*`
 
-  - : "filename"과의 유일한 차이점은 "filename*"는 인코딩으로 [RFC 5987](https://tools.ietf.org/html/rfc5987)을 사용한다는 것 뿐입니다. 하나의 헤더 필드에 "filename"과 "filename*"이 둘 다 사용된다면 "filename*"이 보다 우선됩니다.
+  - : "filename"과의 유일한 차이점은 "filename*"는 인코딩으로 [RFC 5987](https://tools.ietf.org/html/rfc5987)을 사용한다는 것 뿐입니다. 하나의 헤더 필드에 "filename"과 "filename*"이 둘 다 사용된다면 "filename\*"이 보다 우선됩니다.
 
 ## Examples
 
@@ -97,17 +97,17 @@ value2
 --boundary--
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
-{{Compat("http.headers.Content-Disposition")}}
+{{Compat}}
 
 ## Compatibility notes
 
-- Firefox 5 handles the `Content-Disposition` HTTP response header more effectively if both the `filename` and `filename*` parameters are provided; it looks through all provided names, using the `filename*` parameter if one is available, even if a `filename` parameter is included first. Previously, the first matching parameter would be used, thereby preventing a more appropriate name from being used. See {{bug(588781)}}.
+- Firefox 5 handles the `Content-Disposition` HTTP response header more effectively if both the `filename` and `filename*` parameters are provided; it looks through all provided names, using the `filename*` parameter if one is available, even if a `filename` parameter is included first. Previously, the first matching parameter would be used, thereby preventing a more appropriate name from being used. See [Firefox bug 588781](https://bugzil.la/588781).
 
 ## See also
 

@@ -1,7 +1,6 @@
 ---
 title: 表单数据校验
 slug: Learn/Forms/Form_validation
-original_slug: Learn/HTML/Forms/Data_form_validation
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}
@@ -70,7 +69,7 @@ original_slug: Learn/HTML/Forms/Data_form_validation
 当一个元素校验通过时：
 
 - 该元素将可以通过 CSS 伪类 {{cssxref(":valid")}} 进行特殊的样式化；
-- 如果用户尝试提交表单，如果没有其它的控制来阻止该操作（比如 JavaScript 即可阻止提交），那么该表单的数据会被提交。
+- 如果用户尝试提交表单，如果没有其他的控制来阻止该操作（比如 JavaScript 即可阻止提交），那么该表单的数据会被提交。
 
 如果一个元素未校验通过：
 
@@ -81,12 +80,12 @@ original_slug: Learn/HTML/Forms/Data_form_validation
 
 在这一节，我们将会看到一些用于{{HTMLElement("input")}}元素校验的 HTML5 的特性。
 
-让我们用一个简单的例子开始 — 一个可以让你从香蕉或樱桃中选择你最喜欢的水果的 input。这个包含了一个简单的文本{{HTMLElement("input")}} 和一个与之匹配的 label，还有一个 submit {{htmlelement("button")}}。你可以在 GitHub [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html)找到源码，在线例子如下：
+让我们用一个简单的例子开始 — 一个可以让你从香蕉或樱桃中选择你最喜欢的水果的 input。这个包含了一个简单的文本{{HTMLElement("input")}} 和一个与之匹配的 label，还有一个 submit {{htmlelement("button")}}。你可以在 GitHub [fruit-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html)找到源码，在线例子如下：
 
 ```html hidden
 <form>
   <label for="choose">Would you prefer a banana or cherry?</label>
-  <input id="choose" name="i_like">
+  <input id="choose" name="i_like" />
   <button>Submit</button>
 </form>
 ```
@@ -107,14 +106,14 @@ input:valid {
 
 ### required 属性
 
-最简单的 HTML5 校验功能是 {{htmlattrxref("required", "input")}}属性 — 如果要使输入成为必需的，则可以使用此属性标记元素。当设置此属性时，如果输入为空，该表单将不会提交（并将显示错误消息），输入也将被视为无效。
+最简单的 HTML5 校验功能是 [`required`](/zh-CN/docs/Web/HTML/Element/input#required)属性 — 如果要使输入成为必需的，则可以使用此属性标记元素。当设置此属性时，如果输入为空，该表单将不会提交（并将显示错误消息），输入也将被视为无效。
 
 添加一个 `required` 属性到你的 input 元素，如下所示：
 
 ```html
 <form>
   <label for="choose">Would you prefer a banana or cherry?</label>
-  <input id="choose" name="i_like" required>
+  <input id="choose" name="i_like" required />
   <button>Submit</button>
 </form>
 ```
@@ -137,7 +136,7 @@ input:valid {
 
 ### 使用正则表达式校验
 
-另一个常用的校验功能是 {{htmlattrxref("pattern","input")}} 属性，以 [Regular Expression](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions) 作为 value 值。正则表达式 (regex) 是一个可以用来匹配文本字符串中字符的组合的模式，所以它们是理想的表单校验器，也可以支持 JavaScript 中许多其它的用途。
+另一个常用的校验功能是 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性，以 [Regular Expression](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions) 作为 value 值。正则表达式 (regex) 是一个可以用来匹配文本字符串中字符的组合的模式，所以它们是理想的表单校验器，也可以支持 JavaScript 中许多其他的用途。
 
 正则表达式相当复杂，我们不打算在本文中详尽地教你。
 
@@ -171,7 +170,7 @@ input:valid {
 ```html
 <form>
   <label for="choose">Would you prefer a banana or a cherry?</label>
-  <input id="choose" name="i_like" required pattern="banana|cherry">
+  <input id="choose" name="i_like" required pattern="banana|cherry" />
   <button>Submit</button>
 </form>
 ```
@@ -192,17 +191,17 @@ input:valid {
 
 在这个基础上，尝试把`pattern` 属性内部的表达式改变成上面的几个例子，然后看看这些表达式如何影响您可以输入的值以使输入值有效。尝试写一些你自己设计的，看看它如何工作。尽量让他们与水果有关这样你的例子才会有意义。
 
-> **备注：** 一些 {{HTMLElement("input")}} 元素类型不需要{{htmlattrxref("pattern","input")}} 属性进行校验。指定特定 `email` 类型 就会使用匹配电子邮件格式的正则表达式来校验 (如果有 {{htmlattrxref("multiple","input")}} 属性请用逗号来分割多个邮箱). 进一步来说，字段 `url` 类型则会自动校验输入的是否为一个合法的链接。
+> **备注：** 一些 {{HTMLElement("input")}} 元素类型不需要[`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性进行校验。指定特定 `email` 类型 就会使用匹配电子邮件格式的正则表达式来校验 (如果有 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性请用逗号来分割多个邮箱). 进一步来说，字段 `url` 类型则会自动校验输入的是否为一个合法的链接。
 
-> **备注：** 该 {{HTMLElement("textarea")}} 元素不支持{{htmlattrxref("pattern","input")}} 属性。
+> **备注：** 该 {{HTMLElement("textarea")}} 元素不支持[`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性。
 
 ### 限制输入的长度
 
-所有文本框 ({{HTMLElement("input")}} 或 {{HTMLElement("textarea")}}) 都可以使用{{htmlattrxref("minlength","input")}} 和 {{htmlattrxref("maxlength","input")}} 属性来限制长度。如果输入的字段长度小于 {{htmlattrxref("minlength","input")}} 的值或大于 {{htmlattrxref("maxlength","input")}} 值则无效。浏览器通常不会让用户在文本字段中键入比预期更长的值，不过更精细的设置总归是更好的。
+所有文本框 ({{HTMLElement("input")}} 或 {{HTMLElement("textarea")}}) 都可以使用[`minlength`](/zh-CN/docs/Web/HTML/Element/input#minlength) 和 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength) 属性来限制长度。如果输入的字段长度小于 [`minlength`](/zh-CN/docs/Web/HTML/Element/input#minlength) 的值或大于 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength) 值则无效。浏览器通常不会让用户在文本字段中键入比预期更长的值，不过更精细的设置总归是更好的。
 
-在数字条目中 (i.e. `<input type="number">`), 该 {{htmlattrxref("min","input")}} 和 {{htmlattrxref("max","input")}} 属性同样提供校验约束。如果字段的值小于{{htmlattrxref("min","input")}} 属性的值或大于 {{htmlattrxref("max","input")}} 属性的值，该字段则无效。
+在数字条目中 (i.e. `<input type="number">`), 该 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性同样提供校验约束。如果字段的值小于[`min`](/zh-CN/docs/Web/HTML/Element/input#min) 属性的值或大于 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性的值，该字段则无效。
 
-让我来看看另外一个例子。创建一个 [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html) 文件副本。
+让我来看看另外一个例子。创建一个 [fruit-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html) 文件副本。
 
 现在删除 `<body>` 元素中的内容，替换成下面的代码：
 
@@ -210,11 +209,11 @@ input:valid {
 <form>
   <div>
     <label for="choose">Would you prefer a banana or a cherry?</label>
-    <input id="choose" name="i_like" required minlength="6" maxlength="6">
+    <input id="choose" name="i_like" required minlength="6" maxlength="6" />
   </div>
   <div>
     <label for="number">How many would you like?</label>
-    <input type="number" id="number" name="amount" value="1" min="1" max="10">
+    <input type="number" id="number" name="amount" value="1" min="1" max="10" />
   </div>
   <div>
     <button>Submit</button>
@@ -243,7 +242,7 @@ div {
 
 {{EmbedLiveSample("限制输入的长度", "100%", 70)}}
 
-> **备注：** `<input type="number">` (或者其他类型，像 `range`) 也可以获取到一个{{htmlattrxref("step", "input")}} 属性，指定了值在增减过程固定改变的值 (如向上增加和向下减少的按钮).
+> **备注：** `<input type="number">` (或者其他类型，像 `range`) 也可以获取到一个[`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性，指定了值在增减过程固定改变的值 (如向上增加和向下减少的按钮).
 
 ### 完整的例子
 
@@ -297,7 +296,7 @@ div {
 body {
   font: 1em sans-serif;
   padding: 0;
-  margin : 0;
+  margin: 0;
 }
 
 form {
@@ -310,15 +309,15 @@ p > label {
   display: block;
 }
 
-input[type=text],
-input[type=email],
-input[type=number],
+input[type="text"],
+input[type="email"],
+input[type="number"],
 textarea,
 fieldset {
-/* 需要在基于 WebKit 的浏览器上对表单元素进行恰当的样式设置 */
+  /* 需要在基于 WebKit 的浏览器上对表单元素进行恰当的样式设置 */
   -webkit-appearance: none;
 
-  width : 100%;
+  width: 100%;
   border: 1px solid #333;
   margin: 0;
 
@@ -358,7 +357,7 @@ HTML5 提供 [constraint validation API](http://www.w3.org/TR/html5/forms.html#t
 ```html
 <form>
   <label for="mail">I would like you to provide me an e-mail</label>
-  <input type="email" id="mail" name="mail">
+  <input type="email" id="mail" name="mail" />
   <button>Submit</button>
 </form>
 ```
@@ -396,20 +395,20 @@ email.addEventListener("input", function (event) {
 
 #### 约束校验的 API 及属性
 
-| 属性                       | 描述                                                                                                                                                                                     |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `validationMessage`        | 一个本地化消息，描述元素不满足校验条件时（如果有的话）的文本信息。如果元素无需校验（`willValidate` 为 `false`），或元素的值满足校验条件时，为空字符串。                                  |
-| `validity`                 | 一个 {{domxref("ValidityState")}} 对象，描述元素的验证状态。详见有关可能的验证状态的文章。                                                                                       |
-| `validity.customError`     | 如果元素设置了自定义错误，返回 `true` ；否则返回`false`。                                                                                                                                |
-| `validity.patternMismatch` | 如果元素的值不匹配所设置的正则表达式，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                       |
-| `validity.rangeOverflow`   | 如果元素的值高于所设置的最大值，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                             |
-| `validity.rangeUnderflow`  | 如果元素的值低于所设置的最小值，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                             |
-| `validity.stepMismatch`    | 如果元素的值不符合 step 属性的规则，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                         |
-| `validity.tooLong`         | 如果元素的值超过所设置的最大长度，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                           |
-| `validity.typeMismatch`    | 如果元素的值出现语法错误，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                                   |
+| 属性                       | 描述                                                                                                                                                                    |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `validationMessage`        | 一个本地化消息，描述元素不满足校验条件时（如果有的话）的文本信息。如果元素无需校验（`willValidate` 为 `false`），或元素的值满足校验条件时，为空字符串。                 |
+| `validity`                 | 一个 {{domxref("ValidityState")}} 对象，描述元素的验证状态。详见有关可能的验证状态的文章。                                                                              |
+| `validity.customError`     | 如果元素设置了自定义错误，返回 `true` ；否则返回`false`。                                                                                                               |
+| `validity.patternMismatch` | 如果元素的值不匹配所设置的正则表达式，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                |
+| `validity.rangeOverflow`   | 如果元素的值高于所设置的最大值，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                      |
+| `validity.rangeUnderflow`  | 如果元素的值低于所设置的最小值，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                      |
+| `validity.stepMismatch`    | 如果元素的值不符合 step 属性的规则，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                  |
+| `validity.tooLong`         | 如果元素的值超过所设置的最大长度，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                    |
+| `validity.typeMismatch`    | 如果元素的值出现语法错误，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                            |
 | `validity.valid`           | 如果元素的值不存在校验问题，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":valid")}} CSS 伪类，否则命中 {{cssxref(":invalid")}} CSS 伪类。 |
-| `validity.valueMissing`    | 如果元素设置了 required 属性且值为空，返回 `true`，否则返回 `false`。当此属性为 true 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                         |
-| `willValidate`             | 如果元素在表单提交时将被校验，返回 `true`，否则返回 `false`。                                                                                                                            |
+| `validity.valueMissing`    | 如果元素设置了 required 属性且值为空，返回 `true`，否则返回 `false`。当此属性为 true 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                  |
+| `willValidate`             | 如果元素在表单提交时将被校验，返回 `true`，否则返回 `false`。                                                                                                           |
 
 #### 约束校验 API 的方法
 
@@ -461,7 +460,7 @@ email.addEventListener("input", function (event) {
   <p>
     <label for="mail">
       <span>Please enter an email address:</span>
-      <input type="email" id="mail" name="mail">
+      <input type="email" id="mail" name="mail" />
       <span class="error" aria-live="polite"></span>
     </label>
   </p>
@@ -469,7 +468,7 @@ email.addEventListener("input", function (event) {
 </form>
 ```
 
-这个简单的表单使用 {{htmlattrxref("novalidate","form")}} 属性关闭浏览器的自动校验；这允许我们使用脚本控制表单校验。但是，这并不禁止对约束校验 API 的支持或是以下 CSS 伪类：{{cssxref(":valid")}}、{{cssxref(":invalid")}}、{{cssxref(":in-range")}} 、{{cssxref(":out-of-range")}} 的应用。这意味着，即使浏览器在发送数据之前没有自动检查表单的有效性，您仍然可以自己做，并相应地设置表单的样式。
+这个简单的表单使用 [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) 属性关闭浏览器的自动校验；这允许我们使用脚本控制表单校验。但是，这并不禁止对约束校验 API 的支持或是以下 CSS 伪类：{{cssxref(":valid")}}、{{cssxref(":invalid")}}、{{cssxref(":in-range")}} 、{{cssxref(":out-of-range")}} 的应用。这意味着，即使浏览器在发送数据之前没有自动检查表单的有效性，您仍然可以自己做，并相应地设置表单的样式。
 
 [`aria-live`](/zh-CN/docs/Accessibility/ARIA/ARIA_Live_Regions) 属性确保我们的自定义错误信息将呈现给所有人，包括使用屏幕阅读器等辅助技术的人。
 
@@ -482,7 +481,7 @@ email.addEventListener("input", function (event) {
 body {
   font: 1em sans-serif;
   padding: 0;
-  margin : 0;
+  margin: 0;
 }
 
 form {
@@ -493,7 +492,7 @@ p * {
   display: block;
 }
 
-input[type=email]{
+input[type="email"] {
   -webkit-appearance: none;
 
   width: 100%;
@@ -508,9 +507,9 @@ input[type=email]{
 }
 
 /* 校验失败的元素样式 */
-input:invalid{
+input:invalid {
   border-color: #900;
-  background-color: #FDD;
+  background-color: #fdd;
 }
 
 input:focus:invalid {
@@ -519,7 +518,7 @@ input:focus:invalid {
 
 /* 错误消息的样式 */
 .error {
-  width  : 100%;
+  width: 100%;
   padding: 0;
 
   font-size: 80%;
@@ -544,29 +543,36 @@ input:focus:invalid {
 // 有许多方式可以获取 DOM 节点；在此我们获取表单本身和
 // email 输入框，以及我们将放置错误信息的 span 元素。
 
-var form  = document.getElementsByTagName('form')[0];
-var email = document.getElementById('mail');
-var error = document.querySelector('.error');
+var form = document.getElementsByTagName("form")[0];
+var email = document.getElementById("mail");
+var error = document.querySelector(".error");
 
-email.addEventListener("input", function (event) {
-  // 当用户输入信息时，校验 email 字段
-  if (email.validity.valid) {
-    // 如果校验通过，清除已显示的错误消息
-    error.innerHTML = ""; // 重置消息的内容
-    error.className = "error"; // 重置消息的显示状态
-  }
-}, false);
-form.addEventListener("submit", function (event) {
-  // 当用户提交表单时，校验 email 字段
-  if (!email.validity.valid) {
-
-    // 如果校验失败，显示一个自定义错误
-    error.innerHTML = "I expect an e-mail, darling!";
-    error.className = "error active";
-    // 还需要阻止表单提交事件，以取消数据传送
-    event.preventDefault();
-  }
-}, false);
+email.addEventListener(
+  "input",
+  function (event) {
+    // 当用户输入信息时，校验 email 字段
+    if (email.validity.valid) {
+      // 如果校验通过，清除已显示的错误消息
+      error.innerHTML = ""; // 重置消息的内容
+      error.className = "error"; // 重置消息的显示状态
+    }
+  },
+  false,
+);
+form.addEventListener(
+  "submit",
+  function (event) {
+    // 当用户提交表单时，校验 email 字段
+    if (!email.validity.valid) {
+      // 如果校验失败，显示一个自定义错误
+      error.innerHTML = "I expect an e-mail, darling!";
+      error.className = "error active";
+      // 还需要阻止表单提交事件，以取消数据传送
+      event.preventDefault();
+    }
+  },
+  false,
+);
 ```
 
 这是运行结果：
@@ -602,14 +608,17 @@ form.addEventListener("submit", function (event) {
 <form>
   <p>
     <label for="mail">
-        <span>Please enter an email address:</span>
-        <input type="text" class="mail" id="mail" name="mail">
-        <span class="error" aria-live="polite"></span>
+      <span>Please enter an email address:</span>
+      <input type="text" class="mail" id="mail" name="mail" />
+      <span class="error" aria-live="polite"></span>
     </label>
+  </p>
+
   <p>
-  <!-- Some legacy browsers need to have the `type` attribute
+    <!-- Some legacy browsers need to have the `type` attribute
        explicitly set to `submit` on the `button`element -->
-  <button type="submit">Submit</button>
+    <button type="submit">Submit</button>
+  </p>
 </form>
 ```
 
@@ -624,7 +633,7 @@ form.addEventListener("submit", function (event) {
 body {
   font: 1em sans-serif;
   padding: 0;
-  margin : 0;
+  margin: 0;
 }
 
 form {
@@ -650,9 +659,9 @@ input.mail {
 }
 
 /* 校验失败的元素样式 */
-input.invalid{
+input.invalid {
   border-color: #900;
-  background-color: #FDD;
+  background-color: #fdd;
 }
 
 input:focus.invalid {
@@ -661,7 +670,7 @@ input:focus.invalid {
 
 /* 错误消息的样式 */
 .error {
-  width  : 100%;
+  width: 100%;
   padding: 0;
 
   font-size: 80%;
@@ -684,8 +693,8 @@ JavaScript 代码有很大的变化，需要做更多的工作。
 
 ```js
 // 使用旧版浏览器选择 DOM 节点的方法较少
-var form  = document.getElementsByTagName('form')[0];
-var email = document.getElementById('mail');
+var form = document.getElementsByTagName("form")[0];
+var email = document.getElementById("mail");
 
 // 以下是在 DOM 中访问下一个兄弟元素的技巧
 // 这比较危险，很容易引起无限循环
@@ -694,24 +703,25 @@ var error = email;
 while ((error = error.nextSibling).nodeType != 1);
 
 // 按照 HTML5 规范
-var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+var emailRegExp =
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 // 许多旧版浏览器不支持 addEventListener 方法
 // 这只是其中一种简单的处理方法
 function addEvent(element, event, callback) {
-  var previousEventCallBack = element["on"+event];
-  element["on"+event] = function (e) {
+  var previousEventCallBack = element["on" + event];
+  element["on" + event] = function (e) {
     var output = callback(e);
 
     // 返回 `false` 来停止回调链，并中断事件的执行
     if (output === false) return false;
 
-    if (typeof previousEventCallBack === 'function') {
+    if (typeof previousEventCallBack === "function") {
       output = previousEventCallBack(e);
-      if(output === false) return false;
+      if (output === false) return false;
     }
-  }
-};
+  };
+}
 
 // 现在我们可以重构字段的约束校验了
 // 由于不使用 CSS 伪类，我们必须明确地设置 valid 或 invalid 类到 email 字段上

@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/copyWithin
 ---
 
 {{JSRef}}
@@ -138,7 +137,7 @@ if (!Array.prototype.copyWithin) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.copyWithin")}}
+{{Compat}}
 
 ## Ver también
 

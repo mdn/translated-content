@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/entries
 ---
 
 {{JSRef}}El método **`entries()`** retorna un nuevo objeto **`Array Iterator`** que contiene los pares clave/valor para cada índice de la matriz.
@@ -40,7 +39,7 @@ for (let e of iterator) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.entries")}}
+{{Compat}}
 
 ## Ver también
 

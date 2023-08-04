@@ -1,7 +1,6 @@
 ---
 title: Constructor Error()
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/constructor_Error
 ---
 
 {{JSRef}}
@@ -41,9 +40,9 @@ const y = new Error('¡Fui construido con la palabra clave "new"!')
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Error.Error")}}
+{{Compat}}
 
 ## Ve también
 

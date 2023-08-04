@@ -172,14 +172,11 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 
 ## Especificaciones
 
-| Especificación                                                                                   | Título                                                        |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("6265", "Set-Cookie", "4.1")}}                                                 | Mecanismo de gestión del estado HTTP                          |
-| [draft-ietf-httpbis-rfc6265bis-05](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-05) | Cookie Prefixes, Same-Site Cookies, and Strict Secure Cookies |
+{{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Set-Cookie", 5)}}
+{{Compat}}
 
 ## Notas de compatibilidad
 

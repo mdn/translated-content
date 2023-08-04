@@ -109,15 +109,15 @@ For compatibility reasons, the legacy {{cssxref("page-break-after")}} property s
 | `avoid`          | `avoid`     |
 | `always`         | `page`      |
 
-> **Note:** The `always` value of `page-break-*` was implemented by browsers as a page break, and not as a column break. Therefore the aliasing is to `page`, rather than the `always` value in the Level 4 spec.
+> **Nota:** The `always` value of `page-break-*` was implemented by browsers as a page break, and not as a column break. Therefore the aliasing is to `page`, rather than the `always` value in the Level 4 spec.
 
 ## Specifications
 
-| Specification                                                                                                        | Status                                   | Comment                                                                                                                                                                                 |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Fragmentation', '#break-between', 'break-after')}}                             | {{Spec2('CSS3 Fragmentation')}} | Adds the `recto` and `verso` keywords. Changes the media type of this property from `paged` to {{xref_cssvisual}}. Defines the breaking algorithm with different kinds of breaks. |
-| {{SpecName('CSS3 Regions', '#region-flow-break', 'break-after')}}                             | {{Spec2('CSS3 Regions')}}         | Extends the property to handle region breaks. Adds the `avoid-region` and `region` keywords.                                                                                            |
-| {{SpecName('CSS3 Multicol', '#break-before-break-after-break-inside', 'break-after')}} | {{Spec2('CSS3 Multicol')}}     | Initial definition. Extends the CSS 2.1 {{cssxref("page-break-after")}} property to handle both page and column breaks.                                                        |
+| Specification                                                                          | Status                          | Comment                                                                                                                                                                           |
+| -------------------------------------------------------------------------------------- | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Fragmentation', '#break-between', 'break-after')}}                    | {{Spec2('CSS3 Fragmentation')}} | Adds the `recto` and `verso` keywords. Changes the media type of this property from `paged` to {{xref_cssvisual}}. Defines the breaking algorithm with different kinds of breaks. |
+| {{SpecName('CSS3 Regions', '#region-flow-break', 'break-after')}}                      | {{Spec2('CSS3 Regions')}}       | Extends the property to handle region breaks. Adds the `avoid-region` and `region` keywords.                                                                                      |
+| {{SpecName('CSS3 Multicol', '#break-before-break-after-break-inside', 'break-after')}} | {{Spec2('CSS3 Multicol')}}      | Initial definition. Extends the CSS 2.1 {{cssxref("page-break-after")}} property to handle both page and column breaks.                                                           |
 
 ## Browser compatibility
 

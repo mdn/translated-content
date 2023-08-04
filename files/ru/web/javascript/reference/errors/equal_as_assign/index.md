@@ -1,9 +1,6 @@
 ---
-title: >-
-  SyntaxError: test for equality (==) mistyped as assignment (=)?(тест на
-  равенство (==) опечатка как присваивание (=)?)
+title: "SyntaxError: test for equality (==) mistyped as assignment (=)?(тест на равенство (==) опечатка как присваивание (=)?)"
 slug: Web/JavaScript/Reference/Errors/Equal_as_assign
-translation_of: Web/JavaScript/Reference/Errors/Equal_as_assign
 ---
 
 {{jsSidebar("Errors")}}
@@ -52,5 +49,5 @@ if (x == y) {
 
 ## Смотрите также
 
-- [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+- [`if...else`](/ru/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Comparison operators](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)

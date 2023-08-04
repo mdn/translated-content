@@ -1,5 +1,5 @@
 ---
-title: 'Django 教程 11: 部署 Django 到生产环境'
+title: "Django 教程 11: 部署 Django 到生产环境"
 slug: Learn/Server-side/Django/Deployment
 ---
 
@@ -160,7 +160,7 @@ Heroku 是运行时间最长，且最受欢迎的基于云的 PaaS 服务之一�
 
 - 大多数情况下它只是能工作，如果你最终喜欢它，扩展你的应用程序非常容易。
 
-虽然 Heroku 非常适合用于此演示，但它可能并不适合您的真实网站。Heroku 可以轻松设置和扩展，但代价是灵活性较低，而且一旦退 ​​ 出免费套餐，可能会花费更多。
+虽然 Heroku 非常适合用于此演示，但它可能并不适合您的真实网站。Heroku 可以轻松设置和扩展，但代价是灵活性较低，而且一旦退 出免费套餐，可能会花费更多。
 
 ### Heroku 是如何工作的？
 
@@ -197,10 +197,10 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 2. 登录后，点击顶部工具栏中的 + 链接，然后选择新建储存库 **New repository**。
 3. 填写此表单上的所有字段。虽然这些不是强制性的，但强烈建议使用它们。
 
-    - 输入新的储存库名称（例如 django_local_library）和描述（例如“用 Django 编写的本地图书馆网站”）。
-    - 在 Add .gitignore 选择列表中，选择 **Python**。
-    - 在添加许可证选择列表中，选择您想要的许可证。
-    - 选中使用自述文件初始化此储存库（**Initialize this repository with a README）**。
+   - 输入新的储存库名称（例如 django_local_library）和描述（例如“用 Django 编写的本地图书馆网站”）。
+   - 在 Add .gitignore 选择列表中，选择 **Python**。
+   - 在添加许可证选择列表中，选择您想要的许可证。
+   - 选中使用自述文件初始化此储存库（**Initialize this repository with a README）**。
 
 4. 点击 **Create repository**.
 5. 点击新仓库页面上的绿色“克隆或下载”（**Clone or download**）按钮。
@@ -211,65 +211,65 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 1. 为您的本地计算机安装 git（您可以在[此处](https://git-scm.com/downloads)找到不同平台的版本）。
 2. 打开命令提示符/终端，并使用您在上面复制的 URL 克隆储存库：
 
-    ```bash
-    git clone https://github.com/<your_git_user_id>/django_local_library.git
-    ```
+   ```bash
+   git clone https://github.com/<your_git_user_id>/django_local_library.git
+   ```
 
-    这将在当前目录下方创建储存库。
+   这将在当前目录下方创建储存库。
 
 3. 切换目录，到新的仓库。
 
-    ```bash
-    cd django_local_library
-    ```
+   ```bash
+   cd django_local_library
+   ```
 
 最后一步是复制你的应用程序，然后使用 git，将文件添加到你的仓库：
 
 1. 将您的 Django 应用程序，复制到此文件夹（与 **manage.py** 级别相同的、和以下级别的所有文件，而**不是**包含 locallibrary 文件夹的文件）。
 2. 打开 **.gitignore** 文件，将以下几行复制到其底部，然后保存（此文件用于标识默认情况下，不应上传到 git 的文件）。
 
-    ```
-    # Text backup files
-    *.bak
+   ```
+   # Text backup files
+   *.bak
 
-    #Database
-    *.sqlite3
-    ```
+   #Database
+   *.sqlite3
+   ```
 
 3. 打开命令提示符/终端，并使用`add`命令，将所有文件添加到 git。
 
-    ```bash
-    git add -A
-    ```
+   ```bash
+   git add -A
+   ```
 
 4. 使用 status 命令，检查要添加的所有文件是否正确（您希望包含源文件，而不是二进制文件，临时文件等）。它应该看起来有点像下面的列表。
 
-    ```
-    > git status
-    On branch master
-    Your branch is up-to-date with 'origin/master'.
-    Changes to be committed:
-      (use "git reset HEAD <file>..." to unstage)
+   ```
+   > git status
+   On branch master
+   Your branch is up-to-date with 'origin/master'.
+   Changes to be committed:
+     (use "git reset HEAD <file>..." to unstage)
 
-            modified:   .gitignore
-            new file:   catalog/__init__.py
-            ...
-            new file:   catalog/migrations/0001_initial.py
-            ...
-            new file:   templates/registration/password_reset_form.html
-    ```
+           modified:   .gitignore
+           new file:   catalog/__init__.py
+           ...
+           new file:   catalog/migrations/0001_initial.py
+           ...
+           new file:   templates/registration/password_reset_form.html
+   ```
 
 5. 如果您满意，请将文件提交到本地储存库：
 
-    ```bash
-    git commit -m "First version of application moved into github"
-    ```
+   ```bash
+   git commit -m "First version of application moved into github"
+   ```
 
 6. 然后使用以下内容，将本地储存库同步到 Github 网站：
 
-    ```bash
-    git push origin master
-    ```
+   ```bash
+   git push origin master
+   ```
 
 完成此操作后，您应该可以返回创建储存库的 Github 上的页面，刷新页面，并看到您的整个应用程序已经上传。使用此添加/提交/推送循环，您可以在文件更改时，继续更新储存库。
 
@@ -615,7 +615,7 @@ heroku ps   #Display dyno status
 
 如果您需要比这些更多的信息，您将需要开始研究 [Django Logging](https://docs.djangoproject.com/en/2.0/topics/logging/)。
 
-## **总结**
+## 总结
 
 本教程讲述如何在生产环境中配置 Django 应用，也是本系列 Django 教程的结尾。我们希望你觉得教程有用。你可以在 Github 上取得一个完全可工作版本的[源码（用力点击此处）](https://github.com/mdn/django-locallibrary-tutorial)。
 
@@ -651,21 +651,3 @@ heroku ps   #Display dyno status
   - [Other Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
-
-## 本教程文章
-
-- [Django introduction](/zh-CN/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/zh-CN/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/zh-CN/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/zh-CN/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/zh-CN/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/zh-CN/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/zh-CN/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/zh-CN/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/zh-CN/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/zh-CN/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/zh-CN/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/zh-CN/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/zh-CN/docs/Learn/Server-side/Django/django_assessment_blog)

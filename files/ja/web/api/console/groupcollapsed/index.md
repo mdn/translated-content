@@ -18,8 +18,8 @@ l10n:
 ## 構文
 
 ```js
-groupCollapsed()
-groupCollapsed(label)
+groupCollapsed();
+groupCollapsed(label);
 ```
 
 ### 引数

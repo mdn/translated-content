@@ -1,7 +1,6 @@
 ---
 title: tabindex
 slug: Web/HTML/Global_attributes/tabindex
-original_slug: Web/HTML/Atributos_Globales/tabindex
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -21,6 +20,6 @@ Puede consultar [este artículo](/en/Focus_management_in_HTML) para ver una expl
 
 {{Specifications}}
 
-## Compatibilidad en exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.tabindex")}}
+{{Compat}}

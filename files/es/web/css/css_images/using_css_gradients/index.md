@@ -1,8 +1,6 @@
 ---
 title: Usando degradados con CSS
-slug: Web/CSS/CSS_Images/Using_CSS_gradients
-l10n:
-  sourceCommit: 71c4bc0b6329ec40ddbefd8d3124547e91cfa612
+slug: Web/CSS/CSS_images/Using_CSS_gradients
 ---
 
 {{CSSRef}}
@@ -596,11 +594,13 @@ div {
 
 ```css
 .stacked-radial {
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 50% 0,
       rgba(255, 0, 0, 0.5),
       rgba(255, 0, 0, 0) 70.71%
-    ), radial-gradient(
+    ),
+    radial-gradient(
       circle at 6.7% 75%,
       rgba(0, 0, 255, 0.5),
       rgba(0, 0, 255, 0) 70.71%
@@ -906,20 +906,24 @@ div {
 
 ```css
 .multi-target {
-  background: repeating-radial-gradient(
+  background:
+    repeating-radial-gradient(
         ellipse at 80% 50%,
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5) 15px,
         rgba(255, 255, 255, 0.5) 15px,
         rgba(255, 255, 255, 0.5) 30px
-      ) top left no-repeat, repeating-radial-gradient(
+      ) top left no-repeat,
+    repeating-radial-gradient(
         ellipse at 20% 50%,
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5) 10px,
         rgba(255, 255, 255, 0.5) 10px,
         rgba(255, 255, 255, 0.5) 20px
       ) top left no-repeat yellow;
-  background-size: 200px 200px, 150px 150px;
+  background-size:
+    200px 200px,
+    150px 150px;
 }
 ```
 

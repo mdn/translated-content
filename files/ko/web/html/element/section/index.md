@@ -1,5 +1,5 @@
 ---
-title: '<section>: 일반 구획 요소'
+title: "<section>: 일반 구획 요소"
 slug: Web/HTML/Element/section
 ---
 
@@ -106,7 +106,7 @@ slug: Web/HTML/Element/section
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.section")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`Promise.all()`** は静的メソッドで、入力としてプロミスの集合の反復可能オブジェクトを取り、単一の {{jsxref("Promise")}} を返します。この返却されたプロミスは、入力されたプロミスがすべて履行されたとき（空の反復子が渡されたときを含む）、その履行された値の配列で、履行されます。入力されたプロミスのいずれかが拒否されると、その最初の拒否理由とともに拒否されます。
+**`Promise.all()`** は静的メソッドで、入力としてプロミスの集合の反復可能オブジェクトを取り、単一の {{jsxref("Promise")}} を返します。この返却されたプロミスは、入力されたプロミスがすべて履行されたとき（空のイテレーターが渡されたときを含む）、その履行された値の配列で、履行されます。入力されたプロミスのいずれかが拒否されると、その最初の拒否理由とともに拒否されます。
 
 {{EmbedInteractiveExample("pages/js/promise-all.html")}}
 
@@ -20,7 +20,7 @@ Promise.all(iterable)
 ### 引数
 
 - `iterable`
-  - : [反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)オブジェクト（プロミスの配列 ({{jsxref("Array")}}) など）。
+  - : [反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)オブジェクト（プロミスの配列 ({{jsxref("Array")}}) など）。
 
 ### 返値
 

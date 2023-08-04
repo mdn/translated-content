@@ -9,20 +9,20 @@ slug: Web/API/Node/nodeName
 
 不同類型節點之回傳值：
 
-| 介面                                             | nodeName 值                                                           |
-| ------------------------------------------------ | --------------------------------------------------------------------- |
-| {{domxref("Attr")}}                         | The value of {{domxref("Attr.name")}}                         |
-| {{domxref("CDATASection")}}             | `"#cdata-section"`                                                    |
-| {{domxref("Comment")}}                     | `"#comment"`                                                          |
-| {{domxref("Document")}}                 | `"#document"`                                                         |
-| {{domxref("DocumentFragment")}}         | `"#document-fragment"`                                                |
-| {{domxref("DocumentType")}}             | The value of {{domxref("DocumentType.name")}}             |
-| {{domxref("Element")}}                     | The value of {{domxref("Element.tagName")}}                 |
-| {{domxref("Entity")}}                     | The entity name                                                       |
-| {{domxref("EntityReference")}}         | The name of entity reference                                          |
-| {{domxref("Notation")}}                 | The notation name                                                     |
+| 介面                                 | nodeName 值                                              |
+| ------------------------------------ | -------------------------------------------------------- |
+| {{domxref("Attr")}}                  | The value of {{domxref("Attr.name")}}                    |
+| {{domxref("CDATASection")}}          | `"#cdata-section"`                                       |
+| {{domxref("Comment")}}               | `"#comment"`                                             |
+| {{domxref("Document")}}              | `"#document"`                                            |
+| {{domxref("DocumentFragment")}}      | `"#document-fragment"`                                   |
+| {{domxref("DocumentType")}}          | The value of {{domxref("DocumentType.name")}}            |
+| {{domxref("Element")}}               | The value of {{domxref("Element.tagName")}}              |
+| {{domxref("Entity")}}                | The entity name                                          |
+| {{domxref("EntityReference")}}       | The name of entity reference                             |
+| {{domxref("Notation")}}              | The notation name                                        |
 | {{domxref("ProcessingInstruction")}} | The value of {{domxref("ProcessingInstruction.target")}} |
-| {{domxref("Text")}}                         | `"#text"`                                                             |
+| {{domxref("Text")}}                  | `"#text"`                                                |
 
 ## 語法
 
@@ -36,7 +36,7 @@ Given the following markup:
 
 ```html
 <div id="d1">hello world</div>
-<input type="text" id="t"/>
+<input type="text" id="t" />
 ```
 
 and the following script:

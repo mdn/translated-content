@@ -1,7 +1,6 @@
 ---
 title: Object.isFrozen()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isFrozen
 ---
 
 {{JSRef}}
@@ -106,7 +105,7 @@ Object.isFrozen(1);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.isFrozen")}}
+{{Compat}}
 
 ## Ver también
 

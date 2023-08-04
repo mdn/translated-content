@@ -73,11 +73,11 @@ This creates a new `<div>` element in the [XHTML](/ko/docs/XHTML) namespace and 
 
 > **참고:** The example given above uses inline script which is not recommended in XHTML documents. This particular example is actually an XUL document with embedded XHTML, however, the recommendation still applies.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

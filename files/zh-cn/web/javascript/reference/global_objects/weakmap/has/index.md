@@ -23,7 +23,7 @@ wm.has(key);
 - Boolean
   - : 如果指定的 key 存在于某个元素中则返回 true，否则返回 flase。
 
-## 例子
+## 示例
 
 ### 使用 `has` 方法
 
@@ -32,7 +32,7 @@ var wm = new WeakMap();
 wm.set(window, "foo");
 
 wm.has(window); // returns true
-wm.has("baz");  // returns false
+wm.has("baz"); // returns false
 ```
 
 ## 规范

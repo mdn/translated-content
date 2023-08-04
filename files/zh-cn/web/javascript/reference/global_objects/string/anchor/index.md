@@ -36,7 +36,7 @@ str.anchor(name)
 
 ## 示例
 
-### 例子：使用 `anchor`
+### 示例：使用 `anchor`
 
 ```js
 var myString = "Table of Contents";

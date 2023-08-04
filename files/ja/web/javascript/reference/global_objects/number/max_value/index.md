@@ -1,19 +1,27 @@
 ---
 title: Number.MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
+l10n:
+  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
 {{JSRef}}
 
-**`Number.MAX_VALUE`** プロパティは、 JavaScript において表すことが可能な最大の数値です。
+**`Number.MAX_VALUE`** 静的データプロパティは、 JavaScript において表すことが可能な最大の数値を表します。
 
-{{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}{{js_property_attributes(0, 0, 0)}}
+{{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}
+
+## 値
+
+2<sup>1024</sup> - 1、またはおよそ `1.7976931348623157E+308` です。
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 解説
 
-`MAX_VALUE` プロパティはおよそ `1.79E+308`、または 2^1024 の値です。`MAX_VALUE` よりも大きな数値は {{jsxref("Infinity")}} で表されます。
+`MAX_VALUE` よりも大きな数値は {{jsxref("Infinity")}} で表され、正確な値が失われます。
 
-`MAX_VALUE` は {{jsxref("Number")}} オブジェクトの静的なプロパティですので、 生成した {{jsxref("Number")}} オブジェクトのプロパティとしてではなく、常に `Number.MAX_VALUE` として使用してください。
+`MAX_VALUE` は {{jsxref("Number")}} の静的プロパティですので、 数値のプロパティとしてではなく、常に `Number.MAX_VALUE` として使用してください。
 
 ## 例
 

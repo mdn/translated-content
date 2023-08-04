@@ -17,7 +17,7 @@ slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 
 CSS がごく最近まで内蔵されたグリッドシステムを持っていなかったことを、デザインをやってきた誰かは驚くかもしれません。 そして代わりにグリッドのようなデザインを作成するためにさまざまな次善の方法を用いていたようです。 今これらを「過去の」方法と呼んでいます。
 
-新しいプロジェクトでは、ほとんどの場合、CSS グリッドレイアウトを他の 1 つ以上の最新のレイアウト方法と組み合わせて使用 ​​ して、任意のレイアウトの基礎とします。 しかし、時々、これらの過去の方法を使用している「グリッドシステム」に遭遇するでしょう。 それらがどのように機能するのか、そしてなぜそれらが CSS グリッドレイアウトと異なるのかを理解するのは価値があります。
+新しいプロジェクトでは、ほとんどの場合、CSS グリッドレイアウトを他の 1 つ以上の最新のレイアウト方法と組み合わせて使用して、任意のレイアウトの基礎とします。 しかし、時々、これらの過去の方法を使用している「グリッドシステム」に遭遇するでしょう。 それらがどのように機能するのか、そしてなぜそれらが CSS グリッドレイアウトと異なるのかを理解するのは価値があります。
 
 このレッスンでは、フロートとフレックスボックスに基づいたグリッドシステムとグリッドフレームワークの仕組みについて説明します。 グリッドレイアウトを勉強してきたので、おそらくこれがどれほど複雑であるかに驚くことでしょう！ この種のシステムを使用する既存のプロジェクトで作業できるようにすることに加えて、新しい方法をサポートしないブラウザー用の代替コードを作成する必要がある場合に、この知識は役に立ちます。
 
@@ -33,12 +33,31 @@ CSS がごく最近まで内蔵されたグリッドシステムを持ってい�
 <h1>2 column layout example</h1>
 <div>
   <h2>First column</h2>
-  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
+    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
+    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
+    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
+    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+    eget fermentum sapien.
+  </p>
 </div>
 
 <div>
   <h2>Second column</h2>
-  <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  <p>
+    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  </p>
 </div>
 ```
 
@@ -87,12 +106,31 @@ div:nth-of-type(2) {
 
 <div>
   <h2>First column</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
+    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
+    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
+    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
+    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+    eget fermentum sapien.
+  </p>
 </div>
 
 <div>
   <h2>Second column</h2>
-  <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  <p>
+    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  </p>
 </div>
 ```
 
@@ -215,19 +253,41 @@ CSS の最後に次を追加してください。
 
 ```css
 /* Two column widths (120px) plus one gutter width (20px) */
-.col.span2 { width: 140px; }
+.col.span2 {
+  width: 140px;
+}
 /* Three column widths (180px) plus two gutter widths (40px) */
-.col.span3 { width: 220px; }
+.col.span3 {
+  width: 220px;
+}
 /* And so on... */
-.col.span4 { width: 300px; }
-.col.span5 { width: 380px; }
-.col.span6 { width: 460px; }
-.col.span7 { width: 540px; }
-.col.span8 { width: 620px; }
-.col.span9 { width: 700px; }
-.col.span10 { width: 780px; }
-.col.span11 { width: 860px; }
-.col.span12 { width: 940px; }
+.col.span4 {
+  width: 300px;
+}
+.col.span5 {
+  width: 380px;
+}
+.col.span6 {
+  width: 460px;
+}
+.col.span7 {
+  width: 540px;
+}
+.col.span8 {
+  width: 620px;
+}
+.col.span9 {
+  width: 700px;
+}
+.col.span10 {
+  width: 780px;
+}
+.col.span11 {
+  width: 860px;
+}
+.col.span12 {
+  width: 940px;
+}
 ```
 
 これらのクラスを作成したら、グリッド上にさまざまな幅の列を配置できます。 効果を確認するには、ページを保存してブラウザーでロードします。
@@ -308,19 +368,41 @@ body {
 
 ```css
 /* Two column widths (12.5%) plus one gutter width (2.08333333%) */
-.col.span2 { width: 14.58333333%; }
+.col.span2 {
+  width: 14.58333333%;
+}
 /* Three column widths (18.75%) plus two gutter widths (4.1666666) */
-.col.span3 { width: 22.91666666%; }
+.col.span3 {
+  width: 22.91666666%;
+}
 /* And so on... */
-.col.span4 { width: 31.24999999%; }
-.col.span5 { width: 39.58333332%; }
-.col.span6 { width: 47.91666665%; }
-.col.span7 { width: 56.24999998%; }
-.col.span8 { width: 64.58333331%; }
-.col.span9 { width: 72.91666664%; }
-.col.span10 { width: 81.24999997%; }
-.col.span11 { width: 89.5833333%; }
-.col.span12 { width: 97.91666663%; }
+.col.span4 {
+  width: 31.24999999%;
+}
+.col.span5 {
+  width: 39.58333332%;
+}
+.col.span6 {
+  width: 47.91666665%;
+}
+.col.span7 {
+  width: 56.24999998%;
+}
+.col.span8 {
+  width: 64.58333331%;
+}
+.col.span9 {
+  width: 72.91666664%;
+}
+.col.span10 {
+  width: 81.24999997%;
+}
+.col.span11 {
+  width: 89.5833333%;
+}
+.col.span12 {
+  width: 97.91666663%;
+}
 ```
 
 コードを保存してブラウザーにロードし、ビューポートの幅を変更してみます — 列の幅は適切に調整されるはずです。
@@ -335,24 +417,46 @@ CSS のすぐ内側で {{cssxref("calc","calc()")}} 関数を使って数学を�
 
 ```css
 .col.span4 {
-  width: calc((6.25%*4) + (2.08333333%*3));
+  width: calc((6.25% * 4) + (2.08333333% * 3));
 }
 ```
 
 規則の一番下のブロックを次のように置き換えてから、ブラウザーにリロードして、同じ結果になるかどうかを確認します。
 
 ```css
-.col.span2 { width: calc((6.25%*2) + 2.08333333%); }
-.col.span3 { width: calc((6.25%*3) + (2.08333333%*2)); }
-.col.span4 { width: calc((6.25%*4) + (2.08333333%*3)); }
-.col.span5 { width: calc((6.25%*5) + (2.08333333%*4)); }
-.col.span6 { width: calc((6.25%*6) + (2.08333333%*5)); }
-.col.span7 { width: calc((6.25%*7) + (2.08333333%*6)); }
-.col.span8 { width: calc((6.25%*8) + (2.08333333%*7)); }
-.col.span9 { width: calc((6.25%*9) + (2.08333333%*8)); }
-.col.span10 { width: calc((6.25%*10) + (2.08333333%*9)); }
-.col.span11 { width: calc((6.25%*11) + (2.08333333%*10)); }
-.col.span12 { width: calc((6.25%*12) + (2.08333333%*11)); }
+.col.span2 {
+  width: calc((6.25% * 2) + 2.08333333%);
+}
+.col.span3 {
+  width: calc((6.25% * 3) + (2.08333333% * 2));
+}
+.col.span4 {
+  width: calc((6.25% * 4) + (2.08333333% * 3));
+}
+.col.span5 {
+  width: calc((6.25% * 5) + (2.08333333% * 4));
+}
+.col.span6 {
+  width: calc((6.25% * 6) + (2.08333333% * 5));
+}
+.col.span7 {
+  width: calc((6.25% * 7) + (2.08333333% * 6));
+}
+.col.span8 {
+  width: calc((6.25% * 8) + (2.08333333% * 7));
+}
+.col.span9 {
+  width: calc((6.25% * 9) + (2.08333333% * 8));
+}
+.col.span10 {
+  width: calc((6.25% * 10) + (2.08333333% * 9));
+}
+.col.span11 {
+  width: calc((6.25% * 11) + (2.08333333% * 10));
+}
+.col.span12 {
+  width: calc((6.25% * 12) + (2.08333333% * 11));
+}
 ```
 
 > **メモ:** [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-calc.html) で完成版を見ることができます（[ライブでも見られます](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)）。
@@ -367,7 +471,7 @@ CSS のすぐ内側で {{cssxref("calc","calc()")}} 関数を使って数学を�
 
 ```css
 .content {
-  width: calc((6.25%*8) + (2.08333333%*7));
+  width: calc((6.25% * 8) + (2.08333333% * 7));
 }
 ```
 
@@ -385,7 +489,7 @@ CSS でコンテナ要素を 1 列幅だけオフセットするクラスを作�
 
 ```css
 .offset-by-one {
-  margin-left: calc(6.25% + (2.08333333%*2));
+  margin-left: calc(6.25% + (2.08333333% * 2));
 }
 ```
 
@@ -442,7 +546,6 @@ body {
   padding-right: 2.08333333%;
 }
 
-
 .row {
   display: flex;
 }
@@ -452,7 +555,7 @@ body {
   margin-bottom: 1em;
   width: 6.25%;
   flex: 1 1 auto;
-  background: rgb(255,150,150);
+  background: rgb(255, 150, 150);
 }
 ```
 
@@ -487,8 +590,8 @@ body {
 その `head` に次を追加することによって、`skeleton.css` と `normalize.css` を HTML ページに含めます。
 
 ```html
-<link href="normalize.css" rel="stylesheet">
-<link href="skeleton.css" rel="stylesheet">
+<link href="normalize.css" rel="stylesheet" />
+<link href="skeleton.css" rel="stylesheet" />
 ```
 
 Skeleton にはグリッドシステム以上のものが含まれています — タイポグラフィや、出発点として使用できるその他のページ要素の CSS も含んでいます。 ただし、これらはデフォルトのままにします — ここで本当に関心があるのはグリッドです。
@@ -572,7 +675,9 @@ HTML ファイルを保存してブラウザーにロードして、効果を確
 `skeleton.css` ファイルを見ると、これがどのように機能するかがわかります。 例えば、Skeleton には、「`three columns`」クラスを追加して要素をスタイルするための次の定義があります。
 
 ```css
-.three.columns { width: 22%; }
+.three.columns {
+  width: 22%;
+}
 ```
 
 Skeleton（または他のグリッドフレームワーク）が行っていることはすべて、マークアップに追加することで使用できる定義済みクラスを設定することだけです。 これらのパーセントを自分で計算する作業を行ったのとまったく同じです。
@@ -584,18 +689,3 @@ Skeleton（または他のグリッドフレームワーク）が行っている
 これで、さまざまなグリッドシステムの作成方法が理解できました。 これは、古いサイトでの作業や、CSS グリッドレイアウトのネイティブグリッドとこれらの古いシステムとの違いの理解に役立ちます。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
-
-## このモジュール内の文書
-
-- [CSS レイアウト入門](/ja/docs/Learn/CSS/CSS_layout/Introduction)
-- [通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
-- [グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)
-- [フロート](/ja/docs/Learn/CSS/CSS_layout/Floats)
-- [位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [レスポンシブデザイン](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [メディアクエリーの初心者向けガイド](/ja/docs/Learn/CSS/CSS_layout/Media_queries)
-- [過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [古いブラウザーのサポート](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基礎的なレイアウトの理解](/ja/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

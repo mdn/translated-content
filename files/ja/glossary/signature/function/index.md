@@ -1,7 +1,6 @@
 ---
 title: Signature (functions) (シグネチャ (関数))
 slug: Glossary/Signature/Function
-original_slug: Glossary/Signature/関数
 ---
 
 **関数シグネチャ** (もしくは型シグネチャ、メソッドシグネチャ) は{{Glossary("Function", "関数")}}や{{Glossary("Method", "メソッド")}}の入力と出力を定義します。
@@ -20,7 +19,7 @@ original_slug: Glossary/Signature/関数
 {{Glossary("JavaScript")}} は型付けの弱い動的言語です。なので先行して変数の型を宣言する必要がありません。プログラムが処理される間に自動的に型が決定します。JavaScript のシグネチャはそれでもやはりメソッドの情報を付与します:
 
 ```js
-MyObject.prototype.myFunction(value)
+MyObject.prototype.myFunction(value);
 ```
 
 - メソッドは `MyObject` という {{Glossary("オブジェクト")}} に追加される

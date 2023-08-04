@@ -1,18 +1,17 @@
 ---
 title: "<h1>–<h6>: HTML-элементы заголовков секций"
 slug: Web/HTML/Element/Heading_Elements
-translation_of: Web/HTML/Element/Heading_Elements
 ---
 
 **HTML-элементы `<h1>`–`<h6>`** представляют собой 6 уровней заголовков секций. `<h1>` это наибольший заголовок и `<h6>` - наименьший
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Поток контента](/ru/docs/Web/HTML/Content_categories#Flow_content), заголовок контента, явный контент.                                                                                 |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                        | [Фразированное содержание](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                                      |
-| Пропуск тега                                               | {{no_tag_omission}}                                                                                                                                                                     |
-| Разрешённые родители                                       | Любые элементы которые принимают [Содержание потока](/ru/docs/Web/HTML/Content_categories#Flow_content); не используй как дочерний {{HTMLElement("hgroup")}} элемент, сейчас он устарел |
-| Разрешённые роли ДМИП                                      | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>          |
-| DOM интерфейс                                              | {{domxref("HTMLHeadingElement")}}                                                                                                                                                       |
+| Допустимое содержимое                                      | [Фразированное содержание](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                                      |
+| Пропуск тегов                                              | {{no_tag_omission}}                                                                                                                                                                     |
+| Допустимые родители                                        | Любые элементы которые принимают [Содержание потока](/ru/docs/Web/HTML/Content_categories#Flow_content); не используй как дочерний {{HTMLElement("hgroup")}} элемент, сейчас он устарел |
+| Допустимые ARIA-роли                                       | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>          |
+| DOM-интерфейс                                              | {{domxref("HTMLHeadingElement")}}                                                                                                                                                       |
 
 ## Атрибуты
 
@@ -25,7 +24,7 @@ translation_of: Web/HTML/Element/Heading_Elements
 - Информация о заголовке может использоваться пользовательскими агентами, например, для автоматического создания оглавления для документа
 - Не используйте низкие уровни чтобы снизить размер шрифта: используйте [CSS](/ru/docs/Web/CSS) {{cssxref("font-size")}} вместо.
 - Избегайте пропуск уровней заголовков: всегда начинайте с `<h1>`, потом используйте `<h2>`, и так далее.
-- Вам следует рассмотреть избегание использования \<h1> более раза на страницу. Смотрите {{SectionOnPage("/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines", "Defining sections")}}.
+- Вам следует рассмотреть избегание использования \<h1> более раза на страницу. Смотрите {{SectionOnPage("/ru/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines", "Defining sections")}}.
 
 ## Примеры
 
@@ -102,7 +101,7 @@ translation_of: Web/HTML/Element/Heading_Elements
    2. `h2` Распределение и разнообразие
    3. `h2` Эволюция
 
-      1. `h3` Поздний полиозой
+      1. `h3` Поздний палеозой
       2. `h3` Юрский период
       3. `h3` Меловойский период
       4. `h3` Кайнозойский период
@@ -136,7 +135,7 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 Другим распространённым методом навигации для пользователей программ чтения с экрана является создание списка содержимого секций и использование его для определения макета страницы.
 
-Содержимое секционирования можно пометить, используя комбинацию [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) и {{htmlattrxref("id")}} атрибута, с ярлыком, кратко описывающим назначение раздела. Этот метод полезен в ситуациях, когда на одной странице имеется более одного элемента секционирования.
+Содержимое секционирования можно пометить, используя комбинацию [`aria-labelledby`](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) и [`id`](/ru/docs/Web/HTML/Global_attributes#id) атрибута, с ярлыком, кратко описывающим назначение раздела. Этот метод полезен в ситуациях, когда на одной странице имеется более одного элемента секционирования.
 
 #### Пример
 

@@ -96,8 +96,8 @@ p {
 ```html
 <div class="resizable">
   <p class="resizable">
-    This paragraph is resizable, because the CSS resize property is set to 'both' on this
-    element.
+    This paragraph is resizable, because the CSS resize property is set to
+    'both' on this element.
   </p>
 </div>
 ```
@@ -110,9 +110,9 @@ p {
 
 {{Specifications}}
 
-## Compatibilidad de Navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.resize")}}
+{{Compat}}
 
 ## Ver también
 

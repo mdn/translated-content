@@ -47,11 +47,11 @@ arr.unshift([-3]);
 
 ## Especificações
 
-| Especificação                                                                                            | Status                   | Comentário                                         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| ECMAScript 3ª Edição                                                                                     | Padrão                   | Definição inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.13', 'Array.prototype.unshift')}}                 | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-array.prototype.unshift', 'Array.prototype.unshift')}} | {{Spec2('ES6')}}     |                                                    |
+| Especificação                                                                  | Status             | Comentário                                         |
+| ------------------------------------------------------------------------------ | ------------------ | -------------------------------------------------- |
+| ECMAScript 3ª Edição                                                           | Padrão             | Definição inicial. Implementado no JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.4.4.13', 'Array.prototype.unshift')}}             | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-array.prototype.unshift', 'Array.prototype.unshift')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade entre browsers
 

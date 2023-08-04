@@ -1,7 +1,6 @@
 ---
 title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/acosh
 ---
 
 {{JSRef}}
@@ -57,9 +56,9 @@ Math.acosh = Math.acosh || function(x) {
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.acosh")}}
+{{Compat}}
 
 ## Ver también
 

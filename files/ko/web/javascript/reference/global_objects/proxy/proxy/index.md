@@ -34,7 +34,7 @@ new Proxy(target, handler)
 
 ### Handler 함수
 
-이 섹션에서는 정의할 수 있는 모든 처리기 함수를 나열합니다. 처리기 함수는 기본 대상 객체에 대한 호출을 가로채기 때문에 **트랩(traps)**이라고도 합니다.
+이 섹션에서는 정의할 수 있는 모든 처리기 함수를 나열합니다. 처리기 함수는 기본 대상 객체에 대한 호출을 가로채기 때문에 **트랩**(**traps**)이라고도 합니다.
 
 - {{JSxRef("Global_Objects/Proxy/Proxy/apply", "handler.apply()")}}
   - : 함수 호출에 대한 트랩.

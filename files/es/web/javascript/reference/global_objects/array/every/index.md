@@ -1,14 +1,13 @@
 ---
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/every
 ---
 
 {{JSRef}}
 
 Determina si todos los elementos en el array satisfacen una condición.
 
-> **Nota:** **Precaución**: ¡Llamar este método en un array vacío devuelve `true` para cualquier condición!
+> **Advertencia:** ¡Llamar este método en un array vacío devuelve `true` para cualquier condición!
 
 {{EmbedInteractiveExample("pages/js/array-every.html")}}
 
@@ -153,7 +152,7 @@ if (!Array.prototype.every) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.every")}}
+{{Compat}}
 
 ## Ver también
 

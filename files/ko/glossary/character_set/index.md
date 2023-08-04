@@ -1,6 +1,6 @@
 ---
 title: Character set
-slug: Glossary/character_set
+slug: Glossary/Character_set
 ---
 
 **문자 집합** 은 문자, 숫자, 문장 부호, 공백 등의 {{Glossary("Character", "문자")}}들을 재생하는 방법을 컴퓨터에 알려주는 인코딩 시스템이다.
@@ -15,11 +15,11 @@ slug: Glossary/character_set
 
 1. Wikipedia articles
 
-    1. [Character encoding](https://en.wikipedia.org/wiki/Character_encoding)
+   1. [Character encoding](https://en.wikipedia.org/wiki/Character_encoding)
 
 2. [Glossary](/ko/docs/Glossary)
 
-    1. {{Glossary("Character")}}
-    2. {{Glossary("Unicode")}}
+   1. {{Glossary("Character")}}
+   2. {{Glossary("Unicode")}}
 
 <section id="Quick_links"></section>

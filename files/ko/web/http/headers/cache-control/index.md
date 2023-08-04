@@ -138,7 +138,7 @@ Cache-Control:public, max-age=31536000
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Cache-Control")}}
+{{Compat}}
 
 ## 함께 참고할 내용
 

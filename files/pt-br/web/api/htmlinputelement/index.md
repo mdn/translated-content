@@ -80,22 +80,22 @@ Algumas propriedades se aplicam apenas a tipos de elemento de entrada que suport
 
 - {{domxref("HTMLInputElement.formAction", "formAction")}}
 
-  - : `string`: **Retorna / Define** o atributo [`formaction`](/pt-BR/docs/Web/HTML/Element/Input#formaction) do elemento, contendo a URL de um programa que processa as informações enviadas pelo elemento. Isso substitui o atributo {{ htmlattrxref("action", "form") }} do formulário pai.
+  - : `string`: **Retorna / Define** o atributo [`formaction`](/pt-BR/docs/Web/HTML/Element/Input#formaction) do elemento, contendo a URL de um programa que processa as informações enviadas pelo elemento. Isso substitui o atributo [`action`](/pt-BR/docs/Web/HTML/Element/form#action) do formulário pai.
 
 - {{domxref("HTMLInputElement.formEnctype", "formEnctype")}}
 
-  - : `string`: **Retorna / Define** o atributo [`formenctype`](/pt-BR/docs/Web/HTML/Element/Input#formenctype) do elemento, contendo o tipo de conteúdo que é usado para enviar o formulário para o servidor. Isso substitui o atributo {{ htmlattrxref("enctype", "form") }} do formulário pai.
+  - : `string`: **Retorna / Define** o atributo [`formenctype`](/pt-BR/docs/Web/HTML/Element/Input#formenctype) do elemento, contendo o tipo de conteúdo que é usado para enviar o formulário para o servidor. Isso substitui o atributo [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) do formulário pai.
 
 - {{domxref("HTMLInputElement.formMethod", "formMethod")}}
 
-  - : `string`: **Retorna / Define** o atributo [`formmethod`](/pt-BR/docs/Web/HTML/Element/Input#formmethod) do elemento, contendo o método HTTP que o navegador usa para enviar a forma. Isso substitui o atributo {{ htmlattrxref("method", "form") }} do formulário pai.
+  - : `string`: **Retorna / Define** o atributo [`formmethod`](/pt-BR/docs/Web/HTML/Element/Input#formmethod) do elemento, contendo o método HTTP que o navegador usa para enviar a forma. Isso substitui o atributo [`method`](/pt-BR/docs/Web/HTML/Element/form#method) do formulário pai.
 
 - {{domxref("HTMLInputElement.formNoValidate", "formNoValidate")}}
 
-  - : `boolean`: **Retorna / Define** o atributo [`formnovalidate`](/pt-BR/docs/Web/HTML/Element/Input#formnovalidate) do elemento, indicando que o formulário não deve ser validado quando ele é submetido. Isso substitui o atributo {{ htmlattrxref("novalidate", "form") }} do formulário pai.
+  - : `boolean`: **Retorna / Define** o atributo [`formnovalidate`](/pt-BR/docs/Web/HTML/Element/Input#formnovalidate) do elemento, indicando que o formulário não deve ser validado quando ele é submetido. Isso substitui o atributo [`novalidate`](/pt-BR/docs/Web/HTML/Element/form#novalidate) do formulário pai.
 
 - {{domxref("HTMLInputElement.formTarget", "formTarget")}}
-  - : `string`: **Retorna / Define** o atributo [`formtarget`](/pt-BR/docs/Web/HTML/Element/Input#formtarget) do elemento, contendo um nome ou palavra-chave indicando onde exibir o resposta recebida após o envio do formulário. Isso substitui o atributo {{ htmlattrxref("target", "form") }} do formulário pai.
+  - : `string`: **Retorna / Define** o atributo [`formtarget`](/pt-BR/docs/Web/HTML/Element/Input#formtarget) do elemento, contendo um nome ou palavra-chave indicando onde exibir o resposta recebida após o envio do formulário. Isso substitui o atributo [`target`](/pt-BR/docs/Web/HTML/Element/form#target) do formulário pai.
 
 ### Propriedades de instância que se aplicam a qualquer tipo de elemento de entrada que não esteja oculto
 

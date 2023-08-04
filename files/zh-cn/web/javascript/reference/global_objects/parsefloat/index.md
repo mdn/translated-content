@@ -39,20 +39,24 @@ parseFloat(string)
 
 `parseFloat` 也可以转换一个已经定义了 `toString` 或者 `valueOf` 方法的对象，它返回的值和在调用该方法的结果上调用 `parseFloat` 值相同。
 
-## 例子
+## 示例
 
-### 例子：`parseFloat`返回正常数字
+### 示例：`parseFloat`返回正常数字
 
 下面的例子都返回 **3.14**
 
 ```js
 parseFloat(3.14);
-parseFloat('3.14');
-parseFloat('  3.14  ');
-parseFloat('314e-2');
-parseFloat('0.0314E+2');
-parseFloat('3.14some non-digit characters');
-parseFloat({ toString: function() { return "3.14" } });
+parseFloat("3.14");
+parseFloat("  3.14  ");
+parseFloat("314e-2");
+parseFloat("0.0314E+2");
+parseFloat("3.14some non-digit characters");
+parseFloat({
+  toString: function () {
+    return "3.14";
+  },
+});
 ```
 
 ### `parseFloat` 返回 NaN
@@ -69,7 +73,7 @@ parseFloat("FF2");
 
 ```js
 parseFloat(900719925474099267n);
-parseFloat('900719925474099267n');
+parseFloat("900719925474099267n");
 ```
 
 ## 规范

@@ -3,6 +3,8 @@ title: 运算符
 slug: Glossary/Operator
 ---
 
+{{GlossarySidebar}}
+
 由标点符号或字母数字字符组成的保留**语法**，执行内置功能。例如，JavaScript 的加法运算符（“+”）可以将数字相加或者将字符串连接起来，而“非”运算符（“!”）可以对表达式取反，例如将 `true` 语句返回 `false`。
 
 ## 参见

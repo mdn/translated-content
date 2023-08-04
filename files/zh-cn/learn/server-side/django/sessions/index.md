@@ -1,5 +1,5 @@
 ---
-title: 'Django 教程 7: 会话框架'
+title: "Django 教程 7: 会话框架"
 slug: Learn/Server-side/Django/Sessions
 ---
 
@@ -137,18 +137,21 @@ def index(request):
 
 将以下区块底部那一行，添加到主 HTML 模板（**/locallibrary/catalog/templates/index.html**）的“动态内容”部分底部，以显示上下文变量：
 
-```html
+```django
 <h2>Dynamic content</h2>
 
 <p>The library has the following record counts:</p>
 <ul>
-<li><strong>Books:</strong> \{{ num_books }}</li>
-<li><strong>Copies:</strong> \{{ num_instances }}</li>
-<li><strong>Copies available:</strong> \{{ num_instances_available }}</li>
-<li><strong>Authors:</strong> \{{ num_authors }}</li>
+  <li><strong>Books:</strong> \{{ num_books }}</li>
+  <li><strong>Copies:</strong> \{{ num_instances }}</li>
+  <li><strong>Copies available:</strong> \{{ num_instances_available }}</li>
+  <li><strong>Authors:</strong> \{{ num_authors }}</li>
 </ul>
 
-<p>You have visited this page \{{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+<p>
+  You have visited this page \{{ num_visits }}{% if num_visits == 1 %} time{%
+  else %} times{% endif %}.
+</p>
 ```
 
 保存更改，并重新启动测试服务器。每次刷新页面时，数字都应该更新。
@@ -164,21 +167,3 @@ def index(request):
 - [如何使用会话](https://docs.djangoproject.com/en/2.0/topics/http/sessions/) (Django 文档)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}
-
-## 本教程
-
-- [Django 介绍](/zh-CN/docs/Learn/Server-side/Django/Introduction)
-- [架设 Django 开发环境](/zh-CN/docs/Learn/Server-side/Django/development_environment)
-- [Django 教程：The Local Library website](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django 教程 2: Creating a skeleton website](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)
-- [Django 教程 3: Using models](/zh-CN/docs/Learn/Server-side/Django/Models)
-- [Django 教程 4: Django admin site](/zh-CN/docs/Learn/Server-side/Django/Admin_site)
-- [Django 教程 5: Creating our home page](/zh-CN/docs/Learn/Server-side/Django/Home_page)
-- [Django 教程 6: Generic list and detail views](/zh-CN/docs/Learn/Server-side/Django/Generic_views)
-- [Django 教程 7: Sessions framework](/zh-CN/docs/Learn/Server-side/Django/Sessions)
-- [Django 教程 8: User authentication and permissions](/zh-CN/docs/Learn/Server-side/Django/Authentication)
-- [Django 教程 9: Working with forms](/zh-CN/docs/Learn/Server-side/Django/Forms)
-- [Django 教程 10: Testing a Django web application](/zh-CN/docs/Learn/Server-side/Django/Testing)
-- [Django 教程 11: Deploying Django to production](/zh-CN/docs/Learn/Server-side/Django/Deployment)
-- [Django 网络应用安全](/zh-CN/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django 微博](/zh-CN/docs/Learn/Server-side/Django/django_assessment_blog)

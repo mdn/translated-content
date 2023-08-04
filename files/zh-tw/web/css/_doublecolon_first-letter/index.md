@@ -1,5 +1,5 @@
 ---
-title: '::first-letter (:first-letter)'
+title: "::first-letter (:first-letter)"
 slug: Web/CSS/::first-letter
 ---
 
@@ -38,16 +38,25 @@ Make the first letter of every paragraph red and big.
 ### HTML Content
 
 ```html
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-  ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-  dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est. Lorem ipsum dolor
-  sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy amet.</p>
-<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-  aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
-  esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
-  iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait
-  nulla facilisi.</p>
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+  kasd gubergren, no sea takimata sanctus est. Lorem ipsum dolor sit amet. Lorem
+  ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy amet.
+</p>
+<p>
+  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+  consequat.
+</p>
+<p>
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
+  dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
+  dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te
+  feugait nulla facilisi.
+</p>
 <p>-The beginning of a special punctuation mark.</p>
 <p>_The beginning of a special punctuation mark.</p>
 <p>"The beginning of a special punctuation mark.</p>
@@ -62,7 +71,8 @@ Make the first letter of every paragraph red and big.
 ### CSS Content
 
 ```css
-p::first-letter { /* Use :first-letter if support for IE 8 or earlier is needed */
+p::first-letter {
+  /* Use :first-letter if support for IE 8 or earlier is needed */
   color: red;
   font-size: 130%;
 }

@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getSeconds
 ---
 
 {{JSRef}}
@@ -39,7 +38,7 @@ console.log(seconds); // 30
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.getSeconds")}}
+{{Compat}}
 
 ## See also
 

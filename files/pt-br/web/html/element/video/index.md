@@ -1,6 +1,6 @@
 ---
 title: video
-slug: Web/HTML/Element/Video
+slug: Web/HTML/Element/video
 ---
 
 ## Sumário
@@ -24,9 +24,9 @@ Como qualquer elemento HTML, este elemento suporta os [global attributes](/pt-BR
 - {{ htmlattrdef("autoplay") }}
   - : Um atributo Booleano; se especificado, o video vai ser executado assim que possível sem precisar de carregar todo o arquivo.
 
-> **Note:** Nota: Algumas versões do Chrome aceitam somente o `autostart` e não o autoplay
+> **Nota:** Algumas versões do Chrome aceitam somente o `autostart` e não o autoplay
 
-- {{ htmlattrdef("autobuffer") }} {{ Non-standard_inline() }} {{ obsolete_inline() }}
+- {{ htmlattrdef("autobuffer") }} {{ Non-standard_inline() }}
 
   - : Um atributo Booleano; se especificado, o video vai começar a carregar automaticamente mesmo que não especificado para tocar automaticamente. Isso deve ser usado em casos que é esperado que o vídeo seja reproduzido (por exemplo, se o usuário acessa a página para assistir o vídeo, mas não se o vídeo estiver incorporado à pagina junto a outro conteúdo). O vídeo é carregado até que o cache de mídia.
 
@@ -68,7 +68,7 @@ Como qualquer elemento HTML, este elemento suporta os [global attributes](/pt-BR
 
 O tempo de compensação (time offset) entre o áudio e o vídeo está especificado como um valor de ponto flutuante (float) representando o número de segundos da compensação.
 
-> **Note:** **Nota:** A definição de valor de tempo de compensação ainda não foi completada na especificação do HTML 5 e está sujeita a mudança.
+> **Nota:** A definição de valor de tempo de compensação ainda não foi completada na especificação do HTML 5 e está sujeita a mudança.
 
 ## Exemplos
 

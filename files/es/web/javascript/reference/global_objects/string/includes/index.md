@@ -1,7 +1,6 @@
 ---
 title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/includes
 ---
 
 {{JSRef}}
@@ -78,9 +77,9 @@ console.log(str.includes(''))             // true
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.includes")}}
+{{Compat}}
 
 ## Ver también
 

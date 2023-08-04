@@ -49,15 +49,10 @@ var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) => a + b + c; f(); // 6
 ### 更短的函式寫法
 
 ```js
-var elements = [
-  'Hydrogen',
-  'Helium',
-  'Lithium',
-  'Beryllium'
-];
+var elements = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
 // 這段函式會輸出[8, 6, 7, 9]這個陣列
-elements.map(function(element) {
+elements.map(function (element) {
   return element.length;
 });
 
@@ -67,12 +62,12 @@ elements.map((element) => {
 }); // [8, 6, 7, 9]
 
 // 如果輸入的參數只有一個，我們可以移除掉外面的括號
-elements.map(element => {
+elements.map((element) => {
   return element.length;
 }); // [8, 6, 7, 9]
 
 // 當箭頭函式裡的內容只有'return'的時候，我們可以拿掉return和外面的大括號
-elements.map(element => element.length); // [8, 6, 7, 9]
+elements.map((element) => element.length); // [8, 6, 7, 9]
 
 // 在這個範例中，因為我們只需要length這個屬性，所以也可以使用解構賦值：
 // 下方的'length'對應到我們想取得的屬性，而'lengthFooBArX'只是很普通的變數名稱,
@@ -118,7 +113,7 @@ var p = new Person();
 ```js
 function Person() {
   var self = this; // 有些人喜歡 `that` 而不是 `self`.
-                   // 選好一種取法後始終如一
+  // 選好一種取法後始終如一
   self.age = 0;
 
   setInterval(function growUp() {
@@ -135,7 +130,7 @@ function Person() {
 因此，在以下程式碼內，傳遞給 `setInterval` 的 箭頭函式中的`this` ，會與封閉函式的 `this` 值相同：
 
 ```js
-function Person(){
+function Person() {
   this.age = 0;
 
   setInterval(() => {
@@ -151,7 +146,10 @@ var p = new Person();
 由於 `this` 變數具有詞彙上綁定意義，所以[嚴格模式](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode)的宣告對 `this` 的作用將被忽略。
 
 ```js
-var f = () => {'use strict'; return this};
+var f = () => {
+  "use strict";
+  return this;
+};
 f() === window; // 或是 global 物件
 ```
 
@@ -163,20 +161,20 @@ f() === window; // 或是 global 物件
 
 ```js
 var adder = {
-  base : 1,
-  add : function(a) {
-    var f = v => v + this.base;
+  base: 1,
+  add: function (a) {
+    var f = (v) => v + this.base;
     return f(a);
   },
-  addThruCall: function(a) {
-    var f = v => v + this.base;
+  addThruCall: function (a) {
+    var f = (v) => v + this.base;
     var b = {
-      base : 2
+      base: 2,
     };
     return f.call(b, a);
-  }
+  },
 };
-console.log(adder.add(1));         // 顯示 2
+console.log(adder.add(1)); // 顯示 2
 console.log(adder.addThruCall(1)); // 依舊顯示 2
 ```
 
@@ -214,14 +212,14 @@ foo(1); // 11
 如同前述，箭頭函式運算式最適合用在非方法的函式。來看看如果要把它們當成方法來用，會發生什麼事：
 
 ```js
-'use strict';
+"use strict";
 var obj = {
   i: 10,
   b: () => console.log(this.i, this),
-  c: function() {
+  c: function () {
     console.log(this.i, this);
-  }
-}
+  },
+};
 obj.b(); // 印出 undefined, Window {...} (or the global object)
 obj.c(); // 印出 10, Object {...}
 ```
@@ -229,17 +227,17 @@ obj.c(); // 印出 10, Object {...}
 箭頭函式並沒有自己的 `this`。另一個例子與 {{jsxref("Object.defineProperty()")}} 有關：
 
 ```js
-'use strict';
+"use strict";
 
 var obj = {
-  a: 10
+  a: 10,
 };
 
-Object.defineProperty(obj, 'b', {
+Object.defineProperty(obj, "b", {
   get: () => {
     console.log(this.a, typeof this.a, this); // undefined, 'undefined', Window {...} (or the global object)
     return this.a + 10; // represents global object 'Window', therefore 'this.a' returns 'undefined'
-  }
+  },
 });
 ```
 
@@ -272,8 +270,10 @@ console.log(Foo.prototype); // undefined
 在 concise body 裡面只需要輸入運算式，就會附上內建的回傳。在 block body 裡面就必須附上明確的 `return` 宣告。
 
 ```js
-var func = x => x * x;                  // concise 語法會內建 "return"
-var func = (x, y) => { return x + y; }; // block body 需要明確的 "return"
+var func = (x) => x * x; // concise 語法會內建 "return"
+var func = (x, y) => {
+  return x + y;
+}; // block body 需要明確的 "return"
 ```
 
 ## 回傳物件字面值
@@ -290,8 +290,8 @@ var func = () => { foo: function() {} };   // SyntaxError: Unexpected token (
 要記得把物件字面值包在圓括弧內。
 
 ```js
-var func = () => ({foo: 1});
-var func = () => ({ foo: function() {} });
+var func = () => ({ foo: 1 });
+var func = () => ({ foo: function () {} });
 ```
 
 ## 換行
@@ -321,20 +321,20 @@ callback = callback || (() => {});    // ok
 // 回傳 undefined 的箭頭函式
 let empty = () => {};
 
-(() => "foobar")() // 回傳 "foobar"
+(() => "foobar")(); // 回傳 "foobar"
 
-var simple = a => a > 15 ? 15 : a;
+var simple = (a) => (a > 15 ? 15 : a);
 simple(16); // 15
 simple(10); // 10
 
-let max = (a, b) => a > b ? a : b;
+let max = (a, b) => (a > b ? a : b);
 
 // Easy array filtering, mapping, ...
 
 var arr = [5, 6, 13, 0, 1, 18, 23];
-var sum = arr.reduce((a, b) => a + b);  // 66
-var even = arr.filter(v => v % 2 == 0); // [6, 0, 18]
-var double = arr.map(v => v * 2);       // [10, 12, 26, 0, 2, 36, 46]
+var sum = arr.reduce((a, b) => a + b); // 66
+var even = arr.filter((v) => v % 2 == 0); // [6, 0, 18]
+var double = arr.map((v) => v * 2); // [10, 12, 26, 0, 2, 36, 46]
 ```
 
 ## 規範

@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toLocaleString
 ---
 
 {{JSRef}}
@@ -140,9 +139,9 @@ When formatting large numbers of dates, it is better to create an {{jsxref("Glob
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.toLocaleString")}}
+{{Compat}}
 
 ## See also
 

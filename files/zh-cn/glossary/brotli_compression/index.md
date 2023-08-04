@@ -1,7 +1,9 @@
 ---
 title: Brotli
-slug: Glossary/brotli_compression
+slug: Glossary/Brotli_compression
 ---
+
+{{GlossarySidebar}}
 
 **Brotli** 是一种通用的无损压缩算法。
 

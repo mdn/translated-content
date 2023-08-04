@@ -41,10 +41,10 @@ If the original node has an ID and the clone is to be placed in the same documen
 
 To clone a node for appending to a different document, use {{domxref("Document.importNode()")}} instead.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

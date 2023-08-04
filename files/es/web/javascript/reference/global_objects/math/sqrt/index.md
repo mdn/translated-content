@@ -1,7 +1,6 @@
 ---
 title: Math.sqrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/sqrt
 ---
 
 {{JSRef}}
@@ -46,9 +45,9 @@ Math.sqrt(-1); // NaN
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.sqrt")}}
+{{Compat}}
 
 ## Ver también
 

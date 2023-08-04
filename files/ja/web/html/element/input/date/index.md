@@ -2,7 +2,7 @@
 title: <input type="date">
 slug: Web/HTML/Element/input/date
 l10n:
-  sourceCommit: 7594b50698a76ce79209b159835e615052915723
+  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
 {{HTMLSidebar}}
@@ -15,56 +15,11 @@ l10n:
 
 入力欄のユーザーインターフェイスは、一般にブラウザーによってまちまちです。詳細は[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。対応していないブラウザーでは、このコントロールは単純な [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text) に格下げされます。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#値">値</a></strong></td>
-      <td>
-        文字列で、 YYYY-MM-DD 形式の日付、または空欄を表します
-      </td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} および {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>対応している共通属性</strong></td>
-      <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("readonly", "input")}},
-        {{htmlattrxref("step", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td>
-        <code>list</code>, <code>value</code>, <code>valueAsDate</code>,
-        <code>valueAsNumber</code>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## 値
 
-入力欄に入力された日付を表す文字列です。日付は ISO8601 に従って書式化されており、これは[日付の文字列](/ja/docs/Web/HTML/Date_and_time_formats#date_strings)で説明されています。
+入力欄に入力された日付を表す文字列です。日付は[日付文字列形式](/ja/docs/Web/HTML/Date_and_time_formats#日付文字列)に従って書式化されます。
 
-次のように、日付の入力欄の既定値を {{htmlattrxref("value", "input")}} 属性に設定することができます。
+次のように、日付の入力欄の既定値を [`value`](/ja/docs/Web/HTML/Element/input#value) 属性に設定することができます。
 
 ```html
 <input type="date" value="2017-06-01" />
@@ -78,7 +33,7 @@ JavaScript での日付値を取得したり設定したりするには、次の
 
 ```js
 const dateControl = document.querySelector('input[type="date"]');
-dateControl.value = '2017-06-01';
+dateControl.value = "2017-06-01";
 console.log(dateControl.value); // "2017-06-01" と表示
 console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイムスタンプを表示
 ```
@@ -91,21 +46,21 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 ### max
 
-受け付ける最も遅い日付です。要素に入力された {{htmlattrxref("value", "input")}} がこれ以降になった場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。 `max` 属性の値が `yyyy-mm-dd` の書式のありうる日付ではない場合、要素は最大の日付値を持ちません。
+受け付ける最も遅い日付です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこれ以降になった場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `max` 属性の値が `yyyy-mm-dd` の書式のありうる日付ではない場合、要素は最大の日付値を持ちません。
 
 `max` と `min` の両方の属性を設定する場合、この値は `min` 属性にあるもの**より遅いか、同じ**日付文字列でなければなりません。
 
 ### min
 
-受け付ける最も早い日付です。要素に入力された {{htmlattrxref("value", "input")}} がこれ以前になった場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。 `min` 属性の値が `yyyy-mm-dd` の書式のありうる日付でない場合、要素は最小の日付値を持ちません。
+受け付ける最も早い日付です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこれ以前になった場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `min` 属性の値が `yyyy-mm-dd` の書式のありうる日付でない場合、要素は最小の日付値を持ちません。
 
 `max` と `min` の両方の属性を設定する場合、この値は `max` 属性で指定されたもの**より早いか、同じ**日付である必要があります。
 
 ### step
 
-`step` 属性は値を吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ {{htmlattrxref("value", "input")}} 、どちらも提供されていなければ適切な既定値）のみが妥当となります。
+`step` 属性は値を吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値（指定されていれば [`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Element/input#value)、どちらも提供されていなければ適切な既定値）に等しい値のみが妥当となります。
 
-文字列値の `any` は刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約に制限されます）。
+文字列値の `any` は刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
 > **メモ:** ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
 
@@ -140,7 +95,7 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 ### 日付の最大値と最小値の設定
 
-{{htmlattrxref("min", "input")}} および {{htmlattrxref("max", "input")}} 属性を使用して、ユーザーが選択できる日付を制限することができます。次の例では、日付の最小値を `2017-04-01` に、日付の最大値を `2017-04-30` に設定しています。
+[`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性を使用して、ユーザーが選択できる日付を制限することができます。次の例では、日付の最小値を `2017-04-01` に、日付の最大値を `2017-04-30` に設定しています。
 
 ```html
 <form>
@@ -154,19 +109,19 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 この結果は、 2017 年の 4 月の日付のみが選択できるようになります。 — テキストボックスの年と月の部分が編集できなくなり、日付選択ウィジェットで 4 月以外にスクロールすることができなくなります。
 
-> **メモ:** {{htmlattrxref("step", "input")}} 属性を使用すると、日付が加算するたびに飛ばす日数を設定できるはずです（例えば、土曜日のみを選択できるようにしたい場合など）。しかし、執筆時点でどの実装も正しく動作していないようです。
+> **メモ:** [`step`](/ja/docs/Web/HTML/Element/input#step) 属性を使用すると、日付が加算するたびに飛ばす日数を設定できるはずです（例えば、土曜日のみを選択できるようにしたい場合など）。しかし、執筆時点でどの実装も正しく動作していないようです。
 
 ### 入力欄の寸法の制御
 
-`<input type="date">` は {{htmlattrxref("size", "input")}} のような寸法に関する属性には対応していません。寸法を変更するには [CSS](/ja/docs/Web/CSS) を推奨します。
+`<input type="date">` は [`size`](/ja/docs/Web/HTML/Element/input#size) のような寸法に関する属性には対応していません。寸法を変更するには [CSS](/ja/docs/Web/CSS) を推奨します。
 
 ## 検証
 
 既定で、 `<input type="date">` は入力された値をその書式を超えて検証しません。インターフェイスは一般的に、日付でないものの入力をさせないからです。 — これは便利です。 — しかし、入力欄を空のままにしたり、 `text` 型に代替されるするブラウザーにおいて、無効な日付を入力したりすることが可能です（例えば 4 月 32 日など）。
 
-{{htmlattrxref("min", "input")}} および {{htmlattrxref("max", "input")}} を使用して有効な日付を制限すると（[日付の最大値と最小値の設定](#日付の最大値と最小値の設定)を参照）、対応しているブラウザーは、範囲を外れたの日付を送信しようとしたときにエラーを表示するでしょう。しかし、ユーザーの端末が日付選択に完全に対応していない場合、値がこれらの日付の中にあることを保証するためには、送信された結果を再度チェックしなければならないでしょう。
+[`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) を使用して有効な日付を制限すると（[日付の最大値と最小値の設定](#日付の最大値と最小値の設定)を参照）、対応しているブラウザーは、範囲を外れたの日付を送信しようとしたときにエラーを表示するでしょう。しかし、ユーザーの端末が日付選択に完全に対応していない場合、値がこれらの日付の中にあることを保証するためには、送信された結果を再度チェックしなければならないでしょう。
 
-{{htmlattrxref("required", "input")}} 属性を使用して、日付の入力を必須にすることもできます。 — 空の日付欄を送信しようとするとエラーが表示されるでしょう。これは、テキスト入力欄で代替されたとしても、ほとんどのブラウザーで動作するはずです。
+[`required`](/ja/docs/Web/HTML/Element/input#required) 属性を使用して、日付の入力を必須にすることもできます。 — 空の日付欄を送信しようとするとエラーが表示されるでしょう。これは、テキスト入力欄で代替されたとしても、ほとんどのブラウザーで動作するはずです。
 
 日付の最小値と最大値の例と、入力欄を必須にする例を見てみましょう。
 
@@ -229,7 +184,7 @@ input:valid + span::after {
 - `mm-dd-yyyy`
 - `Month dd, yyyy`
 
-これを回避する方法の一つは、日付入力欄に {{htmlattrxref("pattern", "input")}} 属性を付けることです。日付選択ではこれを使用しませんが、文字列入力に代替されたときには使用されます。例えば、次の例を未対応のブラウザーで見てみてください。
+これを回避する方法の一つは、日付入力欄に [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を付けることです。日付選択ではこれを使用しませんが、文字列入力に代替されたときには使用されます。例えば、次の例を未対応のブラウザーで見てみてください。
 
 ```html
 <form>
@@ -343,33 +298,33 @@ input:valid + span::after {
 
 ```js
 // 変数を定義
-const nativePicker = document.querySelector('.nativeDatePicker');
-const fallbackPicker = document.querySelector('.fallbackDatePicker');
-const fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector(".nativeDatePicker");
+const fallbackPicker = document.querySelector(".fallbackDatePicker");
+const fallbackLabel = document.querySelector(".fallbackLabel");
 
-const yearSelect = document.querySelector('#year');
-const monthSelect = document.querySelector('#month');
-const daySelect = document.querySelector('#day');
+const yearSelect = document.querySelector("#year");
+const monthSelect = document.querySelector("#month");
+const daySelect = document.querySelector("#day");
 
 // 最初は代替を隠す
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // 新しい日付入力が文字列入力に代替されるかどうか
-const test = document.createElement('input');
+const test = document.createElement("input");
 
 try {
-  test.type = 'date';
+  test.type = "date";
 } catch (e) {
   console.log(e.message);
 }
 
 // もし文字列入力になるならば、 if() {} ブロックの中のコードを実行する
-if (test.type === 'text') {
+if (test.type === "text") {
   // ネイティブの日付選択を隠して代替版を表示
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // 年と日を動的に生成する
   // （月は常に同じなのでハードコーディング）
@@ -388,9 +343,19 @@ function populateDays(month) {
   let dayNum;
 
   // 31 日か 30 日か？
-  if (month === '1' | month === '3' | month === '5' | month === '7' | month === '8' | month === '10' | month === '12') {
+  if (
+    [
+      "1",
+      "3",
+      "5",
+      "7",
+      "8",
+      "10",
+      "12",
+    ].includes(month)
+  ) {
     dayNum = 31;
-  } else if(month === '4' | month === '6' | month === '9' | month === '11') {
+  } else if (["4", "6", "9", "11"].includes(month)) {
     dayNum = 30;
   } else {
   // 2 月の場合は、閏年かどうかを計算する
@@ -401,7 +366,7 @@ function populateDays(month) {
 
   // <select> に正しい数の新しい <option> 要素を挿入
   for (let i = 1; i <= dayNum; i++) {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.textContent = i;
     daySelect.appendChild(option);
   }
@@ -437,7 +402,7 @@ function populateYears() {
 
   // 今年から 100 年前までの年が <select> で選択できるようにする
   for (let i = 0; i <= 100; i++) {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.textContent = year - i;
     yearSelect.appendChild(option);
   }
@@ -447,23 +412,74 @@ function populateYears() {
 // 再実行して日数を調整する
 yearSelect.onchange = () => {
   populateDays(monthSelect.value);
-}
+};
 
 monthSelect.onchange = () => {
   populateDays(monthSelect.value);
-}
+};
 
 // 日の選択を保存
-var previousDay;
+let previousDay;
 
 // 以前どの日が設定されていたかを保存する
 // 使い方は populateDays() を参照
 daySelect.onchange = () => {
   previousDay = daySelect.value;
-}
+};
 ```
 
 > **メモ:** 53 週ある年もあることを忘れないでください（[年あたりの週数](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)を参照）。商品のアプリを開発するときはこれを念頭に置いておく必要があります。
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#値">値</a></strong></td>
+      <td>
+        文字列で、 YYYY-MM-DD 形式の日付、または空欄を表します
+      </td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} および {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>対応している共通属性</strong></td>
+      <td>
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#step"><code>step</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td>
+        <code>list</code>, <code>value</code>, <code>valueAsDate</code>,
+        <code>valueAsNumber</code>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
+        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

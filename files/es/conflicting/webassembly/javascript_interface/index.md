@@ -1,7 +1,6 @@
 ---
 title: WebAssembly
 slug: conflicting/WebAssembly/JavaScript_interface
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
 
 {{JSRef}}
@@ -76,9 +75,9 @@ fetch('simple.wasm').then(response =>
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.WebAssembly")}}
+{{Compat}}
 
 ## Ver también
 

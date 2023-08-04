@@ -1,7 +1,6 @@
 ---
 title: Object.isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isSealed
 ---
 
 {{JSRef}}
@@ -93,9 +92,9 @@ Object.isSealed(1);
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.isSealed")}}
+{{Compat}}
 
 ## See also
 

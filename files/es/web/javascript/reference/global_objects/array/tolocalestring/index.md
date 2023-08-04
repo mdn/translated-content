@@ -1,12 +1,11 @@
 ---
 title: Array.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/toLocaleString
 ---
 
 {{JSRef}}
 
-El método **`toLocaleString()`** devuelve una cadena de texto representando los elementos del array. Los elementos son convertidos a texto usando su método `toLocaleString` y dichos Strings son separados por un caracter específico para la localidad (como una coma para la separación de decimales “,”).
+El método **`toLocaleString()`** devuelve una cadena de texto representando los elementos del array. Los elementos son convertidos a texto usando su método `toLocaleString` y dichos Strings son separados por un caracter específico para la localidad (como una coma para la separación de decimales ",").
 
 {{EmbedInteractiveExample("pages/js/array-tolocalestring.html")}}
 
@@ -142,7 +141,7 @@ Si necesitas soportar motores de JavaScript obsoletos que no compatibilizan con 
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.toLocaleString")}}
+{{Compat}}
 
 ## Ver también
 

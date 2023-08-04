@@ -1,5 +1,5 @@
 ---
-title: ':focus-visible'
+title: ":focus-visible"
 slug: Web/CSS/:focus-visible
 ---
 
@@ -11,9 +11,13 @@ slug: Web/CSS/:focus-visible
 
 请注意 Firefox 通过较旧的前缀伪类 `:-moz-focusring` 支持类似的功能。更多细节请参考{{cssxref(":-moz-focusring")}}页面。
 
-## 形式语法
+## 语法
 
-{{csssyntax}}
+```css
+:focus-visible {
+  /* ... */
+}
+```
 
 ## 示例
 
@@ -22,16 +26,17 @@ slug: Web/CSS/:focus-visible
 在这个例子中，`:focus-visible` 选择器利用客户端 (UA) 的行为决定是否匹配。比较一下，当你用鼠标点击控件和用键盘 tab 切换控件有何不同。请注意元素的表现与具有 `:focus` 样式的元素的区别。
 
 ```html
-<input value="Default styles"><br>
-<button>Default styles</button><br>
-<input class="focus-only" value=":focus only"><br>
-<button class="focus-only">:focus only</button><br>
-<input class="focus-visible-only" value=":focus-visible only"><br>
+<input value="Default styles" /><br />
+<button>Default styles</button><br />
+<input class="focus-only" value=":focus only" /><br />
+<button class="focus-only">:focus only</button><br />
+<input class="focus-visible-only" value=":focus-visible only" /><br />
 <button class="focus-visible-only">:focus-visible only</button>
 ```
 
 ```css
-input, button {
+input,
+button {
   margin: 10px;
 }
 

@@ -1,7 +1,6 @@
 ---
 title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/toLocaleString
 ---
 
 {{JSRef}}
@@ -130,9 +129,9 @@ console.log(num.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFrac
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.toLocaleString")}}
+{{Compat}}
 
 ## Ver también
 

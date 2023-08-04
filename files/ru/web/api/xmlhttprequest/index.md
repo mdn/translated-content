@@ -1,19 +1,6 @@
 ---
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
-tags:
-  - AJAX
-  - API
-  - HTTP
-  - JavaScript
-  - MakeBrowserAgnostic
-  - NeedsMobileBrowserCompatibility
-  - NeedsTranslation
-  - Reference
-  - Référence(2)
-  - TopicStub
-  - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -32,19 +19,19 @@ var myRequest = new XMLHttpRequest();
 
 ## Список методов объекта
 
-| `XMLHttpRequest(JSObject objParameters);`                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `void abort();`                                                                                                                                                                                    |
-| `DOMString getAllResponseHeaders();`                                                                                                                                                               |
-| `DOMString? getResponseHeader(DOMString header);`                                                                                                                                                  |
-| `void open(DOMString method, DOMString url, optional boolean async, optional DOMString? user, optional DOMString? password);`                                                                      |
-| `void overrideMimeType(DOMString mime);`                                                                                                                                                           |
+| `XMLHttpRequest(JSObject objParameters);`                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `void abort();`                                                                                                                                                 |
+| `DOMString getAllResponseHeaders();`                                                                                                                            |
+| `DOMString? getResponseHeader(DOMString header);`                                                                                                               |
+| `void open(DOMString method, DOMString url, optional boolean async, optional DOMString? user, optional DOMString? password);`                                   |
+| `void overrideMimeType(DOMString mime);`                                                                                                                        |
 | `void send();` `void send(ArrayBufferView data);` `void send(Blob data);` `void send(Document data);` `void send(DOMString? data);` `void send(FormData data);` |
-| `void setRequestHeader(DOMString header, DOMString value);`                                                                                                                                        |
-| Нестандартные методы                                                                                                                                                                               |
-| `[noscript] void init(in nsIPrincipal principal, in nsIScriptContext scriptContext, in nsPIDOMWindow ownerWindow);`                                                                                |
-| `[noscript] void openRequest(in AUTF8String method, in AUTF8String url, in boolean async, in AString user, in AString password);`                                                                  |
-| `void sendAsBinary(in DOMString body);` {{ deprecated_inline(31) }}                                                                                                                       |
+| `void setRequestHeader(DOMString header, DOMString value);`                                                                                                     |
+| Нестандартные методы                                                                                                                                            |
+| `[noscript] void init(in nsIPrincipal principal, in nsIScriptContext scriptContext, in nsPIDOMWindow ownerWindow);`                                             |
+| `[noscript] void openRequest(in AUTF8String method, in AUTF8String url, in boolean async, in AString user, in AString password);`                               |
+| `void sendAsBinary(in DOMString body);` {{ deprecated_inline(31) }}                                                                                             |
 
 ## Поля объекта
 
@@ -252,7 +239,7 @@ var myRequest = new XMLHttpRequest();
         </table>
         <div class="note">
           <strong>Note:</strong> Starting with Gecko 11.0
-          {{ geckoRelease("11.0") }}, as well as WebKit build 528,
+         , as well as WebKit build 528,
           these browsers no longer let you use the
           <code>responseType</code> attribute when performing synchronous
           requests. Attempting to do so throws an
@@ -347,7 +334,7 @@ var myRequest = new XMLHttpRequest();
         </div>
         <div class="note">
           <strong>Примечание:</strong> Начиная с Gecko 11.0
-          {{ geckoRelease("11.0") }}, Gecko больше не позволяет
+         , Gecko больше не позволяет
           использовать поле <code>withCredentials</code> при выполнении
           синхронных запросов. Попытка выполнить это выбрасывает
           <code>NS_ERROR_DOM_INVALID_ACCESS_ERR</code> исключение.
@@ -427,7 +414,7 @@ var myRequest = new XMLHttpRequest();
     </tr>
     <tr id="mozResponseArrayBuffer">
       <td>
-        <code>mozResponseArrayBuffer</code> {{ obsolete_inline("6") }}
+        <code>mozResponseArrayBuffer</code>
         {{ReadOnlyInline()}}
       </td>
       <td>
@@ -444,7 +431,7 @@ var myRequest = new XMLHttpRequest();
       </td>
     </tr>
     <tr id="multipart">
-      <td><code>multipart</code> {{ obsolete_inline("22") }}</td>
+      <td><code>multipart</code></td>
       <td><code>boolean</code></td>
       <td>
         <p>
@@ -453,11 +440,11 @@ var myRequest = new XMLHttpRequest();
           >
           Please use
           <a
-            href="/en-US/docs/Server-sent_events"
-            title="/en-US/docs/Server-sent_events"
+            href="/ru/docs/Server-sent_events"
+            title="/ru/docs/Server-sent_events"
             >Server-Sent Events</a
           >,
-          <a href="/en-US/docs/WebSockets" title="/en-US/docs/WebSockets"
+          <a href="/ru/docs/WebSockets" title="/ru/docs/WebSockets"
             >Web Sockets</a
           >, or <code>responseText</code> from progress events instead.
         </p>
@@ -560,7 +547,7 @@ void open(
 
   - : Необязательный boolean параметр, по умолчанию равный `true`. Определяет, будет ли запрос отправлен асинхронно. Если значение равно `false`, метод `send()` вернёт ответ в общем потоке работы приложения (иначе говоря, приложение зависнет на некоторое время), в противном случае, ответ может быть получен только при помощи определённых обработчиков событий. В случае, если используется отправка `multipart` запроса, то этот атрибут **должен** быть `true`, или будет выброшено исключение.
 
-    > **Примечание:** Начиная с Gecko 30.0 {{ geckoRelease("30.0") }}, синхронные запросы объявлены как deprecated, в силу того что все пользователи недовольны тем, что приложение "зависает".
+    > **Примечание:** Начиная с Gecko 30.0, синхронные запросы объявлены как deprecated, в силу того что все пользователи недовольны тем, что приложение "зависает".
 
 - `user`
   - : Необязательный параметр, используется для аутентификации пользователя. По умолчанию, пустая строка.
@@ -579,7 +566,7 @@ void overrideMimeType(DOMString mimetype);
 
 Отправляет запрос. Если запрос асинхронный (а по умолчанию это так), этот метод вернёт значение сразу после того как метод вызван.
 
-> **Примечание:** **Примечание переводчика:** в этом случае, в ответе не будет содержаться информации, которая пришла с сервера, поскольку она ещё не пришла. Для того чтобы получить эту информацию, нужно слушать события загрузки, или использовать promise.
+> **Примечание:** в этом случае, в ответе не будет содержаться информации, которая пришла с сервера, поскольку она ещё не пришла. Для того чтобы получить эту информацию, нужно слушать события загрузки, или использовать promise.
 
 Если запрос синхронный, то метод вернёт значение только после того, как придёт запрос от сервера.
 
@@ -656,7 +643,7 @@ void setRequestHeader(
 
 Вариант метода `send()` который посылает бинарные данные.
 
-> **Примечание:** Этот нестандартный метод считается устарелым по состоянию на Gecko 31 {{ geckoRelease(31) }}, и со временем будет удалён. Взамен может использоваться стандарт метода `send(Blob data).`
+> **Примечание:** Этот нестандартный метод считается устарелым по состоянию на Gecko 31, и со временем будет удалён. Взамен может использоваться стандарт метода `send(Blob data).`
 
 ```
 void sendAsBinary(
@@ -680,13 +667,14 @@ Since `sendAsBinary()` is an experimental feature, here is **a polyfill** for br
 |*|
 |*|  :: XMLHttpRequest.prototype.sendAsBinary() Polyfill ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()
+|*|  https://developer.mozilla.org/ru/docs/DOM/XMLHttpRequest#sendAsBinary()
 |*|
 \*/
 
 if (!XMLHttpRequest.prototype.sendAsBinary) {
   XMLHttpRequest.prototype.sendAsBinary = function (sData) {
-    var nBytes = sData.length, ui8Data = new Uint8Array(nBytes);
+    var nBytes = sData.length,
+      ui8Data = new Uint8Array(nBytes);
     for (var nIdx = 0; nIdx < nBytes; nIdx++) {
       ui8Data[nIdx] = sData.charCodeAt(nIdx) & 0xff;
     }
@@ -702,7 +690,7 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 ## Notes
 
 - By default, Firefox 3 limits the number of `XMLHttpRequest` connections per server to 6 (previous versions limit this to 2 per server). Some interactive web sites may keep an `XMLHttpRequest` connection open, so opening multiple sessions to such sites may result in the browser hanging in such a way that the window no longer repaints and controls don't respond. This value can be changed by editing the `network.http.max-persistent-connections-per-server` preference in [`about:config`](/about:config).
-- From {{ gecko("7.0") }} headers set by [setRequestHeader](#setrequestheader) are sent with the request when following a redirect. Previously these headers would not be sent.
+- From Gecko 7.0 headers set by [setRequestHeader](#setrequestheader) are sent with the request when following a redirect. Previously these headers would not be sent.
 - `XMLHttpRequest` is implemented in Gecko using the `nsIXMLHttpRequest`, `nsIXMLHttpRequestEventTarget`, and `nsIJSXMLHttpRequest` interfaces.
 - When a request reaches its timeout value, a "timeout" event is raised.
 

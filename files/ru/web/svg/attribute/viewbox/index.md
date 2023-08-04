@@ -1,9 +1,6 @@
 ---
 title: viewBox
 slug: Web/SVG/Attribute/viewBox
-tags:
-  - SVG
-translation_of: Web/SVG/Attribute/viewBox
 ---
 
 « [SVG Attribute reference home](/en/SVG/Attribute)
@@ -75,7 +72,7 @@ svg:not(:root) {
 
 На отображение с `viewBox` также влияет атрибут {{ SVGAttr("preserveAspectRatio") }}.
 
-> **Примечание:** **Обратите внимание:** при значениях `width` и `height` меньших или равных `0` элемент не отображается
+> **Примечание:** при значениях `width` и `height` меньших или равных `0` элемент не отображается
 
 Пять элементов используют этот атрибут: {{SVGElement("marker")}}, {{SVGElement("pattern")}}, {{ SVGElement("svg") }}, {{ SVGElement("symbol") }} и {{ SVGElement("view") }}.
 

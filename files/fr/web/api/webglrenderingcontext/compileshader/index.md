@@ -1,13 +1,6 @@
 ---
 title: WebGLRenderingContext.compileShader()
 slug: Web/API/WebGLRenderingContext/compileShader
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/compileShader
 ---
 
 {{APIRef("WebGL")}}

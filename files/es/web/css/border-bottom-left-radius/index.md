@@ -137,7 +137,7 @@ div {
   border-bottom-left-radius: 40%;
   height: 100px;
   width: 100px;
-  background-color: rgb(250,20,70);
+  background-color: rgb(250, 20, 70);
   background-clip: content-box;
 }
 ```
@@ -148,9 +148,9 @@ div {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-bottom-left-radius")}}
+{{Compat}}
 
 ## Véase también
 

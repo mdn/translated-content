@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-progress-value'
+title: "::-webkit-progress-value"
 slug: Web/CSS/::-webkit-progress-value
 ---
 

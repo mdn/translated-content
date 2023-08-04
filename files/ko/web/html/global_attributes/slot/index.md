@@ -15,7 +15,7 @@ slug: Web/HTML/Global_attributes/slot
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.slot")}}
+{{Compat}}
 
 ## 같이 보기
 

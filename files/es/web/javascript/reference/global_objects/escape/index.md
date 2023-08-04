@@ -1,7 +1,6 @@
 ---
 title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/escape
-original_slug: Web/JavaScript/Referencia/Objetos_globales/escape
 ---
 
 {{Deprecated_header}}
@@ -51,7 +50,7 @@ escape('@*_+-./');    // "@*_+-./"
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.escape")}}
+{{Compat}}
 
 ## Ver más
 

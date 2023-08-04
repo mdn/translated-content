@@ -52,51 +52,44 @@ JSON.stringify(value[, replacer [, space]])
 ### 使用 JSON.stringify
 
 ```js
-JSON.stringify({});                        // '{}'
-JSON.stringify(true);                      // 'true'
-JSON.stringify("foo");                     // '"foo"'
-JSON.stringify([1, "false", false]);       // '[1,"false",false]'
-JSON.stringify({ x: 5 });                  // '{"x":5}'
+JSON.stringify({}); // '{}'
+JSON.stringify(true); // 'true'
+JSON.stringify("foo"); // '"foo"'
+JSON.stringify([1, "false", false]); // '[1,"false",false]'
+JSON.stringify({ x: 5 }); // '{"x":5}'
 
-JSON.stringify({x: 5, y: 6});
+JSON.stringify({ x: 5, y: 6 });
 // "{"x":5,"y":6}"
 
 JSON.stringify([new Number(1), new String("false"), new Boolean(false)]);
 // '[1,"false",false]'
 
-JSON.stringify({x: undefined, y: Object, z: Symbol("")});
+JSON.stringify({ x: undefined, y: Object, z: Symbol("") });
 // '{}'
 
 JSON.stringify([undefined, Object, Symbol("")]);
 // '[null,null,null]'
 
-JSON.stringify({[Symbol("foo")]: "foo"});
+JSON.stringify({ [Symbol("foo")]: "foo" });
 // '{}'
 
-JSON.stringify({[Symbol.for("foo")]: "foo"}, [Symbol.for("foo")]);
+JSON.stringify({ [Symbol.for("foo")]: "foo" }, [Symbol.for("foo")]);
 // '{}'
 
-JSON.stringify(
-    {[Symbol.for("foo")]: "foo"},
-    function (k, v) {
-        if (typeof k === "symbol"){
-            return "a symbol";
-        }
-    }
-);
-
+JSON.stringify({ [Symbol.for("foo")]: "foo" }, function (k, v) {
+  if (typeof k === "symbol") {
+    return "a symbol";
+  }
+});
 
 // undefined
 
 // 不可枚举的属性默认会被忽略：
 JSON.stringify(
-    Object.create(
-        null,
-        {
-            x: { value: 'x', enumerable: false },
-            y: { value: 'y', enumerable: true }
-        }
-    )
+  Object.create(null, {
+    x: { value: "x", enumerable: false },
+    y: { value: "y", enumerable: true },
+  }),
 );
 
 // "{"y":"y"}"
@@ -118,7 +111,7 @@ replacer 参数可以是一个函数或者一个数组。作为函数，它有�
 
 **注意：** 不能用 replacer 方法，从数组中移除值（values），如若返回 undefined 或者一个函数，将会被 null 取代。
 
-#### 例子 (function)
+#### 示例 (function)
 
 ```plain
 function replacer(key, value) {
@@ -134,7 +127,7 @@ var jsonString = JSON.stringify(foo, replacer);
 
 JSON 序列化结果为 `{"week":45,"month":7}`.
 
-#### 例子 (array)
+#### 示例 (array)
 
 如果 `replacer` 是一个数组，数组的值代表将被序列化成 JSON 字符串的属性名。
 
@@ -148,13 +141,13 @@ JSON.stringify(foo, ['week', 'month']);
 `space` 参数用来控制结果字符串里面的间距。如果是一个数字，则在字符串化时每一级别会比上一级别缩进多这个数字值的空格（最多 10 个空格）；如果是一个字符串，则每一级别会比上一级别多缩进该字符串（或该字符串的前 10 个字符）。
 
 ```js
-JSON.stringify({ a: 2 }, null, " ");   // '{\n "a": 2\n}'
+JSON.stringify({ a: 2 }, null, " "); // '{\n "a": 2\n}'
 ```
 
 使用制表符（\t）来缩进：
 
 ```js
-JSON.stringify({ uno: 1, dos : 2 }, null, '\t')
+JSON.stringify({ uno: 1, dos: 2 }, null, "\t");
 // '{            \
 //     "uno": 1, \
 //     "dos": 2  \
@@ -167,13 +160,13 @@ JSON.stringify({ uno: 1, dos : 2 }, null, '\t')
 
 ```js
 var obj = {
-  foo: 'foo',
+  foo: "foo",
   toJSON: function () {
-    return 'bar';
-  }
+    return "bar";
+  },
 };
-JSON.stringify(obj);      // '"bar"'
-JSON.stringify({x: obj}); // '{"x":"bar"}'
+JSON.stringify(obj); // '"bar"'
+JSON.stringify({ x: obj }); // '{"x":"bar"}'
 ```
 
 ### `JSON.stringify`用作 JavaScript
@@ -212,22 +205,22 @@ alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}
 ```js
 // 创建一个示例数据
 var session = {
-    'screens' : [],
-    'state' : true
+  screens: [],
+  state: true,
 };
-session.screens.push({"name":"screenA", "width":450, "height":250});
-session.screens.push({"name":"screenB", "width":650, "height":350});
-session.screens.push({"name":"screenC", "width":750, "height":120});
-session.screens.push({"name":"screenD", "width":250, "height":60});
-session.screens.push({"name":"screenE", "width":390, "height":120});
-session.screens.push({"name":"screenF", "width":1240, "height":650});
+session.screens.push({ name: "screenA", width: 450, height: 250 });
+session.screens.push({ name: "screenB", width: 650, height: 350 });
+session.screens.push({ name: "screenC", width: 750, height: 120 });
+session.screens.push({ name: "screenD", width: 250, height: 60 });
+session.screens.push({ name: "screenE", width: 390, height: 120 });
+session.screens.push({ name: "screenF", width: 1240, height: 650 });
 
 // 使用 JSON.stringify 转换为 JSON 字符串
 // 然后使用 localStorage 保存在 session 名称里
-localStorage.setItem('session', JSON.stringify(session));
+localStorage.setItem("session", JSON.stringify(session));
 
 // 然后是如何转换通过 JSON.stringify 生成的字符串，该字符串以 JSON 格式保存在 localStorage 里
-var restoredSession = JSON.parse(localStorage.getItem('session'));
+var restoredSession = JSON.parse(localStorage.getItem("session"));
 
 // 现在 restoredSession 包含了保存在 localStorage 里的对象
 console.log(restoredSession);

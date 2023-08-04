@@ -56,7 +56,7 @@ slug: Web/HTML/Element/article
     <tr>
       <th scope="row"><dfn>가능한 부모 요소</dfn></th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/ko/docs/Web/HTML/Content_categories#Flow_content"
           >플로우 콘텐츠</a
         >를 허용하는 모든 요소.<br /><code>&#x3C;article></code> 요소는
         {{HTMLElement("address")}}의 후손이 될 수 없음에 주의하세요.
@@ -115,16 +115,12 @@ slug: Web/HTML/Element/article
     <article class="user_review">
       <p>I agree, dinos are my favorite.</p>
       <footer>
-        <p>
-          Posted on <time datetime="2015-05-17 19:00">May 17</time> by Tom.
-        </p>
+        <p>Posted on <time datetime="2015-05-17 19:00">May 17</time> by Tom.</p>
       </footer>
     </article>
   </section>
   <footer>
-    <p>
-      Posted on <time datetime="2015-05-15 19:00">May 15</time> by Staff.
-    </p>
+    <p>Posted on <time datetime="2015-05-15 19:00">May 15</time> by Staff.</p>
   </footer>
 </article>
 ```
@@ -135,4 +131,4 @@ slug: Web/HTML/Element/article
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.article")}}
+{{Compat}}

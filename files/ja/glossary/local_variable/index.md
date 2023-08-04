@@ -10,11 +10,11 @@ slug: Glossary/Local_variable
 ```js
 var global = 5; //is a global variable
 
-function fun(){
-    var local = 10; //is a local variable
+function fun() {
+  var local = 10; //is a local variable
 }
 ```
 
 1. 一般知識
 
-    1. Wikipedia 上の[ローカル変数](https://ja.wikipedia.org/wiki/ローカル変数)
+   1. Wikipedia 上の[ローカル変数](https://ja.wikipedia.org/wiki/ローカル変数)

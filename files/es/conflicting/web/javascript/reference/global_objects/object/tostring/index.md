@@ -1,7 +1,6 @@
 ---
 title: Object.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
-original_slug: Web/JavaScript/Reference/Global_Objects/Object/toSource
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -109,14 +108,6 @@ Llamando al método `toSource()` de `theDog` muestra el código JavaScript que d
 theDog.toSource();
 // returns ({name:"Gabby", breed:"Lab", color:"chocolate", sex:"female"})
 ```
-
-## Especificaciones
-
-No es parte de ningún estándar. Implementado en JavaScript 1.3.
-
-## Compatibilidad en navegadores
-
-{{Compat("javascript.builtins.Object.toSource")}}
 
 ## Ver también
 

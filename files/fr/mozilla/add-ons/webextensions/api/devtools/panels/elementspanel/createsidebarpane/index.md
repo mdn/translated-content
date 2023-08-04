@@ -1,20 +1,6 @@
 ---
 title: devtools.panels.ElementsPanel.createSidebarPane()
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane
-tags:
-  - API
-  - Add-ons
-  - DevTools
-  - Extensions
-  - Reference
-  - WebExtensions
-  - createSidebarPane
-  - devtools.panels
-translation_of: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane
-original_slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane
 ---
 
 {{AddonSidebar()}}
@@ -33,8 +19,8 @@ Cette fonction prend un argument, qui est une chaîne représentant le titre du 
 
 ```js
 var creating = browser.devtools.panels.elements.createSidebarPane(
-  title       // string
-)
+  title, // string
+);
 ```
 
 ### Paramètres
@@ -46,9 +32,9 @@ var creating = browser.devtools.panels.elements.createSidebarPane(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet [`ExtensionSidebarPane`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane) représentant le nouveau volet.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.ElementsPanel.createSidebarPane", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -61,8 +47,8 @@ function onCreated(sidebarPane) {
     someString: "hello there",
     someObject: {
       someNumber: 42,
-      someOtherString: "this is my pane's content"
-    }
+      someOtherString: "this is my pane's content",
+    },
   });
 }
 

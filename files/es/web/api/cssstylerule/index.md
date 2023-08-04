@@ -29,8 +29,6 @@ interface CSSStyleRule : CSSRule {
 
 {{Specifications}}
 
-## Compatibilidad entre Navegadores
+## Compatibilidad con navegadores
 
-Para obtener informacion de compatibilidad en los distintos navegadores, por favor consulta la tabla de compatibilidad de la interfaz asociada.
-
-{{Compat("api.CSSStyleRule")}}
+{{Compat}}

@@ -1,22 +1,21 @@
 ---
 title: Node.isSameNode()
 slug: Web/API/Node/isSameNode
-translation_of: Web/API/Node/isSameNode
 ---
 
-{{APIRef("DOM")}} {{ Obsolete_header }}
+{{APIRef("DOM")}}
 
 The **`Node.isSameNode()`** проверяет ссылаются ли два узла на один и тот же объект.
 
-> **Примечание:** **Предупреждение:** Данный метод больше не реализуется в последних браузерах.
+> **Предупреждение:** Данный метод больше не реализуется в последних браузерах.
 >
 > ```js
 > // Instead of using
-> node1.isSameNode(node2)
+> node1.isSameNode(node2);
 >
 > // use
-> node1 === node2 // or
-> node1 == node2
+> node1 === node2; // or
+> node1 == node2;
 > ```
 
 ## Синтаксис

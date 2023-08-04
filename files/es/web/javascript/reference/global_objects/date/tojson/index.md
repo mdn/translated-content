@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toJSON
 ---
 
 {{JSRef}}
@@ -41,9 +40,9 @@ console.log(jsonDate); //2015-10-26T07:46:36.611Z
 
 {{Specifications}}
 
-## Compatibilidad en buscadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.toJSON")}}
+{{Compat}}
 
 ## Ver también
 

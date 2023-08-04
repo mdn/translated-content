@@ -53,9 +53,9 @@ align-self: unset;
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.align-self")}}
+{{Compat}}
 
 ## Véase también
 

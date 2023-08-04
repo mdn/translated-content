@@ -1,7 +1,6 @@
 ---
 title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/split
 ---
 
 {{JSRef("Objetos_globales", "String")}}
@@ -146,9 +145,9 @@ var strReverse = str.split('').reverse().join(''); // 'lkjhgfdsa'
 
 {{Specifications}}
 
-## Compatibilidad con los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.split")}}
+{{Compat}}
 
 ## Ver también
 

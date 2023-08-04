@@ -1,6 +1,6 @@
 ---
 title: <input type="radio">
-slug: Web/HTML/Element/Input/radio
+slug: Web/HTML/Element/input/radio
 ---
 
 {{HTMLSidebar}}
@@ -65,16 +65,13 @@ The resulting HTML looks like this:
 <form>
   <p>Please select your preferred contact method:</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email">
+    <input type="radio" id="contactChoice1" name="contact" value="email" />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="phone">
+    <input type="radio" id="contactChoice2" name="contact" value="phone" />
     <label for="contactChoice2">Phone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="mail">
+    <input type="radio" id="contactChoice3" name="contact" value="mail" />
     <label for="contactChoice3">Mail</label>
   </div>
   <div>
@@ -105,22 +102,18 @@ Let's add a little bit of code to our example so we can examine the data generat
 <form>
   <p>Please select your preferred contact method:</p>
   <div>
-    <input type="radio" id="contactChoice1"
-           name="contact" value="email">
+    <input type="radio" id="contactChoice1" name="contact" value="email" />
     <label for="contactChoice1">Email</label>
-    <input type="radio" id="contactChoice2"
-           name="contact" value="phone">
+    <input type="radio" id="contactChoice2" name="contact" value="phone" />
     <label for="contactChoice2">Phone</label>
-    <input type="radio" id="contactChoice3"
-           name="contact" value="mail">
+    <input type="radio" id="contactChoice3" name="contact" value="mail" />
     <label for="contactChoice3">Mail</label>
   </div>
   <div>
     <button type="submit">Submit</button>
   </div>
 </form>
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 Then we add some [JavaScript](/ko/docs/Web/JavaScript) to set up an event listener on the {{domxref("HTMLFormElement/submit_event", "submit")}} event, which is sent when the user clicks the "Submit" button:
@@ -129,15 +122,19 @@ Then we add some [JavaScript](/ko/docs/Web/JavaScript) to set up an event listen
 var form = document.querySelector("form");
 var log = document.querySelector("#log");
 
-form.addEventListener("submit", function(event) {
-  var data = new FormData(form);
-  var output = "";
-  for (const entry of data) {
-    output = output + entry[0] + "=" + entry[1] + "\r";
-  };
-  log.innerText = output;
-  event.preventDefault();
-}, false);
+form.addEventListener(
+  "submit",
+  function (event) {
+    var data = new FormData(form);
+    var output = "";
+    for (const entry of data) {
+      output = output + entry[0] + "=" + entry[1] + "\r";
+    }
+    log.innerText = output;
+    event.preventDefault();
+  },
+  false,
+);
 ```
 
 Try this example out and see how there's never more than one result for the `contact` group.
@@ -175,16 +172,18 @@ To make a radio button selected by default, you simply include `checked` attribu
 <form>
   <p>Please select your preferred contact method:</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email" checked>
+    <input
+      type="radio"
+      id="contactChoice1"
+      name="contact"
+      value="email"
+      checked />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="phone">
+    <input type="radio" id="contactChoice2" name="contact" value="phone" />
     <label for="contactChoice2">Phone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="mail">
+    <input type="radio" id="contactChoice3" name="contact" value="mail" />
     <label for="contactChoice3">Mail</label>
   </div>
   <div>
@@ -218,16 +217,18 @@ The following example shows a slightly more thorough version of the example we'v
   <fieldset>
     <legend>Please select your preferred contact method:</legend>
     <div>
-      <input type="radio" id="contactChoice1"
-       name="contact" value="email" checked>
+      <input
+        type="radio"
+        id="contactChoice1"
+        name="contact"
+        value="email"
+        checked />
       <label for="contactChoice1">Email</label>
 
-      <input type="radio" id="contactChoice2"
-       name="contact" value="phone">
+      <input type="radio" id="contactChoice2" name="contact" value="phone" />
       <label for="contactChoice2">Phone</label>
 
-      <input type="radio" id="contactChoice3"
-       name="contact" value="mail">
+      <input type="radio" id="contactChoice3" name="contact" value="mail" />
       <label for="contactChoice3">Mail</label>
     </div>
     <div>
@@ -308,7 +309,7 @@ Most notable here is the use of the {{cssxref("-moz-appearance")}} property (wit
 
 Notice that when clicking on a radio button, there's a nice, smooth fade out/in effect as the two buttons change state. In addition, the style and coloring of the legend and submit button are customized to have strong contrast. This might not be a look you'd want in a real web application, but it definitely shows off the possibilities.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

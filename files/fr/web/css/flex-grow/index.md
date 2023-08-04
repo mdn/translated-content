@@ -1,11 +1,6 @@
 ---
 title: flex-grow
 slug: Web/CSS/flex-grow
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/flex-grow
 ---
 
 {{CSSRef}}
@@ -78,12 +73,12 @@ La propriété `flex-grow` se définit avec une valeur de type [`<number>`](#num
 
 .box {
   flex-shrink: 1;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .box1 {
   flex-grow: 1;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 ```
 

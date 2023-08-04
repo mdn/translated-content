@@ -5,7 +5,7 @@ translation_of: Web/API/HTMLBaseFontElement
 original_slug: Web/API/HTMLBaseFontElement
 ---
 
-{{APIRef("HTML DOM")}} {{obsolete_header}}
+{{APIRef("HTML DOM")}}
 
 **`HTMLBaseFontElement`** интерфейс предоставляющий специальные свойства (помимо тех постоянных объектов {{domxref("HTMLElement")}} интерфейса, доступных ему также по наследству) для манипулирования {{HTMLElement("basefont")}} элементами.
 

@@ -1,12 +1,6 @@
 ---
-title: ':-moz-window-inactive'
+title: ":-moz-window-inactive"
 slug: Web/CSS/:-moz-window-inactive
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:-moz-window-inactive
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -51,4 +45,4 @@ Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-moz-window-inactive")}}
+{{Compat}}

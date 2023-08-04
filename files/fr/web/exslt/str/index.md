@@ -1,7 +1,6 @@
 ---
 title: Strings (str)
 slug: Web/EXSLT/str
-translation_of: Web/EXSLT/str
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
@@ -12,4 +11,4 @@ Le paquet EXSLT <i lang="en">Strings</i> fournit des fonctions pour la manipulat
 
 ## Compatibilité des navigateurs
 
-{{Compat("xslt.exslt.str")}}
+{{Compat}}

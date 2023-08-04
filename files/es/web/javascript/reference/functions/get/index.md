@@ -1,7 +1,6 @@
 ---
 title: get
 slug: Web/JavaScript/Reference/Functions/get
-original_slug: Web/JavaScript/Referencia/Funciones/get
 ---
 
 {{jsSidebar("Funciones")}}
@@ -57,13 +56,13 @@ Note que intentar asignar un valor a `latest` no lo cambiará.
 delete o.latest;
 ```
 
-## Compatibilidad de navegadores
+## Especificaciones
 
-Basado en la página de [página de Robert Nyman](http://robertnyman.com/javascript/javascript-getters-setters.html#regular-getters-and-setters)
+{{Specifications}}
 
-Sin soporte (notablemente en IE6-8) significa que el script lanzará un error de sintaxis.
+## Compatibilidad con navegadores
 
-{{Compat("javascript.functions.get")}}
+{{Compat}}
 
 ## Consulta también
 

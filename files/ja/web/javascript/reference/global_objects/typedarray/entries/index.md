@@ -1,6 +1,8 @@
 ---
 title: TypedArray.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
+l10n:
+  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
 ---
 
 {{JSRef}}
@@ -11,8 +13,8 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 
 ## 構文
 
-```
-arr.entries()
+```js-nolint
+entries()
 ```
 
 ### 返値
@@ -21,28 +23,27 @@ arr.entries()
 
 ## 例
 
-### for...of ループを使用した反復
+### for...of ループを使用した反復処理
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArray = arr.entries();
-// your browser must support for..of loop
-// and let-scoped variables in for loops
-for (let n of eArray) {
-  console.log(n);
+const array = new Uint8Array([10, 20, 30, 40, 50]);
+const arrayEntries = arr.entries();
+for (const element of arrayEntries) {
+  console.log(element);
 }
 ```
 
-### 代替の反復
+### 他の反復処理
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArr = arr.entries();
-console.log(eArr.next().value); // [0, 10]
-console.log(eArr.next().value); // [1, 20]
-console.log(eArr.next().value); // [2, 30]
-console.log(eArr.next().value); // [3, 40]
-console.log(eArr.next().value); // [4, 50]
+const array = new Uint8Array([10, 20, 30, 40, 50]);
+const arrayEntries = arr.entries();
+
+console.log(arrayEntries.next().value); // [0, 10]
+console.log(arrayEntries.next().value); // [1, 20]
+console.log(arrayEntries.next().value); // [2, 30]
+console.log(arrayEntries.next().value); // [3, 40]
+console.log(arrayEntries.next().value); // [4, 50]
 ```
 
 ## 仕様書
@@ -51,10 +52,11 @@ console.log(eArr.next().value); // [4, 50]
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.TypedArray.entries")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`TypedArray.prototype.entries` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.keys()")}}

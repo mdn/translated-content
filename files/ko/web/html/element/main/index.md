@@ -88,20 +88,19 @@ slug: Web/HTML/Element/main
 
   <article>
     <h2>Red Delicious</h2>
-    <p>These bright red apples are the most common found in many
-    supermarkets.</p>
-    <p>... </p>
-    <p>... </p>
+    <p>
+      These bright red apples are the most common found in many supermarkets.
+    </p>
+    <p>...</p>
+    <p>...</p>
   </article>
 
   <article>
     <h2>Granny Smith</h2>
-    <p>These juicy, green apples make a great filling for
-    apple pies.</p>
-    <p>... </p>
-    <p>... </p>
+    <p>These juicy, green apples make a great filling for apple pies.</p>
+    <p>...</p>
+    <p>...</p>
   </article>
-
 </main>
 
 <!-- other content -->
@@ -148,12 +147,10 @@ slug: Web/HTML/Element/main
 대부분의 브라우저에서 `<main>` 요소를 지원합니다. 그러나 Internet Explorer 11 이하를 지원할 땐 `<main>` 요소에 `"main"` {{glossary("ARIA")}} 역할을 명시해 접근성을 확보하는 것이 좋습니다.
 
 ```html
-<main role="main">
-  ...
-</main>
+<main role="main">...</main>
 ```
 
-{{Compat("html.elements.main")}}
+{{Compat}}
 
 ## 같이 보기
 

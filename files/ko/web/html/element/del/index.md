@@ -69,8 +69,7 @@ slug: Web/HTML/Element/del
 ## 예제
 
 ```html
-<p><del>This text has been deleted</del>,
-here is the rest of the paragraph.</p>
+<p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
 <del><p>This paragraph has been deleted.</p></del>
 ```
 
@@ -114,7 +113,7 @@ del::after {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.del")}}
+{{Compat}}
 
 ## 같이 보기
 

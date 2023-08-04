@@ -1,12 +1,6 @@
 ---
-title: 'TypeError: X.prototype.y called on incompatible type'
+title: "TypeError: X.prototype.y called on incompatible type"
 slug: Web/JavaScript/Reference/Errors/Called_on_incompatible_type
-tags:
-  - Erreurs
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Called_on_incompatible_type
-original_slug: Web/JavaScript/Reference/Erreurs/Called_on_incompatible_type
 ---
 
 {{jsSidebar("Errors")}}
@@ -38,15 +32,15 @@ Cela peut également se produire quand on fournit une fonction (sous la forme d'
 ### Exemples invalides
 
 ```js example-bad
-var monSet = new Set;
-['truc', 'bidule'].forEach(monSet.add);
+var monSet = new Set();
+["truc", "bidule"].forEach(monSet.add);
 // monSet.add est une fonction mais
 // "monSet" n'est pas capturé en tant que this.
 
 var maFonction = function () {
   console.log(this);
 };
-['truc', 'bidule'].forEach(maFonction.bind);
+["truc", "bidule"].forEach(maFonction.bind);
 // maFonction.bind est une fonction
 // mais "maFonction" n'est pas capturé en tant
 // que this.
@@ -55,14 +49,14 @@ var maFonction = function () {
 ### Exemples valides
 
 ```js example-good
-var monSet = new Set;
-['truc', 'bidule'].forEach(monSet.add.bind(monSet));
+var monSet = new Set();
+["truc", "bidule"].forEach(monSet.add.bind(monSet));
 // Cela fonctionne car on lie "monSet" avec this.
 
 var maFonction = function () {
-  console.log(this)
+  console.log(this);
 };
-['truc', 'bidule'].forEach(x => maFonction.bind(x));
+["truc", "bidule"].forEach((x) => maFonction.bind(x));
 // Cela fonctionne car on utilise
 // la fonction "bind" ce qui permet de
 // créer une fonction lambda qui propage

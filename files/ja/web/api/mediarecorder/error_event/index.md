@@ -1,5 +1,5 @@
 ---
-title: 'MediaRecorder: error イベント'
+title: "MediaRecorder: error イベント"
 slug: Web/API/MediaRecorder/error_event
 l10n:
   sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
@@ -94,4 +94,4 @@ record();
 
 ## 関連情報
 
-- [Media​Stream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)

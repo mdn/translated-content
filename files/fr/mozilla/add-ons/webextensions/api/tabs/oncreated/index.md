@@ -1,17 +1,6 @@
 ---
 title: tabs.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCreated
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
 ---
 
 {{AddonSidebar()}}
@@ -23,9 +12,9 @@ Notez que l'URL de l'onglet peut ne pas avoir sa valeur finale au moment où cet
 ## Syntaxe
 
 ```js
-browser.tabs.onCreated.addListener(callback)
-browser.tabs.onCreated.removeListener(listener)
-browser.tabs.onCreated.hasListener(listener)
+browser.tabs.onCreated.addListener(callback);
+browser.tabs.onCreated.removeListener(listener);
+browser.tabs.onCreated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -62,9 +51,9 @@ browser.tabs.onCreated.addListener(handleCreated);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onCreated")}}
+{{Compat}}
 
 > **Note :**
 >

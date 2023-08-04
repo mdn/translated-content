@@ -2,6 +2,7 @@
 title: <progress>
 slug: Web/HTML/Element/progress
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<progress>` 요소**는 어느 작업의 완료 정도를 나타내며, 주로 진행 표시줄의 형태를 띕니다.
@@ -89,7 +90,7 @@ slug: Web/HTML/Element/progress
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.progress")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/pop
 ---
 
 {{JSRef}}
@@ -50,7 +49,7 @@ console.log(popped); // 'sturgeon'
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.pop")}}
+{{Compat}}
 
 ## Vea también
 

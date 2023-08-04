@@ -40,4 +40,4 @@ Connection: close
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Connection")}}
+{{Compat}}

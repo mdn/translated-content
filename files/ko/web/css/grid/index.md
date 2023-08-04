@@ -7,7 +7,7 @@ slug: Web/CSS/grid
 
 {{EmbedInteractiveExample("pages/css/grid.html")}}
 
-> **참고:** You can only specify the explicit _or_ the implicit grid properties in a single `grid` declaration. The sub-properties you don’t specify are set to their initial value, as normal for shorthands. Also, the gutter properties are NOT reset by this shorthand.
+> **참고:** You can only specify the explicit _or_ the implicit grid properties in a single `grid` declaration. The sub-properties you don't specify are set to their initial value, as normal for shorthands. Also, the gutter properties are NOT reset by this shorthand.
 
 ## Syntax
 
@@ -97,13 +97,13 @@ grid: unset;
 
 {{EmbedLiveSample("Example", "100%", 150)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
 {{cssinfo}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

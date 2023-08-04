@@ -46,9 +46,9 @@ promise.then(successCallback, failureCallback);
 
 콜백 함수를 전달해주는 고전적인 방식과는 달리, Promise는 아래와 같은 특징을 보장합니다.
 
-- 콜백은 자바스크립트 Event Loop가 [현재 실행중인 콜 스택을 완료](/en-US/docs/Web/JavaScript/EventLoop#Run-to-completion)하기 이전에는 절대 호출되지 않습니다.
-- 비동기 작업이 성공하거나 실패한 뒤에 [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 을 이용하여 추가한 콜백의 경우에도 위와 같습니다.
-- [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)을 여러번 사용하여 여러개의 콜백을 추가 할 수 있습니다. 그리고 각각의 콜백은 주어진 순서대로 하나 하나 실행되게 됩니다.
+- 콜백은 자바스크립트 Event Loop가 [현재 실행중인 콜 스택을 완료](/ko/docs/Web/JavaScript/EventLoop#Run-to-completion)하기 이전에는 절대 호출되지 않습니다.
+- 비동기 작업이 성공하거나 실패한 뒤에 [`then()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 을 이용하여 추가한 콜백의 경우에도 위와 같습니다.
+- [`then()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)을 여러번 사용하여 여러개의 콜백을 추가 할 수 있습니다. 그리고 각각의 콜백은 주어진 순서대로 하나 하나 실행되게 됩니다.
 
 Promise의 가장 뛰어난 장점 중의 하나는 **chaining**입니다.
 
@@ -100,7 +100,7 @@ doSomething().then(function(result) {
 .catch(failureCallback);
 ```
 
-`then` 에 넘겨지는 인자는 선택적(optional)입니다. 그리고 `catch(failureCallback)` 는 `then(null, failureCallback)` 의 축약입니다. 이 표현식을 [화살표 함수](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)로 나타내면 다음과 같습니다.
+`then` 에 넘겨지는 인자는 선택적(optional)입니다. 그리고 `catch(failureCallback)` 는 `then(null, failureCallback)` 의 축약입니다. 이 표현식을 [화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)로 나타내면 다음과 같습니다.
 
 ```js
 doSomething()
@@ -173,7 +173,7 @@ try {
 }
 ```
 
-비동기 코드를 사용한 이러한 대칭성은 ECMAScript 2017에서 [`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) 구문(Syntactic sugar) 에서 최고로 느낄 수 있습니다.
+비동기 코드를 사용한 이러한 대칭성은 ECMAScript 2017에서 [`async`/`await`](/ko/docs/Web/JavaScript/Reference/Statements/async_function) 구문(Syntactic sugar) 에서 최고로 느낄 수 있습니다.
 
 ```js
 async function foo() {
@@ -205,7 +205,7 @@ Promise가 reject될 때마다 두 가지 이벤트 중 하나가 전역 범위�
 
 이들을 이용해 프로미스에 대한 에러 처리를 대체(fallback)하는 것이 가능해지며, 또한 프로미스 관리시 발생하는 이슈들을 디버깅하는 데 도움을 얻을 수 있습니다. 이 핸들러들은 모든 맥락에서 전역적(global)이기 때문에, 모든 에러는 발생한 지점(source)에 상관없이 동일한 핸들러로 전달됩니다.
 
-특히 유용한 사례 : {{Glossary("Node.js")}}로 코드를 작성할 때, 흔히 프로젝트에서 사용하는 모듈이 reject된 프로미스를 처리하지 않을 수 있습니다. 이런 경우 노드 실행 시 콘솔에 로그가 남습니다. 이를 수집에서 분석하고 직접 처리할 수도 있습니다. 아니면 그냥 콘솔 출력을 어지럽히는 것을 막기 위해 그럴 수도 있죠. 이런 식으로 {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}([영어](/en-US/docs/Web/API/Window/unhandledrejection_event)) 이벤트를 처리하는 핸들러를 추가하면 됩니다.
+특히 유용한 사례 : {{Glossary("Node.js")}}로 코드를 작성할 때, 흔히 프로젝트에서 사용하는 모듈이 reject된 프로미스를 처리하지 않을 수 있습니다. 이런 경우 노드 실행 시 콘솔에 로그가 남습니다. 이를 수집에서 분석하고 직접 처리할 수도 있습니다. 아니면 그냥 콘솔 출력을 어지럽히는 것을 막기 위해 그럴 수도 있죠. 이런 식으로 {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}([영어](/ko/docs/Web/API/Window/unhandledrejection_event)) 이벤트를 처리하는 핸들러를 추가하면 됩니다.
 
 ```js
 window.addEventListener("unhandledrejection", event => {
@@ -291,7 +291,7 @@ for (const f of [func1, func2, func3]) {
 
 ## Timing
 
-놀라움(역자 주. 에러가 난다거나, 코드가 문제가 생긴다거나..했을때의 그 놀라움..)을 피하기 위해 [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)에 전달된 함수는 already-resolved promise에 있는 경우에도 동기적으로 호출되지 않습니다.
+놀라움(역자 주. 에러가 난다거나, 코드가 문제가 생긴다거나..했을때의 그 놀라움..)을 피하기 위해 [`then()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)에 전달된 함수는 already-resolved promise에 있는 경우에도 동기적으로 호출되지 않습니다.
 
 ```js
 Promise.resolve().then(() => console.log(2));
@@ -374,7 +374,7 @@ doSomething()
 ## See also
 
 - {{jsxref("Promise.then()")}}
-- [`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+- [`async`/`await`](/ko/docs/Web/JavaScript/Reference/Statements/async_function)
 - [Promises/A+ specification](http://promisesaplus.com/)
 - [Venkatraman.R - JS Promise (Part 1, Basics)](https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53)
 - [Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)](https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski)

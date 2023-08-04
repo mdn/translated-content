@@ -2,6 +2,7 @@
 title: Node.js
 slug: Glossary/Node.js
 ---
+
 {{QuickLinksWithSubpages("/ko/docs/Glossary")}}
 
 **Node.js**는 개발자가 서버 측과 네트워크 응용 프로그램을 만들 수 있도록 지원하는 크로스 플랫폼 {{Glossary("JavaScript")}} 런타임 환경입니다.

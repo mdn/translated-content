@@ -7,7 +7,7 @@ slug: Web/CSS/offset
 
 A propriedade CSS **`offset`** é uma propriedade abreviada para animar um elemento ao longo de um caminho definido.
 
-> **Note:** As primeiras versões da especificação chamam essa propriedade de `motion`.
+> **Nota:** As primeiras versões da especificação chamam essa propriedade de `motion`.
 
 {{cssinfo}}
 

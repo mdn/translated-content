@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/or
 
 {{JSRef}}
 
-静态方法 **`Atomics.or()`** 用数组中指定位置的值进行一次按位或运算，并返回未计算时数组中指定位置处的值。这个 atomic 操作保证了在修改后的值被写回之前没有其它的写入操作发生。
+静态方法 **`Atomics.or()`** 用数组中指定位置的值进行一次按位或运算，并返回未计算时数组中指定位置处的值。这个 atomic 操作保证了在修改后的值被写回之前没有其他的写入操作发生。
 
 {{EmbedInteractiveExample("pages/js/atomics-or.html")}}
 
@@ -63,7 +63,7 @@ var ta = new Uint8Array(sab);
 ta[0] = 2;
 
 Atomics.or(ta, 0, 1); // returns 2, the old value
-Atomics.load(ta, 0);  // 3
+Atomics.load(ta, 0); // 3
 ```
 
 ## 规范

@@ -1,12 +1,6 @@
 ---
 title: Responsive web design
 slug: Glossary/Responsive_web_design
-tags:
-  - Глоссарий
-  - Дизайн
-  - адаптивный дизайн
-translation_of: Glossary/Responsive_web_design
-original_slug: Глоссарий/Responsive_web_design
 ---
 
 _Адаптивный веб-дизайн_ ( **RWD** ) - это концепция веб-разработки, направленная на то, чтобы сайты выглядели и вели себя оптимально на всех персональных вычислительных устройствах, от настольных компьютеров до мобильных.

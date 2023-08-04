@@ -1,7 +1,6 @@
 ---
 title: Function.name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/name
 ---
 
 {{JSRef}}
@@ -116,14 +115,10 @@ var b = new a();
 console.log(b.constructor.name); // imprime "a"
 ```
 
-## Polyfill
-
-Para versiones de IE < 9, se puede usar `fn._name()` en su lugar. Para IE9 o posteriores se puede usar el siguiente [polyfill](https://github.com/JamesMGreene/Function.name).
-
 ## Especificaciones
 
 {{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.name")}}
+{{Compat}}

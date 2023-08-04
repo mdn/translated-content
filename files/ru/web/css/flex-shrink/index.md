@@ -1,7 +1,6 @@
 ---
 title: flex-shrink
 slug: Web/CSS/flex-shrink
-translation_of: Web/CSS/flex-shrink
 ---
 {{CSSRef}}
 
@@ -76,7 +75,7 @@ flex-shrink: unset;
 
 ### Результат
 
-{{ EmbedLiveSample('Пример', '500px', '300px', '', 'Web/CSS/flex-shrink') }}
+{{ EmbedLiveSample('Пример', '100%', '300') }}
 
 ## Спецификации
 

@@ -26,7 +26,7 @@ Array(arrayLength)
 - `elementN`
   - : JavaScript の配列は、与えられた要素で初期化されますが、 `Array` コンストラクターに単一の引数が渡され、その引数が数値であった場合は例外です (下記の `arrayLength` 引数を参照してください)。なお、この特殊な場合は JavaScript の配列が `Array` コンストラクターで生成されたときのみであり、ブラケット構文で配列リテラルを作成した場合は当てはまりません。
 - `arrayLength`
-  - : `Array` コンストラクターに渡された唯一の引数が 0 から 2<sup>32</sup>-1 の間（両端を含む）の整数であった場合は、新しい JavaScript の配列を返し、その `length` プロパティがその値になります（**注:** これは `arrayLength` 個の空のスロットを持つ配列であり、実際に `undefined` の値が入ったスロットではありません。[不連続の配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)を参照してください）。
+  - : `Array` コンストラクターに渡された唯一の引数が 0 から 2<sup>32</sup>-1 の間（両端を含む）の整数であった場合は、新しい JavaScript の配列を返し、その `length` プロパティがその値になります（**注:** これは `arrayLength` 個の空のスロットを持つ配列であり、実際に `undefined` の値が入ったスロットではありません。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)を参照してください）。
 
 ### 例外
 

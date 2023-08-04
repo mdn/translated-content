@@ -1,6 +1,8 @@
 ---
 title: ファイルとディレクトリー項目 API
 slug: Web/API/File_and_Directory_Entries_API
+l10n:
+  sourceCommit: c6dbc4ff96451887b908b46c8e70bcfec1c2c48c
 ---
 
 {{DefaultAPISidebar("File and Directory Entries API")}}
@@ -12,7 +14,7 @@ slug: Web/API/File_and_Directory_Entries_API
 仕様の現在の草案で定義されているファイルシステムへのアクセスを取得する方法は 2 つあります。
 
 - ドラッグ＆ドロップで {{domxref("HTMLElement/drop_event", "drop")}} イベントを扱う際、 {{domxref("DataTransferItem.webkitGetAsEntry()")}} を呼び出すとドロップされたアイテムの {{domxref("FileSystemEntry")}} を取得することができます。結果が `null` でなかった場合、これはドロップされたファイルまたはディレクトリーであり、ファイルシステム呼び出しを使用して取り扱うことができます。
-- {{domxref("HTMLInputElement.webkitEntries")}} プロパティでは、現在選択されているファイルの {{domxref("FileSystemFileEntry")}} オブジェクトにアクセスすることができますが、これはファイル選択へドラッグ＆ドロップされた場合に限られます（{{bug(1326031)}}）。 {{domxref("HTMLInputElement.webkitdirectory")}} が `true` である場合、 {{HTMLElement("input")}} 要素はディレクトリーピッカーとなり、それぞれの選択されたディレクトリーの {{domxref("FileSystemDirectoryEntry")}} オブジェクトを取得できます。
+- {{domxref("HTMLInputElement.webkitEntries")}} プロパティでは、現在選択されているファイルの {{domxref("FileSystemFileEntry")}} オブジェクトにアクセスすることができますが、これはファイル選択へドラッグ＆ドロップされた場合に限られます（[Firefox バグ 1326031](https://bugzil.la/1326031)）。 {{domxref("HTMLInputElement.webkitdirectory")}} が `true` である場合、 {{HTMLElement("input")}} 要素はディレクトリーピッカーとなり、それぞれの選択されたディレクトリーの {{domxref("FileSystemDirectoryEntry")}} オブジェクトを取得できます。
 
 ## インターフェイス
 

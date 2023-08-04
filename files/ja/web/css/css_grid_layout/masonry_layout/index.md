@@ -1,6 +1,6 @@
 ---
 title: 組積レイアウト
-slug: Web/CSS/CSS_Grid_Layout/Masonry_Layout
+slug: Web/CSS/CSS_grid_layout/Masonry_layout
 ---
 
 {{CSSRef}}

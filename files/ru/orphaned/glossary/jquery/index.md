@@ -1,8 +1,6 @@
 ---
 title: jQuery
 slug: orphaned/Glossary/jQuery
-translation_of: Glossary/jQuery
-original_slug: Glossary/jQuery
 ---
 
 **jQuery** это {{Glossary("JavaScript")}} {{Glossary("Библиотека")}} сфокусированная на управлении {{Glossary("DOM")}} , вызовах {{Glossary("AJAX")}} , и {{Glossary("событиях")}} обработки.
@@ -27,7 +25,6 @@ window.onload = function() {
 
 ### База знаний
 
-- {{Interwiki("wikipedia", "jQuery")}} В Википедии
 - [jQuery website(официальный веб-сайт)](https://jquery.com/)
 
 ### Техническая информация

@@ -1,7 +1,6 @@
 ---
 title: Operador condicional (ternario)
-slug: Web/JavaScript/Reference/Operators/Conditional_Operator
-original_slug: Web/JavaScript/Referencia/Operadores/Conditional_Operator
+slug: Web/JavaScript/Reference/Operators/Conditional_operator
 ---
 
 {{jsSidebar("Operators")}}El **operador condicional** (**ternario**) es el único operador en JavaScript que tiene tres operandos. Este operador se usa con frecuencia como atajo para la instrucción [if](/es/docs/Web/JavaScript/Referencia/Sentencias/if...else).
@@ -89,9 +88,9 @@ location.assign(url); // "stop.html"
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.conditional")}}
+{{Compat}}
 
 ## Véase también
 

@@ -10,9 +10,9 @@ TCP의 역할은 에러가 없이 패킷이 신뢰할 수 있게 전달 되었�
 ## 같이 보기
 
 - [Transmission Control Protocol](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) (Wikipedia)
-- [HTTP Overview](/en-US/docs/Web/HTTP/Overview)
-- [How browsers work](/en-US/docs/Web/Performance/How_browsers_work)
-- [Glossary](/en-US/docs/Glossary)
+- [HTTP Overview](/ko/docs/Web/HTTP/Overview)
+- [How browsers work](/ko/docs/Web/Performance/How_browsers_work)
+- [Glossary](/ko/docs/Glossary)
 
   - {{Glossary("IPv4")}}
   - {{Glossary("IPv6")}}

@@ -1,7 +1,6 @@
 ---
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/bind
 ---
 
 {{JSRef("Global_Objects", "Function")}}
@@ -218,9 +217,9 @@ Por favor checa <https://github.com/Raynos/function-bind> para ver una solución
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.bind")}}
+{{Compat}}
 
 ## Ver también
 

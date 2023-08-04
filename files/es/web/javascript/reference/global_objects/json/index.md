@@ -1,7 +1,6 @@
 ---
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
-original_slug: Web/JavaScript/Referencia/Objetos_globales/JSON
 ---
 
 {{JSRef("Objetos_globales", "JSON")}}
@@ -121,7 +120,7 @@ Los objectos [JSON2](https://github.com/douglascrockford/JSON-js) y [JSON3](http
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.JSON")}}
+{{Compat}}
 
 ## Vea también
 

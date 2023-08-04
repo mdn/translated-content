@@ -3,6 +3,8 @@ title: Simple response header
 slug: Glossary/Simple_response_header
 ---
 
+{{GlossarySidebar}}
+
 一个简单的响应头（或 CORS 安全列表的响应头）是一个 [HTTP 头](/zh-CN/docs/Web/HTTP/Headers)，它是以下之一：
 
 - {{HTTPHeader("Cache-Control")}}

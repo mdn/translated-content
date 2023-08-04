@@ -1,6 +1,8 @@
 ---
 title: HTMLMediaElement.src
 slug: Web/API/HTMLMediaElement/src
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef("HTML DOM")}}
@@ -16,7 +18,7 @@ slug: Web/API/HTMLMediaElement/src
 ## 例
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.src); // ""
 ```
 

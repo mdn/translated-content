@@ -1,7 +1,6 @@
 ---
 title: String.prototype.repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/repeat
 ---
 
 {{JSRef}}
@@ -94,6 +93,6 @@ if (!String.prototype.repeat) {
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.repeat")}}
+{{Compat}}

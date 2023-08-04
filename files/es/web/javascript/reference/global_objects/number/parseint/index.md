@@ -1,7 +1,6 @@
 ---
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/parseInt
 ---
 
 {{JSRef}}
@@ -53,9 +52,9 @@ if (Number.parseInt === undefined) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.parseInt")}}
+{{Compat}}
 
 ## See also
 

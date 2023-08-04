@@ -1,7 +1,6 @@
 ---
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl
 ---
 {{JSRef}}
 
@@ -64,9 +63,9 @@ One property is supported by all language sensitive constructors and functions: 
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Intl")}}
+{{Compat}}
 
 ## See also
 

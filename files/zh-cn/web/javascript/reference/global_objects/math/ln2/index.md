@@ -19,16 +19,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/LN2
 
 ## 示例
 
-### 例子：使用 `Math.LN2`
+### 示例：使用 `Math.LN2`
 
 下面的函数返回 2 的自然对数：
 
 ```js
 function getNatLog2() {
-   return Math.LN2
+  return Math.LN2;
 }
 
-getNatLog2() // 0.6931471805599453
+getNatLog2(); // 0.6931471805599453
 ```
 
 ## 规范

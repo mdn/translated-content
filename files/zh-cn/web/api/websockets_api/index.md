@@ -18,7 +18,7 @@ slug: Web/API/WebSockets_API
 
 ## 工具
 
-- [HumbleNet](https://hacks.mozilla.org/2017/06/introducing-humblenet-a-cross-platform-networking-library-that-works-in-the-browser/): 一个在浏览器中工作的跨平台网络库。它由一个围绕 websocket 和 WebRTC 的 C 包装器组成，抽象了跨浏览器的差异，方便了为游戏和其它应用程序创建多用户网络功能。
+- [HumbleNet](https://hacks.mozilla.org/2017/06/introducing-humblenet-a-cross-platform-networking-library-that-works-in-the-browser/): 一个在浏览器中工作的跨平台网络库。它由一个围绕 websocket 和 WebRTC 的 C 包装器组成，抽象了跨浏览器的差异，方便了为游戏和其他应用程序创建多用户网络功能。
 - [µWebSockets](https://github.com/uWebSockets/uWebSockets):由 [C++11](https://isocpp.org/) 和 [Node.js](https://nodejs.org/) 实现的高度可扩展的 WebSocket 服务器和客户端.。
 - [ClusterWS](https://github.com/ClusterWS/ClusterWS): 轻量级、快速和强大的框架，用于在 [Node.js](https://nodejs.org/) 中构建可伸缩的 WebSocket 应用程序。
 - [Socket.IO](https://socket.io): 一个基于长轮询/WebSocket 的 [Node.js](https://nodejs.org) 第三方传输协议。

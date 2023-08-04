@@ -1,11 +1,6 @@
 ---
 title: Методы HTTP запроса
 slug: Web/HTTP/Methods
-tags:
-  - HTTP
-  - Methods
-  - Reference
-translation_of: Web/HTTP/Methods
 ---
 
 {{HTTPSidebar}}
@@ -14,21 +9,21 @@ HTTP определяет множество **методов запроса**, 
 
 - [`GET`](/ru/docs/Web/HTTP/Methods/GET)
   - : Метод `GET` запрашивает представление ресурса. Запросы с использованием этого метода могут только извлекать данные.
-- [`HEAD`](/en-US/docs/Web/HTTP/Methods/HEAD)
+- [`HEAD`](/ru/docs/Web/HTTP/Methods/HEAD)
   - : `HEAD` запрашивает ресурс так же, как и метод GET, но без тела ответа.
 - [`POST`](/ru/docs/Web/HTTP/Methods/POST)
   - : `POST` используется для отправки сущностей к определённому ресурсу. Часто вызывает изменение состояния или какие-то побочные эффекты на сервере.
 - [`PUT`](/ru/docs/Web/HTTP/Methods/PUT)
   - : `PUT` заменяет все текущие представления ресурса данными запроса.
-- [`DELETE`](/en-US/docs/Web/HTTP/Methods/DELETE)
+- [`DELETE`](/ru/docs/Web/HTTP/Methods/DELETE)
   - : `DELETE` удаляет указанный ресурс.
-- [`CONNECT`](/en-US/docs/Web/HTTP/Methods/CONNECT)
+- [`CONNECT`](/ru/docs/Web/HTTP/Methods/CONNECT)
   - : `CONNECT` устанавливает "туннель" к серверу, определённому по ресурсу.
 - [`OPTIONS`](/ru/docs/Web/HTTP/Methods/OPTIONS)
   - : `OPTIONS` используется для описания параметров соединения с ресурсом.
-- [`TRACE`](/en-US/docs/Web/HTTP/Methods/TRACE)
+- [`TRACE`](/ru/docs/Web/HTTP/Methods/TRACE)
   - : `TRACE` выполняет вызов возвращаемого тестового сообщения с ресурса.
-- [`PATCH`](/en-US/docs/Web/HTTP/Methods/PATCH)
+- [`PATCH`](/ru/docs/Web/HTTP/Methods/PATCH)
   - : `PATCH` используется для частичного изменения ресурса.
 
 ## Спецификации

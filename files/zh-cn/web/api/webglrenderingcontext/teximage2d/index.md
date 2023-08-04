@@ -59,7 +59,7 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
     | LUMINANCE       | UNSIGNED_BYTE          | 1        | 1               |
     | ALPHA           | UNSIGNED_BYTE          | 1        | 1               |
 
-    在 WebGL2 中，对带有 `ArrayBufferView` 或 `GLintptr offset`的 `texImage2D` 版本，其它可能的值
+    在 WebGL2 中，对带有 `ArrayBufferView` 或 `GLintptr offset`的 `texImage2D` 版本，其他可能的值
 
     | **Sized Format** | **Base Format** | **R bits** | **G bits** | **B bits** | **A bits** | **Shared bits** | **Color renderable** | **Texture filterable** |
     | ---------------- | --------------- | ---------- | ---------- | ---------- | ---------- | --------------- | -------------------- | ---------------------- |

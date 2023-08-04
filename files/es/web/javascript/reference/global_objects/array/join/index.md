@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/join
 ---
 
 {{JSRef}}
@@ -64,7 +63,7 @@ f(1, 'a', true);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.join")}}
+{{Compat}}
 
 ## Ver también
 

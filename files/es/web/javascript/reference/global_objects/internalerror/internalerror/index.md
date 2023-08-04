@@ -1,7 +1,6 @@
 ---
 title: Constructor InternalError()
 slug: Web/JavaScript/Reference/Global_Objects/InternalError/InternalError
-original_slug: Web/JavaScript/Referencia/Objetos_globales/InternalError/Constructor_InternalError
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -35,9 +34,9 @@ new InternalError("Fallo del motor");
 
 No forma parte de ningún estándar.
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.InternalError.InternalError")}}
+{{Compat}}
 
 ## Ve también
 

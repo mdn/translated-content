@@ -43,10 +43,10 @@ function* gen() {
 }
 
 var g = gen(); // "Generator { }"
-g.next();      // "Object { value: 1, done: false }"
-g.next();      // "Object { value: 2, done: false }"
-g.next();      // "Object { value: 3, done: false }"
-g.next();      // "Object { value: undefined, done: true }"
+g.next(); // "Object { value: 1, done: false }"
+g.next(); // "Object { value: 2, done: false }"
+g.next(); // "Object { value: 3, done: false }"
+g.next(); // "Object { value: undefined, done: true }"
 ```
 
 ### 向生成器传值
@@ -77,7 +77,7 @@ g.next(2);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)
-- [Iterators and generators](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [迭代器与生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)

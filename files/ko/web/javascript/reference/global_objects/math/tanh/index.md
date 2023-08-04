@@ -51,7 +51,7 @@ Math.tanh = Math.tanh || function(x){
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

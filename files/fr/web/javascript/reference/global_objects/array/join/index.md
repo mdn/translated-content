@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/join
 ---
 
 {{JSRef}}
@@ -20,8 +12,8 @@ La méthode **`join()`** crée et renvoie une nouvelle chaîne de caractères en
 ## Syntaxe
 
 ```js
-arr.join()
-arr.join(séparateur)
+arr.join();
+arr.join(séparateur);
 ```
 
 ### Paramètres
@@ -44,11 +36,11 @@ Les différents éléments du tableau sont convertis en une chaîne de caractèr
 L'exemple suivant crée un tableau, `a`, avec trois éléments, puis joint le tableau à trois reprises : en utilisant le séparateur par défaut, une virgule et un espace, puis un plus, puis avec la chaîne vide.
 
 ```js
-var a = new Array("Vent","Pluie","Feu");
-a.join();      // "Vent,Pluie,Feu"
-a.join(", ");  // "Vent, Pluie, Feu"
+var a = new Array("Vent", "Pluie", "Feu");
+a.join(); // "Vent,Pluie,Feu"
+a.join(", "); // "Vent, Pluie, Feu"
 a.join(" + "); // "Vent + Pluie + Feu"
-a.join("");    // "VentPluieFeu"
+a.join(""); // "VentPluieFeu"
 ```
 
 ### Fusionner un objet semblable à un tableau
@@ -60,7 +52,7 @@ function f(a, b, c) {
   var s = Array.prototype.join.call(arguments);
   console.log(s);
 }
-f(1, 'a', true); // '1,a,true'
+f(1, "a", true); // '1,a,true'
 ```
 
 ## Spécifications

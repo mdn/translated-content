@@ -143,7 +143,7 @@ slug: Web/HTML/Attributes/autocomplete
 ```html
 <div>
   <label for="cc-number">Enter your credit card number</label>
-  <input type="number" name="cc-number" id="cc-number" autocomplete="off">
+  <input type="number" name="cc-number" id="cc-number" autocomplete="off" />
 </div>
 ```
 
@@ -211,7 +211,7 @@ Exampleville CA 95555
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.autocomplete")}}
+{{Compat}}
 
 ## 같이 보기
 

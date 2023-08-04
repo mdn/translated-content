@@ -54,7 +54,7 @@ Las siguientes propiedades son obsoletos. Where available, the appropriate repla
   - : Utilizar {{domxref("Attr.value")}} en su lugar.
 - `ownerDocument`
   - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
-- `ownerElement` {{deprecated_inline("7.0")}} {{deprecated_inline("29.0")}} {{readOnlyInline}}
+- `ownerElement` {{deprecated_inline}} {{readOnlyInline}}
 
   - : Since you get an `Attr` object from an {{domxref("Element")}}, you should already know the associated element.
 
@@ -85,7 +85,7 @@ Los siguientes metodos ahora son obsoletos.
   - : Use {{domxref("Element.getAttribute()")}} instead.
 - `getAttributeNodeNS()`
   - : Use {{domxref("Element.getAttributeNS()")}} instead.
-- `hasAttributes()`{{deprecated_inline("21.0")}}
+- `hasAttributes()` {{deprecated_inline}}
   - : Estra propiedad ahora retorna false.
 - `hasChildNodes()`
   - : Estra propiedad ahora devuelve `false`.
@@ -114,4 +114,4 @@ Los siguientes metodos ahora son obsoletos.
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Attr")}}
+{{Compat}}

@@ -14,7 +14,7 @@ tags:
 translation_of: Web/HTML/Element/input/datetime
 original_slug: Web/HTML/Element/Input/datetime
 ---
-{{HTMLSidebar}}{{obsolete_header}}
+{{HTMLSidebar}}
 
 HTML `<input type="datetime">` был элементом для ввода даты и времени (час, минута, секунда и доля секунды), а также часовой пояс. **Эта функция была [удалена из WHATWG HTML](https://github.com/whatwg/html/issues/336)** и больше не поддерживается в браузерах.
 

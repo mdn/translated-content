@@ -1,16 +1,6 @@
 ---
 title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
-tags:
-  - Array
-  - ECMAScript2015
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 ---
 
 {{JSRef}}
@@ -50,7 +40,7 @@ arr.fill(value[, start = 0[, end = this.length]])
 
 Метод **`fill`** является _изменяющим методом_, он изменит объект `this` и вернёт его, а не просто вернёт копию.
 
-Если аргумент value​​​​​ является объектом, то метод **`fill`** заполнит массив ссылками на этот объект.
+Если аргумент value является объектом, то метод **`fill`** заполнит массив ссылками на этот объект.
 
 ## Примеры
 

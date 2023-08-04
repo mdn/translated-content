@@ -64,7 +64,7 @@ ctx.fillRect(50, 50, 100, 100);
 
 ### Gecko-specific 注解
 
-- 早起的规范草案指定了 "darker"值。然而，Firefox 在第 4 个版本 ({{bug(571532)}}) 移除了对 "darker"的支持。参见[这篇文章](http://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker)建议如何使用不同的值实现和"darker"类似的效果。
+- 早起的规范草案指定了 "darker"值。然而，Firefox 在第 4 个版本 ([Firefox bug 571532](https://bugzil.la/571532)) 移除了对 "darker"的支持。参见[这篇文章](http://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker)建议如何使用不同的值实现和"darker"类似的效果。
 
 ## 参见
 

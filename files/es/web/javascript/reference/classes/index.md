@@ -1,7 +1,6 @@
 ---
 title: Clases
 slug: Web/JavaScript/Reference/Classes
-original_slug: Web/JavaScript/Referencia/Classes
 ---
 
 {{JsSidebar("Classes")}}
@@ -314,9 +313,9 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## Ver también
 

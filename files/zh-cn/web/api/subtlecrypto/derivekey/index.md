@@ -40,8 +40,8 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
     - `verify`：密钥可用于{{domxref("SubtleCrypto.verify()", "验证", "", 1)}}签名。
     - `deriveKey`：密钥可用于{{domxref("SubtleCrypto.deriveKey()", "派生新的密钥", "", 1)}}。
     - `deriveBits`：密钥可用于{{domxref("SubtleCrypto.deriveBits()", "派生比特序列", "", 1)}}。
-    - `wrapKey`：密钥可被{{domxref("SubtleCrypto.wrapKey()", "包装", "", 1)}}。
-    - `unwrapKey`：密钥可被{{domxref("SubtleCrypto.unwrapKey()", "解包装", "", 1)}}。
+    - `wrapKey`：密钥可用于{{domxref("SubtleCrypto.wrapKey()", "包装一个密钥", "", 1)}}。
+    - `unwrapKey`：密钥可用于{{domxref("SubtleCrypto.unwrapKey()", "解开一个密钥的包装", "", 1)}}。
 
 ### 返回值
 
@@ -100,15 +100,15 @@ function deriveSecretKey(privateKey, publicKey) {
   return window.crypto.subtle.deriveKey(
     {
       name: "ECDH",
-      public: publicKey
+      public: publicKey,
     },
     privateKey,
     {
       name: "AES-GCM",
-      length: 256
+      length: 256,
     },
     false,
-    ["encrypt", "decrypt"]
+    ["encrypt", "decrypt"],
   );
 }
 
@@ -118,26 +118,32 @@ async function agreeSharedSecretKey() {
   let alicesKeyPair = await window.crypto.subtle.generateKey(
     {
       name: "ECDH",
-      namedCurve: "P-384"
+      namedCurve: "P-384",
     },
     false,
-    ["deriveKey"]
+    ["deriveKey"],
   );
 
   let bobsKeyPair = await window.crypto.subtle.generateKey(
     {
       name: "ECDH",
-      namedCurve: "P-384"
+      namedCurve: "P-384",
     },
     false,
-    ["deriveKey"]
+    ["deriveKey"],
   );
 
   // 然后 Alice 使用她的私钥和 Bob 的公钥生成密钥（secret key）。
-  let alicesSecretKey = await deriveSecretKey(alicesKeyPair.privateKey, bobsKeyPair.publicKey);
+  let alicesSecretKey = await deriveSecretKey(
+    alicesKeyPair.privateKey,
+    bobsKeyPair.publicKey,
+  );
 
   // Bob 使用他的私钥和 Alice 的公钥来生成相同的密钥。
-  let bobsSecretKey = await deriveSecretKey(bobsKeyPair.privateKey, alicesKeyPair.publicKey);
+  let bobsSecretKey = await deriveSecretKey(
+    bobsKeyPair.privateKey,
+    alicesKeyPair.publicKey,
+  );
 
   // Alice 可以使用她的密钥拷贝来加密发送给 Bob 的消息。
   let encryptButton = document.querySelector(".ecdh .encrypt-button");
@@ -185,16 +191,12 @@ async function encrypt(plaintext, salt, iv) {
       hash: "SHA-256",
     },
     keyMaterial,
-    { "name": "AES-GCM", "length": 256},
+    { name: "AES-GCM", length: 256 },
     true,
     ["encrypt", "decrypt"],
   );
 
-  return window.crypto.subtle.encrypt(
-    { name: "AES-GCM", iv },
-    key,
-    plaintext,
-  );
+  return window.crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, plaintext);
 }
 ```
 

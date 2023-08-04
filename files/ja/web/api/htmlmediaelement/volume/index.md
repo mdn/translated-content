@@ -1,6 +1,8 @@
 ---
 title: HTMLMediaElement.volume
 slug: Web/API/HTMLMediaElement/volume
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef("HTML DOM")}}
@@ -14,7 +16,7 @@ slug: Web/API/HTMLMediaElement/volume
 ## 例
 
 ```js
-var obj = document.createElement('audio');
+const obj = document.createElement('audio');
 console.log(obj.volume); // 1
 obj.volume = 0.75;
 ```

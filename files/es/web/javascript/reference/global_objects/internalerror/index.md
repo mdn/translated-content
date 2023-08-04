@@ -1,7 +1,6 @@
 ---
 title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
-original_slug: Web/JavaScript/Referencia/Objetos_globales/InternalError
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -71,9 +70,9 @@ Para obtener más información, consulta {{JSxRef("Errors/Too_much_recursion", "
 
 No forma parte de ningún estándar.
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.InternalError")}}
+{{Compat}}
 
 ## Ve también
 

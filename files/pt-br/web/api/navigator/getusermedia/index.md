@@ -5,9 +5,9 @@ slug: Web/API/Navigator/getUserMedia
 
 {{APIRef("Media Capture and Streams")}}{{deprecated_header}}
 
-O método Navigator.getUserMedia() atualmente esta _deprecated_ (obseleto), ele é responsavel por pedir a permissão do usuário para usar até 1 dispositivo de entrada de vídeo (como câmera, ou tela compartilhada) e até 1 dispositivo de entrada de áudio (como o microfone) como fonte para o stream de mídia (pode ser representado por uma instância `MediaStream`).
+O método Navigator.getUserMedia() atualmente esta _deprecated_ (obsoleto), ele é responsável por pedir a permissão do usuário para usar até 1 dispositivo de entrada de vídeo (como câmera, ou tela compartilhada) e até 1 dispositivo de entrada de áudio (como o microfone) como fonte para o stream de mídia (pode ser representado por uma instância `MediaStream`).
 
-Se o usuário der permissão, a MediaStream (o _track_ do video e/ou audio) , é entregue ao _callback_ de sucesso, se a permissão é negada, pode ser que não haja dispositivo compatível ou alguma condição de erro aconteceu, retornando o _callback_ de erro com uma instancia do objeto {{domxref("MediaStreamError")}} , com a descrição do erro que aconteceu, se o usuário não fizer nenhuma escolha, nenhum _callback_ é retornado.
+Se o usuário der permissão, a MediaStream (o _track_ do video e/ou audio) , é entregue ao _callback_ de sucesso, se a permissão é negada, pode ser que não haja dispositivo compatível ou alguma condição de erro aconteceu, retornando o _callback_ de erro com uma instância do objeto {{domxref("MediaStreamError")}} , com a descrição do erro que aconteceu, se o usuário não fizer nenhuma escolha, nenhum _callback_ é retornado.
 
 ## Sintaxe
 

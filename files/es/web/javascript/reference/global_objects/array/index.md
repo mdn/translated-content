@@ -1,7 +1,6 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array
 ---
 
 {{JSRef}}
@@ -411,7 +410,7 @@ da como resultado:
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array")}}
+{{Compat}}
 
 ## Ver también
 

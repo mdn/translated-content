@@ -20,7 +20,7 @@ Una cadena, conteniendo el nombre del archivo sin la ruta de directorios, por ej
 ## Ejemplo
 
 ```html
-<input type="file" multiple onchange="processSelectedFiles(this)">
+<input type="file" multiple onchange="processSelectedFiles(this)" />
 ```
 
 ```js
@@ -43,7 +43,7 @@ Prueba el resultado:
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.File.name")}}
+{{Compat}}
 
 ## Vea también
 

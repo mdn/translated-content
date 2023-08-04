@@ -2299,7 +2299,7 @@ Gecko は、対応表を明示的に作成するために、`KeyboardEvent` に�
       <td>0x0E (14)</td>
       <td>
         予約済みですが、使用されていません。 {{deprecated_inline}} （削除。
-        {{bug(969247)}} を参照）
+        [Firefox バグ 969247](https://bugzil.la/969247) を参照）
       </td>
     </tr>
     <tr>

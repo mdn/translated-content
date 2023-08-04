@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakSet
 它和 {{jsxref("Set")}} 对象的主要区别有：
 
 - `WeakSet` **只能是对象**的集合，而不能像 {{jsxref("Set")}} 那样，可以是任何类型的任意值。
-- `WeakSet` 持*弱引用*：集合中对象的引用为*弱*引用。如果没有其它的对 `WeakSet` 中对象的引用，那么这些对象会被当成垃圾回收掉。
+- `WeakSet` 持*弱引用*：集合中对象的引用为*弱*引用。如果没有其他的对 `WeakSet` 中对象的引用，那么这些对象会被当成垃圾回收掉。
 
 > **备注：** 这也意味着 `WeakSet` 中没有存储当前对象的列表。正因为这样，`WeakSet` 是不可枚举的。
 
@@ -82,12 +82,12 @@ const bar = {};
 ws.add(foo);
 ws.add(bar);
 
-ws.has(foo);    // true
-ws.has(bar);    // true
+ws.has(foo); // true
+ws.has(bar); // true
 
 ws.delete(foo); // 从 set 中删除 foo 对象
-ws.has(foo);    // false，foo 对象已经被删除了
-ws.has(bar);    // true，bar 依然存在
+ws.has(foo); // false，foo 对象已经被删除了
+ws.has(bar); // true，bar 依然存在
 ```
 
 注意，`foo !== bar`。尽管它们是相似的对象，但是它们不是**_同一个对象_**。因此，它们都可以被加入到 set 中。

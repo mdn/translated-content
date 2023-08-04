@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Strict_mode
 2. JavaScript 엔진의 최적화 작업을 어렵게 만드는 실수들을 바로잡습니다. 가끔씩 엄격 모드의 코드는 비-엄격 모드의 동일한 코드보다 더 빨리 작동하도록 만들어집니다.
 3. 엄격 모드는 ECMAScript의 차기 버전들에서 정의 될 문법을 금지합니다.
 
-코드를 JavaScript의 변형이 제한된 환경에서 동작하도록 하고 싶다면, 엄격 모드로의 변환([transitioning to strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode))을 참고하세요.
+코드를 JavaScript의 변형이 제한된 환경에서 동작하도록 하고 싶다면, 엄격 모드로의 변환([transitioning to strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode))을 참고하세요.
 
 ## 엄격모드 적용하기
 
@@ -51,7 +51,7 @@ function notStrict() { return "I'm not strict."; }
 
 ### 모듈에 strict mode 적용
 
-ECMAScript 2015 는 [JavaScript 모듈](/en-US/docs/Web/JavaScript/Reference/Statements/export)을 소개했습니다. 따라서, 이는 엄격 모드를 적용할 수 있는 3번 째 방법입니다. JavaScript 모듈의 전체 컨텐츠는 엄격 모드 시작을 위한 구문 없이도 자동으로 엄격모드입니다.
+ECMAScript 2015 는 [JavaScript 모듈](/ko/docs/Web/JavaScript/Reference/Statements/export)을 소개했습니다. 따라서, 이는 엄격 모드를 적용할 수 있는 3번 째 방법입니다. JavaScript 모듈의 전체 컨텐츠는 엄격 모드 시작을 위한 구문 없이도 자동으로 엄격모드입니다.
 
 ```js
     function strict() {
@@ -110,7 +110,7 @@ delete Object.prototype; // TypeError 발생
 
 넷째로, Gecko 34 이전의 엄격모드는 객체 리터럴의 모든 프로퍼티의 이름이 유니크해도록 요구합니다. 일반 코드는 프로퍼티의 값이 나중에 정해진 프로퍼티 이름으로 중복할 것입니다. 하지만 마지막 인스턴스 만 변경했기 때문에 코드를 수정하여 마지막 인스턴스를 변경하는 것 이외의 속성 값을 변경하면 복제는 버그의 벡터가됩니다. 엄격모드에서는 프로퍼티 이름을 중복하는 것은 구문 에러입니다.
 
-> **Note:** ECMAScript 2015부터는 에러가 아닙니다. ({{bug(1041128)}}).
+> **Note:** ECMAScript 2015부터는 에러가 아닙니다. ([Firefox bug 1041128](https://bugzil.la/1041128)).
 
 ```js
 "use strict";
@@ -370,4 +370,4 @@ function baz(){ // kosher
 - [John Resig - ECMAScript 5 Strict Mode, JSON, and More](http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)
 - [ECMA-262-5 in detail. Chapter 2. Strict Mode.](http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/)
 - [Strict mode compatibility table](http://kangax.github.io/compat-table/es5/#Strict_mode)
-- [Transitioning to strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)
+- [Transitioning to strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)

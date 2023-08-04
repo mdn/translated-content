@@ -64,7 +64,7 @@ Three.js，与任何其他库一样，它给了您一个巨大的便利：不必
 
 Whitestorm.js 是一个基于 [Three.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) 技术上的框架。它的主要区别是内置的物理引擎和插件系统 基于 NPM。请参阅 [Building up a basic demo with Whitestorm.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Whitestorm.js) 了解更多信息、教程和例子制作基本的，甚至配合 Three.js 制作更复杂的应用程序或游戏。
 
-### 其它工具
+### 其他工具
 
 [Unity](http://unity3d.com/) 和 [Unreal](https://www.unrealengine.com/) 可以将你的游戏通过 [asm.js](/zh-CN/docs/Games/Tools/asm.js) 输出到 WebGL，因此你可以自由地使用这些工具与技术来构建可被输出到 Web 上的游戏。
 

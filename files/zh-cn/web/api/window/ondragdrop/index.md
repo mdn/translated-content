@@ -19,7 +19,7 @@ window.addEventListener("dragdrop", funcRef, useCapturing);
 - funcRef
   - : 要注册的事件处理函数。
 
-[Gecko](/zh-CN/docs/Web/API/Window/en/Gecko)({{ Bug(112288) }}) 中未实现`window.ondragdrop`属性和`ondragdrop`属性，您必须使用`addEventListener`。有关详细信息，请参见[addEventListener](/zh-CN/docs/Web/API/Window/en/DOM/element.addEventListener)。
+[Gecko](/zh-CN/docs/Web/API/Window/en/Gecko)([Firefox bug 112288](https://bugzil.la/112288)) 中未实现`window.ondragdrop`属性和`ondragdrop`属性，您必须使用`addEventListener`。有关详细信息，请参见[addEventListener](/zh-CN/docs/Web/API/Window/en/DOM/element.addEventListener)。
 
 **示例**
 

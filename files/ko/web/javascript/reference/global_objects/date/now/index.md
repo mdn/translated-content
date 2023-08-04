@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/now
 ---
 {{JSRef}}
 
-**`Date.now()`** 메소드는 UTC 기준으로 1970년 1월 1일 0시 0분 0초부터 현재까지 경과된 밀리 초를 반환합니다.
+**`Date.now()`** 메소드는 UTC 기준으로 1970년 1월 1일 0시 0분 0초부터 현재까지 경과된 밀리초를 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/date-now.html")}}
 
@@ -16,13 +16,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/now
 
 ### 반환 값
 
-1970년 1월 1일 0시 0분 0초부터 현재까지 경과된 밀리 초를 나타내는 **숫자**입니다.
+1970년 1월 1일 0시 0분 0초부터 현재까지 경과된 밀리초를 나타내는 **숫자**입니다.
 
 ## 설명
 
-now() 메소드는 1970년 1월 1일 0시 0분 0초부터 현재까지 경과된 밀리 초를 {{jsxref("Number")}} 형으로 반환합니다.
+now() 메소드는 1970년 1월 1일 0시 0분 0초부터 현재까지 경과된 밀리초를 {{jsxref("Number")}} 형으로 반환합니다.
 
-now()는 {{jsxref("Date")}}의 정적 메소드이기 때문에, 항상 `Date.now()` 처럼 사용하셔야 합니다.
+now()는 {{jsxref("Date")}}의 정적 메소드이기 때문에, 항상 `Date.now()`처럼 사용하셔야 합니다.
 
 ## Polyfill
 
@@ -40,8 +40,8 @@ if (!Date.now) {
 
 ### 감소된 시간 정밀도
 
-타이밍 공격 및 핑거 프린팅에 대한 보호를 제공하기 위해 `Date.now ()`의 정밀도는 브라우저 설정에 따라 반올림 될 수 있습니다.
-Firefox에서는 `privacy.reduceTimerPrecision` 기본 설정이 기본적으로 활성화되어 있으며 Firefox 59에서는 기본값이 20µs입니다. 60 분에는 2ms가됩니다.
+타이밍 공격 및 핑거 프린팅에 대한 보호를 제공하기 위해 `Date.now ()`의 정밀도는 브라우저 설정에 따라 반올림될 수 있습니다.
+Firefox에서는 `privacy.reduceTimerPrecision` 기본 설정이 기본적으로 활성화되어 있으며 Firefox 59에서는 기본값이 20µs입니다. Firefox 60에서는 2ms가 됩니다.
 
 ```js
 // Firefox 60에서 시간 정밀도 (2ms) 감소
@@ -60,7 +60,7 @@ Date.now();
 // ...
 ```
 
-Firefox에서는 `privacy.resistFingerprinting`을 활성화 할 수도 있습니다. 정밀도는 100ms 또는 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 중 더 큰 값이됩니다.
+Firefox에서는 `privacy.resistFingerprinting`을 활성화할 수도 있습니다. 정밀도는 100ms 또는 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 중 더 큰 값이 됩니다.
 
 ## 명세
 

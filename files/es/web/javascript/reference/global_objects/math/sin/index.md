@@ -1,7 +1,6 @@
 ---
 title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/seno
 ---
 
 {{JSRef("Global_Objects", "Math")}}
@@ -43,7 +42,7 @@ Math.sin(Math.PI / 2); // 1
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.sin")}}
+{{Compat}}
 
 ## Ver también
 

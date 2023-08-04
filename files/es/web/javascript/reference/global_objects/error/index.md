@@ -1,7 +1,6 @@
 ---
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Error
 ---
 
 {{JSRef}}
@@ -180,9 +179,9 @@ try {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Error")}}
+{{Compat}}
 
 ## Ve también
 

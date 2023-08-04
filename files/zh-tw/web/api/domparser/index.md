@@ -26,7 +26,7 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 
 ### 錯誤處理
 
-請注意如果解譯過程出錯,目前的`DOMParser不會丟出異常物件(exception)，但是會回傳一個錯誤文件`(請看程式臭蟲{{Bug(45566)}}):
+請注意如果解譯過程出錯,目前的 `DOMParser` 不會丟出異常物件（exception），但是會回傳一個錯誤文件（請看 [Firefox bug 45566](https://bugzil.la/45566)）：
 
 ```xml
 <parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml">
@@ -70,40 +70,34 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 /*! @source https://gist.github.com/1129031 */
 /*global document, DOMParser*/
 
-(function(DOMParser) {
+(function (DOMParser) {
   "use strict";
 
-  var
-    proto = DOMParser.prototype
-  , nativeParse = proto.parseFromString
-  ;
-
+  var proto = DOMParser.prototype,
+    nativeParse = proto.parseFromString;
   // Firefox/Opera/IE throw errors on unsupported types
   try {
     // WebKit returns null on unsupported types
-    if ((new DOMParser()).parseFromString("", "text/html")) {
+    if (new DOMParser().parseFromString("", "text/html")) {
       // text/html parsing is natively supported
       return;
     }
   } catch (ex) {}
 
-  proto.parseFromString = function(markup, type) {
+  proto.parseFromString = function (markup, type) {
     if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
-      var
-        doc = document.implementation.createHTMLDocument("")
-      ;
-            if (markup.toLowerCase().indexOf('<!doctype') > -1) {
-              doc.documentElement.innerHTML = markup;
-            }
-            else {
-              doc.body.innerHTML = markup;
-            }
+      var doc = document.implementation.createHTMLDocument("");
+      if (markup.toLowerCase().indexOf("<!doctype") > -1) {
+        doc.documentElement.innerHTML = markup;
+      } else {
+        doc.body.innerHTML = markup;
+      }
       return doc;
     } else {
       return nativeParse.apply(this, arguments);
     }
   };
-}(DOMParser));
+})(DOMParser);
 ```
 
 ### DOMParser from Chrome/JSM/XPCOM/Privileged Scope

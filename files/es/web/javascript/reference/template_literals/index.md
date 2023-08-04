@@ -1,7 +1,6 @@
 ---
 title: Plantillas literales (plantillas de cadenas)
 slug: Web/JavaScript/Reference/Template_literals
-original_slug: Web/JavaScript/Referencia/template_strings
 ---
 
 {{JsSidebar("More")}}
@@ -258,9 +257,9 @@ let bad = `bad escape sequence: \unicode`;
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.grammar.template_literals")}}
+{{Compat}}
 
 ## Ver también
 

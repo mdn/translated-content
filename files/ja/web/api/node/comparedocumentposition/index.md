@@ -1,6 +1,8 @@
 ---
-title: Node.compareDocumentPosition()
+title: "Node: compareDocumentPosition() メソッド"
 slug: Web/API/Node/compareDocumentPosition
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -9,8 +11,8 @@ slug: Web/API/Node/compareDocumentPosition
 
 ## 構文
 
-```js
-compareDocumentPosition(otherNode);
+```js-nolint
+compareDocumentPosition(otherNode)
 ```
 
 ### 引数
@@ -44,9 +46,9 @@ const head = document.head;
 const body = document.body;
 
 if (head.compareDocumentPosition(body) & Node.DOCUMENT_POSITION_FOLLOWING) {
-  console.log('正しい形式の文書です');
+  console.log("正しい形式の文書です");
 } else {
-  console.error('<head> が <body> の前にありません');
+  console.error("<head> が <body> の前にありません");
 }
 ```
 

@@ -1,8 +1,8 @@
 ---
-title: HTMLInputElement.files
+title: "HTMLInputElement: files プロパティ"
 slug: Web/API/HTMLInputElement/files
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: bbedc393bbeb2fc0ca6c5681f6a0d30898886418
 ---
 
 {{APIRef("File and Directory Entries API")}}
@@ -11,11 +11,11 @@ l10n:
 
 ## 値
 
-{{domxref("FileList")}} のインスタンスが返ります。**`HTMLInputElement`** が `type="file"` でない場合は、`null` が返ります。
+選択されているファイルがあれば、それをリストする {{domxref("FileList")}} オブジェクトです。**`HTMLInputElement`** が `type="file"` でない場合は、`null` が返ります。
 
 ## 例
 
-以下の例は、**`HTMLInputElement.files`** プロパティにアクセスしてユーザーが選択したファイルの名前を出力する方法を示します。
+以下の例は、**`HTMLInputElement.files`** プロパティにアクセスして、ユーザーが選択したそれぞれのファイルの名前、更新日時、サイズ、種類を出力する方法を示します。
 
 ### HTML
 
@@ -31,10 +31,16 @@ l10n:
 ```js
 const fileInput = document.getElementById("files");
 
-console.log(fileInput.files instanceof FileList); // true
+console.log(fileInput.files instanceof FileList); // 空でも true となる
 
 for (const file of fileInput.files) {
-  console.log(file.name); // ファイル名を出力します
+  console.log(file.name); // ファイル名を表示
+  let fileDate = new Date(file.lastModified);
+  console.log(fileDate.toLocaleDateString()); // 日付を表示
+  console.log(
+    file.size < 1000 ? file.size : Math.round(file.size / 1000) + "KB"
+  );
+  console.log(file.type); // MIME タイプを表示
 }
 ```
 
@@ -45,3 +51,7 @@ for (const file of fileInput.files) {
 ## ブラウザーの互換性
 
 {{ Compat }}
+
+## 関連情報
+
+- {{domxref("DataTransfer.files")}}

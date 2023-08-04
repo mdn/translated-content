@@ -1,7 +1,6 @@
 ---
 title: String.length
 slug: Web/JavaScript/Reference/Global_Objects/String/length
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/length
 ---
 
 {{JSRef}}
@@ -56,7 +55,7 @@ console.log(myString);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.length")}}
+{{Compat}}
 
 ## Ver también
 

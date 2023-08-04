@@ -1,7 +1,6 @@
 ---
 title: Градиенты
 slug: Web/SVG/Tutorial/Gradients
-translation_of: Web/SVG/Tutorial/Gradients
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
 
@@ -58,7 +57,7 @@ translation_of: Web/SVG/Tutorial/Gradients
  <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
 ```
 
-> **Примечание:** **Замечание:** Вы также можете использовать атрибут `xlink:href` для градиентов. Когда он использован, атрибуты и стопы из одного градиента могут быть включены в другой. В примере выше можно было бы не пересоздавать все точки остановки в Gradient2**.**
+> **Примечание:** Вы также можете использовать атрибут `xlink:href` для градиентов. Когда он использован, атрибуты и стопы из одного градиента могут быть включены в другой. В примере выше можно было бы не пересоздавать все точки остановки в Gradient2.
 >
 > ```
 >  <linearGradient id="Gradient1">

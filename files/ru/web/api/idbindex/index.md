@@ -1,17 +1,6 @@
 ---
 title: IDBIndex
 slug: Web/API/IDBIndex
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Storage
-  - TopicStub
-translation_of: Web/API/IDBIndex
 ---
 
 {{APIRef("IndexedDB")}}
@@ -70,39 +59,53 @@ Finally, we iterate through each record, and insert the data into an HTML table.
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = '';
-  var transaction = db.transaction(['contactsList'], 'readonly');
-  var objectStore = transaction.objectStore('contactsList');
+  tableEntry.innerHTML = "";
+  var transaction = db.transaction(["contactsList"], "readonly");
+  var objectStore = transaction.objectStore("contactsList");
 
-  var myIndex = objectStore.index('lName');
-  myIndex.openCursor().onsuccess = function(event) {
+  var myIndex = objectStore.index("lName");
+  myIndex.openCursor().onsuccess = function (event) {
     var cursor = event.target.result;
-    if(cursor) {
-      var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
-                           + '<td>' + cursor.value.lName + '</td>'
-                           + '<td>' + cursor.value.fName + '</td>'
-                           + '<td>' + cursor.value.jTitle + '</td>'
-                           + '<td>' + cursor.value.company + '</td>'
-                           + '<td>' + cursor.value.eMail + '</td>'
-                           + '<td>' + cursor.value.phone + '</td>'
-                           + '<td>' + cursor.value.age + '</td>';
+    if (cursor) {
+      var tableRow = document.createElement("tr");
+      tableRow.innerHTML =
+        "<td>" +
+        cursor.value.id +
+        "</td>" +
+        "<td>" +
+        cursor.value.lName +
+        "</td>" +
+        "<td>" +
+        cursor.value.fName +
+        "</td>" +
+        "<td>" +
+        cursor.value.jTitle +
+        "</td>" +
+        "<td>" +
+        cursor.value.company +
+        "</td>" +
+        "<td>" +
+        cursor.value.eMail +
+        "</td>" +
+        "<td>" +
+        cursor.value.phone +
+        "</td>" +
+        "<td>" +
+        cursor.value.age +
+        "</td>";
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
-};
+}
 ```
 
 ## Specification
 
-| Specification                                                                    | Status                           | Comment |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('IndexedDB', '#idl-def-IDBIndex', 'IDBIndex')}}     | {{Spec2('IndexedDB')}}     |         |
-| {{SpecName("IndexedDB 2", "#index-interface", "IDBIndex")}} | {{Spec2("IndexedDB 2")}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -116,4 +119,4 @@ function displayDataByIndex() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

@@ -1,7 +1,6 @@
 ---
 title: Math.cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/cos
 ---
 
 {{JSRef}}
@@ -49,9 +48,9 @@ Math.cos(2 * Math.PI); // 1
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.cos")}}
+{{Compat}}
 
 ## Ver también
 

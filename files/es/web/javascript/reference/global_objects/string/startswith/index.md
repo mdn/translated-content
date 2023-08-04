@@ -1,7 +1,6 @@
 ---
 title: String.prototype.startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/startsWith
 ---
 
 {{JSRef}}
@@ -65,9 +64,9 @@ console.log(str.startsWith('Esa es la', 16)); // true
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.startsWith")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,7 +1,6 @@
 ---
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/is
 ---
 
 {{JSRef}}
@@ -88,9 +87,9 @@ if (!Object.is) {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.is")}}
+{{Compat}}
 
 ## Ver también
 

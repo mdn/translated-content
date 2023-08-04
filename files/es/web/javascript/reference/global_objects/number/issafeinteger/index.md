@@ -1,7 +1,6 @@
 ---
 title: Number.isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/isSafeInteger
 ---
 
 {{JSRef}}
@@ -61,7 +60,7 @@ Number.isSafeInteger = Number.isSafeInteger || function (value) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.isSafeInteger")}}
+{{Compat}}
 
 ## Ver también
 

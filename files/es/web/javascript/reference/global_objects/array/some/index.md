@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/some
 ---
 
 {{JSRef}}
@@ -160,9 +159,9 @@ if (!Array.prototype.some) {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.some")}}
+{{Compat}}
 
 ## Ver también
 

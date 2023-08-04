@@ -1,13 +1,6 @@
 ---
 title: Storage.setItem()
 slug: Web/API/Storage/setItem
-tags:
-  - API
-  - Storage
-  - Web Storage
-  - localStorage
-  - Справка
-translation_of: Web/API/Storage/setItem
 ---
 
 {{APIRef("Web Storage API")}}
@@ -37,19 +30,17 @@ _Метод не возвращает значений._
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'myCat.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "myCat.png");
 }
 ```
 
 > **Примечание:** Чтобы вживую посмотреть на работу функции, посетите страницу демонстрации [Web Storage](https://github.com/mdn/web-storage-demo).
 
-## Характеристики
+## Спецификации
 
-| Характеристика                                                                       | Статус                           | Комментарий |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('Web Storage', '#dom-storage-setitem', 'setItem()')}} | {{Spec2('Web Storage')}} |             |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

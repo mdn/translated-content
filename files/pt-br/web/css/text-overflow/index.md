@@ -13,7 +13,7 @@ A propriedade `text-overflow` do [CSS](/pt-BR/CSS) determina como o conteúdo qu
 
 O corte acontece na borda da caixa; para cortar no limite de caracteres de uma string personalizada, pode-se usar (`''`).
 
-Essa propriedade afeta apenas o conteúdo que está ultrapassando o bloco ou a div no sentido da linha horizontal (não corta o texto na parte de baixo de um bloco ou div, por exemplo). O texto pode ultrapassar ou transbordar quando utilizado ‘`white-space:nowrap`’ ou quando uma palavra for muito grande.
+Essa propriedade afeta apenas o conteúdo que está ultrapassando o bloco ou a div no sentido da linha horizontal (não corta o texto na parte de baixo de um bloco ou div, por exemplo). O texto pode ultrapassar ou transbordar quando utilizado '`white-space:nowrap`' ou quando uma palavra for muito grande.
 
 Essa propriedade do CSS não força um estouro para que ele ocorra. Para que isso aconteça, é necessário que o autor utilize algumas propriedades adicionais no elemento, como setar a propriedade overflow para hidden.
 

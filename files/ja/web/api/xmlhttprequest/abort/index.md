@@ -1,16 +1,18 @@
 ---
 title: XMLHttpRequest.abort()
 slug: Web/API/XMLHttpRequest/abort
+l10n:
+  sourceCommit: 8e294a76bdebc9583d418ee14b42422eb4a8f4a5
 ---
 
 {{APIRef('XMLHttpRequest')}}
 
-**`XMLHttpRequest.abort()`** メソッドは、すでに送信されたリクエストを中止します。リクエストが中止されたら、 {{domxref("XMLHttpRequest.readyState", "readyState")}} が {{domxref("XMLHttpRequest.UNSENT")}} (0) に変化し、リクエストの {{domxref("XMLHttpRequest.status", "status")}} コードが 0 に設定されます。
+**`XMLHttpRequest.abort()`** メソッドは、すでに送信されたリクエストを中止します。リクエストが中止されたら、 {{domxref("XMLHttpRequest.readyState", "readyState")}} が `XMLHttpRequest.UNSENT` (0) に変化し、リクエストの {{domxref("XMLHttpRequest.status", "status")}} コードが 0 に設定されます。
 
 ## 構文
 
-```js
-XMLHttpRequest.abort()
+```js-nolint
+abort()
 ```
 
 ### 引数
@@ -19,16 +21,16 @@ XMLHttpRequest.abort()
 
 ### 返値
 
-`undefined`
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
 この例では、 MDN のホームページからコンテンツを読み込み始め、ある条件が発生したときに、 `abort()` を呼び出すことで転送を中止します。
 
 ```js
-var xhr = new XMLHttpRequest(),
-    method = "GET",
-    url = "https://developer.mozilla.org/";
+const xhr = new XMLHttpRequest();
+const method = "GET";
+const url = "https://developer.mozilla.org/";
 xhr.open(method, url, true);
 
 xhr.send();
@@ -40,7 +42,7 @@ if (OH_NOES_WE_NEED_TO_CANCEL_RIGHT_NOW_OR_ELSE) {
 
 ## 仕様書
 
-{{Compat}}
+{{Specifications}}
 
 ## ブラウザーの互換性
 

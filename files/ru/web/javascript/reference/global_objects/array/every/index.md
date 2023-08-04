@@ -1,16 +1,6 @@
 ---
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
-tags:
-  - Array
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.6
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
 {{JSRef("Global_Objects", "Array")}}
 
@@ -18,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 
 Метод **`every()`** проверяет, удовлетворяют ли все элементы массива условию, заданному в передаваемой функции.
 
-> **Примечание:** **Обратите внимание**: метод возвращает `true` при любом условии для пустого массива.
+> **Примечание:** метод возвращает `true` при любом условии для пустого массива.
 
 ## Синтаксис
 

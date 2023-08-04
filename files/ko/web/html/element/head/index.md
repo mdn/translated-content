@@ -1,5 +1,5 @@
 ---
-title: '<head>: 문서 메타데이터 (헤더) 요소'
+title: "<head>: 문서 메타데이터 (헤더) 요소"
 slug: Web/HTML/Element/head
 ---
 
@@ -88,7 +88,7 @@ HTML5 호환 브라우저는 `<head>`가 없는 경우 자동으로 생성합니
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.head")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -68,7 +68,7 @@ _该接口没有继承的方法。_
 - {{ domxref("Range.intersectsNode()")}}
   - : 返回一个 `boolean`，表示给定的节点是否与 `Range` 相交。
 - {{ domxref("Range.selectNode()")}}
-  - : 设置 `Range` 包含某个{{ domxref("Node","节点") }}及其它的内容。
+  - : 设置 `Range` 包含某个{{ domxref("Node","节点") }}及其他的内容。
 - {{ domxref("Range.selectNodeContents()")}}
   - : 设置 `Range` 包含某个{{ domxref("Node","节点") }}的内容。
 - {{ domxref("Range.setEnd()")}}

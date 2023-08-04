@@ -1,11 +1,11 @@
 ---
-title: 自定义属性 (--*)：CSS 变量
+title: 自定义属性（--*）：CSS 变量
 slug: Web/CSS/--*
 ---
 
 {{CSSRef}}
 
-带有前缀`--`的属性名，比如`--example--name`，表示的是带有值的自定义属性，其可以通过 {{cssxref("var")}} 函数在全文档范围内复用的。
+带有前缀 `--` 的属性名，比如 `--example--name`，表示的是带有值的自定义属性，其可以通过 {{cssxref("var", "var()")}} 函数在全文档范围内复用的。
 
 CSS 自定义属性是可以级联的：每一个自定义属性可以多次出现，并且变量的值将会借助级联算法和自定义属性值运算出来。
 
@@ -22,19 +22,17 @@ CSS 自定义属性是可以级联的：每一个自定义属性可以多次出�
 - `<declaration-value>`
   - : 这个值将会由一个或者多个语法执行出来，只要这些语法是正确合理的，不包含非法语句。这个值就理应是有效语法执行出来的值。
 
-### 正式语法
-
-{{csssyntax}}
+> **备注：** 自定义属性名区分大小写——`--my-color` 会被视为与 `--My-color` 不同的自定义属性。
 
 ## 示例
 
 ### HTML
 
 ```html
-<p id="firstParagraph">This paragraph should have a blue background and yellow text.</p>
-<p id="secondParagraph">This paragraph should have a yellow background and blue text.</p>
+<p id="firstParagraph">此段落应有蓝色背景和黄色文本。</p>
+<p id="secondParagraph">此段落应有黄色背景和蓝色文本。</p>
 <div id="container">
-  <p id="thirdParagraph">This paragraph should have a green background and yellow text.</p>
+  <p id="thirdParagraph">此段落应有绿色背景和黄色文本。</p>
 </div>
 ```
 
@@ -78,6 +76,7 @@ CSS 自定义属性是可以级联的：每一个自定义属性可以多次出�
 
 {{Compat}}
 
-## 参阅
+## 参见
 
-- [Using CSS variables](/zh-CN/docs/Web/CSS/Using_CSS_variables)
+- [使用 CSS 变量](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)
+- {{CSSXref("var", "var()")}} 函数

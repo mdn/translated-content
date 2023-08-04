@@ -1,6 +1,8 @@
 ---
-title: CanvasRenderingContext2D.fillText()
+title: "CanvasRenderingContext2D: fillText() メソッド"
 slug: Web/API/CanvasRenderingContext2D/fillText
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef("HTML DOM")}}
@@ -15,14 +17,15 @@ slug: Web/API/CanvasRenderingContext2D/fillText
 
 ## 構文
 
-```js
-CanvasRenderingContext2D.fillText(text, x, y [, maxWidth]);
+```js-nolint
+fillText(text, x, y)
+fillText(text, x, y, maxWidth)
 ```
 
 ### 引数
 
 - `text`
-  - : {{domxref("DOMString")}} で、このコンテキストに描画するテキスト文字列を指定します。テキストは、 {{domxref("CanvasRenderingContext2D.font","font")}}、{{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}、{{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}、{{domxref("CanvasRenderingContext2D.direction","direction")}} の設定を使用して描画されます。
+  - : 文字列で、このコンテキストに描画するテキスト文字列を指定します。テキストは、 {{domxref("CanvasRenderingContext2D.font","font")}}、{{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}、{{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}、{{domxref("CanvasRenderingContext2D.direction","direction")}} の設定を使用して描画されます。
 - `x`
   - : テキストの描画を始める、x 軸の座標をピクセル単位で指定します。
 - `y`
@@ -32,7 +35,7 @@ CanvasRenderingContext2D.fillText(text, x, y [, maxWidth]);
 
 ### 返値
 
-{{jsxref("undefined")}}
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -53,11 +56,11 @@ CanvasRenderingContext2D.fillText(text, x, y [, maxWidth]);
 この例の JavaScript コードは次のようになります。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = '50px serif';
-ctx.fillText('Hello world', 50, 90);
+ctx.font = "50px serif";
+ctx.fillText("Hello world", 50, 90);
 ```
 
 このコードでは、 {{HTMLElement("canvas")}} への参照を取得し、その 2D グラフィックコンテキストへの参照を取得します。
@@ -81,11 +84,11 @@ ctx.fillText('Hello world', 50, 90);
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = '50px serif';
-ctx.fillText('Hello world', 50, 90, 140);
+ctx.font = "50px serif";
+ctx.fillText("Hello world", 50, 90, 140);
 ```
 
 #### 結果

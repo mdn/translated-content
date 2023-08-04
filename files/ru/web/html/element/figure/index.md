@@ -1,17 +1,6 @@
 ---
 title: "<figure>: Элемент иллюстрации с необязательной подписью"
 slug: Web/HTML/Element/figure
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - figure
-  - Диаграммы
-  - Иллюстрации
-  - Представление
-  - Элемент
-translation_of: Web/HTML/Element/figure
 ---
 
 {{HTMLSidebar}}
@@ -22,10 +11,10 @@ translation_of: Web/HTML/Element/figure
 
 | [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [секционный корень](/ru/docs/Web/Guide/HTML/Content_categories#Прочие_модели_контента), явный контент                                                         |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Разрешённое содержимое                                           | Элемент {{HTMLElement("figcaption")}} за которым следует [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток); или поточный контент за которым следует элемент {{HTMLElement("figcaption")}}; или поточный контент. |
+| Допустимое содержимое                                            | Элемент {{HTMLElement("figcaption")}} за которым следует [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток); или поточный контент за которым следует элемент {{HTMLElement("figcaption")}}; или поточный контент. |
 | Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                                                                        |
-| Разрешённые родители                                             | Любые элементы принимающие [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток).                                                                                                                                    |
-| Разрешённые ARIA-роли                                            | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>                                                         |
+| Допустимые родители                                              | Любые элементы принимающие [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток).                                                                                                                                    |
+| Допустимые ARIA-роли                                             | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>                                                         |
 | DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                                 |
 
 ## Атрибуты

@@ -5,8 +5,6 @@ translation_of: Web/HTML/Element/basefont
 original_slug: Web/HTML/Element/basefont
 ---
 
-{{obsolete_header}}
-
 The obsolete **HTML Base Font element** (**`<basefont>`**) sets a default font face, size, and color for the other elements which are descended from its parent element. With this set, the font's size can then be varied relative to the base size using the {{HTMLElement("font")}} element.
 
 You should not use this element; instead, you should use CSS properties such as {{cssxref("font")}}, {{cssxref("font-family")}}, {{cssxref("font-size")}}, and {{cssxref("color")}} to change the font configuration for an element and its contents.

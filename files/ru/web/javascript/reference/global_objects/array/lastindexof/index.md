@@ -1,16 +1,6 @@
 ---
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-tags:
-  - Array
-  - ECMAScript5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 ---
 
 {{JSRef}}
@@ -128,7 +118,7 @@ if (!Array.prototype.lastIndexOf) {
 
 ## Замечания по совместимости
 
-- Начиная с Firefox 47 {{geckoRelease (47)}}, метод больше не будет возвращать `-0`. Например, `[0].lastIndexOf(0, -0)` теперь всегда будет возвращать `+0` ({{bug (1242043)}}).
+- Начиная с Firefox 47, метод больше не будет возвращать `-0`. Например, `[0].lastIndexOf(0, -0)` теперь всегда будет возвращать `+0` ({{bug (1242043)}}).
 
 ## Смотрите также
 

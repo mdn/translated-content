@@ -1,13 +1,6 @@
 ---
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
-tags:
-  - Boolean
-  - Constructor
-  - JavaScript
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
 {{JSRef()}}
 
@@ -73,13 +66,9 @@ var s = new Boolean(myString);       // начальное значение ра
 - {{jsxref("Boolean.prototype")}}
   - : Представляет прототип конструктора объекта `Boolean`.
 
-{{jsOverrides("Function", "Properties", "prototype")}}
-
 ## Методы
 
 Глобальный объект `Boolean` не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов:
-
-{{jsOverrides("Function", "Methods")}}
 
 ## Экземпляры объекта `Boolean`
 

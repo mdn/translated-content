@@ -21,8 +21,8 @@ text-decoration-line: none;
 text-decoration-line: underline;
 text-decoration-line: overline;
 text-decoration-line: line-through;
-text-decoration-line: underline overline;                /* Dos líneas de decoración */
-text-decoration-line: overline underline line-through;   /* Múltiples líneas de decoración */
+text-decoration-line: underline overline; /* Dos líneas de decoración */
+text-decoration-line: overline underline line-through; /* Múltiples líneas de decoración */
 
 /* Valores globales */
 text-decoration-line: inherit;
@@ -73,9 +73,9 @@ p {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-decoration-line")}}
+{{Compat}}
 
 ## Ver también
 

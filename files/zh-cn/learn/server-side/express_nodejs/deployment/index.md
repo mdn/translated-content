@@ -1,5 +1,5 @@
 ---
-title: 'Express 教程 7: 部署到生产环境'
+title: "Express 教程 7: 部署到生产环境"
 slug: Learn/Server-side/Express_Nodejs/deployment
 ---
 
@@ -108,21 +108,19 @@ slug: Learn/Server-side/Express_Nodejs/deployment
 在生产环境中，最小化“调试”日志记录的一种方法，是使用类似[调试 debug](https://www.npmjs.com/package/debug) 的模块，允许您通过设置环境变量，来控制执行的日志记录。例如，下面的代码片段，显示了如何设置“author”日志记录。调试变量使用名称“author”声明，并且将自动显示，来自此对象的所有日志的前缀“author”。
 
 ```js
-var debug = require('debug')('author');
+var debug = require("debug")("author");
 
 // Display Author update form on GET
-exports.author_update_get = function(req, res, next) {
-
-    req.sanitize('id').escape().trim();
-    Author.findById(req.params.id, function(err, author) {
-        if (err) {
-            debug('update error:' + err);
-            return next(err);
-        }
-        //On success
-        res.render('author_form', { title: 'Update Author', author: author });
-    });
-
+exports.author_update_get = function (req, res, next) {
+  req.sanitize("id").escape().trim();
+  Author.findById(req.params.id, function (err, author) {
+    if (err) {
+      debug("update error:" + err);
+      return next(err);
+    }
+    //On success
+    res.render("author_form", { title: "Update Author", author: author });
+  });
 };
 ```
 
@@ -220,7 +218,7 @@ Heroku 是运行时间最长，且最受欢迎的基于云的 PaaS 服务之一�
 
 - 大多数情况下它只是可以工作，如果你最终喜欢它，并希望升级，那么扩展你的应用程序非常容易。
 
-虽然 Heroku 非常适合举办此演示，但它可能并不适合您的真实网站。Heroku 可以轻松设置和扩展，但代价是灵活性较低，而且一旦退 ​​ 出免费套餐，可能会花费更多。
+虽然 Heroku 非常适合举办此演示，但它可能并不适合您的真实网站。Heroku 可以轻松设置和扩展，但代价是灵活性较低，而且一旦退 出免费套餐，可能会花费更多。
 
 ### Heroku 如何工作？
 
@@ -248,10 +246,10 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 2. 登录后，单击顶部工具栏中的 **+** 号链接，然后选择新建存储库**New repository**。
 3. 填写此表单上的所有字段。虽然这些不是强制性的，但强烈建议使用它们。
 
-    - 输入新的存储库名称（例如，express-locallibrary-tutorial）和描述（例如“以 Express（node）编写的本地图书馆网站”）。
-    - 在 Add .gitignore 选择列表中选择 **Node**。
-    - 在添加许可证 _Add license_ 选择列表中，选择您偏好的许可证。
-    - 点选 **使用自述文件初始化此存储库** “**Initialize this repository with a README**”
+   - 输入新的存储库名称（例如，express-locallibrary-tutorial）和描述（例如“以 Express（node）编写的本地图书馆网站”）。
+   - 在 Add .gitignore 选择列表中选择 **Node**。
+   - 在添加许可证 _Add license_ 选择列表中，选择您偏好的许可证。
+   - 点选 **使用自述文件初始化此存储库** “**Initialize this repository with a README**”
 
 4. 按 **Create repository**.
 5. 单击新仓库页面上的绿色“克隆或下载”按钮 "**Clone or download**"。
@@ -262,50 +260,50 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 1. 为您的本地计算机安装 git（您可以在[此处](https://git-scm.com/downloads)找到不同平台的版本）。
 2. 打开命令提示符/终端，并使用您在上面复制的 URL，克隆 clone 存储库：
 
-    ```bash
-    git clone https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git
-    ```
+   ```bash
+   git clone https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git
+   ```
 
-    这将在当前时间点之后，创建存储库。
+   这将在当前时间点之后，创建存储库。
 
 3. 到新的仓库。
 
-    ```bash
-    cd express-locallibrary-tutorial
-    ```
+   ```bash
+   cd express-locallibrary-tutorial
+   ```
 
 最后一步，是复制你的应用程序，然后使用 git，将文件添加到你的仓库：
 
 1. 将 Express 应用程序，复制到此文件夹中（不包括**/node_modules**，其中包含您应根据需要，从 NPM 获取的依赖项文件）。
 2. 打开命令提示符/终端，并使用`add`命令，将所有文件添加到 git。
 
-    ```bash
-    git add -A
-    ```
+   ```bash
+   git add -A
+   ```
 
 3. 使用 status 命令，检查要添加的所有文件是否正确（您希望包含源文件，而不是二进制文件，临时文件等）。它应该看起来有点像下面的列表。
 
-    ```plain
-    > git status
-    On branch master
-    Your branch is up-to-date with 'origin/master'.
-    Changes to be committed:
-      (use "git reset HEAD <file>..." to unstage)
+   ```plain
+   > git status
+   On branch master
+   Your branch is up-to-date with 'origin/master'.
+   Changes to be committed:
+     (use "git reset HEAD <file>..." to unstage)
 
-            new file:   ...
-    ```
+           new file:   ...
+   ```
 
 4. 如果您满意，请将文件提交到本地存储库：
 
-    ```bash
-    git commit -m "First version of application moved into github"
-    ```
+   ```bash
+   git commit -m "First version of application moved into github"
+   ```
 
 5. 然后使用以下内容，将本地存储库同步到 Github 网站：
 
-    ```bash
-    git push origin master
-    ```
+   ```bash
+   git push origin master
+   ```
 
 完成此操作后，您应该可以返回创建存储库的 Github 上的页面，刷新页面，并查看您的整个应用程序现已上传。使用此添加/提交/推送循环，您可以在文件更改时，继续更新存储库。
 
@@ -350,13 +348,16 @@ v8.9.1
 打开**app.js**，并找到设置 mongoDB 连接变量的行。它看起来像这样：
 
 ```js
-var mongoDB = 'mongodb://your_user_id:your_password@ds119748.mlab.com:19748/local_library';
+var mongoDB =
+  "mongodb://your_user_id:your_password@ds119748.mlab.com:19748/local_library";
 ```
 
 使用以下代码替换该行，该代码使用`process.env.MONGODB_URI`从名为`MONGODB_URI`的环境变量中，获取连接字符串（如果已设置）（使用您自己的数据库 URL，而不是下面的占位符。）
 
 ```js
-var mongoDB = process.env.MONGODB_URI || 'mongodb://your_user_id:your_password@ds119748.mlab.com:19748/local_library';
+var mongoDB =
+  process.env.MONGODB_URI ||
+  "mongodb://your_user_id:your_password@ds119748.mlab.com:19748/local_library";
 ```
 
 #### 安装依赖并重新测试
@@ -495,15 +496,3 @@ heroku ps   #Display dyno status
   - [Node.js](https://www.digitalocean.com/community/tutorials?q=node.js) tutorials
 
 {{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
-
-## 本教程链接
-
-- [Express/Node 介绍](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [架设 Node (Express) 开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express 教程：本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express 教程 2: 创建骨架网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express 教程 3: 使用数据库 (Mongoose)](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express 教程 4: 路由与控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express 教程 6: 使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express 教程 7: 部署到生产环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/deployment)

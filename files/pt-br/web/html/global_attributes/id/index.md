@@ -9,7 +9,7 @@ O valor deste atributo é uma string opaca: isso significa que os desenvolvedore
 
 O valor deste atributo não deve conter lacunas (espaços, tabulações etc.). Navegadores tratam IDs inadequadas que contenham lacunas como se as lacunas fossem parte do ID. Em contraste com o atributo **class**, que permite múltiplos valores separados por espaço, os elementos podem ter somente um único ID.
 
-> **Note:** **Nota:** Utilizar caracteres exceto letras e dígitos ASCII, `'_'`, `'-'` e `'.'` pode causar problemas de compatibilidade, já que eles não eram permitidos no HTML 4. Embora esta restrição fora suspensa no HTML 5, um ID deve iniciar com uma letra para fins de compatibilidade.
+> **Nota:** Utilizar caracteres exceto letras e dígitos ASCII, `'_'`, `'-'` e `'.'` pode causar problemas de compatibilidade, já que eles não eram permitidos no HTML 4. Embora esta restrição fora suspensa no HTML 5, um ID deve iniciar com uma letra para fins de compatibilidade.
 
 ## Especificações
 

@@ -1,7 +1,6 @@
 ---
 title: Object.prototype.propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/propertyIsEnumerable
 ---
 
 {{JSRef}}
@@ -95,9 +94,9 @@ o.propertyIsEnumerable('firstMethod'); // regresa false
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.propertyIsEnumerable")}}
+{{Compat}}
 
 ## Notas específicas para Gecko
 

@@ -1,11 +1,6 @@
 ---
 title: 'SyntaxError: redeclaration of formal parameter "x"'
 slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
-tags:
-  - JavaScript
-  - SyntaxError
-  - Ошибки
-translation_of: Web/JavaScript/Reference/Errors/Redeclared_parameter
 ---
 
 {{jsSidebar("Errors")}}
@@ -51,7 +46,7 @@ function f(arg) {
 
 ## Примечания о совместимости
 
-- В версиях Firefox до Firefox 49 {{geckoRelease(49)}}, у данной ошибки был тип {{jsxref("TypeError")}} ({{bug(1275240)}}).
+- В версиях Firefox до Firefox 49, у данной ошибки был тип {{jsxref("TypeError")}} ({{bug(1275240)}}).
 
 ## Смотрите также
 

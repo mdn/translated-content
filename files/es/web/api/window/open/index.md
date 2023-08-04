@@ -10,7 +10,11 @@ Carga un recurso en el contexto de un nuevo navegador (como una ventana) o uno q
 ## Sintaxis
 
 ```js
-var referencia_objeto_window = window.open([url],[nombre_de_la_ventana],[configuracion_ventana]);
+var referencia_objeto_window = window.open(
+  [url],
+  [nombre_de_la_ventana],
+  [configuracion_ventana],
+);
 ```
 
 ## Parámetros
@@ -34,10 +38,15 @@ Observe que las URLs no cargarán inmediatamente. Cuando `window.open()` retorna
 
 ```js
 var objeto_window_referencia;
-var configuracion_ventana = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
+var configuracion_ventana =
+  "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
 
 function abrir_Popup() {
-  objeto_window_referencia = window.open("http://www.cnn.com/", "Pagina_CNN", configuracion_ventana);
+  objeto_window_referencia = window.open(
+    "http://www.cnn.com/",
+    "Pagina_CNN",
+    configuracion_ventana,
+  );
 }
 
 // Llamamos a la función
@@ -52,7 +61,7 @@ function openRequestedPopup() {
   windowObjectReference = window.open(
     "http://www.domainname.ext/path/ImageFile.png",
     "DescriptiveWindowName",
-    "resizable,scrollbars,status"
+    "resizable,scrollbars,status",
   );
 }
 ```
@@ -77,7 +86,7 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 
 [Note on position and dimension error correction](#Note_on_position_and_dimension_error_correction)
 
-{{bug(176320)}}
+[Error 176320 en Firefox](https://bugzil.la/176320)
 
 [Note on precedence](#Note_on_precedence)
 
@@ -115,14 +124,16 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 - toolbar
   - : If this feature is on, then the new secondary window renders the Navigation Toolbar (Back, Forward, Reload, Stop buttons). In addition to the Navigation Toolbar, Mozilla-based browsers will render the Tab Bar if it is visible, present in the parent window. (If this feature is set to _no_ all toolbars in the window will be invisible, for example extension toolbars). Mozilla and Firefox users can force new windows to always render the Navigation Toolbar by setting `dom.disable_window_open_feature.toolbar` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - location
+
   - : If this feature is on, then the new secondary window renders the Location bar in Mozilla-based browsers. MSIE 5+ and Opera 7.x renders the Address Bar. Mozilla and Firefox users can force new windows to always render the location bar by setting `dom.disable_window_open_feature.location` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js).
 
     > **Nota:** In Firefox 3, `dom.disable_window_open_feature.location` now defaults to _true_, forcing the presence of the Location Bar much like in IE7. See bug 337344 for more information.
 
     Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png), ![Opera 6+](opera6.gif)
+
 - personalbar
   - : If this feature is on, then the new secondary window renders the Personal Toolbar in Netscape 6.x, Netscape 7.x and Mozilla browser. It renders the Bookmarks Toolbar in Firefox. In addition to the Personal Toolbar, Mozilla browser will render the Site Navigation Bar if such toolbar is visible, present in the parent window. Mozilla and Firefox users can force new windows to always render the Personal Toolbar/Bookmarks toolbar by setting `dom.disable_window_open_feature.personalbar` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
-- directories {{deprecated_inline("2")}}
+- directories {{deprecated_inline}}
   - : Obsolete synonym of personalbar. In IE, it rendered the Links bar. Supported in Gecko up to 1.9.2 and in IE up to 6.
 - status
   - : If this feature is on, then the new secondary window has a status bar. Users can force the rendering of status bar in all Mozilla-based browsers, in MSIE 6 SP2 ([Note on status bar in XP SP2](#Note_on_security_issues_of_the_status_bar_presence)) and in Opera 6+. The default preference setting in recent Mozilla-based browser releases and in Firefox 1.0 is to force the presence of the status bar. [Note on status bar](#Note_on_status_bar) Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
@@ -131,10 +142,10 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 
 - attention {{NonStandardBadge}}
 
-  - : If this feature is specified, the window is able to open even if another application is already in the foreground. This feature is for Firefox OS applications only, and is currently restricted to certified applications. See [Internal (Certified) app permissions](/es/docs/Archive/B2G_OS/Firefox_OS_apps/App_permissions#internal_(certified)_app_permissions) for more information. Supported in: ![](firefox_os_logo_wordmark-75px.png)
+  - : If this feature is specified, the window is able to open even if another application is already in the foreground. This feature is for Firefox OS applications only, and is currently restricted to certified applications. See [Internal (Certified) app permissions](</es/docs/Archive/B2G_OS/Firefox_OS_apps/App_permissions#internal_(certified)_app_permissions>) for more information. Supported in: ![](firefox_os_logo_wordmark-75px.png)
 
 - dependent
-  - : If on, the new window is said to be dependent of its parent window. A dependent window closes when its parent window closes. A dependent window is minimized on the Windows task bar only when its parent window is minimized. On Windows platforms, a dependent window does not show on the task bar. A dependent window also stays in front of the parent window. Dependent windows are not implemented on MacOS X, this option will be ignored. The dependent feature is currently under revision to be removed ({{Bug(214867)}}) In MSIE 6, the nearest equivalent to this feature is the `showModelessDialog()` method. Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
+  - : If on, the new window is said to be dependent of its parent window. A dependent window closes when its parent window closes. A dependent window is minimized on the Windows task bar only when its parent window is minimized. On Windows platforms, a dependent window does not show on the task bar. A dependent window also stays in front of the parent window. Dependent windows are not implemented on MacOS X, this option will be ignored. The dependent feature is currently under revision to be removed ([Error 214867 en Firefox](https://bugzil.la/214867)) In MSIE 6, the nearest equivalent to this feature is the `showModelessDialog()` method. Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - minimizable
   - : This setting can only apply to dialog windows; "minimizable" requires `dialog=yes`. If `minimizable` is on, the new dialog window will have a minimize system command icon in the titlebar and it will be minimizable. Any non-dialog window is always minimizable and `minimizable=no` will be ignored. Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - fullscreen
@@ -143,9 +154,9 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 
   - : If this feature is on, the new secondary window will be resizable. **Note**: Starting with version 1.4, Mozilla-based browsers have a window resizing grippy at the right end of the status bar, this ensures that users can resize the browser window even if the web author requested this secondary window to be non-resizable. In such case, the maximize/restore icon in the window's titlebar will be disabled and the window's borders won't allow resizing but the window will still be resizable via that grippy in the status bar.
 
-    Starting with Firefox 3, secondary windows are always resizable ({{Bug(177838)}})
+    Starting with Firefox 3, secondary windows are always resizable ([Error 177838 en Firefox](https://bugzil.la/177838))
 
-    > **Nota:** **Tip**: For accessibility reasons, it is strongly recommended to set this feature always on
+    > **Nota:** For accessibility reasons, it is strongly recommended to set this feature always on
 
     Mozilla and Firefox users can force new windows to be easily resizable by setting
     `dom.disable_window_open_feature.resizable`
@@ -155,7 +166,7 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 
   - : If this feature is on, the new secondary window will show horizontal and/or vertical scrollbar(s) if the document doesn't fit into the window's viewport.
 
-    > **Nota:** **Tip**: For accessibility reasons, it is strongly encouraged to set this feature always on.
+    > **Nota:** For accessibility reasons, it is strongly encouraged to set this feature always on.
 
     Mozilla and Firefox users can force this option to be always enabled for new windows by setting
     `dom.disable_window_open_feature.scrollbars`
@@ -166,12 +177,12 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 The following features require the `UniversalBrowserWrite` privilege, otherwise they will be ignored. Chrome scripts have this privilege automatically, others have to request it from the PrivilegeManager.
 
 - chrome
-  - : **Note**: Starting with Mozilla 1.7/Firefox 0.9, this feature requires the `UniversalBrowserWrite` privilege ({{Bug(244965)}}). Without this privilege, it is ignored. If on, the page is loaded as window's only content, without any of the browser's interface elements. There will be no context menu defined by default and none of the standard keyboard shortcuts will work. The page is supposed to provide a user interface of its own, usually this feature is used to open XUL documents (standard dialogs like the JavaScript Console are opened this way). Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
+  - : **Note**: Starting with Mozilla 1.7/Firefox 0.9, this feature requires the `UniversalBrowserWrite` privilege ([Error 244965 en Firefox](https://bugzil.la/244965)). Without this privilege, it is ignored. If on, the page is loaded as window's only content, without any of the browser's interface elements. There will be no context menu defined by default and none of the standard keyboard shortcuts will work. The page is supposed to provide a user interface of its own, usually this feature is used to open XUL documents (standard dialogs like the JavaScript Console are opened this way). Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - dialog
   - : **Note**: Starting with Firefox 44, this feature can only be used with chrome privileges. If content attempts to toggle this feature, it will be ignored. [![MenuSystemCommands.png](menusystemcommands.png?size=webview)](menusystemcommands.png)The `dialog` feature removes all icons (restore, minimize, maximize) from the window's titlebar, leaving only the close button. Mozilla 1.2+ and Netscape 7.1 will render the other menu system commands (in FF 1.0 and in NS 7.0x, the command system menu is not identified with the Firefox/NS 7.0x icon on the left end of the titlebar: that's probably a bug. You can access the command system menu with a right-click on the titlebar). Dialog windows are windows which have no minimize system command icon and no maximize/restore down system command icon on the titlebar nor in correspondent menu item in the command system menu. They are said to be dialog because their normal, usual purpose is to only notify info and to be dismissed, closed. On Mac systems, dialog windows have a different window border and they may get turned into a sheet. Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - modal
 
-  - : **Note**: Starting with Mozilla 1.2.1, this feature requires the `UniversalBrowserWrite` privilege ({{Bug(180048)}}). Without this privilege, it is ignored. If on, the new window is said to be modal. The user cannot return to the main window until the modal window is closed. A typical modal window is created by the [alert() function](/es/docs/DOM/window.alert). The exact behavior of modal windows depends on the platform and on the Mozilla release version.
+  - : **Note**: Starting with Mozilla 1.2.1, this feature requires the `UniversalBrowserWrite` privilege ([Error 180048 en Firefox](https://bugzil.la/180048)). Without this privilege, it is ignored. If on, the new window is said to be modal. The user cannot return to the main window until the modal window is closed. A typical modal window is created by the [alert() function](/es/docs/DOM/window.alert). The exact behavior of modal windows depends on the platform and on the Mozilla release version.
 
     > **Nota:** As of Gecko 1.9, the Internet Explorer equivalent to this feature is the {{domxref("window.showModalDialog()")}} method. For compatibility reasons, it's now supported in Firefox. Note also that starting in Gecko 2.0, you can use {{domxref("window.showModalDialog()")}} without UniversalBrowserWrite privileges.
 
@@ -203,7 +214,7 @@ function openRequestedPopup() {
   windowObjectReference = window.open(
     "http://www.domainname.ext/path/ImgFile.png",
     "DescriptiveWindowName",
-    "width=420,height=230,resizable,scrollbars=yes,status=1"
+    "width=420,height=230,resizable,scrollbars=yes,status=1",
   );
 }
 ```
@@ -537,7 +548,7 @@ In cases where `left` and `screenX` (and/or `top` and `screenY`) have conflictin
 windowObjectReference = window.open(
   "http://news.bbc.co.uk/",
   "BBCWorldNewsWindowName",
-  "left=100,screenX=200,resizable,scrollbars,status"
+  "left=100,screenX=200,resizable,scrollbars,status",
 );
 ```
 
@@ -549,7 +560,7 @@ outerWidth has precedence over width and width has precedence over innerWidth. o
 windowObjectReference = window.open(
   "http://www.wwf.org/",
   "WWildlifeOrgWindowName",
-  "outerWidth=600,width=500,innerWidth=400,resizable,scrollbars,status"
+  "outerWidth=600,width=500,innerWidth=400,resizable,scrollbars,status",
 );
 ```
 

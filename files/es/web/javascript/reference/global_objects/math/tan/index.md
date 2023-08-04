@@ -1,7 +1,6 @@
 ---
 title: Math.tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/tan
 ---
 
 {{JSRef}}
@@ -54,9 +53,9 @@ function getTanDeg(deg) {
 
 {{Specifications}}
 
-## Compatibilidad con el navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.tan")}}
+{{Compat}}
 
 ## Ver también
 

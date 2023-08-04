@@ -16,8 +16,8 @@ If the current document is not in a browsing context, the returned value is `nul
 ## Syntax
 
 ```js
-locationObj = document.location
-document.location = 'http://www.mozilla.org' // Equivalent to document.location.href = 'http://www.mozilla.org'
+locationObj = document.location;
+document.location = "http://www.mozilla.org"; // Equivalent to document.location.href = 'http://www.mozilla.org'
 ```
 
 ## Example
@@ -28,11 +28,11 @@ dump(document.location);
 // "http://www.example.com/juicybits.html" to the console
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

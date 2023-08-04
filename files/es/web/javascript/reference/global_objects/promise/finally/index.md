@@ -1,7 +1,6 @@
 ---
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/finally
 ---
 
 {{JSRef}}
@@ -63,9 +62,9 @@ fetch(myRequest).then(function(response) {
 
 {{Specifications}}
 
-## Compatibilidad en navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Promise.finally")}}
+{{Compat}}
 
 ## Ver también
 

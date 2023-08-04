@@ -53,7 +53,7 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

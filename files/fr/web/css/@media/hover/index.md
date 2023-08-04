@@ -1,11 +1,6 @@
 ---
 title: hover
 slug: Web/CSS/@media/hover
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/hover
 ---
 
 {{CSSRef}}

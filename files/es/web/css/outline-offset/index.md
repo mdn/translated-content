@@ -42,7 +42,7 @@ p {
   outline: dashed thin;
   /* Mueve el contorno 10px lejos del borde */
   outline-offset: 10px;
-  border:1px solid black;
+  border: 1px solid black;
 }
 ```
 
@@ -56,7 +56,7 @@ El código anterior producirá este efecto:
 
 {{ EmbedLiveSample('Examples', '', '', '') }}
 
-#### Otro ejemplo:
+#### Otro ejemplo
 
 ```html hidden
 <p>
@@ -64,7 +64,7 @@ El código anterior producirá este efecto:
     <span style="outline-offset: 1px; outline: blue solid 3px;">
       outline: multiple offsets;
     </span>
-</span>
+  </span>
 </p>
 ```
 
@@ -74,6 +74,6 @@ El código anterior producirá este efecto:
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.outline-offset")}}
+{{Compat}}

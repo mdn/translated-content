@@ -1,7 +1,6 @@
 ---
 title: Intl.RelativeTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl/RelativeTimeFormat
 ---
 
 {{JSRef}}
@@ -76,9 +75,9 @@ rtf.formatToParts(100, "day");
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Intl.RelativeTimeFormat")}}
+{{Compat}}
 
 ## Ver también
 

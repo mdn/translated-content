@@ -21,7 +21,7 @@ Firefox 59 以降、サービスワーカーが {{domxref("FetchEvent.respondWit
 
 かつては {{domxref("Request.url","FetchEvent.request.url")}} がすべての場合に最終 URL として使われていました。与えられた {{domxref("Response.url")}} は実際には無視されていました。
 
-つまり、例えば、サービスワーカーがスタイルシートやワーカースクリプトに介入すると、与えられた {{domxref("Response.url")}} が、サブリソースが読み込む相対的な {{cssxref("@import")}} や {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} の代わりに使われます ({{bug(1222008)}})。
+つまり、例えば、サービスワーカーがスタイルシートやワーカースクリプトに介入すると、与えられた {{domxref("Response.url")}} が、サブリソースが読み込む相対的な {{cssxref("@import")}} や {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} の代わりに使われます ([Firefox バグ 1222008](https://bugzil.la/1222008))。
 
 たいていのネットワークリクエストに対して、最終 URL を観測できないためこの変更は影響ありません。しかし、少しだけ関係する場合があります。
 

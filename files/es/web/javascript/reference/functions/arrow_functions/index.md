@@ -1,7 +1,6 @@
 ---
 title: Funciones Flecha
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-original_slug: Web/JavaScript/Referencia/Funciones/Arrow_functions
 ---
 
 {{jsSidebar("Functions", "Funciones")}}
@@ -537,9 +536,9 @@ setTimeout( () => {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.functions.arrow_functions")}}
+{{Compat}}
 
 ## Ve también
 

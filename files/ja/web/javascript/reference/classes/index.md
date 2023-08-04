@@ -408,7 +408,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
 
 クラスを再定義することはできません。再定義しようとすると `SyntaxError` が発生します。
 
-Firefox のウェブコンソール（**メニュー** > **ウェブ開発** > **ウェブコンソール**）などでコードを試しているときに、同じ名前のクラス定義を 2 回実行すると、`SyntaxError: redeclaration of let ClassName` が発生します。（この問題については {{Bug(1428672)}} でさらに詳しく説明しています。）Chrome 開発者ツールで同様の操作を行うと、`Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1` のようなメッセージが表示されます。
+Firefox のウェブコンソール（**メニュー** > **ウェブ開発** > **ウェブコンソール**）などでコードを試しているときに、同じ名前のクラス定義を 2 回実行すると、`SyntaxError: redeclaration of let ClassName` が発生します。（この問題については [Firefox バグ 1428672](https://bugzil.la/1428672) でさらに詳しく説明しています。）Chrome 開発者ツールで同様の操作を行うと、`Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1` のようなメッセージが表示されます。
 
 ## Specifications
 

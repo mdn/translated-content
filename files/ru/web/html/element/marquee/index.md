@@ -1,9 +1,8 @@
 ---
 title: <marquee>
 slug: Web/HTML/Element/marquee
-translation_of: Web/HTML/Element/marquee
 ---
-{{HTMLSidebar}}{{obsolete_header}}
+{{HTMLSidebar}}
 
 ## Определение
 

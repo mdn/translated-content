@@ -23,9 +23,9 @@ dateObj.getUTCHours()
 
 `getUTCHours()` 返回一个 0 到 23 的整数。
 
-## 例子
+## 示例
 
-### 例子：使用 `getUTCHours()` 方法
+### 示例：使用 `getUTCHours()` 方法
 
 下例将当前时间的小时部分赋值给变量 `hours`。
 

@@ -193,11 +193,11 @@ function sortArguments() {
 console.log(sortArguments(5, 3, 7, 1))  // 1, 3, 5, 7
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

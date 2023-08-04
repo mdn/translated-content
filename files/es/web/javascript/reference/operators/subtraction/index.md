@@ -1,7 +1,6 @@
 ---
 title: Sustracción (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
-original_slug: Web/JavaScript/Referencia/Operadores/Sustracción
 ---
 
 {{jsSidebar("Operators")}}
@@ -35,9 +34,9 @@ Operator: x - y
 
 {{Specifications}}
 
-## Compatibilidad entre exploradores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.subtraction")}}
+{{Compat}}
 
 ## También revisa
 

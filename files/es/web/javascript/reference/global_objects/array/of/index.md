@@ -1,7 +1,6 @@
 ---
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/of
 ---
 
 {{JSRef}}
@@ -63,7 +62,7 @@ if (!Array.of) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.of")}}
+{{Compat}}
 
 ## Ver también
 

@@ -140,5 +140,5 @@ const bObjProto = new Boolean({});
 ## 関連情報
 
 - [Boolean](/ja/docs/Glossary/Boolean)
-- [論理値プリミティブ](/ja/docs/Web/JavaScript/Data_structures#boolean_type)
+- [論理値プリミティブ](/ja/docs/Web/JavaScript/Data_structures#論理型)
 - [ブーリアン型 (Wikipedia)](https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%BC%E3%83%AA%E3%82%A2%E3%83%B3%E5%9E%8B)

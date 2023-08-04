@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/includes
 ---
 
 {{JSRef}}
@@ -142,7 +141,7 @@ Si necesita admitir motores de JavaScript realmente obsoletos que no son compati
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.includes")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,15 +1,6 @@
 ---
 title: browserSettings
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserSettings
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings
 ---
 
 {{AddonSidebar}}Permet à une extension de modifier certaines paramètres globaux du navigateur. Chaque propriété de cette API est un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}}, fournissant la possibilité de modifier un paramètre particulier.Parce que ce sont les paramètres globaux, il est possible d'étendre les conflits des extensions. voir la documentation de [`BrowserSetting.set()`](/fr/Add-ons/WebExtensions/API/types/BrowserSetting/set) pour plus détails sur la façon dont les conflits sont traités.
@@ -53,8 +44,8 @@ Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensi
 - {{WebExtAPIRef("browserSettings.zoomSiteSpecific")}}
   - : Contrôle si le zoom est appliqué sur un modèle par-site ou par-onglet. Si {{WebExtAPIRef("privacy.websites")}}`.resistFingerprinting` est à vrai, ce réglage n'a aucun effet et le modèle de zoom appliqué reste par-onglet.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

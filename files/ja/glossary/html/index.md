@@ -2,7 +2,7 @@
 title: HTML
 slug: Glossary/HTML
 l10n:
-  sourceCommit: 2ac7419230e51f9bca905f4ef14d9e44c4dd6dba
+  sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
 ---
 
 **HTML** (HyperText Markup Language) は、ウェブページの構造を指定する記述言語です。

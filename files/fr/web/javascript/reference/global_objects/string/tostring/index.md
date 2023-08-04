@@ -1,14 +1,6 @@
 ---
 title: String.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/String/toString
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/toString
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`toString()`** renvoie une chaine de caractères représentant l'o
 ## Syntaxe
 
 ```js
-str.toString()
+str.toString();
 ```
 
 ### Valeur de retour

@@ -1,13 +1,15 @@
 ---
 title: itemid
 slug: Web/HTML/Global_attributes/itemid
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
 **`itemid`** は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、アイテムの固有でグローバルな識別子の形でマイクロデータを提供します。
 
-`itemid` 属性は、 {{htmlattrxref("itemscope")}} および {{htmlattrxref("itemtype")}} 属性のある要素にだけ指定することができます。また `itemid` は、グローバル識別子に対応する語彙を参照または定義する `itemtype` に関係した `itemscope` 属性を持つ要素でのみ使用することができます。
+`itemid` 属性は、[`itemscope`](/ja/docs/Web/HTML/Global_attributes/itemscope) と [`itemtype`](/ja/docs/Web/HTML/Global_attributes/itemtype) の両属性のある要素にだけ指定することができます。また `itemid` は、グローバル識別子に対応する語彙を参照または定義する `itemtype` に関係した `itemscope` 属性を持つ要素でのみ使用することができます。
 
 `itemtype` のグローバル識別子の正確な意味は、それを特定する語彙の中で識別子の定義が提供されます。語彙は同じグローバル識別子を持つ複数のアイテムが共存できるかどうか、もしそうであれば、同じ識別子を持つアイテムがどのように扱われるかを定義します。
 
@@ -47,19 +49,18 @@ slug: Web/HTML/Global_attributes/itemid
 #### HTML
 
 ```html
-<dl itemscope
+<dl
+  itemscope
   itemtype="https://schema.org/Book"
   itemid="urn:isbn:0-374-22848-5<">
- <dt>Title
-   <dd
-    itemprop="title">Owls of the Eastern Ice
- <dt>Author
-   <dd
-     itemprop="author">Jonathan C Slaght
- <dt>Publication date
- <dd><time
-   itemprop="datePublished"
-   datetime="2020-08-04">August 4 2020</time>
+  <dt>Title</dt>
+  <dd itemprop="title">Owls of the Eastern Ice</dd>
+  <dt>Author</dt>
+  <dd itemprop="author">Jonathan C Slaght</dd>
+  <dt>Publication date</dt>
+  <dd>
+    <time itemprop="datePublished" datetime="2020-08-04">August 4 2020</time>
+  </dd>
 </dl>
 ```
 
@@ -80,8 +81,7 @@ slug: Web/HTML/Global_attributes/itemid
 - すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)
 - その他のマイクロデータに関するグローバル属性:
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop)
+  - [`itemref`](/ja/docs/Web/HTML/Global_attributes/itemref)
+  - [`itemscope`](/ja/docs/Web/HTML/Global_attributes/itemscope)
+  - [`itemtype`](/ja/docs/Web/HTML/Global_attributes/itemtype)

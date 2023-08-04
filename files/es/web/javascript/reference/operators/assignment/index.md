@@ -1,7 +1,6 @@
 ---
 title: Asignacion (=)
 slug: Web/JavaScript/Reference/Operators/Assignment
-original_slug: Web/JavaScript/Referencia/Operadores/Asignacion
 ---
 
 {{jsSidebar("Operators")}}
@@ -34,9 +33,9 @@ x = n = z // x = n (es decir 10) y z pisa el valor total remplazandolo por 25
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.assignment")}}
+{{Compat}}
 
 ## Ver también
 

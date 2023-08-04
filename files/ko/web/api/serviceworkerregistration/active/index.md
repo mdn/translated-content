@@ -2,6 +2,7 @@
 title: ServiceWorkerRegistration.active
 slug: Web/API/ServiceWorkerRegistration/active
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerRegistration")}} 인터페이스의 **`active`** 속성은 {{domxref("ServiceWorker.state")}} 가 `activating` 또는 `activated` 상태인 서비스 워커를 반환한다. 이 속성은 `null` 로 초기 설정되어 있다.
@@ -13,18 +14,18 @@ slug: Web/API/ServiceWorkerRegistration/active
 ## Syntax
 
 ```js
-sw = ServiceWorker.active
+sw = ServiceWorker.active;
 ```
 
 ### Value
 
 현재 `activating` 또는 `activated` 상태에 있다면, {{domxref("ServiceWorker")}} 객체.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

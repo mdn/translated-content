@@ -1,5 +1,5 @@
 ---
-title: '<html>: HTML 문서 / 루트 요소'
+title: "<html>: HTML 문서 / 루트 요소"
 slug: Web/HTML/Element/html
 ---
 
@@ -67,10 +67,14 @@ slug: Web/HTML/Element/html
 ## 예제
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-  <head>...</head>
-  <body>...</body>
+  <head>
+    ...
+  </head>
+  <body>
+    ...
+  </body>
 </html>
 ```
 
@@ -89,7 +93,7 @@ slug: Web/HTML/Element/html
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.html")}}
+{{Compat}}
 
 ## 같이 보기
 

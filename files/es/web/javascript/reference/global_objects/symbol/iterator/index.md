@@ -1,7 +1,6 @@
 ---
 title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 l10n:
   sourceCommit: 552892d8fc6707c47ae879aef32e6ac3023166ee
 ---

@@ -1,7 +1,6 @@
 ---
 title: MouseEvent
 slug: Web/API/MouseEvent
-translation_of: Web/API/MouseEvent
 ---
 
 {{APIRef("DOM Events")}}
@@ -119,11 +118,11 @@ function simulateClick() {
   var evt = new MouseEvent("click", {
     bubbles: true,
     cancelable: true,
-    view: window
+    view: window,
   });
   var cb = document.getElementById("checkbox"); //élément pour cliquer
   var canceled = !cb.dispatchEvent(evt);
-  if(canceled) {
+  if (canceled) {
     // Un gestionnaire appelé preventDefault
     alert("canceled");
   } else {
@@ -131,12 +130,14 @@ function simulateClick() {
     alert("not canceled");
   }
 }
-document.getElementById("button").addEventListener('click', simulateClick);
+document.getElementById("button").addEventListener("click", simulateClick);
 ```
 
 ```html
-<p><label><input type="checkbox" id="checkbox"> Checked</label>
-<p><button id="button">Click me</button>
+<p>
+  <label><input type="checkbox" id="checkbox" /> Checked</label>
+</p>
+<p><button id="button">Click me</button></p>
 ```
 
 Cliquez sur le bouton pour voir comment l'exemple fonctionne :

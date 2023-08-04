@@ -17,7 +17,7 @@ a >>> b
 
 ## 描述
 
-该运算符将第一个操作数向右移动指定的位数。向右移动的多余位将被丢弃。零位从左侧移入。其符号位变为 `0`，因此其表示的结果始终为非负数。与其它按位运算符不同，零填充右移返回无符号 32 位整数。
+该运算符将第一个操作数向右移动指定的位数。向右移动的多余位将被丢弃。零位从左侧移入。其符号位变为 `0`，因此其表示的结果始终为非负数。与其他按位运算符不同，零填充右移返回无符号 32 位整数。
 
 以十进制（以 10 为基数）数字 `9` 和 `-9` 的 32 位二进制表示为例：
 
@@ -75,5 +75,5 @@ a >>> b
 
 ## 参见
 
-- [JS 指南：位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#位运算符)
+- [JS 指南：位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#位运算符)
 - [无符号右移赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)

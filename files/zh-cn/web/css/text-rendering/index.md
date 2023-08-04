@@ -3,7 +3,7 @@ title: 文本渲染
 slug: Web/CSS/text-rendering
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 ## 概述
 
@@ -41,6 +41,7 @@ text-rendering: unset;
 - `optimizeLegibility`
   - : 浏览器在绘制文本时将着重考虑易读性，而不是渲染速度和几何精度。它会使字间距和连字有效。**该属性值在移动设备上会造成比较明显的性能问题**，详细查看 [text-rendering](https://css-tricks.com/almanac/properties/t/text-rendering/)。
 - `geometricPrecision`
+
   - : 浏览器在绘制文本时将着重考虑几何精度，而不是渲染速度和易读性。字体的某些方面—比如字间距—不再线性缩放，所以该值可以使使用某些字体的文本看起来不错。
 
     对于 SVG，当文本缩放时，浏览器会计算文本最终大小（取决于特定的字体大小和相应的缩放比例）并且从操作平台的字体系统中请求一个符合该计算值的字体大小。但如果你请求一个字体大小，比如 9 并且 140% 的缩放，这个最终的字体大小为 12.6，字体系统中明显不存在，所以浏览器会向下取整到 12。这导致文本缩放是阶梯式的。
@@ -55,8 +56,12 @@ text-rendering: unset;
 /* make sure all fonts in the HTML document display in all its glory,
    but avoid inadequate ligatures in class foo elements */
 
-body  { text-rendering: optimizeLegibility; }
-.foo  { text-rendering: optimizeSpeed; }
+body {
+  text-rendering: optimizeLegibility;
+}
+.foo {
+  text-rendering: optimizeSpeed;
+}
 ```
 
 #### Live Example
@@ -74,7 +79,7 @@ body  { text-rendering: optimizeLegibility; }
 
 auto 选项的 20px 字体大小的阈值可以被 `browser.display.auto_quality_min_font_size` 值改变。
 
-`optimizeSpeed` 选项在 Gecko 2.0 上已经没有效果了，因为标准的文字渲染代码已经非常快，而且目前还没有更快的渲染方法。详见 {{ bug(595688) }}。
+`optimizeSpeed` 选项在 Gecko 2.0 上已经没有效果了，因为标准的文字渲染代码已经非常快，而且目前还没有更快的渲染方法。详见 [Firefox bug 595688](https://bugzil.la/595688)。
 
 ## 规范
 

@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/clear
 ---
 
 {{JSRef}}
@@ -40,9 +39,9 @@ mySet.has("bar")  // false
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Set.clear")}}
+{{Compat}}
 
 ## Ver también
 

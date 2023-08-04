@@ -1,7 +1,6 @@
 ---
 title: Booleano
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Boolean
 ---
 
 {{JSRef}}
@@ -92,9 +91,9 @@ var bObjProto = new Boolean({});
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Boolean")}}
+{{Compat}}
 
 ## Ve también
 

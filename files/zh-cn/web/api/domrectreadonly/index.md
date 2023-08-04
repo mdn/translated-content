@@ -29,7 +29,7 @@ slug: Web/API/DOMRectReadOnly
 - {{domxref("DOMRectReadOnly.bottom")}} {{readonlyInline}}
   - : 返回 `DOMRect` 的底部坐标值（通常与 `y + height` 相同）。
 - {{domxref("DOMRectReadOnly.left")}} {{readonlyInline}}
-  - : 返回 `DOMRect` 的左坐标值（通常与 `x​​​​​​​` 相同）。
+  - : 返回 `DOMRect` 的左坐标值（通常与 `x` 相同）。
 
 ## 静态方法
 

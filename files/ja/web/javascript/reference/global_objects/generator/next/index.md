@@ -9,27 +9,27 @@ slug: Web/JavaScript/Reference/Global_Objects/Generator/next
 
 ## 構文
 
-```
-gen.next(value)
+```js-nolint
+generatorObject.next(value)
 ```
 
 ### 引数
 
-- `<var>value</var>`
+- `value`
   - : ジェネレーターへ送る値です。
 
-    この値は `yield` 式の結果として代入されます。例えば `<var>variable</var> = yield <var>expression</var>` の場合、 `.next()` 関数に渡された値は `<var>variable</var>` に代入されます。
+    この値は `yield` 式の結果として代入されます。例えば `variable = yield expression` の場合、 `.next()` 関数に渡された値は `variable` に代入されます。
 
 ### 返値
 
-以下の２つのプロパティを持った {{jsxref("Object")}} です。
+以下の 2 つのプロパティを持った {{jsxref("Object")}} です。
 
 - `done` (boolean)
   - : イテレーターが反復処理の末尾を過ぎている場合、値は `true` になります。この場合、 `value` はオプションでそのイテレーターの _返値_ を指定します。
 
     イテレーターが反復処理の次の値を生成することができた場合、値は `false` になります。これは `done` プロパティを指定しない場合も同等です。
 - `value`
-  - : イテレーターが返す何らかの JavaScript の値です。 `done` が `true` の場合は省略可能です。
+  - : イテレーターが yield または return した、何らかの JavaScript の値です。
 
 ## 例
 
@@ -53,38 +53,27 @@ g.next();      // "Object { value: undefined, done: true }"
 
 ### リストでの next() の使用
 
-```
-function* getPage(pageSize = 1, list) {
-    let output = [];
-    let index = 0;
+この例では、 `getPage` はリストを受け取り `pageSize` 件ごとにページ分割します。それぞれの `next` 呼び出しは個々のページを返します。
 
-    while (index < list.length) {
-        output = [];
-        for (let i = index; i < index + pageSize; i++) {
-            if (list[i]) {
-                output.push(list[i]);
-            }
-        }
-
-        yield output;
-        index += pageSize;
-    }
+```js
+function* getPage(list, pageSize = 1) {
+  for (let index = 0; index < list.length; index += pageSize) {
+    yield list.slice(index, index + pageSize);
+  }
 }
-
-list = [1, 2, 3, 4, 5, 6, 7, 8]
-var page = getPage(3, list);              // Generator { }
-
-page.next();                              // Object {value: (3) [1, 2, 3], done: false}
-page.next();                              // Object {value: (3) [4, 5, 6], done: false}
-page.next();                              // Object {value: (2) [7, 8], done: false}
-page.next();                              // Object {value: undefined, done: true}
+const list = [1, 2, 3, 4, 5, 6, 7, 8]
+const page = getPage(list, 3);            // Generator { }
+page.next();                              // { value: [1, 2, 3], done: false }
+page.next();                              // { value: [4, 5, 6], done: false }
+page.next();                              // { value: [7, 8], done: false }
+page.next();                              // { value: undefined, done: true }
 ```
 
 ### ジェネレーターへ値を送る
 
 この例では `next` を値付きで呼び出しています。
 
-なお、最初の呼び出しではジェネレーターが何も生成していないため、何もログを記録しないことに注意してください。
+> **メモ:** 最初の呼び出しではジェネレーターが何も生成していないため、何もログを記録しません。
 
 ```js
 function* gen() {

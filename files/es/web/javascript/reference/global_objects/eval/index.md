@@ -1,7 +1,6 @@
 ---
 title: eval
 slug: Web/JavaScript/Reference/Global_Objects/eval
-original_slug: Web/JavaScript/Referencia/Objetos_globales/eval
 ---
 
 {{jsSidebar("Objects")}}
@@ -195,7 +194,7 @@ var str = "if (x == 5) {alert('z is 42'); z = 42;} else z = 0; ";
 document.write("<P>z es ", eval(str));
 ```
 
-### La última espresión es evaluada
+### La última expresión es evaluada
 
 `eval()` devuelve el valor de la última expresión evaluada
 
@@ -225,23 +224,9 @@ var fct2 = eval(fctStr2)  // deuelve una función
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.eval")}}
-
-## Observaciones específicas para Gecko
-
-- Históricamente `eval()` tenía un segundo argumento opcional, especificando un objeto en cuyo contexto la evaluación era ejecutada. Este argunmento no era estándar, y fue removido del _SpiderMonkey en_ Gecko 1.9.1 (Firefox 3.5). Vea {{bug(442333)}}.
-
-## Compatibilidad Hacia Atrás
-
-### JavaScript 1.3 y anteriores
-
-Puede usar `eval` indirectamente, aunque ésto está desaconsejado.
-
-### JavaScript 1.1
-
-`eval` también es un método de todos los objetos.
+{{Compat}}
 
 ## Vea También
 

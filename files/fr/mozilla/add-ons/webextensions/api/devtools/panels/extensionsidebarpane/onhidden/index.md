@@ -1,20 +1,6 @@
 ---
 title: devtools.panels.ExtensionSidebarPane.onHidden
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden
-tags:
-  - API
-  - Add-ons
-  - ExtensionSidebarPane
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - onHidden
-translation_of: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onHidden
-original_slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onHidden
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden
 ---
 
 {{AddonSidebar()}}
@@ -24,9 +10,9 @@ Appelé lorsque le volet de la barre latérale est masqué, suite à l'abandon d
 ## Syntaxe
 
 ```js
-browser.devtools.panels.onHidden.addListener(listener)
-browser.devtools.panels.onHidden.removeListener(listener)
-browser.devtools.panels.onHidden.hasListener(listener)
+browser.devtools.panels.onHidden.addListener(listener);
+browser.devtools.panels.onHidden.removeListener(listener);
+browser.devtools.panels.onHidden.hasListener(listener);
 ```
 
 Les événements ont trois fonctions:
@@ -45,9 +31,9 @@ Les événements ont trois fonctions:
 - `callback`
   - : Fonction appelée lorsque cet événement se produit. Cette fonction sera passée sans arguments.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane.onHidden", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -55,7 +41,6 @@ Créez un volet de barre latérale et journal afficher et masquer les événemen
 
 ```js
 function onCreated(sidebarPane) {
-
   sidebarPane.onShown.addListener(() => {
     console.log("Shown");
   });
@@ -63,7 +48,6 @@ function onCreated(sidebarPane) {
   sidebarPane.onHidden.addListener(() => {
     console.log("Hidden");
   });
-
 }
 
 browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);

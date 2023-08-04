@@ -1,7 +1,6 @@
 ---
 title: FormData
 slug: Web/API/FormData
-original_slug: Web/API/XMLHttpRequest/FormData
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -46,7 +45,7 @@ Un objeto que implementa `FormData` puede usarse directamente en una estructura 
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.FormData")}}
+{{Compat}}
 
 ## Ver también
 

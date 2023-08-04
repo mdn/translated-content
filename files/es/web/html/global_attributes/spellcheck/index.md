@@ -1,7 +1,6 @@
 ---
 title: spellcheck
 slug: Web/HTML/Global_attributes/spellcheck
-original_slug: Web/HTML/Atributos_Globales/spellcheck
 ---
 
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
@@ -186,9 +185,9 @@ El valor por default de este atributo es dependiente del explorador y del elemen
 
 {{Specifications}}
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.spellcheck")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,9 +1,9 @@
 ---
-title: '::selection'
+title: "::selection"
 slug: Web/CSS/::selection
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 **`::selection`** CSS 伪元素应用于文档中被用户高亮的部分（比如使用鼠标或其他选择设备选中的部分）。
 

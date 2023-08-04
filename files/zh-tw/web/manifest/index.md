@@ -14,7 +14,7 @@ Web App manifests 是屬於 [progressive web apps](/zh-TW/docs/Web/Apps/Progress
 Web app manifest 的部署只需要在 HTML 文件中的 [head](/zh-TW/docs/Web/HTML/Element/head) 區域加上 [link 元素](/zh-TW/docs/Web/HTML/Element/link)即可。
 
 ```html
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/manifest.json" />
 ```
 
 ## manifest 範例
@@ -27,37 +27,47 @@ Web app manifest 的部署只需要在 HTML 文件中的 [head](/zh-TW/docs/Web/
   "display": "standalone",
   "background_color": "#fff",
   "description": "A simply readable Hacker News app.",
-  "icons": [{
-    "src": "images/touch/homescreen48.png",
-    "sizes": "48x48",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen72.png",
-    "sizes": "72x72",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen96.png",
-    "sizes": "96x96",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen144.png",
-    "sizes": "144x144",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen168.png",
-    "sizes": "168x168",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen192.png",
-    "sizes": "192x192",
-    "type": "image/png"
-  }],
-  "related_applications": [{
-    "platform": "web"
-  }, {
-    "platform": "play",
-    "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
-  }]
+  "icons": [
+    {
+      "src": "images/touch/homescreen48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen168.png",
+      "sizes": "168x168",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web"
+    },
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
+    }
+  ]
 }
 ```
 
@@ -111,7 +121,7 @@ Web app manifest 的部署只需要在 HTML 文件中的 [head](/zh-TW/docs/Web/
 
 | 顯示模式     | 描述                                                                                                                                                                           | Fallback 顯示模式 |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
-| `fullscreen` | 所有可用的顯示區域都被填充並且不顯示使用者代理 {{Glossary("chrome")}} 。                                                                                                 | `standalone`      |
+| `fullscreen` | 所有可用的顯示區域都被填充並且不顯示使用者代理 {{Glossary("chrome")}} 。                                                                                                       | `standalone`      |
 | `standalone` | 這看起來和感覺上就像是獨立應用程式一樣，包括有不同的執行視窗、有圖示的應用程式啟動器 ... 等等。 在這模式下，使用者代理將不包含控制導覽列，但能包含其他的 UI 元素，像是狀態列。 | `minimal-ui`      |
 | `minimal-ui` | 這看起來和感覺上就像是獨立應用程式一樣，但將有控制導覽列 UI 元素的最小設置，元素會因瀏覽器而不同。                                                                             | `browser`         |
 | `browser`    | 預設值。 應用程式如常規般地被開啟於瀏覽器分頁或新視窗，依瀏覽器與平台而不同。                                                                                                  | (None)            |

@@ -16,12 +16,12 @@ Hay un último concepto esencial para que discutamos en este curso, para cerrar 
 **Los valores de retorno** son exactamente como suenan: los valores devueltos por la función cuando se completa. Ya has alcanzado los valores de retorno varias veces, aunque es posible que no hayas pensado en ellos explícitamente. Volvamos a un código familiar:
 
 ```js
-var myText = 'I am a string';
-var newString = myText.replace('string', 'sausage');
+var myText = "I am a string";
+var newString = myText.replace("string", "sausage");
 console.log(newString);
 // la función de cadena replace () toma una cadena,
 // sustituyendo una subcadena con otra y devoviendo
-// ​​una cadena nueva con la sustitución realizada
+// una cadena nueva con la sustitución realizada
 ```
 
 Vimos exactamente este bloque de código en nuestro primer artículo de función. Estamos invocando la función [replace ()](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace) en la cadena `myText`, y le pasamos dos parámetros: la subcadena a encontrar y la subcadena con la que reemplazarla. Cuando esta función se completa (termina de ejecutarse), devuelve un valor, que es una nueva cadena con el reemplazo realizado. En el código anterior, estamos guardando este valor de retorno como el valor de la variable `newString`.
@@ -38,10 +38,10 @@ To return a value from a custom function, you need to use ... wait for it ... th
 
 ```js
 function draw() {
-  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (var i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -52,7 +52,7 @@ Inside each loop iteration, three calls are made to the `random()` function, to 
 
 ```js
 function randomNumber(number) {
-  return Math.floor(Math.random()*number);
+  return Math.floor(Math.random() * number);
 }
 ```
 
@@ -60,7 +60,7 @@ This could be written as follows:
 
 ```js
 function randomNumber(number) {
-  var result = Math.floor(Math.random()*number);
+  var result = Math.floor(Math.random() * number);
   return result;
 }
 ```
@@ -88,43 +88,43 @@ Let's have a go at writing our own functions featuring return values.
 1. First of all, make a local copy of the [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) file from GitHub. This is a simple HTML page containing a text {{htmlelement("input")}} field and a paragraph. There's also a {{htmlelement("script")}} element in which we have stored a reference to both HTML elements in two variables. This little page will allow you to enter a number into the text box, and display different numbers related to it in the paragraph below.
 2. Let's add some useful functions to this `<script>` element. Below the existing two lines of JavaScript, add the following function definitions:
 
-    ```js
-    function squared(num) {
-      return num * num;
-    }
+   ```js
+   function squared(num) {
+     return num * num;
+   }
 
-    function cubed(num) {
-      return num * num * num;
-    }
+   function cubed(num) {
+     return num * num * num;
+   }
 
-    function factorial(num) {
-      var x = num;
-      while (x > 1) {
-        num *= x-1;
-        x--;
-      }
-      return num;
-    }
-    ```
+   function factorial(num) {
+     var x = num;
+     while (x > 1) {
+       num *= x - 1;
+       x--;
+     }
+     return num;
+   }
+   ```
 
-    The `squared()` and `cubed()` functions are fairly obvious — they return the square or cube of the number given as a parameter. The `factorial()` function returns the [factorial](https://en.wikipedia.org/wiki/Factorial) of the given number.
+   The `squared()` and `cubed()` functions are fairly obvious — they return the square or cube of the number given as a parameter. The `factorial()` function returns the [factorial](https://en.wikipedia.org/wiki/Factorial) of the given number.
 
 3. Next, we're going to include a way to print out information about the number entered into the text input. Enter the following event handler below the existing functions:
 
-    ```js
-    input.onchange = function() {
-      var num = input.value;
-      if (isNaN(num)) {
-        para.textContent = 'You need to enter a number!';
-      } else {
-        para.textContent = num + ' squared is ' + squared(num) + '. ' +
-                           num + ' cubed is ' + cubed(num) + '. ' +
-                           num + ' factorial is ' + factorial(num) + '.';
-      }
-    }
-    ```
+   ```js
+   input.addEventListener("change", () => {
+     const num = parseFloat(input.value);
+     if (isNaN(num)) {
+       para.textContent = "You need to enter a number!";
+     } else {
+       para.textContent = `${num} squared is ${squared(num)}. `;
+       para.textContent += `${num} cubed is ${cubed(num)}. `;
+       para.textContent += `${num} factorial is ${factorial(num)}. `;
+     }
+   });
+   ```
 
-    Here we are creating an `onchange` event handler that runs whenever the change event fires on the text input — that is, when a new value is entered into the text input, and submitted (enter a value then press tab for example). When this anonymous function runs, the existing value entered into the input is stored in the `num` variable.\
+   Here we are creating an `onchange` event handler that runs whenever the change event fires on the text input — that is, when a new value is entered into the text input, and submitted (enter a value then press tab for example). When this anonymous function runs, the existing value entered into the input is stored in the `num` variable.\
     Next, we do a conditional test — if the entered value is not a number, we print an error message into the paragraph. The test looks at whether the expression `isNaN(num)` returns true. We use the [isNaN()](/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN) function to test whether the num value is not a number — if so, it returns `true`, and if not, `false`.\
     If the test returns `false`, the `num` value is a number, so we print out a sentence inside the paragraph element stating what the square, cube, and factorial of the number are. The sentence calls the `squared()`, `cubed()`, and `factorial()` functions to get the required values.
 
@@ -151,13 +151,3 @@ If there is anything you didn't understand, feel free to read through the articl
 - [Callback functions in JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — a common JavaScript pattern is to pass a function into another function as an argument, which is then called inside the first function. This is a little beyond the scope of this course, but worth studying before too long.
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## In this module
-
-- [Making decisions in your code — conditionals](/es/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/es/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/es/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/es/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/es/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/es/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/es/docs/Learn/JavaScript/Building_blocks/Image_gallery)

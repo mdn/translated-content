@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.toLocaleTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toLocaleTimeString
 ---
 
 {{JSRef}}
@@ -52,7 +51,7 @@ function toLocaleTimeStringSoportaLocales() {
   try {
     new Date().toLocaleTimeString('i');
   } catch (e) {
-    return e​.name === 'RangeError';
+    return e.name === 'RangeError';
   }
   return false;
 }
@@ -121,7 +120,7 @@ Cuando se da formato a un gran número de fechas, es mejor crear un objeto {{jsx
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.toLocaleTimeString")}}
+{{Compat}}
 
 ## Ver también
 

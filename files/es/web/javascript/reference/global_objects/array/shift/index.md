@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/shift
 ---
 
 {{JSRef}}
@@ -45,9 +44,9 @@ console.log('Elemento eliminado: ' + eliminado);
 
 {{Specifications}}
 
-## Navegadores compatibles
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.shift")}}
+{{Compat}}
 
 ## Ver también
 

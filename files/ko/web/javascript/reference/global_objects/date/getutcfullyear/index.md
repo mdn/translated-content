@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 
 ## Description
 
-**getUTCFullYear()**에 의해 반환 된 값은 1995 년과 같이 2000 년과 호환되는 절대 숫자입니다.
+**getUTCFullYear()** 에 의해 반환 된 값은 1995 년과 같이 2000 년과 호환되는 절대 숫자입니다.
 
 ## Examples
 

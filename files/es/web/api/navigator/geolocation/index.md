@@ -1,7 +1,6 @@
 ---
 title: window.navigator.geolocation
 slug: Web/API/Navigator/geolocation
-original_slug: Web/API/NavigatorGeolocation/geolocation
 ---
 
 {{APIRef("Geolocation API")}}
@@ -28,9 +27,9 @@ geo = navigator.geolocation
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Navigator.geolocation")}}
+{{Compat}}
 
 ## Ver también
 

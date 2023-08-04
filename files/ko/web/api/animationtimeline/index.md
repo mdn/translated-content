@@ -12,11 +12,11 @@ The `AnimationTimeline` interface of the [Web Animations API](/ko/docs/Web/API/W
 - {{domxref("AnimationTimeline.currentTime")}} {{readonlyInline}}
   - : Returns the time value in milliseconds for this timeline or `null` if this timeline is inactive.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

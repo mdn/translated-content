@@ -1,7 +1,6 @@
 ---
 title: 웹의 동작 방식
 slug: Learn/Getting_started_with_the_web/How_the_Web_works
-original_slug: Learn/Getting_started_with_the_web/웹의_동작_방식
 ---
 
 {{LearnSidebar}}
@@ -65,7 +64,7 @@ original_slug: Learn/Getting_started_with_the_web/웹의_동작_방식
 
 - [인터넷 작동 방식](/ko/docs/Learn/Common_questions/How_does_the_Internet_work)
 - [HTTP — 어플리케이션-계층 규약](https://dev.opera.com/articles/http-basic-introduction/)
-- [HTTP: Let’s GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/)
+- [HTTP: Let's GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/)
 - [HTTP: 응답 코드](https://dev.opera.com/articles/http-response-codes/)
 
 ## 크레딧
@@ -73,14 +72,3 @@ original_slug: Learn/Getting_started_with_the_web/웹의_동작_방식
 거리 사진: [Street composing](https://www.flickr.com/photos/kdigga/9110990882/in/photolist-cXrKFs-c1j6hQ-mKrPUT-oRTUK4-7jSQQq-eT7daG-cZEZrh-5xT9L6-bUnkip-9jAbvr-5hVkHn-pMfobT-dm8JuZ-gjwYYM-pREaSM-822JRW-5hhMf9-9RVQNn-bnDMSZ-pL2z3y-k7FRM4-pzd8Y7-822upY-8bFN4Y-kedD87-pzaATg-nrF8ft-5anP2x-mpVky9-ceKc9W-dG75mD-pY62sp-gZmXVZ-7vVJL9-h7r9AQ-gagPYh-jvo5aM-J32rC-ibP2zY-a4JBcH-ndxM5Y-iFHsde-dtJ15p-8nYRgp-93uCB1-o6N5Bh-nBPUny-dNJ66P-9XWmVP-efXhxJ), by [Kevin D](https://www.flickr.com/photos/kdigga/).
 
 {{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [Installing basic software](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](/en-US/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](/en-US/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](/en-US/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)

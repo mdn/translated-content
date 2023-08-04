@@ -5,7 +5,7 @@ slug: Web/API/Document/body
 
 {{APIRef("DOM")}}
 
-**`Document.body`** 表示当前文档中的 {{HTMLElement("body")}} 或 {{HTMLElement("frameset")}} 元素，或 `null` 如果不存在此类元素。
+**`Document.body`** 表示当前文档中的 {{HTMLElement("body")}} 或 {{HTMLElement("frameset")}} 元素，如果不存在此类元素，则为 `null`。
 
 ## 值
 

@@ -1,7 +1,6 @@
 ---
 title: Selectores de atributo
 slug: Web/CSS/Attribute_selectors
-original_slug: Web/CSS/Selectores_atributo
 ---
 
 {{CSSRef}}
@@ -15,7 +14,8 @@ a[title] {
 }
 
 /* Elementos <a> con un href que coincida con "https://example.org" */
-a[href="https://example.org"] {
+a[href="https://example.org"]
+{
   color: green;
 }
 
@@ -160,7 +160,7 @@ div[data-lang="zh-TW"] {
 
 {{SeeCompatTable}}
 
-La especificación HTML requiere que el atributo {{htmlattrxref("type", "input")}} distinga entre mayúsculas y minúsculas debido a que se usa principalmente en el elemento {{HTMLElement("input")}}, tratando de usar selectores de atributos con el atributo {{htmlattrxref("type", "ol")}} de una {{HTMLElement("ol", "lista ordenada")}} no funciona sin el modificador de mayúsculas y minúsculas.
+La especificación HTML requiere que el atributo [`type`](/es/docs/Web/HTML/Element/input#type) distinga entre mayúsculas y minúsculas debido a que se usa principalmente en el elemento {{HTMLElement("input")}}, tratando de usar selectores de atributos con el atributo [`type`](/es/docs/Web/HTML/Element/ol#type) de una {{HTMLElement("ol", "lista ordenada")}} no funciona sin el modificador de mayúsculas y minúsculas.
 
 #### CSS
 
@@ -205,7 +205,7 @@ ol[type="A" s] {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.attribute")}}
+{{Compat}}
 
 ## Ver también
 

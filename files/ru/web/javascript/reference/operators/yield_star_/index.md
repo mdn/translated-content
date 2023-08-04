@@ -1,7 +1,6 @@
 ---
 title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
-translation_of: Web/JavaScript/Reference/Operators/yield*
 ---
 
 {{jsSidebar("Operators")}}
@@ -145,7 +144,7 @@ console.log(result);          // "foo"
 
 ## Специфичные для Firefox примечания
 
-- Начиная с Gecko 33 {{geckoRelease(33)}}, разбор выражений yield было приведено к соответствию с последними спецификациями ES6 ({{bug(981599)}}):
+- Начиная с Gecko 33, разбор выражений yield было приведено к соответствию с последними спецификациями ES6 ({{bug(981599)}}):
 
   - Реализована корректная обработка разрыва строки. Разрыва строки между "yield" и "\*" быть не может. Такой код вызовет {{jsxref("SyntaxError")}}:
 

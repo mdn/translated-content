@@ -1,7 +1,6 @@
 ---
 title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/preventExtensions
 ---
 
 {{JSRef}}
@@ -80,9 +79,9 @@ Object.preventExtensions(1);
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.preventExtensions")}}
+{{Compat}}
 
 ## Mira también
 

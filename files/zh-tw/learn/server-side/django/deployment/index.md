@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 11: Deploying Django to production'
+title: "Django Tutorial Part 11: Deploying Django to production"
 slug: Learn/Server-side/Django/Deployment
 ---
 
@@ -195,10 +195,10 @@ There are a lot of ways of to work with git, but one of the easiest is to first 
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
 3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
 
-    - Enter a new repository name (e.g. _django_local_library_), and description (e.g. "Local Library website written in Django".
-    - Choose **Python** in the _Add .gitignore_ selection list.
-    - Choose your preferred license in the _Add license_ selection list.
-    - Check **Initialize this repository with a README**.
+   - Enter a new repository name (e.g. _django_local_library_), and description (e.g. "Local Library website written in Django".
+   - Choose **Python** in the _Add .gitignore_ selection list.
+   - Choose your preferred license in the _Add license_ selection list.
+   - Check **Initialize this repository with a README**.
 
 4. Press **Create repository**.
 5. Click the green "**Clone or download**" button on your new repo page.
@@ -209,65 +209,65 @@ Now the repository ("repo") is created we are going to want to clone it on our l
 1. Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
 2. Open a command prompt/terminal and clone your repository using the URL you copied above:
 
-    ```bash
-    git clone https://github.com/<your_git_user_id>/django_local_library.git
-    ```
+   ```bash
+   git clone https://github.com/<your_git_user_id>/django_local_library.git
+   ```
 
-    This will create the repository below the current point.
+   This will create the repository below the current point.
 
 3. Navigate into the new repo.
 
-    ```bash
-    cd django_local_library.git
-    ```
+   ```bash
+   cd django_local_library.git
+   ```
 
 The final step is to copy in your application and then add the files to your repo using git:
 
 1. Copy your Django application into this folder (all the files at the same level as **manage.py** and below, **not** their containing locallibrary folder).
 2. Open the **.gitignore** file, copy the following lines into the bottom of it, and then save (this file is used to identify files that should not be uploaded to git by default).
 
-    ```
-    # Text backup files
-    *.bak
+   ```
+   # Text backup files
+   *.bak
 
-    #Database
-    *.sqlite3
-    ```
+   #Database
+   *.sqlite3
+   ```
 
 3. Open a command prompt/terminal and use the `add` command to add all files to git.
 
-    ```bash
-    git add -A
-    ```
+   ```bash
+   git add -A
+   ```
 
 4. Use the status command to check all files that you are about to add are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
 
-    ```
-    > git status
-    On branch master
-    Your branch is up-to-date with 'origin/master'.
-    Changes to be committed:
-      (use "git reset HEAD <file>..." to unstage)
+   ```
+   > git status
+   On branch master
+   Your branch is up-to-date with 'origin/master'.
+   Changes to be committed:
+     (use "git reset HEAD <file>..." to unstage)
 
-            modified:   .gitignore
-            new file:   catalog/__init__.py
-            ...
-            new file:   catalog/migrations/0001_initial.py
-            ...
-            new file:   templates/registration/password_reset_form.html
-    ```
+           modified:   .gitignore
+           new file:   catalog/__init__.py
+           ...
+           new file:   catalog/migrations/0001_initial.py
+           ...
+           new file:   templates/registration/password_reset_form.html
+   ```
 
 5. When you're satisfied commit the files to your local repository:
 
-    ```bash
-    git commit -m "First version of application moved into github"
-    ```
+   ```bash
+   git commit -m "First version of application moved into github"
+   ```
 
 6. Then synchronise your local repository to the Github website, using the following:
 
-    ```bash
-    git push origin master
-    ```
+   ```bash
+   git push origin master
+   ```
 
 When this operation completes, you should be able to go back to the page on Github where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.
 
@@ -649,21 +649,3 @@ The next step is to read our last few articles, and then complete the assessment
   - [Other Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
-
-## 本系列課程
-
-- [Django 介紹](/zh-TW/docs/Learn/Server-side/Django/Introduction)
-- [設定 Django 開發環境](/zh-TW/docs/Learn/Server-side/Django/development_environment)
-- [Django 教學: 本地圖書館網站](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django 教學 第 2 部分: 建立網站骨架](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)
-- [Django 教學 第 3 部分: 使用模型](/zh-TW/docs/Learn/Server-side/Django/Models)
-- [Django 教學 第 4 部分: Django 的管理員頁面](/zh-TW/docs/Learn/Server-side/Django/Admin_site)
-- [Django 教學 第 5 部分: 創建我們的首頁](/zh-TW/docs/Learn/Server-side/Django/Home_page)
-- [Django 教學 第 6 部分: 通用列表與詳細視圖](/zh-TW/docs/Learn/Server-side/Django/Generic_views)
-- [Django 教學 第 7 部分: 會話 (Sessions) 框架](/zh-TW/docs/Learn/Server-side/Django/Sessions)
-- [Django 教學 第 8 部分: 使用者的身分驗證與權限](/zh-TW/docs/Learn/Server-side/Django/Authentication)
-- [Django 教學 第 9 部分: 使用表單](/zh-TW/docs/Learn/Server-side/Django/Forms)
-- [Django 教學 第 10 部分: 測試 Django 網頁應用](/zh-TW/docs/Learn/Server-side/Django/Testing)
-- [Django 教學 第 11 部分: 部署 Django 到生產環境(production)](/zh-TW/docs/Learn/Server-side/Django/Deployment)
-- [Django 網頁應用安全](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django 迷你部落格](/zh-TW/docs/Learn/Server-side/Django/django_assessment_blog)

@@ -1,7 +1,6 @@
 ---
 title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/reject
 ---
 
 {{JSRef}}
@@ -45,9 +44,9 @@ Promise.reject(new Error('fail')).then(function() {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Promise.reject")}}
+{{Compat}}
 
 ## Ver también
 

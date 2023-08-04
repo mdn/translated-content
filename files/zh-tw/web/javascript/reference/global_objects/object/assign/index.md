@@ -3,11 +3,13 @@ title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 ---
 
-{{JSRef}}**`Object.assign()`**被用來複製一個或多個物件自身所有可數的屬性到另一個目標物件。回傳的值為該目標物件。
+{{JSRef}}
+
+**`Object.assign()`** 被用來複製一個或多個物件自身所有可數的屬性到另一個目標物件。回傳的值為該目標物件。
 
 ## 語法
 
-```plain
+```js-nolint
 Object.assign(target, ...sources)
 ```
 
@@ -50,20 +52,20 @@ console.log(copy); // { a: 1 }
 
 ```js
 function test() {
-  let a = { b: {c:4} , d: { e: {f:1}} }
-  let g = Object.assign({},a) // 淺層
+  let a = { b: { c: 4 }, d: { e: { f: 1 } } };
+  let g = Object.assign({}, a); // 淺層
   let h = JSON.parse(JSON.stringify(a)); // 深層
-  console.log(g.d) // { e: { f: 1 } }
-  g.d.e = 32
-  console.log('g.d.e set to 32.') // g.d.e set to 32.
-  console.log(g) // { b: { c: 4 }, d: { e: 32 } }
-  console.log(a) // { b: { c: 4 }, d: { e: 32 } }
-  console.log(h) // { b: { c: 4 }, d: { e: { f: 1 } } }
-  h.d.e = 54
-  console.log('h.d.e set to 54.') // h.d.e set to 54.
-  console.log(g) // { b: { c: 4 }, d: { e: 32 } }
-  console.log(a) // { b: { c: 4 }, d: { e: 32 } }
-  console.log(h) // { b: { c: 4 }, d: { e: 54 } }
+  console.log(g.d); // { e: { f: 1 } }
+  g.d.e = 32;
+  console.log("g.d.e set to 32."); // g.d.e set to 32.
+  console.log(g); // { b: { c: 4 }, d: { e: 32 } }
+  console.log(a); // { b: { c: 4 }, d: { e: 32 } }
+  console.log(h); // { b: { c: 4 }, d: { e: { f: 1 } } }
+  h.d.e = 54;
+  console.log("h.d.e set to 54."); // h.d.e set to 54.
+  console.log(g); // { b: { c: 4 }, d: { e: 32 } }
+  console.log(a); // { b: { c: 4 }, d: { e: 32 } }
+  console.log(h); // { b: { c: 4 }, d: { e: 54 } }
 }
 test();
 ```
@@ -77,7 +79,7 @@ var o3 = { c: 3 };
 
 var obj = Object.assign(o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
-console.log(o1);  // { a: 1, b: 2, c: 3 }, 目標物件本身也被改變。
+console.log(o1); // { a: 1, b: 2, c: 3 }, 目標物件本身也被改變。
 ```
 
 ### 有相同屬性時合併物件
@@ -97,7 +99,7 @@ console.log(obj); // { a: 1, b: 2, c: 3 }，屬性c為o3.c的值，最後一個�
 
 ```js
 var o1 = { a: 1 };
-var o2 = { [Symbol('foo')]: 2 };
+var o2 = { [Symbol("foo")]: 2 };
 
 var obj = Object.assign({}, o1, o2);
 console.log(obj); // { a : 1, [Symbol("foo")]: 2 } (cf. bug 1207182 on Firefox)
@@ -107,15 +109,19 @@ Object.getOwnPropertySymbols(obj); // [Symbol(foo)]非不在
 ### 在屬性鏈中的不可列舉屬性不會被複製
 
 ```js
-var obj = Object.create({ foo: 1 }, { // foo 是 obj 的屬性鏈。
-  bar: {
-    value: 2  // bar 是不可列舉的屬性，因為enumerable預設為false。
+var obj = Object.create(
+  { foo: 1 },
+  {
+    // foo 是 obj 的屬性鏈。
+    bar: {
+      value: 2, // bar 是不可列舉的屬性，因為enumerable預設為false。
+    },
+    baz: {
+      value: 3,
+      enumerable: true, // baz 是自身可列舉的屬性。
+    },
   },
-  baz: {
-    value: 3,
-    enumerable: true  // baz 是自身可列舉的屬性。
-  }
-});
+);
 
 var copy = Object.assign({}, obj);
 console.log(copy); // { baz: 3 }
@@ -124,10 +130,10 @@ console.log(copy); // { baz: 3 }
 ### 原始型別會被包成物件
 
 ```js
-var v1 = 'abc';
+var v1 = "abc";
 var v2 = true;
 var v3 = 10;
-var v4 = Symbol('foo');
+var v4 = Symbol("foo");
 
 var obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
 // 原始型別會被打包，null和undefined則會被忽略。
@@ -138,20 +144,20 @@ console.log(obj); // { "0": "a", "1": "b", "2": "c" }
 ### 任何異常將會中斷正進行的複製程序
 
 ```js
-var target = Object.defineProperty({}, 'foo', {
+var target = Object.defineProperty({}, "foo", {
   value: 1,
-  writable: false
+  writable: false,
 }); // target.foo 是 read-only (唯讀)屬性
 
 Object.assign(target, { bar: 2 }, { foo2: 3, foo: 3, foo3: 3 }, { baz: 4 });
 // TypeError: "foo" 是 read-only
 // 在指派值給 target.foo 時，異常(Exception)會被拋出。
 
-console.log(target.bar);  // 2, 第一個來源物件複製成功。
+console.log(target.bar); // 2, 第一個來源物件複製成功。
 console.log(target.foo2); // 3, 第二個來源物件的第一個屬性複製成功。
-console.log(target.foo);  // 1, 異常在這裡拋出。
+console.log(target.foo); // 1, 異常在這裡拋出。
 console.log(target.foo3); // undefined, 複製程式已中斷，複製失敗。
-console.log(target.baz);  // undefined, 第三個來源物件也不會被複製。
+console.log(target.baz); // undefined, 第三個來源物件也不會被複製。
 ```
 
 ### 複製的存取程序
@@ -161,7 +167,7 @@ var obj = {
   foo: 1,
   get bar() {
     return 2;
-  }
+  },
 };
 
 var copy = Object.assign({}, obj);
@@ -170,13 +176,13 @@ console.log(copy);
 
 // 這個函式用來複製完整的描述內容。
 function completeAssign(target, ...sources) {
-  sources.forEach(source => {
+  sources.forEach((source) => {
     let descriptors = Object.keys(source).reduce((descriptors, key) => {
       descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
       return descriptors;
     }, {});
     // Object.assign 預設會複製可列舉的Symbols。
-    Object.getOwnPropertySymbols(source).forEach(sym => {
+    Object.getOwnPropertySymbols(source).forEach((sym) => {
       let descriptor = Object.getOwnPropertyDescriptor(source, sym);
       if (descriptor.enumerable) {
         descriptors[sym] = descriptor;
@@ -197,11 +203,13 @@ console.log(copy);
 {{Glossary("Polyfill","polyfill")}} 不支援 Symbol 屬性，因為 ES5 沒有 Symbol 型別。
 
 ```js
-if (typeof Object.assign != 'function') {
-  Object.assign = function (target, varArgs) { // .length of function is 2
-    'use strict';
-    if (target == null) { // TypeError if undefined or null
-      throw new TypeError('Cannot convert undefined or null to object');
+if (typeof Object.assign != "function") {
+  Object.assign = function (target, varArgs) {
+    // .length of function is 2
+    "use strict";
+    if (target == null) {
+      // TypeError if undefined or null
+      throw new TypeError("Cannot convert undefined or null to object");
     }
 
     var to = Object(target);
@@ -209,7 +217,8 @@ if (typeof Object.assign != 'function') {
     for (var index = 1; index < arguments.length; index++) {
       var nextSource = arguments[index];
 
-      if (nextSource != null) { // Skip over if undefined or null
+      if (nextSource != null) {
+        // Skip over if undefined or null
         for (var nextKey in nextSource) {
           // Avoid bugs when hasOwnProperty is shadowed
           if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {

@@ -1,7 +1,6 @@
 ---
 title: WindowEventHandlers
 slug: orphaned/Web/API/WindowEventHandlers
-original_slug: Web/API/WindowEventHandlers
 ---
 
 {{APIRef("HTML DOM")}}
@@ -46,14 +45,6 @@ _The events properties, of the form `onXYZ`, are defined on the {{domxref("Windo
 ## Methods
 
 _This interface defines no method._
-
-## Especificaciones
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat("api.WindowEventHandlers")}}
 
 ## See also
 

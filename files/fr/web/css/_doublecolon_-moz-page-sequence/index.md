@@ -1,12 +1,6 @@
 ---
-title: '::-moz-page-sequence'
+title: "::-moz-page-sequence"
 slug: Web/CSS/::-moz-page-sequence
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::-moz-page-sequence
 ---
 
 {{CSSRef}}{{non-standard_header}}
@@ -23,7 +17,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-moz-page-sequence")}}
+{{Compat}}
 
 ## Voir aussi
 

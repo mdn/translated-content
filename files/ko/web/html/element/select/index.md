@@ -20,7 +20,7 @@ slug: Web/HTML/Element/select
 
 `<option>` 요소를 {{htmlelement("optgroup")}} 요소 안에 배치하면 드롭다운 내에서 옵션 그룹을 나눌 수 있습니다.
 
-<p class="hidden">For further examples, see <a href="/en-US/docs/Learn/HTML/Forms/The_native_form_widgets#Drop-down_content">The native form widgets: Drop-down content</a>.</p>
+<p class="hidden">For further examples, see <a href="/ko/docs/Learn/HTML/Forms/The_native_form_widgets#Drop-down_content">The native form widgets: Drop-down content</a>.</p>
 
 ## 특성
 
@@ -58,7 +58,8 @@ slug: Web/HTML/Element/select
 ### 여러 기능을 갖춘 복잡한 메뉴
 
 ```html
-<label>Please choose one or more pets:
+<label
+  >Please choose one or more pets:
   <select name="pets" multiple size="4">
     <optgroup label="4-legged pets">
       <option value="dog">Dog</option>
@@ -150,7 +151,7 @@ slug: Web/HTML/Element/select
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.select")}}
+{{Compat}}
 
 ## 같이 보기
 

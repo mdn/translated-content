@@ -1,7 +1,7 @@
 ---
 title: WindowProxy
 slug: Glossary/WindowProxy
-l10n: 
+l10n:
   sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 

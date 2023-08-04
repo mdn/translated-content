@@ -2,6 +2,7 @@
 title: AudioParam
 slug: Web/API/AudioParam
 ---
+
 {{APIRef("Web Audio API")}}
 
 Web Audio API의 `AudioParam` 인터페이스는 오디오에 관련된 파라미터를 나타내는데, 보통 ({{ domxref("GainNode.gain") }}과 같은) {{domxref("AudioNode")}}의 파라미터입니다.

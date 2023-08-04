@@ -51,8 +51,8 @@ HEAD /index.html
 
 ## Especificações
 
-| Especificação                                | Título                                                       |
-| -------------------------------------------- | ------------------------------------------------------------ |
+| Especificação                    | Título                                                       |
+| -------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7231", "HEAD", "4.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semântica e Conteúdo |
 
 ## Compatibilidade com navegadores

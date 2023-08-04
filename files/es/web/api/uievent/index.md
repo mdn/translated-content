@@ -1,62 +1,54 @@
 ---
 title: UIEvent
 slug: Web/API/UIEvent
+l10n:
+  sourceCommit: 3ca86db64959ed9dc6c8021dc3eb89e82a6628c7
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
-The **`UIEvent`** interface represents simple user interface events.
+La interfaz **`UIEvent`** representa eventos de interfaz de usuario simples.
 
-`UIEvent` derives from {{domxref("Event")}}. Though the {{domxref("UIEvent.initUIEvent()")}} method is kept for backward compatibility, creating of a `UIEvent` object should be done using the {{domxref("UIEvent.UIEvent", "UIEvent()")}} constructor.
+`UIEvent` deriva de {{domxref("Event")}}. Aunque el método {{domxref("UIEvent.initUIEvent()")}} se mantiene por compatibilidad con versiones anteriores, debe crear un objeto `UIEvent` utilizando el constructor {{domxref("UIEvent.UIEvent", "UIEvent()")}}.
 
-Several interfaces are direct or indirect descendants of this one: {{domxref("MouseEvent")}}, {{domxref("FocusEvent")}}, {{domxref("KeyboardEvent")}}, {{domxref("WheelEvent")}}, {{domxref("InputEvent")}}, and {{domxref("CompositionEvent")}}.
+Varias interfaces son descendientes directas o indirectas de esta: {{domxref("MouseEvent")}}, {{domxref("TouchEvent")}}, {{domxref("FocusEvent")}}, {{domxref("KeyboardEvent" )}}, {{domxref("WheelEvent")}}, {{domxref("InputEvent")}} y {{domxref("CompositionEvent")}}.
 
-## Constructors
+{{InheritanceDiagram}}
+
+## Constructor
 
 - {{domxref("UIEvent.UIEvent()", "UIEvent()")}}
-  - : Creates a `UIEvent` object.
+  - : Crea un objeto `UIEvent`.
 
-## Properties
+## Propiedades de instancia
 
-_This interface also inherits properties of its parent, {{domxref("Event")}}._
+_Esta interfaz también hereda las propiedades de su padre, {{domxref("Event")}}._
 
-- {{domxref("UIEvent.cancelBubble")}} {{Deprecated_inline}}{{Non-standard_inline}}
-  - : Is a {{jsxref("Boolean")}} indicating whether the bubbling of the event has been canceled or not.
+- {{domxref("UIEvent.detail")}} {{ReadOnlyInline}}
+  - : Devuelve un `long` con detalles sobre el evento, según el tipo de evento.
+- {{domxref("UIEvent.sourceCapabilities")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Devuelve una instancia de la interfaz `InputDeviceCapabilities`, que proporciona información sobre el dispositivo físico responsable de generar un evento táctil.
+- {{domxref("UIEvent.view")}} {{ReadOnlyInline}}
+  - : Devuelve un {{Glossary("WindowProxy")}} que contiene la vista que generó el evento.
+- {{domxref("UIEvent.which")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
+  - : Devuelve el `keyCode` numérico de la tecla pulsada, o el código de carácter (`charCode`) de una tecla alfanumérica pulsada.
 
-<!---->
+## Métodos de instancia
 
-- {{domxref("UIEvent.detail")}}{{readonlyinline}}
-  - : Returns a `long` that gives some detail about the event, depending on the type of event.
-- {{domxref("UIEvent.isChar")}} {{Non-standard_inline}} {{readonlyinline}}
-  - : Returns a {{jsxref("Boolean")}} indicating whether the event produced a key character or not.
-- {{domxref("UIEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}
-  - : Returns the horizontal coordinate of the event relative to the current layer.
-- {{domxref("UIEvent.layerY")}} {{Non-standard_inline}} {{readonlyinline}}
-  - : Returns the vertical coordinate of the event relative to the current layer.
-- {{domxref("UIEvent.pageX")}} {{Non-standard_inline}} {{readonlyinline}}
-  - : Returns the horizontal coordinate of the event relative to the whole document.
-- {{domxref("UIEvent.pageY")}} {{Non-standard_inline}} {{readonlyinline}}
-  - : Returns the vertical coordinate of the event relative to the whole document.
-- {{domxref("UIEvent.view")}}{{readonlyinline}}
-  - : Returns a {{domxref("WindowProxy")}} that contains the view that generated the event.
-- {{domxref("UIEvent.which")}} {{Non-standard_inline}} {{readonlyinline}}
-  - : Returns the numeric `keyCode` of the key pressed, or the character code (`charCode`) for an alphanumeric key pressed.
+_Esta interfaz también hereda métodos de su padre, {{domxref("Event")}}._
 
-## Methods
+- {{domxref("UIEvent.initUIEvent()")}} {{Deprecated_Inline}}
+  - : Inicializa un objeto `UIEvent`. Si el evento ya se envió, este método no hace nada.
 
-_This interface also inherits methods of its parent, {{domxref("Event")}}._
-
-- {{domxref("UIEvent.initUIEvent()")}} {{deprecated_inline}}
-  - : Initializes a `UIEvent` object. If the event has already being dispatched, this method does nothing.
-
-## Specifications
+## Especificaciones
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.UIEvent")}}
+{{Compat}}
 
-## See also
+## Véase también
 
-- {{ domxref("Event") }}
+- [Introducción a eventos](/es/docs/Learn/JavaScript/Building_blocks/Events)
+- {{domxref("Event")}}

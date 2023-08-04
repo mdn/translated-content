@@ -1,19 +1,13 @@
 ---
 title: JSON.stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
-tags:
-  - JSON
-  - JavaScript
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 ---
 
 {{JSRef("Global_Objects", "JSON")}}
 
 ## Сводка
 
-Метод **`JSON.stringify()`** преобразует значение JavaScript в строку JSON, возможно с заменой значений, если указана функция замены, или с включением только определённых свойств, если указан массив замены.
+Метод **`JSON.stringify()`** возвращает JavaScript-значение, преобразованное в JSON-строку. Возможна замена значений, если как `replacer` передана функция, или включение только определённых свойств, если как `replacer` указан массив.
 
 ## Синтаксис
 

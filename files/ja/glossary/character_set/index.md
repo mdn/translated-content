@@ -1,6 +1,6 @@
 ---
 title: Character set (文字コード)
-slug: Glossary/character_set
+slug: Glossary/Character_set
 ---
 
 **文字コード**は、コンピューターに{{Glossary("Character", "文字")}} (文字、数字、区切り記号、空白文字などを含む) を理解させるための符号化システムです。
@@ -11,10 +11,10 @@ slug: Glossary/character_set
 
 1. Wikipedia の記事
 
-    1. [文字コード](https://ja.wikipedia.org/wiki/文字コード)
-    2. [文字化け](https://ja.wikipedia.org/wiki/文字化け)
+   1. [文字コード](https://ja.wikipedia.org/wiki/文字コード)
+   2. [文字化け](https://ja.wikipedia.org/wiki/文字化け)
 
 2. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Character", "文字")}}
-    2. {{Glossary("Unicode")}}
+   1. {{Glossary("Character", "文字")}}
+   2. {{Glossary("Unicode")}}

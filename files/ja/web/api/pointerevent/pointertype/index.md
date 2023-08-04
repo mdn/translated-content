@@ -2,7 +2,7 @@
 title: PointerEvent.pointerType
 slug: Web/API/PointerEvent/pointerType
 l10n:
-  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
+  sourceCommit: c244d3b2cb6c17e6ba8692e3faec393afd9988ca
 ---
 
 {{ APIRef("Pointer Events") }}
@@ -27,22 +27,26 @@ l10n:
 この例は、`pointerType` プロパティの値を使用して適切なポインターの種類の処理関数を呼び出す方法を示しています。
 
 ```js
-targetElement.addEventListener('pointerdown', (event) => {
-  // 適切なポインターの種類のハンドラーを呼び出す
-  switch (event.pointerType) {
-    case 'mouse':
-      process_pointer_mouse(event);
-      break;
-    case 'pen':
-      process_pointer_pen(event);
-      break;
-    case 'touch':
-      process_pointer_touch(event);
-      break;
-    default:
-      console.log(`pointerType ${event.pointerType} には対応していません`);
-  }
-}, false);
+  targetElement.addEventListener(
+  "pointerdown",
+  (event) => {
+    // 適切なポインターの種類のハンドラーを呼び出す
+    switch (event.pointerType) {
+      case "mouse":
+        process_pointer_mouse(event);
+        break;
+      case "pen":
+        process_pointer_pen(event);
+        break;
+      case "touch":
+        process_pointer_touch(event);
+        break;
+      default:
+        console.log(`pointerType ${event.pointerType} には対応していません`);
+    }
+  },
+  false
+);
 ```
 
 ## 仕様書

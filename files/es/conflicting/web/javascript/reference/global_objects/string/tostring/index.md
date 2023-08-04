@@ -1,7 +1,6 @@
 ---
 title: String.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
-original_slug: Web/JavaScript/Reference/Global_Objects/String/toSource
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -37,11 +36,11 @@ Este método usualmente es llamado internamente por JavaScript y no explícitame
 
 ## Especificaciones
 
-No es parte de ningún estándar. Implementado en JavaScript 1.3.
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.toSource")}}
+{{Compat}}
 
 ## Véase también
 

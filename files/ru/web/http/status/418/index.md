@@ -1,14 +1,6 @@
 ---
 title: 418 I'm a teapot
 slug: Web/HTTP/Status/418
-tags:
-  - 1 апреля
-  - '418'
-  - кофе
-  - кофейник
-  - чайник
-  - шутка
-translation_of: Web/HTTP/Status/418
 ---
 
 {{HTTPSidebar}}
@@ -30,7 +22,3 @@ HTTP код ошибки **`418 I'm a teapot`** сообщает о том, чт
 ## Поддержка браузерами
 
 {{Compat}}
-
-## Смотрите также
-
-- {{interwiki("wikipedia", "Hyper Text Coffee Pot Control Protocol", "Wikipedia: Hyper Text Coffee Pot Control Protocol")}}

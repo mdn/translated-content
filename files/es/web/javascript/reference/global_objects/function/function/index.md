@@ -1,7 +1,6 @@
 ---
 title: Function() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/Función
 ---
 
 {{JSRef("Objetos_globales", "Function")}}
@@ -56,9 +55,9 @@ Los argumentos "`a`" y "`b`" son nombres de argumentos formales que se utilizan 
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.Function")}}
+{{Compat}}
 
 ## Ve también
 

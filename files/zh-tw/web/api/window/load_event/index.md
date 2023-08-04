@@ -1,7 +1,6 @@
 ---
 title: load
 slug: Web/API/Window/load_event
-original_slug: Web/Events/load
 ---
 
 {{APIRef}}
@@ -25,8 +24,8 @@ original_slug: Web/Events/load
 
 ## 屬性
 
-| Property                              | Type                                             | Description                                                                                   |
-| ------------------------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------- |
+| Property                        | Type                                             | Description                                                                                   |
+| ------------------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------- |
 | `target` {{readonlyInline}}     | [`EventTarget`](/zh-TW/docs/Web/API/EventTarget) | The event target (the topmost target in the DOM tree).                                        |
 | `type` {{readonlyInline}}       | [`DOMString`](/zh-TW/docs/Web/API/DOMString)     | The type of event.                                                                            |
 | `bubbles` {{readonlyInline}}    | [`Boolean`](/zh-TW/docs/Web/API/Boolean)         | Whether the event normally bubbles or not.                                                    |
@@ -38,7 +37,7 @@ original_slug: Web/Events/load
 
 ```html
 <script>
-  window.addEventListener("load", function(event) {
+  window.addEventListener("load", function (event) {
     console.log("All resources finished loading!");
   });
 </script>

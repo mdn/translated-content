@@ -187,7 +187,6 @@ HTML DOM API 提供对各种浏览器功能的访问，例如选项卡和窗口�
 - {{DOMxRef("SVGElementInstanceList")}}
 - {{DOMxRef("SVGLength")}}
 - {{DOMxRef("SVGLengthList")}}
-- {{DOMxRef("SVGMatrix")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGNameList")}}
 - {{DOMxRef("SVGNumber")}}
 - {{DOMxRef("SVGNumberList")}}

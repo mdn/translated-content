@@ -1,6 +1,8 @@
 ---
-title: Node.previousSibling
+title: "Node: previousSibling プロパティ"
 slug: Web/API/Node/previousSibling
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -30,11 +32,11 @@ slug: Web/API/Node/previousSibling
 この例では、一連の `img` 要素が互いに隣り合っており、その間にホワイトスペースがありません。
 
 ```html
-<img id="b0"><img id="b1"><img id="b2">
+<img id="b0" /><img id="b1" /><img id="b2" />
 ```
 
 ```js
-document.getElementById("b1").previousSibling;    // <img id="b0">
+document.getElementById("b1").previousSibling; // <img id="b0">
 document.getElementById("b2").previousSibling.id; // "b1"
 ```
 
@@ -43,17 +45,17 @@ document.getElementById("b2").previousSibling.id; // "b1"
 この例では、 `img` 要素の間にホワイトスペースのテキストノード（改行）があります。
 
 ```html
-<img id="b0">
-<img id="b1">
-<img id="b2">
+<img id="b0" />
+<img id="b1" />
+<img id="b2" />
 ```
 
 ```js
-document.getElementById("b1").previousSibling;                 // #text
+document.getElementById("b1").previousSibling; // #text
 document.getElementById("b1").previousSibling.previousSibling; // <img id="b0">
 document.getElementById("b2").previousSibling.previousSibling; // <img id="b1">
-document.getElementById("b2").previousSibling;                 // #text
-document.getElementById("b2").previousSibling.id;              // undefined
+document.getElementById("b2").previousSibling; // #text
+document.getElementById("b2").previousSibling.id; // undefined
 ```
 
 ## 仕様書

@@ -1,6 +1,6 @@
 ---
 title: <input type="date">
-slug: Web/HTML/Element/Input/date
+slug: Web/HTML/Element/input/date
 ---
 
 {{HTMLSidebar}}
@@ -17,15 +17,15 @@ slug: Web/HTML/Element/Input/date
 
 날짜 선택을 위한 별도의 인터페이스를 갖춘 브라우저 중, Chrome과 Opera는 다음과 같은 모양의 달력을 보여줍니다.
 
-![A textbox containing “dd/mm/yyyy”, an increment/decrement button combo, and a downward arrow that opens into a calendar control.](date-picker-chrome.png)
+![A textbox containing "dd/mm/yyyy", an increment/decrement button combo, and a downward arrow that opens into a calendar control.](date-picker-chrome.png)
 
 구 Edge의 컨트롤입니다.
 
-![A textbox containing “mm/dd/yyyy”, but when interacted with, opens a tri-column date selector.](date-picker-edge.png)
+![A textbox containing "mm/dd/yyyy", but when interacted with, opens a tri-column date selector.](date-picker-edge.png)
 
 Firefox의 날짜 컨트롤입니다.
 
-![Another “dd/mm/yyyy” textbox that expands into a selectable calendar control.](firefox_datepicker.png)
+![Another "dd/mm/yyyy" textbox that expands into a selectable calendar control.](firefox_datepicker.png)
 
 <table class="properties">
   <tbody>
@@ -79,7 +79,7 @@ Firefox의 날짜 컨트롤입니다.
 {{htmlattrxref("value", "input")}} 특성에 날짜를 지정해서 입력 칸의 기본값을 지정할 수 있습니다.
 
 ```html
-<input type="date" value="2017-06-01">
+<input type="date" value="2017-06-01" />
 ```
 
 {{EmbedLiveSample('값', 600, 40)}}
@@ -90,7 +90,7 @@ Firefox의 날짜 컨트롤입니다.
 
 ```js
 var dateControl = document.querySelector('input[type="date"]');
-dateControl.value = '2017-06-01';
+dateControl.value = "2017-06-01";
 console.log(dateControl.value); // prints "2017-06-01"
 console.log(dateControl.valueAsNumber); // prints 1496275200000, a UNIX timestamp
 ```
@@ -147,7 +147,7 @@ A string value of `any` means that no stepping is implied, and any value is allo
 <form action="https://example.com">
   <label>
     Enter your birthday:
-    <input type="date" name="bday">
+    <input type="date" name="bday" />
   </label>
 
   <p><button>Submit</button></p>
@@ -164,8 +164,9 @@ A string value of `any` means that no stepping is implied, and any value is allo
 
 ```html
 <form>
-  <label for="party">Choose your preferred party date:
-    <input type="date" name="party" min="2017-04-01" max="2017-04-30">
+  <label for="party"
+    >Choose your preferred party date:
+    <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
   </label>
 </form>
 ```
@@ -194,7 +195,12 @@ A string value of `any` means that no stepping is implied, and any value is allo
 <form>
   <label>
     Choose your preferred party date (required, April 1st to 20th):
-    <input type="date" name="party" min="2017-04-01" max="2017-04-20" required>
+    <input
+      type="date"
+      name="party"
+      min="2017-04-01"
+      max="2017-04-20"
+      required />
     <span class="validity"></span>
   </label>
 
@@ -210,7 +216,7 @@ A string value of `any` means that no stepping is implied, and any value is allo
 
 지원하지 않는 브라우저를 사용하시는 경우엔 다음 스크린샷을 참고하세요.
 
-![The input field has an overlaid speech balloon, with an orange exclamation mark icon and the message “Please fill in this field.”](date-picker-chrome-error-message.png)
+![The input field has an overlaid speech balloon, with an orange exclamation mark icon and the message "Please fill in this field."](date-picker-chrome-error-message.png)
 
 다음은 위 코드에서 사용한 CSS로, {{cssxref(":valid")}}와 {{cssxref(":invalid")}} 의사 클래스를 사용해 입력한 값의 유효성 여부에 따라 다른 스타일을 적용하고 있습니다. 구체적으로는, 유효성에 따라 입력 칸의 옆에 배치한 {{htmlelement("span")}}에 아이콘을 추가합니다.
 
@@ -225,11 +231,11 @@ span::after {
 }
 
 input:invalid + span::after {
-  content: '✖';
+  content: "✖";
 }
 
-input:valid+span::after {
-  content: '✓';
+input:valid + span::after {
+  content: "✓";
 }
 ```
 
@@ -256,8 +262,9 @@ input:valid+span::after {
 
 ```html
 <form>
-  <label for="bday">Enter your birthday:
-    <input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}">
+  <label for="bday"
+    >Enter your birthday:
+    <input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}" />
     <span class="validity"></span>
   </label>
   <p>
@@ -281,11 +288,11 @@ span::after {
 }
 
 input:invalid + span::after {
-  content: '✖';
+  content: "✖";
 }
 
 input:valid + span::after {
-  content: '✓';
+  content: "✓";
 }
 ```
 
@@ -303,8 +310,9 @@ HTML은 다음과 같습니다.
 
 ```html
 <form>
-  <label class="nativeDatePicker">Enter your birthday:
-    <input type="date" name="bday">
+  <label class="nativeDatePicker"
+    >Enter your birthday:
+    <input type="date" name="bday" />
     <span class="validity"></span>
   </label>
 
@@ -350,11 +358,11 @@ span {
 }
 
 input:invalid + span::after {
-  content: '✖';
+  content: "✖";
 }
 
 input:valid + span::after {
-  content: '✓';
+  content: "✓";
 }
 ```
 
@@ -366,23 +374,23 @@ input:valid + span::after {
 
 ```js
 // define variables
-var nativePicker = document.querySelector('.nativeDatePicker');
-var fallbackPicker = document.querySelector('.fallbackDatePicker');
+var nativePicker = document.querySelector(".nativeDatePicker");
+var fallbackPicker = document.querySelector(".fallbackDatePicker");
 
-var yearSelect = document.querySelector('[name=year]');
-var monthSelect = document.querySelector('[name=month]');
+var yearSelect = document.querySelector("[name=year]");
+var monthSelect = document.querySelector("[name=month]");
 
 // Test whether a new date input falls back to a text input
-var testElement = document.createElement('input');
+var testElement = document.createElement("input");
 
 try {
-  test.type = 'date';
+  test.type = "date";
 } catch (e) {
   console.log(e.description);
 }
 
 // If it does, run the code inside the if () {} block
-if (testElement.type === 'text') {
+if (testElement.type === "text") {
   // hide the native picker and show the fallback
   nativePicker.hidden = true;
   fallbackPicker.hidden = false;
@@ -394,7 +402,7 @@ if (testElement.type === 'text') {
 }
 
 function populateDays(month) {
-  const daySelect = document.querySelector('[name=day]');
+  const daySelect = document.querySelector("[name=day]");
   const month = monthSelect.value;
 
   // Create variable to hold new number of days to inject
@@ -402,21 +410,24 @@ function populateDays(month) {
 
   // 31 or 30 days?
   switch (month) {
-    case 'April': case 'June': case 'September': case 'November':
+    case "April":
+    case "June":
+    case "September":
+    case "November":
       dayNum = 30;
-    break;
-    case 'February':
+      break;
+    case "February":
       // If month is February, calculate whether it is a leap year or not
       const year = yearSelect.value;
       const isLeap = new Date(year, 1, 29).getMonth() === 1;
       dayNum = isLeap ? 29 : 28;
-    break;
+      break;
     default:
       dayNum = 31;
   }
 
   // inject the right number of new <option>s into the <select>
-  daySelect.options = Array.from({ length: dayNum }, function(index) {
+  daySelect.options = Array.from({ length: dayNum }, function (index) {
     return index + 1;
   });
 
@@ -438,10 +449,10 @@ function populateDays(month) {
 
 function populateYears() {
   // get this year as a number
-  var year = (new Date()).getFullYear();
+  var year = new Date().getFullYear();
 
   // Make this year and the 100 years before it available in the <select>
-  daySelect.options = Array.from({ length: 100 }, function(index) {
+  daySelect.options = Array.from({ length: 100 }, function (index) {
     return index + year;
   });
 }
@@ -456,9 +467,9 @@ var previousDay;
 
 // update what day has been set to previously
 // see end of populateDays() for usage
-daySelect.onchange = function() {
+daySelect.onchange = function () {
   previousDay = daySelect.value;
-}
+};
 ```
 
 > **참고:** 어떤 연도는 53주임을 기억하세요! ([Wikipedia](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)) 프로덕션 애플리케이션을 개발할 땐 고려해야 할 사항입니다.

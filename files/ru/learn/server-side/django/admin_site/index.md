@@ -1,7 +1,6 @@
 ---
-title: 'Руководство Django часть 4: административная панель Django'
+title: "Руководство Django часть 4: административная панель Django"
 slug: Learn/Server-side/Django/Admin_site
-translation_of: Learn/Server-side/Django/Admin_site
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}

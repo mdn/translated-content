@@ -1,7 +1,6 @@
 ---
 title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/min
 ---
 
 {{JSRef}}
@@ -64,7 +63,7 @@ var x = Math.min(f(foo), limite);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.min")}}
+{{Compat}}
 
 ## Ver además
 

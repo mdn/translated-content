@@ -1,6 +1,6 @@
 ---
 title: Console.dir()
-slug: Web/API/Console/dir
+slug: Web/API/console/dir
 ---
 
 {{APIRef("Console API")}}
@@ -28,9 +28,9 @@ console.dir(objeto);
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.console.dir")}}
+{{Compat}}
 
 ## Ver también
 

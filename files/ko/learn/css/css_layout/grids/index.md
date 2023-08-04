@@ -52,7 +52,7 @@ CSS 그리드 레이아웃은 웹페이지를 위한 이차원 레이아웃 시�
 
 ```css
 .container {
-    display: grid;
+  display: grid;
 }
 ```
 
@@ -62,8 +62,8 @@ CSS 그리드 레이아웃은 웹페이지를 위한 이차원 레이아웃 시�
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 200px 200px 200px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
 }
 ```
 
@@ -74,26 +74,29 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 ```
 
 ```html hidden
 <div class="container">
- <div>하나</div>
- <div>둘</div>
- <div>셋</div>
- <div>넷</div>
- <div>다덧</div>
- <div>여섯</div>
- <div>일곱</div>
+  <div>하나</div>
+  <div>둘</div>
+  <div>셋</div>
+  <div>넷</div>
+  <div>다덧</div>
+  <div>여섯</div>
+  <div>일곱</div>
 </div>
 ```
 
@@ -114,8 +117,8 @@ body {
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 ```
 
@@ -123,8 +126,8 @@ body {
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
 }
 ```
 
@@ -135,7 +138,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container {
@@ -146,10 +152,9 @@ body {
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
-
 ```
 
 ```html hidden
@@ -174,9 +179,9 @@ body {
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 20px;
 }
 ```
 
@@ -187,7 +192,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container {
@@ -199,10 +207,9 @@ body {
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
-
 ```
 
 ```html hidden
@@ -236,9 +243,9 @@ body {
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 }
 ```
 
@@ -255,14 +262,17 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 ```
 
@@ -276,7 +286,6 @@ body {
   <div>여섯</div>
   <div>일곱</div>
 </div>
-
 ```
 
 ```css
@@ -298,10 +307,10 @@ body {
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 20px;
 }
 ```
 
@@ -318,16 +327,18 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
-
 ```
 
 ```html hidden
@@ -400,44 +411,47 @@ footer {
 ```
 
 ```css hidden
-                body {
-                    width: 90%;
-                    max-width: 900px;
-                    margin: 2em auto;
-                    font: .9em/1.2 Arial, Helvetica, sans-serif;
-                }
+body {
+  width: 90%;
+  max-width: 900px;
+  margin: 2em auto;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
+}
 
-                .container {
-                    display: grid;
-                    grid-template-columns: 1fr 3fr;
-                    grid-gap: 20px;
-                }
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 20px;
+}
 header {
-    grid-column: 1 / 3;
-    grid-row: 1;
+  grid-column: 1 / 3;
+  grid-row: 1;
 }
 
 article {
-    grid-column: 2;
-    grid-row: 2;
+  grid-column: 2;
+  grid-row: 2;
 }
 
 aside {
-    grid-column: 1;
-    grid-row: 2;
+  grid-column: 1;
+  grid-row: 2;
 }
 
 footer {
-    grid-column: 1 / 3;
-    grid-row: 3;
+  grid-column: 1 / 3;
+  grid-row: 3;
 }
 
 header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
@@ -450,13 +464,34 @@ aside {
   <header>이것은 나의 사랑스런 블로그입니다</header>
   <article>
     <h1>내 글</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
   <aside>
     <h2>Other things</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
   <footer>Contact me@mysite.com</footer>
 </div>
@@ -476,9 +511,9 @@ aside {
 .container {
   display: grid;
   grid-template-areas:
-      "header header"
-      "sidebar content"
-      "footer footer";
+    "header header"
+    "sidebar content"
+    "footer footer";
   grid-template-columns: 1fr 3fr;
   grid-gap: 20px;
 }
@@ -507,15 +542,18 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
@@ -525,9 +563,9 @@ aside {
 .container {
   display: grid;
   grid-template-areas:
-  "header header"
-  "sidebar content"
-  "footer footer";
+    "header header"
+    "sidebar content"
+    "footer footer";
   grid-template-columns: 1fr 3fr;
   grid-gap: 20px;
 }
@@ -547,7 +585,6 @@ aside {
 footer {
   grid-area: footer;
 }
-
 ```
 
 ```html hidden
@@ -555,12 +592,34 @@ footer {
   <header>이것은 나의 사랑스런 블로그입니다</header>
   <article>
     <h1>내 글</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
-  <aside><h2>Other things</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+  <aside>
+    <h2>Other things</h2>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
   <footer>Contact me@mysite.com</footer>
 </div>
@@ -611,12 +670,15 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0,1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 20px;
 }
 
@@ -644,14 +706,13 @@ header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
   border-right: 1px solid #999;
 }
-
 ```
 
 ```html hidden
@@ -659,16 +720,37 @@ aside {
   <header>이것은 나의 사랑스런 블로그입니다</header>
   <article>
     <h1>내 글</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
-  <aside><h2>Other things</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+  <aside>
+    <h2>Other things</h2>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
   <footer>Contact me@mysite.com</footer>
 </div>
-
 ```
 
 {{ EmbedLiveSample('Grid_8', '100%', 400) }}
@@ -687,18 +769,3 @@ aside {
 - [CSS 그리드 검사기: 그리드 레이아웃을 검사](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
-
-## 이번 단위에는
-
-- [CSS 레이아웃 소개](/ko/docs/Learn/CSS/CSS_layout/Introduction)
-- [일반 대열](/ko/docs/Learn/CSS/CSS_layout/일반_흐름)
-- [가변상자](/ko/docs/Learn/CSS/CSS_layout/Flexbox)
-- [그리드](/ko/docs/Learn/CSS/CSS_layout/Grids)
-- [부동체](/ko/docs/Learn/CSS/CSS_layout/Floats)
-- [위치잡기](/ko/docs/Learn/CSS/CSS_layout/%EC%9C%84%EC%B9%98%EC%9E%A1%EA%B8%B0)
-- [다단 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [반응형 디자인](/ko/docs/Learn/CSS/CSS_layout/%EB%B0%98%EC%9D%91%ED%98%95_%EB%94%94%EC%9E%90%EC%9D%B8)
-- [미디어 쿼리 초보자 안내서](/ko/docs/Learn/CSS/CSS_layout/%EB%AF%B8%EB%94%94%EC%96%B4_%EC%BF%BC%EB%A6%AC_%EC%B4%88%EB%B3%B4%EC%9E%90_%EC%95%88%EB%82%B4%EC%84%9C)
-- [레거시 레이아웃 메서드](/ko/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [이전 브라우저 지원](/ko/docs/Learn/CSS/CSS_layout/%EC%9D%B4%EC%A0%84_%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80_%EC%A7%80%EC%9B%90)
-- [레이아웃 이해도 필수 평가](/ko/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

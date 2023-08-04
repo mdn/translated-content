@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/push
 ---
 
 {{JSRef}}
@@ -92,9 +91,9 @@ Tenga en cuenta que aunque `obj` no es un array, el método `push` ha incrementa
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.push")}}
+{{Compat}}
 
 ## Ver también
 

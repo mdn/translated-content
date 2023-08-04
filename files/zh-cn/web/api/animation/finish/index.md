@@ -26,7 +26,7 @@ None.
 - `InvalidState`
   - : The player's playback rate is 0 or the animation's playback rate is greater than 0 and the end time of the animation is infinity.
 
-## **例子**
+## 示例
 
 The following example shows how to use the `finish()` method and catch an `InvalidState` error.
 
@@ -45,11 +45,9 @@ interfaceElement.addEventListener("mousedown", function() {
 The following example finishes all the animations on a single element, regardless of their direction of playback.
 
 ```js
-elem.getAnimations().forEach(
-  function(animation){
-    return animation.finish();
-  }
-);
+elem.getAnimations().forEach(function (animation) {
+  return animation.finish();
+});
 ```
 
 ## 规范
@@ -60,7 +58,7 @@ elem.getAnimations().forEach(
 
 {{Compat}}
 
-## 更多参考
+## 参见
 
 - [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
 - {{domxref("Animation")}} for other methods and properties you can use to control web page animation.

@@ -91,9 +91,9 @@ slug: Web/HTML/Element/li
 
 ```html
 <ol>
-    <li>first item</li>
-    <li>second item</li>
-    <li>third item</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ol>
 ```
 
@@ -103,9 +103,9 @@ slug: Web/HTML/Element/li
 
 ```html
 <ol type="I">
-    <li value="3">third item</li>
-    <li>fourth item</li>
-    <li>fifth item</li>
+  <li value="3">third item</li>
+  <li>fourth item</li>
+  <li>fifth item</li>
 </ol>
 ```
 
@@ -115,9 +115,9 @@ slug: Web/HTML/Element/li
 
 ```html
 <ul>
-    <li>first item</li>
-    <li>second item</li>
-    <li>third item</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ul>
 ```
 
@@ -129,7 +129,7 @@ slug: Web/HTML/Element/li
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.li")}}
+{{Compat}}
 
 ## 같이 보기
 

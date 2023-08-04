@@ -1,7 +1,6 @@
 ---
 title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/create
 ---
 
 {{JSRef}}
@@ -346,7 +345,7 @@ Note that while the setting of `null` as `[[Prototype]]` is supported in the rea
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.create")}}
+{{Compat}}
 
 ## Ver también
 

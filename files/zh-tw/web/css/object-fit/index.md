@@ -5,8 +5,6 @@ slug: Web/CSS/object-fit
 
 {{CSSRef}}
 
-## Summary
-
 The **`object-fit`** CSS property specifies how the contents of a replaced element should be fitted to the box established by its used height and width.
 
 物件契合(**`object-fit)`**CSS 屬性能指定置換元素(replaced element)的內容要如何契合、安裝到其使用的高度和寬度已確定的框。
@@ -53,30 +51,29 @@ object-fit: unset;
 ```html
 <div>
   <h2>object-fit: fill</h2>
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="fill"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="fill" />
 
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow" />
 
   <h2>object-fit: contain</h2>
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="contain"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="contain" />
 
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow" />
 
   <h2>object-fit: cover</h2>
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="cover"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="cover" />
 
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow" />
 
   <h2>object-fit: none</h2>
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="none"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="none" />
 
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="none narrow" />
 
   <h2>object-fit: scale-down</h2>
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="scale-down" />
 
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/>
-
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow" />
 </div>
 ```
 
@@ -84,7 +81,9 @@ object-fit: unset;
 
 ```css
 h2 {
-  font-family: Courier New, monospace;
+  font-family:
+    Courier New,
+    monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
 }

@@ -1,7 +1,6 @@
 ---
 title: Generator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador/throw
 ---
 
 {{JSRef}}
@@ -59,9 +58,9 @@ g.throw(new Error('Something went wrong'));
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Generator.throw")}}
+{{Compat}}
 
 ## See also
 

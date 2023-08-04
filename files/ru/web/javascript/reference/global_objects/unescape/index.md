@@ -1,7 +1,6 @@
 ---
 title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
-translation_of: Web/JavaScript/Reference/Global_Objects/unescape
 ---
 {{jsSidebar("Objects")}} {{deprecated_header()}}
 
@@ -11,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/unescape
 
 Последовательность может быть результатом работы функции вроде {{jsxref("Global_Objects/escape", "escape")}}. Т.к. {{jsxref("Global_Objects/decodeURIComponent", "unescape")}} является устаревшей, используйте {{jsxref("Global_Objects/decodeURI", "decodeURI")}} или {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} вместо неё.
 
-> **Примечание:** **Обратите внимание:** Не рекомендуется использовать `unescape` чтобы декодировать URI, используйте `decodeURI` вместо него.
+> **Примечание:** Не рекомендуется использовать `unescape` чтобы декодировать URI, используйте `decodeURI` вместо него.
 
 ## Синтаксис
 

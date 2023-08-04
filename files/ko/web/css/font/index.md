@@ -293,11 +293,11 @@ setCss();
 
 {{ EmbedLiveSample('Live_sample','100%', '440px')}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
@@ -305,4 +305,4 @@ setCss();
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Fundamental text and font styling](/ko/docs/Learn/CSS/Styling_text/Fundamentals)

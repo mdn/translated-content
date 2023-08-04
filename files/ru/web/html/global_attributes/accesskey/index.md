@@ -1,10 +1,6 @@
 ---
 title: accesskey
 slug: Web/HTML/Global_attributes/accesskey
-tags:
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/accesskey
 ---
 {{HTMLSidebar("Global_attributes")}}
 
@@ -12,7 +8,7 @@ translation_of: Web/HTML/Global_attributes/accesskey
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}
 
-> **Примечание:** **Замечание**: Спецификация WHATWG допускает использования нескольких символов разделённых пробелом. Однако, на момент написания, эта функциональность не поддерживается в современных браузерах. IE и Edge в таком случае будет использовать первый символ, игнорируя остальные.
+> **Примечание:** Спецификация WHATWG допускает использования нескольких символов разделённых пробелом. Однако, на момент написания, эта функциональность не поддерживается в современных браузерах. IE и Edge в таком случае будет использовать первый символ, игнорируя остальные.
 
 Активация элементов с помощью Accesskey зависит от браузера и платформы:
 

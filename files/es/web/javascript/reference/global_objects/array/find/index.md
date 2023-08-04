@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/find
 ---
 
 {{JSRef}}
@@ -195,9 +194,9 @@ Si necesitas dar soporte a motores de JavaScript realmente obsoletos que no sopo
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.find")}}
+{{Compat}}
 
 ## Ver también
 

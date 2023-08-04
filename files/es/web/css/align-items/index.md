@@ -77,9 +77,9 @@ align-items: unset;
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.align-items")}}
+{{Compat}}
 
 ## Véase también
 

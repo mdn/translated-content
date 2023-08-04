@@ -1,7 +1,6 @@
 ---
 title: Streams API
 slug: Web/API/Streams_API
-translation_of: Web/API/Streams_API
 ---
 
 {{SeeCompatTable}}{{APIRef("Streams")}}
@@ -94,13 +93,7 @@ Examples from other developers:
 
 ## Compatibilité des navigateurs
 
-### ReadableStream
-
-{{Compat("api.ReadableStream")}}
-
-### WritableStream
-
-{{Compat("api.WritableStream")}}
+{{Compat}}
 
 ## Voir aussi
 

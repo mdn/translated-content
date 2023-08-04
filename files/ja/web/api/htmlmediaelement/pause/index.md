@@ -1,6 +1,8 @@
 ---
 title: HTMLMediaElement.pause()
 slug: Web/API/HTMLMediaElement/pause
+l10n:
+  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,7 +11,7 @@ slug: Web/API/HTMLMediaElement/pause
 
 ## 構文
 
-```js
+```js-nolint
 pause()
 ```
 

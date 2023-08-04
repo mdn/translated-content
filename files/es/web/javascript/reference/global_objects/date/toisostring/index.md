@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.toISOString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toISOString
 ---
 
 {{JSRef}}
@@ -66,7 +65,7 @@ if (!Date.prototype.toISOString) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.toISOString")}}
+{{Compat}}
 
 ## Ver también
 

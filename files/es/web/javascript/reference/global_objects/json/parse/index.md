@@ -1,7 +1,6 @@
 ---
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
-original_slug: Web/JavaScript/Referencia/Objetos_globales/JSON/parse
 ---
 
 {{JSRef("Global_Objects", "JSON")}}
@@ -81,9 +80,9 @@ JSON.parse('{"foo" : 1, }');
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.JSON.parse")}}
+{{Compat}}
 
 ## Véase también
 

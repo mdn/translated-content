@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/Clear-Site-Data
 
 **`Clear-Site-Data`** 响应头，表示清除当前请求网站有关的浏览器数据（cookie，存储，缓存）。它让 Web 开发人员对浏览器本地存储的数据有更多控制能力。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 
@@ -33,6 +33,7 @@ Clear-Site-Data: "*"
 - `"cookies"`
   - : 表示服务端希望删除 URL 响应的所有 cookie。HTTP 身份验证凭据也会被清除。会影响整个主域，包括子域。所以 `https://example.com` 以及 `https://stage.example.com` 的 Cookie 都会被清除。
 - `"storage"`
+
   - : 表示服务端希望删除 URL 原响应的所有 DOM 存储。这包括存储机制，如
 
     - localStorage (执行 `localStorage.clear`),
@@ -43,6 +44,7 @@ Clear-Site-Data: "*"
     - WebSQL 数据库，
     - [FileSystem API data](/zh-CN/docs/Web/API/File_and_Directory_Entries_API),
     - Plugin data (Flash via [`NPP_ClearSiteData`](https://wiki.mozilla.org/NPAPI:ClearSiteData)).
+
 - `"executionContexts"`
   - : 表示服务端希望浏览器重新加载本请求 ({{domxref("Location.reload")}}).
 - `"*"` (通配符)

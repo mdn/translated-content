@@ -1,7 +1,6 @@
 ---
 title: Array.prototype[@@unscopables]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/@@unscopables
 ---
 
 {{JSRef}}
@@ -44,7 +43,7 @@ Object.keys(Array.prototype[Symbol.unscopables]);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.@@unscopables")}}
+{{Compat}}
 
 ## Ver también
 

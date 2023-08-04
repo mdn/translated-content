@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.requestAnimationFrame()
 slug: Web/API/VRDisplay/requestAnimationFrame
-translation_of: Web/API/VRDisplay/requestAnimationFrame
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
@@ -93,9 +92,7 @@ function drawVRScene() {
 
 ## Specifications
 
-| Specification                                                                                                                | Status                       | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#dom-vrdisplay-requestanimationframe', 'requestAnimationFrame()')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

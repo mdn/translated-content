@@ -1,7 +1,6 @@
 ---
 title: Gramática léxica
 slug: Web/JavaScript/Reference/Lexical_grammar
-original_slug: Web/JavaScript/Referencia/Gramatica_lexica
 ---
 
 {{JsSidebar("Más")}}
@@ -535,9 +534,9 @@ a + b;
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.grammar")}}
+{{Compat}}
 
 ## Ve también
 

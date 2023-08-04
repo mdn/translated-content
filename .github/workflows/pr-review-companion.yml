@@ -20,7 +20,8 @@ jobs:
     runs-on: ubuntu-latest
 
     if: >
-      ${{ github.event.workflow_run.event == 'pull_request' &&
+      ${{ github.repository == 'mdn/translated-content' &&
+      github.event.workflow_run.event == 'pull_request' &&
       github.event.workflow_run.conclusion == 'success' }}
 
     steps:
@@ -70,7 +71,7 @@ jobs:
         id: setup-python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.8"
+          python-version: "3.10"
 
       # See https://www.peterbe.com/plog/install-python-poetry-github-actions-faster
       - name: Load cached ~/.local

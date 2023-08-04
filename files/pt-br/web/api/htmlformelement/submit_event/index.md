@@ -1,5 +1,5 @@
 ---
-title: 'HTMLFormElement: submit event'
+title: "HTMLFormElement: submit event"
 slug: Web/API/HTMLFormElement/submit_event
 ---
 

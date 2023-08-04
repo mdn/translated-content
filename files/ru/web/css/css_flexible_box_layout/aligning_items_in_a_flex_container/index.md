@@ -1,8 +1,6 @@
 ---
 title: Выравнивание элементов во Flex контейнере
-slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
-original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элементов_в_Flex_контейнере
+slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 ---
 
 {{CSSRef}}
@@ -24,11 +22,11 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элем
 - {{cssxref("justify-content")}} — управляет выравниванием элементов по главной оси.
 - {{cssxref("align-items")}} — управляет выравниванием элементов по перекрёстной оси.
 - {{cssxref("align-self")}} — управляет выравниванием конкретного flex элемента по перекрёстной оси.
-- {{cssxref("align-content")}} — описывается в спецификации как “упаковка flex строк”; управляет промежутками между flex строками по перекрёстной оси.
+- {{cssxref("align-content")}} — описывается в спецификации как "упаковка flex строк"; управляет промежутками между flex строками по перекрёстной оси.
 
 Также будет рассмотрены авто-отступы для выравнивания элементов во flexbox.
 
-> **Примечание:** **Замечание**: Свойства выравнивания во Flexbox помещены в отдельную спецификацию — [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/). Ожидается, что данная спецификация в конце концов заменит свойства, определённые во Flexbox Level One.
+> **Примечание:** Свойства выравнивания во Flexbox помещены в отдельную спецификацию — [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/). Ожидается, что данная спецификация в конце концов заменит свойства, определённые во Flexbox Level One.
 
 ## Перекрёстная ось
 
@@ -102,7 +100,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элем
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}}
 
-> **Примечание:** **Замечание**: значение `space-evenly` не определено в спецификации flexbox и добавлено позже в спецификацию Box Alignment. Поддержка браузерами этого значение не так широка, как значений определённым в спецификации flexbox.
+> **Примечание:** значение `space-evenly` не определено в спецификации flexbox и добавлено позже в спецификацию Box Alignment. Поддержка браузерами этого значение не так широка, как значений определённым в спецификации flexbox.
 
 В [документации по `justify-content` на MDN](/ru/docs/Web/CSS/justify-content) приведено больше деталей о всех значениях и поддержке браузерами.
 

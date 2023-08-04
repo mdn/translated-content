@@ -1,7 +1,6 @@
 ---
 title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/defineProperties
 ---
 
 {{JSRef("Objetos_globales", "Object")}}
@@ -114,11 +113,9 @@ function defineProperties(obj, properties) {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-Basado en [Kangax's compat tables](http://kangax.github.com/es5-compat-table/).
-
-{{Compat("javascript.builtins.Object.defineProperties")}}
+{{Compat}}
 
 ## Ver también
 

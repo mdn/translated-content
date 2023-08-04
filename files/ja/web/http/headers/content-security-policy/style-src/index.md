@@ -1,11 +1,13 @@
 ---
-title: 'CSP: style-src'
+title: "CSP: style-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/style-src
+l10n:
+  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
 {{HTTPSidebar}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`style-src`** ディレクティブは、スタイルシートの有効なソースを指定します。
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`style-src`** ディレクティブは、スタイルシートの有効なソースを指定します。
 
 <table class="properties">
   <tbody>
@@ -43,7 +45,7 @@ Content-Security-Policy: style-src <source> <source>;
 
 ## 例
 
-## 違反例
+### 違反する場合
 
 この CSP ヘッダーがある場合、
 
@@ -54,10 +56,12 @@ Content-Security-Policy: style-src https://example.com/
 以下のスタイルシートはブロックされ、読み込まれません。
 
 ```html
-<link href="https://not-example.com/styles/main.css" rel="stylesheet" type="text/css" />
+<link href="https://not-example.com/styles/main.css" rel="stylesheet" />
 
 <style>
-#inline-style { background: red; }
+  #inline-style {
+    background: red;
+  }
 </style>
 
 <style>
@@ -67,7 +71,7 @@ Content-Security-Policy: style-src https://example.com/
 
 {{HTTPHeader("Link")}} ヘッダーで読み込まれるものも同様です。
 
-```
+```http
 Link: <https://not-example.com/styles/stylesheet.css>;rel=stylesheet
 ```
 
@@ -80,14 +84,14 @@ Link: <https://not-example.com/styles/stylesheet.css>;rel=stylesheet
 JavaScript で直接 `style` 属性を設定したり、 {{domxref("CSSStyleDeclaration.cssText", "cssText")}} を設定したりしたスタイルも同様です。
 
 ```js
-document.querySelector('div').setAttribute('style', 'display:none;');
-document.querySelector('div').style.cssText = 'display:none;';
+document.querySelector("div").setAttribute("style", "display:none;");
+document.querySelector("div").style.cssText = "display:none;";
 ```
 
 しかし、要素の {{domxref("HTMLElement.style", "style")}} プロパティに直接設定されたスタイルプロパティはブロックされず、 JavaScript から安全にスタイルを操作することができます。
 
 ```js
-document.querySelector('div').style.display = 'none';
+document.querySelector("div").style.display = "none";
 ```
 
 この手の操作は、 CSP の {{CSP("script-src")}} ディレクティブで JavaScript を無効にすることで防ぐことができます。
@@ -106,7 +110,9 @@ Content-Security-Policy: style-src 'unsafe-inline';
 
 ```html
 <style>
-  #inline-style { background: red; }
+  #inline-style {
+    background: red;
+  }
 </style>
 
 <div style="display:none">Foo</div>
@@ -114,7 +120,7 @@ Content-Security-Policy: style-src 'unsafe-inline';
 
 ノンスソースを使用して、特定のインラインスタイルのみ許可することができます。
 
-```
+```http
 Content-Security-Policy: style-src 'nonce-2726c7f26c'
 ```
 
@@ -122,7 +128,9 @@ Content-Security-Policy: style-src 'nonce-2726c7f26c'
 
 ```html
 <style nonce="2726c7f26c">
-  #inline-style { background: red; }
+  #inline-style {
+    background: red;
+  }
 </style>
 ```
 
@@ -134,14 +142,18 @@ echo -n "#inline-style { background: red; }" | openssl dgst -sha256 -binary | op
 
 ハッシュソースを使用すると、特定のインラインスタイルブロックのみを許可することができます。
 
-```
+```http
 Content-Security-Policy: style-src 'sha256-ozBpjL6dxO8fsS4u6fwG1dFDACYvpNxYeBA6tzR+FY8='
 ```
 
 ハッシュを生成するときは、 {{HTMLElement("style")}} タグを含めないようにし、大文字小文字と、ホワイトスペース、特に前後のホワイトスペースに注意してください。
 
 ```html
-<style>#inline-style { background: red; }</style>
+<style>
+  #inline-style {
+    background: red;
+  }
+</style>
 ```
 
 ### 安全ではない style 式

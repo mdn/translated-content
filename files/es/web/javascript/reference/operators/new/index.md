@@ -1,7 +1,6 @@
 ---
 title: Operador new
 slug: Web/JavaScript/Reference/Operators/new
-original_slug: Web/JavaScript/Referencia/Operadores/new
 ---
 
 {{jsSidebar("Operators", "Operadores")}}
@@ -146,9 +145,9 @@ car2.owner.name
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.new")}}
+{{Compat}}
 
 ## Ve también
 

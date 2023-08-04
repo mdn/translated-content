@@ -21,7 +21,7 @@ value = window.devicePixelRatio;
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Window.devicePixelRatio")}}
+{{Compat}}
 
 ## Ver también
 

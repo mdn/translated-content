@@ -52,22 +52,22 @@ slug: Learn/JavaScript/First_steps/Math
 
 1. 首先，先來宣告兩個變數，並分別賦予他們初始值為整數與浮點數，然後接著打上變數名稱來確認萬事預備:
 
-    ```js
-    var myInt = 5;
-    var myFloat = 6.667;
-    myInt;
-    myFloat;
-    ```
+   ```js
+   var myInt = 5;
+   var myFloat = 6.667;
+   myInt;
+   myFloat;
+   ```
 
 2. 數字的值不需要引號框起來 — 試著宣告和賦予更多初始值為數字的變數，在繼續下去之前。
 3. 現在，來確認 Now let's check that both our original variables are of the same datatype. There is an operator called {{jsxref("Operators/typeof", "typeof")}} in JavaScript that does this. Enter the below two lines as shown:
 
-    ```js
-    typeof myInt;
-    typeof myFloat;
-    ```
+   ```js
+   typeof myInt;
+   typeof myFloat;
+   ```
 
-    You should get `"number"` returned in both cases — this makes things a lot easier for us than if different numbers had different data types, and we had to deal with them in different ways. Phew!
+   You should get `"number"` returned in both cases — this makes things a lot easier for us than if different numbers had different data types, and we had to deal with them in different ways. Phew!
 
 ## 算術運算符
 
@@ -145,28 +145,28 @@ We probably don't need to teach you how to do basic math, but we would like to t
 
 1. First try entering some simple examples of your own, such as
 
-    ```js
-    10 + 7
-    9 * 8
-    60 % 3
-    ```
+   ```js
+   10 + 7;
+   9 * 8;
+   60 % 3;
+   ```
 
 2. You can also try declaring and initializing some numbers inside variables, and try using those in the sums — the variables will behave exactly like the values they hold for the purposes of the sum. For example:
 
-    ```js
-    var num1 = 10;
-    var num2 = 50;
-    9 * num1;
-    num2 / num1;
-    ```
+   ```js
+   var num1 = 10;
+   var num2 = 50;
+   9 * num1;
+   num2 / num1;
+   ```
 
 3. Last for this section, try entering some more complex expressions, such as:
 
-    ```js
-    5 + 10 * 3;
-    num2 % 9 * num1;
-    num2 + num1 / 8 + 2;
-    ```
+   ```js
+   5 + 10 * 3;
+   (num2 % 9) * num1;
+   num2 + num1 / 8 + 2;
+   ```
 
 Some of this last set of sums might not give you quite the result you were expecting; the below section might well give the answer as to why.
 
@@ -192,7 +192,7 @@ If you want to override operator precedence, you can put parentheses round the p
 
 Try it and see.
 
-> **備註：** A full list of all JavaScript operators and their precedence can be found in [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operator_precedence).
+> **備註：** A full list of all JavaScript operators and their precedence can be found in [Expressions and operators](Learn/JavaScript/First_steps/Math).
 
 ## 遞增和遞減運算符
 
@@ -262,7 +262,7 @@ var y = 4; // y contains the value 4
 x *= y; // x now contains the value 12
 ```
 
-> **備註：** There are lots of [other assignment operators available](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators), but these are the basic ones you should learn now.
+> **備註：** There are lots of [other assignment operators available](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators#賦值運算子), but these are the basic ones you should learn now.
 
 ## Active learning: sizing a canvas box
 
@@ -313,18 +313,18 @@ We'll look at how to code such logic when we look at conditional statements in a
 ```
 
 ```js
-var btn = document.querySelector('button');
-var txt = document.querySelector('p');
+var btn = document.querySelector("button");
+var txt = document.querySelector("p");
 
-btn.addEventListener('click', updateBtn);
+btn.addEventListener("click", updateBtn);
 
 function updateBtn() {
-  if (btn.textContent === 'Start machine') {
-    btn.textContent = 'Stop machine';
-    txt.textContent = 'The machine has started!';
+  if (btn.textContent === "Start machine") {
+    btn.textContent = "Stop machine";
+    txt.textContent = "The machine has started!";
   } else {
-    btn.textContent = 'Start machine';
-    txt.textContent = 'The machine is stopped.';
+    btn.textContent = "Start machine";
+    txt.textContent = "The machine is stopped.";
   }
 }
 ```
@@ -343,18 +343,6 @@ In this article we have covered the fundamental information you need to know abo
 
 In the next article, we'll explore text and how JavaScript allows us to manipulate it.
 
-> **備註：** If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our [Numbers and dates](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates) and [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators) articles.
+> **備註：** If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our [Numbers and dates](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates) and [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators) articles.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
-
-## 在這個學習模組中
-
-- [什麼是 JavaScript?](/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [和 JavaScript 的第一次接觸](/zh-TW/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [什麼出錯了？ JavaScript 的疑難排解（除錯）](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [儲存你需要的資訊 — 變數](/zh-TW/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript 的基本運算— 數字 與 運算子](/zh-TW/docs/Learn/JavaScript/First_steps/Math)
-- [處理文字 — JavaScript 的字串](/zh-TW/docs/Learn/JavaScript/First_steps/Strings)
-- [有用的字串方法](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [陣列](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays)
-- [附錄：笑話產生器](/zh-TW/docs/Learn/JavaScript/First_steps/Silly_story_generator)

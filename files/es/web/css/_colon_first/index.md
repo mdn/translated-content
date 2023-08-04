@@ -1,5 +1,5 @@
 ---
-title: ':first'
+title: ":first"
 slug: Web/CSS/:first
 ---
 
@@ -47,7 +47,7 @@ p {
 ```js
 document.querySelector("button").onclick = function () {
   window.print();
-}
+};
 ```
 
 ### Resultado
@@ -62,7 +62,7 @@ Presione el botón "Imprimir!" para imprimir el ejemplo. Las palabras en la prim
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.first")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,11 +1,13 @@
 ---
-title: HTMLAnchorElement.rel
+title: "HTMLAnchorElement: rel プロパティ"
 slug: Web/API/HTMLAnchorElement/rel
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLAnchorElement.rel`** プロパティは {{htmlattrxref("rel", "a")}} 属性を反映しています。これは、空白で区切られた[リンク種別](/ja/docs/Web/HTML/Link_types)のリストの入った文字列であり、{{HTMLElement("a")}} 要素で表されるリソースと現在の文書との関係を示します。
+**`HTMLAnchorElement.rel`** プロパティは [`rel`](/ja/docs/Web/HTML/Attributes/rel) 属性を反映しています。これは、空白で区切られたリンク種別のリストの入った文字列であり、{{HTMLElement("a")}} 要素で表されるリソースと現在の文書との関係を示します。
 
 ## 値
 
@@ -14,10 +16,9 @@ slug: Web/API/HTMLAnchorElement/rel
 ## 例
 
 ```js
-var anchors = document.getElementsByTagName("a");
-var length = anchors.length;
-for (var i = 0; i < length; i++) {
-  alert("Rel: " + anchors[i].rel);
+const anchors = document.getElementsByTagName("a");
+for (const anchor of anchors) {
+  alert(`Rel: ${anchor.rel}`);
 }
 ```
 

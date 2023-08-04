@@ -1,8 +1,8 @@
 ---
 title: Console.debug()
-slug: Web/API/Console/debug
-translation_of: Web/API/Console/debug
+slug: Web/API/console/debug
 ---
+
 {{APIRef("Console API")}}
 
 Выводит сообщение в веб.консоль Сообщение отображается только если консоль настроена на показ сообщений уровня отладки.

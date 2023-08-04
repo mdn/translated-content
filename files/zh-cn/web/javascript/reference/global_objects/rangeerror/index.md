@@ -48,7 +48,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RangeError
 ```js
 function check(n) {
   if (!(n >= -500 && n <= 500)) {
-    throw new RangeError("The argument must be between -500 and 500.")
+    throw new RangeError("The argument must be between -500 and 500.");
   }
 }
 
@@ -61,12 +61,14 @@ try {
 }
 ```
 
-### 使用 RangeError（对于其它的值）
+### 使用 RangeError（对于其他的值）
 
 ```js
 function check(value) {
   if (!["apple", "banana", "carrot"].includes(value)) {
-    throw new RangeError('The argument must be an "apple", "banana", or "carrot".')
+    throw new RangeError(
+      'The argument must be an "apple", "banana", or "carrot".',
+    );
   }
 }
 

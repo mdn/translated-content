@@ -1,7 +1,6 @@
 ---
 title: Math.expm1()
 slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/expm1
 ---
 
 {{JSRef}}
@@ -53,9 +52,9 @@ Math.expm1 = Math.expm1 || function(x) {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.expm1")}}
+{{Compat}}
 
 ## Vea también
 

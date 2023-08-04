@@ -1,7 +1,6 @@
 ---
 title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
-original_slug: Web/JavaScript/Referencia/Objetos_globales/AggregateError
 ---
 
 {{JSRef}}
@@ -54,9 +53,9 @@ try {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.AggregateError")}}
+{{Compat}}
 
 ## Ve también
 

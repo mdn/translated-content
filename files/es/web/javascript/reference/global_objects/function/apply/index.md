@@ -1,7 +1,6 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/apply
 ---
 
 {{JSRef("Objetos_globales", "Function")}}
@@ -138,9 +137,9 @@ Este método es especialmente útil cuando quieres depurar eventos, o interfaces
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.apply")}}
+{{Compat}}
 
 ## Véase también
 

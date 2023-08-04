@@ -1,13 +1,6 @@
 ---
 title: Window.document
 slug: Web/API/Window/document
-tags:
-  - API
-  - HTML DOM
-  - Propriété
-  - Reference
-  - Window
-translation_of: Web/API/Window/document
 ---
 
 {{APIRef}}

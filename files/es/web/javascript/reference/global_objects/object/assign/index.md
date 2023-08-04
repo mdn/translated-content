@@ -1,7 +1,6 @@
 ---
 title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/assign
 ---
 
 {{JSRef}}
@@ -250,7 +249,7 @@ if (typeof Object.assign != 'function') {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.assign")}}
+{{Compat}}
 
 ## Ver también
 

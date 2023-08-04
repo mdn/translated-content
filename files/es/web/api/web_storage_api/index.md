@@ -1,7 +1,6 @@
 ---
 title: API de almacenamiento web
 slug: Web/API/Web_Storage_API
-original_slug: Web/API/API_de_almacenamiento_web
 ---
 
 {{DefaultAPISidebar("Web Storage API")}}
@@ -40,19 +39,9 @@ También creamos una[página de salida del evento](http://mdn.github.io/web-stor
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-### `Window.localStorage`
-
-{{Compat("api.Window.localStorage")}}
-
-### `Window.sessionStorage`
-
-{{Compat("api.Window.sessionStorage")}}
-
-Todos los navegadores tienen distintos niveles de capacidad tanto para localStorage como para sessionStorage. Aquí está una [análisis detallado de todas las capacidades de almacenamiento de diferentes navegadores](http://dev-test.nemikor.com/web-storage/support-test/).
-
-> **Nota:** Desde iOS 5.1, Safari Mobile almacena los datos de localStorage en la carpeta de caché, la cual está sujeta a limpiezas ocasionales, a petición del sistema operativo, típicamente cuando el espacio es reducido.
+{{Compat}}
 
 ## Navegación privada / Modo incógnito
 

@@ -1,7 +1,6 @@
 ---
 title: Promise.all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/all
 ---
 
 {{JSRef}}
@@ -90,9 +89,9 @@ Promise.all([p1, p2, p3, p4, p5]).then(values => {
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript/promise","Promise.all")}}
+{{Compat}}
 
 ## Vea también
 

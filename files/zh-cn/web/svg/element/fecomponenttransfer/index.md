@@ -38,7 +38,13 @@ slug: Web/SVG/Element/feComponentTransfer
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
   <defs>
-    <linearGradient id="rainbow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100%" y2="0">
+    <linearGradient
+      id="rainbow"
+      gradientUnits="userSpaceOnUse"
+      x1="0"
+      y1="0"
+      x2="100%"
+      y2="0">
       <stop offset="0" stop-color="#ff0000"></stop>
       <stop offset="0.2" stop-color="#ffff00"></stop>
       <stop offset="0.4" stop-color="#00ff00"></stop>
@@ -81,13 +87,33 @@ slug: Web/SVG/Element/feComponentTransfer
     <text x="0" y="5%">Default</text>
     <rect x="0" y="8%" width="100%" height="20"></rect>
     <text x="0" y="26%">Identity</text>
-    <rect x="0" y="29%" width="100%" height="20" style="filter:url(#identity)"></rect>
+    <rect
+      x="0"
+      y="29%"
+      width="100%"
+      height="20"
+      style="filter:url(#identity)"></rect>
     <text x="0" y="47%">Table lookup</text>
-    <rect x="0" y="50%" width="100%" height="20" style="filter:url(#table)"></rect>
+    <rect
+      x="0"
+      y="50%"
+      width="100%"
+      height="20"
+      style="filter:url(#table)"></rect>
     <text x="0" y="68%">Linear function</text>
-    <rect x="0" y="71%" width="100%" height="20" style="filter:url(#linear)"></rect>
+    <rect
+      x="0"
+      y="71%"
+      width="100%"
+      height="20"
+      style="filter:url(#linear)"></rect>
     <text x="0" y="89%">Gamma function</text>
-    <rect x="0" y="92%" width="100%" height="20" style="filter:url(#gamma)"></rect>
+    <rect
+      x="0"
+      y="92%"
+      width="100%"
+      height="20"
+      style="filter:url(#gamma)"></rect>
   </g>
 </svg>
 ```

@@ -79,8 +79,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 ```html
 <footer>
-  Some copyright info or perhaps some author
-  info for an &lt;article&gt;?
+  Some copyright info or perhaps some author info for an &lt;article&gt;?
 </footer>
 ```
 
@@ -96,7 +95,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.footer")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/filter
 ---
 
 {{JSRef}}
@@ -193,7 +192,7 @@ if (!Array.prototype.filter){
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.filter")}}
+{{Compat}}
 
 ## Ver también
 

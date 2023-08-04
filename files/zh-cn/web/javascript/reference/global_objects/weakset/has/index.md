@@ -32,8 +32,8 @@ var ws = new WeakSet();
 var obj = {};
 ws.add(window);
 
-mySet.has(window);  // 返回 true
-mySet.has(obj);     // 返回 false
+mySet.has(window); // 返回 true
+mySet.has(obj); // 返回 false
 ```
 
 ## 规范

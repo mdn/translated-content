@@ -1,7 +1,6 @@
 ---
 title: Number.isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/isInteger
 ---
 
 {{JSRef}}
@@ -63,9 +62,9 @@ Number.isInteger = Number.isInteger || function(value) {
 
 {{Specifications}}
 
-## Compatitibilidad con navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.isInteger")}}
+{{Compat}}
 
 ## Ver también
 

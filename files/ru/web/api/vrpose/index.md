@@ -1,18 +1,6 @@
 ---
 title: VRPose
 slug: Web/API/VRPose
-tags:
-  - API
-  - Experimental
-  - Landing
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - VR
-  - VRPose
-  - Virtual Reality
-  - WebVR
-translation_of: Web/API/VRPose
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
@@ -38,7 +26,7 @@ This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and 
 
 ### Obsolete properties
 
-- {{domxref("VRPose.timeStamp")}} {{readonlyInline}} {{obsolete_inline}}
+- {{domxref("VRPose.timeStamp")}} {{readonlyInline}}
   - : Returns the current time stamp of the system — a monotonically increasing value useful for determining if position data has been updated, and what order updates have occured in. **This version of `timestamp` has been removed from the spec — instead, timestamps are now returned when {{domxref("VRDisplay.getFrameData()")}} is called — see {{domxref("VRFrameData.timestamp")}}.**
 
 ## Examples
@@ -47,9 +35,7 @@ This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and 
 
 ## Specifications
 
-| Specification                                                                | Status                       | Comment            |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#interface-vrpose', 'VRPose')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

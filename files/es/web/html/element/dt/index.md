@@ -1,7 +1,6 @@
 ---
 title: dt
 slug: Web/HTML/Element/dt
-original_slug: Web/HTML/Elemento/dt
 ---
 
 {{HTMLSidebar}}
@@ -81,9 +80,9 @@ Para ver un ejemplo, vea el [proveído por el elemento `<dl>`](/es/docs/Web/HTML
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.dt")}}
+{{Compat}}
 
 ## Vea también
 

@@ -1,6 +1,6 @@
 ---
 title: VisualViewport.offsetleft
-slug: Web/API/VisualViewport/offsetleft
+slug: Web/API/VisualViewport/offsetLeft
 ---
 
 {{SeeCompatTable}}{{APIRef("Visual Viewport")}}

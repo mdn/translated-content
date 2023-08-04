@@ -1,7 +1,6 @@
 ---
 title: Math.pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/pow
 ---
 
 {{JSRef("Global_Objects", "Math")}}
@@ -59,7 +58,7 @@ Math.pow(-7, 1/3); // NaN
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.pow")}}
+{{Compat}}
 
 ## Ver también
 

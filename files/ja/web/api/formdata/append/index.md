@@ -1,83 +1,77 @@
 ---
-title: FormData.append()
+title: "FormData: append() メソッド"
+short-title: append()
 slug: Web/API/FormData/append
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("XMLHttpRequest")}}
 
-インターフェイスの **`append()`** メソッドは、FormData オブジェクト内の既存のキーに新しい値を追加するか、キーがまだ存在しない場合は追加します。
+**`append()`** は {{domxref("FormData")}} インターフェイスのメソッドで、`FormData` オブジェクト内の既存のキーに新しい値を追加します。キーがまだ存在しない場合は追加します。
 
-{{domxref("FormData.set")}}との違いは、指定されたキーが既に存在する場合、{{domxref("FormData.set")}}はすべての既存の値を新しい値で上書きすることです。 一方、`append()`は、既存の値のセットの最後に新しい値を追加します。
+{{domxref("FormData.set", "set()")}} と `append()` の違いは、指定されたキーが既に存在する場合、`set()` は既存のすべての値を新しい値で上書きすることです。 一方、`append()` は、既存の値のセットの最後に新しい値を追加します。
 
-> **メモ:** **このメソッドは Web Workers で使用できます。**
+> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
-## Syntax
+## 構文
 
-There are two versions of this method: a two and a three parameter version:
-
-```js
-formData.append(name, value);
-formData.append(name, value, filename);
+```js-nolint
+append(name, value)
+append(name, value, filename)
 ```
 
-### Parameters
+### 引数
 
 - `name`
-  - : The name of the field whose data is contained in `value`.
+  - : `value` にあるデータのフィールド名です。
 - `value`
-  - : The field's value. This can be a {{domxref("USVString")}} or {{domxref("Blob")}} (including subclasses such as {{domxref("File")}}). If none of these are specified the value is converted to a string.
+  - : フィールドの値です。文字列または {{domxref("Blob")}}（{{domxref("File")}} などのサブクラスを含む）です。これらの何れでもないものが指定された場合、値は文字列に変換されます。
 - `filename` {{optional_inline}}
-  - : The filename reported to the server (a {{domxref("USVString")}}), when a {{domxref("Blob")}} or {{domxref("File")}} is passed as the second parameter. The default filename for {{domxref("Blob")}} objects is "blob". The default filename for {{domxref("File")}} objects is the file's filename.
+  - : 第 2 引数に {{domxref("Blob")}} または {{domxref("File")}} を渡した場合に、サーバーに報告されるファイル名（文字列）です。{{domxref("Blob")}} オブジェクトの既定のファイル名は "blob" です。{{domxref("File")}} オブジェクトの既定値は、ファイルのファイル名です。
 
-> **メモ:** If you specify a {{domxref("Blob")}} as the data to append to the `FormData` object, the filename that will be reported to the server in the "Content-Disposition" header used to vary from browser to browser.
+> **メモ:** `FormData` オブジェクトに追加するデータとして {{domxref("Blob")}} を指定した場合、"Content-Disposition" ヘッダーでサーバーに報告されるファイル名はブラウザーによって異なることがあります。
 
-### Returns
+### 返値
 
-Void.
+なし ({{jsxref("undefined")}})。
 
-## Example
-
-The following line creates an empty `FormData` object:
+## 例
 
 ```js
-var formData = new FormData(); // Currently empty
+formData.append("username", "Chris");
 ```
 
-You can add key/value pairs to this using {{domxref("FormData.append")}}:
+値が {{domxref("Blob")}} （または {{domxref("File")}}）である場合、`filename` 引数でそのファイル名を指定します。
 
 ```js
-formData.append('username', 'Chris');
-formData.append('userpic', myFileInput.files[0], 'chris.jpg');
+formData.append("userpic", myFileInput.files[0], "chris.jpg");
 ```
 
-As with regular form data, you can append multiple values with the same name. For example (and being compatible with PHP's naming conventions by adding \[] to the name):
+通常のフォームデータと同様に、同じ名前の複数の値を追加することができます。
 
 ```js
-formData.append('userpic[]', myFileInput.files[0], 'chris1.jpg');
-formData.append('userpic[]', myFileInput.files[1], 'chris2.jpg');
+formData.append("userpic", myFileInput.files[0], "chris1.jpg");
+formData.append("userpic", myFileInput.files[1], "chris2.jpg");
 ```
 
-This technique makes it simpler to process multi-file uploads because the resultant data structure is more conducive to looping.
-
-If the sent value is different than String or Blob it will be automatically converted to String:
+値が文字列でも `Blob` でもない場合、`append()` は自動的に文字列に変換します。
 
 ```js
-formData.append('name', true);
-formData.append('name', 74);
-formData.append('name', 'John');
-
-formData.getAll('name'); // ["true", "74", "John"]
+formData.append("name", true);
+formData.append("name", 72);
+formData.getAll("name"); // ["true", "72"]
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
-## See also
+{{Compat}}
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+## 関連情報
+
+- [FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

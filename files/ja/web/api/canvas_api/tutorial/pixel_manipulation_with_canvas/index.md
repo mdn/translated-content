@@ -1,7 +1,6 @@
 ---
 title: キャンバスとピクセル操作
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
-original_slug: Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}

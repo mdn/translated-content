@@ -1,8 +1,6 @@
 ---
 title: Server
 slug: Glossary/Server
-translation_of: Glossary/Server
-original_slug: Глоссарий/Server
 ---
 
 A server is a software or hardware offering a service to a user, usually referred to as client. A hardware server is a shared computer on a network, usually powerful and housed in a data center. A software server (often running on a hardware server) is a program that provides services to client programs or a {{glossary("UI","user interface")}} to human clients.
@@ -20,4 +18,3 @@ For example:
 ### General knowledge
 
 - [Introduction to servers](/en-US/Learn/What_is_a_web_server)
-- {{Interwiki("wikipedia", "Server (computing)")}} on Wikipedia

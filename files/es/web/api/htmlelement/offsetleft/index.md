@@ -59,9 +59,9 @@ This example shows a 'long' sentence that wraps within a div with a blue border,
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLElement.offsetLeft")}}
+{{Compat}}
 
 ## See also
 

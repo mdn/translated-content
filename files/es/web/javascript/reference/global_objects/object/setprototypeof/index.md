@@ -1,7 +1,6 @@
 ---
 title: Object.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/setPrototypeOf
 ---
 
 {{JSRef}}
@@ -161,9 +160,9 @@ george(); // 'Hello guys!!'
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.setPrototypeOf")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,13 +1,13 @@
 ---
-title: '::slotted()'
+title: "::slotted()"
 slug: Web/CSS/::slotted
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
-**`:slotted()`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 用于选定那些被放在 HTML 模板中的元素 (更多请查看 [使用模板和插槽](/zh-CN/docs/Web/Web_Components/Using_templates_and_slots))。
+**`:slotted()`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)用于选定那些被放在 HTML 模板中的元素（更多请查看[使用模板和插槽](/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots)）。
 
-这个伪类选择器仅仅适用于 [影子节点树 (Shadow Dom)](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM)。并且只会选择实际的元素节点，而不包括文本节点。
+这个伪类选择器仅仅适用于[影子节点树（Shadow Dom）](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)。并且只会选择实际的元素节点，而不包括文本节点。
 
 ```css
 /* Selects any element placed inside a slot */
@@ -47,26 +47,29 @@ slug: Web/CSS/::slotted
 自定义元素 `<person-details>` 的定义如下：
 
 ```js
-customElements.define('person-details',
+customElements.define(
+  "person-details",
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById('person-template');
+      let template = document.getElementById("person-template");
       let templateContent = template.content;
 
-      const shadowRoot = this.attachShadow({mode: 'open'});
+      const shadowRoot = this.attachShadow({ mode: "open" });
 
-      let style = document.createElement('style');
-      style.textContent = 'div { padding: 10px; border: 1px solid gray; width: 200px; margin: 10px; }' +
-                           'h2 { margin: 0 0 10px; }' +
-                           'ul { margin: 0; }' +
-                           'p { margin: 10px 0; }' +
-                           '::slotted(*) { color: gray; font-family: sans-serif; } ';
+      let style = document.createElement("style");
+      style.textContent =
+        "div { padding: 10px; border: 1px solid gray; width: 200px; margin: 10px; }" +
+        "h2 { margin: 0 0 10px; }" +
+        "ul { margin: 0; }" +
+        "p { margin: 10px 0; }" +
+        "::slotted(*) { color: gray; font-family: sans-serif; } ";
 
       shadowRoot.appendChild(style);
       shadowRoot.appendChild(templateContent.cloneNode(true));
-  }
-})
+    }
+  },
+);
 ```
 
 为了更好地区分**未被成功填充的插槽**和**成功填充的插槽**, 我们在 CSS 中选择了所有的插槽元素 (`::slotted(*)`), 并填充了不一样的颜色和字体。结果也是如此。
@@ -91,4 +94,4 @@ customElements.define('person-details',
 
 ## 参考
 
-- [Web components](/zh-CN/docs/Web/Web_Components)
+- [Web components](/zh-CN/docs/Web/API/Web_components)

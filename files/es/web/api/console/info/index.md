@@ -1,6 +1,6 @@
 ---
 title: Console.info()
-slug: Web/API/Console/info
+slug: Web/API/console/info
 ---
 
 {{APIRef("Console API")}}Emite un mensaje informativo a la Consola Web. En Firefox y Chrome, se muestra un pequeño ícono "i" junto a estos elementos en el registro de la Consola Web.
@@ -29,9 +29,9 @@ Ver [Salida de texto en la consola](/es/docs/Web/API/console#Outputting_text_to_
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.console.info")}}
+{{Compat}}
 
 ## Vea tambien
 

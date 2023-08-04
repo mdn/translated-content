@@ -53,7 +53,7 @@ elem1 = document.forms["named.item.with.periods"];
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.HTMLCollection")}}
+{{Compat}}
 
 ## Vea también
 

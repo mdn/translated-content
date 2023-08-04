@@ -1,7 +1,6 @@
 ---
-title: 'Причина: отсутствует заголовок CORS «Access-Control-Allow-Origin»'
+title: "Причина: отсутствует заголовок CORS «Access-Control-Allow-Origin»"
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
-translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ---
 
 ## [Причина](/ru/docs/)
@@ -22,7 +21,7 @@ translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 Access-Control-Allow-Origin: https://amazing.site
 ```
 
-Также вы можете разрешить доступ любому сайту, используя подстановку `*`. Используйте этот способ только для публичных API. В закрытых API `*` не должна использоваться, вместо этого должен быть установлен определённый домен или домены. При этом подстановка работает только для запросов с атрибутом {{htmlattrxref("crossorigin")}} со значением `anonymous`.
+Также вы можете разрешить доступ любому сайту, используя подстановку `*`. Используйте этот способ только для публичных API. В закрытых API `*` не должна использоваться, вместо этого должен быть установлен определённый домен или домены. При этом подстановка работает только для запросов с атрибутом [`crossorigin`](/ru/docs/Web/HTML/Global_attributes#crossorigin) со значением `anonymous`.
 
 ```
 Access-Control-Allow-Origin: *

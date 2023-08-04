@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.oninput
 slug: conflicting/Web/API/HTMLElement/input_event
-original_slug: Web/API/GlobalEventHandlers/oninput
 ---
 
 {{ ApiRef("HTML DOM") }}
@@ -26,11 +25,11 @@ window.addEventListener('input', function (e) {
 
 ## Especificaciones
 
-[HTML - APIs de elementos de entrada comunes (`input`)](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#event-input-input)
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.GlobalEventHandlers.oninput")}}
+{{Compat}}
 
 ## Vea también
 

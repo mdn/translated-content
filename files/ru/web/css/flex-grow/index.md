@@ -1,14 +1,6 @@
 ---
 title: flex-grow
 slug: Web/CSS/flex-grow
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - CSS-свойство
-  - NeedsContent
-  - Reference
-translation_of: Web/CSS/flex-grow
 ---
 
 {{CSSRef}}
@@ -93,7 +85,7 @@ flex-grow: unset;
 
 ### Результат
 
-{{EmbedLiveSample('Пример', '700px', '300px', '', 'Web/CSS/flex-grow')}}
+{{ EmbedLiveSample('Пример', '100%', '300') }}
 
 ## Спецификации
 

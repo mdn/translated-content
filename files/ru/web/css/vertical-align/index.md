@@ -1,7 +1,6 @@
 ---
 title: vertical-align
 slug: Web/CSS/vertical-align
-translation_of: Web/CSS/vertical-align
 ---
 
 {{CSSRef}}
@@ -109,7 +108,7 @@ td {
 
 {{EmbedLiveSample("vertical-align-table", 1200, 230)}}
 
-> **Примечание:** **Обратите внимание:** свойство vertical-align применяется только к строчным элементам и элементам ячеек таблицы: его нельзя использовать для вертикального позиционирования [блочных элементов](/ru/docs/Web/HTML/Block-level_elements).
+> **Примечание:** свойство vertical-align применяется только к строчным элементам и элементам ячеек таблицы: его нельзя использовать для вертикального позиционирования [блочных элементов](/ru/docs/Web/HTML/Block-level_elements).
 
 {{cssinfo}}
 

@@ -16,7 +16,7 @@ _親である {{domxref("EventTarget")}} からのメソッドを継承します
 - {{domxref("MessagePort.postMessage")}}
   - : ポートからメッセージを送信します。また、任意でオブジェクトの所有権を他のブラウジングコンテキストへ転送します。
 - {{domxref("MessagePort.start")}}
-  - : ポート上で順番待ちのメッセージの送信を開始します。({{domxref("EventTarget.addEventListener")}} を使用する場合のみ必要。これは、{{domxref("MessagePort.onmessage")}} を使用する場合を含みます)
+  - : ポート上で順番待ちのメッセージの送信を開始します。({{domxref("EventTarget.addEventListener")}} を使用する場合のみ必要です。{{domxref("MessagePort.onmessage")}} を使用する場合は暗黙に実行されます。)
 - {{domxref("MessagePort.close")}}
   - : ポートとの接続を切断し、このポートはアクティブではなくなります。
 

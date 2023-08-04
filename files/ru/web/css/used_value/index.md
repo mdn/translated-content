@@ -1,16 +1,12 @@
 ---
 title: Используемое значение
 slug: Web/CSS/used_value
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/used_value
 ---
 {{cssref}}**Используемое значение** - [CSS](/ru/docs/Web/CSS) свойство, которое используется, когда все вычисления уже выполнены, смотрите [вычисленное значение](/ru/docs/Web/CSS/computed_value).
 
 После того как {{glossary("user agent")}} закончил свои расчёты каждое свойство CSS имеет своё значение. Используемые значения (например, {{cssxref("width")}}, {{cssxref("line-height")}}) в пикселях. Используемые значения сокращённых свойств (например, {{cssxref("background")}}) согласуются с теми из свойств компонентов (например, {{cssxref("background-color")}} или {{cssxref("background-size")}}) и с {{cssxref("position")}} и {{cssxref("float")}}.
 
-> **Примечание:** **Замечание**: {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API возвращает [решённое значение](/ru/docs/), которое может быть [численным значением](/ru/docs/) или [используемым значением](/ru/docs/), в зависимости от свойства.
+> **Примечание:** {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API возвращает [решённое значение](/ru/docs/), которое может быть [численным значением](/ru/docs/) или [используемым значением](/ru/docs/), в зависимости от свойства.
 
 ## Пример
 
@@ -100,7 +96,7 @@ CSS 2.0 defined only _computed value_ as the last step in a property's calculati
 | {{SpecName("CSS2.2", "cascade.html#used-value", "used value")}} | {{Spec2("CSS2.2")}} | No change.          |
 | {{SpecName("CSS2.1", "cascade.html#used-value", "used value")}} | {{Spec2("CSS2.1")}} | Initial definition. |
 
-## Смотреть так же:
+## Смотреть так же
 
 - {{domxref("window.getComputedStyle")}}
 - Ключевые концепции CSS

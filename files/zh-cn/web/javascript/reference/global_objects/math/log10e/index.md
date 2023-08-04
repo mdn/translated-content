@@ -19,16 +19,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
 
 ## 示例
 
-### 例子：使用 `Math.LOG10E`
+### 示例：使用 `Math.LOG10E`
 
 下面的函数返回以 10 为底数，E 的对数：
 
 ```js
 function getLog10e() {
-   return Math.LOG10E
+  return Math.LOG10E;
 }
 
-getLog10e() // 0.4342944819032518
+getLog10e(); // 0.4342944819032518
 ```
 
 ## 规范

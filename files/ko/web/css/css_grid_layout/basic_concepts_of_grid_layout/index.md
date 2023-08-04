@@ -1,7 +1,8 @@
 ---
 title: Basic concepts of grid layout
-slug: Web/CSS/CSS_Grid_Layout/Basic_concepts_of_grid_layout
+slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 ---
+
 [CSS 그리드 레이아웃(Grid Layout)](/ko/docs/Web/CSS/CSS_Grid_Layout)은 CSS에 2차원의 그리드 시스템을 도입했습니다. 그리드는 주요 페이지 영역을 설계하거나 작은 사용자 인터페이스 요소를 배치하는 데 사용할 수 있습니다. 이 문서에서는 CSS 그리드 레이아웃 및 CSS 그리드 레이아웃 레벨 1 명세서에 포함된 새로운 기술 용어를 소개합니다. 이번 개요에 소개된 기능은 나머지 안내 문서에서 자세히 설명합니다.
 
 ## 그리드가 무엇인가요?
@@ -18,7 +19,7 @@ slug: Web/CSS/CSS_Grid_Layout/Basic_concepts_of_grid_layout
 
 ### 콘텐츠를 담기 위한 추가 트랙의 생성
 
-그리드 레이아웃으로 그리드를 명시적으로 정의할 수 있지만, 지정된 그리드 밖에 따로 추가되는 콘텐츠에 대응하여 필요에 따라 행과 열을 추가할 수 있도록 표준 문서에서 기술하고 있습니다. 일 예로 “컨테이너에 들어갈 수 있는 만큼의 세로 열”을 추가하는 기능이 포함되었습니다.
+그리드 레이아웃으로 그리드를 명시적으로 정의할 수 있지만, 지정된 그리드 밖에 따로 추가되는 콘텐츠에 대응하여 필요에 따라 행과 열을 추가할 수 있도록 표준 문서에서 기술하고 있습니다. 일 예로 "컨테이너에 들어갈 수 있는 만큼의 세로 열"을 추가하는 기능이 포함되었습니다.
 
 ### 정렬 제어
 

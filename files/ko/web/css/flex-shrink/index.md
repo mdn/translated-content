@@ -75,13 +75,13 @@ The `flex-shrink` property is specified as a single [`<number>`](#number).
 
 {{ EmbedLiveSample('Example', 500, 300) }}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
 {{cssinfo}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

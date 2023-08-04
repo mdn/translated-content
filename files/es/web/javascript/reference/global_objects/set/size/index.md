@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Set/size
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/size
 ---
 
 {{JSRef}}
@@ -29,9 +28,9 @@ mySet.size; // 3
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Set.size")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,6 +1,6 @@
 ---
-title: 'ARIA: form ロール'
-slug: Web/Accessibility/ARIA/Roles/Form_Role
+title: "ARIA: form ロール"
+slug: Web/Accessibility/ARIA/Roles/form_role
 ---
 
 フォーム (`form`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、HTML のフォームと同等の機能を提供するページ上の要素のグループを識別するために使用できます。
@@ -43,24 +43,34 @@ slug: Web/Accessibility/ARIA/Roles/Form_Role
 ```html
 <div role="form" id="send-comment" aria-label="コメントを追加">
   <label for="username">ユーザー名</label>
-  <input id="username" name="username" autocomplete="nickname" autocorrect="off" type="text">
+  <input
+    id="username"
+    name="username"
+    autocomplete="nickname"
+    autocorrect="off"
+    type="text" />
 
   <label for="email">電子メール</label>
-  <input id="email" name="email" autocomplete="email" autocapitalize="off" autocorrect="off" spellcheck="false" type="text">
+  <input
+    id="email"
+    name="email"
+    autocomplete="email"
+    autocapitalize="off"
+    autocorrect="off"
+    spellcheck="false"
+    type="text" />
 
   <label for="comment">コメント</label>
   <textarea id="comment" name="comment"></textarea>
 
-  <input value="コメント" type="submit">
+  <input value="コメント" type="submit" />
 </div>
 ```
 
 代わりに `<form>` を使用することをお勧めします。
 
 ```html
-<form id="send-comment" aria-label="コメントを追加">
-  ....
-</form>
+<form id="send-comment" aria-label="コメントを追加">....</form>
 ```
 
 ## アクセシビリティに関する懸念

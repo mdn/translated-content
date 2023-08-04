@@ -1,7 +1,6 @@
 ---
 title: expresión class
 slug: Web/JavaScript/Reference/Operators/class
-original_slug: Web/JavaScript/Referencia/Operadores/class
 ---
 
 {{jsSidebar("Operators")}}
@@ -75,9 +74,9 @@ Foo.name; // "NamedFoo"
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.class")}}
+{{Compat}}
 
 ## Ver también
 

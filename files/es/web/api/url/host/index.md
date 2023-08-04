@@ -1,6 +1,6 @@
 ---
 title: Estabilidad
-slug: Web/API/URL/Host
+slug: Web/API/URL/host
 ---
 
 {{ApiRef("URL API")}}
@@ -23,14 +23,14 @@ A {{domxref("USVString")}}.
 ## Examples
 
 ```js
-let url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/host');
+let url = new URL("https://developer.mozilla.org/es/docs/Web/API/URL/host");
 console.log(url.host); // "developer.mozilla.org"
 
-url = new URL('https://developer.mozilla.org:443/en-US/docs/Web/API/URL/host');
+url = new URL("https://developer.mozilla.org:443/es/docs/Web/API/URL/host");
 console.log(url.host); // "developer.mozilla.org"
 // The port number is not included because 443 is the scheme's default port
 
-url = new URL('https://developer.mozilla.org:4097/en-US/docs/Web/API/URL/host');
+url = new URL("https://developer.mozilla.org:4097/es/docs/Web/API/URL/host");
 console.log(url.host); // "developer.mozilla.org:4097"
 ```
 
@@ -38,9 +38,9 @@ console.log(url.host); // "developer.mozilla.org:4097"
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.URL.host")}}
+{{Compat}}
 
 ## See also
 

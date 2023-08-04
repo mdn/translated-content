@@ -61,7 +61,7 @@ h1 {
 
 我也可以将它们组合起来，在它们之间加上一个逗号，变为选择器列表。
 
-```css
+```css-nolint
 h1, .special {
   color: blue;
 }
@@ -97,7 +97,8 @@ h1 {
 但是在被组合起来以后，整个规则都会失效，无论是`h1`还是这个 class 都不会被样式化。
 
 ```css
-h1, ..special {
+h1,
+..special {
   color: blue;
 }
 ```
@@ -111,19 +112,22 @@ h1, ..special {
 这个选择器组，第一个是指向了所有 HTML 元素 `<h1>`。
 
 ```css
-h1 { }
+h1 {
+}
 ```
 
 它也包含了一个 class 的选择器：
 
 ```css
-.box { }
+.box {
+}
 ```
 
 亦或，一个 id 选择器：
 
 ```css
-#unique { }
+#unique {
+}
 ```
 
 ### 标签属性选择器
@@ -131,13 +135,16 @@ h1 { }
 这组选择器根据一个元素上的某个标签的属性的存在以选择元素的不同方式：
 
 ```css
-a[title] { }
+a[title] {
+}
 ```
 
 或者根据一个有特定值的标签属性是否存在来选择：
 
 ```css
-a[href="https://example.com"] { }
+a[href="https://example.com"]
+{
+}
 ```
 
 ### 伪类与伪元素
@@ -145,13 +152,15 @@ a[href="https://example.com"] { }
 这组选择器包含了伪类，用来样式化一个元素的特定状态。例如`:hover`伪类会在鼠标指针悬浮到一个元素上的时候选择这个元素：
 
 ```css
-a:hover { }
+a:hover {
+}
 ```
 
 它还可以包含了伪元素，选择一个元素的某个部分而不是元素自己。例如，`::first-line`是会选择一个元素（下面的情况中是`<p>`）中的第一行，类似`<span>`包在了第一个被格式化的行外面，然后选择这个`<span>`。
 
 ```css
-p::first-line { }
+p::first-line {
+}
 ```
 
 ### 运算符
@@ -159,7 +168,8 @@ p::first-line { }
 最后一组选择器可以将其他选择器组合起来，更复杂的选择元素。下面的示例用运算符（`>`）选择了`<article>`元素的初代子元素。
 
 ```css
-article > p { }
+article > p {
+}
 ```
 
 ## 接下来要做的事情
@@ -167,24 +177,3 @@ article > p { }
 你可以看下下面的选择器参考表，可以获得到这个学习章节——或者总体来说是 MDN 上——的各种选择器的直接链接；你也可以继续下去，开始你的了解[类型、类和 ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)的旅程。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
-
-## 本章目录
-
-- [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
-
-  - [类型、类和 ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-  - [属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-  - [伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-  - [关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-- [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
-- [背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [处理不同文字方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-- [溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
-- [值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [在 CSS 中调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-- [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-- [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
-- [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-- [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)

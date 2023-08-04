@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers
 slug: orphaned/Web/API/GlobalEventHandlers
-original_slug: Web/API/GlobalEventHandlers
 ---
 
 {{ApiRef("DOM HTML")}}
@@ -202,14 +201,6 @@ Estos controladores de eventos se definen en el mixin {{DOMxRef("GlobalEventHand
 ## Métodos
 
 _Esta interfaz no define métodos_
-
-## Especificaciones
-
-{{Specifications}}
-
-## Compatibilidad del navegador
-
-{{Compat("api.GlobalEventHandlers")}}
 
 ## Ve también
 

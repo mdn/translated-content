@@ -2,7 +2,7 @@
 title: PointerEvent.isPrimary
 slug: Web/API/PointerEvent/isPrimary
 l10n:
-  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
+  sourceCommit: c244d3b2cb6c17e6ba8692e3faec393afd9988ca
 ---
 
 {{ APIRef("Pointer Events") }}
@@ -24,13 +24,17 @@ l10n:
 この例は、`isPrimary` の値を使用して、適切な処理関数を呼び出す方法を示しています。
 
 ```js
-target.addEventListener('pointerdown', (event) => {
-  if (event.isPrimary) {
-    process_primary_pointer(event);
-  } else {
-    process_secondary_pointer(event);
-  }
-}, false);
+target.addEventListener(
+  "pointerdown",
+  (event) => {
+    if (event.isPrimary) {
+      process_primary_pointer(event);
+    } else {
+      process_secondary_pointer(event);
+    }
+  },
+  false
+);
 ```
 
 ## 仕様書

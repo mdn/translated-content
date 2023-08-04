@@ -23,9 +23,9 @@ HTML 명세는 다음과 같은 표준 메타데이터 이름을 정의하고 �
 - `keywords`: 페이지의 콘텐츠와 관련된, 쉼표로 구분한 키워드 목록.
 - `referrer`: 문서에서 시작하는 요청의 HTTP {{httpheader("Referer")}} 헤더를 아래 표와 같이 통제합니다.
 
-  | `no-referrer`                     | HTTP {{httpheader("Referer")}} 헤더를 전송하지 않습니다.                                                                                                                                                     |
+  | `no-referrer`                     | HTTP {{httpheader("Referer")}} 헤더를 전송하지 않습니다.                                                                                                                                                            |
   | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | `origin`                          | 문서의 {{glossary("origin", "출처")}}를 전송합니다.                                                                                                                                                   |
+  | `origin`                          | 문서의 {{glossary("origin", "출처")}}를 전송합니다.                                                                                                                                                                 |
   | `no-referrer-when-downgrade`      | 목적지가 현재 문서와 동일하거나 더 높은(HTTP(S)→HTTPS) 보안 수준을 가진 경우 전체 URL을 전송하고, 더 취약(HTTPS→HTTP)한 경우 전송하지 않습니다. 기본 동작 방식입니다.                                               |
   | `origin-when-cross-origin`        | 동일 출처 요청에는 매개변수를 제거한 전체 URL을 전송합니다. 교차 출처 요청에는 출처만 전송합니다.                                                                                                                   |
   | `same-origin`                     | 동일 출처 요청에는 매개변수를 제거한 전체 URL을 전송합니다. 교차 출처 요청에는 아무 레퍼러 정보도 보내지 않습니다.                                                                                                  |
@@ -59,7 +59,7 @@ CSS Color Adjustment 명세는 다음과 같은 메타데이터 이름을 정의
   예를 들어, 문서가 다크 모드를 선호하나 라이트 모드도 지원 가능하다는 것을 알리려면 다음과 같이 작성하세요.
 
   ```html
-  <meta name="color-scheme" content="dark light">
+  <meta name="color-scheme" content="dark light" />
   ```
 
   `name="color-scheme"`은 문서 전체의 선호 및 가능한 색채 조합을 지정한다면, CSS {{cssxref("color-scheme")}} 속성은 개별 요소 단위로 지정합니다. CSS {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} 미디어 기능을 사용하면 스타일이 현재 색채 조합에 적응하도록 작성할 수도 있습니다.
@@ -88,10 +88,6 @@ CSS Device Adaptation 명세는 다음과 같은 메타데이터 이름을 정�
 
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
-
-##### 같이 보기
-
-CSS {{cssxref("@viewport")}} @-규칙
 
 ### 다른 메타데이터 이름
 
@@ -128,4 +124,4 @@ CSS {{cssxref("@viewport")}} @-규칙
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.meta.name")}}
+{{Compat}}

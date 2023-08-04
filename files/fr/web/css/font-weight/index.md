@@ -1,8 +1,6 @@
 ---
 title: font-weight
 slug: Web/CSS/font-weight
-translation_of: Web/CSS/font-weight
-browser-compat: css.properties.font-weight
 ---
 
 {{CSSRef}}
@@ -182,14 +180,14 @@ Pour les personnes ayant une vision faible, il peut être extrêmement difficile
 
 ```html
 <p>
-  Alice was beginning to get very tired of sitting by her sister on the
-  bank, and of having nothing to do: once or twice she had peeped into the
-  book her sister was reading, but it had no pictures or conversations in
-  it, "and what is the use of a book," thought Alice "without pictures or
-  conversations?"
+  Alice was beginning to get very tired of sitting by her sister on the bank,
+  and of having nothing to do: once or twice she had peeped into the book her
+  sister was reading, but it had no pictures or conversations in it, "and what
+  is the use of a book," thought Alice "without pictures or conversations?"
 </p>
 
-<div>I'm heavy<br/>
+<div>
+  I'm heavy<br />
   <span>I'm lighter</span>
 </div>
 ```
@@ -205,7 +203,7 @@ p {
 /* Le texte du div utilise plus fort que
    normal mais moins fort que standard. */
 div {
- font-weight: 600;
+  font-weight: 600;
 }
 
 /* Le texte du span utilise un niveau de graisse

@@ -1,21 +1,6 @@
 ---
 title: Qu'est ce que l'accessibilité?
 slug: Learn/Accessibility/What_is_accessibility
-tags:
-  - Accessibilité
-  - Aide technique
-  - Apprendre
-  - Article
-  - CSS
-  - Clavier
-  - Débutant
-  - HTML
-  - JavaScript
-  - Lecteur d'écran
-  - Outils
-  - Utilisateurs
-translation_of: Learn/Accessibility/What_is_accessibility
-original_slug: Apprendre/a11y/What_is_accessibility
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
@@ -60,7 +45,7 @@ L'accessibilité et les bonnes pratiques qu'elle implique peuvent bénéficier �
 
 Les personnes ayant un handicap sont aussi variées que les personnes sans handicap, tout comme leurs handicaps. L'important ici est de ne pas penser seulement à votre propre ordinateur et à comment vous utilisez le web, mais de commencer à apprendre comment les autres l'utilisent — _vous n'êtes pas vos utilisateurs_. Les principaux types de handicap à considérer sont expliqués ci-dessous, avec les outils spéciaux que chacun utilise pour accéder aux contenus du web (connus sous le nom de **technologies d'assistance**).
 
-> **Note :** L'aide-mémoire [Handicap et santé](http://www.who.int/mediacentre/factsheets/fs352/fr/) de l'Organisation Mondiale de la Santé indique que « Plus d’un milliard de personnes, c’est-à-dire environ 15% de la population mondiale, présentent une forme ou une autre de handicap » , et que « Entre 110 et 190 millions de personnes adultes ont des difficultés importantes sur le plan fonctionnel. »
+> **Note :** L'aide-mémoire [Handicap et santé](http://www.who.int/mediacentre/factsheets/fs352/fr/) de l'Organisation Mondiale de la Santé indique que « Plus d'un milliard de personnes, c'est-à-dire environ 15% de la population mondiale, présentent une forme ou une autre de handicap » , et que « Entre 110 et 190 millions de personnes adultes ont des difficultés importantes sur le plan fonctionnel. »
 
 ### Les personnes ayant des troubles de la vue
 
@@ -74,7 +59,7 @@ Il est conseillé de se familiariser avec les lecteurs d'écran ; vous devriez i
 
 {{EmbedYouTube("IK97XMibEws")}}
 
-Pour ce qui est des statistiques, l'Organisation mondiale de la santé estime que «253 millions de personnes présentent une déficience visuelle : 36 millions d’entre elles sont aveugles et 217 millions présentent une déficience visuelle modérée à sévère. » (Voir [Cécité et déficience visuelle](http://www.who.int/mediacentre/factsheets/fs282/fr/)). Cela représente une part conséquente des utilisateurs que vous perdriez parce que votre site est mal codé — presque autant que la population des États-Unis.
+Pour ce qui est des statistiques, l'Organisation mondiale de la santé estime que «253 millions de personnes présentent une déficience visuelle : 36 millions d'entre elles sont aveugles et 217 millions présentent une déficience visuelle modérée à sévère. » (Voir [Cécité et déficience visuelle](http://www.who.int/mediacentre/factsheets/fs282/fr/)). Cela représente une part conséquente des utilisateurs que vous perdriez parce que votre site est mal codé — presque autant que la population des États-Unis.
 
 ### Les personnes ayant des troubles de l'audition
 
@@ -96,16 +81,16 @@ De nombreuses personnes souffrent de troubles de la mobilité. Par exemple, en F
 
 ### Personnes ayant des déficiences cognitives
 
-La dernière catégorie d'incapacités est probablement la plus large. Les déficiences cognitives désignent généralement des incapacités allant des maladies mentales aux difficultés d'apprentissage, aux difficultés de compréhension et de concentration telles que [TDAH-trouble d'hyperactivité avec déficit de l'attention](https://naitreetgrandir.com/fr/mauxenfants/indexmaladiesa_z/fiche.aspx?doc=naitre-grandir-sante-enfant-trouble-deficit-attention-hyperactivite-tdah), [TSA-trouble du spectre de l’autisme](https://cenop.ca/troubles-comportement/tsa-trouble-spectre-autisme.php), aux personnes atteintes de [schizophrénie](http://www.psycom.org/Espace-Presse/Sante-mentale-de-A-a-Z/Schizophrenie-s), et à de nombreux autres types de désordres, qui peuvent affecter de nombreux aspects de la vie quotidienne en raison de problèmes de mémoire, de résolution de problèmes, de compréhension, d'attention, etc.
+La dernière catégorie d'incapacités est probablement la plus large. Les déficiences cognitives désignent généralement des incapacités allant des maladies mentales aux difficultés d'apprentissage, aux difficultés de compréhension et de concentration telles que [TDAH-trouble d'hyperactivité avec déficit de l'attention](https://naitreetgrandir.com/fr/mauxenfants/indexmaladiesa_z/fiche.aspx?doc=naitre-grandir-sante-enfant-trouble-deficit-attention-hyperactivite-tdah), [TSA-trouble du spectre de l'autisme](https://cenop.ca/troubles-comportement/tsa-trouble-spectre-autisme.php), aux personnes atteintes de [schizophrénie](http://www.psycom.org/Espace-Presse/Sante-mentale-de-A-a-Z/Schizophrenie-s), et à de nombreux autres types de désordres, qui peuvent affecter de nombreux aspects de la vie quotidienne en raison de problèmes de mémoire, de résolution de problèmes, de compréhension, d'attention, etc.
 
 Le plus souvent, ces incapacités peuvent affecter l'utilisation du site web : difficulté à comprendre comment effectuer une tâche, à se rappeler comment effectuer une tâche déjà accomplie ou à une frustration accrue en cas de confusion dans les flux de travail ou d'incohérences dans la présentation / navigation / autre page.
 
-Contrairement à d’autres problèmes d’accessibilité web, il est impossible de prescrire des solutions rapides à de nombreux problèmes d’accessibilité web résultant de déficiences cognitives ; la meilleure chance que vous ayez est de concevoir vos sites web de manière à être aussi logiques, cohérents et utilisables que possible. Par exemple, assurez-vous que :
+Contrairement à d'autres problèmes d'accessibilité web, il est impossible de prescrire des solutions rapides à de nombreux problèmes d'accessibilité web résultant de déficiences cognitives ; la meilleure chance que vous ayez est de concevoir vos sites web de manière à être aussi logiques, cohérents et utilisables que possible. Par exemple, assurez-vous que :
 
 - les pages sont cohérentes — la navigation, l'en-tête, le pied de page et le contenu principal se trouvent toujours aux mêmes endroits.
 - les outils sont bien conçus et faciles à utiliser.
 - Les processus en plusieurs étapes sont divisés en étapes logiques, avec des rappels réguliers de l'état d'avancement du processus et du temps qu'il vous reste pour terminer le processus, le cas échéant.
-- Les workflows sont logiques, simples et nécessitent le moins d’interactions possible. Par exemple, l'inscription et la connexion à un site web sont souvent complexes.
+- Les workflows sont logiques, simples et nécessitent le moins d'interactions possible. Par exemple, l'inscription et la connexion à un site web sont souvent complexes.
 - les pages ne sont ni trop longues ni trop denses en termes de quantité d'informations présentées à la fois.
 - le langage utilisé dans vos pages est aussi simple et clair que possible, et ne contient pas un jargon et un argot inutiles.
 - les points importants et le contenu sont mis en évidence.
@@ -145,7 +130,7 @@ Pour montrer que vous vous souciez de l'accessibilité et que vous en avez pens�
 Résumer :
 
 - Pensez à l'accessibilité dès le début d'un projet et testez tôt et souvent. Comme tout autre bogue, un problème d'accessibilité devient d'autant plus coûteux à résoudre qu'il est découvert tard.
-- N'oubliez pas que de nombreuses pratiques optimales en matière d'accessibilité profitent à tout le monde, pas uniquement aux utilisateurs handicapés. Par exemple, le balisage sémantique lean n’est pas seulement bon pour les lecteurs d’écran, il est également rapide à charger et performant, donc meilleur pour tout le monde, en particulier pour les appareils mobiles et/ou les connexions lentes.
+- N'oubliez pas que de nombreuses pratiques optimales en matière d'accessibilité profitent à tout le monde, pas uniquement aux utilisateurs handicapés. Par exemple, le balisage sémantique lean n'est pas seulement bon pour les lecteurs d'écran, il est également rapide à charger et performant, donc meilleur pour tout le monde, en particulier pour les appareils mobiles et/ou les connexions lentes.
 - Publier une déclaration d'accessibilité sur votre site et interagir avec les personnes ayant des problèmes.
 
 ## Directives d'accessibilité et loi
@@ -153,15 +138,15 @@ Résumer :
 Il existe de nombreuses listes de contrôle et ensembles de directives disponibles sur lesquels baser les tests d'accessibilité, ce qui peut sembler fastidieux à première vue. Notre conseil est de vous familiariser avec les domaines fondamentaux dans lesquels vous devez prendre soin, ainsi que de comprendre les structures de haut niveau des directives qui vous sont le plus utiles.
 
 - Pour commencer, le W3C a publié un document volumineux et très détaillé qui inclut des critères très précis, indépendants de la technologie, pour la conformité de l'accessibilité. Celles-ci s'appellent le [Web Content Accessibility Guidelines](https://www.w3.org/WAI/intro/wcag.php) (WCAG), et ne constituent en aucun cas une lecture brève. Les critères sont divisés en quatre catégories principales, qui spécifient comment les implémentations peuvent être rendues perceptibles, exploitables, compréhensibles et robustes. Le meilleur endroit pour commencer à apprendre et [WCAG at a Glance](https://www.w3.org/WAI/WCAG20/glance/Overview.html). Il n'est pas nécessaire d'apprendre le WCAG par cœur — soyez conscient des principaux problèmes et utilisez une variété de techniques et d'outils pour mettre en évidence les domaines qui ne sont pas conformes aux critères du WCAG (voir ci-dessous pour plus d'informations).
-- Votre pays peut également avoir une législation spécifique régissant la nécessité d’accéder aux sites web desservant leur population — par exemple [Section 508 of the Rehabilitation Act](http://www.section508.gov/content/learn) en US, [Federal Ordinance on Barrier-Free Information Technology](https://www.einfach-fuer-alle.de/artikel/bitv_english/) en Germany, la lois sur [Equality Act](http://www.legislation.gov.uk/ukpga/2010/15/contents) Royaume-Uni, [Accessibilità](http://www.agid.gov.it/agenda-digitale/pubblica-amministrazione/accessibilita) en Italy, le [Disability Discrimination Act](https://www.humanrights.gov.au/world-wide-web-access-disability-discrimination-act-advisory-notes-ver-41-2014) en Australia, etc.
+- Votre pays peut également avoir une législation spécifique régissant la nécessité d'accéder aux sites web desservant leur population — par exemple [Section 508 of the Rehabilitation Act](http://www.section508.gov/content/learn) en US, [Federal Ordinance on Barrier-Free Information Technology](https://www.einfach-fuer-alle.de/artikel/bitv_english/) en Germany, la lois sur [Equality Act](http://www.legislation.gov.uk/ukpga/2010/15/contents) Royaume-Uni, [Accessibilità](http://www.agid.gov.it/agenda-digitale/pubblica-amministrazione/accessibilita) en Italy, le [Disability Discrimination Act](https://www.humanrights.gov.au/world-wide-web-access-disability-discrimination-act-advisory-notes-ver-41-2014) en Australia, etc.
 
-Ainsi, alors que le WCAG est un ensemble de directives, votre pays aura probablement des lois régissant l’accessibilité du Web, ou du moins l’accessibilité des services accessibles au public (sites web, télévision, espaces physiques, etc.). C’est une bonne idée. pour savoir quelles sont vos lois. Si vous ne faites aucun effort pour vérifier que votre contenu est accessible, vous pourriez éventuellement avoir des ennuis avec la loi si les personnes handicapées s'en plaignent.
+Ainsi, alors que le WCAG est un ensemble de directives, votre pays aura probablement des lois régissant l'accessibilité du Web, ou du moins l'accessibilité des services accessibles au public (sites web, télévision, espaces physiques, etc.). C'est une bonne idée. pour savoir quelles sont vos lois. Si vous ne faites aucun effort pour vérifier que votre contenu est accessible, vous pourriez éventuellement avoir des ennuis avec la loi si les personnes handicapées s'en plaignent.
 
 Cela semble sérieux, mais vous devez vraiment considérer l'accessibilité comme une priorité principale de vos pratiques de développement web, comme indiqué ci-dessus. En cas de doute, demandez conseil à un avocat qualifié. Nous n'allons pas donner plus de conseils que cela, car nous ne sommes pas des avocats.
 
 ## API d'accessibilité
 
-Les navigateurs web utilisent des **API d’accessibilité** spéciales (fournies par le système d’exploitation sous-jacent) qui présentent des informations utiles pour les technologies d’aide (TA) — les TA ont généralement tendance à utiliser des informations sémantiques. Ces informations ne comprennent donc pas les informations de style, ou JavaScript. Ces informations sont structurées dans une arborescence d'informations appelée **arborescence d'accessibilité**.
+Les navigateurs web utilisent des **API d'accessibilité** spéciales (fournies par le système d'exploitation sous-jacent) qui présentent des informations utiles pour les technologies d'aide (TA) — les TA ont généralement tendance à utiliser des informations sémantiques. Ces informations ne comprennent donc pas les informations de style, ou JavaScript. Ces informations sont structurées dans une arborescence d'informations appelée **arborescence d'accessibilité**.
 
 Différents systèmes d'exploitation ont différentes API d'accessibilité disponibles :
 
@@ -171,7 +156,7 @@ Différents systèmes d'exploitation ont différentes API d'accessibilité dispo
 - Android: Accessibility framework
 - iOS: UIAccessibility
 
-Lorsque les informations sémantiques natives fournies par les éléments HTML dans vos applications Web tombent, vous pouvez les compléter avec des fonctionnalités de la [WAI-ARIA specification](https://www.w3.org/TR/wai-aria/), qui ajoutent des informations sémantiques à l’arbre d’accessibilité pour améliorer l’accessibilité. Vous pouvez en apprendre beaucoup plus sur WAI-ARIA dans notre article sur les bases de [WAI-ARIA basics](/fr/docs/Learn/Accessibility/WAI-ARIA_basics).
+Lorsque les informations sémantiques natives fournies par les éléments HTML dans vos applications Web tombent, vous pouvez les compléter avec des fonctionnalités de la [WAI-ARIA specification](https://www.w3.org/TR/wai-aria/), qui ajoutent des informations sémantiques à l'arbre d'accessibilité pour améliorer l'accessibilité. Vous pouvez en apprendre beaucoup plus sur WAI-ARIA dans notre article sur les bases de [WAI-ARIA basics](/fr/docs/Learn/Accessibility/WAI-ARIA_basics).
 
 ## Résumé
 

@@ -5,8 +5,6 @@ slug: Web/CSS/grid-template-columns
 
 {{CSSRef}}
 
-## Summary
-
 The `grid-template-columns` CSS property defines the line names and track sizing functions of the {{glossary("grid column", "grid columns")}}.
 
 {{cssinfo}}
@@ -27,13 +25,16 @@ grid-template-columns: repeat(3, 200px);
 
 /* <auto-track-list> values */
 grid-template-columns: 200px repeat(auto-fill, 100px) 300px;
-grid-template-columns: minmax(100px, max-content)
-                       repeat(auto-fill, 200px) 20%;
-grid-template-columns: [linename1] 100px [linename2]
-                       repeat(auto-fit, [linename3 linename4] 300px)
-                       100px;
-grid-template-columns: [linename1 linename2] 100px
-                       repeat(auto-fit, [linename1] 300px) [linename3];
+grid-template-columns:
+  minmax(100px, max-content)
+  repeat(auto-fill, 200px) 20%;
+grid-template-columns:
+  [linename1] 100px [linename2]
+  repeat(auto-fit, [linename3 linename4] 300px)
+  100px;
+grid-template-columns:
+  [linename1 linename2] 100px
+  repeat(auto-fit, [linename1] 300px) [linename3];
 
 /* Global values */
 grid-template-columns: inherit;
@@ -113,5 +114,5 @@ grid-template-columns: unset;
 ## See also
 
 - Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- Grid Layout Guide: _[Basic concepts of grid layout - Grid Tracks](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Grid_Tracks)_
+- Grid Layout Guide: _[Basic concepts of grid layout - Grid Tracks](/zh-TW/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#Grid_Tracks)_
 - Video tutorial: _[Defining a Grid](http://gridbyexample.com/video/series-define-a-grid/)_

@@ -1,7 +1,6 @@
 ---
 title: isNaN
 slug: Web/JavaScript/Reference/Global_Objects/isNaN
-original_slug: Web/JavaScript/Referencia/Objetos_globales/isNaN
 ---
 
 {{jsSidebar("Objects")}}
@@ -46,9 +45,9 @@ isNaN(12) //devuelve false
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.isNaN")}}
+{{Compat}}
 
 ### Vea También
 

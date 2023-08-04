@@ -1,18 +1,18 @@
 ---
-title: HTMLTableElement.summary
+title: "HTMLTableElement: summary プロパティ"
+short-title: summary
 slug: Web/API/HTMLTableElement/summary
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 **`HTMLTableElement.summary`** プロパティは表の説明を表します。
 
-## 構文
+## 値
 
-```js
-HTMLTableElement.summary = string;
-varstring = HTMLTableElement.summary;
-```
+文字列です。
 
 ## 例
 

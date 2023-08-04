@@ -1,7 +1,6 @@
 ---
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador/next
 ---
 
 {{JSRef}}
@@ -74,9 +73,9 @@ g.next(2);
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Generator.next")}}
+{{Compat}}
 
 ## See also
 

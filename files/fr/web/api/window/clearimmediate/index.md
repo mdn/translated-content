@@ -1,12 +1,6 @@
 ---
 title: Window.clearImmediate()
 slug: Web/API/Window/clearImmediate
-tags:
-  - API
-  - HTML DOM
-  - Méthode
-  - Window
-translation_of: Web/API/Window/clearImmediate
 ---
 
 {{APIRef("HTML DOM")}}{{Non-standard_header}}
@@ -18,7 +12,7 @@ Cette méthode efface l'action spécifiée par {{DOMxRef("window.setImmediate")}
 ## Syntaxe
 
 ```js
-window.clearImmediate( immediateID )
+window.clearImmediate(immediateID);
 ```
 
 où immediateID est un ID retourné par {{DOMxRef("window.setImmediate")}}.
@@ -38,13 +32,11 @@ document.getElementById("bouton")
 
 ## Spécifications
 
-| Spécification                                                                                                                              | Statut         | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | -------------- | ------------------- |
-| [Efficient Script Yielding La définition de `setImmediate` dans cette spécification.](https://w3c.github.io/setImmediate/#si-setImmediate) | Editor's Draft | Initial definition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.clearImmediate")}}
+{{Compat}}
 
 ## Voir aussi
 

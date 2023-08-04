@@ -38,10 +38,10 @@ Now the JavaScript:
 var span = document.querySelector("span");
 var classes = span.classList;
 var result = classes.contains("c");
-if(result) {
+if (result) {
   span.textContent = "The classList contains 'c'";
 } else {
-   span.textContent = "The classList does not contain 'c'";
+  span.textContent = "The classList does not contain 'c'";
 }
 ```
 
@@ -49,10 +49,10 @@ The output looks like this:
 
 {{ EmbedLiveSample('Examples', '100%', 60) }}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

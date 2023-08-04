@@ -1,7 +1,6 @@
 ---
 title: Promise.resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/resolve
 ---
 
 {{JSRef}}
@@ -121,7 +120,7 @@ p3.then(function(v) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Promise.resolve")}}
+{{Compat}}
 
 ## Véase también
 

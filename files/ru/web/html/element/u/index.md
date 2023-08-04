@@ -1,7 +1,6 @@
 ---
-title: '<u>: Элемент слабой аннотации (подчёркивание)'
+title: "<u>: Элемент слабой аннотации (подчёркивание)"
 slug: Web/HTML/Element/u
-translation_of: Web/HTML/Element/u
 ---
 
 {{HTMLSidebar}}
@@ -34,7 +33,7 @@ Along with other pure styling elements, the original HTML Underline (`<u>`) elem
 
 ### Use cases
 
-Valid use cases for the `<u>` element include annotating spelling errors, applying a {{interwiki("wikipedia", "proper name mark")}} to denote proper names in Chinese text, and other forms of annotation.
+Valid use cases for the `<u>` element include annotating spelling errors, applying a proper name mark to denote proper names in Chinese text, and other forms of annotation.
 
 You should _not_ use `<u>` to simply underline text for presentation purposes, or to denote titles of books.
 

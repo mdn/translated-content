@@ -19,7 +19,7 @@ depth = window.screen.pixelDepth
 
 ```js
 // 如果没有足够的位深度/色彩深度（bit depth），就选择一个更纯的颜色
-if ( window.screen.pixelDepth > 8 ) {
+if (window.screen.pixelDepth > 8) {
   document.style.color = "#FAEBD7";
 } else {
   document.style.color = "#FFFFFF";

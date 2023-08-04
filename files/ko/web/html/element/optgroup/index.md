@@ -86,4 +86,4 @@ slug: Web/HTML/Element/optgroup
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.optgroup")}}
+{{Compat}}

@@ -1,7 +1,6 @@
 ---
 title: Detalles del modelo de objetos
 slug: conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
-original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Iterators_and_Generators")}}
@@ -555,7 +554,7 @@ function instanceOf(object, constructor) {
 }
 ```
 
-> **Nota:** La implementación anterior compara el tipo del objeto con "xml" para soslayar un pequeño problema sobre como se representan los objetos XML en las versiones recientes de JavaScript. Ver {{ bug(634150) }} para entender los detalles.
+> **Nota:** La implementación anterior compara el tipo del objeto con "xml" para soslayar un pequeño problema sobre como se representan los objetos XML en las versiones recientes de JavaScript. Ver [Error 634150 en Firefox](https://bugzil.la/634150) para entender los detalles.
 
 Usando esta función `instanceOf` estas expresiones son todas `true`:
 

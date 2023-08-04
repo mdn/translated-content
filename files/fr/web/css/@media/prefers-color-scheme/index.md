@@ -1,12 +1,6 @@
 ---
 title: prefers-color-scheme
 slug: Web/CSS/@media/prefers-color-scheme
-tags:
-  - '@media'
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/prefers-color-scheme
 ---
 
 {{CSSRef}}
@@ -28,20 +22,39 @@ La caractéristique média **`prefers-color-scheme`** permet de détecter les pr
 ### CSS
 
 ```css
-.day   { background: #eee; color: black; }
-.night { background: #333; color: white; }
+.day {
+  background: #eee;
+  color: black;
+}
+.night {
+  background: #333;
+  color: white;
+}
 
 @media (prefers-color-scheme: dark) {
-  .day.dark-scheme   { background:  #333; color: white; }
-  .night.dark-scheme { background: black; color:  #ddd; }
+  .day.dark-scheme {
+    background: #333;
+    color: white;
+  }
+  .night.dark-scheme {
+    background: black;
+    color: #ddd;
+  }
 }
 
 @media (prefers-color-scheme: light) {
-  .day.light-scheme   { background: white; color:  #555; }
-  .night.light-scheme { background:  #eee; color: black; }
+  .day.light-scheme {
+    background: white;
+    color: #555;
+  }
+  .night.light-scheme {
+    background: #eee;
+    color: black;
+  }
 }
 
-.day, .night {
+.day,
+.night {
   display: inline-block;
   padding: 1em;
   width: 7em;
@@ -54,12 +67,21 @@ La caractéristique média **`prefers-color-scheme`** permet de détecter les pr
 
 ```html
 <div class="day">Jour (initial)</div>
-<div class="day light-scheme">Jour (modifié si utilisation d'un thème clair)</div>
-<div class="day dark-scheme">Jour (modifié si utilisation d'un thème sombre)</div> <br>
+<div class="day light-scheme">
+  Jour (modifié si utilisation d'un thème clair)
+</div>
+<div class="day dark-scheme">
+  Jour (modifié si utilisation d'un thème sombre)
+</div>
+<br />
 
 <div class="night">Nuit (initial)</div>
-<div class="night light-scheme">Nuit (modifié si utilisation d'un thème clair)</div>
-<div class="night dark-scheme">Nuit (modifié si utilisation d'un thème sombre)</div>
+<div class="night light-scheme">
+  Nuit (modifié si utilisation d'un thème clair)
+</div>
+<div class="night dark-scheme">
+  Nuit (modifié si utilisation d'un thème sombre)
+</div>
 ```
 
 ### Résultat

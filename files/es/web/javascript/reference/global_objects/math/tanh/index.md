@@ -1,7 +1,6 @@
 ---
 title: Math.tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/tanh
 ---
 
 {{JSRef}}
@@ -58,7 +57,7 @@ Math.tanh = Math.tanh || function(x){
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.tanh")}}
+{{Compat}}
 
 ## Ver también
 

@@ -34,7 +34,7 @@ Reflect.apply(target, thisArgument, argumentsList)
 
 ## 解説
 
-ES5 では、ふつう {{jsxref("Function.prototype.apply()")}} メソッドを使用することで、指定された `this` の値と `arguments` で配列 (または [配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)) により引数を指定することで、関数を呼び出すことができます。
+ES5 では、ふつう {{jsxref("Function.prototype.apply()")}} メソッドを使用することで、指定された `this` の値と `arguments` で配列 (または [配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い)) により引数を指定することで、関数を呼び出すことができます。
 
 ```js
 Function.prototype.apply.call(Math.floor, undefined, [1.75]);

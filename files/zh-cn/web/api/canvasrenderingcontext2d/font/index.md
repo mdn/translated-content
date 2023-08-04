@@ -67,7 +67,7 @@ f.load().then(function() {
 ### Gecko-specific 注解
 
 - 基于 Gecko 的浏览器，例如 Firefox，实现了一个非标准的并且不赞成使用的属性 `ctx.mozTextStyle` 。不要使用此属性。
-- 在 Gecko 中，当将系统字体设置为 canvas 2D 上下文的{{domxref("CanvasRenderingContext2D.font", "font")}}（例如菜单）的值时，获取用于无法返回期望字体的字体值（不返回任何内容）。这已在 Firefox 57（{{bug(1374885)}}）中发布的 Firefox 的[Quantum/Stylo](https://wiki.mozilla.org/Quantum/Stylo)并行 CSS 引擎中修复。
+- 在 Gecko 中，当将系统字体设置为 canvas 2D 上下文的{{domxref("CanvasRenderingContext2D.font", "font")}}（例如菜单）的值时，获取用于无法返回期望字体的字体值（不返回任何内容）。这已在 Firefox 57（[Firefox bug 1374885](https://bugzil.la/1374885)）中发布的 Firefox 的[Quantum/Stylo](https://wiki.mozilla.org/Quantum/Stylo)并行 CSS 引擎中修复。
 
 ## 参见
 

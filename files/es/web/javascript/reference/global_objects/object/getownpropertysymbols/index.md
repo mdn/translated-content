@@ -1,7 +1,6 @@
 ---
 title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertySymbols
 ---
 
 {{JSRef}}
@@ -48,7 +47,7 @@ console.log(objectSymbols[0]);     // Symbol(a)
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.getOwnPropertySymbols")}}
+{{Compat}}
 
 ## Ver también
 

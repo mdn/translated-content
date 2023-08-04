@@ -106,9 +106,9 @@ TODO
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.basic-shape")}}
+{{Compat}}
 
 ## Véase también
 

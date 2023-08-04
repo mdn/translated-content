@@ -26,13 +26,13 @@ MediaStream = canvas.captureStream(frameRate);
 
 ```js
 //获取所需要截取媒体流的 canvas element
-var canvasElt = document.querySelector('canvas');
+var canvasElt = document.querySelector("canvas");
 
 //截取到媒体流
 var stream = canvasElt.captureStream(25); // 25 FPS
 
 //使用媒体流
-// E.g.使用 RTCPeerConnection 来传输给其它的电脑
+// E.g.使用 RTCPeerConnection 来传输给其他的电脑
 // 下面的 pc 是其他地方创建的一个 RTCPeerConnection
 pc.addStream(stream);
 ```

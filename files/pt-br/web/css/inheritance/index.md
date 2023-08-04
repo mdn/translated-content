@@ -1,6 +1,6 @@
 ---
 title: Herança
-slug: Web/CSS/inheritance
+slug: Web/CSS/Inheritance
 ---
 
 ## Resumo

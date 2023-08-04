@@ -17,7 +17,7 @@ Firefox 9 was released for Windows on December 20, 2011. Mac and Linux version 9
 - Firefox on Android now lets users snap photos with their phone's camera without leaving the browser when the [element is used to create interactive controls for web-based forms in order to accept data from the user.">`<input>`](/zh-TW/docs/Web/HTML/Element/input) element is used with `type="file"` and `accept="image/*"`.
 - Windows Vista style PNG ICO images are now supported.
 - Drawing images that use the [`crossorigin`](/zh-TW/docs/HTML/CORS_settings_attributes) attribute to request CORS access no longer incorrectly [taint the canvas](/zh-TW/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F) when CORS is granted.
-- The value of the [`rowspan`](/zh-TW/docs/Web/HTML/Element/td#attr-rowspan) attribute may now be as large as 65,534, up from 8190.
+- The value of the [`rowspan`](/zh-TW/docs/Web/HTML/Element/td#rowspan) attribute may now be as large as 65,534, up from 8190.
 
 ### CSS
 
@@ -34,6 +34,8 @@ _No change._
 
 - [Using full-screen mode](/zh-TW/docs/DOM/Using_full-screen_mode)
   - : The new full-screen API provides a way to present content using the entire screen, with no browser interface. This is great for video and games. This API is currently experimental and prefixed.
+
+<!---->
 
 - The [`Node.contains()`](/zh-TW/docs/Web/API/Node/contains) method is now implemented; this lets you determine if a given node is a descendant of another node.
 - The [`Node.parentElement`](/zh-TW/docs/Web/API/Node/parentElement) attribute has been implemented; this returns the parent [`Element`](/zh-TW/docs/Web/API/Element) of a DOM node, or `null` if the parent isn't an element.

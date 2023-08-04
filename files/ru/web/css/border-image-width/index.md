@@ -1,7 +1,6 @@
 ---
 title: border-image-width
 slug: Web/CSS/border-image-width
-translation_of: Web/CSS/border-image-width
 ---
 
 {{CSSRef}}
@@ -97,7 +96,7 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Примеры', '480', '320', '', 'Web/CSS/border-image-width') }}
+{{ EmbedLiveSample('Примеры', '100%', '200') }}
 
 ## Спецификации
 

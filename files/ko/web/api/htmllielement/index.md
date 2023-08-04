@@ -2,6 +2,7 @@
 title: HTMLLIElement
 slug: Web/API/HTMLLIElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLLIElement`** 인터페이스는 리스트 엘리먼트를 조작하기 위한 특정 프로퍼티와 메소드들을 제공합니다.
@@ -25,11 +26,11 @@ _부모인 {{domxref("HTMLElement")}}에서 상속받습니다._
 
 _특정 메소드가 없으며, 부모로부터 프로퍼티를 상속 받습니다.{{domxref("HTMLElement")}}._
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
 ---
 {{JSRef}}
 
-**getUTCMonth()**는 지정된 날짜의 월을 0부터 시작하는 값 (0은 첫 해를 나타냄)으로 표준시에 따라 반환합니다.
+**getUTCMonth()** 는 지정된 날짜의 월을 0부터 시작하는 값 (0은 첫 해를 나타냄)으로 표준시에 따라 반환합니다.
 
 ## Syntax
 

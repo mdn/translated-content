@@ -1,6 +1,6 @@
 ---
 title: 条件（三元）运算符
-slug: Web/JavaScript/Reference/Operators/Conditional_Operator
+slug: Web/JavaScript/Reference/Operators/Conditional_operator
 ---
 
 {{jsSidebar("Operators")}}
@@ -46,10 +46,10 @@ console.log(beverage); // "Beer"
 const greeting = (person) => {
   const name = person ? person.name : "stranger";
   return `Howdy, ${name}`;
-}
+};
 
-console.log(greeting({ name: "Alice" }));  // "Howdy, Alice"
-console.log(greeting(null));             // "Howdy, stranger"
+console.log(greeting({ name: "Alice" })); // "Howdy, Alice"
+console.log(greeting(null)); // "Howdy, stranger"
 ```
 
 ### 条件链
@@ -58,10 +58,13 @@ console.log(greeting(null));             // "Howdy, stranger"
 
 ```js
 function example() {
-  return condition1 ? value1
-        : condition2 ? value2
-        : condition3 ? value3
-        : value4;
+  return condition1
+    ? value1
+    : condition2
+    ? value2
+    : condition3
+    ? value3
+    : value4;
 }
 ```
 
@@ -95,4 +98,4 @@ function example() {
 - [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [可选链运算符（`?.`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [在代码中做决定——条件语句](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators)

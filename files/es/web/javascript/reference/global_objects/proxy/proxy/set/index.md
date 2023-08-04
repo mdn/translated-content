@@ -1,7 +1,6 @@
 ---
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 ---
 
 {{JSRef}}
@@ -80,9 +79,9 @@ console.log(p.a)       // 10
 
 {{Specifications}}
 
-## Compatibilidad con los buscadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Proxy.handler.set")}}
+{{Compat}}
 
 ## Ver también
 

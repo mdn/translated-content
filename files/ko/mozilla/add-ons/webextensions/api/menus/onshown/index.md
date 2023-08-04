@@ -1,7 +1,6 @@
 ---
 title: menus.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onShown
-original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/onShown
 ---
 
 {{AddonSidebar()}}
@@ -96,7 +95,7 @@ Events have three functions:
 
 ## 브라우저 호환성
 
-{{Compat("webextensions.api.menus.onShown", 10)}}
+{{Compat}}
 
 ## 예제
 
@@ -105,12 +104,12 @@ This example listens for the context menu to be shown over a link, then updates 
 ```js
 function updateMenuItem(linkHostname) {
   browser.menus.update(openLabelledId, {
-    title: `Open (${linkHostname})`
+    title: `Open (${linkHostname})`,
   });
   browser.menus.refresh();
 }
 
-browser.menus.onShown.addListener(info => {
+browser.menus.onShown.addListener((info) => {
   if (!info.linkUrl) {
     return;
   }

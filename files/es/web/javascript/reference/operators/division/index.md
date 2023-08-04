@@ -1,7 +1,6 @@
 ---
 title: Division (/)
 slug: Web/JavaScript/Reference/Operators/Division
-original_slug: Web/JavaScript/Referencia/Operadores/Division
 ---
 
 {{jsSidebar("Operators")}}
@@ -42,9 +41,9 @@ Math.floor(3 / 2) // 1
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.division")}}
+{{Compat}}
 
 ## Ver también
 

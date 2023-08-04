@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/splice
 ---
 
 {{JSRef}}
@@ -115,7 +114,7 @@ var removed = myFish.splice(2);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.splice")}}
+{{Compat}}
 
 ## Ver también
 

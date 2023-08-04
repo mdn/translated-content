@@ -24,12 +24,12 @@ headers.keys();
 ```js
 // 创建一个 Headers 对象
 var myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.append('Vary', 'Accept-Language');
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.append("Vary", "Accept-Language");
 
 // 显示 Headers 中所有的 key
-for(var key of myHeaders.keys()) {
-   console.log(key);
+for (var key of myHeaders.keys()) {
+  console.log(key);
 }
 ```
 
@@ -40,7 +40,7 @@ content-type
 vary
 ```
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

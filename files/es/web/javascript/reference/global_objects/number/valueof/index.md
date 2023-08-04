@@ -1,7 +1,6 @@
 ---
 title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/valueOf
 ---
 
 {{JSRef}}
@@ -39,9 +38,9 @@ console.log(typeof num);    // número
 
 {{Specifications}}
 
-## Compatibilidad con navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.valueOf")}}
+{{Compat}}
 
 ## Ver también
 

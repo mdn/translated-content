@@ -1,7 +1,6 @@
 ---
 title: El objeto arguments
 slug: Web/JavaScript/Reference/Functions/arguments
-original_slug: Web/JavaScript/Referencia/Funciones/arguments
 ---
 
 {{jsSidebar("Functions", "Funciones")}}
@@ -210,9 +209,9 @@ func(); // undefined
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.functions.arguments")}}
+{{Compat}}
 
 ## Ve también
 

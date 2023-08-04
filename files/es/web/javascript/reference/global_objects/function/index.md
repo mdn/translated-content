@@ -1,7 +1,6 @@
 ---
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function
 ---
 
 {{JSRef("Objetos_globales", "Function")}}
@@ -74,9 +73,9 @@ Si bien este código funciona en los navegadores web, `f1()` producirá un `Refe
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function")}}
+{{Compat}}
 
 ## Ve también
 

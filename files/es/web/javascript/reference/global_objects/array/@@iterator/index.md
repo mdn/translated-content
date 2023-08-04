@@ -1,7 +1,6 @@
 ---
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/@@iterator
 ---
 
 {{JSRef}}
@@ -50,7 +49,7 @@ console.log(eArr.next().value); // p
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.@@iterator")}}
+{{Compat}}
 
 ## Ver también
 

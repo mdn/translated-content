@@ -1,11 +1,6 @@
 ---
 title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
-tags:
-  - JavaScript
-  - NeedsUpdate
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 ---
 
 {{jsSidebar("Objects")}}
@@ -58,7 +53,7 @@ else {
 }
 ```
 
-> **Примечание:** **Обратите внимание:** здесь используется оператор строгого равенства (идентичности) вместо простого оператора равенства, поскольку `x == undefined` также проверяет, является ли `x` равным `null`, в то время как оператор идентичности этого не делает. {{jsxref("Global_Objects/null", "null")}} не эквивалентен `undefined`. Для более подробной информации смотрите {{jsxref("Operators/Comparison_Operators", "операторы сравнения", "", 1)}}.
+> **Примечание:** здесь используется оператор строгого равенства (идентичности) вместо простого оператора равенства, поскольку `x == undefined` также проверяет, является ли `x` равным `null`, в то время как оператор идентичности этого не делает. {{jsxref("Global_Objects/null", "null")}} не эквивалентен `undefined`. Для более подробной информации смотрите {{jsxref("Operators/Comparison_Operators", "операторы сравнения", "", 1)}}.
 
 ### Пример: оператор `typeof` и `undefined`
 

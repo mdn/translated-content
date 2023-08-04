@@ -38,9 +38,9 @@ dateObj.setHours(hoursValue)
 
 如果有一个参数超出了合理范围，`setHours` 会相应地更新日期对象中的日期信息。例如，如果为 `secondsValue` 指定了 100，则分钟会加 1，然后秒数使用 40。
 
-## 例子
+## 示例
 
-### 例子：使用 `setHours` 方法
+### 示例：使用 `setHours` 方法
 
 ```js
 var theBigDay = new Date();
