@@ -1,8 +1,6 @@
 ---
 title: Scroll-контейнер
 slug: Glossary/Scroll_container
-translation_of: Glossary/Scroll_container
-original_slug: Глоссарий/Scroll_container
 ---
 
 **Scroll-контейнер** создаётся путём применения к элементу свойства `overflow: scroll` или `overflow: auto`, при условии, что содержимого достаточно много для появления переполнения.

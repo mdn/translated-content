@@ -1,7 +1,6 @@
 ---
 title: element.offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
-translation_of: Web/API/HTMLElement/offsetHeight
 ---
 
 {{ ApiRef() }}

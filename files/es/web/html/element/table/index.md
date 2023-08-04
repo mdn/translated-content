@@ -1,7 +1,6 @@
 ---
 title: tabla
 slug: Web/HTML/Element/table
-original_slug: Web/HTML/Elemento/table
 ---
 
 ## Resumen

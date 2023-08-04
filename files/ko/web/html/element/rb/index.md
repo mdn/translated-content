@@ -1,5 +1,5 @@
 ---
-title: '<rb>: 루비 베이스 요소'
+title: "<rb>: 루비 베이스 요소"
 slug: Web/HTML/Element/rb
 ---
 
@@ -61,8 +61,8 @@ slug: Web/HTML/Element/rb
 
 ```html
 <ruby>
-  <rb>景<rb>福<rb>宮
-  <rp>(</rp><rt>경<rt>복<rt>궁<rp>)</rp>
+  <rb>景</rb><rb>福</rb><rb>宮 </rb><rp>(</rp><rt>경</rt><rt>복</rt><rt>궁</rt
+  ><rp>)</rp>
 </ruby>
 ```
 
@@ -72,9 +72,8 @@ slug: Web/HTML/Element/rb
 
 ```html
 <ruby>
-  景 <rp>(</rp><rt>경</rt><rp>)</rp>
-  福 <rp>(</rp><rt>복</rt><rp>)</rp>
-  宮 <rp>(</rp><rt>궁</rt><rp>)</rp>
+  景 <rp>(</rp><rt>경</rt><rp>)</rp> 福 <rp>(</rp><rt>복</rt><rp>)</rp> 宮
+  <rp>(</rp><rt>궁</rt><rp>)</rp>
 </ruby>
 ```
 

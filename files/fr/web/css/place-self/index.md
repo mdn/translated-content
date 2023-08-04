@@ -1,7 +1,6 @@
 ---
 title: place-self
 slug: Web/CSS/place-self
-translation_of: Web/CSS/place-self
 ---
 
 {{CSSRef}}

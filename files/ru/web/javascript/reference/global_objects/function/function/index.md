@@ -1,12 +1,6 @@
 ---
 title: Конструктор Function()
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
-tags:
-  - Конструктор
-  - Function
-  - JavaScript
-  - Справочник
-browser-compat: javascript.builtins.Function.Function
 ---
 {{JSRef}}
 

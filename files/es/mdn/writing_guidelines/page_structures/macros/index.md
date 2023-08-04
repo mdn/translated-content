@@ -1,7 +1,6 @@
 ---
 title: Utilizando macros
 slug: MDN/Writing_guidelines/Page_structures/Macros
-page-type: mdn-writing-guide
 l10n:
   sourceCommit: 92cbbdaf81325539eace880b5e78152e3cb8ba49
 ---

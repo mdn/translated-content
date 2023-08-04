@@ -1,7 +1,6 @@
 ---
 title: NodeIterator.whatToShow
 slug: Web/API/NodeIterator/whatToShow
-translation_of: Web/API/NodeIterator/whatToShow
 ---
 
 {{APIRef("DOM")}}

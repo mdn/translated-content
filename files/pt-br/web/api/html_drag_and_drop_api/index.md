@@ -1,7 +1,6 @@
 ---
 title: Arrastar e soltar
 slug: Web/API/HTML_Drag_and_Drop_API
-original_slug: DragDrop/Drag_and_Drop
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}

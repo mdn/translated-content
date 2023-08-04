@@ -94,7 +94,7 @@ You can use heading elements in `<summary>`, like this:
 ```html
 <details open>
   <summary><h4>Overview</h4></summary>
-    <ol>
+  <ol>
     <li>Cash on hand: $500.00</li>
     <li>Current invoice: $75.30</li>
     <li>Due date: 5/6/19</li>

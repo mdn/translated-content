@@ -1,7 +1,6 @@
 ---
 title: Intl.PluralRules.selectRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Document.fullscreenElement
 slug: Web/API/Document/fullscreenElement
-original_slug: Web/API/DocumentOrShadowRoot/fullscreenElement
 l10n:
   sourceCommit: 23aea0fbb04893c64890c89a634250283e2beb71
 ---
@@ -22,7 +21,7 @@ l10n:
 
 ```js
 function isVideoInFullscreen() {
-  if (document.fullscreenElement?.nodeName === 'VIDEO') {
+  if (document.fullscreenElement?.nodeName === "VIDEO") {
     return true;
   }
   return false;

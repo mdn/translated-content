@@ -1,7 +1,6 @@
 ---
 title: 서식 상황 입문서
 slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
-original_slug: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 ---
 
 {{CSSRef}}

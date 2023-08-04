@@ -1,11 +1,6 @@
 ---
 title: Array.length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
-tags:
-  - Array
-  - JavaScript
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/length
 ---
 
 {{JSRef("Global_Objects", "Array")}}

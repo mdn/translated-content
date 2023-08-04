@@ -37,7 +37,7 @@ function forEachKey(callback) {
 A função a seguir itera sobre as chaves do armazenamento local e obtém o valor de cada chave:
 
 ```js
-for(var i =0; i < localStorage.length; i++){
+for (var i = 0; i < localStorage.length; i++) {
   console.log(localStorage.getItem(localStorage.key(i)));
 }
 ```
@@ -46,13 +46,11 @@ for(var i =0; i < localStorage.length; i++){
 
 ## Especificações
 
-| Especificação                                                                                            | Estado                           | Comentário |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-key', 'Storage.key')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Storage.key")}}
+{{Compat}}
 
 ## Veja também
 

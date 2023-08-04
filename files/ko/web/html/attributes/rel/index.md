@@ -1,7 +1,6 @@
 ---
 title: Link types
 slug: Web/HTML/Attributes/rel
-original_slug: Web/HTML/Link_types
 ---
 
 {{HTMLSidebar}}

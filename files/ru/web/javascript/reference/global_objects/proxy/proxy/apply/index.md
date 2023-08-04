@@ -1,11 +1,6 @@
 ---
 title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
-tags:
-  - Прокси
-  - вызов функции
-  - ловушка
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 ---
 
 {{JSRef}}

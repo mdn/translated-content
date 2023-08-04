@@ -1,7 +1,6 @@
 ---
 title: webRequest.onHeadersReceived
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onHeadersReceived
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onHeadersReceived
 ---
 
 {{AddonSidebar()}}

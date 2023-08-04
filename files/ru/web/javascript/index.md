@@ -1,18 +1,6 @@
 ---
 title: JavaScript
 slug: Web/JavaScript
-tags:
-  - Infrastructure
-  - Interface
-  - Intermediate
-  - Internationalization
-  - Intro
-  - JavaScript
-  - Learn
-  - l10n:exclude
-  - l10n:priority
-  - Все_категории
-translation_of: Web/JavaScript
 ---
 
 {{JsSidebar()}}

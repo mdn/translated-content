@@ -1,14 +1,6 @@
 ---
 title: Object.prototype.__defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
-tags:
-  - JavaScript
-  - Method
-  - Non-standard
-  - Object
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 ---
 
 {{JSRef("Global_Objects", "Object")}} {{non-standard_header}} {{deprecated_header}}

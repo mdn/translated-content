@@ -1,7 +1,6 @@
 ---
 title: Event.initEvent()
 slug: Web/API/Event/initEvent
-translation_of: Web/API/Event/initEvent
 ---
 
 {{ ApiRef("DOM") }}{{deprecated_header}}
@@ -45,14 +44,11 @@ elem.addEventListener('click', function (e) {
 elem.dispatchEvent(event);
 ```
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                         | Статус                           | Комментарий                                                                                  |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-initevent','Event.initEvent()')}}         | {{Spec2("DOM WHATWG")}} | Начиная с {{SpecName('DOM2 Events')}} - deprecated, заменено на event constructors. |
-| {{SpecName('DOM2 Events','##Events-Event-initEvent','Event.initEvent()')}} | {{Spec2('DOM2 Events')}} | Начальное определение.                                                                       |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

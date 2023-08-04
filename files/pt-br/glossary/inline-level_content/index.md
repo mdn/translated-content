@@ -1,7 +1,6 @@
 ---
 title: Elementos inline
 slug: Glossary/Inline-level_content
-original_slug: Web/HTML/Inline_elements
 ---
 
 ### Sumário

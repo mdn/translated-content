@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.getTexParameter()
 slug: Web/API/WebGLRenderingContext/getTexParameter
-translation_of: Web/API/WebGLRenderingContext/getTexParameter
 ---
 
 {{APIRef("WebGL")}}

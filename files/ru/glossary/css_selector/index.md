@@ -1,14 +1,6 @@
 ---
 title: CSS-селектор
 slug: Glossary/CSS_Selector
-tags:
-  - CSS
-  - CSS-селектор
-  - HTML
-  - Глоссарий
-  - селектор
-translation_of: Glossary/CSS_Selector
-original_slug: Глоссарий/CSS_Selector
 ---
 
 **CSS-селектор** это часть CSS-правила, которая позволяет вам указать, к какому элементу (элементам) применить стиль. Например:

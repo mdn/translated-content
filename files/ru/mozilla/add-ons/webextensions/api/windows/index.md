@@ -1,7 +1,6 @@
 ---
 title: windows
 slug: Mozilla/Add-ons/WebExtensions/API/windows
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows
 ---
 
 {{AddonSidebar}}

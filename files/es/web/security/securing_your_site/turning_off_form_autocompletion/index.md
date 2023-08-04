@@ -1,7 +1,6 @@
 ---
 title: ¿Cómo desactivar el autocompletado del formulario?
 slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
-original_slug: Web/Security/Securing_your_site/desactivar_autocompletado_formulario
 ---
 
 Este artículo explica como un sitio web puede inhabilitar el autocompletado para los campos del formulario.

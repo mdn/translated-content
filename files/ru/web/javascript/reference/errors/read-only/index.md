@@ -1,7 +1,6 @@
 ---
 title: 'TypeError: "x" is read-only(Ошибка Типа: "x" только для чтения)'
 slug: Web/JavaScript/Reference/Errors/Read-only
-translation_of: Web/JavaScript/Reference/Errors/Read-only
 ---
 {{jsSidebar("Errors")}}
 

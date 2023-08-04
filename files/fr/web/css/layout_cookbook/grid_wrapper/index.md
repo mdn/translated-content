@@ -1,7 +1,6 @@
 ---
 title: Envelopper une grille
 slug: Web/CSS/Layout_cookbook/Grid_wrapper
-translation_of: Web/CSS/Layout_cookbook/Grid_wrapper
 ---
 
 {{CSSRef}}

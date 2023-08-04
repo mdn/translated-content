@@ -1,7 +1,6 @@
 ---
 title: submit
 slug: Web/API/HTMLFormElement/submit_event
-translation_of: Web/API/HTMLFormElement/submit_event
 ---
 
 L'événement `submit` est émis lorsqu'un formulaire est soumis au serveur.

@@ -1,7 +1,6 @@
 ---
 title: Usando o atributo aria-label
 slug: orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
 ---
 
 O atributo [`aria-label`](https://www.w3.org/WAI/PF/aria-1.1/states_and_properties#aria-label) é usado para definir uma _string_ na _tag_ do elemento atual. Use nos casos que a _tag_ do texto não seja visível na tela. Se há texto visível na _tag_ do elemento, usa [aria-labelledby](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute "Using the aria-labelledby attribute") em vez.

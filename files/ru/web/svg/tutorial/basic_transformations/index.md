@@ -1,8 +1,6 @@
 ---
 title: Базовые трансформации
 slug: Web/SVG/Tutorial/Basic_Transformations
-translation_of: Web/SVG/Tutorial/Basic_Transformations
-original_slug: Web/SVG/Tutorial/Базовые_Преобразования
 ---
 
 {{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}

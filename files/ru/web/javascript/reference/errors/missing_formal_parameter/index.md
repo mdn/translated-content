@@ -1,7 +1,6 @@
 ---
-title: 'SyntaxError: missing formal parameter( отсутствует формальный параметр)'
+title: "SyntaxError: missing formal parameter( отсутствует формальный параметр)"
 slug: Web/JavaScript/Reference/Errors/Missing_formal_parameter
-translation_of: Web/JavaScript/Reference/Errors/Missing_formal_parameter
 ---
 
 {{jsSidebar("Errors")}}

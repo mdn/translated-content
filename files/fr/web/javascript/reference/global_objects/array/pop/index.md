@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/pop
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
 title: "<details> : l'élément de divulgation des détails"
 slug: Web/HTML/Element/details
-translation_of: Web/HTML/Element/details
 ---
 
 {{HTMLSidebar}}

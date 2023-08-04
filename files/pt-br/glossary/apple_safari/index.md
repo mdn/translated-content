@@ -1,7 +1,6 @@
 ---
 title: Apple Safari
 slug: Glossary/Apple_Safari
-original_slug: Glossario/Apple_Safari
 ---
 
 [Safari](http://www.apple.com/safari/) é um {{Glossary("navegador","navegador Web")}} desenvolvido pela Apple e fornecido com ambos Mac OS X e iOS. Baseia-se com o mecanismo de código aberto [WebKit](http://www.webkit.org/).

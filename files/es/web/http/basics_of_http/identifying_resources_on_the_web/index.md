@@ -1,7 +1,6 @@
 ---
 title: Identificación de recursos web
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-original_slug: Web/HTTP/Basics_of_HTTP/Identificación_recursos_en_la_Web
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: ¿Qué hay en la cabecera? Metadatos en HTML
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
-original_slug: Learn/HTML/Introduccion_a_HTML/Metados_en
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}

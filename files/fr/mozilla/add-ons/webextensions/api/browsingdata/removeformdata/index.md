@@ -1,7 +1,6 @@
 ---
 title: browsingData.removeFormData()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeFormData
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeFormData
 ---
 
 {{AddonSidebar()}}

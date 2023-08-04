@@ -1,7 +1,6 @@
 ---
 title: Uint8ClampedArray
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 ---
 
 {{JSRef}}

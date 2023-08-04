@@ -1,7 +1,6 @@
 ---
 title: ¿Qué son las extensiones?
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
-original_slug: Mozilla/Add-ons/WebExtensions/Que_son_las_WebExtensions
 ---
 
 {{AddonSidebar}}

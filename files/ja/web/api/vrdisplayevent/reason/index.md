@@ -1,7 +1,6 @@
 ---
 title: VRDisplayEvent.reason
 slug: Web/API/VRDisplayEvent/reason
-page-type: web-api-instance-property
 l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---

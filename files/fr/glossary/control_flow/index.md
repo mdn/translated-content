@@ -1,7 +1,6 @@
 ---
 title: Structure de contrôle
 slug: Glossary/Control_flow
-translation_of: Glossary/Control_flow
 ---
 
 Les _structures de contrôle_ déterminent l'ordre dans lequel l'ordinateur exécute les instructions d'un script.

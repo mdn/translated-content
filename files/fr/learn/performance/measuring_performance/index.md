@@ -1,7 +1,6 @@
 ---
 title: Mesure des performances
 slug: Learn/Performance/Measuring_performance
-translation_of: Learn/Performance/Measuring_performance
 ---
 
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}

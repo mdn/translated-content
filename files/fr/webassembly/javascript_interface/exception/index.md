@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Exception
 slug: WebAssembly/JavaScript_interface/Exception
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception
 ---
 
 {{WebAssemblySidebar}}

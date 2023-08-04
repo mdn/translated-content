@@ -1,5 +1,5 @@
 ---
-title: '<aside>: 별도 구획 요소'
+title: "<aside>: 별도 구획 요소"
 slug: Web/HTML/Element/aside
 ---
 
@@ -94,16 +94,9 @@ slug: Web/HTML/Element/aside
 
 ```html
 <article>
-  <p>
-    디즈니 만화영화 <em>인어 공주</em>는
-    1989년 처음 개봉했습니다.
-  </p>
-  <aside>
-    인어 공주는 첫 개봉 당시 8700만불의 흥행을 기록했습니다.
-  </aside>
-  <p>
-    영화에 대한 정보...
-  </p>
+  <p>디즈니 만화영화 <em>인어 공주</em>는 1989년 처음 개봉했습니다.</p>
+  <aside>인어 공주는 첫 개봉 당시 8700만불의 흥행을 기록했습니다.</aside>
+  <p>영화에 대한 정보...</p>
 </article>
 ```
 

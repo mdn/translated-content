@@ -1,7 +1,6 @@
 ---
 title: Window.dump()
 slug: Web/API/Window/dump
-translation_of: Web/API/Window/dump
 ---
 
 {{ApiRef}} {{Non-standard_header}}

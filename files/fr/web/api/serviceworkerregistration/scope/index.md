@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerRegistration.scope
 slug: Web/API/ServiceWorkerRegistration/scope
-translation_of: Web/API/ServiceWorkerRegistration/scope
 ---
 
 {{APIRef("Service Workers API")}}

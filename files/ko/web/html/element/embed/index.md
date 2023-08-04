@@ -33,7 +33,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 ## 예제
 
 ```html
-<embed type="video/quicktime" src="movie.mov" width="640" height="480">
+<embed type="video/quicktime" src="movie.mov" width="640" height="480" />
 ```
 
 ## 명세

@@ -1,5 +1,5 @@
 ---
-title: "<dialog>：对话框元素"
+title: <dialog>：对话框元素
 slug: Web/HTML/Element/dialog
 ---
 

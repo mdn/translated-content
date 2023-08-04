@@ -1,7 +1,6 @@
 ---
 title: dfn
 slug: Web/HTML/Element/dfn
-original_slug: Web/HTML/Elemento/dfn
 ---
 
 ### Definición

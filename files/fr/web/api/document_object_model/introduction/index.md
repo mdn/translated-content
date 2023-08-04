@@ -1,7 +1,6 @@
 ---
 title: Introduction
 slug: Web/API/Document_Object_Model/Introduction
-translation_of: Web/API/Document_Object_Model/Introduction
 ---
 
 {{DefaultAPISidebar("DOM")}}

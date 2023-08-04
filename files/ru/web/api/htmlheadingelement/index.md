@@ -1,7 +1,6 @@
 ---
 title: HTMLHeadingElement
 slug: Web/API/HTMLHeadingElement
-translation_of: Web/API/HTMLHeadingElement
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -21,16 +20,11 @@ _Наследует свойства родителя, {{domxref("HTMLElement")}
 
 _Нет специфичных методов; наследует методы родителя, {{domxref("HTMLElement")}}._
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                                                | Status                           | Comment                               |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------- |
-| {{SpecName('HTML WHATWG', "#htmlheadingelement", "HTMLHeadingElement")}}                                             | {{Spec2('HTML WHATWG')}} |                                       |
-| {{SpecName('HTML5 W3C', "sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements", "HTMLHeadingElement")}} | {{Spec2('HTML5 W3C')}}     | The `align` property is now obsolete. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-43345119', 'HTMLHeadingElement')}}                                             | {{Spec2('DOM2 HTML')}}     | No change                             |
-| {{SpecName('DOM1', 'level-one-html.html#ID-43345119', 'HTMLHeadingElement')}}                                     | {{Spec2('DOM1')}}         | Initial definition                    |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

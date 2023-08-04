@@ -1,5 +1,5 @@
 ---
-title: 'Window: devicemotion イベント'
+title: "Window: devicemotion イベント"
 slug: Web/API/Window/devicemotion_event
 ---
 

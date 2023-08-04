@@ -1,18 +1,6 @@
 ---
-title: '<dd>: Элемент описания определения'
+title: "<dd>: Элемент описания определения"
 slug: Web/HTML/Element/dd
-tags:
-  - Description Details
-  - Element
-  - HTML
-  - Reference
-  - Web
-  - dd
-  - Веб
-  - Список определений
-  - Элемент
-  - списки
-translation_of: Web/HTML/Element/dd
 ---
 
 {{HTMLSidebar}}

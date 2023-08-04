@@ -1,7 +1,6 @@
 ---
-title: ':enabled'
+title: ":enabled"
 slug: Web/CSS/:enabled
-translation_of: Web/CSS/:enabled
 ---
 {{CSSRef}}
 
